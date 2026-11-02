@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qb extends ll {
+final class Model extends ll {
     pg[] field_L;
     s[] field_n;
     int[] field_l;
@@ -48,12 +48,12 @@ final class qb extends ll {
     private int[][] field_y;
     private byte[] field_I;
 
-    final static qb a(Js5Archive param0, String param1, String param2) {
+    final static Model a(Js5Archive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, 100, param2);
         if (var3 == null) {
           return null;
         }
-        return new qb(var3);
+        return new Model(var3);
     }
 
     private final void b(byte[] param0) {
@@ -998,7 +998,7 @@ final class qb extends ll {
         int var15 = 0;
         s dupTemp$0 = null;
         s dupTemp$1 = null;
-        qb var6;
+        Model var6;
         int var7;
         int var9;
         int var10;
@@ -1014,7 +1014,7 @@ final class qb extends ll {
         int var10Lifetime1Lifetime1;
         s var16Lifetime1;
         s var16Lifetime2;
-        var6 = (qb) (param0);
+        var6 = (Model) (param0);
         var6.e();
         var6.d();
         field_u = field_u + 1;
@@ -1160,7 +1160,7 @@ final class qb extends ll {
         this.field_k = (short)var6;
     }
 
-    private qb(byte[] param0) {
+    private Model(byte[] param0) {
         this.field_z = 0;
         this.field_t = 0;
         this.field_J = 0;

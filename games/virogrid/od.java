@@ -246,7 +246,7 @@ abstract class od extends GameApplet {
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             en.a((String) null, (Throwable) ((Object) var6_ref), 1);
-            this.a(-25296, "crash");
+            this.redirectToErrorPage(-25296, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -284,7 +284,7 @@ abstract class od extends GameApplet {
         if (var2 != 0 &&
           var2 != 1) {
           if (!oc.field_l) {
-            this.a(-25296, "reconnect");
+            this.redirectToErrorPage(-25296, "reconnect");
           }
           ve.c((byte) -105);
           a.a(GameKeyHandler.field_g, var2, false);
@@ -445,19 +445,19 @@ abstract class od extends GameApplet {
             if (nh.field_o != 3) {
               if (nh.field_o != 4) {
                 if (nh.field_o == 2) {
-                  this.a(-25296, "js5connect_full");
+                  this.redirectToErrorPage(-25296, "js5connect_full");
                 } else {
                   if (nh.field_o == 5) {
-                    this.a(-25296, "outofdate");
+                    this.redirectToErrorPage(-25296, "outofdate");
                   } else {
-                    this.a(-25296, "js5connect");
+                    this.redirectToErrorPage(-25296, "js5connect");
                   }
                 }
               } else {
-                this.a(-25296, "js5io");
+                this.redirectToErrorPage(-25296, "js5io");
               }
             } else {
-              this.a(-25296, "js5crc");
+              this.redirectToErrorPage(-25296, "js5crc");
             }
           } else {
             if (j.field_l >= 10) {
@@ -596,7 +596,7 @@ abstract class od extends GameApplet {
         if (!param0 &&
           km.field_Db) {
           af.a((byte) -116, UiWidget.field_v);
-          this.e(21616);
+          this.recreateCanvas(21616);
           nn.a(UiWidget.field_v, (byte) -124);
         }
         if (di.field_r[8]) {

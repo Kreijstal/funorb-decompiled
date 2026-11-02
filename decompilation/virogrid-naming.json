@@ -217,7 +217,7 @@
       "to": "regionExit1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:GameBoard.a(ZIBIIZII)I#0"
+      "renamedSymbol": "B:GameBoard.scoreMove(ZIBIIZII)I#0"
     },
     {
       "symbol": "B:uf.a(ZIBIIZII)I#1",
@@ -225,7 +225,7 @@
       "to": "regionExit2",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:GameBoard.a(ZIBIIZII)I#1"
+      "renamedSymbol": "B:GameBoard.scoreMove(ZIBIIZII)I#1"
     },
     {
       "symbol": "B:uf.a(ZIBIIZII)I#2",
@@ -233,7 +233,7 @@
       "to": "scanLoop3",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:GameBoard.a(ZIBIIZII)I#2"
+      "renamedSymbol": "B:GameBoard.scoreMove(ZIBIIZII)I#2"
     },
     {
       "symbol": "C:cb",
@@ -402,6 +402,14 @@
       "evidence": "Runnable owning a Thread, an EventQueue and a reflection Method for queued platform tasks.",
       "confidence": "reviewed",
       "renamedSymbol": "C:PlatformTaskDispatcher"
+    },
+    {
+      "symbol": "C:qb",
+      "originalName": "qb",
+      "to": "Model",
+      "evidence": "Parsed from archive bytes into short vertex arrays and face arrays for the 3D pipeline.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:Model"
     },
     {
       "symbol": "C:rl",
@@ -820,6 +828,14 @@
       "renamedSymbol": "F:GameBoard.pieceCounts:[I"
     },
     {
+      "symbol": "M:Virogrid.b(Z)V",
+      "originalName": "b",
+      "to": "onCanvasCreated",
+      "evidence": "Called at the end of recreateCanvas after the new canvas is added and sized. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Virogrid.onCanvasCreated(Z)V"
+    },
+    {
       "symbol": "M:Virogrid.c(I)V",
       "originalName": "c",
       "to": "tickGame",
@@ -1124,6 +1140,14 @@
       "renamedSymbol": "M:GameBoard.readCells(LPacketBuffer;B)V"
     },
     {
+      "symbol": "M:uf.a(ZIBIIZII)I",
+      "originalName": "a",
+      "to": "scoreMove",
+      "evidence": "Counts the converted neighbours (plus one for a clone), optionally writes them to the grid, and returns -1 for an invalid move.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameBoard.scoreMove(ZIBIIZII)I"
+    },
+    {
       "symbol": "M:uf.b(I)V",
       "originalName": "b",
       "to": "advanceTurn",
@@ -1172,12 +1196,36 @@
       "renamedSymbol": "M:GameBoard.finishGame(II)V"
     },
     {
+      "symbol": "M:uk.a(BZ)V",
+      "originalName": "a",
+      "to": "terminate",
+      "evidence": "Runs once under a synchronized flag, destroys the loader applet and calls the shutdown hooks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.terminate(BZ)V"
+    },
+    {
+      "symbol": "M:uk.a(ILjava/lang/String;)V",
+      "originalName": "a",
+      "to": "redirectToErrorPage",
+      "evidence": "Shows error_game_<code>.ws; callers pass wrongjava, crash and alreadyloaded.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.redirectToErrorPage(ILjava/lang/String;)V"
+    },
+    {
       "symbol": "M:uk.a(Z)V",
       "originalName": "a",
       "to": "runTick",
       "evidence": "Samples the tick clock into a 32-entry ring and calls tickGame.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameApplet.runTick(Z)V"
+    },
+    {
+      "symbol": "M:uk.b(Z)V",
+      "originalName": "b",
+      "to": "onCanvasCreated",
+      "evidence": "Called at the end of recreateCanvas after the new canvas is added and sized.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.onCanvasCreated(Z)V"
     },
     {
       "symbol": "M:uk.c(I)V",
@@ -1202,6 +1250,14 @@
       "evidence": "Called on the exit path of run before System.exit.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameApplet.shutdown(I)V"
+    },
+    {
+      "symbol": "M:uk.e(I)V",
+      "originalName": "e",
+      "to": "recreateCanvas",
+      "evidence": "Removes the old canvas from its parent, adds a new one of the configured size and then calls onCanvasCreated.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.recreateCanvas(I)V"
     }
   ],
   "symbols": [
@@ -1493,7 +1549,7 @@
     },
     {
       "symbol": "B:uf.a(ZIBIIZII)I#0",
-      "renamedSymbol": "B:GameBoard.a(ZIBIIZII)I#0",
+      "renamedSymbol": "B:GameBoard.scoreMove(ZIBIIZII)I#0",
       "originalName": "L0",
       "renamedName": "regionExit1",
       "declaration": {
@@ -1504,7 +1560,7 @@
     },
     {
       "symbol": "B:uf.a(ZIBIIZII)I#1",
-      "renamedSymbol": "B:GameBoard.a(ZIBIIZII)I#1",
+      "renamedSymbol": "B:GameBoard.scoreMove(ZIBIIZII)I#1",
       "originalName": "L1",
       "renamedName": "regionExit2",
       "declaration": {
@@ -1515,7 +1571,7 @@
     },
     {
       "symbol": "B:uf.a(ZIBIIZII)I#2",
-      "renamedSymbol": "B:GameBoard.a(ZIBIIZII)I#2",
+      "renamedSymbol": "B:GameBoard.scoreMove(ZIBIIZII)I#2",
       "originalName": "L13",
       "renamedName": "scanLoop3",
       "declaration": {
@@ -4221,9 +4277,9 @@
     },
     {
       "symbol": "C:qb",
-      "renamedSymbol": "C:qb",
+      "renamedSymbol": "C:Model",
       "originalName": "qb",
-      "renamedName": "qb",
+      "renamedName": "Model",
       "declaration": {
         "file": "qb.java",
         "start": 50,
@@ -29004,7 +29060,7 @@
     },
     {
       "symbol": "F:qb.field_A:[S",
-      "renamedSymbol": "F:qb.field_A:[S",
+      "renamedSymbol": "F:Model.field_A:[S",
       "originalName": "field_A",
       "renamedName": "field_A",
       "declaration": {
@@ -29015,7 +29071,7 @@
     },
     {
       "symbol": "F:qb.field_B:[B",
-      "renamedSymbol": "F:qb.field_B:[B",
+      "renamedSymbol": "F:Model.field_B:[B",
       "originalName": "field_B",
       "renamedName": "field_B",
       "declaration": {
@@ -29026,7 +29082,7 @@
     },
     {
       "symbol": "F:qb.field_C:[I",
-      "renamedSymbol": "F:qb.field_C:[I",
+      "renamedSymbol": "F:Model.field_C:[I",
       "originalName": "field_C",
       "renamedName": "field_C",
       "declaration": {
@@ -29037,7 +29093,7 @@
     },
     {
       "symbol": "F:qb.field_D:[B",
-      "renamedSymbol": "F:qb.field_D:[B",
+      "renamedSymbol": "F:Model.field_D:[B",
       "originalName": "field_D",
       "renamedName": "field_D",
       "declaration": {
@@ -29048,7 +29104,7 @@
     },
     {
       "symbol": "F:qb.field_E:[S",
-      "renamedSymbol": "F:qb.field_E:[S",
+      "renamedSymbol": "F:Model.field_E:[S",
       "originalName": "field_E",
       "renamedName": "field_E",
       "declaration": {
@@ -29059,7 +29115,7 @@
     },
     {
       "symbol": "F:qb.field_F:S",
-      "renamedSymbol": "F:qb.field_F:S",
+      "renamedSymbol": "F:Model.field_F:S",
       "originalName": "field_F",
       "renamedName": "field_F",
       "declaration": {
@@ -29070,7 +29126,7 @@
     },
     {
       "symbol": "F:qb.field_G:S",
-      "renamedSymbol": "F:qb.field_G:S",
+      "renamedSymbol": "F:Model.field_G:S",
       "originalName": "field_G",
       "renamedName": "field_G",
       "declaration": {
@@ -29081,7 +29137,7 @@
     },
     {
       "symbol": "F:qb.field_H:[I",
-      "renamedSymbol": "F:qb.field_H:[I",
+      "renamedSymbol": "F:Model.field_H:[I",
       "originalName": "field_H",
       "renamedName": "field_H",
       "declaration": {
@@ -29092,7 +29148,7 @@
     },
     {
       "symbol": "F:qb.field_I:[B",
-      "renamedSymbol": "F:qb.field_I:[B",
+      "renamedSymbol": "F:Model.field_I:[B",
       "originalName": "field_I",
       "renamedName": "field_I",
       "declaration": {
@@ -29103,7 +29159,7 @@
     },
     {
       "symbol": "F:qb.field_J:I",
-      "renamedSymbol": "F:qb.field_J:I",
+      "renamedSymbol": "F:Model.field_J:I",
       "originalName": "field_J",
       "renamedName": "field_J",
       "declaration": {
@@ -29114,7 +29170,7 @@
     },
     {
       "symbol": "F:qb.field_K:[I",
-      "renamedSymbol": "F:qb.field_K:[I",
+      "renamedSymbol": "F:Model.field_K:[I",
       "originalName": "field_K",
       "renamedName": "field_K",
       "declaration": {
@@ -29125,7 +29181,7 @@
     },
     {
       "symbol": "F:qb.field_L:[Lpg;",
-      "renamedSymbol": "F:qb.field_L:[Lpg;",
+      "renamedSymbol": "F:Model.field_L:[Lpg;",
       "originalName": "field_L",
       "renamedName": "field_L",
       "declaration": {
@@ -29136,7 +29192,7 @@
     },
     {
       "symbol": "F:qb.field_M:[S",
-      "renamedSymbol": "F:qb.field_M:[S",
+      "renamedSymbol": "F:Model.field_M:[S",
       "originalName": "field_M",
       "renamedName": "field_M",
       "declaration": {
@@ -29147,7 +29203,7 @@
     },
     {
       "symbol": "F:qb.field_N:[B",
-      "renamedSymbol": "F:qb.field_N:[B",
+      "renamedSymbol": "F:Model.field_N:[B",
       "originalName": "field_N",
       "renamedName": "field_N",
       "declaration": {
@@ -29158,7 +29214,7 @@
     },
     {
       "symbol": "F:qb.field_O:[B",
-      "renamedSymbol": "F:qb.field_O:[B",
+      "renamedSymbol": "F:Model.field_O:[B",
       "originalName": "field_O",
       "renamedName": "field_O",
       "declaration": {
@@ -29169,7 +29225,7 @@
     },
     {
       "symbol": "F:qb.field_P:[S",
-      "renamedSymbol": "F:qb.field_P:[S",
+      "renamedSymbol": "F:Model.field_P:[S",
       "originalName": "field_P",
       "renamedName": "field_P",
       "declaration": {
@@ -29180,7 +29236,7 @@
     },
     {
       "symbol": "F:qb.field_Q:[I",
-      "renamedSymbol": "F:qb.field_Q:[I",
+      "renamedSymbol": "F:Model.field_Q:[I",
       "originalName": "field_Q",
       "renamedName": "field_Q",
       "declaration": {
@@ -29191,7 +29247,7 @@
     },
     {
       "symbol": "F:qb.field_R:[[I",
-      "renamedSymbol": "F:qb.field_R:[[I",
+      "renamedSymbol": "F:Model.field_R:[[I",
       "originalName": "field_R",
       "renamedName": "field_R",
       "declaration": {
@@ -29202,7 +29258,7 @@
     },
     {
       "symbol": "F:qb.field_S:S",
-      "renamedSymbol": "F:qb.field_S:S",
+      "renamedSymbol": "F:Model.field_S:S",
       "originalName": "field_S",
       "renamedName": "field_S",
       "declaration": {
@@ -29213,7 +29269,7 @@
     },
     {
       "symbol": "F:qb.field_T:Z",
-      "renamedSymbol": "F:qb.field_T:Z",
+      "renamedSymbol": "F:Model.field_T:Z",
       "originalName": "field_T",
       "renamedName": "field_T",
       "declaration": {
@@ -29224,7 +29280,7 @@
     },
     {
       "symbol": "F:qb.field_U:S",
-      "renamedSymbol": "F:qb.field_U:S",
+      "renamedSymbol": "F:Model.field_U:S",
       "originalName": "field_U",
       "renamedName": "field_U",
       "declaration": {
@@ -29235,7 +29291,7 @@
     },
     {
       "symbol": "F:qb.field_V:[I",
-      "renamedSymbol": "F:qb.field_V:[I",
+      "renamedSymbol": "F:Model.field_V:[I",
       "originalName": "field_V",
       "renamedName": "field_V",
       "declaration": {
@@ -29246,7 +29302,7 @@
     },
     {
       "symbol": "F:qb.field_W:[S",
-      "renamedSymbol": "F:qb.field_W:[S",
+      "renamedSymbol": "F:Model.field_W:[S",
       "originalName": "field_W",
       "renamedName": "field_W",
       "declaration": {
@@ -29257,7 +29313,7 @@
     },
     {
       "symbol": "F:qb.field_e:[I",
-      "renamedSymbol": "F:qb.field_e:[I",
+      "renamedSymbol": "F:Model.field_e:[I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -29268,7 +29324,7 @@
     },
     {
       "symbol": "F:qb.field_f:I",
-      "renamedSymbol": "F:qb.field_f:I",
+      "renamedSymbol": "F:Model.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -29279,7 +29335,7 @@
     },
     {
       "symbol": "F:qb.field_g:[Ls;",
-      "renamedSymbol": "F:qb.field_g:[Ls;",
+      "renamedSymbol": "F:Model.field_g:[Ls;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -29290,7 +29346,7 @@
     },
     {
       "symbol": "F:qb.field_h:S",
-      "renamedSymbol": "F:qb.field_h:S",
+      "renamedSymbol": "F:Model.field_h:S",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -29301,7 +29357,7 @@
     },
     {
       "symbol": "F:qb.field_i:[S",
-      "renamedSymbol": "F:qb.field_i:[S",
+      "renamedSymbol": "F:Model.field_i:[S",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -29312,7 +29368,7 @@
     },
     {
       "symbol": "F:qb.field_j:[B",
-      "renamedSymbol": "F:qb.field_j:[B",
+      "renamedSymbol": "F:Model.field_j:[B",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -29323,7 +29379,7 @@
     },
     {
       "symbol": "F:qb.field_k:S",
-      "renamedSymbol": "F:qb.field_k:S",
+      "renamedSymbol": "F:Model.field_k:S",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -29334,7 +29390,7 @@
     },
     {
       "symbol": "F:qb.field_l:[I",
-      "renamedSymbol": "F:qb.field_l:[I",
+      "renamedSymbol": "F:Model.field_l:[I",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -29345,7 +29401,7 @@
     },
     {
       "symbol": "F:qb.field_m:[B",
-      "renamedSymbol": "F:qb.field_m:[B",
+      "renamedSymbol": "F:Model.field_m:[B",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -29356,7 +29412,7 @@
     },
     {
       "symbol": "F:qb.field_n:[Ls;",
-      "renamedSymbol": "F:qb.field_n:[Ls;",
+      "renamedSymbol": "F:Model.field_n:[Ls;",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -29367,7 +29423,7 @@
     },
     {
       "symbol": "F:qb.field_o:[I",
-      "renamedSymbol": "F:qb.field_o:[I",
+      "renamedSymbol": "F:Model.field_o:[I",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -29378,7 +29434,7 @@
     },
     {
       "symbol": "F:qb.field_p:[S",
-      "renamedSymbol": "F:qb.field_p:[S",
+      "renamedSymbol": "F:Model.field_p:[S",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -29389,7 +29445,7 @@
     },
     {
       "symbol": "F:qb.field_q:[S",
-      "renamedSymbol": "F:qb.field_q:[S",
+      "renamedSymbol": "F:Model.field_q:[S",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -29400,7 +29456,7 @@
     },
     {
       "symbol": "F:qb.field_r:[B",
-      "renamedSymbol": "F:qb.field_r:[B",
+      "renamedSymbol": "F:Model.field_r:[B",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -29411,7 +29467,7 @@
     },
     {
       "symbol": "F:qb.field_s:[B",
-      "renamedSymbol": "F:qb.field_s:[B",
+      "renamedSymbol": "F:Model.field_s:[B",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -29422,7 +29478,7 @@
     },
     {
       "symbol": "F:qb.field_t:I",
-      "renamedSymbol": "F:qb.field_t:I",
+      "renamedSymbol": "F:Model.field_t:I",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -29433,7 +29489,7 @@
     },
     {
       "symbol": "F:qb.field_u:I",
-      "renamedSymbol": "F:qb.field_u:I",
+      "renamedSymbol": "F:Model.field_u:I",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -29444,7 +29500,7 @@
     },
     {
       "symbol": "F:qb.field_v:[I",
-      "renamedSymbol": "F:qb.field_v:[I",
+      "renamedSymbol": "F:Model.field_v:[I",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -29455,7 +29511,7 @@
     },
     {
       "symbol": "F:qb.field_w:[B",
-      "renamedSymbol": "F:qb.field_w:[B",
+      "renamedSymbol": "F:Model.field_w:[B",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -29466,7 +29522,7 @@
     },
     {
       "symbol": "F:qb.field_x:[I",
-      "renamedSymbol": "F:qb.field_x:[I",
+      "renamedSymbol": "F:Model.field_x:[I",
       "originalName": "field_x",
       "renamedName": "field_x",
       "declaration": {
@@ -29477,7 +29533,7 @@
     },
     {
       "symbol": "F:qb.field_y:[[I",
-      "renamedSymbol": "F:qb.field_y:[[I",
+      "renamedSymbol": "F:Model.field_y:[[I",
       "originalName": "field_y",
       "renamedName": "field_y",
       "declaration": {
@@ -29488,7 +29544,7 @@
     },
     {
       "symbol": "F:qb.field_z:I",
-      "renamedSymbol": "F:qb.field_z:I",
+      "renamedSymbol": "F:Model.field_z:I",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -39289,7 +39345,7 @@
     },
     {
       "symbol": "L:Virogrid.a(BLqb;)[I#0",
-      "renamedSymbol": "L:Virogrid.a(BLqb;)[I#0",
+      "renamedSymbol": "L:Virogrid.a(BLModel;)[I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -39300,7 +39356,7 @@
     },
     {
       "symbol": "L:Virogrid.a(BLqb;)[I#1",
-      "renamedSymbol": "L:Virogrid.a(BLqb;)[I#1",
+      "renamedSymbol": "L:Virogrid.a(BLModel;)[I#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -39311,7 +39367,7 @@
     },
     {
       "symbol": "L:Virogrid.a(BLqb;)[I#2",
-      "renamedSymbol": "L:Virogrid.a(BLqb;)[I#2",
+      "renamedSymbol": "L:Virogrid.a(BLModel;)[I#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -39322,7 +39378,7 @@
     },
     {
       "symbol": "L:Virogrid.a(BLqb;)[I#3",
-      "renamedSymbol": "L:Virogrid.a(BLqb;)[I#3",
+      "renamedSymbol": "L:Virogrid.a(BLModel;)[I#3",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -39333,7 +39389,7 @@
     },
     {
       "symbol": "L:Virogrid.a(BLqb;)[I#4",
-      "renamedSymbol": "L:Virogrid.a(BLqb;)[I#4",
+      "renamedSymbol": "L:Virogrid.a(BLModel;)[I#4",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -39344,7 +39400,7 @@
     },
     {
       "symbol": "L:Virogrid.a(BLqb;)[I#5",
-      "renamedSymbol": "L:Virogrid.a(BLqb;)[I#5",
+      "renamedSymbol": "L:Virogrid.a(BLModel;)[I#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -39355,7 +39411,7 @@
     },
     {
       "symbol": "L:Virogrid.a(BLqb;)[I#6",
-      "renamedSymbol": "L:Virogrid.a(BLqb;)[I#6",
+      "renamedSymbol": "L:Virogrid.a(BLModel;)[I#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -40180,7 +40236,7 @@
     },
     {
       "symbol": "L:Virogrid.a(Lqb;B)V#0",
-      "renamedSymbol": "L:Virogrid.a(Lqb;B)V#0",
+      "renamedSymbol": "L:Virogrid.a(LModel;B)V#0",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -40191,7 +40247,7 @@
     },
     {
       "symbol": "L:Virogrid.a(Lqb;B)V#1",
-      "renamedSymbol": "L:Virogrid.a(Lqb;B)V#1",
+      "renamedSymbol": "L:Virogrid.a(LModel;B)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -40202,7 +40258,7 @@
     },
     {
       "symbol": "L:Virogrid.a(Lqb;B)V#2",
-      "renamedSymbol": "L:Virogrid.a(Lqb;B)V#2",
+      "renamedSymbol": "L:Virogrid.a(LModel;B)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -40213,7 +40269,7 @@
     },
     {
       "symbol": "L:Virogrid.a(Lqb;B)V#3",
-      "renamedSymbol": "L:Virogrid.a(Lqb;B)V#3",
+      "renamedSymbol": "L:Virogrid.a(LModel;B)V#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -40224,7 +40280,7 @@
     },
     {
       "symbol": "L:Virogrid.a(Lqb;B)V#4",
-      "renamedSymbol": "L:Virogrid.a(Lqb;B)V#4",
+      "renamedSymbol": "L:Virogrid.a(LModel;B)V#4",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -40235,7 +40291,7 @@
     },
     {
       "symbol": "L:Virogrid.a(Lqb;B)V#5",
-      "renamedSymbol": "L:Virogrid.a(Lqb;B)V#5",
+      "renamedSymbol": "L:Virogrid.a(LModel;B)V#5",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -40246,7 +40302,7 @@
     },
     {
       "symbol": "L:Virogrid.a(Lqb;B)V#6",
-      "renamedSymbol": "L:Virogrid.a(Lqb;B)V#6",
+      "renamedSymbol": "L:Virogrid.a(LModel;B)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -40257,7 +40313,7 @@
     },
     {
       "symbol": "L:Virogrid.a(Lqb;B)V#7",
-      "renamedSymbol": "L:Virogrid.a(Lqb;B)V#7",
+      "renamedSymbol": "L:Virogrid.a(LModel;B)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -40587,7 +40643,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#0",
-      "renamedSymbol": "L:Virogrid.b(Z)V#0",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -40598,7 +40654,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#1",
-      "renamedSymbol": "L:Virogrid.b(Z)V#1",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#1",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -40609,7 +40665,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#10",
-      "renamedSymbol": "L:Virogrid.b(Z)V#10",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#10",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -40620,7 +40676,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#11",
-      "renamedSymbol": "L:Virogrid.b(Z)V#11",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#11",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -40631,7 +40687,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#12",
-      "renamedSymbol": "L:Virogrid.b(Z)V#12",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#12",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -40642,7 +40698,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#13",
-      "renamedSymbol": "L:Virogrid.b(Z)V#13",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#13",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -40653,7 +40709,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#14",
-      "renamedSymbol": "L:Virogrid.b(Z)V#14",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -40664,7 +40720,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#2",
-      "renamedSymbol": "L:Virogrid.b(Z)V#2",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#2",
       "originalName": "stackIn_61_0",
       "renamedName": "stackIn_61_0",
       "declaration": {
@@ -40675,7 +40731,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#3",
-      "renamedSymbol": "L:Virogrid.b(Z)V#3",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#3",
       "originalName": "stackIn_66_0",
       "renamedName": "stackIn_66_0",
       "declaration": {
@@ -40686,7 +40742,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#4",
-      "renamedSymbol": "L:Virogrid.b(Z)V#4",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -40697,7 +40753,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#5",
-      "renamedSymbol": "L:Virogrid.b(Z)V#5",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#5",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -40708,7 +40764,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#6",
-      "renamedSymbol": "L:Virogrid.b(Z)V#6",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#6",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -40719,7 +40775,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#7",
-      "renamedSymbol": "L:Virogrid.b(Z)V#7",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -40730,7 +40786,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#8",
-      "renamedSymbol": "L:Virogrid.b(Z)V#8",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -40741,7 +40797,7 @@
     },
     {
       "symbol": "L:Virogrid.b(Z)V#9",
-      "renamedSymbol": "L:Virogrid.b(Z)V#9",
+      "renamedSymbol": "L:Virogrid.onCanvasCreated(Z)V#9",
       "originalName": "var4_ref_hj",
       "renamedName": "var4_ref_hj",
       "declaration": {
@@ -105729,7 +105785,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#0",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#0",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#0",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -105740,7 +105796,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#1",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#1",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#1",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -105751,7 +105807,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#10",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#10",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#10",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -105762,7 +105818,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#11",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#11",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#11",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -105773,7 +105829,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#12",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#12",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#12",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -105784,7 +105840,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#13",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#13",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#13",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -105795,7 +105851,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#14",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#14",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#14",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -105806,7 +105862,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#15",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#15",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#15",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -105817,7 +105873,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#16",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#16",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#16",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -105828,7 +105884,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#17",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#17",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#17",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -105839,7 +105895,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#18",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#18",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#18",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -105850,7 +105906,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#19",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#19",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#19",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -105861,7 +105917,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#2",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#2",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -105872,7 +105928,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#20",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#20",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#20",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -105883,7 +105939,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#21",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#21",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#21",
       "originalName": "var11Lifetime2",
       "renamedName": "var11Lifetime2",
       "declaration": {
@@ -105894,7 +105950,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#22",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#22",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#22",
       "originalName": "var10Lifetime1Lifetime1",
       "renamedName": "var10Lifetime1Lifetime1",
       "declaration": {
@@ -105905,7 +105961,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#23",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#23",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#23",
       "originalName": "var10Lifetime1Lifetime2",
       "renamedName": "var10Lifetime1Lifetime2",
       "declaration": {
@@ -105916,7 +105972,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#3",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#3",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -105927,7 +105983,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#4",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#4",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -105938,7 +105994,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#5",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#5",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#5",
       "originalName": "var9_ref_int__",
       "renamedName": "var9_ref_int__",
       "declaration": {
@@ -105949,7 +106005,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#6",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#6",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -105960,7 +106016,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#7",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#7",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#7",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -105971,7 +106027,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#8",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#8",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#8",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -105982,7 +106038,7 @@
     },
     {
       "symbol": "L:il.<init>(Lqb;IIIII)V#9",
-      "renamedSymbol": "L:il.<init>(Lqb;IIIII)V#9",
+      "renamedSymbol": "L:il.<init>(LModel;IIIII)V#9",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -158837,7 +158893,7 @@
     },
     {
       "symbol": "L:qb.a()V#0",
-      "renamedSymbol": "L:qb.a()V#0",
+      "renamedSymbol": "L:Model.a()V#0",
       "originalName": "array$2",
       "renamedName": "array$2",
       "declaration": {
@@ -158848,7 +158904,7 @@
     },
     {
       "symbol": "L:qb.a()V#1",
-      "renamedSymbol": "L:qb.a()V#1",
+      "renamedSymbol": "L:Model.a()V#1",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -158859,7 +158915,7 @@
     },
     {
       "symbol": "L:qb.a()V#10",
-      "renamedSymbol": "L:qb.a()V#10",
+      "renamedSymbol": "L:Model.a()V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -158870,7 +158926,7 @@
     },
     {
       "symbol": "L:qb.a()V#11",
-      "renamedSymbol": "L:qb.a()V#11",
+      "renamedSymbol": "L:Model.a()V#11",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -158881,7 +158937,7 @@
     },
     {
       "symbol": "L:qb.a()V#12",
-      "renamedSymbol": "L:qb.a()V#12",
+      "renamedSymbol": "L:Model.a()V#12",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -158892,7 +158948,7 @@
     },
     {
       "symbol": "L:qb.a()V#13",
-      "renamedSymbol": "L:qb.a()V#13",
+      "renamedSymbol": "L:Model.a()V#13",
       "originalName": "var4Lifetime1Lifetime1",
       "renamedName": "var4Lifetime1Lifetime1",
       "declaration": {
@@ -158903,7 +158959,7 @@
     },
     {
       "symbol": "L:qb.a()V#14",
-      "renamedSymbol": "L:qb.a()V#14",
+      "renamedSymbol": "L:Model.a()V#14",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -158914,7 +158970,7 @@
     },
     {
       "symbol": "L:qb.a()V#15",
-      "renamedSymbol": "L:qb.a()V#15",
+      "renamedSymbol": "L:Model.a()V#15",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -158925,7 +158981,7 @@
     },
     {
       "symbol": "L:qb.a()V#2",
-      "renamedSymbol": "L:qb.a()V#2",
+      "renamedSymbol": "L:Model.a()V#2",
       "originalName": "arrayValue$1",
       "renamedName": "arrayValue$1",
       "declaration": {
@@ -158936,7 +158992,7 @@
     },
     {
       "symbol": "L:qb.a()V#3",
-      "renamedSymbol": "L:qb.a()V#3",
+      "renamedSymbol": "L:Model.a()V#3",
       "originalName": "array$5",
       "renamedName": "array$5",
       "declaration": {
@@ -158947,7 +159003,7 @@
     },
     {
       "symbol": "L:qb.a()V#4",
-      "renamedSymbol": "L:qb.a()V#4",
+      "renamedSymbol": "L:Model.a()V#4",
       "originalName": "dupTemp$3",
       "renamedName": "dupTemp$3",
       "declaration": {
@@ -158958,7 +159014,7 @@
     },
     {
       "symbol": "L:qb.a()V#5",
-      "renamedSymbol": "L:qb.a()V#5",
+      "renamedSymbol": "L:Model.a()V#5",
       "originalName": "arrayValue$4",
       "renamedName": "arrayValue$4",
       "declaration": {
@@ -158969,7 +159025,7 @@
     },
     {
       "symbol": "L:qb.a()V#6",
-      "renamedSymbol": "L:qb.a()V#6",
+      "renamedSymbol": "L:Model.a()V#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -158980,7 +159036,7 @@
     },
     {
       "symbol": "L:qb.a()V#7",
-      "renamedSymbol": "L:qb.a()V#7",
+      "renamedSymbol": "L:Model.a()V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -158991,7 +159047,7 @@
     },
     {
       "symbol": "L:qb.a()V#8",
-      "renamedSymbol": "L:qb.a()V#8",
+      "renamedSymbol": "L:Model.a()V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -159002,7 +159058,7 @@
     },
     {
       "symbol": "L:qb.a()V#9",
-      "renamedSymbol": "L:qb.a()V#9",
+      "renamedSymbol": "L:Model.a()V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -159013,7 +159069,7 @@
     },
     {
       "symbol": "L:qb.a(III)V#0",
-      "renamedSymbol": "L:qb.a(III)V#0",
+      "renamedSymbol": "L:Model.a(III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -159024,7 +159080,7 @@
     },
     {
       "symbol": "L:qb.a(IIII)V#0",
-      "renamedSymbol": "L:qb.a(IIII)V#0",
+      "renamedSymbol": "L:Model.a(IIII)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -159035,7 +159091,7 @@
     },
     {
       "symbol": "L:qb.a(Leh;Ljava/lang/String;Ljava/lang/String;)Lqb;#0",
-      "renamedSymbol": "L:qb.a(LJs5Archive;Ljava/lang/String;Ljava/lang/String;)Lqb;#0",
+      "renamedSymbol": "L:Model.a(LJs5Archive;Ljava/lang/String;Ljava/lang/String;)LModel;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -159046,7 +159102,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#0",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#0",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#0",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -159057,7 +159113,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#1",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#1",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#1",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -159068,7 +159124,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#10",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#10",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#10",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -159079,7 +159135,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#11",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#11",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#11",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -159090,7 +159146,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#12",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#12",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#12",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -159101,7 +159157,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#13",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#13",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#13",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -159112,7 +159168,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#14",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#14",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#14",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -159123,7 +159179,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#15",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#15",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#15",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -159134,7 +159190,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#16",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#16",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#16",
       "originalName": "var10Lifetime1Lifetime1",
       "renamedName": "var10Lifetime1Lifetime1",
       "declaration": {
@@ -159145,7 +159201,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#17",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#17",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#17",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -159156,7 +159212,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#18",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#18",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#18",
       "originalName": "var16Lifetime2",
       "renamedName": "var16Lifetime2",
       "declaration": {
@@ -159167,7 +159223,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#2",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#2",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#2",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -159178,7 +159234,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#3",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#3",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -159189,7 +159245,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#4",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#4",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -159200,7 +159256,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#5",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#5",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -159211,7 +159267,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#6",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#6",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -159222,7 +159278,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#7",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#7",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#7",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -159233,7 +159289,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#8",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#8",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#8",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -159244,7 +159300,7 @@
     },
     {
       "symbol": "L:qb.a(Lll;IIIZ)V#9",
-      "renamedSymbol": "L:qb.a(Lll;IIIZ)V#9",
+      "renamedSymbol": "L:Model.a(Lll;IIIZ)V#9",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -159255,7 +159311,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#0",
-      "renamedSymbol": "L:qb.a([B)V#0",
+      "renamedSymbol": "L:Model.a([B)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -159266,7 +159322,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#1",
-      "renamedSymbol": "L:qb.a([B)V#1",
+      "renamedSymbol": "L:Model.a([B)V#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -159277,7 +159333,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#10",
-      "renamedSymbol": "L:qb.a([B)V#10",
+      "renamedSymbol": "L:Model.a([B)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -159288,7 +159344,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#11",
-      "renamedSymbol": "L:qb.a([B)V#11",
+      "renamedSymbol": "L:Model.a([B)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -159299,7 +159355,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#12",
-      "renamedSymbol": "L:qb.a([B)V#12",
+      "renamedSymbol": "L:Model.a([B)V#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -159310,7 +159366,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#13",
-      "renamedSymbol": "L:qb.a([B)V#13",
+      "renamedSymbol": "L:Model.a([B)V#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -159321,7 +159377,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#14",
-      "renamedSymbol": "L:qb.a([B)V#14",
+      "renamedSymbol": "L:Model.a([B)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -159332,7 +159388,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#15",
-      "renamedSymbol": "L:qb.a([B)V#15",
+      "renamedSymbol": "L:Model.a([B)V#15",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -159343,7 +159399,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#16",
-      "renamedSymbol": "L:qb.a([B)V#16",
+      "renamedSymbol": "L:Model.a([B)V#16",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -159354,7 +159410,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#17",
-      "renamedSymbol": "L:qb.a([B)V#17",
+      "renamedSymbol": "L:Model.a([B)V#17",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -159365,7 +159421,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#18",
-      "renamedSymbol": "L:qb.a([B)V#18",
+      "renamedSymbol": "L:Model.a([B)V#18",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -159376,7 +159432,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#19",
-      "renamedSymbol": "L:qb.a([B)V#19",
+      "renamedSymbol": "L:Model.a([B)V#19",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -159387,7 +159443,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#2",
-      "renamedSymbol": "L:qb.a([B)V#2",
+      "renamedSymbol": "L:Model.a([B)V#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -159398,7 +159454,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#20",
-      "renamedSymbol": "L:qb.a([B)V#20",
+      "renamedSymbol": "L:Model.a([B)V#20",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -159409,7 +159465,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#21",
-      "renamedSymbol": "L:qb.a([B)V#21",
+      "renamedSymbol": "L:Model.a([B)V#21",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -159420,7 +159476,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#22",
-      "renamedSymbol": "L:qb.a([B)V#22",
+      "renamedSymbol": "L:Model.a([B)V#22",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -159431,7 +159487,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#23",
-      "renamedSymbol": "L:qb.a([B)V#23",
+      "renamedSymbol": "L:Model.a([B)V#23",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -159442,7 +159498,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#24",
-      "renamedSymbol": "L:qb.a([B)V#24",
+      "renamedSymbol": "L:Model.a([B)V#24",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -159453,7 +159509,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#25",
-      "renamedSymbol": "L:qb.a([B)V#25",
+      "renamedSymbol": "L:Model.a([B)V#25",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -159464,7 +159520,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#26",
-      "renamedSymbol": "L:qb.a([B)V#26",
+      "renamedSymbol": "L:Model.a([B)V#26",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -159475,7 +159531,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#27",
-      "renamedSymbol": "L:qb.a([B)V#27",
+      "renamedSymbol": "L:Model.a([B)V#27",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -159486,7 +159542,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#28",
-      "renamedSymbol": "L:qb.a([B)V#28",
+      "renamedSymbol": "L:Model.a([B)V#28",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -159497,7 +159553,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#29",
-      "renamedSymbol": "L:qb.a([B)V#29",
+      "renamedSymbol": "L:Model.a([B)V#29",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -159508,7 +159564,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#3",
-      "renamedSymbol": "L:qb.a([B)V#3",
+      "renamedSymbol": "L:Model.a([B)V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -159519,7 +159575,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#30",
-      "renamedSymbol": "L:qb.a([B)V#30",
+      "renamedSymbol": "L:Model.a([B)V#30",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -159530,7 +159586,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#31",
-      "renamedSymbol": "L:qb.a([B)V#31",
+      "renamedSymbol": "L:Model.a([B)V#31",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -159541,7 +159597,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#32",
-      "renamedSymbol": "L:qb.a([B)V#32",
+      "renamedSymbol": "L:Model.a([B)V#32",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -159552,7 +159608,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#33",
-      "renamedSymbol": "L:qb.a([B)V#33",
+      "renamedSymbol": "L:Model.a([B)V#33",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -159563,7 +159619,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#34",
-      "renamedSymbol": "L:qb.a([B)V#34",
+      "renamedSymbol": "L:Model.a([B)V#34",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -159574,7 +159630,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#35",
-      "renamedSymbol": "L:qb.a([B)V#35",
+      "renamedSymbol": "L:Model.a([B)V#35",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -159585,7 +159641,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#36",
-      "renamedSymbol": "L:qb.a([B)V#36",
+      "renamedSymbol": "L:Model.a([B)V#36",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -159596,7 +159652,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#37",
-      "renamedSymbol": "L:qb.a([B)V#37",
+      "renamedSymbol": "L:Model.a([B)V#37",
       "originalName": "var36",
       "renamedName": "var36",
       "declaration": {
@@ -159607,7 +159663,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#38",
-      "renamedSymbol": "L:qb.a([B)V#38",
+      "renamedSymbol": "L:Model.a([B)V#38",
       "originalName": "var37",
       "renamedName": "var37",
       "declaration": {
@@ -159618,7 +159674,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#39",
-      "renamedSymbol": "L:qb.a([B)V#39",
+      "renamedSymbol": "L:Model.a([B)V#39",
       "originalName": "var38",
       "renamedName": "var38",
       "declaration": {
@@ -159629,7 +159685,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#4",
-      "renamedSymbol": "L:qb.a([B)V#4",
+      "renamedSymbol": "L:Model.a([B)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -159640,7 +159696,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#40",
-      "renamedSymbol": "L:qb.a([B)V#40",
+      "renamedSymbol": "L:Model.a([B)V#40",
       "originalName": "var39",
       "renamedName": "var39",
       "declaration": {
@@ -159651,7 +159707,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#41",
-      "renamedSymbol": "L:qb.a([B)V#41",
+      "renamedSymbol": "L:Model.a([B)V#41",
       "originalName": "var40",
       "renamedName": "var40",
       "declaration": {
@@ -159662,7 +159718,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#42",
-      "renamedSymbol": "L:qb.a([B)V#42",
+      "renamedSymbol": "L:Model.a([B)V#42",
       "originalName": "var41",
       "renamedName": "var41",
       "declaration": {
@@ -159673,7 +159729,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#43",
-      "renamedSymbol": "L:qb.a([B)V#43",
+      "renamedSymbol": "L:Model.a([B)V#43",
       "originalName": "var42",
       "renamedName": "var42",
       "declaration": {
@@ -159684,7 +159740,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#44",
-      "renamedSymbol": "L:qb.a([B)V#44",
+      "renamedSymbol": "L:Model.a([B)V#44",
       "originalName": "var43",
       "renamedName": "var43",
       "declaration": {
@@ -159695,7 +159751,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#45",
-      "renamedSymbol": "L:qb.a([B)V#45",
+      "renamedSymbol": "L:Model.a([B)V#45",
       "originalName": "var44",
       "renamedName": "var44",
       "declaration": {
@@ -159706,7 +159762,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#46",
-      "renamedSymbol": "L:qb.a([B)V#46",
+      "renamedSymbol": "L:Model.a([B)V#46",
       "originalName": "var45",
       "renamedName": "var45",
       "declaration": {
@@ -159717,7 +159773,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#47",
-      "renamedSymbol": "L:qb.a([B)V#47",
+      "renamedSymbol": "L:Model.a([B)V#47",
       "originalName": "var46",
       "renamedName": "var46",
       "declaration": {
@@ -159728,7 +159784,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#48",
-      "renamedSymbol": "L:qb.a([B)V#48",
+      "renamedSymbol": "L:Model.a([B)V#48",
       "originalName": "var47",
       "renamedName": "var47",
       "declaration": {
@@ -159739,7 +159795,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#49",
-      "renamedSymbol": "L:qb.a([B)V#49",
+      "renamedSymbol": "L:Model.a([B)V#49",
       "originalName": "var48",
       "renamedName": "var48",
       "declaration": {
@@ -159750,7 +159806,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#5",
-      "renamedSymbol": "L:qb.a([B)V#5",
+      "renamedSymbol": "L:Model.a([B)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -159761,7 +159817,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#50",
-      "renamedSymbol": "L:qb.a([B)V#50",
+      "renamedSymbol": "L:Model.a([B)V#50",
       "originalName": "var49",
       "renamedName": "var49",
       "declaration": {
@@ -159772,7 +159828,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#51",
-      "renamedSymbol": "L:qb.a([B)V#51",
+      "renamedSymbol": "L:Model.a([B)V#51",
       "originalName": "var50",
       "renamedName": "var50",
       "declaration": {
@@ -159783,7 +159839,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#52",
-      "renamedSymbol": "L:qb.a([B)V#52",
+      "renamedSymbol": "L:Model.a([B)V#52",
       "originalName": "var51",
       "renamedName": "var51",
       "declaration": {
@@ -159794,7 +159850,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#53",
-      "renamedSymbol": "L:qb.a([B)V#53",
+      "renamedSymbol": "L:Model.a([B)V#53",
       "originalName": "var52",
       "renamedName": "var52",
       "declaration": {
@@ -159805,7 +159861,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#54",
-      "renamedSymbol": "L:qb.a([B)V#54",
+      "renamedSymbol": "L:Model.a([B)V#54",
       "originalName": "var53",
       "renamedName": "var53",
       "declaration": {
@@ -159816,7 +159872,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#55",
-      "renamedSymbol": "L:qb.a([B)V#55",
+      "renamedSymbol": "L:Model.a([B)V#55",
       "originalName": "var54",
       "renamedName": "var54",
       "declaration": {
@@ -159827,7 +159883,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#56",
-      "renamedSymbol": "L:qb.a([B)V#56",
+      "renamedSymbol": "L:Model.a([B)V#56",
       "originalName": "var55",
       "renamedName": "var55",
       "declaration": {
@@ -159838,7 +159894,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#57",
-      "renamedSymbol": "L:qb.a([B)V#57",
+      "renamedSymbol": "L:Model.a([B)V#57",
       "originalName": "var56",
       "renamedName": "var56",
       "declaration": {
@@ -159849,7 +159905,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#58",
-      "renamedSymbol": "L:qb.a([B)V#58",
+      "renamedSymbol": "L:Model.a([B)V#58",
       "originalName": "var57",
       "renamedName": "var57",
       "declaration": {
@@ -159860,7 +159916,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#59",
-      "renamedSymbol": "L:qb.a([B)V#59",
+      "renamedSymbol": "L:Model.a([B)V#59",
       "originalName": "var58",
       "renamedName": "var58",
       "declaration": {
@@ -159871,7 +159927,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#6",
-      "renamedSymbol": "L:qb.a([B)V#6",
+      "renamedSymbol": "L:Model.a([B)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -159882,7 +159938,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#60",
-      "renamedSymbol": "L:qb.a([B)V#60",
+      "renamedSymbol": "L:Model.a([B)V#60",
       "originalName": "var59",
       "renamedName": "var59",
       "declaration": {
@@ -159893,7 +159949,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#61",
-      "renamedSymbol": "L:qb.a([B)V#61",
+      "renamedSymbol": "L:Model.a([B)V#61",
       "originalName": "var28Lifetime1",
       "renamedName": "var28Lifetime1",
       "declaration": {
@@ -159904,7 +159960,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#62",
-      "renamedSymbol": "L:qb.a([B)V#62",
+      "renamedSymbol": "L:Model.a([B)V#62",
       "originalName": "var29Lifetime1",
       "renamedName": "var29Lifetime1",
       "declaration": {
@@ -159915,7 +159971,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#63",
-      "renamedSymbol": "L:qb.a([B)V#63",
+      "renamedSymbol": "L:Model.a([B)V#63",
       "originalName": "var53Lifetime1",
       "renamedName": "var53Lifetime1",
       "declaration": {
@@ -159926,7 +159982,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#64",
-      "renamedSymbol": "L:qb.a([B)V#64",
+      "renamedSymbol": "L:Model.a([B)V#64",
       "originalName": "var53Lifetime2",
       "renamedName": "var53Lifetime2",
       "declaration": {
@@ -159937,7 +159993,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#65",
-      "renamedSymbol": "L:qb.a([B)V#65",
+      "renamedSymbol": "L:Model.a([B)V#65",
       "originalName": "var54Lifetime1",
       "renamedName": "var54Lifetime1",
       "declaration": {
@@ -159948,7 +160004,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#66",
-      "renamedSymbol": "L:qb.a([B)V#66",
+      "renamedSymbol": "L:Model.a([B)V#66",
       "originalName": "var55Lifetime1",
       "renamedName": "var55Lifetime1",
       "declaration": {
@@ -159959,7 +160015,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#67",
-      "renamedSymbol": "L:qb.a([B)V#67",
+      "renamedSymbol": "L:Model.a([B)V#67",
       "originalName": "var56Lifetime1",
       "renamedName": "var56Lifetime1",
       "declaration": {
@@ -159970,7 +160026,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#68",
-      "renamedSymbol": "L:qb.a([B)V#68",
+      "renamedSymbol": "L:Model.a([B)V#68",
       "originalName": "var57Lifetime1",
       "renamedName": "var57Lifetime1",
       "declaration": {
@@ -159981,7 +160037,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#69",
-      "renamedSymbol": "L:qb.a([B)V#69",
+      "renamedSymbol": "L:Model.a([B)V#69",
       "originalName": "var57Lifetime2",
       "renamedName": "var57Lifetime2",
       "declaration": {
@@ -159992,7 +160048,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#7",
-      "renamedSymbol": "L:qb.a([B)V#7",
+      "renamedSymbol": "L:Model.a([B)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -160003,7 +160059,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#70",
-      "renamedSymbol": "L:qb.a([B)V#70",
+      "renamedSymbol": "L:Model.a([B)V#70",
       "originalName": "var57Lifetime3",
       "renamedName": "var57Lifetime3",
       "declaration": {
@@ -160014,7 +160070,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#71",
-      "renamedSymbol": "L:qb.a([B)V#71",
+      "renamedSymbol": "L:Model.a([B)V#71",
       "originalName": "var58Lifetime1",
       "renamedName": "var58Lifetime1",
       "declaration": {
@@ -160025,7 +160081,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#72",
-      "renamedSymbol": "L:qb.a([B)V#72",
+      "renamedSymbol": "L:Model.a([B)V#72",
       "originalName": "var58Lifetime2",
       "renamedName": "var58Lifetime2",
       "declaration": {
@@ -160036,7 +160092,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#8",
-      "renamedSymbol": "L:qb.a([B)V#8",
+      "renamedSymbol": "L:Model.a([B)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -160047,7 +160103,7 @@
     },
     {
       "symbol": "L:qb.a([B)V#9",
-      "renamedSymbol": "L:qb.a([B)V#9",
+      "renamedSymbol": "L:Model.a([B)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -160058,7 +160114,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#0",
-      "renamedSymbol": "L:qb.b([B)V#0",
+      "renamedSymbol": "L:Model.b([B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -160069,7 +160125,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#1",
-      "renamedSymbol": "L:qb.b([B)V#1",
+      "renamedSymbol": "L:Model.b([B)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -160080,7 +160136,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#10",
-      "renamedSymbol": "L:qb.b([B)V#10",
+      "renamedSymbol": "L:Model.b([B)V#10",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -160091,7 +160147,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#11",
-      "renamedSymbol": "L:qb.b([B)V#11",
+      "renamedSymbol": "L:Model.b([B)V#11",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -160102,7 +160158,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#12",
-      "renamedSymbol": "L:qb.b([B)V#12",
+      "renamedSymbol": "L:Model.b([B)V#12",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -160113,7 +160169,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#13",
-      "renamedSymbol": "L:qb.b([B)V#13",
+      "renamedSymbol": "L:Model.b([B)V#13",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -160124,7 +160180,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#14",
-      "renamedSymbol": "L:qb.b([B)V#14",
+      "renamedSymbol": "L:Model.b([B)V#14",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -160135,7 +160191,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#15",
-      "renamedSymbol": "L:qb.b([B)V#15",
+      "renamedSymbol": "L:Model.b([B)V#15",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -160146,7 +160202,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#16",
-      "renamedSymbol": "L:qb.b([B)V#16",
+      "renamedSymbol": "L:Model.b([B)V#16",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -160157,7 +160213,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#17",
-      "renamedSymbol": "L:qb.b([B)V#17",
+      "renamedSymbol": "L:Model.b([B)V#17",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -160168,7 +160224,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#18",
-      "renamedSymbol": "L:qb.b([B)V#18",
+      "renamedSymbol": "L:Model.b([B)V#18",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -160179,7 +160235,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#19",
-      "renamedSymbol": "L:qb.b([B)V#19",
+      "renamedSymbol": "L:Model.b([B)V#19",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -160190,7 +160246,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#2",
-      "renamedSymbol": "L:qb.b([B)V#2",
+      "renamedSymbol": "L:Model.b([B)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -160201,7 +160257,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#20",
-      "renamedSymbol": "L:qb.b([B)V#20",
+      "renamedSymbol": "L:Model.b([B)V#20",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -160212,7 +160268,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#21",
-      "renamedSymbol": "L:qb.b([B)V#21",
+      "renamedSymbol": "L:Model.b([B)V#21",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -160223,7 +160279,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#22",
-      "renamedSymbol": "L:qb.b([B)V#22",
+      "renamedSymbol": "L:Model.b([B)V#22",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -160234,7 +160290,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#23",
-      "renamedSymbol": "L:qb.b([B)V#23",
+      "renamedSymbol": "L:Model.b([B)V#23",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -160245,7 +160301,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#24",
-      "renamedSymbol": "L:qb.b([B)V#24",
+      "renamedSymbol": "L:Model.b([B)V#24",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -160256,7 +160312,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#25",
-      "renamedSymbol": "L:qb.b([B)V#25",
+      "renamedSymbol": "L:Model.b([B)V#25",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -160267,7 +160323,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#26",
-      "renamedSymbol": "L:qb.b([B)V#26",
+      "renamedSymbol": "L:Model.b([B)V#26",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -160278,7 +160334,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#27",
-      "renamedSymbol": "L:qb.b([B)V#27",
+      "renamedSymbol": "L:Model.b([B)V#27",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -160289,7 +160345,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#28",
-      "renamedSymbol": "L:qb.b([B)V#28",
+      "renamedSymbol": "L:Model.b([B)V#28",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -160300,7 +160356,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#29",
-      "renamedSymbol": "L:qb.b([B)V#29",
+      "renamedSymbol": "L:Model.b([B)V#29",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -160311,7 +160367,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#3",
-      "renamedSymbol": "L:qb.b([B)V#3",
+      "renamedSymbol": "L:Model.b([B)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -160322,7 +160378,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#30",
-      "renamedSymbol": "L:qb.b([B)V#30",
+      "renamedSymbol": "L:Model.b([B)V#30",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -160333,7 +160389,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#31",
-      "renamedSymbol": "L:qb.b([B)V#31",
+      "renamedSymbol": "L:Model.b([B)V#31",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -160344,7 +160400,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#32",
-      "renamedSymbol": "L:qb.b([B)V#32",
+      "renamedSymbol": "L:Model.b([B)V#32",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -160355,7 +160411,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#33",
-      "renamedSymbol": "L:qb.b([B)V#33",
+      "renamedSymbol": "L:Model.b([B)V#33",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -160366,7 +160422,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#34",
-      "renamedSymbol": "L:qb.b([B)V#34",
+      "renamedSymbol": "L:Model.b([B)V#34",
       "originalName": "var36",
       "renamedName": "var36",
       "declaration": {
@@ -160377,7 +160433,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#35",
-      "renamedSymbol": "L:qb.b([B)V#35",
+      "renamedSymbol": "L:Model.b([B)V#35",
       "originalName": "var37",
       "renamedName": "var37",
       "declaration": {
@@ -160388,7 +160444,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#36",
-      "renamedSymbol": "L:qb.b([B)V#36",
+      "renamedSymbol": "L:Model.b([B)V#36",
       "originalName": "var38",
       "renamedName": "var38",
       "declaration": {
@@ -160399,7 +160455,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#37",
-      "renamedSymbol": "L:qb.b([B)V#37",
+      "renamedSymbol": "L:Model.b([B)V#37",
       "originalName": "var39",
       "renamedName": "var39",
       "declaration": {
@@ -160410,7 +160466,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#38",
-      "renamedSymbol": "L:qb.b([B)V#38",
+      "renamedSymbol": "L:Model.b([B)V#38",
       "originalName": "var40",
       "renamedName": "var40",
       "declaration": {
@@ -160421,7 +160477,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#39",
-      "renamedSymbol": "L:qb.b([B)V#39",
+      "renamedSymbol": "L:Model.b([B)V#39",
       "originalName": "var41",
       "renamedName": "var41",
       "declaration": {
@@ -160432,7 +160488,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#4",
-      "renamedSymbol": "L:qb.b([B)V#4",
+      "renamedSymbol": "L:Model.b([B)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -160443,7 +160499,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#40",
-      "renamedSymbol": "L:qb.b([B)V#40",
+      "renamedSymbol": "L:Model.b([B)V#40",
       "originalName": "var42",
       "renamedName": "var42",
       "declaration": {
@@ -160454,7 +160510,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#41",
-      "renamedSymbol": "L:qb.b([B)V#41",
+      "renamedSymbol": "L:Model.b([B)V#41",
       "originalName": "var43",
       "renamedName": "var43",
       "declaration": {
@@ -160465,7 +160521,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#42",
-      "renamedSymbol": "L:qb.b([B)V#42",
+      "renamedSymbol": "L:Model.b([B)V#42",
       "originalName": "var44",
       "renamedName": "var44",
       "declaration": {
@@ -160476,7 +160532,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#43",
-      "renamedSymbol": "L:qb.b([B)V#43",
+      "renamedSymbol": "L:Model.b([B)V#43",
       "originalName": "var45",
       "renamedName": "var45",
       "declaration": {
@@ -160487,7 +160543,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#44",
-      "renamedSymbol": "L:qb.b([B)V#44",
+      "renamedSymbol": "L:Model.b([B)V#44",
       "originalName": "var38Lifetime1",
       "renamedName": "var38Lifetime1",
       "declaration": {
@@ -160498,7 +160554,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#45",
-      "renamedSymbol": "L:qb.b([B)V#45",
+      "renamedSymbol": "L:Model.b([B)V#45",
       "originalName": "var38Lifetime2",
       "renamedName": "var38Lifetime2",
       "declaration": {
@@ -160509,7 +160565,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#46",
-      "renamedSymbol": "L:qb.b([B)V#46",
+      "renamedSymbol": "L:Model.b([B)V#46",
       "originalName": "var39Lifetime1",
       "renamedName": "var39Lifetime1",
       "declaration": {
@@ -160520,7 +160576,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#47",
-      "renamedSymbol": "L:qb.b([B)V#47",
+      "renamedSymbol": "L:Model.b([B)V#47",
       "originalName": "var39Lifetime2",
       "renamedName": "var39Lifetime2",
       "declaration": {
@@ -160531,7 +160587,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#48",
-      "renamedSymbol": "L:qb.b([B)V#48",
+      "renamedSymbol": "L:Model.b([B)V#48",
       "originalName": "var40Lifetime1",
       "renamedName": "var40Lifetime1",
       "declaration": {
@@ -160542,7 +160598,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#49",
-      "renamedSymbol": "L:qb.b([B)V#49",
+      "renamedSymbol": "L:Model.b([B)V#49",
       "originalName": "var41Lifetime1",
       "renamedName": "var41Lifetime1",
       "declaration": {
@@ -160553,7 +160609,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#5",
-      "renamedSymbol": "L:qb.b([B)V#5",
+      "renamedSymbol": "L:Model.b([B)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -160564,7 +160620,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#50",
-      "renamedSymbol": "L:qb.b([B)V#50",
+      "renamedSymbol": "L:Model.b([B)V#50",
       "originalName": "var42Lifetime1",
       "renamedName": "var42Lifetime1",
       "declaration": {
@@ -160575,7 +160631,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#51",
-      "renamedSymbol": "L:qb.b([B)V#51",
+      "renamedSymbol": "L:Model.b([B)V#51",
       "originalName": "var42Lifetime2",
       "renamedName": "var42Lifetime2",
       "declaration": {
@@ -160586,7 +160642,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#52",
-      "renamedSymbol": "L:qb.b([B)V#52",
+      "renamedSymbol": "L:Model.b([B)V#52",
       "originalName": "var42Lifetime3",
       "renamedName": "var42Lifetime3",
       "declaration": {
@@ -160597,7 +160653,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#53",
-      "renamedSymbol": "L:qb.b([B)V#53",
+      "renamedSymbol": "L:Model.b([B)V#53",
       "originalName": "var43Lifetime1",
       "renamedName": "var43Lifetime1",
       "declaration": {
@@ -160608,7 +160664,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#54",
-      "renamedSymbol": "L:qb.b([B)V#54",
+      "renamedSymbol": "L:Model.b([B)V#54",
       "originalName": "var44Lifetime1",
       "renamedName": "var44Lifetime1",
       "declaration": {
@@ -160619,7 +160675,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#6",
-      "renamedSymbol": "L:qb.b([B)V#6",
+      "renamedSymbol": "L:Model.b([B)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -160630,7 +160686,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#7",
-      "renamedSymbol": "L:qb.b([B)V#7",
+      "renamedSymbol": "L:Model.b([B)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -160641,7 +160697,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#8",
-      "renamedSymbol": "L:qb.b([B)V#8",
+      "renamedSymbol": "L:Model.b([B)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -160652,7 +160708,7 @@
     },
     {
       "symbol": "L:qb.b([B)V#9",
-      "renamedSymbol": "L:qb.b([B)V#9",
+      "renamedSymbol": "L:Model.b([B)V#9",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -160663,7 +160719,7 @@
     },
     {
       "symbol": "L:qb.d()V#0",
-      "renamedSymbol": "L:qb.d()V#0",
+      "renamedSymbol": "L:Model.d()V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -160674,7 +160730,7 @@
     },
     {
       "symbol": "L:qb.d()V#1",
-      "renamedSymbol": "L:qb.d()V#1",
+      "renamedSymbol": "L:Model.d()V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -160685,7 +160741,7 @@
     },
     {
       "symbol": "L:qb.d()V#10",
-      "renamedSymbol": "L:qb.d()V#10",
+      "renamedSymbol": "L:Model.d()V#10",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -160696,7 +160752,7 @@
     },
     {
       "symbol": "L:qb.d()V#11",
-      "renamedSymbol": "L:qb.d()V#11",
+      "renamedSymbol": "L:Model.d()V#11",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -160707,7 +160763,7 @@
     },
     {
       "symbol": "L:qb.d()V#12",
-      "renamedSymbol": "L:qb.d()V#12",
+      "renamedSymbol": "L:Model.d()V#12",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -160718,7 +160774,7 @@
     },
     {
       "symbol": "L:qb.d()V#13",
-      "renamedSymbol": "L:qb.d()V#13",
+      "renamedSymbol": "L:Model.d()V#13",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -160729,7 +160785,7 @@
     },
     {
       "symbol": "L:qb.d()V#14",
-      "renamedSymbol": "L:qb.d()V#14",
+      "renamedSymbol": "L:Model.d()V#14",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -160740,7 +160796,7 @@
     },
     {
       "symbol": "L:qb.d()V#15",
-      "renamedSymbol": "L:qb.d()V#15",
+      "renamedSymbol": "L:Model.d()V#15",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -160751,7 +160807,7 @@
     },
     {
       "symbol": "L:qb.d()V#16",
-      "renamedSymbol": "L:qb.d()V#16",
+      "renamedSymbol": "L:Model.d()V#16",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -160762,7 +160818,7 @@
     },
     {
       "symbol": "L:qb.d()V#17",
-      "renamedSymbol": "L:qb.d()V#17",
+      "renamedSymbol": "L:Model.d()V#17",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -160773,7 +160829,7 @@
     },
     {
       "symbol": "L:qb.d()V#18",
-      "renamedSymbol": "L:qb.d()V#18",
+      "renamedSymbol": "L:Model.d()V#18",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -160784,7 +160840,7 @@
     },
     {
       "symbol": "L:qb.d()V#19",
-      "renamedSymbol": "L:qb.d()V#19",
+      "renamedSymbol": "L:Model.d()V#19",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -160795,7 +160851,7 @@
     },
     {
       "symbol": "L:qb.d()V#2",
-      "renamedSymbol": "L:qb.d()V#2",
+      "renamedSymbol": "L:Model.d()V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -160806,7 +160862,7 @@
     },
     {
       "symbol": "L:qb.d()V#20",
-      "renamedSymbol": "L:qb.d()V#20",
+      "renamedSymbol": "L:Model.d()V#20",
       "originalName": "var1Lifetime1",
       "renamedName": "var1Lifetime1",
       "declaration": {
@@ -160817,7 +160873,7 @@
     },
     {
       "symbol": "L:qb.d()V#3",
-      "renamedSymbol": "L:qb.d()V#3",
+      "renamedSymbol": "L:Model.d()V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -160828,7 +160884,7 @@
     },
     {
       "symbol": "L:qb.d()V#4",
-      "renamedSymbol": "L:qb.d()V#4",
+      "renamedSymbol": "L:Model.d()V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -160839,7 +160895,7 @@
     },
     {
       "symbol": "L:qb.d()V#5",
-      "renamedSymbol": "L:qb.d()V#5",
+      "renamedSymbol": "L:Model.d()V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -160850,7 +160906,7 @@
     },
     {
       "symbol": "L:qb.d()V#6",
-      "renamedSymbol": "L:qb.d()V#6",
+      "renamedSymbol": "L:Model.d()V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -160861,7 +160917,7 @@
     },
     {
       "symbol": "L:qb.d()V#7",
-      "renamedSymbol": "L:qb.d()V#7",
+      "renamedSymbol": "L:Model.d()V#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -160872,7 +160928,7 @@
     },
     {
       "symbol": "L:qb.d()V#8",
-      "renamedSymbol": "L:qb.d()V#8",
+      "renamedSymbol": "L:Model.d()V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -160883,7 +160939,7 @@
     },
     {
       "symbol": "L:qb.d()V#9",
-      "renamedSymbol": "L:qb.d()V#9",
+      "renamedSymbol": "L:Model.d()V#9",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -160894,7 +160950,7 @@
     },
     {
       "symbol": "L:qb.e()V#0",
-      "renamedSymbol": "L:qb.e()V#0",
+      "renamedSymbol": "L:Model.e()V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -160905,7 +160961,7 @@
     },
     {
       "symbol": "L:qb.e()V#1",
-      "renamedSymbol": "L:qb.e()V#1",
+      "renamedSymbol": "L:Model.e()V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -160916,7 +160972,7 @@
     },
     {
       "symbol": "L:qb.e()V#2",
-      "renamedSymbol": "L:qb.e()V#2",
+      "renamedSymbol": "L:Model.e()V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -160927,7 +160983,7 @@
     },
     {
       "symbol": "L:qb.e()V#3",
-      "renamedSymbol": "L:qb.e()V#3",
+      "renamedSymbol": "L:Model.e()V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -160938,7 +160994,7 @@
     },
     {
       "symbol": "L:qb.e()V#4",
-      "renamedSymbol": "L:qb.e()V#4",
+      "renamedSymbol": "L:Model.e()V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -160949,7 +161005,7 @@
     },
     {
       "symbol": "L:qb.e()V#5",
-      "renamedSymbol": "L:qb.e()V#5",
+      "renamedSymbol": "L:Model.e()V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -160960,7 +161016,7 @@
     },
     {
       "symbol": "L:qb.e()V#6",
-      "renamedSymbol": "L:qb.e()V#6",
+      "renamedSymbol": "L:Model.e()V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -160971,7 +161027,7 @@
     },
     {
       "symbol": "L:qb.e()V#7",
-      "renamedSymbol": "L:qb.e()V#7",
+      "renamedSymbol": "L:Model.e()V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -160982,7 +161038,7 @@
     },
     {
       "symbol": "L:qb.e()V#8",
-      "renamedSymbol": "L:qb.e()V#8",
+      "renamedSymbol": "L:Model.e()V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -160993,7 +161049,7 @@
     },
     {
       "symbol": "L:qb.e()V#9",
-      "renamedSymbol": "L:qb.e()V#9",
+      "renamedSymbol": "L:Model.e()V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -185589,7 +185645,7 @@
     },
     {
       "symbol": "L:uf.a(ZIBIIZII)I#0",
-      "renamedSymbol": "L:GameBoard.a(ZIBIIZII)I#0",
+      "renamedSymbol": "L:GameBoard.scoreMove(ZIBIIZII)I#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -185600,7 +185656,7 @@
     },
     {
       "symbol": "L:uf.a(ZIBIIZII)I#1",
-      "renamedSymbol": "L:GameBoard.a(ZIBIIZII)I#1",
+      "renamedSymbol": "L:GameBoard.scoreMove(ZIBIIZII)I#1",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -185611,7 +185667,7 @@
     },
     {
       "symbol": "L:uf.a(ZIBIIZII)I#2",
-      "renamedSymbol": "L:GameBoard.a(ZIBIIZII)I#2",
+      "renamedSymbol": "L:GameBoard.scoreMove(ZIBIIZII)I#2",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -185622,7 +185678,7 @@
     },
     {
       "symbol": "L:uf.a(ZIBIIZII)I#3",
-      "renamedSymbol": "L:GameBoard.a(ZIBIIZII)I#3",
+      "renamedSymbol": "L:GameBoard.scoreMove(ZIBIIZII)I#3",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -185633,7 +185689,7 @@
     },
     {
       "symbol": "L:uf.a(ZIBIIZII)I#4",
-      "renamedSymbol": "L:GameBoard.a(ZIBIIZII)I#4",
+      "renamedSymbol": "L:GameBoard.scoreMove(ZIBIIZII)I#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -185644,7 +185700,7 @@
     },
     {
       "symbol": "L:uf.a(ZIBIIZII)I#5",
-      "renamedSymbol": "L:GameBoard.a(ZIBIIZII)I#5",
+      "renamedSymbol": "L:GameBoard.scoreMove(ZIBIIZII)I#5",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -185655,7 +185711,7 @@
     },
     {
       "symbol": "L:uf.a(ZIBIIZII)I#6",
-      "renamedSymbol": "L:GameBoard.a(ZIBIIZII)I#6",
+      "renamedSymbol": "L:GameBoard.scoreMove(ZIBIIZII)I#6",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -185666,7 +185722,7 @@
     },
     {
       "symbol": "L:uf.a(ZIBIIZII)I#7",
-      "renamedSymbol": "L:GameBoard.a(ZIBIIZII)I#7",
+      "renamedSymbol": "L:GameBoard.scoreMove(ZIBIIZII)I#7",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -185677,7 +185733,7 @@
     },
     {
       "symbol": "L:uf.a(ZIBIIZII)I#8",
-      "renamedSymbol": "L:GameBoard.a(ZIBIIZII)I#8",
+      "renamedSymbol": "L:GameBoard.scoreMove(ZIBIIZII)I#8",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -186821,7 +186877,7 @@
     },
     {
       "symbol": "L:uk.a(BZ)V#0",
-      "renamedSymbol": "L:GameApplet.a(BZ)V#0",
+      "renamedSymbol": "L:GameApplet.terminate(BZ)V#0",
       "originalName": "exception",
       "renamedName": "exception",
       "declaration": {
@@ -186832,7 +186888,7 @@
     },
     {
       "symbol": "L:uk.a(BZ)V#1",
-      "renamedSymbol": "L:GameApplet.a(BZ)V#1",
+      "renamedSymbol": "L:GameApplet.terminate(BZ)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -186843,7 +186899,7 @@
     },
     {
       "symbol": "L:uk.a(BZ)V#10",
-      "renamedSymbol": "L:GameApplet.a(BZ)V#10",
+      "renamedSymbol": "L:GameApplet.terminate(BZ)V#10",
       "originalName": "decompiledCaughtParameter4",
       "renamedName": "decompiledCaughtParameter4",
       "declaration": {
@@ -186854,7 +186910,7 @@
     },
     {
       "symbol": "L:uk.a(BZ)V#2",
-      "renamedSymbol": "L:GameApplet.a(BZ)V#2",
+      "renamedSymbol": "L:GameApplet.terminate(BZ)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -186865,7 +186921,7 @@
     },
     {
       "symbol": "L:uk.a(BZ)V#3",
-      "renamedSymbol": "L:GameApplet.a(BZ)V#3",
+      "renamedSymbol": "L:GameApplet.terminate(BZ)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -186876,7 +186932,7 @@
     },
     {
       "symbol": "L:uk.a(BZ)V#4",
-      "renamedSymbol": "L:GameApplet.a(BZ)V#4",
+      "renamedSymbol": "L:GameApplet.terminate(BZ)V#4",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -186887,7 +186943,7 @@
     },
     {
       "symbol": "L:uk.a(BZ)V#5",
-      "renamedSymbol": "L:GameApplet.a(BZ)V#5",
+      "renamedSymbol": "L:GameApplet.terminate(BZ)V#5",
       "originalName": "var3_ref2",
       "renamedName": "var3_ref2",
       "declaration": {
@@ -186898,7 +186954,7 @@
     },
     {
       "symbol": "L:uk.a(BZ)V#6",
-      "renamedSymbol": "L:GameApplet.a(BZ)V#6",
+      "renamedSymbol": "L:GameApplet.terminate(BZ)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -186909,7 +186965,7 @@
     },
     {
       "symbol": "L:uk.a(BZ)V#7",
-      "renamedSymbol": "L:GameApplet.a(BZ)V#7",
+      "renamedSymbol": "L:GameApplet.terminate(BZ)V#7",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -186920,7 +186976,7 @@
     },
     {
       "symbol": "L:uk.a(BZ)V#8",
-      "renamedSymbol": "L:GameApplet.a(BZ)V#8",
+      "renamedSymbol": "L:GameApplet.terminate(BZ)V#8",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -186931,7 +186987,7 @@
     },
     {
       "symbol": "L:uk.a(BZ)V#9",
-      "renamedSymbol": "L:GameApplet.a(BZ)V#9",
+      "renamedSymbol": "L:GameApplet.terminate(BZ)V#9",
       "originalName": "decompiledCaughtParameter3",
       "renamedName": "decompiledCaughtParameter3",
       "declaration": {
@@ -187305,7 +187361,7 @@
     },
     {
       "symbol": "L:uk.a(ILjava/lang/String;)V#0",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#0",
+      "renamedSymbol": "L:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#0",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -187316,7 +187372,7 @@
     },
     {
       "symbol": "L:uk.a(ILjava/lang/String;)V#1",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#1",
+      "renamedSymbol": "L:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#1",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -187327,7 +187383,7 @@
     },
     {
       "symbol": "L:uk.a(ILjava/lang/String;)V#10",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#10",
+      "renamedSymbol": "L:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#10",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -187338,7 +187394,7 @@
     },
     {
       "symbol": "L:uk.a(ILjava/lang/String;)V#11",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#11",
+      "renamedSymbol": "L:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#11",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -187349,7 +187405,7 @@
     },
     {
       "symbol": "L:uk.a(ILjava/lang/String;)V#2",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#2",
+      "renamedSymbol": "L:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#2",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -187360,7 +187416,7 @@
     },
     {
       "symbol": "L:uk.a(ILjava/lang/String;)V#3",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#3",
+      "renamedSymbol": "L:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -187371,7 +187427,7 @@
     },
     {
       "symbol": "L:uk.a(ILjava/lang/String;)V#4",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#4",
+      "renamedSymbol": "L:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -187382,7 +187438,7 @@
     },
     {
       "symbol": "L:uk.a(ILjava/lang/String;)V#5",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#5",
+      "renamedSymbol": "L:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#5",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -187393,7 +187449,7 @@
     },
     {
       "symbol": "L:uk.a(ILjava/lang/String;)V#6",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#6",
+      "renamedSymbol": "L:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#6",
       "originalName": "var3_ref2",
       "renamedName": "var3_ref2",
       "declaration": {
@@ -187404,7 +187460,7 @@
     },
     {
       "symbol": "L:uk.a(ILjava/lang/String;)V#7",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#7",
+      "renamedSymbol": "L:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -187415,7 +187471,7 @@
     },
     {
       "symbol": "L:uk.a(ILjava/lang/String;)V#8",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#8",
+      "renamedSymbol": "L:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#8",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -187426,7 +187482,7 @@
     },
     {
       "symbol": "L:uk.a(ILjava/lang/String;)V#9",
-      "renamedSymbol": "L:GameApplet.a(ILjava/lang/String;)V#9",
+      "renamedSymbol": "L:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#9",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -187525,7 +187581,7 @@
     },
     {
       "symbol": "L:uk.e(I)V#0",
-      "renamedSymbol": "L:GameApplet.e(I)V#0",
+      "renamedSymbol": "L:GameApplet.recreateCanvas(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -187536,7 +187592,7 @@
     },
     {
       "symbol": "L:uk.e(I)V#1",
-      "renamedSymbol": "L:GameApplet.e(I)V#1",
+      "renamedSymbol": "L:GameApplet.recreateCanvas(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -187547,7 +187603,7 @@
     },
     {
       "symbol": "L:uk.e(I)V#2",
-      "renamedSymbol": "L:GameApplet.e(I)V#2",
+      "renamedSymbol": "L:GameApplet.recreateCanvas(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -187558,7 +187614,7 @@
     },
     {
       "symbol": "L:uk.e(I)V#3",
-      "renamedSymbol": "L:GameApplet.e(I)V#3",
+      "renamedSymbol": "L:GameApplet.recreateCanvas(I)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -187569,7 +187625,7 @@
     },
     {
       "symbol": "L:uk.e(I)V#4",
-      "renamedSymbol": "L:GameApplet.e(I)V#4",
+      "renamedSymbol": "L:GameApplet.recreateCanvas(I)V#4",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -187580,7 +187636,7 @@
     },
     {
       "symbol": "L:uk.e(I)V#5",
-      "renamedSymbol": "L:GameApplet.e(I)V#5",
+      "renamedSymbol": "L:GameApplet.recreateCanvas(I)V#5",
       "originalName": "decompiledSharedTail0",
       "renamedName": "decompiledSharedTail0",
       "declaration": {
@@ -187591,7 +187647,7 @@
     },
     {
       "symbol": "L:uk.e(I)V#6",
-      "renamedSymbol": "L:GameApplet.e(I)V#6",
+      "renamedSymbol": "L:GameApplet.recreateCanvas(I)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -196864,7 +196920,7 @@
     },
     {
       "symbol": "M:Virogrid.a(BLqb;)[I",
-      "renamedSymbol": "M:Virogrid.a(BLqb;)[I",
+      "renamedSymbol": "M:Virogrid.a(BLModel;)[I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -196919,7 +196975,7 @@
     },
     {
       "symbol": "M:Virogrid.a(Lqb;B)V",
-      "renamedSymbol": "M:Virogrid.a(Lqb;B)V",
+      "renamedSymbol": "M:Virogrid.a(LModel;B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -196963,9 +197019,9 @@
     },
     {
       "symbol": "M:Virogrid.b(Z)V",
-      "renamedSymbol": "M:Virogrid.b(Z)V",
+      "renamedSymbol": "M:Virogrid.onCanvasCreated(Z)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "onCanvasCreated",
       "declaration": {
         "file": "Virogrid.java",
         "start": 31681,
@@ -208535,7 +208591,7 @@
     },
     {
       "symbol": "M:il.<init>(Lqb;IIIII)V",
-      "renamedSymbol": "M:il.<init>(Lqb;IIIII)V",
+      "renamedSymbol": "M:il.<init>(LModel;IIIII)V",
       "originalName": "il",
       "renamedName": "il",
       "declaration": {
@@ -218413,9 +218469,9 @@
     },
     {
       "symbol": "M:qb.<init>([B)V",
-      "renamedSymbol": "M:qb.<init>([B)V",
+      "renamedSymbol": "M:Model.<init>([B)V",
       "originalName": "qb",
-      "renamedName": "qb",
+      "renamedName": "Model",
       "declaration": {
         "file": "qb.java",
         "start": 38523,
@@ -218424,7 +218480,7 @@
     },
     {
       "symbol": "M:qb.a()V",
-      "renamedSymbol": "M:qb.a()V",
+      "renamedSymbol": "M:Model.a()V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -218435,7 +218491,7 @@
     },
     {
       "symbol": "M:qb.a(III)V",
-      "renamedSymbol": "M:qb.a(III)V",
+      "renamedSymbol": "M:Model.a(III)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -218446,7 +218502,7 @@
     },
     {
       "symbol": "M:qb.a(IIII)V",
-      "renamedSymbol": "M:qb.a(IIII)V",
+      "renamedSymbol": "M:Model.a(IIII)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -218457,7 +218513,7 @@
     },
     {
       "symbol": "M:qb.a(IIIII)Lcn;",
-      "renamedSymbol": "M:qb.a(IIIII)Lcn;",
+      "renamedSymbol": "M:Model.a(IIIII)Lcn;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -218468,7 +218524,7 @@
     },
     {
       "symbol": "M:qb.a(Leh;Ljava/lang/String;Ljava/lang/String;)Lqb;",
-      "renamedSymbol": "M:qb.a(LJs5Archive;Ljava/lang/String;Ljava/lang/String;)Lqb;",
+      "renamedSymbol": "M:Model.a(LJs5Archive;Ljava/lang/String;Ljava/lang/String;)LModel;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -218479,7 +218535,7 @@
     },
     {
       "symbol": "M:qb.a(Lll;IIIZ)V",
-      "renamedSymbol": "M:qb.a(Lll;IIIZ)V",
+      "renamedSymbol": "M:Model.a(Lll;IIIZ)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -218490,7 +218546,7 @@
     },
     {
       "symbol": "M:qb.a([B)V",
-      "renamedSymbol": "M:qb.a([B)V",
+      "renamedSymbol": "M:Model.a([B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -218501,7 +218557,7 @@
     },
     {
       "symbol": "M:qb.b()V",
-      "renamedSymbol": "M:qb.b()V",
+      "renamedSymbol": "M:Model.b()V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -218512,7 +218568,7 @@
     },
     {
       "symbol": "M:qb.b([B)V",
-      "renamedSymbol": "M:qb.b([B)V",
+      "renamedSymbol": "M:Model.b([B)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -218523,7 +218579,7 @@
     },
     {
       "symbol": "M:qb.c()V",
-      "renamedSymbol": "M:qb.c()V",
+      "renamedSymbol": "M:Model.c()V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -218534,7 +218590,7 @@
     },
     {
       "symbol": "M:qb.d()V",
-      "renamedSymbol": "M:qb.d()V",
+      "renamedSymbol": "M:Model.d()V",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -218545,7 +218601,7 @@
     },
     {
       "symbol": "M:qb.e()V",
-      "renamedSymbol": "M:qb.e()V",
+      "renamedSymbol": "M:Model.e()V",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -223286,9 +223342,9 @@
     },
     {
       "symbol": "M:uf.a(ZIBIIZII)I",
-      "renamedSymbol": "M:GameBoard.a(ZIBIIZII)I",
+      "renamedSymbol": "M:GameBoard.scoreMove(ZIBIIZII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "scoreMove",
       "declaration": {
         "file": "uf.java",
         "start": 4236,
@@ -223638,9 +223694,9 @@
     },
     {
       "symbol": "M:uk.a(BZ)V",
-      "renamedSymbol": "M:GameApplet.a(BZ)V",
+      "renamedSymbol": "M:GameApplet.terminate(BZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "terminate",
       "declaration": {
         "file": "uk.java",
         "start": 6393,
@@ -223704,9 +223760,9 @@
     },
     {
       "symbol": "M:uk.a(ILjava/lang/String;)V",
-      "renamedSymbol": "M:GameApplet.a(ILjava/lang/String;)V",
+      "renamedSymbol": "M:GameApplet.redirectToErrorPage(ILjava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "redirectToErrorPage",
       "declaration": {
         "file": "uk.java",
         "start": 1517,
@@ -223737,9 +223793,9 @@
     },
     {
       "symbol": "M:uk.b(Z)V",
-      "renamedSymbol": "M:GameApplet.b(Z)V",
+      "renamedSymbol": "M:GameApplet.onCanvasCreated(Z)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "onCanvasCreated",
       "declaration": {
         "file": "uk.java",
         "start": 19746,
@@ -223792,9 +223848,9 @@
     },
     {
       "symbol": "M:uk.e(I)V",
-      "renamedSymbol": "M:GameApplet.e(I)V",
+      "renamedSymbol": "M:GameApplet.recreateCanvas(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "recreateCanvas",
       "declaration": {
         "file": "uk.java",
         "start": 11752,
@@ -226377,7 +226433,7 @@
     },
     {
       "symbol": "P:Virogrid.a(BLqb;)[I#0",
-      "renamedSymbol": "P:Virogrid.a(BLqb;)[I#0",
+      "renamedSymbol": "P:Virogrid.a(BLModel;)[I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -226388,7 +226444,7 @@
     },
     {
       "symbol": "P:Virogrid.a(BLqb;)[I#1",
-      "renamedSymbol": "P:Virogrid.a(BLqb;)[I#1",
+      "renamedSymbol": "P:Virogrid.a(BLModel;)[I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -226520,7 +226576,7 @@
     },
     {
       "symbol": "P:Virogrid.a(Lqb;B)V#0",
-      "renamedSymbol": "P:Virogrid.a(Lqb;B)V#0",
+      "renamedSymbol": "P:Virogrid.a(LModel;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -226531,7 +226587,7 @@
     },
     {
       "symbol": "P:Virogrid.a(Lqb;B)V#1",
-      "renamedSymbol": "P:Virogrid.a(Lqb;B)V#1",
+      "renamedSymbol": "P:Virogrid.a(LModel;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -226619,7 +226675,7 @@
     },
     {
       "symbol": "P:Virogrid.b(Z)V#0",
-      "renamedSymbol": "P:Virogrid.b(Z)V#0",
+      "renamedSymbol": "P:Virogrid.onCanvasCreated(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -255802,7 +255858,7 @@
     },
     {
       "symbol": "P:il.<init>(Lqb;IIIII)V#0",
-      "renamedSymbol": "P:il.<init>(Lqb;IIIII)V#0",
+      "renamedSymbol": "P:il.<init>(LModel;IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -255813,7 +255869,7 @@
     },
     {
       "symbol": "P:il.<init>(Lqb;IIIII)V#1",
-      "renamedSymbol": "P:il.<init>(Lqb;IIIII)V#1",
+      "renamedSymbol": "P:il.<init>(LModel;IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -255824,7 +255880,7 @@
     },
     {
       "symbol": "P:il.<init>(Lqb;IIIII)V#2",
-      "renamedSymbol": "P:il.<init>(Lqb;IIIII)V#2",
+      "renamedSymbol": "P:il.<init>(LModel;IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -255835,7 +255891,7 @@
     },
     {
       "symbol": "P:il.<init>(Lqb;IIIII)V#3",
-      "renamedSymbol": "P:il.<init>(Lqb;IIIII)V#3",
+      "renamedSymbol": "P:il.<init>(LModel;IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -255846,7 +255902,7 @@
     },
     {
       "symbol": "P:il.<init>(Lqb;IIIII)V#4",
-      "renamedSymbol": "P:il.<init>(Lqb;IIIII)V#4",
+      "renamedSymbol": "P:il.<init>(LModel;IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -255857,7 +255913,7 @@
     },
     {
       "symbol": "P:il.<init>(Lqb;IIIII)V#5",
-      "renamedSymbol": "P:il.<init>(Lqb;IIIII)V#5",
+      "renamedSymbol": "P:il.<init>(LModel;IIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -281509,7 +281565,7 @@
     },
     {
       "symbol": "P:qb.<init>([B)V#0",
-      "renamedSymbol": "P:qb.<init>([B)V#0",
+      "renamedSymbol": "P:Model.<init>([B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281520,7 +281576,7 @@
     },
     {
       "symbol": "P:qb.a(III)V#0",
-      "renamedSymbol": "P:qb.a(III)V#0",
+      "renamedSymbol": "P:Model.a(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281531,7 +281587,7 @@
     },
     {
       "symbol": "P:qb.a(III)V#1",
-      "renamedSymbol": "P:qb.a(III)V#1",
+      "renamedSymbol": "P:Model.a(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281542,7 +281598,7 @@
     },
     {
       "symbol": "P:qb.a(III)V#2",
-      "renamedSymbol": "P:qb.a(III)V#2",
+      "renamedSymbol": "P:Model.a(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281553,7 +281609,7 @@
     },
     {
       "symbol": "P:qb.a(IIII)V#0",
-      "renamedSymbol": "P:qb.a(IIII)V#0",
+      "renamedSymbol": "P:Model.a(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281564,7 +281620,7 @@
     },
     {
       "symbol": "P:qb.a(IIII)V#1",
-      "renamedSymbol": "P:qb.a(IIII)V#1",
+      "renamedSymbol": "P:Model.a(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281575,7 +281631,7 @@
     },
     {
       "symbol": "P:qb.a(IIII)V#2",
-      "renamedSymbol": "P:qb.a(IIII)V#2",
+      "renamedSymbol": "P:Model.a(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281586,7 +281642,7 @@
     },
     {
       "symbol": "P:qb.a(IIII)V#3",
-      "renamedSymbol": "P:qb.a(IIII)V#3",
+      "renamedSymbol": "P:Model.a(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -281597,7 +281653,7 @@
     },
     {
       "symbol": "P:qb.a(IIIII)Lcn;#0",
-      "renamedSymbol": "P:qb.a(IIIII)Lcn;#0",
+      "renamedSymbol": "P:Model.a(IIIII)Lcn;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281608,7 +281664,7 @@
     },
     {
       "symbol": "P:qb.a(IIIII)Lcn;#1",
-      "renamedSymbol": "P:qb.a(IIIII)Lcn;#1",
+      "renamedSymbol": "P:Model.a(IIIII)Lcn;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281619,7 +281675,7 @@
     },
     {
       "symbol": "P:qb.a(IIIII)Lcn;#2",
-      "renamedSymbol": "P:qb.a(IIIII)Lcn;#2",
+      "renamedSymbol": "P:Model.a(IIIII)Lcn;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281630,7 +281686,7 @@
     },
     {
       "symbol": "P:qb.a(IIIII)Lcn;#3",
-      "renamedSymbol": "P:qb.a(IIIII)Lcn;#3",
+      "renamedSymbol": "P:Model.a(IIIII)Lcn;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -281641,7 +281697,7 @@
     },
     {
       "symbol": "P:qb.a(IIIII)Lcn;#4",
-      "renamedSymbol": "P:qb.a(IIIII)Lcn;#4",
+      "renamedSymbol": "P:Model.a(IIIII)Lcn;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -281652,7 +281708,7 @@
     },
     {
       "symbol": "P:qb.a(Leh;Ljava/lang/String;Ljava/lang/String;)Lqb;#0",
-      "renamedSymbol": "P:qb.a(LJs5Archive;Ljava/lang/String;Ljava/lang/String;)Lqb;#0",
+      "renamedSymbol": "P:Model.a(LJs5Archive;Ljava/lang/String;Ljava/lang/String;)LModel;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281663,7 +281719,7 @@
     },
     {
       "symbol": "P:qb.a(Leh;Ljava/lang/String;Ljava/lang/String;)Lqb;#1",
-      "renamedSymbol": "P:qb.a(LJs5Archive;Ljava/lang/String;Ljava/lang/String;)Lqb;#1",
+      "renamedSymbol": "P:Model.a(LJs5Archive;Ljava/lang/String;Ljava/lang/String;)LModel;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281674,7 +281730,7 @@
     },
     {
       "symbol": "P:qb.a(Leh;Ljava/lang/String;Ljava/lang/String;)Lqb;#2",
-      "renamedSymbol": "P:qb.a(LJs5Archive;Ljava/lang/String;Ljava/lang/String;)Lqb;#2",
+      "renamedSymbol": "P:Model.a(LJs5Archive;Ljava/lang/String;Ljava/lang/String;)LModel;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281685,7 +281741,7 @@
     },
     {
       "symbol": "P:qb.a(Lll;IIIZ)V#0",
-      "renamedSymbol": "P:qb.a(Lll;IIIZ)V#0",
+      "renamedSymbol": "P:Model.a(Lll;IIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281696,7 +281752,7 @@
     },
     {
       "symbol": "P:qb.a(Lll;IIIZ)V#1",
-      "renamedSymbol": "P:qb.a(Lll;IIIZ)V#1",
+      "renamedSymbol": "P:Model.a(Lll;IIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -281707,7 +281763,7 @@
     },
     {
       "symbol": "P:qb.a(Lll;IIIZ)V#2",
-      "renamedSymbol": "P:qb.a(Lll;IIIZ)V#2",
+      "renamedSymbol": "P:Model.a(Lll;IIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -281718,7 +281774,7 @@
     },
     {
       "symbol": "P:qb.a(Lll;IIIZ)V#3",
-      "renamedSymbol": "P:qb.a(Lll;IIIZ)V#3",
+      "renamedSymbol": "P:Model.a(Lll;IIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -281729,7 +281785,7 @@
     },
     {
       "symbol": "P:qb.a(Lll;IIIZ)V#4",
-      "renamedSymbol": "P:qb.a(Lll;IIIZ)V#4",
+      "renamedSymbol": "P:Model.a(Lll;IIIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -281740,7 +281796,7 @@
     },
     {
       "symbol": "P:qb.a([B)V#0",
-      "renamedSymbol": "P:qb.a([B)V#0",
+      "renamedSymbol": "P:Model.a([B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281751,7 +281807,7 @@
     },
     {
       "symbol": "P:qb.b([B)V#0",
-      "renamedSymbol": "P:qb.b([B)V#0",
+      "renamedSymbol": "P:Model.b([B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -292740,7 +292796,7 @@
     },
     {
       "symbol": "P:uf.a(ZIBIIZII)I#0",
-      "renamedSymbol": "P:GameBoard.a(ZIBIIZII)I#0",
+      "renamedSymbol": "P:GameBoard.scoreMove(ZIBIIZII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -292751,7 +292807,7 @@
     },
     {
       "symbol": "P:uf.a(ZIBIIZII)I#1",
-      "renamedSymbol": "P:GameBoard.a(ZIBIIZII)I#1",
+      "renamedSymbol": "P:GameBoard.scoreMove(ZIBIIZII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -292762,7 +292818,7 @@
     },
     {
       "symbol": "P:uf.a(ZIBIIZII)I#2",
-      "renamedSymbol": "P:GameBoard.a(ZIBIIZII)I#2",
+      "renamedSymbol": "P:GameBoard.scoreMove(ZIBIIZII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -292773,7 +292829,7 @@
     },
     {
       "symbol": "P:uf.a(ZIBIIZII)I#3",
-      "renamedSymbol": "P:GameBoard.a(ZIBIIZII)I#3",
+      "renamedSymbol": "P:GameBoard.scoreMove(ZIBIIZII)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -292784,7 +292840,7 @@
     },
     {
       "symbol": "P:uf.a(ZIBIIZII)I#4",
-      "renamedSymbol": "P:GameBoard.a(ZIBIIZII)I#4",
+      "renamedSymbol": "P:GameBoard.scoreMove(ZIBIIZII)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -292795,7 +292851,7 @@
     },
     {
       "symbol": "P:uf.a(ZIBIIZII)I#5",
-      "renamedSymbol": "P:GameBoard.a(ZIBIIZII)I#5",
+      "renamedSymbol": "P:GameBoard.scoreMove(ZIBIIZII)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -292806,7 +292862,7 @@
     },
     {
       "symbol": "P:uf.a(ZIBIIZII)I#6",
-      "renamedSymbol": "P:GameBoard.a(ZIBIIZII)I#6",
+      "renamedSymbol": "P:GameBoard.scoreMove(ZIBIIZII)I#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -292817,7 +292873,7 @@
     },
     {
       "symbol": "P:uf.a(ZIBIIZII)I#7",
-      "renamedSymbol": "P:GameBoard.a(ZIBIIZII)I#7",
+      "renamedSymbol": "P:GameBoard.scoreMove(ZIBIIZII)I#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -293510,7 +293566,7 @@
     },
     {
       "symbol": "P:uk.a(BZ)V#0",
-      "renamedSymbol": "P:GameApplet.a(BZ)V#0",
+      "renamedSymbol": "P:GameApplet.terminate(BZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -293521,7 +293577,7 @@
     },
     {
       "symbol": "P:uk.a(BZ)V#1",
-      "renamedSymbol": "P:GameApplet.a(BZ)V#1",
+      "renamedSymbol": "P:GameApplet.terminate(BZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -293763,7 +293819,7 @@
     },
     {
       "symbol": "P:uk.a(ILjava/lang/String;)V#0",
-      "renamedSymbol": "P:GameApplet.a(ILjava/lang/String;)V#0",
+      "renamedSymbol": "P:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -293774,7 +293830,7 @@
     },
     {
       "symbol": "P:uk.a(ILjava/lang/String;)V#1",
-      "renamedSymbol": "P:GameApplet.a(ILjava/lang/String;)V#1",
+      "renamedSymbol": "P:GameApplet.redirectToErrorPage(ILjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -293807,7 +293863,7 @@
     },
     {
       "symbol": "P:uk.b(Z)V#0",
-      "renamedSymbol": "P:GameApplet.b(Z)V#0",
+      "renamedSymbol": "P:GameApplet.onCanvasCreated(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -293851,7 +293907,7 @@
     },
     {
       "symbol": "P:uk.e(I)V#0",
-      "renamedSymbol": "P:GameApplet.e(I)V#0",
+      "renamedSymbol": "P:GameApplet.recreateCanvas(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300191,7 +300247,7 @@
       "original": "Virogrid.java",
       "renamed": "Virogrid.java",
       "inputSha256": "d7265fea90666c31db8f708680063c32bd27b3ee78934cc3060a405b4381c4ef",
-      "outputSha256": "d21a16373a72202ac89ce66b3dc16ef4b5c37d381dba7ba352cf678519d95a6e",
+      "outputSha256": "a014095789531010ac5db3446dce95cd62fa74afa5ccd4ac441abb7f2df79603",
       "edits": [
         {
           "start": 91,
@@ -300488,6 +300544,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 11554,
+          "end": 11555,
+          "symbol": "M:Virogrid.b(Z)V",
+          "original": "b",
+          "renamed": "onCanvasCreated"
+        },
+        {
           "start": 11594,
           "end": 11596,
           "symbol": "C:sc",
@@ -300537,6 +300600,20 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 12352,
+          "end": 12353,
+          "symbol": "M:Virogrid.b(Z)V",
+          "original": "b",
+          "renamed": "onCanvasCreated"
+        },
+        {
+          "start": 12686,
+          "end": 12687,
+          "symbol": "M:Virogrid.b(Z)V",
+          "original": "b",
+          "renamed": "onCanvasCreated"
+        },
+        {
           "start": 14193,
           "end": 14195,
           "symbol": "C:el",
@@ -300549,6 +300626,13 @@
           "symbol": "C:el",
           "original": "el",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 15434,
+          "end": 15435,
+          "symbol": "M:Virogrid.b(Z)V",
+          "original": "b",
+          "renamed": "onCanvasCreated"
         },
         {
           "start": 19289,
@@ -300598,6 +300682,13 @@
           "symbol": "C:df",
           "original": "df",
           "renamed": "Rasterizer"
+        },
+        {
+          "start": 31681,
+          "end": 31682,
+          "symbol": "M:Virogrid.b(Z)V",
+          "original": "b",
+          "renamed": "onCanvasCreated"
         },
         {
           "start": 31744,
@@ -300668,6 +300759,272 @@
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "Js5Archive"
+        },
+        {
+          "start": 36230,
+          "end": 36232,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36254,
+          "end": 36256,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36278,
+          "end": 36280,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36302,
+          "end": 36304,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36326,
+          "end": 36328,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36350,
+          "end": 36352,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36374,
+          "end": 36376,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36399,
+          "end": 36401,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36424,
+          "end": 36426,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36449,
+          "end": 36451,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36474,
+          "end": 36476,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36499,
+          "end": 36501,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36524,
+          "end": 36526,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36549,
+          "end": 36551,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36574,
+          "end": 36576,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36599,
+          "end": 36601,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36624,
+          "end": 36626,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 36764,
+          "end": 36766,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37011,
+          "end": 37013,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37164,
+          "end": 37166,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37216,
+          "end": 37218,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37269,
+          "end": 37271,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37326,
+          "end": 37328,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37378,
+          "end": 37380,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37431,
+          "end": 37433,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37484,
+          "end": 37486,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37539,
+          "end": 37541,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37591,
+          "end": 37593,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37655,
+          "end": 37657,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37720,
+          "end": 37722,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37790,
+          "end": 37792,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37859,
+          "end": 37861,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37927,
+          "end": 37929,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 37998,
+          "end": 38000,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 38068,
+          "end": 38070,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 38137,
+          "end": 38139,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 38208,
+          "end": 38210,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 39302,
+          "end": 39304,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
         },
         {
           "start": 39852,
@@ -301426,6 +301783,13 @@
           "renamed": "Js5Archive"
         },
         {
+          "start": 57379,
+          "end": 57381,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
           "start": 61556,
           "end": 61558,
           "symbol": "C:df",
@@ -301776,6 +302140,13 @@
           "renamed": "GameSession"
         },
         {
+          "start": 83778,
+          "end": 83780,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
           "start": 83796,
           "end": 83798,
           "symbol": "C:uf",
@@ -301844,6 +302215,34 @@
           "symbol": "C:fb",
           "original": "fb",
           "renamed": "CellFlip"
+        },
+        {
+          "start": 90100,
+          "end": 90102,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 90218,
+          "end": 90220,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 90510,
+          "end": 90512,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 90566,
+          "end": 90568,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
         },
         {
           "start": 91352,
@@ -320211,7 +320610,7 @@
       "original": "il.java",
       "renamed": "il.java",
       "inputSha256": "aa5979ea3cec3e0afd87e916c06126d9b858dcdbc328f26374e50f12f734292f",
-      "outputSha256": "2529ef2e986bb43913ad7b3e74e7dfac92e0f0208b70170683d1dd4c009e0377",
+      "outputSha256": "d66d3a5a59c1e6dd97d954d4326ae4eb49a3607575ebdc66fa928c7fedac2bae",
       "edits": [
         {
           "start": 9182,
@@ -320265,6 +320664,13 @@
           "symbol": "C:df",
           "original": "df",
           "renamed": "Rasterizer"
+        },
+        {
+          "start": 47255,
+          "end": 47257,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
         }
       ]
     },
@@ -332327,7 +332733,7 @@
       "original": "od.java",
       "renamed": "od.java",
       "inputSha256": "30b45937609818ca99108f09ff0029047bfe5579429e5a8098ebd9141b3239dc",
-      "outputSha256": "0baac943e4ebee16ba542916dd9b069315a83643647228e1e79fa98a495e904c",
+      "outputSha256": "bbda473f9357ba0ba4c96dd792ff9097bae73543368640ac03de517d2484c21c",
       "edits": [
         {
           "start": 64,
@@ -332433,6 +332839,20 @@
           "symbol": "F:jc.field_g:[B",
           "original": "field_g",
           "renamed": "payload"
+        },
+        {
+          "start": 8709,
+          "end": 8710,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
+        },
+        {
+          "start": 10031,
+          "end": 10032,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
         },
         {
           "start": 10110,
@@ -332561,6 +332981,41 @@
           "renamed": "CellAnimator"
         },
         {
+          "start": 14429,
+          "end": 14430,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
+        },
+        {
+          "start": 14550,
+          "end": 14551,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
+        },
+        {
+          "start": 14626,
+          "end": 14627,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
+        },
+        {
+          "start": 14733,
+          "end": 14734,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
+        },
+        {
+          "start": 14809,
+          "end": 14810,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
+        },
+        {
           "start": 15846,
           "end": 15848,
           "symbol": "C:rl",
@@ -332587,6 +333042,13 @@
           "symbol": "C:fi",
           "original": "fi",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 19147,
+          "end": 19148,
+          "symbol": "M:uk.e(I)V",
+          "original": "e",
+          "renamed": "recreateCanvas"
         },
         {
           "start": 19172,
@@ -335466,16 +335928,37 @@
     },
     {
       "original": "qb.java",
-      "renamed": "qb.java",
+      "renamed": "Model.java",
       "inputSha256": "af9ad29772d0972e88be3983a1819f1d04ab81d4ccc83b270eba967311d46493",
-      "outputSha256": "1d49be0f6628c15ab0fb325a095e1185d5327a0adcb6c6e3546583b1a1d33071",
+      "outputSha256": "8645aea88a0ae3655f4ceeff4974da127960142fc5ae2dc03e7f0052ad4c0ed8",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 1153,
+          "end": 1155,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
         {
           "start": 1158,
           "end": 1160,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "Js5Archive"
+        },
+        {
+          "start": 1334,
+          "end": 1336,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
         },
         {
           "start": 1437,
@@ -336631,6 +337114,27 @@
           "symbol": "F:jc.field_l:I",
           "original": "field_l",
           "renamed": "position"
+        },
+        {
+          "start": 33035,
+          "end": 33037,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 33378,
+          "end": 33380,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "Model"
+        },
+        {
+          "start": 38523,
+          "end": 38525,
+          "symbol": "M:qb.<init>([B)V",
+          "original": "qb",
+          "renamed": "Model"
         }
       ]
     },
@@ -342628,7 +343132,7 @@
       "original": "uf.java",
       "renamed": "GameBoard.java",
       "inputSha256": "ceaa88429236c974e78c4c217ba0fc58a3b156ac394984c57d1fbaf15a4eedfa",
-      "outputSha256": "ecc274e949be5f40d68ad7114393a4e5acae749f0379a5281f779e01b4f66ab3",
+      "outputSha256": "1d913839a792e43bbfc52caf8d71fa92c784348191519086fe7b9925756d640c",
       "edits": [
         {
           "start": 50,
@@ -343091,6 +343595,13 @@
           "symbol": "C:uf",
           "original": "uf",
           "renamed": "GameBoard"
+        },
+        {
+          "start": 4236,
+          "end": 4237,
+          "symbol": "M:uf.a(ZIBIIZII)I",
+          "original": "a",
+          "renamed": "scoreMove"
         },
         {
           "start": 4523,
@@ -344518,6 +345029,13 @@
           "renamed": "isLegalMove"
         },
         {
+          "start": 25936,
+          "end": 25937,
+          "symbol": "M:uf.a(ZIBIIZII)I",
+          "original": "a",
+          "renamed": "scoreMove"
+        },
+        {
           "start": 26020,
           "end": 26021,
           "symbol": "M:uf.b(IIIIII)V",
@@ -344588,6 +345106,13 @@
           "renamed": "isLegalMove"
         },
         {
+          "start": 26953,
+          "end": 26954,
+          "symbol": "M:uf.a(ZIBIIZII)I",
+          "original": "a",
+          "renamed": "scoreMove"
+        },
+        {
           "start": 27105,
           "end": 27112,
           "symbol": "F:uf.field_C:[[B",
@@ -344614,6 +345139,13 @@
           "symbol": "M:uf.a(IIIIII)Z",
           "original": "a",
           "renamed": "isLegalMove"
+        },
+        {
+          "start": 27618,
+          "end": 27619,
+          "symbol": "M:uf.a(ZIBIIZII)I",
+          "original": "a",
+          "renamed": "scoreMove"
         },
         {
           "start": 28035,
@@ -344819,7 +345351,7 @@
       "original": "uk.java",
       "renamed": "GameApplet.java",
       "inputSha256": "558b59098495bb3c2069d476f14d39b8691a2b3e08c8cee4f5251a3552a00979",
-      "outputSha256": "7853145d6d3178e9f59a6a371c1cb6f325065d673e5c55c07594d3ec9d3e44dd",
+      "outputSha256": "0b2482d5ff36043e17edbf5534aa80da6ff0e8482fb6a9804cd37c517246e3d6",
       "edits": [
         {
           "start": 60,
@@ -344827,6 +345359,13 @@
           "symbol": "C:uk",
           "original": "uk",
           "renamed": "GameApplet"
+        },
+        {
+          "start": 1517,
+          "end": 1518,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
         },
         {
           "start": 5007,
@@ -344848,6 +345387,13 @@
           "symbol": "M:uk.c(I)V",
           "original": "c",
           "renamed": "tickGame"
+        },
+        {
+          "start": 6393,
+          "end": 6394,
+          "symbol": "M:uk.a(BZ)V",
+          "original": "a",
+          "renamed": "terminate"
         },
         {
           "start": 7281,
@@ -344906,6 +345452,13 @@
           "renamed": "GameApplet"
         },
         {
+          "start": 11752,
+          "end": 11753,
+          "symbol": "M:uk.e(I)V",
+          "original": "e",
+          "renamed": "recreateCanvas"
+        },
+        {
           "start": 11983,
           "end": 11985,
           "symbol": "C:fi",
@@ -344953,6 +345506,13 @@
           "symbol": "C:fi",
           "original": "fi",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 13284,
+          "end": 13285,
+          "symbol": "M:uk.b(Z)V",
+          "original": "b",
+          "renamed": "onCanvasCreated"
         },
         {
           "start": 13316,
@@ -345025,11 +345585,25 @@
           "renamed": "shutdown"
         },
         {
+          "start": 19746,
+          "end": 19747,
+          "symbol": "M:uk.b(Z)V",
+          "original": "b",
+          "renamed": "onCanvasCreated"
+        },
+        {
           "start": 19896,
           "end": 19898,
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 20591,
+          "end": 20592,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
         },
         {
           "start": 21028,
@@ -345053,6 +345627,13 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 21798,
+          "end": 21799,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
+        },
+        {
           "start": 23355,
           "end": 23357,
           "symbol": "C:rl",
@@ -345065,6 +345646,13 @@
           "symbol": "C:rl",
           "original": "rl",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 23954,
+          "end": 23955,
+          "symbol": "M:uk.a(BZ)V",
+          "original": "a",
+          "renamed": "terminate"
         },
         {
           "start": 25874,
@@ -345088,11 +345676,25 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 26622,
+          "end": 26623,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
+        },
+        {
           "start": 27518,
           "end": 27520,
           "symbol": "C:fm",
           "original": "fm",
           "renamed": "WhirlpoolDigest"
+        },
+        {
+          "start": 27601,
+          "end": 27602,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
         },
         {
           "start": 27918,
@@ -345128,6 +345730,13 @@
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 29857,
+          "end": 29858,
+          "symbol": "M:uk.e(I)V",
+          "original": "e",
+          "renamed": "recreateCanvas"
         },
         {
           "start": 29932,
@@ -345170,6 +345779,20 @@
           "symbol": "M:uk.a(Z)V",
           "original": "a",
           "renamed": "runTick"
+        },
+        {
+          "start": 31333,
+          "end": 31334,
+          "symbol": "M:uk.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "redirectToErrorPage"
+        },
+        {
+          "start": 31384,
+          "end": 31385,
+          "symbol": "M:uk.a(BZ)V",
+          "original": "a",
+          "renamed": "terminate"
         },
         {
           "start": 32889,
@@ -345226,6 +345849,13 @@
           "symbol": "C:fi",
           "original": "fi",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 33421,
+          "end": 33422,
+          "symbol": "M:uk.b(Z)V",
+          "original": "b",
+          "renamed": "onCanvasCreated"
         },
         {
           "start": 33904,
@@ -347745,10 +348375,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/virogrid"
     },
-    "rulesSha256": "8e2edbc95cac73ec8d9a77a0a2b1769848091cf18b513c468a888e3db859e180",
+    "rulesSha256": "f062668f8e59846b4a3b1c1322b2d0966a0c5ebe9467ee253487f3eda43a179d",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "73369b22d01d3ca4afc8a1bb025a3f1d85920183905582e40ec4c7859f2e1c78",
-    "outputTreeSha256": "0fc3f0ede935f5b0fd51e44e370e37769a246c977d0985eb5ab6a1d46cd1ad55",
+    "outputTreeSha256": "9adab6ec5fa451e22c3993341b32efb7651cd797e872fb1c81e8050a787f38a2",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -291,7 +291,7 @@ public final class Virogrid extends od {
             }
             if (wm.field_w != null) {
               al.a(mi.field_e, param0 ^ -37, 80.0f);
-              this.b(true);
+              this.onCanvasCreated(true);
               oi.field_c = new MusicTrack[4];
               oi.field_c[0] = MusicTrack.a(wm.field_w, "", "ataxx titlescreen");
               oi.field_c[1] = MusicTrack.a(wm.field_w, "", "tetralink ingame 1");
@@ -309,7 +309,7 @@ public final class Virogrid extends od {
             }
             if (null != g.field_a) {
               al.a(aj.field_l, 13, 90.0f);
-              this.b(true);
+              this.onCanvasCreated(true);
               this.a(gn.field_G, (byte) -105, ge.field_c, s.field_a, g.field_a, oj.field_Fb);
               s.field_a = null;
               g.field_a = null;
@@ -318,7 +318,7 @@ public final class Virogrid extends od {
             }
             if (null != wn.field_i) {
               al.a(gl.field_i, 13, 95.0f);
-              this.b(true);
+              this.onCanvasCreated(true);
               this.a(1053, wn.field_i);
               wn.field_i = null;
               sb.a(param0 - 63);
@@ -378,7 +378,7 @@ public final class Virogrid extends od {
                                           return false;
                                         }
                                         ge.b(18887);
-                                        this.b(true);
+                                        this.onCanvasCreated(true);
                                         af.field_g = new jg(pj.field_c, sf.field_O);
                                         af.field_g.a((byte) 86, "", "menu_select");
                                         of.field_b = af.field_g.a((byte) 112, "", "tetralink_invalid_move");
@@ -731,7 +731,7 @@ public final class Virogrid extends od {
         }
     }
 
-    final void b(boolean param0) {
+    final void onCanvasCreated(boolean param0) {
         Object stackIn_5_0 = null;
         GameSession stackIn_24_0 = null;
         boolean stackIn_61_0 = false;
@@ -867,59 +867,59 @@ public final class Virogrid extends od {
     }
 
     private final void a(int param0, Js5Archive param1) {
-        qb var4 = null;
-        qb var5 = null;
-        qb var6 = null;
-        qb var7 = null;
-        qb var8 = null;
-        qb var9 = null;
-        qb var10 = null;
-        qb var11 = null;
-        qb var12 = null;
-        qb var13 = null;
-        qb var14 = null;
-        qb var15 = null;
-        qb var16 = null;
-        qb var17 = null;
-        qb var18 = null;
-        qb var19 = null;
-        qb var20 = null;
+        Model var4 = null;
+        Model var5 = null;
+        Model var6 = null;
+        Model var7 = null;
+        Model var8 = null;
+        Model var9 = null;
+        Model var10 = null;
+        Model var11 = null;
+        Model var12 = null;
+        Model var13 = null;
+        Model var14 = null;
+        Model var15 = null;
+        Model var16 = null;
+        Model var17 = null;
+        Model var18 = null;
+        Model var19 = null;
+        Model var20 = null;
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
-        qb var27 = null;
+        Model var27 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        qb var26 = null;
+        Model var26 = null;
         try {
           fk.a(1.0f);
           fk.a();
           if (param0 != 1053) {
             return;
           }
-          var27 = qb.a(param1, "", "scenery_walls");
-          var4 = qb.a(param1, "", "scenery_walls2");
-          var5 = qb.a(param1, "", "scenery_game-table");
-          var6 = qb.a(param1, "", "scenery_floor");
-          var7 = qb.a(param1, "", "scenery_props1");
-          var8 = qb.a(param1, "", "scenery_props2");
-          var9 = qb.a(param1, "", "scenery_ceiling");
-          var10 = qb.a(param1, "", "scenery_door");
-          var11 = qb.a(param1, "", "scenery_game-screen_back");
-          var12 = qb.a(param1, "", "scenery_game-screen_front");
-          var13 = qb.a(param1, "", "scenery_game-screen_front-left");
-          var14 = qb.a(param1, "", "scenery_game-screen_back-left");
-          var15 = qb.a(param1, "", "scenery_game-screen_back-top");
-          var16 = qb.a(param1, "", "scenery_game-screen_front-right");
-          var17 = qb.a(param1, "", "scenery_game-screen_back-right");
-          var18 = qb.a(param1, "", "scenery_game-screen_front-top");
-          var19 = qb.a(param1, "", "scenery_game-screen_front-black");
-          var20 = qb.a(param1, "", "scenery_game-screen_back-black");
+          var27 = Model.a(param1, "", "scenery_walls");
+          var4 = Model.a(param1, "", "scenery_walls2");
+          var5 = Model.a(param1, "", "scenery_game-table");
+          var6 = Model.a(param1, "", "scenery_floor");
+          var7 = Model.a(param1, "", "scenery_props1");
+          var8 = Model.a(param1, "", "scenery_props2");
+          var9 = Model.a(param1, "", "scenery_ceiling");
+          var10 = Model.a(param1, "", "scenery_door");
+          var11 = Model.a(param1, "", "scenery_game-screen_back");
+          var12 = Model.a(param1, "", "scenery_game-screen_front");
+          var13 = Model.a(param1, "", "scenery_game-screen_front-left");
+          var14 = Model.a(param1, "", "scenery_game-screen_back-left");
+          var15 = Model.a(param1, "", "scenery_game-screen_back-top");
+          var16 = Model.a(param1, "", "scenery_game-screen_front-right");
+          var17 = Model.a(param1, "", "scenery_game-screen_back-right");
+          var18 = Model.a(param1, "", "scenery_game-screen_front-top");
+          var19 = Model.a(param1, "", "scenery_game-screen_front-black");
+          var20 = Model.a(param1, "", "scenery_game-screen_back-black");
           this.a(var11, (byte) 69);
           this.a(var12, (byte) 69);
           this.a(var13, (byte) 69);
@@ -946,7 +946,7 @@ public final class Virogrid extends od {
           var24 = 256;
           var25 = 0;
           if (db.b((byte) 13, 0)) {
-            var26 = qb.a(param1, "", "ghost_untextured");
+            var26 = Model.a(param1, "", "ghost_untextured");
             ri.field_a = (il) (var26.a(var21, var22, var23, var24, var25));
             var23 = 64;
             var21 = 42;
@@ -1411,7 +1411,7 @@ public final class Virogrid extends od {
         }
     }
 
-    private final int[] a(byte param0, qb param1) {
+    private final int[] a(byte param0, Model param1) {
         RuntimeException var3 = null;
         int[] stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -2132,7 +2132,7 @@ public final class Virogrid extends od {
           GameSession.b(23320);
           pi.a(param0 ^ -29216);
           il.a();
-          qb.b();
+          Model.b();
           GameBoard.a(98);
           ee.b((byte) 119);
           SpriteState.d(0);
@@ -2388,10 +2388,10 @@ public final class Virogrid extends od {
         }
     }
 
-    private final void a(qb param0, byte param1) {
+    private final void a(Model param0, byte param1) {
         int[] discarded$1 = null;
         RuntimeException runtimeException = null;
-        qb var4 = null;
+        Model var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -2399,8 +2399,8 @@ public final class Virogrid extends od {
         try {
           param0.a(0, 154, 0);
           if (param1 != 69) {
-            var4 = (qb) null;
-            discarded$1 = this.a((byte) -76, (qb) null);
+            var4 = (Model) null;
+            discarded$1 = this.a((byte) -76, (Model) null);
           }
           param0.a(256, 256, 256, 32);
           param0.a(0, -154, 0);

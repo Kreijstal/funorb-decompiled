@@ -162,7 +162,7 @@ final class GameBoard {
         }
     }
 
-    private final int a(boolean param0, int param1, byte param2, int param3, int param4, boolean param5, int param6, int param7) {
+    private final int scoreMove(boolean param0, int param1, byte param2, int param3, int param4, boolean param5, int param6, int param7) {
         int var9;
         int var10;
         int var11;
@@ -824,7 +824,7 @@ final class GameBoard {
                   var8 = var6 + var21[var10];
                   var9 = var4[var10] + var7;
                   if (this.isLegalMove(var5, var8, var7, 2, var6, var9)) {
-                    var11 = this.a(false, var9, (byte) var5, var7, 120, false, var8, var6);
+                    var11 = this.scoreMove(false, var9, (byte) var5, var7, 120, false, var8, var6);
                     this.recordCandidate(var8, var11, var6, param1 + 103, var7, var9);
                   }
                 }
@@ -846,7 +846,7 @@ final class GameBoard {
                     var9 = var7 + var24[var11];
                     var10 = var8 + var4[var11];
                     if (this.isLegalMove(var5, var9, var8, 2, var7, var10)) {
-                      var12 = this.a(true, var10, (byte) var5, var8, param1 + 69, false, var9, var7);
+                      var12 = this.scoreMove(true, var10, (byte) var5, var8, param1 + 69, false, var9, var7);
                       var13 = -9;
                       for (var14 = 0; var14 < this.cells.length; var14++) {
                         for (var15 = 0; var15 < this.cells[0].length; var15++) {
@@ -855,7 +855,7 @@ final class GameBoard {
                               var17 = var15 + var4[var18];
                               var16 = var14 + var24[var18];
                               if (this.isLegalMove(-var5 + 1, var16, var15, 2, var14, var17)) {
-                                var19 = this.a(false, var17, (byte)(-var5 + 1), var15, 115, false, var16, var14);
+                                var19 = this.scoreMove(false, var17, (byte)(-var5 + 1), var15, 115, false, var16, var14);
                                 if (var19 > var13) {
                                   var13 = var19;
                                 }
