@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class jl extends rk {
+class DualLinkNode extends IntrusiveNode {
     static int[] field_p;
     static String field_n;
-    jl field_o;
+    DualLinkNode field_o;
     static String field_m;
     long field_r;
-    jl field_q;
+    DualLinkNode field_q;
 
     final void b(boolean param0) {
         if (null == this.field_q) {
@@ -105,13 +105,13 @@ class jl extends rk {
           field_n = null;
           return;
         }
-        jl.a((byte) -120);
+        DualLinkNode.a((byte) -120);
         field_p = null;
         field_m = null;
         field_n = null;
     }
 
-    protected jl() {
+    protected DualLinkNode() {
     }
 
     static {

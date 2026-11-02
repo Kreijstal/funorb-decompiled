@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kg extends rk {
+class PacketBuffer extends IntrusiveNode {
     int field_n;
     byte[] field_m;
     static em field_o;
@@ -82,7 +82,7 @@ class kg extends rk {
         int stackIn_57_1 = 0;
         fg stackIn_57_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hb var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;
@@ -131,26 +131,26 @@ class kg extends rk {
               fieldTemp$1 = Confined.field_E;
               Confined.field_E = Confined.field_E + 1;
               var5_ref.field_lb = fieldTemp$1;
-              vg.field_J.a((rk) (var5_ref), (byte) -97);
+              vg.field_J.a((IntrusiveNode) (var5_ref), (byte) -97);
             }
             var5_ref.field_ob = var4_ref_String;
             return;
           }
           if (1 != var2) {
             if (2 == var2) {
-              if (1 == rk.field_d) {
-                rk.field_d = 2;
+              if (1 == IntrusiveNode.field_d) {
+                IntrusiveNode.field_d = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (rk.field_d == 2) {
-                rk.field_d = 1;
+              if (IntrusiveNode.field_d == 2) {
+                IntrusiveNode.field_d = 1;
               }
               return;
             }
             if (var2 == 4) {
-              rk.field_d = 1;
+              IntrusiveNode.field_d = 1;
               var3 = var1.d(true);
               ql.field_t = ((String) (var3)).intern();
               var4 = var1.c(param0 ^ -20);
@@ -187,7 +187,7 @@ class kg extends rk {
             fieldTemp$0 = c.field_k;
             c.field_k = c.field_k + 1;
             var6.field_lb = fieldTemp$0;
-            il.field_fb.a((rk) (var6), (byte) -103);
+            il.field_fb.a((IntrusiveNode) (var6), (byte) -103);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -196,13 +196,13 @@ class kg extends rk {
           var6.field_ob = var4_ref_StringLifetime1;
           var6.a(true);
           var7 = (fg) (il.field_fb.a(56));
-          L9: while (true) {
+          scanLoop1: while (true) {
             if (var7 != null) {
               stackIn_57_0 = var6;
               stackIn_57_1 = 200;
               stackIn_57_2 = var7;
               if (var8 != 0) {
-                break L9;
+                break scanLoop1;
               }
               if (tb.a(stackIn_57_0, stackIn_57_1, stackIn_57_2)) {
                 var7 = (fg) (il.field_fb.d(param0 ^ -2169));
@@ -210,7 +210,7 @@ class kg extends rk {
               }
             }
             if (var7 == null) {
-              il.field_fb.a((rk) (var6), (byte) 89);
+              il.field_fb.a((IntrusiveNode) (var6), (byte) 89);
               if (var8 == 0) {
                 return;
               }
@@ -1039,7 +1039,7 @@ class kg extends rk {
         }
     }
 
-    kg(int param0) {
+    PacketBuffer(int param0) {
         try {
           this.field_n = 0;
           this.field_m = dl.a(param0, -101);
@@ -1096,7 +1096,7 @@ class kg extends rk {
         }
     }
 
-    kg(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1204,7 +1204,7 @@ class kg extends rk {
         RuntimeException var3 = null;
         try {
           if (param0 != 25859) {
-            kg.c(false);
+            PacketBuffer.c(false);
           }
           this.field_m[this.field_n + (-param1 - 1)] = (byte)param1;
           return;

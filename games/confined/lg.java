@@ -60,7 +60,7 @@ final class lg {
         field_f = null;
     }
 
-    final void a(kg param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_t = new nk();

@@ -3,7 +3,7 @@
  */
 final class tn extends rl {
     int field_B;
-    kg field_A;
+    PacketBuffer field_A;
     static String field_y;
     byte field_z;
     static String field_D;
@@ -25,7 +25,7 @@ final class tn extends rl {
 
     final byte[] e(byte param0) {
         if (param0 < 82) {
-          this.field_A = (kg) null;
+          this.field_A = (PacketBuffer) null;
           if (this.field_v) {
             throw new RuntimeException();
           }

@@ -118,7 +118,7 @@ final class tb {
         }
     }
 
-    final static String a(int param0, kg param1, int param2) {
+    final static String a(int param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;

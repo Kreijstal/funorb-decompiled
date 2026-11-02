@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dn {
-    static gj field_d;
+    static GameCanvas field_d;
     static nf[] field_c;
     static ef field_b;
     static String field_a;

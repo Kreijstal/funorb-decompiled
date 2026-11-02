@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bh implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInput implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static int[] field_b;
     static mi field_a;
 
@@ -200,7 +200,7 @@ final class bh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     final static void b(int param0) {
         String var1 = null;
         String var1Lifetime1;
-        if (!rk.field_f) {
+        if (!IntrusiveNode.field_f) {
           throw new IllegalStateException();
         }
         if (ki.field_c != null) {

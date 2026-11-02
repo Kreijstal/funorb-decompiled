@@ -80,7 +80,7 @@ final class vg extends pm {
     }
 
     final static void a(int param0, int param1, om param2) {
-        hb var6 = null;
+        CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = vh.field_a;
@@ -187,8 +187,8 @@ final class vg extends pm {
         try {
           try {
             var9 = fb.field_b.getGraphics();
-            if (null == gh.field_f) {
-              gh.field_f = new java.awt.Font("Helvetica", 1, 13);
+            if (null == IntrusiveNodeHashTable.field_f) {
+              IntrusiveNodeHashTable.field_f = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param1) {
               var9.setColor(java.awt.Color.black);
@@ -211,7 +211,7 @@ final class vg extends pm {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(param2 * 3 + 2, 2, -(param2 * 3) + 300, 30);
-              var10.setFont(gh.field_f);
+              var10.setFont(IntrusiveNodeHashTable.field_f);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(param0.length() * 6) + 304) / 2, 22);
               var9.drawImage(qm.field_z, wm.field_ab / 2 - 152, -18 + im.field_b / 2, (java.awt.image.ImageObserver) null);
@@ -226,12 +226,12 @@ final class vg extends pm {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(1 + var7, var8 + 1, 301, 31);
               var9.fillRect(3 * param2 + (2 + var7), 2 + var8, 300 - param2 * 3, 30);
-              var9.setFont(gh.field_f);
+              var9.setFont(IntrusiveNodeHashTable.field_f);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param0, var7 + (304 - param0.length() * 6) / 2, var8 + 22);
             }
             if (eb.field_b != null) {
-              var9.setFont(gh.field_f);
+              var9.setFont(IntrusiveNodeHashTable.field_f);
               var9.setColor(java.awt.Color.white);
               var9.drawString(eb.field_b, wm.field_ab / 2 - eb.field_b.length() * 6 / 2, -26 + im.field_b / 2);
             }

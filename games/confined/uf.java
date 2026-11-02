@@ -17,7 +17,7 @@ final class uf {
         return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));
     }
 
-    final void a(kg param0, nk param1) {
+    final void a(PacketBuffer param0, nk param1) {
         int var3;
         int var4;
         int var5;

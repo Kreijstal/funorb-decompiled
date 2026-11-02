@@ -35,7 +35,7 @@ final class ji {
         om var5_ref_om = null;
         int[] var6 = null;
         int var8 = 0;
-        hb var10 = null;
+        CipherPacketBuffer var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         int var4Lifetime1;

@@ -34,7 +34,7 @@ abstract class em {
 
     abstract si b(byte param0);
 
-    abstract void a(kg param0, byte param1);
+    abstract void a(PacketBuffer param0, byte param1);
 
     static {
         field_c = "to return to the normal view.";

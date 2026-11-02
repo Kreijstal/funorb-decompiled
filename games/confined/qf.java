@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class qf {
-    static kg field_c;
+    static PacketBuffer field_c;
     static boolean field_g;
     static volatile int field_f;
     static boolean field_e;
@@ -92,7 +92,7 @@ abstract class qf {
 
     static {
         field_f = 0;
-        field_c = new kg(256);
+        field_c = new PacketBuffer(256);
         field_a = new int[8192];
         field_d = "Loading fonts";
         field_b = "You already have the charge cannon";

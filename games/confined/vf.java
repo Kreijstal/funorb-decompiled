@@ -475,7 +475,7 @@ class vf implements fe, pj {
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             lc.a(param1.field_q + param0, param1.field_F + param1.field_q + param0, param1.field_z + param1.field_m + param2, param2 + param1.field_m, 14907);
-            bg.field_d.a(var10, var11, var12, var10, (byte) -62, this.field_m);
+            KeyboardInput.field_d.a(var10, var11, var12, var10, (byte) -62, this.field_m);
             ib.b(false);
           }
           if (param3 > -19) {
@@ -582,7 +582,7 @@ class vf implements fe, pj {
                 stackIn_20_0 = var18.a(var9, -102);
               }
               var15 = stackIn_20_0;
-              bg.field_d.a(this.a(param0, param2 ^ 14525, var14, param1), var13.field_d + (param1.field_y + this.field_b) + param4 + param1.field_m, this.field_g >>> 24, 126, -var14 + var15, var13.field_a, this.field_g);
+              KeyboardInput.field_d.a(this.a(param0, param2 ^ 14525, var14, param1), var13.field_d + (param1.field_y + this.field_b) + param4 + param1.field_m, this.field_g >>> 24, 126, -var14 + var15, var13.field_a, this.field_g);
             }
             ib.b(false);
             return;

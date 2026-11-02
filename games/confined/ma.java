@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ma extends rk {
+final class ma extends IntrusiveNode {
     private int[] field_q;
     int[] field_t;
     private int[] field_m;
@@ -127,7 +127,7 @@ final class ma extends rk {
         this.field_t = null;
     }
 
-    ma(kg param0) {
+    ma(PacketBuffer param0) {
         boolean stackIn_3_1 = false;
         int var2;
         int var3;

@@ -81,7 +81,7 @@ final class gm extends ah {
           this.field_db.field_m = -var4;
           this.field_db.field_x = -var6;
           this.field_db.field_p = -(var8 * this.field_C * 0.8) + this.field_D;
-          param0.a((rk) (this.field_db), (byte) -88);
+          param0.a((IntrusiveNode) (this.field_db), (byte) -88);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gm.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

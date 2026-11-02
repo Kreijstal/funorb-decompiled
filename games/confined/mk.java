@@ -55,7 +55,7 @@ final class mk extends ai {
             var1 = new ud();
           }
           var1.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
-          ve.field_b.a((rk) (var1), (byte) 114);
+          ve.field_b.a((IntrusiveNode) (var1), (byte) 114);
           return;
         }
         field_m = (String) null;
@@ -64,7 +64,7 @@ final class mk extends ai {
           var1Lifetime1 = new ud();
         }
         var1Lifetime1.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
-        ve.field_b.a((rk) (var1Lifetime1), (byte) 114);
+        ve.field_b.a((IntrusiveNode) (var1Lifetime1), (byte) 114);
     }
 
     static {

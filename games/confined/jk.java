@@ -267,7 +267,7 @@ final class jk {
         }
         var3 = new lb();
         if (var4 != null) {
-          var3.a(-119, new kg(var4));
+          var3.a(-119, new PacketBuffer(var4));
         }
         if (param1 >= 32768) {
           var3.f(0);
@@ -277,7 +277,7 @@ final class jk {
     }
 
     final static void a(byte param0) {
-        bg.field_d = tl.a(4314);
+        KeyboardInput.field_d = tl.a(4314);
         vg.field_Z = new sh();
         if (param0 <= -29) {
           wl.a(-106, true, true);
@@ -308,7 +308,7 @@ final class jk {
           var3[var4_int] = an.field_p[va.a(255, (int) var2[var4_int])];
         }
         if (param0 == 255) {
-          var4 = new nf(kb.field_a, em.field_e, jl.field_p[0], ij.field_r[0], rg.field_I[0], sd.field_f[0], var3);
+          var4 = new nf(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], rg.field_I[0], sd.field_f[0], var3);
           ql.a(false);
           return var4;
         }

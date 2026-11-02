@@ -10,8 +10,8 @@ final class lf extends mf {
     static bi field_i;
 
     final static void a(int param0, int param1, bj param2) {
-        hb var8 = null;
-        hb var9 = null;
+        CipherPacketBuffer var8 = null;
+        CipherPacketBuffer var9 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = Confined.field_J ? 1 : 0;
@@ -60,7 +60,7 @@ final class lf extends mf {
             if (var3 != null) {
               if (var3.a(-3621) == nn.field_q &&
                 !param0.equals(this.field_l.field_B)) {
-                stackIn_6_0 = lm.field_d;
+                stackIn_6_0 = IntrusiveDeque.field_d;
                 return stackIn_6_0;
               }
               stackIn_8_0 = var3.a((byte) 68);
@@ -73,7 +73,7 @@ final class lf extends mf {
           if (param0.equals(this.field_l.field_B)) {
             return null;
           }
-          stackIn_14_0 = lm.field_d;
+          stackIn_14_0 = IntrusiveDeque.field_d;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

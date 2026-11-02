@@ -22,14 +22,14 @@ final class tg extends ga implements el {
         try {
           if (this.field_P != param3) {
             if (param3 == this.field_O) {
-              jl.a((byte) -124);
+              DualLinkNode.a((byte) -124);
             } else {
               if (param3 == this.field_Q) {
                 bd.a(1849965346);
               }
             }
           } else {
-            rk.b((byte) 120);
+            IntrusiveNode.b((byte) 120);
           }
           if (param0 >= 68) {
             return;

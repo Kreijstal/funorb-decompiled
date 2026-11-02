@@ -62,7 +62,7 @@ class rg extends fj {
     }
 
     rg(String param0, uk param1) {
-        this(param0, bg.field_d.field_h, param1);
+        this(param0, KeyboardInput.field_d.field_h, param1);
     }
 
     boolean a(fj param0, int param1) {
@@ -262,7 +262,7 @@ class rg extends fj {
         this.field_L = true;
         this.field_H = false;
         this.field_N = true;
-        this.field_n = bg.field_d.field_w;
+        this.field_n = KeyboardInput.field_d.field_w;
     }
 
     static {

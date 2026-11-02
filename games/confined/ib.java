@@ -69,14 +69,14 @@ final class ib extends fj {
             return 80;
           }
         } else {
-          if (null != o.field_f) {
-            if (!o.field_f.b(param0 ^ 109)) {
+          if (null != IntrusiveNodeHashTableIterator.field_f) {
+            if (!IntrusiveNodeHashTableIterator.field_f.b(param0 ^ 109)) {
               return 14;
             }
-            if (!o.field_f.b("", -4308)) {
+            if (!IntrusiveNodeHashTableIterator.field_f.b("", -4308)) {
               return 29;
             }
-            if (!o.field_f.a("", 0)) {
+            if (!IntrusiveNodeHashTableIterator.field_f.a("", 0)) {
               return 29;
             }
           }
@@ -113,7 +113,7 @@ final class ib extends fj {
         }
         fn.h(var1.field_t, var1.field_n, var1.field_r, var1.field_p);
         var1.field_s = null;
-        m.field_d.a((rk) (var1), (byte) -108);
+        m.field_d.a((IntrusiveNode) (var1), (byte) -108);
     }
 
     final void a(int param0, boolean param1, int param2) {
@@ -283,8 +283,8 @@ final class ib extends fj {
         if (param0) {
           return;
         }
-        hb.field_u = new bf();
-        dn.field_b.a((fj) (hb.field_u), (byte) -72);
+        CipherPacketBuffer.field_u = new bf();
+        dn.field_b.a((fj) (CipherPacketBuffer.field_u), (byte) -72);
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
@@ -352,9 +352,9 @@ final class ib extends fj {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_T[0][var0] = rk.a(rk.a(rk.a(rk.a(var10 << 24, rk.a(rk.a(rk.a(var2 << 48, var2 << 56), var6 << 40), var2 << 32)), var8 << 16), var4 << 8), var12);
+            field_T[0][var0] = IntrusiveNode.a(IntrusiveNode.a(IntrusiveNode.a(IntrusiveNode.a(var10 << 24, IntrusiveNode.a(IntrusiveNode.a(IntrusiveNode.a(var2 << 48, var2 << 56), var6 << 40), var2 << 32)), var8 << 16), var4 << 8), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_T[var14][var0] = rk.a(field_T[-1 + var14][var0] >>> 8, field_T[var14 - 1][var0] << 56);
+                field_T[var14][var0] = IntrusiveNode.a(field_T[-1 + var14][var0] >>> 8, field_T[var14 - 1][var0] << 56);
             }
             var0++;
         }

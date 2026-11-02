@@ -5,7 +5,7 @@ final class vb {
     static bi field_f;
     static int[] field_e;
     private mn field_b;
-    private rk field_c;
+    private IntrusiveNode field_c;
     static long field_d;
     static double[] field_a;
 
@@ -67,15 +67,15 @@ final class vb {
           vb.a((byte) -90, '￘');
         }
         aa.a((byte) -118, false);
-        rk.field_e = 0;
+        IntrusiveNode.field_e = 0;
     }
 
-    final rk b(rk param0, int param1) {
-        rk var3 = null;
+    final IntrusiveNode b(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        rk var4 = null;
+        IntrusiveNode var4 = null;
         Object stackIn_5_0 = null;
-        rk stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -89,12 +89,12 @@ final class vb {
           if (this.field_b.field_a == var3) {
             this.field_c = null;
             stackIn_5_0 = null;
-            return (rk) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
           this.field_c = var3.field_h;
           if (param1 != 6) {
-            var4 = (rk) null;
-            this.a((rk) null, 28);
+            var4 = (IntrusiveNode) null;
+            this.a((IntrusiveNode) null, 28);
           }
           stackIn_9_0 = var3;
           return stackIn_9_0;
@@ -112,18 +112,18 @@ final class vb {
         }
     }
 
-    final rk a(rk param0, int param1) {
-        rk var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        rk stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            this.field_c = (rk) null;
+            this.field_c = (IntrusiveNode) null;
           }
           if (param0 == null) {
             var3 = this.field_b.field_a.field_a;
@@ -133,7 +133,7 @@ final class vb {
           if (var3 == this.field_b.field_a) {
             this.field_c = null;
             stackIn_8_0 = null;
-            return (rk) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
           this.field_c = var3.field_a;
           stackIn_10_0 = var3;
@@ -207,14 +207,14 @@ final class vb {
         }
     }
 
-    final rk c(int param0) {
-        rk var2 = this.field_b.field_a.field_a;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_b.field_a.field_a;
         if (var2 == this.field_b.field_a) {
           this.field_c = null;
           return null;
         }
         if (param0 != 7) {
-          return (rk) null;
+          return (IntrusiveNode) null;
         }
         this.field_c = var2.field_a;
         return var2;
@@ -228,11 +228,11 @@ final class vb {
         }
     }
 
-    final rk a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 != 120) {
           vb.b((byte) -33);
         }
-        rk var2 = this.field_b.field_a.field_h;
+        IntrusiveNode var2 = this.field_b.field_a.field_h;
         if (this.field_b.field_a == var2) {
           this.field_c = null;
           return null;
@@ -250,11 +250,11 @@ final class vb {
         field_e = null;
     }
 
-    final rk a(int param0) {
+    final IntrusiveNode a(int param0) {
         if (param0 != 0) {
           field_d = -121L;
         }
-        rk var2 = this.field_c;
+        IntrusiveNode var2 = this.field_c;
         if (this.field_b.field_a == var2) {
           this.field_c = null;
           return null;
@@ -263,9 +263,9 @@ final class vb {
         return var2;
     }
 
-    final rk b(int param0) {
+    final IntrusiveNode b(int param0) {
         int var2 = -88 % ((param0 - 17) / 35);
-        rk var3 = this.field_c;
+        IntrusiveNode var3 = this.field_c;
         if (var3 == this.field_b.field_a) {
           this.field_c = null;
           return null;

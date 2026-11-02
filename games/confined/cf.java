@@ -28,7 +28,7 @@ final class cf extends hf {
           this.field_eb.field_p = this.field_D;
           this.field_eb.field_u = 0.5;
           this.field_eb.field_t = this.field_E;
-          param0.a((rk) (this.field_eb), (byte) 93);
+          param0.a((IntrusiveNode) (this.field_eb), (byte) 93);
           int var3_int = -39 % ((-2 - param1) / 62);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "cf.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

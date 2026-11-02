@@ -202,7 +202,7 @@ final class ek {
             var4 = 0;
             if ((var2 | var3 | var4) > 0) {
               if (var2 > 0) {
-                stackIn_7_0 = gh.field_h[this.field_m >> 1 & 3];
+                stackIn_7_0 = IntrusiveNodeHashTable.field_h[this.field_m >> 1 & 3];
                 stackIn_7_1 = 0;
                 stackIn_7_2 = 0;
                 stackIn_7_3 = 640;
@@ -239,7 +239,7 @@ final class ek {
             return;
           }
           if (var2 > 0) {
-            stackIn_25_0 = gh.field_h[this.field_m >> 1 & 3];
+            stackIn_25_0 = IntrusiveNodeHashTable.field_h[this.field_m >> 1 & 3];
             stackIn_25_1 = 0;
             stackIn_25_2 = 0;
             stackIn_25_3 = 640;
@@ -295,7 +295,7 @@ final class ek {
               return;
             }
             if (var2Lifetime1 > 0) {
-              stackIn_49_0 = gh.field_h[this.field_m >> 1 & 3];
+              stackIn_49_0 = IntrusiveNodeHashTable.field_h[this.field_m >> 1 & 3];
               stackIn_49_1 = 0;
               stackIn_49_2 = 0;
               stackIn_49_3 = 640;
@@ -346,7 +346,7 @@ final class ek {
           return;
         }
         if (var2Lifetime1 > 0) {
-          stackIn_72_0 = gh.field_h[this.field_m >> 1 & 3];
+          stackIn_72_0 = IntrusiveNodeHashTable.field_h[this.field_m >> 1 & 3];
           stackIn_72_1 = 0;
           stackIn_72_2 = 0;
           stackIn_72_3 = 640;
@@ -642,7 +642,7 @@ final class ek {
           stackIn_13_0.field_u = stackIn_13_1 * ((double)stackIn_14_2 + 0.0078125 * (double)(this.field_a + this.field_o)) * this.field_n.field_C;
           this.field_j.field_p = this.field_n.field_D;
           this.field_j.field_t = this.field_n.field_E;
-          param1.a((rk) (this.field_j), (byte) -126);
+          param1.a((IntrusiveNode) (this.field_j), (byte) -126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

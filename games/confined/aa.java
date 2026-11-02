@@ -12,7 +12,7 @@ final class aa {
           am.g(-4258);
         }
         ka.field_N = cc.a(1, -14245);
-        gj.field_a = cc.a(2, -14245);
+        GameCanvas.field_a = cc.a(2, -14245);
         i.field_u = cc.a(3, -14245);
         gl.field_j = cc.a(4, -14245);
         ih.field_d = cc.a(5, -14245);
@@ -24,9 +24,9 @@ final class aa {
         dg.field_n = new ad(50);
         dg.field_n.a(param0, fi.field_b, dl.field_a, pb.field_e, "basic");
         dg.field_n.a((byte) -6, ka.field_N, un.field_b, ak.field_P);
-        dg.field_n.a((byte) -6, gj.field_a, d.field_f, jl.field_n);
-        dg.field_n.a((byte) -6, i.field_u, d.field_f, jl.field_n);
-        dg.field_n.a((byte) -6, gl.field_j, d.field_f, jl.field_n);
+        dg.field_n.a((byte) -6, GameCanvas.field_a, d.field_f, DualLinkNode.field_n);
+        dg.field_n.a((byte) -6, i.field_u, d.field_f, DualLinkNode.field_n);
+        dg.field_n.a((byte) -6, gl.field_j, d.field_f, DualLinkNode.field_n);
         dg.field_n.a((byte) -6, ih.field_d, fi.field_b, dl.field_a);
         dg.field_n.a((byte) -6, ul.field_U, pb.field_a, qf.field_d);
         dg.field_n.a((byte) -6, oj.field_C, mn.field_g, vk.field_x);

@@ -173,7 +173,7 @@ final class kd extends jf {
     private final void a(int param0, boolean param1) {
         try {
           IOException iOException = null;
-          kg stackIn_6_0 = null;
+          PacketBuffer stackIn_6_0 = null;
           int stackIn_6_1 = 0;
           int stackIn_7_2 = 0;
           Throwable decompiledCaughtException = null;
@@ -193,7 +193,7 @@ final class kd extends jf {
             } else {
               stackIn_7_2 = 2;
             }
-            ((kg) (Object) stackIn_6_0).f(stackIn_6_1, stackIn_7_2);
+            ((PacketBuffer) (Object) stackIn_6_0).f(stackIn_6_1, stackIn_7_2);
             this.field_i.a(0L, param0 + 8848);
             this.field_p.a(this.field_i.field_m.length, false, this.field_i.field_m, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -220,7 +220,7 @@ final class kd extends jf {
     }
 
     final static void a(byte param0, int param1, ca param2) {
-        hb var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = vh.field_a;
           var3.b(true, param1);
@@ -382,7 +382,7 @@ final class kd extends jf {
                     stackIn_75_0 = (var10 == 0) ? 5 : 9;
                     var15 = stackIn_75_0;
                     this.field_f = var14_ref;
-                    this.field_f.field_A = new kg(var9 + (var15 + this.field_f.field_z));
+                    this.field_f.field_A = new PacketBuffer(var9 + (var15 + this.field_f.field_z));
                     this.field_f.field_A.f(127, var10);
                     this.field_f.field_A.d(-86, var9);
                     this.field_f.field_B = 10;

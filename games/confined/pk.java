@@ -10,12 +10,12 @@ final class pk implements Runnable {
     private bc field_b;
     private df field_j;
     static String field_f;
-    private kg field_d;
+    private PacketBuffer field_d;
     private bc field_a;
     static int field_c;
     private int field_e;
 
-    final kg a(int param0) {
+    final PacketBuffer a(int param0) {
         if (~this.field_e != param0) {
           return null;
         }
@@ -262,7 +262,7 @@ final class pk implements Runnable {
         try {
           this.field_g = param1;
           this.field_j = param0;
-          this.field_d = new kg(param2);
+          this.field_d = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "pk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -275,7 +275,7 @@ final class pk implements Runnable {
         try {
           if (!ie.field_a) {
             hc.field_u = param1;
-            bg.field_f = 0;
+            KeyboardInput.field_f = 0;
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "pk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

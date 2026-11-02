@@ -4,17 +4,17 @@
 abstract class jf {
     static String[] field_c;
     wd field_o;
-    static kg field_b;
+    static PacketBuffer field_b;
     static int field_k;
     wd field_j;
     wd field_g;
     wd field_n;
     int field_l;
-    kg field_i;
+    PacketBuffer field_i;
     long field_h;
     volatile int field_a;
     byte field_d;
-    kg field_m;
+    PacketBuffer field_m;
     volatile int field_e;
     tn field_f;
 
@@ -81,7 +81,7 @@ abstract class jf {
         return this.c((byte) -5) >= 20 ? true : false;
     }
 
-    final static void a(kg param0, java.math.BigInteger param1, kg param2, int param3, java.math.BigInteger param4) {
+    final static void a(PacketBuffer param0, java.math.BigInteger param1, PacketBuffer param2, int param3, java.math.BigInteger param4) {
         try {
           id.a(param2, param1, 44, param3, param0.field_m, param4, param0.field_n);
         } catch (RuntimeException runtimeException) {
@@ -183,13 +183,13 @@ abstract class jf {
           if (50 > var6) {
             if (var6 < 20) {
               var7Lifetime8 = var6 * 256 / 20;
-              bg.field_c.c(var3, var4, var7Lifetime8);
+              KeyboardInput.field_c.c(var3, var4, var7Lifetime8);
             } else {
               if (var6 >= 30) {
                 var7Lifetime8 = (-var6 + 50) * 256 / 20;
-                bg.field_c.c(var3, var4, var7Lifetime8);
+                KeyboardInput.field_c.c(var3, var4, var7Lifetime8);
               } else {
-                bg.field_c.c(var3, var4, 256);
+                KeyboardInput.field_c.c(var3, var4, 256);
               }
             }
             var6 = tg.field_H - 140;
@@ -240,7 +240,7 @@ abstract class jf {
           }
           if (var6Lifetime1 < 20) {
             var7Lifetime1Lifetime2 = var6Lifetime1 * 256 / 20;
-            bg.field_c.c(var3, var4, var7Lifetime1Lifetime2);
+            KeyboardInput.field_c.c(var3, var4, var7Lifetime1Lifetime2);
             var6Lifetime1 = tg.field_H - 140;
             if (var6Lifetime1 > 0) {
               var7Lifetime1Lifetime2 = 256;
@@ -252,7 +252,7 @@ abstract class jf {
             return;
           }
           if (var6Lifetime1 < 30) {
-            bg.field_c.c(var3, var4, 256);
+            KeyboardInput.field_c.c(var3, var4, 256);
             var6Lifetime1 = tg.field_H - 140;
             if (var6Lifetime1 > 0) {
               var7Lifetime1Lifetime3 = 256;
@@ -264,7 +264,7 @@ abstract class jf {
             return;
           }
           var7Lifetime1Lifetime4 = (-var6Lifetime1 + 50) * 256 / 20;
-          bg.field_c.c(var3, var4, var7Lifetime1Lifetime4);
+          KeyboardInput.field_c.c(var3, var4, var7Lifetime1Lifetime4);
           var6Lifetime1Lifetime1 = tg.field_H - 140;
           if (var6Lifetime1Lifetime1 > 0) {
             var7Lifetime1Lifetime5 = 256;
@@ -301,7 +301,7 @@ abstract class jf {
         }
         if (var6Lifetime2 < 20) {
           var7Lifetime4 = var6Lifetime2 * 256 / 20;
-          bg.field_c.c(var3, var4, var7Lifetime4);
+          KeyboardInput.field_c.c(var3, var4, var7Lifetime4);
           var6Lifetime2 = tg.field_H - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime4Lifetime1 = 256;
@@ -313,7 +313,7 @@ abstract class jf {
           return;
         }
         if (var6Lifetime2 < 30) {
-          bg.field_c.c(var3, var4, 256);
+          KeyboardInput.field_c.c(var3, var4, 256);
           var6Lifetime2 = tg.field_H - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime5 = 256;
@@ -325,7 +325,7 @@ abstract class jf {
           return;
         }
         var7Lifetime6 = (-var6Lifetime2 + 50) * 256 / 20;
-        bg.field_c.c(var3, var4, var7Lifetime6);
+        KeyboardInput.field_c.c(var3, var4, var7Lifetime6);
         var6Lifetime3 = tg.field_H - 140;
         if (var6Lifetime3 > 0) {
           var7Lifetime7 = 256;
@@ -353,11 +353,11 @@ abstract class jf {
         this.field_j = new wd();
         this.field_g = new wd();
         this.field_n = new wd();
-        this.field_i = new kg(6);
+        this.field_i = new PacketBuffer(6);
         this.field_d = (byte) 0;
         this.field_a = 0;
         this.field_e = 0;
-        this.field_m = new kg(10);
+        this.field_m = new PacketBuffer(10);
     }
 
     static {

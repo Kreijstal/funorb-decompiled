@@ -37,7 +37,7 @@ class ul extends rg {
         this.field_V = -1;
         try {
           this.field_S = param2;
-          this.field_n = bg.field_d.field_u;
+          this.field_n = KeyboardInput.field_d.field_u;
           this.a(true, false, param0);
           this.field_X = true;
           this.field_Y = ri.a(-3);
@@ -404,8 +404,8 @@ class ul extends rg {
         if (2 > we.field_c) {
           return fb.field_c;
         }
-        if (null != o.field_f) {
-          if (!o.field_f.b(0)) {
+        if (null != IntrusiveNodeHashTableIterator.field_f) {
+          if (!IntrusiveNodeHashTableIterator.field_f.b(0)) {
             return hc.field_s;
           }
           return b.field_k;
@@ -601,7 +601,7 @@ class ul extends rg {
         }
     }
 
-    final static he[] a(hb param0, int param1) {
+    final static he[] a(CipherPacketBuffer param0, int param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

@@ -161,7 +161,7 @@ final class pf {
             var3 = (CharSequence[]) null;
             pf.a(-18, (CharSequence[]) null);
           }
-          stackIn_3_0 = fc.a(param1, -2, 0, param1.length);
+          stackIn_3_0 = IsaacRandom.a(param1, -2, 0, param1.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

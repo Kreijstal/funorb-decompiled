@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class gh implements Iterable {
+final class IntrusiveNodeHashTable implements Iterable {
     int field_i;
     static si field_a;
-    rk[] field_j;
+    IntrusiveNode[] field_j;
     static boolean field_k;
-    private rk field_g;
+    private IntrusiveNode field_g;
     static int[] field_c;
     static nf[] field_h;
     static mn field_e;
@@ -23,9 +23,9 @@ final class gh implements Iterable {
         return nh.field_b;
     }
 
-    final rk a(int param0, long param1) {
-        rk var4;
-        rk var5;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
         var6 = Confined.field_J ? 1 : 0;
         var4 = this.field_j[(int)((long)(this.field_i - param0) & param1)];
@@ -59,8 +59,8 @@ final class gh implements Iterable {
         }
     }
 
-    final void a(rk param0, long param1, int param2) {
-        rk var5 = null;
+    final void a(IntrusiveNode param0, long param1, int param2) {
+        IntrusiveNode var5 = null;
         try {
           if (null != param0.field_a) {
             param0.a(true);
@@ -77,10 +77,10 @@ final class gh implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new o(this));
+        return (Iterator) ((Object) new IntrusiveNodeHashTableIterator(this));
     }
 
-    private gh() throws Throwable {
+    private IntrusiveNodeHashTable() throws Throwable {
         throw new Error();
     }
 

@@ -85,12 +85,12 @@ final class mi {
         byte[] var24 = null;
         int[] var25 = null;
         byte[] var26 = null;
-        kg var27 = null;
+        PacketBuffer var27 = null;
         byte[] var28 = null;
-        kg var30 = null;
+        PacketBuffer var30 = null;
         int[] var31 = null;
         byte[][] var32 = null;
-        kg var33 = null;
+        PacketBuffer var33 = null;
         int[] var35 = null;
         byte[] var36 = null;
         byte[] var37 = null;
@@ -141,7 +141,7 @@ final class mi {
             var36 = vb.a(true, 6, this.field_d[param0]);
             var26 = var36;
             var10 = var26;
-            var27 = new kg(var36);
+            var27 = new PacketBuffer(var36);
             var27.a(5, param1, var27.field_m.length, (byte) 72);
             decompiledFrameRemainder0 = false;
           }
@@ -170,7 +170,7 @@ final class mi {
               var12--;
               var13 = var24[var12] & 255;
               var12 = var12 - var5_int * (var13 * 4);
-              var33 = new kg(var44);
+              var33 = new PacketBuffer(var44);
               var15 = 0;
               var16 = 0;
               var33.field_n = var12;
@@ -218,7 +218,7 @@ final class mi {
               var12--;
               var13 = 255 & var24[var12];
               var12 = var12 - var5_int * (var13 * 4);
-              var30 = new kg(var44);
+              var30 = new PacketBuffer(var44);
               var39 = new int[var5_int];
               var31 = var39;
               var15_ref_int__ = var31;

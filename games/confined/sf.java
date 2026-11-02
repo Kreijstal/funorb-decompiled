@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends rk {
+final class sf extends IntrusiveNode {
     int field_q;
     int field_v;
     static double field_t;

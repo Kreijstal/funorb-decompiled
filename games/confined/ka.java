@@ -106,7 +106,7 @@ class ka extends pm {
           this.field_I.field_p = this.field_D;
           this.field_I.field_u = this.field_C * (this.field_C * (64.0 / (double)uc.field_db.length)) * ((double)uc.field_db.length - this.field_K);
           int var3_int = -113 % ((-2 - param1) / 62);
-          param0.a((rk) (this.field_I), (byte) -108);
+          param0.a((IntrusiveNode) (this.field_I), (byte) -108);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ka.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -428,8 +428,8 @@ class ka extends pm {
     final static boolean h(byte param0) {
         ag.field_h = true;
         int var1 = -51 / ((param0 - 22) / 43);
-        ec.field_e = ri.a(-3) + 15000L;
-        return rk.field_e == 11 ? true : false;
+        ClientException.field_e = ri.a(-3) + 15000L;
+        return IntrusiveNode.field_e == 11 ? true : false;
     }
 
     static {

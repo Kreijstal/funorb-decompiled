@@ -31,13 +31,13 @@ final class sd {
         return -1 + this.field_e.length;
     }
 
-    final static ec a(Throwable param0, String param1) {
-        ec var2 = null;
-        if (param0 instanceof ec) {
-          var2 = (ec) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_c = var2.field_c + ' ' + param1;
         } else {
-          var2 = new ec(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }

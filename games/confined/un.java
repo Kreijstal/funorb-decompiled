@@ -88,7 +88,7 @@ final class un {
           this.field_c = param0;
           param0.field_M = true;
           rm.field_f = new eg(100);
-          bg.field_f = 0;
+          KeyboardInput.field_f = 0;
           ie.field_a = true;
           hc.field_u = ve.field_e;
         } catch (RuntimeException runtimeException) {

@@ -366,7 +366,7 @@ abstract class ah extends ee {
         if (param0 != 20253) {
           return (e[]) null;
         }
-        return new e[]{qc.field_l, rn.field_a, tl.field_e, mn.field_f, li.field_k, eb.field_o, la.field_N, ch.field_a, ij.field_s, og.field_i, bg.field_g, ei.field_lb, rk.field_g, oe.field_R};
+        return new e[]{qc.field_l, rn.field_a, tl.field_e, mn.field_f, li.field_k, eb.field_o, la.field_N, ch.field_a, ij.field_s, og.field_i, KeyboardInput.field_g, ei.field_lb, IntrusiveNode.field_g, oe.field_R};
     }
 
     final boolean f(int param0) {

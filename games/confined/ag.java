@@ -8,11 +8,11 @@ final class ag {
     static String[] field_d;
     static String field_e;
     private int field_i;
-    private gh field_f;
+    private IntrusiveNodeHashTable field_f;
     static String field_j;
     static double[] field_a;
     static int[] field_g;
-    private lm field_b;
+    private IntrusiveDeque field_b;
     static boolean field_h;
 
     private final void a(int param0, nd param1) {
@@ -44,7 +44,7 @@ final class ag {
     }
 
     final static String a(int param0, Throwable param1) throws IOException {
-        ec var14 = null;
+        ClientException var14 = null;
         String var20 = null;
         BufferedReader var21 = null;
         String var27 = null;
@@ -93,10 +93,10 @@ final class ag {
         int var9Lifetime1;
         int var10Lifetime1;
         int var12Lifetime1;
-        if (!(param1 instanceof ec)) {
+        if (!(param1 instanceof ClientException)) {
           var2 = "";
         } else {
-          var14 = (ec) ((Object) param1);
+          var14 = (ClientException) ((Object) param1);
           var2 = var14.field_c + " | ";
           var11 = var2;
           var2 = var11;

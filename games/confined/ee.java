@@ -88,10 +88,10 @@ abstract class ee extends pm {
         il.field_gb = null;
         var12 = this.field_A.field_N;
         om.field_q = param0;
-        var12.a((rk) (this), 0);
+        var12.a((IntrusiveNode) (this), 0);
         var14 = (pm) (var12.a(0));
         var9 = var14;
-        var12.b((rk) (this), 6);
+        var12.b((IntrusiveNode) (this), 6);
         if (param3) {
           return (pm) null;
         }
@@ -113,7 +113,7 @@ abstract class ee extends pm {
           if (var9 != null && (var10 == null ||
             -((pm) (var9)).field_D + this.field_D < ((pm) (var10)).field_D - this.field_D)) {
             this.b((pm) (var9), -16654);
-            var12.a((rk) (var9), 0);
+            var12.a((IntrusiveNode) (var9), 0);
             var16_ref = (pm) (var12.a(0));
             if (var16_ref == null) {
               continue;
@@ -125,7 +125,7 @@ abstract class ee extends pm {
             continue;
           }
           this.b((pm) (var10), -16654);
-          var12.b((rk) (var10), 6);
+          var12.b((IntrusiveNode) (var10), 6);
           var15 = (pm) (var12.b(-78));
           if (var15 == null) {
             continue;
@@ -667,10 +667,10 @@ abstract class ee extends pm {
             param0[var6_int] = null;
             var5[var6_int] = 1.7976931348623157e+308;
           }
-          var23.a((rk) (this), 0);
+          var23.a((IntrusiveNode) (this), 0);
           var24_ref = (pm) (var23.a(0));
           var6 = var24_ref;
-          var23.b((rk) (this), 6);
+          var23.b((IntrusiveNode) (this), 6);
           var26_ref = (pm) (var23.b(122));
           var7 = var26_ref;
           if (var24_ref != null &&
@@ -685,7 +685,7 @@ abstract class ee extends pm {
             var19 = (cl) null;
             this.a((cl) null, (byte) -6);
           }
-          L4: while (true) {
+          scanLoop1: while (true) {
             if (var6 == null &&
               var7 == null) {
               var8 = 0;
@@ -724,7 +724,7 @@ abstract class ee extends pm {
                   break;
                 }
               }
-              var23.a((rk) (var6), 0);
+              var23.a((IntrusiveNode) (var6), 0);
               var6 = (pm) (var23.a(0));
               if (null == var6) {
                 continue;
@@ -757,19 +757,19 @@ abstract class ee extends pm {
                   var4 = this.a(0, var30);
                   break;
                 }
-                var23.b((rk) (var7), 6);
+                var23.b((IntrusiveNode) (var7), 6);
                 var31_ref = (pm) (var23.b(-71));
                 if (var31_ref == null) {
-                  continue L4;
+                  continue scanLoop1;
                 }
                 if (!(var30[var4] < (-this.field_D + var31_ref.field_D) * (-this.field_D + var31_ref.field_D))) {
-                  continue L4;
+                  continue scanLoop1;
                 }
                 var7 = null;
-                continue L4;
+                continue scanLoop1;
               }
             }
-            var23.b((rk) (var7), 6);
+            var23.b((IntrusiveNode) (var7), 6);
             var32_ref = (pm) (var23.b(-71));
             if (var32_ref == null) {
               continue;

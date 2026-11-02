@@ -11,7 +11,7 @@ final class hh {
         if (param0 != -13613) {
           field_d = (jb) null;
         }
-        return rk.field_f;
+        return IntrusiveNode.field_f;
     }
 
     final static String a(int param0, CharSequence param1) {
@@ -38,14 +38,14 @@ final class hh {
           var2_int = param0;
           var3 = param1.length();
           while (var3 > var2_int) {
-            if (bg.a(175, param1.charAt(var2_int))) {
+            if (KeyboardInput.a(175, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var3 > var2_int) {
-            if (bg.a(param0 + 175, param1.charAt(-1 + var3))) {
+            if (KeyboardInput.a(param0 + 175, param1.charAt(-1 + var3))) {
               var3--;
               continue;
             }

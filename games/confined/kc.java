@@ -26,7 +26,7 @@ final class kc {
     int field_v;
     static java.applet.Applet field_k;
 
-    final static rm a(int param0, hb param1) {
+    final static rm a(int param0, CipherPacketBuffer param1) {
         int var7 = 0;
         rm stackIn_13_0 = null;
         rm stackIn_26_0 = null;

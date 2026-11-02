@@ -51,7 +51,7 @@ final class w extends ga implements uj, el {
                 }
               }
             } else {
-              jl.a((byte) -123);
+              DualLinkNode.a((byte) -123);
             }
           } else {
             this.a((byte) -65);
@@ -246,13 +246,13 @@ final class w extends ga implements uj, el {
           this.field_T = (ul) ((Object) new wh(param0, (uk) (this), 100));
           this.field_X = (ul) ((Object) new wh("", (uk) (this), 20));
           if (!this.field_W) {
-            this.field_V = new rg(o.field_d, (uk) null);
+            this.field_V = new rg(IntrusiveNodeHashTableIterator.field_d, (uk) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_L) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = te.field_i;
+              stackIn_19_3 = GameAppletShell.field_i;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;

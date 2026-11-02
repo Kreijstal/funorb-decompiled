@@ -54,7 +54,7 @@ final class be extends gf {
         param0.a(true);
         param0.a();
         param0.field_n = null;
-        rk var2 = this.field_q.field_a.field_h;
+        IntrusiveNode var2 = this.field_q.field_a.field_h;
         if (var2 == this.field_q.field_a) {
           this.field_t = -1;
         } else {
@@ -121,7 +121,7 @@ final class be extends gf {
         return (gf) (this.field_s.a(-123));
     }
 
-    private final void a(rk param0, bl param1) {
+    private final void a(IntrusiveNode param0, bl param1) {
         while (true) {
           if (param0 == this.field_q.field_a) {
             ri.a(param0, 0, param1);

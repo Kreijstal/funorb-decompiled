@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ue extends jl {
+class ue extends DualLinkNode {
     static String field_s;
     static nf[] field_u;
     static int field_t;

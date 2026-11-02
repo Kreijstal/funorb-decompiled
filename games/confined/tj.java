@@ -117,7 +117,7 @@ final class tj extends tk {
               var4 = this.field_q.a(this.field_u, true, -1911606496, param2, (byte) 2);
             }
           }
-          this.field_i.a((rk) (var4), param0 ^ 13871, (long)param2);
+          this.field_i.a((IntrusiveNode) (var4), param0 ^ 13871, (long)param2);
         }
         if (((rl) (var4)).field_v) {
           return null;
@@ -177,7 +177,7 @@ final class tj extends tk {
                 return null;
               }
               var4 = this.field_q.a(this.field_u, true, -1911606496, param2, (byte) 2);
-              this.field_i.a((rk) (var4), 11, (long)param2);
+              this.field_i.a((IntrusiveNode) (var4), 11, (long)param2);
             }
             return null;
           }
@@ -216,7 +216,7 @@ final class tj extends tk {
           }
           if (!this.field_q.c(param0 - 13755)) {
             var4 = this.field_q.a(this.field_u, true, -1911606496, param2, (byte) 2);
-            this.field_i.a((rk) (var4), 11, (long)param2);
+            this.field_i.a((IntrusiveNode) (var4), 11, (long)param2);
           }
           return null;
         }
@@ -373,16 +373,16 @@ final class tj extends tk {
         rl discarded$3 = null;
         rl discarded$2 = null;
         int var2;
-        rk var3;
+        IntrusiveNode var3;
         rl var3_ref;
         int var4;
         int var5;
-        rk var6;
-        rk var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2Lifetime1;
         int var2Lifetime2;
         int var4Lifetime1;
-        rk var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = Confined.field_J ? 1 : 0;
         if (this.field_r != null) {
@@ -404,18 +404,18 @@ final class tj extends tk {
               }
               var3 = this.field_r.d(2123);
             }
-            L3: while (true) {
+            scanLoop1: while (true) {
               if (this.field_j < this.field_h.field_t.length) {
                 if (this.field_h.field_t[this.field_j] != 0) {
                   if (this.field_o.field_b >= 250) {
                     var2 = 0;
-                    break L3;
+                    break scanLoop1;
                   }
                   if (this.field_p[this.field_j] == 0) {
                     discarded$0 = this.a(13860, 1, this.field_j);
                   }
                   if (0 == this.field_p[this.field_j]) {
-                    var7 = new rk();
+                    var7 = new IntrusiveNode();
                     var7.field_i = (long)this.field_j;
                     this.field_r.a(var7, (byte) -98);
                     var2 = 0;
@@ -448,18 +448,18 @@ final class tj extends tk {
                 }
                 var3Lifetime1 = this.field_r.d(2123);
               }
-              L10: while (true) {
+              scanLoop2: while (true) {
                 if (this.field_j < this.field_h.field_t.length) {
                   if (this.field_h.field_t[this.field_j] != 0) {
                     if (this.field_q.b(-124)) {
                       var2Lifetime2 = 0;
-                      break L10;
+                      break scanLoop2;
                     }
                     if (this.field_p[this.field_j] != 1) {
                       discarded$2 = this.a(13860, 2, this.field_j);
                     }
                     if (this.field_p[this.field_j] != 1) {
-                      var6 = new rk();
+                      var6 = new IntrusiveNode();
                       var6.field_i = (long)this.field_j;
                       this.field_r.a(var6, (byte) -84);
                       var2Lifetime2 = 0;
@@ -622,7 +622,7 @@ final class tj extends tk {
         if (param0 >= -106) {
           return;
         }
-        rk var2 = this.field_C.a(-115);
+        IntrusiveNode var2 = this.field_C.a(-115);
         while (var2 != null) {
           var3 = (int)var2.field_i;
           if (var3 < 0) {

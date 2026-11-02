@@ -10,8 +10,8 @@ final class mb extends ka {
 
     final static boolean a(boolean param0, byte param1) {
         try {
-          hb var4 = null;
-          hb var5 = null;
+          CipherPacketBuffer var4 = null;
+          CipherPacketBuffer var5 = null;
           if (param1 != 17) {
             return false;
           }

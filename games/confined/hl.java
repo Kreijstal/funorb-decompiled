@@ -44,12 +44,12 @@ final class hl implements de {
     }
 
     final static void a(int param0) {
-        g var1 = (g) (fc.field_a.a(-115));
+        g var1 = (g) (IsaacRandom.field_a.a(-115));
         if (var1 == null) {
           dc.d(120);
           return;
         }
-        hb var2 = e.field_c;
+        CipherPacketBuffer var2 = e.field_c;
         var2.f((byte) 72);
         var2.f((byte) 40);
         var2.f((byte) 100);
@@ -140,7 +140,7 @@ final class hl implements de {
         int var7 = 0;
         int[] var5 = null;
         int var6 = 0;
-        kg var8 = null;
+        PacketBuffer var8 = null;
         int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
@@ -166,7 +166,7 @@ final class hl implements de {
           var6 = var12.length;
           this.field_e = new ma[param0.d(0, (byte) -73)];
           for (var7 = 0; var7 < var6; var7++) {
-            var8 = new kg(param0.a((byte) -2, 0, var12[var7]));
+            var8 = new PacketBuffer(param0.a((byte) -2, 0, var12[var7]));
             this.field_e[var12[var7]] = new ma(var8);
           }
           return;

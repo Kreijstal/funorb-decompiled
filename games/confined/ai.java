@@ -7,7 +7,7 @@ class ai extends em {
     static String field_g;
     static int field_i;
 
-    final void a(kg param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           param0.a(this.field_h, (byte) -96);
           if (param1 < 47) {
@@ -36,9 +36,9 @@ class ai extends em {
     final static int a(int param0, String param1, bn param2, boolean param3, int param4, int param5, bn param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        kg stackIn_16_0 = null;
+        PacketBuffer stackIn_16_0 = null;
         String stackIn_17_1 = null;
-        kg stackIn_19_0 = null;
+        PacketBuffer stackIn_19_0 = null;
         String stackIn_20_1 = null;
         int stackIn_29_0 = 0;
         int stackIn_42_0 = 0;
@@ -98,14 +98,14 @@ class ai extends em {
               } else {
                 stackIn_17_1 = var14;
               }
-              ((kg) (Object) stackIn_16_0).a(stackIn_17_1, (byte) 112);
+              ((PacketBuffer) (Object) stackIn_16_0).a(stackIn_17_1, (byte) 112);
               stackIn_19_0 = qf.field_c;
               if (!param2.b(0)) {
                 stackIn_20_1 = "";
               } else {
                 stackIn_20_1 = var8;
               }
-              ((kg) (Object) stackIn_19_0).a(stackIn_20_1, (byte) 28);
+              ((PacketBuffer) (Object) stackIn_19_0).a(stackIn_20_1, (byte) 28);
               vh.field_a.f(110, 16);
               vh.field_a.field_n = vh.field_a.field_n + 1;
               var9 = vh.field_a.field_n;

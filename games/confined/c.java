@@ -339,10 +339,10 @@ final class c extends sc {
           if (na.field_S == b.field_a &&
             param0.equals(ee.field_F)) {
             na.field_S = ml.field_a;
-            stackIn_13_0 = lm.field_e;
+            stackIn_13_0 = IntrusiveDeque.field_e;
             return stackIn_13_0;
           }
-          lm.field_e = null;
+          IntrusiveDeque.field_e = null;
           ee.field_F = param0;
           na.field_S = wh.field_fb;
           stackIn_15_0 = null;
@@ -885,7 +885,7 @@ final class c extends sc {
           }
           var2Lifetime65 = wm.a("score", (byte) 74);
           if (var2Lifetime65 != null) {
-            hb.field_s = va.a(0, var2Lifetime65);
+            CipherPacketBuffer.field_s = va.a(0, var2Lifetime65);
           }
           var2Lifetime66 = wm.a("pressEscForOptions", (byte) 82);
           if (null != var2Lifetime66) {
@@ -973,7 +973,7 @@ final class c extends sc {
           }
           var2Lifetime87 = wm.a("ending1_SettingCourseForEarth", (byte) 51);
           if (var2Lifetime87 != null) {
-            rk.field_b = va.a(0, var2Lifetime87);
+            IntrusiveNode.field_b = va.a(0, var2Lifetime87);
           }
           var2Lifetime88 = wm.a("ending2_Congratulations", (byte) 39);
           if (var2Lifetime88 != null) {
@@ -1133,7 +1133,7 @@ final class c extends sc {
           }
           var2Lifetime127 = wm.a("instructions_ClusterMine", (byte) 124);
           if (var2Lifetime127 != null) {
-            te.field_g = va.a(0, var2Lifetime127);
+            GameAppletShell.field_g = va.a(0, var2Lifetime127);
           }
           var2Lifetime128 = wm.a("instructions_LightningCannon", (byte) 94);
           if (var2Lifetime128 != null) {

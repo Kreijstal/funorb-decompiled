@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oi extends rk {
+final class oi extends IntrusiveNode {
     pm field_r;
     boolean field_w;
     static String[] field_s;
@@ -57,13 +57,13 @@ final class oi extends rk {
             if (si.field_g == lk.field_d) {
               if (param0) {
                 var10 = (String) null;
-                kg.field_o = g.a(-26547, vb.field_d, false, (String) null, param2);
+                PacketBuffer.field_o = g.a(-26547, vb.field_d, false, (String) null, param2);
               } else {
-                kg.field_o = sh.a(12831, param4, param2, false);
+                PacketBuffer.field_o = sh.a(12831, param4, param2, false);
               }
               vh.field_a.field_n = 0;
               vh.field_a.f(93, 14);
-              vh.field_a.f(90, kg.field_o.b((byte) -42).field_c);
+              vh.field_a.f(90, PacketBuffer.field_o.b((byte) -42).field_c);
               tb.a(-1, 111);
               lk.field_d = oe.field_U;
             }
@@ -83,7 +83,7 @@ final class oi extends rk {
               jj.a(8, (byte) -120)) {
               uh.field_b = e.field_c.h((byte) -68);
               e.field_c.field_n = 0;
-              wb.a(param3, kg.field_o, param0, 25444, param1);
+              wb.a(param3, PacketBuffer.field_o, param0, 25444, param1);
               lk.field_d = rh.field_ab;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -146,8 +146,8 @@ final class oi extends rk {
               dc.field_J = hh.a(0, var11);
               field_q = e.field_c.c(32);
               lk.field_d = wd.field_f;
-              if (kg.field_o.b((byte) -113) != gh.field_a) {
-                if (kg.field_o.b((byte) 126) == vf.field_e) {
+              if (PacketBuffer.field_o.b((byte) -113) != IntrusiveNodeHashTable.field_a) {
+                if (PacketBuffer.field_o.b((byte) 126) == vf.field_e) {
                   tj.field_n.a(ii.b(false), (byte) 49);
                 }
               } else {

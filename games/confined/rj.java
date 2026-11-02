@@ -6,7 +6,7 @@ final class rj {
     static int field_a;
     static byte[][] field_f;
     static bi field_b;
-    static te field_e;
+    static GameAppletShell field_e;
     static String field_d;
 
     public static void a(int param0) {
@@ -20,7 +20,7 @@ final class rj {
     final static boolean b(int param0) {
         if (param0 != 28404) {
           rj.a(58);
-          if (rk.field_e < 10) {
+          if (IntrusiveNode.field_e < 10) {
             return false;
           }
           if (!fd.field_j) {
@@ -28,7 +28,7 @@ final class rj {
           }
           return false;
         }
-        if (rk.field_e < 10) {
+        if (IntrusiveNode.field_e < 10) {
           return false;
         }
         if (!fd.field_j) {

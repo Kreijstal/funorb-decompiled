@@ -11,7 +11,7 @@ final class fi {
         try {
           fb.field_a = a.a("", -6728);
           fb.field_a.a(false, param1 + 64187);
-          rk.a(param0, param1 ^ 122, param4, param3);
+          IntrusiveNode.a(param0, param1 ^ 122, param4, param3);
           jk.a((byte) -81);
           na.field_S = ml.field_a;
           oe.field_Q = ml.field_a;

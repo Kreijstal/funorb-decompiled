@@ -3,7 +3,7 @@
  */
 final class e {
     int field_e;
-    static hb field_c;
+    static CipherPacketBuffer field_c;
     static od field_a;
     static String field_d;
     int field_b;

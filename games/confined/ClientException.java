@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ec extends RuntimeException {
+final class ClientException extends RuntimeException {
     static String field_a;
     String field_c;
     static String field_d;
@@ -20,7 +20,7 @@ final class ec extends RuntimeException {
         try {
           if (param1 != 3) {
             var3 = (String) null;
-            ec.a(89, (String) null, (java.net.URL) null, (String) null, 112);
+            ClientException.a(89, (String) null, (java.net.URL) null, (String) null, 112);
           }
           var2 = param0.getParameter("username");
           if (var2 != null) {
@@ -62,10 +62,10 @@ final class ec extends RuntimeException {
             0 < hh.field_d.field_e) {
             var2_int = var2_int != 0 & hh.field_d.a(false) ? 1 : 0;
           }
-          if (null != bg.field_a &&
-            param0 != bg.field_a &&
-            bg.field_a.field_e > 0) {
-            var2_int = var2_int != 0 & bg.field_a.a(false) ? 1 : 0;
+          if (null != KeyboardInput.field_a &&
+            param0 != KeyboardInput.field_a &&
+            KeyboardInput.field_a.field_e > 0) {
+            var2_int = var2_int != 0 & KeyboardInput.field_a.a(false) ? 1 : 0;
           }
           if (param1 != 0) {
             return;
@@ -90,10 +90,10 @@ final class ec extends RuntimeException {
               param0.field_e = param0.field_e - 1;
             }
           }
-          if (null != bg.field_a &&
+          if (null != KeyboardInput.field_a &&
             !kc.field_o &&
-            bg.field_a.field_e == 0) {
-            bg.field_a = null;
+            KeyboardInput.field_a.field_e == 0) {
+            KeyboardInput.field_a = null;
           }
           if (null != ji.field_e &&
             !bj.field_m &&
@@ -101,7 +101,7 @@ final class ec extends RuntimeException {
             ji.field_e = null;
           }
           if (va.field_b != null &&
-            !gh.field_k &&
+            !IntrusiveNodeHashTable.field_k &&
             va.field_b.field_e == 0) {
             va.field_b = null;
           }
@@ -130,7 +130,7 @@ final class ec extends RuntimeException {
     public static void a(int param0) {
         field_d = null;
         if (param0 != 3) {
-          ec.a((byte) -71);
+          ClientException.a((byte) -71);
           field_a = null;
           return;
         }
@@ -141,15 +141,15 @@ final class ec extends RuntimeException {
         im.a((byte) -77);
         if (param0 == 126) {
           jd.field_c = true;
-          rk.field_f = true;
+          IntrusiveNode.field_f = true;
           vg.field_Z.g((byte) 109);
           r.a((byte) 97, false, wc.field_jc);
           return;
         }
         String var2 = (String) null;
-        ec.a(19, (String) null, (java.net.URL) null, (String) null, -53);
+        ClientException.a(19, (String) null, (java.net.URL) null, (String) null, -53);
         jd.field_c = true;
-        rk.field_f = true;
+        IntrusiveNode.field_f = true;
         vg.field_Z.g((byte) 109);
         r.a((byte) 97, false, wc.field_jc);
     }
@@ -243,7 +243,7 @@ final class ec extends RuntimeException {
                         discarded$8 = var7.append(var5.substring(var6, var5.length()));
                       }
                       if (param4 != -1) {
-                        ec.a((byte) -10);
+                        ClientException.a((byte) -10);
                       }
                       try {
                         stackIn_42_0 = new java.net.URL(param2, var7.toString());
@@ -292,7 +292,7 @@ final class ec extends RuntimeException {
         }
     }
 
-    ec(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_b = param0;
         this.field_c = param1;
     }

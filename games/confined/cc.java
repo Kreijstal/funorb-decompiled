@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cc extends rk {
+final class cc extends IntrusiveNode {
     private int field_n;
     private int field_o;
     static String field_p;
@@ -21,9 +21,9 @@ final class cc extends rk {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        hb var13 = null;
+        CipherPacketBuffer var13 = null;
         int var14 = 0;
-        hb var15 = null;
+        CipherPacketBuffer var15 = null;
         int[][] var19 = null;
         int var6_intLifetime1;
         int var9Lifetime1;

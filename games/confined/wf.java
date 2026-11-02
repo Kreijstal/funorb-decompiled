@@ -29,7 +29,7 @@ final class wf {
             ll.a(0, 0, param1, -96);
             return;
           }
-          if (rk.field_e != 0) {
+          if (IntrusiveNode.field_e != 0) {
             wb.a(param1, 0);
             return;
           }

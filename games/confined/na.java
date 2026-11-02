@@ -232,7 +232,7 @@ class na extends rg {
             if (var10 != null) {
               ((nn) (var10)).field_s = var15;
             }
-            this.field_R.a((rk) (var15), (byte) 88);
+            this.field_R.a((IntrusiveNode) (var15), (byte) 88);
             var10 = var15;
           }
         }

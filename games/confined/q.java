@@ -164,7 +164,7 @@ final class q extends jg {
               if (ki.field_d.field_p) {
                 var3_int = ri.a(cf.field_cb, 106, cd.field_n, rn.field_e, wg.field_a);
               } else {
-                var3_int = ri.a(cf.field_cb, -113, gh.field_d, rn.field_e, wg.field_a);
+                var3_int = ri.a(cf.field_cb, -113, IntrusiveNodeHashTable.field_d, rn.field_e, wg.field_a);
               }
               var4 = 2 + var3_int;
               la.field_T = new int[var4];

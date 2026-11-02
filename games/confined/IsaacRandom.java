@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fc {
+final class IsaacRandom {
     private int field_c;
     static mn field_a;
     private int[] field_e;
@@ -481,8 +481,8 @@ final class fc {
           if (null != ki.field_b) {
             ki.field_b.field_O.a((byte) -127, param1);
           }
-          if (null != hb.field_u) {
-            hb.field_u.field_H.a((byte) -127, param1);
+          if (null != CipherPacketBuffer.field_u) {
+            CipherPacketBuffer.field_u.field_H.a((byte) -127, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -499,7 +499,7 @@ final class fc {
         }
     }
 
-    fc(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_b = new int[256];

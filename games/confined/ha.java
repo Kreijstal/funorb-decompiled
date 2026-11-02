@@ -37,7 +37,7 @@ final class ha {
           if (param1 < 15) {
             field_d = (String[]) null;
           }
-          stackIn_3_0 = bh.field_a.a(125, "", param0);
+          stackIn_3_0 = MouseInput.field_a.a(125, "", param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

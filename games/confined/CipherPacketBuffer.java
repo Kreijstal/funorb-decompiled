@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hb extends kg {
+final class CipherPacketBuffer extends PacketBuffer {
     static bf field_u;
     private int field_p;
     static String field_v;
-    private fc field_q;
+    private IsaacRandom field_q;
     static String field_s;
     static be field_r;
     static String field_t;
@@ -45,7 +45,7 @@ final class hb extends kg {
         }
     }
 
-    hb(byte[] param0) {
+    CipherPacketBuffer(byte[] param0) {
         super(param0);
     }
 
@@ -61,7 +61,7 @@ final class hb extends kg {
     final void a(int[] param0, int param1) {
         try {
           int var3_int = -124 % ((17 - param1) / 51);
-          this.field_q = new fc(param0);
+          this.field_q = new IsaacRandom(param0);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "hb.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -179,7 +179,7 @@ final class hb extends kg {
         return var5;
     }
 
-    hb(int param0) {
+    CipherPacketBuffer(int param0) {
         super(param0);
     }
 
@@ -210,7 +210,7 @@ final class hb extends kg {
           field_v = null;
           return;
         }
-        hb.g(10);
+        CipherPacketBuffer.g(10);
         field_u = null;
         field_v = null;
     }

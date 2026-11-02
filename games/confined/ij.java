@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij extends rk {
+final class ij extends IntrusiveNode {
     static String field_o;
     int[] field_n;
     int field_v;
@@ -81,7 +81,7 @@ final class ij extends rk {
           return (gd) null;
         }
         gd var2 = new gd();
-        ra.field_d.a((rk) (var2), (byte) 109);
+        ra.field_d.a((IntrusiveNode) (var2), (byte) 109);
         fm.a(115, param1);
         return var2;
     }
@@ -98,15 +98,15 @@ final class ij extends rk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        kg var7 = null;
-        kg var8 = null;
+        PacketBuffer var7 = null;
+        PacketBuffer var8 = null;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
         int var4Lifetime4;
         try {
           this.field_v = param0;
-          var7 = new kg(param1);
+          var7 = new PacketBuffer(param1);
           var8 = var7;
           this.field_x = var8.c(32);
           this.field_y = new boolean[this.field_x];

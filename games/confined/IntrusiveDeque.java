@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class lm implements Iterable {
+final class IntrusiveDeque implements Iterable {
     static double field_a;
-    jl field_b;
+    DualLinkNode field_b;
     static String field_d;
     static in field_e;
     static nf field_c;
 
-    private lm() throws Throwable {
+    private IntrusiveDeque() throws Throwable {
         throw new Error();
     }
 
@@ -18,7 +18,7 @@ final class lm implements Iterable {
         return (Iterator) ((Object) new tm(this));
     }
 
-    final void a(jl param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         if (null != param0.field_q) {
           param0.b(true);
         }
@@ -38,7 +38,7 @@ final class lm implements Iterable {
     public static void a(byte param0) {
         field_e = null;
         if (param0 < 94) {
-          lm.a((byte) 44);
+          IntrusiveDeque.a((byte) 44);
           field_d = null;
           field_c = null;
           return;
@@ -47,9 +47,9 @@ final class lm implements Iterable {
         field_c = null;
     }
 
-    final jl a(int param0) {
-        jl var2 = null;
-        jl var2Lifetime1;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != -29870) {
           this.a(-12);
           var2 = this.field_b.field_o;

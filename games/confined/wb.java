@@ -147,7 +147,7 @@ final class wb {
                 this.var4 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                bh.field_a = param1;
+                MouseInput.field_a = param1;
                 var2 = ha.a("loginm3", (byte) 31);
                 if (var2 != null) {
                   hf.field_S = va.a(0, var2);
@@ -190,7 +190,7 @@ final class wb {
                 }
                 var2 = ha.a("create_ineligible", (byte) 98);
                 if (null != var2) {
-                  ec.field_a = va.a(param0 - 6, var2);
+                  ClientException.field_a = va.a(param0 - 6, var2);
                 }
                 var2 = ha.a("usernameprompt", (byte) 58);
                 if (var2 != null) {
@@ -218,7 +218,7 @@ final class wb {
                 }
                 var2 = ha.a("ticketing_xunread", (byte) 90);
                 if (var2 != null) {
-                  gj.field_g = va.a(0, var2);
+                  GameCanvas.field_g = va.a(0, var2);
                 }
                 var2 = ha.a("ticketing_gotowebsite", (byte) 21);
                 if (null != var2) {
@@ -778,7 +778,7 @@ final class wb {
                 }
                 var2 = ha.a("loading", (byte) 112);
                 if (null != var2) {
-                  ec.field_d = va.a(0, var2);
+                  ClientException.field_d = va.a(0, var2);
                 }
                 var2 = ha.a("offline", (byte) 107);
                 if (var2 != null) {
@@ -1134,7 +1134,7 @@ final class wb {
                 }
                 var2 = ha.a("pleasetryagain", (byte) 20);
                 if (var2 != null) {
-                  gj.field_c = va.a(0, var2);
+                  GameCanvas.field_c = va.a(0, var2);
                 }
                 var2 = ha.a("pleasereenterpass", (byte) 105);
                 if (var2 != null) {
@@ -1176,7 +1176,7 @@ final class wb {
                 }
                 var2 = ha.a("login", (byte) 27);
                 if (null != var2) {
-                  o.field_d = va.a(param0 ^ 6, var2);
+                  IntrusiveNodeHashTableIterator.field_d = va.a(param0 ^ 6, var2);
                 }
                 var2 = ha.a("goback", (byte) 17);
                 if (var2 != null) {
@@ -1232,7 +1232,7 @@ final class wb {
                 }
                 var2 = ha.a("invalidpass", (byte) 113);
                 if (var2 != null) {
-                  bg.field_e = va.a(0, var2);
+                  KeyboardInput.field_e = va.a(0, var2);
                 }
                 var2 = ha.a("retry", (byte) 31);
                 if (var2 != null) {
@@ -1240,7 +1240,7 @@ final class wb {
                 }
                 var2 = ha.a("back", (byte) 77);
                 if (var2 != null) {
-                  te.field_i = va.a(0, var2);
+                  GameAppletShell.field_i = va.a(0, var2);
                 }
                 var2 = ha.a("exitfullscreenmode", (byte) 63);
                 if (null != var2) {
@@ -1516,7 +1516,7 @@ final class wb {
                 }
                 var2 = ha.a("create_password_confirm", (byte) 85);
                 if (var2 != null) {
-                  hb.field_t = va.a(param0 - 6, var2);
+                  CipherPacketBuffer.field_t = va.a(param0 - 6, var2);
                 }
                 var2 = ha.a("create_email", (byte) 118);
                 if (var2 != null) {
@@ -1644,7 +1644,7 @@ final class wb {
                 }
                 var2 = ha.a("create_password_confirm_tooltip", (byte) 82);
                 if (var2 != null) {
-                  jl.field_m = va.a(param0 ^ 6, var2);
+                  DualLinkNode.field_m = va.a(param0 ^ 6, var2);
                 }
                 var2 = ha.a("create_email_tooltip", (byte) 21);
                 if (null != var2) {
@@ -1744,7 +1744,7 @@ final class wb {
                 }
                 var2 = ha.a("create_alert_email_unavailable", (byte) 102);
                 if (var2 != null) {
-                  te.field_d = va.a(0, var2);
+                  GameAppletShell.field_d = va.a(0, var2);
                 }
                 var2 = ha.a("create_alert_invaliddate", (byte) 67);
                 if (null != var2) {
@@ -1760,7 +1760,7 @@ final class wb {
                 }
                 var2 = ha.a("create_alert_mismatch", (byte) 102);
                 if (var2 != null) {
-                  lm.field_d = va.a(0, var2);
+                  IntrusiveDeque.field_d = va.a(0, var2);
                 }
                 var2 = ha.a("create_passwordvalid", (byte) 103);
                 if (var2 != null) {
@@ -1952,7 +1952,7 @@ final class wb {
                 }
                 var2 = ha.a("loading_animations", (byte) 59);
                 if (null != var2) {
-                  jl.field_n = va.a(0, var2);
+                  DualLinkNode.field_n = va.a(0, var2);
                 }
                 var2 = ha.a("unpacking_graphics", (byte) 101);
                 if (var2 != null) {
@@ -2406,7 +2406,7 @@ final class wb {
                 }
                 var2 = ha.a("hs_name", (byte) 70);
                 if (var2 != null) {
-                  gh.field_b = va.a(0, var2);
+                  IntrusiveNodeHashTable.field_b = va.a(0, var2);
                 }
                 var2 = ha.a("hs_level", (byte) 22);
                 if (var2 != null) {
@@ -2801,7 +2801,7 @@ final class wb {
                 }
                 var2 = ha.a("fs_unavailable_try_signed_applet", (byte) 79);
                 if (null != var2) {
-                  gh.field_d = va.a(0, var2);
+                  IntrusiveNodeHashTable.field_d = va.a(0, var2);
                 }
                 var2 = ha.a("fs_focus", (byte) 27);
                 if (var2 != null) {
@@ -3133,7 +3133,7 @@ final class wb {
                 if (null != var2) {
                   va.a(0, var2);
                 }
-                bh.field_a = null;
+                MouseInput.field_a = null;
             }
             void run() {
                 var3 = Confined.field_J ? 1 : 0;
@@ -3159,9 +3159,9 @@ final class wb {
                   throw sd.a((Throwable) ((Object) stackIn_2619_0), ((StringBuilder) (Object) stackIn_2619_1).append(stackIn_2620_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = te.field_k;
+                  var4 = GameAppletShell.field_k;
                   var4++;
-                  te.field_k = var4;
+                  GameAppletShell.field_k = var4;
                 }
             }
         }
@@ -3176,7 +3176,7 @@ final class wb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (rk.field_e == 11) {
+          if (IntrusiveNode.field_e == 11) {
             dc.e((byte) -61);
           }
           mk.a(ui.field_b, mk.field_o, og.field_h, -117);

@@ -8,7 +8,7 @@ final class sm extends rl {
     int field_z;
     byte[] field_C;
 
-    final static boolean a(int param0, hb param1) {
+    final static boolean a(int param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;

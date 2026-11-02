@@ -30,7 +30,7 @@ final class gi extends ah {
           var5_int = param2.a(-51, param4);
           var6 = param2.a(var5_int, param3, param1 ^ 126);
           if (param1 == -65) {
-            stackIn_4_0 = te.a((byte) -89, var6, param2, var5_int, param0);
+            stackIn_4_0 = GameAppletShell.a((byte) -89, var6, param2, var5_int, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (vk) null;
@@ -103,7 +103,7 @@ final class gi extends ah {
           this.field_cb.field_m = -var4;
           this.field_cb.field_x = -var6;
           this.field_cb.field_u = 50.0;
-          param0.a((rk) (this.field_cb), (byte) 123);
+          param0.a((IntrusiveNode) (this.field_cb), (byte) 123);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gi.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

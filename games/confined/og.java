@@ -631,7 +631,7 @@ final class og extends n {
     final static void a(boolean param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        hb var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -658,7 +658,7 @@ final class og extends n {
     }
 
     final static void a(byte param0, mi param1, be param2, int param3) {
-        mg.field_g = bg.a(12398) * param3 / 1000;
+        mg.field_g = KeyboardInput.a(12398) * param3 / 1000;
         pl.a(param1, true);
         if (param0 <= 115) {
           return;

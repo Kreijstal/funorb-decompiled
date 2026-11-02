@@ -211,8 +211,8 @@ final class di {
           field_a = (bi) null;
         }
         oj.field_B = oj.field_B | 1 << param2;
-        qn.field_v.field_u.a((rk) (new an(param2)), (byte) -110);
-        ra.field_c.a((rk) (new sf(param2, param1, qn.field_v.field_B.field_yb + bd.field_h, we.field_g + qn.field_v.field_J.field_o, d.field_a - qn.field_v.field_h, rc.field_i)), (byte) 73);
+        qn.field_v.field_u.a((IntrusiveNode) (new an(param2)), (byte) -110);
+        ra.field_c.a((IntrusiveNode) (new sf(param2, param1, qn.field_v.field_B.field_yb + bd.field_h, we.field_g + qn.field_v.field_J.field_o, d.field_a - qn.field_v.field_h, rc.field_i)), (byte) 73);
     }
 
     static {

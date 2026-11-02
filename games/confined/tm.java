@@ -5,9 +5,9 @@ import java.util.*;
 
 final class tm implements Iterator {
     static String field_a;
-    private jl field_c;
-    private jl field_b;
-    private lm field_d;
+    private DualLinkNode field_c;
+    private DualLinkNode field_b;
+    private IntrusiveDeque field_d;
     static String field_e;
 
     final static byte[] a(int param0, byte[] param1) {
@@ -25,13 +25,13 @@ final class tm implements Iterator {
         byte[] var6_ref_byte__ = null;
         byte[] var7 = null;
         Object var8 = null;
-        kg var10 = null;
+        PacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
         try {
-          var10 = new kg(param1);
+          var10 = new PacketBuffer(param1);
           var3 = 94 % ((53 - param0) / 46);
           var4 = var10.c(32);
           var5 = var10.f((byte) 46);
@@ -82,12 +82,12 @@ final class tm implements Iterator {
     public final Object next() {
         Object var1 = this.field_c;
         if (var1 != this.field_d.field_b) {
-          this.field_c = ((jl) (var1)).field_o;
+          this.field_c = ((DualLinkNode) (var1)).field_o;
         } else {
           this.field_c = null;
           var1 = null;
         }
-        this.field_b = (jl) (var1);
+        this.field_b = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -181,7 +181,7 @@ final class tm implements Iterator {
         field_e = null;
     }
 
-    tm(lm param0) {
+    tm(IntrusiveDeque param0) {
         this.field_b = null;
         try {
           this.field_d = param0;

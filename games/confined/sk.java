@@ -574,7 +574,7 @@ final class sk extends wj {
           field_fb = 0;
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < this.field_E; var8Lifetime1++) {
-          L45: {
+          regionExit1: {
             if (this.field_l[var8Lifetime1] != -2) {
               var9 = this.field_t[var8Lifetime1];
               var10 = this.field_M[var8Lifetime1];
@@ -621,7 +621,7 @@ final class sk extends wj {
                       var28 = field_cb[var27];
                       if (var28 == 64) {
                         if (field_fb == 512) {
-                          break L45;
+                          break regionExit1;
                         }
                         fieldTemp$7 = field_fb;
                         field_fb = field_fb + 1;
@@ -636,7 +636,7 @@ final class sk extends wj {
                     }
                   }
                 }
-                break L45;
+                break regionExit1;
               }
               if (param1 &&
                 this.a(on.field_a + ti.field_k, bj.field_q + ti.field_f, field_J[var9], field_J[var10], field_J[var11], var12, var13, var14_int)) {
@@ -663,7 +663,7 @@ final class sk extends wj {
                     var16Lifetime2 = field_cb[var15_intLifetime2];
                     if (var16Lifetime2 == 64) {
                       if (field_fb == 512) {
-                        break L45;
+                        break regionExit1;
                       }
                       fieldTemp$14 = field_fb;
                       field_fb = field_fb + 1;

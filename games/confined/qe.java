@@ -96,7 +96,7 @@ final class qe extends am {
           }
           this.field_N = param1 - this.field_q - param0;
           this.field_R = -param3 + (-this.field_m + param5);
-          rk.field_k = this;
+          IntrusiveNode.field_k = this;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -225,7 +225,7 @@ final class qe extends am {
         this.field_K = this.field_m;
     }
 
-    final static boolean a(byte param0, kg param1) {
+    final static boolean a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

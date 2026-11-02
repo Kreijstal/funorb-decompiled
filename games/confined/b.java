@@ -274,7 +274,7 @@ final class b implements fe {
         }
     }
 
-    final static void a(df param0, int param1, kg param2, int param3) {
+    final static void a(df param0, int param1, PacketBuffer param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -392,7 +392,7 @@ final class b implements fe {
                 var18.field_u[var5] = -5;
               }
             }
-            af.field_cb.a((rk) (var18), (byte) -82);
+            af.field_cb.a((IntrusiveNode) (var18), (byte) -82);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

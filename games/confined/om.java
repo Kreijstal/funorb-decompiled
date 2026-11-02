@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om extends rk {
+final class om extends IntrusiveNode {
     int field_m;
     int field_v;
     int field_t;
@@ -46,7 +46,7 @@ final class om extends rk {
           var7.field_s = param1;
           var7.field_w = param0;
           var7.field_o = param3;
-          na.field_T.a((rk) (var7), (byte) 105);
+          na.field_T.a((IntrusiveNode) (var7), (byte) 105);
           dh.a(param2, var7, 21821);
           return var7;
         }
@@ -63,7 +63,7 @@ final class om extends rk {
         var8.field_s = param1;
         var8.field_w = param0;
         var8.field_o = param3;
-        na.field_T.a((rk) (var8), (byte) 105);
+        na.field_T.a((IntrusiveNode) (var8), (byte) 105);
         dh.a(param2, var8, 21821);
         return var8;
     }

@@ -28,7 +28,7 @@ final class ej {
           if (param4 != 0) {
             field_b = true;
           }
-          stackIn_3_0 = te.a(param2, 10, var6, param1, var5_int);
+          stackIn_3_0 = GameAppletShell.a(param2, 10, var6, param1, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

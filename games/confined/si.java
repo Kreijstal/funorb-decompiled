@@ -45,7 +45,7 @@ final class si {
             for (var7 = 0; var7 < var4; var7++) {
               var11[var7] = an.field_p[va.a(255, (int) var22[var7])];
             }
-            var1[var2] = new nf(kb.field_a, em.field_e, jl.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], var23);
+            var1[var2] = new nf(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], var23);
           } else {
             var16 = un.field_i[var2];
             var12 = var16;
@@ -57,7 +57,7 @@ final class si {
             for (var8 = 0; var4 > var8; var8++) {
               var7_ref_int__[var8] = nl.a(va.a((int) var16[var8], 255) << 24, an.field_p[va.a((int) var22[var8], 255)]);
             }
-            var1[var2] = (nf) ((Object) new pd(kb.field_a, em.field_e, jl.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], var18));
+            var1[var2] = (nf) ((Object) new pd(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], var18));
           }
         }
         ql.a(false);

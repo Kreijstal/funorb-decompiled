@@ -40,7 +40,7 @@ final class ql {
         field_k = null;
     }
 
-    final static void a(int param0, kg param1, int param2, byte param3, int param4) {
+    final static void a(int param0, PacketBuffer param1, int param2, byte param3, int param4) {
         try {
           param1.f(param3 ^ 119, 12);
           param1.c(17, param3 ^ 32);
@@ -61,7 +61,7 @@ final class ql {
           return;
         }
         rj.field_f = (byte[][]) null;
-        jl.field_p = null;
+        DualLinkNode.field_p = null;
         ij.field_r = null;
         an.field_p = null;
         rg.field_I = null;
@@ -371,7 +371,7 @@ final class ql {
         stackIn_92_0[stackIn_92_1] = stackIn_93_2;
         if (this.field_o < wl.field_c[4] + 1) {
           for (var5_int = 0; var5_int < 4; var5_int++) {
-            if (0 != (gh.field_c[var5_int] & this.field_q)) {
+            if (0 != (IntrusiveNodeHashTable.field_c[var5_int] & this.field_q)) {
               this.field_a[var5_int] = this.field_a[var5_int] >> 1;
             }
           }
@@ -543,7 +543,7 @@ final class ql {
           var19_double = var14 + var16 * Math.random();
           var12.a(var19_double, 0.4, 0, var13);
           var21_ref_u = new u(this.field_i, pn.field_h, fa.field_R, var19_double);
-          this.field_i.field_g.a((rk) (var21_ref_u), (byte) 100);
+          this.field_i.field_g.a((IntrusiveNode) (var21_ref_u), (byte) 100);
           if (!this.field_c) {
             var22_double = Math.random() * (double)this.field_y;
             var24_int = 0;
@@ -553,7 +553,7 @@ final class ql {
                 if ((double)var24_int > var22_double) {
                   var26 = (int)(Math.random() * (double)bf.field_L[var25].length);
                   var27_ref_rd = this.a(0.0, 0, 0.0, 0.0, false, bf.field_L[var25][var26], var21_ref_u, this.field_o, 583, var25, (rd) null, false, new boolean[]{true});
-                  this.field_i.field_g.a((rk) (var27_ref_rd), (byte) -93);
+                  this.field_i.field_g.a((IntrusiveNode) (var27_ref_rd), (byte) -93);
                   this.field_a[var25] = this.field_a[var25] - 1;
                   break;
                 }
@@ -583,14 +583,14 @@ final class ql {
               var11Lifetime1 = var20;
             }
             for (var21 = 0; var21 < var11Lifetime1; var21++) {
-              L12: {
+              regionExit1: {
                 var22 = var18Lifetime1;
                 var23 = null;
                 if (0 != (1024 & this.field_q) && (var22 == 1 ||
                   var22 == 3) && Math.random() < 0.1) {
                   var24 = -2.0;
                   var26Lifetime1 = 0;
-                  break L12;
+                  break regionExit1;
                 }
                 var26Lifetime1 = var13;
                 var24 = var14 + Math.random() * var16;
@@ -605,7 +605,7 @@ final class ql {
                 } else {
                   var31.d((byte) -123, var26Lifetime1);
                 }
-                this.field_i.field_g.a((rk) (var31), (byte) 67);
+                this.field_i.field_g.a((IntrusiveNode) (var31), (byte) 67);
                 if (var22 == 1) {
                   if ((32768 & this.field_q) != 0) {
                     if (var23 != null) {
@@ -648,7 +648,7 @@ final class ql {
           } else {
             this.field_i.field_o = 0;
             this.field_i.field_Q = new wc(this.field_i, var13, var12.field_r[-1 + var12.field_a], this.field_v, this.field_h);
-            this.field_i.field_g.a((rk) (this.field_i.field_Q), (byte) 97);
+            this.field_i.field_g.a((IntrusiveNode) (this.field_i.field_Q), (byte) 97);
           }
         }
     }
@@ -751,7 +751,7 @@ final class ql {
           boolean decompiledFrameRemainder0 = true;
           stackIn_7_0Lifetime2 = null;
           stackIn_7_1Lifetime2 = null;
-          if ((this.field_q & gh.field_c[param9]) != 0) {
+          if ((this.field_q & IntrusiveNodeHashTable.field_c[param9]) != 0) {
             stackIn_7_0Lifetime2Lifetime1 = null;
             stackIn_7_1Lifetime2Lifetime1 = null;
             if (param6 == null) {

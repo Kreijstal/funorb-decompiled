@@ -390,7 +390,7 @@ final class wc extends id {
               var9 = Math.random() * 6.283185307179586;
               var11 = Math.sin(var9) * var7;
               var13_double = Math.cos(var9) * var7;
-              ri.a((rk) (this), 0, new ka(this.field_A, this.field_E + var11, var13_double + this.field_t, this.field_D + var5, 0.5, (bi) null));
+              ri.a((IntrusiveNode) (this), 0, new ka(this.field_A, this.field_E + var11, var13_double + this.field_t, this.field_D + var5, 0.5, (bi) null));
             }
             this.c((byte) -24, param1);
             return;
@@ -400,7 +400,7 @@ final class wc extends id {
           var16 = new mb((pm) (this), 2.0, 0.2, 0.0003, lk.field_e[this.field_Zb]);
           var16.field_M.field_w = this.field_C * 2.0;
           var16.field_M.field_m = 192;
-          ri.a((rk) (this), param0 - 11878, var16);
+          ri.a((IntrusiveNode) (this), param0 - 11878, var16);
           this.field_z = true;
           this.field_A.a((byte) 50, 5000);
           this.field_A.field_J.field_j = true;
@@ -540,7 +540,7 @@ final class wc extends id {
                   break;
                 }
                 var8.a((byte) 126, var9_int);
-                ri.a((rk) (this), 0, var8);
+                ri.a((IntrusiveNode) (this), 0, var8);
                 this.field_A.field_o = this.field_A.field_o + 1;
                 this.field_Sb = 40;
               } else {
@@ -582,7 +582,7 @@ final class wc extends id {
               this.field_ib.field_p = dh.field_sb;
               var13 = this.field_ic[var12 / 3];
               var13.a(ud.field_o, 16744512, this.field_bc[2 + var12], 0.5, 1.0, dh.field_sb, rn.field_c, this.field_bc[var12], false, this.field_bc[1 + var12]);
-              this.field_A.field_b.a((rk) (var13), (byte) 123);
+              this.field_A.field_b.a((IntrusiveNode) (var13), (byte) 123);
             }
           }
         }

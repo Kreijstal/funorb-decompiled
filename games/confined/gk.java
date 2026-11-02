@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class gk extends rk {
+class gk extends IntrusiveNode {
     static bi field_q;
     bi field_s;
     int field_m;
@@ -20,7 +20,7 @@ class gk extends rk {
         if (!this.field_x) {
           cb.field_a.a(this.field_n);
         }
-        this.field_t.field_A.field_z.a((rk) (this), (byte) -66);
+        this.field_t.field_A.field_z.a((IntrusiveNode) (this), (byte) -66);
         if (param0 == 209) {
           return;
         }
@@ -236,7 +236,7 @@ class gk extends rk {
     final static void a(boolean param0, String param1, byte param2, boolean param3) {
         im.a((byte) -110);
         vg.field_Z.g((byte) 105);
-        om.field_p = new w(kj.field_c, (String) null, rk.field_f, param0, param3);
+        om.field_p = new w(kj.field_c, (String) null, IntrusiveNode.field_f, param0, param3);
         dn.field_b = new ef(vg.field_Z, om.field_p);
         if (param2 >= -110) {
           return;
@@ -367,7 +367,7 @@ class gk extends rk {
           this.field_n = vc.a(param2, 0, 0);
           this.field_n.c(param3);
           this.field_n.c(param4);
-          param0.field_z.a((rk) (this), (byte) 106);
+          param0.field_z.a((IntrusiveNode) (this), (byte) 106);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -381,7 +381,7 @@ class gk extends rk {
     final static void $cfr$intArgs$a$c13c9cd76cbe(boolean param0, String param1, int param2, boolean param3) {
         im.a((byte) -110);
         vg.field_Z.g((byte) 105);
-        om.field_p = new w(kj.field_c, (String) null, rk.field_f, param0, param3);
+        om.field_p = new w(kj.field_c, (String) null, IntrusiveNode.field_f, param0, param3);
         dn.field_b = new ef(vg.field_Z, om.field_p);
         if (param2 >= -110) {
           return;

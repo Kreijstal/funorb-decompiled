@@ -200,8 +200,8 @@ final class kl extends pm {
         int var5 = Confined.field_J ? 1 : 0;
         int var3 = 0;
         for (var4 = param0; var4 < 9; var4++) {
-          var3 = var3 + ti.field_j[2047 & this.field_L[9 * param1 + var4]] * bh.field_b[var4];
-          var3 = var3 + ti.field_m[2047 & this.field_L[param1 * 9 + var4]] * bh.field_b[var4 + 9];
+          var3 = var3 + ti.field_j[2047 & this.field_L[9 * param1 + var4]] * MouseInput.field_b[var4];
+          var3 = var3 + ti.field_m[2047 & this.field_L[param1 * 9 + var4]] * MouseInput.field_b[var4 + 9];
         }
         return (double)var3 * kd.field_r;
     }

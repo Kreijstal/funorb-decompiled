@@ -210,7 +210,7 @@ final class hn {
         var2 = var15;
         this.field_m.field_X.a((byte) 52, var17);
         sb.field_g = -4.0 * var17[11];
-        lm.field_a = -4.0 * var17[9];
+        IntrusiveDeque.field_a = -4.0 * var17[9];
         ke.field_Z = var17[10] * -4.0;
         var3 = -91 / ((param0 - 45) / 32);
         if (this.field_x.field_a <= 1) {
@@ -517,7 +517,7 @@ final class hn {
                 if (var10 == null) {
                   var10 = this.field_g.field_a;
                 }
-                var10 = ((rk) (var10)).field_h;
+                var10 = ((IntrusiveNode) (var10)).field_h;
                 if (var10 == this.field_g.field_a) {
                   var10 = null;
                 }
@@ -547,7 +547,7 @@ final class hn {
           if (var10Lifetime1 == null) {
             var10Lifetime1 = this.field_g.field_a;
           }
-          var10Lifetime1 = ((rk) (var10Lifetime1)).field_h;
+          var10Lifetime1 = ((IntrusiveNode) (var10Lifetime1)).field_h;
           if (var10Lifetime1 == this.field_g.field_a) {
             var10Lifetime1 = null;
           }
@@ -571,7 +571,7 @@ final class hn {
             if (var8_ref == null) {
               var8_ref = this.field_g.field_a;
             }
-            var8_ref = ((rk) (var8_ref)).field_h;
+            var8_ref = ((IntrusiveNode) (var8_ref)).field_h;
             if (var8_ref == this.field_g.field_a) {
               var8_ref = null;
             }
@@ -1045,7 +1045,7 @@ final class hn {
         pm var3Lifetime1;
         var8 = Confined.field_J ? 1 : 0;
         try {
-          fc.a(true, param1);
+          IsaacRandom.a(true, param1);
           var3 = (pm) (this.field_g.a(false));
           var4 = (oi) (param1.a(19));
           var5 = null;
@@ -1065,14 +1065,14 @@ final class hn {
             var3.field_v = (oi) (var5);
             var3 = (pm) (this.field_g.a((byte) 117));
           }
-          fc.a(param1, (byte) 87);
+          IsaacRandom.a(param1, (byte) 87);
           var3Lifetime1 = (pm) (this.field_g.a(13));
           while (var3Lifetime1 != null) {
             var7 = var3Lifetime1.field_v;
             if (var7 == null) {
               var7 = param1.field_a;
             }
-            var7 = ((rk) (var7)).field_h;
+            var7 = ((IntrusiveNode) (var7)).field_h;
             if (param1.field_a == var7) {
               var7 = null;
             }
@@ -1519,7 +1519,7 @@ final class hn {
         this.field_O = new wd();
         this.field_x = new lc(h.field_V[0], ag.field_g[0], 17, 4.0, vb.field_a[0], 0.0);
         this.field_B = new dj(this);
-        this.field_g.a((rk) (this.field_B), (byte) -113);
+        this.field_g.a((IntrusiveNode) (this.field_B), (byte) -113);
         this.field_m = new vg(this, 0.0, 0.0, 0.0);
         this.field_m.field_ab = 0.0;
         this.field_m.field_P = 0.0;

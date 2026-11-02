@@ -25,7 +25,7 @@ final class ri {
         return im.field_d + var1;
     }
 
-    final static void a(rk param0, int param1, rk param2) {
+    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
         try {
           if (null != param2.field_a) {
             param2.a(true);

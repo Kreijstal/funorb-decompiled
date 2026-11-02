@@ -17,11 +17,11 @@ final class ac {
 
     final static void a(boolean param0) {
         kc.field_o = false;
-        bg.field_a = null;
+        KeyboardInput.field_a = null;
         bj.field_m = param0 ? true : false;
         da.field_e = null;
         va.field_b = null;
-        gh.field_k = false;
+        IntrusiveNodeHashTable.field_k = false;
         ji.field_e = null;
         qf.field_e = false;
         hh.field_d = null;
