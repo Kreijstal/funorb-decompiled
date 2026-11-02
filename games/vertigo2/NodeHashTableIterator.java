@@ -47,30 +47,30 @@ final class NodeHashTableIterator implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = Vertigo2.field_L ? 1 : 0;
-        if (this.field_a.field_f[this.field_b - 1] != this.field_i) {
+        if (this.field_a.buckets[this.field_b - 1] != this.field_i) {
           return true;
         }
         while (this.field_b < this.field_a.field_c) {
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          if (this.field_a.field_f[fieldTemp$0].previous != this.field_a.field_f[-1 + this.field_b]) {
-            this.field_i = this.field_a.field_f[this.field_b - 1].previous;
+          if (this.field_a.buckets[fieldTemp$0].previous != this.field_a.buckets[-1 + this.field_b]) {
+            this.field_i = this.field_a.buckets[this.field_b - 1].previous;
             return true;
           }
-          this.field_i = this.field_a.field_f[-1 + this.field_b];
+          this.field_i = this.field_a.buckets[-1 + this.field_b];
         }
         return false;
     }
 
     private final void a(int param0) {
         if (param0 < -99) {
-          this.field_i = this.field_a.field_f[0].previous;
+          this.field_i = this.field_a.buckets[0].previous;
           this.field_b = 1;
           this.field_c = null;
           return;
         }
         this.a(-22);
-        this.field_i = this.field_a.field_f[0].previous;
+        this.field_i = this.field_a.buckets[0].previous;
         this.field_b = 1;
         this.field_c = null;
     }
@@ -113,7 +113,7 @@ final class NodeHashTableIterator implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = Vertigo2.field_L ? 1 : 0;
-        if (this.field_i != this.field_a.field_f[-1 + this.field_b]) {
+        if (this.field_i != this.field_a.buckets[-1 + this.field_b]) {
           var1 = this.field_i;
           this.field_i = var1.previous;
           this.field_c = var1;
@@ -125,8 +125,8 @@ final class NodeHashTableIterator implements Iterator {
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          var1 = this.field_a.field_f[fieldTemp$0].previous;
-        } while (var1 == this.field_a.field_f[-1 + this.field_b]);
+          var1 = this.field_a.buckets[fieldTemp$0].previous;
+        } while (var1 == this.field_a.buckets[-1 + this.field_b]);
         this.field_c = var1;
         this.field_i = var1.previous;
         return var1;

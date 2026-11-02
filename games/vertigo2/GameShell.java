@@ -748,11 +748,11 @@ abstract class GameShell extends GameApplet {
           }
           for (var2 = 0; var2 < var1.field_n; var2++) {
             if (var4.field_t[var2] != null &&
-              var4.field_t[var2].field_b == 0) {
+              var4.field_t[var2].status == 0) {
               return false;
             }
             if (null != var4.field_w[var2] &&
-              0 == var4.field_w[var2].field_b) {
+              0 == var4.field_w[var2].status) {
               return false;
             }
           }

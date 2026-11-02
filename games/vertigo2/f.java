@@ -170,16 +170,16 @@ final class f extends TextureOperator {
               al.field_t = al.field_t + 1;
             }
             if (1 == al.field_t) {
-              if (pq.field_f.field_b == 2) {
+              if (pq.field_f.status == 2) {
                 stackIn_14_0 = pl.a((byte) 11, -1);
                 return stackIn_14_0;
               }
-              if (pq.field_f.field_b == 1) {
+              if (pq.field_f.status == 1) {
                 al.field_t = al.field_t + 1;
               }
             }
             if (al.field_t == 2) {
-              fn.field_y = new BufferedSocket((java.net.Socket) (pq.field_f.field_d), or.field_f);
+              fn.field_y = new BufferedSocket((java.net.Socket) (pq.field_f.result), or.field_f);
               var2 = new PacketBuffer(13);
               jo.a(var2, od.field_Kb, FullscreenFocusCanvas.field_a, 124, MouseWheelInput.field_h);
               var2.writeByte(15, param0 - 85);

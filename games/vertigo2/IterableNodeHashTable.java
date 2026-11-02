@@ -6,7 +6,7 @@ import java.util.*;
 final class IterableNodeHashTable implements Iterable {
     static ll field_d;
     int field_c;
-    IntrusiveNode[] field_f;
+    IntrusiveNode[] buckets;
     private IntrusiveNode field_g;
     static lb field_e;
     static UiPanel[] field_h;
@@ -87,7 +87,7 @@ final class IterableNodeHashTable implements Iterable {
     final IntrusiveNode get(long param0, byte param1) {
         IntrusiveNode var5 = null;
         int var6 = Vertigo2.field_L ? 1 : 0;
-        IntrusiveNode var4 = this.field_f[(int)(param0 & (long)(this.field_c - 1))];
+        IntrusiveNode var4 = this.buckets[(int)(param0 & (long)(this.field_c - 1))];
         if (param1 < 22) {
           return (IntrusiveNode) null;
         }
@@ -110,7 +110,7 @@ final class IterableNodeHashTable implements Iterable {
           if (param1.next != null) {
             param1.unlink(2);
           }
-          var5 = this.field_f[(int)((long)(this.field_c - 1) & param0)];
+          var5 = this.buckets[(int)((long)(this.field_c - 1) & param0)];
           param1.previous = var5;
           param1.next = var5.next;
           param1.next.previous = param1;
@@ -133,12 +133,12 @@ final class IterableNodeHashTable implements Iterable {
         int var2 = 0;
         IntrusiveNode dupTemp$0 = null;
         IntrusiveNode var3 = null;
-        this.field_f = new IntrusiveNode[param0];
+        this.buckets = new IntrusiveNode[param0];
         this.field_c = param0;
         for (var2 = 0; param0 > var2; var2++) {
           dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
-          this.field_f[var2] = dupTemp$0;
+          this.buckets[var2] = dupTemp$0;
           var3.previous = var3;
           var3.next = var3;
         }

@@ -399,14 +399,14 @@ final class an {
             an.a(48, (Archive) null, 29, (byte) -55);
           }
           var9 = param1.requestDisplayModes(-108);
-          while (var9.field_b == 0) {
+          while (var9.status == 0) {
             um.a(true, 10L);
           }
-          if (2 == var9.field_b) {
+          if (2 == var9.status) {
             stackIn_13_0 = new cl[]{};
             return stackIn_13_0;
           }
-          var11 = (int[]) (var9.field_d);
+          var11 = (int[]) (var9.result);
           var10 = var11;
           var3 = var10;
           var4 = new cl[var11.length >> 2];

@@ -778,13 +778,13 @@ final class t implements Runnable {
         this.field_j = false;
         try {
           var2 = param0.startThread(5, (Runnable) (this), 0);
-          while (0 == var2.field_b) {
+          while (0 == var2.status) {
             um.a(true, 10L);
           }
-          if (var2.field_b == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_h = (Thread) (var2.field_d);
+          this.field_h = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

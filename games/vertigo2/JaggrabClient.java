@@ -53,18 +53,18 @@ final class JaggrabClient implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_a) {
-          if (this.field_a.field_d != null) {
+          if (this.field_a.result != null) {
             try {
-              ((DataInputStream) (this.field_a.field_d)).close();
+              ((DataInputStream) (this.field_a.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_a = null;
         }
         if (null != this.field_h) {
-          if (this.field_h.field_d != null) {
+          if (this.field_h.result != null) {
             try {
-              ((java.net.Socket) (this.field_h.field_d)).close();
+              ((java.net.Socket) (this.field_h.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -101,10 +101,10 @@ final class JaggrabClient implements Runnable {
           if (this.field_a == null) {
             this.field_a = this.field_i.requestUrlStream(-90, this.field_g);
           }
-          if (this.field_a.field_b == 0) {
+          if (this.field_a.status == 0) {
             return false;
           }
-          if (this.field_a.field_b != 1) {
+          if (this.field_a.status != 1) {
             this.field_a = null;
             this.field_e = this.field_e + 1;
             return false;
@@ -114,10 +114,10 @@ final class JaggrabClient implements Runnable {
           if (null == this.field_h) {
             this.field_h = this.field_i.requestSocket(-82, 443, this.field_g.getHost());
           }
-          if (this.field_h.field_b == 0) {
+          if (this.field_h.status == 0) {
             return false;
           }
-          if (this.field_h.field_b != 1) {
+          if (this.field_h.status != 1) {
             this.field_e = this.field_e + 1;
             this.field_h = null;
             return false;
@@ -126,10 +126,10 @@ final class JaggrabClient implements Runnable {
         if (null == this.field_k) {
           try {
             if (this.field_e == 0) {
-              this.field_k = (DataInputStream) (this.field_a.field_d);
+              this.field_k = (DataInputStream) (this.field_a.result);
             }
             if (1 == this.field_e) {
-              var4 = (java.net.Socket) (this.field_h.field_d);
+              var4 = (java.net.Socket) (this.field_h.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -150,10 +150,10 @@ final class JaggrabClient implements Runnable {
             if (null == this.field_c) {
               this.field_c = this.field_i.startThread(5, (Runnable) (this), ~param0);
             }
-            if (0 == this.field_c.field_b) {
+            if (0 == this.field_c.status) {
               return false;
             }
-            if (this.field_c.field_b == 1) {
+            if (this.field_c.status == 1) {
               return false;
             }
             this.finalize();
@@ -164,10 +164,10 @@ final class JaggrabClient implements Runnable {
         if (null == this.field_c) {
           this.field_c = this.field_i.startThread(5, (Runnable) (this), ~param0);
         }
-        if (0 == this.field_c.field_b) {
+        if (0 == this.field_c.status) {
           return false;
         }
-        if (this.field_c.field_b != 1) {
+        if (this.field_c.status != 1) {
           this.finalize();
           this.field_e = this.field_e + 1;
         }

@@ -142,12 +142,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (this.field_e != null) {
-            while (this.field_e.field_b == 0) {
+            while (this.field_e.status == 0) {
               um.a(true, 1L);
             }
-            if (this.field_e.field_b == 1) {
+            if (this.field_e.status == 1) {
               try {
-                ((Thread) (this.field_e.field_d)).join();
+                ((Thread) (this.field_e.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }

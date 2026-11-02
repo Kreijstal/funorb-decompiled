@@ -235,13 +235,13 @@ final class PlatformTaskDispatcher implements Runnable {
                     if (field_l > gk.a(126)) {
                       throw new IOException();
                     }
-                    var8.field_d = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_f)), var8.field_g);
+                    var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_f)), var8.field_g);
                     break;
                   case 4:
                     if (field_l > gk.a(52)) {
                       throw new IOException();
                     }
-                    var8.field_d = new DataInputStream(((java.net.URL) (var8.field_f)).openStream());
+                    var8.result = new DataInputStream(((java.net.URL) (var8.field_f)).openStream());
                     break;
                   case 8:
                     var18 = (Object[]) (var8.field_f);
@@ -249,7 +249,7 @@ final class PlatformTaskDispatcher implements Runnable {
                       ((Class) (var18[0])).getClassLoader() == null) {
                       throw new SecurityException();
                     }
-                    var8.field_d = ((Class) (var18[0])).getDeclaredMethod((String) (var18[1]), (Class[]) (var18[2]));
+                    var8.result = ((Class) (var18[0])).getDeclaredMethod((String) (var18[1]), (Class[]) (var18[2]));
                     break;
                   case 9:
                     var17 = (Object[]) (var8.field_f);
@@ -257,11 +257,11 @@ final class PlatformTaskDispatcher implements Runnable {
                       null == ((Class) (var17[0])).getClassLoader()) {
                       throw new SecurityException();
                     }
-                    var8.field_d = ((Class) (var17[0])).getDeclaredField((String) (var17[1]));
+                    var8.result = ((Class) (var17[0])).getDeclaredField((String) (var17[1]));
                     break;
                   case 18:
                     var16 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
-                    var8.field_d = var16.getContents((Object) null);
+                    var8.result = var16.getContents((Object) null);
                     break;
                   case 16:
                   default:
@@ -274,18 +274,18 @@ final class PlatformTaskDispatcher implements Runnable {
                           throw new IOException();
                         }
                         var15 = (var8.field_g >> 24 & 255) + "." + ((16726532 & var8.field_g) >> 16) + "." + (var8.field_g >> 8 & 255) + "." + (var8.field_g & 255);
-                        var8.field_d = java.net.InetAddress.getByName(var15).getHostName();
+                        var8.result = java.net.InetAddress.getByName(var15).getHostName();
                         break;
                       case 5:
                         if (!this.field_u) {
-                          var8.field_d = Class.forName("pa").getMethod("listmodes", new Class[]{}).invoke(this.field_c, new Object[]{});
+                          var8.result = Class.forName("pa").getMethod("listmodes", new Class[]{}).invoke(this.field_c, new Object[]{});
                         } else {
-                          var8.field_d = this.field_i.a((byte) -99);
+                          var8.result = this.field_i.a((byte) -99);
                         }
                         break;
                       case 6:
                         var14 = new java.awt.Frame("Jagex Full Screen");
-                        var8.field_d = var14;
+                        var8.result = var14;
                         var14.setResizable(false);
                         if (!this.field_u) {
                           Class.forName("pa").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_c, new Object[]{var14, new Integer(var8.field_g >>> 16), new Integer(var8.field_g & 65535), new Integer(var8.field_c >> 16), new Integer(var8.field_c & 65535)});
@@ -342,22 +342,22 @@ final class PlatformTaskDispatcher implements Runnable {
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var13 + "\"");
-                            var8.field_d = null;
+                            var8.result = null;
                           } catch (java.lang.Exception decompiledCaughtParameter1) {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref = (Exception) (Object) decompiledCaughtException;
-                            var8.field_d = var3_ref;
+                            var8.result = var3_ref;
                             throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref);
                           }
                         }
                         break;
                       case 13:
                         var3_ref2 = PlatformTaskDispatcher.a(0, field_f, "", (String) (var8.field_f));
-                        var8.field_d = var3_ref2;
+                        var8.result = var3_ref2;
                         break;
                       case 12:
                         var3_ref2 = PlatformTaskDispatcher.a(0, field_f, field_h, (String) (var8.field_f));
-                        var8.field_d = var3_ref2;
+                        var8.result = var3_ref2;
                         break;
                       case 7:
                         if (this.field_u) {
@@ -370,7 +370,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (field_l > gk.a(101)) {
                           throw new IOException();
                         }
-                        var8.field_d = java.net.InetAddress.getByName((String) (var8.field_f)).getAddress();
+                        var8.result = java.net.InetAddress.getByName((String) (var8.field_f)).getAddress();
                         break;
                     }
                     break;
@@ -384,7 +384,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var9.setDaemon(true);
                     var9.start();
                     var9.setPriority(var8.field_g);
-                    var8.field_d = var9;
+                    var8.result = var9;
                     break;
                   case 22:
                     if (field_l > gk.a(61)) {
@@ -392,17 +392,17 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (rg) null;
-                      var8.field_d = wp.a((String) (var8.field_f), (byte) -109, var8.field_g).b(640);
+                      var8.result = wp.a((String) (var8.field_f), (byte) -109, var8.field_g).b(640);
                     } catch (rg decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (rg) (Object) decompiledCaughtException;
-                      var8.field_d = var3_ref3.getMessage();
+                      var8.result = var3_ref3.getMessage();
                       throw var3_ref3;
                     }
                     break;
                 }
               }
-              var8.field_b = 1;
+              var8.status = 1;
             } catch (java.lang.ThreadDeath decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               var2_ref = (ThreadDeath) (Object) decompiledCaughtException;
@@ -410,7 +410,7 @@ final class PlatformTaskDispatcher implements Runnable {
             } catch (java.lang.Throwable decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = decompiledCaughtException;
-              var8.field_b = 2;
+              var8.status = 2;
             }
             var2 = var8;
             synchronized (var2) {

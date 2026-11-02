@@ -109,7 +109,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     public final Object next() {
         Object var1 = this.field_d;
-        if (this.field_e.field_b == var1) {
+        if (this.field_e.sentinel == var1) {
           this.field_d = null;
           var1 = null;
         } else {
@@ -146,7 +146,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     }
 
     public final boolean hasNext() {
-        return this.field_e.field_b != this.field_d;
+        return this.field_e.sentinel != this.field_d;
     }
 
     SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
@@ -154,7 +154,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         try {
           this.field_e = param0;
           this.field_c = null;
-          this.field_d = this.field_e.field_b.secondaryPrevious;
+          this.field_d = this.field_e.sentinel.secondaryPrevious;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "cf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

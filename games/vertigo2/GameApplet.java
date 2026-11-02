@@ -56,7 +56,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               mr.field_b = dupTemp$0;
               var8 = gi.field_s.startThread(1, (Runnable) (this), 0);
               while (true) {
-                if (0 == var8.field_b) {
+                if (0 == var8.status) {
                   um.a(true, 10L);
                   if (var9 == 0) {
                     continue;

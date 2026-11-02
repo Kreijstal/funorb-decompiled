@@ -10,8 +10,8 @@ final class PcmStreamMixer extends PcmStream {
     private final void a(o param0) {
         param0.unlink(2);
         param0.a();
-        IntrusiveNode var2 = this.field_r.field_h.previous;
-        if (var2 == this.field_r.field_h) {
+        IntrusiveNode var2 = this.field_r.sentinel.previous;
+        if (var2 == this.field_r.sentinel) {
           this.field_u = -1;
         } else {
           this.field_u = ((o) (var2)).field_n;
@@ -28,9 +28,9 @@ final class PcmStreamMixer extends PcmStream {
 
     private final void a(IntrusiveNode param0, o param1) {
         while (true) {
-          if (param0 == this.field_r.field_h) {
+          if (param0 == this.field_r.sentinel) {
             jn.a(param1, param0, 18724);
-            this.field_u = ((o) (this.field_r.field_h.previous)).field_n;
+            this.field_u = ((o) (this.field_r.sentinel.previous)).field_n;
             return;
           }
           if (((o) (param0)).field_n <= param1.field_n) {
@@ -40,7 +40,7 @@ final class PcmStreamMixer extends PcmStream {
           break;
         }
         jn.a(param1, param0, 18724);
-        this.field_u = ((o) (this.field_r.field_h.previous)).field_n;
+        this.field_u = ((o) (this.field_r.sentinel.previous)).field_n;
         return;
     }
 

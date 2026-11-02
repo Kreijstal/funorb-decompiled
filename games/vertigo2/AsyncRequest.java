@@ -4,13 +4,13 @@
 public class AsyncRequest {
     Object field_f;
     int field_c;
-    public volatile Object field_d;
+    public volatile Object result;
     int field_a;
     public int field_g;
     AsyncRequest field_e;
-    public volatile int field_b;
+    public volatile int status;
 
     AsyncRequest() {
-        this.field_b = 0;
+        this.status = 0;
     }
 }

@@ -157,18 +157,18 @@ class ml extends va {
             var3 = 0;
             for (var4 = 0; var4 < var17.field_n; var4++) {
               if (null != var13.field_t[var4]) {
-                if (var13.field_t[var4].field_b == 2) {
+                if (var13.field_t[var4].status == 2) {
                   var13.field_y[var4] = -5;
                 }
-                if (var13.field_t[var4].field_b == 0) {
+                if (var13.field_t[var4].status == 0) {
                   var3 = 1;
                 }
               }
               if (var13.field_w[var4] != null) {
-                if (var13.field_w[var4].field_b == 2) {
+                if (var13.field_w[var4].status == 2) {
                   var13.field_y[var4] = -6;
                 }
-                if (var13.field_w[var4].field_b == 0) {
+                if (var13.field_w[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -187,25 +187,25 @@ class ml extends va {
                   if (var6_int != 0) {
                     if (var6_int != 1) {
                       if (var6_int == 2) {
-                        var15 = (java.lang.reflect.Field) (var17.field_t[var5].field_d);
+                        var15 = (java.lang.reflect.Field) (var17.field_t[var5].result);
                         var8 = var15.getModifiers();
                         param0.writeByte(0, -112);
                         param0.writeInt(var8, 0);
                       }
                     } else {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_t[var5].field_d);
+                      var16_ref = (java.lang.reflect.Field) (var17.field_t[var5].result);
                       var19 = var16_ref;
                       var19.setInt((Object) null, var17.field_u[var5]);
                       param0.writeByte(0, 107);
                     }
                   } else {
-                    var26 = (java.lang.reflect.Field) (var17.field_t[var5].field_d);
+                    var26 = (java.lang.reflect.Field) (var17.field_t[var5].result);
                     var8 = var26.getInt((Object) null);
                     param0.writeByte(0, -90);
                     param0.writeInt(var8, 0);
                   }
                   if (var6_int == 3) {
-                    var27 = (java.lang.reflect.Method) (var17.field_w[var5].field_d);
+                    var27 = (java.lang.reflect.Method) (var17.field_w[var5].result);
                     var25 = var17.field_q[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var10_int < var25.length; var10_int++) {
@@ -226,7 +226,7 @@ class ml extends va {
                     }
                   } else {
                     if (var6_int == 4) {
-                      var28 = (java.lang.reflect.Method) (var17.field_w[var5].field_d);
+                      var28 = (java.lang.reflect.Method) (var17.field_w[var5].result);
                       var8Lifetime1 = var28.getModifiers();
                       param0.writeByte(0, 119);
                       param0.writeInt(var8Lifetime1, 0);

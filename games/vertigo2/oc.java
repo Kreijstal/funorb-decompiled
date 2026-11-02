@@ -102,17 +102,17 @@ final class oc extends IntrusiveNode {
             }
           }
           var11 = param3.requestEnterFullscreen(param0, param4, param2, param1, 1636602704);
-          while (var11.field_b == 0) {
+          while (var11.status == 0) {
             um.a(true, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_d);
+          var7 = (java.awt.Frame) (var11.result);
           if (param5 < 20) {
             field_s = (BitmapFont) null;
           }
           if (var7 == null) {
             return null;
           }
-          if (var11.field_b != 2) {
+          if (var11.status != 2) {
             return var7;
           }
           br.a(var7, param3, 8);
