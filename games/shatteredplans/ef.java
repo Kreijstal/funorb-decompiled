@@ -4,7 +4,7 @@
 final class ef {
     static int field_a;
     static String field_e;
-    static bi field_f;
+    static Sprite field_f;
     static String field_c;
     static String field_d;
     static String field_b;
@@ -59,9 +59,9 @@ final class ef {
     }
 
     final static void a(boolean param0) {
-        kc.field_b = new pf();
+        kc.field_b = new IntrusiveDeque();
         if (!param0) {
-          field_f = (bi) null;
+          field_f = (Sprite) null;
         }
     }
 

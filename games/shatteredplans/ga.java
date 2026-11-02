@@ -61,10 +61,10 @@ final class ga extends tn {
         this.field_u[param2] = (int)(0.5 + 2097152.0 * Math.pow(2.0, 0.00054931640625 * (double)param1));
     }
 
-    final static bi a(bc param0, int param1, int param2, int param3) {
+    final static Sprite a(bc param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        bi stackIn_5_0 = null;
-        bi stackIn_7_0 = null;
+        Sprite stackIn_5_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -77,7 +77,7 @@ final class ga extends tn {
             stackIn_7_0 = gq.d(0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (bi) null;
+          stackIn_5_0 = (Sprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -260,7 +260,7 @@ final class ga extends tn {
           }
           var8 = (be) (param1.field_i.c(-126));
           while (var8 != null) {
-            var9 = (int)var8.field_b;
+            var9 = (int)var8.key;
             var12 = (br) (this.field_Q.a((long)var9, -25064));
             if (var12 == null) {
               var13 = lo.a(param0, (byte) 125, var9);
@@ -375,9 +375,9 @@ final class ga extends tn {
         int stackIn_36_0 = 0;
         int stackIn_71_0 = 0;
         int stackIn_80_0 = 0;
-        bi[] stackIn_82_0 = null;
+        Sprite[] stackIn_82_0 = null;
         int stackIn_83_1 = 0;
-        bi[] stackIn_88_0 = null;
+        Sprite[] stackIn_88_0 = null;
         int stackIn_91_1 = 0;
         String stackIn_155_0 = null;
         String stackIn_165_0 = null;
@@ -385,7 +385,7 @@ final class ga extends tn {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        pf var8 = null;
+        IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         fb var12 = null;
@@ -419,7 +419,7 @@ final class ga extends tn {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        bi var42 = null;
+        Sprite var42 = null;
         qr var43 = null;
         qr var44 = null;
         qr var45 = null;
@@ -428,14 +428,14 @@ final class ga extends tn {
         qr var48 = null;
         qr var49 = null;
         Object var50 = null;
-        bi var50_ref = null;
+        Sprite var50_ref = null;
         Object var51 = null;
-        bi var51_ref = null;
+        Sprite var51_ref = null;
         Object var52 = null;
-        bi var52_ref = null;
+        Sprite var52_ref = null;
         Object var53 = null;
-        bi var53_ref = null;
-        bi var54 = null;
+        Sprite var53_ref = null;
+        Sprite var54 = null;
         int var14Lifetime1;
         int var33_intLifetime1;
         int var34_intLifetime1;
@@ -458,7 +458,7 @@ final class ga extends tn {
           var7_int = ((ub) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_4_3, -109, param0, 2) ? 1 : 0;
           var8 = qs.field_y.field_xb.field_M;
           if (param1 <= 109) {
-            ga.a((nk[]) null, -36, (bc) null, (int[]) null, (bi[][]) null, (String[]) null, 119, (bc) null, (byte[]) null, (String[][]) null, (bc) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (bi[][]) null);
+            ga.a((nk[]) null, -36, (bc) null, (int[]) null, (Sprite[][]) null, (String[]) null, 119, (bc) null, (byte[]) null, (String[][]) null, (bc) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (Sprite[][]) null);
           }
           var9 = pr.a(14274);
           var11 = null;
@@ -506,7 +506,7 @@ final class ga extends tn {
                 var12.field_Mb.a(4, var12.field_oc);
               }
               var12.field_ac = new qr(0L, (qr) null);
-              if ((var14 & 1 << kf.field_i) != 0) {
+              if ((var14 & 1 << GameApplet.field_i) != 0) {
                 var12.field_Mb.a(4, var12.field_ac);
               }
               var12.field_Kb = new qr(0L, (qr) null);
@@ -549,7 +549,7 @@ final class ga extends tn {
               var12.a(4, var12.field_Sb);
               var12.field_Hb = new qr(0L, gn.field_w);
               var12.a(4, var12.field_Hb);
-              var12.field_ic = new qr(0L, ii.field_u);
+              var12.field_ic = new qr(0L, SpriteState.field_u);
               var12.a(4, var12.field_ic);
               var12.e((byte) -126);
               var12.field_Db = new qr(0L, kq.field_h);
@@ -716,7 +716,7 @@ final class ga extends tn {
                 var12.field_oc.a(var51_ref.field_o, var12.field_Mb.field_mb, (byte) 124, 0, var34_int);
                 var34_int = var34_int + (qo.field_b + var51_ref.field_o);
               }
-              if (0 != (1 << kf.field_i & var14Lifetime1)) {
+              if (0 != (1 << GameApplet.field_i & var14Lifetime1)) {
                 var52_ref = j.field_s[-1 + var12.field_Fb];
                 var12.field_ac.field_pb = var52_ref;
                 var12.field_ac.a(var52_ref.field_o, var12.field_Mb.field_mb, (byte) 41, 0, var34_int);
@@ -734,11 +734,11 @@ final class ga extends tn {
                 var12.field_Kb.a(var53_ref.field_o, var12.field_Mb.field_mb, (byte) 127, 0, var34_int);
                 var34_int = var34_int + (qo.field_b + var53_ref.field_o);
               }
-              if (null != ln.field_O) {
+              if (null != Star.field_O) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < em.field_k; var36Lifetime1++) {
-                  if (ln.field_O[var36Lifetime1] != null &&
+                  if (Star.field_O[var36Lifetime1] != null &&
                     0 != (var14Lifetime1 & 1 << var36Lifetime1 + ml.field_j)) {
-                    var42 = ln.field_O[var36Lifetime1][var12.field_dc[var36Lifetime1] & 255];
+                    var42 = Star.field_O[var36Lifetime1][var12.field_dc[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_xb[var36Lifetime1].field_pb = var42;
                     var12.field_xb[var36Lifetime1].a(var54.field_o, var12.field_Mb.field_mb, (byte) 92, 0, var34_int);
@@ -904,7 +904,7 @@ final class ga extends tn {
         }
     }
 
-    final static void a(nk[] param0, int param1, bc param2, int[] param3, bi[][] param4, String[] param5, int param6, bc param7, byte[] param8, String[][] param9, bc param10, byte[] param11, boolean param12, String[][] param13, int param14, int[] param15, bi[][] param16) {
+    final static void a(nk[] param0, int param1, bc param2, int[] param3, Sprite[][] param4, String[] param5, int param6, bc param7, byte[] param8, String[][] param9, bc param10, byte[] param11, boolean param12, String[][] param13, int param14, int[] param15, Sprite[][] param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -1091,7 +1091,7 @@ final class ga extends tn {
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         ij.a(3974311, param4, true, param2, param0, param1);
         if (param3 > -57) {
-          ga.a((nk[]) null, 95, (bc) null, (int[]) null, (bi[][]) null, (String[]) null, -102, (bc) null, (byte[]) null, (String[][]) null, (bc) null, (byte[]) null, false, (String[][]) null, 52, (int[]) null, (bi[][]) null);
+          ga.a((nk[]) null, 95, (bc) null, (int[]) null, (Sprite[][]) null, (String[]) null, -102, (bc) null, (byte[]) null, (String[][]) null, (bc) null, (byte[]) null, false, (String[][]) null, 52, (int[]) null, (Sprite[][]) null);
         }
     }
 
@@ -1433,7 +1433,7 @@ final class ga extends tn {
         if (param0 != 14745) {
           field_L = (String) null;
         }
-        jq.field_d = null;
+        GameKeyHandler.field_d = null;
         rs.field_Fb = -1;
         sc.field_q = false;
         ra.field_g = -1;

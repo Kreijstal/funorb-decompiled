@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class di extends oh {
+final class di extends IntrusiveNode {
     int field_l;
     int field_n;
     static String field_j;
     static String field_q;
-    static bi[] field_i;
+    static Sprite[] field_i;
     int field_h;
     static String field_k;
     int field_o;
@@ -39,11 +39,11 @@ final class di extends oh {
               var4_ref_sk.field_l < var2_long) {
               var4_ref_sk.b((byte) -61);
               rr.field_t = var4_ref_sk.field_h.length;
-              sa.field_a.field_j = 0;
+              sa.field_a.position = 0;
               for (var5_int = 0; rr.field_t > var5_int; var5_int++) {
-                sa.field_a.field_h[var5_int] = var4_ref_sk.field_h[var5_int];
+                sa.field_a.payload[var5_int] = var4_ref_sk.field_h[var5_int];
               }
-              rm.field_e = tp.field_g;
+              IterableNodeHashTable.field_e = tp.field_g;
               tp.field_g = kp.field_n;
               kp.field_n = ej.field_e;
               ej.field_e = var4_ref_sk.field_j;
@@ -51,23 +51,23 @@ final class di extends oh {
             }
           }
           if (param1 != 1) {
-            field_i = (bi[]) null;
+            field_i = (Sprite[]) null;
           }
           while (true) {
             if (ar.field_b < 0) {
-              sa.field_a.field_j = 0;
+              sa.field_a.position = 0;
               if (!es.a(param1 ^ -73, 1)) {
                 return false;
               }
               ar.field_b = sa.field_a.h((byte) 126);
-              sa.field_a.field_j = 0;
+              sa.field_a.position = 0;
               rr.field_t = param0[ar.field_b];
             }
             if (!uc.d((byte) -50)) {
               return false;
             }
             if (jc.field_o == 0) {
-              rm.field_e = tp.field_g;
+              IterableNodeHashTable.field_e = tp.field_g;
               tp.field_g = kp.field_n;
               kp.field_n = ej.field_e;
               ej.field_e = ar.field_b;
@@ -83,7 +83,7 @@ final class di extends oh {
             }
             var5 = new sk(var2_long + (long)var4, ar.field_b, new byte[rr.field_t]);
             for (var6 = 0; var6 < rr.field_t; var6++) {
-              var5.field_h[var6] = sa.field_a.field_h[var6];
+              var5.field_h[var6] = sa.field_a.payload[var6];
             }
             oe.field_h.a((byte) -113, var5);
             ar.field_b = -1;
@@ -156,8 +156,8 @@ final class di extends oh {
         }
     }
 
-    final static void a(ln param0, boolean param1, ob param2) {
-        ob stackIn_2_0 = null;
+    final static void a(Star param0, boolean param1, PacketBuffer param2) {
+        PacketBuffer stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -167,13 +167,13 @@ final class di extends oh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          stackIn_2_0 = (ob) (param2);
+          stackIn_2_0 = (PacketBuffer) (param2);
           if (param0 != null) {
             stackIn_3_1 = param0.field_p;
           } else {
             stackIn_3_1 = -1;
           }
-          ((ob) (Object) stackIn_2_0).c(stackIn_3_1, (byte) -57);
+          ((PacketBuffer) (Object) stackIn_2_0).c(stackIn_3_1, (byte) -57);
           if (param1) {
             di.c(true);
           }
@@ -218,16 +218,16 @@ final class di extends oh {
         boolean stackIn_25_1 = false;
         qr stackIn_28_0 = null;
         boolean stackIn_29_1 = false;
-        ke.a(-6187, gf.field_b + 640 >> 1, gf.field_k, 0, -640 + gf.field_b >> 1);
+        BufferedSocket.a(-6187, gf.field_b + 640 >> 1, gf.field_k, 0, -640 + gf.field_b >> 1);
         if (qa.field_t > 0) {
           if (gn.field_y != null) {
             gn.field_y.c(ia.field_j.field_hb, 0);
           }
           stackIn_7_0 = ia.field_j;
-          stackIn_8_1 = (param1) && (!on.field_b);
+          stackIn_8_1 = (param1) && (!IntrusiveDequeCursor.field_b);
           ((qr) (Object) stackIn_7_0).b(stackIn_8_1, 102);
           stackIn_11_0 = se.field_i;
-          stackIn_12_1 = (param1) && (!on.field_b);
+          stackIn_12_1 = (param1) && (!IntrusiveDequeCursor.field_b);
           ((qr) (Object) stackIn_11_0).b(stackIn_12_1, 119);
         }
         if (param0) {
@@ -241,11 +241,11 @@ final class di extends oh {
           stackIn_24_0 = am.field_xb;
           stackIn_25_1 = (param1) && (!ti.field_e);
           ((qr) (Object) stackIn_24_0).b(stackIn_25_1, 123);
-          stackIn_28_0 = pf.field_g;
+          stackIn_28_0 = IntrusiveDeque.field_g;
           stackIn_29_1 = (param1) && (!ti.field_e);
           ((qr) (Object) stackIn_28_0).b(stackIn_29_1, 115);
         }
-        ln.f((byte) 123);
+        Star.f((byte) 123);
     }
 
     di() {
@@ -262,7 +262,7 @@ final class di extends oh {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        pf var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         ve var6 = null;
         int var7 = 0;
@@ -314,14 +314,14 @@ final class di extends oh {
             if (var6.field_Bb != null &&
               !var6.field_Bb.equals("")) {
               var6.field_Db.field_jb = 16737894;
-              var6.field_Db.field_pb = ke.field_i;
+              var6.field_Db.field_pb = BufferedSocket.field_i;
               var8 = 1;
-              var6.field_Db.a(3 + ke.field_i.field_o, cr.field_c, (byte) 126, 0, 0);
+              var6.field_Db.a(3 + BufferedSocket.field_i.field_o, cr.field_c, (byte) 126, 0, 0);
             }
             var9 = 0;
             var10 = var6.field_K;
             if (var8 != 0) {
-              var9 = ke.field_i.field_o + 3;
+              var9 = BufferedSocket.field_i.field_o + 3;
               var10 = var10 - var9;
             }
             stackIn_20_0 = var6.field_Cb;
@@ -363,13 +363,13 @@ final class di extends oh {
             var6 = (ve) (var4.a((byte) -71));
           }
           if (wg.field_a.field_Fb.field_rb != 0) {
-            lg.field_e = new jp(wg.field_a.field_Fb.field_B, wg.field_a.field_Fb.field_N, wg.field_a.field_Fb.field_K, wg.field_a.field_Fb.field_mb, ob.field_l, h.field_v, ii.field_u, ii.field_u);
+            lg.field_e = new jp(wg.field_a.field_Fb.field_B, wg.field_a.field_Fb.field_N, wg.field_a.field_Fb.field_K, wg.field_a.field_Fb.field_mb, PacketBuffer.field_l, h.field_v, SpriteState.field_u, SpriteState.field_u);
             ia.field_b = 2;
           }
           if (wg.field_a.field_yb.field_rb == 0) {
             return;
           }
-          lg.field_e = new jp(wg.field_a.field_yb.field_B, wg.field_a.field_yb.field_N, wg.field_a.field_yb.field_K, wg.field_a.field_yb.field_mb, ln.field_E, h.field_v, ii.field_u, ii.field_u);
+          lg.field_e = new jp(wg.field_a.field_yb.field_B, wg.field_a.field_yb.field_N, wg.field_a.field_yb.field_K, wg.field_a.field_yb.field_mb, Star.field_E, h.field_v, SpriteState.field_u, SpriteState.field_u);
           ia.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

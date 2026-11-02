@@ -34,7 +34,7 @@ final class oj extends ns implements bp {
           var10 = var8;
           var3 = var10.j(-108);
           var10.m(-84);
-          wc.field_a = ip.a(24243, var10);
+          wc.field_a = SecondaryNodeDequeIterator.a(24243, var10);
           vc.field_d = new sr[var3];
           fa.field_Z = new int[var3][];
           if (param0 <= 82) {
@@ -89,7 +89,7 @@ final class oj extends ns implements bp {
           return;
         }
         try {
-          rm.b(param1 ^ -49);
+          IterableNodeHashTable.b(param1 ^ -49);
           this.i((byte) -104);
           if (param1 != 6) {
             field_Fb = (mp) null;

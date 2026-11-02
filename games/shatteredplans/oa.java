@@ -119,7 +119,7 @@ final class oa {
         return (char)var2;
     }
 
-    final static bi[] a(int param0, boolean param1, int param2, int param3) {
+    final static Sprite[] a(int param0, boolean param1, int param2, int param3) {
         if (param1) {
           oa.a(-72, 121, 20, (byte) 125, 74);
         }

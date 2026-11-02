@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class a extends oh {
+abstract class a extends IntrusiveNode {
     int field_l;
     static String field_i;
     private int field_n;

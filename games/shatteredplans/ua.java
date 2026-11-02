@@ -8,7 +8,7 @@ final class ua {
     static qr field_f;
     private ej field_a;
     private ej field_b;
-    static pf field_d;
+    static IntrusiveDeque field_d;
     private int field_i;
     static String field_g;
     static String[] field_c;
@@ -66,7 +66,7 @@ final class ua {
                 this.field_a.a(-105, 6, 0, ho.field_i);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param0 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -82,7 +82,7 @@ final class ua {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = (ho.field_i[3] & 255) + (16711680 & ho.field_i[1] << 16) + ((-16777216 & ho.field_i[0] << 24) + ((255 & ho.field_i[2]) << 8));
                         var12 = (ho.field_i[4] << 8 & 65280) + (255 & ho.field_i[5]);
@@ -98,7 +98,7 @@ final class ua {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = 255 & ho.field_i[7];
                         var12 = ((ho.field_i[2] & 255) << 8) + (255 & ho.field_i[3]);
@@ -443,7 +443,7 @@ final class ua {
 
     static {
         field_g = "End Tutorial";
-        field_d = new pf();
+        field_d = new IntrusiveDeque();
         field_c = new String[]{"No garrisoning, production unified across territories.", "Garrisoning required, separate production per territory."};
     }
 }

@@ -2,24 +2,24 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class in {
-    private df[] field_b;
-    private df field_h;
+    private DualLinkNode[] field_b;
+    private DualLinkNode field_h;
     private int field_k;
     private int field_c;
-    private df field_j;
+    private DualLinkNode field_j;
     private long field_d;
-    static bi field_i;
+    static Sprite field_i;
     static String field_l;
     static String field_e;
     static String field_a;
     static km field_g;
-    static bi field_f;
+    static Sprite field_f;
 
-    final df b(byte param0) {
+    final DualLinkNode b(byte param0) {
         int fieldTemp$0 = 0;
-        df var2;
+        DualLinkNode var2;
         int var3;
-        df var4;
+        DualLinkNode var4;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (this.field_c > 0 &&
           this.field_b[this.field_c - 1] != this.field_h) {
@@ -32,7 +32,7 @@ final class in {
             if (param0 == -107) {
               return null;
             }
-            return (df) null;
+            return (DualLinkNode) null;
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
@@ -56,7 +56,7 @@ final class in {
             return null;
           }
           if (param0 != 15) {
-            field_f = (bi) null;
+            field_f = (Sprite) null;
           }
           var2 = new th(param1, cf.field_H, sj.field_a, mc.field_s, cm.field_g, eo.field_fb, hd.field_q);
           pd.a(param0 - 15);
@@ -452,7 +452,7 @@ final class in {
         lp var3 = null;
         tq.field_j = new qh(320, -param0 + 479 - 28, 200, param0 + 28, ih.field_a.toUpperCase());
         if (param1) {
-          var2 = new fe(tq.field_j.field_k + 200 - 16, 2 + tq.field_j.field_t, 11, 11, -1, (bi) null, "X", 16711680);
+          var2 = new fe(tq.field_j.field_k + 200 - 16, 2 + tq.field_j.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
           var2.field_h = tq.field_j;
           tq.field_j.a(var2, 8);
           var3 = new lp(tq.field_j.field_k + 9, tq.field_j.field_t + 20, 182, param0);
@@ -463,8 +463,8 @@ final class in {
         return (qh) null;
     }
 
-    final void a(long param0, df param1, boolean param2) {
-        df var5 = null;
+    final void a(long param0, DualLinkNode param1, boolean param2) {
+        DualLinkNode var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -481,7 +481,7 @@ final class in {
           param1.field_h.field_j = param1;
           param1.field_l = param0;
           if (!param2) {
-            this.field_j = (df) null;
+            this.field_j = (DualLinkNode) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -498,16 +498,16 @@ final class in {
         }
     }
 
-    final static qd a(java.awt.Component param0, int param1, int param2, int param3) {
+    final static RasterBuffer a(java.awt.Component param0, int param1, int param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          qd var5 = null;
-          ge var5_ref = null;
-          qd stackIn_2_0 = null;
-          qd stackIn_4_0 = null;
-          ge stackIn_6_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_2_0 = null;
+          RasterBuffer stackIn_4_0 = null;
+          ImageProducerRasterBuffer stackIn_6_0 = null;
           RuntimeException stackIn_9_0 = null;
           StringBuilder stackIn_9_1 = null;
           String stackIn_10_2 = null;
@@ -516,20 +516,20 @@ final class in {
             try {
               var4 = Class.forName("bl");
               if (param1 != 16) {
-                stackIn_2_0 = (qd) null;
+                stackIn_2_0 = (RasterBuffer) null;
                 return stackIn_2_0;
               }
-              var5 = (qd) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param3, param0, (byte) -111, param2);
               stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new ge();
-              ((qd) ((Object) var5_ref)).a(param3, param0, (byte) -99, param2);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(param3, param0, (byte) -99, param2);
               stackIn_6_0 = var5_ref;
-              return (qd) ((Object) stackIn_6_0);
+              return (RasterBuffer) ((Object) stackIn_6_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -550,10 +550,10 @@ final class in {
         }
     }
 
-    final df d(byte param0) {
+    final DualLinkNode d(byte param0) {
         int var2;
-        df var3;
-        df var4;
+        DualLinkNode var3;
+        DualLinkNode var4;
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = 24 / ((-73 - param0) / 35);
@@ -585,7 +585,7 @@ final class in {
         cp.field_a.a(4, lp.field_v);
         bc.field_g = new wh(ds.field_a, cp.field_a);
         if (param0 != -83) {
-          field_i = (bi) null;
+          field_i = (Sprite) null;
         }
         ia.field_j = new qr(0L, (qr) null);
         ia.field_j.a(param0 + 87, bc.field_g.field_d);
@@ -593,7 +593,7 @@ final class in {
         tc.j(96);
     }
 
-    final df c(byte param0) {
+    final DualLinkNode c(byte param0) {
         if (param0 > -66) {
           this.field_c = -75;
         }
@@ -601,9 +601,9 @@ final class in {
         return this.b((byte) -107);
     }
 
-    final df a(int param0, long param1) {
-        df var4;
-        df var5;
+    final DualLinkNode a(int param0, long param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_d = param1;
@@ -642,13 +642,13 @@ final class in {
 
     in(int param0) {
         int var2 = 0;
-        df dupTemp$0 = null;
-        df var3 = null;
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
         this.field_c = 0;
         this.field_k = param0;
-        this.field_b = new df[param0];
+        this.field_b = new DualLinkNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new df();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_b[var2] = dupTemp$0;
           var3.field_h = var3;
@@ -657,7 +657,7 @@ final class in {
     }
 
     static {
-        field_i = new bi(540, 140);
+        field_i = new Sprite(540, 140);
         field_l = "Connection lost. <%0>";
         field_e = "Capture all the systems on the map";
         field_a = "Failed attacks";

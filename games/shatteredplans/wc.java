@@ -5,7 +5,7 @@ final class wc {
     static String field_b;
     static hc[] field_a;
 
-    final static void a(int param0, int param1, int param2, bi param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

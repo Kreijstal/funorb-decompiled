@@ -37,7 +37,7 @@ final class na {
     static gq field_I;
     byte[] field_E;
     int field_h;
-    static pf field_J;
+    static IntrusiveDeque field_J;
     static int field_L;
     static String field_s;
     static int field_r;
@@ -130,7 +130,7 @@ final class na {
           oq.field_i[24] = lq.field_p;
           oq.field_i[26] = ee.field_n;
           oq.field_i[31] = ep.field_d;
-          oq.field_i[25] = ii.field_v;
+          oq.field_i[25] = SpriteState.field_v;
           oq.field_i[23] = ur.field_Db;
           oq.field_i[16] = bf.field_a[1];
           oq.field_i[18] = ul.field_Fb[0];
@@ -141,14 +141,14 @@ final class na {
           jo.field_g[11] = qe.field_l;
           jo.field_g[3] = tc.field_D;
           jo.field_g[14] = ss.field_d;
-          jo.field_g[5] = rg.field_g;
+          jo.field_g[5] = ClientException.field_g;
           jo.field_g[8] = ck.field_d;
           jo.field_g[4] = lk.field_D;
           jo.field_g[6] = ms.field_f;
           jo.field_g[10] = w.field_H;
           jo.field_g[12] = am.field_zb;
           jo.field_g[2] = rq.field_c;
-          jo.field_g[15] = af.field_c;
+          jo.field_g[15] = DelegatingCanvas.field_c;
           jo.field_g[13] = kh.field_Eb;
           jo.field_g[1] = gq.field_g;
           bk.field_b[6] = en.field_e;
@@ -162,9 +162,9 @@ final class na {
           bk.field_b[1] = np.field_l;
           bk.field_b[5] = rk.field_m;
           bk.field_b[10] = nd.field_b;
-          bk.field_b[9] = ln.field_P;
+          bk.field_b[9] = Star.field_P;
           bk.field_b[8] = nr.field_s;
-          bk.field_b[7] = me.field_f;
+          bk.field_b[7] = VictoryChecker.field_f;
           bk.field_b[2] = nf.field_m;
           bk.field_b[3] = wa.field_i;
           w.field_J[0] = new String[5];
@@ -204,7 +204,7 @@ final class na {
         field_u = new Random();
         field_I = new gq(9, 0, 4, 1);
         field_s = "Production";
-        field_J = new pf();
+        field_J = new IntrusiveDeque();
         field_F = 0;
     }
 }

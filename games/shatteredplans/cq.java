@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cq extends f implements bp {
+final class cq extends WidgetContainer implements bp {
     private kg field_G;
     private kg field_J;
     private kg field_H;
@@ -31,8 +31,8 @@ final class cq extends f implements bp {
           var1_int = 0;
           var2 = param0 ? 1 : 0;
           while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
-            dc.field_l.b(0);
-            if (dc.field_l.a((byte) -46)) {
+            GameState.field_l.b(0);
+            if (GameState.field_l.a((byte) -46)) {
               var1_int = 1;
             }
             if (oq.field_j != 13) {
@@ -40,14 +40,14 @@ final class cq extends f implements bp {
             }
             var2 = 1;
           }
-          dc.field_l.a(-1, kq.a(nh.field_p, td.field_P, 16777215), kq.a(pd.field_k, bb.field_b, 16777215));
-          if (dc.field_l.a((byte) -76)) {
+          GameState.field_l.a(-1, kq.a(nh.field_p, td.field_P, 16777215), kq.a(pd.field_k, bb.field_b, 16777215));
+          if (GameState.field_l.a((byte) -76)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            dc.field_l.field_c >= 0) {
-            var3 = ShatteredPlansClient.field_E[dc.field_l.field_c];
+            GameState.field_l.field_c >= 0) {
+            var3 = ShatteredPlansClient.field_E[GameState.field_l.field_c];
             if (2 == var3 ||
               var3 == 5) {
               jf.b((byte) -15);
@@ -81,15 +81,15 @@ final class cq extends f implements bp {
           le.field_e.h((byte) 121);
         }
         if (param0 == -50) {
-          if (ed.field_h != null) {
-            ed.field_h.p(8305);
+          if (MouseInputHandler.field_h != null) {
+            MouseInputHandler.field_h.p(8305);
           }
           ga.g(param0 + 14795);
           return;
         }
     }
 
-    final boolean a(int param0, char param1, int param2, vg param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -171,7 +171,7 @@ final class cq extends f implements bp {
             cq.a(-64, -115, (String) null, (String) null, 39);
           }
           hs.field_j = rp.i(0);
-          ld.field_p = new pf();
+          ld.field_p = new IntrusiveDeque();
           hj.field_l = new tm[7];
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "cq.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

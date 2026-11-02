@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vd extends oh {
-    static pf field_j;
+class vd extends IntrusiveNode {
+    static IntrusiveDeque field_j;
     static String field_n;
     static String field_r;
     int field_t;
@@ -12,7 +12,7 @@ class vd extends oh {
     int field_m;
     int field_i;
     String field_o;
-    pf field_l;
+    IntrusiveDeque field_l;
     boolean field_p;
     static qr field_q;
 
@@ -144,9 +144,9 @@ class vd extends oh {
     final static void a(int param0, int param1, byte param2) {
         if (null != re.field_d) {
           if (param1 <= re.field_d.length) {
-            if (null == kf.field_f ||
-              !(param1 <= kf.field_f.length)) {
-              kf.field_f = new int[param1 * 2];
+            if (null == GameApplet.field_f ||
+              !(param1 <= GameApplet.field_f.length)) {
+              GameApplet.field_f = new int[param1 * 2];
             }
             if (null == fb.field_zb ||
               !(param1 <= fb.field_zb.length)) {
@@ -156,13 +156,13 @@ class vd extends oh {
               !(param1 <= aj.field_d.length)) {
               aj.field_d = new int[2 * param1];
             }
-            if (f.field_y == null ||
-              !(param1 <= f.field_y.length)) {
-              f.field_y = new int[2 * param1];
+            if (WidgetContainer.field_y == null ||
+              !(param1 <= WidgetContainer.field_y.length)) {
+              WidgetContainer.field_y = new int[2 * param1];
             }
-            if (null == dc.field_c ||
-              !(dc.field_c.length >= param1)) {
-              dc.field_c = new int[param1 * 2];
+            if (null == GameState.field_c ||
+              !(GameState.field_c.length >= param1)) {
+              GameState.field_c = new int[param1 * 2];
             }
             if (lg.field_d == null ||
               !(param1 + param0 <= lg.field_d.length)) {
@@ -174,9 +174,9 @@ class vd extends oh {
             }
           } else {
             re.field_d = new int[param1 * 2];
-            if (null == kf.field_f ||
-              !(param1 <= kf.field_f.length)) {
-              kf.field_f = new int[param1 * 2];
+            if (null == GameApplet.field_f ||
+              !(param1 <= GameApplet.field_f.length)) {
+              GameApplet.field_f = new int[param1 * 2];
             }
             if (null == fb.field_zb ||
               !(param1 <= fb.field_zb.length)) {
@@ -186,13 +186,13 @@ class vd extends oh {
               !(param1 <= aj.field_d.length)) {
               aj.field_d = new int[2 * param1];
             }
-            if (f.field_y == null ||
-              !(param1 <= f.field_y.length)) {
-              f.field_y = new int[2 * param1];
+            if (WidgetContainer.field_y == null ||
+              !(param1 <= WidgetContainer.field_y.length)) {
+              WidgetContainer.field_y = new int[2 * param1];
             }
-            if (null == dc.field_c ||
-              !(dc.field_c.length >= param1)) {
-              dc.field_c = new int[param1 * 2];
+            if (null == GameState.field_c ||
+              !(GameState.field_c.length >= param1)) {
+              GameState.field_c = new int[param1 * 2];
             }
             if (lg.field_d == null) {
               lg.field_d = new int[2 * (param0 + param1)];
@@ -217,8 +217,8 @@ class vd extends oh {
           }
         } else {
           re.field_d = new int[param1 * 2];
-          if (null == kf.field_f) {
-            kf.field_f = new int[param1 * 2];
+          if (null == GameApplet.field_f) {
+            GameApplet.field_f = new int[param1 * 2];
             if (null == fb.field_zb ||
               !(param1 <= fb.field_zb.length)) {
               fb.field_zb = new int[param1 * 2];
@@ -227,13 +227,13 @@ class vd extends oh {
               !(param1 <= aj.field_d.length)) {
               aj.field_d = new int[2 * param1];
             }
-            if (f.field_y == null ||
-              !(param1 <= f.field_y.length)) {
-              f.field_y = new int[2 * param1];
+            if (WidgetContainer.field_y == null ||
+              !(param1 <= WidgetContainer.field_y.length)) {
+              WidgetContainer.field_y = new int[2 * param1];
             }
-            if (null == dc.field_c ||
-              !(dc.field_c.length >= param1)) {
-              dc.field_c = new int[param1 * 2];
+            if (null == GameState.field_c ||
+              !(GameState.field_c.length >= param1)) {
+              GameState.field_c = new int[param1 * 2];
             }
             if (lg.field_d == null ||
               !(param1 + param0 <= lg.field_d.length)) {
@@ -244,8 +244,8 @@ class vd extends oh {
               aq.field_p = new boolean[2 * param1];
             }
           } else {
-            if (param1 > kf.field_f.length) {
-              kf.field_f = new int[param1 * 2];
+            if (param1 > GameApplet.field_f.length) {
+              GameApplet.field_f = new int[param1 * 2];
               if (null == fb.field_zb ||
                 !(param1 <= fb.field_zb.length)) {
                 fb.field_zb = new int[param1 * 2];
@@ -254,13 +254,13 @@ class vd extends oh {
                 !(param1 <= aj.field_d.length)) {
                 aj.field_d = new int[2 * param1];
               }
-              if (f.field_y == null ||
-                !(param1 <= f.field_y.length)) {
-                f.field_y = new int[2 * param1];
+              if (WidgetContainer.field_y == null ||
+                !(param1 <= WidgetContainer.field_y.length)) {
+                WidgetContainer.field_y = new int[2 * param1];
               }
-              if (null == dc.field_c ||
-                !(dc.field_c.length >= param1)) {
-                dc.field_c = new int[param1 * 2];
+              if (null == GameState.field_c ||
+                !(GameState.field_c.length >= param1)) {
+                GameState.field_c = new int[param1 * 2];
               }
               if (lg.field_d == null ||
                 !(param1 + param0 <= lg.field_d.length)) {
@@ -279,13 +279,13 @@ class vd extends oh {
                 !(param1 <= aj.field_d.length)) {
                 aj.field_d = new int[2 * param1];
               }
-              if (f.field_y == null ||
-                !(param1 <= f.field_y.length)) {
-                f.field_y = new int[2 * param1];
+              if (WidgetContainer.field_y == null ||
+                !(param1 <= WidgetContainer.field_y.length)) {
+                WidgetContainer.field_y = new int[2 * param1];
               }
-              if (null == dc.field_c ||
-                !(dc.field_c.length >= param1)) {
-                dc.field_c = new int[param1 * 2];
+              if (null == GameState.field_c ||
+                !(GameState.field_c.length >= param1)) {
+                GameState.field_c = new int[param1 * 2];
               }
               if (lg.field_d == null) {
                 lg.field_d = new int[2 * (param0 + param1)];
@@ -353,7 +353,7 @@ class vd extends oh {
 
     void a(int param0, int param1, int param2) {
         if (param1 != 0) {
-          this.field_l = (pf) null;
+          this.field_l = (IntrusiveDeque) null;
         }
     }
 
@@ -395,11 +395,11 @@ class vd extends oh {
           var1 = js.field_f;
           while (bk.a((byte) -50)) {
             var1.h(8, 255);
-            fieldTemp$0 = var1.field_j + 1;
-            var1.field_j = var1.field_j + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             hs.a(var1, (byte) -128);
-            js.field_f.b(-var2 + var1.field_j, (byte) 118);
+            js.field_f.b(-var2 + var1.position, (byte) 118);
           }
           if (param0 != 2147483647) {
             var4 = (bc) null;
@@ -454,7 +454,7 @@ class vd extends oh {
         this.field_p = true;
         this.field_s = true;
         this.field_m = param2;
-        this.field_l = new pf();
+        this.field_l = new IntrusiveDeque();
     }
 
     void b(int param0, int param1, int param2) {

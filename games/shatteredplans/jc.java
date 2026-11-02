@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jc extends df {
+abstract class jc extends DualLinkNode {
     static int field_o;
     static String field_s;
     static int field_p;
@@ -52,7 +52,7 @@ abstract class jc extends df {
             stackIn_4_0 = mj.field_Rb;
             return stackIn_4_0;
           }
-          var3 = oh.c((byte) -90);
+          var3 = IntrusiveNode.c((byte) -90);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5.a((byte) 80, var2)) {
@@ -112,28 +112,28 @@ abstract class jc extends df {
         return false;
     }
 
-    final static void a(int param0, bi param1) {
+    final static void a(int param0, Sprite param1) {
         ra.a(-117);
-        pc.field_n = new bi(128, 128);
+        pc.field_n = new Sprite(128, 128);
         pc.field_n.e();
         if (param0 <= 12) {
           return;
         }
         try {
           param1.f(0, 0);
-          ks.field_h = new bi(256, 256);
+          ks.field_h = new Sprite(256, 256);
           ks.field_h.e();
           pc.field_n.b(0, 0, 256, 256);
           gf.b(3, 3, 0, 0, 256, 256);
-          lq.field_o = new bi(32, 32);
+          lq.field_o = new Sprite(32, 32);
           lq.field_o.e();
           pc.field_n.g(0, 0);
-          n.field_k = new bi(256, 256);
+          n.field_k = new Sprite(256, 256);
           n.field_k.e();
           pc.field_n.f(64, 64);
           gf.b(12, 12, 0, 0, 256, 256);
-          ed.field_b = new bi(64, 64);
-          ed.field_b.e();
+          MouseInputHandler.field_b = new Sprite(64, 64);
+          MouseInputHandler.field_b.e();
           lq.field_o.f(16, 16);
           gf.b(3, 3, 0, 0, 64, 64);
           cg.i(0);

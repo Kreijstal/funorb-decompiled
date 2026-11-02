@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class n extends oh {
+final class n extends IntrusiveNode {
     int field_i;
     static wh field_h;
     static double field_p;
     static String field_q;
     static String field_m;
     static String field_l;
-    static bi field_k;
+    static Sprite field_k;
     static qr field_o;
     static String field_j;
     static qr[] field_n;
@@ -28,7 +28,7 @@ final class n extends oh {
         field_j = null;
     }
 
-    n(fs param0, fs param1, String param2) {
+    n(Player param0, Player param1, String param2) {
         try {
           this.field_i = 0;
         } catch (RuntimeException runtimeException) {

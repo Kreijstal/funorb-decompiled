@@ -38,8 +38,8 @@ final class ue {
             if (param3 >= -75) {
               return;
             }
-            if (qb.field_b.startsWith("win") &&
-              af.b(param2, -1495)) {
+            if (PlatformTaskDispatcher.field_b.startsWith("win") &&
+              DelegatingCanvas.b(param2, -1495)) {
               return;
             }
             try {
@@ -48,7 +48,7 @@ final class ue {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              jq.a(-29901, (Throwable) null, "MGR1: " + param2);
+              GameKeyHandler.a(-29901, (Throwable) null, "MGR1: " + param2);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

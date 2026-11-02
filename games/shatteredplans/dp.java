@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dp extends df {
+final class dp extends DualLinkNode {
     static int field_u;
     private int[] field_w;
     private String[] field_y;
-    static bi field_s;
+    static Sprite field_s;
     int[] field_o;
     private int[][] field_q;
     static int field_v;
@@ -83,7 +83,7 @@ final class dp extends df {
         }
     }
 
-    final void a(ob param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -117,7 +117,7 @@ final class dp extends df {
         }
     }
 
-    private final void a(int param0, int param1, ob param2) {
+    private final void a(int param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_21_0 = null;

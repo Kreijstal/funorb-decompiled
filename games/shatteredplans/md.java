@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class md extends vg {
+final class md extends UiWidget {
     static String field_I;
     static boolean field_B;
     private int field_E;
-    private bi field_S;
-    private bi field_R;
+    private Sprite field_S;
+    private Sprite field_R;
     boolean field_L;
     private int field_P;
     static String field_G;
     static String field_D;
     private int field_O;
-    private bi field_N;
+    private Sprite field_N;
     static int field_M;
     static String field_K;
-    private bi[] field_z;
+    private Sprite[] field_z;
     private int field_A;
     static boolean field_Q;
     static int[] field_J;
@@ -23,7 +23,7 @@ final class md extends vg {
     private int field_H;
     private int field_F;
 
-    private final bi a(int param0, byte param1, int param2) {
+    private final Sprite a(int param0, byte param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -32,7 +32,7 @@ final class md extends vg {
         int var12 = 0;
         int var13 = 0;
         int var14 = ShatteredPlansClient.field_F ? 1 : 0;
-        bi var15 = new bi(2 * this.field_H, this.field_n);
+        Sprite var15 = new Sprite(2 * this.field_H, this.field_n);
         int var5 = -87 % ((param1 - 33) / 61);
         int var9Lifetime1;
         int var10Lifetime1;
@@ -54,18 +54,18 @@ final class md extends vg {
           gf.f(var8 + this.field_H, var7, this.field_H, var13Lifetime1);
           gf.f(-this.field_H + var8, var7, this.field_H, var13Lifetime1);
         }
-        ln.f((byte) 111);
+        Star.f((byte) 111);
         return var15;
     }
 
     private final void a(int param0) {
-        this.field_z = new bi[]{this.a(this.field_E, (byte) 98, this.field_F), this.a(this.field_A, (byte) 124, this.field_O)};
+        this.field_z = new Sprite[]{this.a(this.field_E, (byte) 98, this.field_F), this.a(this.field_A, (byte) 124, this.field_O)};
         if (param0 != -907398527) {
           md.a((byte) 86, -76, 69);
         }
         this.field_R = this.h(61);
         this.field_N = this.field_R.c();
-        this.field_S = new bi(this.field_n >> 1, this.field_n);
+        this.field_S = new Sprite(this.field_n >> 1, this.field_n);
     }
 
     final static void a(int param0, String param1, int param2, String param3, String param4, int param5) {
@@ -124,7 +124,7 @@ final class md extends vg {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, 8355711 & param6 >> 1);
     }
 
-    private final void a(bi param0, int param1, int param2, int param3) {
+    private final void a(Sprite param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -137,20 +137,20 @@ final class md extends vg {
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param3 != -1) {
-            this.field_S = (bi) null;
+            this.field_S = (Sprite) null;
           }
           var5_int = param2 + this.field_x;
-          ke.a(-6187, var5_int - this.field_R.field_z, this.field_n + param1, param1, param2 + this.field_R.field_z);
+          BufferedSocket.a(-6187, var5_int - this.field_R.field_z, this.field_n + param1, param1, param2 + this.field_R.field_z);
           for (var6 = -this.field_P + param2; var5_int > var6; var6 = var6 + param0.field_z) {
             param0.f(var6, param1);
           }
-          ln.f((byte) -64);
+          Star.f((byte) -64);
           if (gf.field_i <= param2 + this.field_R.field_z) {
             aq.a((byte) -90, this.field_S);
             param0.f(-this.field_P, 0);
             param0.f(-this.field_P + this.field_H * 2, 0);
             this.field_N.e(0, 0);
-            ln.f((byte) -91);
+            Star.f((byte) -91);
             this.field_S.f(param2, param1);
           }
           if (gf.field_l >= -this.field_R.field_z + var5_int) {
@@ -160,7 +160,7 @@ final class md extends vg {
             param0.f(-var7, 0);
             param0.f(this.field_H * 2 - var7, 0);
             this.field_R.e(0, 0);
-            ln.f((byte) 111);
+            Star.f((byte) 111);
             this.field_S.f(-this.field_R.field_z + var5_int, param1);
             return;
           }
@@ -179,7 +179,7 @@ final class md extends vg {
         }
     }
 
-    final void a(int param0, int param1, vg param2, byte param3) {
+    final void a(int param0, int param1, UiWidget param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -215,54 +215,54 @@ final class md extends vg {
           return;
         }
         if (param1 != -11857) {
-          vg var7 = (vg) null;
-          this.a(-111, -4, (vg) null, (byte) -84);
+          UiWidget var7 = (UiWidget) null;
+          this.a(-111, -4, (UiWidget) null, (byte) -84);
         }
         int var5 = param3 + this.field_m;
         int var6 = this.field_q + param2;
         this.a(this.field_z[0], var6, var5, -1);
         if (this.field_y < 65536) {
-          ke.a(-6187, var5 + this.field_x, var6 + this.field_n, var6, var5 + (this.field_y * this.field_x >> 16));
+          BufferedSocket.a(-6187, var5 + this.field_x, var6 + this.field_n, var6, var5 + (this.field_y * this.field_x >> 16));
           this.a(this.field_z[1], var6, var5, -1);
-          ln.f((byte) -78);
+          Star.f((byte) -78);
         }
     }
 
-    final static bi i(int param0) {
+    final static Sprite i(int param0) {
         int var2 = 0;
         int var1 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1Lifetime1;
-        ln.field_F = new bi(182 - pf.field_a[0].field_z * 3 / 4, rs.field_Cb.field_J);
+        Star.field_F = new Sprite(182 - IntrusiveDeque.field_a[0].field_z * 3 / 4, rs.field_Cb.field_J);
         ra.a(param0 - 106);
-        ln.field_F.e();
-        for (var1 = 1; -1 + ln.field_F.field_w > var1; var1++) {
-          var2 = (-var1 + ln.field_F.field_w / 2) * (ln.field_F.field_w / 2 - var1);
-          gf.f(0, var1, ln.field_F.field_z, 328965 * (ln.field_F.field_w / 2 * (ln.field_F.field_w / 2) - var2));
+        Star.field_F.e();
+        for (var1 = 1; -1 + Star.field_F.field_w > var1; var1++) {
+          var2 = (-var1 + Star.field_F.field_w / 2) * (Star.field_F.field_w / 2 - var1);
+          gf.f(0, var1, Star.field_F.field_z, 328965 * (Star.field_F.field_w / 2 * (Star.field_F.field_w / 2) - var2));
         }
-        gf.f(param0, 0, ln.field_F.field_z, 1052688);
-        gf.f(0, -1 + ln.field_F.field_w, ln.field_F.field_z, 1052688);
-        for (var1Lifetime1 = 0; var1Lifetime1 < ln.field_F.field_w; var1Lifetime1++) {
-          gf.a(-1 + ln.field_F.field_z, var1Lifetime1, ui.a(1052688, ln.field_F.field_B[-1 + (var1Lifetime1 + 1) * ln.field_F.field_z], -114, 128));
+        gf.f(param0, 0, Star.field_F.field_z, 1052688);
+        gf.f(0, -1 + Star.field_F.field_w, Star.field_F.field_z, 1052688);
+        for (var1Lifetime1 = 0; var1Lifetime1 < Star.field_F.field_w; var1Lifetime1++) {
+          gf.a(-1 + Star.field_F.field_z, var1Lifetime1, ui.a(1052688, Star.field_F.field_B[-1 + (var1Lifetime1 + 1) * Star.field_F.field_z], -114, 128));
         }
-        gf.a(ln.field_F.field_z - 2, 1, ui.a(1052688, ln.field_F.field_B[ln.field_F.field_z * 2 - 2], -83, 128));
-        gf.a(ln.field_F.field_z - 3, 1, ui.a(1052688, ln.field_F.field_B[-3 + ln.field_F.field_z * 2], -78, 192));
-        gf.a(-2 + ln.field_F.field_z, 2, ui.a(1052688, ln.field_F.field_B[-2 + ln.field_F.field_z * 3], -110, 192));
-        gf.a(ln.field_F.field_z - 2, ln.field_F.field_w - 2, ui.a(1052688, ln.field_F.field_B[ln.field_F.field_z * (ln.field_F.field_w - 1) - 2], param0 - 117, 128));
-        gf.a(-3 + ln.field_F.field_z, -2 + ln.field_F.field_w, ui.a(1052688, ln.field_F.field_B[-3 + (-1 + ln.field_F.field_w) * ln.field_F.field_z], -125, 192));
-        gf.a(-2 + ln.field_F.field_z, -3 + ln.field_F.field_w, ui.a(1052688, ln.field_F.field_B[-2 + ln.field_F.field_z * (-2 + ln.field_F.field_w)], -111, 192));
+        gf.a(Star.field_F.field_z - 2, 1, ui.a(1052688, Star.field_F.field_B[Star.field_F.field_z * 2 - 2], -83, 128));
+        gf.a(Star.field_F.field_z - 3, 1, ui.a(1052688, Star.field_F.field_B[-3 + Star.field_F.field_z * 2], -78, 192));
+        gf.a(-2 + Star.field_F.field_z, 2, ui.a(1052688, Star.field_F.field_B[-2 + Star.field_F.field_z * 3], -110, 192));
+        gf.a(Star.field_F.field_z - 2, Star.field_F.field_w - 2, ui.a(1052688, Star.field_F.field_B[Star.field_F.field_z * (Star.field_F.field_w - 1) - 2], param0 - 117, 128));
+        gf.a(-3 + Star.field_F.field_z, -2 + Star.field_F.field_w, ui.a(1052688, Star.field_F.field_B[-3 + (-1 + Star.field_F.field_w) * Star.field_F.field_z], -125, 192));
+        gf.a(-2 + Star.field_F.field_z, -3 + Star.field_F.field_w, ui.a(1052688, Star.field_F.field_B[-2 + Star.field_F.field_z * (-2 + Star.field_F.field_w)], -111, 192));
         cg.i(param0 + 0);
-        return ln.field_F;
+        return Star.field_F;
     }
 
-    private final bi h(int param0) {
+    private final Sprite h(int param0) {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
         int var9 = 0;
         int var10 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = this.field_n >> 1;
-        bi var3 = new bi(var2, this.field_n);
+        Sprite var3 = new Sprite(var2, this.field_n);
         int var4 = 44 / ((param0 + 16) / 62);
         aq.a((byte) -50, var3);
         for (var5 = 0; this.field_n > var5; var5++) {
@@ -276,7 +276,7 @@ final class md extends vg {
             gf.a(var6, var5, var9 << 8 | var9 | var9 << 16);
           }
         }
-        ln.f((byte) 110);
+        Star.f((byte) 110);
         return var3;
     }
 

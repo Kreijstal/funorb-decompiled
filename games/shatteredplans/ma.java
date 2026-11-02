@@ -4,15 +4,15 @@
 final class ma extends ka {
     static String field_q;
     static String[][] field_s;
-    static bi field_r;
+    static Sprite field_r;
     static int field_p;
 
-    final int c(ln param0, int param1) {
+    final int c(Star param0, int param1) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ln[] var4 = null;
-        ln var6 = null;
+        Star[] var4 = null;
+        Star var6 = null;
         int var7 = 0;
         int stackIn_9_0 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -53,7 +53,7 @@ final class ma extends ka {
           return;
         }
         if (oq.field_j == 84) {
-          fl.a(0, "enter");
+          NodeHashTableIterator.a(0, "enter");
           return;
         }
     }
@@ -87,10 +87,10 @@ final class ma extends ka {
         }
     }
 
-    final int d(ln param0, int param1) {
+    final int d(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        ln var4 = null;
+        Star var4 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -98,8 +98,8 @@ final class ma extends ka {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 2) {
-            var4 = (ln) null;
-            this.a((byte) -71, (ln) null);
+            var4 = (Star) null;
+            this.a((byte) -71, (Star) null);
           }
           var3_int = this.a(-5, param0) + (param0.field_x >> 1);
           stackIn_5_0 = (var3_int == 0) ? 1 : var3_int;
@@ -118,7 +118,7 @@ final class ma extends ka {
         }
     }
 
-    ma(dc param0, fs param1, mn param2) {
+    ma(GameState param0, Player param1, mn param2) {
         super(param0, param1, param2, 7);
     }
 
@@ -127,11 +127,11 @@ final class ma extends ka {
         field_q = null;
         field_s = (String[][]) null;
         if (param0 <= 3) {
-          field_r = (bi) null;
+          field_r = (Sprite) null;
         }
     }
 
-    final int a(byte param0, ln param1) {
+    final int a(byte param0, Star param1) {
         int var8 = 0;
         int stackIn_28_0 = 0;
         RuntimeException stackIn_31_0 = null;
@@ -140,17 +140,17 @@ final class ma extends ka {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ln[] var4 = null;
+        Star[] var4 = null;
         int var5 = 0;
-        ln[] var7 = null;
-        ln var9 = null;
+        Star[] var7 = null;
+        Star var9 = null;
         int var10 = 0;
-        ln var11 = null;
-        ln[] var12 = null;
-        ln var13 = null;
-        ln var14 = null;
-        fs[] var15 = null;
-        fs var16 = null;
+        Star var11 = null;
+        Star[] var12 = null;
+        Star var13 = null;
+        Star var14 = null;
+        Player[] var15 = null;
+        Player var16 = null;
         int var5Lifetime1;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -169,8 +169,8 @@ final class ma extends ka {
           var15 = this.field_g.field_v;
           var5Lifetime1 = 0;
           if (param0 >= -14) {
-            var11 = (ln) null;
-            this.d((ln) null, 93);
+            var11 = (Star) null;
+            this.d((Star) null, 93);
           }
           while (var5Lifetime1 < var15.length) {
             var16 = var15[var5Lifetime1];
@@ -221,7 +221,7 @@ final class ma extends ka {
         return -10 + param0;
     }
 
-    final int b(byte param0, ln param1) {
+    final int b(byte param0, Star param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;

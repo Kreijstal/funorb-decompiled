@@ -3,7 +3,7 @@
  */
 final class kr extends Exception {
     static boolean field_b;
-    static bi field_d;
+    static Sprite field_d;
     static int[] field_e;
     static String field_c;
     static v field_a;
@@ -20,7 +20,7 @@ final class kr extends Exception {
         field_c = null;
     }
 
-    final static void a(byte param0, ln param1) {
+    final static void a(byte param0, Star param1) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -34,13 +34,13 @@ final class kr extends Exception {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        pf var11 = null;
+        IntrusiveDeque var11 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1.field_T.g(112)) {
             return;
           }
-          var11 = new pf();
+          var11 = new IntrusiveDeque();
           param1.field_T.a((byte) -90, var11);
           var4 = 65 / ((param0 + 1) / 60);
           param1.field_T.a((byte) -113, var11.h(88));
@@ -529,13 +529,13 @@ final class kr extends Exception {
     }
 
     final static ik b(byte param0) {
-        if (ed.field_c.g(69)) {
+        if (MouseInputHandler.field_c.g(69)) {
           return new ik();
         }
         if (param0 != -103) {
           kr.b((byte) -5);
         }
-        return (ik) (ed.field_c.h(44));
+        return (ik) (MouseInputHandler.field_c.h(44));
     }
 
     static {

@@ -8,7 +8,7 @@ final class sp {
     private int field_p;
     iq field_a;
     static int field_r;
-    static bi[][] field_m;
+    static Sprite[][] field_m;
     iq field_o;
     int field_d;
     int field_l;
@@ -26,21 +26,21 @@ final class sp {
     final void a(nq param0, boolean param1) {
         o var17 = null;
         gn var4 = null;
-        bi[] var5 = null;
-        om var16 = null;
-        om var18 = null;
+        Sprite[] var5 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         gn var6 = null;
         gn var7 = null;
         i discarded$0 = null;
         tp discarded$1 = null;
         gn var8 = null;
-        bi[] var9 = null;
-        bi[] var10 = null;
-        bi dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         gn var11 = null;
         gn var12 = null;
-        bi var13 = null;
+        Sprite var13 = null;
         gn var14 = null;
         gn var19 = null;
         int var15 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -66,13 +66,13 @@ final class sp {
           var4.a(127, 0).a((byte) 124, 15658734).a(oa.a(8947848, !param1 ? true : false, 10066329, 7829367), -73);
           var4.a(-101, 1).a(oa.a(11184810, false, 10066329, 13421772), -101);
           var4.a(-116, 3).a(oa.a(8947848, !param1 ? true : false, 7829367, 10066329), -108).a(1, (byte) 95).a(1, false);
-          var5 = new bi[9];
-          var16 = new om(32, 32);
+          var5 = new Sprite[9];
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_B.length > var7_int; var7_int++) {
             var16.field_B[var7_int] = 1077952576;
           }
-          var5[4] = (bi) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a(98, 4).a(true, -28639).a(var5, -108);
           var4.a(22, 5).a(ek.a(0, 0, 65793, 0, (byte) -92), -91).a(true, -28639).a((byte) 75, -1);
           this.field_q = (iq) ((Object) var4);
@@ -80,8 +80,8 @@ final class sp {
           var6.field_r = 0;
           var7 = new gn(var4, true);
           var7.field_r = 0;
-          var7.a((byte) 8, hi.a(8947848, (byte) -16));
-          var7.a(82, 1).a(hi.a(11184810, (byte) -16), -93).a((byte) 71, 2236962);
+          var7.a((byte) 8, TaskAi.a(8947848, (byte) -16));
+          var7.a(82, 1).a(TaskAi.a(11184810, (byte) -16), -93).a((byte) 71, 2236962);
           this.field_a = (iq) ((Object) new tf(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new i(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new tp(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
@@ -90,10 +90,10 @@ final class sp {
           var8.a(-109, 0).a(oa.a(15658734, false, 7829367, 10066329), -106).a((byte) 64, 1118481).a(-1, 1);
           var8.a(35, 4).a(true, -28639).a(var5, -72);
           this.field_f = (iq) ((Object) var8);
-          var9 = new bi[9];
-          var9[4] = new bi(2, 1);
-          var10 = new bi[9];
-          var10[4] = new bi(1, 2);
+          var9 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10 = new Sprite[9];
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_B = new int[]{6710886, 7829367};
           var10[4].field_B = new int[]{6710886, 7829367};
@@ -101,7 +101,7 @@ final class sp {
           var12 = new gn();
           var11.a(var9, 0, 3);
           var12.a(var10, 0, 3);
-          var13 = new bi(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new gn(var4, true);
           var14.a(-12, var13.g());
@@ -124,7 +124,7 @@ final class sp {
         if (param0 != 3) {
           return;
         }
-        field_m = (bi[][]) null;
+        field_m = (Sprite[][]) null;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -149,17 +149,17 @@ final class sp {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        ln[] var3 = null;
+        Star[] var3 = null;
         mg var3_ref = null;
         qm var3_ref2 = null;
         int var4 = 0;
         int var6 = 0;
-        ln[] var7 = null;
-        ln[] var8 = null;
+        Star[] var7 = null;
+        Star[] var8 = null;
         int var9 = 0;
-        ln var10 = null;
-        ln var11 = null;
-        ln[] var3Lifetime1;
+        Star var10 = null;
+        Star var11 = null;
+        Star[] var3Lifetime1;
         int var4Lifetime1;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {

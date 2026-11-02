@@ -3,7 +3,7 @@
  */
 final class tc extends qs {
     static kh field_G;
-    private pf field_H;
+    private IntrusiveDeque field_H;
     static String field_D;
     static int field_C;
     static String[] field_E;
@@ -12,7 +12,7 @@ final class tc extends qs {
 
     public tc() {
         super(0, 0, ep.field_a, ec.field_q, (iq) null, (ko) null);
-        this.field_H = new pf();
+        this.field_H = new IntrusiveDeque();
     }
 
     final void k(int param0) {
@@ -20,7 +20,7 @@ final class tc extends qs {
         if (param0 <= 77) {
           return;
         }
-        on var2 = new on(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         w var3 = (w) (var2.a(2));
         while (var3 != null) {
           var3.field_E = false;
@@ -31,7 +31,7 @@ final class tc extends qs {
 
     final void i(int param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        on var2 = new on(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         w var3 = (w) (var2.a(2));
         while (var3 != null) {
           if (var3.a((byte) 92)) {
@@ -40,16 +40,16 @@ final class tc extends qs {
           var3 = (w) (var2.a((byte) 125));
         }
         int var4 = 18 % ((46 - param0) / 54);
-        this.field_z = (vg) ((Object) this.g((byte) 115));
+        this.field_z = (UiWidget) ((Object) this.g((byte) 115));
     }
 
     final w g(byte param0) {
-        on var2;
+        IntrusiveDequeCursor var2;
         w var3;
         int var4;
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = new on(this.field_H);
+        var2 = new IntrusiveDequeCursor(this.field_H);
         var3 = (w) (var2.a(2));
         var4 = 98 % ((param0 - 64) / 35);
         while (var3 != null) {
@@ -122,17 +122,17 @@ final class tc extends qs {
           tc.e(false);
         }
         if (null != this.field_p) {
-          this.field_p.a((vg) (this), param3, true, param2, (byte) 12);
+          this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
         }
-        on var5 = new on(this.field_H);
-        vg var6 = (vg) (var5.c(105));
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_H);
+        UiWidget var6 = (UiWidget) (var5.c(105));
         while (var6 != null) {
           var6.a(param0, -11857, this.field_q + param2, param3 + this.field_m);
-          var6 = (vg) (var5.b((byte) -124));
+          var6 = (UiWidget) (var5.b((byte) -124));
         }
     }
 
-    final void a(boolean param0, vg param1) {
+    final void a(boolean param0, UiWidget param1) {
         w var3 = null;
         try {
           if (!(param1 instanceof w)) {
@@ -141,7 +141,7 @@ final class tc extends qs {
           var3 = (w) (param1);
           this.field_H.a(var3, 0);
           var3.field_E = param0 ? true : false;
-          var3.a((byte) 126, (vg) (this));
+          var3.a((byte) 126, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "tc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -149,7 +149,7 @@ final class tc extends qs {
 
     final void h(byte param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        on var2 = new on(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         int var4 = 71 % ((param0 + 34) / 44);
         w var3 = (w) (var2.a(2));
         while (var3 != null) {
@@ -441,12 +441,12 @@ final class tc extends qs {
         }
     }
 
-    final vg a(int param0) {
-        on var2;
+    final UiWidget a(int param0) {
+        IntrusiveDequeCursor var2;
         w var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = new on(this.field_H);
+        var2 = new IntrusiveDequeCursor(this.field_H);
         var3 = (w) (var2.a(param0));
         while (var3 != null) {
           if (var3.field_E) {
@@ -458,17 +458,17 @@ final class tc extends qs {
     }
 
     final static void a(boolean param0, boolean param1) {
-        n.field_h = !param1 ? new wh(jo.field_c, so.field_t) : new wh(ve.field_yb, oh.field_c);
+        n.field_h = !param1 ? new wh(jo.field_c, so.field_t) : new wh(ve.field_yb, IntrusiveNode.field_c);
         am.field_xb = new qr(0L, (qr) null);
         am.field_xb.a(4, n.field_h.field_d);
         am.field_xb.a(4, i.field_g);
-        ed.field_d = new qr(0L, ho.field_j);
+        MouseInputHandler.field_d = new qr(0L, ho.field_j);
         if (!param0) {
           tc.a('x', 117);
         }
         jo.field_a = new qr(0L, (qr) null);
-        ed.field_d.a(4, hl.field_K);
-        ed.field_d.a(4, jo.field_a);
+        MouseInputHandler.field_d.a(4, hl.field_K);
+        MouseInputHandler.field_d.a(4, jo.field_a);
         jo.field_a.a(4, lp.field_v);
         jo.field_a.a(4, oo.field_c);
         en.a(15471, param1);

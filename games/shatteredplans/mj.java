@@ -9,7 +9,7 @@ final class mj extends qr {
     qr field_xb;
     int field_Wb;
     boolean field_Vb;
-    static bi[] field_Nb;
+    static Sprite[] field_Nb;
     int field_Gb;
     qr field_Ob;
     qr field_Mb;
@@ -21,12 +21,12 @@ final class mj extends qr {
     qr field_Jb;
     String field_Db;
     static long field_Pb;
-    static bi field_Kb;
+    static Sprite field_Kb;
     qr field_Ab;
     static bg field_Rb;
     static byte[][] field_Bb;
     long field_Ib;
-    static sd field_yb;
+    static Territory field_yb;
     static io field_Sb;
 
     final static void a(int param0, boolean param1) {
@@ -136,7 +136,7 @@ final class mj extends qr {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, bi[] param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;

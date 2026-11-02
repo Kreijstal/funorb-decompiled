@@ -169,13 +169,13 @@ final class lg extends IOException {
         }
     }
 
-    final static bi a(int param0, String param1) {
+    final static Sprite a(int param0, String param1) {
         th var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        bi var5 = null;
-        bi stackIn_1_0 = null;
+        Sprite var5 = null;
+        Sprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -184,7 +184,7 @@ final class lg extends IOException {
           var2 = mp.field_b;
           var3 = ((nq) ((Object) var2)).c(param1);
           var4 = ((nq) ((Object) var2)).field_J + ((nq) ((Object) var2)).field_q;
-          var5 = new bi(var3, var4);
+          var5 = new Sprite(var3, var4);
           bs.a(var5, 112);
           ((nq) ((Object) var2)).d(param1, 0, ((nq) ((Object) var2)).field_J, 16777215, -1);
           cg.i(param0);

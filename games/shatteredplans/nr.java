@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nr extends oh {
-    ln field_p;
-    ln[] field_j;
+final class nr extends IntrusiveNode {
+    Star field_p;
+    Star[] field_j;
     static fg field_m;
     static boolean[][] field_q;
-    static bi field_k;
+    static Sprite field_k;
     static String field_n;
     static String field_o;
     static String field_s;
     int[] field_i;
     static v field_h;
-    static bi[] field_r;
-    static qb field_l;
+    static Sprite[] field_r;
+    static PlatformTaskDispatcher field_l;
 
     public static void a(byte param0) {
         field_r = null;
@@ -40,7 +40,7 @@ final class nr extends oh {
         return (java.awt.Container) ((Object) kq.f((byte) 125));
     }
 
-    nr(ln param0, int param1) {
+    nr(Star param0, int param1) {
         try {
           this.field_j = null;
           this.field_p = param0;
@@ -49,7 +49,7 @@ final class nr extends oh {
         }
     }
 
-    nr(ln param0, int[] param1, ln[] param2) {
+    nr(Star param0, int[] param1, Star[] param2) {
         int var4_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ih {
-    static ob field_c;
+    static PacketBuffer field_c;
     static int field_d;
     static int field_b;
     static am field_g;
@@ -17,8 +17,8 @@ final class ih {
           var8 = js.field_f;
           sl var6 = var8;
           var8.h(param5, 255);
-          var8.field_j = var8.field_j + 1;
-          var7 = var8.field_j;
+          var8.position = var8.position + 1;
+          var7 = var8.position;
           var8.c(param3, (byte) -80);
           if (param3 == param1) {
             var8.a(param0, (byte) 0);
@@ -28,7 +28,7 @@ final class ih {
           } else {
             ee.a(var8, (byte) -87, param4);
           }
-          var8.b(-var7 + var8.field_j, (byte) 122);
+          var8.b(-var7 + var8.position, (byte) 122);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ih.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

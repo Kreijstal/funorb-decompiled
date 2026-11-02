@@ -4,11 +4,11 @@
 final class bd extends qk {
     static qr field_E;
     static boolean field_A;
-    static bi[] field_C;
+    static Sprite[] field_C;
     static String field_F;
-    static bi field_D;
+    static Sprite field_D;
     private int field_B;
-    static bi field_G;
+    static Sprite field_G;
 
     final void a(int param0) {
         int var2 = 0;

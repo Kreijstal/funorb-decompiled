@@ -124,7 +124,7 @@ final class kh extends qr {
             this.field_Bb.field_u = "|";
             if (!(5 > jd.field_i) ||
               !(bs.field_b < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
@@ -138,7 +138,7 @@ final class kh extends qr {
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = t.field_e;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;
@@ -393,7 +393,7 @@ final class kh extends qr {
         if (param0 != -67) {
           kh.a(false, false);
         }
-        ip.field_b = pr.a(param0 + 14341) + 15000L;
+        SecondaryNodeDequeIterator.field_b = pr.a(param0 + 14341) + 15000L;
         return gm.field_i == 11 ? true : false;
     }
 

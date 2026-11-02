@@ -3,8 +3,8 @@
  */
 final class ta {
     static qr field_d;
-    static pf field_b;
-    static bi field_a;
+    static IntrusiveDeque field_b;
+    static Sprite field_a;
     static String field_c;
     static String field_e;
 
@@ -79,7 +79,7 @@ final class ta {
           param0 = false;
         }
         di.a(false, param0);
-        if (f.field_C) {
+        if (WidgetContainer.field_C) {
           gf.h(n.field_h.field_d.field_hb, n.field_h.field_d.field_db, n.field_h.field_d.field_K, n.field_h.field_d.field_mb);
           n.field_h.field_d.b(param0, -68);
           ml.a((byte) 99, param0);
@@ -207,7 +207,7 @@ final class ta {
     }
 
     static {
-        field_b = new pf();
+        field_b = new IntrusiveDeque();
         field_e = "Percentage of battles won in friendly space.";
         field_c = "Join <%0>'s game";
     }

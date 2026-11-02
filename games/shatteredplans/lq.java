@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lq extends oh {
+final class lq extends IntrusiveNode {
     static volatile boolean field_q;
     int field_n;
     static String field_p;
@@ -12,7 +12,7 @@ final class lq extends oh {
     static nq field_k;
     int field_m;
     int field_i;
-    static bi field_o;
+    static Sprite field_o;
 
     public static void a(byte param0) {
         field_p = null;

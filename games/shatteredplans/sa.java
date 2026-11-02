@@ -8,7 +8,7 @@ final class sa {
     static String field_c;
     static Boolean field_d;
 
-    final static void a(int param0, int param1, byte param2, int param3, bi param4, int param5) {
+    final static void a(int param0, int param1, byte param2, int param3, Sprite param4, int param5) {
         int var13 = 0;
         int stackIn_9_0 = 0;
         RuntimeException stackIn_22_0 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj extends me {
+final class jj extends VictoryChecker {
     static qf field_l;
     static String field_o;
     static int field_m;
@@ -9,7 +9,7 @@ final class jj extends me {
     static boolean field_n;
     static int field_k;
 
-    final void a(byte param0, dc param1, kq param2) {
+    final void a(byte param0, GameState param1, kq param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -75,7 +75,7 @@ final class jj extends me {
         }
     }
 
-    final void a(int param0, ob param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           int var3_int = -114 / ((-72 - param0) / 45);
         } catch (RuntimeException runtimeException) {
@@ -107,20 +107,20 @@ final class jj extends me {
         return var1;
     }
 
-    jj(fs[] param0) {
+    jj(Player[] param0) {
         super(param0);
     }
 
-    final fs[] b(int param0) {
+    final Player[] b(int param0) {
         if (param0 != 0) {
-          ob var3 = (ob) null;
-          this.a((ob) null, (byte) -82);
-          return new fs[]{};
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((PacketBuffer) null, (byte) -82);
+          return new Player[]{};
         }
-        return new fs[]{};
+        return new Player[]{};
     }
 
-    final void a(ob param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           if (param1 != -109) {
             field_o = (String) null;

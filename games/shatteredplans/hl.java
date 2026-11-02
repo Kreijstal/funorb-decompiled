@@ -18,13 +18,13 @@ final class hl extends kg {
         return (param1 - 100) / 200;
     }
 
-    final static void a(pf param0, boolean param1) throws jn {
+    final static void a(IntrusiveDeque param0, boolean param1) throws jn {
         RuntimeException runtimeException = null;
         nc var3 = null;
         nc var4 = null;
         nc var5 = null;
         int var6 = 0;
-        pf var7 = null;
+        IntrusiveDeque var7 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -34,7 +34,7 @@ final class hl extends kg {
           if (!param1) {
             hl.a((byte) -92);
           }
-          var7 = new pf();
+          var7 = new IntrusiveDeque();
           var3 = (nc) (param0.h(72));
           var4 = var3;
           var7.a((byte) -113, var4);
@@ -114,7 +114,7 @@ final class hl extends kg {
         return (String) null;
     }
 
-    final boolean a(byte param0, vg param1) {
+    final boolean a(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -138,7 +138,7 @@ final class hl extends kg {
         }
     }
 
-    final void a(int param0, int param1, vg param2, byte param3) {
+    final void a(int param0, int param1, UiWidget param2, byte param3) {
         try {
           this.field_F = this.field_F + 1;
           super.a(param0, param1, param2, param3);
@@ -147,7 +147,7 @@ final class hl extends kg {
         }
     }
 
-    final static bi[] a(byte param0, int param1) {
+    final static Sprite[] a(byte param0, int param1) {
         int var5 = 0;
         double var6 = 0.0;
         double var8 = 0.0;
@@ -157,9 +157,9 @@ final class hl extends kg {
         int var14 = 0;
         int var15 = ShatteredPlansClient.field_F ? 1 : 0;
         ra.a(-107);
-        bi[] var16 = new bi[param1];
-        bi[] var2 = var16;
-        bi var3 = new bi(240, 120);
+        Sprite[] var16 = new Sprite[param1];
+        Sprite[] var2 = var16;
+        Sprite var3 = new Sprite(240, 120);
         int var4 = 0;
         if (param0 != 111) {
           hl.a((byte) 53);
@@ -176,7 +176,7 @@ final class hl extends kg {
             var14 = (int)(1920.0 / (3.0 + var10));
             e.field_e.b(e.field_e.field_o << 3, e.field_e.field_p << 3, var13, var14, 0, var12);
           }
-          var2[var4] = new bi(60, 30);
+          var2[var4] = new Sprite(60, 30);
           var16[var4].e();
           var3.g(0, 0);
           var4++;
@@ -192,9 +192,9 @@ final class hl extends kg {
         int var9;
         int var10;
         int var11;
-        bi var12;
-        bi var13;
-        bi var14;
+        Sprite var12;
+        Sprite var13;
+        Sprite var14;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         super.a(param0, param1 + 0, param2, param3);
         if (param0 != 0) {
@@ -229,11 +229,11 @@ final class hl extends kg {
           aq.a((byte) 90, gg.field_e);
           gf.b();
         } else {
-          gg.field_e = new bi(var9, var10);
+          gg.field_e = new Sprite(var9, var10);
           aq.a((byte) -107, gg.field_e);
         }
         var14.b(112, 144, var14.field_o << 4, var14.field_p << 4, -this.field_F << 10, 4096);
-        ln.f((byte) -94);
+        Star.f((byte) -94);
         gg.field_e.c(var5 - var14.field_o, -var14.field_p + var6, 256);
         return;
     }

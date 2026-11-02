@@ -7,7 +7,7 @@ final class qc extends ar {
     static String field_s;
     static qf field_w;
     static String field_t;
-    private ke field_v;
+    private BufferedSocket field_v;
     static String field_u;
 
     final static void a(int param0, int param1, int[] param2, int param3) {
@@ -100,19 +100,19 @@ final class qc extends ar {
             this.field_v.a(false);
             var2 = (tk) (this.field_h.c(-128));
             while (var2 != null) {
-              this.field_c.field_j = 0;
+              this.field_c.position = 0;
               this.field_c.c(1, (byte) -85);
               this.field_c.a(param0 + 1729379144, var2.field_l);
-              this.field_v.a(this.field_c.field_h.length, 0, this.field_c.field_h, -13976);
+              this.field_v.a(this.field_c.payload.length, 0, this.field_c.payload, -13976);
               this.field_j.a(var2, 32);
               var2 = (tk) (this.field_h.b(32));
             }
             var2Lifetime1 = (tk) (this.field_m.c(-128));
             while (var2Lifetime1 != null) {
-              this.field_c.field_j = 0;
+              this.field_c.position = 0;
               this.field_c.c(0, (byte) -109);
               this.field_c.a(param0 ^ 1729379144, var2Lifetime1.field_l);
-              this.field_v.a(this.field_c.field_h.length, 0, this.field_c.field_h, param0 - 13976);
+              this.field_v.a(this.field_c.payload.length, 0, this.field_c.payload, param0 - 13976);
               this.field_f.a(var2Lifetime1, 32);
               var2Lifetime1 = (tk) (this.field_m.b(32));
             }
@@ -132,26 +132,26 @@ final class qc extends ar {
                   var4 = 10;
                 }
                 if (var4 <= 0) {
-                  var5 = -this.field_l.field_w + this.field_l.field_D.field_h.length;
+                  var5 = -this.field_l.field_w + this.field_l.field_D.payload.length;
                   var6 = -this.field_l.field_A + 512;
-                  if (var6 > var5 - this.field_l.field_D.field_j) {
-                    var6 = var5 - this.field_l.field_D.field_j;
+                  if (var6 > var5 - this.field_l.field_D.position) {
+                    var6 = var5 - this.field_l.field_D.position;
                   }
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
-                  this.field_v.a(this.field_l.field_D.field_h, var6, this.field_l.field_D.field_j, (byte) 112);
+                  this.field_v.a(this.field_l.field_D.payload, var6, this.field_l.field_D.position, (byte) 112);
                   if (this.field_d != 0) {
                     var17 = 0;
                     var7 = var17;
                     while (var6 > var17) {
-                      this.field_l.field_D.field_h[this.field_l.field_D.field_j + var17] = (byte)nc.a((int) this.field_l.field_D.field_h[this.field_l.field_D.field_j + var17], (int) this.field_d);
+                      this.field_l.field_D.payload[this.field_l.field_D.position + var17] = (byte)nc.a((int) this.field_l.field_D.payload[this.field_l.field_D.position + var17], (int) this.field_d);
                       var17++;
                     }
                   }
                   this.field_l.field_A = this.field_l.field_A + var6;
-                  this.field_l.field_D.field_j = this.field_l.field_D.field_j + var6;
-                  if (var5 != this.field_l.field_D.field_j) {
+                  this.field_l.field_D.position = this.field_l.field_D.position + var6;
+                  if (var5 != this.field_l.field_D.position) {
                     if (this.field_l.field_A == 512) {
                       this.field_l.field_A = 0;
                     }
@@ -161,30 +161,30 @@ final class qc extends ar {
                     this.field_l = null;
                   }
                 } else {
-                  var5 = var4 - this.field_q.field_j;
+                  var5 = var4 - this.field_q.position;
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_v.a(this.field_q.field_h, var5, this.field_q.field_j, (byte) -52);
+                  this.field_v.a(this.field_q.payload, var5, this.field_q.position, (byte) -52);
                   if (0 != this.field_d) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_q.field_h[this.field_q.field_j + var6] = (byte)nc.a((int) this.field_q.field_h[this.field_q.field_j + var6], (int) this.field_d);
+                      this.field_q.payload[this.field_q.position + var6] = (byte)nc.a((int) this.field_q.payload[this.field_q.position + var6], (int) this.field_d);
                     }
                   }
-                  this.field_q.field_j = this.field_q.field_j + var5;
-                  if (this.field_q.field_j >= var4) {
+                  this.field_q.position = this.field_q.position + var5;
+                  if (this.field_q.position >= var4) {
                     if (null != this.field_l) {
                       if (this.field_l.field_A != 0) {
                         throw new IOException();
                       }
-                      if (-1 != this.field_q.field_h[0]) {
+                      if (-1 != this.field_q.payload[0]) {
                         this.field_l = null;
                       } else {
-                        this.field_q.field_j = 0;
+                        this.field_q.position = 0;
                         this.field_l.field_A = 1;
                       }
                     } else {
-                      this.field_q.field_j = 0;
+                      this.field_q.position = 0;
                       var6 = this.field_q.j(-128);
                       var7 = this.field_q.a(16711680);
                       var8 = this.field_q.j(-65);
@@ -223,10 +223,10 @@ final class qc extends ar {
                       stackIn_60_0 = (var10 == 0) ? 5 : 9;
                       var15 = stackIn_60_0;
                       this.field_l = var14_ref;
-                      this.field_l.field_D = new ob(this.field_l.field_w + var9 + var15);
+                      this.field_l.field_D = new PacketBuffer(this.field_l.field_w + var9 + var15);
                       this.field_l.field_D.c(var10, (byte) -106);
                       this.field_l.field_D.e(11135, var9);
-                      this.field_q.field_j = 0;
+                      this.field_q.position = 0;
                       this.field_l.field_A = 10;
                     }
                   }
@@ -296,11 +296,11 @@ final class qc extends ar {
               }
               this.field_v = null;
             }
-            this.field_v = (ke) (param2);
+            this.field_v = (BufferedSocket) (param2);
             this.g(-20189);
             this.a(param1, 3);
             this.field_l = null;
-            this.field_q.field_j = 0;
+            this.field_q.position = 0;
             while (true) {
               var4_ref = (tk) (this.field_j.a(-44));
               if (var4_ref != null) {
@@ -319,11 +319,11 @@ final class qc extends ar {
             }
             if (0 != this.field_d) {
               try {
-                this.field_c.field_j = 0;
+                this.field_c.position = 0;
                 this.field_c.c(4, (byte) -86);
                 this.field_c.c((int) this.field_d, (byte) -88);
                 this.field_c.e(11135, 0);
-                this.field_v.a(this.field_c.field_h.length, 0, this.field_c.field_h, -13976);
+                this.field_v.a(this.field_c.payload.length, 0, this.field_c.payload, -13976);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -395,7 +395,7 @@ final class qc extends ar {
     private final void a(boolean param0, int param1) {
         try {
           IOException iOException = null;
-          ob stackIn_5_0 = null;
+          PacketBuffer stackIn_5_0 = null;
           int stackIn_6_1 = 0;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
@@ -403,19 +403,19 @@ final class qc extends ar {
             return;
           }
           try {
-            this.field_c.field_j = 0;
+            this.field_c.position = 0;
             stackIn_5_0 = this.field_c;
             if (param0) {
               stackIn_6_1 = 2;
             } else {
               stackIn_6_1 = 3;
             }
-            ((ob) (Object) stackIn_5_0).c(stackIn_6_1, (byte) -97);
+            ((PacketBuffer) (Object) stackIn_5_0).c(stackIn_6_1, (byte) -97);
             if (param1 != 3) {
               qc.f(88);
             }
             this.field_c.a(param1 + 1729379141, 0L);
-            this.field_v.a(this.field_c.field_h.length, 0, this.field_c.field_h, param1 - 13979);
+            this.field_v.a(this.field_c.payload.length, 0, this.field_c.payload, param1 - 13979);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -482,7 +482,7 @@ final class qc extends ar {
             return;
           }
           try {
-            this.field_c.field_j = 0;
+            this.field_c.position = 0;
             this.field_c.c(6, (byte) -59);
             this.field_c.a(true, 3);
             this.field_c.d(0, 255);
@@ -490,7 +490,7 @@ final class qc extends ar {
               var4 = (int[]) null;
               qc.a(88, -57, (int[]) null, 10);
             }
-            this.field_v.a(this.field_c.field_h.length, 0, this.field_c.field_h, -13976);
+            this.field_v.a(this.field_c.payload.length, 0, this.field_c.payload, -13976);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;

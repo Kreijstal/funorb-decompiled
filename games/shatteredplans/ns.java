@@ -116,7 +116,7 @@ class ns extends il implements bp {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, vg param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -197,10 +197,10 @@ class ns extends il implements bp {
                   this.b(var6, 110);
                   return;
                 }
-                var6.a((ko) (this), 126, ib.field_d);
+                var6.a((ko) (this), 126, MouseWheelInput.field_d);
               }
             } else {
-              var6.a(pf.field_f, (byte) 122, 8);
+              var6.a(IntrusiveDeque.field_f, (byte) 122, 8);
             }
           }
           this.b(var6, 110);

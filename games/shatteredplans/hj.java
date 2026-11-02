@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hj extends oh {
+final class hj extends IntrusiveNode {
     static gh field_n;
-    fs field_j;
-    ln field_i;
+    Player field_j;
+    Star field_i;
     static String field_m;
     int field_h;
     static int field_k;
@@ -19,7 +19,7 @@ final class hj extends oh {
         }
     }
 
-    hj(fs param0, ln param1, int param2) {
+    hj(Player param0, Star param1, int param2) {
         try {
           this.field_h = param2;
           this.field_j = param0;

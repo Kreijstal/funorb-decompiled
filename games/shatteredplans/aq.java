@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aq extends oh {
+final class aq extends IntrusiveNode {
     static String field_k;
-    static bi field_i;
+    static Sprite field_i;
     static String field_n;
     int field_l;
     int field_m;
@@ -21,20 +21,20 @@ final class aq extends oh {
           aq.a(-82);
         }
         if (param3) {
-          if (kf.field_f[param0] > kf.field_f[param2]) {
+          if (GameApplet.field_f[param0] > GameApplet.field_f[param2]) {
             return true;
           }
-          if (kf.field_f[param2] > kf.field_f[param0]) {
+          if (GameApplet.field_f[param2] > GameApplet.field_f[param0]) {
             return false;
           }
-          if (dc.field_c[param2] < dc.field_c[param0]) {
+          if (GameState.field_c[param2] < GameState.field_c[param0]) {
             return true;
           }
-          if (dc.field_c[param2] > dc.field_c[param0]) {
+          if (GameState.field_c[param2] > GameState.field_c[param0]) {
             return false;
           }
-          var4 = aj.field_d[param2] + fb.field_zb[param2] + f.field_y[param2];
-          var5 = f.field_y[param0] + fb.field_zb[param0] + aj.field_d[param0];
+          var4 = aj.field_d[param2] + fb.field_zb[param2] + WidgetContainer.field_y[param2];
+          var5 = WidgetContainer.field_y[param0] + fb.field_zb[param0] + aj.field_d[param0];
           if (var4 < var5) {
             return true;
           }
@@ -43,20 +43,20 @@ final class aq extends oh {
           }
           return !(param0 <= param2);
         }
-        if (dc.field_c[param0] > dc.field_c[param2]) {
+        if (GameState.field_c[param0] > GameState.field_c[param2]) {
           return true;
         }
-        if (dc.field_c[param0] < dc.field_c[param2]) {
+        if (GameState.field_c[param0] < GameState.field_c[param2]) {
           return false;
         }
-        if (kf.field_f[param0] > kf.field_f[param2]) {
+        if (GameApplet.field_f[param0] > GameApplet.field_f[param2]) {
           return true;
         }
-        if (kf.field_f[param2] > kf.field_f[param0]) {
+        if (GameApplet.field_f[param2] > GameApplet.field_f[param0]) {
           return false;
         }
-        var4Lifetime1 = aj.field_d[param2] + fb.field_zb[param2] + f.field_y[param2];
-        var5Lifetime1 = f.field_y[param0] + fb.field_zb[param0] + aj.field_d[param0];
+        var4Lifetime1 = aj.field_d[param2] + fb.field_zb[param2] + WidgetContainer.field_y[param2];
+        var5Lifetime1 = WidgetContainer.field_y[param0] + fb.field_zb[param0] + aj.field_d[param0];
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
         }
@@ -74,8 +74,8 @@ final class aq extends oh {
         field_p = null;
         field_k = null;
         if (param0 < 71) {
-          bi var2 = (bi) null;
-          aq.a((byte) 4, (bi) null);
+          Sprite var2 = (Sprite) null;
+          aq.a((byte) 4, (Sprite) null);
         }
     }
 
@@ -86,7 +86,7 @@ final class aq extends oh {
         return np.field_m;
     }
 
-    final static void a(byte param0, bi param1) {
+    final static void a(byte param0, Sprite param1) {
         try {
           int var2_int = -121 % ((29 - param0) / 51);
           wh.a(false);

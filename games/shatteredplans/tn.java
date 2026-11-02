@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tn extends oh {
+abstract class tn extends IntrusiveNode {
     int field_i;
     volatile boolean field_j;
     tn field_h;

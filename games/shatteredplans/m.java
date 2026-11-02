@@ -47,7 +47,7 @@ final class m extends mc {
         return false;
     }
 
-    final static void a(byte param0, fs[] param1, ob param2, int param3, pf param4, int param5, me param6, fs param7, l param8, boolean param9) {
+    final static void a(byte param0, Player[] param1, PacketBuffer param2, int param3, IntrusiveDeque param4, int param5, VictoryChecker param6, Player param7, l param8, boolean param9) {
         RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
         String stackIn_64_2 = null;
@@ -67,12 +67,12 @@ final class m extends mc {
         int var11 = 0;
         int var12_int = 0;
         cs var12 = null;
-        sd var12_ref = null;
+        Territory var12_ref = null;
         int var13 = 0;
         lo var13_ref_lo = null;
         int var14 = 0;
-        ln var14_ref_ln = null;
-        ln var15 = null;
+        Star var14_ref_ln = null;
+        Star var15 = null;
         int var16 = 0;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -98,7 +98,7 @@ final class m extends mc {
             field_v = (String) null;
           }
           for (var11Lifetime1 = 0; param1.length > var11Lifetime1; var11Lifetime1++) {
-            var12_ref = (sd) (param1[var11Lifetime1].field_i.d(0));
+            var12_ref = (Territory) (param1[var11Lifetime1].field_i.d(0));
             while (var12_ref != null) {
               im.a(var12_ref.field_o, param2, 9555);
               di.a(var12_ref.field_q, false, param2);
@@ -111,7 +111,7 @@ final class m extends mc {
                 }
                 var14_ref_ln = var12_ref.h(-23410);
               }
-              var12_ref = (sd) (param1[var11Lifetime1].field_i.a((byte) -71));
+              var12_ref = (Territory) (param1[var11Lifetime1].field_i.a((byte) -71));
             }
           }
           var11Lifetime2 = 0;
@@ -222,10 +222,10 @@ final class m extends mc {
     }
 
     final static void a(byte param0, int[] param1, bc param2, nk[] param3, bc param4) {
-        bi[] dupTemp$0 = null;
-        bi[] dupTemp$1 = null;
-        bi[] dupTemp$2 = null;
-        bi[] dupTemp$3 = null;
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
         nk[] var5 = null;
         nk[] var6 = null;
         int[] var6_array = null;
@@ -253,12 +253,12 @@ final class m extends mc {
         qr var9 = null;
         qr var10 = null;
         qr var11 = null;
-        bi[] var12 = null;
-        bi[] var13 = null;
-        bi[] var14 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
         qr var15 = null;
-        bi[] var16 = null;
-        bi[] var17 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;
@@ -266,15 +266,15 @@ final class m extends mc {
         try {
           var20 = tp.a("lobby", param4, "crowns", (byte) -118);
           var5 = var20;
-          rg.field_d = var20.length;
+          ClientException.field_d = var20.length;
           if (param3 != null) {
-            var6 = new nk[param3.length + rg.field_d];
-            for (var7_int = 0; rg.field_d > var7_int; var7_int++) {
+            var6 = new nk[param3.length + ClientException.field_d];
+            for (var7_int = 0; ClientException.field_d > var7_int; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
             var5 = var6;
             for (var7_intLifetime3 = 0; param3.length > var7_intLifetime3; var7_intLifetime3++) {
-              var6[var7_intLifetime3 + rg.field_d] = param3[var7_intLifetime3];
+              var6[var7_intLifetime3 + ClientException.field_d] = param3[var7_intLifetime3];
             }
           }
           var23 = new int[var5.length];
@@ -283,17 +283,17 @@ final class m extends mc {
           var24 = var19;
           var22 = var24;
           var6_array = var22;
-          for (var7_intLifetime1 = 0; var7_intLifetime1 < rg.field_d; var7_intLifetime1++) {
+          for (var7_intLifetime1 = 0; var7_intLifetime1 < ClientException.field_d; var7_intLifetime1++) {
             var23[var7_intLifetime1] = 10;
           }
           if (param3 != null) {
             if (param1 != null) {
               for (var7_intLifetime2 = 0; var7_intLifetime2 < param3.length; var7_intLifetime2++) {
-                var6_array[rg.field_d + var7_intLifetime2] = param1[var7_intLifetime2];
+                var6_array[ClientException.field_d + var7_intLifetime2] = param1[var7_intLifetime2];
               }
             } else {
               for (var7_intLifetime2 = 0; param3.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[rg.field_d + var7_intLifetime2] = param3[var7_intLifetime2].field_c;
+                var6_array[ClientException.field_d + var7_intLifetime2] = param3[var7_intLifetime2].field_c;
               }
             }
           }
@@ -303,10 +303,10 @@ final class m extends mc {
           cr.field_c = 15;
           qo.field_b = 2;
           var7 = go.a(115, "largefont", param4, param2, "lobby");
-          ge.field_p = go.a(117, "generalfont", param4, param2, "lobby");
+          ImageProducerRasterBuffer.field_p = go.a(117, "generalfont", param4, param2, "lobby");
           ul.field_xb = go.a(123, "chatfont", param4, param2, "lobby");
           var7.a(var5, var24);
-          ge.field_p.a(var5, var24);
+          ImageProducerRasterBuffer.field_p.a(var5, var24);
           ul.field_xb.a(var5, var24);
           var8 = new qr(0L, (qr) null);
           var8.field_nb = (nq) ((Object) var7);
@@ -318,14 +318,14 @@ final class m extends mc {
           var10 = new qr(0L, (qr) null);
           var10.field_x = 16777215;
           var10.field_Y = cr.field_c;
-          var10.field_nb = (nq) ((Object) ge.field_p);
+          var10.field_nb = (nq) ((Object) ImageProducerRasterBuffer.field_p);
           var10.field_G = 1;
           var11 = var10;
           var11.field_y = 1;
           gg.field_d = new qr(0L, var8);
           gg.field_d.field_F = re.a(ae.a(-82, "lobby", param4, "heading"), 123);
-          oh.field_a = new qr(0L, (qr) null);
-          oh.field_a.field_F = tj.a(false, 4210752, false, 120, 8421504, (byte) -63);
+          IntrusiveNode.field_a = new qr(0L, (qr) null);
+          IntrusiveNode.field_a.field_F = tj.a(false, 4210752, false, 120, 8421504, (byte) -63);
           l.field_a = new qr(0L, (qr) null);
           l.field_a.field_F = cs.a(16, 3, 114, 6316128, 6316128, 1);
           h.field_v = new qr(0L, (qr) null);
@@ -349,12 +349,12 @@ final class m extends mc {
           vm.field_Cb = new qr(0L, var10);
           vm.field_Cb.field_kb = 2;
           vm.field_Cb.field_F = tj.a(false, 2039583, true, 30, 3815994, (byte) -64);
-          ii.field_u = new qr(0L, (qr) null);
-          ii.field_u.field_x = 13421772;
-          ii.field_u.field_Y = cr.field_c;
-          ii.field_u.field_G = 1;
-          ii.field_u.field_nb = (nq) ((Object) ge.field_p);
-          gn.field_w = new qr(0L, ii.field_u);
+          SpriteState.field_u = new qr(0L, (qr) null);
+          SpriteState.field_u.field_x = 13421772;
+          SpriteState.field_u.field_Y = cr.field_c;
+          SpriteState.field_u.field_G = 1;
+          SpriteState.field_u.field_nb = (nq) ((Object) ImageProducerRasterBuffer.field_p);
+          gn.field_w = new qr(0L, SpriteState.field_u);
           gn.field_w.field_ab = 16777215;
           gn.field_w.field_W = 8421504;
           gn.field_w.field_jb = 16777215;
@@ -364,10 +364,10 @@ final class m extends mc {
           var15.field_x = 16777215;
           var15.field_Y = cr.field_c;
           var15.field_nb = (nq) ((Object) var7);
-          fg.field_b = new qr(0L, ii.field_u);
+          fg.field_b = new qr(0L, SpriteState.field_u);
           fg.field_b.field_F = tj.a(false, 2236962, false, 16, 2236962, (byte) -40);
           fg.field_b.field_kb = 2;
-          dm.field_h = new qr(0L, ii.field_u);
+          dm.field_h = new qr(0L, SpriteState.field_u);
           dm.field_h.field_F = tj.a(false, 1513239, false, 16, 1513239, (byte) -36);
           dm.field_h.field_kb = 2;
           oj.field_zb = new qr(0L, fg.field_b);
@@ -375,7 +375,7 @@ final class m extends mc {
           ek.field_E = new qr(0L, dm.field_h);
           ek.field_E.a(gn.field_w, false);
           var16 = ae.a(-82, "lobby", param4, "button_mouseover");
-          hd.field_t = new ul(h.field_v, var12, ii.field_u, gn.field_w, 3, 2, qo.field_b, 3, cr.field_c);
+          hd.field_t = new ul(h.field_v, var12, SpriteState.field_u, gn.field_w, 3, 2, qo.field_b, 3, cr.field_c);
           rd.field_h = new qr(0L, gn.field_w);
           rd.field_h.field_lb = var16;
           rd.field_h.field_T = 1;
@@ -405,7 +405,7 @@ final class m extends mc {
           ea.field_a.field_J = 1;
           ea.field_a.field_t = 1;
           ea.field_a.field_V = 1;
-          af.field_f = new qr(0L, ea.field_a);
+          DelegatingCanvas.field_f = new qr(0L, ea.field_a);
           jf.field_b = new qr(0L, gn.field_w);
           jf.field_b.field_V = 1;
           jf.field_b.field_t = 1;
@@ -424,9 +424,9 @@ final class m extends mc {
           jf.field_b.field_sb = dupTemp$0;
           jf.field_b.field_vb = dupTemp$0;
           jf.field_b.field_wb = re.a(ae.a(109, "lobby", param4, "smallbutton_disabled"), 65);
-          af.field_f.field_F = re.a(ae.a(-99, "lobby", param4, "mediumbutton"), 41);
-          af.field_f.field_lb = re.a(ae.a(80, "lobby", param4, "mediumbutton_mouseover"), 126);
-          af.field_f.field_vb = re.a(ae.a(113, "lobby", param4, "mediumbutton_mouseheld"), 95);
+          DelegatingCanvas.field_f.field_F = re.a(ae.a(-99, "lobby", param4, "mediumbutton"), 41);
+          DelegatingCanvas.field_f.field_lb = re.a(ae.a(80, "lobby", param4, "mediumbutton_mouseover"), 126);
+          DelegatingCanvas.field_f.field_vb = re.a(ae.a(113, "lobby", param4, "mediumbutton_mouseheld"), 95);
           ea.field_a.field_F = re.a(ae.a(-121, "lobby", param4, "bigbutton"), 53);
           ea.field_a.field_lb = re.a(ae.a(92, "lobby", param4, "bigbutton_mouseover"), 76);
           ea.field_a.field_vb = re.a(ae.a(-108, "lobby", param4, "bigbutton_mouseheld"), 127);
@@ -480,7 +480,7 @@ final class m extends mc {
           eg.field_u.field_U = id.a(2, param4, "lobby", "downbutton_mouseheld");
           eg.field_u.field_ob = id.a(2, param4, "lobby", "downbutton_disabled");
           se.field_m = new ur(0L, sk.field_k, eg.field_u, sj.field_c, ml.field_l);
-          ih.field_g = new am(0L, (qr) null, me.field_d, se.field_m, jf.field_b, (String) null, (String) null);
+          ih.field_g = new am(0L, (qr) null, VictoryChecker.field_d, se.field_m, jf.field_b, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -514,7 +514,7 @@ final class m extends mc {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, bi[] param5, int param6, int param7, bi[] param8, int param9, nq param10, nq param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, bi[] param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, Sprite[] param8, int param9, nq param10, nq param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, Sprite[] param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -528,12 +528,12 @@ final class m extends mc {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
-        bi[] var22 = null;
+        Sprite[] var22 = null;
         try {
           mb.a(param2, param16, param9, 0, param12, param13, param20, param7, param6, param0, param4, param10, param17, param3, new v(param8), new v(param19), param18, param11, param14, new v(param5), param15);
           if (param1 != 13421772) {
-            var22 = (bi[]) null;
-            m.a(48, 114, -92, -17, -81, (bi[]) null, 87, -77, (bi[]) null, 10, (nq) null, (nq) null, -117, -102, 14, -52, -97, -21, 46, (bi[]) null, 33);
+            var22 = (Sprite[]) null;
+            m.a(48, 114, -92, -17, -81, (Sprite[]) null, 87, -77, (Sprite[]) null, 10, (nq) null, (nq) null, -117, -102, 14, -52, -97, -21, 46, (Sprite[]) null, 33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

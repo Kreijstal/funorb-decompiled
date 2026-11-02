@@ -11,15 +11,15 @@ final class ij {
           if (null != vc.field_a) {
             try {
               vc.field_a.a((byte) -26, 0L);
-              vc.field_a.a(param0 + 84, 24, sa.field_a.field_j, sa.field_a.field_h);
+              vc.field_a.a(param0 + 84, 24, sa.field_a.position, sa.field_a.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              sa.field_a.field_j = sa.field_a.field_j + param0;
+              sa.field_a.position = sa.field_a.position + param0;
               return;
             }
           }
-          sa.field_a.field_j = sa.field_a.field_j + param0;
+          sa.field_a.position = sa.field_a.position + param0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -40,8 +40,8 @@ final class ij {
     }
 
     final static qh b(byte param0) {
-        tm.field_k = new qh(250, 60, 150, 186, ib.field_c.toUpperCase());
-        fe var1 = new fe(-16 + (tm.field_k.field_k + tm.field_k.field_m), tm.field_k.field_t + 2, 11, 11, -1, (bi) null, "X", 16711680);
+        tm.field_k = new qh(250, 60, 150, 186, MouseWheelInput.field_c.toUpperCase());
+        fe var1 = new fe(-16 + (tm.field_k.field_k + tm.field_k.field_m), tm.field_k.field_t + 2, 11, 11, -1, (Sprite) null, "X", 16711680);
         var1.field_h = tm.field_k;
         tm.field_k.a(var1, 8);
         lp var2 = new lp(9 + tm.field_k.field_k, 20 + tm.field_k.field_t, 132, 158);

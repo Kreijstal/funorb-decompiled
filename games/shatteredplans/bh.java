@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bh extends oh {
+final class bh extends IntrusiveNode {
     static boolean field_j;
     static String field_r;
     static String field_n;
@@ -10,7 +10,7 @@ final class bh extends oh {
     static qr field_k;
     int field_l;
     int field_o;
-    static bi[] field_m;
+    static Sprite[] field_m;
     static int field_h;
     int field_i;
 

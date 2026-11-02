@@ -3,7 +3,7 @@
  */
 class qk extends vd {
     static String field_z;
-    static bi[] field_y;
+    static Sprite[] field_y;
     private int field_w;
     String field_u;
     static String field_v;
@@ -52,7 +52,7 @@ class qk extends vd {
             stackIn_3_0 = (String[]) null;
             return stackIn_3_0;
           }
-          var6 = vg.g(param1 + 105);
+          var6 = UiWidget.g(param1 + 105);
           var3 = 0;
           var4 = 0;
           while (true) {

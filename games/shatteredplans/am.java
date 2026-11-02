@@ -18,8 +18,8 @@ final class am extends qr {
         field_zb = null;
         field_Ab = null;
         if (param0 != 23880) {
-          bi var2 = (bi) null;
-          am.a(-49, 17, (bi) null, -112, 60, 124, (byte) -54);
+          Sprite var2 = (Sprite) null;
+          am.a(-49, 17, (Sprite) null, -112, 60, 124, (byte) -54);
           field_xb = null;
           return;
         }
@@ -92,11 +92,11 @@ final class am extends qr {
           if (param2 >= -14) {
             return;
           }
-          jq.a(96, 127, param0, 96 - var7, param4, param5, false, param1);
+          GameKeyHandler.a(96, 127, param0, 96 - var7, param4, param5, false, param1);
           var8 = 96;
           for (var9 = 1; var9 < var6_int; var9++) {
             var8 = var8 - var7;
-            jq.a(var8, 78, param0, -var7 + var8, param4, var9 * 10 + param5, true, param1);
+            GameKeyHandler.a(var8, 78, param0, -var7 + var8, param4, var9 * 10 + param5, true, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -106,7 +106,7 @@ final class am extends qr {
         }
     }
 
-    final static void a(int param0, int param1, bi param2, int param3, int param4, int param5, byte param6) {
+    final static void a(int param0, int param1, Sprite param2, int param3, int param4, int param5, byte param6) {
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
         int var7_int = 0;

@@ -5,8 +5,8 @@ final class co extends wf {
     static long field_o;
     static String field_q;
     static String field_t;
-    static bi[] field_p;
-    static om field_s;
+    static Sprite[] field_p;
+    static ArgbSprite field_s;
     static String field_r;
 
     public static void d(byte param0) {
@@ -24,24 +24,24 @@ final class co extends wf {
         return param0 & param1;
     }
 
-    final static void a(int param0, ob param1, java.math.BigInteger param2, ob param3, java.math.BigInteger param4) {
+    final static void a(int param0, PacketBuffer param1, java.math.BigInteger param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
-          ra.a(param2, param1, 0, 0, param4, param3.field_h, param3.field_j);
+          ra.a(param2, param1, 0, 0, param4, param3.payload, param3.position);
           if (param0 != 25050) {
             java.math.BigInteger var6 = (java.math.BigInteger) null;
-            co.a(43, (ob) null, (java.math.BigInteger) null, (ob) null, (java.math.BigInteger) null);
+            co.a(43, (PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "co.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    co(ln param0, boolean param1, boolean[] param2) {
+    co(Star param0, boolean param1, boolean[] param2) {
         super(param0);
         int var5 = 0;
-        ln[] var4 = null;
-        ln var6 = null;
-        ln[] var8 = null;
+        Star[] var4 = null;
+        Star var6 = null;
+        Star[] var8 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

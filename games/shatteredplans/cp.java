@@ -11,7 +11,7 @@ final class cp {
     private int field_n;
     private int field_o;
     private int field_d;
-    static bi field_t;
+    static Sprite field_t;
     private int field_i;
     private int field_f;
     private int field_p;
@@ -128,7 +128,7 @@ final class cp {
             }
           }
         }
-        if (me.field_e != var2) {
+        if (VictoryChecker.field_e != var2) {
           this.field_s.a(var3, var2, -12725);
         } else {
           if (nn.field_b != var3) {
@@ -136,7 +136,7 @@ final class cp {
           }
         }
         if (this.field_c > 0) {
-          gs.field_k = (-me.field_e + this.field_c) / 2;
+          gs.field_k = (-VictoryChecker.field_e + this.field_c) / 2;
         }
     }
 
@@ -216,14 +216,14 @@ final class cp {
           }
           return;
         }
-        if (this.field_c > me.field_e) {
-          gs.field_k = (this.field_c - me.field_e) / 2;
+        if (this.field_c > VictoryChecker.field_e) {
+          gs.field_k = (this.field_c - VictoryChecker.field_e) / 2;
         } else {
           if (0 < this.field_c) {
             gs.field_k = 0;
           }
         }
-        if (me.field_e == this.field_e &&
+        if (VictoryChecker.field_e == this.field_e &&
           nn.field_b == this.field_h) {
           return;
         }
@@ -232,9 +232,9 @@ final class cp {
 
     final eb a(int param0) {
         this.field_o = nn.field_b;
-        this.field_n = me.field_e;
+        this.field_n = VictoryChecker.field_e;
         this.field_s.a(this.field_g, this.field_k, param0 ^ -12725);
-        pf.field_c = false;
+        IntrusiveDeque.field_c = false;
         eb var2 = si.a(this.field_k, fa.field_W, 0, (byte) 125, param0, this.field_g);
         if (var2 == null) {
           this.c(param0 ^ -115);

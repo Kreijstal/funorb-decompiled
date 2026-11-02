@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ql extends oh {
-    static bi[] field_o;
+final class ql extends IntrusiveNode {
+    static Sprite[] field_o;
     int field_l;
     int field_m;
     int field_k;
     ql field_h;
     int field_i;
-    static pf field_p;
+    static IntrusiveDeque field_p;
     int field_j;
     static nq field_n;
     static volatile int field_q;
@@ -120,7 +120,7 @@ final class ql extends oh {
         }
     }
 
-    final static void a(java.awt.Frame param0, int param1, qb param2) {
+    final static void a(java.awt.Frame param0, int param1, PlatformTaskDispatcher param2) {
         pb var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -173,7 +173,7 @@ final class ql extends oh {
         field_p = null;
         field_o = null;
         if (param0 > -46) {
-          field_o = (bi[]) null;
+          field_o = (Sprite[]) null;
         }
         field_n = null;
     }
@@ -187,7 +187,7 @@ final class ql extends oh {
     }
 
     static {
-        field_p = new pf();
+        field_p = new IntrusiveDeque();
         field_q = 0;
     }
 }

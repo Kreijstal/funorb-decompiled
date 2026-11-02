@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class hm extends df {
+class hm extends DualLinkNode {
     static boolean field_o;
     static sq field_q;
     static String[] field_p;
@@ -80,7 +80,7 @@ class hm extends df {
         }
     }
 
-    final static void a(qa param0, ob param1, boolean param2) {
+    final static void a(qa param0, PacketBuffer param1, boolean param2) {
         try {
           di.a(param0.field_u, false, param1);
           if (!param2) {

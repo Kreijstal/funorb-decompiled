@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mr implements fo {
-    private ob field_m;
+    private PacketBuffer field_m;
     private int field_l;
     static vm field_h;
     private int field_b;
-    static bi field_g;
+    static Sprite field_g;
     static boolean field_f;
     static qr[] field_d;
-    static bi[] field_i;
+    static Sprite[] field_i;
     private int field_k;
     static String field_c;
     static int field_a;
@@ -19,13 +19,13 @@ final class mr implements fo {
     public final l a(byte param0) throws jn {
         int var6 = 0;
         l var3;
-        ln[] var4;
+        Star[] var4;
         int var5;
-        ln var7;
+        Star var7;
         int var8;
         int var9;
         int var10;
-        ln var11;
+        Star var11;
         int var12;
         pc var13;
         int var9Lifetime1;
@@ -88,12 +88,12 @@ final class mr implements fo {
         field_i = null;
     }
 
-    final static bi a(int param0, int param1) {
-        bi dupTemp$0 = null;
-        bi var3 = null;
-        bi var2 = tr.field_sb[param0];
+    final static Sprite a(int param0, int param1) {
+        Sprite dupTemp$0 = null;
+        Sprite var3 = null;
+        Sprite var2 = tr.field_sb[param0];
         if (var2 == null) {
-          dupTemp$0 = new bi(256, 256);
+          dupTemp$0 = new Sprite(256, 256);
           var3 = dupTemp$0;
           var2 = var3;
           tr.field_sb[param0] = dupTemp$0;
@@ -115,7 +115,7 @@ final class mr implements fo {
         return ul.field_Hb + (sq.field_a << 2) + (vm.field_Bb << 4);
     }
 
-    mr(ob param0, int param1, int param2, int param3, int param4, int param5) {
+    mr(PacketBuffer param0, int param1, int param2, int param3, int param4, int param5) {
         try {
           this.field_j = param3;
           this.field_l = param1;

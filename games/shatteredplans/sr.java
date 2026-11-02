@@ -19,7 +19,7 @@ final class sr {
     short[] field_z;
     int[] field_Q;
     byte[] field_p;
-    static bi field_F;
+    static Sprite field_F;
     int[] field_H;
     short[] field_B;
     short field_u;
@@ -240,7 +240,7 @@ final class sr {
 
     final static int a(int param0, byte param1, boolean param2, int param3) {
         if (param1 != 0) {
-          field_F = (bi) null;
+          field_F = (Sprite) null;
         }
         return uo.a((byte) -75);
     }

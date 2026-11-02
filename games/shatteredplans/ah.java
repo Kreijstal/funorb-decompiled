@@ -8,7 +8,7 @@ final class ah extends ts {
     static int field_X;
     static int field_R;
     private gk field_M;
-    private bi field_V;
+    private Sprite field_V;
     private String field_W;
     private int field_N;
     static String field_Q;
@@ -34,7 +34,7 @@ final class ah extends ts {
         return rn.field_b;
     }
 
-    final void a(int param0, int param1, vg param2, byte param3) {
+    final void a(int param0, int param1, UiWidget param2, byte param3) {
         try {
           this.field_N = this.field_N + 1;
           super.a(param0, param1, param2, param3);
@@ -51,29 +51,29 @@ final class ah extends ts {
         int var11;
         int var12;
         int var13;
-        bi var14;
+        Sprite var14;
         String var17;
         Object var18;
-        bi var19;
-        bi var20;
-        bi var21;
-        bi var22;
+        Sprite var19;
+        Sprite var20;
+        Sprite var21;
+        Sprite var22;
         String var23;
         Object var24;
-        bi var25;
-        bi var26;
-        bi var27;
-        bi var28;
+        Sprite var25;
+        Sprite var26;
+        Sprite var27;
+        Sprite var28;
         String var29;
         Object var30;
-        bi var31;
-        bi var35;
-        bi var37;
+        Sprite var31;
+        Sprite var35;
+        Sprite var37;
         Object var38;
-        bi var39;
-        bi var40;
-        bi var41;
-        bi var42;
+        Sprite var39;
+        Sprite var40;
+        Sprite var41;
+        Sprite var42;
         pj var43;
         pj var44;
         pj var45;
@@ -114,30 +114,30 @@ final class ah extends ts {
           var6 = this.field_M.c(-123);
           var43 = (pj) ((Object) this.field_p);
           var9 = this.field_m + param3;
-          var10 = var43.a(param2, (vg) (this), 66) + (var43.a((vg) (this), true).b(438) >> 1);
+          var10 = var43.a(param2, (UiWidget) (this), 66) + (var43.a((UiWidget) (this), true).b(438) >> 1);
           if (pd.field_h == var6) {
             var20 = lp.field_w[0];
             var11 = var20.field_o << 1;
             var12 = var20.field_p << 1;
             if (this.field_V == null) {
-              this.field_V = new bi(var11, var12);
+              this.field_V = new Sprite(var11, var12);
               aq.a((byte) -31, this.field_V);
             } else {
               if (this.field_V.field_z < var11) {
-                this.field_V = new bi(var11, var12);
+                this.field_V = new Sprite(var11, var12);
                 aq.a((byte) -31, this.field_V);
               } else {
                 if (this.field_V.field_w >= var12) {
                   aq.a((byte) 106, this.field_V);
                   gf.b();
                 } else {
-                  this.field_V = new bi(var11, var12);
+                  this.field_V = new Sprite(var11, var12);
                   aq.a((byte) -31, this.field_V);
                 }
               }
             }
             var20.b(112, 144, var20.field_o << 4, var20.field_p << 4, -this.field_N << 10, 4096);
-            ln.f((byte) -63);
+            Star.f((byte) -63);
             this.field_V.c(var9 - (var20.field_o >> 1), -var20.field_p + var10, 256);
             return;
           }
@@ -163,11 +163,11 @@ final class ah extends ts {
             aq.a((byte) 106, this.field_V);
             gf.b();
           } else {
-            this.field_V = new bi(var11Lifetime5, var12Lifetime5);
+            this.field_V = new Sprite(var11Lifetime5, var12Lifetime5);
             aq.a((byte) -31, this.field_V);
           }
           var19.b(112, 144, var19.field_o << 4, var19.field_p << 4, -this.field_N << 10, 4096);
-          ln.f((byte) -63);
+          Star.f((byte) -63);
           this.field_V.c(var9 - (var19.field_o >> 1), -var19.field_p + var10, 256);
           return;
         }
@@ -181,30 +181,30 @@ final class ah extends ts {
           var6 = this.field_M.c(-123);
           var44 = (pj) ((Object) this.field_p);
           var9Lifetime1 = this.field_m + param3;
-          var10Lifetime1 = var44.a(param2, (vg) (this), 66) + (var44.a((vg) (this), true).b(438) >> 1);
+          var10Lifetime1 = var44.a(param2, (UiWidget) (this), 66) + (var44.a((UiWidget) (this), true).b(438) >> 1);
           if (pd.field_h == var6) {
             var26 = lp.field_w[0];
             var11Lifetime1 = var26.field_o << 1;
             var12Lifetime1 = var26.field_p << 1;
             if (this.field_V == null) {
-              this.field_V = new bi(var11Lifetime1, var12Lifetime1);
+              this.field_V = new Sprite(var11Lifetime1, var12Lifetime1);
               aq.a((byte) -31, this.field_V);
             } else {
               if (this.field_V.field_z < var11Lifetime1) {
-                this.field_V = new bi(var11Lifetime1, var12Lifetime1);
+                this.field_V = new Sprite(var11Lifetime1, var12Lifetime1);
                 aq.a((byte) -31, this.field_V);
               } else {
                 if (this.field_V.field_w >= var12Lifetime1) {
                   aq.a((byte) 106, this.field_V);
                   gf.b();
                 } else {
-                  this.field_V = new bi(var11Lifetime1, var12Lifetime1);
+                  this.field_V = new Sprite(var11Lifetime1, var12Lifetime1);
                   aq.a((byte) -31, this.field_V);
                 }
               }
             }
             var26.b(112, 144, var26.field_o << 4, var26.field_p << 4, -this.field_N << 10, 4096);
-            ln.f((byte) -63);
+            Star.f((byte) -63);
             this.field_V.c(var9Lifetime1 - (var26.field_o >> 1), -var26.field_p + var10Lifetime1, 256);
             return;
           }
@@ -230,11 +230,11 @@ final class ah extends ts {
             aq.a((byte) 106, this.field_V);
             gf.b();
           } else {
-            this.field_V = new bi(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+            this.field_V = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
             aq.a((byte) -31, this.field_V);
           }
           var25.b(112, 144, var25.field_o << 4, var25.field_p << 4, -this.field_N << 10, 4096);
-          ln.f((byte) -63);
+          Star.f((byte) -63);
           this.field_V.c(var9Lifetime1 - (var25.field_o >> 1), -var25.field_p + var10Lifetime1, 256);
           return;
         }
@@ -250,7 +250,7 @@ final class ah extends ts {
           var6Lifetime1 = this.field_M.c(-123);
           var45 = (pj) ((Object) this.field_p);
           var9Lifetime2 = this.field_m + param3;
-          var10Lifetime2 = var45.a(param2, (vg) (this), 66) + (var45.a((vg) (this), true).b(438) >> 1);
+          var10Lifetime2 = var45.a(param2, (UiWidget) (this), 66) + (var45.a((UiWidget) (this), true).b(438) >> 1);
           if (pd.field_h != var6Lifetime1 &&
             var6Lifetime1 != lm.field_d) {
             if (var6Lifetime1 == tj.field_b) {
@@ -270,15 +270,15 @@ final class ah extends ts {
           var11Lifetime2 = var31.field_o << 1;
           var12Lifetime2 = var31.field_p << 1;
           if (this.field_V == null) {
-            this.field_V = new bi(var11Lifetime2, var12Lifetime2);
+            this.field_V = new Sprite(var11Lifetime2, var12Lifetime2);
             aq.a((byte) -31, this.field_V);
           } else {
             if (this.field_V.field_z < var11Lifetime2) {
-              this.field_V = new bi(var11Lifetime2, var12Lifetime2);
+              this.field_V = new Sprite(var11Lifetime2, var12Lifetime2);
               aq.a((byte) -31, this.field_V);
             } else {
               if (this.field_V.field_w < var12Lifetime2) {
-                this.field_V = new bi(var11Lifetime2, var12Lifetime2);
+                this.field_V = new Sprite(var11Lifetime2, var12Lifetime2);
                 aq.a((byte) -31, this.field_V);
               } else {
                 aq.a((byte) 106, this.field_V);
@@ -287,7 +287,7 @@ final class ah extends ts {
             }
           }
           var31.b(112, 144, var31.field_o << 4, var31.field_p << 4, -this.field_N << 10, 4096);
-          ln.f((byte) -63);
+          Star.f((byte) -63);
           this.field_V.c(var9Lifetime2 - (var31.field_o >> 1), -var31.field_p + var10Lifetime2, 256);
           return;
         }
@@ -299,7 +299,7 @@ final class ah extends ts {
         var6Lifetime2 = this.field_M.c(-123);
         var46 = (pj) ((Object) this.field_p);
         var9Lifetime3 = this.field_m + param3;
-        var10Lifetime3 = var46.a(param2, (vg) (this), 66) + (var46.a((vg) (this), true).b(438) >> 1);
+        var10Lifetime3 = var46.a(param2, (UiWidget) (this), 66) + (var46.a((UiWidget) (this), true).b(438) >> 1);
         if (pd.field_h == var6Lifetime2) {
           var40 = lp.field_w[0];
           var11Lifetime3 = var40.field_o << 1;
@@ -310,11 +310,11 @@ final class ah extends ts {
             aq.a((byte) 106, this.field_V);
             gf.b();
           } else {
-            this.field_V = new bi(var11Lifetime3, var12Lifetime3);
+            this.field_V = new Sprite(var11Lifetime3, var12Lifetime3);
             aq.a((byte) -31, this.field_V);
           }
           var40.b(112, 144, var40.field_o << 4, var40.field_p << 4, -this.field_N << 10, 4096);
-          ln.f((byte) -63);
+          Star.f((byte) -63);
           this.field_V.c(var9Lifetime3 - (var40.field_o >> 1), -var40.field_p + var10Lifetime3, 256);
           return;
         }
@@ -340,15 +340,15 @@ final class ah extends ts {
           aq.a((byte) 106, this.field_V);
           gf.b();
         } else {
-          this.field_V = new bi(var11Lifetime4, var12Lifetime4);
+          this.field_V = new Sprite(var11Lifetime4, var12Lifetime4);
           aq.a((byte) -31, this.field_V);
         }
         var39.b(112, 144, var39.field_o << 4, var39.field_p << 4, -this.field_N << 10, 4096);
-        ln.f((byte) -63);
+        Star.f((byte) -63);
         this.field_V.c(var9Lifetime3 - (var39.field_o >> 1), -var39.field_p + var10Lifetime3, 256);
     }
 
-    final boolean a(byte param0, vg param1) {
+    final boolean a(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;

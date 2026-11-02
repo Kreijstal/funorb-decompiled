@@ -11,7 +11,7 @@ class go extends kg {
     static String field_G;
     private long field_F;
     static qr field_I;
-    static bi field_L;
+    static Sprite field_L;
     private boolean field_P;
     private int field_O;
     private long field_Q;
@@ -79,7 +79,7 @@ class go extends kg {
         this.i(5018);
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, vg param6) {
+    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -93,7 +93,7 @@ class go extends kg {
         try {
           if (super.a(param0, param1, (byte) 100, param3, param4, param5, param6) &&
             this.field_p instanceof pj) {
-            var8_int = ((pj) ((Object) this.field_p)).a(param4, pd.field_k, param5, (vg) (this), true, bb.field_b);
+            var8_int = ((pj) ((Object) this.field_p)).a(param4, pd.field_k, param5, (UiWidget) (this), true, bb.field_b);
             stackIn_5_1 = 119;
             if (var8_int == -1) {
               stackIn_6_2 = 0;
@@ -119,7 +119,7 @@ class go extends kg {
           if (param2 > 95) {
             return false;
           }
-          field_L = (bi) null;
+          field_L = (Sprite) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,12 +153,12 @@ class go extends kg {
           return;
         }
         var9 = (pj) ((Object) this.field_p);
-        var3 = var9.a((vg) (this), true);
+        var3 = var9.a((UiWidget) (this), true);
         var4 = var3.c(126);
         if (param0 != -59) {
           return;
         }
-        var5 = var9.a(120, (vg) (this));
+        var5 = var9.a(120, (UiWidget) (this));
         var6 = var9.a(false) >> 1;
         if (var4 < -var6 + var5) {
           this.field_l = 0;
@@ -194,17 +194,17 @@ class go extends kg {
         if (param0 != 0) {
           return;
         }
-        this.field_p.a((vg) (this), param3, this.field_y, param2, (byte) 12);
+        this.field_p.a((UiWidget) (this), param3, this.field_y, param2, (byte) 12);
         if (!(this.field_p instanceof pj)) {
           return;
         }
         pj var5 = (pj) ((Object) this.field_p);
         if (this.field_H != this.field_N) {
-          var5.a(this.field_N, param2, param3, this.field_H, 0, (vg) (this));
+          var5.a(this.field_N, param2, param3, this.field_H, 0, (UiWidget) (this));
         }
         long var6 = pr.a(param1 + 26131);
         if ((var6 - this.field_Q) % 1000L < 500L) {
-          var5.a(this.field_H, param3, -127, param2, (vg) (this));
+          var5.a(this.field_H, param3, -127, param2, (UiWidget) (this));
           return;
         }
     }
@@ -220,7 +220,7 @@ class go extends kg {
         this.field_N = this.field_H;
     }
 
-    final boolean a(int param0, char param1, int param2, vg param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         int dupTemp$0 = 0;
         int stackIn_49_1 = 0;
         int stackIn_50_2 = 0;
@@ -411,7 +411,7 @@ class go extends kg {
         }
     }
 
-    void a(int param0, int param1, vg param2, byte param3) {
+    void a(int param0, int param1, UiWidget param2, byte param3) {
         pj var5 = null;
         int var6 = 0;
         try {
@@ -420,7 +420,7 @@ class go extends kg {
           if (1 == this.field_o) {
             if (this.field_p instanceof pj) {
               var5 = (pj) ((Object) this.field_p);
-              var6 = var5.a(param0, pd.field_k, param1, (vg) (this), true, bb.field_b);
+              var6 = var5.a(param0, pd.field_k, param1, (UiWidget) (this), true, bb.field_b);
               if (var6 != -1) {
                 if (this.field_P &&
                   this.field_R > var6 &&

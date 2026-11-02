@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class je {
-    static bi field_f;
+    static Sprite field_f;
     static boolean field_e;
-    static bi field_b;
+    static Sprite field_b;
     static oa field_a;
     static int field_d;
     static int field_g;

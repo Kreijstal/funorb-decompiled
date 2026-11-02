@@ -4,7 +4,7 @@
 class rr extends o {
     static int field_t;
 
-    final static a a(pf param0, int param1, int param2, int param3) {
+    final static a a(IntrusiveDeque param0, int param1, int param2, int param3) {
         a dupTemp$1 = null;
         a var5 = null;
         int var6 = 0;
@@ -49,10 +49,10 @@ class rr extends o {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_J, -1, 2147483647, false);
     }
 
-    public final void a(vg param0, int param1, boolean param2, int param3, byte param4) {
+    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         try {
           if (param2) {
-            rg.a((byte) 93, param0.field_q + param3, param0.field_n, param1 + param0.field_m, param0.field_x);
+            ClientException.a((byte) 93, param0.field_q + param3, param0.field_n, param1 + param0.field_m, param0.field_x);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
@@ -60,12 +60,12 @@ class rr extends o {
         }
     }
 
-    final static boolean a(vd param0, pf param1, byte param2) {
-        oh var3 = null;
+    final static boolean a(vd param0, IntrusiveDeque param1, byte param2) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         vd var4 = null;
         int var5 = 0;
-        pf var6 = null;
+        IntrusiveDeque var6 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -85,8 +85,8 @@ class rr extends o {
           if (param2 == 64) {
             return false;
           }
-          var6 = (pf) null;
-          rr.a((pf) null, 76, -63, 75);
+          var6 = (IntrusiveDeque) null;
+          rr.a((IntrusiveDeque) null, 76, -63, 75);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

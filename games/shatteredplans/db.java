@@ -3,16 +3,16 @@
  */
 final class db {
     static int field_f;
-    static bi field_a;
+    static Sprite field_a;
     static boolean field_b;
-    private df field_e;
+    private DualLinkNode field_e;
     static String field_d;
-    private df field_c;
+    private DualLinkNode field_c;
 
     final int c(byte param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = 0;
-        df var3 = this.field_e.field_h;
+        DualLinkNode var3 = this.field_e.field_h;
         int var4 = -48 / ((param0 + 34) / 39);
         while (var3 != this.field_e) {
           var2++;
@@ -42,10 +42,10 @@ final class db {
         return param1 & ~var2;
     }
 
-    final df b(int param0) {
-        df var2 = this.field_c;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = this.field_c;
         if (param0 != 32) {
-          return (df) null;
+          return (DualLinkNode) null;
         }
         if (var2 == this.field_e) {
           this.field_c = null;
@@ -56,7 +56,7 @@ final class db {
     }
 
     final void b(byte param0) {
-        df var2 = null;
+        DualLinkNode var2 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         while (true) {
           var2 = this.field_e.field_h;
@@ -71,8 +71,8 @@ final class db {
         }
     }
 
-    final df a(int param0) {
-        df var2 = this.field_e.field_h;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_e.field_h;
         if (this.field_e == var2) {
           return null;
         }
@@ -88,7 +88,7 @@ final class db {
         return this.field_e.field_h == this.field_e ? true : false;
     }
 
-    final void a(df param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -103,7 +103,7 @@ final class db {
           param0.field_j.field_h = param0;
           param0.field_h.field_j = param0;
           if (param1 != 32) {
-            this.field_e = (df) null;
+            this.field_e = (DualLinkNode) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -120,8 +120,8 @@ final class db {
         }
     }
 
-    final df c(int param0) {
-        df var2 = this.field_e.field_h;
+    final DualLinkNode c(int param0) {
+        DualLinkNode var2 = this.field_e.field_h;
         if (this.field_e == var2) {
           this.field_c = null;
           return null;
@@ -231,7 +231,7 @@ final class db {
     }
 
     public db() {
-        this.field_e = new df();
+        this.field_e = new DualLinkNode();
         this.field_e.field_h = this.field_e;
         this.field_e.field_j = this.field_e;
     }

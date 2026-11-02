@@ -3,15 +3,15 @@
  */
 import java.io.*;
 
-final class es extends oh {
+final class es extends IntrusiveNode {
     static qr field_l;
     static int field_n;
     static bc field_j;
     static int field_m;
     int field_k;
     int field_h;
-    ln field_p;
-    fs field_i;
+    Star field_p;
+    Player field_i;
     int field_o;
 
     final static boolean a(int param0, int param1) {
@@ -20,7 +20,7 @@ final class es extends oh {
           IOException var2 = null;
           int var3 = 0;
           Throwable decompiledCaughtException = null;
-          if (sa.field_a.field_j >= param1) {
+          if (sa.field_a.position >= param1) {
             return true;
           }
           if (null == wg.field_f) {
@@ -40,16 +40,16 @@ final class es extends oh {
               q.g(-114);
               return false;
             }
-            if (var2_int > param1 - sa.field_a.field_j) {
-              var2_int = param1 - sa.field_a.field_j;
+            if (var2_int > param1 - sa.field_a.position) {
+              var2_int = param1 - sa.field_a.position;
             }
-            wg.field_f.a(sa.field_a.field_h, var2_int, sa.field_a.field_j, (byte) 119);
-            pf.field_e = pr.a(14274);
-            sa.field_a.field_j = sa.field_a.field_j + var2_int;
-            if (sa.field_a.field_j < param1) {
+            wg.field_f.a(sa.field_a.payload, var2_int, sa.field_a.position, (byte) 119);
+            IntrusiveDeque.field_e = pr.a(14274);
+            sa.field_a.position = sa.field_a.position + var2_int;
+            if (sa.field_a.position < param1) {
               return false;
             }
-            sa.field_a.field_j = 0;
+            sa.field_a.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,7 +65,7 @@ final class es extends oh {
     }
 
     final static String a(Throwable param0, byte param1) throws IOException {
-        rg var15 = null;
+        ClientException var15 = null;
         String var9 = null;
         int var10 = 0;
         int var11 = 0;
@@ -87,10 +87,10 @@ final class es extends oh {
         String var12Lifetime6;
         String var12Lifetime5Lifetime1;
         String var12Lifetime5Lifetime2;
-        if (!(param0 instanceof rg)) {
+        if (!(param0 instanceof ClientException)) {
           var2 = "";
         } else {
-          var15 = (rg) ((Object) param0);
+          var15 = (ClientException) ((Object) param0);
           param0 = var15.field_e;
           var2 = var15.field_b + " | ";
           var12 = var2;
@@ -162,7 +162,7 @@ final class es extends oh {
         field_l = null;
     }
 
-    es(ln param0, fs param1, int param2, int param3) {
+    es(Star param0, Player param1, int param2, int param3) {
         try {
           this.field_o = param2;
           this.field_p = param0;
@@ -174,7 +174,7 @@ final class es extends oh {
         }
     }
 
-    es(ln param0, fs param1, int param2, int param3, int param4) {
+    es(Star param0, Player param1, int param2, int param3, int param4) {
         try {
           this.field_h = param3;
           this.field_p = param0;

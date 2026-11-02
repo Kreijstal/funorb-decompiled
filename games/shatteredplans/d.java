@@ -7,8 +7,8 @@ import java.util.*;
 final class d {
     static String field_c;
     static am field_a;
-    static bi[] field_b;
-    static ln field_d;
+    static Sprite[] field_b;
+    static Star field_d;
 
     final static boolean a(ve param0, ve param1, byte param2) {
         int var3_int = 0;
@@ -83,24 +83,24 @@ final class d {
             if (param1 != 82) {
               return;
             }
-            if (js.field_f.field_j == 0 &&
+            if (js.field_f.position == 0 &&
               (mj.field_Pb + 10000L) < pr.a(param1 + 14192)) {
               js.field_f.h(param0, param1 ^ 173);
             }
-            if (js.field_f.field_j > 0) {
+            if (js.field_f.position > 0) {
               try {
-                wg.field_f.a(js.field_f.field_j, 0, js.field_f.field_h, param1 ^ -14022);
+                wg.field_f.a(js.field_f.position, 0, js.field_f.payload, param1 ^ -14022);
                 mj.field_Pb = pr.a(14274);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 q.g(-119);
               }
-              js.field_f.field_j = 0;
+              js.field_f.position = 0;
             }
             return;
           }
-          js.field_f.field_j = 0;
+          js.field_f.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -119,7 +119,7 @@ final class d {
           if (param0 != -12) {
             d.a(-116);
           }
-          stackIn_3_0 = param1 + hi.a(1 - param1 + param2, param3, -11);
+          stackIn_3_0 = param1 + TaskAi.a(1 - param1 + param2, param3, -11);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,24 +149,24 @@ final class d {
             if (param1 != 82) {
               return;
             }
-            if (js.field_f.field_j == 0 &&
+            if (js.field_f.position == 0 &&
               (mj.field_Pb + 10000L) < pr.a(param1 + 14192)) {
               js.field_f.h(param0, param1 ^ 173);
             }
-            if (js.field_f.field_j > 0) {
+            if (js.field_f.position > 0) {
               try {
-                wg.field_f.a(js.field_f.field_j, 0, js.field_f.field_h, param1 ^ -14022);
+                wg.field_f.a(js.field_f.position, 0, js.field_f.payload, param1 ^ -14022);
                 mj.field_Pb = pr.a(14274);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 q.g(-119);
               }
-              js.field_f.field_j = 0;
+              js.field_f.position = 0;
             }
             return;
           }
-          js.field_f.field_j = 0;
+          js.field_f.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

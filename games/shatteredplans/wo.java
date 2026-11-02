@@ -3,7 +3,7 @@
  */
 final class wo {
     static int field_a;
-    static bi field_b;
+    static Sprite field_b;
 
     public static void a(byte param0) {
         field_b = null;

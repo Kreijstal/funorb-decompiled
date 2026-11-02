@@ -4,7 +4,7 @@
 final class bk {
     static String field_d;
     static String field_c;
-    static pf field_a;
+    static IntrusiveDeque field_a;
     static String[] field_b;
 
     final static boolean a(byte param0) {
@@ -194,7 +194,7 @@ final class bk {
           if (var2 != null) {
             cq.a(-73, ho.field_c, (String) null, (String) (var2), 0);
           } else {
-            var4 = ln.field_o;
+            var4 = Star.field_o;
             var4 = v.a(var4, (byte) 19);
             var5 = "";
             var6 = "|";
@@ -257,11 +257,11 @@ final class bk {
                 if (uq.field_j.field_rb != 0 &&
                   uq.field_j.field_Q < var10 &&
                   !bg.field_g) {
-                  rg.a(true);
+                  ClientException.a(true);
                 }
               }
             }
-            cq.a(-110, ke.field_q[var7], var6, var5 + nq.a(cg.field_E.toString()), var8);
+            cq.a(-110, BufferedSocket.field_q[var7], var6, var5 + nq.a(cg.field_E.toString()), var8);
             if (!sr.field_h) {
               cg.field_C.field_L = false;
             }
@@ -282,6 +282,6 @@ final class bk {
         field_c = "Open in popup window";
         field_d = "you lost 1 fleet in the attack";
         field_b = new String[16];
-        field_a = new pf();
+        field_a = new IntrusiveDeque();
     }
 }

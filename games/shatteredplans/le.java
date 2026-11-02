@@ -6,7 +6,7 @@ abstract class le {
     static String field_a;
     static String field_c;
     static int field_b;
-    static bi field_d;
+    static Sprite field_d;
 
     abstract void a(byte[] param0, byte param1);
 
@@ -73,7 +73,7 @@ abstract class le {
             qq.c(param2);
           } else {
             var4_ref_String = cg.field_E.toString();
-            if (af.a(var4_ref_String, 0)) {
+            if (DelegatingCanvas.a(var4_ref_String, 0)) {
               var13 = (String) null;
               var12 = (String) null;
               md.a(2, pr.field_e, 0, (String) null, (String) null, -16169);
@@ -125,7 +125,7 @@ abstract class le {
         }
         discarded$0 = cg.field_E.append((char) var4);
         var5Lifetime1 = 485;
-        var17 = ln.field_o;
+        var17 = Star.field_o;
         var16 = v.a(var17, (byte) 17);
         var18 = var16;
         if (em.field_h == 2) {

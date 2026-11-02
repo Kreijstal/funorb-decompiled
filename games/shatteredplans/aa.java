@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aa extends f implements op, bp, dl {
+final class aa extends WidgetContainer implements op, bp, dl {
     private fa field_J;
     private fa field_Q;
     private lk field_K;
@@ -75,7 +75,7 @@ final class aa extends f implements op, bp, dl {
         return "</col></u>";
     }
 
-    private final int a(int param0, int param1, int param2, vg param3, String param4, String param5, int param6) {
+    private final int a(int param0, int param1, int param2, UiWidget param3, String param4, String param5, int param6) {
         int discarded$1 = 0;
         RuntimeException var8 = null;
         ah var9 = null;
@@ -93,7 +93,7 @@ final class aa extends f implements op, bp, dl {
         try {
           if (param0 < 126) {
             var10 = (String) null;
-            discarded$1 = this.a(-107, 92, -35, (vg) null, (String) null, (String) null, 123);
+            discarded$1 = this.a(-107, 92, -35, (UiWidget) null, (String) null, (String) null, 123);
           }
           var11 = new pg(20, param2, 120 + param1, 25, param3, false, 120, 3, gn.field_u, 16777215, param5);
           this.b((byte) -120, var11);
@@ -169,7 +169,7 @@ final class aa extends f implements op, bp, dl {
         }
     }
 
-    private final int a(String param0, int param1, vg param2, int param3, int param4) {
+    private final int a(String param0, int param1, UiWidget param2, int param3, int param4) {
         pg var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
@@ -223,7 +223,7 @@ final class aa extends f implements op, bp, dl {
           ((go) ((Object) var3)).a(57, var4, false);
           if (param0 != 15270) {
             var5 = (String) null;
-            discarded$1 = this.a(-31, (String) null, 115, (byte) 34, (vg) null, (String) null);
+            discarded$1 = this.a(-31, (String) null, 115, (byte) 34, (UiWidget) null, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -290,7 +290,7 @@ final class aa extends f implements op, bp, dl {
         this.field_J.field_p = (iq) ((Object) dupTemp$1);
         String var2 = re.a(bo.field_Y, 4371, new String[]{this.l(-63), this.k(15)});
         int var3 = 20;
-        var3 = var3 + this.a(on.field_i, 21760, this.field_F, var3, 170);
+        var3 = var3 + this.a(IntrusiveDequeCursor.field_i, 21760, this.field_F, var3, 170);
         var3 = var3 + (5 + this.a(127, 170, var3, this.field_M, "", ec.field_u, 20));
         var3 = var3 + this.a(co.field_t, 21760, this.field_J, var3, 170);
         var3 = var3 + (5 + this.a(170, ab.field_a, var3, (byte) -127, this.field_H, qq.field_l));
@@ -322,7 +322,7 @@ final class aa extends f implements op, bp, dl {
         this.a(0, var3 + 55 + var6, (byte) 122, 0, 496);
     }
 
-    private final int a(int param0, String param1, int param2, byte param3, vg param4, String param5) {
+    private final int a(int param0, String param1, int param2, byte param3, UiWidget param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -389,7 +389,7 @@ final class aa extends f implements op, bp, dl {
         }
     }
 
-    final void a(int param0, int param1, vg param2, byte param3) {
+    final void a(int param0, int param1, UiWidget param2, byte param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_E.field_y = this.m(param3 - 46);
@@ -556,7 +556,7 @@ final class aa extends f implements op, bp, dl {
         if (param0 != 10) {
           throw new RuntimeException();
         }
-        var6Lifetime8 = wk.a(param1 - 9544, wg.field_e.a(5607, df.field_m), rs.field_Cb, new int[]{var4});
+        var6Lifetime8 = wk.a(param1 - 9544, wg.field_e.a(5607, DualLinkNode.field_m), rs.field_Cb, new int[]{var4});
         var5 = var5 + var6Lifetime8 * var3;
         if (param1 != -71) {
           return -98;
@@ -565,7 +565,7 @@ final class aa extends f implements op, bp, dl {
         return stackIn_39_0;
     }
 
-    final boolean a(int param0, char param1, int param2, vg param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_12_0 = false;
@@ -603,7 +603,7 @@ final class aa extends f implements op, bp, dl {
         }
     }
 
-    private final int a(String param0, vg param1, int param2, byte param3, int param4) {
+    private final int a(String param0, UiWidget param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         hl var7 = null;
         int var8 = 0;

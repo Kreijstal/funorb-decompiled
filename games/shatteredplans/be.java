@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends oh {
+final class be extends IntrusiveNode {
     static int field_h;
-    static bi field_k;
+    static Sprite field_k;
     static long field_l;
     static String field_i;
     byte[] field_j;
@@ -143,7 +143,7 @@ final class be extends oh {
           var10_int = (7 + var10_int) / 8;
           qj.field_f = new byte[var10_int];
           if (null == param7.field_M) {
-            param7.field_M = new pf();
+            param7.field_M = new IntrusiveDeque();
           }
           gr.field_p = param7.field_M;
           gr.field_p.a(0);
@@ -151,15 +151,15 @@ final class be extends oh {
           a.field_j = -1;
           bh.field_h = -1;
           ah.field_X = 0;
-          kf.field_g = 0;
+          GameApplet.field_g = 0;
           if (param0.field_M == null) {
-            param0.field_M = new pf();
+            param0.field_M = new IntrusiveDeque();
           }
           kj.field_a = param0.field_M;
           kj.field_a.a(0);
           ea.field_b = new in(param3);
           if (param2.field_M == null) {
-            param2.field_M = new pf();
+            param2.field_M = new IntrusiveDeque();
           }
           uo.field_a = param2.field_M;
           uo.field_a.a(0);

@@ -9,11 +9,11 @@ final class wm {
     static nf[] field_d;
     static String field_e;
 
-    final static bi a(int param0, int param1) {
-        bi var2 = new bi(dc.field_F.field_z, dc.field_F.field_w);
+    final static Sprite a(int param0, int param1) {
+        Sprite var2 = new Sprite(GameState.field_F.field_z, GameState.field_F.field_w);
         ra.a(param1 ^ -110);
         var2.e();
-        dc.field_F.b(0, 0, param0 < param1 ? 2105376 : param0);
+        GameState.field_F.b(0, 0, param0 < param1 ? 2105376 : param0);
         cg.i(0);
         return var2;
     }

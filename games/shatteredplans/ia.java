@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class ia {
     int field_db;
-    fs[] field_ib;
+    Player[] field_ib;
     l field_O;
     int field_L;
     kq field_o;
@@ -18,29 +18,29 @@ abstract class ia {
     static qr field_j;
     float field_F;
     float field_g;
-    fs field_B;
+    Player field_B;
     float field_lb;
-    sd field_fb;
+    Territory field_fb;
     int field_e;
     float field_f;
     static int field_b;
     boolean field_x;
-    ln field_p;
-    bi field_gb;
+    Star field_p;
+    Sprite field_gb;
     mg field_S;
     int[][] field_bb;
-    private fs[] field_q;
+    private Player[] field_q;
     int[] field_a;
     Random field_l;
     int field_t;
     int[] field_z;
     int[] field_i;
-    pf field_m;
+    IntrusiveDeque field_m;
     private int[][] field_R;
     int[] field_eb;
-    private sd[] field_r;
+    private Territory[] field_r;
     boolean[] field_A;
-    private sd[] field_w;
+    private Territory[] field_w;
     private int[] field_G;
     int field_n;
     int[] field_U;
@@ -48,28 +48,28 @@ abstract class ia {
     boolean field_X;
     private int[] field_jb;
     int field_u;
-    pf field_c;
-    pf field_hb;
+    IntrusiveDeque field_c;
+    IntrusiveDeque field_hb;
     bh[] field_h;
-    pf field_Y;
+    IntrusiveDeque field_Y;
     int[][] field_D;
-    pf field_ab;
-    fs[] field_Z;
-    pf field_s;
-    pf field_v;
+    IntrusiveDeque field_ab;
+    Player[] field_Z;
+    IntrusiveDeque field_s;
+    IntrusiveDeque field_v;
     boolean[] field_kb;
     int[] field_J;
-    fs[] field_Q;
-    private sd[] field_N;
+    Player[] field_Q;
+    private Territory[] field_N;
     int field_T;
     boolean field_C;
     int field_W;
     int field_d;
     boolean[] field_P;
-    pf field_V;
-    pf field_mb;
+    IntrusiveDeque field_V;
+    IntrusiveDeque field_mb;
 
-    final void a(ln param0, int param1, int param2, fs param3) {
+    final void a(Star param0, int param1, int param2, Player param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -113,7 +113,7 @@ abstract class ia {
 
     final void b(boolean param0) {
         int var3 = 0;
-        ln var4 = null;
+        Star var4 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = this.field_O.field_e.length;
         if (param0) {
@@ -122,8 +122,8 @@ abstract class ia {
         if (this.field_Q == null ||
           this.field_Q.length < this.field_O.field_e.length) {
           this.field_jb = new int[var2];
-          this.field_N = new sd[var2];
-          this.field_Q = new fs[var2];
+          this.field_N = new Territory[var2];
+          this.field_Q = new Player[var2];
           this.field_P = new boolean[var2];
         }
         for (var3 = 0; var3 < var2; var3++) {
@@ -181,7 +181,7 @@ abstract class ia {
         }
     }
 
-    final void a(sd param0, int param1) {
+    final void a(Territory param0, int param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -191,7 +191,7 @@ abstract class ia {
         int var4_int = 0;
         bh var4 = null;
         int var5 = 0;
-        ln var6_ref_ln = null;
+        Star var6_ref_ln = null;
         int var6 = 0;
         int var7_int = 0;
         float var7 = 0.0f;
@@ -266,7 +266,7 @@ abstract class ia {
         }
     }
 
-    final void a(fs param0, ln param1, boolean param2, int param3) {
+    final void a(Player param0, Star param1, boolean param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -320,7 +320,7 @@ abstract class ia {
         }
     }
 
-    final void a(fs param0, ln param1, byte param2, ln param3) {
+    final void a(Player param0, Star param1, byte param2, Star param3) {
         int var5_int = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -375,14 +375,14 @@ abstract class ia {
         }
     }
 
-    private final bh a(int param0, sd param1) {
+    private final bh a(int param0, Territory param1) {
         int var6 = 0;
         bh stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ln var3 = null;
+        Star var3 = null;
         RuntimeException var3_ref = null;
         bh var4 = null;
         jd[] var5 = null;
@@ -430,9 +430,9 @@ abstract class ia {
         }
     }
 
-    final void a(int param0, ln param1) {
-        bi var4 = null;
-        bi var5 = null;
+    final void a(int param0, Star param1) {
+        Sprite var4 = null;
+        Sprite var5 = null;
         try {
           if (param0 > -21) {
             this.field_X = false;
@@ -445,7 +445,7 @@ abstract class ia {
         }
     }
 
-    final void a(ln param0, int param1) {
+    final void a(Star param0, int param1) {
         bh var3 = null;
         float var4 = 0.0f;
         try {
@@ -471,7 +471,7 @@ abstract class ia {
         }
     }
 
-    private final boolean a(int param0, int param1, ln param2) {
+    private final boolean a(int param0, int param1, Star param2) {
         es var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -504,9 +504,9 @@ abstract class ia {
         }
     }
 
-    final ln a(int param0, boolean param1, int param2) {
+    final Star a(int param0, boolean param1, int param2) {
         int var5 = 0;
-        ln var6 = null;
+        Star var6 = null;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 < 0) {
           return null;
@@ -514,8 +514,8 @@ abstract class ia {
         if (param2 < 0) {
           return null;
         }
-        ln[] var9 = this.field_O.field_e;
-        ln[] var4 = var9;
+        Star[] var9 = this.field_O.field_e;
+        Star[] var4 = var9;
         for (var5 = 0; var9.length > var5; var5++) {
           var6 = var9[var5];
           if (cp.a(0, param2, this.field_D[var6.field_p], this.field_h[var6.field_p], param0)) {
@@ -525,12 +525,12 @@ abstract class ia {
         if (!param1) {
           return null;
         }
-        ln var8 = (ln) null;
-        boolean discarded$0 = this.a(-16, -79, (ln) null);
+        Star var8 = (Star) null;
+        boolean discarded$0 = this.a(-16, -79, (Star) null);
         return null;
     }
 
-    final void a(int param0, ln param1, float param2) {
+    final void a(int param0, Star param1, float param2) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -576,15 +576,15 @@ abstract class ia {
 
     final void d(int param0) {
         int var3 = 0;
-        ln var4 = null;
+        Star var4 = null;
         int[] var5 = null;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         if (null == this.field_R ||
           this.field_R.length < this.field_O.field_e.length) {
           this.field_R = new int[this.field_O.field_e.length][];
         }
-        ln[] var7 = this.field_O.field_e;
-        ln[] var2 = var7;
+        Star[] var7 = this.field_O.field_e;
+        Star[] var2 = var7;
         for (var3 = param0; var3 < var7.length; var3++) {
           var4 = var7[var3];
           var5 = mf.a((byte) 74, var4.field_G);
@@ -593,12 +593,12 @@ abstract class ia {
     }
 
     final void b(int param0) {
-        int var2 = -640 + ln.field_K.field_z;
-        int var3 = -480 + ln.field_K.field_w;
+        int var2 = -640 + Star.field_K.field_z;
+        int var3 = -480 + Star.field_K.field_w;
         int var5 = -108 % ((-29 - param0) / 51);
         int var4 = -(((int)this.field_k - 0) * (var2 << 4)) / (0 + this.field_O.field_k);
         int var6 = -(((int)this.field_E + 0) * (var3 << 4)) / (0 + this.field_O.field_b);
-        ln.field_K.f(var4 >> 4, var6 >> 4);
+        Star.field_K.f(var4 >> 4, var6 >> 4);
     }
 
     final void c(boolean param0) {
@@ -620,11 +620,11 @@ abstract class ia {
         field_M = null;
     }
 
-    final void a(int[] param0, boolean param1, sd[] param2, fs[] param3, boolean param4) {
+    final void a(int[] param0, boolean param1, Territory[] param2, Player[] param3, boolean param4) {
         try {
           if (param4) {
-            this.field_Z = (fs[]) ((Object) param3.clone());
-            this.field_r = (sd[]) ((Object) param2.clone());
+            this.field_Z = (Player[]) ((Object) param3.clone());
+            this.field_r = (Territory[]) ((Object) param2.clone());
             this.field_eb = (int[]) ((Object) param0.clone());
           }
           this.field_w = param2;
@@ -638,17 +638,17 @@ abstract class ia {
         }
     }
 
-    final void a(int param0, pf param1, boolean param2) {
+    final void a(int param0, IntrusiveDeque param1, boolean param2) {
         RuntimeException stackIn_68_0 = null;
         StringBuilder stackIn_68_1 = null;
         String stackIn_69_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
-        oh var4 = null;
+        IntrusiveNode var4 = null;
         vn var4_ref = null;
         RuntimeException var4_ref2 = null;
         int var5_int = 0;
-        oh var5 = null;
+        IntrusiveNode var5 = null;
         int var6 = 0;
         ne var7 = null;
         int var8 = 0;
@@ -768,7 +768,7 @@ abstract class ia {
                     var5 = param1.a((byte) -71);
                   }
                 }
-                this.field_o.a(10, 0, ib.field_b);
+                this.field_o.a(10, 0, MouseWheelInput.field_b);
               }
             }
           }
@@ -798,9 +798,9 @@ abstract class ia {
         int var2;
         int var3;
         int var4_int;
-        ln[] var4;
+        Star[] var4;
         int var5;
-        ln var6;
+        Star var6;
         int var7;
         jd var9;
         float var10;

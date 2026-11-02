@@ -31,7 +31,7 @@ final class ja extends da implements od, g {
         field_j = null;
     }
 
-    final static void a(int param0, int param1, bi param2, int param3) {
+    final static void a(int param0, int param1, Sprite param2, int param3) {
         int var9 = 0;
         int var10 = 0;
         int[] stackIn_21_0 = null;

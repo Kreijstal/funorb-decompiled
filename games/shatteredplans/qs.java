@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-abstract class qs extends vg implements ni {
-    vg field_z;
+abstract class qs extends UiWidget implements ni {
+    UiWidget field_z;
     static ub field_y;
 
-    private final boolean a(vg param0, int param1) {
+    private final boolean a(UiWidget param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
@@ -50,7 +50,7 @@ abstract class qs extends vg implements ni {
         try {
           discarded$12 = param3.append('\n');
           if (param0 != 81) {
-            this.field_z = (vg) null;
+            this.field_z = (UiWidget) null;
           }
           for (var5_int = 0; param2 >= var5_int; var5_int++) {
             discarded$14 = param3.append(' ');
@@ -81,7 +81,7 @@ abstract class qs extends vg implements ni {
         }
     }
 
-    final boolean a(byte param0, vg param1) {
+    final boolean a(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
@@ -118,7 +118,7 @@ abstract class qs extends vg implements ni {
         var2Lifetime1 = 31 % ((-84 - param0) / 33);
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4, vg param5) {
+    void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         if (param4 != -600269855) {
           return;
         }
@@ -138,8 +138,8 @@ abstract class qs extends vg implements ni {
         if (param0 == 1) {
           return;
         }
-        vg var3 = (vg) null;
-        this.a(-10, 20, (vg) null, (byte) 94);
+        UiWidget var3 = (UiWidget) null;
+        this.a(-10, 20, (UiWidget) null, (byte) 94);
     }
 
     public static void a(byte param0) {
@@ -149,7 +149,7 @@ abstract class qs extends vg implements ni {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, vg param3, int param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -191,9 +191,9 @@ abstract class qs extends vg implements ni {
         ak.c(126, -var1 + wm.field_b);
     }
 
-    private final boolean a(int param0, vg param1) {
+    private final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        vg var4 = null;
+        UiWidget var4 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -201,8 +201,8 @@ abstract class qs extends vg implements ni {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 9501) {
-            var4 = (vg) null;
-            this.a((byte) -63, (vg) null);
+            var4 = (UiWidget) null;
+            this.a((byte) -63, (UiWidget) null);
           }
           stackIn_7_0 = (this.field_z != null) && (!this.field_z.f(1)) && (this.field_z.a((byte) 1, param1));
           return stackIn_7_0;
@@ -256,8 +256,8 @@ abstract class qs extends vg implements ni {
         String var2Lifetime1;
         String var3Lifetime1;
         if (!param0) {
-          vg var4 = (vg) null;
-          discarded$0 = this.a(112, (vg) null);
+          UiWidget var4 = (UiWidget) null;
+          discarded$0 = this.a(112, (UiWidget) null);
           var2 = super.c(param0);
           if (this.field_z != null) {
             var3 = this.field_z.c(param0);
@@ -317,7 +317,7 @@ abstract class qs extends vg implements ni {
         }
     }
 
-    boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, vg param6) {
+    boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -326,7 +326,7 @@ abstract class qs extends vg implements ni {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 95) {
-            this.field_z = (vg) null;
+            this.field_z = (UiWidget) null;
           }
           stackIn_6_0 = (null != this.field_z) && (this.field_z.a(param0, param1, (byte) 112, param3, param4 + this.field_m, this.field_q + param5, param6));
           return stackIn_6_0;
@@ -344,11 +344,11 @@ abstract class qs extends vg implements ni {
         }
     }
 
-    vg a(int param0) {
-        vg var2 = null;
-        vg var2Lifetime1;
+    UiWidget a(int param0) {
+        UiWidget var2 = null;
+        UiWidget var2Lifetime1;
         if (param0 != 2) {
-          this.field_z = (vg) null;
+          this.field_z = (UiWidget) null;
           var2 = this.field_z;
           if (var2 == null) {
             return null;
@@ -368,7 +368,7 @@ abstract class qs extends vg implements ni {
         return null;
     }
 
-    void a(int param0, int param1, vg param2, byte param3) {
+    void a(int param0, int param1, UiWidget param2, byte param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -401,14 +401,14 @@ abstract class qs extends vg implements ni {
         }
         if (param0 == 0 &&
           this.field_p != null) {
-          this.field_p.a((vg) (this), param3, true, param2, (byte) 12);
+          this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
         }
         if (null != this.field_z) {
           this.field_z.a(param0, -11857, this.field_q + param2, this.field_m + param3);
         }
     }
 
-    final boolean a(int param0, char param1, int param2, vg param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_14_0 = false;

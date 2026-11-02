@@ -4,12 +4,12 @@
 abstract class il extends jl {
     private oa field_ab;
     private int field_jb;
-    private vg field_ib;
+    private UiWidget field_ib;
     private int field_db;
-    static bi field_gb;
+    static Sprite field_gb;
     private int field_Z;
     static String field_fb;
-    static ob field_kb;
+    static PacketBuffer field_kb;
     static a field_bb;
     static String field_Y;
     static String field_lb;
@@ -19,7 +19,7 @@ abstract class il extends jl {
     private cg field_eb;
     static float field_cb;
 
-    private final void a(int param0, vg param1) {
+    private final void a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -56,7 +56,7 @@ abstract class il extends jl {
         }
     }
 
-    il(tc param0, vg param1, int param2, int param3, int param4) {
+    il(tc param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_x, param1.field_n + param2 + 12);
         try {
           this.field_db = param2;
@@ -69,7 +69,7 @@ abstract class il extends jl {
         }
     }
 
-    boolean a(int param0, char param1, int param2, vg param3) {
+    boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -183,7 +183,7 @@ abstract class il extends jl {
         return super.a((byte) 81);
     }
 
-    void b(vg param0, int param1) {
+    void b(UiWidget param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -230,7 +230,7 @@ abstract class il extends jl {
         super.n(param0);
     }
 
-    final static void a(int param0, int param1, int param2, bi param3) {
+    final static void a(int param0, int param1, int param2, Sprite param3) {
         int var17 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;

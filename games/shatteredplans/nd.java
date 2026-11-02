@@ -27,10 +27,10 @@ final class nd {
         sq var8;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         while (true) {
-          if (sd.field_t == null) {
+          if (Territory.field_t == null) {
             return null;
           }
-          if (sd.field_t.charAt(0) != 91) {
+          if (Territory.field_t.charAt(0) != 91) {
             tp.b((byte) 34);
             continue;
           }
@@ -39,22 +39,22 @@ final class nd {
         var2 = -25 % ((0 - param0) / 59);
         var8 = new sq();
         var1 = var8;
-        sd.field_t.substring(1, sd.field_t.indexOf(']'));
+        Territory.field_t.substring(1, Territory.field_t.indexOf(']'));
         var3 = new StringBuilder();
         tp.b((byte) 56);
-        while (null != sd.field_t) {
-          if (sd.field_t.charAt(0) == 91) {
+        while (null != Territory.field_t) {
+          if (Territory.field_t.charAt(0) == 91) {
             var8.field_c = var3.toString();
             return var8;
           }
-          if (sd.field_t.charAt(0) == 64) {
-            var4 = sd.field_t.indexOf(' ');
+          if (Territory.field_t.charAt(0) == 64) {
+            var4 = Territory.field_t.indexOf(' ');
             if (-1 == var4) {
-              var5 = sd.field_t.substring(1);
+              var5 = Territory.field_t.substring(1);
               var6 = null;
             } else {
-              var5 = sd.field_t.substring(1, var4);
-              var6 = kf.a(sd.field_t.substring(var4), (byte) 125, ',');
+              var5 = Territory.field_t.substring(1, var4);
+              var6 = GameApplet.a(Territory.field_t.substring(var4), (byte) 125, ',');
             }
             if (!var5.equalsIgnoreCase("topleft")) {
               var8 = var1;
@@ -94,7 +94,7 @@ final class nd {
                                 var8.field_r = true;
                               }
                             } else {
-                              pa.a((String[]) (var6), var8, (byte) -127);
+                              ProxySocketConnector.a((String[]) (var6), var8, (byte) -127);
                             }
                           }
                         }
@@ -109,7 +109,7 @@ final class nd {
               w.a((String[]) (var6), 0, var8, -117);
             }
           } else {
-            discarded$0 = var3.append(sd.field_t);
+            discarded$0 = var3.append(Territory.field_t);
             discarded$1 = var3.append(' ');
           }
           tp.b((byte) -118);

@@ -38,7 +38,7 @@ final class b extends vd {
         gf.a(this.field_k, this.field_t, this.field_m, this.field_i, this.field_w, this.field_v);
     }
 
-    final static void a(int param0, ob param1, String param2) {
+    final static void a(int param0, PacketBuffer param1, String param2) {
         int var4 = 0;
         int var3_int = 0;
         int var5 = 0;

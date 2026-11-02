@@ -90,7 +90,7 @@ final class sg extends qr {
         return;
     }
 
-    sg(long param0, qr param1, qr param2, qr param3, bi param4, String param5) {
+    sg(long param0, qr param1, qr param2, qr param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -189,7 +189,7 @@ final class sg extends qr {
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (null == cb.field_h) {
-            cb.field_h = new pf();
+            cb.field_h = new IntrusiveDeque();
           }
           var9 = new String[32];
           var10 = var9;

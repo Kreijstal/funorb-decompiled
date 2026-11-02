@@ -6,7 +6,7 @@ abstract class qo {
     static int field_a;
     static int[] field_c;
     ha[] field_d;
-    static ln field_e;
+    static Star field_e;
 
     final int a(byte param0, int param1) {
         ha var4 = null;
@@ -28,13 +28,13 @@ abstract class qo {
 
     final static void a(int param0, int param1) {
         int var2 = (kh.field_Mb - 640) / 2;
-        int var3 = ed.field_f * ed.field_f;
+        int var3 = MouseInputHandler.field_f * MouseInputHandler.field_f;
         int var4 = var3 - param1 * param1;
         if (param0 != 22353) {
           field_b = 102;
         }
         am.field_xb.a(199, gf.field_k - 120 - 94, (byte) 109, 90, var2 - 199 * var4 / var3);
-        pf.field_g.a(438, -124 + gf.field_k, (byte) 77, 0, 438 * var4 / var3 + var2 + 202);
+        IntrusiveDeque.field_g.a(438, -124 + gf.field_k, (byte) 77, 0, 438 * var4 / var3 + var2 + 202);
     }
 
     public static void a(int param0) {

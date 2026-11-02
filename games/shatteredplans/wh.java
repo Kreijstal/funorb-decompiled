@@ -10,9 +10,9 @@ final class wh {
     final static long a(int param0) {
         if (param0 != 18) {
           field_c = (kj) null;
-          return pr.a(14274) - pf.field_e;
+          return pr.a(14274) - IntrusiveDeque.field_e;
         }
-        return pr.a(14274) - pf.field_e;
+        return pr.a(14274) - IntrusiveDeque.field_e;
     }
 
     final static void a(boolean param0) {
@@ -27,8 +27,8 @@ final class wh {
           ta.field_b.a((byte) -113, var1);
           return;
         }
-        bi[] var2 = (bi[]) null;
-        wh.a((bi[]) null, 98, -107, (byte) 31, 66);
+        Sprite[] var2 = (Sprite[]) null;
+        wh.a((Sprite[]) null, 98, -107, (byte) 31, 66);
         var1Lifetime1 = (cl) (ql.field_p.a(true));
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new cl();
@@ -46,7 +46,7 @@ final class wh {
         field_c = null;
     }
 
-    final static void a(bi[] param0, int param1, int param2, byte param3, int param4) {
+    final static void a(Sprite[] param0, int param1, int param2, byte param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lh extends vd {
-    static pf field_v;
+    static IntrusiveDeque field_v;
     private int field_C;
     static int[] field_y;
     private int field_B;
-    static pf field_G;
-    static pf field_D;
+    static IntrusiveDeque field_G;
+    static IntrusiveDeque field_D;
     gj field_x;
     static String field_E;
     static String field_H;
@@ -112,7 +112,7 @@ final class lh extends vd {
 
     final static void a(byte param0, int[] param1, int[] param2) {
         try {
-          rg.a(0, -2147483648, param2.length - 1, param1, param2);
+          ClientException.a(0, -2147483648, param2.length - 1, param1, param2);
           int var3_int = -92 % ((-25 - param0) / 57);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "lh.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -156,14 +156,14 @@ final class lh extends vd {
         if (param2 == -498) {
           return;
         }
-        field_v = (pf) null;
+        field_v = (IntrusiveDeque) null;
     }
 
     static {
         field_y = new int[4];
-        field_D = new pf();
-        field_G = new pf();
-        field_v = new pf();
+        field_D = new IntrusiveDeque();
+        field_G = new IntrusiveDeque();
+        field_v = new IntrusiveDeque();
         field_E = "<%0> cannot join; the game is full.";
         field_u = "Wormhole indicator";
         field_H = "1 fleet has retreated to <%0>";

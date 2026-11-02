@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class kg extends vg {
+class kg extends UiWidget {
     boolean field_z;
     private boolean field_A;
     private boolean field_B;
@@ -55,7 +55,7 @@ class kg extends vg {
         }
     }
 
-    boolean a(byte param0, vg param1) {
+    boolean a(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_13_0 = null;
@@ -74,7 +74,7 @@ class kg extends vg {
           this.field_A = true;
           if (this.field_u != null &&
             this.field_u instanceof dj) {
-            ((dj) (this.field_u)).a(10202, this.field_A, (vg) (this));
+            ((dj) (this.field_u)).a(10202, this.field_A, (UiWidget) (this));
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +99,7 @@ class kg extends vg {
         return this.field_A;
     }
 
-    boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, vg param6) {
+    boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -161,7 +161,7 @@ class kg extends vg {
           return;
         }
         if (this.field_u instanceof dj) {
-          ((dj) (this.field_u)).a(10202, this.field_A, (vg) (this));
+          ((dj) (this.field_u)).a(10202, this.field_A, (UiWidget) (this));
           var2Lifetime2 = -38 % ((param0 + 84) / 33);
           return;
         }
@@ -195,7 +195,7 @@ class kg extends vg {
         }
     }
 
-    void a(int param0, int param1, vg param2, byte param3) {
+    void a(int param0, int param1, UiWidget param2, byte param3) {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_o != 0) {
@@ -213,7 +213,7 @@ class kg extends vg {
         }
     }
 
-    boolean a(int param0, char param1, int param2, vg param3) {
+    boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -273,7 +273,7 @@ class kg extends vg {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, vg param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         if (param4 != -600269855) {
           return;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ca extends oh {
+final class ca extends IntrusiveNode {
     static String field_i;
     static a field_h;
     static int field_j;
@@ -47,7 +47,7 @@ final class ca extends oh {
         }
     }
 
-    ca(fs param0) {
+    ca(Player param0) {
     }
 
     final static void a(java.applet.Applet param0, bc param1, bc param2, bc param3, boolean param4, bc param5) {
@@ -66,11 +66,11 @@ final class ca extends oh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var8 = 0;
-        bi[][] var9 = null;
-        bi[][] var10 = null;
+        Sprite[][] var9 = null;
+        Sprite[][] var10 = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var9 = new bi[la.field_r.length][];
+          var9 = new Sprite[la.field_r.length][];
           var10 = var9;
           for (var7 = 0; var7 < la.field_r.length; var7++) {
             if (la.field_r[var7] != null) {

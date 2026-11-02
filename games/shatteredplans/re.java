@@ -161,7 +161,7 @@ final class re {
         }
         var3 = new dp();
         if (var4 != null) {
-          var3.a(new ob(var4), 0);
+          var3.a(new PacketBuffer(var4), 0);
         }
         if (32768 <= param1) {
           var3.e((byte) -117);
@@ -226,12 +226,12 @@ final class re {
         }
     }
 
-    final static bi[] a(bi[] param0, int param1) {
+    final static Sprite[] a(Sprite[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        bi var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
-        bi[] stackIn_7_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -248,7 +248,7 @@ final class re {
           if (param1 <= 32) {
             re.a((byte) 21);
           }
-          stackIn_7_0 = (bi[]) (param0);
+          stackIn_7_0 = (Sprite[]) (param0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

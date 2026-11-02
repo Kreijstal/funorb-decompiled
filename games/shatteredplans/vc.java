@@ -6,16 +6,16 @@ import java.util.*;
 final class vc {
     static ej field_a;
     static String field_e;
-    static bi field_b;
+    static Sprite field_b;
     static String[] field_c;
     static sr[] field_d;
 
     final static int a(byte param0, int param1) {
         if (param0 != -39) {
           vc.a(-12);
-          return hi.a(param1, tg.field_b, -11);
+          return TaskAi.a(param1, tg.field_b, -11);
         }
-        return hi.a(param1, tg.field_b, -11);
+        return TaskAi.a(param1, tg.field_b, -11);
     }
 
     public static void a(int param0) {

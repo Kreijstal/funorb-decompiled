@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rk extends oh {
+final class rk extends IntrusiveNode {
     static String field_n;
     static String field_h;
     static String field_m;
-    static bi field_j;
+    static Sprite field_j;
     static String field_l;
-    static bi field_k;
+    static Sprite field_k;
     int[] field_i;
     static String field_o;
 
@@ -22,7 +22,7 @@ final class rk extends oh {
           field_n = null;
           return;
         }
-        field_j = (bi) null;
+        field_j = (Sprite) null;
         field_l = null;
         field_n = null;
     }

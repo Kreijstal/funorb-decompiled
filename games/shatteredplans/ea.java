@@ -22,17 +22,17 @@ final class ea extends Random {
         vp.field_o.field_p = 0;
     }
 
-    final static bi[] a(int param0, byte param1, int param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3) {
         int var4 = 10;
-        bi[] var5 = new bi[9];
-        var5[0] = new bi(param3, param3);
-        var5[1] = new bi(10, param3);
-        var5[2] = new bi(param3, param3);
-        var5[3] = new bi(param3, 10);
-        var5[5] = new bi(param3, 10);
-        var5[6] = new bi(param3, param3);
-        var5[7] = new bi(10, param3);
-        var5[8] = new bi(param3, param3);
+        Sprite[] var5 = new Sprite[9];
+        var5[0] = new Sprite(param3, param3);
+        var5[1] = new Sprite(10, param3);
+        var5[2] = new Sprite(param3, param3);
+        var5[3] = new Sprite(param3, 10);
+        var5[5] = new Sprite(param3, 10);
+        var5[6] = new Sprite(param3, param3);
+        var5[7] = new Sprite(10, param3);
+        var5[8] = new Sprite(param3, param3);
         ra.a(-128);
         var5[0].e();
         ch.a(20, 3974311, var4, 10 + param3 * 2, 0, 0, 3974311, 10 + 2 * param3);

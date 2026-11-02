@@ -10986,6 +10986,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "shatteredplans": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/shatteredplans"
+      },
+      "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
+      "sources": {
+        "files": 457,
+        "sha256": "31224c96dc1092dc153381befb25792514a77b617dea0fba886d416b21103560"
+      },
+      "dictionary": {
+        "path": "decompilation/shatteredplans-naming.json",
+        "sha256": "84f064eab6b3fc8b76c32bf4ec6bd652ed9097aa949a96799a6be40667b4ed2b"
+      },
+      "readingGuide": {
+        "path": "games/shatteredplans/README.md",
+        "sha256": "7f2671fccee334382711524f1a094465727f55811b0cb5c9a728d1b394e05906"
+      },
+      "rulesSha256": "7601006f173d24b447996603b175d685917650af00d9b1aa7f56b07e4c512938",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -12446,6 +12470,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 457,
+          "sha256": "31224c96dc1092dc153381befb25792514a77b617dea0fba886d416b21103560"
         }
       },
       "solknight": {

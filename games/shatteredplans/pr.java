@@ -4,7 +4,7 @@
 final class pr {
     static int[] field_d;
     static String field_e;
-    static bi field_a;
+    static Sprite field_a;
     static qr field_c;
     static String field_b;
     static int field_g;

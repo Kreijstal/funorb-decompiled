@@ -5,13 +5,13 @@ import java.io.*;
 
 class ts extends kg {
     static String[] field_K;
-    static bi[] field_L;
-    private pf field_D;
+    static Sprite[] field_L;
+    private IntrusiveDeque field_D;
     private ql field_I;
     private String[] field_J;
     static String field_E;
     static String field_H;
-    static kf field_G;
+    static GameApplet field_G;
     static String field_F;
 
     void a(int param0, int param1, int param2, int param3) {
@@ -24,8 +24,8 @@ class ts extends kg {
         pj var5 = (pj) ((Object) this.field_p);
         ql var6 = this.field_I;
         if (var6 != null) {
-          var7 = var5.b(0, (vg) (this), param3);
-          var8 = var5.a(param2, (vg) (this), 100);
+          var7 = var5.b(0, (UiWidget) (this), param3);
+          var8 = var5.a(param2, (UiWidget) (this), 100);
           do {
             dd.a(2 + var6.field_l, param1 ^ -11858, 2 + var6.field_j, var6.field_k + var7 - 2, var8 + (var6.field_m - 2));
             var6 = var6.field_h;
@@ -96,7 +96,7 @@ class ts extends kg {
         }
     }
 
-    boolean a(byte param0, vg param1) {
+    boolean a(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -145,21 +145,21 @@ class ts extends kg {
           }
           dupTemp$1 = pr.a(14274);
           mj.field_Pb = dupTemp$1;
-          pf.field_e = dupTemp$1;
+          IntrusiveDeque.field_e = dupTemp$1;
           if (param1 != ~da.field_e.field_d) {
             cs.field_j = oa.field_a;
           } else {
             try {
-              wg.field_f = new ke((java.net.Socket) (da.field_e.field_e), nr.field_l);
+              wg.field_f = new BufferedSocket((java.net.Socket) (da.field_e.field_e), nr.field_l);
               var4 = sa.field_a;
               var5 = var4;
-              js.field_f.field_j = 0;
+              js.field_f.position = 0;
               stackIn_9_0 = (param0) ? -2 : -1;
-              rm.field_e = stackIn_9_0;
+              IterableNodeHashTable.field_e = stackIn_9_0;
               tp.field_g = stackIn_9_0;
               kp.field_n = stackIn_9_0;
               cs.field_j = j.field_r;
-              var5.field_j = 0;
+              var5.position = 0;
               hq.a(sp.field_g, ee.field_o, js.field_f, (byte) 20, uk.field_a);
               d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -221,7 +221,7 @@ class ts extends kg {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        this.a(param1, ((pj) ((Object) this.field_p)).a(true, (vg) (this)), (byte) 100, param0, param3);
+        this.a(param1, ((pj) ((Object) this.field_p)).a(true, (UiWidget) (this)), (byte) 100, param0, param3);
         if (param2 != 57) {
           field_E = (String) null;
         }
@@ -241,7 +241,7 @@ class ts extends kg {
               wj.a(128);
             } else {
               if (ui.field_m == 3) {
-                pa.c(8421504);
+                ProxySocketConnector.c(8421504);
               } else {
                 if (4 == ui.field_m) {
                   eb.a(param0 - 6173);
@@ -309,11 +309,11 @@ class ts extends kg {
         var17 = null;
         var22 = null;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
-        this.field_D = new pf();
+        this.field_D = new IntrusiveDeque();
         if (!param0) {
           var2 = 0;
           var27 = (pj) ((Object) this.field_p);
-          var24 = var27.a((vg) (this), true);
+          var24 = var27.a((UiWidget) (this), true);
           while (true) {
             var5 = this.field_s.indexOf("<hotspot=", var2);
             if (var5 == -1) {
@@ -356,10 +356,10 @@ class ts extends kg {
             }
           }
         }
-        field_L = (bi[]) null;
+        field_L = (Sprite[]) null;
         var2Lifetime1 = 0;
         var28 = (pj) ((Object) this.field_p);
-        var19 = var28.a((vg) (this), true);
+        var19 = var28.a((UiWidget) (this), true);
         while (true) {
           var5Lifetime1 = this.field_s.indexOf("<hotspot=", var2Lifetime1);
           if (var5Lifetime1 == -1) {
@@ -455,7 +455,7 @@ class ts extends kg {
         return this.field_J[this.field_I.field_i];
     }
 
-    void a(int param0, int param1, vg param2, byte param3) {
+    void a(int param0, int param1, UiWidget param2, byte param3) {
         int var5_int = 0;
         int var6 = 0;
         try {

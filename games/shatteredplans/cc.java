@@ -78,11 +78,11 @@ final class cc extends ml {
         nf var9 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (ed.field_f > pg.field_J) {
+          if (MouseInputHandler.field_f > pg.field_J) {
             pg.field_J = pg.field_J + 1;
           }
           if (pc.field_m != so.field_q.field_d) {
-            fl.field_f = fl.field_f + (so.field_q.field_d - pc.field_m);
+            NodeHashTableIterator.field_f = NodeHashTableIterator.field_f + (so.field_q.field_d - pc.field_m);
             pc.field_m = so.field_q.field_d;
           }
           if (pg.field_J <= 0) {
@@ -109,7 +109,7 @@ final class cc extends ml {
             }
           }
           if (pr.field_c.field_rb != 0) {
-            tc.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, ho.field_j, un.field_g, po.field_d, ii.field_u, fk.field_i, gn.field_w, (String) null, 0L);
+            tc.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, ho.field_j, un.field_g, po.field_d, SpriteState.field_u, fk.field_i, gn.field_w, (String) null, 0L);
           }
           var9 = sh.a(false, param2, tg.field_a, cr.field_c);
           if (var9 != null) {
@@ -296,7 +296,7 @@ final class cc extends ml {
             stackIn_10_0 = ol.field_d;
             return stackIn_10_0;
           }
-          if (pf.a(var5, (byte) 24)) {
+          if (IntrusiveDeque.a(var5, (byte) 24)) {
             stackIn_13_0 = no.field_d;
             return stackIn_13_0;
           }

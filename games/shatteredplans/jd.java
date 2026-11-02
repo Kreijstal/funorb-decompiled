@@ -4,7 +4,7 @@
 final class jd {
     int field_g;
     static String field_e;
-    static bi[] field_j;
+    static Sprite[] field_j;
     int field_f;
     int field_b;
     int field_c;
@@ -77,7 +77,7 @@ final class jd {
         }
     }
 
-    jd(ln param0, ln param1, ln param2, int param3, int param4, int param5) {
+    jd(Star param0, Star param1, Star param2, int param3, int param4, int param5) {
         try {
           this.field_g = 1;
           this.field_b = param5;

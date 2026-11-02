@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sb extends oh {
+final class sb extends IntrusiveNode {
     float field_p;
     float field_k;
     float field_n;

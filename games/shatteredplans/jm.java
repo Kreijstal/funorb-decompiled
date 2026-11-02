@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jm extends kp {
-    static bi field_r;
+    static Sprite field_r;
     static String field_s;
     static int field_t;
     static String field_q;
@@ -27,7 +27,7 @@ final class jm extends kp {
         field_q = null;
         field_s = null;
         if (param0 != 22595) {
-          field_r = (bi) null;
+          field_r = (Sprite) null;
         }
     }
 

@@ -6,7 +6,7 @@ final class id {
     static String field_a;
     static String field_e;
     static byte[] field_c;
-    static ln field_d;
+    static Star field_d;
 
     public static void a(byte param0) {
         field_d = null;
@@ -61,17 +61,17 @@ final class id {
 
     final static String a(int param0) {
         int var1 = -6 / ((-56 - param0) / 40);
-        if (ln.field_o == null) {
+        if (Star.field_o == null) {
           return "";
         }
-        return ln.field_o;
+        return Star.field_o;
     }
 
-    final static bi a(int param0, bc param1, String param2, String param3) {
+    final static Sprite a(int param0, bc param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        bi stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -82,7 +82,7 @@ final class id {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 2) {
-            field_d = (ln) null;
+            field_d = (Star) null;
           }
           var4_int = param1.a(125, param2);
           var5 = param1.a(var4_int, (byte) 106, param3);

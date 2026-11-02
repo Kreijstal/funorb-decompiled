@@ -4,8 +4,8 @@
 import java.io.*;
 
 final class r implements Runnable {
-    private ob field_k;
-    private qb field_l;
+    private PacketBuffer field_k;
+    private PlatformTaskDispatcher field_l;
     static String field_f;
     static int field_c;
     private pb field_b;
@@ -61,7 +61,7 @@ final class r implements Runnable {
           var5 = var15.j(-87);
           if (var5 != 0) {
             var6 = var3.field_j;
-            wb.field_a[0] = ln.field_o;
+            wb.field_a[0] = Star.field_o;
             for (var7_int = 1; var5 > var7_int; var7_int++) {
               wb.field_a[var7_int] = var15.e(-1);
             }
@@ -91,12 +91,12 @@ final class r implements Runnable {
             while (var9 > var10) {
               var12 = lg.field_d[var10];
               var7[0][var11] = wb.field_a[var12];
-              var8[0][4 * var11] = kf.field_f[var12];
+              var8[0][4 * var11] = GameApplet.field_f[var12];
               var8[0][var11 * 4 + 1] = fb.field_zb[var12];
               var8[0][2 + var11 * 4] = aj.field_d[var12];
-              var8[0][var11 * 4 + 3] = f.field_y[var12];
+              var8[0][var11 * 4 + 3] = WidgetContainer.field_y[var12];
               if (jp.a(wb.field_a[var12], (byte) -105) &&
-                f.field_y[var12] + aj.field_d[var12] + fb.field_zb[var12] == 0) {
+                WidgetContainer.field_y[var12] + aj.field_d[var12] + fb.field_zb[var12] == 0) {
                 var7[0][var11] = null;
                 var11--;
               }
@@ -109,12 +109,12 @@ final class r implements Runnable {
             while (var9 > var10Lifetime1) {
               var12Lifetime1 = lg.field_d[var10Lifetime1 + var6];
               var7[1][var14] = wb.field_a[var12Lifetime1];
-              var8[1][4 * var14] = kf.field_f[var12Lifetime1];
+              var8[1][4 * var14] = GameApplet.field_f[var12Lifetime1];
               var8[1][4 * var14 + 1] = fb.field_zb[var12Lifetime1];
               var8[1][var14 * 4 + 2] = aj.field_d[var12Lifetime1];
-              var8[1][var14 * 4 + 3] = f.field_y[var12Lifetime1];
+              var8[1][var14 * 4 + 3] = WidgetContainer.field_y[var12Lifetime1];
               if (jp.a(wb.field_a[var12Lifetime1], (byte) -105) &&
-                0 == fb.field_zb[var12Lifetime1] + aj.field_d[var12Lifetime1] + f.field_y[var12Lifetime1]) {
+                0 == fb.field_zb[var12Lifetime1] + aj.field_d[var12Lifetime1] + WidgetContainer.field_y[var12Lifetime1]) {
                 var7[1][var14] = null;
                 var14--;
               }
@@ -162,12 +162,12 @@ final class r implements Runnable {
     }
 
     final static void b(byte param0) {
-        bi var1 = null;
-        bi var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1 = new bi(540, 140);
+          var1 = new Sprite(540, 140);
           aq.a((byte) 117, var1);
           wn.c();
           gf.b();
@@ -181,7 +181,7 @@ final class r implements Runnable {
           }
           rf.field_h.e();
           var1.d(0, 0);
-          ln.f((byte) -70);
+          Star.f((byte) -70);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "r.D(" + param0 + ')');
         }
@@ -243,16 +243,16 @@ final class r implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
-            while (this.field_k.field_h.length > this.field_k.field_j) {
-              var1_int = this.field_g.read(this.field_k.field_h, this.field_k.field_j, this.field_k.field_h.length - this.field_k.field_j);
+            while (this.field_k.payload.length > this.field_k.position) {
+              var1_int = this.field_g.read(this.field_k.payload, this.field_k.position, this.field_k.payload.length - this.field_k.position);
               if (var1_int >= 0) {
-                this.field_k.field_j = this.field_k.field_j + var1_int;
+                this.field_k.position = this.field_k.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_k.field_j == this.field_k.field_h.length) {
-              throw r.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_k.field_h.length + " " + this.field_e));
+            if (this.field_k.position == this.field_k.payload.length) {
+              throw r.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_k.payload.length + " " + this.field_e));
             }
             var1 = this;
             synchronized (var1) {
@@ -277,14 +277,14 @@ final class r implements Runnable {
         }
     }
 
-    final ob a(boolean param0) {
+    final PacketBuffer a(boolean param0) {
         if (3 == this.field_h) {
           return this.field_k;
         }
         if (param0) {
           return null;
         }
-        return (ob) null;
+        return (PacketBuffer) null;
     }
 
     final synchronized boolean b(int param0) {
@@ -340,7 +340,7 @@ final class r implements Runnable {
               var3.write(se.a((byte) 80, var5));
               this.field_g = new DataInputStream(var4.getInputStream());
             }
-            this.field_k.field_j = 0;
+            this.field_k.position = 0;
             decompiledRegionSelector0 = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -377,22 +377,22 @@ final class r implements Runnable {
         return false;
     }
 
-    final static rg a(Throwable param0, String param1) {
-        rg var2 = null;
-        if (param0 instanceof rg) {
-          var2 = (rg) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_b = var2.field_b + ' ' + param1;
         } else {
-          var2 = new rg(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }
 
-    r(qb param0, java.net.URL param1, int param2) {
+    r(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_e = param1;
           this.field_l = param0;
-          this.field_k = new ob(param2);
+          this.field_k = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

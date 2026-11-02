@@ -262,7 +262,7 @@ final class ur extends qr {
         field_yb = null;
     }
 
-    final static void a(bi[][] param0, int param1, byte[] param2, boolean param3, bc param4, int[] param5, bi[][] param6, String[] param7, String[] param8, int param9, byte[] param10, bc param11, bc param12, nk[] param13, String[][] param14, int param15, String[][] param16, int[] param17, int param18) {
+    final static void a(Sprite[][] param0, int param1, byte[] param2, boolean param3, bc param4, int[] param5, Sprite[][] param6, String[] param7, String[] param8, int param9, byte[] param10, bc param11, bc param12, nk[] param13, String[][] param14, int param15, String[][] param16, int[] param17, int param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -398,10 +398,10 @@ final class ur extends qr {
         this(param0, param1.field_Fb, param1.field_Cb, param1.field_xb, param1.field_Ab);
     }
 
-    final static fs a(dc param0, int param1, ob param2) {
+    final static Player a(GameState param0, int param1, PacketBuffer param2) {
         RuntimeException var3 = null;
-        fs stackIn_2_0 = null;
-        fs stackIn_4_0 = null;
+        Player stackIn_2_0 = null;
+        Player stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -413,7 +413,7 @@ final class ur extends qr {
             stackIn_4_0 = us.a(param2, param0.field_v, 2);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (fs) null;
+          stackIn_2_0 = (Player) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

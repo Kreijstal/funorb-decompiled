@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vj extends qs {
-    static pf field_E;
+    static IntrusiveDeque field_E;
     private static int[] field_G;
     static int[] field_F;
     private static int[] field_A;
@@ -30,9 +30,9 @@ final class vj extends qs {
           boolean decompiledFrameRemainder0 = true;
           rq.field_e = rq.field_e + 1;
           if (param0 == null) {
-            decompiledFrameRemainder0 = (jq.field_d == null);
+            decompiledFrameRemainder0 = (GameKeyHandler.field_d == null);
           } else {
-            decompiledFrameRemainder0 = !(param0.equals(jq.field_d));
+            decompiledFrameRemainder0 = !(param0.equals(GameKeyHandler.field_d));
           }
           if (decompiledFrameRemainder0) {
             if (!sc.field_q) {
@@ -68,7 +68,7 @@ final class vj extends qs {
             rs.field_Fb = cb.field_n;
             ra.field_g = s.field_c;
           }
-          jq.field_d = param0;
+          GameKeyHandler.field_d = param0;
           if (!sc.field_q &&
             rq.field_e < ri.field_F &&
             r.field_d) {
@@ -116,17 +116,17 @@ final class vj extends qs {
           return fa.field_J;
         }
         if (!rq.field_g.a("commonui", 77)) {
-          return ii.field_r + " - " + rq.field_g.a("commonui", (byte) 65) + "%";
+          return SpriteState.field_r + " - " + rq.field_g.a("commonui", (byte) 65) + "%";
         }
         if (!tq.field_f.b((byte) -69)) {
           return rq.field_h;
         }
         if (!tq.field_f.a("commonui", -91)) {
-          return on.field_h + " - " + tq.field_f.a("commonui", (byte) 28) + "%";
+          return IntrusiveDequeCursor.field_h + " - " + tq.field_f.a("commonui", (byte) 28) + "%";
         }
         int var1 = 32 % ((param0 - 15) / 52);
         if (!l.field_g.b((byte) -2)) {
-          return ed.field_e;
+          return MouseInputHandler.field_e;
         }
         if (!l.field_g.a(-1)) {
           return jh.field_v + " - " + l.field_g.d(100) + "%";
@@ -152,7 +152,7 @@ final class vj extends qs {
         field_H = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, vg param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         super.a(param0, param1, param2, param3, param4 + 0, param5);
         fr var8 = oa.field_b;
         if (param4 != -600269855) {
@@ -177,7 +177,7 @@ final class vj extends qs {
         }
     }
 
-    private vj(int param0, int param1, int param2, int param3, iq param4, ko param5, vg param6) {
+    private vj(int param0, int param1, int param2, int param3, iq param4, ko param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_z = param6;
@@ -202,7 +202,7 @@ final class vj extends qs {
 
     static {
         int var0 = 0;
-        field_E = new pf();
+        field_E = new IntrusiveDeque();
         field_F = new int[256];
         field_G = new int[256];
         field_I = new int[256];

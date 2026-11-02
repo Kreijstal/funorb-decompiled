@@ -19,7 +19,7 @@ final class ph implements jk {
         if (dp.field_t) {
           return dp.a(-85, param1, param3);
         }
-        if (ed.a(param0 ^ 5, param3, param1)) {
+        if (MouseInputHandler.a(param0 ^ 5, param3, param1)) {
           return true;
         }
         if (ae.field_b) {

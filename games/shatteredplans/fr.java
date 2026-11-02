@@ -21,11 +21,11 @@ final class fr extends qs {
           return;
         }
         if (fj.field_t.field_k) {
-          il.a(var1, 0, var2, ln.field_K);
+          il.a(var1, 0, var2, Star.field_K);
           gf.f(0, 0, 640, 0);
           return;
         }
-        ln.field_K.c(-var1 >> 4, -var2 >> 4);
+        Star.field_K.c(-var1 >> 4, -var2 >> 4);
     }
 
     final void h(int param0) {
@@ -35,7 +35,7 @@ final class fr extends qs {
         this.field_C = this.field_q;
     }
 
-    final void a(int param0, int param1, vg param2, byte param3) {
+    final void a(int param0, int param1, UiWidget param2, byte param3) {
         int stackIn_17_1 = 0;
         int stackIn_18_2 = 0;
         int stackIn_25_1 = 0;
@@ -180,7 +180,7 @@ final class fr extends qs {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, vg param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_o = 0;
@@ -189,7 +189,7 @@ final class fr extends qs {
         }
     }
 
-    private fr(int param0, int param1, int param2, int param3, iq param4, ko param5, vg param6, boolean param7, boolean param8) {
+    private fr(int param0, int param1, int param2, int param3, iq param4, ko param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_C = 2147483647;
         this.field_J = 2147483647;
@@ -256,7 +256,7 @@ final class fr extends qs {
         return var1;
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, vg param6) {
+    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_13_0 = 0;

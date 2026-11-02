@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa extends df {
+final class qa extends DualLinkNode {
     int field_v;
     static int field_t;
-    ln field_u;
-    static pf field_r;
+    Star field_u;
+    static IntrusiveDeque field_r;
     static vd field_w;
-    static bi field_q;
+    static Sprite field_q;
     static String[][] field_s;
     static String[] field_o;
-    static bi[] field_p;
+    static Sprite[] field_p;
 
     public static void e(int param0) {
         field_o = null;
@@ -22,7 +22,7 @@ final class qa extends df {
           field_s = (String[][]) null;
           return;
         }
-        field_q = (bi) null;
+        field_q = (Sprite) null;
         field_q = null;
         field_w = null;
         field_r = null;
@@ -30,7 +30,7 @@ final class qa extends df {
         field_s = (String[][]) null;
     }
 
-    qa(ln param0, int param1) {
+    qa(Star param0, int param1) {
         try {
           this.field_u = param0;
           this.field_v = param1;
@@ -40,7 +40,7 @@ final class qa extends df {
     }
 
     static {
-        field_r = new pf();
+        field_r = new IntrusiveDeque();
         field_o = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
     }
 }

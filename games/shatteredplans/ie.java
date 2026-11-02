@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ie {
-    final static void a(bi param0, int param1, int param2) {
+    final static void a(Sprite param0, int param1, int param2) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -48,7 +48,7 @@ final class ie {
         }
     }
 
-    final static void a(om param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(ArgbSprite param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         double var7;
         int var9;
         int var10;

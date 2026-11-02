@@ -76,7 +76,7 @@ final class ae {
             if (0 != var5) {
               var6 = var4.field_i;
               rf.field_j[0].field_b = null;
-              rf.field_j[0].field_d = ln.field_o;
+              rf.field_j[0].field_d = Star.field_o;
               var7 = var4.field_k;
               rf.field_j[0].field_a = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
@@ -104,7 +104,7 @@ final class ae {
                   var20 = var27.j(-115);
                   var21 = rf.field_j[var20].field_d;
                   var22 = var27.d(105);
-                  var24 = var27.field_j;
+                  var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = rf.field_j[var20].field_b;
@@ -118,11 +118,11 @@ final class ae {
                   }
                   if (var21 != null &&
                     jp.a(var21, (byte) -105)) {
-                    var8[1][var13] = ln.field_o;
+                    var8[1][var13] = Star.field_o;
                     var9[1][var13] = null;
                     var34[1][var13] = var22;
                     var13++;
-                    var27.field_j = var24;
+                    var27.position = var24;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$1 = var16;
                       var16++;
@@ -135,7 +135,7 @@ final class ae {
                     var8[2][var14] = var21;
                     var9[2][var14] = rf.field_j[var20].field_b;
                     var34[2][var14] = var22;
-                    var27.field_j = var24;
+                    var27.position = var24;
                     var14++;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$2 = var17;
@@ -169,7 +169,7 @@ final class ae {
               }
             }
             if (decompiledFrameRemainder0) {
-              jq.a(-29901, (Throwable) null, "HS1: " + w.a(16738));
+              GameKeyHandler.a(-29901, (Throwable) null, "HS1: " + w.a(16738));
               q.g(-100);
             }
           }
@@ -234,12 +234,12 @@ final class ae {
         }
     }
 
-    final static bi[] a(int param0, String param1, bc param2, String param3) {
+    final static Sprite[] a(int param0, String param1, bc param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        bi[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

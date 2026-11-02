@@ -87,7 +87,7 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final void a(qb param0, int param1) {
+    final void a(PlatformTaskDispatcher param0, int param1) {
         try {
           if (param1 != -17115) {
             field_b = 54;
@@ -241,7 +241,7 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
             var25 = -var9 + di.field_m;
             var26 = var6 - var9;
             var27_int = 440 * var25 / var26;
-            var28 = var27_int + rg.a(64, -64, (byte) 109);
+            var28 = var27_int + ClientException.a(64, -64, (byte) 109);
             if (var28 < 0) {
               var28 = 0;
             }
@@ -249,7 +249,7 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
               var28 = 255;
             }
             gf.a(16 + var17, var19 + 2, (var28 >> 2) * 65793);
-            var28Lifetime1 = -40 + (var27_int + rg.a(64, -64, (byte) 114));
+            var28Lifetime1 = -40 + (var27_int + ClientException.a(64, -64, (byte) 114));
             if (var28Lifetime1 < 0) {
               var28Lifetime1 = 0;
             }
@@ -257,7 +257,7 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
               var28Lifetime1 = 255;
             }
             gf.a(3 + var17, var19 + 3, 65793 * (var28Lifetime1 >> 2));
-            var28Lifetime2 = rg.a(64, -64, (byte) 98) + (var27_int - 80);
+            var28Lifetime2 = ClientException.a(64, -64, (byte) 98) + (var27_int - 80);
             if (var28Lifetime2 < 0) {
               var28Lifetime2 = 0;
             }
@@ -265,7 +265,7 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
               var28Lifetime2 = 255;
             }
             gf.a(var17 + 12, var19, 65793 * (var28Lifetime2 >> 2));
-            var28Lifetime3 = -120 + var27_int + rg.a(64, -64, (byte) 126);
+            var28Lifetime3 = -120 + var27_int + ClientException.a(64, -64, (byte) 126);
             if (var28Lifetime3 < 0) {
               var28Lifetime3 = 0;
             }
@@ -293,18 +293,18 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
               if ((var22Lifetime1 + 320) >= var31) {
                 gf.g(var17, var19, var31 >> 4, var32 >> 4, 0);
                 gf.b(var31, var32, 64, var29, fe.field_x);
-                p.field_A[sd.field_p] = var31;
-                np.field_f[sd.field_p] = var32;
-                fieldTemp$0 = sd.field_p + 1;
-                sd.field_p = sd.field_p + 1;
+                p.field_A[Territory.field_p] = var31;
+                np.field_f[Territory.field_p] = var32;
+                fieldTemp$0 = Territory.field_p + 1;
+                Territory.field_p = Territory.field_p + 1;
                 if (fieldTemp$0 == 600) {
-                  sd.field_p = 0;
+                  Territory.field_p = 0;
                 }
               }
             }
             stackIn_57_0 = (600 > var25Lifetime1) ? var25Lifetime1 : 600;
             var30Lifetime1 = stackIn_57_0;
-            var31Lifetime1 = -1 + sd.field_p;
+            var31Lifetime1 = -1 + Territory.field_p;
             for (var32Lifetime1 = 0; var30Lifetime1 > var32Lifetime1; var32Lifetime1++) {
               if (var31Lifetime1 < 0) {
                 var31Lifetime1 += 600;

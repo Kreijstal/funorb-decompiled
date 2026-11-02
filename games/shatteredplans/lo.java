@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lo extends sd {
+final class lo extends Territory {
     private db field_z;
     static String field_A;
     static int field_B;
@@ -49,23 +49,23 @@ final class lo extends sd {
         }
     }
 
-    final ln j(int param0) {
+    final Star j(int param0) {
         if (param0 == 18229) {
-          return (ln) (this.field_z.c(-127));
+          return (Star) (this.field_z.c(-127));
         }
         bc var3 = (bc) null;
         lo.a((bc) null, (byte) -92, -64);
-        return (ln) (this.field_z.c(-127));
+        return (Star) (this.field_z.c(-127));
     }
 
-    final ln i(int param0) {
+    final Star i(int param0) {
         if (param0 > -16) {
-          return (ln) null;
+          return (Star) null;
         }
-        return (ln) (this.field_z.a(-118));
+        return (Star) (this.field_z.a(-118));
     }
 
-    final void a(int param0, ln param1) {
+    final void a(int param0, Star param1) {
         try {
           this.field_z.a(param1, 32);
           if (param0 != -21771) {
@@ -76,7 +76,7 @@ final class lo extends sd {
         }
     }
 
-    lo(fs param0, ln param1) {
+    lo(Player param0, Star param1) {
         super(param0, param1);
         try {
           this.field_z = new db();
@@ -90,7 +90,7 @@ final class lo extends sd {
         return this.field_z.c((byte) 67);
     }
 
-    final void a(pf param0, int param1) {
+    final void a(IntrusiveDeque param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -115,12 +115,12 @@ final class lo extends sd {
         }
     }
 
-    final ln h(int param0) {
+    final Star h(int param0) {
         if (param0 == -23410) {
-          return (ln) (this.field_z.b(32));
+          return (Star) (this.field_z.b(32));
         }
         this.field_z = (db) null;
-        return (ln) (this.field_z.b(32));
+        return (Star) (this.field_z.b(32));
     }
 
     public static void l(int param0) {

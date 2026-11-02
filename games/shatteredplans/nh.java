@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nh extends me {
+final class nh extends VictoryChecker {
     static bc field_l;
     private int field_k;
     private int[] field_n;
@@ -35,12 +35,12 @@ final class nh extends me {
             go.a(0, (CharSequence) ((Object) var6))) {
             ma.a((CharSequence) ((Object) var6), param3 + 5);
           }
-          ge.field_l = new bi[param4.length];
+          ImageProducerRasterBuffer.field_l = new Sprite[param4.length];
           if (param3 != -3) {
             nh.b((byte) -94);
           }
           for (var7 = 0; var7 < param4.length; var7++) {
-            ge.field_l[var7] = new bi(317, 34);
+            ImageProducerRasterBuffer.field_l[var7] = new Sprite(317, 34);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,12 +70,12 @@ final class nh extends me {
         return param1 >= 0 ? true : false;
     }
 
-    final fs[] b(int param0) {
+    final Player[] b(int param0) {
         int var5_int = 0;
         int var6 = 0;
         int var2;
         double var3;
-        fs[] var5;
+        Player[] var5;
         double var6_double;
         double var7;
         int var9;
@@ -105,9 +105,9 @@ final class nh extends me {
           }
         }
         if (var2 == 0) {
-          return new fs[]{};
+          return new Player[]{};
         }
-        var5 = new fs[var2];
+        var5 = new Player[var2];
         for (var6 = 0; this.field_i.length > var6; var6++) {
           if (this.field_n[var6] != 0) {
             var7 = (double)(this.field_k - this.field_o[var6]) / (double)this.field_n[var6];
@@ -120,7 +120,7 @@ final class nh extends me {
         return var5;
     }
 
-    final void a(ob param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -153,7 +153,7 @@ final class nh extends me {
     }
 
     final static void a(int param0, nq param1, int param2, int param3, int param4, int param5, String param6, boolean param7, int param8, int param9, int param10, int param11) {
-        bi var13 = null;
+        Sprite var13 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -165,7 +165,7 @@ final class nh extends me {
           cl.a(param5, param8, -22466, param0, param9, param4, param2, param3, param11);
           param1.c(param6, param5 + (param0 >> 1), param3 + (param1.field_J + param9 >> 1), 16777215, param10);
           if (param7) {
-            var13 = new bi(param0, param9);
+            var13 = new Sprite(param0, param9);
             bs.a(var13, 98);
             param1.c(param6, (param0 >> 1) + 1, param9 + param1.field_J >> 1, 16777215, -1);
             param1.c(param6, (param0 >> 1) - 1, param1.field_J + param9 >> 1, 16777215, -1);
@@ -195,7 +195,7 @@ final class nh extends me {
         }
     }
 
-    nh(fs[] param0) {
+    nh(Player[] param0) {
         super(param0);
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
@@ -239,7 +239,7 @@ final class nh extends me {
         return cc.field_n * this.field_o.length + rs.field_Cb.field_J;
     }
 
-    final boolean a(dc param0, byte param1) {
+    final boolean a(GameState param0, byte param1) {
         int stackIn_41_0 = 0;
         int stackIn_41_1 = 0;
         RuntimeException stackIn_65_0 = null;
@@ -250,12 +250,12 @@ final class nh extends me {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        ln var5_ref_ln = null;
+        Star var5_ref_ln = null;
         int var6 = 0;
         int var7 = 0;
-        dc var8 = null;
+        GameState var8 = null;
         int var9 = 0;
-        sd var10 = null;
+        Territory var10 = null;
         int var4Lifetime1;
         int var5Lifetime1;
         int var3_intLifetime1;
@@ -280,21 +280,21 @@ final class nh extends me {
           }
           for (var3_intLifetime1 = 0; var3_intLifetime1 < this.field_i.length; var3_intLifetime1++) {
             this.field_n[var3_intLifetime1] = 0;
-            var10 = (sd) (this.field_i[var3_intLifetime1].field_i.d(0));
+            var10 = (Territory) (this.field_i[var3_intLifetime1].field_i.d(0));
             while (var10 != null) {
               var5_ref_ln = var10.j(18229);
               while (var5_ref_ln != null) {
-                L13: {
+                regionExit1: {
                   var6 = var5_ref_ln.field_L;
                   if (var6 != 0 &&
                     1 != var6) {
                     if (2 == var6) {
                       this.field_n[var3_intLifetime1] = this.field_n[var3_intLifetime1] + 2;
-                      break L13;
+                      break regionExit1;
                     }
                     if (var6 == 3) {
                       this.field_n[var3_intLifetime1] = this.field_n[var3_intLifetime1] + 3;
-                      break L13;
+                      break regionExit1;
                     }
                     var5_ref_ln = var10.h(-23410);
                     continue;
@@ -303,13 +303,13 @@ final class nh extends me {
                 }
                 var5_ref_ln = var10.h(-23410);
               }
-              var10 = (sd) (this.field_i[var3_intLifetime1].field_i.a((byte) -71));
+              var10 = (Territory) (this.field_i[var3_intLifetime1].field_i.a((byte) -71));
             }
             this.field_o[var3_intLifetime1] = this.field_o[var3_intLifetime1] + this.field_n[var3_intLifetime1];
           }
           if (param1 < 23) {
-            var8 = (dc) null;
-            this.a((dc) null, (byte) -96);
+            var8 = (GameState) null;
+            this.a((GameState) null, (byte) -96);
           }
           var3_intLifetime2 = 0;
           var4Lifetime1 = 0;
@@ -334,7 +334,7 @@ final class nh extends me {
             var5++;
           }
           if (var3_intLifetime2 != 0) {
-            this.field_g = new fs[var3_intLifetime2];
+            this.field_g = new Player[var3_intLifetime2];
             var9 = 0;
             var5Lifetime1 = var9;
             while (this.field_i.length > var9) {
@@ -371,7 +371,7 @@ final class nh extends me {
         sp.field_r = param1;
     }
 
-    final void a(byte param0, dc param1, kq param2) {
+    final void a(byte param0, GameState param1, kq param2) {
         int var7_int = 0;
         int var10_int = 0;
         RuntimeException stackIn_34_0 = null;
@@ -385,11 +385,11 @@ final class nh extends me {
         RuntimeException var4_ref = null;
         int var5 = 0;
         int[] var6 = null;
-        fs[] var7 = null;
+        Player[] var7 = null;
         int[] var8 = null;
         int var8_int = 0;
         int[] var9 = null;
-        fs[] var10 = null;
+        Player[] var10 = null;
         int var11 = 0;
         int var12 = 0;
         double var13 = 0.0;
@@ -449,7 +449,7 @@ final class nh extends me {
             lh.a((byte) -93, var4, (int[]) ((Object) this.field_o.clone()));
           }
           var23 = new qk[]{new qk(0, 0, 182, rs.field_Cb.field_J, re.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(this.field_k)}))};
-          var7 = new fs[this.field_i.length];
+          var7 = new Player[this.field_i.length];
           var28 = new int[this.field_i.length];
           var22 = var28;
           var8 = var22;
@@ -492,7 +492,7 @@ final class nh extends me {
         }
     }
 
-    final void a(int param0, ob param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3_intLifetime1;

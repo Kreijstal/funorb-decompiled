@@ -3,7 +3,7 @@
  */
 final class gl {
     int field_f;
-    static bi field_h;
+    static Sprite field_h;
     static boolean field_e;
     int field_c;
     static String field_b;
@@ -26,7 +26,7 @@ final class gl {
 
     final static qh a(int param0, int param1) {
         eq.field_k = new qh(0, -((4 + kb.field_y.field_o) * param0) + 479 - 28, 200, (kb.field_y.field_o + 4) * param0 + 28, ba.field_a.toUpperCase());
-        fe var2 = new fe(184 + eq.field_k.field_k, 2 + eq.field_k.field_t, 11, 11, param1, (bi) null, "X", 16711680);
+        fe var2 = new fe(184 + eq.field_k.field_k, 2 + eq.field_k.field_t, 11, 11, param1, (Sprite) null, "X", 16711680);
         var2.field_h = eq.field_k;
         eq.field_k.a(var2, param1 + 9);
         lp var3 = new lp(9 + eq.field_k.field_k, 20 + eq.field_k.field_t, 182, (4 + kb.field_y.field_o) * param0);

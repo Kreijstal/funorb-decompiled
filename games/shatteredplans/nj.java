@@ -6,7 +6,7 @@ final class nj {
 
     final static void a(int param0) {
         int var1 = (kh.field_Mb - 640) / 2;
-        int var2 = ed.field_f * ed.field_f;
+        int var2 = MouseInputHandler.field_f * MouseInputHandler.field_f;
         int var3 = var2 - qa.field_t * qa.field_t;
         ia.field_j.a(199, -124 + (gf.field_k - 90), (byte) 49, 90, -(199 * var3 / var2) + var1);
         se.field_i.a(param0, gf.field_k - 124, (byte) 56, 0, var1 + (202 + var3 * 438 / var2));
@@ -67,11 +67,11 @@ final class nj {
           }
           var6 = js.field_f;
           var6.h(param1, 255);
-          var6.field_j = var6.field_j + 1;
-          var4 = var6.field_j;
+          var6.position = var6.position + 1;
+          var4 = var6.position;
           var6.c(0, (byte) -58);
           var6.a(param0, (byte) 0);
-          var6.b(-var4 + var6.field_j, (byte) 118);
+          var6.b(-var4 + var6.position, (byte) 118);
           stackIn_28_0 = null;
           return (String) (stackIn_28_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

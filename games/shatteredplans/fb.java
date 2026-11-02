@@ -45,7 +45,7 @@ final class fb extends qr {
     int field_Lb;
     qr field_Ob;
     qr field_ac;
-    static bi field_Vb;
+    static Sprite field_Vb;
 
     fb(int param0) {
         super(0L, (qr) null);
@@ -60,12 +60,12 @@ final class fb extends qr {
         field_yb = null;
         field_zb = null;
         if (param0 != 32) {
-          field_Vb = (bi) null;
+          field_Vb = (Sprite) null;
         }
         field_gc = null;
     }
 
-    final static lp a(int param0, int param1, int param2, int param3, fs param4, int param5, fs[] param6, dc param7) {
+    final static lp a(int param0, int param1, int param2, int param3, Player param4, int param5, Player[] param6, GameState param7) {
         int var12_int = 0;
         int stackIn_9_0 = 0;
         lp stackIn_32_0 = null;
@@ -80,10 +80,10 @@ final class fb extends qr {
         RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
-        fs[] var11_ref_fs__ = null;
+        Player[] var11_ref_fs__ = null;
         int var11 = 0;
         b var12 = null;
-        fs var13 = null;
+        Player var13 = null;
         ff var13_ref = null;
         qk var13_ref2 = null;
         String var14 = null;
@@ -108,22 +108,22 @@ final class fb extends qr {
           }
           stackIn_9_0 = (var10 != 0) ? 8421504 : 2105376;
           var11 = stackIn_9_0;
-          var12 = new b(pf.field_a[param4.field_x].field_z / 2, -(rs.field_Cb.field_J / 2) + (var17.field_i / 2 - 4), -(pf.field_a[param4.field_x].field_z / 2) + var17.field_m, rs.field_Cb.field_J + 8, 2, var11);
+          var12 = new b(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -(rs.field_Cb.field_J / 2) + (var17.field_i / 2 - 4), -(IntrusiveDeque.field_a[param4.field_x].field_z / 2) + var17.field_m, rs.field_Cb.field_J + 8, 2, var11);
           var17.a(var12, 8);
           if ((param7.field_w & 1 << param4.field_x) == 0) {
-            var13_ref = new ff(pf.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - rs.field_Cb.field_J / 2), er.a(param5, (byte) -127, param1, param4, param3));
+            var13_ref = new ff(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - rs.field_Cb.field_J / 2), er.a(param5, (byte) -127, param1, param4, param3));
             var17.a(var13_ref, 8);
           } else {
-            var13_ref2 = new qk(pf.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, var17.field_m - pf.field_a[param4.field_x].field_z, rs.field_Cb.field_J, of.field_d.toUpperCase());
+            var13_ref2 = new qk(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, var17.field_m - IntrusiveDeque.field_a[param4.field_x].field_z, rs.field_Cb.field_J, of.field_d.toUpperCase());
             var17.a(var13_ref2, 8);
           }
           if (var10 != 0 &&
             param0 <= 3 &&
             0 < param0) {
-            var13_ref2Lifetime1 = new qk(pf.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, -pf.field_a[param4.field_x].field_z + var17.field_m, rs.field_Cb.field_J, re.a(ka.field_m, 4371, new String[]{Integer.toString(param0)}));
+            var13_ref2Lifetime1 = new qk(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, -IntrusiveDeque.field_a[param4.field_x].field_z + var17.field_m, rs.field_Cb.field_J, re.a(ka.field_m, 4371, new String[]{Integer.toString(param0)}));
             var17.a(var13_ref2Lifetime1, 8);
           }
-          var13_refLifetime1 = new ff(0, (-pf.field_a[param4.field_x].field_w + var17.field_i) / 2, pf.field_a[param4.field_x]);
+          var13_refLifetime1 = new ff(0, (-IntrusiveDeque.field_a[param4.field_x].field_w + var17.field_i) / 2, IntrusiveDeque.field_a[param4.field_x]);
           var17.a(var13_refLifetime1, 8);
           if ((param7.field_w & 1 << param4.field_x) == 0) {
             if (1 != param3) {
@@ -208,7 +208,7 @@ final class fb extends qr {
         }
         mf.a(true, param5);
         if (qa.field_t > param9) {
-          hi.a(param0, param9 ^ -26671, param5, param2);
+          TaskAi.a(param0, param9 ^ -26671, param5, param2);
         }
         dn.field_f.field_y = 1;
         dn.field_f.field_kb = fg.field_b.field_kb;
@@ -230,7 +230,7 @@ final class fb extends qr {
         }
         ga.a(param1, (byte) 116, param3, param6, param2, param4, param8);
         dm.a(param4, 0, ro.field_a, param1, param2);
-        ln.field_w = ln.field_w + 1;
+        Star.field_w = Star.field_w + 1;
     }
 
     final int g(int param0) {

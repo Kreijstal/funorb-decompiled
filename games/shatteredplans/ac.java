@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ac extends wf {
-    static bi field_s;
+    static Sprite field_s;
     static String field_v;
     static int field_w;
     static String field_r;
@@ -25,8 +25,8 @@ final class ac extends wf {
             var3 = !hm.field_q.field_k ? hm.field_q : hm.field_q.field_l;
             var2 = var3;
             if (var2 != null) {
-              fieldTemp$0 = ge.field_i;
-              ge.field_i = ge.field_i + 1;
+              fieldTemp$0 = ImageProducerRasterBuffer.field_i;
+              ImageProducerRasterBuffer.field_i = ImageProducerRasterBuffer.field_i + 1;
               js.field_b[fieldTemp$0] = var3;
             }
           }
@@ -36,7 +36,7 @@ final class ac extends wf {
         }
     }
 
-    ac(ln param0, int[] param1, boolean[] param2, me param3) {
+    ac(Star param0, int[] param1, boolean[] param2, VictoryChecker param3) {
         super(param0);
         int var5_int = 0;
         int var6 = 0;
@@ -50,10 +50,10 @@ final class ac extends wf {
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ln[] var5 = null;
+        Star[] var5 = null;
         RuntimeException var5_ref = null;
-        ln var7 = null;
-        ln[] var9 = null;
+        Star var7 = null;
+        Star[] var9 = null;
         try {
           this.field_j = 0;
           for (var5_int = 0; 4 > var5_int; var5_int++) {

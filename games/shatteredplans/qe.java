@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class qe extends oh {
+class qe extends IntrusiveNode {
     static String field_l;
-    ln field_h;
+    Star field_h;
     gm field_i;
     static fg field_k;
-    static bi field_j;
+    static Sprite field_j;
 
     public static void a(byte param0) {
         field_l = null;

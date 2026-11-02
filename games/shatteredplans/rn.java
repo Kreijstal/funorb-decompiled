@@ -32,20 +32,20 @@ final class rn implements Runnable {
         w.field_D.e();
         ne.a(0, gf.field_b, (byte) 24, 0, 0, 128, gf.field_k);
         vm.field_Jb.e();
-        ib.a(0, 0, gf.field_k, 0, gf.field_b, param0 + 24024);
+        MouseWheelInput.a(0, 0, gf.field_k, 0, gf.field_b, param0 + 24024);
         id.a(2, hp.field_n, "intro", "intro2_glow");
         ac.field_s = id.a(2, hp.field_n, "intro", "intro2_earth");
         oe.field_c = id.a(2, hp.field_n, "intro", "intro2_clouds");
         ja.a(-174137048, ac.field_s.field_z / 2, ac.field_s, ac.field_s.field_w / 4);
         ja.a(param0 ^ -174137062, oe.field_c.field_z / 2, oe.field_c, oe.field_c.field_w / 4);
-        ds.field_b = new bi(640, 430);
+        ds.field_b = new Sprite(640, 430);
         ds.field_b.e();
         for (var1_int = 1; var1_int < 64; var1_int++) {
           var2 = (int)(20.0 * Math.log((double)(63.0f / (float)var1_int)) / Math.log(2.0));
           gf.g(320, 527, var2 + 400, (var1_int << 2) * 65793);
         }
         gf.b(4, 4, 0, 0, gf.field_b, gf.field_k);
-        ma.field_r = new bi(640, 624 - ac.field_s.field_x);
+        ma.field_r = new Sprite(640, 624 - ac.field_s.field_x);
         ma.field_r.e();
         for (var1_int = 254; var1_int >= 1; var1_int--) {
           var2 = (int)(Math.log((double)(254.0f / (float)var1_int)) * 40.0 / Math.log(2.0));
@@ -57,7 +57,7 @@ final class rn implements Runnable {
         ch.field_c = id.a(2, hp.field_n, "intro", "intro3_crater");
         var1_int = q.field_Cb.field_z;
         var2 = q.field_Cb.field_w + 60;
-        he.field_h = new bi(var1_int, var2);
+        he.field_h = new Sprite(var1_int, var2);
         for (var3 = 0; (var2 - 60) * var1_int > var3; var3++) {
           he.field_h.field_B[var3 + var1_int * 60] = q.field_Cb.field_B[var3];
         }
@@ -67,7 +67,7 @@ final class rn implements Runnable {
         he.field_h.field_x = -60 + q.field_Cb.field_x;
         var2 = 60 + mm.field_o.field_w;
         he.field_h.field_p = 60 + q.field_Cb.field_p;
-        we.field_f = new bi(var1_int, var2);
+        we.field_f = new Sprite(var1_int, var2);
         for (var3 = 0; (var2 - 60) * var1_int > var3; var3++) {
           we.field_f.field_B[var1_int * 60 + var3] = mm.field_o.field_B[var3];
         }
@@ -102,7 +102,7 @@ final class rn implements Runnable {
           uo.a((byte) 110, qq.field_n, 32768);
           var1_int = qq.field_n.field_z;
           var2 = qq.field_n.field_z + 120;
-          tf.field_b = new bi(var1_int, var2);
+          tf.field_b = new Sprite(var1_int, var2);
           tf.field_b.e();
           qq.field_n.e(0, 120, 4259648);
           gf.b(120, 120, 0, 0, var1_int, var2);
@@ -219,7 +219,7 @@ final class rn implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              jq.a(-29901, (Throwable) ((Object) var2_ref), (String) null);
+              GameKeyHandler.a(-29901, (Throwable) ((Object) var2_ref), (String) null);
               var7.field_u = false;
             }
           }
@@ -301,7 +301,7 @@ final class rn implements Runnable {
         }
         if (uo.field_e) {
           tq.field_b = null;
-          jq.field_a = new pf();
+          GameKeyHandler.field_a = new IntrusiveDeque();
           vq.field_a = 0;
           uo.field_e = false;
         }
@@ -446,7 +446,7 @@ final class rn implements Runnable {
         }
     }
 
-    rn(qb param0) {
+    rn(PlatformTaskDispatcher param0) {
         pb var2 = null;
         this.field_c = new db();
         this.field_f = false;

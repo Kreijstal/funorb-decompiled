@@ -8,7 +8,7 @@ final class cj extends j {
     static String field_t;
     static String field_v;
 
-    final int a(ln param0, byte param1) {
+    final int a(Star param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_8_0 = 0;
@@ -45,25 +45,25 @@ final class cj extends j {
         }
     }
 
-    cj(dc param0, fs param1, mn param2) {
+    cj(GameState param0, Player param1, mn param2) {
         super(param0, param1, param2, 2);
     }
 
     final int b(int param0, int param1) {
         int var7 = 0;
-        fs stackIn_9_0 = null;
-        fs stackIn_9_1 = null;
+        Player stackIn_9_0 = null;
+        Player stackIn_9_1 = null;
         int stackIn_26_0 = 0;
         int stackIn_27_1 = 0;
         int var3;
-        ln var4;
+        Star var4;
         int var5;
-        ln[] var6;
-        ln var8;
+        Star[] var6;
+        Star var8;
         int var9;
-        ln[] var10;
+        Star[] var10;
         int var11;
-        ln var12;
+        Star var12;
         int var13;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         var3 = 0;
@@ -133,7 +133,7 @@ final class cj extends j {
         field_v = null;
     }
 
-    final int d(ln param0, int param1) {
+    final int d(Star param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
@@ -213,52 +213,52 @@ final class cj extends j {
 
     final static void a(int param0, int param1, qr param2) {
         fc var11 = null;
-        bi var12 = null;
+        Sprite var12 = null;
         String var13 = null;
         fc var14 = null;
-        bi var15 = null;
+        Sprite var15 = null;
         String var16 = null;
         fc var17 = null;
-        bi var18 = null;
+        Sprite var18 = null;
         String var19 = null;
         fc var20 = null;
         String var22 = null;
         fc var23 = null;
-        bi var24 = null;
+        Sprite var24 = null;
         String var25 = null;
         fc var26 = null;
-        bi var27 = null;
+        Sprite var27 = null;
         String var28 = null;
         fc var29 = null;
         String var31 = null;
         fc var32 = null;
-        bi var33 = null;
+        Sprite var33 = null;
         String var34 = null;
         fc var35 = null;
-        bi var36 = null;
+        Sprite var36 = null;
         String var37 = null;
         fc var38 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        bi var21 = null;
-        bi var30 = null;
-        bi var21Lifetime1;
-        bi var30Lifetime1;
-        bi var30Lifetime2;
-        bi var21Lifetime2;
-        bi var21Lifetime3;
-        bi var21Lifetime4;
-        bi var21Lifetime5;
-        bi var21Lifetime6;
-        bi var30Lifetime3;
-        bi var30Lifetime4;
-        bi var30Lifetime1Lifetime1;
-        bi var30Lifetime1Lifetime2;
-        bi var30Lifetime1Lifetime3;
-        bi var30Lifetime1Lifetime4;
-        bi var30Lifetime1Lifetime5;
+        Sprite var21 = null;
+        Sprite var30 = null;
+        Sprite var21Lifetime1;
+        Sprite var30Lifetime1;
+        Sprite var30Lifetime2;
+        Sprite var21Lifetime2;
+        Sprite var21Lifetime3;
+        Sprite var21Lifetime4;
+        Sprite var21Lifetime5;
+        Sprite var21Lifetime6;
+        Sprite var30Lifetime3;
+        Sprite var30Lifetime4;
+        Sprite var30Lifetime1Lifetime1;
+        Sprite var30Lifetime1Lifetime2;
+        Sprite var30Lifetime1Lifetime3;
+        Sprite var30Lifetime1Lifetime4;
+        Sprite var30Lifetime1Lifetime5;
         try {
           tp.a((int[]) null, 0L, (String) null, (String) null, 293, (ub) null, param2, param0, -1);
           if (0 == param0) {
@@ -315,7 +315,7 @@ final class cj extends j {
             var32.field_j.a(false, var33, var34, 12);
             var35 = hp.field_m;
             var36 = bh.field_m[2];
-            var37 = up.field_c;
+            var37 = SecondaryNodeDeque.field_c;
             var35.field_j.a(false, var36, var37, 13);
           }
           var38 = hp.field_m;
@@ -335,11 +335,11 @@ final class cj extends j {
     final int a(byte param0, int param1) {
         int var8 = 0;
         int var3;
-        ln var4;
+        Star var4;
         int var5;
         int var6;
-        ln[] var7_ref_ln__;
-        ln var9;
+        Star[] var7_ref_ln__;
+        Star var9;
         int var10;
         int var7;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;

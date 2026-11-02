@@ -8,7 +8,7 @@ final class tp implements iq {
     private int field_h;
     static int field_g;
     private nq field_c;
-    static bi field_e;
+    static Sprite field_e;
     private int field_a;
     private int field_i;
     static int field_b;
@@ -16,7 +16,7 @@ final class tp implements iq {
     static int field_j;
     static String field_d;
 
-    public final void a(vg param0, int param1, boolean param2, int param3, byte param4) {
+    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         int var10 = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -24,7 +24,7 @@ final class tp implements iq {
         int var9 = 0;
         int var11 = 0;
         td var12 = null;
-        vg stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -34,7 +34,7 @@ final class tp implements iq {
           if (!(param0 instanceof td)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (vg) (param0);
+            stackIn_4_0 = (UiWidget) (param0);
           }
           var12 = (td) (stackIn_4_0);
           gf.d(param1 + param0.field_m, param3 + param0.field_q, param0.field_x, param0.field_n, this.field_l);
@@ -158,11 +158,11 @@ final class tp implements iq {
         if (um.field_k < vc.field_c.length) {
           fieldTemp$0 = um.field_k;
           um.field_k = um.field_k + 1;
-          sd.field_t = vc.field_c[fieldTemp$0];
+          Territory.field_t = vc.field_c[fieldTemp$0];
           var1 = -8 % ((-21 - param0) / 42);
           return;
         }
-        sd.field_t = null;
+        Territory.field_t = null;
         var1Lifetime1 = -8 % ((-21 - param0) / 42);
     }
 

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mc extends df {
+abstract class mc extends DualLinkNode {
     static gq field_r;
-    static bi field_u;
+    static Sprite field_u;
     static qr field_t;
     int field_p;
     static String field_q;

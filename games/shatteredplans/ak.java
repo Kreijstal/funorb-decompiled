@@ -5,10 +5,10 @@ final class ak extends jc {
     static boolean field_A;
     byte[] field_w;
     int field_y;
-    static bi field_x;
+    static Sprite field_x;
     static fm field_v;
     ua field_B;
-    static bi field_z;
+    static Sprite field_z;
 
     public static void h(int param0) {
         field_z = null;
@@ -76,12 +76,12 @@ final class ak extends jc {
     final static void a(bc param0, byte param1, boolean param2, bc param3) {
         try {
           int var4_int = -57 / ((param1 - 22) / 37);
-          ba.a(n.field_o, dm.field_h, 124, fg.field_b, se.field_m, mc.field_o, l.field_a, oh.field_a, param2, ul.field_xb, ii.field_u, gn.field_w);
+          ba.a(n.field_o, dm.field_h, 124, fg.field_b, se.field_m, mc.field_o, l.field_a, IntrusiveNode.field_a, param2, ul.field_xb, SpriteState.field_u, gn.field_w);
           bh.field_m = ae.a(93, "lobby", param3, "chatfilter");
           jf.field_d[1] = gm.field_o;
           jf.field_d[0] = bf.field_b;
           jf.field_d[2] = ue.field_d;
-          ne.a(param0, (byte) -64, ge.field_p);
+          ne.a(param0, (byte) -64, ImageProducerRasterBuffer.field_p);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ak.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -177,7 +177,7 @@ final class ak extends jc {
           }
         }
         if (param0 != -751) {
-          field_z = (bi) null;
+          field_z = (Sprite) null;
         }
         if (qa.field_t > 0) {
           nj.a(438);

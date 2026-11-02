@@ -62,8 +62,8 @@ final class en {
           vd.field_q.a(42 + pe.field_K, 18, (byte) 84, cr.field_c + 2, -40 + (so.field_t.field_K - pe.field_K) - 2);
           ro.field_a.a(so.field_t.field_K, 22 + cr.field_c, 0, 2, -128, -cr.field_c + (so.field_t.field_mb - 2) - 20, pe.field_K);
           i.field_g.a(am.field_xb.field_K, 40, (byte) 107, -40 + am.field_xb.field_mb, 0);
-          tj.field_f.a(pf.field_g.field_K, 30, (byte) 44, 0, 0);
-          bj.field_D.a(pf.field_g.field_K, -42 + (pf.field_g.field_mb - 30), (byte) 125, 30, 0);
+          tj.field_f.a(IntrusiveDeque.field_g.field_K, 30, (byte) 44, 0, 0);
+          bj.field_D.a(IntrusiveDeque.field_g.field_K, -42 + (IntrusiveDeque.field_g.field_mb - 30), (byte) 125, 30, 0);
           var2_int = 3 + em.field_k;
           if (nl.field_a.length < 2) {
             var2_int--;
@@ -150,7 +150,7 @@ final class en {
                       var9_ref_sg.field_K = 0;
                     }
                   }
-                  var9 = 2 + (-5 + (pf.field_g.field_K - var8));
+                  var9 = 2 + (-5 + (IntrusiveDeque.field_g.field_K - var8));
                   var10 = fk.field_p[var6].length - 1;
                   for (var11 = 0; var11 < var10; var11++) {
                     var12 = var11 * var9 / var10;
@@ -161,9 +161,9 @@ final class en {
               }
             }
           }
-          ed.field_d.a(360, -10 + gf.field_k - 120 - 4 - 10, (byte) 122, 10, -360 + gf.field_b >> 1);
-          hl.field_K.a(ed.field_d.field_K, 24, (byte) 80, 0, 0);
-          jo.field_a.a(ed.field_d.field_K, -24 + ed.field_d.field_mb, (byte) 106, 24, 0);
+          MouseInputHandler.field_d.a(360, -10 + gf.field_k - 120 - 4 - 10, (byte) 122, 10, -360 + gf.field_b >> 1);
+          hl.field_K.a(MouseInputHandler.field_d.field_K, 24, (byte) 80, 0, 0);
+          jo.field_a.a(MouseInputHandler.field_d.field_K, -24 + MouseInputHandler.field_d.field_mb, (byte) 106, 24, 0);
           jo.field_a.field_F = cs.a(16, 3, jo.field_a.field_mb, 11579568, 8421504, 1);
           lp.field_v.a(jo.field_a.field_K - 10, -2 + jo.field_a.field_mb - 10 - 24, (byte) 115, 5, 5);
           oo.field_c.a(80, 24, (byte) 108, -5 + jo.field_a.field_mb - 24, (jo.field_a.field_K - 80) / 2);

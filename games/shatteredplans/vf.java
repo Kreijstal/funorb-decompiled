@@ -7,11 +7,11 @@ final class vf extends hb {
     static String field_f;
     private wb field_g;
 
-    final static void a(int param0, int param1, int param2, boolean param3, ln[] param4, Random param5, ln[] param6) {
-        ln[] array$0 = null;
+    final static void a(int param0, int param1, int param2, boolean param3, Star[] param4, Random param5, Star[] param6) {
+        Star[] array$0 = null;
         int var15 = 0;
         Object stackIn_22_0 = null;
-        ln[] stackIn_22_1 = null;
+        Star[] stackIn_22_1 = null;
         RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
@@ -20,30 +20,30 @@ final class vf extends hb {
         StringBuilder stackIn_68_1 = null;
         String stackIn_69_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ln[][] var7 = null;
+        Star[][] var7 = null;
         RuntimeException var7_ref = null;
         int[] var8 = null;
         int var9 = 0;
         int var10 = 0;
-        pf var10_ref_pf = null;
+        IntrusiveDeque var10_ref_pf = null;
         int var11 = 0;
-        ln[] var11_ref_ln__ = null;
+        Star[] var11_ref_ln__ = null;
         int var12 = 0;
-        ln var13 = null;
+        Star var13 = null;
         fi[] var14 = null;
         fi var16 = null;
-        ln[] var17_ref_ln__ = null;
+        Star[] var17_ref_ln__ = null;
         int var17 = 0;
         int var18 = 0;
-        ln var19_ref_ln = null;
+        Star var19_ref_ln = null;
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        ln var22 = null;
+        Star var22 = null;
         int var23 = 0;
         int[] var24 = null;
-        ln[][] var25 = null;
-        ln var26 = null;
+        Star[][] var25 = null;
+        Star var26 = null;
         int[] var27 = null;
         int var12Lifetime1;
         int var18Lifetime1;
@@ -53,7 +53,7 @@ final class vf extends hb {
         int var9Lifetime1;
         var21 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var25 = new ln[param1][];
+          var25 = new Star[param1][];
           var7 = var25;
           var27 = new int[param1];
           var24 = var27;
@@ -62,7 +62,7 @@ final class vf extends hb {
             return;
           }
           for (var9 = 0; var9 < param1; var9++) {
-            var10_ref_pf = new pf();
+            var10_ref_pf = new IntrusiveDeque();
             var11_ref_ln__ = param4;
             for (var12 = 0; var11_ref_ln__.length > var12; var12++) {
               var22 = var11_ref_ln__[var12];
@@ -70,7 +70,7 @@ final class vf extends hb {
               var10_ref_pf.a((byte) -113, var22);
               var8[var9] = var8[var9] + 1;
             }
-            array$0 = new ln[var27[var9]];
+            array$0 = new Star[var27[var9]];
             var7[var9] = array$0;
             var10_ref_pf.a((byte) 112, var25[var9]);
           }
@@ -87,7 +87,7 @@ final class vf extends hb {
               }
               var11 = qf.a((byte) 76, var27[var9Lifetime1], param5);
               var12Lifetime1 = 0;
-              L4: while (true) {
+              scanLoop1: while (true) {
                 if (var27[var9Lifetime1] > var12Lifetime1) {
                   var26 = var25[var9Lifetime1][(var12Lifetime1 + var11) % var27[var9Lifetime1]];
                   if (~var26.field_x == ~var9Lifetime1) {
@@ -149,7 +149,7 @@ final class vf extends hb {
                           if (decompiledFrameCompleted0) {
                             var26.a((byte) -113, var16.field_k);
                             var16.field_k.a((byte) -111, var26);
-                            break L4;
+                            break scanLoop1;
                           }
                         }
                       }
@@ -228,7 +228,7 @@ final class vf extends hb {
               var4.b((byte) -122);
               return;
             }
-            jq.a(-29901, (Throwable) null, "A1: " + w.a(16738));
+            GameKeyHandler.a(-29901, (Throwable) null, "A1: " + w.a(16738));
             q.g(-108);
           } else {
             var3_ref_ld = (ld) (ua.field_d.d(0));
@@ -246,7 +246,7 @@ final class vf extends hb {
             } else {
               var5 = null;
             }
-            var8.field_j = var8.field_j + 4;
+            var8.position = var8.position + 4;
             if (!var8.f((byte) 104)) {
               q.g(param0 + 17);
               return;
@@ -263,14 +263,14 @@ final class vf extends hb {
         }
     }
 
-    final oh a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         if (param0) {
           vf.d((byte) 82);
         }
-        return (oh) ((Object) this.field_g.d(-115));
+        return (IntrusiveNode) ((Object) this.field_g.d(-115));
     }
 
-    final static void a(int param0, sd param1) {
+    final static void a(int param0, Territory param1) {
         int var3 = 0;
         int[] var2 = null;
         int var4 = 0;
@@ -314,11 +314,11 @@ final class vf extends hb {
         }
     }
 
-    final oh a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 < 99) {
-          return (oh) null;
+          return (IntrusiveNode) null;
         }
-        return (oh) ((Object) this.field_g.e(-31364));
+        return (IntrusiveNode) ((Object) this.field_g.e(-31364));
     }
 
     final int b(byte param0) {
@@ -329,7 +329,7 @@ final class vf extends hb {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        eo.field_cb.field_j = 0;
+        eo.field_cb.position = 0;
         eo.field_cb.c(12, (byte) -128);
         eo.field_cb.e(11135, na.field_u.nextInt());
         eo.field_cb.e(11135, na.field_u.nextInt());
@@ -338,20 +338,20 @@ final class vf extends hb {
         eo.field_cb.d(param0, 255);
         eo.field_cb.a(jl.field_V, hr.field_a, (byte) -56);
         js.field_f.h(18, param2 + 251);
-        int fieldTemp$0 = js.field_f.field_j + 1;
-        js.field_f.field_j = js.field_f.field_j + 1;
+        int fieldTemp$0 = js.field_f.position + 1;
+        js.field_f.position = js.field_f.position + 1;
         int var4 = fieldTemp$0;
-        js.field_f.a(0, eo.field_cb.field_j, eo.field_cb.field_h, 22186);
+        js.field_f.a(0, eo.field_cb.position, eo.field_cb.payload, 22186);
         if (param2 != 4) {
           return;
         }
-        js.field_f.b(-var4 + js.field_f.field_j, (byte) 118);
+        js.field_f.b(-var4 + js.field_f.position, (byte) 118);
     }
 
     public static void a(int param0) {
         if (param0 != 17593) {
-          sd var2 = (sd) null;
-          vf.a(-89, (sd) null);
+          Territory var2 = (Territory) null;
+          vf.a(-89, (Territory) null);
         }
         field_f = null;
     }

@@ -3,7 +3,7 @@
  */
 final class cb extends le {
     private java.nio.ByteBuffer field_k;
-    static pf field_h;
+    static IntrusiveDeque field_h;
     static String field_g;
     static String field_m;
     static int[] field_f;

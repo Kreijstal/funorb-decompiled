@@ -4,7 +4,7 @@
 final class nb {
     static int field_a;
     static String field_c;
-    static bi[][] field_d;
+    static Sprite[][] field_d;
     static int[] field_b;
 
     final static boolean a(char param0, int param1) {
@@ -57,7 +57,7 @@ final class nb {
     }
 
     public static void a(byte param0) {
-        field_d = (bi[][]) null;
+        field_d = (Sprite[][]) null;
         if (param0 > 99) {
           field_b = null;
           field_c = null;

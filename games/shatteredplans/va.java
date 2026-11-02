@@ -5,12 +5,12 @@ final class va {
     static boolean field_j;
     static r field_g;
     static int field_b;
-    static bi field_e;
+    static Sprite field_e;
     static String field_i;
     boolean field_f;
     int field_c;
     boolean field_k;
-    static bi[] field_d;
+    static Sprite[] field_d;
     int field_h;
     int field_a;
 
@@ -131,12 +131,12 @@ final class va {
         }
     }
 
-    final static bi[] a(String param0, int param1, String param2, bc param3) {
+    final static Sprite[] a(String param0, int param1, String param2, bc param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        bi[] stackIn_2_0 = null;
-        bi[] stackIn_4_0 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -152,7 +152,7 @@ final class va {
             stackIn_4_0 = um.a(var4_int, param3, var5, param1 - 84);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (bi[]) null;
+          stackIn_2_0 = (Sprite[]) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

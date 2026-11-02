@@ -7,7 +7,7 @@ final class js {
     static int field_g;
     static gh field_i;
     static String field_h;
-    static ke field_a;
+    static BufferedSocket field_a;
     static sl field_f;
     static int field_j;
     static sq[] field_b;
@@ -215,16 +215,16 @@ final class js {
               var10 = var18;
               var11 = 0;
               var12 = 0;
-              L5: while (true) {
+              scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
                     em.field_k != param0) {
-                    break L5;
+                    break scanLoop1;
                   }
                   for (var12 = 0; var19.length > var12; var12 += 2) {
                     var13 = var19[var12];
                     if (var13 == -1) {
-                      qd.field_h = true;
+                      RasterBuffer.field_h = true;
                     } else {
                       if (var13 < param0) {
                         ek.field_F[var13] = true;
@@ -232,7 +232,7 @@ final class js {
                     }
                   }
                   var8_int = 0;
-                  break L5;
+                  break scanLoop1;
                 }
                 var13Lifetime1 = var19[var12];
                 var14 = var10[1 + var12];
@@ -242,15 +242,15 @@ final class js {
                     var11 = 1;
                   } else {
                     if (param0 <= var13Lifetime1) {
-                      break L5;
+                      break scanLoop1;
                     }
                     if ((lr.field_c[var13Lifetime1] & 255) != var14) {
-                      break L5;
+                      break scanLoop1;
                     }
                   }
                 } else {
                   if (nl.field_a[param7] != var14) {
-                    break L5;
+                    break scanLoop1;
                   }
                 }
                 var12 += 2;
@@ -391,7 +391,7 @@ final class js {
           pc.field_q = tp.field_b;
           ol.field_g = hm.field_q;
           jc.field_r = fe.field_B;
-          me.field_j = false;
+          VictoryChecker.field_j = false;
           td.field_L = false;
           se.field_k = false;
           if (param0 != -10) {
@@ -408,7 +408,7 @@ final class js {
             }
           }
           if (ol.field_g.field_h) {
-            ge.field_i = 0;
+            ImageProducerRasterBuffer.field_i = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

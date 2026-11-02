@@ -46,7 +46,7 @@ final class ad implements jk {
         }
     }
 
-    final static void a(pf param0, int param1) {
+    final static void a(IntrusiveDeque param0, int param1) {
         nc var2 = null;
         int var3 = 0;
         RuntimeException stackIn_12_0 = null;

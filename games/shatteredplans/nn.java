@@ -12,7 +12,7 @@ final class nn {
         field_a = null;
     }
 
-    final static int a(ln[] param0, int param1) {
+    final static int a(Star[] param0, int param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

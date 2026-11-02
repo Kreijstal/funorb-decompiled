@@ -23,7 +23,7 @@ final class vm extends qr {
     private vm[] field_yb;
     private int field_Gb;
     static qr field_Ab;
-    static bi field_Jb;
+    static Sprite field_Jb;
 
     final void h(int param0) {
         int var3 = 0;
@@ -188,7 +188,7 @@ final class vm extends qr {
               ih.a(gi.field_a, 2, var5, em.field_h, (String) null, param3);
               un.a(gi.field_a, (byte) 123, hd.field_k, em.field_h, var5);
               jp.g((byte) 119);
-              dc.a(-5883);
+              GameState.a(-5883);
             } else {
               mm.d(param0 ^ -16705);
               jp.g((byte) 119);
@@ -315,16 +315,16 @@ final class vm extends qr {
             var14 = null;
             if (this.field_yb[var13] != null ||
               this.field_Hb[var13] == -1) {
-              var14 = jq.field_c;
+              var14 = GameKeyHandler.field_c;
             }
-            this.field_Kb[var13] = new sg(0L, param2, (qr) null, param3, (bi) (var14), param6[var13]);
+            this.field_Kb[var13] = new sg(0L, param2, (qr) null, param3, (Sprite) (var14), param6[var13]);
             this.a(4, this.field_Kb[var13]);
             var15 = var17.c(param6[var13]);
             if (this.field_Ib < var15) {
               this.field_Ib = var15;
             }
           }
-          this.field_Ib = this.field_Ib + (jq.field_c.field_o + 10);
+          this.field_Ib = this.field_Ib + (GameKeyHandler.field_c.field_o + 10);
           this.c(false, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

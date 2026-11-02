@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hq {
-    static bi field_a;
+    static Sprite field_a;
     static qr field_b;
     static boolean field_c;
     static String field_d;
 
-    final static void a(int param0, int param1, ob param2, byte param3, int param4) {
+    final static void a(int param0, int param1, PacketBuffer param2, byte param3, int param4) {
         param2.c(12, (byte) -126);
         param2.d(17, param3 + 235);
         if (param3 != 20) {

@@ -216,11 +216,11 @@ final class sm {
         int var15;
         String var15_ref_String;
         int var16;
-        bi var17;
+        Sprite var17;
         int var17_int;
         int var18;
         int var19;
-        bi var20;
+        Sprite var20;
         int var21;
         int[] var25;
         int var9Lifetime1;
@@ -286,7 +286,7 @@ final class sm {
         param1 += 8;
         var10 = nc.field_t;
         for (var11 = 0; -1 + var5 > var11; var11++) {
-          var12 = ln.field_H[var11];
+          var12 = Star.field_H[var11];
           if (12 < var12) {
             var12 = 12;
           }
@@ -304,14 +304,14 @@ final class sm {
           }
           ks.a(-18166, 16, 2458760, -1, var6, param1);
           mh.a(var13, -16 + var6, 16 + param1, 2458760, false);
-          var14_intLifetime1 = -12 + ln.field_H[var11];
+          var14_intLifetime1 = -12 + Star.field_H[var11];
           if (var14_intLifetime1 > 0) {
             var15_ref_String = pe.field_J[var11];
             var16 = rs.field_Cb.c(var15_ref_String);
             var17_int = rs.field_Cb.field_q + rs.field_Cb.field_J;
             var18 = var6 - 15;
             var19 = (var13 - var16 >> 1) + 8 + param1;
-            var20 = new bi(var17_int, var16);
+            var20 = new Sprite(var17_int, var16);
             bs.a(var20, 125);
             rs.field_Cb.a(var15_ref_String, 1 + rs.field_Cb.field_J * 3 / 4, -1 + var16, 16777215, -1);
             cg.i(0);
@@ -328,12 +328,12 @@ final class sm {
         stackIn_48_0 = (this.field_a != 7) ? 16 : 8;
         var12Lifetime2 = stackIn_48_0;
         ks.a(-18166, var12Lifetime2, 2458760, 1, var6 - 16, var11Lifetime1 + 15 + param1);
-        var13Lifetime1 = ln.field_H[var5 - 1] << 2;
+        var13Lifetime1 = Star.field_H[var5 - 1] << 2;
         if (0 != var13Lifetime1) {
           var14 = pe.field_J[var5 - 1];
           var15 = rs.field_Cb.c(var14);
           var16Lifetime1 = rs.field_Cb.field_q + rs.field_Cb.field_J;
-          var17 = new bi(var16Lifetime1, var15);
+          var17 = new Sprite(var16Lifetime1, var15);
           bs.a(var17, 82);
           rs.field_Cb.a(var14, rs.field_Cb.field_J * 3 / 4 + 1, -1 + var15, 16777215, -1);
           cg.i(param2 ^ 7552);
@@ -388,7 +388,7 @@ final class sm {
         int var4Lifetime3;
         int var6Lifetime1;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = ln.field_H.length;
+        var2 = Star.field_H.length;
         var3 = ac.field_w + 147;
         var4 = 0;
         if (param0 >= -31) {
@@ -408,19 +408,19 @@ final class sm {
           var5 = o.field_s;
         }
         nc.field_t = 0;
-        for (var4Lifetime1 = 0; var4Lifetime1 < ln.field_H.length; var4Lifetime1++) {
-          var6 = ln.field_H[var4Lifetime1];
+        for (var4Lifetime1 = 0; var4Lifetime1 < Star.field_H.length; var4Lifetime1++) {
+          var6 = Star.field_H[var4Lifetime1];
           if (var5 == var4Lifetime1) {
             var6++;
             if (var6 <= 24) {
-              ln.field_H[var4Lifetime1] = var6;
+              Star.field_H[var4Lifetime1] = var6;
             } else {
               var6 = 24;
             }
           } else {
             var6--;
             if (var6 >= 0) {
-              ln.field_H[var4Lifetime1] = var6;
+              Star.field_H[var4Lifetime1] = var6;
             } else {
               var6 = 0;
             }
@@ -538,7 +538,7 @@ final class sm {
     private final void e(byte param0) {
         gf.a(kc.field_m);
         gf.a();
-        int var2 = re.a(0, 32, on.field_c, 320, 0);
+        int var2 = re.a(0, 32, IntrusiveDequeCursor.field_c, 320, 0);
         int var3 = 200;
         int var4 = this.b(false) - (var2 - this.c(32) >> 1);
         int var5 = -48 + this.h(-104) - var3;
@@ -548,7 +548,7 @@ final class sm {
         if (var2 > 20) {
           ga.a(var3, var5, var4, (byte) -112, var2);
         }
-        if (on.field_c == 32) {
+        if (IntrusiveDequeCursor.field_c == 32) {
           gf.d(var4 + 8, 8 + var5, var2 + (var4 - 8), var3 + (var5 - 8));
           mp.field_b.c(wc.field_b, (var2 >> 1) + var4, mp.field_b.field_J + 10 + var5, 2805974, -1);
           rs.field_Cb.a(oi.field_c, 10 + var4, mp.field_b.field_J + (var5 + 10), -20 + var2, -mp.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, rs.field_Cb.field_J);
@@ -776,7 +776,7 @@ final class sm {
           return;
         }
         if (ri.field_I == null) {
-          ri.field_I = kf.a((byte) 85, 0, 7, 10);
+          ri.field_I = GameApplet.a((byte) 85, 0, 7, 10);
         }
         var2 = re.a(0, 32, nb.field_a, 560, param0 ^ -23);
         var3 = 200;
@@ -785,7 +785,7 @@ final class sm {
         if (var2 > 20) {
           ga.a(var3, var5, var4, (byte) -109, var2);
         }
-        L3: {
+        regionExit1: {
           gf.d(var4 + 8, 8 + var5, var2 + (var4 - 8), -8 + (var3 + var5));
           var6 = 2805974;
           var7 = 16 + var5 + rs.field_Cb.field_J;
@@ -819,9 +819,9 @@ final class sm {
               if (((var11 == 0)) &&
                 (!(ri.field_I.field_h + ri.field_I.field_i + ri.field_I.field_r <= 0))) {
                 var6Lifetime1Lifetime1 = 2805974;
-                this.a(ln.field_o, ri.field_I.field_i, (byte) -120, ri.field_I.field_l, var4, ri.field_I.field_r, var7, -1, var6Lifetime1Lifetime1, ri.field_I.field_h);
+                this.a(Star.field_o, ri.field_I.field_i, (byte) -120, ri.field_I.field_l, var4, ri.field_I.field_r, var7, -1, var6Lifetime1Lifetime1, ri.field_I.field_h);
               }
-              break L3;
+              break regionExit1;
             }
             var8 = wj.field_k;
           }
@@ -870,19 +870,19 @@ final class sm {
         if (param1 <= 14) {
           this.e((byte) -50);
         }
-        qd.field_e = -1;
+        RasterBuffer.field_e = -1;
         this.field_g = -1;
         qg.field_q = cl.field_n;
         for (var4 = 1; 6 > var4; var4++) {
-          ln.field_H[var4] = 0;
+          Star.field_H[var4] = 0;
         }
         o.field_s = 0;
         if (this.field_a == 8) {
-          up.field_d = 0;
+          SecondaryNodeDeque.field_d = 0;
         }
         ne.field_o = -1;
         nc.field_t = 24;
-        ln.field_H[0] = 24;
+        Star.field_H[0] = 24;
         if (cb.field_i == null && (6 == this.field_a ||
           this.field_a == 7)) {
           hd.c(false);
@@ -953,7 +953,7 @@ final class sm {
           field_c = (String) null;
         }
         for (var2 = 0; jd.field_j.length > var2; var2++) {
-          if (var2 != qd.field_e &&
+          if (var2 != RasterBuffer.field_e &&
             an.field_c != var2) {
             ql.field_o[var2] = null;
             tr.field_sb[var2] = null;
@@ -963,12 +963,12 @@ final class sm {
           fieldTemp$1 = ek.field_A + 1;
           ek.field_A = ek.field_A + 1;
           if (32 <= fieldTemp$1) {
-            up.field_d = q.field_Bb;
+            SecondaryNodeDeque.field_d = q.field_Bb;
             ek.field_A = 0;
           }
         }
         if (an.field_c == -1) {
-          stackIn_21_0 = qd.field_e;
+          stackIn_21_0 = RasterBuffer.field_e;
         } else {
           stackIn_21_0 = an.field_c;
         }
@@ -991,7 +991,7 @@ final class sm {
         }
         if (q.field_Bb != var3) {
           if (ek.field_A != 0) {
-            up.field_d = re.a(up.field_d, 32, ek.field_A, q.field_Bb, 0);
+            SecondaryNodeDeque.field_d = re.a(SecondaryNodeDeque.field_d, 32, ek.field_A, q.field_Bb, 0);
           }
           ek.field_A = 1;
           q.field_Bb = var3;
@@ -1018,7 +1018,7 @@ final class sm {
         int var8;
         int var9;
         int var10;
-        om var10_ref_om;
+        ArgbSprite var10_ref_om;
         int var11;
         int var12;
         int var13;
@@ -1038,20 +1038,20 @@ final class sm {
         Object var31;
         String var32;
         String var33;
-        bi var34;
-        bi var35;
+        Sprite var34;
+        Sprite var35;
         String var36;
         String var37;
         String var38;
         String var39;
         String var40;
         String var41;
-        om var45;
+        ArgbSprite var45;
         int stackIn_55_0 = 0;
         int stackIn_61_0 = 0;
         int stackIn_96_0 = 0;
         int stackIn_99_0 = 0;
-        bi var9_ref_bi;
+        Sprite var9_ref_bi;
         String[] var16;
         String var17;
         String var18;
@@ -1144,9 +1144,9 @@ final class sm {
                 hb.field_d.c(param3 + 5, param0 + 5);
                 this.a(var11, param0 + 5, var9Lifetime1, 5 + param0 + 14, md.field_K, 5, var10Lifetime1, 32 + param0 + 5, (byte) 110, 250 + param3);
                 this.a(-5, nn.field_a, 139 + (5 + param3), 40 + param0 + 5, param0 + 85, var9Lifetime1, var10Lifetime1, (byte) 62, 5 + param3 + 139, var11);
-                this.a(var11, 5 + (param0 + 130), var9Lifetime1, 70 + param0 + 5, pa.field_i, 5, var10Lifetime1, 100 + (5 + param0), (byte) 110, 188 + (5 + param3));
+                this.a(var11, 5 + (param0 + 130), var9Lifetime1, 70 + param0 + 5, ProxySocketConnector.field_i, 5, var10Lifetime1, 100 + (5 + param0), (byte) 110, 188 + (5 + param3));
                 this.a(var11, param0 + 130, var9Lifetime1, 95 + param0, kj.field_e, 10, var10Lifetime1, 5 + (param0 + 260), (byte) 110, param3 + 235);
-                this.a(var11, 264 + param0 + 5, var9Lifetime1, 5 + (param0 + 110), ln.field_q, 25, var10Lifetime1, 5 + (param0 + 294), (byte) 110, 210 + (5 + param3));
+                this.a(var11, 264 + param0 + 5, var9Lifetime1, 5 + (param0 + 110), Star.field_q, 25, var10Lifetime1, 5 + (param0 + 294), (byte) 110, 210 + (5 + param3));
                 param0 += 150;
                 var12 = 400;
                 if (ai.field_e == 1) {
@@ -1177,7 +1177,7 @@ final class sm {
                 return;
               }
               if (param2 == 5) {
-                var9_ref_bi = new bi(80, 80);
+                var9_ref_bi = new Sprite(80, 80);
                 bs.a(var9_ref_bi, 90);
                 bd.field_G.a(40, 40, cl.field_n % 25 * 200, 16384);
                 cg.i(0);
@@ -1199,7 +1199,7 @@ final class sm {
                 return;
               }
               if (param2 == 6) {
-                var45 = (om) (fj.field_p);
+                var45 = (ArgbSprite) (fj.field_p);
                 var10_ref_om = var45.h();
                 var10_ref_om.f();
                 var11Lifetime2 = cl.field_n % 200;
@@ -1258,7 +1258,7 @@ final class sm {
                 for (var16_int = 0; var16_int < 6; var16_int++) {
                   var17_int = (-var15 + var16_int * 8192) / 6;
                   var18_int = (20 * je.a(var17_int, (byte) -104) >> 12) + (param3 + 35 << 4);
-                  var19 = (20 * oh.b(var17_int, -122) >> 12) + (40 + param0 << 4);
+                  var19 = (20 * IntrusiveNode.b(var17_int, -122) >> 12) + (40 + param0 << 4);
                   gf.b(var18_int, var19, 64, 255, vj.field_F);
                 }
                 for (var16_intLifetime1 = 0; var16_intLifetime1 < 10; var16_intLifetime1++) {
@@ -1291,7 +1291,7 @@ final class sm {
                 var17_intLifetime2 = stackIn_61_0;
                 if (var16_intLifetime2 != 0) {
                   if (1 == var16_intLifetime2) {
-                    var34 = new bi(var10_ref_om.field_z + 20, var10_ref_om.field_w);
+                    var34 = new Sprite(var10_ref_om.field_z + 20, var10_ref_om.field_w);
                     bs.a(var34, 83);
                     var20 = 0;
                     for (var21 = 0; 5 > var21; var21++) {
@@ -1303,7 +1303,7 @@ final class sm {
                     var34.c(param3 + 7, 15 + param0, var18_intLifetime1);
                   } else {
                     if (var16_intLifetime2 == 2) {
-                      var35 = new bi(var10_ref_om.field_z + 30, var10_ref_om.field_w);
+                      var35 = new Sprite(var10_ref_om.field_z + 30, var10_ref_om.field_w);
                       bs.a(var35, 123);
                       var20 = 0;
                       var21 = 0;
@@ -1418,10 +1418,10 @@ final class sm {
                   this.a(var28, (byte) 126, var26, var25Lifetime1, var29, 8421504, var11Lifetime3);
                   var28 += 30;
                   var29Lifetime1 = 2 * var27 + var26;
-                  this.a(var28, (byte) 127, var26, var23Lifetime1, var29Lifetime1, df.field_k[0], var11Lifetime3);
+                  this.a(var28, (byte) 127, var26, var23Lifetime1, var29Lifetime1, DualLinkNode.field_k[0], var11Lifetime3);
                   var28 += 30;
                   var29Lifetime2 = 2 * var27 + 10 * var26 / 15;
-                  this.a(var28, (byte) 126, var26, var24Lifetime1, var29Lifetime2, df.field_k[2], var11Lifetime3);
+                  this.a(var28, (byte) 126, var26, var24Lifetime1, var29Lifetime2, DualLinkNode.field_k[2], var11Lifetime3);
                 }
                 return;
               }
@@ -1452,7 +1452,7 @@ final class sm {
                 if (10 != param2) {
                   throw new RuntimeException();
                 }
-                var5 = df.field_m + ac.field_v;
+                var5 = DualLinkNode.field_m + ac.field_v;
               } else {
                 var5 = dm.field_a;
               }
@@ -1533,7 +1533,7 @@ final class sm {
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         var4 = 20 + (this.b(false) + qg.field_r[this.field_a]);
         var5 = 10 + this.h(-121);
-        var6 = ln.field_H.length;
+        var6 = Star.field_H.length;
         if (param1 > var4) {
           return -1;
         }
@@ -1556,7 +1556,7 @@ final class sm {
         var8 = -12 % ((param0 - 41) / 43);
         var9 = nc.field_t;
         for (var10 = 0; var6 > var10; var10++) {
-          var11 = ln.field_H[var10];
+          var11 = Star.field_H[var10];
           if (var11 > 12) {
             var11 = 12;
           }
@@ -1644,10 +1644,10 @@ final class sm {
         }
         this.field_h = this.field_h + 1;
         if (this.field_a == 10) {
-          fieldTemp$0 = on.field_c + 1;
-          on.field_c = on.field_c + 1;
+          fieldTemp$0 = IntrusiveDequeCursor.field_c + 1;
+          IntrusiveDequeCursor.field_c = IntrusiveDequeCursor.field_c + 1;
           if (32 < fieldTemp$0) {
-            on.field_c = 32;
+            IntrusiveDequeCursor.field_c = 32;
           }
         }
         if (this.field_a == 5) {
@@ -1662,7 +1662,7 @@ final class sm {
     private final void a(int param0) {
         int discarded$0 = 0;
         int var2 = 0;
-        qd.field_e = this.d(param0 + 16191, pd.field_k, bb.field_b);
+        RasterBuffer.field_e = this.d(param0 + 16191, pd.field_k, bb.field_b);
         if (param0 != -16084) {
           discarded$0 = this.b(true);
         }
@@ -1805,7 +1805,7 @@ final class sm {
             if (this.field_d.c(-97) &&
               tf.field_p > 0) {
               var5 = 1;
-              df.c(!param2);
+              DualLinkNode.c(!param2);
             }
             if (this.field_d.f(-97) &&
               tf.field_p < 256) {
@@ -1859,10 +1859,10 @@ final class sm {
     private final void j(int param0) {
         int var26 = 0;
         int stackIn_5_0 = 0;
-        bi stackIn_8_0 = null;
-        bi stackIn_11_0 = null;
-        bi stackIn_24_0 = null;
-        bi stackIn_27_0 = null;
+        Sprite stackIn_8_0 = null;
+        Sprite stackIn_11_0 = null;
+        Sprite stackIn_24_0 = null;
+        Sprite stackIn_27_0 = null;
         int stackIn_42_0 = 0;
         int stackIn_48_0 = 0;
         int var2;
@@ -1870,13 +1870,13 @@ final class sm {
         int var4;
         int var5;
         int var6;
-        bi var7;
+        Sprite var7;
         int var7_int;
-        bi var8;
+        Sprite var8;
         int var9;
-        bi var9_ref_bi;
+        Sprite var9_ref_bi;
         int var10;
-        bi var10_ref_bi;
+        Sprite var10_ref_bi;
         int var11;
         int var12;
         int var13;
@@ -1895,9 +1895,9 @@ final class sm {
         int var24;
         int var25;
         int var27;
-        bi var28;
-        bi var29;
-        bi var30;
+        Sprite var28;
+        Sprite var29;
+        Sprite var30;
         int var2Lifetime1;
         int var2Lifetime2;
         int var5Lifetime1;
@@ -1905,9 +1905,9 @@ final class sm {
         int var20Lifetime1;
         int var22Lifetime1;
         int var23Lifetime1;
-        bi var8Lifetime1;
-        bi var9_ref_biLifetime1;
-        bi var8Lifetime2;
+        Sprite var8Lifetime1;
+        Sprite var9_ref_biLifetime1;
+        Sprite var8Lifetime2;
         var27 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = 52;
         var3 = 140;
@@ -1919,9 +1919,9 @@ final class sm {
           stackIn_5_0 = ((1 << var6 & vq.field_a) == 0) ? 0 : 1;
           var5 = stackIn_5_0;
           if (var5 != 0) {
-            stackIn_8_0 = df.a(var6, 32);
+            stackIn_8_0 = DualLinkNode.a(var6, 32);
           } else {
-            stackIn_8_0 = ed.field_b;
+            stackIn_8_0 = MouseInputHandler.field_b;
           }
           var28 = stackIn_8_0;
           var8 = var28;
@@ -1947,14 +1947,14 @@ final class sm {
               }
               var30 = stackIn_27_0;
               var9_ref_biLifetime1 = var30;
-              var10_ref_bi = new bi(48, 48);
+              var10_ref_bi = new Sprite(48, 48);
               bs.a(var10_ref_bi, 112);
               var30.c(0, 0, 48, 48);
               cg.i(0);
               var8Lifetime2.c(var4 - 32, var3 - 32, 96, 96, var7_int << 1);
               var10_ref_bi.c(var4 - 8, -8 + var3, 256);
             } else {
-              if (qd.field_e == var6) {
+              if (RasterBuffer.field_e == var6) {
                 if (-1 == an.field_c) {
                   var28.c(-16 + var4, var3 - 16, var7_int);
                   var29.c(var4, var3, 256);
@@ -1984,13 +1984,13 @@ final class sm {
           }
         }
         if (gl.field_h == null) {
-          gl.field_h = new bi(256, 256);
+          gl.field_h = new Sprite(256, 256);
         }
         if (il.field_gb == null) {
-          il.field_gb = new bi(256, 256);
+          il.field_gb = new Sprite(256, 256);
         }
         if (an.field_c == -1) {
-          stackIn_42_0 = qd.field_e;
+          stackIn_42_0 = RasterBuffer.field_e;
         } else {
           stackIn_42_0 = an.field_c;
         }
@@ -2041,7 +2041,7 @@ final class sm {
         if (-1 != var6 &&
           var6 != 24) {
           mp.field_b.d(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + mp.field_b.field_J), 2805974, -1);
-          var21_ref_String = "(" + re.a(af.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
+          var21_ref_String = "(" + re.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
           var22 = rs.field_Cb.a(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           var22 = var22 + (1 + rs.field_Cb.a(ul.field_Qb[var6], 10 + var2Lifetime1, rs.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * rs.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J));
           rs.field_Cb.a(a.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
@@ -2049,7 +2049,7 @@ final class sm {
           if (var6 == 24) {
             mp.field_b.d(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + mp.field_b.field_J, 2805974, -1);
             if (var5Lifetime1 != 0) {
-              var21_ref_String = "(" + re.a(af.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
+              var21_ref_String = "(" + re.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
               var22_ref_String = ul.field_Qb[var6];
             } else {
               var21_ref_String = "(" + kj.field_i + "???)";
@@ -2060,16 +2060,16 @@ final class sm {
             rs.field_Cb.a(a.field_i, var2Lifetime1 + 10, (var23 + 1) * rs.field_Cb.field_J + 14 + var20, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           } else {
             if (!oe.field_e) {
-              mp.field_b.d(me.field_c.toUpperCase(), var2Lifetime1 + 10, mp.field_b.field_J + (6 + var20), 2805974, -1);
+              mp.field_b.d(VictoryChecker.field_c.toUpperCase(), var2Lifetime1 + 10, mp.field_b.field_J + (6 + var20), 2805974, -1);
               rs.field_Cb.a(rk.field_l, 10 + var2Lifetime1, var20 + 14 + rs.field_Cb.field_J, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
             } else {
               mp.field_b.d(ol.field_j.toUpperCase(), 10 + var2Lifetime1, var20 + 6 + mp.field_b.field_J, 2805974, -1);
-              rs.field_Cb.a(li.field_c, 10 + var2Lifetime1, rs.field_Cb.field_J + var20 + 14, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
+              rs.field_Cb.a(SocketConnector.field_c, 10 + var2Lifetime1, rs.field_Cb.field_J + var20 + 14, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
             }
           }
         }
         if (ek.field_A != 0) {
-          var21 = re.a(up.field_d, 32, ek.field_A, q.field_Bb, 0);
+          var21 = re.a(SecondaryNodeDeque.field_d, 32, ek.field_A, q.field_Bb, 0);
         } else {
           var21 = q.field_Bb;
         }
@@ -2198,7 +2198,7 @@ final class sm {
         int var8 = 20;
         int var9 = 5;
         int var10 = -77 % ((param1 - 63) / 63);
-        jq.a(2 + var9, param5, 4 + var8, -2 + param6 + (param2 - param4), -2 + param0, (byte) -126, 4 + param4);
+        GameKeyHandler.a(2 + var9, param5, 4 + var8, -2 + param6 + (param2 - param4), -2 + param0, (byte) -126, 4 + param4);
         if (0 < param3) {
           var11 = param2 * param3 / 15 + 2 * var9;
           gf.a(param0, param2 + (param6 - var11), var8, var11, var9, param5);
@@ -2210,7 +2210,7 @@ final class sm {
           var17 = new int[4];
           gf.a(var17);
           gf.d(param0, param6, param0 + var8, param2 + param6);
-          ie.a(ii.field_q, param0, param6);
+          ie.a(SpriteState.field_q, param0, param6);
           gf.b(var17);
         }
         rs.field_Cb.c(Integer.toString(param3), var8 / 2 + param0, 10 + param6 + param2, 16777215, -1);
@@ -2219,7 +2219,7 @@ final class sm {
     private final void a(int param0, byte param1) {
         int var5 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        int var3 = ln.field_H.length;
+        int var3 = Star.field_H.length;
         int var4 = ac.field_w + 147;
         for (var5 = 0; var5 < var3; var5++) {
           var4 = var4 - cb.field_i[var5];
@@ -2232,7 +2232,7 @@ final class sm {
         }
         int var6 = var5 + param0;
         if (var6 >= 0 &&
-          ln.field_H.length > var6) {
+          Star.field_H.length > var6) {
           this.d(4, var6);
         }
     }
@@ -2240,7 +2240,7 @@ final class sm {
     sm(int param0) {
         this.field_a = param0;
         this.field_d = new np(qg.field_p[this.field_a].length);
-        ln.field_H = new int[pe.field_J.length];
+        Star.field_H = new int[pe.field_J.length];
         this.a(0, (byte) 28, false);
     }
 
@@ -2252,7 +2252,7 @@ final class sm {
         if (param3 != -32580) {
           field_b = 98;
         }
-        L1: {
+        regionExit1: {
           var5 = param2;
           if (var5 == 0) {
             this.field_g = param0;
@@ -2319,10 +2319,10 @@ final class sm {
                                       } else {
                                         var5 = param1 ? 1 : 0;
                                         ne.field_s = false;
-                                        m.a(8, 13421772, rm.field_b, 8, mp.field_b.field_K, mr.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, mr.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (bi[]) null, es.field_n);
+                                        m.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, mr.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, mr.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, es.field_n);
                                         fm.a(var5 != 0, -1);
                                       }
-                                      break L1;
+                                      break regionExit1;
                                     }
                                     if (var5 == 10) {
                                       this.field_g = param0;
@@ -2367,7 +2367,7 @@ final class sm {
                                                       } else {
                                                         qk.a(se.field_a, this.field_a, (byte) 123);
                                                       }
-                                                      break L1;
+                                                      break regionExit1;
                                                     }
                                                     if (26 == var5) {
                                                       if (this.a((byte) 44, param0)) {
@@ -2394,29 +2394,29 @@ final class sm {
                                                             switch (var5) {
                                                               case 0:
                                                                 oq.field_i[28] = lm.field_a;
-                                                                break L1;
+                                                                break regionExit1;
                                                               case 1:
                                                                 oq.field_i[28] = la.field_n;
-                                                                break L1;
+                                                                break regionExit1;
                                                               case 2:
                                                                 oq.field_i[28] = ue.field_c;
-                                                                break L1;
+                                                                break regionExit1;
                                                               default:
-                                                                break L1;
+                                                                break regionExit1;
                                                               case 3:
                                                                 oq.field_i[28] = cf.field_I;
-                                                                break L1;
+                                                                break regionExit1;
                                                             }
                                                           }
                                                           if (var5 == 29) {
-                                                            if (hi.field_a != td.field_K) {
+                                                            if (TaskAi.field_a != td.field_K) {
                                                               oq.field_i[29] = tp.field_k;
-                                                              td.field_K = hi.field_a;
+                                                              td.field_K = TaskAi.field_a;
                                                             } else {
                                                               td.field_K = ec.field_s;
                                                               oq.field_i[29] = og.field_a;
                                                             }
-                                                            break L1;
+                                                            break regionExit1;
                                                           }
                                                           if (32 == var5) {
                                                             if (oq.field_i[32] == ga.field_L) {
@@ -2495,8 +2495,8 @@ final class sm {
           return fieldTemp$1 <= 0 ? true : false;
         }
         if (this.field_a == 10) {
-          fieldTemp$2 = on.field_c - 1;
-          on.field_c = on.field_c - 1;
+          fieldTemp$2 = IntrusiveDequeCursor.field_c - 1;
+          IntrusiveDequeCursor.field_c = IntrusiveDequeCursor.field_c - 1;
           return 0 >= fieldTemp$2 ? true : false;
         }
         return true;
@@ -2681,7 +2681,7 @@ final class sm {
     }
 
     private final void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, boolean param8) {
-        bi stackIn_23_0 = null;
+        Sprite stackIn_23_0 = null;
         double var10;
         double var12;
         double var14;
@@ -2752,7 +2752,7 @@ final class sm {
         } else {
           stackIn_23_0 = eq.field_o;
         }
-        ie.a((om) (stackIn_23_0), fj.field_p.field_z << 3, fj.field_p.field_w << 3, var30, var31, var32Lifetime1, 4096);
+        ie.a((ArgbSprite) (stackIn_23_0), fj.field_p.field_z << 3, fj.field_p.field_w << 3, var30, var31, var32Lifetime1, 4096);
         if (param8) {
           gf.c(var30 >> 4, var31 >> 4, 9, 0, 92);
           rs.field_Cb.c(Integer.toString(param7), var30 >> 4, 4 + (var31 >> 4), 16777215, -1);
@@ -2796,7 +2796,7 @@ final class sm {
               this.field_d.b(0);
             } else {
               if (oq.field_j == 103) {
-                this.d(4, ln.field_H.length - 1);
+                this.d(4, Star.field_H.length - 1);
               } else {
                 this.field_d.b(0);
               }

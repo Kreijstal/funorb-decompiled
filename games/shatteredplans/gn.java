@@ -4,7 +4,7 @@
 final class gn extends o {
     static String field_v;
     static String field_x;
-    static bi field_y;
+    static Sprite field_y;
     static int field_t;
     static int field_B;
     static qr field_w;
@@ -16,7 +16,7 @@ final class gn extends o {
     final static void a(int param0, int param1, boolean param2, int param3) {
         es.field_n = param3;
         ah.field_P = param1;
-        rm.field_b = param0;
+        IterableNodeHashTable.field_b = param0;
         if (param2) {
           field_w = (qr) null;
         }
@@ -81,7 +81,7 @@ final class gn extends o {
         try {
           super.a(param0, (byte) 42);
           if (param2 != -21979) {
-            field_y = (bi) null;
+            field_y = (Sprite) null;
           }
           if (param1) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
@@ -120,7 +120,7 @@ final class gn extends o {
         }
     }
 
-    final void a(int param0, bi param1) {
+    final void a(int param0, Sprite param1) {
         int var4 = 0;
         wk[] var3 = null;
         wk var5 = null;
@@ -327,7 +327,7 @@ final class gn extends o {
         }
     }
 
-    final void a(byte param0, bi[] param1) {
+    final void a(byte param0, Sprite[] param1) {
         int var4 = 0;
         wk[] var3 = null;
         wk var5 = null;
@@ -366,7 +366,7 @@ final class gn extends o {
         }
     }
 
-    final void a(bi[] param0, int param1, int param2) {
+    final void a(Sprite[] param0, int param1, int param2) {
         int var4_int = 0;
         try {
           var4_int = param1;
@@ -382,8 +382,8 @@ final class gn extends o {
         }
     }
 
-    public final void a(vg param0, int param1, boolean param2, int param3, byte param4) {
-        vg stackIn_3_0 = null;
+    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -391,7 +391,7 @@ final class gn extends o {
         RuntimeException var6 = null;
         wk var7 = null;
         wk var9 = null;
-        bi var10 = null;
+        Sprite var10 = null;
         kg var11 = null;
         wk var12 = null;
         wk var13 = null;
@@ -401,10 +401,10 @@ final class gn extends o {
           if (!(param0 instanceof kg)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (vg) (param0);
+            stackIn_3_0 = (UiWidget) (param0);
           }
           var11 = (kg) (stackIn_3_0);
-          ke.a(-6187, param0.field_x + (param1 + param0.field_m), param0.field_n + param0.field_q + param3, param0.field_q + param3, param1 + param0.field_m);
+          BufferedSocket.a(-6187, param0.field_x + (param1 + param0.field_m), param0.field_n + param0.field_q + param3, param0.field_q + param3, param1 + param0.field_m);
           if (var11 != null) {
             param2 = param2 & var11.field_y;
           }
@@ -444,10 +444,10 @@ final class gn extends o {
             }
           }
           this.field_z.a(param1, true, param0, param3, this);
-          ln.f((byte) 124);
+          Star.f((byte) 124);
           if (param4 != 12) {
-            var10 = (bi) null;
-            this.a(100, (bi) null);
+            var10 = (Sprite) null;
+            this.a(100, (Sprite) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -4,7 +4,7 @@
 final class e {
     private String field_c;
     static int field_f;
-    static bi field_e;
+    static Sprite field_e;
     static int field_d;
     private boolean field_a;
     static int field_b;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uq extends oh {
+final class uq extends IntrusiveNode {
     static int field_k;
     static qr field_j;
     static String field_n;
@@ -55,10 +55,10 @@ final class uq extends oh {
         }
     }
 
-    final static dc a(int param0, int param1, int param2, String[] param3, vr param4) {
-        dc var5 = null;
+    final static GameState a(int param0, int param1, int param2, String[] param3, vr param4) {
+        GameState var5 = null;
         RuntimeException var5_ref = null;
-        dc stackIn_3_0 = null;
+        GameState stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -69,7 +69,7 @@ final class uq extends oh {
           if (param2 != -27579) {
             field_n = (String) null;
           }
-          var5 = new dc(param1, param4, param0, param3);
+          var5 = new GameState(param1, param4, param0, param3);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

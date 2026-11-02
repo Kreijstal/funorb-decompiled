@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cs extends oh {
-    ln field_n;
+final class cs extends IntrusiveNode {
+    Star field_n;
     static fg field_j;
-    ln field_k;
+    Star field_k;
     static boolean field_i;
     static v field_l;
     int field_m;
-    static bi field_h;
+    static Sprite field_h;
 
     public static void a(int param0) {
         field_l = null;
@@ -17,41 +17,41 @@ final class cs extends oh {
         field_h = null;
     }
 
-    final static bi[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        bi var16 = null;
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        Sprite var16 = null;
         int[] var18 = gf.field_h;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
         int var7 = gf.field_b;
         int var8 = gf.field_k;
-        bi var9 = new bi(param1, param2 - 2 * param1);
+        Sprite var9 = new Sprite(param1, param2 - 2 * param1);
         var9.e();
         gf.i(0, 0, param1, param2 - param1 * 2, param3, param4);
-        bi var10 = new bi(param1, param1);
+        Sprite var10 = new Sprite(param1, param1);
         var10.e();
         gf.d(0, 0, param1, param1, param3);
-        bi var11 = new bi(16, param1);
+        Sprite var11 = new Sprite(16, param1);
         var11.e();
         gf.d(0, 0, param0, param1, param3);
-        bi var12 = new bi(param1, param1);
+        Sprite var12 = new Sprite(param1, param1);
         var12.e();
         gf.d(0, 0, param1, param1, param4);
-        bi var13 = new bi(16, param1);
+        Sprite var13 = new Sprite(16, param1);
         var13.e();
         gf.d(0, 0, 16, param1, param4);
         Object var14 = null;
         if (0 < param5) {
-          var16 = new bi(16, 16);
+          var16 = new Sprite(16, 16);
           var14 = var16;
           var16.e();
           gf.d(0, 0, 16, 16, param5);
         }
         gf.a(var18, var7, var8);
-        return new bi[]{var10, var11, var10, var9, (bi) (var14), var9, var12, var13, var12};
+        return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
-    cs(ln param0, ln param1, int param2) {
+    cs(Star param0, Star param1, int param2) {
         try {
           this.field_k = param1;
           this.field_m = param2;

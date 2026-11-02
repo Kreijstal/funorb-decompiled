@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ne extends oh {
+final class ne extends IntrusiveNode {
     int field_r;
     static boolean field_s;
-    ln field_k;
+    Star field_k;
     static qh field_l;
     static int field_o;
-    fs field_h;
+    Player field_h;
     int field_i;
     static String field_n;
     static String field_q;
@@ -90,14 +90,14 @@ final class ne extends oh {
         }
     }
 
-    final static bi a(int param0, boolean param1) {
+    final static Sprite a(int param0, boolean param1) {
         if (param1) {
-          return (bi) null;
+          return (Sprite) null;
         }
-        bi var2 = new bi(pf.field_d.field_z, pf.field_d.field_w);
+        Sprite var2 = new Sprite(IntrusiveDeque.field_d.field_z, IntrusiveDeque.field_d.field_w);
         ra.a(-127);
         var2.e();
-        pf.field_d.b(0, 0, param0 >= 0 ? param0 : 2105376);
+        IntrusiveDeque.field_d.b(0, 0, param0 >= 0 ? param0 : 2105376);
         cg.i(0);
         return var2;
     }
@@ -150,7 +150,7 @@ final class ne extends oh {
           ua.field_f = new qr(0L, (qr) null);
           if (param0 == null) {
             var10 = (Throwable) null;
-            jq.a(-29901, (Throwable) null, "QC1");
+            GameKeyHandler.a(-29901, (Throwable) null, "QC1");
             return;
           }
           param0.field_k = 0;
@@ -159,10 +159,10 @@ final class ne extends oh {
           dh.field_c = new re(var3_int, param0, param0, new ch());
           var4 = hc.a(false);
           if (var4 == null) {
-            jq.a(-29901, (Throwable) null, "QC2");
+            GameKeyHandler.a(-29901, (Throwable) null, "QC2");
             return;
           }
-          ke.a(param1 - 5, var4);
+          BufferedSocket.a(param1 - 5, var4);
           kh.field_Nb = rd.a(65793, 5138823, 65793, 65793, 4020342, (byte) 99, 1127256, 1513239, (nq) null, 0, 2245737, 1513239, 8947848);
           nl.field_d = rd.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16764006, 0, 0, 0);
           hl.field_I = rd.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16777215, 0, 0, 0);
@@ -172,14 +172,14 @@ final class ne extends oh {
           var5 = gf.field_b;
           var6 = gf.field_k;
           var14 = gf.field_h;
-          jq.field_c = new bi(10, 14);
-          jq.field_c.e();
+          GameKeyHandler.field_c = new Sprite(10, 14);
+          GameKeyHandler.field_c.e();
           for (var8 = 2; 7 > var8; var8++) {
             gf.j(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           gf.a(var14, var5, var6);
           of.field_b = gn.a(0, var4, hl.field_I, nl.field_d, kh.field_Nb);
-          ua.field_f.field_M = new pf();
+          ua.field_f.field_M = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -255,7 +255,7 @@ final class ne extends oh {
         }
     }
 
-    ne(fs param0, int param1, int param2, int param3) {
+    ne(Player param0, int param1, int param2, int param3) {
         try {
           this.field_h = param0;
           this.field_k = null;

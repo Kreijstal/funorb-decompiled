@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ui extends me {
+final class ui extends VictoryChecker {
     static int field_m;
     static String field_q;
     private int field_r;
     private int[] field_n;
     static String field_k;
-    private fs field_o;
+    private Player field_o;
     static int field_p;
-    private fs field_l;
+    private Player field_l;
 
     final int b(boolean param0) {
         if (param0) {
           kq var3 = (kq) null;
-          this.a((byte) -126, (dc) null, (kq) null);
+          this.a((byte) -126, (GameState) null, (kq) null);
         }
         return rs.field_Cb.field_J * 3 + this.field_n.length * cc.field_n;
     }
 
-    final boolean a(dc param0, byte param1) {
+    final boolean a(GameState param0, byte param1) {
         int var7 = 0;
         RuntimeException stackIn_48_0 = null;
         StringBuilder stackIn_48_1 = null;
@@ -71,17 +71,17 @@ final class ui extends me {
             }
           }
           if (1 == var4) {
-            this.field_g = new fs[]{(fs) (var5)};
+            this.field_g = new Player[]{(Player) (var5)};
             return true;
           }
           for (var6Lifetime1 = 0; this.field_i.length > var6Lifetime1; var6Lifetime1++) {
             if (this.field_n[var6Lifetime1] == var3_intLifetime1 &&
               this.field_i[var6Lifetime1] == this.field_l) {
-              this.field_g = new fs[]{this.field_l};
+              this.field_g = new Player[]{this.field_l};
               return true;
             }
           }
-          this.field_g = new fs[var4];
+          this.field_g = new Player[var4];
           var6Lifetime2 = 0;
           if (param1 <= 23) {
             ui.a(116, -102, -108, -15);
@@ -125,7 +125,7 @@ final class ui extends me {
         return cg.field_F;
     }
 
-    final void a(int param0, ob param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -138,7 +138,7 @@ final class ui extends me {
         }
     }
 
-    final fs[] b(int param0) {
+    final Player[] b(int param0) {
         int var4_int = 0;
         int var2;
         int var3;
@@ -147,7 +147,7 @@ final class ui extends me {
         int stackIn_9_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_22_1 = 0;
-        fs[] var4;
+        Player[] var4;
         int var6;
         int var8;
         int var5Lifetime1;
@@ -175,7 +175,7 @@ final class ui extends me {
             var3 = var5;
           }
         }
-        var4 = new fs[var2];
+        var4 = new Player[var2];
         var8 = 0;
         var5Lifetime1 = var8;
         while (var8 < this.field_i.length) {
@@ -195,7 +195,7 @@ final class ui extends me {
         return var4;
     }
 
-    final void a(ob param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -226,7 +226,7 @@ final class ui extends me {
         }
     }
 
-    final void a(byte param0, dc param1, kq param2) {
+    final void a(byte param0, GameState param1, kq param2) {
         int var8_int = 0;
         int var11_int = 0;
         int[] stackIn_19_0 = null;
@@ -243,16 +243,16 @@ final class ui extends me {
         int var6 = 0;
         int[] var7 = null;
         qk[] var7_array = null;
-        fs[] var8 = null;
+        Player[] var8 = null;
         int[] var9 = null;
         int var9_int = 0;
         int[] var10 = null;
-        fs[] var11 = null;
+        Player[] var11 = null;
         int var12 = 0;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        fs var16 = null;
+        Player var16 = null;
         int[] var17 = null;
         int[] var18 = null;
         qk[] var19 = null;
@@ -293,9 +293,9 @@ final class ui extends me {
             var7_array[2] = new qk(0, 0, 182, rs.field_Cb.field_J, (String) null);
           } else {
             var7_array[1] = new qk(0, 0, 182, rs.field_Cb.field_J, ms.field_h);
-            var7_array[2] = new qk(0, 0, 182, rs.field_Cb.field_J, var16.field_t, var16.field_k);
+            var7_array[2] = new qk(0, 0, 182, rs.field_Cb.field_J, var16.name, var16.field_k);
           }
-          var8 = new fs[this.field_i.length];
+          var8 = new Player[this.field_i.length];
           var23 = new int[this.field_i.length];
           var18 = var23;
           var9 = var18;
@@ -395,7 +395,7 @@ final class ui extends me {
                 var10 = (String) null;
                 mq.field_c = dd.a(false, param3, (String) null, 4684, pd.field_l);
               }
-              js.field_f.field_j = 0;
+              js.field_f.position = 0;
               js.field_f.c(14, (byte) -80);
               js.field_f.c(mq.field_c.a((byte) -73).field_d, (byte) -68);
               d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
@@ -404,10 +404,10 @@ final class ui extends me {
             if (ti.field_i == cs.field_j &&
               es.a(-90, 1)) {
               var6_int = sa.field_a.j(-92);
-              sa.field_a.field_j = 0;
+              sa.field_a.position = 0;
               if (var6_int != 0) {
                 ej.field_e = var6_int;
-                cs.field_j = fs.field_l;
+                cs.field_j = Player.field_l;
                 rr.field_t = -1;
               } else {
                 cs.field_j = qq.field_m;
@@ -416,7 +416,7 @@ final class ui extends me {
             if (qq.field_m == cs.field_j &&
               es.a(-91, 8)) {
               w.field_I = sa.field_a.d(110);
-              sa.field_a.field_j = 0;
+              sa.field_a.position = 0;
               gi.a(param0, param2, param4, -84, mq.field_c);
               cs.field_j = ti.field_d;
             }
@@ -425,18 +425,18 @@ final class ui extends me {
               es.a(119, 1)) {
               var6_intLifetime1 = sa.field_a.j(-63);
               fr.field_H = null;
-              sa.field_a.field_j = 0;
+              sa.field_a.position = 0;
               ej.field_e = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
                   rr.field_t = -1;
-                  cs.field_j = fs.field_l;
+                  cs.field_j = Player.field_l;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
                   q.g(-118);
-                  ke.field_j = false;
+                  BufferedSocket.field_j = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
                 }
@@ -481,8 +481,8 @@ final class ui extends me {
                   k.field_c[var8] = sa.field_a.g(-2852);
                 }
               }
-              ln.field_o = sa.field_a.e(-1);
-              var11 = (CharSequence) ((Object) ln.field_o);
+              Star.field_o = sa.field_a.e(-1);
+              var11 = (CharSequence) ((Object) Star.field_o);
               ci.field_d = ji.a(var11, true);
               tf.field_n = sa.field_a.j(-112);
               cs.field_j = ih.field_f;
@@ -493,7 +493,7 @@ final class ui extends me {
               } else {
                 og.field_b.a(kq.f((byte) 127), true);
               }
-              ke.field_j = false;
+              BufferedSocket.field_j = false;
               if (var6 != null) {
                 jf.a(-25602, var6, kq.f((byte) 125));
               }
@@ -524,12 +524,12 @@ final class ui extends me {
               stackIn_81_0 = ej.field_e;
               return stackIn_81_0;
             }
-            if (cs.field_j == fs.field_l &&
+            if (cs.field_j == Player.field_l &&
               uc.d((byte) -33)) {
               q.g(-114);
               if (ej.field_e == 7 &&
-                !ke.field_j) {
-                ke.field_j = true;
+                !BufferedSocket.field_j) {
+                BufferedSocket.field_j = true;
                 stackIn_87_0 = -1;
                 return stackIn_87_0;
               }
@@ -537,7 +537,7 @@ final class ui extends me {
                 ej.field_e = 3;
               }
               nl.field_c = sa.field_a.e(-1);
-              ke.field_j = false;
+              BufferedSocket.field_j = false;
               stackIn_92_0 = ej.field_e;
               return stackIn_92_0;
             }
@@ -545,19 +545,19 @@ final class ui extends me {
               ui.a(-26, -48, -112, -53);
             }
             if (wg.field_f == null) {
-              if (ke.field_j) {
+              if (BufferedSocket.field_j) {
                 if (wh.a(18) <= 30000L) {
                   nl.field_c = wb.field_d;
                 } else {
                   nl.field_c = gq.field_f;
                 }
-                ke.field_j = false;
+                BufferedSocket.field_j = false;
                 stackIn_102_0 = 3;
                 return stackIn_102_0;
               }
               var6_intLifetime2 = of.field_f;
               of.field_f = bb.field_c;
-              ke.field_j = true;
+              BufferedSocket.field_j = true;
               bb.field_c = var6_intLifetime2;
             }
             stackIn_104_0 = -1;
@@ -587,7 +587,7 @@ final class ui extends me {
         }
     }
 
-    ui(fs[] param0) {
+    ui(Player[] param0) {
         super(param0);
         try {
           this.field_n = new int[this.field_i.length];

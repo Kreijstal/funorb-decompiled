@@ -11,7 +11,7 @@ abstract class ms {
     static String field_h;
     static int[] field_e;
 
-    abstract void a(ob param0, byte param1);
+    abstract void a(PacketBuffer param0, byte param1);
 
     final static boolean a(String param0, byte param1, String param2) {
         String var3 = null;

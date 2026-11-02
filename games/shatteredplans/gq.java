@@ -108,11 +108,11 @@ final class gq {
         }
     }
 
-    final static ln a(ln[] param0, int param1, ob param2) {
+    final static Star a(Star[] param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        ln stackIn_2_0 = null;
-        ln stackIn_6_0 = null;
+        Star stackIn_2_0 = null;
+        Star stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -122,7 +122,7 @@ final class gq {
         try {
           var3_int = param2.j(-74);
           if (param1 != -2284) {
-            stackIn_2_0 = (ln) null;
+            stackIn_2_0 = (Star) null;
             return stackIn_2_0;
           }
           if (param0.length <= var3_int) {
@@ -201,9 +201,9 @@ final class gq {
             var8 = nc.field_p[9] >> 2;
             var9 = nc.field_p[10] >> 2;
             var10_int = nc.field_p[11] >> 2;
-            var11 = ib.field_a[3] * var8 + (ib.field_a[4] * var9 + ib.field_a[5] * var10_int) >> 14;
-            var12 = var8 * ib.field_a[6] + (var9 * ib.field_a[7] + var10_int * ib.field_a[8]) >> 14;
-            var13 = ib.field_a[11] * var10_int + (var9 * ib.field_a[10] + ib.field_a[9] * var8) >> 14;
+            var11 = MouseWheelInput.field_a[3] * var8 + (MouseWheelInput.field_a[4] * var9 + MouseWheelInput.field_a[5] * var10_int) >> 14;
+            var12 = var8 * MouseWheelInput.field_a[6] + (var9 * MouseWheelInput.field_a[7] + var10_int * MouseWheelInput.field_a[8]) >> 14;
+            var13 = MouseWheelInput.field_a[11] * var10_int + (var9 * MouseWheelInput.field_a[10] + MouseWheelInput.field_a[9] * var8) >> 14;
             var2[var3] = var13 * var7 + var11 * var5 + var6 * var12 >> 16;
           }
           var3Lifetime1 = nc.field_p[9] >> 8;
@@ -212,7 +212,7 @@ final class gq {
           var6Lifetime1 = js.field_j << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = je.a(var6Lifetime1, (byte) -104) >> 8;
-          var9Lifetime1 = oh.b(var6Lifetime1, -123) >> 8;
+          var9Lifetime1 = IntrusiveNode.b(var6Lifetime1, -123) >> 8;
           if (-1 != pd.field_k &&
             bb.field_b != -1) {
             var7Lifetime1 = pd.field_k - 320;
@@ -241,9 +241,9 @@ final class gq {
             var17 = vc.field_d[var16];
             ec.a(-1, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              ib.field_a[var18] = ib.field_a[var18] + fa.field_Z[var15][var18];
+              MouseWheelInput.field_a[var18] = MouseWheelInput.field_a[var18] + fa.field_Z[var15][var18];
             }
-            pe.a(true, nc.field_p, false, 80, ib.field_a, false, var17);
+            pe.a(true, nc.field_p, false, 80, MouseWheelInput.field_a, false, var17);
             er.a(var7Lifetime1, var13Lifetime1, false, var8Lifetime1, var14, var17, var12Lifetime1, var9Lifetime1);
           }
           var16Lifetime1 = -47 / ((47 - param0) / 46);
@@ -256,7 +256,7 @@ final class gq {
         throw new IllegalStateException();
     }
 
-    final static bi d(int param0) {
+    final static Sprite d(int param0) {
         int var4_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1 = cm.field_g[0] * mc.field_s[0];
@@ -265,7 +265,7 @@ final class gq {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = eo.field_fb[we.a((int) var2[var4_int], 255)];
         }
-        bi var4 = new bi(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[param0], var3);
+        Sprite var4 = new Sprite(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[param0], var3);
         pd.a(0);
         return var4;
     }

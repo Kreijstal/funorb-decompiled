@@ -546,7 +546,7 @@ final class ej {
           if (var2 != 0) {
             if (1 == var2) {
               var4_int = var1.d((byte) -122);
-              var5_ref_aq = (aq) (dc.field_E.d(0));
+              var5_ref_aq = (aq) (GameState.field_E.d(0));
               while (true) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var5_ref_aq != null) {
@@ -555,7 +555,7 @@ final class ej {
                   decompiledFrameRemainder0 = (var8 == 0);
                   if ((decompiledFrameRemainder0) && (stackIn_21_0 != stackIn_21_1 ||
                     ~var5_ref_aq.field_l != ~var4_int)) {
-                    var5_ref_aq = (aq) (dc.field_E.a((byte) -71));
+                    var5_ref_aq = (aq) (GameState.field_E.a((byte) -71));
                     continue;
                   }
                 }
@@ -574,7 +574,7 @@ final class ej {
                 return;
               }
             }
-            jq.a(-29901, (Throwable) null, "LR1: " + w.a(16738));
+            GameKeyHandler.a(-29901, (Throwable) null, "LR1: " + w.a(16738));
             q.g(-113);
             if (var8 == 0) {
               return;
@@ -585,7 +585,7 @@ final class ej {
             q.g(-108);
             return;
           }
-          var5 = rr.field_t - var1.field_j;
+          var5 = rr.field_t - var1.position;
           var6 = var4.field_i;
           if (var5 > var6.length << 2) {
             var5 = var6.length << 2;

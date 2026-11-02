@@ -9,7 +9,7 @@ final class lr {
     static int[] field_b;
     static String field_e;
 
-    final static lp a(ph param0, fs param1, byte param2, fs param3, fs[] param4) {
+    final static lp a(ph param0, Player param1, byte param2, Player param3, Player[] param4) {
         String dupTemp$1 = null;
         int var9_int = 0;
         RuntimeException var5 = null;
@@ -43,7 +43,7 @@ final class lr {
         RuntimeException decompiledCaughtException = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var12 = new lp(0, 0, 182, rg.field_a);
+          var12 = new lp(0, 0, 182, ClientException.field_a);
           var13 = var12;
           var13.field_h = param3;
           stackIn_3_0 = param0.field_h;
@@ -53,9 +53,9 @@ final class lr {
             stackIn_4_1 = param3.field_x + 1;
           }
           stackIn_3_0[stackIn_4_1] = var12;
-          var6 = new kb(pf.field_a[param3.field_x].field_z * 3 / 4, -1 + (var13.field_i / 2 - rs.field_Cb.field_J), 182 - pf.field_a[param3.field_x].field_z * 3 / 4, param3.field_k, param3.field_t, 16777215, true);
+          var6 = new kb(IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, -1 + (var13.field_i / 2 - rs.field_Cb.field_J), 182 - IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, param3.field_k, param3.name, 16777215, true);
           var13.a(var6, 8);
-          var7 = new fe(3 * pf.field_a[param3.field_x].field_z / 4, var13.field_i / 2 + 1, 182 - 3 * pf.field_a[param3.field_x].field_z / 4, rs.field_Cb.field_J, 8421504, md.i(0), eb.field_e, 3375155);
+          var7 = new fe(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var13.field_i / 2 + 1, 182 - 3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, rs.field_Cb.field_J, 8421504, md.i(0), eb.field_e, 3375155);
           var13.a(var7, param2 - 13);
           stackIn_6_0 = param0.field_i;
           if (param3.field_x >= param1.field_x) {
@@ -64,7 +64,7 @@ final class lr {
             stackIn_7_1 = param3.field_x;
           }
           stackIn_6_0[stackIn_7_1] = var7;
-          dupTemp$1 = re.a(jg.field_f, 4371, new String[]{param3.field_t});
+          dupTemp$1 = re.a(jg.field_f, 4371, new String[]{param3.name});
           var7.field_o = dupTemp$1;
           var6.field_o = dupTemp$1;
           var13.field_o = dupTemp$1;
@@ -73,9 +73,9 @@ final class lr {
             return stackIn_9_0;
           }
           bg.a(-2612, param4.length);
-          var8 = new ff(3 * pf.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + rs.field_Cb.field_J, ne.a(-1, false));
+          var8 = new ff(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + rs.field_Cb.field_J, ne.a(-1, false));
           var13.a(var8, 8);
-          var8.field_o = re.a(jg.field_f, 4371, new String[]{param3.field_t});
+          var8.field_o = re.a(jg.field_f, 4371, new String[]{param3.name});
           stackIn_12_0 = param0.field_f;
           if (param1.field_x < param3.field_x) {
             stackIn_13_1 = param3.field_x;
@@ -84,9 +84,9 @@ final class lr {
           }
           stackIn_12_0[stackIn_13_1][0] = var8;
           for (var9_int = 1; param4.length - 1 > var9_int; var9_int++) {
-            var10 = new ff(pf.field_a[param3.field_x].field_z + (2 + dc.field_F.field_z) * var9_int, var13.field_i / 2 + rs.field_Cb.field_J + 3, wm.a(-1, param2 - 21));
+            var10 = new ff(IntrusiveDeque.field_a[param3.field_x].field_z + (2 + GameState.field_F.field_z) * var9_int, var13.field_i / 2 + rs.field_Cb.field_J + 3, wm.a(-1, param2 - 21));
             var13.a(var10, 8);
-            var10.field_o = re.a(jg.field_f, 4371, new String[]{param3.field_t});
+            var10.field_o = re.a(jg.field_f, 4371, new String[]{param3.name});
             stackIn_17_0 = param0.field_f;
             if (param3.field_x <= param1.field_x) {
               stackIn_18_1 = 1 + param3.field_x;
@@ -95,9 +95,9 @@ final class lr {
             }
             stackIn_17_0[stackIn_18_1][var9_int] = var10;
           }
-          var9 = new ff(0, (var12.field_i - pf.field_a[param3.field_x].field_w) / 2, pf.field_a[param3.field_x]);
+          var9 = new ff(0, (var12.field_i - IntrusiveDeque.field_a[param3.field_x].field_w) / 2, IntrusiveDeque.field_a[param3.field_x]);
           var13.a(var9, param2 ^ 29);
-          var9.field_o = re.a(jg.field_f, 4371, new String[]{param3.field_t});
+          var9.field_o = re.a(jg.field_f, 4371, new String[]{param3.name});
           stackIn_20_0 = var13;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -348,9 +348,9 @@ final class lr {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((ob) ((Object) var5)).j(-115);
+            var6 = ((PacketBuffer) ((Object) var5)).j(-115);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((ob) ((Object) var5)).a(16711680);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).a(16711680);
             }
             var15 = (gb) (vl.field_o.d(0));
             if (var15 == null) {
@@ -384,7 +384,7 @@ final class lr {
               var16_ref.field_l = true;
               var16_ref.b((byte) -89);
             } else {
-              jq.a(-29901, (Throwable) null, "A1: " + w.a(16738));
+              GameKeyHandler.a(-29901, (Throwable) null, "A1: " + w.a(16738));
               q.g(-125);
             }
           }

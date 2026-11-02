@@ -121,9 +121,9 @@ final class nf {
                 var4.field_r != 0 &&
                 null != var4.field_k) {
                 if (var4.field_r != 1) {
-                  var7 = re.a(wl.field_c, 4371, new String[]{pa.a(var4.field_k, -97), Integer.toString(var4.field_r)});
+                  var7 = re.a(wl.field_c, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -97), Integer.toString(var4.field_r)});
                 } else {
-                  var7 = re.a(lh.field_H, 4371, new String[]{pa.a(var4.field_k, -110)});
+                  var7 = re.a(lh.field_H, 4371, new String[]{ProxySocketConnector.a(var4.field_k, -110)});
                 }
                 incrementValue$0 = var3;
                 var3++;
@@ -243,14 +243,14 @@ final class nf {
           this.field_f = null;
         }
         this.field_b = em.field_a;
-        this.field_k = ke.field_h;
+        this.field_k = BufferedSocket.field_h;
         this.field_c = nj.field_a;
         this.field_h = kr.field_b;
         this.field_o = mc.field_q;
         this.field_p = sp.field_j;
         this.field_l = el.field_f;
         this.field_g = fm.field_f;
-        this.field_n = ob.field_k;
+        this.field_n = PacketBuffer.field_k;
         this.field_d = jc.field_s;
     }
 

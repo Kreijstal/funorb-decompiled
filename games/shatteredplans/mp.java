@@ -5,7 +5,7 @@ final class mp {
     static th field_b;
     static String field_d;
     static String field_a;
-    static bi[] field_e;
+    static Sprite[] field_e;
     static String[] field_c;
     static String field_f;
 

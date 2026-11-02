@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pd extends hb {
-    static ed field_j;
+    static MouseInputHandler field_j;
     private el field_i;
     static u field_h;
     static qf field_m;
     static int field_k;
-    static pf field_f;
+    static IntrusiveDeque field_f;
     static long field_l;
     static String field_g;
 
-    final oh a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 <= 99) {
           pd.b(11);
-          return (oh) ((Object) this.field_i.a(true));
+          return (IntrusiveNode) ((Object) this.field_i.a(true));
         }
-        return (oh) ((Object) this.field_i.a(true));
+        return (IntrusiveNode) ((Object) this.field_i.a(true));
     }
 
     final static String a(byte param0, long param1) {
@@ -77,12 +77,12 @@ final class pd extends hb {
         }
     }
 
-    final oh a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         if (param0) {
           field_l = -98L;
-          return (oh) ((Object) this.field_i.a((byte) -68));
+          return (IntrusiveNode) ((Object) this.field_i.a((byte) -68));
         }
-        return (oh) ((Object) this.field_i.a((byte) -68));
+        return (IntrusiveNode) ((Object) this.field_i.a((byte) -68));
     }
 
     final static void a(int param0) {
@@ -114,10 +114,10 @@ final class pd extends hb {
     }
 
     static {
-        field_j = new ed();
+        field_j = new MouseInputHandler();
         field_h = new u();
         field_k = 0;
-        field_f = new pf();
+        field_f = new IntrusiveDeque();
         field_g = "Showing combat and damaged fleets retreating.";
     }
 }

@@ -12,8 +12,8 @@ final class qj {
 
     final static void a(sq param0, int param1) {
         int var8 = 0;
-        bi[] array$0 = null;
-        bi[] array$1 = null;
+        Sprite[] array$0 = null;
+        Sprite[] array$1 = null;
         int var10 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -36,10 +36,10 @@ final class qj {
         try {
           te.field_c = 0;
           if (param0 == null) {
-            sp.field_m = (bi[][]) null;
+            sp.field_m = (Sprite[][]) null;
             eh.field_L = null;
-            oi.field_i = (bi[][]) null;
-            rg.field_f = null;
+            oi.field_i = (Sprite[][]) null;
+            ClientException.field_f = null;
             return;
           }
           var2_int = rs.field_Cb.field_J + rs.field_Cb.field_q;
@@ -49,12 +49,12 @@ final class qj {
           var6 = var12.length;
           ra.a(-106);
           if (0 < var6) {
-            eh.field_L = new bi[var6];
-            eh.field_L[0] = new bi(var3, var2_int);
+            eh.field_L = new Sprite[var6];
+            eh.field_L[0] = new Sprite(var3, var2_int);
             eh.field_L[0].e();
             rs.field_Cb.d(var12[0], 0, rs.field_Cb.field_J, 16777215, -1);
             for (var7 = 1; var7 < var6; var7++) {
-              eh.field_L[var7] = new bi(var3, var2_int);
+              eh.field_L[var7] = new Sprite(var3, var2_int);
               eh.field_L[var7].e();
               rs.field_Cb.d(var12[var7], 0, rs.field_Cb.field_J, 16777215, -1);
             }
@@ -66,20 +66,20 @@ final class qj {
           }
           if (param0.field_f != null) {
             var7Lifetime1 = param0.field_f.length;
-            rg.field_f = new int[var7Lifetime1];
-            sp.field_m = new bi[var7Lifetime1][];
-            oi.field_i = new bi[var7Lifetime1][];
+            ClientException.field_f = new int[var7Lifetime1];
+            sp.field_m = new Sprite[var7Lifetime1][];
+            oi.field_i = new Sprite[var7Lifetime1][];
             for (var8 = 0; var7Lifetime1 > var8; var8++) {
               var9 = param0.field_f[var8];
               var4Lifetime1 = uq.field_m.a(5607, var9.field_b);
               var13 = vi.a(rs.field_Cb, (byte) 121, var4Lifetime1, new int[]{var3});
               var6Lifetime1 = var13.length;
-              array$0 = new bi[var6Lifetime1];
+              array$0 = new Sprite[var6Lifetime1];
               oi.field_i[var8] = array$0;
-              array$1 = new bi[var6Lifetime1];
+              array$1 = new Sprite[var6Lifetime1];
               sp.field_m[var8] = array$1;
               for (var10 = 0; var10 < var6Lifetime1; var10++) {
-                oi.field_i[var8][var10] = new bi(var3, var2_int);
+                oi.field_i[var8][var10] = new Sprite(var3, var2_int);
                 oi.field_i[var8][var10].e();
                 rs.field_Cb.d(var13[var10], 0, rs.field_Cb.field_J, 16777215, -1);
                 sp.field_m[var8][var10] = oi.field_i[var8][var10].g();
@@ -88,9 +88,9 @@ final class qj {
               }
             }
           } else {
-            rg.field_f = null;
-            oi.field_i = (bi[][]) null;
-            sp.field_m = (bi[][]) null;
+            ClientException.field_f = null;
+            oi.field_i = (Sprite[][]) null;
+            sp.field_m = (Sprite[][]) null;
           }
           cg.i(0);
           return;
@@ -187,8 +187,8 @@ final class qj {
         cr.field_b = param1;
     }
 
-    final static qa a(byte param0, dc param1, ob param2) {
-        ln var3 = null;
+    final static qa a(byte param0, GameState param1, PacketBuffer param2) {
+        Star var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         qa stackIn_3_0 = null;

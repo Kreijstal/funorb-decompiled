@@ -4,9 +4,9 @@
 final class fm {
     static int field_f;
     private int[] field_a;
-    static bi[] field_d;
-    static bi field_e;
-    static bi field_b;
+    static Sprite[] field_d;
+    static Sprite field_e;
+    static Sprite field_b;
     static int[] field_c;
     private byte[] field_h;
     private int[] field_g;
@@ -82,12 +82,12 @@ final class fm {
             return stackIn_3_0;
           }
           if (param3 != 7) {
-            field_b = (bi) null;
+            field_b = (Sprite) null;
           }
           var7_int = 0;
           param2 = param2 + param5;
           var8 = param4;
-          L3: while (true) {
+          scanLoop1: while (true) {
             var9 = param1[var8];
             if (var9 < 0) {
               var7_int = this.field_g[var7_int];
@@ -101,7 +101,7 @@ final class fm {
               param5++;
               param0[incrementValue$1] = (byte)(~var10);
               if (param5 >= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -117,7 +117,7 @@ final class fm {
               param5++;
               param0[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param2 <= param5) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -133,7 +133,7 @@ final class fm {
               param5++;
               param0[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param2 <= param5) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -149,7 +149,7 @@ final class fm {
               param5++;
               param0[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param5 >= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -165,7 +165,7 @@ final class fm {
               param5++;
               param0[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param5 >= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -181,7 +181,7 @@ final class fm {
               param5++;
               param0[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param2 <= param5) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -213,7 +213,7 @@ final class fm {
               param5++;
               param0[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param5 >= param2) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }

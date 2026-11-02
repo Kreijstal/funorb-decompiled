@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tm extends oh {
+final class tm extends IntrusiveNode {
     private int field_m;
     private int field_q;
     private int field_s;
     private String field_l;
     private boolean field_n;
-    static bi field_r;
+    static Sprite field_r;
     static ds field_p;
     static qh field_k;
     static java.awt.Canvas field_i;
@@ -61,7 +61,7 @@ final class tm extends oh {
         }
         gf.a(88, 1 + param1, this.field_s, 17, 6, 0, this.field_q);
         if (param0 != -208410008) {
-          field_r = (bi) null;
+          field_r = (Sprite) null;
         }
         if (this.field_q != 256) {
           ss.field_b.d(this.field_l, 100, param1 + 14, 16777215, -1, this.field_q);

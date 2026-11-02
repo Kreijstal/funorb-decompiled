@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bs {
-    static bi field_a;
+    static Sprite field_a;
     static int field_b;
     static String field_c;
 
@@ -23,7 +23,7 @@ final class bs {
         ih.field_b = param0;
     }
 
-    final static void a(bi param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         try {
           ra.a(-127);
           param0.e();
@@ -61,7 +61,7 @@ final class bs {
             return stackIn_3_0;
           }
           for (var5 = param3; var5 < param0; var5++) {
-            var4_int = var4_int >>> 8 ^ vg.field_w[255 & (var4_int ^ param1[var5])];
+            var4_int = var4_int >>> 8 ^ UiWidget.field_w[255 & (var4_int ^ param1[var5])];
           }
           var4_int = ~var4_int;
           stackIn_8_0 = var4_int;

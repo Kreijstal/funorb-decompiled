@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hp extends me {
+final class hp extends VictoryChecker {
     static int[] field_k;
     static ub field_l;
     static fc field_m;
@@ -17,7 +17,7 @@ final class hp extends me {
         return rs.field_Cb.field_J + this.field_o.length * cc.field_n;
     }
 
-    final boolean a(dc param0, byte param1) {
+    final boolean a(GameState param0, byte param1) {
         int stackIn_26_0 = 0;
         int stackIn_26_1 = 0;
         RuntimeException stackIn_51_0 = null;
@@ -25,13 +25,13 @@ final class hp extends me {
         String stackIn_52_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
-        ln[] var3 = null;
+        Star[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        ln var5_ref_ln = null;
+        Star var5_ref_ln = null;
         int var6 = 0;
-        ln[] var7 = null;
+        Star[] var7 = null;
         int var8 = 0;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -83,7 +83,7 @@ final class hp extends me {
             var5++;
           }
           if (var3_intLifetime2 != 0) {
-            this.field_g = new fs[var3_intLifetime2];
+            this.field_g = new Player[var3_intLifetime2];
             var8 = 0;
             var5Lifetime1 = var8;
             while (var8 < this.field_i.length) {
@@ -110,7 +110,7 @@ final class hp extends me {
         }
     }
 
-    hp(fs[] param0) {
+    hp(Player[] param0) {
         super(param0);
         try {
           this.field_o = new int[this.field_i.length];
@@ -120,7 +120,7 @@ final class hp extends me {
         }
     }
 
-    final void a(int param0, ob param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -133,12 +133,12 @@ final class hp extends me {
         }
     }
 
-    final fs[] b(int param0) {
+    final Player[] b(int param0) {
         int var5_int = 0;
         int var6 = 0;
         int var2;
         double var3;
-        fs[] var5;
+        Player[] var5;
         double var6_double;
         double var7;
         int var9;
@@ -166,9 +166,9 @@ final class hp extends me {
           }
         }
         if (var2 == 0) {
-          return new fs[]{};
+          return new Player[]{};
         }
-        var5 = new fs[var2];
+        var5 = new Player[var2];
         for (var6 = 0; var6 < this.field_i.length; var6++) {
           if (this.field_q[var6] != 0) {
             var7 = (double)(50 - this.field_o[var6]) / (double)this.field_q[var6];
@@ -217,7 +217,7 @@ final class hp extends me {
         int var1 = 29 / ((param0 - 12) / 51);
     }
 
-    final void a(ob param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         String var5 = null;
@@ -250,7 +250,7 @@ final class hp extends me {
         }
     }
 
-    final void a(byte param0, dc param1, kq param2) {
+    final void a(byte param0, GameState param1, kq param2) {
         int var7_int = 0;
         int var10_int = 0;
         RuntimeException stackIn_23_0 = null;
@@ -263,11 +263,11 @@ final class hp extends me {
         RuntimeException var4_ref = null;
         int var5 = 0;
         int[] var6 = null;
-        fs[] var7 = null;
+        Player[] var7 = null;
         int[] var8 = null;
         int var8_int = 0;
         int[] var9 = null;
-        fs[] var10 = null;
+        Player[] var10 = null;
         int var11 = 0;
         int var12 = 0;
         double var13 = 0.0;
@@ -313,7 +313,7 @@ final class hp extends me {
             lh.a((byte) 35, var4, (int[]) ((Object) this.field_o.clone()));
           }
           var23 = new qk[]{new qk(0, 0, 182, rs.field_Cb.field_J, re.a(ShatteredPlansClient.field_J, 4371, new String[]{Integer.toString(50)}))};
-          var7 = new fs[this.field_i.length];
+          var7 = new Player[this.field_i.length];
           var28 = new int[this.field_i.length];
           var22 = var28;
           var8 = var22;

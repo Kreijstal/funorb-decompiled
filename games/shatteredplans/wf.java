@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wf extends oh {
+class wf extends IntrusiveNode {
     static String field_h;
-    ln field_n;
+    Star field_n;
     int field_j;
     static String field_k;
     int field_l;
@@ -34,7 +34,7 @@ class wf extends oh {
         field_k = null;
     }
 
-    wf(ln param0) {
+    wf(Star param0) {
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {

@@ -21,7 +21,7 @@ final class kq {
     private int field_u;
     private os field_M;
     private int[][] field_q;
-    static bi field_R;
+    static Sprite field_R;
     private boolean field_Y;
     private os field_V;
     private boolean field_I;
@@ -31,7 +31,7 @@ final class kq {
     private jh field_a;
     private int field_w;
     private qh field_cb;
-    private bi field_T;
+    private Sprite field_T;
     private boolean field_v;
     private qh field_e;
     private String[][] field_l;
@@ -45,14 +45,14 @@ final class kq {
     private int field_jb;
     private int[] field_p;
     private int[][] field_Z;
-    private pf field_B;
+    private IntrusiveDeque field_B;
     private int[] field_ob;
     private boolean field_ib;
     jh field_X;
     jh field_d;
     private jh field_mb;
     private os field_K;
-    private bi field_eb;
+    private Sprite field_eb;
     private boolean[] field_z;
     private jh field_f;
     private int field_H;
@@ -63,11 +63,11 @@ final class kq {
     private jh field_n;
     static String field_i;
     static jo field_A;
-    private pf field_y;
+    private IntrusiveDeque field_y;
     private jh field_W;
     private int field_Q;
     private jh field_hb;
-    private om field_t;
+    private ArgbSprite field_t;
     static int[] field_c;
 
     final void a(int param0, int param1) {
@@ -84,7 +84,7 @@ final class kq {
         int var4 = 0;
         jh var5 = null;
         qk var6 = null;
-        sd var7 = null;
+        Territory var7 = null;
         String var8 = null;
         int var9 = 0;
         int var4Lifetime1;
@@ -98,7 +98,7 @@ final class kq {
             while (!(var3.field_d.length <= var4)) {
               var5 = var3.field_d[var4];
               var6 = var3.field_i[var4];
-              var7 = (sd) (var5.field_h);
+              var7 = (Territory) (var5.field_h);
               stackOut_9_0 = var5.f(244874369);
               stackIn_27_0 = stackOut_9_0 ? 1 : 0;
               stackIn_10_0 = stackOut_9_0;
@@ -141,7 +141,7 @@ final class kq {
             var3_int++;
           } while (var9 == 0);
           var3_ref = (ad) (this.field_k.field_v);
-          var3_ref.field_e.a(-2948, (bi) null);
+          var3_ref.field_e.a(-2948, (Sprite) null);
           if (this.field_s.field_z.field_T == -1 &&
             !this.field_s.field_L) {
             boolean decompiledFrameRemainder2 = true;
@@ -197,7 +197,7 @@ final class kq {
               (decompiledFrameRemainder4) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.a(10, 0, re.a(wp.field_c, 4371, new String[]{this.field_s.field_c.field_q.field_I, Integer.toString(this.field_s.field_c.field_x)}));
+              this.a(10, 0, re.a(wp.field_c, 4371, new String[]{this.field_s.field_c.field_q.name, Integer.toString(this.field_s.field_c.field_x)}));
               if (var9 == 0) {
                 return;
               }
@@ -224,7 +224,7 @@ final class kq {
             if ((decompiledFrameRemainder7) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.a(10, 0, li.field_e);
+              this.a(10, 0, SocketConnector.field_e);
               if (var9 == 0) {
                 return;
               }
@@ -254,24 +254,24 @@ final class kq {
 
     private final void d(int param0, int param1) {
         int[][] discarded$0 = null;
-        fs stackIn_50_0 = null;
-        fs stackIn_50_1 = null;
+        Player stackIn_50_0 = null;
+        Player stackIn_50_1 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
-        ln[] var3 = null;
+        Star[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        ln var5 = null;
-        ln[] var6 = null;
+        Star var5 = null;
+        Star[] var6 = null;
         int var7 = 0;
-        ln var8 = null;
+        Star var8 = null;
         int var9 = 0;
-        ln[] var3Lifetime1;
-        ln var5Lifetime1;
-        ln[] var3Lifetime2;
-        ln[] var3Lifetime3;
-        ln var5Lifetime2;
-        ln var5Lifetime3;
+        Star[] var3Lifetime1;
+        Star var5Lifetime1;
+        Star[] var3Lifetime2;
+        Star[] var3Lifetime3;
+        Star var5Lifetime2;
+        Star var5Lifetime3;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
@@ -379,19 +379,19 @@ final class kq {
         StringBuilder stackIn_120_1 = null;
         String stackIn_121_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ln[] var2 = null;
+        Star[] var2 = null;
         int var2_int = 0;
         String var2_ref = null;
         RuntimeException var2_ref2 = null;
         int var3 = 0;
-        ln var4 = null;
+        Star var4 = null;
         int var5 = 0;
-        ln[] var2Lifetime1;
+        Star[] var2Lifetime1;
         String var2_refLifetime1;
         String var2_refLifetime2;
         String var2_refLifetime3;
         String var2_refLifetime4;
-        ln var4Lifetime1;
+        Star var4Lifetime1;
         int var2_intLifetime1;
         int var2_intLifetime2;
         int var3Lifetime1;
@@ -467,7 +467,7 @@ final class kq {
           if (param0.equalsIgnoreCase("capture1")) {
             var2_intLifetime1 = ma.a((CharSequence) ((Object) param0.substring(9)), 2);
             id.field_d = oq.field_a.field_P.field_g.field_e[var2_intLifetime1];
-            uq.field_m.a(pa.a(id.field_d, param1 ^ -9), 27275, "capture1");
+            uq.field_m.a(ProxySocketConnector.a(id.field_d, param1 ^ -9), 27275, "capture1");
             return;
           }
           if (param0.equalsIgnoreCase("showtabs")) {
@@ -523,7 +523,7 @@ final class kq {
               return;
             }
             if (var2_refLifetime4.equalsIgnoreCase("garrison")) {
-              me.field_j = true;
+              VictoryChecker.field_j = true;
               return;
             }
             if (var2_refLifetime4.equalsIgnoreCase("resources")) {
@@ -554,7 +554,7 @@ final class kq {
         }
     }
 
-    private final void a(byte param0, fs param1) {
+    private final void a(byte param0, Player param1) {
         int stackIn_16_0 = 0;
         fe[] stackIn_19_0 = null;
         int stackIn_20_1 = 0;
@@ -564,7 +564,7 @@ final class kq {
         int stackIn_28_1 = 0;
         int stackIn_84_0 = 0;
         String stackIn_92_0 = null;
-        fs stackIn_115_0 = null;
+        Player stackIn_115_0 = null;
         int stackIn_122_0 = 0;
         RuntimeException stackIn_133_0 = null;
         StringBuilder stackIn_133_1 = null;
@@ -574,7 +574,7 @@ final class kq {
         RuntimeException var3_ref = null;
         int var4 = 0;
         fe var5 = null;
-        fs var5_ref = null;
+        Player var5_ref = null;
         ff[] var6_ref_ff__ = null;
         int var6 = 0;
         lp var7 = null;
@@ -633,10 +633,10 @@ final class kq {
                 if ((1 << this.field_s.field_n.field_x & param1.field_A) == 0) {
                   if (0 == (1 << param1.field_x & this.field_s.field_n.field_A)) {
                     var5.a((byte) 2, 3375155, eb.field_e);
-                    var7.field_o = re.a(jg.field_f, 4371, new String[]{param1.field_t});
+                    var7.field_o = re.a(jg.field_f, 4371, new String[]{param1.name});
                     var9 = (vd) (var7.field_l.d(0));
                     while (null != var9) {
-                      var9.field_o = re.a(jg.field_f, 4371, new String[]{param1.field_t});
+                      var9.field_o = re.a(jg.field_f, 4371, new String[]{param1.name});
                       var9 = (vd) (var7.field_l.a((byte) -71));
                       if (var11 != 0) {
                         decompiledFrameCompleted4 = false;
@@ -650,10 +650,10 @@ final class kq {
                   if ((decompiledFrameRemainder0) &&
                     (decompiledFrameCompleted4)) {
                     var5.a((byte) -54, 3375155, il.field_hb);
-                    var7.field_o = re.a(gn.field_x, 4371, new String[]{param1.field_t});
+                    var7.field_o = re.a(gn.field_x, 4371, new String[]{param1.name});
                     var9 = (vd) (var7.field_l.d(0));
                     while (null != var9) {
-                      var9.field_o = re.a(gn.field_x, 4371, new String[]{param1.field_t});
+                      var9.field_o = re.a(gn.field_x, 4371, new String[]{param1.name});
                       var9 = (vd) (var7.field_l.a((byte) -71));
                       if (var11 != 0) {
                         decompiledFrameCompleted3 = false;
@@ -669,10 +669,10 @@ final class kq {
                   (decompiledFrameCompleted4) &&
                   (decompiledFrameCompleted3)) {
                   var5.a((byte) -109, 3375155, fb.field_gc);
-                  var7.field_o = re.a(mf.field_u, 4371, new String[]{param1.field_t});
+                  var7.field_o = re.a(mf.field_u, 4371, new String[]{param1.name});
                   var9 = (vd) (var7.field_l.d(0));
                   while (var9 != null) {
-                    var9.field_o = re.a(mf.field_u, 4371, new String[]{param1.field_t});
+                    var9.field_o = re.a(mf.field_u, 4371, new String[]{param1.name});
                     var9 = (vd) (var7.field_l.a((byte) -71));
                     if (var11 != 0) {
                       decompiledFrameCompleted2 = false;
@@ -856,7 +856,7 @@ final class kq {
         int stackIn_29_0 = 0;
         int stackIn_36_0 = 0;
         int stackIn_43_0 = 0;
-        bi stackIn_48_0 = null;
+        Sprite stackIn_48_0 = null;
         int stackIn_81_0 = 0;
         int stackIn_81_1 = 0;
         int stackIn_102_0 = 0;
@@ -877,14 +877,14 @@ final class kq {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        bi var8 = null;
+        Sprite var8 = null;
         int[] var8_array = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        bi var14 = null;
+        Sprite var14 = null;
         int var15 = 0;
         int[][] var16 = null;
         int var17 = 0;
@@ -963,7 +963,7 @@ final class kq {
           var7 = 360;
           if (fj.field_t.field_h == 2) {
             sn.a(var4, -104, var7, (32 - var3_int << 7) / 32 + 128, var5, var6);
-            var8 = qh.a((bi) null, var6, var4, var5, -1, var7);
+            var8 = qh.a((Sprite) null, var6, var4, var5, -1, var7);
             bs.a(var8, 93);
             gf.b(3, 3, 0, 0, var4, var7);
             cg.i(0);
@@ -1151,7 +1151,7 @@ final class kq {
           var23 = 4 * this.field_D;
           var17Lifetime2 = -40 + var4;
           var24_int = 0;
-          L33: while (true) {
+          scanLoop1: while (true) {
             if (var24_int < 4) {
               this.b(var24_int, var22Lifetime2, var21Lifetime2, 85, var23);
               var23++;
@@ -1162,13 +1162,13 @@ final class kq {
               }
             } else {
               if (var17Lifetime2 <= 320) {
-                break L33;
+                break scanLoop1;
               }
             }
             var17Lifetime2 = 320;
             break;
           }
-          L36: {
+          regionExit2: {
             gf.d(20 + var5, var6 + 20, var17Lifetime2 + (var5 + 20), var6 + 20 + 240);
             if (this.field_Q != 0 &&
               var16 != null) {
@@ -1298,7 +1298,7 @@ final class kq {
                   stackIn_206_0 = 0;
                   stackIn_206_1 = var31Lifetime1 % var30;
                   if (var40 != 0) {
-                    break L36;
+                    break regionExit2;
                   }
                   if (stackIn_206_0 == stackIn_206_1) {
                     var33 = Integer.toString(var31Lifetime1);
@@ -1396,7 +1396,7 @@ final class kq {
               return;
             }
           }
-          var15 = kf.a(this.field_G[param4], 117);
+          var15 = GameApplet.a(this.field_G[param4], 117);
           var16 = 0;
           while (var6_int > var16) {
             var17 = (var6_int * var14 - (var15[var16] * var14 >> 1)) / var6_int;
@@ -1439,7 +1439,7 @@ final class kq {
           this.field_J.field_s = false;
           this.field_cb.field_s = false;
           if (param0 != -4956) {
-            this.field_B = (pf) null;
+            this.field_B = (IntrusiveDeque) null;
           }
           if (null != this.field_nb) {
             this.field_nb.field_s = false;
@@ -1453,7 +1453,7 @@ final class kq {
     }
 
     private final void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
-        fs var7 = null;
+        Player var7 = null;
         int var8 = 0;
         if (param4 != 58) {
           return;
@@ -1463,7 +1463,7 @@ final class kq {
           var8 = var7.field_s;
           rs.field_Cb.c(this.field_l[param0][param2], param5 + 27, param1, var8, -1, param3);
           rs.field_Cb.d(eh.field_I[this.field_q[param0][param2]], 37 + param5, param1, var8, -1, param3);
-          rs.field_Cb.d(var7.field_t, param5 + 67, param1, var8, -1, param3);
+          rs.field_Cb.d(var7.name, param5 + 67, param1, var8, -1, param3);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "kq.FB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -1502,13 +1502,13 @@ final class kq {
           var7 = -10 + (320 + var5 + 40);
           var8 = var6 + 51;
           var9 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (4 > var9) {
               var10 = this.field_ob[var9];
               stackIn_40_0 = ~var7;
               stackIn_40_1 = ~pd.field_k;
               if (var13 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_40_0 < stackIn_40_1 ||
                 !(var8 <= bb.field_b) ||
@@ -1577,7 +1577,7 @@ final class kq {
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
-        fs var6 = this.field_s.field_P.field_v[param0];
+        Player var6 = this.field_s.field_P.field_v[param0];
         if (param1 != 2) {
           return;
         }
@@ -1585,7 +1585,7 @@ final class kq {
           var7 = var6.field_s;
           rs.field_Cb.b(this.field_l[param2][param0], param3 + 27, param4, var7, -1);
           rs.field_Cb.d(eh.field_I[this.field_q[param2][param0]], param3 + 37, param4, var7, -1);
-          rs.field_Cb.d(var6.field_t, 67 + param3, param4, var7, -1);
+          rs.field_Cb.d(var6.name, 67 + param3, param4, var7, -1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "kq.CB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -1646,7 +1646,7 @@ final class kq {
           this.field_S.d(false);
           var2 = (rh) (this.field_j.field_x);
           if (param0 != 428) {
-            this.a(95, (sd) null, true);
+            this.a(95, (Territory) null, true);
           }
           var3 = 0;
           while (4 > var3) {
@@ -1678,30 +1678,30 @@ final class kq {
         try {
           var5 = cl.field_m.toUpperCase() + ": " + tc.field_E[2];
           rs.field_Cb.a(var5, param3 + 5, param1 + 5, param0 - 10, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
-          var6 = vg.field_t.field_z * 2 + rs.field_Cb.c("= " + vs.field_a);
-          gf.a((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + rs.field_Cb.field_J), var6 + 20, 10 + vg.field_t.field_w * 3, 5, 0, 128);
+          var6 = UiWidget.field_t.field_z * 2 + rs.field_Cb.c("= " + vs.field_a);
+          gf.a((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + rs.field_Cb.field_J), var6 + 20, 10 + UiWidget.field_t.field_w * 3, 5, 0, 128);
           var7 = 29 + (rs.field_Cb.field_J + param1);
-          var8 = vg.field_t.field_z + rs.field_Cb.c("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(3)}));
-          ek.field_z.f((-ek.field_z.field_z + vg.field_t.field_z) / 2 + (param0 - var8) / 2 + param3, var7);
-          vg.field_t.f((-var8 + param0) / 2 + param3, var7 - 9);
-          gf.b(em.field_c[0] + (param3 + (vg.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, h.field_s);
-          gf.b((param3 + (vg.field_t.field_z + param0 - var8) / 2 << 4) + em.field_c[2], (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, h.field_s);
-          gf.b(em.field_c[3] + ((vg.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, h.field_s);
-          rs.field_Cb.d("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(3)}), vg.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), vg.field_t.field_w / 2 + var7 - 4, 16777215, -1);
-          var7 = var7 + vg.field_t.field_w;
-          ek.field_z.f(param3 + ((-var8 + param0) / 2 + (-ek.field_z.field_z + vg.field_t.field_z) / 2), var7);
-          vg.field_t.f((param0 - var8) / 2 + param3, var7 - 9);
+          var8 = UiWidget.field_t.field_z + rs.field_Cb.c("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(3)}));
+          ek.field_z.f((-ek.field_z.field_z + UiWidget.field_t.field_z) / 2 + (param0 - var8) / 2 + param3, var7);
+          UiWidget.field_t.f((-var8 + param0) / 2 + param3, var7 - 9);
+          gf.b(em.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, h.field_s);
+          gf.b((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + em.field_c[2], (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, h.field_s);
+          gf.b(em.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, h.field_s);
+          rs.field_Cb.d("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(3)}), UiWidget.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), UiWidget.field_t.field_w / 2 + var7 - 4, 16777215, -1);
+          var7 = var7 + UiWidget.field_t.field_w;
+          ek.field_z.f(param3 + ((-var8 + param0) / 2 + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
+          UiWidget.field_t.f((param0 - var8) / 2 + param3, var7 - 9);
           int var9 = 87 % ((-25 - param2) / 51);
-          gf.b((param3 + (vg.field_t.field_z + (-var8 + param0)) / 2 << 4) + em.field_c[0], ul.field_Db[0] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, h.field_s);
-          gf.b(((vg.field_t.field_z - var8 + param0) / 2 + param3 << 4) + em.field_c[1], ul.field_Db[1] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, h.field_s);
-          rs.field_Cb.d("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(2)}), 5 + vg.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + vg.field_t.field_w / 2), 16777215, -1);
-          var7 = var7 + vg.field_t.field_w;
-          ek.field_z.f(-5 + (param3 + (-var6 + param0) / 2 + (-ek.field_z.field_z + vg.field_t.field_z) / 2), var7);
-          vg.field_t.f((-var6 + param0) / 2 + param3 - 5, var7 - 9);
-          gf.b(em.field_c[0] + (-5 + ((vg.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, h.field_s);
-          ek.field_z.f(-5 + (vg.field_t.field_z + (-var6 + param0) / 2 + param3) + (-ek.field_z.field_z + vg.field_t.field_z) / 2, var7);
-          vg.field_t.f(param3 + (-var6 + param0) / 2 + (vg.field_t.field_z - 5), var7 - 9);
-          rs.field_Cb.d("= " + vs.field_a, 2 * vg.field_t.field_z + (-var6 + param0) / 2 + param3, vg.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
+          gf.b((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + em.field_c[0], ul.field_Db[0] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, h.field_s);
+          gf.b(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + em.field_c[1], ul.field_Db[1] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, h.field_s);
+          rs.field_Cb.d("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(2)}), 5 + UiWidget.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + UiWidget.field_t.field_w / 2), 16777215, -1);
+          var7 = var7 + UiWidget.field_t.field_w;
+          ek.field_z.f(-5 + (param3 + (-var6 + param0) / 2 + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
+          UiWidget.field_t.f((-var6 + param0) / 2 + param3 - 5, var7 - 9);
+          gf.b(em.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, h.field_s);
+          ek.field_z.f(-5 + (UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3) + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2, var7);
+          UiWidget.field_t.f(param3 + (-var6 + param0) / 2 + (UiWidget.field_t.field_z - 5), var7 - 9);
+          rs.field_Cb.d("= " + vs.field_a, 2 * UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3, UiWidget.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "kq.NA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -1728,16 +1728,16 @@ final class kq {
         int stackIn_44_0 = 0;
         int[] stackIn_58_0 = null;
         RuntimeException decompiledCaughtException = null;
-        dc var3 = null;
+        GameState var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7_int = 0;
-        fs[] var7 = null;
+        Player[] var7 = null;
         int var8 = 0;
         int var9_int = 0;
-        fs var9 = null;
+        Player var9 = null;
         int[][] var10 = null;
         um var10_ref = null;
         int var11_int = 0;
@@ -1871,7 +1871,7 @@ final class kq {
         try {
           var3 = (rh) (this.field_j.field_x);
           if (var3.field_b[param0] != null) {
-            var3.field_b[param0].a((byte) -126, ii.field_s);
+            var3.field_b[param0].a((byte) -126, SpriteState.field_s);
           }
           var4 = var3.field_c[param0];
           if (param1 != 2) {
@@ -1926,18 +1926,18 @@ final class kq {
         boolean stackOut_10_0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
-        ln[] var3_ref_ln__ = null;
-        fs[] var3_ref_fs__ = null;
+        Star[] var3_ref_ln__ = null;
+        Player[] var3_ref_fs__ = null;
         int var3 = 0;
         int var4_int = 0;
         int[] var4 = null;
-        fs[] var4_array = null;
-        ln var5_ref_ln = null;
-        fs var5_ref_fs = null;
+        Player[] var4_array = null;
+        Star var5_ref_ln = null;
+        Player var5_ref_fs = null;
         int var5 = 0;
-        sd var6 = null;
+        Territory var6 = null;
         int var6_int = 0;
-        fs var6_ref = null;
+        Player var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         lp var9 = null;
@@ -1973,14 +1973,14 @@ final class kq {
               stackIn_11_0 = stackOut_10_0;
               if (var10 == 0) {
                 if (!stackIn_11_0) {
-                  var6 = (sd) (var5_ref_fs.field_i.d(0));
+                  var6 = (Territory) (var5_ref_fs.field_i.d(0));
                   while (null != var6) {
                     stackIn_9_0 = ~var6.field_r;
                     stackIn_9_1 = -1;
                     if (stackIn_9_0 < stackIn_9_1) {
                       var2[var5_ref_fs.field_x] = var2[var5_ref_fs.field_x] + var6.field_r;
                     }
-                    var6 = (sd) (var5_ref_fs.field_i.a((byte) -71));
+                    var6 = (Territory) (var5_ref_fs.field_i.a((byte) -71));
                   }
                 } else {
                   if (0 < var5_ref_fs.field_m.field_r) {
@@ -2066,7 +2066,7 @@ final class kq {
         }
     }
 
-    final void a(fs[] param0, int param1) {
+    final void a(Player[] param0, int param1) {
         int[] array$0 = null;
         int[] array$1 = null;
         RuntimeException stackIn_43_0 = null;
@@ -2077,11 +2077,11 @@ final class kq {
         RuntimeException var3_ref = null;
         boolean[] var4 = null;
         int var5 = 0;
-        fs[] var6 = null;
+        Player[] var6 = null;
         int[][] var6_array = null;
         int var7_int = 0;
         int[][] var7 = null;
-        fs var8_ref_fs = null;
+        Player var8_ref_fs = null;
         int var8 = 0;
         int var9 = 0;
         int var8Lifetime1;
@@ -2158,7 +2158,7 @@ final class kq {
             this.field_Z = var7;
           }
           if (kb.field_x == 7) {
-            this.field_s.field_P.field_x = (me) ((Object) new qg(param0));
+            this.field_s.field_P.field_x = (VictoryChecker) ((Object) new qg(param0));
             this.field_s.field_P.field_x.a((byte) -24, this.field_s.field_P, this);
           }
           return;
@@ -2303,7 +2303,7 @@ final class kq {
           var5Lifetime1 = ui.a(16777215, 16711680, -125, var4Lifetime1);
           if (this.field_e.field_A &&
             this.field_mb.field_s) {
-            jq.field_b.b(this.field_mb.field_k, this.field_mb.field_t, var5Lifetime1);
+            GameKeyHandler.field_b.b(this.field_mb.field_k, this.field_mb.field_t, var5Lifetime1);
           }
           if (null != this.field_j &&
             this.field_j.field_A &&
@@ -2316,7 +2316,7 @@ final class kq {
           }
           if (this.field_J.field_A &&
             this.field_n.field_s) {
-            fl.field_b.b(this.field_n.field_k, this.field_n.field_t, var5Lifetime1);
+            NodeHashTableIterator.field_b.b(this.field_n.field_k, this.field_n.field_t, var5Lifetime1);
           }
           if (null != this.field_nb &&
             this.field_nb.field_A &&
@@ -2365,7 +2365,7 @@ final class kq {
             var8 = stackIn_140_0;
             if (this.field_s.field_n == null &&
               var6Lifetime2 == 0) {
-              var8 = re.a(vp.field_t, 4371, new String[]{this.field_s.field_P.field_v[this.field_s.field_P.field_k].field_t});
+              var8 = re.a(vp.field_t, 4371, new String[]{this.field_s.field_P.field_v[this.field_s.field_P.field_k].name});
             }
           }
           if (this.field_s.field_n != null &&
@@ -2375,22 +2375,22 @@ final class kq {
             var8 = field_L;
           }
           if (null != var8) {
-            mp.field_b.a((String) (var8), 320, 240, var10, -1, qd.field_f);
+            mp.field_b.a((String) (var8), 320, 240, var10, -1, RasterBuffer.field_f);
             var11 = rs.field_Cb.field_J + 245;
             if (var8 == m.field_v) {
               if (this.field_s.field_P.field_w != 0) {
-                stackIn_163_0 = oh.field_g;
+                stackIn_163_0 = IntrusiveNode.field_g;
               } else {
                 stackIn_163_0 = ad.field_b;
               }
               var8 = stackIn_163_0;
-              rs.field_Cb.a((String) (var8), 320, var11, var10, -1, qd.field_f);
+              rs.field_Cb.a((String) (var8), 320, var11, var10, -1, RasterBuffer.field_f);
               var11 = var11 + (3 + rs.field_Cb.field_J);
             }
-            rs.field_Cb.a(er.field_p, 320, var11, var10, -1, qd.field_f);
+            rs.field_Cb.a(er.field_p, 320, var11, var10, -1, RasterBuffer.field_f);
             if (var9 != 0) {
               var11 = var11 + (rs.field_Cb.field_J + 3);
-              rs.field_Cb.a(vn.field_i, 320, var11, var10, -1, qd.field_f);
+              rs.field_Cb.a(vn.field_i, 320, var11, var10, -1, RasterBuffer.field_f);
             }
           }
           if (this.field_u != 0) {
@@ -2416,7 +2416,7 @@ final class kq {
         RuntimeException var2 = null;
         try {
           if (qa.field_t > 0 &&
-            on.field_b) {
+            IntrusiveDequeCursor.field_b) {
             gf.h(0, 0, gf.field_b, tg.field_c.field_N);
             so.field_v.b(param1, -66);
           }
@@ -2429,7 +2429,7 @@ final class kq {
           }
           if (ti.field_e) {
             gf.h(0, 0, gf.field_b, tg.field_c.field_N);
-            ed.field_d.b(param1, -83);
+            MouseInputHandler.field_d.b(param1, -83);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2509,7 +2509,7 @@ final class kq {
         em var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        sd var4 = null;
+        Territory var4 = null;
         String var5 = null;
         int var6 = 0;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -2520,7 +2520,7 @@ final class kq {
           }
           var3 = 0;
           while (var3 < var2.field_i.length) {
-            var4 = (sd) (var2.field_i[var3].field_h);
+            var4 = (Territory) (var2.field_i[var3].field_h);
             var2.field_i[var3].a((byte) -122, Integer.toString(var4.field_x));
             if (var6 != 0) {
               return;
@@ -2627,12 +2627,12 @@ final class kq {
             this.field_s.field_Q != null) {
             this.field_s.field_z.a(0, this.field_s.field_Q.field_a, false);
             this.field_X.g(114);
-            this.field_X.field_o = ip.field_h;
+            this.field_X.field_o = SecondaryNodeDequeIterator.field_h;
             if (!ShatteredPlansClient.field_F) {
               return;
             }
           }
-          this.field_s.field_z.a(-1, new pf(), false);
+          this.field_s.field_z.a(-1, new IntrusiveDeque(), false);
           this.field_s.a(2);
           this.field_X.d(false);
           this.field_X.field_o = da.field_f;
@@ -2656,10 +2656,10 @@ final class kq {
         int var2_int = 0;
         RuntimeException var2 = null;
         int[][] var3 = null;
-        fs[] var4_ref_fs__ = null;
+        Player[] var4_ref_fs__ = null;
         int var4 = 0;
         int var5 = 0;
-        fs var6_ref_fs = null;
+        Player var6_ref_fs = null;
         int var6 = 0;
         int[] var7_ref_int__ = null;
         int var7 = 0;
@@ -2695,14 +2695,14 @@ final class kq {
             var3 = new int[16][var2_int];
             var4_ref_fs__ = this.field_s.field_P.field_v;
             var5 = 0;
-            L6: while (true) {
+            scanLoop1: while (true) {
               if (var5 < var4_ref_fs__.length) {
                 var6_ref_fs = var4_ref_fs__[var5];
                 var7_ref_int__ = var6_ref_fs.field_q.b((byte) -111);
                 var8 = var6_ref_fs.field_q.a(121);
                 stackIn_37_0 = 0;
                 if (var10 != 0) {
-                  break L6;
+                  break scanLoop1;
                 }
                 var9 = stackIn_37_0;
                 while (var9 < 16) {
@@ -2711,7 +2711,7 @@ final class kq {
                   var9++;
                 }
                 var5++;
-                continue L6;
+                continue scanLoop1;
               }
               this.field_q = new int[16][var2_int];
               stackIn_37_0 = 0;
@@ -2730,7 +2730,7 @@ final class kq {
                 break;
               }
               var5Lifetime1 = stackIn_55_0;
-              L14: while (true) {
+              scanLoop2: while (true) {
                 stackIn_43_0 = var2_int;
                 stackIn_43_1 = var5Lifetime1;
                 if (stackIn_43_0 > stackIn_43_1) {
@@ -2747,7 +2747,7 @@ final class kq {
                   }
                   this.field_q[var4][var5Lifetime1] = var2_int - var6;
                   var5Lifetime1++;
-                  continue L14;
+                  continue scanLoop2;
                 }
                 break;
               }
@@ -2758,8 +2758,8 @@ final class kq {
             stackIn_55_0 = -67;
           }
           if (stackIn_55_0 == ~oq.field_j) {
-            stackIn_62_0 = !(ge.field_n);
-            ge.field_n = stackIn_62_0;
+            stackIn_62_0 = !(ImageProducerRasterBuffer.field_n);
+            ImageProducerRasterBuffer.field_n = stackIn_62_0;
             this.field_f.e((byte) 20);
           }
           if (param0 != -1) {
@@ -2831,10 +2831,10 @@ final class kq {
         int var6 = 0;
         int[] var7 = null;
         String var8 = null;
-        me var9 = null;
+        VictoryChecker var9 = null;
         int var10 = 0;
-        bi var11 = null;
-        om var12 = null;
+        Sprite var11 = null;
+        ArgbSprite var12 = null;
         int var13_int = 0;
         String var13 = null;
         int var14 = 0;
@@ -2905,14 +2905,14 @@ final class kq {
           if (null != this.field_s.field_n) {
             var10 = this.field_s.field_n.field_x;
           }
-          var11 = new bi(hb.field_b[0].field_w, -rs.field_Cb.field_J + 450 - (10 + hb.field_b[0].field_z / 2));
+          var11 = new Sprite(hb.field_b[0].field_w, -rs.field_Cb.field_J + 450 - (10 + hb.field_b[0].field_z / 2));
           ra.a(param0 ^ -5630);
           var11.e();
           gf.i(0, 0, var11.field_z, var11.field_w, this.field_s.field_P.field_v[var10].field_k, 0);
           cg.i(param0 ^ param0);
           var11.f();
           var11.a(5 + (rs.field_Cb.field_J / 2 + var4), rs.field_Cb.field_J + var5 + 10, 64);
-          var12 = new om(hb.field_b[0].field_z, hb.field_b[0].field_w);
+          var12 = new ArgbSprite(hb.field_b[0].field_z, hb.field_b[0].field_w);
           var13_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(hb.field_b[var10].field_B.length > var13_int)))) {
@@ -3019,12 +3019,12 @@ final class kq {
           var3 = this.field_C[0].length;
           var4 = new int[var2_int][];
           var5 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var2_int > var5) {
               var6 = this.field_Z[var5];
               stackIn_38_0 = this.field_C;
               if (var10 != 0) {
-                break L3;
+                break scanLoop1;
               }
               var7 = stackIn_38_0[var5];
               var8 = new int[var3];
@@ -3035,7 +3035,7 @@ final class kq {
               }
               var4[var5] = var8;
               var5++;
-              continue L3;
+              continue scanLoop1;
             }
             stackIn_38_0 = var4;
             break;
@@ -3092,7 +3092,7 @@ final class kq {
     final static java.applet.Applet f(byte param0) {
         RuntimeException var1 = null;
         java.applet.Applet stackIn_2_0 = null;
-        kf stackIn_7_0 = null;
+        GameApplet stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (hb.field_a != null) {
@@ -3113,10 +3113,10 @@ final class kq {
 
     final void n(int param0) {
         RuntimeException decompiledCaughtException = null;
-        fs[] var2 = null;
+        Player[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        fs var4 = null;
+        Player var4 = null;
         int var5 = 0;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -3195,17 +3195,17 @@ final class kq {
         int stackIn_161_0 = 0;
         tr stackIn_174_0 = null;
         int stackIn_174_1 = 0;
-        pf stackIn_175_2 = null;
+        IntrusiveDeque stackIn_175_2 = null;
         tr stackIn_187_0 = null;
         int stackIn_187_1 = 0;
-        pf stackIn_188_2 = null;
+        IntrusiveDeque stackIn_188_2 = null;
         int stackIn_190_0 = 0;
         tr stackIn_203_0 = null;
         int stackIn_203_1 = 0;
-        pf stackIn_204_2 = null;
+        IntrusiveDeque stackIn_204_2 = null;
         tr stackIn_210_0 = null;
         int stackIn_210_1 = 0;
-        pf stackIn_211_2 = null;
+        IntrusiveDeque stackIn_211_2 = null;
         int stackIn_213_0 = 0;
         int stackIn_224_0 = 0;
         boolean stackIn_232_0 = false;
@@ -3229,9 +3229,9 @@ final class kq {
         lp[] var5_array = null;
         lp var6_ref_lp = null;
         int var6 = 0;
-        sd var7 = null;
+        Territory var7 = null;
         lp var7_ref = null;
-        fs var8 = null;
+        Player var8 = null;
         int var9 = 0;
         int var5_intLifetime1;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -3336,7 +3336,7 @@ final class kq {
                 this.field_W.d(false);
               }
               if (var4_ref_qh == this.field_nb) {
-                this.field_g.field_o = hi.field_d;
+                this.field_g.field_o = TaskAi.field_d;
                 this.field_g.d(false);
               }
               var4_ref_qh.field_A = false;
@@ -3417,14 +3417,14 @@ final class kq {
               if (!this.field_nb.field_s) {
                 this.a(40, this.field_nb);
                 this.field_nb.field_s = true;
-                this.field_g.field_o = hi.field_d;
+                this.field_g.field_o = TaskAi.field_d;
                 if (var9 != 0) {
                   this.field_nb.field_s = false;
-                  this.field_g.field_o = hi.field_d;
+                  this.field_g.field_o = TaskAi.field_d;
                 }
               } else {
                 this.field_nb.field_s = false;
-                this.field_g.field_o = hi.field_d;
+                this.field_g.field_o = TaskAi.field_d;
               }
               this.field_nb.field_A = false;
               this.field_g.d(false);
@@ -3437,8 +3437,8 @@ final class kq {
               return stackIn_152_0 != 0;
             }
             if (this.field_f == dn.field_h) {
-              stackIn_160_0 = !(ge.field_n);
-              ge.field_n = stackIn_160_0;
+              stackIn_160_0 = !(ImageProducerRasterBuffer.field_n);
+              ImageProducerRasterBuffer.field_n = stackIn_160_0;
               this.field_f.e((byte) 33);
               stackIn_161_0 = var3_int;
               return stackIn_161_0 != 0;
@@ -3461,13 +3461,13 @@ final class kq {
                   decompiledFrameRemainder0 = !(this.field_X.f(244874369));
                   if (decompiledFrameRemainder0) {
                     this.field_X.e((byte) 8);
-                    this.field_X.field_o = ip.field_h;
+                    this.field_X.field_o = SecondaryNodeDequeIterator.field_h;
                     decompiledFrameRemainder0 = (var9 != 0);
                   }
                 }
               }
               if (decompiledFrameRemainder0) {
-                this.field_N.field_o = fl.field_e;
+                this.field_N.field_o = NodeHashTableIterator.field_e;
                 if (this.field_X.f(244874369)) {
                   this.field_X.e((byte) 88);
                   this.field_X.field_o = da.field_f;
@@ -3492,7 +3492,7 @@ final class kq {
               }
               boolean decompiledSharedTail0 = !(this.field_X.f(244874369));
               if (!decompiledSharedTail0) {
-                this.field_X.field_o = ip.field_h;
+                this.field_X.field_o = SecondaryNodeDequeIterator.field_h;
                 stackIn_203_0 = this.field_s.field_z;
                 stackIn_203_1 = 0;
                 if (null != this.field_s.field_Q) {
@@ -3538,7 +3538,7 @@ final class kq {
               var5_int = 0;
               while (!(var5_int >= var4_ref_em.field_f.length)) {
                 var6_ref_lp = var4_ref_em.field_f[var5_int];
-                var7 = (sd) (var6_ref_lp.field_h);
+                var7 = (Territory) (var6_ref_lp.field_h);
                 stackOut_231_0 = var6_ref_lp.a((byte) -10, dn.field_h);
                 stackIn_289_0 = stackOut_231_0 ? 1 : 0;
                 stackIn_232_0 = stackOut_231_0;
@@ -3589,7 +3589,7 @@ final class kq {
                 var6 = 0;
                 while (var6 < var5_array.length) {
                   var7_ref = var5_array[var6];
-                  var8 = (fs) (var7_ref.field_h);
+                  var8 = (Player) (var7_ref.field_h);
                   if (var9 != 0) {
                     decompiledFrameCompleted0 = false;
                     break;
@@ -3612,7 +3612,7 @@ final class kq {
           }
           if ((decompiledFrameCompleted0) &&
             (stackIn_289_0 < 43)) {
-            this.field_y = (pf) null;
+            this.field_y = (IntrusiveDeque) null;
           }
           stackIn_296_0 = (var3_int != 0) ? 0 : 1;
           if (stackIn_296_0 == 1 &&
@@ -3740,12 +3740,12 @@ final class kq {
         int stackIn_125_1 = 0;
         RuntimeException decompiledCaughtException = null;
         ad var2 = null;
-        fs[] var2_array = null;
+        Player[] var2_array = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
         int var3_int = 0;
-        dc var3 = null;
-        fs var4_ref_fs = null;
+        GameState var3 = null;
+        Player var4_ref_fs = null;
         int var4 = 0;
         int var5 = 0;
         Object var6_ref = null;
@@ -3759,7 +3759,7 @@ final class kq {
           if (this.field_s.field_L ||
             this.field_bb == null) {
             var2 = (ad) (this.field_k.field_v);
-            var2.field_e.a(-2948, (bi) null);
+            var2.field_e.a(-2948, (Sprite) null);
             boolean decompiledSharedTail1 = (this.field_s.field_N != 1);
             if (!decompiledSharedTail1) {
               this.a(10, 0, il.field_Y);
@@ -3795,31 +3795,31 @@ final class kq {
           var3 = this.field_s.field_P;
           var4 = 0;
           var5 = 0;
-          L10: while (true) {
+          scanLoop1: while (true) {
             if (var3.field_r > var5) {
               stackIn_125_0 = ~var5;
               stackIn_125_1 = ~this.field_s.field_h;
               if (var7 == 0) {
-                L13: {
+                regionExit2: {
                   if (stackIn_125_0 != stackIn_125_1) {
                     var6_ref = var3.field_I[var5];
                     if ((1 << var5 & this.field_s.field_i) == 0) {
                       if (0 == (var3.field_e & 1 << var5)) {
                         if ((var3.field_f & 1 << var5) != 0) {
                           var6_ref = re.a(ek.field_y, 4371, new String[]{(String) (var6_ref)});
-                          break L13;
+                          break regionExit2;
                         }
                         if ((this.field_s.field_P.field_w & 1 << var5) != 0) {
                           var6_ref = null;
-                          break L13;
+                          break regionExit2;
                         }
                         if (!var3.field_z &&
                           (var3.field_y & 1 << var5) != 0) {
-                          var6_ref = re.a(ob.field_i, 4371, new String[]{(String) (var6_ref)});
-                          break L13;
+                          var6_ref = re.a(PacketBuffer.field_i, 4371, new String[]{(String) (var6_ref)});
+                          break regionExit2;
                         } else {
                           var6_ref = null;
-                          break L13;
+                          break regionExit2;
                         }
                       }
                       if (!this.field_s.field_M) {
@@ -3834,15 +3834,15 @@ final class kq {
                         var6_ref = re.a(bj.field_M, 4371, new String[]{(String) (var6_ref)});
                       }
                     }
-                    break L13;
+                    break regionExit2;
                   }
                   if ((1 << var5 & var3.field_e) != 0) {
                     if (!this.field_s.field_M) {
-                      var6_ref = f.field_B;
+                      var6_ref = WidgetContainer.field_B;
                     } else {
                       var6_ref = ae.field_d;
                     }
-                    break L13;
+                    break regionExit2;
                   }
                   if (0 != (var3.field_f & 1 << var5)) {
                     var6_ref = uh.field_e;
@@ -3914,7 +3914,7 @@ final class kq {
                   this.field_ib = this.field_z[this.field_U];
                   this.field_z[this.field_U] = false;
                   var6 = rs.field_Cb.c(this.field_o);
-                  this.field_T = new bi(var6, rs.field_Cb.field_q + rs.field_Cb.field_J);
+                  this.field_T = new Sprite(var6, rs.field_Cb.field_q + rs.field_Cb.field_J);
                   bs.a(this.field_T, 92);
                   gf.b();
                   rs.field_Cb.b(this.field_o, this.field_T.field_z, rs.field_Cb.field_J, 16777215, -1);
@@ -3932,7 +3932,7 @@ final class kq {
                 this.field_U = -1;
               }
               if (this.field_u == 0) {
-                break L10;
+                break scanLoop1;
               }
               fieldTemp$2 = this.field_u + 1;
               this.field_u = this.field_u + 1;
@@ -3970,7 +3970,7 @@ final class kq {
             gf.d(0, 0, fj.field_r.field_z, fj.field_r.field_w, 0);
             if (se.field_k) {
               aq.field_i.f(10, 10);
-              var5Lifetime1 = ui.a(0, 16777215, -96, qd.field_f);
+              var5Lifetime1 = ui.a(0, 16777215, -96, RasterBuffer.field_f);
               fj.field_r.f(var5Lifetime1);
               fj.field_r.f(var5Lifetime1);
               fj.field_r.e();
@@ -3980,7 +3980,7 @@ final class kq {
             gf.d(0, 0, kb.field_w.field_z, kb.field_w.field_w, 0);
             if (ph.field_g) {
               rk.field_j.f(10, 10);
-              var5Lifetime1Lifetime1 = ui.a(0, 16777215, -103, qd.field_f);
+              var5Lifetime1Lifetime1 = ui.a(0, 16777215, -103, RasterBuffer.field_f);
               kb.field_w.f(var5Lifetime1Lifetime1);
               kb.field_w.f(var5Lifetime1Lifetime1);
               kb.field_w.e();
@@ -4222,8 +4222,8 @@ final class kq {
         int var9Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var2_int = ed.field_f * ed.field_f;
-          var3 = var2_int - fl.field_h * fl.field_h;
+          var2_int = MouseInputHandler.field_f * MouseInputHandler.field_f;
+          var3 = var2_int - NodeHashTableIterator.field_h * NodeHashTableIterator.field_h;
           var4 = 360 + 120 * var3 / var2_int;
           this.field_O.a(640, 120, (byte) 112, var4, 0);
           this.field_E.field_xb.field_M.a(0);
@@ -4414,7 +4414,7 @@ final class kq {
     }
 
     final bh b(byte param0) {
-        pf stackIn_8_0;
+        IntrusiveDeque stackIn_8_0;
         int stackIn_8_1;
         bh stackIn_8_2;
         bh stackIn_8_3;
@@ -4423,14 +4423,14 @@ final class kq {
         bh stackIn_9_2;
         bh stackIn_9_3;
         int stackIn_9_6;
-        pf stackIn_16_0;
+        IntrusiveDeque stackIn_16_0;
         int stackIn_16_1;
         bh stackIn_16_2;
         bh stackIn_16_3;
         bh stackIn_17_2;
         bh stackIn_17_3;
         int stackIn_17_4;
-        pf stackIn_24_0;
+        IntrusiveDeque stackIn_24_0;
         int stackIn_24_1;
         bh stackIn_24_2;
         bh stackIn_24_3;
@@ -4440,7 +4440,7 @@ final class kq {
         bh stackIn_25_2;
         bh stackIn_25_3;
         int stackIn_25_7;
-        pf stackIn_32_0;
+        IntrusiveDeque stackIn_32_0;
         int stackIn_32_1;
         bh stackIn_32_2;
         bh stackIn_32_3;
@@ -4460,7 +4460,7 @@ final class kq {
         RuntimeException var2_ref = null;
         int var3 = 0;
         bh var4 = null;
-        pf var5 = null;
+        IntrusiveDeque var5 = null;
         int var6 = 0;
         Object var7 = null;
         bh var8 = null;
@@ -4477,7 +4477,7 @@ final class kq {
             return stackIn_47_0;
           }
           var4 = new bh(e.field_f, fk.field_k, ei.field_e, kl.field_o);
-          var5 = new pf();
+          var5 = new IntrusiveDeque();
           if (var2.field_l < var4.field_l) {
             stackIn_8_0 = var5;
             stackIn_8_1 = -113;
@@ -4494,7 +4494,7 @@ final class kq {
               stackIn_9_3 = null;
               stackIn_9_6 = var4.field_l;
             }
-            ((pf) (Object) stackIn_8_0).a((byte) stackIn_8_1, new bh(stackIn_8_4, stackIn_8_5, stackIn_9_6, var2.field_i));
+            ((IntrusiveDeque) (Object) stackIn_8_0).a((byte) stackIn_8_1, new bh(stackIn_8_4, stackIn_8_5, stackIn_9_6, var2.field_i));
           }
           if (var4.field_o < var2.field_o) {
             stackIn_16_0 = var5;
@@ -4510,7 +4510,7 @@ final class kq {
               stackIn_17_3 = null;
               stackIn_17_4 = var2.field_l;
             }
-            ((pf) (Object) stackIn_16_0).a((byte) stackIn_16_1, new bh(stackIn_17_4, var2.field_q, var2.field_o, var2.field_i));
+            ((IntrusiveDeque) (Object) stackIn_16_0).a((byte) stackIn_16_1, new bh(stackIn_17_4, var2.field_q, var2.field_o, var2.field_i));
           }
           if (var4.field_q > var2.field_q) {
             stackIn_24_0 = var5;
@@ -4529,7 +4529,7 @@ final class kq {
               stackIn_25_3 = null;
               stackIn_25_7 = var4.field_q;
             }
-            ((pf) (Object) stackIn_24_0).a((byte) stackIn_24_1, new bh(stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_25_7));
+            ((IntrusiveDeque) (Object) stackIn_24_0).a((byte) stackIn_24_1, new bh(stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_25_7));
           }
           if (var2.field_i > var4.field_i) {
             stackIn_32_0 = var5;
@@ -4546,7 +4546,7 @@ final class kq {
               stackIn_33_3 = null;
               stackIn_33_5 = var2.field_q;
             }
-            ((pf) (Object) stackIn_32_0).a((byte) stackIn_32_1, new bh(stackIn_32_4, stackIn_33_5, var2.field_o, var2.field_i));
+            ((IntrusiveDeque) (Object) stackIn_32_0).a((byte) stackIn_32_1, new bh(stackIn_32_4, stackIn_33_5, var2.field_o, var2.field_i));
           }
           var6 = 0;
           var7 = null;
@@ -4594,15 +4594,15 @@ final class kq {
         em var2 = null;
         RuntimeException var2_ref = null;
         lp var3_ref_lp = null;
-        sd var3_ref_sd = null;
-        fs[] var3_ref_fs__ = null;
+        Territory var3_ref_sd = null;
+        Player[] var3_ref_fs__ = null;
         int var3 = 0;
         lp var4_ref_lp = null;
         int var4 = 0;
         lp var5 = null;
-        fs var5_ref = null;
+        Player var5_ref = null;
         lp var6 = null;
-        sd var6_ref = null;
+        Territory var6_ref = null;
         lp var7 = null;
         lp var8 = null;
         int var9 = 0;
@@ -4640,7 +4640,7 @@ final class kq {
               var2.field_i = new qk[this.field_s.field_n.field_i.e(0)];
               this.field_e.field_A = false;
               this.field_mb.d(false);
-              var3_ref_sd = (sd) (this.field_s.field_n.field_i.d(0));
+              var3_ref_sd = (Territory) (this.field_s.field_n.field_i.d(0));
               if (var3_ref_sd != null) {
                 var4_ref_lp = rc.a((byte) 120, var3_ref_sd, var2, true);
                 var4_ref_lp.a((byte) 52, this.field_e.field_z.field_k, this.field_e.field_z.field_t + this.field_e.field_z.field_y);
@@ -4649,7 +4649,7 @@ final class kq {
                   this.field_e.field_A = true;
                   this.field_mb.g(param0 ^ -15994);
                 }
-                var3_ref_sd = (sd) (this.field_s.field_n.field_i.a((byte) -71));
+                var3_ref_sd = (Territory) (this.field_s.field_n.field_i.a((byte) -71));
                 while (var3_ref_sd != null) {
                   var5 = rc.a((byte) 123, var3_ref_sd, var2, false);
                   var5.a((byte) 126, this.field_e.field_z.field_k, this.field_e.field_z.field_t + this.field_e.field_z.field_y);
@@ -4664,7 +4664,7 @@ final class kq {
                     this.field_e.field_A = true;
                     this.field_mb.g(95);
                   }
-                  var3_ref_sd = (sd) (this.field_s.field_n.field_i.a((byte) -71));
+                  var3_ref_sd = (Territory) (this.field_s.field_n.field_i.a((byte) -71));
                 }
               }
             }
@@ -4695,17 +4695,17 @@ final class kq {
                 decompiledFrameRemainder0 = (var9 != 0);
               }
               if (decompiledFrameRemainder0) {
-                var6_ref = (sd) (var5_ref.field_i.d(0));
+                var6_ref = (Territory) (var5_ref.field_i.d(0));
                 if (var6_ref != null) {
                   var7 = an.a((byte) -76, true, var6_ref);
                   var7.a((byte) 52, this.field_e.field_z.field_k, this.field_e.field_z.field_y + this.field_e.field_z.field_t);
                   this.field_e.field_z.a(var7, 8);
-                  var6_ref = (sd) (var5_ref.field_i.a((byte) -71));
+                  var6_ref = (Territory) (var5_ref.field_i.a((byte) -71));
                   while (null != var6_ref) {
                     var8 = an.a((byte) -76, false, var6_ref);
                     var8.a((byte) 51, this.field_e.field_z.field_k, this.field_e.field_z.field_y + this.field_e.field_z.field_t);
                     this.field_e.field_z.a(var8, param0 ^ -15915);
-                    var6_ref = (sd) (var5_ref.field_i.a((byte) -71));
+                    var6_ref = (Territory) (var5_ref.field_i.a((byte) -71));
                     if (var9 != 0) {
                       decompiledFrameCompleted0 = false;
                       break;
@@ -4750,7 +4750,7 @@ final class kq {
         RuntimeException decompiledCaughtException = null;
         ad var2 = null;
         RuntimeException var2_ref = null;
-        sd var3 = null;
+        Territory var3 = null;
         int var4 = 0;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -4768,7 +4768,7 @@ final class kq {
           if (var2.field_e.d((byte) 34) &&
             this.field_s.field_m != 2) {
             if (!this.field_s.field_P.field_o.field_i) {
-              var3 = (sd) (this.field_s.field_n.field_i.d(0));
+              var3 = (Territory) (this.field_s.field_n.field_i.d(0));
               while (null != var3) {
                 stackIn_28_0 = -1;
                 stackIn_28_1 = ~var3.field_x;
@@ -4780,7 +4780,7 @@ final class kq {
                   this.a(-2, var3, true);
                   return;
                 }
-                var3 = (sd) (this.field_s.field_n.field_i.a((byte) -71));
+                var3 = (Territory) (this.field_s.field_n.field_i.a((byte) -71));
               }
               decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
             }
@@ -4794,7 +4794,7 @@ final class kq {
           if (decompiledFrameCompleted0) {
             this.field_s.m(124);
             this.field_bb.g(81);
-            var2.field_e.a(-2948, (bi) null);
+            var2.field_e.a(-2948, (Sprite) null);
             stackIn_28_0 = this.field_s.field_N;
             stackIn_28_1 = 1;
           }
@@ -4842,7 +4842,7 @@ final class kq {
         }
     }
 
-    final void a(int param0, fs[] param1, int[] param2, int[] param3, fs[] param4, qk[] param5, byte param6, int param7) {
+    final void a(int param0, Player[] param1, int[] param2, int[] param3, Player[] param4, qk[] param5, byte param6, int param7) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -4872,7 +4872,7 @@ final class kq {
           var10.a((byte) 61, var9.field_k, var9.field_y + var9.field_t);
           var9.a(var10, 8);
           var11 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param1.length > var11) {
               var12 = fb.a(param7, param0, 28, param3[var11], param1[var11], param2[var11], param4, this.field_s.field_P);
               var12.a((byte) 38, var9.field_k, var9.field_t + var9.field_y);
@@ -4884,7 +4884,7 @@ final class kq {
             } else {
               if (param7 > 0 &&
                 3 >= param7) {
-                break L2;
+                break scanLoop1;
               }
               this.field_nb.field_A = false;
               this.field_g.d(false);
@@ -4935,7 +4935,7 @@ final class kq {
         }
     }
 
-    private final void a(int param0, sd param1, boolean param2) {
+    private final void a(int param0, Territory param1, boolean param2) {
         StringBuilder stackIn_17_0 = null;
         String stackIn_18_1 = null;
         StringBuilder stackIn_30_0 = null;
@@ -4949,10 +4949,10 @@ final class kq {
         RuntimeException var4_ref = null;
         int var5_int = 0;
         ad var5 = null;
-        ln var5_ref = null;
+        Star var5_ref = null;
         jh var6 = null;
         qk var7 = null;
-        sd var8 = null;
+        Territory var8 = null;
         String var9 = null;
         int var10 = 0;
         String var9Lifetime1;
@@ -4969,7 +4969,7 @@ final class kq {
           while (!(decompiledNaturalLoopExit0 = (!(var4.field_d.length > var5_int)))) {
             var6 = var4.field_d[var5_int];
             var7 = var4.field_i[var5_int];
-            var8 = (sd) (var6.field_h);
+            var8 = (Territory) (var6.field_h);
             stackIn_36_0 = var6.f(param0 + 244874371);
             if (var10 == 0) {
               if (stackIn_36_0) {
@@ -5017,7 +5017,7 @@ final class kq {
             var5.field_e.a(-2948, this.field_t);
             var5.field_f.a((byte) 122, 55, var5.field_f.field_t);
             if (this.field_s.field_W) {
-              fl.a(0, "unplaced");
+              NodeHashTableIterator.a(0, "unplaced");
             }
           }
           var5_ref = param1.j(18229);
@@ -5055,7 +5055,7 @@ final class kq {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         qr var3_ref_qr = null;
-        fs var4 = null;
+        Player var4 = null;
         qr var4_ref = null;
         int var5 = 0;
         int stackIn_45_0Lifetime1;
@@ -5063,11 +5063,11 @@ final class kq {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_v = true;
         try {
-          fj.field_r = new bi(20 + aq.field_i.field_o, aq.field_i.field_p + 20);
-          kb.field_w = new om(rk.field_j.field_o + 20, rk.field_j.field_p + 20);
+          fj.field_r = new Sprite(20 + aq.field_i.field_o, aq.field_i.field_p + 20);
+          kb.field_w = new ArgbSprite(rk.field_j.field_o + 20, rk.field_j.field_p + 20);
           this.field_I = true;
           this.field_s = param0;
-          this.field_y = new pf();
+          this.field_y = new IntrusiveDeque();
           this.field_e = ch.a((byte) 112);
           this.field_y.a((byte) -113, this.field_e);
           if (this.field_s.field_n != null) {
@@ -5102,7 +5102,7 @@ final class kq {
           this.field_y.a((byte) -113, this.field_mb);
           if (this.field_nb != null) {
             this.field_g = new jh(k.field_d.field_z + h.field_F.field_z + 515, 25, wl.field_d.field_z, wl.field_d.field_w, -1, wl.field_d, (String) null, 0, -1, nr.field_k, (String) null, 0);
-            this.field_g.field_o = hi.field_d;
+            this.field_g.field_o = TaskAi.field_d;
             this.field_y.a((byte) -113, this.field_g);
           }
           if (this.field_s.field_n != null) {
@@ -5117,10 +5117,10 @@ final class kq {
             this.field_N.e((byte) 9);
             this.field_N.field_o = fi.field_i;
             if (var6 != 0) {
-              this.field_N.field_o = fl.field_e;
+              this.field_N.field_o = NodeHashTableIterator.field_e;
             }
           } else {
-            this.field_N.field_o = fl.field_e;
+            this.field_N.field_o = NodeHashTableIterator.field_e;
           }
           this.field_X = new jh(610, -nr.field_r[1].field_w + 480, nr.field_r[1].field_z, nr.field_r[1].field_w, -1, nr.field_r[1], (String) null, 0, -1, nr.field_r[4], (String) null, 0);
           this.field_X.field_o = da.field_f;
@@ -5139,15 +5139,15 @@ final class kq {
           this.field_K.a(this.field_X, 8);
           this.field_K.a(this.field_d, 8);
           this.field_V = new os(3, 480, 10 + rs.field_Cb.c(fk.field_l), 2 * rs.field_Cb.field_J);
-          this.field_f = new jh(3, 480, this.field_V.field_m, rs.field_Cb.field_J - 4, -1, (bi) null, fk.field_l, 16777215, -1, (bi) null, db.field_d, 16777215);
+          this.field_f = new jh(3, 480, this.field_V.field_m, rs.field_Cb.field_J - 4, -1, (Sprite) null, fk.field_l, 16777215, -1, (Sprite) null, db.field_d, 16777215);
           this.field_V.a(this.field_f, 8);
           this.field_y.a(this.field_V, 0);
-          this.field_t = new om(go.field_L.field_o, go.field_L.field_p);
+          this.field_t = new ArgbSprite(go.field_L.field_o, go.field_L.field_p);
           ra.a(-128);
           this.field_t.e();
           go.field_L.d(0, 0, 16711680);
           var3 = 0;
-          L11: while (true) {
+          scanLoop1: while (true) {
             if (this.field_t.field_B.length > var3) {
               stackIn_45_0 = 0;
               stackIn_45_1 = this.field_t.field_B[var3];
@@ -5155,12 +5155,12 @@ final class kq {
                 if (stackIn_45_0 > stackIn_45_1) {
                   var4 = this.field_s.field_P.field_v[var3];
                   jr.a("playercol" + var3, 1904, re.a("<col=<%0>>", 4371, new String[]{Integer.toString(var4.field_s, 16)}));
-                  jr.a("player" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_t}));
-                  jr.a("playerhome" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.field_I}));
+                  jr.a("player" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.name}));
+                  jr.a("playerhome" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.name}));
                   var3++;
                   return;
                 }
-                break L11;
+                break scanLoop1;
               }
               if (stackIn_45_0 != stackIn_45_1) {
                 gf.c(var3 % this.field_t.field_z, var3 / this.field_t.field_z, 16711680, 128);
@@ -5174,17 +5174,17 @@ final class kq {
               !this.field_s.field_W) {
               qn.b(116);
               var3_ref_qr = new qr(0L, (qr) null);
-              var3_ref_qr.field_M = new pf();
+              var3_ref_qr.field_M = new IntrusiveDeque();
               this.field_E = new ub(0L, var3_ref_qr, dm.field_h, se.field_m);
               var4_ref = new qr(0L, l.field_a);
-              this.field_O = new qr(0L, oh.field_a);
+              this.field_O = new qr(0L, IntrusiveNode.field_a);
               this.field_O.a(640, 120, (byte) 116, 480, 0);
               var4_ref.a(634, this.field_O.field_mb - 6, (byte) 84, 3, 3);
               this.field_O.a(4, var4_ref);
               var4_ref.a(4, this.field_E);
               var5 = -5 + var4_ref.field_mb;
               this.field_E.a(624, 5, 5, 2, -125, -5 + var5, 15);
-              ge.field_n = false;
+              ImageProducerRasterBuffer.field_n = false;
             }
             cq.a(rs.field_Cb, true);
             this.field_ob = new int[]{82, 52, 52, 52};
@@ -5193,7 +5193,7 @@ final class kq {
             this.field_U = -1;
             this.field_p = new int[]{32, 0, 0, 0};
             this.field_z = new boolean[this.field_s.field_P.field_r + 1];
-            this.field_B = new pf();
+            this.field_B = new IntrusiveDeque();
             this.field_F = new os(0, 410, 128, 21);
             this.field_lb = new os(0, 410, 128, 21);
             this.field_m = new os(0, 410, 128, 21);
@@ -5202,13 +5202,13 @@ final class kq {
             this.field_B.a((byte) -113, this.field_lb);
             this.field_B.a((byte) -113, this.field_m);
             this.field_B.a((byte) -113, this.field_M);
-            this.field_hb = new jh(0, 410, 128, 21, -1, (bi) null, ja.field_n.toUpperCase(), 16777215, -1, (bi) null, ja.field_n.toUpperCase(), 2805974);
+            this.field_hb = new jh(0, 410, 128, 21, -1, (Sprite) null, ja.field_n.toUpperCase(), 16777215, -1, (Sprite) null, ja.field_n.toUpperCase(), 2805974);
             this.field_F.a(this.field_hb, 8);
-            this.field_gb = new jh(0, 410, 128, 21, -1, (bi) null, na.field_s.toUpperCase(), 16777215, -1, (bi) null, na.field_s.toUpperCase(), 2805974);
+            this.field_gb = new jh(0, 410, 128, 21, -1, (Sprite) null, na.field_s.toUpperCase(), 16777215, -1, (Sprite) null, na.field_s.toUpperCase(), 2805974);
             this.field_lb.a(this.field_gb, 8);
-            this.field_db = new jh(0, 410, 128, 21, -1, (bi) null, po.field_a.toUpperCase(), 16777215, -1, (bi) null, po.field_a.toUpperCase(), 2805974);
+            this.field_db = new jh(0, 410, 128, 21, -1, (Sprite) null, po.field_a.toUpperCase(), 16777215, -1, (Sprite) null, po.field_a.toUpperCase(), 2805974);
             this.field_m.a(this.field_db, 8);
-            this.field_a = new jh(0, 410, 128, 21, -1, (bi) null, ph.field_a.toUpperCase(), 16777215, -1, (bi) null, ph.field_a.toUpperCase(), 2805974);
+            this.field_a = new jh(0, 410, 128, 21, -1, (Sprite) null, ph.field_a.toUpperCase(), 16777215, -1, (Sprite) null, ph.field_a.toUpperCase(), 2805974);
             this.field_M.a(this.field_a, 8);
             this.field_hb.field_h = new Integer(0);
             this.field_gb.field_h = new Integer(1);
@@ -5242,8 +5242,8 @@ final class kq {
               }
               var4 = this.field_s.field_P.field_v[var3];
               jr.a("playercol" + var3, 1904, re.a("<col=<%0>>", 4371, new String[]{Integer.toString(var4.field_s, 16)}));
-              jr.a("player" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_t}));
-              jr.a("playerhome" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.field_I}));
+              jr.a("player" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.name}));
+              jr.a("playerhome" + var3, 1904, re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(var4.field_s, 16), var4.field_m.field_q.name}));
               var3++;
               if (var6 != 0) {
                 return;

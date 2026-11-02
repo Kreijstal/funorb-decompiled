@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class hb {
-    static bi field_d;
+    static Sprite field_d;
     static java.applet.Applet field_a;
-    static bi[] field_b;
+    static Sprite[] field_b;
     static int field_e;
     static String field_c;
 
@@ -112,16 +112,16 @@ abstract class hb {
         field_b = null;
         field_c = null;
         if (param0 != -122) {
-          field_d = (bi) null;
+          field_d = (Sprite) null;
         }
         field_a = null;
     }
 
     abstract int b(byte param0);
 
-    abstract oh a(byte param0);
+    abstract IntrusiveNode a(byte param0);
 
-    abstract oh a(boolean param0);
+    abstract IntrusiveNode a(boolean param0);
 
     static {
         field_e = 0;

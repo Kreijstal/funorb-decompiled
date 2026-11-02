@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk extends oh {
+final class sk extends IntrusiveNode {
     int field_j;
     long field_l;
     static qr field_k;
@@ -33,10 +33,10 @@ final class sk extends oh {
         var3 = var8.j(param1 ^ 113);
         stackIn_3_0 = (param1 != ~(128 & var3));
         kr.field_b = stackIn_3_0;
-        ob.field_k = var3 & 127;
+        PacketBuffer.field_k = var3 & 127;
         nj.field_a = var8.j(-77);
         sp.field_j = var8.d(param1 ^ -31);
-        if (ob.field_k != 2) {
+        if (PacketBuffer.field_k != 2) {
           el.field_f = 0;
           va.field_b = 0;
         } else {
@@ -51,8 +51,8 @@ final class sk extends oh {
         } else {
           em.field_a = var8.e(-1);
         }
-        if (ob.field_k != 1 &&
-          ob.field_k != 4) {
+        if (PacketBuffer.field_k != 1 &&
+          PacketBuffer.field_k != 4) {
           fm.field_f = 0;
           mc.field_q = null;
         } else {
@@ -60,15 +60,15 @@ final class sk extends oh {
           mc.field_q = var8.e(param1 + 0);
         }
         if (!param0) {
-          ke.field_h = pe.a(var8, param1 + 1, 80);
+          BufferedSocket.field_h = pe.a(var8, param1 + 1, 80);
           mb.field_p = null;
           return new nf(param0);
         }
         var5 = var8.f(-20976);
         try {
           var9 = dh.field_c.a((byte) 47, var5);
-          ke.field_h = var9.f(80);
-          if (em.field_a.equals(ln.field_o)) {
+          BufferedSocket.field_h = var9.f(80);
+          if (em.field_a.equals(Star.field_o)) {
             stackIn_22_0 = null;
           } else {
             stackIn_22_0 = var9.field_o;
@@ -77,8 +77,8 @@ final class sk extends oh {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          jq.a(param1 - 29900, (Throwable) ((Object) var6), "CC1");
-          ke.field_h = null;
+          GameKeyHandler.a(param1 - 29900, (Throwable) ((Object) var6), "CC1");
+          BufferedSocket.field_h = null;
           mb.field_p = null;
           return new nf(param0);
         }

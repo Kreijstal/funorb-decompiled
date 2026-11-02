@@ -14,7 +14,7 @@ final class pn {
     private int field_a;
     private int field_h;
 
-    final void a(ob param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
         this.field_a = param0.j(-126);
         this.field_k = new int[this.field_a];
@@ -62,7 +62,7 @@ final class pn {
         this.field_g = 0;
     }
 
-    final void b(ob param0) {
+    final void b(PacketBuffer param0) {
         this.field_f = param0.j(-121);
         this.field_d = param0.a(16711680);
         this.field_i = param0.a(16711680);

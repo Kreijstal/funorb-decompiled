@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hd extends oh {
-    bi field_o;
+final class hd extends IntrusiveNode {
+    Sprite field_o;
     int field_h;
     static oa field_s;
-    bi field_i;
+    Sprite field_i;
     static qr field_m;
     static byte[][] field_q;
     static String field_p;
@@ -107,8 +107,8 @@ final class hd extends oh {
           if (var6 != 0) {
             var4_int = 600;
           }
-          this.field_i = new bi(var4_int, var5);
-          this.field_o = new bi(var4_int + 6, 6 + var5);
+          this.field_i = new Sprite(var4_int, var5);
+          this.field_o = new Sprite(var4_int + 6, 6 + var5);
           ra.a(-127);
           this.field_i.e();
           if (var6 == 0) {
@@ -161,7 +161,7 @@ final class hd extends oh {
         int var2 = 0;
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        int var1_int = ln.field_H.length;
+        int var1_int = Star.field_H.length;
         kb.field_A = 0;
         if (param0) {
           return;

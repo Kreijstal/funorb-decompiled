@@ -31,7 +31,7 @@ final class wp {
               oq.field_i[13] = en.field_d;
             } else {
               if (-1 + (1 << ce.field_x.field_P.field_r) == (ce.field_x.field_i | 1 << ce.field_x.field_h)) {
-                oq.field_i[13] = ip.field_d;
+                oq.field_i[13] = SecondaryNodeDequeIterator.field_d;
               } else {
                 oq.field_i[13] = hn.field_a;
               }
@@ -55,7 +55,7 @@ final class wp {
         field_b = null;
     }
 
-    final static void a(byte param0, oh param1, oh param2) {
+    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -64,13 +64,13 @@ final class wp {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.field_e != null) {
+          if (param1.previous != null) {
             param1.b((byte) -111);
           }
-          param1.field_f = param2;
-          param1.field_e = param2.field_e;
-          param1.field_e.field_f = param1;
-          param1.field_f.field_e = param1;
+          param1.next = param2;
+          param1.previous = param2.previous;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
           if (param0 <= -122) {
             return;
           }
@@ -181,7 +181,7 @@ final class wp {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$2661ebe01e52(int param0, oh param1, oh param2) {
+    final static void $cfr$intArgs$a$2661ebe01e52(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -190,13 +190,13 @@ final class wp {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.field_e != null) {
+          if (param1.previous != null) {
             param1.b((byte) -111);
           }
-          param1.field_f = param2;
-          param1.field_e = param2.field_e;
-          param1.field_e.field_f = param1;
-          param1.field_f.field_e = param1;
+          param1.next = param2;
+          param1.previous = param2.previous;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
           if (param0 <= -122) {
             return;
           }

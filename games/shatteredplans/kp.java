@@ -9,7 +9,7 @@ class kp extends ms {
     static int field_i;
     private long field_p;
     static int[] field_k;
-    static bi field_m;
+    static Sprite field_m;
 
     public static void b(byte param0) {
         field_o = null;
@@ -20,7 +20,7 @@ class kp extends ms {
         field_m = null;
     }
 
-    final static boolean a(byte param0, ln param1, ln param2, int param3, ln param4) {
+    final static boolean a(byte param0, Star param1, Star param2, int param3, Star param4) {
         boolean stackIn_13_0 = false;
         boolean stackIn_19_0 = false;
         boolean stackIn_25_0 = false;
@@ -37,7 +37,7 @@ class kp extends ms {
         int var6 = 0;
         double var7 = 0.0;
         double var9 = 0.0;
-        ln var11 = null;
+        Star var11 = null;
         try {
           if ((!(param1.field_A - param3 > param4.field_A) ||
             !(param2.field_A < param1.field_A - param3)) &&
@@ -54,8 +54,8 @@ class kp extends ms {
               return stackIn_19_0;
             }
             if (param0 < 88) {
-              var11 = (ln) null;
-              kp.a((byte) 115, (ln) null, (ln) null, -109, (ln) null);
+              var11 = (Star) null;
+              kp.a((byte) 115, (Star) null, (Star) null, -109, (Star) null);
             }
             var7 = Math.sqrt((double)(var6 * var6 + var5_int * var5_int));
             var9 = (double)(-((param1.field_S - param4.field_S) * var5_int) + (param1.field_A - param4.field_A) * var6) / var7;
@@ -101,7 +101,7 @@ class kp extends ms {
         return oi.field_b;
     }
 
-    final void a(ob param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           param0.b(-16426, this.field_p);
           param0.b((byte) -120, this.field_l);

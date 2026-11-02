@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kj {
-    static pf field_a;
+    static IntrusiveDeque field_a;
     boolean field_h;
     boolean field_b;
     String[] field_d;
     static String field_e;
-    static bi[] field_f;
+    static Sprite[] field_f;
     int field_c;
     static String field_i;
     String field_g;
 
-    final static vr a(byte param0, ob param1) {
+    final static vr a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

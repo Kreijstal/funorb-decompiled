@@ -8,7 +8,7 @@ final class cm {
     static int[] field_g;
     static boolean field_f;
     static String field_c;
-    static bi field_b;
+    static Sprite field_b;
 
     cm(int[] param0) {
         int var2_int = 0;

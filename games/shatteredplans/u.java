@@ -24,14 +24,14 @@ final class u {
             ts.a(6493);
           } else {
             if (null != ce.field_x) {
-              on.a(1, param0);
+              IntrusiveDequeCursor.a(1, param0);
               return;
             }
             if (null == in.field_g) {
               fr.f((byte) -99);
               return;
             }
-            on.a(1, param0);
+            IntrusiveDequeCursor.a(1, param0);
             return;
           }
           return;
@@ -40,14 +40,14 @@ final class u {
           ts.a(6493);
         } else {
           if (null != ce.field_x) {
-            on.a(1, param0);
+            IntrusiveDequeCursor.a(1, param0);
             return;
           }
           if (null == in.field_g) {
             fr.f((byte) -99);
             return;
           }
-          on.a(1, param0);
+          IntrusiveDequeCursor.a(1, param0);
           return;
         }
     }

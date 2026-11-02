@@ -7,13 +7,13 @@ final class wk {
     private boolean field_f;
     private int field_c;
     private int field_d;
-    bi field_g;
+    Sprite field_g;
     static String[] field_a;
     private int field_j;
-    bi[] field_h;
+    Sprite[] field_h;
     private int field_e;
 
-    final wk a(bi[] param0, int param1) {
+    final wk a(Sprite[] param0, int param1) {
         RuntimeException var3 = null;
         wk stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -166,21 +166,21 @@ final class wk {
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          if (rm.field_g == null) {
-            rm.field_g = new String[32];
+          if (IterableNodeHashTable.field_g == null) {
+            IterableNodeHashTable.field_g = new String[32];
           }
           do {
             try {
-              var4_int = param2.a(param1, param3, rm.field_g);
+              var4_int = param2.a(param1, param3, IterableNodeHashTable.field_g);
               decompiledRegionSelector0 = 0;
             } catch (java.lang.ArrayIndexOutOfBoundsException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               arrayIndexOutOfBoundsException = (ArrayIndexOutOfBoundsException) (Object) decompiledCaughtException;
-              if (rm.field_g.length >= 1024) {
+              if (IterableNodeHashTable.field_g.length >= 1024) {
                 stackIn_6_0 = -1;
                 return stackIn_6_0;
               }
-              rm.field_g = new String[rm.field_g.length << 1];
+              IterableNodeHashTable.field_g = new String[IterableNodeHashTable.field_g.length << 1];
               decompiledRegionSelector0 = 1;
             }
           } while (decompiledRegionSelector0 != 0);
@@ -216,7 +216,7 @@ final class wk {
         }
     }
 
-    final void a(vg param0, wk param1, gn param2, int param3, int param4, int param5) {
+    final void a(UiWidget param0, wk param1, gn param2, int param3, int param4, int param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -325,7 +325,7 @@ final class wk {
 
     final wk a(boolean param0, int param1) {
         if (param1 != -28639) {
-          this.field_h = (bi[]) null;
+          this.field_h = (Sprite[]) null;
         }
         this.field_f = param0 ? true : false;
         return this;
@@ -335,12 +335,12 @@ final class wk {
         this.field_e = param0;
         if (param1 != 1) {
           gn var4 = (gn) null;
-          this.a(-68, false, (vg) null, 40, (gn) null);
+          this.a(-68, false, (UiWidget) null, 40, (gn) null);
         }
         return this;
     }
 
-    final void a(int param0, boolean param1, vg param2, int param3, gn param4) {
+    final void a(int param0, boolean param1, UiWidget param2, int param3, gn param4) {
         nq stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;

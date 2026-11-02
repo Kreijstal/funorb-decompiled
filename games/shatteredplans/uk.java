@@ -3,23 +3,23 @@
  */
 final class uk {
     static int field_a;
-    static bi[] field_b;
+    static Sprite[] field_b;
 
     public static void a(byte param0) {
         field_b = null;
         int var1 = 36 / ((-14 - param0) / 59);
     }
 
-    final static bi a(boolean param0, ln param1) {
+    final static Sprite a(boolean param0, Star param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        bi stackIn_6_0 = null;
-        bi stackIn_22_0 = null;
-        bi stackIn_24_0 = null;
-        bi stackIn_26_0 = null;
-        bi stackIn_28_0 = null;
-        bi stackIn_30_0 = null;
+        Sprite stackIn_6_0 = null;
+        Sprite stackIn_22_0 = null;
+        Sprite stackIn_24_0 = null;
+        Sprite stackIn_26_0 = null;
+        Sprite stackIn_28_0 = null;
+        Sprite stackIn_30_0 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -27,9 +27,9 @@ final class uk {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0) {
-            field_b = (bi[]) null;
+            field_b = (Sprite[]) null;
           }
-          if (param1.field_I.equalsIgnoreCase("Sol")) {
+          if (param1.name.equalsIgnoreCase("Sol")) {
             stackIn_6_0 = qe.field_j;
             return stackIn_6_0;
           }
@@ -81,7 +81,7 @@ final class uk {
         }
     }
 
-    final static l a(int param0, dc param1, ob param2, pf param3, fs[] param4, fs param5, byte param6, vr param7) throws jn, kr {
+    final static l a(int param0, GameState param1, PacketBuffer param2, IntrusiveDeque param3, Player[] param4, Player param5, byte param6, vr param7) throws jn, kr {
         int var17_int = 0;
         l stackIn_81_0 = null;
         RuntimeException stackIn_84_0 = null;
@@ -108,40 +108,40 @@ final class uk {
         Object var14 = null;
         int var15_int = 0;
         l var15 = null;
-        ln[] var16_ref_ln__ = null;
+        Star[] var16_ref_ln__ = null;
         int var16 = 0;
-        sd[] var17 = null;
+        Territory[] var17 = null;
         int var18 = 0;
-        ln var18_ref_ln = null;
+        Star var18_ref_ln = null;
         lo[] var19 = null;
-        fs var19_ref = null;
+        Player var19_ref = null;
         int var20 = 0;
-        ln var20_ref_ln = null;
+        Star var20_ref_ln = null;
         int var21 = 0;
-        ln var21_ref_ln = null;
-        sd var21_ref_sd = null;
-        fs var21_ref_fs = null;
+        Star var21_ref_ln = null;
+        Territory var21_ref_sd = null;
+        Player var21_ref_fs = null;
         int var22 = 0;
-        ln var22_ref_ln = null;
+        Star var22_ref_ln = null;
         int var23 = 0;
-        ln var23_ref_ln = null;
+        Star var23_ref_ln = null;
         int var24 = 0;
-        fs var25 = null;
+        Player var25 = null;
         cs var25_ref = null;
         int var26 = 0;
-        ln var27 = null;
-        fs var28 = null;
-        ln var29 = null;
-        fs var30 = null;
-        ln var31 = null;
+        Star var27 = null;
+        Player var28 = null;
+        Star var29 = null;
+        Player var30 = null;
+        Star var31 = null;
         lo[] var32 = null;
-        ln var33 = null;
-        ln var34 = null;
-        ln var35 = null;
-        fs[] var36 = null;
-        fs var37 = null;
-        ln var22_ref_lnLifetime1;
-        ln var22_ref_lnLifetime2;
+        Star var33 = null;
+        Star var34 = null;
+        Star var35 = null;
+        Player[] var36 = null;
+        Player var37 = null;
+        Star var22_ref_lnLifetime1;
+        Star var22_ref_lnLifetime2;
         int var20Lifetime1;
         int var20Lifetime2;
         int var20Lifetime3;
@@ -166,8 +166,8 @@ final class uk {
           var12 = hl.a(-33, var9);
           var13 = sa.a(var10, -109);
           if (param6 != -7) {
-            var27 = (ln) null;
-            uk.a(false, (ln) null);
+            var27 = (Star) null;
+            uk.a(false, (Star) null);
           }
           var15_int = param0;
           if (var15_int != 0 &&
@@ -192,12 +192,12 @@ final class uk {
             var18_ref_ln.field_t = us.a(param2, param4, 2);
           }
           var16 = param2.j(-71);
-          var17 = new sd[var16];
+          var17 = new Territory[var16];
           for (var18 = 0; var16 > var18; var18++) {
             var28 = param4[param2.j(-123)];
             var19_ref = var28;
             var20_ref_ln = var15.field_e[param2.j(-123)];
-            var17[var18] = new sd(var28, var20_ref_ln);
+            var17[var18] = new Territory(var28, var20_ref_ln);
             var28.field_i.a((byte) -113, var17[var18]);
             var17[var18].a(param6 ^ 21772, var20_ref_ln);
             var20_ref_ln.field_R = var17[var18];
@@ -230,7 +230,7 @@ final class uk {
           var15.b((byte) 80);
           for (var20Lifetime1 = 0; var20Lifetime1 < param4.length; var20Lifetime1++) {
             if (!param7.field_i) {
-              var21_ref_sd = (sd) (param4[var20Lifetime1].field_i.d(0));
+              var21_ref_sd = (Territory) (param4[var20Lifetime1].field_i.d(0));
               while (var21_ref_sd != null) {
                 vf.a(127, var21_ref_sd);
                 sh.a(var21_ref_sd, -5);
@@ -239,7 +239,7 @@ final class uk {
                   kd.a(param7, false, var22_ref_lnLifetime1, (byte) -2);
                   var22_ref_lnLifetime1 = var21_ref_sd.h(param6 ^ 23415);
                 }
-                var21_ref_sd = (sd) (param4[var20Lifetime1].field_i.a((byte) -71));
+                var21_ref_sd = (Territory) (param4[var20Lifetime1].field_i.a((byte) -71));
               }
             } else {
               if (null != param4[var20Lifetime1].field_m) {
@@ -302,7 +302,7 @@ final class uk {
             var37 = var36[var24Lifetime2];
             var25 = var37;
             if (var37.field_m == null) {
-              var25.field_m = new lo(var37, (ln) null);
+              var25.field_m = new lo(var37, (Star) null);
             }
           }
           stackIn_81_0 = var15;

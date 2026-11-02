@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends oh {
+final class qi extends IntrusiveNode {
     static String field_m;
     static int field_j;
-    ln field_l;
-    fs field_k;
-    static pf field_h;
+    Star field_l;
+    Player field_k;
+    static IntrusiveDeque field_h;
     int field_i;
 
     final static String a(byte[] param0, int param1, int param2, int param3) {
@@ -77,7 +77,7 @@ final class qi extends oh {
         }
     }
 
-    qi(ln param0, fs param1, int param2) {
+    qi(Star param0, Player param1, int param2) {
         try {
           this.field_k = param1;
           this.field_i = param2;

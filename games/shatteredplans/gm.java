@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gm extends oh {
+final class gm extends IntrusiveNode {
     static String[] field_l;
     static qr field_m;
     int field_h;
@@ -10,7 +10,7 @@ final class gm extends oh {
     static int[] field_k;
     static int field_i;
     static String field_j;
-    oh field_n;
+    IntrusiveNode field_n;
 
     final static void a(boolean param0, int param1, int param2) {
         int stackIn_37_0 = 0;
@@ -175,7 +175,7 @@ final class gm extends oh {
             kd.field_b = new String[-1 + (var3_int - var4)];
             ps.a(ts.field_K, var4 + 1, kd.field_b, 0, var3_int + (-var4 - 1));
             var4 = -1;
-            var3_int = db.a(fp.field_c, um.field_c, re.a(ln.field_U, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
+            var3_int = db.a(fp.field_c, um.field_c, re.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ts.field_K[var5])) {
                 continue;
@@ -211,14 +211,14 @@ final class gm extends oh {
             ShatteredPlansClient.field_E = new int[2];
             kr.field_f[0] = wp.field_b;
             ss.field_a[1] = 0;
-            kr.field_f[1] = pa.field_h;
+            kr.field_f[1] = ProxySocketConnector.field_h;
             kr.field_f[2] = ld.field_i;
             ss.field_a[3] = 1;
             kr.field_f[5] = "";
             ShatteredPlansClient.field_E[1] = 2;
             ShatteredPlansClient.field_E[0] = 5;
             kr.field_f[3] = dd.field_a;
-            kr.field_f[4] = ge.field_m;
+            kr.field_f[4] = ImageProducerRasterBuffer.field_m;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_47_0 = kr.field_f;
               stackIn_47_1 = var8Lifetime2 + 6;
@@ -245,7 +245,7 @@ final class gm extends oh {
             }
             br.field_p = pr.a(14274);
           }
-          dc.field_l.field_b = ShatteredPlansClient.field_E.length;
+          GameState.field_l.field_b = ShatteredPlansClient.field_E.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; kr.field_f.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_89_0 = kr.field_f[var4Lifetime1];
@@ -275,7 +275,7 @@ final class gm extends oh {
               }
             }
           }
-          mr.field_a = (sm.field_b + ar.field_i << 1) * dc.field_l.field_b;
+          mr.field_a = (sm.field_b + ar.field_i << 1) * GameState.field_l.field_b;
           db.field_f = cn.field_w - (var3_intLifetime1 >> 1);
           ho.field_a = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + cn.field_w);
           for (var4Lifetime2 = 0; var4Lifetime2 < kr.field_f.length; var4Lifetime2++) {
@@ -310,9 +310,9 @@ final class gm extends oh {
             var4Lifetime3++;
           }
           if (2 == eh.field_C) {
-            dc.field_l.a(-1, -1, param0, 99);
+            GameState.field_l.a(-1, -1, param0, 99);
           } else {
-            dc.field_l.a(kq.a(pd.field_k, bb.field_b, 16777215), 0, param0, -58);
+            GameState.field_l.a(kq.a(pd.field_k, bb.field_b, 16777215), 0, param0, -58);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -351,7 +351,7 @@ final class gm extends oh {
         int var3 = 85 % ((param0 - 59) / 59);
     }
 
-    gm(al param0, oh param1) {
+    gm(al param0, IntrusiveNode param1) {
         try {
           this.field_p = param0;
           this.field_h = param0.i();

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eq extends oh {
-    static bi field_o;
+final class eq extends IntrusiveNode {
+    static Sprite field_o;
     static String field_i;
     int[] field_r;
     int[] field_p;

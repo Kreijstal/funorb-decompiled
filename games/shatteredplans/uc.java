@@ -151,7 +151,7 @@ final class uc extends vd {
         field_y = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, String param5, boolean param6, bi[] param7, byte param8, int param9, bi[] param10, nq param11, boolean param12, int param13, int param14) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, String param5, boolean param6, Sprite[] param7, byte param8, int param9, Sprite[] param10, nq param11, boolean param12, int param13, int param14) {
         try {
           if (param8 != -87) {
             uc.e((byte) -47);
@@ -169,18 +169,18 @@ final class uc extends vd {
             return false;
           }
           rr.field_t = sa.field_a.j(-54);
-          sa.field_a.field_j = 0;
+          sa.field_a.position = 0;
         }
         if (-2 == rr.field_t) {
           if (!es.a(118, 2)) {
             return false;
           }
           rr.field_t = sa.field_a.f(-20976);
-          sa.field_a.field_j = 0;
+          sa.field_a.position = 0;
         }
         if (param0 > -25) {
           nq var2 = (nq) null;
-          uc.a(-68, -91, -81, 82, -51, (String) null, true, (bi[]) null, (byte) -67, 2, (bi[]) null, (nq) null, true, 22, -30);
+          uc.a(-68, -91, -81, 82, -51, (String) null, true, (Sprite[]) null, (byte) -67, 2, (Sprite[]) null, (nq) null, true, 22, -30);
         }
         return es.a(-78, rr.field_t);
     }

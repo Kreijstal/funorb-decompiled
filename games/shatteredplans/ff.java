@@ -4,7 +4,7 @@
 final class ff extends vd {
     static int[][] field_x;
     static int field_u;
-    private bi field_w;
+    private Sprite field_w;
     static int field_y;
     static String[] field_v;
 
@@ -27,7 +27,7 @@ final class ff extends vd {
         this.field_w.b(this.field_k, this.field_t, this.field_m, this.field_i);
     }
 
-    ff(int param0, int param1, int param2, int param3, bi param4) {
+    ff(int param0, int param1, int param2, int param3, Sprite param4) {
         super(param0, param1, param2, param3);
         try {
           this.field_w = param4;
@@ -48,7 +48,7 @@ final class ff extends vd {
         return param0 | param1;
     }
 
-    ff(int param0, int param1, bi param2) {
+    ff(int param0, int param1, Sprite param2) {
         super(param0, param1, param2.field_z, param2.field_w);
         try {
           this.field_w = param2;
@@ -65,7 +65,7 @@ final class ff extends vd {
         return null == this.field_w ? true : false;
     }
 
-    final void a(int param0, bi param1) {
+    final void a(int param0, Sprite param1) {
         try {
           this.field_w = param1;
           if (param0 != -2948) {

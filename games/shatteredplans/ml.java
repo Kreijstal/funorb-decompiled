@@ -37,7 +37,7 @@ abstract class ml extends da implements od {
 
     abstract String a(boolean param0, String param1);
 
-    final static void a(int param0, int param1, int param2, int param3, bi param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite param4, int param5, int param6) {
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
         int var7_int = 0;

@@ -60,7 +60,7 @@ class ap {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -93,7 +93,7 @@ class ap {
                       var12.field_h = var12.field_h + var13;
                     }
                     if (var4 >= this.field_c) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.b();
                     if (var14Lifetime2 != null) {
@@ -272,7 +272,7 @@ class ap {
         this.field_k = param0;
     }
 
-    final static ap a(qb param0, java.awt.Component param1, int param2, int param3) {
+    final static ap a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           oc var4 = null;
           Throwable var4_ref = null;

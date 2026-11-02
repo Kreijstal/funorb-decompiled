@@ -3,7 +3,7 @@
  */
 final class ds {
     static String field_a;
-    static bi field_b;
+    static Sprite field_b;
     static a field_c;
     static String field_e;
     int field_d;
@@ -18,11 +18,11 @@ final class ds {
         field_a = null;
     }
 
-    final static bi a(boolean param0, bc param1, String param2, String param3) {
+    final static Sprite a(boolean param0, bc param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        bi stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

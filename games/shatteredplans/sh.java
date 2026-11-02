@@ -3,7 +3,7 @@
  */
 final class sh implements fo {
     static fg field_c;
-    private ob field_a;
+    private PacketBuffer field_a;
     static int field_b;
     private int field_d;
 
@@ -14,12 +14,12 @@ final class sh implements fo {
         l var4;
         int var5;
         vl var6;
-        ln[] var7;
-        ln var9;
+        Star[] var7;
+        Star var9;
         int var10;
         int var11;
         int var12;
-        ln var13;
+        Star var13;
         int var14;
         int var11Lifetime1;
         int var12Lifetime1;
@@ -65,7 +65,7 @@ final class sh implements fo {
         return var4;
     }
 
-    final static void a(sd param0, int param1) {
+    final static void a(Territory param0, int param1) {
         int[] var11 = null;
         int[] var9 = null;
         int[] var7 = null;
@@ -161,7 +161,7 @@ final class sh implements fo {
         field_c = null;
     }
 
-    sh(ob param0, int param1) {
+    sh(PacketBuffer param0, int param1) {
         try {
           this.field_d = param1;
           this.field_a = param0;

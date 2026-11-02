@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vk extends tn {
-    private pf field_l;
-    private pf field_o;
+    private IntrusiveDeque field_l;
+    private IntrusiveDeque field_o;
     private int field_m;
     private int field_n;
 
@@ -31,7 +31,7 @@ final class vk extends tn {
     private final void a(bm param0) {
         param0.b((byte) -122);
         param0.a();
-        oh var2 = this.field_o.field_h.field_f;
+        IntrusiveNode var2 = this.field_o.field_h.next;
         if (var2 == this.field_o.field_h) {
           this.field_m = -1;
         } else {
@@ -66,7 +66,7 @@ final class vk extends tn {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_h = var5;
-              this.a(var3.field_f, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_h = 0;
               this.a(var3);
@@ -84,21 +84,21 @@ final class vk extends tn {
         return (tn) (this.field_l.a((byte) -71));
     }
 
-    private final void a(oh param0, bm param1) {
+    private final void a(IntrusiveNode param0, bm param1) {
         while (true) {
           if (param0 == this.field_o.field_h) {
             wp.$cfr$intArgs$a$2661ebe01e52(-128, param1, param0);
-            this.field_m = ((bm) (this.field_o.field_h.field_f)).field_h;
+            this.field_m = ((bm) (this.field_o.field_h.next)).field_h;
             return;
           }
           if (((bm) (param0)).field_h <= param1.field_h) {
-            param0 = param0.field_f;
+            param0 = param0.next;
             continue;
           }
           break;
         }
         wp.$cfr$intArgs$a$2661ebe01e52(-128, param1, param0);
-        this.field_m = ((bm) (this.field_o.field_h.field_f)).field_h;
+        this.field_m = ((bm) (this.field_o.field_h.next)).field_h;
         return;
     }
 
@@ -146,7 +146,7 @@ final class vk extends tn {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_h = var7;
-              this.a(var5.field_f, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_h = 0;
               this.a(var5);
@@ -157,8 +157,8 @@ final class vk extends tn {
     }
 
     public vk() {
-        this.field_l = new pf();
-        this.field_o = new pf();
+        this.field_l = new IntrusiveDeque();
+        this.field_o = new IntrusiveDeque();
         this.field_m = -1;
         this.field_n = 0;
     }

@@ -104,7 +104,7 @@ final class s {
               return;
             }
             if (var2 != 4) {
-              jq.a(-29901, (Throwable) null, "F1: " + w.a(16738));
+              GameKeyHandler.a(-29901, (Throwable) null, "F1: " + w.a(16738));
               q.g(-101);
               return;
             }
@@ -148,7 +148,7 @@ final class s {
           var6Lifetime1.field_Bb = var5Lifetime1;
           var6Lifetime1.b((byte) -125);
           var7_ref = (ve) (vd.field_j.d(0));
-          L14: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7_ref != null) {
               stackOut_42_0 = d.a(var7_ref, var6Lifetime1, (byte) -81);
@@ -163,7 +163,7 @@ final class s {
             }
             if (decompiledFrameRemainder0) {
               if (var7_ref == null) {
-                break L14;
+                break scanLoop1;
               }
               stackIn_50_0 = -126;
             }
@@ -190,8 +190,8 @@ final class s {
         try {
           ec.a(param0 ^ -2, bg.field_c, 8);
           if (!kl.d((byte) 104)) {
-            ec.a(-1, rm.field_h, 1);
-            ec.a(-1, up.field_b, 2);
+            ec.a(-1, IterableNodeHashTable.field_h, 1);
+            ec.a(-1, SecondaryNodeDeque.field_b, 2);
             ec.a(param0 ^ -2, hr.field_e, 3);
             ec.a(param0 ^ -2, lm.field_e, 4);
           }
@@ -217,7 +217,7 @@ final class s {
     private s(int param0, int param1, int param2) {
     }
 
-    final void a(byte[] param0, ob param1, int param2) {
+    final void a(byte[] param0, PacketBuffer param1, int param2) {
         try {
           Exception exception = null;
           RuntimeException stackIn_19_0 = null;
@@ -228,13 +228,13 @@ final class s {
           Throwable decompiledCaughtException = null;
           RuntimeException var4 = null;
           try {
-            if (param1.field_h[param1.field_j] == 31 &&
-              param1.field_h[1 + param1.field_j] == -117) {
+            if (param1.payload[param1.position] == 31 &&
+              param1.payload[1 + param1.position] == -117) {
               if (null == this.field_g) {
                 this.field_g = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_g.setInput(param1.field_h, param1.field_j + 10, -10 - (param1.field_j + 8) + param1.field_h.length);
+                this.field_g.setInput(param1.payload, param1.position + 10, -10 - (param1.position + 8) + param1.payload.length);
                 this.field_g.inflate(param0);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

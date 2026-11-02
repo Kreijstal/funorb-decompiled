@@ -37,7 +37,7 @@ final class oq {
         RuntimeException decompiledCaughtException = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var2 = rm.a(param0, param1 ^ -17731);
+          var2 = IterableNodeHashTable.a(param0, param1 ^ -17731);
           if (param1 != -17) {
             field_b = (qr[]) null;
           }
@@ -218,7 +218,7 @@ final class oq {
     }
 
     final static void a(int param0, int param1) {
-        oh var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         fk var4 = null;
         RuntimeException decompiledCaughtException = null;

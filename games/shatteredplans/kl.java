@@ -5,11 +5,11 @@ final class kl extends wf {
     static int field_t;
     static int field_o;
     static bc field_s;
-    static bi[] field_q;
+    static Sprite[] field_q;
     boolean field_p;
     static String field_r;
 
-    kl(ln param0, pf param1, int[][] param2, fs param3, me param4, int param5, dc param6) {
+    kl(Star param0, IntrusiveDeque param1, int[][] param2, Player param3, VictoryChecker param4, int param5, GameState param6) {
         super(param0);
         int var19 = 0;
         RuntimeException stackIn_73_0 = null;
@@ -26,35 +26,35 @@ final class kl extends wf {
         StringBuilder stackIn_88_1 = null;
         String stackIn_89_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sd[] var8 = null;
+        Territory[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ln[] var12_ref_ln__ = null;
+        Star[] var12_ref_ln__ = null;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        ln var14_ref_ln = null;
-        sd var15 = null;
+        Star var14_ref_ln = null;
+        Territory var15 = null;
         Object var16 = null;
         int var17 = 0;
         int var18_int = 0;
-        ln[] var18 = null;
-        ln var20 = null;
+        Star[] var18 = null;
+        Star var20 = null;
         int var22 = 0;
         int var23 = 0;
-        sd[] var24 = null;
-        ln[] var25 = null;
-        ln var26 = null;
-        ln[] var27 = null;
-        ln var28 = null;
+        Territory[] var24 = null;
+        Star[] var25 = null;
+        Star var26 = null;
+        Star[] var27 = null;
+        Star var28 = null;
         int var10Lifetime1;
         int var13Lifetime1;
         int var17Lifetime1;
         this.field_p = false;
         try {
-          var24 = new sd[param0.field_D.length];
+          var24 = new Territory[param0.field_D.length];
           var8 = var24;
           var9 = 0;
           var12_ref_ln__ = param0.field_D;
@@ -76,9 +76,9 @@ final class kl extends wf {
             }
           }
           if (var9 == 0) {
-            throw new RuntimeException("Target star " + param0.field_I + " does not appear to be connected to any of AI's stars.");
+            throw new RuntimeException("Target star " + param0.name + " does not appear to be connected to any of AI's stars.");
           }
-          var15 = (sd) (param1.d(0));
+          var15 = (Territory) (param1.d(0));
           var16 = null;
           this.field_j = 0;
           var10Lifetime1 = 0;
@@ -105,7 +105,7 @@ final class kl extends wf {
               }
               break;
             }
-            var15 = (sd) (param1.a((byte) -71));
+            var15 = (Territory) (param1.a((byte) -71));
             var10Lifetime1++;
           }
           this.field_j = this.field_j + 50 * (-1 + var9);
@@ -116,7 +116,7 @@ final class kl extends wf {
           if (param4 instanceof hp &&
             this.field_n.field_L == 2) {
             if (!param6.field_o.field_i) {
-              var17 = ((sd) (var16)).field_r;
+              var17 = ((Territory) (var16)).field_r;
             } else {
               var17 = param3.field_m.field_r;
             }

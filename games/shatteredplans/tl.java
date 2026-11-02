@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tl extends kf {
+abstract class tl extends GameApplet {
     static int field_D;
     static boolean field_u;
     private boolean field_w;
@@ -55,7 +55,7 @@ abstract class tl extends kf {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          ob var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -76,7 +76,7 @@ abstract class tl extends kf {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = sr.a(bh.d(-97), this.field_B, (byte) -42, ob.g((byte) -24), vj.i(-100), of.a((byte) 42), aq.a(11));
+            var5_intLifetime1 = sr.a(bh.d(-97), this.field_B, (byte) -42, PacketBuffer.g((byte) -24), vj.i(-100), of.a((byte) 42), aq.a(11));
             if (var5_intLifetime1 != -1) {
               va.a(ae.field_e, (byte) -113, var5_intLifetime1, nl.field_c);
               ae.field_e = null;
@@ -150,7 +150,7 @@ abstract class tl extends kf {
                   var9 = (String) null;
                   aa.a((String) null, true);
                 } else {
-                  var7 = qi.a(var12.field_h, var12.field_j, 0, param1 ^ -128);
+                  var7 = qi.a(var12.payload, var12.position, 0, param1 ^ -128);
                   aa.a(var7, true);
                 }
                 va.field_g = null;
@@ -158,7 +158,7 @@ abstract class tl extends kf {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              jq.a(-29901, (Throwable) ((Object) var5), "S1");
+              GameKeyHandler.a(-29901, (Throwable) ((Object) var5), "S1");
               var10 = (String) null;
               aa.a((String) null, true);
               va.field_g = null;
@@ -191,7 +191,7 @@ abstract class tl extends kf {
         this.setBackground(java.awt.Color.black);
         ai.field_e = this.field_v;
         dm.a(0, ai.field_e);
-        jq.a(0, fa.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, ai.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
+        GameKeyHandler.a(0, fa.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, ai.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
         ti.a(param3, this.field_q, this.field_r, this.field_A, ai.field_e, 1491341222, fa.field_W, this.field_s, this.field_x);
         lm.a((byte) 100);
         aj.field_b = cg.e(true);
@@ -260,7 +260,7 @@ abstract class tl extends kf {
                                 sh.a(-1);
                                 return;
                               }
-                              jq.a(-29901, (Throwable) null, "MGS1: " + w.a(16738));
+                              GameKeyHandler.a(-29901, (Throwable) null, "MGS1: " + w.a(16738));
                               q.g(-107);
                               return;
                             }
@@ -286,7 +286,7 @@ abstract class tl extends kf {
           }
           return;
         }
-        jq.a(-29901, (Throwable) null, "MGS2: " + w.a(16738));
+        GameKeyHandler.a(-29901, (Throwable) null, "MGS2: " + w.a(16738));
         q.g(-127);
     }
 
@@ -401,11 +401,11 @@ abstract class tl extends kf {
             !(po.b(123) <= var3)) {
             this.field_y = false;
             q.g(-113);
-            oh.b(-11);
+            IntrusiveNode.b(-11);
             bf.a((byte) -124, 2, he.field_n);
-            rg.b(false);
+            ClientException.b(false);
             md.field_B = true;
-            ip.field_b = 15000L + pr.a(14274);
+            SecondaryNodeDequeIterator.field_b = 15000L + pr.a(14274);
           }
         }
         if (-1 == qj.field_g ||
@@ -421,14 +421,14 @@ abstract class tl extends kf {
           }
           if (qj.field_g != -1 &&
             qj.field_g != 0) {
-            ip.field_b = pr.a(14274) + 15000L;
+            SecondaryNodeDequeIterator.field_b = pr.a(14274) + 15000L;
           }
         }
         if (-1 != qj.field_g &&
           qj.field_g != 0) {
           if (ma.field_p >= 10) {
             if (gm.field_i >= 10) {
-              oh.b(-11);
+              IntrusiveNode.b(-11);
               if (3 != qj.field_g) {
                 if (4 == qj.field_g) {
                   bf.a((byte) -124, 256, sa.field_e);
@@ -471,7 +471,7 @@ abstract class tl extends kf {
         if ((qj.field_g != -1 &&
           qj.field_g != 0 ||
           jc.f(-11)) &&
-          ip.field_b <= pr.a(14274)) {
+          SecondaryNodeDequeIterator.field_b <= pr.a(14274)) {
           md.field_B = false;
           if (-1 != qj.field_g &&
             qj.field_g != 0) {
@@ -583,7 +583,7 @@ abstract class tl extends kf {
           }
         }
         if (!param0 &&
-          pf.field_c) {
+          IntrusiveDeque.field_c) {
           hs.a(tm.field_i, (byte) 125);
           this.f(0);
           re.a(tm.field_i, false);
@@ -689,10 +689,10 @@ abstract class tl extends kf {
         if (!vm.field_Nb) {
           this.a((byte) 58, "reconnect");
         }
-        oh.b(-11);
+        IntrusiveNode.b(-11);
         bf.a((byte) -126, var2, nl.field_c);
         md.field_B = true;
-        ip.field_b = pr.a(14274) + 15000L;
+        SecondaryNodeDequeIterator.field_b = pr.a(14274) + 15000L;
         return var2;
     }
 
@@ -747,7 +747,7 @@ abstract class tl extends kf {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            jq.a(-29901, (Throwable) ((Object) var6_ref), (String) null);
+            GameKeyHandler.a(-29901, (Throwable) ((Object) var6_ref), (String) null);
             this.a((byte) -95, "crash");
           }
           return;
@@ -771,7 +771,7 @@ abstract class tl extends kf {
         int var4 = rr.field_t - 1;
         byte[] var5 = new byte[var4];
         sa.field_a.b(var4, ~param0, 0, var5);
-        ue.a(kq.f((byte) 126), var3 != 0, rm.a(var5, 17746), -128);
+        ue.a(kq.f((byte) 126), var3 != 0, IterableNodeHashTable.a(var5, 17746), -128);
     }
 
     private final void j(int param0) {
@@ -781,7 +781,7 @@ abstract class tl extends kf {
         }
     }
 
-    final static java.awt.Frame a(boolean param0, qb param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(boolean param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_8_0 = null;
@@ -806,7 +806,7 @@ abstract class tl extends kf {
             return (java.awt.Frame) (stackIn_3_0);
           }
           if (0 == param2) {
-            var10 = dc.a(param1, (byte) -57);
+            var10 = GameState.a(param1, (byte) -57);
             var6 = var10;
             if (var6 == null) {
               stackIn_8_0 = null;

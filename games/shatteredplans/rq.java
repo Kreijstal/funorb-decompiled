@@ -28,7 +28,7 @@ final class rq implements iq {
         }
     }
 
-    public final void a(vg param0, int param1, boolean param2, int param3, byte param4) {
+    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -95,8 +95,8 @@ final class rq implements iq {
         }
     }
 
-    final static bi[] a(int param0) {
-        bi[] var1 = null;
+    final static Sprite[] a(int param0) {
+        Sprite[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -105,29 +105,29 @@ final class rq implements iq {
         int var6 = 0;
         int var7 = 0;
         int stackIn_13_0 = 0;
-        bi[] stackIn_14_0 = null;
+        Sprite[] stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1 = new bi[en.field_c];
+          var1 = new Sprite[en.field_c];
           var2 = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (var2 < en.field_c) {
               var3 = mc.field_s[var2] * cm.field_g[var2];
               var4 = hd.field_q[var2];
               var5 = new int[var3];
               stackIn_13_0 = 0;
               if (var7 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var6 = stackIn_13_0;
               while (var6 < var3) {
                 var5[var6] = eo.field_fb[we.a(255, (int) var4[var6])];
                 var6++;
               }
-              var1[var2] = new bi(tk.field_y, eg.field_t, cf.field_H[var2], sj.field_a[var2], mc.field_s[var2], cm.field_g[var2], var5);
+              var1[var2] = new Sprite(tk.field_y, eg.field_t, cf.field_H[var2], sj.field_a[var2], mc.field_s[var2], cm.field_g[var2], var5);
               var2++;
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_13_0 = param0 + param0;
             break;
@@ -156,7 +156,7 @@ final class rq implements iq {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        pf var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         ve var7 = null;
@@ -203,7 +203,7 @@ final class rq implements iq {
           }
           if (decompiledFrameRemainder0) {
             cg.field_A.field_s = true;
-            rj.field_p.field_z = re.a(af.field_b, 4371, new String[]{jo.field_d});
+            rj.field_p.field_z = re.a(DelegatingCanvas.field_b, 4371, new String[]{jo.field_d});
             d.field_a.field_Db.field_zb.field_z = null;
             var6 = null;
             var7 = (ve) (var4.d(0));
@@ -237,9 +237,9 @@ final class rq implements iq {
                   var12 = 0;
                   if (var7.field_Bb != null &&
                     !var7.field_Bb.equals("")) {
-                    var7.field_Db.field_pb = ke.field_i;
+                    var7.field_Db.field_pb = BufferedSocket.field_i;
                     var7.field_Db.field_jb = var11;
-                    var7.field_Db.a(ke.field_i.field_o + 3, cr.field_c, (byte) 88, var9, 0);
+                    var7.field_Db.a(BufferedSocket.field_i.field_o + 3, cr.field_c, (byte) 88, var9, 0);
                     var12 = 1;
                   }
                   var7.field_Fb.field_x = var10;
@@ -253,7 +253,7 @@ final class rq implements iq {
                   var13 = 0;
                   var14 = -2 + var7.field_K - 80;
                   if (var12 != 0) {
-                    var13 = 3 + ke.field_i.field_o;
+                    var13 = 3 + BufferedSocket.field_i.field_o;
                     var14 = var14 - var13;
                   }
                   stackIn_46_0 = var7.field_Cb;
@@ -287,7 +287,7 @@ final class rq implements iq {
                       var16 = var7.field_Ab;
                       tp.a((int[]) null, 0L, (String) null, var16, 293, d.field_a.field_Db, var7, -1, -1);
                       if (null != var7.field_xb &&
-                        !fs.a(62, hp.field_m.field_k) &&
+                        !Player.a(62, hp.field_m.field_k) &&
                         !bg.field_g) {
                         if (!ae.field_b) {
                           var17 = hp.field_m;
@@ -312,14 +312,14 @@ final class rq implements iq {
                 }
               } else {
                 if (d.field_a.field_Fb.field_rb != 0) {
-                  lg.field_e = new jp(d.field_a.field_Fb.field_B, d.field_a.field_Fb.field_N, d.field_a.field_Fb.field_K, d.field_a.field_Fb.field_mb, km.field_A, h.field_v, ii.field_u, ii.field_u);
+                  lg.field_e = new jp(d.field_a.field_Fb.field_B, d.field_a.field_Fb.field_N, d.field_a.field_Fb.field_K, d.field_a.field_Fb.field_mb, km.field_A, h.field_v, SpriteState.field_u, SpriteState.field_u);
                   ia.field_b = 0;
                 }
               }
               if (0 == d.field_a.field_yb.field_rb) {
                 break;
               }
-              lg.field_e = new jp(d.field_a.field_yb.field_B, d.field_a.field_yb.field_N, d.field_a.field_yb.field_K, d.field_a.field_yb.field_mb, on.field_f, h.field_v, ii.field_u, ii.field_u);
+              lg.field_e = new jp(d.field_a.field_yb.field_B, d.field_a.field_yb.field_N, d.field_a.field_yb.field_K, d.field_a.field_yb.field_mb, IntrusiveDequeCursor.field_f, h.field_v, SpriteState.field_u, SpriteState.field_u);
               ia.field_b = 1;
               break;
             }
@@ -392,7 +392,7 @@ final class rq implements iq {
             }
             if (1 == var2 ||
               var3 != 0) {
-              tl.field_z = kf.field_h;
+              tl.field_z = GameApplet.field_h;
             }
             tl.field_z = lr.a(88, new CharSequence[]{(CharSequence) ((Object) tl.field_z), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pr.field_b)});
           }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ji extends f implements ki {
+abstract class ji extends WidgetContainer implements ki {
     static ns field_G;
     static ub field_I;
     static String field_F;
     private ja field_H;
-    static bi[] field_E;
+    static Sprite[] field_E;
     static int[][] field_D;
 
     abstract int d(boolean param0);
