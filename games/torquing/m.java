@@ -139,9 +139,9 @@ final class m {
         RuntimeException var6_ref = null;
         var8 = Torquing.field_u;
         try {
-          hc.field_u = param1.getParameter("overxgames");
-          if (null == hc.field_u) {
-            hc.field_u = "0";
+          Level.field_u = param1.getParameter("overxgames");
+          if (null == Level.field_u) {
+            Level.field_u = "0";
           }
           rj.field_y = param1.getParameter("overxachievements");
           if (null == rj.field_y) {

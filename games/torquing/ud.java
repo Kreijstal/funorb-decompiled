@@ -13,7 +13,7 @@ final class ud extends IntrusiveNode {
     final static String b(int param0) {
         if (!jd.field_E &&
           lp.field_b >= um.field_l &&
-          um.field_l + uf.field_g > lp.field_b) {
+          um.field_l + TooltipPanel.field_g > lp.field_b) {
           return wb.field_t;
         }
         if (param0 == 0) {

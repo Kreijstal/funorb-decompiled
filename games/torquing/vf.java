@@ -180,10 +180,10 @@ final class vf {
             stackIn_13_0 = stackOut_12_0;
             if (var19 == 0) {
               if (stackIn_13_0) {
-                var12 = kh.field_m[var9];
+                var12 = Model.field_m[var9];
                 var13 = u.field_w[var9];
-                var14 = -var12 + kh.field_m[var10];
-                var15 = -var12 + kh.field_m[var11];
+                var14 = -var12 + Model.field_m[var10];
+                var15 = -var12 + Model.field_m[var11];
                 var16 = u.field_w[var10] - var13;
                 var17 = -var13 + u.field_w[var11];
               }

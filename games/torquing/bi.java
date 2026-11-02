@@ -14,7 +14,7 @@ final class bi {
     private int[] field_m;
     private double field_h;
     private int field_E;
-    kh field_i;
+    Model field_i;
     private tl[] field_D;
     private int field_S;
     private int field_U;
@@ -37,7 +37,7 @@ final class bi {
     private int field_c;
     private Torquing field_A;
     private int field_M;
-    hc field_d;
+    Level field_d;
     private int[] field_a;
     private int field_v;
     private boolean field_g;
@@ -60,8 +60,8 @@ final class bi {
         int[] var4 = null;
         int var5_int = 0;
         pj var5 = null;
-        kh[] var6_ref_kh__ = null;
-        kh var8 = null;
+        Model[] var6_ref_kh__ = null;
+        Model var8 = null;
         int var9 = 0;
         tl[] var10 = null;
         int var11 = 0;
@@ -430,7 +430,7 @@ final class bi {
         }
     }
 
-    final void a(byte param0, kh param1, int param2, int param3) {
+    final void a(byte param0, Model param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -911,7 +911,7 @@ final class bi {
         int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
-        kh var10 = null;
+        Model var10 = null;
         sb var11 = null;
         int[] var12 = null;
         int[] var13 = null;
@@ -978,10 +978,10 @@ final class bi {
             this.e(14);
           }
           sg.a(MouseWheelInput.field_c[7], 80, 1365, -1, -12, 12);
-          var10 = (kh) (on.field_e.c((byte) -122));
+          var10 = (Model) (on.field_e.c((byte) -122));
           while (var10 != null) {
             sg.a(var10, 80, 1365, -1, -12, 12);
-            var10 = (kh) (on.field_e.b((byte) -110));
+            var10 = (Model) (on.field_e.b((byte) -110));
           }
           for (var3Lifetime1 = 9; var3Lifetime1 <= 16; var3Lifetime1++) {
             discarded$0 = this.field_C;
@@ -1112,7 +1112,7 @@ final class bi {
         double[] var31 = null;
         double[] var36 = null;
         int[] var37 = null;
-        kh var38 = null;
+        Model var38 = null;
         sb var39 = null;
         var22 = null;
         var23 = null;
@@ -1285,10 +1285,10 @@ final class bi {
           this.field_a[9] = var9_int;
           this.field_a[5] = -var9_int;
           this.field_P.field_h.a(MouseWheelInput.field_c[1], this.field_a);
-          var38 = (kh) (on.field_e.c((byte) -119));
+          var38 = (Model) (on.field_e.c((byte) -119));
           while (var38 != null) {
             this.field_P.field_h.a(var38, this.field_a);
-            var38 = (kh) (on.field_e.b((byte) 72));
+            var38 = (Model) (on.field_e.b((byte) 72));
           }
           for (var10 = 9; var10 <= 16; var10++) {
             this.field_P.field_h.a(MouseWheelInput.field_c[var10], this.field_a);
@@ -1557,7 +1557,7 @@ final class bi {
                 var9_int = this.field_k;
               }
               this.field_k = this.field_k - var9_int;
-              this.a((byte) 115, (1 + this.field_d.field_s) * var9_int / 100);
+              this.a((byte) 115, (1 + this.field_d.id) * var9_int / 100);
             }
           }
           if (!this.field_g &&

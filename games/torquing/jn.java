@@ -140,7 +140,7 @@ final class jn {
           for (var3 = 0; var3 < wh.field_z.length; var3++) {
             var4 = mn.field_Z[var3];
             if (var4 < 0) {
-              var5 = uf.field_c;
+              var5 = TooltipPanel.field_c;
             } else {
               if (var4 != kb.field_g.field_g) {
                 var5 = cc.field_c;

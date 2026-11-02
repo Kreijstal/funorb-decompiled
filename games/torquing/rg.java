@@ -687,11 +687,11 @@ final class rg extends am {
               stackIn_39_0 = null;
             }
             var21 = stackIn_39_0;
-            var22 = kh.field_m[var15Lifetime1];
+            var22 = Model.field_m[var15Lifetime1];
             var23 = u.field_w[var15Lifetime1];
-            var24 = kh.field_m[var16];
+            var24 = Model.field_m[var16];
             var25 = u.field_w[var16];
-            var26 = kh.field_m[var17];
+            var26 = Model.field_m[var17];
             var27 = u.field_w[var17];
             if (var18 == var19 &&
               var20 == var19) {

@@ -14,7 +14,7 @@ final class he {
         }
     }
 
-    final static boolean a(hc param0, double param1, double[] param2, int param3, double param4) {
+    final static boolean a(Level param0, double param1, double[] param2, int param3, double param4) {
         int var9 = 0;
         int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -243,16 +243,16 @@ final class he {
           if (param0 != 1) {
             he.a(-116);
           }
-          if (kh.field_o == mg.field_b) {
+          if (Model.field_o == mg.field_b) {
             return null;
           }
-          if (ag.field_c == kh.field_o &&
+          if (ag.field_c == Model.field_o &&
             param1.equals(on.field_b)) {
-            kh.field_o = tp.field_h;
+            Model.field_o = tp.field_h;
             stackIn_8_0 = qi.field_d;
             return stackIn_8_0;
           }
-          kh.field_o = mg.field_b;
+          Model.field_o = mg.field_b;
           qi.field_d = null;
           on.field_b = param1;
           stackIn_10_0 = null;

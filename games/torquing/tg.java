@@ -30,7 +30,7 @@ abstract class tg extends GameApplet {
         wb.field_u = ResourceArchive.b(26);
         j.a(k.field_d, (byte) -125);
         b.field_w = param6;
-        uf.field_p = param1;
+        TooltipPanel.field_p = param1;
         gf.field_k = param5;
         ug.field_b = param4;
         tp.field_g = param7;
@@ -262,7 +262,7 @@ abstract class tg extends GameApplet {
         }
         if (b.field_x == 10) {
           if (0 != ImageProducerRasterBuffer.field_i) {
-            rd.field_z = vg.a(-27646, uf.field_p);
+            rd.field_z = vg.a(-27646, TooltipPanel.field_p);
           }
           b.field_x = 11;
         }
@@ -413,7 +413,7 @@ abstract class tg extends GameApplet {
               }
             }
           } else {
-            uf.b(-109);
+            TooltipPanel.b(-109);
           }
           return;
         }
@@ -680,8 +680,8 @@ abstract class tg extends GameApplet {
             stackIn_6_0 = !param2;
             var5_int = uj.a(hb.a(stackIn_6_0), (byte) 75, wp.b(-118));
             if (-1 != var5_int) {
-              wb.a(var5_int, kh.field_n, (byte) -94, pl.field_u);
-              kh.field_n = null;
+              wb.a(var5_int, Model.field_n, (byte) -94, pl.field_u);
+              Model.field_n = null;
               pl.field_u = null;
             }
             var11 = qd.a(-112);
@@ -692,9 +692,9 @@ abstract class tg extends GameApplet {
           if (var4 == 2) {
             var5_intLifetime1 = od.a(wd.a(-19), -124, fo.i(17543), VertexMesh.d((byte) -87), this.field_q, oc.a(false), ki.i(20));
             if (var5_intLifetime1 != -1) {
-              gk.a(-5006, pl.field_u, kh.field_n, var5_intLifetime1);
+              gk.a(-5006, pl.field_u, Model.field_n, var5_intLifetime1);
               pl.field_u = null;
-              kh.field_n = null;
+              Model.field_n = null;
             }
           }
           if (3 == var4) {

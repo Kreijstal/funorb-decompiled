@@ -189,7 +189,7 @@ final class na extends jh {
             kj.field_d.position = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
-              kh.field_n = new String[var9Lifetime1 - 100];
+              Model.field_n = new String[var9Lifetime1 - 100];
               ef.field_a = pl.field_s;
             } else {
               if (248 == var9Lifetime1) {
@@ -217,9 +217,9 @@ final class na extends jh {
               var10Lifetime1 = kj.field_d.readUnsignedShort(7088);
               kj.field_d.position = 0;
               if (BufferedSocket.a(var10Lifetime1, 0)) {
-                var11 = kh.field_n.length;
+                var11 = Model.field_n.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  kh.field_n[var12] = kj.field_d.d(-7519);
+                  Model.field_n[var12] = kj.field_d.d(-7519);
                 }
                 ih.b(true);
                 lh.field_J = false;

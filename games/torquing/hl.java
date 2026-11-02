@@ -16,7 +16,7 @@ final class hl {
         field_b = null;
     }
 
-    final static double[] a(double param0, double[] param1, boolean param2, int param3, boolean param4, boolean param5, double param6, double param7, hc param8, double[] param9, double[] param10) {
+    final static double[] a(double param0, double[] param1, boolean param2, int param3, boolean param4, boolean param5, double param6, double param7, Level param8, double[] param9, double[] param10) {
         int var17 = 0;
         double[] stackIn_3_0 = null;
         double[] stackIn_12_0 = null;

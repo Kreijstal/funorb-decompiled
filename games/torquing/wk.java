@@ -206,7 +206,7 @@ class wk implements si {
 
     final static void a(int param0, Sprite[] param1, Sprite[] param2, int param3, int param4, int param5, int param6, boolean param7, int param8, int param9, int param10, uc param11, int param12, int param13, uc param14) {
         Sprite[] var16 = (Sprite[]) null;
-        pl.a(param12, 0, param4, (Sprite[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, param3, param11, param0, 0, param9, param6, param10, 480, uf.field_c, param5, 127);
+        pl.a(param12, 0, param4, (Sprite[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, param3, param11, param0, 0, param9, param6, param10, 480, TooltipPanel.field_c, param5, 127);
         if (param8 <= 109) {
           return;
         }

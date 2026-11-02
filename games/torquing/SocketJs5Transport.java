@@ -1646,7 +1646,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "connectionrestored");
                 if (null != var2) {
-                  kh.field_j = SecondaryNodeDeque.a(var2, false);
+                  Model.field_j = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "warning_ifyouquit");
                 if (null != var2) {
@@ -2764,7 +2764,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "notyetachieved");
                 if (var2 != null) {
-                  uf.field_t = SecondaryNodeDeque.a(var2, false);
+                  TooltipPanel.field_t = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "achieved");
                 if (null != var2) {

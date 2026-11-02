@@ -423,7 +423,7 @@ final class ki extends hn implements fp, ng, ba {
         if (bh.field_a == mg.field_b) {
           return rf.field_u;
         }
-        if (kh.field_o == mg.field_b) {
+        if (Model.field_o == mg.field_b) {
           return on.field_b;
         }
         if (param0 != 20) {

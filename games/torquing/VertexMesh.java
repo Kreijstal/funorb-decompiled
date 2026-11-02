@@ -107,7 +107,7 @@ final class VertexMesh {
         if (!qk.field_q.c(484)) {
           return qk.field_q.a((byte) -96);
         }
-        if (mg.field_b == kh.field_o) {
+        if (mg.field_b == Model.field_o) {
           return qk.field_q.a((byte) -97);
         }
         if (param0 >= -58) {

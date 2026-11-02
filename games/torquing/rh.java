@@ -175,14 +175,14 @@ final class rh {
         }
     }
 
-    final static uf[] a(byte param0, uf[] param1, Sprite param2, String param3) {
+    final static TooltipPanel[] a(byte param0, TooltipPanel[] param1, Sprite param2, String param3) {
         RuntimeException var4 = null;
         int var5 = 0;
-        uf[] var6 = null;
-        uf var7 = null;
-        uf var8 = null;
-        uf var9 = null;
-        uf[] stackIn_3_0 = null;
+        TooltipPanel[] var6 = null;
+        TooltipPanel var7 = null;
+        TooltipPanel var8 = null;
+        TooltipPanel var9 = null;
+        TooltipPanel[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -195,15 +195,15 @@ final class rh {
           var5 = -105 / ((52 - param0) / 57);
           var8 = param1[-1 + param1.length];
           if (!var8.a(param2, param3, 250)) {
-            var7 = new uf(var8.field_b, var8.field_j, var8.field_m, var8.field_k, var8.field_e, var8.field_o, var8.field_d);
+            var7 = new TooltipPanel(var8.field_b, var8.field_j, var8.field_m, var8.field_k, var8.field_e, var8.field_o, var8.field_d);
             var9 = var7;
             var9.a(param2, param3, 250);
-            var6 = new uf[1 + param1.length];
+            var6 = new TooltipPanel[1 + param1.length];
             dk.a(param1, 0, var6, 0, param1.length);
             var6[param1.length] = var7;
             param1 = var6;
           }
-          stackIn_3_0 = (uf[]) (param1);
+          stackIn_3_0 = (TooltipPanel[]) (param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

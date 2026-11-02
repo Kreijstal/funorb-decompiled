@@ -123,10 +123,10 @@ final class dc {
 
     final static boolean b(boolean param0) {
         if (param0) {
-          return kh.field_o == mg.field_b ? true : false;
+          return Model.field_o == mg.field_b ? true : false;
         }
         field_b = (String) null;
-        return kh.field_o == mg.field_b ? true : false;
+        return Model.field_o == mg.field_b ? true : false;
     }
 
     public static void a(boolean param0) {

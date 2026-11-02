@@ -334,7 +334,7 @@ final class mh {
         }
         boolean decompiledSharedTail0 = (var9 != null);
         if (!decompiledSharedTail0) {
-          var14_ref_t = dj.field_a[kh.field_p[var8]];
+          var14_ref_t = dj.field_a[Model.field_p[var8]];
           stackIn_130_0 = var14_ref_t;
           stackIn_130_1 = var13;
           stackIn_130_2 = param1;
@@ -562,7 +562,7 @@ final class mh {
                       return var9Lifetime1;
                     }
                   } else {
-                    var12Lifetime1 = kh.field_p[rf.field_q[this.field_h][var9Lifetime1]];
+                    var12Lifetime1 = Model.field_p[rf.field_q[this.field_h][var9Lifetime1]];
                     var13 = dj.field_a[var12Lifetime1];
                     if (param0 < (var8Lifetime1Lifetime1 + var13.field_v)) {
                       return -1;
@@ -733,12 +733,12 @@ final class mh {
         int var4 = 0;
         int var5 = 0;
         Sprite var6 = null;
-        hc var7 = null;
+        Level var7 = null;
         sg var8 = null;
-        kh[] var9_ref_kh__ = null;
+        Model[] var9_ref_kh__ = null;
         int var9 = 0;
         int var10 = 0;
-        kh var11_ref_kh = null;
+        Model var11_ref_kh = null;
         int var11 = 0;
         int var12 = 0;
         int var14 = 0;
@@ -1355,7 +1355,7 @@ final class mh {
         if (var12Lifetime1 != 0) {
           stackIn_71_1 = qh.field_d;
         } else {
-          stackIn_71_1 = uf.field_t;
+          stackIn_71_1 = TooltipPanel.field_t;
         }
         ((pk) (Object) stackIn_70_0).c(stackIn_71_1, 321, 1 + var14 + dd.field_c.field_x, 1, -1);
         if (var12Lifetime1 != 0) {
@@ -1403,16 +1403,16 @@ final class mh {
         qh.field_c.b(am.field_j, var3Lifetime1, var14 + (-3 + qh.field_c.field_x), 0, -1);
         var3Lifetime1 = var3Lifetime1 + qh.field_c.a(am.field_j);
         if (var16 != 0) {
-          kh.field_r.d(var3Lifetime1, var14 + 1);
-          qh.field_c.b(nl.field_u, var3Lifetime1 + kh.field_r.field_s, qh.field_c.field_x + (-3 + var14), 0, -1);
+          Model.field_r.d(var3Lifetime1, var14 + 1);
+          qh.field_c.b(nl.field_u, var3Lifetime1 + Model.field_r.field_s, qh.field_c.field_x + (-3 + var14), 0, -1);
           if (var19 == 0) {
             return;
           }
         }
         var18 = 0;
         while (!(ef.field_d[var7] <= var18)) {
-          kh.field_r.d(var3Lifetime1, var14 + 1);
-          var3Lifetime1 = var3Lifetime1 + kh.field_r.field_s / 3;
+          Model.field_r.d(var3Lifetime1, var14 + 1);
+          var3Lifetime1 = var3Lifetime1 + Model.field_r.field_s / 3;
           var18++;
           if (var19 != 0) {
             return;
@@ -2419,7 +2419,7 @@ final class mh {
     }
 
     final void c(int param0) {
-        uf dupTemp$0 = null;
+        TooltipPanel dupTemp$0 = null;
         int stackIn_26_0 = 0;
         pk stackIn_35_0 = null;
         boolean stackIn_36_1 = false;
@@ -2454,18 +2454,18 @@ final class mh {
         int var3 = 0;
         af var4_ref_af = null;
         int var4 = 0;
-        uf var5_ref_uf = null;
+        TooltipPanel var5_ref_uf = null;
         int var5 = 0;
         int var6_int = 0;
         Object var6 = null;
         int var7 = 0;
         int var8 = 0;
         af[] var9 = null;
-        uf var10 = null;
+        TooltipPanel var10 = null;
         String var11 = null;
         String var12 = null;
-        uf var13 = null;
-        hc var14 = null;
+        TooltipPanel var13 = null;
+        Level var14 = null;
         String var15 = null;
         String var16 = null;
         int stackIn_43_0Lifetime1;
@@ -2590,9 +2590,9 @@ final class mh {
               if (this.field_h == 9) {
                 var14 = ol.field_f[rn.field_j];
                 if (ti.field_l == null) {
-                  ti.field_l = new uf[hg.field_d.length];
+                  ti.field_l = new TooltipPanel[hg.field_d.length];
                 }
-                dupTemp$0 = new uf(qh.field_c, 0, 359, 166, (sm) null, 0, 0);
+                dupTemp$0 = new TooltipPanel(qh.field_c, 0, 359, 166, (sm) null, 0, 0);
                 ti.field_l[rn.field_j] = dupTemp$0;
                 var10 = dupTemp$0;
                 var13 = var10;

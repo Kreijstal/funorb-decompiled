@@ -286,7 +286,7 @@ class mn extends aa implements ng {
         fo var2 = null;
         this.field_db.c(4210752, 2121792, (byte) 125);
         if (param0 == -20041) {
-          var2 = new fo(this, this.field_cb, kh.field_j);
+          var2 = new fo(this, this.field_cb, Model.field_j);
           var2.a(pn.field_c, 5177, 15);
           this.c(var2, 33);
           return;

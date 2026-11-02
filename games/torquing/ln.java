@@ -8,8 +8,8 @@ final class ln extends jh {
     static int field_D;
     static int field_G;
 
-    final static void a(int param0, int param1, uf[] param2, byte param3) {
-        uf var4 = null;
+    final static void a(int param0, int param1, TooltipPanel[] param2, byte param3) {
+        TooltipPanel var4 = null;
         try {
           if (param3 != -58) {
             field_G = 10;

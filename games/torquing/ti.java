@@ -3,7 +3,7 @@
  */
 final class ti {
     private ja field_d;
-    static uf[] field_l;
+    static TooltipPanel[] field_l;
     static String field_m;
     private int field_j;
     static boolean field_k;

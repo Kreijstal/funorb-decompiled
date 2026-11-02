@@ -74,7 +74,7 @@ final class oj implements WidgetRenderer {
         }
     }
 
-    final static void a(int param0, short param1, int param2, boolean param3, boolean param4, int param5, int param6, short param7, int param8, kh param9) {
+    final static void a(int param0, short param1, int param2, boolean param3, boolean param4, int param5, int param6, short param7, int param8, Model param9) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -102,8 +102,8 @@ final class oj implements WidgetRenderer {
         mp var26 = null;
         int var27 = 0;
         int var28 = 0;
-        rm var29 = null;
-        rm var30 = null;
+        MeshGeometry var29 = null;
+        MeshGeometry var30 = null;
         var28 = Torquing.field_u;
         try {
           var29 = param9.field_l;
@@ -163,7 +163,7 @@ final class oj implements WidgetRenderer {
                   }
                 }
                 pm.a(param9, -27226, 1);
-                var25 = var30.a(param5, param6, param8, (byte)(param0 & 1), (byte)(var24 >> 24), param1, param7);
+                var25 = var30.addVertex(param5, param6, param8, (byte)(param0 & 1), (byte)(var24 >> 24), param1, param7);
                 var26 = param9.field_q;
                 if (var26 != null) {
                   var26.field_q[var25] = (short)var24;

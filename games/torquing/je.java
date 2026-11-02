@@ -83,11 +83,11 @@ final class je implements WidgetRenderer {
         field_f = null;
     }
 
-    final static kh a(ResourceArchive param0, String param1, String param2, byte param3) {
-        rm var4 = null;
+    final static Model a(ResourceArchive param0, String param1, String param2, byte param3) {
+        MeshGeometry var4 = null;
         RuntimeException var4_ref = null;
         Object stackIn_4_0 = null;
-        kh stackIn_6_0 = null;
+        Model stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -97,16 +97,16 @@ final class je implements WidgetRenderer {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = rm.a(param0, param1, param2);
+          var4 = MeshGeometry.a(param0, param1, param2);
           if (param3 > -116) {
             field_a = -35;
           }
           if (var4 != null) {
-            stackIn_6_0 = new kh(var4);
+            stackIn_6_0 = new Model(var4);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (kh) (stackIn_4_0);
+          return (Model) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;

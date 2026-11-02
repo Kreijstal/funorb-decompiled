@@ -30,7 +30,7 @@ class pc implements WidgetRenderer, fe {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, kh param5, short param6, short param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Model param5, short param6, short param7, int param8) {
         RuntimeException var9 = null;
         int var10 = 0;
         int var11 = 0;
@@ -52,8 +52,8 @@ class pc implements WidgetRenderer, fe {
         int var27 = 0;
         int var28 = 0;
         int var29 = 0;
-        rm var30 = null;
-        rm var31 = null;
+        MeshGeometry var30 = null;
+        MeshGeometry var31 = null;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;

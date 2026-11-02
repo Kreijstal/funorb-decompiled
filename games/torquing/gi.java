@@ -7,7 +7,7 @@ final class gi {
     static int field_d;
     static int field_c;
 
-    final static void a(rm param0, byte param1, int param2) {
+    final static void a(MeshGeometry param0, byte param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -39,8 +39,8 @@ final class gi {
           field_b = null;
           return;
         }
-        rm var2 = (rm) null;
-        gi.a((rm) null, (byte) -88, -91);
+        MeshGeometry var2 = (MeshGeometry) null;
+        gi.a((MeshGeometry) null, (byte) -88, -91);
         field_a = null;
         field_b = null;
     }

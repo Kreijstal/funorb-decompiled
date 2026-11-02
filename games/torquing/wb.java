@@ -22,7 +22,7 @@ final class wb extends am {
         RuntimeException decompiledCaughtException = null;
         var5 = Torquing.field_u;
         try {
-          kh.field_o = ag.field_c;
+          Model.field_o = ag.field_c;
           if (param0 != 255) {
             if (param0 >= 100 &&
               param0 <= 105) {
@@ -179,8 +179,8 @@ final class wb extends am {
             var12 = new Sprite(195, 221);
             var6 = var12.field_s / 2;
             var12.e();
-            lh.field_O.c(ff.a(new String[]{hc.field_u}, 0, eo.field_c), var6, 40, 16777215, -1);
-            kl.field_o.c(ff.a(new String[]{hc.field_u}, 0, wd.field_r), var6, 60, 16777215, -1);
+            lh.field_O.c(ff.a(new String[]{Level.field_u}, 0, eo.field_c), var6, 40, 16777215, -1);
+            kl.field_o.c(ff.a(new String[]{Level.field_u}, 0, wd.field_r), var6, 60, 16777215, -1);
             lh.field_O.c(ff.a(new String[]{rj.field_y}, 0, di.field_c), var6, 110, 16777215, -1);
             kl.field_o.c(ff.a(new String[]{rj.field_y}, 0, lc.field_B), var6, 130, 16777215, -1);
             lh.field_O.c(rn.field_a, var6, 180, 16777215, -1);

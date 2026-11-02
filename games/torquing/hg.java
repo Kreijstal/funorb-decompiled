@@ -7,7 +7,7 @@ final class hg {
     static Random field_e;
     static int[] field_d;
     static int field_a;
-    static uf[] field_b;
+    static TooltipPanel[] field_b;
     static boolean field_c;
     static gq field_f;
 

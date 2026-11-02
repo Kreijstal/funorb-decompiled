@@ -48,7 +48,7 @@ final class NodeHashTableIterator implements Iterator {
           if (decompiledFrameRemainder0) {
             if (!jd.field_E) {
               if (lp.field_b >= um.field_l) {
-                stackIn_16_0 = (lp.field_b < uf.field_g + um.field_l) ? 1 : 0;
+                stackIn_16_0 = (lp.field_b < TooltipPanel.field_g + um.field_l) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }

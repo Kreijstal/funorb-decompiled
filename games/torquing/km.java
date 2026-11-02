@@ -9,14 +9,14 @@ final class km {
         if (param0 > 28) {
           aq.field_c = false;
           od.b(128, -1);
-          kh.field_o = tp.field_h;
+          Model.field_o = tp.field_h;
           bh.field_a = tp.field_h;
           return;
         }
         field_a = (String) null;
         aq.field_c = false;
         od.b(128, -1);
-        kh.field_o = tp.field_h;
+        Model.field_o = tp.field_h;
         bh.field_a = tp.field_h;
     }
 

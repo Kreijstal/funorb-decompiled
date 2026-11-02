@@ -17,7 +17,7 @@ final class tp {
     static long[] field_m;
     private IntrusiveDeque field_d;
     boolean field_b;
-    static kh field_a;
+    static Model field_a;
 
     final int[] a(int param0, int param1) {
         boolean stackIn_6_1 = false;
@@ -65,7 +65,7 @@ final class tp {
         int var3 = Torquing.field_u;
         int var2 = 0;
         if (param0 < 97) {
-          field_a = (kh) null;
+          field_a = (Model) null;
         }
         while (this.field_k > var2) {
           this.field_f[var2] = null;

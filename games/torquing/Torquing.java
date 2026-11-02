@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public final class Torquing extends tg {
-    private uf field_t;
+    private TooltipPanel field_t;
     static kk field_v;
     static String field_w;
     static int field_x;
@@ -137,10 +137,10 @@ public final class Torquing extends tg {
           AudioOutput.d();
           wl.d();
           fi.a(108);
-          hc.a((byte) -113);
+          Level.a((byte) -113);
           mh.b(32);
           ia.c(88);
-          uf.a(3);
+          TooltipPanel.a(3);
           bi.c(-3);
           nc.a(param0 ^ 56);
           hj.a((byte) 114);
@@ -163,7 +163,7 @@ public final class Torquing extends tg {
           sg.a();
           dd.a((byte) -127);
           g.a();
-          kh.a(param0 ^ 24993);
+          Model.a(param0 ^ 24993);
           ti.a(false);
           jn.a((byte) 60);
           oh.a(20269);
@@ -469,7 +469,7 @@ public final class Torquing extends tg {
           this.a(true, false, true, true, false);
           GzipDecompressor.field_b = vi.field_a.length;
           cc.field_c = 1;
-          uf.field_c = 0;
+          TooltipPanel.field_c = 0;
           if (param0 != -593) {
             this.c(true, -107);
           }
@@ -490,7 +490,7 @@ public final class Torquing extends tg {
           mh.field_d[param1].a(0, 0, 76);
           GameKeyHandler.field_a[param1].a(0, 0);
           if (null == this.field_t) {
-            this.field_t = new uf(i.field_Q, 0, 372, 286, GameKeyHandler.field_a[param1], -34, -159);
+            this.field_t = new TooltipPanel(i.field_Q, 0, 372, 286, GameKeyHandler.field_a[param1], -34, -159);
             this.field_t.a((byte) -19, 30);
             this.field_t.a(false, ff.a(new String[]{Integer.toString(param1 + 1)}, 0, pc.field_n));
             this.field_t.a((byte) 120, 40);
@@ -526,7 +526,7 @@ public final class Torquing extends tg {
         RuntimeException var3_ref = null;
         int var4_int = 0;
         byte[] var4 = null;
-        hc var4_ref = null;
+        Level var4_ref = null;
         int var5 = 0;
         byte[] var5_ref_byte__ = null;
         int var6 = 0;
@@ -547,7 +547,7 @@ public final class Torquing extends tg {
         int var13_int = 0;
         StringBuilder var13_ref = null;
         int var14_int = 0;
-        hc var14 = null;
+        Level var14 = null;
         sm var15_ref_sm = null;
         int var15 = 0;
         ia var16_ref_ia = null;
@@ -564,7 +564,7 @@ public final class Torquing extends tg {
         int var27 = 0;
         PacketBuffer var28 = null;
         int[] var30 = null;
-        rm var31 = null;
+        MeshGeometry var31 = null;
         short[] var32 = null;
         Sprite var33 = null;
         Sprite var34 = null;
@@ -587,11 +587,11 @@ public final class Torquing extends tg {
         PacketBuffer var52 = null;
         String var53 = null;
         StringBuilder var54 = null;
-        hc var55 = null;
+        Level var55 = null;
         byte[] var56 = null;
         PacketBuffer var57 = null;
         String var58 = null;
-        hc var59 = null;
+        Level var59 = null;
         short[] var60 = null;
         int[] var62 = null;
         byte[] var63 = null;
@@ -599,7 +599,7 @@ public final class Torquing extends tg {
         int[] var67 = null;
         int[] var68 = null;
         short[] var3Lifetime1;
-        hc var4_refLifetime1;
+        Level var4_refLifetime1;
         int var4_intLifetime1;
         int var4_intLifetime2;
         int var5Lifetime1;
@@ -643,8 +643,8 @@ public final class Torquing extends tg {
                     rl.field_a.c(-19375)) {
                     if (rg.field_v.a(-12749) &&
                       rg.field_v.c(-19375)) {
-                      if (uf.field_l.a(-12749) &&
-                        uf.field_l.c(-19375)) {
+                      if (TooltipPanel.field_l.a(-12749) &&
+                        TooltipPanel.field_l.c(-19375)) {
                         if (vp.field_D.a(-12749) &&
                           vp.field_D.c(-19375)) {
                           if (n.field_q.a(-12749) &&
@@ -690,7 +690,7 @@ public final class Torquing extends tg {
                         IsaacPacketBuffer.a(20.0f, 5, il.a(pg.field_a, vp.field_D, mb.field_c, (byte) 113));
                         return false;
                       }
-                      IsaacPacketBuffer.a(19.0f, 28, c.a(param1 + 119, ol.field_e, "", l.field_c, uf.field_l));
+                      IsaacPacketBuffer.a(19.0f, 28, c.a(param1 + 119, ol.field_e, "", l.field_c, TooltipPanel.field_l));
                       return false;
                     }
                     IsaacPacketBuffer.a(10.0f, -99, c.a(17, bo.field_i, "", db.field_d, rg.field_v));
@@ -706,7 +706,7 @@ public final class Torquing extends tg {
               return false;
             }
             if (MouseWheelInput.field_c == null) {
-              MouseWheelInput.field_c = new kh[32];
+              MouseWheelInput.field_c = new Model[32];
               MouseWheelInput.field_c[0] = je.a(rl.field_a, "", "powerups/exit", (byte) -121);
               MouseWheelInput.field_c[2] = je.a(rl.field_a, "", "powerups/time_fixed", (byte) -127);
               MouseWheelInput.field_c[1] = je.a(rl.field_a, "", "powerups/score", (byte) -119);
@@ -737,7 +737,7 @@ public final class Torquing extends tg {
               MouseWheelInput.field_c[16] = je.a(rl.field_a, "", "powerups/letter_g", (byte) -128);
               MouseWheelInput.field_c[17] = je.a(rl.field_a, "", "powerups/skin_tennisball", (byte) -124);
               gi.a(MouseWheelInput.field_c[17].field_l, (byte) 13, 31);
-              MouseWheelInput.field_c[18] = new kh(new jl(30, false));
+              MouseWheelInput.field_c[18] = new Model(new jl(30, false));
               MouseWheelInput.field_c[19] = je.a(rl.field_a, "", "powerups/skin_marble", (byte) -126);
               gi.a(MouseWheelInput.field_c[19].field_l, (byte) 13, 31);
               MouseWheelInput.field_c[20] = je.a(rl.field_a, "", "powerups/skin_ballbearing", (byte) -119);
@@ -757,16 +757,16 @@ public final class Torquing extends tg {
               return false;
             }
             if (ia.a(-22426, 0)) {
-              var31 = rm.a(rl.field_a, "", "sphere_halloween");
+              var31 = MeshGeometry.a(rl.field_a, "", "sphere_halloween");
               gi.a(var31, (byte) 13, 31);
-              MouseWheelInput.field_c[17] = new kh(var31);
-              MouseWheelInput.field_c[18] = new kh(var31);
-              MouseWheelInput.field_c[19] = new kh(var31);
-              MouseWheelInput.field_c[20] = new kh(var31);
-              MouseWheelInput.field_c[21] = new kh(var31);
-              MouseWheelInput.field_c[22] = new kh(var31);
-              MouseWheelInput.field_c[23] = new kh(var31);
-              MouseWheelInput.field_c[24] = new kh(var31);
+              MouseWheelInput.field_c[17] = new Model(var31);
+              MouseWheelInput.field_c[18] = new Model(var31);
+              MouseWheelInput.field_c[19] = new Model(var31);
+              MouseWheelInput.field_c[20] = new Model(var31);
+              MouseWheelInput.field_c[21] = new Model(var31);
+              MouseWheelInput.field_c[22] = new Model(var31);
+              MouseWheelInput.field_c[23] = new Model(var31);
+              MouseWheelInput.field_c[24] = new Model(var31);
               ji.a(MouseWheelInput.field_c[24].field_l, -1);
             }
             if (null == MouseWheelInput.field_c[3]) {
@@ -789,14 +789,14 @@ public final class Torquing extends tg {
               return false;
             }
             if (vb.field_c[3] == null) {
-              vb.field_c[3] = (pj) (rm.a(rl.field_a, "", "obstacles/bb_block").a(80, 1365, -1, -12, 12));
-              vb.field_c[25] = (pj) (rm.a(rl.field_a, "", "obstacles/bb_can").a(80, 1365, -1, -12, 12));
-              vb.field_c[26] = (pj) (rm.a(rl.field_a, "", "obstacles/bb_grave").a(80, 1365, -1, -12, 12));
-              vb.field_c[27] = (pj) (rm.a(rl.field_a, "", "obstacles/bb_roundtree").a(80, 1365, -1, -12, 12));
-              vb.field_c[28] = (pj) (rm.a(rl.field_a, "", "obstacles/bb_squaretree").a(80, 1365, -1, -12, 12));
-              vb.field_c[29] = (pj) (rm.a(rl.field_a, "", "obstacles/bb_statue").a(80, 1365, -1, -12, 12));
-              vb.field_c[30] = (pj) (rm.a(rl.field_a, "", "obstacles/bb_cone").a(80, 1365, -1, -12, 12));
-              vb.field_c[31] = (pj) (rm.a(rl.field_a, "", "obstacles/bb_lights_tall_nopost").a(80, 1365, -1, -12, 12));
+              vb.field_c[3] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_block").a(80, 1365, -1, -12, 12));
+              vb.field_c[25] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_can").a(80, 1365, -1, -12, 12));
+              vb.field_c[26] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_grave").a(80, 1365, -1, -12, 12));
+              vb.field_c[27] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_roundtree").a(80, 1365, -1, -12, 12));
+              vb.field_c[28] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_squaretree").a(80, 1365, -1, -12, 12));
+              vb.field_c[29] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_statue").a(80, 1365, -1, -12, 12));
+              vb.field_c[30] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_cone").a(80, 1365, -1, -12, 12));
+              vb.field_c[31] = (pj) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_lights_tall_nopost").a(80, 1365, -1, -12, 12));
               ka.field_n[31][0] = 0;
               ka.field_n[31][4] = 0;
               ka.field_n[31][1] = 16;
@@ -843,8 +843,8 @@ public final class Torquing extends tg {
           }
           if (null != rg.field_v) {
             var3_int = dd.field_c.field_t + dd.field_c.field_x;
-            kh.field_r = new Sprite(var3_int, var3_int);
-            kh.field_r.e();
+            Model.field_r = new Sprite(var3_int, var3_int);
+            Model.field_r.e();
             dd.field_i.c(0, 0, var3_int, var3_int);
             dd.field_i = null;
             mk.field_b.a(param1 + 4);
@@ -1092,12 +1092,12 @@ public final class Torquing extends tg {
               var12_int = var53.charAt(var11_intLifetime1);
               if (var12_int == 10) {
                 if (var54.length() != 0) {
-                  var55 = new hc(var8Lifetime2, var54.toString());
+                  var55 = new Level(var8Lifetime2, var54.toString());
                   var54.setLength(0);
                   qc.field_ab[var8Lifetime2] = qc.field_ab[var8Lifetime2] + 1;
                   var9++;
                   if (var10_ref != null) {
-                    ((hc) (var10_ref)).field_m = var55;
+                    ((Level) (var10_ref)).field_m = var55;
                     var10_ref = var55;
                   } else {
                     jm.field_d = var55;
@@ -1176,7 +1176,7 @@ public final class Torquing extends tg {
               var16 = var58.charAt(var15Lifetime1);
               if (var16 == 10) {
                 if (var13_ref.length() != 0) {
-                  var59 = new hc(var9Lifetime1Lifetime1, var13_ref.toString());
+                  var59 = new Level(var9Lifetime1Lifetime1, var13_ref.toString());
                   var13_ref = new StringBuilder(8192);
                   qc.field_ab[var9Lifetime1Lifetime1] = qc.field_ab[var9Lifetime1Lifetime1] + 1;
                   var10Lifetime1++;
@@ -1221,7 +1221,7 @@ public final class Torquing extends tg {
               IsaacPacketBuffer.a((float)(var3_intLifetime2 * 60 / hg.field_d.length + 40), 51, kf.field_D + " - " + 100 * var3_intLifetime2 / hg.field_d.length + "%");
               return false;
             }
-            ol.field_f = new hc[var3_intLifetime2];
+            ol.field_f = new Level[var3_intLifetime2];
             var3_intLifetime2 = 0;
             var4_refLifetime1 = jm.field_d;
             while (var4_refLifetime1 != null) {
@@ -1239,7 +1239,7 @@ public final class Torquing extends tg {
             return false;
           }
           if (null == ig.field_q) {
-            ig.field_q = new hc(8, "ZU##############################55555555################################################5555555555###############################################55######555#############################################555#######55#############################################55########555############################################555########55#############################################555######555##############################################55######55########################################################################################################5555####################################################5555555###########55555#################################555##5555#########55555555###############################55#####55########55#####555##############################555####55########55#######55##############################555##555#######55########55###############################555555########55#########55################################555##########55##55###555############################################5555555###55####################################5#######55555555##################################555555555################################################55555555##########5555########################################5555########555555#########################################55#######555##555#################################555555555#######55#####55################################55555555########555###555#####################################5555########55555555#######################################55#######555555555################################555555555#######55#######################################55555555########################################################################5#############################555########5########555555555############################555555555555########55555555###############################5555555555#############5555#################################55###555##############55################################55#####55#######555555555################################5555##55########55555555##################################555555##############5555###################################555#################55################################################555555555################################5555555555555###55555555##################################55555555555#################55############################################55555######55############################55555##########5555555##################################5555555########55555#555################################55555#555#######55#555#55################################55#555#55#######555#55555################################555#55555########55##555##################################55##555################################################################################################################5########################################################55##################################################555555555###############################################5555555555###############################################555####55#################################################55#################################################################################################################55555###################################################5555555#################################################55555#555################################################55#555#55################################################555#55555#################################################55##555#####################fEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfE0007wQ5Y0cw00");
+            ig.field_q = new Level(8, "ZU##############################55555555################################################5555555555###############################################55######555#############################################555#######55#############################################55########555############################################555########55#############################################555######555##############################################55######55########################################################################################################5555####################################################5555555###########55555#################################555##5555#########55555555###############################55#####55########55#####555##############################555####55########55#######55##############################555##555#######55########55###############################555555########55#########55################################555##########55##55###555############################################5555555###55####################################5#######55555555##################################555555555################################################55555555##########5555########################################5555########555555#########################################55#######555##555#################################555555555#######55#####55################################55555555########555###555#####################################5555########55555555#######################################55#######555555555################################555555555#######55#######################################55555555########################################################################5#############################555########5########555555555############################555555555555########55555555###############################5555555555#############5555#################################55###555##############55################################55#####55#######555555555################################5555##55########55555555##################################555555##############5555###################################555#################55################################################555555555################################5555555555555###55555555##################################55555555555#################55############################################55555######55############################55555##########5555555##################################5555555########55555#555################################55555#555#######55#555#55################################55#555#55#######555#55555################################555#55555########55##555##################################55##555################################################################################################################5########################################################55##################################################555555555###############################################5555555555###############################################555####55#################################################55#################################################################################################################55555###################################################5555555#################################################55555#555################################################55#555#55################################################555#55555#################################################55##555#####################fEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfEfE0007wQ5Y0cw00");
             cf.a(6639);
             return false;
           }
@@ -1292,7 +1292,7 @@ public final class Torquing extends tg {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        hc var12 = null;
+        Level var12 = null;
         int var13 = 0;
         var13 = field_u;
         try {
@@ -1634,7 +1634,7 @@ public final class Torquing extends tg {
             MouseInputHandler.field_b[var3] = i.c(65535, vi.field_a[-var3 + var2_int]);
           }
           if (param0 <= 69) {
-            this.field_t = (uf) null;
+            this.field_t = (TooltipPanel) null;
           }
           ok.a((byte) -124);
           return;
@@ -1752,9 +1752,9 @@ public final class Torquing extends tg {
 
     private final void a(int param0, int param1) {
         int var3_int = 0;
-        uf dupTemp$0 = null;
-        uf var5 = null;
-        hc var4 = null;
+        TooltipPanel dupTemp$0 = null;
+        TooltipPanel var5 = null;
+        Level var4 = null;
         try {
           var3_int = wi.field_a[param0];
           k.a(var3_int, 1);
@@ -1773,7 +1773,7 @@ public final class Torquing extends tg {
             var4 = ie.field_b.field_d.field_m;
           }
           if (var4.field_e == null) {
-            dupTemp$0 = new uf(i.field_Q, 0, 372, 286, GameKeyHandler.field_a[var3_int], -34, -159);
+            dupTemp$0 = new TooltipPanel(i.field_Q, 0, 372, 286, GameKeyHandler.field_a[var3_int], -34, -159);
             var4.field_e = dupTemp$0;
             var5 = dupTemp$0;
             var5.a((byte) -59, 30);
@@ -2158,7 +2158,7 @@ public final class Torquing extends tg {
         }
     }
 
-    final void a(int param0, hc param1, uf param2) {
+    final void a(int param0, Level param1, TooltipPanel param2) {
         int var6_int = 0;
         int var5 = 0;
         String[] var5_ref_String__ = null;
@@ -2178,7 +2178,7 @@ public final class Torquing extends tg {
         String var6 = null;
         var8 = field_u;
         try {
-          var9 = kc.a('~', param1.field_l, param0);
+          var9 = kc.a('~', param1.description, param0);
           var10 = var9;
           if (1 == var9.length) {
             var5_ref_String__ = kc.a('/', var9[0], 0);
@@ -2247,7 +2247,7 @@ public final class Torquing extends tg {
         try {
           nl.field_s = qg.a(e.field_b, rp.field_d, "kartika13", "", 255);
           var9 = ip.a(rg.field_v, -119, "", "smallfont");
-          var20 = uf.field_l.a(param0 - 116, "smallfont", "");
+          var20 = TooltipPanel.field_l.a(param0 - 116, "smallfont", "");
           i.field_N = ok.a(var9, 256, var20);
           um.field_m = io.a(var9, -1, var20);
           i.field_Q = ob.a(1579032, new int[]{4473924, 12632256, 13421772}, var20, true, var9);
@@ -2283,7 +2283,7 @@ public final class Torquing extends tg {
           i.field_Q.field_O[10][4] = 4473924;
           i.field_Q.field_O[10][1] = 16750848;
           var5 = ip.a(rg.field_v, -121, "", "minifont");
-          var21 = uf.field_l.a(-114, "minifont", "");
+          var21 = TooltipPanel.field_l.a(-114, "minifont", "");
           dd.field_c = ok.a(var5, 256, var21);
           qh.field_c = ob.a(1579032, new int[]{4473924, 8421504}, var21, true, var5);
           qh.field_c.field_x = qh.field_c.field_x - 1;
@@ -2326,7 +2326,7 @@ public final class Torquing extends tg {
           th.field_C = vg.a(-27646, 4);
           vd.field_e = vg.a(-27646, 5);
           bp.field_c = vg.a(param0 - 54064, 6);
-          uf.field_l = vg.a(-27646, 8);
+          TooltipPanel.field_l = vg.a(-27646, 8);
           he.field_b = vg.a(-27646, 12);
           eg.field_t = vg.a(-27646, 13);
           n.field_q = vg.a(-27646, 14);

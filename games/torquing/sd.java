@@ -71,7 +71,7 @@ final class sd extends am {
         return var12;
     }
 
-    final static void a(rm param0, int param1, int param2) {
+    final static void a(MeshGeometry param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -156,7 +156,7 @@ final class sd extends am {
         if (param2 > -62) {
           return (ResourceArchive) null;
         }
-        return hc.a(false, param0, param3, 8505, param4, param1);
+        return Level.a(false, param0, param3, 8505, param4, param1);
     }
 
     final static boolean b(int param0) {

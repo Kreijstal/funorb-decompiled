@@ -3,7 +3,7 @@
  */
 final class jm extends dp {
     private java.nio.ByteBuffer field_c;
-    static hc field_d;
+    static Level field_d;
     static int[] field_e;
 
     final byte[] a(int param0) {

@@ -284,7 +284,7 @@ final class vg extends eh {
         this.field_n[2] = this.field_n[2] + var14 * var12;
     }
 
-    final sg a(int param0, hc param1) {
+    final sg a(int param0, Level param1) {
         int var4_int = 0;
         int var6 = 0;
         int stackIn_17_0 = 0;
@@ -294,7 +294,7 @@ final class vg extends eh {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        kh var4 = null;
+        Model var4 = null;
         int var5 = 0;
         int var7 = 0;
         tl[] var8 = null;
@@ -377,7 +377,7 @@ final class vg extends eh {
         }
     }
 
-    final void b(int param0, kh param1) {
+    final void b(int param0, Model param1) {
         try {
           if (param0 != 0) {
             field_k = (PacketBuffer) null;
@@ -446,21 +446,21 @@ final class vg extends eh {
         }
     }
 
-    private final kh a(int param0, kh param1) {
-        kh var3 = null;
+    private final Model a(int param0, Model param1) {
+        Model var3 = null;
         RuntimeException var3_ref = null;
-        kh stackIn_2_0 = null;
-        kh stackIn_4_0 = null;
+        Model stackIn_2_0 = null;
+        Model stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            stackIn_2_0 = (kh) null;
+            stackIn_2_0 = (Model) null;
             return stackIn_2_0;
           }
-          var3 = new kh(new rm(new rm[]{param1.field_l, gb.field_c.field_l}, 2));
+          var3 = new Model(new MeshGeometry(new MeshGeometry[]{param1.field_l, gb.field_c.field_l}, 2));
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -488,7 +488,7 @@ final class vg extends eh {
         if (param0 != -27646) {
           return (ResourceArchive) null;
         }
-        return hc.a(false, true, param1, 8505, false, 1);
+        return Level.a(false, true, param1, 8505, false, 1);
     }
 
     private final void a(double[] param0, int param1) {

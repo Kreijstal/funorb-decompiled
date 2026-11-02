@@ -7,7 +7,7 @@ final class ol {
     static String field_e;
     static String field_b;
     static String field_a;
-    static hc[] field_f;
+    static Level[] field_f;
 
     final static void a(String param0, boolean param1, java.applet.Applet param2) {
         try {

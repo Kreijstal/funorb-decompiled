@@ -9,7 +9,7 @@ abstract class eh {
     static bc field_i;
     static IntrusiveDeque field_b;
     double[] field_g;
-    hc field_a;
+    Level field_a;
     static String field_e;
 
     eh() {
@@ -113,7 +113,7 @@ abstract class eh {
           this.field_h.b(this.field_d);
           return;
         }
-        this.field_a = (hc) null;
+        this.field_a = (Level) null;
         this.field_h.d(this.field_c);
         this.field_h.b(this.field_d);
     }

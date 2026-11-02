@@ -82,7 +82,7 @@ final class il extends gf {
     }
 
     final static void a(byte param0, int param1) {
-        ip.field_c = hc.field_d[param1];
+        ip.field_c = Level.field_d[param1];
         if (param0 != 52) {
           String var3 = (String) null;
           il.a((String) null, (ResourceArchive) null, (String) null, (byte) -45);

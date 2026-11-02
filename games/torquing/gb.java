@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gb {
-    static kh field_c;
+    static Model field_c;
     private DualLinkNode field_a;
     private DualLinkNode field_b;
 

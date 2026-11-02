@@ -84,7 +84,7 @@ final class ArchiveIndex {
           re.a(param4, true, param3, param1);
           gh.b(1);
           bh.field_a = tp.field_h;
-          kh.field_o = tp.field_h;
+          Model.field_o = tp.field_h;
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

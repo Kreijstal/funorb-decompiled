@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uf {
+final class TooltipPanel {
     int field_o;
     int field_m;
     static int field_g;
@@ -289,7 +289,7 @@ final class uf {
         }
         IsaacPacketBuffer var2 = kj.field_d;
         if (param0 >= -104) {
-          uf.a(45);
+          TooltipPanel.a(45);
         }
         var1.field_j = new int[]{var2.c((byte) -71), var2.c((byte) -36), var2.c((byte) -100), var2.c((byte) -75)};
         var1.unlink(0);
@@ -495,7 +495,7 @@ final class uf {
         field_q = null;
     }
 
-    uf(uc param0, int param1, int param2, int param3, sm param4, int param5, int param6) {
+    TooltipPanel(uc param0, int param1, int param2, int param3, sm param4, int param5, int param6) {
         try {
           this.field_b = param0;
           this.field_k = param3;

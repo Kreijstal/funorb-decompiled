@@ -3,10 +3,10 @@
  */
 import java.io.*;
 
-final class hc {
-    String field_l;
-    int field_s;
-    hc field_m;
+final class Level {
+    String description;
+    int id;
+    Level field_m;
     private String field_i;
     private int field_b;
     private int field_j;
@@ -14,18 +14,18 @@ final class hc {
     tl[] field_q;
     private double[] field_p;
     private int field_w;
-    private kh field_y;
+    private Model field_y;
     private int field_f;
     static String[] field_d;
     private IntrusiveDeque field_a;
     private sg field_g;
-    uf field_e;
+    TooltipPanel field_e;
     private int field_r;
     private int[][] field_x;
     private int field_n;
     private boolean[][] field_h;
     static PacketBuffer field_c;
-    private kh field_t;
+    private Model field_t;
     static String field_u;
     ti[] field_k;
     private int field_v;
@@ -355,7 +355,7 @@ final class hc {
         long var2Lifetime1;
         var6 = Torquing.field_u;
         if (param0 != 1) {
-          this.field_s = 77;
+          this.id = 77;
         }
         if (this.field_a == null) {
           return true;
@@ -518,12 +518,12 @@ final class hc {
           do {
             var2++;
           } while (34 != this.field_i.charAt(var2));
-          this.field_l = this.field_i.substring(1, var2);
+          this.description = this.field_i.substring(1, var2);
           var2++;
           decompiledFrameRemainder0 = false;
         }
         else {
-          this.field_l = "";
+          this.description = "";
         }
         incrementValue$6 = var2;
         var2++;
@@ -600,7 +600,7 @@ final class hc {
             var16 != 0 &&
             var16 != 3 && (var16 < 25 ||
             var16 > 31)) {
-            mh.field_k[this.field_s] = mh.field_k[this.field_s] + 1;
+            mh.field_k[this.id] = mh.field_k[this.id] + 1;
           }
         }
         incrementValue$9 = var2;
@@ -784,7 +784,7 @@ final class hc {
         }
     }
 
-    final kh c(int param0) {
+    final Model c(int param0) {
         int var10_int = 0;
         int dupTemp$0 = 0;
         int[] arrayValue$1 = null;
@@ -800,9 +800,9 @@ final class hc {
         int[] arrayValue$11 = null;
         int stackIn_79_0 = 0;
         int stackIn_79_1 = 0;
-        kh var3;
-        rm var4;
-        kh var5;
+        Model var3;
+        MeshGeometry var4;
+        Model var5;
         pj var6;
         int var7;
         int var8;
@@ -826,7 +826,7 @@ final class hc {
         int var26;
         int var27;
         int[] var28;
-        rm var29;
+        MeshGeometry var29;
         int[] var31;
         int[] var32;
         int[] var34;
@@ -843,11 +843,11 @@ final class hc {
         int var14Lifetime1Lifetime1;
         var27 = Torquing.field_u;
         if (param0 != -20561) {
-          return (kh) null;
+          return (Model) null;
         }
         if (null == this.field_t) {
-          var29 = new rm(64, 64, 0);
-          var3 = new kh(var29);
+          var29 = new MeshGeometry(64, 64, 0);
+          var3 = new Model(var29);
           var4 = var29;
           var29.field_r = null;
           var4.field_G = null;
@@ -996,12 +996,12 @@ final class hc {
                         if (var23 != var25 &&
                           var24 != var26) {
                           pm.a(var3, -27226, 2);
-                          var29.a(var25, var23, var24, (byte) 1, (byte) -1, (short) 17493, (short) -1);
-                          var29.a(var24, var26, var25, (byte) 1, (byte) -1, (short) 17493, (short) -1);
+                          var29.addVertex(var25, var23, var24, (byte) 1, (byte) -1, (short) 17493, (short) -1);
+                          var29.addVertex(var24, var26, var25, (byte) 1, (byte) -1, (short) 17493, (short) -1);
                         } else {
                           if (var25 != var23) {
                             pm.a(var3, -27226, 1);
-                            var29.a(var25, var23, var24, (byte) 1, (byte) -1, (short) 17493, (short) -1);
+                            var29.addVertex(var25, var23, var24, (byte) 1, (byte) -1, (short) 17493, (short) -1);
                           } else {
                             if (var24 == var26) {
                               var24 = var26;
@@ -1009,7 +1009,7 @@ final class hc {
                               continue;
                             }
                             pm.a(var3, -27226, 1);
-                            var29.a(var23, var24, var26, (byte) 1, (byte) -1, (short) 17493, (short) -1);
+                            var29.addVertex(var23, var24, var26, (byte) 1, (byte) -1, (short) 17493, (short) -1);
                           }
                         }
                         var24 = var26;
@@ -1021,11 +1021,11 @@ final class hc {
               }
             }
           }
-          if (16384 < var29.field_g) {
-            var29.field_g = 3840;
+          if (16384 < var29.vertexCount) {
+            var29.vertexCount = 3840;
           }
-          kh.a(var3, (byte) -126);
-          this.field_t = new kh(var29);
+          Model.trimToUsedCounts(var3, (byte) -126);
+          this.field_t = new Model(var29);
           this.field_t.field_k = (pj) (var29.a(80, 1365, -1, -12, 12));
           this.field_t.field_q = var3.field_q;
         }
@@ -1042,7 +1042,7 @@ final class hc {
     final void d(int param0) {
         sg.field_s = this.field_b;
         if (param0 != -18916) {
-          this.field_m = (hc) null;
+          this.field_m = (Level) null;
         }
     }
 
@@ -1094,22 +1094,22 @@ final class hc {
 
     public static void a(byte param0) {
         if (param0 > -29) {
-          hc.a(true, true, -54, 24, true, 101);
+          Level.a(true, true, -54, 24, true, 101);
         }
         field_u = null;
         field_c = null;
         field_d = null;
     }
 
-    final kh a(int param0, boolean param1) {
+    final Model a(int param0, boolean param1) {
         int var9 = 0;
-        kh var4;
+        Model var4;
         mp var5;
         int var6;
         int var7;
         int var8;
         int var15;
-        rm var16;
+        MeshGeometry var16;
         int var10;
         int var11;
         int var12;
@@ -1121,8 +1121,8 @@ final class hc {
           this.field_w = -33;
         }
         if (this.field_y == null) {
-          var16 = new rm((this.field_x[0].length + 1) * (this.field_x.length + 1), this.field_v * 2 * this.field_r, 0);
-          var4 = new kh(var16);
+          var16 = new MeshGeometry((this.field_x[0].length + 1) * (this.field_x.length + 1), this.field_v * 2 * this.field_r, 0);
+          var4 = new Model(var16);
           var16.b();
           var16.field_G = null;
           var16.field_r = null;
@@ -1164,7 +1164,7 @@ final class hc {
               }
             }
           }
-          kh.a(var4, (byte) -102);
+          Model.trimToUsedCounts(var4, (byte) -102);
           this.field_y = var4;
           this.field_y.field_k = (pj) (var16.a(80, 1365, -1, -12, 12));
           this.field_y.field_k.field_i = new int[var16.field_k];
@@ -1182,12 +1182,12 @@ final class hc {
         return this.field_y;
     }
 
-    hc(int param0, String param1) {
+    Level(int param0, String param1) {
         this.field_w = -2147483648;
         this.field_n = 0;
         try {
           this.field_i = param1;
-          this.field_s = param0;
+          this.id = param0;
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "hc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

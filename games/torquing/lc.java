@@ -208,7 +208,7 @@ final class lc extends ro {
     final static void d(int param0) {
         int var23 = 0;
         int var26 = 0;
-        uf[] var1 = null;
+        TooltipPanel[] var1 = null;
         int[] var2 = null;
         short[] var3 = null;
         Sprite var4 = null;
@@ -218,7 +218,7 @@ final class lc extends ro {
         int var10 = 0;
         int var11_int = 0;
         int var12 = 0;
-        rm var13_ref_rm = null;
+        MeshGeometry var13_ref_rm = null;
         int var14 = 0;
         int var15_int = 0;
         int var16 = 0;
@@ -226,12 +226,12 @@ final class lc extends ro {
         int var18_int = 0;
         int var19_int = 0;
         int var27 = 0;
-        uf[] var28 = null;
-        uf[] var29 = null;
-        uf[] var30 = null;
-        uf[] var31 = null;
-        uf[] var32 = null;
-        uf[] var33 = null;
+        TooltipPanel[] var28 = null;
+        TooltipPanel[] var29 = null;
+        TooltipPanel[] var30 = null;
+        TooltipPanel[] var31 = null;
+        TooltipPanel[] var32 = null;
+        TooltipPanel[] var33 = null;
         int[] var34 = null;
         int[] var45 = null;
         RuntimeException decompiledCaughtException = null;
@@ -240,7 +240,7 @@ final class lc extends ro {
         int var13 = 0;
         Sprite var15 = null;
         Sprite var16_ref_t = null;
-        kh var17_ref_kh = null;
+        Model var17_ref_kh = null;
         sg var18 = null;
         int[] var19 = null;
         int[] var20 = null;
@@ -251,13 +251,13 @@ final class lc extends ro {
         Sprite var35 = null;
         Sprite var36 = null;
         Sprite var37 = null;
-        uf[] var38 = null;
-        uf[] var39 = null;
-        kh var40 = null;
-        uf[] var41 = null;
-        uf[] var1Lifetime1;
-        uf[] var1Lifetime2;
-        uf[] var1Lifetime3;
+        TooltipPanel[] var38 = null;
+        TooltipPanel[] var39 = null;
+        Model var40 = null;
+        TooltipPanel[] var41 = null;
+        TooltipPanel[] var1Lifetime1;
+        TooltipPanel[] var1Lifetime2;
+        TooltipPanel[] var1Lifetime3;
         int var14Lifetime1;
         int var14Lifetime2;
         int var15_intLifetime1;
@@ -268,7 +268,7 @@ final class lc extends ro {
         int var15_intLifetime1Lifetime1;
         var27 = Torquing.field_u;
         try {
-          var28 = new uf[]{new uf(qh.field_c, 0, 517, 298, (sm) null, 0, 0)};
+          var28 = new TooltipPanel[]{new TooltipPanel(qh.field_c, 0, 517, 298, (sm) null, 0, 0)};
           var2 = new int[]{0, 1, 2, 4, 6, 5, 9, 18, 7, 8};
           var3 = new short[]{(short)0, (short)2, (short)4, (short)3, (short)1, (short) 5};
           var4 = new Sprite(8, 1);
@@ -365,7 +365,7 @@ final class lc extends ro {
           var39 = rh.a((byte) -110, var1Lifetime2, var4, vp.field_G);
           var1Lifetime3 = var39;
           ln.a(0, dd.field_c.field_x, var39, (byte) -58);
-          var40 = new kh(new rm(8, 2, 2));
+          var40 = new Model(new MeshGeometry(8, 2, 2));
           var40.field_q = new mp(2);
           var40.field_l.a(-60, -60, 0);
           var40.field_l.a(60, -60, 0);

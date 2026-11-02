@@ -166,7 +166,7 @@ final class kp {
         return var6.toString();
     }
 
-    final static void a(double param0, int param1, double param2, double[] param3, hc param4) {
+    final static void a(double param0, int param1, double param2, double[] param3, Level param4) {
         try {
           SpriteState.c((byte) 76);
           param4.a(param2, param3, (byte) 37, param0);

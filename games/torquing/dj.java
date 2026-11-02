@@ -6,7 +6,7 @@ final class dj {
     static Sprite[] field_a;
     static String field_b;
 
-    final static int a(int param0, int param1, int param2, rm param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final static int a(int param0, int param1, int param2, MeshGeometry param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
         int var14 = 0;
         int fieldTemp$1 = 0;
         int[] var11 = null;

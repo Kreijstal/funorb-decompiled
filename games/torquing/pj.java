@@ -125,7 +125,7 @@ final class pj extends bk {
         this.field_E = false;
     }
 
-    pj(rm param0, int param1, int param2, int param3, int param4, int param5) {
+    pj(MeshGeometry param0, int param1, int param2, int param3, int param4, int param5) {
         int dupTemp$1 = 0;
         int incrementValue$0 = 0;
         int var7;
@@ -163,10 +163,10 @@ final class pj extends bk {
         this.field_j = param0.field_M;
         this.field_y = param0.field_B;
         this.field_v = param0.field_E;
-        this.field_x = param0.field_g;
-        this.field_p = param0.field_o;
-        this.field_u = param0.field_y;
-        this.field_t = param0.field_q;
+        this.field_x = param0.vertexCount;
+        this.field_p = param0.vertexX;
+        this.field_u = param0.vertexY;
+        this.field_t = param0.vertexZ;
         this.field_B = param0.field_G;
         this.field_q = param0.field_r;
         this.field_D = param0.field_I;

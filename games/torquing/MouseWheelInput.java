@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelInput {
-    static kh[] field_c;
+    static Model[] field_c;
     static int[] field_a;
     static Sprite field_b;
     static int field_d;

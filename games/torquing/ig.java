@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ig extends pc {
-    static hc field_q;
+    static Level field_q;
     static nj[] field_r;
 
     ig(uc param0, int param1) {

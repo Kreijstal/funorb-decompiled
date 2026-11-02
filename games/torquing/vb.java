@@ -134,10 +134,10 @@ final class vb {
                 kj.field_d.i((byte) -101);
                 kj.field_d.c((byte) -85);
                 mf.field_w = kj.field_d.readUnsignedShort(param2 ^ 7083);
-                uf.field_n = new byte[mf.field_w];
+                TooltipPanel.field_n = new byte[mf.field_w];
                 var8 = 0;
                 while (!(mf.field_w <= var8)) {
-                  uf.field_n[var8] = kj.field_d.f((byte) 111);
+                  TooltipPanel.field_n[var8] = kj.field_d.f((byte) 111);
                   var8++;
                   if (var9 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -443,7 +443,7 @@ final class vb {
                 break scanLoop1;
               }
               if (stackIn_62_0 >= stackIn_62_1) {
-                kh.field_m[var23] = var27 / var29 + var21;
+                Model.field_m[var23] = var27 / var29 + var21;
                 u.field_w[var23] = var28 / var29 + var22;
                 if (var7_int > var29) {
                   var7_int = var29;
@@ -492,7 +492,7 @@ final class vb {
                 var26 = param0.field_n[var23];
                 ok.field_D[var23] = var9 + (var18 * var26 + (var12 * var24 + var15 * var25) >> 16);
                 hm.field_s[var23] = var10 + (var16 * var25 + (var24 * var13 + var19 * var26) >> 16);
-                uf.field_r[var23] = (var26 * var20 + var25 * var17 + var14 * var24 >> 16) + var11;
+                TooltipPanel.field_r[var23] = (var26 * var20 + var25 * var17 + var14 * var24 >> 16) + var11;
                 var23++;
                 if (var30 != 0) {
                   decompiledFrameCompleted0 = false;

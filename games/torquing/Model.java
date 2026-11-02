@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kh extends IntrusiveNode {
+final class Model extends IntrusiveNode {
     static int[] field_p;
     pj field_k;
     static int[] field_m;
@@ -10,9 +10,9 @@ final class kh extends IntrusiveNode {
     static Sprite field_r;
     static String[] field_n;
     static String field_j;
-    rm field_l;
+    MeshGeometry field_l;
 
-    final static void a(kh param0, byte param1) {
+    final static void trimToUsedCounts(Model model, byte obfuscationGuard) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -20,28 +20,28 @@ final class kh extends IntrusiveNode {
         RuntimeException var2 = null;
         int var3 = 0;
         mp var4 = null;
-        rm var5 = null;
+        MeshGeometry var5 = null;
         int var3Lifetime1;
         int var3Lifetime2;
         try {
-          var5 = param0.field_l;
+          var5 = model.field_l;
           if (var5.field_M.length > var5.field_f) {
             var3 = var5.field_f;
             var5.field_M = u.a(32681, var5.field_M, var3);
             var5.field_B = u.a(32681, var5.field_B, var3);
             var5.field_E = u.a(32681, var5.field_E, var3);
           }
-          if (var5.field_g < var5.field_o.length) {
-            var3Lifetime1 = var5.field_g;
-            var5.field_o = u.a(32681, var5.field_o, var3Lifetime1);
-            var5.field_y = u.a(32681, var5.field_y, var3Lifetime1);
-            var5.field_q = u.a(32681, var5.field_q, var3Lifetime1);
+          if (var5.vertexCount < var5.vertexX.length) {
+            var3Lifetime1 = var5.vertexCount;
+            var5.vertexX = u.a(32681, var5.vertexX, var3Lifetime1);
+            var5.vertexY = u.a(32681, var5.vertexY, var3Lifetime1);
+            var5.vertexZ = u.a(32681, var5.vertexZ, var3Lifetime1);
             var5.field_j = mn.a(-6058, var5.field_j, 0, var3Lifetime1);
             if (null != var5.field_D) {
               var5.field_D = cc.a(var3Lifetime1, (byte) 127, var5.field_D);
             }
             var5.field_m = qi.a(var3Lifetime1, var5.field_m, (byte) 60);
-            var4 = param0.field_q;
+            var4 = model.field_q;
             if (null != var4.field_u) {
               var4.field_u = mn.a(-6058, var4.field_u, 255, var3Lifetime1);
             }
@@ -54,22 +54,22 @@ final class kh extends IntrusiveNode {
             var5.field_n = qi.a(var3Lifetime2, var5.field_n, (byte) 60);
             var5.field_x = qi.a(var3Lifetime2, var5.field_x, (byte) 60);
           }
-          if (param1 < -55) {
+          if (obfuscationGuard < -55) {
             return;
           }
-          kh.a(-88);
+          Model.a(-88);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_18_0 = var2;
           stackIn_18_1 = new StringBuilder().append("kh.A(");
-          if (param0 == null) {
+          if (model == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw rb.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -83,8 +83,8 @@ final class kh extends IntrusiveNode {
           field_o = null;
           return;
         }
-        kh var2 = (kh) null;
-        kh.a((kh) null, (byte) -125);
+        Model var2 = (Model) null;
+        Model.trimToUsedCounts((Model) null, (byte) -125);
         field_n = null;
         field_j = null;
         field_p = null;
@@ -93,13 +93,13 @@ final class kh extends IntrusiveNode {
         field_o = null;
     }
 
-    public kh() {
+    public Model() {
         this.field_k = null;
         this.field_l = null;
         this.field_q = null;
     }
 
-    kh(rm param0) {
+    Model(MeshGeometry param0) {
         try {
           this.field_k = null;
           this.field_l = param0;
@@ -109,9 +109,9 @@ final class kh extends IntrusiveNode {
         }
     }
 
-    kh(kh param0, boolean param1, boolean param2, boolean param3, boolean param4) {
+    Model(Model param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         try {
-          this.field_l = new rm(param0.field_l, param1, param2, param3, param4);
+          this.field_l = new MeshGeometry(param0.field_l, param1, param2, param3, param4);
           this.field_k = null;
           this.field_q = new mp();
         } catch (RuntimeException runtimeException) {

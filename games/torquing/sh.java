@@ -31,7 +31,7 @@ final class sh {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }
-          if (kh.field_o == mg.field_b) {
+          if (Model.field_o == mg.field_b) {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }
