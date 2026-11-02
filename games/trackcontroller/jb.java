@@ -15,8 +15,8 @@ final class jb {
           }
           jf.e(640);
           gl.field_E.l(24910);
-          ra.field_y = new rl(qg.field_c, (String) null, vg.field_o, param2, param1);
-          GameApplet.field_g = new pj(gl.field_E, ra.field_y);
+          LevelView.field_y = new rl(qg.field_c, (String) null, vg.field_o, param2, param1);
+          GameApplet.field_g = new pj(gl.field_E, LevelView.field_y);
           gl.field_E.d((byte) -70, GameApplet.field_g);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "jb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

@@ -67,10 +67,10 @@ final class nb extends PcmStream {
 
     final synchronized void b(boolean param0) {
         int var3 = TrackController.field_F ? 1 : 0;
-        mh var4 = (mh) (this.field_r.b(-48));
+        mh var4 = (mh) (this.field_r.first(-48));
         while (var4 != null) {
           var4.f(21645);
-          var4 = (mh) (this.field_r.a((byte) 91));
+          var4 = (mh) (this.field_r.next((byte) 91));
         }
         if (!param0) {
           this.field_C = -59L;
@@ -377,7 +377,7 @@ final class nb extends PcmStream {
         }
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mix(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var8 = 0;
@@ -399,18 +399,18 @@ final class nb extends PcmStream {
               }
               var7 = (int)((-1L + ((long)var4_int + (-this.field_C + this.field_H))) / (long)var4_int);
               this.field_C = this.field_C + (long)var4_int * (long)var7;
-              this.field_G.a(param0, param1, var7);
+              this.field_G.mix(param0, param1, var7);
               this.e(-17313);
               param2 = param2 - var7;
               param1 = param1 + var7;
               if (this.field_P.a()) {
                 continue;
               }
-              this.field_G.a(param0, param1, param2);
+              this.field_G.mix(param0, param1, param2);
               return;
             }
           }
-          this.field_G.a(param0, param1, param2);
+          this.field_G.mix(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -426,7 +426,7 @@ final class nb extends PcmStream {
         }
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void skip(int param0) {
         int var2;
         long var3;
         int var5;
@@ -443,14 +443,14 @@ final class nb extends PcmStream {
             var5 = (int)(((long)var2 + (-this.field_C + (this.field_H - 1L))) / (long)var2);
             this.field_C = this.field_C + (long)var5 * (long)var2;
             param0 = param0 - var5;
-            this.field_G.d(var5);
+            this.field_G.skip(var5);
             this.e(-17313);
             if (!this.field_P.a()) {
               break;
             }
           }
         }
-        this.field_G.d(param0);
+        this.field_G.skip(param0);
     }
 
     final synchronized void a(wb param0, int param1, boolean param2) {
@@ -683,7 +683,7 @@ final class nb extends PcmStream {
           }
         }
         var5 = -7 % ((57 - param0) / 55);
-        var6 = (mh) (this.field_r.a(8434, (long)this.field_N[param3]));
+        var6 = (mh) (this.field_r.get(8434, (long)this.field_N[param3]));
         if (var6 == null) {
           return;
         }
@@ -830,9 +830,9 @@ final class nb extends PcmStream {
           }
           param4.field_l.h(param4.field_w);
           if (param1 == null) {
-            param4.field_l.d(param0);
+            param4.field_l.skip(param0);
           } else {
-            param4.field_l.a(param1, param2, param0);
+            param4.field_l.mix(param1, param2, param0);
           }
           if (param4.field_l.i()) {
             this.field_G.field_o.a(param4.field_l);
@@ -1214,11 +1214,11 @@ final class nb extends PcmStream {
           if (param2 > 0) {
             var7 = new int[]{param2};
           }
-          var8 = (wl) (param4.field_i.b(-35));
+          var8 = (wl) (param4.field_i.first(-35));
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
             var9 = (int)var8.key;
-            var12 = (mh) (this.field_r.a(8434, (long)var9));
+            var12 = (mh) (this.field_r.get(8434, (long)var9));
             if (var12 == null) {
               var13 = kf.a(-97, param0, var9);
               if (var13 == null) {
@@ -1226,7 +1226,7 @@ final class nb extends PcmStream {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_r.a(false, (long)var9, var13);
+                this.field_r.put(false, (long)var9, var13);
                 decompiledFrameRemainder0 = !(var13.a(var8.field_k, (int[]) (var7), (byte) -61, param3));
               }
             } else {
@@ -1235,7 +1235,7 @@ final class nb extends PcmStream {
             if (decompiledFrameRemainder0) {
               var6_int = 0;
             }
-            var8 = (wl) (param4.field_i.a((byte) 91));
+            var8 = (wl) (param4.field_i.next((byte) 91));
           }
           if (var6_int != 0) {
             param4.b();

@@ -104,7 +104,7 @@ final class w extends wd implements m {
         try {
           var3 = null;
           if (param1 == jf.field_l) {
-            var3 = bf.field_c;
+            var3 = WhirlpoolDigest.field_c;
           } else {
             if (param1 != DelegatingCanvas.field_b) {
               if (param1 == ej.field_e) {
@@ -127,7 +127,7 @@ final class w extends wd implements m {
           var4.field_p = 0;
           var4.field_y = (t) ((Object) new ic(fk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(false, var4);
-          this.field_S = this.a(23879, me.field_k, (tg) (this));
+          this.field_S = this.a(23879, MovingBlock.field_k, (tg) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

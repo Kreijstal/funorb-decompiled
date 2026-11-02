@@ -257,7 +257,7 @@ final class ArchiveIndex {
             if (64 != param2.length) {
               throw new RuntimeException();
             }
-            this.field_j = cf.a(0, param0, param0.length, -6196);
+            this.field_j = cf.whirlpoolDigest(0, param0, param0.length, -6196);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_j[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

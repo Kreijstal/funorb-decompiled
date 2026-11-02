@@ -87,7 +87,7 @@ final class nd extends td implements m {
             nd.a(83, (PacketBuffer) null, -120);
           }
           if (sk.a(param1, param0, 1, param2)) {
-            stackIn_6_0 = me.d(-104);
+            stackIn_6_0 = MovingBlock.d(-104);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

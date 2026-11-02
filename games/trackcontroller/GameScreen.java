@@ -25,7 +25,7 @@ final class GameScreen {
         var8 = TrackController.field_F ? 1 : 0;
         ii.field_o = ii.field_o + 1;
         if (he.field_f[this.field_c] != null) {
-          he.field_f[this.field_c].a(true, 90);
+          he.field_f[this.field_c].tick(true, 90);
         }
         var2 = this.b((byte) 125);
         var3 = mb.field_b - var2;
@@ -94,27 +94,27 @@ final class GameScreen {
             }
           }
           if (this.field_e.d(0)) {
-            var6 = qh.field_b.field_x;
+            var6 = qh.field_b.levelIndex;
             var7 = this.a(db.clickX, 2600, wg.clickY);
             if (var7 != null) {
               this.field_e.field_a = true;
               qh.field_b = var7;
             }
-            var6 = var6 - qh.field_b.field_x;
+            var6 = var6 - qh.field_b.levelIndex;
             mb.field_b = mb.field_b - var6 * 26;
           }
           if (this.field_e.b(false)) {
-            var6Lifetime1 = qh.field_b.field_x;
+            var6Lifetime1 = qh.field_b.levelIndex;
             if (RandomAccessCacheFile.field_b == 0 &&
-              qh.field_b.field_x > 1) {
-              qh.field_b = gj.field_f[-2 + qh.field_b.field_x];
+              qh.field_b.levelIndex > 1) {
+              qh.field_b = gj.field_f[-2 + qh.field_b.levelIndex];
             } else {
               if (RandomAccessCacheFile.field_b == 1 &&
-                gj.field_f.length > qh.field_b.field_x) {
-                qh.field_b = gj.field_f[qh.field_b.field_x];
+                gj.field_f.length > qh.field_b.levelIndex) {
+                qh.field_b = gj.field_f[qh.field_b.levelIndex];
               }
             }
-            var6Lifetime1 = var6Lifetime1 - qh.field_b.field_x;
+            var6Lifetime1 = var6Lifetime1 - qh.field_b.levelIndex;
             mb.field_b = mb.field_b - var6Lifetime1 * 26;
           }
         }
@@ -135,11 +135,11 @@ final class GameScreen {
           field_f = 111;
         }
         int var2 = 0;
-        if (8 > qh.field_b.field_x) {
-          var2 = -208 + qh.field_b.field_x * 26;
+        if (8 > qh.field_b.levelIndex) {
+          var2 = -208 + qh.field_b.levelIndex * 26;
         }
-        if (!(qh.field_b.field_x <= 24)) {
-          var2 = (-24 + qh.field_b.field_x) * 26;
+        if (!(qh.field_b.levelIndex <= 24)) {
+          var2 = (-24 + qh.field_b.levelIndex) * 26;
         }
         return var2;
     }
@@ -166,7 +166,7 @@ final class GameScreen {
         var8 = TrackController.field_F ? 1 : 0;
         try {
           var3_int = param1;
-          var4 = me.field_q;
+          var4 = MovingBlock.field_q;
           while (var3_int < sa.field_I.length) {
             var5 = mj.field_b[var3_int];
             stackIn_13_0 = var5;
@@ -201,7 +201,7 @@ final class GameScreen {
           param0 < 182 &&
           param2 >= 0 &&
           param2 < 390) {
-          var4 = qh.field_b.field_x - (-((param2 - (mb.field_b - 2600)) / 26) + 100 + 8);
+          var4 = qh.field_b.levelIndex - (-((param2 - (mb.field_b - 2600)) / 26) + 100 + 8);
           if (var4 >= 0 &&
             !(gj.field_f.length <= var4)) {
             return gj.field_f[var4];
@@ -253,7 +253,7 @@ final class GameScreen {
               var6 = ii.field_r[var5];
               var6.h(47, var3);
               var7 = 86;
-              var8 = var10.a(me.field_p[var4], var7, -6 + (var3 + 26) - var11.field_G, 606 - var7, 1000, 0, -1, 0, 0, 26);
+              var8 = var10.a(MovingBlock.field_p[var4], var7, -6 + (var3 + 26) - var11.field_G, 606 - var7, 1000, 0, -1, 0, 0, 26);
               var3 = var3 + (var8 * 26 + 26);
             }
           }
@@ -285,7 +285,7 @@ final class GameScreen {
         Object var9;
         Object var10;
         int var11;
-        ra var12;
+        LevelView var12;
         int var13;
         int[] var17;
         int stackIn_54_0Lifetime1;
@@ -517,7 +517,7 @@ final class GameScreen {
         if (param1 != 1) {
           return true;
         }
-        stackIn_5_0 = (qh.field_b != null) && ((ArchiveIndex.field_i + 1) >= qh.field_b.field_x);
+        stackIn_5_0 = (qh.field_b != null) && ((ArchiveIndex.field_i + 1) >= qh.field_b.levelIndex);
         return stackIn_5_0;
     }
 
@@ -710,41 +710,41 @@ final class GameScreen {
                   if (this.field_e.field_e >= 0) {
                     this.field_e.b((byte) -113);
                   } else {
-                    var3 = qh.field_b.field_x;
+                    var3 = qh.field_b.levelIndex;
                     if (kg.field_d == 98) {
                       RandomAccessCacheFile.field_b = 2;
-                      if (qh.field_b.field_x > 1) {
-                        qh.field_b = gj.field_f[-2 + qh.field_b.field_x];
+                      if (qh.field_b.levelIndex > 1) {
+                        qh.field_b = gj.field_f[-2 + qh.field_b.levelIndex];
                       }
                       this.field_e.field_a = false;
                     }
                     if (99 == kg.field_d) {
                       RandomAccessCacheFile.field_b = 2;
-                      if (gj.field_f.length > qh.field_b.field_x) {
-                        qh.field_b = gj.field_f[qh.field_b.field_x];
+                      if (gj.field_f.length > qh.field_b.levelIndex) {
+                        qh.field_b = gj.field_f[qh.field_b.levelIndex];
                       }
                       this.field_e.field_a = false;
                     }
                     if (RandomAccessCacheFile.field_b == 0 && (kg.field_d == 83 ||
                       kg.field_d == 84)) {
-                      if (qh.field_b.field_x > 1) {
-                        qh.field_b = gj.field_f[-2 + qh.field_b.field_x];
+                      if (qh.field_b.levelIndex > 1) {
+                        qh.field_b = gj.field_f[-2 + qh.field_b.levelIndex];
                       }
                       this.field_e.field_a = false;
                     }
                     if (RandomAccessCacheFile.field_b == 1 && (kg.field_d == 83 ||
                       kg.field_d == 84)) {
-                      if (qh.field_b.field_x < gj.field_f.length) {
-                        qh.field_b = gj.field_f[qh.field_b.field_x];
+                      if (qh.field_b.levelIndex < gj.field_f.length) {
+                        qh.field_b = gj.field_f[qh.field_b.levelIndex];
                       }
                       this.field_e.field_a = false;
                     }
                     if (2 != RandomAccessCacheFile.field_b) {
-                      var3 = var3 - qh.field_b.field_x;
+                      var3 = var3 - qh.field_b.levelIndex;
                       mb.field_b = mb.field_b - 26 * var3;
                     } else {
                       if (kg.field_d == 104) {
-                        var4 = qh.field_b.field_x - 9;
+                        var4 = qh.field_b.levelIndex - 9;
                         if (var4 < 0) {
                           var4 = 0;
                         }
@@ -752,7 +752,7 @@ final class GameScreen {
                         this.field_e.field_a = false;
                       }
                       if (kg.field_d == 105) {
-                        var4Lifetime1 = 7 + qh.field_b.field_x;
+                        var4Lifetime1 = 7 + qh.field_b.levelIndex;
                         if (var4Lifetime1 >= gj.field_f.length) {
                           var4Lifetime1 = gj.field_f.length - 1;
                         }
@@ -768,7 +768,7 @@ final class GameScreen {
                         this.field_e.field_a = false;
                       }
                       if (84 == kg.field_d &&
-                        1 + ArchiveIndex.field_i >= qh.field_b.field_x) {
+                        1 + ArchiveIndex.field_i >= qh.field_b.levelIndex) {
                         si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
                         SpriteState.field_w = null;
                         rk.field_bb = null;
@@ -776,7 +776,7 @@ final class GameScreen {
                         sc.field_g = -1;
                         oe.field_e = 0;
                       }
-                      var3 = var3 - qh.field_b.field_x;
+                      var3 = var3 - qh.field_b.levelIndex;
                       mb.field_b = mb.field_b - 26 * var3;
                     }
                   }
@@ -1169,7 +1169,7 @@ final class GameScreen {
                         break scanLoop1;
                       }
                       UiWidget.field_z[3].e(-UiWidget.field_z[3].field_t + 640 >> 1, 1);
-                      if (qh.field_b.field_x > (1 + ArchiveIndex.field_i)) {
+                      if (qh.field_b.levelIndex > (1 + ArchiveIndex.field_i)) {
                         cl.a(nd.field_L, 90, 254, 57, 176, 4);
                         if (!jj.s(param0 + 54)) {
                           var4_ref_String = Archive.field_a;
@@ -1192,15 +1192,15 @@ final class GameScreen {
                       var4 = stackIn_76_0;
                       ii.field_r[53].c(576, 431, var4);
                       var5 = this.a(kf.mouseX, 2600, fg.mouseY);
-                      var6 = 269 - (-(26 * (1 - qh.field_b.field_x)) - mb.field_b);
+                      var6 = 269 - (-(26 * (1 - qh.field_b.levelIndex)) - mb.field_b);
                       var7 = 359;
                       var8 = 62 + bk.field_E.field_u;
                       SoftwareRasterizer.e(var7, var8, var7 + 182 + 10, var8 + 390);
                       var9 = gj.field_f;
                       for (var10 = 0; var9.length > var10; var10++) {
                         var11 = var9[var10];
-                        var12Lifetime1 = var11.field_q;
-                        if (var11.field_x > (ArchiveIndex.field_i + 1)) {
+                        var12Lifetime1 = var11.name;
+                        if (var11.levelIndex > (ArchiveIndex.field_i + 1)) {
                           var12Lifetime1 = qg.field_a;
                         }
                         var13 = 0;
@@ -1218,7 +1218,7 @@ final class GameScreen {
                           var13 = 1;
                         }
                         bk.field_E.c(var12Lifetime1, 390, var6, var13, -1);
-                        bk.field_E.a(var11.field_x + ". ", 390, var6, var13, -1);
+                        bk.field_E.a(var11.levelIndex + ". ", 390, var6, var13, -1);
                         var6 += 26;
                       }
                       SoftwareRasterizer.d();

@@ -36,7 +36,7 @@ final class Archive {
             throw new RuntimeException("");
           }
           if (null != this.field_f[param3][param2]) {
-            var7 = me.a(false, 22692, this.field_f[param3][param2]);
+            var7 = MovingBlock.a(false, 22692, this.field_f[param3][param2]);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -661,7 +661,7 @@ final class Archive {
               decompiledFrameRemainder0 = (stackIn_29_0[3] != 0);
             }
             if (decompiledFrameRemainder0) {
-              var35 = me.a(true, 22692, this.field_d[param1]);
+              var35 = MovingBlock.a(true, 22692, this.field_d[param1]);
               var25 = var35;
               var9 = var25;
               var26 = new PacketBuffer(var35);
@@ -670,7 +670,7 @@ final class Archive {
             }
           }
           if (decompiledFrameRemainder1) {
-            var9 = me.a(false, param0 ^ 22688, this.field_d[param1]);
+            var9 = MovingBlock.a(false, param0 ^ 22688, this.field_d[param1]);
           }
           try {
             var36 = UiWidget.a(-127, var9);

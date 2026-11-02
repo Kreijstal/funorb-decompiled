@@ -59,7 +59,7 @@ final class qh {
             qh.a((Archive) null, -65, (Archive) null, -113, 27);
           }
           if (sk.a(param3, param2, param4 + 11949, param1)) {
-            stackIn_6_0 = ra.a(param4 + 11446, param0.a(param1, param3, (byte) -67));
+            stackIn_6_0 = LevelView.a(param4 + 11446, param0.a(param1, param3, (byte) -67));
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

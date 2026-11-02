@@ -67,7 +67,7 @@ abstract class GameShell extends GameApplet {
                                 og.f((byte) -83);
                                 return;
                               }
-                              hb.a((Throwable) null, 0, "MGS1: " + jc.b(100));
+                              hb.reportClientError((Throwable) null, 0, "MGS1: " + jc.b(100));
                               GameKeyHandler.a((byte) 119);
                               return;
                             }
@@ -91,7 +91,7 @@ abstract class GameShell extends GameApplet {
           }
           return;
         }
-        hb.a((Throwable) null, 0, "MGS2: " + jc.b(90));
+        hb.reportClientError((Throwable) null, 0, "MGS2: " + jc.b(90));
         GameKeyHandler.a((byte) 123);
     }
 
@@ -311,7 +311,7 @@ abstract class GameShell extends GameApplet {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
-            hb.a((Throwable) ((Object) var6_ref), param3 ^ 16813, (String) null);
+            hb.reportClientError((Throwable) ((Object) var6_ref), param3 ^ 16813, (String) null);
             this.a("crash", (byte) 100);
           }
           return;
@@ -431,7 +431,7 @@ abstract class GameShell extends GameApplet {
             ma.a(-9969, gd.b((byte) 77));
           }
           if (var4 == 10) {
-            ra.field_C.c(17, 7);
+            LevelView.field_C.c(17, 7);
           }
           if (var4 == 11) {
             q.a(gd.b((byte) 77), -1);
@@ -458,7 +458,7 @@ abstract class GameShell extends GameApplet {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              hb.a((Throwable) ((Object) var5), 0, "S1");
+              hb.reportClientError((Throwable) ((Object) var5), 0, "S1");
               var10 = (String) null;
               kd.a((String) null, (byte) 42);
               he.field_c = null;

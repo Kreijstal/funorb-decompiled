@@ -277,7 +277,7 @@ abstract class db extends wd {
           if (param3 > 0 &&
             param0 > 0) {
             var9 = param1 * SoftwareRasterizer.stride + param4;
-            ra.a(var9, param2.field_t, param0, var8, (byte) -64, SoftwareRasterizer.pixels, param3, param2.pixels, -param3 + SoftwareRasterizer.stride, var7, var6_int, param2.field_q);
+            LevelView.a(var9, param2.field_t, param0, var8, (byte) -64, SoftwareRasterizer.pixels, param3, param2.pixels, -param3 + SoftwareRasterizer.stride, var7, var6_int, param2.field_q);
             var10 = 77 / ((param5 - 56) / 53);
             return;
           }

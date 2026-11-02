@@ -91,11 +91,11 @@ final class wb extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var19[var10Lifetime2];
-                var14 = (wl) (this.field_i.a(8434, (long)var13));
+                var14 = (wl) (this.field_i.get(8434, (long)var13));
                 if (var14 == null) {
                   var15 = new wl(new byte[128]);
                   var14 = var15;
-                  this.field_i.a(false, (long)var13, var15);
+                  this.field_i.put(false, (long)var13, var15);
                 }
                 var14.field_k[var11Lifetime2] = (byte) 1;
               }

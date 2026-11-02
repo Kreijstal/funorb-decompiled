@@ -144,7 +144,7 @@ class oa {
           this.field_m = 0;
         }
         if (this.field_i != null) {
-          this.field_i.d(param0);
+          this.field_i.skip(param0);
           return;
         }
     }
@@ -415,7 +415,7 @@ class oa {
           this.field_m = 0;
         }
         if (this.field_i != null) {
-          this.field_i.a(param0, 0, param1);
+          this.field_i.mix(param0, 0, param1);
         }
         this.field_u = qg.a(false);
     }

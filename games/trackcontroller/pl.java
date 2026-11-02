@@ -218,7 +218,7 @@ final class pl {
             var6_ref_aj.field_j = var4_long;
             var6_ref_aj.unlink(-62);
           } else {
-            hb.a((Throwable) null, param0 + 3570, "HS1: " + jc.b(116));
+            hb.reportClientError((Throwable) null, param0 + 3570, "HS1: " + jc.b(116));
             GameKeyHandler.a((byte) 118);
           }
           if (param0 != -3570) {

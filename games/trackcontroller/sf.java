@@ -1389,7 +1389,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "checking");
                 if (null != var2) {
-                  bf.field_d = ta.a(32200, var2);
+                  WhirlpoolDigest.field_d = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_namealreadytaken");
                 if (var2 != null) {
@@ -1941,7 +1941,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "waitingfor_extradata");
                 if (var2 != null) {
-                  ra.field_w = ta.a(32200, var2);
+                  LevelView.field_w = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "waitingfor_languages");
                 if (var2 != null) {
@@ -2735,20 +2735,20 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "reconnect_lost_seq,0");
                 if (var2 != null) {
-                  ra.field_t[0] = ta.a(32200, var2);
+                  LevelView.field_t[0] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "reconnect_lost_seq,1");
                 if (null != var2) {
-                  ra.field_t[1] = ta.a(32200, var2);
+                  LevelView.field_t[1] = ta.a(32200, var2);
                 }
                 var3 = -120 / ((-49 - param0) / 56);
                 var2 = va.a(0, "reconnect_lost_seq,2");
                 if (null != var2) {
-                  ra.field_t[2] = ta.a(32200, var2);
+                  LevelView.field_t[2] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "reconnect_lost_seq,3");
                 if (null != var2) {
-                  ra.field_t[3] = ta.a(32200, var2);
+                  LevelView.field_t[3] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "reconnect_lost");
                 if (var2 != null) {
@@ -2832,7 +2832,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "fs_button_close");
                 if (null != var2) {
-                  me.field_k = ta.a(32200, var2);
+                  MovingBlock.field_k = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "fs_button_members");
                 if (var2 != null) {
@@ -2844,7 +2844,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
-                  bf.field_c = ta.a(32200, var2);
+                  WhirlpoolDigest.field_c = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "fs_focus");
                 if (null != var2) {

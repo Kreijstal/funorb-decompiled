@@ -23,7 +23,7 @@ final class pa {
         try {
           var4 = (dh) (field_c.first(param1 - 38));
           while (var4 != null) {
-            me.a(var4, 0, param0);
+            MovingBlock.a(var4, 0, param0);
             var4 = (dh) (field_c.next(param1 - 30));
           }
           if (param1 != 40) {

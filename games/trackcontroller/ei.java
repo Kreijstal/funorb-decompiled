@@ -97,7 +97,7 @@ final class ei extends IntrusiveNode {
           return v.field_c + " - " + ha.field_x.a("commonui", 0) + "%";
         }
         if (!ok.field_G.c(117)) {
-          return ra.field_w;
+          return LevelView.field_w;
         }
         if (param0 <= 96) {
           return (String) null;
@@ -164,8 +164,8 @@ final class ei extends IntrusiveNode {
         ij.a(13809);
         mi.k(10228);
         if (wf.a(-28510)) {
-          ra.field_C.c(1, 7);
-          me.a(param0 + 18600, 0);
+          LevelView.field_C.c(1, 7);
+          MovingBlock.a(param0 + 18600, 0);
         }
         if (param0 != -18601) {
           return;

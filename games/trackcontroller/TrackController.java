@@ -44,7 +44,7 @@ public final class TrackController extends GameShell {
                 decompiledFrameRemainder1 = (null != ua.field_L);
                 if ((decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder1 = !(!ua.field_L.c(-127)))) {
-                  ua.field_L.a(false, 103);
+                  ua.field_L.tick(false, 103);
                   decompiledFrameRemainder0 = false;
                 }
               }
@@ -56,7 +56,7 @@ public final class TrackController extends GameShell {
                   sc.field_g = stackIn_50_0;
                 }
                 if (ib.field_a == -1) {
-                  ua.field_L.a(true, 90);
+                  ua.field_L.tick(true, 90);
                 }
                 while (mh.e(127)) {
                 }
@@ -95,7 +95,7 @@ public final class TrackController extends GameShell {
               }
             }
           } else {
-            he.field_f[ib.field_a].a(false, param0 + 83);
+            he.field_f[ib.field_a].tick(false, param0 + 83);
           }
         } else {
           if (1 != dd.field_o) {
@@ -287,7 +287,7 @@ public final class TrackController extends GameShell {
           qd.a((java.awt.Canvas) (var7), 0, 0, param0 + 2741);
           return;
         }
-        ud.a(128, 100.0f, ra.field_w);
+        ud.a(128, 100.0f, LevelView.field_w);
         l.a((byte) 105, (java.awt.Canvas) (var7));
     }
 
@@ -354,7 +354,7 @@ public final class TrackController extends GameShell {
         pa.a((byte) -125);
         ac.a(105);
         p.b((byte) 117);
-        ra.a(param0 - 208);
+        LevelView.a(param0 - 208);
         ArchiveIndex.a(true);
         vi.a(-25590);
         ArchiveSource.a(false);
@@ -378,7 +378,7 @@ public final class TrackController extends GameShell {
         fd.a((byte) 111);
         SpriteState.a((byte) 12);
         LevelGrid.a((byte) 107);
-        me.a((byte) 41);
+        MovingBlock.a((byte) 41);
         u.a((byte) 105);
         pg.a();
         c.a((byte) 107);
@@ -453,7 +453,7 @@ public final class TrackController extends GameShell {
         ji.a((byte) -64);
         wl.d(-99);
         oc.a((byte) -63);
-        bf.a((byte) -125);
+        WhirlpoolDigest.a((byte) -125);
         mh.d(-24011);
         uh.a((byte) 104);
         sa.b(true);
@@ -673,7 +673,7 @@ public final class TrackController extends GameShell {
         while (ge.a(kg.field_b, param0)) {
           this.e((byte) 85);
         }
-        me.a(-1, 0);
+        MovingBlock.a(-1, 0);
         if (IntrusiveNode.c(72)) {
           var2Lifetime1 = this.d((byte) 103);
           if (2 == var2Lifetime1) {
@@ -1115,7 +1115,7 @@ public final class TrackController extends GameShell {
           var28 = dupTemp$2;
           var10 = var28;
           dupTemp$3 = new Sprite(156, var8Lifetime2);
-          bf.field_o = dupTemp$3;
+          WhirlpoolDigest.field_o = dupTemp$3;
           var11 = dupTemp$3;
           dupTemp$4 = new Sprite(156, var8Lifetime2);
           vl.field_K = dupTemp$4;

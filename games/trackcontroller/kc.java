@@ -10,7 +10,7 @@ final class kc {
         la var6 = null;
         int var4 = 0;
         try {
-          var6 = ra.field_C;
+          var6 = LevelView.field_C;
           var6.c(param0, 7);
           var6.position = var6.position + 1;
           var4 = var6.position;
@@ -89,7 +89,7 @@ final class kc {
             return;
           }
           if (var2 != 2) {
-            hb.a((Throwable) null, 0, "A1: " + jc.b(96));
+            hb.reportClientError((Throwable) null, 0, "A1: " + jc.b(96));
             GameKeyHandler.a((byte) 120);
             return;
           }

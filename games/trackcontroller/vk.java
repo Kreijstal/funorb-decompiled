@@ -188,7 +188,7 @@ final class vk extends IntrusiveNode {
           }
           var2Lifetime21 = DualLinkNode.a("level", -523);
           if (null != var2Lifetime21) {
-            ra.field_r = ta.a(32200, var2Lifetime21);
+            LevelView.field_r = ta.a(32200, var2Lifetime21);
           }
           var2Lifetime22 = DualLinkNode.a("colon_space", -523);
           if (var2Lifetime22 != null) {
@@ -200,19 +200,19 @@ final class vk extends IntrusiveNode {
           }
           var2Lifetime24 = DualLinkNode.a("instructionLabels,0", param0 - 526);
           if (var2Lifetime24 != null) {
-            me.field_p[0] = ta.a(param0 + 32197, var2Lifetime24);
+            MovingBlock.field_p[0] = ta.a(param0 + 32197, var2Lifetime24);
           }
           var2Lifetime25 = DualLinkNode.a("instructionLabels,1", -523);
           if (null != var2Lifetime25) {
-            me.field_p[1] = ta.a(32200, var2Lifetime25);
+            MovingBlock.field_p[1] = ta.a(32200, var2Lifetime25);
           }
           var2Lifetime26 = DualLinkNode.a("instructionLabels,2", param0 ^ -522);
           if (var2Lifetime26 != null) {
-            me.field_p[2] = ta.a(32200, var2Lifetime26);
+            MovingBlock.field_p[2] = ta.a(32200, var2Lifetime26);
           }
           var2Lifetime27 = DualLinkNode.a("instructionLabels,3", -523);
           if (var2Lifetime27 != null) {
-            me.field_p[3] = ta.a(32200, var2Lifetime27);
+            MovingBlock.field_p[3] = ta.a(32200, var2Lifetime27);
           }
           var2Lifetime28 = DualLinkNode.a("tooltips,0", -523);
           if (null != var2Lifetime28) {

@@ -188,7 +188,7 @@ class td extends UiWidget implements je {
             return false;
           }
           while (var9 != null) {
-            if (var9.b(param6 + 10000409)) {
+            if (var9.isLinked(param6 + 10000409)) {
               if (var9.h(-85) &&
                 var9.a(param0, param1, param2, param3, param4, param5, (byte) 127)) {
                 return true;
@@ -230,7 +230,7 @@ class td extends UiWidget implements je {
           }
           var9 = (UiWidget) (var8.d(-126));
           while (var9 != null) {
-            if (var9.b(10000536)) {
+            if (var9.isLinked(10000536)) {
               if (!var9.a(param0, param1, param2, param3, param4 ^ 0, param5 + this.field_p, this.field_m + param6)) {
                 var9 = (UiWidget) (var8.e(37));
                 continue;
@@ -342,7 +342,7 @@ class td extends UiWidget implements je {
           var7 = new ue(this.field_B);
           var8 = (UiWidget) (var7.d(127));
           while (var8 != null) {
-            if (var8.b(10000536)) {
+            if (var8.isLinked(10000536)) {
               var8.a(param0, param1, param2, param3 + this.field_m, param4, param5 + this.field_p);
               var8 = (UiWidget) (var7.e(37));
               continue;
@@ -398,7 +398,7 @@ class td extends UiWidget implements je {
           var10 = new ue(this.field_B);
           var9 = (UiWidget) (var10.d(125));
           while (var9 != null) {
-            if (var9.b(10000536)) {
+            if (var9.isLinked(10000536)) {
               if (var9.h(-119) &&
                 var9.a((byte) 103, param1, param2, param3)) {
                 return true;
@@ -564,7 +564,7 @@ class td extends UiWidget implements je {
           var5 = new ue(this.field_B);
           var6 = (UiWidget) (var5.d(-66));
           while (var6 != null) {
-            if (var6.b(10000536)) {
+            if (var6.isLinked(10000536)) {
               var6.a(param0 + this.field_m, this.field_p + param1, (byte) -124, param3);
               var6 = (UiWidget) (var5.e(param2 ^ -95));
               continue;

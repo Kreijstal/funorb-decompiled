@@ -78,7 +78,7 @@ final class hj implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var5 = (String) null;
-            hb.a((Throwable) ((Object) var1), 0, (String) null);
+            hb.reportClientError((Throwable) ((Object) var1), 0, (String) null);
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {

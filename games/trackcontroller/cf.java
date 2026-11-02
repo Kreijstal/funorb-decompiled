@@ -26,7 +26,7 @@ final class cf extends IntrusiveNode {
         field_p = null;
     }
 
-    final static byte[] a(int param0, byte[] param1, int param2, int param3) {
+    final static byte[] whirlpoolDigest(int param0, byte[] param1, int param2, int param3) {
         int var5_int = 0;
         byte[] var4 = null;
         int var7 = 0;
@@ -37,7 +37,7 @@ final class cf extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        bf var5 = null;
+        WhirlpoolDigest var5 = null;
         byte[] var6 = null;
         byte[] var9 = null;
         byte[] var10 = null;
@@ -55,7 +55,7 @@ final class cf extends IntrusiveNode {
           if (param3 != -6196) {
             field_m = (String) null;
           }
-          var5 = new bf();
+          var5 = new WhirlpoolDigest();
           var5.a(param3 + 6185);
           var5.a(var4, (long)(param2 * 8), 30654);
           var10 = new byte[64];

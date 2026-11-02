@@ -4,23 +4,23 @@
 final class NodeHashTable {
     static int field_h;
     static int field_e;
-    private IntrusiveNode[] field_c;
+    private IntrusiveNode[] buckets;
     private IntrusiveNode field_d;
     static String field_a;
     private int field_f;
     static int field_g;
-    private int field_b;
+    private int bucketCount;
     private IntrusiveNode field_j;
     static int[] field_k;
     static String field_i;
 
-    final IntrusiveNode a(int param0, long param1) {
+    final IntrusiveNode get(int param0, long param1) {
         IntrusiveNode var5 = null;
         int var6 = TrackController.field_F ? 1 : 0;
         if (param0 != 8434) {
           return (IntrusiveNode) null;
         }
-        IntrusiveNode var4 = this.field_c[(int)((long)(this.field_b - 1) & param1)];
+        IntrusiveNode var4 = this.buckets[(int)((long)(this.bucketCount - 1) & param1)];
         this.field_j = var4.next;
         while (var4 != this.field_j) {
           if (~param1 == ~this.field_j.key) {
@@ -100,19 +100,19 @@ final class NodeHashTable {
         }
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode next(byte param0) {
         int fieldTemp$0 = 0;
         IntrusiveNode var2;
         int var3;
         var3 = TrackController.field_F ? 1 : 0;
         if (this.field_f > 0 &&
-          this.field_c[this.field_f - 1] != this.field_d) {
+          this.buckets[this.field_f - 1] != this.field_d) {
           var2 = this.field_d;
           this.field_d = var2.next;
           return var2;
         }
         do {
-          if (this.field_b <= this.field_f) {
+          if (this.bucketCount <= this.field_f) {
             if (param0 == 91) {
               return null;
             }
@@ -121,19 +121,19 @@ final class NodeHashTable {
           }
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          var2 = this.field_c[fieldTemp$0].next;
-        } while (this.field_c[-1 + this.field_f] == var2);
+          var2 = this.buckets[fieldTemp$0].next;
+        } while (this.buckets[-1 + this.field_f] == var2);
         this.field_d = var2.next;
         return var2;
     }
 
-    final void a(boolean param0, long param1, IntrusiveNode param2) {
+    final void put(boolean param0, long param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param2.previous) {
             param2.unlink(-38);
           }
-          var5 = this.field_c[(int)((long)(this.field_b - 1) & param1)];
+          var5 = this.buckets[(int)((long)(this.bucketCount - 1) & param1)];
           param2.next = var5;
           if (param0) {
             this.field_f = 37;
@@ -147,12 +147,12 @@ final class NodeHashTable {
         }
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode first(int param0) {
         if (param0 > -34) {
-          this.b(16);
+          this.first(16);
         }
         this.field_f = 0;
-        return this.a((byte) 91);
+        return this.next((byte) 91);
     }
 
     public static void a(int param0) {
@@ -169,12 +169,12 @@ final class NodeHashTable {
         IntrusiveNode dupTemp$0 = null;
         IntrusiveNode var3 = null;
         this.field_f = 0;
-        this.field_c = new IntrusiveNode[param0];
-        this.field_b = param0;
+        this.buckets = new IntrusiveNode[param0];
+        this.bucketCount = param0;
         for (var2 = 0; var2 < param0; var2++) {
           dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
-          this.field_c[var2] = dupTemp$0;
+          this.buckets[var2] = dupTemp$0;
           var3.next = var3;
           var3.previous = var3;
         }

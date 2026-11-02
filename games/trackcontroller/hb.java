@@ -14,7 +14,7 @@ final class hb {
     static String field_c;
     static String field_d;
 
-    final static void a(Throwable param0, int param1, String param2) {
+    final static void reportClientError(Throwable param0, int param1, String param2) {
         try {
           PlatformTaskDispatcher stackIn_14_0;
           boolean stackIn_14_1;
@@ -185,7 +185,7 @@ final class hb {
         try {
           if (param0 >= -92) {
             var4 = (String) null;
-            hb.a((Throwable) null, 126, (String) null);
+            hb.reportClientError((Throwable) null, 126, (String) null);
           }
           if (param1 == null) {
             return;

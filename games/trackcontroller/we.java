@@ -36,7 +36,7 @@ abstract class we {
         int var6 = 0;
         int var7 = TrackController.field_F ? 1 : 0;
         try {
-          var8 = ra.field_C;
+          var8 = LevelView.field_C;
           var9 = var8;
           var9.c(param0, 7);
           var9.position = var9.position + 1;

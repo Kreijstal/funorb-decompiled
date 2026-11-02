@@ -34,7 +34,7 @@ final class ba {
             var9 = (String) null;
             ba.a((String) null, true);
           }
-          stackIn_3_0 = me.a(param2, param1, param5, var7, param0, param6 + 92, var8);
+          stackIn_3_0 = MovingBlock.a(param2, param1, param5, var7, param0, param6 + 92, var8);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

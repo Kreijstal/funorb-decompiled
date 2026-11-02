@@ -119,7 +119,7 @@ final class vd extends td implements jg, m, a {
         if (uh.field_b[param1] == null) {
           uh.field_b[param1] = PcmSampleStream.a(va.field_d[param1], 100, nd.field_G[param1]);
         }
-        if (!uh.field_b[param1].b(10000536)) {
+        if (!uh.field_b[param1].isLinked(10000536)) {
           uh.field_b[param1].e(0);
           uh.field_b[param1].f(param0);
           bd.a(-31085, uh.field_b[param1]);

@@ -115,7 +115,7 @@ final class ij implements t {
           if (param2 > -120) {
             ij.b(63);
           }
-          me.a(param0, 0, param1);
+          MovingBlock.a(param0, 0, param1);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ij.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -268,7 +268,7 @@ final class ij implements t {
             sa.field_I[-2 + var4] = ma.field_a;
             mj.field_b[-2 + var4] = 0;
             ac.field_c[0] = 4;
-            sa.field_I[-1 + var4] = me.field_k;
+            sa.field_I[-1 + var4] = MovingBlock.field_k;
             mj.field_b[-1 + var4] = 1;
             ac.field_c[1] = 5;
           } else if (di.field_h == 1) {
@@ -284,13 +284,13 @@ final class ij implements t {
               sa.field_I[var5] = ok.field_C[var5];
             }
             sa.field_I[-2 + var4] = "";
-            sa.field_I[var4 - 1] = me.field_k;
+            sa.field_I[var4 - 1] = MovingBlock.field_k;
             mj.field_b[-1 + var4] = 0;
             ac.field_c[0] = 5;
           } else if (di.field_h != 2) {
             if (di.field_h == 3) {
               if (!rg.field_c.field_l) {
-                var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, bf.field_c, ok.field_C);
+                var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, WhirlpoolDigest.field_c, ok.field_C);
               } else {
                 var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, GameKeyHandler.field_b, ok.field_C);
               }
@@ -305,7 +305,7 @@ final class ij implements t {
                 sa.field_I[var5] = ok.field_C[var5];
               }
               sa.field_I[-2 + var4] = "";
-              sa.field_I[-1 + var4] = me.field_k;
+              sa.field_I[-1 + var4] = MovingBlock.field_k;
               mj.field_b[var4 - 1] = 0;
               ac.field_c[0] = 5;
             } else if (di.field_h == 4) {
@@ -321,7 +321,7 @@ final class ij implements t {
                 sa.field_I[var5] = ok.field_C[var5];
               }
               sa.field_I[-2 + var4] = "";
-              sa.field_I[-1 + var4] = me.field_k;
+              sa.field_I[-1 + var4] = MovingBlock.field_k;
               mj.field_b[-1 + var4] = 0;
               ac.field_c[0] = 5;
             } else {
@@ -343,7 +343,7 @@ final class ij implements t {
               sa.field_I[-2 + var4] = vk.field_i;
               mj.field_b[-2 + var4] = 0;
               ac.field_c[0] = 3;
-              sa.field_I[-1 + var4] = me.field_k;
+              sa.field_I[-1 + var4] = MovingBlock.field_k;
               mj.field_b[var4 - 1] = 1;
               ac.field_c[1] = 5;
             }
@@ -476,10 +476,10 @@ final class ij implements t {
           if (param0 < 48) {
             field_j = (ba) null;
           }
-          me.field_q = gf.field_q - (oi.field_b >> 1);
+          MovingBlock.field_q = gf.field_q - (oi.field_b >> 1);
           ud.field_a = new int[sa.field_I.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = me.field_q;
+          var5Lifetime3 = MovingBlock.field_q;
           while (sa.field_I.length > var4Lifetime3) {
             var6Lifetime1 = mj.field_b[var4Lifetime3];
             if (var6Lifetime1 < 0) {

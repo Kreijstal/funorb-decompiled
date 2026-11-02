@@ -6,7 +6,7 @@ final class ef {
     static ud field_b;
 
     final static void a(vk param0, int param1, int param2) {
-        la var3 = ra.field_C;
+        la var3 = LevelView.field_C;
         var3.c(param1, 7);
         if (param2 != 10) {
           return;

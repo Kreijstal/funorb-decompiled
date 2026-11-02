@@ -11,8 +11,8 @@ final class uj {
     final static String a(int param0) {
         String var1 = "";
         if (param0 < -98) {
-          if (ra.field_y != null) {
-            var1 = ra.field_y.d(true);
+          if (LevelView.field_y != null) {
+            var1 = LevelView.field_y.d(true);
           }
           if (var1.length() == 0) {
             var1 = li.d(-579139480);
@@ -94,7 +94,7 @@ final class uj {
           RuntimeException var15_ref = null;
           try {
             ne.field_a = new la(param7);
-            ra.field_C = new la(param4);
+            LevelView.field_C = new la(param4);
             ke.field_c = param6;
             dc.field_o = param0;
             ma.field_c = param2;

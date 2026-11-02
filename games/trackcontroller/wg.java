@@ -100,7 +100,7 @@ final class wg {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = cf.a(5, var10.payload, -5 + var10.position - var13.length, -6196);
+        var15 = cf.whirlpoolDigest(5, var10.payload, -5 + var10.position - var13.length, -6196);
         if (param0 > -62) {
           this.a((byte) -115);
         }

@@ -8,7 +8,7 @@ final class ol extends PcmStream {
     IntrusiveDeque field_q;
     k field_o;
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mix(int[] param0, int param1, int param2) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -20,7 +20,7 @@ final class ol extends PcmStream {
         int var7 = 0;
         var7 = TrackController.field_F ? 1 : 0;
         try {
-          this.field_o.a(param0, param1, param2);
+          this.field_o.mix(param0, param1, param2);
           var6 = (ha) (this.field_q.first(2));
           while (var6 != null) {
             if (!this.field_p.a(-39, var6)) {
@@ -90,7 +90,7 @@ final class ol extends PcmStream {
           if (param2 > -100) {
             this.field_q = (IntrusiveDeque) null;
           }
-          param0.field_l.d(param1);
+          param0.field_l.skip(param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,12 +110,12 @@ final class ol extends PcmStream {
         return 0;
     }
 
-    final void d(int param0) {
+    final void skip(int param0) {
         int var2;
         ha var3;
         int var4;
         var4 = TrackController.field_F ? 1 : 0;
-        this.field_o.d(param0);
+        this.field_o.skip(param0);
         var3 = (ha) (this.field_q.first(2));
         while (var3 != null) {
           if (!this.field_p.a(-93, var3)) {
@@ -173,7 +173,7 @@ final class ol extends PcmStream {
                 param4.field_C = param4.field_C + var7_int * param3;
                 break;
               }
-              param4.field_l.a(param0, param1, var8);
+              param4.field_l.mix(param0, param1, var8);
               param3 = param3 - var8;
               param1 = param1 + var8;
               param4.field_C = param4.field_C + (-1048576 + var7_int * var8);
@@ -197,14 +197,14 @@ final class ol extends PcmStream {
                 param4.field_l.f(-1);
               }
               var11.h(var9);
-              var11.a(param0, param1, param5 - param1);
+              var11.mix(param0, param1, param5 - param1);
               if (!var11.i()) {
                 continue;
               }
               this.field_o.a(var11);
             }
           }
-          param4.field_l.a(param0, param1, param3);
+          param4.field_l.mix(param0, param1, param3);
           if (param2 == 126) {
             return;
           }

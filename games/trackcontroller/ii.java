@@ -35,7 +35,7 @@ class ii extends DualLinkNode {
             NodeHashTable.field_e = 200;
             var1 = (li) (kd.field_a.first(2));
             while (var1 != null) {
-              if (!var1.field_k.b(10000536)) {
+              if (!var1.field_k.isLinked(10000536)) {
                 var1.unlink(-40);
               }
               var1 = (li) (kd.field_a.next(10));
@@ -43,7 +43,7 @@ class ii extends DualLinkNode {
             if (jk.field_c != null) {
               var1Lifetime1 = (li) (jk.field_c.first(2));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_k.b(10000536)) {
+                if (!var1Lifetime1.field_k.isLinked(10000536)) {
                   var1Lifetime1.unlink(-29);
                 }
                 var1Lifetime1 = (li) (jk.field_c.next(10));

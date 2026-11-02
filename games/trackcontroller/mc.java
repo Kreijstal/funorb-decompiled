@@ -55,7 +55,7 @@ final class mc extends ok {
     final static void a(boolean param0, int param1, ti param2) {
         la var3 = null;
         try {
-          var3 = ra.field_C;
+          var3 = LevelView.field_C;
           if (param0) {
             field_E = (Sprite) null;
           }

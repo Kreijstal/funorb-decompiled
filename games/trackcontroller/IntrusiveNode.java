@@ -20,7 +20,7 @@ class IntrusiveNode {
         return stackIn_7_0;
     }
 
-    final boolean b(int param0) {
+    final boolean isLinked(int param0) {
         if (param0 != 10000536) {
           IntrusiveNode.a(20, 32, 14, (byte) -49, 34);
         }

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class bf {
+final class WhirlpoolDigest {
     private byte[] field_n;
     private long[] field_h;
     static Sprite field_o;
@@ -228,7 +228,7 @@ final class bf {
         try {
           kg.field_a = param1;
           if (param0 >= -23) {
-            bf.a((byte) 1);
+            WhirlpoolDigest.a((byte) 1);
           }
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "bf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -305,7 +305,7 @@ final class bf {
         }
     }
 
-    bf() {
+    WhirlpoolDigest() {
         this.field_n = new byte[32];
         this.field_m = new long[8];
         this.field_h = new long[8];

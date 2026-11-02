@@ -607,7 +607,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              hb.a((Throwable) (var1), 0, (String) null);
+              hb.reportClientError((Throwable) (var1), 0, (String) null);
               this.a("crash", (byte) 100);
             }
             this.a(-122, true);
@@ -804,7 +804,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              hb.a(var8_ref, 0, (String) null);
+              hb.reportClientError(var8_ref, 0, (String) null);
               this.a("crash", (byte) 100);
             }
             return;

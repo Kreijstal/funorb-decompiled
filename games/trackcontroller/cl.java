@@ -105,7 +105,7 @@ final class cl {
             }
             var18 = var14;
             var19 = var15;
-            SoftwareRasterizer.a(bf.field_a);
+            SoftwareRasterizer.a(WhirlpoolDigest.field_a);
             if (var19 < var18) {
               var19 = var8 * param2 / (var8 + var9) + param3;
               var18 = var8 * param2 / (var8 + var9) + param3;
@@ -113,22 +113,22 @@ final class cl {
             if (param0[0] != null) {
               SoftwareRasterizer.b(param1, param3, var16, var18);
               param0[0].e(param1, param3);
-              SoftwareRasterizer.b(bf.field_a);
+              SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             if (param0[2] != null) {
               SoftwareRasterizer.b(var17, param3, var10, var18);
               param0[2].e(var13, param3);
-              SoftwareRasterizer.b(bf.field_a);
+              SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             if (param0[6] != null) {
               SoftwareRasterizer.b(param1, var19, var16, var11);
               param0[6].e(param1, var15);
-              SoftwareRasterizer.b(bf.field_a);
+              SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             if (param0[8] != null) {
               SoftwareRasterizer.b(var17, var19, var10, var11);
               param0[8].e(var13, var15);
-              SoftwareRasterizer.b(bf.field_a);
+              SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             if (param0[1] != null &&
               param0[1].field_s != 0) {
@@ -136,7 +136,7 @@ final class cl {
               for (var20 = var12; var20 < var13; var20 = var20 + param0[1].field_s) {
                 param0[1].e(var20, param3);
               }
-              SoftwareRasterizer.b(bf.field_a);
+              SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             if (null != param0[7] &&
               param0[7].field_s != 0) {
@@ -144,7 +144,7 @@ final class cl {
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param0[7].field_s) {
                 param0[7].e(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.b(bf.field_a);
+              SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             if (null != param0[3] &&
               param0[3].field_v != 0) {
@@ -152,7 +152,7 @@ final class cl {
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param0[3].field_v) {
                 param0[3].e(param1, var20Lifetime2);
               }
-              SoftwareRasterizer.b(bf.field_a);
+              SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             if (null != param0[5] &&
               param0[5].field_v != 0) {
@@ -160,7 +160,7 @@ final class cl {
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param0[5].field_v) {
                 param0[5].e(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.b(bf.field_a);
+              SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             if (param0[param5] != null &&
               0 != param0[4].field_s) {
@@ -173,7 +173,7 @@ final class cl {
                   param0[4].e(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.b(bf.field_a);
+              SoftwareRasterizer.b(WhirlpoolDigest.field_a);
             }
             return;
           }

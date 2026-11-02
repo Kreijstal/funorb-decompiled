@@ -91,7 +91,7 @@ abstract class hl extends td {
         if (null == uh.field_b[param0]) {
           return;
         }
-        if (uh.field_b[param0].b(param1 ^ 10000536)) {
+        if (uh.field_b[param0].isLinked(param1 ^ 10000536)) {
           fe.a(uh.field_b[param0], 2);
           return;
         }

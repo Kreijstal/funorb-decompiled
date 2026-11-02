@@ -40,7 +40,7 @@ final class ClientException extends RuntimeException {
         int var8Lifetime1;
         var10 = TrackController.field_F ? 1 : 0;
         try {
-          var1_int = me.field_q;
+          var1_int = MovingBlock.field_q;
           var2 = 0;
           if (di.field_h == 2) {
             var3_long = -fe.field_N + qg.a(false);

@@ -15,12 +15,12 @@ final class qk extends rh {
         if (param0) {
           qk.j(125);
           if (oe.field_b == fd.field_h) {
-            return bf.field_f;
+            return WhirlpoolDigest.field_f;
           }
           return lf.field_T;
         }
         if (oe.field_b == fd.field_h) {
-          return bf.field_f;
+          return WhirlpoolDigest.field_f;
         }
         return lf.field_T;
     }

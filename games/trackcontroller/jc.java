@@ -63,7 +63,7 @@ final class jc {
           var5_int = ((1879052287 & param1) << 4 | param1 >>> 12) ^ param2;
           var5_int = var5_int | param1 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (PcmSample) (this.field_f.a(param0 ^ -27322, var6));
+          var8 = (PcmSample) (this.field_f.get(param0 ^ -27322, var6));
           if (var8 != null) {
             stackIn_3_0 = var8;
             return stackIn_3_0;
@@ -73,14 +73,14 @@ final class jc {
             stackIn_7_0 = null;
             return (PcmSample) (stackIn_7_0);
           }
-          var9 = (ml) (this.field_d.a(8434, var6));
+          var9 = (ml) (this.field_d.get(8434, var6));
           if (var9 == null) {
             var9 = ml.a(this.field_b, param1, param2);
             if (var9 == null) {
               stackIn_11_0 = null;
               return (PcmSample) (stackIn_11_0);
             }
-            this.field_d.a(false, var6, var9);
+            this.field_d.put(false, var6, var9);
           }
           var8Lifetime1 = var9.a(param3);
           if (param0 != -19020) {
@@ -90,7 +90,7 @@ final class jc {
             return null;
           }
           var9.unlink(-35);
-          this.field_f.a(false, var6, var8Lifetime1);
+          this.field_f.put(false, var6, var8Lifetime1);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,7 +130,7 @@ final class jc {
           var5_int = (65533 & param0 << 4 | param0 >>> 12) ^ param2;
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int;
-          var8 = (PcmSample) (this.field_f.a(param1 ^ 4936, var6));
+          var8 = (PcmSample) (this.field_f.get(param1 ^ 4936, var6));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -145,7 +145,7 @@ final class jc {
           }
           var10 = var9.b();
           var8Lifetime1 = var10;
-          this.field_f.a(false, var6, var8Lifetime1);
+          this.field_f.put(false, var6, var8Lifetime1);
           if (param3 != null) {
             param3[0] = param3[0] - var10.field_j.length;
           }

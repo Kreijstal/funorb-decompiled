@@ -79,7 +79,7 @@ final class da extends ae {
           var9 = TrackController.field_F ? 1 : 0;
           try {
             if (r.field_i == null &&
-              !bf.a(param1, (byte) 104)) {
+              !WhirlpoolDigest.a(param1, (byte) 104)) {
               stackIn_6_0 = -1;
               return stackIn_6_0;
             }
@@ -94,10 +94,10 @@ final class da extends ae {
               } else {
                 af.field_o = rl.a(20, false, param3, param2);
               }
-              ra.field_C.position = 0;
-              ra.field_C.writeByte(14, (byte) -72);
-              ra.field_C.writeByte(af.field_o.a(false).field_b, (byte) -100);
-              me.a(-1, -1);
+              LevelView.field_C.position = 0;
+              LevelView.field_C.writeByte(14, (byte) -72);
+              LevelView.field_C.writeByte(af.field_o.a(false).field_b, (byte) -100);
+              MovingBlock.a(-1, -1);
               jc.field_a = sg.field_d;
             }
             if (jc.field_a == sg.field_d &&
@@ -209,7 +209,7 @@ final class da extends ae {
               if (SocketConnector.field_d > 0) {
                 oc.field_i = true;
               }
-              ra.field_C.a((byte) -83, pl.field_a);
+              LevelView.field_C.a((byte) -83, pl.field_a);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 pl.field_a[var8Lifetime1] = pl.field_a[var8Lifetime1] + 50;
               }
@@ -355,7 +355,7 @@ final class da extends ae {
             field_p = (Sprite[][]) null;
           }
           while (var2 != null) {
-            if (var2.field_k.b(10000536)) {
+            if (var2.field_k.isLinked(10000536)) {
               var2.field_j.g(128 + var2.field_m * qd.field_d >> 8);
             } else {
               var2.unlink(-76);
@@ -365,7 +365,7 @@ final class da extends ae {
           if (jk.field_c != null) {
             var2Lifetime1 = (li) (jk.field_c.first(2));
             while (var2Lifetime1 != null) {
-              stackIn_13_0 = var2Lifetime1.field_k.b(param1 ^ -10000594);
+              stackIn_13_0 = var2Lifetime1.field_k.isLinked(param1 ^ -10000594);
               if (!stackIn_13_0) {
                 var2Lifetime1.unlink(-33);
               } else {

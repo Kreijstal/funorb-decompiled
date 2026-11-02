@@ -72,7 +72,7 @@ final class ib {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              hb.a((Throwable) null, 0, "MGR1: " + param1);
+              hb.reportClientError((Throwable) null, 0, "MGR1: " + param1);
             }
             if (param3 == -25) {
               return;

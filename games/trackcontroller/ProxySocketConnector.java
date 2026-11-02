@@ -299,7 +299,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (param1 != -42) {
           field_f = (String) null;
         }
-        ra.field_v = param0;
+        LevelView.field_v = param0;
     }
 
     private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {

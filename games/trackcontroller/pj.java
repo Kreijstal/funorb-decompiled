@@ -69,7 +69,7 @@ final class pj extends db {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          hb.a((Throwable) ((Object) var6), param1 ^ 21552, "CC1");
+          hb.reportClientError((Throwable) ((Object) var6), param1 ^ 21552, "CC1");
           li.field_l = null;
           hi.field_A = null;
           return new q(param0);

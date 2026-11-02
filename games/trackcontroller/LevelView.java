@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra extends LevelGrid {
+final class LevelView extends LevelGrid {
     private boolean field_q;
     private int field_G;
     static int field_z;
@@ -27,12 +27,12 @@ final class ra extends LevelGrid {
         gd.field_x = param0 ? true : false;
         super.a(false, 1000, param0);
         this.field_p = ClientException.a(this.field_s, this.field_E, -257, this.field_a + 26 * this.field_D, this.field_G, this.field_F, this.field_u * 26 + this.field_f, this.tileFlags[this.field_u][this.field_D]);
-        if (this.field_h >= this.field_A) {
+        if (this.tickCount >= this.field_A) {
           if (this.field_p != null) {
             this.field_x.addFirst(this.field_p, (byte) -78);
           }
           var2 = he.field_e.nextInt() & 16777215;
-          this.field_A = this.field_h + 8 + sc.a(var2, -1);
+          this.field_A = this.tickCount + 8 + sc.a(var2, -1);
         }
         u var4 = (u) (this.field_x.first(2));
         while (var4 != null) {
@@ -61,7 +61,7 @@ final class ra extends LevelGrid {
           var13 = param9;
           if (param4 != -64) {
             var17 = (int[]) null;
-            ra.a(-30, -95, 92, -104, (byte) 105, (int[]) null, 27, (int[]) null, -25, 18, -33, 60);
+            LevelView.a(-30, -95, 92, -104, (byte) 105, (int[]) null, 27, (int[]) null, -25, 18, -33, 60);
           }
           for (var14 = -param2; var14 < 0; var14++) {
             for (var15 = -param6; var15 < 0; var15++) {
@@ -148,7 +148,7 @@ final class ra extends LevelGrid {
         field_C = null;
     }
 
-    ra(byte[][] param0, int[][] param1, int[][] param2, int param3, int param4, boolean param5) {
+    LevelView(byte[][] param0, int[][] param1, int[][] param2, int param3, int param4, boolean param5) {
         super(param5, param3, param4);
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -240,8 +240,8 @@ final class ra extends LevelGrid {
         }
     }
 
-    ra(LevelData param0, int param1, int param2) {
-        this(param0.field_o, param0.tileFlags, param0.targetLayout, param1, param2, true);
+    LevelView(LevelData param0, int param1, int param2) {
+        this(param0.floorKind, param0.tileFlags, param0.targetLayout, param1, param2, true);
     }
 
     final void c(byte param0) {
@@ -261,7 +261,7 @@ final class ra extends LevelGrid {
         }
     }
 
-    final void a(boolean param0, int param1) {
+    final void tick(boolean param0, int param1) {
         int fieldTemp$0 = 0;
         boolean stackIn_17_1 = false;
         boolean stackIn_48_1 = false;
@@ -269,7 +269,7 @@ final class ra extends LevelGrid {
         int var4;
         u var5;
         var4 = TrackController.field_F ? 1 : 0;
-        super.a(param0, 101);
+        super.tick(param0, 101);
         if (param1 < 72) {
           return;
         }
@@ -306,11 +306,11 @@ final class ra extends LevelGrid {
           if ((this.field_s != 4096 ||
             this.field_D != 0) &&
             (this.field_s != 8192 ||
-            -1 + this.field_o[0].length != this.field_D) &&
+            -1 + this.floorKind[0].length != this.field_D) &&
             (16384 != this.field_s ||
             0 != this.field_u) &&
             (this.field_s != 2048 ||
-            this.field_u != this.field_o.length - 1)) {
+            this.field_u != this.floorKind.length - 1)) {
             var3 = this.field_s;
             if (var3 == 4096) {
               this.field_F = 512;
@@ -399,7 +399,7 @@ final class ra extends LevelGrid {
         }
         if (param2 != 16384) {
           var12 = (byte[]) null;
-          ra.a(-59, (byte[]) null);
+          LevelView.a(-59, (byte[]) null);
         }
         var8Lifetime1 = (-var7Lifetime1 + 9) * var7Lifetime1 / 2 + (var6Lifetime1 - 1);
         var9 = 1 << var8Lifetime1;

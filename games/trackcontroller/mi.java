@@ -93,7 +93,7 @@ final class mi extends el {
                 }
                 break regionExit1;
               }
-              var5 = bf.field_d;
+              var5 = WhirlpoolDigest.field_d;
             }
             if (var5.equals(this.field_s)) {
               break regionExit1;

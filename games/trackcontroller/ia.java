@@ -31,13 +31,13 @@ final class ia {
             stackIn_3_0 = 79;
             return stackIn_3_0;
           }
-          gl.field_E.a(hf.field_d, true, param0, ra.field_z);
+          gl.field_E.a(hf.field_d, true, param0, LevelView.field_z);
           gl.field_E.b(true);
           while (mh.e(127)) {
             gl.field_E.a(md.field_d, 3931, kg.field_d);
           }
-          if (ra.field_v != -1) {
-            var1_int = ra.field_v;
+          if (LevelView.field_v != -1) {
+            var1_int = LevelView.field_v;
             ProxySocketConnector.b(-1, (byte) -42);
             stackIn_9_0 = var1_int;
             return stackIn_9_0;

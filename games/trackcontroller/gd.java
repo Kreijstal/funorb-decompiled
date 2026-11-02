@@ -30,7 +30,7 @@ final class gd extends ArchiveSource {
         if (param1 != -21770) {
           this.field_w = (hf) null;
         }
-        AsyncRequest var3 = (AsyncRequest) (this.field_v.a(8434, (long)param0));
+        AsyncRequest var3 = (AsyncRequest) (this.field_v.get(8434, (long)param0));
         if (var3 == null) {
           return 0;
         }
@@ -226,7 +226,7 @@ final class gd extends ArchiveSource {
         byte[] var30 = null;
         byte[] var31 = null;
         var11 = TrackController.field_F ? 1 : 0;
-        var13 = (AsyncRequest) (this.field_v.a(8434, (long)param2));
+        var13 = (AsyncRequest) (this.field_v.get(8434, (long)param2));
         var4 = var13;
         if (var13 != null &&
           0 == param0 &&
@@ -268,7 +268,7 @@ final class gd extends ArchiveSource {
               var4 = this.field_i.a(true, param2, this.field_w);
             }
           }
-          this.field_v.a(false, (long)param2, (IntrusiveNode) (var4));
+          this.field_v.put(false, (long)param2, (IntrusiveNode) (var4));
         }
         if (((AsyncRequest) (var4)).field_w) {
           return null;
@@ -290,7 +290,7 @@ final class gd extends ArchiveSource {
               if (null != this.field_e.field_g &&
                 this.field_e.field_g[param2] != null) {
                 var29 = this.field_e.field_g[param2];
-                var28 = cf.a(0, var5, -2 + var19.length, -6196);
+                var28 = cf.whirlpoolDigest(0, var5, -2 + var19.length, -6196);
                 for (var10 = 0; var10 < 64; var10++) {
                   if (var28[var10] != var29[var10]) {
                     throw new RuntimeException();
@@ -323,7 +323,7 @@ final class gd extends ArchiveSource {
             }
             if (!this.field_g.d(-18316)) {
               var4 = this.field_g.a(this.field_m, true, false, param2, (byte) 2);
-              this.field_v.a(false, (long)param2, (IntrusiveNode) (var4));
+              this.field_v.put(false, (long)param2, (IntrusiveNode) (var4));
             }
             return null;
           }
@@ -340,7 +340,7 @@ final class gd extends ArchiveSource {
             if (this.field_e.field_g != null &&
               this.field_e.field_g[param2] != null) {
               var31 = this.field_e.field_g[param2];
-              var30 = cf.a(0, var5, var19.length - 2, -6196);
+              var30 = cf.whirlpoolDigest(0, var5, var19.length - 2, -6196);
               var12 = 0;
               var10 = var12;
               while (var12 < 64) {
@@ -365,7 +365,7 @@ final class gd extends ArchiveSource {
               return null;
             }
             var4 = this.field_g.a(this.field_m, true, false, param2, (byte) 2);
-            this.field_v.a(false, (long)param2, (IntrusiveNode) (var4));
+            this.field_v.put(false, (long)param2, (IntrusiveNode) (var4));
           }
           return null;
         }
@@ -501,7 +501,7 @@ final class gd extends ArchiveSource {
                 decompiledFrameRemainder1 = (this.field_h);
                 if ((decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder0 = !(qg.a(false) < this.field_l))) {
-                  var2 = (AsyncRequest) (this.field_v.b(-49));
+                  var2 = (AsyncRequest) (this.field_v.first(-49));
                   while (var2 != null) {
                     if (!var2.field_w) {
                       if (var2.field_v) {
@@ -513,7 +513,7 @@ final class gd extends ArchiveSource {
                         var2.field_v = true;
                       }
                     }
-                    var2 = (AsyncRequest) (this.field_v.a((byte) 91));
+                    var2 = (AsyncRequest) (this.field_v.next((byte) 91));
                   }
                   decompiledFrameRemainder2 = false;
                 }
@@ -536,7 +536,7 @@ final class gd extends ArchiveSource {
           decompiledFrameRemainder1 = (this.field_h);
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0 = !(qg.a(false) < this.field_l))) {
-            var2Lifetime1 = (AsyncRequest) (this.field_v.b(-49));
+            var2Lifetime1 = (AsyncRequest) (this.field_v.first(-49));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_w) {
                 if (var2Lifetime1.field_v) {
@@ -548,7 +548,7 @@ final class gd extends ArchiveSource {
                   var2Lifetime1.field_v = true;
                 }
               }
-              var2Lifetime1 = (AsyncRequest) (this.field_v.a((byte) 91));
+              var2Lifetime1 = (AsyncRequest) (this.field_v.next((byte) 91));
             }
           }
         }

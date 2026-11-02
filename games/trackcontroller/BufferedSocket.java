@@ -563,7 +563,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            hb.a((Throwable) ((Object) var1_ref), 0, (String) null);
+            hb.reportClientError((Throwable) ((Object) var1_ref), 0, (String) null);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

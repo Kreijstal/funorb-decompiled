@@ -4,10 +4,10 @@
 final class LevelData extends LevelGrid {
     static String[] field_u;
     int field_r;
-    String field_q;
+    String name;
     static IntrusiveDeque field_t;
     static String field_y;
-    int field_x;
+    int levelIndex;
     static int[] field_w;
     int field_v;
     static IntrusiveDeque field_s;
@@ -51,7 +51,7 @@ final class LevelData extends LevelGrid {
         var25 = null;
         var26 = null;
         try {
-          this.field_x = param0;
+          this.levelIndex = param0;
           var3_int = 16;
           var4 = 16;
           var5 = 0;
@@ -104,7 +104,7 @@ final class LevelData extends LevelGrid {
             }
             break;
           }
-          this.field_q = var9.toString();
+          this.name = var9.toString();
           var11 = param1.substring(var5);
           var5Lifetime1 = var11.indexOf('/');
           var27 = (CharSequence) ((Object) var11.substring(0, var5Lifetime1));

@@ -124,7 +124,7 @@ final class sd implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              hb.a((Throwable) ((Object) var2_ref), 0, (String) null);
+              hb.reportClientError((Throwable) ((Object) var2_ref), 0, (String) null);
               var7.field_w = false;
             }
           }

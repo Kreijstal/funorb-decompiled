@@ -3,11 +3,11 @@
  */
 abstract class LevelGrid {
     static aa field_e;
-    int field_h;
+    int tickCount;
     private int field_k;
     int[][] targetLayout;
     int[][] tileFlags;
-    byte[][] field_o;
+    byte[][] floorKind;
     static int field_n;
     int field_l;
     static int field_j;
@@ -30,12 +30,12 @@ abstract class LevelGrid {
         if (!param2) {
           this.field_f = -91;
         }
-        this.field_m = this.field_h / 5 % ActiveLevel.field_H.length;
+        this.field_m = this.tickCount / 5 % ActiveLevel.field_H.length;
         var4 = this.field_f;
-        for (var5 = 0; this.field_o.length > var5; var5++) {
+        for (var5 = 0; this.floorKind.length > var5; var5++) {
           var6 = this.field_a;
-          for (var7 = 0; var7 < this.field_o[0].length; var7++) {
-            this.a(var6, var4, 0, (int) this.field_o[var5][var7]);
+          for (var7 = 0; var7 < this.floorKind[0].length; var7++) {
+            this.a(var6, var4, 0, (int) this.floorKind[var5][var7]);
             var8 = -65 & this.tileFlags[var5][var7];
             if (var8 >= 7 &&
               var8 < 38) {
@@ -46,7 +46,7 @@ abstract class LevelGrid {
             } else {
               if (var8 == 38) {
                 if (param0 &&
-                  this.field_h % 30 < 15) {
+                  this.tickCount % 30 < 15) {
                   ii.field_r[50].e(var6, var4);
                 }
                 var9 = this.field_b / 3 % 4;
@@ -87,9 +87,9 @@ abstract class LevelGrid {
         var11 = TrackController.field_F ? 1 : 0;
         try {
           if (param3.length == 0) {
-            this.field_o = new byte[0][0];
+            this.floorKind = new byte[0][0];
           } else {
-            this.field_o = new byte[param3.length][param3[0].length];
+            this.floorKind = new byte[param3.length][param3[0].length];
           }
           if (param1 != 50) {
             this.a(-69, 10, -15, -70);
@@ -100,7 +100,7 @@ abstract class LevelGrid {
             this.tileFlags = new int[0][0];
           }
           for (var5_int = 0; var5_int < param3.length; var5_int++) {
-            pd.a(param3[var5_int], 0, this.field_o[var5_int], 0, param3[var5_int].length);
+            pd.a(param3[var5_int], 0, this.floorKind[var5_int], 0, param3[var5_int].length);
             pd.a(param0[var5_int], 0, this.tileFlags[var5_int], 0, param0[var5_int].length);
           }
           this.targetLayout = new int[param2.length][param2[0].length];
@@ -163,7 +163,7 @@ abstract class LevelGrid {
 
     void a(LevelData param0, int param1) {
         try {
-          this.a(param0.tileFlags, (byte) 50, param0.targetLayout, param0.field_o);
+          this.a(param0.tileFlags, (byte) 50, param0.targetLayout, param0.floorKind);
           if (param1 <= 36) {
             this.field_f = 43;
           }
@@ -202,15 +202,15 @@ abstract class LevelGrid {
           }
         }
         if (param2 != 0) {
-          this.a(false, 1);
+          this.tick(false, 1);
         }
     }
 
-    void a(boolean param0, int param1) {
+    void tick(boolean param0, int param1) {
         if (param1 < 72) {
           return;
         }
-        this.field_h = this.field_h + 1;
+        this.tickCount = this.tickCount + 1;
     }
 
     final static th a(int param0, int param1) {

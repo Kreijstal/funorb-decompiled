@@ -106,7 +106,7 @@ final class ta {
             field_a = (String) null;
           }
           var4 = (String) null;
-          stackIn_3_0 = me.a((String) null, false, 0, param2, 0, 88, param0);
+          stackIn_3_0 = MovingBlock.a((String) null, false, 0, param2, 0, 88, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

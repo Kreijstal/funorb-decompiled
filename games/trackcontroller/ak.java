@@ -60,8 +60,8 @@ final class ak {
           var5 = ie.a("commonui", param1, "screen_options", 124);
           fj.field_M = new IndexedSprite[4];
           UiWidget.field_j = new IndexedSprite[4];
-          bf.field_e = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{UiWidget.field_j, bf.field_e, fj.field_M};
+          WhirlpoolDigest.field_e = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{UiWidget.field_j, WhirlpoolDigest.field_e, fj.field_M};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

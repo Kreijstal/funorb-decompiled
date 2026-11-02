@@ -388,7 +388,7 @@ final class qi {
           if (param1 != 0) {
             qi.b(-93);
           }
-          bf.a((byte) -26, param0);
+          WhirlpoolDigest.a((byte) -26, param0);
           nb.a(rk.field_Z, false, -16257);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

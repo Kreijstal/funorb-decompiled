@@ -27,7 +27,7 @@ final class nk extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1) {
-        la var2 = ra.field_C;
+        la var2 = LevelView.field_C;
         var2.c(param0, 7);
         var2.writeByte(1, (byte) -70);
         var2.writeByte(2, (byte) -65);

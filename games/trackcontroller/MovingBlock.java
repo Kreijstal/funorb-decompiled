@@ -3,18 +3,18 @@
  */
 import java.io.*;
 
-final class me extends IntrusiveNode {
-    int field_j;
+final class MovingBlock extends IntrusiveNode {
+    int rowStep;
     static String field_k;
     static String[] field_p;
-    int field_o;
+    int columnStep;
     static int field_q;
-    int field_r;
-    private int field_n;
-    int field_s;
+    int column;
+    private int speed;
+    int row;
     static byte[][][] field_i;
-    int field_m;
-    int field_l;
+    int tileValue;
+    int progress;
 
     final static IndexedSprite[] d(int param0) {
         int var4 = TrackController.field_F ? 1 : 0;
@@ -45,24 +45,24 @@ final class me extends IntrusiveNode {
             if (param0 != -1) {
               return;
             }
-            if (ra.field_C.position == 0 &&
+            if (LevelView.field_C.position == 0 &&
               qg.a(false) > qh.field_f + 10000L) {
-              ra.field_C.c(param1, param0 + 8);
+              LevelView.field_C.c(param1, param0 + 8);
             }
-            if (0 < ra.field_C.position) {
+            if (0 < LevelView.field_C.position) {
               try {
-                r.field_i.a(param0 - 124, ra.field_C.payload, ra.field_C.position, 0);
+                r.field_i.a(param0 - 124, LevelView.field_C.payload, LevelView.field_C.position, 0);
                 qh.field_f = qg.a(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 GameKeyHandler.a((byte) 118);
               }
-              ra.field_C.position = 0;
+              LevelView.field_C.position = 0;
             }
             return;
           }
-          ra.field_C.position = 0;
+          LevelView.field_C.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -70,10 +70,10 @@ final class me extends IntrusiveNode {
         }
     }
 
-    final void f(int param0) {
-        this.field_l = param0;
-        this.field_r = this.field_r + this.field_o;
-        this.field_s = this.field_s + this.field_j;
+    final void completeStep(int param0) {
+        this.progress = param0;
+        this.column = this.column + this.columnStep;
+        this.row = this.row + this.rowStep;
     }
 
     final static void a(dh param0, int param1, int param2) {
@@ -83,7 +83,7 @@ final class me extends IntrusiveNode {
           if (param1 != 0) {
             field_p = (String[]) null;
           }
-          var5 = ra.field_C;
+          var5 = LevelView.field_C;
           var5.c(param2, 7);
           var5.position = var5.position + 1;
           var4 = var5.position;
@@ -101,10 +101,10 @@ final class me extends IntrusiveNode {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean advance(int param0) {
         int var2 = -3 % ((0 - param0) / 34);
-        this.field_l = this.field_l + this.field_n;
-        return this.field_l < 26 ? true : false;
+        this.progress = this.progress + this.speed;
+        return this.progress < 26 ? true : false;
     }
 
     final static int a(String param0, boolean param1, int param2, kh param3, int param4, int param5, kh param6) {
@@ -155,13 +155,13 @@ final class me extends IntrusiveNode {
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
           if (null == r.field_i &&
-            !bf.a(false, (byte) 106)) {
+            !WhirlpoolDigest.a(false, (byte) 106)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
           if (jc.field_a == gk.field_a) {
             qi.field_c = null;
-            ra.field_C.position = 0;
+            LevelView.field_C.position = 0;
             if (param0 == null) {
               ui.field_p.position = 0;
               ui.field_p.writeInt(false, ta.field_c.nextInt());
@@ -180,11 +180,11 @@ final class me extends IntrusiveNode {
                 stackIn_21_1 = var8;
               }
               ((PacketBuffer) (Object) stackIn_20_0).b(stackIn_21_1, 112);
-              ra.field_C.writeByte(16, (byte) -87);
-              ra.field_C.position = ra.field_C.position + 1;
-              var9 = ra.field_C.position;
-              NodeHashTableIterator.a(sc.field_d, ra.field_C, fj.field_N, 0, ui.field_p);
-              ra.field_C.a(true, -var9 + ra.field_C.position);
+              LevelView.field_C.writeByte(16, (byte) -87);
+              LevelView.field_C.position = LevelView.field_C.position + 1;
+              var9 = LevelView.field_C.position;
+              NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, 0, ui.field_p);
+              LevelView.field_C.a(true, -var9 + LevelView.field_C.position);
             } else {
               var9 = 0;
               ui.field_p.position = 0;
@@ -200,18 +200,18 @@ final class me extends IntrusiveNode {
               ui.field_p.b(param4, (byte) -119);
               ui.field_p.writeByte(param2, (byte) -98);
               ui.field_p.writeByte(var9, (byte) -66);
-              ra.field_C.writeByte(18, (byte) -92);
-              ra.field_C.position = ra.field_C.position + 2;
-              var10 = ra.field_C.position;
+              LevelView.field_C.writeByte(18, (byte) -92);
+              LevelView.field_C.position = LevelView.field_C.position + 2;
+              var10 = LevelView.field_C.position;
               var11_ref_StringLifetime4 = bg.a(gd.b((byte) 77), -22004);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              ra.field_C.writeString((byte) -57, var11_ref_StringLifetime4);
-              NodeHashTableIterator.a(sc.field_d, ra.field_C, fj.field_N, 0, ui.field_p);
-              ra.field_C.c(-var10 + ra.field_C.position, (byte) -96);
+              LevelView.field_C.writeString((byte) -57, var11_ref_StringLifetime4);
+              NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, 0, ui.field_p);
+              LevelView.field_C.c(-var10 + LevelView.field_C.position, (byte) -96);
             }
-            me.a(-1, -1);
+            MovingBlock.a(-1, -1);
             jc.field_a = l.field_m;
           }
           if (jc.field_a == l.field_m &&
@@ -370,13 +370,13 @@ final class me extends IntrusiveNode {
         }
     }
 
-    me(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.field_o = param4;
-        this.field_r = param2;
-        this.field_n = param5;
-        this.field_m = param0;
-        this.field_s = param1;
-        this.field_j = param3;
+    MovingBlock(int param0, int param1, int param2, int param3, int param4, int param5) {
+        this.columnStep = param4;
+        this.column = param2;
+        this.speed = param5;
+        this.tileValue = param0;
+        this.row = param1;
+        this.rowStep = param3;
     }
 
     static {

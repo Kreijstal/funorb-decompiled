@@ -343,7 +343,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               GameKeyHandler.a((byte) 121);
               return;
             }
-            hb.a((Throwable) null, 0, "A1: " + jc.b(84));
+            hb.reportClientError((Throwable) null, 0, "A1: " + jc.b(84));
             GameKeyHandler.a((byte) 123);
           }
           return;

@@ -117,7 +117,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
               return;
             }
             if (var2 != 4) {
-              hb.a((Throwable) null, 0, "F1: " + jc.b(77));
+              hb.reportClientError((Throwable) null, 0, "F1: " + jc.b(77));
               GameKeyHandler.a((byte) 118);
               return;
             }
@@ -225,9 +225,9 @@ final class SecondaryNodeDequeIterator implements Iterator {
             return;
           }
           var1 = uj.a(-119);
-          ra.field_y = new rl(var1, (String) null, true, false, false);
+          LevelView.field_y = new rl(var1, (String) null, true, false, false);
           gl.field_E.d((byte) -120, GameApplet.field_g);
-          GameApplet.field_g.b(ra.field_y, -82);
+          GameApplet.field_g.b(LevelView.field_y, -82);
           GameApplet.field_g.o(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

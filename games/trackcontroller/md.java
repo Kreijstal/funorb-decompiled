@@ -31,16 +31,16 @@ final class md {
           vd.a(ui.field_p, (byte) -69);
           ui.field_p.b(param1, (byte) -124);
           param0.a((byte) -6, ui.field_p);
-          ra.field_C.position = 0;
+          LevelView.field_C.position = 0;
           if (!param2) {
-            ra.field_C.writeByte(16, (byte) -96);
+            LevelView.field_C.writeByte(16, (byte) -96);
           } else {
-            ra.field_C.writeByte(18, (byte) -105);
+            LevelView.field_C.writeByte(18, (byte) -105);
           }
-          ra.field_C.position = ra.field_C.position + 2;
-          var5_int = ra.field_C.position;
-          ra.field_C.writeInt(false, db.field_Z);
-          ra.field_C.writeLong(sb.field_a, 2147483647);
+          LevelView.field_C.position = LevelView.field_C.position + 2;
+          var5_int = LevelView.field_C.position;
+          LevelView.field_C.writeInt(false, db.field_Z);
+          LevelView.field_C.writeLong(sb.field_a, 2147483647);
           var6 = 0;
           if (oc.field_i) {
             var6 = var6 | 1;
@@ -54,18 +54,18 @@ final class md {
           if (kg.field_a != null) {
             var6 = var6 | 16;
           }
-          ra.field_C.writeByte(var6, (byte) -77);
+          LevelView.field_C.writeByte(var6, (byte) -77);
           var7 = bg.a(gd.b((byte) 77), -22004);
           if (var7 == null) {
             var7 = "";
           }
-          ra.field_C.writeString((byte) -57, var7);
+          LevelView.field_C.writeString((byte) -57, var7);
           if (null != kg.field_a) {
-            ra.field_C.b(kg.field_a, 126);
+            LevelView.field_C.b(kg.field_a, 126);
           }
-          NodeHashTableIterator.a(sc.field_d, ra.field_C, fj.field_N, ~param3, ui.field_p);
-          ra.field_C.c(ra.field_C.position - var5_int, (byte) -96);
-          me.a(param3, -1);
+          NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, ~param3, ui.field_p);
+          LevelView.field_C.c(LevelView.field_C.position - var5_int, (byte) -96);
+          MovingBlock.a(param3, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ final class md {
         la var6 = null;
         int var5 = 0;
         try {
-          var6 = ra.field_C;
+          var6 = LevelView.field_C;
           var6.c(param0, 7);
           int var4 = 81 / ((-12 - param2) / 48);
           var6.position = var6.position + 1;

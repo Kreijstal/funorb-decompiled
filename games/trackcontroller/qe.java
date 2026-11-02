@@ -42,11 +42,11 @@ final class qe extends PcmStream {
         this.field_u = param0;
         if (param1 > -45) {
           int[] var4 = (int[]) null;
-          this.a((int[]) null, -45, 18);
+          this.mix((int[]) null, -45, 18);
         }
     }
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mix(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -70,7 +70,7 @@ final class qe extends PcmStream {
         var11 = TrackController.field_F ? 1 : 0;
         try {
           if (this.field_u <= 0) {
-            this.d(param2);
+            this.skip(param2);
             return;
           }
           if (this.field_q) {
@@ -127,7 +127,7 @@ final class qe extends PcmStream {
           if (this.field_t < 256 && (null != this.field_x ||
             this.field_y != null)) {
             if (var4_int == 256) {
-              this.field_w.a(param0, param1, param2);
+              this.field_w.mix(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (this.field_B != null &&
@@ -138,8 +138,8 @@ final class qe extends PcmStream {
                   this.field_s = new int[var6];
                   this.field_B = new int[var6];
                 }
-                this.field_w.a(this.field_B, 0, param2);
-                this.field_r.a(this.field_s, 0, param2);
+                this.field_w.mix(this.field_B, 0, param2);
+                this.field_r.mix(this.field_s, 0, param2);
                 if (!oa.field_k) {
                   stackIn_46_0 = param1;
                 } else {
@@ -152,7 +152,7 @@ final class qe extends PcmStream {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_B[var8] * var4_int + this.field_s[var8] * var5 >> 8);
                 }
               } else {
-                this.field_r.a(param0, param1, param2);
+                this.field_r.mix(param0, param1, param2);
               }
             }
           }
@@ -165,7 +165,7 @@ final class qe extends PcmStream {
               this.field_s = new int[var6];
               this.field_B = new int[var6];
             }
-            this.field_A.a(this.field_B, 0, param2);
+            this.field_A.mix(this.field_B, 0, param2);
             if (!oa.field_k) {
               stackIn_60_0 = param1;
             } else {
@@ -196,20 +196,20 @@ final class qe extends PcmStream {
         }
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void skip(int param0) {
         int var3;
         var3 = TrackController.field_F ? 1 : 0;
         if (this.field_m > 0 &&
           this.field_x != null) {
-          this.field_w.d(param0);
+          this.field_w.skip(param0);
         }
         if (this.field_m < 1048576 &&
           this.field_y != null) {
-          this.field_r.d(param0);
+          this.field_r.skip(param0);
         }
         if (0 < this.field_t &&
           this.field_o != null) {
-          this.field_A.d(param0);
+          this.field_A.skip(param0);
         }
         if (this.field_q) {
           if (0 < this.field_v &&

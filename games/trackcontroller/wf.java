@@ -33,7 +33,7 @@ final class wf {
             var8.u(-118);
             return true;
           }
-          bf.field_f = param2;
+          WhirlpoolDigest.field_f = param2;
           fi.field_l = param3;
           th.field_n = param1;
           MouseWheelInput.field_c = null;
