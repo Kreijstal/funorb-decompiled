@@ -11,12 +11,12 @@ final class efa extends td {
         return ok.f((byte) -15);
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, ht param4, int param5, java.awt.Component param6, jp param7) {
+    final static void a(int param0, int param1, int param2, boolean param3, PlatformTaskDispatcher param4, int param5, java.awt.Component param6, MidiPcmStream param7) {
         try {
-          pb.a(param0, param3, 10);
-          lc.field_l = pb.a(param4, param6, 0, param1);
-          nia.field_m = pb.a(param4, param6, 1, param2);
-          saa.field_a = new hn();
+          AudioOutput.configure(param0, param3, 10);
+          lc.field_l = AudioOutput.a(param4, param6, 0, param1);
+          nia.field_m = AudioOutput.a(param4, param6, 1, param2);
+          saa.field_a = new PcmStreamMixer();
           ud.field_p = 1000 * param2 / param0;
           nia.field_m.a(saa.field_a);
           uf.field_c = param7;
@@ -26,7 +26,7 @@ final class efa extends td {
             field_p = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "efa.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "efa.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class efa extends td {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class efa extends td {
           this.field_k = param2;
           this.field_n = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "efa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "efa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class efa extends td {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

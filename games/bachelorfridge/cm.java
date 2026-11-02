@@ -37,7 +37,7 @@ final class cm extends oka {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class cm extends oka {
         ru.field_c = param1;
     }
 
-    private cm(po param0, int param1) {
+    private cm(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

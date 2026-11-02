@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class iq extends lw {
-    static kia field_m;
-    static kv field_l;
+    static MusicTrack field_m;
+    static Sprite field_l;
 
     iq() {
         super(true, new String[]{su.field_e, n.field_d, ur.field_f, ld.field_m, uu.field_zb, wf.field_v}, kr.field_xb);
         try {
           this.field_c = new int[][]{new int[]{160, 390}, new int[]{160, 390}, new int[]{160, 350}, new int[]{160, 390}, new int[]{160, 380}, new int[]{160, 400}};
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "iq.<init>()");
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "iq.<init>()");
         }
     }
 
@@ -22,7 +22,7 @@ final class iq extends lw {
         try {
           field_l = null;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "iq.A(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "iq.A(" + param0 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class iq extends lw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "iq.D(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "iq.D(" + param0 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class iq extends lw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "iq.E(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "iq.E(" + param0 + ',' + param1 + ')');
         }
     }
 

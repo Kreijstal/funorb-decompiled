@@ -33,7 +33,7 @@ final class nj extends kj {
         try {
           this.field_h = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

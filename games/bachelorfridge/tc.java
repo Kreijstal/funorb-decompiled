@@ -3,11 +3,11 @@
  */
 final class tc {
     private int field_d;
-    kv[] field_c;
+    Sprite[] field_c;
     private int field_e;
     private boolean field_b;
     private int field_h;
-    kv field_g;
+    Sprite field_g;
     private int field_a;
     private int field_f;
 
@@ -45,7 +45,7 @@ final class tc {
           param1.field_d = this.field_d;
           param1.field_h = this.field_h;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tc.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tc.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class tc {
         return this;
     }
 
-    final tc a(kv[] param0, byte param1) {
+    final tc a(Sprite[] param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -79,7 +79,7 @@ final class tc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "tc.J(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "tc.J(" + param0 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class tc {
         this.field_e = -1;
         this.field_f = 0;
         if (param0 != 11) {
-          this.field_g = (kv) null;
+          this.field_g = (Sprite) null;
         }
         this.field_g = null;
         this.field_c = null;
@@ -254,7 +254,7 @@ final class tc {
             } else {
               stackIn_24_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -264,7 +264,7 @@ final class tc {
     }
 
     final void a(int param0, wd param1, wj param2, int param3, int param4) {
-        po stackIn_21_0 = null;
+        BitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
         int stackIn_24_2;
@@ -304,7 +304,7 @@ final class tc {
             if (param1.field_g == 2) {
               var7 = var7 + (param2.field_q - this.field_g.field_o);
             }
-            this.field_g.e(var6_int, var7);
+            this.field_g.draw(var6_int, var7);
           }
           if (param3 >= -17) {
             this.field_a = 54;
@@ -340,7 +340,7 @@ final class tc {
             } else {
               stackIn_28_8 = this.field_a;
             }
-            ((po) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param1.field_m, param1.field_g, param1.field_c);
+            ((BitmapFont) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param1.field_m, param1.field_g, param1.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -359,14 +359,14 @@ final class tc {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final tc a(boolean param0, int param1) {
         this.field_b = param0 ? true : false;
         if (param1 != -2147483648) {
-          this.field_c = (kv[]) null;
+          this.field_c = (Sprite[]) null;
         }
         return this;
     }
@@ -440,13 +440,13 @@ final class tc {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param5).append(')').toString());
         }
     }
 
     final tc b(int param0, int param1) {
         if (param1 != -25251) {
-          this.field_g = (kv) null;
+          this.field_g = (Sprite) null;
         }
         this.field_h = param0;
         return this;
@@ -510,7 +510,7 @@ final class tc {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -535,7 +535,7 @@ final class tc {
         try {
           var4 = (gea) (wd.field_t.b((byte) 90));
           while (var4 != null) {
-            tca.a(var4, 5, param0);
+            JaggrabDownloader.a(var4, 5, param0);
             var4 = (gea) (wd.field_t.c(0));
           }
           if (param1 != -16482) {
@@ -550,7 +550,7 @@ final class tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "tc.E(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "tc.E(" + param0 + ',' + param1 + ')');
         }
     }
 

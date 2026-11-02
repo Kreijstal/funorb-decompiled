@@ -13,12 +13,12 @@ final class rja extends mv {
     }
 
     final static void a(int param0, int param1, int param2) {
-        pf var3 = null;
+        BitPacketBuffer var3 = null;
         if (param2 == 1) {
           var3 = sja.field_fb;
-          var3.c(param0, (byte) 99);
-          var3.d(3, 0);
-          var3.d(9, 0);
+          var3.writeCipheredByte(param0, (byte) 99);
+          var3.writeByte(3, 0);
+          var3.writeByte(9, 0);
           var3.b(param1, -127);
           return;
         }
@@ -73,7 +73,7 @@ final class rja extends mv {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

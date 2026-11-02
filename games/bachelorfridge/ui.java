@@ -18,7 +18,7 @@ final class ui extends td {
         field_p = null;
     }
 
-    final static void a(byte param0, kv param1) {
+    final static void a(byte param0, Sprite param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -34,7 +34,7 @@ final class ui extends td {
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
-        kv var10 = null;
+        Sprite var10 = null;
         var9 = BachelorFridge.field_y;
         try {
           if (((param1.field_p | param1.field_q | param1.field_t | param1.field_u) & 3) == 0) {
@@ -42,8 +42,8 @@ final class ui extends td {
           }
           var2_int = (param1.field_t & 3) + param1.field_q;
           if (param0 != -33) {
-            var10 = (kv) null;
-            ui.a((byte) -45, (kv) null);
+            var10 = (Sprite) null;
+            ui.a((byte) -45, (Sprite) null);
           }
           var3 = param1.field_p + (3 & param1.field_u);
           var2_int = -(3 & var2_int) + (4 + var2_int);
@@ -77,7 +77,7 @@ final class ui extends td {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class ui extends td {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

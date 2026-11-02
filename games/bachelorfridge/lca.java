@@ -32,15 +32,15 @@ final class lca extends bca {
         var19 = BachelorFridge.field_y;
         try {
           if (0 <= param0 &&
-            param4 < jb.field_n) {
+            param4 < TriangleRasterizer.field_n) {
             if (param1 < 0 &&
               param7 < 0 &&
               param8 < 0) {
               return;
             }
-            if (param1 >= jb.field_o &&
-              jb.field_o <= param7 &&
-              jb.field_o <= param8) {
+            if (param1 >= TriangleRasterizer.field_o &&
+              TriangleRasterizer.field_o <= param7 &&
+              TriangleRasterizer.field_o <= param8) {
               return;
             }
             if (param2 >= -72) {
@@ -105,14 +105,14 @@ final class lca extends bca {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = jb.field_a[param4];
+                var16Lifetime2 = TriangleRasterizer.field_a[param4];
                 while (param5 > param4) {
                   var17 = var9_int >> 16;
-                  if (jb.field_o > var17) {
+                  if (TriangleRasterizer.field_o > var17) {
                     var18 = (var10 >> 16) - (var9_int >> 16);
                     if (0 != var18) {
-                      if (var17 + var18 >= jb.field_o) {
-                        var18 = -var17 + (jb.field_o - 1);
+                      if (var17 + var18 >= TriangleRasterizer.field_o) {
+                        var18 = -var17 + (TriangleRasterizer.field_o - 1);
                       }
                       if (var17 >= 0) {
                         ek.a(var18, param3, param6, (byte) 109, var17 + var16Lifetime2);
@@ -121,16 +121,16 @@ final class lca extends bca {
                       }
                     } else {
                       if (var17 >= 0 &&
-                        jb.field_o > var17) {
+                        TriangleRasterizer.field_o > var17) {
                         ek.a(var18, param3, param6, (byte) -127, var17 + var16Lifetime2);
                       }
                     }
                   }
                   param4++;
-                  if (param4 >= jb.field_n) {
+                  if (param4 >= TriangleRasterizer.field_n) {
                     return;
                   }
-                  var16Lifetime2 = var16Lifetime2 + dg.field_i;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_i;
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
                 }
@@ -156,14 +156,14 @@ final class lca extends bca {
               var9_int = var9_int + param4 * var11;
               param4 = 0;
             }
-            var15Lifetime1 = jb.field_a[param4];
+            var15Lifetime1 = TriangleRasterizer.field_a[param4];
             while (param0 > param4) {
               var16Lifetime1 = var9_int >> 16;
-              if (jb.field_o > var16Lifetime1) {
+              if (TriangleRasterizer.field_o > var16Lifetime1) {
                 var17Lifetime1 = -(var9_int >> 16) + (var10 >> 16);
                 if (var17Lifetime1 != 0) {
-                  if (jb.field_o <= var16Lifetime1 + var17Lifetime1) {
-                    var17Lifetime1 = -1 + (-var16Lifetime1 + jb.field_o);
+                  if (TriangleRasterizer.field_o <= var16Lifetime1 + var17Lifetime1) {
+                    var17Lifetime1 = -1 + (-var16Lifetime1 + TriangleRasterizer.field_o);
                   }
                   if (var16Lifetime1 < 0) {
                     ek.a(var16Lifetime1 + var17Lifetime1, param3, param6, (byte) -128, var15Lifetime1);
@@ -172,17 +172,17 @@ final class lca extends bca {
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
-                    jb.field_o > var16Lifetime1) {
+                    TriangleRasterizer.field_o > var16Lifetime1) {
                     ek.a(var17Lifetime1, param3, param6, (byte) -127, var15Lifetime1 + var16Lifetime1);
                   }
                 }
               }
               param4++;
-              if (param4 >= jb.field_n) {
+              if (param4 >= TriangleRasterizer.field_n) {
                 return;
               }
               var10 = var10 + var12;
-              var15Lifetime1 = var15Lifetime1 + dg.field_i;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_i;
               var9_int = var9_int + var11;
             }
             return;
@@ -198,7 +198,7 @@ final class lca extends bca {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class lca extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -236,20 +236,20 @@ final class lca extends bca {
           this.a(param0, (byte) -2);
           int var3_int = 78 % ((12 - param1) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lca.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lca.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 >= -12) {
-            lu var4 = (lu) null;
-            this.a((byte) 127, (lu) null);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a((byte) 127, (PacketBuffer) null);
           }
           super.a((byte) -16, param1);
           er.a(this.field_q, 107, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lca.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lca.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class lca extends bca {
         try {
           this.field_q = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lca.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lca.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -269,13 +269,13 @@ final class lca extends bca {
         field_r = null;
     }
 
-    lca(lu param0) {
+    lca(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 111);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 111);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (0 > var2_int) {
@@ -285,7 +285,7 @@ final class lca extends bca {
           }
           this.field_q = qi.a(param0, (byte) 41);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -314,7 +314,7 @@ final class lca extends bca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref), "lca.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "lca.C(" + param0 + ')');
         }
     }
 

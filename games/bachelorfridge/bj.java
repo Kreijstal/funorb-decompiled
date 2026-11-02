@@ -20,7 +20,7 @@ final class bj extends pp {
         RuntimeException var2 = null;
         var6 = BachelorFridge.field_y;
         try {
-          lka.field_E = qs.a(false, new lu(param0));
+          lka.field_E = qs.a(false, new PacketBuffer(param0));
           uma.field_P = new kga[lka.field_E.length - 1];
           if (param1 != 22) {
             field_k = (du) null;
@@ -44,7 +44,7 @@ final class bj extends pp {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -56,15 +56,15 @@ final class bj extends pp {
         }
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -28);
           er.a(this.field_h, 122, param0);
-          param0.d(this.field_i, 0);
+          param0.writeByte(this.field_i, 0);
           int var3_int = -81 / ((34 - param1) / 58);
-          param0.d(this.field_l, 0);
+          param0.writeByte(this.field_l, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "bj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class bj extends pp {
           param1.field_a[this.field_i][this.field_l].field_l = var4;
           var4.f(32);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "bj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class bj extends pp {
           this.field_i = param1;
           this.field_l = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

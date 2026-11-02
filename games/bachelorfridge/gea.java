@@ -32,7 +32,7 @@ final class gea extends IntrusiveNode {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gea.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gea.B(" + param0 + ')');
         }
     }
 

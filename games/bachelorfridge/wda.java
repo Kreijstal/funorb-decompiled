@@ -28,7 +28,7 @@ final class wda {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        pf var14 = null;
+        BitPacketBuffer var14 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
@@ -36,7 +36,7 @@ final class wda {
         var12 = BachelorFridge.field_y;
         try {
           var14 = ig.field_m;
-          var2 = var14.b(16711935);
+          var2 = var14.readUnsignedByte(16711935);
           var3 = (ne) (rg.field_f.b((byte) 90));
           if (param0 < 98) {
             return;
@@ -52,12 +52,12 @@ final class wda {
             vc.a((byte) -113);
             return;
           }
-          var4 = var14.b(16711935);
+          var4 = var14.readUnsignedByte(16711935);
           if (var4 != 0) {
             vs.field_a[0] = cha.field_l;
             var5 = var3.field_i;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              vs.field_a[var6_int] = var14.g(80);
+              vs.field_a[var6_int] = var14.readString(80);
             }
             iw.a(var5, -10410, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
@@ -117,12 +117,12 @@ final class wda {
             }
           }
           var3.field_p = true;
-          var3.a(false);
+          var3.unlink(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "wda.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "wda.C(" + param0 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class wda {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class wda {
         this.field_e = param1;
     }
 
-    wda(lu param0) {
+    wda(PacketBuffer param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -183,9 +183,9 @@ final class wda {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_d = param0.b(true);
-          this.field_e = param0.b(16711935);
+          this.field_e = param0.readUnsignedByte(16711935);
           if (param0.b(true) != -1) {
-            param0.field_g = param0.field_g - 1;
+            param0.position = param0.position - 1;
             this.field_f = new it(param0);
           }
           return;
@@ -199,7 +199,7 @@ final class wda {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

@@ -25,12 +25,12 @@ final class gb extends IntrusiveNode {
         int[] var12 = null;
         try {
           k.c(param3 + 3685);
-          var12 = dg.field_e;
+          var12 = SoftwareRasterizer.field_e;
           var11 = var12;
           var10 = var11;
           var6 = var10;
-          var7 = dg.field_i;
-          var8 = dg.field_c;
+          var7 = SoftwareRasterizer.field_i;
+          var8 = SoftwareRasterizer.field_c;
           if (null != cea.field_i &&
             null != hl.field_C) {
             param1 = param1 - (-hl.field_C.field_B + hl.field_C.field_u);
@@ -40,9 +40,9 @@ final class gb extends IntrusiveNode {
             if ((var9 & 1) == 1) {
               var9++;
             }
-            dg.d();
-            hl.field_C.c(param5, 5, 3 + hl.field_C.field_u, param3, -1);
-            dg.a(var12, var7, var8);
+            SoftwareRasterizer.clear();
+            hl.field_C.drawText(param5, 5, 3 + hl.field_C.field_u, param3, -1);
+            SoftwareRasterizer.setTarget(var12, var7, var8);
             fk.d((byte) -121);
             if (param4) {
               fw.a(param0, cea.field_i, var9, param2, true, oa.field_Bb, param1);
@@ -62,7 +62,7 @@ final class gb extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class gb extends IntrusiveNode {
             bf.field_f = true;
           }
           for (var4 = 0; var4 < gs.field_c.length; var4++) {
-            dg.f((wda.field_b[var4] * var3 >> 9) + 362 - var3 + 137, -(param0 * vb.field_h[var4] * param0 >> 17) + gs.field_c[var4], 30 + (param0 * wda.field_b[var4] >> 12), 16777215, 128 <= param0 ? 256 - param0 >> 1 : param0 >> 1);
+            SoftwareRasterizer.fillCircleAlpha((wda.field_b[var4] * var3 >> 9) + 362 - var3 + 137, -(param0 * vb.field_h[var4] * param0 >> 17) + gs.field_c[var4], 30 + (param0 * wda.field_b[var4] >> 12), 16777215, 128 <= param0 ? 256 - param0 >> 1 : param0 >> 1);
           }
         }
         var4 = (var2_int * 53 >> 8) + 84;
@@ -104,7 +104,7 @@ final class gb extends IntrusiveNode {
           lka.field_G = new int[]{-var4, 90, -42, var6, 0, -var7, 0, 65536, 0, var7, 0, var6};
           ni.field_l.a(mu.field_j, lka.field_G);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gb.B(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gb.B(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nia extends lw {
-    static kv[] field_l;
-    static pb field_m;
+    static Sprite[] field_l;
+    static AudioOutput field_m;
 
     final static int a(int param0, boolean param1) {
         int var2;
@@ -148,7 +148,7 @@ final class nia extends lw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "nia.H(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "nia.H(" + param0 + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class nia extends lw {
           var1 = var6 + ":";
           for (var2 = 0; var2 < dw.field_f; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & ig.field_m.field_h[var2];
+            var3 = 255 & ig.field_m.payload[var2];
             var4 = var3 >> 4;
             if (var4 < 10) {
               var4 += 48;

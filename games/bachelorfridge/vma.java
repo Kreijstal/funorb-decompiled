@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vma extends pv {
-    static kv[] field_j;
+    static Sprite[] field_j;
 
     public static void b(int param0) {
         field_j = null;
@@ -143,14 +143,14 @@ final class vma extends pv {
         }
     }
 
-    final static kv[] c(int param0) {
+    final static Sprite[] c(int param0) {
         int var2 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var3 = 0;
         int var7 = BachelorFridge.field_y;
-        kv[] var1 = new kv[ok.field_vb];
+        Sprite[] var1 = new Sprite[ok.field_vb];
         int var3Lifetime1;
         for (var2 = 0; var2 < ok.field_vb; var2++) {
           var3 = lq.field_A[var2] * eha.field_s[var2];
@@ -159,7 +159,7 @@ final class vma extends pv {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = hk.field_f[dda.a(255, (int) var4[var6])];
           }
-          var1[var2] = new kv(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], var5);
+          var1[var2] = new Sprite(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], var5);
         }
         var3Lifetime1 = 60 / ((-56 - param0) / 46);
         al.b(-18073);
@@ -189,7 +189,7 @@ final class vma extends pv {
     final static void a(byte param0, boolean param1, boolean param2, String param3) {
         try {
           if (param0 != -6) {
-            field_j = (kv[]) null;
+            field_j = (Sprite[]) null;
           }
           eha.c(false);
           gja.field_m.f((byte) -66);
@@ -197,7 +197,7 @@ final class vma extends pv {
           kka.field_l = new sja(gja.field_m, ola.field_e);
           gja.field_m.a((wj) (kka.field_l), (byte) 63);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vma.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vma.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -205,7 +205,7 @@ final class vma extends pv {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class vma extends pv {
     final static void $cfr$intArgs$a$842e35442ba4(int param0, boolean param1, boolean param2, String param3) {
         try {
           if (param0 != -6) {
-            field_j = (kv[]) null;
+            field_j = (Sprite[]) null;
           }
           eha.c(false);
           gja.field_m.f((byte) -66);
@@ -224,7 +224,7 @@ final class vma extends pv {
           kka.field_l = new sja(gja.field_m, ola.field_e);
           gja.field_m.a((wj) (kka.field_l), (byte) 63);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vma.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vma.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 }

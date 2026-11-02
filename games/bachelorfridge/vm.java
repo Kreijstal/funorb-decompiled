@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class vm {
-    in field_f;
+    DualLinkDeque field_f;
     static sna field_i;
     static String field_g;
-    in field_a;
-    in field_c;
-    in field_l;
+    DualLinkDeque field_a;
+    DualLinkDeque field_c;
+    DualLinkDeque field_l;
     long field_b;
-    lu field_n;
+    PacketBuffer field_n;
     int field_j;
-    lu field_d;
+    PacketBuffer field_d;
     volatile int field_k;
     volatile int field_e;
     byte field_m;
@@ -56,7 +56,7 @@ abstract class vm {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ abstract class vm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "vm.G(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "vm.G(" + param0 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ abstract class vm {
           var6_long = ((long)param0 << 32) + (long)param1;
           var8 = new qfa();
           var8.field_q = param4;
-          var8.field_h = var6_long;
+          var8.secondaryKey = var6_long;
           var8.field_s = param3;
           if (!param4) {
             if (this.a(-117) >= 20) {
@@ -114,7 +114,7 @@ abstract class vm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var6), "vm.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) var6), "vm.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -261,7 +261,7 @@ abstract class vm {
           } else {
             stackIn_68_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ abstract class vm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "vm.K(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "vm.K(" + param0 + ')');
         }
     }
 
@@ -301,7 +301,7 @@ abstract class vm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "vm.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "vm.C(" + param0 + ')');
         }
     }
 
@@ -313,7 +313,7 @@ abstract class vm {
           int var1_int = -127 % ((param0 - 71) / 46);
           field_g = null;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vm.H(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vm.H(" + param0 + ')');
         }
     }
 
@@ -330,20 +330,20 @@ abstract class vm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "vm.L(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "vm.L(" + param0 + ')');
         }
     }
 
     vm() {
-        this.field_f = new in();
-        this.field_a = new in();
-        this.field_c = new in();
-        this.field_l = new in();
-        this.field_n = new lu(6);
+        this.field_f = new DualLinkDeque();
+        this.field_a = new DualLinkDeque();
+        this.field_c = new DualLinkDeque();
+        this.field_l = new DualLinkDeque();
+        this.field_n = new PacketBuffer(6);
         this.field_e = 0;
         this.field_m = (byte) 0;
         this.field_k = 0;
-        this.field_d = new lu(10);
+        this.field_d = new PacketBuffer(10);
     }
 
     static {

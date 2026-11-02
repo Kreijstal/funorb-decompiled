@@ -7,7 +7,7 @@ final class oga extends bca {
     nq field_s;
     static sna field_t;
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           super.a((byte) -67, param1);
           if (param0 > -12) {
@@ -15,7 +15,7 @@ final class oga extends bca {
           }
           er.a(this.field_s, 112, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oga.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oga.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class oga extends bca {
           if (null != iga.field_c) {
             var3 = (ema) (iga.field_c.b((byte) -73));
             while (var3 != null) {
-              var3.b(0);
+              var3.unlinkSecondary(0);
               var3 = (ema) (iga.field_c.a(-25177));
             }
             iga.field_c = null;
@@ -60,7 +60,7 @@ final class oga extends bca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "oga.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "oga.B(" + param0 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class oga extends bca {
           this.a(param0, (byte) -2);
           int var3_int = -73 % ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class oga extends bca {
         try {
           this.field_s = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oga.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oga.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -118,17 +118,17 @@ final class oga extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    oga(lu param0) {
+    oga(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 122);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 122);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -138,7 +138,7 @@ final class oga extends bca {
           }
           this.field_s = qi.a(param0, (byte) 78);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

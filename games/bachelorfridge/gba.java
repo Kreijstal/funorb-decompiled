@@ -6,14 +6,14 @@ final class gba extends sna {
     private int field_Ab;
     private sna field_zb;
     private boolean field_vb;
-    static kv field_xb;
+    static Sprite field_xb;
     private sna field_Eb;
     private sna field_wb;
     private sna field_Gb;
     private static int[] field_Hb;
     private sna field_Cb;
     static int field_Bb;
-    static kv[] field_Db;
+    static Sprite[] field_Db;
     static String field_yb;
     static String field_Ib;
 
@@ -160,7 +160,7 @@ final class gba extends sna {
         var20.field_sb = var8;
     }
 
-    gba(String param0, sna param1, kv param2, kv param3, sna param4, sna param5, boolean param6) {
+    gba(String param0, sna param1, Sprite param2, Sprite param3, sna param4, sna param5, boolean param6) {
         this(ew.a((byte) 8, (CharSequence) ((Object) param0)), param1, param2, param3, param4, param5, param6);
     }
 
@@ -193,13 +193,13 @@ final class gba extends sna {
         field_Hb = null;
     }
 
-    private gba(long param0, sna param1, kv param2, kv param3, sna param4, sna param5, boolean param6) {
+    private gba(long param0, sna param1, Sprite param2, Sprite param3, sna param4, sna param5, boolean param6) {
         this(param0, param1, param1, param4, param5, param6);
         try {
           this.field_Fb.field_v = param2;
           this.field_Eb.field_v = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gba.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gba.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -423,7 +423,7 @@ final class gba extends sna {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -455,7 +455,7 @@ final class gba extends sna {
           }
         }
         if (param1 < 15) {
-          field_xb = (kv) null;
+          field_xb = (Sprite) null;
         }
         return var5;
     }

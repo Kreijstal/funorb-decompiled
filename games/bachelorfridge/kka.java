@@ -3,13 +3,13 @@
  */
 final class kka extends IntrusiveNode {
     static int field_g;
-    static kv[] field_i;
+    static Sprite[] field_i;
     static sja field_l;
     int[] field_m;
-    static ee field_f;
+    static IndexedSprite field_f;
     static String[] field_k;
     boolean field_j;
-    static kv field_h;
+    static Sprite field_h;
 
     final static int a(int param0, int param1, int param2) {
         String var3 = lka.field_E[param0][param2];

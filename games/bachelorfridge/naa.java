@@ -50,13 +50,13 @@ final class naa extends bca {
           this.field_u = 0;
           this.field_s = new aj[6];
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "naa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "naa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final at a(int param0, gj param1) {
         RuntimeException var3 = null;
-        lu var4 = null;
+        PacketBuffer var4 = null;
         jga stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -64,8 +64,8 @@ final class naa extends bca {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            var4 = (lu) null;
-            this.a((byte) 60, (lu) null);
+            var4 = (PacketBuffer) null;
+            this.a((byte) 60, (PacketBuffer) null);
           }
           stackIn_3_0 = new jga(param1, this);
           return (at) ((Object) stackIn_3_0);
@@ -79,11 +79,11 @@ final class naa extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -97,13 +97,13 @@ final class naa extends bca {
           if (param0 > -12) {
             this.d(-70);
           }
-          param1.d(this.field_q, 0);
-          param1.d(this.field_t, 0);
-          param1.d(this.field_u, 0);
-          param1.d(this.field_r, 0);
+          param1.writeByte(this.field_q, 0);
+          param1.writeByte(this.field_t, 0);
+          param1.writeByte(this.field_u, 0);
+          param1.writeByte(this.field_r, 0);
           for (var3_int = 0; var3_int < this.field_u; var3_int++) {
-            param1.d(this.field_s[var3_int].field_c, 0);
-            param1.d(this.field_s[var3_int].field_a, 0);
+            param1.writeByte(this.field_s[var3_int].field_c, 0);
+            param1.writeByte(this.field_s[var3_int].field_a, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,7 +116,7 @@ final class naa extends bca {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -163,11 +163,11 @@ final class naa extends bca {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    naa(lu param0) {
+    naa(PacketBuffer param0) {
         super(param0);
         int var3 = 0;
         int var2_int = 0;
@@ -177,9 +177,9 @@ final class naa extends bca {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_k = param0.e((byte) 83);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 83);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (0 <= var2_int) {
@@ -188,13 +188,13 @@ final class naa extends bca {
             }
             break;
           }
-          this.field_q = param0.b(16711935);
-          this.field_t = param0.b(16711935);
-          this.field_u = param0.b(16711935);
-          this.field_r = param0.b(16711935);
+          this.field_q = param0.readUnsignedByte(16711935);
+          this.field_t = param0.readUnsignedByte(16711935);
+          this.field_u = param0.readUnsignedByte(16711935);
+          this.field_r = param0.readUnsignedByte(16711935);
           this.field_s = new aj[this.field_u];
           for (var3 = 0; this.field_u > var3; var3++) {
-            this.field_s[var3] = new aj(param0.b(16711935), param0.b(16711935));
+            this.field_s[var3] = new aj(param0.readUnsignedByte(16711935), param0.readUnsignedByte(16711935));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -207,7 +207,7 @@ final class naa extends bca {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

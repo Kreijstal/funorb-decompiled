@@ -3,8 +3,8 @@
  */
 final class rl extends td {
     static int field_q;
-    static kv field_r;
-    static lu field_p;
+    static Sprite field_r;
+    static PacketBuffer field_p;
 
     final ii a(op param0, int param1) {
         aga var3 = null;
@@ -46,7 +46,7 @@ final class rl extends td {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -66,12 +66,12 @@ final class rl extends td {
           this.field_k = param2;
           this.field_n = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
         field_q = 100;
-        field_r = new kv(540, 140);
+        field_r = new Sprite(540, 140);
     }
 }

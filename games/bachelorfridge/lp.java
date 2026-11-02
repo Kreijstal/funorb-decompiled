@@ -5,20 +5,20 @@ final class lp extends bca {
     static boolean field_u;
     static String field_t;
     int field_r;
-    static kv field_q;
+    static Sprite field_q;
     int field_s;
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           super.a((byte) -106, param1);
           if (param0 > -12) {
             java.awt.Component var4 = (java.awt.Component) null;
             lp.a(-82, 11, (java.awt.Component) null, 70);
           }
-          param1.d(this.field_r, 0);
-          param1.d(this.field_s, 0);
+          param1.writeByte(this.field_r, 0);
+          param1.writeByte(this.field_s, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lp.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lp.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,16 +58,16 @@ final class lp extends bca {
         return var2;
     }
 
-    final static qm a(int param0, int param1, java.awt.Component param2, int param3) {
+    final static RasterBuffer a(int param0, int param1, java.awt.Component param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          qm var5 = null;
-          uka var5_ref = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
           java.awt.Component var6 = null;
-          qm stackIn_3_0 = null;
-          uka stackIn_5_0 = null;
+          RasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -79,17 +79,17 @@ final class lp extends bca {
                 var6 = (java.awt.Component) null;
                 lp.a(-117, 32, (java.awt.Component) null, -59);
               }
-              var5 = (qm) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param1, param2, param0, 256);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new uka();
-              ((qm) ((Object) var5_ref)).a(param1, param2, param0, param3 ^ 29292);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(param1, param2, param0, param3 ^ 29292);
               stackIn_5_0 = var5_ref;
-              return (qm) ((Object) stackIn_5_0);
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -101,7 +101,7 @@ final class lp extends bca {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -118,13 +118,13 @@ final class lp extends bca {
         field_q = null;
     }
 
-    lp(lu param0) {
+    lp(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 92);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 92);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (0 > var2_int) {
@@ -132,10 +132,10 @@ final class lp extends bca {
             }
             this.field_o.a(dca.a((byte) 102, param0), true);
           }
-          this.field_r = param0.b(16711935);
-          this.field_s = param0.b(16711935);
+          this.field_r = param0.readUnsignedByte(16711935);
+          this.field_s = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class lp extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -172,15 +172,15 @@ final class lp extends bca {
           param0.a(878, this.field_s, this.field_r, this.e((byte) -108), 30);
           int var3_int = -19 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static kv a(byte param0, kv param1) {
+    final static Sprite a(byte param0, Sprite param1) {
         int var13 = 0;
         int var14 = 0;
-        kv stackIn_36_0 = null;
-        kv stackIn_44_0 = null;
+        Sprite stackIn_36_0 = null;
+        Sprite stackIn_44_0 = null;
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
         String stackIn_48_2 = null;
@@ -267,7 +267,7 @@ final class lp extends bca {
             var3 - 1 == var7Lifetime2 &&
             var6Lifetime1 == 0 &&
             var2_int - 1 == var5) {
-            stackIn_36_0 = (kv) (param1);
+            stackIn_36_0 = (Sprite) (param1);
             return stackIn_36_0;
           }
           var9Lifetime1 = -var8Lifetime2 + (var7Lifetime2 + 1);
@@ -284,7 +284,7 @@ final class lp extends bca {
           param1.field_v = var11;
           param1.field_u = param1.field_u + var6Lifetime1;
           param1.field_t = param1.field_t + var8Lifetime2;
-          stackIn_44_0 = (kv) (param1);
+          stackIn_44_0 = (Sprite) (param1);
           return stackIn_44_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -296,7 +296,7 @@ final class lp extends bca {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(')').toString());
         }
     }
 

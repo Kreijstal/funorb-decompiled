@@ -3,7 +3,7 @@
  */
 final class rla extends pp {
     private int field_j;
-    static kv field_k;
+    static Sprite field_k;
     static String field_i;
 
     final static int a(int param0, int param1, int param2) {
@@ -20,7 +20,7 @@ final class rla extends pp {
         var8 = BachelorFridge.field_y;
         try {
           if (param2 > -118) {
-            field_k = (kv) null;
+            field_k = (Sprite) null;
           }
           var3_int = 0;
           var4 = ql.field_s;
@@ -45,7 +45,7 @@ final class rla extends pp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "rla.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "rla.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -54,25 +54,25 @@ final class rla extends pp {
           this.field_j = param1;
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -123);
           er.a(this.field_h, 117, param0);
-          param0.d(this.field_j, 0);
+          param0.writeByte(this.field_j, 0);
           int var3_int = -78 / ((34 - param1) / 58);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rla.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rla.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void d(byte param0) {
         field_k = null;
         if (param0 != 29) {
-          field_k = (kv) null;
+          field_k = (Sprite) null;
           field_i = null;
           return;
         }
@@ -88,17 +88,17 @@ final class rla extends pp {
         try {
           var6.field_E = this.field_j;
           if (param2 != 12) {
-            lu var5 = (lu) null;
-            this.a((lu) null, (byte) -61);
+            PacketBuffer var5 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, (byte) -61);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rla.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rla.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static int a(boolean param0, int param1) {
         if (param0) {
-          field_k = (kv) null;
+          field_k = (Sprite) null;
           return 255 & param1 >> 16;
         }
         return 255 & param1 >> 16;

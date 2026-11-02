@@ -41,7 +41,7 @@ final class ub extends at {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "ub.B(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "ub.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -170,7 +170,7 @@ final class ub extends at {
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted0)) {
                 for (var10Lifetime2 = 0; var10Lifetime2 < var16.length - 1; var10Lifetime2++) {
-                  if (0 == (sca.field_c[(var10Lifetime2 + param0) / 8] & 1 << (7 & param0 + var10Lifetime2))) {
+                  if (0 == (MouseWheelInput.field_c[(var10Lifetime2 + param0) / 8] & 1 << (7 & param0 + var10Lifetime2))) {
                     continue;
                   }
                   var9 = 0;
@@ -259,7 +259,7 @@ final class ub extends at {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ final class ub extends at {
           this.field_o = param0;
           this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ub.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

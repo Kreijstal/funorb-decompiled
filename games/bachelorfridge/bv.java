@@ -196,7 +196,7 @@ final class bv {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 

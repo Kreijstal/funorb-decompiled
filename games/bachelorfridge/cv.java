@@ -6,7 +6,7 @@ import java.io.*;
 final class cv extends bca {
     final static void a(int param0, String param1, Throwable param2) {
         try {
-          ht stackIn_13_0;
+          PlatformTaskDispatcher stackIn_13_0;
           java.net.URL stackIn_13_1;
           java.net.URL stackIn_13_2;
           java.net.URL stackIn_13_3;
@@ -17,7 +17,7 @@ final class cv extends bca {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          eh var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -44,7 +44,7 @@ final class cv extends bca {
             if (jia.field_m == null) {
               return;
             }
-            stackIn_13_0 = v.field_d;
+            stackIn_13_0 = BufferedCacheFile.field_d;
             stackIn_13_1 = null;
             stackIn_13_2 = null;
             stackIn_13_3 = jia.field_m.getCodeBase();
@@ -58,7 +58,7 @@ final class cv extends bca {
               stackIn_14_2 = null;
               stackIn_14_5 = da.field_b;
             }
-            var4 = ((ht) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(ht.field_g).append("&v2=").append(ht.field_c).append("&e=").append(var10).toString()), param0 + 23);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_g).append("&v2=").append(PlatformTaskDispatcher.field_c).append("&e=").append(var10).toString()), param0 + 23);
             while (var4.field_f == 0) {
               gda.a(false, 1L);
             }
@@ -108,7 +108,7 @@ final class cv extends bca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var6), "cv.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) var6), "cv.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class cv extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class cv extends bca {
           this.a(param0, (byte) -2);
           int var3_int = -4 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "cv.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "cv.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class cv extends bca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "cv.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "cv.C(" + param0 + ')');
         }
     }
 
@@ -184,7 +184,7 @@ final class cv extends bca {
         super(param0, param1);
     }
 
-    cv(lu param0) {
+    cv(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
@@ -193,9 +193,9 @@ final class cv extends bca {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_k = param0.e((byte) 74);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 74);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -213,7 +213,7 @@ final class cv extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

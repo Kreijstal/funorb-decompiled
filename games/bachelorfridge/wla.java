@@ -9,7 +9,7 @@ final class wla extends k {
     private int[] field_o;
     static String field_n;
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -22,16 +22,16 @@ final class wla extends k {
         try {
           var5 = param2;
           if (var5 == 0) {
-            this.field_k = param1.e((byte) 95);
+            this.field_k = param1.readUnsignedShort((byte) 95);
           } else {
             if (var5 == 1) {
-              this.field_p = param1.e((byte) 54);
+              this.field_p = param1.readUnsignedShort((byte) 54);
             } else {
               if (var5 == 2) {
-                this.field_l = param1.e((byte) 118);
+                this.field_l = param1.readUnsignedShort((byte) 118);
               } else {
                 if (var5 == 3) {
-                  this.field_m = param1.e((byte) 108);
+                  this.field_m = param1.readUnsignedShort((byte) 108);
                 } else {
                   if (var5 == 4) {
                     var4_int = param1.a(3);
@@ -57,7 +57,7 @@ final class wla extends k {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 

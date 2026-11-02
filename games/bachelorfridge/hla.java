@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hla extends bca {
-    static lu field_t;
-    static pj field_s;
+    static PacketBuffer field_t;
+    static BufferedSocket field_s;
     nq field_q;
     static String field_r;
 
@@ -11,7 +11,7 @@ final class hla extends bca {
         field_s = null;
         field_r = null;
         if (param0 > -64) {
-          field_t = (lu) null;
+          field_t = (PacketBuffer) null;
           field_t = null;
           return;
         }
@@ -23,7 +23,7 @@ final class hla extends bca {
           int var3_int = -37 % ((param1 - 12) / 35);
           this.a(param0, (byte) -2);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hla.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hla.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class hla extends bca {
         try {
           this.field_q = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hla.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hla.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,17 +61,17 @@ final class hla extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    hla(lu param0) {
+    hla(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 72);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 72);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -81,11 +81,11 @@ final class hla extends bca {
           }
           this.field_q = qi.a(param0, (byte) 12);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         if (param0 > -12) {
           return;
         }
@@ -93,14 +93,14 @@ final class hla extends bca {
           super.a((byte) -107, param1);
           er.a(this.field_q, 112, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hla.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hla.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static sba a(int param0, ee[] param1, byte[] param2) {
+    final static AntialiasedBitmapFont a(int param0, IndexedSprite[] param1, byte[] param2) {
         int var8 = 0;
-        sba stackIn_5_0 = null;
-        sba stackIn_10_0 = null;
+        AntialiasedBitmapFont stackIn_5_0 = null;
+        AntialiasedBitmapFont stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -141,7 +141,7 @@ final class hla extends bca {
           var13 = var18;
           var5 = var13;
           if (param0 != 4676) {
-            stackIn_5_0 = (sba) null;
+            stackIn_5_0 = (AntialiasedBitmapFont) null;
             return stackIn_5_0;
           }
           var19 = new int[256];
@@ -157,7 +157,7 @@ final class hla extends bca {
             var6[var8] = param1[var8].field_e;
             var7[var8] = param1[var8].field_g;
           }
-          stackIn_10_0 = new sba(param2, var16, var17, var18, var19, param1[0].field_h, var20);
+          stackIn_10_0 = new AntialiasedBitmapFont(param2, var16, var17, var18, var19, param1[0].field_h, var20);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -175,12 +175,12 @@ final class hla extends bca {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     static {
-        field_t = new lu(30000);
+        field_t = new PacketBuffer(30000);
         field_r = "Connection lost - attempting to reconnect";
     }
 }

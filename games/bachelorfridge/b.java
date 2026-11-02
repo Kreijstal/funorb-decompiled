@@ -6,7 +6,7 @@ import java.util.*;
 final class b extends cia {
     int field_s;
     static boolean field_r;
-    static pia field_t;
+    static PalettedBitmapFont field_t;
     static int field_u;
 
     b() {

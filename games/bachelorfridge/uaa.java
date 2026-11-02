@@ -7,7 +7,7 @@ final class uaa extends kj {
     private aga field_j;
     static iga field_f;
     static sna field_i;
-    private eaa field_h;
+    private IntrusiveDeque field_h;
     private sl field_g;
 
     final void a(int param0, boolean param1, int param2) {
@@ -26,7 +26,7 @@ final class uaa extends kj {
           while (var4_ref != null) {
             var5 = (var4_ref.field_i >> 4) + param2;
             var6 = -(var4_ref.field_h >> 4) + (param0 + (var4_ref.field_q >> 5));
-            mla.field_b[var4_ref.field_v].e(var5, var6);
+            mla.field_b[var4_ref.field_v].draw(var5, var6);
             var4_ref = (bma) (this.field_h.c(0));
           }
           return;
@@ -35,7 +35,7 @@ final class uaa extends kj {
         while (var4_refLifetime1 != null) {
           var5Lifetime1 = (var4_refLifetime1.field_i >> 4) + param2;
           var6Lifetime1 = -(var4_refLifetime1.field_h >> 4) + (param0 + (var4_refLifetime1.field_q >> 5));
-          mla.field_b[var4_refLifetime1.field_v].e(var5Lifetime1, var6Lifetime1);
+          mla.field_b[var4_refLifetime1.field_v].draw(var5Lifetime1, var6Lifetime1);
           var4_refLifetime1 = (bma) (this.field_h.c(0));
         }
     }
@@ -53,7 +53,7 @@ final class uaa extends kj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_h = new eaa();
+          this.field_h = new IntrusiveDeque();
           this.field_g = param1;
           this.field_j = param2;
           for (var4_int = 0; var4_int < 500; var4_int++) {
@@ -82,7 +82,7 @@ final class uaa extends kj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class uaa extends kj {
           while (var2_ref != null) {
             var2_ref.b(true);
             if (!(var2_ref.field_h >= 0)) {
-              var2_ref.a(false);
+              var2_ref.unlink(false);
             }
             var2_ref = (bma) (this.field_h.c(0));
           }
@@ -155,7 +155,7 @@ final class uaa extends kj {
         while (var2_refLifetime1 != null) {
           var2_refLifetime1.b(true);
           if (!(var2_refLifetime1.field_h >= 0)) {
-            var2_refLifetime1.a(false);
+            var2_refLifetime1.unlink(false);
           }
           var2_refLifetime1 = (bma) (this.field_h.c(0));
         }
@@ -176,7 +176,7 @@ final class uaa extends kj {
         lfa.field_l = new sna("back", vu.field_p, 440, 428, 177, 28, "");
         rv.field_l = new sna("up", vu.field_p, 440, 137, 140, 16, "");
         hk.field_c = new sna("down", vu.field_p, 440, 328, 140, 16, "");
-        se.field_s = new sna[8];
+        DiskCacheRequest.field_s = new sna[8];
         mg.field_l = new sna("bakery", vu.field_p, 14, 90, 73, 34, "Bakery");
         qba.field_l = new sna("meat", vu.field_p, 91, 90, 73, 34, "Meat");
         dt.field_b = new sna("fish", vu.field_p, 168, 90, 73, 34, "Fish");
@@ -185,14 +185,14 @@ final class uaa extends kj {
         mk.field_h = new sna("drinks", vu.field_p, 399, 90, 73, 34, "Drinks");
         mja.field_q = new sna("readymeal", vu.field_p, 476, 90, 73, 34, "Ready Meal");
         rfa.field_b = new sna("misc", vu.field_p, 553, 90, 73, 34, "Misc.");
-        se.field_s[3] = bea.field_u;
-        se.field_s[0] = mg.field_l;
-        se.field_s[4] = sea.field_k;
-        se.field_s[6] = mja.field_q;
-        se.field_s[7] = rfa.field_b;
-        se.field_s[2] = dt.field_b;
-        se.field_s[1] = qba.field_l;
-        se.field_s[5] = mk.field_h;
+        DiskCacheRequest.field_s[3] = bea.field_u;
+        DiskCacheRequest.field_s[0] = mg.field_l;
+        DiskCacheRequest.field_s[4] = sea.field_k;
+        DiskCacheRequest.field_s[6] = mja.field_q;
+        DiskCacheRequest.field_s[7] = rfa.field_b;
+        DiskCacheRequest.field_s[2] = dt.field_b;
+        DiskCacheRequest.field_s[1] = qba.field_l;
+        DiskCacheRequest.field_s[5] = mk.field_h;
     }
 
     static {

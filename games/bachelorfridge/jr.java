@@ -9,12 +9,12 @@ final class jr {
         int var1 = 33 % ((-32 - param0) / 54);
     }
 
-    final static pia a(String param0, byte param1, vr param2, String param3, vr param4) {
+    final static PalettedBitmapFont a(String param0, byte param1, vr param2, String param3, vr param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        pia stackIn_2_0 = null;
-        pia stackIn_4_0 = null;
+        PalettedBitmapFont stackIn_2_0 = null;
+        PalettedBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -28,7 +28,7 @@ final class jr {
         try {
           var5_int = param2.a(param0, false);
           if (param1 < 101) {
-            stackIn_2_0 = (pia) null;
+            stackIn_2_0 = (PalettedBitmapFont) null;
             return stackIn_2_0;
           }
           var6 = param2.a((byte) 6, var5_int, param3);
@@ -62,7 +62,7 @@ final class jr {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

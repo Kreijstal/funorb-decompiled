@@ -7,7 +7,7 @@ final class ba extends mv {
     private gj field_p;
     private hba field_o;
 
-    final static cj a(lu param0, byte param1) {
+    final static cj a(PacketBuffer param0, byte param1) {
         ak stackIn_79_0 = null;
         jl stackIn_81_0 = null;
         mna stackIn_83_0 = null;
@@ -68,8 +68,8 @@ final class ba extends mv {
         int var4 = 0;
         var4 = BachelorFridge.field_y;
         try {
-          var2_int = param0.e((byte) 81);
-          param0.field_g = param0.field_g - 2;
+          var2_int = param0.readUnsignedShort((byte) 81);
+          param0.position = param0.position - 2;
           if (param1 < 118) {
             field_r = (String) null;
           }
@@ -288,7 +288,7 @@ final class ba extends mv {
           } else {
             stackIn_183_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_182_0), ((StringBuilder) (Object) stackIn_182_1).append(stackIn_183_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_182_0), ((StringBuilder) (Object) stackIn_182_1).append(stackIn_183_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -298,22 +298,22 @@ final class ba extends mv {
         var17 = BachelorFridge.field_y;
         if (param7 <= param1) {
           if (param11 > param1) {
-            dk.a(param4, param15, param10, param7, param11, param2, param0, dg.field_e, (byte) -68, param1, param6, param3, param9, param12, param13, param5, param8);
+            dk.a(param4, param15, param10, param7, param11, param2, param0, SoftwareRasterizer.field_e, (byte) -68, param1, param6, param3, param9, param12, param13, param5, param8);
           } else {
             if (param11 <= param7) {
-              dk.a(param3, param8, param5, param11, param1, param4, param13, dg.field_e, (byte) -68, param7, param15, param2, param10, param0, param12, param9, param6);
+              dk.a(param3, param8, param5, param11, param1, param4, param13, SoftwareRasterizer.field_e, (byte) -68, param7, param15, param2, param10, param0, param12, param9, param6);
             } else {
-              dk.a(param2, param8, param9, param7, param1, param4, param13, dg.field_e, (byte) -68, param11, param6, param3, param10, param12, param0, param5, param15);
+              dk.a(param2, param8, param9, param7, param1, param4, param13, SoftwareRasterizer.field_e, (byte) -68, param11, param6, param3, param10, param12, param0, param5, param15);
             }
           }
         } else {
           if (param7 < param11) {
-            dk.a(param3, param15, param5, param1, param11, param2, param0, dg.field_e, (byte) -68, param7, param8, param4, param9, param13, param12, param10, param6);
+            dk.a(param3, param15, param5, param1, param11, param2, param0, SoftwareRasterizer.field_e, (byte) -68, param7, param8, param4, param9, param13, param12, param10, param6);
           } else {
             if (param1 < param11) {
-              dk.a(param2, param6, param9, param1, param7, param3, param12, dg.field_e, (byte) -68, param11, param8, param4, param5, param13, param0, param10, param15);
+              dk.a(param2, param6, param9, param1, param7, param3, param12, SoftwareRasterizer.field_e, (byte) -68, param11, param8, param4, param5, param13, param0, param10, param15);
             } else {
-              dk.a(param4, param6, param10, param11, param7, param3, param12, dg.field_e, (byte) -68, param1, param15, param2, param5, param0, param13, param9, param8);
+              dk.a(param4, param6, param10, param11, param7, param3, param12, SoftwareRasterizer.field_e, (byte) -68, param1, param15, param2, param5, param0, param13, param9, param8);
             }
           }
         }
@@ -380,7 +380,7 @@ final class ba extends mv {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

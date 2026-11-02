@@ -8,7 +8,7 @@ final class vaa {
     static String field_c;
     static int field_d;
     private java.util.zip.Inflater field_e;
-    static kv field_b;
+    static Sprite field_b;
     static int field_f;
 
     final static boolean a(int param0, int param1, int param2) {
@@ -210,7 +210,7 @@ final class vaa {
               var5Lifetime1 = var5Lifetime1 - dc.field_r.a(var23Lifetime3Lifetime2);
               if (var11 != 0) {
                 var49 = (CharSequence) ((Object) bd.field_k);
-                var24 = lga.a(true, new String[]{lu.a(var49, 7995)}, iia.field_q);
+                var24 = lga.a(true, new String[]{PacketBuffer.a(var49, 7995)}, iia.field_q);
                 var26Lifetime6Lifetime3 = var24;
                 var7Lifetime1Lifetime6 = var26Lifetime6Lifetime3;
                 var26Lifetime6Lifetime3 = var24;
@@ -240,7 +240,7 @@ final class vaa {
                   var5Lifetime1 = var5Lifetime1 - dc.field_r.a(var30);
                   if (var11 != 0) {
                     var50 = (CharSequence) ((Object) bd.field_k);
-                    var31 = lga.a(true, new String[]{lu.a(var50, 7995)}, iia.field_q);
+                    var31 = lga.a(true, new String[]{PacketBuffer.a(var50, 7995)}, iia.field_q);
                     var7Lifetime1Lifetime6 = var31;
                     var7Lifetime1Lifetime6 = var31;
                     var32 = lga.a(true, new String[]{var15}, wla.field_n);
@@ -271,7 +271,7 @@ final class vaa {
                 var5Lifetime1 = var5Lifetime1 - dc.field_r.a(var33);
                 if (var11 != 0) {
                   var51 = (CharSequence) ((Object) bd.field_k);
-                  var34 = lga.a(true, new String[]{lu.a(var51, 7995)}, iia.field_q);
+                  var34 = lga.a(true, new String[]{PacketBuffer.a(var51, 7995)}, iia.field_q);
                   var35 = lga.a(true, new String[]{var15}, wla.field_n);
                   var9 = dc.field_r.a(var34);
                   var10 = dc.field_r.a(var35);
@@ -291,7 +291,7 @@ final class vaa {
               var5Lifetime1 = var5Lifetime1 - dc.field_r.a(var36);
               if (var11 != 0) {
                 var52 = (CharSequence) ((Object) bd.field_k);
-                var37 = lga.a(true, new String[]{lu.a(var52, 7995)}, iia.field_q);
+                var37 = lga.a(true, new String[]{PacketBuffer.a(var52, 7995)}, iia.field_q);
                 var7Lifetime1Lifetime6 = var37;
                 var7Lifetime1Lifetime6 = var37;
                 var38 = lga.a(true, new String[]{var15}, wla.field_n);
@@ -319,7 +319,7 @@ final class vaa {
             var5Lifetime1 = var5Lifetime1 - dc.field_r.a(var39);
             if (var11 != 0) {
               var53 = (CharSequence) ((Object) bd.field_k);
-              var40 = lga.a(true, new String[]{lu.a(var53, 7995)}, iia.field_q);
+              var40 = lga.a(true, new String[]{PacketBuffer.a(var53, 7995)}, iia.field_q);
               var41 = lga.a(true, new String[]{var15}, wla.field_n);
               var9 = dc.field_r.a(var40);
               var10 = dc.field_r.a(var41);
@@ -332,7 +332,7 @@ final class vaa {
             }
           } else {
             var53 = (CharSequence) ((Object) bd.field_k);
-            var40 = lga.a(true, new String[]{lu.a(var53, 7995)}, iia.field_q);
+            var40 = lga.a(true, new String[]{PacketBuffer.a(var53, 7995)}, iia.field_q);
             var41 = lga.a(true, new String[]{var15}, wla.field_n);
             var9 = dc.field_r.a(var40);
             var10 = dc.field_r.a(var41);
@@ -436,7 +436,7 @@ final class vaa {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -449,7 +449,7 @@ final class vaa {
         field_a = null;
     }
 
-    final void a(lu param0, byte[] param1, int param2) {
+    final void a(PacketBuffer param0, byte[] param1, int param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -460,13 +460,13 @@ final class vaa {
           String stackIn_18_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (31 == param0.field_h[param0.field_g] &&
-              param0.field_h[param0.field_g + 1] == -117) {
+            if (31 == param0.payload[param0.position] &&
+              param0.payload[param0.position + 1] == -117) {
               if (this.field_e == null) {
                 this.field_e = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_e.setInput(param0.field_h, 10 + param0.field_g, param0.field_h.length - 8 + (-param0.field_g + param2));
+                this.field_e.setInput(param0.payload, 10 + param0.position, param0.payload.length - 8 + (-param0.position + param2));
                 this.field_e.inflate(param1);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -494,7 +494,7 @@ final class vaa {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

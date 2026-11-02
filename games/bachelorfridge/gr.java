@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gr {
-    static kv[] field_a;
+    static Sprite[] field_a;
 
     public static void b(int param0) {
         if (param0 != 12653) {
@@ -11,7 +11,7 @@ final class gr {
         try {
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gr.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gr.B(" + param0 + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class gr {
             var2 = iu.field_l;
           }
           if (param0 != 2) {
-            field_a = (kv[]) null;
+            field_a = (Sprite[]) null;
           }
           if (gk.field_d == 2 &&
             !hv.a(-19229)) {
@@ -132,7 +132,7 @@ final class gr {
                 }
               }
             }
-            pp.a(jaa.field_u[var6], 5, var4 + po.c(jm.field_g.toString()), var7, var5);
+            pp.a(jaa.field_u[var6], 5, var4 + BitmapFont.escapeMarkup(jm.field_g.toString()), var7, var5);
             if (!lna.field_q) {
               ts.field_r.field_T = false;
             }
@@ -145,7 +145,7 @@ final class gr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (var1), "gr.A(" + param0 + ')');
+          throw pe.wrapException((Throwable) (var1), "gr.A(" + param0 + ')');
         }
     }
 

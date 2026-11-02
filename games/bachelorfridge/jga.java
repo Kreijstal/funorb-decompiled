@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jga extends ana {
-    static be[] field_y;
-    static kia field_z;
+    static PcmSample[] field_y;
+    static MusicTrack field_z;
     private taa field_x;
     static String field_v;
     private naa field_w;
 
     final boolean c(byte param0) {
         int var2 = -89 % ((71 - param0) / 47);
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
-        if (this.field_x.a((byte) -106)) {
+        if (this.field_x.isLinked((byte) -106)) {
           return false;
         }
         int fieldTemp$0 = this.field_l - 1;
@@ -36,7 +36,7 @@ final class jga extends ana {
           this.field_x = new taa(this.field_q, this.field_w.field_q, this.field_w.field_t);
           this.a(27799, this.field_x);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class jga extends ana {
     }
 
     static {
-        field_y = new be[71];
+        field_y = new PcmSample[71];
         field_v = null;
     }
 }

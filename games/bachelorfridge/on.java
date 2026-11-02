@@ -6,7 +6,7 @@ final class on extends DualLinkNode {
     static int[] field_u;
     static int field_n;
     static String field_p;
-    static eaa field_r;
+    static IntrusiveDeque field_r;
     private int[] field_o;
     static char[] field_s;
     static int[] field_w;
@@ -86,11 +86,11 @@ final class on extends DualLinkNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    on(lu param0) {
+    on(PacketBuffer param0) {
         int[] array$2 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -118,7 +118,7 @@ final class on extends DualLinkNode {
         int var8Lifetime1;
         int var9Lifetime1Lifetime1;
         try {
-          var2_int = param0.b(16711935);
+          var2_int = param0.readUnsignedByte(16711935);
           var3 = 0;
           var4 = 0;
           this.field_y = new k[var2_int];
@@ -136,7 +136,7 @@ final class on extends DualLinkNode {
             array$2 = new int[var8];
             var12[var6] = array$2;
             for (var9 = 0; var9 < var8; var9++) {
-              var12[var6][var9] = param0.b(16711935);
+              var12[var6][var9] = param0.readUnsignedByte(16711935);
             }
             this.field_y[var6] = var13;
           }
@@ -164,9 +164,9 @@ final class on extends DualLinkNode {
             }
             var12[var6Lifetime1] = null;
           }
-          this.field_v = this.field_y[param0.b(16711935)];
-          param0.b(16711935);
-          param0.b(16711935);
+          this.field_v = this.field_y[param0.readUnsignedByte(16711935)];
+          param0.readUnsignedByte(16711935);
+          param0.readUnsignedByte(16711935);
           var5 = (int[][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -179,7 +179,7 @@ final class on extends DualLinkNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class on extends DualLinkNode {
             this.field_y[var10_int].a(param4, (byte) -93, param3);
           }
           vd.a(param0, 81);
-          jp.a(-117, param3, param4);
+          MidiPcmStream.a(-117, param3, param4);
           var26 = new int[param4 * param3];
           var10 = var26;
           if (!param6) {
@@ -319,7 +319,7 @@ final class on extends DualLinkNode {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -329,6 +329,6 @@ final class on extends DualLinkNode {
         field_s = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
         field_w = new int[8192];
         field_p = "Buying or selling an account";
-        field_r = new eaa();
+        field_r = new IntrusiveDeque();
     }
 }

@@ -8,7 +8,7 @@ abstract class sh extends vd implements mca {
     static String field_H;
     static boolean field_I;
     static aj[] field_C;
-    static ee[] field_G;
+    static IndexedSprite[] field_G;
 
     abstract int d(byte param0);
 
@@ -20,7 +20,7 @@ abstract class sh extends vd implements mca {
           this.field_F = param0;
           this.field_F.field_e = this;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -29,11 +29,11 @@ abstract class sh extends vd implements mca {
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
-        pf var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int[] var4 = null;
         int[] var5 = null;
-        pf var6 = null;
+        BitPacketBuffer var6 = null;
         int var7 = 0;
         int var9 = 0;
         int[] var11 = null;
@@ -45,16 +45,16 @@ abstract class sh extends vd implements mca {
         try {
           var1_int = -96 / ((19 - param0) / 53);
           var2 = ig.field_m;
-          var3 = var2.b(16711935);
+          var3 = var2.readUnsignedByte(16711935);
           if (var3 == 0) {
             var12 = vv.a((byte) 123);
             var4 = var12;
             var11 = var12;
             var5 = var11;
             var6 = var2;
-            var7 = ((lu) ((Object) var6)).b(16711935);
+            var7 = ((PacketBuffer) ((Object) var6)).readUnsignedByte(16711935);
             for (var8 = 0; var7 > var8; var8++) {
-              var11[var8] = ((lu) ((Object) var6)).f(-61);
+              var11[var8] = ((PacketBuffer) ((Object) var6)).readInt(-61);
             }
             var14 = (kka) (gs.field_l.b((byte) 90));
             if (var14 == null) {
@@ -63,13 +63,13 @@ abstract class sh extends vd implements mca {
             }
             var14.field_m = var4;
             var14.field_j = true;
-            var14.a(false);
+            var14.unlink(false);
             return;
           }
           if (var3 == 1) {
-            var13 = (cfa) (eaa.field_d.b((byte) 90));
+            var13 = (cfa) (IntrusiveDeque.field_d.b((byte) 90));
             if (var13 != null) {
-              var13.a(false);
+              var13.unlink(false);
               return;
             }
             vc.a((byte) -99);
@@ -87,12 +87,12 @@ abstract class sh extends vd implements mca {
           }
           var15.field_m = vv.a((byte) 113);
           var15.field_j = true;
-          var15.a(false);
+          var15.unlink(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "sh.T(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "sh.T(" + param0 + ')');
         }
     }
 

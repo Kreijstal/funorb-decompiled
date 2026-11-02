@@ -100,7 +100,7 @@ final class dk extends td {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class dk extends td {
           this.field_k = param2;
           this.field_n = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -161,15 +161,15 @@ final class dk extends td {
         var42 = BachelorFridge.field_y;
         try {
           if (param4 >= 0 &&
-            param3 < jb.field_n) {
+            param3 < TriangleRasterizer.field_n) {
             if (param13 < 0 &&
               param14 < 0 &&
               param6 < 0) {
               return;
             }
-            if (jb.field_o <= param13 &&
-              param14 >= jb.field_o &&
-              jb.field_o <= param6) {
+            if (TriangleRasterizer.field_o <= param13 &&
+              param14 >= TriangleRasterizer.field_o &&
+              TriangleRasterizer.field_o <= param6) {
               return;
             }
             if (param8 != -68) {
@@ -306,17 +306,17 @@ final class dk extends td {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = jb.field_a[param3];
+                var36Lifetime2 = TriangleRasterizer.field_a[param3];
                 while (param3 < param9) {
                   var37 = var17_int >> 16;
-                  if (var37 < jb.field_o) {
+                  if (var37 < TriangleRasterizer.field_o) {
                     var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (var38 != 0) {
                       var39 = (var22 - var21) / var38;
                       var40 = (-var25 + var26) / var38;
                       var41 = (-var29 + var30) / var38;
-                      if (var38 + var37 >= jb.field_o) {
-                        var38 = -1 + (-var37 + jb.field_o);
+                      if (var38 + var37 >= TriangleRasterizer.field_o) {
+                        var38 = -1 + (-var37 + TriangleRasterizer.field_o);
                       }
                       if (var37 < 0) {
                         oj.a(-(var39 * var37) + var21, var39, 92, var36Lifetime2, param7, var29 - var41 * var37, -(var40 * var37) + var25, var38 + var37, var40, var41);
@@ -325,13 +325,13 @@ final class dk extends td {
                       }
                     } else {
                       if (var37 >= 0 &&
-                        jb.field_o > var37) {
+                        TriangleRasterizer.field_o > var37) {
                         oj.a(var21, 0, 91, var36Lifetime2 + var37, param7, var29, var25, var38, 0, 0);
                       }
                     }
                   }
                   param3++;
-                  if (jb.field_n <= param3) {
+                  if (TriangleRasterizer.field_n <= param3) {
                     return;
                   }
                   var26 = var26 + var28;
@@ -341,7 +341,7 @@ final class dk extends td {
                   var21 = var21 + var23;
                   var29 = var29 + var31;
                   var25 = var25 + var27;
-                  var36Lifetime2 = var36Lifetime2 + dg.field_i;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_i;
                   var22 = var22 + var24;
                 }
               }
@@ -393,17 +393,17 @@ final class dk extends td {
               var30 = var30 + param3 * var32;
               param3 = 0;
             }
-            var35Lifetime1 = jb.field_a[param3];
+            var35Lifetime1 = TriangleRasterizer.field_a[param3];
             while (param4 > param3) {
               var36Lifetime1 = var17_int >> 16;
-              if (jb.field_o > var36Lifetime1) {
+              if (TriangleRasterizer.field_o > var36Lifetime1) {
                 var37Lifetime1 = (var18 >> 16) - (var17_int >> 16);
                 if (var37Lifetime1 != 0) {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
                   var39Lifetime1 = (var26 - var25) / var37Lifetime1;
                   var40Lifetime1 = (var30 - var29) / var37Lifetime1;
-                  if (jb.field_o <= var37Lifetime1 + var36Lifetime1) {
-                    var37Lifetime1 = -var36Lifetime1 + jb.field_o - 1;
+                  if (TriangleRasterizer.field_o <= var37Lifetime1 + var36Lifetime1) {
+                    var37Lifetime1 = -var36Lifetime1 + TriangleRasterizer.field_o - 1;
                   }
                   if (var36Lifetime1 < 0) {
                     oj.a(-(var38Lifetime1 * var36Lifetime1) + var21, var38Lifetime1, 97, var35Lifetime1, param7, var29 - var40Lifetime1 * var36Lifetime1, -(var36Lifetime1 * var39Lifetime1) + var25, var37Lifetime1 + var36Lifetime1, var39Lifetime1, var40Lifetime1);
@@ -412,13 +412,13 @@ final class dk extends td {
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
-                    var36Lifetime1 < jb.field_o) {
+                    var36Lifetime1 < TriangleRasterizer.field_o) {
                     oj.a(var21, 0, 78, var36Lifetime1 + var35Lifetime1, param7, var29, var25, var37Lifetime1, 0, 0);
                   }
                 }
               }
               param3++;
-              if (jb.field_n <= param3) {
+              if (TriangleRasterizer.field_n <= param3) {
                 return;
               }
               var17_int = var17_int + var19;
@@ -429,7 +429,7 @@ final class dk extends td {
               var25 = var25 + var27;
               var30 = var30 + var32;
               var29 = var29 + var31;
-              var35Lifetime1 = var35Lifetime1 + dg.field_i;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_i;
             }
             return;
           }
@@ -444,7 +444,7 @@ final class dk extends td {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -497,7 +497,7 @@ final class dk extends td {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -506,9 +506,9 @@ final class dk extends td {
           if (param1 <= 85) {
             field_q = (String) null;
           }
-          ea.a(-1 + param2.length, 0, (byte) 27, param2, param0);
+          DiskCacheWorker.a(-1 + param2.length, 0, (byte) 27, param2, param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -531,9 +531,9 @@ final class dk extends td {
           if (param1 <= 85) {
             field_q = (String) null;
           }
-          ea.a(-1 + param2.length, 0, (byte) 27, param2, param0);
+          DiskCacheWorker.a(-1 + param2.length, 0, (byte) 27, param2, param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 }

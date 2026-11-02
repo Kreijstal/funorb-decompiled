@@ -25,9 +25,9 @@ final class lr extends IntrusiveNode {
     final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5, boolean param6, boolean param7, boolean param8, boolean param9) {
         int var11;
         var11 = BachelorFridge.field_y;
-        if (!param6 && (kg.field_b != dg.field_i ||
-          kq.field_i != dg.field_c) && (dg.field_c == hga.field_U.field_f &&
-          dg.field_i == hga.field_U.field_b)) {
+        if (!param6 && (FullscreenFocusCanvas.field_b != SoftwareRasterizer.field_i ||
+          kq.field_i != SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_c == hga.field_U.field_f &&
+          SoftwareRasterizer.field_i == hga.field_U.field_b)) {
           if (pw.field_w != null) {
             pv.a(false, true);
           } else {
@@ -39,7 +39,7 @@ final class lr extends IntrusiveNode {
           }
         }
         if (!param6) {
-          ce.field_t = (-640 + kg.field_b) / 2;
+          ce.field_t = (-640 + FullscreenFocusCanvas.field_b) / 2;
         } else {
           ce.field_t = wq.field_n;
         }
@@ -59,7 +59,7 @@ final class lr extends IntrusiveNode {
           pw.field_w.field_Pb <= pw.field_w.field_Rb) {
           qba.field_m.field_wb.field_Z = oia.field_i;
           tv.field_o.field_u = false;
-          nn.a((byte) -126, qba.field_m.field_vb);
+          MouseInputHandler.a((byte) -126, qba.field_m.field_vb);
         } else {
           qba.field_m.field_wb.field_Z = null;
           tv.field_o.field_u = true;
@@ -70,12 +70,12 @@ final class lr extends IntrusiveNode {
         qf.field_v = qf.field_v + 1;
     }
 
-    final static void a(int param0, int param1, int param2, eaa param3, int param4, byte param5) {
+    final static void a(int param0, int param1, int param2, IntrusiveDeque param3, int param4, byte param5) {
         lh var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        eaa var10 = null;
+        IntrusiveDeque var10 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -87,8 +87,8 @@ final class lr extends IntrusiveNode {
           param1 -= 32;
           var6 = (lh) (param3.b((byte) 90));
           if (param5 != -4) {
-            var10 = (eaa) null;
-            lr.a(44, -29, -91, (eaa) null, 24, -68);
+            var10 = (IntrusiveDeque) null;
+            lr.a(44, -29, -91, (IntrusiveDeque) null, 24, -68);
           }
           var7 = 0;
           while (var6 != null) {
@@ -111,7 +111,7 @@ final class lr extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class lr extends IntrusiveNode {
         return false;
     }
 
-    final static void a(int param0, int param1, int param2, eaa param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, IntrusiveDeque param3, int param4, int param5) {
         lh var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -194,7 +194,7 @@ final class lr extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class lr extends IntrusiveNode {
         }
     }
 
-    lr(lu param0) {
+    lr(PacketBuffer param0) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -217,26 +217,26 @@ final class lr extends IntrusiveNode {
         int var2_intLifetime2;
         int var3Lifetime1;
         try {
-          if (param0.b(16711935) != 0) {
-            param0.field_g = param0.field_g - 1;
+          if (param0.readUnsignedByte(16711935) != 0) {
+            param0.position = param0.position - 1;
             this.field_j = 2;
           } else {
-            param0.b(16711935);
-            this.field_j = param0.b(16711935);
+            param0.readUnsignedByte(16711935);
+            this.field_j = param0.readUnsignedByte(16711935);
           }
-          this.field_f = param0.b(16711935);
-          this.field_q = param0.b(16711935);
+          this.field_f = param0.readUnsignedByte(16711935);
+          this.field_q = param0.readUnsignedByte(16711935);
           this.field_o = new wia[this.field_f][this.field_q];
           for (var2_int = 0; var2_int < this.field_f; var2_int++) {
             for (var3 = 0; this.field_q > var3; var3++) {
-              this.field_o[var2_int][var3] = new wia(param0.b(16711935));
+              this.field_o[var2_int][var3] = new wia(param0.readUnsignedByte(16711935));
               this.field_o[var2_int][var3].field_a = param0.b(true);
             }
           }
-          this.field_l = param0.b(16711935);
-          this.field_n = param0.b(16711935);
-          this.field_m = param0.b(16711935);
-          param0.b(16711935);
+          this.field_l = param0.readUnsignedByte(16711935);
+          this.field_n = param0.readUnsignedByte(16711935);
+          this.field_m = param0.readUnsignedByte(16711935);
+          param0.readUnsignedByte(16711935);
           this.field_h = new int[this.field_m][2];
           for (var2_intLifetime1 = 0; this.field_m > var2_intLifetime1; var2_intLifetime1++) {
             this.field_h[var2_intLifetime1] = new int[]{param0.b(true), param0.b(true)};
@@ -258,7 +258,7 @@ final class lr extends IntrusiveNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -274,8 +274,8 @@ final class lr extends IntrusiveNode {
           return false;
         }
         if (param4 != -2581) {
-          eaa var7 = (eaa) null;
-          lr.a(-128, -48, 46, (eaa) null, -89, (byte) 122);
+          IntrusiveDeque var7 = (IntrusiveDeque) null;
+          lr.a(-128, -48, 46, (IntrusiveDeque) null, -89, (byte) 122);
         }
         if (param3 > this.field_n) {
           return false;

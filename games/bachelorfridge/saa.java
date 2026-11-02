@@ -16,7 +16,7 @@ final class saa {
     jfa field_k;
     static String field_u;
     static sna field_f;
-    static hn field_a;
+    static PcmStreamMixer field_a;
     static int field_b;
     private boolean field_j;
     static String field_r;
@@ -38,12 +38,12 @@ final class saa {
             for (var2_int = 0; var2_int < 50; var2_int++) {
               if (mg.field_m.field_i[var2_int] != null) {
                 this.field_d.field_c.field_r[var2_int] = new jfa(mg.field_m.field_i[var2_int], 0, 0, this.field_d.field_c.field_i);
-                this.field_d.field_c.field_r[var2_int].field_g.a((byte) -121, dm.field_f);
+                this.field_d.field_c.field_r[var2_int].field_g.a((byte) -121, ProxySocketConnector.field_f);
               }
             }
             var2 = (jfa) (this.field_d.field_c.field_m.b((byte) 90));
             while (var2 != null) {
-              var2.field_g.a((byte) 13, dm.field_f);
+              var2.field_g.a((byte) 13, ProxySocketConnector.field_f);
               var2 = (jfa) (this.field_d.field_c.field_m.c(0));
             }
             this.field_d.field_c.field_n = mg.field_m.field_c;
@@ -56,7 +56,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "saa.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "saa.C(" + param0 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) runtimeException), "saa.I(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.I(" + param0 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class saa {
         try {
           mg.field_m.field_c = this.field_d.field_c.field_n;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "saa.L(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.L(" + param0 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class saa {
           }
           rba.a(mg.field_m, (byte) 58);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "saa.H(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.H(" + param0 + ')');
         }
     }
 
@@ -156,10 +156,10 @@ final class saa {
         int var2_intLifetime3;
         var4 = BachelorFridge.field_y;
         try {
-          kg.field_e.a(19842, true);
+          FullscreenFocusCanvas.field_e.a(19842, true);
           if (!this.field_i &&
-            kg.field_e.field_R == 1 &&
-            kg.field_e.field_T &&
+            FullscreenFocusCanvas.field_e.field_R == 1 &&
+            FullscreenFocusCanvas.field_e.field_T &&
             this.field_d.field_c.field_k.field_a != 2) {
           }
           if (param0 > -31) {
@@ -200,10 +200,10 @@ final class saa {
                   this.field_k = null;
                   mg.field_m.field_e.field_j.field_d = true;
                 } else {
-                  qm.a(11, 7758);
+                  RasterBuffer.a(11, 7758);
                   ag.a(this.field_k, (byte) -104);
                   this.field_n = 12;
-                  this.field_k.a(false);
+                  this.field_k.unlink(false);
                   mg.field_m.field_e.field_j = null;
                 }
                 ct.c(0, -114);
@@ -222,7 +222,7 @@ final class saa {
             if (var6 != null) {
               var3 = this.field_d.field_c.field_k.g(50);
               if (var3 != -1) {
-                var6.a(false);
+                var6.unlink(false);
                 this.field_d.field_c.field_r[var3] = var5;
                 ik.a(0, var6, -6622, var3);
               }
@@ -364,7 +364,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "saa.P(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "saa.P(" + param0 + ')');
         }
     }
 
@@ -389,7 +389,7 @@ final class saa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -406,7 +406,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "saa.J(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "saa.J(" + param0 + ')');
         }
     }
 
@@ -418,11 +418,11 @@ final class saa {
           field_f = null;
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "saa.D(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.D(" + param0 + ')');
         }
     }
 
-    final void a(boolean param0, eaa param1) {
+    final void a(boolean param0, IntrusiveDeque param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -441,11 +441,11 @@ final class saa {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
-    final void a(eaa param0, int param1) {
+    final void a(IntrusiveDeque param0, int param1) {
         int[] var3 = null;
         kha var4 = null;
         int var5 = 0;
@@ -477,7 +477,7 @@ final class saa {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -491,9 +491,9 @@ final class saa {
           var2.field_A = bla.field_p;
           var2.field_db = op.field_I;
           if (param0) {
-            field_a = (hn) null;
+            field_a = (PcmStreamMixer) null;
           }
-          kg.field_e = new sna("shopbutton", var2, 433, 87, 195, 42, "");
+          FullscreenFocusCanvas.field_e = new sna("shopbutton", var2, 433, 87, 195, 42, "");
           sn.field_m = new sna("getmagnify", var2, 420, 32, 80, 62, "");
           d.field_H = new sna("clean", var2, 526, 318, 82, 124, "");
           discarded$0 = new sna("freeze", var2, 576, 430, 50, 42, "");
@@ -503,7 +503,7 @@ final class saa {
           cf.field_b = new sna("close", var2, -50, -50, 50, 20, "Close");
           cf.field_b.field_L = 10;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "saa.G(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.G(" + param0 + ')');
         }
     }
 
@@ -573,23 +573,23 @@ final class saa {
           if (this.field_m != au.field_c) {
             if (1 != au.field_c) {
               if (au.field_c == 5) {
-                qm.a(19, 7758);
+                RasterBuffer.a(19, 7758);
               } else {
                 if (au.field_c == 2) {
-                  qm.a(27, 7758);
+                  RasterBuffer.a(27, 7758);
                 } else {
                   if (au.field_c != 3) {
                     if (-1 == au.field_c &&
                       this.field_m == 5) {
-                      qm.a(20, 7758);
+                      RasterBuffer.a(20, 7758);
                     }
                   } else {
-                    qm.a(22, 7758);
+                    RasterBuffer.a(22, 7758);
                   }
                 }
               }
             } else {
-              qm.a(28, 7758);
+              RasterBuffer.a(28, 7758);
             }
             this.field_m = au.field_c;
           }
@@ -604,7 +604,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "saa.N(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "saa.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -619,44 +619,44 @@ final class saa {
           if (!this.field_p) {
             if (sn.field_m.field_T &&
               this.field_d.field_c.field_k.field_a != 0) {
-              rfa.field_a.e(param1 + 418, 31);
+              rfa.field_a.draw(param1 + 418, 31);
             } else {
-              bh.field_r.e(param1 + 418, 41);
+              bh.field_r.draw(param1 + 418, 41);
             }
           }
           iea.field_a.a(param1 + 524, 420, 64);
-          op.field_u.e(param1 + 540, 424);
-          dp.field_n[5].e(524 + param1, 300);
+          op.field_u.draw(param1 + 540, 424);
+          dp.field_n[5].draw(524 + param1, 300);
           if (this.field_n <= 0) {
             if ((d.field_H.field_T ||
               this.b(true)) &&
               (this.field_d.field_c.field_k.field_a != 0 &&
               !this.field_i)) {
-              dp.field_n[0].e(param1 + 524, 300);
+              dp.field_n[0].draw(param1 + 524, 300);
             } else {
-              dp.field_n[2].e(param1 + 524, 300);
+              dp.field_n[2].draw(param1 + 524, 300);
             }
           } else {
             if (8 >= this.field_n) {
               if (this.field_n > 4) {
-                dp.field_n[4].e(param1 + 524, 300);
+                dp.field_n[4].draw(param1 + 524, 300);
               } else {
                 if (this.field_n > 0) {
-                  dp.field_n[0].e(524 + param1, 300);
+                  dp.field_n[0].draw(524 + param1, 300);
                 }
               }
             } else {
-              dp.field_n[3].e(param1 + 524, 300);
+              dp.field_n[3].draw(param1 + 524, 300);
             }
           }
           this.field_d.field_c.a(-125, param1);
           if (this.field_i &&
             this.field_q != null) {
-            dg.g(0, 0, 640, 480);
+            SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
             this.field_q.a(param2, 117);
           }
           if (this.field_s != null) {
-            dg.g(0, 0, 640, 480);
+            SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
             this.field_s.e(param0 - 2);
           }
           if (af.field_a &&
@@ -670,7 +670,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var4), "saa.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var4), "saa.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -699,7 +699,7 @@ final class saa {
             }
             var2_int++;
           }
-          mg.field_m.field_e.field_m = new eaa();
+          mg.field_m.field_e.field_m = new IntrusiveDeque();
           var2 = (jfa) (this.field_d.field_c.field_m.b((byte) 90));
           while (var2 != null) {
             mg.field_m.field_e.field_m.a(var2.field_g, true);
@@ -720,7 +720,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "saa.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "saa.B(" + param0 + ')');
         }
     }
 
@@ -754,7 +754,7 @@ final class saa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "saa.O(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "saa.O(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -764,7 +764,7 @@ final class saa {
             field_u = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "saa.E(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "saa.E(" + param0 + ')');
         }
     }
 
@@ -778,7 +778,7 @@ final class saa {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        this.field_e = ea.field_d;
+        this.field_e = DiskCacheWorker.field_d;
         try {
           this.field_d = new ua(param0, mg.field_m);
           this.field_d.field_c.a(false, this);
@@ -803,7 +803,7 @@ final class saa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

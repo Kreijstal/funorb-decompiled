@@ -13,7 +13,7 @@ final class dd extends vd implements lja {
         try {
           this.field_D = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class dd extends vd implements lja {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class dd extends vd implements lja {
             var3_int = param0.length;
             this.field_F = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_F[var4_int] = lu.a((CharSequence) ((Object) param0[var4_int]), 7995).replace(' ', ' ');
+              this.field_F[var4_int] = PacketBuffer.a((CharSequence) ((Object) param0[var4_int]), 7995).replace(' ', ' ');
             }
             var4 = new pka(jca.field_a, 0, 1);
             this.field_E = new hf[1 + var3_int];
@@ -115,7 +115,7 @@ final class dd extends vd implements lja {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -132,11 +132,11 @@ final class dd extends vd implements lja {
           return;
         }
         int var6 = -102 / ((-20 - param0) / 54);
-        po var5 = jca.field_a;
+        BitmapFont var5 = jca.field_a;
         if (this.field_F == null) {
           return;
         }
-        var5.a(oja.field_b, this.field_s + param3, this.field_v + param1, this.field_p, 20, 16777215, -1, 0, 0, var5.field_u + var5.field_B);
+        var5.drawParagraph(oja.field_b, this.field_s + param3, this.field_v + param1, this.field_p, 20, 16777215, -1, 0, 0, var5.field_u + var5.field_B);
     }
 
     final boolean a(int param0, int param1, char param2, wj param3) {
@@ -173,7 +173,7 @@ final class dd extends vd implements lja {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

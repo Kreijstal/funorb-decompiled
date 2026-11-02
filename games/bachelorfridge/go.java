@@ -29,7 +29,7 @@ abstract class go extends DualLinkNode {
         }
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     go() {
     }
@@ -44,7 +44,7 @@ abstract class go extends DualLinkNode {
           var7 = this.field_o << 3;
           param2 = (var6 & 15) + (param2 << 4);
           param1 = (var7 & 15) + (param1 << 4);
-          this.a(var6, var7, param2, param1, param0, param4);
+          this.rotateNearest(var6, var7, param2, param1, param0, param4);
           return;
         }
         this.field_p = -3;
@@ -52,7 +52,7 @@ abstract class go extends DualLinkNode {
         var7Lifetime1 = this.field_o << 3;
         param2 = (var6Lifetime1 & 15) + (param2 << 4);
         param1 = (var7Lifetime1 & 15) + (param1 << 4);
-        this.a(var6Lifetime1, var7Lifetime1, param2, param1, param0, param4);
+        this.rotateNearest(var6Lifetime1, var7Lifetime1, param2, param1, param0, param4);
     }
 
     static {

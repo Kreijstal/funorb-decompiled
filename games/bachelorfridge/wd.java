@@ -5,32 +5,32 @@ final class wd extends gha {
     private tc[] field_u;
     private tc field_y;
     static int[] field_x;
-    static eaa field_t;
+    static IntrusiveDeque field_t;
     static sna field_v;
-    static kv[] field_w;
+    static Sprite[] field_w;
 
     wd(wd param0, boolean param1) {
         this();
         try {
           param0.a(this, (byte) 110, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, int param1, kv[] param2) {
+    final void a(int param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         try {
           var4_int = param0;
           if (param1 <= 62) {
-            field_t = (eaa) null;
+            field_t = (IntrusiveDeque) null;
           }
           if (null == this.field_u[var4_int]) {
             this.field_u[var4_int] = new tc();
           }
           this.field_u[param0].field_c = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wd.GA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wd.GA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class wd extends gha {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class wd extends gha {
         field_t = null;
         if (param0 != 1) {
           java.math.BigInteger var2 = (java.math.BigInteger) null;
-          wd.a((java.math.BigInteger) null, (byte) 93, (lu) null, (lu) null, (java.math.BigInteger) null);
+          wd.a((java.math.BigInteger) null, (byte) 93, (PacketBuffer) null, (PacketBuffer) null, (java.math.BigInteger) null);
         }
     }
 
@@ -175,7 +175,7 @@ final class wd extends gha {
             }
             return;
           }
-          bl.a(this.field_u, 0, param0.field_u, 0, 6);
+          ArrayOperations.copy(this.field_u, 0, param0.field_u, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,11 +187,11 @@ final class wd extends gha {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final void a(kv param0, int param1) {
+    final void a(Sprite param0, int param1) {
         int var4 = 0;
         tc[] var3 = null;
         tc var5 = null;
@@ -205,7 +205,7 @@ final class wd extends gha {
         var6 = BachelorFridge.field_y;
         try {
           if (param1 >= -73) {
-            field_t = (eaa) null;
+            field_t = (IntrusiveDeque) null;
           }
           var7 = this.field_u;
           var3 = var7;
@@ -226,7 +226,7 @@ final class wd extends gha {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -239,18 +239,18 @@ final class wd extends gha {
         var1.a(11);
     }
 
-    final static void a(java.math.BigInteger param0, byte param1, lu param2, lu param3, java.math.BigInteger param4) {
+    final static void a(java.math.BigInteger param0, byte param1, PacketBuffer param2, PacketBuffer param3, java.math.BigInteger param4) {
         try {
-          fn.a((byte) -68, 0, param0, param4, param2, param3.field_h, param3.field_g);
+          fn.a((byte) -68, 0, param0, param4, param2, param3.payload, param3.position);
           if (param1 >= -50) {
             wd.c(36);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, kv[] param1) {
+    final void a(byte param0, Sprite[] param1) {
         int var4 = 0;
         tc[] var3 = null;
         tc var5 = null;
@@ -287,7 +287,7 @@ final class wd extends gha {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -301,7 +301,7 @@ final class wd extends gha {
           hl.a((byte) -67, (java.awt.Component) ((Object) param1));
           gda.a(-99, (java.awt.Component) ((Object) param1));
           if (param0 != 70) {
-            field_w = (kv[]) null;
+            field_w = (Sprite[]) null;
           }
           if (sd.field_c != null) {
             sd.field_c.a((java.awt.Component) ((Object) param1), true);
@@ -317,12 +317,12 @@ final class wd extends gha {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     static {
         field_x = new int[128];
-        field_t = new eaa();
+        field_t = new IntrusiveDeque();
     }
 }

@@ -7,7 +7,7 @@ final class vu extends pv {
     private boolean field_n;
     int[][] field_m;
     static String field_o;
-    static ee[] field_k;
+    static IndexedSprite[] field_k;
     private int field_j;
     static sna field_p;
     static String field_l;
@@ -39,9 +39,9 @@ final class vu extends pv {
         if (this.field_g == 1) {
           this.field_f.field_v.a((byte) 57, this.field_f.field_g.field_o.field_b, 0);
           if (this.field_n) {
-            qm.a(29, 7758);
+            RasterBuffer.a(29, 7758);
           } else {
-            qm.a(30, 7758);
+            RasterBuffer.a(30, 7758);
           }
         }
         if (40 >= this.field_g &&
@@ -117,7 +117,7 @@ final class vu extends pv {
           this.field_n = param1 ? true : false;
           this.field_m = new int[5][4];
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

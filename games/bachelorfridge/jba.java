@@ -14,10 +14,10 @@ final class jba extends ana {
     final boolean c(byte param0) {
         int fieldTemp$1 = 0;
         int var2;
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
-        if (this.field_y.a((byte) -106)) {
+        if (this.field_y.isLinked((byte) -106)) {
           return false;
         }
         fieldTemp$1 = this.field_l - 1;
@@ -96,7 +96,7 @@ final class jba extends ana {
           this.a(27799, this.field_y);
           this.field_l = 80;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jba.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -114,14 +114,14 @@ final class jba extends ana {
           return;
         }
         try {
-          sja.field_fb.c(param2, (byte) 109);
-          sja.field_fb.field_g = sja.field_fb.field_g + 2;
-          var3_int = sja.field_fb.field_g;
+          sja.field_fb.writeCipheredByte(param2, (byte) 109);
+          sja.field_fb.position = sja.field_fb.position + 2;
+          var3_int = sja.field_fb.position;
           rha.a(param1.field_g, sja.field_fb, (byte) -93);
           oe.a(-21332, sja.field_fb, param0);
-          sja.field_fb.a((byte) -88, sja.field_fb.field_g - var3_int);
+          sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var3_int);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jba.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jba.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class jba extends ana {
           param1.addMouseMotionListener(uc.field_m);
           param1.addFocusListener(uc.field_m);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jba.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jba.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

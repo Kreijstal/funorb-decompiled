@@ -7,10 +7,10 @@ final class pm extends ana {
     private int field_C;
     private taa field_y;
     private qn field_x;
-    static kia field_z;
-    private kv field_D;
+    static MusicTrack field_z;
+    private Sprite field_D;
     private ws field_w;
-    static ee[] field_v;
+    static IndexedSprite[] field_v;
     private int field_B;
     private av field_E;
     private int field_A;
@@ -23,7 +23,7 @@ final class pm extends ana {
           }
           pe.field_m = pe.field_m + 1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pm.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pm.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -43,7 +43,7 @@ final class pm extends ana {
           this.field_E = param1;
           this.field_w = dba.field_a;
           this.field_l = 75;
-          this.field_D = de.field_F.a();
+          this.field_D = de.field_F.toRgbSprite();
           var3_int = this.field_q.field_h.field_z;
           var4 = this.field_q.field_h.field_B;
           var5 = kla.a(4, m.field_a, -2147483648);
@@ -82,7 +82,7 @@ final class pm extends ana {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class pm extends ana {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var2;
-        if (this.field_y.a((byte) -106)) {
+        if (this.field_y.isLinked((byte) -106)) {
           return false;
         }
         if (this.field_w == dba.field_a) {
@@ -176,7 +176,7 @@ final class pm extends ana {
         var15 = this.field_q.field_h;
         var4 = var15.field_z;
         if (!param1) {
-          this.field_D = (kv) null;
+          this.field_D = (Sprite) null;
         }
         var5 = var15.field_B;
         var6 = this.field_E.field_l.a(-27449, this.field_q);
@@ -225,28 +225,28 @@ final class pm extends ana {
         }
         if (bia.field_i == this.field_w) {
           var5 = this.field_q.field_s.a(this.field_C, (byte) -117, this.field_B);
-          this.field_D.b(var5.field_c, var5.field_a);
+          this.field_D.drawVerticalFlip(var5.field_c, var5.field_a);
         } else {
           if (hba.field_x == this.field_w) {
             var6 = this.field_q.field_s.a(this.field_C, (byte) 80, this.field_B);
             var2 = (-this.field_l + 75) * (-this.field_l + 75) * 400 / 5625;
-            this.field_D.b(var6.field_c, var6.field_a - var2);
+            this.field_D.drawVerticalFlip(var6.field_c, var6.field_a - var2);
           } else {
             if (lw.field_g == this.field_w) {
               var7 = this.field_q.field_s.a(this.field_E.field_q, (byte) -126, this.field_E.field_t);
               var2 = this.field_l * 400 / 30;
-              this.field_D.e(var7.field_c, var7.field_a - (var2 + this.field_D.field_o) + 60);
+              this.field_D.draw(var7.field_c, var7.field_a - (var2 + this.field_D.field_o) + 60);
             }
           }
         }
     }
 
     final static void f(int param0) {
-        int var1 = (kg.field_b - 640) / 2;
+        int var1 = (FullscreenFocusCanvas.field_b - 640) / 2;
         int var2 = saa.field_b * saa.field_b;
         int var3 = var2 - lfa.field_q * lfa.field_q;
-        ng.field_e.a(-94 + (-120 + dg.field_c), param0 ^ 31336, 199, -(param0 * var3 / var2) + var1, 90);
-        ui.field_r.a(-4 + (dg.field_c - 120), 31407, 438, 438 * var3 / var2 + 202 + var1, 0);
+        ng.field_e.a(-94 + (-120 + SoftwareRasterizer.field_c), param0 ^ 31336, 199, -(param0 * var3 / var2) + var1, 90);
+        ui.field_r.a(-4 + (SoftwareRasterizer.field_c - 120), 31407, 438, 438 * var3 / var2 + 202 + var1, 0);
     }
 
     static {

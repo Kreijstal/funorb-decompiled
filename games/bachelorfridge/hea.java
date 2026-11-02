@@ -132,14 +132,14 @@ final class hea extends td {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static ee a(ee param0, int[] param1, byte param2) {
-        ee var3 = null;
+    final static IndexedSprite a(IndexedSprite param0, int[] param1, byte param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        ee stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -147,7 +147,7 @@ final class hea extends td {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ee(0, 0, 0);
+          var3 = new IndexedSprite(0, 0, 0);
           if (param2 < 115) {
             field_r = -40;
           }
@@ -177,7 +177,7 @@ final class hea extends td {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -186,11 +186,11 @@ final class hea extends td {
         try {
           this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hea.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hea.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static pp b(int param0, lu param1) {
+    final static pp b(int param0, PacketBuffer param1) {
         nq var2 = null;
         RuntimeException var2_ref = null;
         ks stackIn_3_0 = null;
@@ -215,7 +215,7 @@ final class hea extends td {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

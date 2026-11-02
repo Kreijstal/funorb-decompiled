@@ -76,7 +76,7 @@ class wj extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ class wj extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -336,15 +336,15 @@ class wj extends IntrusiveNode {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static eka a(vr param0, boolean param1, int param2) {
+    final static MusicPatch a(vr param0, boolean param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        eka stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -358,7 +358,7 @@ class wj extends IntrusiveNode {
           if (param1) {
             wj.a((vr) null, false, -62);
           }
-          stackIn_6_0 = new eka(var4);
+          stackIn_6_0 = new MusicPatch(var4);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -370,7 +370,7 @@ class wj extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -388,18 +388,18 @@ class wj extends IntrusiveNode {
         }
     }
 
-    final static kv[] a(int param0, int[] param1) {
-        kv[] var2 = null;
+    final static Sprite[] a(int param0, int[] param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        kv[] var3 = null;
-        kv[] stackIn_2_0 = null;
-        kv[] stackIn_4_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new kv[14];
+          var3 = new Sprite[14];
           var2 = var3;
           var3[1] = qs.field_l[1][param1[1]];
           var3[0] = qs.field_l[0][param1[0]];
@@ -407,7 +407,7 @@ class wj extends IntrusiveNode {
           var3[3] = qs.field_l[3][param1[3]];
           var3[5] = qs.field_l[5][param1[5]];
           if (param0 != -863) {
-            stackIn_2_0 = (kv[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           var3[8] = qs.field_l[8][param1[8]];
@@ -431,7 +431,7 @@ class wj extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -456,7 +456,7 @@ class wj extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -488,7 +488,7 @@ class wj extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -534,7 +534,7 @@ class wj extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -573,7 +573,7 @@ class wj extends IntrusiveNode {
             this.a(49, -90, 17, 95, -112, (wj) null, -44);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wj.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wj.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -640,7 +640,7 @@ class wj extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -667,7 +667,7 @@ class wj extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        fda.field_i.a((byte) -49, jl.field_s, eaa.field_b, var5);
+        fda.field_i.a((byte) -49, jl.field_s, IntrusiveDeque.field_b, var5);
     }
 
     boolean a(wj param0, int param1) {
@@ -691,7 +691,7 @@ class wj extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -755,7 +755,7 @@ class wj extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -770,7 +770,7 @@ class wj extends IntrusiveNode {
           this.field_s = param0;
           this.field_p = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

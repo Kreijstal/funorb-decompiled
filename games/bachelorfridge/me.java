@@ -3,7 +3,7 @@
  */
 final class me extends bca {
     int field_r;
-    static js field_t;
+    static IntrusiveNodeHashTable field_t;
     int field_u;
     static String field_q;
     static String field_s;
@@ -31,7 +31,7 @@ final class me extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -51,7 +51,7 @@ final class me extends bca {
           }
           int var3_int = -2 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "me.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "me.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -64,17 +64,17 @@ final class me extends bca {
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           super.a((byte) -38, param1);
-          param1.d(this.field_r, 0);
-          param1.d(this.field_u, 0);
+          param1.writeByte(this.field_r, 0);
+          param1.writeByte(this.field_u, 0);
           if (param0 > -12) {
             me.d(94);
           }
-          param1.d(!this.field_p ? 0 : 1, 0);
+          param1.writeByte(!this.field_p ? 0 : 1, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "me.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "me.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -83,20 +83,20 @@ final class me extends bca {
           return;
         }
         if (param0 <= -112) {
-          sja.field_fb.c(64, (byte) 123);
+          sja.field_fb.writeCipheredByte(64, (byte) 123);
           return;
         }
         me.d((byte) 87);
-        sja.field_fb.c(64, (byte) 123);
+        sja.field_fb.writeCipheredByte(64, (byte) 123);
     }
 
-    me(lu param0) {
+    me(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 55);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 55);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -104,11 +104,11 @@ final class me extends bca {
             }
             this.field_o.a(dca.a((byte) 102, param0), true);
           }
-          this.field_r = param0.b(16711935);
-          this.field_u = param0.b(16711935);
-          this.field_p = param0.b(16711935) == 1 ? true : false;
+          this.field_r = param0.readUnsignedByte(16711935);
+          this.field_u = param0.readUnsignedByte(16711935);
+          this.field_p = param0.readUnsignedByte(16711935) == 1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

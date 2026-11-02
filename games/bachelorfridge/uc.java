@@ -5,7 +5,7 @@ final class uc extends pv {
     static sna field_l;
     static rga field_j;
     static int[] field_k;
-    static nn field_m;
+    static MouseInputHandler field_m;
 
     private final void d(byte param0) {
         this.field_f.field_y = -1;
@@ -20,12 +20,12 @@ final class uc extends pv {
           var1 = new fj();
         }
         if (param0 >= 9) {
-          var1.a(dg.field_f, dg.field_c, dg.field_k, dg.field_j, dg.field_h, dg.field_e, (byte) -92, dg.field_i);
+          var1.a(SoftwareRasterizer.field_f, SoftwareRasterizer.field_c, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j, SoftwareRasterizer.field_h, SoftwareRasterizer.field_e, (byte) -92, SoftwareRasterizer.field_i);
           kma.field_o.a(var1, true);
           return;
         }
         uc.c((byte) -24);
-        var1.a(dg.field_f, dg.field_c, dg.field_k, dg.field_j, dg.field_h, dg.field_e, (byte) -92, dg.field_i);
+        var1.a(SoftwareRasterizer.field_f, SoftwareRasterizer.field_c, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j, SoftwareRasterizer.field_h, SoftwareRasterizer.field_e, (byte) -92, SoftwareRasterizer.field_i);
         kma.field_o.a(var1, true);
     }
 
@@ -65,7 +65,7 @@ final class uc extends pv {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -78,6 +78,6 @@ final class uc extends pv {
 
     static {
         field_j = new rga();
-        field_m = new nn();
+        field_m = new MouseInputHandler();
     }
 }

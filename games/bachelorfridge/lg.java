@@ -17,7 +17,7 @@ class lg {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          cw.field_zb = new js(param0);
+          cw.field_zb = new IntrusiveNodeHashTable(param0);
           for (var1_int = 0; var1_int < vca.field_f.length; var1_int++) {
             cw.field_zb.a((long)vca.field_f[var1_int].toLowerCase().hashCode(), (byte) 104, new ji(var1_int));
           }
@@ -25,7 +25,7 @@ class lg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "lg.J(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "lg.J(" + param0 + ')');
         }
     }
 
@@ -38,7 +38,7 @@ class lg {
           var7 = new sna(param0, this.field_e, param5, param4, param3, param1, param0);
           this.field_a.a(-1, var7);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ class lg {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          DualLinkNode.field_f = new js(64);
+          DualLinkNode.field_f = new IntrusiveNodeHashTable(64);
           if (param0 >= -10) {
             lg.c(56);
           }
@@ -60,7 +60,7 @@ class lg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "lg.K(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "lg.K(" + param0 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ class lg {
           this.field_a = new sna();
           this.field_a.a(this.field_c >> 2, 31407, this.field_d, this.field_g, -(this.field_c >> 2) + this.field_f + this.field_c);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lg.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

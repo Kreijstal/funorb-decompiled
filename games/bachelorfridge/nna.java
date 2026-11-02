@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nna extends ana {
-    static kv field_w;
-    static kv field_v;
+    static Sprite field_w;
+    static Sprite field_v;
     private pba field_x;
 
     nna(gj param0, pba param1) {
@@ -11,7 +11,7 @@ final class nna extends ana {
         try {
           this.field_x = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,7 +25,7 @@ final class nna extends ana {
         }
         iv var3 = (iv) (this.field_x.field_o.b((byte) 90));
         if (param0 >= -11) {
-          field_v = (kv) null;
+          field_v = (Sprite) null;
         } else {
           al.a(110, this.field_x.field_k);
           while (var3 != null) {
@@ -69,7 +69,7 @@ final class nna extends ana {
           um.field_d = param4;
           vt.field_k = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nna.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nna.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -27,15 +27,15 @@ abstract class sfa extends IntrusiveNode {
           this.field_f = param0;
           this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sfa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sfa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        pf var3 = sja.field_fb;
-        var3.c(param0, (byte) 119);
-        var3.d(3, 0);
-        var3.d(10, 0);
+        BitPacketBuffer var3 = sja.field_fb;
+        var3.writeCipheredByte(param0, (byte) 119);
+        var3.writeByte(3, 0);
+        var3.writeByte(10, 0);
         var3.b(param1, -125);
         if (!param2) {
           return;
@@ -51,11 +51,11 @@ abstract class sfa extends IntrusiveNode {
         return var1.field_f;
     }
 
-    void a(int param0, lu param1) {
+    void a(int param0, PacketBuffer param1) {
         try {
           int var3_int = 34 % ((param0 - 61) / 53);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sfa.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sfa.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

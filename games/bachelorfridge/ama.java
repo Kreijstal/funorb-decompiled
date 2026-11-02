@@ -3,7 +3,7 @@
  */
 final class ama extends k {
     static String field_m;
-    static kv[] field_o;
+    static Sprite[] field_o;
     private vo[] field_n;
     static String field_l;
     static String field_k;
@@ -65,7 +65,7 @@ final class ama extends k {
         return var3;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         boolean stackIn_21_1 = false;
         RuntimeException stackIn_27_0 = null;
@@ -79,9 +79,9 @@ final class ama extends k {
         var7 = BachelorFridge.field_y;
         try {
           if (param2 == 0) {
-            this.field_n = new vo[param1.b(param0 + 16712006)];
+            this.field_n = new vo[param1.readUnsignedByte(param0 + 16712006)];
             for (var4_int = 0; var4_int < this.field_n.length; var4_int++) {
-              var5 = param1.b(16711935);
+              var5 = param1.readUnsignedByte(16711935);
               var6 = var5;
               if (0 != var6) {
                 if (var6 != 1) {
@@ -101,7 +101,7 @@ final class ama extends k {
             }
           } else {
             if (1 == param2) {
-              stackIn_21_1 = (param1.b(16711935) == 1);
+              stackIn_21_1 = (param1.readUnsignedByte(16711935) == 1);
               this.field_f = stackIn_21_1;
             }
           }
@@ -119,7 +119,7 @@ final class ama extends k {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -184,7 +184,7 @@ final class ama extends k {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

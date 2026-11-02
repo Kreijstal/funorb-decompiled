@@ -3,19 +3,19 @@
  */
 final class sl extends pp {
     static du field_j;
-    static kv[] field_k;
+    static Sprite[] field_k;
     int field_i;
     int field_l;
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -112 % ((34 - param1) / 58);
           super.a(param0, (byte) -32);
           param0.b(this.field_f, -114);
-          param0.d(this.field_i, 0);
-          param0.d(this.field_l, 0);
+          param0.writeByte(this.field_i, 0);
+          param0.writeByte(this.field_l, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class sl extends pp {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class sl extends pp {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 

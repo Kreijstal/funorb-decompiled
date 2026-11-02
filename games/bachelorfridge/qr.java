@@ -52,10 +52,10 @@ final class qr extends ana {
     }
 
     final boolean c(byte param0) {
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
-        if (this.field_w.a((byte) -106)) {
+        if (this.field_w.isLinked((byte) -106)) {
           return false;
         }
         if (!this.field_v) {
@@ -79,7 +79,7 @@ final class qr extends ana {
           this.field_w = new taa(this.field_q, this.field_x.field_q, this.field_x.field_s);
           this.a(27799, this.field_w);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

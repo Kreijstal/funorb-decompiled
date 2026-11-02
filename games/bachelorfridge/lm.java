@@ -5,7 +5,7 @@ final class lm {
     dna field_a;
     static String field_c;
     static int field_d;
-    static kv field_b;
+    static Sprite field_b;
 
     public static void a(byte param0) {
         field_c = null;
@@ -21,7 +21,7 @@ final class lm {
           var4 = new sna[]{param1, ov.field_d, (sna) ((Object) nr.field_w)};
           this.field_a = new dna(0L, ad.field_q, var3, jfa.field_f, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class lm {
         int var7 = 5;
         if (param4 > 45) {
           this.field_a.a(var7, param2, 0, param1, param3, param0, var6);
-          kg.field_d.a(rg.field_h, 31407, ov.field_d.field_sb, 0, 0);
+          FullscreenFocusCanvas.field_d.a(rg.field_h, 31407, ov.field_d.field_sb, 0, 0);
           eda.field_k.a(18, 31407, -82 + ov.field_d.field_sb + (-rj.field_j - 2), 0, 2 + rg.field_h);
           vl.field_d.a(18, 31407, rj.field_j + 82, -2 + ov.field_d.field_sb + (-rj.field_j - 80), 2 + rg.field_h);
           rba.field_a.a(ov.field_d.field_sb, 20 + rg.field_h + 2, 107, 2, 0, -22 + (ov.field_d.field_p - rg.field_h), 20, rj.field_j);

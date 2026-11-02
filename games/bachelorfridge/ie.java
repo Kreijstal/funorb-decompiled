@@ -5,9 +5,9 @@ final class ie {
     static int[] field_b;
     static int field_a;
 
-    final static pp a(lu param0, boolean param1) {
+    final static pp a(PacketBuffer param0, boolean param1) {
         RuntimeException var2 = null;
-        lu var3 = null;
+        PacketBuffer var3 = null;
         dh stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -15,8 +15,8 @@ final class ie {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            var3 = (lu) null;
-            ie.a((lu) null, true);
+            var3 = (PacketBuffer) null;
+            ie.a((PacketBuffer) null, true);
           }
           stackIn_3_0 = new dh();
           return (pp) ((Object) stackIn_3_0);
@@ -30,14 +30,14 @@ final class ie {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 != 0) {
-          lu var2 = (lu) null;
-          ie.a((lu) null, true);
+          PacketBuffer var2 = (PacketBuffer) null;
+          ie.a((PacketBuffer) null, true);
           field_b = null;
           return;
         }

@@ -21,7 +21,7 @@ final class daa extends sna {
           this.a(-1, this.field_xb);
           this.d((byte) 116);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "daa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "daa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,14 +45,14 @@ final class daa extends sna {
         this(param0, param1.field_wb, param1.field_xb, param2);
     }
 
-    daa(long param0, kv param1, kv param2, int param3, sna param4, String param5) {
+    daa(long param0, Sprite param1, Sprite param2, int param3, sna param4, String param5) {
         this(param0, (sna) null, param4, param5);
         try {
           this.field_wb.field_v = param2;
           this.field_wb.field_Y = param3;
           this.field_wb.field_J = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "daa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "daa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

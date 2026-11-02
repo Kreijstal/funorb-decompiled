@@ -93,7 +93,7 @@ final class el extends aba {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class el extends aba {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -134,21 +134,21 @@ final class el extends aba {
         if (param2 > param4) {
           if (param7 <= param2) {
             if (param7 <= param4) {
-              lca.a(param2, param6, (byte) -79, dg.field_e, param7, param4, param3, param5, param1);
+              lca.a(param2, param6, (byte) -79, SoftwareRasterizer.field_e, param7, param4, param3, param5, param1);
             } else {
-              lca.a(param2, param5, (byte) -99, dg.field_e, param4, param7, param3, param6, param1);
+              lca.a(param2, param5, (byte) -99, SoftwareRasterizer.field_e, param4, param7, param3, param6, param1);
             }
           } else {
-            lca.a(param7, param5, (byte) -73, dg.field_e, param4, param2, param3, param1, param6);
+            lca.a(param7, param5, (byte) -73, SoftwareRasterizer.field_e, param4, param2, param3, param1, param6);
           }
         } else {
           if (param7 > param4) {
-            lca.a(param7, param1, (byte) -115, dg.field_e, param2, param4, param3, param5, param6);
+            lca.a(param7, param1, (byte) -115, SoftwareRasterizer.field_e, param2, param4, param3, param5, param6);
           } else {
             if (param7 > param2) {
-              lca.a(param4, param1, (byte) -93, dg.field_e, param2, param7, param3, param6, param5);
+              lca.a(param4, param1, (byte) -93, SoftwareRasterizer.field_e, param2, param7, param3, param6, param5);
             } else {
-              lca.a(param4, param6, (byte) -105, dg.field_e, param7, param2, param3, param1, param5);
+              lca.a(param4, param6, (byte) -105, SoftwareRasterizer.field_e, param7, param2, param3, param1, param5);
             }
           }
         }
@@ -208,7 +208,7 @@ final class el extends aba {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 

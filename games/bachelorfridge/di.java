@@ -80,7 +80,7 @@ final class di extends pu {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -115,23 +115,23 @@ final class di extends pu {
           if (!param0) {
             return;
           }
-          var2 = (cq) (rma.field_d.b((byte) 90));
+          var2 = (cq) (SocketConnector.field_d.b((byte) 90));
           while (var2 != null) {
-            if (!var2.field_h.a((byte) -106)) {
-              var2.a(false);
+            if (!var2.field_h.isLinked((byte) -106)) {
+              var2.unlink(false);
             } else {
               var2.field_i.f(var2.field_f * b.field_u + 128 >> 8);
             }
-            var2 = (cq) (rma.field_d.c(0));
+            var2 = (cq) (SocketConnector.field_d.c(0));
           }
           if (jha.field_i != null) {
             var2Lifetime1 = (cq) (jha.field_i.b((byte) 90));
             while (var2Lifetime1 != null) {
-              stackIn_14_0 = var2Lifetime1.field_h.a((byte) -106);
+              stackIn_14_0 = var2Lifetime1.field_h.isLinked((byte) -106);
               if (stackIn_14_0) {
                 var2Lifetime1.field_i.f(var2Lifetime1.field_f * b.field_u + 128 >> 8);
               } else {
-                var2Lifetime1.a(false);
+                var2Lifetime1.unlink(false);
               }
               var2Lifetime1 = (cq) (jha.field_i.c(0));
             }
@@ -141,7 +141,7 @@ final class di extends pu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "di.D(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "di.D(" + param0 + ',' + param1 + ')');
         }
     }
 

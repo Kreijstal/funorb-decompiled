@@ -4,7 +4,7 @@
 final class uf {
     static String field_a;
     static boolean[] field_b;
-    static jp field_c;
+    static MidiPcmStream field_c;
 
     final static boolean a(int param0) {
         if (param0 <= 89) {

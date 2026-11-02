@@ -12,12 +12,12 @@ final class ep extends pu {
         if (bp.e(-29919)) {
           return;
         }
-        sja.field_fb.c(88, (byte) 114);
-        sja.field_fb.field_g = sja.field_fb.field_g + 2;
-        int var5_int = sja.field_fb.field_g;
+        sja.field_fb.writeCipheredByte(88, (byte) 114);
+        sja.field_fb.position = sja.field_fb.position + 2;
+        int var5_int = sja.field_fb.position;
         rha.a(param1.field_g, sja.field_fb, (byte) -119);
-        sja.field_fb.d(param2 ? 1 : 0, 0);
-        sja.field_fb.d(param3, 0);
+        sja.field_fb.writeByte(param2 ? 1 : 0, 0);
+        sja.field_fb.writeByte(param3, 0);
         int[] var6 = param4;
         if (param0 != 42) {
           return;
@@ -25,11 +25,11 @@ final class ep extends pu {
         try {
           for (var7 = 0; var6.length > var7; var7++) {
             var8 = var6[var7];
-            sja.field_fb.d(var8, 0);
+            sja.field_fb.writeByte(var8, 0);
           }
-          sja.field_fb.a((byte) -88, sja.field_fb.field_g - var5_int);
+          sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var5_int);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ep.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ep.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,10 +48,10 @@ final class ep extends pu {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        pf var3 = sja.field_fb;
-        var3.c(param1, (byte) 107);
-        var3.d(3, 0);
-        var3.d(8, 0);
+        BitPacketBuffer var3 = sja.field_fb;
+        var3.writeCipheredByte(param1, (byte) 107);
+        var3.writeByte(3, 0);
+        var3.writeByte(8, 0);
         if (!param0) {
           var3.b(param2, -123);
           return;

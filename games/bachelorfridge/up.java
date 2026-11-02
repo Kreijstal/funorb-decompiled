@@ -12,7 +12,7 @@ final class up {
 
     final void a(int param0) {
         String stackIn_17_0 = null;
-        fea stackIn_22_0;
+        BinaryBitmapFont stackIn_22_0;
         String stackIn_22_1;
         int stackIn_22_2;
         int stackIn_22_3;
@@ -24,8 +24,8 @@ final class up {
         String var6 = null;
         String var7 = null;
         var4 = BachelorFridge.field_y;
-        nu.field_e.e(0, 0);
-        nna.field_v.e(77, 44);
+        nu.field_e.draw(0, 0);
+        nna.field_v.draw(77, 44);
         jha.field_g.a(eha.field_p, 320, 68, 16776960, -1);
         hfa.field_z.a(eha.field_p, 320, 68, 65793, -1);
         var2 = 0;
@@ -34,7 +34,7 @@ final class up {
           if (var5 != null ||
             var4 != 0) {
             if (0 != (1 << var2 & this.field_e)) {
-              tp.field_x.e(ka.field_a[var2][0] + 2, ka.field_a[var2][1] + 2);
+              tp.field_x.draw(ka.field_a[var2][0] + 2, ka.field_a[var2][1] + 2);
             }
             if (4 > var2) {
               if (var5 != null) {
@@ -57,11 +57,11 @@ final class up {
           break;
         }
         var6 = lga.a(true, new String[]{Integer.toString(this.field_c), Integer.toString(this.field_f.field_h.field_k)}, vu.field_l);
-        hfa.field_z.c(vk.field_r, 105, 380, 65793, -1);
-        jha.field_g.c(vk.field_r, 105, 380, 16777215, -1);
-        hfa.field_z.c(var6, 180, 380, param0, -1);
-        jha.field_g.c(var6, 180, 380, 16776960, -1);
-        pw.field_y.e(490, 430);
+        hfa.field_z.drawText(vk.field_r, 105, 380, 65793, -1);
+        jha.field_g.drawText(vk.field_r, 105, 380, 16777215, -1);
+        hfa.field_z.drawText(var6, 180, 380, param0, -1);
+        jha.field_g.drawText(var6, 180, 380, 16776960, -1);
+        pw.field_y.draw(490, 430);
         if (this.field_d) {
           stackIn_17_0 = wda.field_g;
         } else {
@@ -84,9 +84,9 @@ final class up {
         } else {
           stackIn_23_4 = 11250603;
         }
-        ((fea) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_23_4, -1);
-        jha.field_g.a(st.field_e, 300, 360, 300, 100, 16776960, -1, 1, 0, 14);
-        hfa.field_z.a(st.field_e, 300, 340, 300, 100, 65793, -1, 1, 0, 14);
+        ((BinaryBitmapFont) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_23_4, -1);
+        jha.field_g.drawParagraph(st.field_e, 300, 360, 300, 100, 16776960, -1, 1, 0, 14);
+        hfa.field_z.drawParagraph(st.field_e, 300, 340, 300, 100, 65793, -1, 1, 0, 14);
     }
 
     final void a(byte param0) {
@@ -728,7 +728,7 @@ final class up {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

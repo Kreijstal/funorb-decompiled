@@ -4,7 +4,7 @@
 class tf extends DualLinkNode {
     static volatile int field_n;
 
-    final static kv a(byte param0, int param1, int param2, int param3, int param4) {
+    final static Sprite a(byte param0, int param1, int param2, int param3, int param4) {
         int var6;
         int var7;
         int var8;
@@ -12,14 +12,14 @@ class tf extends DualLinkNode {
         int var10;
         int var11;
         int var12;
-        kv var13;
+        Sprite var13;
         int var7Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
         var12 = BachelorFridge.field_y;
-        var13 = new kv(param3, param4);
+        var13 = new Sprite(param3, param4);
         var6 = 0;
         for (var7 = 0; param4 >> 1 > var7; var7++) {
           var8 = -(65793 * (32 * var7 / param4)) + 9474192;

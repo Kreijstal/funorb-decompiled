@@ -26,7 +26,7 @@ abstract class iha extends at {
           var4 = (at) (this.field_h.b((byte) 90));
           while (var4 != null) {
             if (var4.b(param0 + 0)) {
-              var4.a(false);
+              var4.unlink(false);
             }
             var4 = (at) (this.field_h.c(0));
           }
@@ -48,7 +48,7 @@ abstract class iha extends at {
           var4Lifetime1 = (at) (this.field_h.b((byte) 90));
           while (var4Lifetime1 != null) {
             if (var4Lifetime1.b(param0 + 0)) {
-              var4Lifetime1.a(false);
+              var4Lifetime1.unlink(false);
             }
             var4Lifetime1 = (at) (this.field_h.c(0));
           }
@@ -65,7 +65,7 @@ abstract class iha extends at {
         var4Lifetime2 = (at) (this.field_h.b((byte) 90));
         while (var4Lifetime2 != null) {
           if (var4Lifetime2.b(param0 + 0)) {
-            var4Lifetime2.a(false);
+            var4Lifetime2.unlink(false);
           }
           var4Lifetime2 = (at) (this.field_h.c(0));
         }

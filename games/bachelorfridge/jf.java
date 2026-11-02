@@ -4,7 +4,7 @@
 final class jf extends pu {
     static int field_m;
     static int[][] field_n;
-    static ee field_l;
+    static IndexedSprite field_l;
     private static String field_z;
 
     public static void b(int param0) {

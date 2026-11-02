@@ -6,9 +6,9 @@ final class aj {
     int field_a;
     static String field_b;
 
-    final static ee a(int param0, int param1, int param2, vr param3) {
+    final static IndexedSprite a(int param0, int param1, int param2, vr param3) {
         RuntimeException var4 = null;
-        ee stackIn_6_0 = null;
+        IndexedSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -32,7 +32,7 @@ final class aj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class aj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aj.A(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aj.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class aj {
         try {
           this.a(-1, param0.field_c, param0.field_a);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "aj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ps extends bca {
-    static ee field_q;
+    static IndexedSprite field_q;
 
     public static void d(byte param0) {
         if (param0 >= -8) {
@@ -38,7 +38,7 @@ final class ps extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -46,7 +46,7 @@ final class ps extends bca {
         super(param0, param1);
     }
 
-    ps(lu param0) {
+    ps(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
@@ -55,9 +55,9 @@ final class ps extends bca {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_k = param0.e((byte) 104);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 104);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -75,7 +75,7 @@ final class ps extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class ps extends bca {
           int var3_int = 45 % ((param1 - 12) / 35);
           this.a(param0, (byte) -2);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ps.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ps.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class ps extends bca {
         if (param0 < -116) {
           return pw.field_w.field_Sb == ge.field_F ? true : false;
         }
-        field_q = (ee) null;
+        field_q = (IndexedSprite) null;
         return pw.field_w.field_Sb == ge.field_F ? true : false;
     }
 

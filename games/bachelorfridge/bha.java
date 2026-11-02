@@ -3,7 +3,7 @@
  */
 final class bha extends pu {
     static boolean field_n;
-    static kv[] field_m;
+    static Sprite[] field_m;
     static boolean field_l;
     static int field_o;
     private static String field_z;

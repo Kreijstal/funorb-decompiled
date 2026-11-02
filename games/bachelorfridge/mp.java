@@ -6,7 +6,7 @@ final class mp extends td {
     static String field_p;
     static String field_r;
     static int[] field_q;
-    static kv field_s;
+    static Sprite field_s;
 
     mp(int param0, aga param1) {
         super(param0, param1);
@@ -63,7 +63,7 @@ final class mp extends td {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class mp extends td {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 

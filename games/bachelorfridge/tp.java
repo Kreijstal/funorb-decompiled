@@ -4,7 +4,7 @@
 final class tp extends ana {
     private u field_w;
     private taa field_y;
-    static kv field_x;
+    static Sprite field_x;
     static int field_v;
 
     private final void d(int param0) {
@@ -62,13 +62,13 @@ final class tp extends ana {
           this.field_y = new taa(this.field_q, this.field_w.field_r, this.field_w.field_q);
           this.a(27799, this.field_y);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void e(int param0) {
         if (param0 != -1) {
-          field_x = (kv) null;
+          field_x = (Sprite) null;
         }
     }
 
@@ -76,10 +76,10 @@ final class tp extends ana {
         int fieldTemp$1 = 0;
         int var2;
         var2 = -68 / ((71 - param0) / 47);
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
-        if (this.field_y.a((byte) -106)) {
+        if (this.field_y.isLinked((byte) -106)) {
           return false;
         }
         fieldTemp$1 = this.field_l - 1;

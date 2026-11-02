@@ -4,7 +4,7 @@
 final class kfa extends k {
     private int field_k;
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -19,7 +19,7 @@ final class kfa extends k {
           if (var4_int != 0) {
             return;
           }
-          this.field_k = (param1.b(param0 + 16712006) << 12) / 255;
+          this.field_k = (param1.readUnsignedByte(param0 + 16712006) << 12) / 255;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -31,7 +31,7 @@ final class kfa extends k {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -50,7 +50,7 @@ final class kfa extends k {
           var4 = this.field_j.a(param0, param1 - 1);
           var3 = var4;
           if (this.field_j.field_m) {
-            bl.a(var4, 0, hh.field_d, this.field_k);
+            ArrayOperations.a(var4, 0, hh.field_d, this.field_k);
           }
           return var4;
         }
@@ -58,14 +58,14 @@ final class kfa extends k {
         var4Lifetime1 = this.field_j.a(param0, param1 - 1);
         var3Lifetime1 = var4Lifetime1;
         if (this.field_j.field_m) {
-          bl.a(var4Lifetime1, 0, hh.field_d, this.field_k);
+          ArrayOperations.a(var4Lifetime1, 0, hh.field_d, this.field_k);
         }
         return var4Lifetime1;
     }
 
-    final static ce a(lu param0, int param1, int param2) {
+    final static ce a(PacketBuffer param0, int param1, int param2) {
         RuntimeException var3 = null;
-        lu var4 = null;
+        PacketBuffer var4 = null;
         ce stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -73,8 +73,8 @@ final class kfa extends k {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 4096) {
-            var4 = (lu) null;
-            kfa.a((lu) null, -110, 53);
+            var4 = (PacketBuffer) null;
+            kfa.a((PacketBuffer) null, -110, 53);
           }
           stackIn_3_0 = new ce(param2, param0);
           return stackIn_3_0;
@@ -88,7 +88,7 @@ final class kfa extends k {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

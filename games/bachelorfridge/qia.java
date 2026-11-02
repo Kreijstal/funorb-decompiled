@@ -3,7 +3,7 @@
  */
 final class qia {
     static String field_b;
-    static po field_a;
+    static BitmapFont field_a;
 
     final boolean a(int param0) {
         if (param0 != 23716) {

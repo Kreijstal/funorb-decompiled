@@ -52,7 +52,7 @@ final class wk {
         }
         var3Lifetime1 = new pda();
         if (var4 != null) {
-          var3Lifetime1.a(new lu(var4), (byte) 109);
+          var3Lifetime1.a(new PacketBuffer(var4), (byte) 109);
         }
         if (32768 <= param1) {
           var3Lifetime1.b(true);
@@ -105,7 +105,7 @@ final class wk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

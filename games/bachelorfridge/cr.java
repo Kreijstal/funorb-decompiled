@@ -3,7 +3,7 @@
  */
 final class cr {
     private int[] field_d;
-    static je field_c;
+    static PcmSampleStream field_c;
     static long field_a;
     static boolean field_b;
 
@@ -68,7 +68,7 @@ final class cr {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

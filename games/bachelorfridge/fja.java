@@ -3,7 +3,7 @@
  */
 final class fja {
     static String field_c;
-    static kv[] field_d;
+    static Sprite[] field_d;
     static String field_b;
     static sna field_a;
     private static String field_z;
@@ -16,7 +16,7 @@ final class fja {
           field_b = null;
           return;
         }
-        field_d = (kv[]) null;
+        field_d = (Sprite[]) null;
         field_c = null;
         field_b = null;
     }

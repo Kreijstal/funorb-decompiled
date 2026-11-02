@@ -7,17 +7,17 @@ final class fd extends ana {
     private rr[] field_I;
     private int field_y;
     private cq field_G;
-    static eaa field_z;
+    static IntrusiveDeque field_z;
     tla field_B;
     private boolean field_v;
     private int field_x;
     static String field_E;
     static int[] field_D;
 
-    final static pia a(byte param0, int param1, int param2, vr param3, vr param4) {
+    final static PalettedBitmapFont a(byte param0, int param1, int param2, vr param3, vr param4) {
         RuntimeException var5 = null;
-        pia stackIn_2_0 = null;
-        pia stackIn_7_0 = null;
+        PalettedBitmapFont stackIn_2_0 = null;
+        PalettedBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -26,7 +26,7 @@ final class fd extends ana {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -105) {
-            stackIn_2_0 = (pia) null;
+            stackIn_2_0 = (PalettedBitmapFont) null;
             return stackIn_2_0;
           }
           if (!g.a(param2, param1, param0 ^ 30847, param4)) {
@@ -50,7 +50,7 @@ final class fd extends ana {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -60,7 +60,7 @@ final class fd extends ana {
         field_D = null;
         if (param0 != 0) {
           String[] var2 = (String[]) null;
-          fd.a((int[]) null, (vr) null, -57, 54, (byte[]) null, (vr) null, true, (vr) null, (int[]) null, 67, (ee[]) null, (kv[][]) null, (kv[][]) null, (byte[]) null, (String[][]) null, (String[][]) null, (String[]) null);
+          fd.a((int[]) null, (vr) null, -57, 54, (byte[]) null, (vr) null, true, (vr) null, (int[]) null, 67, (IndexedSprite[]) null, (Sprite[][]) null, (Sprite[][]) null, (byte[]) null, (String[][]) null, (String[][]) null, (String[]) null);
         }
     }
 
@@ -115,7 +115,7 @@ final class fd extends ana {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class fd extends ana {
         int var2 = -114 % ((param0 + 7) / 34);
     }
 
-    final static void a(int[] param0, vr param1, int param2, int param3, byte[] param4, vr param5, boolean param6, vr param7, int[] param8, int param9, ee[] param10, kv[][] param11, kv[][] param12, byte[] param13, String[][] param14, String[][] param15, String[] param16) {
+    final static void a(int[] param0, vr param1, int param2, int param3, byte[] param4, vr param5, boolean param6, vr param7, int[] param8, int param9, IndexedSprite[] param10, Sprite[][] param11, Sprite[][] param12, byte[] param13, String[][] param14, String[][] param15, String[] param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -249,7 +249,7 @@ final class fd extends ana {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -351,17 +351,17 @@ final class fd extends ana {
           gka.a(-56, var3);
         }
         this.field_w = this.field_w + 1;
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
         if (null != this.field_F &&
-          this.field_F.a((byte) -106)) {
+          this.field_F.isLinked((byte) -106)) {
           return false;
         }
         if (this.field_w > 128 &&
           this.field_G == null) {
           gka.a(107, 0);
-          this.field_G = tw.a(je.a(rt.field_a[68], 384, 256), (byte) -36);
+          this.field_G = tw.a(PcmSampleStream.createWithVolume(rt.field_a[68], 384, 256), (byte) -36);
         }
         var3Lifetime1 = 1;
         var8 = this.field_I;
@@ -391,7 +391,7 @@ final class fd extends ana {
     }
 
     static {
-        field_z = new eaa();
+        field_z = new IntrusiveDeque();
         field_E = "Passwords must be between 5 and 20 characters long";
     }
 }

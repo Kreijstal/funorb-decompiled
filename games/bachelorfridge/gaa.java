@@ -8,7 +8,7 @@ final class gaa extends lg {
     boolean field_j;
     private jfa field_h;
 
-    final static void a(po param0, vr param1, int param2) {
+    final static void a(BitmapFont param0, vr param1, int param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -25,7 +25,7 @@ final class gaa extends lg {
         String var10 = null;
         Throwable var11 = null;
         Throwable var12 = null;
-        po var13 = null;
+        BitmapFont var13 = null;
         int[] var17 = null;
         var9 = BachelorFridge.field_y;
         try {
@@ -47,25 +47,25 @@ final class gaa extends lg {
             return;
           }
           nh.a(0, var4);
-          var13 = (po) null;
-          mj.field_k = qla.a(1513239, 1513239, 0, 1127256, 65793, 8947848, -24, (po) null, 4020342, 2245737, 5138823, 65793, 65793);
+          var13 = (BitmapFont) null;
+          mj.field_k = qla.a(1513239, 1513239, 0, 1127256, 65793, 8947848, -24, (BitmapFont) null, 4020342, 2245737, 5138823, 65793, 65793);
           tga.field_p = qla.a(0, 0, 16764006, 0, 0, 0, -24, param0, 0, 0, 0, 0, 0);
           jv.field_i = qla.a(0, 0, 16777215, 0, 0, 0, -24, param0, 0, 0, 0, 0, 0);
-          var5 = dg.field_i;
-          var6 = dg.field_c;
-          var17 = dg.field_e;
+          var5 = SoftwareRasterizer.field_i;
+          var6 = SoftwareRasterizer.field_c;
+          var17 = SoftwareRasterizer.field_e;
           if (param2 > -53) {
             var10 = (String) null;
             gaa.a((String) null, -16);
           }
-          kga.field_a = new kv(10, 14);
+          kga.field_a = new Sprite(10, 14);
           kga.field_a.b();
           for (var8 = 2; 7 > var8; var8++) {
-            dg.f(var8, var8 + 1, 14 - (var8 << 1), 16777215);
+            SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
-          dg.a(var17, var5, var6);
+          SoftwareRasterizer.setTarget(var17, var5, var6);
           sc.field_m = ad.a(mj.field_k, var4, tga.field_p, jv.field_i, false);
-          fo.field_a.field_z = new eaa();
+          fo.field_a.field_z = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ final class gaa extends lg {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class gaa extends lg {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class gaa extends lg {
             gaa.a((String) null, -56);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gaa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gaa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -212,28 +212,28 @@ final class gaa extends lg {
           this.field_h = param5;
           this.a((byte) 82);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gaa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gaa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void e(int param0) {
-        ew.field_r.e(this.field_g, this.field_f);
-        dg.a(this.field_g + 40, this.field_f + 20, this.field_d - 110, this.field_c - 30, 20, 65793, 64);
+        ew.field_r.draw(this.field_g, this.field_f);
+        SoftwareRasterizer.a(this.field_g + 40, this.field_f + 20, this.field_d - 110, this.field_c - 30, 20, 65793, 64);
         this.field_h.field_v.a(false, false, 2048, 2048, param0, -28, 256, 230, 150);
         if (this.field_j) {
           wq.a(1, 14, 300, 16777215, this.field_f + 10, 300, 65793, true, qi.field_a, 0, this.field_g + 54);
           laa.a(284, (byte) -56, 310, 16777215, lga.a(true, new String[]{this.field_h.field_g.field_o.field_h}, he.field_o), 65793);
-          ana.field_r.e(244, 330);
+          ana.field_r.draw(244, 330);
           laa.a(356, (byte) -111, 298, !this.field_j ? 8421504 : 16777215, qga.field_s, 65793);
-          ana.field_r.e(350, 330);
+          ana.field_r.draw(350, 330);
           laa.a(356, (byte) -65, 402, 16777215, hea.field_s, 65793);
           return;
         }
         wq.a(1, 14, 300, 16777215, this.field_f + 16, 300, 65793, true, tba.field_r, 0, this.field_g + 54);
         laa.a(284, (byte) -95, 310, 16777215, us.field_a, 65793);
-        ana.field_r.e(244, 330);
+        ana.field_r.draw(244, 330);
         laa.a(356, (byte) -111, 298, !this.field_j ? 8421504 : 16777215, qga.field_s, 65793);
-        ana.field_r.e(350, 330);
+        ana.field_r.draw(350, 330);
         laa.a(356, (byte) -65, 402, 16777215, hea.field_s, 65793);
     }
 

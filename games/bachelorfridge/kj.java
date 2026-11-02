@@ -19,7 +19,7 @@ abstract class kj {
 
     final static void b(byte param0) {
         if (!bp.e(-29919)) {
-          sja.field_fb.c(78, (byte) 109);
+          sja.field_fb.writeCipheredByte(78, (byte) 109);
           hb.field_j = true;
           if (param0 == -88) {
             uca.a(0, (byte) 101);
@@ -66,7 +66,7 @@ abstract class kj {
           this.field_d = param1;
           this.field_c = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

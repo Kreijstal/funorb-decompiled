@@ -3,7 +3,7 @@
  */
 final class em extends am implements lja {
     private hf field_U;
-    static kv field_S;
+    static Sprite field_S;
     static String field_V;
     static vr field_T;
 
@@ -142,7 +142,7 @@ final class em extends am implements lja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "em.T(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "em.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -207,7 +207,7 @@ final class em extends am implements lja {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class em extends am implements lja {
               this.field_q = this.field_q + 10;
               if (od.e((byte) -127)) {
                 this.field_q = this.field_q + 20;
-                var3 = dm.field_e;
+                var3 = ProxySocketConnector.field_e;
               }
             } else {
               if (param1 == tma.field_x) {
@@ -265,7 +265,7 @@ final class em extends am implements lja {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -313,7 +313,7 @@ final class em extends am implements lja {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

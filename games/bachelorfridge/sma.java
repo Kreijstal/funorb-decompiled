@@ -17,7 +17,7 @@ final class sma extends ana {
     private int field_z;
     static int field_C;
     static String field_B;
-    static kv[] field_H;
+    static Sprite[] field_H;
 
     final boolean c(byte param0) {
         int var3 = 0;
@@ -66,7 +66,7 @@ final class sma extends ana {
         field_H = null;
     }
 
-    final static kv[] a(byte param0, int param1, int param2) {
+    final static Sprite[] a(byte param0, int param1, int param2) {
         int var3 = -126 % ((param0 - 14) / 52);
         return jna.a(param2, 1, (byte) 106, param1);
     }
@@ -83,7 +83,7 @@ final class sma extends ana {
         String var11;
         int var12;
         int var13;
-        gi var14;
+        ClientException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -109,13 +109,13 @@ final class sma extends ana {
         String var2Lifetime3Lifetime12;
         String var11Lifetime3Lifetime1;
         var13 = BachelorFridge.field_y;
-        if (!(param1 instanceof gi)) {
+        if (!(param1 instanceof ClientException)) {
           var2 = "";
           var11 = var2;
         } else {
-          var14 = (gi) ((Object) param1);
-          var2 = var14.field_e + " | ";
-          param1 = var14.field_d;
+          var14 = (ClientException) ((Object) param1);
+          var2 = var14.context + " | ";
+          param1 = var14.cause;
         }
         var15 = new StringWriter();
         var4 = new PrintWriter((Writer) ((Object) var15));
@@ -211,9 +211,9 @@ final class sma extends ana {
         int stackIn_35_0 = 0;
         int stackIn_70_0 = 0;
         int stackIn_79_0 = 0;
-        kv[] stackIn_81_0 = null;
+        Sprite[] stackIn_81_0 = null;
         int stackIn_82_1 = 0;
-        kv[] stackIn_89_0 = null;
+        Sprite[] stackIn_89_0 = null;
         int stackIn_90_1 = 0;
         String stackIn_154_0 = null;
         String stackIn_163_0 = null;
@@ -222,7 +222,7 @@ final class sma extends ana {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        eaa var9 = null;
+        IntrusiveDeque var9 = null;
         long var10 = 0L;
         Object var12 = null;
         uha var13 = null;
@@ -256,7 +256,7 @@ final class sma extends ana {
         int var40 = 0;
         int var41 = 0;
         int var42 = 0;
-        kv var43 = null;
+        Sprite var43 = null;
         sna var44 = null;
         sna var45 = null;
         sna var46 = null;
@@ -265,14 +265,14 @@ final class sma extends ana {
         sna var49 = null;
         sna var50 = null;
         Object var51 = null;
-        kv var51_ref = null;
+        Sprite var51_ref = null;
         Object var52 = null;
-        kv var52_ref = null;
+        Sprite var52_ref = null;
         Object var53 = null;
-        kv var53_ref = null;
+        Sprite var53_ref = null;
         Object var54 = null;
-        kv var54_ref = null;
-        kv var55 = null;
+        Sprite var54_ref = null;
+        Sprite var55 = null;
         int var15Lifetime1;
         int var34_intLifetime1;
         int var35_intLifetime1;
@@ -308,7 +308,7 @@ final class sma extends ana {
               var13.field_hc = new sna(0L, wv.field_l);
               var13.a(-1, var13.field_hc);
               var13.field_hc.field_N = 1;
-              var13.field_Hb = new sna(0L, gi.field_c);
+              var13.field_Hb = new sna(0L, ClientException.field_c);
               var13.a(-1, var13.field_Hb);
               var13.field_yb = new sna(0L, wv.field_l);
               var13.a(-1, var13.field_yb);
@@ -316,21 +316,21 @@ final class sma extends ana {
               var13.field_Yb = new sna(0L, wv.field_l);
               var13.a(-1, var13.field_Yb);
               var13.field_Yb.field_L = 0;
-              var13.field_vb = new sna(0L, gi.field_c);
+              var13.field_vb = new sna(0L, ClientException.field_c);
               var13.a(-1, var13.field_vb);
               var13.field_vb.field_N = 2;
               stackIn_10_0 = var13;
               stackIn_10_1 = null;
               stackIn_10_2 = null;
               stackIn_10_3 = 0L;
-              if (eaa.field_c) {
+              if (IntrusiveDeque.field_c) {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
                 stackIn_11_4 = wv.field_l;
               } else {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
-                stackIn_11_4 = gi.field_c;
+                stackIn_11_4 = ClientException.field_c;
               }
               stackIn_10_0.field_Db = new sna(stackIn_10_3, stackIn_11_4);
               var13.a(-1, var13.field_Db);
@@ -369,10 +369,10 @@ final class sma extends ana {
               stackIn_30_1 = null;
               stackIn_30_2 = null;
               stackIn_30_3 = 0L;
-              if (eaa.field_c) {
+              if (IntrusiveDeque.field_c) {
                 stackIn_31_1 = null;
                 stackIn_31_2 = null;
-                stackIn_31_4 = gi.field_c;
+                stackIn_31_4 = ClientException.field_c;
               } else {
                 stackIn_31_1 = null;
                 stackIn_31_2 = null;
@@ -381,7 +381,7 @@ final class sma extends ana {
               stackIn_30_0.field_Gb = new sna(stackIn_30_3, stackIn_31_4);
               var13.a(-1, var13.field_Gb);
               var13.field_Gb.field_N = 2;
-              var13.field_cc = new sna(0L, gi.field_c);
+              var13.field_cc = new sna(0L, ClientException.field_c);
               var13.a(-1, var13.field_cc);
               var13.field_Tb = new sna(0L, dla.field_k);
               var13.a(-1, var13.field_Tb);
@@ -507,7 +507,7 @@ final class sma extends ana {
               } else {
                 var13.field_Ub.a(rg.field_h, 31407, 68, 0, var32);
               }
-              var13.field_Hb.field_Z = po.a(var13.field_Hb.field_jb, var33, 78);
+              var13.field_Hb.field_Z = BitmapFont.a(var13.field_Hb.field_jb, var33, 78);
               var13.field_Hb.a(rg.field_h, 31407, 78, 70, var32);
               if (var13.field_Hb.field_T &&
                 !var13.field_Hb.field_Z.equals(var33)) {
@@ -526,7 +526,7 @@ final class sma extends ana {
               }
               var13.field_vb.field_Z = Integer.toString(var13.field_bc);
               var13.field_vb.a(rg.field_h, 31407, 48, 200, var32);
-              stackIn_70_0 = (eaa.field_c) ? 250 : 200;
+              stackIn_70_0 = (IntrusiveDeque.field_c) ? 250 : 200;
               var34_intLifetime1 = stackIn_70_0;
               var13.field_Db.a(rg.field_h, 31407, -var34_intLifetime1 + 363, var34_intLifetime1, var32);
               var35_int = lm.field_d;
@@ -543,7 +543,7 @@ final class sma extends ana {
                   stackIn_79_0 = 1;
                 }
                 var37 = stackIn_79_0;
-                stackIn_81_0 = (kv[]) (field_H);
+                stackIn_81_0 = (Sprite[]) (field_H);
                 if (var37 != 0) {
                   stackIn_82_1 = 1;
                 } else {
@@ -629,7 +629,7 @@ final class sma extends ana {
                 var32 = var32 + var40Lifetime1 * rg.field_h;
               }
               if (var13.field_Wb) {
-                var13.field_Tb.field_Z = lga.a(true, new String[]{var33}, eka.field_o);
+                var13.field_Tb.field_Z = lga.a(true, new String[]{var33}, MusicPatch.field_o);
                 var13.field_Tb.a(rg.field_h, 31407, var13.field_sb - 2 * gba.field_Bb, gba.field_Bb, var32);
                 var32 = var32 + rg.field_h;
               }
@@ -731,7 +731,7 @@ final class sma extends ana {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var7), "sma.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) var7), "sma.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -747,7 +747,7 @@ final class sma extends ana {
           this.field_G = this.field_w.field_s;
           this.field_F = this.field_w.field_r;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -764,18 +764,18 @@ final class sma extends ana {
         }
     }
 
-    final static void a(int param0, ee[] param1, vr param2, vr param3, int[] param4) {
-        kv[] dupTemp$0 = null;
-        kv[] dupTemp$1 = null;
-        kv[] dupTemp$2 = null;
-        kv[] dupTemp$3 = null;
-        ee[] var5 = null;
-        ee[] var6 = null;
+    final static void a(int param0, IndexedSprite[] param1, vr param2, vr param3, int[] param4) {
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[] var6 = null;
         int[] var6_array = null;
         int var7_int = 0;
         int var18 = 0;
         int[] var20 = null;
-        ee[] var21 = null;
+        IndexedSprite[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
         int[] var24 = null;
@@ -791,17 +791,17 @@ final class sma extends ana {
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        fea var7 = null;
+        BinaryBitmapFont var7 = null;
         sna var8 = null;
         sna var9 = null;
         sna var10 = null;
         sna var11 = null;
-        kv[] var12 = null;
-        kv[] var13 = null;
-        kv[] var14 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
         sna var15 = null;
-        kv[] var16 = null;
-        kv[] var17 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         int[] var19 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
@@ -812,7 +812,7 @@ final class sma extends ana {
           var5 = var21;
           re.field_E = var21.length;
           if (param1 != null) {
-            var6 = new ee[re.field_E + param1.length];
+            var6 = new IndexedSprite[re.field_E + param1.length];
             for (var7_int = 0; re.field_E > var7_int; var7_int++) {
               var6[var7_int] = var21[var7_int];
             }
@@ -849,18 +849,18 @@ final class sma extends ana {
           var7 = vfa.a("largefont", param2, 76, "lobby", param3);
           ds.field_l = vfa.a("generalfont", param2, -15, "lobby", param3);
           hl.field_H = vfa.a("chatfont", param2, -62, "lobby", param3);
-          var7.a(var5, var25);
-          ds.field_l.a(var5, var25);
-          hl.field_H.a(var5, var25);
+          var7.setInlineSprites(var5, var25);
+          ds.field_l.setInlineSprites(var5, var25);
+          hl.field_H.setInlineSprites(var5, var25);
           var8 = new sna(0L, (sna) null);
           var8.field_gb = 16777215;
           var8.field_B = rg.field_h;
-          var8.field_jb = (po) ((Object) var7);
+          var8.field_jb = (BitmapFont) ((Object) var7);
           var8.field_Y = 1;
           var9 = var8;
           var9.field_N = 1;
           var10 = new sna(0L, (sna) null);
-          var10.field_jb = (po) ((Object) ds.field_l);
+          var10.field_jb = (BitmapFont) ((Object) ds.field_l);
           var10.field_gb = 16777215;
           var10.field_B = rg.field_h;
           var11 = var10;
@@ -897,7 +897,7 @@ final class sma extends ana {
           qs.field_m.field_Y = 1;
           qs.field_m.field_gb = 13421772;
           qs.field_m.field_B = rg.field_h;
-          qs.field_m.field_jb = (po) ((Object) ds.field_l);
+          qs.field_m.field_jb = (BitmapFont) ((Object) ds.field_l);
           dla.field_k = new sna(0L, qs.field_m);
           dla.field_k.field_w = 16777215;
           dla.field_k.field_gb = 16764006;
@@ -906,7 +906,7 @@ final class sma extends ana {
           dla.field_k.field_ab = 16777215;
           var15 = new sna(0L, dla.field_k);
           var15.field_B = rg.field_h;
-          var15.field_jb = (po) ((Object) var7);
+          var15.field_jb = (BitmapFont) ((Object) var7);
           var15.field_gb = 16777215;
           rea.field_g = new sna(0L, qs.field_m);
           rea.field_g.field_eb = nba.a(false, 2236962, 1, false, 16, 2236962);
@@ -916,8 +916,8 @@ final class sma extends ana {
           ina.field_n.field_L = 2;
           wv.field_l = new sna(0L, rea.field_g);
           wv.field_l.a(dla.field_k, param0 ^ 30944);
-          gi.field_c = new sna(0L, ina.field_n);
-          gi.field_c.a(dla.field_k, 41);
+          ClientException.field_c = new sna(0L, ina.field_n);
+          ClientException.field_c.a(dla.field_k, 41);
           var16 = gw.a("lobby", "button_mouseover", param2, param0 - 30928);
           td.field_o = new pna(kha.field_i, var12, qs.field_m, dla.field_k, 3, 2, lm.field_d, 3, rg.field_h);
           wd.field_v = new sna(0L, dla.field_k);
@@ -954,11 +954,11 @@ final class sma extends ana {
           ria.field_k.field_N = 1;
           ria.field_k.field_V = 1;
           mh.field_k = new sna(0L, ria.field_k);
-          tca.field_c = new sna(0L, ria.field_k);
+          JaggrabDownloader.field_c = new sna(0L, ria.field_k);
           iw.field_a = new sna(0L, vo.field_b);
           if (param0 != 30869) {
             var19 = (int[]) null;
-            sma.a(93, (ee[]) null, (vr) null, (vr) null, (int[]) null);
+            sma.a(93, (IndexedSprite[]) null, (vr) null, (vr) null, (int[]) null);
           }
           gfa.field_f = new sna(0L, ria.field_k);
           uaa.field_i = new sna(0L, ria.field_k);
@@ -979,9 +979,9 @@ final class sma extends ana {
           mh.field_k.field_eb = tj.a(gw.a("lobby", "greenbutton", param2, -118), (byte) 123);
           mh.field_k.field_A = tj.a(gw.a("lobby", "greenbutton_mouseover", param2, -53), (byte) 114);
           mh.field_k.field_db = tj.a(gw.a("lobby", "greenbutton_mouseheld", param2, param0 - 30984), (byte) 120);
-          tca.field_c.field_eb = tj.a(gw.a("lobby", "redbutton", param2, param0 ^ -30894), (byte) 123);
-          tca.field_c.field_A = tj.a(gw.a("lobby", "redbutton_mouseover", param2, -84), (byte) -70);
-          tca.field_c.field_db = tj.a(gw.a("lobby", "redbutton_mouseheld", param2, -88), (byte) -106);
+          JaggrabDownloader.field_c.field_eb = tj.a(gw.a("lobby", "redbutton", param2, param0 ^ -30894), (byte) 123);
+          JaggrabDownloader.field_c.field_A = tj.a(gw.a("lobby", "redbutton_mouseover", param2, -84), (byte) -70);
+          JaggrabDownloader.field_c.field_db = tj.a(gw.a("lobby", "redbutton_mouseheld", param2, -88), (byte) -106);
           iw.field_a.field_eb = tj.a(gw.a("lobby", "backbutton", param2, -83), (byte) 106);
           iw.field_a.field_A = tj.a(gw.a("lobby", "backbutton_mouseover", param2, -104), (byte) -72);
           iw.field_a.field_db = tj.a(gw.a("lobby", "backbutton_mouseheld", param2, -80), (byte) -82);
@@ -1055,7 +1055,7 @@ final class sma extends ana {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 

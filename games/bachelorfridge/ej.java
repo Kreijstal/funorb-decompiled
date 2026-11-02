@@ -51,7 +51,7 @@ final class ej extends jm {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -61,16 +61,16 @@ final class ej extends jm {
           gb.a(param0, param4, param1, 0, param3, param2);
           int var6_int = -111 / ((4 - param5) / 59);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ej.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ej.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    ej(lu param0) {
+    ej(PacketBuffer param0) {
         try {
           this.field_j = 7;
-          this.field_m = param0.b(16711935);
+          this.field_m = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -111,16 +111,16 @@ final class ej extends jm {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final void b(lu param0, byte param1) {
+    final void b(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -73 % ((param1 - 37) / 38);
-          param0.d(this.field_m, 0);
+          param0.writeByte(this.field_m, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ej.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ej.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class ej extends jm {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class ej extends jm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref), "ej.G(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "ej.G(" + param0 + ')');
         }
     }
 

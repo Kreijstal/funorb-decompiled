@@ -3,7 +3,7 @@
  */
 final class fda extends pp {
     static java.awt.Frame field_j;
-    static kv field_m;
+    static Sprite field_m;
     static vr field_l;
     static qh field_i;
     static vr field_k;
@@ -12,7 +12,7 @@ final class fda extends pp {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class fda extends pp {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class fda extends pp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "fda.D(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "fda.D(" + param0 + ')');
         }
     }
 
@@ -150,16 +150,16 @@ final class fda extends pp {
             field_l = (vr) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fda.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fda.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           er.a(this.field_h, 109, param0);
           int var3_int = -94 % ((param1 - 34) / 58);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fda.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fda.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -209,7 +209,7 @@ final class fda extends pp {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 

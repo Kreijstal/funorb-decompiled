@@ -27,7 +27,7 @@ final class hda extends k {
         vja.a((byte) 88, param1);
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -43,14 +43,14 @@ final class hda extends k {
           var4_int = param2;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_n = param1.e((byte) 119);
+              this.field_n = param1.readUnsignedShort((byte) 119);
             } else {
               if (var4_int == 2) {
-                this.field_m = param1.b(16711935);
+                this.field_m = param1.readUnsignedByte(16711935);
               }
             }
           } else {
-            this.field_k = param1.b(16711935);
+            this.field_k = param1.readUnsignedByte(16711935);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,7 +63,7 @@ final class hda extends k {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class hda extends k {
               }
               break;
             }
-            bl.a(var13, 0, hh.field_d, var5);
+            ArrayOperations.a(var13, 0, hh.field_d, var5);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -189,7 +189,7 @@ final class hda extends k {
         this.field_p[this.field_k] = this.field_p[0] + 4096;
     }
 
-    final static void a(int param0, kia param1, boolean param2, int param3) {
+    final static void a(int param0, MusicTrack param1, boolean param2, int param3) {
         Object var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -202,7 +202,7 @@ final class hda extends k {
             field_l = (String) null;
           }
           if (kw.field_j != null) {
-            uka.a(1048576, param1, param3, param2, (byte) -112);
+            ImageProducerRasterBuffer.a(1048576, param1, param3, param2, (byte) -112);
           }
           if (null != uf.field_c) {
             var4_ref = lc.field_l;
@@ -230,7 +230,7 @@ final class hda extends k {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

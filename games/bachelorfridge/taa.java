@@ -4,14 +4,14 @@
 import java.util.*;
 
 final class taa extends at {
-    static sba field_u;
+    static AntialiasedBitmapFont field_u;
     private int field_v;
     private gj field_n;
     boolean field_p;
     int field_k;
     private int field_t;
     private int field_o;
-    static kv[] field_m;
+    static Sprite[] field_m;
     static int field_l;
     private int field_r;
     private int field_s;
@@ -21,7 +21,7 @@ final class taa extends at {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         fo.field_a.a(param3, 31407, param6, param0, param5);
         if (param2 < 87) {
-          field_m = (kv[]) null;
+          field_m = (Sprite[]) null;
           if (null != da.field_d) {
             da.field_d.a((byte) -120, param3, param3, param1 - uga.field_x, param1, param4);
             return;
@@ -43,7 +43,7 @@ final class taa extends at {
             this.field_k = 48;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "taa.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "taa.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class taa extends at {
           var5 = -(64 * (param2 + param1) >> 1) + 208;
           this.a(var4_int, (byte) -107, var5, param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "taa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "taa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

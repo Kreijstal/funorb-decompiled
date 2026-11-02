@@ -4,7 +4,7 @@
 final class sd {
     static int[] field_b;
     static int field_a;
-    static sca field_c;
+    static MouseWheelInput field_c;
 
     final synchronized static byte[] a(int param0, int param1) {
         int fieldTemp$3 = 0;
@@ -34,11 +34,11 @@ final class sd {
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 30000 &&
-          0 < sca.field_d) {
-          fieldTemp$5 = sca.field_d - 1;
-          sca.field_d = sca.field_d - 1;
+          0 < MouseWheelInput.field_d) {
+          fieldTemp$5 = MouseWheelInput.field_d - 1;
+          MouseWheelInput.field_d = MouseWheelInput.field_d - 1;
           var2_ref_byte__Lifetime2 = ok.field_zb[fieldTemp$5];
-          ok.field_zb[sca.field_d] = null;
+          ok.field_zb[MouseWheelInput.field_d] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (vla.field_o != null) {
@@ -72,17 +72,17 @@ final class sd {
             sd.a(71, -102);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    final static void a(byte param0, lu param1, sfa param2) {
+    final static void a(byte param0, PacketBuffer param1, sfa param2) {
         if (param2 == null) {
-          param1.d(-1, param0 - 124);
+          param1.writeByte(-1, param0 - 124);
           return;
         }
         try {
-          param1.d(param2.field_f, 0);
+          param1.writeByte(param2.field_f, 0);
           if (param0 != 124) {
             sd.a(62, 123);
           }
@@ -90,7 +90,7 @@ final class sd {
           er.a(param2.field_h, 110, param1);
           param2.a(param0 ^ 14, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

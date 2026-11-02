@@ -8,7 +8,7 @@ final class oa extends sna {
     static String field_wb;
     private int field_zb;
     private sna field_yb;
-    static kv field_Bb;
+    static Sprite field_Bb;
 
     oa(int param0, int param1, int param2, int param3, String param4, sna param5, sna param6, sna param7) {
         super(0L, param5);
@@ -74,7 +74,7 @@ final class oa extends sna {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class oa extends sna {
         field_Bb = null;
         field_wb = null;
         if (param0 <= 107) {
-          field_Bb = (kv) null;
+          field_Bb = (Sprite) null;
         }
     }
 
@@ -171,7 +171,7 @@ final class oa extends sna {
         if (!param12) {
           return;
         }
-        field_Bb = (kv) null;
+        field_Bb = (Sprite) null;
     }
 
     final boolean b(boolean param0) {

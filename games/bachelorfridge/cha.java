@@ -72,7 +72,7 @@ final class cha extends lw {
             17 == param0) {
             this.b(1);
             this.c(81);
-            gi.field_a = true;
+            ClientException.field_a = true;
             return;
           }
           if (this.field_e != 2) {
@@ -123,7 +123,7 @@ final class cha extends lw {
             if (17 == param0) {
               this.b(1);
               this.c(81);
-              gi.field_a = true;
+              ClientException.field_a = true;
               return;
             }
             if (this.field_e != 2) {
@@ -154,7 +154,7 @@ final class cha extends lw {
                 17 == param0) {
                 this.b(1);
                 this.c(81);
-                gi.field_a = true;
+                ClientException.field_a = true;
                 return;
               }
               if (this.field_e == 2 &&
@@ -195,7 +195,7 @@ final class cha extends lw {
             if (17 == param0) {
               this.b(1);
               this.c(81);
-              gi.field_a = true;
+              ClientException.field_a = true;
               return;
             }
             if (this.field_e != 2) {

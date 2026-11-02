@@ -7,7 +7,7 @@ final class io extends td {
     static String field_r;
 
     final static void a(gb param0, boolean param1, int param2) {
-        pf var3 = null;
+        BitPacketBuffer var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -15,8 +15,8 @@ final class io extends td {
         RuntimeException var3_ref = null;
         try {
           var3 = sja.field_fb;
-          var3.c(param2, (byte) 127);
-          var3.d(param0.field_g, 0);
+          var3.writeCipheredByte(param2, (byte) 127);
+          var3.writeByte(param0.field_g, 0);
           var3.b(param0.field_h, -127);
           if (!param1) {
             field_p = -86;
@@ -32,7 +32,7 @@ final class io extends td {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class io extends td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "io.D(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "io.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class io extends td {
         try {
           this.field_j = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "io.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "io.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class io extends td {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -7,18 +7,18 @@ final class oe implements so {
     static sna field_c;
     static String field_a;
 
-    final static void a(int param0, lu param1, it param2) {
+    final static void a(int param0, PacketBuffer param1, it param2) {
         if (param2 == null) {
           return;
         }
         try {
-          param1.d(param2.field_e, 0);
-          param1.d(param2.field_h, param0 + 21332);
-          param1.d(param2.field_m, 0);
+          param1.writeByte(param2.field_e, 0);
+          param1.writeByte(param2.field_h, param0 + 21332);
+          param1.writeByte(param2.field_m, 0);
           param1.b(param2.field_b, -114);
-          param1.d(param2.field_a ? 1 : 0, param0 ^ param0);
+          param1.writeByte(param2.field_a ? 1 : 0, param0 ^ param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oe.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class oe implements so {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var6), "oe.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) var6), "oe.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

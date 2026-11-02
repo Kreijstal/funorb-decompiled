@@ -6,7 +6,7 @@ final class qg {
     static String field_c;
     static sna field_b;
 
-    final static void a(int[] param0, int param1, kv param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void a(int[] param0, int param1, Sprite param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int stackIn_67_0 = 0;
         int stackIn_73_0 = 0;
         int stackIn_80_0 = 0;
@@ -220,18 +220,18 @@ final class qg {
             var35 = var35 >> 4;
             var33 = var33 >> 4;
             var36 = var36 + param15;
-            if (var35 < dg.field_j) {
-              var35 = dg.field_j;
+            if (var35 < SoftwareRasterizer.field_j) {
+              var35 = SoftwareRasterizer.field_j;
             }
-            if (dg.field_h < var34) {
-              var34 = dg.field_h;
+            if (SoftwareRasterizer.field_h < var34) {
+              var34 = SoftwareRasterizer.field_h;
             }
             var36 = var36 + 15 >> 4;
-            if (var33 < dg.field_f) {
-              var33 = dg.field_f;
+            if (var33 < SoftwareRasterizer.field_f) {
+              var33 = SoftwareRasterizer.field_f;
             }
-            if (dg.field_k < var36) {
-              var36 = dg.field_k;
+            if (SoftwareRasterizer.field_k < var36) {
+              var36 = SoftwareRasterizer.field_k;
             }
             var34 = -var34 + var33;
             if (var34 >= 0) {
@@ -241,8 +241,8 @@ final class qg {
             if (var36 >= 0) {
               return;
             }
-            param14 = dg.field_i * var35 + var33;
-            param9 = dg.field_i + var34;
+            param14 = SoftwareRasterizer.field_i * var35 + var33;
+            param9 = SoftwareRasterizer.field_i + var34;
             var37 = 16777216.0 / (double)param1;
             var39 = 16777216.0 / (double)param12;
             var21Lifetime1 = (int)Math.floor(Math.sin(var19) * var37 + 0.5);
@@ -807,7 +807,7 @@ final class qg {
           } else {
             stackIn_242_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_235_0), ((StringBuilder) (Object) stackIn_241_1).append(stackIn_242_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_235_0), ((StringBuilder) (Object) stackIn_241_1).append(stackIn_242_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 

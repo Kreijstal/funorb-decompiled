@@ -4,14 +4,14 @@
 final class ja extends td {
     static String field_r;
     static String field_q;
-    static eaa field_s;
+    static IntrusiveDeque field_s;
     static boolean field_p;
 
     public static void b(int param0) {
         field_s = null;
         field_q = null;
         if (param0 != 0) {
-          field_s = (eaa) null;
+          field_s = (IntrusiveDeque) null;
           field_r = null;
           return;
         }
@@ -81,14 +81,14 @@ final class ja extends td {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     static {
         field_r = "You cannot chat to <%0> because <%0> is not in your friend list.";
         field_q = "Win %";
-        field_s = new eaa();
+        field_s = new IntrusiveDeque();
         field_p = true;
     }
 }

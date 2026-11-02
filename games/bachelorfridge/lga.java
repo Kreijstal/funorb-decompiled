@@ -13,9 +13,9 @@ final class lga {
     private int field_q;
     private int field_b;
     static int field_r;
-    static kv field_k;
+    static Sprite field_k;
     static String field_i;
-    eaa field_e;
+    IntrusiveDeque field_e;
     private int field_a;
     private int[][] field_d;
     private int field_l;
@@ -130,7 +130,7 @@ final class lga {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class lga {
           fo.field_a.a(-1, da.field_d);
           gm.field_k = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lga.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lga.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -209,7 +209,7 @@ final class lga {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class lga {
         mc var4;
         var3 = BachelorFridge.field_y;
         var4 = (mc) (this.field_e.b((byte) 90));
-        var4.a(false);
+        var4.unlink(false);
         if (var4.field_f == 8) {
           this.field_o.field_i.a(new ug(this.field_o, var4.field_j * -56), true);
         } else {
@@ -239,7 +239,7 @@ final class lga {
         if (param0 == 82) {
           return;
         }
-        field_k = (kv) null;
+        field_k = (Sprite) null;
     }
 
     final void a(int param0) {
@@ -255,7 +255,7 @@ final class lga {
         if (param0 == 8) {
           var8 = this.field_m[this.field_h][this.field_c];
           var2 = var8;
-          this.field_e = new eaa();
+          this.field_e = new IntrusiveDeque();
           var3 = this.field_h;
           var4 = this.field_c;
           var5 = new mc(-1, 0);
@@ -299,7 +299,7 @@ final class lga {
           this.a(-28);
           var8 = this.field_m[this.field_h][this.field_c];
           var2 = var8;
-          this.field_e = new eaa();
+          this.field_e = new IntrusiveDeque();
           var3 = this.field_h;
           var4 = this.field_c;
           var5 = new mc(-1, 0);
@@ -407,9 +407,9 @@ final class lga {
           this.field_p = new boolean[this.field_l][this.field_b];
           this.field_m = new mka[this.field_l][this.field_b];
           this.field_g = this.field_o.field_l;
-          this.field_e = new eaa();
+          this.field_e = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

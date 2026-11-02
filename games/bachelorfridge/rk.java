@@ -6,7 +6,7 @@ import java.util.*;
 class rk extends IntrusiveNode {
     int[] field_m;
     Random field_p;
-    eaa field_h;
+    IntrusiveDeque field_h;
     wca field_o;
     int field_q;
     private int[] field_j;
@@ -73,7 +73,7 @@ class rk extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ class rk extends IntrusiveNode {
         return ((a) (al.a(-42, 34))).field_r;
     }
 
-    void a(byte param0, lu param1) {
+    void a(byte param0, PacketBuffer param1) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -144,18 +144,18 @@ class rk extends IntrusiveNode {
         int var5Lifetime1;
         var6 = BachelorFridge.field_y;
         try {
-          param1.d(this.field_o.field_b, 0);
-          param1.e((int)this.field_c, -1615464796);
-          param1.d(0, 0);
+          param1.writeByte(this.field_o.field_b, 0);
+          param1.writeInt((int)this.key, -1615464796);
+          param1.writeByte(0, 0);
           var3 = (ho) (this.field_h.b((byte) 90));
           if (param0 >= -21) {
             var7 = (oha) null;
             this.a((oha) null, -19);
           }
-          param1.d(this.field_h.g(0), 0);
+          param1.writeByte(this.field_h.g(0), 0);
           while (var3 != null) {
-            param1.d(var3.field_h.field_b, 0);
-            param1.d(var3.field_i, 0);
+            param1.writeByte(var3.field_h.field_b, 0);
+            param1.writeByte(var3.field_i, 0);
             var3 = (ho) (this.field_h.c(0));
           }
           var4 = 1;
@@ -164,7 +164,7 @@ class rk extends IntrusiveNode {
               var4 = var4 | 1 << var5 + 1;
             }
           }
-          param1.c(-1607631824, var4);
+          param1.writeMedium(-1607631824, var4);
           var8 = 0;
           var5Lifetime1 = var8;
           while (var8 < 5) {
@@ -182,7 +182,7 @@ class rk extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -220,11 +220,11 @@ class rk extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static pp a(int param0, lu param1) {
+    final static pp a(int param0, PacketBuffer param1) {
         nq var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -238,7 +238,7 @@ class rk extends IntrusiveNode {
           if (param0 != 1) {
             field_r = (String) null;
           }
-          var3 = param1.b(16711935);
+          var3 = param1.readUnsignedByte(16711935);
           stackIn_3_0 = new rla(var2, var3);
           return (pp) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -251,7 +251,7 @@ class rk extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -270,14 +270,14 @@ class rk extends IntrusiveNode {
         try {
           this.field_n = param0.field_n;
           this.field_q = param0.field_q;
-          this.field_h = new eaa();
+          this.field_h = new IntrusiveDeque();
           var2 = (ho) (param0.field_h.b((byte) 90));
           while (var2 != null) {
             this.field_h.a(var2.c((byte) 68), true);
             this.field_g[var2.field_i * 3 - 2] = true;
             var2 = (ho) (param0.field_h.c(0));
           }
-          bl.a(param0.field_g, 0, this.field_g, 0, this.field_g.length);
+          ArrayOperations.copy(param0.field_g, 0, this.field_g, 0, this.field_g.length);
           this.field_j = new int[param0.field_j.length];
           for (var3 = 0; this.field_j.length > var3; var3++) {
             this.field_j[var3] = param0.field_j[var3];
@@ -313,7 +313,7 @@ class rk extends IntrusiveNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -332,7 +332,7 @@ class rk extends IntrusiveNode {
         this.field_n = this.field_o.field_h;
     }
 
-    final void a(lu param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         boolean[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         boolean stackIn_9_2 = false;
@@ -350,12 +350,12 @@ class rk extends IntrusiveNode {
         int var4Lifetime1;
         var7 = BachelorFridge.field_y;
         try {
-          this.field_c = (long)param0.f(-50);
-          param0.field_g = param0.field_g + 1;
-          var3_int = param0.b(16711935);
-          this.field_h = new eaa();
+          this.key = (long)param0.readInt(-50);
+          param0.position = param0.position + 1;
+          var3_int = param0.readUnsignedByte(16711935);
+          this.field_h = new IntrusiveDeque();
           for (var4 = 0; var4 < var3_int; var4++) {
-            this.field_h.a(new ho(fw.field_h[param0.b(16711935)], param0.b(16711935)), true);
+            this.field_h.a(new ho(fw.field_h[param0.readUnsignedByte(16711935)], param0.readUnsignedByte(16711935)), true);
           }
           var4Lifetime1 = param0.a(3);
           this.field_j = new int[rfa.a(param1, var4Lifetime1) + 1];
@@ -374,7 +374,7 @@ class rk extends IntrusiveNode {
           }
           this.field_m = new int[5];
           for (var6Lifetime1 = 0; var6Lifetime1 < 5; var6Lifetime1++) {
-            this.field_m[var6Lifetime1] = param0.c((byte) -85);
+            this.field_m[var6Lifetime1] = param0.readSignedShort((byte) -85);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -387,7 +387,7 @@ class rk extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -397,7 +397,7 @@ class rk extends IntrusiveNode {
         int[] var8 = var9;
         int[] var7 = var8;
         int[] var2 = var7;
-        bl.a(var9, 0, 5, this.field_o.field_b);
+        ArrayOperations.a(var9, 0, 5, this.field_o.field_b);
         int[] var3 = ug.field_l[this.field_h.g(0)];
         if (param0 >= -8) {
           field_r = (String) null;
@@ -480,7 +480,7 @@ class rk extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -552,7 +552,7 @@ class rk extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -560,7 +560,7 @@ class rk extends IntrusiveNode {
         int discarded$0 = 0;
         this.field_q = 1;
         this.field_j = new int[2];
-        this.field_h = new eaa();
+        this.field_h = new IntrusiveDeque();
         this.field_g = new boolean[13];
         this.field_f = -1;
         try {
@@ -570,18 +570,18 @@ class rk extends IntrusiveNode {
           }
           this.d((byte) -107);
           this.field_k = new int[4];
-          bl.a(this.field_o.field_l, 0, this.field_k, 0, 4);
+          ArrayOperations.copy(this.field_o.field_l, 0, this.field_k, 0, 4);
           this.field_p = new Random();
           this.field_j[1] = this.field_o.field_g.field_b[1];
           this.field_m = new int[5];
           this.field_j[0] = this.field_o.field_g.field_b[0];
-          bl.a(this.field_m, 0, this.field_m.length, -1);
+          ArrayOperations.a(this.field_m, 0, this.field_m.length, -1);
           this.field_m[0] = 0;
           this.field_m[1] = 1;
           discarded$0 = this.a(0);
-          this.field_c = (long)kla.a(2147483647, this.field_p, -2147483648);
+          this.key = (long)kla.a(2147483647, this.field_p, -2147483648);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

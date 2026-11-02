@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ln extends ana {
-    static kv field_x;
-    static kv field_v;
+    static Sprite field_x;
+    static Sprite field_v;
     private ima field_A;
     private boolean field_w;
     private boolean field_z;
@@ -57,7 +57,7 @@ final class ln extends ana {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -104,13 +104,13 @@ final class ln extends ana {
         }
         gs.field_f.a((byte) 79);
         if (!bp.e(-29919)) {
-          sja.field_fb.c(79, (byte) 103);
+          sja.field_fb.writeCipheredByte(79, (byte) 103);
         }
     }
 
     final boolean c(byte param0) {
         int var2 = 32 % ((71 - param0) / 47);
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
         if (!this.field_y) {
@@ -148,7 +148,7 @@ final class ln extends ana {
           this.field_n.field_p = -256;
           this.field_A = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ln.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ln.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -156,13 +156,13 @@ final class ln extends ana {
         int var1_int = 0;
         int var3 = BachelorFridge.field_y;
         try {
-          fi.field_m = new js(4);
+          fi.field_m = new IntrusiveNodeHashTable(4);
           for (var1_int = 0; jl.field_q.length > var1_int; var1_int++) {
             fi.field_m.a((long)jl.field_q[var1_int].hashCode(), (byte) 86, new ji(var1_int + 1));
           }
           int var2 = -38 % ((param0 - 43) / 46);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ln.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ln.B(" + param0 + ')');
         }
     }
 

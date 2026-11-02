@@ -4,7 +4,7 @@
 final class ih extends lw {
     static int field_l;
 
-    final static cj a(lu param0, int param1) {
+    final static cj a(PacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         cj stackIn_2_0 = null;
         df stackIn_4_0 = null;
@@ -29,7 +29,7 @@ final class ih extends lw {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -55,14 +55,14 @@ final class ih extends lw {
     }
 
     final void a(int param0, byte param1) {
-        lu var4 = null;
-        lu var4Lifetime1;
-        lu var4Lifetime2;
+        PacketBuffer var4 = null;
+        PacketBuffer var4Lifetime1;
+        PacketBuffer var4Lifetime2;
         if (34 != param0) {
           if (param0 != 29) {
             if (param1 != 73) {
-              var4 = (lu) null;
-              ih.a((lu) null, 104);
+              var4 = (PacketBuffer) null;
+              ih.a((PacketBuffer) null, 104);
               return;
             }
             return;
@@ -71,8 +71,8 @@ final class ih extends lw {
           dj.field_c.field_h.a(true, 0);
           dj.field_c.e(-60);
           if (param1 != 73) {
-            var4Lifetime2 = (lu) null;
-            ih.a((lu) null, 104);
+            var4Lifetime2 = (PacketBuffer) null;
+            ih.a((PacketBuffer) null, 104);
             return;
           }
           return;
@@ -81,8 +81,8 @@ final class ih extends lw {
         if (param1 == 73) {
           return;
         }
-        var4Lifetime1 = (lu) null;
-        ih.a((lu) null, 104);
+        var4Lifetime1 = (PacketBuffer) null;
+        ih.a((PacketBuffer) null, 104);
     }
 
     ih() {

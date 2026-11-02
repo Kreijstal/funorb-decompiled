@@ -11,11 +11,11 @@ final class sm extends bca {
           this.a(param0, (byte) -2);
           int var3_int = -93 % ((12 - param1) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sm.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sm.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    sm(lu param0) {
+    sm(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
@@ -24,9 +24,9 @@ final class sm extends bca {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_k = param0.e((byte) 59);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 59);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -44,7 +44,7 @@ final class sm extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class sm extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -81,10 +81,10 @@ final class sm extends bca {
         if (param0) {
           sm.e(-51);
           if (!bp.e(-29919)) {
-            sja.field_fb.c(81, (byte) 126);
-            sja.field_fb.d(param1, 0);
-            sja.field_fb.d(param2, 0);
-            sja.field_fb.d(param3, 0);
+            sja.field_fb.writeCipheredByte(81, (byte) 126);
+            sja.field_fb.writeByte(param1, 0);
+            sja.field_fb.writeByte(param2, 0);
+            sja.field_fb.writeByte(param3, 0);
             return;
           }
           return;
@@ -92,10 +92,10 @@ final class sm extends bca {
         if (bp.e(-29919)) {
           return;
         }
-        sja.field_fb.c(81, (byte) 126);
-        sja.field_fb.d(param1, 0);
-        sja.field_fb.d(param2, 0);
-        sja.field_fb.d(param3, 0);
+        sja.field_fb.writeCipheredByte(81, (byte) 126);
+        sja.field_fb.writeByte(param1, 0);
+        sja.field_fb.writeByte(param2, 0);
+        sja.field_fb.writeByte(param3, 0);
     }
 
     sm(int param0, nq param1) {
@@ -104,7 +104,7 @@ final class sm extends bca {
 
     final static String e(int param0) {
         int var1 = -30 / ((19 - param0) / 63);
-        return ig.field_m.g(-32);
+        return ig.field_m.readString(-32);
     }
 
     public static void d(int param0) {

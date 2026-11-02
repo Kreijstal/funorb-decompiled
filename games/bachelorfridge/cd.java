@@ -243,7 +243,7 @@ final class cd extends k {
         return var3Lifetime1;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -257,15 +257,15 @@ final class cd extends k {
           var4_int = param2;
           if (0 != var4_int) {
             if (var4_int == 1) {
-              this.field_r = param1.e((byte) 93);
+              this.field_r = param1.readUnsignedShort((byte) 93);
             } else {
               if (2 == var4_int) {
-                stackIn_11_1 = (param1.b(16711935) == 1);
+                stackIn_11_1 = (param1.readUnsignedByte(16711935) == 1);
                 this.field_f = stackIn_11_1;
               }
             }
           } else {
-            this.field_q = param1.e((byte) 79);
+            this.field_q = param1.readUnsignedShort((byte) 79);
           }
           if (param0 != -71) {
             field_k = (String) null;
@@ -281,7 +281,7 @@ final class cd extends k {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 

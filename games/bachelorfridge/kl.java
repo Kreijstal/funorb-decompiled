@@ -33,21 +33,21 @@ final class kl extends td {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1) {
-        pf var2 = sja.field_fb;
-        var2.c(param1, (byte) 125);
-        var2.d(1, 0);
+        BitPacketBuffer var2 = sja.field_fb;
+        var2.writeCipheredByte(param1, (byte) 125);
+        var2.writeByte(1, 0);
         if (param0 > 19) {
-          var2.d(3, 0);
+          var2.writeByte(3, 0);
           return;
         }
     }
 
-    final static void a(byte param0, kv param1) {
+    final static void a(byte param0, Sprite param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -66,7 +66,7 @@ final class kl extends td {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ final class kl extends td {
           this.field_k = param2;
           this.field_n = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

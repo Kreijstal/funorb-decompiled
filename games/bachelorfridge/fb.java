@@ -3,13 +3,13 @@
  */
 final class fb extends td {
     static int field_p;
-    static kv field_r;
+    static Sprite field_r;
     static String field_q;
 
     public static void c(byte param0) {
         field_r = null;
         if (param0 != -91) {
-          field_r = (kv) null;
+          field_r = (Sprite) null;
         }
         field_q = null;
     }
@@ -31,7 +31,7 @@ final class fb extends td {
         int var6 = 0;
         int[] var7 = null;
         int var8_int = 0;
-        ko var8 = null;
+        IsaacRandom var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -71,10 +71,10 @@ final class fb extends td {
             var19[var13] = var13;
             var13++;
           }
-          var8 = new ko(new int[]{(int)f.b((byte) 73)});
+          var8 = new IsaacRandom(new int[]{(int)f.b((byte) 73)});
           var6Lifetime1 = 0;
           for (var9 = 0; var19.length > var9; var9++) {
-            var10 = var8.a(-21000, var19.length);
+            var10 = var8.nextBounded(-21000, var19.length);
             var11 = var19[var10];
             var7[var10] = var19[var9];
             var19[var9] = var11;
@@ -107,7 +107,7 @@ final class fb extends td {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ final class fb extends td {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

@@ -37,84 +37,84 @@ final class uv extends k {
         try {
           var5_int = param0 + param3;
           var6 = param1 + param2;
-          if (param3 > dg.field_f) {
+          if (param3 > SoftwareRasterizer.field_f) {
             stackIn_4_0 = param3;
           } else {
-            stackIn_4_0 = dg.field_f;
+            stackIn_4_0 = SoftwareRasterizer.field_f;
           }
           var7 = stackIn_4_0;
-          if (param1 <= dg.field_j) {
-            stackIn_7_0 = dg.field_j;
+          if (param1 <= SoftwareRasterizer.field_j) {
+            stackIn_7_0 = SoftwareRasterizer.field_j;
           } else {
             stackIn_7_0 = param1;
           }
           var8 = stackIn_7_0;
-          if (var5_int >= dg.field_h) {
-            stackIn_10_0 = dg.field_h;
+          if (var5_int >= SoftwareRasterizer.field_h) {
+            stackIn_10_0 = SoftwareRasterizer.field_h;
           } else {
             stackIn_10_0 = var5_int;
           }
           var9 = stackIn_10_0;
-          if (dg.field_k <= var6) {
-            stackIn_13_0 = dg.field_k;
+          if (SoftwareRasterizer.field_k <= var6) {
+            stackIn_13_0 = SoftwareRasterizer.field_k;
           } else {
             stackIn_13_0 = var6;
           }
           var10 = stackIn_13_0;
-          if (dg.field_f <= param3 &&
-            param3 < dg.field_h) {
-            var11 = dg.field_i * var8 + param3;
+          if (SoftwareRasterizer.field_f <= param3 &&
+            param3 < SoftwareRasterizer.field_h) {
+            var11 = SoftwareRasterizer.field_i * var8 + param3;
             var12 = -var8 + var10 + 1 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              dg.field_e[var11] = 16777215;
-              var11 = var11 + dg.field_i * 2;
+              SoftwareRasterizer.field_e[var11] = 16777215;
+              var11 = var11 + SoftwareRasterizer.field_i * 2;
             }
           }
-          if (param1 >= dg.field_j &&
-            dg.field_k > var6) {
-            var11Lifetime1 = dg.field_i * param1 + var7;
+          if (param1 >= SoftwareRasterizer.field_j &&
+            SoftwareRasterizer.field_k > var6) {
+            var11Lifetime1 = SoftwareRasterizer.field_i * param1 + var7;
             var12Lifetime1 = 1 + (var9 - var7) >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              dg.field_e[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.field_e[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (var5_int >= dg.field_f &&
-            var5_int < dg.field_h) {
-            var11Lifetime2 = dg.field_i * ((var5_int - param3 & 1) + var8) + var5_int;
+          if (var5_int >= SoftwareRasterizer.field_f &&
+            var5_int < SoftwareRasterizer.field_h) {
+            var11Lifetime2 = SoftwareRasterizer.field_i * ((var5_int - param3 & 1) + var8) + var5_int;
             var12Lifetime2 = -var8 + 1 + var10 >> 1;
             while (true) {
               var12Lifetime2--;
               if (0 > var12Lifetime2) {
                 break;
               }
-              dg.field_e[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + dg.field_i * 2;
+              SoftwareRasterizer.field_e[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.field_i * 2;
             }
           }
           if (param4) {
             field_k = (String) null;
           }
-          if (dg.field_j <= param1) {
-            if (var6 >= dg.field_k) {
+          if (SoftwareRasterizer.field_j <= param1) {
+            if (var6 >= SoftwareRasterizer.field_k) {
               return;
             }
-            var11Lifetime3 = var6 * dg.field_i + var7 + (-param1 + var6 & 1);
+            var11Lifetime3 = var6 * SoftwareRasterizer.field_i + var7 + (-param1 + var6 & 1);
             var12Lifetime3 = 1 + var9 - var7 >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 break;
               }
-              dg.field_e[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.field_e[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -122,7 +122,7 @@ final class uv extends k {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var5), "uv.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) var5), "uv.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -157,11 +157,11 @@ final class uv extends k {
             var4_ref_bs = (bs) (mba.field_c.b((byte) 90));
             if (var4_ref_bs != null &&
               var2_long > var4_ref_bs.field_f) {
-              var4_ref_bs.a(false);
+              var4_ref_bs.unlink(false);
               dw.field_f = var4_ref_bs.field_h.length;
-              ig.field_m.field_g = 0;
+              ig.field_m.position = 0;
               for (var5_int = 0; var5_int < dw.field_f; var5_int++) {
-                ig.field_m.field_h[var5_int] = var4_ref_bs.field_h[var5_int];
+                ig.field_m.payload[var5_int] = var4_ref_bs.field_h[var5_int];
               }
               f.field_b = ef.field_l;
               ef.field_l = bd.field_j;
@@ -172,12 +172,12 @@ final class uv extends k {
           }
           while (true) {
             if (hd.field_m < 0) {
-              ig.field_m.field_g = 0;
+              ig.field_m.position = 0;
               if (!ii.b(1, 0)) {
                 return false;
               }
-              hd.field_m = ig.field_m.k(694);
-              ig.field_m.field_g = 0;
+              hd.field_m = ig.field_m.readCipheredByte(694);
+              ig.field_m.position = 0;
               dw.field_f = param1[hd.field_m];
             }
             if (!u.d((byte) -67)) {
@@ -200,7 +200,7 @@ final class uv extends k {
             }
             var5 = new bs(var2_long + (long)var4, hd.field_m, new byte[dw.field_f]);
             for (var6 = 0; var6 < dw.field_f; var6++) {
-              var5.field_h[var6] = ig.field_m.field_h[var6];
+              var5.field_h[var6] = ig.field_m.payload[var6];
             }
             mba.field_c.a(var5, true);
             hd.field_m = -1;
@@ -215,7 +215,7 @@ final class uv extends k {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
@@ -229,7 +229,7 @@ final class uv extends k {
           oq.field_b = new mf(gja.field_m, qia.field_a, param1, gfa.field_i, sna.field_s);
           gja.field_m.a((wj) (oq.field_b), (byte) 73);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "uv.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uv.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

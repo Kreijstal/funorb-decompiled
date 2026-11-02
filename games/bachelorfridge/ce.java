@@ -16,11 +16,11 @@ final class ce extends vja {
         try {
           this.field_v = param6;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ce.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ce.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    ce(int param0, lu param1) {
+    ce(int param0, PacketBuffer param1) {
         super(param0, param1);
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -31,7 +31,7 @@ final class ce extends vja {
           if (this.field_n) {
             return;
           }
-          this.field_v = param1.b(16711935);
+          this.field_v = param1.readUnsignedByte(16711935);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,7 +43,7 @@ final class ce extends vja {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class ce extends vja {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -99,33 +99,33 @@ final class ce extends vja {
         int[] var12 = null;
         try {
           k.c(3685);
-          var12 = dg.field_e;
+          var12 = SoftwareRasterizer.field_e;
           var11 = var12;
           var10 = var11;
           var6 = var10;
-          var7 = dg.field_i;
-          var8 = dg.field_c;
-          if (sca.field_a != null &&
+          var7 = SoftwareRasterizer.field_i;
+          var8 = SoftwareRasterizer.field_c;
+          if (MouseWheelInput.field_a != null &&
             lo.field_b != null) {
             param2 = param2 - (lo.field_b.field_u - lo.field_b.field_B);
             var9 = lo.field_b.a(param3);
             var9 += 10;
-            sca.field_a.b();
+            MouseWheelInput.field_a.b();
             if ((1 & var9) == 1) {
               var9++;
             }
-            dg.d();
+            SoftwareRasterizer.clear();
             if (!param0) {
               field_x = 120;
             }
-            lo.field_b.c(param3, 5, 3 + lo.field_b.field_u, 0, -1);
-            dg.a(var12, var7, var8);
+            lo.field_b.drawText(param3, 5, 3 + lo.field_b.field_u, 0, -1);
+            SoftwareRasterizer.setTarget(var12, var7, var8);
             fk.d((byte) 69);
             if (param5) {
-              fw.a(param4, sca.field_a, var9, param1, true, ap.field_c, param2);
+              fw.a(param4, MouseWheelInput.field_a, var9, param1, true, ap.field_c, param2);
               return;
             }
-            fn.a(param1, (byte) 11, var9, param4, param2, sca.field_a);
+            fn.a(param1, (byte) 11, var9, param4, param2, MouseWheelInput.field_a);
             return;
           }
           return;
@@ -139,7 +139,7 @@ final class ce extends vja {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class ce extends vja {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class ce extends vja {
             var6 = var5.field_g;
             var7 = var5.field_f ? 1 : 0;
             var14 = param0.b(-102, var2_int, var6);
-            rs.field_g[var4] = new lr(new lu(var14));
+            rs.field_g[var4] = new lr(new PacketBuffer(var14));
             if (var7 != 0) {
             }
             stackIn_9_0 = rs.field_g[var4];
@@ -244,11 +244,11 @@ final class ce extends vja {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         RuntimeException var3 = null;
         String var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -264,7 +264,7 @@ final class ce extends vja {
           if (this.field_n) {
             return;
           }
-          param1.d(this.field_v, 0);
+          param1.writeByte(this.field_v, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -276,7 +276,7 @@ final class ce extends vja {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

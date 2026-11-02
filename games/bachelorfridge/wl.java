@@ -3,7 +3,7 @@
  */
 final class wl extends sna {
     gba field_vb;
-    static kv[][] field_yb;
+    static Sprite[][] field_yb;
     static String field_wb;
     private sna field_xb;
     private gba field_zb;
@@ -21,7 +21,7 @@ final class wl extends sna {
           this.field_Ab = param1;
           this.field_xb.a(-1, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,8 +38,8 @@ final class wl extends sna {
         this.field_xb.field_sb = this.field_sb;
         var4 = 18 % ((78 - param2) / 48);
         this.field_xb.field_p = this.field_p;
-        this.field_vb.a(false);
-        this.field_zb.a(false);
+        this.field_vb.unlink(false);
+        this.field_zb.unlink(false);
         stackIn_3_0 = (this.field_Ab.field_sb <= this.field_xb.field_sb) ? 0 : 1;
         var5 = stackIn_3_0;
         stackIn_6_0 = (this.field_Ab.field_p <= this.field_xb.field_p) ? 0 : 1;
@@ -167,10 +167,10 @@ final class wl extends sna {
     }
 
     public static void f(int param0) {
-        field_yb = (kv[][]) null;
+        field_yb = (Sprite[][]) null;
         field_wb = null;
         if (param0 != 0) {
-          field_yb = (kv[][]) null;
+          field_yb = (Sprite[][]) null;
         }
     }
 

@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aw extends ana {
-    static eh field_x;
-    static kv field_y;
-    static ee[][] field_v;
-    static kv[] field_w;
+    static PlatformTask field_x;
+    static Sprite field_y;
+    static IndexedSprite[][] field_v;
+    static Sprite[] field_w;
     private ica field_z;
 
     final static void a(boolean param0, int param1, vr param2, vr param3, vr param4) {
@@ -20,7 +20,7 @@ final class aw extends ana {
           ola.field_p = tn.field_a;
           dka.field_G = tn.field_a;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "aw.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aw.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class aw extends ana {
         var3 = this.field_q.field_h;
         var4 = this.field_z.field_l.a(92, this.field_q.field_h);
         if (param0 > -56) {
-          field_v = (ee[][]) null;
+          field_v = (IndexedSprite[][]) null;
         }
         var21 = this.field_z.a(this.field_q.field_h, 0, -99, var4);
         var6 = this.field_z.field_s;
@@ -122,10 +122,10 @@ final class aw extends ana {
     public static void e(byte param0) {
         field_x = null;
         field_y = null;
-        field_v = (ee[][]) null;
+        field_v = (IndexedSprite[][]) null;
         field_w = null;
         if (param0 != 26) {
-          field_y = (kv) null;
+          field_y = (Sprite) null;
         }
     }
 
@@ -134,7 +134,7 @@ final class aw extends ana {
         try {
           this.field_z = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "aw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

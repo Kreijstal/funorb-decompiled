@@ -54,7 +54,7 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -207,18 +207,18 @@ abstract class lq extends wj implements e {
           rq.field_f = rq.field_f - 1;
           if (0 == rq.field_f) {
             rq.field_f = 200;
-            var1 = (cq) (rma.field_d.b((byte) 90));
+            var1 = (cq) (SocketConnector.field_d.b((byte) 90));
             while (var1 != null) {
-              if (!var1.field_h.a((byte) -106)) {
-                var1.a(false);
+              if (!var1.field_h.isLinked((byte) -106)) {
+                var1.unlink(false);
               }
-              var1 = (cq) (rma.field_d.c(0));
+              var1 = (cq) (SocketConnector.field_d.c(0));
             }
             if (jha.field_i != null) {
               var1Lifetime1 = (cq) (jha.field_i.b((byte) 90));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_h.a((byte) -106)) {
-                  var1Lifetime1.a(false);
+                if (!var1Lifetime1.field_h.isLinked((byte) -106)) {
+                  var1Lifetime1.unlink(false);
                 }
                 var1Lifetime1 = (cq) (jha.field_i.c(0));
               }
@@ -237,7 +237,7 @@ abstract class lq extends wj implements e {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref), "lq.F(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "lq.F(" + param0 + ')');
         }
     }
 
@@ -282,7 +282,7 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -351,7 +351,7 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param6).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -464,7 +464,7 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -519,7 +519,7 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -546,7 +546,7 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -572,14 +572,14 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static kv a(ee param0, int param1, kv param2, int param3, int param4) {
+    final static Sprite a(IndexedSprite param0, int param1, Sprite param2, int param3, int param4) {
         int var6 = 0;
         int var8 = 0;
-        kv stackIn_16_0 = null;
+        Sprite stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -589,19 +589,19 @@ abstract class lq extends wj implements e {
         RuntimeException var5 = null;
         int var7 = 0;
         int var9 = 0;
-        kv var10 = null;
-        kv var11 = null;
+        Sprite var10 = null;
+        Sprite var11 = null;
         var9 = BachelorFridge.field_y;
         try {
-          var10 = new kv(param2.field_q, param2.field_p);
+          var10 = new Sprite(param2.field_q, param2.field_p);
           var11 = var10;
           if (param1 != 8533) {
             field_z = (String) null;
           }
           var11.b();
           param0.a(param4, param3, param2.field_q, param2.field_p);
-          dg.d(0, param3, param4, param3, 16777215);
-          dg.d(param2.field_q + param4, param3, param2.field_q, param3, 16777215);
+          SoftwareRasterizer.drawLine(0, param3, param4, param3, 16777215);
+          SoftwareRasterizer.drawLine(param2.field_q + param4, param3, param2.field_q, param3, 16777215);
           hga.field_U.a((byte) 117);
           for (var6 = 0; var6 < param2.field_q; var6++) {
             var7 = 0;
@@ -614,7 +614,7 @@ abstract class lq extends wj implements e {
               }
             }
           }
-          stackIn_16_0 = (kv) (param2);
+          stackIn_16_0 = (Sprite) (param2);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -632,7 +632,7 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -691,7 +691,7 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -734,7 +734,7 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param6).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -775,7 +775,7 @@ abstract class lq extends wj implements e {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 

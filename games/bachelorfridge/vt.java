@@ -5,8 +5,8 @@ final class vt extends tia {
     static int field_k;
     static String field_m;
     static int[] field_l;
-    private eaa field_j;
-    private kv[] field_i;
+    private IntrusiveDeque field_j;
+    private Sprite[] field_i;
 
     final static void a(sga param0, int param1, int param2, boolean param3, int param4) {
         int var27_int = 0;
@@ -33,7 +33,7 @@ final class vt extends tia {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        eaa var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         ema var12 = null;
@@ -82,15 +82,15 @@ final class vt extends tia {
           var6 = 0;
           var7 = 0;
           var8 = param2;
-          if (pw.field_w != null && (null != hr.field_b ||
+          if (pw.field_w != null && (null != DelegatingCanvas.field_b ||
             null != re.field_F ||
             null != gma.field_c ||
             null != wda.field_c)) {
             for (var9 = 0; var9 < ld.field_q; var9++) {
               var10_int = pw.field_w.field_Eb[var9] & 255;
-              if (hr.field_b != null &&
-                hr.field_b[var9] != null &&
-                hr.field_b[var9][var10_int]) {
+              if (DelegatingCanvas.field_b != null &&
+                DelegatingCanvas.field_b[var9] != null &&
+                DelegatingCanvas.field_b[var9][var10_int]) {
                 var5_int = 1;
               }
               if (re.field_F != null &&
@@ -134,10 +134,10 @@ final class vt extends tia {
           while (var12 != null) {
             var13 = 0;
             if (var12.field_z == null) {
-              var12.field_Ib = new sna(0L, gi.field_c);
+              var12.field_Ib = new sna(0L, ClientException.field_c);
               var12.a(-1, var12.field_Ib);
               var12.field_Bb = new sna(0L, wv.field_l);
-              if (eaa.field_c) {
+              if (IntrusiveDeque.field_c) {
                 var12.a(-1, var12.field_Bb);
               }
               var12.field_Bb.field_N = 2;
@@ -146,7 +146,7 @@ final class vt extends tia {
               var12.d((byte) 118);
               var12.field_Fb = new sna(0L, mh.field_k);
               var12.a(-1, var12.field_Fb);
-              var12.field_Db = new sna(0L, tca.field_c);
+              var12.field_Db = new sna(0L, JaggrabDownloader.field_c);
               var13 = 1;
               var12.a(-1, var12.field_Db);
             }
@@ -177,7 +177,7 @@ final class vt extends tia {
             if (param0 == qba.field_m) {
               var21 += 42;
             }
-            var33 = po.a(var12.field_Ib.field_jb, var32, var21);
+            var33 = BitmapFont.a(var12.field_Ib.field_jb, var32, var21);
             var20 = var33;
             stackIn_57_0 = (var33.equals(var12.field_Nb)) ? 0 : 1;
             var22 = stackIn_57_0;
@@ -253,7 +253,7 @@ final class vt extends tia {
               stackIn_95_1 = rg.field_h;
               stackIn_95_2 = param2 + 31407;
               stackIn_95_3 = var12.field_sb;
-              if (!eaa.field_c) {
+              if (!IntrusiveDeque.field_c) {
                 stackIn_96_4 = 0;
               } else {
                 stackIn_96_4 = 42;
@@ -314,7 +314,7 @@ final class vt extends tia {
               if (~ge.field_F != ~var12.field_Eb) {
                 if (var5_int != 0 &&
                   !var12.field_zb) {
-                  var24Lifetime2 = lga.a(true, new String[]{var20}, in.field_d);
+                  var24Lifetime2 = lga.a(true, new String[]{var20}, DualLinkDeque.field_d);
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
                   var24Lifetime2 = var25;
@@ -385,9 +385,9 @@ final class vt extends tia {
                 for (var27_int = 0; var27_int < ld.field_q; var27_int++) {
                   var28 = 255 & pw.field_w.field_Eb[var27_int];
                   var29 = 0;
-                  if (hr.field_b != null &&
-                    null != hr.field_b[var27_int] &&
-                    hr.field_b[var27_int][var28] &&
+                  if (DelegatingCanvas.field_b != null &&
+                    null != DelegatingCanvas.field_b[var27_int] &&
+                    DelegatingCanvas.field_b[var27_int][var28] &&
                     !var12.field_zb) {
                     var29 = 1;
                   }
@@ -470,7 +470,7 @@ final class vt extends tia {
           } else {
             stackIn_217_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_216_0), ((StringBuilder) (Object) stackIn_216_1).append(stackIn_217_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_216_0), ((StringBuilder) (Object) stackIn_216_1).append(stackIn_217_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -488,14 +488,14 @@ final class vt extends tia {
         int var4 = 0;
         try {
           var3_int = qq.field_i.length;
-          this.field_i = new kv[var3_int];
+          this.field_i = new Sprite[var3_int];
           for (var4 = 0; var4 < var3_int; var4++) {
-            this.field_i[var4] = qq.field_i[var4].a();
+            this.field_i[var4] = qq.field_i[var4].toRgbSprite();
           }
-          this.field_j = new eaa();
+          this.field_j = new IntrusiveDeque();
           this.field_g = 192;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

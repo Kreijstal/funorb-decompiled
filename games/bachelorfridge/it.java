@@ -17,7 +17,7 @@ final class it {
     int field_j;
     static int field_r;
     private int field_q;
-    static ee field_i;
+    static IndexedSprite field_i;
     static lda field_s;
     int field_p;
     static double[] field_c;
@@ -53,9 +53,9 @@ final class it {
         nk.a(qa.field_k, param1 + 16 + this.field_p, 4 + this.field_j, 48, 28);
         if (this.field_a) {
           if (this.field_b == 0) {
-            ca.field_c[this.field_e].e(16 + this.field_p + param1, -22 + this.field_j);
+            ca.field_c[this.field_e].draw(16 + this.field_p + param1, -22 + this.field_j);
           } else {
-            dc.field_y[this.field_e].e(param1 + (16 + this.field_p), -22 + this.field_j);
+            dc.field_y[this.field_e].draw(param1 + (16 + this.field_p), -22 + this.field_j);
             if (256 - (this.field_b >> 2) > 0) {
               tr.a(this.field_j - 22, dc.field_y[this.field_e], -(this.field_b >> 2) + 256, this.field_k, ua.field_d, this.field_q, -26512, param1 + this.field_p + 16);
             }
@@ -64,7 +64,7 @@ final class it {
             }
           }
         } else {
-          a.field_n[this.field_e].e(this.field_p + 16 + param1, this.field_j - 22);
+          a.field_n[this.field_e].draw(this.field_p + 16 + param1, this.field_j - 22);
         }
         if (param0) {
           this.a(true);
@@ -133,7 +133,7 @@ final class it {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "it.B(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "it.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -148,19 +148,19 @@ final class it {
         this.field_b = 1024;
     }
 
-    it(lu param0) {
+    it(PacketBuffer param0) {
         this.field_a = true;
         try {
-          this.field_e = param0.b(16711935);
-          this.field_h = param0.b(16711935);
-          this.field_m = param0.b(16711935);
+          this.field_e = param0.readUnsignedByte(16711935);
+          this.field_h = param0.readUnsignedByte(16711935);
+          this.field_m = param0.readUnsignedByte(16711935);
           this.field_d = fw.field_h[this.field_e];
           this.field_p = this.a(-19);
           this.field_j = this.c(98);
-          this.field_b = param0.e((byte) 87);
-          this.field_a = param0.b(16711935) == 1 ? true : false;
+          this.field_b = param0.readUnsignedShort((byte) 87);
+          this.field_a = param0.readUnsignedByte(16711935) == 1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "it.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "it.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -7,7 +7,7 @@ final class jk extends at {
     static String field_l;
     private int field_m;
     static String field_p;
-    static po field_o;
+    static BitmapFont field_o;
     private mh field_n;
     private ad field_q;
 
@@ -60,7 +60,7 @@ final class jk extends at {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "jk.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "jk.C(" + param0 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ final class jk extends at {
           this.field_q = param1;
           this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

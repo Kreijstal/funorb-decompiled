@@ -4,7 +4,7 @@
 final class aa extends pu {
     static String[] field_m;
     static String field_n;
-    static eaa field_l;
+    static IntrusiveDeque field_l;
     private static String field_z;
 
     public static void b(int param0) {

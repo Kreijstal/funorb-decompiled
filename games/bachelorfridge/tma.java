@@ -18,7 +18,7 @@ final class tma extends ana {
         try {
           this.field_y = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,11 +74,11 @@ final class tma extends ana {
           }
           tj.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tma.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tma.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static cj a(lu param0, byte param1) {
+    final static cj a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         cj stackIn_6_0 = null;
@@ -93,7 +93,7 @@ final class tma extends ana {
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.b(16711935);
+          var2_int = param0.readUnsignedByte(16711935);
           if (255 == var2_int) {
             return null;
           }
@@ -136,7 +136,7 @@ final class tma extends ana {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 

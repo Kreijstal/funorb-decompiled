@@ -3,12 +3,12 @@
  */
 final class kn extends pn {
     static int field_h;
-    static kv field_g;
+    static Sprite field_g;
 
-    final static ee[] a(int param0, vr param1, int param2, int param3) {
+    final static IndexedSprite[] a(int param0, vr param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        ee[] stackIn_6_0 = null;
+        IndexedSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -16,7 +16,7 @@ final class kn extends pn {
         try {
           if (!g.a(param3, param2, param0 - 23018, param1)) {
             stackIn_2_0 = null;
-            return (ee[]) (stackIn_2_0);
+            return (IndexedSprite[]) (stackIn_2_0);
           }
           if (param0 != -7726) {
             kn.a(-95);
@@ -33,7 +33,7 @@ final class kn extends pn {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -95,16 +95,16 @@ final class kn extends pn {
             var4Lifetime1++;
           }
           var10 = param0.a(0, (byte) 107, 0);
-          this.field_a[0].e(-128 + var10.field_c, -128 + var10.field_a);
+          this.field_a[0].draw(-128 + var10.field_c, -128 + var10.field_a);
           var3Lifetime2 = param0.a(0, (byte) 77, param0.field_a);
           if (param1 != -13319) {
             kn.b(-107);
           }
-          this.field_a[3].e(var3Lifetime2.field_c - 64, 32 + var3Lifetime2.field_a - 128);
+          this.field_a[3].draw(var3Lifetime2.field_c - 64, 32 + var3Lifetime2.field_a - 128);
           var11 = param0.a(param0.field_z, (byte) 118, param0.field_a);
-          this.field_a[2].e(-128 + var11.field_c, var11.field_a - 64);
+          this.field_a[2].draw(-128 + var11.field_c, var11.field_a - 64);
           var12 = param0.a(param0.field_z, (byte) 43, 0);
-          this.field_a[1].e(-128 + (var12.field_c - 64), 32 + (var12.field_a - 128));
+          this.field_a[1].draw(-128 + (var12.field_c - 64), 32 + (var12.field_a - 128));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,24 +116,24 @@ final class kn extends pn {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private final void b(byte param0) {
-        this.field_a = new kv[4];
+        this.field_a = new Sprite[4];
         if (param0 != -5) {
           return;
         }
-        kv var6 = new kv(384, 192);
-        kv var2 = var6;
+        Sprite var6 = new Sprite(384, 192);
+        Sprite var2 = var6;
         var6.b();
         this.field_b[0].a(128, 0);
         this.field_b[8].a(64, 32);
         this.field_b[1].a(192, 32);
         this.field_b[16].a(128, 64);
         this.field_a[0] = var6;
-        kv var3 = new kv(384, 192);
+        Sprite var3 = new Sprite(384, 192);
         var3.b();
         this.field_b[13].a(128, 0);
         this.field_b[14].a(64, 32);
@@ -142,7 +142,7 @@ final class kn extends pn {
         this.field_b[41].a(192, 96);
         this.field_b[56].a(128, 128);
         this.field_a[1] = var3;
-        kv var4 = new kv(384, 192);
+        Sprite var4 = new Sprite(384, 192);
         var4.b();
         this.field_b[6].a(128, 0);
         this.field_b[21].a(64, 32);
@@ -151,7 +151,7 @@ final class kn extends pn {
         this.field_b[33].a(64, 96);
         this.field_b[48].a(128, 128);
         this.field_a[3] = var4;
-        kv var5 = new kv(384, 192);
+        Sprite var5 = new Sprite(384, 192);
         var5.b();
         this.field_b[38].a(128, 64);
         this.field_b[44].a(64, 32);
@@ -176,7 +176,7 @@ final class kn extends pn {
           this.field_b = bla.a(29611, "basic", "tiles_curry", param0);
           this.b((byte) -5);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

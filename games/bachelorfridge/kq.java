@@ -9,12 +9,12 @@ final class kq extends pp {
     kq() {
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           int var3_int = 91 % ((34 - param1) / 58);
           super.a(param0, (byte) 126);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -31,11 +31,11 @@ final class kq extends pp {
         try {
           param1.field_l = false;
           if (param2 != 12) {
-            lu var5 = (lu) null;
-            this.a((lu) null, (byte) 108);
+            PacketBuffer var5 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, (byte) 108);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kq.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kq.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

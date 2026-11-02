@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class of extends td {
-    final static kv a(kv param0, int[] param1, boolean param2, int param3, int param4, int param5) {
+    final static Sprite a(Sprite param0, int[] param1, boolean param2, int param3, int param4, int param5) {
         int var14 = 0;
         int var18 = 0;
         int var19 = 0;
-        kv stackIn_34_0 = null;
+        Sprite stackIn_34_0 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_38_2 = null;
@@ -25,7 +25,7 @@ final class of extends td {
         int var17 = 0;
         int var20 = 0;
         int var21 = 0;
-        kv var22 = null;
+        Sprite var22 = null;
         int[] var24 = null;
         int[] var26 = null;
         int[] var28 = null;
@@ -33,7 +33,7 @@ final class of extends td {
         int var13Lifetime1;
         var20 = BachelorFridge.field_y;
         try {
-          var22 = new kv(param0.field_q + (param5 + param5), param5 + param0.field_p + param5);
+          var22 = new Sprite(param0.field_q + (param5 + param5), param5 + param0.field_p + param5);
           var22.field_t = -param5 + param0.field_t;
           var22.field_o = param5 + param0.field_o + param5;
           var22.field_u = param0.field_u - param5;
@@ -104,7 +104,7 @@ final class of extends td {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class of extends td {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class of extends td {
         bp.d(18);
         if (param0 < 79) {
           int[] var2 = (int[]) null;
-          of.a((kv) null, (int[]) null, false, -80, -115, 44);
+          of.a((Sprite) null, (int[]) null, false, -80, -115, 44);
         }
     }
 

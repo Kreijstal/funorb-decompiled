@@ -9,7 +9,7 @@ final class sea implements qda {
     private int field_m;
     private int field_b;
     private int field_n;
-    private po field_c;
+    private BitmapFont field_c;
     private int field_h;
     private int field_e;
     private int field_f;
@@ -43,21 +43,21 @@ final class sea implements qda {
           if (param4) {
             var7 = 16777215;
           }
-          dg.c(param1.field_s + param0, param1.field_v + param3, param1.field_p, param1.field_q, this.field_e);
+          SoftwareRasterizer.fillRectangle(param1.field_s + param0, param1.field_v + param3, param1.field_p, param1.field_q, this.field_e);
           var8 = param1.field_s + param0 + this.field_h;
           var9 = this.field_a + param1.field_v + param3;
-          dg.e(var8, var9, this.field_f, this.field_m, 5592405);
-          dg.c(var8, var9, this.field_f, this.field_m, var7);
+          SoftwareRasterizer.e(var8, var9, this.field_f, this.field_m, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_f, this.field_m, var7);
           if (param2 != 32679) {
             sea.a((byte) 118);
           }
           if (var11.field_B) {
-            dg.d(var8, var9, var8 + this.field_f, var9 + this.field_m, 1);
-            dg.d(this.field_f + var8, var9, var8, this.field_m + var9, 1);
+            SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_f, var9 + this.field_m, 1);
+            SoftwareRasterizer.drawLine(this.field_f + var8, var9, var8, this.field_m + var9, 1);
           }
           if (this.field_c != null) {
             var10 = this.field_n + (this.field_h + this.field_f);
-            this.field_c.a(param1.field_w, var10 + param1.field_s + param0, param1.field_v + (param3 + this.field_b), -this.field_n + (-var10 + param1.field_p), param1.field_q - (this.field_n << 1), this.field_l, this.field_d, this.field_i, this.field_g, 0);
+            this.field_c.drawParagraph(param1.field_w, var10 + param1.field_s + param0, param1.field_v + (param3 + this.field_b), -this.field_n + (-var10 + param1.field_p), param1.field_q - (this.field_n << 1), this.field_l, this.field_d, this.field_i, this.field_g, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -70,7 +70,7 @@ final class sea implements qda {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class sea implements qda {
         field_k = null;
     }
 
-    sea(po param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    sea(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_i = 1;
         this.field_g = 1;
         try {
@@ -96,7 +96,7 @@ final class sea implements qda {
           this.field_m = param7;
           this.field_e = param9;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

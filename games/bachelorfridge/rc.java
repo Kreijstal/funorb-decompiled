@@ -3,7 +3,7 @@
  */
 final class rc extends k {
     static String field_k;
-    static kv field_l;
+    static Sprite field_l;
 
     final int[] a(int param0, int param1) {
         int var5 = 0;
@@ -38,12 +38,12 @@ final class rc extends k {
         super(1, false);
     }
 
-    final static sba a(vr param0, byte param1, vr param2, String param3, String param4) {
+    final static AntialiasedBitmapFont a(vr param0, byte param1, vr param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        sba stackIn_2_0 = null;
-        sba stackIn_4_0 = null;
+        AntialiasedBitmapFont stackIn_2_0 = null;
+        AntialiasedBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -56,12 +56,12 @@ final class rc extends k {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 113) {
-            stackIn_2_0 = (sba) null;
+            stackIn_2_0 = (AntialiasedBitmapFont) null;
             return stackIn_2_0;
           }
           var5_int = param2.a(param4, false);
           var6 = param2.a((byte) 6, var5_int, param3);
-          stackIn_4_0 = ev.a(128, var6, param2, param0, var5_int);
+          stackIn_4_0 = DualLinkDequeIterator.a(128, var6, param2, param0, var5_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,20 +91,20 @@ final class rc extends k {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         if (param0 != -71) {
           return;
         }
         try {
           if (param2 == 0) {
-            this.field_f = param1.b(16711935) == 1 ? true : false;
+            this.field_f = param1.readUnsignedByte(16711935) == 1 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class rc extends k {
           }
           return var13;
         }
-        field_l = (kv) null;
+        field_l = (Sprite) null;
         var20Lifetime1 = this.field_h.a(param1, -858);
         var15Lifetime1 = var20Lifetime1;
         var13Lifetime1 = var15Lifetime1;

@@ -5,9 +5,9 @@ final class eda extends kj {
     private lna field_h;
     private int field_f;
     static boolean field_j;
-    static kia field_i;
+    static MusicTrack field_i;
     static sna field_k;
-    private ee field_g;
+    private IndexedSprite field_g;
 
     final boolean b(int param0) {
         int fieldTemp$0 = 0;
@@ -36,20 +36,20 @@ final class eda extends kj {
         }
     }
 
-    eda(gj param0, int param1, int param2, lna param3, ee param4) {
+    eda(gj param0, int param1, int param2, lna param3, IndexedSprite param4) {
         super(param0, param1, param2);
         try {
           this.field_g = param4;
           this.field_h = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "eda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "eda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, int param2) {
         this.field_h.e(66);
-        kv var4 = lq.a(this.field_g, 8533, bd.field_i, (bd.field_i.field_p >> 1) - (this.field_f + 60), param1);
-        var4.c(param2 + 16, -64 + (param0 - (40 - (this.field_f >> 1))), var4.field_q >> 1, var4.field_p >> 1);
+        Sprite var4 = lq.a(this.field_g, 8533, bd.field_i, (bd.field_i.field_p >> 1) - (this.field_f + 60), param1);
+        var4.drawScaled(param2 + 16, -64 + (param0 - (40 - (this.field_f >> 1))), var4.field_q >> 1, var4.field_p >> 1);
         this.field_g.a(param2, param0);
     }
 

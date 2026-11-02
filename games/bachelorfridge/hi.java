@@ -45,7 +45,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref), "hi.A(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "hi.A(" + param0 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class hi {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

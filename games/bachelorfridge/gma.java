@@ -23,7 +23,7 @@ final class gma {
 
     final static void a(boolean param0) {
         eha.c(false);
-        uka.field_j = param0 ? true : false;
+        ImageProducerRasterBuffer.field_j = param0 ? true : false;
         gfa.field_i = true;
         gja.field_m.f((byte) -66);
         uv.a(false, hla.field_r, false);
@@ -36,21 +36,21 @@ final class gma {
           if (null != vg.field_n) {
             try {
               vg.field_n.a(0L, (byte) -108);
-              vg.field_n.a(-96, ig.field_m.field_g, ig.field_m.field_h, 24);
+              vg.field_n.a(-96, ig.field_m.position, ig.field_m.payload, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
               if (param0 <= 44) {
                 return;
               }
-              ig.field_m.field_g = ig.field_m.field_g + 24;
+              ig.field_m.position = ig.field_m.position + 24;
               return;
             }
           }
           if (param0 <= 44) {
             return;
           }
-          ig.field_m.field_g = ig.field_m.field_g + 24;
+          ig.field_m.position = ig.field_m.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -91,7 +91,7 @@ final class gma {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

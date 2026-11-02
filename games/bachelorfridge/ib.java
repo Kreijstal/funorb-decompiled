@@ -3,7 +3,7 @@
  */
 final class ib {
     aga[] field_b;
-    static be[] field_d;
+    static PcmSample[] field_d;
     int field_a;
     boolean field_c;
 
@@ -42,7 +42,7 @@ final class ib {
           var1_int = 0;
           var2 = 0;
           if (!param0) {
-            field_d = (be[]) null;
+            field_d = (PcmSample[]) null;
           }
           while (kaa.b(127)) {
             dp.field_o.b(true);
@@ -86,14 +86,14 @@ final class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "ib.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "ib.C(" + param0 + ')');
         }
     }
 
     public static void a(int param0) {
         field_d = null;
         if (param0 > -71) {
-          field_d = (be[]) null;
+          field_d = (PcmSample[]) null;
         }
     }
 
@@ -149,7 +149,7 @@ final class ib {
           this.field_b[this.field_a] = param1;
           this.field_a = this.field_a + 1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ib.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ib.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -158,6 +158,6 @@ final class ib {
     }
 
     static {
-        field_d = new be[38];
+        field_d = new PcmSample[38];
     }
 }

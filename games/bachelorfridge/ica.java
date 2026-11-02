@@ -4,7 +4,7 @@
 final class ica extends bca {
     static int[][] field_r;
     int field_s;
-    static kv field_t;
+    static Sprite field_t;
     int field_q;
 
     final at a(int param0, gj param1) {
@@ -32,7 +32,7 @@ final class ica extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -41,7 +41,7 @@ final class ica extends bca {
           int var3_int = -26 % ((param1 - 12) / 35);
           this.a(param0, (byte) -2);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ica.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ica.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -53,17 +53,17 @@ final class ica extends bca {
         field_t = null;
         field_r = (int[][]) null;
         if (param0 > -98) {
-          field_t = (kv) null;
+          field_t = (Sprite) null;
         }
     }
 
-    ica(lu param0) {
+    ica(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 117);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 117);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -71,10 +71,10 @@ final class ica extends bca {
             }
             this.field_o.a(dca.a((byte) 102, param0), true);
           }
-          this.field_s = param0.b(16711935);
-          this.field_q = param0.b(16711935);
+          this.field_s = param0.readUnsignedByte(16711935);
+          this.field_q = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ica.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ica.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -144,21 +144,21 @@ final class ica extends bca {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           super.a((byte) -106, param1);
           if (param0 > -12) {
             gj var4 = (gj) null;
             this.a(106, (gj) null);
           }
-          param1.d(this.field_s, 0);
-          param1.d(this.field_q, 0);
+          param1.writeByte(this.field_s, 0);
+          param1.writeByte(this.field_q, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ica.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ica.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -30,7 +30,7 @@ final class dda extends kj {
         try {
           this.field_i = 150;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -104,18 +104,18 @@ final class dda extends kj {
     }
 
     final void a(int param0, int param1, int param2) {
-        dg.a(dga.field_b);
+        SoftwareRasterizer.saveClip(dga.field_b);
         int var4 = this.field_i * 36 / 150;
         if (param1 == 0) {
-          dg.a(param2, var4 + param0, 128 + param2, -var4 + (param0 + 64));
+          SoftwareRasterizer.setClip(param2, var4 + param0, 128 + param2, -var4 + (param0 + 64));
           this.field_e.field_s.field_k.field_b[109].a(param2, param0);
-          dg.b(dga.field_b);
+          SoftwareRasterizer.restoreClip(dga.field_b);
           return;
         }
         field_f = true;
-        dg.a(param2, var4 + param0, 128 + param2, -var4 + (param0 + 64));
+        SoftwareRasterizer.setClip(param2, var4 + param0, 128 + param2, -var4 + (param0 + 64));
         this.field_e.field_s.field_k.field_b[109].a(param2, param0);
-        dg.b(dga.field_b);
+        SoftwareRasterizer.restoreClip(dga.field_b);
     }
 
     static {

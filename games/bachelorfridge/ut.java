@@ -8,9 +8,9 @@ final class ut extends tia {
     static int field_o;
     private dha field_i;
     private gw field_j;
-    static kv[] field_r;
+    static Sprite[] field_r;
     static sna field_q;
-    private eaa field_n;
+    private IntrusiveDeque field_n;
     static int field_l;
     static n field_m;
     private int field_p;
@@ -38,7 +38,7 @@ final class ut extends tia {
         try {
           this.field_k = param2;
           this.field_p = 1 + param3;
-          this.field_n = new eaa();
+          this.field_n = new IntrusiveDeque();
           var5_int = 128 * this.field_p >> 1;
           var6 = this.field_p * 64 >> 1;
           var7 = 20 * this.field_p;
@@ -77,7 +77,7 @@ final class ut extends tia {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -93,12 +93,12 @@ final class ut extends tia {
     final void a(int param0, int param1, int param2) {
         qq.a(this.field_n, param2, param0, param1 ^ -28638);
         if (param1 != 25415) {
-          po var5 = (po) null;
-          ut.a((String[]) null, 124, (String) null, (po) null, 98);
+          BitmapFont var5 = (BitmapFont) null;
+          ut.a((String[]) null, 124, (String) null, (BitmapFont) null, 98);
         }
     }
 
-    final static int a(String[] args, int param1, String param2, po param3, int param4) {
+    final static int a(String[] args, int param1, String param2, BitmapFont param3, int param4) {
         int var10 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -189,7 +189,7 @@ final class ut extends tia {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class ut extends tia {
         RuntimeException var1 = null;
         var2 = BachelorFridge.field_y;
         try {
-          eu.field_b = new js(8);
+          eu.field_b = new IntrusiveNodeHashTable(8);
           for (var1_int = 0; ra.field_k.length > var1_int; var1_int++) {
             eu.field_b.a((long)ra.field_k[var1_int].toLowerCase().hashCode(), (byte) -81, new ji(var1_int));
           }
@@ -247,7 +247,7 @@ final class ut extends tia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "ut.E(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "ut.E(" + param0 + ')');
         }
     }
 

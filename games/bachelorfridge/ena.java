@@ -3,7 +3,7 @@
  */
 final class ena extends pu {
     static byte[][] field_p;
-    static ee field_l;
+    static IndexedSprite field_l;
     static tn field_m;
     static String[] field_o;
     static int field_n;
@@ -35,20 +35,20 @@ final class ena extends pu {
         dc.field_y = pi.a(param1, param0 ^ 8871, "basic", "food_icons");
         ca.field_c = pi.a(param1, -8845, "basic", "food_icons_mouldy");
         a.field_n = pi.a(param1, -8845, "basic", "food_icons_eaten");
-        gr.field_a = new kv[dc.field_y.length];
+        gr.field_a = new Sprite[dc.field_y.length];
         for (var2_int = 0; var2_int < gr.field_a.length; var2_int++) {
-          gr.field_a[var2_int] = new kv(39, 39);
+          gr.field_a[var2_int] = new Sprite(39, 39);
           gr.field_a[var2_int].b();
-          dg.c(0, 0, 39, 39, 16700762);
-          nk.a((pa) (dc.field_y[var2_int])).b(0, 0, 39, 39);
+          SoftwareRasterizer.fillRectangle(0, 0, 39, 39, 16700762);
+          nk.a((ArgbSprite) (dc.field_y[var2_int])).b(0, 0, 39, 39);
         }
         hga.field_U.a((byte) -10);
-        kka.field_i = new kv[dc.field_y.length];
+        kka.field_i = new Sprite[dc.field_y.length];
         for (var2_intLifetime1 = 0; kka.field_i.length > var2_intLifetime1; var2_intLifetime1++) {
-          kka.field_i[var2_intLifetime1] = new kv(39, 39);
+          kka.field_i[var2_intLifetime1] = new Sprite(39, 39);
           kka.field_i[var2_intLifetime1].b();
-          dg.c(0, 0, 39, 39, 12688481);
-          nk.a((pa) (dc.field_y[var2_intLifetime1])).b(0, 0, 39, 39);
+          SoftwareRasterizer.fillRectangle(0, 0, 39, 39, 12688481);
+          nk.a((ArgbSprite) (dc.field_y[var2_intLifetime1])).b(0, 0, 39, 39);
         }
         hga.field_U.a((byte) 114);
         hk.a("basic_frame", param1, param0 + 152, "basic");
@@ -65,14 +65,14 @@ final class ena extends pu {
         fk.field_s = wfa.a("stamina", param1, "basic", (byte) 91);
         vaa.field_b = wfa.a("speed", param1, "basic", (byte) -30);
         dt.field_a = wfa.a("fisticuffs", param1, "basic", (byte) 74);
-        in.field_b = wfa.a("flingstuff", param1, "basic", (byte) 84);
+        DualLinkDeque.field_b = wfa.a("flingstuff", param1, "basic", (byte) 84);
         nw.field_p = gw.a("basic", "category_icons", param1, -102);
         mq.field_b = gw.a("basic", "category_icons_small", param1, -121);
         hh.field_b = pi.a(param1, -8845, "basic", "move_icons");
         nia.field_l = pi.a(param1, -8845, "basic", "icon_frames");
-        hp.field_b = new kv[nia.field_l.length];
+        hp.field_b = new Sprite[nia.field_l.length];
         for (var2_intLifetime2 = 0; var2_intLifetime2 < nia.field_l.length; var2_intLifetime2++) {
-          hp.field_b[var2_intLifetime2] = new kv(nia.field_l[var2_intLifetime2].field_q, nia.field_l[var2_intLifetime2].field_p);
+          hp.field_b[var2_intLifetime2] = new Sprite(nia.field_l[var2_intLifetime2].field_q, nia.field_l[var2_intLifetime2].field_p);
           hp.field_b[var2_intLifetime2].b();
           cja.a(5587456, nia.field_l[var2_intLifetime2], (byte) -116, 0, 0);
           hga.field_U.a((byte) -41);
@@ -134,7 +134,7 @@ final class ena extends pu {
           var2 = null;
           gg.field_a = wfa.a("padlock_freezer", param1, "basic", (byte) -58);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ena.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ena.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

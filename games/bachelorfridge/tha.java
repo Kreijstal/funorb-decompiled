@@ -5,7 +5,7 @@ final class tha extends td {
     static int field_p;
     static int field_q;
 
-    final static void a(lda param0, po param1, int param2, lda param3, int param4, int param5, int param6, int param7, boolean param8, int param9, int param10, po param11, lda param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(lda param0, BitmapFont param1, int param2, lda param3, int param4, int param5, int param6, int param7, boolean param8, int param9, int param10, BitmapFont param11, lda param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -64,7 +64,7 @@ final class tha extends td {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ final class tha extends td {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class tha extends td {
 
     final static String a(int param0, String param1, String param2, int param3) {
         RuntimeException var4 = null;
-        pf var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         nea var7 = null;
         CharSequence var8 = null;
@@ -135,16 +135,16 @@ final class tha extends td {
             stackIn_10_0 = lga.a(true, new String[]{param2}, vc.field_e);
             return stackIn_10_0;
           }
-          var7.a(false);
-          var7.b(0);
+          var7.unlink(false);
+          var7.unlinkSecondary(0);
           bda.field_l = bda.field_l - 1;
           var5 = sja.field_fb;
-          var5.c(param3, (byte) 99);
-          var5.field_g = var5.field_g + 1;
-          var6 = var5.field_g;
-          var5.d(3, 0);
-          var5.a((byte) -50, param1);
-          var5.b((byte) 104, -var6 + var5.field_g);
+          var5.writeCipheredByte(param3, (byte) 99);
+          var5.position = var5.position + 1;
+          var6 = var5.position;
+          var5.writeByte(3, 0);
+          var5.writeString((byte) -50, param1);
+          var5.writeLengthByte((byte) 104, -var6 + var5.position);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -163,7 +163,7 @@ final class tha extends td {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nma extends ana {
-    static kv field_v;
+    static Sprite field_v;
     private vha field_w;
 
     private final void c(boolean param0) {
@@ -13,7 +13,7 @@ final class nma extends ana {
 
     final static boolean e(int param0) {
         if (param0 != -8774) {
-          field_v = (kv) null;
+          field_v = (Sprite) null;
           return paa.a(15000);
         }
         return paa.a(15000);
@@ -25,13 +25,13 @@ final class nma extends ana {
             nma.d(126);
           }
           qq.a(uaa.field_i, gfa.field_f, qf.field_y, rea.field_g, hl.field_H, ina.field_n, qs.field_m, oe.field_c, dla.field_k, -30803, nu.field_c, param2);
-          gi.field_b = gw.a("lobby", "chatfilter", param3, -112);
+          ClientException.field_b = gw.a("lobby", "chatfilter", param3, -112);
           qo.field_a[0] = wj.field_x;
           qo.field_a[2] = cn.field_i;
           qo.field_a[1] = de.field_K;
           gaa.a(ds.field_l, param0, -95);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nma.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nma.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class nma extends ana {
         Boolean var1 = null;
         Boolean var1Lifetime1;
         if (!param0) {
-          field_v = (kv) null;
+          field_v = (Sprite) null;
           var1 = vg.field_l;
           vg.field_l = null;
           return var1;
@@ -99,7 +99,7 @@ final class nma extends ana {
         try {
           this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

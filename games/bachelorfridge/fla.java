@@ -3,7 +3,7 @@
  */
 final class fla extends td {
     static String field_p;
-    static kv field_s;
+    static Sprite field_s;
     static boolean field_q;
     static float field_r;
     static String[] field_t;
@@ -74,7 +74,7 @@ final class fla extends td {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 

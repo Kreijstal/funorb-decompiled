@@ -19,19 +19,19 @@ final class cn extends pp {
           param1.field_a[this.field_l][this.field_m].field_l = var4;
           var4.f(32);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "cn.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "cn.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) 100);
           er.a(this.field_h, 109, param0);
-          param0.d(this.field_l, 0);
+          param0.writeByte(this.field_l, 0);
           int var3_int = -63 % ((param1 - 34) / 58);
-          param0.d(this.field_m, 0);
+          param0.writeByte(this.field_m, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "cn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "cn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class cn extends pp {
         return !sea.field_j ? true : false;
     }
 
-    final static void a(byte param0, int param1, kv param2, int[] param3, int param4, int param5, kv param6) {
+    final static void a(byte param0, int param1, Sprite param2, int[] param3, int param4, int param5, Sprite param6) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
@@ -148,7 +148,7 @@ final class cn extends pp {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class cn extends pp {
           this.field_h = param0;
           this.field_m = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "cn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "cn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

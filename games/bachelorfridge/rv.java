@@ -3,8 +3,8 @@
  */
 final class rv extends cj {
     static uha field_n;
-    eaa field_m;
-    static kv[] field_k;
+    IntrusiveDeque field_m;
+    static Sprite[] field_k;
     static sna field_l;
 
     final at a(int param0, gj param1) {
@@ -32,7 +32,7 @@ final class rv extends cj {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -40,7 +40,7 @@ final class rv extends cj {
         try {
           this.field_m.a(param1, param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rv.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rv.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class rv extends cj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class rv extends cj {
         field_n = null;
     }
 
-    rv(lu param0) {
+    rv(PacketBuffer param0) {
         super(5);
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -121,14 +121,14 @@ final class rv extends cj {
         RuntimeException var2 = null;
         int var3 = 0;
         try {
-          this.field_m = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_m = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
               return;
             }
-            var3 = param0.b(16711935);
+            var3 = param0.readUnsignedByte(16711935);
             if (var3 == 1) {
               this.field_m.a(vo.a(-44, param0), true);
               continue;
@@ -168,11 +168,11 @@ final class rv extends cj {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
-    final void a(lu param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         pp var3 = null;
         int var4 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -182,7 +182,7 @@ final class rv extends cj {
         RuntimeException var3_ref = null;
         var4 = BachelorFridge.field_y;
         try {
-          param0.d(this.field_m.g(0), 0);
+          param0.writeByte(this.field_m.g(0), 0);
           if (param1 != -9) {
             return;
           }
@@ -191,30 +191,30 @@ final class rv extends cj {
             if (!(var3 instanceof lia)) {
               if (!(var3 instanceof qq)) {
                 if (var3 instanceof ks) {
-                  param0.d(3, 0);
+                  param0.writeByte(3, 0);
                 } else {
                   if (!(var3 instanceof mh)) {
                     if (var3 instanceof kt) {
-                      param0.d(5, 0);
+                      param0.writeByte(5, 0);
                     } else {
                       if (var3 instanceof fda) {
-                        param0.d(6, param1 ^ -9);
+                        param0.writeByte(6, param1 ^ -9);
                       } else {
                         if (!(var3 instanceof ic)) {
                           throw new RuntimeException();
                         }
-                        param0.d(7, 0);
+                        param0.writeByte(7, 0);
                       }
                     }
                   } else {
-                    param0.d(4, 0);
+                    param0.writeByte(4, 0);
                   }
                 }
               } else {
-                param0.d(2, param1 ^ -9);
+                param0.writeByte(2, param1 ^ -9);
               }
             } else {
-              param0.d(1, 0);
+              param0.writeByte(1, 0);
             }
             var3.a(param0, (byte) -56);
             var3 = (pp) (this.field_m.c(param1 ^ -9));
@@ -230,13 +230,13 @@ final class rv extends cj {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public rv() {
         super(5);
-        this.field_m = new eaa();
+        this.field_m = new IntrusiveDeque();
     }
 
     static {

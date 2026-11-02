@@ -2,24 +2,24 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class DualLinkNode extends IntrusiveNode {
-    static kv[] field_k;
-    static js field_f;
-    DualLinkNode field_m;
+    static Sprite[] field_k;
+    static IntrusiveNodeHashTable field_f;
+    DualLinkNode secondaryNext;
     static String field_j;
     static int field_l;
     static String field_g;
-    long field_h;
-    DualLinkNode field_i;
+    long secondaryKey;
+    DualLinkNode secondaryPrevious;
 
-    final void b(int param0) {
-        if (null == this.field_i) {
+    final void unlinkSecondary(int param0) {
+        if (null == this.secondaryPrevious) {
           return;
         }
-        this.field_i.field_m = this.field_m;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
         if (param0 == 0) {
-          this.field_m.field_i = this.field_i;
-          this.field_i = null;
-          this.field_m = null;
+          this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+          this.secondaryPrevious = null;
+          this.secondaryNext = null;
           return;
         }
     }
@@ -38,24 +38,24 @@ class DualLinkNode extends IntrusiveNode {
         if (param0 >= -97) {
           return 6L;
         }
-        return this.field_h;
+        return this.secondaryKey;
     }
 
-    final boolean a(int param0) {
+    final boolean isSecondaryLinked(int param0) {
         if (param0 != 0) {
-          this.b(115);
-          if (this.field_i != null) {
+          this.unlinkSecondary(115);
+          if (this.secondaryPrevious != null) {
             return true;
           }
           return false;
         }
-        if (this.field_i != null) {
+        if (this.secondaryPrevious != null) {
           return true;
         }
         return false;
     }
 
-    final static pp a(lu param0, int param1) {
+    final static pp a(PacketBuffer param0, int param1) {
         nq var2 = null;
         RuntimeException var2_ref = null;
         fda stackIn_3_0 = null;
@@ -80,7 +80,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -96,29 +96,29 @@ class DualLinkNode extends IntrusiveNode {
           cca.field_v.d(59);
           var1 = wja.field_m.b((byte) -73);
           while (var1 != null) {
-            var1.b(0);
+            var1.unlinkSecondary(0);
             var1 = wja.field_m.a(-25177);
           }
           int var2 = -42 / ((param0 - 35) / 54);
           var1Lifetime1 = fq.field_s.b((byte) -73);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.b(0);
+            var1Lifetime1.unlinkSecondary(0);
             var1Lifetime1 = fq.field_s.a(-25177);
           }
           um.field_c = 0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "eo.I(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "eo.I(" + param0 + ')');
         }
     }
 
-    final void a(boolean param0, long param1) {
-        if (null != this.field_i) {
+    final void setSecondaryKey(boolean param0, long param1) {
+        if (null != this.secondaryPrevious) {
           throw new RuntimeException();
         }
         if (!param0) {
           return;
         }
-        this.field_h = param1;
+        this.secondaryKey = param1;
     }
 
     protected DualLinkNode() {

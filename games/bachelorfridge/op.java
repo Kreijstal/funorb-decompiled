@@ -6,19 +6,19 @@ import java.util.*;
 final class op {
     int field_J;
     static String field_q;
-    static kv[] field_I;
+    static Sprite[] field_I;
     int field_G;
     int field_m;
-    static kv field_u;
+    static Sprite field_u;
     Random field_w;
     int field_Q;
     boolean field_R;
     int field_s;
     int field_F;
-    private eaa field_P;
+    private IntrusiveDeque field_P;
     int field_E;
     int field_A;
-    private eaa[] field_t;
+    private IntrusiveDeque[] field_t;
     wia[][] field_a;
     int field_e;
     int field_f;
@@ -35,7 +35,7 @@ final class op {
     private int[] field_g;
     lr field_L;
     boolean field_N;
-    eaa field_U;
+    IntrusiveDeque field_U;
     int field_B;
     int field_k;
     int[] field_C;
@@ -100,7 +100,7 @@ final class op {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -184,7 +184,7 @@ final class op {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -270,18 +270,18 @@ final class op {
 
     }
 
-    final void b(lu param0, byte param1) {
+    final void b(PacketBuffer param0, byte param1) {
         try {
           param0.b(this.field_A, -126);
-          param0.d(this.field_N ? 1 : 0, 0);
+          param0.writeByte(this.field_N ? 1 : 0, 0);
           int var3_int = -55 / ((param1 - 85) / 37);
-          param0.d(this.field_M, 0);
-          param0.d(this.field_Q, 0);
+          param0.writeByte(this.field_M, 0);
+          param0.writeByte(this.field_Q, 0);
           this.c(param0, (byte) 92);
           this.d(param0, (byte) -115);
           this.a(param0, (byte) 113);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "op.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "op.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -314,21 +314,21 @@ final class op {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, lu param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         aga var5 = null;
         ib dupTemp$0 = null;
         int var6 = BachelorFridge.field_y;
         try {
-          this.field_A = param1.e((byte) 91);
-          this.field_N = ~param1.b(16711935) != param0 ? false : true;
+          this.field_A = param1.readUnsignedShort((byte) 91);
+          this.field_N = ~param1.readUnsignedByte(16711935) != param0 ? false : true;
           this.field_M = param1.b(true);
-          this.field_Q = param1.b(16711935);
+          this.field_Q = param1.readUnsignedByte(16711935);
           this.b(-1, param1);
           this.b(param1, 68);
           this.field_S = new ib[this.field_d];
@@ -346,7 +346,7 @@ final class op {
           this.j(-1);
           this.g(127);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "op.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "op.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -369,7 +369,7 @@ final class op {
         int var2Lifetime2;
         var6 = BachelorFridge.field_y;
         for (var2 = 0; var2 < 7; var2++) {
-          this.field_t[var2] = new eaa();
+          this.field_t[var2] = new IntrusiveDeque();
         }
         this.field_n = new nq[7 * this.field_d];
         for (var2Lifetime1 = 0; var2Lifetime1 < this.field_d; var2Lifetime1++) {
@@ -434,7 +434,7 @@ final class op {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -509,7 +509,7 @@ final class op {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -562,7 +562,7 @@ final class op {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -603,7 +603,7 @@ final class op {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -657,7 +657,7 @@ final class op {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -698,14 +698,14 @@ final class op {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void i(int param0) {
         int var3 = 0;
         int var2;
-        eaa var4;
+        IntrusiveDeque var4;
         int var9;
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
@@ -756,7 +756,7 @@ final class op {
         int var3Lifetime1;
         var4 = BachelorFridge.field_y;
         if (param0 != 23189) {
-          this.field_P = (eaa) null;
+          this.field_P = (IntrusiveDeque) null;
         }
         for (var2 = 0; var2 < this.field_a.length; var2++) {
           for (var3 = 0; this.field_a[0].length > var3; var3++) {
@@ -810,7 +810,7 @@ final class op {
         var13 = BachelorFridge.field_y;
         var14 = new rv();
         if (param2 != -1) {
-          this.field_t = (eaa[]) null;
+          this.field_t = (IntrusiveDeque[]) null;
         }
         for (var7 = 0; this.field_d > var7; var7++) {
           if (!this.field_S[var7].field_c) {
@@ -882,7 +882,7 @@ final class op {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -947,7 +947,7 @@ final class op {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -959,7 +959,7 @@ final class op {
         }
     }
 
-    private final void b(lu param0, int param1) {
+    private final void b(PacketBuffer param0, int param1) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -973,7 +973,7 @@ final class op {
         try {
           var4 = 71 / ((-28 - param1) / 35);
           this.field_n = new nq[this.field_d * 7];
-          var3_int = param0.b(16711935);
+          var3_int = param0.readUnsignedByte(16711935);
           for (var5 = 0; var5 < var3_int; var5++) {
             this.field_n[var5] = qi.a(param0, (byte) 48);
           }
@@ -988,7 +988,7 @@ final class op {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1109,7 +1109,7 @@ final class op {
         return var2;
     }
 
-    private final void d(lu param0, byte param1) {
+    private final void d(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         nq[] var5_ref_nq__ = null;
@@ -1119,12 +1119,12 @@ final class op {
         int var8 = BachelorFridge.field_y;
         try {
           this.j(-1);
-          var3_int = param0.field_g;
+          var3_int = param0.position;
           var4 = 0;
           if (param1 > -80) {
             this.field_y = (String[]) null;
           }
-          param0.field_g = param0.field_g + 1;
+          param0.position = param0.position + 1;
           var5_ref_nq__ = this.field_n;
           for (var6 = 0; var5_ref_nq__.length > var6; var6++) {
             var7 = var5_ref_nq__[var6];
@@ -1133,12 +1133,12 @@ final class op {
               er.a(var7, 110, param0);
             }
           }
-          var5 = param0.field_g;
-          param0.field_g = var3_int;
-          param0.d(var4, 0);
-          param0.field_g = var5;
+          var5 = param0.position;
+          param0.position = var3_int;
+          param0.writeByte(var4, 0);
+          param0.position = var5;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "op.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "op.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1186,7 +1186,7 @@ final class op {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -1256,7 +1256,7 @@ final class op {
         int var3;
         sfa var4;
         int var6;
-        eaa var7;
+        IntrusiveDeque var7;
         oha var5;
         int var3Lifetime1;
         sfa var4Lifetime1;
@@ -1264,9 +1264,9 @@ final class op {
         if (~(this.field_A & 1) == param0) {
           this.d((byte) -74);
         }
-        this.field_P = new eaa();
-        this.field_U = new eaa();
-        var7 = new eaa();
+        this.field_P = new IntrusiveDeque();
+        this.field_U = new IntrusiveDeque();
+        var7 = new IntrusiveDeque();
         for (var3 = 0; this.field_n.length > var3; var3++) {
           var4 = this.b(param0 - 112, var3);
           if (var4 != null) {
@@ -1324,11 +1324,11 @@ final class op {
         return false;
     }
 
-    private final void c(lu param0, byte param1) {
+    private final void c(PacketBuffer param0, byte param1) {
         int var5 = 0;
-        lu stackIn_10_0 = null;
+        PacketBuffer stackIn_10_0 = null;
         int stackIn_11_1 = 0;
-        lu stackIn_13_0 = null;
+        PacketBuffer stackIn_13_0 = null;
         int stackIn_14_1 = 0;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -1345,12 +1345,12 @@ final class op {
         int var4Lifetime2Lifetime1;
         var8 = BachelorFridge.field_y;
         try {
-          param0.d(this.field_D, 0);
-          param0.d(this.field_o, 0);
-          param0.d(this.field_E, 0);
-          param0.d(this.field_z, 0);
+          param0.writeByte(this.field_D, 0);
+          param0.writeByte(this.field_o, 0);
+          param0.writeByte(this.field_E, 0);
+          param0.writeByte(this.field_z, 0);
           var3_int = -73 / ((param1 + 9) / 63);
-          param0.d(this.field_B, 0);
+          param0.writeByte(this.field_B, 0);
           for (var4 = 0; var4 < this.field_B; var4++) {
             for (var5 = 0; this.field_z > var5; var5++) {
               var6 = this.field_a[var5][var4];
@@ -1358,40 +1358,40 @@ final class op {
               if (var6.field_i) {
                 var7 = var7 | 128;
               }
-              param0.d(var7, 0);
-              param0.d(var6.field_j, 0);
-              param0.d(var6.field_a, 0);
-              stackIn_10_0 = (lu) (param0);
+              param0.writeByte(var7, 0);
+              param0.writeByte(var6.field_j, 0);
+              param0.writeByte(var6.field_a, 0);
+              stackIn_10_0 = (PacketBuffer) (param0);
               if (var6.field_m) {
                 stackIn_11_1 = 1;
               } else {
                 stackIn_11_1 = 0;
               }
-              ((lu) (Object) stackIn_10_0).d(stackIn_11_1, 0);
-              param0.d(var6.field_h, 0);
-              stackIn_13_0 = (lu) (param0);
+              ((PacketBuffer) (Object) stackIn_10_0).writeByte(stackIn_11_1, 0);
+              param0.writeByte(var6.field_h, 0);
+              stackIn_13_0 = (PacketBuffer) (param0);
               if (var6.field_d) {
                 stackIn_14_1 = 1;
               } else {
                 stackIn_14_1 = 0;
               }
-              ((lu) (Object) stackIn_13_0).d(stackIn_14_1, 0);
+              ((PacketBuffer) (Object) stackIn_13_0).writeByte(stackIn_14_1, 0);
             }
           }
           if (2 == this.field_o) {
             for (var4Lifetime1 = 0; this.field_i.length > var4Lifetime1; var4Lifetime1++) {
-              param0.d(this.field_i[var4Lifetime1][0], 0);
-              param0.d(this.field_i[var4Lifetime1][1], 0);
-              param0.d(this.field_i[var4Lifetime1][2], 0);
+              param0.writeByte(this.field_i[var4Lifetime1][0], 0);
+              param0.writeByte(this.field_i[var4Lifetime1][1], 0);
+              param0.writeByte(this.field_i[var4Lifetime1][2], 0);
             }
           }
           if (3 == this.field_o) {
             for (var4Lifetime2 = 0; this.field_d > var4Lifetime2; var4Lifetime2++) {
-              param0.d(this.field_c[var4Lifetime2][0], 0);
-              param0.d(this.field_c[var4Lifetime2][1], 0);
+              param0.writeByte(this.field_c[var4Lifetime2][0], 0);
+              param0.writeByte(this.field_c[var4Lifetime2][1], 0);
             }
             for (var4Lifetime2Lifetime1 = 0; var4Lifetime2Lifetime1 < this.field_d; var4Lifetime2Lifetime1++) {
-              param0.d(this.field_C[var4Lifetime2Lifetime1], 0);
+              param0.writeByte(this.field_C[var4Lifetime2Lifetime1], 0);
             }
             return;
           }
@@ -1406,7 +1406,7 @@ final class op {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1500,7 +1500,7 @@ final class op {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1627,7 +1627,7 @@ final class op {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1687,7 +1687,7 @@ final class op {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1813,7 +1813,7 @@ final class op {
         try {
           this.field_S[param2].field_b[param3] = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "op.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "op.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1891,7 +1891,7 @@ final class op {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -1958,11 +1958,11 @@ final class op {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final void a(int param0, lu param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int discarded$1 = 0;
         int var4_int = 0;
         aga var5 = null;
@@ -1994,7 +1994,7 @@ final class op {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2203,7 +2203,7 @@ final class op {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2315,7 +2315,7 @@ final class op {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -2337,11 +2337,11 @@ final class op {
 
     private final void f(byte param0) {
         if (param0 != 103) {
-          this.field_t = (eaa[]) null;
+          this.field_t = (IntrusiveDeque[]) null;
         }
     }
 
-    private final void b(int param0, lu param1) {
+    private final void b(int param0, PacketBuffer param1) {
         int var6 = 0;
         wia stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
@@ -2365,12 +2365,12 @@ final class op {
         int var5Lifetime2Lifetime1;
         var8 = BachelorFridge.field_y;
         try {
-          this.field_D = param1.b(16711935);
+          this.field_D = param1.readUnsignedByte(16711935);
           this.field_L = rs.field_g[this.field_D];
-          this.field_o = param1.b(16711935);
-          this.field_E = param1.b(param0 + 16711936);
-          this.field_z = param1.b(16711935);
-          this.field_B = param1.b(16711935);
+          this.field_o = param1.readUnsignedByte(16711935);
+          this.field_E = param1.readUnsignedByte(param0 + 16711936);
+          this.field_z = param1.readUnsignedByte(16711935);
+          this.field_B = param1.readUnsignedByte(16711935);
           this.field_a = new wia[this.field_z][this.field_B];
           this.field_i = new int[this.field_L.field_m][3];
           if (param0 != -1) {
@@ -2386,18 +2386,18 @@ final class op {
           var4 = 0;
           for (var5 = 0; this.field_B > var5; var5++) {
             for (var6 = 0; this.field_z > var6; var6++) {
-              var7 = param1.b(16711935);
+              var7 = param1.readUnsignedByte(16711935);
               this.field_a[var6][var5] = new wia(dda.a(var7, 127));
               stackIn_15_0 = this.field_a[var6][var5];
               stackIn_16_1 = ((var7 & 128) != 0);
               stackIn_15_0.field_i = stackIn_16_1;
-              this.field_a[var6][var5].field_j = param1.b(16711935);
+              this.field_a[var6][var5].field_j = param1.readUnsignedByte(16711935);
               if (this.field_a[var6][var5].field_j == 255) {
                 this.field_a[var6][var5].field_j = -1;
               }
               this.field_a[var6][var5].field_a = param1.b(true);
               stackIn_20_0 = this.field_a[var6][var5];
-              stackIn_21_1 = (1 == param1.b(16711935));
+              stackIn_21_1 = (1 == param1.readUnsignedByte(16711935));
               stackIn_20_0.field_m = stackIn_21_1;
               if (this.field_a[var6][var5].field_n == 20) {
                 this.field_i[var4][0] = var6;
@@ -2405,9 +2405,9 @@ final class op {
                 this.field_i[var4][2] = -1;
                 var4++;
               }
-              this.field_a[var6][var5].field_h = param1.b(param0 + 16711936);
+              this.field_a[var6][var5].field_h = param1.readUnsignedByte(param0 + 16711936);
               stackIn_26_0 = this.field_a[var6][var5];
-              stackIn_27_1 = (1 == param1.b(16711935));
+              stackIn_27_1 = (1 == param1.readUnsignedByte(16711935));
               stackIn_26_0.field_d = stackIn_27_1;
             }
           }
@@ -2420,11 +2420,11 @@ final class op {
           if (this.field_o == 3) {
             this.field_c = new int[this.field_d][0];
             for (var5Lifetime2 = 0; this.field_d > var5Lifetime2; var5Lifetime2++) {
-              this.field_c[var5Lifetime2] = new int[]{param1.b(16711935), param1.b(param0 + 16711936)};
+              this.field_c[var5Lifetime2] = new int[]{param1.readUnsignedByte(16711935), param1.readUnsignedByte(param0 + 16711936)};
             }
             this.field_C = new int[this.field_d];
             for (var5Lifetime2Lifetime1 = 0; this.field_d > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
-              this.field_C[var5Lifetime2Lifetime1] = param1.b(16711935);
+              this.field_C[var5Lifetime2Lifetime1] = param1.readUnsignedByte(16711935);
             }
             return;
           }
@@ -2439,7 +2439,7 @@ final class op {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 
@@ -2486,11 +2486,11 @@ final class op {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, boolean param1, lu param2) {
+    final void a(int param0, boolean param1, PacketBuffer param2) {
         int var4_int = 0;
         cj var5 = null;
         int var6 = 0;
@@ -2501,13 +2501,13 @@ final class op {
         RuntimeException var4 = null;
         var6 = BachelorFridge.field_y;
         try {
-          var4_int = param2.field_g + param0;
+          var4_int = param2.position + param0;
           this.b(param2, -69);
-          this.field_O = param2.b(16711935);
-          this.field_U = new eaa();
-          while (var4_int > param2.field_g) {
+          this.field_O = param2.readUnsignedByte(16711935);
+          this.field_U = new IntrusiveDeque();
+          while (var4_int > param2.position) {
             var5 = tma.a(param2, (byte) -50);
-            var5.field_j = param2.f(-98);
+            var5.field_j = param2.readInt(-98);
             this.field_U.a(var5, true);
           }
           if (!param1) {
@@ -2524,7 +2524,7 @@ final class op {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -2703,11 +2703,11 @@ final class op {
           } else {
             stackIn_88_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_87_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_87_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(')').toString());
         }
     }
 
-    final void a(lu param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         cj var3 = null;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -2721,11 +2721,11 @@ final class op {
             this.d(52, -96, -42);
           }
           this.d(param0, (byte) -116);
-          param0.d(this.field_O, 0);
+          param0.writeByte(this.field_O, 0);
           var3 = (cj) (this.field_U.b((byte) 90));
           while (var3 != null) {
             nca.a(101, param0, var3);
-            param0.e(var3.field_j, -1615464796);
+            param0.writeInt(var3.field_j, -1615464796);
             var3 = (cj) (this.field_U.c(~param1));
           }
           return;
@@ -2739,7 +2739,7 @@ final class op {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2788,7 +2788,7 @@ final class op {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -2992,7 +2992,7 @@ final class op {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3068,7 +3068,7 @@ final class op {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3121,7 +3121,7 @@ final class op {
         }
         var3Lifetime3 = 0;
         if (param0 > -60) {
-          this.field_U = (eaa) null;
+          this.field_U = (IntrusiveDeque) null;
         }
         while (var3Lifetime3 < this.field_d) {
           var8.a("player: " + this.field_y[var3Lifetime3], 4819);
@@ -3155,7 +3155,7 @@ final class op {
         return stackIn_6_0;
     }
 
-    private final void a(lu param0, byte param1) {
+    private final void a(PacketBuffer param0, byte param1) {
         int var4 = 0;
         int var3_int = 0;
         int var5 = 0;
@@ -3181,7 +3181,7 @@ final class op {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3214,7 +3214,7 @@ final class op {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3329,7 +3329,7 @@ final class op {
             this.field_C = new int[this.field_d];
           }
           this.field_j = new sfa[this.field_d][7];
-          this.field_t = new eaa[7];
+          this.field_t = new IntrusiveDeque[7];
           this.field_n = new nq[7 * this.field_d];
           this.field_g = new int[this.field_d];
           this.field_p = new vg();
@@ -3354,7 +3354,7 @@ final class op {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 

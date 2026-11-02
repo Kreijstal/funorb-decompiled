@@ -7,7 +7,7 @@ final class gs {
     boolean field_i;
     int field_m;
     int field_p;
-    static eaa field_l;
+    static IntrusiveDeque field_l;
     int field_j;
     String field_k;
     String field_g;
@@ -40,7 +40,7 @@ final class gs {
         try {
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          bl.a(param1, 0, var3, 0, var2_int);
+          ArrayOperations.copy(param1, 0, var3, 0, var2_int);
           if (param0 < 118) {
             gs.a(-47);
           }
@@ -56,7 +56,7 @@ final class gs {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -116,11 +116,11 @@ final class gs {
           this.field_g = param1;
           this.field_p = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static pp a(boolean param0, lu param1) {
+    final static pp a(boolean param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         pp stackIn_2_0 = null;
@@ -134,7 +134,7 @@ final class gs {
             stackIn_2_0 = (pp) null;
             return stackIn_2_0;
           }
-          var2_int = param1.e((byte) 113);
+          var2_int = param1.readUnsignedShort((byte) 113);
           stackIn_4_0 = new o(var2_int);
           return (pp) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,12 +147,12 @@ final class gs {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     static {
-        field_l = new eaa();
+        field_l = new IntrusiveDeque();
         field_c = new int[24];
     }
 }

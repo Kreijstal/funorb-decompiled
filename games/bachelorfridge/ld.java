@@ -6,10 +6,10 @@ final class ld extends pu {
     static String field_m;
     static int field_p;
     static ai[] field_o;
-    static ee[] field_l;
+    static IndexedSprite[] field_l;
     static int field_q;
 
-    final static void a(kv param0, kv param1, kv param2, ee param3, int param4, kv param5, byte param6) {
+    final static void a(Sprite param0, Sprite param1, Sprite param2, IndexedSprite param3, int param4, Sprite param5, byte param6) {
         int incrementValue$2 = 0;
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
@@ -276,7 +276,7 @@ final class ld extends pu {
           } else {
             stackIn_93_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(',').append(param6).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(',').append(param6).append(')').toString());
         }
     }
 

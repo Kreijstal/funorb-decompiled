@@ -15,17 +15,17 @@ final class cja extends bca {
           this.a(param0, (byte) -2);
           param0.b((byte) -64, this.field_q, this.field_s, this.field_u);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "cja.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "cja.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    cja(lu param0) {
+    cja(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 105);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 105);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (0 > var2_int) {
@@ -33,11 +33,11 @@ final class cja extends bca {
             }
             this.field_o.a(dca.a((byte) 102, param0), true);
           }
-          this.field_s = param0.b(16711935);
-          this.field_u = param0.b(16711935);
-          this.field_q = param0.b(16711935);
+          this.field_s = param0.readUnsignedByte(16711935);
+          this.field_u = param0.readUnsignedByte(16711935);
+          this.field_q = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "cja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "cja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class cja extends bca {
 
     final at a(int param0, gj param1) {
         RuntimeException var3 = null;
-        lu var4 = null;
+        PacketBuffer var4 = null;
         mm stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -59,8 +59,8 @@ final class cja extends bca {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            var4 = (lu) null;
-            cja.a((uha) null, (lu) null, 81, true);
+            var4 = (PacketBuffer) null;
+            cja.a((uha) null, (PacketBuffer) null, 81, true);
           }
           stackIn_3_0 = new mm(param1, this);
           return (at) ((Object) stackIn_3_0);
@@ -74,7 +74,7 @@ final class cja extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class cja extends bca {
         super(param0, param1);
     }
 
-    final static void a(int param0, kv param1, byte param2, int param3, int param4) {
+    final static void a(int param0, Sprite param1, byte param2, int param3, int param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -100,33 +100,33 @@ final class cja extends bca {
         try {
           param4 = param4 + param1.field_u;
           param3 = param3 + param1.field_t;
-          var5_int = param3 + param4 * dg.field_i;
+          var5_int = param3 + param4 * SoftwareRasterizer.field_i;
           var6 = 0;
           var7 = param1.field_p;
           var8 = param1.field_q;
-          var9 = -var8 + dg.field_i;
-          if (dg.field_j > param4) {
-            var11 = -param4 + dg.field_j;
+          var9 = -var8 + SoftwareRasterizer.field_i;
+          if (SoftwareRasterizer.field_j > param4) {
+            var11 = -param4 + SoftwareRasterizer.field_j;
             var7 = var7 - var11;
             var6 = var6 + var8 * var11;
-            param4 = dg.field_j;
-            var5_int = var5_int + dg.field_i * var11;
+            param4 = SoftwareRasterizer.field_j;
+            var5_int = var5_int + SoftwareRasterizer.field_i * var11;
           }
           var10 = 0;
-          if (param3 < dg.field_f) {
-            var11Lifetime1 = -param3 + dg.field_f;
+          if (param3 < SoftwareRasterizer.field_f) {
+            var11Lifetime1 = -param3 + SoftwareRasterizer.field_f;
             var6 = var6 + var11Lifetime1;
             var9 = var9 + var11Lifetime1;
             var8 = var8 - var11Lifetime1;
             var10 = var10 + var11Lifetime1;
-            param3 = dg.field_f;
+            param3 = SoftwareRasterizer.field_f;
             var5_int = var5_int + var11Lifetime1;
           }
-          if (dg.field_k < var7 + param4) {
-            var7 = var7 - (-dg.field_k + (param4 + var7));
+          if (SoftwareRasterizer.field_k < var7 + param4) {
+            var7 = var7 - (-SoftwareRasterizer.field_k + (param4 + var7));
           }
-          if (dg.field_h < var8 + param3) {
-            var11Lifetime2 = -dg.field_h + (var8 + param3);
+          if (SoftwareRasterizer.field_h < var8 + param3) {
+            var11Lifetime2 = -SoftwareRasterizer.field_h + (var8 + param3);
             var9 = var9 + var11Lifetime2;
             var8 = var8 - var11Lifetime2;
             var10 = var10 + var11Lifetime2;
@@ -136,7 +136,7 @@ final class cja extends bca {
             if (param2 > -103) {
               return;
             }
-            el.a(var8, var6, var9, var5_int, 125, param0, dg.field_e, param1.field_v, var10, var7);
+            el.a(var8, var6, var9, var5_int, 125, param0, SoftwareRasterizer.field_e, param1.field_v, var10, var7);
             return;
           }
           return;
@@ -150,11 +150,11 @@ final class cja extends bca {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static void a(uha param0, lu param1, int param2, boolean param3) {
+    final static void a(uha param0, PacketBuffer param1, int param2, boolean param3) {
         int var8 = 0;
         uha stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
@@ -185,11 +185,11 @@ final class cja extends bca {
         var9 = BachelorFridge.field_y;
         try {
           if (param3) {
-            param0.field_Rb = param1.b(16711935);
+            param0.field_Rb = param1.readUnsignedByte(16711935);
           }
-          param0.field_Pb = param1.b(16711935);
-          param0.field_Kb = param1.b(16711935);
-          var4_int = param1.b(16711935);
+          param0.field_Pb = param1.readUnsignedByte(16711935);
+          param0.field_Kb = param1.readUnsignedByte(16711935);
+          var4_int = param1.readUnsignedByte(16711935);
           stackIn_6_0 = (uha) (param0);
           stackIn_7_1 = (0 != (128 & var4_int));
           stackIn_6_0.field_Bb = stackIn_7_1;
@@ -220,24 +220,24 @@ final class cja extends bca {
           stackIn_31_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var6 = stackIn_31_0;
           param1.a(param0.field_Eb, param0.field_Eb.length, 128, 0);
-          param0.field_bc = param1.e((byte) 64);
-          param0.field_Ob = f.b((byte) 73) - (long)param1.f(-124);
+          param0.field_bc = param1.readUnsignedShort((byte) 64);
+          param0.field_Ob = f.b((byte) 73) - (long)param1.readInt(-124);
           if (var5 == 0) {
             param0.field_Nb = -1;
           } else {
-            param0.field_Nb = param1.f(51);
+            param0.field_Nb = param1.readInt(51);
           }
-          param0.field_Sb = param1.c(-120);
-          var7 = param1.field_g;
-          param0.field_Jb = param1.g(-87);
+          param0.field_Sb = param1.readLong(-120);
+          var7 = param1.position;
+          param0.field_Jb = param1.readString(-87);
           if (var6 == 0) {
             param0.field_Cb = null;
             return;
           }
           param0.field_Cb = new String[param0.field_Rb];
-          param1.field_g = var7;
+          param1.position = var7;
           for (var8 = 0; param0.field_Rb > var8; var8++) {
-            param0.field_Cb[var8] = param1.g(-88);
+            param0.field_Cb[var8] = param1.readString(-88);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -256,21 +256,21 @@ final class cja extends bca {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         super.a((byte) -47, param1);
-        param1.d(this.field_s, 0);
-        param1.d(this.field_u, 0);
+        param1.writeByte(this.field_s, 0);
+        param1.writeByte(this.field_u, 0);
         if (param0 > -12) {
           return;
         }
         try {
-          param1.d(this.field_q, 0);
+          param1.writeByte(this.field_q, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "cja.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "cja.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -20,7 +20,7 @@ final class jea {
         qi.b(-1);
         te.c((byte) 94);
         if (lt.a((byte) 99)) {
-          sja.field_fb.c(1, (byte) 125);
+          sja.field_fb.writeCipheredByte(1, (byte) 125);
           hna.a(0, 68);
         }
         vc.a((byte) -96);

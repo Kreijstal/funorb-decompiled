@@ -3,7 +3,7 @@
  */
 final class ca extends kda {
     static String[] field_e;
-    static kv[] field_c;
+    static Sprite[] field_c;
     static String field_d;
     private static String field_z;
 

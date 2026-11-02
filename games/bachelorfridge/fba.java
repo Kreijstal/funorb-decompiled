@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fba {
-    static ee field_a;
+    static IndexedSprite field_a;
 
     public static void a(int param0) {
         field_a = null;
@@ -21,7 +21,7 @@ final class fba {
           ic.field_i.a(param0, 91, wja.a(gd.field_m, mk.field_p, false), -1);
           return;
         }
-        field_a = (ee) null;
+        field_a = (IndexedSprite) null;
         ic.field_i = new jd(2);
         ic.field_i.a(param0, 91, wja.a(gd.field_m, mk.field_p, false), -1);
     }

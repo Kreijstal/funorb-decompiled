@@ -3,7 +3,7 @@
  */
 final class fk extends bca {
     int field_q;
-    static kv field_s;
+    static Sprite field_s;
     static String field_t;
     int field_r;
 
@@ -13,7 +13,7 @@ final class fk extends bca {
           this.field_q = param2;
           this.field_r = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class fk extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -61,17 +61,17 @@ final class fk extends bca {
           int var4 = -119 / ((param1 - 12) / 35);
           var3.field_A = false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    fk(lu param0) {
+    fk(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 74);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 74);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -79,10 +79,10 @@ final class fk extends bca {
             }
             this.field_o.a(dca.a((byte) 102, param0), true);
           }
-          this.field_q = param0.b(16711935);
-          this.field_r = param0.b(16711935);
+          this.field_q = param0.readUnsignedByte(16711935);
+          this.field_r = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -111,20 +111,20 @@ final class fk extends bca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "fk.B(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "fk.B(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         if (param0 > -12) {
           return;
         }
         try {
           super.a((byte) -52, param1);
-          param1.d(this.field_q, 0);
-          param1.d(this.field_r, 0);
+          param1.writeByte(this.field_q, 0);
+          param1.writeByte(this.field_r, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fk.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fk.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -279,11 +279,11 @@ final class fk extends bca {
     }
 
     final static void d(byte param0) {
-        dg.field_j = mm.field_D;
-        dg.field_k = eia.field_d;
+        SoftwareRasterizer.field_j = mm.field_D;
+        SoftwareRasterizer.field_k = eia.field_d;
         int var1 = -34 % ((-63 - param0) / 42);
-        dg.field_h = tq.field_r;
-        dg.field_f = jf.field_m;
+        SoftwareRasterizer.field_h = tq.field_r;
+        SoftwareRasterizer.field_f = jf.field_m;
     }
 
     static {

@@ -42,9 +42,9 @@ final class gja extends tia {
         String var6Lifetime2;
         String var6Lifetime1Lifetime1;
         if (this.field_o == 3) {
-          dg.a(-128 + (param2 - 8), param0 - 32, 1024 - ((this.field_g << 3) + 16) + (param2 - 128), un.field_m.field_p + (param0 - 32));
+          SoftwareRasterizer.setClip(-128 + (param2 - 8), param0 - 32, 1024 - ((this.field_g << 3) + 16) + (param2 - 128), un.field_m.field_p + (param0 - 32));
           un.field_m.a(param2 - 128 - 8, -32 + param0, this.field_g << 1);
-          dg.c();
+          SoftwareRasterizer.c();
           if (param1 != 25415) {
             var6 = (String) null;
             gja.a(false, (java.applet.Applet) null, (String) null, 115);
@@ -62,9 +62,9 @@ final class gja extends tia {
               }
               return;
             }
-            dg.a(qga.field_r.field_q + (-128 + (-8 + param2) - 1024 + (this.field_g << 3)), -32 + param0 - 64, qga.field_r.field_q + 16 + param2 - 128, qga.field_r.field_p - 32 + (param0 - 64));
+            SoftwareRasterizer.setClip(qga.field_r.field_q + (-128 + (-8 + param2) - 1024 + (this.field_g << 3)), -32 + param0 - 64, qga.field_r.field_q + 16 + param2 - 128, qga.field_r.field_p - 32 + (param0 - 64));
             qga.field_r.a(-8 + (param2 - 128), -96 + param0, this.field_g << 1);
-            dg.c();
+            SoftwareRasterizer.c();
             if (param1 == 25415) {
               return;
             }
@@ -72,9 +72,9 @@ final class gja extends tia {
             gja.a(false, (java.applet.Applet) null, (String) null, 115);
             return;
           }
-          dg.a(qga.field_r.field_q + param2 - (1056 - (this.field_g << 3)), param0 - 32, qga.field_r.field_q + (-128 + param2) + 96, -32 + (param0 + qga.field_r.field_p));
+          SoftwareRasterizer.setClip(qga.field_r.field_q + param2 - (1056 - (this.field_g << 3)), param0 - 32, qga.field_r.field_q + (-128 + param2) + 96, -32 + (param0 + qga.field_r.field_p));
           qga.field_r.a(param2 - 128 + 96, param0 - 32, this.field_g << 1);
-          dg.c();
+          SoftwareRasterizer.c();
           if (param1 == 25415) {
             return;
           }
@@ -82,9 +82,9 @@ final class gja extends tia {
           gja.a(false, (java.applet.Applet) null, (String) null, 115);
           return;
         }
-        dg.a(-8 + param2, -96 + param0, -(this.field_g << 3) - (-1024 - param2) - 16, un.field_m.field_p + param0 - 96);
+        SoftwareRasterizer.setClip(-8 + param2, -96 + param0, -(this.field_g << 3) - (-1024 - param2) - 16, un.field_m.field_p + param0 - 96);
         un.field_m.a(param2 - 8, -32 + param0 - 64, this.field_g << 1);
-        dg.c();
+        SoftwareRasterizer.c();
         if (param1 == 25415) {
           return;
         }
@@ -98,7 +98,7 @@ final class gja extends tia {
           this.field_g = 128;
           this.field_o = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class gja extends tia {
         try {
           ij.field_m = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gja.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gja.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class gja extends tia {
           String stackIn_15_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (ht.field_i.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_i.startsWith("win") &&
               qd.a(param2, -126)) {
               return;
             }
@@ -163,7 +163,7 @@ final class gja extends tia {
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qa extends k {
-    static kv field_k;
+    static Sprite field_k;
 
     final static void d(int param0) {
         if (bka.field_h) {

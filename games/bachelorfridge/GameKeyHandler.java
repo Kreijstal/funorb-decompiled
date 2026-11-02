@@ -1,0 +1,245 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+    static int field_a;
+    static int[] field_b;
+
+    public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
+        int var2_int = 0;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var3Lifetime1;
+        try {
+          if (vv.field_e != null) {
+            ce.field_x = 0;
+            var2_int = param0.getKeyCode();
+            if (var2_int >= 0 &&
+              ru.field_d.length > var2_int) {
+              var2_int = ru.field_d[var2_int];
+              if ((var2_int & 128) != 0) {
+                var2_int = -1;
+              }
+            } else {
+              var2_int = -1;
+            }
+            if (gfa.field_c >= 0 &&
+              var2_int >= 0) {
+              wd.field_x[gfa.field_c] = var2_int;
+              gfa.field_c = gfa.field_c + 1 & 127;
+              if (cj.field_i == gfa.field_c) {
+                gfa.field_c = -1;
+              }
+            }
+            if (0 <= var2_int) {
+              var3 = lma.field_x + 1 & 127;
+              if (gha.field_q != var3) {
+                aq.field_a[lma.field_x] = var2_int;
+                dla.field_i[lma.field_x] = (char)0;
+                lma.field_x = var3;
+              }
+            }
+            var3Lifetime1 = param0.getModifiers();
+            if ((var3Lifetime1 & 10) == 0 &&
+              var2_int != 85 &&
+              var2_int != 10) {
+              return;
+            }
+            param0.consume();
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_24_0 = var2;
+          stackIn_24_1 = new StringBuilder().append("mfa.keyPressed(");
+          if (param0 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+        }
+    }
+
+    public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
+        int var2_int = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        try {
+          if (null != vv.field_e) {
+            ce.field_x = 0;
+            var2_int = param0.getKeyCode();
+            if (0 <= var2_int &&
+              var2_int < ru.field_d.length) {
+              var2_int = ru.field_d[var2_int] & -129;
+            } else {
+              var2_int = -1;
+            }
+            if (gfa.field_c >= 0 &&
+              0 <= var2_int) {
+              wd.field_x[gfa.field_c] = ~var2_int;
+              gfa.field_c = 127 & gfa.field_c + 1;
+              if (gfa.field_c == cj.field_i) {
+                gfa.field_c = -1;
+              }
+            }
+          }
+          param0.consume();
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_15_0 = var2;
+          stackIn_15_1 = new StringBuilder().append("mfa.keyReleased(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+        }
+    }
+
+    public final void focusGained(java.awt.event.FocusEvent param0) {
+    }
+
+    final static Sprite[] a(int param0) {
+        int var2 = 0;
+        int var6_int = 0;
+        int var7 = 0;
+        Sprite[] var1;
+        int var3;
+        int[] var6;
+        int var8;
+        int[] var9;
+        int[] var13;
+        int[] var16;
+        byte[] var20;
+        int[] var21;
+        byte[] var22;
+        var8 = BachelorFridge.field_y;
+        if (param0 != 10583) {
+          return (Sprite[]) null;
+        }
+        var1 = new Sprite[ok.field_vb];
+        for (var2 = 0; var2 < ok.field_vb; var2++) {
+          var3 = eha.field_s[var2] * lq.field_A[var2];
+          var20 = baa.field_P[var2];
+          if (!uf.field_b[var2]) {
+            var9 = new int[var3];
+            var21 = var9;
+            for (var6_int = 0; var6_int < var3; var6_int++) {
+              var9[var6_int] = hk.field_f[dda.a(255, (int) var20[var6_int])];
+            }
+            var1[var2] = new Sprite(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], var21);
+          } else {
+            var22 = cea.field_d[var2];
+            var16 = new int[var3];
+            var13 = var16;
+            var6 = var13;
+            for (var7 = 0; var7 < var3; var7++) {
+              var6[var7] = mp.a(dda.a(var22[var7] << 24, -16777216), hk.field_f[dda.a((int) var20[var7], 255)]);
+            }
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], var16));
+          }
+        }
+        al.b(-18073);
+        return var1;
+    }
+
+    final static FullscreenFocusCanvas a(boolean param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
+        java.awt.Frame var6 = null;
+        RuntimeException var6_ref = null;
+        FullscreenFocusCanvas var7 = null;
+        java.awt.Frame var8 = null;
+        Object stackIn_2_0 = null;
+        FullscreenFocusCanvas stackIn_5_0 = null;
+        FullscreenFocusCanvas stackIn_7_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var8 = ts.a(param3, param4, param1, param5, 2, param2);
+          var6 = var8;
+          if (var8 == null) {
+            stackIn_2_0 = null;
+            return (FullscreenFocusCanvas) (stackIn_2_0);
+          }
+          var7 = new FullscreenFocusCanvas();
+          var7.field_g = var8;
+          var7.field_g.add((java.awt.Component) ((Object) var7));
+          if (!param0) {
+            stackIn_5_0 = (FullscreenFocusCanvas) null;
+            return stackIn_5_0;
+          }
+          var7.setBounds(0, 0, param1, param3);
+          var7.addFocusListener(var7);
+          var7.requestFocus();
+          stackIn_7_0 = var7;
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6_ref = decompiledCaughtException;
+          stackIn_10_0 = var6_ref;
+          stackIn_10_1 = new StringBuilder().append("mfa.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    public static void b(int param0) {
+        field_b = null;
+        if (param0 != 0) {
+          field_b = (int[]) null;
+        }
+    }
+
+    public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
+        try {
+          if (null != vv.field_e) {
+            gfa.field_c = -1;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mfa.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final void keyTyped(java.awt.event.KeyEvent param0) {
+        int var2_int = 0;
+        int var3 = 0;
+        try {
+          if (vv.field_e != null) {
+            var2_int = param0.getKeyChar();
+            if (0 != var2_int && 65535 != var2_int &&
+              cga.a(255, (char) var2_int)) {
+              var3 = lma.field_x + 1 & 127;
+              if (var3 != gha.field_q) {
+                aq.field_a[lma.field_x] = -1;
+                dla.field_i[lma.field_x] = (char)var2_int;
+                lma.field_x = var3;
+              }
+            }
+          }
+          param0.consume();
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mfa.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_b = new int[256];
+    }
+}

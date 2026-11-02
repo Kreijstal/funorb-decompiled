@@ -16,7 +16,7 @@ final class eb extends td {
           this.field_n = param3;
           this.field_k = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "eb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "eb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -99,13 +99,13 @@ final class eb extends td {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(boolean param0, int param1) {
         int var2_int = 0;
-        fea stackIn_15_0;
+        BinaryBitmapFont stackIn_15_0;
         String stackIn_15_1;
         int stackIn_15_2;
         int stackIn_15_3;
@@ -121,15 +121,15 @@ final class eb extends td {
           ps.field_q.d(0, 0);
           for (var2_int = 0; 8 > var2_int; var2_int++) {
             jf.field_l.a(14 + var2_int * 77, 89);
-            if (se.field_s[var2_int].field_T ||
+            if (DiskCacheRequest.field_s[var2_int].field_T ||
               baa.field_Q - 1 == var2_int) {
               dr.field_p.a(77 * var2_int + 14, 89);
             }
-            nw.field_p[var2_int].e(77 * var2_int + 36, 91);
+            nw.field_p[var2_int].draw(77 * var2_int + 36, 91);
           }
-          qm.field_d.a(true, 7802);
-          jha.field_g.c(ak.field_t, 22, 146, 16370176, -1);
-          hfa.field_z.c(ak.field_t, 22, 146, 65793, -1);
+          RasterBuffer.field_d.a(true, 7802);
+          jha.field_g.drawText(ak.field_t, 22, 146, 16370176, -1);
+          hfa.field_z.drawText(ak.field_t, 22, 146, 65793, -1);
           if (mg.field_m.field_a >= dea.field_n) {
             fba.field_a.a(48 + IntrusiveNode.field_a.field_kb, 4 + IntrusiveNode.field_a.field_rb);
             if (IntrusiveNode.field_a.field_T) {
@@ -148,24 +148,24 @@ final class eb extends td {
           } else {
             stackIn_16_4 = 16699649;
           }
-          ((fea) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_16_4, -1);
+          ((BinaryBitmapFont) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_16_4, -1);
           hfa.field_z.a(ow.field_n, 530, 446, 16204, -1);
           ug.field_q.a(true, param1 + 7766);
           if (null != qg.field_b.field_z) {
-            dg.a(ug.field_q.field_kb, ug.field_q.field_rb, ug.field_q.field_sb + ug.field_q.field_kb, ug.field_q.field_p + ug.field_q.field_rb);
+            SoftwareRasterizer.setClip(ug.field_q.field_kb, ug.field_q.field_rb, ug.field_q.field_sb + ug.field_q.field_kb, ug.field_q.field_p + ug.field_q.field_rb);
             var2 = (kr) (qg.field_b.field_z.b((byte) 90));
             while (var2 != null) {
-              jha.field_g.c(Integer.toString(var2.field_yb.field_g), ug.field_q.field_kb - (-var2.field_kb - 28), qg.field_b.field_rb + 32 + (ug.field_q.field_rb + var2.field_rb), 16777215, -1);
-              hfa.field_z.c(Integer.toString(var2.field_yb.field_g), 28 + var2.field_kb + ug.field_q.field_kb, qg.field_b.field_rb + (32 + (var2.field_rb + ug.field_q.field_rb)), 65793, -1);
+              jha.field_g.drawText(Integer.toString(var2.field_yb.field_g), ug.field_q.field_kb - (-var2.field_kb - 28), qg.field_b.field_rb + 32 + (ug.field_q.field_rb + var2.field_rb), 16777215, -1);
+              hfa.field_z.drawText(Integer.toString(var2.field_yb.field_g), 28 + var2.field_kb + ug.field_q.field_kb, qg.field_b.field_rb + (32 + (var2.field_rb + ug.field_q.field_rb)), 65793, -1);
               var2 = (kr) (qg.field_b.field_z.c(0));
             }
-            dg.c();
+            SoftwareRasterizer.c();
           }
-          jha.field_g.c(hka.field_g, 452, 306, 65793, -1);
+          jha.field_g.drawText(hka.field_g, 452, 306, 65793, -1);
           var4 = lga.a(true, new String[]{ti.a((byte) -118, 2, (long)dea.field_n, kt.field_k, true)}, vla.field_u);
           jha.field_g.b(var4, 600, 306, 16699649, -1);
           hfa.field_z.b(var4, 600, 306, 65793, -1);
-          jha.field_g.c(jla.field_c, 452, 400, 65793, -1);
+          jha.field_g.drawText(jla.field_c, 452, 400, 65793, -1);
           if (param1 != 36) {
             field_q = (String) null;
           }
@@ -183,7 +183,7 @@ final class eb extends td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "eb.C(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "eb.C(" + param0 + ',' + param1 + ')');
         }
     }
 

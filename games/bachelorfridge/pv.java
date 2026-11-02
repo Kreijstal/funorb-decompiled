@@ -76,8 +76,8 @@ class pv extends IntrusiveNode {
           if (!param1) {
             field_i = -56;
           }
-          kq.field_i = dg.field_c;
-          kg.field_b = dg.field_i;
+          kq.field_i = SoftwareRasterizer.field_c;
+          FullscreenFocusCanvas.field_b = SoftwareRasterizer.field_i;
           if (param0) {
             stackIn_6_0 = ld.field_p;
           } else {
@@ -85,12 +85,12 @@ class pv extends IntrusiveNode {
           }
           stackIn_9_1 = !(param1);
           dna.c(stackIn_6_0, stackIn_9_1);
-          pf.field_n.a(0, ela.field_i.field_p - 42, 0, ela.field_i.field_sb, (byte) 99);
+          BitPacketBuffer.field_n.a(0, ela.field_i.field_p - 42, 0, ela.field_i.field_sb, (byte) 99);
           mja.field_t.a(rg.field_h, 31407, nu.field_f.field_sb, 0, 0);
           stackIn_11_0 = oga.field_t;
           stackIn_11_1 = 18;
           stackIn_11_2 = 31407;
-          if (!eaa.field_c) {
+          if (!IntrusiveDeque.field_c) {
             stackIn_12_3 = 0;
           } else {
             stackIn_12_3 = 4 + rj.field_j + 40;
@@ -202,7 +202,7 @@ class pv extends IntrusiveNode {
               }
             }
           }
-          qw.field_b.a(-124 + (dg.field_c - 10 - 10), 31407, 360, dg.field_i - 360 >> 1, 10);
+          qw.field_b.a(-124 + (SoftwareRasterizer.field_c - 10 - 10), 31407, 360, SoftwareRasterizer.field_i - 360 >> 1, 10);
           saa.field_f.a(24, 31407, qw.field_b.field_sb, 0, 0);
           rf.field_q.a(-24 + qw.field_b.field_p, 31407, qw.field_b.field_sb, 0, 24);
           rf.field_q.field_eb = mu.a(11579568, 3, rf.field_q.field_p, 8421504, 1, (byte) 17);
@@ -213,7 +213,7 @@ class pv extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "pv.B(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "pv.B(" + param0 + ',' + param1 + ')');
         }
     }
 

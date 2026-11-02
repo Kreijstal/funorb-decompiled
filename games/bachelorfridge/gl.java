@@ -29,7 +29,7 @@ final class gl extends pk implements fca, ufa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -39,7 +39,7 @@ final class gl extends pk implements fca, ufa {
             field_g = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class gl extends pk implements fca, ufa {
           var5 = kja.a(27168);
           if (1890 <= var4 &&
             -3 + var5 >= var4) {
-            if (jp.a(var4, var3, (byte) 85, var2_int)) {
+            if (MidiPcmStream.a(var4, var3, (byte) 85, var2_int)) {
               return null;
             }
             if (param0 <= 97) {
@@ -120,7 +120,7 @@ final class gl extends pk implements fca, ufa {
             stackIn_9_0 = jt.field_f;
             return stackIn_9_0;
           }
-          if (!jp.a(var4, var3, (byte) 91, var2_int)) {
+          if (!MidiPcmStream.a(var4, var3, (byte) 91, var2_int)) {
             stackIn_13_0 = jt.field_f;
             return stackIn_13_0;
           }
@@ -137,7 +137,7 @@ final class gl extends pk implements fca, ufa {
           int var3_int = -85 / ((param1 - 0) / 49);
           this.a(574);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gl.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gl.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -6,13 +6,13 @@ abstract class lw {
     int field_a;
     static String[] field_k;
     String field_j;
-    static kv[] field_b;
+    static Sprite[] field_b;
     int field_e;
     private int field_d;
     String[] field_h;
     int[][] field_c;
     boolean field_i;
-    static be[] field_f;
+    static PcmSample[] field_f;
 
     void a(int param0) {
         int var2 = 87 / ((59 - param0) / 33);
@@ -44,7 +44,7 @@ abstract class lw {
         field_b = null;
         field_k = null;
         if (!param0) {
-          field_b = (kv[]) null;
+          field_b = (Sprite[]) null;
         }
     }
 
@@ -91,7 +91,7 @@ abstract class lw {
         try {
           param4 = param4 - param1;
           if (param5 != 12175) {
-            field_b = (kv[]) null;
+            field_b = (Sprite[]) null;
           }
           param7 = param7 - param3;
           var9_int = param6;
@@ -181,7 +181,7 @@ abstract class lw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var9), "lw.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw pe.wrapException((Throwable) ((Object) var9), "lw.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -193,12 +193,12 @@ abstract class lw {
           this.field_d = this.field_h.length;
           this.field_i = param0 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lw.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lw.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_f = new be[10];
+        field_f = new PcmSample[10];
         field_g = new ws();
     }
 }

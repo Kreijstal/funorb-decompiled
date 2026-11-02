@@ -21,14 +21,14 @@ final class nga extends vo {
     }
 
     final static int a(int param0, int param1, byte param2, int param3) {
-        if (!(param1 + (param3 + param0) > dg.field_c)) {
+        if (!(param1 + (param3 + param0) > SoftwareRasterizer.field_c)) {
           return param3 + param1;
         }
         if (param2 < 95) {
           return 24;
         }
         if (0 > param1 - param0) {
-          return -param0 + dg.field_c;
+          return -param0 + SoftwareRasterizer.field_c;
         }
         return param1 - param0;
     }

@@ -6,8 +6,8 @@ final class a extends oha {
     static String field_p;
     int field_r;
     int field_q;
-    static kv field_o;
-    static kv[] field_n;
+    static Sprite field_o;
+    static Sprite[] field_n;
 
     public static void c(int param0) {
         field_p = null;
@@ -58,7 +58,7 @@ final class a extends oha {
           this.field_r = param6;
           this.field_f = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "a.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "a.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

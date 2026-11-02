@@ -5,17 +5,17 @@ import java.util.*;
 
 final class gf extends kj {
     static String field_h;
-    private eaa field_j;
+    private IntrusiveDeque field_j;
     static String field_i;
     static int field_l;
     private int field_f;
-    private kv[][] field_g;
+    private Sprite[][] field_g;
     static int field_k;
 
     gf(gj param0, int param1, int param2) {
         super(param0, param1, param2);
         int var5 = 0;
-        kv[] array$2 = null;
+        Sprite[] array$2 = null;
         int var7 = 0;
         int var4_int = 0;
         int var6 = 0;
@@ -25,16 +25,16 @@ final class gf extends kj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_j = new eaa();
+          this.field_j = new IntrusiveDeque();
           this.field_f = 300;
           var4_int = aw.field_v.length;
-          this.field_g = new kv[var4_int][];
+          this.field_g = new Sprite[var4_int][];
           for (var5 = 0; var5 < var4_int; var5++) {
             var6 = aw.field_v[var5].length;
-            array$2 = new kv[var6];
+            array$2 = new Sprite[var6];
             this.field_g[var5] = array$2;
             for (var7 = 0; var6 > var7; var7++) {
-              this.field_g[var5][var7] = aw.field_v[var5][var7].a();
+              this.field_g[var5][var7] = aw.field_v[var5][var7].toRgbSprite();
             }
           }
           return;
@@ -48,7 +48,7 @@ final class gf extends kj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class gf extends kj {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        kv var8 = null;
+        Sprite var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = BachelorFridge.field_y;
@@ -162,7 +162,7 @@ final class gf extends kj {
           var8 = this.field_g[var4.field_r][var7];
           var9 = var8.field_n >> 1;
           var10 = var8.field_o >> 1;
-          var8.c(-(var9 >> 1) + var5, -(var10 >> 1) + (var6 + 30), var9, var10, var4.field_o);
+          var8.drawScaledAlpha(-(var9 >> 1) + var5, -(var10 >> 1) + (var6 + 30), var9, var10, var4.field_o);
           var4 = (mia) (this.field_j.c(0));
         }
     }

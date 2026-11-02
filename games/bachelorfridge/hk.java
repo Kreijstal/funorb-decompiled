@@ -24,12 +24,12 @@ final class hk {
         field_b = null;
     }
 
-    final static kv[] a(String param0, vr param1, int param2, String param3) {
-        kv[] var4 = null;
+    final static Sprite[] a(String param0, vr param1, int param2, String param3) {
+        Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        kv[] var6 = null;
-        kv[] stackIn_1_0 = null;
+        Sprite[] var6 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -70,7 +70,7 @@ final class hk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class hk {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class hk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class hk {
           int var3_int = 12 % ((-16 - param0) / 61);
           oc.a(param1, "jagex-last-login-method", 31536000L, 123, this.field_g);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class cma extends ana {
     private j field_w;
-    static js field_x;
+    static IntrusiveNodeHashTable field_x;
     static int[] field_y;
     static int[] field_v;
 
@@ -42,7 +42,7 @@ final class cma extends ana {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var7), "cma.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) var7), "cma.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class cma extends ana {
         try {
           this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "cma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "cma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

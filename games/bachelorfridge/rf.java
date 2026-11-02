@@ -59,7 +59,7 @@ final class rf {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        lu var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -76,25 +76,25 @@ final class rf {
         int var13Lifetime1Lifetime1;
         var16 = BachelorFridge.field_y;
         try {
-          var17 = new lu(td.a(-97, param1));
-          var4 = var17.b(16711935);
+          var17 = new PacketBuffer(td.a(-97, param1));
+          var4 = var17.readUnsignedByte(16711935);
           if (var4 >= 5 &&
             var4 <= 7) {
             if (var4 >= 6) {
-              this.field_r = var17.f(-66);
+              this.field_r = var17.readInt(-66);
             } else {
               this.field_r = 0;
             }
             if (param0 != 27062) {
               rf.a(12);
             }
-            var5 = var17.b(16711935);
+            var5 = var17.readUnsignedByte(16711935);
             stackIn_13_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_13_0;
             if (var4 < 7) {
-              this.field_d = var17.e((byte) 100);
+              this.field_d = var17.readUnsignedShort((byte) 100);
             } else {
-              this.field_d = var17.f((byte) -127);
+              this.field_d = var17.readSmartInt((byte) -127);
             }
             stackIn_19_0 = ((var5 & 2) == 0) ? 0 : 1;
             var7 = stackIn_19_0;
@@ -103,7 +103,7 @@ final class rf {
             this.field_o = new int[this.field_d];
             if (var4 < 7) {
               for (var10 = 0; this.field_d > var10; var10++) {
-                dupTemp$0 = var8 + var17.e((byte) 107);
+                dupTemp$0 = var8 + var17.readUnsignedShort((byte) 107);
                 var8 = dupTemp$0;
                 this.field_o[var10] = dupTemp$0;
                 if (this.field_o[var10] > var9) {
@@ -112,7 +112,7 @@ final class rf {
               }
             } else {
               for (var10 = 0; var10 < this.field_d; var10++) {
-                dupTemp$1 = var8 + var17.f((byte) 103);
+                dupTemp$1 = var8 + var17.readSmartInt((byte) 103);
                 var8 = dupTemp$1;
                 this.field_o[var10] = dupTemp$1;
                 if (this.field_o[var10] > var9) {
@@ -135,12 +135,12 @@ final class rf {
                 this.field_s[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; this.field_d > var10Lifetime1Lifetime1; var10Lifetime1Lifetime1++) {
-                this.field_s[this.field_o[var10Lifetime1Lifetime1]] = var17.f(lt.a(param0, 27083));
+                this.field_s[this.field_o[var10Lifetime1Lifetime1]] = var17.readInt(lt.a(param0, 27083));
               }
               this.field_m = new cr(this.field_s);
             }
             for (var10Lifetime2 = 0; var10Lifetime2 < this.field_d; var10Lifetime2++) {
-              this.field_p[this.field_o[var10Lifetime2]] = var17.f(lt.a(param0, 27103));
+              this.field_p[this.field_o[var10Lifetime2]] = var17.readInt(lt.a(param0, 27103));
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.field_d > var10Lifetime3; var10Lifetime3++) {
@@ -150,11 +150,11 @@ final class rf {
               }
             }
             for (var10Lifetime4 = 0; var10Lifetime4 < this.field_d; var10Lifetime4++) {
-              this.field_i[this.field_o[var10Lifetime4]] = var17.f(-67);
+              this.field_i[this.field_o[var10Lifetime4]] = var17.readInt(-67);
             }
             if (var4 < 7) {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_d; var10Lifetime5++) {
-                this.field_e[this.field_o[var10Lifetime5]] = var17.e((byte) 108);
+                this.field_e[this.field_o[var10Lifetime5]] = var17.readUnsignedShort((byte) 108);
               }
               for (var10Lifetime5 = 0; this.field_d > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_o[var10Lifetime5];
@@ -164,7 +164,7 @@ final class rf {
                 array$2 = new int[var12];
                 this.field_c[var11] = array$2;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.e((byte) 57);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShort((byte) 57);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_c[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -180,7 +180,7 @@ final class rf {
               }
             } else {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_d; var10Lifetime5++) {
-                this.field_e[this.field_o[var10Lifetime5]] = var17.f((byte) -11);
+                this.field_e[this.field_o[var10Lifetime5]] = var17.readSmartInt((byte) -11);
               }
               for (var10Lifetime5 = 0; this.field_d > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_o[var10Lifetime5];
@@ -190,7 +190,7 @@ final class rf {
                 this.field_c[var11] = array$5;
                 var13 = -1;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.f((byte) -124);
+                  dupTemp$6 = var8Lifetime1 + var17.readSmartInt((byte) -124);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_c[var11];
                   dupTemp$7[var14] = dupTemp$6;
@@ -222,7 +222,7 @@ final class rf {
                   } else {
                     var14Lifetime1 = this.field_c[var11Lifetime1][var13Lifetime1Lifetime1];
                   }
-                  this.field_n[var11Lifetime1][var14Lifetime1] = var17.f(103);
+                  this.field_n[var11Lifetime1][var14Lifetime1] = var17.readInt(103);
                 }
                 this.field_l[var11Lifetime1] = new cr(this.field_n[var11Lifetime1]);
               }
@@ -241,7 +241,7 @@ final class rf {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
         }
     }
 
@@ -273,7 +273,7 @@ final class rf {
           }
           this.a(27062, param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

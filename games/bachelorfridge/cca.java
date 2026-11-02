@@ -3,7 +3,7 @@
  */
 final class cca extends ana {
     static String field_w;
-    static eaa field_v;
+    static IntrusiveDeque field_v;
     private jaa field_x;
 
     final boolean c(byte param0) {
@@ -29,7 +29,7 @@ final class cca extends ana {
           this.field_x.a(this.field_q.field_h, false);
           return;
         }
-        field_v = (eaa) null;
+        field_v = (IntrusiveDeque) null;
         this.field_x.a(this.field_q.field_h, false);
     }
 
@@ -62,20 +62,20 @@ final class cca extends ana {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final static void a(lu param0, int param1, byte param2, int param3, int param4) {
+    final static void a(PacketBuffer param0, int param1, byte param2, int param3, int param4) {
         try {
-          param0.d(12, 0);
+          param0.writeByte(12, 0);
           int var5_int = 51 / ((param2 + 3) / 61);
           param0.b(17, -114);
           param0.b(param4, -119);
           param0.b(param1, -117);
-          param0.d(param3, 0);
+          param0.writeByte(param3, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "cca.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "cca.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class cca extends ana {
         try {
           this.field_x = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "cca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "cca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

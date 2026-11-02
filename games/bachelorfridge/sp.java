@@ -32,7 +32,7 @@ final class sp extends pu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "sp.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "sp.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class sp extends pu {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class sp extends pu {
         RuntimeException var2 = null;
         var4 = BachelorFridge.field_y;
         try {
-          lka.field_E = qs.a(false, new lu(param0));
+          lka.field_E = qs.a(false, new PacketBuffer(param0));
           w.field_h = new int[50][13];
           for (var2_int = 1; var2_int < lka.field_E.length; var2_int++) {
             for (var3 = 2; 15 > var3; var3++) {
@@ -129,7 +129,7 @@ final class sp extends pu {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

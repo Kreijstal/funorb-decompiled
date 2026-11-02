@@ -9,7 +9,7 @@ final class jfa extends IntrusiveNode {
     int field_n;
     static int field_w;
     int field_z;
-    eaa field_i;
+    IntrusiveDeque field_i;
     int field_x;
     int field_p;
     private Random field_r;
@@ -19,7 +19,7 @@ final class jfa extends IntrusiveNode {
     wda[][] field_m;
     int field_u;
     int field_k;
-    private kv field_j;
+    private Sprite field_j;
     private int field_h;
     static qc[] field_q;
     rk field_g;
@@ -50,7 +50,7 @@ final class jfa extends IntrusiveNode {
         int var4Lifetime1;
         int var6Lifetime1;
         var8 = BachelorFridge.field_y;
-        stackIn_3_0 = (dm.field_f > 0) ? 0 : 1;
+        stackIn_3_0 = (ProxySocketConnector.field_f > 0) ? 0 : 1;
         var2 = stackIn_3_0;
         var3 = -117 % ((param0 - 6) / 37);
         stackIn_6_0 = (var2 == 0) ? 5 : 2;
@@ -95,7 +95,7 @@ final class jfa extends IntrusiveNode {
           return true;
         }
         if (param1 <= 115) {
-          this.field_j = (kv) null;
+          this.field_j = (Sprite) null;
           return false;
         }
         return false;
@@ -117,32 +117,32 @@ final class jfa extends IntrusiveNode {
         } else {
           var2_ref_pv = (pv) (this.field_i.b((byte) 90));
           if (var2_ref_pv.b(true)) {
-            var2_ref_pv.a(false);
+            var2_ref_pv.unlink(false);
           }
         }
         this.field_v.c(11);
         var2 = 84 / ((57 - param0) / 36);
     }
 
-    final static kv[] a(vr param0, int param1, String param2) {
+    final static Sprite[] a(vr param0, int param1, String param2) {
         int var4 = 0;
         int var6 = 0;
-        kv[] stackIn_16_0 = null;
+        Sprite[] stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kv[] var3 = null;
+        Sprite[] var3 = null;
         RuntimeException var3_ref = null;
         Object var5 = null;
-        kv[] var5_array = null;
+        Sprite[] var5_array = null;
         int var7 = 0;
         String var8 = null;
         var7 = BachelorFridge.field_y;
         try {
-          var3 = new kv[50];
+          var3 = new Sprite[50];
           if (param1 != 4) {
             var8 = (String) null;
             jfa.a((vr) null, -103, (String) null);
@@ -178,7 +178,7 @@ final class jfa extends IntrusiveNode {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -213,7 +213,7 @@ final class jfa extends IntrusiveNode {
           this.field_o.field_e.e(12917) &&
           null != this.field_m[this.field_u][this.field_l].field_f &&
           this.field_m[this.field_u][this.field_l].field_f.field_a &&
-          this.field_g.a((byte) 77, this.field_m[this.field_u][this.field_l].field_f.field_d, dm.field_f)) {
+          this.field_g.a((byte) 77, this.field_m[this.field_u][this.field_l].field_f.field_d, ProxySocketConnector.field_f)) {
           this.field_i.a(new vma(this, this.field_m[this.field_u][this.field_l].field_f), true);
           this.field_i.a(new vu(this, true), true);
           this.field_y = -1;
@@ -365,7 +365,7 @@ final class jfa extends IntrusiveNode {
     }
 
     final void g(int param0) {
-        this.field_i = new eaa();
+        this.field_i = new IntrusiveDeque();
         this.field_o = null;
         this.field_x = -1;
         this.field_z = -1;
@@ -403,8 +403,8 @@ final class jfa extends IntrusiveNode {
         this.field_v.a(this.field_s, false, this.field_p >> 1, this.field_h >> 1, 0, -15, 256, this.field_n + param1, this.field_k - 33);
         if (this.field_y != -1 &&
           this.field_g.field_f == -1) {
-          bna.field_v.e(param1 + this.field_n + 10, this.field_k - 44);
-          mq.field_b[this.field_y].e(this.field_n + 23 + param1, this.field_k - 38);
+          bna.field_v.draw(param1 + this.field_n + 10, this.field_k - 44);
+          mq.field_b[this.field_y].draw(this.field_n + 23 + param1, this.field_k - 38);
         }
         if (this.field_i.b((byte) 90) instanceof vu) {
           var6 = (vu) (this.field_i.b((byte) 90));
@@ -413,7 +413,7 @@ final class jfa extends IntrusiveNode {
             if (var6.field_m[var4][2] <= 0) {
               return;
             }
-            iq.field_l.c(param1 + (30 - var6.field_m[var4][0]) + this.field_n, -var6.field_m[var4][1] + this.field_k, var6.field_m[var4][3], var6.field_m[var4][3]);
+            iq.field_l.drawScaled(param1 + (30 - var6.field_m[var4][0]) + this.field_n, -var6.field_m[var4][1] + this.field_k, var6.field_m[var4][3], var6.field_m[var4][3]);
           }
         }
     }
@@ -437,19 +437,19 @@ final class jfa extends IntrusiveNode {
           this.field_k = this.b(true);
           this.field_m = param3;
           this.field_v = this.field_g.e((byte) -127);
-          this.field_i = new eaa();
+          this.field_i = new IntrusiveDeque();
           this.field_r = new Random();
-          this.field_j = new kv(39, 39);
+          this.field_j = new Sprite(39, 39);
           var5 = new int[256];
           var8 = a.a(0, 256, 16763049, 4552212);
           var7 = var8;
           var6 = var7;
           var5Lifetime1 = var6;
           this.field_j.b();
-          dg.a(320, 320, 304, 255, var8);
+          SoftwareRasterizer.a(320, 320, 304, 255, var8);
           hga.field_U.a((byte) -53);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jfa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jfa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

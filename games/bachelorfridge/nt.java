@@ -3,7 +3,7 @@
  */
 final class nt extends ana {
     static String field_x;
-    static ee[] field_z;
+    static IndexedSprite[] field_z;
     static String[] field_y;
     static String field_w;
     private lk field_v;
@@ -43,7 +43,7 @@ final class nt extends ana {
 
     final boolean c(byte param0) {
         int fieldTemp$0 = 0;
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
         int var2 = 12 % ((param0 - 71) / 47);
@@ -81,7 +81,7 @@ final class nt extends ana {
         try {
           this.field_v = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

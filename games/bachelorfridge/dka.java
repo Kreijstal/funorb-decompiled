@@ -15,13 +15,13 @@ final class dka extends vd implements lja {
           }
           fo.field_a.a(param1 ^ -60, param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dka.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dka.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public dka() {
         super(0, 0, 476, 225, (qda) null);
-        this.field_E = new hf(sca.field_b, (pl) null);
+        this.field_E = new hf(MouseWheelInput.field_b, (pl) null);
         this.field_C = new hf(nt.field_x, (pl) null);
         this.field_F = new hf(tja.field_b, (pl) null);
         ff var1 = new ff();
@@ -81,14 +81,14 @@ final class dka extends vd implements lja {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = param3 + this.field_s;
         int var6 = param1 + this.field_v;
-        jca.field_a.a(wfa.field_q, var5 + 20, 20 + var6, this.field_p - 40, this.field_q - 50, 16777215, -1, 1, 0, jca.field_a.field_u);
+        jca.field_a.drawParagraph(wfa.field_q, var5 + 20, 20 + var6, this.field_p - 40, this.field_q - 50, 16777215, -1, 1, 0, jca.field_a.field_u);
         super.a((byte) 74, param1, param2, param3);
         int var7 = -39 / ((param0 + 20) / 54);
     }
@@ -127,7 +127,7 @@ final class dka extends vd implements lja {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

@@ -49,7 +49,7 @@ final class vn extends lka implements mca {
           super.a(param0, param1, param2, param3);
           this.field_P = mk.field_p - this.field_s - param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vn.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vn.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class vn extends lka implements mca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class vn extends lka implements mca {
           }
           this.field_N = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vn.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vn.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

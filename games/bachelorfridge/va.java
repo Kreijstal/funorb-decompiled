@@ -4,24 +4,24 @@
 final class va {
     final static void a(int param0) {
         RuntimeException decompiledCaughtException = null;
-        kv var1 = null;
+        Sprite var1 = null;
         RuntimeException var1_ref = null;
         int var2_int = 0;
         Object var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        kv var6 = null;
-        kv var7 = null;
-        kv var8 = null;
+        Sprite var6 = null;
+        Sprite var7 = null;
+        Sprite var8 = null;
         int var3Lifetime1;
         var4 = BachelorFridge.field_y;
         try {
-          dg.a(243, 197, 369, 143, 16777215);
-          dg.c(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRectangle(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == oja.field_f) {
             if (null != g.field_f) {
-              g.field_f.a(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              g.field_f.drawParagraph(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -31,10 +31,10 @@ final class va {
             va.a((byte) -87);
           }
           if (var6 != null) {
-            var6.e(245, 199);
+            var6.draw(245, 199);
           } else {
             if (null != g.field_f) {
-              g.field_f.a(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              g.field_f.drawParagraph(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
           if (gp.field_A < ph.field_E) {
@@ -70,12 +70,12 @@ final class va {
           if (var2 == null) {
             return;
           }
-          g.field_f.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+          g.field_f.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref), "va.A(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "va.A(" + param0 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class va {
         if (param0 < 7) {
           return;
         }
-        eaa.field_b = -1;
+        IntrusiveDeque.field_b = -1;
         b.field_r = false;
         df.field_o = 0;
     }

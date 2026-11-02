@@ -7,7 +7,7 @@ final class oja {
     static int field_c;
     static String field_b;
     static int[] field_a;
-    static kv[] field_f;
+    static Sprite[] field_f;
     static String field_e;
 
     public static void a(int param0) {

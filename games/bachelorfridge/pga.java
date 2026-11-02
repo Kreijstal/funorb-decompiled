@@ -3,7 +3,7 @@
  */
 final class pga {
     static int field_a;
-    static js field_b;
+    static IntrusiveNodeHashTable field_b;
 
     final static du a(boolean param0, int param1) {
         int var3 = 0;

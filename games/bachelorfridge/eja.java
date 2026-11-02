@@ -3,7 +3,7 @@
  */
 final class eja extends ana {
     private nb field_v;
-    static kv field_w;
+    static Sprite field_w;
 
     final boolean c(byte param0) {
         ad var2 = this.field_v.field_l.a(-27449, this.field_q);
@@ -27,7 +27,7 @@ final class eja extends ana {
 
     private final void d(int param0) {
         if (param0 <= 57) {
-          field_w = (kv) null;
+          field_w = (Sprite) null;
         }
     }
 
@@ -63,7 +63,7 @@ final class eja extends ana {
         try {
           this.field_v = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "eja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "eja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class eja extends ana {
         var25 = BachelorFridge.field_y;
         try {
           if (param0 != -60) {
-            field_w = (kv) null;
+            field_w = (Sprite) null;
           }
           gp.a(true, param1);
           var7_int = 0;
@@ -188,13 +188,13 @@ final class eja extends ana {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var7), "eja.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) var7), "eja.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     public static void e(int param0) {
         if (param0 < 94) {
-          field_w = (kv) null;
+          field_w = (Sprite) null;
           field_w = null;
           return;
         }

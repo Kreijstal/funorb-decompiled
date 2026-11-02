@@ -91,7 +91,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             vc.a((byte) -65);
             ih.e(10);
             ns.a(bja.field_m, -11, 2);
-            eka.c((byte) -69);
+            MusicPatch.c((byte) -69);
             qe.field_l = true;
             sja.field_hb = f.b((byte) 73) + 15000L;
           }
@@ -317,7 +317,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (null == dla.field_l) {
             dla.field_l = cda.a(0);
-            de.field_E = rma.b(1);
+            de.field_E = SocketConnector.b(1);
           }
           re.a(de.field_E, dla.field_l, em.field_T, false);
           em.field_T = null;
@@ -510,7 +510,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           int var4 = 0;
           int var5 = 0;
           Exception var6 = null;
-          lu var7 = null;
+          PacketBuffer var7 = null;
           String var8 = null;
           int var9 = 0;
           String var10 = null;
@@ -592,7 +592,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             lha.a(nia.d(-31768), -17672);
           }
           if (var4 == 10) {
-            sja.field_fb.c(17, (byte) 127);
+            sja.field_fb.writeCipheredByte(17, (byte) 127);
           }
           if (var4 == 11) {
             qfa.a(nia.d(-31768), -61);
@@ -604,7 +604,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 13) {
             try {
               if (lf.field_d == null) {
-                lf.field_d = new tca(ju.field_r, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                lf.field_d = new JaggrabDownloader(ju.field_r, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (lf.field_d.b((byte) 126)) {
                 var7 = lf.field_d.a(-11514);
@@ -612,7 +612,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   var10 = (String) null;
                   ana.a(-1, (String) null);
                 } else {
-                  var8 = gt.a(0, var7.field_h, (byte) 104, var7.field_g);
+                  var8 = gt.a(0, var7.payload, (byte) 104, var7.position);
                   ana.a(-1, var8);
                 }
                 lf.field_d = null;
@@ -693,34 +693,34 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void f(byte param0) {
-        mfa.field_b[18] = 1;
-        mfa.field_b[17] = -1;
-        mfa.field_b[6] = -2;
-        mfa.field_b[8] = -2;
-        mfa.field_b[1] = 16;
-        mfa.field_b[11] = -1;
-        mfa.field_b[10] = -1;
-        mfa.field_b[7] = -1;
-        mfa.field_b[16] = -1;
+        GameKeyHandler.field_b[18] = 1;
+        GameKeyHandler.field_b[17] = -1;
+        GameKeyHandler.field_b[6] = -2;
+        GameKeyHandler.field_b[8] = -2;
+        GameKeyHandler.field_b[1] = 16;
+        GameKeyHandler.field_b[11] = -1;
+        GameKeyHandler.field_b[10] = -1;
+        GameKeyHandler.field_b[7] = -1;
+        GameKeyHandler.field_b[16] = -1;
         if (param0 == -115) {
-          mfa.field_b[5] = -1;
-          mfa.field_b[2] = -2;
-          mfa.field_b[12] = -1;
-          mfa.field_b[9] = -1;
-          mfa.field_b[13] = -1;
-          mfa.field_b[3] = -1;
-          mfa.field_b[4] = -1;
+          GameKeyHandler.field_b[5] = -1;
+          GameKeyHandler.field_b[2] = -2;
+          GameKeyHandler.field_b[12] = -1;
+          GameKeyHandler.field_b[9] = -1;
+          GameKeyHandler.field_b[13] = -1;
+          GameKeyHandler.field_b[3] = -1;
+          GameKeyHandler.field_b[4] = -1;
           return;
         }
     }
 
     private final void k(int param0) {
         int discarded$0 = 0;
-        int var2 = ig.field_m.b(16711935);
+        int var2 = ig.field_m.readUnsignedByte(16711935);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = dw.field_f - 1;
         byte[] var5 = new byte[var4];
-        ig.field_m.b(var5, var4, 0, param0 - 31918);
+        ig.field_m.readCipheredBytes(var5, var4, 0, param0 - 31918);
         gja.a(var3 != 0, nia.d(-31768), qq.a(var5, false), 38);
         if (param0 != 10) {
           discarded$0 = this.a(false, 81, false);
@@ -746,7 +746,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         sr.a(kt.field_k, (byte) 78);
         vda.a(this.field_w, this.field_v, 5000, param0, param5, this.field_n, 5000, 64, ju.field_r, this.field_k, kt.field_k, this.field_r, this.field_t, this.field_l);
         cc.a(param0, this.field_r, -1456477592, this.field_k, this.field_l, ju.field_r, kt.field_k, this.field_v, this.field_t);
-        wma.c((byte) 69);
+        DualLinkNodeHashTable.c((byte) 69);
         sd.field_c = qq.b(-5368);
         nl.a(dca.field_y, (byte) 76);
         mj.field_j = param6;
@@ -768,7 +768,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           this.a(640, param2, 480, param0 + 19898, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ms.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ms.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

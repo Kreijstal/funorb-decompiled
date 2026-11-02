@@ -10,7 +10,7 @@ final class gh extends td {
         if (param0 != -67) {
           return (hk[]) null;
         }
-        return new hk[]{se.field_u, er.field_x, uka.field_k};
+        return new hk[]{DiskCacheRequest.field_u, er.field_x, ImageProducerRasterBuffer.field_k};
     }
 
     final ii a(op param0, int param1) {
@@ -60,7 +60,7 @@ final class gh extends td {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

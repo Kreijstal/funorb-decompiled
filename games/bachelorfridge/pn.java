@@ -5,15 +5,15 @@ abstract class pn {
     static String field_e;
     static int field_d;
     static int field_f;
-    private pa[] field_c;
-    ee[] field_b;
-    kv[] field_a;
+    private ArgbSprite[] field_c;
+    IndexedSprite[] field_b;
+    Sprite[] field_a;
 
-    private final ee a(int param0, byte param1) {
-        pa discarded$0 = null;
+    private final IndexedSprite a(int param0, byte param1) {
+        ArgbSprite discarded$0 = null;
         if (param1 != -78) {
-          kv var4 = (kv) null;
-          discarded$0 = this.a((kv) null, (kv) null, false, 60);
+          Sprite var4 = (Sprite) null;
+          discarded$0 = this.a((Sprite) null, (Sprite) null, false, 60);
         }
         if (param0 < 0) {
           return null;
@@ -24,7 +24,7 @@ abstract class pn {
         return this.field_b[param0 + 120];
     }
 
-    private final ee b(int param0, int param1, int param2) {
+    private final IndexedSprite b(int param0, int param1, int param2) {
         if (param1 > 5) {
           return null;
         }
@@ -87,7 +87,7 @@ abstract class pn {
             }
           }
           if (param1 < 97) {
-            this.field_c = (pa[]) null;
+            this.field_c = (ArgbSprite[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,19 +100,19 @@ abstract class pn {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private final void a(jo param0, int param1) {
         int var6 = 0;
         int var3_int = 0;
-        ee[] var4 = null;
+        IndexedSprite[] var4 = null;
         int var5 = 0;
-        kv var7 = null;
-        kv var8 = null;
+        Sprite var7 = null;
+        Sprite var8 = null;
         int var9 = 0;
-        kv stackIn_16_0 = null;
+        Sprite stackIn_16_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -132,18 +132,18 @@ abstract class pn {
           }
           var4 = iw.field_b;
           var5 = var4.length;
-          this.field_c = new pa[var5];
+          this.field_c = new ArgbSprite[var5];
           if (param1 != -1) {
-            this.field_a = (kv[]) null;
+            this.field_a = (Sprite[]) null;
           }
           for (var6 = 0; var6 < var5; var6++) {
             if (var6 == 0) {
               stackIn_16_0 = null;
             } else {
-              stackIn_16_0 = iw.field_b[var6 - 1].a();
+              stackIn_16_0 = iw.field_b[var6 - 1].toRgbSprite();
             }
             var7 = stackIn_16_0;
-            var8 = iw.field_b[var6].a();
+            var8 = iw.field_b[var6].toRgbSprite();
             this.field_c[var6] = this.a(var8, var7, false, var3_int);
           }
           return;
@@ -157,22 +157,22 @@ abstract class pn {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final ee a(int param0, int param1) {
+    private final IndexedSprite a(int param0, int param1) {
         if (param1 > 5) {
           return null;
         }
         if (param0 != 21160) {
-          return (ee) null;
+          return (IndexedSprite) null;
         }
         return this.field_b[96 + param1];
     }
 
     private final void a(int param0, aj param1, int param2, byte param3, jo param4) {
-        ee var9 = null;
+        IndexedSprite var9 = null;
         wia var10 = param4.field_i.field_h.field_a[param2][param0];
         int var7 = var10.field_n;
         if (param3 != -35) {
@@ -189,11 +189,11 @@ abstract class pn {
           }
           this.a(param2, (byte) 100, var8, param0, var7).a(param1.field_c, param1.field_a);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pn.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pn.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final ee d(int param0, int param1) {
+    private final IndexedSprite d(int param0, int param1) {
         if (param1 == 0) {
           return nca.field_a[15];
         }
@@ -207,7 +207,7 @@ abstract class pn {
         return nca.field_a[111];
     }
 
-    private final ee b(int param0, int param1) {
+    private final IndexedSprite b(int param0, int param1) {
         if (param0 == ~param1) {
           return nca.field_a[14];
         }
@@ -220,7 +220,7 @@ abstract class pn {
         return null;
     }
 
-    private final ee a(int param0, int param1, int param2, byte param3, int param4, int param5) {
+    private final IndexedSprite a(int param0, int param1, int param2, byte param3, int param4, int param5) {
         if (param0 == 6 ||
           param0 == 8 ||
           10 == param0 ||
@@ -236,13 +236,13 @@ abstract class pn {
     }
 
     void b(jo param0, int param1) {
-        ee discarded$0 = null;
+        IndexedSprite discarded$0 = null;
         try {
           if (param1 != -13319) {
             discarded$0 = this.a(45, -37, 115, (byte) 34, -102, -47);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -256,7 +256,7 @@ abstract class pn {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        pa var11 = null;
+        ArgbSprite var11 = null;
         int var11_int = 0;
         int var12 = 0;
         int var13 = 0;
@@ -319,7 +319,7 @@ abstract class pn {
                       var10 = iw.field_b.length - 1;
                     }
                     var11 = this.field_c[var10];
-                    var11.e(param4, param5);
+                    var11.draw(param4, param5);
                   }
                 } else {
                   if (var9 != 36) {
@@ -328,7 +328,7 @@ abstract class pn {
                         pk.field_b[(param2 + param0) % 7].a(param4, param5);
                       } else {
                         if (var9 == 39) {
-                          ip.field_f[0].e(32 + param4, -32 + param5);
+                          ip.field_f[0].draw(32 + param4, -32 + param5);
                         } else {
                           if (var9 == 37) {
                             var10 = (param0 + 47 * param2) % 3;
@@ -347,7 +347,7 @@ abstract class pn {
                             var20 = var20 - (3 * var18 >> 4);
                             var19 = var19 - (var18 >> 2);
                             nk.a(param3.field_y, -(var19 >> 1) + 64 + var13, -(var20 >> 1) + 36 + var14, var19, var20);
-                            eka.field_g[var10][var21].a(var13, -var18 + var14);
+                            MusicPatch.field_g[var10][var21].a(var13, -var18 + var14);
                           }
                         }
                       }
@@ -372,33 +372,33 @@ abstract class pn {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    private final pa a(kv param0, int param1, int param2) {
+    private final ArgbSprite a(Sprite param0, int param1, int param2) {
         int var7 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        pa var5 = null;
+        ArgbSprite var5 = null;
         int[] var6 = null;
         int var8 = 0;
         int var9 = 0;
         jo var10 = null;
-        pa stackIn_10_0 = null;
+        ArgbSprite stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         var9 = BachelorFridge.field_y;
         try {
-          param0.g();
+          param0.normalizeCanvas();
           var4_int = param0.field_v.length;
           if (param2 >= -75) {
             var10 = (jo) null;
             this.a((jo) null, (byte) 45);
           }
-          var5 = new pa(param0.field_n, param0.field_o);
+          var5 = new ArgbSprite(param0.field_n, param0.field_o);
           var6 = var5.field_v;
           for (var7 = 0; var4_int > var7; var7++) {
             var8 = 16777215 & param0.field_v[var7];
@@ -420,19 +420,19 @@ abstract class pn {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     private final void a(int param0, int param1, jo param2, int param3, int param4, boolean param5) {
-        ee discarded$0 = null;
+        IndexedSprite discarded$0 = null;
         try {
           if (param5) {
             discarded$0 = this.a(116, -127, -22);
           }
           this.c(26728, (param0 + param1 * (param2.field_a + 2)) % 24).a(param4, param3);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pn.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pn.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -465,16 +465,16 @@ abstract class pn {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    private final pa a(kv param0, kv param1, boolean param2, int param3) {
+    private final ArgbSprite a(Sprite param0, Sprite param1, boolean param2, int param3) {
         int var8 = 0;
-        pa stackIn_5_0 = null;
-        pa stackIn_7_0 = null;
-        pa stackIn_10_0 = null;
-        pa stackIn_26_0 = null;
+        ArgbSprite stackIn_5_0 = null;
+        ArgbSprite stackIn_7_0 = null;
+        ArgbSprite stackIn_10_0 = null;
+        ArgbSprite stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -483,7 +483,7 @@ abstract class pn {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        pa var6 = null;
+        ArgbSprite var6 = null;
         int[] var7 = null;
         int var9 = 0;
         int var10 = 0;
@@ -504,17 +504,17 @@ abstract class pn {
             stackIn_5_0 = this.a(param1, 255 - param3, -115);
             return stackIn_5_0;
           }
-          param1.g();
-          param0.g();
+          param1.normalizeCanvas();
+          param0.normalizeCanvas();
           if (param2) {
-            stackIn_10_0 = (pa) null;
+            stackIn_10_0 = (ArgbSprite) null;
             return stackIn_10_0;
           }
           var5_int = param1.field_v.length;
           if (param0.field_v.length != var5_int) {
             throw new RuntimeException();
           }
-          var6 = new pa(param1.field_n, param1.field_o);
+          var6 = new ArgbSprite(param1.field_n, param1.field_o);
           var17 = var6.field_v;
           var16 = var17;
           var7 = var16;
@@ -566,11 +566,11 @@ abstract class pn {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final ee a(int param0, byte param1, int param2, int param3, int param4) {
+    private final IndexedSprite a(int param0, byte param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var6 = 27 / ((-28 - param1) / 40);
         if (param4 != 6 &&
@@ -632,12 +632,12 @@ abstract class pn {
         Object var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
-        ee var9 = null;
-        ee var10 = null;
-        ee var11 = null;
-        ee var12 = null;
-        ee var13 = null;
-        ee var14 = null;
+        IndexedSprite var9 = null;
+        IndexedSprite var10 = null;
+        IndexedSprite var11 = null;
+        IndexedSprite var12 = null;
+        IndexedSprite var13 = null;
+        IndexedSprite var14 = null;
         var8 = BachelorFridge.field_y;
         try {
           if (param4.field_j[param0][param3].field_n == 1) {
@@ -772,7 +772,7 @@ abstract class pn {
             }
           }
           if (param1) {
-            this.field_c = (pa[]) null;
+            this.field_c = (ArgbSprite[]) null;
           }
           if (30 == param4.field_j[param0][param3].field_n) {
             if (param4.field_j[param0][param3].field_k == 5) {
@@ -802,11 +802,11 @@ abstract class pn {
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    private final ee c(int param0, int param1) {
+    private final IndexedSprite c(int param0, int param1) {
         if (param1 < 0) {
           return null;
         }
@@ -814,14 +814,14 @@ abstract class pn {
           return null;
         }
         if (param0 != 26728) {
-          return (ee) null;
+          return (IndexedSprite) null;
         }
         return this.field_b[param1 + 64];
     }
 
-    private final ee a(int param0, int param1, int param2) {
+    private final IndexedSprite a(int param0, int param1, int param2) {
         if (param2 != 15392) {
-          return (ee) null;
+          return (IndexedSprite) null;
         }
         if (1 != param0) {
           return null;
@@ -829,7 +829,7 @@ abstract class pn {
         return nca.field_a[64 + param1];
     }
 
-    private final ee a(byte param0, int param1) {
+    private final IndexedSprite a(byte param0, int param1) {
         if (param1 > 5) {
           return null;
         }

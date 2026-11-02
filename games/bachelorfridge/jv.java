@@ -8,16 +8,16 @@ final class jv extends tia {
     static sna field_i;
     private int field_k;
     static int field_j;
-    private eaa field_l;
+    private IntrusiveDeque field_l;
 
     jv(gj param0, ad param1, int param2) {
         super(param0, param1);
         try {
           this.field_k = param2;
           this.field_g = 128;
-          this.field_l = new eaa();
+          this.field_l = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qla extends kj {
-    static kv[] field_g;
+    static Sprite[] field_g;
     static int field_f;
     private int field_i;
     private int field_h;
 
-    final static sna a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, po param7, int param8, int param9, int param10, int param11, int param12) {
+    final static sna a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7, int param8, int param9, int param10, int param11, int param12) {
         sna var13 = null;
         RuntimeException var13_ref = null;
         sna stackIn_3_0 = null;
@@ -39,7 +39,7 @@ final class qla extends kj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -50,8 +50,8 @@ final class qla extends kj {
           this.field_i = this.field_i + 1;
           return fieldTemp$0 < 64 ? false : true;
         }
-        po var3 = (po) null;
-        qla.a(96, -29, 54, -43, 95, 72, 56, (po) null, -23, -63, 97, 106, -33);
+        BitmapFont var3 = (BitmapFont) null;
+        qla.a(96, -29, 54, -43, 95, 72, 56, (BitmapFont) null, -23, -63, 97, 106, -33);
         int fieldTemp$1 = this.field_i + 1;
         this.field_i = this.field_i + 1;
         if (fieldTemp$1 >= 64) {
@@ -65,23 +65,23 @@ final class qla extends kj {
         try {
           this.field_h = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void a(int param0, boolean param1, int param2) {
-        am.field_M[this.field_h].c(-24 + (param2 + 64), -this.field_i - 24 + param0 - 32, am.field_M[this.field_h].field_q << 1, am.field_M[this.field_h].field_p << 1, 256 - (this.field_i << 2));
+        am.field_M[this.field_h].drawScaledAlpha(-24 + (param2 + 64), -this.field_i - 24 + param0 - 32, am.field_M[this.field_h].field_q << 1, am.field_M[this.field_h].field_p << 1, 256 - (this.field_i << 2));
         if (!param1) {
           this.a(43, 82, 108);
         }
     }
 
     final static void d(int param0) {
-        eaa.f(31883);
+        IntrusiveDeque.f(31883);
         nm.f(-21522);
         uc.b(-103);
         if (param0 != -64) {
-          field_g = (kv[]) null;
+          field_g = (Sprite[]) null;
         }
     }
 
@@ -100,7 +100,7 @@ final class qla extends kj {
         field_g = null;
     }
 
-    final static boolean a(byte param0, lu param1) {
+    final static boolean a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -111,7 +111,7 @@ final class qla extends kj {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.b(16711935);
+          var2_int = param1.readUnsignedByte(16711935);
           stackIn_3_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_3_0;
           if (param0 > 79) {
@@ -129,7 +129,7 @@ final class qla extends kj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

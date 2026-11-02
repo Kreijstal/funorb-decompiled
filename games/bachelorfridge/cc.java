@@ -8,7 +8,7 @@ final class cc {
     private pha field_g;
     static String[] field_d;
     static sna field_b;
-    static ht field_e;
+    static PlatformTaskDispatcher field_e;
 
     final jc a(byte param0, int param1) {
         byte[] var4 = null;
@@ -24,7 +24,7 @@ final class cc {
         }
         var3 = new jc();
         if (var4 != null) {
-          var3.a(new lu(var4), false);
+          var3.a(new PacketBuffer(var4), false);
         }
         if (param1 >= 32768) {
           var3.d((byte) -25);
@@ -36,8 +36,8 @@ final class cc {
     public static void a(byte param0) {
         field_d = null;
         if (param0 != -122) {
-          ht var2 = (ht) null;
-          cc.a(-37, (String) null, 61, 62, -69, (ht) null, -47, 27, -18);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          cc.a(-37, (String) null, 61, 62, -69, (PlatformTaskDispatcher) null, -47, 27, -18);
         }
         field_e = null;
         field_b = null;
@@ -79,7 +79,7 @@ final class cc {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -278,11 +278,11 @@ final class cc {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, ht param5, int param6, int param7, int param8) {
+    final static void a(int param0, String param1, int param2, int param3, int param4, PlatformTaskDispatcher param5, int param6, int param7, int param8) {
         nj.field_f = param4;
         pw.field_A = param1;
         ro.field_j = param0;
@@ -296,10 +296,10 @@ final class cc {
           uea.field_i = param7;
           gp.field_x = param3;
           aka.field_G = (vm) ((Object) new cl());
-          oea.field_q = new ea(param5);
+          oea.field_q = new DiskCacheWorker(param5);
           ga.field_c = new kb(aka.field_G, oea.field_q);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "cc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "cc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

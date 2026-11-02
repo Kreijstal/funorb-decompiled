@@ -5,19 +5,19 @@ abstract class at extends IntrusiveNode {
     static String field_i;
     static String[] field_g;
     boolean field_f;
-    eaa field_h;
+    IntrusiveDeque field_h;
 
     final void a(int param0, at param1) {
         try {
           if (this.field_h == null) {
-            this.field_h = new eaa();
+            this.field_h = new IntrusiveDeque();
           }
           if (param0 != 27799) {
             field_g = (String[]) null;
           }
           this.field_h.a(param1, true);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "at.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "at.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,7 +48,7 @@ abstract class at extends IntrusiveNode {
               return stackIn_11_0;
             }
             if (var2.b(21807)) {
-              var2.a(false);
+              var2.unlink(false);
               var2 = (at) (this.field_h.c(0));
               continue;
             }
@@ -76,7 +76,7 @@ abstract class at extends IntrusiveNode {
               return stackIn_61_0;
             }
             if (var2Lifetime1.b(21807)) {
-              var2Lifetime1.a(false);
+              var2Lifetime1.unlink(false);
               var2Lifetime1 = (at) (this.field_h.c(0));
               continue;
             }
@@ -99,7 +99,7 @@ abstract class at extends IntrusiveNode {
             return stackIn_34_0;
           }
           if (var2Lifetime2.b(21807)) {
-            var2Lifetime2.a(false);
+            var2Lifetime2.unlink(false);
             var2Lifetime2 = (at) (this.field_h.c(0));
             continue;
           }

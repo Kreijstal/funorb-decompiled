@@ -13,14 +13,14 @@ class gha implements qda, qka {
     static sna field_d;
     static int field_q;
     int field_r;
-    static ee field_b;
+    static IndexedSprite field_b;
     int field_m;
     int field_j;
     private boolean field_o;
     int field_i;
     int field_f;
-    static ee field_h;
-    po field_l;
+    static IndexedSprite field_h;
+    BitmapFont field_l;
 
     public final int a(wj param0, int param1, byte param2) {
         RuntimeException var4 = null;
@@ -45,11 +45,11 @@ class gha implements qda, qka {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    gha(po param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    gha(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -84,7 +84,7 @@ class gha implements qda, qka {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ class gha implements qda, qka {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ class gha implements qda, qka {
         try {
           this.a(0, param2, -98, param3, param0, this.field_n, param1, this.field_k);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gha.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gha.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ class gha implements qda, qka {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ class gha implements qda, qka {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ class gha implements qda, qka {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -298,7 +298,7 @@ class gha implements qda, qka {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -328,7 +328,7 @@ class gha implements qda, qka {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -349,7 +349,7 @@ class gha implements qda, qka {
           param1.field_s = this.field_s;
           param1.field_m = this.field_m;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gha.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gha.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -408,7 +408,7 @@ class gha implements qda, qka {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -455,7 +455,7 @@ class gha implements qda, qka {
         if (param0 != 8) {
           return;
         }
-        ko.a(param1, (byte) -89);
+        IsaacRandom.a(param1, (byte) -89);
     }
 
     private final void a(int param0, int param1, int param2, int param3, wj param4, int param5, int param6, int param7) {
@@ -479,7 +479,7 @@ class gha implements qda, qka {
           var10 = this.a(param4, false);
           var11 = this.b(param4, 8);
           if (this.field_o) {
-            this.field_l.a(this.c(param4, 1), this.a((byte) -110, param4, param3, param1), this.a(param0, param6, param4, (byte) 110), var10, var11, param7, param5, this.field_m, this.field_g, this.field_c);
+            this.field_l.drawParagraph(this.c(param4, 1), this.a((byte) -110, param4, param3, param1), this.a(param0, param6, param4, (byte) 110), var10, var11, param7, param5, this.field_m, this.field_g, this.field_c);
           } else {
             var13 = this.field_g;
             if (var13 != 0) {
@@ -507,7 +507,7 @@ class gha implements qda, qka {
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_l.c(this.c(param4, 1), this.a((byte) 77, param4, param3, param1), this.a(param0, param6, param4, (byte) 100) + var12, param7, param5);
+              this.field_l.drawText(this.c(param4, 1), this.a((byte) 77, param4, param3, param1), this.a(param0, param6, param4, (byte) 100) + var12, param7, param5);
             }
           }
           db.b(105);
@@ -522,7 +522,7 @@ class gha implements qda, qka {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -536,7 +536,7 @@ class gha implements qda, qka {
         try {
           this.a(param1, param3, 0, param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gha.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gha.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -566,7 +566,7 @@ class gha implements qda, qka {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -595,7 +595,7 @@ class gha implements qda, qka {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -673,7 +673,7 @@ class gha implements qda, qka {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -698,14 +698,14 @@ class gha implements qda, qka {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
     protected gha() {
     }
 
-    gha(po param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    gha(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_r = param4;
           this.field_j = param3;
@@ -721,7 +721,7 @@ class gha implements qda, qka {
           this.field_l = param0;
           this.field_c = param9;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 
@@ -747,7 +747,7 @@ class gha implements qda, qka {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(')').toString());
         }
     }
 

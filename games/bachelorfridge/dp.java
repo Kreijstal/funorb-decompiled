@@ -6,7 +6,7 @@ final class dp extends lw {
     static aj field_l;
     static String field_m;
     static String field_p;
-    static kv[] field_n;
+    static Sprite[] field_n;
     static int field_q;
 
     final void a(int param0, byte param1) {
@@ -124,7 +124,7 @@ final class dp extends lw {
             dp.a((java.applet.Applet) null, 36);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -4,22 +4,22 @@
 import java.util.*;
 
 final class bn extends kj {
-    private eaa field_g;
-    static ee field_h;
+    private IntrusiveDeque field_g;
+    static IndexedSprite field_h;
     private int field_f;
-    static ee field_i;
+    static IndexedSprite field_i;
 
     public static void c(int param0) {
         field_i = null;
         field_h = null;
         if (param0 <= 93) {
-          field_i = (ee) null;
+          field_i = (IndexedSprite) null;
         }
     }
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-          field_h = (ee) null;
+          field_h = (IndexedSprite) null;
         }
     }
 
@@ -36,7 +36,7 @@ final class bn extends kj {
         try {
           if (lk.field_r >= 10) {
             if (!ad.d((byte) 27)) {
-              dg.d();
+              SoftwareRasterizer.clear();
               rha.a(240, false, 320);
               av.a(0, -83, param1, 0);
             } else {
@@ -70,7 +70,7 @@ final class bn extends kj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -78,9 +78,9 @@ final class bn extends kj {
         super(param0, param1, param2);
         try {
           this.field_f = 128;
-          this.field_g = new eaa();
+          this.field_g = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -91,11 +91,11 @@ final class bn extends kj {
         rea.a(this.field_g, 65280, param2, (byte) 118, 10, param0);
     }
 
-    final static kv a(vr param0, byte param1, int param2, int param3) {
+    final static Sprite a(vr param0, byte param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        kv stackIn_4_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -103,7 +103,7 @@ final class bn extends kj {
         try {
           if (!g.a(param3, param2, -30744, param0)) {
             stackIn_2_0 = null;
-            return (kv) (stackIn_2_0);
+            return (Sprite) (stackIn_2_0);
           }
           var4_int = -101 / ((-66 - param1) / 41);
           stackIn_4_0 = nja.a(true);
@@ -118,7 +118,7 @@ final class bn extends kj {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

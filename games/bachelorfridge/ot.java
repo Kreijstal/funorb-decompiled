@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ot extends iga {
-    static kv field_e;
+    static Sprite field_e;
     private String field_g;
     private long field_f;
 
@@ -48,25 +48,25 @@ class ot extends iga {
           this.field_f = param0;
           this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ot.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ot.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(lu param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         try {
-          param0.b(1686281208, this.field_f);
+          param0.writeLong(1686281208, this.field_f);
           if (param1) {
             this.field_f = -1L;
           }
           param0.a(26, this.field_g);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ot.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ot.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void b(byte param0) {
         if (param0 >= -36) {
-          field_e = (kv) null;
+          field_e = (Sprite) null;
           field_e = null;
           return;
         }

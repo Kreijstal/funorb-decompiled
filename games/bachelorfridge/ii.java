@@ -6,7 +6,7 @@ import java.io.*;
 abstract class ii extends cj {
     nq field_l;
     int field_k;
-    static eaa field_m;
+    static IntrusiveDeque field_m;
 
     public static void b(int param0) {
         if (param0 != -225) {
@@ -17,18 +17,18 @@ abstract class ii extends cj {
         field_m = null;
     }
 
-    void a(byte param0, lu param1) {
+    void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 > -12) {
             uha var4 = (uha) null;
             ii.a((String) null, false, -42, (uha) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ii.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ii.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(lu param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           param0.b(this.field_k, -121);
           er.a(this.field_l, param1 + 132, param0);
@@ -37,7 +37,7 @@ abstract class ii extends cj {
           }
           this.a((byte) -54, param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ii.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ii.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ abstract class ii extends cj {
           int var2_int = 0;
           IOException var2 = null;
           Throwable decompiledCaughtException = null;
-          if (param0 <= ig.field_m.field_g) {
+          if (param0 <= ig.field_m.position) {
             return true;
           }
           if (dma.field_b == null) {
@@ -77,16 +77,16 @@ abstract class ii extends cj {
               vc.a((byte) -106);
               return false;
             }
-            if (-ig.field_m.field_g + param0 < var2_int) {
-              var2_int = -ig.field_m.field_g + param0;
+            if (-ig.field_m.position + param0 < var2_int) {
+              var2_int = -ig.field_m.position + param0;
             }
-            dma.field_b.a(ig.field_m.field_g, (byte) 75, ig.field_m.field_h, var2_int);
+            dma.field_b.a(ig.field_m.position, (byte) 75, ig.field_m.payload, var2_int);
             pk.field_c = f.b((byte) 73);
-            ig.field_m.field_g = ig.field_m.field_g + var2_int;
-            if (param0 > ig.field_m.field_g) {
+            ig.field_m.position = ig.field_m.position + var2_int;
+            if (param0 > ig.field_m.position) {
               return false;
             }
-            ig.field_m.field_g = 0;
+            ig.field_m.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,7 +101,7 @@ abstract class ii extends cj {
         }
     }
 
-    ii(int param0, int param1, lu param2) {
+    ii(int param0, int param1, PacketBuffer param2) {
         this(param0, param1, qi.a(param2, (byte) 80));
     }
 
@@ -112,12 +112,12 @@ abstract class ii extends cj {
           param1.addFocusListener(vv.field_e);
           int var2_int = -78 / ((13 - param0) / 48);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ii.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ii.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    ii(int param0, lu param1) {
-        this(param0, param1.e((byte) 100), qi.a(param1, (byte) 21));
+    ii(int param0, PacketBuffer param1) {
+        this(param0, param1.readUnsignedShort((byte) 100), qi.a(param1, (byte) 21));
     }
 
     final static void a(String param0, boolean param1, int param2, uha param3) {
@@ -159,7 +159,7 @@ abstract class ii extends cj {
           }
           var15 = NetworkGameClient.field_u;
           if (param2 != -3) {
-            field_m = (eaa) null;
+            field_m = (IntrusiveDeque) null;
           }
           var5 = nfa.field_a;
           var6 = jc.field_r;
@@ -181,7 +181,7 @@ abstract class ii extends cj {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -191,11 +191,11 @@ abstract class ii extends cj {
           this.field_k = param1;
           this.field_l = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ii.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ii.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_m = new eaa();
+        field_m = new IntrusiveDeque();
     }
 }

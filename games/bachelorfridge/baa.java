@@ -6,7 +6,7 @@ import java.util.*;
 final class baa extends ana {
     private int field_I;
     static int field_Q;
-    private kv field_J;
+    private Sprite field_J;
     private int field_L;
     private int field_O;
     private boolean field_N;
@@ -18,7 +18,7 @@ final class baa extends ana {
     private int field_F;
     private rn field_B;
     private int field_G;
-    static kv field_y;
+    static Sprite field_y;
     static int[] field_z;
     static long[] field_C;
     private ad field_R;
@@ -76,8 +76,8 @@ final class baa extends ana {
           Runtime.getRuntime().gc();
           return;
         }
-        eaa var2 = (eaa) null;
-        baa.a((eaa) null, true, -4, -1, -110, -21);
+        IntrusiveDeque var2 = (IntrusiveDeque) null;
+        baa.a((IntrusiveDeque) null, true, -4, -1, -110, -21);
         pja.field_b = null;
         ca.field_c = null;
         gq.field_E = null;
@@ -123,9 +123,9 @@ final class baa extends ana {
           this.field_F = this.field_B.field_r;
           this.field_K = this.field_R.field_s.field_x;
           this.field_I = this.field_R.field_s.field_J;
-          this.field_J = nha.field_a.a();
+          this.field_J = nha.field_a.toRgbSprite();
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "baa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "baa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class baa extends ana {
         aj var5Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
         if (!this.field_N) {
@@ -185,11 +185,11 @@ final class baa extends ana {
         }
     }
 
-    final static void a(eaa param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final static void a(IntrusiveDeque param0, boolean param1, int param2, int param3, int param4, int param5) {
         rea var6 = null;
         int var7 = 0;
         int var8 = 0;
-        eaa var9 = null;
+        IntrusiveDeque var9 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -198,8 +198,8 @@ final class baa extends ana {
         var8 = BachelorFridge.field_y;
         try {
           if (!param1) {
-            var9 = (eaa) null;
-            baa.a((eaa) null, true, 50, 90, 110, 28);
+            var9 = (IntrusiveDeque) null;
+            baa.a((IntrusiveDeque) null, true, 50, 90, 110, 28);
           }
           var6 = (rea) (param0.b((byte) 90));
           while (var6 != null) {
@@ -208,8 +208,8 @@ final class baa extends ana {
             if (var7 > 256) {
               var7 = 256;
             }
-            dg.d(((int)var6.field_m * param5 >> 16) + param3, -2 + param4 - (((int)var6.field_j - (int)var6.field_l) * param5 >> 16), 5, param2);
-            dg.f(param3 + (int)var6.field_m, (int)var6.field_l + param4 - 2, (-var6.field_n + 128) / 12, param2, 256 - var7 >> 3);
+            SoftwareRasterizer.d(((int)var6.field_m * param5 >> 16) + param3, -2 + param4 - (((int)var6.field_j - (int)var6.field_l) * param5 >> 16), 5, param2);
+            SoftwareRasterizer.fillCircleAlpha(param3 + (int)var6.field_m, (int)var6.field_l + param4 - 2, (-var6.field_n + 128) / 12, param2, 256 - var7 >> 3);
             var6 = (rea) (param0.c(0));
           }
           return;
@@ -223,7 +223,7 @@ final class baa extends ana {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -442,7 +442,7 @@ final class baa extends ana {
         int var5Lifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return;
         }
         if (this.field_f) {
@@ -459,7 +459,7 @@ final class baa extends ana {
           this.field_J.a(vr.field_b << 12, -var5 - 20 + var9.field_a, 64 + var9.field_c, -1049413117, 3072);
           return;
         }
-        this.field_J = (kv) null;
+        this.field_J = (Sprite) null;
         var3Lifetime1 = this.field_L * (this.field_I - this.field_G << 16) / 6 + (this.field_G << 16);
         aj var8 = this.field_q.field_s.a(false, var3Lifetime1, var2);
         var5Lifetime1 = 16;

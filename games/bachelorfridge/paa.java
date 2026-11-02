@@ -123,7 +123,7 @@ final class paa {
           this.field_u = new boolean[var2_int];
           this.field_c = new int[var2_int];
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "paa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "paa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

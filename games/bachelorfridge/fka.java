@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fka extends IntrusiveNode {
-    eh[] field_j;
+    PlatformTask[] field_j;
     static String field_h;
     int[] field_g;
-    eh[] field_i;
+    PlatformTask[] field_i;
     byte[][][] field_f;
     int[] field_m;
     int field_k;

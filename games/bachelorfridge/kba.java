@@ -7,16 +7,16 @@ final class kba extends k {
     final void d(byte param0) {
         gea.a(4231);
         if (param0 != -68) {
-          lu var3 = (lu) null;
-          this.a((byte) 21, (lu) null, 123);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((byte) 21, (PacketBuffer) null, 123);
         }
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        lu var6 = null;
+        PacketBuffer var6 = null;
         boolean stackIn_11_1 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -25,18 +25,18 @@ final class kba extends k {
         var5 = BachelorFridge.field_y;
         try {
           if (param0 != -71) {
-            var6 = (lu) null;
-            this.a((byte) 39, (lu) null, -88);
+            var6 = (PacketBuffer) null;
+            this.a((byte) 39, (PacketBuffer) null, -88);
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_k = param1.e((byte) 76) << 4;
+            this.field_k = param1.readUnsignedShort((byte) 76) << 4;
             return;
           }
           if (1 != var4_int) {
             return;
           }
-          stackIn_11_1 = (param1.b(16711935) == 1);
+          stackIn_11_1 = (param1.readUnsignedByte(16711935) == 1);
           this.field_f = stackIn_11_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,7 +49,7 @@ final class kba extends k {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ final class kba extends k {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

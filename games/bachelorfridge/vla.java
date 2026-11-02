@@ -5,7 +5,7 @@ final class vla extends mv {
     private int field_q;
     static kka field_x;
     static byte[][][] field_o;
-    static ee[] field_r;
+    static IndexedSprite[] field_r;
     static long field_v;
     static String field_u;
     static String field_t;
@@ -52,7 +52,7 @@ final class vla extends mv {
         try {
           this.field_q = 64;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class vla extends mv {
         return true;
     }
 
-    final static int a(int param0, be param1) {
+    final static int a(int param0, PcmSample param1) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
@@ -146,7 +146,7 @@ final class vla extends mv {
             stackIn_6_0 = 0;
             return stackIn_6_0;
           }
-          stackIn_8_0 = 50 * param1.field_i.length / pb.field_j;
+          stackIn_8_0 = 50 * param1.field_i.length / AudioOutput.field_j;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -158,7 +158,7 @@ final class vla extends mv {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

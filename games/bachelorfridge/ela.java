@@ -3,7 +3,7 @@
  */
 final class ela extends pp {
     private int field_k;
-    static ee[] field_j;
+    static IndexedSprite[] field_j;
     static sna field_i;
 
     public static void d(byte param0) {
@@ -17,14 +17,14 @@ final class ela extends pp {
         field_i = null;
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           int var3_int = 37 % ((34 - param1) / 58);
           super.a(param0, (byte) -49);
           er.a(this.field_h, 108, param0);
-          param0.d(this.field_k, 0);
+          param0.writeByte(this.field_k, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ela.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ela.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class ela extends pp {
             ela.d((byte) 105);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ela.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ela.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class ela extends pp {
           this.field_h = param0;
           this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ela.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ela.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

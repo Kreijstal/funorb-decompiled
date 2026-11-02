@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vg extends cj {
-    eaa field_m;
+    IntrusiveDeque field_m;
     static sna field_k;
-    static v field_n;
+    static BufferedCacheFile field_n;
     static Boolean field_l;
 
     final void a(op param0, boolean param1) {
@@ -38,7 +38,7 @@ final class vg extends cj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -49,11 +49,11 @@ final class vg extends cj {
           }
           this.field_m.a(param1, true);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vg.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vg.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    vg(lu param0) {
+    vg(PacketBuffer param0) {
         super(6);
         int var2_int = 0;
         int var3 = 0;
@@ -63,14 +63,14 @@ final class vg extends cj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_m = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_m = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
               return;
             }
-            var3 = param0.b(16711935);
+            var3 = param0.readUnsignedByte(16711935);
             if (var3 == 0) {
               this.field_m.a(new qja(param0), true);
               continue;
@@ -90,7 +90,7 @@ final class vg extends cj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -131,11 +131,11 @@ final class vg extends cj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final void a(lu param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         bf var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -145,16 +145,16 @@ final class vg extends cj {
         RuntimeException var3_ref = null;
         var4 = BachelorFridge.field_y;
         try {
-          param0.d(this.field_m.g(param1 ^ param1), param1 ^ -9);
+          param0.writeByte(this.field_m.g(param1 ^ param1), param1 ^ -9);
           var3 = (bf) (this.field_m.b((byte) 90));
           while (var3 != null) {
             if (var3 instanceof qja) {
-              param0.d(0, 0);
+              param0.writeByte(0, 0);
             } else {
               if (!(var3 instanceof dla)) {
                 throw new IllegalStateException();
               }
-              param0.d(1, 0);
+              param0.writeByte(1, 0);
             }
             var3.a(41, param0);
             var3 = (bf) (this.field_m.c(0));
@@ -170,24 +170,24 @@ final class vg extends cj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(kv param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           if (param2 != 22997) {
             vg.c((byte) -13);
           }
-          qg.a(param0.field_v, param4, param0, param1, 0, 0, 0, 0, dg.field_e, 0, param3, param7, param6, 0, 0, param5, param8);
+          qg.a(param0.field_v, param4, param0, param1, 0, 0, 0, 0, SoftwareRasterizer.field_e, 0, param3, param7, param6, 0, 0, param5, param8);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vg.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vg.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     public vg() {
         super(7);
-        this.field_m = new eaa();
+        this.field_m = new IntrusiveDeque();
     }
 
     static {

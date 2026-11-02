@@ -138,13 +138,13 @@ class qb extends k {
           nla.field_f = true;
           var11 = param2;
           if (!param1) {
-            stackIn_4_0 = ko.field_h;
+            stackIn_4_0 = IsaacRandom.field_h;
           } else {
             stackIn_4_0 = maa.field_x;
           }
           var6 = stackIn_4_0;
           if (~fv.field_w == param3) {
-            var7 = ut.a(db.field_b, 480, var11, qm.field_a, 127);
+            var7 = ut.a(db.field_b, 480, var11, RasterBuffer.field_a, 127);
             var8 = var7 + 3;
             gn.field_l = new int[var8];
             pt.field_a = new String[var8];
@@ -166,7 +166,7 @@ class qb extends k {
             if (1 != fv.field_w) {
               throw new IllegalArgumentException();
             }
-            var7 = ut.a(db.field_b, 480, var11, qm.field_a, -118);
+            var7 = ut.a(db.field_b, 480, var11, RasterBuffer.field_a, -118);
             var8 = var7 + 2;
             gn.field_l = new int[var8];
             pt.field_a = new String[var8];
@@ -220,11 +220,11 @@ class qb extends k {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -232,7 +232,7 @@ class qb extends k {
         RuntimeException var4 = null;
         try {
           if (param2 == 0) {
-            this.field_k = param1.e((byte) 108);
+            this.field_k = param1.readUnsignedShort((byte) 108);
           }
           if (param0 != -71) {
             this.a(66);
@@ -248,7 +248,7 @@ class qb extends k {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -5,7 +5,7 @@ final class qi {
     static ue field_b;
     static String field_a;
 
-    final static nq a(lu param0, byte param1) {
+    final static nq a(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         nq stackIn_6_0 = null;
@@ -17,7 +17,7 @@ final class qi {
           if (param1 <= 1) {
             field_b = (ue) null;
           }
-          var2_int = param0.b(16711935);
+          var2_int = param0.readUnsignedByte(16711935);
           if (255 == var2_int) {
             return null;
           }
@@ -33,7 +33,7 @@ final class qi {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,11 +75,11 @@ final class qi {
     final static void b(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        lu var3 = null;
+        PacketBuffer var3 = null;
         Throwable decompiledCaughtException = null;
         if (param0 != -1) {
-          var3 = (lu) null;
-          qi.a((lu) null, (byte) 14);
+          var3 = (PacketBuffer) null;
+          qi.a((PacketBuffer) null, (byte) 14);
         }
         if (null == uc.field_m) {
           return;

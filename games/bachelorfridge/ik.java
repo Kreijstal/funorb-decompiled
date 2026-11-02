@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ik {
-    static ee[] field_h;
+    static IndexedSprite[] field_h;
     static sna field_i;
     private String field_f;
     sna field_g;
-    static kv[] field_l;
+    static Sprite[] field_l;
     pna field_a;
     private long field_e;
     private int[] field_c;
@@ -38,7 +38,7 @@ final class ik {
                 }
               }
               if (var5.field_gc) {
-                this.field_a.a(lga.a(true, new String[]{var3}, fh.field_s), true, 3);
+                this.field_a.a(lga.a(true, new String[]{var3}, MidiNote.field_s), true, 3);
               }
             }
           }
@@ -91,7 +91,7 @@ final class ik {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class ik {
           this.field_a.a(lga.a(true, new String[]{var3}, wba.field_d), true, 17);
         }
         if (param0 != 21654) {
-          field_l = (kv[]) null;
+          field_l = (Sprite[]) null;
         }
     }
 
@@ -122,7 +122,7 @@ final class ik {
           pw.field_w != null &&
           ps.d(-117)) {
           var7 = gf.a(this.field_e, false);
-          var4 = uka.a(this.field_e, 28791);
+          var4 = ImageProducerRasterBuffer.a(this.field_e, 28791);
           var5 = this.b(8510);
           if (var4 != null) {
             if (!pw.field_w.field_Zb ||
@@ -160,13 +160,13 @@ final class ik {
         }
     }
 
-    final static kv b(int param0, int param1, int param2) {
+    final static Sprite b(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = BachelorFridge.field_y;
-        kv var6 = new kv(param0, param0);
-        kv var3 = var6;
+        Sprite var6 = new Sprite(param0, param0);
+        Sprite var3 = var6;
         if (param2 != 2) {
-          return (kv) null;
+          return (Sprite) null;
         }
         for (var4 = 0; var4 < var3.field_v.length; var4++) {
           var6.field_v[var4] = param1;
@@ -196,9 +196,9 @@ final class ik {
                     if (param0 != 16) {
                       return false;
                     }
-                    lu.a(0, param2, (byte) 87);
+                    PacketBuffer.a(0, param2, (byte) 87);
                   } else {
-                    lu.a(this.field_k, param2, (byte) -101);
+                    PacketBuffer.a(this.field_k, param2, (byte) -101);
                   }
                 }
               } else {
@@ -283,7 +283,7 @@ final class ik {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -323,7 +323,7 @@ final class ik {
               fk.a(param0 ^ -117, this.field_b, param1, 0);
             }
           } else {
-            pj.a(this.field_j, (byte) 89, this.field_e);
+            BufferedSocket.a(this.field_j, (byte) 89, this.field_e);
           }
         }
         return true;
@@ -368,22 +368,22 @@ final class ik {
     }
 
     final static void a(int param0, jfa param1, int param2, int param3) {
-        pf var4 = null;
+        BitPacketBuffer var4 = null;
         int var5 = 0;
         if (bp.e(-29919)) {
           return;
         }
         try {
           var4 = sja.field_fb;
-          var4.c(85, (byte) 117);
-          sja.field_fb.field_g = sja.field_fb.field_g + 2;
-          var5 = sja.field_fb.field_g;
+          var4.writeCipheredByte(85, (byte) 117);
+          sja.field_fb.position = sja.field_fb.position + 2;
+          var5 = sja.field_fb.position;
           rha.a(param1.field_g, var4, (byte) -116);
-          var4.d(param0, 0);
-          var4.d(param3, param2 ^ param2);
-          sja.field_fb.a((byte) -88, sja.field_fb.field_g - var5);
+          var4.writeByte(param0, 0);
+          var4.writeByte(param3, param2 ^ param2);
+          sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var5);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ik.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ik.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -443,7 +443,7 @@ final class ik {
           this.field_c = param6;
           param0.field_t = true;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

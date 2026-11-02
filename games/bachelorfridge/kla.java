@@ -7,26 +7,26 @@ final class kla extends ana {
     static String[] field_y;
     static int field_x;
     private ju field_v;
-    static pia field_w;
+    static PalettedBitmapFont field_w;
 
-    final static kv[] a(kv[] param0, int param1) {
+    final static Sprite[] a(Sprite[] param0, int param1) {
         int var3 = 0;
-        kv[] var2 = null;
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
         int var4 = 0;
         int var5 = 0;
-        kv[] stackIn_8_0 = null;
+        Sprite[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = BachelorFridge.field_y;
         try {
-          var2 = new kv[param0.length];
+          var2 = new Sprite[param0.length];
           var4 = 76 / ((-25 - param1) / 32);
           for (var3 = 0; var3 < param0.length; var3++) {
             if (null != param0[var3]) {
-              var2[var3] = new kv(param0[var3].field_n, param0[var3].field_o);
+              var2[var3] = new Sprite(param0[var3].field_n, param0[var3].field_o);
               var2[var3].b();
               da.a(0, 0, -110, param0[var3]);
             }
@@ -44,7 +44,7 @@ final class kla extends ana {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class kla extends ana {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class kla extends ana {
         }
         if (!o.d((byte) 81)) {
           if (!bf.field_h[wca.field_n].field_i) {
-            uka.field_h.a((byte) 19);
+            ImageProducerRasterBuffer.field_h.a((byte) 19);
           }
           if (bf.field_h[wca.field_n] != null) {
             bf.field_h[wca.field_n].a((byte) 113);
@@ -184,7 +184,7 @@ final class kla extends ana {
           this.field_l = this.field_l - 1;
         }
         int var2 = -109 / ((param0 - 71) / 47);
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
         int fieldTemp$0 = this.field_l - 1;
@@ -212,7 +212,7 @@ final class kla extends ana {
         try {
           this.field_v = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

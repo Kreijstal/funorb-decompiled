@@ -13,7 +13,7 @@ abstract class ana extends at {
     static String[] field_u;
     static String[] field_k;
     static String[] field_o;
-    static kv field_r;
+    static Sprite field_r;
 
     final static void a(int param0, String param1) {
         try {
@@ -22,7 +22,7 @@ abstract class ana extends at {
             ana.a(75, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ana.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ana.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -73,7 +73,7 @@ abstract class ana extends at {
                 if (var12.field_k == param0 &&
                   param1 == var12.field_l) {
                   var12.a(param2.field_s, this.field_q.field_h, 12);
-                  var5.a(false);
+                  var5.unlink(false);
                   return;
                 }
               } else {
@@ -81,7 +81,7 @@ abstract class ana extends at {
                 if (param0 == var11.field_i &&
                   var11.field_l == param1) {
                   var11.a(param2.field_s, this.field_q.field_h, param3 + 12);
-                  var5.a(false);
+                  var5.unlink(false);
                   return;
                 }
               }
@@ -94,12 +94,12 @@ abstract class ana extends at {
                 var8 = stackIn_11_0;
                 var5.a(param2.field_s, this.field_q.field_h, 12);
                 if (var8 == 0) {
-                  var5.a(false);
+                  var5.unlink(false);
                   return;
                 }
                 var7.b(param3 - 1, 6);
                 this.a(param3 ^ 27799, new ek(this.field_q, var7, var10.field_f));
-                var5.a(false);
+                var5.unlink(false);
                 return;
               }
             }
@@ -116,7 +116,7 @@ abstract class ana extends at {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ abstract class ana extends at {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ abstract class ana extends at {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var5), "ana.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) var5), "ana.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

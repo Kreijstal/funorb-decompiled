@@ -18,9 +18,9 @@ final class dj {
     }
 
     final static void a(int param0, boolean param1) {
-        pf.field_n = !param1 ? new lm(hfa.field_B, nu.field_f) : new lm(dea.field_l, sr.field_b);
+        BitPacketBuffer.field_n = !param1 ? new lm(hfa.field_B, nu.field_f) : new lm(dea.field_l, sr.field_b);
         ela.field_i = new sna(0L, (sna) null);
-        ela.field_i.a(-1, pf.field_n.field_a);
+        ela.field_i.a(-1, BitPacketBuffer.field_n.field_a);
         ela.field_i.a(param0 - 1, jj.field_wb);
         qw.field_b = new sna(0L, qaa.field_d);
         rf.field_q = new sna((long)param0, (sna) null);
@@ -64,7 +64,7 @@ final class dj {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

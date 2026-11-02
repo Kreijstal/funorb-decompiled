@@ -4,7 +4,7 @@
 final class ku extends bca {
     static boolean field_q;
 
-    ku(lu param0) {
+    ku(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
@@ -13,9 +13,9 @@ final class ku extends bca {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_k = param0.e((byte) 72);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 72);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -33,7 +33,7 @@ final class ku extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -62,7 +62,7 @@ final class ku extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -81,14 +81,14 @@ final class ku extends bca {
           }
           for (var2 = 1; var2 < wa.field_m.length; var2++) {
             var3 = wa.field_m[var2];
-            bl.a(ci.field_q, var2 << 4, ci.field_q, var1_int, var3);
+            ArrayOperations.copy(ci.field_q, var2 << 4, ci.field_q, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "ku.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "ku.B(" + param0 + ')');
         }
     }
 
@@ -112,31 +112,31 @@ final class ku extends bca {
           }
           var3_intLifetime1 = -50 / ((12 - param1) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ku.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ku.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6) {
         try {
-          pj.field_b[param6] = param2;
-          pj.field_c[param6] = param4;
+          BufferedSocket.field_b[param6] = param2;
+          BufferedSocket.field_c[param6] = param4;
           int var7_int = 77 % ((-13 - param0) / 38);
-          pj.field_l[param6] = param1;
-          pj.field_h[param6] = param3;
-          pj.field_o[param6] = param5;
+          BufferedSocket.field_l[param6] = param1;
+          BufferedSocket.field_h[param6] = param3;
+          BufferedSocket.field_o[param6] = param5;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ku.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ku.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         if (param0 >= -12) {
           return;
         }
         try {
           super.a((byte) -98, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ku.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ku.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

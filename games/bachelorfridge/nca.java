@@ -3,7 +3,7 @@
  */
 final class nca {
     static String field_b;
-    static ee[] field_a;
+    static IndexedSprite[] field_a;
 
     public static void a(byte param0) {
         if (param0 != 87) {
@@ -16,20 +16,20 @@ final class nca {
         field_b = null;
     }
 
-    final static void a(int param0, lu param1, cj param2) {
+    final static void a(int param0, PacketBuffer param1, cj param2) {
         if (param2 == null) {
-          param1.d(-1, 0);
+          param1.writeByte(-1, 0);
           return;
         }
         try {
           if (param0 < 82) {
             cj var4 = (cj) null;
-            nca.a(-125, (lu) null, (cj) null);
+            nca.a(-125, (PacketBuffer) null, (cj) null);
           }
-          param1.d(param2.field_h, 0);
+          param1.writeByte(param2.field_h, 0);
           param2.a(param1, -9);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nca.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nca.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

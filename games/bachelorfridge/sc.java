@@ -28,7 +28,7 @@ final class sc extends lw {
           fla.b(23621);
           mka.field_j = true;
           pka.field_f = true;
-          iaa.field_a = true;
+          MeshObject.field_a = true;
         }
         if (param1 == 73) {
           return;

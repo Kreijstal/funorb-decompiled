@@ -7,9 +7,9 @@ class vja extends ii {
     boolean field_r;
     int field_p;
     boolean field_n;
-    eaa field_o;
+    IntrusiveDeque field_o;
 
-    void a(byte param0, lu param1) {
+    void a(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         pp var4 = null;
         int var5 = 0;
@@ -33,9 +33,9 @@ class vja extends ii {
           if (this.field_s) {
             var3_int = var3_int | 32;
           }
-          param1.d(var3_int, 0);
-          param1.d(this.field_p, 0);
-          param1.d(this.field_o.g(0), 0);
+          param1.writeByte(var3_int, 0);
+          param1.writeByte(this.field_p, 0);
+          param1.writeByte(this.field_o.g(0), 0);
           var4 = (pp) (this.field_o.b((byte) 90));
           while (var4 != null) {
             var4.a(param1, (byte) -80);
@@ -52,7 +52,7 @@ class vja extends ii {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -94,9 +94,9 @@ class vja extends ii {
           this.field_r = param4 ? true : false;
           this.field_q = param2;
           this.field_s = param6 ? true : false;
-          this.field_o = new eaa();
+          this.field_o = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vja.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vja.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -130,21 +130,21 @@ class vja extends ii {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     final static void a(byte param0, boolean param1) {
         if (param0 >= 84) {
           if (null != jea.field_c) {
-            dg.g(dg.field_f, dg.field_j, -dg.field_f + dg.field_h, dg.field_k - dg.field_j);
+            SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.field_f, SoftwareRasterizer.field_j, -SoftwareRasterizer.field_f + SoftwareRasterizer.field_h, SoftwareRasterizer.field_k - SoftwareRasterizer.field_j);
             jea.field_c.a(param1, 7802);
           }
           return;
         }
     }
 
-    vja(int param0, lu param1) {
+    vja(int param0, PacketBuffer param1) {
         super(1, param0, param1);
         int var3_int = 0;
         int var4 = 0;
@@ -157,7 +157,7 @@ class vja extends ii {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param1.b(16711935);
+          var3_int = param1.readUnsignedByte(16711935);
           this.field_q = 7 & var3_int;
           stackIn_4_1 = ((64 & var3_int) != 0);
           this.field_n = stackIn_4_1;
@@ -165,9 +165,9 @@ class vja extends ii {
           this.field_r = stackIn_7_1;
           stackIn_10_1 = ((32 & var3_int) != 0);
           this.field_s = stackIn_10_1;
-          this.field_p = param1.b(16711935);
-          this.field_o = new eaa();
-          var4 = param1.b(16711935);
+          this.field_p = param1.readUnsignedByte(16711935);
+          this.field_o = new IntrusiveDeque();
+          var4 = param1.readUnsignedByte(16711935);
           while (true) {
             var4--;
             if (var4 < 0) {
@@ -185,7 +185,7 @@ class vja extends ii {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -201,13 +201,13 @@ class vja extends ii {
         aga var6_ref_aga = null;
         int var7 = 0;
         int var8 = 0;
-        lu var9 = null;
+        PacketBuffer var9 = null;
         aga var10 = null;
         var8 = BachelorFridge.field_y;
         try {
           if (param1) {
-            var9 = (lu) null;
-            this.a((byte) 108, (lu) null);
+            var9 = (PacketBuffer) null;
+            this.a((byte) 108, (PacketBuffer) null);
           }
           var10 = this.field_l.a(20, param0);
           if (var10.i(55)) {
@@ -260,7 +260,7 @@ class vja extends ii {
                 var4 = (pp) (this.field_o.c(0));
                 continue;
               }
-              var7 = nn.a(var6_ref_aga, var10, (byte) 104);
+              var7 = MouseInputHandler.a(var6_ref_aga, var10, (byte) 104);
               ((iv) (var4)).a((byte) -21, var10, param0, var7);
               var4 = (pp) (this.field_o.c(0));
             }
@@ -276,7 +276,7 @@ class vja extends ii {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
         }
     }
 

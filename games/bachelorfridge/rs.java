@@ -8,7 +8,7 @@ final class rs {
     static lr[] field_g;
     static int field_c;
     static int field_a;
-    static kv field_f;
+    static Sprite field_f;
     String field_d;
     String field_e;
 
@@ -55,7 +55,7 @@ final class rs {
             iba.d(34);
           }
           if (ai.field_c) {
-            tla.field_q = new eaa();
+            tla.field_q = new IntrusiveDeque();
             var9 = sg.field_q;
             var7 = var9;
             var4 = var7;
@@ -95,17 +95,17 @@ final class rs {
           if (iba.field_s != 0 &&
             kaa.field_m == -3 &&
             iba.field_s != 12) {
-            ena.a((byte) -44, wha.field_a);
+            ena.a((byte) -44, IterableNodeHashTable.field_a);
             return;
           }
           if (kaa.field_m == -1) {
-            hba.a(true, wha.field_a);
+            hba.a(true, IterableNodeHashTable.field_a);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref), "rs.D(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "rs.D(" + param0 + ')');
         }
     }
 

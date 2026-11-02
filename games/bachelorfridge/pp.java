@@ -20,11 +20,11 @@ abstract class pp extends IntrusiveNode {
           jba.field_A.field_sb = jba.field_A.field_sb - ts.field_r.field_sb;
           ts.field_r.field_kb = ts.field_r.field_kb - ts.field_r.field_sb;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pp.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pp.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(String param0, int param1, kv param2) {
+    final static void a(String param0, int param1, Sprite param2) {
         try {
           rr.field_r = param0;
           if (param1 > -81) {
@@ -33,13 +33,13 @@ abstract class pp extends IntrusiveNode {
           }
           vh.field_x = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pp.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pp.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract void a(aga param0, op param1, int param2);
 
-    void a(lu param0, byte param1) {
+    void a(PacketBuffer param0, byte param1) {
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_38_2 = null;
@@ -51,69 +51,69 @@ abstract class pp extends IntrusiveNode {
         try {
           var3_int = -43 / ((param1 - 34) / 58);
           if (this instanceof iv) {
-            param0.d(1, 0);
+            param0.writeByte(1, 0);
             return;
           }
           if (this instanceof cn) {
-            param0.d(2, 0);
+            param0.writeByte(2, 0);
             return;
           }
           if (this instanceof bj) {
-            param0.d(3, 0);
+            param0.writeByte(3, 0);
             return;
           }
           if (this instanceof sl) {
-            param0.d(4, 0);
+            param0.writeByte(4, 0);
             return;
           }
           if (this instanceof o) {
-            param0.d(5, 0);
+            param0.writeByte(5, 0);
             return;
           }
           if (this instanceof rla) {
-            param0.d(6, 0);
+            param0.writeByte(6, 0);
             return;
           }
           if (this instanceof ela) {
-            param0.d(7, 0);
+            param0.writeByte(7, 0);
             return;
           }
           if (this instanceof eba) {
-            param0.d(8, 0);
+            param0.writeByte(8, 0);
             return;
           }
           if (this instanceof dh) {
-            param0.d(9, 0);
+            param0.writeByte(9, 0);
             return;
           }
           if (this instanceof fda) {
-            param0.d(10, 0);
+            param0.writeByte(10, 0);
             return;
           }
           if (this instanceof ic) {
-            param0.d(11, 0);
+            param0.writeByte(11, 0);
             return;
           }
           if (this instanceof ro) {
-            param0.d(12, 0);
+            param0.writeByte(12, 0);
             return;
           }
           if (this instanceof tfa) {
-            param0.d(13, 0);
+            param0.writeByte(13, 0);
             return;
           }
           if (this instanceof kq) {
-            param0.d(14, 0);
+            param0.writeByte(14, 0);
             return;
           }
           if (this instanceof bm) {
-            param0.d(15, 0);
+            param0.writeByte(15, 0);
             return;
           }
           if (!(this instanceof pea)) {
             throw new RuntimeException("CreatureEffect type not found");
           }
-          param0.d(16, 0);
+          param0.writeByte(16, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -125,7 +125,7 @@ abstract class pp extends IntrusiveNode {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
         }
     }
 

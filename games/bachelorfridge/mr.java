@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mr extends kj {
-    static kv field_f;
+    static Sprite field_f;
     private ns field_i;
     static String field_h;
     private int field_g;
@@ -13,7 +13,7 @@ final class mr extends kj {
           this.field_i = param1;
           this.field_g = -25;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class mr extends kj {
         int stackIn_10_0 = 0;
         int var4;
         int var5;
-        ee var6;
+        IndexedSprite var6;
         int var7;
         int var8;
         var8 = BachelorFridge.field_y;
@@ -50,7 +50,7 @@ final class mr extends kj {
           stackIn_10_0 = (this.field_g >= 15) ? 2 : 1;
         }
         var5 = stackIn_10_0;
-        var6 = ou.field_d[var5];
+        var6 = IterableDualLinkDeque.field_d[var5];
         var7 = 64 + (param0 - var4) - var6.field_b;
         var6.a(param2, var7);
         if (param1) {
@@ -59,7 +59,7 @@ final class mr extends kj {
             vi.field_f.a(param2, var7);
           }
         } else {
-          field_f = (kv) null;
+          field_f = (Sprite) null;
           while (var7 > 0) {
             var7 -= 64;
             vi.field_f.a(param2, var7);

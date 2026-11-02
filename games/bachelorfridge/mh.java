@@ -3,7 +3,7 @@
  */
 final class mh extends pp {
     boolean field_i;
-    static ht field_l;
+    static PlatformTaskDispatcher field_l;
     static sna field_k;
     static sna field_j;
 
@@ -16,13 +16,13 @@ final class mh extends pp {
         field_k = null;
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -92 / ((param1 - 34) / 58);
           er.a(this.field_h, 126, param0);
-          param0.d(this.field_i ? 1 : 0, 0);
+          param0.writeByte(this.field_i ? 1 : 0, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class mh extends pp {
             this.field_i = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mh.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mh.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class mh extends pp {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        eaa var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         ema var18_ref = null;
@@ -310,7 +310,7 @@ final class mh extends pp {
                   jja.field_m = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
                 }
               }
-              if ((decompiledFrameRemainder1) && (!(var10 < 2) || var19 != 0) && (hr.field_b != null ||
+              if ((decompiledFrameRemainder1) && (!(var10 < 2) || var19 != 0) && (DelegatingCanvas.field_b != null ||
                 null != re.field_F ||
                 null != gma.field_c ||
                 null != wda.field_c)) {
@@ -324,9 +324,9 @@ final class mh extends pp {
                 while (!(decompiledNaturalLoopExit0 = (!(ld.field_q > var16)))) {
                   var17_int = pw.field_w.field_Eb[var16] & 255;
                   if (var19 == 0) {
-                    if (hr.field_b != null &&
-                      hr.field_b[var16] != null &&
-                      hr.field_b[var16][var17_int]) {
+                    if (DelegatingCanvas.field_b != null &&
+                      DelegatingCanvas.field_b[var16] != null &&
+                      DelegatingCanvas.field_b[var16][var17_int]) {
                       var11 = 1;
                     }
                     if (null != re.field_F &&
@@ -420,7 +420,7 @@ final class mh extends pp {
                 if (var16 != 0) {
                   cn.field_j.field_u = false;
                   if (cn.field_j.field_E) {
-                    boolean decompiledSharedTail0 = (0 != pf.field_n.field_a.field_yb);
+                    boolean decompiledSharedTail0 = (0 != BitPacketBuffer.field_n.field_a.field_yb);
                     if (!decompiledSharedTail0) {
                       jja.field_m = bma.field_t;
                       decompiledSharedTail0 = (var19 != 0);
@@ -454,7 +454,7 @@ final class mh extends pp {
           stackIn_177_1 = 19842;
           stackIn_178_2 = (param2) && (!param1) && (w.field_e);
           ((sna) (Object) stackIn_177_0).a(stackIn_177_1, stackIn_178_2);
-          pf.field_n.field_a.f(18632);
+          BitPacketBuffer.field_n.field_a.f(18632);
           if (null != pw.field_w) {
             if (0 != jj.field_wb.field_R) {
               rja.a(param3, pw.field_w.f((byte) -62), 1);
@@ -475,7 +475,7 @@ final class mh extends pp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var5_ref), "mh.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) var5_ref), "mh.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -484,7 +484,7 @@ final class mh extends pp {
           this.field_h = param0;
           this.field_i = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

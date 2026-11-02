@@ -12,7 +12,7 @@ final class er extends ana {
         if (ur.field_b != null) {
           var2 = ur.field_b;
           String var1 = var2;
-          rg.a(lga.a(true, new String[]{var2}, nn.field_a), param0 ^ 9943);
+          rg.a(lga.a(true, new String[]{var2}, MouseInputHandler.field_a), param0 ^ 9943);
           ur.field_b = null;
         }
         if (param0 != 9941) {
@@ -22,10 +22,10 @@ final class er extends ana {
     }
 
     final boolean c(byte param0) {
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
-        if (this.field_v.a((byte) -106)) {
+        if (this.field_v.isLinked((byte) -106)) {
           return false;
         }
         int fieldTemp$0 = this.field_l - 1;
@@ -112,7 +112,7 @@ final class er extends ana {
         sia.field_h = true;
         kaa.field_m = -3;
         if (param0 < -64) {
-          ena.a((byte) -44, wha.field_a);
+          ena.a((byte) -44, IterableNodeHashTable.field_a);
           gs.field_f = new saa(cha.field_l);
           aq.a(0, -1);
           jn.b(0);
@@ -156,22 +156,22 @@ final class er extends ana {
           this.field_v = new taa(this.field_q, this.field_w.field_s.a(-27449, this.field_q));
           this.a(27799, this.field_v);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "er.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "er.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(nq param0, int param1, lu param2) {
+    final static void a(nq param0, int param1, PacketBuffer param2) {
         if (param1 < 105) {
           return;
         }
         if (param0 == null) {
-          param2.d(-1, 0);
+          param2.writeByte(-1, 0);
           return;
         }
         try {
-          param2.d(param0.field_f | param0.field_g << 5, 0);
+          param2.writeByte(param0.field_f | param0.field_g << 5, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "er.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "er.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

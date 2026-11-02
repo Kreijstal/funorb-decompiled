@@ -10,7 +10,7 @@ final class uq extends sna {
     private sna field_yb;
     long field_Eb;
     private daa field_Db;
-    static kv[] field_zb;
+    static Sprite[] field_zb;
     private sna[] field_Bb;
     private sna field_Gb;
     private sna field_Ab;
@@ -76,7 +76,7 @@ final class uq extends sna {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= -44) {
-            field_zb = (kv[]) null;
+            field_zb = (Sprite[]) null;
           }
           var7 = new sna(0L, param4, 0, param5, param0, 24, param3);
           param5 += 32;
@@ -105,7 +105,7 @@ final class uq extends sna {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class uq extends sna {
         RuntimeException decompiledCaughtException = null;
         try {
           param0 += 8;
-          var6_int = param2.field_jb.a(param2.field_Z, -(2 * param2.field_L) + param1, param2.field_B);
+          var6_int = param2.field_jb.measureWrappedHeight(param2.field_Z, -(2 * param2.field_L) + param1, param2.field_B);
           param2.a(var6_int, param3 + 44810, param1, 0, param0);
           if (param3 != -13403) {
             stackIn_2_0 = 89;
@@ -148,7 +148,7 @@ final class uq extends sna {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class uq extends sna {
 
     final static void h(int param0) {
         baa.e(17035);
-        hba.a(true, wha.field_a);
+        hba.a(true, IterableNodeHashTable.field_a);
         gs.field_f = null;
         int var1 = 3;
         int var2 = 0;
@@ -174,7 +174,7 @@ final class uq extends sna {
         }
         int var7 = 0;
         op var8 = new op(var1, var2, var3, var4, var5, var6);
-        eaa var9 = mg.field_m.field_e.field_m;
+        IntrusiveDeque var9 = mg.field_m.field_e.field_m;
         rk[] var10 = new rk[var9.g(param0 + 28716)];
         var9.a((byte) 88, var10);
         gj var11 = new gj(var8, var7, var10, false);
@@ -504,7 +504,7 @@ final class uq extends sna {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 

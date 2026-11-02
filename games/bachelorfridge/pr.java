@@ -6,11 +6,11 @@ final class pr {
     private rca[] field_k;
     private int field_l;
     private int[][] field_a;
-    static kv[] field_h;
+    static Sprite[] field_h;
     private int field_f;
     static int field_i;
     static vr field_j;
-    private eaa field_d;
+    private IntrusiveDeque field_d;
     private int field_g;
     static String field_c;
     private int field_b;
@@ -112,7 +112,7 @@ final class pr {
             var4Lifetime2 = (rca) (this.field_d.a(param1 ^ -7));
             var3 = new rca(param0, var4Lifetime2.field_f);
             this.field_k[var4Lifetime2.field_g] = null;
-            var4Lifetime2.a(false);
+            var4Lifetime2.unlink(false);
           } else {
             var3 = new rca(param0, this.field_g);
             this.field_g = this.field_g + 1;
@@ -145,7 +145,7 @@ final class pr {
         int var1_intLifetime1;
         var4 = BachelorFridge.field_y;
         try {
-          jb.d();
+          TriangleRasterizer.d();
           ima.field_s = 11;
           qk.field_m = new int[260];
           if (param0 > -21) {
@@ -165,14 +165,14 @@ final class pr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "pr.E(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "pr.E(" + param0 + ')');
         }
     }
 
     pr(int param0, int param1, int param2) {
         this.field_f = -1;
         this.field_g = 0;
-        this.field_d = new eaa();
+        this.field_d = new IntrusiveDeque();
         this.field_m = false;
         this.field_b = param0;
         this.field_l = param1;

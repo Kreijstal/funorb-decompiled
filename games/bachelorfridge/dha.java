@@ -54,7 +54,7 @@ final class dha {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class dha {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class dha {
         }
     }
 
-    final static void a(eaa param0, int param1, Random param2, int param3) {
+    final static void a(IntrusiveDeque param0, int param1, Random param2, int param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -147,7 +147,7 @@ final class dha {
             fieldTemp$0 = var5.field_n + var5.field_h;
             var5.field_n = var5.field_n + var5.field_h;
             if (0 > fieldTemp$0) {
-              var5.a(false);
+              var5.unlink(false);
             } else {
               var5.field_l = var5.field_l + var5.field_o;
               kla.a(50, param2, -2147483648);
@@ -171,7 +171,7 @@ final class dha {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 

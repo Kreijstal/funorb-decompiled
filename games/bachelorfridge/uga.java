@@ -5,7 +5,7 @@ final class uga extends ana {
     static String field_A;
     private wfa field_z;
     static int field_y;
-    static kv field_C;
+    static Sprite field_C;
     static vr field_B;
     static int field_v;
     static String field_w;
@@ -34,7 +34,7 @@ final class uga extends ana {
         try {
           this.field_z = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "uga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

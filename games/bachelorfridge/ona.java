@@ -4,7 +4,7 @@
 final class ona extends sna {
     static String field_vb;
     kna field_zb;
-    static kv field_yb;
+    static Sprite field_yb;
     int field_wb;
     static String field_xb;
 
@@ -100,7 +100,7 @@ final class ona extends sna {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class ona extends sna {
         }
     }
 
-    ona(int param0, kv param1, kna param2) {
+    ona(int param0, Sprite param1, kna param2) {
         try {
           this.field_p = 39;
           this.field_v = param1;
@@ -132,7 +132,7 @@ final class ona extends sna {
           }
           this.field_zb = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ona.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ona.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

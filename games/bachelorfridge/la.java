@@ -7,7 +7,7 @@ final class la extends bca {
     int field_t;
     int field_q;
 
-    final static void a(int param0, pia param1) {
+    final static void a(int param0, PalettedBitmapFont param1) {
         int var2_int = 0;
         int var3 = 0;
         try {
@@ -20,18 +20,18 @@ final class la extends bca {
           if (1 == (var3 & 1)) {
             var3++;
           }
-          sca.field_a = new kv(var2_int, var3);
-          ap.field_c = new kv(var2_int, var3);
+          MouseWheelInput.field_a = new Sprite(var2_int, var3);
+          ap.field_c = new Sprite(var2_int, var3);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void d(int param0) {
         field_s = null;
         if (param0 != 2) {
-          pia var2 = (pia) null;
-          la.a(109, (pia) null);
+          PalettedBitmapFont var2 = (PalettedBitmapFont) null;
+          la.a(109, (PalettedBitmapFont) null);
         }
     }
 
@@ -67,7 +67,7 @@ final class la extends bca {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class la extends bca {
         int var2;
         int var3;
         var3 = BachelorFridge.field_y;
-        if (dm.field_f <= 0) {
+        if (ProxySocketConnector.field_f <= 0) {
           if (bp.e(param1 ^ -29917)) {
             var2 = 0;
             if (qt.field_l == null &&
@@ -91,7 +91,7 @@ final class la extends bca {
           var2 = 1;
         } else {
           if (null == qt.field_l) {
-            kga.field_c = mfa.a(true, 640, 0, 480, ju.field_r, 0);
+            kga.field_c = GameKeyHandler.a(true, 640, 0, 480, ju.field_r, 0);
           } else {
             kga.field_c = qt.field_l.c((byte) -91);
             fga.a(2, (byte) -2);
@@ -113,17 +113,17 @@ final class la extends bca {
         field_r = -88;
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           super.a((byte) -48, param1);
-          param1.d(this.field_q, 0);
+          param1.writeByte(this.field_q, 0);
           if (param0 >= -12) {
             this.field_t = -45;
           }
-          param1.d(this.field_t, 0);
-          param1.d(this.field_p ? 1 : 0, 0);
+          param1.writeByte(this.field_t, 0);
+          param1.writeByte(this.field_p ? 1 : 0, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "la.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "la.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -150,17 +150,17 @@ final class la extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    la(lu param0) {
+    la(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 100);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 100);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -168,11 +168,11 @@ final class la extends bca {
             }
             this.field_o.a(dca.a((byte) 102, param0), true);
           }
-          this.field_q = param0.b(16711935);
-          this.field_t = param0.b(16711935);
-          this.field_p = 1 == param0.b(16711935) ? true : false;
+          this.field_q = param0.readUnsignedByte(16711935);
+          this.field_t = param0.readUnsignedByte(16711935);
+          this.field_p = 1 == param0.readUnsignedByte(16711935) ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "la.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "la.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

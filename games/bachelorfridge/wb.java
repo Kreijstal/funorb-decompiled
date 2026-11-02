@@ -97,7 +97,7 @@ final class wb extends lw {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        eaa var4 = null;
+        IntrusiveDeque var4 = null;
         int var5 = 0;
         Object var6 = null;
         nea var7 = null;
@@ -126,7 +126,7 @@ final class wb extends lw {
             um.field_c != 1) {
             nr.field_w.field_u = false;
             nr.field_w.field_xb.field_wb.field_Z = ema.field_Ab;
-            nn.a((byte) -126, nr.field_w.field_wb);
+            MouseInputHandler.a((byte) -126, nr.field_w.field_wb);
             return;
           }
           nr.field_w.field_u = true;
@@ -136,9 +136,9 @@ final class wb extends lw {
           while (var7 != null) {
             var8 = 0;
             if (var7.field_z == null) {
-              var7.field_Db = new sna(0L, gi.field_c);
+              var7.field_Db = new sna(0L, ClientException.field_c);
               var7.a(-1, var7.field_Db);
-              var7.field_zb = new sna(0L, gi.field_c);
+              var7.field_zb = new sna(0L, ClientException.field_c);
               var7.a(-1, var7.field_zb);
               var7.d((byte) 116);
               var8 = 1;
@@ -161,7 +161,7 @@ final class wb extends lw {
             }
             stackIn_20_0 = var7.field_Db;
             if (var11 > 0) {
-              stackIn_21_1 = po.a(var7.field_Db.field_jb, var7.field_xb, var11);
+              stackIn_21_1 = BitmapFont.a(var7.field_Db.field_jb, var7.field_xb, var11);
             } else {
               stackIn_21_1 = var7.field_xb;
             }
@@ -210,11 +210,11 @@ final class wb extends lw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "wb.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "wb.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static pp a(lu param0, int param1) {
+    final static pp a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         tfa stackIn_1_0 = null;
@@ -236,7 +236,7 @@ final class wb extends lw {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -253,7 +253,7 @@ final class wb extends lw {
             field_l = (vr) null;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_3_0 = tca.field_a.equals(fq.a(param0 ^ 52, var3));
+          stackIn_3_0 = JaggrabDownloader.field_a.equals(fq.a(param0 ^ 52, var3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -265,11 +265,11 @@ final class wb extends lw {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static k b(lu param0, int param1) {
+    final static k b(PacketBuffer param0, int param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -287,13 +287,13 @@ final class wb extends lw {
           if (param1 <= 45) {
             wb.a(false, -57, -18);
           }
-          param0.b(16711935);
-          var2_int = param0.b(16711935);
+          param0.readUnsignedByte(16711935);
+          var2_int = param0.readUnsignedByte(16711935);
           var3 = ffa.a(-16, var2_int);
-          var3.field_i = param0.b(16711935);
-          var4 = param0.b(16711935);
+          var3.field_i = param0.readUnsignedByte(16711935);
+          var4 = param0.readUnsignedByte(16711935);
           for (var5 = 0; var4 > var5; var5++) {
-            var6 = param0.b(16711935);
+            var6 = param0.readUnsignedByte(16711935);
             var3.a((byte) -71, param0, var6);
           }
           var3.d((byte) -68);
@@ -309,7 +309,7 @@ final class wb extends lw {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

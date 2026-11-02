@@ -7,7 +7,7 @@ final class c extends gca {
     float field_j;
     static String field_i;
     static String[] field_k;
-    private eaa field_l;
+    private IntrusiveDeque field_l;
 
     private final void e(byte param0) {
         int var5 = 0;
@@ -57,14 +57,14 @@ final class c extends gca {
         } else {
           var4_ref = (cia) (this.field_l.b((byte) 90));
           while (var4_ref != null) {
-            dg.f((var4_ref.field_i >> 4) + param1, (var4_ref.field_q >> 5) + param0 + (var4_ref.field_h >> 9), 2, 12632256, var4_ref.field_o);
+            SoftwareRasterizer.fillCircleAlpha((var4_ref.field_i >> 4) + param1, (var4_ref.field_q >> 5) + param0 + (var4_ref.field_h >> 9), 2, 12632256, var4_ref.field_o);
             var4_ref = (cia) (this.field_l.c(0));
           }
           return;
         }
         var4_refLifetime1 = (cia) (this.field_l.b((byte) 90));
         while (var4_refLifetime1 != null) {
-          dg.f((var4_refLifetime1.field_i >> 4) + param1, (var4_refLifetime1.field_q >> 5) + param0 + (var4_refLifetime1.field_h >> 9), 2, 12632256, var4_refLifetime1.field_o);
+          SoftwareRasterizer.fillCircleAlpha((var4_refLifetime1.field_i >> 4) + param1, (var4_refLifetime1.field_q >> 5) + param0 + (var4_refLifetime1.field_h >> 9), 2, 12632256, var4_refLifetime1.field_o);
           var4_refLifetime1 = (cia) (this.field_l.c(0));
         }
     }
@@ -98,7 +98,7 @@ final class c extends gca {
 
     public c() {
         super(32);
-        this.field_l = new eaa();
+        this.field_l = new IntrusiveDeque();
     }
 
     final boolean a(boolean param0, boolean param1) {

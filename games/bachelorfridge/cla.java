@@ -6,7 +6,7 @@ import java.util.*;
 final class cla {
     static byte[] field_a;
 
-    final static void a(byte param0, eaa param1, int param2, Random param3) {
+    final static void a(byte param0, IntrusiveDeque param1, int param2, Random param3) {
         lh var4 = null;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -47,7 +47,7 @@ final class cla {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

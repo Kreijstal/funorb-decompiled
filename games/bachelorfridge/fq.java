@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fq extends td {
-    static wma field_s;
+    static DualLinkNodeHashTable field_s;
     static String field_r;
     static String field_q;
     static String field_p;
@@ -13,7 +13,7 @@ final class fq extends td {
           this.field_n = param3;
           this.field_k = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -22,7 +22,7 @@ final class fq extends td {
         field_q = null;
         field_s = null;
         if (param0 <= 120) {
-          field_s = (wma) null;
+          field_s = (DualLinkNodeHashTable) null;
           field_p = null;
           return;
         }
@@ -31,28 +31,28 @@ final class fq extends td {
 
     final static void a(int param0, byte param1) {
         int var3 = 0;
-        pf var2 = sja.field_fb;
+        BitPacketBuffer var2 = sja.field_fb;
         int var3Lifetime1;
-        var2.c(param0, (byte) 127);
-        var2.field_g = var2.field_g + 1;
+        var2.writeCipheredByte(param0, (byte) 127);
+        var2.position = var2.position + 1;
         if (param1 <= -112) {
-          var3 = var2.field_g;
-          var2.d(2, 0);
+          var3 = var2.position;
+          var2.writeByte(2, 0);
           var2.a(0, -125, fia.field_r.length, fia.field_r);
-          var2.d(tq.field_h, 0);
-          var2.d(ena.field_n, 0);
-          var2.a(0, -128, sca.field_c.length, sca.field_c);
-          var2.b((byte) 81, var2.field_g - var3);
+          var2.writeByte(tq.field_h, 0);
+          var2.writeByte(ena.field_n, 0);
+          var2.a(0, -128, MouseWheelInput.field_c.length, MouseWheelInput.field_c);
+          var2.writeLengthByte((byte) 81, var2.position - var3);
           return;
         }
         field_r = (String) null;
-        var3Lifetime1 = var2.field_g;
-        var2.d(2, 0);
+        var3Lifetime1 = var2.position;
+        var2.writeByte(2, 0);
         var2.a(0, -125, fia.field_r.length, fia.field_r);
-        var2.d(tq.field_h, 0);
-        var2.d(ena.field_n, 0);
-        var2.a(0, -128, sca.field_c.length, sca.field_c);
-        var2.b((byte) 81, var2.field_g - var3Lifetime1);
+        var2.writeByte(tq.field_h, 0);
+        var2.writeByte(ena.field_n, 0);
+        var2.a(0, -128, MouseWheelInput.field_c.length, MouseWheelInput.field_c);
+        var2.writeLengthByte((byte) 81, var2.position - var3Lifetime1);
     }
 
     final static String a(int param0, CharSequence param1) {
@@ -128,7 +128,7 @@ final class fq extends td {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ final class fq extends td {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 

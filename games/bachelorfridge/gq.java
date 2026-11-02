@@ -8,7 +8,7 @@ final class gq extends ana {
     static String field_G;
     static boolean field_x;
     private int field_C;
-    static kv field_E;
+    static Sprite field_E;
     private ct field_D;
     private int field_y;
     private int field_B;
@@ -49,7 +49,7 @@ final class gq extends ana {
           this.field_F.field_o = 0;
           this.field_F.field_r = 0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class gq extends ana {
         int var2Lifetime2;
         int var3Lifetime1;
         int var3Lifetime2;
-        if (this.field_A.a((byte) -106)) {
+        if (this.field_A.isLinked((byte) -106)) {
           return false;
         }
         if (this.field_H + 12 <= this.field_B) {

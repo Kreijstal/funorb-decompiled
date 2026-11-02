@@ -4,13 +4,13 @@
 import java.util.*;
 
 final class vj extends pu {
-    static kv field_p;
+    static Sprite field_p;
     static String field_q;
     static Random field_o;
     static String[] field_r;
     static int field_n;
     static String field_l;
-    static kv field_m;
+    static Sprite field_m;
 
     final static int a(int param0, int param1, byte param2) {
         int var3 = 0;

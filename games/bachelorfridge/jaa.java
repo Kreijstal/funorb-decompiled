@@ -13,7 +13,7 @@ final class jaa extends bca {
           param0.b((byte) 40, 33, this.field_t, this.field_r);
           int var3_int = -24 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jaa.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jaa.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class jaa extends bca {
           this.field_r = param3;
           this.field_t = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jaa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jaa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -61,17 +61,17 @@ final class jaa extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    jaa(lu param0) {
+    jaa(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 49);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 49);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -79,23 +79,23 @@ final class jaa extends bca {
             }
             this.field_o.a(dca.a((byte) 102, param0), true);
           }
-          this.field_t = param0.b(16711935);
-          this.field_r = param0.b(16711935);
+          this.field_t = param0.readUnsignedByte(16711935);
+          this.field_r = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jaa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jaa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         if (param0 >= -12) {
           return;
         }
         try {
           super.a((byte) -88, param1);
-          param1.d(this.field_t, 0);
-          param1.d(this.field_r, 0);
+          param1.writeByte(this.field_t, 0);
+          param1.writeByte(this.field_r, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jaa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jaa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class og {
-    static kv[] field_b;
-    static kv[] field_a;
+    static Sprite[] field_b;
+    static Sprite[] field_a;
 
     public static void a(byte param0) {
         field_b = null;

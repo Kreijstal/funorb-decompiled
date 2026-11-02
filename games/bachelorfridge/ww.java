@@ -9,14 +9,14 @@ final class ww extends td {
     final static lr a(int param0, int param1, int param2, int param3, boolean param4) {
         int var6;
         int var10;
-        eaa var11;
-        eaa var12;
+        IntrusiveDeque var11;
+        IntrusiveDeque var12;
         int var7;
         int var8;
         lr var9;
         int var6Lifetime1;
         var10 = BachelorFridge.field_y;
-        var11 = new eaa();
+        var11 = new IntrusiveDeque();
         var12 = var11;
         for (var6 = 0; var6 < rn.field_u; var6++) {
           if (rs.field_g[var6].a(param4, param1, param2, param3, param0 ^ -2581) &&
@@ -67,7 +67,7 @@ final class ww extends td {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

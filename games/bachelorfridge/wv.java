@@ -35,7 +35,7 @@ final class wv extends pu {
         int[] var8Lifetime1;
         var12 = BachelorFridge.field_y;
         try {
-          lka.field_E = qs.a(false, new lu(param1));
+          lka.field_E = qs.a(false, new PacketBuffer(param1));
           if (param0 >= -16) {
             field_l = (sna) null;
           }
@@ -90,7 +90,7 @@ final class wv extends pu {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

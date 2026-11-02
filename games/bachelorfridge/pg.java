@@ -5,13 +5,13 @@ final class pg extends bca {
     nq field_r;
     static String field_q;
 
-    pg(lu param0) {
+    pg(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 123);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 123);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -21,7 +21,7 @@ final class pg extends bca {
           }
           this.field_r = qi.a(param0, (byte) 68);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,12 +50,12 @@ final class pg extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final static void e(int param0) {
-        fja.field_a.a(18, 31407, tv.field_o.field_sb - (eaa.field_c ? 2 + (rj.field_j + 2 + 40) : 0), 0, 0);
+        fja.field_a.a(18, 31407, tv.field_o.field_sb - (IntrusiveDeque.field_c ? 2 + (rj.field_j + 2 + 40) : 0), 0, 0);
         oca.field_n.a(18, param0 ^ 31407, rj.field_j + 42, tv.field_o.field_sb - (rj.field_j + 2 + 40), param0);
         qba.field_m.a((byte) -58, tv.field_o.field_p - 20, 0, 20, tv.field_o.field_sb, rj.field_j, 2);
     }
@@ -65,7 +65,7 @@ final class pg extends bca {
         try {
           this.field_r = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class pg extends bca {
           int var3_int = 56 / ((param1 - 12) / 35);
           this.a(param0, (byte) -2);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pg.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pg.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class pg extends bca {
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           super.a((byte) -95, param1);
           er.a(this.field_r, 127, param1);
@@ -93,7 +93,7 @@ final class pg extends bca {
             this.field_r = (nq) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

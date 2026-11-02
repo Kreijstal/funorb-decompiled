@@ -6,20 +6,20 @@ final class aq {
     static sna field_b;
 
     final static void a(int param0, byte param1) {
-        pf var2 = null;
-        pf var2Lifetime1;
+        BitPacketBuffer var2 = null;
+        BitPacketBuffer var2Lifetime1;
         if (param1 >= 42) {
           var2 = sja.field_fb;
-          var2.c(param0, (byte) 115);
-          var2.d(1, 0);
-          var2.d(0, 0);
+          var2.writeCipheredByte(param0, (byte) 115);
+          var2.writeByte(1, 0);
+          var2.writeByte(0, 0);
           return;
         }
         aq.a(121, (byte) 73);
         var2Lifetime1 = sja.field_fb;
-        var2Lifetime1.c(param0, (byte) 115);
-        var2Lifetime1.d(1, 0);
-        var2Lifetime1.d(0, 0);
+        var2Lifetime1.writeCipheredByte(param0, (byte) 115);
+        var2Lifetime1.writeByte(1, 0);
+        var2Lifetime1.writeByte(0, 0);
     }
 
     final static void a(int param0, int param1) {
@@ -27,8 +27,8 @@ final class aq {
         tla.d(param1 ^ 92);
         if (0 != param0) {
           if (param0 == 1) {
-            cr.field_c = je.a(wt.field_m[1], 256, 96);
-            sla.field_a = je.a(wt.field_m[2], 256, 96);
+            cr.field_c = PcmSampleStream.createWithVolume(wt.field_m[1], 256, 96);
+            sla.field_a = PcmSampleStream.createWithVolume(wt.field_m[2], 256, 96);
             cr.field_c.d(-1);
             sla.field_a.d(-1);
             ofa.a(0, cr.field_c);
@@ -47,9 +47,9 @@ final class aq {
               }
               return;
             }
-            cr.field_c = je.a(wt.field_m[1], 256, 96);
-            sla.field_a = je.a(wt.field_m[5], 256, 96);
-            m.field_b = je.a(wt.field_m[4], 256, 96);
+            cr.field_c = PcmSampleStream.createWithVolume(wt.field_m[1], 256, 96);
+            sla.field_a = PcmSampleStream.createWithVolume(wt.field_m[5], 256, 96);
+            m.field_b = PcmSampleStream.createWithVolume(wt.field_m[4], 256, 96);
             cr.field_c.d(-1);
             sla.field_a.d(-1);
             m.field_b.d(-1);
@@ -62,8 +62,8 @@ final class aq {
             aq.a(-13, (byte) 0);
             return;
           }
-          cr.field_c = je.a(wt.field_m[1], 256, 96);
-          sla.field_a = je.a(wt.field_m[3], 256, 96);
+          cr.field_c = PcmSampleStream.createWithVolume(wt.field_m[1], 256, 96);
+          sla.field_a = PcmSampleStream.createWithVolume(wt.field_m[3], 256, 96);
           cr.field_c.d(-1);
           sla.field_a.d(-1);
           ofa.a(param1 + 1, cr.field_c);
@@ -74,7 +74,7 @@ final class aq {
           aq.a(-13, (byte) 0);
           return;
         }
-        cr.field_c = je.a(wt.field_m[0], 256, 96);
+        cr.field_c = PcmSampleStream.createWithVolume(wt.field_m[0], 256, 96);
         cr.field_c.d(-1);
         ofa.a(0, cr.field_c);
         if (param1 == -1) {

@@ -12,7 +12,7 @@ final class rj extends vo {
     private int field_r;
     private int field_h;
     private int field_n;
-    static ee field_l;
+    static IndexedSprite field_l;
     private int field_g;
     static int field_i;
 
@@ -77,7 +77,7 @@ final class rj extends vo {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

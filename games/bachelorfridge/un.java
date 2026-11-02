@@ -6,7 +6,7 @@ final class un {
     static int[] field_a;
     byte[] field_b;
     int field_g;
-    static kv field_m;
+    static Sprite field_m;
     static int field_i;
     int field_d;
     int field_e;

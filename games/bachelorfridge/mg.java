@@ -39,10 +39,10 @@ final class mg extends at {
         this.field_j.field_k = 0;
     }
 
-    final static be a(byte param0, int param1) {
-        be var2 = null;
+    final static PcmSample a(byte param0, int param1) {
+        PcmSample var2 = null;
         if (param0 > -114) {
-          return (be) null;
+          return (PcmSample) null;
         }
         if (param1 != -1) {
           var2 = jga.field_y[param1];
@@ -64,7 +64,7 @@ final class mg extends at {
           this.field_n = 50;
           this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

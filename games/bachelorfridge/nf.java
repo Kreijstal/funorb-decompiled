@@ -3,9 +3,9 @@
  */
 final class nf extends aha {
     static volatile boolean field_K;
-    static kv[] field_P;
+    static Sprite[] field_P;
     private int field_Q;
-    private kv field_N;
+    private Sprite field_N;
     static boolean field_M;
     private qu field_L;
     private String field_O;
@@ -41,7 +41,7 @@ final class nf extends aha {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -53,7 +53,7 @@ final class nf extends aha {
             field_K = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nf.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nf.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -67,10 +67,10 @@ final class nf extends aha {
         int var11;
         int var12;
         int var13;
-        kv var16;
-        kv var17;
-        kv var18;
-        kv var19;
+        Sprite var16;
+        Sprite var17;
+        Sprite var18;
+        Sprite var19;
         int var12Lifetime1;
         int var13Lifetime1;
         jg var6Lifetime1;
@@ -111,36 +111,36 @@ final class nf extends aha {
           var12 = var19.field_n << 1;
           var13 = var19.field_o << 1;
           if (null == this.field_N) {
-            this.field_N = new kv(var12, var13);
+            this.field_N = new Sprite(var12, var13);
             bu.a(0, this.field_N);
           } else {
             if (this.field_N.field_q < var12) {
-              this.field_N = new kv(var12, var13);
+              this.field_N = new Sprite(var12, var13);
               bu.a(0, this.field_N);
             } else {
               if (var13 > this.field_N.field_p) {
-                this.field_N = new kv(var12, var13);
+                this.field_N = new Sprite(var12, var13);
                 bu.a(0, this.field_N);
               } else {
                 bu.a(0, this.field_N);
-                dg.d();
+                SoftwareRasterizer.clear();
               }
             }
           }
           var19.b(112, 144, var19.field_n << 4, var19.field_o << 4, -this.field_Q << 10, 4096);
           db.b(120);
-          this.field_N.d(-(var19.field_n >> 1) + var10, -var19.field_o + var11, 256);
+          this.field_N.drawAdditive(-(var19.field_n >> 1) + var10, -var19.field_o + var11, 256);
           return;
         }
         if (var6Lifetime1 != ji.field_f) {
           if (jt.field_f == var6Lifetime1) {
             var16 = fr.field_q[2];
-            var16.d(var10, var11 - (var16.field_p >> 1), 256);
+            var16.drawAdditive(var10, var11 - (var16.field_p >> 1), 256);
             return;
           }
           if (var6Lifetime1 == cm.field_u) {
             var17 = fr.field_q[1];
-            var17.d(var10, -(var17.field_p >> 1) + var11, 256);
+            var17.drawAdditive(var10, -(var17.field_p >> 1) + var11, 256);
           }
           return;
         }
@@ -148,25 +148,25 @@ final class nf extends aha {
         var12Lifetime1 = var18.field_n << 1;
         var13Lifetime1 = var18.field_o << 1;
         if (null == this.field_N) {
-          this.field_N = new kv(var12Lifetime1, var13Lifetime1);
+          this.field_N = new Sprite(var12Lifetime1, var13Lifetime1);
           bu.a(0, this.field_N);
         } else {
           if (this.field_N.field_q < var12Lifetime1) {
-            this.field_N = new kv(var12Lifetime1, var13Lifetime1);
+            this.field_N = new Sprite(var12Lifetime1, var13Lifetime1);
             bu.a(0, this.field_N);
           } else {
             if (var13Lifetime1 > this.field_N.field_p) {
-              this.field_N = new kv(var12Lifetime1, var13Lifetime1);
+              this.field_N = new Sprite(var12Lifetime1, var13Lifetime1);
               bu.a(0, this.field_N);
             } else {
               bu.a(0, this.field_N);
-              dg.d();
+              SoftwareRasterizer.clear();
             }
           }
         }
         var18.b(112, 144, var18.field_n << 4, var18.field_o << 4, -this.field_Q << 10, 4096);
         db.b(120);
-        this.field_N.d(-(var18.field_n >> 1) + var10, -var18.field_o + var11, 256);
+        this.field_N.drawAdditive(-(var18.field_n >> 1) + var10, -var18.field_o + var11, 256);
         return;
     }
 
@@ -184,7 +184,7 @@ final class nf extends aha {
           this.field_O = param1;
           this.a(param2, param5, (byte) 59, param4, param3);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

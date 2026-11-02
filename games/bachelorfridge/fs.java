@@ -28,14 +28,14 @@ final class fs {
           this.field_d.a(param0 ^ 1, var4, 0);
           this.field_d.i((byte) -99);
           this.field_d.i(param0 ^ 0);
-          hla.field_t.field_g = 0;
+          hla.field_t.position = 0;
           this.field_d.b(hla.field_t, (byte) 123);
-          hla.field_t.field_g = 0;
+          hla.field_t.position = 0;
           dj.field_c.field_h.a(-2, hla.field_t);
           this.c(15467);
         } else {
-          sja.field_fb.c(68, (byte) 108);
-          sja.field_fb.d(param1, 0);
+          sja.field_fb.writeCipheredByte(68, (byte) 108);
+          sja.field_fb.writeByte(param1, 0);
         }
         if (param0 != 0) {
           fs.c((byte) 97);
@@ -53,7 +53,7 @@ final class fs {
         if (!this.field_a) {
           return;
         }
-        sja.field_fb.c(param0, (byte) 125);
+        sja.field_fb.writeCipheredByte(param0, (byte) 125);
     }
 
     private final void c(int param0) {
@@ -115,7 +115,7 @@ final class fs {
           return;
         }
         this.field_b.field_h.field_v = this.field_b.field_h.field_v | 1 << this.field_b.field_n;
-        sja.field_fb.c(60, (byte) 102);
+        sja.field_fb.writeCipheredByte(60, (byte) 102);
         int var2 = -10 / ((param0 + 61) / 49);
     }
 
@@ -126,12 +126,12 @@ final class fs {
         if (!this.field_a) {
           return;
         }
-        sja.field_fb.c(61, (byte) 127);
+        sja.field_fb.writeCipheredByte(61, (byte) 127);
     }
 
     final void d(byte param0) {
         int var2;
-        pf var3;
+        BitPacketBuffer var3;
         int var4;
         if (param0 != -16) {
           field_e = (int[]) null;
@@ -140,19 +140,19 @@ final class fs {
           if (this.field_c) {
             return;
           }
-          sja.field_fb.c(96, (byte) 102);
+          sja.field_fb.writeCipheredByte(96, (byte) 102);
           this.field_c = true;
           var2 = this.field_b.field_h.c((byte) -81);
           if (this.field_b.field_h.field_A > 3 &&
             this.field_b.field_g != var2) {
             var3 = sja.field_fb;
-            var3.c(97, (byte) 97);
-            var3.field_g = var3.field_g + 2;
-            var4 = var3.field_g;
-            var3.e(var2, -1615464796);
-            var3.e(this.field_b.field_g, -1615464796);
-            this.field_b.field_h.b((lu) (var3), (byte) 127);
-            var3.a((byte) -88, var3.field_g - var4);
+            var3.writeCipheredByte(97, (byte) 97);
+            var3.position = var3.position + 2;
+            var4 = var3.position;
+            var3.writeInt(var2, -1615464796);
+            var3.writeInt(this.field_b.field_g, -1615464796);
+            this.field_b.field_h.b((PacketBuffer) (var3), (byte) 127);
+            var3.writeLengthShort((byte) -88, var3.position - var4);
             hna.a(0, param0 ^ -100);
             vc.a((byte) -99);
           }
@@ -177,24 +177,24 @@ final class fs {
         var6 = BachelorFridge.field_y;
         try {
           if (this.field_a) {
-            sja.field_fb.c(58, (byte) 107);
-            fieldTemp$1 = sja.field_fb.field_g + 1;
-            sja.field_fb.field_g = sja.field_fb.field_g + 1;
+            sja.field_fb.writeCipheredByte(58, (byte) 107);
+            fieldTemp$1 = sja.field_fb.position + 1;
+            sja.field_fb.position = sja.field_fb.position + 1;
             var4_int = fieldTemp$1;
-            sja.field_fb.d(param2, 0);
+            sja.field_fb.writeByte(param2, 0);
             for (var5 = 0; 7 > var5; var5++) {
               sd.a((byte) 124, sja.field_fb, param1[var5]);
             }
-            var5Lifetime1 = -var4_int + sja.field_fb.field_g;
-            sja.field_fb.b((byte) 83, var5Lifetime1);
+            var5Lifetime1 = -var4_int + sja.field_fb.position;
+            sja.field_fb.writeLengthByte((byte) 83, var5Lifetime1);
           } else {
             this.field_d.a(param1, 0, (byte) -31);
             this.c(15467);
-            hla.field_t.field_g = 0;
+            hla.field_t.position = 0;
             this.field_d.a(hla.field_t, -1);
             this.field_d.h((byte) -111);
-            var4_int = hla.field_t.field_g;
-            hla.field_t.field_g = 0;
+            var4_int = hla.field_t.position;
+            hla.field_t.position = 0;
             this.field_b.field_h.a(var4_int, true, hla.field_t);
             this.field_b.b((byte) 31);
             this.field_b.field_cb = false;
@@ -213,7 +213,7 @@ final class fs {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -225,14 +225,14 @@ final class fs {
           if (!this.field_a) {
             var3 = this.field_b.field_h;
             this.field_d = new op(var3.field_G, var3.field_E, var3.field_k, var3.field_o, var3.field_m, var3.field_y);
-            hla.field_t.field_g = 0;
+            hla.field_t.position = 0;
             this.field_b.field_h.b(hla.field_t, (byte) 126);
-            hla.field_t.field_g = 0;
+            hla.field_t.position = 0;
             this.field_d.a(-2, hla.field_t);
           }
           this.field_c = true;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

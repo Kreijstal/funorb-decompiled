@@ -54,7 +54,7 @@ final class qaa {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class qaa {
           this.field_b.write(param2, param0, param1);
           this.field_f = this.field_f + (long)param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qaa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qaa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -94,14 +94,14 @@ final class qaa {
         }
     }
 
-    final static kv[] a(int param0, int param1) {
-        kv[] var3 = new kv[9];
-        kv[] var2 = var3;
+    final static Sprite[] a(int param0, int param1) {
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         if (param1 <= -13) {
           var3[4] = ik.b(64, param0, 2);
           return var2;
         }
-        return (kv[]) null;
+        return (Sprite[]) null;
     }
 
     final void a(boolean param0) throws IOException {
@@ -134,7 +134,7 @@ final class qaa {
           }
           this.field_b.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qaa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qaa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

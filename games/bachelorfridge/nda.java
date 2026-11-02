@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nda extends pu {
-    static kv field_l;
+    static Sprite field_l;
 
-    final static void a(int param0, lda param1, int param2, int param3, int param4, po param5, po param6, lda param7, int param8, boolean param9, lda param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void a(int param0, lda param1, int param2, int param3, int param4, BitmapFont param5, BitmapFont param6, lda param7, int param8, boolean param9, lda param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19) {
         int stackIn_4_0 = 0;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_9_0 = null;
@@ -21,14 +21,14 @@ final class nda extends pu {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          qm.field_a = param6;
+          RasterBuffer.field_a = param6;
           lha.field_b = param5;
           jk.a(param15, param17, param13, (byte) -64, param3);
           jn.a(param2, param10, param14, param9);
           if (param9) {
             return;
           }
-          v.a(param8, (byte) 124, param0, param1, param7, param19);
+          BufferedCacheFile.a(param8, (byte) 124, param0, param1, param7, param19);
           stackIn_4_0 = param12;
           stackIn_5_1 = !(param9);
           fg.a(stackIn_4_0, stackIn_5_1, param16);
@@ -68,7 +68,7 @@ final class nda extends pu {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
         }
     }
 

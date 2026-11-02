@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ff extends gha {
-    static ee field_u;
+    static IndexedSprite field_u;
     private int field_x;
     private int field_v;
     private int field_w;
-    private kv[] field_t;
+    private Sprite[] field_t;
 
     public static void c(int param0) {
         if (param0 != 16777215) {
-          field_u = (ee) null;
+          field_u = (IndexedSprite) null;
           field_u = null;
           return;
         }
@@ -49,13 +49,13 @@ final class ff extends gha {
             stackIn_13_0 = this.field_w;
           }
           var7 = stackIn_13_0;
-          pj.a(param1.field_s + param0, var7, 447, param1.field_v + param3 + (param1.field_q - this.field_t[0].field_o >> 1), param1.field_p, this.field_t);
+          BufferedSocket.a(param1.field_s + param0, var7, 447, param1.field_v + param3 + (param1.field_q - this.field_t[0].field_o >> 1), param1.field_p, this.field_t);
           stackIn_16_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_16_0;
           if (param2 != 32679) {
             ff.c(122);
           }
-          this.field_l.a(param1.field_w, param1.field_s + param0, -2 + (param1.field_v + param3), param1.field_p, param1.field_q, var8, -1, 1, 1, this.field_l.field_u);
+          this.field_l.drawParagraph(param1.field_w, param1.field_s + param0, -2 + (param1.field_v + param3), param1.field_p, param1.field_q, var8, -1, 1, 1, this.field_l.field_u);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ final class ff extends gha {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -19,7 +19,7 @@ final class uha extends sna {
     sna field_cc;
     sna field_Ub;
     boolean field_gc;
-    static kv[][] field_Xb;
+    static Sprite[][] field_Xb;
     sna field_hc;
     byte[] field_Eb;
     long field_Ob;
@@ -46,14 +46,14 @@ final class uha extends sna {
         if (param0 <= 32) {
           field_Vb = (String) null;
           field_Vb = null;
-          field_Xb = (kv[][]) null;
+          field_Xb = (Sprite[][]) null;
           return;
         }
         field_Vb = null;
-        field_Xb = (kv[][]) null;
+        field_Xb = (Sprite[][]) null;
     }
 
-    final static pp b(lu param0, int param1) {
+    final static pp b(PacketBuffer param0, int param1) {
         nq var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -68,7 +68,7 @@ final class uha extends sna {
           if (param1 != -7) {
             uha.g((byte) 6);
           }
-          stackIn_5_0 = (param0.b(16711935) == 1) ? 1 : 0;
+          stackIn_5_0 = (param0.readUnsignedByte(16711935) == 1) ? 1 : 0;
           var3 = stackIn_5_0;
           stackIn_6_0 = new mh(var2, var3 != 0);
           return (pp) ((Object) stackIn_6_0);
@@ -82,7 +82,7 @@ final class uha extends sna {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class uha extends sna {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        lu var7 = null;
+        PacketBuffer var7 = null;
         try {
           if (!this.field_Wb) {
             stackIn_6_0 = (this.field_ec == 6) ? 1 : 0;
@@ -159,8 +159,8 @@ final class uha extends sna {
             return stackIn_41_0;
           }
           if (param0 != -7) {
-            var7 = (lu) null;
-            uha.b((lu) null, -6);
+            var7 = (PacketBuffer) null;
+            uha.b((PacketBuffer) null, -6);
           }
           if (!this.field_Zb) {
             stackIn_48_0 = !(this.field_Ob >= param1.field_Ob);
@@ -200,7 +200,7 @@ final class uha extends sna {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
@@ -218,10 +218,10 @@ final class uha extends sna {
 
     final boolean f(int param0) {
         if (param0 >= 24) {
-          return !this.a(0) ? true : false;
+          return !this.isSecondaryLinked(0) ? true : false;
         }
         this.field_Zb = true;
-        return !this.a(0) ? true : false;
+        return !this.isSecondaryLinked(0) ? true : false;
     }
 
     static {

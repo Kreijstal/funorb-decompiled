@@ -106,7 +106,7 @@ final class su {
           this.b(true);
           this.b(-12);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "su.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "su.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class co {
-    static ee[] field_b;
+    static IndexedSprite[] field_b;
     static String[][] field_a;
     private static String field_z;
 

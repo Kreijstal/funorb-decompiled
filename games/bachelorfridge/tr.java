@@ -8,7 +8,7 @@ final class tr {
         sna.field_s = true;
     }
 
-    final static void a(int param0, kv param1, int param2, int param3, kv param4, int param5, int param6, int param7) {
+    final static void a(int param0, Sprite param1, int param2, int param3, Sprite param4, int param5, int param6, int param7) {
         int var8_int = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -50,7 +50,7 @@ final class tr {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

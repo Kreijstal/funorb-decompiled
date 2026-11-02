@@ -225,7 +225,7 @@ public final class BachelorFridge extends NetworkGameClient {
           if (14 != kaa.field_m) {
           }
           if (-4 == kaa.field_m) {
-            sja.field_fb.c(9, (byte) 118);
+            sja.field_fb.writeCipheredByte(9, (byte) 118);
             bka.field_h = true;
             kaa.field_m = iba.field_s;
             jaa.field_q = saa.field_b;
@@ -243,7 +243,7 @@ public final class BachelorFridge extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "BachelorFridge.E(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "BachelorFridge.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -275,7 +275,7 @@ public final class BachelorFridge extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "BachelorFridge.G(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "BachelorFridge.G(" + param0 + ')');
         }
     }
 
@@ -286,7 +286,7 @@ public final class BachelorFridge extends NetworkGameClient {
             this.a((byte) 111);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "BachelorFridge.I(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "BachelorFridge.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -356,18 +356,18 @@ public final class BachelorFridge extends NetworkGameClient {
               } else {
                 var4 = var5 / 2 - 32;
               }
-              dg.a(4, 8 + var4, aha.field_D.a(pp.field_g[var3.field_h]) + 56, aha.field_D.field_B + aha.field_D.field_u, 5, 0, 128);
-              og.field_a[var3.field_h].d(8, var4);
-              aha.field_D.c(pp.field_g[var3.field_h], 48, -2 + (8 + var4) + aha.field_D.field_u, 12320512, -1);
+              SoftwareRasterizer.a(4, 8 + var4, aha.field_D.a(pp.field_g[var3.field_h]) + 56, aha.field_D.field_B + aha.field_D.field_u, 5, 0, 128);
+              og.field_a[var3.field_h].drawQuarterSize(8, var4);
+              aha.field_D.drawText(pp.field_g[var3.field_h], 48, -2 + (8 + var4) + aha.field_D.field_u, 12320512, -1);
             }
             if (vs.a(23864)) {
-              dg.g(0, 0, dg.field_i, dg.field_c);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
               gla.a(-101, uma.field_J[0].field_p, uma.field_J[0].field_q, uma.field_J);
             }
             if (nba.b((byte) -125) &&
               !vs.a(23864) &&
               !paa.a(15000)) {
-              dg.g(0, 0, dg.field_i, dg.field_c);
+              SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
               bla.a(uma.field_J[0].field_q, uma.field_J, (byte) 15, uma.field_J[0].field_p);
             }
           }
@@ -387,26 +387,26 @@ public final class BachelorFridge extends NetworkGameClient {
           if (ha.field_l != ha.field_k) {
             var3_int = nm.field_A * 256 / 16;
             if (var3_int > 0) {
-              dg.f(0, 0, dg.field_i, dg.field_c, 0, var3_int);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0, var3_int);
             }
           }
           if (aha.field_D != null &&
             hea.field_r >= 2) {
             var3_ref = Runtime.getRuntime();
             var4Lifetime1 = (int)(var3_ref.totalMemory() - var3_ref.freeMemory()) >> 10;
-            aha.field_D.c(pr.field_i + " fps; " + var4Lifetime1 + "KiB", 20, 20, 16777215, 0);
+            aha.field_D.drawText(pr.field_i + " fps; " + var4Lifetime1 + "KiB", 20, 20, 16777215, 0);
           }
           if (kha.field_f &&
             mk.field_p != -1 &&
             -1 != gd.field_m) {
-            vv.field_c[kr.field_vb].e(mk.field_p - vv.field_c[kr.field_vb].field_t, gd.field_m - vv.field_c[kr.field_vb].field_u);
+            vv.field_c[kr.field_vb].draw(mk.field_p - vv.field_c[kr.field_vb].field_t, gd.field_m - vv.field_c[kr.field_vb].field_u);
           }
           av.a(0, -106, var2, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "BachelorFridge.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "BachelorFridge.B(" + param0 + ')');
         }
     }
 
@@ -425,7 +425,7 @@ public final class BachelorFridge extends NetworkGameClient {
           aka.field_w = daa.c(param0 + 103, 7);
           uga.field_B = daa.c(param0 + 96, 8);
           fda.field_l = daa.c(param0 ^ 73, 9);
-          tca.field_m = daa.c(param0 ^ 52, 10);
+          JaggrabDownloader.field_m = daa.c(param0 ^ 52, 10);
           fda.field_k = daa.c(83, param0);
           ria.field_i = daa.c(103, 12);
           pr.field_j = daa.c(-60, 13);
@@ -440,7 +440,7 @@ public final class BachelorFridge extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "BachelorFridge.N(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "BachelorFridge.N(" + param0 + ')');
         }
     }
 
@@ -461,7 +461,7 @@ public final class BachelorFridge extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "BachelorFridge.A(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "BachelorFridge.A(" + param0 + ')');
         }
     }
 
@@ -486,7 +486,7 @@ public final class BachelorFridge extends NetworkGameClient {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -498,7 +498,7 @@ public final class BachelorFridge extends NetworkGameClient {
         try {
           this.a(-8771, "bachelorfridge", 21);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "BachelorFridge.init()");
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "BachelorFridge.init()");
         }
     }
 
@@ -532,19 +532,19 @@ public final class BachelorFridge extends NetworkGameClient {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     private final boolean j(byte param0) {
-        fea dupTemp$0 = null;
+        BinaryBitmapFont dupTemp$0 = null;
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var2_ref = null;
-        ee[] var3 = null;
+        IndexedSprite[] var3 = null;
         try {
           boolean decompiledFrameRemainder0 = true;
-          th.a(25);
+          IndexedSpriteState.a(25);
           if (!this.field_x) {
             if (vb.field_j.a(param0 - 7) &&
               vb.field_j.a("minimal", 20637)) {
@@ -568,7 +568,7 @@ public final class BachelorFridge extends NetworkGameClient {
           this.field_x = true;
           var2 = wia.field_b.a((byte) 123, "smallfont", "minimal");
           var3 = bla.a(param0 ^ 29612, "minimal", "smallfont", vb.field_j);
-          dupTemp$0 = qm.a(var3, var2, 0);
+          dupTemp$0 = RasterBuffer.a(var3, var2, 0);
           aha.field_D = dupTemp$0;
           jha.field_g = dupTemp$0;
           hfa.field_z = ll.a(var2, -8659, var3);
@@ -583,21 +583,21 @@ public final class BachelorFridge extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "BachelorFridge.H(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "BachelorFridge.H(" + param0 + ')');
         }
     }
 
     final void b(int param0) {
-        mfa.b(0);
+        GameKeyHandler.b(0);
         jr.a(86);
         fo.a(-15135);
         ri.a(false);
         vc.a(-96);
         sv.a(24173);
-        jb.b();
+        TriangleRasterizer.b();
         wi.b(true);
         ji.a(125);
-        eaa.b(7);
+        IntrusiveDeque.b(7);
         ga.a((byte) -123);
         og.a((byte) 16);
         gj.p(-1);
@@ -608,8 +608,8 @@ public final class BachelorFridge extends NetworkGameClient {
         ml.a((byte) 63);
         vm.a((byte) -87);
         kb.a(92);
-        v.a(-203);
-        pj.a(96);
+        BufferedCacheFile.a(-203);
+        BufferedSocket.a(96);
         vr.b(-19779);
         oja.a(-32341);
         dj.a((byte) -75);
@@ -617,19 +617,19 @@ public final class BachelorFridge extends NetworkGameClient {
         GameAppletShell.e(-12132);
         dl.d((byte) -39);
         pn.a((byte) -60);
-        dg.a();
+        SoftwareRasterizer.releaseRasterStorage();
         gr.b(12653);
-        pb.d();
+        AudioOutput.d();
         i.a((byte) -122);
         au.a(-31824);
         NetworkGameClient.g((byte) 109);
-        gi.a(101);
-        tca.a((byte) -84);
-        nn.a(0);
-        sca.b((byte) -33);
-        po.a();
+        ClientException.a(101);
+        JaggrabDownloader.a((byte) -84);
+        MouseInputHandler.a(0);
+        MouseWheelInput.b((byte) -33);
+        BitmapFont.a();
         vda.a((byte) -62);
-        lu.d((byte) -19);
+        PacketBuffer.d((byte) -19);
         f.a(true);
         um.a((byte) 106);
         vw.b(7130);
@@ -641,9 +641,9 @@ public final class BachelorFridge extends NetworkGameClient {
         jn.a(-22089);
         oma.a((byte) 51);
         tn.a(0);
-        qm.a(0);
+        RasterBuffer.a(0);
         qha.a(124);
-        kg.a((byte) 36);
+        FullscreenFocusCanvas.a((byte) 36);
         qe.a((byte) 93);
         jla.b(true);
         da.a(-47);
@@ -682,7 +682,7 @@ public final class BachelorFridge extends NetworkGameClient {
         to.a(53);
         is.a(12836);
         hs.a((byte) -127);
-        pf.l(-6199);
+        BitPacketBuffer.l(-6199);
         rk.c((byte) 114);
         tj.a((byte) -114);
         nha.a(-18307);
@@ -708,7 +708,7 @@ public final class BachelorFridge extends NetworkGameClient {
         fja.a(6220);
         pga.a(470);
         rfa.a((byte) -101);
-        ss.a();
+        ModelMesh.a();
         rba.a(-52);
         il.a(4);
         lf.b(123);
@@ -722,7 +722,7 @@ public final class BachelorFridge extends NetworkGameClient {
         wba.a(-96);
         iga.a(false);
         dn.a(-114);
-        ko.a((byte) -73);
+        IsaacRandom.a((byte) -73);
         we.a((byte) -124);
         ola.d((byte) -120);
         jna.a(30862);
@@ -748,18 +748,18 @@ public final class BachelorFridge extends NetworkGameClient {
         mk.a(1);
         ua.a(-9);
         cl.b(false);
-        in.b(-1);
+        DualLinkDeque.b(-1);
         qfa.g(97);
-        ta.a(255);
-        se.f(103);
+        SectorCacheStore.a(255);
+        DiskCacheRequest.f(103);
         fp.d(12);
         fg.a((byte) 127);
         gg.a((byte) -106);
         cga.b(true);
         kn.b(50);
         id.b(35);
-        fh.c((byte) 73);
-        vga.b();
+        MidiNote.c((byte) 73);
+        MidiFileReader.b();
         jja.c((byte) -90);
         kc.a((byte) 94);
         rm.a(-101);
@@ -789,12 +789,12 @@ public final class BachelorFridge extends NetworkGameClient {
         wl.f(0);
         lha.a(1);
         mq.a(213);
-        rma.c(1);
+        SocketConnector.c(1);
         en.a(-10132);
         ur.a(107);
         cr.a(21592);
         nu.a(76);
-        pca.a();
+        Bzip2Decoder.a();
         bv.a(98);
         rh.a(0);
         oe.a(false);
@@ -802,14 +802,14 @@ public final class BachelorFridge extends NetworkGameClient {
         cc.a((byte) -122);
         wk.a(-24);
         jc.e(127);
-        hr.a(true);
+        DelegatingCanvas.a(true);
         rda.a(true);
         g.c((byte) -124);
-        eka.a(123);
+        MusicPatch.a(123);
         un.a(2);
-        sda.a();
-        dv.c();
-        mga.b();
+        SynthInstrument.releaseScratch();
+        VorbisSample.c();
+        VorbisFloor.b();
         hm.a(-123);
         em.o(-22799);
         gha.a((byte) -124);
@@ -832,13 +832,13 @@ public final class BachelorFridge extends NetworkGameClient {
         am.c(true);
         vf.j(-99);
         vd.i(20742);
-        rna.a(7);
+        IntrusiveDequeCursor.a(7);
         gk.a(false);
         qw.a((byte) -119);
         pda.e(-3);
         pha.a(true);
         ru.b(42);
-        uka.b((byte) 81);
+        ImageProducerRasterBuffer.b((byte) 81);
         lba.a((byte) -68);
         bi.d((byte) -97);
         ge.e((byte) -111);
@@ -851,7 +851,7 @@ public final class BachelorFridge extends NetworkGameClient {
         nf.d((byte) -127);
         dia.a(14213);
         bfa.a(true);
-        iaa.a((byte) 93);
+        MeshObject.a((byte) 93);
         jea.a(1);
         sr.b((byte) 127);
         eia.a(124);
@@ -944,12 +944,12 @@ public final class BachelorFridge extends NetworkGameClient {
         qk.d(89);
         lfa.e((byte) -128);
         qca.d(-98);
-        dm.b((byte) -100);
+        ProxySocketConnector.b((byte) -100);
         gla.a((byte) -62);
-        wha.a(-1);
-        ou.b(-124);
+        IterableNodeHashTable.a(-1);
+        IterableDualLinkDeque.b(-124);
         ul.b(false);
-        bc.a();
+        SoundFilter.a();
         tq.c(-15298);
         raa.h(2);
         re.h(-124);
@@ -1287,7 +1287,7 @@ public final class BachelorFridge extends NetworkGameClient {
           rga.a((byte) -84);
           this.field_r = null;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "BachelorFridge.D(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "BachelorFridge.D(" + param0 + ')');
         }
     }
 
@@ -1321,7 +1321,7 @@ public final class BachelorFridge extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "BachelorFridge.M(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "BachelorFridge.M(" + param0 + ')');
         }
     }
 
@@ -1330,20 +1330,20 @@ public final class BachelorFridge extends NetworkGameClient {
         int var2_int = 0;
         byte[] var2 = null;
         RuntimeException var2_ref = null;
-        ee[] var3 = null;
-        kv[][] var4 = null;
-        kv[][] var5 = null;
+        IndexedSprite[] var3 = null;
+        Sprite[][] var4 = null;
+        Sprite[][] var5 = null;
         int var6_int = 0;
         String[][] var6 = null;
         int var7 = 0;
         byte[] var2Lifetime1;
         byte[] var2Lifetime2;
-        ee[] var3Lifetime1;
-        ee[] var3Lifetime2;
+        IndexedSprite[] var3Lifetime1;
+        IndexedSprite[] var3Lifetime2;
         var7 = field_y;
         try {
           iha.e(5);
-          th.a(25);
+          IndexedSpriteState.a(25);
           if (aka.field_w != null) {
             if (mt.field_p.a(0) &&
               mt.field_p.a("basic", 20637)) {
@@ -1363,8 +1363,8 @@ public final class BachelorFridge extends NetworkGameClient {
                       if (fda.field_l.a(0) &&
                         fda.field_l.b((byte) 113)) {
                         waa.a(0, 5);
-                        if (tca.field_m.a(0) &&
-                          tca.field_m.b((byte) 120)) {
+                        if (JaggrabDownloader.field_m.a(0) &&
+                          JaggrabDownloader.field_m.b((byte) 120)) {
                           waa.a(0, 6);
                           if (vb.field_j.a(0) &&
                             vb.field_j.a("basic", 20637)) {
@@ -1409,7 +1409,7 @@ public final class BachelorFridge extends NetworkGameClient {
                                                     this.a(78.5999984741211f, true);
                                                     this.a((byte) 50);
                                                     waa.a(0, 20);
-                                                    pu.a(tca.field_m, fda.field_l, -21201, aka.field_w, uga.field_B);
+                                                    pu.a(JaggrabDownloader.field_m, fda.field_l, -21201, aka.field_w, uga.field_B);
                                                     oe.a(230, (byte) 108);
                                                     ke.b(34);
                                                     aka.field_w = null;
@@ -1456,7 +1456,7 @@ public final class BachelorFridge extends NetworkGameClient {
                           this.a(25.399999618530273f, vb.field_j, 55.5f, -121, "basic");
                           return false;
                         }
-                        this.a(tca.field_m, (byte) 115, 23.299999237060547f, 25.399999618530273f);
+                        this.a(JaggrabDownloader.field_m, (byte) 115, 23.299999237060547f, 25.399999618530273f);
                         return false;
                       }
                       this.a(fda.field_l, (byte) -100, 23.299999237060547f, 23.299999237060547f);
@@ -1502,10 +1502,10 @@ public final class BachelorFridge extends NetworkGameClient {
           }
           this.a(85.9000015258789f, true);
           waa.a(0, 25);
-          if (null != tca.field_m) {
+          if (null != JaggrabDownloader.field_m) {
             this.a((byte) 125);
             if (lha.b(18)) {
-              tca.field_m = null;
+              JaggrabDownloader.field_m = null;
             }
             mia.b(32);
             return false;
@@ -1513,7 +1513,7 @@ public final class BachelorFridge extends NetworkGameClient {
           this.a(94.0999984741211f, true);
           waa.a(0, 26);
           if (iga.field_d != null) {
-            pj.a(true, iga.field_d);
+            BufferedSocket.a(true, iga.field_d);
             iga.field_d = null;
             return false;
           }
@@ -1599,14 +1599,14 @@ public final class BachelorFridge extends NetworkGameClient {
           rc.field_l = hca.a("basic", mt.field_p, 84, "orbcoin");
           ui.a((byte) -33, ona.field_yb);
           ui.a((byte) -33, rc.field_l);
-          jb.a(new wi(vd.field_y, fw.field_j, uda.field_U, 32, false));
-          sw.field_p = new kv(32, 32);
+          TriangleRasterizer.a(new wi(vd.field_y, fw.field_j, uda.field_U, 32, false));
+          sw.field_p = new Sprite(32, 32);
           sw.field_p.b();
           rc.field_l.e(0, 0, 32, 32);
           hga.field_U.a((byte) -97);
           rc.field_l = null;
-          var4 = new kv[1 + ena.field_o.length][];
-          var5 = new kv[1 + ena.field_o.length][];
+          var4 = new Sprite[1 + ena.field_o.length][];
+          var5 = new Sprite[1 + ena.field_o.length][];
           var6_int = 0;
           while (ena.field_o.length > var6_int) {
             if (null != ena.field_o[var6_int]) {
@@ -1640,7 +1640,7 @@ public final class BachelorFridge extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "BachelorFridge.J(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "BachelorFridge.J(" + param0 + ')');
         }
     }
 
@@ -1660,7 +1660,7 @@ public final class BachelorFridge extends NetworkGameClient {
         int[] var4_ref_int__ = null;
         int var4 = 0;
         jna[] var4_ref_jna__ = null;
-        pf var5_ref_pf = null;
+        BitPacketBuffer var5_ref_pf = null;
         int[] var5_ref_int__ = null;
         int var5 = 0;
         int var6 = 0;
@@ -1805,7 +1805,7 @@ public final class BachelorFridge extends NetworkGameClient {
             }
             if (decompiledFrameCompleted0) {
               while (true) {
-                stackIn_120_0 = uv.a((byte) 122, mfa.field_b);
+                stackIn_120_0 = uv.a((byte) 122, GameKeyHandler.field_b);
                 if (stackIn_120_0) {
                   stackIn_223_0 = ri.field_a;
                   stackIn_223_1 = 9;
@@ -1814,13 +1814,13 @@ public final class BachelorFridge extends NetworkGameClient {
                       rs.a(true);
                       bka.field_h = false;
                       kaa.field_m = 10;
-                      fia.field_s = ig.field_m.g(-84);
+                      fia.field_s = ig.field_m.readString(-84);
                       continue;
                     }
                     if (ri.field_a == 14) {
                       rs.a(true);
                       dfa.a(150, ul.a(-58, 4), ul.a(-51, 2000), 0, jha.field_j, cma.field_y.length, mia.d((byte) -104), efa.c(true), 1024, NetworkGameClient.n(96));
-                      eka.a(vv.a(31185), -83, jha.c(-31068));
+                      MusicPatch.a(vv.a(31185), -83, jha.c(-31068));
                       wj.field_g = true;
                       hm.field_b = true;
                       bka.field_h = false;
@@ -1861,10 +1861,10 @@ public final class BachelorFridge extends NetworkGameClient {
                       var3_ref_int__ = vv.a((byte) 124);
                       var4_ref_int__ = var3_ref_int__;
                       var5_ref_pf = ig.field_m;
-                      var6 = ((lu) ((Object) var5_ref_pf)).b(16711935);
+                      var6 = ((PacketBuffer) ((Object) var5_ref_pf)).readUnsignedByte(16711935);
                       var7 = 0;
                       while (var6 > var7) {
-                        var4_ref_int__[var7] = ((lu) ((Object) var5_ref_pf)).f(-111);
+                        var4_ref_int__[var7] = ((PacketBuffer) ((Object) var5_ref_pf)).readInt(-111);
                         var7++;
                       }
                       var4_ref_int__ = var3_ref_int__;
@@ -1906,13 +1906,13 @@ public final class BachelorFridge extends NetworkGameClient {
                       }
                       mg.field_m = new mu(ig.field_m);
                       rba.a(mg.field_m, (byte) 125);
-                      ep.field_m = ig.field_m.e((byte) 65);
+                      ep.field_m = ig.field_m.readUnsignedShort((byte) 65);
                       continue;
                     }
                     if (ri.field_a == 76) {
                       ig.field_m.a(3);
                       ig.field_m.a(3);
-                      var3 = ig.field_m.b(16711935);
+                      var3 = ig.field_m.readUnsignedByte(16711935);
                       var4_ref_jna__ = new jna[var3];
                       var5 = 0;
                       while (var5 < var3) {
@@ -1926,7 +1926,7 @@ public final class BachelorFridge extends NetworkGameClient {
                         gja.field_n) {
                         rs.a(true);
                         vs.field_d = false;
-                        wma.field_b = 0;
+                        DualLinkNodeHashTable.field_b = 0;
                         gja.field_n = false;
                         kaa.field_m = -2;
                         wj.field_g = true;
@@ -1956,7 +1956,7 @@ public final class BachelorFridge extends NetworkGameClient {
             }
           }
           if (wj.field_g) {
-            wma.field_b = 0;
+            DualLinkNodeHashTable.field_b = 0;
           }
           if (er.d(11154)) {
             var3 = this.g(-127);
@@ -2025,7 +2025,7 @@ public final class BachelorFridge extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "BachelorFridge.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "BachelorFridge.C(" + param0 + ')');
         }
     }
 
@@ -2041,39 +2041,39 @@ public final class BachelorFridge extends NetworkGameClient {
           ru.field_c = 16711935;
           wk.field_f = 16777215;
           this.a(false, (byte) 62, true, true, false, false, false);
-          mfa.field_b[64] = 1;
-          mfa.field_b[63] = 1;
-          mfa.field_b[57] = -2;
-          mfa.field_b[79] = -2;
-          mfa.field_b[9] = -1;
-          mfa.field_b[58] = -2;
-          mfa.field_b[61] = 4;
-          mfa.field_b[84] = 1;
-          mfa.field_b[65] = 1;
+          GameKeyHandler.field_b[64] = 1;
+          GameKeyHandler.field_b[63] = 1;
+          GameKeyHandler.field_b[57] = -2;
+          GameKeyHandler.field_b[79] = -2;
+          GameKeyHandler.field_b[9] = -1;
+          GameKeyHandler.field_b[58] = -2;
+          GameKeyHandler.field_b[61] = 4;
+          GameKeyHandler.field_b[84] = 1;
+          GameKeyHandler.field_b[65] = 1;
           if (param0 < 50) {
             this.field_x = true;
           }
-          mfa.field_b[66] = 1;
-          mfa.field_b[69] = -2;
-          mfa.field_b[60] = 7;
-          mfa.field_b[68] = -1;
-          mfa.field_b[78] = -2;
-          mfa.field_b[70] = 8;
-          mfa.field_b[73] = -2;
-          mfa.field_b[62] = -1;
-          mfa.field_b[67] = 1;
-          mfa.field_b[82] = -2;
-          mfa.field_b[59] = 0;
-          mfa.field_b[10] = -1;
-          mfa.field_b[80] = -2;
-          mfa.field_b[76] = -2;
-          mfa.field_b[75] = 2;
-          mfa.field_b[74] = -2;
+          GameKeyHandler.field_b[66] = 1;
+          GameKeyHandler.field_b[69] = -2;
+          GameKeyHandler.field_b[60] = 7;
+          GameKeyHandler.field_b[68] = -1;
+          GameKeyHandler.field_b[78] = -2;
+          GameKeyHandler.field_b[70] = 8;
+          GameKeyHandler.field_b[73] = -2;
+          GameKeyHandler.field_b[62] = -1;
+          GameKeyHandler.field_b[67] = 1;
+          GameKeyHandler.field_b[82] = -2;
+          GameKeyHandler.field_b[59] = 0;
+          GameKeyHandler.field_b[10] = -1;
+          GameKeyHandler.field_b[80] = -2;
+          GameKeyHandler.field_b[76] = -2;
+          GameKeyHandler.field_b[75] = 2;
+          GameKeyHandler.field_b[74] = -2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "BachelorFridge.K(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "BachelorFridge.K(" + param0 + ')');
         }
     }
 

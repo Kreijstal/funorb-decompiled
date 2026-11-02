@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vh extends ana {
-    static kv field_x;
+    static Sprite field_x;
     private ir field_v;
     static sna field_y;
     static String field_w;
 
     private final void d(int param0) {
         if (param0 < 75) {
-          vh.a((byte[]) null, (int[]) null, (byte[]) null, (ee[]) null, 91, (int[]) null, true, (vr) null, (kv[][]) null, (String[][]) null, 21, (String[]) null, 37, (vr) null, (String[]) null, (kv[][]) null, (vr) null, (String[][]) null, 2);
+          vh.a((byte[]) null, (int[]) null, (byte[]) null, (IndexedSprite[]) null, 91, (int[]) null, true, (vr) null, (Sprite[][]) null, (String[][]) null, 21, (String[]) null, 37, (vr) null, (String[]) null, (Sprite[][]) null, (vr) null, (String[][]) null, 2);
         }
     }
 
@@ -26,7 +26,7 @@ final class vh extends ana {
         field_w = null;
     }
 
-    final static void a(byte[] param0, int[] param1, byte[] param2, ee[] param3, int param4, int[] param5, boolean param6, vr param7, kv[][] param8, String[][] param9, int param10, String[] param11, int param12, vr param13, String[] param14, kv[][] param15, vr param16, String[][] param17, int param18) {
+    final static void a(byte[] param0, int[] param1, byte[] param2, IndexedSprite[] param3, int param4, int[] param5, boolean param6, vr param7, Sprite[][] param8, String[][] param9, int param10, String[] param11, int param12, vr param13, String[] param14, Sprite[][] param15, vr param16, String[][] param17, int param18) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -154,7 +154,7 @@ final class vh extends ana {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param18).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param18).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class vh extends ana {
         iv var3 = (iv) (this.field_v.field_o.b((byte) 90));
         al.a(param0 + 88, this.field_v.field_k);
         if (param0 != 0) {
-          vh.a((byte[]) null, (int[]) null, (byte[]) null, (ee[]) null, -84, (int[]) null, true, (vr) null, (kv[][]) null, (String[][]) null, 83, (String[]) null, 45, (vr) null, (String[]) null, (kv[][]) null, (vr) null, (String[][]) null, -71);
+          vh.a((byte[]) null, (int[]) null, (byte[]) null, (IndexedSprite[]) null, -84, (int[]) null, true, (vr) null, (Sprite[][]) null, (String[][]) null, 83, (String[]) null, 45, (vr) null, (String[]) null, (Sprite[][]) null, (vr) null, (String[][]) null, -71);
         } else {
           var8 = this.field_v.field_l.a(-27449, this.field_q);
           this.field_q.field_fb.a(new vt(this.field_q, var8), true);
@@ -244,11 +244,11 @@ final class vh extends ana {
           bha.field_o = param3;
           dp.field_q = param2;
           rl.field_q = param0;
-          taa.field_m = new kv[param1.length];
+          taa.field_m = new Sprite[param1.length];
           for (var7 = param4; param1.length > var7; var7++) {
-            taa.field_m[var7] = new kv(317, 34);
+            taa.field_m[var7] = new Sprite(317, 34);
           }
-          iaa.field_b = param1;
+          MeshObject.field_b = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -266,7 +266,7 @@ final class vh extends ana {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ final class vh extends ana {
         try {
           this.field_v = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

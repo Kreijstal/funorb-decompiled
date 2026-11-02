@@ -7,7 +7,7 @@ class mf extends uda implements lja {
     private boolean field_fb;
     private boolean field_jb;
     private de field_kb;
-    private po field_hb;
+    private BitmapFont field_hb;
 
     final void o(int param0) {
         this.field_kb.c(1705304705, 2121792, 4210752);
@@ -49,7 +49,7 @@ class mf extends uda implements lja {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ class mf extends uda implements lja {
                 }
                 var6.a((pl) (this), eq.field_i, 19528);
               } else {
-                var6.a(7, wha.field_b, 9);
+                var6.a(7, IterableNodeHashTable.field_b, 9);
               }
             }
           }
@@ -125,7 +125,7 @@ class mf extends uda implements lja {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ class mf extends uda implements lja {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 < 50) {
-            this.field_hb = (po) null;
+            this.field_hb = (BitmapFont) null;
           }
           if (!this.field_ib) {
             eea.a((byte) 127, "tochangedisplayname.ws", nia.d(-31768));
@@ -156,7 +156,7 @@ class mf extends uda implements lja {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ class mf extends uda implements lja {
         }
     }
 
-    mf(rp param0, po param1, String param2, boolean param3, boolean param4) {
+    mf(rp param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new hc((mf) null, param1, param2), 77, 10, 10);
         try {
           this.field_jb = param3 ? true : false;
@@ -203,7 +203,7 @@ class mf extends uda implements lja {
           this.field_kb.field_P = true;
           this.c(this.field_kb, -123);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

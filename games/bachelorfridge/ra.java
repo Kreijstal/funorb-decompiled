@@ -15,7 +15,7 @@ final class ra extends at {
 
     final boolean c(byte param0) {
         int fieldTemp$0 = 0;
-        if (!this.field_q.a((byte) -106)) {
+        if (!this.field_q.isLinked((byte) -106)) {
           int var2 = -46 / ((param0 - 71) / 47);
           fieldTemp$0 = this.field_m - 1;
           this.field_m = this.field_m - 1;
@@ -33,7 +33,7 @@ final class ra extends at {
           this.field_n.a(16761024, 65, fb.field_q);
           this.field_m = 100;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

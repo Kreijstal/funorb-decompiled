@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class il {
-    static ee field_b;
+    static IndexedSprite field_b;
     private byte[] field_d;
     private int[] field_c;
-    static ee field_a;
+    static IndexedSprite field_a;
     static String field_e;
     private int[] field_f;
 
@@ -63,7 +63,7 @@ final class il {
             return stackIn_4_0;
           }
           if (param4 != -69) {
-            field_a = (ee) null;
+            field_a = (IndexedSprite) null;
           }
           var7_int = 0;
           param0 = param0 + param2;
@@ -220,7 +220,7 @@ final class il {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -313,7 +313,7 @@ final class il {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -417,7 +417,7 @@ final class il {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 

@@ -9,7 +9,7 @@ final class aca extends kj {
     static int field_i;
     private boolean field_j;
     static int field_k;
-    private eaa field_h;
+    private IntrusiveDeque field_h;
 
     final boolean b(int param0) {
         int fieldTemp$2 = 0;
@@ -51,7 +51,7 @@ final class aca extends kj {
             stackIn_10_0 = var2_ref.field_h;
             if (var4 == 0) {
               if (stackIn_10_0 < 0) {
-                var2_ref.a(false);
+                var2_ref.unlink(false);
               }
               var2_ref = (bma) (this.field_h.c(0));
               continue;
@@ -83,7 +83,7 @@ final class aca extends kj {
             stackIn_29_0 = var2_refLifetime1.field_h;
             if (var4 == 0) {
               if (stackIn_29_0 < 0) {
-                var2_refLifetime1.a(false);
+                var2_refLifetime1.unlink(false);
               }
               var2_refLifetime1 = (bma) (this.field_h.c(0));
               continue;
@@ -113,7 +113,7 @@ final class aca extends kj {
           stackIn_43_0 = var2_refLifetime2.field_h;
           if (var4 == 0) {
             if (stackIn_43_0 < 0) {
-              var2_refLifetime2.a(false);
+              var2_refLifetime2.unlink(false);
             }
             var2_refLifetime2 = (bma) (this.field_h.c(0));
             continue;
@@ -697,7 +697,7 @@ final class aca extends kj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_h = new eaa();
+          this.field_h = new IntrusiveDeque();
           stackIn_4_1 = (param3);
           this.field_j = stackIn_4_1;
           if (this.field_j) {
@@ -718,7 +718,7 @@ final class aca extends kj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -736,7 +736,7 @@ final class aca extends kj {
           }
           var5 = (var4.field_i >> 4) + param2;
           var6 = (var4.field_q >> 4) + param0 - (var4.field_h >> 4);
-          mla.field_b[var4.field_v].e(var5, var6);
+          mla.field_b[var4.field_v].draw(var5, var6);
           var4 = (bma) (this.field_h.c(0));
           if (var7 != 0) {
             return;

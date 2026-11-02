@@ -3,7 +3,7 @@
  */
 final class bp extends ana {
     static int field_x;
-    static ee[] field_y;
+    static IndexedSprite[] field_y;
     static String field_w;
     static int field_z;
     private kk field_v;
@@ -19,7 +19,7 @@ final class bp extends ana {
         try {
           this.field_v = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "bp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class bp extends ana {
         int fieldTemp$0 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
         if (this.field_l > 75) {

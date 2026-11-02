@@ -5,14 +5,14 @@ final class kh extends bca {
     static int field_r;
     static int field_q;
 
-    final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, kv param8) {
+    final static void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, Sprite param8) {
         if (param0) {
           return;
         }
         try {
-          fi.a(param6, param1, param7, 0, 0, param8, dg.field_e, 0, -123, 0, param4, param5, 0, param2, param3, 0, param8.field_v);
+          fi.a(param6, param1, param7, 0, 0, param8, SoftwareRasterizer.field_e, 0, -123, 0, param4, param5, 0, param2, param3, 0, param8.field_v);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class kh extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -52,11 +52,11 @@ final class kh extends bca {
           this.a(param0, (byte) -2);
           int var3_int = -89 % ((12 - param1) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    kh(lu param0) {
+    kh(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
@@ -65,9 +65,9 @@ final class kh extends bca {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_k = param0.e((byte) 89);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 89);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -85,7 +85,7 @@ final class kh extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -95,11 +95,11 @@ final class kh extends bca {
         }
         jd.a(param1, (byte) 86);
         if (param0 <= -47) {
-          v.a((byte) -50);
+          BufferedCacheFile.a((byte) -50);
           return;
         }
         field_q = 118;
-        v.a((byte) -50);
+        BufferedCacheFile.a((byte) -50);
     }
 
     final static String a(vr param0, byte param1, String param2, String param3) {
@@ -146,7 +146,7 @@ final class kh extends bca {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kca {
-    static pia field_c;
+    static PalettedBitmapFont field_c;
     static int field_a;
     static vaa field_b;
     private static String field_z;

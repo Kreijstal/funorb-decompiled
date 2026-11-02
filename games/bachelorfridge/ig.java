@@ -15,7 +15,7 @@ final class ig extends k {
     private int field_s;
     private int field_y;
     private int field_t;
-    static pf field_m;
+    static BitPacketBuffer field_m;
     private int field_w;
     private int[] field_u;
     private int field_n;
@@ -78,12 +78,12 @@ final class ig extends k {
 
     public static void d(int param0) {
         if (param0 != 0) {
-          field_m = (pf) null;
+          field_m = (BitPacketBuffer) null;
         }
         field_m = null;
     }
 
-    final static vb a(int param0, lu param1) {
+    final static vb a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         vb stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -92,9 +92,9 @@ final class ig extends k {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            field_m = (pf) null;
+            field_m = (BitPacketBuffer) null;
           }
-          stackIn_3_0 = new vb(param1.c((byte) -85), param1.c((byte) -85), param1.c((byte) -85), param1.c((byte) -85), param1.a(3), param1.a(param0 ^ 3), param1.b(16711935));
+          stackIn_3_0 = new vb(param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.a(3), param1.a(param0 ^ 3), param1.readUnsignedByte(16711935));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,11 +106,11 @@ final class ig extends k {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_28_0 = null;
@@ -125,34 +125,34 @@ final class ig extends k {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_x = param1.b(16711935);
+            this.field_x = param1.readUnsignedByte(16711935);
           } else {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                this.field_k = param1.e((byte) 103);
+                this.field_k = param1.readUnsignedShort((byte) 103);
               } else {
                 if (var4_int != 3) {
                   if (var4_int != 4) {
                     if (var4_int != 5) {
                       if (var4_int != 6) {
                         if (7 == var4_int) {
-                          this.field_s = param1.e((byte) 99);
+                          this.field_s = param1.readUnsignedShort((byte) 99);
                         }
                       } else {
-                        this.field_w = param1.e((byte) 52);
+                        this.field_w = param1.readUnsignedShort((byte) 52);
                       }
                     } else {
-                      this.field_t = param1.e((byte) 56);
+                      this.field_t = param1.readUnsignedShort((byte) 56);
                     }
                   } else {
-                    this.field_y = param1.e((byte) 59);
+                    this.field_y = param1.readUnsignedShort((byte) 59);
                   }
                 } else {
-                  this.field_o = param1.e((byte) 123);
+                  this.field_o = param1.readUnsignedShort((byte) 123);
                 }
               }
             } else {
-              this.field_v = param1.b(16711935);
+              this.field_v = param1.readUnsignedByte(16711935);
             }
           }
           return;
@@ -166,11 +166,11 @@ final class ig extends k {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static cj a(lu param0, int param1) {
+    final static cj a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         cj stackIn_2_0 = null;
@@ -186,7 +186,7 @@ final class ig extends k {
             stackIn_2_0 = (cj) null;
             return stackIn_2_0;
           }
-          var2_int = param0.e((byte) 64);
+          var2_int = param0.readUnsignedShort((byte) 64);
           if (3 == ((t) (al.a(103, var2_int))).field_p) {
             stackIn_6_0 = kfa.a(param0, 4096, var2_int);
             return (cj) ((Object) stackIn_6_0);
@@ -207,7 +207,7 @@ final class ig extends k {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class ig extends k {
             }
           } else {
             var19Lifetime1 = var18;
-            bl.a(var19Lifetime1, 0, hh.field_d, 0);
+            ArrayOperations.a(var19Lifetime1, 0, hh.field_d, 0);
           }
         }
         return var3;

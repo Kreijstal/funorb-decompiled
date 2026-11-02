@@ -3,17 +3,17 @@
  */
 final class ew extends bca {
     static int[] field_s;
-    static ee field_q;
-    static kv field_r;
+    static IndexedSprite field_q;
+    static Sprite field_r;
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 > -12) {
             CharSequence var4 = (CharSequence) null;
             ew.a((byte) 95, (CharSequence) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ew.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ew.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class ew extends bca {
             } else {
               stackIn_53_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -159,11 +159,11 @@ final class ew extends bca {
         try {
           int var3_int = 113 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ew.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ew.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    ew(lu param0) {
+    ew(PacketBuffer param0) {
         super(param0);
     }
 
@@ -188,7 +188,7 @@ final class ew extends bca {
           bd.field_k = param4;
           var7 = (CharSequence) ((Object) param4);
           df.field_s = fq.a(0, var7);
-          eaa.field_a = param1;
+          IntrusiveDeque.field_a = param1;
           var6 = lma.a(jv.field_i, param0, tga.field_p, 0, mj.field_k);
           if (param3) {
             return true;
@@ -211,7 +211,7 @@ final class ew extends bca {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class ew extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -291,7 +291,7 @@ final class ew extends bca {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

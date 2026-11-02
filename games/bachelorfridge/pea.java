@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pea extends pp {
-    static kv field_k;
+    static Sprite field_k;
     static String field_l;
     private int field_j;
     private int field_i;
@@ -24,7 +24,7 @@ final class pea extends pp {
         try {
           ((aga) (var4)).field_A = false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pea.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pea.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -38,15 +38,15 @@ final class pea extends pp {
         field_k = null;
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           int var3_int = 23 % ((param1 - 34) / 58);
           super.a(param0, (byte) 113);
           er.a(this.field_h, 115, param0);
-          param0.d(this.field_j, 0);
-          param0.d(this.field_i, 0);
+          param0.writeByte(this.field_j, 0);
+          param0.writeByte(this.field_i, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pea.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pea.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class pea extends pp {
           this.field_h = param0;
           this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class pea extends pp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "pea.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "pea.B(" + param0 + ')');
         }
     }
 

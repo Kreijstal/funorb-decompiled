@@ -4,7 +4,7 @@
 final class nd extends kj {
     static double field_j;
     static int field_h;
-    static kv field_g;
+    static Sprite field_g;
     static sna field_i;
     private int field_f;
 

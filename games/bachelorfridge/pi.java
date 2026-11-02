@@ -5,7 +5,7 @@ import java.util.*;
 
 final class pi extends kj {
     private int field_f;
-    private eaa field_g;
+    private IntrusiveDeque field_g;
     static String field_h;
 
     final static String a(int param0, java.applet.Applet param1) {
@@ -64,7 +64,7 @@ final class pi extends kj {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -142,17 +142,17 @@ final class pi extends kj {
           }
         }
         if (param0 < 21) {
-          this.field_g = (eaa) null;
+          this.field_g = (IntrusiveDeque) null;
         }
         r.a(-126, this.field_f, this.field_e.field_h.field_w, this.field_g);
         return false;
     }
 
-    final static kv[] a(vr param0, int param1, String param2, String param3) {
+    final static Sprite[] a(vr param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        kv[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -167,7 +167,7 @@ final class pi extends kj {
           }
           var4_int = param0.a(param2, false);
           var5 = param0.a((byte) 6, var4_int, param3);
-          stackIn_3_0 = uka.a(var5, param1 ^ -8947, param0, var4_int);
+          stackIn_3_0 = ImageProducerRasterBuffer.a(var5, param1 ^ -8947, param0, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,7 +191,7 @@ final class pi extends kj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -205,9 +205,9 @@ final class pi extends kj {
         super(param0, param1, param2);
         try {
           this.field_f = 136;
-          this.field_g = new eaa();
+          this.field_g = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

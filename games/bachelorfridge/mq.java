@@ -3,7 +3,7 @@
  */
 final class mq {
     static String[] field_a;
-    static kv[] field_b;
+    static Sprite[] field_b;
 
     public static void a(int param0) {
         if (param0 != 213) {
@@ -121,7 +121,7 @@ final class mq {
           }
           return '_';
         }
-        field_b = (kv[]) null;
+        field_b = (Sprite[]) null;
         var2Lifetime1 = param1;
         if (var2Lifetime1 == 32) {
           return '_';

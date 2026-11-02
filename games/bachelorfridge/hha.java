@@ -6,7 +6,7 @@ final class hha extends ana {
     static hw[] field_w;
     static int[] field_A;
     private mna field_x;
-    static ee[] field_y;
+    static IndexedSprite[] field_y;
     static long[][] field_v;
 
     final static boolean e(int param0) {
@@ -57,7 +57,7 @@ final class hha extends ana {
         try {
           this.field_x = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class hha extends ana {
             hha.g(78);
           }
           if (var2 == null) {
-            stackIn_6_0 = uka.field_k;
+            stackIn_6_0 = ImageProducerRasterBuffer.field_k;
             return stackIn_6_0;
           }
           var3 = gh.c((byte) -67);
@@ -108,7 +108,7 @@ final class hha extends ana {
               return stackIn_12_0;
             }
           }
-          stackIn_15_0 = uka.field_k;
+          stackIn_15_0 = ImageProducerRasterBuffer.field_k;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ final class hha extends ana {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

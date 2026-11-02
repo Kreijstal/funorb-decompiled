@@ -5,7 +5,7 @@ import java.io.*;
 
 final class hna extends aba {
     private hb field_j;
-    static ee field_h;
+    static IndexedSprite field_h;
     private String field_g;
     static int field_k;
     private boolean field_i;
@@ -17,7 +17,7 @@ final class hna extends aba {
         try {
           this.field_j = new hb(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class hna extends aba {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class hna extends aba {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -120,28 +120,28 @@ final class hna extends aba {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (param1 < 61) {
-            field_h = (ee) null;
+            field_h = (IndexedSprite) null;
           }
           if (dma.field_b != null && (param0 < 0 ||
             eia.field_a == uca.field_a)) {
-            if (0 == sja.field_fb.field_g &&
+            if (0 == sja.field_fb.position &&
               f.b((byte) 73) > (vla.field_v + 10000L)) {
-              sja.field_fb.c(param0, (byte) 99);
+              sja.field_fb.writeCipheredByte(param0, (byte) 99);
             }
-            if (sja.field_fb.field_g > 0) {
+            if (sja.field_fb.position > 0) {
               try {
-                dma.field_b.a(0, sja.field_fb.field_h, false, sja.field_fb.field_g);
+                dma.field_b.a(0, sja.field_fb.payload, false, sja.field_fb.position);
                 vla.field_v = f.b((byte) 73);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 vc.a((byte) -118);
               }
-              sja.field_fb.field_g = 0;
+              sja.field_fb.position = 0;
             }
             return;
           }
-          sja.field_fb.field_g = 0;
+          sja.field_fb.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

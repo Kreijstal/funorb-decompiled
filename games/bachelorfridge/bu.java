@@ -3,24 +3,24 @@
  */
 final class bu extends kj {
     private int field_h;
-    private kv field_f;
+    private Sprite field_f;
     static String field_g;
     static sna field_j;
     private int field_i;
 
     bu(gj param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
-        kv var5 = null;
+        Sprite var5 = null;
         try {
           this.field_h = param3;
           this.field_i = 64;
           var5 = param0.field_s.field_p;
-          this.field_f = new kv(var5.field_q, var5.field_p);
+          this.field_f = new Sprite(var5.field_q, var5.field_p);
           bu.a(0, this.field_f);
           var5.e(0, 0, 16777215);
           db.b(62);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "bu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -30,15 +30,15 @@ final class bu extends kj {
         int var1 = 81 / ((14 - param0) / 62);
     }
 
-    final static void a(int param0, kv param1) {
+    final static void a(int param0, Sprite param1) {
         uc.d(125);
         if (param0 != 0) {
           return;
         }
         try {
-          dg.a(param1.field_v, param1.field_n, param1.field_o);
+          SoftwareRasterizer.setTarget(param1.field_v, param1.field_n, param1.field_o);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "bu.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bu.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class bu extends kj {
         if (param0 > 21) {
           return true;
         }
-        this.field_f = (kv) null;
+        this.field_f = (Sprite) null;
         return true;
     }
 

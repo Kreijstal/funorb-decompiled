@@ -30,7 +30,7 @@ final class aia extends IntrusiveNode {
         int stackIn_66_2 = 0;
         boolean stackIn_67_3;
         RuntimeException decompiledCaughtException = null;
-        kv var1 = null;
+        Sprite var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -42,12 +42,12 @@ final class aia extends IntrusiveNode {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        kv var9 = null;
+        Sprite var9 = null;
         int var10 = 0;
-        kv var11 = null;
-        kv var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         String var14 = null;
-        kv var16 = null;
+        Sprite var16 = null;
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -84,19 +84,19 @@ final class aia extends IntrusiveNode {
             bna.field_y = hca.a("benefits", sha.field_l, 106, "menu_text");
             ug.field_o = hca.a("benefits", sha.field_l, -115, "button_frame");
             id.field_h = hca.a("benefits", sha.field_l, 113, "arrow");
-            fna.field_q = (po) ((Object) vfa.a("large_font", sha.field_l, -58, "benefits", la.field_s));
-            g.field_f = (po) ((Object) vfa.a("small_font", sha.field_l, 117, "benefits", la.field_s));
-            var27 = dg.field_e;
-            var2 = dg.field_i;
-            var3 = dg.field_c;
-            dg.a(ie.field_b);
-            var11 = new kv(4 + id.field_h.field_q, 4 + id.field_h.field_p);
+            fna.field_q = (BitmapFont) ((Object) vfa.a("large_font", sha.field_l, -58, "benefits", la.field_s));
+            g.field_f = (BitmapFont) ((Object) vfa.a("small_font", sha.field_l, 117, "benefits", la.field_s));
+            var27 = SoftwareRasterizer.field_e;
+            var2 = SoftwareRasterizer.field_i;
+            var3 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(ie.field_b);
+            var11 = new Sprite(4 + id.field_h.field_q, 4 + id.field_h.field_p);
             var11.b();
-            id.field_h.f(2, 2, bha.field_o);
+            id.field_h.drawGrayModulated(2, 2, bha.field_o);
             sb.a(0, 2, var11, var11.field_p, 0, var11.field_q, 1, 87);
             id.field_h = var11;
-            vs.field_b = id.field_h.h();
-            var12 = new kv(195, 221);
+            vs.field_b = id.field_h.copyFlippedHorizontal();
+            var12 = new Sprite(195, 221);
             var6 = var12.field_q / 2;
             var12.b();
             fna.field_q.a(lga.a(true, new String[]{pg.field_q}, jw.field_x), var6, 40, 16777215, -1);
@@ -107,18 +107,18 @@ final class aia extends IntrusiveNode {
             g.field_f.a(ema.field_Lb, var6, 200, 16777215, -1);
             sb.a(0, 3, var12, var12.field_p, 0, var12.field_q, 1, 117);
             uea.field_j.b();
-            var12.e(18 - uea.field_j.field_t, -uea.field_j.field_u + 241);
-            for (var7 = 0; var7 < iaa.field_b.length; var7++) {
+            var12.draw(18 - uea.field_j.field_t, -uea.field_j.field_u + 241);
+            for (var7 = 0; var7 < MeshObject.field_b.length; var7++) {
               taa.field_m[var7].b();
-              g.field_f.a(iaa.field_b[var7], 3, 3, taa.field_m[var7].field_q - 6, -6 + taa.field_m[var7].field_p, bha.field_o, -1, 1, 1, g.field_f.field_B + g.field_f.field_u);
+              g.field_f.drawParagraph(MeshObject.field_b[var7], 3, 3, taa.field_m[var7].field_q - 6, -6 + taa.field_m[var7].field_p, bha.field_o, -1, 1, 1, g.field_f.field_B + g.field_f.field_u);
               sb.a(0, 3, taa.field_m[var7], taa.field_m[var7].field_p, 0, taa.field_m[var7].field_q, 1, 88);
             }
-            iaa.field_b = null;
-            baa.field_y = ai.field_a.a();
+            MeshObject.field_b = null;
+            baa.field_y = ai.field_a.copy();
             baa.field_y.b();
-            kea.a(dg.field_i, dg.field_c * 2 / 3, 16711680, 64, 0, 0);
-            dg.a(var27, var2, var3);
-            dg.b(ie.field_b);
+            kea.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c * 2 / 3, 16711680, 64, 0, 0);
+            SoftwareRasterizer.setTarget(var27, var2, var3);
+            SoftwareRasterizer.restoreClip(ie.field_b);
             et.field_l = 390 + (aka.field_E.field_p - ug.field_o.field_p) / 2;
             ak.field_u = 434 + (-ug.field_o.field_q + aka.field_E.field_q) / 2;
             sha.field_l = null;
@@ -130,13 +130,13 @@ final class aia extends IntrusiveNode {
           }
           if (null != od.field_B &&
             fna.field_q != null) {
-            var28 = dg.field_e;
-            var2Lifetime1 = dg.field_i;
-            var3Lifetime1 = dg.field_c;
-            dg.a(ie.field_b);
+            var28 = SoftwareRasterizer.field_e;
+            var2Lifetime1 = SoftwareRasterizer.field_i;
+            var3Lifetime1 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(ie.field_b);
             var14 = lga.a(true, new String[]{aa.field_m[lk.field_q]}, uca.field_c);
             var5 = fna.field_q.c(var14, ima.field_r);
-            var6Lifetime1 = fna.field_q.a(var14, ima.field_r, fna.field_q.field_B + fna.field_q.field_u);
+            var6Lifetime1 = fna.field_q.measureWrappedHeight(var14, ima.field_r, fna.field_q.field_B + fna.field_q.field_u);
             var7Lifetime1 = rs.field_c + (ima.field_r - var5) / 2;
             var5 += 6;
             var8 = vc.field_c + (-var6Lifetime1 + kt.field_j) / 2;
@@ -179,81 +179,81 @@ final class aia extends IntrusiveNode {
               var8 = var8 + var9_intLifetime3;
               od.field_B.field_u = od.field_B.field_u + var9_intLifetime3;
             }
-            od.field_B.g();
-            var9 = new kv(od.field_B.field_n, od.field_B.field_o);
+            od.field_B.normalizeCanvas();
+            var9 = new Sprite(od.field_B.field_n, od.field_B.field_o);
             var9.b();
-            fna.field_q.a(var14, rs.field_c, vc.field_c, ima.field_r, kt.field_j, 16777215, -1, 1, 1, fna.field_q.field_B + fna.field_q.field_u);
+            fna.field_q.drawParagraph(var14, rs.field_c, vc.field_c, ima.field_r, kt.field_j, 16777215, -1, 1, 1, fna.field_q.field_B + fna.field_q.field_u);
             sb.a(0, 3, var9, var9.field_o, 0, var9.field_n, 1, 89);
             od.field_B.b();
-            var9.e(0, 0);
-            is.field_c = new kv(640, 480);
+            var9.draw(0, 0);
+            is.field_c = new Sprite(640, 480);
             is.field_c.b();
-            od.field_B.d(sha.field_m + (od.field_B.field_n >> 1), cga.field_p + (od.field_B.field_o >> 1), ou.field_b, 4096);
+            od.field_B.d(sha.field_m + (od.field_B.field_n >> 1), cga.field_p + (od.field_B.field_o >> 1), IterableDualLinkDeque.field_b, 4096);
             od.field_B = null;
-            is.field_c.d();
-            dg.a(var28, var2Lifetime1, var3Lifetime1);
-            dg.b(ie.field_b);
+            is.field_c.trimTransparentBorders();
+            SoftwareRasterizer.setTarget(var28, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.restoreClip(ie.field_b);
           }
           if (null != rr.field_r &&
             g.field_f != null) {
-            var29 = dg.field_e;
-            var2Lifetime2 = dg.field_i;
-            var3Lifetime2 = dg.field_c;
-            dg.a(ie.field_b);
-            var16 = new kv(412, 43);
+            var29 = SoftwareRasterizer.field_e;
+            var2Lifetime2 = SoftwareRasterizer.field_i;
+            var3Lifetime2 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(ie.field_b);
+            var16 = new Sprite(412, 43);
             var5_ref_String = lga.a(true, new String[]{rr.field_r}, kr.field_wb);
             rr.field_r = null;
             var16.b();
-            g.field_f.a(var5_ref_String, 3, 3, -6 + var16.field_q, var16.field_p - 6, 16777215, -1, 0, 1, g.field_f.field_u + g.field_f.field_B);
+            g.field_f.drawParagraph(var5_ref_String, 3, 3, -6 + var16.field_q, var16.field_p - 6, 16777215, -1, 0, 1, g.field_f.field_u + g.field_f.field_B);
             sb.a(0, 3, var16, var16.field_p, 0, var16.field_q, 1, 120);
             vh.field_x.b();
-            var16.e(-vh.field_x.field_t + 199, 83 - vh.field_x.field_u);
-            dg.a(var29, var2Lifetime2, var3Lifetime2);
-            dg.b(ie.field_b);
+            var16.draw(-vh.field_x.field_t + 199, 83 - vh.field_x.field_u);
+            SoftwareRasterizer.setTarget(var29, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.restoreClip(ie.field_b);
           }
           if (kka.field_h != null &&
             g.field_f != null) {
-            var30 = dg.field_e;
-            var2Lifetime3 = dg.field_i;
-            var3Lifetime3 = dg.field_c;
-            dg.a(ie.field_b);
+            var30 = SoftwareRasterizer.field_e;
+            var2Lifetime3 = SoftwareRasterizer.field_i;
+            var3Lifetime3 = SoftwareRasterizer.field_c;
+            SoftwareRasterizer.saveClip(ie.field_b);
             var4 = 6 + g.field_f.c(fja.field_c, 640);
             var5Lifetime1 = 20 + kka.field_h.field_n + var4;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = 20 + kka.field_h.field_n + var6Lifetime2;
             vh.field_x.b();
-            g.field_f.c(fja.field_c, -vh.field_x.field_t + var7Lifetime2, g.field_f.field_B + (g.field_f.field_u - vh.field_x.field_u) + 155, 16777215, -1);
+            g.field_f.drawText(fja.field_c, -vh.field_x.field_t + var7Lifetime2, g.field_f.field_B + (g.field_f.field_u - vh.field_x.field_u) + 155, 16777215, -1);
             sb.a(-4 - vh.field_x.field_t + var7Lifetime2, 3, vh.field_x, 50, -vh.field_x.field_u + 155, var4, 1, 117);
             var8Lifetime1 = -((-g.field_f.field_B + (-g.field_f.field_u - 3 + kka.field_h.field_o)) / 2) + 155 - vh.field_x.field_u;
-            kka.field_h.e(-vh.field_x.field_t + var6Lifetime2, var8Lifetime1);
-            dg.a(var30, var2Lifetime3, var3Lifetime3);
-            dg.b(ie.field_b);
+            kka.field_h.draw(-vh.field_x.field_t + var6Lifetime2, var8Lifetime1);
+            SoftwareRasterizer.setTarget(var30, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.restoreClip(ie.field_b);
             kka.field_h = null;
           }
-          dg.a(ie.field_b);
-          dg.a(16, 16, 608, 112, 15, dp.field_q, rl.field_q);
-          dg.a(231, 144, 393, 232, 15, dp.field_q, rl.field_q);
+          SoftwareRasterizer.saveClip(ie.field_b);
+          SoftwareRasterizer.a(16, 16, 608, 112, 15, dp.field_q, rl.field_q);
+          SoftwareRasterizer.a(231, 144, 393, 232, 15, dp.field_q, rl.field_q);
           if (null != lm.field_b) {
-            lm.field_b.e(0, 0);
+            lm.field_b.draw(0, 0);
           }
           if (param0 >= -105) {
             aia.c((byte) 87);
           }
           if (null != uea.field_j) {
-            uea.field_j.e(0, 0);
+            uea.field_j.draw(0, 0);
           }
-          vh.field_x.e(0, 0);
+          vh.field_x.draw(0, 0);
           if (is.field_c != null) {
-            is.field_c.e(0, 0);
+            is.field_c.draw(0, 0);
           }
           if (aka.field_E != null &&
             null != ug.field_o) {
-            aka.field_E.e(231, 390);
+            aka.field_E.draw(231, 390);
             var1 = ai.field_a;
             if (ic.field_i.field_g == 0) {
               var1 = baa.field_y;
             }
-            var1.e(0, 0);
+            var1.draw(0, 0);
             stackIn_50_0 = 40;
             stackIn_50_1 = wga.field_s;
             if (ic.field_i.field_g == 0) {
@@ -263,14 +263,14 @@ final class aia extends IntrusiveNode {
             }
             var2Lifetime4 = (stackIn_50_0 * iw.a(stackIn_50_1 << stackIn_51_2, 2047) >> 16) + 40;
             if (0 < var2Lifetime4) {
-              aka.field_E.d(230, 389, var2Lifetime4);
-              aka.field_E.d(232, 389, var2Lifetime4);
-              aka.field_E.d(232, 391, var2Lifetime4);
-              aka.field_E.d(230, 391, var2Lifetime4);
-              var1.d(1, 1, var2Lifetime4);
-              var1.d(-1, 1, var2Lifetime4);
-              var1.d(1, -1, var2Lifetime4);
-              var1.d(-1, -1, var2Lifetime4);
+              aka.field_E.drawAdditive(230, 389, var2Lifetime4);
+              aka.field_E.drawAdditive(232, 389, var2Lifetime4);
+              aka.field_E.drawAdditive(232, 391, var2Lifetime4);
+              aka.field_E.drawAdditive(230, 391, var2Lifetime4);
+              var1.drawAdditive(1, 1, var2Lifetime4);
+              var1.drawAdditive(-1, 1, var2Lifetime4);
+              var1.drawAdditive(1, -1, var2Lifetime4);
+              var1.drawAdditive(-1, -1, var2Lifetime4);
             }
             stackIn_56_0 = qs.field_o;
             stackIn_56_1 = et.field_l;
@@ -280,8 +280,8 @@ final class aia extends IntrusiveNode {
           }
           if (null != aka.field_E &&
             null != ug.field_o) {
-            aka.field_E.e(434, 390);
-            bna.field_y.e(0, 0);
+            aka.field_E.draw(434, 390);
+            bna.field_y.draw(0, 0);
             if (1 == ic.field_i.field_g) {
               kea.a(-4 + aka.field_E.field_q, 7 * aka.field_E.field_p / 12, 16711680, 64, 392, 436);
             }
@@ -293,37 +293,37 @@ final class aia extends IntrusiveNode {
           }
           if (id.field_h != null) {
             var1_int = -(id.field_h.field_o / 2) + 357;
-            id.field_h.e(-id.field_h.field_n + 269, var1_int);
-            vs.field_b.e(586, var1_int);
+            id.field_h.draw(-id.field_h.field_n + 269, var1_int);
+            vs.field_b.draw(586, var1_int);
             if (gd.field_m > var1_int &&
               gd.field_m < var1_int + id.field_h.field_p) {
               var2Lifetime5 = (iw.a(wga.field_s << 4, 2047) * 40 >> 16) + 40;
               if (var2Lifetime5 > 0) {
                 if (-id.field_h.field_q + 269 < mk.field_p &&
                   mk.field_p < 269) {
-                  id.field_h.d(-id.field_h.field_n + 268, -1 + var1_int, var2Lifetime5);
-                  id.field_h.d(269 - id.field_h.field_n + 1, -1 + var1_int, var2Lifetime5);
-                  id.field_h.d(-id.field_h.field_n + 269 - 1, var1_int + 1, var2Lifetime5);
-                  id.field_h.d(269 + (-id.field_h.field_n + 1), var1_int + 1, var2Lifetime5);
+                  id.field_h.drawAdditive(-id.field_h.field_n + 268, -1 + var1_int, var2Lifetime5);
+                  id.field_h.drawAdditive(269 - id.field_h.field_n + 1, -1 + var1_int, var2Lifetime5);
+                  id.field_h.drawAdditive(-id.field_h.field_n + 269 - 1, var1_int + 1, var2Lifetime5);
+                  id.field_h.drawAdditive(269 + (-id.field_h.field_n + 1), var1_int + 1, var2Lifetime5);
                 } else {
                   if (mk.field_p > 586 &&
                     mk.field_p < id.field_h.field_q + 586) {
-                    vs.field_b.d(585, var1_int - 1, var2Lifetime5);
-                    vs.field_b.d(587, -1 + var1_int, var2Lifetime5);
-                    vs.field_b.d(585, var1_int + 1, var2Lifetime5);
-                    vs.field_b.d(587, var1_int + 1, var2Lifetime5);
+                    vs.field_b.drawAdditive(585, var1_int - 1, var2Lifetime5);
+                    vs.field_b.drawAdditive(587, -1 + var1_int, var2Lifetime5);
+                    vs.field_b.drawAdditive(585, var1_int + 1, var2Lifetime5);
+                    vs.field_b.drawAdditive(587, var1_int + 1, var2Lifetime5);
                   }
                 }
               }
             }
           }
           va.a(127);
-          taa.field_m[ih.field_l].e(269, 340);
+          taa.field_m[ih.field_l].draw(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref), "aia.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "aia.B(" + param0 + ')');
         }
     }
 

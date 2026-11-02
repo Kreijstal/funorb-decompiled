@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fv extends ana {
-    static kv field_y;
+    static Sprite field_y;
     private taa field_z;
     static int field_w;
     static int[] field_x;
     private boolean field_v;
 
-    final static void a(int param0, int param1, int param2, eaa param3, int param4, byte param5) {
+    final static void a(int param0, int param1, int param2, IntrusiveDeque param3, int param4, byte param5) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -17,13 +17,13 @@ final class fv extends ana {
         RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
-        eaa var9 = null;
+        IntrusiveDeque var9 = null;
         var8 = BachelorFridge.field_y;
         try {
           var6 = (rea) (param3.b((byte) 90));
           if (param5 > -104) {
-            var9 = (eaa) null;
-            fv.a(6, 16, -46, (eaa) null, -23, (byte) 95);
+            var9 = (IntrusiveDeque) null;
+            fv.a(6, 16, -46, (IntrusiveDeque) null, -23, (byte) 95);
           }
           while (var6 != null) {
             var7 = (var6.field_n >> 1) + (630 & (int)var6.field_m * 8357 + 326565 * (int)var6.field_j);
@@ -31,7 +31,7 @@ final class fv extends ana {
               var7 = 256;
             }
             param1 = var6.field_i;
-            dg.f((int)var6.field_m + param4, -2 + (param0 + (int)var6.field_l), (128 - var6.field_n) / 16, param1, 256 - var7 >> 2);
+            SoftwareRasterizer.fillCircleAlpha((int)var6.field_m + param4, -2 + (param0 + (int)var6.field_l), (128 - var6.field_n) / 16, param1, 256 - var7 >> 2);
             var6 = (rea) (param3.c(0));
           }
           return;
@@ -45,7 +45,7 @@ final class fv extends ana {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -98,16 +98,16 @@ final class fv extends ana {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
     final boolean c(byte param0) {
         int var2 = -54 % ((param0 - 71) / 47);
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
-        if (this.field_z.a((byte) -106)) {
+        if (this.field_z.isLinked((byte) -106)) {
           return false;
         }
         if (!this.field_v) {
@@ -151,7 +151,7 @@ final class fv extends ana {
           this.field_z = new taa(this.field_q, (this.field_q.field_h.field_z >> 1) - 1, -3);
           this.a(27799, this.field_z);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class ap {
     String field_b;
-    static kv field_c;
+    static Sprite field_c;
     String field_f;
     int field_d;
     String field_a;

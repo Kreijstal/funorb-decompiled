@@ -5,7 +5,7 @@ import java.io.*;
 
 final class cl extends vm {
     static boolean[] field_p;
-    private pj field_q;
+    private BufferedSocket field_q;
     static String field_o;
 
     final boolean c(byte param0) {
@@ -66,10 +66,10 @@ final class cl extends vm {
             this.field_q.c((byte) 34);
             var2 = (qfa) (this.field_f.a(-102));
             while (var2 != null) {
-              this.field_n.field_g = 0;
-              this.field_n.d(1, 0);
-              this.field_n.a(4096, var2.field_h);
-              this.field_q.a(0, this.field_n.field_h, false, this.field_n.field_h.length);
+              this.field_n.position = 0;
+              this.field_n.writeByte(1, 0);
+              this.field_n.a(4096, var2.secondaryKey);
+              this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
               this.field_a.a(var2, (byte) -64);
               var2 = (qfa) (this.field_f.a((byte) 108));
             }
@@ -78,10 +78,10 @@ final class cl extends vm {
             }
             var2Lifetime1 = (qfa) (this.field_c.a(-78));
             while (var2Lifetime1 != null) {
-              this.field_n.field_g = 0;
-              this.field_n.d(0, 0);
-              this.field_n.a(param0 + 4027, var2Lifetime1.field_h);
-              this.field_q.a(0, this.field_n.field_h, false, this.field_n.field_h.length);
+              this.field_n.position = 0;
+              this.field_n.writeByte(0, 0);
+              this.field_n.a(param0 + 4027, var2Lifetime1.secondaryKey);
+              this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
               this.field_l.a(var2Lifetime1, (byte) 90);
               var2Lifetime1 = (qfa) (this.field_c.a((byte) 94));
             }
@@ -101,24 +101,24 @@ final class cl extends vm {
                   }
                 }
                 if (0 < var4) {
-                  var5 = var4 - this.field_d.field_g;
+                  var5 = var4 - this.field_d.position;
                   if (var5 > var3_int) {
                     var5 = var3_int;
                   }
-                  this.field_q.a(this.field_d.field_g, (byte) 108, this.field_d.field_h, var5);
+                  this.field_q.a(this.field_d.position, (byte) 108, this.field_d.payload, var5);
                   if (0 != this.field_m) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_d.field_h[var6 + this.field_d.field_g] = (byte)lt.a((int) this.field_d.field_h[var6 + this.field_d.field_g], (int) this.field_m);
+                      this.field_d.payload[var6 + this.field_d.position] = (byte)lt.a((int) this.field_d.payload[var6 + this.field_d.position], (int) this.field_m);
                     }
                   }
-                  this.field_d.field_g = this.field_d.field_g + var5;
-                  if (var4 <= this.field_d.field_g) {
+                  this.field_d.position = this.field_d.position + var5;
+                  if (var4 <= this.field_d.position) {
                     if (this.field_h == null) {
-                      this.field_d.field_g = 0;
-                      var6 = this.field_d.b(16711935);
-                      var7 = this.field_d.f(106);
-                      var8 = this.field_d.b(16711935);
-                      var9 = this.field_d.f(-127);
+                      this.field_d.position = 0;
+                      var6 = this.field_d.readUnsignedByte(16711935);
+                      var7 = this.field_d.readInt(106);
+                      var8 = this.field_d.readUnsignedByte(16711935);
+                      var9 = this.field_d.readInt(-127);
                       var10 = var8 & 127;
                       stackIn_63_0 = ((var8 & 128) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -129,7 +129,7 @@ final class cl extends vm {
                       if (var11 != 0) {
                         var14_ref = (qfa) (this.field_l.a(-101));
                         while (var14_ref != null) {
-                          if (~var14_ref.field_h == ~var12) {
+                          if (~var14_ref.secondaryKey == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
@@ -141,7 +141,7 @@ final class cl extends vm {
                         (decompiledFrameCompleted0)) {
                         var14_ref = (qfa) (this.field_a.a(param0 - 163));
                         while (var14_ref != null) {
-                          if (var14_ref.field_h == var12) {
+                          if (var14_ref.secondaryKey == var12) {
                             break;
                           }
                           var14_ref = (qfa) (this.field_a.a((byte) 120));
@@ -153,42 +153,42 @@ final class cl extends vm {
                       this.field_h = var14_ref;
                       stackIn_79_0 = (var10 == 0) ? 5 : 9;
                       var15 = stackIn_79_0;
-                      this.field_h.field_v = new lu(var15 + var9 + this.field_h.field_s);
-                      this.field_h.field_v.d(var10, 0);
-                      this.field_h.field_v.e(var9, -1615464796);
+                      this.field_h.field_v = new PacketBuffer(var15 + var9 + this.field_h.field_s);
+                      this.field_h.field_v.writeByte(var10, 0);
+                      this.field_h.field_v.writeInt(var9, -1615464796);
                       this.field_h.field_u = 10;
-                      this.field_d.field_g = 0;
+                      this.field_d.position = 0;
                     } else {
                       if (this.field_h.field_u != 0) {
                         throw new IOException();
                       }
-                      if (this.field_d.field_h[0] != -1) {
+                      if (this.field_d.payload[0] != -1) {
                         this.field_h = null;
                       } else {
                         this.field_h.field_u = 1;
-                        this.field_d.field_g = 0;
+                        this.field_d.position = 0;
                       }
                     }
                   }
                 } else {
-                  var5 = this.field_h.field_v.field_h.length - this.field_h.field_s;
+                  var5 = this.field_h.field_v.payload.length - this.field_h.field_s;
                   var6 = 512 - this.field_h.field_u;
-                  if (-this.field_h.field_v.field_g + var5 < var6) {
-                    var6 = var5 - this.field_h.field_v.field_g;
+                  if (-this.field_h.field_v.position + var5 < var6) {
+                    var6 = var5 - this.field_h.field_v.position;
                   }
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_q.a(this.field_h.field_v.field_g, (byte) 106, this.field_h.field_v.field_h, var6);
+                  this.field_q.a(this.field_h.field_v.position, (byte) 106, this.field_h.field_v.payload, var6);
                   if (this.field_m != 0) {
                     for (var7 = 0; var6 > var7; var7++) {
-                      this.field_h.field_v.field_h[var7 + this.field_h.field_v.field_g] = (byte)lt.a((int) this.field_h.field_v.field_h[var7 + this.field_h.field_v.field_g], (int) this.field_m);
+                      this.field_h.field_v.payload[var7 + this.field_h.field_v.position] = (byte)lt.a((int) this.field_h.field_v.payload[var7 + this.field_h.field_v.position], (int) this.field_m);
                     }
                   }
-                  this.field_h.field_v.field_g = this.field_h.field_v.field_g + var6;
+                  this.field_h.field_v.position = this.field_h.field_v.position + var6;
                   this.field_h.field_u = this.field_h.field_u + var6;
-                  if (var5 == this.field_h.field_v.field_g) {
-                    this.field_h.b(0);
+                  if (var5 == this.field_h.field_v.position) {
+                    this.field_h.unlinkSecondary(0);
                     this.field_h.field_n = false;
                     this.field_h = null;
                   } else {
@@ -260,14 +260,14 @@ final class cl extends vm {
               }
               this.field_q = null;
             }
-            this.field_q = (pj) (param1);
+            this.field_q = (BufferedSocket) (param1);
             this.d(param2 ^ 16074);
             this.a(125, param0);
             this.field_h = null;
             if (param2 != 16008) {
               this.c(-28);
             }
-            this.field_d.field_g = 0;
+            this.field_d.position = 0;
             while (true) {
               var4_ref = (qfa) (this.field_a.a(true));
               if (var4_ref != null) {
@@ -286,11 +286,11 @@ final class cl extends vm {
             }
             if (this.field_m != 0) {
               try {
-                this.field_n.field_g = 0;
-                this.field_n.d(4, 0);
-                this.field_n.d((int) this.field_m, 0);
-                this.field_n.e(0, param2 ^ -1615476692);
-                this.field_q.a(0, this.field_n.field_h, false, this.field_n.field_h.length);
+                this.field_n.position = 0;
+                this.field_n.writeByte(4, 0);
+                this.field_n.writeByte((int) this.field_m, 0);
+                this.field_n.writeInt(0, param2 ^ -1615476692);
+                this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -318,7 +318,7 @@ final class cl extends vm {
             } else {
               stackIn_30_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -336,11 +336,11 @@ final class cl extends vm {
             return;
           }
           try {
-            this.field_n.field_g = 0;
-            this.field_n.d(6, 0);
-            this.field_n.c(-1607631824, 3);
+            this.field_n.position = 0;
+            this.field_n.writeByte(6, 0);
+            this.field_n.writeMedium(-1607631824, 3);
             this.field_n.b(0, -124);
-            this.field_q.a(0, this.field_n.field_h, false, this.field_n.field_h.length);
+            this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -355,7 +355,7 @@ final class cl extends vm {
             this.field_q = null;
           }
           if (param0 < 23) {
-            this.field_q = (pj) null;
+            this.field_q = (BufferedSocket) null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -404,7 +404,7 @@ final class cl extends vm {
         try {
           IOException iOException = null;
           int var3 = 0;
-          lu stackIn_5_0 = null;
+          PacketBuffer stackIn_5_0 = null;
           int stackIn_6_1 = 0;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
@@ -412,16 +412,16 @@ final class cl extends vm {
             return;
           }
           try {
-            this.field_n.field_g = 0;
+            this.field_n.position = 0;
             stackIn_5_0 = this.field_n;
             if (param1) {
               stackIn_6_1 = 2;
             } else {
               stackIn_6_1 = 3;
             }
-            ((lu) (Object) stackIn_5_0).d(stackIn_6_1, 0);
+            ((PacketBuffer) (Object) stackIn_5_0).writeByte(stackIn_6_1, 0);
             this.field_n.a(4096, 0L);
-            this.field_q.a(0, this.field_n.field_h, false, this.field_n.field_h.length);
+            this.field_q.a(0, this.field_n.payload, false, this.field_n.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -443,14 +443,14 @@ final class cl extends vm {
         }
     }
 
-    final static kv[] a(kv[] param0, boolean param1) {
+    final static Sprite[] a(Sprite[] param0, boolean param1) {
         int var3 = 0;
-        kv[] var2 = null;
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
         int var4 = 0;
-        kv[] var5 = null;
-        kv[] stackIn_3_0 = null;
-        kv[] stackIn_8_0 = null;
+        Sprite[] var5 = null;
+        Sprite[] stackIn_3_0 = null;
+        Sprite[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -458,15 +458,15 @@ final class cl extends vm {
         var4 = BachelorFridge.field_y;
         try {
           if (param1) {
-            stackIn_3_0 = (kv[]) null;
+            stackIn_3_0 = (Sprite[]) null;
             return stackIn_3_0;
           }
-          var5 = new kv[param0.length];
+          var5 = new Sprite[param0.length];
           var2 = var5;
           for (var3 = 0; var3 < param0.length; var3++) {
-            var5[var3] = new kv(param0[var3].field_n >> 1, param0[var3].field_o >> 1);
+            var5[var3] = new Sprite(param0[var3].field_n >> 1, param0[var3].field_o >> 1);
             var5[var3].b();
-            param0[var3].f(0, 0);
+            param0[var3].drawHalfSize(0, 0);
           }
           hga.field_U.a((byte) 6);
           stackIn_8_0 = var2;
@@ -481,7 +481,7 @@ final class cl extends vm {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

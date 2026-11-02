@@ -45,8 +45,8 @@ final class hia extends sfa {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        lu var17 = null;
-        lu var18 = null;
+        PacketBuffer var17 = null;
+        PacketBuffer var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
@@ -58,10 +58,10 @@ final class hia extends sfa {
         int var5Lifetime2;
         var16 = BachelorFridge.field_y;
         try {
-          var17 = new lu(param1);
+          var17 = new PacketBuffer(param1);
           var18 = var17;
-          var18.field_g = param1.length - 2;
-          ok.field_vb = var18.e((byte) 62);
+          var18.position = param1.length - 2;
+          ok.field_vb = var18.readUnsignedShort((byte) 62);
           eha.field_s = new int[ok.field_vb];
           fd.field_D = new int[ok.field_vb];
           baa.field_P = new byte[ok.field_vb][];
@@ -69,24 +69,24 @@ final class hia extends sfa {
           uf.field_b = new boolean[ok.field_vb];
           fl.field_j = new int[ok.field_vb];
           lq.field_A = new int[ok.field_vb];
-          var18.field_g = -(8 * ok.field_vb) + param1.length - 7;
-          ok.field_Bb = var18.e((byte) 101);
-          kh.field_r = var18.e((byte) 60);
-          var3 = (var18.b(16711935) & 255) + 1;
+          var18.position = -(8 * ok.field_vb) + param1.length - 7;
+          ok.field_Bb = var18.readUnsignedShort((byte) 101);
+          kh.field_r = var18.readUnsignedShort((byte) 60);
+          var3 = (var18.readUnsignedByte(16711935) & 255) + 1;
           for (var4 = 0; var4 < ok.field_vb; var4++) {
-            fl.field_j[var4] = var17.e((byte) 57);
+            fl.field_j[var4] = var17.readUnsignedShort((byte) 57);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < ok.field_vb; var4Lifetime1++) {
-            fd.field_D[var4Lifetime1] = var18.e((byte) 99);
+            fd.field_D[var4Lifetime1] = var18.readUnsignedShort((byte) 99);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < ok.field_vb; var4Lifetime2++) {
-            lq.field_A[var4Lifetime2] = var18.e((byte) 67);
+            lq.field_A[var4Lifetime2] = var18.readUnsignedShort((byte) 67);
           }
           var4Lifetime3 = 7 % ((param0 - 60) / 48);
           for (var5 = 0; var5 < ok.field_vb; var5++) {
-            eha.field_s[var5] = var18.e((byte) 105);
+            eha.field_s[var5] = var18.readUnsignedShort((byte) 105);
           }
-          var18.field_g = param1.length - (7 + 8 * ok.field_vb + (3 * var3 - 3));
+          var18.position = param1.length - (7 + 8 * ok.field_vb + (3 * var3 - 3));
           hk.field_f = new int[var3];
           for (var5Lifetime1 = 1; var3 > var5Lifetime1; var5Lifetime1++) {
             hk.field_f[var5Lifetime1] = var18.a(3);
@@ -94,7 +94,7 @@ final class hia extends sfa {
               hk.field_f[var5Lifetime1] = 1;
             }
           }
-          var18.field_g = 0;
+          var18.position = 0;
           for (var5Lifetime2 = 0; ok.field_vb > var5Lifetime2; var5Lifetime2++) {
             var6 = lq.field_A[var5Lifetime2];
             var7 = eha.field_s[var5Lifetime2];
@@ -108,7 +108,7 @@ final class hia extends sfa {
             var10 = var20;
             cea.field_d[var5Lifetime2] = var22;
             var11 = 0;
-            var12 = var18.b(16711935);
+            var12 = var18.readUnsignedByte(16711935);
             if ((1 & var12) == 0) {
               for (var13 = 0; var8 > var13; var13++) {
                 var9[var13] = var18.b(true);
@@ -163,7 +163,7 @@ final class hia extends sfa {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ final class hia extends sfa {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        lu var9 = null;
+        PacketBuffer var9 = null;
         aga var10 = null;
         int var6Lifetime1;
         var8 = BachelorFridge.field_y;
@@ -207,8 +207,8 @@ final class hia extends sfa {
             return (ii) ((Object) stackIn_4_0);
           }
           if (param1 != 3) {
-            var9 = (lu) null;
-            this.a(-51, (lu) null);
+            var9 = (PacketBuffer) null;
+            this.a(-51, (PacketBuffer) null);
           }
           if (2 == var10.field_y) {
             stackIn_10_0 = this.a(true, false, true, param1 - 282);
@@ -264,11 +264,11 @@ final class hia extends sfa {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void a(int param0, eaa param1, op param2) {
+    private final void a(int param0, IntrusiveDeque param1, op param2) {
         int var17 = 0;
         int stackIn_6_0 = 0;
         int[] stackIn_25_0 = null;
@@ -524,16 +524,16 @@ final class hia extends sfa {
           } else {
             stackIn_138_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_134_0), ((StringBuilder) (Object) stackIn_137_1).append(stackIn_138_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_134_0), ((StringBuilder) (Object) stackIn_137_1).append(stackIn_138_2).append(')').toString());
         }
     }
 
-    final void a(int param0, lu param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           int var3_int = 84 / ((61 - param0) / 53);
-          param1.d(this.field_j | this.field_k << 3, 0);
+          param1.writeByte(this.field_j | this.field_k << 3, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hia.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hia.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -544,12 +544,12 @@ final class hia extends sfa {
         if (((dfa) ((Object) dj.field_c)).field_a) {
           if ((dj.field_c.field_h.field_f & 1 << dj.field_c.field_n) == 0) {
             if (0 != dj.field_c.field_h.field_f) {
-              lr.field_k[12] = wha.field_g;
+              lr.field_k[12] = IterableNodeHashTable.field_g;
             } else {
               if ((1 << dj.field_c.field_h.field_d) - 1 == (1 << dj.field_c.field_n | dj.field_c.field_V)) {
                 lr.field_k[12] = ama.field_m;
               } else {
-                lr.field_k[12] = rna.field_b;
+                lr.field_k[12] = IntrusiveDequeCursor.field_b;
               }
             }
           } else {

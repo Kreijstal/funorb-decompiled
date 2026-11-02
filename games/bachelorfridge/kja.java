@@ -5,7 +5,7 @@ import java.util.*;
 
 final class kja {
     int field_a;
-    static kv field_e;
+    static Sprite field_e;
     int field_c;
     int field_b;
     int field_d;
@@ -16,7 +16,7 @@ final class kja {
           vla.a(5, param1, param0, param3);
           return;
         }
-        field_e = (kv) null;
+        field_e = (Sprite) null;
         vla.a(5, param1, param0, param3);
     }
 
@@ -30,7 +30,7 @@ final class kja {
 
     public static void b(int param0) {
         if (param0 != 1900) {
-          field_e = (kv) null;
+          field_e = (Sprite) null;
           field_e = null;
           return;
         }
@@ -41,23 +41,23 @@ final class kja {
         if (param0 == 27168) {
           return new Date().getYear() + 1900;
         }
-        field_e = (kv) null;
+        field_e = (Sprite) null;
         return new Date().getYear() + 1900;
     }
 
     final static void a(int param0, byte param1, ne param2) {
-        pf var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           if (param1 < 1) {
             ne var4 = (ne) null;
             kja.a(80, (byte) 81, (ne) null);
           }
           var3 = sja.field_fb;
-          var3.c(param0, (byte) 108);
-          var3.d(param2.field_o, 0);
-          var3.d(param2.field_i, 0);
+          var3.writeCipheredByte(param0, (byte) 108);
+          var3.writeByte(param2.field_o, 0);
+          var3.writeByte(param2.field_i, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kja.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kja.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -7,9 +7,9 @@ final class fr extends pu {
     static String field_r;
     static int[] field_p;
     static int[] field_l;
-    static v[] field_m;
+    static BufferedCacheFile[] field_m;
     static String[] field_o;
-    static kv[] field_q;
+    static Sprite[] field_q;
     private static String field_z;
 
     public static void d(byte param0) {

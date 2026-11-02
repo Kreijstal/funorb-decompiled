@@ -24,12 +24,12 @@ final class qe {
     private int field_o;
     static int[] field_q;
 
-    final kg c(byte param0) {
-        this.field_t = nn.field_b;
+    final FullscreenFocusCanvas c(byte param0) {
+        this.field_t = MouseInputHandler.field_b;
         this.field_f = dda.field_j;
         this.field_j.a(this.field_b, (byte) 19, this.field_m);
         daa.field_vb = false;
-        kg var2 = mfa.a(true, this.field_m, 0, this.field_b, ju.field_r, 0);
+        FullscreenFocusCanvas var2 = GameKeyHandler.a(true, this.field_m, 0, this.field_b, ju.field_r, 0);
         if (var2 == null) {
           this.a(true);
         }
@@ -51,7 +51,7 @@ final class qe {
           if (this.field_g > aja.field_o) {
             return false;
           }
-          if (dm.field_f > 0) {
+          if (ProxySocketConnector.field_f > 0) {
             return true;
           }
           return false;
@@ -59,7 +59,7 @@ final class qe {
         if (this.field_g > aja.field_o) {
           return false;
         }
-        if (dm.field_f > 0) {
+        if (ProxySocketConnector.field_f > 0) {
           return true;
         }
         return false;
@@ -113,7 +113,7 @@ final class qe {
               if (var2 != dda.field_j) {
                 this.field_j.a(var3, (byte) 19, var2);
               } else {
-                if (var3 != nn.field_b) {
+                if (var3 != MouseInputHandler.field_b) {
                   this.field_j.a(var3, (byte) 19, var2);
                 }
               }
@@ -138,7 +138,7 @@ final class qe {
         if (var2 != dda.field_j) {
           this.field_j.a(var3, (byte) 19, var2);
         } else {
-          if (var3 != nn.field_b) {
+          if (var3 != MouseInputHandler.field_b) {
             this.field_j.a(var3, (byte) 19, var2);
           }
         }
@@ -161,7 +161,7 @@ final class qe {
         if (null != kga.field_c) {
           return;
         }
-        if (dm.field_f <= 0) {
+        if (ProxySocketConnector.field_f <= 0) {
           this.field_k = false;
         }
         if (this.field_k) {
@@ -189,7 +189,7 @@ final class qe {
           }
         }
         if (dda.field_j == this.field_h &&
-          this.field_s == nn.field_b) {
+          this.field_s == MouseInputHandler.field_b) {
           return;
         }
         this.field_j.a(this.field_s, (byte) 19, this.field_h);

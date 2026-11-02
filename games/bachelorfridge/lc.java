@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lc extends cj {
-    static pb field_l;
-    eaa field_k;
+    static AudioOutput field_l;
+    IntrusiveDeque field_k;
 
     final void a(jm param0, byte param1) {
         try {
@@ -13,7 +13,7 @@ final class lc extends cj {
             this.a((jm) null, (byte) -11);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class lc extends cj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -62,7 +62,7 @@ final class lc extends cj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            this.field_k = (eaa) null;
+            this.field_k = (IntrusiveDeque) null;
           }
           stackIn_3_0 = new ub(param1, this);
           return (at) ((Object) stackIn_3_0);
@@ -76,11 +76,11 @@ final class lc extends cj {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final void a(lu param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var4 = 0;
         jm var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -90,9 +90,9 @@ final class lc extends cj {
         RuntimeException var3 = null;
         var4 = BachelorFridge.field_y;
         try {
-          param0.d(this.field_k.g(0), 0);
+          param0.writeByte(this.field_k.g(0), 0);
           if (param1 != -9) {
-            this.field_k = (eaa) null;
+            this.field_k = (IntrusiveDeque) null;
           }
           var5 = (jm) (this.field_k.b((byte) 90));
           while (var5 != null) {
@@ -110,18 +110,18 @@ final class lc extends cj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void c(boolean param0) {
         field_l = null;
         if (param0) {
-          field_l = (pb) null;
+          field_l = (AudioOutput) null;
         }
     }
 
-    lc(lu param0) {
+    lc(PacketBuffer param0) {
         super(6);
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -131,14 +131,14 @@ final class lc extends cj {
         RuntimeException var2 = null;
         int var3 = 0;
         try {
-          this.field_k = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
               return;
             }
-            var3 = param0.b(16711935);
+            var3 = param0.readUnsignedByte(16711935);
             if (var3 == 1) {
               this.field_k.a(new oca(param0), true);
               continue;
@@ -190,13 +190,13 @@ final class lc extends cj {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
     public lc() {
         super(6);
-        this.field_k = new eaa();
+        this.field_k = new IntrusiveDeque();
     }
 
     final static void b(int param0) {
@@ -206,7 +206,7 @@ final class lc extends cj {
           }
           return;
         }
-        field_l = (pb) null;
+        field_l = (AudioOutput) null;
         if (gm.field_k) {
           ki.g(param0 - 25);
         }

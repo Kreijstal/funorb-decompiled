@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sla {
-    static je field_a;
+    static PcmSampleStream field_a;
     private static String field_z;
 
     public static void a(byte param0) {

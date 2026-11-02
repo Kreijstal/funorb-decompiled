@@ -4,7 +4,7 @@
 final class sv {
     static cf field_a;
     static String field_b;
-    static ee field_c;
+    static IndexedSprite field_c;
     private static String field_z;
 
     public static void a(int param0) {

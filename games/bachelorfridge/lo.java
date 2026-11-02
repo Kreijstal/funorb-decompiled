@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class lo {
-    static pia field_b;
+    static PalettedBitmapFont field_b;
     static String field_a;
 
     public final String toString() {
@@ -68,13 +68,13 @@ final class lo {
             raa.e((byte) 31);
           }
           if (param0 <= 73) {
-            field_b = (pia) null;
+            field_b = (PalettedBitmapFont) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "lo.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "lo.C(" + param0 + ')');
         }
     }
 
@@ -118,13 +118,13 @@ final class lo {
             return true;
           }
           if (ri.field_a == 79) {
-            stackIn_16_0 = (ig.field_m.b(16711935) == 1) ? 1 : 0;
+            stackIn_16_0 = (ig.field_m.readUnsignedByte(16711935) == 1) ? 1 : 0;
             var1_int = stackIn_16_0;
             var6 = new int[50];
             var2_ref_int__Lifetime1 = var6;
-            var3 = ig.field_m.b(16711935);
+            var3 = ig.field_m.readUnsignedByte(16711935);
             for (var4 = 0; var3 > var4; var4++) {
-              var6[ig.field_m.b(16711935)] = ig.field_m.b(16711935);
+              var6[ig.field_m.readUnsignedByte(16711935)] = ig.field_m.readUnsignedByte(16711935);
             }
             mg.field_m.field_f = var2_ref_int__Lifetime1;
             pka.a((byte) -111, var1_int != 0);
@@ -145,7 +145,7 @@ final class lo {
           var7 = new boolean[50];
           var13 = var7;
           var2 = 0;
-          var3Lifetime1 = ig.field_m.b(16711935);
+          var3Lifetime1 = ig.field_m.readUnsignedByte(16711935);
           var8 = 0;
           var4Lifetime1 = var8;
           while (var8 < 50) {
@@ -154,7 +154,7 @@ final class lo {
             }
             var2++;
             if (var2 == 8) {
-              var3Lifetime1 = ig.field_m.b(16711935);
+              var3Lifetime1 = ig.field_m.readUnsignedByte(16711935);
               var2 = 0;
             }
             var8++;
@@ -164,7 +164,7 @@ final class lo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref), "lo.A(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "lo.A(" + param0 + ')');
         }
     }
 

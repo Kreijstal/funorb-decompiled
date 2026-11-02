@@ -79,13 +79,13 @@ final class oda {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var10), "oda.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw pe.wrapException((Throwable) ((Object) var10), "oda.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
-    final static pp a(int param0, lu param1) {
+    final static pp a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
-        lu var3 = null;
+        PacketBuffer var3 = null;
         kq stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -93,8 +93,8 @@ final class oda {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -30) {
-            var3 = (lu) null;
-            oda.a(-17, (lu) null);
+            var3 = (PacketBuffer) null;
+            oda.a(-17, (PacketBuffer) null);
           }
           stackIn_3_0 = new kq();
           return (pp) ((Object) stackIn_3_0);
@@ -108,7 +108,7 @@ final class oda {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -131,8 +131,8 @@ final class oda {
         field_a = null;
         field_b = null;
         if (param0 != 14124) {
-          lu var2 = (lu) null;
-          oda.a(-77, (lu) null);
+          PacketBuffer var2 = (PacketBuffer) null;
+          oda.a(-77, (PacketBuffer) null);
         }
     }
 

@@ -6,22 +6,22 @@ final class tl extends bca {
     int field_t;
     static du field_r;
     int field_u;
-    static kv field_s;
+    static Sprite field_s;
 
     tl(int param0, nq param1) {
         super(param0, param1);
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         super.a((byte) -76, param1);
         if (param0 > -12) {
           return;
         }
         try {
-          param1.d(this.field_u, 0);
-          param1.d(this.field_t, 0);
+          param1.writeByte(this.field_u, 0);
+          param1.writeByte(this.field_t, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class tl extends bca {
           this.a(param0, (byte) -2);
           int var3_int = 10 % ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -45,13 +45,13 @@ final class tl extends bca {
         field_r = null;
     }
 
-    tl(lu param0) {
+    tl(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 81);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 81);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (0 > var2_int) {
@@ -59,10 +59,10 @@ final class tl extends bca {
             }
             this.field_o.a(dca.a((byte) 102, param0), true);
           }
-          this.field_u = param0.b(16711935);
-          this.field_t = param0.b(16711935);
+          this.field_u = param0.readUnsignedByte(16711935);
+          this.field_t = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class tl extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

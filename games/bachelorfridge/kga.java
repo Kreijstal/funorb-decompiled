@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kga {
-    static kg field_c;
-    static kv field_d;
-    static kv field_a;
+    static FullscreenFocusCanvas field_c;
+    static Sprite field_d;
+    static Sprite field_a;
     int[] field_b;
 
     public static void a(int param0) {
@@ -43,7 +43,7 @@ final class kga {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

@@ -34,7 +34,7 @@ final class haa extends kj {
           return;
         }
         int var4 = this.field_d * this.field_c % 3;
-        ee var5 = cba.field_c[var4];
+        IndexedSprite var5 = cba.field_c[var4];
         int var6 = via.a(6 * this.field_g * (13 + (15 & this.field_d * 3 + this.field_c * 4)), (byte) 118) >> 3;
         var5.a(var5.field_a << 3, -40 + var5.field_b << 3, ((param2 << 1) + 128 << 3) + (-var6 >> 4), 64 + (param0 - (2 * this.field_g + 20) << 1) << 3, var6, 4096);
     }
@@ -45,7 +45,7 @@ final class haa extends kj {
           this.field_f = param3 ? true : false;
           this.field_g = 150;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "haa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "haa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

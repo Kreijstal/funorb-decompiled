@@ -6,7 +6,7 @@ import java.util.*;
 final class ah extends tia {
     private double field_m;
     private int field_i;
-    private eaa field_n;
+    private IntrusiveDeque field_n;
     static int field_l;
     private int field_j;
     private double field_k;
@@ -81,7 +81,7 @@ final class ah extends tia {
           this.field_j = param2;
           Math.sqrt(20480.0);
           this.field_g = 64;
-          this.field_n = new eaa();
+          this.field_n = new IntrusiveDeque();
           this.field_k = (double)(128 * this.field_i / 64);
           this.field_m = (double)(this.field_i * 64 / 64);
           if (this.field_j == 1) {
@@ -113,7 +113,7 @@ final class ah extends tia {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -191,21 +191,21 @@ final class ah extends tia {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw pe.a((Throwable) (stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) (stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1) {
-        pf var2 = sja.field_fb;
-        var2.c(param1, (byte) 118);
-        var2.d(1, 0);
-        var2.d(2, param0 ^ param0);
+        BitPacketBuffer var2 = sja.field_fb;
+        var2.writeCipheredByte(param1, (byte) 118);
+        var2.writeByte(1, 0);
+        var2.writeByte(2, param0 ^ param0);
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = 71 / ((param1 - 52) / 45);
         uc.d(107);
-        dg.c(param3, param2, param0, param4);
+        SoftwareRasterizer.intersectClip(param3, param2, param0, param4);
     }
 
     static {

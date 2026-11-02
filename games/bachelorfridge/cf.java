@@ -38,7 +38,7 @@ final class cf {
           return;
         }
         if (-2 == param1) {
-          dg.d();
+          SoftwareRasterizer.clear();
           if (param3 >= 13) {
             return;
           }
@@ -47,7 +47,7 @@ final class cf {
         }
         if (param2) {
           jm.a(false, true);
-          dg.g(0, 0, 640, 480);
+          SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
           eg.field_p[param1].l(9);
           if (param3 >= 13) {
             return;

@@ -3,10 +3,10 @@
  */
 final class ika {
     static gba field_a;
-    eaa field_b;
+    IntrusiveDeque field_b;
     int field_c;
 
-    final static tk a(byte param0, lu param1) {
+    final static tk a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -33,28 +33,28 @@ final class ika {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.e((byte) 118);
-          var3 = param1.e((byte) 45);
-          var4 = param1.e((byte) 80);
+          var2_int = param1.readUnsignedShort((byte) 118);
+          var3 = param1.readUnsignedShort((byte) 45);
+          var4 = param1.readUnsignedShort((byte) 80);
           if (param0 != 85) {
             stackIn_2_0 = (tk) null;
             return stackIn_2_0;
           }
-          var5 = param1.e((byte) 61);
-          var6 = param1.b(16711935);
-          var7 = param1.b(16711935);
-          var8 = param1.e((byte) 97);
-          var9 = param1.b(16711935);
-          var10 = param1.e((byte) 118);
-          var11 = param1.e((byte) 83);
-          var12 = param1.e((byte) 54);
-          var13 = param1.e((byte) 102);
-          var14 = param1.e((byte) 47);
-          var15 = param1.e((byte) 124);
-          var16 = param1.e((byte) 77);
-          var17 = param1.e((byte) 45);
-          var18 = param1.e((byte) 59);
-          var19 = param1.b(16711935);
+          var5 = param1.readUnsignedShort((byte) 61);
+          var6 = param1.readUnsignedByte(16711935);
+          var7 = param1.readUnsignedByte(16711935);
+          var8 = param1.readUnsignedShort((byte) 97);
+          var9 = param1.readUnsignedByte(16711935);
+          var10 = param1.readUnsignedShort((byte) 118);
+          var11 = param1.readUnsignedShort((byte) 83);
+          var12 = param1.readUnsignedShort((byte) 54);
+          var13 = param1.readUnsignedShort((byte) 102);
+          var14 = param1.readUnsignedShort((byte) 47);
+          var15 = param1.readUnsignedShort((byte) 124);
+          var16 = param1.readUnsignedShort((byte) 77);
+          var17 = param1.readUnsignedShort((byte) 45);
+          var18 = param1.readUnsignedShort((byte) 59);
+          var19 = param1.readUnsignedByte(16711935);
           stackIn_4_0 = new tk(var2_int, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, var18, var19);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -67,7 +67,7 @@ final class ika {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class ika {
     }
 
     ika(byte[] param0) {
-        this(new lu(param0));
+        this(new PacketBuffer(param0));
     }
 
     final static void a(byte param0, il param1) {
@@ -125,7 +125,7 @@ final class ika {
           }
           jka.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ika.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ika.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -138,16 +138,16 @@ final class ika {
         field_a = null;
     }
 
-    private ika(lu param0) {
-        this.field_b = new eaa();
+    private ika(PacketBuffer param0) {
+        this.field_b = new IntrusiveDeque();
         try {
           this.a(param0, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ika.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ika.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(lu param0, int param1) {
+    private final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -157,7 +157,7 @@ final class ika {
         RuntimeException var3 = null;
         var4 = BachelorFridge.field_y;
         try {
-          this.field_c = param0.e((byte) 114);
+          this.field_c = param0.readUnsignedShort((byte) 114);
           for (var3_int = param1; var3_int < this.field_c; var3_int++) {
             this.field_b.a(new ft(param0), true);
           }
@@ -172,7 +172,7 @@ final class ika {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

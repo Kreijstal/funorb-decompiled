@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oea extends ul {
-    static ea field_q;
-    static jp field_p;
-    static kv[] field_s;
+    static DiskCacheWorker field_q;
+    static MidiPcmStream field_p;
+    static Sprite[] field_s;
     private Object field_r;
 
     final boolean f(int param0) {
@@ -20,7 +20,7 @@ final class oea extends ul {
         try {
           this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class oea extends ul {
     public static void g(int param0) {
         field_p = null;
         if (param0 != -8333) {
-          field_s = (kv[]) null;
+          field_s = (Sprite[]) null;
           field_s = null;
           field_q = null;
           return;

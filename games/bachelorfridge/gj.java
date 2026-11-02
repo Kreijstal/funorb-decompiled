@@ -14,15 +14,15 @@ final class gj extends dfa {
     int field_u;
     private ng field_W;
     int[] field_T;
-    eaa field_fb;
+    IntrusiveDeque field_fb;
     private int field_B;
-    eaa field_j;
+    IntrusiveDeque field_j;
     private int field_t;
-    static kv field_F;
+    static Sprite field_F;
     int field_U;
     private boolean field_d;
     private sna field_bb;
-    private eaa field_X;
+    private IntrusiveDeque field_X;
     int field_p;
     ad field_P;
     sfa[] field_Y;
@@ -39,7 +39,7 @@ final class gj extends dfa {
     int field_k;
     private int field_R;
     private sna field_C;
-    private kv field_x;
+    private Sprite field_x;
     private int field_q;
     ad[] field_G;
     boolean field_J;
@@ -55,7 +55,7 @@ final class gj extends dfa {
     boolean field_cb;
     private int field_N;
     private sna field_O;
-    private eaa field_S;
+    private IntrusiveDeque field_S;
     private int field_i;
     private up field_y;
     private int field_E;
@@ -75,7 +75,7 @@ final class gj extends dfa {
           }
           this.field_A.a(0, param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gj.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class gj extends dfa {
     }
 
     final void m(int param0) {
-        qm.a(param0, 7758);
+        RasterBuffer.a(param0, 7758);
         this.field_l = false;
         lf.field_c = 1;
         this.field_J = false;
@@ -134,19 +134,19 @@ final class gj extends dfa {
         var13 = (tia) (this.field_fb.b((byte) 90));
         while (var13 != null) {
           if (!var13.a(-59)) {
-            var13.a(false);
+            var13.unlink(false);
           }
           var13 = (tia) (this.field_fb.c(0));
         }
         var3 = (at) (this.field_j.b((byte) 90));
         if (var3 != null &&
           var3.b(21807)) {
-          var3.a(false);
+          var3.unlink(false);
         }
         var4 = (vca) (this.field_S.b((byte) 90));
         while (var4 != null) {
           if (var4.b(false)) {
-            var4.a(false);
+            var4.unlink(false);
           }
           var4 = (vca) (this.field_S.c(0));
         }
@@ -203,7 +203,7 @@ final class gj extends dfa {
           }
           this.field_P = param1;
           if (this.field_P != null) {
-            qm.a(33, 7758);
+            RasterBuffer.a(33, 7758);
             this.field_q = param1.field_s.field_x;
             this.field_E = param1.field_s.field_J;
             this.field_s.a((byte) -57, param1.field_s.field_J, param1.field_s.field_x);
@@ -214,7 +214,7 @@ final class gj extends dfa {
             uca.a(20, (byte) -63);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -294,18 +294,18 @@ final class gj extends dfa {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
-    private final void a(int param0, kv param1) {
+    private final void a(int param0, Sprite param1) {
         try {
           if (param0 != 3) {
             this.field_K = 121;
           }
           this.field_S.a(new vca(param1, 20, 30, 50), true);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gj.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -337,7 +337,7 @@ final class gj extends dfa {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -345,7 +345,7 @@ final class gj extends dfa {
         int var5 = 0;
         Object stackIn_17_0 = null;
         ad stackIn_17_1 = null;
-        fea stackIn_65_0;
+        BinaryBitmapFont stackIn_65_0;
         String stackIn_65_1;
         int stackIn_65_2;
         int stackIn_65_3;
@@ -359,8 +359,8 @@ final class gj extends dfa {
         int var4Lifetime1;
         int var4Lifetime2;
         var6 = BachelorFridge.field_y;
-        dg.d();
-        dg.a(0, 0, 640, i.field_a.field_rb);
+        SoftwareRasterizer.clear();
+        SoftwareRasterizer.setClip(0, 0, 640, i.field_a.field_rb);
         if (param0 < 29) {
           var7 = (aga) null;
           this.a((aga) null, -122);
@@ -370,8 +370,8 @@ final class gj extends dfa {
           if (this.field_n >= 0) {
             this.field_y.a(65793);
           } else {
-            ew.field_r.e(120, 100);
-            jha.field_g.a(cba.field_b, 230, 160, 200, 200, 16777215, -1, 1, 0, 14);
+            ew.field_r.draw(120, 100);
+            jha.field_g.drawParagraph(cba.field_b, 230, 160, 200, 200, 16777215, -1, 1, 0, 14);
           }
           if (null != this.field_A) {
             this.field_A.a(false);
@@ -382,7 +382,7 @@ final class gj extends dfa {
           }
           this.g((byte) -86);
           if (this.field_M != 0) {
-            qn.field_g.e(-qn.field_g.field_q + 640, 0);
+            qn.field_g.draw(-qn.field_g.field_q + 640, 0);
             if (this.field_n >= 0 &&
               !this.field_cb) {
               var3 = (int)(Math.sin((double)dj.field_c.field_L / 10.0 * 0.5) * 5.0);
@@ -398,18 +398,18 @@ final class gj extends dfa {
               if (var4 != 0) {
                 this.field_x.e(-8 + (this.field_C.field_kb - (var3 >> 1)), -(var3 >> 1) + this.field_C.field_rb - 7, var3 + 16 + this.field_C.field_sb, this.field_C.field_p + (16 + var3), 256);
               }
-              ica.field_t.e(574, 64);
+              ica.field_t.draw(574, 64);
               if (this.field_C.field_T) {
-                fla.field_s.e(574, 64);
+                fla.field_s.draw(574, 64);
               }
-              b.field_t.a(NetworkGameClient.field_q, 580, 41, 40, 30, 0, -1, 1, 0, 10);
+              b.field_t.drawParagraph(NetworkGameClient.field_q, 580, 41, 40, 30, 0, -1, 1, 0, 10);
             }
             if (null != this.field_G) {
               this.g(-1);
             }
             if (this.field_n < 0) {
-              fb.field_r.e(-fb.field_r.field_q + b.field_t.a(pj.field_a) + 20, 5);
-              b.field_t.c(pj.field_a, 5, -8 + b.field_t.field_u, 0, -1);
+              fb.field_r.draw(-fb.field_r.field_q + b.field_t.a(BufferedSocket.field_a) + 20, 5);
+              b.field_t.drawText(BufferedSocket.field_a, 5, -8 + b.field_t.field_u, 0, -1);
             }
             if (this.field_Y != null &&
               this.field_Y[0] != null) {
@@ -420,7 +420,7 @@ final class gj extends dfa {
             this.b(-92);
           }
           this.g((byte) -63);
-          dg.a(0, 0, 640, i.field_a.field_rb);
+          SoftwareRasterizer.setClip(0, 0, 640, i.field_a.field_rb);
           if (this.field_eb) {
             this.field_O.a(true, 7802);
           }
@@ -435,9 +435,9 @@ final class gj extends dfa {
             var8 = (vca) (this.field_S.c(0));
           }
           if (this.field_e.field_a) {
-            nna.field_w.e(0, -nna.field_w.field_p + i.field_a.field_rb);
+            nna.field_w.draw(0, -nna.field_w.field_p + i.field_a.field_rb);
             var4Lifetime2 = 16776960;
-            if (wma.field_b > 0 &&
+            if (DualLinkNodeHashTable.field_b > 0 &&
               this.field_L % 40 > 20) {
               var4Lifetime2 = 16711680;
             }
@@ -454,9 +454,9 @@ final class gj extends dfa {
           stackIn_65_2 = 320;
           stackIn_65_3 = 60;
           stackIn_66_4 = (var4Lifetime1 == 0) ? 8421504 : 16711680;
-          ((fea) (Object) stackIn_65_0).a(stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, -1);
+          ((BinaryBitmapFont) (Object) stackIn_65_0).a(stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, -1);
         }
-        dg.c();
+        SoftwareRasterizer.c();
         if (this.field_d) {
           this.f(8910);
         }
@@ -517,7 +517,7 @@ final class gj extends dfa {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -631,7 +631,7 @@ final class gj extends dfa {
               break;
             }
             var4 = al.a(-110, var3.field_g);
-            hh.field_b[var4.field_h].e(var3.field_h.field_f * 39 + 16, 28);
+            hh.field_b[var4.field_h].draw(var3.field_h.field_f * 39 + 16, 28);
             if (hh.field_b[var4.field_h].a(39 * var3.field_h.field_f + 16, 28, mk.field_p, gd.field_m)) {
               var5 = 640;
               var6 = 480;
@@ -659,7 +659,7 @@ final class gj extends dfa {
         } else {
           var2Lifetime1 = Math.max(ad.field_h.a(cd.field_o[this.field_h.field_o - 1]), ad.field_h.a(tw.field_b));
         }
-        dg.a(635 + (-var2Lifetime1 - 10), -eja.field_w.field_p + i.field_a.field_rb - 26, var2Lifetime1 + 20, 32, 7, 65793, 128);
+        SoftwareRasterizer.a(635 + (-var2Lifetime1 - 10), -eja.field_w.field_p + i.field_a.field_rb - 26, var2Lifetime1 + 20, 32, 7, 65793, 128);
         if (this.field_h.field_J <= this.field_h.field_A) {
           ad.field_h.b(tw.field_b, 630, i.field_a.field_rb - eja.field_w.field_p - 12, 0, -1);
         } else {
@@ -671,16 +671,16 @@ final class gj extends dfa {
         }
         ad.field_h.b(cd.field_o[-1 + this.field_h.field_o], 630, -eja.field_w.field_p + i.field_a.field_rb, 0, -1);
         var3 = -(this.field_h.field_d * 132) + 592;
-        eja.field_w.e(var3, 4 - eja.field_w.field_p + i.field_a.field_rb);
+        eja.field_w.draw(var3, 4 - eja.field_w.field_p + i.field_a.field_rb);
         for (var4 = 0; var4 < this.field_h.field_d; var4++) {
           var5 = var4 * 132 + 40;
           b.field_t.a(this.field_h.field_y[var4], var3 + (var5 + 67), 10 - eja.field_w.field_p + (i.field_a.field_rb + 12), var4 + 2, -1);
-          dg.a(7 + (var3 + var5), 14 - eja.field_w.field_p + i.field_a.field_rb + 10, 130, 16, 7, 65793, 128);
+          SoftwareRasterizer.a(7 + (var3 + var5), 14 - eja.field_w.field_p + i.field_a.field_rb + 10, 130, 16, 7, 65793, 128);
           if (this.field_h.field_o == 1) {
             for (var6 = 0; 7 > var6; var6++) {
               if (this.field_h.field_S[var4].field_b[var6] != null) {
                 if (this.field_h.field_S[var4].field_b[var6].i(-124)) {
-                  kn.field_g.c(18 * var6 + (var3 + var5 + 12), 27 - eja.field_w.field_p + i.field_a.field_rb, kn.field_g.field_q >> 1, kn.field_g.field_p >> 1, 192);
+                  kn.field_g.drawScaledAlpha(18 * var6 + (var3 + var5 + 12), 27 - eja.field_w.field_p + i.field_a.field_rb, kn.field_g.field_q >> 1, kn.field_g.field_p >> 1, 192);
                 } else {
                   this.field_o[var4][var6].field_f.a(1024, 10 + (-eja.field_w.field_p + i.field_a.field_rb - 12), 256, 8, 1024, 18 * var6 + var3 + var5 - 20);
                 }
@@ -729,7 +729,7 @@ final class gj extends dfa {
           this.field_bb = new sna("abortorder", (sna) null, 15, 125, 16, 16, "");
           this.field_bb.field_v = fe.field_j;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gj.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -749,12 +749,12 @@ final class gj extends dfa {
           this.field_l = false;
           uca.a(21, (byte) 122);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gj.TA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.TA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final void a(boolean param0, boolean param1) {
-        eaa stackIn_25_0 = null;
+        IntrusiveDeque stackIn_25_0 = null;
         at stackIn_25_1 = null;
         boolean stackIn_26_2 = false;
         boolean stackIn_51_0 = false;
@@ -815,7 +815,7 @@ final class gj extends dfa {
               stackIn_25_0 = this.field_j;
               stackIn_25_1 = var4_ref_at;
               stackIn_26_2 = (param1) ? false : true;
-              ((eaa) (Object) stackIn_25_0).a(stackIn_25_1, stackIn_26_2);
+              ((IntrusiveDeque) (Object) stackIn_25_0).a(stackIn_25_1, stackIn_26_2);
             }
           }
           this.field_L = this.field_L + 1;
@@ -924,7 +924,7 @@ final class gj extends dfa {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -936,7 +936,7 @@ final class gj extends dfa {
         int[] var6;
         int[] var7;
         var5 = BachelorFridge.field_y;
-        qm.a(10, 7758);
+        RasterBuffer.a(10, 7758);
         int fieldTemp$1 = this.field_U;
         this.field_U = this.field_U + 1;
         this.field_Y[fieldTemp$1] = this.field_Z;
@@ -959,7 +959,7 @@ final class gj extends dfa {
           }
         }
         if (param0 != -1) {
-          this.field_x = (kv) null;
+          this.field_x = (Sprite) null;
         }
         dk.$cfr$intArgs$a$e46325ef0b7e(this.field_Y, 94, var7);
         this.field_f = 5;
@@ -1030,7 +1030,7 @@ final class gj extends dfa {
         var10 = BachelorFridge.field_y;
         var2 = 14;
         var3 = this.field_h.field_S[this.field_n].a((byte) -43);
-        fb.field_r.e(var3 * 39 - fb.field_r.field_q, 5);
+        fb.field_r.draw(var3 * 39 - fb.field_r.field_q, 5);
         if (param0 != -1) {
           this.field_n = 83;
         }
@@ -1039,11 +1039,11 @@ final class gj extends dfa {
           var6 = var4[var5];
           if (var6 != null) {
             var7 = var6.field_s;
-            uga.field_C.e(-17 + var2, 6);
+            uga.field_C.draw(-17 + var2, 6);
             if (null != this.field_P &&
               this.field_P.field_s.field_u == var7.field_u &&
               this.field_P.field_s.field_D == var7.field_D) {
-              this.field_x.d(var2 - 17, 1, 128);
+              this.field_x.drawAdditive(var2 - 17, 1, 128);
             }
             if (!var6.field_s.i(100)) {
               var6.field_f.a(2048, -43, 255, 8, 2048, var2 - 66);
@@ -1053,7 +1053,7 @@ final class gj extends dfa {
             var8 = -7 + var2;
             var9 = 11;
             if (!var6.field_s.i(param0 ^ -111)) {
-              b.field_t.c("" + var7.field_v, var8 - 4, 6 + var9, 2 + this.field_n, -1);
+              b.field_t.drawText("" + var7.field_v, var8 - 4, 6 + var9, 2 + this.field_n, -1);
             }
             var2 += 40;
           }
@@ -1118,8 +1118,8 @@ final class gj extends dfa {
         var15 = new sfa[this.field_Y.length];
         var7 = var15;
         if (var4 > 0) {
-          bl.a(this.field_Y, 0, var15, 0, -1 + var4);
-          bl.a(this.field_Y, var4, var7, var4 - 1, -var4 + this.field_Y.length - 1);
+          ArrayOperations.copy(this.field_Y, 0, var15, 0, -1 + var4);
+          ArrayOperations.copy(this.field_Y, var4, var7, var4 - 1, -var4 + this.field_Y.length - 1);
         }
         this.field_Y = var7;
         if (this.field_P == var5) {
@@ -1148,13 +1148,13 @@ final class gj extends dfa {
           if (640 < var2 + var5) {
             var2 = var2 + (640 - var2 - var5);
           }
-          var7 = 20 + ad.field_h.a(od.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_d, 100, 12) + ad.field_h.a(od.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_a, 100, 12);
+          var7 = 20 + ad.field_h.measureWrappedHeight(od.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_d, 100, 12) + ad.field_h.measureWrappedHeight(od.field_w[this.a(-18254, this.field_s.field_r, this.field_s.field_q)].field_a, 100, 12);
           if (i.field_a.field_rb < var7 + var3) {
             var3 = var3 + (i.field_a.field_rb - var3 - var7);
           }
-          dg.a(var2, var3, var5, var7, 5, 65793, 192);
+          SoftwareRasterizer.a(var2, var3, var5, var7, 5, 65793, 192);
           ad.field_h.a(od.field_w[var4].field_a, var2 + (var5 >> 1), var3 + 15, 0, -1);
-          ad.field_h.a(od.field_w[var4].field_d, 10 + var2, var3 + 20, -20 + var5, 80, 0, -1, 1, 0, 12);
+          ad.field_h.drawParagraph(od.field_w[var4].field_d, 10 + var2, var3 + 20, -20 + var5, 80, 0, -1, 1, 0, 12);
         }
         if (param0 != 8910) {
           this.field_q = 34;
@@ -1207,7 +1207,7 @@ final class gj extends dfa {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -1233,7 +1233,7 @@ final class gj extends dfa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1273,7 +1273,7 @@ final class gj extends dfa {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1296,13 +1296,13 @@ final class gj extends dfa {
           this.b(param0, param1, true);
           this.b(param1, param0, !param2 ? true : false);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gj.PA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.PA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void b(byte param0) {
         int var2 = 62 / ((param0 + 16) / 44);
-        eaa var3 = this.field_h.field_U;
+        IntrusiveDeque var3 = this.field_h.field_U;
         var3.a(this.field_X, 12632256);
     }
 
@@ -1343,7 +1343,7 @@ final class gj extends dfa {
             return;
           }
           if (!param2) {
-            this.field_x = (kv) null;
+            this.field_x = (Sprite) null;
           }
           if (21 == var15.field_n) {
             var14 = new eda(this, param0.field_s.field_x, param0.field_s.field_J, param0.field_f, this.field_s.field_k.field_b[93]);
@@ -1436,7 +1436,7 @@ final class gj extends dfa {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1491,7 +1491,7 @@ final class gj extends dfa {
           param0.field_s.field_x = param3;
           this.b(param0, param2, true);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gj.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1510,16 +1510,16 @@ final class gj extends dfa {
             discarded$0 = this.a((byte) -101, (ad) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gj.LA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.LA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void e(int param0) {
-        dg.g(0, 0, 640, 480);
+        SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
         if (param0 >= -54) {
           return;
         }
-        kv var2 = new kv(640, 480);
+        Sprite var2 = new Sprite(640, 480);
         fc.a(480, 640, var2, 0, (byte) 124, 0);
         eq.a(var2, this, (byte) -111);
         sia.field_h = false;
@@ -1539,7 +1539,7 @@ final class gj extends dfa {
             ad var4 = (ad) null;
             this.a((ad) null, (byte) -47);
           }
-          qm.a(10, param1 ^ -7759);
+          RasterBuffer.a(10, param1 ^ -7759);
           this.field_db = param0;
           var5 = (t) (al.a(116, this.field_P.field_s.field_o.field_g.field_b[this.field_P.field_s.field_m[this.field_db]]));
           this.field_P.a(16776960, 41, var5.field_f);
@@ -1576,11 +1576,11 @@ final class gj extends dfa {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    final static void a(byte param0, eaa param1, Random param2, int param3) {
+    final static void a(byte param0, IntrusiveDeque param1, Random param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         cia var7 = null;
@@ -1616,7 +1616,7 @@ final class gj extends dfa {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1683,7 +1683,7 @@ final class gj extends dfa {
         RuntimeException decompiledCaughtException = null;
         var4 = BachelorFridge.field_y;
         try {
-          param1.a(false);
+          param1.unlink(false);
           var2 = (ema) (aa.field_l.b((byte) 90));
           while (var2 != null) {
             if (var2.a(0, param1)) {
@@ -1710,7 +1710,7 @@ final class gj extends dfa {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -1721,7 +1721,7 @@ final class gj extends dfa {
           }
           this.a(132, (ad) null, param1, param3, param2);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gj.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -1737,7 +1737,7 @@ final class gj extends dfa {
           }
           this.field_l = false;
           this.field_ab = false;
-          qm.a(10, 7758);
+          RasterBuffer.a(10, 7758);
           this.field_db = param1;
           var6 = (hd) (al.a(-103, this.field_P.field_s.field_o.field_g.field_b[this.field_P.field_s.field_m[this.field_db]]));
           var3 = var6;
@@ -1885,7 +1885,7 @@ final class gj extends dfa {
           this.a(param1, param3, (ad) null, param0, (byte) -126);
           int var5_int = 108 % ((-45 - param2) / 42);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gj.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1946,7 +1946,7 @@ final class gj extends dfa {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1973,7 +1973,7 @@ final class gj extends dfa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1995,7 +1995,7 @@ final class gj extends dfa {
           }
           this.field_D = new kj[this.field_h.field_z][this.field_h.field_B];
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gj.MA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gj.MA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2121,7 +2121,7 @@ final class gj extends dfa {
           this.field_J) {
           if (!this.c(-3985)) {
             this.m(10);
-            qm.a(34, 7758);
+            RasterBuffer.a(34, 7758);
             this.field_f = 5;
           }
           this.field_B = -1;
@@ -2174,7 +2174,7 @@ final class gj extends dfa {
             this.field_J = false;
             this.field_e.a(false, this.field_Y, this.field_h.field_A);
             uca.a(22, (byte) 103);
-            qm.a(35, 7758);
+            RasterBuffer.a(35, 7758);
           }
           this.field_k = this.field_k - 1;
         }
@@ -2235,7 +2235,7 @@ final class gj extends dfa {
           this.field_e.a(false, this.field_Y, this.field_h.field_A);
         }
         if (this.field_p == 250) {
-          qm.a(36, 7758);
+          RasterBuffer.a(36, 7758);
         }
         if (this.field_n >= 0 &&
           (this.field_h.field_S[this.field_n].field_c ||
@@ -2250,7 +2250,7 @@ final class gj extends dfa {
     public static void p(int param0) {
         field_F = null;
         if (param0 != -1) {
-          field_F = (kv) null;
+          field_F = (Sprite) null;
         }
     }
 
@@ -2444,11 +2444,11 @@ final class gj extends dfa {
         try {
           this.a(param2, param0, 19273, param1);
           this.field_e = new fs(this, param3);
-          this.field_j = new eaa();
-          this.field_X = new eaa();
+          this.field_j = new IntrusiveDeque();
+          this.field_X = new IntrusiveDeque();
           this.j(-15503);
-          this.field_S = new eaa();
-          this.field_fb = new eaa();
+          this.field_S = new IntrusiveDeque();
+          this.field_fb = new IntrusiveDeque();
           this.field_v = new int[255];
           for (var5_int = 0; var5_int < 255; var5_int++) {
             this.field_v[var5_int] = 256 * var5_int;
@@ -2463,9 +2463,9 @@ final class gj extends dfa {
           for (var6 = 0; var6 < 256; var6++) {
             var9[var6] = 65793 * var6;
           }
-          this.field_x = new kv(45, 45);
+          this.field_x = new Sprite(45, 45);
           this.field_x.b();
-          dg.a(352, 352, 352, 255, var16);
+          SoftwareRasterizer.a(352, 352, 352, 255, var16);
           hga.field_U.a((byte) 120);
           var17 = nga.field_i;
           for (var7 = 0; var7 < 8; var7++) {
@@ -2488,7 +2488,7 @@ final class gj extends dfa {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -2503,7 +2503,7 @@ final class gj extends dfa {
 
     final void h(int param0) {
         int var2;
-        kv var3;
+        Sprite var3;
         int var4;
         ad var5;
         var4 = BachelorFridge.field_y;
@@ -2518,7 +2518,7 @@ final class gj extends dfa {
           if (hea.field_r >= 2 &&
             gf.field_k == 50 &&
             wga.field_q[82]) {
-            sja.field_fb.c(93, (byte) 113);
+            sja.field_fb.writeCipheredByte(93, (byte) 113);
             System.out.println("--- STATE DUMP REQUESTED ---");
             System.out.println(this.field_h.k((byte) -72));
             System.out.println("--- STATE DUMP ENDS ---");
@@ -2534,8 +2534,8 @@ final class gj extends dfa {
             if (!this.field_h.field_r) {
               var2 = 2;
             } else {
-              dg.g(0, 0, 640, 480);
-              var3 = new kv(640, 480);
+              SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
+              var3 = new Sprite(640, 480);
               fc.a(480, 640, var3, 0, (byte) -90, 0);
               eq.a(var3, this, (byte) -111);
               sia.field_h = false;
@@ -2552,7 +2552,7 @@ final class gj extends dfa {
 
     final ad a(int param0, boolean param1, int param2) {
         if (param1) {
-          this.field_X = (eaa) null;
+          this.field_X = (IntrusiveDeque) null;
         }
         return this.b(this.field_h.field_a[param2][param0].field_l, -23990);
     }
@@ -2565,7 +2565,7 @@ final class gj extends dfa {
             this.field_P.field_s.a(8, (byte) 55)) {
             return;
           }
-          qm.a(10, 7758);
+          RasterBuffer.a(10, 7758);
           this.field_ab = false;
           this.field_w = false;
           this.field_l = true;

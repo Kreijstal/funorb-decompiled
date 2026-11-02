@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eq {
-    static kv[] field_b;
+    static Sprite[] field_b;
     String[] field_a;
     String field_g;
     static String field_i;
@@ -26,7 +26,7 @@ final class eq {
         field_i = null;
     }
 
-    final static void a(kv param0, gj param1, byte param2) {
+    final static void a(Sprite param0, gj param1, byte param2) {
         int var5 = 0;
         int var4 = 0;
         boolean stackIn_6_0 = false;
@@ -51,7 +51,7 @@ final class eq {
           rga.field_a = pu.field_j.field_G;
           if (param2 != -111) {
             var8 = (gj) null;
-            eq.a((kv) null, (gj) null, (byte) 68);
+            eq.a((Sprite) null, (gj) null, (byte) 68);
           }
           var3_int = pu.field_j.field_h.field_b;
           stackIn_6_0 = (var3_int == pu.field_j.field_n);
@@ -111,7 +111,7 @@ final class eq {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -7,7 +7,7 @@ final class qf extends ida {
     static int field_v;
     private int field_C;
     static String[] field_A;
-    static be[] field_x;
+    static PcmSample[] field_x;
     private cq field_u;
     private int field_z;
     private boolean field_B;
@@ -25,7 +25,7 @@ final class qf extends ida {
           }
           this.a(param1, param3, -3670);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qf.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qf.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -67,12 +67,12 @@ final class qf extends ida {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final boolean c(byte param0) {
-        je var4_ref_je = null;
+        PcmSampleStream var4_ref_je = null;
         ad var2 = null;
         int var4 = 0;
         int var5 = 0;
@@ -98,7 +98,7 @@ final class qf extends ida {
         }
         if (null == this.field_u &&
           var7.field_s.field_y == 32) {
-          var4_ref_je = je.a(rt.field_a[32], 256, 256);
+          var4_ref_je = PcmSampleStream.createWithVolume(rt.field_a[32], 256, 256);
           var4_ref_je.d(-1);
           this.field_u = tw.a(var4_ref_je, (byte) -36);
         }
@@ -221,7 +221,7 @@ final class qf extends ida {
           var3 = this.field_p.a(-27449, this.field_s);
           var3.field_s.d(param1.field_k, (byte) -115);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -269,7 +269,7 @@ final class qf extends ida {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -296,7 +296,7 @@ final class qf extends ida {
           }
           var1_int = 0;
           if (param0 != 20434) {
-            field_x = (be[]) null;
+            field_x = (PcmSample[]) null;
           }
           var2 = (kr) (qg.field_b.field_z.b((byte) 90));
           while (var2 != null) {
@@ -311,13 +311,13 @@ final class qf extends ida {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "qf.N(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "qf.N(" + param0 + ')');
         }
     }
 
     static {
         field_w = "Your email address is used to identify this account";
         field_A = new String[]{"Walk", "Jump", "Sprint"};
-        field_x = new be[10];
+        field_x = new PcmSample[10];
     }
 }

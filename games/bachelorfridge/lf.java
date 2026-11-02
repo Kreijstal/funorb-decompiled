@@ -3,9 +3,9 @@
  */
 final class lf {
     static qia field_a;
-    static ee[] field_b;
+    static IndexedSprite[] field_b;
     static int field_c;
-    static tca field_d;
+    static JaggrabDownloader field_d;
 
     public static void b(int param0) {
         field_b = null;
@@ -27,7 +27,7 @@ final class lf {
         if (param0 >= 57) {
           oha.b((byte) -34);
           mda.field_b.a(jfa.field_q[baa.field_Q].field_d * 100, 31407, 400, 105, 350);
-          qm.field_d = new wl("foodlist", mda.field_b, cb.field_m, nha.field_e);
+          RasterBuffer.field_d = new wl("foodlist", mda.field_b, cb.field_m, nha.field_e);
           iu.d(118);
           ak.field_t = "";
           var1 = baa.field_Q;
@@ -72,7 +72,7 @@ final class lf {
         lf.b(-42);
         oha.b((byte) -34);
         mda.field_b.a(jfa.field_q[baa.field_Q].field_d * 100, 31407, 400, 105, 350);
-        qm.field_d = new wl("foodlist", mda.field_b, cb.field_m, nha.field_e);
+        RasterBuffer.field_d = new wl("foodlist", mda.field_b, cb.field_m, nha.field_e);
         iu.d(118);
         ak.field_t = "";
         var1Lifetime1 = baa.field_Q;

@@ -10,7 +10,7 @@ final class gt extends k {
     static java.util.zip.CRC32 field_l;
     private int field_p;
     private int field_n;
-    static kv field_s;
+    static Sprite field_s;
     static String field_r;
     private int field_m;
     private int field_o;
@@ -342,15 +342,15 @@ final class gt extends k {
           if (var10 <= 0) {
             if (hh.field_d >= param1 + param4) {
               for (var11 = 0; var11 < param5; var11++) {
-                bl.a(param0[param6 + var11], param1, param4, var8_int);
+                ArrayOperations.a(param0[param6 + var11], param1, param4, var8_int);
               }
               return;
             }
             var11Lifetime2 = hh.field_d - param1;
             for (var12 = 0; var12 < param5; var12++) {
               var13 = param0[param6 + var12];
-              bl.a(var13, param1, var11Lifetime2, var8_int);
-              bl.a(var13, 0, param4 - var11Lifetime2, var8_int);
+              ArrayOperations.a(var13, param1, var11Lifetime2, var8_int);
+              ArrayOperations.a(var13, 0, param4 - var11Lifetime2, var8_int);
             }
             return;
           }
@@ -398,10 +398,10 @@ final class gt extends k {
                 }
                 if (var16 + var15 > hh.field_d) {
                   var20 = -var15 + hh.field_d;
-                  bl.a(var18, var15, var20, var19);
-                  bl.a(var18, 0, -var20 + var16, var19);
+                  ArrayOperations.a(var18, var15, var20, var19);
+                  ArrayOperations.a(var18, 0, -var20 + var16, var19);
                 } else {
-                  bl.a(var18, var15, var16, var19);
+                  ArrayOperations.a(var18, var15, var16, var19);
                 }
               } else {
                 var19 = param5 - var17 - 1;
@@ -412,11 +412,11 @@ final class gt extends k {
                     var18[dda.a(var20 + param1, wp.field_r)] = var8_int * var20 / var13_int;
                   }
                   if (var16 + var15 <= hh.field_d) {
-                    bl.a(var18, var15, var16, var8_int);
+                    ArrayOperations.a(var18, var15, var16, var8_int);
                   } else {
                     var20 = -var15 + hh.field_d;
-                    bl.a(var18, var15, var20, var8_int);
-                    bl.a(var18, 0, -var20 + var16, var8_int);
+                    ArrayOperations.a(var18, var15, var20, var8_int);
+                    ArrayOperations.a(var18, 0, -var20 + var16, var8_int);
                   }
                   decompiledFrameRemainder0 = false;
                 }
@@ -446,11 +446,11 @@ final class gt extends k {
                     }
                   }
                   if (hh.field_d >= var15 + var16) {
-                    bl.a(var18, var15, var16, var20);
+                    ArrayOperations.a(var18, var15, var16, var20);
                   } else {
                     var21 = -var15 + hh.field_d;
-                    bl.a(var18, var15, var21, var20);
-                    bl.a(var18, 0, -var21 + var16, var20);
+                    ArrayOperations.a(var18, var15, var21, var20);
+                    ArrayOperations.a(var18, 0, -var21 + var16, var20);
                   }
                 }
               }
@@ -474,11 +474,11 @@ final class gt extends k {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -491,38 +491,38 @@ final class gt extends k {
           var4_int = param2;
           if (0 != var4_int) {
             if (var4_int == 1) {
-              this.field_n = param1.e((byte) 56);
+              this.field_n = param1.readUnsignedShort((byte) 56);
             } else {
               if (var4_int != 2) {
                 if (var4_int == 3) {
-                  this.field_m = param1.e((byte) 82);
+                  this.field_m = param1.readUnsignedShort((byte) 82);
                 } else {
                   if (4 != var4_int) {
                     if (var4_int == 5) {
-                      this.field_t = param1.e((byte) 80);
+                      this.field_t = param1.readUnsignedShort((byte) 80);
                     } else {
                       if (var4_int != 6) {
                         if (var4_int == 7) {
-                          this.field_o = param1.e((byte) 104);
+                          this.field_o = param1.readUnsignedShort((byte) 104);
                         } else {
                           if (var4_int == 8) {
-                            this.field_u = param1.e((byte) 106);
+                            this.field_u = param1.readUnsignedShort((byte) 106);
                           }
                         }
                       } else {
-                        this.field_v = param1.b(16711935);
+                        this.field_v = param1.readUnsignedByte(16711935);
                       }
                     }
                   } else {
-                    this.field_k = param1.e((byte) 84);
+                    this.field_k = param1.readUnsignedShort((byte) 84);
                   }
                 }
               } else {
-                this.field_p = param1.e((byte) 64);
+                this.field_p = param1.readUnsignedShort((byte) 64);
               }
             }
           } else {
-            this.field_w = param1.b(param0 ^ -16711866);
+            this.field_w = param1.readUnsignedByte(param0 ^ -16711866);
           }
           if (param0 != -71) {
             this.field_k = -21;
@@ -538,7 +538,7 @@ final class gt extends k {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -597,13 +597,13 @@ final class gt extends k {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void d(byte param0) {
         if (param0 != -68) {
-          field_s = (kv) null;
+          field_s = (Sprite) null;
         }
     }
 

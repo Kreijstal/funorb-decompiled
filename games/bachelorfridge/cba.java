@@ -3,14 +3,14 @@
  */
 final class cba {
     static String field_b;
-    static kv field_a;
+    static Sprite field_a;
     static int field_d;
-    static ee[] field_c;
+    static IndexedSprite[] field_c;
 
     public static void a(byte param0) {
         field_b = null;
         if (param0 != -44) {
-          field_c = (ee[]) null;
+          field_c = (IndexedSprite[]) null;
           field_a = null;
           field_c = null;
           return;

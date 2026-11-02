@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class nu {
-    static kia field_h;
-    static kv field_e;
+    static MusicTrack field_h;
+    static Sprite field_e;
     static String field_g;
     static sna field_c;
     static boolean field_b;
@@ -36,7 +36,7 @@ abstract class nu {
         field_f = null;
     }
 
-    final static int a(String param0, lu param1, int param2) {
+    final static int a(String param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -50,16 +50,16 @@ abstract class nu {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param1.field_g;
+          var3_int = param1.position;
           var5 = (CharSequence) ((Object) param0);
           var4 = bv.a(18019, var5);
-          param1.b(var4.length, true);
+          param1.writeSmart(var4.length, true);
           if (param2 != -21840) {
             stackIn_2_0 = -15;
             return stackIn_2_0;
           }
-          param1.field_g = param1.field_g + jka.field_l.a(var4, var4.length, param2 + 42697, param1.field_h, 0, param1.field_g);
-          stackIn_4_0 = -var3_int + param1.field_g;
+          param1.position = param1.position + jka.field_l.a(var4, var4.length, param2 + 42697, param1.payload, 0, param1.position);
+          stackIn_4_0 = -var3_int + param1.position;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,7 +77,7 @@ abstract class nu {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 

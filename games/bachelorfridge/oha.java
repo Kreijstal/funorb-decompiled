@@ -34,7 +34,7 @@ class oha {
         RuntimeException var1 = null;
         qc var2 = null;
         int var4 = 0;
-        kv var5 = null;
+        Sprite var5 = null;
         String var6 = null;
         int var7 = 0;
         uu var8 = null;
@@ -63,7 +63,7 @@ class oha {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "oha.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "oha.B(" + param0 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ class oha {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ class oha {
           this.field_l = param5;
           this.field_g = param8;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oha.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oha.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

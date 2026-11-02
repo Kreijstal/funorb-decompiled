@@ -7,7 +7,7 @@ final class ola {
     wda[][] field_i;
     private mj field_f;
     private saa field_c;
-    private eaa field_q;
+    private IntrusiveDeque field_q;
     jfa[] field_r;
     static af field_p;
     private int field_d;
@@ -15,10 +15,10 @@ final class ola {
     int field_n;
     boolean field_h;
     private sna field_a;
-    static wma field_g;
+    static DualLinkNodeHashTable field_g;
     jt field_k;
     sna field_s;
-    eaa field_m;
+    IntrusiveDeque field_m;
     private int field_o;
     private int field_l;
     static ph field_e;
@@ -39,7 +39,7 @@ final class ola {
             var5 = this.a(mk.field_p, -4456, gd.field_m);
             if (var5 != null) {
               discarded$0 = this.b(-1, gd.field_m);
-              var5.a(false);
+              var5.unlink(false);
               var5.g(0);
               this.field_j = new ula(mk.field_p, gd.field_m, var5, var5.field_u, var5.field_l);
               this.field_h = true;
@@ -53,14 +53,14 @@ final class ola {
             if (this.e(-103) &&
               var2 != -1 &&
               null == this.field_r[var2]) {
-              qm.a(3, 7758);
+              RasterBuffer.a(3, 7758);
               this.field_r[var2] = this.field_j.field_c;
               ik.a(this.field_j.field_g, this.field_j.field_c, -6622, var2);
               this.field_j.field_c.field_v.a(false, 0, 0, true, -1);
               this.field_j = null;
             } else {
               if (this.a(this.field_j.field_c, gd.field_m, -19906, mk.field_p)) {
-                qm.a(2, 7758);
+                RasterBuffer.a(2, 7758);
                 this.field_m.a(this.field_j.field_c, param0);
                 this.field_j = null;
               } else {
@@ -125,7 +125,7 @@ final class ola {
 
     private final boolean e(int param0) {
         int var2;
-        if (!iaa.field_a) {
+        if (!MeshObject.field_a) {
           return false;
         }
         var2 = 30 % ((param0 - 6) / 58);
@@ -146,7 +146,7 @@ final class ola {
     final void a(int param0, int param1) {
         int var4_int = 0;
         int var6 = 0;
-        kv[] stackIn_5_0 = null;
+        Sprite[] stackIn_5_0 = null;
         int stackIn_6_1 = 0;
         jfa var4;
         int var5;
@@ -159,35 +159,35 @@ final class ola {
           var8.a(128, param1);
           var8 = (es) (this.field_q.c(0));
         }
-        gba.field_xb.e(10 + param1, 75);
-        ln.field_v.e(param1 + 14, 79);
+        gba.field_xb.draw(10 + param1, 75);
+        ln.field_v.draw(param1 + 14, 79);
         stackIn_5_0 = pja.field_b;
         if (-1 + this.field_m.g(0) == -1) {
           stackIn_6_1 = 9;
         } else {
           stackIn_6_1 = -1 + this.field_m.g(0);
         }
-        ((kv) (Object) stackIn_5_0[stackIn_6_1]).e(28 + param1, 79);
+        ((Sprite) (Object) stackIn_5_0[stackIn_6_1]).draw(28 + param1, 79);
         if (!this.field_a.field_T) {
           if (8 < this.field_o) {
-            ve.field_l[0].e(param1 + 35, 358);
+            ve.field_l[0].draw(param1 + 35, 358);
           } else {
             if (this.field_o <= 6) {
               if (this.field_o > 4) {
-                ve.field_l[2].e(35 + param1, 358);
+                ve.field_l[2].draw(35 + param1, 358);
               } else {
                 if (this.field_o <= 2) {
                   if (this.field_o > 0) {
-                    ve.field_l[3].e(param1 + 35, 358);
+                    ve.field_l[3].draw(param1 + 35, 358);
                   } else {
-                    ve.field_l[4].e(param1 + 35, 358);
+                    ve.field_l[4].draw(param1 + 35, 358);
                   }
                 } else {
-                  ve.field_l[3].e(35 + param1, 358);
+                  ve.field_l[3].draw(35 + param1, 358);
                 }
               }
             } else {
-              ve.field_l[1].e(35 + param1, 358);
+              ve.field_l[1].draw(35 + param1, 358);
             }
           }
           this.field_o = this.field_o - 1;
@@ -199,22 +199,22 @@ final class ola {
             if (4 <= this.field_o) {
               if (this.field_o >= 6) {
                 if (this.field_o < 8) {
-                  ve.field_l[0].e(param1 + 35, 358);
+                  ve.field_l[0].draw(param1 + 35, 358);
                 } else {
                   if (10 <= this.field_o) {
-                    ve.field_l[0].e(param1 + 35, 358);
+                    ve.field_l[0].draw(param1 + 35, 358);
                   } else {
-                    ve.field_l[1].e(param1 + 35, 358);
+                    ve.field_l[1].draw(param1 + 35, 358);
                   }
                 }
               } else {
-                ve.field_l[1].e(35 + param1, 358);
+                ve.field_l[1].draw(35 + param1, 358);
               }
             } else {
-              ve.field_l[2].e(param1 + 35, 358);
+              ve.field_l[2].draw(param1 + 35, 358);
             }
           } else {
-            ve.field_l[3].e(param1 + 35, 358);
+            ve.field_l[3].draw(param1 + 35, 358);
           }
           this.field_o = this.field_o + 1;
           if (this.field_o > 10) {
@@ -224,9 +224,9 @@ final class ola {
         if (vr.field_b % 200 != 1 &&
           vr.field_b % 200 != 4 &&
           this.field_a.field_T) {
-          ot.field_e.e(param1 + 48, 330);
+          ot.field_e.draw(param1 + 48, 330);
         } else {
-          rea.field_k.e(48 + param1, 330);
+          rea.field_k.draw(48 + param1, 330);
         }
         for (var4_int = 0; var4_int < 6; var4_int++) {
           for (var5 = 0; var5 < 10; var5++) {
@@ -245,29 +245,29 @@ final class ola {
           for (var6 = 0; var6 < 10; var6++) {
             if (this.field_i[var5Lifetime1][var6].field_f != null &&
               this.field_i[var5Lifetime1][var6].field_f.field_n > 0) {
-              oo.field_q[-this.field_i[var5Lifetime1][var6].field_f.field_n + 24].e(param1 + (-6 + this.field_i[var5Lifetime1][var6].field_f.field_p), -32 + this.field_i[var5Lifetime1][var6].field_f.field_j);
+              oo.field_q[-this.field_i[var5Lifetime1][var6].field_f.field_n + 24].draw(param1 + (-6 + this.field_i[var5Lifetime1][var6].field_f.field_p), -32 + this.field_i[var5Lifetime1][var6].field_f.field_j);
             }
           }
         }
         this.field_k.a(param1, 8687);
         if (this.field_j != null) {
           if (this.e(-122)) {
-            kaa.field_l[0].e(param1 + 0, 6);
+            kaa.field_l[0].draw(param1 + 0, 6);
             if (this.field_l < 2) {
-              kaa.field_l[1].e(0 + param1, 72);
+              kaa.field_l[1].draw(0 + param1, 72);
             } else {
               if (this.field_l >= 4) {
                 if (this.field_l < 6) {
-                  kaa.field_l[2].e(0 + param1, 72);
+                  kaa.field_l[2].draw(0 + param1, 72);
                 } else {
                   if (8 <= this.field_l) {
-                    kaa.field_l[1].e(0 + param1, 72);
+                    kaa.field_l[1].draw(0 + param1, 72);
                   } else {
-                    kaa.field_l[3].e(param1 + 0, 72);
+                    kaa.field_l[3].draw(param1 + 0, 72);
                   }
                 }
               } else {
-                kaa.field_l[3].e(param1 + 0, 72);
+                kaa.field_l[3].draw(param1 + 0, 72);
               }
             }
             this.field_l = this.field_l + 1;
@@ -277,7 +277,7 @@ final class ola {
           this.field_j.b(-17613);
         }
         if (null != this.field_f) {
-          dg.g(0, 0, 640, 480);
+          SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
           this.field_f.a((byte) -115);
         }
         if (param0 > -123) {
@@ -315,7 +315,7 @@ final class ola {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        pf var28 = null;
+        BitPacketBuffer var28 = null;
         long[][] var35 = null;
         int[][] var36 = null;
         int var3Lifetime1;
@@ -327,9 +327,9 @@ final class ola {
             field_p = (af) null;
           }
           var28 = ig.field_m;
-          var2 = var28.b(16711935);
+          var2 = var28.readUnsignedByte(16711935);
           if (var2 == 0) {
-            var3 = var28.e((byte) 70);
+            var3 = var28.readUnsignedShort((byte) 70);
             var4_ref = (mha) (wba.field_g.b((byte) 90));
             while (var4_ref != null) {
               if (var4_ref.field_f != var3) {
@@ -342,9 +342,9 @@ final class ola {
               vc.a((byte) -73);
               return;
             }
-            var5 = var28.b(16711935);
+            var5 = var28.readUnsignedByte(16711935);
             if (0 == var5) {
-              var4_ref.a(false);
+              var4_ref.unlink(false);
               return;
             }
             var6 = var4_ref.field_h;
@@ -353,10 +353,10 @@ final class ola {
             var7 = var4_ref.field_i;
             mi.field_l[0].field_c = false;
             for (var8_int = 1; var8_int < var5; var8_int++) {
-              mi.field_l[var8_int].field_e = var28.g(-82);
+              mi.field_l[var8_int].field_e = var28.readString(-82);
               mi.field_l[var8_int].field_c = false;
-              if (var28.b(16711935) == 1) {
-                mi.field_l[var8_int].field_b = var28.g(-60);
+              if (var28.readUnsignedByte(16711935) == 1) {
+                mi.field_l[var8_int].field_b = var28.readString(-60);
               } else {
                 mi.field_l[var8_int].field_b = null;
               }
@@ -371,16 +371,16 @@ final class ola {
             var15 = 0;
             var16 = 0;
             var17 = 0;
-            var18 = var28.b(16711935);
+            var18 = var28.readUnsignedByte(16711935);
             if (var18 <= 0) {
-              var4_ref.a(false);
+              var4_ref.unlink(false);
               return;
             }
             for (var19 = 0; var19 < var18; var19++) {
-              var20 = var28.b(16711935);
+              var20 = var28.readUnsignedByte(16711935);
               var21 = mi.field_l[var20].field_e;
-              var22 = var28.c(-117);
-              var24 = var28.field_g;
+              var22 = var28.readLong(-117);
+              var24 = var28.position;
               if (var6 > var19) {
                 var8[0][var12] = var21;
                 var9[0][var12] = mi.field_l[var20].field_b;
@@ -388,7 +388,7 @@ final class ola {
                 for (var25 = 0; var25 < var7; var25++) {
                   incrementValue$0 = var15;
                   var15++;
-                  var36[0][incrementValue$0] = var28.f(81);
+                  var36[0][incrementValue$0] = var28.readInt(81);
                 }
                 var12++;
               }
@@ -397,12 +397,12 @@ final class ola {
                 var8[1][var13] = cha.field_l;
                 var9[1][var13] = null;
                 var35[1][var13] = var22;
-                var28.field_g = var24;
+                var28.position = var24;
                 var13++;
                 for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                   incrementValue$1 = var16;
                   var16++;
-                  var36[1][incrementValue$1] = var28.f(-101);
+                  var36[1][incrementValue$1] = var28.readInt(-101);
                 }
               }
               if (var6 > var14 &&
@@ -412,20 +412,20 @@ final class ola {
                 var9[2][var14] = mi.field_l[var20].field_b;
                 var35[2][var14] = var22;
                 var14++;
-                var28.field_g = var24;
+                var28.position = var24;
                 for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                   incrementValue$2 = var17;
                   var17++;
-                  var36[2][incrementValue$2] = var28.f(-127);
+                  var36[2][incrementValue$2] = var28.readInt(-127);
                 }
               }
             }
-            var4_ref.a(false);
+            var4_ref.unlink(false);
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var28.e((byte) 46);
-            var28.c(-109);
+            var3Lifetime1 = var28.readUnsignedShort((byte) 46);
+            var28.readLong(-109);
             var4 = (nc) (tb.field_c.b((byte) 90));
             while (var4 != null) {
               if (var4.field_j != var3Lifetime1) {
@@ -435,7 +435,7 @@ final class ola {
               break;
             }
             if (var4 != null) {
-              var4.a(false);
+              var4.unlink(false);
               return;
             }
             vc.a((byte) -99);
@@ -447,7 +447,7 @@ final class ola {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "ola.H(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "ola.H(" + param0 + ')');
         }
     }
 
@@ -467,7 +467,7 @@ final class ola {
     final static void b(byte param0) {
         ep.a(17, 8192);
         if (param0 > 0) {
-          field_g = (wma) null;
+          field_g = (DualLinkNodeHashTable) null;
         }
     }
 
@@ -511,7 +511,7 @@ final class ola {
                   null != this.field_j ||
                   !(this.field_m.g(0) >= 8) &&
                   this.field_j == null)) {
-                  qm.a(0, 7758);
+                  RasterBuffer.a(0, 7758);
                   this.field_m.a(new jfa(new rk(gfa.field_a[this.field_i[var3][var4].field_f.field_e]), var3, var4, this.field_i), true);
                   wf.a(3909, var3, this.field_i[var3][var4].field_f.field_e, (jfa) (this.field_m.a(6)), var4);
                   uca.a(9, (byte) 99);
@@ -623,7 +623,7 @@ final class ola {
         return -1;
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -645,13 +645,13 @@ final class ola {
               this.field_i[var3_int][var4] = new wda(param1);
             }
           }
-          var3_intLifetime1 = param1.b(16711935);
+          var3_intLifetime1 = param1.readUnsignedByte(16711935);
           for (var4Lifetime1 = 0; var3_intLifetime1 > var4Lifetime1; var4Lifetime1++) {
             var5_ref_it = new it(param1);
             this.field_i[var5_ref_it.field_h][var5_ref_it.field_m].field_f = var5_ref_it;
           }
-          var4Lifetime2 = param1.b(16711935);
-          this.field_m = new eaa();
+          var4Lifetime2 = param1.readUnsignedByte(16711935);
+          this.field_m = new IntrusiveDeque();
           if (param0 > -115) {
             return;
           }
@@ -670,7 +670,7 @@ final class ola {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -702,20 +702,20 @@ final class ola {
           this.field_c = param1;
           this.field_k = new jt(this);
           this.c(59);
-          qa.field_k = new kv(49, 49);
+          qa.field_k = new Sprite(49, 49);
           var6 = new int[256];
           var3 = var6;
           if (param0) {
-            field_g = (wma) null;
+            field_g = (DualLinkNodeHashTable) null;
           }
           for (var4 = 0; 256 > var4; var4++) {
             var6[var4] = var4 * 65793;
           }
           qa.field_k.b();
-          dg.a(400, 400, 384, 77, var3);
+          SoftwareRasterizer.a(400, 400, 384, 77, var3);
           hga.field_U.a((byte) 122);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ola.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ola.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -765,7 +765,7 @@ final class ola {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -794,7 +794,7 @@ final class ola {
             }
             var3_int++;
           }
-          this.field_m = new eaa();
+          this.field_m = new IntrusiveDeque();
           var3 = (rk) (param1.field_m.b((byte) 90));
           while (var3 != null) {
             this.field_m.a(new jfa(var3, kla.a(6, var3.field_p, -2147483648), kla.a(10, var3.field_p, -2147483648), this.field_i), true);
@@ -811,7 +811,7 @@ final class ola {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -893,8 +893,8 @@ final class ola {
         this.field_n = 0;
         this.field_r = new jfa[50];
         this.field_i = fs.a(1);
-        this.field_m = new eaa();
-        this.field_q = new eaa();
+        this.field_m = new IntrusiveDeque();
+        this.field_q = new IntrusiveDeque();
     }
 
     static {

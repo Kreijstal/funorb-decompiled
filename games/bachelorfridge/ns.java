@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ns extends jm {
-    static kv[] field_m;
+    static Sprite[] field_m;
     nq field_n;
 
-    ns(lu param0) {
+    ns(PacketBuffer param0) {
         this(qi.a(param0, (byte) 9));
     }
 
-    final void b(lu param0, byte param1) {
+    final void b(PacketBuffer param0, byte param1) {
         try {
           er.a(this.field_n, 108, param0);
           int var3_int = -18 / ((param1 - 37) / 38);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ns.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ns.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class ns extends jm {
           var3.field_A = param0 ? true : false;
           param1.field_R = false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ns.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ns.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class ns extends jm {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          uka.field_j = false;
+          ImageProducerRasterBuffer.field_j = false;
           eea.field_b = false;
           if (oq.field_b != null &&
             oq.field_b.field_C) {
@@ -67,7 +67,7 @@ final class ns extends jm {
               bga.c((byte) -106);
             }
             if (var3_int != 0) {
-              if (uka.field_j) {
+              if (ImageProducerRasterBuffer.field_j) {
                 param0 = lga.a(true, new String[]{param0}, ok.field_Cb);
               }
               if (sna.field_s) {
@@ -97,7 +97,7 @@ final class ns extends jm {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class ns extends jm {
           this.field_j = 8;
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ns.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ns.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class ns extends jm {
             this.a(false, (op) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ns.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ns.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

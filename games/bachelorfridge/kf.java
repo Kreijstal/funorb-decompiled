@@ -10,13 +10,13 @@ final class kf {
     final static void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        kq.field_i = dg.field_c;
-        kg.field_b = dg.field_i;
+        kq.field_i = SoftwareRasterizer.field_c;
+        FullscreenFocusCanvas.field_b = SoftwareRasterizer.field_i;
         pm.f(199);
         lia.field_j.a(0, -42 + ng.field_e.field_p, 0, ng.field_e.field_sb, (byte) 59);
         dea.field_m.a(rg.field_h, 31407, kt.field_m.field_sb, 0, 0);
         int var1 = 2 + rg.field_h;
-        tv.field_o.a(kt.field_m.field_p - (eaa.field_c ? var1 : 0), 31407, kt.field_m.field_sb, 0, eaa.field_c ? var1 : 0);
+        tv.field_o.a(kt.field_m.field_p - (IntrusiveDeque.field_c ? var1 : 0), 31407, kt.field_m.field_sb, 0, IntrusiveDeque.field_c ? var1 : 0);
         pg.e(0);
         mc.field_g.a(40, 31407, ng.field_e.field_sb, 0, -40 + ng.field_e.field_p);
         wia.field_f.a(30, 31407, ui.field_r.field_sb, 0, 0);
@@ -26,13 +26,13 @@ final class kf {
           nd.field_i.a(30, param0 + 31413, 78, 75, 5);
           mt.field_q.a(30, param0 ^ -31403, 48, 155, 5);
           hj.field_p.a(30, 31407, 48, 205, 5);
-          var2 = eaa.field_c ? 250 : 200;
+          var2 = IntrusiveDeque.field_c ? 250 : 200;
           vf.field_F.a(30, param0 + 31413, -var2 + 363, var2 + 5, 5);
           aia.field_l.a(30, 31407, -370 + ui.field_r.field_sb - 5, 370, 5);
           p.field_n.a((byte) -58, -10 + (nea.field_yb.field_p - 32), 5, 37, -5 + (nea.field_yb.field_sb - 5), rj.field_j, 2);
           var3 = (ui.field_r.field_sb + 2) / 2;
           ae.field_a.a(40, 31407, -2 + var3, 0, -40 + ui.field_r.field_p);
-          if (!eaa.field_c) {
+          if (!IntrusiveDeque.field_c) {
             var3 = 0;
           }
           vh.field_y.a(40, 31407, -var3 + ui.field_r.field_sb, var3, ui.field_r.field_p - 40);
@@ -70,7 +70,7 @@ final class kf {
             }
             if (el.field_h != 2) {
               if (el.field_h == 2) {
-                if (!rna.b(7)) {
+                if (!IntrusiveDequeCursor.b(7)) {
                   return true;
                 }
                 var5 = (String) null;
@@ -78,7 +78,7 @@ final class kf {
                 return true;
               }
               if (var3 == 0) {
-                if (rna.b(7)) {
+                if (IntrusiveDequeCursor.b(7)) {
                   var5 = (String) null;
                   no.a(oa.field_vb, el.field_h, 52, (String) null, hda.field_l, param2);
                   return true;
@@ -92,7 +92,7 @@ final class kf {
                 var3 != 0) {
                 return false;
               }
-              if (rna.b(7)) {
+              if (IntrusiveDequeCursor.b(7)) {
                 var5Lifetime2 = (String) null;
                 no.a(oa.field_vb, el.field_h, 52, (String) null, hda.field_l, param2);
                 return true;
@@ -126,7 +126,7 @@ final class kf {
             var3 != 0) {
             return false;
           }
-          if (rna.b(7)) {
+          if (IntrusiveDequeCursor.b(7)) {
             var5Lifetime1 = (String) null;
             no.a(oa.field_vb, el.field_h, 52, (String) null, hda.field_l, param2);
             return true;

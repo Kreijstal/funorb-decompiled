@@ -7,12 +7,12 @@ final class hca {
     sna field_c;
     private int field_b;
 
-    final static kv a(String param0, vr param1, int param2, String param3) {
+    final static Sprite a(String param0, vr param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        kv stackIn_1_0 = null;
+        Sprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -49,14 +49,14 @@ final class hca {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     final void a(byte param0) {
         if (param0 == 19) {
           hp.a(this.field_c.field_sb, this.field_c.field_kb, (byte) 102, this.field_c.field_p, uq.field_zb, this.field_c.field_rb);
-          g.field_g.a(this.field_a, this.field_d, this.field_b, 300, 200, 16777215, -1, 0, 0, 14);
+          g.field_g.drawParagraph(this.field_a, this.field_d, this.field_b, 300, 200, 16777215, -1, 0, 0, 14);
           return;
         }
     }
@@ -69,18 +69,18 @@ final class hca {
         int var2 = 74 % ((82 - param0) / 32);
     }
 
-    final static ee[] b(int param0) {
+    final static IndexedSprite[] b(int param0) {
         int var2 = 0;
         int var3 = BachelorFridge.field_y;
-        ee[] var1 = new ee[ok.field_vb];
+        IndexedSprite[] var1 = new IndexedSprite[ok.field_vb];
         for (var2 = 0; ok.field_vb > var2; var2++) {
-          var1[var2] = new ee(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], baa.field_P[var2], hk.field_f);
+          var1[var2] = new IndexedSprite(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], baa.field_P[var2], hk.field_f);
         }
         if (param0 == 200) {
           al.b(-18073);
           return var1;
         }
-        return (ee[]) null;
+        return (IndexedSprite[]) null;
     }
 
     hca(int param0, int param1, String param2) {
@@ -92,9 +92,9 @@ final class hca {
           this.field_c.field_kb = this.field_d - 15;
           this.field_c.field_rb = -10 + this.field_b;
           this.field_c.field_sb = 30 + g.field_g.c(this.field_a, 300);
-          this.field_c.field_p = g.field_g.a(this.field_a, 300, 14) + 20;
+          this.field_c.field_p = g.field_g.measureWrappedHeight(this.field_a, 300, 14) + 20;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hca.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hca.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

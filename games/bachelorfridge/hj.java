@@ -4,7 +4,7 @@
 final class hj extends td {
     static sna field_p;
 
-    final static cj a(byte param0, lu param1) {
+    final static cj a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         lc stackIn_1_0 = null;
@@ -26,7 +26,7 @@ final class hj extends td {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -49,7 +49,7 @@ final class hj extends td {
         nea stackOut_11_0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        eaa var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         nea var7 = null;
@@ -84,7 +84,7 @@ final class hj extends td {
           var5 = null;
           if (um.field_c == 2) {
             ov.field_d.field_u = true;
-            kg.field_d.field_Z = lga.a(true, new String[]{sja.field_gb}, qg.field_c);
+            FullscreenFocusCanvas.field_d.field_Z = lga.a(true, new String[]{sja.field_gb}, qg.field_c);
             rba.field_a.field_xb.field_wb.field_Z = null;
             var6 = null;
             var7 = (nea) (var4.b((byte) 90));
@@ -96,11 +96,11 @@ final class hj extends td {
               stackIn_12_0 = stackOut_11_0;
               if (var19 == 0) {
                 if (stackIn_12_0.field_z == null) {
-                  var7.field_Db = new sna(0L, gi.field_c);
+                  var7.field_Db = new sna(0L, ClientException.field_c);
                   var7.a(~param0, var7.field_Db);
                   var7.field_Eb = new sna(0L, wv.field_l);
                   var7.a(-1, var7.field_Eb);
-                  var7.field_zb = new sna(0L, gi.field_c);
+                  var7.field_zb = new sna(0L, ClientException.field_c);
                   var7.a(-1, var7.field_zb);
                   var7.field_Eb.field_N = 2;
                   var8 = 1;
@@ -144,7 +144,7 @@ final class hj extends td {
                 }
                 stackIn_35_0 = var7.field_Db;
                 if (var14 > 0) {
-                  stackIn_36_1 = po.a(var7.field_Db.field_jb, var7.field_xb, var14);
+                  stackIn_36_1 = BitmapFont.a(var7.field_Db.field_jb, var7.field_xb, var14);
                 } else {
                   stackIn_36_1 = var7.field_xb;
                 }
@@ -212,7 +212,7 @@ final class hj extends td {
             decompiledFrameRemainder0 = false;
           }
           else {
-            kg.field_d.field_Z = fo.field_b;
+            FullscreenFocusCanvas.field_d.field_Z = fo.field_b;
             ov.field_d.field_u = false;
             if (um.field_c == 1) {
               rba.field_a.field_xb.field_wb.field_Z = ek.field_m;
@@ -222,14 +222,14 @@ final class hj extends td {
             } else {
               rba.field_a.field_xb.field_wb.field_Z = ema.field_Ab;
             }
-            nn.a((byte) -126, rba.field_a.field_wb);
+            MouseInputHandler.a((byte) -126, rba.field_a.field_wb);
           }
           stackIn_104_0 = var5;
           return (nea) (stackIn_104_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "hj.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "hj.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -264,7 +264,7 @@ final class hj extends td {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -275,7 +275,7 @@ final class hj extends td {
             field_p = (sna) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hj.D(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hj.D(" + param0 + ')');
         }
     }
 

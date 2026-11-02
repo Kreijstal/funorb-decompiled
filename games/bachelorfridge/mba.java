@@ -4,8 +4,8 @@
 final class mba {
     static qia field_b;
     static int[] field_a;
-    static eaa field_c;
-    static kv[] field_d;
+    static IntrusiveDeque field_c;
+    static Sprite[] field_d;
     private static String field_z;
 
     public static void a(int param0) {

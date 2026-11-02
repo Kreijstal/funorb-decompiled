@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eea {
-    static kv field_a;
+    static Sprite field_a;
     static String field_c;
     static boolean field_b;
 
@@ -50,7 +50,7 @@ final class eea {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -83,7 +83,7 @@ final class eea {
             var4.field_vb != null) {
             return true;
           }
-          stackIn_8_0 = (null != pw.field_w) && (uka.a(param1, 28791) != null);
+          stackIn_8_0 = (null != pw.field_w) && (ImageProducerRasterBuffer.a(param1, 28791) != null);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -95,7 +95,7 @@ final class eea {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

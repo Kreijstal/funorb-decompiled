@@ -4,7 +4,7 @@
 final class is {
     static int[] field_b;
     static String field_d;
-    static kv field_c;
+    static Sprite field_c;
     static String field_a;
     private static String field_z;
 
@@ -14,7 +14,7 @@ final class is {
         field_b = null;
         field_d = null;
         if (param0 != 12836) {
-          field_c = (kv) null;
+          field_c = (Sprite) null;
         }
     }
 

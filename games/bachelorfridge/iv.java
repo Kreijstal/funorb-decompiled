@@ -14,11 +14,11 @@ final class iv extends pp {
           }
           this.a((byte) -27, param0, param1, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "iv.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "iv.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         try {
           super.a(param0, (byte) -28);
@@ -29,11 +29,11 @@ final class iv extends pp {
           }
           param0.b(var3_int, -111);
           var3_int = var3_int | this.field_l << 5 & 224;
-          param0.d(var3_int, 0);
-          param0.d(this.field_k, 0);
+          param0.writeByte(var3_int, 0);
+          param0.writeByte(this.field_k, 0);
           int var4 = -49 / ((param1 - 34) / 58);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "iv.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "iv.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class iv extends pp {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -141,9 +141,9 @@ final class iv extends pp {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
-        lu stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         String stackIn_15_1 = null;
-        lu stackIn_17_0 = null;
+        PacketBuffer stackIn_17_0 = null;
         String stackIn_18_1 = null;
         int stackIn_33_0 = 0;
         int stackIn_45_0 = 0;
@@ -187,80 +187,80 @@ final class iv extends pp {
           }
           if (eia.field_a == rga.field_c) {
             vg.field_l = null;
-            sja.field_fb.field_g = 0;
+            sja.field_fb.position = 0;
             if (param4 != null) {
               var9 = 0;
-              dm.field_g.field_g = 0;
+              ProxySocketConnector.field_g.position = 0;
               if (param5) {
                 var9 = var9 | 1;
               }
-              dm.field_g.e(ia.field_k.nextInt(), -1615464796);
-              dm.field_g.e(ia.field_k.nextInt(), -1615464796);
-              dm.field_g.a(var14, param0 ^ -73);
-              dm.field_g.a(var8, 104);
+              ProxySocketConnector.field_g.writeInt(ia.field_k.nextInt(), -1615464796);
+              ProxySocketConnector.field_g.writeInt(ia.field_k.nextInt(), -1615464796);
+              ProxySocketConnector.field_g.a(var14, param0 ^ -73);
+              ProxySocketConnector.field_g.a(var8, 104);
               var15 = (CharSequence) ((Object) param4);
-              dm.field_g.a(qfa.a(20, var15), 117);
-              dm.field_g.b(param1, -119);
-              dm.field_g.d(param2, param0 + 15);
-              dm.field_g.d(var9, 0);
-              sja.field_fb.d(18, 0);
-              sja.field_fb.field_g = sja.field_fb.field_g + 2;
-              var10 = sja.field_fb.field_g;
+              ProxySocketConnector.field_g.a(qfa.a(20, var15), 117);
+              ProxySocketConnector.field_g.b(param1, -119);
+              ProxySocketConnector.field_g.writeByte(param2, param0 + 15);
+              ProxySocketConnector.field_g.writeByte(var9, 0);
+              sja.field_fb.writeByte(18, 0);
+              sja.field_fb.position = sja.field_fb.position + 2;
+              var10 = sja.field_fb.position;
               var11_ref_String = pi.a(11713, nia.d(-31768));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              sja.field_fb.a((byte) -50, var11_ref_String);
-              wd.a(sm.field_q, (byte) -67, sja.field_fb, dm.field_g, tg.field_p);
-              sja.field_fb.a((byte) -88, sja.field_fb.field_g - var10);
+              sja.field_fb.writeString((byte) -50, var11_ref_String);
+              wd.a(sm.field_q, (byte) -67, sja.field_fb, ProxySocketConnector.field_g, tg.field_p);
+              sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var10);
             } else {
-              dm.field_g.field_g = 0;
-              dm.field_g.e(ia.field_k.nextInt(), -1615464796);
-              dm.field_g.e(ia.field_k.nextInt(), -1615464796);
-              stackIn_14_0 = dm.field_g;
+              ProxySocketConnector.field_g.position = 0;
+              ProxySocketConnector.field_g.writeInt(ia.field_k.nextInt(), -1615464796);
+              ProxySocketConnector.field_g.writeInt(ia.field_k.nextInt(), -1615464796);
+              stackIn_14_0 = ProxySocketConnector.field_g;
               if (param3.a(true)) {
                 stackIn_15_1 = var14;
               } else {
                 stackIn_15_1 = "";
               }
-              ((lu) (Object) stackIn_14_0).a(stackIn_15_1, 90);
-              stackIn_17_0 = dm.field_g;
+              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_15_1, 90);
+              stackIn_17_0 = ProxySocketConnector.field_g;
               if (param6.a(true)) {
                 stackIn_18_1 = var8;
               } else {
                 stackIn_18_1 = "";
               }
-              ((lu) (Object) stackIn_17_0).a(stackIn_18_1, 74);
-              sja.field_fb.d(16, param0 + 15);
-              sja.field_fb.field_g = sja.field_fb.field_g + 1;
-              var9 = sja.field_fb.field_g;
-              wd.a(sm.field_q, (byte) -89, sja.field_fb, dm.field_g, tg.field_p);
-              sja.field_fb.b((byte) -97, sja.field_fb.field_g - var9);
+              ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_18_1, 74);
+              sja.field_fb.writeByte(16, param0 + 15);
+              sja.field_fb.position = sja.field_fb.position + 1;
+              var9 = sja.field_fb.position;
+              wd.a(sm.field_q, (byte) -89, sja.field_fb, ProxySocketConnector.field_g, tg.field_p);
+              sja.field_fb.writeLengthByte((byte) -97, sja.field_fb.position - var9);
             }
             hna.a(-1, 116);
             eia.field_a = dc.field_k;
           }
           if (eia.field_a == dc.field_k &&
             ii.b(1, param0 ^ -15)) {
-            var9Lifetime1 = ig.field_m.b(16711935);
-            ig.field_m.field_g = 0;
+            var9Lifetime1 = ig.field_m.readUnsignedByte(16711935);
+            ig.field_m.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              eia.field_a = qm.field_g;
+              eia.field_a = RasterBuffer.field_g;
               vd.field_B = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
                 ud.a(nia.d(-31768), (byte) 87);
                 vt.field_m = oja.field_e;
                 vc.a((byte) -77);
-                se.field_x = false;
+                DiskCacheRequest.field_x = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
               }
               if (var9Lifetime1 == 99) {
                 ii.b(md.d((byte) -125), param0 ^ -15);
                 vg.field_l = new Boolean(qla.a((byte) 112, ig.field_m));
-                ig.field_m.field_g = 0;
+                ig.field_m.position = 0;
               } else {
                 eia.field_a = mba.field_b;
                 ri.field_a = var9Lifetime1;
@@ -268,18 +268,18 @@ final class iv extends pp {
               }
             }
           }
-          if (eia.field_a == qm.field_g) {
+          if (eia.field_a == RasterBuffer.field_g) {
             var9Lifetime2 = 2;
             if (ii.b(var9Lifetime2, 0)) {
-              var10Lifetime1 = ig.field_m.e((byte) 118);
-              ig.field_m.field_g = 0;
+              var10Lifetime1 = ig.field_m.readUnsignedShort((byte) 118);
+              ig.field_m.position = 0;
               if (ii.b(var10Lifetime1, 0)) {
                 var11 = vd.field_B.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   vd.field_B[var12] = ig.field_m.i(0);
                 }
                 vc.a((byte) -91);
-                se.field_x = false;
+                DiskCacheRequest.field_x = false;
                 stackIn_45_0 = var11 + 100;
                 return stackIn_45_0;
               }
@@ -288,32 +288,32 @@ final class iv extends pp {
           if (mba.field_b == eia.field_a &&
             u.d((byte) -67)) {
             if (ri.field_a != 255) {
-              vt.field_m = ig.field_m.g(125);
+              vt.field_m = ig.field_m.readString(125);
             } else {
-              var9_ref_String = ig.field_m.g((byte) 56);
+              var9_ref_String = ig.field_m.readNullableString((byte) 56);
               if (var9_ref_String != null) {
                 hp.a(nia.d(param0 - 31753), var9_ref_String, 3);
               }
             }
             vc.a((byte) -121);
-            se.field_x = false;
+            DiskCacheRequest.field_x = false;
             stackIn_55_0 = ri.field_a;
             return stackIn_55_0;
           }
           if (dma.field_b == null) {
-            if (se.field_x) {
+            if (DiskCacheRequest.field_x) {
               if (ag.e(-9109) <= 30000L) {
                 vt.field_m = qd.field_n;
               } else {
                 vt.field_m = nca.field_b;
               }
-              se.field_x = false;
+              DiskCacheRequest.field_x = false;
               stackIn_63_0 = 249;
               return stackIn_63_0;
             }
             var9Lifetime3 = kn.field_h;
             kn.field_h = oja.field_c;
-            se.field_x = true;
+            DiskCacheRequest.field_x = true;
             oja.field_c = var9Lifetime3;
           }
           stackIn_65_0 = -1;
@@ -340,7 +340,7 @@ final class iv extends pp {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 
@@ -486,7 +486,7 @@ final class iv extends pp {
           } else {
             stackIn_97_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_93_0), ((StringBuilder) (Object) stackIn_96_1).append(stackIn_97_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_93_0), ((StringBuilder) (Object) stackIn_96_1).append(stackIn_97_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -498,7 +498,7 @@ final class iv extends pp {
           this.field_k = param4;
           this.field_f = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "iv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "iv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -558,7 +558,7 @@ final class iv extends pp {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

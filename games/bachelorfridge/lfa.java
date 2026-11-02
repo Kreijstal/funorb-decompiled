@@ -5,8 +5,8 @@ final class lfa extends k {
     static int field_q;
     private int field_m;
     static sna field_l;
-    static kv field_u;
-    static ee field_s;
+    static Sprite field_u;
+    static IndexedSprite field_s;
     private int field_p;
     private int field_n;
     private int field_v;
@@ -63,7 +63,7 @@ final class lfa extends k {
         int var11_int = 0;
         gj var11 = null;
         int var13 = 0;
-        kv var14 = null;
+        Sprite var14 = null;
         rk[] var15 = null;
         int var2Lifetime1;
         int var3_intLifetime1;
@@ -110,12 +110,12 @@ final class lfa extends k {
             }
             if (ri.field_a == 60) {
               if (var1 != null) {
-                var2 = ig.field_m.e((byte) 66);
-                stackIn_45_0 = (ig.field_m.b(16711935) != 1) ? 0 : 1;
+                var2 = ig.field_m.readUnsignedShort((byte) 66);
+                stackIn_45_0 = (ig.field_m.readUnsignedByte(16711935) != 1) ? 0 : 1;
                 var3_int = stackIn_45_0;
                 var4_int = ig.field_m.b(true);
-                var5 = ig.field_m.b(16711935);
-                var6 = ig.field_m.e((byte) 127);
+                var5 = ig.field_m.readUnsignedByte(16711935);
+                var6 = ig.field_m.readUnsignedShort((byte) 127);
                 if (0 == ((gj) (var1)).field_h.field_A) {
                   stackIn_51_0 = (0 != var2) ? 1 : 0;
                 } else {
@@ -148,7 +148,7 @@ final class lfa extends k {
               return true;
             }
             if (75 == ri.field_a) {
-              var2Lifetime2 = ig.field_m.e((byte) 121);
+              var2Lifetime2 = ig.field_m.readUnsignedShort((byte) 121);
               ((gj) (var1)).field_u = var2Lifetime2;
               ((gj) (var1)).field_p = var2Lifetime2 - 500;
               ((gj) (var1)).c(false);
@@ -167,30 +167,30 @@ final class lfa extends k {
               var3.a(true, var2Lifetime3);
               var3.field_H = var4;
               if (0 == var3.field_A) {
-                var14 = (kv) null;
-                eq.a((kv) null, (gj) (var1), (byte) -111);
+                var14 = (Sprite) null;
+                eq.a((Sprite) null, (gj) (var1), (byte) -111);
                 sia.field_h = false;
                 lg.a(true, 3, false);
               }
               return true;
             }
             if (ri.field_a == 63) {
-              ((gj) (var1)).field_h.field_h = ig.field_m.b(16711935);
+              ((gj) (var1)).field_h.field_h = ig.field_m.readUnsignedByte(16711935);
               if (vs.field_d) {
                 qi.a((byte) 120);
               }
               return true;
             }
             if (ri.field_a == 64) {
-              ((gj) (var1)).field_h.field_v = ig.field_m.b(16711935);
+              ((gj) (var1)).field_h.field_v = ig.field_m.readUnsignedByte(16711935);
               return true;
             }
             if (ri.field_a == 65) {
-              ((gj) (var1)).field_h.field_s = ig.field_m.b(16711935);
+              ((gj) (var1)).field_h.field_s = ig.field_m.readUnsignedByte(16711935);
               return true;
             }
             if (ri.field_a == 66) {
-              ((gj) (var1)).field_h.field_f = ig.field_m.b(16711935);
+              ((gj) (var1)).field_h.field_f = ig.field_m.readUnsignedByte(16711935);
               if (vs.field_d) {
                 hia.c((byte) -109);
               }
@@ -199,32 +199,32 @@ final class lfa extends k {
             if (ri.field_a != 67) {
               return false;
             }
-            ((gj) (var1)).field_V = ig.field_m.b(16711935);
+            ((gj) (var1)).field_V = ig.field_m.readUnsignedByte(16711935);
             if (vs.field_d) {
               hia.c((byte) -122);
             }
             return true;
           }
           baa.e(17035);
-          hba.a(true, wha.field_a);
+          hba.a(true, IterableNodeHashTable.field_a);
           gs.field_f = null;
-          var1_int = ig.field_m.b(16711935);
-          var2Lifetime1 = ig.field_m.b(16711935);
-          var3_intLifetime1 = ig.field_m.b(16711935);
-          var4_intLifetime1 = ig.field_m.b(16711935);
-          var5Lifetime1 = ig.field_m.b(16711935);
-          var6_ref_String__ = new String[ig.field_m.b(16711935)];
+          var1_int = ig.field_m.readUnsignedByte(16711935);
+          var2Lifetime1 = ig.field_m.readUnsignedByte(16711935);
+          var3_intLifetime1 = ig.field_m.readUnsignedByte(16711935);
+          var4_intLifetime1 = ig.field_m.readUnsignedByte(16711935);
+          var5Lifetime1 = ig.field_m.readUnsignedByte(16711935);
+          var6_ref_String__ = new String[ig.field_m.readUnsignedByte(16711935)];
           var7Lifetime1 = ig.field_m.b(true);
           for (var8_int = 0; var6_ref_String__.length > var8_int; var8_int++) {
             var6_ref_String__[var8_int] = ig.field_m.i(0);
           }
           var8 = new op(var1_int, var2Lifetime1, var3_intLifetime1, var4_intLifetime1, var5Lifetime1, var6_ref_String__);
-          var9 = ig.field_m.e((byte) 80);
+          var9 = ig.field_m.readUnsignedShort((byte) 80);
           var8.a(-2, ig.field_m);
           var10 = null;
           if (var8.field_A == 0 &&
             var7Lifetime1 >= 0) {
-            var11_int = ig.field_m.b(16711935);
+            var11_int = ig.field_m.readUnsignedByte(16711935);
             var15 = new rk[var11_int];
             var10 = var15;
             for (var12 = 0; var12 < var11_int; var12++) {
@@ -232,7 +232,7 @@ final class lfa extends k {
             }
           }
           var11 = new gj(var8, var7Lifetime1, (rk[]) (var10), true);
-          var11.field_g = ig.field_m.f(51);
+          var11.field_g = ig.field_m.readInt(51);
           if (var8.field_A != 0) {
             ala.a(26219, iq.field_m);
             var11.l(-60);
@@ -260,27 +260,27 @@ final class lfa extends k {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (var1), "lfa.D(" + param0 + ')');
+          throw pe.wrapException((Throwable) (var1), "lfa.D(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, ht param1, boolean param2, byte param3, jp param4, java.awt.Component param5) {
+    final static void a(int param0, PlatformTaskDispatcher param1, boolean param2, byte param3, MidiPcmStream param4, java.awt.Component param5) {
         try {
           if (param3 <= 25) {
             java.awt.Component var7 = (java.awt.Component) null;
-            lfa.a(93, (ht) null, true, (byte) 13, (jp) null, (java.awt.Component) null);
+            lfa.a(93, (PlatformTaskDispatcher) null, true, (byte) 13, (MidiPcmStream) null, (java.awt.Component) null);
           }
           efa.a(param0, param0, 1024, param2, param1, 19299, param5, param4);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lfa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lfa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void d(byte param0) {
         gea.a(4231);
         if (param0 != -68) {
-          lu var3 = (lu) null;
-          this.a((byte) -6, (lu) null, -101);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((byte) -6, (PacketBuffer) null, -101);
         }
     }
 
@@ -401,7 +401,7 @@ final class lfa extends k {
         this.field_n = 12288;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -416,25 +416,25 @@ final class lfa extends k {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_v = param1.e((byte) 83);
+            this.field_v = param1.readUnsignedShort((byte) 83);
           } else {
             if (var4_int == 1) {
-              this.field_t = param1.e((byte) 102);
+              this.field_t = param1.readUnsignedShort((byte) 102);
             } else {
               if (var4_int == 2) {
-                this.field_k = param1.e((byte) 115);
+                this.field_k = param1.readUnsignedShort((byte) 115);
               } else {
                 if (var4_int == 3) {
-                  this.field_r = param1.e((byte) 67);
+                  this.field_r = param1.readUnsignedShort((byte) 67);
                 } else {
                   if (var4_int == 4) {
-                    this.field_n = param1.e((byte) 45);
+                    this.field_n = param1.readUnsignedShort((byte) 45);
                   } else {
                     if (var4_int == 5) {
-                      this.field_m = param1.e((byte) 118);
+                      this.field_m = param1.readUnsignedShort((byte) 118);
                     } else {
                       if (6 == var4_int) {
-                        this.field_p = param1.e((byte) 70);
+                        this.field_p = param1.readUnsignedShort((byte) 70);
                       }
                     }
                   }
@@ -453,21 +453,21 @@ final class lfa extends k {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
     private final boolean a(int param0, int param1, int param2) {
         int var4;
         int var5;
-        lu var6;
+        PacketBuffer var6;
         boolean stackIn_6_0 = false;
         var4 = this.field_n * (param0 + param1) >> 12;
         var5 = am.field_R[255 & var4 * 255 >> 12];
         var5 = (var5 << 12) / this.field_n;
         if (param2 > -29) {
-          var6 = (lu) null;
-          this.a((byte) -2, (lu) null, 90);
+          var6 = (PacketBuffer) null;
+          this.a((byte) -2, (PacketBuffer) null, 90);
         }
         var5 = (var5 << 12) / this.field_p;
         var5 = this.field_m * var5 >> 12;

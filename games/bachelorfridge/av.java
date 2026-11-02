@@ -15,17 +15,17 @@ final class av extends bca {
           this.field_s = param2;
           this.field_q = param5;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "av.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "av.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    av(lu param0) {
+    av(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 123);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 123);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (0 > var2_int) {
@@ -33,12 +33,12 @@ final class av extends bca {
             }
             this.field_o.a(dca.a((byte) 102, param0), true);
           }
-          this.field_s = param0.b(16711935);
-          this.field_r = param0.b(16711935);
-          this.field_t = param0.b(16711935);
-          this.field_q = param0.b(16711935);
+          this.field_s = param0.readUnsignedByte(16711935);
+          this.field_r = param0.readUnsignedByte(16711935);
+          this.field_t = param0.readUnsignedByte(16711935);
+          this.field_q = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "av.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "av.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,22 +47,22 @@ final class av extends bca {
           this.a(param0, (byte) -2);
           int var3_int = -127 % ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "av.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "av.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 >= -12) {
             this.field_s = 78;
           }
           super.a((byte) -38, param1);
-          param1.d(this.field_s, 0);
-          param1.d(this.field_r, 0);
-          param1.d(this.field_t, 0);
-          param1.d(this.field_q, 0);
+          param1.writeByte(this.field_s, 0);
+          param1.writeByte(this.field_r, 0);
+          param1.writeByte(this.field_t, 0);
+          param1.writeByte(this.field_q, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "av.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "av.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -99,13 +99,13 @@ final class av extends bca {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final at a(int param0, gj param1) {
         RuntimeException var3 = null;
-        lu var4 = null;
+        PacketBuffer var4 = null;
         pm stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -113,8 +113,8 @@ final class av extends bca {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            var4 = (lu) null;
-            this.a((byte) -84, (lu) null);
+            var4 = (PacketBuffer) null;
+            this.a((byte) -84, (PacketBuffer) null);
           }
           stackIn_3_0 = new pm(param1, this);
           return (at) ((Object) stackIn_3_0);
@@ -128,7 +128,7 @@ final class av extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

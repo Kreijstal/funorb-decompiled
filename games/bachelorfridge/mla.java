@@ -4,7 +4,7 @@
 final class mla {
     int field_d;
     int field_c;
-    static kv[] field_b;
+    static Sprite[] field_b;
     int[] field_a;
 
     final int a(int param0, int param1) {
@@ -57,7 +57,7 @@ final class mla {
               if (var1.field_Mb == 0) {
                 var1.field_yb = 0;
                 if (var1.f((byte) 21)) {
-                  var1.a(false);
+                  var1.unlink(false);
                 }
               }
             }
@@ -70,7 +70,7 @@ final class mla {
               if (var1_ref.field_Mb == 0) {
                 var1_ref.field_ec = 0;
                 if (var1_ref.f(26)) {
-                  var1_ref.a(false);
+                  var1_ref.unlink(false);
                 }
               }
             }
@@ -86,7 +86,7 @@ final class mla {
             if (0 == var1Lifetime1.field_Mb) {
               var1Lifetime1.field_yb = 0;
               if (var1Lifetime1.f((byte) 21)) {
-                var1Lifetime1.a(false);
+                var1Lifetime1.unlink(false);
               }
             }
             var1Lifetime1 = (ema) (bia.field_g.c(0));
@@ -96,7 +96,7 @@ final class mla {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref2), "mla.D(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref2), "mla.D(" + param0 + ')');
         }
     }
 

@@ -71,7 +71,7 @@ final class wca {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class wca {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class wca {
           var7 = var10.field_a;
           var8 = var10.field_l;
           if (param0) {
-            hh.field_b[var6].e(5 + param2, param1 + 5);
+            hh.field_b[var6].draw(5 + param2, param1 + 5);
             if (1 != var8 &&
               2 != var8 &&
               3 == var8) {
@@ -278,7 +278,7 @@ final class wca {
           }
           return;
         }
-        hh.field_b[var6Lifetime1].e(5 + param2, param1 + 5);
+        hh.field_b[var6Lifetime1].draw(5 + param2, param1 + 5);
         if (1 != var8Lifetime1 &&
           2 != var8Lifetime1 &&
           3 != var8Lifetime1) {
@@ -365,7 +365,7 @@ final class wca {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -385,7 +385,7 @@ final class wca {
           if (param0 > -59) {
             wca.a((byte) 26);
           }
-          dl.field_h = new js(16);
+          dl.field_h = new IntrusiveNodeHashTable(16);
           for (var1_int = 0; var1_int < ol.field_l.length; var1_int++) {
             dl.field_h.a((long)ol.field_l[var1_int].hashCode(), (byte) -55, new ji(var1_int));
           }
@@ -393,7 +393,7 @@ final class wca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "wca.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "wca.C(" + param0 + ')');
         }
     }
 
@@ -470,7 +470,7 @@ final class wca {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

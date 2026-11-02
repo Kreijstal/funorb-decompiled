@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj extends k {
-    static ee[] field_k;
+    static IndexedSprite[] field_k;
     static int[] field_l;
 
     final int[] a(int param0, int param1) {

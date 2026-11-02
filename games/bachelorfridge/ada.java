@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ada extends k {
-    static ee field_l;
-    static ee field_p;
+    static IndexedSprite field_l;
+    static IndexedSprite field_p;
     static boolean field_k;
     private int[][] field_n;
     private int[] field_o;
-    static ee field_m;
+    static IndexedSprite field_m;
 
     public ada() {
         super(1, false);
         this.field_o = new int[257];
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var5 = 0;
         int var4_int = 0;
         int var6 = 0;
@@ -26,14 +26,14 @@ final class ada extends k {
         var6 = BachelorFridge.field_y;
         try {
           if (param2 == 0) {
-            var4_int = param1.b(16711935);
+            var4_int = param1.readUnsignedByte(16711935);
             if (0 == var4_int) {
-              this.field_n = new int[param1.b(16711935)][4];
+              this.field_n = new int[param1.readUnsignedByte(16711935)][4];
               for (var5 = 0; var5 < this.field_n.length; var5++) {
-                this.field_n[var5][0] = param1.e((byte) 124);
-                this.field_n[var5][1] = param1.b(16711935) << 4;
-                this.field_n[var5][2] = param1.b(16711935) << 4;
-                this.field_n[var5][3] = param1.b(16711935) << 4;
+                this.field_n[var5][0] = param1.readUnsignedShort((byte) 124);
+                this.field_n[var5][1] = param1.readUnsignedByte(16711935) << 4;
+                this.field_n[var5][2] = param1.readUnsignedByte(16711935) << 4;
+                this.field_n[var5][3] = param1.readUnsignedByte(16711935) << 4;
               }
             } else {
               this.a(var4_int, (byte) 33);
@@ -53,7 +53,7 @@ final class ada extends k {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class ada extends k {
         int[] var17;
         var13 = BachelorFridge.field_y;
         if (param0 != 578) {
-          field_p = (ee) null;
+          field_p = (IndexedSprite) null;
         }
         var5 = this.field_n.length;
         if (var5 > 0) {
@@ -170,7 +170,7 @@ final class ada extends k {
           efa.field_p = true;
         }
         if (ae.field_a.field_R != 0 && (bha.field_l ||
-          !(dm.field_f <= 0) ||
+          !(ProxySocketConnector.field_f <= 0) ||
           !(hea.field_r < 2) &&
           wga.field_q[12])) {
           aq.a(param2, (byte) 47);
@@ -255,13 +255,13 @@ final class ada extends k {
             }
           }
           if (param3 <= 72) {
-            field_m = (ee) null;
+            field_m = (IndexedSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var5), "ada.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) var5), "ada.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

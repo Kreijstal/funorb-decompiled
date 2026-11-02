@@ -16,13 +16,13 @@ final class ph extends vd implements fca, lja {
     private boolean field_F;
     static String field_N;
     static long field_P;
-    static kv field_C;
+    static Sprite field_C;
 
     public final void a(lka param0, byte param1) {
         try {
           int var3_int = 85 % ((0 - param1) / 49);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ph.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ph.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -72,17 +72,17 @@ final class ph extends vd implements fca, lja {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = -90 % ((param0 + 20) / 54);
         if (this.field_L != null) {
-          jca.field_a.a(this.field_L, this.field_s + param3 + 20, 15 + (param1 + this.field_v), this.field_p - 40, this.field_q, 16777215, -1, 1, 0, jca.field_a.field_u);
+          jca.field_a.drawParagraph(this.field_L, this.field_s + param3 + 20, 15 + (param1 + this.field_v), this.field_p - 40, this.field_q, 16777215, -1, 1, 0, jca.field_a.field_u);
         }
         if (null != this.field_O) {
-          dg.e(param3 + 10, param1 + 134, this.field_p - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param3 + 10, param1 + 134, this.field_p - 20, 4210752);
         }
         super.a((byte) -102, param1, param2, param3);
     }
@@ -101,7 +101,7 @@ final class ph extends vd implements fca, lja {
     public static void j(int param0) {
         field_C = null;
         if (param0 != 31826) {
-          field_C = (kv) null;
+          field_C = (Sprite) null;
         }
         field_N = null;
     }
@@ -148,7 +148,7 @@ final class ph extends vd implements fca, lja {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ final class ph extends vd implements fca, lja {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -207,7 +207,7 @@ final class ph extends vd implements fca, lja {
         RuntimeException decompiledCaughtException = null;
         ff var6 = null;
         RuntimeException var6_ref = null;
-        po var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         hk var9 = null;
         ge var12 = null;
@@ -245,7 +245,7 @@ final class ph extends vd implements fca, lja {
             }
             this.field_K = new hf(stackIn_18_3, (pl) null);
             if (this.field_I) {
-              this.field_O = new hf(sca.field_b, (pl) (this));
+              this.field_O = new hf(MouseWheelInput.field_b, (pl) (this));
             }
           }
           this.field_Q.field_f = (qda) ((Object) new oka(10000536));
@@ -270,16 +270,16 @@ final class ph extends vd implements fca, lja {
               this.field_K.field_f = (qda) ((Object) new pka());
             }
           } else {
-            this.field_K.field_h = wha.field_e;
+            this.field_K.field_h = IterableNodeHashTable.field_e;
           }
           this.field_v = 15;
           var7 = jca.field_a;
           if (null != this.field_L) {
-            this.field_v = this.field_v + (5 + var7.a(this.field_L, -40 + this.field_p, var7.field_u));
+            this.field_v = this.field_v + (5 + var7.measureWrappedHeight(this.field_L, -40 + this.field_p, var7.field_u));
           }
           var8 = rw.field_b;
           var9 = hha.a((byte) 127, nia.d(-31768));
-          if (se.field_u == var9) {
+          if (DiskCacheRequest.field_u == var9) {
             var8 = kr.field_zb;
           } else {
             if (er.field_x == var9) {
@@ -347,7 +347,7 @@ final class ph extends vd implements fca, lja {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -363,7 +363,7 @@ final class ph extends vd implements fca, lja {
           var3.a((byte) 123, var4, false);
           this.field_H.j((byte) 101);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ph.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ph.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

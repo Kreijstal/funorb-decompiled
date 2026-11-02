@@ -6,7 +6,7 @@ import java.util.*;
 final class rba {
     static int field_b;
     static ok field_a;
-    static kia field_c;
+    static MusicTrack field_c;
 
     public static void a(int param0) {
         field_c = null;
@@ -22,22 +22,22 @@ final class rba {
         int var9 = 0;
         int incrementValue$0 = 0;
         if (param2 >= 0) {
-          if (param2 >= dg.field_i ||
+          if (param2 >= SoftwareRasterizer.field_i ||
             param1 < 0 ||
-            dg.field_c <= param1) {
+            SoftwareRasterizer.field_c <= param1) {
             return;
           }
           if (param3 != -1) {
-            field_c = (kia) null;
+            field_c = (MusicTrack) null;
           }
           var5 = param0 * (param4 >>> 24) >> 8;
           var6 = 256 - var5;
-          var7 = dg.field_i * param1 + param2;
+          var7 = SoftwareRasterizer.field_i * param1 + param2;
           var8 = param4;
-          var9 = dg.field_e[var7];
+          var9 = SoftwareRasterizer.field_e[var7];
           incrementValue$0 = var7;
           var7++;
-          dg.field_e[incrementValue$0] = dda.a(dda.a(var9, 16711935) * var6 + dda.a(16711935, var8) * var5, -16711936) + dda.a(16711680, var5 * dda.a(var8, 65280) + dda.a(65280, var9) * var6) >>> 8;
+          SoftwareRasterizer.field_e[incrementValue$0] = dda.a(dda.a(var9, 16711935) * var6 + dda.a(16711935, var8) * var5, -16711936) + dda.a(16711680, var5 * dda.a(var8, 65280) + dda.a(65280, var9) * var6) >>> 8;
           return;
         }
     }
@@ -121,7 +121,7 @@ final class rba {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 

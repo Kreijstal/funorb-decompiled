@@ -5,7 +5,7 @@ final class db {
     static vr field_a;
     static String[] field_b;
 
-    final static pp a(lu param0, int param1) {
+    final static pp a(PacketBuffer param0, int param1) {
         nq var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -18,7 +18,7 @@ final class db {
         try {
           var2 = qi.a(param0, (byte) 115);
           var3 = param0.b(true);
-          var4 = param0.c((byte) -85);
+          var4 = param0.readSignedShort((byte) -85);
           if (param1 != 95) {
             field_a = (vr) null;
           }
@@ -34,7 +34,7 @@ final class db {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -43,8 +43,8 @@ final class db {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        dg.a(var1.field_o, var1.field_f, var1.field_n);
-        dg.a(var1.field_l, var1.field_j, var1.field_k, var1.field_h);
+        SoftwareRasterizer.setTarget(var1.field_o, var1.field_f, var1.field_n);
+        SoftwareRasterizer.setClip(var1.field_l, var1.field_j, var1.field_k, var1.field_h);
         if (param0 > 60) {
           var1.field_o = null;
           ii.field_m.a(var1, true);
@@ -102,7 +102,7 @@ final class db {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 

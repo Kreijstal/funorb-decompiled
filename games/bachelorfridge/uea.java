@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uea extends kj {
-    static kv field_j;
+    static Sprite field_j;
     static int field_i;
     static String field_g;
-    private kv field_f;
+    private Sprite field_f;
     private int field_h;
 
     final void a(int param0, int param1, int param2) {
@@ -32,7 +32,7 @@ final class uea extends kj {
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-          this.field_f = (kv) null;
+          this.field_f = (Sprite) null;
         }
     }
 
@@ -40,12 +40,12 @@ final class uea extends kj {
         super(param0, param1, param2);
         try {
           this.field_h = 50;
-          this.field_f = new kv(128, 64);
+          this.field_f = new Sprite(128, 64);
           bu.a(0, this.field_f);
           param0.field_s.field_p.e(0, 0, param3);
           db.b(100);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "uea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

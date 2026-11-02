@@ -4,7 +4,7 @@
 final class nh extends td {
     static String field_p;
 
-    final static hba a(lu param0, int param1, byte param2) {
+    final static hba a(PacketBuffer param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         hba stackIn_1_0 = null;
@@ -26,7 +26,7 @@ final class nh extends td {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -34,12 +34,12 @@ final class nh extends td {
         try {
           param1.field_o = new char[]{(char)63};
           if (param0 != 0) {
-            lu var3 = (lu) null;
-            nh.a((lu) null, 9, (byte) 2);
+            PacketBuffer var3 = (PacketBuffer) null;
+            nh.a((PacketBuffer) null, 9, (byte) 2);
           }
           param1.field_q = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class nh extends td {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

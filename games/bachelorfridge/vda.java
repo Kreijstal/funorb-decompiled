@@ -6,7 +6,7 @@ import java.io.*;
 final class vda {
     static sna field_a;
 
-    final static void a(long param0, int param1, int param2, int param3, boolean param4, boolean param5, int param6, int param7, ht param8, int param9, int param10, String param11, int param12, int param13) {
+    final static void a(long param0, int param1, int param2, int param3, boolean param4, boolean param5, int param6, int param7, PlatformTaskDispatcher param8, int param9, int param10, String param11, int param12, int param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -17,14 +17,14 @@ final class vda {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            ig.field_m = new pf(param6);
-            sja.field_fb = new pf(param2);
+            ig.field_m = new BitPacketBuffer(param6);
+            sja.field_fb = new BitPacketBuffer(param2);
             vs.field_c = param5;
             oja.field_c = param9;
             if (param7 != 64) {
               vda.a(-73, -89, 99, 10, (byte) 120, -109);
             }
-            mfa.field_a = param10;
+            GameKeyHandler.field_a = param10;
             oca.field_p = param11;
             cp.field_c = param12;
             vi.field_a = param0;
@@ -37,7 +37,7 @@ final class vda {
               return;
             }
             try {
-              vg.field_n = new v(cc.field_e.field_a, 64, 0);
+              vg.field_n = new BufferedCacheFile(cc.field_e.field_a, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -60,7 +60,7 @@ final class vda {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -170,7 +170,7 @@ final class vda {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var6), "vda.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) var6), "vda.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

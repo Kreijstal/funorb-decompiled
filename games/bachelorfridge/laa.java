@@ -89,7 +89,7 @@ final class laa extends pv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var7), "laa.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) var7), "laa.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -134,10 +134,10 @@ final class laa extends pv {
           if (param1 > -44) {
             laa.a(123, -54, -39, true, -63, -89, -61);
           }
-          hfa.field_z.c(param4, param2, param0, param5, -1);
-          jha.field_g.c(param4, param2, param0, param3, -1);
+          hfa.field_z.drawText(param4, param2, param0, param5, -1);
+          jha.field_g.drawText(param4, param2, param0, param3, -1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "laa.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "laa.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class laa extends pv {
           this.field_k = this.field_f.field_k;
           this.field_l = (double)this.field_o / (double)this.c((byte) 107);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "laa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "laa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

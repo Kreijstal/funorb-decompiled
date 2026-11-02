@@ -5,7 +5,7 @@ final class hga extends am {
     private boolean field_X;
     private de field_T;
     private String field_V;
-    static qm field_U;
+    static RasterBuffer field_U;
     private boolean field_W;
     private String field_S;
 
@@ -15,7 +15,7 @@ final class hga extends am {
         try {
           this.field_V = param1;
           if (null != this.field_V) {
-            var3_int = qia.field_a.a(this.field_V, 260, qia.field_a.field_u);
+            var3_int = qia.field_a.measureWrappedHeight(this.field_V, 260, qia.field_a.field_u);
             this.b(-93, var3_int + 150, 300);
           }
           this.field_T = new de(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -24,13 +24,13 @@ final class hga extends am {
           this.field_W = false;
           this.c(this.field_T, 25);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void o(int param0) {
         if (param0 != 8405024) {
-          field_U = (qm) null;
+          field_U = (RasterBuffer) null;
           field_U = null;
           return;
         }
@@ -95,7 +95,7 @@ final class hga extends am {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -130,12 +130,12 @@ final class hga extends am {
         int var22 = 0;
         var22 = BachelorFridge.field_y;
         try {
-          lka.field_E = qs.a(false, new lu(param1));
+          lka.field_E = qs.a(false, new PacketBuffer(param1));
           ur.field_e = new oha[lka.field_E.length - 1];
           pe.field_m = 0;
           var2_int = 1;
           if (!param0) {
-            field_U = (qm) null;
+            field_U = (RasterBuffer) null;
           }
           while (lka.field_E.length > var2_int) {
             var3 = -1 + var2_int;
@@ -168,7 +168,7 @@ final class hga extends am {
                 mw.a((byte) -120, var9, var10, var8, var4, var5, var7, var3);
               }
             } else {
-              var11 = eka.a((byte) 125, var2_int);
+              var11 = MusicPatch.a((byte) 125, var2_int);
               stackIn_7_0 = var2_int;
               stackIn_8_1 = !(param0);
               var12 = dna.b(stackIn_7_0, stackIn_8_1);
@@ -196,7 +196,7 @@ final class hga extends am {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -205,8 +205,8 @@ final class hga extends am {
         super.a(param0, (byte) -79, param2);
         qia.field_a.a(this.field_S, param2 + (this.field_p >> 1), param0 + 103, 16777215, -1);
         if (null != this.field_V) {
-          dg.e(param2 + 20, param0 + 120 - 7, 260, 8421504);
-          qia.field_a.a(this.field_V, param2 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, qia.field_a.field_u);
+          SoftwareRasterizer.drawHorizontalLine(param2 + 20, param0 + 120 - 7, 260, 8421504);
+          qia.field_a.drawParagraph(this.field_V, param2 + 20, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, qia.field_a.field_u);
           return;
         }
     }

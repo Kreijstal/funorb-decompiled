@@ -6,10 +6,10 @@ final class wq extends k {
     static int field_n;
     private int field_p;
     private int field_o;
-    static kv field_k;
+    static Sprite field_k;
     private int field_l;
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -21,14 +21,14 @@ final class wq extends k {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_o = param1.e((byte) 112);
+            this.field_o = param1.readUnsignedShort((byte) 112);
           } else {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                this.field_p = param1.e((byte) 120);
+                this.field_p = param1.readUnsignedShort((byte) 120);
               }
             } else {
-              this.field_l = param1.e((byte) 67);
+              this.field_l = param1.readUnsignedShort((byte) 67);
             }
           }
           if (param0 != -71) {
@@ -45,7 +45,7 @@ final class wq extends k {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -54,10 +54,10 @@ final class wq extends k {
           if (!param7) {
             wq.d(51);
           }
-          hfa.field_z.a(param8, param10, param4, param5, param2, param6, -1, param0, param9, param1);
-          jha.field_g.a(param8, param10, 20 + param4, param5, param2, param3, -1, param0, param9, param1);
+          hfa.field_z.drawParagraph(param8, param10, param4, param5, param2, param6, -1, param0, param9, param1);
+          jha.field_g.drawParagraph(param8, param10, 20 + param4, param5, param2, param3, -1, param0, param9, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
         }
     }
 

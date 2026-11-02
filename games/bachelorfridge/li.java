@@ -13,7 +13,7 @@ final class li extends lw {
         RuntimeException var1 = null;
         var3 = BachelorFridge.field_y;
         try {
-          cma.field_x = new js(256);
+          cma.field_x = new IntrusiveNodeHashTable(256);
           var1_int = -102 / ((-53 - param0) / 51);
           for (var2 = 0; dq.field_a.length > var2; var2++) {
             cma.field_x.a((long)dq.field_a[var2].toLowerCase().hashCode(), (byte) 76, new ji(var2));
@@ -22,7 +22,7 @@ final class li extends lw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "li.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "li.B(" + param0 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class li extends lw {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

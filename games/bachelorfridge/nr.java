@@ -23,40 +23,40 @@ final class nr extends ana {
     }
 
     final static void a(int param0, cfa param1, byte param2) {
-        pf var6 = null;
+        BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
           var6 = sja.field_fb;
-          var6.c(param0, (byte) 116);
-          var6.field_g = var6.field_g + 1;
-          var4 = var6.field_g;
-          var6.d(1, 0);
-          var6.d(param1.field_g, 0);
-          var6.d(param1.field_i, 0);
-          var6.e(param1.field_j, -1615464796);
-          var6.e(param1.field_h, -1615464796);
-          var6.e(param1.field_k, -1615464796);
-          var6.e(param1.field_f, -1615464796);
+          var6.writeCipheredByte(param0, (byte) 116);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
+          var6.writeByte(1, 0);
+          var6.writeByte(param1.field_g, 0);
+          var6.writeByte(param1.field_i, 0);
+          var6.writeInt(param1.field_j, -1615464796);
+          var6.writeInt(param1.field_h, -1615464796);
+          var6.writeInt(param1.field_k, -1615464796);
+          var6.writeInt(param1.field_f, -1615464796);
           var6.a(var4, 19);
-          var6.b((byte) 85, -var4 + var6.field_g);
+          var6.writeLengthByte((byte) 85, -var4 + var6.position);
           int var5 = 47 % ((1 - param2) / 47);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nr.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nr.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
-          if (param2.field_e != null) {
-            param2.a(false);
+          if (param2.previous != null) {
+            param2.unlink(false);
           }
-          param2.field_b = param1;
-          param2.field_e = param1.field_e;
-          param2.field_e.field_b = param2;
-          param2.field_b.field_e = param2;
+          param2.next = param1;
+          param2.previous = param1.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
           int var3_int = 33 / ((42 - param0) / 63);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class nr extends ana {
         try {
           this.field_x = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,16 +116,16 @@ final class nr extends ana {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$94cfdbf41ae0(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
-          if (param2.field_e != null) {
-            param2.a(false);
+          if (param2.previous != null) {
+            param2.unlink(false);
           }
-          param2.field_b = param1;
-          param2.field_e = param1.field_e;
-          param2.field_e.field_b = param2;
-          param2.field_b.field_e = param2;
+          param2.next = param1;
+          param2.previous = param1.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
           int var3_int = 33 / ((42 - param0) / 63);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 }

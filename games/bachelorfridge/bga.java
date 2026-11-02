@@ -5,7 +5,7 @@ final class bga extends IntrusiveNode {
     static sga field_m;
     static String field_h;
     int field_i;
-    static kv[] field_j;
+    static Sprite[] field_j;
     static String field_f;
     static String field_k;
     byte[] field_g;
@@ -20,7 +20,7 @@ final class bga extends IntrusiveNode {
           kka.field_l.e(vk.field_q, 33);
           return;
         }
-        field_j = (kv[]) null;
+        field_j = (Sprite[]) null;
         kka.field_l.e(vk.field_q, 33);
     }
 

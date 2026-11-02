@@ -65,7 +65,7 @@ final class mja extends td {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class mja extends td {
         if (param2 != 3) {
           field_r = (String) null;
         }
-        tca.field_f = param1;
+        JaggrabDownloader.field_f = param1;
         gaa.field_k = param0;
         mm.field_z = param3;
         hc.field_D = param4;
@@ -84,7 +84,7 @@ final class mja extends td {
         try {
           this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mja.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mja.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

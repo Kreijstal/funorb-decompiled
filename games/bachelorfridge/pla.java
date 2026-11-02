@@ -5,22 +5,22 @@ final class pla extends pn {
     static long field_g;
 
     private final void b(byte param0) {
-        this.field_a = new kv[4];
-        kv var6 = new kv(384, 192);
-        kv var2 = var6;
+        this.field_a = new Sprite[4];
+        Sprite var6 = new Sprite(384, 192);
+        Sprite var2 = var6;
         var6.b();
         this.field_b[0].a(128, 64);
         this.field_b[1].a(192, 96);
         this.field_b[12].a(64, 96);
         this.field_a[0] = var6;
-        kv var3 = new kv(384, 192);
+        Sprite var3 = new Sprite(384, 192);
         var3.b();
         this.field_b[13].a(128, 64);
         this.field_b[8].a(192, 32);
         this.field_b[24].a(192, 96);
         this.field_b[40].a(128, 128);
         this.field_a[1] = var3;
-        kv var4 = new kv(384, 192);
+        Sprite var4 = new Sprite(384, 192);
         var4.b();
         if (param0 >= -51) {
           return;
@@ -30,7 +30,7 @@ final class pla extends pn {
         this.field_b[16].a(64, 96);
         this.field_b[32].a(128, 128);
         this.field_a[3] = var4;
-        kv var5 = new kv(384, 192);
+        Sprite var5 = new Sprite(384, 192);
         var5.b();
         this.field_b[19].a(128, 64);
         this.field_b[26].a(64, 32);
@@ -101,16 +101,16 @@ final class pla extends pn {
             var4Lifetime1++;
           }
           var10 = param0.a(0, (byte) -104, 0);
-          this.field_a[0].e(-128 + var10.field_c, var10.field_a - 128);
+          this.field_a[0].draw(-128 + var10.field_c, var10.field_a - 128);
           var11 = param0.a(0, (byte) 91, param0.field_a);
-          this.field_a[3].e(var11.field_c - 64, var11.field_a - 128 + 32);
+          this.field_a[3].draw(var11.field_c - 64, var11.field_a - 128 + 32);
           var3Lifetime2 = param0.a(param0.field_z, (byte) 66, param0.field_a);
           if (param1 != -13319) {
             return;
           }
-          this.field_a[2].e(-128 + var3Lifetime2.field_c, var3Lifetime2.field_a - 64);
+          this.field_a[2].draw(-128 + var3Lifetime2.field_c, var3Lifetime2.field_a - 64);
           var12 = param0.a(param0.field_z, (byte) 122, 0);
-          this.field_a[1].e(var12.field_c - 192, 32 + var12.field_a - 128);
+          this.field_a[1].draw(var12.field_c - 192, 32 + var12.field_a - 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -122,7 +122,7 @@ final class pla extends pn {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class pla extends pn {
           this.field_b = bla.a(29611, "basic", "tiles_dessert", param0);
           this.b((byte) -117);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "pla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "pla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

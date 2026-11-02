@@ -4,15 +4,15 @@
 import java.util.*;
 
 final class kea extends td {
-    static be[] field_r;
+    static PcmSample[] field_r;
     static byte[] field_q;
     static int[] field_s;
     static String field_p;
 
-    final static fea a(byte param0, byte[] param1) {
-        fea var2 = null;
+    final static BinaryBitmapFont a(byte param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        fea stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -21,7 +21,7 @@ final class kea extends td {
           if (param1 == null) {
             return null;
           }
-          var2 = new fea(param1, fl.field_j, fd.field_D, lq.field_A, eha.field_s, baa.field_P);
+          var2 = new BinaryBitmapFont(param1, fl.field_j, fd.field_D, lq.field_A, eha.field_s, baa.field_P);
           al.b(-18073);
           if (param0 != -3) {
             kea.b(5);
@@ -38,7 +38,7 @@ final class kea extends td {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -51,15 +51,15 @@ final class kea extends td {
           rba.field_a = new ok(0L, ob.field_g, baa.field_A, cd.field_p);
           nr.field_w = new ok(0L, ob.field_g, lma.field_z, mna.field_r);
           ov.field_d = new sna(0L, (sna) null);
-          kg.field_d = new sna(0L, qs.field_m);
-          kg.field_d.field_N = 1;
+          FullscreenFocusCanvas.field_d = new sna(0L, qs.field_m);
+          FullscreenFocusCanvas.field_d.field_N = 1;
           eda.field_k = new sna(0L, iia.field_m, bs.field_j);
           vl.field_d = new sna(0L, vda.field_a, te.field_f);
           if (param0 != -12238) {
             field_s = (int[]) null;
           }
           fa.field_k = new sna(0L, dla.field_k);
-          ov.field_d.a(param0 ^ 12237, kg.field_d);
+          ov.field_d.a(param0 ^ 12237, FullscreenFocusCanvas.field_d);
           ov.field_d.a(-1, eda.field_k);
           ov.field_d.a(-1, vl.field_d);
           ov.field_d.a(param0 ^ 12237, rba.field_a);
@@ -74,7 +74,7 @@ final class kea extends td {
           nr.field_w.field_xb.field_wb.field_Y = 1;
           var3.field_N = 1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kea.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kea.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -84,7 +84,7 @@ final class kea extends td {
           this.field_n = param3;
           this.field_k = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kea.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kea.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -207,7 +207,7 @@ final class kea extends td {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -223,30 +223,30 @@ final class kea extends td {
         int var12 = 0;
         var12 = BachelorFridge.field_y;
         try {
-          if (dg.field_f > param5) {
-            param0 = param0 - (dg.field_f - param5);
-            param5 = dg.field_f;
+          if (SoftwareRasterizer.field_f > param5) {
+            param0 = param0 - (SoftwareRasterizer.field_f - param5);
+            param5 = SoftwareRasterizer.field_f;
           }
-          if (param4 < dg.field_j) {
-            param1 = param1 - (dg.field_j - param4);
-            param4 = dg.field_j;
+          if (param4 < SoftwareRasterizer.field_j) {
+            param1 = param1 - (SoftwareRasterizer.field_j - param4);
+            param4 = SoftwareRasterizer.field_j;
           }
-          if (param0 + param5 > dg.field_h) {
-            param0 = dg.field_h - param5;
+          if (param0 + param5 > SoftwareRasterizer.field_h) {
+            param0 = SoftwareRasterizer.field_h - param5;
           }
-          if (param4 + param1 > dg.field_k) {
-            param1 = dg.field_k - param4;
+          if (param4 + param1 > SoftwareRasterizer.field_k) {
+            param1 = SoftwareRasterizer.field_k - param4;
           }
           if (param0 > 0 &&
             param1 > 0) {
-            var6_int = param5 + dg.field_i * param4;
+            var6_int = param5 + SoftwareRasterizer.field_i * param4;
             if (param2 != 16711680) {
               return;
             }
-            var7 = dg.field_i - param0;
+            var7 = SoftwareRasterizer.field_i - param0;
             for (param4 = -param1; param4 < 0; param4++) {
               for (param5 = -param0; 0 > param5; param5++) {
-                var8 = dg.field_e[var6_int];
+                var8 = SoftwareRasterizer.field_e[var6_int];
                 if (param3 < (255 & var8 >> 8) &&
                   (var8 & 16711680) >> 16 <= (var8 & 65280) >> 8) {
                   var9 = ((var8 & 16711680) >> 15) - 60;
@@ -256,7 +256,7 @@ final class kea extends td {
                   var10 = var8 & 65280;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = 31 & var8 >> 3;
-                  dg.field_e[var6_int] = mp.a(var11, mp.a(var10, var9 << 16));
+                  SoftwareRasterizer.field_e[var6_int] = mp.a(var11, mp.a(var10, var9 << 16));
                 }
                 var6_int++;
               }
@@ -268,7 +268,7 @@ final class kea extends td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var6), "kea.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) var6), "kea.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -283,7 +283,7 @@ final class kea extends td {
     }
 
     static {
-        field_r = new be[1];
+        field_r = new PcmSample[1];
         field_s = new int[8192];
         field_p = "Waiting for extra data";
     }

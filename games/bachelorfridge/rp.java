@@ -2,23 +2,23 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rp extends hfa {
-    private eaa field_D;
-    static eaa field_C;
+    private IntrusiveDeque field_D;
+    static IntrusiveDeque field_C;
 
     public rp() {
         super(0, 0, lb.field_v, mi.field_k, (qda) null, (pl) null);
-        this.field_D = new eaa();
+        this.field_D = new IntrusiveDeque();
     }
 
     final vf h(int param0) {
-        rna var2;
+        IntrusiveDequeCursor var2;
         vf var3;
         int var4;
         var4 = BachelorFridge.field_y;
         if (param0 != 0) {
           return (vf) null;
         }
-        var2 = new rna(this.field_D);
+        var2 = new IntrusiveDequeCursor(this.field_D);
         var3 = (vf) (var2.b((byte) 90));
         while (var3 != null) {
           if (var3.field_C) {
@@ -31,11 +31,11 @@ final class rp extends hfa {
 
     final void i(int param0) {
         int var4 = BachelorFridge.field_y;
-        rna var2 = new rna(this.field_D);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_D);
         vf var3 = (vf) (var2.b((byte) 44));
         while (var3 != null) {
           if (var3.a(param0 ^ -68)) {
-            var3.a(false);
+            var3.unlink(false);
           }
           var3 = (vf) (var2.a((byte) 0));
         }
@@ -44,20 +44,20 @@ final class rp extends hfa {
 
     public static void e(byte param0) {
         if (param0 != 104) {
-          field_C = (eaa) null;
+          field_C = (IntrusiveDeque) null;
         }
         field_C = null;
     }
 
     final wj d(byte param0) {
-        rna var2;
+        IntrusiveDequeCursor var2;
         vf var3;
         int var4;
         var4 = BachelorFridge.field_y;
         if (param0 < 38) {
           rp.e((byte) -80);
         }
-        var2 = new rna(this.field_D);
+        var2 = new IntrusiveDequeCursor(this.field_D);
         var3 = (vf) (var2.b((byte) 107));
         while (var3 != null) {
           if (var3.field_C) {
@@ -74,7 +74,7 @@ final class rp extends hfa {
         if (null != this.field_f) {
           this.field_f.a(param3, (wj) (this), 32679, param1, true);
         }
-        rna var6 = new rna(this.field_D);
+        IntrusiveDequeCursor var6 = new IntrusiveDequeCursor(this.field_D);
         wj var7 = (wj) (var6.c((byte) 126));
         while (var7 != null) {
           var7.a((byte) -127, this.field_v + param1, param2, param3 + this.field_s);
@@ -87,7 +87,7 @@ final class rp extends hfa {
         if (param0 != -66) {
           return;
         }
-        rna var2 = new rna(this.field_D);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_D);
         vf var3 = (vf) (var2.b((byte) -112));
         while (var3 != null) {
           var3.field_C = false;
@@ -98,27 +98,27 @@ final class rp extends hfa {
 
     final void g(byte param0) {
         int var4 = BachelorFridge.field_y;
-        rna var2 = new rna(this.field_D);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_D);
         if (param0 <= 126) {
-          this.field_D = (eaa) null;
+          this.field_D = (IntrusiveDeque) null;
         }
         vf var3 = (vf) (var2.b((byte) 69));
         while (var3 != null) {
           if (var3.k(-116)) {
-            var3.a(false);
+            var3.unlink(false);
           }
           var3 = (vf) (var2.a((byte) 0));
         }
     }
 
-    final static void a(boolean param0, je param1) {
+    final static void a(boolean param0, PcmSampleStream param1) {
         try {
           qc.a(param1, -2490);
           if (!param0) {
-            field_C = (eaa) null;
+            field_C = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,11 +135,11 @@ final class rp extends hfa {
         try {
           var3.a((wj) (this), -94);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rp.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rp.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        field_C = new eaa();
+        field_C = new IntrusiveDeque();
     }
 }

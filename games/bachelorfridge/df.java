@@ -10,7 +10,7 @@ final class df extends ii {
     int field_p;
     boolean field_t;
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         try {
           var3_int = this.field_n << 3 | this.field_p;
@@ -20,9 +20,9 @@ final class df extends ii {
           if (this.field_t) {
             var3_int = var3_int | 128;
           }
-          param1.d(var3_int, 0);
+          param1.writeByte(var3_int, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "df.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "df.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,7 +33,7 @@ final class df extends ii {
           this.field_t = param4 ? true : false;
           this.field_n = param3;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "df.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "df.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -62,16 +62,16 @@ final class df extends ii {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static pp b(lu param0, int param1) {
+    final static pp b(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        lu var5 = null;
+        PacketBuffer var5 = null;
         bm stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -79,12 +79,12 @@ final class df extends ii {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 33) {
-            var5 = (lu) null;
-            df.b((lu) null, -113);
+            var5 = (PacketBuffer) null;
+            df.b((PacketBuffer) null, -113);
           }
-          var2_int = param0.b(16711935);
-          var3 = param0.b(16711935);
-          var4 = param0.b(16711935);
+          var2_int = param0.readUnsignedByte(16711935);
+          var3 = param0.readUnsignedByte(16711935);
+          var4 = param0.readUnsignedByte(16711935);
           stackIn_3_0 = new bm(var2_int, var3, var4);
           return (pp) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -97,7 +97,7 @@ final class df extends ii {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -117,20 +117,20 @@ final class df extends ii {
             return;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "df.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "df.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    df(lu param0) {
+    df(PacketBuffer param0) {
         super(2, param0);
         int var2_int = 0;
         try {
-          var2_int = param0.b(16711935);
+          var2_int = param0.readUnsignedByte(16711935);
           this.field_p = 7 & var2_int;
           this.field_n = 15 & var2_int >> 3;
           this.field_t = (var2_int & 128) != 0 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

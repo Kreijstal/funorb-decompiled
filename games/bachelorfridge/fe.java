@@ -7,7 +7,7 @@ final class fe extends vo {
     private int field_m;
     private int field_l;
     private int field_i;
-    static kv field_j;
+    static Sprite field_j;
     static int field_k;
 
     final void a(byte param0, int param1, int param2) {

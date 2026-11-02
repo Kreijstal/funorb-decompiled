@@ -24,20 +24,20 @@ final class mm extends ana {
     }
 
     final boolean c(byte param0) {
-        je var5 = null;
+        PcmSampleStream var5 = null;
         uea var2_ref_uea = null;
         int var3 = 0;
         int var4 = 0;
         int var3Lifetime1;
         int var4Lifetime1;
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
-        if (this.field_E.a((byte) -106)) {
+        if (this.field_E.isLinked((byte) -106)) {
           return false;
         }
         if (null == this.field_y) {
-          var5 = je.a(rt.field_a[20], 256, 192);
+          var5 = PcmSampleStream.createWithVolume(rt.field_a[20], 256, 192);
           var5.d(-1);
           this.field_y = tw.a(var5, (byte) -36);
         }
@@ -106,7 +106,7 @@ final class mm extends ana {
           this.field_E.field_j = -var5 + 240;
           this.a(27799, this.field_E);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class mm extends ana {
           if (var7Lifetime1 >= 4) {
             var7Lifetime1 -= 4;
           } else {
-            ve.field_m[var7Lifetime1][(this.field_q.field_L >> 2) % 25].e(var2 + 44, -var5 + var3);
+            ve.field_m[var7Lifetime1][(this.field_q.field_L >> 2) % 25].draw(var2 + 44, -var5 + var3);
             var7Lifetime1 = -(var5 >> 2) + 64;
             var8 = 48 - (var5 >> 2);
             nk.a(this.field_q.field_s.field_y, -(var7Lifetime1 >> 1) + 64 + var2, 24 + (var3 - (var8 >> 1)), var7Lifetime1, var8);
@@ -150,7 +150,7 @@ final class mm extends ana {
             ho.field_j[var4].a(var2, -var5 + var3 - 45);
             return;
           }
-          ve.field_m[var7Lifetime1][(this.field_q.field_L >> 2) % 25].e(var2 + 44, -var5 + var3);
+          ve.field_m[var7Lifetime1][(this.field_q.field_L >> 2) % 25].draw(var2 + 44, -var5 + var3);
           var7Lifetime1Lifetime1 = -(var5 >> 2) + 64;
           var8Lifetime2 = 48 - (var5 >> 2);
           nk.a(this.field_q.field_s.field_y, -(var7Lifetime1Lifetime1 >> 1) + 64 + var2, 24 + (var3 - (var8Lifetime2 >> 1)), var7Lifetime1Lifetime1, var8Lifetime2);

@@ -4,11 +4,11 @@
 final class uma extends sh {
     private lka field_N;
     private lka field_Q;
-    static kv[] field_J;
+    static Sprite[] field_J;
     private boolean field_K;
     static String field_O;
     private lka field_L;
-    static eaa field_M;
+    static IntrusiveDeque field_M;
     static kga[] field_P;
 
     uma(qda param0, boolean param1, int param2, int param3, int param4, int param5) {
@@ -16,7 +16,7 @@ final class uma extends sh {
         try {
           this.a(param2, param5, (byte) 59, param4, param3);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "uma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -30,11 +30,11 @@ final class uma extends sh {
           this.field_N.field_k = (pl) ((Object) param0);
           this.field_L.field_k = (pl) ((Object) param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "uma.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uma.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, kv param3, int param4, int[] param5) {
+    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int[] param5) {
         int var7 = 0;
         int var9 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -81,7 +81,7 @@ final class uma extends sh {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class uma extends sh {
         Throwable decompiledCaughtException = null;
         try {
           if (param0 < 20) {
-            field_J = (kv[]) null;
+            field_J = (Sprite[]) null;
           }
           stackIn_3_0 = Integer.parseInt(this.field_N.field_w) - 1;
           return stackIn_3_0;
@@ -120,7 +120,7 @@ final class uma extends sh {
             field_O = (String) null;
           }
           for (var1_int = 0; var1_int < bf.field_g.length; var1_int++) {
-            bf.field_g[var1_int] = new hw(ko.field_f.field_b[var1_int]);
+            bf.field_g[var1_int] = new hw(IsaacRandom.field_f.field_b[var1_int]);
             var2 = ica.field_r[var1_int][0];
             var3 = ica.field_r[var1_int][1];
             bf.field_g[var1_int].field_kb = -16 + var2;
@@ -148,7 +148,7 @@ final class uma extends sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "uma.F(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "uma.F(" + param0 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class uma extends sh {
         try {
           oc.field_l.a(param2, param4 + param1.field_s + (param1.field_p >> 1), -5 + param1.field_v + param3, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "uma.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uma.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -212,7 +212,7 @@ final class uma extends sh {
           }
           this.c(this.field_L, -128);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "uma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -282,7 +282,7 @@ final class uma extends sh {
         param1 = param1 + this.field_v;
         int var5 = 83 % ((param0 + 20) / 54);
         param3 = param3 + this.field_s;
-        this.a((byte) -68, this.field_Q, tca.field_b, param1, param3);
+        this.a((byte) -68, this.field_Q, JaggrabDownloader.field_b, param1, param3);
         this.a((byte) -68, this.field_N, ao.field_c, param1, param3);
         this.a((byte) -68, this.field_L, ca.field_d, param1, param3);
     }

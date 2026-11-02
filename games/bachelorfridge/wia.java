@@ -105,7 +105,7 @@ class wia {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -116,16 +116,16 @@ class wia {
         fa.a(param0, param1 + 26412);
         if (param1 == 31) {
           if (ad.field_i) {
-            dg.g(pf.field_n.field_a.field_kb, pf.field_n.field_a.field_rb, pf.field_n.field_a.field_sb, pf.field_n.field_a.field_p);
-            pf.field_n.field_a.a(param0, 7802);
+            SoftwareRasterizer.darkenRectangle(BitPacketBuffer.field_n.field_a.field_kb, BitPacketBuffer.field_n.field_a.field_rb, BitPacketBuffer.field_n.field_a.field_sb, BitPacketBuffer.field_n.field_a.field_p);
+            BitPacketBuffer.field_n.field_a.a(param0, 7802);
           }
           hl.a(0, param0);
           return;
         }
         wia.a(true, (byte) 28);
         if (ad.field_i) {
-          dg.g(pf.field_n.field_a.field_kb, pf.field_n.field_a.field_rb, pf.field_n.field_a.field_sb, pf.field_n.field_a.field_p);
-          pf.field_n.field_a.a(param0, 7802);
+          SoftwareRasterizer.darkenRectangle(BitPacketBuffer.field_n.field_a.field_kb, BitPacketBuffer.field_n.field_a.field_rb, BitPacketBuffer.field_n.field_a.field_sb, BitPacketBuffer.field_n.field_a.field_p);
+          BitPacketBuffer.field_n.field_a.a(param0, 7802);
         }
         hl.a(0, param0);
     }
@@ -204,7 +204,7 @@ class wia {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -257,7 +257,7 @@ class wia {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -382,7 +382,7 @@ class wia {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

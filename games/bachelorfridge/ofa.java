@@ -19,15 +19,15 @@ final class ofa extends sna {
         return true;
     }
 
-    final static void a(int param0, je param1) {
+    final static void a(int param0, PcmSampleStream param1) {
         try {
           tw.a(param1, (byte) -36);
           if (param0 != 0) {
-            je var3 = (je) null;
-            ofa.a(7, (je) null);
+            PcmSampleStream var3 = (PcmSampleStream) null;
+            ofa.a(7, (PcmSampleStream) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ofa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ofa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class ofa extends sna {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

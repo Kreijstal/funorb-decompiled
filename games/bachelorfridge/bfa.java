@@ -4,7 +4,7 @@
 final class bfa {
     static int[][] field_c;
     static boolean field_a;
-    static kv[] field_b;
+    static Sprite[] field_b;
     private static String field_z;
 
     public static void a(boolean param0) {

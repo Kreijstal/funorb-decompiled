@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ch extends td {
-    static eh field_p;
+    static PlatformTask field_p;
     static String field_q;
 
-    final static ee a(vr param0, int param1, String param2, String param3) {
+    final static IndexedSprite a(vr param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         String var6 = null;
-        ee stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -50,7 +50,7 @@ final class ch extends td {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class ch extends td {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -155,9 +155,9 @@ final class ch extends td {
         return gfa.field_i;
     }
 
-    final static rj a(boolean param0, lu param1) {
+    final static rj a(boolean param0, PacketBuffer param1) {
         RuntimeException var2 = null;
-        lu var3 = null;
+        PacketBuffer var3 = null;
         rj stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -165,10 +165,10 @@ final class ch extends td {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            var3 = (lu) null;
-            ch.a(false, (lu) null);
+            var3 = (PacketBuffer) null;
+            ch.a(false, (PacketBuffer) null);
           }
-          stackIn_3_0 = new rj(param1.c((byte) -85), param1.c((byte) -85), param1.c((byte) -85), param1.c((byte) -85), param1.c((byte) -85), param1.c((byte) -85), param1.c((byte) -85), param1.c((byte) -85), param1.a(3), param1.b(16711935));
+          stackIn_3_0 = new rj(param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.readSignedShort((byte) -85), param1.a(3), param1.readUnsignedByte(16711935));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -180,7 +180,7 @@ final class ch extends td {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

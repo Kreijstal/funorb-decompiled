@@ -15,7 +15,7 @@ final class oma {
         field_a = null;
     }
 
-    final static void a(int param0, Random param1, eaa param2, gw param3, int param4, dha param5) {
+    final static void a(int param0, Random param1, IntrusiveDeque param2, gw param3, int param4, dha param5) {
         cia var9 = null;
         int var8 = BachelorFridge.field_y;
         try {
@@ -26,7 +26,7 @@ final class oma {
           }
           int var7 = -10 / ((param4 + 9) / 53);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oma.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oma.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

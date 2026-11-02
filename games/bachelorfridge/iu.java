@@ -69,10 +69,10 @@ final class iu extends at {
             if (null == var8_ref_gs.field_h ||
               wia.field_e) {
               if (null == var8_ref_gs.field_h) {
-                wma.field_b = wma.field_b + 1;
+                DualLinkNodeHashTable.field_b = DualLinkNodeHashTable.field_b + 1;
               }
               var10 = ah.a(var8_ref_gs, (byte) -118);
-              var11 = var10 + po.c(var8_ref_gs.field_n);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_gs.field_n);
               var12 = tc.a(false, var8_ref_gs);
               var8_ref_gs.field_h = new sna(0L, uc.field_l, var11);
               var8_ref_gs.field_h.field_jb = dc.field_r;
@@ -272,24 +272,24 @@ final class iu extends at {
     final static void d(int param0) {
         mda.field_b.a(100 * jfa.field_q[baa.field_Q].field_d, 31407, 400, 105, 350);
         if (param0 > 6) {
-          qm.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
-          qm.field_d.a(0, 155, false, 19, 298, 20, 406);
+          RasterBuffer.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
+          RasterBuffer.field_d.a(0, 155, false, 19, 298, 20, 406);
           return;
         }
         field_l = (String) null;
-        qm.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
-        qm.field_d.a(0, 155, false, 19, 298, 20, 406);
+        RasterBuffer.field_d = new wl("foodlist", mda.field_b, bu.field_j, nha.field_e);
+        RasterBuffer.field_d.a(0, 155, false, 19, 298, 20, 406);
     }
 
     final static void a(int param0, vr param1) {
         try {
           fi.field_p = param1.a((byte) 123, "minimal/fridge-view-bg.jpg", "");
-          gla.field_j = new kv(fi.field_p, (java.awt.Component) ((Object) dca.field_y));
+          gla.field_j = new Sprite(fi.field_p, (java.awt.Component) ((Object) dca.field_y));
           if (param0 != -1638641311) {
             iu.d(-98);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "iu.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "iu.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

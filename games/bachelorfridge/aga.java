@@ -60,7 +60,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3_ref), "aga.U(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3_ref), "aga.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3_ref), "aga.OA(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3_ref), "aga.OA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -94,9 +94,9 @@ final class aga extends rk {
         }
         try {
           mn.field_l = new hca(var1[0], var1[1], kda.b(97));
-          uka.field_h = new hca(320, 400, bf.field_h[wca.field_n].field_j);
+          ImageProducerRasterBuffer.field_h = new hca(320, 400, bf.field_h[wca.field_n].field_j);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "aga.GA(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aga.GA(" + param0 + ')');
         }
     }
 
@@ -132,7 +132,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var4), "aga.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var4), "aga.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -254,7 +254,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aga.K(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aga.K(" + param0 + ')');
         }
     }
 
@@ -310,7 +310,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aga.BA(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aga.BA(" + param0 + ')');
         }
     }
 
@@ -347,7 +347,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) runtimeException), "aga.H(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aga.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -366,7 +366,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aga.R(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aga.R(" + param0 + ')');
         }
     }
 
@@ -378,7 +378,7 @@ final class aga extends rk {
         try {
           this.field_K[param0] = var3.field_g + 1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "aga.M(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aga.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -407,7 +407,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) runtimeException), "aga.A(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aga.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -473,7 +473,7 @@ final class aga extends rk {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -503,7 +503,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "aga.T(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "aga.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -528,7 +528,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aga.O(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aga.O(" + param0 + ')');
         }
     }
 
@@ -548,7 +548,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "aga.DA(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "aga.DA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -593,7 +593,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "aga.L(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "aga.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -740,7 +740,7 @@ final class aga extends rk {
           } else {
             stackIn_126_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_125_0), ((StringBuilder) (Object) stackIn_125_1).append(stackIn_126_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_125_0), ((StringBuilder) (Object) stackIn_125_1).append(stackIn_126_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -755,7 +755,7 @@ final class aga extends rk {
         var5 = BachelorFridge.field_y;
         try {
           if (param0 <= 110) {
-            this.a((byte) -104, (lu) null);
+            this.a((byte) -104, (PacketBuffer) null);
           }
           var2_int = 0;
           var3 = 0;
@@ -781,11 +781,11 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aga.W(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aga.W(" + param0 + ')');
         }
     }
 
-    final void a(wia param0, lc param1, eaa param2, byte param3) {
+    final void a(wia param0, lc param1, IntrusiveDeque param2, byte param3) {
         int stackIn_46_0 = 0;
         int stackIn_46_1 = 0;
         RuntimeException stackIn_126_0 = null;
@@ -936,7 +936,7 @@ final class aga extends rk {
           } else {
             stackIn_135_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_126_0), ((StringBuilder) (Object) stackIn_134_1).append(stackIn_135_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_126_0), ((StringBuilder) (Object) stackIn_134_1).append(stackIn_135_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -988,7 +988,7 @@ final class aga extends rk {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1039,7 +1039,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "aga.FA(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "aga.FA(" + param0 + ')');
         }
     }
 
@@ -1055,7 +1055,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "aga.NA(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "aga.NA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1074,7 +1074,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aga.PA(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aga.PA(" + param0 + ')');
         }
     }
 
@@ -1098,11 +1098,11 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aga.MA(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aga.MA(" + param0 + ')');
         }
     }
 
-    final static void a(Random param0, boolean param1, eaa param2, int param3) {
+    final static void a(Random param0, boolean param1, IntrusiveDeque param2, int param3) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -1126,7 +1126,7 @@ final class aga extends rk {
             fieldTemp$0 = var4.field_n + var4.field_h;
             var4.field_n = var4.field_n + var4.field_h;
             if (0 > fieldTemp$0) {
-              var4.a(false);
+              var4.unlink(false);
             } else {
               var4.field_l = var4.field_l + var4.field_o;
               kla.a(50, param0, -2147483648);
@@ -1150,7 +1150,7 @@ final class aga extends rk {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1190,7 +1190,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "aga.E(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "aga.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1231,7 +1231,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "aga.G(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "aga.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1255,7 +1255,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "aga.C(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "aga.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1308,7 +1308,7 @@ final class aga extends rk {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1347,7 +1347,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "aga.KA(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "aga.KA(" + param0 + ')');
         }
     }
 
@@ -1371,7 +1371,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) runtimeException), "aga.J(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aga.J(" + param0 + ')');
         }
     }
 
@@ -1390,7 +1390,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var4), "aga.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var4), "aga.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1421,7 +1421,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "aga.LA(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "aga.LA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1500,7 +1500,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var4), "aga.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var4), "aga.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1521,12 +1521,12 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3_ref), "aga.Q(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3_ref), "aga.Q(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, lu param1) {
-        lu stackIn_14_0 = null;
+    final void a(byte param0, PacketBuffer param1) {
+        PacketBuffer stackIn_14_0 = null;
         int stackIn_15_1 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -1540,34 +1540,34 @@ final class aga extends rk {
           super.a((byte) -74, param1);
           param1.b(this.field_I, -126);
           param1.b(this.field_t, -119);
-          param1.d(this.field_D, 0);
-          param1.d(this.field_u, 0);
-          param1.d(this.field_F, 0);
-          param1.d(this.field_x, 0);
-          param1.d(this.field_J, 0);
-          param1.d(this.field_s, 0);
-          param1.d(this.field_y, 0);
-          param1.d(this.field_C, 0);
-          param1.d(this.field_E, 0);
+          param1.writeByte(this.field_D, 0);
+          param1.writeByte(this.field_u, 0);
+          param1.writeByte(this.field_F, 0);
+          param1.writeByte(this.field_x, 0);
+          param1.writeByte(this.field_J, 0);
+          param1.writeByte(this.field_s, 0);
+          param1.writeByte(this.field_y, 0);
+          param1.writeByte(this.field_C, 0);
+          param1.writeByte(this.field_E, 0);
           if (param0 >= -21) {
             this.field_A = true;
           }
           var3_int = 0;
           do {
             if (5 <= var3_int) {
-              param1.d(this.field_H, 0);
+              param1.writeByte(this.field_H, 0);
               break;
             }
-            param1.d(this.field_K[var3_int], 0);
+            param1.writeByte(this.field_K[var3_int], 0);
             var3_int++;
           } while (var4 == 0);
-          stackIn_14_0 = (lu) (param1);
+          stackIn_14_0 = (PacketBuffer) (param1);
           if (!this.field_A) {
             stackIn_15_1 = 0;
           } else {
             stackIn_15_1 = 1;
           }
-          ((lu) (Object) stackIn_14_0).d(stackIn_15_1, 0);
+          ((PacketBuffer) (Object) stackIn_14_0).writeByte(stackIn_15_1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1579,7 +1579,7 @@ final class aga extends rk {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -1593,7 +1593,7 @@ final class aga extends rk {
         int var2_intLifetime1;
         var3 = BachelorFridge.field_y;
         try {
-          bl.a(this.field_o.field_l, 0, this.field_k, 0, this.field_k.length);
+          ArrayOperations.copy(this.field_o.field_l, 0, this.field_k, 0, this.field_k.length);
           if (this.a(84, 0, this.field_m)) {
             this.field_k[0] = this.field_k[0] + 1;
           }
@@ -1674,7 +1674,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aga.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aga.B(" + param0 + ')');
         }
     }
 
@@ -1690,7 +1690,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aga.S(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aga.S(" + param0 + ')');
         }
     }
 
@@ -1710,7 +1710,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var4), "aga.IA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var4), "aga.IA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1734,7 +1734,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "aga.HA(" + param0 + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "aga.HA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1799,7 +1799,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aga.P(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aga.P(" + param0 + ')');
         }
     }
 

@@ -5,12 +5,12 @@ final class tfa extends pp {
     public tfa() {
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -57);
           int var3_int = -49 % ((34 - param1) / 58);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tfa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tfa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class tfa extends pp {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class tfa extends pp {
               mj.field_h[var5] = ec.field_a[var5];
             }
             mj.field_h[-3 + var4] = "";
-            mj.field_h[-2 + var4] = ko.field_h;
+            mj.field_h[-2 + var4] = IsaacRandom.field_h;
             fr.field_l[var4 - 2] = 0;
             mu.field_l[0] = 4;
             mj.field_h[-1 + var4] = ala.field_d;
@@ -205,9 +205,9 @@ final class tfa extends pp {
               throw new IllegalStateException();
             }
             vka.field_p = new String[var4];
-            bl.a(ec.field_a, 0, vka.field_p, 0, var4);
+            ArrayOperations.copy(ec.field_a, 0, vka.field_p, 0, var4);
             wba.field_a = new String[var3_int - var4 - 1];
-            bl.a(ec.field_a, var4 + 1, wba.field_a, 0, var3_int - var4 - 1);
+            ArrayOperations.copy(ec.field_a, var4 + 1, wba.field_a, 0, var3_int - var4 - 1);
             var3_int = ut.a(ec.field_a, wfa.field_s, lga.a(true, new String[]{"<br><%0><br>"}, sc.field_l), jk.field_o, -54);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -221,19 +221,19 @@ final class tfa extends pp {
               throw new IllegalStateException();
             }
             mq.field_a = new String[var4];
-            bl.a(ec.field_a, 0, mq.field_a, 0, var4);
-            ta.field_b = new String[-1 - var4 + var3_int];
-            bl.a(ec.field_a, 1 + var4, ta.field_b, 0, -1 + var3_int - var4);
+            ArrayOperations.copy(ec.field_a, 0, mq.field_a, 0, var4);
+            SectorCacheStore.field_b = new String[-1 - var4 + var3_int];
+            ArrayOperations.copy(ec.field_a, 1 + var4, SectorCacheStore.field_b, 0, -1 + var3_int - var4);
             if (vka.field_p.length >= mq.field_a.length) {
               stackIn_53_0 = vka.field_p.length;
             } else {
               stackIn_53_0 = mq.field_a.length;
             }
             var5 = stackIn_53_0;
-            if (wba.field_a.length >= ta.field_b.length) {
+            if (wba.field_a.length >= SectorCacheStore.field_b.length) {
               stackIn_56_0 = wba.field_a.length;
             } else {
-              stackIn_56_0 = ta.field_b.length;
+              stackIn_56_0 = SectorCacheStore.field_b.length;
             }
             var6 = stackIn_56_0;
             var7 = var6 + 7 + var5;
@@ -268,8 +268,8 @@ final class tfa extends pp {
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_69_0 = mj.field_h;
               stackIn_69_1 = var8Lifetime3 + 7 + var5;
-              if (ta.field_b.length > var8Lifetime3) {
-                stackIn_70_2 = ta.field_b[var8Lifetime3];
+              if (SectorCacheStore.field_b.length > var8Lifetime3) {
+                stackIn_70_2 = SectorCacheStore.field_b[var8Lifetime3];
               } else {
                 stackIn_70_2 = "";
               }
@@ -347,7 +347,7 @@ final class tfa extends pp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var3), "tfa.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var3), "tfa.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -360,7 +360,7 @@ final class tfa extends pp {
           }
           param1.field_F = 0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tfa.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tfa.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

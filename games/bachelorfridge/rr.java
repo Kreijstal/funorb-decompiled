@@ -91,7 +91,7 @@ final class rr extends at {
         this.field_j.field_s.c(107, 240 - var3, param0 - var2);
     }
 
-    final static void a(int param0, eaa param1, int param2, Random param3) {
+    final static void a(int param0, IntrusiveDeque param1, int param2, Random param3) {
         lh var4 = null;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -133,7 +133,7 @@ final class rr extends at {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -162,10 +162,10 @@ final class rr extends at {
     }
 
     final boolean c(byte param0) {
-        je var3 = null;
+        PcmSampleStream var3 = null;
         int var2 = -62 / ((param0 - 71) / 47);
         if (this.field_w == -this.field_t) {
-          var3 = je.a(rt.field_a[20], 256, 128);
+          var3 = PcmSampleStream.createWithVolume(rt.field_a[20], 256, 128);
           var3.d(-1);
           this.field_l = tw.a(var3, (byte) -36);
         }
@@ -245,7 +245,7 @@ final class rr extends at {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

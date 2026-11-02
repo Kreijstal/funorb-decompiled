@@ -7,7 +7,7 @@ final class pma extends k {
     private int field_n;
     private int field_m;
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -33,7 +33,7 @@ final class pma extends k {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -104,11 +104,11 @@ final class pma extends k {
         stackIn_16_6 = (md.field_l <= 50) ? false : true;
         gfa.a(stackIn_13_0, stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_15_4 != 0, stackIn_15_5, stackIn_16_6, param1, 0, true, 109, 11);
         if (aba.field_f) {
-          sja.field_fb.c(57, (byte) 100);
+          sja.field_fb.writeCipheredByte(57, (byte) 100);
           aba.field_f = false;
         }
         if (efa.field_p) {
-          sja.field_fb.c(10, (byte) 97);
+          sja.field_fb.writeCipheredByte(10, (byte) 97);
           efa.field_p = false;
         }
     }
@@ -131,7 +131,7 @@ final class pma extends k {
         }
         wca.field_n = param0;
         if (8 >= wca.field_n) {
-          iaa.field_a = false;
+          MeshObject.field_a = false;
         }
         if (wca.field_n <= 3) {
           sh.field_I = false;
@@ -143,7 +143,7 @@ final class pma extends k {
           ku.field_q = false;
         }
         if (wca.field_n <= 5) {
-          gi.field_a = false;
+          ClientException.field_a = false;
         }
         if (wca.field_n <= 8) {
           cm.field_v = false;

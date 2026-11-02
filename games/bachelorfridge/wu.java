@@ -6,10 +6,10 @@ final class wu extends hf {
     private int field_D;
 
     final void a(byte param0, int param1, int param2, int param3) {
-        kv var16 = null;
-        kv var17 = null;
-        kv var14 = null;
-        kv var13 = null;
+        Sprite var16 = null;
+        Sprite var17 = null;
+        Sprite var14 = null;
+        Sprite var13 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = BachelorFridge.field_y;
@@ -28,34 +28,34 @@ final class wu extends hf {
           var10 = var16.field_n << 1;
           var11 = var16.field_o << 1;
           if (null == rs.field_f) {
-            rs.field_f = new kv(var10, var11);
+            rs.field_f = new Sprite(var10, var11);
             bu.a(0, rs.field_f);
             var16.b(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
-            rs.field_f.d(var5 - var16.field_n, var6 - var16.field_o, 256);
+            rs.field_f.drawAdditive(var5 - var16.field_n, var6 - var16.field_o, 256);
             return;
           }
           if (var10 > rs.field_f.field_q) {
-            rs.field_f = new kv(var10, var11);
+            rs.field_f = new Sprite(var10, var11);
             bu.a(0, rs.field_f);
             var16.b(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
-            rs.field_f.d(var5 - var16.field_n, var6 - var16.field_o, 256);
+            rs.field_f.drawAdditive(var5 - var16.field_n, var6 - var16.field_o, 256);
             return;
           }
           if (rs.field_f.field_p < var11) {
-            rs.field_f = new kv(var10, var11);
+            rs.field_f = new Sprite(var10, var11);
             bu.a(0, rs.field_f);
             var16.b(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
-            rs.field_f.d(var5 - var16.field_n, var6 - var16.field_o, 256);
+            rs.field_f.drawAdditive(var5 - var16.field_n, var6 - var16.field_o, 256);
             return;
           }
           bu.a(0, rs.field_f);
-          dg.d();
+          SoftwareRasterizer.clear();
           var16.b(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
           db.b(89);
-          rs.field_f.d(var5 - var16.field_n, var6 - var16.field_o, 256);
+          rs.field_f.drawAdditive(var5 - var16.field_n, var6 - var16.field_o, 256);
           return;
         }
         if (var8 == ji.field_f) {
@@ -63,44 +63,44 @@ final class wu extends hf {
           var10Lifetime1 = var17.field_n << 1;
           var11Lifetime1 = var17.field_o << 1;
           if (null == rs.field_f) {
-            rs.field_f = new kv(var10Lifetime1, var11Lifetime1);
+            rs.field_f = new Sprite(var10Lifetime1, var11Lifetime1);
             bu.a(0, rs.field_f);
             var17.b(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
-            rs.field_f.d(var5 - var17.field_n, var6 - var17.field_o, 256);
+            rs.field_f.drawAdditive(var5 - var17.field_n, var6 - var17.field_o, 256);
             return;
           }
           if (var10Lifetime1 > rs.field_f.field_q) {
-            rs.field_f = new kv(var10Lifetime1, var11Lifetime1);
+            rs.field_f = new Sprite(var10Lifetime1, var11Lifetime1);
             bu.a(0, rs.field_f);
             var17.b(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
-            rs.field_f.d(var5 - var17.field_n, var6 - var17.field_o, 256);
+            rs.field_f.drawAdditive(var5 - var17.field_n, var6 - var17.field_o, 256);
             return;
           }
           if (rs.field_f.field_p < var11Lifetime1) {
-            rs.field_f = new kv(var10Lifetime1, var11Lifetime1);
+            rs.field_f = new Sprite(var10Lifetime1, var11Lifetime1);
             bu.a(0, rs.field_f);
             var17.b(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
-            rs.field_f.d(var5 - var17.field_n, var6 - var17.field_o, 256);
+            rs.field_f.drawAdditive(var5 - var17.field_n, var6 - var17.field_o, 256);
             return;
           }
           bu.a(0, rs.field_f);
-          dg.d();
+          SoftwareRasterizer.clear();
           var17.b(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
           db.b(89);
-          rs.field_f.d(var5 - var17.field_n, var6 - var17.field_o, 256);
+          rs.field_f.drawAdditive(var5 - var17.field_n, var6 - var17.field_o, 256);
           return;
         }
         if (var8 == jt.field_f) {
           var14 = fr.field_q[2];
-          var14.d(-(var14.field_q >> 1) + var5, var6 - (var14.field_p >> 1), 256);
+          var14.drawAdditive(-(var14.field_q >> 1) + var5, var6 - (var14.field_p >> 1), 256);
           return;
         }
         if (var8 == cm.field_u) {
           var13 = fr.field_q[1];
-          var13.d(var5 - (var13.field_q >> 1), var6 - (var13.field_p >> 1), 256);
+          var13.drawAdditive(var5 - (var13.field_q >> 1), var6 - (var13.field_p >> 1), 256);
           return;
         }
     }
@@ -109,7 +109,7 @@ final class wu extends hf {
         try {
           this.field_A = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class wu extends hf {
           this.field_D = this.field_D + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wu.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wu.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -207,7 +207,7 @@ final class wu extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var5), "wu.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) var5), "wu.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -237,7 +237,7 @@ final class wu extends hf {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ final class wu extends hf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

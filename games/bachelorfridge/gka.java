@@ -46,7 +46,7 @@ final class gka extends at {
         }
     }
 
-    final static rk a(lu param0, int param1) {
+    final static rk a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         rk var3 = null;
@@ -57,7 +57,7 @@ final class gka extends at {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.b(16711935);
+          var2_int = param0.readUnsignedByte(16711935);
           if (var2_int == param1) {
             stackIn_2_0 = null;
             return (rk) (stackIn_2_0);
@@ -76,12 +76,12 @@ final class gka extends at {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final boolean c(byte param0) {
-        if (this.field_k.a((byte) -106)) {
+        if (this.field_k.isLinked((byte) -106)) {
           return false;
         }
         int var2 = 112 % ((71 - param0) / 47);
@@ -114,7 +114,7 @@ final class gka extends at {
           this.field_k = new taa(this.field_p, (this.field_p.field_h.field_z >> 1) - 1, -3);
           this.a(27799, this.field_k);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "gka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "gka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

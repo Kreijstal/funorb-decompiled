@@ -7,7 +7,7 @@ abstract class jm extends IntrusiveNode {
     static String field_l;
     int field_j;
     static String field_h;
-    static kv[] field_f;
+    static Sprite[] field_f;
     static lna field_i;
 
     public static void c(byte param0) {
@@ -126,27 +126,27 @@ abstract class jm extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
-          param0.d(this.field_j, 0);
+          param0.writeByte(this.field_j, 0);
           if (param1 != -63) {
-            field_f = (kv[]) null;
+            field_f = (Sprite[]) null;
           }
           this.b(param0, (byte) 87);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jm.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jm.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void b(lu param0, byte param1) {
+    void b(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -10 / ((37 - param1) / 38);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jm.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jm.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -296,7 +296,7 @@ abstract class jm extends IntrusiveNode {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ abstract class jm extends IntrusiveNode {
           }
           this.a(false, param0.field_o.field_h);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

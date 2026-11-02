@@ -40,28 +40,28 @@ final class fha extends at {
         int var6 = 0;
         String var7 = null;
         try {
-          uka.field_i[0] = ia.field_k.nextInt();
-          uka.field_i[1] = ia.field_k.nextInt();
-          dm.field_g.field_g = param1;
-          uka.field_i[3] = (int)bi.field_j;
-          uka.field_i[2] = (int)(bi.field_j >> 32);
-          dm.field_g.e(uka.field_i[0], param1 - 1615464796);
-          dm.field_g.e(uka.field_i[1], param1 - 1615464796);
-          dm.field_g.e(uka.field_i[2], -1615464796);
-          dm.field_g.e(uka.field_i[3], -1615464796);
-          qja.b(param1 ^ 24, dm.field_g);
-          dm.field_g.b(param0, -125);
-          param2.a(dm.field_g, false);
-          sja.field_fb.field_g = 0;
+          ImageProducerRasterBuffer.field_i[0] = ia.field_k.nextInt();
+          ImageProducerRasterBuffer.field_i[1] = ia.field_k.nextInt();
+          ProxySocketConnector.field_g.position = param1;
+          ImageProducerRasterBuffer.field_i[3] = (int)bi.field_j;
+          ImageProducerRasterBuffer.field_i[2] = (int)(bi.field_j >> 32);
+          ProxySocketConnector.field_g.writeInt(ImageProducerRasterBuffer.field_i[0], param1 - 1615464796);
+          ProxySocketConnector.field_g.writeInt(ImageProducerRasterBuffer.field_i[1], param1 - 1615464796);
+          ProxySocketConnector.field_g.writeInt(ImageProducerRasterBuffer.field_i[2], -1615464796);
+          ProxySocketConnector.field_g.writeInt(ImageProducerRasterBuffer.field_i[3], -1615464796);
+          qja.b(param1 ^ 24, ProxySocketConnector.field_g);
+          ProxySocketConnector.field_g.b(param0, -125);
+          param2.a(ProxySocketConnector.field_g, false);
+          sja.field_fb.position = 0;
           if (!param4) {
-            sja.field_fb.d(16, 0);
+            sja.field_fb.writeByte(16, 0);
           } else {
-            sja.field_fb.d(18, param1 ^ 0);
+            sja.field_fb.writeByte(18, param1 ^ 0);
           }
-          sja.field_fb.field_g = sja.field_fb.field_g + 2;
-          var5_int = sja.field_fb.field_g;
-          sja.field_fb.e(cp.field_c, param1 - 1615464796);
-          sja.field_fb.b(param1 + 1686281208, vi.field_a);
+          sja.field_fb.position = sja.field_fb.position + 2;
+          var5_int = sja.field_fb.position;
+          sja.field_fb.writeInt(cp.field_c, param1 - 1615464796);
+          sja.field_fb.writeLong(param1 + 1686281208, vi.field_a);
           var6 = 0;
           if (vs.field_c) {
             var6 = var6 | 1;
@@ -75,17 +75,17 @@ final class fha extends at {
           if (ij.field_m != null) {
             var6 = var6 | 16;
           }
-          sja.field_fb.d(var6, 0);
+          sja.field_fb.writeByte(var6, 0);
           var7 = pi.a(11713, nia.d(param1 - 31768));
           if (var7 == null) {
             var7 = "";
           }
-          sja.field_fb.a((byte) -50, var7);
+          sja.field_fb.writeString((byte) -50, var7);
           if (null != ij.field_m) {
             sja.field_fb.a(ij.field_m, 86);
           }
-          wd.a(sm.field_q, (byte) -126, sja.field_fb, dm.field_g, tg.field_p);
-          sja.field_fb.a((byte) -88, sja.field_fb.field_g - var5_int);
+          wd.a(sm.field_q, (byte) -126, sja.field_fb, ProxySocketConnector.field_g, tg.field_p);
+          sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var5_int);
           hna.a(-1, 85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class fha extends at {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class fha extends at {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class fha extends at {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var8), "fha.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw pe.wrapException((Throwable) ((Object) var8), "fha.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

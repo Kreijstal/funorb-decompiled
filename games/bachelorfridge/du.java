@@ -3,9 +3,9 @@
  */
 final class du {
     int field_c;
-    static js field_a;
+    static IntrusiveNodeHashTable field_a;
     int field_d;
-    static ee field_b;
+    static IndexedSprite field_b;
     static int[] field_e;
 
     final static eq a(String param0, byte param1) {
@@ -48,7 +48,7 @@ final class du {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class du {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 8192) {
-          field_a = (js) null;
+          field_a = (IntrusiveNodeHashTable) null;
           field_a = null;
           field_e = null;
           return;

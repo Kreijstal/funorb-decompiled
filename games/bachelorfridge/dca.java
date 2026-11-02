@@ -15,15 +15,15 @@ final class dca extends ana {
           this.field_x = param2 ? true : false;
           this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public static void e(byte param0) {
         field_y = null;
         if (param0 != -87) {
-          lu var2 = (lu) null;
-          dca.a((byte) 46, (lu) null);
+          PacketBuffer var2 = (PacketBuffer) null;
+          dca.a((byte) 46, (PacketBuffer) null);
         }
     }
 
@@ -38,7 +38,7 @@ final class dca extends ana {
         if (this.field_x) {
           return true;
         }
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
         int fieldTemp$0 = this.field_l - 1;
@@ -57,7 +57,7 @@ final class dca extends ana {
         return false;
     }
 
-    final static pp a(byte param0, lu param1) {
+    final static pp a(byte param0, PacketBuffer param1) {
         pp stackIn_4_0 = null;
         pp stackIn_8_0 = null;
         pp stackIn_11_0 = null;
@@ -85,7 +85,7 @@ final class dca extends ana {
           if (param0 != 102) {
             field_v = 111;
           }
-          var2_int = param1.b(16711935);
+          var2_int = param1.readUnsignedByte(16711935);
           if (1 == var2_int) {
             stackIn_4_0 = n.a(param1, -127);
             return stackIn_4_0;
@@ -147,7 +147,7 @@ final class dca extends ana {
             return stackIn_35_0;
           }
           if (16 == var2_int) {
-            stackIn_33_0 = ta.a(59, param1);
+            stackIn_33_0 = SectorCacheStore.a(59, param1);
             return stackIn_33_0;
           }
           stackIn_31_0 = null;
@@ -162,7 +162,7 @@ final class dca extends ana {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
         }
     }
 

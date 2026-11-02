@@ -103,7 +103,7 @@ class mv extends at {
                 }
                 var8_int = this.field_k.field_q;
                 if (this instanceof ba) {
-                  var8_int = nn.a(var16, var3, (byte) 104);
+                  var8_int = MouseInputHandler.a(var16, var3, (byte) 104);
                 }
                 var17 = ((iv) (var4_ref)).a(this.field_k.field_l.a(-27449, this.field_l), this.field_l, false, var8_int);
                 if (var17 != null) {
@@ -198,7 +198,7 @@ class mv extends at {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "mv.H(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "mv.H(" + param0 + ')');
         }
     }
 
@@ -213,7 +213,7 @@ class mv extends at {
         try {
           this.field_k.field_l.a(-27449, this.field_l).b(false);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mv.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mv.B(" + param0 + ')');
         }
     }
 
@@ -300,7 +300,7 @@ class mv extends at {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "mv.A(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "mv.A(" + param0 + ')');
         }
     }
 
@@ -329,7 +329,7 @@ class mv extends at {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "mv.I(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "mv.I(" + param0 + ')');
         }
     }
 
@@ -420,7 +420,7 @@ class mv extends at {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "mv.F(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "mv.F(" + param0 + ')');
         }
     }
 
@@ -431,7 +431,7 @@ class mv extends at {
             field_m = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "mv.G(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "mv.G(" + param0 + ')');
         }
     }
 
@@ -497,7 +497,7 @@ class mv extends at {
             stackIn_28_0 = stackIn_23_0;
             stackIn_28_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

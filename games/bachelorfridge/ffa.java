@@ -61,7 +61,7 @@ final class ffa extends kj {
           this.field_f = param1;
           this.field_g = 80;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ffa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ffa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -202,14 +202,14 @@ final class ffa extends kj {
           re.field_D = param0;
           ep.a(param1, 8192);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ffa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ffa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, boolean param1, int param2) {
         int var4 = (400 + (-(this.field_g * 655360) + 52428800 >> 16)) * this.field_g / 80;
         if (param1) {
-          hr.field_c.a(param2, param0 + (-var4 - 64), 192);
+          DelegatingCanvas.field_c.a(param2, param0 + (-var4 - 64), 192);
           return;
         }
     }

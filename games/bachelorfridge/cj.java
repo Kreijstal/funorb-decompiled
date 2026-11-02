@@ -8,7 +8,7 @@ abstract class cj extends IntrusiveNode {
     int field_j;
     static String field_g;
 
-    abstract void a(lu param0, int param1);
+    abstract void a(PacketBuffer param0, int param1);
 
     final static boolean b(boolean param0) {
         if (!param0) {

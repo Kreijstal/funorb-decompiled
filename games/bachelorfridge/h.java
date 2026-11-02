@@ -5,7 +5,7 @@ final class h extends td {
     static du field_p;
 
     final static void c(byte param0) {
-        sja.field_fb.c(95, (byte) 104);
+        sja.field_fb.writeCipheredByte(95, (byte) 104);
         if (param0 != -69) {
           uha var2 = (uha) null;
           h.a((uha) null, -126);
@@ -49,7 +49,7 @@ final class h extends td {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class h extends td {
         RuntimeException decompiledCaughtException = null;
         var3 = BachelorFridge.field_y;
         try {
-          param0.a(false);
+          param0.unlink(false);
           if (param1 != 0) {
             return;
           }
@@ -93,7 +93,7 @@ final class h extends td {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class h extends td {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

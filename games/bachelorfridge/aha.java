@@ -4,8 +4,8 @@
 class aha extends hf {
     static int[][] field_A;
     static String field_H;
-    static fea field_D;
-    private eaa field_G;
+    static BinaryBitmapFont field_D;
+    private IntrusiveDeque field_G;
     static sna field_F;
     private aia field_E;
     private String[] field_I;
@@ -15,7 +15,7 @@ class aha extends hf {
           super.a(param0, param1, param2, param3, param4);
           this.a(21646);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "aha.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aha.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -29,7 +29,7 @@ class aha extends hf {
           super.a(param0, param1, param2, param3);
           var5_int = -this.field_s + param0;
           if (param2) {
-            field_D = (fea) null;
+            field_D = (BinaryBitmapFont) null;
           }
           var6 = param3 - this.field_v;
           var7 = this.b(var6, 35, var5_int);
@@ -41,7 +41,7 @@ class aha extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) runtimeException), "aha.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aha.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ class aha extends hf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ class aha extends hf {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                ko.field_g = param1;
+                IsaacRandom.field_g = param1;
                 var2 = od.a("text_game_name", (byte) 105);
                 if (var2 != null) {
                   qk.field_k = qq.a(var2, false);
@@ -861,7 +861,7 @@ class aha extends hf {
                 }
                 var2 = od.a("options", (byte) 92);
                 if (null != var2) {
-                  pf.field_i = qq.a(var2, false);
+                  BitPacketBuffer.field_i = qq.a(var2, false);
                 }
                 var2 = od.a("price", (byte) 81);
                 if (var2 != null) {
@@ -889,7 +889,7 @@ class aha extends hf {
                 }
                 var2 = od.a("moves_set", (byte) 122);
                 if (null != var2) {
-                  hr.field_a = qq.a(var2, false);
+                  DelegatingCanvas.field_a = qq.a(var2, false);
                 }
                 var2 = od.a("actions", (byte) 111);
                 if (var2 != null) {
@@ -1015,7 +1015,7 @@ class aha extends hf {
                 }
                 var2 = od.a("spectating", (byte) 98);
                 if (null != var2) {
-                  pj.field_a = qq.a(var2, false);
+                  BufferedSocket.field_a = qq.a(var2, false);
                 }
                 var2 = od.a("turn", (byte) 95);
                 if (var2 != null) {
@@ -2482,7 +2482,7 @@ class aha extends hf {
                 if (var2 != null) {
                   id.field_g = qq.a(var2, false);
                 }
-                ko.field_g = null;
+                IsaacRandom.field_g = null;
             }
             void run() {
                 var3 = BachelorFridge.field_y;
@@ -2503,7 +2503,7 @@ class aha extends hf {
                   } else {
                     stackIn_2086_2 = "{...}";
                   }
-                  throw pe.a((Throwable) ((Object) stackIn_2085_0), ((StringBuilder) (Object) stackIn_2085_1).append(stackIn_2086_2).append(')').toString());
+                  throw pe.wrapException((Throwable) ((Object) stackIn_2085_0), ((StringBuilder) (Object) stackIn_2085_1).append(stackIn_2086_2).append(')').toString());
                 }
                 if (GameAppletShell.field_a != 0) {
                   var3++;
@@ -2527,7 +2527,7 @@ class aha extends hf {
         var6 = BachelorFridge.field_y;
         try {
           if (param0 != 1) {
-            field_D = (fea) null;
+            field_D = (BinaryBitmapFont) null;
           }
           if (this.field_I == null ||
             param1 >= this.field_I.length) {
@@ -2556,7 +2556,7 @@ class aha extends hf {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -2567,7 +2567,7 @@ class aha extends hf {
             this.a((byte) 33, 18, 3, 92);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "aha.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aha.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2592,7 +2592,7 @@ class aha extends hf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2643,7 +2643,7 @@ class aha extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var4_ref), "aha.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) var4_ref), "aha.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2672,7 +2672,7 @@ class aha extends hf {
         int var7Lifetime1;
         var16 = BachelorFridge.field_y;
         try {
-          this.field_G = new eaa();
+          this.field_G = new IntrusiveDeque();
           var2_int = 0;
           var3 = (qka) ((Object) this.field_f);
           var4 = var3.b((wj) (this), false);
@@ -2729,13 +2729,13 @@ class aha extends hf {
             break;
           }
           if (param0 != 21646) {
-            field_D = (fea) null;
+            field_D = (BinaryBitmapFont) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aha.F(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aha.F(" + param0 + ')');
         }
     }
 
@@ -2766,7 +2766,7 @@ class aha extends hf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -2799,7 +2799,7 @@ class aha extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) runtimeException), "aha.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aha.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2829,7 +2829,7 @@ class aha extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2), "aha.U(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2), "aha.U(" + param0 + ')');
         }
     }
 
@@ -2848,7 +2848,7 @@ class aha extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "aha.G(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "aha.G(" + param0 + ')');
         }
     }
 

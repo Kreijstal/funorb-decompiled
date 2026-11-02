@@ -65,7 +65,7 @@ final class ji extends IntrusiveNode {
               }
             }
             jl.field_s = ld.field_n;
-            eaa.field_b = hda.field_o;
+            IntrusiveDeque.field_b = hda.field_o;
           }
           ov.field_g = param1;
           if (!b.field_r &&
@@ -73,7 +73,7 @@ final class ji extends IntrusiveNode {
             dda.field_f) {
             jl.field_s = ld.field_n;
             df.field_o = 0;
-            eaa.field_b = hda.field_o;
+            IntrusiveDeque.field_b = hda.field_o;
           }
           ld.field_n = -1;
           hda.field_o = -1;
@@ -94,7 +94,7 @@ final class ji extends IntrusiveNode {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 

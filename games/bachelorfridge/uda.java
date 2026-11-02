@@ -27,7 +27,7 @@ abstract class uda extends am {
           }
           return super.a(-118);
         }
-        if (pj.field_n == this.field_Y) {
+        if (BufferedSocket.field_n == this.field_Y) {
           fieldTemp$0 = this.field_Z + 1;
           this.field_Z = this.field_Z + 1;
           if (fieldTemp$0 != this.field_W) {
@@ -75,7 +75,7 @@ abstract class uda extends am {
         if (param3 < 13) {
           return;
         }
-        qm.a(false, param0, param1, param2);
+        RasterBuffer.a(false, param0, param1, param2);
     }
 
     public static void n(int param0) {
@@ -125,12 +125,12 @@ abstract class uda extends am {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     final void b(boolean param0) {
-        if (pj.field_n == this.field_Y) {
+        if (BufferedSocket.field_n == this.field_Y) {
           return;
         }
         this.field_Y = dha.field_b;
@@ -157,14 +157,14 @@ abstract class uda extends am {
           this.field_W = param3;
           this.d(param1, -15084);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "uda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     private final void d(wj param0, int param1) {
         try {
           if (null != this.field_S) {
-            this.field_S.a(false);
+            this.field_S.unlink(false);
           }
           if (param0 == null) {
             this.field_S = new hl();
@@ -178,7 +178,7 @@ abstract class uda extends am {
           }
           this.field_T = null;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "uda.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "uda.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -198,11 +198,11 @@ abstract class uda extends am {
             this.field_Z = 0;
             return;
           }
-          if (pj.field_n == this.field_Y) {
+          if (BufferedSocket.field_n == this.field_Y) {
             return;
           }
           this.field_Z = 0;
-          this.field_Y = pj.field_n;
+          this.field_Y = BufferedSocket.field_n;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,7 +214,7 @@ abstract class uda extends am {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

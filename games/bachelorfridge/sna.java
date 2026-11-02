@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class sna extends tf {
-    kv[] field_db;
+    Sprite[] field_db;
     int field_N;
-    kv[] field_eb;
-    po field_jb;
-    kv[] field_A;
+    Sprite[] field_eb;
+    BitmapFont field_jb;
+    Sprite[] field_A;
     int field_mb;
     int field_V;
     private boolean field_P;
@@ -18,17 +18,17 @@ class sna extends tf {
     int field_cb;
     int field_hb;
     int field_ab;
-    kv field_H;
+    Sprite field_H;
     private int field_O;
     int field_o;
     int field_lb;
     int field_B;
     int field_M;
     int field_p;
-    kv field_v;
+    Sprite field_v;
     int field_ib;
     String field_pb;
-    kv field_y;
+    Sprite field_y;
     private int field_x;
     boolean field_qb;
     int field_I;
@@ -36,14 +36,14 @@ class sna extends tf {
     int field_w;
     int field_W;
     private boolean field_q;
-    kv field_J;
-    kv[] field_X;
+    Sprite field_J;
+    Sprite[] field_X;
     int field_rb;
     private int field_bb;
     int field_Y;
     int field_G;
     private int field_S;
-    kv field_U;
+    Sprite field_U;
     int field_kb;
     private int field_Q;
     int field_ob;
@@ -57,8 +57,8 @@ class sna extends tf {
     boolean field_ub;
     int field_nb;
     int field_R;
-    kv[] field_K;
-    eaa field_z;
+    Sprite[] field_K;
+    IntrusiveDeque field_z;
     private int field_F;
     boolean field_T;
 
@@ -110,7 +110,7 @@ class sna extends tf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -120,11 +120,11 @@ class sna extends tf {
             this.field_Q = 109;
           }
           if (null == this.field_z) {
-            this.field_z = new eaa();
+            this.field_z = new IntrusiveDeque();
           }
           this.field_z.a(param1, true);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sna.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sna.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -266,7 +266,7 @@ class sna extends tf {
           } else {
             stackIn_100_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -341,9 +341,9 @@ class sna extends tf {
     }
 
     final void a(boolean param0, int param1) {
-        this.a(false, false, 0, false, param1 ^ -2147475846, 0, dg.field_c, param0, dg.field_i, true, false);
+        this.a(false, false, 0, false, param1 ^ -2147475846, 0, SoftwareRasterizer.field_c, param0, SoftwareRasterizer.field_i, true, false);
         if (param1 != 7802) {
-          this.field_jb = (po) null;
+          this.field_jb = (BitmapFont) null;
         }
     }
 
@@ -353,7 +353,7 @@ class sna extends tf {
         }
         mu.field_k = !param1 ? true : false;
         on.field_x = !param1 ? true : false;
-        this.a(true, 0, false, dg.field_i, dg.field_c, 0);
+        this.a(true, 0, false, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0);
     }
 
     final int e(int param0) {
@@ -385,8 +385,8 @@ class sna extends tf {
         int var13;
         int var14;
         int var15;
-        kv[] var16;
-        kv var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;
@@ -403,14 +403,14 @@ class sna extends tf {
         var25 = BachelorFridge.field_y;
         this.field_D = this.field_kb + param5;
         this.field_M = param2 + this.field_rb;
-        var12 = dg.field_f;
-        var13 = dg.field_j;
-        var14 = dg.field_h;
+        var12 = SoftwareRasterizer.field_f;
+        var13 = SoftwareRasterizer.field_j;
+        var14 = SoftwareRasterizer.field_h;
         if (param4 != -2147483648) {
           this.field_E = true;
         }
-        var15 = dg.field_k;
-        dg.c(this.field_D, this.field_M, this.field_D + this.field_sb, this.field_p + this.field_M);
+        var15 = SoftwareRasterizer.field_k;
+        SoftwareRasterizer.intersectClip(this.field_D, this.field_M, this.field_D + this.field_sb, this.field_p + this.field_M);
         if (!this.field_q) {
           param0 = this.field_T;
           stackIn_7_0 = (this.field_ib != 0);
@@ -508,7 +508,7 @@ class sna extends tf {
             var24 = var24 + (this.field_p - var17.field_o);
           }
           if (this.field_F >= 256) {
-            var17.e(var23_int, var24);
+            var17.draw(var23_int, var24);
           } else {
             var17.a(var23_int, var24, this.field_F);
           }
@@ -534,7 +534,7 @@ class sna extends tf {
               }
             }
             if (0 == this.field_N) {
-              this.field_jb.b(var23Lifetime2, var21 + this.field_D + this.field_L, var22 + this.field_M + this.field_jb.field_u, var18, -1, this.field_cb);
+              this.field_jb.drawLeftAlpha(var23Lifetime2, var21 + this.field_D + this.field_L, var22 + this.field_M + this.field_jb.field_u, var18, -1, this.field_cb);
             } else {
               if (this.field_N == 1) {
                 this.field_jb.a(var23Lifetime2, var21 + this.field_D + this.field_L + (this.field_sb - this.field_L * 2) / 2, this.field_jb.field_u + (this.field_M + var22), var18, -1, this.field_cb);
@@ -559,7 +559,7 @@ class sna extends tf {
             var23_ref = (sna) (this.field_z.c(0));
           }
         }
-        dg.a(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
     final int b(int param0, int param1) {
@@ -642,19 +642,19 @@ class sna extends tf {
         param0 = param0 & this.field_u;
         this.field_hb = this.field_hb - var7Lifetime3;
         this.field_p = this.field_p + var7Lifetime3;
-        var8 = dg.field_f;
-        var9 = dg.field_j;
-        var10 = dg.field_h;
-        var11 = dg.field_k;
-        dg.c(this.field_D, this.field_M, this.field_sb + this.field_D, this.field_M + this.field_p);
+        var8 = SoftwareRasterizer.field_f;
+        var9 = SoftwareRasterizer.field_j;
+        var10 = SoftwareRasterizer.field_h;
+        var11 = SoftwareRasterizer.field_k;
+        SoftwareRasterizer.intersectClip(this.field_D, this.field_M, this.field_sb + this.field_D, this.field_M + this.field_p);
         var12 = param2 ? 1 : 0;
         if (!mu.field_k &&
           param0 &&
           lf.field_c != 0 &&
-          dg.field_f <= nfa.field_a &&
-          dg.field_h > nfa.field_a &&
-          jc.field_r >= dg.field_j &&
-          jc.field_r < dg.field_k) {
+          SoftwareRasterizer.field_f <= nfa.field_a &&
+          SoftwareRasterizer.field_h > nfa.field_a &&
+          jc.field_r >= SoftwareRasterizer.field_j &&
+          jc.field_r < SoftwareRasterizer.field_k) {
           var12 = 1;
           this.field_ib = lf.field_c;
           this.field_R = lf.field_c;
@@ -666,7 +666,7 @@ class sna extends tf {
             this.field_ib = 0;
           }
         }
-        stackIn_30_1 = (!on.field_x) && (dg.field_f <= mk.field_p) && (dg.field_h > mk.field_p) && (dg.field_j <= gd.field_m) && (gd.field_m < dg.field_k);
+        stackIn_30_1 = (!on.field_x) && (SoftwareRasterizer.field_f <= mk.field_p) && (SoftwareRasterizer.field_h > mk.field_p) && (SoftwareRasterizer.field_j <= gd.field_m) && (gd.field_m < SoftwareRasterizer.field_k);
         this.field_E = stackIn_30_1;
         if (fia.field_t == 0) {
           this.field_ib = 0;
@@ -686,7 +686,7 @@ class sna extends tf {
         if (this.field_E) {
           on.field_x = true;
         }
-        dg.a(var8, var9, var10, var11);
+        SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (this.field_ib != 0 &&
           this.field_ub) {
           this.field_rb = -param5 + (-this.field_S + gd.field_m);
@@ -756,7 +756,7 @@ class sna extends tf {
           this.field_rb = param3;
           this.field_kb = param2;
           this.field_p = param5;
-          this.field_c = param0;
+          this.key = param0;
           this.a(param1, 56);
           if (param6 != null) {
             this.field_Z = param6;
@@ -778,7 +778,7 @@ class sna extends tf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class vs {
     static boolean field_d;
-    static kv field_b;
+    static Sprite field_b;
     static boolean field_c;
     static String[] field_a;
 
@@ -52,7 +52,7 @@ final class vs {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

@@ -26,13 +26,13 @@ final class rda {
           var11 = param1;
           var12.field_a.a(var10, false, var8, var11, var9);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rda.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rda.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
     final static void a(int param0, boolean param1, boolean param2) {
         if (param2) {
-          dg.f(0, 0, dg.field_i, dg.field_c, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0, 192);
           pja.a((byte) 111, param2);
           if (param0 != 0) {
             rda.a(125, false, true);
@@ -40,7 +40,7 @@ final class rda {
           }
           return;
         }
-        dg.d();
+        SoftwareRasterizer.clear();
         pja.a((byte) 111, param2);
         if (param0 != 0) {
           rda.a(125, false, true);

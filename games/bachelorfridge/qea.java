@@ -24,17 +24,17 @@ abstract class qea {
         if (param0 < 0) {
           return;
         }
-        if (dg.field_i <= param0) {
+        if (SoftwareRasterizer.field_i <= param0) {
           return;
         }
         if (param1 < 0) {
           return;
         }
-        if (dg.field_c <= param1) {
+        if (SoftwareRasterizer.field_c <= param1) {
           return;
         }
         if (param2 == 255) {
-          dg.field_e[param0 + dg.field_i * param1] = param4;
+          SoftwareRasterizer.field_e[param0 + SoftwareRasterizer.field_i * param1] = param4;
           return;
         }
         if (param3 <= -95) {
@@ -42,12 +42,12 @@ abstract class qea {
           var6 = ((param4 & 16759249) >> 16) * param2;
           var7 = (255 & param4 >> 8) * param2;
           var8 = param2 * (255 & param4);
-          var9 = param0 + dg.field_i * param1;
-          var11 = ((65384 & dg.field_e[var9]) >> 8) * var5;
-          var10 = ((dg.field_e[var9] & 16765900) >> 16) * var5;
-          var12 = (255 & dg.field_e[var9]) * var5;
+          var9 = param0 + SoftwareRasterizer.field_i * param1;
+          var11 = ((65384 & SoftwareRasterizer.field_e[var9]) >> 8) * var5;
+          var10 = ((SoftwareRasterizer.field_e[var9] & 16765900) >> 16) * var5;
+          var12 = (255 & SoftwareRasterizer.field_e[var9]) * var5;
           var13 = (var8 + var12 >> 8) + ((var7 + var11 >> 8 << 8) + (var6 + var10 >> 8 << 16));
-          dg.field_e[var9] = var13;
+          SoftwareRasterizer.field_e[var9] = var13;
           return;
         }
     }

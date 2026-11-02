@@ -22,22 +22,22 @@ final class eha extends td {
         gea var6_ref_gea = null;
         int[] var7 = null;
         int var9 = 0;
-        pf var11 = null;
+        BitPacketBuffer var11 = null;
         int[] var12 = null;
         int[] var13 = null;
         var9 = BachelorFridge.field_y;
         try {
           var11 = ig.field_m;
-          var2 = var11.b(16711935);
+          var2 = var11.readUnsignedByte(16711935);
           var3 = -49 / ((param0 + 10) / 41);
-          var4 = var11.b(16711935);
+          var4 = var11.readUnsignedByte(16711935);
           if (var2 == 0) {
             var5 = (rg) (rp.field_C.b((byte) 90));
             if (var5 == null) {
               vc.a((byte) -124);
               return;
             }
-            var6 = dw.field_f - var11.field_g;
+            var6 = dw.field_f - var11.position;
             var13 = var5.field_g;
             var12 = var13;
             var7 = var12;
@@ -45,13 +45,13 @@ final class eha extends td {
               var6 = var13.length << 2;
             }
             for (var8 = 0; var6 > var8; var8++) {
-              var7[var8 >> 2] = var7[var8 >> 2] + (var11.b(16711935) << (dda.a(var8, 3) << 8));
+              var7[var8 >> 2] = var7[var8 >> 2] + (var11.readUnsignedByte(16711935) << (dda.a(var8, 3) << 8));
             }
-            var5.a(false);
+            var5.unlink(false);
             return;
           }
           if (var2 == 1) {
-            var5_int = var11.e(-4095);
+            var5_int = var11.readSignedSmart(-4095);
             var6_ref_gea = (gea) (wd.field_t.b((byte) 90));
             while (var6_ref_gea != null) {
               if (var6_ref_gea.field_i != var4 ||
@@ -65,7 +65,7 @@ final class eha extends td {
               vc.a((byte) -109);
               return;
             }
-            var6_ref_gea.a(false);
+            var6_ref_gea.unlink(false);
             return;
           }
           cv.a(1, "LR1: " + nia.d((byte) -116), (Throwable) null);
@@ -74,7 +74,7 @@ final class eha extends td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "eha.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "eha.B(" + param0 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class eha extends td {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -133,7 +133,7 @@ final class eha extends td {
           this.field_n = param3;
           this.field_k = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "eha.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "eha.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class eha extends td {
         try {
           if (param1 != null &&
             param1.length() >= bp.field_z &&
-            param1.length() <= ko.field_e) {
+            param1.length() <= IsaacRandom.field_e) {
             if (param0 != 15) {
               var3 = (java.applet.Applet) null;
               eha.a(13, (java.applet.Applet) null);
@@ -165,7 +165,7 @@ final class eha extends td {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -253,7 +253,7 @@ final class eha extends td {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
         }
     }
 

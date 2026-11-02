@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sb extends pu {
-    static ee[] field_l;
+    static IndexedSprite[] field_l;
     static sna field_n;
     static String[] field_m;
 
@@ -15,7 +15,7 @@ final class sb extends pu {
         field_m = null;
     }
 
-    final static void a(int param0, int param1, kv param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, Sprite param2, int param3, int param4, int param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -30,40 +30,40 @@ final class sb extends pu {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        kv var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;
         int[] var30 = null;
         var19 = BachelorFridge.field_y;
         try {
-          if (param0 < dg.field_f) {
-            param5 = param5 - (-param0 + dg.field_f);
-            param0 = dg.field_f;
+          if (param0 < SoftwareRasterizer.field_f) {
+            param5 = param5 - (-param0 + SoftwareRasterizer.field_f);
+            param0 = SoftwareRasterizer.field_f;
           }
-          if (dg.field_h < param5 + param0) {
-            param5 = dg.field_h - param0;
+          if (SoftwareRasterizer.field_h < param5 + param0) {
+            param5 = SoftwareRasterizer.field_h - param0;
           }
-          if (param4 < dg.field_j) {
-            param3 = param3 - (dg.field_j - param4);
-            param4 = dg.field_j;
+          if (param4 < SoftwareRasterizer.field_j) {
+            param3 = param3 - (SoftwareRasterizer.field_j - param4);
+            param4 = SoftwareRasterizer.field_j;
           }
-          if (dg.field_k < param3 + param4) {
-            param3 = -param4 + dg.field_k;
+          if (SoftwareRasterizer.field_k < param3 + param4) {
+            param3 = -param4 + SoftwareRasterizer.field_k;
           }
           if (param5 > 0 &&
             param3 > 0) {
-            var21 = param2.a();
-            var30 = dg.field_e;
-            var10 = dg.field_i;
-            var11 = dg.field_c;
+            var21 = param2.copy();
+            var30 = SoftwareRasterizer.field_e;
+            var10 = SoftwareRasterizer.field_i;
+            var11 = SoftwareRasterizer.field_c;
             var29 = new int[4];
-            dg.a(var29);
+            SoftwareRasterizer.saveClip(var29);
             param2.b();
             if (param7 <= 71) {
               return;
             }
-            dg.c(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param0 + param2.field_q * param4;
             var14 = param2.field_q - param5;
             var25 = var21.field_v;
@@ -80,15 +80,15 @@ final class sb extends pu {
                   var15[1 + var13] == 0 ||
                   !(var16 >= -1 + param2.field_p) &&
                   var15[param2.field_q + var13] == 0)) {
-                  dg.b(var17, var16, param1, param6);
+                  SoftwareRasterizer.fillCircle(var17, var16, param1, param6);
                 }
                 var13++;
               }
               var13 = var13 + var14;
             }
-            var21.e(-param2.field_t, -param2.field_u);
-            dg.a(var30, var10, var11);
-            dg.b(var29);
+            var21.draw(-param2.field_t, -param2.field_u);
+            SoftwareRasterizer.setTarget(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;
@@ -102,7 +102,7 @@ final class sb extends pu {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

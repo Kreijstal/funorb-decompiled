@@ -35,7 +35,7 @@ final class d extends lq implements lja {
           super.a(param0, param1, param2, param3);
           this.field_C.field_z = this.field_G.a(16728128).b(-19704) == cm.field_u ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "d.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "d.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -49,13 +49,13 @@ final class d extends lq implements lja {
         try {
           tba.a((byte) 103, this.field_G.j(-1), this.field_G.f((byte) 31), this.field_G.d((byte) 47));
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "d.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "d.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
         super.a((byte) 121, param1, param2, param3);
-        oc.field_l.c(gp.field_y, this.field_s + (param3 + 4), param1 - (-this.field_v + (-oc.field_l.field_u - 4)), 16777215, -1);
+        oc.field_l.drawText(gp.field_y, this.field_s + (param3 + 4), param1 - (-this.field_v + (-oc.field_l.field_u - 4)), 16777215, -1);
         int var5 = -15 % ((-20 - param0) / 54);
     }
 

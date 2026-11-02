@@ -28,7 +28,7 @@ final class hd extends oha {
           this.field_k = param4;
           this.field_n = param9;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class hd extends oha {
         return 2;
     }
 
-    final static byte[] a(byte[] param0, pf param1, byte param2, int param3) {
+    final static byte[] a(byte[] param0, BitPacketBuffer param1, byte param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -70,7 +70,7 @@ final class hd extends oha {
         RuntimeException var4 = null;
         var8 = BachelorFridge.field_y;
         try {
-          var4_int = param1.d(param3, (byte) -108);
+          var4_int = param1.readBits(param3, (byte) -108);
           if (0 == var4_int) {
             return null;
           }
@@ -78,15 +78,15 @@ final class hd extends oha {
             var4_int != param0.length) {
             param0 = new byte[var4_int];
           }
-          var5 = param1.d(3, (byte) 87);
-          var6 = (byte)param1.d(8, (byte) -117);
+          var5 = param1.readBits(3, (byte) 87);
+          var6 = (byte)param1.readBits(8, (byte) -117);
           if (param2 <= 89) {
             stackIn_10_0 = (byte[]) null;
             return stackIn_10_0;
           }
           if (0 < var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param0[var7] = (byte)(param1.d(var5, (byte) 48) + var6);
+              param0[var7] = (byte)(param1.readBits(var5, (byte) 48) + var6);
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
@@ -111,7 +111,7 @@ final class hd extends oha {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

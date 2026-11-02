@@ -3,7 +3,7 @@
  */
 final class rha {
     private StringBuilder field_c;
-    static kv[][] field_e;
+    static Sprite[][] field_e;
     static String field_d;
     private int field_b;
     private boolean field_a;
@@ -25,7 +25,7 @@ final class rha {
           this.field_a = false;
           return;
         }
-        field_e = (kv[][]) null;
+        field_e = (Sprite[][]) null;
         this.field_a = false;
     }
 
@@ -45,7 +45,7 @@ final class rha {
           this.a(true, param0);
           this.a(83);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -80,14 +80,14 @@ final class rha {
           var5 = (250 - ur.field_d << 8) / 50;
         }
         bu.a(0, rl.field_r);
-        jb.d();
-        dg.d();
+        TriangleRasterizer.d();
+        SoftwareRasterizer.clear();
         tc.b(-8144);
         if (var5 < 256) {
-          dg.f(0, 0, dg.field_i, dg.field_c, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0, -var5 + 256);
           db.b(110);
           if (ur.field_d < 150) {
-            rl.field_r.f(var3, var4);
+            rl.field_r.drawHalfSize(var3, var4);
           } else {
             nd.field_g.a(var3 + 15, var4 + 10, var5);
           }
@@ -96,13 +96,13 @@ final class rha {
             var6 < 50) {
             if (var6 < 20) {
               var7 = var6 * 256 / 20;
-              rg.field_j.d(var3, var4, var7);
+              rg.field_j.drawAdditive(var3, var4, var7);
             } else {
               if (30 > var6) {
-                rg.field_j.d(var3, var4, 256);
+                rg.field_j.drawAdditive(var3, var4, 256);
               } else {
                 var7 = (-(256 * var6) + 12800) / 20;
-                rg.field_j.d(var3, var4, var7);
+                rg.field_j.drawAdditive(var3, var4, var7);
               }
             }
           }
@@ -118,28 +118,28 @@ final class rha {
                   var7 = var6 * 256 / 20;
                 } else {
                   if (30 > var6) {
-                    rg.field_j.d(var3, var4, 256);
+                    rg.field_j.drawAdditive(var3, var4, 256);
                     break regionExit1;
                   }
                   var7 = (-(256 * var6) + 12800) / 20;
                 }
-                rg.field_j.d(var3, var4, var7);
+                rg.field_j.drawAdditive(var3, var4, var7);
               }
             }
           } else {
-            rl.field_r.f(var3, var4);
+            rl.field_r.drawHalfSize(var3, var4);
             var6 = ur.field_d - 125;
             if (var6 > 0 &&
               var6 < 50) {
               if (var6 < 20) {
                 var7 = var6 * 256 / 20;
-                rg.field_j.d(var3, var4, var7);
+                rg.field_j.drawAdditive(var3, var4, var7);
               } else {
                 if (30 <= var6) {
                   var7 = (-(256 * var6) + 12800) / 20;
-                  rg.field_j.d(var3, var4, var7);
+                  rg.field_j.drawAdditive(var3, var4, var7);
                 } else {
-                  rg.field_j.d(var3, var4, 256);
+                  rg.field_j.drawAdditive(var3, var4, 256);
                 }
               }
             }
@@ -169,28 +169,28 @@ final class rha {
           }
           discarded$0 = this.field_c.append(param1.toString());
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void c(int param0) {
-        field_e = (kv[][]) null;
+        field_e = (Sprite[][]) null;
         field_d = null;
         int var1 = -18 % ((40 - param0) / 37);
     }
 
-    final static void a(rk param0, lu param1, byte param2) {
+    final static void a(rk param0, PacketBuffer param1, byte param2) {
         if (param2 >= -61) {
-          field_e = (kv[][]) null;
+          field_e = (Sprite[][]) null;
         }
         if (param0 == null) {
-          param1.d(-1, 0);
+          param1.writeByte(-1, 0);
           return;
         }
         try {
           param0.a((byte) -59, param1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "rha.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "rha.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

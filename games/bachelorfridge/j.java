@@ -6,7 +6,7 @@ final class j extends bca {
     int field_r;
     int field_s;
 
-    j(lu param0) {
+    j(PacketBuffer param0) {
         super(param0);
         int var3 = 0;
         int var2_int = 0;
@@ -16,9 +16,9 @@ final class j extends bca {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_k = param0.e((byte) 85);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 85);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int >= 0) {
@@ -27,11 +27,11 @@ final class j extends bca {
             }
             break;
           }
-          this.field_r = param0.b(16711935);
-          this.field_s = param0.b(16711935);
+          this.field_r = param0.readUnsignedByte(16711935);
+          this.field_s = param0.readUnsignedByte(16711935);
           this.field_q = new int[this.field_o.g(0)];
           for (var3 = 0; this.field_q.length > var3; var3++) {
-            this.field_q[var3] = param0.b(16711935);
+            this.field_q[var3] = param0.readUnsignedByte(16711935);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,11 +44,11 @@ final class j extends bca {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var4 = 0;
         int[] var3 = null;
         RuntimeException var3_ref = null;
@@ -62,13 +62,13 @@ final class j extends bca {
         var6 = BachelorFridge.field_y;
         try {
           super.a((byte) -63, param1);
-          param1.d(this.field_r, 0);
-          param1.d(this.field_s, 0);
+          param1.writeByte(this.field_r, 0);
+          param1.writeByte(this.field_s, 0);
           var7 = this.field_q;
           var3 = var7;
           for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            param1.d(var5, 0);
+            param1.writeByte(var5, 0);
           }
           if (param0 <= -12) {
             return;
@@ -85,7 +85,7 @@ final class j extends bca {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class j extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class j extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class j extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -250,7 +250,7 @@ final class j extends bca {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

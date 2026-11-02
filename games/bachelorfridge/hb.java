@@ -4,7 +4,7 @@
 final class hb extends aba {
     private lka field_h;
     static String field_g;
-    static ee[] field_k;
+    static IndexedSprite[] field_k;
     static String field_i;
     static boolean field_j;
 
@@ -167,7 +167,7 @@ final class hb extends aba {
                 wg.field_i[var12].a(-param2 + var7Lifetime1 - param2, 31407, param0, var9, param2);
                 bda.field_m[var12].a(var7Lifetime1 + (-param2 - param2), 31407, var8 - param1 - var10, var10, param2);
               } else {
-                kg.field_a.a(var7Lifetime1, 31407, var8, var6_int, var13);
+                FullscreenFocusCanvas.field_a.a(var7Lifetime1, 31407, var8, var6_int, var13);
               }
             }
           }
@@ -178,7 +178,7 @@ final class hb extends aba {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var6), "hb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) var6), "hb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ final class hb extends aba {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ final class hb extends aba {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -276,7 +276,7 @@ final class hb extends aba {
         try {
           this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

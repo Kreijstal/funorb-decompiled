@@ -59,7 +59,7 @@ final class ek extends at {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class ek extends at {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -163,17 +163,17 @@ final class ek extends at {
         field_m = null;
     }
 
-    final static kv[] a(byte param0, int[] param1) {
-        kv[] var2 = null;
+    final static Sprite[] a(byte param0, int[] param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        kv[] var3 = null;
-        kv[] stackIn_3_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new kv[14];
+          var3 = new Sprite[14];
           var2 = var3;
           var3[1] = wo.field_k[1][param1[1]];
           var3[0] = wo.field_k[0][param1[0]];
@@ -204,7 +204,7 @@ final class ek extends at {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

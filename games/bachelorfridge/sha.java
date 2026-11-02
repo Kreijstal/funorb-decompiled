@@ -6,7 +6,7 @@ final class sha extends pu {
     static int field_m;
 
     final static void a(vr param0, boolean param1) {
-        kv var2 = new kv(param0.a((byte) 123, "", "final_frame.jpg"), (java.awt.Component) ((Object) dca.field_y));
+        Sprite var2 = new Sprite(param0.a((byte) 123, "", "final_frame.jpg"), (java.awt.Component) ((Object) dca.field_y));
         int var3 = var2.field_q;
         int var4 = var2.field_p;
         if (param1) {
@@ -14,16 +14,16 @@ final class sha extends pu {
         }
         try {
           uc.d(76);
-          nd.field_g = new kv(var3, 3 * var4 / 4);
+          nd.field_g = new Sprite(var3, 3 * var4 / 4);
           nd.field_g.b();
           var2.c(0, 0);
-          lt.field_a = new kv(var3, var4 - nd.field_g.field_p);
+          lt.field_a = new Sprite(var3, var4 - nd.field_g.field_p);
           lt.field_a.b();
           var2.c(0, -nd.field_g.field_p);
           lt.field_a.field_u = nd.field_g.field_p;
           db.b(99);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class sha extends pu {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

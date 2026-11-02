@@ -12,7 +12,7 @@ final class lv extends iha {
         aj var5 = null;
         mw var6 = null;
         int var7 = BachelorFridge.field_y;
-        qm.a(37, 7758);
+        RasterBuffer.a(37, 7758);
         aj[] var8 = this.field_n;
         aj[] var2 = var8;
         int var3 = -71 % ((param0 - 71) / 47);
@@ -76,7 +76,7 @@ final class lv extends iha {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

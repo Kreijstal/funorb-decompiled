@@ -6,7 +6,7 @@ final class nea extends sna {
     String field_Cb;
     String field_Ab;
     sna field_Db;
-    static ee[] field_Bb;
+    static IndexedSprite[] field_Bb;
     int field_wb;
     String field_vb;
     static sna field_yb;

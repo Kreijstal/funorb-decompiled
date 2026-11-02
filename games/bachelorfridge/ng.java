@@ -4,15 +4,15 @@
 final class ng {
     private jj[] field_g;
     private gj field_m;
-    static js field_f;
+    static IntrusiveNodeHashTable field_f;
     private sna field_j;
     static sna field_e;
-    private kv field_k;
+    private Sprite field_k;
     private jj field_i;
     sna field_l;
     static String field_n;
     private int field_c;
-    static kv field_a;
+    static Sprite field_a;
     private jj field_h;
     private int[] field_b;
     private sna field_d;
@@ -23,7 +23,7 @@ final class ng {
         field_a = null;
         field_e = null;
         if (param0 != -621) {
-          field_f = (js) null;
+          field_f = (IntrusiveNodeHashTable) null;
         }
         field_n = null;
     }
@@ -154,18 +154,18 @@ final class ng {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
     final static boolean a(byte param0) {
-        lu var2;
+        PacketBuffer var2;
         boolean stackIn_7_0 = false;
         if (param0 != -24) {
-          var2 = (lu) null;
-          ng.a((op) null, 101, (lu) null);
+          var2 = (PacketBuffer) null;
+          ng.a((op) null, 101, (PacketBuffer) null);
         }
-        stackIn_7_0 = (bp.e(-29919)) || !(dm.field_f > 0);
+        stackIn_7_0 = (bp.e(-29919)) || !(ProxySocketConnector.field_f > 0);
         return stackIn_7_0;
     }
 
@@ -191,12 +191,12 @@ final class ng {
     }
 
     final void a(int param0, int param1, int param2) {
-        kv stackIn_44_0;
+        Sprite stackIn_44_0;
         int stackIn_44_1;
         int stackIn_44_2;
         int[] stackIn_44_3;
         int stackIn_45_4;
-        kv stackIn_48_0;
+        Sprite stackIn_48_0;
         int stackIn_48_1;
         int stackIn_48_2;
         int[] stackIn_48_3;
@@ -328,7 +328,7 @@ final class ng {
                     } else {
                       stackIn_49_4 = this.field_m.field_L % 128;
                     }
-                    ((kv) (Object) stackIn_48_0).e(stackIn_48_1, stackIn_48_2, stackIn_48_3[stackIn_49_4]);
+                    ((Sprite) (Object) stackIn_48_0).e(stackIn_48_1, stackIn_48_2, stackIn_48_3[stackIn_49_4]);
                   } else {
                     stackIn_44_0 = bfa.field_b[var8.field_xb];
                     stackIn_44_1 = var8.field_kb + this.field_d.field_kb - 10;
@@ -339,7 +339,7 @@ final class ng {
                     } else {
                       stackIn_45_4 = this.field_m.field_L % 128;
                     }
-                    ((kv) (Object) stackIn_44_0).e(stackIn_44_1, stackIn_44_2, stackIn_44_3[stackIn_45_4]);
+                    ((Sprite) (Object) stackIn_44_0).e(stackIn_44_1, stackIn_44_2, stackIn_44_3[stackIn_45_4]);
                   }
                 } else {
                   if (var8.field_xb <= 2) {
@@ -364,7 +364,7 @@ final class ng {
               boolean decompiledFrameRemainder0 = true;
               var24 = al.a(-95, var8.field_zb);
               var27 = var24;
-              dg.b(11 + var8.field_kb + this.field_d.field_kb, 11 + var8.field_rb + this.field_d.field_rb, 15, 65793);
+              SoftwareRasterizer.fillCircle(11 + var8.field_kb + this.field_d.field_kb, 11 + var8.field_rb + this.field_d.field_rb, 15, 65793);
               if (!(var27 instanceof tv)) {
                 if (var27 instanceof hd) {
                   if ((var10 == null ||
@@ -490,11 +490,11 @@ final class ng {
                   var14_int = var25.field_s.b(var8.field_zb, (byte) -110);
                   var15_int = -var25.field_s.field_K[var14_int] + var13_ref_oha.field_g;
                   if (var15_int != -2) {
-                    ad.field_h.c(Integer.toString(var15_int), 2 + (this.field_d.field_kb + var8.field_kb), var8.field_rb + this.field_d.field_rb + 20, 2, -1);
+                    ad.field_h.drawText(Integer.toString(var15_int), 2 + (this.field_d.field_kb + var8.field_kb), var8.field_rb + this.field_d.field_rb + 20, 2, -1);
                   }
                 }
-                dg.d(this.field_d.field_kb + var8.field_kb, this.field_d.field_rb + var8.field_rb, (var8.field_sb >> 1) + var8.field_kb + this.field_d.field_kb + 6, 6 + (var8.field_rb + this.field_d.field_rb) + (var8.field_p >> 1), 65793, 4);
-                dg.d(this.field_d.field_kb + var8.field_kb + 1, 1 + (this.field_d.field_rb + var8.field_rb), 5 + ((var8.field_sb >> 1) + var8.field_kb + this.field_d.field_kb), 5 + (var8.field_p >> 1) + (var8.field_rb + this.field_d.field_rb), 16711680, 2);
+                SoftwareRasterizer.d(this.field_d.field_kb + var8.field_kb, this.field_d.field_rb + var8.field_rb, (var8.field_sb >> 1) + var8.field_kb + this.field_d.field_kb + 6, 6 + (var8.field_rb + this.field_d.field_rb) + (var8.field_p >> 1), 65793, 4);
+                SoftwareRasterizer.d(this.field_d.field_kb + var8.field_kb + 1, 1 + (this.field_d.field_rb + var8.field_rb), 5 + ((var8.field_sb >> 1) + var8.field_kb + this.field_d.field_kb), 5 + (var8.field_p >> 1) + (var8.field_rb + this.field_d.field_rb), 16711680, 2);
               }
               var8 = (jj) (this.field_d.field_z.c(0));
             }
@@ -539,13 +539,13 @@ final class ng {
                 if (var15_int + var13 > 620) {
                   var13 = var13 + (-20 - var15_int - (var13 - 640));
                 }
-                var16 = ad.field_h.a(var29, 200, 0) + (ad.field_h.field_F << 1);
+                var16 = ad.field_h.measureWrappedHeight(var29, 200, 0) + (ad.field_h.field_F << 1);
                 if (var16 + var14_int > i.field_a.field_rb) {
                   var14_int = var14_int + (-var14_int - var16 + i.field_a.field_rb);
                 }
-                dg.a(13 + var13, var14_int, var15_int + 6, var16, 10, 65793, 128);
-                ad.field_h.c(var30, var13 + 20, var14_int + 16, 0, -1);
-                ad.field_h.a(var29, var13 + 20, 20 + var14_int, 200, 200, 0, -1, 0, 0, 0);
+                SoftwareRasterizer.a(13 + var13, var14_int, var15_int + 6, var16, 10, 65793, 128);
+                ad.field_h.drawText(var30, var13 + 20, var14_int + 16, 0, -1);
+                ad.field_h.drawParagraph(var29, var13 + 20, 20 + var14_int, 200, 200, 0, -1, 0, 0, 0);
               }
               if (this.field_h.field_vb > 50 &&
                 this.field_h.field_T &&
@@ -561,7 +561,7 @@ final class ng {
                 if (var17 + var12 > 620) {
                   var12 = var12 + (-var17 - var12 + 620);
                 }
-                stackIn_203_0 = ad.field_h.a(var15, 200, 10);
+                stackIn_203_0 = ad.field_h.measureWrappedHeight(var15, 200, 10);
                 stackIn_203_1 = ad.field_h.field_F;
                 if (var16 == 0) {
                   stackIn_204_2 = 1;
@@ -572,10 +572,10 @@ final class ng {
                 if (i.field_a.field_rb < var13 + var18) {
                   var13 = var13 + (i.field_a.field_rb - var13 - var18);
                 }
-                dg.a(var12 + 13, var13, 6 + var17, var18, 10, 65793, 164);
-                ad.field_h.c(var14, 20 + var12, var13 + 20, 0, -1);
-                ad.field_h.a(var15, 20 + var12, var13 + 24, 200, 200, 0, -1, 0, 0, 10);
-                var19 = ad.field_h.a(var15, 200, 8);
+                SoftwareRasterizer.a(var12 + 13, var13, 6 + var17, var18, 10, 65793, 164);
+                ad.field_h.drawText(var14, 20 + var12, var13 + 20, 0, -1);
+                ad.field_h.drawParagraph(var15, 20 + var12, var13 + 24, 200, 200, 0, -1, 0, 0, 10);
+                var19 = ad.field_h.measureWrappedHeight(var15, 200, 8);
                 if (var16 != 0) {
                   var20 = ((t) (var31)).field_q;
                   var21 = ((t) (var31)).field_u;
@@ -587,7 +587,7 @@ final class ng {
                   if (var20 >= 0) {
                     var20 = (int)((double)var20 * it.field_c[var25.field_s.field_k[var22]] / 100.0);
                   }
-                  ad.field_h.c("Damage " + var20, 20 + var12, var19 + 48 + var13, 0, -1);
+                  ad.field_h.drawText("Damage " + var20, 20 + var12, var19 + 48 + var13, 0, -1);
                   if (var21 != 0) {
                     ad.field_h.b("Status effect " + kna.field_g[var21], var12 + (var17 + 10), 44 + (var13 + var19), 0, -1);
                   }
@@ -720,7 +720,7 @@ final class ng {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -747,7 +747,7 @@ final class ng {
         }
     }
 
-    final static aga a(op param0, int param1, lu param2) {
+    final static aga a(op param0, int param1, PacketBuffer param2) {
         int var5 = 0;
         aga stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
@@ -769,26 +769,26 @@ final class ng {
             return null;
           }
           var4 = new aga(var7, param0, -1, -1);
-          var4.field_I = param2.e((byte) 54);
-          var4.field_t = param2.e((byte) 109);
-          var4.field_D = param2.b(16711935);
-          var4.field_u = param2.b(param1 + 16711986);
-          var4.field_F = param2.b(param1 + 16711986);
-          var4.field_x = param2.b(param1 ^ -16711886);
-          var4.field_J = param2.b(16711935);
-          var4.field_s = param2.b(16711935);
-          var4.field_y = param2.b(16711935);
-          var4.field_C = param2.b(16711935);
-          var4.field_E = param2.b(16711935);
+          var4.field_I = param2.readUnsignedShort((byte) 54);
+          var4.field_t = param2.readUnsignedShort((byte) 109);
+          var4.field_D = param2.readUnsignedByte(16711935);
+          var4.field_u = param2.readUnsignedByte(param1 + 16711986);
+          var4.field_F = param2.readUnsignedByte(param1 + 16711986);
+          var4.field_x = param2.readUnsignedByte(param1 ^ -16711886);
+          var4.field_J = param2.readUnsignedByte(16711935);
+          var4.field_s = param2.readUnsignedByte(16711935);
+          var4.field_y = param2.readUnsignedByte(16711935);
+          var4.field_C = param2.readUnsignedByte(16711935);
+          var4.field_E = param2.readUnsignedByte(16711935);
           if (param1 != -51) {
             ng.a((byte) 43);
           }
           for (var5 = 0; 5 > var5; var5++) {
             var4.field_K[var5] = param2.b(true);
           }
-          var4.field_H = param2.b(16711935);
+          var4.field_H = param2.readUnsignedByte(16711935);
           stackIn_11_0 = var4;
-          stackIn_12_1 = (param2.b(16711935) == 1);
+          stackIn_12_1 = (param2.readUnsignedByte(16711935) == 1);
           stackIn_11_0.field_A = stackIn_12_1;
           if (!var4.i(param1 ^ -100)) {
             param0.field_a[var4.field_x][var4.field_J].field_l = var4;
@@ -812,7 +812,7 @@ final class ng {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -820,7 +820,7 @@ final class ng {
         int stackIn_39_0 = 0;
         int stackIn_44_0 = 0;
         jj stackIn_52_0 = null;
-        kv stackIn_53_1 = null;
+        Sprite stackIn_53_1 = null;
         jj stackIn_55_0 = null;
         boolean stackIn_56_1 = false;
         double var7;
@@ -960,9 +960,9 @@ final class ng {
             this.field_o[var3_int] = var3_int * 65793;
           }
           this.field_b = a.a(12889, 64, 16763049, 46335);
-          this.field_k = new kv(84, 84);
+          this.field_k = new Sprite(84, 84);
           this.field_k.b();
-          dg.a(672, 672, 672, 128, this.field_o);
+          SoftwareRasterizer.a(672, 672, 672, 128, this.field_o);
           hga.field_U.a((byte) 114);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -981,7 +981,7 @@ final class ng {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

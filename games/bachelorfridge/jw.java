@@ -4,7 +4,7 @@
 final class jw extends ana {
     private fia field_w;
     static String field_x;
-    static kv[] field_v;
+    static Sprite[] field_v;
 
     public static void d(int param0) {
         field_x = null;
@@ -77,7 +77,7 @@ final class jw extends ana {
         try {
           this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

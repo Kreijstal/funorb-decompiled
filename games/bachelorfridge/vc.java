@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vc {
-    static kv[] field_d;
+    static Sprite[] field_d;
     static int field_a;
     static String field_f;
     static String field_b;

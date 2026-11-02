@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kc implements Runnable {
-    volatile pb[] field_b;
-    ht field_c;
+    volatile AudioOutput[] field_b;
+    PlatformTaskDispatcher field_c;
     volatile boolean field_e;
     static String field_a;
     volatile boolean field_d;
 
     public final void run() {
         int var1_int = 0;
-        pb var2 = null;
+        AudioOutput var2 = null;
         int var4 = BachelorFridge.field_y;
         this.field_d = true;
         try {
@@ -42,7 +42,7 @@ final class kc implements Runnable {
     }
 
     kc() {
-        this.field_b = new pb[2];
+        this.field_b = new AudioOutput[2];
         this.field_e = false;
         this.field_d = false;
     }

@@ -6,7 +6,7 @@ final class st {
     static lda field_b;
     static String field_e;
     static int[] field_a;
-    static kv field_c;
+    static Sprite field_c;
     private static String field_z;
 
     public static void a(byte param0) {

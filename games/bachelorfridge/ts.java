@@ -13,11 +13,11 @@ final class ts extends td {
         try {
           this.field_j = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ts.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ts.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static java.awt.Frame a(int param0, ht param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_7_0 = null;
         Object stackIn_27_0 = null;
@@ -33,7 +33,7 @@ final class ts extends td {
         java.awt.Frame var7 = null;
         int var9 = 0;
         lba[] var10 = null;
-        eh var11 = null;
+        PlatformTask var11 = null;
         var9 = BachelorFridge.field_y;
         try {
           if (!param1.b(34)) {
@@ -87,7 +87,7 @@ final class ts extends td {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -141,7 +141,7 @@ final class ts extends td {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wja extends pu {
-    static wma field_m;
-    static kv field_l;
+    static DualLinkNodeHashTable field_m;
+    static Sprite field_l;
     static String field_n;
 
     public static void d(byte param0) {

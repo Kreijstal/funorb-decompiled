@@ -15,7 +15,7 @@ abstract class vf extends vd {
           this.field_E = 0;
           this.field_C = false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -92,9 +92,9 @@ abstract class vf extends vd {
           return;
         }
         if (null == lfa.field_u) {
-          lfa.field_u = new kv(this.field_p, this.field_q);
+          lfa.field_u = new Sprite(this.field_p, this.field_q);
           bu.a(0, lfa.field_u);
-          dg.d();
+          SoftwareRasterizer.clear();
           var5 = 42 % ((-20 - param0) / 54);
           this.a(0, (byte) -109, 0);
           super.a((byte) 43, -this.field_v - param1, param2, -param3 - this.field_s);
@@ -103,9 +103,9 @@ abstract class vf extends vd {
           return;
         }
         if (this.field_p > lfa.field_u.field_q) {
-          lfa.field_u = new kv(this.field_p, this.field_q);
+          lfa.field_u = new Sprite(this.field_p, this.field_q);
           bu.a(0, lfa.field_u);
-          dg.d();
+          SoftwareRasterizer.clear();
           var5Lifetime1 = 42 % ((-20 - param0) / 54);
           this.a(0, (byte) -109, 0);
           super.a((byte) 43, -this.field_v - param1, param2, -param3 - this.field_s);
@@ -114,9 +114,9 @@ abstract class vf extends vd {
           return;
         }
         if (this.field_q > lfa.field_u.field_p) {
-          lfa.field_u = new kv(this.field_p, this.field_q);
+          lfa.field_u = new Sprite(this.field_p, this.field_q);
           bu.a(0, lfa.field_u);
-          dg.d();
+          SoftwareRasterizer.clear();
           var5Lifetime2 = 42 % ((-20 - param0) / 54);
           this.a(0, (byte) -109, 0);
           super.a((byte) 43, -this.field_v - param1, param2, -param3 - this.field_s);
@@ -125,7 +125,7 @@ abstract class vf extends vd {
           return;
         }
         bu.a(0, lfa.field_u);
-        dg.d();
+        SoftwareRasterizer.clear();
         var5Lifetime3 = 42 % ((-20 - param0) / 54);
         this.a(0, (byte) -109, 0);
         super.a((byte) 43, -this.field_v - param1, param2, -param3 - this.field_s);
@@ -140,7 +140,7 @@ abstract class vf extends vd {
           ija.a((byte) 105, var6);
           int var7 = -6 / ((70 - param2) / 45);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vf.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vf.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

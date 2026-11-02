@@ -20,12 +20,12 @@ abstract class vo {
           field_c = null;
           return;
         }
-        lu var2 = (lu) null;
-        vo.a(-98, (lu) null);
+        PacketBuffer var2 = (PacketBuffer) null;
+        vo.a(-98, (PacketBuffer) null);
         field_c = null;
     }
 
-    final static pp a(int param0, lu param1) {
+    final static pp a(int param0, PacketBuffer param1) {
         nq var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -37,7 +37,7 @@ abstract class vo {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = qi.a(param1, (byte) 96);
-          var3 = param1.c((byte) -85);
+          var3 = param1.readSignedShort((byte) -85);
           if (param0 > -37) {
             vo.a((byte) 104);
           }
@@ -54,7 +54,7 @@ abstract class vo {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

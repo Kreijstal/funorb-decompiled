@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class od extends ana {
-    static ee field_C;
+    static IndexedSprite field_C;
     static int[][] field_A;
-    static kv field_B;
+    static Sprite field_B;
     static hja[] field_w;
     private me field_y;
     private boolean field_x;
@@ -18,7 +18,7 @@ final class od extends ana {
           this.field_x = param2 ? true : false;
           this.field_y = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -52,10 +52,10 @@ final class od extends ana {
           if (param2) {
             od.e((byte) 9);
           }
-          eaa.field_a = param0;
+          IntrusiveDeque.field_a = param0;
           lna.field_q = true;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "od.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "od.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -72,14 +72,14 @@ final class od extends ana {
 
     final static void a(long param0, int param1, int param2) {
         int var5 = 0;
-        pf var4 = sja.field_fb;
+        BitPacketBuffer var4 = sja.field_fb;
         if (param2 == 2) {
-          var4.c(param1, (byte) 100);
-          var4.field_g = var4.field_g + 1;
-          var5 = var4.field_g;
-          var4.d(7, 0);
-          var4.b(param2 ^ 1686281210, param0);
-          var4.b((byte) 89, -var5 + var4.field_g);
+          var4.writeCipheredByte(param1, (byte) 100);
+          var4.position = var4.position + 1;
+          var5 = var4.position;
+          var4.writeByte(7, 0);
+          var4.writeLong(param2 ^ 1686281210, param0);
+          var4.writeLengthByte((byte) 89, -var5 + var4.position);
           return;
         }
     }
@@ -103,7 +103,7 @@ final class od extends ana {
             var3 = (String) null;
             od.a(-51L, (String) null, true);
           }
-          stackIn_3_0 = ko.field_g.a((byte) 123, param0, "");
+          stackIn_3_0 = IsaacRandom.field_g.a((byte) 123, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -115,7 +115,7 @@ final class od extends ana {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class od extends ana {
         if (this.field_x) {
           return true;
         }
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
         int fieldTemp$0 = this.field_l - 1;

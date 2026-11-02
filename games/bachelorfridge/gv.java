@@ -4,8 +4,8 @@
 final class gv extends kj {
     private int field_f;
 
-    final static void a(int param0, ht param1, java.awt.Frame param2) {
-        eh var3 = null;
+    final static void a(int param0, PlatformTaskDispatcher param1, java.awt.Frame param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -49,7 +49,7 @@ final class gv extends kj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

@@ -4,7 +4,7 @@
 final class fi extends jm {
     static vr field_n;
     static String field_o;
-    static js field_m;
+    static IntrusiveNodeHashTable field_m;
     private int field_q;
     static byte[] field_p;
     private int field_r;
@@ -14,12 +14,12 @@ final class fi extends jm {
         field_m = null;
         field_p = null;
         if (param0 != -80) {
-          field_m = (js) null;
+          field_m = (IntrusiveNodeHashTable) null;
         }
         field_o = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, kv param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int[] param16) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int[] param16) {
         int stackIn_66_0 = 0;
         int stackIn_72_0 = 0;
         int stackIn_80_0 = 0;
@@ -226,18 +226,18 @@ final class fi extends jm {
             var35 = var35 >> 4;
             var34 = 15 + var34 >> 4;
             var33 = var33 >> 4;
-            if (dg.field_f > var33) {
-              var33 = dg.field_f;
+            if (SoftwareRasterizer.field_f > var33) {
+              var33 = SoftwareRasterizer.field_f;
             }
-            if (dg.field_h < var34) {
-              var34 = dg.field_h;
+            if (SoftwareRasterizer.field_h < var34) {
+              var34 = SoftwareRasterizer.field_h;
             }
-            if (dg.field_j > var35) {
-              var35 = dg.field_j;
+            if (SoftwareRasterizer.field_j > var35) {
+              var35 = SoftwareRasterizer.field_j;
             }
             var36 = var36 + 15 >> 4;
-            if (var36 > dg.field_k) {
-              var36 = dg.field_k;
+            if (var36 > SoftwareRasterizer.field_k) {
+              var36 = SoftwareRasterizer.field_k;
             }
             var34 = var33 - var34;
             if (var34 >= 0) {
@@ -248,8 +248,8 @@ final class fi extends jm {
             if (var36 >= 0) {
               return;
             }
-            param12 = var35 * dg.field_i + var33;
-            param15 = dg.field_i + var34;
+            param12 = var35 * SoftwareRasterizer.field_i + var33;
+            param15 = SoftwareRasterizer.field_i + var34;
             var38 = 16777216.0 / (double)param10;
             var21Lifetime1 = (int)Math.floor(0.5 + var38 * Math.sin(var19));
             var40 = 16777216.0 / (double)param14;
@@ -799,7 +799,7 @@ final class fi extends jm {
           } else {
             stackIn_240_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_233_0), ((StringBuilder) (Object) stackIn_239_1).append(stackIn_240_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_233_0), ((StringBuilder) (Object) stackIn_239_1).append(stackIn_240_2).append(')').toString());
         }
     }
 
@@ -858,7 +858,7 @@ final class fi extends jm {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -876,17 +876,17 @@ final class fi extends jm {
           dupTemp$0 = param1.field_a[this.field_r][this.field_q];
           dupTemp$0.field_j = dupTemp$0.field_j + 1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(lu param0, byte param1) {
+    final void b(PacketBuffer param0, byte param1) {
         try {
-          param0.d(this.field_r, 0);
-          param0.d(this.field_q, 0);
+          param0.writeByte(this.field_r, 0);
+          param0.writeByte(this.field_q, 0);
           int var3_int = 20 / ((37 - param1) / 38);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fi.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -903,7 +903,7 @@ final class fi extends jm {
           ((kj) ((Object) var4)).a(0);
           var3.field_s.field_F = 0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -913,13 +913,13 @@ final class fi extends jm {
         this.field_r = param0;
     }
 
-    fi(lu param0) {
+    fi(PacketBuffer param0) {
         try {
           this.field_j = 4;
-          this.field_r = param0.b(16711935);
-          this.field_q = param0.b(16711935);
+          this.field_r = param0.readUnsignedByte(16711935);
+          this.field_q = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

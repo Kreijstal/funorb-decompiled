@@ -5,16 +5,16 @@ import java.util.*;
 
 final class id extends pn {
     static String field_g;
-    static kv field_h;
+    static Sprite field_h;
     static String field_j;
-    static js field_i;
+    static IntrusiveNodeHashTable field_i;
 
     id(vr param0) {
         try {
           this.field_b = bla.a(29611, "basic", "tiles_pizza", param0);
           this.a(128);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,14 +30,14 @@ final class id extends pn {
           int var2_int = -125 % ((-18 - param0) / 55);
           saa.field_a.b(param1.field_i);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "id.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "id.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void a(int param0) {
-        this.field_a = new kv[4];
-        kv var6 = new kv(384, 192);
-        kv var2 = var6;
+        this.field_a = new Sprite[4];
+        Sprite var6 = new Sprite(384, 192);
+        Sprite var2 = var6;
         var6.b();
         this.field_b[48].a(64, 32);
         this.field_b[49].a(0, 64);
@@ -45,7 +45,7 @@ final class id extends pn {
         this.field_b[8].a(64, 96);
         this.field_b[1].a(192, 96);
         this.field_a[0] = var6;
-        kv var3 = new kv(384, 192);
+        Sprite var3 = new Sprite(384, 192);
         var3.b();
         this.field_b[49].a(128, 0);
         this.field_b[49].a(64, 32);
@@ -56,7 +56,7 @@ final class id extends pn {
         this.field_b[24].a(192, 96);
         this.field_b[41].a(128, param0);
         this.field_a[1] = var3;
-        kv var4 = new kv(384, 192);
+        Sprite var4 = new Sprite(384, 192);
         var4.b();
         this.field_b[6].a(64, 32);
         this.field_b[7].a(128, 64);
@@ -64,7 +64,7 @@ final class id extends pn {
         this.field_b[32].a(192, 96);
         this.field_b[33].a(128, 128);
         this.field_a[3] = var4;
-        kv var5 = new kv(384, 192);
+        Sprite var5 = new Sprite(384, 192);
         var5.b();
         this.field_b[29].a(64, 32);
         this.field_b[21].a(192, 32);
@@ -81,23 +81,23 @@ final class id extends pn {
         field_i = null;
         field_g = null;
         if (param0 != 35) {
-          field_i = (js) null;
+          field_i = (IntrusiveNodeHashTable) null;
         }
         field_h = null;
         field_j = null;
     }
 
     final static void a(vr param0, int param1) {
-        dv var2 = null;
+        VorbisSample var2 = null;
         try {
-          dv.b(param0.a((byte) 123, "", "headers.packvorbis"));
+          VorbisSample.b(param0.a((byte) 123, "", "headers.packvorbis"));
           if (param1 != 64) {
             id.b(-45);
           }
-          var2 = dv.a(param0, "jagex logo2.packvorbis", "");
-          var2.b();
+          var2 = VorbisSample.a(param0, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "id.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "id.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -168,13 +168,13 @@ final class id extends pn {
             }
           }
           var12 = param0.a(0, (byte) -90, 0);
-          this.field_a[0].e(var12.field_c - 128, -128 + var12.field_a);
+          this.field_a[0].draw(var12.field_c - 128, -128 + var12.field_a);
           var13 = param0.a(0, (byte) 98, param0.field_a);
-          this.field_a[3].e(var13.field_c - 64, -128 + (var13.field_a + 32));
+          this.field_a[3].draw(var13.field_c - 64, -128 + (var13.field_a + 32));
           var14 = param0.a(param0.field_z, (byte) 35, param0.field_a);
-          this.field_a[2].e(-128 + var14.field_c, -64 + var14.field_a);
+          this.field_a[2].draw(-128 + var14.field_c, -64 + var14.field_a);
           var15 = param0.a(param0.field_z, (byte) -98, 0);
-          this.field_a[1].e(-192 + var15.field_c, 32 + (-128 + var15.field_a));
+          this.field_a[1].draw(-192 + var15.field_c, 32 + (-128 + var15.field_a));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -186,7 +186,7 @@ final class id extends pn {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
         }
     }
 

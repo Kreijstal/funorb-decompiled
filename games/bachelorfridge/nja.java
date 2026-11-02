@@ -82,7 +82,7 @@ final class nja {
         }
     }
 
-    final static kv a(boolean param0) {
+    final static Sprite a(boolean param0) {
         int var5_int = 0;
         int var6 = 0;
         int var1;
@@ -102,7 +102,7 @@ final class nja {
           for (var5_int = 0; var1 > var5_int; var5_int++) {
             var8[var5_int] = hk.field_f[dda.a((int) var16[var5_int], 255)];
           }
-          var3 = new kv(ok.field_Bb, kh.field_r, fl.field_j[0], fd.field_D[0], lq.field_A[0], eha.field_s[0], var8);
+          var3 = new Sprite(ok.field_Bb, kh.field_r, fl.field_j[0], fd.field_D[0], lq.field_A[0], eha.field_s[0], var8);
         } else {
           var17 = cea.field_d[0];
           var13 = new int[var1];
@@ -111,13 +111,13 @@ final class nja {
           for (var6 = 0; var6 < var1; var6++) {
             var5[var6] = mp.a(dda.a(255, (int) var17[var6]) << 24, hk.field_f[dda.a(255, (int) var16[var6])]);
           }
-          var3 = new pa(ok.field_Bb, kh.field_r, fl.field_j[0], fd.field_D[0], lq.field_A[0], eha.field_s[0], var13);
+          var3 = new ArgbSprite(ok.field_Bb, kh.field_r, fl.field_j[0], fd.field_D[0], lq.field_A[0], eha.field_s[0], var13);
         }
         al.b(-18073);
         if (!param0) {
           nja.a(28);
         }
-        return (kv) (var3);
+        return (Sprite) (var3);
     }
 
     final static void a(int param0) {
@@ -125,7 +125,7 @@ final class nja {
           return;
         }
         hl.field_I = false;
-        sea.field_j = ig.field_m.b(16711935) == 0 ? true : false;
+        sea.field_j = ig.field_m.readUnsignedByte(16711935) == 0 ? true : false;
     }
 
     static {

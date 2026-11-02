@@ -124,16 +124,16 @@ final class ag extends k {
           return;
         }
         try {
-          sja.field_fb.c(92, (byte) 111);
-          sja.field_fb.field_g = sja.field_fb.field_g + 2;
+          sja.field_fb.writeCipheredByte(92, (byte) 111);
+          sja.field_fb.position = sja.field_fb.position + 2;
           if (param1 != -104) {
             field_k = (String) null;
           }
-          var2_int = sja.field_fb.field_g;
+          var2_int = sja.field_fb.position;
           rha.a(param0.field_g, sja.field_fb, (byte) -107);
-          sja.field_fb.a((byte) -88, sja.field_fb.field_g - var2_int);
+          sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var2_int);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ag.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ag.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -150,11 +150,11 @@ final class ag extends k {
             field_k = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ag.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ',' + param15 + ',' + param16 + ',' + param17 + ',' + param18 + ',' + param19 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ag.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ',' + param15 + ',' + param16 + ',' + param17 + ',' + param18 + ',' + param19 + ')');
         }
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -170,10 +170,10 @@ final class ag extends k {
           var4_int = param2;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_m = param1.b(param0 ^ -16711866);
+              this.field_m = param1.readUnsignedByte(param0 ^ -16711866);
             }
           } else {
-            this.field_l = param1.b(16711935);
+            this.field_l = param1.readUnsignedByte(16711935);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -186,7 +186,7 @@ final class ag extends k {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -7,25 +7,25 @@ final class dla extends bf {
     static char[] field_i;
     static sna field_k;
     static String field_m;
-    static hn field_l;
+    static PcmStreamMixer field_l;
 
-    final void a(int param0, lu param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           er.a(this.field_n, 122, param1);
           int var3_int = 126 % ((param0 + 53) / 50);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dla.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dla.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(op param0, int param1) {
         try {
           if (param1 != -26281) {
-            lu var4 = (lu) null;
-            this.a(-110, (lu) null);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a(-110, (PacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dla.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dla.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class dla extends bf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -112,15 +112,15 @@ final class dla extends bf {
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    dla(lu param0) {
+    dla(PacketBuffer param0) {
         try {
           this.field_n = qi.a(param0, (byte) 81);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

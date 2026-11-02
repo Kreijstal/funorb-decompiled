@@ -40,7 +40,7 @@ final class ro extends pp {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -49,14 +49,14 @@ final class ro extends pp {
         int var1 = -57 / ((-39 - param0) / 35);
     }
 
-    final void a(lu param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) 101);
           int var3_int = 57 / ((34 - param1) / 58);
-          param0.d(this.field_i, 0);
-          param0.d(this.field_l, 0);
+          param0.writeByte(this.field_i, 0);
+          param0.writeByte(this.field_l, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ro.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ro.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -6,7 +6,7 @@ final class lha {
     int field_c;
     float field_d;
     float field_f;
-    static po field_b;
+    static BitmapFont field_b;
     boolean field_e;
     int field_g;
 
@@ -40,39 +40,39 @@ final class lha {
         var1 = 1;
         var2 = kca.field_a;
         if (0 == var2) {
-          wc.field_p = kia.a(oaa.field_b, "", "bf_titlescreen_version2");
+          wc.field_p = MusicTrack.a(oaa.field_b, "", "bf_titlescreen_version2");
           stackIn_32_0 = (wc.field_p == null) ? 0 : 1;
           var1Lifetime1 = stackIn_32_0;
         } else {
           if (var2 == 1) {
-            jga.field_z = kia.a(oaa.field_b, "", "bf_shopping_screen");
+            jga.field_z = MusicTrack.a(oaa.field_b, "", "bf_shopping_screen");
             stackIn_36_0 = (null == jga.field_z) ? 0 : 1;
             var1Lifetime1 = stackIn_36_0;
           } else {
             if (var2 != 2) {
               if (var2 == 3) {
-                pm.field_z = kia.a(oaa.field_b, "", "bf_main_view2");
+                pm.field_z = MusicTrack.a(oaa.field_b, "", "bf_main_view2");
                 stackIn_44_0 = (pm.field_z == null) ? 0 : 1;
                 var1Lifetime1 = stackIn_44_0;
               } else {
                 if (var2 != 4) {
                   if (5 == var2) {
-                    wba.field_e[1] = kia.a(oaa.field_b, "", "bf_new_battle3");
+                    wba.field_e[1] = MusicTrack.a(oaa.field_b, "", "bf_new_battle3");
                     stackIn_52_0 = (null == wba.field_e[1]) ? 0 : 1;
                     var1Lifetime1 = stackIn_52_0;
                   } else {
                     if (var2 == 6) {
-                      wba.field_e[2] = kia.a(oaa.field_b, "", "bf_new_battle2");
+                      wba.field_e[2] = MusicTrack.a(oaa.field_b, "", "bf_new_battle2");
                       stackIn_56_0 = (wba.field_e[2] == null) ? 0 : 1;
                       var1Lifetime1 = stackIn_56_0;
                     } else {
                       if (var2 == 7) {
-                        iq.field_m = kia.a(oaa.field_b, "", "bf_competition_arena_intro_jingle");
+                        iq.field_m = MusicTrack.a(oaa.field_b, "", "bf_competition_arena_intro_jingle");
                         stackIn_60_0 = (null == iq.field_m) ? 0 : 1;
                         var1Lifetime1 = stackIn_60_0;
                       } else {
                         if (var2 == 8) {
-                          nu.field_h = kia.a(oaa.field_b, "", "bf_competition_lose_jingle");
+                          nu.field_h = MusicTrack.a(oaa.field_b, "", "bf_competition_lose_jingle");
                           stackIn_64_0 = (null == nu.field_h) ? 0 : 1;
                           var1Lifetime1 = stackIn_64_0;
                         } else {
@@ -130,12 +130,12 @@ final class lha {
                                 }
                               }
                             } else {
-                              rba.field_c = kia.a(oaa.field_b, "", "bf_combat_arena");
+                              rba.field_c = MusicTrack.a(oaa.field_b, "", "bf_combat_arena");
                               stackIn_72_0 = (null == rba.field_c) ? 0 : 1;
                               var1Lifetime1 = stackIn_72_0;
                             }
                           } else {
-                            mu.field_d = kia.a(oaa.field_b, "", "bf_competition_victory_jingle");
+                            mu.field_d = MusicTrack.a(oaa.field_b, "", "bf_competition_victory_jingle");
                             stackIn_68_0 = (null == mu.field_d) ? 0 : 1;
                             var1Lifetime1 = stackIn_68_0;
                           }
@@ -144,20 +144,20 @@ final class lha {
                     }
                   }
                 } else {
-                  wba.field_e[0] = kia.a(oaa.field_b, "", "bf_new_battle1");
+                  wba.field_e[0] = MusicTrack.a(oaa.field_b, "", "bf_new_battle1");
                   stackIn_48_0 = (wba.field_e[0] == null) ? 0 : 1;
                   var1Lifetime1 = stackIn_48_0;
                 }
               }
             } else {
-              eda.field_i = kia.a(oaa.field_b, "", "bf_main_view1");
+              eda.field_i = MusicTrack.a(oaa.field_b, "", "bf_main_view1");
               stackIn_40_0 = (eda.field_i == null) ? 0 : 1;
               var1Lifetime1 = stackIn_40_0;
             }
           }
         }
         if (param0 <= 12) {
-          field_b = (po) null;
+          field_b = (BitmapFont) null;
         }
         if (var1Lifetime1 == 0) {
           return false;
@@ -170,7 +170,7 @@ final class lha {
         if (!param0) {
           this.field_c = -117;
         }
-        dc.field_y[this.field_g].e((int)this.field_f - 12, -12 + (int)this.field_d);
+        dc.field_y[this.field_g].draw((int)this.field_f - 12, -12 + (int)this.field_d);
     }
 
     private final boolean a(float param0, float param1, byte param2) {
@@ -191,7 +191,7 @@ final class lha {
         this.field_f = (float)param0;
         this.field_d = (float)param1;
         this.field_g = param2;
-        qm.a(4, 7758);
+        RasterBuffer.a(4, 7758);
     }
 
     final static void b(byte param0) {
@@ -203,7 +203,7 @@ final class lha {
           pda.field_p = hga.field_U.field_f;
         }
         if (param0 <= 59) {
-          field_b = (po) null;
+          field_b = (BitmapFont) null;
         }
         if (!(eb.field_t <= 0)) {
           iv.b(false);
@@ -212,7 +212,7 @@ final class lha {
 
     public static void a(int param0) {
         if (param0 != 1) {
-          field_b = (po) null;
+          field_b = (BitmapFont) null;
         }
         field_b = null;
     }
@@ -253,7 +253,7 @@ final class lha {
             }
             if (param3) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, dda.field_j, nn.field_b);
+              var9.fillRect(0, 0, dda.field_j, MouseInputHandler.field_b);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
@@ -272,12 +272,12 @@ final class lha {
               var10.setFont(tb.field_b);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (304 - 6 * param0.length()) / 2, 22);
-              var9.drawImage(et.field_m, dda.field_j / 2 - 152, -18 + nn.field_b / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(et.field_m, dda.field_j / 2 - 152, -18 + MouseInputHandler.field_b / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = -152 + dda.field_j / 2;
-              var8 = nn.field_b / 2 - 18;
+              var8 = MouseInputHandler.field_b / 2 - 18;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(2 + var7, var8 + 2, 3 * param2, 30);
@@ -291,7 +291,7 @@ final class lha {
             if (ina.field_r != null) {
               var9.setFont(tb.field_b);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(ina.field_r, dda.field_j / 2 - 6 * ina.field_r.length() / 2, -26 + nn.field_b / 2);
+              var9.drawString(ina.field_r, dda.field_j / 2 - 6 * ina.field_r.length() / 2, -26 + MouseInputHandler.field_b / 2);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -315,7 +315,7 @@ final class lha {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -351,7 +351,7 @@ final class lha {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

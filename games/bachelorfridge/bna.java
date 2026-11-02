@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bna extends ana {
-    static kv field_v;
+    static Sprite field_v;
     static wba field_x;
     private lca field_A;
-    static kv field_y;
+    static Sprite field_y;
     static sna field_z;
     static int field_w;
 
@@ -37,7 +37,7 @@ final class bna extends ana {
         try {
           this.field_A = param1;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "bna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class bna extends ana {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class bna extends ana {
           dha.a(-108, this.field_A, this.field_q);
           return;
         }
-        field_v = (kv) null;
+        field_v = (Sprite) null;
         dha.a(-108, this.field_A, this.field_q);
     }
 
@@ -117,9 +117,9 @@ final class bna extends ana {
         int var2 = -50 / ((13 - param0) / 40);
     }
 
-    final static kv[] a(int param0, vr param1, int param2, int param3) {
+    final static Sprite[] a(int param0, vr param1, int param2, int param3) {
         RuntimeException var4 = null;
-        kv[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -143,7 +143,7 @@ final class bna extends ana {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class bna extends ana {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

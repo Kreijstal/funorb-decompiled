@@ -218,7 +218,7 @@ final class sr {
           stackIn_83_1 = 19842;
           stackIn_84_2 = (param3) && (!param1) && (w.field_e);
           ((sna) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_84_2);
-          pf.field_n.field_a.f(18632);
+          BitPacketBuffer.field_n.field_a.f(18632);
           if (null != rv.field_n) {
             if (jj.field_wb.field_R != 0) {
               wt.b(-22908, param2);
@@ -236,7 +236,7 @@ final class sr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var4), "sr.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) var4), "sr.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class nv extends sna {
     private nv field_Eb;
-    static ee field_wb;
+    static IndexedSprite field_wb;
     private int field_Ib;
     private int[] field_yb;
     private int field_Ab;
@@ -20,7 +20,7 @@ final class nv extends sna {
     public static void f(int param0) {
         field_wb = null;
         if (param0 != 20038) {
-          field_wb = (ee) null;
+          field_wb = (IndexedSprite) null;
         }
     }
 
@@ -73,7 +73,7 @@ final class nv extends sna {
         } else {
           if (this.field_Hb[param1] == null) {
             if (this.field_yb[param1] == -1) {
-              js.a(121);
+              IntrusiveNodeHashTable.a(121);
               ki.g(-26);
             } else {
               var5 = 32768 | this.field_yb[param1];
@@ -87,7 +87,7 @@ final class nv extends sna {
               }
               var8 = (String) null;
               no.a(var5, gk.field_d, 110, (String) null, bd.field_k, param2);
-              ob.a(eaa.field_a, (byte) -47, gk.field_d, var5, bd.field_k);
+              ob.a(IntrusiveDeque.field_a, (byte) -47, gk.field_d, var5, bd.field_k);
               ki.g(-26);
               vca.c(true);
             }
@@ -134,7 +134,7 @@ final class nv extends sna {
         }
         if (this.field_Eb != null) {
           this.field_Eb.f((byte) -97);
-          this.field_Eb.a(false);
+          this.field_Eb.unlink(false);
         }
         this.field_Eb = null;
         this.field_xb = -1;
@@ -143,7 +143,7 @@ final class nv extends sna {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (param2 >= -82) {
-          field_wb = (ee) null;
+          field_wb = (IndexedSprite) null;
         }
         if (jea.field_c != null &&
           13 == gf.field_k) {
@@ -207,8 +207,8 @@ final class nv extends sna {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        po var17 = null;
-        po var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_xb = -1;
         try {
           this.field_Db = param7;
@@ -232,7 +232,7 @@ final class nv extends sna {
               this.field_yb[var13] == -1) {
               var14 = kga.field_a;
             }
-            this.field_vb[var13] = new gna(0L, param2, (sna) null, param3, (kv) (var14), param6[var13]);
+            this.field_vb[var13] = new gna(0L, param2, (sna) null, param3, (Sprite) (var14), param6[var13]);
             this.a(-1, this.field_vb[var13]);
             var15 = var17.a(param6[var13]);
             if (var15 > this.field_Gb) {
@@ -288,7 +288,7 @@ final class nv extends sna {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

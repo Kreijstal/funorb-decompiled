@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bla extends td {
-    static kv[] field_p;
+    static Sprite[] field_p;
     static String field_q;
 
-    final static ee[] a(int param0, String param1, String param2, vr param3) {
+    final static IndexedSprite[] a(int param0, String param1, String param2, vr param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         vr var6 = null;
-        ee[] stackIn_3_0 = null;
+        IndexedSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -50,11 +50,11 @@ final class bla extends td {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, kv[] param1, byte param2, int param3) {
+    final static void a(int param0, Sprite[] param1, byte param2, int param3) {
         raa.field_I = new lda(param1);
         wo.field_j = param0;
         if (param2 != 15) {
@@ -64,7 +64,7 @@ final class bla extends td {
           ge.field_I = param3;
           el.e((byte) 122);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "bla.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bla.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class bla extends td {
         RuntimeException var3_ref = null;
         aga var4 = null;
         pg var5 = null;
-        kv[] var6 = null;
+        Sprite[] var6 = null;
         ew stackIn_6_0 = null;
         pg stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -82,8 +82,8 @@ final class bla extends td {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            var6 = (kv[]) null;
-            bla.a(57, (kv[]) null, (byte) 36, -19);
+            var6 = (Sprite[]) null;
+            bla.a(57, (Sprite[]) null, (byte) 36, -19);
           }
           var3 = this.field_h.a(62, param0);
           var4 = this.field_j.a(116, param0);
@@ -106,7 +106,7 @@ final class bla extends td {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -115,7 +115,7 @@ final class bla extends td {
         try {
           this.field_j = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "bla.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "bla.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -36,29 +36,29 @@ class dfa {
             var10_int = var10_int + (255 & mja.field_s[var11]);
           }
           var10_int = (7 + var10_int) / 8;
-          sca.field_c = new byte[var10_int];
+          MouseWheelInput.field_c = new byte[var10_int];
           if (param9.field_z == null) {
-            param9.field_z = new eaa();
+            param9.field_z = new IntrusiveDeque();
           }
           aa.field_l = param9.field_z;
           aa.field_l.d(99);
-          iga.field_c = new wma(param2);
+          iga.field_c = new DualLinkNodeHashTable(param2);
           wk.field_a = -1;
           ui.field_q = -1;
           hja.field_i = 0;
           hc.field_J = 0;
           if (null == param7.field_z) {
-            param7.field_z = new eaa();
+            param7.field_z = new IntrusiveDeque();
           }
           uma.field_M = param7.field_z;
           uma.field_M.d(param3 + 91);
-          ola.field_g = new wma(param8);
+          ola.field_g = new DualLinkNodeHashTable(param8);
           if (null == param6.field_z) {
-            param6.field_z = new eaa();
+            param6.field_z = new IntrusiveDeque();
           }
           bia.field_g = param6.field_z;
           bia.field_g.d(param3 + 92);
-          wi.field_i = new wma(param1);
+          wi.field_i = new DualLinkNodeHashTable(param1);
           wda.field_a = 0L;
           kla.field_x = param0;
           return;
@@ -90,7 +90,7 @@ class dfa {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

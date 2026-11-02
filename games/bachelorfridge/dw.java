@@ -11,7 +11,7 @@ final class dw extends kj {
         try {
           this.field_h = 39;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "dw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "dw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class dw extends kj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var6), "dw.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) var6), "dw.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -122,11 +122,11 @@ final class dw extends kj {
 
     final void a(int param0, boolean param1, int param2) {
         if (param1) {
-          mba.field_d[(-this.field_h + 39) / 4].e(param2, -16 + param0);
+          mba.field_d[(-this.field_h + 39) / 4].draw(param2, -16 + param0);
           return;
         }
         this.a(-64, false, -127);
-        mba.field_d[(-this.field_h + 39) / 4].e(param2, -16 + param0);
+        mba.field_d[(-this.field_h + 39) / 4].draw(param2, -16 + param0);
     }
 
     static {

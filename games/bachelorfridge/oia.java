@@ -5,7 +5,7 @@ import java.util.*;
 
 final class oia extends kj {
     private int field_h;
-    private eaa field_g;
+    private IntrusiveDeque field_g;
     static long field_f;
     static String field_i;
 
@@ -84,7 +84,7 @@ final class oia extends kj {
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-          this.field_g = (eaa) null;
+          this.field_g = (IntrusiveDeque) null;
         }
     }
 
@@ -99,9 +99,9 @@ final class oia extends kj {
         super(param0, param1, param2);
         try {
           this.field_h = 128;
-          this.field_g = new eaa();
+          this.field_g = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "oia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "oia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

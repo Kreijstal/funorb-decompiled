@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tla extends bca {
-    static eaa field_q;
+    static IntrusiveDeque field_q;
     int field_r;
     int field_v;
     aj[] field_t;
@@ -45,23 +45,23 @@ final class tla extends bca {
           this.field_u = 0;
           this.field_t = new aj[6];
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tla.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tla.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
-        if (param0 < dg.field_f) {
+        if (param0 < SoftwareRasterizer.field_f) {
           return;
         }
-        if (!(param0 < dg.field_h)) {
+        if (!(param0 < SoftwareRasterizer.field_h)) {
           return;
         }
-        if (param3 < dg.field_j) {
+        if (param3 < SoftwareRasterizer.field_j) {
           return;
         }
-        if (dg.field_k <= param3) {
+        if (SoftwareRasterizer.field_k <= param3) {
           return;
         }
         int var5 = 65280 & param2;
@@ -71,11 +71,11 @@ final class tla extends bca {
           param2 = param2 * param4;
           var5 = var5 & 16711680;
           param2 = param2 & -16711936;
-          var6 = dg.field_i * param3 + param0;
-          var7 = dg.field_e[var6];
+          var6 = SoftwareRasterizer.field_i * param3 + param0;
+          var7 = SoftwareRasterizer.field_e[var6];
           var5 = var5 + (16711680 & (var7 & 65280) * (256 - param4));
           param2 = param2 + ((16711935 & var7) * (256 - param4) & -16711936);
-          dg.field_e[var6] = mp.a(param2, var5) >>> 8;
+          SoftwareRasterizer.field_e[var6] = mp.a(param2, var5) >>> 8;
           return;
         }
     }
@@ -105,11 +105,11 @@ final class tla extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    tla(lu param0) {
+    tla(PacketBuffer param0) {
         super(param0);
         int var3 = 0;
         int var2_int = 0;
@@ -119,9 +119,9 @@ final class tla extends bca {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_k = param0.e((byte) 46);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 46);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (0 <= var2_int) {
@@ -130,12 +130,12 @@ final class tla extends bca {
             }
             break;
           }
-          this.field_v = param0.b(16711935);
-          this.field_r = param0.b(16711935);
-          this.field_u = param0.b(16711935);
+          this.field_v = param0.readUnsignedByte(16711935);
+          this.field_r = param0.readUnsignedByte(16711935);
+          this.field_u = param0.readUnsignedByte(16711935);
           this.field_t = new aj[this.field_u];
           for (var3 = 0; this.field_u > var3; var3++) {
-            this.field_t[var3] = new aj(param0.b(16711935), param0.b(16711935));
+            this.field_t[var3] = new aj(param0.readUnsignedByte(16711935), param0.readUnsignedByte(16711935));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -148,11 +148,11 @@ final class tla extends bca {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -163,15 +163,15 @@ final class tla extends bca {
         var4 = BachelorFridge.field_y;
         try {
           super.a((byte) -82, param1);
-          param1.d(this.field_v, 0);
-          param1.d(this.field_r, 0);
-          param1.d(this.field_u, 0);
+          param1.writeByte(this.field_v, 0);
+          param1.writeByte(this.field_r, 0);
+          param1.writeByte(this.field_u, 0);
           if (param0 >= -12) {
             return;
           }
           for (var3_int = 0; this.field_u > var3_int; var3_int++) {
-            param1.d(this.field_t[var3_int].field_c, 0);
-            param1.d(this.field_t[var3_int].field_a, 0);
+            param1.writeByte(this.field_t[var3_int].field_c, 0);
+            param1.writeByte(this.field_t[var3_int].field_a, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,7 +184,7 @@ final class tla extends bca {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -237,12 +237,12 @@ final class tla extends bca {
           int var3_int = -53 / ((param1 - 12) / 35);
           this.a(param0, (byte) -2);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "tla.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "tla.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
         field_s = "Click";
-        field_q = new eaa();
+        field_q = new IntrusiveDeque();
     }
 }

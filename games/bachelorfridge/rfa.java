@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rfa {
-    static kv field_a;
+    static Sprite field_a;
     static sna field_b;
 
     final static int a(boolean param0, int param1) {
@@ -25,7 +25,7 @@ final class rfa {
         }
     }
 
-    final static cj a(int param0, lu param1) {
+    final static cj a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         rv stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -48,7 +48,7 @@ final class rfa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

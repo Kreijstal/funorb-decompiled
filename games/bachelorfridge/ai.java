@@ -5,7 +5,7 @@ final class ai {
     static i field_d;
     static boolean field_c;
     int field_b;
-    static kv field_a;
+    static Sprite field_a;
     static boolean field_e;
     private static String field_z;
 

@@ -6,7 +6,7 @@ import java.util.*;
 final class nw extends td {
     static String field_r;
     static String field_t;
-    static kv[] field_p;
+    static Sprite[] field_p;
     static String field_s;
     static String field_q;
 
@@ -16,7 +16,7 @@ final class nw extends td {
           this.field_n = param3;
           this.field_k = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nw.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nw.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class nw extends td {
           var4.field_s = this.field_k;
           var4.field_u = this.field_n;
           if (param1 != 3) {
-            field_p = (kv[]) null;
+            field_p = (Sprite[]) null;
           }
           var4.field_q = 2 * kla.a(4, param0.field_w, param1 ^ -2147483645) + 6;
           stackIn_3_0 = var4;
@@ -50,7 +50,7 @@ final class nw extends td {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class nw extends td {
         byte[] var8 = null;
         byte[] var4 = null;
         byte[] var2 = null;
-        lu var9 = null;
+        PacketBuffer var9 = null;
         byte[] var14 = null;
         byte[] var10 = null;
         byte[] var5 = null;
@@ -100,7 +100,7 @@ final class nw extends td {
           var8 = var13;
           var4 = var8;
           var2 = var4;
-          var9 = new lu(var13);
+          var9 = new PacketBuffer(var13);
           wca.a((byte) -121);
           vi.b(16);
           ln.f(-93);
@@ -110,7 +110,7 @@ final class nw extends td {
           li.e(-117);
           mk.a((byte) -43);
           ut.c(-22021);
-          ev.a((byte) 80);
+          DualLinkDequeIterator.a((byte) 80);
           if (param1 != 2) {
             field_t = (String) null;
           }
@@ -132,7 +132,7 @@ final class nw extends td {
           var12 = var16;
           var7 = var12;
           var2Lifetime3 = var7;
-          lu var3 = new lu(var16);
+          PacketBuffer var3 = new PacketBuffer(var16);
           qs.b(false);
           an.a(var16, -49);
           wv.a((byte) -73, var16);
@@ -148,7 +148,7 @@ final class nw extends td {
           DualLinkNode.field_f = null;
           i.field_h = null;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nw.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nw.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

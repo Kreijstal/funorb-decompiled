@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ala {
-    static kv[] field_a;
+    static Sprite[] field_a;
     static boolean[] field_b;
     static String field_d;
     static String field_c;
@@ -15,14 +15,14 @@ final class ala {
         field_c = null;
     }
 
-    final static void a(int param0, kia param1) {
+    final static void a(int param0, MusicTrack param1) {
         try {
           pka.a(param1, true, (byte) 73);
           if (param0 != 26219) {
             ala.a(101);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ala.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ala.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -43,7 +43,7 @@ final class iba extends bca {
         od.field_C = null;
         ik.field_h = null;
         nia.field_l = null;
-        lu.field_f = null;
+        PacketBuffer.field_f = null;
         op.field_I = null;
         rw.field_a = null;
         if (null != dj.field_c) {
@@ -55,7 +55,7 @@ final class iba extends bca {
         nna.field_v = null;
         fe.field_j = null;
         am.field_M = null;
-        ve.field_m = (kv[][]) null;
+        ve.field_m = (Sprite[][]) null;
         bfa.field_b = null;
         tp.field_x = null;
         wd.field_w = null;
@@ -75,21 +75,21 @@ final class iba extends bca {
         pfa.field_g = null;
         cba.field_c = null;
         ff.field_u = null;
-        eka.field_g = (ee[][]) null;
+        MusicPatch.field_g = (IndexedSprite[][]) null;
         ela.field_j = null;
         qq.field_i = null;
         it.field_i = null;
         vi.field_f = null;
         as.field_a = null;
-        aw.field_v = (ee[][]) null;
+        aw.field_v = (IndexedSprite[][]) null;
         ed.field_f = null;
         ula.field_h = null;
-        ou.field_d = null;
+        IterableDualLinkDeque.field_d = null;
         hha.field_y = null;
         ip.field_f = null;
         nca.field_a = null;
         if (param0 == 34) {
-          hr.field_c = null;
+          DelegatingCanvas.field_c = null;
           ena.field_l = null;
           kn.field_g = null;
           ld.field_l = null;
@@ -99,9 +99,9 @@ final class iba extends bca {
           Runtime.getRuntime().gc();
           return;
         }
-        lu var2 = (lu) null;
-        iba.b((byte) 59, (lu) null);
-        hr.field_c = null;
+        PacketBuffer var2 = (PacketBuffer) null;
+        iba.b((byte) 59, (PacketBuffer) null);
+        DelegatingCanvas.field_c = null;
         ena.field_l = null;
         kn.field_g = null;
         ld.field_l = null;
@@ -136,11 +136,11 @@ final class iba extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final static pp b(byte param0, lu param1) {
+    final static pp b(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -153,8 +153,8 @@ final class iba extends bca {
           if (param0 > -101) {
             iba.d(107);
           }
-          var2_int = param1.b(16711935);
-          var3 = param1.b(16711935);
+          var2_int = param1.readUnsignedByte(16711935);
+          var3 = param1.readUnsignedByte(16711935);
           stackIn_3_0 = new ro(var2_int, var3);
           return (pp) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -167,17 +167,17 @@ final class iba extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    iba(lu param0) {
+    iba(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 103);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 103);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -185,10 +185,10 @@ final class iba extends bca {
             }
             this.field_o.a(dca.a((byte) 102, param0), true);
           }
-          this.field_q = param0.b(16711935);
-          this.field_r = param0.b(16711935);
+          this.field_q = param0.readUnsignedByte(16711935);
+          this.field_r = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "iba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "iba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -198,20 +198,20 @@ final class iba extends bca {
           param0.b((byte) -85, 34, this.field_q, this.field_r);
           int var3_int = -88 % ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "iba.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "iba.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         super.a((byte) -62, param1);
-        param1.d(this.field_q, 0);
+        param1.writeByte(this.field_q, 0);
         if (param0 >= -12) {
           return;
         }
         try {
-          param1.d(this.field_r, 0);
+          param1.writeByte(this.field_r, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "iba.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "iba.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

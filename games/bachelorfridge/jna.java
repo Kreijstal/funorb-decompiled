@@ -47,30 +47,30 @@ final class jna extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    final void a(int param0, lu param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
-          this.field_c = param1.c(-99);
+          this.key = param1.readLong(-99);
           if (param0 > -43) {
             field_f = (int[]) null;
           }
-          param1.f(-55);
+          param1.readInt(-55);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "jna.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "jna.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static kv[] a(int param0, int param1, byte param2, int param3) {
+    final static Sprite[] a(int param0, int param1, byte param2, int param3) {
         int var6 = BachelorFridge.field_y;
-        kv[] var7 = new kv[9];
-        kv[] var4 = var7;
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var4 = var7;
         var7[0] = ik.b(param1, param3, 2);
         int var5 = 1;
         if (param2 != 106) {
-          return (kv[]) null;
+          return (Sprite[]) null;
         }
         while (9 > var5) {
           var7[var5] = var7[0];

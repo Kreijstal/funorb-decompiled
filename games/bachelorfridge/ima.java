@@ -7,23 +7,23 @@ final class ima extends bca {
     static int field_r;
     int field_t;
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           super.a((byte) -38, param1);
-          param1.d(this.field_q, 0);
+          param1.writeByte(this.field_q, 0);
           if (param0 > -12) {
             gj var4 = (gj) null;
             this.a(-92, (gj) null);
           }
-          param1.d(this.field_t, 0);
+          param1.writeByte(this.field_t, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ima.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ima.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final at a(int param0, gj param1) {
         RuntimeException var3 = null;
-        lu var4 = null;
+        PacketBuffer var4 = null;
         ln stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -31,8 +31,8 @@ final class ima extends bca {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            var4 = (lu) null;
-            this.a((byte) -31, (lu) null);
+            var4 = (PacketBuffer) null;
+            this.a((byte) -31, (PacketBuffer) null);
           }
           stackIn_3_0 = new ln(param1, this);
           return (at) ((Object) stackIn_3_0);
@@ -46,7 +46,7 @@ final class ima extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class ima extends bca {
         super(param0, param1);
     }
 
-    final static jna a(lu param0, boolean param1) {
+    final static jna a(PacketBuffer param0, boolean param1) {
         jna var2 = null;
         RuntimeException var2_ref = null;
         jna stackIn_2_0 = null;
@@ -82,17 +82,17 @@ final class ima extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    ima(lu param0) {
+    ima(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         try {
-          this.field_k = param0.e((byte) 76);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 76);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -100,10 +100,10 @@ final class ima extends bca {
             }
             this.field_o.a(dca.a((byte) 102, param0), true);
           }
-          this.field_q = param0.b(16711935);
-          this.field_t = param0.b(16711935);
+          this.field_q = param0.readUnsignedByte(16711935);
+          this.field_t = param0.readUnsignedByte(16711935);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ima.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ima.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class ima extends bca {
           this.a(param0, (byte) -2);
           int var3_int = -3 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ima.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ima.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

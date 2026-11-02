@@ -89,7 +89,7 @@ abstract class bf extends IntrusiveNode {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ abstract class bf extends IntrusiveNode {
         field_h = null;
     }
 
-    abstract void a(int param0, lu param1);
+    abstract void a(int param0, PacketBuffer param1);
 
     static {
     }

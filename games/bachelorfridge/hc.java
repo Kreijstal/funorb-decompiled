@@ -9,7 +9,7 @@ final class hc extends vd implements lja {
     private String field_C;
     private hf[] field_F;
     static int field_D;
-    private po field_H;
+    private BitmapFont field_H;
 
     public final void a(int param0, hf param1, int param2, byte param3, int param4) {
         int var6_int = 0;
@@ -50,13 +50,13 @@ final class hc extends vd implements lja {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
         super.a((byte) -85, param1, param2, param3);
-        this.field_H.a(this.field_C, 14 + (this.field_s + param3), 10 + this.field_v + param1, -28 + this.field_p, this.field_q, 16777215, -1, 0, 0, this.field_H.field_u);
+        this.field_H.drawParagraph(this.field_C, 14 + (this.field_s + param3), 10 + this.field_v + param1, -28 + this.field_p, this.field_q, 16777215, -1, 0, 0, this.field_H.field_u);
         int var5 = -1 % ((param0 + 20) / 54);
     }
 
@@ -68,7 +68,7 @@ final class hc extends vd implements lja {
           this.field_F[var4_int] = this.a((pl) (this), param1, param0 + 19521);
           this.field_G[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class hc extends vd implements lja {
         this.field_G = var4;
     }
 
-    hc(mf param0, po param1, String param2) {
+    hc(mf param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (qda) null);
         int var4_int = 0;
         this.field_E = 0;
@@ -98,10 +98,10 @@ final class hc extends vd implements lja {
           this.field_I = param0;
           this.field_H = param1;
           this.field_C = param2;
-          var4_int = this.field_C != null ? this.field_H.a(this.field_C, 260, this.field_H.field_u) : 0;
+          var4_int = this.field_C != null ? this.field_H.measureWrappedHeight(this.field_C, 260, this.field_H.field_u) : 0;
           this.a(0, 22 + var4_int, (byte) 59, 288, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class hc extends vd implements lja {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -58,7 +58,7 @@ final class ol extends pu {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ final class ol extends pu {
         }
     }
 
-    final static cq a(be param0, boolean param1) {
+    final static cq a(PcmSample param0, boolean param1) {
         RuntimeException var2 = null;
         cq stackIn_2_0 = null;
         cq stackIn_4_0 = null;
@@ -79,7 +79,7 @@ final class ol extends pu {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_4_0 = tw.a(je.b(param0, 100, 96), (byte) -36);
+            stackIn_4_0 = tw.a(PcmSampleStream.b(param0, 100, 96), (byte) -36);
             return stackIn_4_0;
           }
           stackIn_2_0 = (cq) null;
@@ -94,7 +94,7 @@ final class ol extends pu {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

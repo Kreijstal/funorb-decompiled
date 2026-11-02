@@ -3,7 +3,7 @@
  */
 final class qt extends pu {
     static qe field_l;
-    static kv field_m;
+    static Sprite field_m;
     private static String field_z;
 
     public static void b(int param0) {

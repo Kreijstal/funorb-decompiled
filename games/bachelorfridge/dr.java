@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dr extends td {
-    static ee field_p;
+    static IndexedSprite field_p;
 
     public static void c(boolean param0) {
         if (!param0) {
@@ -15,13 +15,13 @@ final class dr extends td {
         super(param0, param1);
     }
 
-    final static ee b(int param0) {
-        ee var1 = new ee(ok.field_Bb, kh.field_r, fl.field_j[0], fd.field_D[0], lq.field_A[0], eha.field_s[0], baa.field_P[0], hk.field_f);
+    final static IndexedSprite b(int param0) {
+        IndexedSprite var1 = new IndexedSprite(ok.field_Bb, kh.field_r, fl.field_j[0], fd.field_D[0], lq.field_A[0], eha.field_s[0], baa.field_P[0], hk.field_f);
         if (param0 == -32124) {
           al.b(-18073);
           return var1;
         }
-        field_p = (ee) null;
+        field_p = (IndexedSprite) null;
         al.b(-18073);
         return var1;
     }
@@ -81,7 +81,7 @@ final class dr extends td {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

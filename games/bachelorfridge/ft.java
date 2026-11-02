@@ -8,7 +8,7 @@ final class ft extends IntrusiveNode {
 
     final static void a(int param0) {
         kt.field_m = new sna(0L, (sna) null);
-        if (eaa.field_c) {
+        if (IntrusiveDeque.field_c) {
           kt.field_m.a(-1, dea.field_m);
         }
         kt.field_m.a(-1, tv.field_o);
@@ -39,7 +39,7 @@ final class ft extends IntrusiveNode {
         throw new IllegalStateException();
     }
 
-    private final void a(lu param0, int param1) {
+    private final void a(PacketBuffer param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_8_0 = null;
@@ -47,8 +47,8 @@ final class ft extends IntrusiveNode {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_g = param0.f(-95);
-          stackIn_3_1 = (param0.b(16711935) != 0);
+          this.field_g = param0.readInt(-95);
+          stackIn_3_1 = (param0.readUnsignedByte(16711935) != 0);
           this.field_f = stackIn_3_1;
           if (param1 == -26011) {
             return;
@@ -65,7 +65,7 @@ final class ft extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -85,11 +85,11 @@ final class ft extends IntrusiveNode {
         return 2048 > param0 ? ed.field_b[2048 - param0] : -ed.field_b[-2048 + param0];
     }
 
-    ft(lu param0) {
+    ft(PacketBuffer param0) {
         try {
           this.a(param0, -26011);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ft.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ft.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

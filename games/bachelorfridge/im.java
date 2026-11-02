@@ -77,25 +77,25 @@ final class im {
         }
     }
 
-    final static pp a(int param0, lu param1) {
+    final static pp a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        lu var5 = null;
+        PacketBuffer var5 = null;
         sl stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.e((byte) 73);
+          var2_int = param1.readUnsignedShort((byte) 73);
           if (param0 != -22833) {
-            var5 = (lu) null;
-            im.a(9, (lu) null);
+            var5 = (PacketBuffer) null;
+            im.a(9, (PacketBuffer) null);
           }
-          var3 = param1.b(param0 ^ -16734672);
-          var4 = param1.b(16711935);
+          var3 = param1.readUnsignedByte(param0 ^ -16734672);
+          var4 = param1.readUnsignedByte(16711935);
           stackIn_3_0 = new sl(var2_int, var3, var4);
           return (pp) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -108,7 +108,7 @@ final class im {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

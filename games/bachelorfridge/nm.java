@@ -4,7 +4,7 @@
 final class nm extends ana {
     static String[] field_C;
     static int field_A;
-    private eaa field_v;
+    private IntrusiveDeque field_v;
     private boolean field_w;
     private int field_D;
     private int field_E;
@@ -30,20 +30,20 @@ final class nm extends ana {
     }
 
     final static void a(vr param0, vr param1, int param2, vr param3) {
-        kv var17 = null;
-        ee[] var5 = null;
-        ee[][] var6 = null;
+        Sprite var17 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var19 = null;
         int[][] var16 = null;
         int[][] var7 = null;
         int var9 = 0;
         int var10_int = 0;
-        ee[] var14 = null;
+        IndexedSprite[] var14 = null;
         int var12_int = 0;
-        kv var10 = null;
-        kv var15 = null;
-        kv var18 = null;
-        kv var12 = null;
+        Sprite var10 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var13 = BachelorFridge.field_y;
         int var9Lifetime1;
@@ -54,16 +54,16 @@ final class nm extends ana {
           gt.field_s = hca.a("commonui", param1, -59, "jagex_logo_grey");
           sl.field_k = gw.a("commonui", "button", param1, -61);
           fr.field_q = pi.a(param1, -8845, "commonui", "validation");
-          oc.field_l = (po) ((Object) rc.a(param3, (byte) 113, param1, "arezzo12", "commonui"));
-          jca.field_a = (po) ((Object) rc.a(param3, (byte) 113, param1, "arezzo14", "commonui"));
-          qia.field_a = (po) ((Object) rc.a(param3, (byte) 113, param1, "arezzo14bold", "commonui"));
-          var17 = new kv(param0.a((byte) 123, "", "button.gif"), (java.awt.Component) ((Object) dca.field_y));
+          oc.field_l = (BitmapFont) ((Object) rc.a(param3, (byte) 113, param1, "arezzo12", "commonui"));
+          jca.field_a = (BitmapFont) ((Object) rc.a(param3, (byte) 113, param1, "arezzo14", "commonui"));
+          qia.field_a = (BitmapFont) ((Object) rc.a(param3, (byte) 113, param1, "arezzo14bold", "commonui"));
+          var17 = new Sprite(param0.a((byte) 123, "", "button.gif"), (java.awt.Component) ((Object) dca.field_y));
           ch.a(param1, -1, "commonui", "dropdown");
           var5 = bla.a(29611, "commonui", "screen_options", param1);
-          sh.field_G = new ee[4];
-          sb.field_l = new ee[4];
-          nea.field_Bb = new ee[4];
-          var6 = new ee[][]{sb.field_l, nea.field_Bb, sh.field_G};
+          sh.field_G = new IndexedSprite[4];
+          sb.field_l = new IndexedSprite[4];
+          nea.field_Bb = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{sb.field_l, nea.field_Bb, sh.field_G};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -78,7 +78,7 @@ final class nm extends ana {
           var9 = -29 % ((param2 - 6) / 43);
           for (var10_int = 0; 3 > var10_int; var10_int++) {
             var14 = var6[var10_int];
-            ee[] var11 = var14;
+            IndexedSprite[] var11 = var14;
             for (var12_int = 0; var12_int < var14.length; var12_int++) {
               var14[var12_int] = hea.a(var5[var10_int], var19[var12_int], (byte) 117);
             }
@@ -86,21 +86,21 @@ final class nm extends ana {
           var9Lifetime1 = var17.field_p;
           uc.d(39);
           var17.b();
-          dg.i(0, 0, dg.field_i, dg.field_c);
-          var10 = new kv(var9Lifetime1, var9Lifetime1);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
+          var10 = new Sprite(var9Lifetime1, var9Lifetime1);
           var10.b();
           var17.c(0, 0);
-          var15 = new kv(var9Lifetime1, var9Lifetime1);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.b();
           var17.c(var9Lifetime1 - var17.field_q, 0);
-          var12 = new kv(-(2 * var9Lifetime1) + var17.field_q, var9Lifetime1);
+          var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_q, var9Lifetime1);
           var12.b();
           var17.c(-var9Lifetime1, 0);
           db.b(103);
-          sl.field_k = new kv[]{var10, var12, var15};
+          sl.field_k = new Sprite[]{var10, var12, var15};
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "nm.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "nm.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -112,13 +112,13 @@ final class nm extends ana {
         int var6;
         at var7;
         var6 = BachelorFridge.field_y;
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
         var7 = (at) (this.field_v.b((byte) 90));
         while (var7 != null) {
           if (var7.b(21807)) {
-            var7.a(false);
+            var7.unlink(false);
           }
           var7 = (at) (this.field_v.c(0));
         }
@@ -238,7 +238,7 @@ final class nm extends ana {
           }
           this.field_x = this.field_z.b(this.field_q.field_h, -1);
           this.field_l = this.field_l + this.field_x * this.field_D;
-          this.field_v = new eaa();
+          this.field_v = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -256,7 +256,7 @@ final class nm extends ana {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

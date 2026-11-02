@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sw extends td {
-    static kv field_p;
+    static Sprite field_p;
 
     final ii a(op param0, int param1) {
         ii stackIn_3_0 = null;
@@ -66,7 +66,7 @@ final class sw extends td {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class sw extends td {
         try {
           this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "sw.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "sw.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class sw extends td {
         var6 = BachelorFridge.field_y;
         try {
           if (param1 != 4) {
-            field_p = (kv) null;
+            field_p = (Sprite) null;
           }
           var4_int = param0.length();
           param0.setLength(param2);
@@ -111,13 +111,13 @@ final class sw extends td {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     public static void c(boolean param0) {
         if (!param0) {
-          field_p = (kv) null;
+          field_p = (Sprite) null;
         }
         field_p = null;
     }

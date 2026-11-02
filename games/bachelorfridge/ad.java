@@ -6,14 +6,14 @@ final class ad extends IntrusiveNode {
     static boolean field_i;
     static sna field_q;
     int field_o;
-    static pia field_h;
+    static PalettedBitmapFont field_h;
     aga field_s;
     static int field_g;
-    eaa field_n;
+    IntrusiveDeque field_n;
     int field_k;
     int field_j;
     static int[] field_m;
-    eaa field_t;
+    IntrusiveDeque field_t;
     int field_p;
     int field_r;
     lna field_f;
@@ -49,7 +49,7 @@ final class ad extends IntrusiveNode {
           }
           this.field_t.a(new vca(taa.field_u, param2, param0, 4096, 20, 30, 50, (-8 + taa.field_u.field_F) * (-1 + this.field_t.g(0)) + 8), true);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ad.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ad.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class ad extends IntrusiveNode {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param4).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -222,8 +222,8 @@ final class ad extends IntrusiveNode {
     final void c(byte param0) {
         this.field_f = this.field_s.e((byte) -78);
         this.field_f.field_b = this.field_s.field_o.field_k.field_b;
-        this.field_t = new eaa();
-        this.field_n = new eaa();
+        this.field_t = new IntrusiveDeque();
+        this.field_n = new IntrusiveDeque();
         this.field_j = this.field_s.field_I;
         if (param0 >= -53) {
           this.a(124);
@@ -267,7 +267,7 @@ final class ad extends IntrusiveNode {
         scanLoop1: while (true) {
           if (var8 != null) {
             if (var8.b(false)) {
-              var8.a(false);
+              var8.unlink(false);
             } else {
               if (var8.c((byte) 127)) {
                 break scanLoop1;
@@ -296,7 +296,7 @@ final class ad extends IntrusiveNode {
           var6 = var4.a(false, var5 != 0) ? 1 : 0;
           if (var5 == 0 &&
             var6 == 0) {
-            var4.a(false);
+            var4.unlink(false);
           }
           var4 = (gca) (this.field_n.c(0));
           var3 = var3 | var5;
@@ -316,7 +316,7 @@ final class ad extends IntrusiveNode {
           this.field_s = param0;
           this.c((byte) -126);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

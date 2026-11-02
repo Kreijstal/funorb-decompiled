@@ -5,7 +5,7 @@ import java.util.*;
 
 final class bh extends k {
     private short[] field_k;
-    static kv field_r;
+    static Sprite field_r;
     private int field_q;
     private int field_n;
     static String field_s;
@@ -18,7 +18,7 @@ final class bh extends k {
 
     public static void e(byte param0) {
         if (param0 > -78) {
-          field_r = (kv) null;
+          field_r = (Sprite) null;
         }
         field_r = null;
         field_p = null;
@@ -241,7 +241,7 @@ final class bh extends k {
         return var3;
     }
 
-    final void a(byte param0, lu param1, int param2) {
+    final void a(byte param0, PacketBuffer param1, int param2) {
         int dupTemp$0 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -257,28 +257,28 @@ final class bh extends k {
           }
           var4_int = param2;
           if (0 == var4_int) {
-            dupTemp$0 = param1.b(param0 + 16712006);
+            dupTemp$0 = param1.readUnsignedByte(param0 + 16712006);
             this.field_q = dupTemp$0;
             this.field_u = dupTemp$0;
           } else {
             if (1 == var4_int) {
-              this.field_o = param1.b(16711935);
+              this.field_o = param1.readUnsignedByte(16711935);
             } else {
               if (var4_int == 2) {
-                this.field_m = param1.e((byte) 112);
+                this.field_m = param1.readUnsignedShort((byte) 112);
               } else {
                 if (var4_int == 3) {
-                  this.field_l = param1.b(16711935);
+                  this.field_l = param1.readUnsignedByte(16711935);
                 } else {
                   if (4 == var4_int) {
-                    this.field_n = param1.b(16711935);
+                    this.field_n = param1.readUnsignedByte(16711935);
                   } else {
                     if (var4_int != 5) {
                       if (var4_int == 6) {
-                        this.field_q = param1.b(16711935);
+                        this.field_q = param1.readUnsignedByte(16711935);
                       }
                     } else {
-                      this.field_u = param1.b(param0 + 16712006);
+                      this.field_u = param1.readUnsignedByte(param0 + 16712006);
                     }
                   }
                 }
@@ -296,7 +296,7 @@ final class bh extends k {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -304,8 +304,8 @@ final class bh extends k {
         this.field_t = rba.a(this.field_o, -96);
         this.b(false);
         if (param0 != -68) {
-          lu var3 = (lu) null;
-          this.a((byte) 95, (lu) null, -98);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((byte) 95, (PacketBuffer) null, -98);
         }
     }
 

@@ -118,7 +118,7 @@ final class ur {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class ur {
             this.field_c = this.field_c + 1;
             this.field_i[fieldTemp$1] = (byte) 0;
           }
-          bl.a(this.field_k, 0, this.field_i, 32, 32);
+          ArrayOperations.copy(this.field_k, 0, this.field_i, 32, 32);
           this.a(false);
           var6 = -122 % ((param0 - 10) / 46);
           var4_int = 0;
@@ -182,11 +182,11 @@ final class ur {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final static pp a(lu param0, byte param1) {
+    final static pp a(PacketBuffer param0, byte param1) {
         nq var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -200,7 +200,7 @@ final class ur {
           if (param1 != 120) {
             ur.a(-96);
           }
-          var3 = param0.b(param1 ^ 16711815);
+          var3 = param0.readUnsignedByte(param1 ^ 16711815);
           stackIn_3_0 = new ela(var2, var3);
           return (pp) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -213,7 +213,7 @@ final class ur {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -299,7 +299,7 @@ final class ur {
           param2 + param0 <= ha.field_n) {
           eja.a((byte) -60, param0, param3, param2, param4, param5, param1);
         } else {
-          pj.a(param2, param3, 170, param1, param0, param4, param5);
+          BufferedSocket.a(param2, param3, 170, param1, param0, param4, param5);
         }
     }
 

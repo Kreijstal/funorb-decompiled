@@ -95,19 +95,19 @@ final class dna extends sna {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 
     final static void c(int param0, boolean param1) {
-        int var2 = (kg.field_b - 640) / 2;
+        int var2 = (FullscreenFocusCanvas.field_b - 640) / 2;
         int var3 = saa.field_b * saa.field_b;
         int var4 = var3 - param0 * param0;
-        ela.field_i.a(dg.field_c - 124 - 90, 31407, 199, -(199 * var4 / var3) + var2, 90);
+        ela.field_i.a(SoftwareRasterizer.field_c - 124 - 90, 31407, 199, -(199 * var4 / var3) + var2, 90);
         if (param1) {
           dna.f((byte) 74);
         }
-        ho.field_g.a(-4 + dg.field_c - 120, 31407, 438, var4 * 438 / var3 + (var2 + 202), 0);
+        ho.field_g.a(-4 + SoftwareRasterizer.field_c - 120, 31407, 438, var4 * 438 / var3 + (var2 + 202), 0);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

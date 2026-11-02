@@ -3,8 +3,8 @@
  */
 final class ls {
     static String[] field_b;
-    static kv[] field_a;
-    static kv field_c;
+    static Sprite[] field_a;
+    static Sprite field_c;
     static String field_d;
     private static String field_z;
 

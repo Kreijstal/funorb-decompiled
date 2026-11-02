@@ -37,7 +37,7 @@ final class fu extends at {
           }
           qs.field_n = 0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fu.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fu.B(" + param0 + ')');
         }
     }
 
@@ -63,27 +63,27 @@ final class fu extends at {
     }
 
     final static void a(vr param0, boolean param1) {
-        kv[] dupTemp$0 = null;
-        kv[] dupTemp$1 = null;
-        kv[] dupTemp$2 = null;
-        kv[] dupTemp$3 = null;
-        kv[] dupTemp$4 = null;
-        kv[] dupTemp$5 = null;
-        kv[] dupTemp$6 = null;
-        kv[] dupTemp$7 = null;
-        kv[] dupTemp$8 = null;
-        kv[] dupTemp$9 = null;
-        kv[] dupTemp$10 = null;
-        kv[] dupTemp$11 = null;
-        kv[] dupTemp$12 = null;
-        kv[] dupTemp$13 = null;
-        kv[] var6 = null;
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
+        Sprite[] dupTemp$4 = null;
+        Sprite[] dupTemp$5 = null;
+        Sprite[] dupTemp$6 = null;
+        Sprite[] dupTemp$7 = null;
+        Sprite[] dupTemp$8 = null;
+        Sprite[] dupTemp$9 = null;
+        Sprite[] dupTemp$10 = null;
+        Sprite[] dupTemp$11 = null;
+        Sprite[] dupTemp$12 = null;
+        Sprite[] dupTemp$13 = null;
+        Sprite[] var6 = null;
         int var3 = 0;
-        kv var4 = null;
+        Sprite var4 = null;
         int var5 = BachelorFridge.field_y;
         try {
-          qs.field_l = new kv[14][50];
-          wo.field_k = new kv[14][50];
+          qs.field_l = new Sprite[14][50];
+          wo.field_k = new Sprite[14][50];
           dupTemp$0 = jfa.a(param0, 4, "left_eye");
           pha.field_f = dupTemp$0;
           qs.field_l[1] = dupTemp$0;
@@ -155,7 +155,7 @@ final class fu extends at {
           pr.field_h = pi.a(param0, -8845, "basic", "stains");
           vv.field_c = pi.a(param0, -8845, "basic", "cursors");
           var6 = vv.field_c;
-          kv[] var2 = var6;
+          Sprite[] var2 = var6;
           for (var3 = 0; var6.length > var3; var3++) {
             var4 = var6[var3];
             lp.a((byte) -62, var4);
@@ -166,7 +166,7 @@ final class fu extends at {
           jt.field_g = wfa.a("lrg_button", param0, "basic", (byte) 126);
           gj.field_F = wfa.a("med_button", param0, "basic", (byte) -68);
           ana.field_r = wfa.a("small_button", param0, "basic", (byte) -17);
-          de.field_A = fh.a("frame_tape", param0, "basic", 7);
+          de.field_A = MidiNote.a("frame_tape", param0, "basic", 7);
           bh.field_r = wfa.a("mag", param0, "basic", (byte) 62);
           cba.field_a = wfa.a("bag", param0, "basic", (byte) -105);
           gca.field_g = wfa.a("bag_full", param0, "basic", (byte) 106);
@@ -182,7 +182,7 @@ final class fu extends at {
           t.a(0, param0);
           param0 = null;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fu.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fu.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -207,7 +207,7 @@ final class fu extends at {
           var10 = new dha((int)((double)var6_int * (0.2 * (double)this.field_q) + (double)this.field_r), (int)(-(0.2 * (double)this.field_n * (double)var6_int) + (double)this.field_j));
           this.field_t = new gw(var7, var9, var10, var8, 0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "fu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "fu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

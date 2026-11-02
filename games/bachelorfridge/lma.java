@@ -4,7 +4,7 @@
 final class lma extends ana {
     static String field_z;
     private taa field_v;
-    static ee field_y;
+    static IndexedSprite field_y;
     static String field_A;
     static int field_x;
     private bea field_w;
@@ -72,10 +72,10 @@ final class lma extends ana {
 
     final boolean c(byte param0) {
         int var2 = -119 / ((param0 - 71) / 47);
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
-        if (this.field_v.a((byte) -106)) {
+        if (this.field_v.isLinked((byte) -106)) {
           return false;
         }
         int fieldTemp$0 = this.field_l - 1;
@@ -170,7 +170,7 @@ final class lma extends ana {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class lma extends ana {
           this.field_v = new taa(this.field_q, this.field_w.field_q, this.field_w.field_t);
           this.a(27799, this.field_v);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "lma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "lma.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ei {
-    final static void a(ee[] param0, int param1, vr param2, String[][] param3, String[] param4, String[][] param5, boolean param6, kv[][] param7, String[] param8, boolean param9, vr param10, int[] param11, int param12, byte[] param13, int[] param14, String[] param15, vr param16, kv[][] param17, byte[] param18, int param19) {
-        kv[][] stackIn_4_0;
+    final static void a(IndexedSprite[] param0, int param1, vr param2, String[][] param3, String[] param4, String[][] param5, boolean param6, Sprite[][] param7, String[] param8, boolean param9, vr param10, int[] param11, int param12, byte[] param13, int[] param14, String[] param15, vr param16, Sprite[][] param17, byte[] param18, int param19) {
+        Sprite[][] stackIn_4_0;
         int stackIn_4_1;
         vr stackIn_4_2;
         int stackIn_4_3;
@@ -52,7 +52,7 @@ final class ei {
           if (param9) {
             return;
           }
-          stackIn_4_0 = (kv[][]) (param17);
+          stackIn_4_0 = (Sprite[][]) (param17);
           stackIn_4_1 = param1;
           stackIn_4_2 = (vr) (param16);
           stackIn_4_3 = param12;
@@ -162,16 +162,16 @@ final class ei {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param19).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param19).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1) {
-        pf var2 = sja.field_fb;
-        var2.c(param1, (byte) 122);
-        var2.d(2, 0);
-        var2.d(param0, 0);
-        var2.d(qea.a(false), 0);
+        BitPacketBuffer var2 = sja.field_fb;
+        var2.writeCipheredByte(param1, (byte) 122);
+        var2.writeByte(2, 0);
+        var2.writeByte(param0, 0);
+        var2.writeByte(qea.a(false), 0);
     }
 
     final static void a(byte param0) {

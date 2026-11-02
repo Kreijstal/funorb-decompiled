@@ -4,7 +4,7 @@
 abstract class gca extends IntrusiveNode {
     static qia field_f;
     int field_h;
-    static kv field_g;
+    static Sprite field_g;
 
     void a(int param0, int param1, byte param2) {
         if (param2 != -34) {
@@ -12,7 +12,7 @@ abstract class gca extends IntrusiveNode {
         }
     }
 
-    final static ola a(int param0, lu param1) {
+    final static ola a(int param0, PacketBuffer param1) {
         ola var2 = null;
         RuntimeException var2_ref = null;
         ola stackIn_3_0 = null;
@@ -38,19 +38,19 @@ abstract class gca extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static void d(byte param0) {
         if (param0 == 124) {
           iv.b(false);
-          hb.a(gi.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
+          hb.a(ClientException.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
           return;
         }
         gca.c((byte) -33);
         iv.b(false);
-        hb.a(gi.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
+        hb.a(ClientException.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
     }
 
     gca(int param0) {

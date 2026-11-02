@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eca extends bi {
-    private po field_k;
+    private BitmapFont field_k;
 
     final int b(int param0, int param1) {
         int var3;
         int var4;
         var4 = BachelorFridge.field_y;
         if (param1 != 40) {
-          this.field_k = (po) null;
+          this.field_k = (BitmapFont) null;
         }
         var3 = param0;
         if (0 == var3) {
@@ -52,28 +52,28 @@ final class eca extends bi {
 
     public eca() {
         super(5);
-        this.field_k = (po) ((Object) jha.field_g);
+        this.field_k = (BitmapFont) ((Object) jha.field_g);
     }
 
     final void b(boolean param0, int param1, int param2) {
-        kv var12 = null;
+        Sprite var12 = null;
         String var13 = null;
         int var5 = 0;
-        pia var7 = null;
+        PalettedBitmapFont var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        pia var7Lifetime1;
+        PalettedBitmapFont var7Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         if (param2 != 0) {
-          this.field_k = (po) null;
+          this.field_k = (BitmapFont) null;
           var12 = this.b(param1, (byte) 81);
-          kv var11 = var12;
+          Sprite var11 = var12;
           var5 = this.d(param1, 26891) ? 1 : 0;
-          var13 = this.d(false, pj.field_b[this.field_b][param1]);
+          var13 = this.d(false, BufferedSocket.field_b[this.field_b][param1]);
           String var6 = var13;
           var7 = fn.field_n;
           var8 = var5 != 0 ? param0 ? 10 : 9 : 8;
@@ -81,27 +81,27 @@ final class eca extends bi {
           var10 = this.a(param1, (byte) -74) + (this.a(param2 - 119, param1) >> 1);
           if (var5 == 0) {
             var12.b(var9 - (var12.field_n >> 1), var10 - 22, 128);
-            ((po) ((Object) var7)).a(var13, var9, var10 + 6, var8, -1);
+            ((BitmapFont) ((Object) var7)).a(var13, var9, var10 + 6, var8, -1);
             return;
           }
-          var12.e(-(var12.field_n >> 1) + var9, var10 - 22);
-          ((po) ((Object) var7)).a(var13, var9, var10 + 6, var8, -1);
+          var12.draw(-(var12.field_n >> 1) + var9, var10 - 22);
+          ((BitmapFont) ((Object) var7)).a(var13, var9, var10 + 6, var8, -1);
           return;
         }
-        kv var14 = this.b(param1, (byte) 81);
+        Sprite var14 = this.b(param1, (byte) 81);
         var5Lifetime1 = this.d(param1, 26891) ? 1 : 0;
-        String var15 = this.d(false, pj.field_b[this.field_b][param1]);
+        String var15 = this.d(false, BufferedSocket.field_b[this.field_b][param1]);
         var7Lifetime1 = fn.field_n;
         var8Lifetime1 = var5Lifetime1 != 0 ? param0 ? 10 : 9 : 8;
         var9Lifetime1 = this.a(param1, true) + this.b(param1, 40) >> 1;
         var10Lifetime1 = this.a(param1, (byte) -74) + (this.a(param2 - 119, param1) >> 1);
         if (var5Lifetime1 == 0) {
           var14.b(var9Lifetime1 - (var14.field_n >> 1), var10Lifetime1 - 22, 128);
-          ((po) ((Object) var7Lifetime1)).a(var15, var9Lifetime1, var10Lifetime1 + 6, var8Lifetime1, -1);
+          ((BitmapFont) ((Object) var7Lifetime1)).a(var15, var9Lifetime1, var10Lifetime1 + 6, var8Lifetime1, -1);
           return;
         }
-        var14.e(-(var14.field_n >> 1) + var9Lifetime1, var10Lifetime1 - 22);
-        ((po) ((Object) var7Lifetime1)).a(var15, var9Lifetime1, var10Lifetime1 + 6, var8Lifetime1, -1);
+        var14.draw(-(var14.field_n >> 1) + var9Lifetime1, var10Lifetime1 - 22);
+        ((BitmapFont) ((Object) var7Lifetime1)).a(var15, var9Lifetime1, var10Lifetime1 + 6, var8Lifetime1, -1);
     }
 
     private final void a(int param0, int param1, int param2, String param3, byte param4) {
@@ -113,7 +113,7 @@ final class eca extends bi {
           var6_int = oja.field_a[param2] + oja.field_a[1 + param2] >> 1;
           this.field_k.a(param3, var6_int, param0, param1, -1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "eca.UA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "eca.UA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class eca extends bi {
           }
           return stackIn_57_0;
         }
-        this.field_k = (po) null;
+        this.field_k = (BitmapFont) null;
         this.a(2, aj.field_b, 0);
         this.a(3, ej.field_n, param0 - 9);
         this.a(4, es.field_h, 0);
@@ -256,7 +256,7 @@ final class eca extends bi {
           ri.field_b = au.a(7, 16757, 0, 10);
         }
         if (param0 != 1) {
-          this.field_k = (po) null;
+          this.field_k = (BitmapFont) null;
           if (!ri.field_b.field_p) {
             var5 = fo.field_b;
             var3 = 95 + this.field_k.field_u + 253;
@@ -294,9 +294,9 @@ final class eca extends bi {
     final void l(int param0) {
         this.i(-12988);
         j.a(wa.field_l, 40, 16760896, true, 320, false);
-        dg.a(40, 60, 560, 335, 20, 0, 80);
+        SoftwareRasterizer.a(40, 60, 560, 335, 20, 0, 80);
         if (param0 != 9) {
-          this.field_k = (po) null;
+          this.field_k = (BitmapFont) null;
           if (bp.e(param0 - 29928)) {
             this.p(-118);
             this.c(true);
@@ -315,10 +315,10 @@ final class eca extends bi {
         this.c(true);
     }
 
-    final kv b(int param0, byte param1) {
+    final Sprite b(int param0, byte param1) {
         int var3;
         if (param1 < 62) {
-          return (kv) null;
+          return (Sprite) null;
         }
         var3 = param0;
         if (var3 == 3) {
@@ -342,7 +342,7 @@ final class eca extends bi {
         try {
           var10_int = param2 + param5 + param6;
           if (param3 != 22442) {
-            this.field_k = (po) null;
+            this.field_k = (BitmapFont) null;
           }
           if (param8 != -1) {
             this.field_k.b(param8 + 1 + ". ", 70, param1, param7, -1);
@@ -352,7 +352,7 @@ final class eca extends bi {
             param2 = (var10_int + 200 * param2) / (var10_int * 2);
             param5 = (param5 * 200 + var10_int) / (2 * var10_int);
           }
-          this.field_k.c(param0, 80, param1, param7, -1);
+          this.field_k.drawText(param0, 80, param1, param7, -1);
           if (var10_int >= 50) {
             stackIn_11_0 = "50+";
           } else {
@@ -375,22 +375,22 @@ final class eca extends bi {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
     private final void a(int param0, String param1, int param2) {
         int var4_int = 0;
-        pia var5 = null;
+        PalettedBitmapFont var5 = null;
         try {
           if (param2 != param0) {
-            dg.b(oja.field_a[param0], 80, 276, 0, 64);
+            SoftwareRasterizer.drawVerticalLineAlpha(oja.field_a[param0], 80, 276, 0, 64);
           }
           var4_int = oja.field_a[1 + param0] + oja.field_a[param0] >> 1;
           var5 = fn.field_n;
-          ((po) ((Object) var5)).a(param1, var4_int, 100, 10, -1);
+          ((BitmapFont) ((Object) var5)).a(param1, var4_int, 100, 10, -1);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "eca.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "eca.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

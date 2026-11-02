@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class iea {
-    static eaa field_d;
+    static IntrusiveDeque field_d;
     static String field_c;
     static String field_b;
-    static kv field_a;
+    static Sprite field_a;
 
     final static void a(int param0, int param1, byte param2) {
         qaa.field_c = param0;

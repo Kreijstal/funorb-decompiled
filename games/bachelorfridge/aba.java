@@ -30,22 +30,22 @@ abstract class aba extends pk implements fca {
         return true;
     }
 
-    final static kv[] a(kv param0, boolean param1) {
-        kv[] var2 = null;
+    final static Sprite[] a(Sprite param0, boolean param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        kv var3 = null;
-        kv[] var4 = null;
-        kv[] stackIn_3_0 = null;
+        Sprite var3 = null;
+        Sprite[] var4 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            var3 = (kv) null;
-            aba.a((kv) null, true);
+            var3 = (Sprite) null;
+            aba.a((Sprite) null, true);
           }
-          var4 = new kv[9];
+          var4 = new Sprite[9];
           var2 = var4;
           var4[4] = param0;
           stackIn_3_0 = var2;
@@ -60,7 +60,7 @@ abstract class aba extends pk implements fca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ abstract class aba extends pk implements fca {
           int var3_int = 96 % ((param1 - 0) / 49);
           this.a(574);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "aba.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aba.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -91,13 +91,13 @@ abstract class aba extends pk implements fca {
             this.c((byte) 6);
           }
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "aba.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aba.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static pp a(lu param0, int param1) {
+    final static pp a(PacketBuffer param0, int param1) {
         RuntimeException var2 = null;
-        lu var3 = null;
+        PacketBuffer var3 = null;
         eba stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -105,8 +105,8 @@ abstract class aba extends pk implements fca {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 9) {
-            var3 = (lu) null;
-            aba.a((lu) null, 85);
+            var3 = (PacketBuffer) null;
+            aba.a((PacketBuffer) null, 85);
           }
           stackIn_3_0 = new eba();
           return (pp) ((Object) stackIn_3_0);
@@ -120,7 +120,7 @@ abstract class aba extends pk implements fca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ abstract class aba extends pk implements fca {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "aba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

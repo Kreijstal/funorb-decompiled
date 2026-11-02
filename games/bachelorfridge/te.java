@@ -54,7 +54,7 @@ final class te extends kj {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw pe.a((Throwable) ((Object) var1_ref), "te.J(" + param0 + ')');
+            throw pe.wrapException((Throwable) ((Object) var1_ref), "te.J(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -110,11 +110,11 @@ final class te extends kj {
     }
 
     final void a(int param0, int param1, int param2) {
-        ee var5 = null;
+        IndexedSprite var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var4 = this.field_g * ((-(this.field_g * 655360) + 52428800 >> 16) + 400) / 80;
-        ee var5Lifetime1;
+        IndexedSprite var5Lifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
         if (param1 == 0) {
@@ -138,7 +138,7 @@ final class te extends kj {
           this.field_i = kla.a(129, m.field_a, -2147483648) - 64;
           this.field_h = -32 + kla.a(65, m.field_a, -2147483648);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

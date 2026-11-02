@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aea extends k {
-    static kv field_k;
+    static Sprite field_k;
 
     private final void a(int param0, int param1, int param2) {
         int var4;
@@ -114,8 +114,8 @@ final class aea extends k {
         super(1, false);
     }
 
-    final void a(byte param0, lu param1, int param2) {
-        lu var5 = null;
+    final void a(byte param0, PacketBuffer param1, int param2) {
+        PacketBuffer var5 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -124,12 +124,12 @@ final class aea extends k {
         RuntimeException var4 = null;
         try {
           if (param2 == 0) {
-            stackIn_5_1 = (param1.b(param0 + 16712006) == 1);
+            stackIn_5_1 = (param1.readUnsignedByte(param0 + 16712006) == 1);
             this.field_f = stackIn_5_1;
           }
           if (param0 != -71) {
-            var5 = (lu) null;
-            this.a((byte) 63, (lu) null, 61);
+            var5 = (PacketBuffer) null;
+            this.a((byte) 63, (PacketBuffer) null, 61);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -142,7 +142,7 @@ final class aea extends k {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

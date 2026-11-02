@@ -89,7 +89,7 @@ final class qd extends pv {
         var4 = BachelorFridge.field_y;
         try {
           try {
-            if (!ht.field_i.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_i.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&
@@ -122,7 +122,7 @@ final class qd extends pv {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class qd extends pv {
           this.field_o = this.field_f.field_k;
           this.field_j = (double)this.field_m / (-43.0 + (double)this.c(false));
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

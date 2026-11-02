@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class vv {
-    static mfa field_e;
+    static GameKeyHandler field_e;
     static String field_b;
     static int field_d;
     mla[] field_a;
-    static kv[] field_c;
+    static Sprite[] field_c;
 
     final int b(byte param0) {
         int var4 = 0;
@@ -37,7 +37,7 @@ abstract class vv {
 
     final static int[] a(byte param0) {
         if (param0 <= 101) {
-          field_c = (kv[]) null;
+          field_c = (Sprite[]) null;
         }
         return new int[8];
     }
@@ -120,7 +120,7 @@ abstract class vv {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ abstract class vv {
     }
 
     static {
-        field_e = new mfa();
+        field_e = new GameKeyHandler();
         field_b = "If you do nothing the game will revert to normal view in <%0> second.";
     }
 }

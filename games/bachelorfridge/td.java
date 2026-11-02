@@ -19,19 +19,19 @@ class td extends sfa {
         }
     }
 
-    final void a(int param0, lu param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           if (this.a(-4)) {
             er.a(this.field_j, 111, param1);
           } else {
-            param1.d(this.field_k, 0);
-            param1.d(this.field_n, 0);
+            param1.writeByte(this.field_k, 0);
+            param1.writeByte(this.field_n, 0);
           }
-          param1.d(this.field_i, 0);
-          param1.d(!this.field_m ? 0 : 1, 0);
+          param1.writeByte(this.field_i, 0);
+          param1.writeByte(!this.field_m ? 0 : 1, 0);
           int var3_int = 71 % ((61 - param0) / 53);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "td.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "td.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,7 +54,7 @@ class td extends sfa {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        lu var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -64,9 +64,9 @@ class td extends sfa {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          var9 = new lu(param1);
-          var3 = var9.b(16711935);
-          var4 = var9.f(-52);
+          var9 = new PacketBuffer(param1);
+          var3 = var9.readUnsignedByte(16711935);
+          var4 = var9.readInt(-52);
           if (var4 >= 0 && (0 == kq.field_k ||
             !(var4 > kq.field_k))) {
             if (var3 == 0) {
@@ -77,14 +77,14 @@ class td extends sfa {
               stackIn_10_0 = var5_ref_byte__;
               return stackIn_10_0;
             }
-            var5 = var9.f(-128);
+            var5 = var9.readInt(-128);
             if (var5 >= 0 && (0 == kq.field_k ||
               !(kq.field_k < var5))) {
               var13 = new byte[var5];
               var11 = var13;
               var6 = var11;
               if (1 == var3) {
-                pca.a(var13, var5, param1, var4, 9);
+                Bzip2Decoder.a(var13, var5, param1, var4, 9);
               } else {
                 var7 = kca.field_b;
                 synchronized (var7) {
@@ -107,7 +107,7 @@ class td extends sfa {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ class td extends sfa {
         try {
           this.field_m = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "td.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "td.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -367,7 +367,7 @@ class td extends sfa {
           } else {
             stackIn_137_2 = "{...}";
           }
-          throw pe.a((Throwable) (stackIn_136_0), ((StringBuilder) (Object) stackIn_136_1).append(stackIn_137_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) (stackIn_136_0), ((StringBuilder) (Object) stackIn_136_1).append(stackIn_137_2).append(',').append(param1).append(')').toString());
         }
     }
 

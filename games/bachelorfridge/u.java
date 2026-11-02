@@ -9,7 +9,7 @@ final class u extends bca {
         super(param0, param1);
     }
 
-    u(lu param0) {
+    u(PacketBuffer param0) {
         super(param0);
         RuntimeException runtimeException = null;
         int var2_int = 0;
@@ -20,9 +20,9 @@ final class u extends bca {
         RuntimeException decompiledCaughtException = null;
         var3 = BachelorFridge.field_y;
         try {
-          this.field_k = param0.e((byte) 111);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 111);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int >= 0) {
@@ -34,8 +34,8 @@ final class u extends bca {
             }
             break;
           }
-          this.field_r = param0.b(16711935);
-          this.field_q = param0.b(16711935);
+          this.field_r = param0.readUnsignedByte(16711935);
+          this.field_q = param0.readUnsignedByte(16711935);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,7 +47,7 @@ final class u extends bca {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class u extends bca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var2_ref), "u.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var2_ref), "u.C(" + param0 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ final class u extends bca {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -323,7 +323,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "mu_you_declined_invite");
                 if (null != var2) {
-                  hr.field_e = qq.a(var2, false);
+                  DelegatingCanvas.field_e = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_invite_withdrawn");
                 if (var2 != null) {
@@ -407,11 +407,11 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "mu_options");
                 if (var2 != null) {
-                  ou.field_c = qq.a(var2, param0);
+                  IterableDualLinkDeque.field_c = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_options_whocanjoin");
                 if (var2 != null) {
-                  pf.field_k = qq.a(var2, false);
+                  BitPacketBuffer.field_k = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_options_players");
                 if (var2 != null) {
@@ -491,7 +491,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "join_withdraw_request_xs_game");
                 if (var2 != null) {
-                  fh.field_s = qq.a(var2, false);
+                  MidiNote.field_s = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_gameopt_kick_x_from_this_game");
                 if (var2 != null) {
@@ -543,7 +543,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "mu_chat_game_show_all");
                 if (var2 != null) {
-                  eaa.field_f = qq.a(var2, false);
+                  IntrusiveDeque.field_f = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_game_friends_only");
                 if (null != var2) {
@@ -575,7 +575,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
-                  nn.field_a = qq.a(var2, false);
+                  MouseInputHandler.field_a = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "your_rating_is_x");
                 if (var2 != null) {
@@ -731,7 +731,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "you_are_invited_to_xs_game");
                 if (null != var2) {
-                  eka.field_o = qq.a(var2, false);
+                  MusicPatch.field_o = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "asking_to_join_xs_game");
                 if (var2 != null) {
@@ -795,7 +795,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "multiconst_friends");
                 if (var2 != null) {
-                  kg.field_c = qq.a(var2, false);
+                  FullscreenFocusCanvas.field_c = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "multiconst_similar_rating");
                 if (var2 != null) {
@@ -919,7 +919,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "gameopt_playernotmember");
                 if (var2 != null) {
-                  in.field_d = qq.a(var2, false);
+                  DualLinkDeque.field_d = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_younotmember");
                 if (var2 != null) {
@@ -1157,7 +1157,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "tocustomersupport");
                 if (null != var2) {
-                  wha.field_b = qq.a(var2, param0);
+                  IterableNodeHashTable.field_b = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "changedisplayname");
                 if (var2 != null) {
@@ -1257,7 +1257,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "warning_ifyouquit");
                 if (var2 != null) {
-                  wha.field_e = qq.a(var2, false);
+                  IterableNodeHashTable.field_e = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "warning_ifyouquitorleavepage");
                 if (var2 != null) {
@@ -1417,7 +1417,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "creatingyouraccount");
                 if (var2 != null) {
-                  rma.field_c = qq.a(var2, param0);
+                  SocketConnector.field_c = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_youmustaccept");
                 if (var2 != null) {
@@ -1433,7 +1433,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "day");
                 if (var2 != null) {
-                  tca.field_b = qq.a(var2, false);
+                  JaggrabDownloader.field_b = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "month");
                 if (null != var2) {
@@ -1501,7 +1501,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "create_createanaccount");
                 if (null != var2) {
-                  sca.field_b = qq.a(var2, false);
+                  MouseWheelInput.field_b = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_username");
                 if (var2 != null) {
@@ -2447,7 +2447,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "mp_offerrematch_unrated");
                 if (null != var2) {
-                  rna.field_b = qq.a(var2, false);
+                  IntrusiveDequeCursor.field_b = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_acceptrematch");
                 if (null != var2) {
@@ -2455,7 +2455,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "mp_acceptrematch_unrated");
                 if (var2 != null) {
-                  wha.field_g = qq.a(var2, false);
+                  IterableNodeHashTable.field_g = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_cancelrematch");
                 if (null != var2) {
@@ -2794,7 +2794,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "fs_button_members");
                 if (var2 != null) {
-                  ko.field_h = qq.a(var2, false);
+                  IsaacRandom.field_h = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_unavailable");
                 if (null != var2) {
@@ -2810,7 +2810,7 @@ final class u extends bca {
                 }
                 var2 = qba.a(17602, "fs_focus_or_resolution");
                 if (var2 != null) {
-                  dm.field_e = qq.a(var2, param0);
+                  ProxySocketConnector.field_e = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "fs_timeout");
                 if (var2 != null) {
@@ -3157,7 +3157,7 @@ final class u extends bca {
                   } else {
                     stackIn_2619_2 = "{...}";
                   }
-                  throw pe.a((Throwable) ((Object) stackIn_2618_0), ((StringBuilder) (Object) stackIn_2618_1).append(stackIn_2619_2).append(')').toString());
+                  throw pe.wrapException((Throwable) ((Object) stackIn_2618_0), ((StringBuilder) (Object) stackIn_2618_1).append(stackIn_2619_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   var4 = GameAppletShell.field_a;
@@ -3182,26 +3182,26 @@ final class u extends bca {
             if (!ii.b(1, 0)) {
               return false;
             }
-            dw.field_f = ig.field_m.b(16711935);
-            ig.field_m.field_g = 0;
+            dw.field_f = ig.field_m.readUnsignedByte(16711935);
+            ig.field_m.position = 0;
           }
           if (dw.field_f == -2) {
             if (!ii.b(2, param0 + 67)) {
               return false;
             }
-            dw.field_f = ig.field_m.e((byte) 84);
-            ig.field_m.field_g = 0;
+            dw.field_f = ig.field_m.readUnsignedShort((byte) 84);
+            ig.field_m.position = 0;
           }
           stackIn_20_0 = ii.b(dw.field_f, 0);
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1), "u.B(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1), "u.B(" + param0 + ')');
         }
     }
 
-    final void a(byte param0, lu param1) {
+    final void a(byte param0, PacketBuffer param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -3212,8 +3212,8 @@ final class u extends bca {
             return;
           }
           super.a((byte) -26, param1);
-          param1.d(this.field_r, 0);
-          param1.d(this.field_q, 0);
+          param1.writeByte(this.field_r, 0);
+          param1.writeByte(this.field_q, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3225,7 +3225,7 @@ final class u extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -3251,7 +3251,7 @@ final class u extends bca {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 

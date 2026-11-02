@@ -9,7 +9,7 @@ final class ula {
     boolean field_d;
     static int field_f;
     int field_g;
-    static kv field_h;
+    static Sprite field_h;
     jfa field_c;
     private int field_b;
 
@@ -69,19 +69,19 @@ final class ula {
     final static void a(int param0, byte param1, String param2, int param3, boolean param4, long param5) {
         int var7_int = 0;
         try {
-          sja.field_fb.c(param0, (byte) 110);
-          sja.field_fb.field_g = sja.field_fb.field_g + 1;
+          sja.field_fb.writeCipheredByte(param0, (byte) 110);
+          sja.field_fb.position = sja.field_fb.position + 1;
           if (param1 != 75) {
             field_j = (String) null;
           }
-          var7_int = sja.field_fb.field_g;
-          sja.field_fb.b(1686281208, param5);
-          sja.field_fb.a((byte) -50, param2);
-          sja.field_fb.d(param3, 0);
-          sja.field_fb.d(!param4 ? 0 : 1, param1 - 75);
-          sja.field_fb.b((byte) -127, sja.field_fb.field_g - var7_int);
+          var7_int = sja.field_fb.position;
+          sja.field_fb.writeLong(1686281208, param5);
+          sja.field_fb.writeString((byte) -50, param2);
+          sja.field_fb.writeByte(param3, 0);
+          sja.field_fb.writeByte(!param4 ? 0 : 1, param1 - 75);
+          sja.field_fb.writeLengthByte((byte) -127, sja.field_fb.position - var7_int);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ula.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ula.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -94,9 +94,9 @@ final class ula {
           this.field_g = param3;
           this.field_i = (float)param0;
           this.field_c.field_v.a((byte) 46, this.field_c.field_g.field_o.field_b, 3);
-          qm.a(5, 7758);
+          RasterBuffer.a(5, 7758);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ula.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ula.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

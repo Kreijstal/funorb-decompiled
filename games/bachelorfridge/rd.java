@@ -23,11 +23,11 @@ final class rd extends td {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static int[] a(boolean param0, lu param1) {
+    final static int[] a(boolean param0, PacketBuffer param1) {
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -42,7 +42,7 @@ final class rd extends td {
         var5 = BachelorFridge.field_y;
         try {
           var2 = new int[50];
-          var3 = param1.b(16711935);
+          var3 = param1.readUnsignedByte(16711935);
           var4 = 0;
           if (!param0) {
             stackIn_3_0 = (int[]) null;
@@ -52,7 +52,7 @@ final class rd extends td {
           while (!(decompiledNaturalLoopExit0 = (var3 <= var4))) {
             stackIn_10_0 = var2;
             if (var5 == 0) {
-              stackIn_10_0[param1.b(16711935)] = param1.b(16711935);
+              stackIn_10_0[param1.readUnsignedByte(16711935)] = param1.readUnsignedByte(16711935);
               var4++;
               continue;
             }
@@ -72,7 +72,7 @@ final class rd extends td {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class rd extends td {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class rd extends td {
         int stackIn_60_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_49_0;
-        pf var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -138,24 +138,24 @@ final class rd extends td {
         var9 = BachelorFridge.field_y;
         try {
           var1 = ig.field_m;
-          var2 = var1.b(param0 + 16712046);
+          var2 = var1.readUnsignedByte(param0 + 16712046);
           if (var2 == 0) {
             if (fq.field_s == null) {
-              fq.field_s = new wma(128);
+              fq.field_s = new DualLinkNodeHashTable(128);
               bda.field_l = 0;
             }
-            stackIn_11_0 = (var1.b(param0 + 16712046) != 1) ? 0 : 1;
+            stackIn_11_0 = (var1.readUnsignedByte(param0 + 16712046) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
-            var4_ref_String = var1.g(83);
+            var4_ref_String = var1.readString(83);
             if (var3_int != 0) {
-              var5 = var1.g(43);
+              var5 = var1.readString(43);
             }
             if (var3_int == 0 ||
               var9 != 0) {
               var5 = var4_ref_String;
             }
             var6 = di.a(var4_ref_String, -118);
-            var7 = var1.g(param0 + 157);
+            var7 = var1.readString(param0 + 157);
             var8 = fq.a(0, (CharSequence) ((Object) var4_ref_String));
             if (var8 == null) {
               var8 = var4_ref_String;
@@ -198,22 +198,22 @@ final class rd extends td {
               return;
             }
             um.field_c = 1;
-            var3 = var1.g(52);
+            var3 = var1.readString(52);
             sja.field_gb = ((String) (var3)).intern();
-            var4 = var1.b(param0 ^ -16711826);
+            var4 = var1.readUnsignedByte(param0 ^ -16711826);
             em.a(param0 ^ -109, var4);
             return;
           }
           if (wja.field_m == null) {
-            wja.field_m = new wma(128);
+            wja.field_m = new DualLinkNodeHashTable(128);
             maa.field_v = 0;
           }
-          var3Lifetime1 = var1.g(79);
+          var3Lifetime1 = var1.readString(79);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.g(param0 ^ -40);
-          var5Lifetime1 = var1.g(-94);
+          var4_ref_StringLifetime1 = var1.readString(param0 ^ -40);
+          var5Lifetime1 = var1.readString(-94);
           var6Lifetime1 = bna.b(-51, var4_ref_StringLifetime1);
           if (var6Lifetime1 == null) {
             var6Lifetime1 = bna.b(-102, var5Lifetime1);
@@ -235,7 +235,7 @@ final class rd extends td {
           var6Lifetime1.field_vb = (String) (var3Lifetime1);
           var6Lifetime1.field_Ab = var5Lifetime1;
           var6Lifetime1.field_xb = var4_ref_StringLifetime1;
-          var6Lifetime1.a(false);
+          var6Lifetime1.unlink(false);
           var7_ref = (nea) (es.field_j.b((byte) 90));
           scanLoop1: while (true) {
             if (var7_ref != null) {
@@ -264,7 +264,7 @@ final class rd extends td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var1_ref), "rd.C(" + param0 + ')');
+          throw pe.wrapException((Throwable) ((Object) var1_ref), "rd.C(" + param0 + ')');
         }
     }
 

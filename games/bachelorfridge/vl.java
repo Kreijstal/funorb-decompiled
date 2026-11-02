@@ -6,7 +6,7 @@ final class vl {
     static String field_a;
     static String field_b;
     static sna field_d;
-    static ee field_c;
+    static IndexedSprite field_c;
     private static String field_z;
 
     public static void a(byte param0) {

@@ -7,7 +7,7 @@ final class ed {
     static du field_d;
     static String field_c;
     static String field_e;
-    static kv[] field_f;
+    static Sprite[] field_f;
     private static String field_z;
 
     public static void a(int param0) {
@@ -19,7 +19,7 @@ final class ed {
           field_b = null;
           return;
         }
-        field_f = (kv[]) null;
+        field_f = (Sprite[]) null;
         field_e = null;
         field_d = null;
         field_b = null;

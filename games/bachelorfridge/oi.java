@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oi extends ana {
-    static js field_v;
+    static IntrusiveNodeHashTable field_v;
     static sna field_w;
 
     private final void d(int param0) {
@@ -11,7 +11,7 @@ final class oi extends ana {
         }
     }
 
-    final static void a(int param0, kv[] param1) {
+    final static void a(int param0, Sprite[] param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -37,7 +37,7 @@ final class oi extends ana {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ final class oi extends ana {
         int var3 = 0;
         wia var4;
         int var5;
-        kv[] var6;
+        Sprite[] var6;
         var5 = BachelorFridge.field_y;
         for (var2 = 0; this.field_q.field_h.field_z > var2; var2++) {
           for (var3 = 0; var3 < this.field_q.field_h.field_B; var3++) {
@@ -72,22 +72,22 @@ final class oi extends ana {
           }
         }
         if (param0 != 48) {
-          var6 = (kv[]) null;
-          oi.a(25, (kv[]) null);
+          var6 = (Sprite[]) null;
+          oi.a(25, (Sprite[]) null);
         }
     }
 
     public static void f(int param0) {
         if (param0 != -6887) {
-          kv[] var2 = (kv[]) null;
-          oi.a(-14, (kv[]) null);
+          Sprite[] var2 = (Sprite[]) null;
+          oi.a(-14, (Sprite[]) null);
         }
         field_w = null;
         field_v = null;
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (!(dg.field_i < param1 + param2)) {
+        if (!(SoftwareRasterizer.field_i < param1 + param2)) {
           return param2;
         }
         if (param2 + param0 - param1 >= 0) {
@@ -96,7 +96,7 @@ final class oi extends ana {
         if (param3 != -21264) {
           oi.a(-72, -7, -102, 104);
         }
-        return dg.field_i - param1;
+        return SoftwareRasterizer.field_i - param1;
     }
 
     oi(gj param0, vba param1) {

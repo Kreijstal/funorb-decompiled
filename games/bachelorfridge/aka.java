@@ -6,10 +6,10 @@ final class aka extends ana {
     private fk field_C;
     private taa field_v;
     private cf field_z;
-    private kv field_B;
+    private Sprite field_B;
     private dda field_A;
     static vr field_w;
-    static kv field_E;
+    static Sprite field_E;
     static vm field_G;
     static String field_y;
     static lda field_x;
@@ -30,7 +30,7 @@ final class aka extends ana {
         int fieldTemp$1 = 0;
         int var2;
         ad var3;
-        if (this.field_v.a((byte) -106)) {
+        if (this.field_v.isLinked((byte) -106)) {
           return false;
         }
         if (li.field_l == this.field_z) {
@@ -158,22 +158,22 @@ final class aka extends ana {
           var3_ref_ad = this.field_C.field_l.a(-27449, this.field_q);
           var4 = this.field_q.field_s.a(var3_ref_ad.field_s.field_J, (byte) 33, var3_ref_ad.field_s.field_x);
           var5 = (-var2 + 150) * ((150 - var2) * 400) / 22500;
-          dg.a(fr.field_p);
+          SoftwareRasterizer.saveClip(fr.field_p);
           var6 = 32 + var4.field_a;
-          dg.a(0, 0, 640, var6);
-          this.field_B.b(var4.field_c, 30 + (var4.field_a - var5));
+          SoftwareRasterizer.setClip(0, 0, 640, var6);
+          this.field_B.drawVerticalFlip(var4.field_c, 30 + (var4.field_a - var5));
           var7 = new int[]{35, 35, 36, 37, 38, 39, 41, 43, 45, 48, 52, 56};
           for (var8 = 0; var8 < var7.length; var8++) {
-            dg.a(var4.field_c + var7[var8], var6 + var8, var4.field_c - (-128 + var7[var8]), 1 + (var8 + var6));
-            this.field_B.b(var4.field_c, 30 + (var4.field_a - var5));
+            SoftwareRasterizer.setClip(var4.field_c + var7[var8], var6 + var8, var4.field_c - (-128 + var7[var8]), 1 + (var8 + var6));
+            this.field_B.drawVerticalFlip(var4.field_c, 30 + (var4.field_a - var5));
           }
-          dg.b(fr.field_p);
+          SoftwareRasterizer.restoreClip(fr.field_p);
           return;
         }
         if (this.field_z == qn.field_i) {
           var10 = this.field_q.field_s.a(this.field_C.field_r, (byte) -112, this.field_C.field_q);
           var3 = 400 * this.field_l / 40;
-          this.field_B.e(var10.field_c, 60 - this.field_B.field_o - var3 + var10.field_a);
+          this.field_B.draw(var10.field_c, 60 - this.field_B.field_o - var3 + var10.field_a);
         }
         if (param0 > -10) {
           this.d(53);
@@ -194,12 +194,12 @@ final class aka extends ana {
           this.field_C = param1;
           this.field_v = this.field_m;
           this.field_z = li.field_l;
-          this.field_B = de.field_F.a();
+          this.field_B = de.field_F.toRgbSprite();
           this.field_l = 150;
           var3 = this.field_C.field_l.a(34, this.field_q.field_h);
           this.field_A = new dda(this.field_q, var3.field_x, var3.field_J);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "aka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "aka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

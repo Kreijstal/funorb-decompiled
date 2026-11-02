@@ -4,7 +4,7 @@
 final class wga extends bca {
     static int field_s;
     static boolean[] field_q;
-    static kv field_r;
+    static Sprite field_r;
 
     final at a(int param0, gj param1) {
         RuntimeException var3 = null;
@@ -15,7 +15,7 @@ final class wga extends bca {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5) {
-            field_r = (kv) null;
+            field_r = (Sprite) null;
           }
           stackIn_3_0 = new lb(param1, this);
           return (at) ((Object) stackIn_3_0);
@@ -29,11 +29,11 @@ final class wga extends bca {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    wga(lu param0) {
+    wga(PacketBuffer param0) {
         super(param0);
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
@@ -42,9 +42,9 @@ final class wga extends bca {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_k = param0.e((byte) 99);
-          this.field_o = new eaa();
-          var2_int = param0.b(16711935);
+          this.field_k = param0.readUnsignedShort((byte) 99);
+          this.field_o = new IntrusiveDeque();
+          var2_int = param0.readUnsignedByte(16711935);
           while (true) {
             var2_int--;
             if (var2_int < 0) {
@@ -62,7 +62,7 @@ final class wga extends bca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -81,13 +81,13 @@ final class wga extends bca {
           int var3_int = 123 / ((param1 - 12) / 35);
           this.a(param0, (byte) -2);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static du[] d(int param0) {
         if (param0 == 0) {
-          return new du[]{fh.field_i, sl.field_j, bj.field_k, uj.field_u, uca.field_b, wn.field_j, tj.field_d, mj.field_l, tl.field_r, h.field_p, hea.field_p, ed.field_d, jq.field_l, mda.field_a};
+          return new du[]{MidiNote.field_i, sl.field_j, bj.field_k, uj.field_u, uca.field_b, wn.field_j, tj.field_d, mj.field_l, tl.field_r, h.field_p, hea.field_p, ed.field_d, jq.field_l, mda.field_a};
         }
         return (du[]) null;
     }

@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class en extends IOException {
-    static ee field_a;
+    static IndexedSprite field_a;
 
     en(String param0) {
         super(param0);
@@ -13,7 +13,7 @@ final class en extends IOException {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -10132) {
-          field_a = (ee) null;
+          field_a = (IndexedSprite) null;
         }
     }
 
@@ -39,7 +39,7 @@ final class en extends IOException {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
         }
     }
 

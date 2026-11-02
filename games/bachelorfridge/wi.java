@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wi extends w implements oh {
-    static wma field_i;
+    static DualLinkNodeHashTable field_i;
     static int[] field_o;
     private boolean field_k;
     private vi field_n;
@@ -21,7 +21,7 @@ final class wi extends w implements oh {
           this.field_m = param2;
           this.field_n = new vi(this.field_l);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class wi extends w implements oh {
           dk.field_p = param1;
           uv.a(false, oc.field_m, param0);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "wi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "wi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class wi extends w implements oh {
         }
         byte[] var4 = this.field_j.b(-54, param1, 0);
         if (var4 != null) {
-          var3 = new cg(new lu(var4));
+          var3 = new cg(new PacketBuffer(var4));
           this.field_n.a(var3, (long)param1, 83);
           int var5 = -80 / ((param0 + 37) / 48);
           return var3;
@@ -94,7 +94,7 @@ final class wi extends w implements oh {
         field_o = null;
         field_i = null;
         if (!param0) {
-          field_i = (wma) null;
+          field_i = (DualLinkNodeHashTable) null;
         }
     }
 
@@ -221,7 +221,7 @@ final class wi extends w implements oh {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 

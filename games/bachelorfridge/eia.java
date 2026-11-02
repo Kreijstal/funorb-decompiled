@@ -8,7 +8,7 @@ final class eia {
     private fw[] field_e;
     private int field_h;
     static qia field_a;
-    private eaa field_f;
+    private IntrusiveDeque field_f;
     private int field_g;
     static int field_d;
     boolean field_b;
@@ -241,7 +241,7 @@ final class eia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw pe.a((Throwable) ((Object) var8), "eia.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw pe.wrapException((Throwable) ((Object) var8), "eia.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -294,7 +294,7 @@ final class eia {
             var4Lifetime2 = (fw) (this.field_f.a(param1 + 864));
             var3 = new fw(param0, var4Lifetime2.field_g);
             this.field_e[var4Lifetime2.field_k] = null;
-            var4Lifetime2.a(false);
+            var4Lifetime2.unlink(false);
           }
           this.field_e[param0] = var3;
         } else {
@@ -307,7 +307,7 @@ final class eia {
     eia(int param0, int param1, int param2) {
         this.field_g = 0;
         this.field_j = -1;
-        this.field_f = new eaa();
+        this.field_f = new IntrusiveDeque();
         this.field_b = false;
         this.field_i = param0;
         this.field_h = param1;

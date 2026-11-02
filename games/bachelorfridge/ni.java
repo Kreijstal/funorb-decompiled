@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ni extends pv {
-    static ss field_l;
+    static ModelMesh field_l;
     static String field_k;
-    static kv field_j;
+    static Sprite field_j;
 
     ni(jfa param0) {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "ni.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "ni.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static ai[] a(byte param0, pf param1) {
+    final static ai[] a(byte param0, BitPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -31,11 +31,11 @@ final class ni extends pv {
         RuntimeException decompiledCaughtException = null;
         var7 = BachelorFridge.field_y;
         try {
-          var2_int = param1.d(8, (byte) -65);
+          var2_int = param1.readBits(8, (byte) -65);
           if (var2_int > 0) {
             return null;
           }
-          var3 = param1.d(12, (byte) 45);
+          var3 = param1.readBits(12, (byte) 45);
           if (param0 != 41) {
             stackIn_6_0 = (ai[]) null;
             return stackIn_6_0;
@@ -43,17 +43,17 @@ final class ni extends pv {
           var4 = new ai[var3];
           for (var5 = 0; var5 < var3; var5++) {
             if (!fa.a((byte) -75, param1)) {
-              var6 = param1.d(nia.a(-1 + var5, false), (byte) 64);
+              var6 = param1.readBits(nia.a(-1 + var5, false), (byte) 64);
               var4[var5] = var4[var6];
             } else {
               var6_ref_ai = new ai();
-              param1.d(24, (byte) -105);
-              param1.d(24, (byte) 50);
-              var6_ref_ai.field_b = param1.d(24, (byte) -123);
-              param1.d(9, (byte) 69);
-              param1.d(12, (byte) -64);
-              param1.d(12, (byte) 58);
-              param1.d(12, (byte) -116);
+              param1.readBits(24, (byte) -105);
+              param1.readBits(24, (byte) 50);
+              var6_ref_ai.field_b = param1.readBits(24, (byte) -123);
+              param1.readBits(9, (byte) 69);
+              param1.readBits(12, (byte) -64);
+              param1.readBits(12, (byte) 58);
+              param1.readBits(12, (byte) -116);
               var4[var5] = var6_ref_ai;
             }
           }
@@ -69,7 +69,7 @@ final class ni extends pv {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

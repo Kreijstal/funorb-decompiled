@@ -5,7 +5,7 @@ import java.util.*;
 
 final class kw extends kj {
     private int field_l;
-    static hq field_j;
+    static MusicCrossfadeStream field_j;
     private int field_h;
     static int field_f;
     static String field_m;
@@ -43,7 +43,7 @@ final class kw extends kj {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw pe.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class kw extends kj {
           this.field_i = -64 + kla.a(129, m.field_a, -2147483648) + param3;
           this.field_h = kla.a(65, m.field_a, -2147483648) + param4 - 32;
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "kw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -139,7 +139,7 @@ final class kw extends kj {
 
     final void a(int param0, int param1, int param2) {
         int var4 = 0;
-        ee var5 = null;
+        IndexedSprite var5 = null;
         int var6 = 0;
         int var7 = 0;
         if (param1 == 0) {

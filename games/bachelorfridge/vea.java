@@ -54,10 +54,10 @@ final class vea extends ana {
 
     final boolean c(byte param0) {
         int var2 = -28 / ((param0 - 71) / 47);
-        if (this.field_m.a((byte) -106)) {
+        if (this.field_m.isLinked((byte) -106)) {
           return false;
         }
-        if (this.field_v.a((byte) -106)) {
+        if (this.field_v.isLinked((byte) -106)) {
           return false;
         }
         if (this.field_l == 100) {
@@ -97,7 +97,7 @@ final class vea extends ana {
           this.field_v = new taa(this.field_q, var3);
           this.a(27799, this.field_v);
         } catch (RuntimeException runtimeException) {
-          throw pe.a((Throwable) ((Object) runtimeException), "vea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
