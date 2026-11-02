@@ -82,10 +82,10 @@ final class dk extends wc {
         if (this.field_Wb >= 200) {
           if (this.field_Wb != 200) {
             if (this.field_Wb == 250) {
-              this.e(1, -6904);
-              this.field_Y = var2Lifetime1 + this.getX(true);
-              this.field_X = this.getY(237239984);
-              this.c(0, 143360);
+              this.setState(1, -6904);
+              this.targetX = var2Lifetime1 + this.getX(true);
+              this.targetY = this.getY(237239984);
+              this.moveToward(0, 143360);
             } else {
               if (this.field_Wb >= 300 &&
                 this.field_Wb < 316) {
@@ -100,19 +100,19 @@ final class dk extends wc {
                   } else {
                     if (365 == this.field_Wb) {
                       this.field_U = dc.a((byte) 18, 113);
-                      this.e(1, -6904);
-                      this.field_Y = -var2Lifetime1 + this.getX(true);
-                      this.field_X = this.getY(237239984);
-                      this.c(0, 143360);
+                      this.setState(1, -6904);
+                      this.targetX = -var2Lifetime1 + this.getX(true);
+                      this.targetY = this.getY(237239984);
+                      this.moveToward(0, 143360);
                     } else {
                       if (this.field_Wb != 402) {
                         if (this.field_Wb >= 15930) {
                           if (this.field_Wb == 15930) {
-                            this.e(0, -6904);
+                            this.setState(0, -6904);
                             super.g(112);
                           } else {
                             if (this.field_Wb == 15980) {
-                              this.e(2, -6904);
+                              this.setState(2, -6904);
                               super.g(112);
                             } else {
                               if (this.field_Wb > 15980) {
@@ -120,12 +120,12 @@ final class dk extends wc {
                                   fieldTemp$0 = this.field_Yb;
                                   this.field_Yb = this.field_Yb + 1;
                                   if (fieldTemp$0 < 2) {
-                                    this.field_T = 0;
-                                    this.field_O = 0;
-                                    this.field_Y = this.getX(true);
-                                    this.field_X = this.getY(237239984);
+                                    this.velocityY = 0;
+                                    this.velocityX = 0;
+                                    this.targetX = this.getX(true);
+                                    this.targetY = this.getY(237239984);
                                     this.field_G = 0;
-                                    this.e(0, -6904);
+                                    this.setState(0, -6904);
                                     super.g(100);
                                     this.field_Wb = 15930;
                                   } else {
@@ -172,7 +172,7 @@ final class dk extends wc {
                       } else {
                         kh.a(110, false);
                         jp.$cfr$intArgs$a$c44adeabe1a9(127, 100);
-                        this.e(0, -6904);
+                        this.setState(0, -6904);
                       }
                     }
                   }
@@ -181,7 +181,7 @@ final class dk extends wc {
             }
           } else {
             this.field_U = dc.a((byte) 18, 111);
-            this.e(3, -6904);
+            this.setState(3, -6904);
           }
         }
     }

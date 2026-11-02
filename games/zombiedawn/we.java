@@ -25,7 +25,7 @@ final class we extends qk {
         if (!gl.field_E.a(96)) {
           return Point.field_k;
         }
-        return m.field_B;
+        return GameLoopApplet.field_B;
     }
 
     final void a(Camera param0, int param1) {
@@ -58,7 +58,7 @@ final class we extends qk {
             var7 = (IntrusiveNode) null;
             we.a((IntrusiveNode) null, 97, (IntrusiveNode) null);
           }
-          Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.field_Y, (byte) -94), param0.worldToScreenY(this.field_X, param1 - 5060), 16711935);
+          Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.targetX, (byte) -94), param0.worldToScreenY(this.targetY, param1 - 5060), 16711935);
           var5 = Integer.toString(this.state);
           bj.field_q.c(var5, var3_int, var4 - 48, 16777215, 0);
           return;
@@ -108,7 +108,7 @@ final class we extends qk {
         if (this.state == 0) {
           return;
         }
-        this.e(0, -6904);
+        this.setState(0, -6904);
     }
 
     final static boolean o(byte param0) {

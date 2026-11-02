@@ -45,7 +45,7 @@ class gl extends an {
           if (param0 != -753) {
             gl.a(-39, (String) null, false, false);
           }
-          he.field_a = new ih(m.field_B, (String) null, nm.field_c, param3, param2);
+          he.field_a = new ih(GameLoopApplet.field_B, (String) null, nm.field_c, param3, param2);
           bm.field_d = new cf(e.field_S, he.field_a);
           e.field_S.a(bm.field_d, true);
           return;
@@ -102,7 +102,7 @@ class gl extends an {
                 }
                 var2 = ClientException.a(param1 ^ -684, "mouseoverathing");
                 if (var2 != null) {
-                  m.field_C = gg.a(var2, (byte) 56);
+                  GameLoopApplet.field_C = gg.a(var2, (byte) 56);
                 }
                 var2 = ClientException.a(-44, "achievementsthisgame");
                 if (var2 != null) {

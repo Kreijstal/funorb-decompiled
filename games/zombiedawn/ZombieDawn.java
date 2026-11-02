@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class ZombieDawn extends m {
+public final class ZombieDawn extends GameLoopApplet {
     private boolean field_F;
     static Js5Archive field_H;
     static long[] field_E;
@@ -30,7 +30,7 @@ public final class ZombieDawn extends m {
         return false;
     }
 
-    public final boolean a(char param0, int param1, int param2) {
+    public final boolean onKeyTyped(char param0, int param1, int param2) {
         if (null != GameApplet.field_c &&
           sg.field_eb == GameApplet.field_c) {
           return GameApplet.field_c.a(param1, 65793, param0);
@@ -184,7 +184,7 @@ public final class ZombieDawn extends m {
         sa.field_Y = this;
     }
 
-    final void o(int param0) {
+    final void onLoadingFinished(int param0) {
         if (GameApplet.field_c.field_d == 6 &&
           !nk.a(8, kg.field_g)) {
           GameApplet.field_c = jj.c(3, 123);
@@ -351,7 +351,7 @@ public final class ZombieDawn extends m {
         am.j(-98);
         ff.a(-1);
         sb.a(false);
-        m.j((byte) -125);
+        GameLoopApplet.j((byte) -125);
         rn.a(-12637);
         fo.a(false);
         cm.a(0);
@@ -362,7 +362,7 @@ public final class ZombieDawn extends m {
         nl.d((byte) 69);
         ph.a(-1);
         GameKeyHandler.a((byte) 85);
-        wb.f(false);
+        FunOrbApplet.f(false);
         ClientException.a((byte) 86);
         GameApplet.b(40);
         li.b(-72);
@@ -647,7 +647,7 @@ public final class ZombieDawn extends m {
         wl.a((byte) -86);
         eg.c(-26441);
         vk.a((byte) -90);
-        this.field_u = null;
+        this.host = null;
         this.field_I = null;
         this.field_G = null;
     }

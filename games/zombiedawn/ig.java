@@ -31,39 +31,39 @@ final class ig extends wo {
         var3 = var2 / 24;
         var4 = this.getY(param0 ^ 237239940);
         var5 = var4 / 24;
-        var6 = 127 & this.l(param0 - 157);
+        var6 = 127 & this.currentTile(param0 - 157);
         if (this.state != 1) {
           if (var5 >= 34) {
             boolean decompiledFrameRemainder1 = true;
             var7 = 0;
             if (var6 == 10) {
-              this.field_X = var4;
-              this.field_Y = -96 + var2;
+              this.targetY = var4;
+              this.targetX = -96 + var2;
               var7 = 1;
             } else {
               if (var6 != 14 && (var2 < 1080 ||
                 500 >= var4)) {
                 if (var6 == 2) {
-                  this.field_Y = var2;
-                  this.field_X = var4 + 72;
+                  this.targetX = var2;
+                  this.targetY = var4 + 72;
                   var7 = 1;
                   decompiledFrameRemainder1 = false;
                 }
                 else {
                   if (var2 > 48) {
                     if (var4 <= 96) {
-                      this.field_Y = -24 + var2 + so.c(48);
+                      this.targetX = -24 + var2 + so.c(48);
                       var7 = 1;
-                      this.field_X = -48 + (so.c(96) + 96);
+                      this.targetY = -48 + (so.c(96) + 96);
                     } else {
                       if (var2 >= 1080) {
-                        this.field_Y = -24 - so.c(48) + 1008;
+                        this.targetX = -24 - so.c(48) + 1008;
                         var7 = 1;
-                        this.field_X = so.c(48) + var4 - 24;
+                        this.targetY = so.c(48) + var4 - 24;
                       } else {
                         if (!(1440 > var4)) {
-                          this.field_Y = so.c(48) + (var2 - 24);
-                          this.field_X = -24 + (so.c(8) + 1436);
+                          this.targetX = so.c(48) + (var2 - 24);
+                          this.targetY = -24 + (so.c(8) + 1436);
                           var7 = 1;
                         }
                       }
@@ -71,12 +71,12 @@ final class ig extends wo {
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    this.field_Y = 24 + (so.c(48) + 96);
+                    this.targetX = 24 + (so.c(48) + 96);
                     var7 = 1;
-                    this.field_X = -24 + (var4 + so.c(48));
+                    this.targetY = -24 + (var4 + so.c(48));
                     if (var7 != 0) {
-                      this.c(0, this.field_D);
-                      this.e(1, -6904);
+                      this.moveToward(0, this.field_D);
+                      this.setState(1, -6904);
                       this.field_Ab = false;
                     }
                     if (var6 == 3) {
@@ -100,8 +100,8 @@ final class ig extends wo {
                 }
               }
               if (decompiledFrameRemainder1) {
-                this.field_X = var4;
-                this.field_Y = 96 + var2;
+                this.targetY = var4;
+                this.targetX = 96 + var2;
                 var7 = 1;
               }
             }
@@ -119,8 +119,8 @@ final class ig extends wo {
               this.d(0);
               return;
             }
-            this.c(0, this.field_D);
-            this.e(1, -6904);
+            this.moveToward(0, this.field_D);
+            this.setState(1, -6904);
             this.field_Ab = false;
             if (var6 == 3) {
               Js5Archive.field_e.a(this, (byte) 110);
@@ -159,33 +159,33 @@ final class ig extends wo {
           boolean decompiledFrameRemainder0 = true;
           var7Lifetime1 = 0;
           if (var6 == 10) {
-            this.field_X = var4;
-            this.field_Y = -96 + var2;
+            this.targetY = var4;
+            this.targetX = -96 + var2;
             var7Lifetime1 = 1;
           } else {
             if (var6 != 14 && (var2 < 1080 ||
               500 >= var4)) {
               if (var6 == 2) {
-                this.field_Y = var2;
-                this.field_X = var4 + 72;
+                this.targetX = var2;
+                this.targetY = var4 + 72;
                 var7Lifetime1 = 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (var2 > 48) {
                   if (var4 <= 96) {
-                    this.field_Y = -24 + var2 + so.c(48);
+                    this.targetX = -24 + var2 + so.c(48);
                     var7Lifetime1 = 1;
-                    this.field_X = -48 + (so.c(96) + 96);
+                    this.targetY = -48 + (so.c(96) + 96);
                   } else {
                     if (var2 >= 1080) {
-                      this.field_Y = -24 - so.c(48) + 1008;
+                      this.targetX = -24 - so.c(48) + 1008;
                       var7Lifetime1 = 1;
-                      this.field_X = so.c(48) + var4 - 24;
+                      this.targetY = so.c(48) + var4 - 24;
                     } else {
                       if (!(1440 > var4)) {
-                        this.field_Y = so.c(48) + (var2 - 24);
-                        this.field_X = -24 + (so.c(8) + 1436);
+                        this.targetX = so.c(48) + (var2 - 24);
+                        this.targetY = -24 + (so.c(8) + 1436);
                         var7Lifetime1 = 1;
                       }
                     }
@@ -193,12 +193,12 @@ final class ig extends wo {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  this.field_Y = 24 + (so.c(48) + 96);
+                  this.targetX = 24 + (so.c(48) + 96);
                   var7Lifetime1 = 1;
-                  this.field_X = -24 + (var4 + so.c(48));
+                  this.targetY = -24 + (var4 + so.c(48));
                   if (var7Lifetime1 != 0) {
-                    this.c(0, this.field_D);
-                    this.e(1, -6904);
+                    this.moveToward(0, this.field_D);
+                    this.setState(1, -6904);
                     this.field_Ab = false;
                   }
                   if (var6 == 3) {
@@ -223,14 +223,14 @@ final class ig extends wo {
               }
             }
             if (decompiledFrameRemainder0) {
-              this.field_X = var4;
-              this.field_Y = 96 + var2;
+              this.targetY = var4;
+              this.targetX = 96 + var2;
               var7Lifetime1 = 1;
             }
           }
           if (var7Lifetime1 != 0) {
-            this.c(0, this.field_D);
-            this.e(1, -6904);
+            this.moveToward(0, this.field_D);
+            this.setState(1, -6904);
             this.field_Ab = false;
           }
         }
@@ -280,7 +280,7 @@ final class ig extends wo {
           if (param1 != 5060) {
             ig.m((byte) 7);
           }
-          Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.field_Y, (byte) -128), param0.worldToScreenY(this.field_X, param1 - 5060), 16711935);
+          Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.targetX, (byte) -128), param0.worldToScreenY(this.targetY, param1 - 5060), 16711935);
           for (var5 = 0; var5 < this.field_ub; var5++) {
             var6 = param0.worldToScreenX(this.field_jb[var5], (byte) -115);
             var7 = param0.worldToScreenY(this.field_gb[var5], 0);
@@ -361,7 +361,7 @@ final class ig extends wo {
         RuntimeException var20 = null;
         try {
           re.field_g = param0;
-          wb.field_m = param5;
+          FunOrbApplet.field_m = param5;
           di.a(param17, param10, param12, (byte) -116, param19);
           hn.a(1780, param14, param13, param8);
           ro.a(param4, param7, param9, param11, param16, -386);

@@ -99,8 +99,8 @@ final class va {
           var2 = new PacketBuffer(param1);
           var3 = var2.d((byte) -118);
           var4 = var2.c(-38);
-          if (var4 >= 0 && (m.field_z == 0 ||
-            !(var4 > m.field_z))) {
+          if (var4 >= 0 && (GameLoopApplet.field_z == 0 ||
+            !(var4 > GameLoopApplet.field_z))) {
             if (var3 == 0) {
               var5_ref_byte__ = new byte[var4];
               var2.readBytes(var4, 0, var5_ref_byte__, 11240);
@@ -108,8 +108,8 @@ final class va {
               return stackIn_14_0;
             }
             var5 = var2.c(-69);
-            if (var5 >= 0 && (0 == m.field_z ||
-              !(var5 > m.field_z))) {
+            if (var5 >= 0 && (0 == GameLoopApplet.field_z ||
+              !(var5 > GameLoopApplet.field_z))) {
               var6 = new byte[var5];
               if (1 != var3) {
                 var7 = cn.field_d;

@@ -76,7 +76,7 @@ class wo extends Human {
             if (!this.a(-86, var2, this.field_Ab)) {
               this.field_Ab = false;
               if (3 == this.state) {
-                this.e(0, -6904);
+                this.setState(0, -6904);
               }
             } else {
               if (!this.p(-125)) {
@@ -84,7 +84,7 @@ class wo extends Human {
                   this.field_Ab = false;
                 } else {
                   if (this.state != 3) {
-                    this.e(3, -6904);
+                    this.setState(3, -6904);
                   }
                 }
               } else {
@@ -101,7 +101,7 @@ class wo extends Human {
             if (!this.a(-86, var2, this.field_Ab)) {
               this.field_Ab = false;
               if (3 == this.state) {
-                this.e(0, -6904);
+                this.setState(0, -6904);
               }
             } else {
               if (!this.p(-125)) {
@@ -109,7 +109,7 @@ class wo extends Human {
                   this.field_Ab = false;
                 } else {
                   if (this.state != 3) {
-                    this.e(3, -6904);
+                    this.setState(3, -6904);
                   }
                 }
               } else {
@@ -127,7 +127,7 @@ class wo extends Human {
             if (3 != this.state) {
               return;
             }
-            this.e(0, -6904);
+            this.setState(0, -6904);
             return;
           }
           if (this.p(-125)) {
@@ -144,7 +144,7 @@ class wo extends Human {
           if (this.state == 3) {
             return;
           }
-          this.e(3, -6904);
+          this.setState(3, -6904);
           return;
         }
         this.field_pb = var2;
@@ -156,7 +156,7 @@ class wo extends Human {
             if (3 != this.state) {
               return;
             }
-            this.e(0, -6904);
+            this.setState(0, -6904);
             return;
           }
           if (this.p(-125)) {
@@ -173,7 +173,7 @@ class wo extends Human {
           if (this.state == 3) {
             return;
           }
-          this.e(3, -6904);
+          this.setState(3, -6904);
           return;
         }
         var3Lifetime2 = 0;
@@ -182,7 +182,7 @@ class wo extends Human {
           if (3 != this.state) {
             return;
           }
-          this.e(0, -6904);
+          this.setState(0, -6904);
           return;
         }
         if (this.p(-125)) {
@@ -199,7 +199,7 @@ class wo extends Human {
         if (this.state == 3) {
           return;
         }
-        this.e(3, -6904);
+        this.setState(3, -6904);
     }
 
     wo(int param0, int param1, int param2) {

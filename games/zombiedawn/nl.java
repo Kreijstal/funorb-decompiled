@@ -123,7 +123,7 @@ final class nl extends al {
           }
         }
         var9Lifetime2 = 384;
-        var7.a(m.field_C, bd.field_d, id.field_M + var9Lifetime2 + 32, 16777215, 0);
+        var7.a(GameLoopApplet.field_C, bd.field_d, id.field_M + var9Lifetime2 + 32, 16777215, 0);
         var10Lifetime1 = -1;
         if (param0 >= -35) {
           return;

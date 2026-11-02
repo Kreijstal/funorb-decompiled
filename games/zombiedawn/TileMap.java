@@ -819,7 +819,7 @@ final class TileMap {
               stackIn_34_0 = param0;
             }
             if (stackIn_34_0 < 92) {
-              TileMap.a((byte) 51, (ib) null);
+              TileMap.a((byte) 51, (GameLayer) null);
             }
             return;
           }
@@ -1016,7 +1016,7 @@ final class TileMap {
           var1_ref = ea.field_c;
           synchronized (var1_ref) {
             var2 = -66 / ((param0 - 42) / 59);
-            if (~wb.field_y == ~he.field_e) {
+            if (~FunOrbApplet.field_y == ~he.field_e) {
               return false;
             }
             kg.field_i = vd.field_b[he.field_e];
@@ -1487,7 +1487,7 @@ final class TileMap {
         }
     }
 
-    final static void a(byte param0, ib param1) {
+    final static void a(byte param0, GameLayer param1) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException stackIn_5_0 = null;
@@ -1659,7 +1659,7 @@ final class TileMap {
           }
           if ((decompiledFrameCompleted0) &&
             (param3 <= 21)) {
-            TileMap.a((byte) 52, (ib) null);
+            TileMap.a((byte) 52, (GameLayer) null);
           }
           if (var5_int >= Rasterizer.field_g &&
             Rasterizer.field_b > var5_int) {

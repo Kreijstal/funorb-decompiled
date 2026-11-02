@@ -466,7 +466,7 @@ final class si extends qk {
     private final void o(byte param0) {
         if (this.field_Ob != null) {
           this.a(this.field_Ob.getX(true), (byte) 121, this.field_Ob.getY(237239984));
-          this.c(0, this.field_D / 2);
+          this.moveToward(0, this.field_D / 2);
           if (param0 != 71) {
             this.o(28);
           }
@@ -500,7 +500,7 @@ final class si extends qk {
           }
           if (null == this.field_Ob &&
             this.state != 0) {
-            this.e(0, param0 - 6956);
+            this.setState(0, param0 - 6956);
           }
         } else {
           if (!this.field_fb) {
@@ -510,7 +510,7 @@ final class si extends qk {
                 this.y(100);
               } else {
                 if (this.state == 3) {
-                  this.e(0, -6904);
+                  this.setState(0, -6904);
                   if (param0 != 52) {
                     field_Rb = -17;
                   }
@@ -532,7 +532,7 @@ final class si extends qk {
               }
             }
             if (!this.p(-125)) {
-              this.e(3, -6904);
+              this.setState(3, -6904);
             }
           }
         }

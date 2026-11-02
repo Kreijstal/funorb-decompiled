@@ -199,7 +199,7 @@ final class i extends pn implements hh {
               dp.field_e.position = 0;
               stackIn_12_0 = (!param0) ? -1 : -2;
               em.field_U = stackIn_12_0;
-              wb.field_t = stackIn_12_0;
+              FunOrbApplet.field_t = stackIn_12_0;
               e.field_P = stackIn_12_0;
               ic.field_T = ui.field_g;
               var5.position = 0;

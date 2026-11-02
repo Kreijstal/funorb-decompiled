@@ -47,10 +47,10 @@ final class jo extends qk {
           return;
         }
         if (this.field_Rb != -1) {
-          this.e(23, -6904);
+          this.setState(23, -6904);
           return;
         }
-        var2 = this.l(param0 - 178) & 127;
+        var2 = this.currentTile(param0 - 178) & 127;
         if (var2 < 60) {
           return;
         }
@@ -65,10 +65,10 @@ final class jo extends qk {
           do {
             var4 = var4 + var6;
             var5 = var5 + var7;
-          } while (this.b(0, var4, var5) < 60);
+          } while (this.tileAtPixel(0, var4, var5) < 60);
           this.field_Pb = var5;
           this.field_Rb = var4;
-          this.e(23, -6904);
+          this.setState(23, -6904);
           return;
         }
         if (var8 == 2) {
@@ -76,10 +76,10 @@ final class jo extends qk {
           do {
             var4 = var4 + var6;
             var5 = var5 + var7;
-          } while (this.b(0, var4, var5) < 60);
+          } while (this.tileAtPixel(0, var4, var5) < 60);
           this.field_Pb = var5;
           this.field_Rb = var4;
-          this.e(23, -6904);
+          this.setState(23, -6904);
           return;
         }
         if (var8 == 1) {
@@ -87,30 +87,30 @@ final class jo extends qk {
           do {
             var4 = var4 + var6;
             var5 = var5 + var7;
-          } while (this.b(0, var4, var5) < 60);
+          } while (this.tileAtPixel(0, var4, var5) < 60);
           this.field_Pb = var5;
           this.field_Rb = var4;
-          this.e(23, -6904);
+          this.setState(23, -6904);
           return;
         }
         if (var8 != 3) {
           do {
             var4 = var4 + var6;
             var5 = var5 + var7;
-          } while (this.b(0, var4, var5) < 60);
+          } while (this.tileAtPixel(0, var4, var5) < 60);
           this.field_Pb = var5;
           this.field_Rb = var4;
-          this.e(23, -6904);
+          this.setState(23, -6904);
           return;
         }
         var6 = -24;
         do {
           var4 = var4 + var6;
           var5 = var5 + var7;
-        } while (this.b(0, var4, var5) < 60);
+        } while (this.tileAtPixel(0, var4, var5) < 60);
         this.field_Pb = var5;
         this.field_Rb = var4;
-        this.e(23, -6904);
+        this.setState(23, -6904);
         return;
     }
 
@@ -154,9 +154,9 @@ final class jo extends qk {
         stackIn_3_1 = (this.state == 23);
         this.field_Sb = stackIn_3_1;
         if (this.field_Sb) {
-          this.field_X = this.field_Pb;
-          this.field_Y = this.field_Rb;
-          this.c(0, this.field_D / 2);
+          this.targetY = this.field_Pb;
+          this.targetX = this.field_Rb;
+          this.moveToward(0, this.field_D / 2);
         }
         super.g(106);
         if (this.field_Sb) {
@@ -170,7 +170,7 @@ final class jo extends qk {
                 this.field_Pb = -1;
                 this.field_Rb = -1;
                 this.field_Sb = false;
-                this.e(0, -6904);
+                this.setState(0, -6904);
                 this.l((byte) 52);
               }
             }
@@ -185,7 +185,7 @@ final class jo extends qk {
                   this.field_Pb = -1;
                   this.field_Rb = -1;
                   this.field_Sb = false;
-                  this.e(0, -6904);
+                  this.setState(0, -6904);
                   this.l((byte) 52);
                 }
               }
@@ -316,7 +316,7 @@ final class jo extends qk {
             bj.field_q.c(Integer.toString(this.field_yb.state), var5_int, -48 + var6, 16777215, 0);
           }
           var5 = Integer.toString(this.state);
-          var5Lifetime1 = Integer.toString(this.l(-111) & 127);
+          var5Lifetime1 = Integer.toString(this.currentTile(-111) & 127);
           var10 = 0;
           var6Lifetime1 = var10;
           while (this.field_ub > var10) {

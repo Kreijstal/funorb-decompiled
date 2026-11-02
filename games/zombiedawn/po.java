@@ -99,12 +99,12 @@ final class po extends Human {
                 this.field_yb = null;
                 if ((ZombieDawn.field_J != 0) &&
                   (this.field_G == 2)) {
-                  this.e(0, -6904);
+                  this.setState(0, -6904);
                 }
               }
             } else {
               if (this.field_G == 2) {
-                this.e(0, -6904);
+                this.setState(0, -6904);
               }
             }
           }
@@ -169,7 +169,7 @@ final class po extends Human {
             }
             this.field_S = stackIn_17_1;
           }
-          this.e(10, -6904);
+          this.setState(10, -6904);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

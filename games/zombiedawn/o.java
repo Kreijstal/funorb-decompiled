@@ -423,7 +423,7 @@ final class o {
           return 122;
         }
         this.field_q = this.field_q + 65536;
-        while (65536 <= wb.a(108, ij.field_E, this.field_q)) {
+        while (65536 <= FunOrbApplet.a(108, ij.field_E, this.field_q)) {
           this.field_o = this.field_o + 1;
           this.field_q = this.field_q - ij.field_E;
         }

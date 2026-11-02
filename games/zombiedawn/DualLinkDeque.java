@@ -283,10 +283,10 @@ final class DualLinkDeque {
           return gl.field_E.c(0);
         }
         if (param0 < -12) {
-          return m.field_B;
+          return GameLoopApplet.field_B;
         }
         DualLinkDeque.e((byte) 66);
-        return m.field_B;
+        return GameLoopApplet.field_B;
     }
 
     static {

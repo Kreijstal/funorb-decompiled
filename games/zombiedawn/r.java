@@ -238,7 +238,7 @@ final class r extends eh {
     final static void a(String param0, int param1, boolean param2, String param3) {
         try {
           lk.field_k = param0;
-          m.field_B = param3;
+          GameLoopApplet.field_B = param3;
           int var4_int = -81 % ((72 - param1) / 47);
           ti.a(md.field_wb, param2, false);
         } catch (RuntimeException runtimeException) {

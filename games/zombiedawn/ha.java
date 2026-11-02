@@ -39,7 +39,7 @@ final class ha {
           var1 = ea.field_c;
           synchronized (var1) {
             nl.field_s = nl.field_s + 1;
-            he.field_e = wb.field_y;
+            he.field_e = FunOrbApplet.field_y;
             if (ih.field_F < 0) {
               var5 = 0;
               var2 = var5;
@@ -59,7 +59,7 @@ final class ha {
                 bo.field_p[~var2] = false;
               }
             }
-            wb.field_y = je.field_c;
+            FunOrbApplet.field_y = je.field_c;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

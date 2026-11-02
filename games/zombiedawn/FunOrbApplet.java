@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wb extends GameApplet {
+abstract class FunOrbApplet extends GameApplet {
     static int field_t;
     private boolean field_s;
-    private long field_p;
-    String field_u;
+    private long instanceId;
+    String host;
     static int field_y;
-    private int field_x;
-    private int field_l;
-    private int field_v;
-    private int field_n;
-    private boolean field_o;
+    private int gameCrc;
+    private int language;
+    private int affiliateId;
+    private int serverNumber;
+    private boolean isMember;
     static Font field_m;
     private boolean field_r;
-    private int field_q;
-    private int field_w;
+    private int gamePort1;
+    private int gamePort2;
 
     final void d(boolean param0) {
         if (param0) {
@@ -35,7 +35,7 @@ abstract class wb extends GameApplet {
         i.field_X[12] = true;
         i.field_X[13] = true;
         if (param0 > -110) {
-          this.field_q = -51;
+          this.gamePort1 = -51;
         }
         i.field_X[11] = true;
     }
@@ -59,7 +59,7 @@ abstract class wb extends GameApplet {
         }
     }
 
-    private final void a(String param0, int param1, int param2, int param3, int param4) {
+    private final void readAppletParameters(String param0, int param1, int param2, int param3, int param4) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -76,35 +76,35 @@ abstract class wb extends GameApplet {
             if (!this.b(false)) {
               return;
             }
-            this.field_u = this.getCodeBase().getHost();
-            var11 = this.field_u.toLowerCase();
+            this.host = this.getCodeBase().getHost();
+            var11 = this.host.toLowerCase();
             stackIn_7_1 = (var11.equals("jagex.com")) || (var11.endsWith(".jagex.com"));
             this.field_s = stackIn_7_1;
-            this.field_q = Integer.parseInt(this.getParameter("gameport1"));
+            this.gamePort1 = Integer.parseInt(this.getParameter("gameport1"));
             if (param2 != -17761) {
               this.j(-81);
             }
-            this.field_w = Integer.parseInt(this.getParameter("gameport2"));
+            this.gamePort2 = Integer.parseInt(this.getParameter("gameport2"));
             var7 = this.getParameter("servernum");
             if (var7 != null) {
-              this.field_n = Integer.parseInt(var7);
+              this.serverNumber = Integer.parseInt(var7);
             }
-            this.field_x = Integer.parseInt(this.getParameter("gamecrc"));
-            this.field_p = Long.parseLong(this.getParameter("instanceid"));
-            this.field_o = this.getParameter("member").equals("yes");
+            this.gameCrc = Integer.parseInt(this.getParameter("gamecrc"));
+            this.instanceId = Long.parseLong(this.getParameter("instanceid"));
+            this.isMember = this.getParameter("member").equals("yes");
             var8 = this.getParameter("lang");
             if (var8 != null) {
-              this.field_l = Integer.parseInt(var8);
+              this.language = Integer.parseInt(var8);
             }
-            if (5 <= this.field_l) {
-              this.field_l = 0;
+            if (5 <= this.language) {
+              this.language = 0;
             }
             var9 = this.getParameter("affid");
             if (var9 != null) {
-              this.field_v = Integer.parseInt(var9);
+              this.affiliateId = Integer.parseInt(var9);
             }
             di.field_J = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(param3, param4, param0, param1, -14384, this.field_x, 32);
+            this.a(param3, param4, param0, param1, -14384, this.gameCrc, 32);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
@@ -163,7 +163,7 @@ abstract class wb extends GameApplet {
         int var2 = fj.field_g.d((byte) -121);
         int var3 = 0 != (var2 & 1) ? 1 : 0;
         if (param0 != -1) {
-          this.field_x = -26;
+          this.gameCrc = -26;
         }
         int var4 = jd.field_b - 1;
         byte[] var5 = new byte[var4];
@@ -187,7 +187,7 @@ abstract class wb extends GameApplet {
         if (ja.field_b) {
           return -1;
         }
-        int var2 = PacketBuffer.a(true, we.p((byte) 106), ja.a(23917), this.field_v, true, this.field_s);
+        int var2 = PacketBuffer.a(true, we.p((byte) 106), ja.a(23917), this.affiliateId, true, this.field_s);
         if (var2 == -1) {
           return -1;
         }
@@ -565,7 +565,7 @@ abstract class wb extends GameApplet {
           return;
         }
         try {
-          this.a(param2, 640, -17761, 480, param0);
+          this.readAppletParameters(param2, 640, -17761, 480, param0);
         } catch (RuntimeException runtimeException) {
           throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "wb.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -575,7 +575,7 @@ abstract class wb extends GameApplet {
         int var3 = param2 >> 16;
         int var4 = param2 & 65535;
         if (param0 <= 1) {
-          wb.f(true);
+          FunOrbApplet.f(true);
         }
         int var5 = param1 >> 16;
         int var6 = param1 & 65535;
@@ -621,7 +621,7 @@ abstract class wb extends GameApplet {
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = md.a(co.c(17821), DualLinkDeque.e((byte) -57), ja.a(23917), la.b(0), (byte) -15, this.field_v, we.p((byte) -117));
+            var5_intLifetime1 = md.a(co.c(17821), DualLinkDeque.e((byte) -57), ja.a(23917), la.b(0), (byte) -15, this.affiliateId, we.p((byte) -117));
             if (var5_intLifetime1 != -1) {
               ln.a(var5_intLifetime1, -14, sc.field_d, ho.field_a);
               ho.field_a = null;
@@ -635,7 +635,7 @@ abstract class wb extends GameApplet {
               si.x(0);
             }
             if (!param0) {
-              var5_intLifetime2 = PacketBuffer.a(true, we.p((byte) 126), ja.a(23917), this.field_v, false, this.field_s);
+              var5_intLifetime2 = PacketBuffer.a(true, we.p((byte) 126), ja.a(23917), this.affiliateId, false, this.field_s);
               if (var5_intLifetime2 != -1) {
                 if (0 == var5_intLifetime2) {
                   nk.field_e = p.field_a;
@@ -685,7 +685,7 @@ abstract class wb extends GameApplet {
             qi.a(ff.a((byte) -12), hc.a(0), -66);
           }
           if (param2 <= 36) {
-            this.field_q = 102;
+            this.gamePort1 = 102;
           }
           if (var4 == 13) {
             try {
@@ -734,10 +734,10 @@ abstract class wb extends GameApplet {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        jp.field_a = this.field_l;
+        jp.field_a = this.language;
         pc.a(jp.field_a, (byte) -66);
-        s.a(this.field_p, 5000, this.field_o, jp.field_a, param3, this.field_x, this.field_n, 5000, this.field_q, param0, vh.field_a, this.field_u, param1 + 120, this.field_w);
-        mh.a(this.field_n, this.field_w, this.field_x, this.field_u, this.field_q, param0, vh.field_a, 0, jp.field_a);
+        s.a(this.instanceId, 5000, this.isMember, jp.field_a, param3, this.gameCrc, this.serverNumber, 5000, this.gamePort1, param0, vh.field_a, this.host, param1 + 120, this.gamePort2);
+        mh.a(this.serverNumber, this.gamePort2, this.gameCrc, this.host, this.gamePort1, param0, vh.field_a, 0, jp.field_a);
         bd.a((byte) -114);
         jl.field_u = n.c((byte) 94);
         se.a(param1 ^ 20925, cj.field_d);
@@ -761,7 +761,7 @@ abstract class wb extends GameApplet {
         boolean stackIn_12_2 = false;
         var3 = ZombieDawn.field_J;
         if (param0 != 20) {
-          this.field_v = 4;
+          this.affiliateId = 4;
         }
         if (bj.d(18840)) {
           stackIn_11_1 = false;
@@ -793,7 +793,7 @@ abstract class wb extends GameApplet {
         i.field_X[7] = true;
     }
 
-    wb() {
+    FunOrbApplet() {
     }
 
     final void g(byte param0) {

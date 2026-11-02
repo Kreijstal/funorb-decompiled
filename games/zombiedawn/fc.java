@@ -9,7 +9,7 @@ final class fc extends qk {
     final void w(int param0) {
         this.field_x = 9;
         this.field_y = param0;
-        this.e(0, -6904);
+        this.setState(0, -6904);
     }
 
     final void g(int param0) {
@@ -27,7 +27,7 @@ final class fc extends qk {
           if (this.state == 10 &&
             2 == this.field_G) {
             this.field_yb.z(0);
-            this.e(0, -6904);
+            this.setState(0, -6904);
           }
         } else {
           if (this.field_Pb <= 0) {
@@ -200,7 +200,7 @@ final class fc extends qk {
           this.field_yb = null;
         }
         if (this.field_yb != null) {
-          this.e(10, -6904);
+          this.setState(10, -6904);
           this.field_Gb = 10;
           this.field_U = dc.a((byte) 18, 44);
           stackIn_23_1 = !(this.field_Nb);

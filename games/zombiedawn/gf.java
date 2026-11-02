@@ -38,8 +38,8 @@ final class gf {
               for (var6_int = 0; var6_int < jd.field_b; var6_int++) {
                 fj.field_g.payload[var6_int] = var5_ref_bg.field_m[var6_int];
               }
-              em.field_U = wb.field_t;
-              wb.field_t = e.field_P;
+              em.field_U = FunOrbApplet.field_t;
+              FunOrbApplet.field_t = e.field_P;
               e.field_P = l.field_d;
               l.field_d = var5_ref_bg.field_j;
               return true;
@@ -59,8 +59,8 @@ final class gf {
               return false;
             }
             if (0 == jh.field_h) {
-              em.field_U = wb.field_t;
-              wb.field_t = e.field_P;
+              em.field_U = FunOrbApplet.field_t;
+              FunOrbApplet.field_t = e.field_P;
               e.field_P = l.field_d;
               l.field_d = l.field_e;
               l.field_e = -1;

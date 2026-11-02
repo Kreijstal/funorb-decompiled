@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-abstract class m extends wb implements ib {
+abstract class GameLoopApplet extends FunOrbApplet implements GameLayer {
     static String field_B;
     static String field_C;
     static int field_z;
     static Sprite field_A;
 
-    abstract void o(int param0);
+    abstract void onLoadingFinished(int param0);
 
-    protected m() {
+    protected GameLoopApplet() {
     }
 
     final void a(ug param0, byte param1) {
@@ -31,7 +31,7 @@ abstract class m extends wb implements ib {
             wh.field_d[10] = -1;
             wh.field_d[9] = -1;
             cf.field_eb = new Vector();
-            TileMap.a((byte) 6, (ib) (this));
+            TileMap.a((byte) 6, (GameLayer) (this));
           } catch (RuntimeException runtimeException) {
             throw ExceptionWrapper.wrapException((Throwable) ((Object) runtimeException), "m.NA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
           }
@@ -62,7 +62,7 @@ abstract class m extends wb implements ib {
         }
         wn.field_b = true;
         for (var3 = -1 + cf.field_eb.size(); var3 >= 0; var3--) {
-          ((ib) (cf.field_eb.elementAt(var3))).drawFrame(-14964);
+          ((GameLayer) (cf.field_eb.elementAt(var3))).drawFrame(-14964);
         }
         int var4 = 35 / ((param0 + 27) / 44);
         if (wn.field_b) {
@@ -86,7 +86,7 @@ abstract class m extends wb implements ib {
         int var3;
         int var4;
         int var5;
-        ib var6;
+        GameLayer var6;
         int var3Lifetime1;
         var5 = ZombieDawn.field_J;
         var2 = 0;
@@ -162,7 +162,7 @@ abstract class m extends wb implements ib {
                     }
                     var4 = 0;
                     while (cf.field_eb.size() > var4) {
-                      if (((ib) (cf.field_eb.elementAt(var4))).a(lc.field_c, kg.field_i, 20)) {
+                      if (((GameLayer) (cf.field_eb.elementAt(var4))).onKeyTyped(lc.field_c, kg.field_i, 20)) {
                         break;
                       }
                       var4++;
@@ -181,7 +181,7 @@ abstract class m extends wb implements ib {
           return;
         }
         for (var3Lifetime1 = 0; cf.field_eb.size() > var3Lifetime1; var3Lifetime1++) {
-          var6 = (ib) (cf.field_eb.elementAt(var3Lifetime1));
+          var6 = (GameLayer) (cf.field_eb.elementAt(var3Lifetime1));
           var6.runTick(var2 != 0, false);
           stackIn_58_0 = var2;
           if (var6.a((byte) 119)) {
@@ -215,7 +215,7 @@ abstract class m extends wb implements ib {
         }
     }
 
-    public abstract boolean a(char param0, int param1, int param2);
+    public abstract boolean onKeyTyped(char param0, int param1, int param2);
 
     final void e(byte param0) {
         boolean stackIn_9_1 = false;
@@ -225,7 +225,7 @@ abstract class m extends wb implements ib {
         bo var5;
         var4 = ZombieDawn.field_J;
         if (param0 != 15) {
-          m.a((byte) 91, 77, -4, -72);
+          GameLoopApplet.a((byte) 91, 77, -4, -72);
         }
         if (cn.field_b != null &&
           cn.field_b.field_a) {
@@ -251,7 +251,7 @@ abstract class m extends wb implements ib {
             !po.w(13296)) {
             if (!(!pf.field_b.a((byte) 19))) {
               dg.field_b = true;
-              this.o(1235);
+              this.onLoadingFinished(1235);
               oh.d((byte) -118);
             }
             decompiledFrameRemainder0 = false;
@@ -311,7 +311,7 @@ abstract class m extends wb implements ib {
         field_C = null;
         field_B = null;
         if (param0 > -121) {
-          m.a((byte) -29, 125, -97, 86);
+          GameLoopApplet.a((byte) -29, 125, -97, 86);
         }
         field_A = null;
     }
@@ -320,7 +320,7 @@ abstract class m extends wb implements ib {
 
     final static lo a(byte param0, int param1, int param2, int param3) {
         if (param0 > -104) {
-          m.j((byte) -31);
+          GameLoopApplet.j((byte) -31);
         }
         lo var4 = new lo();
         var4.field_k = param3;

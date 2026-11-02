@@ -764,14 +764,14 @@ final class LevelNavigation {
           this.field_f = var5;
           var12 = 0;
           this.field_j = var6;
-          if (24 + bd.field_e == m.field_A.field_r &&
-            m.field_A.field_q == nh.field_P + 24) {
+          if (24 + bd.field_e == GameLoopApplet.field_A.field_r &&
+            GameLoopApplet.field_A.field_q == nh.field_P + 24) {
             if (0 > this.field_y) {
-              gp.a(m.field_A.field_z, 0, m.field_A.field_z.length, 0);
+              gp.a(GameLoopApplet.field_A.field_z, 0, GameLoopApplet.field_A.field_z.length, 0);
             }
           } else {
-            m.field_A = null;
-            m.field_A = new Sprite(24 + bd.field_e, nh.field_P + 24);
+            GameLoopApplet.field_A = null;
+            GameLoopApplet.field_A = new Sprite(24 + bd.field_e, nh.field_P + 24);
             this.field_y = -1;
           }
           if (this.field_y >= 0) {
@@ -782,20 +782,20 @@ final class LevelNavigation {
               this.field_r = var5;
               this.field_n = var6;
               var7 = 1;
-              this.field_g = var6 + m.field_A.field_t / 24;
-              this.field_z = var5 + m.field_A.field_w / 24;
+              this.field_g = var6 + GameLoopApplet.field_A.field_t / 24;
+              this.field_z = var5 + GameLoopApplet.field_A.field_w / 24;
             }
           } else {
             var7 = 1;
             this.field_n = var6;
-            this.field_z = m.field_A.field_w / 24 + var5;
+            this.field_z = GameLoopApplet.field_A.field_w / 24 + var5;
             this.field_r = var5;
-            this.field_g = m.field_A.field_t / 24 + var6;
+            this.field_g = GameLoopApplet.field_A.field_t / 24 + var6;
           }
           this.field_y = var5;
           this.field_c = var6;
           if (var7 != 0) {
-            ki.a((byte) -121, m.field_A);
+            ki.a((byte) -121, GameLoopApplet.field_A);
             var13Lifetime1 = 0;
             var14Lifetime1 = 0;
             while (var9 > var6) {
@@ -842,10 +842,10 @@ final class LevelNavigation {
             param1.y = param1.y - var4;
             param1.x = param1.x - var3_int;
             pa.a(-21189);
-            m.field_A.e(var3_int, var4);
+            GameLoopApplet.field_A.e(var3_int, var4);
             return;
           }
-          m.field_A.e(var3_int, var4);
+          GameLoopApplet.field_A.e(var3_int, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

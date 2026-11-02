@@ -73,7 +73,7 @@ class cb extends ce {
         if (param0 != 3) {
           cb.a(39, '￾');
         }
-        var6 = "(" + em.field_U + " " + wb.field_t + " " + e.field_P + ") " + l.field_d;
+        var6 = "(" + em.field_U + " " + FunOrbApplet.field_t + " " + e.field_P + ") " + l.field_d;
         var1 = var6;
         if (jd.field_b > 0) {
           var1 = var6 + ":";

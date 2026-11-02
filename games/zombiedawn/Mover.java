@@ -4,21 +4,21 @@
 import java.util.*;
 
 abstract class Mover extends WorldObject {
-    int field_W;
+    int speedScale;
     static int[] field_P;
     int field_ab;
-    int field_T;
+    int velocityY;
     int field_Z;
     int field_K;
     int field_I;
     int field_D;
-    int field_O;
+    int velocityX;
     int field_R;
     static boolean field_Q;
     PcmSampleStream field_U;
-    int field_X;
+    int targetY;
     boolean field_J;
-    int field_Y;
+    int targetX;
     static String field_H;
     int field_E;
     int state;
@@ -38,7 +38,7 @@ abstract class Mover extends WorldObject {
         if (!Js5Archive.field_e.tileMap.field_e) {
           return null;
         }
-        va var7 = ub.a(127, this.l(-95));
+        va var7 = ub.a(127, this.currentTile(-95));
         int var3 = 49 % ((param0 - 36) / 50);
         if (var7 == null) {
           return var7;
@@ -53,21 +53,21 @@ abstract class Mover extends WorldObject {
           if (this.state == 6) {
             var4 = this.field_G;
             var5 = this.field_N;
-            this.e(4, -6904);
+            this.setState(4, -6904);
             this.field_N = var5;
             this.field_G = var4;
             return var7;
           }
           if (this.state == 5) {
-            this.c(0, this.field_L);
+            this.moveToward(0, this.field_L);
             return var7;
           }
           if (this.state == 1) {
-            this.c(0, this.field_L);
+            this.moveToward(0, this.field_L);
             return var7;
           }
           if (this.state == 7) {
-            this.c(0, this.field_L);
+            this.moveToward(0, this.field_L);
             return var7;
           }
           return var7;
@@ -75,27 +75,27 @@ abstract class Mover extends WorldObject {
         if (this.state == 6) {
           var4Lifetime1 = this.field_G;
           var5Lifetime1 = this.field_N;
-          this.e(4, -6904);
+          this.setState(4, -6904);
           this.field_N = var5Lifetime1;
           this.field_G = var4Lifetime1;
           return var7;
         }
         if (this.state == 5) {
-          this.c(0, this.field_L);
+          this.moveToward(0, this.field_L);
           return var7;
         }
         if (this.state == 1) {
-          this.c(0, this.field_L);
+          this.moveToward(0, this.field_L);
           return var7;
         }
         if (this.state == 7) {
-          this.c(0, this.field_L);
+          this.moveToward(0, this.field_L);
           return var7;
         }
         return var7;
     }
 
-    final void c(int param0, int param1) {
+    final void moveToward(int param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -103,52 +103,52 @@ abstract class Mover extends WorldObject {
         int var5Lifetime1;
         int var6Lifetime1;
         this.field_L = param1;
-        param1 = param1 * this.field_W / 4;
-        int var3 = this.field_Y - this.getX(true);
+        param1 = param1 * this.speedScale / 4;
+        int var3 = this.targetX - this.getX(true);
         if (param0 == 0) {
-          var4 = this.field_X - this.getY(237239984);
+          var4 = this.targetY - this.getY(237239984);
           var5 = so.b(var3 * var3 + var4 * var4);
           if (var5 == 0) {
-            this.e(this instanceof Human ? 0 : 4, -6904);
+            this.setState(this instanceof Human ? 0 : 4, -6904);
           } else {
             var6 = param1 / var5;
-            this.field_O = var3 * var6;
-            this.field_T = var4 * var6;
-            this.field_E = 3 * this.field_O / 4;
-            this.field_ab = this.field_T * 3 / 4;
-            this.field_S = this.field_O <= 0 ? 3 : 1;
-            this.field_M = 2 * this.field_T - this.field_ab;
-            this.field_I = -this.field_E + this.field_O * 2;
-            this.field_K = (this.field_O - this.field_E) / 2;
-            this.field_R = (-this.field_ab + this.field_T) / 2;
+            this.velocityX = var3 * var6;
+            this.velocityY = var4 * var6;
+            this.field_E = 3 * this.velocityX / 4;
+            this.field_ab = this.velocityY * 3 / 4;
+            this.field_S = this.velocityX <= 0 ? 3 : 1;
+            this.field_M = 2 * this.velocityY - this.field_ab;
+            this.field_I = -this.field_E + this.velocityX * 2;
+            this.field_K = (this.velocityX - this.field_E) / 2;
+            this.field_R = (-this.field_ab + this.velocityY) / 2;
           }
           return;
         }
         this.field_D = -90;
-        var4Lifetime1 = this.field_X - this.getY(237239984);
+        var4Lifetime1 = this.targetY - this.getY(237239984);
         var5Lifetime1 = so.b(var3 * var3 + var4Lifetime1 * var4Lifetime1);
         if (var5Lifetime1 == 0) {
-          this.e(this instanceof Human ? 0 : 4, -6904);
+          this.setState(this instanceof Human ? 0 : 4, -6904);
         } else {
           var6Lifetime1 = param1 / var5Lifetime1;
-          this.field_O = var3 * var6Lifetime1;
-          this.field_T = var4Lifetime1 * var6Lifetime1;
-          this.field_E = 3 * this.field_O / 4;
-          this.field_ab = this.field_T * 3 / 4;
-          this.field_S = this.field_O <= 0 ? 3 : 1;
-          this.field_M = 2 * this.field_T - this.field_ab;
-          this.field_I = -this.field_E + this.field_O * 2;
-          this.field_K = (this.field_O - this.field_E) / 2;
-          this.field_R = (-this.field_ab + this.field_T) / 2;
+          this.velocityX = var3 * var6Lifetime1;
+          this.velocityY = var4Lifetime1 * var6Lifetime1;
+          this.field_E = 3 * this.velocityX / 4;
+          this.field_ab = this.velocityY * 3 / 4;
+          this.field_S = this.velocityX <= 0 ? 3 : 1;
+          this.field_M = 2 * this.velocityY - this.field_ab;
+          this.field_I = -this.field_E + this.velocityX * 2;
+          this.field_K = (this.velocityX - this.field_E) / 2;
+          this.field_R = (-this.field_ab + this.velocityY) / 2;
         }
     }
 
-    final int l(int param0) {
+    final int currentTile(int param0) {
         if (param0 <= -71) {
-          return this.b(0, this.getX(true), this.getY(237239984));
+          return this.tileAtPixel(0, this.getX(true), this.getY(237239984));
         }
         Mover.a(false, -39, true, true);
-        return this.b(0, this.getX(true), this.getY(237239984));
+        return this.tileAtPixel(0, this.getX(true), this.getY(237239984));
     }
 
     abstract void k(int param0);
@@ -168,7 +168,7 @@ abstract class Mover extends WorldObject {
         if (this.field_G >= cg.field_h[param0]) {
           this.field_G = 0;
         }
-        if (this.field_W == 4) {
+        if (this.speedScale == 4) {
         }
         if (param1 == -26109) {
           fieldTemp$2 = this.field_N + 1;
@@ -201,23 +201,23 @@ abstract class Mover extends WorldObject {
         int var5 = ZombieDawn.field_J;
         int var3 = -66 / ((param0 - 27) / 46);
         this.field_Z = param1;
-        this.field_W = 2;
+        this.speedScale = 2;
         int var4 = this.state;
         if (var4 != 5) {
           if (var4 == 1) {
-            this.c(0, this.field_D);
+            this.moveToward(0, this.field_D);
             return;
           }
           if (7 == var4) {
-            this.c(0, 114688);
+            this.moveToward(0, 114688);
             return;
           }
           if (var4 == 2) {
-            this.c(0, 401408);
+            this.moveToward(0, 401408);
             return;
           }
           if (var4 == 6) {
-            this.c(0, 28672);
+            this.moveToward(0, 28672);
             return;
           }
           if (var4 != 8) {
@@ -226,10 +226,10 @@ abstract class Mover extends WorldObject {
           ((Zombie) (this)).k((byte) 40);
           return;
         }
-        this.c(0, 57344);
+        this.moveToward(0, 57344);
     }
 
-    void e(int param0, int param1) {
+    void setState(int param0, int param1) {
         if (param1 != -6904) {
           this.m(-100);
           if (this.state != param0) {
@@ -267,7 +267,7 @@ abstract class Mover extends WorldObject {
         return false;
     }
 
-    final int b(int param0, int param1, int param2) {
+    final int tileAtPixel(int param0, int param1, int param2) {
         int var4 = param1 / 24;
         int var5 = param2 / 24;
         int[][] var6 = Js5Archive.field_e.field_H.field_A.field_f;
@@ -289,7 +289,7 @@ abstract class Mover extends WorldObject {
     Mover(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         this.field_U = null;
-        this.field_W = 4;
+        this.speedScale = 4;
         this.field_J = false;
         this.field_Z = 0;
         this.state = this instanceof Human ? 0 : 4;
@@ -303,9 +303,9 @@ abstract class Mover extends WorldObject {
         if (this.field_V) {
           return;
         }
-        this.field_x = this.field_x + this.field_T;
+        this.field_x = this.field_x + this.velocityY;
         int var2 = 71 / ((param0 + 41) / 52);
-        this.field_y = this.field_y + this.field_O;
+        this.field_y = this.field_y + this.velocityX;
         this.d((byte) -18);
     }
 
@@ -343,17 +343,17 @@ abstract class Mover extends WorldObject {
         int var6Lifetime1Lifetime2;
         int var6Lifetime4Lifetime1;
         int var6Lifetime4Lifetime2;
-        var2 = this.field_Y << 16;
-        var3 = this.field_X << 16;
-        if (this.field_O == 0 &&
-          this.field_T == 0) {
+        var2 = this.targetX << 16;
+        var3 = this.targetY << 16;
+        if (this.velocityX == 0 &&
+          this.velocityY == 0) {
           return false;
         }
-        if (this.field_O == 0) {
+        if (this.velocityX == 0) {
           var4 = 1;
-          if (this.field_T != 0) {
-            if (this.field_T <= 0) {
-              if (this.field_T < 0 &&
+          if (this.velocityY != 0) {
+            if (this.velocityY <= 0) {
+              if (this.velocityY < 0 &&
                 this.field_x < var3) {
                 var5 = 1;
                 var6 = 67 % ((-53 - param0) / 32);
@@ -364,19 +364,19 @@ abstract class Mover extends WorldObject {
                 }
                 if (var4 != 0 &&
                   var5 == 0) {
-                  this.field_O = 0;
+                  this.velocityX = 0;
                 } else {
                   if (var4 == 0 &&
                     var5 != 0) {
-                    this.field_T = 0;
+                    this.velocityY = 0;
                     return false;
                   }
                   if (var4 == 0) {
                     return false;
                   }
                   if (var5 != 0) {
-                    this.field_x = this.field_X << 16;
-                    this.field_y = this.field_Y << 16;
+                    this.field_x = this.targetY << 16;
+                    this.field_y = this.targetX << 16;
                     return true;
                   }
                 }
@@ -385,7 +385,7 @@ abstract class Mover extends WorldObject {
               stackIn_54_0 = 0;
             } else {
               if (this.field_x <= var3) {
-                if (this.field_T < 0) {
+                if (this.velocityY < 0) {
                   stackIn_15_0 = (this.field_x < var3) ? 1 : 0;
                 } else {
                   stackIn_15_0 = 0;
@@ -399,12 +399,12 @@ abstract class Mover extends WorldObject {
                 }
                 if (var4 != 0 &&
                   var5 == 0) {
-                  this.field_O = 0;
+                  this.velocityX = 0;
                   return false;
                 }
                 if (var4 == 0 &&
                   var5 != 0) {
-                  this.field_T = 0;
+                  this.velocityY = 0;
                   return false;
                 }
                 if (var4 == 0) {
@@ -413,8 +413,8 @@ abstract class Mover extends WorldObject {
                 if (var5 == 0) {
                   return false;
                 }
-                this.field_x = this.field_X << 16;
-                this.field_y = this.field_Y << 16;
+                this.field_x = this.targetY << 16;
+                this.field_y = this.targetX << 16;
                 return true;
               }
               stackIn_54_0 = 1;
@@ -431,38 +431,38 @@ abstract class Mover extends WorldObject {
           }
           if (var4 != 0 &&
             var5Lifetime5 == 0) {
-            this.field_O = 0;
+            this.velocityX = 0;
           } else {
             if (var4 == 0 &&
               var5Lifetime5 != 0) {
-              this.field_T = 0;
+              this.velocityY = 0;
               return false;
             }
             if (var4 == 0) {
               return false;
             }
             if (var5Lifetime5 != 0) {
-              this.field_x = this.field_X << 16;
-              this.field_y = this.field_Y << 16;
+              this.field_x = this.targetY << 16;
+              this.field_y = this.targetX << 16;
               return true;
             }
           }
           return false;
         }
-        if (this.field_O > 0) {
+        if (this.velocityX > 0) {
           if (var2 >= this.field_y) {
-            if (this.field_O < 0) {
+            if (this.velocityX < 0) {
               stackIn_145_0 = (this.field_y >= var2) ? 0 : 1;
             } else {
               stackIn_145_0 = 0;
             }
             var4Lifetime1 = stackIn_145_0;
-            if (this.field_T != 0) {
-              if (this.field_T > 0 &&
+            if (this.velocityY != 0) {
+              if (this.velocityY > 0 &&
                 this.field_x > var3) {
                 stackIn_157_0 = 1;
               } else {
-                if (this.field_T < 0) {
+                if (this.velocityY < 0) {
                   stackIn_157_0 = (this.field_x < var3) ? 1 : 0;
                 } else {
                   stackIn_157_0 = 0;
@@ -480,28 +480,28 @@ abstract class Mover extends WorldObject {
             }
             if (var4Lifetime1 != 0 &&
               var5Lifetime1 == 0) {
-              this.field_O = 0;
+              this.velocityX = 0;
             } else {
               if (var4Lifetime1 == 0 &&
                 var5Lifetime1 != 0) {
-                this.field_T = 0;
+                this.velocityY = 0;
                 return false;
               }
               if (var4Lifetime1 == 0) {
                 return false;
               }
               if (var5Lifetime1 != 0) {
-                this.field_x = this.field_X << 16;
-                this.field_y = this.field_Y << 16;
+                this.field_x = this.targetY << 16;
+                this.field_y = this.targetX << 16;
                 return true;
               }
             }
             return false;
           }
           var4Lifetime1Lifetime1 = 1;
-          if (this.field_T != 0) {
-            if (this.field_T <= 0) {
-              if (this.field_T < 0 &&
+          if (this.velocityY != 0) {
+            if (this.velocityY <= 0) {
+              if (this.velocityY < 0 &&
                 this.field_x < var3) {
                 var5Lifetime1Lifetime1 = 1;
                 var6Lifetime1Lifetime1 = 67 % ((-53 - param0) / 32);
@@ -512,19 +512,19 @@ abstract class Mover extends WorldObject {
                 }
                 if (var4Lifetime1Lifetime1 != 0 &&
                   var5Lifetime1Lifetime1 == 0) {
-                  this.field_O = 0;
+                  this.velocityX = 0;
                 } else {
                   if (var4Lifetime1Lifetime1 == 0 &&
                     var5Lifetime1Lifetime1 != 0) {
-                    this.field_T = 0;
+                    this.velocityY = 0;
                     return false;
                   }
                   if (var4Lifetime1Lifetime1 == 0) {
                     return false;
                   }
                   if (var5Lifetime1Lifetime1 != 0) {
-                    this.field_x = this.field_X << 16;
-                    this.field_y = this.field_Y << 16;
+                    this.field_x = this.targetY << 16;
+                    this.field_y = this.targetX << 16;
                     return true;
                   }
                 }
@@ -533,7 +533,7 @@ abstract class Mover extends WorldObject {
               stackIn_123_0 = 0;
             } else {
               if (this.field_x <= var3) {
-                if (this.field_T < 0) {
+                if (this.velocityY < 0) {
                   stackIn_84_0 = (this.field_x < var3) ? 1 : 0;
                 } else {
                   stackIn_84_0 = 0;
@@ -547,19 +547,19 @@ abstract class Mover extends WorldObject {
                 }
                 if (var4Lifetime1Lifetime1 != 0 &&
                   var5Lifetime1Lifetime1 == 0) {
-                  this.field_O = 0;
+                  this.velocityX = 0;
                 } else {
                   if (var4Lifetime1Lifetime1 == 0 &&
                     var5Lifetime1Lifetime1 != 0) {
-                    this.field_T = 0;
+                    this.velocityY = 0;
                     return false;
                   }
                   if (var4Lifetime1Lifetime1 == 0) {
                     return false;
                   }
                   if (var5Lifetime1Lifetime1 != 0) {
-                    this.field_x = this.field_X << 16;
-                    this.field_y = this.field_Y << 16;
+                    this.field_x = this.targetY << 16;
+                    this.field_y = this.targetX << 16;
                     return true;
                   }
                 }
@@ -579,33 +579,33 @@ abstract class Mover extends WorldObject {
           }
           if (var4Lifetime1Lifetime1 != 0 &&
             var5Lifetime1Lifetime2 == 0) {
-            this.field_O = 0;
+            this.velocityX = 0;
           } else {
             if (var4Lifetime1Lifetime1 == 0 &&
               var5Lifetime1Lifetime2 != 0) {
-              this.field_T = 0;
+              this.velocityY = 0;
               return false;
             }
             if (var4Lifetime1Lifetime1 == 0) {
               return false;
             }
             if (var5Lifetime1Lifetime2 != 0) {
-              this.field_x = this.field_X << 16;
-              this.field_y = this.field_Y << 16;
+              this.field_x = this.targetY << 16;
+              this.field_y = this.targetX << 16;
               return true;
             }
           }
           return false;
         }
-        if (this.field_O < 0 &&
+        if (this.velocityX < 0 &&
           this.field_y < var2) {
           var4Lifetime2 = 1;
-          if (this.field_T != 0) {
-            if (this.field_T > 0 &&
+          if (this.velocityY != 0) {
+            if (this.velocityY > 0 &&
               this.field_x > var3) {
               stackIn_188_0 = 1;
             } else {
-              if (this.field_T < 0) {
+              if (this.velocityY < 0) {
                 stackIn_188_0 = (this.field_x < var3) ? 1 : 0;
               } else {
                 stackIn_188_0 = 0;
@@ -623,26 +623,26 @@ abstract class Mover extends WorldObject {
           }
           if (var4Lifetime2 != 0 &&
             var5Lifetime2 == 0) {
-            this.field_O = 0;
+            this.velocityX = 0;
           } else {
             if (var4Lifetime2 == 0 &&
               var5Lifetime2 != 0) {
-              this.field_T = 0;
+              this.velocityY = 0;
               return false;
             }
             if (var4Lifetime2 == 0) {
               return false;
             }
             if (var5Lifetime2 != 0) {
-              this.field_x = this.field_X << 16;
-              this.field_y = this.field_Y << 16;
+              this.field_x = this.targetY << 16;
+              this.field_y = this.targetX << 16;
               return true;
             }
           }
           return false;
         }
         var4Lifetime3 = 0;
-        if (this.field_T == 0) {
+        if (this.velocityY == 0) {
           var5Lifetime3 = 1;
           var6Lifetime3 = 67 % ((-53 - param0) / 32);
           if (Math.abs(-var2 + this.field_y) < SpriteState.field_y &&
@@ -652,12 +652,12 @@ abstract class Mover extends WorldObject {
           }
           if (var4Lifetime3 != 0 &&
             var5Lifetime3 == 0) {
-            this.field_O = 0;
+            this.velocityX = 0;
             return false;
           }
           if (var4Lifetime3 == 0) {
             if (var5Lifetime3 != 0) {
-              this.field_T = 0;
+              this.velocityY = 0;
             } else {
               if (var4Lifetime3 != 0) {
               }
@@ -670,12 +670,12 @@ abstract class Mover extends WorldObject {
           if (var5Lifetime3 == 0) {
             return false;
           }
-          this.field_x = this.field_X << 16;
-          this.field_y = this.field_Y << 16;
+          this.field_x = this.targetY << 16;
+          this.field_y = this.targetX << 16;
           return true;
         }
         regionExit1: {
-          if (this.field_T > 0) {
+          if (this.velocityY > 0) {
             if (this.field_x > var3) {
               var5Lifetime4 = 1;
               var6Lifetime4 = 67 % ((-53 - param0) / 32);
@@ -686,12 +686,12 @@ abstract class Mover extends WorldObject {
               }
               if (var4Lifetime3 != 0 &&
                 var5Lifetime4 == 0) {
-                this.field_O = 0;
+                this.velocityX = 0;
                 return false;
               }
               if (var4Lifetime3 == 0) {
                 if (var5Lifetime4 != 0) {
-                  this.field_T = 0;
+                  this.velocityY = 0;
                 } else {
                   if (var4Lifetime3 != 0) {
                   }
@@ -700,7 +700,7 @@ abstract class Mover extends WorldObject {
               }
               break regionExit1;
             }
-            if (this.field_T < 0) {
+            if (this.velocityY < 0) {
               stackIn_253_0 = (this.field_x >= var3) ? 0 : 1;
             } else {
               stackIn_253_0 = 0;
@@ -714,21 +714,21 @@ abstract class Mover extends WorldObject {
             }
             if (var4Lifetime3 != 0 &&
               var5Lifetime4 == 0) {
-              this.field_O = 0;
+              this.velocityX = 0;
             } else if (var4Lifetime3 == 0 &&
               var5Lifetime4 != 0) {
-              this.field_T = 0;
+              this.velocityY = 0;
             } else {
               if (var4Lifetime3 != 0 &&
                 var5Lifetime4 != 0) {
-                this.field_x = this.field_X << 16;
-                this.field_y = this.field_Y << 16;
+                this.field_x = this.targetY << 16;
+                this.field_y = this.targetX << 16;
                 return true;
               }
             }
             return false;
           }
-          if (this.field_T >= 0) {
+          if (this.velocityY >= 0) {
             var5Lifetime4 = 0;
           } else {
             if (this.field_x < var3) {
@@ -745,13 +745,13 @@ abstract class Mover extends WorldObject {
           }
           if (var4Lifetime3 != 0 &&
             var5Lifetime4 == 0) {
-            this.field_O = 0;
+            this.velocityX = 0;
             return false;
           }
           if (var4Lifetime3 == 0) {
             if (var5Lifetime4 == 0) {
             } else {
-              this.field_T = 0;
+              this.velocityY = 0;
             }
             return false;
           }
@@ -762,8 +762,8 @@ abstract class Mover extends WorldObject {
         if (var5Lifetime4 == 0) {
           return false;
         }
-        this.field_x = this.field_X << 16;
-        this.field_y = this.field_Y << 16;
+        this.field_x = this.targetY << 16;
+        this.field_y = this.targetX << 16;
         return true;
     }
 

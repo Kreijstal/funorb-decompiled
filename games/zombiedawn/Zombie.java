@@ -41,16 +41,16 @@ final class Zombie extends Mover {
         int var2;
         var2 = pb.a(so.field_a, 50, param0 ^ 0);
         if (var2 == param0 &&
-          Math.abs(this.field_K + this.field_O) < Math.abs(this.field_I) &&
-          Math.abs(this.field_R + this.field_T) < Math.abs(this.field_M)) {
-          this.field_O = this.field_O + this.field_K;
-          this.field_T = this.field_T + this.field_R;
+          Math.abs(this.field_K + this.velocityX) < Math.abs(this.field_I) &&
+          Math.abs(this.field_R + this.velocityY) < Math.abs(this.field_M)) {
+          this.velocityX = this.velocityX + this.field_K;
+          this.velocityY = this.velocityY + this.field_R;
         } else {
           if (var2 == 2 &&
-            Math.abs(this.field_O - this.field_K) > Math.abs(this.field_E) &&
-            Math.abs(this.field_T - this.field_R) > Math.abs(this.field_ab)) {
-            this.field_T = this.field_T - this.field_R;
-            this.field_O = this.field_O - this.field_K;
+            Math.abs(this.velocityX - this.field_K) > Math.abs(this.field_E) &&
+            Math.abs(this.velocityY - this.field_R) > Math.abs(this.field_ab)) {
+            this.velocityY = this.velocityY - this.field_R;
+            this.velocityX = this.velocityX - this.field_K;
           }
         }
     }
@@ -60,7 +60,7 @@ final class Zombie extends Mover {
         if (this.n((byte) 25)) {
           return false;
         }
-        this.e(15, -6904);
+        this.setState(15, -6904);
         if (param0 != 6) {
           discarded$0 = this.o((byte) -114);
           return true;
@@ -82,7 +82,7 @@ final class Zombie extends Mover {
         if (param0 <= 14) {
           return true;
         }
-        this.e(14, -6904);
+        this.setState(14, -6904);
         return true;
     }
 
@@ -202,7 +202,7 @@ final class Zombie extends Mover {
               if (400 > var5) {
                 this.field_wb = var16_ref;
                 var16_ref.r(20);
-                this.e(8, -6904);
+                this.setState(8, -6904);
                 this.field_zb = 70;
                 this.field_kb = (var16_ref.getX(true) - this.getX(true)) / 2;
                 this.field_mb = (var16_ref.getY(237239984) - this.getY(237239984)) / 2;
@@ -250,10 +250,10 @@ final class Zombie extends Mover {
                   var5 = var4 * var4 + var3 * var3;
                   if (529 > var5 &&
                     var6.a(var15.getY(237239984), this.getY(237239984), var15.getX(true), this.getX(true), 106) != -1) {
-                    this.e(21, -6904);
+                    this.setState(21, -6904);
                     this.field_zb = 50;
                     if (!var15.field_ob) {
-                      var15.e(21, -6904);
+                      var15.setState(21, -6904);
                       if (0 >= var3) {
                         var15.field_S = 1;
                         this.field_S = 3;
@@ -266,20 +266,20 @@ final class Zombie extends Mover {
                     var12 = var15.field_y + (var3 << 15);
                     var13 = var15.field_x + (var4 << 15);
                     if (var6.a(var13 >> 16, var15.getY(237239984), var12 >> 16, var15.getX(true), 120) == -1) {
-                      var15.field_Y = var15.getX(true);
-                      var15.field_X = var15.getY(237239984);
+                      var15.targetX = var15.getX(true);
+                      var15.targetY = var15.getY(237239984);
                     } else {
-                      var15.field_X = var13 >> 16;
-                      var15.field_Y = var12 >> 16;
+                      var15.targetY = var13 >> 16;
+                      var15.targetX = var12 >> 16;
                     }
                     var13Lifetime1 = this.field_x - (var4 << 15);
                     var12Lifetime1 = this.field_y - (var3 << 15);
                     if (var6.a(var13Lifetime1 >> 16, this.getY(237239984), var12Lifetime1 >> 16, this.getX(true), 108) == -1) {
-                      this.field_X = this.field_x >> 16;
-                      this.field_Y = this.field_y >> 16;
+                      this.targetY = this.field_x >> 16;
+                      this.targetX = this.field_y >> 16;
                     } else {
-                      this.field_X = var13Lifetime1 >> 16;
-                      this.field_Y = var12Lifetime1 >> 16;
+                      this.targetY = var13Lifetime1 >> 16;
+                      this.targetX = var12Lifetime1 >> 16;
                     }
                     return;
                   }
@@ -297,10 +297,10 @@ final class Zombie extends Mover {
           this.state != 7 &&
           this.field_Eb == 0 &&
           !this.field_ob) {
-          this.field_Y = ((Human) (var2)).getX(true);
-          this.field_X = ((Human) (var2)).getY(237239984);
-          this.c(0, 114688);
-          this.e(7, -6904);
+          this.targetX = ((Human) (var2)).getX(true);
+          this.targetY = ((Human) (var2)).getY(237239984);
+          this.moveToward(0, 114688);
+          this.setState(7, -6904);
           this.field_Eb = 0;
           this.field_wb = (Human) (var2);
         }
@@ -463,7 +463,7 @@ final class Zombie extends Mover {
           null != this.field_wb) {
           this.field_wb.q(118);
         }
-        this.e(9, param0 - 6904);
+        this.setState(9, param0 - 6904);
         this.l((byte) -124);
     }
 
@@ -488,20 +488,20 @@ final class Zombie extends Mover {
         if (this.field_ob) {
           return false;
         }
-        this.e(19, -6904);
+        this.setState(19, -6904);
         if (param0 <= -57) {
           return true;
         }
         return false;
     }
 
-    final void e(int param0, int param1) {
+    final void setState(int param0, int param1) {
         int var4;
         var4 = ZombieDawn.field_J;
         if (this.state == 9) {
           return;
         }
-        super.e(param0, param1);
+        super.setState(param0, param1);
         if (7 != this.state) {
           if (9 == this.state &&
             !this.field_J) {
@@ -561,7 +561,7 @@ final class Zombie extends Mover {
         if (param0 != -85) {
           this.field_yb = (qh) null;
         }
-        this.e(22, -6904);
+        this.setState(22, -6904);
         if (null != this.field_wb) {
           this.field_wb.q(119);
         }
@@ -672,8 +672,8 @@ final class Zombie extends Mover {
         try {
           var3_int = param0.worldToScreenX(this.getX(true), (byte) -105);
           var4 = param0.worldToScreenY(this.getY(param1 ^ -237239985), 0);
-          var5 = param0.worldToScreenX(this.field_Y, (byte) -112);
-          var6 = param0.worldToScreenY(this.field_X, 0);
+          var5 = param0.worldToScreenX(this.targetX, (byte) -112);
+          var6 = param0.worldToScreenY(this.targetY, 0);
           if (param1 != -1) {
             this.field_qb = true;
           }
@@ -719,12 +719,12 @@ final class Zombie extends Mover {
           var3 = (Camera) null;
           this.a((byte) 118, (Camera) null);
         }
-        this.field_W = 8;
+        this.speedScale = 8;
         if (5 == this.state) {
-          this.c(0, 57344);
+          this.moveToward(0, 57344);
         } else {
           if (7 == this.state) {
-            this.c(0, 114688);
+            this.moveToward(0, 114688);
           }
         }
         return true;
@@ -800,8 +800,8 @@ final class Zombie extends Mover {
         this.field_gb = 0;
         this.field_kb = 0;
         this.field_Gb = 0;
-        this.field_T = 0;
-        this.field_O = 0;
+        this.velocityY = 0;
+        this.velocityX = 0;
         this.field_fb = param3;
         this.field_vb = pb.a(so.field_a, 5, 1);
         this.field_db = pb.a(so.field_a, 120, 1);
@@ -828,12 +828,12 @@ final class Zombie extends Mover {
         int var5 = -this.getX(true) + param2;
         int var6 = -this.getY(237239984) + param1;
         double var7 = (double)var4 / (double)so.b(var6 * var6 + var5 * var5);
-        this.field_Y = -(int)(var7 * (double)var5) + this.getX(true);
-        this.field_X = -(int)(var7 * (double)var6) + this.getY(237239984);
+        this.targetX = -(int)(var7 * (double)var5) + this.getX(true);
+        this.targetY = -(int)(var7 * (double)var6) + this.getY(237239984);
         int var9 = this.field_S;
-        this.c(param0 ^ param0, 401408);
+        this.moveToward(param0 ^ param0, 401408);
         this.field_S = var9;
-        this.e(12, -6904);
+        this.setState(12, -6904);
     }
 
     Zombie(int param0, int param1, boolean param2, int param3) {
@@ -857,10 +857,10 @@ final class Zombie extends Mover {
         if (this.field_V) {
           return;
         }
-        this.field_X = param0;
-        this.field_Y = param1;
-        this.c(0, 28672);
-        this.e(6, -6904);
+        this.targetY = param0;
+        this.targetX = param1;
+        this.moveToward(0, 28672);
+        this.setState(6, -6904);
     }
 
     final void b(boolean param0) {
@@ -890,7 +890,7 @@ final class Zombie extends Mover {
         if (param0 <= 33) {
           this.f((byte) -56);
         }
-        this.e(17, -6904);
+        this.setState(17, -6904);
         return true;
     }
 
@@ -917,16 +917,16 @@ final class Zombie extends Mover {
         if (null != this.field_yb &&
           !this.field_yb.isEmpty((byte) -122)) {
           var2 = (Point) (this.field_yb.removeLast(29));
-          this.field_Y = var2.x;
-          this.field_X = var2.y;
+          this.targetX = var2.x;
+          this.targetY = var2.y;
           var3 = -39 / ((-49 - param0) / 54);
-          this.e(5, -6904);
-          this.c(0, 57344);
+          this.setState(5, -6904);
+          this.moveToward(0, 57344);
           return;
         }
         this.field_yb = null;
         this.field_lb = null;
-        this.e(4, -6904);
+        this.setState(4, -6904);
     }
 
     final void j(int param0) {
@@ -934,7 +934,7 @@ final class Zombie extends Mover {
         if (param0 < 66) {
           this.field_Bb = 8;
         }
-        this.e(4, -6904);
+        this.setState(4, -6904);
         this.q((byte) -125);
     }
 
@@ -1019,8 +1019,8 @@ final class Zombie extends Mover {
             this.q(1);
             this.g((byte) -127);
             if (var9 != null) {
-              if (var9.field_h * this.field_O >= 0 &&
-                0 <= var9.field_i * this.field_T && (0 != var9.field_h ||
+              if (var9.field_h * this.velocityX >= 0 &&
+                0 <= var9.field_i * this.velocityY && (0 != var9.field_h ||
                 var9.field_i != 0)) {
                 this.field_xb = this.field_xb + 1;
                 if (!(2250 >= this.field_xb)) {
@@ -1033,8 +1033,8 @@ final class Zombie extends Mover {
               }
             }
             if (this.h((byte) -126) ||
-              this.field_O == 0 &&
-              this.field_T == 0) {
+              this.velocityX == 0 &&
+              this.velocityY == 0) {
               this.B(123);
             }
             if (this.field_tb &&
@@ -1049,9 +1049,9 @@ final class Zombie extends Mover {
               }
               this.g((byte) 64);
               if (this.h((byte) -100) ||
-                0 == this.field_O &&
-                this.field_T == 0) {
-                this.e(4, -6904);
+                0 == this.velocityX &&
+                this.velocityY == 0) {
+                this.setState(4, -6904);
               }
               this.A(-96);
             } else {
@@ -1060,20 +1060,20 @@ final class Zombie extends Mover {
                 this.field_zb = this.field_zb - 1;
                 if (fieldTemp$3 <= 0) {
                   this.field_zb = 35;
-                  this.e(4, -6904);
+                  this.setState(4, -6904);
                   this.j((byte) 82);
                   this.B(41);
                 }
                 var3 = 16384;
-                if (this.field_X > (this.field_x >> 16)) {
+                if (this.targetY > (this.field_x >> 16)) {
                   this.field_x = this.field_x + var3;
                 } else {
-                  if (this.field_X < (this.field_x >> 16)) {
+                  if (this.targetY < (this.field_x >> 16)) {
                     this.field_x = this.field_x - var3;
                   }
                 }
-                if (this.field_y >> 16 >= this.field_Y) {
-                  if (this.field_Y < this.field_y >> 16) {
+                if (this.field_y >> 16 >= this.targetX) {
+                  if (this.targetX < this.field_y >> 16) {
                     this.field_y = this.field_y - var3;
                   }
                 } else {
@@ -1096,9 +1096,9 @@ final class Zombie extends Mover {
                           var6 = this.getY(237239984) - var4;
                           if (var6 * var6 + var5 * var5 <= 6410 &&
                             Js5Archive.field_e.field_H.a(var4, this.getY(237239984), var3, this.getX(true), 114) != -1) {
-                            this.field_X = var4;
-                            this.field_Y = var3;
-                            this.c(0, 114688);
+                            this.targetY = var4;
+                            this.targetX = var3;
+                            this.moveToward(0, 114688);
                           } else {
                             this.j((byte) 82);
                             this.B(-128);
@@ -1146,7 +1146,7 @@ final class Zombie extends Mover {
                       }
                       ((GameWorld) (Object) stackIn_119_0).a(stackIn_119_1, stackIn_119_2, (byte) stackIn_119_3, stackIn_119_4, stackIn_120_5);
                       this.field_wb = null;
-                      this.e(4, -6904);
+                      this.setState(4, -6904);
                       if (null != this.field_lb) {
                         this.a(Js5Archive.field_e.field_H.a(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984)), true);
                       }
@@ -1163,20 +1163,20 @@ final class Zombie extends Mover {
                         stackIn_89_0 = (Js5Archive.field_e.field_H.a(false, this.getY(237239984), this.getX(true), true)) ? 0 : 1;
                         var3 = stackIn_89_0;
                         if (var3 != 0) {
-                          this.field_y = this.field_y - this.field_O;
+                          this.field_y = this.field_y - this.velocityX;
                           var3 = 0;
-                          this.field_x = this.field_x - this.field_T;
-                          if (this.field_O != 0 &&
-                            Js5Archive.field_e.field_H.a(false, this.getY(237239984), this.field_y + this.field_O >> 16, true)) {
-                            this.field_T = 0;
-                            this.field_X = this.field_x >> 16;
-                            this.field_y = this.field_y + this.field_O;
+                          this.field_x = this.field_x - this.velocityY;
+                          if (this.velocityX != 0 &&
+                            Js5Archive.field_e.field_H.a(false, this.getY(237239984), this.field_y + this.velocityX >> 16, true)) {
+                            this.velocityY = 0;
+                            this.targetY = this.field_x >> 16;
+                            this.field_y = this.field_y + this.velocityX;
                           } else {
-                            if (0 != this.field_T &&
-                              Js5Archive.field_e.field_H.a(false, this.field_T + this.field_x >> 16, this.field_y >> 16, true)) {
-                              this.field_Y = this.field_y >> 16;
-                              this.field_x = this.field_x + this.field_T;
-                              this.field_O = 0;
+                            if (0 != this.velocityY &&
+                              Js5Archive.field_e.field_H.a(false, this.velocityY + this.field_x >> 16, this.field_y >> 16, true)) {
+                              this.targetX = this.field_y >> 16;
+                              this.field_x = this.field_x + this.velocityY;
+                              this.velocityX = 0;
                             } else {
                               var3 = 1;
                             }
@@ -1196,7 +1196,7 @@ final class Zombie extends Mover {
                             this.field_G = 0;
                             this.field_ob = false;
                             Js5Archive.field_e.b(0, this.getY(237239984), true, this.getX(true));
-                            this.e(4, -6904);
+                            this.setState(4, -6904);
                           }
                         } else {
                           if (14 == this.state) {
@@ -1204,7 +1204,7 @@ final class Zombie extends Mover {
                             this.field_S = 1;
                             if (this.field_G == 4) {
                               Js5Archive.field_e.zombies.addFirst(0, new vb(this.getX(true), this.getY(237239984), this.field_t));
-                              this.e(4, -6904);
+                              this.setState(4, -6904);
                               this.field_db = 2;
                             }
                           } else {
@@ -1224,7 +1224,7 @@ final class Zombie extends Mover {
                                 if (this.field_rb.c(123)) {
                                   this.field_rb.unlink(-27598);
                                   this.field_rb = null;
-                                  this.e(4, -6904);
+                                  this.setState(4, -6904);
                                 }
                               }
                             } else {
@@ -1241,7 +1241,7 @@ final class Zombie extends Mover {
                                   5 == this.field_G) {
                                   this.field_ob = true;
                                   this.l((byte) -121);
-                                  this.e(4, -6904);
+                                  this.setState(4, -6904);
                                 }
                               }
                             }
@@ -1279,7 +1279,7 @@ final class Zombie extends Mover {
             this.field_Eb = this.field_Eb - 1;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_db != 1 && (!(this.field_W > 4) ||
+          if (this.field_db != 1 && (!(this.speedScale > 4) ||
             this.field_ob)) {
             if ((this.field_db == 0)) {
               this.field_db = 60 + pb.a(so.field_a, 60, 1);
@@ -1303,7 +1303,7 @@ final class Zombie extends Mover {
         if (this.n((byte) 25)) {
           return false;
         }
-        this.e(13, -6904);
+        this.setState(13, -6904);
         if (param0 != 11312) {
           this.field_ub = -65;
           return true;

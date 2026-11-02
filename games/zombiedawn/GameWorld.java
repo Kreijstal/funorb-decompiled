@@ -4608,7 +4608,7 @@ final class GameWorld {
                   } else {
                     stackIn_18_1 = 4;
                   }
-                  ((Mover) (Object) stackIn_17_0).e(stackIn_18_1, -6904);
+                  ((Mover) (Object) stackIn_17_0).setState(stackIn_18_1, -6904);
                 }
               }
               stackIn_22_0 = this.zombies;

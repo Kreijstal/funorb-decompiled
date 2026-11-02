@@ -107,14 +107,14 @@ class qk extends Human {
         }
     }
 
-    final void e(int param0, int param1) {
+    final void setState(int param0, int param1) {
         if (param0 != 10 &&
           param0 != 11 &&
           null != this.field_yb) {
           this.field_yb.field_hb = false;
           this.field_yb = null;
         }
-        super.e(param0, param1);
+        super.setState(param0, param1);
     }
 
     final static void n(byte param0) {
@@ -190,7 +190,7 @@ class qk extends Human {
           !this.a(-68, var2, false)) && (this.field_t != 28 ||
           !this.a(-19718, false, var2))) {
           if ((this.state == 3)) {
-            this.e(0, param0 ^ -6852);
+            this.setState(0, param0 ^ -6852);
           }
           decompiledFrameRemainder1 = false;
         }
@@ -211,7 +211,7 @@ class qk extends Human {
                 else {
                   decompiledFrameRemainder0 = (this.state == 3);
                   if (decompiledFrameRemainder0) {
-                    this.e(0, -6904);
+                    this.setState(0, -6904);
                     decompiledFrameRemainder1 = false;
                   }
                 }
@@ -231,7 +231,7 @@ class qk extends Human {
                 else {
                   decompiledFrameRemainder0 = (this.state == 3);
                   if (decompiledFrameRemainder0) {
-                    this.e(0, -6904);
+                    this.setState(0, -6904);
                     decompiledFrameRemainder1 = false;
                   }
                 }
@@ -241,7 +241,7 @@ class qk extends Human {
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0) &&
             (!this.p(-120))) {
-            this.e(3, -6904);
+            this.setState(3, -6904);
           }
         }
 
@@ -432,8 +432,8 @@ class qk extends Human {
             if (this.field_G != 1) {
               if (this.field_G == 2) {
                 this.field_xb = this.field_Ib;
-                if (4 != this.field_W) {
-                  this.field_xb = 4 * this.field_xb / this.field_W;
+                if (4 != this.speedScale) {
+                  this.field_xb = 4 * this.field_xb / this.speedScale;
                 }
                 if (this.field_zb == this.field_Lb &&
                   this.field_yb != null) {
@@ -457,7 +457,7 @@ class qk extends Human {
                 } else {
                   stackIn_32_1 = 0;
                 }
-                this.e(stackIn_32_1, -6904);
+                this.setState(stackIn_32_1, -6904);
               }
             } else {
               if (this.field_Gb > 0) {
@@ -467,7 +467,7 @@ class qk extends Human {
           }
         } else {
           if (0 == this.field_xb) {
-            this.e(10, -6904);
+            this.setState(10, -6904);
             if (0 >= this.field_Ab) {
               this.field_Gb = -2;
               this.field_U = dc.a((byte) 18, 63);
@@ -531,7 +531,7 @@ class qk extends Human {
         int var5Lifetime1;
         var10 = ZombieDawn.field_J;
         if (this.field_wb) {
-          this.e(3, -6904);
+          this.setState(3, -6904);
           return;
         }
         if (0 < this.field_xb) {
@@ -588,7 +588,7 @@ class qk extends Human {
             this.field_S = stackIn_29_1;
           }
           this.field_yb = (Zombie) (var2);
-          this.e(10, -6904);
+          this.setState(10, -6904);
           if (0 >= this.field_Ab) {
             this.field_wb = true;
             this.field_Gb = -2;

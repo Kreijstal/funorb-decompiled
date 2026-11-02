@@ -42,7 +42,7 @@ class wc extends qk {
           this.field_yb = null;
         }
         if (null != this.field_yb) {
-          this.e(10, -6904);
+          this.setState(10, -6904);
           this.field_Gb = 10;
           this.field_U = kh.a(44, false);
           this.field_U.h(ge.field_c >> 1);
@@ -285,7 +285,7 @@ class wc extends qk {
             this.field_N = this.field_N + 3;
             if (2 == this.field_G) {
               this.field_yb.z(0);
-              this.e(0, -6904);
+              this.setState(0, -6904);
             }
           }
         } else {

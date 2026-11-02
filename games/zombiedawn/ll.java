@@ -190,7 +190,7 @@ abstract class ll {
               var2 = var2 + lb.field_Y;
             }
             if (var4 >= 0) {
-              wb.field_m.c(var6, var8, pf.field_g + var2, var5, -1);
+              FunOrbApplet.field_m.c(var6, var8, pf.field_g + var2, var5, -1);
               var2 = var2 + (ma.field_k + lb.field_Y + qb.field_i);
             } else {
               re.field_g.c(var6, var8, SpatialObject.field_p + var2, var5, -1);

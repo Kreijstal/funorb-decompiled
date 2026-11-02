@@ -26,7 +26,7 @@ final class qh extends IntrusiveDeque {
               } else {
                 param2 = fl.field_b;
               }
-              he.field_a.a(m.field_B, 20);
+              he.field_a.a(GameLoopApplet.field_B, 20);
             }
             var3_int = 1;
             if (param1 == 10) {

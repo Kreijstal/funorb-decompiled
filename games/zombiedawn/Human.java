@@ -38,12 +38,12 @@ abstract class Human extends Mover {
         }
         this.field_nb = false;
         this.field_qb = 5;
-        this.field_Y = this.field_jb[var3];
-        this.field_X = this.field_gb[var3];
+        this.targetX = this.field_jb[var3];
+        this.targetY = this.field_gb[var3];
         ho.a(this.getY(237239984), (byte) 54, this.getX(true));
-        pi.a(this.field_X, this.field_Y, (byte) 101);
-        this.c(0, this.field_D);
-        this.e(1, -6904);
+        pi.a(this.targetY, this.targetX, (byte) 101);
+        this.moveToward(0, this.field_D);
+        this.setState(1, -6904);
         return true;
     }
 
@@ -70,10 +70,10 @@ abstract class Human extends Mover {
         }
         var6 = -this.getY(237239984) + param2;
         var7 = (double)var4 / (double)so.b(var6 * var6 + var5 * var5);
-        this.field_Y = this.getX(true) - (int)((double)var5 * var7);
-        this.field_X = -(int)((double)var6 * var7) + this.getY(237239984);
-        this.c(0, 401408);
-        this.e(2, -6904);
+        this.targetX = this.getX(true) - (int)((double)var5 * var7);
+        this.targetY = -(int)((double)var6 * var7) + this.getY(237239984);
+        this.moveToward(0, 401408);
+        this.setState(2, -6904);
         this.field_rb = 1;
         if (this.field_S != 3) {
           stackIn_8_1 = 3;
@@ -287,10 +287,10 @@ abstract class Human extends Mover {
           if (var6 == null) {
             return;
           }
-          this.field_Y = var6.x;
-          this.field_X = var6.y;
-          this.c(0, this.field_D);
-          this.e(1, -6904);
+          this.targetX = var6.x;
+          this.targetY = var6.y;
+          this.moveToward(0, this.field_D);
+          this.setState(1, -6904);
         }
     }
 
@@ -555,7 +555,7 @@ abstract class Human extends Mover {
 
     final void j(int param0) {
         super.j(124);
-        this.e(3, -6904);
+        this.setState(3, -6904);
         if (param0 < 66) {
           this.n(53);
         }
@@ -692,26 +692,26 @@ abstract class Human extends Mover {
             this.l((byte) 52);
           } else {
             if (2 == this.state) {
-              if (0 != this.field_O ||
-                this.field_T != 0) {
+              if (0 != this.velocityX ||
+                this.velocityY != 0) {
                 this.g((byte) -113);
-                if (!Js5Archive.field_e.field_H.a(false, this.field_T + this.field_x >> 16, this.field_y + this.field_O >> 16, true)) {
-                  this.field_x = this.field_x - this.field_T;
-                  this.field_y = this.field_y - this.field_O;
-                  if (this.field_O != 0 &&
-                    Js5Archive.field_e.field_H.a(false, this.getY(237239984), this.field_O + this.field_y >> 16, true)) {
-                    this.field_T = 0;
-                    this.field_y = this.field_y + this.field_O;
-                    this.field_X = this.field_x >> 16;
+                if (!Js5Archive.field_e.field_H.a(false, this.velocityY + this.field_x >> 16, this.field_y + this.velocityX >> 16, true)) {
+                  this.field_x = this.field_x - this.velocityY;
+                  this.field_y = this.field_y - this.velocityX;
+                  if (this.velocityX != 0 &&
+                    Js5Archive.field_e.field_H.a(false, this.getY(237239984), this.velocityX + this.field_y >> 16, true)) {
+                    this.velocityY = 0;
+                    this.field_y = this.field_y + this.velocityX;
+                    this.targetY = this.field_x >> 16;
                   } else {
-                    if (this.field_T != 0 &&
-                      Js5Archive.field_e.field_H.a(false, this.field_x + this.field_T >> 16, this.field_y >> 16, true)) {
-                      this.field_O = 0;
-                      this.field_Y = this.field_y >> 16;
-                      this.field_x = this.field_x + this.field_T;
+                    if (this.velocityY != 0 &&
+                      Js5Archive.field_e.field_H.a(false, this.field_x + this.velocityY >> 16, this.field_y >> 16, true)) {
+                      this.velocityX = 0;
+                      this.targetX = this.field_y >> 16;
+                      this.field_x = this.field_x + this.velocityY;
                     } else {
-                      this.field_O = 0;
-                      this.field_T = 0;
+                      this.velocityX = 0;
+                      this.velocityY = 0;
                     }
                   }
                 }
@@ -721,7 +721,7 @@ abstract class Human extends Mover {
               } else {
                 if (this.field_G != 4) {
                   if ((6 == this.field_G)) {
-                    this.e(0, -6904);
+                    this.setState(0, -6904);
                     pi.a(this.getY(237239984), this.getX(true), (byte) 101);
                   }
                 } else {
@@ -731,8 +731,8 @@ abstract class Human extends Mover {
                   if (fieldTemp$2 >= 400) {
                     this.field_G = this.field_G + 1;
                   }
-                  this.field_T = 0;
-                  this.field_O = 0;
+                  this.velocityY = 0;
+                  this.velocityX = 0;
                 }
               }
               break regionExit1;
@@ -750,11 +750,11 @@ abstract class Human extends Mover {
                 }
                 if (!this.field_nb &&
                   var2 != 0) {
-                  this.c(0, this.field_D >> 2);
+                  this.moveToward(0, this.field_D >> 2);
                 } else {
                   if (this.field_nb &&
                     var2 == 0) {
-                    this.c(0, this.field_D);
+                    this.moveToward(0, this.field_D);
                   }
                 }
                 stackIn_30_1 = (var2 != 0);
@@ -762,7 +762,7 @@ abstract class Human extends Mover {
               }
               this.g((byte) 113);
               if (!(!this.h((byte) 126))) {
-                this.e(0, -6904);
+                this.setState(0, -6904);
                 this.l((byte) 52);
               }
               break regionExit1;
@@ -780,11 +780,11 @@ abstract class Human extends Mover {
                 }
                 if (!this.field_nb &&
                   var2Lifetime1 != 0) {
-                  this.c(0, this.field_D >> 2);
+                  this.moveToward(0, this.field_D >> 2);
                 } else {
                   if (this.field_nb &&
                     var2Lifetime1 == 0) {
-                    this.c(0, this.field_D);
+                    this.moveToward(0, this.field_D);
                   }
                 }
                 stackIn_51_1 = (var2Lifetime1 != 0);
@@ -793,7 +793,7 @@ abstract class Human extends Mover {
               }
               this.g((byte) -104);
               if (!(!this.h((byte) -127))) {
-                this.e(0, -6904);
+                this.setState(0, -6904);
                 this.l((byte) 52);
               }
               break regionExit1;
@@ -810,7 +810,7 @@ abstract class Human extends Mover {
                   this.field_cb.c(111));
                 if (decompiledFrameRemainder0) {
                   this.field_cb = null;
-                  this.e(0, -6904);
+                  this.setState(0, -6904);
                   this.l((byte) 52);
                   break regionExit1;
                 }
@@ -867,7 +867,7 @@ abstract class Human extends Mover {
           this.k(76);
         }
         this.field_J = true;
-        this.e(2, param0 - 6819);
+        this.setState(2, param0 - 6819);
         this.field_G = 2;
     }
 
@@ -923,7 +923,7 @@ abstract class Human extends Mover {
           if (this.field_cb == param0) {
             if (var5 == 0) {
               this.field_cb = null;
-              this.e(0, param1 ^ 31858);
+              this.setState(0, param1 ^ 31858);
               this.l((byte) 52);
             }
           } else {
@@ -951,7 +951,7 @@ abstract class Human extends Mover {
         if (param0 <= 5) {
           this.c(22, 55, 42);
         }
-        this.e(0, -6904);
+        this.setState(0, -6904);
     }
 
     abstract void l(byte param0);
@@ -960,7 +960,7 @@ abstract class Human extends Mover {
         if (param0 != -6253) {
           return;
         }
-        this.e(18, -6904);
+        this.setState(18, -6904);
         this.unlink(-27598);
         this.d(0);
         if (!(0 >= this.field_z)) {
@@ -1076,7 +1076,7 @@ abstract class Human extends Mover {
           return;
         }
         try {
-          this.e(16, -6904);
+          this.setState(16, -6904);
           this.field_cb = param0;
           int var3_int = -89 % ((param1 + 53) / 54);
         } catch (RuntimeException runtimeException) {
@@ -1085,7 +1085,7 @@ abstract class Human extends Mover {
     }
 
     final void r(int param0) {
-        this.e(param0, param0 ^ -6884);
+        this.setState(param0, param0 ^ -6884);
     }
 
     static {

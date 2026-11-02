@@ -516,7 +516,7 @@ final class tl implements ug {
         if (null == this.field_q) {
           this.field_q = new lo[2];
           for (var2 = 0; var2 < 2; var2++) {
-            this.field_q[var2] = m.a((byte) -119, 1, 5, var2);
+            this.field_q[var2] = GameLoopApplet.a((byte) -119, 1, 5, var2);
           }
         }
         if (param0 != -110) {
