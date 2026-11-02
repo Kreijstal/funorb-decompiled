@@ -61,11 +61,11 @@ final class jd extends jh {
           var3 = 60 / ((param0 + 84) / 40);
           while (var1.field_l > var2) {
             if (null != var5.field_u[var2] &&
-              var5.field_u[var2].field_a == 0) {
+              var5.field_u[var2].status == 0) {
               return false;
             }
             if (null != var5.field_n[var2] &&
-              0 == var5.field_n[var2].field_a) {
+              0 == var5.field_n[var2].status) {
               return false;
             }
             var2++;

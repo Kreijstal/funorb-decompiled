@@ -485,7 +485,7 @@ final class ka extends IntrusiveNode {
     }
 
     final static void a(int param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
-        rc var3 = null;
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -498,10 +498,10 @@ final class ka extends IntrusiveNode {
         try {
           while (true) {
             var3 = param2.a(false, param1);
-            while (0 == var3.field_a) {
+            while (0 == var3.status) {
               ub.a(1976, 10L);
             }
-            if (var3.field_a != 1) {
+            if (var3.status != 1) {
               ub.a(1976, 100L);
               continue;
             }

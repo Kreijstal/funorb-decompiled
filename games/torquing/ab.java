@@ -57,7 +57,7 @@ final class ab extends gf {
           if (param0 > -85) {
             field_l = (hh) null;
           }
-          var2 = kp.a((byte) -87, mm.a(param1, (byte) 121));
+          var2 = kp.a((byte) -87, UrlRequest.a(param1, (byte) 121));
           if (var2 == null) {
             var2 = "";
           }
@@ -151,7 +151,7 @@ final class ab extends gf {
             var6 = param0;
           } else {
             var7 = (CharSequence) ((Object) param0);
-            var4_long = mm.a(var7, (byte) 91);
+            var4_long = UrlRequest.a(var7, (byte) 91);
           }
           stackIn_7_0 = tp.a((byte) -51, param3, param1, (String) (var6), var4_long);
           return stackIn_7_0;

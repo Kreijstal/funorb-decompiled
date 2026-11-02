@@ -150,7 +150,7 @@ final class nn {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          rc var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -190,16 +190,16 @@ final class nn {
               stackIn_14_6 = vd.field_b;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_v).append("&e=").append(var7).toString()));
-            while (var4.field_a == 0) {
+            while (var4.status == 0) {
               ub.a(1976, 1L);
             }
             if (param2 != -9958) {
               field_b = (byte) -127;
             }
-            if (var4.field_a != 1) {
+            if (var4.status != 1) {
               return;
             }
-            var5 = (DataInputStream) (var4.field_d);
+            var5 = (DataInputStream) (var4.result);
             var5.read();
             var5.close();
             return;

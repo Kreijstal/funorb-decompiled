@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ub extends lg {
-    static mm field_G;
+    static UrlRequest field_G;
     private int field_H;
     private sk field_F;
     static int field_E;

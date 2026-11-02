@@ -230,7 +230,7 @@ final class ne {
           }
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (0L != mm.a(var3, (byte) 116)) {
+            if (0L != UrlRequest.a(var3, (byte) 116)) {
               return;
             }
           }

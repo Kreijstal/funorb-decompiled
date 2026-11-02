@@ -19,7 +19,7 @@ final class jj {
         int var9 = 0;
         PlatformTaskDispatcher var10 = null;
         sf[] var11 = null;
-        rc var12 = null;
+        PlatformTask var12 = null;
         var9 = Torquing.field_u;
         try {
           if (!param0.a((byte) 13)) {
@@ -48,19 +48,19 @@ final class jj {
             }
           }
           var12 = param0.a(true, param2, param1, param5, param4);
-          while (var12.field_a == 0) {
+          while (var12.status == 0) {
             ub.a(1976, 10L);
           }
           if (param3 != 0) {
             var10 = (PlatformTaskDispatcher) null;
             jj.a((PlatformTaskDispatcher) null, 19, 84, -43, 52, 100);
           }
-          var7 = (java.awt.Frame) (var12.field_d);
+          var7 = (java.awt.Frame) (var12.result);
           if (var7 == null) {
             stackIn_32_0 = null;
             return (java.awt.Frame) (stackIn_32_0);
           }
-          if (var12.field_a != 2) {
+          if (var12.status != 2) {
             stackIn_37_0 = var7;
             return stackIn_37_0;
           }

@@ -7,7 +7,7 @@ final class BufferedSocket implements Runnable {
     private java.net.Socket field_b;
     private boolean field_c;
     private boolean field_h;
-    private rc field_k;
+    private PlatformTask field_k;
     static bo field_n;
     private int field_l;
     private PlatformTaskDispatcher field_g;
@@ -45,12 +45,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (null != this.field_k) {
-            while (this.field_k.field_a == 0) {
+            while (this.field_k.status == 0) {
               ub.a(1976, 1L);
             }
-            if (this.field_k.field_a == 1) {
+            if (this.field_k.status == 1) {
               try {
-                ((Thread) (this.field_k.field_d)).join();
+                ((Thread) (this.field_k.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
@@ -354,7 +354,7 @@ final class BufferedSocket implements Runnable {
         sf[] var4 = null;
         sf var6 = null;
         int var7 = 0;
-        rc var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = Torquing.field_u;
@@ -367,14 +367,14 @@ final class BufferedSocket implements Runnable {
             BufferedSocket.b(false);
           }
           var8 = param0.a(100);
-          while (var8.field_a == 0) {
+          while (var8.status == 0) {
             ub.a(1976, 10L);
           }
-          if (2 == var8.field_a) {
+          if (2 == var8.status) {
             stackIn_12_0 = new sf[]{};
             return stackIn_12_0;
           }
-          var10 = (int[]) (var8.field_d);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new sf[var10.length >> 2];

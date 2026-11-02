@@ -167,7 +167,7 @@ final class ld implements WidgetRenderer {
           }
           if (sh.field_a == null) {
             sh.field_a = new uk(128);
-            mm.field_g = 0;
+            UrlRequest.field_g = 0;
           }
           var3Lifetime1 = var1.h((byte) 124);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -185,8 +185,8 @@ final class ld implements WidgetRenderer {
           if (null == var6_ref) {
             var6_ref = new ae();
             sh.field_a.a(var6_ref, (long)hf.a((CharSequence) ((Object) var4_ref_StringLifetime1), 118).hashCode(), 0);
-            fieldTemp$1 = mm.field_g;
-            mm.field_g = mm.field_g + 1;
+            fieldTemp$1 = UrlRequest.field_g;
+            UrlRequest.field_g = UrlRequest.field_g + 1;
             var6_ref.field_kb = fieldTemp$1;
             SpriteState.field_x.a((byte) 54, var6_ref);
           }

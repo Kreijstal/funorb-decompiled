@@ -41,7 +41,7 @@ final class kg {
               for (var5_int = 0; var5_int < oo.field_a; var5_int++) {
                 kj.field_d.payload[var5_int] = var4_ref_ai.field_k[var5_int];
               }
-              mm.field_d = eb.field_f;
+              UrlRequest.field_d = eb.field_f;
               eb.field_f = wk.field_h;
               wk.field_h = fa.field_e;
               fa.field_e = var4_ref_ai.field_j;
@@ -76,7 +76,7 @@ final class kg {
               return false;
             }
             if (wh.field_x == 0) {
-              mm.field_d = eb.field_f;
+              UrlRequest.field_d = eb.field_f;
               eb.field_f = wk.field_h;
               wk.field_h = fa.field_e;
               fa.field_e = im.field_E;

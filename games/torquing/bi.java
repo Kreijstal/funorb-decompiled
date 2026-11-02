@@ -1142,7 +1142,7 @@ final class bi {
               case 96:
                 var4++;
                 this.field_y = false;
-                if (mm.field_h) {
+                if (UrlRequest.field_h) {
                   this.field_P.field_g[0] = this.field_P.field_g[0] - 10.0;
                   this.field_M = this.field_M + 4;
                 }
@@ -1150,13 +1150,13 @@ final class bi {
               case 97:
                 this.field_y = false;
                 var4--;
-                if (mm.field_h) {
+                if (UrlRequest.field_h) {
                   this.field_M = this.field_M + 8;
                   this.field_P.field_g[0] = this.field_P.field_g[0] + 10.0;
                 }
                 break;
               case 42:
-                if (mm.field_h) {
+                if (UrlRequest.field_h) {
                   this.field_M = this.field_M + 16;
                   this.field_P.field_g[1] = this.field_P.field_g[1] + 10.0;
                 }
@@ -1181,7 +1181,7 @@ final class bi {
                 }
                 break;
               case 43:
-                if (mm.field_h) {
+                if (UrlRequest.field_h) {
                   this.field_P.field_g[1] = this.field_P.field_g[1] - 10.0;
                   this.field_M = this.field_M + 32;
                 }
@@ -1208,13 +1208,13 @@ final class bi {
                 break;
               case 99:
                 var3--;
-                if (mm.field_h) {
+                if (UrlRequest.field_h) {
                   this.field_P.field_g[2] = this.field_P.field_g[2] - 10.0;
                   this.field_M = this.field_M + 2;
                 }
                 break;
               case 98:
-                if (mm.field_h) {
+                if (UrlRequest.field_h) {
                   this.field_P.field_g[2] = this.field_P.field_g[2] + 10.0;
                   this.field_M = this.field_M + 1;
                   var3++;
@@ -1261,8 +1261,8 @@ final class bi {
                 continue;
               }
               stackIn_117_0 = !(i.field_P[81]);
-              mm.field_h = stackIn_117_0;
-              this.field_t = this.field_t | mm.field_h;
+              UrlRequest.field_h = stackIn_117_0;
+              this.field_t = this.field_t | UrlRequest.field_h;
               continue;
             }
             this.field_k = 0;
@@ -1365,7 +1365,7 @@ final class bi {
           var7[1] = 2670.0 * (double)(-be.field_l[this.field_x] * var3) / 65535.0;
           var7[2] = (double)Math.min(Math.max(var4, -10), 10) * 2670.0;
           if (this.field_c >= 0 &&
-            !mm.field_h &&
+            !UrlRequest.field_h &&
             !this.field_J) {
             stackIn_194_0 = this.field_P;
             stackIn_194_1 = var7;
@@ -1388,7 +1388,7 @@ final class bi {
             stackIn_210_0 = (!(var9_double < 100000.0 + this.field_h)) ? 0 : 1;
             var8 = stackIn_210_0;
           } else {
-            if (mm.field_h) {
+            if (UrlRequest.field_h) {
               this.field_P.c(0);
             }
             var8 = 1;

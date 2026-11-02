@@ -267,19 +267,19 @@ final class co implements Runnable {
     }
 
     co(PlatformTaskDispatcher param0) {
-        rc var2 = null;
+        PlatformTask var2 = null;
         this.field_e = new gb();
         this.field_c = false;
         this.field_a = 0;
         try {
           var2 = param0.a((byte) -126, 5, (Runnable) (this));
-          while (var2.field_a == 0) {
+          while (var2.status == 0) {
             ub.a(1976, 10L);
           }
-          if (var2.field_a == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.field_b = (Thread) (var2.field_d);
+          this.field_b = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "co.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

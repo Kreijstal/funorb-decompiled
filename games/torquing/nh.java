@@ -54,9 +54,9 @@ final class nh extends IntrusiveNode {
             var19.field_l = param2.i((byte) -101);
             var19.field_j = param2.c((byte) -121);
             var19.field_t = new int[var19.field_l];
-            var19.field_n = new rc[var19.field_l];
+            var19.field_n = new PlatformTask[var19.field_l];
             var19.field_k = new int[var19.field_l];
-            var19.field_u = new rc[var19.field_l];
+            var19.field_u = new PlatformTask[var19.field_l];
             var19.field_q = new int[var19.field_l];
             var19.field_o = new byte[var19.field_l][][];
             var6 = 31 / ((param3 + 71) / 33);

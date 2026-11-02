@@ -7,7 +7,7 @@ final class rd extends am {
     private int field_y;
     private int field_u;
     private int field_B;
-    static rc field_x;
+    static PlatformTask field_x;
     static String field_t;
     private int field_w;
     private int field_s;

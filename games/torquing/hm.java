@@ -306,16 +306,16 @@ final class hm extends am {
               pd.field_c = pd.field_c + 1;
             }
             if (pd.field_c == 1) {
-              if (rd.field_x.field_a == 2) {
+              if (rd.field_x.status == 2) {
                 stackIn_15_0 = pg.a(-1, (byte) -56);
                 return stackIn_15_0;
               }
-              if (rd.field_x.field_a == 1) {
+              if (rd.field_x.status == 1) {
                 pd.field_c = pd.field_c + 1;
               }
             }
             if (pd.field_c == 2) {
-              up.field_a = new BufferedSocket((java.net.Socket) (rd.field_x.field_d), hq.field_a);
+              up.field_a = new BufferedSocket((java.net.Socket) (rd.field_x.result), hq.field_a);
               var2 = new PacketBuffer(13);
               IntrusiveNode.a(um.field_r, 123, qg.field_A, var2, eg.field_x);
               var2.writeByte(90, 15);

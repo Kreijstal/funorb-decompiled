@@ -387,7 +387,7 @@ abstract class tg extends GameApplet {
                                 return;
                               }
                               if (18 == var2) {
-                                mm.a((byte) 60);
+                                UrlRequest.a((byte) 60);
                                 return;
                               }
                               nn.a("MGS1: " + ArchiveSource.a(-1), (Throwable) null, -9958);
@@ -759,7 +759,7 @@ abstract class tg extends GameApplet {
           if (var4 == 13) {
             try {
               if (null == ub.field_G) {
-                ub.field_G = new mm(nk.field_u, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                ub.field_G = new UrlRequest(nk.field_u, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (ub.field_G.a(3)) {
                 var12 = ub.field_G.a(true);

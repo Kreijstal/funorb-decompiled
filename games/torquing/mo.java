@@ -89,7 +89,7 @@ final class mo extends am {
           if (null == rh.field_b) {
             rh.field_b = u.field_t.a(ih.field_b, ea.field_t, param0 ^ -369);
           }
-          if (rh.field_b.field_a == 0) {
+          if (rh.field_b.status == 0) {
             return false;
           }
           if (param0 != 269) {
@@ -98,17 +98,17 @@ final class mo extends am {
           long dupTemp$0 = km.b(-1);
           ak.field_k = dupTemp$0;
           rb.field_C = dupTemp$0;
-          if (1 != rh.field_b.field_a) {
+          if (1 != rh.field_b.status) {
             ef.field_a = wj.field_i;
           } else {
             try {
-              vk.field_E = new BufferedSocket((java.net.Socket) (rh.field_b.field_d), u.field_t);
+              vk.field_E = new BufferedSocket((java.net.Socket) (rh.field_b.result), u.field_t);
               wa.field_d.position = 0;
               var4 = kj.field_d;
               var5 = var4;
               var5.position = 0;
               ef.field_a = tb.field_o;
-              mm.field_d = !param1 ? -1 : -2;
+              UrlRequest.field_d = !param1 ? -1 : -2;
               eb.field_f = !param1 ? -1 : -2;
               wk.field_h = !param1 ? -1 : -2;
               IntrusiveNode.a(vg.field_j, 107, tp.field_i, wa.field_d, SocketConnector.field_d);

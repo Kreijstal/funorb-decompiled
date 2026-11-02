@@ -87,18 +87,18 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             while (!(decompiledNaturalLoopExit1 = (!(var4 < var2.field_l)))) {
               if (var12 == 0) {
                 if (null != var2.field_u[var4]) {
-                  if (var2.field_u[var4].field_a == 2) {
+                  if (var2.field_u[var4].status == 2) {
                     var2.field_t[var4] = -5;
                   }
-                  if (0 == var2.field_u[var4].field_a) {
+                  if (0 == var2.field_u[var4].status) {
                     var3 = 1;
                   }
                 }
                 if (null != var2.field_n[var4]) {
-                  if (var2.field_n[var4].field_a == 2) {
+                  if (var2.field_n[var4].status == 2) {
                     var2.field_t[var4] = -6;
                   }
-                  if (var2.field_n[var4].field_a == 0) {
+                  if (var2.field_n[var4].status == 0) {
                     var3 = 1;
                   }
                 }
@@ -126,18 +126,18 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var6_int = var2.field_q[var5];
                     switch (var6_int) {
                       case 0:
-                        var7 = (java.lang.reflect.Field) (var2.field_u[var5].field_d);
+                        var7 = (java.lang.reflect.Field) (var2.field_u[var5].result);
                         var8 = var7.getInt((Object) null);
                         param0.writeByte(90, 0);
                         param0.b((byte) 60, var8);
                         break;
                       case 1:
-                        var7 = (java.lang.reflect.Field) (var2.field_u[var5].field_d);
+                        var7 = (java.lang.reflect.Field) (var2.field_u[var5].result);
                         var7.setInt((Object) null, var2.field_k[var5]);
                         param0.writeByte(90, 0);
                         break;
                       case 2:
-                        var7 = (java.lang.reflect.Field) (var2.field_u[var5].field_d);
+                        var7 = (java.lang.reflect.Field) (var2.field_u[var5].result);
                         var8 = var7.getModifiers();
                         param0.writeByte(90, 0);
                         param0.b((byte) 60, var8);
@@ -147,7 +147,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     boolean decompiledFrameCompleted0 = true;
                     if (var6_int == 3) {
-                      var7_ref = (java.lang.reflect.Method) (var2.field_n[var5].field_d);
+                      var7_ref = (java.lang.reflect.Method) (var2.field_n[var5].result);
                       var8_ref_byte____ = var2.field_o[var5];
                       var9 = new Object[var8_ref_byte____.length];
                       var10_int = 0;
@@ -196,7 +196,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                         }
                         if ((var12 != 0) &&
                           (var6_int == 4)) {
-                          var7_ref = (java.lang.reflect.Method) (var2.field_n[var5].field_d);
+                          var7_ref = (java.lang.reflect.Method) (var2.field_n[var5].result);
                           var8 = var7_ref.getModifiers();
                           param0.writeByte(90, 0);
                           param0.b((byte) 60, var8);
@@ -204,7 +204,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       }
                     } else {
                       if (var6_int == 4) {
-                        var7_ref = (java.lang.reflect.Method) (var2.field_n[var5].field_d);
+                        var7_ref = (java.lang.reflect.Method) (var2.field_n[var5].result);
                         var8 = var7_ref.getModifiers();
                         param0.writeByte(90, 0);
                         param0.b((byte) 60, var8);
@@ -968,7 +968,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           int var8_int = 0;
           Throwable var8 = null;
           RuntimeException var8_ref = null;
-          rc var9 = null;
+          PlatformTask var9 = null;
           int var10 = 0;
           var10 = Torquing.field_u;
           try {
@@ -997,7 +997,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8_int = 117 % ((param1 - 76) / 34);
               var9 = nk.field_u.a((byte) -91, 1, (Runnable) (this));
               while (true) {
-                if (var9.field_a == 0) {
+                if (var9.status == 0) {
                   ub.a(1976, 10L);
                   if (var10 == 0) {
                     continue;

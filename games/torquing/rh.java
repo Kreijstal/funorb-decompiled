@@ -5,7 +5,7 @@ final class rh {
     static bp field_c;
     static String field_a;
     static int field_d;
-    static rc field_b;
+    static PlatformTask field_b;
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, Sprite[] param5) {
         int var21 = 0;

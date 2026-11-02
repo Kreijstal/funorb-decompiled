@@ -3,22 +3,22 @@
  */
 import java.io.*;
 
-final class mm implements Runnable {
+final class UrlRequest implements Runnable {
     static int field_g;
     static int field_d;
-    private PacketBuffer field_i;
-    private rc field_f;
+    private PacketBuffer buffer;
+    private PlatformTask field_f;
     private DataInputStream field_c;
-    private rc field_a;
+    private PlatformTask field_a;
     private PlatformTaskDispatcher field_j;
-    private int field_e;
-    private rc field_b;
-    private java.net.URL field_k;
+    private int state;
+    private PlatformTask field_b;
+    private java.net.URL url;
     static boolean field_h;
 
     final PacketBuffer a(boolean param0) {
-        if (this.field_e == 3) {
-          return this.field_i;
+        if (this.state == 3) {
+          return this.buffer;
         }
         if (param0) {
           return null;
@@ -37,21 +37,21 @@ final class mm implements Runnable {
           Object var2_ref = null;
           var4 = Torquing.field_u;
           try {
-            while (this.field_i.payload.length > this.field_i.position) {
-              var1_int = this.field_c.read(this.field_i.payload, this.field_i.position, this.field_i.payload.length - this.field_i.position);
+            while (this.buffer.payload.length > this.buffer.position) {
+              var1_int = this.field_c.read(this.buffer.payload, this.buffer.position, this.buffer.payload.length - this.buffer.position);
               if (var1_int >= 0) {
-                this.field_i.position = this.field_i.position + var1_int;
+                this.buffer.position = this.buffer.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_i.payload.length == this.field_i.position) {
-              throw mm.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.payload.length + " " + this.field_k));
+            if (this.buffer.payload.length == this.buffer.position) {
+              throw UrlRequest.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.buffer.payload.length + " " + this.url));
             }
             var1 = this;
             synchronized (var1) {
               this.finalize();
-              this.field_e = 3;
+              this.state = 3;
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -59,7 +59,7 @@ final class mm implements Runnable {
             var2_ref = this;
             synchronized (var2_ref) {
               this.finalize();
-              this.field_e = this.field_e + 1;
+              this.state = this.state + 1;
             }
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -83,55 +83,55 @@ final class mm implements Runnable {
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        if (this.field_e >= 2) {
+        if (this.state >= 2) {
           return true;
         }
-        if (this.field_e == 0) {
+        if (this.state == 0) {
           if (this.field_f == null) {
-            this.field_f = this.field_j.a(param0 ^ 3, this.field_k);
+            this.field_f = this.field_j.a(param0 ^ 3, this.url);
           }
-          if (this.field_f.field_a == 0) {
+          if (this.field_f.status == 0) {
             return false;
           }
-          if (1 != this.field_f.field_a) {
-            this.field_e = this.field_e + 1;
+          if (1 != this.field_f.status) {
+            this.state = this.state + 1;
             this.field_f = null;
             return false;
           }
         }
-        if (this.field_e == 1) {
+        if (this.state == 1) {
           if (null == this.field_b) {
-            this.field_b = this.field_j.a(this.field_k.getHost(), 443, -60);
+            this.field_b = this.field_j.a(this.url.getHost(), 443, -60);
           }
-          if (this.field_b.field_a == 0) {
+          if (this.field_b.status == 0) {
             return false;
           }
-          if (this.field_b.field_a != 1) {
-            this.field_e = this.field_e + 1;
+          if (this.field_b.status != 1) {
+            this.state = this.state + 1;
             this.field_b = null;
             return false;
           }
         }
         if (null == this.field_c) {
           try {
-            if (this.field_e == 0) {
-              this.field_c = (DataInputStream) (this.field_f.field_d);
+            if (this.state == 0) {
+              this.field_c = (DataInputStream) (this.field_f.result);
             }
-            if (1 == this.field_e) {
-              var4 = (java.net.Socket) (this.field_b.field_d);
+            if (1 == this.state) {
+              var4 = (java.net.Socket) (this.field_b.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
-              var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_k.getFile() + "\n\n"));
+              var5 = (CharSequence) ((Object) ("JAGGRAB " + this.url.getFile() + "\n\n"));
               var3.write(vg.a(var5, (byte) -126));
               this.field_c = new DataInputStream(var4.getInputStream());
             }
-            this.field_i.position = 0;
+            this.buffer.position = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
             this.finalize();
-            this.field_e = this.field_e + 1;
+            this.state = this.state + 1;
           }
         }
         if (param0 != 3) {
@@ -140,14 +140,14 @@ final class mm implements Runnable {
         if (this.field_a == null) {
           this.field_a = this.field_j.a((byte) -102, 5, (Runnable) (this));
         }
-        if (this.field_a.field_a == 0) {
+        if (this.field_a.status == 0) {
           return false;
         }
-        if (this.field_a.field_a == 1) {
+        if (this.field_a.status == 1) {
           return false;
         }
         this.finalize();
-        this.field_e = this.field_e + 1;
+        this.state = this.state + 1;
         return false;
     }
 
@@ -215,18 +215,18 @@ final class mm implements Runnable {
 
     protected final void finalize() {
         if (this.field_f != null) {
-          if (null != this.field_f.field_d) {
+          if (null != this.field_f.result) {
             try {
-              ((DataInputStream) (this.field_f.field_d)).close();
+              ((DataInputStream) (this.field_f.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_f = null;
         }
         if (null != this.field_b) {
-          if (this.field_b.field_d != null) {
+          if (this.field_b.result != null) {
             try {
-              ((java.net.Socket) (this.field_b.field_d)).close();
+              ((java.net.Socket) (this.field_b.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -242,11 +242,11 @@ final class mm implements Runnable {
         this.field_a = null;
     }
 
-    mm(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
+    UrlRequest(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_j = param0;
-          this.field_k = param1;
-          this.field_i = new PacketBuffer(param2);
+          this.url = param1;
+          this.buffer = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "mm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pm extends IntrusiveNode {
-    rc[] field_u;
+    PlatformTask[] field_u;
     int[] field_q;
     byte[][][] field_o;
-    rc[] field_n;
+    PlatformTask[] field_n;
     int field_l;
     static int[] field_s;
     static String field_p;
