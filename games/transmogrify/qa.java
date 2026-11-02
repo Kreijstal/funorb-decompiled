@@ -4,15 +4,15 @@
 final class qa extends h {
     private int field_o;
     static int field_u;
-    private ti[] field_q;
+    private Sprite[] field_q;
     private int field_t;
     static int field_r;
     private int field_s;
     static int field_p;
 
-    final static ti[] a(int param0, int param1) {
-        ti[] var3 = new ti[9];
-        ti[] var2 = var3;
+    final static Sprite[] a(int param0, int param1) {
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         if (param0 > 59) {
           var3[4] = cd.a(param1, 64, (byte) -51);
           return var2;

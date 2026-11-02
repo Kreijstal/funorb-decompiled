@@ -70,7 +70,7 @@ final class da extends fi {
     }
 
     public da() {
-        super(0, 0, cd.field_b, wj.field_h, (WidgetListener) null, (ma) null);
+        super(0, 0, cd.field_b, wj.field_h, (WidgetRenderer) null, (ma) null);
         this.field_D = new IntrusiveDeque();
     }
 

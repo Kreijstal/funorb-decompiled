@@ -10,7 +10,7 @@ final class te {
     private int field_e;
     static String field_f;
 
-    final static void a(gd param0, byte param1, int param2) {
+    final static void a(AchievementNotice param0, byte param1, int param2) {
         try {
           rh.field_r.a(param0, -101);
           ne.a((byte) 7, param0, param2);
@@ -69,7 +69,7 @@ final class te {
         return this.field_g[param0];
     }
 
-    final static void a(ti[] param0, int param1, int param2, int param3, byte param4, int param5) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3, byte param4, int param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -133,8 +133,8 @@ final class te {
         if (param0 == 1) {
           return 1 + this.field_a;
         }
-        gd var3 = (gd) null;
-        te.a((gd) null, (byte) -123, -32);
+        AchievementNotice var3 = (AchievementNotice) null;
+        te.a((AchievementNotice) null, (byte) -123, -32);
         return 1 + this.field_a;
     }
 

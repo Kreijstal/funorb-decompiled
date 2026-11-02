@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class k {
+abstract class IndexedSpriteState {
     static String field_e;
     int field_c;
     static String field_a;
@@ -32,7 +32,7 @@ abstract class k {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, ti[] param3, int param4) {
+    final static void a(int param0, boolean param1, int param2, Sprite[] param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

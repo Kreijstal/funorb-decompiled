@@ -169,7 +169,7 @@ final class vl extends fi {
         }
     }
 
-    private vl(int param0, int param1, int param2, int param3, WidgetListener param4, ma param5, UiWidget param6, boolean param7, boolean param8) {
+    private vl(int param0, int param1, int param2, int param3, WidgetRenderer param4, ma param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_D = 2147483647;
         this.field_z = 2147483647;
@@ -236,7 +236,7 @@ final class vl extends fi {
             stackIn_4_0 = null;
             return (uj) (stackIn_4_0);
           }
-          if (db.field_a == gd.field_l &&
+          if (db.field_a == AchievementNotice.field_l &&
             param1.equals(jh.field_g)) {
             db.field_a = jh.field_n;
             stackIn_11_0 = de.field_a;

@@ -6,12 +6,12 @@ import java.util.*;
 final class SecondaryNodeDeque implements Iterable {
     static byte[][] field_a;
     static int field_b;
-    static ti[] field_h;
+    static Sprite[] field_h;
     static int field_g;
     DualLinkNode field_e;
     static String field_c;
     static String field_f;
-    static ti field_d;
+    static Sprite field_d;
     static String field_i;
 
     final DualLinkNode a(boolean param0) {
@@ -43,7 +43,7 @@ final class SecondaryNodeDeque implements Iterable {
           field_d = null;
           return;
         }
-        field_h = (ti[]) null;
+        field_h = (Sprite[]) null;
         field_d = null;
     }
 

@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class hc extends dl {
-    static ti field_r;
+    static Sprite field_r;
     static java.util.zip.CRC32 field_v;
     static int field_t;
     private Object field_s;

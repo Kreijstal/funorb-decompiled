@@ -128,7 +128,7 @@ final class eg {
           }
           rd.field_f = -1;
           if (lk.field_c &&
-            pi.field_j == da.field_y) {
+            AchievementUnlockEvent.field_j == da.field_y) {
             da.field_y = 0;
             lk.field_c = false;
           }

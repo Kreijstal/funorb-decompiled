@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qe extends UiWidget {
-    private ti field_y;
+    private Sprite field_y;
     static String field_H;
-    private ti field_C;
+    private Sprite field_C;
     static String field_I;
-    static ti[] field_F;
-    private ti[] field_D;
+    static Sprite[] field_F;
+    private Sprite[] field_D;
     private int field_G;
     boolean field_w;
     int field_J;
     static kh field_x;
     private int field_u;
-    private ti field_K;
+    private Sprite field_K;
     private int field_M;
     private int field_L;
     private int field_t;
@@ -23,14 +23,14 @@ final class qe extends UiWidget {
     static String field_v;
     static String field_A;
 
-    private final ti h(int param0) {
+    private final Sprite h(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Transmogrify.field_A ? 1 : 0;
         int var2 = this.field_h >> 1;
-        ti var3 = new ti(var2, this.field_h);
+        Sprite var3 = new Sprite(var2, this.field_h);
         oj.a(var3, 256);
         for (var4 = 0; var4 < this.field_h; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
@@ -67,8 +67,8 @@ final class qe extends UiWidget {
         this.c(false);
     }
 
-    private final ti a(byte param0, int param1, int param2) {
-        ti discarded$0 = null;
+    private final Sprite a(byte param0, int param1, int param2) {
+        Sprite discarded$0 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -77,7 +77,7 @@ final class qe extends UiWidget {
         int var11 = 0;
         int var12 = 0;
         int var13 = Transmogrify.field_A ? 1 : 0;
-        ti var14 = new ti(this.field_t * 2, this.field_h);
+        Sprite var14 = new Sprite(this.field_t * 2, this.field_h);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -140,14 +140,14 @@ final class qe extends UiWidget {
         if (param0) {
           this.field_u = -108;
         }
-        this.field_D = new ti[]{this.a((byte) 90, this.field_B, this.field_M), this.a((byte) 90, this.field_u, this.field_L)};
+        this.field_D = new Sprite[]{this.a((byte) 90, this.field_B, this.field_M), this.a((byte) 90, this.field_u, this.field_L)};
         this.field_y = this.h(-29239);
         this.field_C = this.field_y.c();
-        this.field_K = new ti(this.field_h >> 1, this.field_h);
+        this.field_K = new Sprite(this.field_h >> 1, this.field_h);
     }
 
-    private final void a(byte param0, ti param1, int param2, int param3) {
-        ti discarded$0 = null;
+    private final void a(byte param0, Sprite param1, int param2, int param3) {
+        Sprite discarded$0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;

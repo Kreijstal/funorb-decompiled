@@ -40,7 +40,7 @@ final class IntrusiveDeque {
         return null;
     }
 
-    final static ti[] a(int param0, int param1, ci param2, byte param3) {
+    final static Sprite[] a(int param0, int param1, ci param2, byte param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

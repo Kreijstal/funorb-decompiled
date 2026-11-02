@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vf {
-    static ti field_a;
+    static Sprite field_a;
     static hi field_b;
 
     final static void a(byte param0, float param1, String param2) {
@@ -66,7 +66,7 @@ final class vf {
           if (param0) {
             return;
           }
-          field_a = (ti) null;
+          field_a = (Sprite) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

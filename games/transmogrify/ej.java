@@ -81,11 +81,11 @@ final class ej extends PcmStream {
         }
     }
 
-    final static ii[] a(byte param0, ci param1, String param2, String param3) {
+    final static IndexedSprite[] a(byte param0, ci param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ii[] stackIn_4_0 = null;
+        IndexedSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

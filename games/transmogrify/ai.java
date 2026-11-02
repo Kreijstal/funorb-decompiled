@@ -8,7 +8,7 @@ final class ai {
     static q field_a;
     static String field_d;
     static int field_c;
-    static ti[] field_b;
+    static Sprite[] field_b;
 
     final static int a(int param0) {
         try {

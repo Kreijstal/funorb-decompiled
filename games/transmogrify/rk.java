@@ -9,7 +9,7 @@ final class rk extends DualLinkNode {
     private String[] field_s;
     int[] field_m;
     private int[] field_o;
-    static ti[] field_r;
+    static Sprite[] field_r;
     static int[] field_q;
     private int[][] field_l;
 
@@ -276,7 +276,7 @@ final class rk extends DualLinkNode {
 
     static {
         field_n = new int[12];
-        field_r = new ti[8];
+        field_r = new Sprite[8];
         field_q = new int[8192];
     }
 }

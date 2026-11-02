@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pg {
-    private ti[] field_c;
+    private Sprite[] field_c;
     static boolean field_a;
     static PacketBuffer field_b;
 
@@ -71,7 +71,7 @@ final class pg {
         field_b = null;
     }
 
-    pg(ti[] param0) {
+    pg(Sprite[] param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

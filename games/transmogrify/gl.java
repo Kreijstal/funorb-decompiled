@@ -10,12 +10,12 @@ final class gl extends fi {
     int field_A;
 
     public gl() {
-        super(0, 0, 0, 0, (WidgetListener) null, (ma) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null, (ma) null);
         this.field_A = 256;
     }
 
     gl(UiWidget param0) {
-        super(param0.field_p, param0.field_n, param0.field_l, param0.field_h, (WidgetListener) null, (ma) null);
+        super(param0.field_p, param0.field_n, param0.field_l, param0.field_h, (WidgetRenderer) null, (ma) null);
         try {
           param0.a(-128, 0, 0, this.field_l, this.field_h);
           this.field_v = param0;
@@ -141,7 +141,7 @@ final class gl extends fi {
           return;
         }
         int var6 = -59 / ((77 - param3) / 34);
-        ti var7 = new ti(this.field_v.field_l, this.field_v.field_h);
+        Sprite var7 = new Sprite(this.field_v.field_l, this.field_v.field_h);
         oj.a(var7, 256);
         this.field_v.a(0, 0, param2, (byte) -117);
         fi.c(true);

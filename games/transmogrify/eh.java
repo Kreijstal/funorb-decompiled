@@ -6,9 +6,9 @@ import java.io.*;
 final class eh {
     private static long[] field_d;
     static h field_e;
-    static ti[] field_c;
+    static Sprite[] field_c;
     static int totalScore;
-    static ii[] field_b;
+    static IndexedSprite[] field_b;
 
     final static void a(ol param0, byte param1, String param2, kg param3, int param4) {
         int var7 = 0;
@@ -197,7 +197,7 @@ final class eh {
         }
     }
 
-    final static sa a(ii[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static sa a(IndexedSprite[] param0, int param1, byte[] param2, int param3, int param4) {
         int var11_int = 0;
         byte[] array$0 = null;
         int incrementValue$3 = 0;

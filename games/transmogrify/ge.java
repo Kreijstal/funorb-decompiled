@@ -101,7 +101,7 @@ final class ge extends aj implements hl, df {
     }
 
     ge(sf param0) {
-        super(0, 0, 288, 0, (WidgetListener) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         h var4 = null;
@@ -110,7 +110,7 @@ final class ge extends aj implements hl, df {
         try {
           this.field_w = param0;
           this.field_y = new lj(qe.field_I, (ma) null);
-          this.field_y.field_q = (WidgetListener) ((Object) new qa());
+          this.field_y.field_q = (WidgetRenderer) ((Object) new qa());
           var7 = ij.a(ua.field_b, new String[]{this.l(300), this.m(-71)}, (byte) -123);
           var3 = 20;
           var4 = new h(vd.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, vd.field_h.field_y, -1, 2147483647, true);

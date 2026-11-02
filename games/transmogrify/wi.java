@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wi implements WidgetListener {
+final class wi implements WidgetRenderer {
     private int field_a;
     private int field_l;
     private int field_c;

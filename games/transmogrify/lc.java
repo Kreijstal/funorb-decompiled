@@ -431,7 +431,7 @@ final class lc extends PcmStream {
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        gd var11 = null;
+        AchievementNotice var11 = null;
         hj var12 = null;
         int[] var13 = null;
         oh var14 = null;
@@ -468,7 +468,7 @@ final class lc extends PcmStream {
             return;
           }
           if (var2 == 1) {
-            var11 = (gd) (rh.field_r.a((byte) -95));
+            var11 = (AchievementNotice) (rh.field_r.a((byte) -95));
             if (var11 == null) {
               pc.a(1);
               return;
@@ -1111,7 +1111,7 @@ final class lc extends PcmStream {
         boolean stackIn_20_2 = false;
         kc var5;
         int var6_int;
-        hb var6;
+        PcmSample var6;
         kc var7;
         kc var8;
         int var9;

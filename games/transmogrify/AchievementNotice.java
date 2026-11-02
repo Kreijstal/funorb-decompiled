@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends IntrusiveNode {
+final class AchievementNotice extends IntrusiveNode {
     static java.awt.Canvas field_k;
     int field_h;
     int field_g;
@@ -73,7 +73,7 @@ final class gd extends IntrusiveNode {
           }
           return ba.field_l[var4];
         }
-        gd.$cfr$intArgs$a$c7de0d339b2a(-80, false, false, false);
+        AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(-80, false, false, false);
         var4Lifetime1 = 0;
         if (param3) {
           var4Lifetime1 += 4;
@@ -87,7 +87,7 @@ final class gd extends IntrusiveNode {
         return ba.field_l[var4Lifetime1];
     }
 
-    gd(int param0, int param1, int param2, int param3, int param4, int param5) {
+    AchievementNotice(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.field_p = param4;
         this.field_j = param2;
         this.field_i = param3;
@@ -118,7 +118,7 @@ final class gd extends IntrusiveNode {
           }
           return ba.field_l[var4];
         }
-        gd.$cfr$intArgs$a$c7de0d339b2a(-80, false, false, false);
+        AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(-80, false, false, false);
         var4Lifetime1 = 0;
         if (param3) {
           var4Lifetime1 += 4;

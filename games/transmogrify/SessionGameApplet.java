@@ -172,7 +172,7 @@ abstract class SessionGameApplet extends GameApplet {
         me.a(this.field_s, this.field_u, 50, this.field_q, param2, this.field_w, this.field_p, NodeHashTableIterator.field_f, lk.field_b);
         wh.e((byte) -42);
         ga.field_a = nh.b(1);
-        RasterBuffer.a(gd.field_k, 13861);
+        RasterBuffer.a(AchievementNotice.field_k, 13861);
         rd.field_a = param4;
         ic.field_a = param5;
         uh.field_q = param3;
@@ -441,8 +441,8 @@ abstract class SessionGameApplet extends GameApplet {
             this.field_t = false;
             pc.a(1);
             je.a(-11);
-            gb.a(2, 88, k.field_a);
-            k.b(true);
+            gb.a(2, 88, IndexedSpriteState.field_a);
+            IndexedSpriteState.b(true);
             wi.field_p = true;
             qf.field_b = 15000L + lk.a(param0 - 10017);
           }
@@ -620,9 +620,9 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (!param1 &&
           mg.field_c) {
-          gd.a(gd.field_k, (byte) 111);
+          AchievementNotice.a(AchievementNotice.field_k, (byte) 111);
           this.a(false);
-          RasterBuffer.a(gd.field_k, param0 + 3844);
+          RasterBuffer.a(AchievementNotice.field_k, param0 + 3844);
         }
         if (c.field_e[8]) {
           Transmogrify.m(param0 ^ 10050);

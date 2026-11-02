@@ -30,7 +30,7 @@ class IntrusiveNode {
         }
     }
 
-    final static void a(ti[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var22 = 0;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;

@@ -5,7 +5,7 @@ final class ac extends kk {
     static ld field_n;
     private String field_i;
     static String field_h;
-    static ti field_m;
+    static Sprite field_m;
     private String field_l;
     static long field_j;
     static String[] field_k;
@@ -18,7 +18,7 @@ final class ac extends kk {
           field_n = null;
           return;
         }
-        field_m = (ti) null;
+        field_m = (Sprite) null;
         field_k = null;
         field_m = null;
         field_n = null;
@@ -123,7 +123,7 @@ final class ac extends kk {
         }
     }
 
-    final static ti a(int param0, int param1, ci param2, boolean param3) {
+    final static Sprite a(int param0, int param1, ci param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -162,7 +162,7 @@ final class ac extends kk {
 
     static {
         field_h = "Cancel";
-        field_m = new ti(270, 70);
+        field_m = new Sprite(270, 70);
         field_k = new String[]{"All scores", "My scores", "Best each"};
     }
 }

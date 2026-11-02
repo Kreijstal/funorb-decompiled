@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ug {
-    static ti field_f;
+    static Sprite field_f;
     static int[] field_c;
     private int[] field_j;
     private int field_i;
@@ -111,7 +111,7 @@ final class ug {
 
     public static void a(byte param0) {
         if (param0 <= 94) {
-          field_f = (ti) null;
+          field_f = (Sprite) null;
           field_c = null;
           field_f = null;
           return;
@@ -251,7 +251,7 @@ final class ug {
     }
 
     static {
-        field_f = new ti(540, 140);
+        field_f = new Sprite(540, 140);
         field_h = 0;
     }
 }

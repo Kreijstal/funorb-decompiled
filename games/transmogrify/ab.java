@@ -4,8 +4,8 @@
 final class ab {
     static IntrusiveDeque field_c;
     private int field_g;
-    ti field_d;
-    ti[] field_i;
+    Sprite field_d;
+    Sprite[] field_i;
     private int field_h;
     private int field_f;
     private int field_b;
@@ -38,7 +38,7 @@ final class ab {
         }
     }
 
-    final ab a(ti[] param0, byte param1) {
+    final ab a(Sprite[] param0, byte param1) {
         RuntimeException var3 = null;
         ab var4 = null;
         RuntimeException stackIn_6_0 = null;

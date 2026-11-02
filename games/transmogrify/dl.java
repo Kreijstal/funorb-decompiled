@@ -322,7 +322,7 @@ abstract class dl extends DualLinkNode {
           }
           var2Lifetime52 = qd.a(10, "mine");
           if (var2Lifetime52 != null) {
-            se.field_q = eg.a(98, var2Lifetime52);
+            SpriteState.field_q = eg.a(98, var2Lifetime52);
           }
           var2Lifetime53 = qd.a(10, "besteach");
           if (var2Lifetime53 != null) {

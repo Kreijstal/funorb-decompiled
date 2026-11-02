@@ -13,7 +13,7 @@ abstract class a extends bi {
     private int field_U;
     private gl field_Z;
     static boolean field_bb;
-    static ti field_R;
+    static Sprite field_R;
     private int field_Y;
 
     boolean m(int param0) {

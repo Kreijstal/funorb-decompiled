@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vk {
-    final static od a(byte param0, hb param1) {
+    final static od a(byte param0, PcmSample param1) {
         RuntimeException var2 = null;
-        hb var3 = null;
+        PcmSample var3 = null;
         od stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -12,8 +12,8 @@ final class vk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 77) {
-            var3 = (hb) null;
-            vk.a((byte) -63, (hb) null);
+            var3 = (PcmSample) null;
+            vk.a((byte) -63, (PcmSample) null);
           }
           stackIn_3_0 = ic.a(PcmSampleStream.a(param1, 100, 96), 4);
           return stackIn_3_0;

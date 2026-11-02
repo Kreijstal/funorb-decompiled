@@ -67,8 +67,8 @@ final class lf {
 
     final static void a(boolean param0) {
         qd.b(5);
-        if (null != gd.field_k) {
-          gd.a(gd.field_k, (byte) 118);
+        if (null != AchievementNotice.field_k) {
+          AchievementNotice.a(AchievementNotice.field_k, (byte) 118);
           jh.a(false);
           lk.b(false);
           eh.b((byte) 99);
@@ -233,7 +233,7 @@ final class lf {
             stackIn_13_0 = (byte[]) (param2);
             return stackIn_13_0;
           }
-          stackIn_11_0 = pi.a((byte) -29, param2);
+          stackIn_11_0 = AchievementUnlockEvent.a((byte) -29, param2);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

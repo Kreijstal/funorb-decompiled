@@ -11,7 +11,7 @@ final class ck extends aj implements tc, df {
     private vc field_D;
     static boolean field_A;
     static int field_z;
-    static ti[] field_C;
+    static Sprite[] field_C;
     static int field_y;
 
     private final boolean a(ie param0, byte param1) {
@@ -174,7 +174,7 @@ final class ck extends aj implements tc, df {
     }
 
     public ck() {
-        super(0, 0, 496, 0, (WidgetListener) null);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_D = new vc("", (ma) null, 12);
         h var1 = new h(al.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, vd.field_h.field_y, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(bj.field_P, var1, (ma) null);
@@ -183,9 +183,9 @@ final class ck extends aj implements tc, df {
         this.field_D.field_j = mf.field_a;
         this.field_D.a(-65, new li(this.field_D));
         this.field_x.field_t = false;
-        this.field_x.field_q = (WidgetListener) ((Object) new qa());
-        this.field_w.field_q = (WidgetListener) ((Object) new ek());
-        this.field_D.field_q = (WidgetListener) ((Object) new ni(10000536));
+        this.field_x.field_q = (WidgetRenderer) ((Object) new qa());
+        this.field_w.field_q = (WidgetRenderer) ((Object) new ek());
+        this.field_D.field_q = (WidgetRenderer) ((Object) new ni(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;

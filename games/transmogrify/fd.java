@@ -60,7 +60,7 @@ final class fd {
               TileRack.field_b = sc.field_a;
             } else {
               while (sc.field_a != TileRack.field_b) {
-                var2 = se.field_p[sc.field_a];
+                var2 = SpriteState.field_p[sc.field_a];
                 sc.field_a = 127 & sc.field_a + 1;
                 if (var2 < 0) {
                   ve.field_B[~var2] = false;

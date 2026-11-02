@@ -157,7 +157,7 @@ final class LetterTile extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0) {
+    final void stepTowardDestination(byte param0) {
         double var3 = 0.0;
         int var2 = 0;
         double var3Lifetime1;

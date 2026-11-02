@@ -39,7 +39,7 @@ abstract class fi extends UiWidget implements pb {
         }
     }
 
-    fi(int param0, int param1, int param2, int param3, WidgetListener param4, ma param5) {
+    fi(int param0, int param1, int param2, int param3, WidgetRenderer param4, ma param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
@@ -447,7 +447,7 @@ abstract class fi extends UiWidget implements pb {
         }
         rh.unlockedAchievementMask = rh.unlockedAchievementMask | var3;
         hc.field_u = hc.field_u | var3;
-        oj.field_u.a(new pi(param2), -99);
+        oj.field_u.a(new AchievementUnlockEvent(param2), -99);
         if (IntrusiveDeque.b((byte) 78)) {
           rh.unlockedAchievementMask = rh.unlockedAchievementMask | var3;
         }
@@ -458,7 +458,7 @@ abstract class fi extends UiWidget implements pb {
           nh.a(jk.field_B, ud.field_b, param1, nc.field_t, param2, gh.field_l, 4, 75);
           return true;
         }
-        mc.field_c.a(new gd(param2, param1, nc.field_t, ud.field_b, jk.field_B, gh.field_l), -94);
+        mc.field_c.a(new AchievementNotice(param2, param1, nc.field_t, ud.field_b, jk.field_B, gh.field_l), -94);
         return true;
     }
 

@@ -53,7 +53,7 @@ final class ql {
         }
     }
 
-    final static od a(int param0, int param1, int param2, hb param3, int param4) {
+    final static od a(int param0, int param1, int param2, PcmSample param3, int param4) {
         PcmSampleStream var5 = null;
         RuntimeException var5_ref = null;
         nd var6 = null;

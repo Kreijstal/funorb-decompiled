@@ -5,7 +5,7 @@ final class bf extends lj {
     static pe field_C;
     static int field_B;
 
-    private bf(String param0, WidgetListener param1, ma param2) {
+    private bf(String param0, WidgetRenderer param1, ma param2) {
         super(param0, param1, param2);
         try {
           this.field_q = IterableNodeHashTable.field_e.field_b;

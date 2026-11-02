@@ -8,11 +8,11 @@ final class qf {
     static long field_b;
     static String[] field_c;
 
-    final static ii a(ii param0, int[] param1, int param2) {
-        ii var3 = null;
+    final static IndexedSprite a(IndexedSprite param0, int[] param1, int param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
-        ii stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -22,9 +22,9 @@ final class qf {
         try {
           if (param2 != -2) {
             var4 = (int[]) null;
-            qf.a((ii) null, (int[]) null, 115);
+            qf.a((IndexedSprite) null, (int[]) null, 115);
           }
-          var3 = new ii(0, 0, 0);
+          var3 = new IndexedSprite(0, 0, 0);
           var3.field_d = param0.field_d;
           var3.field_i = param0.field_i;
           var3.field_f = param0.field_f;

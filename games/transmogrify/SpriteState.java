@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class se extends DualLinkNode {
+abstract class SpriteState extends DualLinkNode {
     int field_m;
     static String field_o;
     int field_n;
@@ -9,7 +9,7 @@ abstract class se extends DualLinkNode {
     static int field_v;
     int field_r;
     static int[] field_p;
-    static ti field_t;
+    static Sprite field_t;
     static String field_q;
     int field_l;
     int field_s;
@@ -23,7 +23,7 @@ abstract class se extends DualLinkNode {
         int var1 = 57 / ((38 - param0) / 45);
     }
 
-    se() {
+    SpriteState() {
     }
 
     static {

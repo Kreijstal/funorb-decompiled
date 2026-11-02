@@ -12,7 +12,7 @@ final class WordLanguage {
     boolean field_g;
     int[] field_p;
     static java.awt.Frame field_e;
-    ti field_a;
+    Sprite field_a;
     static tf field_m;
     static String field_i;
     String field_j;

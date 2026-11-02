@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class mk extends aj {
-    static ti field_y;
+    static Sprite field_y;
     boolean field_A;
     static String field_C;
     private int field_D;
     static int field_x;
     static int[] field_w;
-    static ti[] field_B;
+    static Sprite[] field_B;
     static String field_E;
     private da field_z;
 
@@ -55,7 +55,7 @@ abstract class mk extends aj {
         if (param0 == -18555) {
           return !this.field_A ? 0 : this.field_z.e((byte) 14) == this ? 256 : 0;
         }
-        field_y = (ti) null;
+        field_y = (Sprite) null;
         return !this.field_A ? 0 : this.field_z.e((byte) 14) == this ? 256 : 0;
     }
 
@@ -147,7 +147,7 @@ abstract class mk extends aj {
     }
 
     mk(da param0, int param1, int param2) {
-        super(-param1 + cd.field_b >> 1, wj.field_h - param2 >> 1, param1, param2, (WidgetListener) null);
+        super(-param1 + cd.field_b >> 1, wj.field_h - param2 >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_D = 0;
           this.field_A = false;
@@ -160,7 +160,7 @@ abstract class mk extends aj {
     final void a(int param0, int param1, boolean param2) {
         this.a(87, -param1 + wj.field_h >> 1, cd.field_b - param0 >> 1, param0, param1);
         if (param2) {
-          field_B = (ti[]) null;
+          field_B = (Sprite[]) null;
         }
     }
 
@@ -178,7 +178,7 @@ abstract class mk extends aj {
           return;
         }
         if (qk.field_c == null) {
-          qk.field_c = new ti(this.field_l, this.field_h);
+          qk.field_c = new Sprite(this.field_l, this.field_h);
           oj.a(qk.field_c, 256);
           sb.c();
           this.a(0, (byte) -81, 0);
@@ -188,7 +188,7 @@ abstract class mk extends aj {
           return;
         }
         if (this.field_l > qk.field_c.field_n) {
-          qk.field_c = new ti(this.field_l, this.field_h);
+          qk.field_c = new Sprite(this.field_l, this.field_h);
           oj.a(qk.field_c, 256);
           sb.c();
           this.a(0, (byte) -81, 0);
@@ -206,7 +206,7 @@ abstract class mk extends aj {
           qk.field_c.e(param0 + this.field_p, param1 + this.field_n, this.field_D);
           return;
         }
-        qk.field_c = new ti(this.field_l, this.field_h);
+        qk.field_c = new Sprite(this.field_l, this.field_h);
         oj.a(qk.field_c, 256);
         sb.c();
         this.a(0, (byte) -81, 0);

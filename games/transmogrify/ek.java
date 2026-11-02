@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek implements WidgetListener {
+final class ek implements WidgetRenderer {
     static int field_g;
     static int[] field_c;
     private kg field_f;

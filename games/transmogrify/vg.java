@@ -60,7 +60,7 @@ final class vg {
           this.a(true, -9, -1, 116);
         }
         IntrusiveNode.field_d.a(rh.a((byte) 117, 1 + ra.field_a), 548, param0 + 142, 0, -1);
-        se.field_t.c(166, param0);
+        SpriteState.field_t.c(166, param0);
     }
 
     private final boolean a(int param0, boolean param1) {
@@ -795,12 +795,12 @@ final class vg {
         int var8;
         String[] var9;
         int var12;
-        ti var13;
+        Sprite var13;
         int var14;
         int var15;
         int var16;
         String var17;
-        ti var18;
+        Sprite var18;
         int var19;
         int[] var26;
         long[] var27;
@@ -927,7 +927,7 @@ final class vg {
                   stackIn_16_1 = false;
                   stackIn_17_2 = (SecondaryNodeDeque.field_g == 0) ? false : true;
                   stackIn_20_3 = (hc.field_u == 0) ? false : true;
-                  var9 = gd.$cfr$intArgs$a$c7de0d339b2a(stackIn_16_0, stackIn_16_1, stackIn_17_2, stackIn_20_3);
+                  var9 = AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(stackIn_16_0, stackIn_16_1, stackIn_17_2, stackIn_20_3);
                   var5Lifetime2 = var4 * IntrusiveNode.field_d.b(var9, 341);
                   IntrusiveNode.field_d.a(var9, 150, var3, 341, var5Lifetime2, 0, -1, 1, 0, var4);
                   var3 = var3 + var5Lifetime2;
@@ -1148,7 +1148,7 @@ final class vg {
         int var10;
         mi var11;
         int var12;
-        ti var12_ref_ti;
+        Sprite var12_ref_ti;
         int var13;
         int var14;
         int var15;

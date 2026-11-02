@@ -33,7 +33,7 @@ final class he extends IntrusiveNode {
           if (param1 <= 75) {
             return;
           }
-          db.field_a = gd.field_l;
+          db.field_a = AchievementNotice.field_l;
           if (255 == param3) {
             stackIn_12_0 = !(ab.field_j >= 13);
             de.field_a = de.a(stackIn_12_0, (byte) -116);
@@ -408,7 +408,7 @@ final class he extends IntrusiveNode {
         vb.field_a = -2147483648;
     }
 
-    final static void a(ti param0, int param1, int param2, byte param3, int param4) {
+    final static void a(Sprite param0, int param1, int param2, byte param3, int param4) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -421,7 +421,7 @@ final class he extends IntrusiveNode {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ti var12 = null;
+        Sprite var12 = null;
         int var11Lifetime1;
         int var11Lifetime2;
         try {
@@ -431,8 +431,8 @@ final class he extends IntrusiveNode {
           var6 = 0;
           var7 = param0.field_m;
           if (param3 <= 55) {
-            var12 = (ti) null;
-            he.a((ti) null, 10, 5, (byte) -107, 1);
+            var12 = (Sprite) null;
+            he.a((Sprite) null, 10, 5, (byte) -107, 1);
           }
           var8 = param0.field_n;
           var9 = -var8 + sb.field_c;

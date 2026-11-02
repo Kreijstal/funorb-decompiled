@@ -72,7 +72,7 @@ final class ml extends IntrusiveNode {
         }
     }
 
-    final hb b() {
+    final PcmSample b() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -104,7 +104,7 @@ final class ml extends IntrusiveNode {
           }
         }
         this.field_k = null;
-        return new hb(this.field_E, var1, this.field_l, this.field_z, this.field_A);
+        return new PcmSample(this.field_E, var1, this.field_l, this.field_z, this.field_A);
     }
 
     public static void c() {
@@ -138,7 +138,7 @@ final class ml extends IntrusiveNode {
         return true;
     }
 
-    final hb a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -188,7 +188,7 @@ final class ml extends IntrusiveNode {
         this.field_k = null;
         var12 = this.field_J;
         this.field_J = null;
-        return new hb(this.field_E, var12, this.field_l, this.field_z, this.field_A);
+        return new PcmSample(this.field_E, var12, this.field_l, this.field_z, this.field_A);
     }
 
     private final float[] e(int param0) {

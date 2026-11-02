@@ -9,8 +9,8 @@ abstract class rh extends DualLinkNode {
     private static tf field_u;
     boolean field_p;
     static pd field_v;
-    static ti[] field_l;
-    static ti field_s;
+    static Sprite[] field_l;
+    static Sprite field_s;
     static int unlockedAchievementMask;
     static kg field_q;
 

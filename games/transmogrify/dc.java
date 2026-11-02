@@ -64,8 +64,8 @@ final class dc {
             var5 = var2_int;
             if (var2_int > 0) {
               var6 = 0;
-              for (var7 = 0; gd.field_n.length > var7; var7++) {
-                if (gd.field_n[var7] > field_a) {
+              for (var7 = 0; AchievementNotice.field_n.length > var7; var7++) {
+                if (AchievementNotice.field_n[var7] > field_a) {
                   var6++;
                   continue;
                 }
@@ -92,8 +92,8 @@ final class dc {
               if (n.submittedWordCount == 10) {
                 rb.field_a = rb.field_a / 10;
                 var7 = 0;
-                for (var8 = 0; var8 < gd.field_n.length; var8++) {
-                  if (gd.field_n[var8] > rb.field_a) {
+                for (var8 = 0; var8 < AchievementNotice.field_n.length; var8++) {
+                  if (AchievementNotice.field_n[var8] > rb.field_a) {
                     var7 += 5;
                     continue;
                   }
@@ -367,7 +367,7 @@ final class dc {
         if (param2 > -35) {
           field_a = -68;
         }
-        pi.field_k = param1;
+        AchievementUnlockEvent.field_k = param1;
         hd.field_d = param0;
     }
 

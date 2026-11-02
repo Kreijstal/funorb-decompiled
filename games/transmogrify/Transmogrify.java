@@ -7,7 +7,7 @@ public final class Transmogrify extends SessionGameApplet {
     static int field_D;
     public static boolean field_A;
 
-    final void e(int param0) {
+    final void releaseGameResources(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -39,7 +39,7 @@ public final class Transmogrify extends SessionGameApplet {
         }
     }
 
-    final void b(byte param0) {
+    final void updateGame(byte param0) {
         boolean discarded$0 = false;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
@@ -50,7 +50,7 @@ public final class Transmogrify extends SessionGameApplet {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        gd var5 = null;
+        AchievementNotice var5 = null;
         var4 = field_A ? 1 : 0;
         try {
           sf.v(107);
@@ -166,7 +166,7 @@ public final class Transmogrify extends SessionGameApplet {
           }
           if (!IntrusiveDeque.b((byte) 122)) {
             while (true) {
-              var5 = (gd) (mc.field_c.c(-128));
+              var5 = (AchievementNotice) (mc.field_c.c(-128));
               if (var5 == null) {
                 break;
               }
@@ -429,7 +429,7 @@ public final class Transmogrify extends SessionGameApplet {
                       stackIn_52_7 = stackIn_48_7;
                       stackIn_52_8 = true;
                     }
-                    stackIn_52_0[stackIn_52_1] = stackIn_52_2 + stackIn_52_3 * ((mi) (Object) stackIn_52_4).b(gd.$cfr$intArgs$a$c7de0d339b2a(stackIn_52_5, stackIn_52_6 != 0, stackIn_52_7 != 0, stackIn_52_8), 341);
+                    stackIn_52_0[stackIn_52_1] = stackIn_52_2 + stackIn_52_3 * ((mi) (Object) stackIn_52_4).b(AchievementNotice.$cfr$intArgs$a$c7de0d339b2a(stackIn_52_5, stackIn_52_6 != 0, stackIn_52_7 != 0, stackIn_52_8), 341);
                   }
                 }
               } else {
@@ -458,7 +458,7 @@ public final class Transmogrify extends SessionGameApplet {
             }
           }
           if (param0 != 11179) {
-            this.a(60);
+            this.initializeGame(60);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -468,23 +468,23 @@ public final class Transmogrify extends SessionGameApplet {
         }
     }
 
-    final void b(int param0) {
+    final void renderFrame(int param0) {
         Object stackIn_5_0 = null;
         boolean stackIn_12_0 = false;
         boolean stackIn_88_0 = false;
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
         RuntimeException var2_ref = null;
-        ti[] var3_ref_ti__ = null;
+        Sprite[] var3_ref_ti__ = null;
         int var3 = 0;
         int var4 = 0;
-        ti var5_ref_ti = null;
+        Sprite var5_ref_ti = null;
         int var5 = 0;
         int var6 = 0;
-        ti[] var7_ref_ti__ = null;
+        Sprite[] var7_ref_ti__ = null;
         int var7 = 0;
         int var8 = 0;
-        ti var9 = null;
+        Sprite var9 = null;
         int var10 = 0;
         Object var11 = null;
         int var3Lifetime1;
@@ -492,7 +492,7 @@ public final class Transmogrify extends SessionGameApplet {
         var10 = field_A ? 1 : 0;
         try {
           if (ub.field_c == null) {
-            stackIn_5_0 = gd.field_k;
+            stackIn_5_0 = AchievementNotice.field_k;
           } else {
             stackIn_5_0 = ub.field_c;
           }
@@ -658,9 +658,9 @@ public final class Transmogrify extends SessionGameApplet {
         LetterTile var8 = null;
         LetterTile var9 = null;
         int var10 = 0;
-        ti var12 = null;
-        ti[] var13 = null;
-        ti var14 = null;
+        Sprite var12 = null;
+        Sprite[] var13 = null;
+        Sprite var14 = null;
         WordDictionary[] var15 = null;
         WordDictionary[] var16 = null;
         LetterTile var17 = null;
@@ -721,7 +721,7 @@ public final class Transmogrify extends SessionGameApplet {
                               return false;
                             }
                             cg.b((byte) -121);
-                            this.b(15648);
+                            this.renderFrame(15648);
                             rc.field_a = new bl(pc.field_a, di.field_h);
                             FullscreenFocusCanvas.field_d[0] = r.a(pc.field_a, "", "trans16_button_click").a();
                             FullscreenFocusCanvas.field_d[1] = r.a(pc.field_a, "", "trans01_submit_accept").a();
@@ -754,7 +754,7 @@ public final class Transmogrify extends SessionGameApplet {
                 vf.a((byte) -10, 2.0f, ee.a(i.field_d, (byte) 74, kh.field_e, di.field_h, ""));
                 return false;
               }
-              vf.a((byte) 90, 1.0f, ee.a(oc.field_H, (byte) 71, k.field_e, pc.field_a, ""));
+              vf.a((byte) 90, 1.0f, ee.a(oc.field_H, (byte) 71, IndexedSpriteState.field_e, pc.field_a, ""));
               return false;
             }
             vf.a((byte) -121, 0.0f, ee.a(vg.field_a, (byte) 100, aa.field_f, li.field_k, "basic"));
@@ -762,7 +762,7 @@ public final class Transmogrify extends SessionGameApplet {
           }
           if (null != di.field_h) {
             vf.a((byte) -121, 74.0f, q.field_c);
-            this.b(15648);
+            this.renderFrame(15648);
             FullscreenFocusCanvas.field_d[10] = ml.a(di.field_h, "", "trans14_crowd_cheer_long").b();
             FullscreenFocusCanvas.field_d[11] = ml.a(di.field_h, "", "trans15_crowd_cheer_short").b();
             var3_int = 95190;
@@ -776,7 +776,7 @@ public final class Transmogrify extends SessionGameApplet {
           }
           if (null != ta.field_d) {
             vf.a((byte) -125, 75.0f, db.field_f);
-            this.b(15648);
+            this.renderFrame(15648);
             bd.field_u = new pl[10];
             bd.field_u[0] = pl.a(ta.field_d, "", "transmogrify intro jingle");
             bd.field_u[1] = pl.a(ta.field_d, "", "transmogrify 1-3");
@@ -808,7 +808,7 @@ public final class Transmogrify extends SessionGameApplet {
           if (null == gb.field_a &&
             null == IntrusiveNode.field_d) {
             vf.a((byte) -125, 92.0f, ha.field_b);
-            this.b(param0 ^ -15744);
+            this.renderFrame(param0 ^ -15744);
             gb.field_a = ej.a((byte) -43, li.field_k, "", "arialish20");
             el.b(-6491);
             return false;
@@ -829,7 +829,7 @@ public final class Transmogrify extends SessionGameApplet {
             c.field_a = pc.a("basic", "orbcoin", li.field_k, param0 ^ 33);
             li.field_k = null;
             SessionGameApplet.field_y = null;
-            og.field_b = new ti(var4Lifetime1, var4Lifetime1);
+            og.field_b = new Sprite(var4Lifetime1, var4Lifetime1);
             og.field_b.e();
             c.field_a.a(0, 0, var4Lifetime1, var4Lifetime1);
             c.field_a = null;
@@ -846,14 +846,14 @@ public final class Transmogrify extends SessionGameApplet {
               var5_int = var6_int;
             }
             var6_intLifetime3 = IntrusiveNode.field_d.a(mc.countdownLabels[2]);
-            tb.field_b = new ti[3];
+            tb.field_b = new Sprite[3];
             if (var6_intLifetime3 > var5_int) {
               var5_int = var6_intLifetime3;
             }
             var5_int += 16;
             var7_int = 4 + IntrusiveNode.field_d.field_y + IntrusiveNode.field_d.field_t;
             for (var8_int = 0; var8_int < 3; var8_int++) {
-              tb.field_b[var8_int] = new ti(var5_int, var7_int);
+              tb.field_b[var8_int] = new Sprite(var5_int, var7_int);
               tb.field_b[var8_int].e();
               dk.a(var7_int, mk.field_B, -28018, 0, 0, var5_int);
               for (var9_int = 0; sb.field_h.length > var9_int; var9_int++) {
@@ -874,13 +874,13 @@ public final class Transmogrify extends SessionGameApplet {
           if (null == rk.field_r[4]) {
             a.field_R = pc.a("", "logo_highscores", oi.field_g, param0 ^ 118);
             mk.field_y = pc.a("", "logo_achievements", oi.field_g, 58);
-            se.field_t = pc.a("", "logo_instructions", oi.field_g, -33);
+            SpriteState.field_t = pc.a("", "logo_instructions", oi.field_g, -33);
             uj.field_e = cf.a((byte) -122);
             kk.field_d = ContextualRuntimeException.a(oi.field_g, (byte) 121, "", "frame_trans");
             ck.field_C = ContextualRuntimeException.a(oi.field_g, (byte) 123, "", "frame_trans_inner");
             SecondaryNodeDeque.field_d = pc.a("", "banner", oi.field_g, 71);
-            rk.field_r[4] = new ti(640, 480);
-            var12 = new ti(640, 480);
+            rk.field_r[4] = new Sprite(640, 480);
+            var12 = new Sprite(640, 480);
             var12.e();
             dk.a(377, ck.field_C, -28018, 258, 72, 361);
             mk.field_y.d(337, 14, 0);
@@ -900,7 +900,7 @@ public final class Transmogrify extends SessionGameApplet {
             IntrusiveNode.a(kk.field_d, 377, 7, 258, 2363394, 361, 72);
             mk.field_y.c(337, 14);
             rk.field_r[6] = rk.field_r[4];
-            rk.field_r[1] = new ti(640, 480);
+            rk.field_r[1] = new Sprite(640, 480);
             rk.field_r[1].e();
             uj.field_e.f(0, 0);
             if (!wl.a(false, 0)) {
@@ -929,11 +929,11 @@ public final class Transmogrify extends SessionGameApplet {
             wl.field_K = pc.a("", "tile", oi.field_g, param0 + 149);
             MouseWheelInput.field_a = ContextualRuntimeException.a(oi.field_g, (byte) 122, "", "sparkles");
             hf.field_d = ContextualRuntimeException.a(oi.field_g, (byte) 122, "", "sparkle_array");
-            jh.field_h = new ti(640, 480);
+            jh.field_h = new Sprite(640, 480);
             jh.field_h.e();
             uj.field_e.f(0, 0);
             pc.a("", "spikes", oi.field_g, 45).c(0, 0);
-            rk.field_r[2] = new ti(640, 480);
+            rk.field_r[2] = new Sprite(640, 480);
             rk.field_r[2].e();
             jh.field_h.f(0, 0);
             if (wl.a(false, 0)) {
@@ -984,7 +984,7 @@ public final class Transmogrify extends SessionGameApplet {
             return true;
           }
           vf.a((byte) -11, 93.0f, vh.field_k);
-          this.b(param0 + 15744);
+          this.renderFrame(param0 + 15744);
           var15 = ContextualRuntimeException.b(param0 + 12, l.field_a);
           var4Lifetime4 = 0;
           for (var5_intLifetime1 = 0; var5_intLifetime1 < var15.length; var5_intLifetime1++) {
@@ -1040,7 +1040,7 @@ public final class Transmogrify extends SessionGameApplet {
         }
     }
 
-    final void a(int param0) {
+    final void initializeGame(int param0) {
         this.a(8, param0 ^ -10, 13, 9, 11, 0, false, 10);
         lc var2 = new lc();
         if (param0 != -9) {
@@ -1048,13 +1048,13 @@ public final class Transmogrify extends SessionGameApplet {
         }
         try {
           var2.b(128, 9, -23780);
-          uh.a((java.awt.Component) ((Object) gd.field_k), 22050, -21, lk.field_b, var2, true);
+          uh.a((java.awt.Component) ((Object) AchievementNotice.field_k), 22050, -21, lk.field_b, var2, true);
           uc.a(128, (byte) -119);
           u.field_b = 4473924;
           field_D = 128;
           SecondaryNodeDeque.field_b = 255;
           this.a(true, false, false, false, (byte) 9);
-          ue.field_c = new ii[3];
+          ue.field_c = new IndexedSprite[3];
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "Transmogrify.F(" + param0 + ')');
         }
@@ -1070,7 +1070,7 @@ public final class Transmogrify extends SessionGameApplet {
           }
           wd.a(param0 - 15099, false, bd.field_u[0]);
           if (param0 != 32198) {
-            this.c(9);
+            this.clearAppletStatics(9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1132,7 +1132,7 @@ public final class Transmogrify extends SessionGameApplet {
         }
     }
 
-    final void c(int param0) {
+    final void clearAppletStatics(int param0) {
         try {
           Transmogrify.l(0);
           IntrusiveDeque.c((byte) -115);
@@ -1214,8 +1214,8 @@ public final class Transmogrify extends SessionGameApplet {
           mb.a();
           hk.a((byte) 35);
           DualLinkNode.a((byte) 18);
-          k.a(false);
-          se.c((byte) 99);
+          IndexedSpriteState.a(false);
+          SpriteState.c((byte) 99);
           id.a((byte) 92);
           ei.a((byte) -110);
           TileRack.a((byte) -119);
@@ -1311,7 +1311,7 @@ public final class Transmogrify extends SessionGameApplet {
           wh.h(43);
           fk.a((byte) 114);
           jg.a();
-          pi.a((byte) -110);
+          AchievementUnlockEvent.a((byte) -110);
           mf.a(true);
           ProxySocketConnector.d(-114);
           hf.a((byte) 118);
@@ -1338,7 +1338,7 @@ public final class Transmogrify extends SessionGameApplet {
           ng.a((byte) 122);
           qk.a((byte) -86);
           oh.a((byte) 104);
-          gd.d(111);
+          AchievementNotice.d(111);
           pd.b((byte) -74);
           uj.b(-1);
           fc.a(false);

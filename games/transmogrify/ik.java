@@ -194,11 +194,11 @@ class ik extends a implements df {
         }
     }
 
-    final static ti[] a(String param0, ci param1, byte param2, String param3) {
+    final static Sprite[] a(String param0, ci param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ti[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

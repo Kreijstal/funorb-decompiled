@@ -3,7 +3,7 @@
  */
 abstract class kk {
     static IntrusiveDeque field_f;
-    static ti[] field_d;
+    static Sprite[] field_d;
     static ci field_a;
     static we field_b;
     static String field_g;

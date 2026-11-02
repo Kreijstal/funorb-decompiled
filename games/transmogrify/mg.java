@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mg {
-    private ii[] field_a;
+    private IndexedSprite[] field_a;
     static boolean field_d;
     private int field_f;
     static volatile boolean field_c;
@@ -119,7 +119,7 @@ final class mg {
         return this.field_a[0].field_g;
     }
 
-    mg(ii[] param0) {
+    mg(IndexedSprite[] param0) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException stackIn_16_0 = null;

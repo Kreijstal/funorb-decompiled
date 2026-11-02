@@ -178,7 +178,7 @@ final class ki extends h {
         }
     }
 
-    final void a(ti[] param0, int param1) {
+    final void a(Sprite[] param0, int param1) {
         int var5 = 0;
         ab[] var3 = null;
         int var4 = 0;
@@ -216,7 +216,7 @@ final class ki extends h {
         }
     }
 
-    final void a(int param0, int param1, ti[] param2) {
+    final void a(int param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         if (param1 != -19106) {
           return;
@@ -232,7 +232,7 @@ final class ki extends h {
         }
     }
 
-    final void a(ti param0, int param1) {
+    final void a(Sprite param0, int param1) {
         int var4 = 0;
         ab[] var3 = null;
         ab var5 = null;

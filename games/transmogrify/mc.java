@@ -3,7 +3,7 @@
  */
 final class mc {
     static IntrusiveDeque field_c;
-    static ti[] field_b;
+    static Sprite[] field_b;
     static String[] countdownLabels;
 
     final static long b(boolean param0) {

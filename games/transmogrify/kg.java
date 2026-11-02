@@ -4,7 +4,7 @@
 abstract class kg extends DualLinkNode {
     private byte[] field_p;
     private int[] field_x;
-    private k[] field_A;
+    private IndexedSpriteState[] field_A;
     int field_y;
     private static StringBuilder field_E;
     private int[] field_z;
@@ -431,7 +431,7 @@ abstract class kg extends DualLinkNode {
         Exception var13_ref_Exception = null;
         int var14 = 0;
         int var15 = 0;
-        k var16_ref_k = null;
+        IndexedSpriteState var16_ref_k = null;
         int var16 = 0;
         int var17 = 0;
         Object var18 = null;
@@ -588,7 +588,7 @@ abstract class kg extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        k var11_ref_k = null;
+        IndexedSpriteState var11_ref_k = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -803,7 +803,7 @@ abstract class kg extends DualLinkNode {
         field_I = 0;
     }
 
-    final void a(k[] param0, int[] param1) {
+    final void a(IndexedSpriteState[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();

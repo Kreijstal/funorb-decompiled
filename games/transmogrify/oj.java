@@ -181,7 +181,7 @@ final class oj extends PcmStream {
         return 2;
     }
 
-    final static void a(ti param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         try {
           og.a((byte) 92);
           if (param1 != 256) {
@@ -308,7 +308,7 @@ final class oj extends PcmStream {
         if (jh.field_n == rh.field_v) {
           throw new IllegalStateException();
         }
-        if (rh.field_v == gd.field_l) {
+        if (rh.field_v == AchievementNotice.field_l) {
           rh.field_v = jh.field_n;
           return q.field_h;
         }

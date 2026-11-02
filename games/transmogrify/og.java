@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class og {
-    static ti field_b;
+    static Sprite field_b;
     static int field_e;
     static tf field_d;
     static hh field_a;

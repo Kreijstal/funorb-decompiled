@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wl extends aj implements hl, df, tc {
-    static ti field_K;
+    static Sprite field_K;
     private vc field_C;
     private lj field_G;
     private vc field_x;
@@ -17,7 +17,7 @@ final class wl extends aj implements hl, df, tc {
     private vc field_E;
 
     public wl() {
-        super(0, 0, 496, 0, (WidgetListener) null);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_J = new vc("", (ma) null, 12);
         this.field_y = new vc("", (ma) null, 100);
         this.field_E = new vc("", (ma) null, 100);
@@ -42,17 +42,17 @@ final class wl extends aj implements hl, df, tc {
         this.field_x.a(97, new cg(this.field_x, this.field_F));
         this.field_C.a(-104, new md(this.field_C));
         this.field_G.field_t = false;
-        this.field_G.field_q = (WidgetListener) ((Object) new qa());
-        this.field_A.field_q = (WidgetListener) ((Object) new ek());
-        this.field_J.field_q = (WidgetListener) ((Object) new ni(10000536));
+        this.field_G.field_q = (WidgetRenderer) ((Object) new qa());
+        this.field_A.field_q = (WidgetRenderer) ((Object) new ek());
+        this.field_J.field_q = (WidgetRenderer) ((Object) new ni(10000536));
         ni dupTemp$0 = new ni(10000536);
-        this.field_E.field_q = (WidgetListener) ((Object) dupTemp$0);
-        this.field_y.field_q = (WidgetListener) ((Object) dupTemp$0);
-        this.field_C.field_q = (WidgetListener) ((Object) new ni(10000536));
-        this.field_w.field_q = (WidgetListener) ((Object) new kd());
+        this.field_E.field_q = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_y.field_q = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_C.field_q = (WidgetRenderer) ((Object) new ni(10000536));
+        this.field_w.field_q = (WidgetRenderer) ((Object) new kd());
         nc dupTemp$1 = new nc(10000536);
-        this.field_x.field_q = (WidgetListener) ((Object) dupTemp$1);
-        this.field_F.field_q = (WidgetListener) ((Object) dupTemp$1);
+        this.field_x.field_q = (WidgetRenderer) ((Object) dupTemp$1);
+        this.field_F.field_q = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = ij.a(gk.field_g, new String[]{this.m(-122), this.n(106)}, (byte) -72);
         int var3 = 20;
         var3 = var3 + this.a(170, 74, rg.field_I, this.field_y, var3);
@@ -342,7 +342,7 @@ final class wl extends aj implements hl, df, tc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 17) {
-            field_K = (ti) null;
+            field_K = (Sprite) null;
           }
           if (param0 == this.field_A) {
             kc.a((byte) -127);
@@ -548,7 +548,7 @@ final class wl extends aj implements hl, df, tc {
 
     final static void p(int param0) {
         if (param0 < 101) {
-          field_K = (ti) null;
+          field_K = (Sprite) null;
         }
     }
 

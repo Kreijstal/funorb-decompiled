@@ -69,12 +69,12 @@ final class ra {
     }
 
     final static void a(int param0) {
-        ti var1 = null;
-        ti var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = Transmogrify.field_A ? 1 : 0;
         try {
-          var1 = new ti(540, 140);
+          var1 = new Sprite(540, 140);
           oj.a(var1, 256);
           ka.c();
           sb.c();

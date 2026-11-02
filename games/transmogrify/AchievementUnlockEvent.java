@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends IntrusiveNode {
+final class AchievementUnlockEvent extends IntrusiveNode {
     static int field_j;
     static ci field_g;
     static int field_k;
@@ -17,7 +17,7 @@ final class pi extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 17118) {
-            pi.a((byte) 93);
+            AchievementUnlockEvent.a((byte) 93);
           }
           if (dl.field_l.b(-26753) &&
             !param1.equals(dl.field_l.a((byte) -41))) {
@@ -62,7 +62,7 @@ final class pi extends IntrusiveNode {
           ji.a(param1, 0, var3, 0, var2_int);
           if (param0 != -29) {
             var4 = (String) null;
-            pi.a(-109, (String) null);
+            AchievementUnlockEvent.a(-109, (String) null);
           }
           stackIn_3_0 = var3;
           return stackIn_3_0;
@@ -80,7 +80,7 @@ final class pi extends IntrusiveNode {
         }
     }
 
-    pi(int param0) {
+    AchievementUnlockEvent(int param0) {
         this.field_i = param0;
     }
 

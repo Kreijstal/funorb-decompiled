@@ -6,7 +6,7 @@ import java.io.*;
 final class gb {
     static String field_e;
     static String field_b;
-    static ii[] field_a;
+    static IndexedSprite[] field_a;
     static String field_c;
     static String field_d;
 

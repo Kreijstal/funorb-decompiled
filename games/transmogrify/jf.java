@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf extends ti {
+final class jf extends Sprite {
     final void d(int param0, int param1) {
         int var9 = 0;
         int stackIn_3_0 = 0;

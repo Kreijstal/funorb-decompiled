@@ -7,7 +7,7 @@ final class ua {
     static int field_c;
     static int field_d;
     static String field_b;
-    static ti[] field_f;
+    static Sprite[] field_f;
 
     public static void a(int param0) {
         int var1 = 122 % ((-70 - param0) / 50);

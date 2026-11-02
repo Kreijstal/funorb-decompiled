@@ -8,7 +8,7 @@ final class ob extends le {
     static String field_I;
     private wa field_L;
     static String field_M;
-    private ti field_H;
+    private Sprite field_H;
     static String field_F;
 
     final void a(int param0, byte param1, UiWidget param2, int param3) {
@@ -37,9 +37,9 @@ final class ob extends le {
         int var12;
         int var13;
         int var14;
-        ti var15;
-        ti var16;
-        ti var17;
+        Sprite var15;
+        Sprite var16;
+        Sprite var17;
         rc var6Lifetime1;
         regionExit1: {
           regionExit2: {
@@ -92,7 +92,7 @@ final class ob extends le {
             oj.a(this.field_H, 256);
             sb.c();
           } else {
-            this.field_H = new ti(var12, var13);
+            this.field_H = new Sprite(var12, var13);
             oj.a(this.field_H, 256);
           }
           var15.a(112, 144, var15.field_r << 4, var15.field_s << 4, -this.field_K << 10, 4096);
@@ -125,16 +125,16 @@ final class ob extends le {
         int var7 = 0;
         int var8 = 0;
         int var10 = 0;
-        ii var11 = null;
-        ii var12 = null;
+        IndexedSprite var11 = null;
+        IndexedSprite var12 = null;
         var10 = Transmogrify.field_A ? 1 : 0;
         try {
           if (null == ue.field_c[param1]) {
-            ue.field_c[param1] = new ii(wl.field_K.field_n, wl.field_K.field_m, 256);
+            ue.field_c[param1] = new IndexedSprite(wl.field_K.field_n, wl.field_K.field_m, 256);
             ue.field_c[param1].field_h = hk.field_a.field_y;
           }
           if (null == tj.field_s) {
-            tj.field_s = new ti(wl.field_K.field_n, wl.field_K.field_m);
+            tj.field_s = new Sprite(wl.field_K.field_n, wl.field_K.field_m);
           }
           tj.field_s.e();
           sb.c();

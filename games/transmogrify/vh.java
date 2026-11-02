@@ -4,7 +4,7 @@
 final class vh extends me {
     static int field_m;
     static int field_n;
-    static ti field_l;
+    static Sprite field_l;
     static String field_j;
     static String field_k;
 

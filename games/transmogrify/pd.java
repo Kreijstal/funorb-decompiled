@@ -10,12 +10,12 @@ final class pd {
         throw new IllegalStateException();
     }
 
-    final static ii[] a(byte param0) {
+    final static IndexedSprite[] a(byte param0) {
         int var2 = 0;
         int var3 = Transmogrify.field_A ? 1 : 0;
-        ii[] var1 = new ii[ih.field_b];
+        IndexedSprite[] var1 = new IndexedSprite[ih.field_b];
         for (var2 = 0; ih.field_b > var2; var2++) {
-          var1[var2] = new ii(pj.field_y, ll.field_U, BufferedSocket.field_j[var2], re.field_a[var2], ql.field_b[var2], wk.field_b[var2], re.field_K[var2], rg.field_D);
+          var1[var2] = new IndexedSprite(pj.field_y, ll.field_U, BufferedSocket.field_j[var2], re.field_a[var2], ql.field_b[var2], wk.field_b[var2], re.field_K[var2], rg.field_D);
         }
         if (param0 > 96) {
           wd.d(121);

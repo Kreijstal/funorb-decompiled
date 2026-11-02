@@ -65,14 +65,14 @@ final class jk extends aj implements df {
     }
 
     public jk() {
-        super(0, 0, 476, 225, (WidgetListener) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
         this.field_w = new lj(je.field_c, (ma) null);
         this.field_z = new lj(el.field_a, (ma) null);
         this.field_C = new lj(gl.field_z, (ma) null);
         qa var1 = new qa();
-        this.field_w.field_q = (WidgetListener) ((Object) var1);
-        this.field_z.field_q = (WidgetListener) ((Object) var1);
-        this.field_C.field_q = (WidgetListener) ((Object) var1);
+        this.field_w.field_q = (WidgetRenderer) ((Object) var1);
+        this.field_z.field_q = (WidgetRenderer) ((Object) var1);
+        this.field_C.field_q = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
@@ -354,7 +354,7 @@ final class jk extends aj implements df {
             jk.a((java.awt.Color) null, (byte) 107, 51, (String) null, false);
           }
           try {
-            var10 = gd.field_k.getGraphics();
+            var10 = AchievementNotice.field_k.getGraphics();
             if (ha.field_a == null) {
               ha.field_a = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -367,7 +367,7 @@ final class jk extends aj implements df {
             }
             try {
               if (hk.field_c == null) {
-                hk.field_c = gd.field_k.createImage(304, 34);
+                hk.field_c = AchievementNotice.field_k.createImage(304, 34);
               }
               var11 = hk.field_c.getGraphics();
               var11.setColor(param0);
@@ -403,7 +403,7 @@ final class jk extends aj implements df {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            gd.field_k.repaint();
+            AchievementNotice.field_k.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

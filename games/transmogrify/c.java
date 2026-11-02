@@ -5,7 +5,7 @@ final class c {
     static boolean field_d;
     static long field_c;
     static int field_b;
-    static ti field_a;
+    static Sprite field_a;
     static boolean[] field_e;
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {

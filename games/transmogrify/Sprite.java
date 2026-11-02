@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ti extends se {
+class Sprite extends SpriteState {
     int[] field_w;
 
     final void e() {
@@ -149,9 +149,9 @@ class ti extends se {
             return;
           }
           if (param2 == 256) {
-            ti.a(0, 0, 0, sb.field_h, this.field_w, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.a(0, 0, 0, sb.field_h, this.field_w, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            ti.a(0, 0, 0, sb.field_h, this.field_w, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.a(0, 0, 0, sb.field_h, this.field_w, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -198,7 +198,7 @@ class ti extends se {
           if (var5 <= 0) {
             return;
           }
-          ti.a(sb.field_h, this.field_w, var4, var3, var6, var5, var7, var8);
+          Sprite.a(sb.field_h, this.field_w, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -473,7 +473,7 @@ class ti extends se {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          ti.a(sb.field_h, this.field_w, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          Sprite.a(sb.field_h, this.field_w, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -602,10 +602,10 @@ class ti extends se {
         }
     }
 
-    final ti c() {
+    final Sprite c() {
         int var2 = 0;
         int var3 = 0;
-        ti var1 = new ti(this.field_n, this.field_m);
+        Sprite var1 = new Sprite(this.field_n, this.field_m);
         var1.field_r = this.field_r;
         var1.field_s = this.field_s;
         var1.field_u = this.field_r - this.field_n - this.field_u;
@@ -625,7 +625,7 @@ class ti extends se {
         int var4 = param0 + (this.field_n >> 1) > sb.field_b ? sb.field_b - param0 << 1 : this.field_n;
         int var5 = param1 < sb.field_e ? sb.field_e - param1 << 1 : 0;
         int var6 = param1 + (this.field_m >> 1) > sb.field_f ? sb.field_f - param1 << 1 : this.field_m;
-        ti.a(this.field_w, var5 * this.field_n + var3, (param1 + (var5 >> 1)) * sb.field_c + (param0 + (var3 >> 1)), (this.field_n << 1) - (var4 - var3) + (this.field_n & 1), sb.field_c - (var4 - var3 >> 1), this.field_n, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.a(this.field_w, var5 * this.field_n + var3, (param1 + (var5 >> 1)) * sb.field_c + (param0 + (var3 >> 1)), (this.field_n << 1) - (var4 - var3) + (this.field_n & 1), sb.field_c - (var4 - var3 >> 1), this.field_n, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     void c(int param0, int param1) {
@@ -669,7 +669,7 @@ class ti extends se {
           if (var5 <= 0) {
             return;
           }
-          ti.b(sb.field_h, this.field_w, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.b(sb.field_h, this.field_w, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1150,7 +1150,7 @@ class ti extends se {
           if (var6 <= 0) {
             return;
           }
-          ti.a(sb.field_h, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.a(sb.field_h, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1316,9 +1316,9 @@ class ti extends se {
         }
     }
 
-    final ti a() {
+    final Sprite a() {
         int var3 = 0;
-        ti var1 = new ti(this.field_n, this.field_m);
+        Sprite var1 = new Sprite(this.field_n, this.field_m);
         var1.field_r = this.field_r;
         var1.field_s = this.field_s;
         var1.field_u = this.field_u;
@@ -1418,7 +1418,7 @@ class ti extends se {
           if (var6 <= 0) {
             return;
           }
-          ti.b(sb.field_h, this.field_w, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          Sprite.b(sb.field_h, this.field_w, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1606,7 +1606,7 @@ class ti extends se {
           if (var5 <= 0) {
             return;
           }
-          ti.a(0, sb.field_h, this.field_w, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(0, sb.field_h, this.field_w, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1652,12 +1652,12 @@ class ti extends se {
           if (var6 <= 0) {
             return;
           }
-          ti.a(sb.field_h, this.field_w, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.a(sb.field_h, this.field_w, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
 
-    ti(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    Sprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_r = param0;
         this.field_s = param1;
         this.field_u = param2;
@@ -1739,12 +1739,12 @@ class ti extends se {
           if (var6 <= 0) {
             return;
           }
-          ti.b(sb.field_h, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.b(sb.field_h, this.field_w, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    ti(int param0, int param1) {
+    Sprite(int param0, int param1) {
         this.field_w = new int[param0 * param1];
         this.field_r = param0;
         this.field_n = param0;
@@ -1776,7 +1776,7 @@ class ti extends se {
         }
     }
 
-    ti(byte[] param0, java.awt.Component param1) {
+    Sprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;

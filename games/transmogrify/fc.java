@@ -3,7 +3,7 @@
  */
 final class fc {
     static volatile int field_g;
-    static ti[] field_h;
+    static Sprite[] field_h;
     private boolean field_a;
     private String field_c;
     private boolean field_b;

@@ -89,7 +89,7 @@ final class tf {
           ej.field_n = true;
           q.field_a = param2;
           if (q.field_a == 0) {
-            var3_int = vd.a(nc.field_r, gd.field_m, MouseInputHandler.field_b, GameKeyHandler.field_b, (byte) 110);
+            var3_int = vd.a(nc.field_r, AchievementNotice.field_m, MouseInputHandler.field_b, GameKeyHandler.field_b, (byte) 110);
             var4 = 3 + var3_int;
             GameKeyHandler.field_a = new int[var4];
             qb.field_f = new String[var4];
@@ -108,7 +108,7 @@ final class tf {
             GameKeyHandler.field_a[-1 + var4] = 1;
             uj.field_d[1] = 5;
           } else if (1 == q.field_a) {
-            var3_int = vd.a(nc.field_r, gd.field_m, MouseInputHandler.field_b, GameKeyHandler.field_b, (byte) -103);
+            var3_int = vd.a(nc.field_r, AchievementNotice.field_m, MouseInputHandler.field_b, GameKeyHandler.field_b, (byte) -103);
             var4 = var3_int + 2;
             qb.field_f = new String[var4];
             GameKeyHandler.field_a = new int[var4];
@@ -126,9 +126,9 @@ final class tf {
           } else if (q.field_a != 2) {
             if (q.field_a == 3) {
               if (!lk.field_b.field_e) {
-                var3_int = vd.a(nc.field_r, gd.field_m, nh.field_m, GameKeyHandler.field_b, (byte) -103);
+                var3_int = vd.a(nc.field_r, AchievementNotice.field_m, nh.field_m, GameKeyHandler.field_b, (byte) -103);
               } else {
-                var3_int = vd.a(nc.field_r, gd.field_m, e.field_x, GameKeyHandler.field_b, (byte) -118);
+                var3_int = vd.a(nc.field_r, AchievementNotice.field_m, e.field_x, GameKeyHandler.field_b, (byte) -118);
               }
               var4 = 2 + var3_int;
               GameKeyHandler.field_a = new int[var4];
@@ -145,7 +145,7 @@ final class tf {
               GameKeyHandler.field_a[-1 + var4] = 0;
               uj.field_d[0] = 5;
             } else if (4 == q.field_a) {
-              var3_int = vd.a(nc.field_r, gd.field_m, n.field_b, GameKeyHandler.field_b, (byte) -111);
+              var3_int = vd.a(nc.field_r, AchievementNotice.field_m, n.field_b, GameKeyHandler.field_b, (byte) -111);
               var4 = 2 + var3_int;
               qb.field_f = new String[var4];
               GameKeyHandler.field_a = new int[var4];
@@ -164,7 +164,7 @@ final class tf {
               if (5 != q.field_a) {
                 throw new IllegalArgumentException();
               }
-              var3_int = vd.a(nc.field_r, gd.field_m, FullscreenFocusCanvas.field_e, GameKeyHandler.field_b, (byte) 71);
+              var3_int = vd.a(nc.field_r, AchievementNotice.field_m, FullscreenFocusCanvas.field_e, GameKeyHandler.field_b, (byte) 71);
               var4 = 3 + var3_int;
               qb.field_f = new String[var4];
               GameKeyHandler.field_a = new int[var4];
@@ -184,7 +184,7 @@ final class tf {
               uj.field_d[1] = 5;
             }
           } else {
-            var3_int = vd.a(nc.field_r, gd.field_m, ij.a(ef.field_c, new String[]{"<br><%0><br>"}, (byte) -53), GameKeyHandler.field_b, (byte) -80);
+            var3_int = vd.a(nc.field_r, AchievementNotice.field_m, ij.a(ef.field_c, new String[]{"<br><%0><br>"}, (byte) -53), GameKeyHandler.field_b, (byte) -80);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(nc.field_r[var5])) {
@@ -201,7 +201,7 @@ final class tf {
             ne.field_a = new String[-1 + var3_int - var4];
             ji.a(nc.field_r, 1 + var4, ne.field_a, 0, -1 + (var3_int - var4));
             var4 = -1;
-            var3_int = vd.a(nc.field_r, gd.field_m, ij.a(mk.field_C, new String[]{"<br><%0><br>"}, (byte) -46), GameKeyHandler.field_b, (byte) 112);
+            var3_int = vd.a(nc.field_r, AchievementNotice.field_m, ij.a(mk.field_C, new String[]{"<br><%0><br>"}, (byte) -46), GameKeyHandler.field_b, (byte) 112);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(nc.field_r[var5])) {
                 continue;

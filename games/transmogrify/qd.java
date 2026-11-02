@@ -100,14 +100,14 @@ final class qd {
         if (null == ub.field_c) {
           return;
         }
-        gd.a(ub.field_c, (byte) 106);
+        AchievementNotice.a(ub.field_c, (byte) 106);
         ub.field_c.a(-100, lk.field_b);
         if (param0 == 5) {
           ub.field_c = null;
           if (vg.field_b != null) {
             vg.field_b.c((byte) -126);
           }
-          gd.field_k.requestFocus();
+          AchievementNotice.field_k.requestFocus();
           return;
         }
         ci var2 = (ci) null;
@@ -116,7 +116,7 @@ final class qd {
         if (vg.field_b != null) {
           vg.field_b.c((byte) -126);
         }
-        gd.field_k.requestFocus();
+        AchievementNotice.field_k.requestFocus();
     }
 
     final static boolean a(ci param0, byte param1) {

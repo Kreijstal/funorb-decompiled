@@ -103,7 +103,7 @@ class lj extends UiWidget {
         tb.a(ha.b(119), true);
     }
 
-    lj(String param0, WidgetListener param1, ma param2) {
+    lj(String param0, WidgetRenderer param1, ma param2) {
         super(param0, param1, param2);
         this.field_t = true;
         this.field_w = false;

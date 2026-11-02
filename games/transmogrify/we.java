@@ -163,7 +163,7 @@ final class we {
         return og.field_c[var4];
     }
 
-    final static ti[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         if (param1 <= 110) {
           we.a(49);
         }

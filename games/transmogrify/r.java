@@ -6,9 +6,9 @@ final class r {
     private int field_a;
     private mj[] field_b;
 
-    final hb a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new hb(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
     private final byte[] b() {

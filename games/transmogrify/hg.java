@@ -51,7 +51,7 @@ final class hg {
         try {
           var3 = (LetterTile) (ch.field_e.a((byte) -95));
           while (var3 != null) {
-            var3.a((byte) 75);
+            var3.stepTowardDestination((byte) 75);
             var3 = (LetterTile) (ch.field_e.a(true));
           }
           if (param0 > 40) {

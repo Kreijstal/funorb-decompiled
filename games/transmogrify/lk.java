@@ -113,19 +113,19 @@ final class lk {
         }
     }
 
-    final static ti a(boolean param0) {
+    final static Sprite a(boolean param0) {
         int var4_int = 0;
         int var5 = Transmogrify.field_A ? 1 : 0;
         int var1 = wk.field_b[0] * ql.field_b[0];
         byte[] var2 = re.field_K[0];
         int[] var3 = new int[var1];
         if (!param0) {
-          return (ti) null;
+          return (Sprite) null;
         }
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = rg.field_D[vg.c(255, (int) var2[var4_int])];
         }
-        ti var4 = new ti(pj.field_y, ll.field_U, BufferedSocket.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[0], var3);
+        Sprite var4 = new Sprite(pj.field_y, ll.field_U, BufferedSocket.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[0], var3);
         wd.d(126);
         return var4;
     }

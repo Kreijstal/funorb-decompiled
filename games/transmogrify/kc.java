@@ -19,7 +19,7 @@ final class kc extends IntrusiveNode {
     si field_h;
     int field_n;
     int field_p;
-    hb field_t;
+    PcmSample field_t;
     int field_o;
     int field_m;
     static boolean field_D;

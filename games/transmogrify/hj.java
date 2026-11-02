@@ -146,10 +146,10 @@ final class hj extends PacketBuffer {
         }
     }
 
-    final static ii[] a(ci param0, byte param1, int param2, int param3) {
+    final static IndexedSprite[] a(ci param0, byte param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
-        ii[] stackIn_6_0 = null;
+        IndexedSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -163,7 +163,7 @@ final class hj extends PacketBuffer {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (ii[]) (stackIn_4_0);
+          return (IndexedSprite[]) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

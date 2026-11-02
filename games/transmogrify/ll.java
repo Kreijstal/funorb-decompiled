@@ -163,7 +163,7 @@ final class ll extends bi implements df {
           var4.field_p = 0;
           var4.field_h = 80;
           var4.field_n = 50;
-          var4.field_q = (WidgetListener) ((Object) new h(al.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_q = (WidgetRenderer) ((Object) new h(al.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, (byte) -82);
           this.field_P = this.a(oe.field_a, (ma) (this), -3);
           return;
@@ -202,7 +202,7 @@ final class ll extends bi implements df {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new lj(param0, param1);
-          var4.field_q = (WidgetListener) ((Object) new qa());
+          var4.field_q = (WidgetRenderer) ((Object) new qa());
           var5 = -6 + this.field_h;
           this.field_h = this.field_h + 38;
           var4.a(-91, var5, 15, -14 + (this.field_l - 16), 30);

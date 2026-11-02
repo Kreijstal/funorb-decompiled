@@ -7,7 +7,7 @@ final class jd extends IOException {
     static int field_a;
     static int field_b;
 
-    final static mi a(byte[] param0, int param1, ii[] param2) {
+    final static mi a(byte[] param0, int param1, IndexedSprite[] param2) {
         int var9 = 0;
         int[] var3 = null;
         RuntimeException var3_ref = null;
@@ -94,7 +94,7 @@ final class jd extends IOException {
         super(param0);
     }
 
-    final static void a(int param0, int param1, ti[] param2, int param3, int param4, int param5, kg param6, int param7, int param8, ti[] param9, boolean param10) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, int param5, kg param6, int param7, int param8, Sprite[] param9, boolean param10) {
         try {
           je.a(-11);
           if (param10) {

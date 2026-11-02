@@ -8,15 +8,15 @@ final class jj {
 
     public static void a(int param0) {
         if (param0 != 96) {
-          hb var2 = (hb) null;
-          jj.a((byte) 74, -122, (hb) null);
+          PcmSample var2 = (PcmSample) null;
+          jj.a((byte) 74, -122, (PcmSample) null);
         }
         field_b = null;
         field_c = (int[][]) null;
         field_a = null;
     }
 
-    final static od a(byte param0, int param1, hb param2) {
+    final static od a(byte param0, int param1, PcmSample param2) {
         RuntimeException var3 = null;
         od stackIn_2_0 = null;
         od stackIn_4_0 = null;

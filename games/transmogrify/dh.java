@@ -5,7 +5,7 @@ final class dh extends aj implements df {
     private tc field_z;
     private String[] field_y;
     private lj[] field_C;
-    static ti field_B;
+    static Sprite field_B;
     static volatile int field_w;
     static int field_x;
 
@@ -20,7 +20,7 @@ final class dh extends aj implements df {
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param1 != 17) {
-            field_B = (ti) null;
+            field_B = (Sprite) null;
           }
           for (var6_int = 0; this.field_y.length > var6_int; var6_int++) {
             if (this.field_C[var6_int] == param0) {
@@ -75,13 +75,13 @@ final class dh extends aj implements df {
             }
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_C[var5] = new lj(this.field_y[var5], (ma) (this));
-              this.field_C[var5].field_q = (WidgetListener) ((Object) var4);
+              this.field_C[var5].field_q = (WidgetRenderer) ((Object) var4);
               this.field_C[var5].field_j = ae.field_c;
               this.field_C[var5].a(param1 ^ 17099, var5 * 16 + 20, 0, 80, 15);
               this.a((UiWidget) (this.field_C[var5]), (byte) -125);
             }
             this.field_C[var3_int] = new lj(nj.field_p, (ma) (this));
-            this.field_C[var3_int].field_q = (WidgetListener) ((Object) var4);
+            this.field_C[var3_int].field_q = (WidgetRenderer) ((Object) var4);
             this.field_C[var3_int].a(-127, 16 * var3_int + 16 + 20, 0, 100, 15);
             this.a((UiWidget) (this.field_C[var3_int]), (byte) -92);
             return;
@@ -247,7 +247,7 @@ final class dh extends aj implements df {
     }
 
     dh(tc param0) {
-        super(0, 0, 0, 0, (WidgetListener) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_z = param0;
         } catch (RuntimeException runtimeException) {

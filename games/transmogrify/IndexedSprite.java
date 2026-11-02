@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii extends k {
+final class IndexedSprite extends IndexedSpriteState {
     byte[] field_i;
     int[] field_j;
 
@@ -108,7 +108,7 @@ final class ii extends k {
           var5 <= 0) {
           return;
         }
-        ii.a(sb.field_h, this.field_i, this.field_j, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.a(sb.field_h, this.field_i, this.field_j, var4, var3, var6, var5, var7, var8);
     }
 
     final void a(int param0, int param1) {
@@ -152,7 +152,7 @@ final class ii extends k {
           var5 <= 0) {
           return;
         }
-        ii.a(sb.field_h, this.field_i, this.field_j, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.a(sb.field_h, this.field_i, this.field_j, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -273,10 +273,10 @@ final class ii extends k {
           var6 <= 0) {
           return;
         }
-        ii.b(sb.field_h, this.field_i, this.field_j, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.b(sb.field_h, this.field_i, this.field_j, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    ii(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
+    IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
         this.field_d = param0;
         this.field_h = param1;
         this.field_c = param2;
@@ -287,7 +287,7 @@ final class ii extends k {
         this.field_j = param7;
     }
 
-    ii(int param0, int param1, int param2) {
+    IndexedSprite(int param0, int param1, int param2) {
         this.field_f = param0;
         this.field_d = param0;
         this.field_g = param1;

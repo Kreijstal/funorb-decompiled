@@ -8,7 +8,7 @@ final class gk {
     static int field_f;
     static int field_e;
     static String field_a;
-    static ti[] field_c;
+    static Sprite[] field_c;
     static String field_g;
     static tf field_b;
 
@@ -42,7 +42,7 @@ final class gk {
               WordLanguage.field_k = stackIn_10_0;
               FullscreenFocusCanvas.field_a = stackIn_10_0;
               lj.field_z = jk.field_y;
-              qb.a(124, pi.field_h, ff.field_D, dh.field_x, ua.field_c);
+              qb.a(124, AchievementUnlockEvent.field_h, ff.field_D, dh.field_x, ua.field_c);
               rb.a(-1, -377);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -74,12 +74,12 @@ final class gk {
         field_d = null;
     }
 
-    final static ii a(String param0, int param1, ci param2, String param3) {
+    final static IndexedSprite a(String param0, int param1, ci param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         String var6 = null;
-        ii stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

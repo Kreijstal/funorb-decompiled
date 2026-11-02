@@ -46,12 +46,12 @@ final class pc {
         pc.a((String) null, (String) null, (ci) null, -89);
     }
 
-    final static ti a(String param0, String param1, ci param2, int param3) {
+    final static Sprite a(String param0, String param1, ci param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        ti stackIn_1_0 = null;
+        Sprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

@@ -5,7 +5,7 @@ final class si extends IntrusiveNode {
     private int[] field_o;
     static int field_l;
     byte[] field_p;
-    hb[] field_j;
+    PcmSample[] field_j;
     static TileRack newRack;
     nh[] field_m;
     short[] field_k;
@@ -70,7 +70,7 @@ final class si extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_j[var8] = (hb) (var7);
+                  this.field_j[var8] = (PcmSample) (var7);
                   this.field_o[var8] = 0;
                 }
               }
@@ -236,7 +236,7 @@ final class si extends IntrusiveNode {
           this.field_o = new int[128];
           this.field_k = new short[128];
           this.field_n = new byte[128];
-          this.field_j = new hb[128];
+          this.field_j = new PcmSample[128];
           this.field_g = new byte[128];
           this.field_m = new nh[128];
           var38 = new PacketBuffer(param0);

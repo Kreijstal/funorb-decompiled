@@ -10,7 +10,7 @@ final class kf extends td {
     private int field_m;
     static IntrusiveDeque field_o;
     static String[] field_k;
-    static ii[] field_h;
+    static IndexedSprite[] field_h;
     static int[] field_g;
     static String field_e;
     static pg field_i;
@@ -285,7 +285,7 @@ final class kf extends td {
         this.field_l = (long)param0;
     }
 
-    final static ti a(ti param0, boolean param1, byte param2) {
+    final static Sprite a(Sprite param0, boolean param1, byte param2) {
         int incrementValue$5 = 0;
         int incrementValue$4 = 0;
         int var17 = 0;
@@ -304,13 +304,13 @@ final class kf extends td {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ti var16 = null;
+        Sprite var16 = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
         int[] var25 = null;
-        ti stackIn_23_0 = null;
+        Sprite stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -371,7 +371,7 @@ final class kf extends td {
           var6 += 2;
           var15 = ga.a(param0.field_w[var6], (byte) -128) * 255 + ga.a(param0.field_w[var6 + 1], (byte) -113);
           var6 += 2;
-          var16 = new ti(var14, var15);
+          var16 = new Sprite(var14, var15);
           var16.field_l = var11Lifetime1;
           var16.field_u = var10Lifetime2;
           var16.field_r = var12Lifetime1;

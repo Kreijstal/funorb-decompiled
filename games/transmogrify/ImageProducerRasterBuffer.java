@@ -598,7 +598,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     final static void a(byte param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        gd var4 = null;
+        AchievementNotice var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = Transmogrify.field_A ? 1 : 0;
@@ -606,10 +606,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           if (param0 > -56) {
             field_j = -24L;
           }
-          var4 = (gd) (rh.field_r.a((byte) -95));
+          var4 = (AchievementNotice) (rh.field_r.a((byte) -95));
           while (var4 != null) {
             ne.a((byte) 7, var4, param1);
-            var4 = (gd) (rh.field_r.a(true));
+            var4 = (AchievementNotice) (rh.field_r.a(true));
           }
           var2 = oc.field_G.a((byte) -95);
           while (var2 != null) {

@@ -322,18 +322,18 @@ class aj extends UiWidget implements pb {
     }
 
     final static void a(ci param0, ci param1, ci param2, int param3) {
-        ti var17 = null;
-        ii[] var5 = null;
-        ii[][] var6 = null;
+        Sprite var17 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var19 = null;
         int[][] var16 = null;
         int[][] var7 = null;
-        ii[] var14 = null;
+        IndexedSprite[] var14 = null;
         int var11_int = 0;
-        ti var15 = null;
-        ti var18 = null;
-        ti var11 = null;
-        ti var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = Transmogrify.field_A ? 1 : 0;
@@ -348,13 +348,13 @@ class aj extends UiWidget implements pb {
           al.field_i = (kg) ((Object) ua.a(param2, "commonui", 32, param1, "arezzo12"));
           vd.field_h = (kg) ((Object) ua.a(param2, "commonui", 32, param1, "arezzo14"));
           rh.field_q = (kg) ((Object) ua.a(param2, "commonui", param3 - 2394310, param1, "arezzo14bold"));
-          var17 = new ti(param0.a("", (byte) 100, "button.gif"), (java.awt.Component) ((Object) gd.field_k));
+          var17 = new Sprite(param0.a("", (byte) 100, "button.gif"), (java.awt.Component) ((Object) AchievementNotice.field_k));
           gk.a("commonui", param3 ^ -2392393, param2, "dropdown");
           var5 = ej.a((byte) -43, param2, "screen_options", "commonui");
-          kf.field_h = new ii[4];
-          fj.field_a = new ii[4];
-          eh.field_b = new ii[4];
-          var6 = new ii[][]{fj.field_a, kf.field_h, eh.field_b};
+          kf.field_h = new IndexedSprite[4];
+          fj.field_a = new IndexedSprite[4];
+          eh.field_b = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{fj.field_a, kf.field_h, eh.field_b};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -368,7 +368,7 @@ class aj extends UiWidget implements pb {
           var19[3][var8Lifetime1] = 4767999;
           for (var9 = 0; var9 < 3; var9++) {
             var14 = var6[var9];
-            ii[] var10 = var14;
+            IndexedSprite[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
               var14[var11_int] = qf.a(var5[var9], var19[var11_int], -2);
             }
@@ -377,18 +377,18 @@ class aj extends UiWidget implements pb {
           og.a((byte) 108);
           var17.e();
           sb.b(0, 0, sb.field_c, sb.field_g);
-          var15 = new ti(var9Lifetime1, var9Lifetime1);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.e();
           var17.f(0, 0);
-          var11 = new ti(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.e();
           var17.f(-var17.field_n + var9Lifetime1, 0);
-          var12 = new ti(-(2 * var9Lifetime1) + var17.field_n, var9Lifetime1);
+          var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_n, var9Lifetime1);
           var12.e();
           var17.f(-var9Lifetime1, 0);
           fi.c(true);
-          mc.field_b = new ti[]{var15, var12, var11};
+          mc.field_b = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "aj.QB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -642,7 +642,7 @@ class aj extends UiWidget implements pb {
         }
     }
 
-    aj(int param0, int param1, int param2, int param3, WidgetListener param4) {
+    aj(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
         super(param0, param1, param2, param3, param4, (ma) null);
         this.field_u = new IntrusiveDeque();
     }

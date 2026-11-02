@@ -129,16 +129,16 @@ final class WordDictionary {
         }
     }
 
-    final static ti[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
         int var5 = -101 / ((param3 - 78) / 48);
-        ti[] var6 = new ti[9];
-        ti dupTemp$0 = cd.a(param1, param4, (byte) -20);
+        Sprite[] var6 = new Sprite[9];
+        Sprite dupTemp$0 = cd.a(param1, param4, (byte) -20);
         var6[6] = dupTemp$0;
         var6[3] = dupTemp$0;
         var6[2] = dupTemp$0;
         var6[1] = dupTemp$0;
         var6[0] = dupTemp$0;
-        ti dupTemp$1 = cd.a(param2, param4, (byte) -31);
+        Sprite dupTemp$1 = cd.a(param2, param4, (byte) -31);
         var6[8] = dupTemp$1;
         var6[7] = dupTemp$1;
         var6[5] = dupTemp$1;

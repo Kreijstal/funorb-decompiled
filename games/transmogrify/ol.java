@@ -34,7 +34,7 @@ final class ol {
               return;
             }
             wd.field_g = param7;
-            pi.field_h = param2;
+            AchievementUnlockEvent.field_h = param2;
             lf.field_c = param13;
             l.field_b = param4;
             kf.field_p = param0;

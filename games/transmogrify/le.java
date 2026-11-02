@@ -254,7 +254,7 @@ class le extends lj {
         }
     }
 
-    le(String param0, WidgetListener param1) {
+    le(String param0, WidgetRenderer param1) {
         super(param0, (ma) null);
         this.field_B = null;
         try {

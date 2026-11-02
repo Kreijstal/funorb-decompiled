@@ -71,7 +71,7 @@ final class ne {
         var1Lifetime4 = 60 % ((-44 - param0) / 35);
     }
 
-    final static void a(byte param0, gd param1, int param2) {
+    final static void a(byte param0, AchievementNotice param1, int param2) {
         int var4 = 0;
         hj var5 = ff.field_D;
         var5.a(false, param2);

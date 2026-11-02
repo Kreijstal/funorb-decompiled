@@ -109,7 +109,7 @@ final class va extends me {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_l)) {
-            var3 = pi.a(17118, param1);
+            var3 = AchievementUnlockEvent.a(17118, param1);
             if (!var3.b(-26753)) {
               stackIn_8_0 = fi.field_u;
               return stackIn_8_0;

@@ -5,7 +5,7 @@ final class ch {
     static int field_b;
     static String field_a;
     static IntrusiveDeque field_e;
-    static ti field_c;
+    static Sprite field_c;
     static Boolean field_f;
     static int field_d;
 

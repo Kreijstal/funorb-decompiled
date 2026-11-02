@@ -255,7 +255,7 @@ final class rb {
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param1 == null) {
-            stackIn_3_0 = se.field_o;
+            stackIn_3_0 = SpriteState.field_o;
             return stackIn_3_0;
           }
           var3_int = param1.length();
@@ -292,10 +292,10 @@ final class rb {
               stackIn_20_0 = kd.field_d;
               return stackIn_20_0;
             }
-            stackIn_15_0 = se.field_o;
+            stackIn_15_0 = SpriteState.field_o;
             return stackIn_15_0;
           }
-          stackIn_10_0 = se.field_o;
+          stackIn_10_0 = SpriteState.field_o;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

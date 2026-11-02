@@ -25,7 +25,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (TileRack.field_b >= 0 &&
               var2_int >= 0) {
-              se.field_p[TileRack.field_b] = ~var2_int;
+              SpriteState.field_p[TileRack.field_b] = ~var2_int;
               TileRack.field_b = 127 & TileRack.field_b + 1;
               if (sc.field_a == TileRack.field_b) {
                 TileRack.field_b = -1;
@@ -129,7 +129,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (TileRack.field_b >= 0 &&
               var2_int >= 0) {
-              se.field_p[TileRack.field_b] = var2_int;
+              SpriteState.field_p[TileRack.field_b] = var2_int;
               TileRack.field_b = TileRack.field_b + 1 & 127;
               if (TileRack.field_b == sc.field_a) {
                 TileRack.field_b = -1;

@@ -4,9 +4,9 @@
 final class tb {
     static int field_a;
     static kg field_c;
-    static ti field_e;
+    static Sprite field_e;
     static int[] field_d;
-    static ti[] field_b;
+    static Sprite[] field_b;
 
     final static void a(kk param0, int param1, boolean param2, boolean param3, int param4) {
         RuntimeException stackIn_25_0 = null;

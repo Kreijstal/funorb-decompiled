@@ -4,7 +4,7 @@
 final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     java.awt.Frame field_f;
     static String field_e;
-    static hb[] field_d;
+    static PcmSample[] field_d;
     volatile boolean field_c;
     static int field_b;
     static int field_a;
@@ -77,7 +77,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     }
 
     static {
-        field_d = new hb[13];
+        field_d = new PcmSample[13];
         field_e = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
         field_a = -1;
     }

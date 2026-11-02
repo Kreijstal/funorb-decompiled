@@ -14,7 +14,7 @@ class UiWidget extends IntrusiveNode {
     int field_l;
     int field_r;
     int field_h;
-    WidgetListener field_q;
+    WidgetRenderer field_q;
     int field_s;
     ma field_m;
 
@@ -543,7 +543,7 @@ class UiWidget extends IntrusiveNode {
         this.field_o = 0;
     }
 
-    UiWidget(String param0, WidgetListener param1, ma param2) {
+    UiWidget(String param0, WidgetRenderer param1, ma param2) {
         RuntimeException runtimeException = null;
         m var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -592,7 +592,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    UiWidget(int param0, int param1, int param2, int param3, WidgetListener param4, ma param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetRenderer param4, ma param5) {
         this.field_r = 0;
         this.field_o = 0;
         try {

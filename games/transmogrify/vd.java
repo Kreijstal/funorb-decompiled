@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vd {
-    WidgetListener field_d;
+    WidgetRenderer field_d;
     private int field_k;
-    WidgetListener field_q;
+    WidgetRenderer field_q;
     int field_c;
     int field_l;
     int field_e;
     int field_g;
-    WidgetListener field_o;
-    WidgetListener field_f;
+    WidgetRenderer field_o;
+    WidgetRenderer field_f;
     kg field_m;
-    WidgetListener field_b;
+    WidgetRenderer field_b;
     static volatile int field_a;
     int field_i;
     int field_j;
@@ -503,19 +503,19 @@ final class vd {
         pa discarded$0 = null;
         ij discarded$1 = null;
         ki var8 = null;
-        ti[] var9 = null;
-        ti[] var10 = null;
-        ti dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         ki var11 = null;
         ki var12 = null;
-        ti var13 = null;
+        Sprite var13 = null;
         ki var14 = null;
         ki var19 = null;
         int var15 = Transmogrify.field_A ? 1 : 0;
         h var17 = new h(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_t + param1.field_y));
         ki var14Lifetime1;
         ki var14Lifetime2;
-        this.field_q = (WidgetListener) ((Object) var17);
+        this.field_q = (WidgetRenderer) ((Object) var17);
         var17.field_f = 16777215;
         ki var4 = new ki();
         var17.a((byte) -106, var4);
@@ -533,7 +533,7 @@ final class vd {
         var4.a((byte) -21, 0).a(-108, 15658734).a(we.a(8947848, 124, 7829367, 10066329), (byte) 32);
         var4.a((byte) -21, 1).a(we.a(11184810, 117, 13421772, 10066329), (byte) 32);
         var4.a((byte) -21, 3).a(we.a(8947848, 112, 10066329, 7829367), (byte) 32).a(1, (byte) 112).a(1, false);
-        ti[] var5 = new ti[9];
+        Sprite[] var5 = new Sprite[9];
         if (param0 >= -12) {
           return;
         }
@@ -543,28 +543,28 @@ final class vd {
           for (var7_int = 0; var18.field_w.length > var7_int; var7_int++) {
             var16.field_w[var7_int] = 1077952576;
           }
-          var5[4] = (ti) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) -21, 4).a(true, 256).a(var5, (byte) 32);
           var4.a((byte) -21, 5).a(bh.a(65793, -118, 0, 0, 0), (byte) 32).a(true, 256).a(-116, -1);
-          this.field_d = (WidgetListener) ((Object) var4);
+          this.field_d = (WidgetRenderer) ((Object) var4);
           var6 = new ki(var4, true);
           var6.field_b = 0;
           var7 = new ki(var4, true);
           var7.field_b = 0;
           var7.a(qa.a(68, 8947848), -114);
           var7.a((byte) -21, 1).a(qa.a(64, 11184810), (byte) 32).a(-81, 2236962);
-          this.field_b = (WidgetListener) ((Object) new wi(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_b = (WidgetRenderer) ((Object) new wi(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new pa(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ij(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ki();
           var17.a((byte) -106, var8);
           var8.a((byte) -21, 0).a(we.a(15658734, 116, 10066329, 7829367), (byte) 32).a(-62, 1118481).b(-1, (byte) -102);
           var8.a((byte) -21, 4).a(true, 256).a(var5, (byte) 32);
-          this.field_f = (WidgetListener) ((Object) var8);
-          var9 = new ti[9];
-          var10 = new ti[9];
-          var9[4] = new ti(2, 1);
-          var10[4] = new ti(1, 2);
+          this.field_f = (WidgetRenderer) ((Object) var8);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_w = new int[]{6710886, 7829367};
           var10[4].field_w = new int[]{6710886, 7829367};
@@ -572,7 +572,7 @@ final class vd {
           var12 = new ki();
           var11.a(0, -19106, var9);
           var12.a(0, -19106, var10);
-          var13 = new ti(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_w = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new ki(var4, true);
           var14.a(var13.a(), 1);
@@ -603,7 +603,7 @@ final class vd {
             this.a(param0, (byte) 125, param3, param2);
           }
           if (param1 < 6) {
-            this.field_f = (WidgetListener) null;
+            this.field_f = (WidgetRenderer) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

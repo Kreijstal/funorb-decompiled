@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kd implements WidgetListener {
+final class kd implements WidgetRenderer {
     static String field_d;
     static PacketBuffer field_c;
     static int field_a;
@@ -15,7 +15,7 @@ final class kd implements WidgetListener {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        ti var8 = null;
+        Sprite var8 = null;
         int var9 = 0;
         try {
           var6_int = param0 + param4.field_p;
@@ -75,7 +75,7 @@ final class kd implements WidgetListener {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4_int = 0;
-        ti var4 = null;
+        Sprite var4 = null;
         Object var5_ref = null;
         int var5 = 0;
         int var6 = 0;
@@ -88,8 +88,8 @@ final class kd implements WidgetListener {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        pi var15 = null;
-        ti var16 = null;
+        AchievementUnlockEvent var15 = null;
+        Sprite var16 = null;
         StringBuilder var17 = null;
         Object var8Lifetime1;
         Object var8Lifetime2;
@@ -254,9 +254,9 @@ final class kd implements WidgetListener {
             }
             if (var8Lifetime1 != null &&
               dc.field_a < 50) {
-              var9 = ((ti) (var8Lifetime1)).field_n * (100 - 2 * dc.field_a) / 50;
-              var10 = ((ti) (var8Lifetime1)).field_m * (-(2 * dc.field_a) + 100) / 50;
-              ((ti) (var8Lifetime1)).b(-var9 + 640 >> 1, 480 - var10 >> 1, var9, var10);
+              var9 = ((Sprite) (var8Lifetime1)).field_n * (100 - 2 * dc.field_a) / 50;
+              var10 = ((Sprite) (var8Lifetime1)).field_m * (-(2 * dc.field_a) + 100) / 50;
+              ((Sprite) (var8Lifetime1)).b(-var9 + 640 >> 1, 480 - var10 >> 1, var9, var10);
             }
           }
           if (null != sg.field_d) {
@@ -310,7 +310,7 @@ final class kd implements WidgetListener {
             IntrusiveNode.field_d.a("FPS: " + ub.field_a, 630, 30, 65535, -1);
             IntrusiveNode.field_d.a("LPS: " + oc.field_y, 630, 60, 65535, -1);
           }
-          var15 = (pi) (oj.field_u.a((byte) -95));
+          var15 = (AchievementUnlockEvent) (oj.field_u.a((byte) -95));
           var8Lifetime2 = var15;
           if (var8Lifetime2 != null) {
             var10Lifetime2 = da.field_C;

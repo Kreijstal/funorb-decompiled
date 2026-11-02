@@ -82,7 +82,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                pi.field_g = param1;
+                AchievementUnlockEvent.field_g = param1;
                 var2 = kb.a("loginm3", (byte) 119);
                 if (var2 != null) {
                   ng.field_h = eg.a(125, var2);
@@ -97,7 +97,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("idlemessage20min", (byte) 109);
                 if (var2 != null) {
-                  k.field_a = eg.a(88, var2);
+                  IndexedSpriteState.field_a = eg.a(88, var2);
                 }
                 var2 = kb.a("error_js5crc", (byte) 115);
                 if (var2 != null) {
@@ -1634,7 +1634,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_alert_namelength", (byte) 119);
                 if (null != var2) {
-                  se.field_o = eg.a(param0 + 103, var2);
+                  SpriteState.field_o = eg.a(param0 + 103, var2);
                 }
                 var2 = kb.a("create_alert_namechars", (byte) 127);
                 if (null != var2) {
@@ -1862,7 +1862,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("loading_soundeffects", (byte) 108);
                 if (var2 != null) {
-                  k.field_e = eg.a(88, var2);
+                  IndexedSpriteState.field_e = eg.a(88, var2);
                 }
                 var2 = kb.a("loading_music", (byte) 115);
                 if (var2 != null) {
@@ -3068,7 +3068,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 if (null != var2) {
                   eg.a(93, var2);
                 }
-                pi.field_g = null;
+                AchievementUnlockEvent.field_g = null;
             }
             void run() {
                 var3 = Transmogrify.field_A ? 1 : 0;
@@ -3213,11 +3213,11 @@ final class ContextualRuntimeException extends RuntimeException {
         this.field_b = param0;
     }
 
-    final static ti[] a(ci param0, byte param1, String param2, String param3) {
+    final static Sprite[] a(ci param0, byte param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ti[] stackIn_4_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

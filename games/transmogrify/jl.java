@@ -9,7 +9,7 @@ final class jl extends IntrusiveNode {
     int field_k;
     int field_h;
     int field_m;
-    static ti field_l;
+    static Sprite field_l;
     static int field_j;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -128,7 +128,7 @@ final class jl extends IntrusiveNode {
     public static void a(byte param0) {
         field_l = null;
         if (param0 < 9) {
-          field_l = (ti) null;
+          field_l = (Sprite) null;
         }
     }
 

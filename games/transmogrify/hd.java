@@ -227,7 +227,7 @@ final class hd {
               GameKeyHandler.field_b.b(var6, var8Lifetime1, var1_int + field_d, var5, -1);
               var1_int = var1_int + fi.field_x;
             } else {
-              tb.field_c.b(var6, var8Lifetime1, var1_int + pi.field_k, var5, -1);
+              tb.field_c.b(var6, var8Lifetime1, var1_int + AchievementUnlockEvent.field_k, var5, -1);
               var1_int = var1_int + (hi.field_c + (ee.field_D + jl.field_o));
             }
           }

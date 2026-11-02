@@ -123,8 +123,8 @@ final class f {
         field_b = null;
     }
 
-    final static ii a(int param0) {
-        ii var1 = new ii(pj.field_y, ll.field_U, BufferedSocket.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[param0], re.field_K[0], rg.field_D);
+    final static IndexedSprite a(int param0) {
+        IndexedSprite var1 = new IndexedSprite(pj.field_y, ll.field_U, BufferedSocket.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[param0], re.field_K[0], rg.field_D);
         wd.d(param0 ^ 9);
         return var1;
     }

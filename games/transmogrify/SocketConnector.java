@@ -76,16 +76,16 @@ abstract class SocketConnector {
         var3Lifetime1 = 119 % ((-73 - param2) / 42);
     }
 
-    final static hb a(int param0, int param1, int param2, hb param3) {
-        hb var4 = null;
+    final static PcmSample a(int param0, int param1, int param2, PcmSample param3) {
+        PcmSample var4 = null;
         RuntimeException var4_ref = null;
-        hb stackIn_1_0 = null;
+        PcmSample stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new hb(param3.field_h, -param2 + param0);
+          var4 = new PcmSample(param3.field_h, -param2 + param0);
           ji.a(param3.field_l, param2, var4.field_l, param1, var4.field_l.length);
           stackIn_1_0 = var4;
           return stackIn_1_0;

@@ -109,7 +109,7 @@ final class al {
         if (b.field_k != 0) {
           if (this.field_g <= 0) {
             this.field_c = this.field_e;
-            this.field_g = se.field_v;
+            this.field_g = SpriteState.field_v;
             this.field_g = this.field_g - 1;
           } else {
             this.field_g = this.field_g - 1;

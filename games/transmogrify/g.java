@@ -49,7 +49,7 @@ final class g extends fi {
         }
     }
 
-    private g(int param0, int param1, int param2, int param3, WidgetListener param4, ma param5, UiWidget param6) {
+    private g(int param0, int param1, int param2, int param3, WidgetRenderer param4, ma param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_v = param6;

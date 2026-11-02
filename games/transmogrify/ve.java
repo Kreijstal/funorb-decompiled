@@ -55,10 +55,10 @@ final class ve extends lj {
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        ti var16 = null;
-        ti var17 = null;
-        ti var14 = null;
-        ti var13 = null;
+        Sprite var16 = null;
+        Sprite var17 = null;
+        Sprite var14 = null;
+        Sprite var13 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = Transmogrify.field_A ? 1 : 0;
@@ -77,7 +77,7 @@ final class ve extends lj {
           var10 = var16.field_r << 1;
           var11 = var16.field_s << 1;
           if (null == vh.field_l) {
-            vh.field_l = new ti(var10, var11);
+            vh.field_l = new Sprite(var10, var11);
             oj.a(vh.field_l, 256);
             var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
@@ -85,7 +85,7 @@ final class ve extends lj {
             return;
           }
           if (var10 > vh.field_l.field_n) {
-            vh.field_l = new ti(var10, var11);
+            vh.field_l = new Sprite(var10, var11);
             oj.a(vh.field_l, 256);
             var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
@@ -93,7 +93,7 @@ final class ve extends lj {
             return;
           }
           if (vh.field_l.field_m < var11) {
-            vh.field_l = new ti(var10, var11);
+            vh.field_l = new Sprite(var10, var11);
             oj.a(vh.field_l, 256);
             var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
@@ -112,7 +112,7 @@ final class ve extends lj {
           var10Lifetime1 = var17.field_r << 1;
           var11Lifetime1 = var17.field_s << 1;
           if (null == vh.field_l) {
-            vh.field_l = new ti(var10Lifetime1, var11Lifetime1);
+            vh.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
             oj.a(vh.field_l, 256);
             var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
@@ -120,7 +120,7 @@ final class ve extends lj {
             return;
           }
           if (var10Lifetime1 > vh.field_l.field_n) {
-            vh.field_l = new ti(var10Lifetime1, var11Lifetime1);
+            vh.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
             oj.a(vh.field_l, 256);
             var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
@@ -128,7 +128,7 @@ final class ve extends lj {
             return;
           }
           if (vh.field_l.field_m < var11Lifetime1) {
-            vh.field_l = new ti(var10Lifetime1, var11Lifetime1);
+            vh.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
             oj.a(vh.field_l, 256);
             var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);

@@ -9,7 +9,7 @@ final class tj extends uh {
     static String field_t;
     static String field_A;
     static int field_u;
-    static ti field_s;
+    static Sprite field_s;
     static String field_z;
     static int field_y;
     static String field_v;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelInput {
-    static ti[] field_a;
+    static Sprite[] field_a;
     static boolean field_b;
 
     abstract int a(int param0);

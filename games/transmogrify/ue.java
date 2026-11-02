@@ -6,7 +6,7 @@ import java.io.*;
 abstract class ue {
     static int field_a;
     ol[] field_b;
-    static ii[] field_c;
+    static IndexedSprite[] field_c;
 
     final int a(int param0) {
         int stackIn_6_0 = 0;
