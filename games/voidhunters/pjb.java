@@ -76,7 +76,7 @@ final class pjb extends llb {
           var6_int = stackIn_4_0;
           param0.a(-632, var6_int, param2);
           if (var6_int != 0) {
-            var7 = iia.a(-98, -1 + param4.length);
+            var7 = BodyInZoneCondition.a(-98, -1 + param4.length);
             var8 = param1;
             for (var9 = 0; var8.length > var9; var9++) {
               var10 = var8[var9];
@@ -92,11 +92,11 @@ final class pjb extends llb {
                     continue;
                   }
                   param0.a(-632, var11, var7);
-                  stb.a(2, param3, param0, var10);
+                  GetComponentBreakingExplosionForceMultiplier.a(2, param3, param0, var10);
                   break;
                 }
                 if (decompiledNaturalLoopExit0) {
-                  stb.a(2, param3, param0, var10);
+                  GetComponentBreakingExplosionForceMultiplier.a(2, param3, param0, var10);
                 }
               }
             }
@@ -127,7 +127,7 @@ final class pjb extends llb {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ final class pjb extends llb {
         if (!param1) {
           return (jk) null;
         }
-        return (jk) (icb.field_p.a(-1, param0));
+        return (jk) (SetUseDetailLines.field_p.a(-1, param0));
     }
 
     final boolean i(int param0) {
@@ -465,7 +465,7 @@ final class pjb extends llb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

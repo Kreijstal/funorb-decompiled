@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class coa implements ntb {
+final class coa implements DiffableState {
     static int[] field_d;
     lc field_e;
-    boolean field_a;
-    int[] field_c;
-    private int[] field_b;
+    boolean copyToClipboardHidden;
+    int[] componentoptionStates;
+    private int[] voteoptionStates;
     static int field_f;
 
     final void a(byte param0) {
@@ -14,13 +14,13 @@ final class coa implements ntb {
         if (param0 != -65) {
           discarded$0 = this.b(-107);
         }
-        this.field_b = this.b(param0 ^ -64);
-        this.field_c = this.c(0);
-        this.field_a = true;
+        this.voteoptionStates = this.b(param0 ^ -64);
+        this.componentoptionStates = this.c(0);
+        this.copyToClipboardHidden = true;
     }
 
     final boolean d(int param0, byte param1) {
-        int var3 = this.field_b[param0];
+        int var3 = this.voteoptionStates[param0];
         if (param1 != -43) {
           return true;
         }
@@ -55,9 +55,9 @@ final class coa implements ntb {
         RuntimeException var3_ref = null;
         try {
           var3 = (coa) (param1);
-          var3.field_b = dob.a(var3.field_b, (byte) -108, this.field_b);
-          var3.field_c = dob.a(var3.field_c, (byte) -38, this.field_c);
-          var3.field_a = this.field_a;
+          var3.voteoptionStates = SetTeamSelectionSpeedup.a(var3.voteoptionStates, (byte) -108, this.voteoptionStates);
+          var3.componentoptionStates = SetTeamSelectionSpeedup.a(var3.componentoptionStates, (byte) -38, this.componentoptionStates);
+          var3.copyToClipboardHidden = this.copyToClipboardHidden;
           if (param0 < 54) {
             this.d(-67, (byte) -39);
           }
@@ -72,11 +72,11 @@ final class coa implements ntb {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         int var4 = 0;
         coa var5 = null;
         int stackIn_10_0 = 0;
@@ -87,28 +87,28 @@ final class coa implements ntb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var5 = (coa) (param0);
-          if (param1 >= -19) {
+          var5 = (coa) (other);
+          if (obfuscationGuard >= -19) {
             return;
           }
           var4 = 0;
-          if (ikb.a(this.field_b, var5.field_b, false)) {
+          if (GetCountermeasuresCooldown.a(this.voteoptionStates, var5.voteoptionStates, false)) {
             var4 = 1;
             System.out.println("int[] voteoption_states has changed. ");
           }
-          if (ikb.a(this.field_c, var5.field_c, false)) {
+          if (GetCountermeasuresCooldown.a(this.componentoptionStates, var5.componentoptionStates, false)) {
             var4 = 1;
             System.out.println("int[] componentoption_states has changed. ");
           }
-          stackIn_10_0 = (var5.field_a) ? 0 : 1;
-          if (this.field_a) {
+          stackIn_10_0 = (var5.copyToClipboardHidden) ? 0 : 1;
+          if (this.copyToClipboardHidden) {
             stackIn_13_1 = 0;
           } else {
             stackIn_13_1 = 1;
           }
           if (stackIn_10_0 != stackIn_13_1) {
             var4 = 1;
-            System.out.println("boolean copy_to_clipboard_hidden has changed. before=" + var5.field_a + ", now=" + this.field_a);
+            System.out.println("boolean copy_to_clipboard_hidden has changed. before=" + var5.copyToClipboardHidden + ", now=" + this.copyToClipboardHidden);
           }
           if (var4 != 0) {
             System.out.println("This instance of ServerInfo has changed");
@@ -119,12 +119,12 @@ final class coa implements ntb {
           var3 = decompiledCaughtException;
           stackIn_22_0 = var3;
           stackIn_22_1 = new StringBuilder().append("coa.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -155,28 +155,28 @@ final class coa implements ntb {
         int[] var4 = null;
         int[] var2 = null;
         int[] var2Lifetime1;
-        if (null == this.field_b) {
-          this.field_b = this.b(119);
+        if (null == this.voteoptionStates) {
+          this.voteoptionStates = this.b(119);
           return;
         }
-        if (this.field_b.length != 31) {
+        if (this.voteoptionStates.length != 31) {
           var3 = this.b(param0 - 13424);
           var2 = var3;
-          this.a(this.field_b, (byte) 117, var3);
-          this.field_b = var3;
+          this.a(this.voteoptionStates, (byte) 117, var3);
+          this.voteoptionStates = var3;
         }
-        if (this.field_c == null) {
-          this.field_c = this.c(param0 - 13546);
+        if (this.componentoptionStates == null) {
+          this.componentoptionStates = this.c(param0 - 13546);
           return;
         }
         if (param0 != 13546) {
           this.d(-88, (byte) 56);
         }
-        if (56 != this.field_c.length) {
+        if (56 != this.componentoptionStates.length) {
           var4 = this.c(0);
           var2Lifetime1 = var4;
-          this.a(this.field_c, (byte) 108, var4);
-          this.field_c = var4;
+          this.a(this.componentoptionStates, (byte) 108, var4);
+          this.componentoptionStates = var4;
         }
     }
 
@@ -203,14 +203,14 @@ final class coa implements ntb {
     }
 
     public final String toString() {
-        return "Voteoption states=" + fva.a(this.field_b, false) + "\nComponentoption states=" + fva.a(this.field_c, false) + "\ncopy_to_clipboard_hidden=" + this.field_a + "\nServerside: " + this.field_e;
+        return "Voteoption states=" + SetFightersPerPlayerMaximum.a(this.voteoptionStates, false) + "\nComponentoption states=" + SetFightersPerPlayerMaximum.a(this.componentoptionStates, false) + "\ncopy_to_clipboard_hidden=" + this.copyToClipboardHidden + "\nServerside: " + this.field_e;
     }
 
     final boolean d(int param0, int param1) {
         if (param0 != -22549) {
           this.field_e = (lc) null;
         }
-        int var3 = this.field_c[param1];
+        int var3 = this.componentoptionStates[param1];
         return this.c(var3, param0 + 22645);
     }
 
@@ -259,12 +259,12 @@ final class coa implements ntb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final boolean a(int param0, byte param1) {
-        int var3 = this.field_b[param0];
+        int var3 = this.voteoptionStates[param0];
         int var4 = 22 % ((-29 - param1) / 48);
         return this.a(true, var3);
     }
@@ -274,7 +274,7 @@ final class coa implements ntb {
           tv var4 = (tv) null;
           this.b((byte) 119, (tv) null);
         }
-        int var3 = this.field_b[param0];
+        int var3 = this.voteoptionStates[param0];
         return this.c(var3, -52);
     }
 
@@ -292,7 +292,7 @@ final class coa implements ntb {
         if (param2 != -84) {
           return true;
         }
-        int var4 = this.field_c[param1];
+        int var4 = this.componentoptionStates[param1];
         return this.a(var4, param0, false);
     }
 
@@ -319,7 +319,7 @@ final class coa implements ntb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -345,7 +345,7 @@ final class coa implements ntb {
         var2[12] = 5;
         var2[30] = 4;
         if (param0 <= 117) {
-          this.field_c = (int[]) null;
+          this.componentoptionStates = (int[]) null;
         }
         var2[29] = 4;
         var2[1] = 5;
@@ -361,12 +361,12 @@ final class coa implements ntb {
 
     public final void a(faa param0, boolean param1) {
         try {
-          this.field_b = wkb.a((byte) 37, this.field_b, param0, 8);
-          this.field_c = wkb.a((byte) 37, this.field_c, param0, 8);
-          this.field_a = kv.a(param1, param0);
+          this.voteoptionStates = wkb.a((byte) 37, this.voteoptionStates, param0, 8);
+          this.componentoptionStates = wkb.a((byte) 37, this.componentoptionStates, param0, 8);
+          this.copyToClipboardHidden = kv.a(param1, param0);
           this.b(true);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "coa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "coa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -374,14 +374,14 @@ final class coa implements ntb {
         if (param0 > -116) {
           this.c(-38, (byte) 32);
         }
-        int var3 = this.field_b[param1];
+        int var3 = this.voteoptionStates[param1];
         return this.a(var3, -8);
     }
 
     final boolean a(int param0, int param1, boolean param2) {
-        int var4 = this.field_b[param0];
+        int var4 = this.voteoptionStates[param0];
         if (param1 != 11) {
-          this.field_c = (int[]) null;
+          this.componentoptionStates = (int[]) null;
         }
         if (!this.a(param0, false)) {
           return false;
@@ -401,20 +401,20 @@ final class coa implements ntb {
         RuntimeException var3 = null;
         try {
           stackIn_2_0 = 8;
-          if (null == this.field_b) {
+          if (null == this.voteoptionStates) {
             stackIn_3_1 = 0;
           } else {
-            stackIn_3_1 = this.field_b.length;
+            stackIn_3_1 = this.voteoptionStates.length;
           }
-          pgb.a(stackIn_2_0, stackIn_3_1, 44, param0, this.field_b);
+          pgb.a(stackIn_2_0, stackIn_3_1, 44, param0, this.voteoptionStates);
           stackIn_5_0 = 8;
-          if (this.field_c != null) {
-            stackIn_6_1 = this.field_c.length;
+          if (this.componentoptionStates != null) {
+            stackIn_6_1 = this.componentoptionStates.length;
           } else {
             stackIn_6_1 = 0;
           }
-          pgb.a(stackIn_5_0, stackIn_6_1, 60, param0, this.field_c);
-          vq.a(param0, -110, this.field_a);
+          pgb.a(stackIn_5_0, stackIn_6_1, 60, param0, this.componentoptionStates);
+          vq.a(param0, -110, this.copyToClipboardHidden);
           if (param1 >= -109) {
             this.field_e = (lc) null;
           }
@@ -429,7 +429,7 @@ final class coa implements ntb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -437,7 +437,7 @@ final class coa implements ntb {
         if (param1 != 24) {
           this.a((byte) 119);
         }
-        int var3 = this.field_c[param0];
+        int var3 = this.componentoptionStates[param0];
         return this.a(var3, param1 ^ -32);
     }
 
@@ -494,12 +494,12 @@ final class coa implements ntb {
           if (param0 == null) {
             return null;
           }
-          var2 = new arb(param0, iib.field_e, so.field_f, nhb.field_o, hla.field_a, sh.field_a);
+          var2 = new arb(param0, iib.field_e, SettingsChange.field_f, SetMissionTerrainDebrisProbability.field_o, hla.field_a, sh.field_a);
           if (param1 != 11) {
             var3 = (byte[]) null;
             coa.a((byte[]) null, -100);
           }
-          qqb.a(69);
+          MatchResults.a(69);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -512,7 +512,7 @@ final class coa implements ntb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -529,7 +529,7 @@ final class coa implements ntb {
         if (param1 != 34) {
           field_d = (int[]) null;
         }
-        int var3 = this.field_c[param0];
+        int var3 = this.componentoptionStates[param0];
         return var3 != 4 ? true : false;
     }
 
@@ -547,10 +547,10 @@ final class coa implements ntb {
           boolean decompiledFrameRemainder0 = true;
           var4 = 55 / ((param0 - 22) / 59);
           var3 = (coa) (param1);
-          if (!wpb.a(var3.field_b, this.field_b, (byte) 28) &&
-            !wpb.a(var3.field_c, this.field_c, (byte) 28)) {
-            stackIn_5_0 = (this.field_a) ? 0 : 1;
-            if (stackIn_5_0 != (var3.field_a ? 1 : 0)) {
+          if (!SetBlueprintSaveTime.a(var3.voteoptionStates, this.voteoptionStates, (byte) 28) &&
+            !SetBlueprintSaveTime.a(var3.componentoptionStates, this.componentoptionStates, (byte) 28)) {
+            stackIn_5_0 = (this.copyToClipboardHidden) ? 0 : 1;
+            if (stackIn_5_0 != (var3.copyToClipboardHidden ? 1 : 0)) {
               stackIn_8_0 = false;
               decompiledFrameRemainder0 = false;
             }
@@ -569,7 +569,7 @@ final class coa implements ntb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

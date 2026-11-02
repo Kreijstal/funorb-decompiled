@@ -23,7 +23,7 @@ final class fdb extends hbb {
           this.f(-17);
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fdb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fdb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class fdb extends hbb {
         try {
           this.f(-17);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fdb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fdb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -59,49 +59,49 @@ final class fdb extends hbb {
         llb stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
         moa.a(true);
-        if (0 > tg.field_q) {
+        if (0 > SetShieldsDirectionalArcParticleSpeedDownshift.field_q) {
           nna.field_v.field_R = null;
         } else {
-          nna.field_v.field_R = isa.a(gcb.field_t, new String[]{Integer.toString(tg.field_q)}, 78);
+          nna.field_v.field_R = SetReverbGain.a(SetUseExtraBackground.field_t, new String[]{Integer.toString(SetShieldsDirectionalArcParticleSpeedDownshift.field_q)}, 78);
         }
         stackIn_9_0 = tb.field_a;
-        stackIn_10_1 = (param0) && (!param1) && (!bv.field_d) && (lqa.field_o == null) && (null == ohb.field_o);
+        stackIn_10_1 = (param0) && (!param1) && (!bv.field_d) && (SetSpinningBladeSpindamageMultiplier.field_o == null) && (null == SetThrusterParticleSpeedDownshift.field_o);
         ((llb) (Object) stackIn_9_0).a(stackIn_10_1, 1332);
         stackIn_16_0 = bqa.field_d;
-        stackIn_17_1 = (param0) && (!param1) && (!bv.field_d) && (null == lqa.field_o) && (null == ohb.field_o);
+        stackIn_17_1 = (param0) && (!param1) && (!bv.field_d) && (null == SetSpinningBladeSpindamageMultiplier.field_o) && (null == SetThrusterParticleSpeedDownshift.field_o);
         ((llb) (Object) stackIn_16_0).a(stackIn_17_1, 1332);
-        stackIn_21_0 = dd.field_o;
+        stackIn_21_0 = GetTorpedoProjectiles.field_o;
         stackIn_22_1 = (param0) && (!param1) && (bv.field_d);
         ((llb) (Object) stackIn_21_0).a(stackIn_22_1, 1332);
         lc.field_b.field_a.i(10000);
         if (gmb.field_c.field_o != 0) {
-          nwa.field_d = true;
+          MessageLog.field_d = true;
         }
         if (param3 < 96) {
           field_S = (String) null;
         }
-        if (gha.field_p.field_o != 0) {
-          if (ufa.field_o) {
+        if (GetMomentOfInertiaPerpointCalcDownshift.field_p.field_o != 0) {
+          if (GetOndamageParticleLife.field_o) {
             w.a(param2, (byte) 92);
           } else {
-            if (hcb.field_o > 0) {
+            if (GetDebrisCarryOver.field_o > 0) {
               w.a(param2, (byte) 92);
             } else {
-              if (go.field_p >= 2 &&
-                si.field_o[12]) {
+              if (SetAngularVelocitySustain.field_p >= 2 &&
+                SetMachineGunEnergyUsed.field_o[12]) {
                 w.a(param2, (byte) 92);
               }
             }
           }
         }
         if (0 != oib.field_a.field_o) {
-          if (ieb.field_o.length == 1 &&
-            sha.field_w != ieb.field_o[0]) {
-            sha.field_w = ieb.field_o[0];
+          if (SetMutatorVotes.field_o.length == 1 &&
+            sha.field_w != SetMutatorVotes.field_o[0]) {
+            sha.field_w = SetMutatorVotes.field_o[0];
           }
-          eaa.a((byte) 127, true, vva.field_u, 0, sha.field_w, param2);
+          GetMassDriverProjectiles.a((byte) 127, true, vva.field_u, 0, sha.field_w, param2);
         }
-        if (ss.field_o.field_o != 0) {
+        if (SetTorpedoAcceleration.field_o.field_o != 0) {
           bv.field_d = false;
         }
     }
@@ -122,7 +122,7 @@ final class fdb extends hbb {
           this.a(-91, param2, var4_int);
           int var5 = 76 % ((param0 - 80) / 33);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fdb.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fdb.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -213,7 +213,7 @@ final class fdb extends hbb {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class fdb extends hbb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class umb extends ksa implements ntb {
+final class umb extends IntrusiveNode implements DiffableState {
     static llb field_d;
     int field_g;
     boolean field_e;
@@ -16,7 +16,7 @@ final class umb extends ksa implements ntb {
         field_d = null;
     }
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
         umb var5 = null;
@@ -27,14 +27,14 @@ final class umb extends ksa implements ntb {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = (umb) (param0);
+          var5 = (umb) (other);
           var4 = 0;
           if (var5.field_f != this.field_f) {
-            iva.a(-6940, "int servertick has changed. before=" + var5.field_f + ", now=" + this.field_f);
+            GetSniperCannonAimarc.a(-6940, "int servertick has changed. before=" + var5.field_f + ", now=" + this.field_f);
             var4 = 1;
           }
           if (var5.field_g != this.field_g) {
-            iva.a(-6940, "int statecrc has changed. before=" + var5.field_g + ", now=" + this.field_g);
+            GetSniperCannonAimarc.a(-6940, "int statecrc has changed. before=" + var5.field_g + ", now=" + this.field_g);
             var4 = 1;
           }
           stackIn_7_0 = this.field_e;
@@ -45,27 +45,27 @@ final class umb extends ksa implements ntb {
           }
           if ((stackIn_7_0 ? 1 : 0) == stackIn_8_1) {
             var4 = 1;
-            iva.a(-6940, "boolean client_should_catchup has changed. ");
+            GetSniperCannonAimarc.a(-6940, "boolean client_should_catchup has changed. ");
           }
-          if (param1 > -19) {
+          if (obfuscationGuard > -19) {
             this.field_e = true;
           }
           if (var4 == 0) {
             return;
           }
-          tfb.a((byte) -82, "This instance of ServerTick has changed");
+          SetDebrisGrabbingRange.a((byte) -82, "This instance of ServerTick has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_19_0 = var3;
           stackIn_19_1 = new StringBuilder().append("umb.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class umb extends ksa implements ntb {
           }
           vq.a(param0, 43, this.field_e);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "umb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "umb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class umb extends ksa implements ntb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class umb extends ksa implements ntb {
           var4.field_g = this.field_g;
           var4.field_e = this.field_e;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "umb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "umb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -150,10 +150,10 @@ final class umb extends ksa implements ntb {
           this.field_e = kv.a(param1, param0);
           if (param1) {
             tv var4 = (tv) null;
-            this.a((tv) null, 89);
+            this.reportDifferences((tv) null, 89);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "umb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "umb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

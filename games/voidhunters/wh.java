@@ -66,19 +66,19 @@ final class wh extends ona {
             this.field_p.a((byte) 115);
             var2 = (km) (this.field_a.a((byte) -54));
             while (var2 != null) {
-              this.field_e.field_e = 0;
+              this.field_e.position = 0;
               this.field_e.c(0, 1);
               this.field_e.a(117, var2.field_i);
-              this.field_p.a(0, this.field_e.field_h, this.field_e.field_h.length, 0);
+              this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
               this.field_d.a(var2, -84);
               var2 = (km) (this.field_a.a(param0 + 1900));
             }
             var2Lifetime1 = (km) (this.field_c.a((byte) -54));
             while (var2Lifetime1 != null) {
-              this.field_e.field_e = 0;
+              this.field_e.position = 0;
               this.field_e.c(0, 0);
               this.field_e.a(100, var2Lifetime1.field_i);
-              this.field_p.a(0, this.field_e.field_h, this.field_e.field_h.length, 0);
+              this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
               this.field_f.a(var2Lifetime1, -65);
               var2Lifetime1 = (km) (this.field_c.a(1900));
             }
@@ -98,30 +98,30 @@ final class wh extends ona {
                   }
                 }
                 if (0 < var4) {
-                  var5 = -this.field_i.field_e + var4;
+                  var5 = -this.field_i.position + var4;
                   if (var5 > var3_int) {
                     var5 = var3_int;
                   }
-                  this.field_p.a(-122, this.field_i.field_e, var5, this.field_i.field_h);
+                  this.field_p.a(-122, this.field_i.position, var5, this.field_i.payload);
                   if (0 != this.field_j) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_i.field_h[this.field_i.field_e + var6] = (byte)mgb.a((int) this.field_i.field_h[this.field_i.field_e + var6], (int) this.field_j);
+                      this.field_i.payload[this.field_i.position + var6] = (byte)SetFixedaim.a((int) this.field_i.payload[this.field_i.position + var6], (int) this.field_j);
                     }
                   }
-                  this.field_i.field_e = this.field_i.field_e + var5;
-                  if (var4 <= this.field_i.field_e) {
+                  this.field_i.position = this.field_i.position + var5;
+                  if (var4 <= this.field_i.position) {
                     if (this.field_b != null) {
                       if (0 != this.field_b.field_r) {
                         throw new IOException();
                       }
-                      if (this.field_i.field_h[0] != -1) {
+                      if (this.field_i.payload[0] != -1) {
                         this.field_b = null;
                       } else {
-                        this.field_i.field_e = 0;
+                        this.field_i.position = 0;
                         this.field_b.field_r = 1;
                       }
                     } else {
-                      this.field_i.field_e = 0;
+                      this.field_i.position = 0;
                       var6 = this.field_i.e((byte) -126);
                       var7 = this.field_i.h(125);
                       var8 = this.field_i.e((byte) -125);
@@ -160,31 +160,31 @@ final class wh extends ona {
                       stackIn_78_0 = (var10 != 0) ? 9 : 5;
                       var15 = stackIn_78_0;
                       this.field_b = var14_ref;
-                      this.field_b.field_p = new ds(this.field_b.field_q + var9 + var15);
+                      this.field_b.field_p = new PacketBuffer(this.field_b.field_q + var9 + var15);
                       this.field_b.field_p.c(0, var10);
                       this.field_b.field_p.d(var9, param0 + 332614536);
-                      this.field_i.field_e = 0;
+                      this.field_i.position = 0;
                       this.field_b.field_r = 10;
                     }
                   }
                 } else {
-                  var5 = -this.field_b.field_q + this.field_b.field_p.field_h.length;
+                  var5 = -this.field_b.field_q + this.field_b.field_p.payload.length;
                   var6 = 512 - this.field_b.field_r;
-                  if (var6 > var5 - this.field_b.field_p.field_e) {
-                    var6 = -this.field_b.field_p.field_e + var5;
+                  if (var6 > var5 - this.field_b.field_p.position) {
+                    var6 = -this.field_b.field_p.position + var5;
                   }
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
-                  this.field_p.a(param0 ^ -126, this.field_b.field_p.field_e, var6, this.field_b.field_p.field_h);
+                  this.field_p.a(param0 ^ -126, this.field_b.field_p.position, var6, this.field_b.field_p.payload);
                   if (this.field_j != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_b.field_p.field_h[var7 + this.field_b.field_p.field_e] = (byte)mgb.a((int) this.field_b.field_p.field_h[var7 + this.field_b.field_p.field_e], (int) this.field_j);
+                      this.field_b.field_p.payload[var7 + this.field_b.field_p.position] = (byte)SetFixedaim.a((int) this.field_b.field_p.payload[var7 + this.field_b.field_p.position], (int) this.field_j);
                     }
                   }
                   this.field_b.field_r = this.field_b.field_r + var6;
-                  this.field_b.field_p.field_e = this.field_b.field_p.field_e + var6;
-                  if (var5 != this.field_b.field_p.field_e) {
+                  this.field_b.field_p.position = this.field_b.field_p.position + var6;
+                  if (var5 != this.field_b.field_p.position) {
                     if (this.field_b.field_r == 512) {
                       this.field_b.field_r = 0;
                     }
@@ -227,7 +227,7 @@ final class wh extends ona {
     private final void a(byte param0, boolean param1) {
         try {
           IOException iOException = null;
-          ds stackIn_6_0 = null;
+          PacketBuffer stackIn_6_0 = null;
           int stackIn_6_1 = 0;
           int stackIn_7_2 = 0;
           Throwable decompiledCaughtException = null;
@@ -239,7 +239,7 @@ final class wh extends ona {
             return;
           }
           try {
-            this.field_e.field_e = 0;
+            this.field_e.position = 0;
             stackIn_6_0 = this.field_e;
             stackIn_6_1 = 0;
             if (param1) {
@@ -247,9 +247,9 @@ final class wh extends ona {
             } else {
               stackIn_7_2 = 3;
             }
-            ((ds) (Object) stackIn_6_0).c(stackIn_6_1, stackIn_7_2);
+            ((PacketBuffer) (Object) stackIn_6_0).c(stackIn_6_1, stackIn_7_2);
             this.field_e.a(param0 ^ -50, 0L);
-            this.field_p.a(0, this.field_e.field_h, this.field_e.field_h.length, 0);
+            this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -286,11 +286,11 @@ final class wh extends ona {
             return;
           }
           try {
-            this.field_e.field_e = 0;
+            this.field_e.position = 0;
             this.field_e.c(0, 6);
             this.field_e.a(3, (byte) 125);
             this.field_e.a(0, true);
-            this.field_p.a(param0 ^ param0, this.field_e.field_h, this.field_e.field_h.length, 0);
+            this.field_p.a(param0 ^ param0, this.field_e.payload, this.field_e.payload.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -333,7 +333,7 @@ final class wh extends ona {
         if (param0 > -113) {
           wh.a(-4, (byte) 35, 31);
         }
-        stackIn_6_0 = (null != ov.field_o) && (sp.field_o == tc.field_c);
+        stackIn_6_0 = (null != SetShipSpawnInvulnerabilityTime.field_o) && (GetOndamageParticleSpeed.field_o == tc.field_c);
         return stackIn_6_0;
     }
 
@@ -383,7 +383,7 @@ final class wh extends ona {
             this.i(7571);
             this.a((byte) -65, param1);
             this.field_b = null;
-            this.field_i.field_e = 0;
+            this.field_i.position = 0;
             while (true) {
               var4_ref = (km) (this.field_d.b((byte) 87));
               if (var4_ref != null) {
@@ -402,11 +402,11 @@ final class wh extends ona {
             }
             if (0 != this.field_j) {
               try {
-                this.field_e.field_e = 0;
+                this.field_e.position = 0;
                 this.field_e.c(0, 4);
                 this.field_e.c(0, (int) this.field_j);
                 this.field_e.d(0, 332614536);
-                this.field_p.a(0, this.field_e.field_h, this.field_e.field_h.length, 0);
+                this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -437,7 +437,7 @@ final class wh extends ona {
             } else {
               stackIn_28_2 = "{...}";
             }
-            throw rta.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

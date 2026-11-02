@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tob extends fh {
+final class tob extends DualLinkNode {
     static String field_l;
     static dja field_o;
     private long field_n;
     int field_m;
-    private qfa field_k;
+    private OpenGlToolkit field_k;
 
     final static boolean g(int param0) {
         if (param0 != 0) {
@@ -42,13 +42,13 @@ final class tob extends fh {
         return this.field_n;
     }
 
-    tob(qfa param0, int param1, int param2) {
+    tob(OpenGlToolkit param0, int param1, int param2) {
         try {
           this.field_m = param1 * param2;
           this.field_k = param0;
           this.field_n = this.field_k.field_c.createPbuffer(param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "tob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

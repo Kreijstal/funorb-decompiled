@@ -4,7 +4,7 @@
 final class of {
     static gj field_a;
     long field_c;
-    private qfa field_b;
+    private OpenGlToolkit field_b;
 
     protected final void finalize() throws Throwable {
         this.field_b.a((byte) 18, this.field_c);
@@ -18,12 +18,12 @@ final class of {
         }
     }
 
-    of(qfa param0, long param1, ts[] param2) {
+    of(OpenGlToolkit param0, long param1, ts[] param2) {
         try {
           this.field_c = param1;
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

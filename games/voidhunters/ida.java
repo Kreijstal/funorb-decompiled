@@ -6,7 +6,7 @@ import java.io.*;
 final class ida extends mc {
     static kba field_x;
     static gj field_w;
-    private ij field_v;
+    private IntrusiveDeque field_v;
 
     final void a(boolean param0, shb param1) {
         if (!(param1 instanceof bl)) {
@@ -21,7 +21,7 @@ final class ida extends mc {
         try {
           var3.a(0, (shb) (this));
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ida.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ida.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -88,9 +88,9 @@ final class ida extends mc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          hoa.a(param1, 0, param0);
+          SetExplosionProjectileDamage.a(param1, 0, param0);
           if (lob.field_a != null) {
-            ukb.a(lob.field_a, (byte) 92);
+            SetPhasedEnergyBeamPulsetime.a(lob.field_a, (byte) 92);
           }
           if (param2 > -66) {
             var4 = (faa) null;
@@ -107,7 +107,7 @@ final class ida extends mc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -182,8 +182,8 @@ final class ida extends mc {
     }
 
     public ida() {
-        super(0, 0, fob.field_a, vi.field_p, (wwa) null, (sba) null);
-        this.field_v = new ij();
+        super(0, 0, fob.field_a, GetSniperCannonFiringLeeway.field_p, (wwa) null, (sba) null);
+        this.field_v = new IntrusiveDeque();
     }
 
     final static void a(faa param0, byte param1) {
@@ -235,7 +235,7 @@ final class ida extends mc {
           var22 = null;
           var12 = VoidHunters.field_G;
           try {
-            var13 = (mv) (tma.field_r.d(0));
+            var13 = (mv) (GetArmageddonLength.field_r.d(0));
             var18 = var13;
             if (var18 == null) {
               return;
@@ -262,7 +262,7 @@ final class ida extends mc {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.field_e;
+            var4 = param0.position;
             param0.d(var18.field_d, 332614536);
             for (var5 = 0; var5 < var18.field_i; var5++) {
               if (var18.field_k[var5] == 0) {
@@ -382,7 +382,7 @@ final class ida extends mc {
             } else {
               stackIn_70_2 = "{...}";
             }
-            throw rta.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(')').toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

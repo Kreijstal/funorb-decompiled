@@ -20,14 +20,14 @@ final class mia implements Runnable {
         mm var7 = null;
         faa var4 = null;
         faa var4Lifetime1;
-        if (param1 != paa.field_q) {
-          var6 = (mm) (ks.field_r.a(-1, (long)paa.field_q));
+        if (param1 != GetMachineGunPulsetime.field_q) {
+          var6 = (mm) (GetLaserReload.field_r.a(-1, (long)GetMachineGunPulsetime.field_q));
           var7 = var6;
           if (var7 != null) {
             var7.field_Ib = null;
           } else {
-            paa.field_q = param1;
-            var4 = dpa.field_p;
+            GetMachineGunPulsetime.field_q = param1;
+            var4 = RequestNewestBlackboxRecording.field_p;
             var4.h(24335, param0);
             var4.c(0, 3);
             var4.c(0, 11);
@@ -38,8 +38,8 @@ final class mia implements Runnable {
             }
             return;
           }
-          paa.field_q = param1;
-          var4Lifetime1 = dpa.field_p;
+          GetMachineGunPulsetime.field_q = param1;
+          var4Lifetime1 = RequestNewestBlackboxRecording.field_p;
           var4Lifetime1.h(24335, param0);
           var4Lifetime1.c(0, 3);
           var4Lifetime1.c(0, 11);
@@ -136,7 +136,7 @@ final class mia implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2_ref), "mia.A(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2_ref), "mia.A(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be implements ntb {
-    int field_b;
-    int field_a;
+final class be implements DiffableState {
+    int index;
+    int value;
 
     public final boolean a(byte param0, tv param1) {
         int var3_int = 0;
@@ -17,7 +17,7 @@ final class be implements ntb {
         try {
           var3_int = 34 / ((param0 - 22) / 59);
           var4 = (be) (param1);
-          stackIn_5_0 = (this.field_b != var4.field_b) || (var4.field_a != this.field_a);
+          stackIn_5_0 = (this.index != var4.index) || (var4.value != this.value);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -29,11 +29,11 @@ final class be implements ntb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         be var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -42,18 +42,18 @@ final class be implements ntb {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 >= -19) {
+          if (obfuscationGuard >= -19) {
             return;
           }
-          var3 = (be) (param0);
+          var3 = (be) (other);
           var4 = 0;
-          if (this.field_b != var3.field_b) {
-            System.out.println("int index has changed. before=" + var3.field_b + ", now=" + this.field_b);
+          if (this.index != var3.index) {
+            System.out.println("int index has changed. before=" + var3.index + ", now=" + this.index);
             var4 = 1;
           }
-          if (var3.field_a != this.field_a) {
+          if (var3.value != this.value) {
             var4 = 1;
-            System.out.println("int value has changed. before=" + var3.field_a + ", now=" + this.field_a);
+            System.out.println("int value has changed. before=" + var3.value + ", now=" + this.value);
           }
           if (var4 == 0) {
             return;
@@ -65,28 +65,28 @@ final class be implements ntb {
           var3_ref = decompiledCaughtException;
           stackIn_12_0 = var3_ref;
           stackIn_12_1 = new StringBuilder().append("be.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     public final String toString() {
-        return this.field_b + " to " + this.field_a;
+        return this.index + " to " + this.value;
     }
 
     public final void b(faa param0, int param1) {
-        param0.a(-632, this.field_b, 32);
+        param0.a(-632, this.index, 32);
         if (param1 >= -109) {
           return;
         }
         try {
-          param0.a(-632, this.field_a, 32);
+          param0.a(-632, this.value, 32);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "be.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "be.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -96,9 +96,9 @@ final class be implements ntb {
             kka var4 = (kka) null;
             be.a(-122, false, (kka) null);
           }
-          mi.a(param2, param1, 256, (byte) 97);
+          GetWeaponProjectileSpeedMultiply.a(param2, param1, 256, (byte) 97);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "be.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "be.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,12 +113,12 @@ final class be implements ntb {
         try {
           var5 = (be) (param1);
           var6 = var5;
-          var6.field_a = this.field_a;
-          var6.field_b = this.field_b;
+          var6.value = this.value;
+          var6.index = this.index;
           if (param0 >= 54) {
             return;
           }
-          this.field_a = 35;
+          this.value = 35;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -130,7 +130,7 @@ final class be implements ntb {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -140,10 +140,10 @@ final class be implements ntb {
             kka var4 = (kka) null;
             be.a(-84, true, (kka) null);
           }
-          this.field_b = param0.i(0, 32);
-          this.field_a = param0.i(0, 32);
+          this.index = param0.i(0, 32);
+          this.value = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "be.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "be.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

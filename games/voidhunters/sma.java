@@ -50,7 +50,7 @@ final class sma extends le {
         int var13;
         int var14;
         int var15;
-        ds var16;
+        PacketBuffer var16;
         int[][] var17;
         int[][] var19;
         int[] var23;
@@ -66,8 +66,8 @@ final class sma extends le {
         int[] var41;
         var15 = VoidHunters.field_G;
         if (param0 != 255) {
-          var16 = (ds) null;
-          this.a(-114, -34, (ds) null);
+          var16 = (PacketBuffer) null;
+          this.a(-114, -34, (PacketBuffer) null);
         }
         var27 = this.field_d.a(param1, (byte) -117);
         var19 = var27;
@@ -123,7 +123,7 @@ final class sma extends le {
         return var3;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_14_1 = false;
@@ -161,7 +161,7 @@ final class sma extends le {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

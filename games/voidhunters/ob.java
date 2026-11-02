@@ -31,7 +31,7 @@ final class ob extends pib {
         }
     }
 
-    ob(qfa param0, int param1, int param2, int param3, int param4) {
+    ob(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
         super(param0, 32879, param1, param2 * param3 * param4, false);
         this.field_n = -1;
         this.field_o = -1;
@@ -43,7 +43,7 @@ final class ob extends pib {
           jaggl.OpenGL.glTexImage3Dub(this.field_b, 0, this.field_d, this.field_i, this.field_k, this.field_h, 0, fsb.a(this.field_d, false), 5121, (byte[]) null, 0);
           this.a(-95, true);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class ob extends pib {
         }
     }
 
-    ob(qfa param0, int param1, int param2, int param3, int param4, byte[] param5, int param6) {
+    ob(OpenGlToolkit param0, int param1, int param2, int param3, int param4, byte[] param5, int param6) {
         super(param0, 32879, param1, param3 * (param2 * param4), false);
         this.field_n = -1;
         this.field_o = -1;
@@ -70,7 +70,7 @@ final class ob extends pib {
           jaggl.OpenGL.glPixelStorei(3317, 4);
           this.a(99, true);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class ob extends pib {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = jqb.a(11168, param4, param1, param3, param0, param2);
+          var8 = GetAutozoomSpeedDivide.a(11168, param4, param1, param3, param0, param2);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
@@ -110,7 +110,7 @@ final class ob extends pib {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

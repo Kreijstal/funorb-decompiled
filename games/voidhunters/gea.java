@@ -41,7 +41,7 @@ abstract class gea extends iw {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ abstract class gea extends iw {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ abstract class gea extends iw {
           super.e(param0);
           return;
         }
-        if (this.field_N != kk.field_o) {
+        if (this.field_N != SetBloomCoefficientPercentage.field_o) {
           this.c(this.field_K.field_h + 12, -1860440319, this.field_K.field_f + (this.field_O + 12));
           this.a(this.field_K, (byte) 71);
         } else {
@@ -130,7 +130,7 @@ abstract class gea extends iw {
             this.field_L.field_v = -((this.field_Q << 8) / this.field_P) + 256;
             return super.a(248);
           }
-          if (this.field_N != kk.field_o) {
+          if (this.field_N != SetBloomCoefficientPercentage.field_o) {
             return super.a(248);
           }
           fieldTemp$1 = this.field_Q + 1;
@@ -161,7 +161,7 @@ abstract class gea extends iw {
           this.field_L.field_v = -((this.field_Q << 8) / this.field_P) + 256;
           return super.a(248);
         }
-        if (this.field_N != kk.field_o) {
+        if (this.field_N != SetBloomCoefficientPercentage.field_o) {
           return super.a(248);
         }
         int fieldTemp$3 = this.field_Q + 1;
@@ -180,7 +180,7 @@ abstract class gea extends iw {
           return;
         }
         this.field_Q = 0;
-        this.field_N = kk.field_o;
+        this.field_N = SetBloomCoefficientPercentage.field_o;
         this.a(this.field_K, (byte) 71);
         this.field_K = null;
         if (param0 == 15435) {
@@ -208,7 +208,7 @@ abstract class gea extends iw {
           }
           this.field_K = null;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gea.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gea.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ abstract class gea extends iw {
           this.field_O = param2;
           this.a(param1, (byte) 71);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -12,9 +12,9 @@ final class mcb extends uj {
     final int d(byte param0) {
         if (param0 != 64) {
           mcb.a(-124, -42);
-          return oq.field_m;
+          return Particle.field_m;
         }
-        return oq.field_m;
+        return Particle.field_m;
     }
 
     mcb() {
@@ -32,12 +32,12 @@ final class mcb extends uj {
         if (param0 != -1) {
           return -6;
         }
-        return hta.field_o;
+        return GetResourceNodeCaptureTime.field_o;
     }
 
     final static void a(int param0, int param1) {
         int var2 = -18 % ((param1 - 36) / 36);
-        bja.field_p[4] = param0;
+        SetLaserEnergyUsed.field_p[4] = param0;
     }
 
     static {

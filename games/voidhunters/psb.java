@@ -18,11 +18,11 @@ final class psb {
             stackIn_2_0 = (ge) null;
             return stackIn_2_0;
           }
-          if (wba.field_p.a(4) &&
-            !param0.equals(wba.field_p.b(4))) {
-            wba.field_p = gi.a(param0, (byte) 110);
+          if (GetBombletSprayPushMultiplier.field_p.a(4) &&
+            !param0.equals(GetBombletSprayPushMultiplier.field_p.b(4))) {
+            GetBombletSprayPushMultiplier.field_p = gi.a(param0, (byte) 110);
           }
-          stackIn_8_0 = wba.field_p;
+          stackIn_8_0 = GetBombletSprayPushMultiplier.field_p;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -34,7 +34,7 @@ final class psb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -51,7 +51,7 @@ final class psb {
             var4 = (String) null;
             psb.a((String) null, 28);
           }
-          stackIn_3_0 = k.a((byte) -69, param1, param0, 0);
+          stackIn_3_0 = GetMessageMaxage.a((byte) -69, param1, param0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +63,7 @@ final class psb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

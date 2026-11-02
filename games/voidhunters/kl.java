@@ -16,13 +16,13 @@ final class kl {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          rib.a((java.awt.Component) ((Object) param0), (byte) 121);
+          SetDebrisCollision.a((java.awt.Component) ((Object) param0), (byte) 121);
           uab.a((byte) 1, (java.awt.Component) ((Object) param0));
           var2_int = 105 / ((41 - param1) / 39);
-          if (kkb.field_o == null) {
+          if (GetWaitForPlayers.field_o == null) {
             return;
           }
-          kkb.field_o.a((java.awt.Component) ((Object) param0), -21835);
+          GetWaitForPlayers.field_o.a((java.awt.Component) ((Object) param0), -21835);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -34,7 +34,7 @@ final class kl {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -53,7 +53,7 @@ final class kl {
           return (uwa) null;
         }
         if (this.field_d >= this.field_b.length) {
-          nkb.a(false, "We've run out of shieldinfo slots");
+          GetDebrisThrowable.a(false, "We've run out of shieldinfo slots");
           return null;
         }
         if (null != this.field_b[this.field_d]) {
@@ -91,7 +91,7 @@ final class kl {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ch.field_o = true;
+          GetSpecialOrderBarYOffset.field_o = true;
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
@@ -111,7 +111,7 @@ final class kl {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 

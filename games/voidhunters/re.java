@@ -60,7 +60,7 @@ final class re extends ar {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -169,7 +169,7 @@ final class re extends ar {
               } else {
                 stackIn_40_1 = this.a(false, param2, param4.b(var13), var13);
               }
-              tbb.a(stackIn_39_0, stackIn_40_1, var14, var13, 18126);
+              TrailHolder.a(stackIn_39_0, stackIn_40_1, var14, var13, 18126);
             }
             var11 = var11 + param0;
             this.field_c[var12Lifetime1] = var14;
@@ -191,7 +191,7 @@ final class re extends ar {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -221,9 +221,9 @@ final class re extends ar {
           if (param2 != -3) {
             field_n = (wdb) null;
           }
-          tbb.a(param1, 0, var8, param3, 18126);
+          TrailHolder.a(param1, 0, var8, param3, 18126);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -252,9 +252,9 @@ final class re extends ar {
           var7 = param4.b(param2);
           var8.field_c[0] = -(var7 >> 1) + param1;
           var8.field_c[param2.length()] = (var7 >> 1) + param1;
-          tbb.a(param4, 0, var8, param2, 18126);
+          TrailHolder.a(param4, 0, var8, param2, 18126);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "re.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "re.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -284,9 +284,9 @@ final class re extends ar {
           var9 = var8;
           var9.field_c[0] = -param1.b(param4) + param3;
           var9.field_c[param4.length()] = param3;
-          tbb.a(param1, 0, var9, param4, 18126);
+          TrailHolder.a(param1, 0, var9, param4, 18126);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "re.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "re.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -294,30 +294,30 @@ final class re extends ar {
     }
 
     final static void a(int param0, byte param1) {
-        hlb.field_p = param0;
-        if (null != aab.field_o) {
-          aab.field_o.b(param0, (byte) 14);
+        GetMutatorVotes.field_p = param0;
+        if (null != SetMassDriverRandomness.field_o) {
+          SetMassDriverRandomness.field_o.b(param0, (byte) 14);
           if (param1 >= -93) {
             re.d(-100);
-            if (null != ew.field_p) {
-              ew.field_p.b((byte) -108, param0);
+            if (null != GetBurstFireMaxEnergy.field_p) {
+              GetBurstFireMaxEnergy.field_p.b((byte) -108, param0);
             }
             return;
           }
-          if (null != ew.field_p) {
-            ew.field_p.b((byte) -108, param0);
+          if (null != GetBurstFireMaxEnergy.field_p) {
+            GetBurstFireMaxEnergy.field_p.b((byte) -108, param0);
           }
           return;
         }
         if (param1 < -93) {
-          if (null != ew.field_p) {
-            ew.field_p.b((byte) -108, param0);
+          if (null != GetBurstFireMaxEnergy.field_p) {
+            GetBurstFireMaxEnergy.field_p.b((byte) -108, param0);
           }
           return;
         }
         re.d(-100);
-        if (null != ew.field_p) {
-          ew.field_p.b((byte) -108, param0);
+        if (null != GetBurstFireMaxEnergy.field_p) {
+          GetBurstFireMaxEnergy.field_p.b((byte) -108, param0);
         }
     }
 

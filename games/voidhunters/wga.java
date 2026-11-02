@@ -42,16 +42,16 @@ final class wga implements dja {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = (lwa) null;
-          return (tv[]) ((Object) new wna[param1]);
+          return (tv[]) ((Object) new RoundResult[param1]);
         }
-        return (tv[]) ((Object) new wna[param1]);
+        return (tv[]) ((Object) new RoundResult[param1]);
     }
 
     public static void a(int param0) {
@@ -64,7 +64,7 @@ final class wga implements dja {
 
     public final tv a(byte param0) {
         int var2 = 127 % ((-64 - param0) / 50);
-        return (tv) ((Object) new wna());
+        return (tv) ((Object) new RoundResult());
     }
 
     static {

@@ -271,7 +271,7 @@ class vka {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -304,7 +304,7 @@ class vka {
                       var12.field_d = var12.field_d + var13;
                     }
                     if (var4 >= this.field_g) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.c();
                     if (var14Lifetime2 != null) {

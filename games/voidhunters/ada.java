@@ -47,7 +47,7 @@ final class ada implements dja {
         byte[] var15 = null;
         var9 = VoidHunters.field_G;
         try {
-          if (!nwa.field_c.field_k) {
+          if (!MessageLog.field_c.field_k) {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
@@ -55,21 +55,21 @@ final class ada implements dja {
             stackIn_7_0 = 100;
             return stackIn_7_0;
           }
-          var10 = mib.a((byte) -33, param0);
+          var10 = CarouselCommongameInfo.a((byte) -33, param0);
           if (var10 == null) {
             stackIn_10_0 = -1;
             return stackIn_10_0;
           }
-          var3 = oea.field_p + var10;
-          if (!tba.field_q.a((byte) -107, "", var3)) {
+          var3 = SetSniperCannonEnergyUsed.field_p + var10;
+          if (!SetExplosionPushMultiplier.field_q.a((byte) -107, "", var3)) {
             stackIn_14_0 = -1;
             return stackIn_14_0;
           }
-          if (!tba.field_q.a(32171, var3)) {
-            stackIn_17_0 = tba.field_q.a(var3, -2118);
+          if (!SetExplosionPushMultiplier.field_q.a(32171, var3)) {
+            stackIn_17_0 = SetExplosionPushMultiplier.field_q.a(var3, -2118);
             return stackIn_17_0;
           }
-          var14 = tba.field_q.a("", param1, var3);
+          var14 = SetExplosionPushMultiplier.field_q.a("", param1, var3);
           var12 = var14;
           var4 = var12;
           var5 = null;
@@ -114,7 +114,7 @@ final class ada implements dja {
             }
             try {
               if (var6 == 0) {
-                nwa.field_c.a(var14, (byte) 110, var11);
+                MessageLog.field_c.a(var14, (byte) 110, var11);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -122,7 +122,7 @@ final class ada implements dja {
               stackIn_39_0 = -1;
               return stackIn_39_0;
             }
-            td.a((byte) 123, param0, var11);
+            GetSelfDestructActivateCooldown.a((byte) 123, param0, var11);
             stackIn_41_0 = 100;
             return stackIn_41_0;
           }
@@ -138,23 +138,23 @@ final class ada implements dja {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final tv a(byte param0) {
         int var2 = 61 % ((param0 + 64) / 50);
-        return (tv) ((Object) new cda());
+        return (tv) ((Object) new PartitionZoneList());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           return (tv[]) null;
         }
-        return (tv[]) ((Object) new cda[param1]);
+        return (tv[]) ((Object) new PartitionZoneList[param1]);
     }
 
-    final static int a(rsb param0, lbb param1, boolean param2, rna[] param3) {
+    final static int a(GameSnapshot param0, MissionState param1, boolean param2, MissionAction[] param3) {
         int var5 = 0;
         int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -167,14 +167,14 @@ final class ada implements dja {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        rna var6 = null;
+        MissionAction var6 = null;
         int var8 = 0;
-        et var9 = null;
+        MissionVariable var9 = null;
         int var10 = 0;
         int var11 = 0;
-        ika var12 = null;
-        uoa var13 = null;
-        lrb var14 = null;
+        AwardVictoryToTeamAction var12 = null;
+        IncrementVariableAction var13 = null;
+        SetShipTeamAction var14 = null;
         var11 = VoidHunters.field_G;
         try {
           var4_int = -1;
@@ -183,29 +183,29 @@ final class ada implements dja {
           }
           for (var5 = 0; var5 < param3.length; var5++) {
             var6 = param3[var5];
-            if (var6 instanceof lrb) {
-              var14 = (lrb) (var6);
+            if (var6 instanceof SetShipTeamAction) {
+              var14 = (SetShipTeamAction) (var6);
               var8 = var14.a(1, -116);
               if (param0.a(var8, 0, -1)) {
                 var4_int = var8;
               }
             } else {
-              if (!(var6 instanceof ika)) {
-                if (!(var6 instanceof uoa)) {
+              if (!(var6 instanceof AwardVictoryToTeamAction)) {
+                if (!(var6 instanceof IncrementVariableAction)) {
                   continue;
                 }
-                var13 = (uoa) (var6);
+                var13 = (IncrementVariableAction) (var6);
                 var8 = var13.a(0, -103);
                 var9 = param1.a(-31634, var8);
                 if (var9 != null) {
-                  var10 = var9.field_b;
-                  var4_int = fq.field_o[var10];
+                  var10 = var9.label;
+                  var4_int = GetReloadBarWidth.field_o[var10];
                   if (var13.a(1, -126) < 0) {
                     var4_int = mjb.b(21957, var4_int);
                   }
                 }
               } else {
-                var12 = (ika) (var6);
+                var12 = (AwardVictoryToTeamAction) (var6);
                 var4_int = var12.a(0, -117);
               }
             }
@@ -235,7 +235,7 @@ final class ada implements dja {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

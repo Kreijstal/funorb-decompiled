@@ -11,7 +11,7 @@ final class vfa {
     private int field_o;
     private int field_n;
     int field_q;
-    static ij field_p;
+    static IntrusiveDeque field_p;
     private int field_t;
     private float field_j;
     int field_i;
@@ -73,15 +73,15 @@ final class vfa {
                   var2 = var4Lifetime2;
                 }
               }
-              if (var2 != rda.field_p) {
+              if (var2 != GetDebrisSurvives.field_p) {
                 this.field_a.a(99, var2, var3);
               } else {
-                if (fua.field_p != var3) {
+                if (SetPointDefenceLaserReload.field_p != var3) {
                   this.field_a.a(99, var2, var3);
                 }
               }
               if (0 < this.field_f) {
-                qtb.field_o = (this.field_f - rda.field_p) / 2;
+                GetCountermeasuresPulseRadius.field_o = (this.field_f - GetDebrisSurvives.field_p) / 2;
               }
               return;
             }
@@ -105,15 +105,15 @@ final class vfa {
             }
           }
         }
-        if (var2 != rda.field_p) {
+        if (var2 != GetDebrisSurvives.field_p) {
           this.field_a.a(99, var2, var3);
         } else {
-          if (fua.field_p != var3) {
+          if (SetPointDefenceLaserReload.field_p != var3) {
             this.field_a.a(99, var2, var3);
           }
         }
         if (0 < this.field_f) {
-          qtb.field_o = (this.field_f - rda.field_p) / 2;
+          GetCountermeasuresPulseRadius.field_o = (this.field_f - GetDebrisSurvives.field_p) / 2;
         }
     }
 
@@ -130,13 +130,13 @@ final class vfa {
     final ufb a(byte param0) {
         ufb var2 = null;
         ufb var2Lifetime1;
-        this.field_s = rda.field_p;
-        this.field_r = fua.field_p;
+        this.field_s = GetDebrisSurvives.field_p;
+        this.field_r = SetPointDefenceLaserReload.field_p;
         if (param0 < 112) {
           vfa.a(false, -4);
           this.field_a.a(65, this.field_q, this.field_e);
-          rda.field_q = false;
-          var2 = ob.a(0, bm.field_o, this.field_q, this.field_e, 0, 0);
+          GetDebrisSurvives.field_q = false;
+          var2 = ob.a(0, SetTorpedoProjectiles.field_o, this.field_q, this.field_e, 0, 0);
           if (var2 == null) {
             this.c(-29674);
             return var2;
@@ -144,8 +144,8 @@ final class vfa {
           return var2;
         }
         this.field_a.a(65, this.field_q, this.field_e);
-        rda.field_q = false;
-        var2Lifetime1 = ob.a(0, bm.field_o, this.field_q, this.field_e, 0, 0);
+        GetDebrisSurvives.field_q = false;
+        var2Lifetime1 = ob.a(0, SetTorpedoProjectiles.field_o, this.field_q, this.field_e, 0, 0);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }
@@ -157,10 +157,10 @@ final class vfa {
         if (param0 < 0) {
           return false;
         }
-        if (this.field_i > qob.field_b) {
+        if (this.field_i > Nebula.field_b) {
           return false;
         }
-        if (hcb.field_o <= 0) {
+        if (GetDebrisCarryOver.field_o <= 0) {
           return false;
         }
         return true;
@@ -169,18 +169,18 @@ final class vfa {
     final boolean b(byte param0) {
         if (param0 != -17) {
           this.field_i = 13;
-          if (hcb.field_o <= 0) {
+          if (GetDebrisCarryOver.field_o <= 0) {
             return false;
           }
-          if (this.field_i > qob.field_b) {
+          if (this.field_i > Nebula.field_b) {
             return true;
           }
           return false;
         }
-        if (hcb.field_o <= 0) {
+        if (GetDebrisCarryOver.field_o <= 0) {
           return false;
         }
-        if (this.field_i > qob.field_b) {
+        if (this.field_i > Nebula.field_b) {
           return true;
         }
         return false;
@@ -196,7 +196,7 @@ final class vfa {
         field_d = null;
         field_p = null;
         if (param0 != 120) {
-          field_p = (ij) null;
+          field_p = (IntrusiveDeque) null;
         }
     }
 
@@ -249,7 +249,7 @@ final class vfa {
         if (null != psb.field_b) {
           return;
         }
-        if (0 < hcb.field_o) {
+        if (0 < GetDebrisCarryOver.field_o) {
           if (this.field_b) {
             fieldTemp$1 = this.field_k - 1;
             this.field_k = this.field_k - 1;
@@ -260,30 +260,30 @@ final class vfa {
             if (param0 != 3908) {
               field_d = (phb[]) null;
             }
-            if (qob.field_b < this.field_i) {
+            if (Nebula.field_b < this.field_i) {
               this.field_b = false;
             } else {
               this.b(-17698);
             }
             return;
           }
-          if (this.field_f > rda.field_p) {
-            qtb.field_o = (this.field_f - rda.field_p) / 2;
+          if (this.field_f > GetDebrisSurvives.field_p) {
+            GetCountermeasuresPulseRadius.field_o = (this.field_f - GetDebrisSurvives.field_p) / 2;
           } else {
             if (this.field_f <= 0) {
-              if (this.field_c == rda.field_p &&
-                this.field_t == fua.field_p) {
+              if (this.field_c == GetDebrisSurvives.field_p &&
+                this.field_t == SetPointDefenceLaserReload.field_p) {
                 return;
               }
               this.field_a.a(98, this.field_c, this.field_t);
               return;
             }
-            qtb.field_o = 0;
+            GetCountermeasuresPulseRadius.field_o = 0;
           }
-          if (this.field_c != rda.field_p) {
+          if (this.field_c != GetDebrisSurvives.field_p) {
             this.field_a.a(98, this.field_c, this.field_t);
           } else {
-            if (this.field_t != fua.field_p) {
+            if (this.field_t != SetPointDefenceLaserReload.field_p) {
               this.field_a.a(98, this.field_c, this.field_t);
             }
           }
@@ -300,30 +300,30 @@ final class vfa {
           if (param0 != 3908) {
             field_d = (phb[]) null;
           }
-          if (qob.field_b >= this.field_i) {
+          if (Nebula.field_b >= this.field_i) {
             this.b(-17698);
           } else {
             this.field_b = false;
           }
           return;
         }
-        if (this.field_f > rda.field_p) {
-          qtb.field_o = (this.field_f - rda.field_p) / 2;
+        if (this.field_f > GetDebrisSurvives.field_p) {
+          GetCountermeasuresPulseRadius.field_o = (this.field_f - GetDebrisSurvives.field_p) / 2;
         } else {
           if (this.field_f > 0) {
-            qtb.field_o = 0;
-            if (this.field_c != rda.field_p) {
+            GetCountermeasuresPulseRadius.field_o = 0;
+            if (this.field_c != GetDebrisSurvives.field_p) {
               this.field_a.a(98, this.field_c, this.field_t);
             } else {
-              if (this.field_t != fua.field_p) {
+              if (this.field_t != SetPointDefenceLaserReload.field_p) {
                 this.field_a.a(98, this.field_c, this.field_t);
               }
             }
             return;
           }
         }
-        if (this.field_c == rda.field_p &&
-          this.field_t == fua.field_p) {
+        if (this.field_c == GetDebrisSurvives.field_p &&
+          this.field_t == SetPointDefenceLaserReload.field_p) {
           return;
         }
         this.field_a.a(98, this.field_c, this.field_t);
@@ -334,7 +334,7 @@ final class vfa {
     }
 
     final static void a(boolean param0, int param1) {
-        if (!vba.f((byte) -91)) {
+        if (!SetReloadBarWidth.f((byte) -91)) {
           return;
         }
         if (param0) {
@@ -364,7 +364,7 @@ final class vfa {
           this.field_n = param3;
           this.field_q = 640;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "vfa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vfa.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -378,6 +378,6 @@ final class vfa {
     }
 
     static {
-        field_p = new ij();
+        field_p = new IntrusiveDeque();
     }
 }

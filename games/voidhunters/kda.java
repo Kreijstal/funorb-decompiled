@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kda {
-    private ij field_i;
+    private IntrusiveDeque field_i;
     private int field_d;
     private boolean field_l;
     private int field_b;
     private int field_n;
-    private ij field_c;
+    private IntrusiveDeque field_c;
     ova field_j;
     private boolean field_o;
     private boolean field_p;
@@ -43,11 +43,11 @@ final class kda {
         this.field_c.e(110);
         int var3 = this.field_n;
         this.field_n = 0;
-        this.field_i = new ij();
+        this.field_i = new IntrusiveDeque();
         if (param1 != -13027) {
           this.field_m = (um) null;
         }
-        iva.a(-6940, "Called Carousel_clientgame.start_game(), resetting any buffered events");
+        GetSniperCannonAimarc.a(-6940, "Called Carousel_clientgame.start_game(), resetting any buffered events");
         this.field_b = 0;
         this.field_h = 2147483647;
         if (!param0) {
@@ -62,7 +62,7 @@ final class kda {
 
     private final void a(byte param0, int param1) {
         if (param0 != 85) {
-          this.field_i = (ij) null;
+          this.field_i = (IntrusiveDeque) null;
         }
         this.field_d = param1;
     }
@@ -77,7 +77,7 @@ final class kda {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_m.a(param0, param1 ^ 900, nia.field_o);
+          this.field_m.a(param0, param1 ^ 900, SetPointDefenceLaserProjectileDamage.field_o);
           if (param1 != 1000) {
             this.a(-52);
           }
@@ -96,12 +96,12 @@ final class kda {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void a(mib param0, int param1, int param2, int param3, boolean param4) {
-        mib stackIn_22_0 = null;
+    private final void a(CarouselCommongameInfo param0, int param1, int param2, int param3, boolean param4) {
+        CarouselCommongameInfo stackIn_22_0 = null;
         boolean stackIn_23_1 = false;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -116,7 +116,7 @@ final class kda {
         uqb var11 = null;
         tja var11_ref = null;
         int var12 = 0;
-        bhb var13 = null;
+        CarouselSlotStateDump var13 = null;
         lla var14 = null;
         int var16 = 0;
         byte[] var20 = null;
@@ -130,26 +130,26 @@ final class kda {
           }
           var6_int = -param0.field_g + param3;
           var7 = this.c(param2 - 1000) / 2;
-          var8 = ela.field_p * var7 / param2;
-          var9 = foa.field_q / 2 + 2 * var8;
+          var8 = GetBombletSprayProjectileOndamageParticles.field_p * var7 / param2;
+          var9 = SetMissionResnetResourceTickTime.field_q / 2 + 2 * var8;
           if (-var9 > var6_int) {
             var10 = -var6_int + shb.field_k;
             if (var10 >= param0.c((byte) 114)) {
-              iva.a(param2 ^ -6388, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back");
+              GetSniperCannonAimarc.a(param2 ^ -6388, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back");
               return;
             }
             var11 = (uqb) (param0.field_f.d(0));
             while (var11 != null) {
               if (!var11.a(115) &&
                 -var10 + param0.field_g >= var11.field_e) {
-                iva.a(-6940, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back when unconfirmed event was back by " + (-var11.field_e + param0.field_g));
+                GetSniperCannonAimarc.a(-6940, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back when unconfirmed event was back by " + (-var11.field_e + param0.field_g));
                 return;
               }
               var11 = (uqb) (param0.field_f.a((byte) 36));
             }
             var11_ref = param0.a(var10, param2 ^ -949);
-            var12 = tmb.a(var11_ref, (byte) -70);
-            stackIn_22_0 = (mib) (param0);
+            var12 = SetTestActionLag.a(var11_ref, (byte) -70);
+            stackIn_22_0 = (CarouselCommongameInfo) (param0);
             stackIn_23_1 = (var12 != param1);
             stackIn_22_0.field_k = stackIn_23_1;
             if (param0.field_k &&
@@ -158,16 +158,16 @@ final class kda {
                 return;
               }
               this.field_e = true;
-              iva.a(-6940, "Carousel_clientgame: Now out of sync for server tick " + param3 + ", which is " + -var6_int + " ticks back, so dumping state");
+              GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Now out of sync for server tick " + param3 + ", which is " + -var6_int + " ticks back, so dumping state");
               if (null == this.field_j) {
                 this.field_j = new ova(kha.field_v);
               }
               if (this.field_j.a(param2 - 1000)) {
-                iva.a(-6940, "Carousel_clientgame: Sending the state dump to the server");
-                var13 = new bhb(-var10 + param0.field_g, bk.field_w);
+                GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending the state dump to the server");
+                var13 = new CarouselSlotStateDump(-var10 + param0.field_g, bk.field_w);
                 var14 = new lla();
                 var14.a(84, 0, var13.field_d, var13.field_d.length);
-                var20 = wi.a((byte) 10, var14.field_f);
+                var20 = GameApplet.a((byte) 10, var14.field_f);
                 this.field_j.a(var20, 0);
               }
             }
@@ -184,11 +184,11 @@ final class kda {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final boolean a(mib param0, int param1) {
+    private final boolean a(CarouselCommongameInfo param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -197,7 +197,7 @@ final class kda {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = this.c(0) * ela.field_p / param1;
+          var3_int = this.c(0) * GetBombletSprayProjectileOndamageParticles.field_p / param1;
           var4 = wsb.field_f - var3_int;
           if (param0.field_c <= var4) {
             return false;
@@ -213,11 +213,11 @@ final class kda {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final boolean a(byte param0, mib param1, int param2, faa param3) {
+    final boolean a(byte param0, CarouselCommongameInfo param1, int param2, faa param3) {
         uqb var5 = null;
         RuntimeException var5_ref = null;
         RuntimeException stackIn_12_0 = null;
@@ -230,7 +230,7 @@ final class kda {
           if (this.field_l &&
             param2 >= 0 &&
             !this.field_p) {
-            iva.a(-6940, "Carousel_clientgame: Sending ready packet");
+            GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending ready packet");
             var5 = (uqb) (wc.field_a.a((byte) 77));
             var5.field_e = param1.field_g;
             var5.a(param2, -125);
@@ -257,7 +257,7 @@ final class kda {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -269,13 +269,13 @@ final class kda {
         try {
           var3 = new whb();
           var3.field_b = (ub) ((Object) new mo("<RequestNewestBlackBox>"));
-          rkb.a(0, var3, param1, fk.field_e);
+          SetBuildViewAutozoomEndOnAction.a(0, var3, param1, fk.field_e);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kda.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kda.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0, uqb param1, mib param2, boolean param3, boolean param4, int param5, faa param6) {
+    final void a(boolean param0, uqb param1, CarouselCommongameInfo param2, boolean param3, boolean param4, int param5, faa param6) {
         uqb stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_27_0 = null;
@@ -288,7 +288,7 @@ final class kda {
         RuntimeException decompiledCaughtException = null;
         uqb var8 = null;
         RuntimeException var8_ref = null;
-        mib var9 = null;
+        CarouselCommongameInfo var9 = null;
         try {
           if (param4 &&
             !this.field_l) {
@@ -299,8 +299,8 @@ final class kda {
             stackIn_9_1 = !(param4);
             stackIn_8_0.field_f = stackIn_9_1;
             if (!param0) {
-              var9 = (mib) null;
-              this.b((mib) null, 33);
+              var9 = (CarouselCommongameInfo) null;
+              this.b((CarouselCommongameInfo) null, 33);
             }
             param1.field_e = -param5 + param2.field_g;
             if (hna.field_s == 1 &&
@@ -321,7 +321,7 @@ final class kda {
               }
             }
             if (!param2.a(1, param1)) {
-              tfb.a((byte) -101, "Carousel_clientgame: Added an action off your own carousel! " + param1);
+              SetDebrisGrabbingRange.a((byte) -101, "Carousel_clientgame: Added an action off your own carousel! " + param1);
             }
             return;
           }
@@ -348,7 +348,7 @@ final class kda {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -357,11 +357,11 @@ final class kda {
           if (param2 != 1000) {
             this.field_a = true;
           }
-          em.field_o = false;
-          rkb.a(0, param0, param1, pra.field_o);
-          em.field_o = true;
+          SetDebrisProjectileCollision.field_o = false;
+          SetBuildViewAutozoomEndOnAction.a(0, param0, param1, GetMissionTimeLimit.field_o);
+          SetDebrisProjectileCollision.field_o = true;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kda.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kda.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -379,17 +379,17 @@ final class kda {
         return this.field_d;
     }
 
-    final boolean a(faa param0, faa param1, boolean param2, byte param3, int param4, mib param5) {
+    final boolean a(faa param0, faa param1, boolean param2, byte param3, int param4, CarouselCommongameInfo param5) {
         boolean discarded$0 = false;
         int var10 = 0;
         Object stackIn_22_0;
-        mib stackIn_22_1;
+        CarouselCommongameInfo stackIn_22_1;
         int stackIn_22_2;
         int stackIn_22_3;
         int stackIn_22_4;
         Object stackIn_23_0;
         boolean stackIn_23_5;
-        mib stackIn_76_0 = null;
+        CarouselCommongameInfo stackIn_76_0 = null;
         RuntimeException stackIn_95_0 = null;
         StringBuilder stackIn_95_1 = null;
         String stackIn_96_2 = null;
@@ -408,7 +408,7 @@ final class kda {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        mib var14 = null;
+        CarouselCommongameInfo var14 = null;
         af var15 = null;
         umb var16 = null;
         Object var17 = null;
@@ -426,7 +426,7 @@ final class kda {
         var21 = null;
         var13 = VoidHunters.field_G;
         try {
-          if (param4 == vi.field_o) {
+          if (param4 == GetSniperCannonFiringLeeway.field_o) {
             var16 = new umb();
             param1.p(-23497);
             var16.a(param1, false);
@@ -442,13 +442,13 @@ final class kda {
               }
               var8_int = var16.field_f;
               if (param2) {
-                var8_int = var8_int + foa.field_q;
+                var8_int = var8_int + SetMissionResnetResourceTickTime.field_q;
               }
               param5.a(var8_int, var16.field_e, 0);
               if (!var16.field_e) {
                 if (this.field_l) {
                   stackIn_22_0 = this;
-                  stackIn_22_1 = (mib) (param5);
+                  stackIn_22_1 = (CarouselCommongameInfo) (param5);
                   stackIn_22_2 = var16.field_g;
                   stackIn_22_3 = param3 ^ 1007;
                   stackIn_22_4 = var16.field_f;
@@ -462,11 +462,11 @@ final class kda {
                   this.a(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_22_4, stackIn_23_5);
                 }
               } else {
-                iva.a(param3 ^ -6941, "Carousel_clientgame: Handling catchup packet here, where targettick=" + var8_int + ",(+ " + (-param5.field_g + var8_int) + "), playinggame=" + param2);
+                GetSniperCannonAimarc.a(param3 ^ -6941, "Carousel_clientgame: Handling catchup packet here, where targettick=" + var8_int + ",(+ " + (-param5.field_g + var8_int) + "), playinggame=" + param2);
                 param5.g(-1);
-                iva.a(-6940, "Carousel_clientgame: Tick is now " + param5.field_g);
+                GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Tick is now " + param5.field_g);
                 if (!this.field_l) {
-                  iva.a(-6940, "Carousel_clientgame: Is ready");
+                  GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Is ready");
                 }
                 this.field_h = param5.field_g;
                 this.field_l = true;
@@ -492,7 +492,7 @@ final class kda {
                   var9_int = ((pca) (var17_ref)).field_k;
                 }
                 var18 = param5.e(param3 + 101).a(param3 ^ 6, var9_int);
-                tfb.a((byte) -92, "I'm " + kca.field_a + ", and an action from " + var18 + " is off carousel so dropping connection");
+                SetDebrisGrabbingRange.a((byte) -92, "I'm " + kca.field_a + ", and an action from " + var18 + " is off carousel so dropping connection");
                 ifb.l(-118);
               }
             } else if (!var17_ref.c(120) ||
@@ -502,21 +502,21 @@ final class kda {
             return true;
           }
           if (param3 != 7) {
-            var14 = (mib) null;
-            discarded$0 = this.a((mib) null, -70);
+            var14 = (CarouselCommongameInfo) null;
+            discarded$0 = this.a((CarouselCommongameInfo) null, -70);
           }
           if (ehb.field_g == param4) {
             var7_int = param1.h(94);
             if (param5 != null &&
               !this.field_a &&
               !this.field_o) {
-              param0.h(24335, pka.field_o);
+              param0.h(24335, PrintSettings.field_o);
               param0.d(var7_int, 332614536);
               param0.d(param5.field_g, 332614536);
             }
             return true;
           }
-          if (iva.field_o == param4) {
+          if (GetSniperCannonAimarc.field_o == param4) {
             var7_intLifetime1 = param1.h(98);
             var8_intLifetime1 = param1.h(74);
             var9_intLifetime1 = param1.e((byte) -121);
@@ -533,43 +533,43 @@ final class kda {
             if (param5 != null &&
               !this.field_a &&
               !this.field_o) {
-              stackIn_76_0 = (mib) (param5);
-              if (!((mib) (Object) stackIn_76_0).f(1)) {
+              stackIn_76_0 = (CarouselCommongameInfo) (param5);
+              if (!((CarouselCommongameInfo) (Object) stackIn_76_0).f(1)) {
                 param5.a(false, var7_intLifetime1);
                 this.a((byte) 85, var8_intLifetime1);
               }
             }
             return true;
           }
-          if (param4 != qha.field_o) {
+          if (param4 != GetAngleset.field_o) {
             return false;
           }
-          this.field_m.a(param1, 90, nia.field_o);
+          this.field_m.a(param1, 90, SetPointDefenceLaserProjectileDamage.field_o);
           var22 = this.field_m.b(param3 ^ -30218);
           var19 = var22;
           var7 = var19;
           if (var7 != null) {
-            var8 = wl.a(9, var22);
+            var8 = SetCountermeasuresPulseRadius.a(9, var22);
             try {
               var20 = new whb();
               var8.p(-23497);
               var20.a(var8, false);
               var8.f((byte) -33);
               if (var20.field_b instanceof af) {
-                iva.a(param3 - 6947, "Received black box recording");
+                GetSniperCannonAimarc.a(param3 - 6947, "Received black box recording");
                 var15 = (af) (var20.field_b);
                 param5.field_d = var15;
                 this.b(param5, -125);
               } else {
                 if (var20.field_b instanceof mo) {
                   var21_ref = (mo) (var20.field_b);
-                  iva.a(-6940, "The newest black box recording=" + var21_ref.field_i);
+                  GetSniperCannonAimarc.a(-6940, "The newest black box recording=" + var21_ref.field_i);
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var9 = (Exception) (Object) decompiledCaughtException;
-              iva.a(param3 - 6947, "Error reading in debug response");
+              GetSniperCannonAimarc.a(param3 - 6947, "Error reading in debug response");
               var9.printStackTrace();
             }
           }
@@ -596,7 +596,7 @@ final class kda {
           } else {
             stackIn_102_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(')').toString());
         }
     }
 
@@ -638,7 +638,7 @@ final class kda {
         return this.field_a;
     }
 
-    final void a(int param0, boolean param1, mib param2) {
+    final void a(int param0, boolean param1, CarouselCommongameInfo param2) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -646,7 +646,7 @@ final class kda {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ksa var6 = null;
+        IntrusiveNode var6 = null;
         umb var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -656,7 +656,7 @@ final class kda {
         var10 = VoidHunters.field_G;
         try {
           if (this.field_l) {
-            iva.a(-6940, "Carousel_clientgame:Not ready");
+            GetSniperCannonAimarc.a(-6940, "Carousel_clientgame:Not ready");
           }
           this.field_l = false;
           this.field_h = 2147483647;
@@ -670,11 +670,11 @@ final class kda {
                 var8 = var7.field_f;
                 var9 = var8;
                 if (param1) {
-                  iva.a(-6940, "Carousel_clientgame: Adding the server follow time...");
-                  var9 = var9 + foa.field_q;
+                  GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Adding the server follow time...");
+                  var9 = var9 + SetMissionResnetResourceTickTime.field_q;
                 }
                 if (var7.field_e) {
-                  tfb.a((byte) -122, "Carousel_clientgame: Recieved a client catchup packet which still connecting");
+                  SetDebrisGrabbingRange.a((byte) -122, "Carousel_clientgame: Recieved a client catchup packet which still connecting");
                 }
                 var5++;
                 param2.a(var9, false, 0);
@@ -690,9 +690,9 @@ final class kda {
             }
             var6 = this.field_c.a((byte) 62);
           }
-          iva.a(-6940, "Carousel_clientgame: Adding all the way with " + var4_int + " actions, and " + var5 + " server ticks. Tick=" + param2.field_g + ", Ticks behind=" + param2.field_c);
+          GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Adding all the way with " + var4_int + " actions, and " + var5 + " server ticks. Tick=" + param2.field_g + ", Ticks behind=" + param2.field_c);
           param2.g(param0 - 1);
-          iva.a(-6940, "Carousel_clientgame: Tick is now " + param2.field_g);
+          GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Tick is now " + param2.field_g);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -704,7 +704,7 @@ final class kda {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -713,9 +713,9 @@ final class kda {
         try {
           var4 = new whb();
           var4.field_b = (ub) ((Object) new mo("<SetCarouselConstant>" + param2));
-          rkb.a(param1 ^ param1, var4, param0, fk.field_e);
+          SetBuildViewAutozoomEndOnAction.a(param1 ^ param1, var4, param0, fk.field_e);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kda.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kda.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -754,9 +754,9 @@ final class kda {
           }
           var4 = new whb();
           var4.field_b = (ub) ((Object) new mo(param1));
-          rkb.a(0, var4, param2, fk.field_e);
+          SetBuildViewAutozoomEndOnAction.a(0, var4, param2, fk.field_e);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kda.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kda.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -773,22 +773,22 @@ final class kda {
         try {
           if (!wh.g(-121)) {
             if (this.field_l) {
-              iva.a(-6940, "Carousel_clientgame: Not ready");
+              GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Not ready");
             }
             this.field_l = false;
           }
           var3_int = 80 / ((-42 - param1) / 46);
           if (this.field_a) {
             if (this.field_l) {
-              iva.a(-6940, "Carousel_clientgame: Not ready");
+              GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Not ready");
             }
             this.field_l = false;
           }
           if (null != this.field_j) {
-            this.field_j.a(param0, nia.field_o, 126);
+            this.field_j.a(param0, SetPointDefenceLaserProjectileDamage.field_o, 126);
             if (this.field_j.a(0)) {
               this.field_j = null;
-              iva.a(-6940, "Carousel_clientgame: Finished sending from Carousel_clientgame.dataSender");
+              GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Finished sending from Carousel_clientgame.dataSender");
             }
           }
           this.field_b = (1 + this.field_b) % 5;
@@ -813,11 +813,11 @@ final class kda {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void b(mib param0, int param1) {
+    final void b(CarouselCommongameInfo param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -828,7 +828,7 @@ final class kda {
             return;
           }
           if (param0.field_d != null) {
-            param0.field_d.a(108).b((byte) 96, param0);
+            param0.field_d.getServerCarousel(108).b((byte) 96, param0);
             param0.c(-64);
             param0.field_h = true;
           }
@@ -843,18 +843,18 @@ final class kda {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public kda() {
         this.field_h = 2147483647;
-        this.field_c = new ij();
+        this.field_c = new IntrusiveDeque();
         this.field_m = new um();
         this.field_o = true;
         this.field_l = false;
         this.field_a = false;
-        this.field_i = new ij();
+        this.field_i = new IntrusiveDeque();
         this.field_b = 0;
         this.field_q = false;
         this.field_f = 0;

@@ -1,0 +1,74 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SetMachineGunProjectileDamage extends ConsoleCommand {
+    static String field_o;
+
+    SetMachineGunProjectileDamage(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        if (param5 < ob.field_j) {
+          MissionGenerationData.a(param1, param0, 0, param2, param5, param3, param4, param6);
+        } else {
+          if (GetCountermeasureLauncherProjectiles.field_o < param1) {
+            MissionGenerationData.a(param1, param0, 0, param2, param5, param3, param4, param6);
+          } else {
+            if (NebulaField.field_c > param3) {
+              MissionGenerationData.a(param1, param0, 0, param2, param5, param3, param4, param6);
+            } else {
+              if (param6 <= hab.field_i) {
+                ul.a(param3, param5, param2, param6, param4, param1, param7 + 7, param0);
+              } else {
+                MissionGenerationData.a(param1, param0, 0, param2, param5, param3, param4, param6);
+              }
+            }
+          }
+        }
+        if (param7 == 0) {
+          return;
+        }
+        SetMachineGunProjectileDamage.a(-123, 19, -27, 40, -88, 106, 33, 78);
+    }
+
+    public static void a(int param0) {
+        field_o = null;
+        if (param0 != 146) {
+          SetMachineGunProjectileDamage.a(59);
+        }
+    }
+
+    final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
+        RuntimeException var3 = null;
+        ConsoleValue stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (obfuscationGuard > -119) {
+            field_o = (String) null;
+          }
+          SetMachineGunEnergyUsed.a(146, 62, arguments[0].a(112));
+          stackIn_3_0 = new ConsoleValue("void");
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("kpa.A(");
+          if (arguments == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    static {
+        jja discarded$0 = new jja();
+        field_o = "win";
+    }
+}

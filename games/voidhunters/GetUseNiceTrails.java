@@ -1,0 +1,53 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GetUseNiceTrails extends ConsoleCommand {
+    static int field_p;
+    static int field_r;
+    static String field_q;
+    static pjb field_o;
+
+    GetUseNiceTrails(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
+        RuntimeException var3 = null;
+        ConsoleValue stackIn_2_0 = null;
+        ConsoleValue stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (obfuscationGuard < -119) {
+            stackIn_4_0 = new ConsoleValue(GetSalvoDamageMultiplier.field_q);
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = (ConsoleValue) null;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("cab.A(");
+          if (arguments == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    public static void a(int param0) {
+        int var1 = 53 / ((param0 - 47) / 55);
+        field_q = null;
+        field_o = null;
+    }
+
+    static {
+        field_p = 524288;
+        field_q = "Enter name of player to delete from list";
+    }
+}

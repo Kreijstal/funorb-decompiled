@@ -31,7 +31,7 @@ final class fr implements dja {
         int var12 = 0;
         int var13 = 0;
         int[] var14 = null;
-        ml var15 = null;
+        ShipComponent var15 = null;
         int[] var16 = null;
         int[] var17 = null;
         int[] var18 = null;
@@ -57,18 +57,18 @@ final class fr implements dja {
               var3 = "Detail lines mode";
             }
           }
-          cka.a(-1, var3, 16777215, 40, ip.field_p.width / 2 - (kga.a(123, var3) >> 1), 4266);
+          GetLagStandardDeviationOut.a(-1, var3, 16777215, 40, GetBombletSprayEnergyUsed.field_p.width / 2 - (GetPhasedEnergyBeamProjectiles.a(123, var3) >> 1), 4266);
           if (param2) {
             return;
           }
           if (param1.field_v == null) {
             return;
           }
-          if (0 <= fe.field_p &&
+          if (0 <= SetMissileLauncherProjectileLife.field_p &&
             au.field_c == 2) {
             try {
-              var15 = new ml(fe.field_p);
-              var15.a((pe) null, (byte) 84, 16777215, param0, false);
+              var15 = new ShipComponent(SetMissileLauncherProjectileLife.field_p);
+              var15.a((World) null, (byte) 84, 16777215, param0, false);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (Exception) (Object) decompiledCaughtException;
@@ -84,7 +84,7 @@ final class fr implements dja {
           stackIn_18_0 = 16711935;
           stackIn_18_1 = (lta) (param0);
           stackIn_19_2 = !(param2);
-          fg.a(stackIn_18_0, ((lta) (Object) stackIn_18_1).b(stackIn_19_2, 0), param0.a(0, (byte) 122), 80);
+          MouseWheelInput.a(stackIn_18_0, ((lta) (Object) stackIn_18_1).b(stackIn_19_2, 0), param0.a(0, (byte) 122), 80);
           for (var5 = 0; var5 < var18.length; var5 += 2) {
             var6 = var18[var5];
             var7 = var14[var5 + 1];
@@ -97,9 +97,9 @@ final class fr implements dja {
             var7Lifetime1 = var4_array[var5Lifetime1 + 1];
             var8Lifetime1 = param0.a(var6Lifetime1, (byte) 120);
             var9Lifetime1 = param0.b(true, var7Lifetime1);
-            fg.a(16777215, var9Lifetime1, var8Lifetime1, 63);
+            MouseWheelInput.a(16777215, var9Lifetime1, var8Lifetime1, 63);
             if (au.field_c != 2) {
-              cka.a(1, "" + (var5Lifetime1 >> 1), 16777215, var9Lifetime1, var8Lifetime1, 4266);
+              GetLagStandardDeviationOut.a(1, "" + (var5Lifetime1 >> 1), 16777215, var9Lifetime1, var8Lifetime1, 4266);
             }
           }
           if (au.field_c == 0) {
@@ -112,11 +112,11 @@ final class fr implements dja {
                 stackIn_36_0 = (lta) (param0);
                 stackIn_37_1 = !(param2);
                 var10 = ((lta) (Object) stackIn_36_0).b(stackIn_37_1, var8Lifetime2);
-                ena.a(var10, (float)(int)(param0.field_a * 256.0f), -104, var9Lifetime2, 65280);
-                var11 = 8 * fc.a(var5_ref_lsb__[var6Lifetime2].field_a, (byte) 61) >> 8;
+                GetPhasedEnergyBeamReload.a(var10, (float)(int)(param0.field_a * 256.0f), -104, var9Lifetime2, 65280);
+                var11 = 8 * GetNumStars.a(var5_ref_lsb__[var6Lifetime2].field_a, (byte) 61) >> 8;
                 var12 = eu.a(var5_ref_lsb__[var6Lifetime2].field_a, 109) * 8 >> 8;
                 c.a(param0.b(true, var12 + var8Lifetime2), param0.a(var11 + var7Lifetime2, (byte) 127), var9Lifetime2, var10, -16777216, 16711680);
-                cka.a(-1, Integer.toString(var6Lifetime2), 16711935, var10, var9Lifetime2, 4266);
+                GetLagStandardDeviationOut.a(-1, Integer.toString(var6Lifetime2), 16711935, var10, var9Lifetime2, 4266);
               }
             }
           }
@@ -124,7 +124,7 @@ final class fr implements dja {
           stackIn_40_0 = (lta) (param0);
           stackIn_41_1 = !(param2);
           var6Lifetime3 = ((lta) (Object) stackIn_40_0).b(stackIn_41_1, param1.field_i);
-          kq.a(2.0f, (byte) 115, var6Lifetime3, 255, var5Lifetime2);
+          SetNumStars.a(2.0f, (byte) 115, var6Lifetime3, 255, var5Lifetime2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -142,7 +142,7 @@ final class fr implements dja {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class fr implements dja {
           return;
         }
         lga.a(param0, -24055);
-        sj.a(param0, (byte) -93);
+        SetSalvoUsesAllEnergy.a(param0, (byte) -93);
     }
 
     public final tv a(byte param0) {

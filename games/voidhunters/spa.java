@@ -48,11 +48,11 @@ final class spa implements dja {
         float var11;
         float var12;
         String var15;
-        sg var16;
+        Ship var16;
         lta var18;
-        sg var19;
+        Ship var19;
         lta var21;
-        sg var22;
+        Ship var22;
         lta var24;
         int[] var25;
         int[] var26;
@@ -71,7 +71,7 @@ final class spa implements dja {
         String var3Lifetime2;
         String var15Lifetime1;
         String var15Lifetime2;
-        if (!ck.b(false)) {
+        if (!SetDebrisGroupColour.b(false)) {
           if (param1) {
           }
           if (param0 == 0) {
@@ -91,39 +91,39 @@ final class spa implements dja {
           !vqa.field_g.field_N) {
           var4 = 1;
         } else {
-          if (oab.field_o != 0) {
-            var15Lifetime2 = cf.field_a;
+          if (GetArmageddonTimerStart.field_o != 0) {
+            var15Lifetime2 = SetVariableLabelAction.field_a;
             var3Lifetime2 = var15Lifetime2;
-            ga.a(200, false, 0, 0, ip.field_p.height, ip.field_p.width, 1);
+            ga.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
             var5 = kma.a(var2, 0, 200, var15Lifetime2);
-            var16 = ae.a(wba.field_o, (byte) 41);
+            var16 = ae.a(GetBombletSprayPushMultiplier.field_o, (byte) 41);
             var18 = new lta();
-            var18.field_e = (ip.field_p.height >> 1) - (-(var5 >> 1) - ((ip.field_p.height >> 1) - (var5 >> 1) >> 1));
-            var18.field_d = ip.field_p.width >> 1;
-            var25 = var16.f((byte) -92);
+            var18.field_e = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5 >> 1) >> 1));
+            var18.field_d = GetBombletSprayEnergyUsed.field_p.width >> 1;
+            var25 = var16.getBoundingbox((byte) -92);
             var9 = -var25[0] + var25[1];
             var10 = var25[3] - var25[2];
-            var11 = (-32.0f + (float)((ip.field_p.height >> 1) - (var5 >> 1))) / (float)var9;
-            var12 = (-32.0f + (float)((ip.field_p.height >> 1) - (var5 >> 1))) / (float)var10;
+            var11 = (-32.0f + (float)((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5 >> 1))) / (float)var9;
+            var12 = (-32.0f + (float)((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5 >> 1))) / (float)var10;
             var18.field_a = Math.min(var11, var12);
             var18.field_c = (float)((var25[0] + var25[1]) / 2);
             var18.field_b = (float)((var25[3] + var25[2]) / 2);
-            var16.a(kdb.field_o * 10 % 8192, -82);
+            var16.a(SetMinimapWidth.field_o * 10 % 8192, -82);
             if (vqa.field_g != null &&
               !vqa.field_g.field_N &&
-              vqa.field_g.field_m.b(param0 + 1).field_g.d(vqa.field_g.field_L, 76) != null) {
+              vqa.field_g.field_m.b(param0 + 1).world.d(vqa.field_g.field_L, 76) != null) {
               var16.h(17704, 1);
-              var16.a(false, true, (pe) null);
-              var16.a(var18, 121, (pe) null);
-              if (0 != sab.field_o ||
-                si.field_o[83] ||
-                si.field_o[84] ||
-                si.field_o[13]) {
+              var16.a(false, true, (World) null);
+              var16.a(var18, 121, (World) null);
+              if (0 != GetBots.field_o ||
+                SetMachineGunEnergyUsed.field_o[83] ||
+                SetMachineGunEnergyUsed.field_o[84] ||
+                SetMachineGunEnergyUsed.field_o[13]) {
                 if (var4 != 0) {
-                  mgb.field_o = true;
+                  SetFixedaim.field_o = true;
                 } else {
-                  wba.field_o = null;
-                  mgb.field_o = true;
+                  GetBombletSprayPushMultiplier.field_o = null;
+                  SetFixedaim.field_o = true;
                 }
               }
               if (param1) {
@@ -133,12 +133,12 @@ final class spa implements dja {
               }
               return;
             }
-            var16.a(false, true, (pe) null);
-            var16.a(var18, 121, (pe) null);
-            if (0 == sab.field_o &&
-              !si.field_o[83] &&
-              !si.field_o[84]) {
-              if (!si.field_o[13]) {
+            var16.a(false, true, (World) null);
+            var16.a(var18, 121, (World) null);
+            if (0 == GetBots.field_o &&
+              !SetMachineGunEnergyUsed.field_o[83] &&
+              !SetMachineGunEnergyUsed.field_o[84]) {
+              if (!SetMachineGunEnergyUsed.field_o[13]) {
                 if (param1) {
                 }
                 if (param0 == 0) {
@@ -148,10 +148,10 @@ final class spa implements dja {
                 return;
               }
               if (var4 != 0) {
-                mgb.field_o = true;
+                SetFixedaim.field_o = true;
               } else {
-                wba.field_o = null;
-                mgb.field_o = true;
+                GetBombletSprayPushMultiplier.field_o = null;
+                SetFixedaim.field_o = true;
               }
               if (param1) {
               }
@@ -161,7 +161,7 @@ final class spa implements dja {
               return;
             }
             if (var4 != 0) {
-              mgb.field_o = true;
+              SetFixedaim.field_o = true;
               if (param1) {
               }
               if (param0 != 0) {
@@ -169,8 +169,8 @@ final class spa implements dja {
               }
               return;
             }
-            wba.field_o = null;
-            mgb.field_o = true;
+            GetBombletSprayPushMultiplier.field_o = null;
+            SetFixedaim.field_o = true;
             if (param1) {
             }
             if (param0 != 0) {
@@ -180,37 +180,37 @@ final class spa implements dja {
           }
           if (0 == wgb.field_f) {
             var4 = 1;
-            ga.a(200, false, 0, 0, ip.field_p.height, ip.field_p.width, 1);
+            ga.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
             var5Lifetime2 = kma.a(var2, 0, 200, var3Lifetime2);
-            var19 = ae.a(wba.field_o, (byte) 41);
+            var19 = ae.a(GetBombletSprayPushMultiplier.field_o, (byte) 41);
             var21 = new lta();
-            var21.field_e = (ip.field_p.height >> 1) - (-(var5Lifetime2 >> 1) - ((ip.field_p.height >> 1) - (var5Lifetime2 >> 1) >> 1));
-            var21.field_d = ip.field_p.width >> 1;
-            var26 = var19.f((byte) -92);
+            var21.field_e = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5Lifetime2 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime2 >> 1) >> 1));
+            var21.field_d = GetBombletSprayEnergyUsed.field_p.width >> 1;
+            var26 = var19.getBoundingbox((byte) -92);
             var9Lifetime2 = -var26[0] + var26[1];
             var10Lifetime2 = var26[3] - var26[2];
-            var11Lifetime2 = (-32.0f + (float)((ip.field_p.height >> 1) - (var5Lifetime2 >> 1))) / (float)var9Lifetime2;
-            var12Lifetime2 = (-32.0f + (float)((ip.field_p.height >> 1) - (var5Lifetime2 >> 1))) / (float)var10Lifetime2;
+            var11Lifetime2 = (-32.0f + (float)((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime2 >> 1))) / (float)var9Lifetime2;
+            var12Lifetime2 = (-32.0f + (float)((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime2 >> 1))) / (float)var10Lifetime2;
             var21.field_a = Math.min(var11Lifetime2, var12Lifetime2);
             var21.field_c = (float)((var26[0] + var26[1]) / 2);
             var21.field_b = (float)((var26[3] + var26[2]) / 2);
-            var19.a(kdb.field_o * 10 % 8192, -82);
+            var19.a(SetMinimapWidth.field_o * 10 % 8192, -82);
             if (vqa.field_g != null &&
               !vqa.field_g.field_N &&
-              vqa.field_g.field_m.b(param0 + 1).field_g.d(vqa.field_g.field_L, 76) != null) {
+              vqa.field_g.field_m.b(param0 + 1).world.d(vqa.field_g.field_L, 76) != null) {
               var19.h(17704, 1);
             }
-            var19.a(false, true, (pe) null);
-            var19.a(var21, 121, (pe) null);
-            if (0 != sab.field_o ||
-              si.field_o[83] ||
-              si.field_o[84] ||
-              si.field_o[13]) {
+            var19.a(false, true, (World) null);
+            var19.a(var21, 121, (World) null);
+            if (0 != GetBots.field_o ||
+              SetMachineGunEnergyUsed.field_o[83] ||
+              SetMachineGunEnergyUsed.field_o[84] ||
+              SetMachineGunEnergyUsed.field_o[13]) {
               if (var4 != 0) {
-                mgb.field_o = true;
+                SetFixedaim.field_o = true;
               } else {
-                wba.field_o = null;
-                mgb.field_o = true;
+                GetBombletSprayPushMultiplier.field_o = null;
+                SetFixedaim.field_o = true;
               }
             }
             if (param1) {
@@ -220,34 +220,34 @@ final class spa implements dja {
             }
             return;
           }
-          var3Lifetime2 = cf.field_a;
+          var3Lifetime2 = SetVariableLabelAction.field_a;
         }
-        ga.a(200, false, 0, 0, ip.field_p.height, ip.field_p.width, 1);
+        ga.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
         var5Lifetime1 = kma.a(var2, 0, 200, var3Lifetime2);
-        var22 = ae.a(wba.field_o, (byte) 41);
+        var22 = ae.a(GetBombletSprayPushMultiplier.field_o, (byte) 41);
         var24 = new lta();
-        var24.field_e = (ip.field_p.height >> 1) - (-(var5Lifetime1 >> 1) - ((ip.field_p.height >> 1) - (var5Lifetime1 >> 1) >> 1));
-        var24.field_d = ip.field_p.width >> 1;
-        var27 = var22.f((byte) -92);
+        var24.field_e = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5Lifetime1 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime1 >> 1) >> 1));
+        var24.field_d = GetBombletSprayEnergyUsed.field_p.width >> 1;
+        var27 = var22.getBoundingbox((byte) -92);
         var9Lifetime1 = -var27[0] + var27[1];
         var10Lifetime1 = var27[3] - var27[2];
-        var11Lifetime1 = (-32.0f + (float)((ip.field_p.height >> 1) - (var5Lifetime1 >> 1))) / (float)var9Lifetime1;
-        var12Lifetime1 = (-32.0f + (float)((ip.field_p.height >> 1) - (var5Lifetime1 >> 1))) / (float)var10Lifetime1;
+        var11Lifetime1 = (-32.0f + (float)((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime1 >> 1))) / (float)var9Lifetime1;
+        var12Lifetime1 = (-32.0f + (float)((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime1 >> 1))) / (float)var10Lifetime1;
         var24.field_a = Math.min(var11Lifetime1, var12Lifetime1);
         var24.field_c = (float)((var27[0] + var27[1]) / 2);
         var24.field_b = (float)((var27[3] + var27[2]) / 2);
-        var22.a(kdb.field_o * 10 % 8192, -82);
+        var22.a(SetMinimapWidth.field_o * 10 % 8192, -82);
         if (vqa.field_g == null) {
-          var22.a(false, true, (pe) null);
-          var22.a(var24, 121, (pe) null);
-          if (0 == sab.field_o &&
-            !si.field_o[83] &&
-            !si.field_o[84]) {
-            if (si.field_o[13]) {
+          var22.a(false, true, (World) null);
+          var22.a(var24, 121, (World) null);
+          if (0 == GetBots.field_o &&
+            !SetMachineGunEnergyUsed.field_o[83] &&
+            !SetMachineGunEnergyUsed.field_o[84]) {
+            if (SetMachineGunEnergyUsed.field_o[13]) {
               if (var4 == 0) {
-                wba.field_o = null;
+                GetBombletSprayPushMultiplier.field_o = null;
               }
-              mgb.field_o = true;
+              SetFixedaim.field_o = true;
               if (param1) {
               }
               if (param0 != 0) {
@@ -257,22 +257,22 @@ final class spa implements dja {
             }
           } else {
             if (var4 == 0) {
-              wba.field_o = null;
+              GetBombletSprayPushMultiplier.field_o = null;
             }
-            mgb.field_o = true;
+            SetFixedaim.field_o = true;
           }
         } else {
           if (vqa.field_g.field_N) {
-            var22.a(false, true, (pe) null);
-            var22.a(var24, 121, (pe) null);
-            if (0 == sab.field_o &&
-              !si.field_o[83] &&
-              !si.field_o[84]) {
-              if (si.field_o[13]) {
+            var22.a(false, true, (World) null);
+            var22.a(var24, 121, (World) null);
+            if (0 == GetBots.field_o &&
+              !SetMachineGunEnergyUsed.field_o[83] &&
+              !SetMachineGunEnergyUsed.field_o[84]) {
+              if (SetMachineGunEnergyUsed.field_o[13]) {
                 if (var4 == 0) {
-                  wba.field_o = null;
+                  GetBombletSprayPushMultiplier.field_o = null;
                 }
-                mgb.field_o = true;
+                SetFixedaim.field_o = true;
                 if (param1) {
                 }
                 if (param0 != 0) {
@@ -282,50 +282,50 @@ final class spa implements dja {
               }
             } else {
               if (var4 == 0) {
-                wba.field_o = null;
+                GetBombletSprayPushMultiplier.field_o = null;
               }
-              mgb.field_o = true;
+              SetFixedaim.field_o = true;
             }
           } else {
-            if (vqa.field_g.field_m.b(param0 + 1).field_g.d(vqa.field_g.field_L, 76) != null) {
+            if (vqa.field_g.field_m.b(param0 + 1).world.d(vqa.field_g.field_L, 76) != null) {
               var22.h(17704, 1);
-              var22.a(false, true, (pe) null);
-              var22.a(var24, 121, (pe) null);
-              if (0 != sab.field_o ||
-                si.field_o[83] ||
-                si.field_o[84] ||
-                si.field_o[13]) {
+              var22.a(false, true, (World) null);
+              var22.a(var24, 121, (World) null);
+              if (0 != GetBots.field_o ||
+                SetMachineGunEnergyUsed.field_o[83] ||
+                SetMachineGunEnergyUsed.field_o[84] ||
+                SetMachineGunEnergyUsed.field_o[13]) {
                 if (var4 != 0) {
-                  mgb.field_o = true;
+                  SetFixedaim.field_o = true;
                 } else {
-                  wba.field_o = null;
-                  mgb.field_o = true;
+                  GetBombletSprayPushMultiplier.field_o = null;
+                  SetFixedaim.field_o = true;
                 }
               }
             } else {
-              var22.a(false, true, (pe) null);
-              var22.a(var24, 121, (pe) null);
-              if (0 != sab.field_o) {
+              var22.a(false, true, (World) null);
+              var22.a(var24, 121, (World) null);
+              if (0 != GetBots.field_o) {
                 if (var4 == 0) {
-                  wba.field_o = null;
+                  GetBombletSprayPushMultiplier.field_o = null;
                 }
-                mgb.field_o = true;
+                SetFixedaim.field_o = true;
               } else {
-                if (si.field_o[83]) {
+                if (SetMachineGunEnergyUsed.field_o[83]) {
                   if (var4 == 0) {
-                    wba.field_o = null;
+                    GetBombletSprayPushMultiplier.field_o = null;
                   }
-                  mgb.field_o = true;
+                  SetFixedaim.field_o = true;
                 } else {
-                  if (si.field_o[84]) {
+                  if (SetMachineGunEnergyUsed.field_o[84]) {
                     if (var4 == 0) {
-                      wba.field_o = null;
+                      GetBombletSprayPushMultiplier.field_o = null;
                     }
-                    mgb.field_o = true;
+                    SetFixedaim.field_o = true;
                   } else {
-                    if (si.field_o[13]) {
+                    if (SetMachineGunEnergyUsed.field_o[13]) {
                       if (var4 != 0) {
-                        mgb.field_o = true;
+                        SetFixedaim.field_o = true;
                         if (param1) {
                         }
                         if (param0 != 0) {
@@ -333,8 +333,8 @@ final class spa implements dja {
                         }
                         return;
                       }
-                      wba.field_o = null;
-                      mgb.field_o = true;
+                      GetBombletSprayPushMultiplier.field_o = null;
+                      SetFixedaim.field_o = true;
                     }
                   }
                 }

@@ -95,8 +95,8 @@ final class cm extends le {
           var13 = 0;
           var14 = hob.field_d * this.field_n >> 12;
           var15 = this.field_q * hob.field_d >> 12;
-          var16 = this.field_k * noa.field_o >> 12;
-          var17 = noa.field_o * this.field_s >> 12;
+          var16 = this.field_k * GetTorpedoReload.field_o >> 12;
+          var17 = GetTorpedoReload.field_o * this.field_s >> 12;
           if (var17 <= 1) {
             return var47[param0];
           }
@@ -114,7 +114,7 @@ final class cm extends le {
               var25 = hob.field_d;
               var23 = -var8 + hob.field_d;
             }
-            L4: {
+            regionExit1: {
               if (var11 == 0) {
                 var48Lifetime1 = var20;
                 var26_int = var9;
@@ -170,7 +170,7 @@ final class cm extends le {
                       }
                     }
                     var9 = var26_int;
-                    break L4;
+                    break regionExit1;
                   }
                   var28++;
                   var26_int++;
@@ -184,8 +184,8 @@ final class cm extends le {
               }
               var22 = 0;
             }
-            if (var24 + var22 > noa.field_o) {
-              var24 = noa.field_o - var22;
+            if (var24 + var22 > GetTorpedoReload.field_o) {
+              var24 = GetTorpedoReload.field_o - var22;
             } else {
               var10 = 0;
             }
@@ -263,7 +263,7 @@ final class cm extends le {
         this.field_o = 1024;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -325,7 +325,7 @@ final class cm extends le {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -366,7 +366,7 @@ final class cm extends le {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -487,17 +487,17 @@ final class cm extends le {
                 if (this.field_p == 0) {
                   for (var20 = 0; var20 < var13; var20++) {
                     var21 = var8_int * var20 / var13;
-                    dupTemp$0 = dla.a(gbb.field_q, param1 + param3 - var20 - 1);
+                    dupTemp$0 = dla.a(SetMassDriverEnergyUsed.field_q, param1 + param3 - var20 - 1);
                     var18[dupTemp$0] = var21 * var19 >> 12;
-                    var18[dla.a(param3 + var20, gbb.field_q)] = var21 * var19 >> 12;
+                    var18[dla.a(param3 + var20, SetMassDriverEnergyUsed.field_q)] = var21 * var19 >> 12;
                   }
                 } else {
                   for (var20 = 0; var20 < var13; var20++) {
                     var21 = var8_int * var20 / var13;
                     stackIn_41_0 = var18;
-                    stackIn_41_1 = dla.a(gbb.field_q, var20 + param3);
+                    stackIn_41_1 = dla.a(SetMassDriverEnergyUsed.field_q, var20 + param3);
                     stackIn_41_2 = var18;
-                    stackIn_41_3 = dla.a(param1 + (param3 - (var20 + 1)), gbb.field_q);
+                    stackIn_41_3 = dla.a(param1 + (param3 - (var20 + 1)), SetMassDriverEnergyUsed.field_q);
                     if (var19 <= var21) {
                       stackIn_42_4 = var19;
                     } else {
@@ -518,9 +518,9 @@ final class cm extends le {
                 var19 = -var17 + (param4 - 1);
                 if (var19 >= var14) {
                   for (var20 = 0; var20 < var13; var20++) {
-                    dupTemp$2 = dla.a(-1 + param1 + param3 - var20, gbb.field_q);
+                    dupTemp$2 = dla.a(-1 + param1 + param3 - var20, SetMassDriverEnergyUsed.field_q);
                     var18[dupTemp$2] = var8_int * var20 / var13;
-                    var18[dla.a(var20 + param3, gbb.field_q)] = var8_int * var20 / var13;
+                    var18[dla.a(var20 + param3, SetMassDriverEnergyUsed.field_q)] = var8_int * var20 / var13;
                   }
                   if (hob.field_d >= var15 + var16) {
                     cua.a(var18, var15, var16, var8_int);
@@ -536,17 +536,17 @@ final class cm extends le {
                   if (0 == this.field_p) {
                     for (var21 = 0; var21 < var13; var21++) {
                       var22 = var8_int * var21 / var13;
-                      dupTemp$1 = dla.a(-var21 + (param1 + (param3 - 1)), gbb.field_q);
+                      dupTemp$1 = dla.a(-var21 + (param1 + (param3 - 1)), SetMassDriverEnergyUsed.field_q);
                       var18[dupTemp$1] = var20 * var22 >> 12;
-                      var18[dla.a(gbb.field_q, param3 + var21)] = var20 * var22 >> 12;
+                      var18[dla.a(SetMassDriverEnergyUsed.field_q, param3 + var21)] = var20 * var22 >> 12;
                     }
                   } else {
                     for (var21 = 0; var21 < var13; var21++) {
                       var22 = var21 * var8_int / var13;
                       stackIn_53_0 = var18;
-                      stackIn_53_1 = dla.a(gbb.field_q, param3 + var21);
+                      stackIn_53_1 = dla.a(SetMassDriverEnergyUsed.field_q, param3 + var21);
                       stackIn_53_2 = var18;
-                      stackIn_53_3 = dla.a(gbb.field_q, -var21 + (param3 + param1) - 1);
+                      stackIn_53_3 = dla.a(SetMassDriverEnergyUsed.field_q, -var21 + (param3 + param1) - 1);
                       if (var22 >= var20) {
                         stackIn_54_4 = var20;
                       } else {
@@ -585,7 +585,7 @@ final class cm extends le {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param6).append(')').toString());
         }
     }
 

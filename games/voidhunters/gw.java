@@ -32,7 +32,7 @@ final class gw extends le {
         if (!this.field_f.field_e) {
           return var9;
         }
-        var4 = sj.field_p[param0];
+        var4 = SetSalvoUsesAllEnergy.field_p[param0];
         for (var5 = 0; hob.field_d > var5; var5++) {
           var6 = grb.field_l[var5];
           if (var6 > this.field_j &&
@@ -105,7 +105,7 @@ final class gw extends le {
         this.field_j = 585;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -132,7 +132,7 @@ final class gw extends le {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

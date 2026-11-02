@@ -8,7 +8,7 @@ final class cma {
         if (param2 != -22785) {
           return false;
         }
-        return iua.a(param0, (byte) 119, param1) & bdb.a(param0, false, param1);
+        return SetDebrisCarryOverPercentage.a(param0, (byte) 119, param1) & SetHealthBarWidth.a(param0, false, param1);
     }
 
     final static String a(String param0, String param1, String param2, byte param3) {
@@ -26,8 +26,8 @@ final class cma {
           if (param3 >= -57) {
             field_a = 104;
           }
-          param1 = jd.a(param1, "<teamname>", 0, param0);
-          param1 = jd.a(param1, "<objective>", 0, param2);
+          param1 = SetLagVariant.a(param1, "<teamname>", 0, param0);
+          param1 = SetLagVariant.a(param1, "<objective>", 0, param2);
           stackIn_3_0 = (String) (param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -52,7 +52,7 @@ final class cma {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class cma {
         String[] var18 = null;
         try {
           var18 = (String[]) null;
-          db.a((String[]) null, param5, param11, param13, param0, param1, param16, param12, param6, param15, param9, 1, param3, param7, 1, param2, param8, param10, param14);
+          GetWorldWidthUpshift.a((String[]) null, param5, param11, param13, param0, param1, param16, param12, param6, param15, param9, 1, param3, param7, 1, param2, param8, param10, param14);
           if (param4 >= -68) {
             field_a = -108;
           }
@@ -206,7 +206,7 @@ final class cma {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 

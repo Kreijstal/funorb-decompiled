@@ -24,14 +24,14 @@ final class vsb extends uda {
     final static void e(int param0) {
         if (param0 != -24248) {
           vsb.e(30);
-          cea.a(113, 4);
+          GetSelfDestructPrepareToggleCooldown.a(113, 4);
           return;
         }
-        cea.a(113, 4);
+        GetSelfDestructPrepareToggleCooldown.a(113, 4);
     }
 
     final void b(int param0, boolean param1) {
-        this.field_d.a(je.field_c, true, et.field_c);
+        this.field_d.a(je.field_c, true, MissionVariable.field_c);
         if (param0 != 5) {
           this.a(0, 25, 20);
         }
@@ -61,7 +61,7 @@ final class vsb extends uda {
             this.field_e = (rga) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "vsb.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vsb.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,12 +109,12 @@ final class vsb extends uda {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
     final void a(int param0) {
-        this.field_d.a(0, qcb.field_q, param0 - 2536);
+        this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, param0 - 2536);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34820);
         jaggl.OpenGL.glDisable(34336);

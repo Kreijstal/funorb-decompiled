@@ -6,7 +6,7 @@ final class wua extends le {
     static int field_k;
     private int field_i;
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -39,7 +39,7 @@ final class wua extends le {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

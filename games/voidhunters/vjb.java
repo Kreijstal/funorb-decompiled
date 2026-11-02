@@ -10,15 +10,15 @@ abstract class vjb {
         if (param0 > 75) {
           lnb.d(0);
           ebb.a((byte) -74);
-          crb.field_v = null;
-          fea.a(-1);
+          Asteroid.field_v = null;
+          GetUseExtraBackground.a(-1);
           return;
         }
         vjb.a((byte) 48);
         lnb.d(0);
         ebb.a((byte) -74);
-        crb.field_v = null;
-        fea.a(-1);
+        Asteroid.field_v = null;
+        GetUseExtraBackground.a(-1);
     }
 
     public static void b(byte param0) {

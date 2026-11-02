@@ -22,7 +22,7 @@ final class li extends pib {
         }
     }
 
-    li(qfa param0, int param1, int param2, byte[] param3, int param4) {
+    li(OpenGlToolkit param0, int param1, int param2, byte[] param3, int param4) {
         super(param0, 3552, param1, param2, false);
         try {
           this.field_h = param2;
@@ -32,15 +32,15 @@ final class li extends pib {
           jaggl.OpenGL.glPixelStorei(3317, 4);
           this.a(-125, true);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     final static int[] a(int param0, int param1, int param2) {
         int var3 = eu.a(param1, 53);
-        int var4 = fc.a(param1, (byte) 106);
+        int var4 = GetNumStars.a(param1, (byte) 106);
         int var5 = eu.a(param2, 108);
-        int var6 = fc.a(param2, (byte) -76);
+        int var6 = GetNumStars.a(param2, (byte) -76);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);
         int var9 = (int)((long)var5 * (long)var4 >> 16);

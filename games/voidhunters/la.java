@@ -58,7 +58,7 @@ final class la extends qg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -75,14 +75,14 @@ final class la extends qg {
         } else {
           jaggl.OpenGL.glBindProgramARB(34336, this.field_b.field_V == 2147483647 ? this.field_c.field_b : this.field_i.field_b);
         }
-        var2.a(dn.field_o, 0.0f, (float)this.field_b.field_V, 0.0f, param0 - 34323, -1.0f);
-        jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, dn.field_o[0], dn.field_o[1], dn.field_o[2], dn.field_o[3]);
+        var2.a(SetCountermeasureLauncherAimspeed.field_o, 0.0f, (float)this.field_b.field_V, 0.0f, param0 - 34323, -1.0f);
+        jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, SetCountermeasureLauncherAimspeed.field_o[0], SetCountermeasureLauncherAimspeed.field_o[1], SetCountermeasureLauncherAimspeed.field_o[2], SetCountermeasureLauncherAimspeed.field_o[3]);
         jaggl.OpenGL.glEnable(param0);
         this.field_e = true;
         this.d(param0 ^ 34386);
     }
 
-    la(qfa param0) {
+    la(OpenGlToolkit param0) {
         super(param0);
         int stackIn_5_0 = 0;
         int stackIn_8_1 = 0;
@@ -139,7 +139,7 @@ final class la extends qg {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ final class la extends qg {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

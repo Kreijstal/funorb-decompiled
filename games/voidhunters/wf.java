@@ -23,23 +23,23 @@ final class wf {
           }
         }
         int var4 = 36;
-        int var5 = (-dma.field_g + ip.field_p.width) / 2;
+        int var5 = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
         var3 = var3 + var5;
-        int var6 = (ip.field_p.height - dma.field_j) / 2;
+        int var6 = (GetBombletSprayEnergyUsed.field_p.height - dma.field_j) / 2;
         var4 = var4 + var6;
-        int var7 = pob.field_b;
+        int var7 = SetVariableAction.field_b;
         if (param1 != -61) {
           this.field_b = (ae) null;
         }
         int var8 = 0;
         if (var7 >= 16) {
-          var8 = -(mg.f(255) * 4) + 1020;
+          var8 = -(SetRepairModeRadius.f(255) * 4) + 1020;
         } else {
           if (var7 > 0) {
-            var8 = 4 * mg.f(param1 ^ -196);
+            var8 = 4 * SetRepairModeRadius.f(param1 ^ -196);
           }
         }
-        ga.a(param0, false, var3 + var8, var4, -(2 * var4) + ip.field_p.height, ip.field_p.width - var3 * 2, 0);
+        ga.a(param0, false, var3 + var8, var4, -(2 * var4) + GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width - var3 * 2, 0);
     }
 
     private final String a(String param0, byte param1, String param2, int param3) {
@@ -55,7 +55,7 @@ final class wf {
           if (param1 <= 34) {
             this.a(true, 114, 76);
           }
-          stackIn_3_0 = jd.a(param2, param0, 0, "<col=ffaa00>" + bpb.field_q[param3] + "</col>");
+          stackIn_3_0 = SetLagVariant.a(param2, param0, 0, "<col=ffaa00>" + SetTorpedoProjectileDamage.field_q[param3] + "</col>");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class wf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -105,14 +105,14 @@ final class wf {
         stackIn_8_0 = (!this.a(2, 120)) ? 1 : 2;
         var3 = stackIn_8_0;
         if (!this.field_b.b((byte) 123)) {
-          if (pma.field_o == 96) {
+          if (SetBombletSprayProjectileDamage.field_o == 96) {
             if (this.field_b.field_j > var2) {
               this.field_b.a((byte) -17, -1 + this.field_b.field_j);
             } else {
               this.field_b.a((byte) -17, var3);
             }
           }
-          if (pma.field_o == 97) {
+          if (SetBombletSprayProjectileDamage.field_o == 97) {
             if (this.field_b.field_j >= 0 &&
               var3 > this.field_b.field_j) {
               this.field_b.a((byte) -17, 1 + this.field_b.field_j);
@@ -131,7 +131,7 @@ final class wf {
 
     private final int c(int param0, int param1) {
         int var4 = 0;
-        int var3 = (ip.field_p.height - dma.field_j) / 2;
+        int var3 = (GetBombletSprayEnergyUsed.field_p.height - dma.field_j) / 2;
         if (param1 != 17915) {
           this.a(false, -15, 108);
         }
@@ -141,13 +141,13 @@ final class wf {
             param0 -= 2;
           } else {
             var4 = ct.a(param1 ^ 3900, 128);
-            return var3 + vba.field_s[this.field_c] + (5 + var4) * param0;
+            return var3 + SetReloadBarWidth.field_s[this.field_c] + (5 + var4) * param0;
           }
         }
         if (5 == this.field_c) {
-          return vba.field_s[this.field_c] + var3;
+          return SetReloadBarWidth.field_s[this.field_c] + var3;
         }
-        return vba.field_s[this.field_c] + var3 + param0 * vba.field_o[this.field_c];
+        return SetReloadBarWidth.field_s[this.field_c] + var3 + param0 * SetReloadBarWidth.field_o[this.field_c];
     }
 
     private final void a(int param0, boolean param1, int param2) {
@@ -191,28 +191,28 @@ final class wf {
         String var9_ref_StringLifetime1Lifetime4;
         boolean decompiledFrameRemainder0 = true;
         var27 = VoidHunters.field_G;
-        var4 = pob.field_b;
+        var4 = SetVariableAction.field_b;
         var5 = 2;
-        var6 = vba.field_p[this.field_c][param0];
-        var7 = vba.field_p[this.field_c].length;
+        var6 = SetReloadBarWidth.field_p[this.field_c][param0];
+        var7 = SetReloadBarWidth.field_p[this.field_c].length;
         var8 = ifa.field_g[var6];
         if (var6 == 6) {
-          if (he.field_o != 0 &&
+          if (SetCountermeasureLauncherProjectileLife.field_o != 0 &&
             wgb.field_f != 0 &&
-            7 != he.field_o &&
+            7 != SetCountermeasureLauncherProjectileLife.field_o &&
             wgb.field_f != 7) {
-            if (he.field_o != 1 &&
+            if (SetCountermeasureLauncherProjectileLife.field_o != 1 &&
               wgb.field_f != 1) {
-              if ((he.field_o == 2 ||
+              if ((SetCountermeasureLauncherProjectileLife.field_o == 2 ||
                 wgb.field_f == 2 ||
-                he.field_o == 3 ||
+                SetCountermeasureLauncherProjectileLife.field_o == 3 ||
                 wgb.field_f == 3 ||
-                he.field_o == 4 ||
+                SetCountermeasureLauncherProjectileLife.field_o == 4 ||
                 4 == wgb.field_f)) {
-                var8 = aj.field_p.toUpperCase();
+                var8 = SetMessageFadetime.field_p.toUpperCase();
               }
             } else {
-              var8 = nd.field_q.toUpperCase();
+              var8 = SetSalvoaim.field_q.toUpperCase();
             }
             decompiledFrameRemainder0 = false;
           }
@@ -223,14 +223,14 @@ final class wf {
           }
         }
         if (19 == var6) {
-          if (2 != jha.field_p) {
-            if (jha.field_p == 1) {
-              var9_ref_StringLifetime1 = jhb.field_o;
+          if (2 != GetMissileLauncherProjectileLife.field_p) {
+            if (GetMissileLauncherProjectileLife.field_p == 1) {
+              var9_ref_StringLifetime1 = SetMissileLauncherAimspeed.field_o;
             } else {
               var9_ref_StringLifetime1 = wva.field_a;
             }
           } else {
-            var9_ref_StringLifetime1 = dv.field_d;
+            var9_ref_StringLifetime1 = PlayerVote.field_d;
           }
           var28 = var9_ref_StringLifetime1.toUpperCase();
           var9_ref_StringLifetime1Lifetime1 = var28;
@@ -242,10 +242,10 @@ final class wf {
           var9_ref_StringLifetime1Lifetime4 = var8;
         }
         if (24 == var6) {
-          if (3 != eaa.field_q) {
-            if (eaa.field_q != 1) {
-              if (0 != eaa.field_q) {
-                var9_ref_StringLifetime2 = vk.field_o;
+          if (3 != GetMassDriverProjectiles.field_q) {
+            if (GetMassDriverProjectiles.field_q != 1) {
+              if (0 != GetMassDriverProjectiles.field_q) {
+                var9_ref_StringLifetime2 = SetMomentOfInertiaPredivideDownshift.field_o;
                 var8 = var9_ref_StringLifetime2;
                 var8 = var9_ref_StringLifetime2;
               } else {
@@ -255,7 +255,7 @@ final class wf {
               var9_ref_StringLifetime2 = ot.field_a;
             }
           } else {
-            var9_ref_StringLifetime2 = msa.field_p;
+            var9_ref_StringLifetime2 = GetDebrisMax.field_p;
           }
           var29 = var9_ref_StringLifetime2.toUpperCase();
           var8 = var29;
@@ -263,16 +263,16 @@ final class wf {
           var8 = var8 + var29;
         }
         if (var6 == 22 &&
-          ji.b(true)) {
-          var8 = tqa.field_o.toUpperCase();
+          SetReverbFeedback.b(true)) {
+          var8 = SetBombletSprayProjectileOndamageParticles.field_o.toUpperCase();
         }
         var9 = 0;
         var11 = -10 / ((param2 - 55) / 34);
         if (var6 == 23) {
-          if (fwa.field_g.field_a &&
+          if (fwa.field_g.copyToClipboardHidden &&
             !ssa.b(2)) {
             if (param1) {
-              kwa.a(fla.field_o, -33);
+              GetMassDriverReload.a(GetDebrisCollisionDamage.field_o, -33);
             }
             var9 = 1;
           }
@@ -281,9 +281,9 @@ final class wf {
             var8 = pu.field_b.toUpperCase();
           } else {
             var8 = gmb.field_b.toUpperCase();
-            if (bm.field_o == null ||
+            if (SetTorpedoProjectiles.field_o == null ||
               null == vqa.field_g ||
-              null == vqa.field_g.field_m.b(1).field_g.d(vqa.field_g.field_L, 107)) {
+              null == vqa.field_g.field_m.b(1).world.d(vqa.field_g.field_L, 107)) {
               var9 = 1;
             }
           }
@@ -295,11 +295,11 @@ final class wf {
         if (var4 < 16) {
           if (0 < var4) {
             var15_float = (float)(var7 * 2 - param0) * 0.800000011920929f;
-            var14 = (int)(var15_float * (float)mg.f(255));
+            var14 = (int)(var15_float * (float)SetRepairModeRadius.f(255));
           }
         } else {
           var15_float = (float)(param0 + var7) * 0.800000011920929f;
-          var14 = (int)(var15_float * (float)(-mg.f(255) + 255));
+          var14 = (int)(var15_float * (float)(-SetRepairModeRadius.f(255) + 255));
         }
         var13 = var13 + var14;
         var12 = var12 + var14;
@@ -311,7 +311,7 @@ final class wf {
         }
         var16 = stackIn_64_0;
         if (var16 != 0) {
-          var10 = wrb.a(100, 132);
+          var10 = GetSniperCannonAimspeed.a(100, 132);
         }
         var17 = -var10 + var12 + var13 >> 1;
         var18 = this.a(param0, (byte) 70);
@@ -338,13 +338,13 @@ final class wf {
         if (var21 == 1) {
           var22++;
         }
-        var23 = wrb.a(100, var22);
+        var23 = GetSniperCannonAimspeed.a(100, var22);
         var24 = ct.a(19143, var22);
         if (var16 != 0) {
           var25 = var15 + var18 / 2 - 1;
           bn.a(131, var17, (byte) 93, var25);
           if (var6 != 13) {
-            stackIn_91_0 = var10 * hlb.field_p / 256;
+            stackIn_91_0 = var10 * GetMutatorVotes.field_p / 256;
           } else {
             stackIn_91_0 = var10 * kt.field_l / 256;
           }
@@ -352,18 +352,18 @@ final class wf {
           if (var21 == 1) {
             fpa.a(var25, ct.a(19143, 131) + var25, true, var17 + var26, var17);
             bn.a(132, var17, (byte) 122, var25);
-            tm.a(126);
+            GetMissionTerrainSpaceProbability.a(126);
           }
           bn.a(var22, -1 + var17 - (-var26 + var23 / 2), (byte) 92, var25 + (ct.a(19143, 132) - var24) / 2);
         } else {
           bn.a(var22, var19 / 2 + (var12 - var23 / 2), (byte) 108, var15 + var20 / 2 - var24 / 2);
-          uoa.a(var22, 250, -(var24 / 2) + (var20 / 2 + var15), 0, -(var23 / 2) + var12 + var19 / 2);
+          IncrementVariableAction.a(var22, 250, -(var24 / 2) + (var20 / 2 + var15), 0, -(var23 / 2) + var12 + var19 / 2);
           stackIn_85_0 = (param1) ? 15658751 : 13421772;
           var25 = stackIn_85_0;
           if (var9 != 0) {
             var25 = 7829367;
           }
-          pm.a(var17, -1, -12 + var18 / 2 + var15 + tib.a(true, var5), var8, var5, var25, (byte) -88);
+          SetSelfDestructPrepareToggleCooldown.a(var17, -1, -12 + var18 / 2 + var15 + tib.a(true, var5), var8, var5, var25, (byte) -88);
         }
     }
 
@@ -376,7 +376,7 @@ final class wf {
           param2 = this.field_b.field_j;
         }
         this.field_b.a(param0, -1, param2, this.a(uia.field_b, kc.field_b, param1 ^ 7060));
-        mba.field_b = kdb.field_o;
+        mba.field_b = SetMinimapWidth.field_o;
     }
 
     final int a(int param0, int param1, int param2) {
@@ -388,7 +388,7 @@ final class wf {
         if (param2 != 6868) {
           field_d = 97;
         }
-        while (vba.field_p[this.field_c].length > var4) {
+        while (SetReloadBarWidth.field_p[this.field_c].length > var4) {
           var5 = this.c(var4, 17915);
           if (this.a(var4, 116) &&
             this.b(31488, var4) <= param1 &&
@@ -424,17 +424,17 @@ final class wf {
         String var21;
         var19 = VoidHunters.field_G;
         var2 = 4;
-        var3 = pob.field_b;
+        var3 = SetVariableAction.field_b;
         var4 = 0;
         if (var3 >= 16) {
-          var4 = (-mg.f(255) + 255) * 4;
+          var4 = (-SetRepairModeRadius.f(255) + 255) * 4;
         } else {
           if (0 < var3) {
-            var4 = mg.f(255) * 4;
+            var4 = SetRepairModeRadius.f(255) * 4;
           }
         }
-        var5 = var4 + (ip.field_p.width - dma.field_g) / 2;
-        var6 = (-dma.field_j + ip.field_p.height) / 2;
+        var5 = var4 + (GetBombletSprayEnergyUsed.field_p.width - dma.field_g) / 2;
+        var6 = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
         var7 = 20;
         var8 = 20;
         var10 = -32 % ((param0 - 3) / 51);
@@ -448,17 +448,17 @@ final class wf {
         var15 = -var7 + (-ko.field_e[0].field_m + (var5 + 80 + var9)) + var14;
         var16 = 2 * var7 + (ko.field_e[0].field_m + 480 - var14 * 2) + (ko.field_e[2].field_m - var9 * 2);
         var17 = 13421772;
-        if (op.field_o == 0) {
+        if (SetFps.field_o == 0) {
           var12 += 50;
-          nua.a(-1, var13, var15, pqa.a(false, var2), 0, mb.field_k[op.field_o], var17, var16, -55, var12, 0, var2);
-          nua.a(-1, var13, 140 + var15, pqa.a(false, var2), 0, lu.field_a, 16755200, var16, -51, var12, 0, var2);
+          SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, mb.field_k[SetFps.field_o], var17, var16, -55, var12, 0, var2);
+          SetAutoaim.a(-1, var13, 140 + var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, lu.field_a, 16755200, var16, -51, var12, 0, var2);
         } else {
           var12 -= 10;
-          var20 = this.a("<savekey>", (byte) 119, mb.field_k[op.field_o], ve.field_p);
+          var20 = this.a("<savekey>", (byte) 119, mb.field_k[SetFps.field_o], SetDetachmentMode.field_p);
           var21 = this.a("<loadkey>", (byte) 63, var20, gg.field_j);
-          nua.a(-1, var13, var15, pqa.a(false, var2), 1, var21, var17, var16, -42, var12, 0, var2);
+          SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.a(false, var2), 1, var21, var17, var16, -42, var12, 0, var2);
         }
-        pm.a(80 + var5, -1, -50 + var6 + 160, pt.a(op.field_o, -98), 1, 16738305, (byte) -96);
+        SetSelfDestructPrepareToggleCooldown.a(80 + var5, -1, -50 + var6 + 160, GetAutoAfkTimeout.a(SetFps.field_o, -98), 1, 16738305, (byte) -96);
     }
 
     private final void b(int param0, boolean param1, int param2) {
@@ -475,7 +475,7 @@ final class wf {
         int var8;
         int var9;
         int var10_int;
-        sg var10;
+        Ship var10;
         int var11;
         String var12;
         int var12_int;
@@ -501,16 +501,16 @@ final class wf {
         String var14Lifetime4;
         var15 = VoidHunters.field_G;
         var4 = 1;
-        var5 = vba.field_p[this.field_c][param2];
+        var5 = SetReloadBarWidth.field_p[this.field_c][param2];
         var10_int = var5;
         if (var10_int != 0) {
           if (var10_int == 1) {
             if (this.field_b.e((byte) -126)) {
-              if (fda.e((byte) 85)) {
-                iba.a(dsb.field_p, 2, (byte) -115, 320, ck.field_o, param1, wc.field_d, 0, 8, true, dsb.field_p.field_o, dra.field_v, 240, 8, dsb.field_p.field_A + dsb.field_p.field_o);
+              if (GetPhasedEnergyBeamPulsetime.e((byte) 85)) {
+                GetAutoDetail.a(SetMpSandboxEnemySpawnLimit.field_p, 2, (byte) -115, 320, SetDebrisGroupColour.field_o, param1, wc.field_d, 0, 8, true, SetMpSandboxEnemySpawnLimit.field_p.field_o, dra.field_v, 240, 8, SetMpSandboxEnemySpawnLimit.field_p.field_A + SetMpSandboxEnemySpawnLimit.field_p.field_o);
               } else {
                 var10_int = param1 ? 1 : 0;
-                lha.a(wgb.field_f, var10_int != 0, (byte) -85, -4);
+                GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, -4);
               }
             }
           } else {
@@ -519,22 +519,22 @@ final class wf {
                 if (16 == var10_int) {
                   if (this.field_b.e((byte) -78)) {
                     var10_int = param1 ? 1 : 0;
-                    lha.a(wgb.field_f, var10_int != 0, (byte) -85, 7);
-                    fhb.field_p = true;
+                    GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, 7);
+                    GetMachineGunAimarc.field_p = true;
                   }
                 } else {
                   if (var10_int == 3) {
                     if (this.field_b.e((byte) -86)) {
-                      op.field_o = 0;
+                      SetFps.field_o = 0;
                       var10_int = param1 ? 1 : 0;
-                      lha.a(wgb.field_f, var10_int != 0, (byte) -85, 5);
+                      GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, 5);
                     }
                   } else {
                     if (var10_int != 6) {
                       if (20 == var10_int) {
                         if (this.field_b.e((byte) -95)) {
                           var10_int = param1 ? 1 : 0;
-                          lha.a(wgb.field_f, var10_int != 0, (byte) -85, 8);
+                          GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, 8);
                         }
                       } else {
                         if (var10_int != 21) {
@@ -548,24 +548,24 @@ final class wf {
                                 if (19 == var10_int) {
                                   var8 = 0;
                                   if (this.field_b.c((byte) -45)) {
-                                    jha.field_p = jha.field_p + 1;
+                                    GetMissileLauncherProjectileLife.field_p = GetMissileLauncherProjectileLife.field_p + 1;
                                     var8 = 1;
                                   }
                                   if (this.field_b.a(42)) {
-                                    jha.field_p = jha.field_p - 1;
+                                    GetMissileLauncherProjectileLife.field_p = GetMissileLauncherProjectileLife.field_p - 1;
                                     var8 = 1;
                                   }
-                                  if (3 <= jha.field_p) {
-                                    jha.field_p = 0;
+                                  if (3 <= GetMissileLauncherProjectileLife.field_p) {
+                                    GetMissileLauncherProjectileLife.field_p = 0;
                                   }
-                                  if (jha.field_p < 0) {
-                                    jha.field_p = 2;
+                                  if (GetMissileLauncherProjectileLife.field_p < 0) {
+                                    GetMissileLauncherProjectileLife.field_p = 2;
                                   }
                                   if (var8 != 0) {
                                     aw.a(false);
                                     if (ef.field_E) {
-                                      bea.a((byte) 114, "graphics_quality", jha.field_p);
-                                      qra.a(-96);
+                                      bea.a((byte) 114, "graphics_quality", GetMissileLauncherProjectileLife.field_p);
+                                      SetLaserAimarc.a(-96);
                                     }
                                   }
                                 } else {
@@ -576,12 +576,12 @@ final class wf {
                                           vqa.field_g.a(param1, -10510);
                                         }
                                         aeb.field_a = true;
-                                        bg.field_o = false;
+                                        GetMessageFadetime.field_o = false;
                                         if (wh.g(-118) &&
                                           jkb.field_a) {
-                                          dpa.field_p.h(param0 ^ 24343, 10);
+                                          RequestNewestBlackboxRecording.field_p.h(param0 ^ 24343, 10);
                                           jkb.field_a = false;
-                                          nwa.field_d = false;
+                                          MessageLog.field_d = false;
                                         }
                                       }
                                     } else {
@@ -591,7 +591,7 @@ final class wf {
                                             vqa.field_g.i(60);
                                             var10_int = param1 ? 1 : 0;
                                             stackIn_161_0 = (!bqa.a(false)) ? 0 : 7;
-                                            lha.a(stackIn_161_0, var10_int != 0, (byte) -85, -1);
+                                            GetNebulaFadesOutWhenClose.a(stackIn_161_0, var10_int != 0, (byte) -85, -1);
                                           }
                                         } else {
                                           if (var10_int == 10) {
@@ -599,16 +599,16 @@ final class wf {
                                               vqa.field_g.b(true);
                                               var10_int = param1 ? 1 : 0;
                                               stackIn_166_0 = (bqa.a(false)) ? 7 : 0;
-                                              lha.a(stackIn_166_0, var10_int != 0, (byte) -85, -1);
+                                              GetNebulaFadesOutWhenClose.a(stackIn_166_0, var10_int != 0, (byte) -85, -1);
                                             }
                                           } else {
                                             if (var10_int == 11) {
                                               if (this.field_b.e((byte) -98)) {
-                                                if (idb.field_o) {
+                                                if (GetThrusterSmallForce.field_o) {
                                                   var10_int = param1 ? 1 : 0;
-                                                  lha.a(wgb.field_f, var10_int != 0, (byte) -85, -5);
+                                                  GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, -5);
                                                 }
-                                                if (nhb.field_p) {
+                                                if (SetMissionTerrainDebrisProbability.field_p) {
                                                   jua.a(0, 11, 20694);
                                                 }
                                               }
@@ -617,7 +617,7 @@ final class wf {
                                                 if (var10_int == 18) {
                                                   if (this.field_b.e((byte) -115) &&
                                                     this.a(param2, param0 ^ 96)) {
-                                                    op.field_o = op.field_o + 1;
+                                                    SetFps.field_o = SetFps.field_o + 1;
                                                   }
                                                   if (!this.a(param2, 125) &&
                                                     !param1) {
@@ -626,12 +626,12 @@ final class wf {
                                                 } else {
                                                   if (var10_int == 12) {
                                                     if (this.field_b.e((byte) -82)) {
-                                                      VoidHunters.a(vpa.b((byte) -123), param0 - 20);
+                                                      VoidHunters.a(MissionList.b((byte) -123), param0 - 20);
                                                     }
                                                   } else {
                                                     if (var10_int == 22) {
                                                       if (this.field_b.e((byte) -119)) {
-                                                        stackIn_193_0 = (!ji.b(true)) ? 0 : 1;
+                                                        stackIn_193_0 = (!SetReverbFeedback.b(true)) ? 0 : 1;
                                                         var10_int = stackIn_193_0;
                                                         qqa.a(var10_int != 0, (byte) -90);
                                                       }
@@ -640,15 +640,15 @@ final class wf {
                                                         this.field_b.e((byte) -84)) {
                                                         var4 = 0;
                                                         if (vqa.field_g != null &&
-                                                          wh.field_n <= 0 && (!fwa.field_g.field_a ||
+                                                          wh.field_n <= 0 && (!fwa.field_g.copyToClipboardHidden ||
                                                           ssa.b(2))) {
-                                                          var10 = vqa.field_g.field_m.b(1).field_g.d(vqa.field_g.field_L, 93);
+                                                          var10 = vqa.field_g.field_m.b(1).world.d(vqa.field_g.field_L, 93);
                                                           if (var10 != null) {
-                                                            if (bm.field_o == null) {
+                                                            if (SetTorpedoProjectiles.field_o == null) {
                                                               return;
                                                             }
-                                                            var23 = rsa.a(var10.field_k, param0 ^ -98);
-                                                            var18 = rob.a(65535, var23);
+                                                            var23 = SetOndamageParticleLife.a(var10.chassis, param0 ^ -98);
+                                                            var18 = GetWeaponParticleSpeedDownshift.a(65535, var23);
                                                             var14 = var18;
                                                             var13 = var14;
                                                             var13Lifetime1 = var18;
@@ -689,12 +689,12 @@ final class wf {
                                                                 }
                                                               }
                                                             }
-                                                            var20 = "http://" + var13Lifetime7 + "/g=voidhunters/autochoose.ws?dest=" + msa.a((CharSequence) ((Object) var12), 32);
+                                                            var20 = "http://" + var13Lifetime7 + "/g=voidhunters/autochoose.ws?dest=" + GetDebrisMax.a((CharSequence) ((Object) var12), 32);
                                                             var13_ref = new java.awt.datatransfer.StringSelection(var20);
-                                                            bm.field_o.a((byte) -45, (java.awt.datatransfer.Transferable) ((Object) var13_ref));
+                                                            SetTorpedoProjectiles.field_o.a((byte) -45, (java.awt.datatransfer.Transferable) ((Object) var13_ref));
                                                             wh.field_n = 100;
                                                             var4 = 1;
-                                                            qp.a(true, 0, vpa.b((byte) -92), var20);
+                                                            qp.a(true, 0, MissionList.b((byte) -92), var20);
                                                           }
                                                         }
                                                       }
@@ -704,7 +704,7 @@ final class wf {
                                               } else {
                                                 if (this.field_b.e((byte) -81) &&
                                                   this.a(param2, 115)) {
-                                                  op.field_o = op.field_o - 1;
+                                                  SetFps.field_o = SetFps.field_o - 1;
                                                 }
                                                 if (!this.a(param2, 113) &&
                                                   !param1) {
@@ -719,7 +719,7 @@ final class wf {
                                           vqa.field_g.e(true);
                                           var10_int = param1 ? 1 : 0;
                                           stackIn_156_0 = (bqa.a(false)) ? 7 : 0;
-                                          lha.a(stackIn_156_0, var10_int != 0, (byte) -85, -1);
+                                          GetNebulaFadesOutWhenClose.a(stackIn_156_0, var10_int != 0, (byte) -85, -1);
                                         }
                                       }
                                     }
@@ -734,15 +734,15 @@ final class wf {
                                     if (var9 != 0) {
                                       var10_int = 0;
                                       while (!(var10_int >= ub.field_f.length)) {
-                                        var11 = lwa.a(eaa.field_q, -1);
+                                        var11 = lwa.a(GetMassDriverProjectiles.field_q, -1);
                                         var11 = (var9 + ub.field_f.length + var11) % ub.field_f.length;
                                         var12_int = ub.field_f[var11];
-                                        if (!wea.a(-25915, var12_int)) {
+                                        if (!SetTorpedoProjectileOndamageParticles.a(-25915, var12_int)) {
                                           var10_int++;
                                           continue;
                                         }
                                         var16 = new int[]{var12_int};
-                                        vq.field_x.a(false, fja.a(var16, 2));
+                                        vq.field_x.a(false, GetFighterRepairAmount.a(var16, 2));
                                         break;
                                       }
                                     }
@@ -750,7 +750,7 @@ final class wf {
                                 }
                               }
                             } else {
-                              var7 = hlb.field_p;
+                              var7 = GetMutatorVotes.field_p;
                               if (this.field_b.a(true)) {
                                 re.a(0, (byte) -109);
                               }
@@ -758,9 +758,9 @@ final class wf {
                                 re.a(256, (byte) -104);
                               }
                               if (this.field_b.b((byte) 111)) {
-                                var10_int = this.b(31488, param2) + (this.a((byte) -76, param2) - wrb.a(100, 131)) >> 1;
+                                var10_int = this.b(31488, param2) + (this.a((byte) -76, param2) - GetSniperCannonAimspeed.a(100, 131)) >> 1;
                                 var11 = kc.field_b - var10_int;
-                                var12_int = 256 * var11 / wrb.a(100, 131);
+                                var12_int = 256 * var11 / GetSniperCannonAimspeed.a(100, 131);
                                 if (var12_int > 0) {
                                   if (var12_int < 256) {
                                     re.a(var12_int, (byte) -111);
@@ -772,15 +772,15 @@ final class wf {
                                 }
                               }
                               if (this.field_b.d((byte) -7)) {
-                                mi.e((byte) -81);
+                                GetWeaponProjectileSpeedMultiply.e((byte) -81);
                               }
                               if (this.field_b.b(-80)) {
                                 vcb.f(32);
                               }
-                              if (hlb.field_p != var7 &&
+                              if (GetMutatorVotes.field_p != var7 &&
                                 ef.field_E) {
-                                bea.a((byte) -22, "music_volume", hlb.field_p);
-                                qra.a(-122);
+                                bea.a((byte) -22, "music_volume", GetMutatorVotes.field_p);
+                                SetLaserAimarc.a(-122);
                               }
                             }
                           } else {
@@ -796,9 +796,9 @@ final class wf {
                               nl.a(256, -13205);
                             }
                             if (this.field_b.b((byte) 126)) {
-                              var10_int = this.b(31488, param2) - (-this.a((byte) -79, param2) + wrb.a(100, 131)) >> 1;
+                              var10_int = this.b(31488, param2) - (-this.a((byte) -79, param2) + GetSniperCannonAimspeed.a(100, 131)) >> 1;
                               var11 = kc.field_b - var10_int;
-                              var12_int = 256 * var11 / wrb.a(param0 + 76, 131);
+                              var12_int = 256 * var11 / GetSniperCannonAimspeed.a(param0 + 76, 131);
                               var6 = 1;
                               if (var12_int <= 0) {
                                 nl.a(0, -13205);
@@ -822,28 +822,28 @@ final class wf {
                             }
                             if (var6 != 0) {
                               if (!this.field_b.b((byte) 119) ||
-                                !(mba.field_b >= kdb.field_o)) {
-                                lha.a(-124, fa.field_d[1]);
-                                mba.field_b = 20 + kdb.field_o;
+                                !(mba.field_b >= SetMinimapWidth.field_o)) {
+                                GetNebulaFadesOutWhenClose.a(-124, fa.field_d[1]);
+                                mba.field_b = 20 + SetMinimapWidth.field_o;
                               }
                               if (ef.field_E) {
                                 bea.a((byte) 3, "fx_volume", kt.field_l);
-                                qra.a(-108);
+                                SetLaserAimarc.a(-108);
                               }
                             }
                           }
                         } else {
                           if (this.field_b.e((byte) -107)) {
                             var10_int = param1 ? 1 : 0;
-                            lha.a(wgb.field_f, var10_int != 0, (byte) -85, 9);
+                            GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, 9);
                           }
                         }
                       }
                     } else {
                       if (this.field_b.e((byte) -105)) {
-                        var10_int = he.field_o;
+                        var10_int = SetCountermeasureLauncherProjectileLife.field_o;
                         var11 = param1 ? 1 : 0;
-                        lha.a(wgb.field_f, var11 != 0, (byte) -85, var10_int);
+                        GetNebulaFadesOutWhenClose.a(wgb.field_f, var11 != 0, (byte) -85, var10_int);
                       }
                     }
                   }
@@ -851,14 +851,14 @@ final class wf {
               } else {
                 if (this.field_b.e((byte) -83)) {
                   var10_int = param1 ? 1 : 0;
-                  lha.a(wgb.field_f, var10_int != 0, (byte) -85, 0);
+                  GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, 0);
                 }
               }
             } else {
               if (this.field_b.e((byte) -97)) {
                 var10_int = param1 ? 1 : 0;
                 stackIn_51_0 = (bqa.a(false)) ? 7 : 0;
-                lha.a(stackIn_51_0, var10_int != 0, (byte) -85, -1);
+                GetNebulaFadesOutWhenClose.a(stackIn_51_0, var10_int != 0, (byte) -85, -1);
               }
             }
           }
@@ -866,7 +866,7 @@ final class wf {
           if (this.field_b.e((byte) -78)) {
             var10_int = param1 ? 1 : 0;
             stackIn_40_0 = (bqa.a(false)) ? 7 : 0;
-            lha.a(stackIn_40_0, var10_int != 0, (byte) -85, -3);
+            GetNebulaFadesOutWhenClose.a(stackIn_40_0, var10_int != 0, (byte) -85, -3);
           }
         }
         if (param0 != 24) {
@@ -874,7 +874,7 @@ final class wf {
         }
         if (var4 != 0 &&
           this.field_b.e((byte) -102)) {
-          lha.a(param0 ^ -106, fa.field_d[7]);
+          GetNebulaFadesOutWhenClose.a(param0 ^ -106, fa.field_d[7]);
         }
     }
 
@@ -901,7 +901,7 @@ final class wf {
           return;
         }
         if (this.field_c == 8) {
-          nb.e((byte) 102);
+          SetWeaponProjectileSpeedMultiply.e((byte) 102);
         }
         if (param0 != 65) {
           var8 = (String) null;
@@ -919,34 +919,34 @@ final class wf {
         } else {
           if (this.field_c == 6) {
             var2Lifetime1 = 3;
-            var3 = aib.a((byte) -37, iia.field_c, pqa.a(false, var2Lifetime1), var2Lifetime1, 480);
+            var3 = AsteroidField.a((byte) -37, BodyInZoneCondition.field_c, GetPointDefenceLaserProjectiles.a(false, var2Lifetime1), var2Lifetime1, 480);
             var4 = 16;
-            var5_int = (ip.field_p.width - dma.field_g) / 2;
-            var6 = (-dma.field_j + ip.field_p.height) / 2;
+            var5_int = (GetBombletSprayEnergyUsed.field_p.width - dma.field_g) / 2;
+            var6 = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
             var3 = var3 + var4 * 2;
             af.a((byte) -115, 255, var3, var5_int + (80 - var4), -var4 + (var6 + 160), var4 * 2 + 480);
-            nua.a(-1, 1000, 80 + var5_int, pqa.a(false, var2Lifetime1), 0, iia.field_c, 8555923, 480, -32, 160 + var6, 0, var2Lifetime1);
+            SetAutoaim.a(-1, 1000, 80 + var5_int, GetPointDefenceLaserProjectiles.a(false, var2Lifetime1), 0, BodyInZoneCondition.field_c, 8555923, 480, -32, 160 + var6, 0, var2Lifetime1);
           }
         }
-        var2Lifetime2 = pob.field_b;
+        var2Lifetime2 = SetVariableAction.field_b;
         var3Lifetime1 = 0;
         if (var2Lifetime2 < 16) {
           if (var2Lifetime2 > 0) {
-            var3Lifetime1 = mg.f(255) * 4;
+            var3Lifetime1 = SetRepairModeRadius.f(255) * 4;
           }
         } else {
-          var3Lifetime1 = 4 * (-mg.f(param0 ^ 190) + 255);
+          var3Lifetime1 = 4 * (-SetRepairModeRadius.f(param0 ^ 190) + 255);
         }
-        var4Lifetime1 = (ip.field_p.height - dma.field_j) / 2;
+        var4Lifetime1 = (GetBombletSprayEnergyUsed.field_p.height - dma.field_j) / 2;
         if (this.field_c != 0) {
           if (this.field_c < ocb.field_m.length &&
             ocb.field_m[this.field_c] != null) {
             var5 = ocb.field_m[this.field_c];
             var6Lifetime1 = 1;
-            pm.a(ip.field_p.width / 2 - (tea.a(var6Lifetime1, var5, 13879) / 2 - var3Lifetime1), 1, var4Lifetime1 + 110, var5, 1, 16777215, (byte) -120);
+            SetSelfDestructPrepareToggleCooldown.a(GetBombletSprayEnergyUsed.field_p.width / 2 - (tea.a(var6Lifetime1, var5, 13879) / 2 - var3Lifetime1), 1, var4Lifetime1 + 110, var5, 1, 16777215, (byte) -120);
           }
         } else {
-          bn.a(137, var3Lifetime1 + ip.field_p.width / 2 - wrb.a(param0 ^ 37, 137) / 2, (byte) 103, 20 + var4Lifetime1);
+          bn.a(137, var3Lifetime1 + GetBombletSprayEnergyUsed.field_p.width / 2 - GetSniperCannonAimspeed.a(param0 ^ 37, 137) / 2, (byte) 103, 20 + var4Lifetime1);
         }
         return;
     }
@@ -957,18 +957,18 @@ final class wf {
         if (param0 != 31488) {
           discarded$0 = this.a((byte) -10, -10);
         }
-        int var3 = (ip.field_p.width - dma.field_g) / 2;
+        int var3 = (GetBombletSprayEnergyUsed.field_p.width - dma.field_g) / 2;
         if (this.field_c == 5) {
-          return 190 * param1 + var3 + vba.field_r[this.field_c];
+          return 190 * param1 + var3 + SetReloadBarWidth.field_r[this.field_c];
         }
         if (0 == this.field_c) {
           if (param1 < 2) {
-            var4 = -25 + (ip.field_p.width / 2 - wrb.a(100, 128));
+            var4 = -25 + (GetBombletSprayEnergyUsed.field_p.width / 2 - GetSniperCannonAimspeed.a(100, 128));
             return var4;
           }
-          return 25 + var3 + vba.field_r[this.field_c];
+          return 25 + var3 + SetReloadBarWidth.field_r[this.field_c];
         }
-        return vba.field_r[this.field_c] + var3;
+        return SetReloadBarWidth.field_r[this.field_c] + var3;
     }
 
     private final boolean a(int param0, int param1) {
@@ -979,11 +979,11 @@ final class wf {
           return true;
         }
         if (param0 == 0 &&
-          op.field_o == 0) {
+          SetFps.field_o == 0) {
           return false;
         }
         if (param0 == 2 &&
-          op.field_o == mb.field_k.length - 1) {
+          SetFps.field_o == mb.field_k.length - 1) {
           return false;
         }
         return true;
@@ -996,17 +996,17 @@ final class wf {
         int var4;
         int var5;
         var6 = VoidHunters.field_G;
-        if (si.field_o[13]) {
-          var2 = vba.field_p[this.field_c].length;
+        if (SetMachineGunEnergyUsed.field_o[13]) {
+          var2 = SetReloadBarWidth.field_p[this.field_c].length;
           for (var3 = 0; var2 > var3; var3++) {
-            var4 = vba.field_p[this.field_c][var3];
+            var4 = SetReloadBarWidth.field_p[this.field_c][var3];
             if (var4 == 6) {
-              var5 = he.field_o;
-              lha.a(wgb.field_f, false, (byte) -85, var5);
+              var5 = SetCountermeasureLauncherProjectileLife.field_o;
+              GetNebulaFadesOutWhenClose.a(wgb.field_f, false, (byte) -85, var5);
             }
           }
         } else {
-          if (5 != oab.field_o) {
+          if (5 != GetArmageddonTimerStart.field_o) {
             this.field_b.a((byte) -63);
           } else {
             this.c(param0 + 183);
@@ -1018,7 +1018,7 @@ final class wf {
     }
 
     private final int a(byte param0, int param1) {
-        int var3 = (-dma.field_g + ip.field_p.width) / 2;
+        int var3 = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
         if (this.field_c == 5) {
           return this.b(31488, param1) + 140;
         }
@@ -1027,9 +1027,9 @@ final class wf {
         }
         if (this.field_c == 0 &&
           param1 < 2) {
-          return ip.field_p.width / 2;
+          return GetBombletSprayEnergyUsed.field_p.width / 2;
         }
-        return vba.field_q[this.field_c] + var3;
+        return SetReloadBarWidth.field_q[this.field_c] + var3;
     }
 
     final void b(int param0) {
@@ -1040,7 +1040,7 @@ final class wf {
         int var2Lifetime1;
         int var2Lifetime1Lifetime1;
         var3 = VoidHunters.field_G;
-        if (vba.f((byte) -72)) {
+        if (SetReloadBarWidth.f((byte) -72)) {
           return;
         }
         if (param0 != 0) {
@@ -1050,29 +1050,29 @@ final class wf {
           fia.a(false);
         }
         if (this.field_c == 7) {
-          stackIn_10_0 = !(ee.a(-75));
-          var2 = ll.a(stackIn_10_0, (byte) 40);
+          stackIn_10_0 = !(GetBombletSprayRandomness.a(-75));
+          var2 = GetGrapplingHooksDamageableBySourcePlayer.a(stackIn_10_0, (byte) 40);
           if (3 == var2) {
             if (null != psb.field_b) {
-              cqb.b((byte) -42);
+              VariableCondition.b((byte) -42);
             }
-            mra.a(vpa.b((byte) -105), 0);
+            SetMaxShipSize.a(MissionList.b((byte) -105), 0);
           }
           if (var2 == 1) {
-            lha.a(wgb.field_f, false, (byte) -85, 0);
+            GetNebulaFadesOutWhenClose.a(wgb.field_f, false, (byte) -85, 0);
           }
           if (var2 == 2) {
-            lha.a(wgb.field_f, true, (byte) -85, 0);
+            GetNebulaFadesOutWhenClose.a(wgb.field_f, true, (byte) -85, 0);
           }
           return;
         }
         if (!lu.field_d &&
-          !dua.field_o) {
+          !SetMassDriverFireForce.field_o) {
           while (ata.e(127)) {
-            if (qmb.a(-22029)) {
+            if (GetSpinningBladeAimspeed.a(-22029)) {
               continue;
             }
-            if (pma.field_o == 13) {
+            if (SetBombletSprayProjectileDamage.field_o == 13) {
               if (1 != this.field_c &&
                 2 != this.field_c &&
                 this.field_c != 3 &&
@@ -1080,14 +1080,14 @@ final class wf {
                 continue;
               }
               stackIn_41_0 = (!bqa.a(false)) ? 0 : 7;
-              lha.a(stackIn_41_0, false, (byte) -85, -1);
+              GetNebulaFadesOutWhenClose.a(stackIn_41_0, false, (byte) -85, -1);
               continue;
             }
             var2Lifetime1 = this.field_b.field_j;
             this.a((byte) -51);
             if (0 <= this.field_b.field_j &&
               var2Lifetime1 != this.field_b.field_j) {
-              lha.a(-110, fa.field_d[0]);
+              GetNebulaFadesOutWhenClose.a(-110, fa.field_d[0]);
             }
             if (this.field_b.field_j == -1) {
               continue;
@@ -1095,10 +1095,10 @@ final class wf {
             this.b(24, false, this.field_b.field_j);
           }
           var2Lifetime1Lifetime1 = this.field_b.field_j;
-          this.field_b.a(this.a(qs.field_a, oq.field_H, 6868), 5620, this.a(uia.field_b, kc.field_b, param0 ^ 6868));
+          this.field_b.a(this.a(qs.field_a, Particle.field_H, 6868), 5620, this.a(uia.field_b, kc.field_b, param0 ^ 6868));
           if (this.field_b.field_j >= 0 &&
             var2Lifetime1Lifetime1 != this.field_b.field_j) {
-            lha.a(-124, fa.field_d[0]);
+            GetNebulaFadesOutWhenClose.a(-124, fa.field_d[0]);
           }
           if (this.field_b.field_j != -1) {
             this.b(24, true, this.field_b.field_j);
@@ -1110,7 +1110,7 @@ final class wf {
         int discarded$0 = 0;
         if (this.field_c == 0 &&
           param0 < 2) {
-          return vba.field_o[this.field_c] + 30;
+          return SetReloadBarWidth.field_o[this.field_c] + 30;
         }
         if (param1 != 70) {
           discarded$0 = this.c(-81, -122);
@@ -1120,7 +1120,7 @@ final class wf {
 
     wf(int param0) {
         this.field_c = param0;
-        this.field_b = new ae(vba.field_p[this.field_c].length);
+        this.field_b = new ae(SetReloadBarWidth.field_p[this.field_c].length);
     }
 
     static {

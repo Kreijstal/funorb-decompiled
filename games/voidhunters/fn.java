@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fn extends da {
-    private qfa field_f;
+    private OpenGlToolkit field_f;
     private bt field_d;
     private boolean field_c;
     private im field_e;
 
-    fn(qfa param0, sw param1, ima[] param2, boolean param3) {
+    fn(OpenGlToolkit param0, sw param1, ima[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;

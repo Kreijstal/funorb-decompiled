@@ -26,7 +26,7 @@ final class vla extends dqa implements en, oo {
           var3.a(false, param0 ^ 9, var4);
           this.field_G.e(82);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "vla.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vla.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -44,14 +44,14 @@ final class vla extends dqa implements en, oo {
           }
           if (this.field_x != param3) {
             if (param3 == this.field_z) {
-              kga.a(70);
+              GetPhasedEnergyBeamProjectiles.a(70);
             } else {
               if (param3 == this.field_A) {
                 if (!this.field_B) {
                   if (!this.field_w) {
                     vsb.e(-24248);
                   } else {
-                    to.e((byte) -91);
+                    GetGrapplingHookRopeBreakLength.e((byte) -91);
                   }
                 } else {
                   qj.a((byte) 127);
@@ -72,13 +72,13 @@ final class vla extends dqa implements en, oo {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final void b(int param0, int param1, int param2, int param3) {
         if (this.field_v != null) {
-          loa.field_o.a(this.field_v, this.field_g + (param0 + 20), 15 + (param3 + this.field_r), -40 + this.field_h, this.field_f, 16777215, -1, 1, 0, loa.field_o.field_k);
+          SetShipToShipRamDamage.field_o.a(this.field_v, this.field_g + (param0 + 20), 15 + (param3 + this.field_r), -40 + this.field_h, this.field_f, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.field_k);
         }
         if (this.field_z != null) {
           dma.h(param0 + 10, param3 + 134, -20 + this.field_h, 4210752);
@@ -104,10 +104,10 @@ final class vla extends dqa implements en, oo {
           var3 = (uf) null;
           this.a((uf) null, (byte) -20);
         }
-        if (tj.f((byte) -21) ||
+        if (Projectile.f((byte) -21) ||
           !(this.field_y.field_j.length() <= 0) &&
           !(this.field_G.field_j.length() <= 0)) {
-          cda.a(-41, this.field_G.field_j, this.field_y.field_j);
+          PartitionZoneList.a(-41, this.field_G.field_j, this.field_y.field_j);
         }
     }
 
@@ -142,7 +142,7 @@ final class vla extends dqa implements en, oo {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -196,11 +196,11 @@ final class vla extends dqa implements en, oo {
           this.field_y = (uf) ((Object) new tga(param0, (sba) (this), 100));
           this.field_G = (uf) ((Object) new tga("", (sba) (this), 20));
           if (this.field_B) {
-            this.field_x = new htb(kj.field_p, (sba) null);
-            this.field_A = new htb(vda.field_q, (sba) null);
+            this.field_x = new htb(SetSpecialOrderBoxHeight.field_p, (sba) null);
+            this.field_A = new htb(GetFighterBayAimspeed.field_q, (sba) null);
             this.field_y.field_x = false;
           } else {
-            this.field_x = new htb(jmb.field_s, (sba) null);
+            this.field_x = new htb(GetBombletSprayProjectiles.field_s, (sba) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (this.field_w) {
@@ -214,7 +214,7 @@ final class vla extends dqa implements en, oo {
             }
             this.field_A = new htb(stackIn_18_3, (sba) null);
             if (this.field_F) {
-              this.field_z = new htb(gqb.field_b, (sba) (this));
+              this.field_z = new htb(TimedSpecialOrderBehaviour.field_b, (sba) (this));
             }
           }
           this.field_y.field_q = (wwa) ((Object) new io(10000536));
@@ -229,10 +229,10 @@ final class vla extends dqa implements en, oo {
             this.field_z.field_q = (wwa) ((Object) var6);
           }
           if (this.field_z != null) {
-            this.field_z.field_p = tt.field_a;
+            this.field_z.field_p = AdjustBodyComponentsAction.field_a;
           }
           if (this.field_B) {
-            this.field_A.field_p = ewa.field_o;
+            this.field_A.field_p = GetSpecialOrderBoxHeight.field_o;
           } else {
             if (!this.field_w) {
               this.field_A.field_q = (wwa) ((Object) new meb());
@@ -242,15 +242,15 @@ final class vla extends dqa implements en, oo {
             }
           }
           this.field_r = 15;
-          var7 = loa.field_o;
+          var7 = SetShipToShipRamDamage.field_o;
           if (null != this.field_v) {
             this.field_r = this.field_r + (var7.b(this.field_v, this.field_h - 40, var7.field_k) + 5);
           }
           var8 = rg.field_a;
-          var9 = gib.a(19314, vpa.b((byte) -86));
-          if (up.field_o != var9) {
-            if (var9 == hha.field_p) {
-              var8 = ula.field_o;
+          var9 = gib.a(19314, MissionList.b((byte) -86));
+          if (SetFighterBayAimspeed.field_o != var9) {
+            if (var9 == SetShowTutorial.field_p) {
+              var8 = SetSpinningBladeTopSpeed.field_o;
             }
           } else {
             var8 = fj.field_a;
@@ -259,7 +259,7 @@ final class vla extends dqa implements en, oo {
           var12 = dupTemp$0;
           this.b(-18756, dupTemp$0);
           this.field_r = this.field_r + (((shb) ((Object) var12)).field_f + 5);
-          dupTemp$1 = new sca(10, this.field_r, -20 + this.field_h, 25, this.field_G, false, 80, 3, var7, 16777215, dpa.field_q);
+          dupTemp$1 = new sca(10, this.field_r, -20 + this.field_h, 25, this.field_G, false, 80, 3, var7, 16777215, RequestNewestBlackboxRecording.field_q);
           var13 = dupTemp$1;
           this.b(-18756, dupTemp$1);
           this.field_r = this.field_r + (((shb) ((Object) var13)).field_f + 5);
@@ -316,7 +316,7 @@ final class vla extends dqa implements en, oo {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -361,7 +361,7 @@ final class vla extends dqa implements en, oo {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -371,7 +371,7 @@ final class vla extends dqa implements en, oo {
             this.d(-74);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "vla.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vla.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -404,7 +404,7 @@ final class vla extends dqa implements en, oo {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

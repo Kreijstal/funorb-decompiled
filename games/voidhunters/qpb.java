@@ -12,7 +12,7 @@ final class qpb extends mc {
           this.field_t = param0;
           this.field_v = 256;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qpb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qpb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class qpb extends mc {
             return;
           }
           var8 = new phb(this.field_t.field_h, this.field_t.field_f);
-          de.a(117, var8);
+          SetTorpedoEnergyUsed.a(117, var8);
           this.field_t.b(0, param1, 115, 0);
           bia.a((byte) 124);
           var8.d(param0 + this.field_g, this.field_r + param3, this.field_v);
@@ -108,7 +108,7 @@ final class qpb extends mc {
           return;
         }
         var7 = new phb(this.field_t.field_h, this.field_t.field_f);
-        de.a(117, var7);
+        SetTorpedoEnergyUsed.a(117, var7);
         this.field_t.b(0, param1, 115, 0);
         bia.a((byte) 124);
         var7.d(param0 + this.field_g, this.field_r + param3, this.field_v);

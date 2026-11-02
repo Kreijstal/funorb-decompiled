@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa extends ksa {
+final class fa extends IntrusiveNode {
     int field_g;
     int field_f;
     static gd[] field_d;
@@ -17,13 +17,13 @@ final class fa extends ksa {
         try {
           rg.field_b = true;
           kmb.field_c = param2 ? true : false;
-          hwa.field_o = new os(klb.field_r, vob.field_r, param0, tla.field_c, kmb.field_c);
+          SetPointDefenceLaserAimarc.field_o = new os(GetLagStandardDeviationIn.field_r, GetBoostersCooldown.field_r, param0, tla.field_c, kmb.field_c);
           if (param1 >= -119) {
             field_d = (gd[]) null;
           }
-          klb.field_r.a(false, hwa.field_o);
+          GetLagStandardDeviationIn.field_r.a(false, SetPointDefenceLaserAimarc.field_o);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

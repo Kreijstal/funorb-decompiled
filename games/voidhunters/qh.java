@@ -53,7 +53,7 @@ final class qh extends iw implements oo {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -72,14 +72,14 @@ final class qh extends iw implements oo {
           var2.field_f = 80;
           var2.field_r = 50;
           var2.field_h = this.field_h;
-          var2.field_q = (wwa) ((Object) new bob(web.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2.field_q = (wwa) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(-18756, var2);
-          if (fda.e((byte) 90)) {
-            this.field_K = this.a((sba) (this), kg.field_s, 125);
+          if (GetPhasedEnergyBeamPulsetime.e((byte) 90)) {
+            this.field_K = this.a((sba) (this), GetLaserBeamProjectileDamage.field_s, 125);
           }
-          this.field_M = this.a((sba) (this), wm.field_b, 125);
+          this.field_M = this.a((sba) (this), MissionCondition.field_b, 125);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class qh extends iw implements oo {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class qh extends iw implements oo {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 

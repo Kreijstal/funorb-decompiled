@@ -8,44 +8,44 @@ final class lc {
     private Hashtable field_c;
     static bs field_b;
 
-    final static void a(int param0, ml param1) {
-        ml var4 = null;
-        ml var5 = null;
-        ml var6 = null;
-        ml var7 = null;
+    final static void a(int param0, ShipComponent param1) {
+        ShipComponent var4 = null;
+        ShipComponent var5 = null;
+        ShipComponent var6 = null;
+        ShipComponent var7 = null;
         try {
-          param1.a(1, 9, new ml(16));
-          param1.a(1, 14, new ml(13));
-          param1.a(1, 4, new ml(13));
-          param1.a(1, 0, new ml(13));
-          param1.a(1, 18, new ml(13));
-          var4 = new ml(39);
-          var5 = new ml(30);
-          var5.a(1, 0, new ml(24));
+          param1.a(1, 9, new ShipComponent(16));
+          param1.a(1, 14, new ShipComponent(13));
+          param1.a(1, 4, new ShipComponent(13));
+          param1.a(1, 0, new ShipComponent(13));
+          param1.a(1, 18, new ShipComponent(13));
+          var4 = new ShipComponent(39);
+          var5 = new ShipComponent(30);
+          var5.a(1, 0, new ShipComponent(24));
           var4.a(param0 ^ 39, 3, var5);
-          var4.a(param0 ^ 39, 1, new ml(13));
+          var4.a(param0 ^ 39, 1, new ShipComponent(13));
           param1.a(1, 3, var4);
-          var6 = new ml(param0);
-          var7 = new ml(30);
-          var7.a(1, 1, new ml(24));
+          var6 = new ShipComponent(param0);
+          var7 = new ShipComponent(30);
+          var7.a(1, 1, new ShipComponent(24));
           var6.a(param0 ^ 39, 2, var7);
-          var6.a(1, 4, new ml(13));
+          var6.a(1, 4, new ShipComponent(13));
           param1.a(1, 15, var6);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "lc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         field_b = null;
         if (param0 != 95) {
-          ml var2 = (ml) null;
-          lc.a(-56, (ml) null);
+          ShipComponent var2 = (ShipComponent) null;
+          lc.a(-56, (ShipComponent) null);
         }
     }
 
     public final String toString() {
-        String var1 = "Release mode=" + jqa.field_o[this.field_a] + "\n";
+        String var1 = "Release mode=" + SetSpecialOrderBarX.field_o[this.field_a] + "\n";
         var1 = var1 + this.field_c.toString();
         return var1;
     }
@@ -64,7 +64,7 @@ final class lc {
           }
           this.field_c.put(param0, new Integer(param1));
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "lc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class lc {
           java.net.URL var3 = null;
           Exception var3_ref = null;
           RuntimeException var3_ref2 = null;
-          ml var4 = null;
+          ShipComponent var4 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -86,8 +86,8 @@ final class lc {
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 86) {
-              var4 = (ml) null;
-              lc.a(-123, (ml) null);
+              var4 = (ShipComponent) null;
+              lc.a(-123, (ShipComponent) null);
             }
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param2);
@@ -116,7 +116,7 @@ final class lc {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

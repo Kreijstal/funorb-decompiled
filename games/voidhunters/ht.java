@@ -3,7 +3,7 @@
  */
 final class ht extends f {
     static String field_h;
-    ij field_k;
+    IntrusiveDeque field_k;
     private hbb field_i;
     qkb field_j;
 
@@ -45,7 +45,7 @@ final class ht extends f {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class ht extends f {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class ht extends f {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -250,7 +250,7 @@ final class ht extends f {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -288,12 +288,12 @@ final class ht extends f {
     }
 
     ht(hbb param0) {
-        this.field_k = new ij();
+        this.field_k = new IntrusiveDeque();
         this.field_j = new qkb();
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ht.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ht.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

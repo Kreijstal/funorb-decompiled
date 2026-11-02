@@ -21,10 +21,10 @@ public final class VoidHunters extends ms {
         try {
           if (this.field_D == -1) {
             for (var4_int = 0; var4_int < param1.field_a.length; var4_int++) {
-              fi.field_o.b(param1.field_a[var4_int], (byte) 18, var4_int);
+              GetThrusterParticleLife.field_o.b(param1.field_a[var4_int], (byte) 18, var4_int);
             }
           } else {
-            fi.field_o.a((byte) 125, 4000, param1);
+            GetThrusterParticleLife.field_o.a((byte) 125, 4000, param1);
           }
           this.field_D = param2;
           if (param0 != -23134) {
@@ -41,7 +41,7 @@ public final class VoidHunters extends ms {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -60,11 +60,11 @@ public final class VoidHunters extends ms {
         RuntimeException decompiledCaughtException = null;
         var4 = field_G;
         try {
-          if (ls.field_q &&
+          if (GetMissionTerrainNebulaProbability.field_q &&
             param1 != null) {
             var2_int = 0;
-            while (var2_int < hh.field_o) {
-              if (ug.field_o[var2_int] != param1) {
+            while (var2_int < SetVelocitySustainMax.field_o) {
+              if (SetFogOfWarOn.field_o[var2_int] != param1) {
                 var2_int++;
                 continue;
               }
@@ -73,17 +73,17 @@ public final class VoidHunters extends ms {
             if (!param0) {
               field_E = (int[]) null;
             }
-            if (~hh.field_o == ~ug.field_o.length) {
-              var5 = new Object[ug.field_o.length + 1];
+            if (~SetVelocitySustainMax.field_o == ~SetFogOfWarOn.field_o.length) {
+              var5 = new Object[SetFogOfWarOn.field_o.length + 1];
               var2 = var5;
-              for (var3 = 0; var3 < ug.field_o.length; var3++) {
-                var5[var3] = ug.field_o[var3];
+              for (var3 = 0; var3 < SetFogOfWarOn.field_o.length; var3++) {
+                var5[var3] = SetFogOfWarOn.field_o[var3];
               }
-              ug.field_o = var2;
+              SetFogOfWarOn.field_o = var2;
             }
-            fieldTemp$2 = ug.field_o;
-            fieldTemp$3 = hh.field_o;
-            hh.field_o = hh.field_o + 1;
+            fieldTemp$2 = SetFogOfWarOn.field_o;
+            fieldTemp$3 = SetVelocitySustainMax.field_o;
+            SetVelocitySustainMax.field_o = SetVelocitySustainMax.field_o + 1;
             fieldTemp$2[fieldTemp$3] = param1;
             return false;
           }
@@ -98,16 +98,16 @@ public final class VoidHunters extends ms {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
     private final static void m(int param0) {
-        vj.e(param0 + 29129);
+        SetPlayerRepairAmount.e(param0 + 29129);
         if (param0 != -29130) {
           return;
         }
-        oc.a(param0 + 29129);
+        GetUseBackground.a(param0 + 29129);
     }
 
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6, boolean param7) {
@@ -118,26 +118,26 @@ public final class VoidHunters extends ms {
         RuntimeException var8 = null;
         try {
           if (0 != jba.field_b.field_o &&
-            !erb.field_p) {
-            fva.field_p = true;
+            !GetBloomThresholdPercentage.field_p) {
+            SetFightersPerPlayerMaximum.field_p = true;
           }
           if (!param6) {
             field_E = (int[]) null;
           }
-          if (fva.field_p) {
-            mrb.a(param0, param1, 20, param5, false, param3, param3, param4, param2);
+          if (SetFightersPerPlayerMaximum.field_p) {
+            SetTorpedoRandomness.a(param0, param1, 20, param5, false, param3, param3, param4, param2);
             qw.field_l.a(param7, 1332);
             if (!param7) {
               return;
             }
-            if (fhb.field_q.field_o != 0) {
-              fva.field_p = false;
+            if (GetMachineGunAimarc.field_q.field_o != 0) {
+              SetFightersPerPlayerMaximum.field_p = false;
             }
             if (dp.field_a.field_o == 0) {
               return;
             }
             dr.a(26718);
-            fva.field_p = false;
+            SetFightersPerPlayerMaximum.field_p = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -150,18 +150,18 @@ public final class VoidHunters extends ms {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    private final void f(boolean param0) {
-        if (null != wba.field_o) {
+    private final void applyShipCookie(boolean logGuard) {
+        if (null != GetBombletSprayPushMultiplier.field_o) {
           return;
         }
-        String var2 = ro.a("fog_voidhunters_ship", 74, vpa.b((byte) -125));
-        nkb.a(param0, "Ship cookie=" + var2);
+        String var2 = ro.a("fog_voidhunters_ship", 74, MissionList.b((byte) -125));
+        GetDebrisThrowable.a(logGuard, "Ship cookie=" + var2);
         if (var2 != null) {
-          hja.a(0, hta.a(var2, true, true));
+          SetInnateThrusters.a(0, GetResourceNodeCaptureTime.a(var2, true, true));
         }
     }
 
@@ -185,27 +185,27 @@ public final class VoidHunters extends ms {
           olb.d(param1 + 991426336);
           lu.field_d = false;
           wgb.field_f = 6;
-          iia.field_c = qga.field_b.a(-1);
+          BodyInZoneCondition.field_c = qga.field_b.a(-1);
           return;
         }
         boolean decompiledFrameRemainder0 = true;
         if (param0 == 14) {
-          nkb.a(false, "Entering lobby");
-          am.a(shb.field_o, jrb.a(0), hj.a(8, (byte) -99), hj.a(2000, (byte) -116), jrb.b(false), true, ms.field_A.length, 150, 1024, sua.a(207));
-          plb.a(hia.a(0), dm.i((byte) -90), true);
+          GetDebrisThrowable.a(false, "Entering lobby");
+          GetBombletSprayAimarc.a(shb.field_o, SetUseOffscreenRendering.a(0), GetSalvoaim.a(8, (byte) -99), GetSalvoaim.a(2000, (byte) -116), SetUseOffscreenRendering.b(false), true, ms.field_A.length, 150, 1024, GetMissilesAcceleration.a(207));
+          GetPhasedEnergyBeamAimarc.a(SetBombletSprayPushMultiplier.a(0), dm.i((byte) -90), true);
           jkb.field_a = true;
           lu.field_d = false;
           if (vqa.field_g != null &&
             !vqa.field_g.field_N) {
             vga.field_b = 0;
-            aka.field_p = false;
-            jgb.e((byte) -86);
+            GetSniperCannonProjectiles.field_p = false;
+            SetDebrisSurvives.e((byte) -86);
             return;
           }
           if (vqa.field_g == null) {
             olb.d(param1 ^ 991426336);
             wgb.field_f = -2;
-            aka.field_p = true;
+            GetSniperCannonProjectiles.field_p = true;
             lsb.a(true);
             decompiledFrameRemainder0 = false;
           }
@@ -215,64 +215,64 @@ public final class VoidHunters extends ms {
         }
         if (decompiledFrameRemainder0) {
           if (param0 == 15) {
-            nkb.a(false, "Leaving lobby");
+            GetDebrisThrowable.a(false, "Leaving lobby");
             if (jkb.field_a) {
               olb.d(991426348);
               vjb.a((byte) 110);
-              tr.a(-15400);
+              SettingsInstance.a(-15400);
               enb.field_b = true;
-              idb.field_o = false;
-              bg.field_o = false;
-              nhb.field_p = false;
+              GetThrusterSmallForce.field_o = false;
+              GetMessageFadetime.field_o = false;
+              SetMissionTerrainDebrisProbability.field_p = false;
               wgb.field_f = 0;
               aeb.field_a = true;
               jkb.field_a = false;
               lsb.a(true);
             }
             lu.field_d = false;
-            dua.field_o = false;
+            SetMassDriverFireForce.field_o = false;
             return;
           }
           if (param0 == 10 &&
             jkb.field_a) {
-            ie.a(13);
-            nkb.a(false, "Lobby packet");
+            GetTeamSelectionSpeedup.a(13);
+            GetDebrisThrowable.a(false, "Lobby packet");
             return;
           }
           if (param0 != 57 &&
             param0 != 58) {
             if (59 == param0) {
-              nkb.a(false, "Stop game packet");
+              GetDebrisThrowable.a(false, "Stop game packet");
               if (null != vqa.field_g &&
                 !vqa.field_g.field_N) {
                 return;
               }
-              nkb.a(false, "Stop game! playing=" + idb.field_o + ", spectating=" + nhb.field_p);
-              if (idb.field_o ||
-                nhb.field_p ||
+              GetDebrisThrowable.a(false, "Stop game! playing=" + GetThrusterSmallForce.field_o + ", spectating=" + SetMissionTerrainDebrisProbability.field_p);
+              if (GetThrusterSmallForce.field_o ||
+                SetMissionTerrainDebrisProbability.field_p ||
                 di.field_l.a(-28208)) {
                 olb.d(991426348);
                 if (null == vqa.field_g) {
-                  idb.field_o = false;
+                  GetThrusterSmallForce.field_o = false;
                 }
-                if (idb.field_o) {
+                if (GetThrusterSmallForce.field_o) {
                   vqa.field_g.a(false, -10510);
                 }
-                bg.field_o = false;
-                idb.field_o = false;
+                GetMessageFadetime.field_o = false;
+                GetThrusterSmallForce.field_o = false;
                 wgb.field_f = -2;
-                nhb.field_p = false;
+                SetMissionTerrainDebrisProbability.field_p = false;
                 aeb.field_a = true;
-                aka.field_p = true;
+                GetSniperCannonProjectiles.field_p = true;
                 lsb.a(true);
               }
               di.field_l.a(true);
-              dua.field_o = false;
+              SetMassDriverFireForce.field_o = false;
               return;
             }
             var3 = null;
-            if (!idb.field_o) {
-              if (nhb.field_p) {
+            if (!GetThrusterSmallForce.field_o) {
+              if (SetMissionTerrainDebrisProbability.field_p) {
                 var3 = ndb.field_a;
               }
             } else {
@@ -282,10 +282,10 @@ public final class VoidHunters extends ms {
               this.field_F = (phb) null;
             }
             if (param0 == 62) {
-              nkb.a(false, "Game finished packet");
+              GetDebrisThrowable.a(false, "Game finished packet");
               if (var3 != null) {
                 stackIn_59_0 = (bqa.a(false)) ? 7 : 0;
-                lha.a(stackIn_59_0, false, (byte) -85, -1);
+                GetNebulaFadesOutWhenClose.a(stackIn_59_0, false, (byte) -85, -1);
               }
               return;
             }
@@ -311,7 +311,7 @@ public final class VoidHunters extends ms {
                     if (null == vqa.field_g) {
                       return;
                     }
-                    cqb.b(param1 ^ -86);
+                    VariableCondition.b(param1 ^ -86);
                   }
                   return;
                 }
@@ -322,25 +322,25 @@ public final class VoidHunters extends ms {
                     if (null == vqa.field_g) {
                       return;
                     }
-                    cqb.b(-106);
+                    VariableCondition.b(-106);
                   }
                   return;
                 }
-                if (ir.a(-53, param0)) {
+                if (GetMpSandboxEnemySpawnLimit.a(-53, param0)) {
                   return;
                 }
                 if ((param0 == 11 ||
                   12 == param0) &&
                   (vqa.field_g != null &&
                   vqa.field_g.field_N &&
-                  idb.field_o)) {
-                  lha.a(-118, fa.field_d[5]);
+                  GetThrusterSmallForce.field_o)) {
+                  GetNebulaFadesOutWhenClose.a(-118, fa.field_d[5]);
                 }
                 var5 = null;
                 if (var3 != null) {
-                  var5 = ((uca) (var3)).field_m.field_l;
+                  var5 = ((uca) (var3)).field_m.carouselInfo;
                 }
-                if (di.field_l.a(dpa.field_p, qga.field_b, idb.field_o, (byte) 7, param0, (mib) (var5))) {
+                if (di.field_l.a(RequestNewestBlackboxRecording.field_p, qga.field_b, GetThrusterSmallForce.field_o, (byte) 7, param0, (CarouselCommongameInfo) (var5))) {
                   return;
                 }
                 this.e(97);
@@ -357,28 +357,28 @@ public final class VoidHunters extends ms {
             }
           }
           if (decompiledFrameRemainder0) {
-            nkb.a(false, "Start game packet");
+            GetDebrisThrowable.a(false, "Start game packet");
             olb.d(991426348);
             vqa.field_g = null;
             ndb.field_a = null;
-            var8 = nia.a(param0, di.field_l, qga.field_b, (byte) 120);
+            var8 = SetPointDefenceLaserProjectileDamage.a(param0, di.field_l, qga.field_b, (byte) 120);
             var3Lifetime1 = var8;
             if (var8 != null) {
               mjb.field_e = false;
-              aka.field_p = false;
+              GetSniperCannonProjectiles.field_p = false;
               if (param0 == 57) {
                 vqa.field_g = (uca) (var3Lifetime1);
-                idb.field_o = true;
+                GetThrusterSmallForce.field_o = true;
                 sna.d(-19057);
-                cqb.b(-126);
-                jgb.e((byte) -76);
+                VariableCondition.b(-126);
+                SetDebrisSurvives.e((byte) -76);
               } else {
-                nhb.field_p = true;
+                SetMissionTerrainDebrisProbability.field_p = true;
                 ndb.field_a = var8;
               }
-              dua.field_o = false;
+              SetMassDriverFireForce.field_o = false;
               wgb.field_f = -1;
-              bg.field_o = true;
+              GetMessageFadetime.field_o = true;
             }
             return;
           }
@@ -401,39 +401,39 @@ public final class VoidHunters extends ms {
         int var3Lifetime1;
         int var3Lifetime2;
         var6 = field_G;
-        aqb.field_f = ria.a(32);
-        lgb.field_o = gia.d(-2);
-        ji.e(200);
+        ProxySocketConnector.field_f = SetPedrosRepairModeSwitchtime.a(32);
+        GetCountermeasureLauncherEnergyUsed.field_o = gia.d(-2);
+        SetReverbFeedback.e(200);
         if (psb.field_b != null &&
           psb.field_b.field_a) {
-          cqb.b((byte) 116);
+          VariableCondition.b((byte) 116);
           gva.a((byte) -115);
         }
         stackIn_7_1 = (psb.field_b != null);
         this.b(stackIn_7_1, 9);
-        if (gwa.field_o) {
+        if (GetMissionTerrainDebrisProbability.field_o) {
           eu.field_i.b((byte) 1);
-          gwa.field_o = false;
+          GetMissionTerrainDebrisProbability.field_o = false;
         }
         var2 = -40 % ((23 - param0) / 61);
-        kdb.field_o = kdb.field_o + 1;
-        if (fu.a(51)) {
+        SetMinimapWidth.field_o = SetMinimapWidth.field_o + 1;
+        if (GetUseTriFill.a(51)) {
           fka.a("Servicing login...", (byte) -86);
           this.h(0);
-          if (fu.a(119)) {
+          if (GetUseTriFill.a(119)) {
             return;
           }
         }
         if (!uob.field_e) {
           fka.a("Servicing login_create_ui...", (byte) -85);
-          ala.a(tcb.field_o, 15877);
+          GetLagOut.a(GetPointDefenceLaserPulsetime.field_o, 15877);
           fka.a("Finished servicing login_create_ui...", (byte) -72);
           if (this.h((byte) 125)) {
             uob.field_e = true;
           }
         } else {
-          if (!hkb.b(-1)) {
-            rl.b(false);
+          if (!Mission.b(-1)) {
+            GetUseRectOutline.b(false);
             if (ar.field_d &&
               this.l(0) &&
               !uc.b(-116)) {
@@ -446,16 +446,16 @@ public final class VoidHunters extends ms {
               if (1 == var3 ||
                 var3 == 2) {
                 if (psb.field_b != null) {
-                  cqb.b((byte) -56);
+                  VariableCondition.b((byte) -56);
                 }
                 if (2 == var3) {
-                  VoidHunters.a(vpa.b((byte) -118), 4);
+                  VoidHunters.a(MissionList.b((byte) -118), 4);
                 }
               }
               this.d(true, -121);
             } else {
               if (!ffa.a(false)) {
-                if (ck.b(false)) {
+                if (SetDebrisGroupColour.b(false)) {
                   this.d(true, -126);
                 } else {
                   this.d(false, -124);
@@ -475,39 +475,39 @@ public final class VoidHunters extends ms {
             }
           }
         }
-        di.field_l.a(dpa.field_p, -114);
-        if (!fda.e((byte) 111)) {
+        di.field_l.a(RequestNewestBlackboxRecording.field_p, -114);
+        if (!GetPhasedEnergyBeamPulsetime.e((byte) 111)) {
           while (true) {
-            var7 = (ea) (qa.field_o.a(true));
+            var7 = (ea) (SetGrapplingHookCooldown.field_o.a(true));
             if (var7 == null) {
               break;
             }
-            dba.a(4, var7, 0);
+            SetLaserReload.a(4, var7, 0);
           }
         }
-        while (rhb.a(0, ta.field_b)) {
+        while (GetSelfDestructTimer.a(0, ta.field_b)) {
           var3Lifetime1 = ow.field_a;
           this.a(var3Lifetime1, 12);
         }
-        ui.a(0, -29008);
-        if (aka.field_p) {
+        SetReverbWidth.a(0, -29008);
+        if (GetSniperCannonProjectiles.field_p) {
         }
         if (null != di.field_l &&
-          !idb.field_o &&
-          !nhb.field_p &&
+          !GetThrusterSmallForce.field_o &&
+          !SetMissionTerrainDebrisProbability.field_p &&
           di.field_l.field_m.c(0) <= 0) {
           di.field_l.a((byte) -110);
         }
         boolean decompiledFrameRemainder0 = true;
         if ((ssa.b(2) ||
           (vqa.field_g != null &&
-          vqa.field_g.field_m.field_l.field_k ||
+          vqa.field_g.field_m.carouselInfo.field_k ||
           ndb.field_a != null &&
-          ndb.field_a.field_m.field_l.field_k) &&
+          ndb.field_a.field_m.carouselInfo.field_k) &&
           null != di.field_l &&
           null == di.field_l.field_j) && (wh.g(-114) &&
-          si.field_o[82] &&
-          si.field_o[35])) {
+          SetMachineGunEnergyUsed.field_o[82] &&
+          SetMachineGunEnergyUsed.field_o[35])) {
           stackIn_69_0 = 1;
           decompiledFrameRemainder0 = false;
         }
@@ -518,44 +518,44 @@ public final class VoidHunters extends ms {
         if (var3Lifetime2 != 0) {
           ifb.l(-118);
         }
-        if (nb.b(true)) {
+        if (SetWeaponProjectileSpeedMultiply.b(true)) {
           di.field_l.c((byte) -94);
           var4 = this.f(109);
           if (var4 == 0 ||
             var4 == 1) {
             iwa.a((byte) -30, 2);
-            bta.a(50, 4);
-            qf.a(6, (byte) -52);
+            GetSalvoDamageMultiplier.a(50, 4);
+            GetReverbGain.a(6, (byte) -52);
             md.b(5, 0);
-            wq.a(-115);
+            GetReverbDry.a(-115);
             if (1 == var4) {
               if (vqa.field_g == null ||
                 vqa.field_g.field_N) {
-                dua.field_o = true;
+                SetMassDriverFireForce.field_o = true;
                 lu.field_d = true;
               }
             } else {
               if (jkb.field_a) {
                 aeb.field_a = true;
                 enb.field_b = true;
-                bg.field_o = false;
-                if (!idb.field_o) {
+                GetMessageFadetime.field_o = false;
+                if (!GetThrusterSmallForce.field_o) {
                   stackIn_85_0 = (!bqa.a(false)) ? 0 : 7;
-                  lha.a(stackIn_85_0, false, (byte) -85, 0);
+                  GetNebulaFadesOutWhenClose.a(stackIn_85_0, false, (byte) -85, 0);
                 } else {
-                  iia.field_c = hsa.field_o;
+                  BodyInZoneCondition.field_c = GetMissilesDamageSourceTeam.field_o;
                   stackIn_81_0 = (bqa.a(false)) ? 7 : 0;
-                  lha.a(stackIn_81_0, false, (byte) -85, 6);
+                  GetNebulaFadesOutWhenClose.a(stackIn_81_0, false, (byte) -85, 6);
                 }
                 olb.d(991426348);
-                lo.field_a[oab.field_o].a(false, 320, 0);
+                lo.field_a[GetArmageddonTimerStart.field_o].a(false, 320, 0);
                 jkb.field_a = false;
-                idb.field_o = false;
-                nhb.field_p = false;
+                GetThrusterSmallForce.field_o = false;
+                SetMissionTerrainDebrisProbability.field_p = false;
                 lsb.a(true);
               }
               lu.field_d = false;
-              dua.field_o = false;
+              SetMassDriverFireForce.field_o = false;
             }
           }
           var5 = 0;
@@ -567,10 +567,10 @@ public final class VoidHunters extends ms {
           }
           if (jkb.field_a ||
             lu.field_d ||
-            dua.field_o) {
+            SetMassDriverFireForce.field_o) {
             var5 = 1;
           }
-          if (!nb.b(true)) {
+          if (!SetWeaponProjectileSpeedMultiply.b(true)) {
             var5 = 0;
           }
           if (var5 != 0) {
@@ -583,7 +583,7 @@ public final class VoidHunters extends ms {
         if (param0 != 0) {
           this.d(true, 48);
         }
-        return gcb.field_p;
+        return SetUseExtraBackground.field_p;
     }
 
     private final void a(cl param0, int param1, int param2) {
@@ -618,7 +618,7 @@ public final class VoidHunters extends ms {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -627,32 +627,32 @@ public final class VoidHunters extends ms {
         eu.field_i = new fcb();
         hbb var6 = new hbb();
         var6.a(128, (byte) 96, 9);
-        fi.field_o = new fdb();
-        uga.field_g = new fdb(fi.field_o);
+        GetThrusterParticleLife.field_o = new fdb();
+        uga.field_g = new fdb(GetThrusterParticleLife.field_o);
         hbb var3 = new hbb();
-        dra var4 = new dra(fi.field_o, uga.field_g, var3);
-        kr.a((byte) -32, true, bm.field_o, (java.awt.Component) ((Object) igb.field_a), var4, 22050);
+        dra var4 = new dra(GetThrusterParticleLife.field_o, uga.field_g, var3);
+        kr.a((byte) -32, true, SetTorpedoProjectiles.field_o, (java.awt.Component) ((Object) igb.field_a), var4, 22050);
         vfa var5 = new vfa(new iab());
         var5.field_i = 0;
         var5.field_b = false;
-        gv.a(var5, 20);
+        SetMissionTimeLimit.a(var5, 20);
         uu.a((byte) 90, ta.field_b, (ms) (this));
-        pcb.a(114, param0, false);
+        SetNebulaProximityFadeDownshift.a(114, param0, false);
         di.field_l = new kda();
-        dva.e((byte) 117);
-        this.f(false);
+        GetCountermeasureLauncherAimarc.e((byte) 117);
+        this.applyShipCookie(false);
         fwa.field_g = new coa();
         fwa.field_g.a((byte) -65);
-        hjb.field_o = rrb.b(-89);
-        qcb.field_o = tc.field_b;
-        ncb.field_a = sbb.field_o;
+        SetUseTriFill.field_o = GameKeyHandler.b(-89);
+        SetGrapplingHookMaxExtension8Force.field_o = tc.field_b;
+        ncb.field_a = GetPointDefenceLaserAimspeed.field_o;
         if (ef.field_E) {
-          ll.e((byte) -120);
-          jha.field_p = mva.a(jha.field_p, 68, "graphics_quality");
+          GetGrapplingHooksDamageableBySourcePlayer.e((byte) -120);
+          GetMissileLauncherProjectileLife.field_p = GetLagIn.a(GetMissileLauncherProjectileLife.field_p, 68, "graphics_quality");
           aw.a(false);
-          nl.a(mva.a(kt.field_l, 93, "fx_volume"), -13205);
-          re.a(mva.a(hlb.field_p, 21, "music_volume"), (byte) -99);
-          eaa.field_q = mva.a(eaa.field_q, 36, "graphics_mode");
+          nl.a(GetLagIn.a(kt.field_l, 93, "fx_volume"), -13205);
+          re.a(GetLagIn.a(GetMutatorVotes.field_p, 21, "music_volume"), (byte) -99);
+          GetMassDriverProjectiles.field_q = GetLagIn.a(GetMassDriverProjectiles.field_q, 36, "graphics_mode");
         }
     }
 
@@ -687,23 +687,23 @@ public final class VoidHunters extends ms {
         var2 = stackIn_5_0;
         var3 = 28 / ((-54 - param0) / 37);
         if (var2 != 0) {
-          if (ew.field_p.field_n != uga.field_g &&
+          if (GetBurstFireMaxEnergy.field_p.field_n != uga.field_g &&
             this.field_B <= 0) {
-            ew.field_p.a(-126, pab.field_k[1], 100, 1000000);
+            GetBurstFireMaxEnergy.field_p.a(-126, pab.field_k[1], 100, 1000000);
           }
           this.field_D = -1;
         } else {
-          if (ew.field_p.field_n != fi.field_o) {
-            ew.field_p.a(-127, pab.field_k[0], 100, 1000000);
+          if (GetBurstFireMaxEnergy.field_p.field_n != GetThrusterParticleLife.field_o) {
+            GetBurstFireMaxEnergy.field_p.a(-127, pab.field_k[0], 100, 1000000);
           }
           this.field_C = -1;
         }
         if (this.field_B > 0) {
           this.field_B = this.field_B - 1;
         }
-        L6: {
+        regionExit1: {
           if (var2 != 0) {
-            if (wqa.a(false, oab.field_o)) {
+            if (wqa.a(false, GetArmageddonTimerStart.field_o)) {
               if (4 != this.field_C) {
                 var9 = new cl();
                 var9.field_a[0] = 255;
@@ -766,7 +766,7 @@ public final class VoidHunters extends ms {
                         break;
                       default:
                         this.a(var6, -19653, var5);
-                        break L6;
+                        break regionExit1;
                       case 3:
                         var6.field_a[4] = 255;
                         break;
@@ -778,8 +778,8 @@ public final class VoidHunters extends ms {
             }
           }
         }
-        if (!wqa.a(false, oab.field_o)) {
-          if (oab.field_o == -2 &&
+        if (!wqa.a(false, GetArmageddonTimerStart.field_o)) {
+          if (GetArmageddonTimerStart.field_o == -2 &&
             this.field_D != 1) {
             var11 = new cl();
             var11.field_a[14] = 255;
@@ -833,7 +833,7 @@ public final class VoidHunters extends ms {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -863,15 +863,15 @@ public final class VoidHunters extends ms {
         gob.a(26986);
         tua.a(114);
         coa.a(true);
-        boa.a(0);
-        rrb.a(-106);
+        ShipBlueprint.a(0);
+        GameKeyHandler.a(-106);
         ms.d(false);
-        hva.a(127);
+        ClientException.a(127);
         bi.b(-19766);
-        fg.a(-25692);
+        MouseWheelInput.a(-25692);
         dma.b();
         asb.a((byte) 112);
-        ds.j(-38);
+        PacketBuffer.j(-38);
         wt.a(-101);
         tc.a((byte) 40);
         kia.a(3553);
@@ -893,14 +893,14 @@ public final class VoidHunters extends ms {
         fcb.a(111);
         dla.a((byte) 101);
         mn.a(-49);
-        ml.e(24388);
+        ShipComponent.e(24388);
         iwa.a((byte) -116);
         igb.a(0);
         ro.a(-47);
         kma.c(-58);
-        lja.c((byte) 114);
-        aqa.b(-69);
-        qjb.c(!param0 ? true : false);
+        GrappleLauncherBehaviour.c((byte) 114);
+        ThrusterBehaviour.b(-69);
+        WeaponBehaviour.c(!param0 ? true : false);
         fra.a(2147483647);
         jb.a(12472);
         uj.a((byte) -95);
@@ -909,24 +909,24 @@ public final class VoidHunters extends ms {
         pd.c((byte) 26);
         oma.a(28801);
         bea.a(1);
-        wm.a((byte) -110);
-        una.a((byte) -98);
-        bba.b((byte) -76);
-        lbb.a(!param0 ? true : false);
-        et.a((byte) -102);
+        MissionCondition.a((byte) -110);
+        MissionControl.a((byte) -98);
+        MissionEvent.b((byte) -76);
+        MissionState.a(!param0 ? true : false);
+        MissionVariable.a((byte) -102);
         qsa.a(30089);
-        crb.l(3);
-        nbb.j((byte) -127);
-        it.c(3);
-        jo.a(true);
+        Asteroid.l(3);
+        Debris.j((byte) -127);
+        EscapePod.c(3);
+        PartitionZone.a(true);
         fba.b(117);
-        tj.g(-124);
-        rba.a(false);
-        aoa.a(false);
-        pe.h(3);
-        so.a((byte) 61);
-        twa.a(32);
-        tw.a(-120);
+        Projectile.g(-124);
+        ResourceNode.a(false);
+        ShipAI.a(false);
+        World.h(3);
+        SettingsChange.a((byte) 61);
+        SpawnChoice.a(32);
+        SpecialOrderSubmessage.a(-120);
         rj.a();
         ncb.a(500);
         cib.a(-18013);
@@ -935,40 +935,40 @@ public final class VoidHunters extends ms {
         hw.a(-1);
         bfb.b();
         aaa.a((byte) 35);
-        tr.b(17674);
-        vpa.a(param0);
+        SettingsInstance.b(17674);
+        MissionList.a(param0);
         qga.a(114);
         qs.a(true);
         joa.a(26936);
         qua.a(16606);
         sfa.a(false);
         ara.a(true);
-        cf.c(112);
-        dab.b((byte) -44);
+        SetVariableLabelAction.c(112);
+        TickCondition.b((byte) -44);
         tja.a(false);
-        nwa.a(1);
+        MessageLog.a(1);
         rgb.a(true);
         ptb.b((byte) 127);
-        tt.a((byte) 94);
-        jpa.a(true);
-        ika.b(1);
-        pob.a((byte) 24);
-        lrb.a((byte) 118);
-        cc.c(6970);
-        iia.b(-15818);
-        om.b(-2684);
-        jsb.b((byte) 11);
-        ih.b(-10570);
-        cqb.c(-120);
+        AdjustBodyComponentsAction.a((byte) 94);
+        AdjustVariableAction.a(true);
+        AwardVictoryToTeamAction.b(1);
+        SetVariableAction.a((byte) 24);
+        SetShipTeamAction.a((byte) 118);
+        BodyCondition.c(6970);
+        BodyInZoneCondition.b(-15818);
+        TeamNodeCondition.b(-2684);
+        ShipSpawnedCondition.b((byte) 11);
+        ShipCondition.b(-10570);
+        VariableCondition.c(-120);
         gda.c((byte) 18);
         lu.a((byte) 87);
         vra.a((byte) -66);
         kl.b(-127);
-        aib.a((byte) 48);
-        mqb.j((byte) -116);
+        AsteroidField.a((byte) 48);
+        GrapplingHook.j((byte) -116);
         rdb.c(51200);
         rca.a(12035);
-        imb.a(64);
+        Hardpoint.a(64);
         kra.a((byte) 70);
         pea.a(true);
         sra.a(96);
@@ -1004,7 +1004,7 @@ public final class VoidHunters extends ms {
         dj.a((byte) -114);
         rbb.b((byte) -29);
         kr.a(-127);
-        oca.b(-125);
+        RemoveEventAction.b(-125);
         qpa.a(!param0 ? true : false);
         bc.a(-22113);
         gdb.a(-73);
@@ -1025,7 +1025,7 @@ public final class VoidHunters extends ms {
         cna.h(1);
         bs.a((byte) 42);
         ooa.h(126);
-        fh.d(-31049);
+        DualLinkNode.d(-31049);
         qc.a((byte) 78);
         ffb.a(-106);
         kw.g((byte) 124);
@@ -1064,7 +1064,7 @@ public final class VoidHunters extends ms {
         whb.a(-113);
         ub.c((byte) 104);
         mo.d((byte) 46);
-        bhb.a(32);
+        CarouselSlotStateDump.a(32);
         umb.a(16214);
         pca.d(9);
         hg.a(false);
@@ -1072,10 +1072,10 @@ public final class VoidHunters extends ms {
         hp.a(false);
         fnb.a(-19);
         mia.a(-11954);
-        dv.a((byte) -98);
+        PlayerVote.a((byte) -98);
         sa.b();
-        eka.b(0);
-        gqb.a(126);
+        ComponentBehaviour.b(0);
+        TimedSpecialOrderBehaviour.a(126);
         uab.a(0);
         fca.a();
         wma.b(118);
@@ -1093,20 +1093,20 @@ public final class VoidHunters extends ms {
         pfb.a(118);
         bbb.a(0);
         jw.a(false);
-        rb.a((byte) -109);
+        SocketConnector.a((byte) -109);
         ndb.a(91);
-        qdb.a((byte) -125);
-        odb.a(true);
-        dmb.a((byte) -128);
-        wna.a((byte) -128);
+        MissionGenerationData.a((byte) -125);
+        TargetLock.a(true);
+        MapClearanceArea.a((byte) -128);
+        RoundResult.a((byte) -128);
         lh.a(15261);
-        vp.b(-2404);
+        TeamShipComponentCondition.b(-2404);
         ehb.a(false);
         lra.a(!param0 ? true : false);
         qeb.a((byte) -122);
         tn.a((byte) 110);
         bqa.a((byte) 124);
-        via.b(0);
+        AwardVictoryToWinnerAction.b(0);
         qw.a(true);
         wh.h(0);
         km.g((byte) 114);
@@ -1130,7 +1130,7 @@ public final class VoidHunters extends ms {
         vq.i((byte) -81);
         sha.f(1);
         nga.b((byte) -126);
-        vh.b(!param0 ? true : false);
+        IterableNodeHashTable.b(!param0 ? true : false);
         al.a(true);
         rlb.a(-120);
         fbb.a(param0);
@@ -1170,7 +1170,7 @@ public final class VoidHunters extends ms {
         ri.a(41);
         ska.e(5697);
         bna.a(!param0 ? true : false);
-        aqb.b(true);
+        ProxySocketConnector.b(true);
         gab.a(15325);
         pja.d(-1);
         wv.d(65280);
@@ -1200,12 +1200,12 @@ public final class VoidHunters extends ms {
         hk.d(-1210841460);
         oqb.e((byte) -123);
         hc.a();
-        jn.a((byte) -101);
+        NodeHashTableIterator.a((byte) -101);
         lia.a(97);
         uva.a();
         woa.a(-16777216);
         cs.a((byte) 111);
-        hq.c((byte) -128);
+        ImageProducerRasterBuffer.c((byte) -128);
         r.e((byte) -123);
         ct.a((byte) -96);
         mb.f((byte) -122);
@@ -1280,7 +1280,7 @@ public final class VoidHunters extends ms {
         ujb.a((byte) -111);
         lw.a(false);
         kob.a(127);
-        rqa.a(true);
+        ConsoleCommand.a(true);
         gva.a(true);
         qab.b(0);
         kua.a(181765988);
@@ -1367,421 +1367,421 @@ public final class VoidHunters extends ms {
         ci.a(-5254);
         kgb.a(0);
         nma.b((byte) -4);
-        skb.a(301);
-        jd.a(125);
-        klb.b(true);
-        cka.a(-2);
-        wda.e((byte) -100);
-        wnb.e(0);
-        dpa.b(false);
-        eq.e((byte) -105);
-        uqa.a(1);
-        gq.b(false);
-        tca.a(-9028);
-        wg.b(false);
-        cg.b(false);
-        hca.e((byte) 124);
-        og.a(23969);
-        ck.a(7311);
-        ema.a(0);
-        awa.a(-1);
-        dfb.e(105);
-        jrb.e(-2326);
-        eja.a(2);
-        jfb.a(0);
-        baa.e((byte) -47);
-        nha.e((byte) 74);
-        vea.a(0);
-        ltb.a(10);
-        apa.a(25837);
-        vha.e((byte) -5);
-        fu.e((byte) -125);
-        hjb.a(100);
-        oja.a(9141);
-        hha.a(0);
-        scb.a(30465);
-        nob.a(0);
-        nw.e((byte) -93);
-        ddb.e((byte) 89);
-        ppa.b(param0);
-        na.a(27358);
-        uka.a(0);
-        fq.a(1);
-        vba.e((byte) -31);
-        qwa.a(123);
-        inb.b(!param0 ? true : false);
-        hqa.e((byte) -115);
-        jqa.e((byte) 4);
-        ewa.b(false);
-        kj.a(0);
-        s.a(18841);
-        hpa.a(2);
-        fv.a(16224);
-        sla.e((byte) 98);
-        tsb.b(param0);
-        qf.a(34);
-        ji.a(200);
-        lf.e((byte) 121);
-        bsa.e((byte) -7);
-        oha.a(-23714);
-        nh.e((byte) 124);
-        hra.a(9839);
-        kaa.a(-21447);
-        wpb.a(0);
-        k.e((byte) -71);
-        aj.e((byte) 32);
-        edb.a(-122);
-        ueb.a(0);
-        sp.a(30388);
-        vbb.a(2051507073);
-        ufa.a(-92);
-        rsa.a(-1);
-        gjb.a(-118);
-        gp.a(-23822);
-        urb.a(0);
-        cga.e((byte) -31);
-        tg.a(-32514);
-        mla.a(0);
-        eo.e(53562);
-        fc.a(95);
-        kq.e((byte) 84);
-        ki.a(-91);
-        cw.a(118);
-        leb.e((byte) -29);
-        jda.a(0);
-        gcb.a(0);
-        cab.a(106);
-        fha.a(25553);
-        ca.e((byte) 116);
-        lba.e((byte) 49);
-        icb.a(0);
-        erb.a(96);
-        uib.b(false);
-        pp.a(256);
-        kk.e((byte) 107);
-        jqb.e((byte) -15);
-        qi.a(101);
-        ff.a(-105);
-        ws.e(-122);
-        te.b(param0);
-        ql.e((byte) 63);
-        mja.e((byte) 103);
-        nt.a(2);
-        loa.a(-128);
-        ie.e(3575);
-        dob.e((byte) -66);
-        kkb.e((byte) 40);
-        ica.e((byte) -20);
-        pha.a(22829);
-        bjb.b(false);
-        rib.e((byte) -128);
-        qta.b(false);
-        fla.e((byte) -91);
-        nkb.e((byte) -115);
-        opb.e((byte) 123);
-        acb.b(false);
-        hsa.a(111);
-        lib.a(0);
-        ll.e(1);
-        df.f((byte) -96);
-        jab.a(2);
-        wj.e((byte) -114);
-        uhb.e((byte) 32);
-        ug.f((byte) -104);
-        neb.e((byte) -57);
-        bka.a(0);
-        hja.a(21);
-        gba.a(-21968);
-        otb.b(true);
-        ic.a(124);
-        nsa.e((byte) -115);
-        hj.a(87);
-        nd.b(false);
-        wlb.e((byte) -70);
-        mgb.e((byte) -49);
-        dt.e(44);
-        sj.a(0);
-        ina.a(-1721);
-        mhb.e((byte) -127);
-        omb.e((byte) -50);
-        oqa.e((byte) 53);
-        lea.a(33);
-        mqa.a(-125);
-        hcb.a(68);
-        psa.a(0);
-        rh.a(-51);
-        iua.e((byte) -119);
-        jgb.e(0);
-        jl.a(37);
-        bta.e((byte) -119);
-        jnb.a(-126);
-        fd.e(-1);
-        ir.e((byte) 32);
-        dsb.a(-23436);
-        ljb.a(-100);
-        era.a(42);
-        ew.b(param0);
-        mk.e((byte) 7);
-        ov.a(46);
-        vg.e((byte) -114);
-        lqb.a(122);
-        sdb.e((byte) 87);
-        cha.e((byte) 76);
-        stb.a(3);
-        qt.a(124);
-        gt.e((byte) 123);
-        vgb.a(51);
-        qja.a(124);
-        jna.b(true);
-        vnb.a(54);
-        fsa.e((byte) 56);
-        epa.a(55);
-        tfb.e((byte) 112);
-        msa.e((byte) -61);
-        nr.e((byte) -127);
-        oba.a(-78);
-        hlb.e((byte) 95);
-        ieb.a(122);
-        pra.a(-75);
-        qla.e((byte) 126);
-        seb.b(true);
-        tma.f((byte) 66);
-        cca.e((byte) -41);
-        mtb.e((byte) -117);
-        gwa.b(true);
-        nhb.a(12124934);
-        tm.b(!param0 ? true : false);
-        afa.b(true);
-        iga.b(!param0 ? true : false);
-        aq.a(-10441);
-        dwa.a(69);
-        uta.e((byte) 112);
-        bfa.a(70);
-        eg.a(-124);
-        aab.b(true);
-        bo.a(-26081);
-        qea.b(!param0 ? true : false);
-        ee.e(-15435);
-        lb.a(-612363640);
-        tab.a(76);
-        emb.a(23518);
-        mpa.a(-27645);
-        fb.e((byte) 42);
-        rta.a(32);
-        iqb.a(122);
-        wpa.b(true);
-        dhb.a(6);
-        pua.a(80);
-        aha.a(1511754497);
-        eaa.a(-110);
-        vwa.a(32);
-        bqb.e((byte) -96);
-        jmb.b(true);
-        ad.e((byte) -27);
-        hr.a(-60);
-        dd.a(85);
-        bm.a(-28228);
-        aka.e((byte) -119);
-        gra.e((byte) -8);
-        fqb.a(27154);
-        pqa.a(0);
-        gkb.a(88);
-        jh.a(89);
-        hmb.a(21584);
-        rnb.e((byte) 127);
-        web.e((byte) 102);
-        eia.a(92);
-        lna.e((byte) -115);
-        u.a(4);
-        qia.e((byte) -87);
-        jha.e((byte) 127);
-        fe.a(6425);
-        keb.a(-87);
-        esa.b(!param0 ? true : false);
-        sga.e((byte) -97);
-        vl.a(127);
-        dua.f((byte) 106);
-        mp.b(false);
-        rja.e((byte) -91);
-        lva.a(617169759);
-        raa.a(0);
-        gka.a(-114);
-        eha.a(-17297);
-        vpb.a(1600);
-        ra.a(107);
-        kwa.b(true);
-        jea.e(-20005);
-        noa.a(194);
-        gsa.a(109);
-        ks.e((byte) 119);
-        js.a(-20626);
-        wd.a(0);
-        ena.a(-100);
-        tk.e((byte) 101);
-        job.e((byte) -16);
-        rd.a(-1);
-        kn.a(16086);
-        gk.a(116);
-        iv.a(117);
-        hgb.e((byte) 57);
-        ejb.e(117);
-        vda.e((byte) 99);
-        up.e((byte) 65);
-        qmb.e((byte) -125);
-        wrb.a(100);
-        jm.e((byte) 71);
-        rf.a(15110);
-        pga.a(-29417);
-        nda.a(0);
-        lr.a(125);
-        qv.e((byte) -78);
-        pmb.a(-1);
-        eob.a(127);
-        jhb.e((byte) 53);
-        sbb.a(-120);
-        dn.a(-52);
-        tnb.e((byte) -25);
-        usa.e((byte) 108);
-        sta.a(63);
-        ceb.e((byte) -116);
-        qra.e((byte) -80);
-        po.a(69);
-        mlb.e((byte) 92);
-        dh.e((byte) -99);
-        am.e(-1);
-        nlb.e((byte) -80);
-        plb.a(16);
-        fhb.a(-116);
-        cta.a(14675);
-        ahb.a(0);
-        vaa.e((byte) 21);
-        hwa.e((byte) 107);
-        vsa.a(-92);
-        vo.b(!param0 ? true : false);
-        qoa.a(9099);
-        wo.a(-124);
-        bpb.a(0);
-        kg.a(7848);
-        eva.a(0);
-        kpa.a(146);
-        we.e((byte) 97);
-        ioa.e((byte) -102);
-        pma.e((byte) -102);
-        hoa.a(-123);
-        vqb.e((byte) -127);
-        lcb.a(0);
-        orb.a(-982);
-        ijb.a(-59);
-        wea.a(153);
-        lda.a(-2573);
-        hv.e((byte) 15);
-        ma.a(-17548);
-        tqa.a(76);
-        st.a(0);
-        qe.e((byte) 118);
-        gbb.b(!param0 ? true : false);
-        fmb.a(0);
-        bja.f((byte) 92);
-        ip.e((byte) 62);
-        cu.a(163);
-        ag.b(false);
-        si.b(!param0 ? true : false);
-        egb.a(118);
-        oea.e((byte) -113);
-        nu.a(-10515);
-        jj.a(-17);
-        lgb.b(false);
-        ega.e((byte) 28);
-        gr.a(12992);
-        uua.e((byte) -99);
-        wra.a(0);
-        ss.a(169);
-        qna.a(-107);
-        rua.e((byte) 83);
-        go.a(-25544);
-        ipa.a(176);
-        ohb.e((byte) 84);
-        fi.a(177);
-        mwa.a(127);
-        uh.a(64);
-        knb.e((byte) -118);
-        qnb.a(0);
-        uaa.a(2);
-        ktb.e((byte) 126);
-        vk.e((byte) 69);
-        gha.a(0);
-        tta.a(113);
-        tdb.a(-120);
-        ula.a(-19013);
-        obb.a(21942);
-        jc.b(false);
-        lqa.e((byte) -122);
-        fda.f((byte) 51);
-        ukb.e((byte) -71);
-        ju.e((byte) 65);
-        paa.e((byte) -28);
-        iha.a(-105);
-        wba.a(-122);
-        hia.e(0);
-        vtb.a(80);
-        tba.e((byte) -89);
-        qhb.e((byte) -118);
-        jt.a(26468);
-        db.e(193);
-        rob.a(-33);
-        vs.a(7069);
-        mi.f((byte) -125);
-        nb.a(0);
-        hga.a(67);
-        cqa.e((byte) -52);
-        tra.a(0);
-        ep.e((byte) 57);
-        tq.b(true);
-        thb.a(200);
-        qcb.a(17231);
-        gca.a(-120);
-        qa.e((byte) -63);
-        saa.a(-14010);
-        to.a(204);
-        wjb.a(235);
-        jca.a(124);
-        tkb.a(3);
-        eh.a(0);
-        bga.a(207);
-        bnb.e((byte) -90);
-        bb.e((byte) 123);
-        oh.e((byte) 0);
-        jta.a(-29044);
-        geb.e((byte) 121);
-        tha.e((byte) -101);
-        lv.a(-126);
-        haa.e((byte) 91);
-        ap.a(215);
-        ib.a(-99);
-        mg.e(-105);
-        ldb.b(false);
-        ou.e((byte) -33);
-        vob.e((byte) -121);
-        cnb.e((byte) 84);
-        hm.a(-123);
-        ikb.a(221);
-        dia.a(0);
-        qtb.a(16407);
-        wl.a(-27266);
-        rhb.a(225);
-        flb.a(-26016);
-        ce.a(8);
-        gh.a(14055);
-        dca.a(103);
-        vj.a(-128);
-        kp.a(46);
-        dsa.a(0);
-        fja.e((byte) -106);
-        tl.e((byte) -15);
-        gu.a(232);
-        rfa.e((byte) 49);
-        ah.a(233);
-        iqa.e((byte) 91);
+        Lo.a(301);
+        SetLagVariant.a(125);
+        GetLagStandardDeviationIn.b(true);
+        GetLagStandardDeviationOut.a(-2);
+        LoadSettings.e((byte) -100);
+        LoadBlackboxRecording.e(0);
+        RequestNewestBlackboxRecording.b(false);
+        SetCarouselConstant.e((byte) -105);
+        GetLoadingMissions.a(1);
+        SetTrapMouse.b(false);
+        GetTabForScores.a(-9028);
+        SetTabForScores.b(false);
+        GetToggledScoreboard.b(false);
+        SetToggledScoreboard.e((byte) 124);
+        GetDebrisGroupColour.a(23969);
+        SetDebrisGroupColour.a(7311);
+        SetShipDirectionArrow.a(0);
+        SetShipAimLines.a(-1);
+        GetAllowShipSaving.e(105);
+        SetUseOffscreenRendering.e(-2326);
+        GetUseCircleFill.a(2);
+        SetUseCircleFill.a(0);
+        GetUseCircleOutline.e((byte) -47);
+        SetUseCircleOutline.e((byte) 74);
+        GetUseLines.a(0);
+        SetUseLines.a(10);
+        GetUseRectFill.a(25837);
+        SetUseRectFill.e((byte) -5);
+        GetUseTriFill.e((byte) -125);
+        SetUseTriFill.a(100);
+        GetUsePolygonFill.a(9141);
+        SetShowTutorial.a(0);
+        GetFps.a(30465);
+        GetRadialMenuRadius.a(0);
+        GetMinimapWidth.e((byte) -93);
+        GetMinimapHeight.e((byte) 89);
+        SetMinimapHeight.b(param0);
+        GetHealthBarWidth.a(27358);
+        SetHealthBarHeight.a(0);
+        GetReloadBarWidth.a(1);
+        SetReloadBarWidth.e((byte) -31);
+        GetReloadBarHeight.a(123);
+        SetReloadBarHeight.b(!param0 ? true : false);
+        GetSpecialOrderBarX.e((byte) -115);
+        SetSpecialOrderBarX.e((byte) 4);
+        GetSpecialOrderBoxHeight.b(false);
+        SetSpecialOrderBoxHeight.a(0);
+        GetMissionVariablesHudX.a(18841);
+        SetMissionVariablesHudX.a(2);
+        GetMissionVariablesHudY.a(16224);
+        GetAudioRangeCutoff.e((byte) 98);
+        SetAudioRangeCutoff.b(param0);
+        GetReverbGain.a(34);
+        SetReverbFeedback.a(200);
+        GetReverbDamp.e((byte) 121);
+        SetReverbDamp.e((byte) -7);
+        GetReverbWet.a(-23714);
+        SetReverbWet.e((byte) 124);
+        GetReverbWidth.a(9839);
+        GetBlueprintSaveTime.a(-21447);
+        SetBlueprintSaveTime.a(0);
+        GetMessageMaxage.e((byte) -71);
+        SetMessageFadetime.e((byte) 32);
+        GetMessageMax.a(-122);
+        SetMessageMax.a(0);
+        GetOndamageParticleSpeed.a(30388);
+        SetOndamageParticleSpeed.a(2051507073);
+        GetOndamageParticleLife.a(-92);
+        SetOndamageParticleLife.a(-1);
+        SetShieldsDirectionalHalfarcCuts.a(-118);
+        GetShieldsDirectionalArcParticleLife.a(-23822);
+        SetShieldsDirectionalArcParticleLife.a(0);
+        GetShieldsDirectionalArcParticleSpeedDownshift.e((byte) -31);
+        SetShieldsDirectionalArcParticleSpeedDownshift.a(-32514);
+        SetAutoAfkTimeout.a(0);
+        GetBuildViewAutozoomEndOnAction.e(53562);
+        GetNumStars.a(95);
+        SetNumStars.e((byte) 84);
+        GetUseSprites.a(-91);
+        SetUseBackground.a(118);
+        GetUseBackgroundInFullscreen.e((byte) -29);
+        SetUseBackgroundInFullscreen.a(0);
+        SetUseExtraBackground.a(0);
+        GetUseNiceTrails.a(106);
+        GetDebugLineLife.a(25553);
+        SetDebugLineLife.e((byte) 116);
+        GetUseFilledPolygons.e((byte) 49);
+        SetUseDetailLines.a(0);
+        GetBloomThresholdPercentage.a(96);
+        SetBloomThresholdPercentage.b(false);
+        GetBloomCoefficientPercentage.a(256);
+        SetBloomCoefficientPercentage.e((byte) 107);
+        GetAutozoomSpeedDivide.e((byte) -15);
+        SetAutozoomSpeedDivide.a(101);
+        GetAutozoomAmountMultiply.a(-105);
+        SetAutozoomAmountMultiply.e(-122);
+        GetNebulaProximityFadeDownshift.b(param0);
+        GetUseTrails.e((byte) 63);
+        SetUseTrails.e((byte) 103);
+        GetShipToShipRamDamage.a(2);
+        SetShipToShipRamDamage.a(-128);
+        GetTeamSelectionSpeedup.e(3575);
+        SetTeamSelectionSpeedup.e((byte) -66);
+        GetWaitForPlayers.e((byte) 40);
+        SetWaitForPlayers.e((byte) -20);
+        GetKeepTeamColours.a(22829);
+        SetKeepTeamColours.b(false);
+        SetDebrisCollision.e((byte) -128);
+        GetDebrisPartitioned.b(false);
+        GetDebrisCollisionDamage.e((byte) -91);
+        GetDebrisThrowable.e((byte) -115);
+        GetMissilesHitSourceTeam.e((byte) 123);
+        SetMissilesHitSourceTeam.b(false);
+        GetMissilesDamageSourceTeam.a(111);
+        SetMissilesDamageSourceTeam.a(0);
+        GetGrapplingHooksDamageableBySourcePlayer.e(1);
+        SetThrusterBindingMoveAndTurnHasOppositeMove.f((byte) -96);
+        SetNebulaFadesOutWhenClose.a(2);
+        GetDebrisFoundInPairs.e((byte) -114);
+        SetDebrisFoundInPairs.e((byte) 32);
+        SetFogOfWarOn.f((byte) -104);
+        SetUseModels.e((byte) -57);
+        GetInnateThrusters.a(0);
+        SetInnateThrusters.a(21);
+        SetThrusterAutobalancing.a(-21968);
+        SetBots.b(true);
+        GetDetachmentMode.a(124);
+        GetAutoaim.e((byte) -115);
+        GetSalvoaim.a(87);
+        SetSalvoaim.b(false);
+        GetFixedaim.e((byte) -70);
+        SetFixedaim.e((byte) -49);
+        GetSalvoUsesAllEnergy.e(44);
+        SetSalvoUsesAllEnergy.a(0);
+        GetSalvoHoldable.a(-1721);
+        SetSalvoHoldable.e((byte) -127);
+        GetPedrosRepairMode.e((byte) -50);
+        SetPedrosRepairMode.e((byte) 53);
+        GetShipPersistence.a(33);
+        SetShipPersistence.a(-125);
+        GetDebrisCarryOver.a(68);
+        SetDebrisCarryOver.a(0);
+        GetDebrisCarryOverPercentage.a(-51);
+        SetDebrisCarryOverPercentage.e((byte) -119);
+        SetDebrisSurvives.e(0);
+        SetClientSideDragging.a(37);
+        GetSalvoDamageMultiplier.e((byte) -119);
+        SetSalvoDamageMultiplier.a(-126);
+        SetSalvoRepairTimeMultiplier.e(-1);
+        GetMpSandboxEnemySpawnLimit.e((byte) 32);
+        SetMpSandboxEnemySpawnLimit.a(-23436);
+        GetMaxShipSize.a(-100);
+        GetFightersPerPlayerMaximum.a(42);
+        GetBurstFireMaxEnergy.b(param0);
+        SetBurstFireMaxEnergy.e((byte) 7);
+        SetShipSpawnInvulnerabilityTime.a(46);
+        GetFogOfWarSensorRange.e((byte) -114);
+        SetFogOfWarSensorRange.a(122);
+        GetThrusterBindingBalanceThreshold.e((byte) 87);
+        SetThrusterBindingBalanceThreshold.e((byte) 76);
+        GetComponentBreakingExplosionForceMultiplier.a(3);
+        SetPhysicsCollisionForceMultiplier.a(124);
+        SetPhysicsCollisionGrapplingHookForceMultiplier.e((byte) 123);
+        GetPhysicsCollisionPhantomForceMultiplier.a(51);
+        SetPhysicsCollisionPhantomForceMultiplier.a(124);
+        GetDebrisDetachmentForceMultiplier.b(true);
+        GetGrappleDebris.a(54);
+        SetGrappleDebris.e((byte) 56);
+        GetDebrisGrabbingRange.a(55);
+        SetDebrisGrabbingRange.e((byte) 112);
+        GetDebrisMax.e((byte) -61);
+        GetMissionVotes.e((byte) -127);
+        SetMissionVotes.a(-78);
+        GetMutatorVotes.e((byte) 95);
+        SetMutatorVotes.a(122);
+        GetMissionTimeLimit.a(-75);
+        SetArmageddonTimerStart.e((byte) 126);
+        SetArmageddonWarning.b(true);
+        GetArmageddonLength.f((byte) 66);
+        SetArmageddonLength.e((byte) -41);
+        GetMissionTerrainAsteroidProbability.e((byte) -117);
+        GetMissionTerrainDebrisProbability.b(true);
+        SetMissionTerrainDebrisProbability.a(12124934);
+        GetMissionTerrainSpaceProbability.b(!param0 ? true : false);
+        GetMissionTerrainVotingChancestep.b(true);
+        GetMissionDebrisDefaultProbability.b(!param0 ? true : false);
+        SetMissionDebrisDefaultProbability.a(-10441);
+        GetMissionDebrisVotingChancestep.a(69);
+        SetMissionDebrisVotingChancestep.e((byte) 112);
+        SetResourceNodeCaptureTime.a(70);
+        GetMissionResnetResourceTickTime.a(-124);
+        SetMassDriverRandomness.b(true);
+        GetLaserRandomness.a(-26081);
+        SetLaserRandomness.b(!param0 ? true : false);
+        GetBombletSprayRandomness.e(-15435);
+        SetBombletSprayRandomness.a(-612363640);
+        GetPhasedEnergyBeamRandomness.a(76);
+        SetPhasedEnergyBeamRandomness.a(23518);
+        GetSniperCannonRandomness.a(-27645);
+        SetSniperCannonRandomness.e((byte) 42);
+        GetMissileLauncherRandomness.a(32);
+        SetMissileLauncherRandomness.a(122);
+        GetPointDefenceLaserRandomness.b(true);
+        SetPointDefenceLaserRandomness.a(6);
+        GetCountermeasureLauncherRandomness.a(80);
+        SetCountermeasureLauncherRandomness.a(1511754497);
+        GetMassDriverProjectiles.a(-110);
+        GetLaserProjectiles.a(32);
+        SetLaserProjectiles.e((byte) -96);
+        GetBombletSprayProjectiles.b(true);
+        SetBombletSprayProjectiles.e((byte) -27);
+        SetPhasedEnergyBeamProjectiles.a(-60);
+        GetTorpedoProjectiles.a(85);
+        SetTorpedoProjectiles.a(-28228);
+        GetSniperCannonProjectiles.e((byte) -119);
+        SetSniperCannonProjectiles.e((byte) -8);
+        SetMissileLauncherProjectiles.a(27154);
+        GetPointDefenceLaserProjectiles.a(0);
+        SetPointDefenceLaserProjectiles.a(88);
+        SetCountermeasureLauncherProjectiles.a(89);
+        GetMassDriverProjectileLife.a(21584);
+        SetMassDriverProjectileLife.e((byte) 127);
+        SetTorpedoProjectileLife.e((byte) 102);
+        GetBombletSprayProjectileLife.a(92);
+        SetBombletSprayProjectileLife.e((byte) -115);
+        GetSniperCannonProjectileLife.a(4);
+        SetSniperCannonProjectileLife.e((byte) -87);
+        GetMissileLauncherProjectileLife.e((byte) 127);
+        SetMissileLauncherProjectileLife.a(6425);
+        GetCountermeasureLauncherProjectileLife.a(-87);
+        SetDefaultFiringLeeway.b(!param0 ? true : false);
+        SetSniperCannonFiringLeeway.e((byte) -97);
+        GetMassDriverFireForce.a(127);
+        SetMassDriverFireForce.f((byte) 106);
+        SetTorpedoFireForce.b(false);
+        GetBombletSprayFireForce.e((byte) -91);
+        GetPhasedEnergyBeamFireForce.a(617169759);
+        SetMachineGunFireForce.a(0);
+        SetSniperCannonFireForce.a(-114);
+        SetMissileLauncherFireForce.a(-17297);
+        SetPointDefenceLaserFireForce.a(1600);
+        SetCountermeasureLauncherFireForce.a(107);
+        GetMassDriverReload.b(true);
+        SetMassDriverReload.e(-20005);
+        GetTorpedoReload.a(194);
+        SetTorpedoReload.a(109);
+        GetLaserReload.e((byte) 119);
+        GetBombletSprayReload.a(-20626);
+        SetBombletSprayReload.a(0);
+        GetPhasedEnergyBeamReload.a(-100);
+        SetPhasedEnergyBeamReload.e((byte) 101);
+        SetMachineGunReload.e((byte) -16);
+        GetSniperCannonReload.a(-1);
+        GetFighterBayReload.a(16086);
+        GetPointDefenceLaserReload.a(116);
+        GetMassDriverAimspeed.a(117);
+        GetTorpedoAimspeed.e((byte) 57);
+        GetLaserAimspeed.e(117);
+        GetFighterBayAimspeed.e((byte) 99);
+        SetFighterBayAimspeed.e((byte) 65);
+        GetSpinningBladeAimspeed.e((byte) -125);
+        GetSniperCannonAimspeed.a(100);
+        GetBombletSprayAimspeed.e((byte) 71);
+        SetBombletSprayAimspeed.a(15110);
+        GetPhasedEnergyBeamAimspeed.a(-29417);
+        SetPhasedEnergyBeamAimspeed.a(0);
+        GetMachineGunAimspeed.a(125);
+        SetMachineGunAimspeed.e((byte) -78);
+        GetGrapplingHookAimspeed.a(-1);
+        GetMissileLauncherAimspeed.a(127);
+        SetMissileLauncherAimspeed.e((byte) 53);
+        GetPointDefenceLaserAimspeed.a(-120);
+        SetCountermeasureLauncherAimspeed.a(-52);
+        SetMassDriverAimarc.e((byte) -25);
+        GetTorpedoAimarc.e((byte) 108);
+        SetTorpedoAimarc.a(63);
+        GetLaserAimarc.e((byte) -116);
+        SetLaserAimarc.e((byte) -80);
+        GetFighterBayAimarc.a(69);
+        GetSpinningBladeAimarc.e((byte) 92);
+        SetSniperCannonAimarc.e((byte) -99);
+        GetBombletSprayAimarc.e(-1);
+        SetBombletSprayAimarc.e((byte) -80);
+        GetPhasedEnergyBeamAimarc.a(16);
+        GetMachineGunAimarc.a(-116);
+        SetMachineGunAimarc.a(14675);
+        SetGrapplingHookAimarc.a(0);
+        GetPointDefenceLaserAimarc.e((byte) 21);
+        SetPointDefenceLaserAimarc.e((byte) 107);
+        SetCountermeasureLauncherAimarc.a(-92);
+        GetMassDriverProjectileDamage.b(!param0 ? true : false);
+        SetMassDriverProjectileDamage.a(9099);
+        GetTorpedoProjectileDamage.a(-124);
+        SetTorpedoProjectileDamage.a(0);
+        GetLaserBeamProjectileDamage.a(7848);
+        GetMachineGunProjectileDamage.a(0);
+        SetMachineGunProjectileDamage.a(146);
+        SetSniperCannonProjectileDamage.e((byte) 97);
+        GetBombletSprayProjectileDamage.e((byte) -102);
+        SetBombletSprayProjectileDamage.e((byte) -102);
+        SetExplosionProjectileDamage.a(-123);
+        GetPointDefenceLaserProjectileDamage.e((byte) -127);
+        GetPointDefenceLaserProjectileInterceptDamage.a(0);
+        SetPointDefenceLaserProjectileInterceptDamage.a(-982);
+        GetMassDriverProjectileOndamageParticles.a(-59);
+        SetTorpedoProjectileOndamageParticles.a(153);
+        SetPhasedEnergyBeamProjectileOndamageParticles.a(-2573);
+        GetSniperCannonProjectileOndamageParticles.e((byte) 15);
+        SetSniperCannonProjectileOndamageParticles.a(-17548);
+        SetBombletSprayProjectileOndamageParticles.a(76);
+        SetPointDefenceLaserProjectileOndamageParticles.a(0);
+        GetMassDriverEnergyUsed.e((byte) 118);
+        SetMassDriverEnergyUsed.b(!param0 ? true : false);
+        GetLaserEnergyUsed.a(0);
+        SetLaserEnergyUsed.f((byte) 92);
+        GetBombletSprayEnergyUsed.e((byte) 62);
+        SetPhasedEnergyBeamEnergyUsed.a(163);
+        GetMachineGunEnergyUsed.b(false);
+        SetMachineGunEnergyUsed.b(!param0 ? true : false);
+        GetSniperCannonEnergyUsed.a(118);
+        SetSniperCannonEnergyUsed.e((byte) -113);
+        GetMissileLauncherEnergyUsed.a(-10515);
+        SetMissileLauncherEnergyUsed.a(-17);
+        GetCountermeasureLauncherEnergyUsed.b(false);
+        SetCountermeasureLauncherEnergyUsed.e((byte) 28);
+        GetPointDefenceLaserEnergyUsed.a(12992);
+        SetPointDefenceLaserEnergyUsed.e((byte) -99);
+        GetTorpedoAcceleration.a(0);
+        SetTorpedoAcceleration.a(169);
+        SetVelocitySustain.a(-107);
+        GetAngularVelocitySustain.e((byte) 83);
+        SetAngularVelocitySustain.a(-25544);
+        GetThrusterParticleSpeedDownshift.a(176);
+        SetThrusterParticleSpeedDownshift.e((byte) 84);
+        GetThrusterParticleLife.a(177);
+        SetThrusterParticleLife.a(127);
+        GetAngularForceDownshift.a(64);
+        SetAngularForceDownshift.e((byte) -118);
+        GetAngularVelocitySustainMax.a(0);
+        GetTorqueDownshift.a(2);
+        GetMomentOfInertiaPredivideDownshift.e((byte) 126);
+        SetMomentOfInertiaPredivideDownshift.e((byte) 69);
+        GetMomentOfInertiaPerpointCalcDownshift.a(0);
+        SetMomentOfInertiaPerpointCalcDownshift.a(113);
+        GetSpinningBladeTopSpeed.a(-120);
+        SetSpinningBladeTopSpeed.a(-19013);
+        SetSpinningBladeSpinupSpeed.a(21942);
+        GetSpinningBladeSpindamageMultiplier.b(false);
+        SetSpinningBladeSpindamageMultiplier.e((byte) -122);
+        GetPhasedEnergyBeamPulsetime.f((byte) 51);
+        SetPhasedEnergyBeamPulsetime.e((byte) -71);
+        GetPhasedEnergyBeamPulseFadetime.e((byte) 65);
+        GetMachineGunPulsetime.e((byte) -28);
+        SetMachineGunPulsetime.a(-105);
+        GetBombletSprayPushMultiplier.a(-122);
+        SetBombletSprayPushMultiplier.e(0);
+        GetExplosionPushMultiplier.a(80);
+        SetExplosionPushMultiplier.e((byte) -89);
+        GetAiFiringRangeUpshift.e((byte) -118);
+        SetAiFiringRangeUpshift.a(26468);
+        GetWorldWidthUpshift.e(193);
+        GetWeaponParticleSpeedDownshift.a(-33);
+        SetWeaponParticleSpeedDownshift.a(7069);
+        GetWeaponProjectileSpeedMultiply.f((byte) -125);
+        SetWeaponProjectileSpeedMultiply.a(0);
+        SetRespawnTime.a(67);
+        SetGrapplingHookMaxLength.e((byte) -52);
+        GetGrapplingHookFireForce.a(0);
+        SetGrapplingHookFireForce.e((byte) 57);
+        GetGrapplingHookSpringConstant.b(true);
+        SetGrapplingHookSpringConstant.a(200);
+        SetGrapplingHookMaxExtension8Force.a(17231);
+        GetGrapplingHookCooldown.a(-120);
+        SetGrapplingHookCooldown.e((byte) -63);
+        GetGrapplingHookRopeChangeRate.a(-14010);
+        GetGrapplingHookRopeBreakLength.a(204);
+        SetGrapplingHookRopeBreakLength.a(235);
+        GetMissilesCooldown.a(124);
+        GetMissilesExplosionPower.a(3);
+        SetMissilesExplosionPower.a(0);
+        SetMissilesAcceleration.a(207);
+        SetMissilesTopSpeed.e((byte) -90);
+        GetShieldsToggleCooldown.e((byte) 123);
+        SetShieldsDirectionalIdleEnergyUsage.e((byte) 0);
+        GetShieldsDirectionalArc.a(-29044);
+        SetShieldsDirectionalArc.e((byte) 121);
+        GetShieldsDamageEnergyConversion.e((byte) -101);
+        SetShieldsDamageEnergyConversion.a(-126);
+        GetRepairModeCooldown.e((byte) 91);
+        GetRepairModeActiveTime.a(215);
+        GetRepairModeRadius.a(-99);
+        SetRepairModeRadius.e(-105);
+        GetRepairModePower.b(false);
+        SetRepairModePower.e((byte) -33);
+        GetBoostersCooldown.e((byte) -121);
+        GetBoostersActiveTime.e((byte) 84);
+        SetCountermeasuresPulsetime.a(-123);
+        GetCountermeasuresCooldown.a(221);
+        SetCountermeasuresCooldown.a(0);
+        GetCountermeasuresPulseRadius.a(16407);
+        SetCountermeasuresPulseRadius.a(-27266);
+        GetSelfDestructTimer.a(225);
+        SetSelfDestructTimer.a(-26016);
+        GetPlayerRepairTime.a(8);
+        SetPlayerRepairTime.a(14055);
+        GetPlayerRepairAmount.a(103);
+        SetPlayerRepairAmount.a(-128);
+        GetAiRepairTime.a(46);
+        SetFighterRepairTime.a(0);
+        GetFighterRepairAmount.e((byte) -106);
+        SetFighterRepairAmount.e((byte) -15);
+        GetReadyRoomMissionTime.a(232);
+        GetReadyRoomMutatorTime.e((byte) 49);
+        SetReadyRoomMutatorTime.a(233);
+        GetReadyRoomTeamTime.e((byte) 91);
         bab.a(true);
         fob.a(75);
         rc.a(540800);
@@ -1828,7 +1828,7 @@ public final class VoidHunters extends ms {
           lo.field_a[var2] = new wf(var2);
         }
         wgb.field_f = 0;
-        oab.field_o = 0;
+        GetArmageddonTimerStart.field_o = 0;
         gib.a(-106, 50);
         fka.a("Playing music", (byte) -101);
         hb.a(pab.field_k[0], (byte) -114);
@@ -1837,26 +1837,26 @@ public final class VoidHunters extends ms {
           VoidHunters.a(true, (Object) null);
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < 16; var2Lifetime1++) {
-          fi.field_o.b(0, (byte) 18, var2Lifetime1);
+          GetThrusterParticleLife.field_o.b(0, (byte) 18, var2Lifetime1);
         }
-        wgb.a(jj.field_p, ama.field_o, qaa.field_a, -131, qua.field_b, nl.field_n, oma.field_i);
+        wgb.a(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, qaa.field_a, -131, qua.field_b, nl.field_n, oma.field_i);
         fka.a("Initing audiohandler", (byte) -64);
         qn.c((byte) 89);
         fkb.a(2096);
         fka.a("Finished loadloop", (byte) -128);
         if (this.l(0) &&
-          fda.e((byte) 116)) {
+          GetPhasedEnergyBeamPulsetime.e((byte) 116)) {
           wu.a(true, false);
         }
         return true;
     }
 
     final void b(int param0) {
-        prb.b(false);
+        GetBurstFireRegenerationRate.b(false);
         if (null != psb.field_b) {
-          cqb.b((byte) 86);
+          VariableCondition.b((byte) 86);
         }
-        jn.a(1);
+        NodeHashTableIterator.a(1);
         if (param0 >= -102) {
           VoidHunters.b(63, 91);
         }
@@ -1895,21 +1895,21 @@ public final class VoidHunters extends ms {
         int var7Lifetime2;
         var10 = field_G;
         if (ssa.b(2)) {
-          wgb.a(jj.field_p, ama.field_o, qaa.field_a, -131, qua.field_b, nl.field_n, oma.field_i);
-          if (si.field_o[81] &&
-            si.field_o[102]) {
-            hja.a(0, new int[]{4});
+          wgb.a(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, qaa.field_a, -131, qua.field_b, nl.field_n, oma.field_i);
+          if (SetMachineGunEnergyUsed.field_o[81] &&
+            SetMachineGunEnergyUsed.field_o[102]) {
+            SetInnateThrusters.a(0, new int[]{4});
           }
         }
-        if (eo.a(61848) &&
-          oab.field_o == 0 &&
+        if (GetBuildViewAutozoomEndOnAction.a(61848) &&
+          GetArmageddonTimerStart.field_o == 0 &&
           0 == wgb.field_f) {
-          nkb.a(false, "Cookie ship found, so starting game");
+          GetDebrisThrowable.a(false, "Cookie ship found, so starting game");
           stackIn_10_0 = (bqa.a(false)) ? 7 : 0;
-          lha.a(stackIn_10_0, false, (byte) -85, -3);
+          GetNebulaFadesOutWhenClose.a(stackIn_10_0, false, (byte) -85, -3);
         }
         if (wp.field_b != wp.field_a) {
-          if (~wp.field_a == ~maa.field_o) {
+          if (~wp.field_a == ~SetBombletSprayEnergyUsed.field_o) {
             hn.field_a = hn.field_a + 1;
             if (16 == hn.field_a) {
               if (!hpb.field_i) {
@@ -1921,20 +1921,20 @@ public final class VoidHunters extends ms {
             }
           } else {
             if (tjb.field_wb == wp.field_a) {
-              if (!fda.e((byte) 102)) {
-                ek.b(false);
+              if (!GetPhasedEnergyBeamPulsetime.e((byte) 102)) {
+                SetMissionTerrainSpaceProbability.b(false);
                 wgb.field_f = pw.field_a;
                 if (hpb.field_i) {
-                  ika.a(-356, false);
+                  AwardVictoryToTeamAction.a(-356, false);
                 }
                 if (kua.field_e) {
-                  lha.a(wgb.field_f, false, (byte) -85, -4);
+                  GetNebulaFadesOutWhenClose.a(wgb.field_f, false, (byte) -85, -4);
                 }
                 if (wqa.a(false, wgb.field_f)) {
                   olb.d(991426348);
                 }
               }
-              wp.field_a = oh.field_p;
+              wp.field_a = SetShieldsDirectionalIdleEnergyUsage.field_p;
             } else {
               hn.field_a = hn.field_a - 1;
               if (hn.field_a == 0) {
@@ -1956,15 +1956,15 @@ public final class VoidHunters extends ms {
           }
           boolean decompiledFrameRemainder0 = true;
           var5 = stackIn_18_0;
-          if (pcb.field_o &&
+          if (SetNebulaProximityFadeDownshift.field_o &&
             null != vqa.field_g &&
-            oab.field_o == -1 &&
-            wgb.field_f == oab.field_o &&
+            GetArmageddonTimerStart.field_o == -1 &&
+            wgb.field_f == GetArmageddonTimerStart.field_o &&
             var5 == 0 && ((psb.field_b != null ||
-            bsa.field_o) &&
+            SetReverbDamp.field_o) &&
             (!vqa.field_g.field_N ||
-            !aka.field_p &&
-            !fva.field_p))) {
+            !GetSniperCannonProjectiles.field_p &&
+            !SetFightersPerPlayerMaximum.field_p))) {
             stackIn_32_0 = 1;
             decompiledFrameRemainder0 = false;
           }
@@ -1972,20 +1972,20 @@ public final class VoidHunters extends ms {
             stackIn_32_0 = 0;
           }
           var6 = stackIn_32_0;
-          bq.a(true, var6 != 0, ip.field_p.width, ip.field_p.height);
+          SetReadyRoomMissionTime.a(true, var6 != 0, GetBombletSprayEnergyUsed.field_p.width, GetBombletSprayEnergyUsed.field_p.height);
           if (!param0) {
-            if (~wgb.field_f != ~oab.field_o) {
-              pob.field_b = pob.field_b + 1;
-              if (32 == pob.field_b) {
+            if (~wgb.field_f != ~GetArmageddonTimerStart.field_o) {
+              SetVariableAction.field_b = SetVariableAction.field_b + 1;
+              if (32 == SetVariableAction.field_b) {
                 olb.d(991426348);
               }
             } else {
-              if (oab.field_o != -1) {
-                if (oab.field_o == -2) {
+              if (GetArmageddonTimerStart.field_o != -1) {
+                if (GetArmageddonTimerStart.field_o == -2) {
                   var3 = 1;
                 } else {
-                  if (wqa.a(false, oab.field_o)) {
-                    lo.field_a[oab.field_o].b(0);
+                  if (wqa.a(false, GetArmageddonTimerStart.field_o)) {
+                    lo.field_a[GetArmageddonTimerStart.field_o].b(0);
                   }
                 }
               } else {
@@ -2002,7 +2002,7 @@ public final class VoidHunters extends ms {
                   ((uca) (Object) stackIn_43_0).a((byte) stackIn_43_1, stackIn_44_2);
                   if (!jkb.field_a) {
                     while (ata.e(127)) {
-                      stackOut_47_0 = qmb.a(-22029);
+                      stackOut_47_0 = GetSpinningBladeAimspeed.a(-22029);
                       stackIn_59_0 = stackOut_47_0 ? 1 : 0;
                       stackIn_48_0 = stackOut_47_0;
                       if (stackIn_48_0) {
@@ -2026,33 +2026,33 @@ public final class VoidHunters extends ms {
             var4 = 0;
           }
           if (di.field_l.a(-28208) ||
-            !idb.field_o &&
-            !nhb.field_p &&
-            lqa.field_o != null &&
-            lqa.field_o.field_fc) {
+            !GetThrusterSmallForce.field_o &&
+            !SetMissionTerrainDebrisProbability.field_p &&
+            SetSpinningBladeSpindamageMultiplier.field_o != null &&
+            SetSpinningBladeSpindamageMultiplier.field_o.field_fc) {
             var3 = 0;
             var4 = 0;
           }
           if (jkb.field_a &&
             !lu.field_d &&
-            !dua.field_o) {
-            if (idb.field_o &&
-              fva.field_p) {
+            !SetMassDriverFireForce.field_o) {
+            if (GetThrusterSmallForce.field_o &&
+              SetFightersPerPlayerMaximum.field_p) {
               var3 = 0;
             }
-            m.a((byte) 21, var3 != 0);
-            if (nhb.field_p) {
+            GetShieldsDirectionalRadius.a((byte) 21, var3 != 0);
+            if (SetMissionTerrainDebrisProbability.field_p) {
               ndb.field_a.a((byte) 98, var4 != 0);
             }
-            if (idb.field_o) {
+            if (GetThrusterSmallForce.field_o) {
               if (vqa.field_g == null) {
-                idb.field_o = false;
+                GetThrusterSmallForce.field_o = false;
               } else {
-                var7 = (-dma.field_g + ip.field_p.width) / 2;
-                var8 = (-dma.field_j + ip.field_p.height) / 2;
-                js.a(-119, var8, var7);
-                hlb.a(tqa.e((byte) 93), var4 != 0, sea.a(-99), 123);
-                cc.b(-1);
+                var7 = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
+                var8 = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
+                GetBombletSprayReload.a(-119, var8, var7);
+                GetMutatorVotes.a(SetBombletSprayProjectileOndamageParticles.e((byte) 93), var4 != 0, SetThrusterForce.a(-99), 123);
+                BodyCondition.b(-1);
                 if (vqa.field_g.field_N) {
                   vqa.field_g.a((byte) 89, var4 != 0);
                 }
@@ -2060,49 +2060,49 @@ public final class VoidHunters extends ms {
             }
             var7Lifetime2 = 0;
             while (ata.e(127)) {
-              if (qmb.a(-22029)) {
+              if (GetSpinningBladeAimspeed.a(-22029)) {
                 continue;
               }
-              stackIn_133_0 = idb.field_o;
+              stackIn_133_0 = GetThrusterSmallForce.field_o;
               if (stackIn_133_0 &&
-                pma.field_o != 9 &&
-                pma.field_o != 10 &&
-                pma.field_o != 11) {
-                if (!fva.field_p) {
+                SetBombletSprayProjectileDamage.field_o != 9 &&
+                SetBombletSprayProjectileDamage.field_o != 10 &&
+                SetBombletSprayProjectileDamage.field_o != 11) {
+                if (!SetFightersPerPlayerMaximum.field_p) {
                   mjb.field_e = false;
                 }
-                if (!fva.field_p) {
+                if (!SetFightersPerPlayerMaximum.field_p) {
                   if (!me.field_r) {
-                    if (na.field_q == pma.field_o) {
+                    if (GetHealthBarWidth.field_q == SetBombletSprayProjectileDamage.field_o) {
                       var7Lifetime2 = 1;
                       mjb.field_e = false;
-                      fva.field_p = true;
+                      SetFightersPerPlayerMaximum.field_p = true;
                       continue;
                     }
-                    if (~vnb.field_p == ~pma.field_o) {
-                      fva.field_p = true;
+                    if (~GetGrappleDebris.field_p == ~SetBombletSprayProjectileDamage.field_o) {
+                      SetFightersPerPlayerMaximum.field_p = true;
                       mjb.field_e = true;
                       var7Lifetime2 = 1;
                       continue;
                     }
                   } else {
-                    if (pma.field_o == vu.field_Db) {
+                    if (SetBombletSprayProjectileDamage.field_o == vu.field_Db) {
                       mjb.field_e = false;
-                      fva.field_p = true;
+                      SetFightersPerPlayerMaximum.field_p = true;
                       var7Lifetime2 = 1;
                       continue;
                     }
-                    if (jmb.field_p == pma.field_o) {
+                    if (GetBombletSprayProjectiles.field_p == SetBombletSprayProjectileDamage.field_o) {
                       var7Lifetime2 = 1;
                       mjb.field_e = true;
-                      fva.field_p = true;
+                      SetFightersPerPlayerMaximum.field_p = true;
                       continue;
                     }
                   }
                 }
                 if (var7Lifetime2 != 0) {
-                  dpa.field_p.h(24335, 69);
-                  stackIn_118_0 = dpa.field_p;
+                  RequestNewestBlackboxRecording.field_p.h(24335, 69);
+                  stackIn_118_0 = RequestNewestBlackboxRecording.field_p;
                   stackIn_118_1 = 0;
                   if (mjb.field_e) {
                     stackIn_119_2 = 1;
@@ -2111,20 +2111,20 @@ public final class VoidHunters extends ms {
                   }
                   ((faa) (Object) stackIn_118_0).c(stackIn_118_1, stackIn_119_2);
                 }
-                if (var7Lifetime2 == 0 && (pma.field_o != 80 ||
-                  fva.field_p) && gbb.a(13, 15, 12, (byte) 23)) {
+                if (var7Lifetime2 == 0 && (SetBombletSprayProjectileDamage.field_o != 80 ||
+                  SetFightersPerPlayerMaximum.field_p) && SetMassDriverEnergyUsed.a(13, 15, 12, (byte) 23)) {
                   continue;
                 }
               } else {
-                if (aka.field_p &&
+                if (GetSniperCannonProjectiles.field_p &&
                   jlb.b(12, -2048, 13, 15)) {
                   continue;
                 }
               }
-              if (nhb.field_p) {
+              if (SetMissionTerrainDebrisProbability.field_p) {
                 ndb.field_a.d((byte) -111);
               }
-              if (!idb.field_o) {
+              if (!GetThrusterSmallForce.field_o) {
                 continue;
               }
               vqa.field_g.d((byte) -16);
@@ -2134,8 +2134,8 @@ public final class VoidHunters extends ms {
           if (!stackIn_133_0Lifetime1) {
             VoidHunters.m(-29130);
           }
-          if (aka.field_p) {
-            if (ldb.field_o > vga.field_b) {
+          if (GetSniperCannonProjectiles.field_p) {
+            if (GetRepairModePower.field_o > vga.field_b) {
               vga.field_b = vga.field_b + 1;
             }
           } else {
@@ -2143,16 +2143,16 @@ public final class VoidHunters extends ms {
               vga.field_b = vga.field_b - 1;
             }
           }
-          var7Lifetime1 = ldb.field_o * ldb.field_o;
+          var7Lifetime1 = GetRepairModePower.field_o * GetRepairModePower.field_o;
           var8Lifetime1 = -(vga.field_b * vga.field_b) + var7Lifetime1;
           var9 = 120 * var8Lifetime1 / var7Lifetime1 + nv.field_v;
-          ig.a(0, var9);
-          if (dv.field_c.d(0) != null) {
+          GetDebrisProjectileCollision.a(0, var9);
+          if (PlayerVote.field_c.d(0) != null) {
             fieldTemp$0 = wva.field_b + 1;
             wva.field_b = wva.field_b + 1;
             if (fieldTemp$0 == 335) {
               wva.field_b = 0;
-              dv.field_c.a(true);
+              PlayerVote.field_c.a(true);
             }
           }
         }
@@ -2160,15 +2160,15 @@ public final class VoidHunters extends ms {
           wu.a(false, false);
         }
         if (-4 == wgb.field_f) {
-          dpa.field_p.h(24335, 9);
-          wgb.field_f = oab.field_o;
+          RequestNewestBlackboxRecording.field_p.h(24335, 9);
+          wgb.field_f = GetArmageddonTimerStart.field_o;
           lu.field_d = true;
-          vga.field_b = ldb.field_o;
+          vga.field_b = GetRepairModePower.field_o;
         }
         if (-5 == wgb.field_f) {
-          sh.a(lqa.field_o.f((byte) -13), -1, 11);
-          dua.field_o = true;
-          wgb.field_f = oab.field_o;
+          sh.a(SetSpinningBladeSpindamageMultiplier.field_o.f((byte) -13), -1, 11);
+          SetMassDriverFireForce.field_o = true;
+          wgb.field_f = GetArmageddonTimerStart.field_o;
         }
         if (param1 >= -117) {
           this.field_B = -120;
@@ -2178,34 +2178,34 @@ public final class VoidHunters extends ms {
         }
         this.g((byte) -127);
         if (ssa.b(2) &&
-          si.field_o[1]) {
+          SetMachineGunEnergyUsed.field_o[1]) {
           li.field_i = true;
         } else {
           if (ssa.b(2) &&
-            si.field_o[2]) {
+            SetMachineGunEnergyUsed.field_o[2]) {
             li.field_i = false;
           }
         }
         if (ssa.b(2) &&
-          si.field_o[3]) {
-          nkb.a(false, "Selecting opengl toolkit...");
+          SetMachineGunEnergyUsed.field_o[3]) {
+          GetDebrisThrowable.a(false, "Selecting opengl toolkit...");
           var11 = new int[]{1};
-          vq.field_x.a(false, fja.a(var11, 2));
-          nkb.a(false, "Done");
+          vq.field_x.a(false, GetFighterRepairAmount.a(var11, 2));
+          GetDebrisThrowable.a(false, "Done");
         }
         if (ssa.b(2) &&
-          si.field_o[4]) {
-          nkb.a(false, "Selecting java toolkit...");
+          SetMachineGunEnergyUsed.field_o[4]) {
+          GetDebrisThrowable.a(false, "Selecting java toolkit...");
           var12 = new int[]{0};
-          vq.field_x.a(false, fja.a(var12, 2));
-          nkb.a(false, "Done");
+          vq.field_x.a(false, GetFighterRepairAmount.a(var12, 2));
+          GetDebrisThrowable.a(false, "Done");
         }
         if (ssa.b(2) &&
-          si.field_o[55] &&
-          si.field_o[82]) {
-          iia.field_c = "This is a forced error, you pressed some crazy button combo";
+          SetMachineGunEnergyUsed.field_o[55] &&
+          SetMachineGunEnergyUsed.field_o[82]) {
+          BodyInZoneCondition.field_c = "This is a forced error, you pressed some crazy button combo";
           stackIn_200_0 = (!bqa.a(false)) ? 0 : 7;
-          lha.a(stackIn_200_0, false, (byte) -85, 6);
+          GetNebulaFadesOutWhenClose.a(stackIn_200_0, false, (byte) -85, 6);
         }
     }
 
@@ -2216,9 +2216,9 @@ public final class VoidHunters extends ms {
           return;
         }
         if (param1 > 0 &&
-          og.field_r != null) {
-          var4 = (ip.field_p.width - param2) / 2;
-          var5 = (ip.field_p.height - param1) / 2;
+          GetDebrisGroupColour.field_r != null) {
+          var4 = (GetBombletSprayEnergyUsed.field_p.width - param2) / 2;
+          var5 = (GetBombletSprayEnergyUsed.field_p.height - param1) / 2;
           if (null == this.field_F ||
             ~param2 != ~this.field_F.field_q ||
             ~this.field_F.field_p != ~param1) {
@@ -2227,7 +2227,7 @@ public final class VoidHunters extends ms {
             this.field_F.field_m = param2;
             this.field_F.field_p = param1;
             this.field_F.field_n = param1;
-            this.field_F.field_r = og.field_r.na(var4, var5, this.field_F.field_q, this.field_F.field_p);
+            this.field_F.field_r = GetDebrisGroupColour.field_r.na(var4, var5, this.field_F.field_q, this.field_F.field_p);
           }
           this.field_F.c(dma.field_g / 2 - param2 / param0, dma.field_j / 2 - param1 / 2 - 1);
           return;
@@ -2273,63 +2273,63 @@ public final class VoidHunters extends ms {
           int var6Lifetime1Lifetime1;
           int var7Lifetime1Lifetime1;
           var9 = field_G;
-          ip.field_p = df.e((byte) 102).getSize();
-          wna.field_e = false;
-          var10 = df.e((byte) 101);
+          GetBombletSprayEnergyUsed.field_p = SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 102).getSize();
+          RoundResult.field_e = false;
+          var10 = SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 101);
           if (null != vq.field_x) {
             if (uu.field_b != var10) {
-              nkb.a(false, "Canvas=" + var10 + " hashcode=" + var10.hashCode());
+              GetDebrisThrowable.a(false, "Canvas=" + var10 + " hashcode=" + var10.hashCode());
               uu.field_b = var10;
             }
             if (vq.field_x.a((byte) -128, var10) ||
               null != vq.field_x.field_e &&
-              vq.field_x.field_e.field_g != og.field_r) {
-              jc.a(-9934);
+              vq.field_x.field_e.field_g != GetDebrisGroupColour.field_r) {
+              GetSpinningBladeSpindamageMultiplier.a(-9934);
             }
           }
-          if (fu.a(77)) {
-            hka.a(111, var10, rnb.a(0));
+          if (GetUseTriFill.a(77)) {
+            hka.a(111, var10, SetMassDriverProjectileLife.a(0));
             return;
           }
           if (!uob.field_e) {
-            pga.a(var10, true);
+            GetPhasedEnergyBeamAimspeed.a(var10, true);
             return;
           }
-          if (!hkb.b(-1)) {
-            uoa.a(lwa.field_vb, -1, 100.0f);
-            pga.a(var10, true);
+          if (!Mission.b(-1)) {
+            IncrementVariableAction.a(lwa.field_vb, -1, 100.0f);
+            GetPhasedEnergyBeamAimspeed.a(var10, true);
             return;
           }
           if (li.field_i) {
-            og.field_r.c((int)(-hj.field_q + wt.a(false)));
+            GetDebrisGroupColour.field_r.c((int)(-GetSalvoaim.field_q + wt.a(false)));
             if (ul.field_a == 1) {
-              if (!og.field_r.s()) {
-                og.field_r.b();
+              if (!GetDebrisGroupColour.field_r.s()) {
+                GetDebrisGroupColour.field_r.b();
               }
-              og.field_r.a((float)pab.field_m / 100.0f, 1.0f, (float)oaa.field_i / 100.0f);
+              GetDebrisGroupColour.field_r.a((float)pab.field_m / 100.0f, 1.0f, (float)oaa.field_i / 100.0f);
             }
-            og.field_r.GA(0);
-            og.field_r.ya();
+            GetDebrisGroupColour.field_r.GA(0);
+            GetDebrisGroupColour.field_r.ya();
           }
           dma.a();
-          if (~wgb.field_f != ~oab.field_o) {
-            if (pob.field_b < 16) {
-              uea.a((byte) 88, lrb.field_f, false, oab.field_o);
+          if (~wgb.field_f != ~GetArmageddonTimerStart.field_o) {
+            if (SetVariableAction.field_b < 16) {
+              uea.a((byte) 88, SetShipTeamAction.field_f, false, GetArmageddonTimerStart.field_o);
             } else {
-              uea.a((byte) 88, bg.field_o, false, wgb.field_f);
+              uea.a((byte) 88, GetMessageFadetime.field_o, false, wgb.field_f);
             }
           } else {
-            uea.a((byte) 88, lrb.field_f, true, oab.field_o);
+            uea.a((byte) 88, SetShipTeamAction.field_f, true, GetArmageddonTimerStart.field_o);
           }
-          if (!lrb.field_f ||
-            !bg.field_o) {
-            var3_int = (-dma.field_g + ip.field_p.width) / 2;
-            var4_int = (-dma.field_j + ip.field_p.height) / 2;
-            js.a(-89, var4_int, var3_int);
-            fr.a(jnb.e(83), true);
-            cc.b(-1);
+          if (!SetShipTeamAction.field_f ||
+            !GetMessageFadetime.field_o) {
+            var3_int = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
+            var4_int = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
+            GetBombletSprayReload.a(-89, var4_int, var3_int);
+            fr.a(SetSalvoDamageMultiplier.e(83), true);
+            BodyCondition.b(-1);
           }
-          var3 = (hua) (dv.field_c.d(0));
+          var3 = (hua) (PlayerVote.field_c.d(0));
           if (var3 != null) {
             var5_int = wva.field_b;
             if (var5_int < 80) {
@@ -2349,36 +2349,36 @@ public final class VoidHunters extends ms {
           if (nna.field_C != null) {
             nna.field_C.b((byte) 95);
             if (nna.field_C.c(13462)) {
-              wna.field_e = true;
+              RoundResult.field_e = true;
             }
           }
-          if (vba.f((byte) -113)) {
-            var4_int = (-dma.field_g + ip.field_p.width) / 2;
-            var5_intLifetime1 = (ip.field_p.height - dma.field_j) / 2;
+          if (SetReloadBarWidth.f((byte) -113)) {
+            var4_int = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
+            var5_intLifetime1 = (GetBombletSprayEnergyUsed.field_p.height - dma.field_j) / 2;
             if (li.field_i) {
-              og.field_r.GA(-16777216);
+              GetDebrisGroupColour.field_r.GA(-16777216);
             }
-            qoa.a(var4_int, var5_intLifetime1, 143);
+            SetMassDriverProjectileDamage.a(var4_int, var5_intLifetime1, 143);
             vfa.a(false, 20637);
-            wna.field_e = true;
+            RoundResult.field_e = true;
           }
           if (tjb.l(0)) {
-            var4_int = (-dma.field_g + ip.field_p.width) / 2;
-            var5_intLifetime2 = (-dma.field_j + ip.field_p.height) / 2;
-            lva.a(var4_int, 32, var5_intLifetime2);
-            if (!wna.field_e) {
+            var4_int = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
+            var5_intLifetime2 = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
+            GetPhasedEnergyBeamFireForce.a(var4_int, 32, var5_intLifetime2);
+            if (!RoundResult.field_e) {
               this.a(2, 20 + cd.a(true), fk.b(-119));
             }
             rw.a(false, (byte) 71);
-            wna.field_e = true;
+            RoundResult.field_e = true;
           } else {
             if (ffa.a(false)) {
-              ksa.a((phb[]) null, 8, 0, (phb[]) null, (phb[]) null, 8555923, 0, 15658751, 15658751, dsb.field_p, dma.field_j / 2, 0, 0, -14109, dma.field_g / 2);
+              IntrusiveNode.a((phb[]) null, 8, 0, (phb[]) null, (phb[]) null, 8555923, 0, 15658751, 15658751, SetMpSandboxEnemySpawnLimit.field_p, dma.field_j / 2, 0, 0, -14109, dma.field_g / 2);
               var4_int = 16;
-              var5_intLifetime2 = var4_int + eba.a(0);
-              var6 = var4_int + geb.a(-22954);
-              var7 = ip.field_p.width / 2 - var5_intLifetime2 / 2;
-              var8 = -(var6 / 2) + ip.field_p.height / 2;
+              var5_intLifetime2 = var4_int + SetUseNiceTrails.a(0);
+              var6 = var4_int + SetShieldsDirectionalArc.a(-22954);
+              var7 = GetBombletSprayEnergyUsed.field_p.width / 2 - var5_intLifetime2 / 2;
+              var8 = -(var6 / 2) + GetBombletSprayEnergyUsed.field_p.height / 2;
               af.a((byte) -115, 255, var6, var7, var8 - 1, var5_intLifetime2);
               if (this.field_F == null) {
                 this.field_F = new phb(0, 0);
@@ -2386,11 +2386,11 @@ public final class VoidHunters extends ms {
                 this.field_F.field_m = var5_intLifetime2;
                 this.field_F.field_p = var6;
                 this.field_F.field_n = var6;
-                this.field_F.field_r = og.field_r.na(var7, var8, this.field_F.field_q, this.field_F.field_p);
+                this.field_F.field_r = GetDebrisGroupColour.field_r.na(var7, var8, this.field_F.field_q, this.field_F.field_p);
               }
               this.field_F.c(dma.field_g / 2 - var5_intLifetime2 / 2, dma.field_j / 2 - var6 / 2 - 1);
-              ieb.f(-1321004447);
-              wna.field_e = true;
+              SetMutatorVotes.f(-1321004447);
+              RoundResult.field_e = true;
             }
           }
           if (wp.field_a != wp.field_b) {
@@ -2399,10 +2399,10 @@ public final class VoidHunters extends ms {
               dma.e(0, 0, dma.field_g, dma.field_j, 0, var4_int);
             }
           }
-          if (!wna.field_e) {
+          if (!RoundResult.field_e) {
             this.field_F = null;
           }
-          if (wna.field_e &&
+          if (RoundResult.field_e &&
             li.field_i) {
             var4_int = dma.field_g;
             var5_intLifetime3 = dma.field_j;
@@ -2410,45 +2410,45 @@ public final class VoidHunters extends ms {
               var5_intLifetime3 = this.field_F.field_p;
               var4_int = this.field_F.field_q;
             }
-            var6Lifetime1 = (-var4_int + ip.field_p.width) / 2;
-            var7Lifetime1 = (-var5_intLifetime3 + ip.field_p.height) / 2;
-            if (vba.f((byte) -116) &&
+            var6Lifetime1 = (-var4_int + GetBombletSprayEnergyUsed.field_p.width) / 2;
+            var7Lifetime1 = (-var5_intLifetime3 + GetBombletSprayEnergyUsed.field_p.height) / 2;
+            if (SetReloadBarWidth.f((byte) -116) &&
               this.field_F != null) {
-              var6Lifetime1 = gua.e((byte) -24);
+              var6Lifetime1 = GetExplosionProjectileOndamageParticles.e((byte) -24);
               var7Lifetime1 = rg.b((byte) 102);
             }
-            var8_ref_kla = feb.a(og.field_r, true);
+            var8_ref_kla = feb.a(GetDebrisGroupColour.field_r, true);
             var8_ref_kla.a(var6Lifetime1, var6Lifetime1 + var4_int, var7Lifetime1, var7Lifetime1 + var5_intLifetime3, (byte) -76);
-            var7Lifetime1Lifetime1 = (-dma.field_j + ip.field_p.height) / 2;
-            var6Lifetime1Lifetime1 = (ip.field_p.width - dma.field_g) / 2;
-            og.field_r.SA(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, dma.field_g, dma.field_j, dma.field_i, 0, dma.field_g);
+            var7Lifetime1Lifetime1 = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
+            var6Lifetime1Lifetime1 = (GetBombletSprayEnergyUsed.field_p.width - dma.field_g) / 2;
+            GetDebrisGroupColour.field_r.SA(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, dma.field_g, dma.field_j, dma.field_i, 0, dma.field_g);
             var8_ref_kla.a(true);
           }
           if (di.field_l.a(-28208)) {
             var4_int = di.field_l.field_m.c(0);
-            var5 = isa.a(to.field_q, new String[]{Integer.toString(var4_int)}, 106);
+            var5 = SetReverbGain.a(GetGrapplingHookRopeBreakLength.field_q, new String[]{Integer.toString(var4_int)}, 106);
             var6Lifetime2 = 1;
-            var7Lifetime2 = (ip.field_p.width >> 1) - (tea.a(var6Lifetime2, var5, 13879) >> 1);
-            var8Lifetime1 = (ip.field_p.height >> 1) - (pqa.a(false, var6Lifetime2) >> 1);
+            var7Lifetime2 = (GetBombletSprayEnergyUsed.field_p.width >> 1) - (tea.a(var6Lifetime2, var5, 13879) >> 1);
+            var8Lifetime1 = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (GetPointDefenceLaserProjectiles.a(false, var6Lifetime2) >> 1);
             af.a((byte) -115, 200, fkb.a(var6Lifetime2, (byte) -121) * 8, var7Lifetime2 - 16, var8Lifetime1 - 5 * fkb.a(var6Lifetime2, (byte) -121), 32 + tea.a(var6Lifetime2, var5, 13879));
-            pm.a(var7Lifetime2, 1, var8Lifetime1, var5, var6Lifetime2, 16777215, (byte) -101);
+            SetSelfDestructPrepareToggleCooldown.a(var7Lifetime2, 1, var8Lifetime1, var5, var6Lifetime2, 16777215, (byte) -101);
           }
           stackIn_81_0 = 0;
-          stackIn_82_1 = (pk.field_o != -1) && (noa.field_q != -1);
+          stackIn_82_1 = (GetUseDetailLines.field_o != -1) && (GetTorpedoReload.field_q != -1);
           spa.a(stackIn_81_0, stackIn_82_1);
-          if (pqa.a(1024, 11284)) {
-            cka.a(1, "FPS: " + Integer.toString(ffa.field_a), 16777215, 20, 160, 4266);
+          if (GetPointDefenceLaserProjectiles.a(1024, 11284)) {
+            GetLagStandardDeviationOut.a(1, "FPS: " + Integer.toString(ffa.field_a), 16777215, 20, 160, 4266);
           }
           if (li.field_i) {
             try {
-              og.field_r.b(-122);
+              GetDebrisGroupColour.field_r.b(-122);
             } catch (jkb decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (jkb) (Object) decompiledCaughtException;
               var4.printStackTrace();
             }
           } else {
-            dh.a(var10, 0, 0, 0);
+            SetSniperCannonAimarc.a(var10, 0, 0, 0);
           }
           return;
         } catch (RuntimeException | Error decompiledUncheckedException) {

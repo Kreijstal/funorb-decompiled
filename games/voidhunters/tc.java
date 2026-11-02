@@ -21,7 +21,7 @@ final class tc {
           if (param0 != 8448) {
             field_b = (boolean[][]) null;
           }
-          if (param1 == et.field_c) {
+          if (param1 == MissionVariable.field_c) {
             stackIn_4_0 = 7681;
             return stackIn_4_0;
           }
@@ -29,7 +29,7 @@ final class tc {
             stackIn_7_0 = 8448;
             return stackIn_7_0;
           }
-          if (param1 == df.field_o) {
+          if (param1 == SetThrusterBindingMoveAndTurnHasOppositeMove.field_o) {
             stackIn_10_0 = 34165;
             return stackIn_10_0;
           }
@@ -52,15 +52,15 @@ final class tc {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2) {
         be var3 = new be();
-        var3.field_a = param1;
-        var3.field_b = 31 + param2;
-        rkb.a(0, var3, dpa.field_p, param0);
+        var3.value = param1;
+        var3.index = 31 + param2;
+        SetBuildViewAutozoomEndOnAction.a(0, var3, RequestNewestBlackboxRecording.field_p, param0);
     }
 
     public static void a(byte param0) {

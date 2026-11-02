@@ -53,16 +53,16 @@ final class pbb implements wwa {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static ha a(asb param0, int param1, int param2, d param3, java.awt.Canvas param4) {
+    final static GraphicsToolkit a(asb param0, int param1, int param2, d param3, java.awt.Canvas param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
         jp var8 = null;
         jaggl.OpenGL var9 = null;
-        ha stackIn_11_0 = null;
+        GraphicsToolkit stackIn_11_0 = null;
         jp stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -73,10 +73,10 @@ final class pbb implements wwa {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!sab.e((byte) 121)) {
+          if (!GetBots.e((byte) 121)) {
             throw new RuntimeException("");
           }
-          if (!gpb.a("jaggl", (byte) 114)) {
+          if (!RasterBuffer.a("jaggl", (byte) 114)) {
             throw new RuntimeException("");
           }
           var9 = new jaggl.OpenGL();
@@ -86,12 +86,12 @@ final class pbb implements wwa {
           }
           var8 = new jp(var9, param4, var6, param3, param0, param1);
           if (param2 != -1588388127) {
-            stackIn_11_0 = (ha) null;
+            stackIn_11_0 = (GraphicsToolkit) null;
             return stackIn_11_0;
           }
           var8.z(-31089);
           stackIn_13_0 = var8;
-          return (ha) ((Object) stackIn_13_0);
+          return (GraphicsToolkit) ((Object) stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -114,7 +114,7 @@ final class pbb implements wwa {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

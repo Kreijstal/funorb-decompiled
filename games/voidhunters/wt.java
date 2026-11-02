@@ -8,21 +8,21 @@ final class wt {
 
     final synchronized static long a(boolean param0) {
         long var1 = System.currentTimeMillis();
-        if (dfb.field_q > var1) {
-          eib.field_p = eib.field_p + (-var1 + dfb.field_q);
-          dfb.field_q = var1;
+        if (GetAllowShipSaving.field_q > var1) {
+          GetFighterVision.field_p = GetFighterVision.field_p + (-var1 + GetAllowShipSaving.field_q);
+          GetAllowShipSaving.field_q = var1;
           if (param0) {
             field_b = (String) null;
-            return var1 + eib.field_p;
+            return var1 + GetFighterVision.field_p;
           }
-          return var1 + eib.field_p;
+          return var1 + GetFighterVision.field_p;
         }
-        dfb.field_q = var1;
+        GetAllowShipSaving.field_q = var1;
         if (!param0) {
-          return var1 + eib.field_p;
+          return var1 + GetFighterVision.field_p;
         }
         field_b = (String) null;
-        return var1 + eib.field_p;
+        return var1 + GetFighterVision.field_p;
     }
 
     final static void a(int param0, int param1, String[] param2, String param3) {
@@ -37,18 +37,18 @@ final class wt {
         RuntimeException var4 = null;
         var5 = VoidHunters.field_G;
         try {
-          dn.field_r = gka.field_o;
+          SetCountermeasureLauncherAimspeed.field_r = SetSniperCannonFireForce.field_o;
           if (param0 == 255) {
-            stackIn_11_0 = !(iua.field_p >= 13);
+            stackIn_11_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
             cjb.field_b = rv.a(stackIn_11_0, param1 ^ -19341);
           } else {
             if (param0 < 100) {
-              cjb.field_b = tma.a(param0, param3, (byte) -124);
+              cjb.field_b = GetArmageddonLength.a(param0, param3, (byte) -124);
             } else {
               if (param0 <= 105) {
-                cjb.field_b = wm.a(param2, (byte) -122);
+                cjb.field_b = MissionCondition.a(param2, (byte) -122);
               } else {
-                cjb.field_b = tma.a(param0, param3, (byte) -124);
+                cjb.field_b = GetArmageddonLength.a(param0, param3, (byte) -124);
               }
             }
           }
@@ -73,7 +73,7 @@ final class wt {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

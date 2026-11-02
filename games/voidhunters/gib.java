@@ -18,11 +18,11 @@ final class gib {
     }
 
     final static void a(byte param0) {
-        klb.field_r.g((byte) -17);
+        GetLagStandardDeviationIn.field_r.g((byte) -17);
         if (null == vqa.field_i) {
-          vqa.field_i = new goa(klb.field_r, hab.field_j);
+          vqa.field_i = new goa(GetLagStandardDeviationIn.field_r, hab.field_j);
         }
-        klb.field_r.a(false, vqa.field_i);
+        GetLagStandardDeviationIn.field_r.a(false, vqa.field_i);
         if (param0 < -32) {
           return;
         }
@@ -50,7 +50,7 @@ final class gib {
             field_b = (String[]) null;
           }
           if (var2 == null) {
-            stackIn_6_0 = dua.field_p;
+            stackIn_6_0 = SetMassDriverFireForce.field_p;
             return stackIn_6_0;
           }
           var3 = pl.c((byte) 123);
@@ -61,7 +61,7 @@ final class gib {
               return stackIn_12_0;
             }
           }
-          stackIn_15_0 = dua.field_p;
+          stackIn_15_0 = SetMassDriverFireForce.field_p;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class gib {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

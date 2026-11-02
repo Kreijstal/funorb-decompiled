@@ -6,15 +6,15 @@ final class nfb implements dja {
 
     public final tv a(byte param0) {
         int var2 = 39 % ((-64 - param0) / 50);
-        return (tv) ((Object) new lja());
+        return (tv) ((Object) new GrappleLauncherBehaviour());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a(114, 88);
-          return (tv[]) ((Object) new lja[param1]);
+          return (tv[]) ((Object) new GrappleLauncherBehaviour[param1]);
         }
-        return (tv[]) ((Object) new lja[param1]);
+        return (tv[]) ((Object) new GrappleLauncherBehaviour[param1]);
     }
 
     public static void b(byte param0) {

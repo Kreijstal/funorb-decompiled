@@ -64,16 +64,16 @@ final class kab extends bob {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     kab(caa[] param0) {
         try {
-          this.field_d = loa.field_o;
+          this.field_d = SetShipToShipRamDamage.field_o;
           this.field_q = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

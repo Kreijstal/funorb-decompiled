@@ -79,7 +79,7 @@ final class asb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class asb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -260,7 +260,7 @@ final class asb {
           boolean decompiledFrameRemainder0 = true;
           var5 = 0;
           if (param2) {
-            decompiledFrameRemainder1 = !(ieb.field_o.length < 2);
+            decompiledFrameRemainder1 = !(SetMutatorVotes.field_o.length < 2);
             if (decompiledFrameRemainder1) {
               if (param2) {
                 stackIn_22_0 = (-1 != tsa.field_h) ? 1 : 0;
@@ -271,38 +271,38 @@ final class asb {
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
                 var7 = tsa.field_h;
-                for (var8_int = 0; var8_int < ce.field_o.length; var8_int++) {
-                  ce.field_o[var8_int] = (byte) 0;
+                for (var8_int = 0; var8_int < GetPlayerRepairTime.field_o.length; var8_int++) {
+                  GetPlayerRepairTime.field_o[var8_int] = (byte) 0;
                 }
               }
             }
           } else {
             for (var6 = 0; var6 < 5; var6++) {
               if (var4_int != 0 &&
-                0 != inb.field_q[0][var6 + 1].field_o &&
+                0 != SetReloadBarHeight.field_q[0][var6 + 1].field_o &&
                 param1.field_Cb != var6) {
                 var5 = 1;
                 param1.field_Cb = var6;
               }
-              stackIn_34_0 = inb.field_q[0][var6 + 1];
+              stackIn_34_0 = SetReloadBarHeight.field_q[0][var6 + 1];
               stackIn_35_1 = (var4_int != 0);
               stackIn_34_0.field_y = stackIn_35_1;
-              if (!ll.field_o &&
+              if (!GetGrapplingHooksDamageableBySourcePlayer.field_o &&
                 var6 == 3) {
-                inb.field_q[0][var6 + 1].field_y = false;
+                SetReloadBarHeight.field_q[0][var6 + 1].field_y = false;
               }
-              stackIn_41_0 = inb.field_q[0][1 + var6];
+              stackIn_41_0 = SetReloadBarHeight.field_q[0][1 + var6];
               stackIn_42_1 = (var6 == param1.field_Cb);
               stackIn_41_0.field_J = stackIn_42_1;
             }
-            if (inb.field_q[0][2].field_Q) {
+            if (SetReloadBarHeight.field_q[0][2].field_Q) {
               if (nmb.b(97)) {
-                lob.field_a = mla.field_r;
+                lob.field_a = SetAutoAfkTimeout.field_r;
               } else {
-                lob.field_a = isa.a(oba.field_p, new String[]{lqa.field_o.field_Vb}, 124);
+                lob.field_a = SetReverbGain.a(SetMissionVotes.field_p, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 124);
               }
             }
-            decompiledFrameRemainder1 = !(ieb.field_o.length < 2);
+            decompiledFrameRemainder1 = !(SetMutatorVotes.field_o.length < 2);
             if (decompiledFrameRemainder1) {
               if (param2) {
                 stackIn_56_0 = (-1 != tsa.field_h) ? 1 : 0;
@@ -313,19 +313,19 @@ final class asb {
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
                 var7 = tsa.field_h;
-                for (var8_int = 0; var8_int < ce.field_o.length; var8_int++) {
-                  ce.field_o[var8_int] = (byte) 0;
+                for (var8_int = 0; var8_int < GetPlayerRepairTime.field_o.length; var8_int++) {
+                  GetPlayerRepairTime.field_o[var8_int] = (byte) 0;
                 }
               }
             }
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            ce.field_o[var7 / 8] = (byte)knb.a((int) ce.field_o[var7 / 8], 1 << var7 % 8);
+            GetPlayerRepairTime.field_o[var7 / 8] = (byte)SetAngularForceDownshift.a((int) GetPlayerRepairTime.field_o[var7 / 8], 1 << var7 % 8);
           }
           if (decompiledFrameRemainder1) {
             stackIn_64_0 = (!param2) ? 0 : -1;
-            for (var7 = stackIn_64_0; var7 < ieb.field_o.length; var7++) {
+            for (var7 = stackIn_64_0; var7 < SetMutatorVotes.field_o.length; var7++) {
               if (var6 != 0) {
                 stackIn_72_0 = (tsa.field_h != var7) ? 1 : 0;
               } else {
@@ -333,9 +333,9 @@ final class asb {
               }
               var8_intLifetime1 = stackIn_72_0;
               if (var4_int != 0 &&
-                0 != inb.field_q[1][var7 + 1].field_o) {
+                0 != SetReloadBarHeight.field_q[1][var7 + 1].field_o) {
                 if (!param2) {
-                  var9 = ieb.field_o[var7];
+                  var9 = SetMutatorVotes.field_o[var7];
                   if (param1.field_Fb != var9) {
                     var5 = 1;
                     param1.field_Fb = var9;
@@ -343,47 +343,47 @@ final class asb {
                 } else {
                   if (var6 == 0) {
                     if (var7 == -1) {
-                      for (var9 = 0; ce.field_o.length > var9; var9++) {
-                        ce.field_o[var9] = (byte) 0;
+                      for (var9 = 0; GetPlayerRepairTime.field_o.length > var9; var9++) {
+                        GetPlayerRepairTime.field_o[var9] = (byte) 0;
                       }
                     } else {
-                      ce.field_o[var7 / 8] = (byte)mgb.a((int) ce.field_o[var7 / 8], 1 << dla.a(7, var7));
+                      GetPlayerRepairTime.field_o[var7 / 8] = (byte)SetFixedaim.a((int) GetPlayerRepairTime.field_o[var7 / 8], 1 << dla.a(7, var7));
                     }
                   }
                 }
               }
               if (param2) {
                 if (var7 == -1) {
-                  inb.field_q[1][var7 + 1].field_J = true;
-                  for (var9 = 0; var9 < ieb.field_o.length; var9++) {
-                    dupTemp$0 = inb.field_q[1][var7 + 1];
+                  SetReloadBarHeight.field_q[1][var7 + 1].field_J = true;
+                  for (var9 = 0; var9 < SetMutatorVotes.field_o.length; var9++) {
+                    dupTemp$0 = SetReloadBarHeight.field_q[1][var7 + 1];
                     stackIn_96_0 = dupTemp$0;
                     stackIn_96_1 = dupTemp$0.field_J;
-                    stackIn_97_2 = ((ce.field_o[var9 / 8] & 1 << (7 & var9)) == 0);
+                    stackIn_97_2 = ((GetPlayerRepairTime.field_o[var9 / 8] & 1 << (7 & var9)) == 0);
                     stackIn_96_0.field_J = stackIn_96_1 & stackIn_97_2;
                   }
                 } else {
-                  stackIn_99_0 = inb.field_q[1][1 + var7];
+                  stackIn_99_0 = SetReloadBarHeight.field_q[1][1 + var7];
                   stackIn_99_1 = -1;
-                  stackIn_99_2 = ce.field_o[var7 / 8] & 1 << (7 & var7);
+                  stackIn_99_2 = GetPlayerRepairTime.field_o[var7 / 8] & 1 << (7 & var7);
                   stackIn_99_3 = -1;
                   stackIn_102_1 = (stackIn_99_1 != (stackIn_99_2 ^ stackIn_99_3));
                   stackIn_99_0.field_J = stackIn_102_1;
                 }
               } else {
-                var9 = ieb.field_o[var7];
-                stackIn_89_0 = inb.field_q[1][1 + var7];
+                var9 = SetMutatorVotes.field_o[var7];
+                stackIn_89_0 = SetReloadBarHeight.field_q[1][1 + var7];
                 stackIn_90_1 = (param1.field_Fb == var9);
                 stackIn_89_0.field_J = stackIn_90_1;
               }
-              stackIn_106_0 = inb.field_q[1][1 + var7];
+              stackIn_106_0 = SetReloadBarHeight.field_q[1][1 + var7];
               stackIn_107_1 = (var4_int != 0) && (var8_intLifetime1 == 0);
               stackIn_106_0.field_y = stackIn_107_1;
             }
           }
           stackIn_111_0 = (!param2) ? 1 : 0;
           for (var6Lifetime1 = stackIn_111_0; var6Lifetime1 < 3; var6Lifetime1++) {
-            var29 = inb.field_q[2][var6Lifetime1];
+            var29 = SetReloadBarHeight.field_q[2][var6Lifetime1];
             if (var4_int != 0 &&
               var29.field_o != 0) {
               if (!param2) {
@@ -423,12 +423,12 @@ final class asb {
             asb.a(-90, (mm) null, true, (byte) -109);
           }
           if (param2 &&
-            nkb.field_r > 1) {
-            for (var6Lifetime2 = 0; var6Lifetime2 < nkb.field_r + 1; var6Lifetime2++) {
-              var30 = inb.field_q[3][var6Lifetime2];
+            GetDebrisThrowable.field_r > 1) {
+            for (var6Lifetime2 = 0; var6Lifetime2 < GetDebrisThrowable.field_r + 1; var6Lifetime2++) {
+              var30 = SetReloadBarHeight.field_q[3][var6Lifetime2];
               if (var4_int != 0 &&
                 0 != var30.field_o) {
-                imb.field_a = var6Lifetime2;
+                Hardpoint.field_a = var6Lifetime2;
               }
               if (var30.field_Q &&
                 var6Lifetime2 > 0) {
@@ -443,7 +443,7 @@ final class asb {
                 }
               }
               stackIn_158_0 = var30;
-              stackIn_159_1 = (var6Lifetime2 == imb.field_a);
+              stackIn_159_1 = (var6Lifetime2 == Hardpoint.field_a);
               stackIn_158_0.field_J = stackIn_159_1;
               stackIn_161_0 = var30;
               stackIn_162_1 = (var4_int != 0);
@@ -452,7 +452,7 @@ final class asb {
           }
           var6Lifetime3 = 0;
           for (var7 = 0; var7 < ocb.field_l; var7++) {
-            var31 = inb.field_q[4 + var7];
+            var31 = SetReloadBarHeight.field_q[4 + var7];
             var8_array = var31;
             stackIn_168_0 = (!param2) ? 0 : -1;
             for (var9 = stackIn_168_0; var9 < -1 + var31.length; var9++) {
@@ -464,28 +464,28 @@ final class asb {
               var15 = 0;
               if (var4_int != 0 &&
                 var9 >= 0) {
-                if (hia.field_o != null &&
-                  hia.field_o[var7] != null &&
-                  0 < (~kbb.field_p & hia.field_o[var7][var9])) {
+                if (SetBombletSprayPushMultiplier.field_o != null &&
+                  SetBombletSprayPushMultiplier.field_o[var7] != null &&
+                  0 < (~kbb.field_p & SetBombletSprayPushMultiplier.field_o[var7][var9])) {
                   var14 = 1;
-                  var15 = wsb.a(hia.field_o[var7][var9] & ~kbb.field_p, 1302374146);
+                  var15 = wsb.a(SetBombletSprayPushMultiplier.field_o[var7][var9] & ~kbb.field_p, 1302374146);
                 }
-                if (null != qcb.field_o &&
-                  qcb.field_o[var7] != null &&
-                  0 >= hcb.field_o &&
-                  qcb.field_o[var7][var9]) {
+                if (null != SetGrapplingHookMaxExtension8Force.field_o &&
+                  SetGrapplingHookMaxExtension8Force.field_o[var7] != null &&
+                  0 >= GetDebrisCarryOver.field_o &&
+                  SetGrapplingHookMaxExtension8Force.field_o[var7][var9]) {
                   var10 = 1;
                 }
-                if (null != crb.field_w &&
-                  null != crb.field_w[var7]) {
-                  var16 = crb.field_w[var7][var9];
+                if (null != Asteroid.field_w &&
+                  null != Asteroid.field_w[var7]) {
+                  var16 = Asteroid.field_w[var7][var9];
                   if (var16 > 0 &&
-                    tg.field_q < var16) {
+                    SetShieldsDirectionalArcParticleSpeedDownshift.field_q < var16) {
                     var12 = 1;
                   }
                   if (var16 != 0 &&
-                    !ufa.field_o &&
-                    hcb.field_o <= 0) {
+                    !GetOndamageParticleLife.field_o &&
+                    GetDebrisCarryOver.field_o <= 0) {
                     var10 = 1;
                   }
                 }
@@ -503,22 +503,22 @@ final class asb {
                   stackIn_202_0 = 0;
                 }
                 var13 = stackIn_202_0;
-                if (tab.field_p != null &&
-                  tab.field_p[var7] != null) {
-                  var16Lifetime2 = tab.field_p[var7][var9];
+                if (GetPhasedEnergyBeamRandomness.field_p != null &&
+                  GetPhasedEnergyBeamRandomness.field_p[var7] != null) {
+                  var16Lifetime2 = GetPhasedEnergyBeamRandomness.field_p[var7][var9];
                   if (var16Lifetime2 > 0 &&
                     var16Lifetime2 > cla.field_b) {
                     var11 = 1;
                   }
                   if (0 != var16Lifetime2 &&
-                    !ufa.field_o &&
-                    0 >= hcb.field_o) {
+                    !GetOndamageParticleLife.field_o &&
+                    0 >= GetDebrisCarryOver.field_o) {
                     var10 = 1;
                   }
                 }
               }
-              if (go.field_p >= 2 &&
-                si.field_o[12]) {
+              if (SetAngularVelocitySustain.field_p >= 2 &&
+                SetMachineGunEnergyUsed.field_o[12]) {
                 var12 = 0;
                 var10 = 0;
                 var14 = 0;
@@ -540,7 +540,7 @@ final class asb {
                 var9 >= 0 &&
                 null != ncb.field_a && (!param2 ||
                 !ii.field_h)) {
-                nr.field_p = false;
+                GetMissionVotes.field_p = false;
                 hrb.field_b = false;
                 if (tib.field_i == null) {
                   tib.field_i = new byte[ocb.field_l];
@@ -550,8 +550,8 @@ final class asb {
                   mia.field_a[var17_int] = false;
                 }
                 bea.a(var7, var9, param1, -1, 93, param2, 0, -1);
-                if (2 <= go.field_p &&
-                  si.field_o[12]) {
+                if (2 <= SetAngularVelocitySustain.field_p &&
+                  SetMachineGunEnergyUsed.field_o[12]) {
                   hrb.field_b = true;
                 }
                 if (!hrb.field_b) {
@@ -570,16 +570,16 @@ final class asb {
                 } else {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime3; var6Lifetime3 - (-var31.length + 1) > var18; var18++) {
-                      nkb.field_p[var18 / 8] = (byte)dla.a((int) nkb.field_p[var18 / 8], ~(1 << dla.a(7, var18)));
+                      GetDebrisThrowable.field_p[var18 / 8] = (byte)dla.a((int) GetDebrisThrowable.field_p[var18 / 8], ~(1 << dla.a(7, var18)));
                     }
                   } else {
-                    nkb.field_p[(var9 + var6Lifetime3) / 8] = (byte)mgb.a((int) nkb.field_p[(var9 + var6Lifetime3) / 8], 1 << dla.a(var6Lifetime3 + var9, 7));
+                    GetDebrisThrowable.field_p[(var9 + var6Lifetime3) / 8] = (byte)SetFixedaim.a((int) GetDebrisThrowable.field_p[(var9 + var6Lifetime3) / 8], 1 << dla.a(var6Lifetime3 + var9, 7));
                   }
                 }
               }
               if (param2 &&
                 var16Lifetime1 != 0) {
-                nkb.field_p[(var6Lifetime3 + var9) / 8] = (byte)dla.a((int) nkb.field_p[(var6Lifetime3 + var9) / 8], ~(1 << dla.a(var9 + var6Lifetime3, 7)));
+                GetDebrisThrowable.field_p[(var6Lifetime3 + var9) / 8] = (byte)dla.a((int) GetDebrisThrowable.field_p[(var6Lifetime3 + var9) / 8], ~(1 << dla.a(var9 + var6Lifetime3, 7)));
               }
               if (var9 >= 0 &&
                 var17.field_Q) {
@@ -592,11 +592,11 @@ final class asb {
                     var18_ref = hqb.field_k[var7][var9];
                   }
                 }
-                if (awa.field_o == null) {
+                if (SetShipAimLines.field_o == null) {
                   var19 = null;
                 } else {
-                  if (null != awa.field_o[var7]) {
-                    var19 = awa.field_o[var7][var9];
+                  if (null != SetShipAimLines.field_o[var7]) {
+                    var19 = SetShipAimLines.field_o[var7][var9];
                   } else {
                     var19 = null;
                   }
@@ -608,7 +608,7 @@ final class asb {
                 }
                 var21 = null;
                 if (var13 != 0) {
-                  var21 = k.field_q;
+                  var21 = GetMessageMaxage.field_q;
                   var22 = var21;
                   var25 = var22;
                   var22 = var25;
@@ -619,7 +619,7 @@ final class asb {
                     var21 = bpa.field_d;
                   } else {
                     if (var11 != 0) {
-                      var22_int = tab.field_p[var7][var9] - cla.field_b;
+                      var22_int = GetPhasedEnergyBeamRandomness.field_p[var7][var9] - cla.field_b;
                       if (var22_int == 1) {
                         var21 = wia.field_b;
                         var32 = var21;
@@ -627,11 +627,11 @@ final class asb {
                         var32Lifetime1 = var21;
                         var21 = var32Lifetime1;
                       } else {
-                        var21 = isa.a(nra.field_a, new String[]{Integer.toString(var22_int)}, 105);
+                        var21 = SetReverbGain.a(nra.field_a, new String[]{Integer.toString(var22_int)}, 105);
                       }
                     }
                     if (var12 != 0) {
-                      var32_ref = isa.a(gh.field_p, new String[]{Integer.toString(tg.field_q), Integer.toString(crb.field_w[var7][var9])}, 110);
+                      var32_ref = SetReverbGain.a(SetPlayerRepairTime.field_p, new String[]{Integer.toString(SetShieldsDirectionalArcParticleSpeedDownshift.field_q), Integer.toString(Asteroid.field_w[var7][var9])}, 110);
                       var21 = var32_ref;
                       var21 = var32_ref;
                       if (var21 == null) {
@@ -660,7 +660,7 @@ final class asb {
                   !hrb.field_b) {
                   var22 = null;
                   var23 = 0;
-                  if (nr.field_p) {
+                  if (GetMissionVotes.field_p) {
                     var22 = "</col>" + uda.field_a + "<col=A00000>";
                     var25Lifetime1 = var22;
                     var22 = var25Lifetime1;
@@ -670,7 +670,7 @@ final class asb {
                   }
                   for (var24 = 0; var7 > var24; var24++) {
                     if (mia.field_a[var24]) {
-                      var25_ref = "</col>" + hva.field_c[var24] + "<col=A00000>";
+                      var25_ref = "</col>" + ClientException.field_c[var24] + "<col=A00000>";
                       var22 = var25_ref;
                       var21 = var22;
                       var22 = var25_ref;
@@ -685,14 +685,14 @@ final class asb {
                     }
                   }
                   if (var23 == 0) {
-                    var21 = isa.a(fra.field_c, new String[]{(String) (var22)}, 78);
+                    var21 = SetReverbGain.a(fra.field_c, new String[]{(String) (var22)}, 78);
                   } else {
                     var21 = nna.field_F + (String) (var22);
                   }
                 }
                 if (var21 != null) {
                   var21 = "<col=A00000>" + (String) (var21);
-                  var33 = jd.a((String) (var21), "<br>", 0, "<br><col=A00000>");
+                  var33 = SetLagVariant.a((String) (var21), "<br>", 0, "<br><col=A00000>");
                   if (var20 != null) {
                     var20 = (String) (var20) + "<br>" + var33;
                   } else {
@@ -727,13 +727,13 @@ final class asb {
                   while (var28 < var6Lifetime3 - (-var31.length + 1)) {
                     stackIn_326_0 = var17;
                     stackIn_326_1 = var17.field_J;
-                    stackIn_327_2 = (0 == (nkb.field_p[var28 / 8] & 1 << (var28 & 7)));
+                    stackIn_327_2 = (0 == (GetDebrisThrowable.field_p[var28 / 8] & 1 << (var28 & 7)));
                     stackIn_326_0.field_J = stackIn_326_1 & stackIn_327_2;
                     var28++;
                   }
                 } else {
                   stackIn_320_0 = var17;
-                  stackIn_321_1 = ((nkb.field_p[(var6Lifetime3 + var9) / 8] & 1 << (var9 + var6Lifetime3 & 7)) != 0);
+                  stackIn_321_1 = ((GetDebrisThrowable.field_p[(var6Lifetime3 + var9) / 8] & 1 << (var9 + var6Lifetime3 & 7)) != 0);
                   stackIn_320_0.field_J = stackIn_321_1;
                 }
               }
@@ -760,7 +760,7 @@ final class asb {
           } else {
             stackIn_348_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_347_0), ((StringBuilder) (Object) stackIn_347_1).append(stackIn_348_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_347_0), ((StringBuilder) (Object) stackIn_347_1).append(stackIn_348_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -802,7 +802,7 @@ final class asb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -873,7 +873,7 @@ final class asb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -910,7 +910,7 @@ final class asb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -965,7 +965,7 @@ final class asb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -1088,7 +1088,7 @@ final class asb {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1178,7 +1178,7 @@ final class asb {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -1236,7 +1236,7 @@ final class asb {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -1353,12 +1353,12 @@ final class asb {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        ds var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        ds var29 = null;
+        PacketBuffer var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        ds var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -1408,15 +1408,15 @@ final class asb {
             var35 = ffb.a(true, this.field_i[param2], true);
             var25 = var35;
             var9 = var25;
-            var26 = new ds(var35);
-            var26.a(5, param3, var26.field_h.length, false);
+            var26 = new PacketBuffer(var35);
+            var26.a(5, param3, var26.payload.length, false);
             decompiledFrameRemainder0 = false;
           }
           else {
             var9 = ffb.a(false, this.field_i[param2], true);
           }
           try {
-            var36 = rob.a(param1, var9);
+            var36 = GetWeaponParticleSpeedDownshift.a(param1, var9);
             var27 = var36;
             var23 = var27;
             var43 = var23;
@@ -1426,7 +1426,7 @@ final class asb {
             stackIn_36_0 = var11_ref_RuntimeException;
             stackIn_36_1 = new StringBuilder();
             stackIn_37_2 = (param3 != null);
-            throw rta.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(psb.a(var9, var9.length, 0)).append(" ").append(psb.a(var9, -2 + var9.length, 0)).append(" ").append(this.field_g.field_d[param2]).append(" ").append(this.field_g.field_k).toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(psb.a(var9, var9.length, 0)).append(" ").append(psb.a(var9, -2 + var9.length, 0)).append(" ").append(this.field_g.field_d[param2]).append(" ").append(this.field_g.field_k).toString());
           }
           if (this.field_e) {
             this.field_i[param2] = null;
@@ -1437,10 +1437,10 @@ final class asb {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - var12 * var5_int * 4;
-              var32 = new ds(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
               var15 = 0;
-              var32.field_e = var11;
+              var32.position = var11;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
@@ -1460,7 +1460,7 @@ final class asb {
                 return true;
               }
               var44 = new byte[var14];
-              var32.field_e = var11;
+              var32.position = var11;
               var14Lifetime1 = 0;
               var17 = 0;
               for (var18 = 0; var12 > var18; var18++) {
@@ -1485,8 +1485,8 @@ final class asb {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * (var12 * var5_int);
-              var29 = new ds(var43);
-              var29.field_e = var11;
+              var29 = new PacketBuffer(var43);
+              var29.position = var11;
               var38 = new int[var5_int];
               var30 = var38;
               var14_ref_int__ = var30;
@@ -1505,7 +1505,7 @@ final class asb {
                 var15_ref_byte____[var16] = array$1;
                 var38[var16] = 0;
               }
-              var29.field_e = var11;
+              var29.position = var11;
               var16 = 0;
               for (var17 = 0; var17 < var12; var17++) {
                 var18 = 0;
@@ -1552,7 +1552,7 @@ final class asb {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(')').toString());
         }
     }
 
@@ -1567,7 +1567,7 @@ final class asb {
           this.field_h = param2;
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "asb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "asb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

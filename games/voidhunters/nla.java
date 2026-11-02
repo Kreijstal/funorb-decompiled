@@ -38,7 +38,7 @@ public final class nla extends pf {
         if (param1 == cs.field_a) {
           return 2;
         }
-        if (jd.field_o == param1) {
+        if (SetLagVariant.field_o == param1) {
           return 1;
         }
         throw new IllegalArgumentException();
@@ -67,13 +67,13 @@ public final class nla extends pf {
         if (param0 == vf.field_a) {
           return 2;
         }
-        if (wda.field_o == param0) {
+        if (LoadSettings.field_o == param0) {
           return 3;
         }
-        if (gcb.field_q == param0) {
+        if (SetUseExtraBackground.field_q == param0) {
           return 4;
         }
-        if (ql.field_p != param0) {
+        if (GetUseTrails.field_p != param0) {
           return 0;
         }
         return 256;
@@ -138,7 +138,7 @@ public final class nla extends pf {
           if (jagdx.hea.a(param4.a(param3, var14), (byte) 118)) {
             return false;
           }
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param1 >= 0) {
               if (param1 != 1) {
                 var8 = 0 + param1;
@@ -152,7 +152,7 @@ public final class nla extends pf {
                         param4.CheckDeviceMultiSampleType(param3, param5, field_Pc[var10], true, var8) == 0)) {
                         var6 = field_Pc[var11];
                         var7 = field_Xc[var10];
-                        break L2;
+                        break scanLoop1;
                       }
                     }
                   }
@@ -220,13 +220,13 @@ public final class nla extends pf {
 
     private final static int a(boolean param0, aba param1) {
         Integer var3;
-        if (param1 == et.field_c) {
+        if (param1 == MissionVariable.field_c) {
           return 2;
         }
         if (asa.field_a == param1) {
           return 4;
         }
-        if (param1 == df.field_o) {
+        if (param1 == SetThrusterBindingMoveAndTurnHasOppositeMove.field_o) {
           return 26;
         }
         if (param1 == je.field_c) {
@@ -328,7 +328,7 @@ public final class nla extends pf {
           return;
         }
         if (null == this.field_Tc &&
-          fsa.field_o != this.field_A[this.field_ab]) {
+          SetGrappleDebris.field_o != this.field_A[this.field_ab]) {
           if (vf.field_a != this.field_A[this.field_ab]) {
             this.field_Mc.SetTransform(this.field_ab + 16, this.field_Eb[this.field_ab].b(field_Bc, (byte) 114));
           } else {
@@ -482,10 +482,10 @@ public final class nla extends pf {
         if (param0 == tu.field_b) {
           return 2;
         }
-        if (param0 == era.field_o) {
+        if (param0 == GetFightersPerPlayerMaximum.field_o) {
           return 3;
         }
-        if (mwa.field_p == param0) {
+        if (SetThrusterParticleLife.field_p == param0) {
           return 1;
         }
         if (di.field_i == param0) {
@@ -494,7 +494,7 @@ public final class nla extends pf {
         if (bk.field_v == param0) {
           return 6;
         }
-        if (param0 != fu.field_o) {
+        if (param0 != GetUseTriFill.field_o) {
           throw new IllegalArgumentException("");
         }
         return 5;
@@ -763,7 +763,7 @@ public final class nla extends pf {
         super.n(116);
     }
 
-    final static ha createToolkit(java.awt.Canvas param0, d param1, asb param2, Integer param3) {
+    final static GraphicsToolkit createToolkit(java.awt.Canvas param0, d param1, asb param2, Integer param3) {
         nla stackIn_41_0 = null;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -848,7 +848,7 @@ public final class nla extends pf {
           var4 = var14;
           var14.z(-31089);
           stackIn_41_0 = var14;
-          return (ha) ((Object) stackIn_41_0);
+          return (GraphicsToolkit) ((Object) stackIn_41_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5 = (RuntimeException) (Object) decompiledCaughtException;
@@ -886,7 +886,7 @@ public final class nla extends pf {
         if (param0 != -39) {
           this.ya();
         }
-        if (this.field_fc == to.field_o) {
+        if (this.field_fc == GetGrapplingHookRopeBreakLength.field_o) {
           this.field_Mc.SetRenderState(19, 5);
           this.field_Mc.SetRenderState(20, 6);
         } else {
@@ -904,22 +904,22 @@ public final class nla extends pf {
 
     final static int a(kb param0, mj param1, int param2) {
         if (param1 == mj.field_f) {
-          if (ep.field_o == param0) {
+          if (SetGrapplingHookFireForce.field_o == param0) {
             return 22;
           }
           if (param0 == qua.field_d) {
             return 21;
           }
-          if (param0 == nw.field_p) {
+          if (param0 == GetMinimapWidth.field_p) {
             return 28;
           }
-          if (param0 == gka.field_p) {
+          if (param0 == SetSniperCannonFireForce.field_p) {
             return 50;
           }
           if (param0 == wh.field_o) {
             return 51;
           }
-          if (param0 == qf.field_o) {
+          if (param0 == GetReverbGain.field_o) {
             return 77;
           }
         }
@@ -983,10 +983,10 @@ public final class nla extends pf {
 
     private final static int a(slb param0, byte param1) {
         int var2;
-        if (param0 == qcb.field_q) {
+        if (param0 == SetGrapplingHookMaxExtension8Force.field_q) {
           return 2;
         }
-        if (param0 == tma.field_q) {
+        if (param0 == GetArmageddonLength.field_q) {
           return 0;
         }
         if (pja.field_l == param0) {
@@ -1140,7 +1140,7 @@ public final class nla extends pf {
           var3 = 65536;
         } else {
           if (rpa.field_c != param1) {
-            if (param1 == tma.field_p) {
+            if (param1 == GetArmageddonLength.field_p) {
               var3 = 196608;
             }
           } else {

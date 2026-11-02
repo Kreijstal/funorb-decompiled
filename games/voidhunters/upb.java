@@ -16,9 +16,9 @@ final class upb implements dja {
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           upb.b(105);
-          return (tv[]) ((Object) new cqb[param1]);
+          return (tv[]) ((Object) new VariableCondition[param1]);
         }
-        return (tv[]) ((Object) new cqb[param1]);
+        return (tv[]) ((Object) new VariableCondition[param1]);
     }
 
     final static int[] a(int param0) {
@@ -26,25 +26,25 @@ final class upb implements dja {
         int[] var1 = null;
         int[] var2Lifetime1;
         int[] var1Lifetime1;
-        if (!mgb.field_o) {
+        if (!SetFixedaim.field_o) {
           return null;
         }
         if (param0 >= 97) {
-          var2 = wba.field_o;
+          var2 = GetBombletSprayPushMultiplier.field_o;
           var1 = var2;
-          wba.field_o = null;
+          GetBombletSprayPushMultiplier.field_o = null;
           return var2;
         }
         upb.a(-101);
-        var2Lifetime1 = wba.field_o;
+        var2Lifetime1 = GetBombletSprayPushMultiplier.field_o;
         var1Lifetime1 = var2Lifetime1;
-        wba.field_o = null;
+        GetBombletSprayPushMultiplier.field_o = null;
         return var2Lifetime1;
     }
 
     public final tv a(byte param0) {
         int var2 = -45 / ((param0 + 64) / 50);
-        return (tv) ((Object) new cqb());
+        return (tv) ((Object) new VariableCondition());
     }
 
     static {

@@ -96,8 +96,8 @@ final class fta extends uda {
           return;
         }
         if (this.field_f) {
-          this.field_d.a(0, qcb.field_q, 7);
-          this.field_d.a(0, (byte) -60, qcb.field_q);
+          this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+          this.field_d.a(0, (byte) -60, SetGrapplingHookMaxExtension8Force.field_q);
           this.field_f = false;
         } else {
           this.field_d.a(param2, -106);
@@ -145,9 +145,9 @@ final class fta extends uda {
           return;
         }
         this.field_d.a(asa.field_a, true, asa.field_a);
-        this.field_d.a(0, qcb.field_q, param0 - 2536);
+        this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, param0 - 2536);
         this.field_d.a(2, pea.field_d, 7);
-        this.field_d.a(0, (byte) -106, qcb.field_q);
+        this.field_d.a(0, (byte) -106, SetGrapplingHookMaxExtension8Force.field_q);
         this.field_d.g(0, -71);
         if (!this.field_f) {
           if (null != this.field_h) {
@@ -156,8 +156,8 @@ final class fta extends uda {
           }
           return;
         }
-        this.field_d.a(0, qcb.field_q, 7);
-        this.field_d.a(0, (byte) -65, qcb.field_q);
+        this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
+        this.field_d.a(0, (byte) -65, SetGrapplingHookMaxExtension8Force.field_q);
         this.field_f = false;
         if (null != this.field_h) {
           this.field_m.a(0, (jagdx.IDirect3DVertexShader) null);
@@ -229,18 +229,18 @@ final class fta extends uda {
         this.field_d.g(1, -109);
         this.field_d.a(this.field_o, -110);
         if (param0 == 5) {
-          this.field_d.a(et.field_c, true, df.field_o);
+          this.field_d.a(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
           this.field_d.a(0, pea.field_d, 7);
-          this.field_d.a(true, -21115, false, qcb.field_q, 2);
+          this.field_d.a(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
           this.field_d.a(0, (byte) -108, pja.field_l);
           this.field_d.g(0, -72);
           this.d((byte) -46);
           return;
         }
         this.field_l = (jagdx.IDirect3DVertexShader) null;
-        this.field_d.a(et.field_c, true, df.field_o);
+        this.field_d.a(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
         this.field_d.a(0, pea.field_d, 7);
-        this.field_d.a(true, -21115, false, qcb.field_q, 2);
+        this.field_d.a(true, -21115, false, SetGrapplingHookMaxExtension8Force.field_q, 2);
         this.field_d.a(0, (byte) -108, pja.field_l);
         this.field_d.g(0, -72);
         this.d((byte) -46);

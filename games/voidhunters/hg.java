@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hg implements ntb {
-    static aib field_b;
+final class hg implements DiffableState {
+    static AsteroidField field_b;
     int field_d;
     static int[] field_a;
     static int field_c;
@@ -45,7 +45,7 @@ final class hg implements ntb {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -89,7 +89,7 @@ final class hg implements ntb {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class hg implements ntb {
           }
           if (param1.field_f != 0 ||
             param1.field_h != 0) {
-            for (var2_int = 0; var2_int < ou.field_q; var2_int++) {
+            for (var2_int = 0; var2_int < SetRepairModePower.field_q; var2_int++) {
               var3 = nrb.field_b[var2_int];
               if (var3.field_a == 2 &&
                 param1.field_f == var3.field_f &&
@@ -119,10 +119,10 @@ final class hg implements ntb {
             }
           }
           if (param1.field_m != null) {
-            itb.field_p = param1.field_i;
+            SetPhasedEnergyBeamPulseFadetime.field_p = param1.field_i;
             rea.field_d = param1.field_n;
             abb.field_a = param1.field_a;
-            wrb.field_p = param1.field_m;
+            GetSniperCannonAimspeed.field_p = param1.field_m;
           }
           fpb.a(param1, 0);
           if (param0 <= 105) {
@@ -139,7 +139,7 @@ final class hg implements ntb {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class hg implements ntb {
           }
           param0.a(-632, this.field_d, 32);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -178,7 +178,7 @@ final class hg implements ntb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -189,11 +189,11 @@ final class hg implements ntb {
         try {
           this.field_d = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "hg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         hg var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -202,17 +202,17 @@ final class hg implements ntb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = (hg) (param0);
-          if (param1 > -19) {
+          var3 = (hg) (other);
+          if (obfuscationGuard > -19) {
             return;
           }
           var4 = 0;
           if (this.field_d != var3.field_d) {
             var4 = 1;
-            iva.a(-6940, "int playerid has changed. before=" + var3.field_d + ", now=" + this.field_d);
+            GetSniperCannonAimarc.a(-6940, "int playerid has changed. before=" + var3.field_d + ", now=" + this.field_d);
           }
           if (var4 != 0) {
-            tfb.a((byte) -123, "This instance of PlayerLeave has changed");
+            SetDebrisGrabbingRange.a((byte) -123, "This instance of PlayerLeave has changed");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -220,12 +220,12 @@ final class hg implements ntb {
           var3_ref = decompiledCaughtException;
           stackIn_11_0 = var3_ref;
           stackIn_11_1 = new StringBuilder().append("hg.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

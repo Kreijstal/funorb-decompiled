@@ -4,7 +4,7 @@
 final class kla {
     private sja field_e;
     private int[] field_g;
-    private ha field_f;
+    private GraphicsToolkit field_f;
     private aja field_c;
     static dfa field_d;
     private sja field_a;
@@ -22,7 +22,7 @@ final class kla {
           }
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kla.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kla.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class kla {
             this.field_e = (sja) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kla.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kla.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -149,13 +149,13 @@ final class kla {
         field_d = null;
     }
 
-    kla(ha param0) {
+    kla(GraphicsToolkit param0) {
         this.field_g = new int[4];
         this.field_c = null;
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

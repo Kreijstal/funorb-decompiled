@@ -11,7 +11,7 @@ final class cr {
 
     private final static int a(int param0, int param1) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; wob.a(var2, param1, 1) > param0; var2--) {
+        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; SetGrapplingHookRopeChangeRate.a(var2, param1, 1) > param0; var2--) {
         }
         return var2;
     }
@@ -63,7 +63,7 @@ final class cr {
           var2 = 0;
           var3_int = fca.c(5) + 1;
           while (var2 < this.field_e) {
-            var4_int = fca.c(ieb.a(this.field_e - var2, 81));
+            var4_int = fca.c(SetMutatorVotes.a(this.field_e - var2, 81));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;

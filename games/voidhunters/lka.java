@@ -7,14 +7,14 @@ final class lka implements dja {
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a((byte) 43);
-          return (tv[]) ((Object) new imb[param1]);
+          return (tv[]) ((Object) new Hardpoint[param1]);
         }
-        return (tv[]) ((Object) new imb[param1]);
+        return (tv[]) ((Object) new Hardpoint[param1]);
     }
 
     public final tv a(byte param0) {
         int var2 = -113 % ((-64 - param0) / 50);
-        return (tv) ((Object) new imb());
+        return (tv) ((Object) new Hardpoint());
     }
 
     public static void a(int param0) {

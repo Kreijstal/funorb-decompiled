@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd extends ksa {
+final class sd extends IntrusiveNode {
     byte[] field_j;
     byte[] field_g;
     short[] field_e;
@@ -84,7 +84,7 @@ final class sd extends ksa {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class sd extends ksa {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        ds var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         cja var40 = null;
         byte[] var41 = null;
@@ -235,8 +235,8 @@ final class sd extends ksa {
           this.field_j = new byte[128];
           this.field_k = new int[128];
           this.field_h = new cja[128];
-          var38 = new ds(param0);
-          for (var3 = 0; var38.field_h[var3 + var38.field_e] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
@@ -245,10 +245,10 @@ final class sd extends ksa {
             var4[var5] = var38.d((byte) -114);
           }
           var3++;
-          var38.field_e = var38.field_e + 1;
-          var5Lifetime1 = var38.field_e;
-          var38.field_e = var38.field_e + var3;
-          for (var6 = 0; var38.field_h[var38.field_e + var6] != 0; var6++) {
+          var38.position = var38.position + 1;
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.payload[var38.position + var6] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
@@ -256,11 +256,11 @@ final class sd extends ksa {
           for (var8 = 0; var8 < var6; var8++) {
             var7[var8] = var38.d((byte) -114);
           }
-          var38.field_e = var38.field_e + 1;
+          var38.position = var38.position + 1;
           var6++;
-          var8Lifetime1 = var38.field_e;
-          var38.field_e = var38.field_e + var6;
-          for (var9 = 0; var38.field_h[var38.field_e + var9] != 0; var9++) {
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.payload[var38.position + var9] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
@@ -269,7 +269,7 @@ final class sd extends ksa {
             var10[var11_int] = var38.d((byte) -114);
           }
           var9++;
-          var38.field_e = var38.field_e + 1;
+          var38.position = var38.position + 1;
           var53 = new byte[var9];
           var39 = var53;
           var11 = var39;
@@ -328,7 +328,7 @@ final class sd extends ksa {
           var59 = stackIn_42_0;
           var47 = var59;
           var16 = var47;
-          for (var17 = 0; var38.field_h[var38.field_e + var17] != 0; var17++) {
+          for (var17 = 0; var38.payload[var38.position + var17] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
@@ -337,7 +337,7 @@ final class sd extends ksa {
             var18[var19] = var38.d((byte) -114);
           }
           var17++;
-          var38.field_e = var38.field_e + 1;
+          var38.position = var38.position + 1;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
             var19Lifetime1 = var19Lifetime1 + var38.e((byte) -124);
@@ -372,7 +372,7 @@ final class sd extends ksa {
               if (var20Lifetime3 == 0) {
                 incrementValue$5 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = -1 + var38.field_h[incrementValue$5];
+                var23Lifetime1 = -1 + var38.payload[incrementValue$5];
                 if (var21Lifetime1 < var55.length) {
                   var20Lifetime3 = var4[var21Lifetime1++];
                 } else {
@@ -391,7 +391,7 @@ final class sd extends ksa {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = var38.field_h[incrementValue$3] + 16 << 2;
+                var24Lifetime1 = var38.payload[incrementValue$3] + 16 << 2;
                 if (var21Lifetime2 >= var56.length) {
                   var20Lifetime4 = -1;
                 } else {
@@ -499,7 +499,7 @@ final class sd extends ksa {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = (-var27Lifetime6Lifetime1 + var30) * var28_int + (-var27Lifetime6Lifetime1 + var30) / 2;
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = lb.a(var32, var30 - var27Lifetime6Lifetime1, false);
+                var34 = SetBombletSprayRandomness.a(var32, var30 - var27Lifetime6Lifetime1, false);
                 var32 = var32 + (-var28_int + var31);
                 this.field_f[var33] = (byte)(32 + this.field_f[var33] * var34 >> 6);
               }
@@ -539,7 +539,7 @@ final class sd extends ksa {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
-                var34Lifetime1 = lb.a(var32Lifetime1, -var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, false);
+                var34Lifetime1 = SetBombletSprayRandomness.a(var32Lifetime1, -var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, false);
                 var35 = var34Lifetime1 + (this.field_g[var37] & 255);
                 if (var35 < 0) {
                   var35 = 0;
@@ -609,7 +609,7 @@ final class sd extends ksa {
           } else {
             stackIn_205_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_204_1).append(stackIn_205_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_204_0), ((StringBuilder) (Object) stackIn_204_1).append(stackIn_205_2).append(')').toString());
         }
     }
 

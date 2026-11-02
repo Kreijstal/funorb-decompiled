@@ -6,21 +6,21 @@ final class lga {
     }
 
     final static void a(boolean param0, int param1) {
-        crb.a(3, param0);
+        Asteroid.a(3, param0);
         if (param1 != -24055) {
           lga.a((byte) 71, -57);
-          ao.a((byte) 91, param0);
+          SetSpecialOrderBoxWidth.a((byte) 91, param0);
           return;
         }
-        ao.a((byte) 91, param0);
+        SetSpecialOrderBoxWidth.a((byte) 91, param0);
     }
 
     final static boolean a(int param0, int param1, int param2) {
         if (param0 == 14216) {
-          return (uoa.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & rfb.a((byte) -49, param2, param1);
+          return (IncrementVariableAction.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & SetDebrisThrowable.a((byte) -49, param2, param1);
         }
         lga.a(-124, 11, -116);
-        return (uoa.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & rfb.a((byte) -49, param2, param1);
+        return (IncrementVariableAction.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & SetDebrisThrowable.a((byte) -49, param2, param1);
     }
 
     final static int a(byte param0, int param1) {
@@ -28,22 +28,22 @@ final class lga {
           return 2147483647;
         }
         if (param1 == 9) {
-          return aea.field_b * oq.field_l * 2;
+          return aea.field_b * Particle.field_l * 2;
         }
         if (11 == param1) {
-          return 1 + oq.field_l * (wha.field_a + 300);
+          return 1 + Particle.field_l * (wha.field_a + 300);
         }
         if (param1 == 3) {
-          return 120 * oq.field_l;
+          return 120 * Particle.field_l;
         }
         if (param1 == 12) {
-          return oq.field_l * 120;
+          return Particle.field_l * 120;
         }
         if (param0 == -2) {
-          return aea.field_b * oq.field_l;
+          return aea.field_b * Particle.field_l;
         }
         lga.a((byte) 36, 1);
-        return aea.field_b * oq.field_l;
+        return aea.field_b * Particle.field_l;
     }
 
     static {

@@ -18,7 +18,7 @@ final class fpb extends mfb {
         if (param0 != 0) {
           this.b(true);
         }
-        return sbb.field_p;
+        return GetPointDefenceLaserAimspeed.field_p;
     }
 
     final static void a(pgb param0, int param1) {
@@ -40,23 +40,23 @@ final class fpb extends mfb {
         var5 = VoidHunters.field_G;
         try {
           for (var2_int = param1; var2_int < 3; var2_int++) {
-            dca.field_q[var2_int] = 0;
+            GetPlayerRepairAmount.field_q[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < ou.field_q; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < SetRepairModePower.field_q; var2_intLifetime1++) {
             if (param0.field_a == nrb.field_b[var2_intLifetime1].field_a) {
               dupTemp$3 = nrb.field_b[var2_intLifetime1].a(param1 ^ 1);
-              dca.field_q[dupTemp$3] = dca.field_q[dupTemp$3] + 1;
+              GetPlayerRepairAmount.field_q[dupTemp$3] = GetPlayerRepairAmount.field_q[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param0.a(1);
-          dca.field_q[dupTemp$0] = dca.field_q[dupTemp$0] + 1;
+          GetPlayerRepairAmount.field_q[dupTemp$0] = GetPlayerRepairAmount.field_q[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; ou.field_q > var3; var3++) {
+          for (var3 = 0; SetRepairModePower.field_q > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (nrb.field_b[var3].field_a == param0.field_a) {
               var4 = nrb.field_b[var3].a(1);
-              if (dca.field_q[var4] > hab.field_k) {
-                dca.field_q[var4] = dca.field_q[var4] - 1;
+              if (GetPlayerRepairAmount.field_q[var4] > hab.field_k) {
+                GetPlayerRepairAmount.field_q[var4] = GetPlayerRepairAmount.field_q[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
@@ -66,9 +66,9 @@ final class fpb extends mfb {
               nrb.field_b[incrementValue$2] = nrb.field_b[var3];
             }
           }
-          ou.field_q = var2_intLifetime2;
-          fieldTemp$1 = ou.field_q;
-          ou.field_q = ou.field_q + 1;
+          SetRepairModePower.field_q = var2_intLifetime2;
+          fieldTemp$1 = SetRepairModePower.field_q;
+          SetRepairModePower.field_q = SetRepairModePower.field_q + 1;
           nrb.field_b[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -81,7 +81,7 @@ final class fpb extends mfb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -103,8 +103,8 @@ final class fpb extends mfb {
         if (!param0) {
           field_d = (byte[][]) null;
         }
-        if (dw.field_c == dn.field_r) {
-          return mqb.field_x;
+        if (dw.field_c == SetCountermeasureLauncherAimspeed.field_r) {
+          return GrapplingHook.field_x;
         }
         return ht.field_h;
     }
@@ -134,7 +134,7 @@ final class fpb extends mfb {
         if (param0) {
           field_d = (byte[][]) null;
         }
-        return fd.field_p;
+        return SetSalvoRepairTimeMultiplier.field_p;
     }
 
     fpb() {
@@ -158,12 +158,12 @@ final class fpb extends mfb {
         if (param0 != 2769) {
           field_c = (String) null;
         }
-        return ls.field_p;
+        return GetMissionTerrainNebulaProbability.field_p;
     }
 
     final int a(byte param0) {
         int var2 = 43 / ((param0 + 48) / 43);
-        return oq.field_x;
+        return Particle.field_x;
     }
 
     static {

@@ -36,7 +36,7 @@ final class iwa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "iwa.B(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "iwa.B(" + param0 + ',' + param1 + ')');
         }
     }
 

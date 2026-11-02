@@ -14,14 +14,14 @@ final class upa implements dja {
 
     public final tv a(byte param0) {
         int var2 = 29 / ((-64 - param0) / 50);
-        return (tv) ((Object) new ml());
+        return (tv) ((Object) new ShipComponent());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           return (tv[]) null;
         }
-        return (tv[]) ((Object) new ml[param1]);
+        return (tv[]) ((Object) new ShipComponent[param1]);
     }
 
     static {

@@ -23,15 +23,15 @@ final class pia extends oda implements oo {
     final void a(int param0, int param1, int param2, shb param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_w.field_x = this.field_v.a(param2 ^ 782443887).a((byte) 35) == lea.field_o ? true : false;
+          this.field_w.field_x = this.field_v.a(param2 ^ 782443887).a((byte) 35) == GetShipPersistence.field_o ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pia.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pia.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     pia(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (wwa) null);
-        this.field_v = new ita(new io(10000536), acb.field_p, 0, 0, 140, 25);
+        this.field_v = new ita(new io(10000536), SetMissilesHitSourceTeam.field_p, 0, 0, 140, 25);
         this.field_v.a(99, new wta());
         this.field_w = new htb(tn.field_b, (sba) (this));
         this.field_u = new shb[]{(shb) ((Object) this.field_v), (shb) ((Object) this.field_w)};
@@ -41,7 +41,7 @@ final class pia extends oda implements oo {
 
     final void b(int param0, int param1, int param2, int param3) {
         super.b(param0, param1, 80, param3);
-        web.field_o.c(pea.field_c, 4 + (param0 + this.field_g), 4 + param3 + (this.field_r + web.field_o.field_k), 16777215, -1);
+        SetTorpedoProjectileLife.field_o.c(pea.field_c, 4 + (param0 + this.field_g), 4 + param3 + (this.field_r + SetTorpedoProjectileLife.field_o.field_k), 16777215, -1);
         if (param2 < 47) {
           htb var6 = (htb) null;
           this.a(46, -102, -40, (htb) null, -107);
@@ -52,13 +52,13 @@ final class pia extends oda implements oo {
         if (param0 != 11) {
           this.field_v = (ita) null;
         }
-        if (this.field_v.a(param0 ^ -782444209).a((byte) 35) != lea.field_o) {
+        if (this.field_v.a(param0 ^ -782444209).a((byte) 35) != GetShipPersistence.field_o) {
           return;
         }
         try {
-          seb.b(0, this.field_v.e(-5), this.field_v.c(true), this.field_v.f(3476));
+          SetArmageddonWarning.b(0, this.field_v.e(-5), this.field_v.c(true), this.field_v.f(3476));
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pia.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pia.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

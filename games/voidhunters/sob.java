@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sob extends ha {
+final class sob extends GraphicsToolkit {
     private int field_E;
     private int field_z;
     private gnb field_t;
     private boolean field_B;
     private int field_o;
-    private gpb field_D;
+    private RasterBuffer field_D;
     private boolean field_w;
     private java.awt.Canvas field_l;
     int field_i;
@@ -1094,7 +1094,7 @@ final class sob extends ha {
         var7 = 0;
         var8 = param1;
         var9 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var9 < param4) {
             for (var10 = 0; var10 < param3; var10++) {
               incrementValue$4 = var8;
@@ -1103,7 +1103,7 @@ final class sob extends ha {
               if (var11 != 0 &&
                 var11 != 255) {
                 var7 = 1;
-                break L1;
+                break scanLoop1;
               }
             }
             var9++;
@@ -1397,8 +1397,8 @@ final class sob extends ha {
     }
 
     private final void b(java.awt.Canvas param0, int param1, int param2) {
-        gpb var4;
-        var4 = (gpb) (this.field_t.a((long)param0.hashCode(), 119));
+        RasterBuffer var4;
+        var4 = (RasterBuffer) (this.field_t.a((long)param0.hashCode(), 119));
         if (var4 != null) {
           if (var4.field_e == param1 &&
             var4.field_d == param2) {
@@ -1406,7 +1406,7 @@ final class sob extends ha {
           }
           this.a(param0, param1, param2);
         } else {
-          var4 = rba.a(param1, true, param0, param2);
+          var4 = ResourceNode.a(param1, true, param0, param2);
           this.field_t.a((long)param0.hashCode(), var4, (byte) -124);
         }
     }
@@ -1565,13 +1565,13 @@ final class sob extends ha {
     }
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
-        gpb var7 = null;
+        RasterBuffer var7 = null;
         java.awt.Dimension var5 = null;
         float[] array$0 = null;
-        gpb var6 = (gpb) (this.field_t.a((long)param0.hashCode(), 97));
+        RasterBuffer var6 = (RasterBuffer) (this.field_t.a((long)param0.hashCode(), 97));
         if (var6 != null) {
           var6.b(-3846);
-          var7 = rba.a(param1, true, param0, param2);
+          var7 = ResourceNode.a(param1, true, param0, param2);
           this.field_t.a((long)param0.hashCode(), var7, (byte) -122);
           if (this.field_l == param0 &&
             this.field_c == null) {
@@ -1830,7 +1830,7 @@ final class sob extends ha {
 
     private final void a(java.awt.Canvas param0) {
         float[] array$1 = null;
-        gpb var2;
+        RasterBuffer var2;
         java.awt.Dimension var3;
         if (param0 == null) {
           this.field_l = null;
@@ -1844,7 +1844,7 @@ final class sob extends ha {
             this.y();
           }
         } else {
-          var2 = (gpb) (this.field_t.a((long)param0.hashCode(), 125));
+          var2 = (RasterBuffer) (this.field_t.a((long)param0.hashCode(), 125));
           if (var2 != null) {
             this.field_l = param0;
             var3 = param0.getSize();
@@ -2203,7 +2203,7 @@ final class sob extends ha {
 
     final void o() {
         if (this.field_B) {
-          uhb.a((byte) -101, false, true);
+          SetDebrisFoundInPairs.a((byte) -101, false, true);
           this.field_B = false;
         }
         this.field_D = null;

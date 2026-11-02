@@ -35,9 +35,9 @@ final class sna extends le {
           for (var9 = 0; hob.field_d > var9; var9++) {
             var10 = var30[var9] * 255 >> 12 & 255;
             var11 = this.field_i * var31[var9] >> 12;
-            var12 = jmb.field_q[var10] * var11 >> 12;
-            var13 = qta.field_o[var10] * var11 >> 12;
-            var14 = var9 + (var12 >> 12) & gbb.field_q;
+            var12 = GetBombletSprayProjectiles.field_q[var10] * var11 >> 12;
+            var13 = GetDebrisPartitioned.field_o[var10] * var11 >> 12;
+            var14 = var9 + (var12 >> 12) & SetMassDriverEnergyUsed.field_q;
             var15 = wf.field_d & param1 + (var13 >> 12);
             var32 = this.a((byte) 82, 0, var15);
             var6[var9] = var32[0][var14];
@@ -78,7 +78,7 @@ final class sna extends le {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -145,7 +145,7 @@ final class sna extends le {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -155,9 +155,9 @@ final class sna extends le {
           ifa.field_g[8] = ut.field_a;
         } else {
           if (vqa.field_g.field_m.field_f != 0) {
-            ifa.field_g[8] = ema.field_q;
+            ifa.field_g[8] = SetShipDirectionArrow.field_q;
           } else {
-            ifa.field_g[8] = ds.field_f;
+            ifa.field_g[8] = PacketBuffer.field_f;
           }
         }
         if (param0 != -19057) {
@@ -170,7 +170,7 @@ final class sna extends le {
         this.field_i = 32768;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -204,7 +204,7 @@ final class sna extends le {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -228,9 +228,9 @@ final class sna extends le {
           for (var6 = 0; var6 < hob.field_d; var6++) {
             var7 = (4084 & var25[var6]) >> 4;
             var8 = var26[var6] * this.field_i >> 12;
-            var9 = var8 * jmb.field_q[var7] >> 12;
-            var10 = var8 * qta.field_o[var7] >> 12;
-            var11 = gbb.field_q & (var9 >> 12) + var6;
+            var9 = var8 * GetBombletSprayProjectiles.field_q[var7] >> 12;
+            var10 = var8 * GetDebrisPartitioned.field_o[var7] >> 12;
+            var11 = SetMassDriverEnergyUsed.field_q & (var9 >> 12) + var6;
             var12 = wf.field_d & (var10 >> 12) + param0;
             var27 = this.a(0, var12, 255);
             var15[var6] = var27[var11];
@@ -243,7 +243,7 @@ final class sna extends le {
     }
 
     final void c(byte param0) {
-        taa.e((byte) 124);
+        GetTrapMouse.e((byte) 124);
         if (param0 >= -35) {
           this.field_i = 33;
         }

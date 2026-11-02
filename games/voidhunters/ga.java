@@ -16,8 +16,8 @@ final class ga extends fnb {
     private byte[] field_d;
     private jtb field_r;
     private boolean field_o;
-    private ij field_v;
-    private ij field_i;
+    private IntrusiveDeque field_v;
+    private IntrusiveDeque field_i;
     private int field_h;
     private boolean field_q;
     private long field_e;
@@ -118,15 +118,15 @@ final class ga extends fnb {
         jtb discarded$0 = null;
         int var2_int;
         jtb var2;
-        ksa var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        ksa var6;
-        ksa var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
         jtb var2Lifetime1;
-        ksa var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder2 = true;
@@ -150,18 +150,18 @@ final class ga extends fnb {
               }
               var3 = this.field_i.a((byte) 80);
             }
-            L15: while (true) {
+            scanLoop1: while (true) {
               if (this.field_t.field_j.length > this.field_h) {
                 if (0 != this.field_t.field_j[this.field_h]) {
                   if (this.field_f.field_e >= 250) {
                     var2_int = 0;
-                    break L15;
+                    break scanLoop1;
                   }
                   if (this.field_d[this.field_h] == 0) {
                     discarded$2 = this.a(1, -26489, this.field_h);
                   }
                   if (this.field_d[this.field_h] == 0) {
-                    var6 = new ksa();
+                    var6 = new IntrusiveNode();
                     var6.field_b = (long)this.field_h;
                     var2_int = 0;
                     this.field_i.b(-10258, var6);
@@ -194,18 +194,18 @@ final class ga extends fnb {
                 }
                 var3Lifetime1 = this.field_i.a((byte) 121);
               }
-              L5: while (true) {
+              scanLoop2: while (true) {
                 if (this.field_h < this.field_t.field_j.length) {
                   if (this.field_t.field_j[this.field_h] != 0) {
                     if (this.field_g.b((byte) 32)) {
                       var2_intLifetime1 = 0;
-                      break L5;
+                      break scanLoop2;
                     }
                     if (this.field_d[this.field_h] != 1) {
                       discarded$0 = this.a(2, -26489, this.field_h);
                     }
                     if (1 != this.field_d[this.field_h]) {
-                      var7 = new ksa();
+                      var7 = new IntrusiveNode();
                       var7.field_b = (long)this.field_h;
                       this.field_i.b(-10258, var7);
                       var2_intLifetime1 = 0;
@@ -292,7 +292,7 @@ final class ga extends fnb {
         }
         this.field_q = true;
         if (this.field_i == null) {
-          this.field_i = new ij();
+          this.field_i = new IntrusiveDeque();
         }
     }
 
@@ -312,7 +312,7 @@ final class ga extends fnb {
     final void c(int param0) {
         jtb discarded$0 = null;
         jtb discarded$1 = null;
-        ksa var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = VoidHunters.field_G;
@@ -416,7 +416,7 @@ final class ga extends fnb {
               var4 = this.field_g.a(true, -21, param2, (byte) 2, this.field_p);
             }
           }
-          this.field_u.a((long)param2, (ksa) (var4), (byte) -119);
+          this.field_u.a((long)param2, (IntrusiveNode) (var4), (byte) -119);
         }
         if (((jtb) (var4)).field_n) {
           return null;
@@ -428,16 +428,16 @@ final class ga extends fnb {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              gkb.field_p.reset();
-              gkb.field_p.update(var5, 0, var18.length - 2);
-              var6_int = (int)gkb.field_p.getValue();
+              SetPointDefenceLaserProjectiles.field_p.reset();
+              SetPointDefenceLaserProjectiles.field_p.update(var5, 0, var18.length - 2);
+              var6_int = (int)SetPointDefenceLaserProjectiles.field_p.getValue();
               if (this.field_t.field_d[param2] != var6_int) {
                 throw new RuntimeException();
               }
               if (this.field_t.field_c != null &&
                 this.field_t.field_c[param2] != null) {
                 var29 = this.field_t.field_c[param2];
-                var30 = fqb.a((byte) 25, -2 + var18.length, var18, 0);
+                var30 = SetMissileLauncherProjectiles.a((byte) 25, -2 + var18.length, var18, 0);
                 var11 = 0;
                 var9 = var11;
                 while (64 > var11) {
@@ -475,23 +475,23 @@ final class ga extends fnb {
               return null;
             }
             var4 = this.field_g.a(true, -21, param2, (byte) 2, this.field_p);
-            this.field_u.a((long)param2, (ksa) (var4), (byte) -127);
+            this.field_u.a((long)param2, (IntrusiveNode) (var4), (byte) -127);
             return null;
           }
         }
         try {
           if (var5 != null &&
             2 < var18.length) {
-            gkb.field_p.reset();
-            gkb.field_p.update(var5, 0, var18.length - 2);
-            var6_int = (int)gkb.field_p.getValue();
+            SetPointDefenceLaserProjectiles.field_p.reset();
+            SetPointDefenceLaserProjectiles.field_p.update(var5, 0, var18.length - 2);
+            var6_int = (int)SetPointDefenceLaserProjectiles.field_p.getValue();
             if (this.field_t.field_d[param2] != var6_int) {
               throw new RuntimeException();
             }
             if (this.field_t.field_c != null &&
               this.field_t.field_c[param2] != null) {
               var28 = this.field_t.field_c[param2];
-              var27 = fqb.a((byte) 25, -2 + var18.length, var18, 0);
+              var27 = SetMissileLauncherProjectiles.a((byte) 25, -2 + var18.length, var18, 0);
               for (var9 = 0; var9 < 64; var9++) {
                 if (var27[var9] != var28[var9]) {
                   throw new RuntimeException();
@@ -513,7 +513,7 @@ final class ga extends fnb {
               return null;
             }
             var4 = this.field_g.a(true, -21, param2, (byte) 2, this.field_p);
-            this.field_u.a((long)param2, (ksa) (var4), (byte) -118);
+            this.field_u.a((long)param2, (IntrusiveNode) (var4), (byte) -118);
           }
           return null;
         }
@@ -538,7 +538,7 @@ final class ga extends fnb {
           dma.e(param2, param3, param5, param4, param6, param0);
         } else {
           if (ne.field_v) {
-            og.field_r.a(param5, (byte) 120, param6 | param0 << 24, param4, param3, param2);
+            GetDebrisGroupColour.field_r.a(param5, (byte) 120, param6 | param0 << 24, param4, param3, param2);
           }
         }
         if (param1) {
@@ -563,7 +563,7 @@ final class ga extends fnb {
         RuntimeException var10 = null;
         this.field_u = new gnb(16);
         this.field_h = 0;
-        this.field_v = new ij();
+        this.field_v = new IntrusiveDeque();
         this.field_e = 0L;
         try {
           this.field_p = param0;
@@ -572,7 +572,7 @@ final class ga extends fnb {
             this.field_o = false;
           } else {
             this.field_o = true;
-            this.field_i = new ij();
+            this.field_i = new IntrusiveDeque();
           }
           this.field_j = param2;
           stackIn_7_1 = (param8);
@@ -620,7 +620,7 @@ final class ga extends fnb {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

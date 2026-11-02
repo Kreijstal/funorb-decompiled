@@ -42,7 +42,7 @@ final class rga {
         byte[] var3Lifetime1;
         if (this.field_e == null) {
           if (ti.field_c == null) {
-            var23 = dbb.a(4.0f, 0.6000000238418579f, (byte) 97, 8, new ko(419684), 16, 128, 128, 0.5f, 4.0f, 16.0f);
+            var23 = GetFighterRepairTime.a(4.0f, 0.6000000238418579f, (byte) 97, 8, new ko(419684), 16, 128, 128, 0.5f, 4.0f, 16.0f);
             var20 = var23;
             var19 = var20;
             var3 = var19;
@@ -129,19 +129,19 @@ final class rga {
           if (!this.field_b) {
             this.field_a = new eb[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
-              var15 = ppb.a(dv.field_b, var2_int * 32768, true, 32768);
+              var15 = ppb.a(PlayerVote.field_b, var2_int * 32768, true, 32768);
               this.field_a[var2_int] = this.field_h.a(128, wh.field_o, 0, 128, true, var15);
             }
             this.field_c = new eb[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
-              var16 = ppb.a(wpa.field_q, 32768 * var2_intLifetime1, true, 32768);
+              var16 = ppb.a(GetPointDefenceLaserRandomness.field_q, 32768 * var2_intLifetime1, true, 32768);
               this.field_c[var2_intLifetime1] = this.field_h.a(128, wh.field_o, 0, 128, true, var16);
             }
             return;
           }
-          var17 = ffb.a(false, dv.field_b, true);
+          var17 = ffb.a(false, PlayerVote.field_b, true);
           this.field_d = this.field_h.a(128, 16, var17, wh.field_o, 128, -16539);
-          var18 = ffb.a(false, wpa.field_q, true);
+          var18 = ffb.a(false, GetPointDefenceLaserRandomness.field_q, true);
           this.field_h.a(128, 16, var18, wh.field_o, 128, -16539);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -154,7 +154,7 @@ final class rga {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -163,7 +163,7 @@ final class rga {
           return;
         }
         String var4 = (String) null;
-        vt.a(param0, -90, param1, (String) null);
+        SetSniperCannonAimspeed.a(param0, -90, param1, (String) null);
     }
 
     static {

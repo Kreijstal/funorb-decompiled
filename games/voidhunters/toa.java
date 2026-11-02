@@ -47,7 +47,7 @@ final class toa {
             toa.a(80, -3, -102);
           }
           for (var13_int = 0; param2 > var13_int; var13_int++) {
-            nq.a(param7, param10, param1, param0, param11, var13_int, param9, param6, param2, param3, param8, param12, (byte) 126, param4);
+            GetMissilesTopSpeed.a(param7, param10, param1, param0, param11, var13_int, param9, param6, param2, param3, param8, param12, (byte) 126, param4);
             param8 = param8 + param0 * param11;
           }
           return;
@@ -67,7 +67,7 @@ final class toa {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

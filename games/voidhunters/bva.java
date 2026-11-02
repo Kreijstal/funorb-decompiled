@@ -22,7 +22,7 @@ final class bva extends vmb {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -78,7 +78,7 @@ final class rj {
         }
     }
 
-    final static void a(ha param0, int[] param1, int param2, int param3, int param4) {
+    final static void a(GraphicsToolkit param0, int[] param1, int param2, int param3, int param4) {
         int[] var6 = (int[]) null;
         int[] var5 = (int[]) null;
         rj.a(param0, param1, param2, param3, param4, (int[]) null, (int[]) null);
@@ -196,7 +196,7 @@ final class rj {
         field_c = 0;
     }
 
-    final static void a(ha param0, int[] param1, int param2) {
+    final static void a(GraphicsToolkit param0, int[] param1, int param2) {
         rj.a(param0, param1, 0, param1.length, param2, (int[]) null, (int[]) null);
     }
 
@@ -272,7 +272,7 @@ final class rj {
         }
     }
 
-    private final static void a(ha param0, int[] param1, int param2, int param3, int param4, int[] param5, int[] param6) {
+    private final static void a(GraphicsToolkit param0, int[] param1, int param2, int param3, int param4, int[] param5, int[] param6) {
         int var8;
         int var9;
         int var10;

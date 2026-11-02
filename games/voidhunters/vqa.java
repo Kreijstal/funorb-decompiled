@@ -22,8 +22,8 @@ final class vqa extends eca {
           if (this.field_h instanceof lca) {
             var3 = ((lca) ((Object) this.field_h)).a(-782444220);
             if (var3 != null &&
-              var3.a((byte) 35) != lea.field_o) {
-              stackIn_6_0 = cca.field_o;
+              var3.a((byte) 35) != GetShipPersistence.field_o) {
+              stackIn_6_0 = SetArmageddonLength.field_o;
               return stackIn_6_0;
             }
           }
@@ -31,9 +31,9 @@ final class vqa extends eca {
             field_k = -96;
           }
           if (param0.equals(this.field_h.field_j)) {
-            stackIn_12_0 = lea.field_o;
+            stackIn_12_0 = GetShipPersistence.field_o;
           } else {
-            stackIn_12_0 = cca.field_o;
+            stackIn_12_0 = SetArmageddonLength.field_o;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -46,7 +46,7 @@ final class vqa extends eca {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -65,7 +65,7 @@ final class vqa extends eca {
           if (this.field_h instanceof lca) {
             var3 = ((lca) ((Object) this.field_h)).a(-782444220);
             if (var3 != null) {
-              if (var3.a((byte) 35) == lea.field_o &&
+              if (var3.a((byte) 35) == GetShipPersistence.field_o &&
                 !param0.equals(this.field_h.field_j)) {
                 stackIn_6_0 = lmb.field_a;
                 return stackIn_6_0;
@@ -94,7 +94,7 @@ final class vqa extends eca {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class vqa extends eca {
         try {
           this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "vqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -68,7 +68,7 @@ final class qab {
           this.field_c = param0;
           this.field_e = this.field_c.length();
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

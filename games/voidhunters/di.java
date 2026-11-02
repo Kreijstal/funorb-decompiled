@@ -41,7 +41,7 @@ final class di extends le {
             cua.a(var4, 0, var7, 0, hob.field_d);
           } else {
             for (var5 = 0; hob.field_d > var5; var5++) {
-              var3[var5] = var4[gbb.field_q - var5];
+              var3[var5] = var4[SetMassDriverEnergyUsed.field_q - var5];
             }
           }
         }
@@ -51,7 +51,7 @@ final class di extends le {
         return var3;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_8_1 = false;
@@ -93,7 +93,7 @@ final class di extends le {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -160,9 +160,9 @@ final class di extends le {
             var14 = 0;
             var11 = var14;
             while (hob.field_d > var14) {
-              var8[var14] = var5[-var14 + gbb.field_q];
-              var9[var14] = var6[gbb.field_q - var14];
-              var10[var14] = var7[gbb.field_q - var14];
+              var8[var14] = var5[-var14 + SetMassDriverEnergyUsed.field_q];
+              var9[var14] = var6[SetMassDriverEnergyUsed.field_q - var14];
+              var10[var14] = var7[SetMassDriverEnergyUsed.field_q - var14];
               var14++;
             }
           }
@@ -231,7 +231,7 @@ final class di extends le {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 

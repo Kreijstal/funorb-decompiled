@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ms extends wi {
+abstract class ms extends GameApplet {
     private boolean field_x;
     private int field_r;
     static int[] field_A;
     private int field_w;
-    static ij field_y;
+    static IntrusiveDeque field_y;
     private int field_v;
     private boolean field_z;
     private long field_t;
@@ -21,7 +21,7 @@ abstract class ms extends wi {
           this.e((byte) 92);
         }
         String var2 = mea.a(true);
-        wva.a(vpa.b((byte) -119), (byte) 56, var2);
+        wva.a(MissionList.b((byte) -119), (byte) 56, var2);
     }
 
     final int f(int param0) {
@@ -32,37 +32,37 @@ abstract class ms extends wi {
         if (this.field_c) {
           return -1;
         }
-        if (!nb.b(true)) {
+        if (!SetWeaponProjectileSpeedMultiply.b(true)) {
           return -1;
         }
-        if (mlb.field_o) {
+        if (GetSpinningBladeAimarc.field_o) {
           return -1;
         }
-        var2 = ju.a(this.field_x, this.field_r, wnb.a(125), (byte) 13, true, fpb.d(true));
+        var2 = GetPhasedEnergyBeamPulseFadetime.a(this.field_x, this.field_r, LoadBlackboxRecording.a(125), (byte) 13, true, fpb.d(true));
         if (var2 == -1) {
           return -1;
         }
         if (var2 == 0) {
-          if (qmb.field_q != 11) {
+          if (GetSpinningBladeAimspeed.field_q != 11) {
             return var2;
           }
-          if (0 != dmb.field_a) {
+          if (0 != MapClearanceArea.field_a) {
             return var2;
           }
           uk.b((byte) 50);
           return var2;
         }
         if (var2 != 1) {
-          if (!tsb.field_q) {
+          if (!SetAudioRangeCutoff.field_q) {
             this.a("reconnect", 0);
           }
           km.f((byte) -119);
-          aj.a(dgb.field_b, (byte) 72, var2);
-          mlb.field_o = true;
+          SetMessageFadetime.a(dgb.field_b, (byte) 72, var2);
+          GetSpinningBladeAimarc.field_o = true;
           ska.field_p = wt.a(false) + 15000L;
         } else {
-          if (qmb.field_q == 11 &&
-            0 == dmb.field_a) {
+          if (GetSpinningBladeAimspeed.field_q == 11 &&
+            0 == MapClearanceArea.field_a) {
             uk.b((byte) 50);
           }
         }
@@ -86,8 +86,8 @@ abstract class ms extends wi {
             if (!lm.a(true)) {
               wkb.b((byte) 6);
             } else {
-              if (qmb.field_q != 0) {
-                ala.a(tcb.field_o, param0 ^ 15877);
+              if (GetSpinningBladeAimspeed.field_q != 0) {
+                GetLagOut.a(GetPointDefenceLaserPulsetime.field_o, param0 ^ 15877);
               } else {
                 discarded$28 = this.a((byte) -96, false, false);
               }
@@ -128,79 +128,79 @@ abstract class ms extends wi {
           }
           efb.field_b.d(param1 + 3899);
         }
-        vl.e((byte) -101);
+        GetMassDriverFireForce.e((byte) -101);
         ts.a(1001);
         if (param1 != 9) {
           this.field_w = 76;
         }
-        if (!fu.a(45) &&
-          qmb.field_q != 11) {
+        if (!GetUseTriFill.a(45) &&
+          GetSpinningBladeAimspeed.field_q != 11) {
           csb.a(true);
         }
-        if (null != kkb.field_o) {
-          tcb.field_o = kkb.field_o.b(1);
+        if (null != GetWaitForPlayers.field_o) {
+          GetPointDefenceLaserPulsetime.field_o = GetWaitForPlayers.field_o.b(1);
         }
         if (wh.g(-126)) {
-          var3 = 1200 * wjb.e(204);
+          var3 = 1200 * SetGrapplingHookRopeBreakLength.e(204);
           if (this.field_s ||
-            !(var3 >= ria.a(32)) &&
+            !(var3 >= SetPedrosRepairModeSwitchtime.a(32)) &&
             !(gia.d(-2) <= var3)) {
             this.field_s = false;
             ifb.l(-123);
             km.f((byte) -119);
-            aj.a(jc.field_o, (byte) 105, 2);
-            vi.a(-10560);
-            mlb.field_o = true;
+            SetMessageFadetime.a(GetSpinningBladeSpindamageMultiplier.field_o, (byte) 105, 2);
+            GetSniperCannonFiringLeeway.a(-10560);
+            GetSpinningBladeAimarc.field_o = true;
             ska.field_p = 15000L + wt.a(false);
           }
         }
-        if (-1 == dmb.field_a ||
-          dmb.field_a == 0) {
-          stackIn_23_0 = (-1 != dmb.field_a) ? 0 : 1;
+        if (-1 == MapClearanceArea.field_a ||
+          MapClearanceArea.field_a == 0) {
+          stackIn_23_0 = (-1 != MapClearanceArea.field_a) ? 0 : 1;
           var3Lifetime1 = stackIn_23_0;
-          dmb.field_a = ll.a(-124);
+          MapClearanceArea.field_a = GetGrapplingHooksDamageableBySourcePlayer.a(-124);
           if (var3Lifetime1 != 0 &&
-            0 == dmb.field_a &&
-            qmb.field_q == 11 &&
-            !nb.b(true)) {
+            0 == MapClearanceArea.field_a &&
+            GetSpinningBladeAimspeed.field_q == 11 &&
+            !SetWeaponProjectileSpeedMultiply.b(true)) {
             uk.b((byte) 123);
           }
-          if (dmb.field_a != -1 &&
-            dmb.field_a != 0) {
+          if (MapClearanceArea.field_a != -1 &&
+            MapClearanceArea.field_a != 0) {
             ska.field_p = wt.a(false) + 15000L;
           }
         }
-        if (-1 != dmb.field_a &&
-          dmb.field_a != 0) {
+        if (-1 != MapClearanceArea.field_a &&
+          MapClearanceArea.field_a != 0) {
           if (10 <= ef.field_z) {
-            if (10 <= qmb.field_q) {
+            if (10 <= GetSpinningBladeAimspeed.field_q) {
               km.f((byte) -119);
-              if (dmb.field_a == 3) {
-                aj.a(lba.field_o, (byte) 84, 256);
+              if (MapClearanceArea.field_a == 3) {
+                SetMessageFadetime.a(GetUseFilledPolygons.field_o, (byte) 84, 256);
               } else {
-                if (dmb.field_a != 4) {
-                  if (dmb.field_a != 2) {
-                    if (5 != dmb.field_a) {
-                      aj.a(ca.field_o, (byte) 82, 256);
+                if (MapClearanceArea.field_a != 4) {
+                  if (MapClearanceArea.field_a != 2) {
+                    if (5 != MapClearanceArea.field_a) {
+                      SetMessageFadetime.a(SetDebugLineLife.field_o, (byte) 82, 256);
                     } else {
-                      aj.a(wna.field_a, (byte) 121, 5);
+                      SetMessageFadetime.a(RoundResult.field_a, (byte) 121, 5);
                     }
                   } else {
-                    aj.a(una.field_f, (byte) 110, 256);
+                    SetMessageFadetime.a(MissionControl.field_f, (byte) 110, 256);
                   }
                 } else {
-                  aj.a(cna.field_wb, (byte) 17, 256);
+                  SetMessageFadetime.a(cna.field_wb, (byte) 17, 256);
                 }
               }
-              mlb.field_o = true;
+              GetSpinningBladeAimarc.field_o = true;
             }
           } else {
-            if (dmb.field_a == 3) {
+            if (MapClearanceArea.field_a == 3) {
               this.a("js5crc", 0);
             } else {
-              if (dmb.field_a != 4) {
-                if (dmb.field_a != 2) {
-                  if (dmb.field_a != 5) {
+              if (MapClearanceArea.field_a != 4) {
+                if (MapClearanceArea.field_a != 2) {
+                  if (MapClearanceArea.field_a != 5) {
                     this.a("js5connect", 0);
                   } else {
                     this.a("outofdate", 0);
@@ -214,35 +214,35 @@ abstract class ms extends wi {
             }
           }
         }
-        if ((-1 != dmb.field_a &&
-          dmb.field_a != 0 ||
-          nb.b(true)) &&
+        if ((-1 != MapClearanceArea.field_a &&
+          MapClearanceArea.field_a != 0 ||
+          SetWeaponProjectileSpeedMultiply.b(true)) &&
           wt.a(false) >= ska.field_p) {
-          mlb.field_o = false;
-          if (-1 != dmb.field_a &&
-            dmb.field_a != 0) {
-            dmb.field_a = -1;
+          GetSpinningBladeAimarc.field_o = false;
+          if (-1 != MapClearanceArea.field_a &&
+            MapClearanceArea.field_a != 0) {
+            MapClearanceArea.field_a = -1;
             bna.e(0);
           }
         }
-        if (dmb.field_a == 0 &&
-          !nb.b(true)) {
+        if (MapClearanceArea.field_a == 0 &&
+          !SetWeaponProjectileSpeedMultiply.b(true)) {
           dga.field_a = false;
         }
         if (0 == ef.field_z &&
-          aqa.a(param1 - 90)) {
+          ThrusterBehaviour.a(param1 - 90)) {
           ef.field_z = 1;
         }
         if (1 == ef.field_z) {
-          if (0 != ahb.field_p) {
-            ppb.field_a = bea.a(1, lja.field_f);
+          if (0 != SetGrapplingHookAimarc.field_p) {
+            ppb.field_a = bea.a(1, GrappleLauncherBehaviour.field_f);
           }
-          btb.field_b = uhb.a(1, jta.field_p, 106, true, false);
-          dt.field_o = uhb.a(1, tl.field_p, 97, true, false);
-          gdb.field_i = uhb.a(1, ru.field_p, 81, true, false);
+          btb.field_b = SetDebrisFoundInPairs.a(1, GetShieldsDirectionalArc.field_p, 106, true, false);
+          GetSalvoUsesAllEnergy.field_o = SetDebrisFoundInPairs.a(1, SetFighterRepairAmount.field_p, 97, true, false);
+          gdb.field_i = SetDebrisFoundInPairs.a(1, GetThrusterBindingMoveAndTurnHasOppositeMove.field_p, 81, true, false);
           ef.field_z = 2;
-          kwa.field_o = btb.field_b;
-          jta.field_r = dt.field_o;
+          GetMassDriverReload.field_o = btb.field_b;
+          GetShieldsDirectionalArc.field_r = GetSalvoUsesAllEnergy.field_o;
         }
         if (ef.field_z == 2) {
           if (null != ppb.field_a &&
@@ -262,29 +262,29 @@ abstract class ms extends wi {
           }
         }
         if (ef.field_z == 3 &&
-          maa.a(dt.field_o, 2, gdb.field_i, btb.field_b) &&
-          poa.a(-20230, gdb.field_i)) {
+          SetBombletSprayEnergyUsed.a(GetSalvoUsesAllEnergy.field_o, 2, gdb.field_i, btb.field_b) &&
+          GetUseOffscreenRendering.a(-20230, gdb.field_i)) {
           mta.b((byte) 123);
-          lva.b(false);
-          mnb.field_g = dsa.field_o;
+          GetPhasedEnergyBeamFireForce.b(false);
+          mnb.field_g = SetFighterRepairTime.field_o;
           djb.field_r = false;
-          baa.a(bua.field_o, dt.field_o, btb.field_b, gdb.field_i, false);
+          GetUseCircleOutline.a(GetRespawnTime.field_o, GetSalvoUsesAllEnergy.field_o, btb.field_b, gdb.field_i, false);
           if (jb.field_a ||
             gtb.field_a != null) {
             stackIn_102_0 = !(jb.field_a);
             stackIn_104_1 = param1 ^ -110;
             stackIn_105_2 = !(jb.field_a);
-            vt.a(stackIn_102_0, stackIn_104_1, stackIn_105_2, gtb.field_a);
+            SetSniperCannonAimspeed.a(stackIn_102_0, stackIn_104_1, stackIn_105_2, gtb.field_a);
           }
           if (tc.field_a) {
             pr.a(param1 + 17487);
           }
-          if (null == ji.field_p) {
-            ji.field_p = bia.a(true);
-            it.field_j = lwa.e((byte) 73);
+          if (null == SetReverbFeedback.field_p) {
+            SetReverbFeedback.field_p = bia.a(true);
+            EscapePod.field_j = lwa.e((byte) 73);
           }
-          jc.a((byte) 55, gdb.field_i, it.field_j, ji.field_p);
-          dt.field_o = null;
+          GetSpinningBladeSpindamageMultiplier.a((byte) 55, gdb.field_i, EscapePod.field_j, SetReverbFeedback.field_p);
+          GetSalvoUsesAllEnergy.field_o = null;
           gdb.field_i = null;
           btb.field_b = null;
           qd.a(0, (java.applet.Applet) (this));
@@ -292,8 +292,8 @@ abstract class ms extends wi {
           ef.field_z = 10;
         }
         if (10 == ef.field_z) {
-          if (0 != ahb.field_p) {
-            esb.field_j = bea.a(1, vc.field_o);
+          if (0 != SetGrapplingHookAimarc.field_p) {
+            esb.field_j = bea.a(1, GetFullMissionSet.field_o);
           }
           ef.field_z = 11;
         }
@@ -301,16 +301,16 @@ abstract class ms extends wi {
         if (ef.field_z == 11) {
           if (esb.field_j != null && (!esb.field_j.b((byte) -38) ||
             !esb.field_j.a(param1 ^ 113))) {
-            uoa.a(tta.a(-93, esb.field_j, ocb.field_i, lo.field_d), -1, 0.0f);
+            IncrementVariableAction.a(SetMomentOfInertiaPerpointCalcDownshift.a(-93, esb.field_j, ocb.field_i, lo.field_d), -1, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
-            gwa.field_o = true;
+            GetMissionTerrainDebrisProbability.field_o = true;
             ef.field_z = 12;
           }
         }
         if (ef.field_z == 12 &&
-          !gwa.field_o) {
+          !GetMissionTerrainDebrisProbability.field_o) {
           ef.field_z = 13;
         }
         if (ef.field_z == 13) {
@@ -318,27 +318,27 @@ abstract class ms extends wi {
           if (null != rab.field_m) {
             stackIn_133_0 = (!rab.field_m.a((byte) 87)) ? 0 : 1;
             var3Lifetime2 = stackIn_133_0;
-            uoa.a(rab.field_m.field_a, -1, rab.field_m.field_g);
+            IncrementVariableAction.a(rab.field_m.field_a, -1, rab.field_m.field_g);
           }
           if (var3Lifetime2 != 0) {
             ef.field_z = 20;
           }
         }
         if (!param0 &&
-          rda.field_q) {
+          GetDebrisSurvives.field_q) {
           kl.a(igb.field_a, -125);
           this.c(-81);
-          qa.a((byte) -62, igb.field_a);
+          SetGrapplingHookCooldown.a((byte) -62, igb.field_a);
         }
-        if (lna.field_o[8]) {
-          qfb.a(param1 ^ 1);
+        if (SetBombletSprayProjectileLife.field_o[8]) {
+          GetCountermeasureLauncherFireForce.a(param1 ^ 1);
         }
     }
 
     private final void g(int param0) {
-        lna.field_o[11] = true;
-        lna.field_o[12] = true;
-        lna.field_o[13] = true;
+        SetBombletSprayProjectileLife.field_o[11] = true;
+        SetBombletSprayProjectileLife.field_o[12] = true;
+        SetBombletSprayProjectileLife.field_o[13] = true;
         int var2 = -95 % ((param0 - 24) / 37);
     }
 
@@ -401,7 +401,7 @@ abstract class ms extends wi {
           int var4_int = 1 % ((-20 - param1) / 33);
           this.a(param2, 480, 640, param0, 32);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ms.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ms.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -428,7 +428,7 @@ abstract class ms extends wi {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -437,11 +437,11 @@ abstract class ms extends wi {
           String var3 = (String) null;
           this.a((String) null, 57, -40);
         }
-        lna.field_o[2] = true;
+        SetBombletSprayProjectileLife.field_o[2] = true;
     }
 
     private final void e(boolean param0) {
-        lna.field_o[4] = param0;
+        SetBombletSprayProjectileLife.field_o[4] = param0;
     }
 
     private final void a(int param0, int param1, int param2, String param3, int param4) {
@@ -506,7 +506,7 @@ abstract class ms extends wi {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -515,25 +515,25 @@ abstract class ms extends wi {
         var11.pack();
         var11.dispose();
         this.setBackground(java.awt.Color.black);
-        ahb.field_p = this.field_o;
-        aeb.a(ahb.field_p, 1);
+        SetGrapplingHookAimarc.field_p = this.field_o;
+        aeb.a(SetGrapplingHookAimarc.field_p, 1);
         int var10 = -52 / ((-72 - param0) / 33);
-        bmb.a(5000, this.field_v, 60, this.field_w, bm.field_o, this.field_t, this.field_u, this.field_z, this.field_p, this.field_q, param6, ahb.field_p, param3, 5000);
-        sha.a(param3, this.field_u, this.field_p, this.field_v, (byte) -2, ahb.field_p, this.field_q, bm.field_o, this.field_w);
+        bmb.a(5000, this.field_v, 60, this.field_w, SetTorpedoProjectiles.field_o, this.field_t, this.field_u, this.field_z, this.field_p, this.field_q, param6, SetGrapplingHookAimarc.field_p, param3, 5000);
+        sha.a(param3, this.field_u, this.field_p, this.field_v, (byte) -2, SetGrapplingHookAimarc.field_p, this.field_q, SetTorpedoProjectiles.field_o, this.field_w);
         ndb.b(47);
-        kkb.field_o = ghb.c((byte) -127);
-        qa.a((byte) 122, igb.field_a);
-        jta.field_p = param7;
-        tl.field_p = param5;
-        vc.field_o = param4;
-        lja.field_f = param2;
-        ru.field_p = param1;
+        GetWaitForPlayers.field_o = ghb.c((byte) -127);
+        SetGrapplingHookCooldown.a((byte) 122, igb.field_a);
+        GetShieldsDirectionalArc.field_p = param7;
+        SetFighterRepairAmount.field_p = param5;
+        GetFullMissionSet.field_o = param4;
+        GrappleLauncherBehaviour.field_f = param2;
+        GetThrusterBindingMoveAndTurnHasOppositeMove.field_p = param1;
         this.k(-92);
-        rrb.a((byte) 101);
+        GameKeyHandler.a((byte) 101);
     }
 
     final void a(boolean param0, int param1, int param2) {
-        this.a(-119, cp.field_q.field_a, mqa.field_r.field_a, param2, aw.field_Bb.field_a, pgb.field_b.field_a, param0, al.field_f.field_a);
+        this.a(-119, cp.field_q.field_a, SetShipPersistence.field_r.field_a, param2, aw.field_Bb.field_a, pgb.field_b.field_a, param0, al.field_f.field_a);
         int var4 = -37 % ((param1 - 30) / 50);
     }
 
@@ -541,7 +541,7 @@ abstract class ms extends wi {
         if (param0 != -1) {
           return;
         }
-        lna.field_o[6] = true;
+        SetBombletSprayProjectileLife.field_o[6] = true;
     }
 
     final void e(int param0) {
@@ -553,17 +553,17 @@ abstract class ms extends wi {
         var4 = VoidHunters.field_G;
         var2 = ow.field_a;
         if (64 > var2 &&
-          lna.field_o[var2]) {
+          SetBombletSprayProjectileLife.field_o[var2]) {
           if (var2 == 0) {
             return;
           }
-          L1: {
+          regionExit1: {
             switch (var2) {
               case 1:
                 je.a((byte) 113);
                 break;
               case 4:
-                ogb.a(-8999);
+                SetLag.a(-8999);
                 break;
               case 7:
                 this.d((byte) -116);
@@ -574,41 +574,41 @@ abstract class ms extends wi {
                   switch (var2) {
                     case 13:
                       lob.a(true);
-                      break L1;
+                      break regionExit1;
                     case 17:
                       this.j(3);
-                      break L1;
+                      break regionExit1;
                     case 18:
-                      g.e(-96);
-                      break L1;
+                      GetAiRepairAmount.e(-96);
+                      break regionExit1;
                     default:
-                      gna.a((Throwable) null, "MGS1: " + hm.e(-13514), 0);
+                      gna.a((Throwable) null, "MGS1: " + SetCountermeasuresPulsetime.e(-13514), 0);
                       ifb.l(-123);
-                      break L1;
+                      break regionExit1;
                   }
                 }
                 stackIn_31_0 = 47;
                 stackIn_32_1 = (12 == var2);
-                var3 = tbb.a(stackIn_31_0, stackIn_32_1);
+                var3 = TrailHolder.a(stackIn_31_0, stackIn_32_1);
                 hg.a((byte) 108, var3);
                 break;
               case 16:
                 al.a(-113);
                 break;
               case 8:
-                jnb.a(bm.field_o, vja.field_a, qga.field_b, false);
+                SetSalvoDamageMultiplier.a(SetTorpedoProjectiles.field_o, vja.field_a, qga.field_b, false);
                 break;
               case 6:
                 iw.k((byte) -38);
                 break;
               case 5:
-                tma.e((byte) -128);
+                GetArmageddonLength.e((byte) -128);
                 break;
               case 3:
-                fb.a(0);
+                SetSniperCannonRandomness.a(0);
                 break;
               case 2:
-                ejb.a(1);
+                GetLaserAimspeed.a(1);
                 break;
             }
           }
@@ -617,12 +617,12 @@ abstract class ms extends wi {
           }
           return;
         }
-        gna.a((Throwable) null, "MGS2: " + hm.e(-13514), 0);
+        gna.a((Throwable) null, "MGS2: " + SetCountermeasuresPulsetime.e(-13514), 0);
         ifb.l(-125);
     }
 
     private final void c(boolean param0) {
-        lna.field_o[1] = param0;
+        SetBombletSprayProjectileLife.field_o[1] = param0;
     }
 
     private final void j(int param0) {
@@ -631,24 +631,24 @@ abstract class ms extends wi {
         int var4 = -1 + vja.field_a;
         byte[] var5 = new byte[var4];
         qga.field_b.a(var4, 0, (byte) -50, var5);
-        qp.a(var3 != 0, param0 ^ param0, vpa.b((byte) -117), qpa.a((byte) -125, var5));
+        qp.a(var3 != 0, param0 ^ param0, MissionList.b((byte) -117), qpa.a((byte) -125, var5));
     }
 
     private final void a(byte param0, boolean param1) {
-        lna.field_o[0] = true;
-        lna.field_o[18] = true;
-        lna.field_o[3] = true;
+        SetBombletSprayProjectileLife.field_o[0] = true;
+        SetBombletSprayProjectileLife.field_o[18] = true;
+        SetBombletSprayProjectileLife.field_o[3] = true;
         if (param0 <= 40) {
           this.c(false, 74);
         }
-        lna.field_o[7] = true;
-        lna.field_o[17] = true;
-        lna.field_o[8] = param1;
-        lna.field_o[16] = true;
+        SetBombletSprayProjectileLife.field_o[7] = true;
+        SetBombletSprayProjectileLife.field_o[17] = true;
+        SetBombletSprayProjectileLife.field_o[8] = param1;
+        SetBombletSprayProjectileLife.field_o[16] = true;
     }
 
     private final void e(byte param0) {
-        lna.field_o[5] = true;
+        SetBombletSprayProjectileLife.field_o[5] = true;
         if (param0 != -4) {
           String var3 = (String) null;
           ms.b((String) null, -15);
@@ -662,7 +662,7 @@ abstract class ms extends wi {
           int var5 = 0;
           int var6_int = 0;
           Exception var6 = null;
-          ds var7 = null;
+          PacketBuffer var7 = null;
           String var8 = null;
           int var9 = 0;
           String var10 = null;
@@ -671,25 +671,25 @@ abstract class ms extends wi {
           int var5Lifetime1;
           int var6_intLifetime1;
           var9 = VoidHunters.field_G;
-          var4 = tia.a(false, tcb.field_o, ahb.field_p, param2);
+          var4 = tia.a(false, GetPointDefenceLaserPulsetime.field_o, SetGrapplingHookAimarc.field_p, param2);
           if (0 == var4) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5 = qua.a(wlb.g((byte) -65), true, raa.e(120));
+            var5 = qua.a(GetFixedaim.g((byte) -65), true, SetMachineGunFireForce.e(120));
             if (var5 != -1) {
               qga.a(dgb.field_b, var5, (byte) 70, gob.field_a);
               gob.field_a = null;
               dgb.field_b = null;
             }
-            var12 = tba.a(-127);
+            var12 = SetExplosionPushMultiplier.a(-127);
             if (var12 != null) {
-              nkb.a(12, var12.booleanValue());
+              GetDebrisThrowable.a(12, var12.booleanValue());
             }
           }
           var5Lifetime1 = 60 % ((-49 - param0) / 41);
           if (var4 == 2) {
-            var6_int = wna.a(pob.b(119), wpa.a(52), this.field_r, (byte) 111, wnb.a(88), etb.a(31065), fpb.d(true));
+            var6_int = RoundResult.a(SetVariableAction.b(119), GetPointDefenceLaserRandomness.a(52), this.field_r, (byte) 111, LoadBlackboxRecording.a(88), etb.a(31065), fpb.d(true));
             if (-1 != var6_int) {
               wt.a(var6_int, -19342, gob.field_a, dgb.field_b);
               gob.field_a = null;
@@ -697,88 +697,88 @@ abstract class ms extends wi {
             }
           }
           if (3 == var4) {
-            if (dmb.field_a != -1 &&
-              dmb.field_a != 0) {
-              dmb.field_a = -1;
+            if (MapClearanceArea.field_a != -1 &&
+              MapClearanceArea.field_a != 0) {
+              MapClearanceArea.field_a = -1;
               bna.e(0);
             }
             if (param1) {
-              mlb.field_o = false;
+              GetSpinningBladeAimarc.field_o = false;
             } else {
-              var6_intLifetime1 = ju.a(this.field_x, this.field_r, wnb.a(83), (byte) 13, false, fpb.d(true));
+              var6_intLifetime1 = GetPhasedEnergyBeamPulseFadetime.a(this.field_x, this.field_r, LoadBlackboxRecording.a(83), (byte) 13, false, fpb.d(true));
               if (var6_intLifetime1 != -1) {
                 if (var6_intLifetime1 != 0) {
-                  aj.a(dgb.field_b, (byte) 110, var6_intLifetime1);
+                  SetMessageFadetime.a(dgb.field_b, (byte) 110, var6_intLifetime1);
                   dgb.field_b = null;
                 } else {
-                  tia.field_C = sta.field_p;
+                  tia.field_C = SetTorpedoAimarc.field_p;
                   uk.b((byte) 49);
                   cgb.field_a = false;
-                  qmb.field_q = 10;
+                  GetSpinningBladeAimspeed.field_q = 10;
                 }
               }
             }
           }
           if (4 == var4) {
-            if (!bua.field_o) {
-              qmb.field_q = 10;
+            if (!GetRespawnTime.field_o) {
+              GetSpinningBladeAimspeed.field_q = 10;
               cgb.field_a = true;
             } else {
-              wob.a(vpa.b((byte) -84), -18209);
+              SetGrapplingHookRopeChangeRate.a(MissionList.b((byte) -84), -18209);
             }
           }
           if (5 == var4) {
-            VoidHunters.a(vpa.b((byte) -91), 4);
+            VoidHunters.a(MissionList.b((byte) -91), 4);
           }
           if (var4 == 6 &&
             djb.field_r) {
-            qmb.field_q = 10;
+            GetSpinningBladeAimspeed.field_q = 10;
           }
           if (var4 == 7) {
-            ria.a(32, vpa.b((byte) -86));
+            SetPedrosRepairModeSwitchtime.a(32, MissionList.b((byte) -86));
           }
           if (var4 == 8) {
-            wob.a(vpa.b((byte) -90), -18209);
+            SetGrapplingHookRopeChangeRate.a(MissionList.b((byte) -90), -18209);
           }
           if (var4 == 9) {
-            jab.a(17, vpa.b((byte) -127));
+            SetNebulaFadesOutWhenClose.a(17, MissionList.b((byte) -127));
           }
           if (var4 == 10) {
-            dpa.field_p.h(24335, 17);
+            RequestNewestBlackboxRecording.field_p.h(24335, 17);
           }
           if (11 == var4) {
-            kr.a(vpa.b((byte) -126), 5836);
+            kr.a(MissionList.b((byte) -126), 5836);
           }
           if (var4 == 12) {
-            lc.a((byte) 86, vpa.b((byte) -126), cg.a(27158));
+            lc.a((byte) 86, MissionList.b((byte) -126), GetToggledScoreboard.a(27158));
           }
           if (var4 == 13) {
             try {
-              if (tk.field_p == null) {
-                tk.field_p = new bi(bm.field_o, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (SetPhasedEnergyBeamReload.field_p == null) {
+                SetPhasedEnergyBeamReload.field_p = new bi(SetTorpedoProjectiles.field_o, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (tk.field_p.c(104)) {
-                var7 = tk.field_p.a(43);
+              if (SetPhasedEnergyBeamReload.field_p.c(104)) {
+                var7 = SetPhasedEnergyBeamReload.field_p.a(43);
                 if (var7 != null) {
-                  var8 = tja.a(0, 0, var7.field_e, var7.field_h);
-                  ls.a(var8, (byte) 122);
+                  var8 = tja.a(0, 0, var7.position, var7.payload);
+                  GetMissionTerrainNebulaProbability.a(var8, (byte) 122);
                 } else {
                   var10 = (String) null;
-                  ls.a((String) null, (byte) 125);
+                  GetMissionTerrainNebulaProbability.a((String) null, (byte) 125);
                 }
-                tk.field_p = null;
+                SetPhasedEnergyBeamReload.field_p = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               gna.a((Throwable) ((Object) var6), "S1", 0);
               var11 = (String) null;
-              ls.a((String) null, (byte) 122);
-              tk.field_p = null;
+              GetMissionTerrainNebulaProbability.a((String) null, (byte) 122);
+              SetPhasedEnergyBeamReload.field_p = null;
             }
           }
           if (var4 == 15) {
-            qmb.field_q = 10;
+            GetSpinningBladeAimspeed.field_q = 10;
           }
           if (16 == var4) {
             return 1;
@@ -797,7 +797,7 @@ abstract class ms extends wi {
     public static void d(boolean param0) {
         field_y = null;
         if (param0) {
-          field_y = (ij) null;
+          field_y = (IntrusiveDeque) null;
         }
         field_A = null;
     }

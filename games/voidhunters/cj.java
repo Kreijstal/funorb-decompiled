@@ -4,7 +4,7 @@
 final class cj extends le {
     private int field_i;
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_13_0 = null;
@@ -36,7 +36,7 @@ final class cj extends le {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class cj extends le {
         int var5;
         int var8;
         int var9;
-        ds var10;
+        PacketBuffer var10;
         int[] var11;
         int[] var18;
         int[] var19;
@@ -214,8 +214,8 @@ final class cj extends le {
           }
         }
         if (!param1) {
-          var10 = (ds) null;
-          this.a(-107, 21, (ds) null);
+          var10 = (PacketBuffer) null;
+          this.a(-107, 21, (PacketBuffer) null);
         }
         return var3;
     }

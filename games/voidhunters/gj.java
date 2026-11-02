@@ -23,7 +23,7 @@ final class gj {
         if (htb.field_A == this) {
           return true;
         }
-        if (this != sp.field_o) {
+        if (this != GetOndamageParticleSpeed.field_o) {
           return false;
         }
         return true;

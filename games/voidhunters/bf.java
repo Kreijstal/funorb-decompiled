@@ -7,9 +7,9 @@ final class bf implements dja {
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = (llb) null;
-          return (tv[]) ((Object) new jpa[param1]);
+          return (tv[]) ((Object) new AdjustVariableAction[param1]);
         }
-        return (tv[]) ((Object) new jpa[param1]);
+        return (tv[]) ((Object) new AdjustVariableAction[param1]);
     }
 
     public static void b(byte param0) {
@@ -21,7 +21,7 @@ final class bf implements dja {
 
     public final tv a(byte param0) {
         int var2 = 5 % ((-64 - param0) / 50);
-        return (tv) ((Object) new jpa());
+        return (tv) ((Object) new AdjustVariableAction());
     }
 
     static {

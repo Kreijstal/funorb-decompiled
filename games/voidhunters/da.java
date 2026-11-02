@@ -3,7 +3,7 @@
  */
 abstract class da {
     private sw field_b;
-    private ha field_a;
+    private GraphicsToolkit field_a;
 
     private final void a(int param0, int param1, int param2) {
         vq.field_v = -1;
@@ -11,12 +11,12 @@ abstract class da {
           param0 = 0;
         }
         nn.field_b = param2;
-        gqb.field_a = param2;
+        TimedSpecialOrderBehaviour.field_a = param2;
         drb.field_j = param1;
         oib.field_c = 0;
-        wob.field_p = -1;
+        SetGrapplingHookRopeChangeRate.field_p = -1;
         qlb.field_a = param0;
-        gba.field_q = param0;
+        SetThrusterAutobalancing.field_q = param0;
     }
 
     abstract void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
@@ -70,7 +70,7 @@ abstract class da {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ abstract class da {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -166,11 +166,11 @@ abstract class da {
               param14 = 1;
             }
           }
-          var19 = this.field_b.a(param3, param5, (int[]) (var18), vha.field_o, 4);
+          var19 = this.field_b.a(param3, param5, (int[]) (var18), SetUseRectFill.field_o, 4);
           if (param14 > 0 &&
             var19 >= param14) {
             var19 = param14;
-            vha.field_o[param14 - 1] = this.field_b.a(vha.field_o[param14 - 1], param10, -62, param5);
+            SetUseRectFill.field_o[param14 - 1] = this.field_b.a(SetUseRectFill.field_o[param14 - 1], param10, -62, param5);
           }
           if (param13 == 3 &&
             var19 == 1) {
@@ -201,22 +201,22 @@ abstract class da {
           for (var21Lifetime1 = 0; var19 > var21Lifetime1; var21Lifetime1++) {
             if (param6 != 0) {
               if (1 == param6) {
-                this.a(var20, 27, param1, param5, vha.field_o[var21Lifetime1], param15 + (param10 - this.field_b.a(vha.field_o[var21Lifetime1], 1)) / 2, param2, param12, param4);
+                this.a(var20, 27, param1, param5, SetUseRectFill.field_o[var21Lifetime1], param15 + (param10 - this.field_b.a(SetUseRectFill.field_o[var21Lifetime1], 1)) / 2, param2, param12, param4);
               } else {
                 if (param6 == 2) {
-                  this.a(var20, param8 - 460, param1, param5, vha.field_o[var21Lifetime1], -this.field_b.a(vha.field_o[var21Lifetime1], 1) + param15 + param10, param2, param12, param4);
+                  this.a(var20, param8 - 460, param1, param5, SetUseRectFill.field_o[var21Lifetime1], -this.field_b.a(SetUseRectFill.field_o[var21Lifetime1], 1) + param15 + param10, param2, param12, param4);
                 } else {
                   if (var21Lifetime1 != -1 + var19) {
-                    this.a(-116, param10, vha.field_o[var21Lifetime1]);
-                    this.a(var20, param8 - 432, param1, param5, vha.field_o[var21Lifetime1], param15, param2, param12, param4);
+                    this.a(-116, param10, SetUseRectFill.field_o[var21Lifetime1]);
+                    this.a(var20, param8 - 432, param1, param5, SetUseRectFill.field_o[var21Lifetime1], param15, param2, param12, param4);
                     drb.field_j = 0;
                   } else {
-                    this.a(var20, param8 - 613, param1, param5, vha.field_o[var21Lifetime1], param15, param2, param12, param4);
+                    this.a(var20, param8 - 613, param1, param5, SetUseRectFill.field_o[var21Lifetime1], param15, param2, param12, param4);
                   }
                 }
               }
             } else {
-              this.a(var20, 97, param1, param5, vha.field_o[var21Lifetime1], param15, param2, param12, param4);
+              this.a(var20, 97, param1, param5, SetUseRectFill.field_o[var21Lifetime1], param15, param2, param12, param4);
             }
             var20 = var20 + param11;
           }
@@ -250,7 +250,7 @@ abstract class da {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw rta.a((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 
@@ -323,10 +323,10 @@ abstract class da {
                                       stackIn_26_0 = param8[var17_int];
                                     }
                                     var19 = stackIn_26_0;
-                                    if ((gqb.field_a & -16777216) == -16777216) {
+                                    if ((TimedSpecialOrderBehaviour.field_a & -16777216) == -16777216) {
                                       var18.a(param5, -var19 + (this.field_b.field_a + param0), 1, 0, 1);
                                     } else {
-                                      var18.a(param5, this.field_b.field_a + param0 - var19, 0, -16777216 & gqb.field_a | 16777215, 1);
+                                      var18.a(param5, this.field_b.field_a + param0 - var19, 0, -16777216 & TimedSpecialOrderBehaviour.field_a | 16777215, 1);
                                     }
                                     param5 = param5 + param3[var17_int].c();
                                     var12 = -1;
@@ -371,20 +371,20 @@ abstract class da {
                   }
                 } else {
                   if (param7 == null) {
-                    if ((-16777216 & gba.field_q) != 0) {
-                      this.fa((char) var15, param5 + 1, param0 + 1, gba.field_q, true);
+                    if ((-16777216 & SetThrusterAutobalancing.field_q) != 0) {
+                      this.fa((char) var15, param5 + 1, param0 + 1, SetThrusterAutobalancing.field_q, true);
                     }
-                    this.fa((char) var15, param5, param0, gqb.field_a, false);
+                    this.fa((char) var15, param5, param0, TimedSpecialOrderBehaviour.field_a, false);
                   } else {
-                    if (0 != (gba.field_q & -16777216)) {
-                      this.a((char) var15, 1 + param5, param0 + 1, gba.field_q, true, param7, param6, param2);
+                    if (0 != (SetThrusterAutobalancing.field_q & -16777216)) {
+                      this.a((char) var15, 1 + param5, param0 + 1, SetThrusterAutobalancing.field_q, true, param7, param6, param2);
                     }
-                    this.a((char) var15, param5, param0, gqb.field_a, false, param7, param6, param2);
+                    this.a((char) var15, param5, param0, TimedSpecialOrderBehaviour.field_a, false, param7, param6, param2);
                   }
                 }
                 var16 = this.field_b.a(var15, (byte) 46);
-                if (wob.field_p != -1) {
-                  this.field_a.a(param5, -25559, wob.field_p, param0 + (int)(0.7 * (double)this.field_b.field_a), var16);
+                if (SetGrapplingHookRopeChangeRate.field_p != -1) {
+                  this.field_a.a(param5, -25559, SetGrapplingHookRopeChangeRate.field_p, param0 + (int)(0.7 * (double)this.field_b.field_a), var16);
                 }
                 if (vq.field_v != -1) {
                   this.field_a.a(param5, -25559, vq.field_v, 1 + this.field_b.field_a + param0, var16);
@@ -425,7 +425,7 @@ abstract class da {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
         }
     }
 
@@ -441,7 +441,7 @@ abstract class da {
             this.a(81, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "da.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "da.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -465,21 +465,21 @@ abstract class da {
           try {
             if (param1.startsWith("col=")) {
               var5 = (CharSequence) ((Object) param1.substring(4));
-              gqb.field_a = -16777216 & gqb.field_a | tib.a(-596, var5, 16) & 16777215;
+              TimedSpecialOrderBehaviour.field_a = -16777216 & TimedSpecialOrderBehaviour.field_a | tib.a(-596, var5, 16) & 16777215;
             } else {
               if (param1.equals("/col")) {
-                gqb.field_a = 16777215 & nn.field_b | gqb.field_a & -16777216;
+                TimedSpecialOrderBehaviour.field_a = 16777215 & nn.field_b | TimedSpecialOrderBehaviour.field_a & -16777216;
               }
             }
             if (param1.startsWith("argb=")) {
               var9 = (CharSequence) ((Object) param1.substring(5));
-              gqb.field_a = tib.a(-596, var9, 16);
+              TimedSpecialOrderBehaviour.field_a = tib.a(-596, var9, 16);
             } else {
               if (!param1.equals("/argb")) {
                 if (!param1.startsWith("str=")) {
                   if (!param1.equals("str")) {
                     if (param1.equals("/str")) {
-                      wob.field_p = -1;
+                      SetGrapplingHookRopeChangeRate.field_p = -1;
                     } else {
                       if (!param1.startsWith("u=")) {
                         if (!param1.equals("u")) {
@@ -489,7 +489,7 @@ abstract class da {
                             if (!param1.equalsIgnoreCase("shad=-1")) {
                               if (param1.startsWith("shad=")) {
                                 var8 = (CharSequence) ((Object) param1.substring(5));
-                                gba.field_q = -16777216 & gqb.field_a | tib.a(-596, var8, 16);
+                                SetThrusterAutobalancing.field_q = -16777216 & TimedSpecialOrderBehaviour.field_a | tib.a(-596, var8, 16);
                               } else {
                                 if (!param1.equals("shad")) {
                                   if (!param1.equals("/shad")) {
@@ -497,33 +497,33 @@ abstract class da {
                                       this.a(qlb.field_a, 0, nn.field_b);
                                     }
                                   } else {
-                                    gba.field_q = qlb.field_a;
+                                    SetThrusterAutobalancing.field_q = qlb.field_a;
                                   }
                                 } else {
-                                  gba.field_q = gqb.field_a & -16777216;
+                                  SetThrusterAutobalancing.field_q = TimedSpecialOrderBehaviour.field_a & -16777216;
                                 }
                               }
                             } else {
-                              gba.field_q = 0;
+                              SetThrusterAutobalancing.field_q = 0;
                             }
                           }
                         } else {
-                          vq.field_v = gqb.field_a & -16777216;
+                          vq.field_v = TimedSpecialOrderBehaviour.field_a & -16777216;
                         }
                       } else {
                         var7 = (CharSequence) ((Object) param1.substring(2));
-                        vq.field_v = -16777216 & gqb.field_a | tib.a(-596, var7, 16);
+                        vq.field_v = -16777216 & TimedSpecialOrderBehaviour.field_a | tib.a(-596, var7, 16);
                       }
                     }
                   } else {
-                    wob.field_p = gqb.field_a & -16777216 | 8388608;
+                    SetGrapplingHookRopeChangeRate.field_p = TimedSpecialOrderBehaviour.field_a & -16777216 | 8388608;
                   }
                 } else {
                   var6 = (CharSequence) ((Object) param1.substring(4));
-                  wob.field_p = gqb.field_a & -16777216 | tib.a(-596, var6, 16);
+                  SetGrapplingHookRopeChangeRate.field_p = TimedSpecialOrderBehaviour.field_a & -16777216 | tib.a(-596, var6, 16);
                 }
               } else {
-                gqb.field_a = nn.field_b;
+                TimedSpecialOrderBehaviour.field_a = nn.field_b;
               }
             }
             if (param0 < 65) {
@@ -544,7 +544,7 @@ abstract class da {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -559,16 +559,16 @@ abstract class da {
           this.a(param0, 0, param2);
           this.a(param1, 87, 0, (aja[]) null, param5, param4 - this.field_b.a(param5, 1), 0, (aa) null, (int[]) null);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    da(ha param0, sw param1) {
+    da(GraphicsToolkit param0, sw param1) {
         try {
           this.field_b = param1;
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

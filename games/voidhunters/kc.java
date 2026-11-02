@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kc implements ntb {
+final class kc implements DiffableState {
     static int[] field_e;
-    int field_d;
-    boa field_f;
+    int version;
+    ShipBlueprint blueprint;
     static String field_a;
-    private boolean[] field_c;
+    private boolean[] tipsDone;
     static int field_b;
 
     private final void a(int param0, byte param1, int param2) {
@@ -15,8 +15,8 @@ final class kc implements ntb {
         int var6;
         int[] var7;
         var6 = VoidHunters.field_G;
-        if (null != this.field_f) {
-          var7 = this.field_f.field_c;
+        if (null != this.blueprint) {
+          var7 = this.blueprint.description;
           var4 = var7;
           if (var7 != null) {
             for (var5 = 0; var7.length > var5; var5++) {
@@ -45,10 +45,10 @@ final class kc implements ntb {
           if (param0 != 0) {
             return;
           }
-          if (this.field_c != null) {
-            var3_int = Math.min(param1.length, this.field_c.length);
+          if (this.tipsDone != null) {
+            var3_int = Math.min(param1.length, this.tipsDone.length);
             for (var4 = 0; var3_int > var4; var4++) {
-              param1[var4] = this.field_c[var4];
+              param1[var4] = this.tipsDone[var4];
             }
             return;
           }
@@ -63,7 +63,7 @@ final class kc implements ntb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -78,13 +78,13 @@ final class kc implements ntb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          param0.a(-632, this.field_d, 8);
-          qla.a(param0, (byte) -15, this.field_c, 8);
+          param0.a(-632, this.version, 8);
+          SetArmageddonTimerStart.a(param0, (byte) -15, this.tipsDone, 8);
           stackIn_2_0 = (faa) (param0);
           stackIn_2_1 = 79;
-          stackIn_3_2 = (this.field_f != null);
+          stackIn_3_2 = (this.blueprint != null);
           if (vq.a(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
-            this.field_f.b(param0, -126);
+            this.blueprint.b(param0, -126);
           }
           if (param1 > -109) {
             var4 = (tv) null;
@@ -101,7 +101,7 @@ final class kc implements ntb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -120,16 +120,16 @@ final class kc implements ntb {
           boolean decompiledFrameRemainder0 = true;
           var4 = 112 % ((22 - param0) / 59);
           var3 = (kc) (param1);
-          if (this.field_d == var3.field_d &&
-            !it.a(var3.field_c, this.field_c, 32)) {
-            stackIn_5_0 = (null != var3.field_f) ? 0 : 1;
-            if (null != this.field_f) {
+          if (this.version == var3.version &&
+            !EscapePod.a(var3.tipsDone, this.tipsDone, 32)) {
+            stackIn_5_0 = (null != var3.blueprint) ? 0 : 1;
+            if (null != this.blueprint) {
               stackIn_8_1 = 0;
             } else {
               stackIn_8_1 = 1;
             }
-            if ((stackIn_5_0 ^ stackIn_8_1) == 0 && (this.field_f == null ||
-              !this.field_f.a((byte) 94, var3.field_f))) {
+            if ((stackIn_5_0 ^ stackIn_8_1) == 0 && (this.blueprint == null ||
+              !this.blueprint.a((byte) 94, var3.blueprint))) {
               stackIn_14_0 = false;
               decompiledFrameRemainder0 = false;
             }
@@ -148,7 +148,7 @@ final class kc implements ntb {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -164,10 +164,10 @@ final class kc implements ntb {
         if (param0 < 46) {
           return;
         }
-        if (0 == this.field_d) {
+        if (0 == this.version) {
           this.a(4, (byte) 31, 8);
         }
-        this.field_d = 1;
+        this.version = 1;
     }
 
     final static void a(int param0, long[] param1, int param2, int[] param3, int param4) {
@@ -238,23 +238,23 @@ final class kc implements ntb {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final void a(boolean[] param0, int param1) {
         try {
-          this.field_c = param0;
+          this.tipsDone = param0;
           if (param1 != -28855) {
-            this.field_d = -112;
+            this.version = -112;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public kc() {
-        this.field_d = 1;
+        this.version = 1;
     }
 
     public final void b(byte param0, tv param1) {
@@ -269,15 +269,15 @@ final class kc implements ntb {
             field_b = 51;
           }
           var3 = (kc) (param1);
-          var3.field_d = this.field_d;
-          var3.field_c = sab.a(var3.field_c, -31567, this.field_c);
-          if (null == this.field_f) {
-            var3.field_f = null;
+          var3.version = this.version;
+          var3.tipsDone = GetBots.a(var3.tipsDone, -31567, this.tipsDone);
+          if (null == this.blueprint) {
+            var3.blueprint = null;
           } else {
-            if (null == var3.field_f) {
-              var3.field_f = new boa();
+            if (null == var3.blueprint) {
+              var3.blueprint = new ShipBlueprint();
             }
-            this.field_f.b((byte) 72, var3.field_f);
+            this.blueprint.b((byte) 72, var3.blueprint);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -290,11 +290,11 @@ final class kc implements ntb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         int stackIn_13_0 = 0;
         int stackIn_16_1 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -305,34 +305,34 @@ final class kc implements ntb {
         int var4 = 0;
         kc var5 = null;
         try {
-          var5 = (kc) (param0);
-          if (null != this.field_f &&
-            var5.field_f != null) {
-            this.field_f.a(var5.field_f, -28);
+          var5 = (kc) (other);
+          if (null != this.blueprint &&
+            var5.blueprint != null) {
+            this.blueprint.reportDifferences(var5.blueprint, -28);
           }
           var4 = 0;
-          if (this.field_d != var5.field_d) {
+          if (this.version != var5.version) {
             var4 = 1;
-            System.out.println("int version has changed. before=" + var5.field_d + ", now=" + this.field_d);
+            System.out.println("int version has changed. before=" + var5.version + ", now=" + this.version);
           }
-          if (param1 >= -19) {
+          if (obfuscationGuard >= -19) {
             this.a((byte) 101);
           }
-          if (uca.a(this.field_c, var5.field_c, -48)) {
+          if (uca.a(this.tipsDone, var5.tipsDone, -48)) {
             System.out.println("boolean[] tips_done has changed. ");
             var4 = 1;
           }
-          stackIn_13_0 = (null != var5.field_f) ? 0 : 1;
-          if (null != this.field_f) {
+          stackIn_13_0 = (null != var5.blueprint) ? 0 : 1;
+          if (null != this.blueprint) {
             stackIn_16_1 = 0;
           } else {
             stackIn_16_1 = 1;
           }
           if ((stackIn_13_0 ^ stackIn_16_1) != 0 ||
-            this.field_f != null &&
-            this.field_f.a((byte) 121, var5.field_f)) {
+            this.blueprint != null &&
+            this.blueprint.a((byte) 121, var5.blueprint)) {
             var4 = 1;
-            System.out.println("ShipBlueprint blueprint has changed. before=" + var5.field_f + ", now=" + this.field_f);
+            System.out.println("ShipBlueprint blueprint has changed. before=" + var5.blueprint + ", now=" + this.blueprint);
           }
           if (var4 != 0) {
             System.out.println("This instance of PlayerGameData has changed");
@@ -343,30 +343,30 @@ final class kc implements ntb {
           var3 = decompiledCaughtException;
           stackIn_26_0 = var3;
           stackIn_26_1 = new StringBuilder().append("kc.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     public final void a(faa param0, boolean param1) {
         try {
-          this.field_d = param0.i(0, 8);
-          this.field_c = nsa.a(8, param0, 76, this.field_c);
+          this.version = param0.i(0, 8);
+          this.tipsDone = GetAutoaim.a(8, param0, 76, this.tipsDone);
           if (!kv.a(param1, param0)) {
-            this.field_f = null;
+            this.blueprint = null;
           } else {
-            if (null == this.field_f) {
-              this.field_f = new boa();
+            if (null == this.blueprint) {
+              this.blueprint = new ShipBlueprint();
             }
-            this.field_f.a(param0, false);
+            this.blueprint.a(param0, false);
           }
           this.a((byte) 58);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

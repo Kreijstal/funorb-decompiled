@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ub extends ksa implements tv {
+abstract class ub extends IntrusiveNode implements tv {
     static String field_g;
     static int[] field_f;
     static String[] field_d;
-    static clb field_e;
+    static ConsoleCommandRegistry field_e;
     static String field_h;
 
     ub() {
@@ -17,7 +17,7 @@ abstract class ub extends ksa implements tv {
             field_g = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ub.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ub.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -28,7 +28,7 @@ abstract class ub extends ksa implements tv {
             this.a((faa) null, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ub.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ub.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,17 +39,17 @@ abstract class ub extends ksa implements tv {
             this.a((byte) -11, (tv) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ub.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ub.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void a(tv param0, int param1) {
+    void reportDifferences(tv other, int obfuscationGuard) {
         try {
-          if (param1 > -19) {
-            field_e = (clb) null;
+          if (obfuscationGuard > -19) {
+            field_e = (ConsoleCommandRegistry) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ub.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ub.F(" + (other != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -84,7 +84,7 @@ abstract class ub extends ksa implements tv {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -93,6 +93,6 @@ abstract class ub extends ksa implements tv {
         field_f = new int[]{1, 0};
         field_h = "Waiting for <%0> to start the game...";
         field_d = new String[]{"Game type"};
-        field_e = new clb();
+        field_e = new ConsoleCommandRegistry();
     }
 }

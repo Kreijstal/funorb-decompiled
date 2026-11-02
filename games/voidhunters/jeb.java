@@ -30,9 +30,9 @@ final class jeb extends mfb {
     final int a(int param0) {
         if (param0 != 0) {
           field_b = (Random) null;
-          return m.field_p;
+          return GetShieldsDirectionalRadius.field_p;
         }
-        return m.field_p;
+        return GetShieldsDirectionalRadius.field_p;
     }
 
     final int a(byte param0) {
@@ -44,7 +44,7 @@ final class jeb extends mfb {
         if (param0 < 0) {
           return 34;
         }
-        return oq.field_a;
+        return Particle.field_a;
     }
 
     final int k(int param0) {
@@ -67,7 +67,7 @@ final class jeb extends mfb {
         if (param0 >= -52) {
           return -93;
         }
-        return jj.field_o;
+        return SetMissileLauncherEnergyUsed.field_o;
     }
 
     final int b(boolean param0) {
@@ -127,7 +127,7 @@ final class jeb extends mfb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 

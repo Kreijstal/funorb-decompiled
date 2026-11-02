@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lsa extends ksa {
+final class lsa extends IntrusiveNode {
     static long field_f;
     int field_g;
     int field_d;
@@ -36,7 +36,7 @@ final class lsa extends ksa {
             stackIn_6_0 = bl.field_x.b(param0);
             return stackIn_6_0;
           }
-          stackIn_4_0 = oja.field_p.b(param0);
+          stackIn_4_0 = GetUsePolygonFill.field_p.b(param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -48,7 +48,7 @@ final class lsa extends ksa {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

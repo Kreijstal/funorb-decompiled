@@ -7,18 +7,18 @@ final class lob implements dja {
     static llb[] field_c;
 
     public final tv a(byte param0) {
-        lua stackIn_1_0 = null;
+        NebulaField stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
           var2_int = 13 / ((-64 - param0) / 50);
-          stackIn_1_0 = new lua();
+          stackIn_1_0 = new NebulaField();
           return (tv) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "lob.A(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "lob.A(" + param0 + ')');
         }
     }
 
@@ -53,8 +53,8 @@ final class lob implements dja {
           }
           var2 = var1.e((byte) -91);
           if (var2 == 0) {
-            if (om.field_c == null) {
-              om.field_c = new pr(128);
+            if (TeamNodeCondition.field_c == null) {
+              TeamNodeCondition.field_c = new pr(128);
               mq.field_k = 0;
             }
             stackIn_14_0 = (var1.e((byte) -101) != 1) ? 0 : 1;
@@ -76,16 +76,16 @@ final class lob implements dja {
             if (null == var6) {
               var6 = nf.a(var7, false);
               if (null != var6) {
-                om.field_c.a(var6, (byte) -124, (long)var8.hashCode());
+                TeamNodeCondition.field_c.a(var6, (byte) -124, (long)var8.hashCode());
               }
             }
             if (var6 == null) {
               var6 = new vu();
-              om.field_c.a(var6, (byte) -106, (long)var8.hashCode());
+              TeamNodeCondition.field_c.a(var6, (byte) -106, (long)var8.hashCode());
               fieldTemp$0 = mq.field_k;
               mq.field_k = mq.field_k + 1;
               var6.field_yb = fieldTemp$0;
-              st.field_o.b(-10258, var6);
+              SetPointDefenceLaserProjectileOndamageParticles.field_o.b(-10258, var6);
             }
             var6.field_vb = var7;
             var6.field_Fb = var4_ref_String;
@@ -106,7 +106,7 @@ final class lob implements dja {
               return;
             }
             if (var2 != 4) {
-              gna.a((Throwable) null, "F1: " + hm.e(-13514), 0);
+              gna.a((Throwable) null, "F1: " + SetCountermeasuresPulsetime.e(-13514), 0);
               ifb.l(-125);
               return;
             }
@@ -119,7 +119,7 @@ final class lob implements dja {
           }
           if (ae.field_f == null) {
             ae.field_f = new pr(128);
-            vob.field_p = 0;
+            GetBoostersCooldown.field_p = 0;
           }
           var3Lifetime1 = var1.a(-1);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -137,8 +137,8 @@ final class lob implements dja {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new vu();
             ae.field_f.a(var6Lifetime1, (byte) -112, (long)jwa.a(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
-            fieldTemp$1 = vob.field_p;
-            vob.field_p = vob.field_p + 1;
+            fieldTemp$1 = GetBoostersCooldown.field_p;
+            GetBoostersCooldown.field_p = GetBoostersCooldown.field_p + 1;
             var6Lifetime1.field_yb = fieldTemp$1;
             mr.field_M.b(-10258, var6Lifetime1);
           }
@@ -150,13 +150,13 @@ final class lob implements dja {
           var6Lifetime1.field_Ab = (String) (var3Lifetime1);
           var6Lifetime1.b(-3846);
           var7_ref = (vu) (mr.field_M.d(0));
-          L17: while (true) {
+          scanLoop1: while (true) {
             if (var7_ref != null) {
               stackIn_66_0 = var7_ref;
               if (var9 != 0) {
-                break L17;
+                break scanLoop1;
               }
-              if (qob.a(stackIn_66_0, 7569, var6Lifetime1)) {
+              if (Nebula.a(stackIn_66_0, 7569, var6Lifetime1)) {
                 var7_ref = (vu) (mr.field_M.a((byte) 78));
                 continue;
               }
@@ -175,7 +175,7 @@ final class lob implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1_ref), "lob.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref), "lob.D(" + param0 + ')');
         }
     }
 
@@ -196,23 +196,23 @@ final class lob implements dja {
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
           if (hab.field_i >= param4 &&
-            param5 >= lua.field_c) {
+            param5 >= NebulaField.field_c) {
             if (ob.field_j > param2) {
               param2 = ob.field_j;
               var6_int = 0;
               if (var10 != 0) {
-                if (param2 > mt.field_o) {
+                if (param2 > GetCountermeasureLauncherProjectiles.field_o) {
                   var6_int = 0;
-                  param2 = mt.field_o;
+                  param2 = GetCountermeasureLauncherProjectiles.field_o;
                   var6_int = 1;
                 } else {
                   var6_int = 1;
                 }
               }
             } else {
-              if (param2 > mt.field_o) {
+              if (param2 > GetCountermeasureLauncherProjectiles.field_o) {
                 var6_int = 0;
-                param2 = mt.field_o;
+                param2 = GetCountermeasureLauncherProjectiles.field_o;
                 if (var10 != 0) {
                   var6_int = 1;
                 }
@@ -224,36 +224,36 @@ final class lob implements dja {
               param0 = ob.field_j;
               var7 = 0;
               if (var10 != 0) {
-                if (mt.field_o >= param0) {
+                if (GetCountermeasureLauncherProjectiles.field_o >= param0) {
                   var7 = 1;
-                  param0 = mt.field_o;
+                  param0 = GetCountermeasureLauncherProjectiles.field_o;
                   var7 = 0;
                 } else {
-                  param0 = mt.field_o;
+                  param0 = GetCountermeasureLauncherProjectiles.field_o;
                   var7 = 0;
                 }
               }
             } else {
-              if (mt.field_o >= param0) {
+              if (GetCountermeasureLauncherProjectiles.field_o >= param0) {
                 var7 = 1;
                 if (var10 != 0) {
-                  param0 = mt.field_o;
+                  param0 = GetCountermeasureLauncherProjectiles.field_o;
                   var7 = 0;
                 }
               } else {
-                param0 = mt.field_o;
+                param0 = GetCountermeasureLauncherProjectiles.field_o;
                 var7 = 0;
               }
             }
-            boolean decompiledSharedTail1 = !(param4 < lua.field_c);
+            boolean decompiledSharedTail1 = !(param4 < NebulaField.field_c);
             if (!decompiledSharedTail1) {
-              param4 = lua.field_c;
+              param4 = NebulaField.field_c;
               decompiledSharedTail1 = (var10 != 0);
             }
             if (decompiledSharedTail1) {
               incrementValue$0 = param4;
               param4++;
-              ww.a(param1, param0, rba.field_b[incrementValue$0], (byte) 75, param2);
+              GetSalvoRepairTimeMultiplier.a(param1, param0, ResourceNode.field_b[incrementValue$0], (byte) 75, param2);
             }
             boolean decompiledSharedTail0 = !(param5 > hab.field_i);
             if (!decompiledSharedTail0) {
@@ -263,13 +263,13 @@ final class lob implements dja {
             if (decompiledSharedTail0) {
               incrementValue$1 = param5;
               param5--;
-              ww.a(param1, param0, rba.field_b[incrementValue$1], (byte) 75, param2);
+              GetSalvoRepairTimeMultiplier.a(param1, param0, ResourceNode.field_b[incrementValue$1], (byte) 75, param2);
             }
             if (var6_int != 0 &&
               var7 != 0) {
               var8 = param4;
               while (param5 >= var8) {
-                var9 = rba.field_b[var8];
+                var9 = ResourceNode.field_b[var8];
                 var9[param0] = param1;
                 var9[param2] = param1;
                 var8++;
@@ -284,7 +284,7 @@ final class lob implements dja {
               if (var6_int != 0) {
                 var8Lifetime1 = param4;
                 while (param5 >= var8Lifetime1) {
-                  rba.field_b[var8Lifetime1][param2] = param1;
+                  ResourceNode.field_b[var8Lifetime1][param2] = param1;
                   var8Lifetime1++;
                   if (var10 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -298,7 +298,7 @@ final class lob implements dja {
                 (var7 != 0)) {
                 var8Lifetime1Lifetime1 = param4;
                 while (var8Lifetime1Lifetime1 <= param5) {
-                  rba.field_b[var8Lifetime1Lifetime1][param0] = param1;
+                  ResourceNode.field_b[var8Lifetime1Lifetime1][param0] = param1;
                   var8Lifetime1Lifetime1++;
                   if (var10 != 0) {
                     return;
@@ -314,7 +314,7 @@ final class lob implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var6), "lob.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var6), "lob.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -328,7 +328,7 @@ final class lob implements dja {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -59 % ((param0 + 31) / 40);
-          stackIn_1_0 = ua.a(true, param1, true, 10);
+          stackIn_1_0 = SetMissionTerrainVotingChancestep.a(true, param1, true, 10);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -340,18 +340,18 @@ final class lob implements dja {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
     public final tv[] a(int param0, int param1) {
         RuntimeException var3 = null;
         tv[] stackIn_2_0 = null;
-        lua[] stackIn_4_0 = null;
+        NebulaField[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 11995) {
-            stackIn_4_0 = new lua[param1];
+            stackIn_4_0 = new NebulaField[param1];
             return (tv[]) ((Object) stackIn_4_0);
           }
           stackIn_2_0 = (tv[]) null;
@@ -359,7 +359,7 @@ final class lob implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var3), "lob.B(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "lob.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -376,7 +376,7 @@ final class lob implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1), "lob.E(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "lob.E(" + param0 + ')');
         }
     }
 

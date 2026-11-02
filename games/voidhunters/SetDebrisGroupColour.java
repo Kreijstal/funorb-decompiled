@@ -1,0 +1,233 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SetDebrisGroupColour extends ConsoleCommand {
+    static phb[] field_o;
+
+    final static float[] a(float param0, int param1, int param2, int param3, float param4, int param5, int param6, float param7) {
+        float[] var21 = new float[9];
+        float[] var19 = var21;
+        float[] var17 = var19;
+        float[] var8 = var17;
+        float[] var18 = new float[9];
+        float[] var9 = var18;
+        float var10 = (float)Math.cos((double)((float)param3 * 0.02454369328916073f));
+        float var11 = (float)Math.sin((double)((float)param3 * 0.02454369328916073f));
+        var17[3] = 0.0f;
+        var17[6] = -var11;
+        float var12 = 1.0f - var10;
+        var17[4] = 1.0f;
+        var21[0] = var10;
+        var21[8] = var10;
+        var17[7] = 0.0f;
+        var17[5] = 0.0f;
+        var17[1] = 0.0f;
+        var21[2] = var11;
+        float[] var22 = new float[9];
+        float[] var20 = var22;
+        float[] var13 = var20;
+        float var14 = 1.0f;
+        float var15 = (float)param1;
+        var10 = (float)param5 / 32767.0f;
+        var12 = -var10 + 1.0f;
+        var11 = -(float)Math.sqrt((double)(1.0f - var10 * var10));
+        float var16 = (float)Math.sqrt((double)(param2 * param2 + param6 * param6));
+        if (0.0f == var16) {
+          if (0.0f == var10) {
+            var9 = var17;
+            var9[8] = var9[8] * param0;
+            var9[0] = var9[0] * param7;
+            var9[1] = var9[1] * param7;
+            var9[5] = var9[5] * param4;
+            var9[3] = var9[3] * param4;
+            var9[7] = var9[7] * param0;
+            var9[6] = var9[6] * param0;
+            var9[2] = var9[2] * param7;
+            var9[4] = var9[4] * param4;
+            return var9;
+          }
+          if (var16 != 0.0f) {
+            var15 = (float)param2 / var16;
+            var14 = (float)(-param6) / var16;
+          }
+          var13[0] = var14 * var14 * var12 + var10;
+          var13[3] = var11 * -var15;
+          var13[1] = var15 * var11;
+          var13[7] = -var14 * var11;
+          var22[4] = var10;
+          var13[5] = var14 * var11;
+          var13[6] = var14 * var15 * var12;
+          var13[2] = var15 * var14 * var12;
+          var13[8] = var10 + var15 * var15 * var12;
+          var18[0] = var22[6] * var21[2] + (var22[3] * var21[1] + var22[0] * var21[0]);
+          var18[1] = var22[7] * var21[2] + (var21[0] * var22[1] + var22[4] * var21[1]);
+          var18[2] = var22[2] * var21[0] + var22[5] * var21[1] + var21[2] * var22[8];
+          var18[3] = var22[6] * var21[5] + (var22[0] * var21[3] + var22[3] * var21[4]);
+          var18[4] = var21[4] * var22[4] + var22[1] * var21[3] + var22[7] * var21[5];
+          var18[6] = var22[0] * var21[6] + var22[3] * var21[7] + var22[6] * var21[8];
+          var18[5] = var21[3] * var22[2] + var22[5] * var21[4] + var21[5] * var22[8];
+          var18[7] = var21[6] * var22[1] + var22[4] * var21[7] + var21[8] * var22[7];
+          var18[8] = var22[8] * var21[8] + (var22[2] * var21[6] + var22[5] * var21[7]);
+          var9[8] = var9[8] * param0;
+          var9[0] = var9[0] * param7;
+          var9[1] = var9[1] * param7;
+          var9[5] = var9[5] * param4;
+          var9[3] = var9[3] * param4;
+          var9[7] = var9[7] * param0;
+          var9[6] = var9[6] * param0;
+          var9[2] = var9[2] * param7;
+          var9[4] = var9[4] * param4;
+          return var9;
+        }
+        if (var16 != 0.0f) {
+          var15 = (float)param2 / var16;
+          var14 = (float)(-param6) / var16;
+        }
+        var13[0] = var14 * var14 * var12 + var10;
+        var13[3] = var11 * -var15;
+        var13[1] = var15 * var11;
+        var13[7] = -var14 * var11;
+        var22[4] = var10;
+        var13[5] = var14 * var11;
+        var13[6] = var14 * var15 * var12;
+        var13[2] = var15 * var14 * var12;
+        var13[8] = var10 + var15 * var15 * var12;
+        var18[0] = var22[6] * var21[2] + (var22[3] * var21[1] + var22[0] * var21[0]);
+        var18[1] = var22[7] * var21[2] + (var21[0] * var22[1] + var22[4] * var21[1]);
+        var18[2] = var22[2] * var21[0] + var22[5] * var21[1] + var21[2] * var22[8];
+        var18[3] = var22[6] * var21[5] + (var22[0] * var21[3] + var22[3] * var21[4]);
+        var18[4] = var21[4] * var22[4] + var22[1] * var21[3] + var22[7] * var21[5];
+        var18[6] = var22[0] * var21[6] + var22[3] * var21[7] + var22[6] * var21[8];
+        var18[5] = var21[3] * var22[2] + var22[5] * var21[4] + var21[5] * var22[8];
+        var18[7] = var21[6] * var22[1] + var22[4] * var21[7] + var21[8] * var22[7];
+        var18[8] = var22[8] * var21[8] + (var22[2] * var21[6] + var22[5] * var21[7]);
+        var9[8] = var9[8] * param0;
+        var9[0] = var9[0] * param7;
+        var9[1] = var9[1] * param7;
+        var9[5] = var9[5] * param4;
+        var9[3] = var9[3] * param4;
+        var9[7] = var9[7] * param0;
+        var9[6] = var9[6] * param0;
+        var9[2] = var9[2] * param7;
+        var9[4] = var9[4] * param4;
+        return var9;
+    }
+
+    final static boolean b(boolean param0) {
+        if (param0) {
+          return true;
+        }
+        if (null == GetBombletSprayPushMultiplier.field_o) {
+          return false;
+        }
+        if (SetFixedaim.field_o) {
+          return false;
+        }
+        return true;
+    }
+
+    public static void a(int param0) {
+        field_o = null;
+        if (param0 != 7311) {
+          String var2 = (String) null;
+          SetDebrisGroupColour.a(-5, (String) null);
+        }
+    }
+
+    final static IntrusiveDeque a(int param0, String param1) {
+        IntrusiveDeque stackIn_3_0 = null;
+        IntrusiveDeque stackIn_19_0 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        IntrusiveDeque var2 = null;
+        RuntimeException var2_ref = null;
+        qab var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        var5 = VoidHunters.field_G;
+        try {
+          var2 = new IntrusiveDeque();
+          if (param0 != -1) {
+            stackIn_3_0 = (IntrusiveDeque) null;
+            return stackIn_3_0;
+          }
+          var3 = new qab(param1);
+          while (!var3.a((byte) -111)) {
+            var4 = var3.a(param0 ^ 75);
+            if (Character.isWhitespace((char) var4)) {
+              continue;
+            }
+            if (var4 != 34 &&
+              var4 != 39) {
+              if (var4 == 40) {
+                var2.b(param0 - 10257, new tsa(wdb.field_vb, var3.field_b - 1));
+                continue;
+              }
+              if (var4 == 41) {
+                var2.b(-10258, new tsa(SetMissionTerrainVotingChancestep.field_o, -1 + var3.field_b));
+                continue;
+              }
+              if (var4 == 44) {
+                var2.b(-10258, new tsa(jwa.field_l, -1 + var3.field_b));
+                continue;
+              }
+              var2.b(param0 ^ 10257, GetMpSandboxEnemySpawnLimit.a(-20, var3));
+              continue;
+            }
+            var2.b(param0 ^ 10257, GetAutoDetail.a(117, var3));
+          }
+          stackIn_19_0 = var2;
+          return stackIn_19_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          stackIn_22_0 = var2_ref;
+          stackIn_22_1 = new StringBuilder().append("ck.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+        }
+    }
+
+    final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
+        RuntimeException var3 = null;
+        ConsoleValue stackIn_2_0 = null;
+        ConsoleValue stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (obfuscationGuard > -119) {
+            stackIn_2_0 = (ConsoleValue) null;
+            return stackIn_2_0;
+          }
+          btb.field_a = arguments[0].a(false);
+          stackIn_4_0 = new ConsoleValue("void");
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("ck.A(");
+          if (arguments == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    SetDebrisGroupColour(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    static {
+    }
+}

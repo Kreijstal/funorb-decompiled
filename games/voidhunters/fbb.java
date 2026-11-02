@@ -10,7 +10,7 @@ final class fbb {
     private int field_g;
     private int field_a;
     la field_b;
-    private qfa field_h;
+    private OpenGlToolkit field_h;
     static int[] field_j;
 
     final static boolean b(int param0, int param1) {
@@ -268,11 +268,11 @@ final class fbb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    fbb(qfa param0) {
+    fbb(OpenGlToolkit param0) {
         la dupTemp$1 = null;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
@@ -314,7 +314,7 @@ final class fbb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

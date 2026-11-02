@@ -13,7 +13,7 @@ final class wu extends uda {
         if (param0 != 5) {
           return;
         }
-        this.field_d.a(et.field_c, true, asa.field_a);
+        this.field_d.a(MissionVariable.field_c, true, asa.field_a);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -86,14 +86,14 @@ final class wu extends uda {
         try {
           this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "wu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, boolean param1) {
         this.field_d.g(1, param0 ^ -72);
-        this.field_d.a(et.field_c, true, je.field_c);
-        this.field_d.a(true, param0 ^ -21120, false, qcb.field_q, 0);
+        this.field_d.a(MissionVariable.field_c, true, je.field_c);
+        this.field_d.a(true, param0 ^ -21120, false, SetGrapplingHookMaxExtension8Force.field_q, 0);
         this.field_d.a(0, (byte) -101, pja.field_l);
         this.field_d.d(-34, 0);
         this.field_d.g(0, -79);
@@ -115,12 +115,12 @@ final class wu extends uda {
     final void a(int param0) {
         this.field_d.g(1, -59);
         this.field_d.a(asa.field_a, true, asa.field_a);
-        this.field_d.a(0, qcb.field_q, param0 ^ 2536);
-        this.field_d.a(0, (byte) -101, qcb.field_q);
+        this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, param0 ^ 2536);
+        this.field_d.a(0, (byte) -101, SetGrapplingHookMaxExtension8Force.field_q);
         this.field_d.d(-70, 1);
         this.field_d.a((ura) null, -124);
         this.field_d.g(0, -62);
-        this.field_d.a(0, (byte) -76, qcb.field_q);
+        this.field_d.a(0, (byte) -76, SetGrapplingHookMaxExtension8Force.field_q);
         if (param0 != 2543) {
           field_h = (phb) null;
         }
@@ -146,14 +146,14 @@ final class wu extends uda {
           var2 = "You";
         }
         var3 = new String[]{var2};
-        if (foa.field_p == 1) {
+        if (SetMissionResnetResourceTickTime.field_p == 1) {
           var3 = new String[]{var2, null, null, null, null, null};
         }
         var4 = 2;
         if (ssa.b(2)) {
-          if (!si.field_o[81]) {
+          if (!SetMachineGunEnergyUsed.field_o[81]) {
             if (ssa.b(2) &&
-              si.field_o[82]) {
+              SetMachineGunEnergyUsed.field_o[82]) {
               var4 = 1;
             }
             if (!ssa.b(2)) {
@@ -167,18 +167,18 @@ final class wu extends uda {
               di.field_l.a(false, -13027);
               var6 = mnb.field_d ? 1 : 0;
               stackIn_34_0 = (bqa.a(false)) ? 7 : 0;
-              lha.a(stackIn_34_0, var6 != 0, (byte) -85, -1);
-              dua.field_o = false;
-              aka.field_p = false;
-              bg.field_o = true;
-              idb.field_o = true;
+              GetNebulaFadesOutWhenClose.a(stackIn_34_0, var6 != 0, (byte) -85, -1);
+              SetMassDriverFireForce.field_o = false;
+              GetSniperCannonProjectiles.field_p = false;
+              GetMessageFadetime.field_o = true;
+              GetThrusterSmallForce.field_o = true;
               if (wh.g(-120)) {
-                dpa.field_p.h(24335, 71);
-                vga.field_b = ldb.field_o;
+                RequestNewestBlackboxRecording.field_p.h(24335, 71);
+                vga.field_b = GetRepairModePower.field_o;
               }
               return;
             }
-            if (si.field_o[86]) {
+            if (SetMachineGunEnergyUsed.field_o[86]) {
               param0 = true;
             }
             var5Lifetime2 = hob.a(new Random(), 2147483647, 117);
@@ -191,21 +191,21 @@ final class wu extends uda {
             di.field_l.a(false, -13027);
             var6Lifetime2 = mnb.field_d ? 1 : 0;
             stackIn_22_0 = (bqa.a(false)) ? 7 : 0;
-            lha.a(stackIn_22_0, var6Lifetime2 != 0, (byte) -85, -1);
-            dua.field_o = false;
-            aka.field_p = false;
-            bg.field_o = true;
-            idb.field_o = true;
+            GetNebulaFadesOutWhenClose.a(stackIn_22_0, var6Lifetime2 != 0, (byte) -85, -1);
+            SetMassDriverFireForce.field_o = false;
+            GetSniperCannonProjectiles.field_p = false;
+            GetMessageFadetime.field_o = true;
+            GetThrusterSmallForce.field_o = true;
             if (wh.g(-120)) {
-              dpa.field_p.h(24335, 71);
-              vga.field_b = ldb.field_o;
+              RequestNewestBlackboxRecording.field_p.h(24335, 71);
+              vga.field_b = GetRepairModePower.field_o;
             }
             return;
           }
           var4 = 0;
         }
         if (ssa.b(2) &&
-          si.field_o[82]) {
+          SetMachineGunEnergyUsed.field_o[82]) {
           var4 = 1;
         }
         if (!ssa.b(2)) {
@@ -219,9 +219,9 @@ final class wu extends uda {
           di.field_l.a(false, -13027);
           var6Lifetime1 = mnb.field_d ? 1 : 0;
           stackIn_52_0 = (bqa.a(false)) ? 7 : 0;
-          lha.a(stackIn_52_0, var6Lifetime1 != 0, (byte) -85, -1);
+          GetNebulaFadesOutWhenClose.a(stackIn_52_0, var6Lifetime1 != 0, (byte) -85, -1);
         } else {
-          if (!si.field_o[86]) {
+          if (!SetMachineGunEnergyUsed.field_o[86]) {
             var5Lifetime1 = hob.a(new Random(), 2147483647, 117);
             if (param0) {
               var4 = 3;
@@ -232,7 +232,7 @@ final class wu extends uda {
             di.field_l.a(false, -13027);
             var6Lifetime1 = mnb.field_d ? 1 : 0;
             stackIn_77_0 = (bqa.a(false)) ? 7 : 0;
-            lha.a(stackIn_77_0, var6Lifetime1 != 0, (byte) -85, -1);
+            GetNebulaFadesOutWhenClose.a(stackIn_77_0, var6Lifetime1 != 0, (byte) -85, -1);
           } else {
             param0 = true;
             var5Lifetime1 = hob.a(new Random(), 2147483647, 117);
@@ -245,16 +245,16 @@ final class wu extends uda {
             di.field_l.a(false, -13027);
             var6Lifetime1 = mnb.field_d ? 1 : 0;
             stackIn_65_0 = (bqa.a(false)) ? 7 : 0;
-            lha.a(stackIn_65_0, var6Lifetime1 != 0, (byte) -85, -1);
+            GetNebulaFadesOutWhenClose.a(stackIn_65_0, var6Lifetime1 != 0, (byte) -85, -1);
           }
         }
-        dua.field_o = false;
-        aka.field_p = false;
-        bg.field_o = true;
-        idb.field_o = true;
+        SetMassDriverFireForce.field_o = false;
+        GetSniperCannonProjectiles.field_p = false;
+        GetMessageFadetime.field_o = true;
+        GetThrusterSmallForce.field_o = true;
         if (wh.g(-120)) {
-          dpa.field_p.h(24335, 71);
-          vga.field_b = ldb.field_o;
+          RequestNewestBlackboxRecording.field_p.h(24335, 71);
+          vga.field_b = GetRepairModePower.field_o;
         }
     }
 
@@ -268,7 +268,7 @@ final class wu extends uda {
           var3.a(var2, 16383);
           var3.b(-3286, 0.125f, 0.125f, 1.0f);
           var3.a(this.field_f, 0.0f, 0.0f, (byte) 13);
-          this.field_d.a(wda.field_o, true);
+          this.field_d.a(LoadSettings.field_o, true);
           this.field_d.g(0, -52);
         }
         if (param0 == 8) {
@@ -285,7 +285,7 @@ final class wu extends uda {
             field_h = (phb) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "wu.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wu.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

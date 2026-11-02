@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-abstract class pf extends ha {
+abstract class pf extends GraphicsToolkit {
     private jaclib.memory.heap.NativeHeap field_jc;
     static String[] field_Yb;
     rga field_Mb;
-    private ij field_s;
+    private IntrusiveDeque field_s;
     Object field_qc;
     private Hashtable field_rb;
     int field_db;
@@ -116,7 +116,7 @@ abstract class pf extends ha {
     boolean field_zb;
     int field_rc;
     private boolean field_Tb;
-    clb field_fc;
+    ConsoleCommandRegistry field_fc;
     private mkb field_C;
     private vmb field_G;
     private roa field_w;
@@ -209,7 +209,7 @@ abstract class pf extends ha {
         if (param0 != 0) {
           return;
         }
-        if (vl.field_p == this.field_pb) {
+        if (GetMassDriverFireForce.field_p == this.field_pb) {
           var2 = this.f((byte) -128);
           this.field_O.a(0.0f, var2, var2, (byte) 13);
         }
@@ -243,8 +243,8 @@ abstract class pf extends ha {
         this.a(-44, false);
         this.r((byte) -64);
         this.a(-86, true);
-        this.a(0, (byte) -53, qcb.field_q);
-        this.a(0, qcb.field_q, 7);
+        this.a(0, (byte) -53, SetGrapplingHookMaxExtension8Force.field_q);
+        this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
     private final void d(int param0) {
@@ -268,7 +268,7 @@ abstract class pf extends ha {
           }
           this.a(false, (byte) 94, param2, param0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pf.SE(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pf.SE(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -331,7 +331,7 @@ abstract class pf extends ha {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -366,8 +366,8 @@ abstract class pf extends ha {
         this.a(-51, this.field_G);
         this.a(bk.field_v, 0, 256, 66);
         this.a(-82, true);
-        this.a(0, (byte) -122, qcb.field_q);
-        this.a(0, qcb.field_q, 7);
+        this.a(0, (byte) -122, SetGrapplingHookMaxExtension8Force.field_q);
+        this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
     abstract void I(int param0);
@@ -379,13 +379,13 @@ abstract class pf extends ha {
         boolean decompiledFrameRemainder0 = true;
         var4 = VoidHunters.field_G;
         if (param1 == 1) {
-          this.a(et.field_c, true, et.field_c);
+          this.a(MissionVariable.field_c, true, MissionVariable.field_c);
         } else {
           if (param1 == 0) {
             this.a(asa.field_a, true, asa.field_a);
           } else {
             if (param1 == 2) {
-              this.a(et.field_c, true, df.field_o);
+              this.a(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
             } else {
               if (param1 == 3) {
                 this.a(asa.field_a, true, je.field_c);
@@ -550,7 +550,7 @@ abstract class pf extends ha {
         Throwable decompiledCaughtException = null;
         Throwable var7 = null;
         RuntimeException var7_ref = null;
-        this.field_s = new ij();
+        this.field_s = new IntrusiveDeque();
         this.field_ec = true;
         this.field_O = new oj();
         this.field_t = new oj();
@@ -599,7 +599,7 @@ abstract class pf extends ha {
         this.field_sb = false;
         this.field_g = true;
         this.field_gc = new float[]{1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f};
-        this.field_pb = pob.field_c;
+        this.field_pb = SetVariableAction.field_c;
         this.field_Cb = 0;
         this.field_mc = 1;
         this.field_Fb = this.field_gc;
@@ -616,7 +616,7 @@ abstract class pf extends ha {
         this.field_Sb = 1.0f;
         this.field_zb = true;
         this.field_xc = 0;
-        this.field_fc = to.field_o;
+        this.field_fc = GetGrapplingHookRopeBreakLength.field_o;
         this.field_n = 128;
         this.field_kb = new jaclib.memory.Stream();
         oj discarded$1 = new oj();
@@ -679,7 +679,7 @@ abstract class pf extends ha {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -739,7 +739,7 @@ abstract class pf extends ha {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -807,7 +807,7 @@ abstract class pf extends ha {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -838,7 +838,7 @@ abstract class pf extends ha {
         for (var2 = 0; var2 < this.field_L; var2++) {
           this.field_U[var2] = asa.field_a;
           this.field_z[var2] = asa.field_a;
-          this.field_A[var2] = fsa.field_o;
+          this.field_A[var2] = SetGrappleDebris.field_o;
           this.field_Eb[var2] = new oj();
         }
         this.field_Lb = new fsb[-2 + this.field_qb];
@@ -1088,7 +1088,7 @@ abstract class pf extends ha {
     final void c(int param0, int param1) {
         int var5 = 0;
         int var4 = 0;
-        clb var3 = null;
+        ConsoleCommandRegistry var3 = null;
         int var6 = VoidHunters.field_G;
         if (param0 < 53) {
           return;
@@ -1098,7 +1098,7 @@ abstract class pf extends ha {
           if (param1 == 1) {
             var5 = 1;
             var4 = 1;
-            var3 = to.field_o;
+            var3 = GetGrapplingHookRopeBreakLength.field_o;
           } else {
             if (2 == param1) {
               var3 = oj.field_b;
@@ -1136,9 +1136,9 @@ abstract class pf extends ha {
     final void h(byte param0) {
         mma var3 = null;
         int var2 = -109 / ((param0 + 65) / 34);
-        if (this.field_pb != vl.field_p) {
+        if (this.field_pb != GetMassDriverFireForce.field_p) {
           var3 = this.field_pb;
-          this.field_pb = vl.field_p;
+          this.field_pb = GetMassDriverFireForce.field_p;
           if (var3.a(-12178)) {
             this.s(0);
           }
@@ -1181,7 +1181,7 @@ abstract class pf extends ha {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1211,8 +1211,8 @@ abstract class pf extends ha {
         this.a(-75, false);
         this.k(126);
         this.a(-101, true);
-        this.a(0, (byte) -70, qcb.field_q);
-        this.a(0, qcb.field_q, 7);
+        this.a(0, (byte) -70, SetGrapplingHookMaxExtension8Force.field_q);
+        this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
     final int[] Y() {
@@ -1221,9 +1221,9 @@ abstract class pf extends ha {
 
     final void w(byte param0) {
         mma var2 = null;
-        if (pob.field_c != this.field_pb) {
+        if (SetVariableAction.field_c != this.field_pb) {
           var2 = this.field_pb;
-          this.field_pb = pob.field_c;
+          this.field_pb = SetVariableAction.field_c;
           if (var2.a(-12178)) {
             this.s(0);
           }
@@ -1238,7 +1238,7 @@ abstract class pf extends ha {
     abstract eb a(int param0, byte[] param1, kb param2, int param3, int param4, int param5, boolean param6, int param7);
 
     void o() {
-        ksa var1 = null;
+        IntrusiveNode var1 = null;
         Enumeration var1_ref = null;
         java.awt.Canvas var2 = null;
         int var3 = VoidHunters.field_G;
@@ -1253,7 +1253,7 @@ abstract class pf extends ha {
             var2 = (java.awt.Canvas) (var1_ref.nextElement());
             this.a(var2, this.field_rb.get(var2), 0);
           }
-          uhb.a((byte) 104, true, false);
+          SetDebrisFoundInPairs.a((byte) 104, true, false);
           this.field_Zb.release();
           this.field_hc = true;
         }
@@ -1300,7 +1300,7 @@ abstract class pf extends ha {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -1385,7 +1385,7 @@ abstract class pf extends ha {
         this.field_C = this.a(false, 3);
         this.field_C.a(28, 140, 126);
         var2 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (4 > var2) {
             var3 = this.field_C.a(true, (byte) 119);
             if (var3 != null) {
@@ -1465,7 +1465,7 @@ abstract class pf extends ha {
               }
               var4.b();
               if (this.field_C.b(-20836)) {
-                break L1;
+                break scanLoop1;
               }
             }
             var2++;
@@ -1501,7 +1501,7 @@ abstract class pf extends ha {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1544,7 +1544,7 @@ abstract class pf extends ha {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -1557,7 +1557,7 @@ abstract class pf extends ha {
             this.a();
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pf.LF(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pf.LF(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -1575,8 +1575,8 @@ abstract class pf extends ha {
         if (param0 <= 63) {
           this.field_yb = (oj) null;
         }
-        if (this.field_A[this.field_ab] != fsa.field_o) {
-          this.field_A[this.field_ab] = fsa.field_o;
+        if (this.field_A[this.field_ab] != SetGrappleDebris.field_o) {
+          this.field_A[this.field_ab] = SetGrappleDebris.field_o;
           this.field_Eb[this.field_ab].c(1);
           this.B((byte) 96);
         }
@@ -1622,10 +1622,10 @@ abstract class pf extends ha {
         this.a(-112, false);
         this.a((byte) -6, this.field_P, 0);
         this.a(115, this.field_G);
-        this.a(era.field_o, 1, 256, -114);
+        this.a(GetFightersPerPlayerMaximum.field_o, 1, 256, -114);
         this.a(-27, true);
-        this.a(0, (byte) -97, qcb.field_q);
-        this.a(0, qcb.field_q, 7);
+        this.a(0, (byte) -97, SetGrapplingHookMaxExtension8Force.field_q);
+        this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
     abstract boolean a(int param0, kb param1, mj param2);
@@ -1677,7 +1677,7 @@ abstract class pf extends ha {
             this.field_V = this.field_V & -2;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pf.HF(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pf.HF(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1707,7 +1707,7 @@ abstract class pf extends ha {
         this.field_P = this.a(false, param0 - 3093);
         this.field_P.a(12, param0, 86);
         var2 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var2 < 4) {
             var3 = this.field_P.a(true, (byte) 52);
             if (var3 != null) {
@@ -1731,7 +1731,7 @@ abstract class pf extends ha {
               }
               var4.b();
               if (this.field_P.b(param0 ^ -23932)) {
-                break L1;
+                break scanLoop1;
               }
             }
             var2++;
@@ -1752,10 +1752,10 @@ abstract class pf extends ha {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (!eja.a(param1, (byte) -120, param2)) {
+        if (!GetUseCircleFill.a(param1, (byte) -120, param2)) {
           return false;
         }
-        if (rc.a(param2, (byte) 91, param1) | (param0 != (param1 & 36864) ? true : false) | uoa.a(param2, param1, (byte) 9)) {
+        if (rc.a(param2, (byte) 91, param1) | (param0 != (param1 & 36864) ? true : false) | IncrementVariableAction.a(param2, param1, (byte) 9)) {
           return true;
         }
         return (bla.a(param1, false, param2) | ((param1 & 8192) != 0 ? true : false) | hsb.a(param2, 65536, param1)) & ((55 & param2) == 0 ? true : false);
@@ -1772,7 +1772,7 @@ abstract class pf extends ha {
           param0[3] = this.field_Bb;
           param0[2] = this.field_F;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pf.K(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pf.K(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1835,7 +1835,7 @@ abstract class pf extends ha {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1866,8 +1866,8 @@ abstract class pf extends ha {
         this.a(-72, false);
         this.r((byte) -54);
         this.a(-59, true);
-        this.a(0, (byte) -117, qcb.field_q);
-        this.a(0, qcb.field_q, 7);
+        this.a(0, (byte) -117, SetGrapplingHookMaxExtension8Force.field_q);
+        this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
     final aja a(int param0, int param1, boolean param2) {
@@ -1991,7 +1991,7 @@ abstract class pf extends ha {
           this.a(101, this.field_ic);
           this.a(param1, 0, param2, -114);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pf.FH(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pf.FH(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -2013,10 +2013,10 @@ abstract class pf extends ha {
         this.field_O.a(0.0f, (float)param0 - var7, -var7 + (float)param1, (byte) 13);
         this.h(20837);
         this.a(-118, false);
-        this.a(0, era.field_o, 4);
+        this.a(0, GetFightersPerPlayerMaximum.field_o, 4);
         this.a(-110, true);
-        this.a(0, (byte) -67, qcb.field_q);
-        this.a(0, qcb.field_q, 7);
+        this.a(0, (byte) -67, SetGrapplingHookMaxExtension8Force.field_q);
+        this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
     abstract void m(int param0);
@@ -2179,7 +2179,7 @@ abstract class pf extends ha {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2244,7 +2244,7 @@ abstract class pf extends ha {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -2317,7 +2317,7 @@ abstract class pf extends ha {
                 for (var8 = 0; param0.field_f > var8; var8++) {
                   incrementValue$0 = var6;
                   var6++;
-                  var4[incrementValue$0] = knb.a(param0.field_b[dla.a(255, (int) param0.field_h[var5])], param0.field_a[var5] << 24);
+                  var4[incrementValue$0] = SetAngularForceDownshift.a(param0.field_b[dla.a(255, (int) param0.field_h[var5])], param0.field_a[var5] << 24);
                   var5++;
                 }
               }
@@ -2332,7 +2332,7 @@ abstract class pf extends ha {
                   stackIn_12_0 = var4;
                   stackIn_12_1 = incrementValue$2;
                   if (var9 != 0) {
-                    stackIn_13_2 = knb.a(-16777216, var9);
+                    stackIn_13_2 = SetAngularForceDownshift.a(-16777216, var9);
                   } else {
                     stackIn_13_2 = 0;
                   }
@@ -2357,7 +2357,7 @@ abstract class pf extends ha {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2421,7 +2421,7 @@ abstract class pf extends ha {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -2430,7 +2430,7 @@ abstract class pf extends ha {
           this.field_jc = ((cba) (param0)).field_f;
           this.field_m = this.field_jc.a(32768, false);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pf.GB(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pf.GB(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -15,9 +15,9 @@ final class ufb extends java.awt.Canvas implements java.awt.event.FocusListener 
           if (param1 != -32335) {
             ufb.a(false);
           }
-          db.a(this.field_b, param0, (byte) 126);
+          GetWorldWidthUpshift.a(this.field_b, param0, (byte) 126);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ufb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ufb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -28,7 +28,7 @@ final class ufb extends java.awt.Canvas implements java.awt.event.FocusListener 
         try {
           this.field_a = true;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ufb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ufb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

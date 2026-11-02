@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class qn extends ksa {
+final class qn extends IntrusiveNode {
     static String field_d;
     static int field_f;
     int field_e;
@@ -12,8 +12,8 @@ final class qn extends ksa {
     int field_g;
 
     final static void c(byte param0) {
-        ms.field_y = new ij();
-        gtb.field_d = new ij();
+        ms.field_y = new IntrusiveDeque();
+        gtb.field_d = new IntrusiveDeque();
         if (param0 >= 52) {
           jp.field_Jc = new Random();
           return;
@@ -75,7 +75,7 @@ final class qn extends ksa {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

@@ -13,15 +13,15 @@ final class qb implements dja {
 
     public final tv a(byte param0) {
         int var2 = 50 / ((param0 + 64) / 50);
-        return (tv) ((Object) new mib());
+        return (tv) ((Object) new CarouselCommongameInfo());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           qb.a(-6);
-          return (tv[]) ((Object) new mib[param1]);
+          return (tv[]) ((Object) new CarouselCommongameInfo[param1]);
         }
-        return (tv[]) ((Object) new mib[param1]);
+        return (tv[]) ((Object) new CarouselCommongameInfo[param1]);
     }
 
     static {

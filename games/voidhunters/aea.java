@@ -90,7 +90,7 @@ final class aea {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), field_z + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), field_z + param0 + ',' + param1 + ')');
         }
     }
 

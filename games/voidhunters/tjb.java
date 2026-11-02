@@ -28,7 +28,7 @@ final class tjb extends llb {
         if (param1 > -60) {
           this.field_Eb = 67;
         }
-        stackIn_5_0 = (pma.field_o != 85) ? 0 : 1;
+        stackIn_5_0 = (SetBombletSprayProjectileDamage.field_o != 85) ? 0 : 1;
         var4 = stackIn_5_0;
         if (this.field_xb != null) {
           if (var4 != 0 &&
@@ -42,10 +42,10 @@ final class tjb extends llb {
         if (null == this.field_xb &&
           this == fkb.field_m &&
           var4 != 0) {
-          fea.a(-1);
+          GetUseExtraBackground.a(-1);
           return true;
         }
-        var5 = jl.field_r;
+        var5 = SetClientSideDragging.field_r;
         if (var5 > 0) {
           if (ttb.field_B == var5) {
             var5 = 63;
@@ -86,24 +86,24 @@ final class tjb extends llb {
               var5 = 32768 | this.field_Ab[param0];
               var6 = ow.field_b;
               if (var6 == 0 &&
-                null != lqa.field_o) {
+                null != SetSpinningBladeSpindamageMultiplier.field_o) {
                 var6 = 1;
               }
-              if (jia.a(var6, (byte) 19) == 2) {
+              if (SetReverbDry.a(var6, (byte) 19) == 2) {
                 mea.a(1, (byte) -119, param2, var6);
               }
               var8 = (String) null;
-              va.a((String) null, -25719, var5, param3, ow.field_b, waa.field_x);
+              SetBurstFireReload.a((String) null, -25719, var5, param3, ow.field_b, waa.field_x);
               stackIn_15_0 = ow.field_b;
               stackIn_15_1 = var5;
               stackIn_15_2 = lsa.field_f;
               stackIn_16_3 = (param1) ? false : true;
               jtb.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, waa.field_x);
-              fea.a(-1);
-              fd.a(4907);
+              GetUseExtraBackground.a(-1);
+              SetSalvoRepairTimeMultiplier.a(4907);
             } else {
               wha.a(29012);
-              fea.a(-1);
+              GetUseExtraBackground.a(-1);
             }
           }
         } else {
@@ -159,7 +159,7 @@ final class tjb extends llb {
             var14 = null;
             if (this.field_Db[var13] != null ||
               this.field_Ab[var13] == -1) {
-              var14 = ie.field_o;
+              var14 = GetTeamSelectionSpeedup.field_o;
             }
             this.field_Bb[var13] = new cna(0L, param2, (llb) null, param3, (phb) (var14), param6[var13]);
             this.b(-561, this.field_Bb[var13]);
@@ -168,7 +168,7 @@ final class tjb extends llb {
               this.field_Jb = var15;
             }
           }
-          this.field_Jb = this.field_Jb + (10 + ie.field_o.field_m);
+          this.field_Jb = this.field_Jb + (10 + GetTeamSelectionSpeedup.field_o.field_m);
           this.a((byte) 120, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -217,7 +217,7 @@ final class tjb extends llb {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -278,9 +278,9 @@ final class tjb extends llb {
         if (param0 != 0) {
           return false;
         }
-        tsb.field_q = true;
+        SetAudioRangeCutoff.field_q = true;
         ska.field_p = wt.a(false) + 15000L;
-        return qmb.field_q == 11 ? true : false;
+        return GetSpinningBladeAimspeed.field_q == 11 ? true : false;
     }
 
     final void a(int param0, int param1, byte param2) {
@@ -395,7 +395,7 @@ final class tjb extends llb {
         RuntimeException var2 = null;
         var3 = VoidHunters.field_G;
         try {
-          if (!ls.field_q) {
+          if (!GetMissionTerrainNebulaProbability.field_q) {
             stackIn_3_0 = null;
             return stackIn_3_0;
           }
@@ -426,7 +426,7 @@ final class tjb extends llb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 

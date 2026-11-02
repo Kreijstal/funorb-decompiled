@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class km extends jtb {
-    ds field_p;
+    PacketBuffer field_p;
     int field_r;
     static int field_o;
     byte field_q;
@@ -20,15 +20,15 @@ final class km extends jtb {
         if (this.field_n) {
           throw new RuntimeException();
         }
-        if (this.field_p.field_e < this.field_p.field_h.length - this.field_q) {
+        if (this.field_p.position < this.field_p.payload.length - this.field_q) {
           throw new RuntimeException();
         }
         var2 = 9 / ((17 - param0) / 58);
-        return this.field_p.field_h;
+        return this.field_p.payload;
     }
 
     final static void e(int param0) {
-        fva.field_p = true;
+        SetFightersPerPlayerMaximum.field_p = true;
         ow.field_b = 0;
         if (param0 != 1) {
           field_o = -76;
@@ -57,10 +57,10 @@ final class km extends jtb {
           var3 = var10.e((byte) -87);
           var10.p(-23497);
           gs.field_a = bh.a(var10, (byte) -122);
-          raa.field_p = new int[var3][];
-          eha.field_o = new wma[var3];
+          SetMachineGunFireForce.field_p = new int[var3][];
+          SetMissileLauncherFireForce.field_o = new wma[var3];
           for (var4 = 0; var3 > var4; var4++) {
-            eha.field_o[var4] = ur.a(var8, (byte) -105);
+            SetMissileLauncherFireForce.field_o[var4] = GetBuildViewAutozoomTimeout.a(var8, (byte) -105);
           }
           var10.f((byte) -79);
           var9 = 0;
@@ -69,11 +69,11 @@ final class km extends jtb {
             return;
           }
           while (var9 < var3) {
-            var5 = eha.field_o[var9];
+            var5 = SetMissileLauncherFireForce.field_o[var9];
             var5.a(-21227, 6, 6, 6, 1);
             var5.a(param1 + 83);
             var6 = new int[]{var5.field_B + var5.field_d >> 1, var5.field_a + var5.field_u >> 1, var5.field_s + var5.field_q >> 1};
-            raa.field_p[var9] = var6;
+            SetMachineGunFireForce.field_p[var9] = var6;
             var5.a(param1 - 45, -var6[2], -var6[0], -var6[1]);
             var9++;
           }
@@ -88,7 +88,7 @@ final class km extends jtb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -96,13 +96,13 @@ final class km extends jtb {
         if (param0 != -119) {
           km.g((byte) 33);
         }
-        if (qmb.field_q == 10) {
-          twa.b(param0 ^ -108);
-          qmb.field_q = 11;
+        if (GetSpinningBladeAimspeed.field_q == 10) {
+          SpawnChoice.b(param0 ^ -108);
+          GetSpinningBladeAimspeed.field_q = 11;
         } else {
-          if (!nua.b(true)) {
-            twa.b(param0 ^ -108);
-            qmb.field_q = 11;
+          if (!SetAutoaim.b(true)) {
+            SpawnChoice.b(param0 ^ -108);
+            GetSpinningBladeAimspeed.field_q = 11;
           }
         }
         dga.field_a = true;
@@ -118,7 +118,7 @@ final class km extends jtb {
         if (param0 != -4) {
           return -96;
         }
-        return this.field_p.field_e * 100 / (this.field_p.field_h.length - this.field_q);
+        return this.field_p.position * 100 / (this.field_p.payload.length - this.field_q);
     }
 
     static {

@@ -105,8 +105,8 @@ final class cob extends vka {
           this.field_y.start();
           this.field_v = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-          if (lb.a(param0, 1431655765) != 1) {
-            this.a(hj.a(param0, (byte) -104));
+          if (SetBombletSprayRandomness.a(param0, 1431655765) != 1) {
+            this.a(GetSalvoaim.a(param0, (byte) -104));
             return;
           }
           this.field_y = null;

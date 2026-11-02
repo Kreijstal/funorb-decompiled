@@ -70,7 +70,7 @@ abstract class bl extends dqa {
         }
         if (null == vib.field_b) {
           vib.field_b = new phb(this.field_h, this.field_f);
-          de.a(111, vib.field_b);
+          SetTorpedoEnergyUsed.a(111, vib.field_b);
           dma.a();
           this.b(0, 1630174241, 0);
           super.b(-param0 - this.field_g, param1, 127, -this.field_r - param3);
@@ -86,7 +86,7 @@ abstract class bl extends dqa {
         }
         if (vib.field_b.field_q < this.field_h) {
           vib.field_b = new phb(this.field_h, this.field_f);
-          de.a(111, vib.field_b);
+          SetTorpedoEnergyUsed.a(111, vib.field_b);
           dma.a();
           this.b(0, 1630174241, 0);
           super.b(-param0 - this.field_g, param1, 127, -this.field_r - param3);
@@ -102,7 +102,7 @@ abstract class bl extends dqa {
         }
         if (this.field_f > vib.field_b.field_p) {
           vib.field_b = new phb(this.field_h, this.field_f);
-          de.a(111, vib.field_b);
+          SetTorpedoEnergyUsed.a(111, vib.field_b);
           dma.a();
           this.b(0, 1630174241, 0);
           super.b(-param0 - this.field_g, param1, 127, -this.field_r - param3);
@@ -116,7 +116,7 @@ abstract class bl extends dqa {
           vib.field_b.d(param0 + this.field_g, this.field_r + param3, this.field_w);
           return;
         }
-        de.a(111, vib.field_b);
+        SetTorpedoEnergyUsed.a(111, vib.field_b);
         dma.a();
         this.b(0, 1630174241, 0);
         super.b(-param0 - this.field_g, param1, 127, -this.field_r - param3);
@@ -147,7 +147,7 @@ abstract class bl extends dqa {
     abstract void b(int param0, int param1, int param2);
 
     final void c(int param0, int param1, int param2) {
-        this.a(-param0 + fob.field_a >> 1, param0, param2, 1, vi.field_p - param2 >> 1);
+        this.a(-param0 + fob.field_a >> 1, param0, param2, 1, GetSniperCannonFiringLeeway.field_p - param2 >> 1);
         if (param1 != -1860440319) {
           this.field_z = false;
         }
@@ -173,7 +173,7 @@ abstract class bl extends dqa {
         RuntimeException var1_ref = null;
         var4 = VoidHunters.field_G;
         try {
-          var5 = rua.field_q;
+          var5 = GetAngularVelocitySustain.field_q;
           var1 = var5;
           if (param0) {
             bl.i((byte) 60);
@@ -194,18 +194,18 @@ abstract class bl extends dqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1_ref), "bl.EA(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref), "bl.EA(" + param0 + ')');
         }
     }
 
     bl(ida param0, int param1, int param2) {
-        super(fob.field_a - param1 >> 1, -param2 + vi.field_p >> 1, param1, param2, (wwa) null);
+        super(fob.field_a - param1 >> 1, -param2 + GetSniperCannonFiringLeeway.field_p >> 1, param1, param2, (wwa) null);
         try {
           this.field_w = 0;
           this.field_v = param0;
           this.field_z = false;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

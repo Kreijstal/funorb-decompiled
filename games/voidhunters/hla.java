@@ -53,7 +53,7 @@ final class hla {
               var11 = var16;
               if (var16 == null ||
                 var16.getClass() != var10) {
-                dupTemp$0 = udb.a(param0, param2, var10, -82);
+                dupTemp$0 = GetVelocitySustainMax.a(param0, param2, var10, -82);
                 param4[var8] = dupTemp$0;
                 var11 = dupTemp$0;
               }
@@ -109,7 +109,7 @@ final class hla {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 

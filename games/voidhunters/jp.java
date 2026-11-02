@@ -6,14 +6,14 @@ import java.util.*;
 final class jp extends pf {
     static Random field_Jc;
     static int field_Oc;
-    private ij field_yc;
+    private IntrusiveDeque field_yc;
     private jaggl.OpenGL field_zc;
-    private ij field_Ic;
-    private ij field_Uc;
-    private ij field_Cc;
-    private ij field_bd;
-    private ij field_Ec;
-    private ij field_Gc;
+    private IntrusiveDeque field_Ic;
+    private IntrusiveDeque field_Uc;
+    private IntrusiveDeque field_Cc;
+    private IntrusiveDeque field_bd;
+    private IntrusiveDeque field_Ec;
+    private IntrusiveDeque field_Gc;
     private boolean field_cd;
     private boolean field_Kc;
     private long field_Tc;
@@ -43,7 +43,7 @@ final class jp extends pf {
           }
           this.field_Pc[param2] = (esb) (param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "jp.VC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jp.VC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -82,7 +82,7 @@ final class jp extends pf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -100,13 +100,13 @@ final class jp extends pf {
         try {
           var5_int = -83 / ((-4 - param3) / 32);
           if (tu.field_b != param0) {
-            if (era.field_o != param0) {
+            if (GetFightersPerPlayerMaximum.field_o != param0) {
               if (di.field_i == param0) {
                 var6 = 4;
                 var7 = 3 * param2;
               } else {
                 if (param0 != bk.field_v) {
-                  if (param0 != fu.field_o) {
+                  if (param0 != GetUseTriFill.field_o) {
                     var7 = param2;
                     var6 = 0;
                   } else {
@@ -138,7 +138,7 @@ final class jp extends pf {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -233,13 +233,13 @@ final class jp extends pf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final void e(boolean param0) {
         if (param0) {
-          this.field_Cc = (ij) null;
+          this.field_Cc = (IntrusiveDeque) null;
         }
         if (this.field_g) {
           jaggl.OpenGL.glEnable(16384);
@@ -308,7 +308,7 @@ final class jp extends pf {
           jaggl.OpenGL.glLightf(var4, 4616, 0.0f);
         }
         if (param0 < 106) {
-          this.field_Gc = (ij) null;
+          this.field_Gc = (IntrusiveDeque) null;
         }
         jaggl.OpenGL.glFogf(2914, 0.949999988079071f);
         jaggl.OpenGL.glFogi(2917, 9729);
@@ -340,7 +340,7 @@ final class jp extends pf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ final class jp extends pf {
           jaggl.OpenGL.glDisable(2896);
         }
         if (param0 >= -15) {
-          this.field_bd = (ij) null;
+          this.field_bd = (IntrusiveDeque) null;
         }
     }
 
@@ -378,7 +378,7 @@ final class jp extends pf {
               stackIn_9_0 = new gn(this, param0, param3, param2, param6, param4);
               return (eb) ((Object) stackIn_9_0);
             }
-            var9 = new ubb(this, qua.field_d, mj.field_f, hj.a(param0, (byte) -100), hj.a(param3, (byte) -121));
+            var9 = new ubb(this, qua.field_d, mj.field_f, GetSalvoaim.a(param0, (byte) -100), GetSalvoaim.a(param3, (byte) -121));
             var9.a(0, param3, param0, param6, param4, param2, 0, (byte) -104);
             stackIn_11_0 = var9;
             return (eb) ((Object) stackIn_11_0);
@@ -395,7 +395,7 @@ final class jp extends pf {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -411,19 +411,19 @@ final class jp extends pf {
           if (this.field_ec) {
             jaggl.OpenGL.glLoadIdentity();
           } else {
-            jaggl.OpenGL.glLoadMatrixf(this.field_O.b(msa.field_q, (byte) 114), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.field_O.b(GetDebrisMax.field_q, (byte) 114), 0);
           }
           this.field_Dc = false;
         } else {
           if (!this.field_cd) {
-            jaggl.OpenGL.glLoadMatrixf(this.field_gb.b(msa.field_q, (byte) 114), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.field_gb.b(GetDebrisMax.field_q, (byte) 114), 0);
             this.field_cd = true;
             this.m(3);
             this.f(73);
           }
           if (!this.field_ec) {
             jaggl.OpenGL.glPushMatrix();
-            jaggl.OpenGL.glMultMatrixf(this.field_O.b(msa.field_q, (byte) 114), 0);
+            jaggl.OpenGL.glMultMatrixf(this.field_O.b(GetDebrisMax.field_q, (byte) 114), 0);
             this.field_Dc = true;
           } else {
             this.field_Dc = false;
@@ -435,19 +435,19 @@ final class jp extends pf {
     }
 
     final void h(boolean param0) {
-        lva.field_o[2] = this.field_Rb * this.field_x;
-        lva.field_o[1] = this.field_Rb * this.field_u;
-        lva.field_o[0] = this.field_Rb * this.field_Sb;
+        GetPhasedEnergyBeamFireForce.field_o[2] = this.field_Rb * this.field_x;
+        GetPhasedEnergyBeamFireForce.field_o[1] = this.field_Rb * this.field_u;
+        GetPhasedEnergyBeamFireForce.field_o[0] = this.field_Rb * this.field_Sb;
         if (!param0) {
           field_Oc = -95;
         }
-        lva.field_o[3] = 1.0f;
-        jaggl.OpenGL.glLightModelfv(2899, lva.field_o, 0);
+        GetPhasedEnergyBeamFireForce.field_o[3] = 1.0f;
+        jaggl.OpenGL.glLightModelfv(2899, GetPhasedEnergyBeamFireForce.field_o, 0);
     }
 
     final synchronized void b(int param0, int param1, int param2) {
         if (param1 <= 89) {
-          this.field_Gc = (ij) null;
+          this.field_Gc = (IntrusiveDeque) null;
         }
         hua var4 = new hua(param2);
         var4.field_b = (long)param0;
@@ -482,7 +482,7 @@ final class jp extends pf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -503,7 +503,7 @@ final class jp extends pf {
           jaggl.OpenGL.glRasterPos2i(0, 0);
           jaggl.OpenGL.glPixelZoom(1.0f, 1.0f);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "jp.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jp.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -591,14 +591,14 @@ final class jp extends pf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final void y(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -41) {
-          this.field_Cc = (ij) null;
+          this.field_Cc = (IntrusiveDeque) null;
         }
         stackIn_6_0 = (this.field_M) && (this.field_X);
         jaggl.OpenGL.glDepthMask(stackIn_6_0);
@@ -639,7 +639,7 @@ final class jp extends pf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -671,7 +671,7 @@ final class jp extends pf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -699,19 +699,19 @@ final class jp extends pf {
     }
 
     final void G(byte param0) {
-        lva.field_o[2] = this.field_x * this.field_oc;
-        lva.field_o[1] = this.field_oc * this.field_u;
-        lva.field_o[0] = this.field_Sb * this.field_oc;
-        lva.field_o[3] = 1.0f;
-        jaggl.OpenGL.glLightfv(16384, 4609, lva.field_o, 0);
-        lva.field_o[1] = this.field_u * -this.field_tc;
+        GetPhasedEnergyBeamFireForce.field_o[2] = this.field_x * this.field_oc;
+        GetPhasedEnergyBeamFireForce.field_o[1] = this.field_oc * this.field_u;
+        GetPhasedEnergyBeamFireForce.field_o[0] = this.field_Sb * this.field_oc;
+        GetPhasedEnergyBeamFireForce.field_o[3] = 1.0f;
+        jaggl.OpenGL.glLightfv(16384, 4609, GetPhasedEnergyBeamFireForce.field_o, 0);
+        GetPhasedEnergyBeamFireForce.field_o[1] = this.field_u * -this.field_tc;
         if (param0 <= 4) {
           return;
         }
-        lva.field_o[2] = -this.field_tc * this.field_x;
-        lva.field_o[3] = 1.0f;
-        lva.field_o[0] = this.field_Sb * -this.field_tc;
-        jaggl.OpenGL.glLightfv(16385, 4609, lva.field_o, 0);
+        GetPhasedEnergyBeamFireForce.field_o[2] = -this.field_tc * this.field_x;
+        GetPhasedEnergyBeamFireForce.field_o[3] = 1.0f;
+        GetPhasedEnergyBeamFireForce.field_o[0] = this.field_Sb * -this.field_tc;
+        jaggl.OpenGL.glLightfv(16385, 4609, GetPhasedEnergyBeamFireForce.field_o, 0);
     }
 
     final void G(int param0) {
@@ -759,7 +759,7 @@ final class jp extends pf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -775,8 +775,8 @@ final class jp extends pf {
         hua var7;
         hua var8;
         hua var9;
-        ksa var10;
-        ksa var11;
+        IntrusiveNode var10;
+        IntrusiveNode var11;
         hua var12;
         var4 = VoidHunters.field_G;
         var2 = 0;
@@ -901,7 +901,7 @@ final class jp extends pf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -929,7 +929,7 @@ final class jp extends pf {
               stackIn_12_0 = new gn(this, param0, param7, param4, param1, param3, param5);
               return (eb) ((Object) stackIn_12_0);
             }
-            var11 = new ubb(this, param0, mj.field_d, hj.a(param7, (byte) -125), hj.a(param4, (byte) -101));
+            var11 = new ubb(this, param0, mj.field_d, GetSalvoaim.a(param7, (byte) -125), GetSalvoaim.a(param4, (byte) -101));
             var11.a(param4, param0, (byte) -51, param5, param1, 0, 0, param7, param3);
             stackIn_10_0 = var11;
             return (eb) ((Object) stackIn_10_0);
@@ -952,7 +952,7 @@ final class jp extends pf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -992,7 +992,7 @@ final class jp extends pf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1012,16 +1012,16 @@ final class jp extends pf {
           var4 = var3.a(-118);
           var5 = 16386 + var2;
           var6 = var3.d(-392138175) / 255.0f;
-          lva.field_o[0] = (float)var3.c((byte) -79);
-          lva.field_o[1] = (float)var3.a(true);
-          lva.field_o[2] = (float)var3.d((byte) 62);
-          lva.field_o[3] = 1.0f;
-          jaggl.OpenGL.glLightfv(var5, 4611, lva.field_o, 0);
-          lva.field_o[0] = (float)dla.a(255, var4 >> 16) * var6;
-          lva.field_o[2] = (float)dla.a(255, var4) * var6;
-          lva.field_o[1] = var6 * (float)(dla.a(var4, 65382) >> 8);
-          lva.field_o[3] = 1.0f;
-          jaggl.OpenGL.glLightfv(var5, 4609, lva.field_o, 0);
+          GetPhasedEnergyBeamFireForce.field_o[0] = (float)var3.c((byte) -79);
+          GetPhasedEnergyBeamFireForce.field_o[1] = (float)var3.a(true);
+          GetPhasedEnergyBeamFireForce.field_o[2] = (float)var3.d((byte) 62);
+          GetPhasedEnergyBeamFireForce.field_o[3] = 1.0f;
+          jaggl.OpenGL.glLightfv(var5, 4611, GetPhasedEnergyBeamFireForce.field_o, 0);
+          GetPhasedEnergyBeamFireForce.field_o[0] = (float)dla.a(255, var4 >> 16) * var6;
+          GetPhasedEnergyBeamFireForce.field_o[2] = (float)dla.a(255, var4) * var6;
+          GetPhasedEnergyBeamFireForce.field_o[1] = var6 * (float)(dla.a(var4, 65382) >> 8);
+          GetPhasedEnergyBeamFireForce.field_o[3] = 1.0f;
+          jaggl.OpenGL.glLightfv(var5, 4609, GetPhasedEnergyBeamFireForce.field_o, 0);
           jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.c(16777215) * var3.c(16777215)));
           jaggl.OpenGL.glEnable(var5);
           var2++;
@@ -1034,7 +1034,7 @@ final class jp extends pf {
     }
 
     final synchronized void a(long param0, int param1) {
-        ksa var4 = new ksa();
+        IntrusiveNode var4 = new IntrusiveNode();
         var4.field_b = param0;
         if (param1 != 0) {
           return;
@@ -1072,7 +1072,7 @@ final class jp extends pf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -1081,24 +1081,24 @@ final class jp extends pf {
           return;
         }
         jaggl.OpenGL.glMatrixMode(5890);
-        if (fsa.field_o == this.field_A[this.field_ab]) {
+        if (SetGrappleDebris.field_o == this.field_A[this.field_ab]) {
           jaggl.OpenGL.glLoadIdentity();
         } else {
-          jaggl.OpenGL.glLoadMatrixf(this.field_Eb[this.field_ab].b(msa.field_q, (byte) 114), 0);
+          jaggl.OpenGL.glLoadMatrixf(this.field_Eb[this.field_ab].b(GetDebrisMax.field_q, (byte) 114), 0);
         }
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
     final void v(byte param0) {
-        lva.field_o[3] = (float)(this.field_jb >>> 24) / 255.0f;
-        lva.field_o[2] = (float)dla.a(255, this.field_jb) / 255.0f;
-        lva.field_o[1] = (float)dla.a(65280, this.field_jb) / 65280.0f;
+        GetPhasedEnergyBeamFireForce.field_o[3] = (float)(this.field_jb >>> 24) / 255.0f;
+        GetPhasedEnergyBeamFireForce.field_o[2] = (float)dla.a(255, this.field_jb) / 255.0f;
+        GetPhasedEnergyBeamFireForce.field_o[1] = (float)dla.a(65280, this.field_jb) / 65280.0f;
         if (param0 != -109) {
           uja var3 = (uja) null;
           this.a((byte) -64, (uja) null);
         }
-        lva.field_o[0] = (float)dla.a(this.field_jb, 16711680) / 16711680.0f;
-        jaggl.OpenGL.glTexEnvfv(8960, 8705, lva.field_o, 0);
+        GetPhasedEnergyBeamFireForce.field_o[0] = (float)dla.a(this.field_jb, 16711680) / 16711680.0f;
+        jaggl.OpenGL.glTexEnvfv(8960, 8705, GetPhasedEnergyBeamFireForce.field_o, 0);
     }
 
     final void l(byte param0) {
@@ -1167,7 +1167,7 @@ final class jp extends pf {
               stackIn_10_0 = new gn(this, param2, param4, param5, param1, param0, param3);
               return (eb) ((Object) stackIn_10_0);
             }
-            var10 = new ubb(this, param2, mj.field_f, hj.a(param4, (byte) -107), hj.a(param5, (byte) -127));
+            var10 = new ubb(this, param2, mj.field_f, GetSalvoaim.a(param4, (byte) -107), GetSalvoaim.a(param5, (byte) -127));
             var10.a(param3, param1, param5, param4, param0, 0, 3314, 0, param2);
             stackIn_12_0 = var10;
             return (eb) ((Object) stackIn_12_0);
@@ -1190,7 +1190,7 @@ final class jp extends pf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -1250,13 +1250,13 @@ final class jp extends pf {
         var28 = null;
         var29 = null;
         var30 = null;
-        this.field_yc = new ij();
-        this.field_Ic = new ij();
-        this.field_Uc = new ij();
-        this.field_Cc = new ij();
-        this.field_bd = new ij();
-        this.field_Ec = new ij();
-        this.field_Gc = new ij();
+        this.field_yc = new IntrusiveDeque();
+        this.field_Ic = new IntrusiveDeque();
+        this.field_Uc = new IntrusiveDeque();
+        this.field_Cc = new IntrusiveDeque();
+        this.field_bd = new IntrusiveDeque();
+        this.field_Ec = new IntrusiveDeque();
+        this.field_Gc = new IntrusiveDeque();
         this.field_Pc = new esb[16];
         this.field_Sc = new jaggl.MapBuffer();
         this.field_Vc = new jaggl.MapBuffer();
@@ -1270,7 +1270,7 @@ final class jp extends pf {
               this.field_Bc.indexOf("brian paul") == -1 &&
               this.field_Bc.indexOf("mesa") == -1) {
               var20 = jaggl.OpenGL.glGetString(7938);
-              var9 = up.a((byte) -67, ' ', var20.replace('.', ' '));
+              var9 = SetFighterBayAimspeed.a((byte) -67, ' ', var20.replace('.', ' '));
               if (var9.length < 2) {
                 throw new RuntimeException("");
               }
@@ -1320,7 +1320,7 @@ final class jp extends pf {
                 var11_int = 0;
                 var12 = 0;
                 var13 = 0;
-                var14 = up.a((byte) -67, ' ', this.field_ad.replace('/', ' '));
+                var14 = SetFighterBayAimspeed.a((byte) -67, ' ', this.field_ad.replace('/', ' '));
                 for (var15 = 0; var14.length > var15; var15++) {
                   var21 = var14[var15];
                   var16 = var21;
@@ -1332,7 +1332,7 @@ final class jp extends pf {
                       if (var21.charAt(0) == 120 &&
                         var21.length() >= 3) {
                         var31 = (CharSequence) ((Object) var21.substring(1, 3));
-                        if (hwa.a(var31, 10)) {
+                        if (SetPointDefenceLaserAimarc.a(var31, 10)) {
                           var13 = 1;
                           var16 = var21.substring(1);
                         }
@@ -1346,7 +1346,7 @@ final class jp extends pf {
                         }
                         if (var16.length() >= 4) {
                           var32 = (CharSequence) ((Object) var16.substring(0, 4));
-                          if (hwa.a(var32, 10)) {
+                          if (SetPointDefenceLaserAimarc.a(var32, 10)) {
                             var33 = (CharSequence) ((Object) var16.substring(0, 4));
                             var11_int = lob.a(63, var33);
                             decompiledRegionSelector0 = 1;
@@ -1431,7 +1431,7 @@ final class jp extends pf {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1459,7 +1459,7 @@ final class jp extends pf {
     }
 
     final synchronized void a(int param0, byte param1) {
-        ksa var3 = new ksa();
+        IntrusiveNode var3 = new IntrusiveNode();
         var3.field_b = (long)param0;
         if (param1 <= 94) {
           return;
@@ -1483,13 +1483,13 @@ final class jp extends pf {
         }
         jaggl.OpenGL.glFogf(2915, this.field_p);
         jaggl.OpenGL.glFogf(2916, this.field_r);
-        lva.field_o[0] = (float)dla.a(this.field_lc, 16711680) / 16711680.0f;
-        lva.field_o[1] = (float)dla.a(this.field_lc, 65280) / 65280.0f;
+        GetPhasedEnergyBeamFireForce.field_o[0] = (float)dla.a(this.field_lc, 16711680) / 16711680.0f;
+        GetPhasedEnergyBeamFireForce.field_o[1] = (float)dla.a(this.field_lc, 65280) / 65280.0f;
         if (param0 != 8) {
-          this.field_Cc = (ij) null;
+          this.field_Cc = (IntrusiveDeque) null;
         }
-        lva.field_o[2] = (float)dla.a(255, this.field_lc) / 255.0f;
-        jaggl.OpenGL.glFogfv(2918, lva.field_o, 0);
+        GetPhasedEnergyBeamFireForce.field_o[2] = (float)dla.a(255, this.field_lc) / 255.0f;
+        jaggl.OpenGL.glFogfv(2918, GetPhasedEnergyBeamFireForce.field_o, 0);
     }
 
     final void u() {
@@ -1518,7 +1518,7 @@ final class jp extends pf {
               stackIn_11_0 = new gn(this, param3, param4, param1, param2);
               return (eb) ((Object) stackIn_11_0);
             }
-            stackIn_9_0 = new ubb(this, param3, param4, hj.a(param1, (byte) -102), hj.a(param2, (byte) -127));
+            stackIn_9_0 = new ubb(this, param3, param4, GetSalvoaim.a(param1, (byte) -102), GetSalvoaim.a(param2, (byte) -127));
             return (eb) ((Object) stackIn_9_0);
           }
           stackIn_13_0 = new ubb(this, param3, param4, param1, param2);
@@ -1539,7 +1539,7 @@ final class jp extends pf {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -1585,7 +1585,7 @@ final class jp extends pf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1775,7 +1775,7 @@ final class jp extends pf {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(')').toString());
         }
     }
 
@@ -1785,7 +1785,7 @@ final class jp extends pf {
         if (param0 != -39) {
           return;
         }
-        if (to.field_o != this.field_fc) {
+        if (GetGrapplingHookRopeBreakLength.field_o != this.field_fc) {
           if (this.field_fc == oj.field_b) {
             jaggl.OpenGL.glBlendFunc(1, 1);
           } else {

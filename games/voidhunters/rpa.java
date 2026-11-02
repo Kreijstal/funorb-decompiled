@@ -4,7 +4,7 @@
 final class rpa implements jaa {
     private int field_e;
     private int field_a;
-    private qfa field_f;
+    private OpenGlToolkit field_f;
     private int field_i;
     private int field_j;
     static uja field_c;
@@ -20,7 +20,7 @@ final class rpa implements jaa {
           if (this.field_d == -1) {
             throw new RuntimeException();
           }
-          jaggl.OpenGL.glReadBuffer(vbb.field_o[param1]);
+          jaggl.OpenGL.glReadBuffer(SetOndamageParticleSpeed.field_o[param1]);
           if (param0 > 118) {
             return;
           }
@@ -29,7 +29,7 @@ final class rpa implements jaa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var3), "rpa.M(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "rpa.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class rpa implements jaa {
           this.field_a = this.field_a & -2;
           this.field_d = this.e(2);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rpa.E(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.E(" + param0 + ')');
         }
     }
 
@@ -55,27 +55,27 @@ final class rpa implements jaa {
           this.field_a = this.field_a | 4;
           this.field_d = this.e(2);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rpa.F(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.F(" + param0 + ')');
         }
     }
 
-    final static sg a(int param0, int param1, boolean param2) {
-        sg stackIn_9_0 = null;
-        sg stackIn_64_0 = null;
+    final static Ship a(int param0, int param1, boolean param2) {
+        Ship stackIn_9_0 = null;
+        Ship stackIn_64_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        ml var4 = null;
+        ShipComponent var4 = null;
         int var5 = 0;
         int var6 = 0;
-        sg var7 = null;
+        Ship var7 = null;
         var6 = VoidHunters.field_G;
         try {
           if (param0 == 0) {
-            stackIn_9_0 = gqb.a(!param2);
+            stackIn_9_0 = TimedSpecialOrderBehaviour.a(!param2);
             return stackIn_9_0;
           }
-          var7 = new sg();
-          var4 = new ml(param0);
+          var7 = new Ship();
+          var4 = new ShipComponent(param0);
           var5 = param0;
           if (var5 == 3) {
             waa.a(var4, 18632);
@@ -86,7 +86,7 @@ final class rpa implements jaa {
               } else {
                 if (var5 != 9) {
                   if (10 == var5) {
-                    hr.a(var4, 116);
+                    SetPhasedEnergyBeamProjectiles.a(var4, 116);
                   } else {
                     if (var5 == 11) {
                       bab.a(param2, var4);
@@ -100,7 +100,7 @@ final class rpa implements jaa {
                           if (var5 != 6) {
                             if (var5 == 1) {
                               if (param1 == 0) {
-                                qu.a(var4, -14);
+                                GetExplosionProjectileDamage.a(var4, -14);
                               } else {
                                 if (1 == param1) {
                                   vab.a((byte) -94, var4);
@@ -113,7 +113,7 @@ final class rpa implements jaa {
                                 } else {
                                   if (param1 != 1) {
                                     if (param1 == 2) {
-                                      wnb.a(var4, (byte) -10);
+                                      LoadBlackboxRecording.a(var4, (byte) -10);
                                     }
                                   } else {
                                     eqb.a(var4, 14670);
@@ -122,32 +122,32 @@ final class rpa implements jaa {
                               }
                             }
                           } else {
-                            ir.a(var4, (byte) 127);
+                            GetMpSandboxEnemySpawnLimit.a(var4, (byte) 127);
                           }
                         }
                       }
                     }
                   }
                 } else {
-                  tkb.a(var4, -77);
+                  GetMissilesExplosionPower.a(var4, -77);
                 }
               }
             } else {
-              leb.a((byte) -107, var4);
+              GetUseBackgroundInFullscreen.a((byte) -107, var4);
             }
           }
-          var7.field_k = var4;
+          var7.chassis = var4;
           if (!param2) {
             field_c = (uja) null;
           }
           var7.e((byte) 119);
-          var7.field_k.a((byte) -128, (anb) (var7));
+          var7.chassis.a((byte) -128, (ShipBody) (var7));
           stackIn_64_0 = var7;
           return stackIn_64_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var3), "rpa.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "rpa.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -158,12 +158,12 @@ final class rpa implements jaa {
           if (~this.field_d == param0) {
             throw new RuntimeException();
           }
-          jaggl.OpenGL.glDrawBuffer(vbb.field_o[param1]);
+          jaggl.OpenGL.glDrawBuffer(SetOndamageParticleSpeed.field_o[param1]);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var3), "rpa.O(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "rpa.O(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class rpa implements jaa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "rpa.H(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "rpa.H(" + param0 + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class rpa implements jaa {
           this.field_a = this.field_a | 2;
           this.field_d = this.e(param0 - 31634);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rpa.B(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.B(" + param0 + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class rpa implements jaa {
           this.field_a = this.field_a & -5;
           this.field_d = this.e(2);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rpa.A(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.A(" + param0 + ')');
         }
     }
 
@@ -236,7 +236,7 @@ final class rpa implements jaa {
             this.field_i = param0.field_j;
             this.field_j = param0.field_h;
           }
-          param0.a(this.field_d, vbb.field_o[param2], param1, false);
+          param0.a(this.field_d, SetOndamageParticleSpeed.field_o[param2], param1, false);
           this.field_h[param2] = (mda) ((Object) param0);
           this.field_g = this.field_g | var5_int;
           return;
@@ -250,7 +250,7 @@ final class rpa implements jaa {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ final class rpa implements jaa {
           this.field_f.a((byte) 107, this.field_e);
           super.finalize();
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rpa.finalize()");
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.finalize()");
         }
     }
 
@@ -287,7 +287,7 @@ final class rpa implements jaa {
             this.field_i = param1.field_u;
             this.field_j = param1.field_w;
           }
-          param1.a(1, vbb.field_o[param0], this.field_d);
+          param1.a(1, SetOndamageParticleSpeed.field_o[param0], this.field_d);
           this.field_h[param0] = (mda) ((Object) param1);
           this.field_g = this.field_g | var4_int;
           return;
@@ -301,7 +301,7 @@ final class rpa implements jaa {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class rpa implements jaa {
           this.field_g = this.field_g & ~(1 << param0);
           this.field_h[param0] = null;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rpa.I(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class rpa implements jaa {
             this.field_d = 85;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rpa.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.D(" + param0 + ')');
         }
     }
 
@@ -338,7 +338,7 @@ final class rpa implements jaa {
             field_c = (uja) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rpa.P(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.P(" + param0 + ')');
         }
     }
 
@@ -349,7 +349,7 @@ final class rpa implements jaa {
           this.field_a = this.field_a | 1;
           this.field_d = this.e(2);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rpa.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.C(" + param0 + ')');
         }
     }
 
@@ -378,7 +378,7 @@ final class rpa implements jaa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2), "rpa.G(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "rpa.G(" + param0 + ')');
         }
     }
 
@@ -404,11 +404,11 @@ final class rpa implements jaa {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    rpa(qfa param0) {
+    rpa(OpenGlToolkit param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -422,8 +422,8 @@ final class rpa implements jaa {
             throw new IllegalStateException("");
           }
           this.field_f = param0;
-          jaggl.OpenGL.glGenFramebuffersEXT(1, qea.field_r, 0);
-          this.field_e = qea.field_r[0];
+          jaggl.OpenGL.glGenFramebuffersEXT(1, SetLaserRandomness.field_r, 0);
+          this.field_e = SetLaserRandomness.field_r[0];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -435,7 +435,7 @@ final class rpa implements jaa {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

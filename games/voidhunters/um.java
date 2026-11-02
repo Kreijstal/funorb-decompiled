@@ -22,7 +22,7 @@ final class um {
         return null;
     }
 
-    final void a(ds param0, int param1, boolean param2) {
+    final void a(PacketBuffer param0, int param1, boolean param2) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -82,7 +82,7 @@ final class um {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -15,11 +15,11 @@ final class bv {
             field_d = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bv.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bv.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final int[] a(int param0, ij param1, int param2, int param3, lta param4, int param5, int param6, int param7) {
+    private final int[] a(int param0, IntrusiveDeque param1, int param2, int param3, lta param4, int param5, int param6, int param7) {
         lw var9 = null;
         int var10 = 0;
         int var13 = 0;
@@ -48,7 +48,7 @@ final class bv {
               if (stackIn_12_0 == stackIn_12_1) {
                 var11 = var9.field_m;
                 var12 = var9.field_h;
-                stackIn_9_0 = new int[]{var11, var11 + chb.field_a, var12, bhb.field_g + var12};
+                stackIn_9_0 = new int[]{var11, var11 + chb.field_a, var12, CarouselSlotStateDump.field_g + var12};
                 return stackIn_9_0;
               }
               var9 = (lw) (param1.a((byte) 39));
@@ -61,7 +61,7 @@ final class bv {
             stackIn_12_1 = 30;
           }
           if (stackIn_12_0 != stackIn_12_1) {
-            this.a(-87, (rsb) null, 37, 98, (sg) null, 100, (lta) null);
+            this.a(-87, (GameSnapshot) null, 37, 98, (Ship) null, 100, (lta) null);
           }
           stackIn_16_0 = null;
           return (int[]) (stackIn_16_0);
@@ -81,7 +81,7 @@ final class bv {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -89,10 +89,10 @@ final class bv {
         try {
           this.a((byte) 113, 100, param1);
           if (param0 != -26476) {
-            this.a((rsb) null, (lta) null, 111, -69, (int[]) null, (String) null, -41);
+            this.a((GameSnapshot) null, (lta) null, 111, -69, (int[]) null, (String) null, -41);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bv.J(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bv.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class bv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var3), "bv.D(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "bv.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class bv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var3), "bv.K(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "bv.K(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -137,18 +137,18 @@ final class bv {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -6448) {
-            this.a((rsb) null, (lta) null, 32, -33, (int[]) null, (String) null, -106);
+            this.a((GameSnapshot) null, (lta) null, 32, -33, (int[]) null, (String) null, -106);
           }
           if (!param2) {
-            stackIn_7_0 = bpb.field_q[param1];
+            stackIn_7_0 = SetTorpedoProjectileDamage.field_q[param1];
             return stackIn_7_0;
           }
-          stackIn_5_0 = "<col=ffaa00>" + bpb.field_q[param1] + "</col>";
+          stackIn_5_0 = "<col=ffaa00>" + SetTorpedoProjectileDamage.field_q[param1] + "</col>";
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var4), "bv.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var4), "bv.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -165,16 +165,16 @@ final class bv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var3), "bv.H(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "bv.H(" + param0 + ',' + param1 + ')');
         }
     }
 
     final void a(byte param0) {
         try {
           int var2_int = -50 / ((55 - param0) / 38);
-          m.a(-98);
+          GetShieldsDirectionalRadius.a(-98);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bv.B(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bv.B(" + param0 + ')');
         }
     }
 
@@ -190,7 +190,7 @@ final class bv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var3), "bv.E(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "bv.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -207,11 +207,11 @@ final class bv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1), "bv.N(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "bv.N(" + param0 + ')');
         }
     }
 
-    private final void a(int[] param0, lta param1, boolean param2, int param3, rsb param4, boolean param5, String param6, int param7, byte param8) {
+    private final void a(int[] param0, lta param1, boolean param2, int param3, GameSnapshot param4, boolean param5, String param6, int param7, byte param8) {
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_77_2 = null;
@@ -270,7 +270,7 @@ final class bv {
               var16 = param1.b(true, var11 + (param0[2] + param0[3] >> 1));
             }
           }
-          var17 = pqa.a(false, param7);
+          var17 = GetPointDefenceLaserProjectiles.a(false, param7);
           if (!param5) {
             var16 = var16 - var17 / 2;
             var15 = var15 - var12 / 2;
@@ -347,13 +347,13 @@ final class bv {
               var26Lifetime1 = -var27Lifetime1 + (var20 + var22);
             }
             var29 = param3 << 24;
-            opb.a(var20 - 1, -1 + var21, (byte) -128, var23 + 2, param3, 1, 2 + var22);
-            hcb.a(8, -var27Lifetime1 + var28Lifetime1, 1, 1 | var29, var26Lifetime1, -1 + (var26Lifetime1 - var27Lifetime1) + 1, var28Lifetime1 - var27Lifetime1, var28Lifetime1 + 1, var29 | 1, 1 + (var27Lifetime1 + var26Lifetime1), 1 | var29);
-            hcb.a(8, -var27Lifetime1 + var28Lifetime1, 1, var29 | 236981, var26Lifetime1, var26Lifetime1 + (1 - var27Lifetime1), -var27Lifetime1 + var28Lifetime1, var28Lifetime1, var29 | 56035, var26Lifetime1 + var27Lifetime1, 236981 | var29);
+            GetMissilesHitSourceTeam.a(var20 - 1, -1 + var21, (byte) -128, var23 + 2, param3, 1, 2 + var22);
+            GetDebrisCarryOver.a(8, -var27Lifetime1 + var28Lifetime1, 1, 1 | var29, var26Lifetime1, -1 + (var26Lifetime1 - var27Lifetime1) + 1, var28Lifetime1 - var27Lifetime1, var28Lifetime1 + 1, var29 | 1, 1 + (var27Lifetime1 + var26Lifetime1), 1 | var29);
+            GetDebrisCarryOver.a(8, -var27Lifetime1 + var28Lifetime1, 1, var29 | 236981, var26Lifetime1, var26Lifetime1 + (1 - var27Lifetime1), -var27Lifetime1 + var28Lifetime1, var28Lifetime1, var29 | 56035, var26Lifetime1 + var27Lifetime1, 236981 | var29);
           }
           if (!param5 ||
             var30 != 0) {
-            opb.a(-1 + var20, var21 - 1, (byte) -128, 2 + var23, param3, 1, 2 + var22);
+            GetMissilesHitSourceTeam.a(-1 + var20, var21 - 1, (byte) -128, 2 + var23, param3, 1, 2 + var22);
           }
           ga.a(param3, false, var20, var21, var23, var22, 236981);
           var24Lifetime1 = param1.a(0, 4 + var16 + var19);
@@ -404,11 +404,11 @@ final class bv {
           } else {
             stackIn_89_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
-    private final void a(rsb param0, lta param1, int param2, int param3, int[] param4, String param5, int param6) {
+    private final void a(GameSnapshot param0, lta param1, int param2, int param3, int[] param4, String param5, int param6) {
         String discarded$1 = null;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
@@ -455,7 +455,7 @@ final class bv {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -469,8 +469,8 @@ final class bv {
         try {
           if (!qd.field_a[param2] &&
             lu.field_f[param2] < param0 && (param3 ||
-            -1 == vl.field_o ||
-            param2 == vl.field_o)) {
+            -1 == GetMassDriverFireForce.field_o ||
+            param2 == GetMassDriverFireForce.field_o)) {
             lu.field_f[param2] = lu.field_f[param2] + 2;
           }
           if (param1 <= 85) {
@@ -480,11 +480,11 @@ final class bv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var5), "bv.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var5), "bv.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, rsb param1, int param2, int param3, sg param4, int param5, lta param6) {
+    final void a(int param0, GameSnapshot param1, int param2, int param3, Ship param4, int param5, lta param6) {
         int stackIn_28_0 = 0;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -496,35 +496,35 @@ final class bv {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        ij var9 = null;
-        tj var10 = null;
-        nbb[] var10_array = null;
-        nbb[] var11_ref_nbb__ = null;
+        IntrusiveDeque var9 = null;
+        Projectile var10 = null;
+        Debris[] var10_array = null;
+        Debris[] var11_ref_nbb__ = null;
         int var11 = 0;
         int var12 = 0;
         Object var13 = null;
-        sg var14 = null;
+        Ship var14 = null;
         rca var15 = null;
-        bba var16 = null;
+        MissionEvent var16 = null;
         int var17 = 0;
         Object var13Lifetime1;
         int var12Lifetime1;
         var17 = VoidHunters.field_G;
         try {
           var8_int = -18 % ((94 - param2) / 32);
-          var9 = param1.field_g.c(true);
-          var10 = (tj) (var9.d(0));
+          var9 = param1.world.getProjectiles(true);
+          var10 = (Projectile) (var9.d(0));
           while (var10 != null) {
-            if (var10.e(512) != 0) {
+            if (var10.getFiredTeam(512) != 0) {
               var10.b(0, 71);
             }
-            var10 = (tj) (var9.a((byte) 109));
+            var10 = (Projectile) (var9.a((byte) 109));
             if (var17 == 0) {
               continue;
             }
             break;
           }
-          var10_array = param1.field_g.h((byte) -33);
+          var10_array = param1.world.getDebris((byte) -33);
           var11_ref_nbb__ = var10_array;
           var12 = 0;
           while (var11_ref_nbb__.length > var12) {
@@ -533,15 +533,15 @@ final class bv {
               return;
             }
             if (null != var13 &&
-              ((nbb) (var13)).field_k.a(27, 0) > 0) {
-              ((nbb) (var13)).field_k.e(122, 27);
+              ((Debris) (var13)).chassis.a(27, 0) > 0) {
+              ((Debris) (var13)).chassis.e(122, 27);
             }
             var12++;
           }
           if (this.b((byte) 11, 1) &&
-            param1.field_g.c(0) <= 1) {
-            var11 = param1.field_e.b(7061, 0);
-            stackIn_28_0 = (0 != param1.field_g.b(true)) ? 0 : 1;
+            param1.world.c(0) <= 1) {
+            var11 = param1.missionState.b(7061, 0);
+            stackIn_28_0 = (0 != param1.world.b(true)) ? 0 : 1;
             var12Lifetime1 = stackIn_28_0;
             var13Lifetime1 = null;
             if (var11 != 0) {
@@ -555,16 +555,16 @@ final class bv {
             if (var13Lifetime1 != null) {
               var14 = ae.a((int[]) (var13Lifetime1), (byte) 56);
               var14.h(17704, 1);
-              var14.a(new aoa(), 4);
-              var15 = param1.field_g.a(0, param1.field_g.m(1) / 2, 0, 0, var14.q((byte) 108), param1.field_g.g((byte) -122) / 2);
+              var14.a(new ShipAI(), 4);
+              var15 = param1.world.a(0, param1.world.m(1) / 2, 0, 0, var14.getTeam((byte) 108), param1.world.getWidth((byte) -122) / 2);
               var14.a(var15.field_c, var15.field_b, (byte) 80);
-              param1.field_g.a(var14, (byte) 72);
+              param1.world.a(var14, (byte) 72);
               var14.r(-2);
-              var16 = new bba();
-              var16.a((byte) -106, (wm) (new cc(var14.c(false))));
-              var16.a(new uoa(0, 1), true);
-              var16.a(new oca(), true);
-              param1.field_g.a(var16, -38);
+              var16 = new MissionEvent();
+              var16.a((byte) -106, (MissionCondition) (new BodyCondition(var14.getId(false))));
+              var16.a(new IncrementVariableAction(0, 1), true);
+              var16.a(new RemoveEventAction(), true);
+              param1.world.a(var16, -38);
             }
           }
           return;
@@ -590,11 +590,11 @@ final class bv {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 
-    final void a(rsb param0, int param1, boolean param2, lta param3, int param4, int param5, int param6, int param7, byte param8, ij param9, int param10, int param11, sg param12) {
+    final void a(GameSnapshot param0, int param1, boolean param2, lta param3, int param4, int param5, int param6, int param7, byte param8, IntrusiveDeque param9, int param10, int param11, Ship param12) {
         int stackIn_23_0 = 0;
         int stackIn_41_0 = 0;
         boolean stackIn_82_0 = false;
@@ -616,7 +616,7 @@ final class bv {
         boolean stackOut_100_0;
         int var14_int = 0;
         RuntimeException var14 = null;
-        tfa var15 = null;
+        Player var15 = null;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
@@ -624,18 +624,18 @@ final class bv {
         int[] var19 = null;
         String var20 = null;
         int var20_int = 0;
-        nbb var20_ref = null;
-        ij var20_ref2 = null;
+        Debris var20_ref = null;
+        IntrusiveDeque var20_ref2 = null;
         int var21 = 0;
         int[] var21_ref_int__ = null;
         int var22 = 0;
         int[] var22_ref_int__ = null;
         String var22_ref_String = null;
-        ml var23 = null;
+        ShipComponent var23 = null;
         int var23_int = 0;
         int[] var23_array = null;
         int var24_int = 0;
-        ml var24 = null;
+        ShipComponent var24 = null;
         int[] var24_array = null;
         int var25 = 0;
         int var26_int = 0;
@@ -671,7 +671,7 @@ final class bv {
         try {
           if (0 <= param11 &&
             param0.field_c.length > param11) {
-            var14_int = param0.field_e.e(8);
+            var14_int = param0.missionState.getMissionPhase(8);
             if (1 != var14_int &&
               var14_int != 2) {
               var15 = param0.a(param11, (byte) 59);
@@ -693,19 +693,19 @@ final class bv {
               }
               var18 = stackIn_23_0;
               var16 = 4;
-              var17 = param3.a(true, pk.field_o);
-              var18 = param3.a(0, noa.field_q);
-              vl.field_o = -1;
+              var17 = param3.a(true, GetUseDetailLines.field_o);
+              var18 = param3.a(0, GetTorpedoReload.field_q);
+              GetMassDriverFireForce.field_o = -1;
               var19_int = 0;
-              L8: while (true) {
+              scanLoop1: while (true) {
                 if (11 > var19_int) {
                   stackIn_41_0 = var19_int;
                   if (var43 != 0) {
-                    break L8;
+                    break scanLoop1;
                   }
                   if (stackIn_41_0 != 4 &&
                     lu.field_f[var19_int] > 0) {
-                    vl.field_o = var19_int;
+                    GetMassDriverFireForce.field_o = var19_int;
                   } else {
                     var19_int++;
                     continue;
@@ -718,44 +718,44 @@ final class bv {
                 break;
               }
               if (stackIn_41_0 == 0) {
-                var19 = param12.f((byte) -66);
+                var19 = param12.getBoundingbox((byte) -66);
                 this.a(-26476, 0);
-                if (mja.field_o &&
-                  eka.field_b &&
+                if (SetUseTrails.field_o &&
+                  ComponentBehaviour.field_b &&
                   bva.field_d &&
                   mfb.field_a) {
                   this.a((byte) 86, 0);
                 }
-                if ((2 & var15.field_f) != 0) {
-                  eka.field_b = true;
+                if ((2 & var15.triggers) != 0) {
+                  ComponentBehaviour.field_b = true;
                 }
-                if ((var15.field_f & 8) != 0) {
+                if ((var15.triggers & 8) != 0) {
                   mfb.field_a = true;
                 }
-                if (0 != (var15.field_f & 1)) {
-                  mja.field_o = true;
+                if (0 != (var15.triggers & 1)) {
+                  SetUseTrails.field_o = true;
                 }
-                if ((var15.field_f & 4) != 0) {
+                if ((var15.triggers & 4) != 0) {
                   bva.field_d = true;
                 }
                 if (this.b(0, -116)) {
-                  var20 = isa.a(ge.field_b, new String[]{this.a(-6448, mgb.field_q, mja.field_o), this.a(-6448, nd.field_p, bva.field_d), this.a(-6448, bib.field_f, mfb.field_a), this.a(-6448, dn.field_q, eka.field_b)}, 90);
-                  this.a(param0, param3, hlb.a(lu.field_f[0], 255), var16, var19, var20, 1619);
+                  var20 = SetReverbGain.a(ge.field_b, new String[]{this.a(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.a(-6448, SetSalvoaim.field_p, bva.field_d), this.a(-6448, bib.field_f, mfb.field_a), this.a(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
+                  this.a(param0, param3, GetMutatorVotes.a(lu.field_f[0], 255), var16, var19, var20, 1619);
                 }
                 if (this.b((byte) 11, 0) &&
-                  !param12.v(32)) {
-                  var20_int = param12.field_k.b(126, 0);
+                  !param12.getRepairModeOn(32)) {
+                  var20_int = param12.chassis.b(126, 0);
                   var21 = 0;
                   var22 = 0;
                   while (true) {
                     if (var22 < var20_int) {
-                      var23 = lcb.field_q[var22];
+                      var23 = GetPointDefenceLaserProjectileInterceptDamage.field_q[var22];
                       stackOut_81_0 = var23.k((byte) 122);
                       stackIn_92_0 = stackOut_81_0 ? 1 : 0;
                       stackIn_82_0 = stackOut_81_0;
                       if (var43 == 0) {
                         if (!stackIn_82_0 &&
-                          var23.field_c.b((byte) 119)) {
+                          var23.weaponbehaviour.b((byte) 119)) {
                           var24_int = var23.c(-14);
                           if (var24_int != 0) {
                             var21 = 1;
@@ -777,7 +777,7 @@ final class bv {
                     var23_int = 0;
                     boolean decompiledNaturalLoopExit0 = false;
                     while (!(decompiledNaturalLoopExit0 = (var23_int >= var20_int))) {
-                      var24 = lcb.field_q[var23_int];
+                      var24 = GetPointDefenceLaserProjectileInterceptDamage.field_q[var23_int];
                       stackOut_100_0 = var24.k((byte) 73);
                       stackIn_117_0 = stackOut_100_0 ? 1 : 0;
                       stackIn_101_0 = stackOut_100_0;
@@ -785,14 +785,14 @@ final class bv {
                         if (!stackIn_101_0) {
                           var25 = var24.c(118);
                           if (var25 != 0) {
-                            var26_int = rrb.a(22433, var24.g((byte) -127) - var24.c(-61));
-                            var27 = rrb.a(22433, var24.g((byte) -127) + var24.c(-118));
+                            var26_int = GameKeyHandler.a(22433, var24.g((byte) -127) - var24.c(-61));
+                            var27 = GameKeyHandler.a(22433, var24.g((byte) -127) + var24.c(-118));
                             var28 = var24.a(var24.i((byte) -112), (byte) -69);
                             var29 = var24.a(125, var24.i((byte) -112));
                             var30 = 8;
-                            var31 = var28 + (fc.a(var26_int, (byte) -96) * var30 >> 1);
+                            var31 = var28 + (GetNumStars.a(var26_int, (byte) -96) * var30 >> 1);
                             var32 = (eu.a(var26_int, 44) * var30 >> 1) + var29;
-                            var33 = (var30 * fc.a(var27, (byte) 109) >> 1) + var28;
+                            var33 = (var30 * GetNumStars.a(var27, (byte) 109) >> 1) + var28;
                             var34 = (var30 * eu.a(var27, 87) >> 1) + var29;
                             var35 = param3.a(var31, (byte) 118);
                             var36 = param3.b(true, var32);
@@ -801,18 +801,18 @@ final class bv {
                             var39 = param3.a(var28, (byte) 115);
                             var40 = param3.b(true, var29);
                             var41 = 11142145;
-                            var42 = hlb.a(lu.field_f[1], 255) >>> 2;
-                            if (!var24.field_c.a(-26772, var18, var17, var24.i((byte) -112), var24)) {
-                              if (ds.field_g != 0) {
+                            var42 = GetMutatorVotes.a(lu.field_f[1], 255) >>> 2;
+                            if (!var24.weaponbehaviour.a(-26772, var18, var17, var24.i((byte) -112), var24)) {
+                              if (PacketBuffer.field_g != 0) {
                                 var41 = 16712705;
                               }
                             } else {
                               var41 = 16712705;
-                              hha.a(var39, (byte) 66, var35, var40, 11142145, var36, var42);
+                              SetShowTutorial.a(var39, (byte) 66, var35, var40, 11142145, var36, var42);
                               var22 = 1;
-                              hha.a(var39, (byte) 66, var37, var40, 11142145, var38, var42);
+                              SetShowTutorial.a(var39, (byte) 66, var37, var40, 11142145, var38, var42);
                             }
-                            hcb.a(8, var36, 1, 131586, var39, var35, var38, var40, var41 | var42 << 24, var37, 131586);
+                            GetDebrisCarryOver.a(8, var36, 1, 131586, var39, var35, var38, var40, var41 | var42 << 24, var37, 131586);
                           }
                         }
                         var23_int++;
@@ -821,60 +821,60 @@ final class bv {
                       break;
                     }
                     if (decompiledNaturalLoopExit0) {
-                      stackIn_117_0 = ~pk.field_o;
+                      stackIn_117_0 = ~GetUseDetailLines.field_o;
                     }
                     if (stackIn_117_0 == 0 ||
-                      -1 == noa.field_q) {
-                      var17 = param12.field_d;
-                      var18 = param12.f((byte) -112)[2];
+                      -1 == GetTorpedoReload.field_q) {
+                      var17 = param12.x;
+                      var18 = param12.getBoundingbox((byte) -112)[2];
                       if ((var43 != 0) &&
                         (var22 != 0)) {
                         var24_intLifetime2 = kc.field_b;
                         var25Lifetime1 = uia.field_b;
                         var26 = mmb.field_d[0];
-                        var26.a(-(var26.d() / 2) + var24_intLifetime2, -(var26.a() / 2) + var25Lifetime1, 0, 16777215 | hlb.a(lu.field_f[1], 255) << 24, 1);
+                        var26.a(-(var26.d() / 2) + var24_intLifetime2, -(var26.a() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(lu.field_f[1], 255) << 24, 1);
                       }
                     } else {
                       if (var22 != 0) {
                         var24_intLifetime2 = kc.field_b;
                         var25Lifetime1 = uia.field_b;
                         var26 = mmb.field_d[0];
-                        var26.a(-(var26.d() / 2) + var24_intLifetime2, -(var26.a() / 2) + var25Lifetime1, 0, 16777215 | hlb.a(lu.field_f[1], 255) << 24, 1);
+                        var26.a(-(var26.d() / 2) + var24_intLifetime2, -(var26.a() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(lu.field_f[1], 255) << 24, 1);
                       }
                     }
                     var23_int = 1024;
                     var24_array = new int[]{-var23_int + var17, var23_int + var17, -var23_int + var18, var23_int + var18};
-                    this.a(param0, param3, hlb.a(lu.field_f[1], 255), var16, var24_array, bhb.field_e, 1619);
+                    this.a(param0, param3, GetMutatorVotes.a(lu.field_f[1], 255), var16, var24_array, CarouselSlotStateDump.field_e, 1619);
                     break;
                   }
                 }
                 if (this.b((byte) 11, 0) &&
                   this.b((byte) 11, 1) &&
                   !param12.d(4, 50)) {
-                  if (pk.field_o == -1 ||
-                    -1 == noa.field_q) {
-                    var17 = param12.field_d;
-                    var18 = param12.field_e;
+                  if (GetUseDetailLines.field_o == -1 ||
+                    -1 == GetTorpedoReload.field_q) {
+                    var17 = param12.x;
+                    var18 = param12.y;
                   }
-                  var20_ref = param0.field_g.b(1, 2147483647, param12.d(false), var17, var18, param12.g((byte) 124));
+                  var20_ref = param0.world.b(1, 2147483647, param12.d(false), var17, var18, param12.g((byte) 124));
                   if (var20_ref != null ||
-                    param12.x(-96) != -1) {
+                    param12.getDragging(-96) != -1) {
                     this.a(-26476, 3);
-                    if (param2 && (!(param0.field_g.b(true) > 0) ||
-                      !(param0.field_g.b(true) > 1) &&
-                      param12.x(46) != -1)) {
+                    if (param2 && (!(param0.world.b(true) > 0) ||
+                      !(param0.world.b(true) > 1) &&
+                      param12.getDragging(46) != -1)) {
                       this.a((byte) 99, 3);
                       lu.field_f[3] = 0;
                     }
-                    if (param12.x(-119) != -1) {
+                    if (param12.getDragging(-119) != -1) {
                       if (!param2) {
                         this.a((byte) 123, 3);
                       }
                       lu.field_f[3] = 0;
                     }
                     if (this.b(3, -123)) {
-                      var21_ref_int__ = var20_ref.f((byte) -82);
-                      this.a(param0, param3, hlb.a(lu.field_f[3], 255), var16, var21_ref_int__, nr.field_o, 1619);
+                      var21_ref_int__ = var20_ref.getBoundingbox((byte) -82);
+                      this.a(param0, param3, GetMutatorVotes.a(lu.field_f[3], 255), var16, var21_ref_int__, GetMissionVotes.field_o, 1619);
                       if ((var43 != 0) && (!qd.field_a[3] &&
                         lu.field_f[3] > 0)) {
                         lu.field_f[3] = lu.field_f[3] - 1;
@@ -890,17 +890,17 @@ final class bv {
                 if (this.b((byte) 11, 0) &&
                   this.b((byte) 11, 1)) {
                   this.a(-26476, 2);
-                  if (!(tcb.field_o >= 0) ||
-                    si.field_o[baa.field_p] ||
-                    si.field_o[wpa.field_r]) {
-                    gk.field_p = true;
+                  if (!(GetPointDefenceLaserPulsetime.field_o >= 0) ||
+                    SetMachineGunEnergyUsed.field_o[GetUseCircleOutline.field_p] ||
+                    SetMachineGunEnergyUsed.field_o[GetPointDefenceLaserRandomness.field_r]) {
+                    GetPointDefenceLaserReload.field_p = true;
                   }
-                  if (!(tcb.field_o <= 0) ||
-                    si.field_o[oeb.field_o] ||
-                    si.field_o[hna.field_n]) {
+                  if (!(GetPointDefenceLaserPulsetime.field_o <= 0) ||
+                    SetMachineGunEnergyUsed.field_o[GetTorpedoProjectileLife.field_o] ||
+                    SetMachineGunEnergyUsed.field_o[hna.field_n]) {
                     nqa.field_c = true;
                   }
-                  if (gk.field_p &&
+                  if (GetPointDefenceLaserReload.field_p &&
                     nqa.field_c) {
                     this.a((byte) 83, 2);
                   }
@@ -908,13 +908,13 @@ final class bv {
                     var20_int = param10 / 2;
                     var21 = param5 / 4;
                     var22_ref_int__ = new int[]{var20_int, var21};
-                    this.a(var22_ref_int__, param3, false, hlb.a(lu.field_f[2], 255), param0, false, ei.field_f, var16, (byte) 116);
+                    this.a(var22_ref_int__, param3, false, GetMutatorVotes.a(lu.field_f[2], 255), param0, false, ei.field_f, var16, (byte) 116);
                   }
                 }
                 if (this.b((byte) 11, 0) &&
                   this.b((byte) 11, 1) &&
                   var14_int == 5) {
-                  var20_int = cab.field_p;
+                  var20_int = GetUseNiceTrails.field_p;
                   var21_ref_int__Lifetime1 = new int[]{param12.d(false) - var20_int, -var20_int + param12.d(false), param12.g((byte) 127), param12.g((byte) 124)};
                   if (param3.field_f[0] >= var21_ref_int__Lifetime1[0] &&
                     param3.field_f[1] <= var21_ref_int__Lifetime1[1] &&
@@ -926,56 +926,56 @@ final class bv {
                   }
                   var22 = stackIn_236_0;
                   if (var22 != 0) {
-                    var23_int = oq.field_l * 5 + 100;
-                    var24_intLifetime1 = vl.field_o;
-                    vl.field_o = -1;
+                    var23_int = Particle.field_l * 5 + 100;
+                    var24_intLifetime1 = GetMassDriverFireForce.field_o;
+                    GetMassDriverFireForce.field_o = -1;
                     this.a((byte) 113, var23_int, 4);
                     if (~lu.field_f[4] == ~var23_int) {
                       this.a((byte) 113, 4);
                     }
                     if (this.b(4, -124)) {
-                      this.a(param0, param3, hlb.a(lu.field_f[4], 255), var16, var21_ref_int__Lifetime1, uia.field_a, 1619);
+                      this.a(param0, param3, GetMutatorVotes.a(lu.field_f[4], 255), var16, var21_ref_int__Lifetime1, uia.field_a, 1619);
                     }
-                    vl.field_o = var24_intLifetime1;
+                    GetMassDriverFireForce.field_o = var24_intLifetime1;
                   }
-                  var20_ref2 = new ij();
-                  param12.a(var20_ref2, 9, param2, param0.field_g.d(param12.c(false), (byte) 21));
+                  var20_ref2 = new IntrusiveDeque();
+                  param12.a(var20_ref2, 9, param2, param0.world.d(param12.getId(false), (byte) 21));
                   if (var20_ref2.c(3) > 1) {
                     this.a(-26476, 9);
-                    if (si.field_o[81]) {
+                    if (SetMachineGunEnergyUsed.field_o[81]) {
                       this.a((byte) 127, 9);
                     }
                     if (this.b(9, -56)) {
                       var21 = 172;
                       var22 = param5 - 58;
                       var23_array = new int[]{var21, var22};
-                      this.a(var23_array, param3, false, hlb.a(lu.field_f[9], 255), param0, false, slb.field_b, var16, (byte) -47);
+                      this.a(var23_array, param3, false, GetMutatorVotes.a(lu.field_f[9], 255), param0, false, slb.field_b, var16, (byte) -47);
                     }
                   }
                   if (this.b((byte) 11, 9)) {
                     this.a(-26476, 10);
                     if (null != es.field_b &&
-                      es.field_b.field_f != null) {
+                      es.field_b.blueprint != null) {
                       this.a((byte) 123, 10);
                     }
                     if (this.b(10, -61)) {
                       var21_ref_int__Lifetime1Lifetime1 = this.a(11, param9, 30, param4, param3, param6, param5, param1);
                       if (null != var21_ref_int__Lifetime1Lifetime1) {
-                        var22_ref_String = isa.a(vsa.field_o, new String[]{bpb.field_q[ve.field_p]}, 110);
-                        this.a(var21_ref_int__Lifetime1Lifetime1, param3, true, hlb.a(lu.field_f[10], 255), param0, true, var22_ref_String, var16, (byte) -50);
+                        var22_ref_String = SetReverbGain.a(SetCountermeasureLauncherAimarc.field_o, new String[]{SetTorpedoProjectileDamage.field_q[SetDetachmentMode.field_p]}, 110);
+                        this.a(var21_ref_int__Lifetime1Lifetime1, param3, true, GetMutatorVotes.a(lu.field_f[10], 255), param0, true, var22_ref_String, var16, (byte) -50);
                       }
                     }
                   }
                   if (ssa.b(2) &&
-                    si.field_o[101]) {
+                    SetMachineGunEnergyUsed.field_o[101]) {
                     this.a((byte) 118, 10);
                   }
                   var21_ref_int__Lifetime1Lifetime2 = new int[2];
-                  param12.field_k.a(var21_ref_int__Lifetime1Lifetime2, (byte) -17, true);
+                  param12.chassis.a(var21_ref_int__Lifetime1Lifetime2, (byte) -17, true);
                   var22 = var21_ref_int__Lifetime1Lifetime2[0] * 256 / var21_ref_int__Lifetime1Lifetime2[1];
                   var21_ref_int__Lifetime1Lifetime2[0] = 0;
                   var21_ref_int__Lifetime1Lifetime2[1] = 0;
-                  param12.field_k.a(var21_ref_int__Lifetime1Lifetime2, (byte) -17, false);
+                  param12.chassis.a(var21_ref_int__Lifetime1Lifetime2, (byte) -17, false);
                   var23_int = 256 * var21_ref_int__Lifetime1Lifetime2[0] / var21_ref_int__Lifetime1Lifetime2[1];
                   if (var22 < var23_int) {
                     this.a(-26476, 5);
@@ -991,21 +991,21 @@ final class bv {
                   if (this.b(5, -12)) {
                     var24_arrayLifetime1 = this.a(4, param9, 30, param4, param3, param6, param5, param1);
                     if (var24_arrayLifetime1 != null) {
-                      this.a(var24_arrayLifetime1, param3, true, hlb.a(lu.field_f[5], 255), param0, true, oba.field_o, var16, (byte) 98);
+                      this.a(var24_arrayLifetime1, param3, true, GetMutatorVotes.a(lu.field_f[5], 255), param0, true, SetMissionVotes.field_o, var16, (byte) 98);
                     }
                   }
                   if (param12.d(4, 72)) {
                     if (param12.q(-50)) {
                       this.a(-26476, 6);
                     }
-                    if (!param12.v(32)) {
+                    if (!param12.getRepairModeOn(32)) {
                       this.a((byte) 106, 6);
                     }
                   }
                   if (this.b(6, -88)) {
                     var21_ref_int__Lifetime1Lifetime3 = this.a(4, param9, 30, param4, param3, param6, param5, param1);
                     if (var21_ref_int__Lifetime1Lifetime3 != null) {
-                      this.a(var21_ref_int__Lifetime1Lifetime3, param3, true, hlb.a(lu.field_f[6], 255), param0, true, afa.field_p, var16, (byte) 102);
+                      this.a(var21_ref_int__Lifetime1Lifetime3, param3, true, GetMutatorVotes.a(lu.field_f[6], 255), param0, true, GetMissionTerrainVotingChancestep.field_p, var16, (byte) 102);
                     }
                   }
                   var21_ref_int__Lifetime1Lifetime4 = this.a(0, param9, 30, param4, param3, param6, param5, param1);
@@ -1014,18 +1014,18 @@ final class bv {
                     if (param7 == 0) {
                       this.a((byte) 82, 7);
                       if (this.b((byte) 11, 7) &&
-                        pk.field_o != -1 &&
-                        noa.field_q != -1) {
+                        GetUseDetailLines.field_o != -1 &&
+                        GetTorpedoReload.field_q != -1) {
                         this.a(-26476, 8);
                         if (this.b(8, -43)) {
                           var22 = 1024;
                           var23_arrayLifetime1 = new int[]{var17 - var22, var17 + var22, -var22 + var18, var18 + var22};
-                          this.a(var23_arrayLifetime1, param3, false, hlb.a(lu.field_f[8], 255), param0, true, pja.field_i, var16, (byte) -115);
+                          this.a(var23_arrayLifetime1, param3, false, GetMutatorVotes.a(lu.field_f[8], 255), param0, true, pja.field_i, var16, (byte) -115);
                         }
                       }
                     }
                     if (this.b(7, -106)) {
-                      this.a(var21_ref_int__Lifetime1Lifetime4, param3, true, hlb.a(lu.field_f[7], 255), param0, true, gla.field_b, var16, (byte) 60);
+                      this.a(var21_ref_int__Lifetime1Lifetime4, param3, true, GetMutatorVotes.a(lu.field_f[7], 255), param0, true, gla.field_b, var16, (byte) 60);
                     }
                   }
                   if (this.b((byte) 11, 10) &&
@@ -1036,7 +1036,7 @@ final class bv {
                       if (var21 > 200) {
                         var21 = 200;
                       }
-                      maa.a(165, (byte) -127, 2, qoa.field_p, var21);
+                      SetBombletSprayEnergyUsed.a(165, (byte) -127, 2, SetMassDriverProjectileDamage.field_p, var21);
                     }
                   }
                 }
@@ -1074,12 +1074,12 @@ final class bv {
           } else {
             stackIn_366_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_353_0), ((StringBuilder) (Object) stackIn_365_1).append(stackIn_366_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_353_0), ((StringBuilder) (Object) stackIn_365_1).append(stackIn_366_2).append(')').toString());
         }
     }
 
     static {
-        field_a = oea.f((byte) -49);
+        field_a = SetSniperCannonEnergyUsed.f((byte) -49);
         field_e = 2;
     }
 }

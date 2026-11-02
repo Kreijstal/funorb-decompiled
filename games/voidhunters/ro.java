@@ -32,7 +32,7 @@ final class ro {
                 ro.a((String) null, 114, (java.applet.Applet) null);
               }
               var9 = (String) (ia.a(param2, "getcookies", 12348));
-              var4 = up.a((byte) -67, ';', var9);
+              var4 = SetFighterBayAimspeed.a((byte) -67, ';', var9);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (0 <= var6 &&
@@ -63,7 +63,7 @@ final class ro {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

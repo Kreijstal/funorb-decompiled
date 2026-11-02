@@ -56,17 +56,17 @@ final class ab {
         if (var3 == null) {
           return null;
         }
-        return new ab(new ds(var3));
+        return new ab(new PacketBuffer(var3));
     }
 
-    private ab(ds param0) {
+    private ab(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_c = new qda[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.e((byte) -92);
           if (var3 != 0) {
-            param0.field_e = param0.field_e - 1;
+            param0.position = param0.position - 1;
             this.field_c[var2] = new qda();
             this.field_c[var2].a(param0);
           }

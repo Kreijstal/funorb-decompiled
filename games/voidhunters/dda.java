@@ -40,13 +40,13 @@ final class dda extends dg implements uq {
     final static void a(int param0, boolean param1) {
         if (param0 != 18090) {
           field_d = (mka[]) null;
-          ll.field_o = param1;
+          GetGrapplingHooksDamageableBySourcePlayer.field_o = param1;
           return;
         }
-        ll.field_o = param1;
+        GetGrapplingHooksDamageableBySourcePlayer.field_o = param1;
     }
 
-    dda(qfa param0, int param1, byte[] param2, int param3) {
+    dda(OpenGlToolkit param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
     }
 

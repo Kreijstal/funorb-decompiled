@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ajb extends ksa {
+final class ajb extends IntrusiveNode {
     int[] field_k;
     int field_j;
     int field_h;
     int field_g;
-    static clb field_f;
+    static ConsoleCommandRegistry field_f;
     int field_i;
     int field_d;
     int field_e;
 
     final static void a(byte param0, String param1) {
         try {
-          vda.field_o = param1;
+          GetFighterBayAimspeed.field_o = param1;
           if (param0 != -74) {
             String var3 = (String) null;
             ajb.a((byte) 76, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ajb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ajb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,7 +43,7 @@ final class ajb extends ksa {
           this.field_h = param4;
           this.field_j = param7;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ajb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ajb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -51,6 +51,6 @@ final class ajb extends ksa {
     }
 
     static {
-        field_f = new clb();
+        field_f = new ConsoleCommandRegistry();
     }
 }

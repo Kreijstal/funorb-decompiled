@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rgb extends dmb implements ntb {
-    private int field_g;
-    private int field_d;
-    private int field_e;
+final class rgb extends MapClearanceArea implements DiffableState {
+    private int x;
+    private int y;
+    private int radius;
     static soa field_f;
 
     public final boolean a(byte param0, tv param1) {
@@ -19,7 +19,7 @@ final class rgb extends dmb implements ntb {
         try {
           var4 = 106 / ((param0 - 22) / 59);
           var3 = (rgb) (param1);
-          stackIn_7_0 = (super.a((byte) -50, param1)) || (this.field_g != var3.field_g) || (var3.field_d != this.field_d) || (var3.field_e != this.field_e);
+          stackIn_7_0 = (super.a((byte) -50, param1)) || (this.x != var3.x) || (var3.y != this.y) || (var3.radius != this.radius);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -31,7 +31,7 @@ final class rgb extends dmb implements ntb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -45,11 +45,11 @@ final class rgb extends dmb implements ntb {
           super.b((byte) 98, param1);
           var5 = (rgb) (param1);
           var6 = var5;
-          var6.field_d = this.field_d;
-          var6.field_e = this.field_e;
-          var6.field_g = this.field_g;
+          var6.y = this.y;
+          var6.radius = this.radius;
+          var6.x = this.x;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rgb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rgb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -65,27 +65,27 @@ final class rgb extends dmb implements ntb {
     public final void a(faa param0, boolean param1) {
         try {
           super.a(param0, param1);
-          this.field_g = param0.i(0, 32);
-          this.field_d = param0.i(0, 32);
-          this.field_e = param0.i(0, 32);
+          this.x = param0.i(0, 32);
+          this.y = param0.i(0, 32);
+          this.radius = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rgb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rgb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(pe param0, boolean param1) {
+    final void a(World param0, boolean param1) {
         try {
           if (!param1) {
-            pe var4 = (pe) null;
-            this.a((pe) null, true);
+            World var4 = (World) null;
+            this.a((World) null, true);
           }
-          param0.a((byte) -99, false, this.field_d, this.field_g, this.field_e);
+          param0.a((byte) -99, false, this.y, this.x, this.radius);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rgb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rgb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
         rgb var5 = null;
@@ -94,23 +94,23 @@ final class rgb extends dmb implements ntb {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 > -19) {
-            this.field_g = 46;
+          if (obfuscationGuard > -19) {
+            this.x = 46;
           }
-          var5 = (rgb) (param0);
-          super.a(param0, -59);
+          var5 = (rgb) (other);
+          super.reportDifferences(other, -59);
           var4 = 0;
-          if (this.field_g != var5.field_g) {
+          if (this.x != var5.x) {
             var4 = 1;
-            System.out.println("int x has changed. before=" + var5.field_g + ", now=" + this.field_g);
+            System.out.println("int x has changed. before=" + var5.x + ", now=" + this.x);
           }
-          if (var5.field_d != this.field_d) {
-            System.out.println("int y has changed. before=" + var5.field_d + ", now=" + this.field_d);
+          if (var5.y != this.y) {
+            System.out.println("int y has changed. before=" + var5.y + ", now=" + this.y);
             var4 = 1;
           }
-          if (this.field_e != var5.field_e) {
+          if (this.radius != var5.radius) {
             var4 = 1;
-            System.out.println("int radius has changed. before=" + var5.field_e + ", now=" + this.field_e);
+            System.out.println("int radius has changed. before=" + var5.radius + ", now=" + this.radius);
           }
           if (var4 == 0) {
             return;
@@ -122,27 +122,27 @@ final class rgb extends dmb implements ntb {
           var3 = decompiledCaughtException;
           stackIn_13_0 = var3;
           stackIn_13_1 = new StringBuilder().append("rgb.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     public final void b(faa param0, int param1) {
         try {
           super.b(param0, -123);
-          param0.a(-632, this.field_g, 32);
-          param0.a(-632, this.field_d, 32);
+          param0.a(-632, this.x, 32);
+          param0.a(-632, this.y, 32);
           if (param1 > -109) {
             faa var4 = (faa) null;
             this.b((faa) null, -92);
           }
-          param0.a(-632, this.field_e, 32);
+          param0.a(-632, this.radius, 32);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rgb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rgb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -150,9 +150,9 @@ final class rgb extends dmb implements ntb {
     }
 
     rgb(int param0, int param1, int param2) {
-        this.field_e = param2;
-        this.field_d = param1;
-        this.field_g = param0;
+        this.radius = param2;
+        this.y = param1;
+        this.x = param0;
     }
 
     static {

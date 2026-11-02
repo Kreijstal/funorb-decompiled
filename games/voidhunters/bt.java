@@ -4,7 +4,7 @@
 final class bt {
     static String field_b;
     private int field_c;
-    static ds field_a;
+    static PacketBuffer field_a;
 
     final void b(int param0) {
         jaggl.OpenGL.glEndList();
@@ -33,18 +33,18 @@ final class bt {
         jaggl.OpenGL.glCallList(this.field_c + param1);
     }
 
-    bt(qfa param0, int param1) {
+    bt(OpenGlToolkit param0, int param1) {
         try {
           this.field_c = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, int param1) {
         jaggl.OpenGL.glNewList(this.field_c + param1, 4864);
         if (param0 >= -79) {
-          field_a = (ds) null;
+          field_a = (PacketBuffer) null;
         }
     }
 

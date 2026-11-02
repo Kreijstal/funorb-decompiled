@@ -29,7 +29,7 @@ class os extends gea implements oo {
           }
           return;
         }
-        lja.e((byte) 90);
+        GrappleLauncherBehaviour.e((byte) 90);
         if (param0 == -106) {
           return;
         }
@@ -48,14 +48,14 @@ class os extends gea implements oo {
           this.field_R.field_x = true;
           this.b(-18756, this.field_R);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "os.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "os.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void g(int param0) {
         int var2 = 102 % ((param0 - 24) / 59);
         this.field_R.b(2121792, -21202, 4210752);
-        nna var3 = new nna(this, this.field_T, vaa.field_o);
+        nna var3 = new nna(this, this.field_T, GetPointDefenceLaserAimarc.field_o);
         var3.a(-123, nna.field_D, 15);
         this.b(var3, -53);
     }
@@ -87,7 +87,7 @@ class os extends gea implements oo {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -100,10 +100,10 @@ class os extends gea implements oo {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_V) {
-            cea.a(-123, 3);
+            GetSelfDestructPrepareToggleCooldown.a(-123, 3);
             this.l((byte) -106);
           } else {
-            lc.a((byte) 86, vpa.b((byte) -92), "tochangedisplayname.ws");
+            lc.a((byte) 86, MissionList.b((byte) -92), "tochangedisplayname.ws");
           }
           if (param0 == 11) {
             return;
@@ -121,7 +121,7 @@ class os extends gea implements oo {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -153,15 +153,15 @@ class os extends gea implements oo {
           var4 = var6;
           if (param2 == 5) {
             var6.a(-123, fma.field_c, 11);
-            var6.a(-115, vda.field_q, 17);
+            var6.a(-115, GetFighterBayAimspeed.field_q, 17);
           } else {
             if (param2 == 256) {
-              var6.a((byte) 127, kj.field_p, (sba) (this));
+              var6.a((byte) 127, SetSpecialOrderBoxHeight.field_p, (sba) (this));
             } else {
               stackIn_14_0 = var6;
               stackIn_14_1 = -128;
               if (this.field_W) {
-                stackIn_15_2 = kj.field_p;
+                stackIn_15_2 = SetSpecialOrderBoxHeight.field_p;
               } else {
                 stackIn_15_2 = vab.field_a;
               }
@@ -172,11 +172,11 @@ class os extends gea implements oo {
             var6.a(-125, mab.field_h, 7);
           } else {
             if (param2 == 4) {
-              var6.a(-119, eia.field_p, 8);
+              var6.a(-119, GetBombletSprayProjectileLife.field_p, 8);
             } else {
               if (6 != param2) {
                 if (param2 == 9) {
-                  var6.a((byte) 111, keb.field_o, (sba) (this));
+                  var6.a((byte) 111, GetCountermeasureLauncherProjectileLife.field_o, (sba) (this));
                 }
               } else {
                 var6.a(-126, lia.field_c, 9);
@@ -195,7 +195,7 @@ class os extends gea implements oo {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mb extends ds {
+final class mb extends PacketBuffer {
     static String[] field_k;
     static boolean field_i;
     static int field_j;
@@ -17,28 +17,28 @@ final class mb extends ds {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var3 = jaclib.memory.Stream.floatToRawIntBits(param0);
-        int fieldTemp$0 = this.field_e;
-        this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$0] = (byte)(var3 >> 24);
-        int fieldTemp$1 = this.field_e;
-        this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$1] = (byte)(var3 >> 16);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(var3 >> 24);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(var3 >> 16);
         if (param1 == 1724347896) {
-          fieldTemp$2 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$2] = (byte)(var3 >> 8);
-          fieldTemp$3 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$3] = (byte)var3;
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(var3 >> 8);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)var3;
           return;
         }
         field_i = false;
-        int fieldTemp$4 = this.field_e;
-        this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$4] = (byte)(var3 >> 8);
-        int fieldTemp$5 = this.field_e;
-        this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$5] = (byte)var3;
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(var3 >> 8);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)var3;
     }
 
     mb(int param0) {
@@ -50,27 +50,27 @@ final class mb extends ds {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var3 = jaclib.memory.Stream.floatToRawIntBits(param0);
-        int fieldTemp$0 = this.field_e;
-        this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$0] = (byte)var3;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)var3;
         if (param1 == 1059949744) {
-          fieldTemp$1 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$1] = (byte)(var3 >> 8);
-          fieldTemp$2 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$2] = (byte)(var3 >> 16);
-          fieldTemp$3 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$3] = (byte)(var3 >> 24);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(var3 >> 8);
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(var3 >> 16);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)(var3 >> 24);
           return;
         }
     }
 
-    final static void a(int param0, ml param1) {
+    final static void a(int param0, ShipComponent param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        ml var3 = null;
+        ShipComponent var3 = null;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -79,8 +79,8 @@ final class mb extends ds {
         var4 = VoidHunters.field_G;
         try {
           for (var2_int = 0; var2_int < 4; var2_int++) {
-            var3 = new ml(29);
-            var3.a(param0 ^ -1688588311, 0, new ml(24));
+            var3 = new ShipComponent(29);
+            var3.a(param0 ^ -1688588311, 0, new ShipComponent(24));
             param1.a(1, var2_int, var3);
           }
           if (param0 == -1688588312) {
@@ -98,7 +98,7 @@ final class mb extends ds {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class mb extends ds {
             if (param1 < 88) {
               return;
             }
-            ia.a(new Object[]{new Integer(param0)}, vpa.b((byte) -107), "resizing", (byte) 88);
+            ia.a(new Object[]{new Integer(param0)}, MissionList.b((byte) -107), "resizing", (byte) 88);
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

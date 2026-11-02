@@ -6,8 +6,8 @@ final class bna extends is {
     private java.lang.ref.SoftReference field_l;
 
     final static void e(int param0) {
-        ff.field_o.field_g = 0;
-        ff.field_o.field_k = param0;
+        GetAutozoomAmountMultiply.field_o.field_g = 0;
+        GetAutozoomAmountMultiply.field_o.field_k = param0;
     }
 
     final Object a(int param0) {
@@ -23,7 +23,7 @@ final class bna extends is {
         try {
           this.field_l = new java.lang.ref.SoftReference(param0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

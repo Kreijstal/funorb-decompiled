@@ -33,9 +33,9 @@ class uj {
     int d(byte param0) {
         if (param0 != 64) {
           this.d((byte) -115);
-          return 10 * oq.field_l;
+          return 10 * Particle.field_l;
         }
-        return 10 * oq.field_l;
+        return 10 * Particle.field_l;
     }
 
     int b(int param0) {

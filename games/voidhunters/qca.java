@@ -17,18 +17,18 @@ final class qca extends llb {
           this.b(-561, this.field_xb);
           this.g(123);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qca.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qca.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {
         if (param3) {
-          vbb.e(3);
+          SetOndamageParticleSpeed.e(3);
           dma.g(param2, param4, param0, param1);
           return;
         }
         field_yb = 104;
-        vbb.e(3);
+        SetOndamageParticleSpeed.e(3);
         dma.g(param2, param4, param0, param1);
     }
 
@@ -74,7 +74,7 @@ final class qca extends llb {
           this.field_vb.field_tb = param2;
           this.field_vb.field_B = param3;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qca.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qca.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

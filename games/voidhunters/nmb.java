@@ -40,10 +40,10 @@ final class nmb extends hrb {
         if (param0 > -57) {
           return;
         }
-        if (gha.field_q != null) {
-          var1 = gha.field_q;
+        if (GetMomentOfInertiaPerpointCalcDownshift.field_q != null) {
+          var1 = GetMomentOfInertiaPerpointCalcDownshift.field_q;
           synchronized (var1) {
-            gha.field_q = null;
+            GetMomentOfInertiaPerpointCalcDownshift.field_q = null;
           }
         }
     }
@@ -78,13 +78,13 @@ final class nmb extends hrb {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
     final static boolean b(int param0) {
         int var1 = 99 / ((param0 - 30) / 45);
-        return wqa.field_a == lqa.field_o.field_Nb ? true : false;
+        return wqa.field_a == SetSpinningBladeSpindamageMultiplier.field_o.field_Nb ? true : false;
     }
 
     nmb() {

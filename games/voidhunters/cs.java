@@ -7,12 +7,12 @@ final class cs {
     static tu field_a;
 
     final static void b(byte param0) {
-        int var1 = ldb.field_o * ldb.field_o;
+        int var1 = GetRepairModePower.field_o * GetRepairModePower.field_o;
         int var2 = var1 - tb.field_b * tb.field_b;
-        int var3 = (-kga.field_o + uh.field_p) * var2 / var1 + kga.field_o;
-        hca.field_o.a(icb.field_o, 118, 640, var3, 120);
+        int var3 = (-GetPhasedEnergyBeamProjectiles.field_o + GetAngularForceDownshift.field_p) * var2 / var1 + GetPhasedEnergyBeamProjectiles.field_o;
+        SetToggledScoreboard.field_o.a(SetUseDetailLines.field_o, 118, 640, var3, 120);
         int var4 = 81 / ((31 - param0) / 40);
-        hp.a(640, -24 + uh.field_p, qs.field_c, false, hi.field_a, 5, 0);
+        hp.a(640, -24 + GetAngularForceDownshift.field_p, qs.field_c, false, hi.field_a, 5, 0);
     }
 
     cs(int param0) {

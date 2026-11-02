@@ -20,25 +20,25 @@ final class wkb implements dja {
         if (param0 != 6) {
           field_a = 79;
         }
-        if (nd.field_r != -tha.field_p + 0 &&
-          nd.field_r == -tha.field_p + 250) {
+        if (SetSalvoaim.field_r != -GetShieldsDamageEnergyConversion.field_p + 0 &&
+          SetSalvoaim.field_r == -GetShieldsDamageEnergyConversion.field_p + 250) {
         }
-        nd.field_r = nd.field_r + 1;
+        SetSalvoaim.field_r = SetSalvoaim.field_r + 1;
     }
 
     public final tv a(byte param0) {
         int var2 = 73 % ((-64 - param0) / 50);
-        return (tv) ((Object) new pob());
+        return (tv) ((Object) new SetVariableAction());
     }
 
     final static void a(tjb param0, int param1) {
         try {
-          tra.field_o.b(-561, param0);
+          GetGrapplingHookFireForce.field_o.b(-561, param0);
           if (param1 != 6) {
             field_e = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "wkb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wkb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class wkb implements dja {
           faa var4 = (faa) null;
           wkb.a((byte) -44, (int[]) null, (faa) null, -49);
         }
-        return (tv[]) ((Object) new pob[param1]);
+        return (tv[]) ((Object) new SetVariableAction[param1]);
     }
 
     final static int[] a(byte param0, int[] param1, faa param2, int param3) {
@@ -112,7 +112,7 @@ final class wkb implements dja {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -24,7 +24,7 @@ final class iib extends qg {
           this.field_b.a(param1 ^ 77, param2);
           this.field_b.c(0, param0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "iib.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "iib.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,7 +43,7 @@ final class iib extends qg {
         field_e = null;
     }
 
-    iib(qfa param0, jjb param1) {
+    iib(OpenGlToolkit param0, jjb param1) {
         super(param0);
         try {
           this.field_c = param1;
@@ -70,7 +70,7 @@ final class iib extends qg {
           this.field_b.h(33984, 0);
           this.field_d.b(4864);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "iib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "iib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

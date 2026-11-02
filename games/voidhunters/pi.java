@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends fh {
+final class pi extends DualLinkNode {
     int[] field_n;
     private String[] field_k;
     private int[][] field_l;
     private int[] field_m;
 
-    private final void a(ds param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -26,7 +26,7 @@ final class pi extends fh {
             pi.a((byte) 3, false, false);
           }
           if (param1 == 1) {
-            this.field_k = up.a((byte) -67, '<', param0.a(-1));
+            this.field_k = SetFighterBayAimspeed.a((byte) -67, '<', param0.a(-1));
           } else {
             if (param1 == 2) {
               var4_int = param0.e((byte) -113);
@@ -40,7 +40,7 @@ final class pi extends fh {
               this.field_l = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
                 var6 = param0.e(param2 ^ 1869);
-                var7 = itb.a(0, var6);
+                var7 = SetPhasedEnergyBeamPulseFadetime.a(0, var6);
                 if (var7 != null) {
                   this.field_m[var5] = var6;
                   array$0 = new int[var7.field_c];
@@ -67,7 +67,7 @@ final class pi extends fh {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -97,12 +97,12 @@ final class pi extends fh {
         }
         if (null != this.field_n) {
           for (var2 = 0; this.field_n.length > var2; var2++) {
-            this.field_n[var2] = knb.a(this.field_n[var2], 32768);
+            this.field_n[var2] = SetAngularForceDownshift.a(this.field_n[var2], 32768);
           }
         }
     }
 
-    final void a(ds param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -134,7 +134,7 @@ final class pi extends fh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class pi extends fh {
         } else {
           dma.e(0, 0, dma.field_g, dma.field_j, 0, 192);
         }
-        vqb.a(param1, 76);
+        GetPointDefenceLaserProjectileDamage.a(param1, 76);
     }
 
     pi() {

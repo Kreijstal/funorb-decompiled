@@ -125,15 +125,15 @@ final class amb implements dja {
           if (null != ndb.field_a) {
             ndb.field_a.c((byte) 111, param1);
           }
-          if (lrb.field_f &&
-            bg.field_o &&
+          if (SetShipTeamAction.field_f &&
+            GetMessageFadetime.field_o &&
             vqa.field_g != null) {
-            if (idb.field_o) {
+            if (GetThrusterSmallForce.field_o) {
               if (!vqa.field_g.field_N &&
                 !jkb.field_a) {
                 stackIn_20_0 = 0;
               } else {
-                if (fva.field_p) {
+                if (SetFightersPerPlayerMaximum.field_p) {
                   stackIn_20_0 = (tob.g(0)) ? 1 : 0;
                 } else {
                   stackIn_20_0 = 0;
@@ -143,47 +143,47 @@ final class amb implements dja {
               stackIn_20_0 = 0;
             }
             var2 = stackIn_20_0;
-            stackIn_25_0 = (param1) && (jnb.e(51)) && (var2 == 0);
+            stackIn_25_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2 == 0);
             fr.a(stackIn_25_0, true);
-            var14 = feb.a(og.field_r, true);
+            var14 = feb.a(GetDebrisGroupColour.field_r, true);
             if (li.field_i) {
-              var4_int = hca.field_o.field_u;
+              var4_int = SetToggledScoreboard.field_o.field_u;
               if (!uga.field_d) {
-                if (wq.e((byte) 105)) {
+                if (GetReverbDry.e((byte) 105)) {
                   var4_int = dma.field_j;
-                  kp.e(-22);
+                  GetAiRepairTime.e(-22);
                 }
               } else {
                 var4_int = dma.field_j;
-                kp.e(-97);
+                GetAiRepairTime.e(-97);
               }
               if (dma.field_j > var4_int) {
                 var5 = (onb.field_a - dma.field_g) / 2;
                 var6 = -dma.field_j + var4_int + lj.field_a;
-                og.field_r.SA(var5, var6, dma.field_g, -var4_int + dma.field_j, dma.field_i, var4_int * dma.field_g, dma.field_g);
+                GetDebrisGroupColour.field_r.SA(var5, var6, dma.field_g, -var4_int + dma.field_j, dma.field_i, var4_int * dma.field_g, dma.field_g);
               }
             }
             if (var2 != 0) {
               if (mjb.field_e) {
-                stackIn_38_0 = up.field_p;
+                stackIn_38_0 = SetFighterBayAimspeed.field_p;
               } else {
                 stackIn_38_0 = kia.field_b;
               }
               var13 = stackIn_38_0;
               var4 = var13;
-              stackIn_42_0 = (param1) && (jnb.e(param0 + 30499));
+              stackIn_42_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
               ida.a(stackIn_42_0, var13, -73);
               if (li.field_i) {
-                var5Lifetime2 = bja.e((byte) -47);
+                var5Lifetime2 = SetLaserEnergyUsed.e((byte) -47);
                 var6Lifetime2 = fra.a((byte) 120);
                 var7 = se.a(false);
-                var8 = seb.a(param0 + 57974);
+                var8 = SetArmageddonWarning.a(param0 + 57974);
                 var9 = (onb.field_a - dma.field_g) / 2;
                 var10 = (-dma.field_j + lj.field_a) / 2;
                 var11 = var5Lifetime2 + var9;
                 var12 = var6Lifetime2 + var10;
                 var14.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
-                og.field_r.SA(var11 - var5Lifetime2, var12, dma.field_g, var8, dma.field_i, dma.field_g * var6Lifetime2, dma.field_g);
+                GetDebrisGroupColour.field_r.SA(var11 - var5Lifetime2, var12, dma.field_g, var8, dma.field_i, dma.field_g * var6Lifetime2, dma.field_g);
                 var14.a(true);
               }
             }
@@ -196,65 +196,65 @@ final class amb implements dja {
         if (null != ndb.field_a) {
           ndb.field_a.c((byte) 111, param1);
         }
-        if (lrb.field_f &&
-          bg.field_o &&
+        if (SetShipTeamAction.field_f &&
+          GetMessageFadetime.field_o &&
           vqa.field_g != null) {
-          if (idb.field_o) {
+          if (GetThrusterSmallForce.field_o) {
             if (vqa.field_g.field_N) {
-              if (fva.field_p) {
+              if (SetFightersPerPlayerMaximum.field_p) {
                 stackIn_108_0 = (!tob.g(0)) ? 0 : 1;
               } else {
                 stackIn_108_0 = 0;
               }
             } else {
               if (jkb.field_a) {
-                if (fva.field_p) {
+                if (SetFightersPerPlayerMaximum.field_p) {
                   stackIn_74_0 = (tob.g(0)) ? 1 : 0;
                 } else {
                   stackIn_74_0 = 0;
                 }
                 var2Lifetime1 = stackIn_74_0;
-                stackIn_79_0 = (param1) && (jnb.e(51)) && (var2Lifetime1 == 0);
+                stackIn_79_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2Lifetime1 == 0);
                 fr.a(stackIn_79_0, true);
-                var16 = feb.a(og.field_r, true);
+                var16 = feb.a(GetDebrisGroupColour.field_r, true);
                 if (li.field_i) {
-                  var4_intLifetime1 = hca.field_o.field_u;
+                  var4_intLifetime1 = SetToggledScoreboard.field_o.field_u;
                   if (!uga.field_d) {
-                    if (wq.e((byte) 105)) {
+                    if (GetReverbDry.e((byte) 105)) {
                       var4_intLifetime1 = dma.field_j;
-                      kp.e(-22);
+                      GetAiRepairTime.e(-22);
                     }
                   } else {
                     var4_intLifetime1 = dma.field_j;
-                    kp.e(-97);
+                    GetAiRepairTime.e(-97);
                   }
                   if (dma.field_j > var4_intLifetime1) {
                     var5Lifetime1 = (onb.field_a - dma.field_g) / 2;
                     var6Lifetime1 = -dma.field_j + var4_intLifetime1 + lj.field_a;
-                    og.field_r.SA(var5Lifetime1, var6Lifetime1, dma.field_g, -var4_intLifetime1 + dma.field_j, dma.field_i, var4_intLifetime1 * dma.field_g, dma.field_g);
+                    GetDebrisGroupColour.field_r.SA(var5Lifetime1, var6Lifetime1, dma.field_g, -var4_intLifetime1 + dma.field_j, dma.field_i, var4_intLifetime1 * dma.field_g, dma.field_g);
                   }
                 }
                 if (var2Lifetime1 != 0) {
                   if (mjb.field_e) {
-                    stackIn_92_0 = up.field_p;
+                    stackIn_92_0 = SetFighterBayAimspeed.field_p;
                   } else {
                     stackIn_92_0 = kia.field_b;
                   }
                   var15 = stackIn_92_0;
                   var4Lifetime1 = var15;
-                  stackIn_96_0 = (param1) && (jnb.e(param0 + 30499));
+                  stackIn_96_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
                   ida.a(stackIn_96_0, var15, -73);
                   if (li.field_i) {
-                    var5Lifetime1Lifetime3 = bja.e((byte) -47);
+                    var5Lifetime1Lifetime3 = SetLaserEnergyUsed.e((byte) -47);
                     var6Lifetime1Lifetime3 = fra.a((byte) 120);
                     var7Lifetime1 = se.a(false);
-                    var8Lifetime1 = seb.a(param0 + 57974);
+                    var8Lifetime1 = SetArmageddonWarning.a(param0 + 57974);
                     var9Lifetime1 = (onb.field_a - dma.field_g) / 2;
                     var10Lifetime1 = (-dma.field_j + lj.field_a) / 2;
                     var11Lifetime1 = var5Lifetime1Lifetime3 + var9Lifetime1;
                     var12Lifetime1 = var6Lifetime1Lifetime3 + var10Lifetime1;
                     var16.a(var11Lifetime1, var7Lifetime1 + var11Lifetime1, var12Lifetime1, var8Lifetime1 + var12Lifetime1, (byte) -70);
-                    og.field_r.SA(var11Lifetime1 - var5Lifetime1Lifetime3, var12Lifetime1, dma.field_g, var8Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime3, dma.field_g);
+                    GetDebrisGroupColour.field_r.SA(var11Lifetime1 - var5Lifetime1Lifetime3, var12Lifetime1, dma.field_g, var8Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime3, dma.field_g);
                     var16.a(true);
                   }
                 }
@@ -269,23 +269,23 @@ final class amb implements dja {
             stackIn_108_0 = 0;
           }
           var2Lifetime1Lifetime1 = stackIn_108_0;
-          stackIn_113_0 = (param1) && (jnb.e(51)) && (var2Lifetime1Lifetime1 == 0);
+          stackIn_113_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2Lifetime1Lifetime1 == 0);
           fr.a(stackIn_113_0, true);
-          var18 = feb.a(og.field_r, true);
+          var18 = feb.a(GetDebrisGroupColour.field_r, true);
           var3 = var18;
           if (li.field_i) {
-            var4_intLifetime1Lifetime1 = hca.field_o.field_u;
+            var4_intLifetime1Lifetime1 = SetToggledScoreboard.field_o.field_u;
             if (uga.field_d) {
               var4_intLifetime1Lifetime1 = dma.field_j;
-              kp.e(-97);
+              GetAiRepairTime.e(-97);
               if (dma.field_j > var4_intLifetime1Lifetime1) {
                 var5Lifetime1Lifetime1 = (onb.field_a - dma.field_g) / 2;
                 var6Lifetime1Lifetime1 = -dma.field_j + var4_intLifetime1Lifetime1 + lj.field_a;
-                og.field_r.SA(var5Lifetime1Lifetime1, var6Lifetime1Lifetime1, dma.field_g, -var4_intLifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1 * dma.field_g, dma.field_g);
+                GetDebrisGroupColour.field_r.SA(var5Lifetime1Lifetime1, var6Lifetime1Lifetime1, dma.field_g, -var4_intLifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1 * dma.field_g, dma.field_g);
               }
               if (var2Lifetime1Lifetime1 != 0) {
                 if (mjb.field_e) {
-                  stackIn_122_0 = up.field_p;
+                  stackIn_122_0 = SetFighterBayAimspeed.field_p;
                 } else {
                   stackIn_122_0 = kia.field_b;
                 }
@@ -299,19 +299,19 @@ final class amb implements dja {
                 var4Lifetime1Lifetime1 = var19Lifetime3;
                 var19Lifetime4 = var4Lifetime1Lifetime1;
                 var4Lifetime1Lifetime1 = var19Lifetime4;
-                stackIn_126_0 = (param1) && (jnb.e(param0 + 30499));
+                stackIn_126_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
                 ida.a(stackIn_126_0, var17, -73);
                 if (li.field_i) {
-                  var5Lifetime1Lifetime1Lifetime4 = bja.e((byte) -47);
+                  var5Lifetime1Lifetime1Lifetime4 = SetLaserEnergyUsed.e((byte) -47);
                   var6Lifetime1Lifetime1Lifetime4 = fra.a((byte) 120);
                   var7Lifetime1Lifetime1 = se.a(false);
-                  var8Lifetime1Lifetime1 = seb.a(param0 + 57974);
+                  var8Lifetime1Lifetime1 = SetArmageddonWarning.a(param0 + 57974);
                   var9Lifetime1Lifetime1 = (onb.field_a - dma.field_g) / 2;
                   var10Lifetime1Lifetime1 = (-dma.field_j + lj.field_a) / 2;
                   var11Lifetime1Lifetime1 = var5Lifetime1Lifetime1Lifetime4 + var9Lifetime1Lifetime1;
                   var12Lifetime1Lifetime1 = var6Lifetime1Lifetime1Lifetime4 + var10Lifetime1Lifetime1;
                   var18.a(var11Lifetime1Lifetime1, var7Lifetime1Lifetime1 + var11Lifetime1Lifetime1, var12Lifetime1Lifetime1, var8Lifetime1Lifetime1 + var12Lifetime1Lifetime1, (byte) -70);
-                  og.field_r.SA(var11Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime4, var12Lifetime1Lifetime1, dma.field_g, var8Lifetime1Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime4, dma.field_g);
+                  GetDebrisGroupColour.field_r.SA(var11Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime4, var12Lifetime1Lifetime1, dma.field_g, var8Lifetime1Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime4, dma.field_g);
                   var18.a(true);
                 }
               }
@@ -320,21 +320,21 @@ final class amb implements dja {
               }
               return;
             }
-            if (!wq.e((byte) 105)) {
+            if (!GetReverbDry.e((byte) 105)) {
               if (dma.field_j > var4_intLifetime1Lifetime1) {
                 var5Lifetime1Lifetime1Lifetime1 = (onb.field_a - dma.field_g) / 2;
                 var6Lifetime1Lifetime1Lifetime1 = -dma.field_j + var4_intLifetime1Lifetime1 + lj.field_a;
-                og.field_r.SA(var5Lifetime1Lifetime1Lifetime1, var6Lifetime1Lifetime1Lifetime1, dma.field_g, -var4_intLifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1 * dma.field_g, dma.field_g);
+                GetDebrisGroupColour.field_r.SA(var5Lifetime1Lifetime1Lifetime1, var6Lifetime1Lifetime1Lifetime1, dma.field_g, -var4_intLifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1 * dma.field_g, dma.field_g);
               }
               if (var2Lifetime1Lifetime1 != 0) {
                 if (mjb.field_e) {
-                  stackIn_140_0 = up.field_p;
+                  stackIn_140_0 = SetFighterBayAimspeed.field_p;
                 } else {
                   stackIn_140_0 = kia.field_b;
                 }
                 var19Lifetime1 = stackIn_140_0;
                 var4Lifetime1Lifetime1 = var19Lifetime1;
-                stackIn_144_0 = (param1) && (jnb.e(param0 + 30499));
+                stackIn_144_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
                 ida.a(stackIn_144_0, var19Lifetime1, -73);
                 if (!li.field_i) {
                   if (param0 != -30428) {
@@ -342,16 +342,16 @@ final class amb implements dja {
                   }
                   return;
                 }
-                var5Lifetime1Lifetime1Lifetime1Lifetime1 = bja.e((byte) -47);
+                var5Lifetime1Lifetime1Lifetime1Lifetime1 = SetLaserEnergyUsed.e((byte) -47);
                 var6Lifetime1Lifetime1Lifetime1Lifetime1 = fra.a((byte) 120);
                 var7Lifetime1Lifetime1Lifetime1 = se.a(false);
-                var8Lifetime1Lifetime1Lifetime1 = seb.a(param0 + 57974);
+                var8Lifetime1Lifetime1Lifetime1 = SetArmageddonWarning.a(param0 + 57974);
                 var9Lifetime1Lifetime1Lifetime1 = (onb.field_a - dma.field_g) / 2;
                 var10Lifetime1Lifetime1Lifetime1 = (-dma.field_j + lj.field_a) / 2;
                 var11Lifetime1Lifetime1Lifetime1 = var5Lifetime1Lifetime1Lifetime1Lifetime1 + var9Lifetime1Lifetime1Lifetime1;
                 var12Lifetime1Lifetime1Lifetime1 = var6Lifetime1Lifetime1Lifetime1Lifetime1 + var10Lifetime1Lifetime1Lifetime1;
                 var18.a(var11Lifetime1Lifetime1Lifetime1, var7Lifetime1Lifetime1Lifetime1 + var11Lifetime1Lifetime1Lifetime1, var12Lifetime1Lifetime1Lifetime1, var8Lifetime1Lifetime1Lifetime1 + var12Lifetime1Lifetime1Lifetime1, (byte) -70);
-                og.field_r.SA(var11Lifetime1Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime1Lifetime1, var12Lifetime1Lifetime1Lifetime1, dma.field_g, var8Lifetime1Lifetime1Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime1Lifetime1, dma.field_g);
+                GetDebrisGroupColour.field_r.SA(var11Lifetime1Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime1Lifetime1, var12Lifetime1Lifetime1Lifetime1, dma.field_g, var8Lifetime1Lifetime1Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime1Lifetime1, dma.field_g);
                 var18.a(true);
               }
               if (param0 == -30428) {
@@ -361,29 +361,29 @@ final class amb implements dja {
               return;
             }
             var4_intLifetime1Lifetime1Lifetime1 = dma.field_j;
-            kp.e(-22);
+            GetAiRepairTime.e(-22);
             if (dma.field_j <= var4_intLifetime1Lifetime1Lifetime1) {
               if (var2Lifetime1Lifetime1 != 0) {
                 if (mjb.field_e) {
-                  stackIn_158_0 = up.field_p;
+                  stackIn_158_0 = SetFighterBayAimspeed.field_p;
                 } else {
                   stackIn_158_0 = kia.field_b;
                 }
                 var20 = stackIn_158_0;
                 var4Lifetime1Lifetime1 = var20;
-                stackIn_162_0 = (param1) && (jnb.e(param0 + 30499));
+                stackIn_162_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
                 ida.a(stackIn_162_0, var20, -73);
                 if (li.field_i) {
-                  var5Lifetime1Lifetime1Lifetime2 = bja.e((byte) -47);
+                  var5Lifetime1Lifetime1Lifetime2 = SetLaserEnergyUsed.e((byte) -47);
                   var6Lifetime1Lifetime1Lifetime2 = fra.a((byte) 120);
                   var7Lifetime1Lifetime1Lifetime2 = se.a(false);
-                  var8Lifetime1Lifetime1Lifetime2 = seb.a(param0 + 57974);
+                  var8Lifetime1Lifetime1Lifetime2 = SetArmageddonWarning.a(param0 + 57974);
                   var9Lifetime1Lifetime1Lifetime2 = (onb.field_a - dma.field_g) / 2;
                   var10Lifetime1Lifetime1Lifetime2 = (-dma.field_j + lj.field_a) / 2;
                   var11Lifetime1Lifetime1Lifetime2 = var5Lifetime1Lifetime1Lifetime2 + var9Lifetime1Lifetime1Lifetime2;
                   var12Lifetime1Lifetime1Lifetime2 = var6Lifetime1Lifetime1Lifetime2 + var10Lifetime1Lifetime1Lifetime2;
                   var18.a(var11Lifetime1Lifetime1Lifetime2, var7Lifetime1Lifetime1Lifetime2 + var11Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1Lifetime2, var8Lifetime1Lifetime1Lifetime2 + var12Lifetime1Lifetime1Lifetime2, (byte) -70);
-                  og.field_r.SA(var11Lifetime1Lifetime1Lifetime2 - var5Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1Lifetime2, dma.field_g, var8Lifetime1Lifetime1Lifetime2, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime2, dma.field_g);
+                  GetDebrisGroupColour.field_r.SA(var11Lifetime1Lifetime1Lifetime2 - var5Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1Lifetime2, dma.field_g, var8Lifetime1Lifetime1Lifetime2, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime2, dma.field_g);
                   var18.a(true);
                 }
               }
@@ -395,17 +395,17 @@ final class amb implements dja {
             }
             var5Lifetime1Lifetime1Lifetime3 = (onb.field_a - dma.field_g) / 2;
             var6Lifetime1Lifetime1Lifetime3 = -dma.field_j + var4_intLifetime1Lifetime1Lifetime1 + lj.field_a;
-            og.field_r.SA(var5Lifetime1Lifetime1Lifetime3, var6Lifetime1Lifetime1Lifetime3, dma.field_g, -var4_intLifetime1Lifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1Lifetime1 * dma.field_g, dma.field_g);
+            GetDebrisGroupColour.field_r.SA(var5Lifetime1Lifetime1Lifetime3, var6Lifetime1Lifetime1Lifetime3, dma.field_g, -var4_intLifetime1Lifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1Lifetime1 * dma.field_g, dma.field_g);
           }
           if (var2Lifetime1Lifetime1 != 0) {
             if (mjb.field_e) {
-              stackIn_177_0 = up.field_p;
+              stackIn_177_0 = SetFighterBayAimspeed.field_p;
             } else {
               stackIn_177_0 = kia.field_b;
             }
             var21 = stackIn_177_0;
             var4Lifetime1Lifetime2 = var21;
-            stackIn_181_0 = (param1) && (jnb.e(param0 + 30499));
+            stackIn_181_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
             ida.a(stackIn_181_0, var21, -73);
             if (!li.field_i) {
               if (param0 == -30428) {
@@ -414,16 +414,16 @@ final class amb implements dja {
               field_b = (String) null;
               return;
             }
-            var5Lifetime1Lifetime2 = bja.e((byte) -47);
+            var5Lifetime1Lifetime2 = SetLaserEnergyUsed.e((byte) -47);
             var6Lifetime1Lifetime2 = fra.a((byte) 120);
             var7Lifetime1Lifetime2 = se.a(false);
-            var8Lifetime1Lifetime2 = seb.a(param0 + 57974);
+            var8Lifetime1Lifetime2 = SetArmageddonWarning.a(param0 + 57974);
             var9Lifetime1Lifetime2 = (onb.field_a - dma.field_g) / 2;
             var10Lifetime1Lifetime2 = (-dma.field_j + lj.field_a) / 2;
             var11Lifetime1Lifetime2 = var5Lifetime1Lifetime2 + var9Lifetime1Lifetime2;
             var12Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + var10Lifetime1Lifetime2;
             var18.a(var11Lifetime1Lifetime2, var7Lifetime1Lifetime2 + var11Lifetime1Lifetime2, var12Lifetime1Lifetime2, var8Lifetime1Lifetime2 + var12Lifetime1Lifetime2, (byte) -70);
-            og.field_r.SA(var11Lifetime1Lifetime2 - var5Lifetime1Lifetime2, var12Lifetime1Lifetime2, dma.field_g, var8Lifetime1Lifetime2, dma.field_i, dma.field_g * var6Lifetime1Lifetime2, dma.field_g);
+            GetDebrisGroupColour.field_r.SA(var11Lifetime1Lifetime2 - var5Lifetime1Lifetime2, var12Lifetime1Lifetime2, dma.field_g, var8Lifetime1Lifetime2, dma.field_i, dma.field_g * var6Lifetime1Lifetime2, dma.field_g);
             var18.a(true);
           }
         }

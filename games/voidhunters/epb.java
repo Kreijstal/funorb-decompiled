@@ -17,29 +17,29 @@ final class epb extends pw {
     private float field_d;
 
     final float[] b(byte param0) {
-        tra.field_p[6] = this.field_d;
-        tra.field_p[0] = this.field_k;
-        tra.field_p[8] = this.field_f;
-        tra.field_p[13] = 0.0f;
-        tra.field_p[14] = 0.0f;
-        tra.field_p[10] = this.field_c;
+        GetGrapplingHookFireForce.field_p[6] = this.field_d;
+        GetGrapplingHookFireForce.field_p[0] = this.field_k;
+        GetGrapplingHookFireForce.field_p[8] = this.field_f;
+        GetGrapplingHookFireForce.field_p[13] = 0.0f;
+        GetGrapplingHookFireForce.field_p[14] = 0.0f;
+        GetGrapplingHookFireForce.field_p[10] = this.field_c;
         if (param0 > 27) {
-          tra.field_p[5] = this.field_j;
-          tra.field_p[4] = this.field_i;
-          tra.field_p[12] = 0.0f;
-          tra.field_p[2] = this.field_b;
-          tra.field_p[9] = this.field_g;
-          tra.field_p[1] = this.field_h;
-          return tra.field_p;
+          GetGrapplingHookFireForce.field_p[5] = this.field_j;
+          GetGrapplingHookFireForce.field_p[4] = this.field_i;
+          GetGrapplingHookFireForce.field_p[12] = 0.0f;
+          GetGrapplingHookFireForce.field_p[2] = this.field_b;
+          GetGrapplingHookFireForce.field_p[9] = this.field_g;
+          GetGrapplingHookFireForce.field_p[1] = this.field_h;
+          return GetGrapplingHookFireForce.field_p;
         }
         this.a(false);
-        tra.field_p[5] = this.field_j;
-        tra.field_p[4] = this.field_i;
-        tra.field_p[12] = 0.0f;
-        tra.field_p[2] = this.field_b;
-        tra.field_p[9] = this.field_g;
-        tra.field_p[1] = this.field_h;
-        return tra.field_p;
+        GetGrapplingHookFireForce.field_p[5] = this.field_j;
+        GetGrapplingHookFireForce.field_p[4] = this.field_i;
+        GetGrapplingHookFireForce.field_p[12] = 0.0f;
+        GetGrapplingHookFireForce.field_p[2] = this.field_b;
+        GetGrapplingHookFireForce.field_p[9] = this.field_g;
+        GetGrapplingHookFireForce.field_p[1] = this.field_h;
+        return GetGrapplingHookFireForce.field_p;
     }
 
     final void a(float[] param0, float param1, float param2, float param3, int param4, float param5) {
@@ -93,7 +93,7 @@ final class epb extends pw {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class epb extends pw {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class epb extends pw {
           this.field_e = -(this.field_g * var4.field_l + (this.field_j * var4.field_e + var4.field_n * this.field_h));
           this.field_l = -(this.field_c * var4.field_l + (var4.field_n * this.field_b + var4.field_e * this.field_d));
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "epb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "epb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -206,32 +206,32 @@ final class epb extends pw {
     }
 
     final float[] a(boolean param0) {
-        tra.field_p[13] = this.field_e;
-        tra.field_p[4] = this.field_i;
-        tra.field_p[14] = this.field_l;
-        tra.field_p[0] = this.field_k;
-        tra.field_p[1] = this.field_h;
-        tra.field_p[2] = this.field_b;
-        tra.field_p[5] = this.field_j;
-        tra.field_p[6] = this.field_d;
-        tra.field_p[12] = this.field_n;
-        tra.field_p[9] = this.field_g;
-        tra.field_p[10] = this.field_c;
-        tra.field_p[8] = this.field_f;
+        GetGrapplingHookFireForce.field_p[13] = this.field_e;
+        GetGrapplingHookFireForce.field_p[4] = this.field_i;
+        GetGrapplingHookFireForce.field_p[14] = this.field_l;
+        GetGrapplingHookFireForce.field_p[0] = this.field_k;
+        GetGrapplingHookFireForce.field_p[1] = this.field_h;
+        GetGrapplingHookFireForce.field_p[2] = this.field_b;
+        GetGrapplingHookFireForce.field_p[5] = this.field_j;
+        GetGrapplingHookFireForce.field_p[6] = this.field_d;
+        GetGrapplingHookFireForce.field_p[12] = this.field_n;
+        GetGrapplingHookFireForce.field_p[9] = this.field_g;
+        GetGrapplingHookFireForce.field_p[10] = this.field_c;
+        GetGrapplingHookFireForce.field_p[8] = this.field_f;
         if (param0) {
-          return tra.field_p;
+          return GetGrapplingHookFireForce.field_p;
         }
         this.field_n = 1.1959586143493652f;
-        return tra.field_p;
+        return GetGrapplingHookFireForce.field_p;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        float var7 = kn.field_o[16383 & param3];
-        float var8 = kn.field_r[param3 & 16383];
-        float var9 = kn.field_o[param4 & 16383];
-        float var10 = kn.field_r[param4 & 16383];
-        float var11 = kn.field_o[param5 & 16383];
-        float var12 = kn.field_r[16383 & param5];
+        float var7 = GetFighterBayReload.field_o[16383 & param3];
+        float var8 = GetFighterBayReload.field_r[param3 & 16383];
+        float var9 = GetFighterBayReload.field_o[param4 & 16383];
+        float var10 = GetFighterBayReload.field_r[param4 & 16383];
+        float var11 = GetFighterBayReload.field_o[param5 & 16383];
+        float var12 = GetFighterBayReload.field_r[16383 & param5];
         float var13 = var11 * var8;
         float var14 = var8 * var12;
         this.field_k = var9 * var11 + var14 * var10;

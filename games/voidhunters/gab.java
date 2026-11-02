@@ -9,7 +9,7 @@ final class gab {
     static sfa field_b;
     private int field_d;
     private int field_g;
-    private ij field_i;
+    private IntrusiveDeque field_i;
     private int[][] field_h;
     boolean field_e;
 
@@ -20,7 +20,7 @@ final class gab {
           throw new RuntimeException("Can only retrieve a full image cache");
         }
         for (var2 = 0; var2 < this.field_c; var2++) {
-          this.field_a[var2] = hgb.field_o;
+          this.field_a[var2] = GetTorpedoAimspeed.field_o;
         }
         if (param0 <= 23) {
           this.field_h = (int[][]) null;
@@ -63,7 +63,7 @@ final class gab {
         if (this.field_c == this.field_g) {
           stackIn_16_1 = (null == this.field_a[param1]);
           this.field_e = stackIn_16_1;
-          this.field_a[param1] = hgb.field_o;
+          this.field_a[param1] = GetTorpedoAimspeed.field_o;
           return this.field_h[param1];
         }
         if (1 == this.field_c) {
@@ -95,7 +95,7 @@ final class gab {
     gab(int param0, int param1, int param2) {
         this.field_f = -1;
         this.field_d = 0;
-        this.field_i = new ij();
+        this.field_i = new IntrusiveDeque();
         this.field_e = false;
         this.field_g = param1;
         this.field_c = param0;

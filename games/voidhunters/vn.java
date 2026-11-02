@@ -8,7 +8,7 @@ final class vn extends le {
     private int field_l;
     private int field_j;
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -16,7 +16,7 @@ final class vn extends le {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        ds var6 = null;
+        PacketBuffer var6 = null;
         var5 = VoidHunters.field_G;
         try {
           var4_int = param0;
@@ -32,8 +32,8 @@ final class vn extends le {
             }
           }
           if (param1 >= -60) {
-            var6 = (ds) null;
-            this.a(-122, -52, (ds) null);
+            var6 = (PacketBuffer) null;
+            this.a(-122, -52, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -46,7 +46,7 @@ final class vn extends le {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class vn extends le {
           for (var4 = 0; var4 < hob.field_d; var4++) {
             boolean decompiledFrameRemainder0 = true;
             var5 = grb.field_l[var4];
-            var6 = sj.field_p[param0];
+            var6 = SetSalvoUsesAllEnergy.field_p[param0];
             var7 = var5 * this.field_j >> 12;
             var8 = this.field_l * var6 >> 12;
             var9 = this.field_j * (var5 % (4096 / this.field_j));

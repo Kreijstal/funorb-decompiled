@@ -3,7 +3,7 @@
  */
 final class nk {
     private of field_a;
-    private qfa field_b;
+    private OpenGlToolkit field_b;
 
     final boolean a(int param0) {
         int var2 = 69 / ((38 - param0) / 41);
@@ -20,7 +20,7 @@ final class nk {
         if (var3 == null) {
           return null != this.field_a ? true : false;
         }
-        this.field_a = wra.a(new ts[]{var3}, (byte) 107, this.field_b);
+        this.field_a = GetTorpedoAcceleration.a(new ts[]{var3}, (byte) 107, this.field_b);
         return null != this.field_a ? true : false;
     }
 
@@ -109,15 +109,15 @@ final class nk {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
-    nk(qfa param0) {
+    nk(OpenGlToolkit param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

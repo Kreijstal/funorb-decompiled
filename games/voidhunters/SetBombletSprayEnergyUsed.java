@@ -1,0 +1,136 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SetBombletSprayEnergyUsed extends ConsoleCommand {
+    static int field_o;
+
+    SetBombletSprayEnergyUsed(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    final static int a(int param0, byte param1, int param2, String param3, int param4) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var5_int = 400;
+          var6 = GameKeyHandler.a((byte) 122, 0, param2, var5_int, param3);
+          if (param1 > -123) {
+            field_o = 42;
+          }
+          var7 = AsteroidField.a((byte) -37, param3, 0, param2, var5_int);
+          var8 = 20;
+          var9 = param0 + GetBombletSprayEnergyUsed.field_p.height / 2 - var7 / 2;
+          af.a((byte) -115, param4, 2 * var8 + var7, -(var6 / 2) + (GetBombletSprayEnergyUsed.field_p.width / 2 - var8), -var8 + var9, var6 + 2 * var8);
+          kca.a(var9, var7, -(var6 / 2) + GetBombletSprayEnergyUsed.field_p.width / 2, 0, param4, 1, param3, param2, 16777215, var6, 0, (byte) -99, 1);
+          stackIn_3_0 = var8 * 2 + var7;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_6_0 = var5;
+          stackIn_6_1 = new StringBuilder().append("maa.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final static boolean a(asb param0, int param1, asb param2, asb param3) {
+        RuntimeException var4 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_23_2 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_26_2 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param3.b((byte) -43) &&
+            param3.a(32171, "commonui")) {
+            if (param0.b((byte) 114) &&
+              param0.a(param1 + 32169, "commonui")) {
+              if (!param2.b((byte) 127)) {
+                return false;
+              }
+              if (!param2.a(32171, "button.gif")) {
+                return false;
+              }
+              if (param1 == 2) {
+                return true;
+              }
+              return true;
+            }
+            return false;
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_22_0 = var4;
+          stackIn_22_1 = new StringBuilder().append("maa.C(");
+          if (param0 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
+          }
+          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
+          }
+          stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',');
+          if (param3 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+        }
+    }
+
+    final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
+        RuntimeException var3 = null;
+        ConsoleValue stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (obfuscationGuard >= -119) {
+            field_o = -21;
+          }
+          SetMachineGunEnergyUsed.a(162, 62, arguments[0].a(46));
+          stackIn_3_0 = new ConsoleValue("void");
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("maa.A(");
+          if (arguments == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    static {
+        field_o = 1;
+    }
+}

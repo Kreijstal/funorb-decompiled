@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends ha implements e {
+final class oa extends GraphicsToolkit implements e {
     private boolean field_m;
-    private ij field_c;
+    private IntrusiveDeque field_c;
     private ya field_k;
     long field_nativeid;
     private p field_e;
@@ -92,7 +92,7 @@ final class oa extends ha implements e {
         this.field_c.e(93);
         this.FA();
         if (this.field_h) {
-          uhb.a((byte) -115, true, false);
+          SetDebrisFoundInPairs.a((byte) -115, true, false);
           this.field_h = false;
         }
         this.g();
@@ -299,7 +299,7 @@ final class oa extends ha implements e {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.y().a((ha) (this), param0, param1, param2, param3, param4, param5, param6);
+        this.y().a((GraphicsToolkit) (this), param0, param1, param2, param3, param4, param5, param6);
     }
 
     final boolean a() {
@@ -359,13 +359,13 @@ final class oa extends ha implements e {
         Throwable var5 = null;
         this.field_m = false;
         this.field_nativeid = 0L;
-        this.field_c = new ij();
+        this.field_c = new IntrusiveDeque();
         this.field_f = 4096;
         this.field_d = 4096;
         this.field_i = new gnb(4);
         this.field_h = false;
         try {
-          if (!gpb.a("sw3d", (byte) 114)) {
+          if (!RasterBuffer.a("sw3d", (byte) 114)) {
             throw new RuntimeException("");
           }
           pq.b((byte) -76);

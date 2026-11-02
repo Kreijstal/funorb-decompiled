@@ -57,8 +57,8 @@ final class lo {
           if (var5 < 0) {
             var5 = var5 - param1;
           }
-          var6 = param3.a(true, ip.field_p.width);
-          var7 = param3.a(0, ip.field_p.height);
+          var6 = param3.a(true, GetBombletSprayEnergyUsed.field_p.width);
+          var7 = param3.a(0, GetBombletSprayEnergyUsed.field_p.height);
           var8 = -var4_int + var6;
           var9 = var7 - var5;
           var10 = var4_int / param1 * param1;
@@ -98,7 +98,7 @@ final class lo {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

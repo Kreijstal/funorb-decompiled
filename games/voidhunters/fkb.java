@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fkb extends ksa {
+final class fkb extends IntrusiveNode {
     int field_k;
     static tjb field_m;
     int field_v;
@@ -34,12 +34,12 @@ final class fkb extends ksa {
           if (!li.field_i) {
             return ita.a(param0, param1 ^ -8013).field_A;
           }
-          return de.a(param0, 300).field_e;
+          return SetTorpedoEnergyUsed.a(param0, 300).field_e;
         }
         if (!li.field_i) {
           return ita.a(param0, param1 ^ -8013).field_A;
         }
-        return de.a(param0, 300).field_e;
+        return SetTorpedoEnergyUsed.a(param0, 300).field_e;
     }
 
     final void c(int param0) {
@@ -72,9 +72,9 @@ final class fkb extends ksa {
         int var2 = VoidHunters.field_G;
         int var1_intLifetime1;
         try {
-          omb.field_p.a(-103);
+          GetPedrosRepairMode.field_p.a(-103);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            sga.field_o[var1_int] = 0L;
+            SetSniperCannonFiringLeeway.field_o[var1_int] = 0L;
           }
           if (param0 != 2096) {
             field_m = (tjb) null;
@@ -82,9 +82,9 @@ final class fkb extends ksa {
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             fm.field_b[var1_intLifetime1] = 0L;
           }
-          dn.field_p = 0;
+          SetCountermeasureLauncherAimspeed.field_p = 0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fkb.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fkb.D(" + param0 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class fkb extends ksa {
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -1,0 +1,100 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GetShieldsDirectionalArcParticleLife extends ConsoleCommand {
+    static String[] field_q;
+    static long[] field_o;
+    static int field_p;
+    static long[][] field_r;
+
+    GetShieldsDirectionalArcParticleLife(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
+        RuntimeException var3 = null;
+        ConsoleValue stackIn_2_0 = null;
+        ConsoleValue stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (obfuscationGuard <= -119) {
+            stackIn_4_0 = new ConsoleValue(LoadSettings.field_q);
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = (ConsoleValue) null;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("gp.A(");
+          if (arguments == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    public static void a(int param0) {
+        field_o = null;
+        if (param0 != -23822) {
+          return;
+        }
+        field_r = (long[][]) null;
+        field_q = null;
+    }
+
+    static {
+        int var14 = 0;
+        long stackIn_5_0 = 0L;
+        int var0;
+        int var1;
+        long var2;
+        long var4;
+        long var6;
+        long var8;
+        long var10;
+        long var12;
+        field_o = new long[11];
+        field_r = new long[8][256];
+        var0 = 0;
+        scanLoop1: while (var0 < 256) {
+          var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+          if ((var0 & 1) != 0) {
+            stackIn_5_0 = (long)(255 & var1);
+          } else {
+            stackIn_5_0 = (long)(var1 >>> 8);
+          }
+          var2 = stackIn_5_0;
+          var4 = var2 << 1;
+          if (var4 >= 256L) {
+            var4 = var4 ^ 285L;
+          }
+          var6 = var4 << 1;
+          if (256L <= var6) {
+            var6 = var6 ^ 285L;
+          }
+          var8 = var2 ^ var6;
+          var10 = var6 << 1;
+          if (var10 >= 256L) {
+            var10 = var10 ^ 285L;
+          }
+          var12 = var10 ^ var2;
+          field_r[0][var0] = nra.a(nra.a(nra.a(var8 << 16, nra.a(var10 << 24, nra.a(var2 << 32, nra.a(nra.a(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8), var12);
+          for (var14 = 1; var14 < 8; var14++) {
+            field_r[var14][var0] = nra.a(field_r[var14 - 1][var0] << 56, field_r[var14 - 1][var0] >>> 8);
+          }
+          var0++;
+        }
+        field_o[0] = 0L;
+        for (var0 = 1; var0 <= 10; var0++) {
+          var1 = -8 + var0 * 8;
+          field_o[var0] = ihb.a(ihb.a(ihb.a(SetExplosionProjectileDamage.a(16711680L, field_r[5][var1 + 5]), ihb.a(ihb.a(ihb.a(SetExplosionProjectileDamage.a(280375465082880L, field_r[2][var1 + 2]), ihb.a(SetExplosionProjectileDamage.a(field_r[1][1 + var1], 71776119061217280L), SetExplosionProjectileDamage.a(-72057594037927936L, field_r[0][var1]))), SetExplosionProjectileDamage.a(field_r[3][3 + var1], 1095216660480L)), SetExplosionProjectileDamage.a(field_r[4][4 + var1], 4278190080L))), SetExplosionProjectileDamage.a(65280L, field_r[6][var1 + 6])), SetExplosionProjectileDamage.a(255L, field_r[7][var1 + 7]));
+        }
+    }
+}

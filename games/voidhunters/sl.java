@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sl implements dja {
-    static cda[] field_c;
+    static PartitionZoneList[] field_c;
     static boolean field_b;
     static int field_a;
 
@@ -11,10 +11,10 @@ final class sl implements dja {
         field_c = null;
     }
 
-    final static ha a(d param0, byte param1, int param2, java.awt.Canvas param3) {
+    final static GraphicsToolkit a(d param0, byte param1, int param2, java.awt.Canvas param3) {
         RuntimeException var4 = null;
-        ha stackIn_2_0 = null;
-        qfa stackIn_4_0 = null;
+        GraphicsToolkit stackIn_2_0 = null;
+        OpenGlToolkit stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -23,10 +23,10 @@ final class sl implements dja {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 16) {
-            stackIn_4_0 = new qfa(param3, param0, param2);
-            return (ha) ((Object) stackIn_4_0);
+            stackIn_4_0 = new OpenGlToolkit(param3, param0, param2);
+            return (GraphicsToolkit) ((Object) stackIn_4_0);
           }
-          stackIn_2_0 = (ha) null;
+          stackIn_2_0 = (GraphicsToolkit) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -44,7 +44,7 @@ final class sl implements dja {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -57,29 +57,29 @@ final class sl implements dja {
             field_a = 99;
           }
           fkb.field_m = param1;
-          tra.field_o.field_lb.e(param0 + 128);
-          tra.field_o.b(-561, fkb.field_m);
+          GetGrapplingHookFireForce.field_o.field_lb.e(param0 + 128);
+          GetGrapplingHookFireForce.field_o.b(-561, fkb.field_m);
           uga.field_d = true;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "sl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final tv a(byte param0) {
         int var2 = 91 % ((param0 + 64) / 50);
-        return (tv) ((Object) new aib());
+        return (tv) ((Object) new AsteroidField());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = 110;
-          return (tv[]) ((Object) new aib[param1]);
+          return (tv[]) ((Object) new AsteroidField[param1]);
         }
-        return (tv[]) ((Object) new aib[param1]);
+        return (tv[]) ((Object) new AsteroidField[param1]);
     }
 
     static {
-        field_c = new cda[256];
+        field_c = new PartitionZoneList[256];
         field_b = false;
         field_a = 1;
     }

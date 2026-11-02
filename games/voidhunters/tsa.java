@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tsa extends ksa {
+final class tsa extends IntrusiveNode {
     String field_d;
     int field_e;
     static int field_h;
     int field_g;
-    ij field_f;
+    IntrusiveDeque field_f;
 
     public final String toString() {
-        if (this.field_e == hpa.field_p) {
+        if (this.field_e == SetMissionVariablesHudX.field_p) {
           return "Method{" + this.field_d + "}";
         }
         if (fwa.field_h == this.field_e) {
@@ -18,7 +18,7 @@ final class tsa extends ksa {
         if (io.field_p == this.field_e) {
           return "Boolean{" + this.field_d + "}";
         }
-        if (this.field_e == ek.field_o) {
+        if (this.field_e == SetMissionTerrainSpaceProbability.field_o) {
           return "Char{" + this.field_d + "}";
         }
         if (dla.field_d == this.field_e) {
@@ -27,7 +27,7 @@ final class tsa extends ksa {
         if (this.field_e == wdb.field_vb) {
           return "ArgStart";
         }
-        if (ua.field_o == this.field_e) {
+        if (SetMissionTerrainVotingChancestep.field_o == this.field_e) {
           return "ArgEnd";
         }
         if (jwa.field_l != this.field_e) {
@@ -36,17 +36,17 @@ final class tsa extends ksa {
         return "ArgComma";
     }
 
-    final nc a(byte param0, rqa[] param1) throws gva, ojb {
+    final ConsoleValue a(byte param0, ConsoleCommand[] param1) throws gva, ojb {
         int incrementValue$0 = 0;
-        nc stackIn_3_0 = null;
-        nc stackIn_10_0 = null;
-        nc stackIn_16_0 = null;
-        nc stackIn_19_0 = null;
-        nc stackIn_23_0 = null;
-        nc stackIn_25_0 = null;
-        nc stackIn_29_0 = null;
-        nc stackIn_35_0 = null;
-        nc stackIn_39_0 = null;
+        ConsoleValue stackIn_3_0 = null;
+        ConsoleValue stackIn_10_0 = null;
+        ConsoleValue stackIn_16_0 = null;
+        ConsoleValue stackIn_19_0 = null;
+        ConsoleValue stackIn_23_0 = null;
+        ConsoleValue stackIn_25_0 = null;
+        ConsoleValue stackIn_29_0 = null;
+        ConsoleValue stackIn_35_0 = null;
+        ConsoleValue stackIn_39_0 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -57,18 +57,18 @@ final class tsa extends ksa {
         int var4 = 0;
         tsa var5 = null;
         int var6 = 0;
-        nc[] var7 = null;
-        nc[] var8 = null;
+        ConsoleValue[] var7 = null;
+        ConsoleValue[] var8 = null;
         String var9 = null;
         var6 = VoidHunters.field_G;
         try {
           if (param0 <= 60) {
-            stackIn_3_0 = (nc) null;
+            stackIn_3_0 = (ConsoleValue) null;
             return stackIn_3_0;
           }
           try {
-            if (this.field_e == hpa.field_p) {
-              var7 = new nc[this.field_f.c(3)];
+            if (this.field_e == SetMissionVariablesHudX.field_p) {
+              var7 = new ConsoleValue[this.field_f.c(3)];
               var8 = var7;
               var4 = 0;
               var5 = (tsa) (this.field_f.d(0));
@@ -84,34 +84,34 @@ final class tsa extends ksa {
             if (this.field_e == fwa.field_h) {
               var3_int = Character.toLowerCase(this.field_d.charAt(this.field_d.length() - 1));
               if (var3_int == 102) {
-                stackIn_16_0 = new nc(Float.valueOf(this.field_d).floatValue());
+                stackIn_16_0 = new ConsoleValue(Float.valueOf(this.field_d).floatValue());
                 return stackIn_16_0;
               }
               if (var3_int == 108) {
-                stackIn_19_0 = new nc(Long.parseLong(this.field_d.substring(0, -1 + this.field_d.length())));
+                stackIn_19_0 = new ConsoleValue(Long.parseLong(this.field_d.substring(0, -1 + this.field_d.length())));
                 return stackIn_19_0;
               }
               if (-1 != this.field_d.indexOf('.')) {
-                stackIn_23_0 = new nc(Double.valueOf(this.field_d).doubleValue());
+                stackIn_23_0 = new ConsoleValue(Double.valueOf(this.field_d).doubleValue());
                 return stackIn_23_0;
               }
-              stackIn_25_0 = new nc(Integer.parseInt(this.field_d));
+              stackIn_25_0 = new ConsoleValue(Integer.parseInt(this.field_d));
               return stackIn_25_0;
             }
             if (io.field_p == this.field_e) {
-              stackIn_29_0 = new nc(this.field_d.equals("true"));
+              stackIn_29_0 = new ConsoleValue(this.field_d.equals("true"));
               return stackIn_29_0;
             }
-            if (this.field_e == ek.field_o) {
+            if (this.field_e == SetMissionTerrainSpaceProbability.field_o) {
               var9 = this.field_d.substring(1, this.field_d.length() - 1);
               if (var9.length() != 1) {
                 throw new gva("Invalid char value: " + var9);
               }
-              stackIn_35_0 = new nc(var9.charAt(0));
+              stackIn_35_0 = new ConsoleValue(var9.charAt(0));
               return stackIn_35_0;
             }
             if (dla.field_d == this.field_e) {
-              stackIn_39_0 = new nc(this.field_d.substring(1, this.field_d.length() - 1));
+              stackIn_39_0 = new ConsoleValue(this.field_d.substring(1, this.field_d.length() - 1));
               return stackIn_39_0;
             }
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -130,7 +130,7 @@ final class tsa extends ksa {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class tsa extends ksa {
           this.field_e = param0;
           this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "tsa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tsa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

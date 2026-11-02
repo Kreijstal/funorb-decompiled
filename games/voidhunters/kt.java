@@ -123,7 +123,7 @@ class kt extends elb {
           if (var44.field_E != null &&
             var44.field_z > 1) {
             var60 = var44.field_E;
-            tga.a(rua.field_q, 0, (byte) 118, var60, 0);
+            tga.a(GetAngularVelocitySustain.field_q, 0, (byte) 118, var60, 0);
           } else {
             ila.c((byte) -15);
           }
@@ -133,8 +133,8 @@ class kt extends elb {
           var8 = var41;
           var64 = new int[param0.field_L];
           var63 = bva.field_b;
-          var62 = mpa.field_o;
-          var61 = lf.field_p;
+          var62 = GetSniperCannonRandomness.field_o;
+          var61 = GetReverbDamp.field_p;
           for (var13 = 0; var13 < param0.field_L; var13++) {
             var14 = var61[var13] * param6 + (var62[var13] * param5 + var63[var13] * param7) >> 8;
             if (0 > var14) {
@@ -151,7 +151,7 @@ class kt extends elb {
             }
             var14Lifetime2 = stackIn_15_0;
             var15 = var63[var13] * param2 + var62[var13] * param1 + param4 * var61[var13] >> 8;
-            stackIn_17_0 = ap.field_p;
+            stackIn_17_0 = GetRepairModeActiveTime.field_p;
             if (0 <= var15) {
               stackIn_18_1 = var15;
             } else {
@@ -163,7 +163,7 @@ class kt extends elb {
             var64[var13] = var15Lifetime2;
           }
           for (var13Lifetime1 = 0; var13Lifetime1 < pca.field_j; var13Lifetime1++) {
-            var14Lifetime1 = aq.field_p[var13Lifetime1];
+            var14Lifetime1 = SetMissionDebrisDefaultProbability.field_p[var13Lifetime1];
             var15Lifetime1 = param0.field_w[var14Lifetime1];
             var16 = param0.field_N[var14Lifetime1];
             var17 = param0.field_D[var14Lifetime1];
@@ -196,11 +196,11 @@ class kt extends elb {
             }
             var21 = stackIn_38_0;
             var22 = cl.field_b[var15Lifetime1];
-            var23 = lr.field_o[var15Lifetime1];
+            var23 = GetMachineGunAimspeed.field_o[var15Lifetime1];
             var24 = cl.field_b[var16];
-            var25 = lr.field_o[var16];
+            var25 = GetMachineGunAimspeed.field_o[var16];
             var26 = cl.field_b[var17];
-            var27 = lr.field_o[var17];
+            var27 = GetMachineGunAimspeed.field_o[var17];
             if (var19 == var18 &&
               var19 == var20) {
               var28 = var54[var18];
@@ -237,7 +237,7 @@ class kt extends elb {
               var39 = 234946304 & var30 * var36 >>> 8 | -218169089 & var35 * var30 >>> 8;
               var37 = var37 + var31 * 65793;
               var39 = var39 + var33 * 65793;
-              vqb.a(var39 >> 16, var38 >> 8 & 255, var38 >> 16, var22, (var39 & 65337) >> 8, var25, var37 >> 16, (65314 & var37) >> 8, var39 & 255, -18419, var26, var27, var37 & 255, var24, var38 & 255, var23);
+              GetPointDefenceLaserProjectileDamage.a(var39 >> 16, var38 >> 8 & 255, var38 >> 16, var22, (var39 & 65337) >> 8, var25, var37 >> 16, (65314 & var37) >> 8, var39 & 255, -18419, var26, var27, var37 & 255, var24, var38 & 255, var23);
             }
           }
           if (param3 > -109) {
@@ -254,7 +254,7 @@ class kt extends elb {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

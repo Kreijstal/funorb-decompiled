@@ -117,7 +117,7 @@ final class rbb {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class rbb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class rbb {
           dma.d(1 + var7, 1 + var8, var5_int + 4, 4 + var6, this.field_b);
           this.field_p.c(param2, var7 + 3, this.field_p.field_o + param1 + var8, this.field_t, -1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rbb.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rbb.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -250,14 +250,14 @@ final class rbb {
           }
           var5[4] = (phb) ((Object) var18);
           var4.a(4, -1).a(-123, true).a(true, var5);
-          var4.a(5, -1).a(true, ra.a(0, (byte) 119, 0, 65793, 0)).a(param1 + 24638, true).b(-1, param1 - 2147458885);
+          var4.a(5, -1).a(true, SetCountermeasureLauncherFireForce.a(0, (byte) 119, 0, 65793, 0)).a(param1 + 24638, true).b(-1, param1 - 2147458885);
           this.field_a = (wwa) ((Object) var4);
           var6 = new uea(var4, true);
           var6.field_c = 0;
           var7 = new uea(var4, true);
           var7.field_c = 0;
-          var7.a(prb.a(true, 8947848), (byte) -54);
-          var7.a(1, -1).a(true, prb.a(true, 11184810)).b(2236962, -2147483648);
+          var7.a(GetBurstFireRegenerationRate.a(true, 8947848), (byte) -54);
+          var7.a(1, -1).a(true, GetBurstFireRegenerationRate.a(true, 11184810)).b(2236962, -2147483648);
           this.field_d = (wwa) ((Object) new uv(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ei(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new jba(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
@@ -294,7 +294,7 @@ final class rbb {
           var19 = new uea(var4, true);
           var19.a(32460, var13);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rbb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rbb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

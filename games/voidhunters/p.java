@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class p extends ksa implements e {
+final class p extends IntrusiveNode implements e {
     int field_g;
     private static boolean field_d;
     java.awt.Canvas field_f;

@@ -43,7 +43,7 @@ final class vva extends bob {
             }
           }
           var8 = stackIn_14_0;
-          qt.a(this.field_q, var8, param1.field_r + (param3 + (-this.field_q[0].field_n + param1.field_f >> 1)), param1.field_h, param2 + param1.field_g, true);
+          SetPhysicsCollisionForceMultiplier.a(this.field_q, var8, param1.field_r + (param3 + (-this.field_q[0].field_n + param1.field_f >> 1)), param1.field_h, param2 + param1.field_g, true);
           stackIn_17_0 = (!param4) ? 7105644 : 16777215;
           var9 = stackIn_17_0;
           this.field_d.a(param1.field_j, param2 + param1.field_g, param1.field_r + param3 - 2, param1.field_h, param1.field_f, var9, -1, 1, 1, this.field_d.field_k);
@@ -58,7 +58,7 @@ final class vva extends bob {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -76,9 +76,9 @@ final class vva extends bob {
 
     private vva(int param0, int param1, int param2) {
         this.field_s = param0;
-        this.field_q = eia.field_o;
+        this.field_q = GetBombletSprayProjectileLife.field_o;
         this.field_p = param2;
-        this.field_d = vob.field_r;
+        this.field_d = GetBoostersCooldown.field_r;
         this.field_t = param1;
     }
 

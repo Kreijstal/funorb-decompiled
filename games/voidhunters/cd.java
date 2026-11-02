@@ -22,9 +22,9 @@ final class cd {
     final static int a(boolean param0) {
         if (!param0) {
           field_a = (String) null;
-          return klb.field_r.f(-2147483648);
+          return GetLagStandardDeviationIn.field_r.f(-2147483648);
         }
-        return klb.field_r.f(-2147483648);
+        return GetLagStandardDeviationIn.field_r.f(-2147483648);
     }
 
     static {

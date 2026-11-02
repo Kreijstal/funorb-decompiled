@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class djb extends qc {
-    private rqa[] field_t;
+    private ConsoleCommand[] field_t;
     static boolean field_r;
     static ima[][] field_s;
 
@@ -33,9 +33,9 @@ final class djb extends qc {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        rqa var12_ref_rqa = null;
+        ConsoleCommand var12_ref_rqa = null;
         int var12 = 0;
-        rqa var13 = null;
+        ConsoleCommand var13 = null;
         int var14 = 0;
         int stackIn_45_0Lifetime1;
         int stackIn_45_1Lifetime1;
@@ -46,12 +46,12 @@ final class djb extends qc {
           var2 = this.field_p.l(-14453);
           var3 = this.field_p.j(param0 ^ param0);
           var4 = dib.a(var2, 90);
-          var5 = aab.a(var4, -25223, var3);
+          var5 = SetMassDriverRandomness.a(var4, -25223, var3);
           var6 = "";
           if (0 <= var5) {
             var7 = var4[var5];
             var8_int = var3 - var7.field_g;
-            if (var7.field_e == hpa.field_p &&
+            if (var7.field_e == SetMissionVariablesHudX.field_p &&
               var8_int > 0 &&
               var8_int <= var7.field_d.length()) {
               var6 = var7.field_d.substring(0, var8_int);
@@ -65,7 +65,7 @@ final class djb extends qc {
           var9 = var6.length();
           var10 = 1;
           var11 = 2147483647;
-          var12_ref_rqa = (rqa) (var7_ref.a((byte) -54));
+          var12_ref_rqa = (ConsoleCommand) (var7_ref.a((byte) -54));
           while (true) {
             if (var12_ref_rqa != null) {
               stackIn_44_0 = var12_ref_rqa.field_k.length();
@@ -74,7 +74,7 @@ final class djb extends qc {
                 if (stackIn_44_0 < stackIn_44_1) {
                   var11 = var12_ref_rqa.field_k.length();
                 }
-                var12_ref_rqa = (rqa) (var7_ref.a(1900));
+                var12_ref_rqa = (ConsoleCommand) (var7_ref.a(1900));
                 continue;
               }
             } else {
@@ -86,8 +86,8 @@ final class djb extends qc {
                     break;
                   }
                   if (stackIn_44_0 > stackIn_44_1) {
-                    var12 = ((rqa) (var7_ref.a((byte) -54))).field_k.charAt(var9);
-                    var13 = (rqa) (var7_ref.a(1900));
+                    var12 = ((ConsoleCommand) (var7_ref.a((byte) -54))).field_k.charAt(var9);
+                    var13 = (ConsoleCommand) (var7_ref.a(1900));
                     while (null != var13) {
                       stackIn_45_0 = var10;
                       stackOut_31_1 = var13.field_k.charAt(var9);
@@ -100,7 +100,7 @@ final class djb extends qc {
                         stackIn_38_1 = 1;
                       }
                       var10 = stackIn_45_0 & stackIn_38_1;
-                      var13 = (rqa) (var7_ref.a(1900));
+                      var13 = (ConsoleCommand) (var7_ref.a(1900));
                     }
                     if (var10 != 0) {
                       discarded$0 = var8.append((char) var12);
@@ -124,7 +124,7 @@ final class djb extends qc {
             var12Lifetime1++;
             discarded$1 = var8.append("()");
             if (var7_ref.c(0) == 1 &&
-              ((rqa) (var7_ref.a((byte) -54))).field_n.length == 0) {
+              ((ConsoleCommand) (var7_ref.a((byte) -54))).field_n.length == 0) {
               var12Lifetime1++;
             }
           }
@@ -134,7 +134,7 @@ final class djb extends qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2_ref), "djb.F(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2_ref), "djb.F(" + param0 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class djb extends qc {
           super.b((byte) -74);
           this.field_p.field_Fb.field_R = var3;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "djb.A(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "djb.A(" + param0 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class djb extends qc {
         String[] var8 = null;
         int var9 = 0;
         int var10_int = 0;
-        rqa var10 = null;
+        ConsoleCommand var10 = null;
         int var11 = 0;
         int var9Lifetime1;
         var11 = VoidHunters.field_G;
@@ -181,22 +181,22 @@ final class djb extends qc {
           var2 = this.field_p.l(-14453);
           var3 = this.field_p.j(0);
           var4 = dib.a(var2, 83);
-          var5 = aab.a(var4, -25223, var3);
+          var5 = SetMassDriverRandomness.a(var4, -25223, var3);
           this.field_o.field_L = 0;
           var6 = "";
           if (var5 >= 0) {
             var7 = var4[var5];
             var8_int = -var7.field_g + var3;
-            if (~hpa.field_p != ~var7.field_e ||
+            if (~SetMissionVariablesHudX.field_p != ~var7.field_e ||
               var8_int <= 0) {
               var9 = var5;
               var10_int = 0;
-              L5: while (true) {
+              scanLoop1: while (true) {
                 if (0 <= var9) {
-                  stackIn_25_0 = ua.field_o;
+                  stackIn_25_0 = SetMissionTerrainVotingChancestep.field_o;
                   stackIn_25_1 = var4[var9].field_e;
                   if (var11 != 0) {
-                    break L5;
+                    break scanLoop1;
                   }
                   if (stackIn_25_0 == stackIn_25_1) {
                     var10_int++;
@@ -214,7 +214,7 @@ final class djb extends qc {
                 break;
               }
               if (stackIn_25_0 < stackIn_25_1 &&
-                hpa.field_p == var4[var9 - 1].field_e) {
+                SetMissionVariablesHudX.field_p == var4[var9 - 1].field_e) {
                 var6 = var4[var9 - 1].field_d;
                 this.field_o.field_L = this.field_n.b(var2.substring(0, var4[-1 + var9].field_g));
               }
@@ -228,7 +228,7 @@ final class djb extends qc {
           var7_ref = this.a(var6, (byte) 28);
           var8 = new String[var7_ref.c(0)];
           var9Lifetime1 = 0;
-          var10 = (rqa) (var7_ref.a((byte) -54));
+          var10 = (ConsoleCommand) (var7_ref.a((byte) -54));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var10 == null))) {
             stackIn_39_0 = var8;
@@ -236,7 +236,7 @@ final class djb extends qc {
               incrementValue$0 = var9Lifetime1;
               var9Lifetime1++;
               stackIn_39_0[incrementValue$0] = var10.field_l;
-              var10 = (rqa) (var7_ref.a(1900));
+              var10 = (ConsoleCommand) (var7_ref.a(1900));
               continue;
             }
             break;
@@ -248,16 +248,16 @@ final class djb extends qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var2_ref), "djb.E(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2_ref), "djb.E(" + param0 + ')');
         }
     }
 
-    djb(ij param0, no param1, eab param2) {
+    djb(IntrusiveDeque param0, no param1, eab param2) {
         super(param1, param2);
         int incrementValue$1 = 0;
         RuntimeException runtimeException = null;
         int var4_int = 0;
-        rqa var5 = null;
+        ConsoleCommand var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -269,14 +269,14 @@ final class djb extends qc {
         RuntimeException decompiledCaughtException = null;
         var6 = VoidHunters.field_G;
         try {
-          this.field_t = new rqa[param0.c(3)];
+          this.field_t = new ConsoleCommand[param0.c(3)];
           var4_int = 0;
-          var5 = (rqa) (param0.d(0));
+          var5 = (ConsoleCommand) (param0.d(0));
           while (null != var5) {
             incrementValue$1 = var4_int;
             var4_int++;
             this.field_t[incrementValue$1] = var5;
-            var5 = (rqa) (param0.a((byte) 92));
+            var5 = (ConsoleCommand) (param0.a((byte) 92));
             if (var6 != 0) {
               return;
             }
@@ -305,13 +305,13 @@ final class djb extends qc {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     final boolean a(int param0, String param1) {
         try {
-          ij var3 = null;
+          IntrusiveDeque var3 = null;
           ojb var3_ref = null;
           RuntimeException var3_ref2 = null;
           ipb var4 = null;
@@ -325,7 +325,7 @@ final class djb extends qc {
           try {
             try {
               if (false) throw (ojb) null;
-              var3 = ck.a(-1, param1);
+              var3 = SetDebrisGroupColour.a(-1, param1);
               if (param0 != -10278) {
                 djb.c((byte) 96);
               }
@@ -358,7 +358,7 @@ final class djb extends qc {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -372,7 +372,7 @@ final class djb extends qc {
           field_s = (ima[][]) null;
           int var1_int = -118 % ((83 - param0) / 35);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "djb.B(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "djb.B(" + param0 + ')');
         }
     }
 
@@ -534,7 +534,7 @@ final class djb extends qc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var4_ref), "djb.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var4_ref), "djb.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -590,7 +590,7 @@ final class djb extends qc {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 

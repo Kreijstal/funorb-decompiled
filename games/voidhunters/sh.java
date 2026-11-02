@@ -5,7 +5,7 @@ final class sh {
     static byte[][] field_a;
 
     final static void a(int param0, int param1, int param2) {
-        faa var3 = dpa.field_p;
+        faa var3 = RequestNewestBlackboxRecording.field_p;
         var3.h(24335, param2);
         var3.c(0, 3);
         var3.c(0, 9);
@@ -50,23 +50,23 @@ final class sh {
           if (param0 != 20824) {
             field_a = (byte[][]) null;
           }
-          if (null == rb.field_c) {
+          if (null == SocketConnector.field_c) {
             return;
           }
-          var1 = (pd) (rb.field_c.d(0));
+          var1 = (pd) (SocketConnector.field_c.d(0));
           while (var1 != null) {
             fieldTemp$0 = var1.field_d;
             var1.field_d = var1.field_d - 1;
             if (fieldTemp$0 == 0) {
               var1.b(param0 ^ -24158);
             }
-            var1 = (pd) (rb.field_c.a((byte) 12));
+            var1 = (pd) (SocketConnector.field_c.a((byte) 12));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1_ref), "sh.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref), "sh.D(" + param0 + ')');
         }
     }
 

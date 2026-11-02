@@ -29,7 +29,7 @@ final class ubb extends kva implements eb {
             return;
           }
           jaggl.OpenGL.glPixelStorei(3314, param7);
-          jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.e((byte) -31), param2, param3, 0, una.a(-29328, this.field_f), 5126, param5, 4 * param6);
+          jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.e((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.field_f), 5126, param5, 4 * param6);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,7 +54,7 @@ final class ubb extends kva implements eb {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -63,11 +63,11 @@ final class ubb extends kva implements eb {
           this.field_h.a((ura) (this), -116);
           jaggl.OpenGL.glPixelStorei(3317, 1);
           jaggl.OpenGL.glPixelStorei(param6, param0);
-          jaggl.OpenGL.glTexSubImage2Dub(this.field_e, 0, param7, param5, param3, param2, una.a(param6 ^ -32382, param8), 5121, param1, param4);
+          jaggl.OpenGL.glTexSubImage2Dub(this.field_e, 0, param7, param5, param3, param2, MissionControl.a(param6 ^ -32382, param8), 5121, param1, param4);
           jaggl.OpenGL.glPixelStorei(3314, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ubb.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ubb.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -77,9 +77,9 @@ final class ubb extends kva implements eb {
           this.field_m = param4;
           this.field_l = param3;
           this.field_h.a((ura) (this), -118);
-          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.e((byte) -31), param3, param4, 0, una.a(-29328, this.field_f), od.a(true, this.field_b), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.e((byte) -31), param3, param4, 0, MissionControl.a(-29328, this.field_f), od.a(true, this.field_b), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ubb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ubb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class ubb extends kva implements eb {
             field_j = (phb) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ubb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ubb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class ubb extends kva implements eb {
           }
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ubb.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ubb.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class ubb extends kva implements eb {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (nia.field_o) {
+          if (SetPointDefenceLaserProjectileDamage.field_o) {
             System.out.print(param0);
           }
           if (param1 == 0) {
@@ -150,7 +150,7 @@ final class ubb extends kva implements eb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ final class ubb extends kva implements eb {
             this.a(this.field_e, param3, param5, 0, param2);
           } else {
             jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.e((byte) -31), param2, param3, 0, una.a(-29328, this.field_f), 5121, param5, param6);
+            jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.e((byte) -31), param2, param3, 0, MissionControl.a(-29328, this.field_f), 5121, param5, param6);
             jaggl.OpenGL.glPixelStorei(3314, 0);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);
@@ -203,7 +203,7 @@ final class ubb extends kva implements eb {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -262,7 +262,7 @@ final class ubb extends kva implements eb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -303,13 +303,13 @@ final class ubb extends kva implements eb {
         try {
           this.field_h.a((ura) (this), -122);
           jaggl.OpenGL.glPixelStorei(3314, param3);
-          jaggl.OpenGL.glTexSubImage2Df(this.field_e, 0, param6, param5, param7, param0, una.a(-29328, param1), 5121, param4, param8);
+          jaggl.OpenGL.glTexSubImage2Df(this.field_e, 0, param6, param5, param7, param0, MissionControl.a(-29328, param1), 5121, param4, param8);
           if (param2 >= -35) {
             ubb.f((byte) -66);
           }
           jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ubb.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ubb.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

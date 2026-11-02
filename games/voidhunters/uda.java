@@ -24,14 +24,14 @@ abstract class uda {
         RuntimeException decompiledCaughtException = null;
         var2 = VoidHunters.field_G;
         try {
-          if (!po.field_o) {
+          if (!GetFighterBayAimarc.field_o) {
             return;
           }
           nma.field_b = new da[5];
           for (var1_int = 0; nma.field_b.length > var1_int; var1_int++) {
-            nma.field_b[var1_int] = og.field_r.a(ok.field_b[var1_int], djb.field_s[var1_int], smb.a((byte) -26, var1_int));
+            nma.field_b[var1_int] = GetDebrisGroupColour.field_r.a(ok.field_b[var1_int], djb.field_s[var1_int], smb.a((byte) -26, var1_int));
           }
-          nkb.a(false, "Finished building fonts");
+          GetDebrisThrowable.a(false, "Finished building fonts");
           if (param0 == -2283) {
             return;
           }
@@ -40,7 +40,7 @@ abstract class uda {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1), "uda.L(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "uda.L(" + param0 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ abstract class uda {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

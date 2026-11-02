@@ -50,7 +50,7 @@ final class jlb extends le {
         }
         if (this.field_f.field_e) {
           var7 = 0;
-          for (var9 = this.field_p + sj.field_p[param0]; 0 > var9; var9 += 4096) {
+          for (var9 = this.field_p + SetSalvoUsesAllEnergy.field_p[param0]; 0 > var9; var9 += 4096) {
           }
           while (4096 < var9) {
             var9 -= 4096;
@@ -109,18 +109,18 @@ final class jlb extends le {
     }
 
     final static boolean b(int param0, int param1, int param2, int param3) {
-        if (cka.field_o != null &&
-          cka.field_o.a(0)) {
+        if (GetLagStandardDeviationOut.field_o != null &&
+          GetLagStandardDeviationOut.field_o.a(0)) {
           lnb.d(0);
           return true;
         }
-        if (crb.field_v != null &&
-          crb.field_v.h(-15244)) {
-          crb.field_v = null;
+        if (Asteroid.field_v != null &&
+          Asteroid.field_v.h(-15244)) {
+          Asteroid.field_v = null;
           lnb.d(0);
           return true;
         }
-        if (nu.e((byte) 114)) {
+        if (GetMissileLauncherEnergyUsed.e((byte) 114)) {
           return true;
         }
         if (param1 != -2048) {
@@ -194,7 +194,7 @@ final class jlb extends le {
         this.field_v[this.field_s] = 4096;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_27_0 = null;
@@ -250,7 +250,7 @@ final class jlb extends le {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

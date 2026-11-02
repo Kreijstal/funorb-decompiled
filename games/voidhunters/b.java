@@ -328,7 +328,7 @@ final class b extends ka {
             for (var19_int = 0; var19_int < param1.field_g.length; var19_int++) {
               var56 = param1.field_g[var19_int];
               if (var12 == var56.field_b) {
-                var21_ref_sr = jm.a(var56.field_e, 0);
+                var21_ref_sr = GetBombletSprayAimspeed.a(var56.field_e, 0);
                 if (var21_ref_sr.field_a) {
                   var18_int = 1;
                 }
@@ -386,7 +386,7 @@ final class b extends ka {
             this.field_z = true;
           }
         }
-        kn.a((byte) -24, var74, var68);
+        GetFighterBayReload.a((byte) -24, var74, var68);
         if (param1.field_g != null) {
           this.field_t = param1.field_g.length;
           this.field_i = new ffa[this.field_t];
@@ -395,7 +395,7 @@ final class b extends ka {
           var11_intLifetime1 = var54;
           while (var54 < param1.field_g.length) {
             var59 = param1.field_g[var54];
-            var60 = jm.a(var59.field_e, 0);
+            var60 = GetBombletSprayAimspeed.a(var59.field_e, 0);
             var14Lifetime1 = mpb.field_h[param1.field_b[var59.field_b] & 65535] & 16777215;
             stackIn_57_0 = var14Lifetime1;
             stackIn_57_1 = 255;
@@ -412,7 +412,7 @@ final class b extends ka {
         }
         this.field_q = new float[this.field_c][];
         this.field_a = new float[this.field_c][];
-        var11 = ao.a(param1, var74, this.field_c, -3);
+        var11 = SetSpecialOrderBoxWidth.a(param1, var74, this.field_c, -3);
         var61 = this.field_f.a((Runnable) ((Object) Thread.currentThread()));
         var76 = var61.field_a;
         var14Lifetime2 = 0;
@@ -520,14 +520,14 @@ final class b extends ka {
                     var46 = ((float)var40 * var75[0] + (float)var41 * var75[1] + (float)var42 * var75[2]) / var43;
                     var47 = ((float)var40 * var75[3] + (float)var41 * var75[4] + (float)var42 * var75[5]) / var44;
                     var48 = ((float)var40 * var75[6] + (float)var41 * var75[7] + (float)var42 * var75[8]) / var45;
-                    var21Lifetime1 = mpa.a(-44, var47, var46, var48);
-                    dhb.a(var33, this.field_y[var23], var32, (byte) 109, this.field_e[var23], var28, this.field_o[var23], var21Lifetime1, var76, var26, var30, var75, var27, var31);
+                    var21Lifetime1 = GetSniperCannonRandomness.a(-44, var47, var46, var48);
+                    SetPointDefenceLaserRandomness.a(var33, this.field_y[var23], var32, (byte) 109, this.field_e[var23], var28, this.field_o[var23], var21Lifetime1, var76, var26, var30, var75, var27, var31);
                     var19[0] = var76[0];
                     var20[0] = var76[1];
-                    dhb.a(var33, this.field_y[var24], var32, (byte) 40, this.field_e[var24], var28, this.field_o[var24], var21Lifetime1, var76, var26, var30, var75, var27, var31);
+                    SetPointDefenceLaserRandomness.a(var33, this.field_y[var24], var32, (byte) 40, this.field_e[var24], var28, this.field_o[var24], var21Lifetime1, var76, var26, var30, var75, var27, var31);
                     var19[1] = var76[0];
                     var20[1] = var76[1];
-                    dhb.a(var33, this.field_y[var25], var32, (byte) 19, this.field_e[var25], var28, this.field_o[var25], var21Lifetime1, var76, var26, var30, var75, var27, var31);
+                    SetPointDefenceLaserRandomness.a(var33, this.field_y[var25], var32, (byte) 19, this.field_e[var25], var28, this.field_o[var25], var21Lifetime1, var76, var26, var30, var75, var27, var31);
                     var19[2] = var76[0];
                     var20[2] = var76[1];
                   }

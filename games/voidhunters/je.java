@@ -37,16 +37,16 @@ final class je {
             var4 = jwa.a(false, param1);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (fg.a(var4.charAt(0), 104)) {
+              if (MouseWheelInput.a(var4.charAt(0), 104)) {
                 return false;
               }
-              if (fg.a(var4.charAt(var4.length() - 1), 26)) {
+              if (MouseWheelInput.a(var4.charAt(var4.length() - 1), 26)) {
                 return false;
               }
               var5 = 0;
               for (var6 = 0; param1.length() > var6; var6++) {
                 var7 = param1.charAt(var6);
-                if (!fg.a((char) var7, 46)) {
+                if (!MouseWheelInput.a((char) var7, 46)) {
                   var5 = 0;
                 } else {
                   var5++;
@@ -77,7 +77,7 @@ final class je {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class je {
         try {
           this.field_a.a(param0, 786336, 97);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "je.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "je.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class je {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

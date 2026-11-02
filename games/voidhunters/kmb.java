@@ -22,7 +22,7 @@ final class kmb {
           if (di.field_l == null) {
             return;
           }
-          di.field_l.a(dpa.field_p, param1 ^ -17690, param0);
+          di.field_l.a(RequestNewestBlackboxRecording.field_p, param1 ^ -17690, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -34,7 +34,7 @@ final class kmb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

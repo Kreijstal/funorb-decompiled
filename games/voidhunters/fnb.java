@@ -36,15 +36,15 @@ abstract class fnb {
             while (var6 != null) {
               if (var6.field_f == param4 &&
                 var6.field_m &&
-                Math.abs(-jia.field_o + var6.field_i) < param0) {
-                if (var6.field_i == jia.field_o) {
+                Math.abs(-SetReverbDry.field_o + var6.field_i) < param0) {
+                if (var6.field_i == SetReverbDry.field_o) {
                   return;
                 }
                 var7 = -param2 + var6.field_d;
                 var8 = var6.field_h - param1;
                 var9_int = ar.a(var7, (byte) 109, var8);
-                if (var9_int < tj.field_q) {
-                  cqb.a(var6.field_d + 65536, var6.field_h, var6.field_h, var6.field_d, (byte) -54);
+                if (var9_int < Projectile.field_q) {
+                  VariableCondition.a(var6.field_d + 65536, var6.field_h, var6.field_h, var6.field_d, (byte) -54);
                   return;
                 }
               }
@@ -65,7 +65,7 @@ abstract class fnb {
             var10.field_h = param1;
             var10.field_f = param4;
             var10.field_k = var9;
-            var10.field_i = jia.field_o;
+            var10.field_i = SetReverbDry.field_o;
             var10.field_d = param2;
             ms.field_y.b(-10258, var10);
             return;
@@ -74,7 +74,7 @@ abstract class fnb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var6_ref), "fnb.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var6_ref), "fnb.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

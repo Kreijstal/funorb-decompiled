@@ -19,16 +19,16 @@ final class lkb {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 < -100) {
-          var2 = (-640 + gp.field_p) / 2;
-          var3 = ldb.field_o * ldb.field_o;
+          var2 = (-640 + GetShieldsDirectionalArcParticleLife.field_p) / 2;
+          var3 = GetRepairModePower.field_o * GetRepairModePower.field_o;
           var4 = var3 - param0 * param0;
           rga.field_g.a(var2 - 199 * var4 / var3, 122, 199, 90, -94 + (-120 + dma.field_j));
           vva.field_r.a(var2 + 202 + 438 * var4 / var3, 26, 438, 0, -124 + dma.field_j);
           return;
         }
         lkb.a(92);
-        var2Lifetime1 = (-640 + gp.field_p) / 2;
-        var3Lifetime1 = ldb.field_o * ldb.field_o;
+        var2Lifetime1 = (-640 + GetShieldsDirectionalArcParticleLife.field_p) / 2;
+        var3Lifetime1 = GetRepairModePower.field_o * GetRepairModePower.field_o;
         var4Lifetime1 = var3Lifetime1 - param0 * param0;
         rga.field_g.a(var2Lifetime1 - 199 * var4Lifetime1 / var3Lifetime1, 122, 199, 90, -94 + (-120 + dma.field_j));
         vva.field_r.a(var2Lifetime1 + 202 + 438 * var4Lifetime1 / var3Lifetime1, 26, 438, 0, -124 + dma.field_j);
@@ -65,15 +65,15 @@ final class lkb {
             }
             var3 = param0.substring(0, var2_int);
             var4 = param0.substring(var2_int + 1);
-            var5 = hca.a((byte) 108, var3);
+            var5 = SetToggledScoreboard.a((byte) 108, var3);
             if (var5 == null) {
-              stackIn_15_0 = ofb.a(0, var4);
+              stackIn_15_0 = SetServerinfoComponentstate.a(0, var4);
               return stackIn_15_0;
             }
             stackIn_13_0 = var5;
             return stackIn_13_0;
           }
-          stackIn_6_0 = gca.field_r;
+          stackIn_6_0 = GetGrapplingHookCooldown.field_r;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ final class lkb {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

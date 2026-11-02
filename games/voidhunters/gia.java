@@ -7,7 +7,7 @@ final class gia extends le {
     static eab field_k;
     static String field_j;
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -41,7 +41,7 @@ final class gia extends le {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class gia extends le {
           var44 = var29[2];
           for (var10 = 0; hob.field_d > var10; var10++) {
             var14 = this.field_i * (var40[var10] - var41[var10]);
-            var15 = (var5[gbb.field_q & var10 + 1] - var5[gbb.field_q & -1 + var10]) * this.field_i;
+            var15 = (var5[SetMassDriverEnergyUsed.field_q & var10 + 1] - var5[SetMassDriverEnergyUsed.field_q & -1 + var10]) * this.field_i;
             var16 = var15 >> 12;
             var17 = var14 >> 12;
             var18 = var16 * var16 >> 12;

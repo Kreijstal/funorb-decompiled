@@ -25,15 +25,15 @@ final class gs implements dja {
 
     public final tv a(byte param0) {
         int var2 = -113 % ((param0 + 64) / 50);
-        return (tv) ((Object) new so());
+        return (tv) ((Object) new SettingsChange());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           gs.b((byte) 40);
-          return (tv[]) ((Object) new so[param1]);
+          return (tv[]) ((Object) new SettingsChange[param1]);
         }
-        return (tv[]) ((Object) new so[param1]);
+        return (tv[]) ((Object) new SettingsChange[param1]);
     }
 
     static {

@@ -4,7 +4,7 @@
 final class pfb {
     static String field_a;
     private int field_e;
-    private vh field_b;
+    private IterableNodeHashTable field_b;
     private nga field_c;
     private int field_d;
 
@@ -48,7 +48,7 @@ final class pfb {
           this.field_b.a(-17569, var6_ref);
           ((is) ((Object) var6_ref)).field_i = 0L;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pfb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pfb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class pfb {
           }
           this.a(param2 ^ 20, param0, param1, 1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pfb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pfb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class pfb {
               if ((long)param1 < fieldTemp$0) {
                 var4 = new bna(var3_ref.a(122), var3_ref.field_k);
                 this.field_c.a(var4, 0, var3_ref.field_b);
-                gbb.a(var4, var3_ref, (byte) -68);
+                SetMassDriverEnergyUsed.a(var4, var3_ref, (byte) -68);
                 var3_ref.b(-3846);
                 var3_ref.d((byte) -35);
               }
@@ -133,7 +133,7 @@ final class pfb {
             if ((long)param1 < fieldTemp$1) {
               var4Lifetime1 = new bna(var3_refLifetime1.a(122), var3_refLifetime1.field_k);
               this.field_c.a(var4Lifetime1, 0, var3_refLifetime1.field_b);
-              gbb.a(var4Lifetime1, var3_refLifetime1, (byte) -68);
+              SetMassDriverEnergyUsed.a(var4Lifetime1, var3_refLifetime1, (byte) -68);
               var3_refLifetime1.b(-3846);
               var3_refLifetime1.d((byte) -35);
             }
@@ -254,7 +254,7 @@ final class pfb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -273,7 +273,7 @@ final class pfb {
 
     private pfb(int param0, int param1) {
         int var3;
-        this.field_b = new vh();
+        this.field_b = new IterableNodeHashTable();
         this.field_d = param0;
         this.field_e = param0;
         var3 = 1;

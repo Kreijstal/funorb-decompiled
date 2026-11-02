@@ -38,7 +38,7 @@ final class uga extends qg {
         throw new IllegalStateException("NGR");
     }
 
-    uga(qfa param0, jjb param1) {
+    uga(OpenGlToolkit param0, jjb param1) {
         super(param0);
         int var6 = 0;
         int var9 = 0;
@@ -106,7 +106,7 @@ final class uga extends qg {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class uga extends qg {
           this.field_b.a(param1 ^ 96, param2);
           this.field_b.c(param1 - 125, param0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uga.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uga.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

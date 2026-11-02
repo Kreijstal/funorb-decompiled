@@ -11,19 +11,19 @@ final class kia {
           throw new IllegalStateException();
         }
         if (param0 == 63) {
-          if (null != hwa.field_o) {
-            hwa.field_o.l((byte) -106);
+          if (null != SetPointDefenceLaserAimarc.field_o) {
+            SetPointDefenceLaserAimarc.field_o.l((byte) -106);
           }
           var1 = mr.m((byte) -118);
-          jt.field_o = new vla(var1, (String) null, true, false, false);
-          klb.field_r.a(false, s.field_o);
-          s.field_o.b(jt.field_o, -110);
-          s.field_o.e(param0 - 10394);
+          SetAiFiringRangeUpshift.field_o = new vla(var1, (String) null, true, false, false);
+          GetLagStandardDeviationIn.field_r.a(false, GetMissionVariablesHudX.field_o);
+          GetMissionVariablesHudX.field_o.b(SetAiFiringRangeUpshift.field_o, -110);
+          GetMissionVariablesHudX.field_o.e(param0 - 10394);
           return;
         }
     }
 
-    final static im a(int param0, qfa param1, int param2, byte[] param3, int param4, boolean param5, int param6, int param7) {
+    final static im a(int param0, OpenGlToolkit param1, int param2, byte[] param3, int param4, boolean param5, int param6, int param7) {
         RuntimeException var8 = null;
         im stackIn_2_0 = null;
         im stackIn_9_0 = null;
@@ -43,7 +43,7 @@ final class kia {
           if (!param1.field_n && (!bd.a(param2, (byte) -95) ||
             !bd.a(param0, (byte) -95))) {
             if (!param1.field_g) {
-              stackIn_11_0 = new im(param1, param7, param2, param0, hj.a(param2, (byte) -95), hj.a(param0, (byte) -109), param3, param4);
+              stackIn_11_0 = new im(param1, param7, param2, param0, GetSalvoaim.a(param2, (byte) -95), GetSalvoaim.a(param0, (byte) -109), param3, param4);
               return stackIn_11_0;
             }
             stackIn_9_0 = new im(param1, 34037, param7, param2, param0, param5, param3, param4);
@@ -67,7 +67,7 @@ final class kia {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

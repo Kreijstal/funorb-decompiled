@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ts {
-    private qfa field_b;
+    private OpenGlToolkit field_b;
     long field_c;
     static String field_a;
 
@@ -10,27 +10,27 @@ final class ts {
         Object var1 = null;
         Throwable decompiledCaughtException = null;
         Object var1_ref = null;
-        var1_ref = wj.field_q;
+        var1_ref = GetDebrisFoundInPairs.field_q;
         synchronized (var1_ref) {
-          hu.field_b = am.field_q;
+          hu.field_b = GetBombletSprayAimarc.field_q;
           rpa.field_b = rpa.field_b + 1;
           kc.field_b = wt.field_a;
           uia.field_b = kv.field_e;
           upb.field_c = hda.field_a;
           hda.field_a = false;
-          pba.field_o = ro.field_a;
-          oq.field_H = cma.field_a;
+          SetDebrisPartitioned.field_o = ro.field_a;
+          Particle.field_H = cma.field_a;
           if (param0 != 1001) {
             return;
           }
-          qs.field_a = nlb.field_p;
+          qs.field_a = SetBombletSprayAimarc.field_p;
           ro.field_a = 0;
-          ds.field_g = tda.field_K;
+          PacketBuffer.field_g = tda.field_K;
         }
     }
 
     final static void a(boolean param0, int param1) {
-        faa var2 = dpa.field_p;
+        faa var2 = RequestNewestBlackboxRecording.field_p;
         var2.h(24335, param1);
         var2.c(0, 1);
         var2.c(0, 1);
@@ -39,12 +39,12 @@ final class ts {
         }
     }
 
-    ts(qfa param0, long param1, int param2) {
+    ts(OpenGlToolkit param0, long param1, int param2) {
         try {
           this.field_b = param0;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ts.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ts.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -53,11 +53,11 @@ final class ts {
           return;
         }
         try {
-          param0.addMouseListener(wj.field_q);
-          param0.addMouseMotionListener(wj.field_q);
-          param0.addFocusListener(wj.field_q);
+          param0.addMouseListener(GetDebrisFoundInPairs.field_q);
+          param0.addMouseMotionListener(GetDebrisFoundInPairs.field_q);
+          param0.addFocusListener(GetDebrisFoundInPairs.field_q);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ts.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ts.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class ts {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lra extends fh {
+final class lra extends DualLinkNode {
     private le field_m;
     static String field_o;
     private int[] field_n;
@@ -46,12 +46,12 @@ final class lra extends fh {
         int var9Lifetime1;
         var18 = VoidHunters.field_G;
         try {
-          qnb.field_o = param4;
+          GetAngularVelocitySustainMax.field_o = param4;
           nl.field_e = param2;
           for (var7_int = 0; this.field_q.length > var7_int; var7_int++) {
             this.field_q[var7_int].b(-9163, param1, param5);
           }
-          hr.a(param5, param1, -116);
+          SetPhasedEnergyBeamProjectiles.a(param5, param1, -116);
           var20 = new float[4 * (param1 * param5)];
           var7 = var20;
           var8 = 0;
@@ -137,7 +137,7 @@ final class lra extends fh {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -154,9 +154,9 @@ final class lra extends fh {
         int var4_intLifetime1;
         var5 = VoidHunters.field_G;
         try {
-          if (dbb.field_o >= 0) {
+          if (GetFighterRepairTime.field_o >= 0) {
             for (var4_int = 0; var4_int < this.field_n.length; var4_int++) {
-              if (!param1.a((byte) 67, this.field_n[var4_int], dbb.field_o)) {
+              if (!param1.a((byte) 67, this.field_n[var4_int], GetFighterRepairTime.field_o)) {
                 return false;
               }
             }
@@ -198,7 +198,7 @@ final class lra extends fh {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -242,12 +242,12 @@ final class lra extends fh {
             this.a(45, (asb) null, (d) null);
           }
           nl.field_e = param5;
-          qnb.field_o = param4;
+          GetAngularVelocitySustainMax.field_o = param4;
           for (var9_int = 0; this.field_q.length > var9_int; var9_int++) {
             this.field_q[var9_int].b(-9163, param0, param2);
           }
           igb.a(true, param6);
-          hr.a(param2, param0, -99);
+          SetPhasedEnergyBeamProjectiles.a(param2, param0, -99);
           var9 = new int[param2 * param0];
           var10 = 0;
           for (var11 = 0; param2 > var11; var11++) {
@@ -293,12 +293,12 @@ final class lra extends fh {
               if (255 < var19) {
                 var19 = 255;
               }
-              var17 = pp.field_o[var17];
-              var18 = pp.field_o[var18];
+              var17 = GetBloomCoefficientPercentage.field_o[var17];
+              var18 = GetBloomCoefficientPercentage.field_o[var18];
               if (var19 < 0) {
                 var19 = 0;
               }
-              var19 = pp.field_o[var19];
+              var19 = GetBloomCoefficientPercentage.field_o[var19];
               if (var17 == 0 &&
                 var18 == 0 &&
                 var19 == 0) {
@@ -344,7 +344,7 @@ final class lra extends fh {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -382,13 +382,13 @@ final class lra extends fh {
         int var15Lifetime1;
         var24 = VoidHunters.field_G;
         try {
-          qnb.field_o = param2;
+          GetAngularVelocitySustainMax.field_o = param2;
           nl.field_e = param1;
           for (var10_int = 0; this.field_q.length > var10_int; var10_int++) {
             this.field_q[var10_int].b(-9163, param5, param7);
           }
           igb.a(true, param6);
-          hr.a(param7, param5, -128);
+          SetPhasedEnergyBeamProjectiles.a(param7, param5, -128);
           var26 = new int[param5 * param7];
           var10 = var26;
           if (!param0) {
@@ -440,9 +440,9 @@ final class lra extends fh {
               if (0 > var22) {
                 var22 = 0;
               }
-              var20 = pp.field_o[var20];
-              var21 = pp.field_o[var21];
-              var22 = pp.field_o[var22];
+              var20 = GetBloomCoefficientPercentage.field_o[var20];
+              var21 = GetBloomCoefficientPercentage.field_o[var21];
+              var22 = GetBloomCoefficientPercentage.field_o[var22];
               var23 = var22 + (var20 << 16) + (var21 << 8);
               if (var23 != 0) {
                 var23 = var23 | -16777216;
@@ -477,11 +477,11 @@ final class lra extends fh {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    lra(ds param0) {
+    lra(PacketBuffer param0) {
         int[] array$2 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -515,7 +515,7 @@ final class lra extends fh {
           var12 = new int[var2_int][];
           this.field_q = new le[var2_int];
           for (var6 = 0; var2_int > var6; var6++) {
-            var13 = sk.a(param0, (byte) 55);
+            var13 = GetPhasedEnergyBeamProjectileOndamageParticles.a(param0, (byte) 55);
             var14 = var13;
             if (var14.a(-1) >= 0) {
               var3++;
@@ -570,7 +570,7 @@ final class lra extends fh {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

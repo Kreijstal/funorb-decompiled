@@ -54,7 +54,7 @@ final class pgb {
               }
             }
             param3.a(-632, param1, param0);
-            var7 = iia.a(-103, -var5_int + var6);
+            var7 = BodyInZoneCondition.a(-103, -var5_int + var6);
             param3.a(-632, var7, 6);
             param3.a(-632, var5_int, 32);
             if (var7 > 0) {
@@ -83,7 +83,7 @@ final class pgb {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class pgb {
             return 1;
           }
           if (iwa.field_b == 2 &&
-            uaa.a(this.field_n, (byte) -105)) {
+            GetTorqueDownshift.a(this.field_n, (byte) -105)) {
             return 1;
           }
           if (param0 == 1) {
@@ -116,9 +116,9 @@ final class pgb {
     }
 
     pgb(boolean param0) {
-        this.field_f = sj.field_o;
+        this.field_f = SetSalvoUsesAllEnergy.field_o;
         this.field_o = pva.field_f;
-        this.field_i = sga.field_q;
+        this.field_i = SetSniperCannonFiringLeeway.field_q;
         if (!param0) {
           this.field_m = null;
         } else {
@@ -127,11 +127,11 @@ final class pgb {
         this.field_q = psb.field_a;
         this.field_c = bl.field_A;
         this.field_a = wja.field_a;
-        this.field_k = dab.field_e;
+        this.field_k = TickCondition.field_e;
         this.field_e = ti.field_h;
         this.field_h = jkb.field_b;
         this.field_n = uja.field_a;
-        this.field_d = jh.field_p;
+        this.field_d = SetCountermeasureLauncherProjectiles.field_p;
     }
 
     pgb(int param0, String param1, int param2, String param3, String param4) {
@@ -149,7 +149,7 @@ final class pgb {
           this.field_o = param3;
           this.field_i = 0L;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pgb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pgb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

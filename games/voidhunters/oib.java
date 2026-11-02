@@ -17,7 +17,7 @@ abstract class oib {
 
     abstract dka a(byte param0);
 
-    abstract void a(ds param0, int param1);
+    abstract void a(PacketBuffer param0, int param1);
 
     static {
         field_z = "oib.D(";

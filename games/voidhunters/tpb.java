@@ -3,7 +3,7 @@
  */
 final class tpb {
     int field_a;
-    ml field_b;
+    ShipComponent field_b;
 
     final boolean a(byte param0) {
         if (param0 >= 61) {

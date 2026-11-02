@@ -9,7 +9,7 @@ abstract class qc implements kd {
     llb field_o;
     no field_n;
     soa field_h;
-    private ij field_i;
+    private IntrusiveDeque field_i;
     static ri field_g;
     static llb field_q;
     private String[] field_d;
@@ -45,7 +45,7 @@ abstract class qc implements kd {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ abstract class qc implements kd {
           this.field_h.field_wb.field_G = var4_int;
           this.field_h.field_wb.field_K = -var4_int + this.field_h.field_G;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qc.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qc.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,19 +87,19 @@ abstract class qc implements kd {
             this.a((byte) -84, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qc.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qc.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final ij a(int param0, byte param1, String param2) {
+    private final IntrusiveDeque a(int param0, byte param1, String param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
-        ij stackIn_20_0 = null;
+        IntrusiveDeque stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ij var4 = null;
+        IntrusiveDeque var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
@@ -109,7 +109,7 @@ abstract class qc implements kd {
         var9 = VoidHunters.field_G;
         try {
           var5 = -120 / ((-80 - param1) / 41);
-          var4 = new ij();
+          var4 = new IntrusiveDeque();
           while (param2 != null) {
             boolean decompiledFrameRemainder0 = true;
             var6 = this.field_n.b(param2);
@@ -156,7 +156,7 @@ abstract class qc implements kd {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ abstract class qc implements kd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -223,10 +223,10 @@ abstract class qc implements kd {
           if (0 > var3) {
             var3 = 0;
           }
-          dma.e(this.field_m.field_M, this.field_m.field_G + this.field_m.field_u, this.field_m.field_hb, -this.field_m.field_G + fua.field_p - this.field_m.field_u, 0, var3 >> 1);
+          dma.e(this.field_m.field_M, this.field_m.field_G + this.field_m.field_u, this.field_m.field_hb, -this.field_m.field_G + SetPointDefenceLaserReload.field_p - this.field_m.field_u, 0, var3 >> 1);
           var4 = 5 + (this.field_m.field_G + this.field_m.field_K);
           for (var5 = 0; 6 > var5; var5++) {
-            dma.g(0, var4, rda.field_p, 0, var5 << 5);
+            dma.g(0, var4, GetDebrisSurvives.field_p, 0, var5 << 5);
             var4--;
           }
           this.field_m.b((8 & this.field_b) == 0 ? true : false, 111);
@@ -249,7 +249,7 @@ abstract class qc implements kd {
           this.field_d = (String[]) null;
         }
         llb var4 = new llb(0L, (llb) null);
-        var4.field_gb = va.a(-26998, param1, param2);
+        var4.field_gb = SetBurstFireReload.a(-26998, param1, param2);
         return var4;
     }
 
@@ -261,7 +261,7 @@ abstract class qc implements kd {
         if (param0 != 0) {
           field_q = (llb) null;
         }
-        return pj.a((byte) 52, qw.field_e.field_a);
+        return SetBoostersCooldown.a((byte) 52, qw.field_e.field_a);
     }
 
     private final llb a(int param0, int param1) {
@@ -269,7 +269,7 @@ abstract class qc implements kd {
           return (llb) null;
         }
         llb var3 = new llb(0L, (llb) null);
-        var3.field_gb = prb.a(true, param1);
+        var3.field_gb = GetBurstFireRegenerationRate.a(true, param1);
         return var3;
     }
 
@@ -327,7 +327,7 @@ abstract class qc implements kd {
         }
         this.field_b = this.field_b + 1;
         this.field_m.a(param0, 1332);
-        this.field_h.a(2 * (this.field_e * tcb.field_o), true, this.field_e, 0);
+        this.field_h.a(2 * (this.field_e * GetPointDefenceLaserPulsetime.field_o), true, this.field_e, 0);
         this.field_p.f((byte) -6);
     }
 
@@ -337,7 +337,7 @@ abstract class qc implements kd {
         String[] var5 = null;
         String[] var6 = null;
         String var8 = null;
-        ij var9 = null;
+        IntrusiveDeque var9 = null;
         ila var10 = null;
         int var11 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -348,7 +348,7 @@ abstract class qc implements kd {
         var11 = VoidHunters.field_G;
         try {
           var4_int = this.field_h.field_hb - 25;
-          var5 = up.a((byte) -67, '\n', param0);
+          var5 = SetFighterBayAimspeed.a((byte) -67, '\n', param0);
           var6 = var5;
           if (param1) {
             return;
@@ -377,14 +377,14 @@ abstract class qc implements kd {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     private final llb a(int param0, byte param1) {
         int var3 = -103 / ((param1 + 68) / 35);
         llb var4 = new llb();
-        var4.field_gb = va.a(-26998, 0, param0);
+        var4.field_gb = SetBurstFireReload.a(-26998, 0, param0);
         return var4;
     }
 
@@ -409,7 +409,7 @@ abstract class qc implements kd {
 
     boolean a(int param0, char param1, int param2) {
         llb discarded$0 = null;
-        ksa stackIn_18_1 = null;
+        IntrusiveNode stackIn_18_1 = null;
         llb var5;
         int var6;
         String var7;
@@ -477,7 +477,7 @@ abstract class qc implements kd {
         try {
           this.a((byte) 115, param0 != null ? param0.toString() : "null");
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qc.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qc.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -496,7 +496,7 @@ abstract class qc implements kd {
         llb var14 = null;
         llb var15 = null;
         this.field_c = "# ";
-        this.field_i = new ij();
+        this.field_i = new IntrusiveDeque();
         this.field_d = null;
         this.field_f = 0;
         this.field_j = false;
@@ -515,12 +515,12 @@ abstract class qc implements kd {
           var11 = this.a(4, 2263074);
           var12 = this.a((byte) -105, 2236962, 65793);
           this.field_m = new llb(0L, var5);
-          this.field_m.a(0, 16, rda.field_p, -200, 200);
+          this.field_m.a(0, 16, GetDebrisSurvives.field_p, -200, 200);
           var13 = new pjb(0L, var8, var8, var9, var10);
           var14 = new llb();
-          var14.field_lb = new ij();
+          var14.field_lb = new IntrusiveDeque();
           this.field_h = new soa(0L, var14, var6, var13);
-          this.field_h.field_wb.field_lb = new ij();
+          this.field_h.field_wb.field_lb = new IntrusiveDeque();
           this.field_h.a(this.field_m.field_hb - 10, 0, -1, -var3_int + 185, 5, 5, 15);
           this.field_m.b(-561, this.field_h);
           var15 = new llb();
@@ -535,7 +535,7 @@ abstract class qc implements kd {
           this.field_o = new llb(0L, var12);
           this.field_o.field_L = 0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

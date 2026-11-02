@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qkb extends f {
-    private ij field_h;
-    private ij field_k;
+    private IntrusiveDeque field_h;
+    private IntrusiveDeque field_k;
     private int field_j;
     private int field_i;
 
@@ -35,7 +35,7 @@ final class qkb extends f {
     private final void a(wka param0) {
         param0.b(-3846);
         param0.a();
-        ksa var2 = this.field_k.field_a.field_c;
+        IntrusiveNode var2 = this.field_k.field_a.field_c;
         if (var2 == this.field_k.field_a) {
           this.field_i = -1;
         } else {
@@ -142,7 +142,7 @@ final class qkb extends f {
         }
     }
 
-    private final void a(ksa param0, wka param1) {
+    private final void a(IntrusiveNode param0, wka param1) {
         while (true) {
           if (param0 == this.field_k.field_a) {
             al.a(param1, param0, 2);
@@ -161,8 +161,8 @@ final class qkb extends f {
     }
 
     public qkb() {
-        this.field_h = new ij();
-        this.field_k = new ij();
+        this.field_h = new IntrusiveDeque();
+        this.field_k = new IntrusiveDeque();
         this.field_i = -1;
         this.field_j = 0;
     }

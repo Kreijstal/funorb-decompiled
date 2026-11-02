@@ -46,22 +46,22 @@ final class iab implements nka {
           }
           var7 = nf.a(param1, false);
           if (var7 == null) {
-            stackIn_10_0 = isa.a(mr.field_L, new String[]{param1}, 122);
+            stackIn_10_0 = SetReverbGain.a(mr.field_L, new String[]{param1}, 122);
             return stackIn_10_0;
           }
           var7.b(param3 ^ 3918);
           var7.d((byte) -35);
           mq.field_k = mq.field_k - 1;
-          var5 = dpa.field_p;
+          var5 = RequestNewestBlackboxRecording.field_p;
           if (param3 != -76) {
             iab.a(76);
           }
           var5.h(24335, param0);
-          var5.field_e = var5.field_e + 1;
-          var6 = var5.field_e;
+          var5.position = var5.position + 1;
+          var6 = var5.position;
           var5.c(param3 ^ -76, 3);
           var5.a(true, param2);
-          var5.e(var5.field_e - var6, param3 - 53);
+          var5.e(var5.position - var6, param3 - 53);
           stackIn_14_0 = null;
           return (String) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -80,7 +80,7 @@ final class iab implements nka {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 

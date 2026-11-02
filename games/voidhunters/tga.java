@@ -29,11 +29,11 @@ final class tga extends uf implements lca {
           return null;
         }
         if (param0 == 125) {
-          tba.a(kc.field_b + (this.field_h - this.field_L), (byte) -114, uia.field_b);
+          SetExplosionPushMultiplier.a(kc.field_b + (this.field_h - this.field_L), (byte) -114, uia.field_b);
           return this.field_p;
         }
         field_M = (String[]) null;
-        tba.a(kc.field_b + (this.field_h - this.field_L), (byte) -114, uia.field_b);
+        SetExplosionPushMultiplier.a(kc.field_b + (this.field_h - this.field_L), (byte) -114, uia.field_b);
         return this.field_p;
     }
 
@@ -44,7 +44,7 @@ final class tga extends uf implements lca {
         try {
           this.field_O = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "tga.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tga.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,11 +97,11 @@ final class tga extends uf implements lca {
               }
               incrementValue$1 = var6;
               var6++;
-              param4 = aq.field_p[incrementValue$1];
+              param4 = SetMissionDebrisDefaultProbability.field_p[incrementValue$1];
               dupTemp$2 = param3[param4];
               dupTemp$3 = param0[dupTemp$2];
               param0[dupTemp$2] = dupTemp$3 + 1;
-              aq.field_p[dupTemp$3] = param4;
+              SetMissionDebrisDefaultProbability.field_p[dupTemp$3] = param4;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -120,7 +120,7 @@ final class tga extends uf implements lca {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class tga extends uf implements lca {
           super.a(param0, param1, param2, param3);
           this.field_L = -param1 + (kc.field_b - this.field_g);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "tga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

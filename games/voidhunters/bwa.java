@@ -37,7 +37,7 @@ final class bwa extends llb {
         if (this.field_xb != -2) {
           return false;
         }
-        if (13 == pma.field_o) {
+        if (13 == SetBombletSprayProjectileDamage.field_o) {
           this.field_xb = -1;
         }
         if (param0 != -15244) {
@@ -84,7 +84,7 @@ final class bwa extends llb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -167,11 +167,11 @@ final class bwa extends llb {
           this.field_Ab = new llb(0L, (llb) null);
           this.b(-561, this.field_Ab);
           if (param11 != null) {
-            this.field_Bb = new llb(0L, param8, lcb.field_p);
+            this.field_Bb = new llb(0L, param8, GetPointDefenceLaserProjectileInterceptDamage.field_p);
             this.field_Bb.field_Y = 11184810;
             this.field_Bb.field_F = 1;
             this.field_Ab.b(-561, this.field_Bb);
-            this.field_vb = new llb(0L, param8, fh.field_j);
+            this.field_vb = new llb(0L, param8, DualLinkNode.field_j);
             this.field_vb.field_Y = 11184810;
             this.field_vb.field_F = 1;
             this.field_Ab.b(-561, this.field_vb);
@@ -180,8 +180,8 @@ final class bwa extends llb {
             this.field_Ab.b(-561, this.field_Eb);
             this.field_Eb.field_s = "|";
             if (!(nfa.field_d < 5) ||
-              !(go.field_p < 2)) {
-              L3: {
+              !(SetAngularVelocitySustain.field_p < 2)) {
+              regionExit1: {
                 stackIn_8_0 = this;
                 stackIn_8_1 = null;
                 stackIn_8_2 = null;
@@ -191,18 +191,18 @@ final class bwa extends llb {
                   stackIn_8_0Lifetime1 = this;
                   stackIn_8_1Lifetime1 = null;
                   stackIn_8_2Lifetime1 = null;
-                  if (go.field_p < 2) {
+                  if (SetAngularVelocitySustain.field_p < 2) {
                     stackIn_9_0 = this;
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;
-                    stackIn_9_5 = po.field_p;
-                    break L3;
+                    stackIn_9_5 = GetFighterBayAimarc.field_p;
+                    break regionExit1;
                   }
                 }
                 stackIn_9_0Lifetime1 = this;
                 stackIn_9_1Lifetime1 = null;
                 stackIn_9_2Lifetime1 = null;
-                stackIn_9_5 = pqa.field_p;
+                stackIn_9_5 = GetPointDefenceLaserProjectiles.field_p;
               }
               this.field_wb = new qca(stackIn_8_3, stackIn_8_4, stackIn_9_5);
               this.field_Ab.b(-561, this.field_wb);
@@ -215,10 +215,10 @@ final class bwa extends llb {
             this.field_Ab.b(-561, var28[1]);
             var28[2] = new llb(0L, (llb) null);
             this.field_Ab.b(-561, var28[2]);
-            this.field_Db = new llb[fva.field_o];
-            for (var16 = 0; fva.field_o > var16; var16++) {
-              if (egb.field_o[var16] != null) {
-                this.field_Db[var16] = new llb(0L, param10, egb.field_o[var16]);
+            this.field_Db = new llb[SetFightersPerPlayerMaximum.field_o];
+            for (var16 = 0; SetFightersPerPlayerMaximum.field_o > var16; var16++) {
+              if (GetSniperCannonEnergyUsed.field_o[var16] != null) {
+                this.field_Db[var16] = new llb(0L, param10, GetSniperCannonEnergyUsed.field_o[var16]);
                 this.field_Db[var16].field_F = 0;
                 stackIn_15_0 = this.field_Db[var16];
                 stackIn_16_1 = (param11 != null);
@@ -231,7 +231,7 @@ final class bwa extends llb {
               discarded$1 = this.field_Fb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_eb.b(gca.field_p);
+            var17 = param6.field_eb.b(GetGrapplingHookCooldown.field_p);
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
@@ -239,11 +239,11 @@ final class bwa extends llb {
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_eb.b(jrb.field_p);
+            var17Lifetime3 = param6.field_eb.b(SetUseOffscreenRendering.field_p);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
-            for (var17Lifetime4 = 0; var17Lifetime4 < fva.field_o; var17Lifetime4++) {
+            for (var17Lifetime4 = 0; var17Lifetime4 < SetFightersPerPlayerMaximum.field_o; var17Lifetime4++) {
               if (null != this.field_Db[var17Lifetime4]) {
                 var18 = this.field_Db[var17Lifetime4].e(80);
                 if (var16Lifetime2 < var18) {
@@ -257,7 +257,7 @@ final class bwa extends llb {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(6300, var28[0], gca.field_p, var16Lifetime2, var18Lifetime3, param6);
+            var18Lifetime3 = this.a(6300, var28[0], GetGrapplingHookCooldown.field_p, var16Lifetime2, var18Lifetime3, param6);
             var18Lifetime3 = this.a(var28[0], var18Lifetime3, var16Lifetime2, this.field_Db[6], 28488);
             var18Lifetime3 = this.a(var28[0], var18Lifetime3, var16Lifetime2, this.field_Db[9], 28488);
             var18Lifetime3 = this.a(var28[0], var18Lifetime3, var16Lifetime2, this.field_Db[5], 28488);
@@ -278,7 +278,7 @@ final class bwa extends llb {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(6300, var28[2], jrb.field_p, var16Lifetime2, var18Lifetime5, param6);
+            var18Lifetime5 = this.a(6300, var28[2], SetUseOffscreenRendering.field_p, var16Lifetime2, var18Lifetime5, param6);
             var18Lifetime5 = this.a(var28[2], var18Lifetime5, var16Lifetime2, this.field_Db[13], 28488);
             var18Lifetime5 = this.a(var28[2], var18Lifetime5, var16Lifetime2, this.field_Db[21], 28488);
             var18Lifetime5 = this.a(var28[2], var18Lifetime5, var16Lifetime2, this.field_Db[11], 28488);
@@ -323,7 +323,7 @@ final class bwa extends llb {
             this.a(var25, 0, var23, var26, var24);
             return;
           }
-          this.field_Bb = new llb(0L, param8, vgb.field_q);
+          this.field_Bb = new llb(0L, param8, GetPhysicsCollisionPhantomForceMultiplier.field_q);
           this.field_Bb.field_Y = 11184810;
           this.field_Bb.field_F = 1;
           this.field_Ab.b(-561, this.field_Bb);
@@ -386,7 +386,7 @@ final class bwa extends llb {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -443,7 +443,7 @@ final class bwa extends llb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -466,7 +466,7 @@ final class bwa extends llb {
             stackIn_8_1 = !(this.field_wb.field_J);
             stackIn_7_0.field_J = stackIn_8_1;
           }
-          for (var3 = 0; var3 < fva.field_o; var3++) {
+          for (var3 = 0; var3 < SetFightersPerPlayerMaximum.field_o; var3++) {
             if (null != this.field_Db[var3]) {
               stackIn_16_0 = this.field_Db[var3];
               stackIn_17_1 = !(0 >= this.field_Fb.length());
@@ -485,7 +485,7 @@ final class bwa extends llb {
           return -1;
         }
         if (param0 &&
-          pba.field_o != 0 &&
+          SetDebrisPartitioned.field_o != 0 &&
           0 == this.field_o) {
           return -1;
         }

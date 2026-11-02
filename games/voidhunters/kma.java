@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kma extends eka implements ntb {
+final class kma extends ComponentBehaviour implements DiffableState {
     static String field_d;
     static String field_c;
 
-    public final void a(tv param0, int param1) {
-        if (param1 >= -19) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
+        if (obfuscationGuard >= -19) {
           return;
         }
         try {
-          super.a(param0, -20);
+          super.reportDifferences(other, -20);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kma.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kma.F(" + (other != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -28,12 +28,12 @@ final class kma extends eka implements ntb {
         try {
           ht.field_h = param0;
           qsb.field_d = param3;
-          fa.a(uta.field_p, -127, param1);
+          fa.a(SetMissionDebrisVotingChancestep.field_p, -127, param1);
           if (param2 != -17833) {
             field_d = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kma.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kma.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class kma extends eka implements ntb {
             field_d = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kma.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kma.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class kma extends eka implements ntb {
             var5 = (String) null;
             kma.a((String) null, false, -23, (String) null);
           }
-          stackIn_3_0 = maa.a(param1, (byte) -126, param0, param3, 200);
+          stackIn_3_0 = SetBombletSprayEnergyUsed.a(param1, (byte) -126, param0, param3, 200);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -73,7 +73,7 @@ final class kma extends eka implements ntb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ final class kma extends eka implements ntb {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class kma extends eka implements ntb {
             this.b((byte) 105);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kma.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kma.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class kma extends eka implements ntb {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kma.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kma.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

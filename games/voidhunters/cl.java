@@ -16,12 +16,12 @@ final class cl {
         RuntimeException decompiledCaughtException = null;
         var11 = VoidHunters.field_G;
         try {
-          var6_int = ksa.a(31123, lua.field_c, hab.field_i, param3);
-          var7 = ksa.a(31123, lua.field_c, hab.field_i, param2);
-          var8 = ksa.a(31123, ob.field_j, mt.field_o, param5);
-          var9 = ksa.a(param0 ^ -29743, ob.field_j, mt.field_o, param4);
+          var6_int = IntrusiveNode.a(31123, NebulaField.field_c, hab.field_i, param3);
+          var7 = IntrusiveNode.a(31123, NebulaField.field_c, hab.field_i, param2);
+          var8 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param5);
+          var9 = IntrusiveNode.a(param0 ^ -29743, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);
           for (var10 = var6_int; var7 >= var10; var10++) {
-            ww.a(param1, var9, rba.field_b[var10], (byte) 75, var8);
+            GetSalvoRepairTimeMultiplier.a(param1, var9, ResourceNode.field_b[var10], (byte) 75, var8);
           }
           if (param0 == -3518) {
             return;
@@ -31,7 +31,7 @@ final class cl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var6), "cl.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var6), "cl.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -69,13 +69,13 @@ final class beb implements dja {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final tv a(byte param0) {
         int var2 = 66 % ((param0 + 64) / 50);
-        return (tv) ((Object) new tj());
+        return (tv) ((Object) new Projectile());
     }
 
     final static tv a(byte[] param0, int param1, dja param2) {
@@ -119,7 +119,7 @@ final class beb implements dja {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class beb implements dja {
         if (param0 != 11995) {
           return (tv[]) null;
         }
-        return (tv[]) ((Object) new tj[param1]);
+        return (tv[]) ((Object) new Projectile[param1]);
     }
 
     static {

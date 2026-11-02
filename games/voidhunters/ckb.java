@@ -124,7 +124,7 @@ final class ckb extends le {
                 var4 = 255;
               }
             }
-            this.field_i[var6] = knb.a(var4, knb.a(var3 << 8, var2 << 16));
+            this.field_i[var6] = SetAngularForceDownshift.a(var4, SetAngularForceDownshift.a(var3 << 8, var2 << 16));
           }
         }
         if (param0 < 93) {
@@ -132,7 +132,7 @@ final class ckb extends le {
         }
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var5 = 0;
         int var4_int = 0;
         int var6 = 0;
@@ -171,7 +171,7 @@ final class ckb extends le {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

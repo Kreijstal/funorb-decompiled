@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class osa extends ksa {
+final class osa extends IntrusiveNode {
     int field_d;
     int field_f;
     static boolean field_e;

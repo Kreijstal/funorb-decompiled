@@ -37,7 +37,7 @@ final class iq {
               param1.length != var9) {
               param1 = param3.a(11995, var9);
             }
-            var10 = iia.a(-118, param0.length - 1);
+            var10 = BodyInZoneCondition.a(-118, param0.length - 1);
             for (var11 = 0; var9 > var11; var11++) {
               if (!kv.a(false, param5)) {
                 param1[var11] = null;
@@ -100,7 +100,7 @@ final class iq {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

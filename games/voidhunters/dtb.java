@@ -74,7 +74,7 @@ final class dtb implements dja {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ final class dtb implements dja {
           if (param1 <= 18) {
             return true;
           }
-          if (!qnb.a((byte) -35, param0)) {
+          if (!GetAngularVelocitySustainMax.a((byte) -35, param0)) {
             return false;
           }
           if (param2 == null) {
@@ -107,7 +107,7 @@ final class dtb implements dja {
           if (12 <= var3_int) {
             return false;
           }
-          if (fg.a(param0, 70) &&
+          if (MouseWheelInput.a(param0, 70) &&
             var3_int == 0) {
             return false;
           }
@@ -122,7 +122,7 @@ final class dtb implements dja {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

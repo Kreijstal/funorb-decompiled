@@ -24,7 +24,7 @@ final class hpb extends le {
           var6 = var10[2];
           for (var7 = 0; var7 < hob.field_d; var7++) {
             this.c(-117, var7, param1);
-            var8 = this.a((byte) 95, 0, cg.field_q);
+            var8 = this.a((byte) 95, 0, GetToggledScoreboard.field_q);
             var4[var7] = var8[0][rab.field_n];
             var5[var7] = var8[1][rab.field_n];
             var6[var7] = var8[2][rab.field_n];
@@ -40,7 +40,7 @@ final class hpb extends le {
         }
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -66,7 +66,7 @@ final class hpb extends le {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class hpb extends le {
         if (this.field_f.field_e) {
           for (var4 = 0; hob.field_d > var4; var4++) {
             this.c(-95, var4, param0);
-            var5 = this.a(0, cg.field_q, 255);
+            var5 = this.a(0, GetToggledScoreboard.field_q, 255);
             var7[var4] = var5[rab.field_n];
           }
         }
@@ -99,45 +99,45 @@ final class hpb extends le {
         if (param0 > -54) {
           this.a(-48, true);
         }
-        var5 = sj.field_p[param2];
+        var5 = SetSalvoUsesAllEnergy.field_p[param2];
         var6 = (float)Math.atan2((double)(var4 - 2048), (double)(var5 - 2048));
         if (-3.141592653589793 <= (double)var6 &&
           -2.356194490192345 >= (double)var6) {
-          cg.field_q = param2;
+          GetToggledScoreboard.field_q = param2;
           rab.field_n = param1;
         } else if (-1.5707963267948966 >= (double)var6 &&
           -2.356194490192345 <= (double)var6) {
           rab.field_n = param2;
-          cg.field_q = param1;
+          GetToggledScoreboard.field_q = param1;
         } else if (-0.7853981633974483 >= (double)var6 &&
           -1.5707963267948966 <= (double)var6) {
-          cg.field_q = param1;
+          GetToggledScoreboard.field_q = param1;
           rab.field_n = hob.field_d - param2;
         } else if (var6 <= 0.0f &&
           (double)var6 >= -0.7853981633974483) {
           rab.field_n = param1;
-          cg.field_q = -param2 + noa.field_o;
+          GetToggledScoreboard.field_q = -param2 + GetTorpedoReload.field_o;
         } else if (0.0f <= var6 &&
           (double)var6 <= 0.7853981633974483) {
-          cg.field_q = noa.field_o - param2;
+          GetToggledScoreboard.field_q = GetTorpedoReload.field_o - param2;
           rab.field_n = -param1 + hob.field_d;
         } else if (0.7853981633974483 <= (double)var6 &&
           1.5707963267948966 >= (double)var6) {
-          cg.field_q = noa.field_o - param1;
+          GetToggledScoreboard.field_q = GetTorpedoReload.field_o - param1;
           rab.field_n = hob.field_d - param2;
         } else if (1.5707963267948966 <= (double)var6 &&
           2.356194490192345 >= (double)var6) {
-          cg.field_q = -param1 + noa.field_o;
+          GetToggledScoreboard.field_q = -param1 + GetTorpedoReload.field_o;
           rab.field_n = param2;
         } else {
           if ((double)var6 >= 2.356194490192345 &&
             3.141592653589793 >= (double)var6) {
-            cg.field_q = param2;
+            GetToggledScoreboard.field_q = param2;
             rab.field_n = hob.field_d - param1;
           }
         }
-        cg.field_q = cg.field_q & wf.field_d;
-        rab.field_n = rab.field_n & gbb.field_q;
+        GetToggledScoreboard.field_q = GetToggledScoreboard.field_q & wf.field_d;
+        rab.field_n = rab.field_n & SetMassDriverEnergyUsed.field_q;
     }
 
     public hpb() {

@@ -24,7 +24,7 @@ final class al implements hf {
         ffb.field_e = jwa.a(false, var2);
     }
 
-    final static void a(ksa param0, ksa param1, int param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         try {
           if (param0.field_a != null) {
             param0.b(-3846);
@@ -33,12 +33,12 @@ final class al implements hf {
           param0.field_c = param1;
           param0.field_a.field_c = param0;
           if (param2 != 2) {
-            ksa var4 = (ksa) null;
-            al.a((ksa) null, (ksa) null, 44);
+            IntrusiveNode var4 = (IntrusiveNode) null;
+            al.a((IntrusiveNode) null, (IntrusiveNode) null, 44);
           }
           param0.field_c.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "al.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "al.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class al implements hf {
             this.field_b = this.field_c.field_d;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "al.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

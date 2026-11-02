@@ -7,7 +7,7 @@ class aia extends pib {
     private int field_k;
     private int field_i;
 
-    aia(qfa param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
+    aia(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
         super(param0, param1, param2, param3 * param4, param5);
         int var12 = 0;
         int var15 = 0;
@@ -70,7 +70,7 @@ class aia extends pib {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ class aia extends pib {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ class aia extends pib {
         }
     }
 
-    aia(qfa param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
+    aia(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
         super(param0, param1, param2, param4 * param3, param5);
         int var11 = 0;
         int var14 = 0;
@@ -218,7 +218,7 @@ class aia extends pib {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -277,11 +277,11 @@ class aia extends pib {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
-    aia(qfa param0, int param1, int param2, int param3, int param4) {
+    aia(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
         super(param0, param1, param2, param4 * param3, false);
         this.field_k = -1;
         this.field_i = -1;
@@ -292,11 +292,11 @@ class aia extends pib {
           jaggl.OpenGL.glTexImage2Dub(this.field_b, 0, this.field_d, param3, param4, 0, fsb.a(this.field_d, false), 5121, (byte[]) null, 0);
           this.a(-96, true);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "aia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    aia(qfa param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
+    aia(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
         super(param0, param1, param2, param3 * param4, param5);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -337,7 +337,7 @@ class aia extends pib {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param7).append(')').toString());
         }
     }
 

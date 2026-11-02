@@ -26,7 +26,7 @@ final class voa {
           }
           var6 = new pi();
           if (var4 != null) {
-            var6.a(new ds(var4), -1);
+            var6.a(new PacketBuffer(var4), -1);
           }
           if (param0 >= 32768) {
             var6.e((byte) 97);
@@ -42,7 +42,7 @@ final class voa {
         }
         var5 = new pi();
         if (var4Lifetime1 != null) {
-          var5.a(new ds(var4Lifetime1), -1);
+          var5.a(new PacketBuffer(var4Lifetime1), -1);
         }
         if (param0 >= 32768) {
           var5.e((byte) 97);
@@ -95,7 +95,7 @@ final class voa {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

@@ -9,33 +9,33 @@ final class rtb extends pib {
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (param1 >= -37) {
           field_h = (llb) null;
-          if (erb.field_p) {
-            return ada.field_b.a(-9445, pma.field_o, jl.field_r);
+          if (GetBloomThresholdPercentage.field_p) {
+            return ada.field_b.a(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
           }
           if (uga.field_d) {
-            return ic.a(param3, -9307, param2);
+            return GetDetachmentMode.a(param3, -9307, param2);
           }
-          if (qt.a(param3, 2, param2)) {
+          if (SetPhysicsCollisionForceMultiplier.a(param3, 2, param2)) {
             return true;
           }
           if (hb.field_c) {
             return false;
           }
-          return tl.b(param0, param3, -85);
+          return SetFighterRepairAmount.b(param0, param3, -85);
         }
-        if (erb.field_p) {
-          return ada.field_b.a(-9445, pma.field_o, jl.field_r);
+        if (GetBloomThresholdPercentage.field_p) {
+          return ada.field_b.a(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
         }
         if (uga.field_d) {
-          return ic.a(param3, -9307, param2);
+          return GetDetachmentMode.a(param3, -9307, param2);
         }
-        if (qt.a(param3, 2, param2)) {
+        if (SetPhysicsCollisionForceMultiplier.a(param3, 2, param2)) {
           return true;
         }
         if (hb.field_c) {
           return false;
         }
-        return tl.b(param0, param3, -85);
+        return SetFighterRepairAmount.b(param0, param3, -85);
     }
 
     public static void c(byte param0) {
@@ -54,7 +54,7 @@ final class rtb extends pib {
         }
     }
 
-    rtb(qfa param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
+    rtb(OpenGlToolkit param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
         super(param0, 34067, param1, 6 * (param2 * param2), param3);
         int var7_int = 0;
         this.field_j = -1;
@@ -66,7 +66,7 @@ final class rtb extends pib {
           }
           this.a(87, true);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rtb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rtb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

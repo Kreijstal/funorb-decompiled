@@ -5,7 +5,7 @@ final class hk extends le {
     static String field_i;
     private int field_j;
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -29,7 +29,7 @@ final class hk extends le {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -62,7 +62,7 @@ final class hk extends le {
           var24 = this.a(0, wf.field_d & param0 + 1, 255);
           for (var7 = 0; var7 < hob.field_d; var7++) {
             var8 = this.field_j * (var24[var7] - var25[var7]);
-            var9 = (-var5[gbb.field_q & -1 + var7] + var5[var7 + 1 & gbb.field_q]) * this.field_j;
+            var9 = (-var5[SetMassDriverEnergyUsed.field_q & -1 + var7] + var5[var7 + 1 & SetMassDriverEnergyUsed.field_q]) * this.field_j;
             var10 = var9 >> 12;
             var11 = var8 >> 12;
             var12 = var10 * var10 >> 12;
@@ -85,8 +85,8 @@ final class hk extends le {
         if (param1 > -90) {
           field_i = (String) null;
         }
-        ou.field_q = 0;
-        dca.field_q = new int[3];
+        SetRepairModePower.field_q = 0;
+        GetPlayerRepairAmount.field_q = new int[3];
         hab.field_k = param0;
     }
 

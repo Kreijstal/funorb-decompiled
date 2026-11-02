@@ -27,12 +27,12 @@ final class lnb extends le {
         var3 = var10;
         if (this.field_f.field_e) {
           var5 = hob.field_d / this.field_k;
-          var6 = noa.field_o / this.field_j;
+          var6 = GetTorpedoReload.field_o / this.field_j;
           if (var6 <= 0) {
             var4 = this.a(0, 0, 255);
           } else {
             var7 = param0 % var6;
-            var4 = this.a(0, noa.field_o * var7 / var6, 255);
+            var4 = this.a(0, GetTorpedoReload.field_o * var7 / var6, 255);
           }
           var11 = 0;
           var7Lifetime1 = var11;
@@ -78,12 +78,12 @@ final class lnb extends le {
         var3 = var17;
         if (this.field_d.field_g) {
           var5 = hob.field_d / this.field_k;
-          var6 = noa.field_o / this.field_j;
+          var6 = GetTorpedoReload.field_o / this.field_j;
           if (var6 <= 0) {
             var4 = this.a((byte) 69, 0, 0);
           } else {
             var7_int = param1 % var6;
-            var4 = this.a((byte) 82, 0, var7_int * noa.field_o / var6);
+            var4 = this.a((byte) 82, 0, var7_int * GetTorpedoReload.field_o / var6);
           }
           var7 = var4[0];
           var8 = var4[1];
@@ -106,7 +106,7 @@ final class lnb extends le {
         return var17;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -138,7 +138,7 @@ final class lnb extends le {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -146,29 +146,29 @@ final class lnb extends le {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
-          if (null != ov.field_o && (param0 < 0 ||
-            sp.field_o == tc.field_c)) {
+          if (null != SetShipSpawnInvulnerabilityTime.field_o && (param0 < 0 ||
+            GetOndamageParticleSpeed.field_o == tc.field_c)) {
             if (param1 < 110) {
               return;
             }
-            if (dpa.field_p.field_e == 0 &&
-              (10000L + bgb.field_o) < wt.a(false)) {
-              dpa.field_p.h(24335, param0);
+            if (RequestNewestBlackboxRecording.field_p.position == 0 &&
+              (10000L + GetTorpedoProjectileOndamageParticles.field_o) < wt.a(false)) {
+              RequestNewestBlackboxRecording.field_p.h(24335, param0);
             }
-            if (0 < dpa.field_p.field_e) {
+            if (0 < RequestNewestBlackboxRecording.field_p.position) {
               try {
-                ov.field_o.a(0, dpa.field_p.field_h, dpa.field_p.field_e, 0);
-                bgb.field_o = wt.a(false);
+                SetShipSpawnInvulnerabilityTime.field_o.a(0, RequestNewestBlackboxRecording.field_p.payload, RequestNewestBlackboxRecording.field_p.position, 0);
+                GetTorpedoProjectileOndamageParticles.field_o = wt.a(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 ifb.l(-122);
               }
-              dpa.field_p.field_e = 0;
+              RequestNewestBlackboxRecording.field_p.position = 0;
             }
             return;
           }
-          dpa.field_p.field_e = 0;
+          RequestNewestBlackboxRecording.field_p.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -190,12 +190,12 @@ final class lnb extends le {
     }
 
     final static void d(int param0) {
-        if (null != cka.field_o &&
-          cka.field_o.field_b != null) {
-          cka.field_o.field_b.field_J = false;
+        if (null != GetLagStandardDeviationOut.field_o &&
+          GetLagStandardDeviationOut.field_o.field_b != null) {
+          GetLagStandardDeviationOut.field_o.field_b.field_J = false;
         }
         qg.field_a = null;
-        cka.field_o = null;
+        GetLagStandardDeviationOut.field_o = null;
         if (param0 != 0) {
           lnb.e(75);
         }

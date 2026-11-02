@@ -10,8 +10,8 @@ final class t {
     private long field_c;
 
     final void b(int param0, bra param1) {
-        ha var4 = null;
-        ha var3 = null;
+        GraphicsToolkit var4 = null;
+        GraphicsToolkit var3 = null;
         try {
           var4 = param1.field_g;
           var3 = var4;
@@ -20,12 +20,12 @@ final class t {
           var3.f(this.field_f, this.field_a);
           param1.field_e = this.field_c;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "t.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "t.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, bra param1) {
-        ha var3 = null;
+        GraphicsToolkit var3 = null;
         if (param0 != 4) {
           return;
         }
@@ -37,13 +37,13 @@ final class t {
           this.field_a = var3.XA();
           this.field_c = param1.field_e;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "t.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "t.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static sg a(int param0, byte param1) {
+    final static Ship a(int param0, byte param1) {
         if (param1 < 34) {
-          return (sg) null;
+          return (Ship) null;
         }
         return rpa.a(param0, 0, true);
     }

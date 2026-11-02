@@ -19,7 +19,7 @@ final class teb extends mfb {
 
     final int b(int param0) {
         int var2 = 35 / ((param0 - 7) / 47);
-        return qea.field_o;
+        return SetLaserRandomness.field_o;
     }
 
     public static void l(int param0) {
@@ -35,25 +35,25 @@ final class teb extends mfb {
     final int f(int param0) {
         if (param0 != 1024) {
           field_b = (int[]) null;
-          return vha.field_p;
+          return SetUseRectFill.field_p;
         }
-        return vha.field_p;
+        return SetUseRectFill.field_p;
     }
 
     final int b(byte param0) {
         if (param0 < 27) {
           this.f(-17);
-          return op.field_p;
+          return SetFps.field_p;
         }
-        return op.field_p;
+        return SetFps.field_p;
     }
 
     final int c(int param0) {
         if (param0 != 0) {
           field_b = (int[]) null;
-          return mp.field_o;
+          return SetTorpedoFireForce.field_o;
         }
-        return mp.field_o;
+        return SetTorpedoFireForce.field_o;
     }
 
     static {

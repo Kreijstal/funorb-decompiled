@@ -5,25 +5,25 @@ import java.util.*;
 
 final class nga implements Iterable {
     static String field_a;
-    private ksa field_g;
+    private IntrusiveNode field_g;
     static String field_c;
-    private ksa field_b;
+    private IntrusiveNode field_b;
     int field_f;
     static String field_e;
     private int field_d;
-    ksa[] field_h;
+    IntrusiveNode[] field_h;
 
     public final Iterator iterator() {
         return (Iterator) ((Object) new pnb(this));
     }
 
-    final ksa a(byte param0, long param1) {
-        ksa var5 = null;
+    final IntrusiveNode a(byte param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = VoidHunters.field_G;
-        ksa var4 = this.field_h[(int)(param1 & (long)(this.field_f - 1))];
+        IntrusiveNode var4 = this.field_h[(int)(param1 & (long)(this.field_f - 1))];
         this.field_b = var4.field_c;
         if (param0 > -103) {
-          return (ksa) null;
+          return (IntrusiveNode) null;
         }
         while (var4 != this.field_b) {
           if (~param1 == ~this.field_b.field_b) {
@@ -37,8 +37,8 @@ final class nga implements Iterable {
         return null;
     }
 
-    final void a(ksa param0, int param1, long param2) {
-        ksa var5 = null;
+    final void a(IntrusiveNode param0, int param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
           if (null != param0.field_a) {
             param0.b(-3846);
@@ -53,15 +53,15 @@ final class nga implements Iterable {
           param0.field_b = param2;
           param0.field_c.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "nga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final ksa a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         int fieldTemp$0 = 0;
-        ksa var2;
+        IntrusiveNode var2;
         int var3;
-        ksa var4;
+        IntrusiveNode var4;
         var3 = VoidHunters.field_G;
         if (0 < this.field_d &&
           this.field_h[-1 + this.field_d] != this.field_g) {
@@ -74,7 +74,7 @@ final class nga implements Iterable {
             if (param0 == 44) {
               return null;
             }
-            this.a((ksa) null, 116, -5L);
+            this.a((IntrusiveNode) null, 116, -5L);
             return null;
           }
           fieldTemp$0 = this.field_d;
@@ -86,7 +86,7 @@ final class nga implements Iterable {
         return var2;
     }
 
-    final ksa a(int param0) {
+    final IntrusiveNode a(int param0) {
         int var2 = 110 / ((47 - param0) / 40);
         this.field_d = 0;
         return this.a((byte) 44);
@@ -94,8 +94,8 @@ final class nga implements Iterable {
 
     final void b(int param0) {
         int var2 = 0;
-        ksa var3 = null;
-        ksa var4 = null;
+        IntrusiveNode var3 = null;
+        IntrusiveNode var4 = null;
         int var5 = VoidHunters.field_G;
         for (var2 = param0; var2 < this.field_f; var2++) {
           var3 = this.field_h[var2];
@@ -122,13 +122,13 @@ final class nga implements Iterable {
 
     nga(int param0) {
         int var2 = 0;
-        ksa dupTemp$0 = null;
-        ksa var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_d = 0;
         this.field_f = param0;
-        this.field_h = new ksa[param0];
+        this.field_h = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new ksa();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_h[var2] = dupTemp$0;
           var3.field_a = var3;

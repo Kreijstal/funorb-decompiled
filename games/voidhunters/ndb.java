@@ -19,18 +19,18 @@ final class ndb extends IOException {
     }
 
     final static void b(int param0) {
-        ee.field_o[61] = 27;
-        ee.field_o[59] = 57;
-        ee.field_o[222] = 58;
-        ee.field_o[520] = 59;
-        ee.field_o[192] = 28;
-        ee.field_o[46] = 72;
-        ee.field_o[45] = 26;
-        ee.field_o[param0] = 73;
-        ee.field_o[93] = 43;
-        ee.field_o[91] = 42;
-        ee.field_o[92] = 74;
-        ee.field_o[44] = 71;
+        GetBombletSprayRandomness.field_o[61] = 27;
+        GetBombletSprayRandomness.field_o[59] = 57;
+        GetBombletSprayRandomness.field_o[222] = 58;
+        GetBombletSprayRandomness.field_o[520] = 59;
+        GetBombletSprayRandomness.field_o[192] = 28;
+        GetBombletSprayRandomness.field_o[46] = 72;
+        GetBombletSprayRandomness.field_o[45] = 26;
+        GetBombletSprayRandomness.field_o[param0] = 73;
+        GetBombletSprayRandomness.field_o[93] = 43;
+        GetBombletSprayRandomness.field_o[91] = 42;
+        GetBombletSprayRandomness.field_o[92] = 74;
+        GetBombletSprayRandomness.field_o[44] = 71;
     }
 
     ndb(String param0) {

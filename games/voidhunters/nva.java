@@ -38,7 +38,7 @@ final class nva extends dqa implements oo {
           this.e(125);
           this.field_E = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "nva.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nva.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class nva extends dqa implements oo {
         this.field_w.a(0, this.field_h, var2, 1, 0);
         this.field_G = new sha(0, 0, 0, 0, new nrb(), this.field_w, (wwa) null);
         if (var4 != 0) {
-          this.field_G.a(true, qe.a(0), (byte) -99);
+          this.field_G.a(true, GetMassDriverEnergyUsed.a(0), (byte) -99);
         }
         this.field_G.a(0, this.field_h, this.field_f - this.field_B, 1, this.field_B);
         this.field_H = true;
@@ -131,7 +131,7 @@ final class nva extends dqa implements oo {
     nva(Object[] param0, int param1, int param2) {
         super(0, 0, 0, 0, (wwa) null);
         this.field_E = "";
-        this.field_v = loa.field_o;
+        this.field_v = SetShipToShipRamDamage.field_o;
         try {
           this.field_w = new tia(this, this.field_v, param0, param1);
           this.field_y = param2;
@@ -144,7 +144,7 @@ final class nva extends dqa implements oo {
           this.b(-18756, this.field_A);
           this.b(-18756, this.field_x);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "nva.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nva.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class nva extends dqa implements oo {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class nva extends dqa implements oo {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ final class nva extends dqa implements oo {
         try {
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "nva.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nva.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -294,7 +294,7 @@ final class nva extends dqa implements oo {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -404,7 +404,7 @@ final class nva extends dqa implements oo {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -443,7 +443,7 @@ final class nva extends dqa implements oo {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -477,12 +477,12 @@ final class nva extends dqa implements oo {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
-        fda.field_o = param2;
+        GetPhasedEnergyBeamPulsetime.field_o = param2;
         mb.field_j = param0;
         if (!param1) {
           nva.a('W', true, -7);
         }
-        eqa.field_o = param3;
+        SetUsePolygonFill.field_o = param3;
     }
 
     static {

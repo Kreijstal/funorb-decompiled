@@ -10,7 +10,7 @@ final class uwa {
     int field_d;
     int field_b;
     int field_a;
-    anb field_e;
+    ShipBody field_e;
 
     final static phb[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
         phb var11 = null;
@@ -53,10 +53,10 @@ final class uwa {
         return (phb[]) null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, anb param7, int param8, int param9) {
+    final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, ShipBody param7, int param8, int param9) {
         try {
           if (param6 < 7) {
-            this.field_e = (anb) null;
+            this.field_e = (ShipBody) null;
           }
           this.field_h = param9;
           this.field_a = param5;
@@ -68,7 +68,7 @@ final class uwa {
           this.field_d = param3;
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "uwa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uwa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class uwa {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 

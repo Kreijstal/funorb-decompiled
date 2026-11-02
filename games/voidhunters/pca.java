@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pca extends uqb implements ntb {
+class pca extends uqb implements DiffableState {
     int field_k;
     static uj[] field_i;
     static String field_l;
@@ -16,7 +16,7 @@ class pca extends uqb implements ntb {
           }
           this.a((byte) -121, param0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ class pca extends uqb implements ntb {
             var4 = (faa) null;
             this.b((faa) null, -21);
           }
-          if (!em.field_o) {
+          if (!SetDebrisProjectileCollision.field_o) {
             return;
           }
           this.field_k = param0.i(param1 + 0, hab.field_h);
@@ -47,7 +47,7 @@ class pca extends uqb implements ntb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ class pca extends uqb implements ntb {
           super.b((byte) 126, param1);
           var6.field_k = this.field_k;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pca.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pca.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -77,7 +77,7 @@ class pca extends uqb implements ntb {
           if (param0 >= -116) {
             pca.a(-90, -61, 89);
           }
-          if (!em.field_o) {
+          if (!SetDebrisProjectileCollision.field_o) {
             return;
           }
           param1.a(-632, this.field_k, hab.field_h);
@@ -92,14 +92,14 @@ class pca extends uqb implements ntb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     protected pca() {
     }
 
-    public void a(tv param0, int param1) {
+    public void reportDifferences(tv other, int obfuscationGuard) {
         pca var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -108,32 +108,32 @@ class pca extends uqb implements ntb {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, -22);
-          var3 = (pca) (param0);
+          super.reportDifferences(other, -22);
+          var3 = (pca) (other);
           var4 = 0;
-          if (param1 > -19) {
+          if (obfuscationGuard > -19) {
             return;
           }
           if (this.field_k != var3.field_k) {
-            iva.a(-6940, "int playerid has changed. before=" + var3.field_k + ", now=" + this.field_k);
+            GetSniperCannonAimarc.a(-6940, "int playerid has changed. before=" + var3.field_k + ", now=" + this.field_k);
             var4 = 1;
           }
           if (var4 == 0) {
             return;
           }
-          iva.a(-6940, "This instance of CarouselPlayerEvent has changed");
+          GetSniperCannonAimarc.a(-6940, "This instance of CarouselPlayerEvent has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_9_0 = var3_ref;
           stackIn_9_1 = new StringBuilder().append("pca.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ class pca extends uqb implements ntb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -169,12 +169,12 @@ class pca extends uqb implements ntb {
         try {
           if (param1) {
             tv var4 = (tv) null;
-            this.a((tv) null, -35);
+            this.reportDifferences((tv) null, -35);
           }
           super.a(param0, param1);
           this.a(param0, 0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "pca.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pca.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -47,13 +47,13 @@ abstract class pw {
         int var13Lifetime1;
         var19 = VoidHunters.field_G;
         try {
-          uib.field_p = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = eha.field_o.length;
+          SetBloomThresholdPercentage.field_p = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          var1_int = SetMissileLauncherFireForce.field_o.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_wma = eha.field_o[var3];
+            var4_ref_wma = SetMissileLauncherFireForce.field_o[var3];
             var17 = var4_ref_wma;
             var17Lifetime2 = var4_ref_wma;
             var4_ref_wma.a(84);
@@ -61,24 +61,24 @@ abstract class pw {
             var5 = var4_ref_wma.field_B + var4_ref_wma.field_d >> 1;
             var6 = var4_ref_wma.field_u + var4_ref_wma.field_a >> 1;
             var7 = var4_ref_wma.field_s + var4_ref_wma.field_q >> 1;
-            var8 = uib.field_p[9] >> 2;
-            var9 = uib.field_p[10] >> 2;
-            var10_int = uib.field_p[11] >> 2;
-            var11 = var9 * eob.field_p[4] + (var8 * eob.field_p[3] + eob.field_p[5] * var10_int) >> 14;
-            var12 = var9 * eob.field_p[7] + eob.field_p[6] * var8 + var10_int * eob.field_p[8] >> 14;
-            var13 = eob.field_p[11] * var10_int + var9 * eob.field_p[10] + eob.field_p[9] * var8 >> 14;
+            var8 = SetBloomThresholdPercentage.field_p[9] >> 2;
+            var9 = SetBloomThresholdPercentage.field_p[10] >> 2;
+            var10_int = SetBloomThresholdPercentage.field_p[11] >> 2;
+            var11 = var9 * GetMissileLauncherAimspeed.field_p[4] + (var8 * GetMissileLauncherAimspeed.field_p[3] + GetMissileLauncherAimspeed.field_p[5] * var10_int) >> 14;
+            var12 = var9 * GetMissileLauncherAimspeed.field_p[7] + GetMissileLauncherAimspeed.field_p[6] * var8 + var10_int * GetMissileLauncherAimspeed.field_p[8] >> 14;
+            var13 = GetMissileLauncherAimspeed.field_p[11] * var10_int + var9 * GetMissileLauncherAimspeed.field_p[10] + GetMissileLauncherAimspeed.field_p[9] * var8 >> 14;
             var2[var3] = var13 * var7 + var5 * var11 + var6 * var12 >> 16;
           }
           if (param0 != 74) {
             pw.a((byte) 57);
           }
-          var3Lifetime1 = uib.field_p[9] >> 8;
-          var4 = uib.field_p[10] >> 8;
-          var5Lifetime1 = uib.field_p[11] >> 8;
-          var6Lifetime1 = nd.field_r << 4;
+          var3Lifetime1 = SetBloomThresholdPercentage.field_p[9] >> 8;
+          var4 = SetBloomThresholdPercentage.field_p[10] >> 8;
+          var5Lifetime1 = SetBloomThresholdPercentage.field_p[11] >> 8;
+          var6Lifetime1 = SetSalvoaim.field_r << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = eu.a(var6Lifetime1, 57) >> 8;
-          var9Lifetime1 = fc.a(var6Lifetime1, (byte) 61) >> 8;
+          var9Lifetime1 = GetNumStars.a(var6Lifetime1, (byte) 61) >> 8;
           if (kc.field_b != -1 &&
             uia.field_b != -1) {
             var8Lifetime1 = 240 - uia.field_b;
@@ -96,27 +96,27 @@ abstract class pw {
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
-          for (var15 = 0; var15 < eha.field_o.length; var15++) {
+          for (var15 = 0; var15 < SetMissileLauncherFireForce.field_o.length; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < eha.field_o.length; var17_int++) {
+            for (var17_int = 1; var17_int < SetMissileLauncherFireForce.field_o.length; var17_int++) {
               if (var21[var17_int] > var21[var16]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17Lifetime1 = eha.field_o[var16];
+            var17Lifetime1 = SetMissileLauncherFireForce.field_o[var16];
             rv.a(param0 ^ -34, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              eob.field_p[var18] = eob.field_p[var18] + raa.field_p[var15][var18];
+              GetMissileLauncherAimspeed.field_p[var18] = GetMissileLauncherAimspeed.field_p[var18] + SetMachineGunFireForce.field_p[var15][var18];
             }
-            wl.a(var17Lifetime1, eob.field_p, false, true, false, uib.field_p, false);
+            SetCountermeasuresPulseRadius.a(var17Lifetime1, GetMissileLauncherAimspeed.field_p, false, true, false, SetBloomThresholdPercentage.field_p, false);
             kt.a(var17Lifetime1, var13Lifetime1, var12Lifetime1, -119, var14, var8Lifetime1, var9Lifetime1, var7Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1), field_z + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), field_z + param0 + ')');
         }
     }
 

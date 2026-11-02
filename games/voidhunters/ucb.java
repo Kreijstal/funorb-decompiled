@@ -25,7 +25,7 @@ final class ucb {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = wjb.a(param3, true, param2, param0);
+          var6 = SetGrapplingHookRopeBreakLength.a(param3, true, param2, param0);
           var4 = var6;
           var6[1].field_m = var6[1].field_q;
           var5 = -55 % ((13 - param1) / 38);
@@ -56,7 +56,7 @@ final class ucb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

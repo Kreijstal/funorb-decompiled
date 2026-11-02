@@ -14,7 +14,7 @@ final class goa extends iw {
         try {
           this.field_K = param1;
           if (this.field_K != null) {
-            var3_int = vob.field_r.b(this.field_K, 260, vob.field_r.field_k);
+            var3_int = GetBoostersCooldown.field_r.b(this.field_K, 260, GetBoostersCooldown.field_r.field_k);
             this.c(300, -1860440319, 150 + var3_int);
           }
           this.field_N = new ttb(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -23,16 +23,16 @@ final class goa extends iw {
           this.field_M = false;
           this.b(-18756, this.field_N);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "goa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "goa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1, param2);
-        vob.field_r.a(this.field_J, (this.field_h >> 1) + param2, 103 + param0, 16777215, -1);
+        GetBoostersCooldown.field_r.a(this.field_J, (this.field_h >> 1) + param2, 103 + param0, 16777215, -1);
         if (null != this.field_K) {
           dma.h(param2 + 20, 113 + param0, 260, 8421504);
-          vob.field_r.a(this.field_K, 20 + param2, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, vob.field_r.field_k);
+          GetBoostersCooldown.field_r.a(this.field_K, 20 + param2, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, GetBoostersCooldown.field_r.field_k);
         }
     }
 
@@ -88,7 +88,7 @@ final class goa extends iw {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

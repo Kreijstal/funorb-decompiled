@@ -37,7 +37,7 @@ abstract class mc extends shb implements nea {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ abstract class mc extends shb implements nea {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -109,47 +109,47 @@ abstract class mc extends shb implements nea {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1) {
         if (!(lia.field_b <= 0) &&
           bv.field_d) {
-          dma.e(0, 0, dma.field_g, hca.field_o.field_u);
-          dd.field_o.b(param1, 45);
+          dma.e(0, 0, dma.field_g, SetToggledScoreboard.field_o.field_u);
+          GetTorpedoProjectiles.field_o.b(param1, 45);
         }
         if (param0 >= -117) {
-          ml var3 = (ml) null;
-          mc.a((ml) null, -56);
+          ShipComponent var3 = (ShipComponent) null;
+          mc.a((ShipComponent) null, -56);
         }
-        if ((nf.field_a > 0 || tba.field_p > 0) &&
-          wo.field_o) {
-          dma.e(0, 0, dma.field_g, hca.field_o.field_u);
-          jfb.field_o.b(param1, -91);
+        if ((nf.field_a > 0 || SetExplosionPushMultiplier.field_p > 0) &&
+          GetTorpedoProjectileDamage.field_o) {
+          dma.e(0, 0, dma.field_g, SetToggledScoreboard.field_o.field_u);
+          SetUseCircleFill.field_o.b(param1, -91);
         }
     }
 
-    final static void a(ml param0, int param1) {
-        ml var3 = null;
-        ml var4 = null;
+    final static void a(ShipComponent param0, int param1) {
+        ShipComponent var3 = null;
+        ShipComponent var4 = null;
         try {
-          param0.a(1, 2, new ml(13));
-          param0.a(param1 ^ 26, 8, new ml(13));
-          param0.a(1, 11, new ml(13));
-          param0.a(1, 4, new ml(25));
-          param0.a(1, 6, new ml(25));
-          param0.a(1, 5, new ml(25));
-          var3 = new ml(29);
-          var3.a(1, 0, new ml(27));
-          var3.a(1, 1, new ml(13));
+          param0.a(1, 2, new ShipComponent(13));
+          param0.a(param1 ^ 26, 8, new ShipComponent(13));
+          param0.a(1, 11, new ShipComponent(13));
+          param0.a(1, 4, new ShipComponent(25));
+          param0.a(1, 6, new ShipComponent(25));
+          param0.a(1, 5, new ShipComponent(25));
+          var3 = new ShipComponent(29);
+          var3.a(1, 0, new ShipComponent(27));
+          var3.a(1, 1, new ShipComponent(13));
           param0.a(1, 0, var3);
-          var4 = new ml(29);
-          var4.a(1, 0, new ml(param1));
-          var4.a(1, 2, new ml(13));
+          var4 = new ShipComponent(29);
+          var4.a(1, 0, new ShipComponent(param1));
+          var4.a(1, 2, new ShipComponent(13));
           param0.a(1, 10, var4);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "mc.TA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mc.TA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -195,7 +195,7 @@ abstract class mc extends shb implements nea {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ abstract class mc extends shb implements nea {
           }
           int var7_int = -98 % ((52 - param0) / 52);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "mc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mc.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -246,7 +246,7 @@ abstract class mc extends shb implements nea {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -294,7 +294,7 @@ abstract class mc extends shb implements nea {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -321,7 +321,7 @@ abstract class mc extends shb implements nea {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -348,7 +348,7 @@ abstract class mc extends shb implements nea {
           if (var5_int != 80) {
             return false;
           }
-          if (!si.field_o[81]) {
+          if (!SetMachineGunEnergyUsed.field_o[81]) {
             stackIn_12_0 = this.a((byte) -47, param2);
           } else {
             stackIn_12_0 = this.b(-125, param2);
@@ -364,7 +364,7 @@ abstract class mc extends shb implements nea {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -426,7 +426,7 @@ abstract class mc extends shb implements nea {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

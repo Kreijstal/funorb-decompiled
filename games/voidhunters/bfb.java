@@ -89,7 +89,7 @@ final class bfb {
             param0[param1++] = param2;
           }
         }
-        L2: {
+        regionExit1: {
           if (field_b == 254) {
             while (true) {
               param3--;
@@ -98,7 +98,7 @@ final class bfb {
                 while (true) {
                   param3--;
                   if (param3 < 0) {
-                    break L2;
+                    break regionExit1;
                   }
                   incrementValue$12 = param1;
                   param1++;
@@ -129,7 +129,7 @@ final class bfb {
               while (true) {
                 param3--;
                 if (param3 < 0) {
-                  break L2;
+                  break regionExit1;
                 }
                 var8 = param0[param1];
                 incrementValue$7 = param1;
@@ -606,7 +606,7 @@ final class bfb {
         field_h = param3 - param1;
         bfb.a();
         if (field_g.length < field_h) {
-          field_g = new int[hj.a(field_h, (byte) -105)];
+          field_g = new int[GetSalvoaim.a(field_h, (byte) -105)];
         }
         int var4 = param1 * dma.field_g + param0;
         for (var5 = 0; var5 < field_h; var5++) {

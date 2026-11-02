@@ -42,7 +42,7 @@ final class mjb extends aja {
           (1 & param7) != 0) {
           stackIn_6_1 = cs.field_a;
         } else {
-          stackIn_6_1 = jd.field_o;
+          stackIn_6_1 = SetLagVariant.field_o;
         }
         ((eb) (Object) stackIn_4_0).a(stackIn_6_1, -28798);
         this.field_h.E((byte) 111);
@@ -85,7 +85,7 @@ final class mjb extends aja {
         oj var7 = this.field_h.H((byte) 124);
         param1 = param1 + this.field_m;
         param0 = param0 + this.field_l;
-        this.field_o.a(jd.field_o, -28798);
+        this.field_o.a(SetLagVariant.field_o, -28798);
         this.field_h.E((byte) 111);
         this.field_h.a(this.field_o, -123);
         this.field_h.c(121, param4);
@@ -135,7 +135,7 @@ final class mjb extends aja {
           (param9 & 1) != 0) {
           stackIn_5_1 = cs.field_a;
         } else {
-          stackIn_5_1 = jd.field_o;
+          stackIn_5_1 = SetLagVariant.field_o;
         }
         ((eb) (Object) stackIn_4_0).a(stackIn_5_1, -28798);
         this.field_h.E((byte) 111);
@@ -206,7 +206,7 @@ final class mjb extends aja {
         var22 = VoidHunters.field_G;
         var23 = this.field_h.A(11);
         var9 = this.field_h.H((byte) -122);
-        this.field_o.a(jd.field_o, -28798);
+        this.field_o.a(SetLagVariant.field_o, -28798);
         this.field_h.E((byte) 111);
         this.field_h.a(this.field_o, -119);
         this.field_h.c(75, param6);
@@ -354,19 +354,19 @@ final class mjb extends aja {
     }
 
     final static void a(byte param0, int param1) {
-        faa var2 = dpa.field_p;
+        faa var2 = RequestNewestBlackboxRecording.field_p;
         var2.h(24335, param1);
-        var2.field_e = var2.field_e + 1;
-        int var3 = var2.field_e;
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         if (param0 <= 93) {
           field_c = (dja) null;
         }
         var2.c(0, 2);
-        var2.a(0, ce.field_o, -1, ce.field_o.length);
-        var2.c(0, imb.field_a);
+        var2.a(0, GetPlayerRepairTime.field_o, -1, GetPlayerRepairTime.field_o.length);
+        var2.c(0, Hardpoint.field_a);
         var2.c(0, qd.field_d);
-        var2.a(0, nkb.field_p, -1, nkb.field_p.length);
-        var2.e(-var3 + var2.field_e, -129);
+        var2.a(0, GetDebrisThrowable.field_p, -1, GetDebrisThrowable.field_p.length);
+        var2.e(-var3 + var2.position, -129);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -387,7 +387,7 @@ final class mjb extends aja {
         try {
           this.field_o.a(param1, param3, param2, param5, param6, param4, param0, (byte) -101);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "mjb.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mjb.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -424,7 +424,7 @@ final class mjb extends aja {
           if (param3) {
             stackIn_4_5 = qua.field_d;
           } else {
-            stackIn_4_5 = ep.field_o;
+            stackIn_4_5 = SetGrapplingHookFireForce.field_o;
           }
           this.field_o = ((pf) (Object) stackIn_3_1).a(stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5, mj.field_f);
           this.field_o.a(true, (byte) -98, true);
@@ -447,7 +447,7 @@ final class mjb extends aja {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -499,7 +499,7 @@ final class mjb extends aja {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

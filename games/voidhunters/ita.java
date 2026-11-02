@@ -11,12 +11,12 @@ final class ita extends vq {
 
     private final void a(shb param0, int param1, String param2, int param3, int param4) {
         try {
-          web.field_o.a(param2, (param0.field_h >> 1) + (param4 + param0.field_g), param1 + param0.field_r - 5, 16777215, -1);
+          SetTorpedoProjectileLife.field_o.a(param2, (param0.field_h >> 1) + (param4 + param0.field_g), param1 + param0.field_r - 5, 16777215, -1);
           if (param3 != 1225728129) {
             this.d(108);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ita.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ita.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -25,7 +25,7 @@ final class ita extends vq {
         try {
           this.a(param2, param4, param5, 1, param3);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ita.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ita.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -38,9 +38,9 @@ final class ita extends vq {
           }
           param0 = param0 + this.field_g;
           param3 = param3 + this.field_r;
-          this.a(this.field_E, param3, gu.field_q, 1225728129, param0);
-          this.a(this.field_B, param3, jm.field_o, 1225728129, param0);
-          this.a(this.field_C, param3, rta.field_q, 1225728129, param0);
+          this.a(this.field_E, param3, GetReadyRoomMissionTime.field_q, 1225728129, param0);
+          this.a(this.field_B, param3, GetBombletSprayAimspeed.field_o, 1225728129, param0);
+          this.a(this.field_C, param3, GetMissileLauncherRandomness.field_q, 1225728129, param0);
           return;
         }
         if (0 != param1) {
@@ -48,9 +48,9 @@ final class ita extends vq {
         }
         param0 = param0 + this.field_g;
         param3 = param3 + this.field_r;
-        this.a(this.field_E, param3, gu.field_q, 1225728129, param0);
-        this.a(this.field_B, param3, jm.field_o, 1225728129, param0);
-        this.a(this.field_C, param3, rta.field_q, 1225728129, param0);
+        this.a(this.field_E, param3, GetReadyRoomMissionTime.field_q, 1225728129, param0);
+        this.a(this.field_B, param3, GetBombletSprayAimspeed.field_o, 1225728129, param0);
+        this.a(this.field_C, param3, GetMissileLauncherRandomness.field_q, 1225728129, param0);
     }
 
     final int f(int param0) {
@@ -158,7 +158,7 @@ final class ita extends vq {
             this.d(-83);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ita.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ita.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -198,7 +198,7 @@ final class ita extends vq {
           }
           this.b(-18756, this.field_C);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ita.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ita.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

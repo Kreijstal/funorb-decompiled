@@ -1,0 +1,91 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SetMachineGunEnergyUsed extends ConsoleCommand {
+    static int field_s;
+    static int field_p;
+    static int field_r;
+    static boolean[] field_o;
+    static int[] field_q;
+
+    final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
+        RuntimeException var3 = null;
+        ConsoleValue stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          SetMachineGunEnergyUsed.a(164, 62, arguments[0].a(60));
+          if (obfuscationGuard > -119) {
+            SetMachineGunEnergyUsed.a(100, -78, -48);
+          }
+          stackIn_3_0 = new ConsoleValue("void");
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("si.A(");
+          if (arguments == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    SetMachineGunEnergyUsed(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    public static void b(boolean param0) {
+        if (!param0) {
+          field_s = 71;
+        }
+        field_q = null;
+        field_o = null;
+    }
+
+    final static void a(int param0, int param1, int param2) {
+        hna var3 = null;
+        if (param1 != 62) {
+          field_r = 110;
+        }
+        if (vqa.field_g != null) {
+          var3 = new hna();
+          var3.specialOrderSubmessage = new SpecialOrderSubmessage();
+          var3.specialOrderSubmessage.settingsChange = new SettingsChange(param0, param2);
+          vqa.field_g.a(param1 ^ 62, true, var3);
+        }
+    }
+
+    static {
+        int var0_int = 0;
+        int var0_intLifetime1;
+        int var0_intLifetime2;
+        int var0_intLifetime3;
+        SetLag.a(105, 50);
+        field_o = new boolean[112];
+        field_q = new int[128];
+        for (var0_int = 0; field_q.length > var0_int; var0_int++) {
+          field_q[var0_int] = -1;
+        }
+        for (var0_intLifetime1 = 65; var0_intLifetime1 <= 90; var0_intLifetime1++) {
+          field_q[var0_intLifetime1] = var0_intLifetime1 - 65;
+        }
+        for (var0_intLifetime2 = 97; var0_intLifetime2 <= 122; var0_intLifetime2++) {
+          field_q[var0_intLifetime2] = 26 + (var0_intLifetime2 - 97);
+        }
+        for (var0_intLifetime3 = 48; var0_intLifetime3 <= 57; var0_intLifetime3++) {
+          field_q[var0_intLifetime3] = -48 + (var0_intLifetime3 + 52);
+        }
+        int[] var0 = field_q;
+        field_q[43] = 62;
+        var0[42] = 62;
+        field_q[47] = 63;
+        int[] var1 = field_q;
+        var1[45] = 63;
+    }
+}

@@ -36,13 +36,13 @@ final class ae {
         this.field_i = 0;
         if (param0 == -19255) {
           if (this.field_d == 0) {
-            this.field_i = pma.field_o;
+            this.field_i = SetBombletSprayProjectileDamage.field_o;
           }
           return;
         }
         this.a(false, 6);
         if (this.field_d == 0) {
-          this.field_i = pma.field_o;
+          this.field_i = SetBombletSprayProjectileDamage.field_o;
         }
     }
 
@@ -57,19 +57,19 @@ final class ae {
           this.field_i = 0;
           this.field_a = 0;
           this.field_h = 0;
-          if (pba.field_o != 0) {
-            this.field_e = jab.field_p;
+          if (SetDebrisPartitioned.field_o != 0) {
+            this.field_e = SetNebulaFadesOutWhenClose.field_p;
             this.field_b = true;
-            this.field_h = pba.field_o;
-            this.field_a = pba.field_o;
+            this.field_h = SetDebrisPartitioned.field_o;
+            this.field_a = SetDebrisPartitioned.field_o;
             this.field_j = param0;
-            this.field_d = pba.field_o;
+            this.field_d = SetDebrisPartitioned.field_o;
           }
           if (this.field_d != 0 &&
             hu.field_b != 0) {
             if (this.field_e > 0) {
               this.field_e = this.field_e - 1;
-              if (pba.field_o == 0 &&
+              if (SetDebrisPartitioned.field_o == 0 &&
                 0 == hu.field_b) {
                 this.field_d = 0;
               }
@@ -95,10 +95,10 @@ final class ae {
               }
               return;
             }
-            this.field_e = og.field_q;
+            this.field_e = GetDebrisGroupColour.field_q;
             this.field_h = this.field_d;
             this.field_e = this.field_e - 1;
-            if (pba.field_o == 0 &&
+            if (SetDebrisPartitioned.field_o == 0 &&
               0 == hu.field_b) {
               this.field_d = 0;
             }
@@ -124,7 +124,7 @@ final class ae {
             }
             return;
           }
-          if (pba.field_o == 0 &&
+          if (SetDebrisPartitioned.field_o == 0 &&
             0 == hu.field_b) {
             this.field_d = 0;
             if (0 != this.field_d) {
@@ -157,12 +157,12 @@ final class ae {
           this.field_i = 0;
           this.field_a = 0;
           this.field_h = 0;
-          if (pba.field_o == 0) {
+          if (SetDebrisPartitioned.field_o == 0) {
             if (this.field_d != 0 &&
               hu.field_b != 0) {
               if (this.field_e > 0) {
                 this.field_e = this.field_e - 1;
-                if (pba.field_o == 0 &&
+                if (SetDebrisPartitioned.field_o == 0 &&
                   0 == hu.field_b) {
                   this.field_d = 0;
                 }
@@ -188,10 +188,10 @@ final class ae {
                 }
                 return;
               }
-              this.field_e = og.field_q;
+              this.field_e = GetDebrisGroupColour.field_q;
               this.field_h = this.field_d;
               this.field_e = this.field_e - 1;
-              if (pba.field_o == 0 &&
+              if (SetDebrisPartitioned.field_o == 0 &&
                 0 == hu.field_b) {
                 this.field_d = 0;
               }
@@ -217,7 +217,7 @@ final class ae {
               }
               return;
             }
-            if (pba.field_o == 0 &&
+            if (SetDebrisPartitioned.field_o == 0 &&
               0 == hu.field_b) {
               this.field_d = 0;
               if (0 != this.field_d) {
@@ -243,17 +243,17 @@ final class ae {
               return;
             }
           } else {
-            this.field_e = jab.field_p;
+            this.field_e = SetNebulaFadesOutWhenClose.field_p;
             this.field_b = true;
-            this.field_h = pba.field_o;
-            this.field_a = pba.field_o;
+            this.field_h = SetDebrisPartitioned.field_o;
+            this.field_a = SetDebrisPartitioned.field_o;
             this.field_j = param0;
-            this.field_d = pba.field_o;
+            this.field_d = SetDebrisPartitioned.field_o;
             if (this.field_d != 0 &&
               hu.field_b != 0) {
               if (this.field_e > 0) {
                 this.field_e = this.field_e - 1;
-                if (pba.field_o == 0 &&
+                if (SetDebrisPartitioned.field_o == 0 &&
                   0 == hu.field_b) {
                   this.field_d = 0;
                 }
@@ -279,11 +279,11 @@ final class ae {
                 }
                 return;
               }
-              this.field_e = og.field_q;
+              this.field_e = GetDebrisGroupColour.field_q;
               this.field_h = this.field_d;
               this.field_e = this.field_e - 1;
             }
-            if (pba.field_o == 0 &&
+            if (SetDebrisPartitioned.field_o == 0 &&
               0 == hu.field_b) {
               this.field_d = 0;
             }
@@ -380,11 +380,11 @@ final class ae {
           this.field_a = 19;
           this.field_h = 0;
           if (0 == this.field_d) {
-            this.field_i = pma.field_o;
+            this.field_i = SetBombletSprayProjectileDamage.field_o;
           }
           if (this.field_d != 0) {
             if (this.field_d == 0 &&
-              97 == pma.field_o) {
+              97 == SetBombletSprayProjectileDamage.field_o) {
               this.field_j = this.field_j + 1;
               if (this.field_c <= this.field_j) {
                 this.field_j = 0;
@@ -392,8 +392,8 @@ final class ae {
               this.field_b = false;
             }
             if (this.field_d == 0) {
-              if (pma.field_o != 98 &&
-                pma.field_o != 99) {
+              if (SetBombletSprayProjectileDamage.field_o != 98 &&
+                SetBombletSprayProjectileDamage.field_o != 99) {
                 return;
               }
               this.field_b = false;
@@ -403,7 +403,7 @@ final class ae {
             }
             return;
           }
-          if (pma.field_o == 96) {
+          if (SetBombletSprayProjectileDamage.field_o == 96) {
             if (0 >= this.field_j) {
               this.field_j = this.field_c;
             }
@@ -412,8 +412,8 @@ final class ae {
           }
           if (this.field_d != 0) {
             if (this.field_d == 0) {
-              if (pma.field_o != 98 &&
-                pma.field_o != 99) {
+              if (SetBombletSprayProjectileDamage.field_o != 98 &&
+                SetBombletSprayProjectileDamage.field_o != 99) {
                 return;
               }
               this.field_b = false;
@@ -423,7 +423,7 @@ final class ae {
             }
             return;
           }
-          if (97 == pma.field_o) {
+          if (97 == SetBombletSprayProjectileDamage.field_o) {
             this.field_j = this.field_j + 1;
             if (this.field_c <= this.field_j) {
               this.field_j = 0;
@@ -431,8 +431,8 @@ final class ae {
             this.field_b = false;
           }
           if (this.field_d == 0) {
-            if (pma.field_o != 98 &&
-              pma.field_o != 99) {
+            if (SetBombletSprayProjectileDamage.field_o != 98 &&
+              SetBombletSprayProjectileDamage.field_o != 99) {
               return;
             }
             this.field_b = false;
@@ -444,10 +444,10 @@ final class ae {
         }
         this.field_h = 0;
         if (0 == this.field_d) {
-          this.field_i = pma.field_o;
+          this.field_i = SetBombletSprayProjectileDamage.field_o;
         }
         if (this.field_d == 0 &&
-          pma.field_o == 96) {
+          SetBombletSprayProjectileDamage.field_o == 96) {
           if (0 >= this.field_j) {
             this.field_j = this.field_c;
           }
@@ -455,7 +455,7 @@ final class ae {
           this.field_j = this.field_j - 1;
         }
         if (this.field_d == 0 &&
-          97 == pma.field_o) {
+          97 == SetBombletSprayProjectileDamage.field_o) {
           this.field_j = this.field_j + 1;
           if (this.field_c <= this.field_j) {
             this.field_j = 0;
@@ -465,8 +465,8 @@ final class ae {
         if (this.field_d != 0) {
           return;
         }
-        if (pma.field_o != 98 &&
-          pma.field_o != 99) {
+        if (SetBombletSprayProjectileDamage.field_o != 98 &&
+          SetBombletSprayProjectileDamage.field_o != 99) {
           return;
         }
         this.field_b = false;
@@ -489,13 +489,13 @@ final class ae {
         this.field_i = 0;
         this.field_a = 0;
         if (this.field_d == 0) {
-          this.field_i = pma.field_o;
+          this.field_i = SetBombletSprayProjectileDamage.field_o;
           if (0 != this.field_d) {
             if (param0 > -37) {
               ae.e(15);
             }
             if (this.field_d == 0 &&
-              99 == pma.field_o) {
+              99 == SetBombletSprayProjectileDamage.field_o) {
               this.field_j = this.field_j + 1;
               if (this.field_j >= this.field_c) {
                 this.field_j = 0;
@@ -504,12 +504,12 @@ final class ae {
             }
             return;
           }
-          if (98 != pma.field_o) {
+          if (98 != SetBombletSprayProjectileDamage.field_o) {
             if (param0 > -37) {
               ae.e(15);
             }
             if (this.field_d == 0 &&
-              99 == pma.field_o) {
+              99 == SetBombletSprayProjectileDamage.field_o) {
               this.field_j = this.field_j + 1;
               if (this.field_j >= this.field_c) {
                 this.field_j = 0;
@@ -525,7 +525,7 @@ final class ae {
           this.field_j = this.field_j - 1;
         } else {
           if (0 == this.field_d &&
-            98 == pma.field_o) {
+            98 == SetBombletSprayProjectileDamage.field_o) {
             if (this.field_j <= 0) {
               this.field_j = this.field_c;
               this.field_b = false;
@@ -534,7 +534,7 @@ final class ae {
                 ae.e(15);
               }
               if (this.field_d == 0) {
-                if (99 != pma.field_o) {
+                if (99 != SetBombletSprayProjectileDamage.field_o) {
                   return;
                 }
                 this.field_j = this.field_j + 1;
@@ -555,7 +555,7 @@ final class ae {
         if (this.field_d != 0) {
           return;
         }
-        if (99 != pma.field_o) {
+        if (99 != SetBombletSprayProjectileDamage.field_o) {
           return;
         }
         this.field_j = this.field_j + 1;
@@ -583,20 +583,20 @@ final class ae {
         }
     }
 
-    final static sg a(int[] param0, byte param1) {
-        sg var2 = null;
+    final static Ship a(int[] param0, byte param1) {
+        Ship var2 = null;
         RuntimeException var2_ref = null;
-        sg stackIn_3_0 = null;
+        Ship stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new sg();
-          var2.field_k = qia.a(1, param0);
+          var2 = new Ship();
+          var2.chassis = SetSniperCannonProjectileLife.a(1, param0);
           var2.e((byte) 119);
-          var2.field_k.a(true, 0, 0, 0, 0, var2.f((byte) -123));
-          var2.field_k.a((byte) 21, (anb) (var2));
+          var2.chassis.a(true, 0, 0, 0, 0, var2.getBoundingbox((byte) -123));
+          var2.chassis.a((byte) 21, (ShipBody) (var2));
           if (param1 <= 21) {
             field_g = (ri) null;
           }
@@ -612,7 +612,7 @@ final class ae {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

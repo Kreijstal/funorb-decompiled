@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gda extends ksa {
-    ml field_m;
+final class gda extends IntrusiveNode {
+    ShipComponent field_m;
     static String field_k;
     int field_i;
     int field_e;
-    ml field_h;
+    ShipComponent field_h;
     int field_j;
     int field_g;
     static int field_d;
@@ -20,7 +20,7 @@ final class gda extends ksa {
         }
     }
 
-    gda(ml param0, int param1, ml param2, int param3, int param4, int param5, int param6, int param7) {
+    gda(ShipComponent param0, int param1, ShipComponent param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_h = param0;
           this.field_g = param3;
@@ -31,7 +31,7 @@ final class gda extends ksa {
           this.field_i = param1;
           this.field_e = param4;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

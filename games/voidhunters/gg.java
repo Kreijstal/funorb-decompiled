@@ -8,13 +8,13 @@ final class gg extends le {
     private int field_i;
 
     final void c(byte param0) {
-        taa.e((byte) -91);
+        GetTrapMouse.e((byte) -91);
         if (param0 >= -35) {
           this.field_k = 85;
         }
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -50,7 +50,7 @@ final class gg extends le {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class gg extends le {
         var12 = var13;
         var3 = var12;
         if (this.field_f.field_e) {
-          var4 = sj.field_p[param0];
+          var4 = SetSalvoUsesAllEnergy.field_p[param0];
           var5 = var4 - 2048 >> 1;
           for (var6 = 0; var6 < hob.field_d; var6++) {
             var8 = grb.field_l[var6];
@@ -90,7 +90,7 @@ final class gg extends le {
             var7 = var7 - (-4096 & var7);
             if (this.field_i == 0) {
               var14Lifetime1 = var13;
-              var7 = 4096 + qta.field_o[255 & var7 >> 4] >> 1;
+              var7 = 4096 + GetDebrisPartitioned.field_o[255 & var7 >> 4] >> 1;
             } else {
               if (2 == this.field_i) {
                 var7 -= 2048;

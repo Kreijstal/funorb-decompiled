@@ -14,29 +14,29 @@ abstract class ija {
     abstract void a(int param0, int param1);
 
     final static void a(int param0) {
-        fh var2 = null;
+        DualLinkNode var2 = null;
         int var3 = VoidHunters.field_G;
-        fh var2Lifetime1;
+        DualLinkNode var2Lifetime1;
         try {
-          vob.field_p = 0;
+          GetBoostersCooldown.field_p = 0;
           mq.field_k = 0;
           kbb.field_q = null;
           mr.field_M.e(120);
           int var1_int = -31 % ((param0 + 31) / 39);
-          st.field_o.e(97);
+          SetPointDefenceLaserProjectileOndamageParticles.field_o.e(97);
           var2 = ae.field_f.c(-43);
           while (var2 != null) {
             var2.d((byte) -35);
             var2 = ae.field_f.d(-1);
           }
-          var2Lifetime1 = om.field_c.c(-94);
+          var2Lifetime1 = TeamNodeCondition.field_c.c(-94);
           while (var2Lifetime1 != null) {
             var2Lifetime1.d((byte) -35);
-            var2Lifetime1 = om.field_c.d(-1);
+            var2Lifetime1 = TeamNodeCondition.field_c.d(-1);
           }
           iwa.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ija.G(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ija.G(" + param0 + ')');
         }
     }
 
@@ -67,7 +67,7 @@ abstract class ija {
             var5 = (dja) null;
             ija.a(param1[1], (Object[]) null, ((int[]) (param1[7]))[7], (dja) null);
           }
-          stackIn_3_0 = kn.a(param1, param0, false, param3, param2 - 110);
+          stackIn_3_0 = GetFighterBayReload.a(param1, param0, false, param3, param2 - 110);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ abstract class ija {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

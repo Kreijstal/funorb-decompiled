@@ -6,7 +6,7 @@ final class dr {
     private static String field_z;
 
     final static void a(int param0) {
-        awa.field_p.setLength(0);
+        SetShipAimLines.field_p.setLength(0);
         ow.field_b = 0;
         if (param0 != 26718) {
           field_a = 106;

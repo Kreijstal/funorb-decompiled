@@ -7,7 +7,7 @@ final class apb {
     int field_c;
 
     final static void a(byte param0) {
-        cf.b(32);
+        SetVariableLabelAction.b(32);
         int var1 = -97 % ((62 - param0) / 54);
     }
 
@@ -21,7 +21,7 @@ final class apb {
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          var5 = (mv) (tma.field_r.d(0));
+          var5 = (mv) (GetArmageddonLength.field_r.d(0));
           var1 = var5;
           if (var1 == null) {
             return false;
@@ -41,7 +41,7 @@ final class apb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1_ref), "apb.B(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref), "apb.B(" + param0 + ')');
         }
     }
 

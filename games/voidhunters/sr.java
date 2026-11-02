@@ -10,10 +10,10 @@ final class sr {
     boolean field_c;
     int field_b;
 
-    final void a(int param0, ds param1, byte param2) {
+    final void a(int param0, PacketBuffer param1, byte param2) {
         int var4_int = 0;
         int var5 = 0;
-        ds var6 = null;
+        PacketBuffer var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -22,8 +22,8 @@ final class sr {
         var5 = VoidHunters.field_G;
         try {
           if (param2 != 11) {
-            var6 = (ds) null;
-            this.a(-11, (ds) null, -118, true);
+            var6 = (PacketBuffer) null;
+            this.a(-11, (PacketBuffer) null, -118, true);
           }
           while (true) {
             var4_int = param1.e((byte) -127);
@@ -42,11 +42,11 @@ final class sr {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final void a(int param0, ds param1, int param2, boolean param3) {
+    private final void a(int param0, PacketBuffer param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -102,7 +102,7 @@ final class sr {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

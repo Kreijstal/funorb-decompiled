@@ -29,7 +29,7 @@ class bia extends tb {
           dma.a(var1_ref.field_k, var1_ref.field_d, var1_ref.field_i);
           dma.b(var1_ref.field_j, var1_ref.field_g, var1_ref.field_h, var1_ref.field_e);
           var1_ref.field_k = null;
-          ce.field_p.b(-10258, var1_ref);
+          GetPlayerRepairTime.field_p.b(-10258, var1_ref);
           return;
         }
         var1_refLifetime1 = (ajb) (bc.field_b.c((byte) -126));
@@ -39,7 +39,7 @@ class bia extends tb {
         dma.a(var1_refLifetime1.field_k, var1_refLifetime1.field_d, var1_refLifetime1.field_i);
         dma.b(var1_refLifetime1.field_j, var1_refLifetime1.field_g, var1_refLifetime1.field_h, var1_refLifetime1.field_e);
         var1_refLifetime1.field_k = null;
-        ce.field_p.b(-10258, var1_refLifetime1);
+        GetPlayerRepairTime.field_p.b(-10258, var1_refLifetime1);
     }
 
     final static qkb a(boolean param0) {

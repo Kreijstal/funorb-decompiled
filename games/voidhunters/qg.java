@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class qg {
-    qfa field_b;
+    OpenGlToolkit field_b;
     static soa field_a;
 
     public static void c(int param0) {
@@ -34,11 +34,11 @@ abstract class qg {
             stackIn_2_0 = 104;
             return stackIn_2_0;
           }
-          if (param0 == qcb.field_q) {
+          if (param0 == SetGrapplingHookMaxExtension8Force.field_q) {
             stackIn_14_0 = 5890;
             return stackIn_14_0;
           }
-          if (param0 == tma.field_q) {
+          if (param0 == GetArmageddonLength.field_q) {
             stackIn_6_0 = 34167;
             return stackIn_6_0;
           }
@@ -61,17 +61,17 @@ abstract class qg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
     abstract boolean b(int param0);
 
-    qg(qfa param0) {
+    qg(OpenGlToolkit param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

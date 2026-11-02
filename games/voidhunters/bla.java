@@ -25,23 +25,23 @@ final class bla extends eca {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_f.a(param0, param1) == cca.field_o) {
-            stackIn_2_0 = cca.field_o;
+          if (this.field_f.a(param0, param1) == SetArmageddonLength.field_o) {
+            stackIn_2_0 = SetArmageddonLength.field_o;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_g)) {
             var3 = psb.a(param0, param1 ^ 16384);
             if (!var3.a(4)) {
-              stackIn_8_0 = dsa.field_q;
+              stackIn_8_0 = SetFighterRepairTime.field_q;
               return stackIn_8_0;
             }
             this.field_g = param0;
             this.field_h = var3.b((byte) -20);
           }
           if (!this.field_h) {
-            stackIn_13_0 = cca.field_o;
+            stackIn_13_0 = SetArmageddonLength.field_o;
           } else {
-            stackIn_13_0 = lea.field_o;
+            stackIn_13_0 = GetShipPersistence.field_o;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,7 +54,7 @@ final class bla extends eca {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -68,11 +68,11 @@ final class bla extends eca {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_f.a(param0, 16384) == cca.field_o) {
+          if (this.field_f.a(param0, 16384) == SetArmageddonLength.field_o) {
             stackIn_3_0 = this.field_f.b(param0, -1);
             return stackIn_3_0;
           }
-          if (this.a(param0, 16384) == cca.field_o) {
+          if (this.a(param0, 16384) == SetArmageddonLength.field_o) {
             stackIn_7_0 = qh.field_N;
             return stackIn_7_0;
           }
@@ -91,7 +91,7 @@ final class bla extends eca {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class bla extends eca {
         try {
           this.field_f = new vqa(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

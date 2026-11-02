@@ -55,7 +55,7 @@ final class rq extends dqa implements ln, oo, jpb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class rq extends dqa implements ln, oo, jpb {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new sca(20, param1, param3 + 120, 25, param0, false, 120, 3, loa.field_o, 16777215, param2);
+          var6 = new sca(20, param1, param3 + 120, 25, param0, false, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param2);
           this.b(-18756, var6);
           if (param4 > -27) {
             var7 = (String) null;
@@ -95,7 +95,7 @@ final class rq extends dqa implements ln, oo, jpb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class rq extends dqa implements ln, oo, jpb {
             return;
           }
           if (param3 == this.field_v) {
-            to.e((byte) -77);
+            GetGrapplingHookRopeBreakLength.e((byte) -77);
             return;
           }
           if (this.field_B != param3) {
@@ -129,7 +129,7 @@ final class rq extends dqa implements ln, oo, jpb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -150,13 +150,13 @@ final class rq extends dqa implements ln, oo, jpb {
             return false;
           }
           var4 = var3.a((byte) 35);
-          if (cca.field_o == var4) {
+          if (SetArmageddonLength.field_o == var4) {
             return false;
           }
-          if (tg.field_p == var4) {
+          if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p == var4) {
             return false;
           }
-          if (mp.field_p != var4) {
+          if (SetTorpedoFireForce.field_p != var4) {
             return true;
           }
           return false;
@@ -170,7 +170,7 @@ final class rq extends dqa implements ln, oo, jpb {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class rq extends dqa implements ln, oo, jpb {
           super.a(param0, param1, param2, param3);
           this.field_B.field_x = this.e(-122);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rq.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rq.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class rq extends dqa implements ln, oo, jpb {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new sca(20, param4, param0 + 120, 25, param1, false, 120, 3, loa.field_o, 16777215, param3);
+          var8 = new sca(20, param4, param0 + 120, 25, param1, false, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param3);
           this.b(param2 - 18860, var8);
           var7 = new pla(((lca) ((Object) param1)).a(-782444220));
           this.b(-18756, var7);
@@ -236,7 +236,7 @@ final class rq extends dqa implements ln, oo, jpb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -250,13 +250,13 @@ final class rq extends dqa implements ln, oo, jpb {
         this.field_D = new tga("", (sba) null, 3);
         int var1 = 1;
         this.field_E = new jla("", (sba) null, var1 != 0);
-        this.field_B = new htb(so.field_d, (sba) null);
-        this.field_v = new htb(gsa.field_p, (sba) null);
+        this.field_B = new htb(SettingsChange.field_d, (sba) null);
+        this.field_v = new htb(SetTorpedoReload.field_p, (sba) null);
         this.field_F.field_p = gna.field_m;
-        this.field_z.field_p = lcb.field_s;
+        this.field_z.field_p = GetPointDefenceLaserProjectileInterceptDamage.field_s;
         this.field_y.field_p = dj.field_a;
         this.field_x.field_p = sha.field_x;
-        this.field_A.field_p = knb.field_p;
+        this.field_A.field_p = SetAngularForceDownshift.field_p;
         this.field_D.field_p = lq.field_j;
         this.field_E.field_p = jv.field_f;
         this.field_F.a(6614, new tib(this.field_F));
@@ -277,22 +277,22 @@ final class rq extends dqa implements ln, oo, jpb {
         kpb dupTemp$1 = new kpb(10000536);
         this.field_A.field_q = (wwa) ((Object) dupTemp$1);
         this.field_x.field_q = (wwa) ((Object) dupTemp$1);
-        String var2 = isa.a(vwa.field_o, new String[]{this.j((byte) 50), this.i((byte) -121)}, 109);
+        String var2 = SetReverbGain.a(GetLaserProjectiles.field_o, new String[]{this.j((byte) 50), this.i((byte) -121)}, 109);
         int var3 = 20;
-        var3 = var3 + this.a(this.field_z, var3, lbb.field_h, 170, (byte) -42);
+        var3 = var3 + this.a(this.field_z, var3, MissionState.field_h, 170, (byte) -42);
         var3 = var3 + (5 + this.a(this.field_y, var3, 170, qs.field_b, false, 20, ""));
-        var3 = var3 + this.a(this.field_x, var3, dpa.field_q, 170, (byte) -36);
+        var3 = var3 + this.a(this.field_x, var3, RequestNewestBlackboxRecording.field_q, 170, (byte) -36);
         var3 = var3 + (this.a(-41, mmb.field_e, 170, lg.field_d, var3, this.field_A) + 5);
-        var3 = var3 + (5 + this.a(-103, tj.field_r, 170, ffb.field_c, var3, this.field_F));
+        var3 = var3 + (5 + this.a(-103, Projectile.field_r, 170, ffb.field_c, var3, this.field_F));
         var3 = var3 + this.a(170, this.field_D, (byte) 104, jja.field_a, var3);
-        sca var4 = new sca(46, var3, -90 + this.field_h, 25, this.field_E, true, this.field_h - 120, 5, web.field_o, 11579568, shb.field_m);
+        sca var4 = new sca(46, var3, -90 + this.field_h, 25, this.field_E, true, this.field_h - 120, 5, SetTorpedoProjectileLife.field_o, 11579568, shb.field_m);
         this.b(-18756, var4);
         var3 = var3 + var4.field_f;
-        bob var5 = new bob(loa.field_o, 0, 0, 0, 0, 16777215, -1, 0, 0, loa.field_o.field_k, -1, 2147483647, true);
+        bob var5 = new bob(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 0, 0, SetShipToShipRamDamage.field_o.field_k, -1, 2147483647, true);
         this.field_w = new kja(var2, var5);
         this.field_w.field_p = "";
-        this.field_w.a(0, -1, pma.field_q);
-        this.field_w.a(1, -1, pma.field_q);
+        this.field_w.a(0, -1, SetBombletSprayProjectileDamage.field_q);
+        this.field_w.a(1, -1, SetBombletSprayProjectileDamage.field_q);
         this.field_w.field_l = (sba) (this);
         this.field_w.a(this.field_h - 90, var3, 46, (byte) -23);
         var3 = var3 + (15 + this.field_w.field_f);
@@ -376,7 +376,7 @@ final class rq extends dqa implements ln, oo, jpb {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new sca(20, param1, 120 + param2, 25, param0, param4, 120, 3, loa.field_o, 16777215, param3);
+          var10 = new sca(20, param1, 120 + param2, 25, param0, param4, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param3);
           this.b(-18756, var10);
           var9 = new gm(((lca) ((Object) param0)).a(-782444220), param6, 126, param1 + var10.field_f, param2 + 50, param5);
           var9.field_l = (sba) (this);
@@ -405,7 +405,7 @@ final class rq extends dqa implements ln, oo, jpb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -440,7 +440,7 @@ final class rq extends dqa implements ln, oo, jpb {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -454,17 +454,17 @@ final class rq extends dqa implements ln, oo, jpb {
         var6 = VoidHunters.field_G;
         try {
           if (param0 == ~param2) {
-            vba.a(12, "terms.ws");
+            SetReloadBarWidth.a(12, "terms.ws");
             return;
           }
           if (param2 == 1) {
-            vba.a(12, "privacy.ws");
+            SetReloadBarWidth.a(12, "privacy.ws");
             return;
           }
           if (param2 != 2) {
             return;
           }
-          vba.a(12, "conduct.ws");
+          SetReloadBarWidth.a(12, "conduct.ws");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -476,7 +476,7 @@ final class rq extends dqa implements ln, oo, jpb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -510,7 +510,7 @@ final class rq extends dqa implements ln, oo, jpb {
           var4 = param1;
           ((uf) ((Object) var3)).a(false, 0, var4);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

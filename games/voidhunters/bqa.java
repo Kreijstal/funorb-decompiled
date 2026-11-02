@@ -22,10 +22,10 @@ final class bqa {
         if (param0) {
           return false;
         }
-        if (fda.e((byte) 119)) {
+        if (GetPhasedEnergyBeamPulsetime.e((byte) 119)) {
           stackIn_7_0 = true;
         } else {
-          if (hcb.field_o <= 0) {
+          if (GetDebrisCarryOver.field_o <= 0) {
             return true;
           }
           stackIn_7_0 = false;

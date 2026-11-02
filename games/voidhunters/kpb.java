@@ -3,7 +3,7 @@
  */
 final class kpb extends io {
     static qkb field_q;
-    static jo[] field_s;
+    static PartitionZone[] field_s;
     static String field_r;
 
     public static void c(int param0) {
@@ -19,7 +19,7 @@ final class kpb extends io {
     }
 
     kpb(int param0) {
-        this(loa.field_o, param0);
+        this(SetShipToShipRamDamage.field_o, param0);
     }
 
     final String b(byte param0, shb param1) {
@@ -47,7 +47,7 @@ final class kpb extends io {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -57,6 +57,6 @@ final class kpb extends io {
 
     static {
         field_r = "Name";
-        field_s = new jo[256];
+        field_s = new PartitionZone[256];
     }
 }

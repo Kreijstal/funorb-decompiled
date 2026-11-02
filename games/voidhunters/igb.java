@@ -16,7 +16,7 @@ final class igb {
           if (param1 <= 111) {
             igb.a(-66);
           }
-          stackIn_3_0 = dk.a(-125, false, param0);
+          stackIn_3_0 = SetThrusterBoosterForce.a(-125, false, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -28,7 +28,7 @@ final class igb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class igb {
           if (r.field_l != param1) {
             for (var3_int = 0; var3_int < 256; var3_int++) {
               var4 = (int)(255.0 * Math.pow((double)var3_int / 255.0, param1));
-              stackIn_7_0 = pp.field_o;
+              stackIn_7_0 = GetBloomCoefficientPercentage.field_o;
               stackIn_7_1 = var3_int;
               if (255 < var4) {
                 stackIn_8_2 = 255;
@@ -73,7 +73,7 @@ final class igb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var3), "igb.A(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "igb.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class igb {
           param0.field_E = 0;
           param0.field_G = 0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "igb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "igb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -19,7 +19,7 @@ final class rab extends kva implements gf {
         try {
           super.a(param0, param1 ^ 0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rab.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rab.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -40,10 +40,10 @@ final class rab extends kva implements gf {
           this.field_j = param2;
           this.field_h.a((ura) (this), -116);
           jaggl.OpenGL.glPixelStorei(3317, 1);
-          jaggl.OpenGL.glTexImage3Dub(this.field_e, 0, this.e((byte) -31), this.field_j, this.field_l, this.field_k, 0, una.a(-29328, this.field_f), 5121, param5, 0);
+          jaggl.OpenGL.glTexImage3Dub(this.field_e, 0, this.e((byte) -31), this.field_j, this.field_l, this.field_k, 0, MissionControl.a(-29328, this.field_f), 5121, param5, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "rab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

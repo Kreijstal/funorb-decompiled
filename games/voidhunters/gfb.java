@@ -35,7 +35,7 @@ final class gfb implements dja {
             stackIn_14_0 = (byte[]) (param1);
             return stackIn_14_0;
           }
-          stackIn_12_0 = nia.a(param1, (byte) -100);
+          stackIn_12_0 = SetPointDefenceLaserProjectileDamage.a(param1, (byte) -100);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,21 +47,21 @@ final class gfb implements dja {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public final tv a(byte param0) {
         int var2 = 37 % ((param0 + 64) / 50);
-        return (tv) ((Object) new it());
+        return (tv) ((Object) new EscapePod());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a((byte) -124);
-          return (tv[]) ((Object) new it[param1]);
+          return (tv[]) ((Object) new EscapePod[param1]);
         }
-        return (tv[]) ((Object) new it[param1]);
+        return (tv[]) ((Object) new EscapePod[param1]);
     }
 
     final static String a(int param0, String param1) {
@@ -73,7 +73,7 @@ final class gfb implements dja {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = ppa.a(nfa.field_d, go.field_p, false);
+          var2_int = SetMinimapHeight.a(nfa.field_d, SetAngularVelocitySustain.field_p, false);
           if (param0 == var2_int) {
             param1 = "<img=0>" + param1;
           }
@@ -92,7 +92,7 @@ final class gfb implements dja {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

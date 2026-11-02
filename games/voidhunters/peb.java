@@ -14,7 +14,7 @@ final class peb extends le {
           var4 = this.field_f.a((byte) 127, param0);
           var3 = var4;
           if (this.field_f.field_e) {
-            cua.a(var4, 0, hob.field_d, sj.field_p[param0]);
+            cua.a(var4, 0, hob.field_d, SetSalvoUsesAllEnergy.field_p[param0]);
             return var4;
           }
           return var4;
@@ -24,7 +24,7 @@ final class peb extends le {
         if (!this.field_f.field_e) {
           return var4Lifetime1;
         }
-        cua.a(var4Lifetime1, 0, hob.field_d, sj.field_p[param0]);
+        cua.a(var4Lifetime1, 0, hob.field_d, SetSalvoUsesAllEnergy.field_p[param0]);
         return var4Lifetime1;
     }
 

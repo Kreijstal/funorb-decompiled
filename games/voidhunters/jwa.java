@@ -48,7 +48,7 @@ final class jwa extends le {
         this.b(param0, -121);
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -74,7 +74,7 @@ final class jwa extends le {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -107,14 +107,14 @@ final class jwa extends le {
           var2_int = 0;
           var3 = param1.length();
           while (var2_int < var3) {
-            if (fg.a(param1.charAt(var2_int), 120)) {
+            if (MouseWheelInput.a(param1.charAt(var2_int), 120)) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var3 > var2_int) {
-            if (fg.a(param1.charAt(var3 - 1), 116)) {
+            if (MouseWheelInput.a(param1.charAt(var3 - 1), 116)) {
               var3--;
               continue;
             }
@@ -131,8 +131,8 @@ final class jwa extends le {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
-            if (qnb.a((byte) -128, (char) var7)) {
-              var8 = rr.a((char) var7, 102);
+            if (GetAngularVelocitySustainMax.a((byte) -128, (char) var7)) {
+              var8 = GetThrusterBoosterForce.a((char) var7, 102);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }
@@ -152,7 +152,7 @@ final class jwa extends le {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 

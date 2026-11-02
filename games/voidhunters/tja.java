@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tja implements ntb {
+class tja implements DiffableState {
     static String field_b;
     bha[] field_c;
     static soa field_a;
@@ -77,7 +77,7 @@ class tja implements ntb {
               stackIn_12_1 = -110;
               stackIn_13_2 = (var9 != null);
               if (vq.a(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
-                stb.a(2, 1, var3, var9);
+                GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var9);
               }
             }
             return;
@@ -93,11 +93,11 @@ class tja implements ntb {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static boolean a(ntb[] param0, int param1, ntb[] param2, boolean param3, int param4) {
+    final static boolean a(DiffableState[] param0, int param1, DiffableState[] param2, boolean param3, int param4) {
         int var8 = 0;
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
@@ -113,7 +113,7 @@ class tja implements ntb {
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
-        ntb[] var10 = null;
+        DiffableState[] var10 = null;
         var9 = VoidHunters.field_G;
         try {
           if (param2 == null) {
@@ -133,25 +133,25 @@ class tja implements ntb {
           }
           var7 = 0;
           if (param4 != 5547) {
-            var10 = (ntb[]) null;
-            tja.a((ntb[]) null, 96, (ntb[]) null, true, 70);
+            var10 = (DiffableState[]) null;
+            tja.a((DiffableState[]) null, 96, (DiffableState[]) null, true, 70);
           }
           for (var8 = 0; var8 < var5_int; var8++) {
             if (param3 &&
               null != param2[var8] &&
               param0[var8] != null &&
               param2[var8].getClass() != param0[var8].getClass()) {
-              te.a(param4 + 24239, param2[var8], param0[var8]);
+              GetNebulaProximityFadeDownshift.a(param4 + 24239, param2[var8], param0[var8]);
             } else {
               if (param2[var8] == null &&
                 param0[var8] != null ||
                 null != param2[var8] &&
                 param0[var8] == null) {
-                te.a(29786, param2[var8], param0[var8]);
+                GetNebulaProximityFadeDownshift.a(29786, param2[var8], param0[var8]);
               }
               if (null != param2[var8] &&
                 null != param0[var8]) {
-                param2[var8].a(param0[var8], param4 ^ -5605);
+                param2[var8].reportDifferences(param0[var8], param4 ^ -5605);
                 if (param2[var8].a((byte) -78, param0[var8])) {
                   var7 = 1;
                   System.out.println("Element " + var8 + " has changed");
@@ -177,11 +177,11 @@ class tja implements ntb {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    public void a(tv param0, int param1) {
+    public void reportDifferences(tv other, int obfuscationGuard) {
         tja var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -190,18 +190,18 @@ class tja implements ntb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          if (param1 >= -19) {
+          if (obfuscationGuard >= -19) {
             field_a = (soa) null;
           }
-          var3 = (tja) (param0);
+          var3 = (tja) (other);
           var4 = 0;
           tja.a(var3.field_c, 1, this.field_c, false, 5547);
-          if (dn.a(var3.field_c, false, 1, this.field_c, 126)) {
+          if (SetCountermeasureLauncherAimspeed.a(var3.field_c, false, 1, this.field_c, 126)) {
             var4 = 1;
-            iva.a(-6940, "CarouselPlayerInfo[] players has changed. ");
+            GetSniperCannonAimarc.a(-6940, "CarouselPlayerInfo[] players has changed. ");
           }
           if (var4 != 0) {
-            iva.a(-6940, "This instance of CarouselSlot has changed");
+            GetSniperCannonAimarc.a(-6940, "This instance of CarouselSlot has changed");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -209,12 +209,12 @@ class tja implements ntb {
           var3_ref = decompiledCaughtException;
           stackIn_11_0 = var3_ref;
           stackIn_11_1 = new StringBuilder().append("tja.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -230,7 +230,7 @@ class tja implements ntb {
         try {
           var3_int = -83 % ((22 - param0) / 59);
           var4 = (tja) (param1);
-          stackIn_1_0 = dn.a(var4.field_c, false, 1, this.field_c, -93);
+          stackIn_1_0 = SetCountermeasureLauncherAimspeed.a(var4.field_c, false, 1, this.field_c, -93);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -242,7 +242,7 @@ class tja implements ntb {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ class tja implements ntb {
             this.a(-32);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "tja.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tja.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -265,7 +265,7 @@ class tja implements ntb {
         RuntimeException var3_ref = null;
         try {
           var3 = (tja) (param1);
-          var3.field_c = (bha[]) (sqb.a(var3.field_c, this.field_c, 1, uqa.field_q, false));
+          var3.field_c = (bha[]) (sqb.a(var3.field_c, this.field_c, 1, GetLoadingMissions.field_q, false));
           if (param0 < 54) {
             this.field_c = (bha[]) null;
           }
@@ -280,7 +280,7 @@ class tja implements ntb {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -336,7 +336,7 @@ class tja implements ntb {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -346,9 +346,9 @@ class tja implements ntb {
         if (param1 <= 93) {
           field_a = (soa) null;
         }
-        this.field_c = (bha[]) (uqa.field_q.a(11995, param0));
+        this.field_c = (bha[]) (GetLoadingMissions.field_q.a(11995, param0));
         for (var3 = 0; var3 < param0; var3++) {
-          this.field_c[var3] = (bha) (uqa.field_q.a((byte) 15));
+          this.field_c[var3] = (bha) (GetLoadingMissions.field_q.a((byte) 15));
         }
     }
 
@@ -357,9 +357,9 @@ class tja implements ntb {
           return;
         }
         try {
-          this.field_c = (bha[]) (kcb.a(hab.field_h, uqa.field_q, param0, 1, -80, this.field_c));
+          this.field_c = (bha[]) (SetAutoDetail.a(hab.field_h, GetLoadingMissions.field_q, param0, 1, -80, this.field_c));
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "tja.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tja.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

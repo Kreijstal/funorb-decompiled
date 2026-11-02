@@ -11,7 +11,7 @@ final class wta extends sc implements en, aca {
             this.field_c = (vq) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "wta.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wta.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class wta extends sc implements en, aca {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -66,18 +66,18 @@ final class wta extends sc implements en, aca {
           var5 = vga.a(true);
           if (var4 >= 1890 &&
             -3 + var5 >= var4) {
-            if (iia.a(var3, var2_int, true, var4)) {
+            if (BodyInZoneCondition.a(var3, var2_int, true, var4)) {
               return null;
             }
           } else {
-            stackIn_7_0 = isa.a(fob.field_d, new String[]{"1890", Integer.toString(var5 - 3)}, 79);
+            stackIn_7_0 = SetReverbGain.a(fob.field_d, new String[]{"1890", Integer.toString(var5 - 3)}, 79);
             return stackIn_7_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return apa.field_o;
+        return GetUseRectFill.field_o;
     }
 
     final qrb b(int param0) {
@@ -99,23 +99,23 @@ final class wta extends sc implements en, aca {
           var4 = this.field_c.f(3476);
           var5 = vga.a(true);
           if (var4 < 1890) {
-            stackIn_5_0 = cca.field_o;
+            stackIn_5_0 = SetArmageddonLength.field_o;
             return stackIn_5_0;
           }
           if (var4 > -3 + var5) {
-            stackIn_9_0 = cca.field_o;
+            stackIn_9_0 = SetArmageddonLength.field_o;
             return stackIn_9_0;
           }
-          if (!iia.a(var3, var2_int, true, var4)) {
-            stackIn_12_0 = cca.field_o;
+          if (!BodyInZoneCondition.a(var3, var2_int, true, var4)) {
+            stackIn_12_0 = SetArmageddonLength.field_o;
             return stackIn_12_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return cca.field_o;
+          return SetArmageddonLength.field_o;
         }
-        return lea.field_o;
+        return GetShipPersistence.field_o;
     }
 
     public final void a(int param0, uf param1) {
@@ -124,7 +124,7 @@ final class wta extends sc implements en, aca {
             this.d(116);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "wta.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wta.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

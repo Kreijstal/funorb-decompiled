@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iea extends ksa {
+final class iea extends IntrusiveNode {
     static int field_d;
 
     private iea() throws Throwable {
@@ -10,7 +10,7 @@ final class iea extends ksa {
 
     final static boolean a(int param0, int param1, byte param2) {
         int var3 = 50 % ((73 - param2) / 32);
-        return plb.a(param0, false, param1) & eta.a(param1, -1104, param0);
+        return GetPhasedEnergyBeamAimarc.a(param0, false, param1) & eta.a(param1, -1104, param0);
     }
 
     static {

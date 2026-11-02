@@ -5,7 +5,7 @@ final class aba {
     static dja field_b;
     static aw field_a;
 
-    final static void a(lbb param0, wm[] param1, lta param2, int param3, byte param4, int param5, rsb param6) {
+    final static void a(MissionState param0, MissionCondition[] param1, lta param2, int param3, byte param4, int param5, GameSnapshot param6) {
         int var8 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -19,69 +19,69 @@ final class aba {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        wm var9 = null;
+        MissionCondition var9 = null;
         int var11 = 0;
-        anb var12 = null;
+        ShipBody var12 = null;
         int var13 = 0;
-        iia var14 = null;
-        vp var15 = null;
+        BodyInZoneCondition var14 = null;
+        TeamShipComponentCondition var15 = null;
         Object var16 = null;
-        anb var17 = null;
-        cq var18 = null;
-        anb var19 = null;
-        anb var20 = null;
-        cc var21 = null;
+        ShipBody var17 = null;
+        MapZone var18 = null;
+        ShipBody var19 = null;
+        ShipBody var20 = null;
+        BodyCondition var21 = null;
         var16 = null;
         var13 = VoidHunters.field_G;
         try {
           var7_int = 43 / ((param4 + 6) / 39);
           for (var8 = 0; param1.length > var8; var8++) {
             var9 = param1[var8];
-            if (!(var9 instanceof iia)) {
-              if (var9 instanceof cc) {
-                var21 = (cc) (var9);
+            if (!(var9 instanceof BodyInZoneCondition)) {
+              if (var9 instanceof BodyCondition) {
+                var21 = (BodyCondition) (var9);
                 var11 = var21.a((byte) -123, 0);
-                var20 = param6.field_g.d((byte) -27, var11);
+                var20 = param6.world.d((byte) -27, var11);
                 var12 = var20;
                 if (var20 != null) {
                   if (param3 == param5) {
-                    uba.a((byte) -100, 0, var20);
+                    SetRadialMenuRadius.a((byte) -100, 0, var20);
                   } else {
-                    uba.a((byte) -100, 1, var20);
+                    SetRadialMenuRadius.a((byte) -100, 1, var20);
                   }
                 }
               } else {
-                if (var9 instanceof vp) {
-                  var15 = (vp) (var9);
+                if (var9 instanceof TeamShipComponentCondition) {
+                  var15 = (TeamShipComponentCondition) (var9);
                   var11 = var15.a((byte) -106, 1);
-                  var19 = param6.field_g.g((byte) 118, var11);
+                  var19 = param6.world.g((byte) 118, var11);
                   var12 = var19;
                   if (var19 != null) {
                     if (param3 != param5) {
-                      uba.a((byte) -100, 1, var19);
+                      SetRadialMenuRadius.a((byte) -100, 1, var19);
                     } else {
-                      uba.a((byte) -100, 3, var19);
+                      SetRadialMenuRadius.a((byte) -100, 3, var19);
                     }
                   }
                 }
               }
             } else {
-              var14 = (iia) (var9);
+              var14 = (BodyInZoneCondition) (var9);
               if (param3 == param5) {
                 var11 = var14.a((byte) -122, 0);
-                var17 = param6.field_g.d((byte) -27, var11);
+                var17 = param6.world.d((byte) -27, var11);
                 if (var17 != null) {
-                  uba.a((byte) -100, 2, var17);
+                  SetRadialMenuRadius.a((byte) -100, 2, var17);
                 }
               }
               var11 = var14.a((byte) -124, 1);
-              var18 = param6.field_g.e((byte) -79, var11);
+              var18 = param6.world.e((byte) -79, var11);
               if (var18 != null) {
-                if (param0.e(8) == 3) {
+                if (param0.getMissionPhase(8) == 3) {
                   var18.a(32, qpb.a(false, param3, 13894143), param2);
                 } else {
                   if (param5 == param3) {
-                    uba.a((byte) -100, 2, var18);
+                    SetRadialMenuRadius.a((byte) -100, 2, var18);
                     var18.a(32, qpb.a(false, param3, 13894143), param2);
                   } else {
                     var18.a(32, qpb.a(false, param3, 13894143), param2);
@@ -119,7 +119,7 @@ final class aba {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -133,8 +133,8 @@ final class aba {
           field_b = null;
           return;
         }
-        rsb var2 = (rsb) null;
-        aba.a((lbb) null, (wm[]) null, (lta) null, -51, (byte) -22, -26, (rsb) null);
+        GameSnapshot var2 = (GameSnapshot) null;
+        aba.a((MissionState) null, (MissionCondition[]) null, (lta) null, -51, (byte) -22, -26, (GameSnapshot) null);
         field_b = null;
     }
 
@@ -166,7 +166,7 @@ final class aba {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -6,14 +6,14 @@ final class jdb implements dja {
 
     public final tv a(byte param0) {
         int var2 = -11 / ((-64 - param0) / 50);
-        return (tv) ((Object) new cf());
+        return (tv) ((Object) new SetVariableLabelAction());
     }
 
     public static void a(boolean param0) {
         field_a = null;
         if (param0) {
-          ds var2 = (ds) null;
-          jdb.a(-105, (byte) 0, 18, (ds) null, 3);
+          PacketBuffer var2 = (PacketBuffer) null;
+          jdb.a(-105, (byte) 0, 18, (PacketBuffer) null, 3);
         }
     }
 
@@ -40,7 +40,7 @@ final class jdb implements dja {
         int var24 = 0;
         int var25 = 0;
         int var28 = 0;
-        ds var29 = null;
+        PacketBuffer var29 = null;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -61,8 +61,8 @@ final class jdb implements dja {
             throw new IllegalArgumentException("");
           }
           if (param2 != 29175) {
-            var29 = (ds) null;
-            jdb.a(-98, (byte) 61, -25, (ds) null, -48);
+            var29 = (PacketBuffer) null;
+            jdb.a(-98, (byte) 61, -25, (PacketBuffer) null, -48);
           }
           var8_int = 0;
           stackIn_14_0 = (param7 >= param6) ? param6 : param7;
@@ -104,7 +104,7 @@ final class jdb implements dja {
                 var22 = var22 + (var19 & 255);
                 incrementValue$9 = var15;
                 var15++;
-                var13[incrementValue$9] = knb.a(dla.a(var22 >> 2, 255), knb.a(dla.a(var21, 1020) << 6, knb.a(dla.a(16711680, var20 << 14), dla.a(-16777216, var23 << 22))));
+                var13[incrementValue$9] = SetAngularForceDownshift.a(dla.a(var22 >> 2, 255), SetAngularForceDownshift.a(dla.a(var21, 1020) << 6, SetAngularForceDownshift.a(dla.a(16711680, var20 << 14), dla.a(-16777216, var23 << 22))));
               }
               var24 = var24 + param7;
               var25 = var25 + param7;
@@ -128,11 +128,11 @@ final class jdb implements dja {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    final static void a(int param0, byte param1, int param2, ds param3, int param4) {
+    final static void a(int param0, byte param1, int param2, PacketBuffer param3, int param4) {
         try {
           if (param1 != -48) {
             field_a = (String) null;
@@ -143,7 +143,7 @@ final class jdb implements dja {
           param3.a(param4, true);
           param3.c(0, param0);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "jdb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jdb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class jdb implements dja {
         if (param0 != 11995) {
           return (tv[]) null;
         }
-        return (tv[]) ((Object) new cf[param1]);
+        return (tv[]) ((Object) new SetVariableLabelAction[param1]);
     }
 
     static {

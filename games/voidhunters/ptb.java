@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ptb extends dmb implements ntb {
-    private int field_h;
+final class ptb extends MapClearanceArea implements DiffableState {
+    private int x;
     static String field_f;
-    private int field_d;
-    private int field_e;
-    private int field_g;
+    private int height;
+    private int width;
+    private int y;
 
     public final boolean a(byte param0, tv param1) {
         int var3_int = 0;
@@ -20,7 +20,7 @@ final class ptb extends dmb implements ntb {
         try {
           var3_int = 122 / ((param0 - 22) / 59);
           var4 = (ptb) (param1);
-          stackIn_8_0 = (super.a((byte) 113, param1)) || (this.field_h != var4.field_h) || (this.field_g != var4.field_g) || (this.field_e != var4.field_e) || (this.field_d != var4.field_d);
+          stackIn_8_0 = (super.a((byte) 113, param1)) || (this.x != var4.x) || (this.y != var4.y) || (this.width != var4.width) || (this.height != var4.height);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -32,19 +32,19 @@ final class ptb extends dmb implements ntb {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    final void a(pe param0, boolean param1) {
+    final void a(World param0, boolean param1) {
         try {
           if (!param1) {
             tv var4 = (tv) null;
             this.a((byte) -16, (tv) null);
           }
-          param0.a(this.field_h + this.field_e / 2, this.field_g + this.field_d / 2, this.field_g, false, -124, this.field_h);
+          param0.a(this.x + this.width / 2, this.y + this.height / 2, this.y, false, -124, this.x);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ptb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ptb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class ptb extends dmb implements ntb {
             return stackIn_2_0;
           }
           if (!param1) {
-            stackIn_7_0 = boa.field_a.b(param2);
+            stackIn_7_0 = ShipBlueprint.field_a.b(param2);
             return stackIn_7_0;
           }
           stackIn_5_0 = ssa.field_a.b(param2);
@@ -78,22 +78,22 @@ final class ptb extends dmb implements ntb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     public final void b(faa param0, int param1) {
         super.b(param0, -124);
-        param0.a(-632, this.field_h, 32);
-        param0.a(-632, this.field_g, 32);
+        param0.a(-632, this.x, 32);
+        param0.a(-632, this.y, 32);
         if (param1 > -109) {
           return;
         }
         try {
-          param0.a(-632, this.field_e, 32);
-          param0.a(-632, this.field_d, 32);
+          param0.a(-632, this.width, 32);
+          param0.a(-632, this.height, 32);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ptb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ptb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -107,12 +107,12 @@ final class ptb extends dmb implements ntb {
     public final void a(faa param0, boolean param1) {
         try {
           super.a(param0, param1);
-          this.field_h = param0.i(0, 32);
-          this.field_g = param0.i(0, 32);
-          this.field_e = param0.i(0, 32);
-          this.field_d = param0.i(0, 32);
+          this.x = param0.i(0, 32);
+          this.y = param0.i(0, 32);
+          this.width = param0.i(0, 32);
+          this.height = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ptb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ptb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -126,19 +126,19 @@ final class ptb extends dmb implements ntb {
           if (param0 <= 54) {
             field_f = (String) null;
           }
-          var6.field_d = this.field_d;
-          var6.field_h = this.field_h;
-          var6.field_e = this.field_e;
-          var6.field_g = this.field_g;
+          var6.height = this.height;
+          var6.x = this.x;
+          var6.width = this.width;
+          var6.y = this.y;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ptb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ptb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     ptb() {
     }
 
-    public final void a(tv param0, int param1) {
+    public final void reportDifferences(tv other, int obfuscationGuard) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -147,52 +147,52 @@ final class ptb extends dmb implements ntb {
         int var4 = 0;
         ptb var5 = null;
         try {
-          super.a(param0, -57);
-          var5 = (ptb) (param0);
+          super.reportDifferences(other, -57);
+          var5 = (ptb) (other);
           var4 = 0;
-          if (this.field_h != var5.field_h) {
+          if (this.x != var5.x) {
             var4 = 1;
-            System.out.println("int x has changed. before=" + var5.field_h + ", now=" + this.field_h);
+            System.out.println("int x has changed. before=" + var5.x + ", now=" + this.x);
           }
-          if (this.field_g != var5.field_g) {
+          if (this.y != var5.y) {
             var4 = 1;
-            System.out.println("int y has changed. before=" + var5.field_g + ", now=" + this.field_g);
+            System.out.println("int y has changed. before=" + var5.y + ", now=" + this.y);
           }
-          if (this.field_e != var5.field_e) {
-            System.out.println("int width has changed. before=" + var5.field_e + ", now=" + this.field_e);
+          if (this.width != var5.width) {
+            System.out.println("int width has changed. before=" + var5.width + ", now=" + this.width);
             var4 = 1;
           }
-          if (var5.field_d != this.field_d) {
-            System.out.println("int height has changed. before=" + var5.field_d + ", now=" + this.field_d);
+          if (var5.height != this.height) {
+            System.out.println("int height has changed. before=" + var5.height + ", now=" + this.height);
             var4 = 1;
           }
           if (var4 != 0) {
             System.out.println("This instance of MapClearanceRectangle has changed");
           }
-          if (param1 < -19) {
+          if (obfuscationGuard < -19) {
             return;
           }
-          this.field_e = 3;
+          this.width = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_17_0 = var3;
           stackIn_17_1 = new StringBuilder().append("ptb.F(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     ptb(int param0, int param1, int param2, int param3) {
-        this.field_h = param0;
-        this.field_e = param2;
-        this.field_d = param3;
-        this.field_g = param1;
+        this.x = param0;
+        this.width = param2;
+        this.height = param3;
+        this.y = param1;
     }
 
     static {
@@ -215,7 +215,7 @@ final class ptb extends dmb implements ntb {
             return stackIn_2_0;
           }
           if (!param1) {
-            stackIn_7_0 = boa.field_a.b(param2);
+            stackIn_7_0 = ShipBlueprint.field_a.b(param2);
             return stackIn_7_0;
           }
           stackIn_5_0 = ssa.field_a.b(param2);
@@ -230,7 +230,7 @@ final class ptb extends dmb implements ntb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 }

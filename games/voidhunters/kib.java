@@ -16,22 +16,22 @@ final class kib extends uj {
         if (param0 != -25131) {
           return 46;
         }
-        return oq.field_y;
+        return Particle.field_y;
     }
 
     final int d(byte param0) {
         if (param0 != 64) {
           return 5;
         }
-        return oq.field_e;
+        return Particle.field_e;
     }
 
     final int a(int param0) {
         if (param0 != -1) {
           this.b((byte) -66);
-          return rrb.field_a;
+          return GameKeyHandler.field_a;
         }
-        return rrb.field_a;
+        return GameKeyHandler.field_a;
     }
 
     final boolean c(byte param0) {

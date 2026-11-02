@@ -25,9 +25,9 @@ final class vdb extends uj {
     final int a(int param0) {
         if (param0 != -1) {
           field_d = 30;
-          return oqa.field_p;
+          return SetPedrosRepairMode.field_p;
         }
-        return oqa.field_p;
+        return SetPedrosRepairMode.field_p;
     }
 
     final int d(byte param0) {
@@ -66,7 +66,7 @@ final class vdb extends uj {
             }
             var1_int = 1;
           }
-          ei.field_c.a(rkb.a(qs.field_a, param0 ^ -29724, oq.field_H), 5620, rkb.a(uia.field_b, 3841, kc.field_b));
+          ei.field_c.a(SetBuildViewAutozoomEndOnAction.a(qs.field_a, param0 ^ -29724, Particle.field_H), 5620, SetBuildViewAutozoomEndOnAction.a(uia.field_b, 3841, kc.field_b));
           if (ei.field_c.e((byte) -126)) {
             var1_int = 1;
           }
@@ -75,7 +75,7 @@ final class vdb extends uj {
             0 <= ei.field_c.field_j) {
             var2 = kc.field_e[ei.field_c.field_j];
             if (var2 == 2) {
-              ek.b(false);
+              SetMissionTerrainSpaceProbability.b(false);
             }
           }
           stackIn_15_0 = var2;
@@ -83,7 +83,7 @@ final class vdb extends uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1), "vdb.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "vdb.C(" + param0 + ')');
         }
     }
 

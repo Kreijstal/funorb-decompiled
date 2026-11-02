@@ -25,7 +25,7 @@ final class jv {
         }
         rn var5 = new rn();
         if (var4 != null) {
-          var5.a(new ds(var4), param0 + 8524);
+          var5.a(new PacketBuffer(var4), param0 + 8524);
           if (32768 <= param1) {
             var5.a(0);
             this.field_c.a(var5, (long)param1, (byte) -117);
@@ -104,7 +104,7 @@ final class jv {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

@@ -5,7 +5,7 @@ final class ipb {
     int field_a;
     private tsa[] field_b;
 
-    ipb(ij param0) {
+    ipb(IntrusiveDeque param0) {
         int incrementValue$2 = 0;
         int var2_int = 0;
         tsa var3 = null;
@@ -37,7 +37,7 @@ final class ipb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

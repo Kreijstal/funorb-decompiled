@@ -23,9 +23,9 @@ final class ifb extends mfb {
         if (param0 > -115) {
           return;
         }
-        if (ov.field_o != null) {
-          ov.field_o.b(1);
-          ov.field_o = null;
+        if (SetShipSpawnInvulnerabilityTime.field_o != null) {
+          SetShipSpawnInvulnerabilityTime.field_o.b(1);
+          SetShipSpawnInvulnerabilityTime.field_o = null;
         }
     }
 
@@ -48,7 +48,7 @@ final class ifb extends mfb {
         if (param0 != 0) {
           return -71;
         }
-        return df.field_p;
+        return SetThrusterBindingMoveAndTurnHasOppositeMove.field_p;
     }
 
     final int b(int param0) {

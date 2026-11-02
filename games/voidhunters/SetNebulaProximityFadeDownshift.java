@@ -1,0 +1,105 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
+    static boolean field_o;
+    static int field_p;
+
+    final static void a(int param0, boolean param1, boolean param2) {
+        SetLag.a(param2, 62, 71, 64, GetSniperCannonProjectileOndamageParticles.field_o, 66, w.field_v, 2000, 70, 65, 69, 72, GetPhasedEnergyBeamReload.field_p, 68, (byte) 91);
+        dra.a((byte) 125, 3);
+        if (param1) {
+          lw.field_f = true;
+          OpenGlToolkit.a(62, true);
+          if (param0 < 68) {
+            field_p = 55;
+            return;
+          }
+          return;
+        }
+        OpenGlToolkit.a(62, true);
+        if (param0 >= 68) {
+          return;
+        }
+        field_p = 55;
+    }
+
+    final static void a(java.applet.Applet param0, String param1, int param2) {
+        try {
+          String var6 = null;
+          String var5 = null;
+          String var4 = null;
+          String var7 = null;
+          String var5Lifetime1;
+          String var5Lifetime2;
+          String var5Lifetime3;
+          String var5Lifetime4;
+          String var5Lifetime5;
+          String var5Lifetime6;
+          try {
+            nga.field_e = param1;
+            try {
+              var6 = param0.getParameter("cookieprefix");
+              var5 = var6;
+              var5Lifetime1 = var6;
+              var4 = param0.getParameter("cookiehost");
+              var5Lifetime2 = var4;
+              var5Lifetime3 = var4;
+              var7 = var6 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
+              var5Lifetime4 = var7;
+              var5Lifetime5 = var7;
+              if (param2 != ~param1.length()) {
+                var5Lifetime6 = var7 + "; Expires=" + SetMassDriverAimarc.a((byte) -88, 94608000000L + wt.a(false)) + "; Max-Age=" + 94608000L;
+              } else {
+                var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              }
+              ia.a((byte) -126, param0, "document.cookie=\"" + var5Lifetime6 + "\"");
+            } catch (Throwable throwable) {
+            }
+            hg.a(-38, param0);
+          } catch (RuntimeException runtimeException) {
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pcb.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    SetNebulaProximityFadeDownshift(String param0, Class[] param1, String param2) {
+        super(param0, param1, param2);
+    }
+
+    final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
+        RuntimeException var3 = null;
+        ConsoleValue stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          SetMachineGunEnergyUsed.a(0, 62, arguments[0].a(22));
+          if (obfuscationGuard > -119) {
+            SetNebulaProximityFadeDownshift.a(57, true, true);
+          }
+          stackIn_3_0 = new ConsoleValue("void");
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("pcb.A(");
+          if (arguments == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    static {
+        field_o = false;
+    }
+}

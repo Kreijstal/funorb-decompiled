@@ -59,15 +59,15 @@ final class grb extends le {
             var11_ref_int__ = var16;
             var12 = 0;
             for (var13 = -this.field_m; var13 <= this.field_m; var13++) {
-              var12 = var12 + var10_ref_int__[gbb.field_q & var13];
+              var12 = var12 + var10_ref_int__[SetMassDriverEnergyUsed.field_q & var13];
             }
             var15 = 0;
             var13Lifetime1 = var15;
             while (hob.field_d > var15) {
               var11_ref_int__[var15] = var12 * var7 >> 16;
-              var12 = var12 - var10_ref_int__[gbb.field_q & var15 - this.field_m];
+              var12 = var12 - var10_ref_int__[SetMassDriverEnergyUsed.field_q & var15 - this.field_m];
               var15++;
-              var12 = var12 + var10_ref_int__[this.field_m + var15 & gbb.field_q];
+              var12 = var12 + var10_ref_int__[this.field_m + var15 & SetMassDriverEnergyUsed.field_q];
             }
             var8[-param0 + (var9 + this.field_k)] = var18;
           }
@@ -88,7 +88,7 @@ final class grb extends le {
         this.field_k = 1;
     }
 
-    final void a(int param0, int param1, ds param2) {
+    final void a(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_10_1 = false;
@@ -126,7 +126,7 @@ final class grb extends le {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class grb extends le {
             var49 = var46[1];
             var47 = var46[2];
             for (var18_int = -this.field_m; var18_int <= this.field_m; var18_int++) {
-              var19_int = gbb.field_q & var18_int;
+              var19_int = SetMassDriverEnergyUsed.field_q & var18_int;
               var14 = var14 + var47[var19_int];
               var12 = var12 + var48[var19_int];
               var13 = var13 + var49[var19_int];
@@ -199,12 +199,12 @@ final class grb extends le {
               var18[var21] = var7 * var12 >> 16;
               var19[var21] = var7 * var13 >> 16;
               var20[var21] = var7 * var14 >> 16;
-              var22 = -this.field_m + var21 & gbb.field_q;
+              var22 = -this.field_m + var21 & SetMassDriverEnergyUsed.field_q;
               var21++;
               var12 = var12 - var48[var22];
               var13 = var13 - var49[var22];
               var14 = var14 - var47[var22];
-              var22Lifetime1 = gbb.field_q & this.field_m + var21;
+              var22Lifetime1 = SetMassDriverEnergyUsed.field_q & this.field_m + var21;
               var14 = var14 + var47[var22Lifetime1];
               var13 = var13 + var49[var22Lifetime1];
               var12 = var12 + var48[var22Lifetime1];

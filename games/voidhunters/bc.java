@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bc {
-    static ij field_b;
+    static IntrusiveDeque field_b;
     private phb[] field_c;
     static String field_a;
 
@@ -23,12 +23,12 @@ final class bc {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_b = new ij();
+        field_b = new IntrusiveDeque();
         field_a = "Plasma ball";
     }
 }

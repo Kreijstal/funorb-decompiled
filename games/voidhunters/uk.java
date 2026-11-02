@@ -6,7 +6,7 @@ final class uk implements dja {
 
     public final tv a(byte param0) {
         int var2 = -55 / ((-64 - param0) / 50);
-        return (tv) ((Object) new vp());
+        return (tv) ((Object) new TeamShipComponentCondition());
     }
 
     final static boolean a(int param0, fm param1, fm param2) {
@@ -46,7 +46,7 @@ final class uk implements dja {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -60,9 +60,9 @@ final class uk implements dja {
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a((byte) 15);
-          return (tv[]) ((Object) new vp[param1]);
+          return (tv[]) ((Object) new TeamShipComponentCondition[param1]);
         }
-        return (tv[]) ((Object) new vp[param1]);
+        return (tv[]) ((Object) new TeamShipComponentCondition[param1]);
     }
 
     final static void b(byte param0) {
@@ -72,23 +72,23 @@ final class uk implements dja {
         rg.field_b = false;
         hab.field_j = null;
         if (tla.field_c) {
-          hwa.field_o.g(-123);
+          SetPointDefenceLaserAimarc.field_o.g(-123);
           if (param0 > 30) {
             return;
           }
           uk.c((byte) 6);
           return;
         }
-        var1 = jl.field_p;
+        var1 = SetClientSideDragging.field_p;
         if (var1 > 0) {
           if (var1 == 1) {
             hab.field_j = nnb.field_d;
           } else {
-            hab.field_j = isa.a(bva.field_g, new String[]{Integer.toString(var1)}, 119);
+            hab.field_j = SetReverbGain.a(bva.field_g, new String[]{Integer.toString(var1)}, 119);
           }
-          hab.field_j = geb.a(0, new CharSequence[]{(CharSequence) ((Object) hab.field_j), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) vo.field_o)});
+          hab.field_j = SetShieldsDirectionalArc.a(0, new CharSequence[]{(CharSequence) ((Object) hab.field_j), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GetMassDriverProjectileDamage.field_o)});
         }
-        hwa.field_o.l((byte) -106);
+        SetPointDefenceLaserAimarc.field_o.l((byte) -106);
         gib.a((byte) -89);
         if (param0 > 30) {
           return;

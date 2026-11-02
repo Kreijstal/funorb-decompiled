@@ -108,7 +108,7 @@ final class sw {
                       decompiledFrameRemainder0 = false;
                     }
                     else {
-                      L10: {
+                      regionExit1: {
                         if (var19.equals("lt")) {
                           var17 = var17 + this.a(60, (byte) 37);
                           if (null != this.field_g &&
@@ -160,10 +160,10 @@ final class sw {
                                     } else {
                                       if (!var19.equals("reg")) {
                                         if (!var19.startsWith("img=")) {
-                                          break L10;
+                                          break regionExit1;
                                         }
                                         if (null == param1) {
-                                          break L10;
+                                          break regionExit1;
                                         }
                                         try {
                                           var20_int = lob.a(123, (CharSequence) ((Object) var19.substring(4)));
@@ -176,7 +176,7 @@ final class sw {
                                           decompiledRegionSelector0 = 0;
                                         }
                                         if (decompiledRegionSelector0 == 0) {
-                                          break L10;
+                                          break regionExit1;
                                         }
                                       }
                                       var17 = var17 + this.a(174, (byte) 56);
@@ -190,7 +190,7 @@ final class sw {
                                 }
                               }
                             }
-                            break L10;
+                            break regionExit1;
                           }
                           var17 = var17 + this.a(62, (byte) 76);
                           if (this.field_g != null &&
@@ -296,7 +296,7 @@ final class sw {
           } else {
             stackIn_181_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_168_0), ((StringBuilder) (Object) stackIn_180_1).append(stackIn_181_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_168_0), ((StringBuilder) (Object) stackIn_180_1).append(stackIn_181_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -468,7 +468,7 @@ final class sw {
           } else {
             stackIn_93_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(')').toString());
         }
     }
 
@@ -495,7 +495,7 @@ final class sw {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -542,7 +542,7 @@ final class sw {
           var18 = var11 * (-3 + (var7 << 1));
           var19 = (1 + var6_int) * var16;
           var20 = var15 * (-1 + var7);
-          ww.a(param4, param3 + param5, rba.field_b[param1], (byte) 75, -param5 + param3);
+          GetSalvoRepairTimeMultiplier.a(param4, param3 + param5, ResourceNode.field_b[param1], (byte) 75, -param5 + param3);
           while (var7 > 0) {
             if (var25 != 0) {
               return;
@@ -572,14 +572,14 @@ final class sw {
             var22 = param1 + var7;
             var23 = var6_int + param3;
             var24 = param3 - var6_int;
-            ww.a(param4, var23, rba.field_b[var21], (byte) 75, var24);
-            ww.a(param4, var23, rba.field_b[var22], (byte) 75, var24);
+            GetSalvoRepairTimeMultiplier.a(param4, var23, ResourceNode.field_b[var21], (byte) 75, var24);
+            GetSalvoRepairTimeMultiplier.a(param4, var23, ResourceNode.field_b[var22], (byte) 75, var24);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) runtimeException), "sw.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sw.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -601,12 +601,12 @@ final class sw {
         RuntimeException decompiledCaughtException = null;
         var9 = VoidHunters.field_G;
         try {
-          var5_int = this.a(param1, param3, new int[]{param0}, to.field_p, 4);
+          var5_int = this.a(param1, param3, new int[]{param0}, GetGrapplingHookRopeBreakLength.field_p, 4);
           var6 = 0;
           var7 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var7 >= var5_int))) {
-            var8 = this.a(62, to.field_p[var7], param3);
+            var8 = this.a(62, GetGrapplingHookRopeBreakLength.field_p[var7], param3);
             stackIn_10_0 = ~var8;
             stackIn_10_1 = ~var6;
             if (var9 == 0) {
@@ -643,7 +643,7 @@ final class sw {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -662,7 +662,7 @@ final class sw {
           if (param1 == 0) {
             param1 = this.field_a;
           }
-          var6_int = this.a(param0, param4, new int[]{param2}, to.field_p, 4);
+          var6_int = this.a(param0, param4, new int[]{param2}, GetGrapplingHookRopeBreakLength.field_p, 4);
           if (param3 <= 83) {
             this.a((String) null, 127, 112, (byte) -23, (aja[]) null);
           }
@@ -685,7 +685,7 @@ final class sw {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -702,7 +702,7 @@ final class sw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var3), "sw.E(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "sw.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -719,7 +719,7 @@ final class sw {
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ds var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -739,7 +739,7 @@ final class sw {
         int var9Lifetime2;
         var12 = VoidHunters.field_G;
         try {
-          var2 = new ds(param0);
+          var2 = new PacketBuffer(param0);
           var3 = var2.e((byte) -102);
           if (0 != var3) {
             throw new RuntimeException("");
@@ -770,14 +770,14 @@ final class sw {
             }
             var7 = new byte[256][];
             var8_int = 0;
-            L11: while (true) {
+            scanLoop1: while (true) {
               if (256 > var8_int) {
                 array$0 = new byte[var5[var8_int]];
                 var7[var8_int] = array$0;
                 var9 = 0;
                 stackIn_35_0 = 0;
                 if (var12 != 0) {
-                  break L11;
+                  break scanLoop1;
                 }
                 var10 = stackIn_35_0;
                 while (var7[var8_int].length > var10) {
@@ -793,14 +793,14 @@ final class sw {
             }
             var8 = new byte[stackIn_35_0][];
             var9Lifetime1 = 0;
-            L17: while (true) {
+            scanLoop2: while (true) {
               if (var9Lifetime1 < 256) {
                 array$1 = new byte[var5[var9Lifetime1]];
                 var8[var9Lifetime1] = array$1;
                 var10Lifetime1 = 0;
                 stackIn_47_0 = 0;
                 if (var12 != 0) {
-                  break L17;
+                  break scanLoop2;
                 }
                 var11 = stackIn_47_0;
                 while (var8[var9Lifetime1].length > var11) {
@@ -833,7 +833,7 @@ final class sw {
                     stackIn_49_1 = var10Lifetime2;
                     if (stackIn_49_0 != stackIn_49_1 && (var10Lifetime2 != 160 ||
                       var12 != 0)) {
-                      this.field_g[var9Lifetime2][var10Lifetime2] = (byte)om.a(this.field_b, var10Lifetime2, var9Lifetime2, var7, false, var8, var5, var6);
+                      this.field_g[var9Lifetime2][var10Lifetime2] = (byte)TeamNodeCondition.a(this.field_b, var10Lifetime2, var9Lifetime2, var7, false, var8, var5, var6);
                     }
                     var10Lifetime2++;
                   }
@@ -868,7 +868,7 @@ final class sw {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
@@ -889,7 +889,7 @@ final class sw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var4), "sw.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var4), "sw.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1036,7 +1036,7 @@ final class sw {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(')').toString());
         }
     }
 

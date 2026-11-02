@@ -5,14 +5,14 @@ final class wfb {
     int field_p;
     int field_u;
     int[][] field_A;
-    qjb field_c;
+    WeaponBehaviour field_c;
     int field_n;
     int field_a;
     kma field_e;
     boolean field_r;
     lsb[] field_o;
     boolean field_k;
-    lja field_x;
+    GrappleLauncherBehaviour field_x;
     boolean field_s;
     int field_i;
     mua field_g;
@@ -21,7 +21,7 @@ final class wfb {
     int field_h;
     int field_b;
     int[][] field_w;
-    aqa field_t;
+    ThrusterBehaviour field_t;
     int field_z;
     private int field_j;
     boolean field_f;
@@ -207,7 +207,7 @@ final class wfb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -230,7 +230,7 @@ final class wfb {
           this.field_k = true;
           this.field_a = 6;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "wfb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wfb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

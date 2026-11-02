@@ -43,7 +43,7 @@ final class qp {
         StringBuilder stackIn_168_1 = null;
         String stackIn_169_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ds var3 = null;
+        PacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -68,7 +68,7 @@ final class qp {
         int stackIn_137_1Lifetime1;
         var16 = VoidHunters.field_G;
         try {
-          var3 = new ds(rob.a(0, param1));
+          var3 = new PacketBuffer(GetWeaponParticleSpeedDownshift.a(0, param1));
           var4 = var3.e((byte) -87);
           if (var4 >= 5 &&
             7 >= var4) {
@@ -388,7 +388,7 @@ final class qp {
           } else {
             stackIn_169_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_168_0), ((StringBuilder) (Object) stackIn_168_1).append(stackIn_169_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_168_0), ((StringBuilder) (Object) stackIn_168_1).append(stackIn_169_2).append(')').toString());
         }
     }
 
@@ -410,7 +410,7 @@ final class qp {
         vu stackOut_8_0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        ij var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         vu var7 = null;
@@ -441,7 +441,7 @@ final class qp {
           var5 = null;
           if (iwa.field_b == 2) {
             ci.field_c.field_y = true;
-            rtb.field_h.field_R = isa.a(qna.field_o, new String[]{kbb.field_q}, param1 + 89);
+            rtb.field_h.field_R = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{kbb.field_q}, param1 + 89);
             re.field_n.field_xb.field_xb.field_R = null;
             var6 = null;
             var7 = (vu) (var4.d(0));
@@ -453,11 +453,11 @@ final class qp {
               stackIn_9_0 = stackOut_8_0;
               if (var19 == 0) {
                 if (stackIn_9_0.field_lb == null) {
-                  var7.field_wb = new llb(0L, bsa.field_q);
+                  var7.field_wb = new llb(0L, SetReverbDamp.field_q);
                   var7.b(param1 - 563, var7.field_wb);
-                  var7.field_Eb = new llb(0L, geb.field_o);
+                  var7.field_Eb = new llb(0L, SetShieldsDirectionalArc.field_o);
                   var7.b(-561, var7.field_Eb);
-                  var7.field_Bb = new llb(0L, bsa.field_q);
+                  var7.field_Bb = new llb(0L, SetReverbDamp.field_q);
                   var7.b(-561, var7.field_Bb);
                   var7.field_Eb.field_F = 2;
                   var8 = 1;
@@ -480,10 +480,10 @@ final class qp {
                 var12 = 0;
                 if (var7.field_vb != null &&
                   !var7.field_vb.equals("")) {
-                  var7.field_Bb.field_tb = iqb.field_o;
+                  var7.field_Bb.field_tb = SetMissileLauncherRandomness.field_o;
                   var7.field_Bb.field_qb = var11;
                   var12 = 1;
-                  var7.field_Bb.a(0, 127, iqb.field_o.field_m + 3, var9, nna.field_w);
+                  var7.field_Bb.a(0, 127, SetMissileLauncherRandomness.field_o.field_m + 3, var9, nna.field_w);
                 }
                 var7.field_Eb.field_Y = var10;
                 var7.field_wb.field_Y = var10;
@@ -496,7 +496,7 @@ final class qp {
                 var13 = 0;
                 var14 = -80 + (var7.field_hb - 2);
                 if (var12 != 0) {
-                  var13 = 3 + iqb.field_o.field_m;
+                  var13 = 3 + SetMissileLauncherRandomness.field_o.field_m;
                   var14 = var14 - var13;
                 }
                 stackIn_34_0 = var7.field_wb;
@@ -511,7 +511,7 @@ final class qp {
                 if (null != var7.field_Ab) {
                   stackIn_39_1 = var7.field_Ab;
                 } else {
-                  stackIn_39_1 = wl.field_o;
+                  stackIn_39_1 = SetCountermeasuresPulseRadius.field_o;
                 }
                 stackIn_38_0.field_R = stackIn_39_1;
                 var7.field_Eb.a(var7.field_hb - 80, -79, 80, var9, nna.field_w);
@@ -531,15 +531,15 @@ final class qp {
                     var16 = var7.field_Fb;
                     pea.$cfr$intArgs$a$91f64d33677c(0L, var7, -1, (int[]) null, var16, re.field_n.field_xb, (String) null, 87, -1);
                     if (null != var7.field_Ab &&
-                      !qs.a(0, cka.field_o.field_a) &&
-                      !erb.field_p) {
+                      !qs.a(0, GetLagStandardDeviationOut.field_o.field_a) &&
+                      !GetBloomThresholdPercentage.field_p) {
                       if (!hb.field_c) {
-                        var17 = cka.field_o;
-                        var18 = isa.a(qia.field_o, new String[]{var16}, param1 + 122);
+                        var17 = GetLagStandardDeviationOut.field_o;
+                        var18 = SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var16}, param1 + 122);
                         var17.field_i.a(var18, (byte) -53, 8);
                       }
-                      var17Lifetime1 = cka.field_o;
-                      var18Lifetime1 = isa.a(eha.field_p, new String[]{var16}, 115);
+                      var17Lifetime1 = GetLagStandardDeviationOut.field_o;
+                      var18Lifetime1 = SetReverbGain.a(SetMissileLauncherFireForce.field_p, new String[]{var16}, 115);
                       var17Lifetime1.field_i.a(var18Lifetime1, (byte) -53, 18);
                     }
                     var5 = var7;
@@ -557,27 +557,27 @@ final class qp {
             }
             if (decompiledNaturalLoopExit0) {
               if (re.field_n.field_wb.field_o != 0) {
-                ola.field_p = new qka(re.field_n.field_wb.field_M, re.field_n.field_wb.field_u, re.field_n.field_wb.field_hb, re.field_n.field_wb.field_G, hk.field_i, msa.field_o, qc.field_q, qc.field_q);
+                ola.field_p = new qka(re.field_n.field_wb.field_M, re.field_n.field_wb.field_u, re.field_n.field_wb.field_hb, re.field_n.field_wb.field_G, hk.field_i, GetDebrisMax.field_o, qc.field_q, qc.field_q);
                 rc.field_b = 0;
               }
               stackIn_89_0 = re.field_n.field_zb;
             }
             if (((llb) (stackIn_89_0)).field_o != 0) {
-              ola.field_p = new qka(re.field_n.field_zb.field_M, re.field_n.field_zb.field_u, re.field_n.field_zb.field_hb, re.field_n.field_zb.field_G, bba.field_e, msa.field_o, qc.field_q, qc.field_q);
+              ola.field_p = new qka(re.field_n.field_zb.field_M, re.field_n.field_zb.field_u, re.field_n.field_zb.field_hb, re.field_n.field_zb.field_G, MissionEvent.field_e, GetDebrisMax.field_o, qc.field_q, qc.field_q);
               rc.field_b = 1;
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            rtb.field_h.field_R = neb.field_p;
+            rtb.field_h.field_R = SetUseModels.field_p;
             ci.field_c.field_y = false;
             if (iwa.field_b == 1) {
-              re.field_n.field_xb.field_xb.field_R = iha.field_o;
+              re.field_n.field_xb.field_xb.field_R = SetMachineGunPulsetime.field_o;
               if (var19 != 0) {
-                re.field_n.field_xb.field_xb.field_R = dsa.field_o;
+                re.field_n.field_xb.field_xb.field_R = SetFighterRepairTime.field_o;
               }
             } else {
-              re.field_n.field_xb.field_xb.field_R = dsa.field_o;
+              re.field_n.field_xb.field_xb.field_R = SetFighterRepairTime.field_o;
             }
             igb.a(re.field_n.field_yb, (byte) -100);
           }
@@ -586,7 +586,7 @@ final class qp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var3), "qp.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "qp.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -602,7 +602,7 @@ final class qp {
           java.net.MalformedURLException var4 = null;
           try {
             if (eab.field_s.startsWith("win") &&
-              rd.a(param3, 69)) {
+              GetSniperCannonReload.a(param3, 69)) {
               return;
             }
             try {
@@ -633,7 +633,7 @@ final class qp {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -662,7 +662,7 @@ final class qp {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_b = fqb.a((byte) 25, param0.length, param0, 0);
+            this.field_b = SetMissileLauncherProjectiles.a((byte) 25, param0.length, param0, 0);
             var4_int = 0;
             while (var4_int < 64) {
               if (var5 != 0) {
@@ -692,7 +692,7 @@ final class qp {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 

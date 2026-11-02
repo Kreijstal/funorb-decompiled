@@ -4,15 +4,15 @@
 final class pv implements dja {
     public final tv a(byte param0) {
         int var2 = 13 % ((-64 - param0) / 50);
-        return (tv) ((Object) new lbb());
+        return (tv) ((Object) new MissionState());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a(51, -109);
-          return (tv[]) ((Object) new lbb[param1]);
+          return (tv[]) ((Object) new MissionState[param1]);
         }
-        return (tv[]) ((Object) new lbb[param1]);
+        return (tv[]) ((Object) new MissionState[param1]);
     }
 
     static {

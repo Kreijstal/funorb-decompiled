@@ -7,7 +7,7 @@ final class gga extends mc {
         try {
           this.field_t = param6;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gga.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gga.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -15,7 +15,7 @@ final class gga extends mc {
         ef var9 = null;
         try {
           super.a((byte) -124, param1, param2, param3, param4, param5);
-          var9 = lb.field_p;
+          var9 = SetBombletSprayRandomness.field_p;
           int var8 = 123 % ((52 - param0) / 52);
           if (var9 != null &&
             this.a(param2, param1, param5, param3, (byte) 22)) {
@@ -24,15 +24,15 @@ final class gga extends mc {
                 return;
               }
               ((ol) (var9.field_l)).a((byte) -70, var9, this);
-              lb.field_p = null;
+              SetBombletSprayRandomness.field_p = null;
               return;
             }
             ((ol) (this.field_l)).a((byte) -70, var9, this);
-            lb.field_p = null;
+            SetBombletSprayRandomness.field_p = null;
             return;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "gga.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gga.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

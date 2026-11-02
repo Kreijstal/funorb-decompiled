@@ -5,9 +5,9 @@ final class kha {
     private int field_b;
     private rpa field_o;
     private int field_g;
-    private ij field_i;
+    private IntrusiveDeque field_i;
     private rpa field_s;
-    private qfa field_t;
+    private OpenGlToolkit field_t;
     private boolean field_k;
     private int field_q;
     static int field_v;
@@ -33,7 +33,7 @@ final class kha {
           param0.b(-3846);
           this.c(false);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "kha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -118,16 +118,16 @@ final class kha {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4) {
-        ksa var6;
+        IntrusiveNode var6;
         int var7;
         var7 = VoidHunters.field_G;
         if (param4 != -5214) {
-          this.field_i = (ij) null;
+          this.field_i = (IntrusiveDeque) null;
         }
         if (null != this.field_h &&
           !this.field_i.b(118)) {
@@ -364,7 +364,7 @@ final class kha {
     }
 
     final void a(boolean param0) {
-        ksa var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = VoidHunters.field_G;
         this.field_s = null;
         this.field_l = null;
@@ -395,7 +395,7 @@ final class kha {
         return this.field_h != null ? true : false;
     }
 
-    kha(qfa param0) {
+    kha(OpenGlToolkit param0) {
         rpa dupTemp$2 = null;
         rpa dupTemp$3 = null;
         RuntimeException runtimeException = null;
@@ -407,7 +407,7 @@ final class kha {
         this.field_q = 1;
         this.field_b = 1;
         this.field_m = 0;
-        this.field_i = new ij();
+        this.field_i = new IntrusiveDeque();
         this.field_l = new aia[2];
         this.field_p = 0;
         this.field_a = true;
@@ -444,7 +444,7 @@ final class kha {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

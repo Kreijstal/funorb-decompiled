@@ -21,7 +21,7 @@ final class aw extends llb {
         if (this.field_Ab != -2) {
           return false;
         }
-        if (pma.field_o == 13) {
+        if (SetBombletSprayProjectileDamage.field_o == 13) {
           this.field_Ab = -1;
         }
         int var2 = 108 % ((-69 - param0) / 48);
@@ -41,7 +41,7 @@ final class aw extends llb {
           }
         }
         int var4 = -115 / ((param0 + 87) / 37);
-        if (0 != pba.field_o) {
+        if (0 != SetDebrisPartitioned.field_o) {
           return -1;
         }
         return this.field_Ab;
@@ -61,7 +61,7 @@ final class aw extends llb {
             this.a((String) null, (byte) -31, -41);
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "aw.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aw.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class aw extends llb {
         int var8Lifetime1;
         var11 = VoidHunters.field_G;
         if (0 == this.field_Ib) {
-          this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Fb, (phb) null, fc.field_o);
+          this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Fb, (phb) null, GetNumStars.field_o);
           this.field_Gb[this.field_Ib].field_B = 1;
           this.b(-561, this.field_Gb[this.field_Ib]);
           this.field_Eb[this.field_Ib] = -1;
@@ -105,28 +105,28 @@ final class aw extends llb {
 
     final static void a(boolean param0) {
         rma.field_b = 0;
-        tkb.field_p = 1;
-        bta.field_q = 1;
-        ki.field_o = 1;
-        via.field_b = 1;
+        GetMissilesExplosionPower.field_p = 1;
+        GetSalvoDamageMultiplier.field_q = 1;
+        GetUseSprites.field_o = 1;
+        AwardVictoryToWinnerAction.field_b = 1;
         wkb.field_c = 1;
         if (param0) {
           return;
         }
-        jnb.field_o = 1;
-        if (jha.field_p == 2) {
-          ki.field_o = 0;
-          bta.field_q = 0;
-          jnb.field_o = 0;
-          via.field_b = 0;
+        SetSalvoDamageMultiplier.field_o = 1;
+        if (GetMissileLauncherProjectileLife.field_p == 2) {
+          GetUseSprites.field_o = 0;
+          GetSalvoDamageMultiplier.field_q = 0;
+          SetSalvoDamageMultiplier.field_o = 0;
+          AwardVictoryToWinnerAction.field_b = 0;
           wkb.field_c = 0;
-          tkb.field_p = 0;
+          GetMissilesExplosionPower.field_p = 0;
         } else {
-          if (1 == jha.field_p) {
-            tkb.field_p = 0;
-            ki.field_o = 0;
-            jnb.field_o = 0;
-            bta.field_q = 0;
+          if (1 == GetMissileLauncherProjectileLife.field_p) {
+            GetMissilesExplosionPower.field_p = 0;
+            GetUseSprites.field_o = 0;
+            SetSalvoDamageMultiplier.field_o = 0;
+            GetSalvoDamageMultiplier.field_q = 0;
           }
         }
     }
@@ -144,7 +144,7 @@ final class aw extends llb {
           this.field_Eb[this.field_Ib] = param1;
           this.field_Ib = this.field_Ib + 1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "aw.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aw.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class aw extends llb {
           this.field_Hb = param6;
           this.field_yb = param7;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "aw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

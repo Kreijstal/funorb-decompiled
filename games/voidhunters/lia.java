@@ -40,7 +40,7 @@ final class lia extends pw {
             param8 == param2 &&
             param4 == param7 &&
             param6 == param1) {
-            rsa.a(param5, param7, -1, param8, param6, param3);
+            SetOndamageParticleLife.a(param5, param7, -1, param8, param6, param3);
           } else {
             var10_int = param3;
             var11 = param8;
@@ -67,7 +67,7 @@ final class lia extends pw {
               var32 = var23 * var24;
               var33 = (var29 + (var27 + var31) >> 12) + param3;
               var34 = (var32 + var28 + var30 >> 12) + param8;
-              rsa.a(param5, var33, param9 ^ 56, var11, var34, var10_int);
+              SetOndamageParticleLife.a(param5, var33, param9 ^ 56, var11, var34, var10_int);
               var11 = var34;
               var10_int = var33;
             }
@@ -80,7 +80,7 @@ final class lia extends pw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var10), "lia.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var10), "lia.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

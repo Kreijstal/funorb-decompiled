@@ -112,11 +112,11 @@ abstract class iw extends bl {
           var7Lifetime1++;
         }
         wf.field_a.a(-90 + this.field_h + param2, 10 + param0);
-        eg.a(param1 ^ 1630174240, 35 + param0, vsa.field_p, 5 + param2, this.field_h - 10);
+        GetMissionResnetResourceTickTime.a(param1 ^ 1630174240, 35 + param0, SetCountermeasureLauncherAimarc.field_p, 5 + param2, this.field_h - 10);
         if (param1 != 1630174241) {
           this.a(59);
         }
-        eg.a(1, this.field_f + param0 - 22, oqa.field_q, param2, this.field_h);
+        GetMissionResnetResourceTickTime.a(1, this.field_f + param0 - 22, SetPedrosRepairMode.field_q, param2, this.field_h);
         var5Lifetime2 = 169;
         var6Lifetime2 = 127;
         var4Lifetime2 = -79 + this.field_f;
@@ -217,21 +217,21 @@ abstract class iw extends bl {
           }
           var4 = var14.e((byte) -118);
           if (var4 != 0) {
-            tsb.field_o[0] = kca.field_a;
+            SetAudioRangeCutoff.field_o[0] = kca.field_a;
             var5 = var3.field_g;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              tsb.field_o[var6_int] = var14.a(param0 + 37);
+              SetAudioRangeCutoff.field_o[var6_int] = var14.a(param0 + 37);
             }
-            eja.a(var5, var4, 0);
+            GetUseCircleFill.a(var5, var4, 0);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
-              bb.a(var14, true);
+              GetShieldsToggleCooldown.a(var14, true);
               if (var6_intLifetime1 != 0) {
-                ujb.a(wl.field_q, qfb.field_o, vga.field_d, 13336, var6_intLifetime1, jv.field_b);
+                ujb.a(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, vga.field_d, 13336, var6_intLifetime1, jv.field_b);
               } else {
-                ujb.a(wl.field_q, qfb.field_o, vga.field_d, 13336, var6_intLifetime1, jv.field_b);
+                ujb.a(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, vga.field_d, 13336, var6_intLifetime1, jv.field_b);
               }
             }
-            qea.a((byte) -29, var5);
+            SetLaserRandomness.a((byte) -29, var5);
             var6 = new String[2][var5];
             var18 = new int[2][var5 * 4];
             var8 = bea.field_e;
@@ -239,13 +239,13 @@ abstract class iw extends bl {
             var10 = 0;
             while (var9 < var8) {
               var11 = sv.field_f[var9];
-              var6[0][var10] = tsb.field_o[var11];
-              var18[0][var10 * 4] = fmb.field_o[var11];
-              var18[0][var10 * 4 + 1] = emb.field_o[var11];
+              var6[0][var10] = SetAudioRangeCutoff.field_o[var11];
+              var18[0][var10 * 4] = GetLaserEnergyUsed.field_o[var11];
+              var18[0][var10 * 4 + 1] = SetPhasedEnergyBeamRandomness.field_o[var11];
               var18[0][2 + var10 * 4] = hma.field_d[var11];
-              var18[0][3 + 4 * var10] = fv.field_o[var11];
-              if (qja.a((byte) -75, tsb.field_o[var11]) &&
-                0 == emb.field_o[var11] + hma.field_d[var11] + fv.field_o[var11]) {
+              var18[0][3 + 4 * var10] = GetMissionVariablesHudY.field_o[var11];
+              if (SetPhysicsCollisionPhantomForceMultiplier.a((byte) -75, SetAudioRangeCutoff.field_o[var11]) &&
+                0 == SetPhasedEnergyBeamRandomness.field_o[var11] + hma.field_d[var11] + GetMissionVariablesHudY.field_o[var11]) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -257,13 +257,13 @@ abstract class iw extends bl {
             var10Lifetime1 = var13;
             while (var9Lifetime1 < var8) {
               var11Lifetime1 = sv.field_f[var5 + var9Lifetime1];
-              var6[1][var13] = tsb.field_o[var11Lifetime1];
-              var18[1][var13 * 4] = fmb.field_o[var11Lifetime1];
-              var18[1][1 + var13 * 4] = emb.field_o[var11Lifetime1];
+              var6[1][var13] = SetAudioRangeCutoff.field_o[var11Lifetime1];
+              var18[1][var13 * 4] = GetLaserEnergyUsed.field_o[var11Lifetime1];
+              var18[1][1 + var13 * 4] = SetPhasedEnergyBeamRandomness.field_o[var11Lifetime1];
               var18[1][var13 * 4 + 2] = hma.field_d[var11Lifetime1];
-              var18[1][3 + var13 * 4] = fv.field_o[var11Lifetime1];
-              if (qja.a((byte) -75, tsb.field_o[var11Lifetime1]) &&
-                0 == fv.field_o[var11Lifetime1] + (hma.field_d[var11Lifetime1] + emb.field_o[var11Lifetime1])) {
+              var18[1][3 + var13 * 4] = GetMissionVariablesHudY.field_o[var11Lifetime1];
+              if (SetPhysicsCollisionPhantomForceMultiplier.a((byte) -75, SetAudioRangeCutoff.field_o[var11Lifetime1]) &&
+                0 == GetMissionVariablesHudY.field_o[var11Lifetime1] + (hma.field_d[var11Lifetime1] + SetPhasedEnergyBeamRandomness.field_o[var11Lifetime1])) {
                 var6[1][var13] = null;
                 var13--;
               }
@@ -278,7 +278,7 @@ abstract class iw extends bl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) ((Object) var1), "iw.MA(" + param0 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "iw.MA(" + param0 + ')');
         }
     }
 

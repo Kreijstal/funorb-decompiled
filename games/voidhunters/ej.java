@@ -17,15 +17,15 @@ final class ej implements dja {
 
     public final tv a(byte param0) {
         int var2 = -12 % ((-64 - param0) / 50);
-        return (tv) ((Object) new nbb());
+        return (tv) ((Object) new Debris());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
           ej.b((byte) 12);
-          return (tv[]) ((Object) new nbb[param1]);
+          return (tv[]) ((Object) new Debris[param1]);
         }
-        return (tv[]) ((Object) new nbb[param1]);
+        return (tv[]) ((Object) new Debris[param1]);
     }
 
     static {

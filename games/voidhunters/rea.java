@@ -27,9 +27,9 @@ final class rea extends uj {
     final int d(byte param0) {
         if (param0 != 64) {
           field_d = (String) null;
-          return oq.field_t;
+          return Particle.field_t;
         }
-        return oq.field_t;
+        return Particle.field_t;
     }
 
     rea() {

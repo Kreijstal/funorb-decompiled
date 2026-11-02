@@ -61,7 +61,7 @@ final class fo {
                 this.field_b.a(6, 0, (byte) -117, hbb.field_N);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param3) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -77,7 +77,7 @@ final class fo {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = ((hbb.field_N[0] & 255) << 8) + (255 & hbb.field_N[1]);
                         var10 = (255 & hbb.field_N[6]) + ((hbb.field_N[4] << 16 & 16711680) + (hbb.field_N[5] << 8 & 65280));
@@ -93,7 +93,7 @@ final class fo {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = hbb.field_N[9] & 255;
                         var12 = (255 & hbb.field_N[5]) + (hbb.field_N[4] << 8 & 65280);
@@ -187,7 +187,7 @@ final class fo {
             } else {
               stackIn_75_2 = "{...}";
             }
-            throw rta.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -234,7 +234,7 @@ final class fo {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -376,7 +376,7 @@ final class fo {
           this.field_b = param2;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "fo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

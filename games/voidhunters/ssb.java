@@ -13,7 +13,7 @@ final class ssb extends qg {
         this.field_b.b(260, 8448, !param0 ? true : false);
     }
 
-    ssb(qfa param0, jjb param1) {
+    ssb(OpenGlToolkit param0, jjb param1) {
         super(param0);
         try {
           this.field_e = param1;
@@ -21,7 +21,7 @@ final class ssb extends qg {
           this.field_c = new li(this.field_b, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
           this.field_c.a(false, true);
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ssb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ssb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class ssb extends qg {
             this.field_c = (li) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rta.a((Throwable) ((Object) runtimeException), "ssb.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ssb.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -59,13 +59,13 @@ final class ssb extends qg {
         if (!(this.field_b.field_jc <= 0)) {
           var3 = -0.5f / (float)this.field_b.field_jc;
           this.field_b.h(33984, 1);
-          mpa.field_p[2] = var3;
-          mpa.field_p[3] = var3 * this.field_b.field_wb + 0.25f;
-          mpa.field_p[0] = 0.0f;
-          mpa.field_p[1] = 0.0f;
+          GetSniperCannonRandomness.field_p[2] = var3;
+          GetSniperCannonRandomness.field_p[3] = var3 * this.field_b.field_wb + 0.25f;
+          GetSniperCannonRandomness.field_p[0] = 0.0f;
+          GetSniperCannonRandomness.field_p[1] = 0.0f;
           jaggl.OpenGL.glPushMatrix();
           jaggl.OpenGL.glLoadIdentity();
-          jaggl.OpenGL.glTexGenfv(8192, 9474, mpa.field_p, 0);
+          jaggl.OpenGL.glTexGenfv(8192, 9474, GetSniperCannonRandomness.field_p, 0);
           jaggl.OpenGL.glPopMatrix();
           this.field_b.a((float)this.field_b.field_jc, 0.5f, 0);
           this.field_b.a(68, this.field_c);
@@ -95,20 +95,20 @@ final class ssb extends qg {
               return;
             }
             this.field_b.a(35, this.field_e.field_b);
-            mpa.field_p[2] = 0.0f;
-            mpa.field_p[3] = (float)(this.field_b.field_Mc % 4000) / 4000.0f;
-            mpa.field_p[1] = 0.0f;
-            mpa.field_p[0] = 0.0f;
-            jaggl.OpenGL.glTexGenfv(8194, 9473, mpa.field_p, 0);
+            GetSniperCannonRandomness.field_p[2] = 0.0f;
+            GetSniperCannonRandomness.field_p[3] = (float)(this.field_b.field_Mc % 4000) / 4000.0f;
+            GetSniperCannonRandomness.field_p[1] = 0.0f;
+            GetSniperCannonRandomness.field_p[0] = 0.0f;
+            jaggl.OpenGL.glTexGenfv(8194, 9473, GetSniperCannonRandomness.field_p, 0);
             return;
           }
           if (this.field_e.field_d) {
             this.field_b.a(123, this.field_e.field_b);
-            mpa.field_p[1] = 0.0f;
-            mpa.field_p[2] = 0.0f;
-            mpa.field_p[0] = 0.0f;
-            mpa.field_p[3] = 0.0f;
-            jaggl.OpenGL.glTexGenfv(8194, 9473, mpa.field_p, 0);
+            GetSniperCannonRandomness.field_p[1] = 0.0f;
+            GetSniperCannonRandomness.field_p[2] = 0.0f;
+            GetSniperCannonRandomness.field_p[0] = 0.0f;
+            GetSniperCannonRandomness.field_p[3] = 0.0f;
+            jaggl.OpenGL.glTexGenfv(8194, 9473, GetSniperCannonRandomness.field_p, 0);
             return;
           }
           this.field_b.a(93, this.field_e.field_e[0]);
@@ -121,20 +121,20 @@ final class ssb extends qg {
             return;
           }
           this.field_b.a(35, this.field_e.field_b);
-          mpa.field_p[2] = 0.0f;
-          mpa.field_p[3] = (float)(this.field_b.field_Mc % 4000) / 4000.0f;
-          mpa.field_p[1] = 0.0f;
-          mpa.field_p[0] = 0.0f;
-          jaggl.OpenGL.glTexGenfv(8194, 9473, mpa.field_p, 0);
+          GetSniperCannonRandomness.field_p[2] = 0.0f;
+          GetSniperCannonRandomness.field_p[3] = (float)(this.field_b.field_Mc % 4000) / 4000.0f;
+          GetSniperCannonRandomness.field_p[1] = 0.0f;
+          GetSniperCannonRandomness.field_p[0] = 0.0f;
+          jaggl.OpenGL.glTexGenfv(8194, 9473, GetSniperCannonRandomness.field_p, 0);
           return;
         }
         if (this.field_e.field_d) {
           this.field_b.a(123, this.field_e.field_b);
-          mpa.field_p[1] = 0.0f;
-          mpa.field_p[2] = 0.0f;
-          mpa.field_p[0] = 0.0f;
-          mpa.field_p[3] = 0.0f;
-          jaggl.OpenGL.glTexGenfv(8194, 9473, mpa.field_p, 0);
+          GetSniperCannonRandomness.field_p[1] = 0.0f;
+          GetSniperCannonRandomness.field_p[2] = 0.0f;
+          GetSniperCannonRandomness.field_p[0] = 0.0f;
+          GetSniperCannonRandomness.field_p[3] = 0.0f;
+          jaggl.OpenGL.glTexGenfv(8194, 9473, GetSniperCannonRandomness.field_p, 0);
           return;
         }
         this.field_b.a(93, this.field_e.field_e[0]);

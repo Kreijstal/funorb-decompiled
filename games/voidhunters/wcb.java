@@ -85,21 +85,21 @@ final class wcb extends uda {
 
     final void a(int param0) {
         this.field_e.a(0, (jagdx.IDirect3DVertexShader) null);
-        this.field_d.a(0, qcb.field_q, 7);
+        this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
         if (param0 == 2543) {
-          this.field_d.a(1, tma.field_q, 7);
+          this.field_d.a(1, GetArmageddonLength.field_q, 7);
           this.field_d.a(2, pea.field_d, 7);
           this.field_d.a(true, false);
           return;
         }
         this.field_g = (jagdx.IDirect3DVertexShader) null;
-        this.field_d.a(1, tma.field_q, 7);
+        this.field_d.a(1, GetArmageddonLength.field_q, 7);
         this.field_d.a(2, pea.field_d, 7);
         this.field_d.a(true, false);
     }
 
     final void b(int param0, boolean param1) {
-        this.field_d.a(je.field_c, true, df.field_o);
+        this.field_d.a(je.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
         if (param0 != 5) {
           this.c((byte) 107);
         }
@@ -179,9 +179,9 @@ final class wcb extends uda {
     }
 
     final void a(int param0, boolean param1) {
-        this.field_d.a(0, qcb.field_q, param0 + 2);
+        this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, param0 + 2);
         this.field_d.a(1, pea.field_d, 7);
-        this.field_d.a(false, -21115, true, tma.field_q, 2);
+        this.field_d.a(false, -21115, true, GetArmageddonLength.field_q, 2);
         this.field_d.a(false, false);
         this.field_e.a(0, this.field_g);
         this.c(param0);
