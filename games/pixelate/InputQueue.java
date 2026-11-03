@@ -63,8 +63,8 @@ final class InputQueue {
           var1 = MusicCrossfadeStream.field_o;
           var2 = var1.f(255);
           if (var2 == 0) {
-            if (null == hq.field_q) {
-              hq.field_q = new SecondaryNodeHashTable(128);
+            if (null == GameResultsScreen.field_q) {
+              GameResultsScreen.field_q = new SecondaryNodeHashTable(128);
               aj.field_t = 0;
             }
             stackIn_11_0 = (var1.f(255) != 1) ? 0 : 1;
@@ -86,12 +86,12 @@ final class InputQueue {
             if (var6 == null) {
               var6 = DisplayNameForm.a(var7, 69);
               if (null != var6) {
-                hq.field_q.a(false, var6, (long)var8.hashCode());
+                GameResultsScreen.field_q.a(false, var6, (long)var8.hashCode());
               }
             }
             if (var6 == null) {
               var6 = new im();
-              hq.field_q.a(false, var6, (long)var8.hashCode());
+              GameResultsScreen.field_q.a(false, var6, (long)var8.hashCode());
               fieldTemp$0 = aj.field_t;
               aj.field_t = aj.field_t + 1;
               var6.field_Kb = fieldTemp$0;

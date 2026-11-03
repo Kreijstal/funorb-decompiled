@@ -58,7 +58,7 @@ class BackgroundScene {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
         ValidatedTextWidget.field_fb = param4;
-        hq.field_r = param0;
+        GameResultsScreen.field_r = param0;
         if (param1) {
           return;
         }

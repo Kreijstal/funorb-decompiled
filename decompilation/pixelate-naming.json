@@ -804,6 +804,14 @@
       "renamedSymbol": "C:DebouncedValidator"
     },
     {
+      "symbol": "C:hq",
+      "originalName": "hq",
+      "to": "GameResultsScreen",
+      "evidence": "MenuScreen that draws the final score, tiles dropped, perfect drops and time rows and the final scores of a finished match.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:GameResultsScreen"
+    },
+    {
       "symbol": "C:i",
       "originalName": "i",
       "to": "ImageProducerRasterBuffer",
@@ -8658,9 +8666,9 @@
     },
     {
       "symbol": "C:hq",
-      "renamedSymbol": "C:hq",
+      "renamedSymbol": "C:GameResultsScreen",
       "originalName": "hq",
-      "renamedName": "hq",
+      "renamedName": "GameResultsScreen",
       "declaration": {
         "file": "hq.java",
         "start": 50,
@@ -23893,7 +23901,7 @@
     },
     {
       "symbol": "F:hq.field_A:Ljava/lang/String;",
-      "renamedSymbol": "F:hq.field_A:Ljava/lang/String;",
+      "renamedSymbol": "F:GameResultsScreen.field_A:Ljava/lang/String;",
       "originalName": "field_A",
       "renamedName": "field_A",
       "declaration": {
@@ -23904,7 +23912,7 @@
     },
     {
       "symbol": "F:hq.field_B:Z",
-      "renamedSymbol": "F:hq.field_B:Z",
+      "renamedSymbol": "F:GameResultsScreen.field_B:Z",
       "originalName": "field_B",
       "renamedName": "field_B",
       "declaration": {
@@ -23915,7 +23923,7 @@
     },
     {
       "symbol": "F:hq.field_D:Ljava/lang/String;",
-      "renamedSymbol": "F:hq.field_D:Ljava/lang/String;",
+      "renamedSymbol": "F:GameResultsScreen.field_D:Ljava/lang/String;",
       "originalName": "field_D",
       "renamedName": "field_D",
       "declaration": {
@@ -23926,7 +23934,7 @@
     },
     {
       "symbol": "F:hq.field_E:I",
-      "renamedSymbol": "F:hq.field_E:I",
+      "renamedSymbol": "F:GameResultsScreen.field_E:I",
       "originalName": "field_E",
       "renamedName": "field_E",
       "declaration": {
@@ -23937,7 +23945,7 @@
     },
     {
       "symbol": "F:hq.field_G:I",
-      "renamedSymbol": "F:hq.field_G:I",
+      "renamedSymbol": "F:GameResultsScreen.field_G:I",
       "originalName": "field_G",
       "renamedName": "field_G",
       "declaration": {
@@ -23948,7 +23956,7 @@
     },
     {
       "symbol": "F:hq.field_H:I",
-      "renamedSymbol": "F:hq.field_H:I",
+      "renamedSymbol": "F:GameResultsScreen.field_H:I",
       "originalName": "field_H",
       "renamedName": "field_H",
       "declaration": {
@@ -23959,7 +23967,7 @@
     },
     {
       "symbol": "F:hq.field_I:I",
-      "renamedSymbol": "F:hq.field_I:I",
+      "renamedSymbol": "F:GameResultsScreen.field_I:I",
       "originalName": "field_I",
       "renamedName": "field_I",
       "declaration": {
@@ -23970,7 +23978,7 @@
     },
     {
       "symbol": "F:hq.field_J:I",
-      "renamedSymbol": "F:hq.field_J:I",
+      "renamedSymbol": "F:GameResultsScreen.field_J:I",
       "originalName": "field_J",
       "renamedName": "field_J",
       "declaration": {
@@ -23981,7 +23989,7 @@
     },
     {
       "symbol": "F:hq.field_K:Ljava/lang/String;",
-      "renamedSymbol": "F:hq.field_K:Ljava/lang/String;",
+      "renamedSymbol": "F:GameResultsScreen.field_K:Ljava/lang/String;",
       "originalName": "field_K",
       "renamedName": "field_K",
       "declaration": {
@@ -23992,7 +24000,7 @@
     },
     {
       "symbol": "F:hq.field_M:[Ljava/lang/String;",
-      "renamedSymbol": "F:hq.field_M:[Ljava/lang/String;",
+      "renamedSymbol": "F:GameResultsScreen.field_M:[Ljava/lang/String;",
       "originalName": "field_M",
       "renamedName": "field_M",
       "declaration": {
@@ -24003,7 +24011,7 @@
     },
     {
       "symbol": "F:hq.field_o:Ljava/lang/String;",
-      "renamedSymbol": "F:hq.field_o:Ljava/lang/String;",
+      "renamedSymbol": "F:GameResultsScreen.field_o:Ljava/lang/String;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -24014,7 +24022,7 @@
     },
     {
       "symbol": "F:hq.field_p:[Ljava/lang/String;",
-      "renamedSymbol": "F:hq.field_p:[Ljava/lang/String;",
+      "renamedSymbol": "F:GameResultsScreen.field_p:[Ljava/lang/String;",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -24025,7 +24033,7 @@
     },
     {
       "symbol": "F:hq.field_q:Lvg;",
-      "renamedSymbol": "F:hq.field_q:LSecondaryNodeHashTable;",
+      "renamedSymbol": "F:GameResultsScreen.field_q:LSecondaryNodeHashTable;",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -24036,7 +24044,7 @@
     },
     {
       "symbol": "F:hq.field_r:I",
-      "renamedSymbol": "F:hq.field_r:I",
+      "renamedSymbol": "F:GameResultsScreen.field_r:I",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -24047,7 +24055,7 @@
     },
     {
       "symbol": "F:hq.field_s:Ljava/lang/String;",
-      "renamedSymbol": "F:hq.field_s:Ljava/lang/String;",
+      "renamedSymbol": "F:GameResultsScreen.field_s:Ljava/lang/String;",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -24058,7 +24066,7 @@
     },
     {
       "symbol": "F:hq.field_t:Ljava/lang/String;",
-      "renamedSymbol": "F:hq.field_t:Ljava/lang/String;",
+      "renamedSymbol": "F:GameResultsScreen.field_t:Ljava/lang/String;",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -24069,7 +24077,7 @@
     },
     {
       "symbol": "F:hq.field_u:Ljava/lang/String;",
-      "renamedSymbol": "F:hq.field_u:Ljava/lang/String;",
+      "renamedSymbol": "F:GameResultsScreen.field_u:Ljava/lang/String;",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -24080,7 +24088,7 @@
     },
     {
       "symbol": "F:hq.field_v:Ljava/lang/String;",
-      "renamedSymbol": "F:hq.field_v:Ljava/lang/String;",
+      "renamedSymbol": "F:GameResultsScreen.field_v:Ljava/lang/String;",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -24091,7 +24099,7 @@
     },
     {
       "symbol": "F:hq.field_w:Ljava/lang/String;",
-      "renamedSymbol": "F:hq.field_w:Ljava/lang/String;",
+      "renamedSymbol": "F:GameResultsScreen.field_w:Ljava/lang/String;",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -24102,7 +24110,7 @@
     },
     {
       "symbol": "F:hq.field_x:I",
-      "renamedSymbol": "F:hq.field_x:I",
+      "renamedSymbol": "F:GameResultsScreen.field_x:I",
       "originalName": "field_x",
       "renamedName": "field_x",
       "declaration": {
@@ -24113,7 +24121,7 @@
     },
     {
       "symbol": "F:hq.field_y:Ljava/lang/String;",
-      "renamedSymbol": "F:hq.field_y:Ljava/lang/String;",
+      "renamedSymbol": "F:GameResultsScreen.field_y:Ljava/lang/String;",
       "originalName": "field_y",
       "renamedName": "field_y",
       "declaration": {
@@ -24124,7 +24132,7 @@
     },
     {
       "symbol": "F:hq.field_z:I",
-      "renamedSymbol": "F:hq.field_z:I",
+      "renamedSymbol": "F:GameResultsScreen.field_z:I",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -102059,7 +102067,7 @@
     },
     {
       "symbol": "L:hq.a(BI)I#0",
-      "renamedSymbol": "L:hq.a(BI)I#0",
+      "renamedSymbol": "L:GameResultsScreen.a(BI)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -102070,7 +102078,7 @@
     },
     {
       "symbol": "L:hq.a(BI)I#1",
-      "renamedSymbol": "L:hq.a(BI)I#1",
+      "renamedSymbol": "L:GameResultsScreen.a(BI)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -102081,7 +102089,7 @@
     },
     {
       "symbol": "L:hq.a(I)V#0",
-      "renamedSymbol": "L:hq.a(I)V#0",
+      "renamedSymbol": "L:GameResultsScreen.a(I)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -102092,7 +102100,7 @@
     },
     {
       "symbol": "L:hq.a(I)V#1",
-      "renamedSymbol": "L:hq.a(I)V#1",
+      "renamedSymbol": "L:GameResultsScreen.a(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -102103,7 +102111,7 @@
     },
     {
       "symbol": "L:hq.a(I)V#2",
-      "renamedSymbol": "L:hq.a(I)V#2",
+      "renamedSymbol": "L:GameResultsScreen.a(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -102114,7 +102122,7 @@
     },
     {
       "symbol": "L:hq.a(I)V#3",
-      "renamedSymbol": "L:hq.a(I)V#3",
+      "renamedSymbol": "L:GameResultsScreen.a(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -102125,7 +102133,7 @@
     },
     {
       "symbol": "L:hq.a(I)V#4",
-      "renamedSymbol": "L:hq.a(I)V#4",
+      "renamedSymbol": "L:GameResultsScreen.a(I)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -102136,7 +102144,7 @@
     },
     {
       "symbol": "L:hq.a(I)V#5",
-      "renamedSymbol": "L:hq.a(I)V#5",
+      "renamedSymbol": "L:GameResultsScreen.a(I)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -102147,7 +102155,7 @@
     },
     {
       "symbol": "L:hq.a(I)V#6",
-      "renamedSymbol": "L:hq.a(I)V#6",
+      "renamedSymbol": "L:GameResultsScreen.a(I)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -102158,7 +102166,7 @@
     },
     {
       "symbol": "L:hq.a(I)V#7",
-      "renamedSymbol": "L:hq.a(I)V#7",
+      "renamedSymbol": "L:GameResultsScreen.a(I)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -102169,7 +102177,7 @@
     },
     {
       "symbol": "L:hq.a(I)V#8",
-      "renamedSymbol": "L:hq.a(I)V#8",
+      "renamedSymbol": "L:GameResultsScreen.a(I)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -102180,7 +102188,7 @@
     },
     {
       "symbol": "L:hq.a(IB)I#0",
-      "renamedSymbol": "L:hq.a(IB)I#0",
+      "renamedSymbol": "L:GameResultsScreen.a(IB)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -102191,7 +102199,7 @@
     },
     {
       "symbol": "L:hq.a(IIZZZZIIII)V#0",
-      "renamedSymbol": "L:hq.a(IIZZZZIIII)V#0",
+      "renamedSymbol": "L:GameResultsScreen.a(IIZZZZIIII)V#0",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -102202,7 +102210,7 @@
     },
     {
       "symbol": "L:hq.a(IIZZZZIIII)V#1",
-      "renamedSymbol": "L:hq.a(IIZZZZIIII)V#1",
+      "renamedSymbol": "L:GameResultsScreen.a(IIZZZZIIII)V#1",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -102213,7 +102221,7 @@
     },
     {
       "symbol": "L:hq.a(IIZZZZIIII)V#2",
-      "renamedSymbol": "L:hq.a(IIZZZZIIII)V#2",
+      "renamedSymbol": "L:GameResultsScreen.a(IIZZZZIIII)V#2",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -102224,7 +102232,7 @@
     },
     {
       "symbol": "L:hq.a(IZZ)V#0",
-      "renamedSymbol": "L:hq.a(IZZ)V#0",
+      "renamedSymbol": "L:GameResultsScreen.a(IZZ)V#0",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -102235,7 +102243,7 @@
     },
     {
       "symbol": "L:hq.a(IZZ)V#1",
-      "renamedSymbol": "L:hq.a(IZZ)V#1",
+      "renamedSymbol": "L:GameResultsScreen.a(IZZ)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -102246,7 +102254,7 @@
     },
     {
       "symbol": "L:hq.a(IZZ)V#2",
-      "renamedSymbol": "L:hq.a(IZZ)V#2",
+      "renamedSymbol": "L:GameResultsScreen.a(IZZ)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -102257,7 +102265,7 @@
     },
     {
       "symbol": "L:hq.a(IZZ)V#3",
-      "renamedSymbol": "L:hq.a(IZZ)V#3",
+      "renamedSymbol": "L:GameResultsScreen.a(IZZ)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -102268,7 +102276,7 @@
     },
     {
       "symbol": "L:hq.a(Ljava/lang/String;B)V#0",
-      "renamedSymbol": "L:hq.a(Ljava/lang/String;B)V#0",
+      "renamedSymbol": "L:GameResultsScreen.a(Ljava/lang/String;B)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -102279,7 +102287,7 @@
     },
     {
       "symbol": "L:hq.a(Ljava/lang/String;ILpm;)V#0",
-      "renamedSymbol": "L:hq.a(Ljava/lang/String;ILMatch;)V#0",
+      "renamedSymbol": "L:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -102290,7 +102298,7 @@
     },
     {
       "symbol": "L:hq.a(Ljava/lang/String;ILpm;)V#1",
-      "renamedSymbol": "L:hq.a(Ljava/lang/String;ILMatch;)V#1",
+      "renamedSymbol": "L:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#1",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -102301,7 +102309,7 @@
     },
     {
       "symbol": "L:hq.a(Ljava/lang/String;ILpm;)V#10",
-      "renamedSymbol": "L:hq.a(Ljava/lang/String;ILMatch;)V#10",
+      "renamedSymbol": "L:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -102312,7 +102320,7 @@
     },
     {
       "symbol": "L:hq.a(Ljava/lang/String;ILpm;)V#2",
-      "renamedSymbol": "L:hq.a(Ljava/lang/String;ILMatch;)V#2",
+      "renamedSymbol": "L:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#2",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -102323,7 +102331,7 @@
     },
     {
       "symbol": "L:hq.a(Ljava/lang/String;ILpm;)V#3",
-      "renamedSymbol": "L:hq.a(Ljava/lang/String;ILMatch;)V#3",
+      "renamedSymbol": "L:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#3",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -102334,7 +102342,7 @@
     },
     {
       "symbol": "L:hq.a(Ljava/lang/String;ILpm;)V#4",
-      "renamedSymbol": "L:hq.a(Ljava/lang/String;ILMatch;)V#4",
+      "renamedSymbol": "L:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#4",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -102345,7 +102353,7 @@
     },
     {
       "symbol": "L:hq.a(Ljava/lang/String;ILpm;)V#5",
-      "renamedSymbol": "L:hq.a(Ljava/lang/String;ILMatch;)V#5",
+      "renamedSymbol": "L:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#5",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -102356,7 +102364,7 @@
     },
     {
       "symbol": "L:hq.a(Ljava/lang/String;ILpm;)V#6",
-      "renamedSymbol": "L:hq.a(Ljava/lang/String;ILMatch;)V#6",
+      "renamedSymbol": "L:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#6",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -102367,7 +102375,7 @@
     },
     {
       "symbol": "L:hq.a(Ljava/lang/String;ILpm;)V#7",
-      "renamedSymbol": "L:hq.a(Ljava/lang/String;ILMatch;)V#7",
+      "renamedSymbol": "L:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -102378,7 +102386,7 @@
     },
     {
       "symbol": "L:hq.a(Ljava/lang/String;ILpm;)V#8",
-      "renamedSymbol": "L:hq.a(Ljava/lang/String;ILMatch;)V#8",
+      "renamedSymbol": "L:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -102389,7 +102397,7 @@
     },
     {
       "symbol": "L:hq.a(Ljava/lang/String;ILpm;)V#9",
-      "renamedSymbol": "L:hq.a(Ljava/lang/String;ILMatch;)V#9",
+      "renamedSymbol": "L:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -102400,7 +102408,7 @@
     },
     {
       "symbol": "L:hq.a(ZI)V#0",
-      "renamedSymbol": "L:hq.a(ZI)V#0",
+      "renamedSymbol": "L:GameResultsScreen.a(ZI)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -102411,7 +102419,7 @@
     },
     {
       "symbol": "L:hq.a(ZI)V#1",
-      "renamedSymbol": "L:hq.a(ZI)V#1",
+      "renamedSymbol": "L:GameResultsScreen.a(ZI)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -102422,7 +102430,7 @@
     },
     {
       "symbol": "L:hq.b(BZ)V#0",
-      "renamedSymbol": "L:hq.b(BZ)V#0",
+      "renamedSymbol": "L:GameResultsScreen.b(BZ)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -102433,7 +102441,7 @@
     },
     {
       "symbol": "L:hq.b(BZ)V#1",
-      "renamedSymbol": "L:hq.b(BZ)V#1",
+      "renamedSymbol": "L:GameResultsScreen.b(BZ)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -102444,7 +102452,7 @@
     },
     {
       "symbol": "L:hq.b(BZ)V#2",
-      "renamedSymbol": "L:hq.b(BZ)V#2",
+      "renamedSymbol": "L:GameResultsScreen.b(BZ)V#2",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -102455,7 +102463,7 @@
     },
     {
       "symbol": "L:hq.b(I)V#0",
-      "renamedSymbol": "L:hq.b(I)V#0",
+      "renamedSymbol": "L:GameResultsScreen.b(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -102466,7 +102474,7 @@
     },
     {
       "symbol": "L:hq.b(I)V#1",
-      "renamedSymbol": "L:hq.b(I)V#1",
+      "renamedSymbol": "L:GameResultsScreen.b(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -102477,7 +102485,7 @@
     },
     {
       "symbol": "L:hq.b(I)V#2",
-      "renamedSymbol": "L:hq.b(I)V#2",
+      "renamedSymbol": "L:GameResultsScreen.b(I)V#2",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -102488,7 +102496,7 @@
     },
     {
       "symbol": "L:hq.b(I)V#3",
-      "renamedSymbol": "L:hq.b(I)V#3",
+      "renamedSymbol": "L:GameResultsScreen.b(I)V#3",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -102499,7 +102507,7 @@
     },
     {
       "symbol": "L:hq.b(I)V#4",
-      "renamedSymbol": "L:hq.b(I)V#4",
+      "renamedSymbol": "L:GameResultsScreen.b(I)V#4",
       "originalName": "stackIn_17_2",
       "renamedName": "stackIn_17_2",
       "declaration": {
@@ -102510,7 +102518,7 @@
     },
     {
       "symbol": "L:hq.b(I)V#5",
-      "renamedSymbol": "L:hq.b(I)V#5",
+      "renamedSymbol": "L:GameResultsScreen.b(I)V#5",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -102521,7 +102529,7 @@
     },
     {
       "symbol": "L:hq.b(II)I#0",
-      "renamedSymbol": "L:hq.b(II)I#0",
+      "renamedSymbol": "L:GameResultsScreen.b(II)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -102532,7 +102540,7 @@
     },
     {
       "symbol": "L:hq.c(II)Z#0",
-      "renamedSymbol": "L:hq.c(II)Z#0",
+      "renamedSymbol": "L:GameResultsScreen.c(II)Z#0",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -102543,7 +102551,7 @@
     },
     {
       "symbol": "L:hq.c(II)Z#1",
-      "renamedSymbol": "L:hq.c(II)Z#1",
+      "renamedSymbol": "L:GameResultsScreen.c(II)Z#1",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -102554,7 +102562,7 @@
     },
     {
       "symbol": "L:hq.d(II)I#0",
-      "renamedSymbol": "L:hq.d(II)I#0",
+      "renamedSymbol": "L:GameResultsScreen.d(II)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -102565,7 +102573,7 @@
     },
     {
       "symbol": "L:hq.d(II)I#1",
-      "renamedSymbol": "L:hq.d(II)I#1",
+      "renamedSymbol": "L:GameResultsScreen.d(II)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -102576,7 +102584,7 @@
     },
     {
       "symbol": "L:hq.e(I)V#0",
-      "renamedSymbol": "L:hq.e(I)V#0",
+      "renamedSymbol": "L:GameResultsScreen.e(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -102587,7 +102595,7 @@
     },
     {
       "symbol": "L:hq.e(I)V#1",
-      "renamedSymbol": "L:hq.e(I)V#1",
+      "renamedSymbol": "L:GameResultsScreen.e(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -102598,7 +102606,7 @@
     },
     {
       "symbol": "L:hq.e(I)V#2",
-      "renamedSymbol": "L:hq.e(I)V#2",
+      "renamedSymbol": "L:GameResultsScreen.e(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -102609,7 +102617,7 @@
     },
     {
       "symbol": "L:hq.e(I)V#3",
-      "renamedSymbol": "L:hq.e(I)V#3",
+      "renamedSymbol": "L:GameResultsScreen.e(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -102620,7 +102628,7 @@
     },
     {
       "symbol": "L:hq.e(II)Ljava/lang/String;#0",
-      "renamedSymbol": "L:hq.e(II)Ljava/lang/String;#0",
+      "renamedSymbol": "L:GameResultsScreen.e(II)Ljava/lang/String;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -102631,7 +102639,7 @@
     },
     {
       "symbol": "L:hq.e(II)Ljava/lang/String;#1",
-      "renamedSymbol": "L:hq.e(II)Ljava/lang/String;#1",
+      "renamedSymbol": "L:GameResultsScreen.e(II)Ljava/lang/String;#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -226007,9 +226015,9 @@
     },
     {
       "symbol": "M:hq.<init>(IIIII[I)V",
-      "renamedSymbol": "M:hq.<init>(IIIII[I)V",
+      "renamedSymbol": "M:GameResultsScreen.<init>(IIIII[I)V",
       "originalName": "hq",
-      "renamedName": "hq",
+      "renamedName": "GameResultsScreen",
       "declaration": {
         "file": "hq.java",
         "start": 5149,
@@ -226018,7 +226026,7 @@
     },
     {
       "symbol": "M:hq.a(BI)I",
-      "renamedSymbol": "M:hq.a(BI)I",
+      "renamedSymbol": "M:GameResultsScreen.a(BI)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226029,7 +226037,7 @@
     },
     {
       "symbol": "M:hq.a(BZI)V",
-      "renamedSymbol": "M:hq.a(BZI)V",
+      "renamedSymbol": "M:GameResultsScreen.a(BZI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226040,7 +226048,7 @@
     },
     {
       "symbol": "M:hq.a(I)V",
-      "renamedSymbol": "M:hq.a(I)V",
+      "renamedSymbol": "M:GameResultsScreen.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226051,7 +226059,7 @@
     },
     {
       "symbol": "M:hq.a(IB)I",
-      "renamedSymbol": "M:hq.a(IB)I",
+      "renamedSymbol": "M:GameResultsScreen.a(IB)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226062,7 +226070,7 @@
     },
     {
       "symbol": "M:hq.a(IIZ)V",
-      "renamedSymbol": "M:hq.a(IIZ)V",
+      "renamedSymbol": "M:GameResultsScreen.a(IIZ)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226073,7 +226081,7 @@
     },
     {
       "symbol": "M:hq.a(IIZZZZIIII)V",
-      "renamedSymbol": "M:hq.a(IIZZZZIIII)V",
+      "renamedSymbol": "M:GameResultsScreen.a(IIZZZZIIII)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226084,7 +226092,7 @@
     },
     {
       "symbol": "M:hq.a(IZ)I",
-      "renamedSymbol": "M:hq.a(IZ)I",
+      "renamedSymbol": "M:GameResultsScreen.a(IZ)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226095,7 +226103,7 @@
     },
     {
       "symbol": "M:hq.a(IZZ)V",
-      "renamedSymbol": "M:hq.a(IZZ)V",
+      "renamedSymbol": "M:GameResultsScreen.a(IZZ)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226106,7 +226114,7 @@
     },
     {
       "symbol": "M:hq.a(Ljava/lang/String;B)V",
-      "renamedSymbol": "M:hq.a(Ljava/lang/String;B)V",
+      "renamedSymbol": "M:GameResultsScreen.a(Ljava/lang/String;B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226117,7 +226125,7 @@
     },
     {
       "symbol": "M:hq.a(Ljava/lang/String;ILpm;)V",
-      "renamedSymbol": "M:hq.a(Ljava/lang/String;ILMatch;)V",
+      "renamedSymbol": "M:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226128,7 +226136,7 @@
     },
     {
       "symbol": "M:hq.a(ZI)V",
-      "renamedSymbol": "M:hq.a(ZI)V",
+      "renamedSymbol": "M:GameResultsScreen.a(ZI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226139,7 +226147,7 @@
     },
     {
       "symbol": "M:hq.a(ZZIIBII)V",
-      "renamedSymbol": "M:hq.a(ZZIIBII)V",
+      "renamedSymbol": "M:GameResultsScreen.a(ZZIIBII)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -226150,7 +226158,7 @@
     },
     {
       "symbol": "M:hq.b(BZ)V",
-      "renamedSymbol": "M:hq.b(BZ)V",
+      "renamedSymbol": "M:GameResultsScreen.b(BZ)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -226161,7 +226169,7 @@
     },
     {
       "symbol": "M:hq.b(I)V",
-      "renamedSymbol": "M:hq.b(I)V",
+      "renamedSymbol": "M:GameResultsScreen.b(I)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -226172,7 +226180,7 @@
     },
     {
       "symbol": "M:hq.b(II)I",
-      "renamedSymbol": "M:hq.b(II)I",
+      "renamedSymbol": "M:GameResultsScreen.b(II)I",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -226183,7 +226191,7 @@
     },
     {
       "symbol": "M:hq.c(B)V",
-      "renamedSymbol": "M:hq.c(B)V",
+      "renamedSymbol": "M:GameResultsScreen.c(B)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -226194,7 +226202,7 @@
     },
     {
       "symbol": "M:hq.c(I)V",
-      "renamedSymbol": "M:hq.c(I)V",
+      "renamedSymbol": "M:GameResultsScreen.c(I)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -226205,7 +226213,7 @@
     },
     {
       "symbol": "M:hq.c(II)Z",
-      "renamedSymbol": "M:hq.c(II)Z",
+      "renamedSymbol": "M:GameResultsScreen.c(II)Z",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -226216,7 +226224,7 @@
     },
     {
       "symbol": "M:hq.d(II)I",
-      "renamedSymbol": "M:hq.d(II)I",
+      "renamedSymbol": "M:GameResultsScreen.d(II)I",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -226227,7 +226235,7 @@
     },
     {
       "symbol": "M:hq.e(I)V",
-      "renamedSymbol": "M:hq.e(I)V",
+      "renamedSymbol": "M:GameResultsScreen.e(I)V",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -226238,7 +226246,7 @@
     },
     {
       "symbol": "M:hq.e(II)Ljava/lang/String;",
-      "renamedSymbol": "M:hq.e(II)Ljava/lang/String;",
+      "renamedSymbol": "M:GameResultsScreen.e(II)Ljava/lang/String;",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -226249,7 +226257,7 @@
     },
     {
       "symbol": "M:hq.f(B)V",
-      "renamedSymbol": "M:hq.f(B)V",
+      "renamedSymbol": "M:GameResultsScreen.f(B)V",
       "originalName": "f",
       "renamedName": "f",
       "declaration": {
@@ -226260,7 +226268,7 @@
     },
     {
       "symbol": "M:hq.f(I)V",
-      "renamedSymbol": "M:hq.f(I)V",
+      "renamedSymbol": "M:GameResultsScreen.f(I)V",
       "originalName": "f",
       "renamedName": "f",
       "declaration": {
@@ -274121,7 +274129,7 @@
     },
     {
       "symbol": "P:hq.<init>(IIIII[I)V#0",
-      "renamedSymbol": "P:hq.<init>(IIIII[I)V#0",
+      "renamedSymbol": "P:GameResultsScreen.<init>(IIIII[I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274132,7 +274140,7 @@
     },
     {
       "symbol": "P:hq.<init>(IIIII[I)V#1",
-      "renamedSymbol": "P:hq.<init>(IIIII[I)V#1",
+      "renamedSymbol": "P:GameResultsScreen.<init>(IIIII[I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274143,7 +274151,7 @@
     },
     {
       "symbol": "P:hq.<init>(IIIII[I)V#2",
-      "renamedSymbol": "P:hq.<init>(IIIII[I)V#2",
+      "renamedSymbol": "P:GameResultsScreen.<init>(IIIII[I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -274154,7 +274162,7 @@
     },
     {
       "symbol": "P:hq.<init>(IIIII[I)V#3",
-      "renamedSymbol": "P:hq.<init>(IIIII[I)V#3",
+      "renamedSymbol": "P:GameResultsScreen.<init>(IIIII[I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -274165,7 +274173,7 @@
     },
     {
       "symbol": "P:hq.<init>(IIIII[I)V#4",
-      "renamedSymbol": "P:hq.<init>(IIIII[I)V#4",
+      "renamedSymbol": "P:GameResultsScreen.<init>(IIIII[I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -274176,7 +274184,7 @@
     },
     {
       "symbol": "P:hq.<init>(IIIII[I)V#5",
-      "renamedSymbol": "P:hq.<init>(IIIII[I)V#5",
+      "renamedSymbol": "P:GameResultsScreen.<init>(IIIII[I)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -274187,7 +274195,7 @@
     },
     {
       "symbol": "P:hq.a(BI)I#0",
-      "renamedSymbol": "P:hq.a(BI)I#0",
+      "renamedSymbol": "P:GameResultsScreen.a(BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274198,7 +274206,7 @@
     },
     {
       "symbol": "P:hq.a(BI)I#1",
-      "renamedSymbol": "P:hq.a(BI)I#1",
+      "renamedSymbol": "P:GameResultsScreen.a(BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274209,7 +274217,7 @@
     },
     {
       "symbol": "P:hq.a(BZI)V#0",
-      "renamedSymbol": "P:hq.a(BZI)V#0",
+      "renamedSymbol": "P:GameResultsScreen.a(BZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274220,7 +274228,7 @@
     },
     {
       "symbol": "P:hq.a(BZI)V#1",
-      "renamedSymbol": "P:hq.a(BZI)V#1",
+      "renamedSymbol": "P:GameResultsScreen.a(BZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274231,7 +274239,7 @@
     },
     {
       "symbol": "P:hq.a(BZI)V#2",
-      "renamedSymbol": "P:hq.a(BZI)V#2",
+      "renamedSymbol": "P:GameResultsScreen.a(BZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -274242,7 +274250,7 @@
     },
     {
       "symbol": "P:hq.a(I)V#0",
-      "renamedSymbol": "P:hq.a(I)V#0",
+      "renamedSymbol": "P:GameResultsScreen.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274253,7 +274261,7 @@
     },
     {
       "symbol": "P:hq.a(IB)I#0",
-      "renamedSymbol": "P:hq.a(IB)I#0",
+      "renamedSymbol": "P:GameResultsScreen.a(IB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274264,7 +274272,7 @@
     },
     {
       "symbol": "P:hq.a(IB)I#1",
-      "renamedSymbol": "P:hq.a(IB)I#1",
+      "renamedSymbol": "P:GameResultsScreen.a(IB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274275,7 +274283,7 @@
     },
     {
       "symbol": "P:hq.a(IIZ)V#0",
-      "renamedSymbol": "P:hq.a(IIZ)V#0",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274286,7 +274294,7 @@
     },
     {
       "symbol": "P:hq.a(IIZ)V#1",
-      "renamedSymbol": "P:hq.a(IIZ)V#1",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274297,7 +274305,7 @@
     },
     {
       "symbol": "P:hq.a(IIZ)V#2",
-      "renamedSymbol": "P:hq.a(IIZ)V#2",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -274308,7 +274316,7 @@
     },
     {
       "symbol": "P:hq.a(IIZZZZIIII)V#0",
-      "renamedSymbol": "P:hq.a(IIZZZZIIII)V#0",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZZZZIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274319,7 +274327,7 @@
     },
     {
       "symbol": "P:hq.a(IIZZZZIIII)V#1",
-      "renamedSymbol": "P:hq.a(IIZZZZIIII)V#1",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZZZZIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274330,7 +274338,7 @@
     },
     {
       "symbol": "P:hq.a(IIZZZZIIII)V#2",
-      "renamedSymbol": "P:hq.a(IIZZZZIIII)V#2",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZZZZIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -274341,7 +274349,7 @@
     },
     {
       "symbol": "P:hq.a(IIZZZZIIII)V#3",
-      "renamedSymbol": "P:hq.a(IIZZZZIIII)V#3",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZZZZIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -274352,7 +274360,7 @@
     },
     {
       "symbol": "P:hq.a(IIZZZZIIII)V#4",
-      "renamedSymbol": "P:hq.a(IIZZZZIIII)V#4",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZZZZIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -274363,7 +274371,7 @@
     },
     {
       "symbol": "P:hq.a(IIZZZZIIII)V#5",
-      "renamedSymbol": "P:hq.a(IIZZZZIIII)V#5",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZZZZIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -274374,7 +274382,7 @@
     },
     {
       "symbol": "P:hq.a(IIZZZZIIII)V#6",
-      "renamedSymbol": "P:hq.a(IIZZZZIIII)V#6",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZZZZIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -274385,7 +274393,7 @@
     },
     {
       "symbol": "P:hq.a(IIZZZZIIII)V#7",
-      "renamedSymbol": "P:hq.a(IIZZZZIIII)V#7",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZZZZIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -274396,7 +274404,7 @@
     },
     {
       "symbol": "P:hq.a(IIZZZZIIII)V#8",
-      "renamedSymbol": "P:hq.a(IIZZZZIIII)V#8",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZZZZIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -274407,7 +274415,7 @@
     },
     {
       "symbol": "P:hq.a(IIZZZZIIII)V#9",
-      "renamedSymbol": "P:hq.a(IIZZZZIIII)V#9",
+      "renamedSymbol": "P:GameResultsScreen.a(IIZZZZIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -274418,7 +274426,7 @@
     },
     {
       "symbol": "P:hq.a(IZ)I#0",
-      "renamedSymbol": "P:hq.a(IZ)I#0",
+      "renamedSymbol": "P:GameResultsScreen.a(IZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274429,7 +274437,7 @@
     },
     {
       "symbol": "P:hq.a(IZ)I#1",
-      "renamedSymbol": "P:hq.a(IZ)I#1",
+      "renamedSymbol": "P:GameResultsScreen.a(IZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274440,7 +274448,7 @@
     },
     {
       "symbol": "P:hq.a(IZZ)V#0",
-      "renamedSymbol": "P:hq.a(IZZ)V#0",
+      "renamedSymbol": "P:GameResultsScreen.a(IZZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274451,7 +274459,7 @@
     },
     {
       "symbol": "P:hq.a(IZZ)V#1",
-      "renamedSymbol": "P:hq.a(IZZ)V#1",
+      "renamedSymbol": "P:GameResultsScreen.a(IZZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274462,7 +274470,7 @@
     },
     {
       "symbol": "P:hq.a(IZZ)V#2",
-      "renamedSymbol": "P:hq.a(IZZ)V#2",
+      "renamedSymbol": "P:GameResultsScreen.a(IZZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -274473,7 +274481,7 @@
     },
     {
       "symbol": "P:hq.a(Ljava/lang/String;B)V#0",
-      "renamedSymbol": "P:hq.a(Ljava/lang/String;B)V#0",
+      "renamedSymbol": "P:GameResultsScreen.a(Ljava/lang/String;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274484,7 +274492,7 @@
     },
     {
       "symbol": "P:hq.a(Ljava/lang/String;B)V#1",
-      "renamedSymbol": "P:hq.a(Ljava/lang/String;B)V#1",
+      "renamedSymbol": "P:GameResultsScreen.a(Ljava/lang/String;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274495,7 +274503,7 @@
     },
     {
       "symbol": "P:hq.a(Ljava/lang/String;ILpm;)V#0",
-      "renamedSymbol": "P:hq.a(Ljava/lang/String;ILMatch;)V#0",
+      "renamedSymbol": "P:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274506,7 +274514,7 @@
     },
     {
       "symbol": "P:hq.a(Ljava/lang/String;ILpm;)V#1",
-      "renamedSymbol": "P:hq.a(Ljava/lang/String;ILMatch;)V#1",
+      "renamedSymbol": "P:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274517,7 +274525,7 @@
     },
     {
       "symbol": "P:hq.a(Ljava/lang/String;ILpm;)V#2",
-      "renamedSymbol": "P:hq.a(Ljava/lang/String;ILMatch;)V#2",
+      "renamedSymbol": "P:GameResultsScreen.a(Ljava/lang/String;ILMatch;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -274528,7 +274536,7 @@
     },
     {
       "symbol": "P:hq.a(ZI)V#0",
-      "renamedSymbol": "P:hq.a(ZI)V#0",
+      "renamedSymbol": "P:GameResultsScreen.a(ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274539,7 +274547,7 @@
     },
     {
       "symbol": "P:hq.a(ZI)V#1",
-      "renamedSymbol": "P:hq.a(ZI)V#1",
+      "renamedSymbol": "P:GameResultsScreen.a(ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274550,7 +274558,7 @@
     },
     {
       "symbol": "P:hq.a(ZZIIBII)V#0",
-      "renamedSymbol": "P:hq.a(ZZIIBII)V#0",
+      "renamedSymbol": "P:GameResultsScreen.a(ZZIIBII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274561,7 +274569,7 @@
     },
     {
       "symbol": "P:hq.a(ZZIIBII)V#1",
-      "renamedSymbol": "P:hq.a(ZZIIBII)V#1",
+      "renamedSymbol": "P:GameResultsScreen.a(ZZIIBII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274572,7 +274580,7 @@
     },
     {
       "symbol": "P:hq.a(ZZIIBII)V#2",
-      "renamedSymbol": "P:hq.a(ZZIIBII)V#2",
+      "renamedSymbol": "P:GameResultsScreen.a(ZZIIBII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -274583,7 +274591,7 @@
     },
     {
       "symbol": "P:hq.a(ZZIIBII)V#3",
-      "renamedSymbol": "P:hq.a(ZZIIBII)V#3",
+      "renamedSymbol": "P:GameResultsScreen.a(ZZIIBII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -274594,7 +274602,7 @@
     },
     {
       "symbol": "P:hq.a(ZZIIBII)V#4",
-      "renamedSymbol": "P:hq.a(ZZIIBII)V#4",
+      "renamedSymbol": "P:GameResultsScreen.a(ZZIIBII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -274605,7 +274613,7 @@
     },
     {
       "symbol": "P:hq.a(ZZIIBII)V#5",
-      "renamedSymbol": "P:hq.a(ZZIIBII)V#5",
+      "renamedSymbol": "P:GameResultsScreen.a(ZZIIBII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -274616,7 +274624,7 @@
     },
     {
       "symbol": "P:hq.a(ZZIIBII)V#6",
-      "renamedSymbol": "P:hq.a(ZZIIBII)V#6",
+      "renamedSymbol": "P:GameResultsScreen.a(ZZIIBII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -274627,7 +274635,7 @@
     },
     {
       "symbol": "P:hq.b(BZ)V#0",
-      "renamedSymbol": "P:hq.b(BZ)V#0",
+      "renamedSymbol": "P:GameResultsScreen.b(BZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274638,7 +274646,7 @@
     },
     {
       "symbol": "P:hq.b(BZ)V#1",
-      "renamedSymbol": "P:hq.b(BZ)V#1",
+      "renamedSymbol": "P:GameResultsScreen.b(BZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274649,7 +274657,7 @@
     },
     {
       "symbol": "P:hq.b(I)V#0",
-      "renamedSymbol": "P:hq.b(I)V#0",
+      "renamedSymbol": "P:GameResultsScreen.b(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274660,7 +274668,7 @@
     },
     {
       "symbol": "P:hq.b(II)I#0",
-      "renamedSymbol": "P:hq.b(II)I#0",
+      "renamedSymbol": "P:GameResultsScreen.b(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274671,7 +274679,7 @@
     },
     {
       "symbol": "P:hq.b(II)I#1",
-      "renamedSymbol": "P:hq.b(II)I#1",
+      "renamedSymbol": "P:GameResultsScreen.b(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274682,7 +274690,7 @@
     },
     {
       "symbol": "P:hq.c(B)V#0",
-      "renamedSymbol": "P:hq.c(B)V#0",
+      "renamedSymbol": "P:GameResultsScreen.c(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274693,7 +274701,7 @@
     },
     {
       "symbol": "P:hq.c(I)V#0",
-      "renamedSymbol": "P:hq.c(I)V#0",
+      "renamedSymbol": "P:GameResultsScreen.c(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274704,7 +274712,7 @@
     },
     {
       "symbol": "P:hq.c(II)Z#0",
-      "renamedSymbol": "P:hq.c(II)Z#0",
+      "renamedSymbol": "P:GameResultsScreen.c(II)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274715,7 +274723,7 @@
     },
     {
       "symbol": "P:hq.c(II)Z#1",
-      "renamedSymbol": "P:hq.c(II)Z#1",
+      "renamedSymbol": "P:GameResultsScreen.c(II)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274726,7 +274734,7 @@
     },
     {
       "symbol": "P:hq.d(II)I#0",
-      "renamedSymbol": "P:hq.d(II)I#0",
+      "renamedSymbol": "P:GameResultsScreen.d(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274737,7 +274745,7 @@
     },
     {
       "symbol": "P:hq.d(II)I#1",
-      "renamedSymbol": "P:hq.d(II)I#1",
+      "renamedSymbol": "P:GameResultsScreen.d(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274748,7 +274756,7 @@
     },
     {
       "symbol": "P:hq.e(I)V#0",
-      "renamedSymbol": "P:hq.e(I)V#0",
+      "renamedSymbol": "P:GameResultsScreen.e(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274759,7 +274767,7 @@
     },
     {
       "symbol": "P:hq.e(II)Ljava/lang/String;#0",
-      "renamedSymbol": "P:hq.e(II)Ljava/lang/String;#0",
+      "renamedSymbol": "P:GameResultsScreen.e(II)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274770,7 +274778,7 @@
     },
     {
       "symbol": "P:hq.e(II)Ljava/lang/String;#1",
-      "renamedSymbol": "P:hq.e(II)Ljava/lang/String;#1",
+      "renamedSymbol": "P:GameResultsScreen.e(II)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -274781,7 +274789,7 @@
     },
     {
       "symbol": "P:hq.f(B)V#0",
-      "renamedSymbol": "P:hq.f(B)V#0",
+      "renamedSymbol": "P:GameResultsScreen.f(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -274792,7 +274800,7 @@
     },
     {
       "symbol": "P:hq.f(I)V#0",
-      "renamedSymbol": "P:hq.f(I)V#0",
+      "renamedSymbol": "P:GameResultsScreen.f(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -331402,7 +331410,7 @@
       "original": "Pixelate.java",
       "renamed": "Pixelate.java",
       "inputSha256": "01350a8fe3776c0288104dc932b01e5332f893f6105add570abad67af3f62293",
-      "outputSha256": "cc60bde87a91c9a2090f2b1c17ee4680a00613e5974445f5dacdbd8176777e10",
+      "outputSha256": "d046df0f27851f847d0cf3714712a2126c7dc6bffcebe70de290a17e637d31e2",
       "edits": [
         {
           "start": 74,
@@ -331571,6 +331579,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "MatchController"
+        },
+        {
+          "start": 2011,
+          "end": 2013,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 2665,
@@ -331774,6 +331789,13 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 5864,
+          "end": 5866,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 5869,
@@ -333111,6 +333133,13 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 18150,
+          "end": 18152,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 18225,
@@ -344395,7 +344424,7 @@
       "original": "bc.java",
       "renamed": "EmailValidator.java",
       "inputSha256": "ec1e0cbb3ed882c6f783d9cc8de47c90a2c4e3596e03ad2cf08507d7c32dcfe9",
-      "outputSha256": "80e4ab6c14e405ef5a6ab600f0597a5ce9624ebdc9c3d8522b380176b8f21027",
+      "outputSha256": "a3ac04cf0a522e7354058ffb93a9ede89f433cf71e400515fbe2048cef9c1b05",
       "edits": [
         {
           "start": 50,
@@ -344445,6 +344474,20 @@
           "symbol": "C:c",
           "original": "c",
           "renamed": "EditableTextWidget"
+        },
+        {
+          "start": 2269,
+          "end": 2271,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
+          "start": 2381,
+          "end": 2383,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 4503,
@@ -344543,7 +344586,7 @@
       "original": "bd.java",
       "renamed": "bd.java",
       "inputSha256": "ae6731e68c8d28bc5a5a10c1a9a53dc33c5c7d10d1c7e054e0af0ec41c3afc24",
-      "outputSha256": "847fa5c3ba29c2808198fe3dcc891f60bc98e5242f8580cd0d8a6176317bfc8c",
+      "outputSha256": "e7887225b563b94b0adcbddb5446055ca1bddaf029a14a97a67d7b4222d7f9cf",
       "edits": [
         {
           "start": 66,
@@ -344810,6 +344853,20 @@
           "symbol": "C:vp",
           "original": "vp",
           "renamed": "VerticalScrollbar"
+        },
+        {
+          "start": 4263,
+          "end": 4265,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
+          "start": 4385,
+          "end": 4387,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 4432,
@@ -349684,7 +349741,7 @@
       "original": "bq.java",
       "renamed": "bq.java",
       "inputSha256": "a22a90b7bcb54c31195b0148492cf71af36c835301d982cd0d4d865377da0421",
-      "outputSha256": "93a02613a6d5c4dab3ff21962b77a3ad8154e18ad2b88cdd866719d24c55b65f",
+      "outputSha256": "bfb0f8fcdcbed5a61be1bdaf9e1c41438e5d25b59afae53f437b6df871870b47",
       "edits": [
         {
           "start": 66,
@@ -350212,6 +350269,13 @@
           "renamed": "MouseInputHandler"
         },
         {
+          "start": 11078,
+          "end": 11080,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
           "start": 11141,
           "end": 11143,
           "symbol": "C:gk",
@@ -350252,6 +350316,13 @@
           "symbol": "C:de",
           "original": "de",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 11603,
+          "end": 11605,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 11762,
@@ -356824,7 +356895,7 @@
       "original": "de.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "5064dfa2ecfa6ff0fc4a6dd81ba279d286c03db524000ead5df81a0a315d3d3a",
-      "outputSha256": "9112772bdb5cd488015bc0deb2548247bf4fd16124cc7e692514b9a7614f359f",
+      "outputSha256": "cd518182ad06577c152f5371e8316e2e58e484a48a3c1e496b9b9fb762432476",
       "edits": [
         {
           "start": 53,
@@ -357951,6 +358022,13 @@
           "renamed": "isActivated"
         },
         {
+          "start": 30352,
+          "end": 30354,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
           "start": 30650,
           "end": 30651,
           "symbol": "M:pf.a(I)Z",
@@ -358019,6 +358097,13 @@
           "symbol": "M:pf.a(I)Z",
           "original": "a",
           "renamed": "isActivated"
+        },
+        {
+          "start": 31576,
+          "end": 31578,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 31808,
@@ -360812,7 +360897,7 @@
       "original": "ee.java",
       "renamed": "InputQueue.java",
       "inputSha256": "ace29139357f309e3183be9720c8f65cf59042006426d1beaa233c2d82003038",
-      "outputSha256": "8be06a3e662392e2daa60ed79e9cdc667b74bad05f6f26f04c2dc49b17c9a89e",
+      "outputSha256": "0244dea55287c96a7ec2acd4e558413dac242ceff09fe1b057074027358e10f6",
       "edits": [
         {
           "start": 50,
@@ -360864,6 +360949,20 @@
           "renamed": "MusicCrossfadeStream"
         },
         {
+          "start": 1958,
+          "end": 1960,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
+          "start": 1986,
+          "end": 1988,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
           "start": 2003,
           "end": 2005,
           "symbol": "C:vg",
@@ -360883,6 +360982,20 @@
           "symbol": "C:fh",
           "original": "fh",
           "renamed": "DisplayNameForm"
+        },
+        {
+          "start": 2741,
+          "end": 2743,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
+          "start": 2898,
+          "end": 2900,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 3099,
@@ -365400,7 +365513,7 @@
       "original": "fc.java",
       "renamed": "fc.java",
       "inputSha256": "d63e4ee303bd821868a4ff943c21008fae139bee266a15edc86415bfcb2f5317",
-      "outputSha256": "265a5fd7a90a1cc7591d7b8751c00becae498a45bd929bbad26af0bedd50f6be",
+      "outputSha256": "054578543c02318b6a16252bc6952c0b7e8cb4dc66a5b56d4152658f107e182b",
       "edits": [
         {
           "start": 66,
@@ -365471,6 +365584,20 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "SecondaryNodeHashTable"
+        },
+        {
+          "start": 774,
+          "end": 776,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
+          "start": 800,
+          "end": 802,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 817,
@@ -366118,7 +366245,7 @@
       "original": "fh.java",
       "renamed": "DisplayNameForm.java",
       "inputSha256": "5ebda4676799133358b477dd831d97fb81448c67af5a575dd8bb0606266864ab",
-      "outputSha256": "ae59f5cdee844ef2eead47f20053262219adb1fda252ad620254683a2b37d278",
+      "outputSha256": "6932623d2808a45d96899f1ecf304e7b9aab430d3c4d91ed7146d8bf022d1ec5",
       "edits": [
         {
           "start": 50,
@@ -366602,6 +366729,27 @@
           "symbol": "C:pn",
           "original": "pn",
           "renamed": "NameSuggestionListener"
+        },
+        {
+          "start": 11572,
+          "end": 11574,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
+          "start": 11899,
+          "end": 11901,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
+          "start": 12308,
+          "end": 12310,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 12994,
@@ -374148,7 +374296,7 @@
       "original": "hb.java",
       "renamed": "ContentTransitionDialog.java",
       "inputSha256": "c2606a493e8fe7a88f5b96b2c5c64e69cd36868dc6e440856de15fd15224dc9b",
-      "outputSha256": "93bddaceb4cc6d78ed39e8ab873c67fb6cfc276b04d1bc530e52eedd3ead23be",
+      "outputSha256": "b81395806de079ac4178689c25acccc0d4922ef18ff147b84f97369ebb5b03a3",
       "edits": [
         {
           "start": 53,
@@ -374282,6 +374430,13 @@
           "symbol": "C:de",
           "original": "de",
           "renamed": "MenuScreen"
+        },
+        {
+          "start": 2198,
+          "end": 2200,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 2370,
@@ -378367,10 +378522,17 @@
     },
     {
       "original": "hq.java",
-      "renamed": "hq.java",
+      "renamed": "GameResultsScreen.java",
       "inputSha256": "9721c28ef326cf7c9393e054809ec821a6dde96177329d04f3fd8a84b2a1be15",
-      "outputSha256": "285e9ae48c921ae772ce578ee57b0ea83f8e7131f3aec8e94aae6d37f46d2dee",
+      "outputSha256": "d08d7734cd971b280e63a54b9cf86d391f257a5d0940dd7addc190f7dd61c56b",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
         {
           "start": 61,
           "end": 63,
@@ -378384,6 +378546,13 @@
           "symbol": "C:vg",
           "original": "vg",
           "renamed": "SecondaryNodeHashTable"
+        },
+        {
+          "start": 1006,
+          "end": 1008,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 1515,
@@ -378687,6 +378856,13 @@
           "renamed": "drawCentered"
         },
         {
+          "start": 5149,
+          "end": 5151,
+          "symbol": "M:hq.<init>(IIIII[I)V",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
           "start": 5638,
           "end": 5639,
           "symbol": "M:jl.c(Ljava/lang/String;)I",
@@ -378727,6 +378903,13 @@
           "symbol": "C:pg",
           "original": "pg",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 7588,
+          "end": 7590,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 8256,
@@ -378804,6 +378987,13 @@
           "symbol": "C:ko",
           "original": "ko",
           "renamed": "LoadingProgressDialog"
+        },
+        {
+          "start": 11563,
+          "end": 11565,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 11770,
@@ -378937,6 +379127,13 @@
           "symbol": "C:pf",
           "original": "pf",
           "renamed": "MenuInputState"
+        },
+        {
+          "start": 15563,
+          "end": 15565,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         }
       ]
     },
@@ -382333,7 +382530,7 @@
       "original": "ii.java",
       "renamed": "MatchController.java",
       "inputSha256": "f6d4308b60950a09d985b7c7d325b3438d85cec7d024eb7dbf19702ce8e1bcce",
-      "outputSha256": "b321a6a62bac94e081a948864554a235c644c1e42bba204a8e3cc286dd668da4",
+      "outputSha256": "b9ee992e91132a15ce6d08bfdd6e3c6572ada854062472c75b6a7c07501c80e2",
       "edits": [
         {
           "start": 71,
@@ -382630,6 +382827,41 @@
           "renamed": "DialWidgetPainter"
         },
         {
+          "start": 3751,
+          "end": 3753,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
+          "start": 3964,
+          "end": 3966,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
+          "start": 4095,
+          "end": 4097,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
+          "start": 4112,
+          "end": 4114,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
+          "start": 4263,
+          "end": 4265,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
           "start": 4323,
           "end": 4325,
           "symbol": "C:oa",
@@ -382672,6 +382904,13 @@
           "renamed": "EmailCredentials"
         },
         {
+          "start": 5069,
+          "end": 5071,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
+        },
+        {
           "start": 5490,
           "end": 5492,
           "symbol": "C:jg",
@@ -382684,6 +382923,13 @@
           "symbol": "C:go",
           "original": "go",
           "renamed": "EmailCredentials"
+        },
+        {
+          "start": 5577,
+          "end": 5579,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 5729,
@@ -388307,7 +388553,7 @@
       "original": "jj.java",
       "renamed": "BackgroundScene.java",
       "inputSha256": "d878142b54506d6592227518064962003bb1d5590799bade2ffe30d9a0fed98e",
-      "outputSha256": "54080c6cd041a8270fac861a92a4a0b43d44430f671494f47134411c59e29821",
+      "outputSha256": "f20ebc5796e8ce56c08910348f6a8f6e6bee7b2017160098aba845e499cc74e5",
       "edits": [
         {
           "start": 44,
@@ -388518,6 +388764,13 @@
           "symbol": "C:gk",
           "original": "gk",
           "renamed": "ValidatedTextWidget"
+        },
+        {
+          "start": 1799,
+          "end": 1801,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 1878,
@@ -401139,7 +401392,7 @@
       "original": "mc.java",
       "renamed": "mc.java",
       "inputSha256": "2893d45bfb79e152c5f8bc2febdcfabadb0ddfaabd9f85ad692deaa1cee72371",
-      "outputSha256": "db531a99cebf0377dedd77910b74be334458ce98e6e918bc32c3f550846abd8d",
+      "outputSha256": "4246047d5a8739345c4e50386e82a0360537756e58c8b73e0d4402e638263edf",
       "edits": [
         {
           "start": 82,
@@ -401224,6 +401477,13 @@
           "symbol": "C:cf",
           "original": "cf",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 1373,
+          "end": 1375,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 1487,
@@ -403692,7 +403952,7 @@
       "original": "mi.java",
       "renamed": "mi.java",
       "inputSha256": "afe7db9ac90b75044f798f1538d8b656ed222ccd87960fbba406f09105087a44",
-      "outputSha256": "b3c25287755f8aae19897eeb8333ded49575e61508e252e0469d235d7708ac61",
+      "outputSha256": "ca044046413d675db705d1107b6e22b41887f8952c020d137bcfde257ace85c0",
       "edits": [
         {
           "start": 82,
@@ -404134,6 +404394,13 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "MusicCrossfadeStream"
+        },
+        {
+          "start": 6862,
+          "end": 6864,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 6910,
@@ -404582,6 +404849,13 @@
           "symbol": "C:ko",
           "original": "ko",
           "renamed": "LoadingProgressDialog"
+        },
+        {
+          "start": 14180,
+          "end": 14182,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 14689,
@@ -424298,7 +424572,7 @@
       "original": "pm.java",
       "renamed": "Match.java",
       "inputSha256": "162b0e15b3792a8f03dd2f3967d12166167ec0b5e547a61eab134faf28574ce9",
-      "outputSha256": "efeddb8e1adba92ba565f90abb091b577bee3cd6ab0ad89a0904f1ea7b061b8f",
+      "outputSha256": "7795fcaeb41bc186064c97ae917b0396e1b2f2564d88c08227ea2e4cc0fc3fe2",
       "edits": [
         {
           "start": 71,
@@ -424474,6 +424748,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "MatchController"
+        },
+        {
+          "start": 4459,
+          "end": 4461,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 4517,
@@ -453639,7 +453920,7 @@
       "original": "uk.java",
       "renamed": "uk.java",
       "inputSha256": "0bdcc311bda24f20250e73c6f6f5e0e6206cfb9fff68556d27b217b28af5d8ff",
-      "outputSha256": "fe6ba3728832ce3f80825aecaf87ed3fd8f5991923459805d43c240c9316b9b3",
+      "outputSha256": "9271f21a077bb177b3f77e035a522e2fa13cc7acbb151a64a75d28672137fd1e",
       "edits": [
         {
           "start": 61,
@@ -454557,6 +454838,13 @@
           "symbol": "C:mk",
           "original": "mk",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 45248,
+          "end": 45250,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 48713,
@@ -460292,7 +460580,7 @@
       "original": "vk.java",
       "renamed": "AccountRequestDialog.java",
       "inputSha256": "3533cc65c406ec77b68859ec09024459808831549a2af8f047212fb4684c7966",
-      "outputSha256": "edca04f73cb2ea40c0e105fc0c37c112f41a891b6ac532cadef6912ae45b56c9",
+      "outputSha256": "c3e14613c7b6d0dac272f65a8bcfb60e71de4b41383ed1964245ab9ca79cc265",
       "edits": [
         {
           "start": 44,
@@ -460510,6 +460798,13 @@
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "AccountMessagePanel"
+        },
+        {
+          "start": 4172,
+          "end": 4174,
+          "symbol": "C:hq",
+          "original": "hq",
+          "renamed": "GameResultsScreen"
         },
         {
           "start": 4234,
@@ -470113,10 +470408,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/pixelate"
     },
-    "rulesSha256": "9ce2168b2894e14ed0306b9aa04df3d4337700d433b7633d3602efc1c0eb40ac",
+    "rulesSha256": "3092df621f6ab025ad84956f941a6d186575528e52bfa865bd950422b47bdac7",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "bbe81e06d5b464eab92a6b6bf59f014012750ba4b945989ca378209286aa16a7",
-    "outputTreeSha256": "a9ac7e71a203407de7a0f9780ffbc8c03cde3c677da4e26a838d74795b7d8a3f",
+    "outputTreeSha256": "8cb833cf3617139a0e90539d96807b5b7bfba70123fc527f5938d2c13f7bf643",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -278,7 +278,7 @@ final class bq {
           for (var4Lifetime2 = 0; var4Lifetime2 < vm.field_e.length; var4Lifetime2++) {
             stackIn_115_0 = MouseInputHandler.field_b;
             if (fo.field_a[var4Lifetime2] < 0) {
-              stackIn_116_1 = hq.field_r;
+              stackIn_116_1 = GameResultsScreen.field_r;
             } else {
               stackIn_116_1 = ValidatedTextWidget.field_fb;
             }
@@ -291,7 +291,7 @@ final class bq {
           while (var4Lifetime3 < vm.field_e.length) {
             var6Lifetime1 = fo.field_a[var4Lifetime3];
             if (var6Lifetime1 < 0) {
-              var5Lifetime3 = var5Lifetime3 + hq.field_r;
+              var5Lifetime3 = var5Lifetime3 + GameResultsScreen.field_r;
             } else {
               var7Lifetime2 = sb.a(3, vm.field_e[var4Lifetime3], true);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + QuickChatCategory.field_u;

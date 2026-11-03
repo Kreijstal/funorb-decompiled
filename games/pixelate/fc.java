@@ -31,8 +31,8 @@ final class fc {
           if (null == vm.field_b) {
             vm.field_b = new SecondaryNodeHashTable(64);
           }
-          if (null == hq.field_q) {
-            hq.field_q = new SecondaryNodeHashTable(64);
+          if (null == GameResultsScreen.field_q) {
+            GameResultsScreen.field_q = new SecondaryNodeHashTable(64);
           }
           bq.field_b = param2.children;
           VerticalScrollbar.field_Hb = param0.children;

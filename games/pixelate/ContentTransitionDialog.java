@@ -48,7 +48,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
                             StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new ol(param2, param6, param3, param1, param5, param4));
                           } else {
                             if (param2 == 13) {
-                              StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new hq(param2, param6, param3, param1, param5, param4));
+                              StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new GameResultsScreen(param2, param6, param3, param1, param5, param4));
                             } else {
                               if (param2 == 16) {
                                 StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new uk(param2, param6, param3, param1, param5, param4));

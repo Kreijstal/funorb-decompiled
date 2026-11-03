@@ -209,7 +209,7 @@ final class mi extends MenuScreen {
             if (e.field_d == uk.field_s &&
               MusicPatchNode.e(-18481)) {
               vn.field_b = MusicCrossfadeStream.field_o.a(false);
-              hq.field_t = param2;
+              GameResultsScreen.field_t = param2;
               wo.field_h = MusicCrossfadeStream.field_o.f(255);
               Js5NetworkRequest.field_I = MusicCrossfadeStream.field_o.f(255);
               BufferedRandomAccessFile.field_j = MusicCrossfadeStream.field_o.a((byte) -116);
@@ -392,7 +392,7 @@ final class mi extends MenuScreen {
               }
               var4 = var4 + (ValidatedTextWidget.field_fb + LoadingProgressDialog.field_fb + (bd.field_c << 1));
             } else {
-              var4 = var4 + hq.field_r;
+              var4 = var4 + GameResultsScreen.field_r;
             }
             var3_int++;
           }

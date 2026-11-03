@@ -304,7 +304,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         RuntimeException var2_ref = null;
         var6 = Pixelate.field_H ? 1 : 0;
         try {
-          if (null == hq.field_q) {
+          if (null == GameResultsScreen.field_q) {
             stackIn_3_0 = null;
             return (im) (stackIn_3_0);
           }
@@ -314,7 +314,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           if (var2 == null) {
             var2 = param0;
           }
-          var4 = (im) (hq.field_q.a(-11434, (long)var2.hashCode()));
+          var4 = (im) (GameResultsScreen.field_q.a(-11434, (long)var2.hashCode()));
           while (var4 != null) {
             var8 = (CharSequence) ((Object) var4.field_Fb);
             var5 = dh.a(var8, (byte) 27);
@@ -325,7 +325,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
               stackIn_15_0 = var4;
               return stackIn_15_0;
             }
-            var4 = (im) (hq.field_q.b((byte) 47));
+            var4 = (im) (GameResultsScreen.field_q.b((byte) 47));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

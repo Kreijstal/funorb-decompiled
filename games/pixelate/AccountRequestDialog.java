@@ -133,7 +133,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
 
     final void o(int param0) {
         this.field_rb.a((byte) 125, param0, 4210752);
-        AccountMessagePanel var2 = new AccountMessagePanel(this, this.field_wb, hq.field_D);
+        AccountMessagePanel var2 = new AccountMessagePanel(this, this.field_wb, GameResultsScreen.field_D);
         var2.a(15, -1, sk.field_b);
         this.transitionToContent(var2, -118);
     }

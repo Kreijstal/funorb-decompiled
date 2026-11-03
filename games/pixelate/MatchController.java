@@ -120,26 +120,26 @@ final class MatchController {
     }
 
     final void a(boolean param0, int param1, boolean param2) {
-        hq stackIn_5_0 = null;
+        GameResultsScreen stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_5_2 = 0;
         boolean stackIn_6_3 = false;
         boolean stackIn_8_4;
         boolean stackIn_8_5;
         boolean stackIn_9_6;
-        hq stackIn_21_0 = null;
+        GameResultsScreen stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
         Object var5;
         int var5_int;
         int var6;
-        hq var7;
-        hq var8;
+        GameResultsScreen var7;
+        GameResultsScreen var8;
         var6 = Pixelate.field_H ? 1 : 0;
         if (this.field_g) {
           return;
         }
         this.field_g = true;
-        var7 = (hq) (wo.b(-119, 13));
+        var7 = (GameResultsScreen) (wo.b(-119, 13));
         var8 = var7;
         if (0 != DateOfBirthValidator.field_j) {
           if (DateOfBirthValidator.field_j != 1) {
@@ -164,7 +164,7 @@ final class MatchController {
             }
             stackIn_21_0 = var8;
             stackIn_22_1 = (EmailCredentials.field_k == 0) ? false : true;
-            ((hq) (Object) stackIn_21_0).a(stackIn_22_1, un.field_j.field_n, gb.field_f[1], gb.field_f[0], (byte) 34, var5_int, un.field_j.a((byte) -117));
+            ((GameResultsScreen) (Object) stackIn_21_0).a(stackIn_22_1, un.field_j.field_n, gb.field_f[1], gb.field_f[0], (byte) 34, var5_int, un.field_j.a((byte) -117));
           }
         } else {
           this.j(17945);
@@ -175,7 +175,7 @@ final class MatchController {
           stackIn_8_4 = param0;
           stackIn_8_5 = ArrayWidgetContainer.a((byte) 85);
           stackIn_9_6 = (EmailCredentials.field_k == 0) ? false : true;
-          ((hq) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3, stackIn_8_4, stackIn_8_5, stackIn_9_6, gb.field_f[3], 2, gb.field_f[2], this.field_a.scores[0]);
+          ((GameResultsScreen) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3, stackIn_8_4, stackIn_8_5, stackIn_9_6, gb.field_f[3], 2, gb.field_f[2], this.field_a.scores[0]);
         }
         if (DateOfBirthValidator.field_j != 1) {
           dg.a(1, (byte) -97);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hq extends MenuScreen {
+final class GameResultsScreen extends MenuScreen {
     static int field_r;
     private int field_J;
     private String field_y;
@@ -32,7 +32,7 @@ final class hq extends MenuScreen {
         var12 = Pixelate.field_H ? 1 : 0;
         this.field_G = 0;
         if (param7 != 2) {
-          hq.f((byte) -64);
+          GameResultsScreen.f((byte) -64);
         }
         this.field_v = this.e(10, param0);
         this.field_E = param1;
@@ -160,7 +160,7 @@ final class hq extends MenuScreen {
         }
     }
 
-    hq(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    GameResultsScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
@@ -241,7 +241,7 @@ final class hq extends MenuScreen {
     final void c(byte param0) {
         this.b((byte) 12, false);
         if (param0 > -13) {
-          hq.f((byte) 29);
+          GameResultsScreen.f((byte) 29);
         }
     }
 
@@ -371,7 +371,7 @@ final class hq extends MenuScreen {
         int var6_int = 0;
         int var4 = param0 * 2;
         if (!param1) {
-          hq.f((byte) -107);
+          GameResultsScreen.f((byte) -107);
         }
         int var5 = 128 <= param0 ? param0 * 2 - 256 : 0;
         if (param2) {
@@ -509,7 +509,7 @@ final class hq extends MenuScreen {
           }
         }
         if (param0 >= -35) {
-          hq.f((byte) -122);
+          GameResultsScreen.f((byte) -122);
         }
         this.field_g.b((byte) -71);
     }

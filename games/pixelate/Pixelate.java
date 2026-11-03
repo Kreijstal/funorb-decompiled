@@ -69,7 +69,7 @@ public final class Pixelate extends NetworkGameClient {
         hf var14;
         MatchController var15;
         Object var16;
-        hq var16_ref;
+        GameResultsScreen var16_ref;
         byte[] var17;
         byte[] var19;
         byte[] var22;
@@ -194,7 +194,7 @@ public final class Pixelate extends NetworkGameClient {
             DirectByteStorage.a(109, var14, 4);
           }
         }
-        var16_ref = (hq) (StripedProgressBar.field_H[13]);
+        var16_ref = (GameResultsScreen) (StripedProgressBar.field_H[13]);
         while (true) {
           stackIn_70_0 = !param0;
           if (!jf.a(stackIn_70_0, GrowableIntList.field_d)) {
@@ -595,7 +595,7 @@ public final class Pixelate extends NetworkGameClient {
         IndexedSpriteState.a(false);
         bj.b((byte) 109);
         fc.a(32);
-        hq.f((byte) -49);
+        GameResultsScreen.f((byte) -49);
         l.e(param0 - 20899);
         mp.a(true);
         PlayerController.f(103);

@@ -1142,7 +1142,7 @@ final class uk extends MenuScreen {
                 }
                 var2 = vd.a("connectionrestored", 0);
                 if (null != var2) {
-                  hq.field_D = of.a(var2, 1);
+                  GameResultsScreen.field_D = of.a(var2, 1);
                 }
                 var2 = vd.a("warning_ifyouquit", 0);
                 if (null != var2) {

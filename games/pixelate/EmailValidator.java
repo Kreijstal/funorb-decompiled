@@ -71,10 +71,10 @@ final class EmailValidator extends TextFieldValidator {
           if (param1 != 1) {
             return false;
           }
-          if (null == hq.field_t) {
+          if (null == GameResultsScreen.field_t) {
             return false;
           }
-          stackIn_10_0 = !(0 > param0.toLowerCase().indexOf(hq.field_t.toLowerCase()));
+          stackIn_10_0 = !(0 > param0.toLowerCase().indexOf(GameResultsScreen.field_t.toLowerCase()));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

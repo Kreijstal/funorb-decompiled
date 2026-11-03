@@ -145,10 +145,10 @@ final class bd {
             var1.e(17);
             var1 = vm.field_b.a((byte) 50);
           }
-          var1Lifetime1 = hq.field_q.a(-84);
+          var1Lifetime1 = GameResultsScreen.field_q.a(-84);
           while (var1Lifetime1 != null) {
             var1Lifetime1.e(17);
-            var1Lifetime1 = hq.field_q.a((byte) 50);
+            var1Lifetime1 = GameResultsScreen.field_q.a((byte) 50);
           }
           ValidatedTextWidget.field_db = 0;
         } catch (RuntimeException runtimeException) {

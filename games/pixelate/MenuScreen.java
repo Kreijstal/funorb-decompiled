@@ -840,7 +840,7 @@ abstract class MenuScreen {
                                     break;
                                   case 33:
                                     if (this.field_g.isActivated(40)) {
-                                      ((hq) (this)).b((byte) 12, param2);
+                                      ((GameResultsScreen) (this)).b((byte) 12, param2);
                                     }
                                     break;
                                   default:
@@ -864,7 +864,7 @@ abstract class MenuScreen {
                                     break;
                                   case 34:
                                     if (this.field_g.isActivated(28)) {
-                                      ((hq) (this)).a(param2, -116);
+                                      ((GameResultsScreen) (this)).a(param2, -116);
                                     }
                                     break;
                                 }
