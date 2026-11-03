@@ -1570,7 +1570,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("gameopt_youhaventunlocked", 511);
                 if (null != var2) {
-                  ub.field_Eb = IterableNodeHashTable.a(var2, 17746);
+                  ScrollPane.field_Eb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("gameopt_trychanging1", 511);
                 if (var2 != null) {
@@ -1960,7 +1960,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("checking", 511);
                 if (null != var2) {
-                  qr.field_R = IterableNodeHashTable.a(var2, 17746);
+                  AnimatedPanel.field_R = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("create_namealreadytaken", 511);
                 if (null != var2) {
@@ -2640,7 +2640,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("achievements", 511);
                 if (null != var2) {
-                  ur.field_Db = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Db = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("achievementsthisgame", 511);
                 if (var2 != null) {

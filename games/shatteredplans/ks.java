@@ -36,7 +36,7 @@ final class ks {
             if (!param0) {
               return true;
             }
-            if (WeightedLruCache.field_g != hm.field_q) {
+            if (WeightedLruCache.field_g != PanelNode.field_q) {
               js.a((byte) -10);
               if (BattleSnapshot.a(0)) {
                 NodeHashTableIterator.a(0, "enter");
@@ -49,7 +49,7 @@ final class ks {
             }
             return true;
           }
-          if (null == hm.field_q) {
+          if (null == PanelNode.field_q) {
             return false;
           }
           if (pd.field_k < e.field_f) {
@@ -66,7 +66,7 @@ final class ks {
               if (!param0) {
                 return true;
               }
-              if (WeightedLruCache.field_g != hm.field_q) {
+              if (WeightedLruCache.field_g != PanelNode.field_q) {
                 js.a((byte) -10);
                 if (BattleSnapshot.a(0)) {
                   NodeHashTableIterator.a(0, "enter");
@@ -84,7 +84,7 @@ final class ks {
           return false;
         }
         if (WeightedLruCache.field_g == null) {
-          if (null == hm.field_q) {
+          if (null == PanelNode.field_q) {
             return false;
           }
           if (pd.field_k < e.field_f) {
@@ -99,7 +99,7 @@ final class ks {
               if (!param0) {
                 return true;
               }
-              if (WeightedLruCache.field_g != hm.field_q) {
+              if (WeightedLruCache.field_g != PanelNode.field_q) {
                 js.a((byte) -10);
                 if (BattleSnapshot.a(0)) {
                   NodeHashTableIterator.a(0, "enter");
@@ -126,7 +126,7 @@ final class ks {
             if (!param0) {
               return true;
             }
-            if (WeightedLruCache.field_g != hm.field_q) {
+            if (WeightedLruCache.field_g != PanelNode.field_q) {
               js.a((byte) -10);
               if (BattleSnapshot.a(0)) {
                 NodeHashTableIterator.a(0, "enter");
@@ -281,7 +281,7 @@ final class ks {
         String stackIn_2_3;
         int stackIn_2_4;
         Object stackIn_2_5;
-        qr stackIn_2_6;
+        AnimatedPanel stackIn_2_6;
         int stackIn_2_7;
         int stackIn_3_8 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -314,7 +314,7 @@ final class ks {
           } else {
             stackIn_3_8 = 0;
           }
-          SliderPainter.a((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ub) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
+          SliderPainter.a((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ScrollPane) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_n == 0 &&
             !ha.a((byte) 95) &&
             null == np.field_a &&

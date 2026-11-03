@@ -127,8 +127,8 @@ final class TutorialAi extends LegacyAi {
         field_t = null;
         field_u = null;
         if (param0) {
-          qr var2 = (qr) null;
-          TutorialAi.a(40, -110, (qr) null);
+          AnimatedPanel var2 = (AnimatedPanel) null;
+          TutorialAi.a(40, -110, (AnimatedPanel) null);
         }
         field_v = null;
     }
@@ -211,7 +211,7 @@ final class TutorialAi extends LegacyAi {
         }
     }
 
-    final static void a(int param0, int param1, qr param2) {
+    final static void a(int param0, int param1, AnimatedPanel param2) {
         fc var11 = null;
         Sprite var12 = null;
         String var13 = null;
@@ -260,7 +260,7 @@ final class TutorialAi extends LegacyAi {
         Sprite var30Lifetime1Lifetime4;
         Sprite var30Lifetime1Lifetime5;
         try {
-          SliderPainter.a((int[]) null, 0L, (String) null, (String) null, 293, (ub) null, param2, param0, -1);
+          SliderPainter.a((int[]) null, 0L, (String) null, (String) null, 293, (ScrollPane) null, param2, param0, -1);
           if (0 == param0) {
             var11 = DerelictVictoryChecker.field_m;
             var12 = BoundsRect.field_m[0];

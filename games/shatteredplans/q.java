@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class q extends qr {
-    private qr[] field_xb;
+final class q extends AnimatedPanel {
+    private AnimatedPanel[] field_xb;
     static int[] field_Ab;
-    private qr[] field_Db;
-    private qr field_yb;
+    private AnimatedPanel[] field_Db;
+    private AnimatedPanel field_yb;
     static Sprite field_Cb;
     int field_zb;
     static int field_Bb;
 
     final void a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         if (param5) {
-          this.field_xb = (qr[]) null;
+          this.field_xb = (AnimatedPanel[]) null;
         }
         this.field_mb = param2;
         this.field_hb = param4;
@@ -29,8 +29,8 @@ final class q extends qr {
 
     final void f(boolean param0) {
         int var2 = 0;
-        qr dupTemp$0 = null;
-        qr dupTemp$1 = null;
+        AnimatedPanel dupTemp$0 = null;
+        AnimatedPanel dupTemp$1 = null;
         int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0) {
@@ -50,8 +50,8 @@ final class q extends qr {
         }
     }
 
-    q(long param0, qr param1, String[] param2, qr param3, qr[] param4, int param5) {
-        super(param0, (qr) null);
+    q(long param0, AnimatedPanel param1, String[] param2, AnimatedPanel param3, AnimatedPanel[] param4, int param5) {
+        super(param0, (AnimatedPanel) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -64,24 +64,24 @@ final class q extends qr {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        qr var9 = null;
+        AnimatedPanel var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Db = new qr[param2.length];
-          this.field_yb = new qr(0L, param3);
+          this.field_Db = new AnimatedPanel[param2.length];
+          this.field_yb = new AnimatedPanel(0L, param3);
           this.field_xb = param4;
           for (var8_int = 0; param2.length > var8_int; var8_int++) {
-            var9 = new qr(0L, param1);
+            var9 = new AnimatedPanel(0L, param1);
             var9.field_z = param2[var8_int];
             this.field_Db[var8_int] = var9;
-            this.a(4, var9);
+            this.addChild(4, var9);
           }
-          this.a(4, this.field_yb);
+          this.addChild(4, this.field_yb);
           var11 = 0;
           var8_intLifetime1 = var11;
           while (var11 < param4.length) {
-            this.field_yb.a(4, param4[var11]);
+            this.field_yb.addChild(4, param4[var11]);
             var11++;
           }
           this.field_zb = param5;
@@ -205,7 +205,7 @@ final class q extends qr {
     }
 
     private final void a(int param0, int param1, int param2) {
-        qr dupTemp$0 = null;
+        AnimatedPanel dupTemp$0 = null;
         int var4;
         int var5;
         int var6;
@@ -224,11 +224,11 @@ final class q extends qr {
           this.field_Db[var4].field_K = var6 - var5;
           this.field_Db[var4].field_mb = param1;
         }
-        this.field_yb.a(this.field_K, this.field_mb - param1, (byte) 56, param1, 0);
+        this.field_yb.setTarget(this.field_K, this.field_mb - param1, (byte) 56, param1, 0);
         var8 = 0;
         var4Lifetime1 = var8;
         while (var8 < this.field_xb.length) {
-          this.field_xb[var8].a(-(param2 * 2) + this.field_yb.field_K, this.field_yb.field_mb - param2 * 2, (byte) 100, param2, param2);
+          this.field_xb[var8].setTarget(-(param2 * 2) + this.field_yb.field_K, this.field_yb.field_mb - param2 * 2, (byte) 100, param2, param2);
           if (this.field_zb != var8) {
             dupTemp$0 = this.field_xb[var8];
             dupTemp$0.field_hb = dupTemp$0.field_hb + 10000;

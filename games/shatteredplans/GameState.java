@@ -1191,7 +1191,7 @@ final class GameState {
         if (0 >= this.field_O) {
           return ek.field_H;
         }
-        return QuickChatCategoryRegistry.a(tq.field_i, 4371, new String[]{QuickChatCategoryRegistry.a(BattleEvent.field_x[this.field_G], 4371, new String[]{ur.field_Bb[this.field_n]})});
+        return QuickChatCategoryRegistry.a(tq.field_i, 4371, new String[]{QuickChatCategoryRegistry.a(BattleEvent.field_x[this.field_G], 4371, new String[]{ScrollBar.field_Bb[this.field_n]})});
     }
 
     final static void a(int param0) {
@@ -1515,7 +1515,7 @@ final class GameState {
             }
             if (var4_int >= 251) {
               var5 = var4_int - 251;
-              var6_ref_fs = ur.a(this, 78, param2);
+              var6_ref_fs = ScrollBar.a(this, 78, param2);
               var10 = FleetMove.a(this, param2, 20);
               if (var5 != 3) {
                 param0 -= 2;
@@ -2165,7 +2165,7 @@ final class GameState {
         int var13Lifetime3;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = BattleEvent.field_x.length;
-        var3 = ur.field_Bb.length;
+        var3 = ScrollBar.field_Bb.length;
         var4 = var2 * var3 / 2;
         var5 = var2 / 2;
         var6 = var3 / 2;

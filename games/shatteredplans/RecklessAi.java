@@ -4,7 +4,7 @@
 final class RecklessAi extends StandardAi {
     static int field_q;
     static String field_r;
-    static qr field_p;
+    static AnimatedPanel field_p;
 
     public static void clearStatics(int param0) {
         field_r = null;

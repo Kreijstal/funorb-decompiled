@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class vm extends qr {
+final class vm extends AnimatedPanel {
     private int field_xb;
     static int field_Bb;
     private int field_Eb;
@@ -11,7 +11,7 @@ final class vm extends qr {
     private vm field_Ob;
     private sg[] field_Kb;
     private int field_Mb;
-    static qr field_Cb;
+    static AnimatedPanel field_Cb;
     static boolean field_Nb;
     static String field_Lb;
     private int field_Ib;
@@ -22,7 +22,7 @@ final class vm extends qr {
     private int field_Db;
     private vm[] field_yb;
     private int field_Gb;
-    static qr field_Ab;
+    static AnimatedPanel field_Ab;
     static Sprite field_Jb;
 
     final void h(int param0) {
@@ -51,7 +51,7 @@ final class vm extends qr {
         int var9 = ShatteredPlansClient.field_F ? 1 : 0;
         int var7Lifetime1;
         this.field_Eb = this.field_Ib + param1 * 2;
-        this.a(this.field_Eb, this.field_xb, (byte) 77, param5 - this.field_xb, param3);
+        this.setTarget(this.field_Eb, this.field_xb, (byte) 77, param5 - this.field_xb, param3);
         if (this.field_Mb != param2) {
           this.field_Mb = param2;
           this.c(false, this.field_Db);
@@ -268,7 +268,7 @@ final class vm extends qr {
         return false;
     }
 
-    vm(long param0, qr param1, qr param2, qr param3, vm[] param4, int[] param5, String[] param6, char[] param7) {
+    vm(long param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, vm[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -317,8 +317,8 @@ final class vm extends qr {
               this.field_Hb[var13] == -1) {
               var14 = GameKeyHandler.field_c;
             }
-            this.field_Kb[var13] = new sg(0L, param2, (qr) null, param3, (Sprite) (var14), param6[var13]);
-            this.a(4, this.field_Kb[var13]);
+            this.field_Kb[var13] = new sg(0L, param2, (AnimatedPanel) null, param3, (Sprite) (var14), param6[var13]);
+            this.addChild(4, this.field_Kb[var13]);
             var15 = var17.stringWidth(param6[var13]);
             if (this.field_Ib < var15) {
               this.field_Ib = var15;

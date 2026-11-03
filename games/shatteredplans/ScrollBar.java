@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ur extends qr {
+final class ScrollBar extends AnimatedPanel {
     static String field_yb;
-    private qr field_Gb;
-    private qr field_Fb;
+    private AnimatedPanel field_Gb;
+    private AnimatedPanel field_Fb;
     static gb field_zb;
-    private qr field_xb;
+    private AnimatedPanel field_xb;
     static String[] field_Bb;
-    private qr field_Eb;
+    private AnimatedPanel field_Eb;
     static String field_Db;
-    private qr field_Ab;
-    private qr field_Cb;
+    private AnimatedPanel field_Ab;
+    private AnimatedPanel field_Cb;
     private int field_Hb;
 
-    ur(long param0, qr param1, qr param2, qr param3, qr param4) {
-        super(param0, (qr) null);
+    ScrollBar(long param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
+        super(param0, (AnimatedPanel) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -27,26 +27,26 @@ final class ur extends qr {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        qr var9 = null;
-        qr var10 = null;
+        AnimatedPanel var9 = null;
+        AnimatedPanel var10 = null;
         try {
-          this.field_Fb = new qr(0L, param1);
-          this.field_Cb = new qr(0L, param2);
-          this.a(4, this.field_Fb);
-          this.a(4, this.field_Cb);
-          this.field_Gb = new qr(0L, (qr) null);
-          this.a(4, this.field_Gb);
-          this.field_xb = new qr(0L, param3);
-          this.field_Eb = new qr(0L, param3);
+          this.field_Fb = new AnimatedPanel(0L, param1);
+          this.field_Cb = new AnimatedPanel(0L, param2);
+          this.addChild(4, this.field_Fb);
+          this.addChild(4, this.field_Cb);
+          this.field_Gb = new AnimatedPanel(0L, (AnimatedPanel) null);
+          this.addChild(4, this.field_Gb);
+          this.field_xb = new AnimatedPanel(0L, param3);
+          this.field_Eb = new AnimatedPanel(0L, param3);
           this.field_Eb.field_r = true;
           var9 = this.field_xb;
           var10 = var9;
           var10.field_r = true;
-          this.field_Gb.a(4, this.field_xb);
-          this.field_Gb.a(4, this.field_Eb);
-          this.field_Ab = new qr(0L, param4);
+          this.field_Gb.addChild(4, this.field_xb);
+          this.field_Gb.addChild(4, this.field_Eb);
+          this.field_Ab = new AnimatedPanel(0L, param4);
           this.field_Ab.field_P = true;
-          this.field_Gb.a(4, this.field_Ab);
+          this.field_Gb.addChild(4, this.field_Ab);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -229,7 +229,7 @@ final class ur extends qr {
           return true;
         }
         if (param0) {
-          ur.clearStatics((byte) -12);
+          ScrollBar.clearStatics((byte) -12);
         }
         if (this.field_Cb.field_ub == 0) {
           return false;
@@ -394,7 +394,7 @@ final class ur extends qr {
         }
     }
 
-    ur(long param0, ur param1) {
+    ScrollBar(long param0, ScrollBar param1) {
         this(param0, param1.field_Fb, param1.field_Cb, param1.field_xb, param1.field_Ab);
     }
 
@@ -442,24 +442,24 @@ final class ur extends qr {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        qr var14 = null;
-        qr var15 = null;
-        qr var16 = null;
-        qr var17 = null;
-        qr var18 = null;
-        qr var19 = null;
-        qr var14Lifetime1;
-        qr var14Lifetime2;
-        qr var15Lifetime1;
-        qr var15Lifetime2;
-        qr var16Lifetime1;
-        qr var16Lifetime2;
-        qr var17Lifetime1;
-        qr var17Lifetime2;
-        qr var18Lifetime1;
-        qr var18Lifetime2;
-        qr var19Lifetime1;
-        qr var19Lifetime2;
+        AnimatedPanel var14 = null;
+        AnimatedPanel var15 = null;
+        AnimatedPanel var16 = null;
+        AnimatedPanel var17 = null;
+        AnimatedPanel var18 = null;
+        AnimatedPanel var19 = null;
+        AnimatedPanel var14Lifetime1;
+        AnimatedPanel var14Lifetime2;
+        AnimatedPanel var15Lifetime1;
+        AnimatedPanel var15Lifetime2;
+        AnimatedPanel var16Lifetime1;
+        AnimatedPanel var16Lifetime2;
+        AnimatedPanel var17Lifetime1;
+        AnimatedPanel var17Lifetime2;
+        AnimatedPanel var18Lifetime1;
+        AnimatedPanel var18Lifetime2;
+        AnimatedPanel var19Lifetime1;
+        AnimatedPanel var19Lifetime2;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;

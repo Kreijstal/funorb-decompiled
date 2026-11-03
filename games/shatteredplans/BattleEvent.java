@@ -8,7 +8,7 @@ final class BattleEvent extends IntrusiveNode {
     Star field_p;
     IntrusiveDeque field_v;
     Player field_i;
-    static qr field_u;
+    static AnimatedPanel field_u;
     int field_n;
     static String[] field_x;
     int[] field_j;
@@ -93,7 +93,7 @@ final class BattleEvent extends IntrusiveNode {
     final static tq c(int param0, int param1) {
         tq var2 = new tq(param0, false);
         if (param1 != 0) {
-          field_u = (qr) null;
+          field_u = (AnimatedPanel) null;
         }
         return var2;
     }
@@ -137,7 +137,7 @@ final class BattleEvent extends IntrusiveNode {
     final static void b(int param0, int param1, int param2) {
         QuaternaryLinkNode.field_w = param0;
         if (param2 != 0) {
-          field_u = (qr) null;
+          field_u = (AnimatedPanel) null;
         }
         ObjectList.field_i = param1;
     }

@@ -3,7 +3,7 @@
  */
 final class MenuList extends MenuComponent implements gj {
     static Sprite[] field_w;
-    static qr field_v;
+    static AnimatedPanel field_v;
     static String field_A;
     static String field_u;
     int field_y;
@@ -45,7 +45,7 @@ final class MenuList extends MenuComponent implements gj {
         field_u = null;
         field_z = null;
         if (param0 != 1546006977) {
-          field_v = (qr) null;
+          field_v = (AnimatedPanel) null;
         }
     }
 
@@ -91,7 +91,7 @@ final class MenuList extends MenuComponent implements gj {
           if (is.field_b) {
             return;
           }
-          hm.field_q = param1;
+          PanelNode.field_q = param1;
           if (param1 == null) {
             SliderPainter.field_b = DerelictMapGenerator.field_q;
             jb.field_d = kp.field_j + ArchiveRequest.field_r >> 1;

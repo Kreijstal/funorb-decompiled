@@ -3,7 +3,7 @@
  */
 final class DerelictVictoryChecker extends VictoryChecker {
     static int[] field_k;
-    static ub field_l;
+    static ScrollPane field_l;
     static fc field_m;
     static Archive field_n;
     private int[] field_q;

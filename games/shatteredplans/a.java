@@ -25,7 +25,7 @@ abstract class a extends IntrusiveNode {
         }
     }
 
-    final static qr a(int param0) {
+    final static AnimatedPanel a(int param0) {
         if (param0 != 20605) {
           a.clearStatics((byte) -50);
           return SingleChildWidget.field_y.field_xb;

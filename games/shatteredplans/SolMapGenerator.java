@@ -156,8 +156,8 @@ final class SolMapGenerator extends StandardMapGenerator {
         nk[] var5 = SliderPainter.a("commonui", param1, "screen_options", (byte) -118);
         ValidationIndicator.field_E = new nk[4];
         EmailValidator.field_o = new nk[4];
-        qr.field_A = new nk[4];
-        nk[][] var6 = new nk[][]{qr.field_A, ValidationIndicator.field_E, EmailValidator.field_o};
+        AnimatedPanel.field_A = new nk[4];
+        nk[][] var6 = new nk[][]{AnimatedPanel.field_A, ValidationIndicator.field_E, EmailValidator.field_o};
         int[][] var19 = new int[4][];
         int[][] var16 = var19;
         int[][] var7 = var16;

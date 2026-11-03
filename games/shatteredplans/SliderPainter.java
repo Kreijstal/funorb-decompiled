@@ -125,7 +125,7 @@ final class SliderPainter implements WidgetPainter {
         }
     }
 
-    final static void a(int[] param0, long param1, String param2, String param3, int param4, ub param5, qr param6, int param7, int param8) {
+    final static void a(int[] param0, long param1, String param2, String param3, int param4, ScrollPane param5, AnimatedPanel param6, int param7, int param8) {
         try {
           if (param4 != 293) {
             field_k = (String) null;

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jp extends qr {
+final class jp extends AnimatedPanel {
     static v field_Cb;
-    private qr field_yb;
-    private qr field_zb;
+    private AnimatedPanel field_yb;
+    private AnimatedPanel field_zb;
     static String field_xb;
     static PcmStreamMixer field_Bb;
     private StringBuilder field_Db;
@@ -357,7 +357,7 @@ final class jp extends qr {
         }
     }
 
-    jp(int param0, int param1, int param2, int param3, String param4, qr param5, qr param6, qr param7) {
+    jp(int param0, int param1, int param2, int param3, String param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -377,21 +377,21 @@ final class jp extends qr {
         int var13 = 0;
         this.field_Ab = 0;
         try {
-          this.field_yb = new qr(0L, param6, param4);
-          this.a(4, this.field_yb);
-          this.field_zb = new qr(0L, param7);
+          this.field_yb = new AnimatedPanel(0L, param6, param4);
+          this.addChild(4, this.field_yb);
+          this.field_zb = new AnimatedPanel(0L, param7);
           this.field_zb.field_x = 16764006;
-          this.a(4, this.field_zb);
+          this.addChild(4, this.field_zb);
           this.field_zb.field_u = "|";
           this.field_Db = new StringBuilder(12);
-          var9_int = this.field_yb.e(false);
-          this.field_yb.a(var9_int, cr.field_c, (byte) 96, 3, 5);
-          this.field_zb.a(var9_int, cr.field_c, (byte) 76, cr.field_c + 3, 5);
+          var9_int = this.field_yb.measureWidthUnbounded(false);
+          this.field_yb.setTarget(var9_int, cr.field_c, (byte) 96, 3, 5);
+          this.field_zb.setTarget(var9_int, cr.field_c, (byte) 76, cr.field_c + 3, 5);
           var10 = 5 + var9_int + 5;
           var11 = 3 + cr.field_c * 2 + 3;
           var12 = uh.a(-57, param0, var10, param2);
           var13 = uq.a(param3, 0, var11, param1);
-          this.a(var10, var11, (byte) 63, var13, var12);
+          this.setTarget(var10, var11, (byte) 63, var13, var12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

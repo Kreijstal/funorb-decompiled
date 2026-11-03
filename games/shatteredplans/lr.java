@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lr {
-    static qr field_a;
+    static AnimatedPanel field_a;
     static String field_d;
     static byte[] field_c;
     static String field_f;
@@ -230,7 +230,7 @@ final class lr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 63) {
-            stackIn_4_0 = hm.a(param1, 0, param1.length, (byte) 28);
+            stackIn_4_0 = PanelNode.a(param1, 0, param1.length, (byte) 28);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

@@ -11,7 +11,7 @@ final class DialPainter implements WidgetPainter {
     private nq field_d;
     private int field_i;
     private int field_k;
-    static qr field_g;
+    static AnimatedPanel field_g;
     static Calendar field_e;
     private int field_l;
     static String field_f;

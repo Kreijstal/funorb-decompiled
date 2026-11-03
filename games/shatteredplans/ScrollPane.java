@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub extends qr {
-    qr field_xb;
+final class ScrollPane extends AnimatedPanel {
+    AnimatedPanel field_xb;
     static String[][] field_Db;
     static String field_Bb;
     static qf field_yb;
-    ur field_Ab;
-    qr field_zb;
+    ScrollBar field_Ab;
+    AnimatedPanel field_zb;
     static String field_Cb;
     static String field_Eb;
 
@@ -84,7 +84,7 @@ final class ub extends qr {
         int var8Lifetime1;
         if (param2) {
           var8 = 1;
-          this.field_xb.a(this.field_zb.field_mb, true, var8 != 0, param0);
+          this.field_xb.layoutChildren(this.field_zb.field_mb, true, var8 != 0, param0);
           this.a(param4, false, param1, (byte) 10, param5);
           if (param3 > -113) {
             return false;
@@ -100,7 +100,7 @@ final class ub extends qr {
             var8Lifetime1 = 0;
           }
         }
-        this.field_xb.a(this.field_zb.field_mb, true, var8Lifetime1 != 0, param0);
+        this.field_xb.layoutChildren(this.field_zb.field_mb, true, var8Lifetime1 != 0, param0);
         this.a(param4, false, param1, (byte) 10, param5);
         if (param3 > -113) {
           return false;
@@ -197,15 +197,15 @@ final class ub extends qr {
         return var2Lifetime1;
     }
 
-    ub(long param0, qr param1, qr param2, ur param3) {
-        super(param0, (qr) null);
+    ScrollPane(long param0, AnimatedPanel param1, AnimatedPanel param2, ScrollBar param3) {
+        super(param0, (AnimatedPanel) null);
         try {
-          this.field_zb = new qr(0L, param2);
-          this.field_Ab = new ur(0L, param3);
-          this.a(4, this.field_zb);
-          this.a(4, this.field_Ab);
+          this.field_zb = new AnimatedPanel(0L, param2);
+          this.field_Ab = new ScrollBar(0L, param3);
+          this.addChild(4, this.field_zb);
+          this.addChild(4, this.field_Ab);
           this.field_xb = param1;
-          this.field_zb.a(4, param1);
+          this.field_zb.addChild(4, param1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ub.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -243,7 +243,7 @@ final class ub extends qr {
             }
           }
           if (param0 != 93) {
-            ub.f((byte) -67);
+            ScrollPane.f((byte) -67);
           }
           while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (oq.field_j == 13) {

@@ -6,7 +6,7 @@ final class jr extends IntrusiveNode {
     int field_j;
     int field_i;
     int field_k;
-    static qr field_h;
+    static AnimatedPanel field_h;
 
     final static void a(String param0, int param1, String param2) {
         try {

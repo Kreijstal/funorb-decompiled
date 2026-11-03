@@ -8,7 +8,7 @@ final class aq extends IntrusiveNode {
     int field_l;
     int field_m;
     static boolean[] field_p;
-    static qr field_j;
+    static AnimatedPanel field_j;
     static int[] field_o;
     static double field_h;
 

@@ -47,7 +47,7 @@ final class ee extends ms {
           if (!param1) {
             field_l = (mp) null;
           }
-          SectorCacheStore.field_f.a(4, param0);
+          SectorCacheStore.field_f.addChild(4, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -689,7 +689,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("hint_select_src", 103);
                 if (var2 != null) {
-                  ub.field_Bb = IterableNodeHashTable.a(var2, 17746);
+                  ScrollPane.field_Bb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("hint_select_dest", 123);
                 if (null != var2) {
@@ -825,91 +825,91 @@ final class ee extends ms {
                 }
                 var2 = nb.a("turn_name1,0", 119);
                 if (var2 != null) {
-                  ur.field_Bb[0] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,1", 122);
                 if (var2 != null) {
-                  ur.field_Bb[1] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,2", 116);
                 if (null != var2) {
-                  ur.field_Bb[2] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,3", 125);
                 if (null != var2) {
-                  ur.field_Bb[3] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,4", 126);
                 if (var2 != null) {
-                  ur.field_Bb[4] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[4] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,5", 99);
                 if (null != var2) {
-                  ur.field_Bb[5] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[5] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,6", 121);
                 if (null != var2) {
-                  ur.field_Bb[6] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[6] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,7", 99);
                 if (var2 != null) {
-                  ur.field_Bb[7] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[7] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,8", 109);
                 if (null != var2) {
-                  ur.field_Bb[8] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[8] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,9", 95);
                 if (null != var2) {
-                  ur.field_Bb[9] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[9] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,10", 123);
                 if (var2 != null) {
-                  ur.field_Bb[10] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[10] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,11", 108);
                 if (null != var2) {
-                  ur.field_Bb[11] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[11] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,12", 111);
                 if (null != var2) {
-                  ur.field_Bb[12] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[12] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,13", 126);
                 if (null != var2) {
-                  ur.field_Bb[13] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[13] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,14", 96);
                 if (var2 != null) {
-                  ur.field_Bb[14] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[14] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,15", 126);
                 if (null != var2) {
-                  ur.field_Bb[15] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[15] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,16", 122);
                 if (null != var2) {
-                  ur.field_Bb[16] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[16] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,17", 127);
                 if (null != var2) {
-                  ur.field_Bb[17] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[17] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,18", 122);
                 if (null != var2) {
-                  ur.field_Bb[18] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[18] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,19", 119);
                 if (null != var2) {
-                  ur.field_Bb[19] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[19] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,20", 107);
                 if (var2 != null) {
-                  ur.field_Bb[20] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[20] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name1,21", 121);
                 if (var2 != null) {
-                  ur.field_Bb[21] = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_Bb[21] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_name2,0", 113);
                 if (null != var2) {
@@ -1099,7 +1099,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_instructions_stats", 104);
                 if (null != var2) {
-                  ub.field_Cb = IterableNodeHashTable.a(var2, 17746);
+                  ScrollPane.field_Cb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_project_metal", 118);
                 if (null != var2) {
@@ -2010,7 +2010,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tooltipPartiallyComplete", 117);
                 if (null != var2) {
-                  ur.field_yb = IterableNodeHashTable.a(var2, 17746);
+                  ScrollBar.field_yb = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipProjectComplete", 118);
                 if (var2 != null) {

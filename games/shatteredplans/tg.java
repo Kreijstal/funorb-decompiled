@@ -7,7 +7,7 @@ final class tg {
     static Random field_b;
     static int[] field_d;
     static int field_a;
-    static qr field_c;
+    static AnimatedPanel field_c;
 
     final static boolean a(int param0, int param1, byte param2, int param3) {
         if (param2 >= -91) {

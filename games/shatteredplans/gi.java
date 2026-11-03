@@ -77,7 +77,7 @@ final class gi {
         int var2_intLifetime1;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (hm.field_q == WeightedLruCache.field_g) {
+          if (PanelNode.field_q == WeightedLruCache.field_g) {
             if (null != WeightedLruCache.field_g) {
               te.field_c = te.field_c + 16;
               var5 = WeightedLruCache.field_g.field_f;
@@ -112,7 +112,7 @@ final class gi {
             }
           }
           aj.field_a.clear(0);
-          if (WeightedLruCache.field_g == hm.field_q) {
+          if (WeightedLruCache.field_g == PanelNode.field_q) {
             ei.field_e = kp.field_j;
             e.field_f = ArchiveRequest.field_r;
             ByteArrayNode.field_k = be.field_h;

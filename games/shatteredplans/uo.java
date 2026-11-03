@@ -131,21 +131,21 @@ final class uo {
     }
 
     final static void a(byte param0, boolean param1, int param2, boolean param3, boolean param4) {
-        qr stackIn_20_0 = null;
+        AnimatedPanel stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int stackIn_40_0 = 0;
-        qr stackIn_159_0 = null;
+        AnimatedPanel stackIn_159_0 = null;
         boolean stackIn_160_1 = false;
-        qr stackIn_164_0 = null;
+        AnimatedPanel stackIn_164_0 = null;
         boolean stackIn_165_1 = false;
-        qr stackIn_169_0 = null;
+        AnimatedPanel stackIn_169_0 = null;
         boolean stackIn_170_1 = false;
         Object stackIn_172_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        qr var6 = null;
-        qr var7 = null;
-        qr var8 = null;
+        AnimatedPanel var6 = null;
+        AnimatedPanel var7 = null;
+        AnimatedPanel var8 = null;
         String var9_ref_String = null;
         int var9 = 0;
         String var10_ref_String = null;
@@ -166,11 +166,11 @@ final class uo {
         mj var18_ref = null;
         int var18_int = 0;
         int var19 = 0;
-        qr var21 = null;
+        AnimatedPanel var21 = null;
         int[] var22 = null;
         String var23 = null;
         int[] var24 = null;
-        qr var25 = null;
+        AnimatedPanel var25 = null;
         int var11_intLifetime1;
         int var12Lifetime1;
         int var12Lifetime2;
@@ -202,13 +202,13 @@ final class uo {
             if (!SecondaryNodeDequeIterator.a((byte) -94)) {
               var9_ref_String = np.field_a.field_Xb;
               ArchiveSourceManager.field_f.field_z = QuickChatCategoryRegistry.a(he.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
-              dn.field_f.a(IntrusiveDeque.field_g.field_K, 40, (byte) 56, IntrusiveDeque.field_g.field_mb - 40, 0);
+              dn.field_f.setTarget(IntrusiveDeque.field_g.field_K, 40, (byte) 56, IntrusiveDeque.field_g.field_mb - 40, 0);
               dn.field_f.field_z = QuickChatCategoryRegistry.a(gq.field_a, 4371, new String[]{var9_ref_String});
               var8 = dn.field_f;
             } else {
               ArchiveSourceManager.field_f.field_z = n.field_m.toUpperCase();
               var9 = (IntrusiveDeque.field_g.field_K + 2) / 2;
-              TextFieldWidget.field_I.a(-2 + var9, 40, (byte) 124, IntrusiveDeque.field_g.field_mb - 40, 0);
+              TextFieldWidget.field_I.setTarget(-2 + var9, 40, (byte) 124, IntrusiveDeque.field_g.field_mb - 40, 0);
               if (np.field_a.field_Lb >= np.field_a.field_Eb) {
                 TextFieldWidget.field_I.field_z = SoundPlayback.field_j.toUpperCase();
                 TextFieldWidget.field_I.field_s = false;
@@ -229,7 +229,7 @@ final class uo {
                 }
                 TextFieldWidget.field_I.field_z = TextFieldWidget.field_I.field_z + "<br>" + var10_ref_String;
               }
-              aq.field_j.a(-var9 + IntrusiveDeque.field_g.field_K, 40, (byte) 82, IntrusiveDeque.field_g.field_mb - 40, var9);
+              aq.field_j.setTarget(-var9 + IntrusiveDeque.field_g.field_K, 40, (byte) 82, IntrusiveDeque.field_g.field_mb - 40, var9);
               aq.field_j.field_z = MenuList.field_u.toUpperCase();
               stackIn_20_0 = aq.field_j;
               stackIn_21_1 = (param3) && (sf.field_e == 0L);
@@ -326,7 +326,7 @@ final class uo {
                       ArchiveIndex.field_h[var16Lifetime1] != null) {
                       var18_int = ArchiveIndex.field_h[var16Lifetime1][var17_intLifetime1];
                       if (var18_int != 0 &&
-                        !hm.field_o) {
+                        !PanelNode.field_o) {
                         var11_intLifetime1 = 1;
                       }
                       if (var18_int > var13_int) {
@@ -340,7 +340,7 @@ final class uo {
                         var14_intLifetime1 = var18_intLifetime1;
                       }
                       if (var18_intLifetime1 != 0 &&
-                        !hm.field_o) {
+                        !PanelNode.field_o) {
                         var11_intLifetime1 = 1;
                       }
                     }
@@ -446,13 +446,13 @@ final class uo {
           }
           stackIn_159_0 = am.field_xb;
           stackIn_160_1 = (param1) && (!param4) && (!IntrusiveNodeHashTable.field_e);
-          ((qr) (Object) stackIn_159_0).a(stackIn_160_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_159_0).a(stackIn_160_1, -20429);
           stackIn_164_0 = IntrusiveDeque.field_g;
           stackIn_165_1 = (param1) && (!param4) && (!IntrusiveNodeHashTable.field_e);
-          ((qr) (Object) stackIn_164_0).a(stackIn_165_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_164_0).a(stackIn_165_1, -20429);
           stackIn_169_0 = MouseInputHandler.field_d;
           stackIn_170_1 = (param1) && (!param4) && (IntrusiveNodeHashTable.field_e);
-          ((qr) (Object) stackIn_169_0).a(stackIn_170_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_169_0).a(stackIn_170_1, -20429);
           n.field_h.field_d.f(false);
           if (param0 != 23) {
             stackIn_172_0 = null;

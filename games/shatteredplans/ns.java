@@ -55,7 +55,7 @@ class ns extends il implements ButtonListener {
             }
             return;
           }
-          ur.j(0);
+          ScrollBar.j(0);
           if (param0 != -104) {
             this.i((byte) -32);
             return;

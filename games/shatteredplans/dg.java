@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends qr {
+final class dg extends AnimatedPanel {
     static int[] field_yb;
-    private qr field_xb;
+    private AnimatedPanel field_xb;
 
     final static va g(int param0) {
         va var1 = new va();
@@ -32,7 +32,7 @@ final class dg extends qr {
         return stackIn_9_0;
     }
 
-    dg(qr param0, qr param1, qr param2, qr param3, qr param4, qr param5) {
+    dg(AnimatedPanel param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4, AnimatedPanel param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -49,48 +49,48 @@ final class dg extends qr {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        qr var8 = null;
-        qr var9 = null;
+        AnimatedPanel var8 = null;
+        AnimatedPanel var9 = null;
         int var10 = 0;
         int var11 = 0;
-        qr var13 = null;
-        qr var14 = null;
+        AnimatedPanel var13 = null;
+        AnimatedPanel var14 = null;
         int var15 = 0;
-        qr var17 = null;
+        AnimatedPanel var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new qr(0L, param1, MenuWindow.field_u.toUpperCase());
+          var17 = new AnimatedPanel(0L, param1, MenuWindow.field_u.toUpperCase());
           var17.field_y = 1;
-          this.field_xb = new qr(0L, param2);
-          var8 = new qr(0L, param3);
-          var9 = new qr(0L, param3, DiskCacheWorker.field_g);
+          this.field_xb = new AnimatedPanel(0L, param2);
+          var8 = new AnimatedPanel(0L, param3);
+          var9 = new AnimatedPanel(0L, param3, DiskCacheWorker.field_g);
           var9.field_y = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; var12 < CheckboxPainter.field_c.length; var12++) {
-            var13 = new qr(0L, param3, bg.field_d[var12]);
-            var14 = new qr(0L, param3, CheckboxPainter.field_c[var12]);
+            var13 = new AnimatedPanel(0L, param3, bg.field_d[var12]);
+            var14 = new AnimatedPanel(0L, param3, CheckboxPainter.field_c[var12]);
             var15 = param3.field_nb.stringWidth(CheckboxPainter.field_c[var12]);
-            var13.a(65, 15, (byte) 69, var10, 20);
+            var13.setTarget(65, 15, (byte) 69, var10, 20);
             if (var15 > var11) {
               var11 = var15;
             }
-            var14.a(640, 15, (byte) 122, var10, 90);
-            var8.a(4, var13);
-            var8.a(4, var14);
+            var14.setTarget(640, 15, (byte) 122, var10, 90);
+            var8.addChild(4, var13);
+            var8.addChild(4, var14);
             var10 += 30;
           }
           var10 += 15;
-          var17.a(20 + var11 + 90, 24, (byte) 113, 0, 0);
-          this.a(var17.field_K, var10 + var17.field_mb, (byte) 83, 100, 100);
-          this.field_xb.a(15, 15, (byte) 126, 5, -20 + var17.field_K);
-          var8.a(this.field_K, -var17.field_mb + this.field_mb, (byte) 79, var17.field_mb, 0);
-          var9.a(this.field_K, 15, (byte) 75, 20, 0);
+          var17.setTarget(20 + var11 + 90, 24, (byte) 113, 0, 0);
+          this.setTarget(var17.field_K, var10 + var17.field_mb, (byte) 83, 100, 100);
+          this.field_xb.setTarget(15, 15, (byte) 126, 5, -20 + var17.field_K);
+          var8.setTarget(this.field_K, -var17.field_mb + this.field_mb, (byte) 79, var17.field_mb, 0);
+          var9.setTarget(this.field_K, 15, (byte) 75, 20, 0);
           var8.field_F = Wormhole.a(16, 3, var8.field_mb, 11579568, 8421504, 2105376);
-          var17.a(4, this.field_xb);
-          var8.a(4, var9);
-          this.a(4, var17);
-          this.a(4, var8);
+          var17.addChild(4, this.field_xb);
+          var8.addChild(4, var9);
+          this.addChild(4, var17);
+          this.addChild(4, var8);
           this.field_hb = 320 - (this.field_K >> 1);
           var10Lifetime1 = -(this.field_mb >> 1) + 240;
           return;

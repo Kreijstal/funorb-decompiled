@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ck {
-    static qr field_a;
+    static AnimatedPanel field_a;
     static int field_e;
     static String field_d;
     static String field_b;

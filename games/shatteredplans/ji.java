@@ -3,7 +3,7 @@
  */
 abstract class ji extends WidgetContainer implements ValidatableWidget {
     static ns field_G;
-    static ub field_I;
+    static ScrollPane field_I;
     static String field_F;
     private ja field_H;
     static Sprite[] field_E;
@@ -28,7 +28,7 @@ abstract class ji extends WidgetContainer implements ValidatableWidget {
 
     public final ValidationSource a(byte param0) {
         if (param0 < 58) {
-          field_I = (ub) null;
+          field_I = (ScrollPane) null;
         }
         return (ValidationSource) ((Object) this.field_H);
     }

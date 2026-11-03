@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj {
-    static qr field_c;
+    static AnimatedPanel field_c;
     static int[] field_a;
     static String field_d;
     static ir field_b;
 
-    final static void a(byte param0, qr param1, qr param2) {
+    final static void a(byte param0, AnimatedPanel param1, AnimatedPanel param2) {
         try {
           if (null == param1.field_M) {
             param1.field_M = new IntrusiveDeque();

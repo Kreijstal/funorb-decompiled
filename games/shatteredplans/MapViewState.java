@@ -15,7 +15,7 @@ abstract class MapViewState {
     float field_H;
     float field_k;
     float field_I;
-    static qr field_j;
+    static AnimatedPanel field_j;
     float field_F;
     float field_g;
     Player field_B;

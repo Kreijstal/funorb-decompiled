@@ -3,7 +3,7 @@
  */
 final class uq extends IntrusiveNode {
     static int field_k;
-    static qr field_j;
+    static AnimatedPanel field_j;
     static String field_n;
     static String field_l;
     static int field_i;

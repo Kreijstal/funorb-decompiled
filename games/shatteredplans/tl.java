@@ -521,7 +521,7 @@ abstract class tl extends GameApplet {
         if (DefensiveAi.field_p == 3 &&
           ig.a(LinkPainter.field_g, -7526, tq.field_f, GalaxyMap.field_g) &&
           uq.a(GalaxyMap.field_g, 0)) {
-          qr.f(-98);
+          AnimatedPanel.f(-98);
           GameScreen.c(28164);
           DerelictMapGenerator.field_r = tb.field_c;
           or.field_a = false;

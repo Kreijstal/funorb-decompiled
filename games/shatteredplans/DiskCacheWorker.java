@@ -437,7 +437,7 @@ final class DiskCacheWorker implements Runnable {
           aj.field_c = param1 * ArchiveSourceManager.getTargetFrameRate(param2 ^ param2) / 1000;
           ArchiveRequest.a(param2 - 1102, param3);
           oj.a(param2 ^ 902, param3);
-          qr.a(param3, (byte) 56);
+          AnimatedPanel.a(param3, (byte) 56);
           eq.d((byte) -47);
           UrlLoader.b((byte) -112);
           js.field_j = -aj.field_c + 0;

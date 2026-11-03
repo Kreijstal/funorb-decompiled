@@ -8,7 +8,7 @@ final class DerelictMapReader implements MapGenerator {
     private int field_b;
     static Sprite field_g;
     static boolean field_f;
-    static qr[] field_d;
+    static AnimatedPanel[] field_d;
     static Sprite[] field_i;
     private int field_k;
     static String field_c;

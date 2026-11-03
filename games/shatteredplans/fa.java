@@ -10,7 +10,7 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
     static int[][] field_Z;
     private ValidationSource field_V;
     private int field_U;
-    static qr field_X;
+    static AnimatedPanel field_X;
 
     final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
@@ -32,7 +32,7 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
         if (this.field_v == null) {
           return null;
         }
-        ur.a(bb.field_b, !param0 ? true : false, this.field_x - this.field_U + pd.field_k);
+        ScrollBar.a(bb.field_b, !param0 ? true : false, this.field_x - this.field_U + pd.field_k);
         if (param0) {
           return this.field_v;
         }
@@ -74,7 +74,7 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
           var3 = -(pg.field_J * pg.field_J) + var2;
           param0 = param0 + (-param0 + DerelictMapGenerator.field_m) * var3 / var2;
         }
-        tg.field_c.a(640, 120, (byte) 66, param0, tm.field_h);
+        tg.field_c.setTarget(640, 120, (byte) 66, param0, tm.field_h);
         if (param1 <= -35) {
           SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, tg.field_a, 3, 640, 5, qo.field_b);
           return;

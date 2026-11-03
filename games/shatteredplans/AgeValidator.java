@@ -4,7 +4,7 @@
 final class AgeValidator extends TextFieldValidator {
     static int[] field_o;
     static int[] field_p;
-    static qr field_n;
+    static AnimatedPanel field_n;
 
     final String a(boolean param0, String param1) {
         RuntimeException var3 = null;
@@ -182,7 +182,7 @@ final class AgeValidator extends TextFieldValidator {
         field_p = null;
         field_n = null;
         if (param0 <= 77) {
-          field_n = (qr) null;
+          field_n = (AnimatedPanel) null;
         }
     }
 

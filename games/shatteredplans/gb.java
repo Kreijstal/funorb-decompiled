@@ -7,7 +7,7 @@ final class gb extends IntrusiveNode {
     boolean field_l;
     boolean field_j;
     static String field_o;
-    static qr field_m;
+    static AnimatedPanel field_m;
     int field_h;
     static int field_i;
 

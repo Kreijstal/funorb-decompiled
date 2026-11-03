@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class IntrusiveNode {
-    static qr field_c;
-    static qr field_a;
+    static AnimatedPanel field_c;
+    static AnimatedPanel field_a;
     IntrusiveNode next;
     static String field_g;
     long key;

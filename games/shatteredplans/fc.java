@@ -5,7 +5,7 @@ final class fc {
     private int[] field_i;
     static String field_c;
     private String field_h;
-    qr field_e;
+    AnimatedPanel field_e;
     private int field_l;
     static boolean field_a;
     int field_f;
@@ -417,11 +417,11 @@ final class fc {
 
     final void a(int param0, boolean param1) {
         if (param0 == 13505) {
-          this.field_j.b(param1, 122);
+          this.field_j.drawFullRaster(param1, 122);
           return;
         }
-        this.field_e = (qr) null;
-        this.field_j.b(param1, 122);
+        this.field_e = (AnimatedPanel) null;
+        this.field_j.drawFullRaster(param1, 122);
     }
 
     final void a(nf param0, byte param1) {
@@ -519,7 +519,7 @@ final class fc {
             return;
           }
         } else {
-          this.field_e = (qr) null;
+          this.field_e = (AnimatedPanel) null;
           if (null != np.field_a) {
             return;
           }
@@ -622,7 +622,7 @@ final class fc {
         return true;
     }
 
-    fc(qr param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    fc(AnimatedPanel param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_j = new ul(hd.field_t);
           this.field_i = param6;

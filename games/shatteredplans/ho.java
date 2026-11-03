@@ -3,7 +3,7 @@
  */
 final class ho {
     static int field_b;
-    static qr field_j;
+    static AnimatedPanel field_j;
     static nq field_f;
     static int field_c;
     static int field_a;
@@ -16,7 +16,7 @@ final class ho {
     final static void a(boolean param0, int param1) {
         if (null != bq.field_h) {
           SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l - SoftwareRasterizer.field_i, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
-          bq.field_h.b(param0, -100);
+          bq.field_h.drawFullRaster(param0, -100);
           if (param1 != 8323199) {
             ho.a(-86);
             return;

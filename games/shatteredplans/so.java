@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class so extends qe {
-    static qr field_v;
+    static AnimatedPanel field_v;
     static RasterBuffer field_q;
     int field_u;
     static int field_m;
     static byte[] field_r;
-    static qr field_t;
+    static AnimatedPanel field_t;
     int field_p;
     static String field_s;
     static int field_o;

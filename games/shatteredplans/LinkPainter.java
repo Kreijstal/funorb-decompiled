@@ -6,7 +6,7 @@ final class LinkPainter implements WidgetPainter {
     static int[] field_j;
     static int field_i;
     static int field_e;
-    static qr field_b;
+    static AnimatedPanel field_b;
     private nq field_f;
     static Archive field_g;
     static String field_h;
@@ -143,13 +143,13 @@ final class LinkPainter implements WidgetPainter {
     }
 
     final static ve a(boolean param0, int param1, boolean param2) {
-        ub stackIn_4_0 = null;
+        ScrollPane stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         int stackIn_4_2 = 0;
         boolean stackIn_5_3 = false;
-        qr stackIn_46_0 = null;
+        AnimatedPanel stackIn_46_0 = null;
         String stackIn_47_1 = null;
-        qr stackIn_50_0 = null;
+        AnimatedPanel stackIn_50_0 = null;
         String stackIn_51_1 = null;
         int stackIn_55_0 = 0;
         Object stackIn_102_0 = null;
@@ -180,7 +180,7 @@ final class LinkPainter implements WidgetPainter {
           stackIn_4_1 = param1 * ((cr.field_c + 2) * 3);
           stackIn_4_2 = cr.field_c + 2;
           stackIn_5_3 = (DerelictVictoryChecker.field_l == d.field_a.field_Db);
-          var3_int = ((ub) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_5_3, -103, param2, 2) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_5_3, -103, param2, 2) ? 1 : 0;
           var4 = d.field_a.field_Eb.field_M;
           if (!param0) {
             field_e = 100;
@@ -212,15 +212,15 @@ final class LinkPainter implements WidgetPainter {
                 var8 = 0;
                 if (var19 == 0) {
                   if (null == var7.field_M) {
-                    var7.field_Cb = new qr(0L, ek.field_E);
-                    var7.a(4, var7.field_Cb);
-                    var7.field_Fb = new qr(0L, oj.field_zb);
-                    var7.a(4, var7.field_Fb);
-                    var7.field_Db = new qr(0L, ek.field_E);
-                    var7.a(4, var7.field_Db);
+                    var7.field_Cb = new AnimatedPanel(0L, ek.field_E);
+                    var7.addChild(4, var7.field_Cb);
+                    var7.field_Fb = new AnimatedPanel(0L, oj.field_zb);
+                    var7.addChild(4, var7.field_Fb);
+                    var7.field_Db = new AnimatedPanel(0L, ek.field_E);
+                    var7.addChild(4, var7.field_Db);
                     var7.field_Fb.field_y = 2;
                     var8 = 1;
-                    var7.e((byte) -125);
+                    var7.markDirty((byte) -125);
                   }
                   var7.field_K = d.field_a.field_Eb.field_K;
                   var9 = 0;
@@ -239,7 +239,7 @@ final class LinkPainter implements WidgetPainter {
                     !var7.field_Bb.equals("")) {
                     var7.field_Db.field_pb = BufferedSocket.field_i;
                     var7.field_Db.field_jb = var11;
-                    var7.field_Db.a(BufferedSocket.field_i.field_o + 3, cr.field_c, (byte) 88, var9, 0);
+                    var7.field_Db.setTarget(BufferedSocket.field_i.field_o + 3, cr.field_c, (byte) 88, var9, 0);
                     var12 = 1;
                   }
                   var7.field_Fb.field_x = var10;
@@ -263,7 +263,7 @@ final class LinkPainter implements WidgetPainter {
                     stackIn_47_1 = var7.field_Ab;
                   }
                   stackIn_46_0.field_z = stackIn_47_1;
-                  var7.field_Cb.a(var14, cr.field_c, (byte) 110, var9, var13);
+                  var7.field_Cb.setTarget(var14, cr.field_c, (byte) 110, var9, var13);
                   stackIn_50_0 = var7.field_Fb;
                   if (null != var7.field_xb) {
                     stackIn_51_1 = var7.field_xb;
@@ -271,7 +271,7 @@ final class LinkPainter implements WidgetPainter {
                     stackIn_51_1 = ConquestVictoryChecker.field_p;
                   }
                   stackIn_50_0.field_z = stackIn_51_1;
-                  var7.field_Fb.a(80, cr.field_c, (byte) 109, var9, -80 + var7.field_K);
+                  var7.field_Fb.setTarget(80, cr.field_c, (byte) 109, var9, -80 + var7.field_K);
                   stackIn_55_0 = (var7.field_Cb.field_z.equals(var7.field_Ab)) ? 0 : 1;
                   var15 = stackIn_55_0;
                   var9 = var9 + cr.field_c;
@@ -279,7 +279,7 @@ final class LinkPainter implements WidgetPainter {
                     var7.field_gb = -var7.field_mb + var9;
                   }
                   if (var8 != 0) {
-                    d.field_a.field_Eb.a(2, (qr) (var6), var7, (byte) 98);
+                    d.field_a.field_Eb.layoutAfter(2, (AnimatedPanel) (var6), var7, (byte) 98);
                   }
                   if (var7.field_Db == null ||
                     !var7.field_Db.field_L) {

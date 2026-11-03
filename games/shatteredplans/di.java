@@ -210,13 +210,13 @@ final class di extends IntrusiveNode {
     }
 
     final static void a(boolean param0, boolean param1) {
-        qr stackIn_7_0 = null;
+        AnimatedPanel stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        qr stackIn_11_0 = null;
+        AnimatedPanel stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
-        qr stackIn_24_0 = null;
+        AnimatedPanel stackIn_24_0 = null;
         boolean stackIn_25_1 = false;
-        qr stackIn_28_0 = null;
+        AnimatedPanel stackIn_28_0 = null;
         boolean stackIn_29_1 = false;
         BufferedSocket.a(-6187, SoftwareRasterizer.field_b + 640 >> 1, SoftwareRasterizer.field_k, 0, -640 + SoftwareRasterizer.field_b >> 1);
         if (PlacementOrder.field_t > 0) {
@@ -225,10 +225,10 @@ final class di extends IntrusiveNode {
           }
           stackIn_7_0 = MapViewState.field_j;
           stackIn_8_1 = (param1) && (!IntrusiveDequeCursor.field_b);
-          ((qr) (Object) stackIn_7_0).b(stackIn_8_1, 102);
+          ((AnimatedPanel) (Object) stackIn_7_0).drawFullRaster(stackIn_8_1, 102);
           stackIn_11_0 = AchievementProgress.field_i;
           stackIn_12_1 = (param1) && (!IntrusiveDequeCursor.field_b);
-          ((qr) (Object) stackIn_11_0).b(stackIn_12_1, 119);
+          ((AnimatedPanel) (Object) stackIn_11_0).drawFullRaster(stackIn_12_1, 119);
         }
         if (param0) {
           field_p = (boolean[]) null;
@@ -240,10 +240,10 @@ final class di extends IntrusiveNode {
           }
           stackIn_24_0 = am.field_xb;
           stackIn_25_1 = (param1) && (!IntrusiveNodeHashTable.field_e);
-          ((qr) (Object) stackIn_24_0).b(stackIn_25_1, 123);
+          ((AnimatedPanel) (Object) stackIn_24_0).drawFullRaster(stackIn_25_1, 123);
           stackIn_28_0 = IntrusiveDeque.field_g;
           stackIn_29_1 = (param1) && (!IntrusiveNodeHashTable.field_e);
-          ((qr) (Object) stackIn_28_0).b(stackIn_29_1, 115);
+          ((AnimatedPanel) (Object) stackIn_28_0).drawFullRaster(stackIn_29_1, 115);
         }
         Star.f((byte) 123);
     }
@@ -252,11 +252,11 @@ final class di extends IntrusiveNode {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        ub stackIn_5_0 = null;
+        ScrollPane stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_5_2 = 0;
         boolean stackIn_6_3 = false;
-        qr stackIn_20_0 = null;
+        AnimatedPanel stackIn_20_0 = null;
         String stackIn_21_1 = null;
         int stackIn_24_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -285,7 +285,7 @@ final class di extends IntrusiveNode {
           stackIn_5_1 = param2 * ((cr.field_c + 2) * 3);
           stackIn_5_2 = 2 + cr.field_c;
           stackIn_6_3 = (wg.field_a.field_Db == DerelictVictoryChecker.field_l);
-          var3_int = ((ub) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3, -76, param1, 2) ? 1 : 0;
+          var3_int = ((ScrollPane) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3, -76, param1, 2) ? 1 : 0;
           var4 = wg.field_a.field_Eb.field_M;
           if (2 != po.field_b &&
             1 != po.field_b) {
@@ -301,22 +301,22 @@ final class di extends IntrusiveNode {
           while (var6 != null) {
             var7 = 0;
             if (null == var6.field_M) {
-              var6.field_Cb = new qr(0L, ek.field_E);
-              var6.a(param0 ^ -7900, var6.field_Cb);
-              var6.field_Db = new qr(0L, ek.field_E);
-              var6.a(4, var6.field_Db);
+              var6.field_Cb = new AnimatedPanel(0L, ek.field_E);
+              var6.addChild(param0 ^ -7900, var6.field_Cb);
+              var6.field_Db = new AnimatedPanel(0L, ek.field_E);
+              var6.addChild(4, var6.field_Db);
               var7 = 1;
-              var6.e((byte) -123);
+              var6.markDirty((byte) -123);
             }
             var6.field_K = wg.field_a.field_Eb.field_K;
-            var6.field_Cb.a(var6.field_K, cr.field_c, (byte) 78, 0, 0);
+            var6.field_Cb.setTarget(var6.field_K, cr.field_c, (byte) 78, 0, 0);
             var8 = 0;
             if (var6.field_Bb != null &&
               !var6.field_Bb.equals("")) {
               var6.field_Db.field_jb = 16737894;
               var6.field_Db.field_pb = BufferedSocket.field_i;
               var8 = 1;
-              var6.field_Db.a(3 + BufferedSocket.field_i.field_o, cr.field_c, (byte) 126, 0, 0);
+              var6.field_Db.setTarget(3 + BufferedSocket.field_i.field_o, cr.field_c, (byte) 126, 0, 0);
             }
             var9 = 0;
             var10 = var6.field_K;
@@ -333,12 +333,12 @@ final class di extends IntrusiveNode {
             stackIn_20_0.field_z = stackIn_21_1;
             stackIn_24_0 = (var6.field_Cb.field_z.equals(var6.field_Ab)) ? 0 : 1;
             var11 = stackIn_24_0;
-            var6.field_Cb.a(var10, cr.field_c, (byte) 39, 0, var9);
+            var6.field_Cb.setTarget(var10, cr.field_c, (byte) 39, 0, var9);
             if (var3_int == 0) {
               var6.field_gb = cr.field_c - var6.field_mb;
             }
             if (var7 != 0) {
-              wg.field_a.field_Eb.a(2, (qr) (var5), var6, (byte) 55);
+              wg.field_a.field_Eb.layoutAfter(2, (AnimatedPanel) (var5), var6, (byte) 55);
             }
             if (var6.field_Db != null &&
               var6.field_Db.field_L) {

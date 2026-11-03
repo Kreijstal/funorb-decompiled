@@ -109,7 +109,7 @@ final class va {
           }
           stackIn_12_0 = 93;
           stackIn_13_1 = !(jm.field_t >= 13);
-          wh.field_c = ub.$cfr$intArgs$a$be17d4c2d3e3(stackIn_12_0, stackIn_13_1);
+          wh.field_c = ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(stackIn_12_0, stackIn_13_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

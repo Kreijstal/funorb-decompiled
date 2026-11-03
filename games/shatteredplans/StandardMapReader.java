@@ -5,7 +5,7 @@ final class StandardMapReader implements MapGenerator {
     private int field_a;
     private PacketBuffer field_e;
     private int field_b;
-    static qr field_h;
+    static AnimatedPanel field_h;
     static String field_d;
     static wa field_g;
     private int field_f;
@@ -86,17 +86,17 @@ final class StandardMapReader implements MapGenerator {
         }
     }
 
-    final static qr a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, nq param8, int param9, int param10, int param11, int param12) {
-        qr var13 = null;
+    final static AnimatedPanel a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, nq param8, int param9, int param10, int param11, int param12) {
+        AnimatedPanel var13 = null;
         RuntimeException var13_ref = null;
-        qr stackIn_2_0 = null;
-        qr stackIn_4_0 = null;
+        AnimatedPanel stackIn_2_0 = null;
+        AnimatedPanel stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var13 = new qr(0L, (qr) null);
+          var13 = new AnimatedPanel(0L, (AnimatedPanel) null);
           var13.field_F = qp.a(param7, -114, param3);
           var13.field_lb = qp.a(param12, -79, param11);
           var13.field_vb = qp.a(param10, param5 ^ 28, param6);
@@ -104,7 +104,7 @@ final class StandardMapReader implements MapGenerator {
           var13.field_wb = qp.a(param0, param5 - 213, param2);
           var13.field_nb = param8;
           if (param5 != 99) {
-            stackIn_2_0 = (qr) null;
+            stackIn_2_0 = (AnimatedPanel) null;
             return stackIn_2_0;
           }
           var13.field_x = param9;

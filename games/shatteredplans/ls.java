@@ -4,7 +4,7 @@
 final class ls {
     static String field_b;
     static String field_c;
-    static ub field_a;
+    static ScrollPane field_a;
     static String field_d;
 
     public static void clearStatics(int param0) {

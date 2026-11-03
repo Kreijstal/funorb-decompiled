@@ -5,7 +5,7 @@ final class sf {
     static qf field_g;
     static long field_e;
     int field_c;
-    static qr field_f;
+    static AnimatedPanel field_f;
     sf field_b;
     static String field_h;
     static String field_a;

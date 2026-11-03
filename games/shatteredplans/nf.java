@@ -16,7 +16,7 @@ final class nf {
     int[] field_f;
     String field_b;
     int field_n;
-    qr field_j;
+    AnimatedPanel field_j;
     int field_e;
 
     final int a(byte param0) {

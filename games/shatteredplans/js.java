@@ -133,9 +133,9 @@ final class js {
         }
     }
 
-    final static qr b(byte param0) {
+    final static AnimatedPanel b(byte param0) {
         if (param0 != 121) {
-          return (qr) null;
+          return (AnimatedPanel) null;
         }
         return d.field_a.field_Eb;
     }
@@ -389,7 +389,7 @@ final class js {
           ListContent.field_g = false;
           WhirlpoolHasher.field_g = false;
           DerelictMapGenerator.field_q = SliderPainter.field_b;
-          WeightedLruCache.field_g = hm.field_q;
+          WeightedLruCache.field_g = PanelNode.field_q;
           ArchiveRequest.field_r = MenuButton.field_B;
           VictoryChecker.field_j = false;
           SliderWidget.field_L = false;

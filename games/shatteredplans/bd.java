@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bd extends MenuLabel {
-    static qr field_E;
+    static AnimatedPanel field_E;
     static boolean field_A;
     static Sprite[] field_C;
     static String field_F;

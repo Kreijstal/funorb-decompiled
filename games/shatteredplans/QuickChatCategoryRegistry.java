@@ -5,10 +5,10 @@ final class QuickChatCategoryRegistry {
     static int[] field_d;
     private Archive field_c;
     private Archive field_e;
-    static qr[] field_g;
+    static AnimatedPanel[] field_g;
     static int field_b;
     private WeightedLruCache field_f;
-    static qr field_h;
+    static AnimatedPanel field_h;
     static int field_a;
 
     final static int a(int param0, int param1, int param2, int param3, int param4) {
@@ -91,7 +91,7 @@ final class QuickChatCategoryRegistry {
             break;
           }
           if (param1 != 4371) {
-            field_g = (qr[]) null;
+            field_g = (AnimatedPanel[]) null;
           }
           var6 = new StringBuilder(var4);
           var5Lifetime1 = 0;

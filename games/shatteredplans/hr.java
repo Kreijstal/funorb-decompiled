@@ -101,12 +101,12 @@ final class hr {
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var6_int = param4 + 2 + 485 + 8 + param2 + 8;
-          StatusContent.field_c.a(var6_int - 6, -6 + tg.field_c.field_mb, (byte) 82, 3, 3);
+          StatusContent.field_c.setTarget(var6_int - 6, -6 + tg.field_c.field_mb, (byte) 82, 3, 3);
           var7 = StatusContent.field_c.field_mb - 5;
-          TaskAi.field_o.a(487 + (param2 + param4), param1, (byte) 69, -param1 + var7, 5);
-          uq.field_j.a(-cg.field_C.field_K - param2 + TaskAi.field_o.field_K, param1, (byte) 116, 0, param2);
+          TaskAi.field_o.setTarget(487 + (param2 + param4), param1, (byte) 69, -param1 + var7, 5);
+          uq.field_j.setTarget(-cg.field_C.field_K - param2 + TaskAi.field_o.field_K, param1, (byte) 116, 0, param2);
           var7 = var7 - (param1 + 2);
-          cg.field_C.a(cg.field_C.field_K, param1, (byte) 95, 0, param2 + uq.field_j.field_K);
+          cg.field_C.setTarget(cg.field_C.field_K, param1, (byte) 95, 0, param2 + uq.field_j.field_K);
           ji.field_I.a(485 + param2 - (-2 - param4), 5, 5, 2, -123, -5 + var7, param4);
           if (wi.field_c != null) {
             wi.field_c.setBounds(ji.field_I.field_db, ji.field_I.field_mb, (byte) 117, ji.field_I.field_hb, ji.field_I.field_K);
@@ -125,12 +125,12 @@ final class hr {
               var11++;
               var7Lifetime1 = -var13 + var11 * (-4 + tg.field_c.field_mb) / (1 + gq.field_d) + 3 - 2;
               if (5 <= var12) {
-                pr.field_c.a(var8, var7Lifetime1, (byte) 46, var13, var6_int);
+                pr.field_c.setTarget(var8, var7Lifetime1, (byte) 46, var13, var6_int);
               } else {
-                oq.field_b[var12].a(var8, var7Lifetime1, (byte) 115, var13, var6_int);
-                tb.field_a[var12].a(var9 - param2, var7Lifetime1, (byte) 118, 0, param2);
-                DerelictMapReader.field_d[var12].a(param0, -param5 + var7Lifetime1 - param5, (byte) 122, param5, var9);
-                n.field_n[var12].a(var8 - param2 - var10, var7Lifetime1 - param5 - param5, (byte) 52, param5, var10);
+                oq.field_b[var12].setTarget(var8, var7Lifetime1, (byte) 115, var13, var6_int);
+                tb.field_a[var12].setTarget(var9 - param2, var7Lifetime1, (byte) 118, 0, param2);
+                DerelictMapReader.field_d[var12].setTarget(param0, -param5 + var7Lifetime1 - param5, (byte) 122, param5, var9);
+                n.field_n[var12].setTarget(var8 - param2 - var10, var7Lifetime1 - param5 - param5, (byte) 52, param5, var10);
               }
             }
           }

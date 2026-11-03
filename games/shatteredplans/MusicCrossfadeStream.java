@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MusicCrossfadeStream extends PcmStream {
-    static qr field_v;
+    static AnimatedPanel field_v;
     private int[] field_D;
     private MusicTrack field_E;
     static String[] field_w;

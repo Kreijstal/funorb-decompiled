@@ -10,7 +10,7 @@ abstract class ek extends UiWidget implements ni {
     UiWidget[] field_B;
     static String field_G;
     static int field_A;
-    static qr field_E;
+    static AnimatedPanel field_E;
     static Archive field_D;
     static boolean[] field_F;
 
@@ -258,7 +258,7 @@ abstract class ek extends UiWidget implements ni {
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 != -92) {
-          field_E = (qr) null;
+          field_E = (AnimatedPanel) null;
         }
         return pg.a(param2, 1, 1, (byte) -41, param3, param0, 3, 1, param1);
     }
@@ -420,7 +420,7 @@ abstract class ek extends UiWidget implements ni {
             }
           }
           if (param4 != -600269855) {
-            field_E = (qr) null;
+            field_E = (AnimatedPanel) null;
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ek.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');

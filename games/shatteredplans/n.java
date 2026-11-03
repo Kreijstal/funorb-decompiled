@@ -9,9 +9,9 @@ final class n extends IntrusiveNode {
     static String field_m;
     static String field_l;
     static Sprite field_k;
-    static qr field_o;
+    static AnimatedPanel field_o;
     static String field_j;
-    static qr[] field_n;
+    static AnimatedPanel[] field_n;
 
     public static void clearStatics(int param0) {
         field_n = null;

@@ -5,12 +5,12 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
     static String field_k;
     static int field_j;
     static String field_m;
-    static qr field_l;
+    static AnimatedPanel field_l;
     private TextFieldWidget field_i;
 
     public final boolean a(int param0) {
         if (param0 != 16647) {
-          field_l = (qr) null;
+          field_l = (AnimatedPanel) null;
           if (null != this.field_i.field_s) {
             return this.field_i.field_s.length() == 0 ? true : false;
           }
@@ -117,8 +117,8 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
         eh var2 = null;
         eh var2Lifetime1;
         if (param0 < 96) {
-          field_l = (qr) null;
-          tg.field_c.b(param1, -43);
+          field_l = (AnimatedPanel) null;
+          tg.field_c.drawFullRaster(param1, -43);
           var2 = wi.field_c;
           if (var2 != null) {
             var2.draw(tg.field_c.field_N, tg.field_c.field_B, (byte) -66);
@@ -126,7 +126,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
           }
           return;
         }
-        tg.field_c.b(param1, -43);
+        tg.field_c.drawFullRaster(param1, -43);
         var2Lifetime1 = wi.field_c;
         if (var2Lifetime1 == null) {
           return;

@@ -10,11 +10,11 @@ final class FleetMove extends QuaternaryLinkNode {
     int field_z;
     static boolean field_C;
     static String field_D;
-    static qr field_F;
+    static AnimatedPanel field_F;
 
     final static int e(int param0) {
         if (param0 >= -77) {
-          field_F = (qr) null;
+          field_F = (AnimatedPanel) null;
           return DerelictMapReader.field_a;
         }
         return DerelictMapReader.field_a;

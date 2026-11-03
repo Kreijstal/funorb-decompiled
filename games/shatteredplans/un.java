@@ -5,7 +5,7 @@ final class un extends hb {
     private static int[] field_f;
     private static int[] field_k;
     private IntrusiveDeque field_h;
-    static qr field_g;
+    static AnimatedPanel field_g;
     static ValidationState field_i;
     static String field_j;
 

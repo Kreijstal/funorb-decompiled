@@ -39,7 +39,7 @@ final class bb {
         }
     }
 
-    final static qr a(byte param0) {
+    final static AnimatedPanel a(byte param0) {
         if (param0 != 100) {
           bb.a(false, false, (byte) 25, -35);
         }
@@ -75,22 +75,22 @@ final class bb {
 
     final static void a(boolean param0, boolean param1, byte param2, int param3) {
         int stackIn_13_0 = 0;
-        qr stackIn_25_0 = null;
+        AnimatedPanel stackIn_25_0 = null;
         String stackIn_26_1 = null;
-        qr stackIn_28_0 = null;
+        AnimatedPanel stackIn_28_0 = null;
         String stackIn_29_1 = null;
         String stackIn_57_0 = null;
-        qr stackIn_70_0 = null;
+        AnimatedPanel stackIn_70_0 = null;
         boolean stackIn_71_1 = false;
-        qr stackIn_75_0 = null;
+        AnimatedPanel stackIn_75_0 = null;
         boolean stackIn_76_1 = false;
-        qr stackIn_80_0 = null;
+        AnimatedPanel stackIn_80_0 = null;
         boolean stackIn_81_1 = false;
         int stackIn_83_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        qr var5 = null;
-        qr var6 = null;
+        AnimatedPanel var5 = null;
+        AnimatedPanel var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -101,9 +101,9 @@ final class bb {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        qr var15 = null;
+        AnimatedPanel var15 = null;
         String var16 = null;
-        qr var17 = null;
+        AnimatedPanel var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
@@ -126,8 +126,8 @@ final class bb {
             var6.field_K = 0;
             ArchiveSourceManager.field_f.field_z = le.field_c.toUpperCase();
             var7 = (2 + IntrusiveDeque.field_g.field_K) / 2;
-            dn.field_f.a(-2 + var7, 40, (byte) 108, IntrusiveDeque.field_g.field_mb - 40, 0);
-            aq.field_j.a(-var7 + IntrusiveDeque.field_g.field_K, 40, (byte) 73, IntrusiveDeque.field_g.field_mb - 40, var7);
+            dn.field_f.setTarget(-2 + var7, 40, (byte) 108, IntrusiveDeque.field_g.field_mb - 40, 0);
+            aq.field_j.setTarget(-var7 + IntrusiveDeque.field_g.field_K, 40, (byte) 73, IntrusiveDeque.field_g.field_mb - 40, var7);
             if (nl.field_a.length == 1 &&
               2 == nl.field_a[0]) {
               var8 = 0;
@@ -251,13 +251,13 @@ final class bb {
           }
           stackIn_70_0 = am.field_xb;
           stackIn_71_1 = (param1) && (!param0) && (!IntrusiveNodeHashTable.field_e);
-          ((qr) (Object) stackIn_70_0).a(stackIn_71_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_70_0).a(stackIn_71_1, -20429);
           stackIn_75_0 = IntrusiveDeque.field_g;
           stackIn_76_1 = (param1) && (!param0) && (!IntrusiveNodeHashTable.field_e);
-          ((qr) (Object) stackIn_75_0).a(stackIn_76_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_75_0).a(stackIn_76_1, -20429);
           stackIn_80_0 = MouseInputHandler.field_d;
           stackIn_81_1 = (param1) && (!param0) && (IntrusiveNodeHashTable.field_e);
-          ((qr) (Object) stackIn_80_0).a(stackIn_81_1, -20429);
+          ((AnimatedPanel) (Object) stackIn_80_0).a(stackIn_81_1, -20429);
           n.field_h.field_d.f(false);
           if (he.field_p != null) {
             stackIn_83_0 = ~DialPainter.field_g.field_rb;

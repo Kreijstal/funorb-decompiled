@@ -5,7 +5,7 @@ final class pr {
     static int[] field_d;
     static String field_e;
     static Sprite field_a;
-    static qr field_c;
+    static AnimatedPanel field_c;
     static String field_b;
     static int field_g;
     static String field_f;
@@ -13,7 +13,7 @@ final class pr {
     final static void a(java.awt.Component param0, int param1) {
         try {
           if (param1 != -9194) {
-            field_c = (qr) null;
+            field_c = (AnimatedPanel) null;
           }
           param0.setFocusTraversalKeysEnabled(false);
           param0.addKeyListener(im.field_c);

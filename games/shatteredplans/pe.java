@@ -530,9 +530,9 @@ final class pe extends WidgetContainer implements op, ButtonListener {
         }
     }
 
-    final static qr m(int param0) {
+    final static AnimatedPanel m(int param0) {
         RuntimeException var1 = null;
-        qr stackIn_4_0 = null;
+        AnimatedPanel stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 20) {

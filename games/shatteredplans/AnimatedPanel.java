@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class qr extends hm {
+class AnimatedPanel extends PanelNode {
     static nk[] field_A;
     int field_I;
     private int field_E;
@@ -177,7 +177,7 @@ class qr extends hm {
             var7 = param2.length;
             var8 = var7 * md.field_J[param5];
             if (param1 != 50) {
-              qr.a(false, (byte) 41);
+              AnimatedPanel.a(false, (byte) 41);
             }
             var9 = 0;
             while (50 > var9) {
@@ -239,8 +239,8 @@ class qr extends hm {
         }
     }
 
-    final int a(int param0, byte param1) {
-        qr var4 = null;
+    final int measureWidth(int param0, byte param1) {
+        AnimatedPanel var4 = null;
         int var5 = 0;
         int var4_int = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -263,19 +263,19 @@ class qr extends hm {
           this.a(false, false, true, 31, 106, -74, false, -100, false, false, -72);
         }
         if (null != this.field_M) {
-          var4 = (qr) (this.field_M.startForward(0));
+          var4 = (AnimatedPanel) (this.field_M.startForward(0));
           while (var4 != null) {
             var5 = var4.field_hb + var4.field_K;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (qr) (this.field_M.nextForward((byte) -71));
+            var4 = (AnimatedPanel) (this.field_M.nextForward((byte) -71));
           }
         }
         return var3;
     }
 
-    final void a(int param0, qr param1) {
+    final void addChild(int param0, AnimatedPanel param1) {
         if (null == this.field_M) {
           this.field_M = new IntrusiveDeque();
         }
@@ -289,7 +289,7 @@ class qr extends hm {
         }
     }
 
-    final void a(int param0, qr param1, qr param2, byte param3) {
+    final void layoutAfter(int param0, AnimatedPanel param1, AnimatedPanel param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -329,7 +329,7 @@ class qr extends hm {
         }
     }
 
-    final void b(boolean param0, int param1) {
+    final void drawFullRaster(boolean param0, int param1) {
         this.a(false, true, false, 0, 0, -2147483648, false, SoftwareRasterizer.field_k, false, param0, SoftwareRasterizer.field_b);
         int var3 = 114 % ((param1 - 25) / 62);
     }
@@ -338,13 +338,13 @@ class qr extends hm {
         jb.a(param0, (byte) -27);
         if (param1 <= 107) {
           GameRules var3 = (GameRules) null;
-          qr.a(46, -4, (String[]) null, (GameRules) null, -66, -4);
+          AnimatedPanel.a(46, -4, (String[]) null, (GameRules) null, -66, -4);
         }
         mj.a(0, param0);
     }
 
-    final void a(int param0, boolean param1, boolean param2, int param3) {
-        qr var10_ref_qr = null;
+    final void layoutChildren(int param0, boolean param1, boolean param2, int param3) {
+        AnimatedPanel var10_ref_qr = null;
         int var10 = 0;
         int var9 = 0;
         int var11 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -355,11 +355,11 @@ class qr extends hm {
         int var9Lifetime1;
         if (!param2) {
           var9 = 0;
-          var10_ref_qr = (qr) (this.field_M.startForward(0));
+          var10_ref_qr = (AnimatedPanel) (this.field_M.startForward(0));
           while (var10_ref_qr != null) {
             var10_ref_qr.field_w = -var10_ref_qr.field_db + var9;
             var9 = var9 + (var10_ref_qr.field_mb + var10_ref_qr.field_gb + param3);
-            var10_ref_qr = (qr) (this.field_M.nextForward((byte) -71));
+            var10_ref_qr = (AnimatedPanel) (this.field_M.nextForward((byte) -71));
           }
           var8 = -param3 + var9;
         }
@@ -386,15 +386,15 @@ class qr extends hm {
         }
     }
 
-    final void e(byte param0) {
-        qr var4 = null;
+    final void markDirty(byte param0) {
+        AnimatedPanel var4 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (this.field_M != null) {
-          var4 = (qr) (this.field_M.startReverse(3725));
+          var4 = (AnimatedPanel) (this.field_M.startReverse(3725));
           while (var4 != null) {
             var4.field_H = true;
-            var4.e((byte) -123);
-            var4 = (qr) (this.field_M.nextReverse(-125));
+            var4.markDirty((byte) -123);
+            var4 = (AnimatedPanel) (this.field_M.nextReverse(-125));
           }
         }
         if (param0 >= -122) {
@@ -412,7 +412,7 @@ class qr extends hm {
         int var11;
         int var12;
         int var13;
-        qr var14;
+        AnimatedPanel var14;
         int var15;
         int var7Lifetime1;
         int var7Lifetime2;
@@ -482,10 +482,10 @@ class qr extends hm {
         stackIn_39_1 = (this.field_v) && (this.field_ub == AllianceExpiredEvent.field_n) && (param3);
         this.field_L = stackIn_39_1;
         if (null != this.field_M) {
-          var14 = (qr) (this.field_M.startReverse(3725));
+          var14 = (AnimatedPanel) (this.field_M.startReverse(3725));
           while (var14 != null) {
             var14.a(this.field_B, this.field_N, this.field_K, param3, -93, this.field_mb);
-            var14 = (qr) (this.field_M.nextReverse(-125));
+            var14 = (AnimatedPanel) (this.field_M.nextReverse(-125));
           }
         }
         if (this.field_v) {
@@ -526,7 +526,7 @@ class qr extends hm {
         IterableNodeHashTable.field_a = null;
     }
 
-    final void a(qr param0, boolean param1) {
+    final void copyFrom(AnimatedPanel param0, boolean param1) {
         boolean stackIn_101_1 = false;
         RuntimeException stackIn_107_0 = null;
         StringBuilder stackIn_107_1 = null;
@@ -667,7 +667,7 @@ class qr extends hm {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4) {
+    final void setTarget(int param0, int param1, byte param2, int param3, int param4) {
         this.field_db = param3;
         this.field_hb = param4;
         if (param2 <= 38) {
@@ -790,15 +790,15 @@ class qr extends hm {
         }
     }
 
-    qr(long param0, qr param1) {
+    AnimatedPanel(long param0, AnimatedPanel param1) {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    final int e(boolean param0) {
+    final int measureWidthUnbounded(boolean param0) {
         if (param0) {
-          this.a(55, true, true, 26);
+          this.layoutChildren(55, true, true, 26);
         }
-        return this.a(2147483647, (byte) -93);
+        return this.measureWidth(2147483647, (byte) -93);
     }
 
     final void a(boolean param0, int param1) {
@@ -825,7 +825,7 @@ class qr extends hm {
         int var22;
         int var23_int;
         String var23;
-        qr var23_ref;
+        AnimatedPanel var23_ref;
         int var24;
         int var25;
         String var26;
@@ -841,7 +841,7 @@ class qr extends hm {
         SoftwareRasterizer.intersectClip(this.field_B, this.field_N, this.field_B + this.field_K, this.field_mb + this.field_N);
         param1 = param1 & this.field_s;
         if (param5 != -2147483648) {
-          qr.a((int[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, 117, (String[][]) null, (Archive) null, (Archive) null, 119, (Archive) null, (Sprite[][]) null, 82, false, (Sprite[][]) null);
+          AnimatedPanel.a((int[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, 117, (String[][]) null, (Archive) null, (Archive) null, 119, (Archive) null, (Sprite[][]) null, 82, false, (Sprite[][]) null);
         }
         if (!this.field_H) {
           param6 = this.field_bb;
@@ -984,10 +984,10 @@ class qr extends hm {
           }
         }
         if (null != this.field_M) {
-          var23_ref = (qr) (this.field_M.startForward(0));
+          var23_ref = (AnimatedPanel) (this.field_M.startForward(0));
           while (var23_ref != null) {
             var23_ref.a(this.field_ib, param1, param2, this.field_B + var19, var20 + this.field_N, -2147483648, param6, this.field_mb, param8, param9, this.field_K);
-            var23_ref = (qr) (this.field_M.nextForward((byte) -71));
+            var23_ref = (AnimatedPanel) (this.field_M.nextForward((byte) -71));
           }
         }
         SoftwareRasterizer.setClip(var12, var13, var14, var15);
@@ -1004,7 +1004,7 @@ class qr extends hm {
           wh.a(false);
           if (param1 <= 22) {
             GameRules var5 = (GameRules) null;
-            qr.a(-15, 122, (String[]) null, (GameRules) null, -98, -12);
+            AnimatedPanel.a(-15, 122, (String[]) null, (GameRules) null, -98, -12);
           }
           PlacementOrder.field_q = new Sprite(var3, 3 * var4 / 4);
           PlacementOrder.field_q.bindAsRenderTarget();
@@ -1019,7 +1019,7 @@ class qr extends hm {
         }
     }
 
-    qr(long param0, qr param1, String param2) {
+    AnimatedPanel(long param0, AnimatedPanel param1, String param2) {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
@@ -1031,7 +1031,7 @@ class qr extends hm {
         field_R = null;
     }
 
-    protected qr() {
+    protected AnimatedPanel() {
         this.field_W = -1;
         this.field_T = -2147483648;
         this.field_I = 256;
@@ -1049,7 +1049,7 @@ class qr extends hm {
         this.field_t = -2147483648;
     }
 
-    qr(long param0, qr param1, int param2, int param3, int param4, int param5, String param6) {
+    AnimatedPanel(long param0, AnimatedPanel param1, int param2, int param3, int param4, int param5, String param6) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -1078,7 +1078,7 @@ class qr extends hm {
           this.field_mb = param5;
           this.key = param0;
           this.field_db = param3;
-          this.a(param1, false);
+          this.copyFrom(param1, false);
           if (param6 != null) {
             this.field_z = param6;
           }

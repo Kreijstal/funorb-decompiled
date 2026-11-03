@@ -4,7 +4,7 @@
 final class an {
     static aa field_b;
     static int field_c;
-    static qr field_d;
+    static AnimatedPanel field_d;
     static String field_a;
 
     final static void a(boolean param0) {

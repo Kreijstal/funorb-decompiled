@@ -861,8 +861,8 @@ final class sm {
         }
         if (this.field_a == 8 &&
           oe.field_e &&
-          ur.field_zb == null) {
-          ur.field_zb = vs.a((byte) 88, 4);
+          ScrollBar.field_zb == null) {
+          ScrollBar.field_zb = vs.a((byte) 88, 4);
         }
         this.field_d.a(this.a(bb.field_b, (byte) -109, pd.field_k), param0, param2, 59);
         this.field_h = 0;
@@ -1344,7 +1344,7 @@ final class sm {
                 }
                 SoftwareRasterizer.drawVerticalLine(9 + param3, param0 + 10, 35, 16777215);
                 SoftwareRasterizer.drawHorizontalLine(param3 + 10, param0 + 44, 40, 16777215);
-                var37 = ub.field_Cb;
+                var37 = ScrollPane.field_Cb;
                 var14 = rs.field_Cb.a(wg.field_e.a(5607, var37), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (var14 * 4 + 3) >> 2);
                 return;

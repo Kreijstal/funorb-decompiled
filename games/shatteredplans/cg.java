@@ -7,10 +7,10 @@ final class cg extends SingleChildWidget {
     static String field_F;
     static java.awt.Frame field_K;
     static int field_I;
-    static qr field_A;
+    static AnimatedPanel field_A;
     static String[] field_B;
     static String field_G;
-    static qr field_C;
+    static AnimatedPanel field_C;
 
     public cg() {
         super(0, 0, 0, 0, (WidgetPainter) null, (WidgetListener) null);
@@ -179,7 +179,7 @@ final class cg extends SingleChildWidget {
           SoftwareRasterizer.field_f = DebouncedValidator.field_d[RandomAccessCacheFile.field_k];
           return;
         }
-        field_A = (qr) null;
+        field_A = (AnimatedPanel) null;
         SoftwareRasterizer.field_l = dk.field_b[RandomAccessCacheFile.field_k];
         SoftwareRasterizer.field_a = bf.field_c[RandomAccessCacheFile.field_k];
         SoftwareRasterizer.field_f = DebouncedValidator.field_d[RandomAccessCacheFile.field_k];

@@ -147,7 +147,7 @@ final class BattleContribution extends IntrusiveNode {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var3_int = ai.field_e;
-          SectorCacheStore.field_f = new qr(0L, (qr) null);
+          SectorCacheStore.field_f = new AnimatedPanel(0L, (AnimatedPanel) null);
           if (param0 == null) {
             var10 = (Throwable) null;
             GameKeyHandler.a(-29901, (Throwable) null, "QC1");

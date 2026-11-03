@@ -219,7 +219,7 @@ final class SolMapReader implements MapGenerator {
               var10 = IsolationistAi.a(param0, var8_ref_nf);
               var11 = var10 + nq.a(var8_ref_nf.field_k);
               var12 = jl.a(var8_ref_nf, (byte) -73);
-              var8_ref_nf.field_j = new qr(0L, BoundsRect.field_k, var11);
+              var8_ref_nf.field_j = new AnimatedPanel(0L, BoundsRect.field_k, var11);
               var8_ref_nf.field_j.field_nb = ho.field_f;
               var8_ref_nf.field_j.field_jb = -(var12 >> 1 & 8355711) + var12 + (8355711 & BoundsRect.field_k.field_jb >> 1);
               var8_ref_nf.field_j.field_x = var12;
@@ -233,8 +233,8 @@ final class SolMapReader implements MapGenerator {
         for (var8 = 0; DebouncedValidator.field_g > var8; var8++) {
           var9_ref_nf = wm.field_d[var8];
           if (null != var9_ref_nf.field_j) {
-            ji.field_I.field_xb.a(4, var9_ref_nf.field_j);
-            var9_ref_nf.field_j.a(var9_ref_nf.field_j.e(false), param3, (byte) 111, var7Lifetime1, param2);
+            ji.field_I.field_xb.addChild(4, var9_ref_nf.field_j);
+            var9_ref_nf.field_j.setTarget(var9_ref_nf.field_j.measureWidthUnbounded(false), param3, (byte) 111, var7Lifetime1, param2);
             if (0 != var9_ref_nf.field_j.field_rb) {
               var4 = var9_ref_nf;
             }

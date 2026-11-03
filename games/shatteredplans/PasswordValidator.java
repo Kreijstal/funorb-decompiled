@@ -71,7 +71,7 @@ final class PasswordValidator extends TextFieldValidator {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        qr var5 = null;
+        AnimatedPanel var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;

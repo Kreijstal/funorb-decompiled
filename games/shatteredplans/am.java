@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am extends qr {
+final class am extends AnimatedPanel {
     static String[] field_Bb;
-    qr field_Eb;
-    static qr field_xb;
-    qr field_Fb;
+    AnimatedPanel field_Eb;
+    static AnimatedPanel field_xb;
+    AnimatedPanel field_Fb;
     static int field_Gb;
     static String field_Ab;
-    ub field_Db;
+    ScrollPane field_Db;
     static long field_Cb;
     static String field_zb;
-    qr field_yb;
+    AnimatedPanel field_yb;
 
     public static void clearStatics(int param0) {
         field_Bb = null;
@@ -30,18 +30,18 @@ final class am extends qr {
         this(param0, param1, param1.field_Db.field_zb, param1.field_Db.field_Ab, param1.field_Fb, param2, param3);
     }
 
-    am(long param0, qr param1, qr param2, ur param3, qr param4, String param5, String param6) {
+    am(long param0, AnimatedPanel param1, AnimatedPanel param2, ScrollBar param3, AnimatedPanel param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_Eb = new qr(0L, (qr) null);
-          this.field_Db = new ub(0L, this.field_Eb, param2, param3);
-          this.field_Fb = new qr(0L, param4);
-          this.field_yb = new qr(0L, param4);
+          this.field_Eb = new AnimatedPanel(0L, (AnimatedPanel) null);
+          this.field_Db = new ScrollPane(0L, this.field_Eb, param2, param3);
+          this.field_Fb = new AnimatedPanel(0L, param4);
+          this.field_yb = new AnimatedPanel(0L, param4);
           this.field_Fb.field_z = param5;
           this.field_yb.field_z = param6;
-          this.a(4, this.field_Db);
-          this.a(4, this.field_Fb);
-          this.a(4, this.field_yb);
+          this.addChild(4, this.field_Db);
+          this.addChild(4, this.field_Fb);
+          this.addChild(4, this.field_yb);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "am.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
@@ -64,7 +64,7 @@ final class am extends qr {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7) {
         this.field_db = param1;
         if (param6 < 78) {
-          this.field_yb = (qr) null;
+          this.field_yb = (AnimatedPanel) null;
           this.field_mb = param0;
           this.field_hb = param7;
           this.field_K = param5;

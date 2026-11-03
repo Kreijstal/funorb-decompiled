@@ -8,7 +8,7 @@ final class QuickChatPhraseRegistry {
     private Archive field_f;
     private Archive field_h;
     private WeightedLruCache field_b;
-    static qr field_a;
+    static AnimatedPanel field_a;
     static String field_d;
     static String field_c;
     static String[] field_g;

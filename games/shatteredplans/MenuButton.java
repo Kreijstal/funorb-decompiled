@@ -16,7 +16,7 @@ final class MenuButton extends MenuComponent {
     static String field_E;
     static int field_B;
     static int field_A;
-    static qr field_w;
+    static AnimatedPanel field_w;
     static int field_J;
 
     public static void clearStatics(int param0) {

@@ -563,7 +563,7 @@ final class AggressiveAi extends StandardAi {
                   null != ArchiveIndex.field_h[var8]) {
                   var17 = ArchiveIndex.field_h[var8][var10];
                   if (var17 != 0 &&
-                    !hm.field_o &&
+                    !PanelNode.field_o &&
                     StarAnnotation.field_m <= 0) {
                     var11 = 1;
                   }
@@ -580,7 +580,7 @@ final class AggressiveAi extends StandardAi {
                     var12 = 1;
                   }
                   if (var17Lifetime2 != 0 &&
-                    !hm.field_o &&
+                    !PanelNode.field_o &&
                     StarAnnotation.field_m <= 0) {
                     var11 = 1;
                   }
@@ -783,7 +783,7 @@ final class AggressiveAi extends StandardAi {
                 }
                 if (var22 != null) {
                   var22 = "<col=A00000>" + (String) (var22);
-                  var33 = qr.a((String) (var22), (byte) -125, "<br><col=A00000>", "<br>");
+                  var33 = AnimatedPanel.a((String) (var22), (byte) -125, "<br><col=A00000>", "<br>");
                   if (var21 == null) {
                     var21 = var33;
                   } else {

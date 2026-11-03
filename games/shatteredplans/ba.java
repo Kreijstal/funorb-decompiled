@@ -23,7 +23,7 @@ final class ba {
         }
     }
 
-    final static void a(qr param0, qr param1, int param2, qr param3, ur param4, qr param5, qr param6, qr param7, boolean param8, nq param9, qr param10, qr param11) {
+    final static void a(AnimatedPanel param0, AnimatedPanel param1, int param2, AnimatedPanel param3, ScrollBar param4, AnimatedPanel param5, AnimatedPanel param6, AnimatedPanel param7, boolean param8, nq param9, AnimatedPanel param10, AnimatedPanel param11) {
         String stackIn_16_0 = null;
         int stackIn_34_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -54,7 +54,7 @@ final class ba {
         int[] var14 = null;
         int[] var15 = null;
         Sprite[] var16 = null;
-        qr var17 = null;
+        AnimatedPanel var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
@@ -87,26 +87,26 @@ final class ba {
           var13[2] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          tg.field_c = new qr(0L, param7);
-          StatusContent.field_c = new qr(0L, param6);
-          tg.field_c.a(4, StatusContent.field_c);
-          var17 = new qr(0L, (qr) null);
+          tg.field_c = new AnimatedPanel(0L, param7);
+          StatusContent.field_c = new AnimatedPanel(0L, param6);
+          tg.field_c.addChild(4, StatusContent.field_c);
+          var17 = new AnimatedPanel(0L, (AnimatedPanel) null);
           var17.field_M = new IntrusiveDeque();
-          ji.field_I = new ub(0L, var17, param1, param4);
-          StatusContent.field_c.a(4, ji.field_I);
-          TaskAi.field_o = new qr(0L, param3);
-          StatusContent.field_c.a(4, TaskAi.field_o);
-          uq.field_j = new qr(0L, param10);
+          ji.field_I = new ScrollPane(0L, var17, param1, param4);
+          StatusContent.field_c.addChild(4, ji.field_I);
+          TaskAi.field_o = new AnimatedPanel(0L, param3);
+          StatusContent.field_c.addChild(4, TaskAi.field_o);
+          uq.field_j = new AnimatedPanel(0L, param10);
           uq.field_j.field_nb = ho.field_f;
-          TaskAi.field_o.a(4, uq.field_j);
-          TaskAi.field_o.e((byte) -128);
-          cg.field_C = new qr(0L, (qr) null);
+          TaskAi.field_o.addChild(4, uq.field_j);
+          TaskAi.field_o.markDirty((byte) -128);
+          cg.field_C = new AnimatedPanel(0L, (AnimatedPanel) null);
           cg.field_C.field_F = var16;
-          TaskAi.field_o.a(4, cg.field_C);
-          DerelictMapReader.field_d = new qr[5];
-          tb.field_a = new qr[5];
-          n.field_n = new qr[5];
-          oq.field_b = new qr[5];
+          TaskAi.field_o.addChild(4, cg.field_C);
+          DerelictMapReader.field_d = new AnimatedPanel[5];
+          tb.field_a = new AnimatedPanel[5];
+          n.field_n = new AnimatedPanel[5];
+          oq.field_b = new AnimatedPanel[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -130,17 +130,17 @@ final class ba {
                 var19 = QuickChatPhraseRegistry.field_c;
               }
               if (decompiledFrameRemainder0) {
-                oq.field_b[var18] = new qr(0L, param5);
-                tb.field_a[var18] = new qr(0L, BoundsRect.field_k, var19);
-                DerelictMapReader.field_d[var18] = new qr(0L, (qr) null);
+                oq.field_b[var18] = new AnimatedPanel(0L, param5);
+                tb.field_a[var18] = new AnimatedPanel(0L, BoundsRect.field_k, var19);
+                DerelictMapReader.field_d[var18] = new AnimatedPanel(0L, (AnimatedPanel) null);
                 DerelictMapReader.field_d[var18].field_G = 1;
-                n.field_n[var18] = new qr(0L, BoundsRect.field_k);
+                n.field_n[var18] = new AnimatedPanel(0L, BoundsRect.field_k);
                 n.field_n[var18].field_G = 1;
-                oq.field_b[var18].a(4, tb.field_a[var18]);
-                oq.field_b[var18].a(4, DerelictMapReader.field_d[var18]);
-                oq.field_b[var18].a(4, n.field_n[var18]);
-                oq.field_b[var18].e((byte) -126);
-                tg.field_c.a(4, oq.field_b[var18]);
+                oq.field_b[var18].addChild(4, tb.field_a[var18]);
+                oq.field_b[var18].addChild(4, DerelictMapReader.field_d[var18]);
+                oq.field_b[var18].addChild(4, n.field_n[var18]);
+                oq.field_b[var18].markDirty((byte) -126);
+                tg.field_c.addChild(4, oq.field_b[var18]);
                 gq.field_d = gq.field_d + 1;
               }
               var18++;
@@ -149,9 +149,9 @@ final class ba {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            pr.field_c = new qr(0L, param0);
+            pr.field_c = new AnimatedPanel(0L, param0);
             pr.field_c.field_z = dk.field_c;
-            tg.field_c.a(4, pr.field_c);
+            tg.field_c.addChild(4, pr.field_c);
             stackIn_34_0 = cb.b((byte) -121) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&

@@ -3,7 +3,7 @@
  */
 final class hq {
     static Sprite field_a;
-    static qr field_b;
+    static AnimatedPanel field_b;
     static boolean field_c;
     static String field_d;
 

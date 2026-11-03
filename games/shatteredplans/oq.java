@@ -8,7 +8,7 @@ final class oq {
     String field_h;
     static int field_j;
     String field_d;
-    static qr[] field_b;
+    static AnimatedPanel[] field_b;
     static String[] field_i;
     static GameSession field_a;
     static BufferedCacheFile field_g;
@@ -39,7 +39,7 @@ final class oq {
         try {
           var2 = IterableNodeHashTable.a(param0, param1 ^ -17731);
           if (param1 != -17) {
-            field_b = (qr[]) null;
+            field_b = (AnimatedPanel[]) null;
           }
           var3 = so.a(var2, '\n', -123);
           for (var4 = 0; var4 < var3.length; var4++) {

@@ -10,7 +10,7 @@ final class SliderWidget extends FocusableWidget {
     private hn field_J;
     static int field_G;
     static boolean field_L;
-    static qr field_N;
+    static AnimatedPanel field_N;
     static boolean[][] field_E;
     int field_I;
 

@@ -9,7 +9,7 @@ final class ArchiveSourceManager {
     private DiskCacheWorker field_d;
     private java.math.BigInteger field_g;
     private java.math.BigInteger field_j;
-    static qr field_f;
+    static AnimatedPanel field_f;
     private NetworkArchiveRequest field_c;
     static int field_h;
 
@@ -120,7 +120,7 @@ final class ArchiveSourceManager {
 
     final static int getTargetFrameRate(int param0) {
         if (param0 != 0) {
-          field_f = (qr) null;
+          field_f = (AnimatedPanel) null;
         }
         return (int)(1000000000L / UiWidget.field_i);
     }

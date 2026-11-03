@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoundCache {
-    static qr field_c;
+    static AnimatedPanel field_c;
     private Archive field_b;
     private IntrusiveNodeHashTable field_a;
     private Archive field_e;
@@ -302,7 +302,7 @@ final class SoundCache {
         if (param1 >= 27) {
           return PasswordValidator.a(1, false, param0, 12000, true, false);
         }
-        field_c = (qr) null;
+        field_c = (AnimatedPanel) null;
         return PasswordValidator.a(1, false, param0, 12000, true, false);
     }
 

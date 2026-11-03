@@ -14,7 +14,7 @@ class MenuComponent extends IntrusiveNode {
     String field_o;
     IntrusiveDeque field_l;
     boolean field_p;
-    static qr field_q;
+    static AnimatedPanel field_q;
 
     final void translate(int param0, int param1, int param2) {
         MenuComponent var6 = null;

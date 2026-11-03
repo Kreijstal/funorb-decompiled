@@ -11,9 +11,9 @@ final class AchievementProgress {
     int[] field_l;
     static String field_e;
     int[] field_h;
-    static ur field_m;
+    static ScrollBar field_m;
     boolean[][] field_d;
-    static qr field_i;
+    static AnimatedPanel field_i;
     static String field_c;
 
     final static void a(hb param0, int param1, hb param2, hb param3, CipherPacketBuffer param4) {
@@ -57,7 +57,7 @@ final class AchievementProgress {
           while (var5_int >= 59) {
             param4.writeByte(250, (byte) -61);
             for (var9 = 0; var9 < 59; var9++) {
-              hm.a(var8, param4, true);
+              PanelNode.a(var8, param4, true);
               var8 = (PlacementOrder) (param0.a(false));
             }
             var5_int -= 59;
@@ -65,7 +65,7 @@ final class AchievementProgress {
           if (var5_int > 0) {
             param4.writeByte(192 + var5_int - 1, (byte) -86);
             while (var8 != null) {
-              hm.a(var8, param4, true);
+              PanelNode.a(var8, param4, true);
               var8 = (PlacementOrder) (param0.a(false));
             }
           }

@@ -95,12 +95,12 @@ final class wh {
         }
     }
 
-    wh(String param0, qr param1) {
+    wh(String param0, AnimatedPanel param1) {
         String[] var3 = null;
-        qr[] var4 = null;
+        AnimatedPanel[] var4 = null;
         try {
           var3 = new String[]{param0, SoundPlayback.field_o, wk.field_b};
-          var4 = new qr[]{param1, cg.field_A, (qr) ((Object) wg.field_a)};
+          var4 = new AnimatedPanel[]{param1, cg.field_A, (AnimatedPanel) ((Object) wg.field_a)};
           this.field_d = new q(0L, QuickChatCategoryRegistry.field_h, var3, tm.field_t, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -111,9 +111,9 @@ final class wh {
         int var6 = 24;
         int var7 = 5;
         this.field_d.a(param3, param4, param1, var6, param0, false, var7);
-        RecklessAi.field_p.a(cg.field_A.field_K, cr.field_c, (byte) 59, 0, 0);
-        BattleSnapshot.field_t.a(-pe.field_K + (cg.field_A.field_K - 2 - 82), 18, (byte) 82, 2 + cr.field_c, 0);
-        FleetMove.field_F.a(82 + pe.field_K, 18, (byte) 117, 2 + cr.field_c, -80 - pe.field_K + (cg.field_A.field_K - 2));
+        RecklessAi.field_p.setTarget(cg.field_A.field_K, cr.field_c, (byte) 59, 0, 0);
+        BattleSnapshot.field_t.setTarget(-pe.field_K + (cg.field_A.field_K - 2 - 82), 18, (byte) 82, 2 + cr.field_c, 0);
+        FleetMove.field_F.setTarget(82 + pe.field_K, 18, (byte) 117, 2 + cr.field_c, -80 - pe.field_K + (cg.field_A.field_K - 2));
         d.field_a.a(-22 + (cg.field_A.field_mb - cr.field_c), 20 + cr.field_c + 2, pe.field_K, 2, 20, cg.field_A.field_K, (byte) 123, 0);
         wg.field_a.a(2, pe.field_K, 0, 20);
         if (param2 == 95) {

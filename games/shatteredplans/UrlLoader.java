@@ -189,7 +189,7 @@ final class UrlLoader implements Runnable {
 
     final static void a(byte param0, boolean param1) {
         if (null != lg.field_e) {
-          lg.field_e.b(param1, 125);
+          lg.field_e.drawFullRaster(param1, 125);
           if (param0 > -81) {
             field_j = (int[]) null;
             return;

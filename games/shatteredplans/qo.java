@@ -33,8 +33,8 @@ abstract class qo {
         if (param0 != 22353) {
           field_b = 102;
         }
-        am.field_xb.a(199, SoftwareRasterizer.field_k - 120 - 94, (byte) 109, 90, var2 - 199 * var4 / var3);
-        IntrusiveDeque.field_g.a(438, -124 + SoftwareRasterizer.field_k, (byte) 77, 0, 438 * var4 / var3 + var2 + 202);
+        am.field_xb.setTarget(199, SoftwareRasterizer.field_k - 120 - 94, (byte) 109, 90, var2 - 199 * var4 / var3);
+        IntrusiveDeque.field_g.setTarget(438, -124 + SoftwareRasterizer.field_k, (byte) 77, 0, 438 * var4 / var3 + var2 + 202);
     }
 
     public static void clearStatics(int param0) {

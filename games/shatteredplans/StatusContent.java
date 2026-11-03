@@ -3,7 +3,7 @@
  */
 final class StatusContent implements MenuContent {
     static String field_d;
-    static qr field_c;
+    static AnimatedPanel field_c;
     SpriteButton field_e;
     bd field_f;
     static String field_a;

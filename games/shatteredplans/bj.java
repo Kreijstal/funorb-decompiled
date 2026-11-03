@@ -5,7 +5,7 @@ final class bj extends WidgetContainer implements ButtonListener {
     private dl field_F;
     static wa[] field_J;
     static String field_E;
-    static qr field_D;
+    static AnimatedPanel field_D;
     static String field_M;
     static int field_L;
     private FocusableWidget[] field_I;

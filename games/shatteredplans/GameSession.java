@@ -47,7 +47,7 @@ final class GameSession implements AiHost {
     boolean field_f;
     boolean field_W;
     private boolean field_T;
-    static qr field_e;
+    static AnimatedPanel field_e;
     private int field_O;
     boolean field_M;
     private boolean field_y;
@@ -4239,11 +4239,11 @@ final class GameSession implements AiHost {
               this.field_P = AudioService.a(param3, param5, param2, -22379, 4);
               PacketBuffer.a(-126, this);
               if (var13 != 0) {
-                this.field_P = qr.a(param2, 50, param5, param3, param4, 2);
+                this.field_P = AnimatedPanel.a(param2, 50, param5, param3, param4, 2);
                 this.field_P = uq.a(param4, param2, -27579, param5, param3);
               }
             } else {
-              this.field_P = qr.a(param2, 50, param5, param3, param4, 2);
+              this.field_P = AnimatedPanel.a(param2, 50, param5, param3, param4, 2);
               if (var13 != 0) {
                 this.field_P = uq.a(param4, param2, -27579, param5, param3);
               }

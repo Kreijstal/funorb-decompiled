@@ -14,7 +14,7 @@ final class tm extends IntrusiveNode {
     static int field_h;
     static String field_j;
     static String field_o;
-    static qr field_t;
+    static AnimatedPanel field_t;
 
     public static void d(int param0) {
         field_j = null;

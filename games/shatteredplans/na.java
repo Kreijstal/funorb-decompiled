@@ -131,7 +131,7 @@ final class na {
           oq.field_i[26] = ee.field_n;
           oq.field_i[31] = ep.field_d;
           oq.field_i[25] = SpriteState.field_v;
-          oq.field_i[23] = ur.field_Db;
+          oq.field_i[23] = ScrollBar.field_Db;
           oq.field_i[16] = bf.field_a[1];
           oq.field_i[18] = ul.field_Fb[0];
           oq.field_i[22] = rs.field_zb;
@@ -168,14 +168,14 @@ final class na {
           bk.field_b[2] = nf.field_m;
           bk.field_b[3] = wa.field_i;
           Dialog.field_J[0] = new String[5];
-          ub.field_Db = new String[5][];
-          ub.field_Db[0] = new String[5];
+          ScrollPane.field_Db = new String[5][];
+          ScrollPane.field_Db[0] = new String[5];
           for (var1_int = 0; var1_int < 5; var1_int++) {
             Dialog.field_J[0][var1_int] = Integer.toString(var1_int);
-            ub.field_Db[0][var1_int] = be.field_i;
+            ScrollPane.field_Db[0][var1_int] = be.field_i;
           }
-          ub.field_Db[4] = SectorCacheStore.field_c;
-          ub.field_Db[2] = DialogRoot.field_E;
+          ScrollPane.field_Db[4] = SectorCacheStore.field_c;
+          ScrollPane.field_Db[2] = DialogRoot.field_E;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "na.B(" + param0 + ')');
         }

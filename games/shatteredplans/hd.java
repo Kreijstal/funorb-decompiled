@@ -6,7 +6,7 @@ final class hd extends IntrusiveNode {
     int field_h;
     static oa field_s;
     Sprite field_i;
-    static qr field_m;
+    static AnimatedPanel field_m;
     static byte[][] field_q;
     static String field_p;
     static String field_j;

@@ -9,7 +9,7 @@ final class qf {
     static byte[][] field_d;
     static String field_c;
     static String field_b;
-    static qr field_e;
+    static AnimatedPanel field_e;
 
     public static void clearStatics(int param0) {
         if (param0 != 9952) {

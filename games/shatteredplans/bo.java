@@ -169,7 +169,7 @@ final class bo extends jl implements ButtonListener {
         }
     }
 
-    final static vm a(int[] param0, byte param1, qr param2, qr param3, qr param4) {
+    final static vm a(int[] param0, byte param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;

@@ -72,7 +72,7 @@ abstract class ms {
         if (param0 == 20975) {
           if (QuickChatCategoryDefinition.field_t) {
             SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_l, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
-            SectorCacheStore.field_f.b(false, -104);
+            SectorCacheStore.field_f.drawFullRaster(false, -104);
           }
           return;
         }
@@ -80,7 +80,7 @@ abstract class ms {
         ms.a((String) null, (byte) -111, (String) null);
         if (QuickChatCategoryDefinition.field_t) {
           SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_l, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
-          SectorCacheStore.field_f.b(false, -104);
+          SectorCacheStore.field_f.drawFullRaster(false, -104);
         }
     }
 

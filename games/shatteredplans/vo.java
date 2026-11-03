@@ -26,7 +26,7 @@ final class vo {
           pd.field_m = ConquestVictoryChecker.a((byte) -111, 120, "shatteredplans_explosion");
           gg.a(128, param2, "shatteredplans_tab_open");
           gg.a(128, 100, "shatteredplans_tab_close");
-          ub.field_yb = gg.a(param2 ^ 228, 256, "shatteredplans_next_open");
+          ScrollPane.field_yb = gg.a(param2 ^ 228, 256, "shatteredplans_next_open");
           sf.field_g = gg.a(128, 256, "shatteredplans_next_close");
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vo.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

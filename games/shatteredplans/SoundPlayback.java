@@ -3,7 +3,7 @@
  */
 final class SoundPlayback extends IntrusiveNode {
     static String[] field_l;
-    static qr field_m;
+    static AnimatedPanel field_m;
     int field_h;
     PcmSampleStream field_p;
     static String field_o;
@@ -188,16 +188,16 @@ final class SoundPlayback extends IntrusiveNode {
             }
             TertiaryNodeList.field_d = new String[var4];
             ps.a(ts.field_K, 0, TertiaryNodeList.field_d, 0, var4);
-            hm.field_p = new String[-1 + (var3_int - var4)];
-            ps.a(ts.field_K, var4 + 1, hm.field_p, 0, var3_int - var4 - 1);
+            PanelNode.field_p = new String[-1 + (var3_int - var4)];
+            ps.a(ts.field_K, var4 + 1, PanelNode.field_p, 0, var3_int - var4 - 1);
             if (kp.field_o.length >= TertiaryNodeList.field_d.length) {
               stackIn_37_0 = kp.field_o.length;
             } else {
               stackIn_37_0 = TertiaryNodeList.field_d.length;
             }
             var5 = stackIn_37_0;
-            if (hm.field_p.length > kd.field_b.length) {
-              stackIn_40_0 = hm.field_p.length;
+            if (PanelNode.field_p.length > kd.field_b.length) {
+              stackIn_40_0 = PanelNode.field_p.length;
             } else {
               stackIn_40_0 = kd.field_b.length;
             }
@@ -235,9 +235,9 @@ final class SoundPlayback extends IntrusiveNode {
               stackIn_52_0 = kr.field_f;
               stackIn_52_1 = 7 - (-var5 - var8Lifetime3);
               stackIn_52_2 = ~var8Lifetime3;
-              stackIn_52_3 = ~hm.field_p.length;
+              stackIn_52_3 = ~PanelNode.field_p.length;
               if (stackIn_52_2 > stackIn_52_3) {
-                stackIn_55_2 = hm.field_p[var8Lifetime3];
+                stackIn_55_2 = PanelNode.field_p[var8Lifetime3];
               } else {
                 stackIn_55_2 = "";
               }

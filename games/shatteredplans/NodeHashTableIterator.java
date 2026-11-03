@@ -30,7 +30,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_c = null;
     }
 
-    final static qr a(int param0) {
+    final static AnimatedPanel a(int param0) {
         int var1 = -56 % ((-22 - param0) / 48);
         return wg.field_a.field_Eb;
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class hm extends DualLinkNode {
+class PanelNode extends DualLinkNode {
     static boolean field_o;
     static sq field_q;
     static String[] field_p;
@@ -92,7 +92,7 @@ class hm extends DualLinkNode {
         }
     }
 
-    hm() {
+    PanelNode() {
     }
 
     public static void clearStatics(boolean param0) {

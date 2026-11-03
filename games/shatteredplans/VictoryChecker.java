@@ -6,7 +6,7 @@ abstract class VictoryChecker {
     static boolean field_a;
     static String field_c;
     Player[] field_i;
-    static qr field_d;
+    static AnimatedPanel field_d;
     Player[] field_g;
     static String field_f;
     static boolean field_j;

@@ -46,7 +46,7 @@ final class wo {
           }
           stackIn_6_0 = 93;
           stackIn_7_1 = !(jm.field_t >= 13);
-          ij.field_a = ub.$cfr$intArgs$a$be17d4c2d3e3(stackIn_6_0, stackIn_7_1);
+          ij.field_a = ScrollPane.$cfr$intArgs$a$be17d4c2d3e3(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
           jp.a((String[]) null, false);
           return;

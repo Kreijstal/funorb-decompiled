@@ -7,7 +7,7 @@ final class gn extends WidgetTheme {
     static Sprite field_y;
     static int field_t;
     static int field_B;
-    static qr field_w;
+    static AnimatedPanel field_w;
     private wk field_z;
     static String field_A;
     static nq field_u;
@@ -18,14 +18,14 @@ final class gn extends WidgetTheme {
         ah.field_P = param1;
         IterableNodeHashTable.field_b = param0;
         if (param2) {
-          field_w = (qr) null;
+          field_w = (AnimatedPanel) null;
         }
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (param1 != -9861) {
-          qr var5 = (qr) null;
-          gn.a(122, (QuickChatPhraseDefinition) null, (qr) null, (qr) null, (qr) null);
+          AnimatedPanel var5 = (AnimatedPanel) null;
+          gn.a(122, (QuickChatPhraseDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
         }
         if (bq.field_h != null &&
           13 == oq.field_j) {
@@ -191,13 +191,13 @@ final class gn extends WidgetTheme {
         field_A = null;
         field_x = null;
         if (!param0) {
-          qr var2 = (qr) null;
-          gn.a(-46, (QuickChatPhraseDefinition) null, (qr) null, (qr) null, (qr) null);
+          AnimatedPanel var2 = (AnimatedPanel) null;
+          gn.a(-46, (QuickChatPhraseDefinition) null, (AnimatedPanel) null, (AnimatedPanel) null, (AnimatedPanel) null);
         }
         field_y = null;
     }
 
-    final static vm a(int param0, QuickChatPhraseDefinition param1, qr param2, qr param3, qr param4) {
+    final static vm a(int param0, QuickChatPhraseDefinition param1, AnimatedPanel param2, AnimatedPanel param3, AnimatedPanel param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;

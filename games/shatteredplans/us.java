@@ -11,10 +11,10 @@ final class us {
     final static void a(boolean param0, boolean param1) {
         if (param0) {
           field_b = -58;
-          fa.field_X.b(param1, 97);
+          fa.field_X.drawFullRaster(param1, 97);
           return;
         }
-        fa.field_X.b(param1, 97);
+        fa.field_X.drawFullRaster(param1, 97);
     }
 
     final static void a(int param0, int param1) {

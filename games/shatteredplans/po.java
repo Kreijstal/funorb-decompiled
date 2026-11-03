@@ -6,7 +6,7 @@ final class po {
     static java.awt.Color field_h;
     static String field_g;
     static String field_e;
-    static qr field_d;
+    static AnimatedPanel field_d;
     static String field_c;
     static int field_b;
     static int field_f;

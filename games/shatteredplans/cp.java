@@ -21,7 +21,7 @@ final class cp {
     private int field_l;
     private bn field_s;
     private int field_e;
-    static qr field_a;
+    static AnimatedPanel field_a;
     private float field_v;
     private boolean field_b;
 
@@ -182,7 +182,7 @@ final class cp {
 
     public static void clearStatics(boolean param0) {
         if (param0) {
-          field_a = (qr) null;
+          field_a = (AnimatedPanel) null;
           field_t = null;
           field_a = null;
           return;

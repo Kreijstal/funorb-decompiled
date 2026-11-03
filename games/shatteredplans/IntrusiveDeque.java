@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntrusiveDeque {
-    static qr field_g;
+    static AnimatedPanel field_g;
     IntrusiveNode field_h;
     static volatile boolean field_c;
     static String field_f;

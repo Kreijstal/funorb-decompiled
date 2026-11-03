@@ -11,7 +11,7 @@ final class WhirlpoolHasher {
     static String field_p;
     static String field_l;
     private int field_d;
-    static qr field_j;
+    static AnimatedPanel field_j;
     private int field_o;
     private long[] field_f;
     static int field_i;

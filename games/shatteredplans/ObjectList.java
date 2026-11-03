@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ObjectList {
-    static qr field_h;
+    static AnimatedPanel field_h;
     static bg field_f;
     static Sprite[] field_d;
     Object[] field_b;
@@ -27,15 +27,15 @@ final class ObjectList {
         this.field_b = var2;
     }
 
-    final static void a(int param0, int param1, ub param2, boolean param3, int param4) {
+    final static void a(int param0, int param1, ScrollPane param2, boolean param3, int param4) {
         int var27_int = 0;
-        ub stackIn_42_0 = null;
+        ScrollPane stackIn_42_0 = null;
         int stackIn_42_1 = 0;
         int stackIn_42_2 = 0;
         boolean stackIn_43_3 = false;
         int stackIn_46_0 = 0;
         int stackIn_59_0 = 0;
-        qr stackIn_96_0 = null;
+        AnimatedPanel stackIn_96_0 = null;
         int stackIn_96_1 = 0;
         int stackIn_96_2 = 0;
         int stackIn_97_3 = 0;
@@ -55,11 +55,11 @@ final class ObjectList {
         Object var11 = null;
         mj var12 = null;
         int var13 = 0;
-        qr var14 = null;
-        qr var15 = null;
-        qr var16 = null;
-        qr var17 = null;
-        qr var18 = null;
+        AnimatedPanel var14 = null;
+        AnimatedPanel var15 = null;
+        AnimatedPanel var16 = null;
+        AnimatedPanel var17 = null;
+        AnimatedPanel var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -117,7 +117,7 @@ final class ObjectList {
                   var6 = var11_int;
                 }
                 if (var11_int != 0 &&
-                  !hm.field_o) {
+                  !PanelNode.field_o) {
                   var5_int = 1;
                 }
               }
@@ -132,17 +132,17 @@ final class ObjectList {
                   var7 = var11_intLifetime1;
                 }
                 if (var11_intLifetime1 != 0 &&
-                  !hm.field_o) {
+                  !PanelNode.field_o) {
                   var5_int = 1;
                 }
               }
             }
           }
-          stackIn_42_0 = (ub) (param2);
+          stackIn_42_0 = (ScrollPane) (param2);
           stackIn_42_1 = 4 * (2 + cr.field_c) * param0;
           stackIn_42_2 = cr.field_c * 2 + 4;
           stackIn_43_3 = (param2 == DerelictVictoryChecker.field_l);
-          stackIn_46_0 = (!((ub) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_42_2, stackIn_43_3, -108, param3, 2)) ? 0 : 1;
+          stackIn_46_0 = (!((ScrollPane) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_42_2, stackIn_43_3, -108, param3, 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_46_0;
           var10 = param2.field_xb.field_M;
           var11 = null;
@@ -150,21 +150,21 @@ final class ObjectList {
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_M) {
-              var12.field_Ab = new qr(0L, ek.field_E);
-              var12.a(4, var12.field_Ab);
-              var12.field_Ob = new qr(0L, oj.field_zb);
+              var12.field_Ab = new AnimatedPanel(0L, ek.field_E);
+              var12.addChild(4, var12.field_Ab);
+              var12.field_Ob = new AnimatedPanel(0L, oj.field_zb);
               if (ns.field_pb) {
-                var12.a(param1 ^ 4, var12.field_Ob);
+                var12.addChild(param1 ^ 4, var12.field_Ob);
               }
               var12.field_Ob.field_y = 2;
-              var12.field_xb = new qr(0L, SpriteState.field_u);
-              var12.a(4, var12.field_xb);
-              var12.e((byte) -128);
-              var12.field_Jb = new qr(0L, GameScreen.field_h);
-              var12.a(param1 ^ 4, var12.field_Jb);
-              var12.field_Mb = new qr(0L, AllianceExpiredEvent.field_l);
+              var12.field_xb = new AnimatedPanel(0L, SpriteState.field_u);
+              var12.addChild(4, var12.field_xb);
+              var12.markDirty((byte) -128);
+              var12.field_Jb = new AnimatedPanel(0L, GameScreen.field_h);
+              var12.addChild(param1 ^ 4, var12.field_Jb);
+              var12.field_Mb = new AnimatedPanel(0L, AllianceExpiredEvent.field_l);
               var13 = 1;
-              var12.a(4, var12.field_Mb);
+              var12.addChild(4, var12.field_Mb);
             }
             var12.field_Ab.field_z = null;
             var14 = var12.field_Ab;
@@ -255,17 +255,17 @@ final class ObjectList {
                 SecondaryNodeDequeIterator.a((byte) -97) &&
                 ~UsernameAvailabilityValidator.field_p != ~var12.field_Ib) {
                 if (null != var12.field_Jb.field_z) {
-                  var26 = var12.field_Jb.e(false) + 2 * tg.field_a;
-                  var12.field_Jb.a(var26, cr.field_c, (byte) 80, var19, var25_int);
+                  var26 = var12.field_Jb.measureWidthUnbounded(false) + 2 * tg.field_a;
+                  var12.field_Jb.setTarget(var26, cr.field_c, (byte) 80, var19, var25_int);
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Mb.field_z) {
                   if (param2 != ro.field_a) {
-                    var26Lifetime2 = var12.field_Mb.e(false) + tg.field_a * 2;
+                    var26Lifetime2 = var12.field_Mb.measureWidthUnbounded(false) + tg.field_a * 2;
                   } else {
                     var26Lifetime2 = 40;
                   }
-                  var12.field_Mb.a(var26Lifetime2, cr.field_c, (byte) 78, var19, var25_int);
+                  var12.field_Mb.setTarget(var26Lifetime2, cr.field_c, (byte) 78, var19, var25_int);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -277,9 +277,9 @@ final class ObjectList {
               } else {
                 stackIn_97_3 = 0;
               }
-              ((qr) (Object) stackIn_96_0).a(stackIn_96_1 + (stackIn_96_2 - stackIn_97_3), cr.field_c, (byte) 44, var19, var25_int);
+              ((AnimatedPanel) (Object) stackIn_96_0).setTarget(stackIn_96_1 + (stackIn_96_2 - stackIn_97_3), cr.field_c, (byte) 44, var19, var25_int);
               var12.field_Ob.field_z = Integer.toString(var12.field_Qb);
-              var12.field_Ob.a(40, cr.field_c, (byte) 126, var19, var12.field_K - 40);
+              var12.field_Ob.setTarget(40, cr.field_c, (byte) 126, var19, var12.field_K - 40);
               if (var12.field_Ab.field_L &&
                 var22 != 0) {
                 dn.field_k = var12.field_Cb;
@@ -305,14 +305,14 @@ final class ObjectList {
               var24_intLifetime1 = var12.field_xb.field_nb.lineCount(var23, var12.field_K - tg.field_a - tg.field_a);
               var12.field_xb.field_z = var23;
               var12.field_xb.field_I = 256 * var12.field_Gb / ks.field_i;
-              var12.field_xb.a(-(2 * tg.field_a) + var12.field_K, var24_intLifetime1 * cr.field_c, (byte) 96, var19, tg.field_a);
+              var12.field_xb.setTarget(-(2 * tg.field_a) + var12.field_K, var24_intLifetime1 * cr.field_c, (byte) 96, var19, tg.field_a);
               var19 = var19 + cr.field_c * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
               var12.field_gb = var19 - var12.field_mb;
             }
             if (var13 != 0) {
-              param2.field_xb.a(2, (qr) (var11), var12, (byte) 126);
+              param2.field_xb.layoutAfter(2, (AnimatedPanel) (var11), var12, (byte) 126);
             }
             if (var12.field_rb != 0 &&
               !var12.h(-72)) {
@@ -381,7 +381,7 @@ final class ObjectList {
                     if (var6 <= var12.field_Qb) {
                       if ((var8 & ~var12.field_Wb) != 0) {
                         var25_int = DualLinkDeque.highestOneBit(param1 + 31, var8 & ~var12.field_Wb);
-                        var24Lifetime2 = ub.field_Eb;
+                        var24Lifetime2 = ScrollPane.field_Eb;
                         if (0 < var25_int &&
                           null != PlacementOrder.field_s &&
                           PlacementOrder.field_s.length >= var25_int &&
@@ -417,7 +417,7 @@ final class ObjectList {
                     ArchiveIndex.field_h[var27_int] != null) {
                     var30_int = ArchiveIndex.field_h[var27_int][var28];
                     if (var30_int != 0 &&
-                      !hm.field_o &&
+                      !PanelNode.field_o &&
                       !var12.field_Ub) {
                       var29 = 1;
                     }
@@ -429,7 +429,7 @@ final class ObjectList {
                     null != pg.field_A[var27_int]) {
                     var30_intLifetime1 = pg.field_A[var27_int][var28];
                     if (var30_intLifetime1 != 0 &&
-                      !hm.field_o &&
+                      !PanelNode.field_o &&
                       !var12.field_Ub) {
                       var29 = 1;
                     }
@@ -501,8 +501,8 @@ final class ObjectList {
         de.field_h = SpriteButton.field_v[param1];
         DialPainter.field_a = MusicCrossfadeStream.field_w[param1];
         if (param0 != 0) {
-          ub var3 = (ub) null;
-          ObjectList.a(-32, 115, (ub) null, false, 125);
+          ScrollPane var3 = (ScrollPane) null;
+          ObjectList.a(-32, 115, (ScrollPane) null, false, 125);
         }
         ns.field_xb = ae.field_c[param1];
     }
@@ -565,8 +565,8 @@ final class ObjectList {
         field_d = null;
         field_a = null;
         if (param0) {
-          ub var2 = (ub) null;
-          ObjectList.a(-33, 120, (ub) null, true, 27);
+          ScrollPane var2 = (ScrollPane) null;
+          ObjectList.a(-33, 120, (ScrollPane) null, true, 27);
         }
     }
 

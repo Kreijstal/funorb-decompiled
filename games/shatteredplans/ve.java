@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ve extends qr {
+final class ve extends AnimatedPanel {
     String field_Ab;
     String field_Eb;
-    qr field_Fb;
-    qr field_Db;
+    AnimatedPanel field_Fb;
+    AnimatedPanel field_Db;
     int field_zb;
     static String field_Gb;
     String field_xb;
     String field_Bb;
-    qr field_Cb;
+    AnimatedPanel field_Cb;
     static String field_yb;
 
     final static String a(Archive param0, int param1, String param2, String param3, int param4) {
@@ -72,7 +72,7 @@ final class ve extends qr {
     }
 
     ve() {
-        super(0L, (qr) null);
+        super(0L, (AnimatedPanel) null);
     }
 
     static {

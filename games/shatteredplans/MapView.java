@@ -3140,7 +3140,7 @@ final class MapView extends MapViewState {
             }
             if (-1 == this.field_T) {
               if (var5 == null) {
-                this.field_o.showStatusText(10, 0, ub.field_Bb);
+                this.field_o.showStatusText(10, 0, ScrollPane.field_Bb);
               } else {
                 this.field_o.showStatusText(10, 0, QuickChatCategoryRegistry.a(vo.field_c, 4371, new String[]{or.field_d[((ProjectUse) (var5)).field_o], this.field_p.name}));
               }

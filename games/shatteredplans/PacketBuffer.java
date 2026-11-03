@@ -669,7 +669,7 @@ class PacketBuffer extends IntrusiveNode {
         try {
           int var2_int = -35 % ((param0 + 60) / 50);
           kb.field_x = 1;
-          hm.field_q = null;
+          PanelNode.field_q = null;
           oq.field_a = param1;
           ei.field_e = -1;
           WeightedLruCache.field_g = null;

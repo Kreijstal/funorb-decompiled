@@ -9,7 +9,7 @@ abstract class SocketConnector {
     static Star field_b;
     static String field_c;
     String host;
-    static qr field_d;
+    static AnimatedPanel field_d;
 
     public static void clearStatics(byte param0) {
         field_b = null;

@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class SingleChildWidget extends UiWidget implements ni {
     UiWidget field_z;
-    static ub field_y;
+    static ScrollPane field_y;
 
     private final boolean a(UiWidget param0, int param1) {
         int var3_int = 0;
@@ -145,7 +145,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
     public static void clearStatics(byte param0) {
         field_y = null;
         if (param0 < 6) {
-          field_y = (ub) null;
+          field_y = (ScrollPane) null;
         }
     }
 
@@ -158,7 +158,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            field_y = (ub) null;
+            field_y = (ScrollPane) null;
           }
           stackIn_7_0 = (null != this.field_z) && (this.field_z.isFocused(param0 + 1)) && (this.field_z.a(param0 ^ 0, param1, param2, param3, param4, param5, param6));
           return stackIn_7_0;
@@ -397,7 +397,7 @@ abstract class SingleChildWidget extends UiWidget implements ni {
 
     void drawLayer(int param0, int param1, int param2, int param3) {
         if (param1 != -11857) {
-          field_y = (ub) null;
+          field_y = (ScrollPane) null;
         }
         if (param0 == 0 &&
           this.field_p != null) {

@@ -105,7 +105,7 @@ final class ah extends ts {
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         var6 = this.field_M.c(126);
         if (var6 == pd.field_h) {
-          var17 = qr.field_R;
+          var17 = AnimatedPanel.field_R;
           if (!var17.equals(this.field_s)) {
             this.field_s = var17;
             this.e(false);
@@ -172,7 +172,7 @@ final class ah extends ts {
           return;
         }
         if (var6 == lm.field_d) {
-          var23 = qr.field_R;
+          var23 = AnimatedPanel.field_R;
           if (!var23.equals(this.field_s)) {
             this.field_s = var23;
             this.e(false);

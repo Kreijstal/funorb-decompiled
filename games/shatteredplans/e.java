@@ -42,7 +42,7 @@ final class e {
           var8 = new SpriteButton(0, 2 + rs.field_Cb.field_J, d.field_b[param2]);
           var12.addChild(var8, 8);
           if (param0 != 5) {
-            dupTemp$1 = QuickChatCategoryRegistry.a(ur.field_yb, 4371, new String[]{Integer.toString(param0)});
+            dupTemp$1 = QuickChatCategoryRegistry.a(ScrollBar.field_yb, 4371, new String[]{Integer.toString(param0)});
             var8.field_o = dupTemp$1;
             var7.field_o = dupTemp$1;
             var6.field_o = dupTemp$1;

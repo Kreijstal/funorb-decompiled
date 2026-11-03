@@ -6,7 +6,7 @@ import java.util.*;
 final class TaskAi implements Ai {
     private Player field_w;
     static String field_d;
-    static qr field_o;
+    static AnimatedPanel field_o;
     private int field_x;
     private int field_j;
     private IntrusiveDeque field_l;
@@ -823,11 +823,11 @@ final class TaskAi implements Ai {
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3) {
-        qr stackIn_11_0 = null;
+        AnimatedPanel stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
-        qr stackIn_18_0 = null;
+        AnimatedPanel stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
-        qr stackIn_23_0 = null;
+        AnimatedPanel stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -842,20 +842,20 @@ final class TaskAi implements Ai {
         }
         stackIn_11_0 = MapViewState.field_j;
         stackIn_12_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (np.field_a == null) && (he.field_p == null);
-        ((qr) (Object) stackIn_11_0).a(stackIn_12_1, -20429);
+        ((AnimatedPanel) (Object) stackIn_11_0).a(stackIn_12_1, -20429);
         stackIn_18_0 = AchievementProgress.field_i;
         stackIn_19_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (null == np.field_a) && (null == he.field_p);
-        ((qr) (Object) stackIn_18_0).a(stackIn_19_1, -20429);
+        ((AnimatedPanel) (Object) stackIn_18_0).a(stackIn_19_1, -20429);
         stackIn_23_0 = so.field_v;
         stackIn_24_1 = (param0) && (!param2) && (IntrusiveDequeCursor.field_b);
-        ((qr) (Object) stackIn_23_0).a(stackIn_24_1, param1 ^ 10210);
+        ((AnimatedPanel) (Object) stackIn_23_0).a(stackIn_24_1, param1 ^ 10210);
         Archive.field_g.field_d.f(false);
         if (0 != vm.field_Ab.field_rb) {
           GzipInflater.field_d = true;
         }
         boolean decompiledFrameRemainder0 = true;
         if (gb.field_m.field_rb != 0) {
-          if (!hm.field_o &&
+          if (!PanelNode.field_o &&
             0 >= StarAnnotation.field_m && (!(bs.field_b >= 2) ||
             !di.field_p[12])) {
             uc.field_B = true;

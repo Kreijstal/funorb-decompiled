@@ -48,14 +48,14 @@ final class mq {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (null == WeightedLruCache.field_g &&
-            null == hm.field_q) {
+            null == PanelNode.field_q) {
             return;
           }
           if (-e.field_f + ei.field_e > 20 &&
             -ByteArrayNode.field_k + AttackTask.field_o > 20) {
             ei.a(true, -ByteArrayNode.field_k + AttackTask.field_o, -e.field_f + ei.field_e, param0 - 12350, ByteArrayNode.field_k, e.field_f, SolVictoryChecker.blendColours(3974311, 0, -120, 128));
           }
-          if (WeightedLruCache.field_g == hm.field_q) {
+          if (WeightedLruCache.field_g == PanelNode.field_q) {
             var1_int = e.field_f + 13;
             var2 = 6 + ByteArrayNode.field_k;
             var3 = te.field_c;

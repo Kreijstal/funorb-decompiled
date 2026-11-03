@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sg extends qr {
-    qr field_Bb;
-    private qr field_Db;
-    static qr field_zb;
+final class sg extends AnimatedPanel {
+    AnimatedPanel field_Bb;
+    private AnimatedPanel field_Db;
+    static AnimatedPanel field_zb;
     static int field_Cb;
-    static qr field_Ab;
+    static AnimatedPanel field_Ab;
     static String field_yb;
     static String field_xb;
 
@@ -20,11 +20,11 @@ final class sg extends qr {
         var4 = -param1;
         if (param0 == 50) {
           if (this.field_Db != null) {
-            var4 = this.field_Db.e(false);
+            var4 = this.field_Db.measureWidthUnbounded(false);
           }
           var5 = -param1;
           if (null != this.field_Bb) {
-            var5 = this.field_Bb.a(-param2 + (-param1 - param2) + (this.field_K - var4), (byte) -79);
+            var5 = this.field_Bb.measureWidth(-param2 + (-param1 - param2) + (this.field_K - var4), (byte) -79);
           }
           var6 = param2 + (var4 + param2) - (-param1 - var5);
           if (this.field_K < var6) {
@@ -38,13 +38,13 @@ final class sg extends qr {
             param2 = param2 + (this.field_K - var6);
           }
           if (null != this.field_Db) {
-            this.field_Db.a(var4, this.field_mb, (byte) 61, 0, param2);
+            this.field_Db.setTarget(var4, this.field_mb, (byte) 61, 0, param2);
             this.field_Db.field_G = this.field_G;
           }
           if (this.field_Bb == null) {
             return;
           }
-          this.field_Bb.a(var5, this.field_mb, (byte) 50, 0, param2 + (var4 + param1));
+          this.field_Bb.setTarget(var5, this.field_mb, (byte) 50, 0, param2 + (var4 + param1));
           if (this.field_Db != null) {
             this.field_Bb.field_y = 0;
           } else {
@@ -56,11 +56,11 @@ final class sg extends qr {
         var7 = (nq) null;
         sg.a(true, false, -42, (String) null, (nq) null);
         if (this.field_Db != null) {
-          var4 = this.field_Db.e(false);
+          var4 = this.field_Db.measureWidthUnbounded(false);
         }
         var5Lifetime1 = -param1;
         if (null != this.field_Bb) {
-          var5Lifetime1 = this.field_Bb.a(-param2 + (-param1 - param2) + (this.field_K - var4), (byte) -79);
+          var5Lifetime1 = this.field_Bb.measureWidth(-param2 + (-param1 - param2) + (this.field_K - var4), (byte) -79);
         }
         var6Lifetime1 = param2 + (var4 + param2) - (-param1 - var5Lifetime1);
         if (this.field_K < var6Lifetime1) {
@@ -74,13 +74,13 @@ final class sg extends qr {
           param2 = param2 + (this.field_K - var6Lifetime1);
         }
         if (null != this.field_Db) {
-          this.field_Db.a(var4, this.field_mb, (byte) 61, 0, param2);
+          this.field_Db.setTarget(var4, this.field_mb, (byte) 61, 0, param2);
           this.field_Db.field_G = this.field_G;
         }
         if (this.field_Bb == null) {
           return;
         }
-        this.field_Bb.a(var5Lifetime1, this.field_mb, (byte) 50, 0, param2 + (var4 + param1));
+        this.field_Bb.setTarget(var5Lifetime1, this.field_mb, (byte) 50, 0, param2 + (var4 + param1));
         if (this.field_Db != null) {
           this.field_Bb.field_y = 0;
         } else {
@@ -90,7 +90,7 @@ final class sg extends qr {
         return;
     }
 
-    sg(long param0, qr param1, qr param2, qr param3, Sprite param4, String param5) {
+    sg(long param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -107,16 +107,16 @@ final class sg extends qr {
         RuntimeException var8 = null;
         try {
           if (param4 != null) {
-            this.field_Db = new qr(0L, param2);
+            this.field_Db = new AnimatedPanel(0L, param2);
             this.field_Db.field_pb = param4;
-            this.a(4, this.field_Db);
+            this.addChild(4, this.field_Db);
           }
           if (param5 != null) {
-            this.field_Bb = new qr(0L, param3, param5);
-            this.a(4, this.field_Bb);
-            this.e((byte) -128);
+            this.field_Bb = new AnimatedPanel(0L, param3, param5);
+            this.addChild(4, this.field_Bb);
+            this.markDirty((byte) -128);
           } else {
-            this.e((byte) -128);
+            this.markDirty((byte) -128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -158,7 +158,7 @@ final class sg extends qr {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(param5, param1, (byte) 42, param2, param6);
+        this.setTarget(param5, param1, (byte) 42, param2, param6);
         this.a(param0, param4, param3);
     }
 
@@ -228,17 +228,17 @@ final class sg extends qr {
         int var4 = -param0;
         int var5 = -param0;
         if (null != this.field_Db) {
-          var4 = this.field_Db.e(false);
+          var4 = this.field_Db.measureWidthUnbounded(false);
         }
         if (param1 <= -62) {
           if (this.field_Bb != null) {
-            var5 = this.field_Bb.e(false);
+            var5 = this.field_Bb.measureWidthUnbounded(false);
           }
           return var5 + var4 + (param2 + (param0 + param2));
         }
-        this.field_Bb = (qr) null;
+        this.field_Bb = (AnimatedPanel) null;
         if (this.field_Bb != null) {
-          var5 = this.field_Bb.e(false);
+          var5 = this.field_Bb.measureWidthUnbounded(false);
         }
         return var5 + var4 + (param2 + (param0 + param2));
     }

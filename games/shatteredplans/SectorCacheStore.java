@@ -5,7 +5,7 @@ import java.io.*;
 
 final class SectorCacheStore {
     private int field_e;
-    static qr field_f;
+    static AnimatedPanel field_f;
     private BufferedCacheFile field_a;
     private BufferedCacheFile field_b;
     static IntrusiveDeque field_d;

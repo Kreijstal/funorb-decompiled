@@ -4,7 +4,7 @@
 final class gg {
     static String field_b;
     static Sprite field_e;
-    static qr field_d;
+    static AnimatedPanel field_d;
     static String field_c;
     static int field_a;
 

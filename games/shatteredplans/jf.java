@@ -5,7 +5,7 @@ final class jf {
     static byte[][] field_c;
     static boolean[] field_e;
     static Sprite field_a;
-    static qr field_b;
+    static AnimatedPanel field_b;
     static String[] field_d;
 
     final static void a(int param0, String param1, java.applet.Applet param2) {
@@ -107,14 +107,14 @@ final class jf {
     final static void b(byte param0) {
         BoundsRect.field_j = false;
         if (param0 == -15) {
-          hm.field_p = null;
+          PanelNode.field_p = null;
           TertiaryNodeList.field_d = null;
           kp.field_o = null;
           kd.field_b = null;
           return;
         }
         field_c = (byte[][]) null;
-        hm.field_p = null;
+        PanelNode.field_p = null;
         TertiaryNodeList.field_d = null;
         kp.field_o = null;
         kd.field_b = null;

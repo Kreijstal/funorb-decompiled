@@ -7,7 +7,7 @@ final class oj extends ns implements ButtonListener {
     static String field_Ib;
     static PlatformTask field_Gb;
     static int[] field_Cb;
-    static qr field_zb;
+    static AnimatedPanel field_zb;
     static mp field_Fb;
     private aa field_Db;
     private boolean field_Hb;

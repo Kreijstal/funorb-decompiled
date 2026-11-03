@@ -3,7 +3,7 @@
  */
 final class fg {
     static ro field_a;
-    static qr field_b;
+    static AnimatedPanel field_b;
     static int[] field_c;
 
     final boolean a(int param0) {
@@ -85,7 +85,7 @@ final class fg {
         field_b = null;
         field_c = null;
         if (param0 < 123) {
-          field_b = (qr) null;
+          field_b = (AnimatedPanel) null;
         }
     }
 

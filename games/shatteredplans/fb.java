@@ -1,54 +1,54 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb extends qr {
-    qr field_Hb;
+final class fb extends AnimatedPanel {
+    AnimatedPanel field_Hb;
     boolean field_mc;
     static String field_kc;
     static String field_gc;
-    qr field_Wb;
-    qr field_Ib;
-    qr field_Db;
+    AnimatedPanel field_Wb;
+    AnimatedPanel field_Ib;
+    AnimatedPanel field_Db;
     int field_Zb;
-    qr field_Ub;
+    AnimatedPanel field_Ub;
     boolean field_Qb;
     static long[] field_Cb;
     static int[] field_zb;
     String[] field_jc;
-    qr field_Kb;
-    qr field_Mb;
+    AnimatedPanel field_Kb;
+    AnimatedPanel field_Mb;
     static char[] field_yb;
     static String field_bc;
     long field_Gb;
     int field_hc;
-    qr[] field_xb;
-    qr field_Rb;
+    AnimatedPanel[] field_xb;
+    AnimatedPanel field_Rb;
     boolean field_cc;
     int field_Fb;
-    qr field_oc;
+    AnimatedPanel field_oc;
     int field_lc;
     boolean field_Ab;
-    qr field_Pb;
+    AnimatedPanel field_Pb;
     long field_fc;
     int field_nc;
-    qr field_Sb;
+    AnimatedPanel field_Sb;
     int field_Eb;
-    qr field_ic;
-    qr field_Tb;
+    AnimatedPanel field_ic;
+    AnimatedPanel field_Tb;
     boolean field_ec;
     byte[] field_dc;
     boolean field_Yb;
-    qr field_Bb;
+    AnimatedPanel field_Bb;
     int field_Nb;
     String field_Xb;
     boolean field_Jb;
     int field_Lb;
-    qr field_Ob;
-    qr field_ac;
+    AnimatedPanel field_Ob;
+    AnimatedPanel field_ac;
     static Sprite field_Vb;
 
     fb(int param0) {
-        super(0L, (qr) null);
+        super(0L, (AnimatedPanel) null);
         this.field_dc = new byte[param0];
     }
 

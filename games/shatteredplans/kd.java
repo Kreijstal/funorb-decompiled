@@ -262,8 +262,8 @@ final class kd {
                 stackIn_20_0 = TertiaryNodeList.field_d.length;
               }
               var7 = stackIn_20_0;
-              if (hm.field_p.length > field_b.length) {
-                stackIn_23_0 = hm.field_p.length;
+              if (PanelNode.field_p.length > field_b.length) {
+                stackIn_23_0 = PanelNode.field_p.length;
               } else {
                 stackIn_23_0 = field_b.length;
               }

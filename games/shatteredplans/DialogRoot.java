@@ -63,8 +63,8 @@ final class DialogRoot extends SingleChildWidget {
 
     final static void f(byte param0) {
         if (!IsolationistAi.field_r &&
-          ur.field_zb == null) {
-          ur.field_zb = vs.a((byte) 88, 4);
+          ScrollBar.field_zb == null) {
+          ScrollBar.field_zb = vs.a((byte) 88, 4);
         }
         if (param0 <= 118) {
           field_G = (kh) null;
@@ -459,18 +459,18 @@ final class DialogRoot extends SingleChildWidget {
 
     final static void a(boolean param0, boolean param1) {
         n.field_h = !param1 ? new wh(QuickChatPhraseRegistry.field_c, so.field_t) : new wh(ve.field_yb, IntrusiveNode.field_c);
-        am.field_xb = new qr(0L, (qr) null);
-        am.field_xb.a(4, n.field_h.field_d);
-        am.field_xb.a(4, DialPainter.field_g);
-        MouseInputHandler.field_d = new qr(0L, ho.field_j);
+        am.field_xb = new AnimatedPanel(0L, (AnimatedPanel) null);
+        am.field_xb.addChild(4, n.field_h.field_d);
+        am.field_xb.addChild(4, DialPainter.field_g);
+        MouseInputHandler.field_d = new AnimatedPanel(0L, ho.field_j);
         if (!param0) {
           DialogRoot.isNameSeparator('x', 117);
         }
-        QuickChatPhraseRegistry.field_a = new qr(0L, (qr) null);
-        MouseInputHandler.field_d.a(4, ValidationIndicator.field_K);
-        MouseInputHandler.field_d.a(4, QuickChatPhraseRegistry.field_a);
-        QuickChatPhraseRegistry.field_a.a(4, MenuList.field_v);
-        QuickChatPhraseRegistry.field_a.a(4, oo.field_c);
+        QuickChatPhraseRegistry.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
+        MouseInputHandler.field_d.addChild(4, ValidationIndicator.field_K);
+        MouseInputHandler.field_d.addChild(4, QuickChatPhraseRegistry.field_a);
+        QuickChatPhraseRegistry.field_a.addChild(4, MenuList.field_v);
+        QuickChatPhraseRegistry.field_a.addChild(4, oo.field_c);
         en.a(15471, param1);
     }
 
@@ -509,30 +509,30 @@ final class DialogRoot extends SingleChildWidget {
         kh.field_Mb = SoftwareRasterizer.field_b;
         nj.a(438);
         Archive.field_g.a(0, MapViewState.field_j.field_mb - 42, (byte) 95, MapViewState.field_j.field_K, 0);
-        nm.field_c.a(cp.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
+        nm.field_c.setTarget(cp.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
         int var1 = cr.field_c + 2;
-        MenuList.field_v.a(cp.field_a.field_K, cp.field_a.field_mb - (!ns.field_pb ? 0 : var1), (byte) 105, !ns.field_pb ? 0 : var1, 0);
+        MenuList.field_v.setTarget(cp.field_a.field_K, cp.field_a.field_mb - (!ns.field_pb ? 0 : var1), (byte) 105, !ns.field_pb ? 0 : var1, 0);
         CachedArchiveSource.d(18);
-        vm.field_Ab.a(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
-        sg.field_zb.a(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);
-        qf.field_e.a(AchievementProgress.field_i.field_K, -40 + AchievementProgress.field_i.field_mb - 32, (byte) 48, 30, 0);
-        BattleSnapshot.field_y.a(68, 30, (byte) 64, 5, 5);
-        GameSession.field_e.a(78, 30, (byte) 42, 5, 75);
-        WeightedCacheEntry.field_t.a(48, 30, (byte) 61, 5, 155);
-        ta.field_d.a(48, 30, (byte) 39, 5, 205);
+        vm.field_Ab.setTarget(MapViewState.field_j.field_K, 40, (byte) 41, -40 + MapViewState.field_j.field_mb, 0);
+        sg.field_zb.setTarget(AchievementProgress.field_i.field_K, 30, (byte) 72, 0, 0);
+        qf.field_e.setTarget(AchievementProgress.field_i.field_K, -40 + AchievementProgress.field_i.field_mb - 32, (byte) 48, 30, 0);
+        BattleSnapshot.field_y.setTarget(68, 30, (byte) 64, 5, 5);
+        GameSession.field_e.setTarget(78, 30, (byte) 42, 5, 75);
+        WeightedCacheEntry.field_t.setTarget(48, 30, (byte) 61, 5, 155);
+        ta.field_d.setTarget(48, 30, (byte) 39, 5, 205);
         int var2 = !ns.field_pb ? 200 : 250;
-        IsaacBackedRandom.field_c.a(363 - var2, 30, (byte) 95, 5, var2 + 5);
-        hq.field_b.a(-5 + AchievementProgress.field_i.field_K - 370, 30, (byte) 53, 5, 370);
+        IsaacBackedRandom.field_c.setTarget(363 - var2, 30, (byte) 95, 5, var2 + 5);
+        hq.field_b.setTarget(-5 + AchievementProgress.field_i.field_K - 370, 30, (byte) 53, 5, 370);
         SingleChildWidget.field_y.a(-5 + qf.field_e.field_K - 5, 37, 5, 2, -125, -5 + (qf.field_e.field_mb - 32) - 5, pe.field_K);
         if (param0 < 93) {
           field_C = -10;
         }
         int var3 = (2 + AchievementProgress.field_i.field_K) / 2;
-        gb.field_m.a(-2 + var3, 40, (byte) 114, -40 + AchievementProgress.field_i.field_mb, 0);
+        gb.field_m.setTarget(-2 + var3, 40, (byte) 114, -40 + AchievementProgress.field_i.field_mb, 0);
         if (!ns.field_pb) {
           var3 = 0;
         }
-        LinkPainter.field_b.a(AchievementProgress.field_i.field_K - var3, 40, (byte) 85, -40 + AchievementProgress.field_i.field_mb, var3);
+        LinkPainter.field_b.setTarget(AchievementProgress.field_i.field_K - var3, 40, (byte) 85, -40 + AchievementProgress.field_i.field_mb, var3);
     }
 
     static {

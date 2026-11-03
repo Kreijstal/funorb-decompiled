@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oo {
-    static qr field_c;
+    static AnimatedPanel field_c;
     static Sprite field_a;
     static String field_f;
     static int field_e;
@@ -56,7 +56,7 @@ final class oo {
         if (param6) {
           return;
         }
-        field_c = (qr) null;
+        field_c = (AnimatedPanel) null;
     }
 
     final static boolean a(int param0, int param1, int param2, boolean param3, int param4) {
@@ -76,7 +76,7 @@ final class oo {
         field_b = null;
         field_a = null;
         if (param0 != 4) {
-          field_c = (qr) null;
+          field_c = (AnimatedPanel) null;
         }
     }
 

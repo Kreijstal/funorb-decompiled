@@ -7,9 +7,9 @@ final class ValidationIndicator extends FocusableWidget {
     static nk[] field_E;
     private int field_F;
     static String field_J;
-    static qr field_K;
+    static AnimatedPanel field_K;
     static String field_D;
-    static qr field_I;
+    static AnimatedPanel field_I;
 
     final static int a(int param0, int param1) {
         if (param0 >= -21) {

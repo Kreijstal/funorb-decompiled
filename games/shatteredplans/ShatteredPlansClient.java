@@ -451,11 +451,11 @@ public final class ShatteredPlansClient extends tl {
           stackIn_150_0 = 0;
           stackIn_150_1 = 82;
           d.$cfr$intArgs$a$a6964d7afeb1(stackIn_150_0, stackIn_150_1);
-          if (null != ur.field_zb &&
-            ur.field_zb.field_j) {
-            vq.field_a = vq.field_a | ur.field_zb.field_h;
-            oe.field_e = ur.field_zb.field_l;
-            ur.field_zb = null;
+          if (null != ScrollBar.field_zb &&
+            ScrollBar.field_zb.field_j) {
+            vq.field_a = vq.field_a | ScrollBar.field_zb.field_h;
+            oe.field_e = ScrollBar.field_zb.field_l;
+            ScrollBar.field_zb = null;
             IsolationistAi.field_r = true;
           }
           if (GameRules.field_c == -2 &&
@@ -798,22 +798,22 @@ public final class ShatteredPlansClient extends tl {
         PcmPlayerService.clearStatics();
         d.clearStatics(-28065);
         np.b(true);
-        hm.clearStatics(false);
+        PanelNode.clearStatics(false);
         v.clearStatics(3);
         wp.clearStatics((byte) -90);
         ae.b(-17358);
-        qr.clearStatics(-14115);
+        AnimatedPanel.clearStatics(-14115);
         fb.clearStatics(32);
         SecondaryNodeHashTable.clearStatics(true);
         mj.clearStatics(-4923);
         qn.clearStatics(-989994556);
         ue.a(18031);
         rs.clearStatics(2616);
-        ur.clearStatics((byte) -118);
+        ScrollBar.clearStatics((byte) -118);
         ul.g(param0 ^ -24045);
         am.clearStatics(param0 + 47949);
         fc.clearStatics((byte) -87);
-        ub.clearStatics(param0 ^ param0);
+        ScrollPane.clearStatics(param0 ^ param0);
         kh.clearStatics(param0 ^ 24070);
         wg.clearStatics((byte) -117);
         ArchiveIndex.clearStatics(true);
@@ -1205,7 +1205,7 @@ public final class ShatteredPlansClient extends tl {
               if (GameRules.field_c != -1) {
                 if (GameRules.field_c != -2) {
                   if (GameRules.field_c == -3) {
-                    ub.f((byte) 93);
+                    ScrollPane.f((byte) 93);
                   } else {
                     if (PointsVictoryChecker.a((byte) -121, GameRules.field_c)) {
                       mj.field_Hb[GameRules.field_c].i(2664);
@@ -1441,7 +1441,7 @@ public final class ShatteredPlansClient extends tl {
         }
         if (!TutorialAi.field_x ||
           !Wormhole.field_i) {
-          qr.a(VictoryChecker.a(30), (byte) 111);
+          AnimatedPanel.a(VictoryChecker.a(30), (byte) 111);
         }
         if (FullscreenFocusCanvas.field_b > 0) {
           SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, FullscreenFocusCanvas.field_b);

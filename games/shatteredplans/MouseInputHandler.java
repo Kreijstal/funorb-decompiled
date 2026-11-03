@@ -3,7 +3,7 @@
  */
 final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static eo field_h;
-    static qr field_d;
+    static AnimatedPanel field_d;
     static IntrusiveDeque field_g;
     static String field_e;
     static IntrusiveDeque field_c;

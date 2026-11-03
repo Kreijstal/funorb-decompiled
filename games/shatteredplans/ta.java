@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta {
-    static qr field_d;
+    static AnimatedPanel field_d;
     static IntrusiveDeque field_b;
     static Sprite field_a;
     static String field_c;
@@ -81,7 +81,7 @@ final class ta {
         di.a(false, param0);
         if (WidgetContainer.field_C) {
           SoftwareRasterizer.clearRect(n.field_h.field_d.field_hb, n.field_h.field_d.field_db, n.field_h.field_d.field_K, n.field_h.field_d.field_mb);
-          n.field_h.field_d.b(param0, -68);
+          n.field_h.field_d.drawFullRaster(param0, -68);
           TextFieldValidator.a((byte) 99, param0);
           if (param1 < 38) {
             field_c = (String) null;

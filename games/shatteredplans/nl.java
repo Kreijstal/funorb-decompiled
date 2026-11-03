@@ -4,8 +4,8 @@
 final class nl {
     static int[] field_a;
     static String field_c;
-    static qr field_b;
-    static qr field_d;
+    static AnimatedPanel field_b;
+    static AnimatedPanel field_d;
 
     public static void clearStatics(int param0) {
         field_d = null;

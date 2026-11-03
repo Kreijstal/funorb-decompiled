@@ -4,7 +4,7 @@
 final class DelegatingCanvas extends java.awt.Canvas {
     static String field_b;
     static String field_e;
-    static qr field_f;
+    static AnimatedPanel field_f;
     private java.awt.Component field_a;
     static String field_d;
     static String field_c;
@@ -42,7 +42,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     final static void b(int param0) {
         MenuWindow.g(83);
         if (param0 != 0) {
-          field_f = (qr) null;
+          field_f = (AnimatedPanel) null;
           DiskArchiveRequest.i(-751);
           return;
         }

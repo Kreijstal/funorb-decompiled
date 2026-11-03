@@ -7,7 +7,7 @@ final class dn extends hb {
     private DualLinkDeque field_i;
     static String field_g;
     static int field_l;
-    static qr field_f;
+    static AnimatedPanel field_f;
     static String field_j;
 
     final static String a(String param0, boolean param1) {
@@ -52,7 +52,7 @@ final class dn extends hb {
         int var4 = 0;
         try {
           if (param2 != 13) {
-            field_f = (qr) null;
+            field_f = (AnimatedPanel) null;
           }
           var5 = js.field_f;
           CipherPacketBuffer var3 = var5;

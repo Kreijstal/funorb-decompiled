@@ -4,7 +4,7 @@
 final class sk extends IntrusiveNode {
     int field_j;
     long field_l;
-    static qr field_k;
+    static AnimatedPanel field_k;
     byte[] field_h;
     static String field_i;
 

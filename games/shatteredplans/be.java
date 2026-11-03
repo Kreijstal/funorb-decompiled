@@ -108,7 +108,7 @@ final class be extends IntrusiveNode {
         }
     }
 
-    final static void a(qr param0, int param1, qr param2, int param3, int param4, byte param5, int param6, qr param7, byte[] param8, int param9) {
+    final static void a(AnimatedPanel param0, int param1, AnimatedPanel param2, int param3, int param4, byte param5, int param6, AnimatedPanel param7, byte[] param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;

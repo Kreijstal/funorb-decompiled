@@ -263,8 +263,8 @@ final class TutorialVictoryChecker extends VictoryChecker {
     public static void clearStatics(int param0) {
         field_k = null;
         if (param0 >= -93) {
-          ub var2 = (ub) null;
-          TutorialVictoryChecker.a(-23, (mj) null, -88, (ub) null, -99, 99, (byte) 109);
+          ScrollPane var2 = (ScrollPane) null;
+          TutorialVictoryChecker.a(-23, (mj) null, -88, (ScrollPane) null, -99, 99, (byte) 109);
         }
         field_r = null;
         field_o = null;
@@ -282,7 +282,7 @@ final class TutorialVictoryChecker extends VictoryChecker {
         }
     }
 
-    final static void a(int param0, mj param1, int param2, ub param3, int param4, int param5, byte param6) {
+    final static void a(int param0, mj param1, int param2, ScrollPane param3, int param4, int param5, byte param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;

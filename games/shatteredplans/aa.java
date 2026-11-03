@@ -503,7 +503,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           var18 = fr.field_F;
           var5 = var5 + ((var6Lifetime4Lifetime1 * 4 + 3) * var3 >> 2);
           var6Lifetime4Lifetime2 = wk.a(-9615, wg.field_e.a(5607, var18), rs.field_Cb, new int[]{var4 - 80});
-          var19 = ub.field_Cb;
+          var19 = ScrollPane.field_Cb;
           var5 = var5 + ((4 * var6Lifetime4Lifetime2 + 3) * var3 >> 2);
           var6Lifetime4Lifetime3 = wk.a(-9615, wg.field_e.a(5607, var19), rs.field_Cb, new int[]{-80 + var4});
           var5 = var5 + var6Lifetime4Lifetime3 * var3;

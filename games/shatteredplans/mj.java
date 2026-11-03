@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mj extends qr {
+final class mj extends AnimatedPanel {
     int field_Qb;
     boolean field_Ub;
     long field_zb;
     int field_Fb;
-    qr field_xb;
+    AnimatedPanel field_xb;
     int field_Wb;
     boolean field_Vb;
     static Sprite[] field_Nb;
     int field_Gb;
-    qr field_Ob;
-    qr field_Mb;
+    AnimatedPanel field_Ob;
+    AnimatedPanel field_Mb;
     static sm[] field_Hb;
     int field_Eb;
     int field_Lb;
     String field_Cb;
     boolean field_Tb;
-    qr field_Jb;
+    AnimatedPanel field_Jb;
     String field_Db;
     static long field_Pb;
     static Sprite field_Kb;
-    qr field_Ab;
+    AnimatedPanel field_Ab;
     static bg field_Rb;
     static byte[][] field_Bb;
     long field_Ib;
@@ -38,7 +38,7 @@ final class mj extends qr {
           if (param0 == 0) {
             UrlLoader.a((byte) -82, param1);
             if (null != DialogRoot.field_G) {
-              DialogRoot.field_G.b(param1, -68);
+              DialogRoot.field_G.drawFullRaster(param1, -68);
             }
             ho.a(param1, param0 + 8323199);
             return;
@@ -48,7 +48,7 @@ final class mj extends qr {
         if (param0 == 0) {
           UrlLoader.a((byte) -82, param1);
           if (null != DialogRoot.field_G) {
-            DialogRoot.field_G.b(param1, -68);
+            DialogRoot.field_G.drawFullRaster(param1, -68);
           }
           ho.a(param1, param0 + 8323199);
           return;
@@ -191,7 +191,7 @@ final class mj extends qr {
     }
 
     mj(String param0, String param1, long param2) {
-        super(0L, (qr) null);
+        super(0L, (AnimatedPanel) null);
         CharSequence var6 = null;
         try {
           this.field_Db = param0;

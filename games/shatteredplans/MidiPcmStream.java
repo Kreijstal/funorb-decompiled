@@ -349,29 +349,29 @@ final class MidiPcmStream extends PcmStream {
     final static void a(boolean param0, byte param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var18_int = 0;
         int var22_int = 0;
-        qr dupTemp$0 = null;
+        AnimatedPanel dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        ub stackIn_3_0 = null;
+        ScrollPane stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_3_2 = 0;
         boolean stackIn_4_3 = false;
         fb stackIn_12_0;
-        qr stackIn_12_1;
-        qr stackIn_12_2;
+        AnimatedPanel stackIn_12_1;
+        AnimatedPanel stackIn_12_2;
         long stackIn_12_3;
-        qr stackIn_13_1 = null;
-        qr stackIn_13_2 = null;
-        qr stackIn_13_4 = null;
+        AnimatedPanel stackIn_13_1 = null;
+        AnimatedPanel stackIn_13_2 = null;
+        AnimatedPanel stackIn_13_4 = null;
         fb stackIn_31_0;
-        qr stackIn_31_1;
-        qr stackIn_31_2;
+        AnimatedPanel stackIn_31_1;
+        AnimatedPanel stackIn_31_2;
         long stackIn_31_3;
-        qr stackIn_32_1;
-        qr stackIn_32_2;
-        qr stackIn_32_4;
+        AnimatedPanel stackIn_32_1;
+        AnimatedPanel stackIn_32_2;
+        AnimatedPanel stackIn_32_4;
         int stackIn_36_0 = 0;
         int stackIn_71_0 = 0;
         int stackIn_80_0 = 0;
@@ -391,19 +391,19 @@ final class MidiPcmStream extends PcmStream {
         fb var12 = null;
         int var13 = 0;
         int var14 = 0;
-        qr var18 = null;
-        qr var19 = null;
-        qr var20 = null;
-        qr var21 = null;
-        qr var22 = null;
-        qr var23 = null;
-        qr var24 = null;
-        qr var25 = null;
-        qr var26 = null;
-        qr var27 = null;
-        qr var28 = null;
-        qr var29 = null;
-        qr var30 = null;
+        AnimatedPanel var18 = null;
+        AnimatedPanel var19 = null;
+        AnimatedPanel var20 = null;
+        AnimatedPanel var21 = null;
+        AnimatedPanel var22 = null;
+        AnimatedPanel var23 = null;
+        AnimatedPanel var24 = null;
+        AnimatedPanel var25 = null;
+        AnimatedPanel var26 = null;
+        AnimatedPanel var27 = null;
+        AnimatedPanel var28 = null;
+        AnimatedPanel var29 = null;
+        AnimatedPanel var30 = null;
         int var31 = 0;
         String var32 = null;
         int var33_int = 0;
@@ -420,13 +420,13 @@ final class MidiPcmStream extends PcmStream {
         int var40 = 0;
         int var41 = 0;
         Sprite var42 = null;
-        qr var43 = null;
-        qr var44 = null;
-        qr var45 = null;
-        qr var46 = null;
-        qr var47 = null;
-        qr var48 = null;
-        qr var49 = null;
+        AnimatedPanel var43 = null;
+        AnimatedPanel var44 = null;
+        AnimatedPanel var45 = null;
+        AnimatedPanel var46 = null;
+        AnimatedPanel var47 = null;
+        AnimatedPanel var48 = null;
+        AnimatedPanel var49 = null;
         Object var50 = null;
         Sprite var50_ref = null;
         Object var51 = null;
@@ -455,7 +455,7 @@ final class MidiPcmStream extends PcmStream {
           stackIn_3_1 = (cr.field_c * 4 + 8) * param5;
           stackIn_3_2 = (2 + cr.field_c) * 2;
           stackIn_4_3 = (DerelictVictoryChecker.field_l == SingleChildWidget.field_y);
-          var7_int = ((ub) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_4_3, -109, param0, 2) ? 1 : 0;
+          var7_int = ((ScrollPane) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_4_3, -109, param0, 2) ? 1 : 0;
           var8 = SingleChildWidget.field_y.field_xb.field_M;
           if (param1 <= 109) {
             MidiPcmStream.a((nk[]) null, -36, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, 119, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (Sprite[][]) null);
@@ -467,19 +467,19 @@ final class MidiPcmStream extends PcmStream {
             var13 = 0;
             if (null == var12.field_M) {
               var14 = param2 | param3;
-              var12.field_Ub = new qr(0L, oj.field_zb);
-              var12.a(4, var12.field_Ub);
+              var12.field_Ub = new AnimatedPanel(0L, oj.field_zb);
+              var12.addChild(4, var12.field_Ub);
               var12.field_Ub.field_y = 1;
-              var12.field_Pb = new qr(0L, ek.field_E);
-              var12.a(4, var12.field_Pb);
-              var12.field_Rb = new qr(0L, oj.field_zb);
-              var12.a(4, var12.field_Rb);
+              var12.field_Pb = new AnimatedPanel(0L, ek.field_E);
+              var12.addChild(4, var12.field_Pb);
+              var12.field_Rb = new AnimatedPanel(0L, oj.field_zb);
+              var12.addChild(4, var12.field_Rb);
               var12.field_Rb.field_kb = 0;
-              var12.field_Wb = new qr(0L, oj.field_zb);
-              var12.a(4, var12.field_Wb);
+              var12.field_Wb = new AnimatedPanel(0L, oj.field_zb);
+              var12.addChild(4, var12.field_Wb);
               var12.field_Wb.field_kb = 0;
-              var12.field_Ib = new qr(0L, ek.field_E);
-              var12.a(4, var12.field_Ib);
+              var12.field_Ib = new AnimatedPanel(0L, ek.field_E);
+              var12.addChild(4, var12.field_Ib);
               var12.field_Ib.field_y = 2;
               stackIn_12_0 = var12;
               stackIn_12_1 = null;
@@ -494,24 +494,24 @@ final class MidiPcmStream extends PcmStream {
                 stackIn_13_2 = null;
                 stackIn_13_4 = ek.field_E;
               }
-              stackIn_12_0.field_Mb = new qr(stackIn_12_3, stackIn_13_4);
-              var12.a(4, var12.field_Mb);
-              var12.field_xb = new qr[ProductionContent.field_k];
-              var12.field_Bb = new qr(0L, (qr) null);
+              stackIn_12_0.field_Mb = new AnimatedPanel(stackIn_12_3, stackIn_13_4);
+              var12.addChild(4, var12.field_Mb);
+              var12.field_xb = new AnimatedPanel[ProductionContent.field_k];
+              var12.field_Bb = new AnimatedPanel(0L, (AnimatedPanel) null);
               if ((1 << cp.field_q & var14) != 0) {
-                var12.field_Mb.a(4, var12.field_Bb);
+                var12.field_Mb.addChild(4, var12.field_Bb);
               }
-              var12.field_oc = new qr(0L, (qr) null);
+              var12.field_oc = new AnimatedPanel(0L, (AnimatedPanel) null);
               if ((1 << GameRules.field_g & var14) != 0) {
-                var12.field_Mb.a(4, var12.field_oc);
+                var12.field_Mb.addChild(4, var12.field_oc);
               }
-              var12.field_ac = new qr(0L, (qr) null);
+              var12.field_ac = new AnimatedPanel(0L, (AnimatedPanel) null);
               if ((var14 & 1 << GameApplet.field_i) != 0) {
-                var12.field_Mb.a(4, var12.field_ac);
+                var12.field_Mb.addChild(4, var12.field_ac);
               }
-              var12.field_Kb = new qr(0L, (qr) null);
+              var12.field_Kb = new AnimatedPanel(0L, (AnimatedPanel) null);
               if (0 != (1 << v.field_e & var14)) {
-                var12.field_Mb.a(4, var12.field_Kb);
+                var12.field_Mb.addChild(4, var12.field_Kb);
               }
               var45 = var12.field_Bb;
               var44 = var12.field_Kb;
@@ -521,9 +521,9 @@ final class MidiPcmStream extends PcmStream {
               var44.field_G = 1;
               var45.field_G = 1;
               for (var18_int = 0; ProductionContent.field_k > var18_int; var18_int++) {
-                var12.field_xb[var18_int] = new qr(0L, (qr) null);
+                var12.field_xb[var18_int] = new AnimatedPanel(0L, (AnimatedPanel) null);
                 if (0 != (var14 & 1 << var18_int + TextFieldValidator.field_j)) {
-                  var12.field_Mb.a(4, var12.field_xb[var18_int]);
+                  var12.field_Mb.addChild(4, var12.field_xb[var18_int]);
                 }
                 var12.field_xb[var18_int].field_G = 1;
               }
@@ -540,21 +540,21 @@ final class MidiPcmStream extends PcmStream {
                 stackIn_32_2 = null;
                 stackIn_32_4 = oj.field_zb;
               }
-              stackIn_31_0.field_Ob = new qr(stackIn_31_3, stackIn_32_4);
-              var12.a(4, var12.field_Ob);
+              stackIn_31_0.field_Ob = new AnimatedPanel(stackIn_31_3, stackIn_32_4);
+              var12.addChild(4, var12.field_Ob);
               var12.field_Ob.field_y = 2;
-              var12.field_Tb = new qr(0L, ek.field_E);
-              var12.a(4, var12.field_Tb);
-              var12.field_Sb = new qr(0L, gn.field_w);
-              var12.a(4, var12.field_Sb);
-              var12.field_Hb = new qr(0L, gn.field_w);
-              var12.a(4, var12.field_Hb);
-              var12.field_ic = new qr(0L, SpriteState.field_u);
-              var12.a(4, var12.field_ic);
-              var12.e((byte) -126);
-              var12.field_Db = new qr(0L, GameScreen.field_h);
+              var12.field_Tb = new AnimatedPanel(0L, ek.field_E);
+              var12.addChild(4, var12.field_Tb);
+              var12.field_Sb = new AnimatedPanel(0L, gn.field_w);
+              var12.addChild(4, var12.field_Sb);
+              var12.field_Hb = new AnimatedPanel(0L, gn.field_w);
+              var12.addChild(4, var12.field_Hb);
+              var12.field_ic = new AnimatedPanel(0L, SpriteState.field_u);
+              var12.addChild(4, var12.field_ic);
+              var12.markDirty((byte) -126);
+              var12.field_Db = new AnimatedPanel(0L, GameScreen.field_h);
               var13 = 1;
-              var12.a(4, var12.field_Db);
+              var12.addChild(4, var12.field_Db);
             }
             stackIn_36_0 = (!var12.field_Ab) ? param2 : param3;
             var14Lifetime1 = stackIn_36_0;
@@ -665,12 +665,12 @@ final class MidiPcmStream extends PcmStream {
                 }
               }
               if (var12.field_Db.field_z == null) {
-                var12.field_Ub.a(68, cr.field_c, (byte) 48, var31, 0);
+                var12.field_Ub.setTarget(68, cr.field_c, (byte) 48, var31, 0);
               } else {
-                var12.field_Db.a(68, cr.field_c, (byte) 72, var31, 0);
+                var12.field_Db.setTarget(68, cr.field_c, (byte) 72, var31, 0);
               }
               var12.field_Pb.field_z = nq.a(var12.field_Pb.field_nb, var32, 78);
-              var12.field_Pb.a(78, cr.field_c, (byte) 85, var31, 70);
+              var12.field_Pb.setTarget(78, cr.field_c, (byte) 85, var31, 70);
               if (var12.field_Pb.field_L &&
                 !var12.field_Pb.field_z.equals(var32)) {
                 dn.field_k = var32;
@@ -680,22 +680,22 @@ final class MidiPcmStream extends PcmStream {
                 var12.field_Wb.field_z = "/" + var12.field_Eb;
                 var12.field_Rb.field_y = 2;
                 var33_int = (348 - var12.field_Wb.field_nb.stringWidth("/")) / 2;
-                var12.field_Rb.a(var33_int - 150, cr.field_c, (byte) 83, var31, 150);
-                var12.field_Wb.a(-var33_int + 198, cr.field_c, (byte) 84, var31, var33_int);
+                var12.field_Rb.setTarget(var33_int - 150, cr.field_c, (byte) 83, var31, 150);
+                var12.field_Wb.setTarget(-var33_int + 198, cr.field_c, (byte) 84, var31, var33_int);
               } else {
                 var12.field_Rb.field_y = 1;
-                var12.field_Rb.a(48, cr.field_c, (byte) 108, var31, 150);
+                var12.field_Rb.setTarget(48, cr.field_c, (byte) 108, var31, 150);
               }
               var12.field_Ib.field_z = Integer.toString(var12.field_Zb);
-              var12.field_Ib.a(48, cr.field_c, (byte) 47, var31, 200);
+              var12.field_Ib.setTarget(48, cr.field_c, (byte) 47, var31, 200);
               stackIn_71_0 = (!ns.field_pb) ? 200 : 250;
               var33_intLifetime1 = stackIn_71_0;
-              var12.field_Mb.a(-2 + (365 - var33_intLifetime1), cr.field_c, (byte) 46, var31, var33_intLifetime1);
+              var12.field_Mb.setTarget(-2 + (365 - var33_intLifetime1), cr.field_c, (byte) 46, var31, var33_intLifetime1);
               var34_int = qo.field_b;
               if ((var14Lifetime1 & 1 << cp.field_q) != 0) {
                 var50_ref = uk.field_b[var12.field_nc];
                 var12.field_Bb.field_pb = var50_ref;
-                var12.field_Bb.a(var50_ref.field_o, var12.field_Mb.field_mb, (byte) 111, 0, var34_int);
+                var12.field_Bb.setTarget(var50_ref.field_o, var12.field_Mb.field_mb, (byte) 111, 0, var34_int);
                 var34_int = var34_int + (var50_ref.field_o + qo.field_b);
               }
               if ((var14Lifetime1 & 1 << GameRules.field_g) != 0) {
@@ -713,13 +713,13 @@ final class MidiPcmStream extends PcmStream {
                 }
                 var51_ref = stackIn_82_0[stackIn_83_1];
                 var12.field_oc.field_pb = var51_ref;
-                var12.field_oc.a(var51_ref.field_o, var12.field_Mb.field_mb, (byte) 124, 0, var34_int);
+                var12.field_oc.setTarget(var51_ref.field_o, var12.field_Mb.field_mb, (byte) 124, 0, var34_int);
                 var34_int = var34_int + (qo.field_b + var51_ref.field_o);
               }
               if (0 != (1 << GameApplet.field_i & var14Lifetime1)) {
                 var52_ref = LegacyAi.field_s[-1 + var12.field_Fb];
                 var12.field_ac.field_pb = var52_ref;
-                var12.field_ac.a(var52_ref.field_o, var12.field_Mb.field_mb, (byte) 41, 0, var34_int);
+                var12.field_ac.setTarget(var52_ref.field_o, var12.field_Mb.field_mb, (byte) 41, 0, var34_int);
                 var34_int = var34_int + (qo.field_b + var52_ref.field_o);
               }
               if ((1 << v.field_e & var14Lifetime1) != 0) {
@@ -731,7 +731,7 @@ final class MidiPcmStream extends PcmStream {
                 }
                 var53_ref = stackIn_88_0[stackIn_91_1];
                 var12.field_Kb.field_pb = var53_ref;
-                var12.field_Kb.a(var53_ref.field_o, var12.field_Mb.field_mb, (byte) 127, 0, var34_int);
+                var12.field_Kb.setTarget(var53_ref.field_o, var12.field_Mb.field_mb, (byte) 127, 0, var34_int);
                 var34_int = var34_int + (qo.field_b + var53_ref.field_o);
               }
               if (null != Star.field_O) {
@@ -741,7 +741,7 @@ final class MidiPcmStream extends PcmStream {
                     var42 = Star.field_O[var36Lifetime1][var12.field_dc[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_xb[var36Lifetime1].field_pb = var42;
-                    var12.field_xb[var36Lifetime1].a(var54.field_o, var12.field_Mb.field_mb, (byte) 92, 0, var34_int);
+                    var12.field_xb[var36Lifetime1].setTarget(var54.field_o, var12.field_Mb.field_mb, (byte) 92, 0, var34_int);
                     var34_int = var34_int + (qo.field_b + var54.field_o);
                   }
                 }
@@ -773,7 +773,7 @@ final class MidiPcmStream extends PcmStream {
                   var12.field_Ob.field_z = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_Ob.a(var12.field_K - 365, cr.field_c, (byte) 57, var31, 365);
+              var12.field_Ob.setTarget(var12.field_K - 365, cr.field_c, (byte) 57, var31, 365);
               var31 = var31 + cr.field_c;
               if (var12.field_jc != null) {
                 var31 += 2;
@@ -787,17 +787,17 @@ final class MidiPcmStream extends PcmStream {
                 var38 = var37.toString();
                 var12.field_Tb.field_z = var38;
                 var39Lifetime1 = var12.field_Tb.field_nb.lineCount(var38, var12.field_K - 2 * var12.field_Tb.field_kb);
-                var12.field_Tb.a(var12.field_K, cr.field_c * var39Lifetime1, (byte) 73, var31, 0);
+                var12.field_Tb.setTarget(var12.field_K, cr.field_c * var39Lifetime1, (byte) 73, var31, 0);
                 var31 = var31 + var39Lifetime1 * cr.field_c;
               }
               if (var12.field_Jb) {
                 var12.field_Sb.field_z = QuickChatCategoryRegistry.a(tq.field_a, 4371, new String[]{var32});
-                var12.field_Sb.a(var12.field_K - tg.field_a * 2, cr.field_c, (byte) 80, var31, tg.field_a);
+                var12.field_Sb.setTarget(var12.field_K - tg.field_a * 2, cr.field_c, (byte) 80, var31, tg.field_a);
                 var31 = var31 + cr.field_c;
               }
               if (var12.field_Yb) {
                 var12.field_Hb.field_z = QuickChatCategoryRegistry.a(wj.field_n, 4371, new String[]{var32});
-                var12.field_Hb.a(-(2 * tg.field_a) + var12.field_K, cr.field_c, (byte) 91, var31, tg.field_a);
+                var12.field_Hb.setTarget(-(2 * tg.field_a) + var12.field_K, cr.field_c, (byte) 91, var31, tg.field_a);
                 var31 = var31 + cr.field_c;
               }
             }
@@ -806,14 +806,14 @@ final class MidiPcmStream extends PcmStream {
               var34_intLifetime1 = var12.field_ic.field_nb.lineCount(var33, -tg.field_a - tg.field_a + var12.field_K);
               var12.field_ic.field_z = var33;
               var12.field_ic.field_I = 256 * var12.field_Nb / ks.field_i;
-              var12.field_ic.a(var12.field_K - tg.field_a * 2, cr.field_c * var34_intLifetime1, (byte) 112, var31, tg.field_a);
+              var12.field_ic.setTarget(var12.field_K - tg.field_a * 2, cr.field_c * var34_intLifetime1, (byte) 112, var31, tg.field_a);
               var31 = var31 + var34_intLifetime1 * cr.field_c;
             }
             if (var7_int == 0) {
               var12.field_gb = -var12.field_mb + var31;
             }
             if (var13 != 0) {
-              SingleChildWidget.field_y.field_xb.a(2, (qr) (var11), var12, (byte) 65);
+              SingleChildWidget.field_y.field_xb.layoutAfter(2, (AnimatedPanel) (var11), var12, (byte) 65);
             }
             for (var34_intLifetime2 = 0; ProductionContent.field_k > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_xb[var34_intLifetime2].field_L) {
@@ -937,7 +937,7 @@ final class MidiPcmStream extends PcmStream {
         String[] var18 = null;
         try {
           var18 = (String[]) null;
-          ur.a(param4, param1, param8, param12, param10, param15, param16, param5, (String[]) null, -82, param11, param7, param2, param0, param13, 1, param9, param3, param6);
+          ScrollBar.a(param4, param1, param8, param12, param10, param15, param16, param5, (String[]) null, -82, param11, param7, param2, param0, param13, 1, param9, param3, param6);
           if (param14 != 16384) {
             field_o = (String) null;
           }

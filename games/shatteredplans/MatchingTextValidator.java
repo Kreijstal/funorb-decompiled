@@ -19,20 +19,20 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(boolean param0, qr param1) {
-        qr var4 = null;
-        qr var2 = null;
+    final static void a(boolean param0, AnimatedPanel param1) {
+        AnimatedPanel var4 = null;
+        AnimatedPanel var2 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        qr var2Lifetime1;
+        AnimatedPanel var2Lifetime1;
         try {
-          var4 = (qr) (param1.field_M.startForward(0));
+          var4 = (AnimatedPanel) (param1.field_M.startForward(0));
           var2 = var4;
           while (var4 != null) {
             var4.field_mb = 0;
             var4.field_gb = 0;
             var4.field_w = 0;
             var4.field_db = 0;
-            var4 = (qr) (param1.field_M.nextForward((byte) -71));
+            var4 = (AnimatedPanel) (param1.field_M.nextForward((byte) -71));
             var2Lifetime1 = var4;
           }
           if (param0) {

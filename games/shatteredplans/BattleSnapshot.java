@@ -22,8 +22,8 @@ final class BattleSnapshot extends IntrusiveNode {
     static String field_i;
     static DiskCacheWorker field_w;
     static a field_s;
-    static qr field_t;
-    static qr field_y;
+    static AnimatedPanel field_t;
+    static AnimatedPanel field_y;
 
     final static void d(int param0) {
         int var2 = 0;

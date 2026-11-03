@@ -93,7 +93,7 @@ final class ToggleButton extends MenuComponent implements ok {
         }
     }
 
-    final static void a(qr param0, qr param1, qr param2, qr param3, int param4) {
+    final static void a(AnimatedPanel param0, AnimatedPanel param1, AnimatedPanel param2, AnimatedPanel param3, int param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -130,22 +130,22 @@ final class ToggleButton extends MenuComponent implements ok {
           uq.field_j.field_jb = -(8355711 & ho.field_c >> 1) + ho.field_c + ((BoundsRect.field_k.field_jb & 16711422) >> 1);
           WhirlpoolHasher.field_j = cg.field_C;
           uq.field_j.field_qb = -(ho.field_c >> 1 & 8355711) + ho.field_c + (BoundsRect.field_k.field_qb >> 1 & 8355711);
-          fa.field_X = new qr(0L, param1);
-          AgeValidator.field_n = new qr(0L, param2);
-          MenuButton.field_w = new qr(0L, (qr) null);
-          sg.field_Ab = new qr(0L, param3);
-          uq.field_j = new qr((long)param4, param0);
+          fa.field_X = new AnimatedPanel(0L, param1);
+          AgeValidator.field_n = new AnimatedPanel(0L, param2);
+          MenuButton.field_w = new AnimatedPanel(0L, (AnimatedPanel) null);
+          sg.field_Ab = new AnimatedPanel(0L, param3);
+          uq.field_j = new AnimatedPanel((long)param4, param0);
           uq.field_j.field_nb = ho.field_f;
-          sg.field_Ab.a(4, uq.field_j);
-          cg.field_C = new qr(0L, WhirlpoolHasher.field_j);
-          sg.field_Ab.a(4, cg.field_C);
-          hd.field_m = new qr(0L, BoundsRect.field_k, ld.field_n);
-          cb.field_l = new qr(0L, BoundsRect.field_k);
-          fa.field_X.a(4, AgeValidator.field_n);
-          fa.field_X.a(4, MenuButton.field_w);
-          MenuButton.field_w.a(4, sg.field_Ab);
-          MenuButton.field_w.a(param4 + 4, hd.field_m);
-          MenuButton.field_w.a(4, cb.field_l);
+          sg.field_Ab.addChild(4, uq.field_j);
+          cg.field_C = new AnimatedPanel(0L, WhirlpoolHasher.field_j);
+          sg.field_Ab.addChild(4, cg.field_C);
+          hd.field_m = new AnimatedPanel(0L, BoundsRect.field_k, ld.field_n);
+          cb.field_l = new AnimatedPanel(0L, BoundsRect.field_k);
+          fa.field_X.addChild(4, AgeValidator.field_n);
+          fa.field_X.addChild(4, MenuButton.field_w);
+          MenuButton.field_w.addChild(4, sg.field_Ab);
+          MenuButton.field_w.addChild(param4 + 4, hd.field_m);
+          MenuButton.field_w.addChild(4, cb.field_l);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

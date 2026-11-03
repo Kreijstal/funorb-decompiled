@@ -4,11 +4,11 @@
 abstract class WeightedCacheEntry extends DualLinkNode {
     static gq field_r;
     static Sprite field_u;
-    static qr field_t;
+    static AnimatedPanel field_t;
     int field_p;
     static String field_q;
     static int[] field_s;
-    static qr field_o;
+    static AnimatedPanel field_o;
 
     abstract boolean e(boolean param0);
 
@@ -51,7 +51,7 @@ abstract class WeightedCacheEntry extends DualLinkNode {
           if (param0 >= 21) {
             return;
           }
-          field_o = (qr) null;
+          field_o = (AnimatedPanel) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

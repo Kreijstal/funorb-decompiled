@@ -8,7 +8,7 @@ final class GalaxyMap {
     int field_k;
     static String field_i;
     static String field_d;
-    static qr field_a;
+    static AnimatedPanel field_a;
     Star[] field_e;
     int[][] field_h;
     int field_b;

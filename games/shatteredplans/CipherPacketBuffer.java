@@ -247,7 +247,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         try {
           DerelictMapReader.field_h = param1;
           SectorCacheStore.field_f.field_M.clear(param0);
-          SectorCacheStore.field_f.a(4, DerelictMapReader.field_h);
+          SectorCacheStore.field_f.addChild(4, DerelictMapReader.field_h);
           QuickChatCategoryDefinition.field_t = true;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "sl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

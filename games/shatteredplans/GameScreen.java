@@ -16,7 +16,7 @@ final class GameScreen {
     private String[] field_ab;
     private os field_F;
     private int field_D;
-    private ub field_E;
+    private ScrollPane field_E;
     private int[][] field_G;
     private int field_u;
     private os field_M;
@@ -27,7 +27,7 @@ final class GameScreen {
     private boolean field_I;
     private MenuWindow field_J;
     static String field_L;
-    private qr field_O;
+    private AnimatedPanel field_O;
     private ToggleButton field_a;
     private int field_w;
     private MenuWindow field_cb;
@@ -38,7 +38,7 @@ final class GameScreen {
     private os field_m;
     private os field_lb;
     private int[][] field_C;
-    static qr field_h;
+    static AnimatedPanel field_h;
     private String field_r;
     private int field_U;
     private int field_fb;
@@ -174,7 +174,7 @@ final class GameScreen {
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1) &&
               (decompiledFrameRemainder0)) {
-              this.showStatusText(10, 0, ub.field_Bb);
+              this.showStatusText(10, 0, ScrollPane.field_Bb);
               if (var9 == 0) {
                 return;
               }
@@ -2271,7 +2271,7 @@ final class GameScreen {
           }
           BattleSnapshot.d(stackIn_45_0);
           if (null != this.field_O) {
-            this.field_O.b(false, 96);
+            this.field_O.drawFullRaster(false, 96);
           }
           if (this.field_U != -1) {
             var4 = this.field_x;
@@ -2418,7 +2418,7 @@ final class GameScreen {
           if (PlacementOrder.field_t > 0 &&
             IntrusiveDequeCursor.field_b) {
             SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, tg.field_c.field_N);
-            so.field_v.b(param1, -66);
+            so.field_v.drawFullRaster(param1, -66);
           }
           if (param0 != -57) {
             return;
@@ -2429,7 +2429,7 @@ final class GameScreen {
           }
           if (IntrusiveNodeHashTable.field_e) {
             SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, tg.field_c.field_N);
-            MouseInputHandler.field_d.b(param1, -83);
+            MouseInputHandler.field_d.drawFullRaster(param1, -83);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3172,7 +3172,7 @@ final class GameScreen {
           vc.a((byte) -39, mp.field_e.length);
           this.field_P = this.field_s.field_P.getYearName((byte) -50);
           this.field_u = 1;
-          MenuLabel.a(ub.field_yb, 63);
+          MenuLabel.a(ScrollPane.field_yb, 63);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4225,7 +4225,7 @@ final class GameScreen {
           var2_int = MouseInputHandler.field_f * MouseInputHandler.field_f;
           var3 = var2_int - NodeHashTableIterator.field_h * NodeHashTableIterator.field_h;
           var4 = 360 + 120 * var3 / var2_int;
-          this.field_O.a(640, 120, (byte) 112, var4, 0);
+          this.field_O.setTarget(640, 120, (byte) 112, var4, 0);
           this.field_E.field_xb.field_M.clear(0);
           var5 = 0;
           var6 = 0;
@@ -4242,7 +4242,7 @@ final class GameScreen {
               } else {
                 if (null == var8_ref_nf.field_j) {
                   var10 = var8_ref_nf.field_g;
-                  var8_ref_nf.field_j = new qr(0L, gn.field_w, var8_ref_nf.field_k);
+                  var8_ref_nf.field_j = new AnimatedPanel(0L, gn.field_w, var8_ref_nf.field_k);
                   var8_ref_nf.field_j.field_jb = ((16711422 & gn.field_w.field_jb) >> 1) + var10 - (var10 >> 1 & 8355711);
                   var6 += 15;
                   var8_ref_nf.field_j.field_nb = ho.field_f;
@@ -4266,8 +4266,8 @@ final class GameScreen {
             var9_ref_nf = wm.field_d[var8];
             if (var11 == 0) {
               if (null != var9_ref_nf.field_j) {
-                this.field_E.field_xb.a(4, var9_ref_nf.field_j);
-                var9_ref_nf.field_j.a(var9_ref_nf.field_j.e(false), 15, (byte) 79, var7, tg.field_a);
+                this.field_E.field_xb.addChild(4, var9_ref_nf.field_j);
+                var9_ref_nf.field_j.setTarget(var9_ref_nf.field_j.measureWidthUnbounded(false), 15, (byte) 79, var7, tg.field_a);
                 var7 += 15;
               }
               var8++;
@@ -5054,9 +5054,9 @@ final class GameScreen {
         String stackIn_56_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        qr var3_ref_qr = null;
+        AnimatedPanel var3_ref_qr = null;
         Player var4 = null;
-        qr var4_ref = null;
+        AnimatedPanel var4_ref = null;
         int var5 = 0;
         int stackIn_45_0Lifetime1;
         int stackIn_45_1Lifetime1;
@@ -5173,15 +5173,15 @@ final class GameScreen {
             if (!this.field_s.field_f &&
               !this.field_s.field_W) {
               qn.b(116);
-              var3_ref_qr = new qr(0L, (qr) null);
+              var3_ref_qr = new AnimatedPanel(0L, (AnimatedPanel) null);
               var3_ref_qr.field_M = new IntrusiveDeque();
-              this.field_E = new ub(0L, var3_ref_qr, ObjectList.field_h, AchievementProgress.field_m);
-              var4_ref = new qr(0L, GalaxyMap.field_a);
-              this.field_O = new qr(0L, IntrusiveNode.field_a);
-              this.field_O.a(640, 120, (byte) 116, 480, 0);
-              var4_ref.a(634, this.field_O.field_mb - 6, (byte) 84, 3, 3);
-              this.field_O.a(4, var4_ref);
-              var4_ref.a(4, this.field_E);
+              this.field_E = new ScrollPane(0L, var3_ref_qr, ObjectList.field_h, AchievementProgress.field_m);
+              var4_ref = new AnimatedPanel(0L, GalaxyMap.field_a);
+              this.field_O = new AnimatedPanel(0L, IntrusiveNode.field_a);
+              this.field_O.setTarget(640, 120, (byte) 116, 480, 0);
+              var4_ref.setTarget(634, this.field_O.field_mb - 6, (byte) 84, 3, 3);
+              this.field_O.addChild(4, var4_ref);
+              var4_ref.addChild(4, this.field_E);
               var5 = -5 + var4_ref.field_mb;
               this.field_E.a(624, 5, 5, 2, -125, -5 + var5, 15);
               ImageProducerRasterBuffer.field_n = false;

@@ -578,18 +578,18 @@ final class SecondaryNodeHashTable {
     }
 
     final static void a(byte param0) {
-        cp.field_a = new qr(0L, (qr) null);
+        cp.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
         if (ns.field_pb) {
-          cp.field_a.a(4, nm.field_c);
+          cp.field_a.addChild(4, nm.field_c);
         }
-        cp.field_a.a(4, MenuList.field_v);
+        cp.field_a.addChild(4, MenuList.field_v);
         Archive.field_g = new wh(ds.field_a, cp.field_a);
         if (param0 != -83) {
           field_i = (Sprite) null;
         }
-        MapViewState.field_j = new qr(0L, (qr) null);
-        MapViewState.field_j.a(param0 + 87, Archive.field_g.field_d);
-        MapViewState.field_j.a(4, vm.field_Ab);
+        MapViewState.field_j = new AnimatedPanel(0L, (AnimatedPanel) null);
+        MapViewState.field_j.addChild(param0 + 87, Archive.field_g.field_d);
+        MapViewState.field_j.addChild(4, vm.field_Ab);
         DialogRoot.j(96);
     }
 

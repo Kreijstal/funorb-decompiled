@@ -10,7 +10,7 @@ class TextFieldWidget extends FocusableWidget {
     static boolean field_D;
     static String field_G;
     private long field_F;
-    static qr field_I;
+    static AnimatedPanel field_I;
     static Sprite field_L;
     private boolean field_P;
     private int field_O;

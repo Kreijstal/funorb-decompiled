@@ -6,10 +6,10 @@ import java.util.*;
 final class IsaacBackedRandom extends Random {
     static String field_d;
     private IsaacRandom field_f;
-    static qr field_a;
+    static AnimatedPanel field_a;
     static String field_e;
     static SecondaryNodeHashTable field_b;
-    static qr field_c;
+    static AnimatedPanel field_c;
 
     final static void a(int param0) {
         if (param0 > 111) {
@@ -17,7 +17,7 @@ final class IsaacBackedRandom extends Random {
           TertiaryLinkNode.field_o.field_p = 0;
           return;
         }
-        field_c = (qr) null;
+        field_c = (AnimatedPanel) null;
         TertiaryLinkNode.field_o.field_a = 0;
         TertiaryLinkNode.field_o.field_p = 0;
     }

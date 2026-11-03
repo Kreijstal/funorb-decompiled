@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class StarAnnotation extends IntrusiveNode {
-    static qr field_l;
+    static AnimatedPanel field_l;
     static int field_n;
     static Archive field_j;
     static int field_m;
