@@ -173,7 +173,7 @@ final class TeamSelectionView extends MatchPhaseView {
         if (param0 > -35) {
           field_r = (int[]) null;
         }
-        return al.field_Ab.pollMasterIndex((byte) -45);
+        return FriendsListPanel.field_Ab.pollMasterIndex((byte) -45);
     }
 
     private final void a(byte param0, int param1) {

@@ -97,7 +97,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
             GameModesHelpScreen.field_L.c(5 + this.slideOffsetX, 290);
             var10 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
             var11 = var8 + var10 * 16 + 5;
-            ConsoleTokenCursor.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11 + 6, 16711680, -1);
+            ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11 + 6, 16711680, -1);
             var11 += 10;
             var12 = ProxyAuthenticationRequiredException.field_a[var5];
             if (th.field_a[var5]) {
@@ -125,7 +125,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
           StrongCacheEntry.field_w.c(5 + this.slideOffsetX, 290);
           var10Lifetime2 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
           var11Lifetime2 = var8 + var10Lifetime2 * 16 + 5;
-          ConsoleTokenCursor.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime2 + 6, 16711680, -1);
+          ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime2 + 6, 16711680, -1);
           var11Lifetime2 += 10;
           var12Lifetime2 = ProxyAuthenticationRequiredException.field_a[var5];
           if (th.field_a[var5]) {
@@ -154,7 +154,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         var10Lifetime1 = var18.a('"' + kw.field_c[var5] + '"', var7, var8, var9, 80, 16776960, -1, 1, 0, 16);
         var11Lifetime1 = var8 + var10Lifetime1 * 16 + 5;
         if (var6 == 0) {
-          ConsoleTokenCursor.field_d.d(bo.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime1 + 6, 16711680, -1);
+          ConsoleTokenCursor.field_d.d(QuickChatKeysHelpPanel.field_Db.toLowerCase(), (var9 >> 1) + var7, var11Lifetime1 + 6, 16711680, -1);
           var11Lifetime1 += 10;
           var12Lifetime1 = ProxyAuthenticationRequiredException.field_a[var5];
           if (th.field_a[var5]) {

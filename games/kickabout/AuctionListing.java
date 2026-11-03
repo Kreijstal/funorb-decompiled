@@ -679,7 +679,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -127, "mu_chat_game_friends");
                 if (var2 != null) {
-                  bo.field_Bb = BlackFadeScreen.a(var2, true);
+                  QuickChatKeysHelpPanel.field_Bb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = ni.a((byte) -50, "mu_chat_game_hide");
                 if (null != var2) {
@@ -967,7 +967,7 @@ final class AuctionListing extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -53, "esc_cancelthisline");
                 if (var2 != null) {
-                  im.field_Bb = BlackFadeScreen.a(var2, param0);
+                  ListRow.field_Bb = BlackFadeScreen.a(var2, param0);
                 }
                 var2 = ni.a((byte) -71, "privatequickchat_from_x");
                 if (null != var2) {

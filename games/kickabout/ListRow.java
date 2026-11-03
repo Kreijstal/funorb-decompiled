@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class im extends UiLayoutNode {
+abstract class ListRow extends UiLayoutNode {
     static String field_Bb;
     static String field_zb;
     static int field_Ab;
     static int field_yb;
 
-    im() {
+    ListRow() {
     }
 
     public static void a(int param0) {
@@ -42,7 +42,7 @@ abstract class im extends UiLayoutNode {
           return;
         }
         CharSequence var2 = (CharSequence) null;
-        im.a((byte) 6, (CharSequence) null, -12);
+        ListRow.a((byte) 6, (CharSequence) null, -12);
     }
 
     final static int a(byte param0, CharSequence param1, int param2) {
@@ -73,7 +73,7 @@ abstract class im extends UiLayoutNode {
 
     abstract void b(int param0, int param1);
 
-    final static void a(java.applet.Applet param0, int param1, String param2) {
+    final static void openUrlInBrowser(java.applet.Applet param0, int param1, String param2) {
         try {
           java.net.URL var3 = null;
           Exception var3_ref = null;

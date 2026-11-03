@@ -116,7 +116,7 @@ final class WhirlpoolHasher {
           if (NodeHashTableIterator.field_b == 2) {
             MySquadScreen.field_N.field_E = IntrusiveNodeHashTable.field_f;
           } else {
-            MySquadScreen.field_N.field_E = im.field_Bb;
+            MySquadScreen.field_N.field_E = ListRow.field_Bb;
           }
           var9_int = 495;
           var10 = 5;

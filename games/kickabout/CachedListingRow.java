@@ -47,10 +47,10 @@ final class CachedListingRow extends IntrusiveNode {
         if (IntrusiveNodeHashTable.field_g[var4] != null) {
           return true;
         }
-        if (!bo.field_Cb.ensureFileAvailableByName("scenery", var3, (byte) -10)) {
+        if (!QuickChatKeysHelpPanel.field_Cb.ensureFileAvailableByName("scenery", var3, (byte) -10)) {
           return false;
         }
-        IntrusiveNodeHashTable.field_g[var4] = QuickChatPhraseDefinition.a("scenery", bo.field_Cb, (byte) 76, var3);
+        IntrusiveNodeHashTable.field_g[var4] = QuickChatPhraseDefinition.a("scenery", QuickChatKeysHelpPanel.field_Cb, (byte) 76, var3);
         return true;
     }
 

@@ -6,7 +6,7 @@ final class TournamentChampionDialog extends MessageDialog {
     static int field_I;
     static String field_H;
     static int field_J;
-    static al field_F;
+    static FriendsListPanel field_F;
 
     final static boolean i(int param0) {
         if (param0 >= -55) {

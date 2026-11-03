@@ -24,7 +24,7 @@ final class j {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = bo.a(-1, param1);
+          var3 = QuickChatKeysHelpPanel.reverseString(-1, param1);
           var4 = -111 % ((-20 - param0) / 49);
           if (-1 != param2.indexOf(param1)) {
             return true;

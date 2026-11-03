@@ -13,7 +13,7 @@ final class NumericDateInputWidget extends DateInputWidget {
     static int[] field_M;
     private TextInputWidget field_P;
     static int field_R;
-    static bo field_J;
+    static QuickChatKeysHelpPanel field_J;
     private boolean field_U;
     static String field_S;
 

@@ -884,7 +884,7 @@ final class TournamentLobbyScreen extends AppScreen {
           if (null != this.field_y) {
             for (var6Lifetime2 = 0; var6Lifetime2 < this.field_y.length; var6Lifetime2++) {
               if (null == this.field_y[var6Lifetime2]) {
-                jr.a(410, -89, 250);
+                ReceivedAuctionItemRow.a(410, -89, 250);
               } else {
                 this.field_y[var6Lifetime2].a(98);
               }
@@ -1236,7 +1236,7 @@ final class TournamentLobbyScreen extends AppScreen {
           var6 = 0;
           var7 = Math.abs(255 - var5) | Math.abs(-var5 + 255) << 8 | Math.abs(255 - var5) << 16;
           AuctionListing.a(40 + (du.field_n + var3), -22914, -2 + var3, var4, -16 + var4);
-          SoftwareRasterizer.a(var3, var4 - 11, 33 + du.field_n, 20, 6, var6, al.a(false, (byte) -96));
+          SoftwareRasterizer.a(var3, var4 - 11, 33 + du.field_n, 20, 6, var6, FriendsListPanel.a(false, (byte) -96));
           ScrollPane.a(var4, -123, 14 + var3);
           ScrollPane.a(var4, param0 + 113, du.field_n + (30 + var3));
           var8 = LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, NanoTickClock.field_o, new String[]{mk.field_b[il.field_h]});

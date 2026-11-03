@@ -91,7 +91,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             this.a(-123, (TextButton) null, 56, (byte) 64, 43);
           }
           if (!this.field_cb) {
-            im.a(so.a(-79), 126, "tochangedisplayname.ws");
+            ListRow.openUrlInBrowser(so.a(-79), 126, "tochangedisplayname.ws");
           } else {
             IndexedSpriteState.b(38, 3);
             this.q(-97);

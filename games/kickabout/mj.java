@@ -27,7 +27,7 @@ final class mj {
             LoginForm.a(c.field_f[var2_int], 20684);
             DelayedServerPacket.a(100, 9863, var2_int + 96);
           }
-          var7 = al.field_Bb[ih.field_c];
+          var7 = FriendsListPanel.field_Bb[ih.field_c];
           var6 = var7;
           var5 = var6;
           double[] var2 = var5;

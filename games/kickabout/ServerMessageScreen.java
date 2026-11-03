@@ -58,7 +58,7 @@ final class ServerMessageScreen extends ButtonMenuScreen {
           var15 = go.a(param4, param0, 0, RenderedFootballer.field_fb);
           var16 = go.a(param4, param0, 0, RandomAccessCacheFile.field_i);
           var19 = 0.0;
-          jr.field_Mb = -1;
+          ReceivedAuctionItemRow.field_Mb = -1;
           if (param2 != -99) {
             ServerMessageScreen.a((byte) -36, 37L);
           }
@@ -77,7 +77,7 @@ final class ServerMessageScreen extends ButtonMenuScreen {
                 var17 = var17 + ((double)var11 * (double)var11 + ((double)var9_int * (double)var9_int + (double)var10 * (double)var10)) / (double)var12;
                 if (var17 > var19) {
                   var19 = var17;
-                  jr.field_Mb = var21;
+                  ReceivedAuctionItemRow.field_Mb = var21;
                 }
               }
             }

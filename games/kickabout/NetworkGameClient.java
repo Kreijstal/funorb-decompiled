@@ -1208,7 +1208,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5_int = bo.a(s.j(61), (byte) -98, PlayingView.f(-1));
+            var5_int = QuickChatKeysHelpPanel.a(s.j(61), (byte) -98, PlayingView.f(-1));
             if (-1 != var5_int) {
               LeagueWinnerDialog.a(ValidatedTextWidget.field_X, var5_int, ListingRowCache.field_b, -1);
               ListingRowCache.field_b = null;
@@ -1284,7 +1284,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             bq.a((byte) 125, so.a(51));
           }
           if (var4 == 12) {
-            im.a(so.a(-85), 114, IsaacRandom.c(71));
+            ListRow.openUrlInBrowser(so.a(-85), 114, IsaacRandom.c(71));
           }
           if (13 == var4) {
             try {

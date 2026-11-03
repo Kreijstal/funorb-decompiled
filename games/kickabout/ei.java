@@ -13,7 +13,7 @@ final class ei implements WidgetPainter {
     private int field_a;
     private int field_g;
     private int field_l;
-    static al field_d;
+    static FriendsListPanel field_d;
     private int field_j;
     private int field_m;
 

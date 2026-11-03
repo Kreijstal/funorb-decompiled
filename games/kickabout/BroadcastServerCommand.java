@@ -3,7 +3,7 @@
  */
 final class BroadcastServerCommand extends ConsoleCommand {
     static int[][] field_E;
-    static al field_D;
+    static FriendsListPanel field_D;
     static String field_A;
     static String field_C;
     static String field_F;

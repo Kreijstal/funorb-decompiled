@@ -108,7 +108,7 @@ final class gg extends UiLayoutNode {
     final static void h(byte param0) {
         UiLayoutNode.field_K = CachedArchiveSource.field_C;
         InstrumentNoteMask.field_f = PlayArea.field_d;
-        jr.field_Gb = AuctionLogEntry.field_f;
+        ReceivedAuctionItemRow.field_Gb = AuctionLogEntry.field_f;
         PlayerStats.field_f = 0.0;
         DualLinkDeque.field_e = 0.0;
         int var1 = -104 % ((param0 + 10) / 60);

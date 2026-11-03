@@ -637,7 +637,7 @@ final class SquadGridWidget extends UiLayoutNode {
         MatchingTextValidator.field_o[8] = IconLabel.field_Eb;
         MatchingTextValidator.field_o[27] = DebouncedValidationProvider.field_c;
         MatchingTextValidator.field_o[9] = NumericDateInputWidget.field_N;
-        MatchingTextValidator.field_o[0] = bo.field_zb;
+        MatchingTextValidator.field_o[0] = QuickChatKeysHelpPanel.field_zb;
         MatchingTextValidator.field_o[6] = ConsoleEvaluationException.field_a;
         MatchingTextValidator.field_o[5] = MenuButton.field_i;
         MatchingTextValidator.field_o[1] = h.field_c;

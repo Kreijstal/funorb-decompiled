@@ -280,7 +280,7 @@ final class IsaacRandom {
         if (!param0) {
           return 17;
         }
-        return (int)jr.field_Gb;
+        return (int)ReceivedAuctionItemRow.field_Gb;
     }
 
     private final void a(int param0) {

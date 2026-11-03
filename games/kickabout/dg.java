@@ -107,10 +107,10 @@ class dg {
           var9Lifetime2 = "0";
         }
         if (0 >= var10.length()) {
-          return var14.toString() + bo.a(-1, var9Lifetime2) + bo.a(-1, var10.toString());
+          return var14.toString() + QuickChatKeysHelpPanel.reverseString(-1, var9Lifetime2) + QuickChatKeysHelpPanel.reverseString(-1, var10.toString());
         }
         discarded$3 = var10.append(var7);
-        return var14.toString() + bo.a(-1, var9Lifetime2) + bo.a(-1, var10.toString());
+        return var14.toString() + QuickChatKeysHelpPanel.reverseString(-1, var9Lifetime2) + QuickChatKeysHelpPanel.reverseString(-1, var10.toString());
     }
 
     public static void a(byte param0) {

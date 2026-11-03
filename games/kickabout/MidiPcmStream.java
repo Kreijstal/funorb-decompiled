@@ -565,7 +565,7 @@ final class MidiPcmStream extends PcmStream {
             var9 = (int)var8.field_a;
             var10 = (MusicPatch) (this.field_w.a(true, (long)var9));
             if (var10 == null) {
-              var10 = jr.a(param2, var9, 116);
+              var10 = ReceivedAuctionItemRow.a(param2, var9, 116);
               if (var10 != null) {
                 this.field_w.a(var10, param0 ^ 124, (long)var9);
               } else {
@@ -1110,7 +1110,7 @@ final class MidiPcmStream extends PcmStream {
             3 == RankingsScreen.field_C) {
             var5 = go.a(-87, (byte) -56);
             for (var6 = 0; var6 < 5; var6++) {
-              im.a(-12376, MySquadScreen.c(-121, (-5 + MatchingTextValidator.field_k.field_o) * var6 - 32), var5, MatchingTextValidator.field_k);
+              ListRow.a(-12376, MySquadScreen.c(-121, (-5 + MatchingTextValidator.field_k.field_o) * var6 - 32), var5, MatchingTextValidator.field_k);
             }
           }
           if (ih.field_c == 2) {
@@ -1120,11 +1120,11 @@ final class MidiPcmStream extends PcmStream {
             var7 = stackIn_48_0;
             for (var8 = 0; 5 > var8; var8++) {
               var9 = go.a(var8 * 290 - 40, (byte) -56);
-              im.a(-12376, var5Lifetime1, var9, so.field_d[0 + var7]);
-              im.a(-12376, var6Lifetime1, var9, so.field_d[1 + var7]);
+              ListRow.a(-12376, var5Lifetime1, var9, so.field_d[0 + var7]);
+              ListRow.a(-12376, var6Lifetime1, var9, so.field_d[1 + var7]);
             }
           }
-          im.a(-12376, var3, var4, (Sprite) (var2));
+          ListRow.a(-12376, var3, var4, (Sprite) (var2));
           if (param1 != -114) {
             field_M = (IntrusiveDeque) null;
           }
@@ -1132,7 +1132,7 @@ final class MidiPcmStream extends PcmStream {
             3 == RankingsScreen.field_C) {
             var5Lifetime2 = go.a(1384, (byte) -56);
             for (var6Lifetime2 = 0; var6Lifetime2 < 5; var6Lifetime2++) {
-              im.a(param1 - 12262, MySquadScreen.c(-126, var6Lifetime2 * (-5 + MatchingTextValidator.field_k.field_o) - 32), var5Lifetime2, MatchingTextValidator.field_k);
+              ListRow.a(param1 - 12262, MySquadScreen.c(-126, var6Lifetime2 * (-5 + MatchingTextValidator.field_k.field_o) - 32), var5Lifetime2, MatchingTextValidator.field_k);
             }
             return;
           }

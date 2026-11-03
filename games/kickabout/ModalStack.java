@@ -7,7 +7,7 @@ final class ModalStack extends SingleChildContainer {
     static String field_B;
 
     public ModalStack() {
-        super(0, 0, il.field_b, im.field_Ab, (WidgetPainter) null, (UiListener) null);
+        super(0, 0, il.field_b, ListRow.field_Ab, (WidgetPainter) null, (UiListener) null);
         this.field_A = new IntrusiveDeque();
     }
 

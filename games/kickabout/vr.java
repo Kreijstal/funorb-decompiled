@@ -165,10 +165,10 @@ final class vr {
         if (param2 > -48) {
           vr.a(22);
         }
-        if (!bo.field_Cb.a(false, var6)) {
-          return bo.field_Cb.getGroupProgressByName(var6, -16248);
+        if (!QuickChatKeysHelpPanel.field_Cb.a(false, var6)) {
+          return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName(var6, -16248);
         }
-        cv.field_b[param1][param0] = wa.a((byte) 113, var6, bo.field_Cb, "");
+        cv.field_b[param1][param0] = wa.a((byte) 113, var6, QuickChatKeysHelpPanel.field_Cb, "");
         if (param1 != 1) {
           return -1;
         }

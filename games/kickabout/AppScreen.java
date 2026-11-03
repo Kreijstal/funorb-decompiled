@@ -82,7 +82,7 @@ abstract class AppScreen {
           or.field_c = param3;
           ParticipantStatus.field_t = (ArchiveNetworkClient) ((Object) new tb());
           SplashScreen.field_i = new DiskCacheWorker(param2);
-          al.field_Ab = new ArchiveManager(ParticipantStatus.field_t, SplashScreen.field_i);
+          FriendsListPanel.field_Ab = new ArchiveManager(ParticipantStatus.field_t, SplashScreen.field_i);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "js.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

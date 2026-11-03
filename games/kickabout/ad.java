@@ -1970,7 +1970,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("menu_training", param1 - 129);
                 if (var2 != null) {
-                  bo.field_zb = BlackFadeScreen.a(var2, true);
+                  QuickChatKeysHelpPanel.field_zb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("menu_multiplayer", -104);
                 if (null != var2) {
@@ -3344,7 +3344,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("no_buyout", -113);
                 if (var2 != null) {
-                  im.field_zb = BlackFadeScreen.a(var2, true);
+                  ListRow.field_zb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("selling", param1 - 84);
                 if (var2 != null) {
@@ -3512,7 +3512,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay1", param1 ^ -126);
                 if (null != var2) {
-                  jr.field_Fb = BlackFadeScreen.a(var2, true);
+                  ReceivedAuctionItemRow.field_Fb = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("instructions_gameplay2,0", -112);
                 if (null != var2) {
@@ -3930,7 +3930,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("notyetachieved", -82);
                 if (null != var2) {
-                  bo.field_Db = BlackFadeScreen.a(var2, true);
+                  QuickChatKeysHelpPanel.field_Db = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("auctionhouse_commission", -84);
                 if (var2 != null) {

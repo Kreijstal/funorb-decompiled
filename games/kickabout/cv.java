@@ -230,9 +230,9 @@ abstract class cv {
             SortCriterion.field_l = null;
             TextButton.field_B = false;
           }
-          if (al.field_Db) {
+          if (FriendsListPanel.field_Db) {
             um.field_e = null;
-            al.field_Db = false;
+            FriendsListPanel.field_Db = false;
             oa.b(-23217);
             mv.$cfr$intArgs$a$6121ff5511c4(119);
             BytePlusOneCommand.g(0);

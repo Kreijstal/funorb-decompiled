@@ -402,8 +402,8 @@ final class tb extends ArchiveNetworkClient {
         UiLayoutNode var3 = null;
         try {
           DirectByteStorage.field_n = wa.a((byte) 126, "basic", param1, "display_name_changed");
-          ei.field_d = new al(0L, BroadcastServerCommand.field_D, le.field_a, ButtonMenuScreen.field_k);
-          TournamentChampionDialog.field_F = new al(0L, BroadcastServerCommand.field_D, CheatCodeListener.field_j, IsSixCommand.field_D);
+          ei.field_d = new FriendsListPanel(0L, BroadcastServerCommand.field_D, le.field_a, ButtonMenuScreen.field_k);
+          TournamentChampionDialog.field_F = new FriendsListPanel(0L, BroadcastServerCommand.field_D, CheatCodeListener.field_j, IsSixCommand.field_D);
           TriangleMesh.field_R = new UiLayoutNode(0L, (UiLayoutNode) null);
           du.field_f = new UiLayoutNode(0L, ConsoleEvaluationException.field_e);
           du.field_f.field_A = 1;

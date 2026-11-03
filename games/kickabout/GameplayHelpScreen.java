@@ -40,7 +40,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var3 = ca.field_f.length;
         if (!LoginMethod.b(param0 - 15) ||
           !wn.a((byte) 50) &&
-          !c.a(bo.field_Ab[32], 0, BufferedSocket.field_f)) {
+          !c.a(QuickChatKeysHelpPanel.field_Ab[32], 0, BufferedSocket.field_f)) {
           var3--;
         }
         for (var4 = 0; var4 < var3; var4++) {
@@ -50,20 +50,20 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var12.addChild((byte) -121, var5);
           var6 = ca.field_f[var4];
           for (var7 = 0; var7 < ca.field_f[var4]; var7++) {
-            if (hv.field_a[bo.field_Ab[var2 + var7]] &&
-              !c.a(bo.field_Ab[var7 + var2], 0, BufferedSocket.field_f)) {
+            if (hv.field_a[QuickChatKeysHelpPanel.field_Ab[var2 + var7]] &&
+              !c.a(QuickChatKeysHelpPanel.field_Ab[var7 + var2], 0, BufferedSocket.field_f)) {
               var6--;
             }
           }
           var7Lifetime1 = 0;
           for (var8 = 0; var8 < ca.field_f[var4]; var8++) {
             var9 = 0;
-            if (hv.field_a[bo.field_Ab[var2]] &&
-              !c.a(bo.field_Ab[var2], 0, BufferedSocket.field_f)) {
+            if (hv.field_a[QuickChatKeysHelpPanel.field_Ab[var2]] &&
+              !c.a(QuickChatKeysHelpPanel.field_Ab[var2], 0, BufferedSocket.field_f)) {
               var9 = 1;
             }
             if (var9 == 0) {
-              var10 = new SelectableTrinketIcon(bo.field_Ab[var2]);
+              var10 = new SelectableTrinketIcon(QuickChatKeysHelpPanel.field_Ab[var2]);
               stackIn_30_0 = var10;
               stackIn_30_1 = true;
               stackIn_30_2 = 32;
@@ -504,7 +504,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var13 = Kickabout.field_G;
         stackIn_3_0 = (null == AccountRegistrationPanel.field_C) ? 0 : 1;
         var2 = stackIn_3_0;
-        IsSixCommand.field_C.a(jr.field_Fb, 60 + this.slideOffsetX, 136, 16777215, -1);
+        IsSixCommand.field_C.a(ReceivedAuctionItemRow.field_Fb, 60 + this.slideOffsetX, 136, 16777215, -1);
         var3 = this.slideOffsetX + 40;
         if (param0 != 96) {
           this.field_F = (PlayerStats[]) null;

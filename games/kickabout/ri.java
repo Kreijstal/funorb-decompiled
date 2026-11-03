@@ -408,7 +408,7 @@ class ri extends TextWidgetPainter {
           IterableDualLinkDeque.field_b.field_r = wa.a((byte) 115, "lobby", param4, "downbutton_mouseheld");
           IterableDualLinkDeque.field_b.field_t = wa.a((byte) 119, "lobby", param4, "downbutton_disabled");
           uk.field_b = new VerticalScrollbar(0L, sd.field_a, IterableDualLinkDeque.field_b, ScrollPane.field_Hb, ts.field_a);
-          BroadcastServerCommand.field_D = new al(0L, (UiLayoutNode) null, SoundCache.field_b, uk.field_b, um.field_d, (String) null, (String) null);
+          BroadcastServerCommand.field_D = new FriendsListPanel(0L, (UiLayoutNode) null, SoundCache.field_b, uk.field_b, um.field_d, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

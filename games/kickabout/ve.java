@@ -32,17 +32,17 @@ final class ve extends ResizableModalPanel implements ButtonListener {
         if (BallAgent.field_u) {
           return -1;
         }
-        if (bo.field_Cb.a(param0, "park")) {
+        if (QuickChatKeysHelpPanel.field_Cb.a(param0, "park")) {
           BallAgent.field_u = true;
-          LeaguesScreen.field_E = ng.a("benches", "park", 2, bo.field_Cb);
-          ConsoleCommand.field_w = QuickChatPhraseDefinition.a("park", bo.field_Cb, (byte) 70, "hotdog");
-          pi.field_a = QuickChatPhraseDefinition.a("park", bo.field_Cb, (byte) 59, "swing");
-          RandomAccessCacheFile.field_c = QuickChatPhraseDefinition.a("park", bo.field_Cb, (byte) 114, "slide");
-          ng.field_j = ng.a("trees", "park", 2, bo.field_Cb);
-          gw.field_d = ng.a("stains", "park", 2, bo.field_Cb);
+          LeaguesScreen.field_E = ng.a("benches", "park", 2, QuickChatKeysHelpPanel.field_Cb);
+          ConsoleCommand.field_w = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 70, "hotdog");
+          pi.field_a = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 59, "swing");
+          RandomAccessCacheFile.field_c = QuickChatPhraseDefinition.a("park", QuickChatKeysHelpPanel.field_Cb, (byte) 114, "slide");
+          ng.field_j = ng.a("trees", "park", 2, QuickChatKeysHelpPanel.field_Cb);
+          gw.field_d = ng.a("stains", "park", 2, QuickChatKeysHelpPanel.field_Cb);
           return -1;
         }
-        return bo.field_Cb.getGroupProgressByName("park", -16248);
+        return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("park", -16248);
     }
 
     final static void a(GameSetupPanel param0, byte param1) {

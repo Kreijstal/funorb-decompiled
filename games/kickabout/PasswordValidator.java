@@ -137,7 +137,7 @@ final class PasswordValidator extends TextFieldValidator {
         var10 = Kickabout.field_G;
         try {
           if (FadingChatMessage.field_h == param2 &&
-            param1 == jr.field_Kb &&
+            param1 == ReceivedAuctionItemRow.field_Kb &&
             TextButton.field_C == param3 &&
             param4 == ValidationIndicator.field_K &&
             MouseWheelInput.field_f == param5) {
@@ -148,8 +148,8 @@ final class PasswordValidator extends TextFieldValidator {
           TextButton.field_C = param3;
           stackIn_11_0 = param5;
           MouseWheelInput.field_f = stackIn_11_0;
-          jr.field_Kb = param1;
-          var6_int = (100 * jr.field_Kb >> 8) + 50;
+          ReceivedAuctionItemRow.field_Kb = param1;
+          var6_int = (100 * ReceivedAuctionItemRow.field_Kb >> 8) + 50;
           var7 = (116 * FadingChatMessage.field_h >> 8) + 40;
           PacketBuffer.a(-68, wn.field_j);
           SoftwareRasterizer.b();

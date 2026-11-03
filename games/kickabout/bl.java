@@ -54,7 +54,7 @@ final class bl {
         if (param0 < 63) {
           this.field_e = (LobbyGameRecord) null;
         }
-        SquadPickerDialog.field_Q.b(var2, var3, al.a(false, (byte) 14));
+        SquadPickerDialog.field_Q.b(var2, var3, FriendsListPanel.a(false, (byte) 14));
         if (this.field_e.field_f == 4) {
           PacketBuffer.a(-45, DraggableWidget.field_K);
           SoftwareRasterizer.b();
@@ -131,10 +131,10 @@ final class bl {
         if (param0 != -94) {
           return false;
         }
-        if (!bo.field_Cb.ensureFileAvailableByName("scenery", "bleachers", (byte) -10)) {
+        if (!QuickChatKeysHelpPanel.field_Cb.ensureFileAvailableByName("scenery", "bleachers", (byte) -10)) {
           return false;
         }
-        TeamSelectionAgent.field_p = ng.a("bleachers", "scenery", 2, bo.field_Cb);
+        TeamSelectionAgent.field_p = ng.a("bleachers", "scenery", 2, QuickChatKeysHelpPanel.field_Cb);
         return true;
     }
 

@@ -93,7 +93,7 @@ final class kr {
           var23 = il.field_d[1];
           var29Lifetime1Lifetime2 = var23;
           var29Lifetime1Lifetime3 = var23;
-          var22 = bo.field_Bb;
+          var22 = QuickChatKeysHelpPanel.field_Bb;
           var21.field_j.addItemWithIcon(var22, true, 12, var23);
           var24 = TextButton.field_v;
           var26 = il.field_d[2];

@@ -981,7 +981,7 @@ final class PlayerStats implements lv {
         }
         var16 = kj.a(stackIn_31_0, stackIn_31_1, this, stackIn_31_3, stackIn_31_4, stackIn_36_5);
         if (var16 == null) {
-          jr.a(param1 + 24, -103, -19 + (param6 + 50));
+          ReceivedAuctionItemRow.a(param1 + 24, -103, -19 + (param6 + 50));
         } else {
           var16.c(7 + param1, 50 + param6 - (var16.field_v + 1));
         }

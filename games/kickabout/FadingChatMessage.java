@@ -32,7 +32,7 @@ final class FadingChatMessage extends IntrusiveNode {
         if (this.alpha == 0) {
           return;
         }
-        int var4 = al.a(true, (byte) -120);
+        int var4 = FriendsListPanel.a(true, (byte) -120);
         SoftwareRasterizer.a(95, param1 + 1, this.field_e, 17, 6, 0, var4 * this.alpha >> 8);
         if (256 != this.alpha) {
           AuctionLogEntry.field_e.b(this.text, 107, -4 + (18 + param1), 16777215, -1, this.alpha);

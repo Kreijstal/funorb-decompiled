@@ -130,7 +130,7 @@ final class RenderedFootballer extends FootballerAgent {
             var5 = param2.field_q + param2.field_F - 38;
             var6 = param2.field_T + 58;
             if (var4 == null) {
-              jr.a(var5, -128, var6);
+              ReceivedAuctionItemRow.a(var5, -128, var6);
             } else {
               ((Sprite) ((Object) var4)).c(var5 - (((Sprite) ((Object) var4)).field_o >> 1), var6 - (((Sprite) ((Object) var4)).field_v >> 1));
             }

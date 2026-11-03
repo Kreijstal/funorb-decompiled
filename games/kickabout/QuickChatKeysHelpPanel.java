@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bo extends UiLayoutNode {
+final class QuickChatKeysHelpPanel extends UiLayoutNode {
     static ResourceArchive field_Cb;
     static String field_zb;
     static String field_Db;
@@ -9,7 +9,7 @@ final class bo extends UiLayoutNode {
     private UiLayoutNode field_yb;
     static String field_Bb;
 
-    final static String a(int param0, String param1) {
+    final static String reverseString(int param0, String param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -72,7 +72,7 @@ final class bo extends UiLayoutNode {
         field_zb = null;
         field_Bb = null;
         if (param0 != 72) {
-          bo.a(-72);
+          QuickChatKeysHelpPanel.a(-72);
         }
     }
 
@@ -112,7 +112,7 @@ final class bo extends UiLayoutNode {
         }
     }
 
-    bo(UiLayoutNode param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4, UiLayoutNode param5) {
+    QuickChatKeysHelpPanel(UiLayoutNode param0, UiLayoutNode param1, UiLayoutNode param2, UiLayoutNode param3, UiLayoutNode param4, UiLayoutNode param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

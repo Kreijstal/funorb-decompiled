@@ -33,7 +33,7 @@ final class TextLine extends IntrusiveNode {
         RuntimeException var3_ref = null;
         try {
           param1 = ArchiveManager.a('_', "", (byte) -124, param1);
-          var3 = bo.a(-1, param1);
+          var3 = QuickChatKeysHelpPanel.reverseString(-1, param1);
           var4 = 117 / ((-74 - param0) / 46);
           stackIn_5_0 = (-1 != param2.indexOf(param1)) || (param2.indexOf(var3) != -1);
           return stackIn_5_0;

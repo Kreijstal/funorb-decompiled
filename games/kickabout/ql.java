@@ -110,7 +110,7 @@ final class ql {
           if (param0 != 96) {
             field_d = (String) null;
           }
-          var3_int = al.a(false, (byte) 71);
+          var3_int = FriendsListPanel.a(false, (byte) 71);
           if (4 == vt.field_c.phase) {
             sk.a(1, var3_int);
             od.a(param2, var3_int, vt.field_c.participantStatus, 14839);

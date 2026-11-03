@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class al extends UiLayoutNode {
+final class FriendsListPanel extends UiLayoutNode {
     static double[][] field_Bb;
     ScrollPane field_Cb;
     static boolean field_Db;
@@ -28,7 +28,7 @@ final class al extends UiLayoutNode {
         field_Ab = null;
         field_Bb = (double[][]) null;
         if (param0 != 1) {
-          al.h((byte) 68);
+          FriendsListPanel.h((byte) 68);
         }
     }
 
@@ -39,11 +39,11 @@ final class al extends UiLayoutNode {
         this.field_q = param4;
         this.a(param6, param0, (byte) 19, param2);
         if (param5 < 82) {
-          al.a(-85);
+          FriendsListPanel.a(-85);
         }
     }
 
-    al(long param0, UiLayoutNode param1, UiLayoutNode param2, VerticalScrollbar param3, UiLayoutNode param4, String param5, String param6) {
+    FriendsListPanel(long param0, UiLayoutNode param1, UiLayoutNode param2, VerticalScrollbar param3, UiLayoutNode param4, String param5, String param6) {
         super(param0, param1);
         try {
           this.field_yb = new UiLayoutNode(0L, (UiLayoutNode) null);
@@ -90,7 +90,7 @@ final class al extends UiLayoutNode {
         }
     }
 
-    al(long param0, al param1, String param2, String param3) {
+    FriendsListPanel(long param0, FriendsListPanel param1, String param2, String param3) {
         this(param0, param1, param1.field_Cb.field_zb, param1.field_Cb.field_Fb, param1.field_Eb, param2, param3);
     }
 
@@ -109,7 +109,7 @@ final class al extends UiLayoutNode {
           this.field_zb.field_mb = param3;
           return;
         }
-        al.a(48);
+        FriendsListPanel.a(48);
         this.field_Eb.field_mb = param3;
         this.field_Eb.field_q = var5 - param0;
         this.field_zb.field_q = this.field_q - var5;

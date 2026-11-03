@@ -208,7 +208,7 @@ final class MySquadScreen extends TeamManagementScreen {
           if (var7 != null) {
             ((Sprite) ((Object) var7)).c(var8 - (((Sprite) ((Object) var7)).field_o >> 1), -(((Sprite) ((Object) var7)).field_v >> 1) + var9);
           } else {
-            jr.a(var8, param0 - 94, var9);
+            ReceivedAuctionItemRow.a(var8, param0 - 94, var9);
           }
           var10 = 60 + this.field_I.field_F;
           var11 = 44 + this.field_I.field_T;
@@ -263,7 +263,7 @@ final class MySquadScreen extends TeamManagementScreen {
             if (var15_ref != null &&
               !PlayArea.a(param0 + 105)) {
               if (!ValidationIndicator.field_F) {
-                jr.a(this.field_G.field_F + (this.field_G.field_q >> 1), -32, (this.field_G.field_mb >> 1) + this.field_G.field_T);
+                ReceivedAuctionItemRow.a(this.field_G.field_F + (this.field_G.field_q >> 1), -32, (this.field_G.field_mb >> 1) + this.field_G.field_T);
               } else {
                 var16Lifetime2 = var28.field_v;
                 for (var17_int = 0; 3 > var17_int; var17_int++) {

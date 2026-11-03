@@ -111,7 +111,7 @@ final class ig {
         if (param1 != 4620) {
           field_h = (String) null;
         }
-        return (int)(MyPitchScreen.field_G + (jr.field_Gb + (double)((-240 + param0 << 8) / InstrumentNoteMask.field_i)));
+        return (int)(MyPitchScreen.field_G + (ReceivedAuctionItemRow.field_Gb + (double)((-240 + param0 << 8) / InstrumentNoteMask.field_i)));
     }
 
     final static void a(boolean param0, byte param1, int param2, int param3) {

@@ -153,7 +153,7 @@ final class gw {
     }
 
     final static void a(int param0) {
-        NumericDateInputWidget.field_J = new bo(ChatMessage.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c);
+        NumericDateInputWidget.field_J = new QuickChatKeysHelpPanel(ChatMessage.field_e, AccountTermsPanel.field_H, hl.field_f, ConsoleEvaluationException.field_e, MatchPhaseView.field_d, ul.field_c);
         if (param0 != 8) {
           field_a = (UiLayoutNode) null;
         }

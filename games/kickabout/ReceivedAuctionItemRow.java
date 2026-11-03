@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jr extends im {
+final class ReceivedAuctionItemRow extends ListRow {
     private String field_Ib;
     static String field_Fb;
     static int field_Mb;
@@ -106,7 +106,7 @@ final class jr extends im {
         }
         if (param0 != 0) {
           var6 = (ResourceArchive) null;
-          jr.a((ResourceArchive) null, 41, 84);
+          ReceivedAuctionItemRow.a((ResourceArchive) null, 41, 84);
         }
     }
 
@@ -173,7 +173,7 @@ final class jr extends im {
             if (var5 != null) {
               var5.c(1 + var4, this.field_T + 4);
             } else {
-              jr.a(1 + var4 + 19, -97, this.field_T + 4 + 23);
+              ReceivedAuctionItemRow.a(1 + var4 + 19, -97, this.field_T + 4 + 23);
             }
             this.field_X.a(var12.getDisplayName(100), 45 + var4, (this.field_mb >> 1) + this.field_T + 4, this.field_y, -1);
             var4 = var4 + this.field_Db[0];
@@ -241,7 +241,7 @@ final class jr extends im {
             if (-1 != var8Lifetime1) {
               stackIn_58_0 = ad.formatCurrencyAmount(var8Lifetime1, 26300);
             } else {
-              stackIn_58_0 = im.field_zb;
+              stackIn_58_0 = ListRow.field_zb;
             }
             var9 = stackIn_58_0;
             this.field_X.d(var9, (this.field_Db[5] >> 1) + var4, -7 + (this.field_mb >> 1) + this.field_T, this.field_y, -1);
@@ -255,7 +255,7 @@ final class jr extends im {
               IsSixCommand.field_C.d(this.field_Ib, this.field_F + (this.field_q >> 1), this.field_T + 42, 16777215, -1);
             }
           } else {
-            jr.a(this.field_Db[1] + (this.field_Db[0] + this.field_F + (this.field_Db[2] - 30)), -96, this.field_T + 23);
+            ReceivedAuctionItemRow.a(this.field_Db[1] + (this.field_Db[0] + this.field_F + (this.field_Db[2] - 30)), -96, this.field_T + 23);
           }
           return;
         }
@@ -315,11 +315,11 @@ final class jr extends im {
         }
     }
 
-    private jr() {
+    private ReceivedAuctionItemRow() {
         this.field_Lb = true;
     }
 
-    jr(String param0) {
+    ReceivedAuctionItemRow(String param0) {
         try {
           this.field_Ib = param0;
           this.field_Lb = true;
@@ -328,7 +328,7 @@ final class jr extends im {
         }
     }
 
-    jr(int[] param0) {
+    ReceivedAuctionItemRow(int[] param0) {
         try {
           this.field_Lb = true;
           this.field_Db = param0;
@@ -337,7 +337,7 @@ final class jr extends im {
         }
     }
 
-    jr(ReceivedAuctionItem param0, int[] param1) {
+    ReceivedAuctionItemRow(ReceivedAuctionItem param0, int[] param1) {
         int var8 = 0;
         int stackIn_11_0 = 0;
         Object stackIn_14_0 = null;
@@ -347,7 +347,7 @@ final class jr extends im {
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jr var3 = null;
+        ReceivedAuctionItemRow var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object var5 = null;
@@ -358,9 +358,9 @@ final class jr extends im {
         int var11 = 0;
         int var12 = 0;
         try {
-          var3 = (jr) (bk.field_f.b((byte) 126));
+          var3 = (ReceivedAuctionItemRow) (bk.field_f.b((byte) 126));
           if (var3 == null) {
-            var3 = new jr();
+            var3 = new ReceivedAuctionItemRow();
           }
           this.field_mb = 50;
           this.field_Hb = param0;

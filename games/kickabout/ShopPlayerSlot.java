@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ShopPlayerSlot extends im {
+final class ShopPlayerSlot extends ListRow {
     private int[] field_Pb;
     static Sprite[] field_Hb;
     int field_Fb;
@@ -99,7 +99,7 @@ final class ShopPlayerSlot extends im {
           if (var4 != null) {
             var4.c(1 + var3Lifetime1, 4 + this.field_T);
           } else {
-            jr.a(19 + (1 + var3Lifetime1), -92, 23 + (this.field_T + 4));
+            ReceivedAuctionItemRow.a(19 + (1 + var3Lifetime1), -92, 23 + (this.field_T + 4));
           }
           this.field_X.a(this.field_Sb.getDisplayName(100), var3Lifetime1 + 40, 4 + (this.field_mb >> 1) + this.field_T, this.field_y, -1);
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[param0];
@@ -180,8 +180,8 @@ final class ShopPlayerSlot extends im {
         int var1 = param0 + 81920 / InstrumentNoteMask.field_i;
         int var2 = 61440 / InstrumentNoteMask.field_i - 240;
         int var3 = -var1 + 896;
-        if ((double)var2 > jr.field_Gb) {
-          jr.field_Gb = (double)var2;
+        if ((double)var2 > ReceivedAuctionItemRow.field_Gb) {
+          ReceivedAuctionItemRow.field_Gb = (double)var2;
         }
         if (UiLayoutNode.field_K < (double)var1) {
           UiLayoutNode.field_K = (double)var1;
@@ -193,8 +193,8 @@ final class ShopPlayerSlot extends im {
         if ((double)var3 < UiLayoutNode.field_K) {
           UiLayoutNode.field_K = (double)var3;
         }
-        if (jr.field_Gb > (double)var4) {
-          jr.field_Gb = (double)var4;
+        if (ReceivedAuctionItemRow.field_Gb > (double)var4) {
+          ReceivedAuctionItemRow.field_Gb = (double)var4;
         }
         if (2048.0 < InstrumentNoteMask.field_f) {
           InstrumentNoteMask.field_f = 2048.0;

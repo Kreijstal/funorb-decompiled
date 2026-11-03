@@ -117,11 +117,11 @@ final class tr implements OverlayLayer {
           var15 = NameSuggestionsPanel.a(param2, RenderedFootballer.field_fb, true);
           var16 = NameSuggestionsPanel.a(param2, RandomAccessCacheFile.field_i, true);
           var7 = ServerMessageScreen.a(2, param2.field_l, (byte) -99, var15, param2, var13, var16, param2.field_c + 1, var14);
-          var4 = jr.field_Mb;
+          var4 = ReceivedAuctionItemRow.field_Mb;
           var9 = ServerMessageScreen.a(1, param2.field_d, (byte) -99, var15, param2, var13, var16, 1 + param2.field_i, var14);
-          var5 = jr.field_Mb;
+          var5 = ReceivedAuctionItemRow.field_Mb;
           var11 = ServerMessageScreen.a(0, param2.field_e, (byte) -99, var15, param2, var13, var16, 1 + param2.field_k, var14);
-          var6 = jr.field_Mb;
+          var6 = ReceivedAuctionItemRow.field_Mb;
           if (var9 <= var7 &&
             var7 >= var11) {
             var3_int = 2;

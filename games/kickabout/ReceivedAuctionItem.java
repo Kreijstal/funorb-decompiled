@@ -222,19 +222,19 @@ final class ReceivedAuctionItem extends AuctionItem {
         if (tc.field_s) {
           return -1;
         }
-        if (!bo.field_Cb.a(false, "beach")) {
-          return bo.field_Cb.getGroupProgressByName("beach", -16248);
+        if (!QuickChatKeysHelpPanel.field_Cb.a(false, "beach")) {
+          return QuickChatKeysHelpPanel.field_Cb.getGroupProgressByName("beach", -16248);
         }
         tc.field_s = true;
-        wn.field_a = ng.a("deckchairs", "beach", 2, bo.field_Cb);
-        CachedTextLayout.field_q = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 45, "parasol");
-        ns.field_c = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 92, "ball");
-        AnimationSkeleton.field_h = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 68, "bucket");
-        c.field_e = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 76, "palmtree");
-        FullscreenFocusCanvas.field_a = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 76, "starfish");
-        BytePlusOneCommand.field_D = QuickChatPhraseDefinition.a("beach", bo.field_Cb, (byte) 93, "icecream");
+        wn.field_a = ng.a("deckchairs", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
+        CachedTextLayout.field_q = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 45, "parasol");
+        ns.field_c = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 92, "ball");
+        AnimationSkeleton.field_h = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 68, "bucket");
+        c.field_e = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "palmtree");
+        FullscreenFocusCanvas.field_a = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 76, "starfish");
+        BytePlusOneCommand.field_D = QuickChatPhraseDefinition.a("beach", QuickChatKeysHelpPanel.field_Cb, (byte) 93, "icecream");
         int var1 = 88 % ((65 - param0) / 42);
-        ChatMessage.field_b = ng.a("stains", "beach", 2, bo.field_Cb);
+        ChatMessage.field_b = ng.a("stains", "beach", 2, QuickChatKeysHelpPanel.field_Cb);
         return -1;
     }
 

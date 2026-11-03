@@ -24,7 +24,7 @@ final class SetLagCommand extends ConsoleCommand {
           if (param0 < 12) {
             return true;
           }
-          var3 = bo.a(-1, param1);
+          var3 = QuickChatKeysHelpPanel.reverseString(-1, param1);
           stackIn_8_0 = (param2.indexOf(param1) != -1) || (-1 != param2.indexOf(var3));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -231,7 +231,7 @@ final class SetLagCommand extends ConsoleCommand {
               }
               var8 = new SectorCacheStore(param0, RandomAccessCacheFile.field_h, JaggrabDownloader.field_j[param0], 2097152);
             }
-            var9 = al.field_Ab.a((SectorCacheStore) (var8), -122, param0, param4, (SectorCacheStore) (var7));
+            var9 = FriendsListPanel.field_Ab.a((SectorCacheStore) (var8), -122, param0, param4, (SectorCacheStore) (var7));
             if (param3) {
               var9.b((byte) 55);
             }

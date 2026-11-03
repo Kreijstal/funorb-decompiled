@@ -505,7 +505,7 @@ final class AuctionSettingsDialog extends MessageDialog {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LoginDialog.$cfr$intArgs$a$53ce4ab4c593(-18, IntrusiveDequeCursor.field_c, new String[]{ad.formatCurrencyAmount(1, param0 ^ 26303)}));
             }
           } else {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, im.field_zb);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ListRow.field_zb);
           }
         }
         if (hq.field_c.field_Q) {
@@ -520,7 +520,7 @@ final class AuctionSettingsDialog extends MessageDialog {
               IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, LeaguesScreen.field_C);
             }
           } else {
-            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, im.field_zb);
+            IndexedSpriteState.$cfr$intArgs$a$b6210757cdab(-67, ListRow.field_zb);
           }
         }
         stackIn_43_0 = AccountMessagePanel.field_L;

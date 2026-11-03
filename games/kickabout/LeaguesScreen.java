@@ -311,7 +311,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
             if (!PlayerContextMenu.field_f) {
               un.field_d.d(PasswordValidator.field_k.toLowerCase(), 194 + this.slideOffsetX, 290, 16777215, -1);
             } else {
-              jr.a(this.slideOffsetX + 194, -65, 290);
+              ReceivedAuctionItemRow.a(this.slideOffsetX + 194, -65, 290);
             }
           } else {
             IsSixCommand.field_C.d(sh.field_b, this.slideOffsetX + 194, 290, 16777215, -1);
