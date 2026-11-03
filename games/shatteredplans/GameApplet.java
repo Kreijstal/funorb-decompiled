@@ -89,10 +89,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           if (null != aj.field_e) {
-            aj.field_e.c();
+            aj.field_e.close();
           }
           if (null != IsolationistAi.field_q) {
-            IsolationistAi.field_q.c();
+            IsolationistAi.field_q.close();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -716,8 +716,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = -40 / ((-13 - param1) / 47);
-          var4_int = param2.a(127, param0);
-          var6 = param2.a(var4_int, (byte) 106, param3);
+          var4_int = param2.getGroupIdByName(127, param0);
+          var6 = param2.getFileIdByName(var4_int, (byte) 106, param3);
           stackIn_1_0 = lg.a(-78, var6, var4_int, param2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -148,7 +148,7 @@ final class AudioService implements Runnable {
               for (var1_int = 0; var1_int < 2; var1_int++) {
                 var2 = this.field_d[var1_int];
                 if (var2 != null) {
-                  var2.e();
+                  var2.service();
                 }
               }
               jb.a((byte) -98, 10L);

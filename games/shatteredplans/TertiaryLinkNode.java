@@ -191,7 +191,7 @@ class TertiaryLinkNode extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 511) {
-            stackIn_4_0 = Archive.field_d.a(true, param0, "");
+            stackIn_4_0 = Archive.field_d.getFileByName(true, param0, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

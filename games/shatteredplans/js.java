@@ -25,7 +25,7 @@ final class js {
           var2 = (gm) (eo.field_ab.startForward(0));
           while (var2 != null) {
             if (var2.field_n.isLinked(param1 - 197124104)) {
-              var2.field_p.e(var2.field_h * CheckboxPainter.field_p + 128 >> 8);
+              var2.field_p.setVolume(var2.field_h * CheckboxPainter.field_p + 128 >> 8);
             } else {
               var2.unlink((byte) -75);
             }
@@ -37,7 +37,7 @@ final class js {
               if (!var2Lifetime1.field_n.isLinked(param1 - 197124104)) {
                 var2Lifetime1.unlink((byte) -69);
               } else {
-                var2Lifetime1.field_p.e(128 + CheckboxPainter.field_p * var2Lifetime1.field_h >> 8);
+                var2Lifetime1.field_p.setVolume(128 + CheckboxPainter.field_p * var2Lifetime1.field_h >> 8);
               }
               var2Lifetime1 = (gm) (nc.field_v.nextForward((byte) -71));
             }

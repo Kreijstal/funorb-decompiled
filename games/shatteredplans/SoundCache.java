@@ -77,11 +77,11 @@ final class SoundCache {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_e.a((byte) -114) == 1) {
+          if (this.field_e.groupCount((byte) -114) == 1) {
             stackIn_2_0 = this.a(param0 - 12203, param2, 0, param1);
             return stackIn_2_0;
           }
-          if (this.field_e.a(param2, param0 ^ -26268) == 1) {
+          if (this.field_e.getFileCount(param2, param0 ^ -26268) == 1) {
             stackIn_6_0 = this.a(param0 - 12203, 0, param2, param1);
             return stackIn_6_0;
           }
@@ -114,11 +114,11 @@ final class SoundCache {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_b.a((byte) -79) == 1) {
+          if (this.field_b.groupCount((byte) -79) == 1) {
             stackIn_2_0 = this.a(0, param2, 0, param0);
             return stackIn_2_0;
           }
-          if (1 == this.field_b.a(param0, -26268)) {
+          if (1 == this.field_b.getFileCount(param0, -26268)) {
             stackIn_5_0 = this.a(param0, param2, param1 ^ -63, 0);
             return stackIn_5_0;
           }
@@ -155,11 +155,11 @@ final class SoundCache {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_b.a(122, param3);
+          var5_int = this.field_b.getGroupIdByName(122, param3);
           if (0 > var5_int) {
             return null;
           }
-          var6 = this.field_b.a(var5_int, (byte) 106, param2);
+          var6 = this.field_b.getFileIdByName(var5_int, (byte) 106, param2);
           if (param1 < ~var6) {
             return null;
           }
@@ -327,12 +327,12 @@ final class SoundCache {
             stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
-          var5_int = this.field_e.a(124, param0);
+          var5_int = this.field_e.getGroupIdByName(124, param0);
           if (var5_int < 0) {
             stackIn_5_0 = null;
             return (PcmSample) (stackIn_5_0);
           }
-          var6 = this.field_e.a(var5_int, (byte) 106, param3);
+          var6 = this.field_e.getFileIdByName(var5_int, (byte) 106, param3);
           if (var6 >= 0) {
             stackIn_10_0 = this.a(-12203, var6, var5_int, param2);
             return stackIn_10_0;

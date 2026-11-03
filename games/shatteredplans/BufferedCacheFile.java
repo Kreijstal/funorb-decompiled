@@ -20,7 +20,7 @@ final class BufferedCacheFile {
     private byte[] field_o;
     static int field_e;
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_82_0 = null;
         StringBuilder stackIn_82_1 = null;
         String stackIn_83_2 = null;
@@ -41,7 +41,7 @@ final class BufferedCacheFile {
             }
             if (this.field_n != -1L && (this.field_n > this.field_d ||
               this.field_n + (long)this.field_b < this.field_d)) {
-              this.e(-117);
+              this.flushWrites(-117);
             }
             if (this.field_n != -1L &&
               this.field_d + (long)param1 > (long)this.field_o.length + this.field_n) {
@@ -51,7 +51,7 @@ final class BufferedCacheFile {
               param1 = param1 - var5_int;
               param2 = param2 + var5_int;
               this.field_b = this.field_o.length;
-              this.e(-117);
+              this.flushWrites(-117);
             }
             var5_intLifetime1 = -125 % ((32 - param0) / 43);
             if (this.field_o.length >= param1) {
@@ -69,10 +69,10 @@ final class BufferedCacheFile {
               return;
             }
             if (this.field_g != this.field_d) {
-              this.field_c.a(this.field_d, (byte) 59);
+              this.field_c.seek(this.field_d, (byte) 59);
               this.field_g = this.field_d;
             }
-            this.field_c.a(param3, param1, (byte) 11, param2);
+            this.field_c.write(param3, param1, (byte) 11, param2);
             this.field_g = this.field_g + (long)param1;
             if (this.field_g > this.field_l) {
               this.field_l = this.field_g;
@@ -143,7 +143,7 @@ final class BufferedCacheFile {
         }
     }
 
-    private final void a(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -153,7 +153,7 @@ final class BufferedCacheFile {
         try {
           this.field_a = 0;
           if (~this.field_d != ~this.field_g) {
-            this.field_c.a(this.field_d, (byte) 98);
+            this.field_c.seek(this.field_d, (byte) 98);
             this.field_g = this.field_d;
           }
           if (param0 >= -107) {
@@ -169,7 +169,7 @@ final class BufferedCacheFile {
               if (var2_int > 200000000) {
                 var2_int = 200000000;
               }
-              var3 = this.field_c.a(var2_int, this.field_a, 0, this.field_k);
+              var3 = this.field_c.read(var2_int, this.field_a, 0, this.field_k);
               if (var3 != -1) {
                 this.field_a = this.field_a + var3;
                 this.field_g = this.field_g + (long)var3;
@@ -243,7 +243,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final void a(int param0, byte[] param1, byte param2, int param3) throws IOException {
+    final void read(int param0, byte[] param1, byte param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         int stackIn_91_0 = 0;
         int stackIn_91_1 = 0;
@@ -297,7 +297,7 @@ final class BufferedCacheFile {
             var9Lifetime1 = 87 % ((param2 - 2) / 39);
             if ((param0 <= this.field_k.length) &&
               (decompiledFrameRemainder0 = !(param0 <= 0))) {
-              this.a(-110);
+              this.fillReadBuffer(-110);
               var10_int = param0;
               if (var10_int > this.field_a) {
                 var10_int = this.field_a;
@@ -309,10 +309,10 @@ final class BufferedCacheFile {
               decompiledFrameRemainder0 = (var15 != 0);
             }
             if (decompiledFrameRemainder0) {
-              this.field_c.a(this.field_d, (byte) 108);
+              this.field_c.seek(this.field_d, (byte) 108);
               this.field_g = this.field_d;
               while (param0 > 0) {
-                var10_intLifetime2 = this.field_c.a(param0, param3, 0, param1);
+                var10_intLifetime2 = this.field_c.read(param0, param3, 0, param1);
                 stackIn_91_0 = 0;
                 stackIn_91_1 = ~var10_intLifetime2;
                 if (var15 != 0) {
@@ -424,7 +424,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final void a(byte[] param0, boolean param1) throws IOException {
+    final void readFully(byte[] param0, boolean param1) throws IOException {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -434,7 +434,7 @@ final class BufferedCacheFile {
           if (!param1) {
             return;
           }
-          this.a(param0.length, param0, (byte) -83, 0);
+          this.read(param0.length, param0, (byte) -83, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -475,7 +475,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final long a(byte param0) {
+    final long length(byte param0) {
         RuntimeException var2 = null;
         long stackIn_4_0 = 0L;
         RuntimeException decompiledCaughtException = null;
@@ -492,7 +492,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final void a(byte param0, long param1) throws IOException {
+    final void seek(byte param0, long param1) throws IOException {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
@@ -510,11 +510,11 @@ final class BufferedCacheFile {
         }
     }
 
-    final void b(byte param0) throws IOException {
+    final void close(byte param0) throws IOException {
         try {
-          this.e(85);
+          this.flushWrites(85);
           int var2_int = 115 % ((param0 - 72) / 44);
-          this.field_c.c(10);
+          this.field_c.close(10);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ej.I(" + param0 + ')');
         }
@@ -607,7 +607,7 @@ final class BufferedCacheFile {
         }
     }
 
-    private final void e(int param0) throws IOException {
+    private final void flushWrites(int param0) throws IOException {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -620,10 +620,10 @@ final class BufferedCacheFile {
           var2_int = -106 / ((-62 - param0) / 53);
           if (this.field_n != -1L) {
             if (~this.field_g != ~this.field_n) {
-              this.field_c.a(this.field_n, (byte) 33);
+              this.field_c.seek(this.field_n, (byte) 33);
               this.field_g = this.field_n;
             }
-            this.field_c.a(this.field_o, this.field_b, (byte) 11, 0);
+            this.field_c.write(this.field_o, this.field_b, (byte) 11, 0);
             this.field_g = this.field_g + (long)this.field_b;
             if (this.field_l < this.field_g) {
               this.field_l = this.field_g;
@@ -681,7 +681,7 @@ final class BufferedCacheFile {
         this.field_n = -1L;
         try {
           this.field_c = param0;
-          dupTemp$2 = param0.b(3);
+          dupTemp$2 = param0.length(3);
           this.field_l = dupTemp$2;
           this.field_h = dupTemp$2;
           this.field_o = new byte[param2];

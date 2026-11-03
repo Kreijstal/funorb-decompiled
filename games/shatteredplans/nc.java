@@ -91,12 +91,12 @@ final class nc extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.b((byte) 115)) {
+          if (!param1.isIndexLoaded((byte) 115)) {
             stackIn_2_0 = (String) (param0);
             return stackIn_2_0;
           }
           var4_int = -57 % ((-25 - param2) / 51);
-          stackIn_4_0 = param3 + " - " + param1.d(100) + "%";
+          stackIn_4_0 = param3 + " - " + param1.getOverallProgress(100) + "%";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

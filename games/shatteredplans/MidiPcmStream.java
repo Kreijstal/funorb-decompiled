@@ -51,7 +51,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream firstChild() {
         return (PcmStream) ((Object) this.field_l);
     }
 
@@ -203,7 +203,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void a(int param0, byte param1, int param2) {
         if (param1 != 98) {
-          this.b();
+          this.firstChild();
         }
     }
 
@@ -312,14 +312,14 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var2;
         long var3;
         int var6;
         int var5;
         boolean decompiledFrameRemainder0 = true;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (this.field_x.f()) {
+        if (this.field_x.isLoaded()) {
           var2 = this.field_x.field_e * this.field_M / PcmPlayerService.field_j;
           while (true) {
             var3 = (long)param0 * (long)var2 + this.field_O;
@@ -328,20 +328,20 @@ final class MidiPcmStream extends PcmStream {
             } else {
               var5 = (int)((-1L - this.field_O + (this.field_n + (long)var2)) / (long)var2);
               this.field_O = this.field_O + (long)var5 * (long)var2;
-              this.field_l.a(var5);
+              this.field_l.skip(var5);
               param0 = param0 - var5;
               this.a((byte) 42);
-              if (this.field_x.f()) {
+              if (this.field_x.isLoaded()) {
                 continue;
               }
             }
             break;
           }
-          this.field_l.a(param0);
+          this.field_l.skip(param0);
           decompiledFrameRemainder0 = false;
         }
         else {
-          this.field_l.a(param0);
+          this.field_l.skip(param0);
         }
 
     }
@@ -1029,7 +1029,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final synchronized void b(int param0, boolean param1) {
-        this.field_x.d();
+        this.field_x.release();
         if (param0 != 16384) {
           this.h(18);
         }
@@ -1048,8 +1048,8 @@ final class MidiPcmStream extends PcmStream {
             param0 == var3.field_y) {
             if (var3.field_K != null) {
               var3.field_K.g(PcmPlayerService.field_j / 100);
-              if (var3.field_K.e()) {
-                this.field_l.field_o.a(var3.field_K);
+              if (var3.field_K.isRamping()) {
+                this.field_l.field_o.addChild(var3.field_K);
               }
               var3.d(false);
             }
@@ -1106,7 +1106,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void fill(int[] param0, int param1, int param2) {
         int var4_int = 0;
         long var5 = 0L;
         int var8 = 0;
@@ -1118,7 +1118,7 @@ final class MidiPcmStream extends PcmStream {
         int var7 = 0;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (this.field_x.f()) {
+          if (this.field_x.isLoaded()) {
             var4_int = this.field_x.field_e * this.field_M / PcmPlayerService.field_j;
             while (true) {
               var5 = this.field_O + (long)param2 * (long)var4_int;
@@ -1128,18 +1128,18 @@ final class MidiPcmStream extends PcmStream {
               }
               var7 = (int)((-this.field_O + (this.field_n - (-(long)var4_int + 1L))) / (long)var4_int);
               this.field_O = this.field_O + (long)var7 * (long)var4_int;
-              this.field_l.b(param0, param1, var7);
+              this.field_l.fill(param0, param1, var7);
               param1 = param1 + var7;
               param2 = param2 - var7;
               this.a((byte) -64);
-              if (this.field_x.f()) {
+              if (this.field_x.isLoaded()) {
                 continue;
               }
-              this.field_l.b(param0, param1, param2);
+              this.field_l.fill(param0, param1, param2);
               return;
             }
           }
-          this.field_l.b(param0, param1, param2);
+          this.field_l.fill(param0, param1, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1166,7 +1166,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_y[param1] = 12800;
           this.field_G[param1] = 8192;
           if (param0 != -63) {
-            this.d();
+            this.nextChild();
           }
           this.field_s[param1] = 16383;
           this.field_T[param1] = 8192;
@@ -1459,19 +1459,19 @@ final class MidiPcmStream extends PcmStream {
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           this.b(16384, param3);
-          this.field_x.a(param1.field_h);
+          this.field_x.load(param1.field_h);
           stackIn_4_1 = (param0);
           this.field_v = stackIn_4_1;
           this.field_O = 0L;
-          var5_int = this.field_x.c();
+          var5_int = this.field_x.trackCount();
           for (var6 = 0; var5_int > var6; var6++) {
-            this.field_x.b(var6);
-            this.field_x.d(var6);
-            this.field_x.e(var6);
+            this.field_x.seekToTrack(var6);
+            this.field_x.advanceTime(var6);
+            this.field_x.savePosition(var6);
           }
-          this.field_C = this.field_x.g();
+          this.field_C = this.field_x.nextTrack();
           this.field_D = this.field_x.field_b[this.field_C];
-          this.field_n = this.field_x.c(this.field_D);
+          this.field_n = this.field_x.eventTime(this.field_D);
           if (param2 < 32) {
             this.b(-59, true);
           }
@@ -1490,7 +1490,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized PcmStream d() {
+    final synchronized PcmStream nextChild() {
         return null;
     }
 
@@ -1567,7 +1567,7 @@ final class MidiPcmStream extends PcmStream {
         var7.field_h = 0;
         var7.field_v = 0;
         if (this.field_t[param1] != 0) {
-          var7.field_K = PcmSampleStream.a(var6, this.b(var7, (byte) -123), 0, this.a(var7, (byte) 120));
+          var7.field_K = PcmSampleStream.create(var6, this.b(var7, (byte) -123), 0, this.a(var7, (byte) 120));
           stackIn_17_1 = -2139009338;
           stackIn_17_2 = var7;
           if (var12.field_k[param0] >= 0) {
@@ -1579,10 +1579,10 @@ final class MidiPcmStream extends PcmStream {
           }
           this.a(stackIn_17_1, stackIn_17_2, stackIn_18_3);
         } else {
-          var7.field_K = PcmSampleStream.a(var6, this.b(var7, (byte) -6), this.a(var7, -1481279096), this.a(var7, (byte) 124));
+          var7.field_K = PcmSampleStream.create(var6, this.b(var7, (byte) -6), this.a(var7, -1481279096), this.a(var7, (byte) 124));
         }
         if (0 > var12.field_k[param0]) {
-          var7.field_K.f(-1);
+          var7.field_K.setLoopMode(-1);
         }
         if (0 <= var7.field_z) {
           var9 = this.field_K[param1][var7.field_z];
@@ -1615,7 +1615,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           param3.field_p = PcmPlayerService.field_j / 100;
           if (0 <= param3.field_E && (param3.field_K == null ||
-            param3.field_K.g())) {
+            param3.field_K.hasEnded())) {
             param3.d(false);
             param3.unlink((byte) -68);
             if (param3.field_z > 0 &&
@@ -1633,7 +1633,7 @@ final class MidiPcmStream extends PcmStream {
             }
             param3.field_G = var6_int;
           }
-          param3.field_K.d(this.b(param3, (byte) -1));
+          param3.field_K.setSpeed(this.b(param3, (byte) -1));
           var7 = param3.field_u;
           param3.field_i = param3.field_i + var7.field_o;
           param3.field_C = param3.field_C + 1;
@@ -1696,12 +1696,12 @@ final class MidiPcmStream extends PcmStream {
           }
           param3.field_K.g(param3.field_p);
           if (param1 == null) {
-            param3.field_K.a(param4);
+            param3.field_K.skip(param4);
           } else {
-            param3.field_K.b(param1, param0, param4);
+            param3.field_K.fill(param1, param0, param4);
           }
-          if (param3.field_K.e()) {
-            this.field_l.field_o.a(param3.field_K);
+          if (param3.field_K.isRamping()) {
+            this.field_l.field_o.addChild(param3.field_K);
           }
           param3.d(false);
           if (param3.field_E >= 0) {
@@ -1818,25 +1818,25 @@ final class MidiPcmStream extends PcmStream {
               if (stackIn_24_0 < stackIn_24_1) {
                 this.field_C = -1;
                 this.field_D = this.field_S;
-                this.field_n = this.field_x.c(this.field_D);
+                this.field_n = this.field_x.eventTime(this.field_D);
               }
             }
             return;
           }
           while (~this.field_x.field_b[var2] == ~var3) {
-            this.field_x.b(var2);
-            var7 = this.field_x.a(var2);
+            this.field_x.seekToTrack(var2);
+            var7 = this.field_x.readEvent(var2);
             if (var7 != 1) {
               if ((var7 & 128) != 0) {
                 this.a(var7, (byte) -121);
               }
-              this.field_x.d(var2);
-              this.field_x.e(var2);
+              this.field_x.advanceTime(var2);
+              this.field_x.savePosition(var2);
               continue;
             }
             this.field_x.e();
-            this.field_x.e(var2);
-            if (this.field_x.a()) {
+            this.field_x.savePosition(var2);
+            if (this.field_x.isFinished()) {
               if (null != this.field_z) {
                 this.a(this.field_z, (byte) 101, this.field_v);
                 this.a((byte) 29);
@@ -1844,18 +1844,18 @@ final class MidiPcmStream extends PcmStream {
               }
               if (this.field_v &&
                 var3 != 0) {
-                this.field_x.a(var4);
+                this.field_x.reset(var4);
               } else {
                 this.a(-1, true);
-                this.field_x.d();
+                this.field_x.release();
                 return;
               }
             }
             break;
           }
-          var2 = this.field_x.g();
+          var2 = this.field_x.nextTrack();
           var3 = this.field_x.field_b[var2];
-          var4 = this.field_x.c(var3);
+          var4 = this.field_x.eventTime(var3);
         }
     }
 
@@ -1879,13 +1879,13 @@ final class MidiPcmStream extends PcmStream {
             var5 = (int)((long)this.field_t[param1.field_y] * (long)var6 >> 6);
             var4_int = var4_int << 8;
             if (var5 >= var4_int) {
-              param1.field_K.c(true);
+              param1.field_K.setReverse(true);
               var5 = -var5 + var4_int + var4_int - 1;
             }
           } else {
             var5 = (int)((long)this.field_t[param1.field_y] * (long)var4_int >> 6);
           }
-          param1.field_K.h(var5);
+          param1.field_K.setPosition(var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1980,7 +1980,7 @@ final class MidiPcmStream extends PcmStream {
     final synchronized void d(int param0, byte param1, int param2) {
         this.c(param0, (byte) 113, param2);
         if (param1 != -110) {
-          this.b();
+          this.firstChild();
         }
     }
 
@@ -1988,7 +1988,7 @@ final class MidiPcmStream extends PcmStream {
         if (param0 != 5309) {
           field_L = (String) null;
         }
-        return this.field_x.f();
+        return this.field_x.isLoaded();
     }
 
     public MidiPcmStream() {

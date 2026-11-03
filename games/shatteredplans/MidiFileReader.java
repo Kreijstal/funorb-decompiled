@@ -12,7 +12,7 @@ final class MidiFileReader {
     private long field_f;
     private int field_a;
 
-    final boolean a() {
+    final boolean isFinished() {
         int var2 = 0;
         int var1 = this.field_h.length;
         for (var2 = 0; var2 < var1; var2++) {
@@ -23,12 +23,12 @@ final class MidiFileReader {
         return true;
     }
 
-    final int a(int param0) {
+    final int readEvent(int param0) {
         int var2 = this.f(param0);
         return var2;
     }
 
-    final void a(long param0) {
+    final void reset(long param0) {
         int var4 = 0;
         this.field_f = param0;
         int var3 = this.field_h.length;
@@ -36,12 +36,12 @@ final class MidiFileReader {
           this.field_b[var4] = 0;
           this.field_d[var4] = 0;
           this.field_i.position = this.field_c[var4];
-          this.d(var4);
+          this.advanceTime(var4);
           this.field_h[var4] = this.field_i.position;
         }
     }
 
-    final long c(int param0) {
+    final long eventTime(int param0) {
         return this.field_f + (long)param0 * (long)this.field_a;
     }
 
@@ -49,7 +49,7 @@ final class MidiFileReader {
         field_g = null;
     }
 
-    final void b(int param0) {
+    final void seekToTrack(int param0) {
         this.field_i.position = this.field_h[param0];
     }
 
@@ -90,7 +90,7 @@ final class MidiFileReader {
         return var4Lifetime1;
     }
 
-    final int g() {
+    final int nextTrack() {
         int var4 = 0;
         int var1;
         int var2;
@@ -112,11 +112,11 @@ final class MidiFileReader {
         this.field_i.position = -1;
     }
 
-    final void e(int param0) {
+    final void savePosition(int param0) {
         this.field_h[param0] = this.field_i.position;
     }
 
-    final int c() {
+    final int trackCount() {
         return this.field_h.length;
     }
 
@@ -153,7 +153,7 @@ final class MidiFileReader {
         return 0;
     }
 
-    final void d() {
+    final void release() {
         this.field_i.payload = null;
         this.field_c = null;
         this.field_h = null;
@@ -161,16 +161,16 @@ final class MidiFileReader {
         this.field_d = null;
     }
 
-    final boolean f() {
+    final boolean isLoaded() {
         return this.field_i.payload != null;
     }
 
-    final void d(int param0) {
+    final void advanceTime(int param0) {
         int var2 = this.field_i.readVariableInt(false);
         this.field_b[param0] = this.field_b[param0] + var2;
     }
 
-    final void a(byte[] param0) {
+    final void load(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
@@ -208,7 +208,7 @@ final class MidiFileReader {
 
     MidiFileReader(byte[] param0) {
         this.field_i = new PacketBuffer((byte[]) null);
-        this.a(param0);
+        this.load(param0);
     }
 
     static {

@@ -101,7 +101,7 @@ final class nb {
           if (param1 <= 94) {
             nb.a((byte) -57);
           }
-          stackIn_3_0 = ek.field_D.a(true, param0, "");
+          stackIn_3_0 = ek.field_D.getFileByName(true, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -6,7 +6,7 @@ final class MusicTrack extends IntrusiveNode {
     IntrusiveNodeHashTable field_i;
 
     final static MusicTrack a(Archive param0, String param1, String param2) {
-        byte[] var3 = param0.a(true, param2, param1);
+        byte[] var3 = param0.getFileByName(true, param2, param1);
         if (var3 == null) {
           return null;
         }
@@ -52,25 +52,25 @@ final class MusicTrack extends IntrusiveNode {
         var18[9] = 128;
         var22[9] = 128;
         var4 = new MidiFileReader(this.field_h);
-        var5 = var4.c();
+        var5 = var4.trackCount();
         for (var6 = 0; var6 < var5; var6++) {
-          var4.b(var6);
-          var4.d(var6);
-          var4.e(var6);
+          var4.seekToTrack(var6);
+          var4.advanceTime(var6);
+          var4.savePosition(var6);
         }
         while (true) {
-          var6Lifetime1 = var4.g();
+          var6Lifetime1 = var4.nextTrack();
           var7 = var4.field_b[var6Lifetime1];
           while (true) {
             if (var4.field_b[var6Lifetime1] != var7) {
               break;
             }
-            var4.b(var6Lifetime1);
-            var8 = var4.a(var6Lifetime1);
+            var4.seekToTrack(var6Lifetime1);
+            var8 = var4.readEvent(var6Lifetime1);
             if (var8 == 1) {
               var4.e();
-              var4.e(var6Lifetime1);
-              if (var4.a()) {
+              var4.savePosition(var6Lifetime1);
+              if (var4.isFinished()) {
                 return;
               }
               break;
@@ -106,8 +106,8 @@ final class MusicTrack extends IntrusiveNode {
                 var14.field_j[var11Lifetime2] = (byte) 1;
               }
             }
-            var4.d(var6Lifetime1);
-            var4.e(var6Lifetime1);
+            var4.advanceTime(var6Lifetime1);
+            var4.savePosition(var6Lifetime1);
           }
         }
     }

@@ -74,7 +74,7 @@ final class PcmSampleStream extends PcmStream {
         this.k();
     }
 
-    final static PcmSampleStream a(PcmSample param0, int param1, int param2, int param3) {
+    final static PcmSampleStream create(PcmSample param0, int param1, int param2, int param3) {
         if (param0.field_m == null) {
           return null;
         }
@@ -127,7 +127,7 @@ final class PcmSampleStream extends PcmStream {
         return param3;
     }
 
-    final synchronized int i() {
+    final synchronized int getVolume() {
         return this.field_w == -2147483648 ? 0 : this.field_w;
     }
 
@@ -197,12 +197,12 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    final PcmStream d() {
+    final PcmStream nextChild() {
         return null;
     }
 
     final synchronized void a(int param0, int param1) {
-        this.a(param0, param1, this.l());
+        this.a(param0, param1, this.getPan());
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmSampleStream param12) {
@@ -498,7 +498,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final synchronized void h(int param0) {
+    final synchronized void setPosition(int param0) {
         int var2 = ((PcmSample) (this.field_k)).field_m.length << 8;
         if (param0 < -1) {
           param0 = -1;
@@ -513,7 +513,7 @@ final class PcmSampleStream extends PcmStream {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
-          this.e(0);
+          this.setVolume(0);
           this.unlink((byte) -95);
           return;
         }
@@ -621,7 +621,7 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final static PcmSampleStream a(PcmSample param0, int param1, int param2) {
+    final static PcmSampleStream createScaled(PcmSample param0, int param1, int param2) {
         if (param0.field_m == null) {
           return null;
         }
@@ -749,11 +749,11 @@ final class PcmSampleStream extends PcmStream {
         this.field_m = PcmSampleStream.d(this.field_w, this.field_z);
     }
 
-    final synchronized boolean e() {
+    final synchronized boolean isRamping() {
         return this.field_v != 0;
     }
 
-    final synchronized void c(boolean param0) {
+    final synchronized void setReverse(boolean param0) {
         this.field_l = (this.field_l ^ this.field_l >> 31) + (this.field_l >>> 31);
         if (!param0) {
           return;
@@ -761,7 +761,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_l = -this.field_l;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1053,7 +1053,7 @@ final class PcmSampleStream extends PcmStream {
         return param4 >> 1;
     }
 
-    final synchronized boolean g() {
+    final synchronized boolean hasEnded() {
         return this.field_t < 0 || this.field_t >= ((PcmSample) (this.field_k)).field_m.length << 8;
     }
 
@@ -1125,7 +1125,7 @@ final class PcmSampleStream extends PcmStream {
         this.field_v = 0;
     }
 
-    final PcmStream b() {
+    final PcmStream firstChild() {
         return null;
     }
 
@@ -1141,7 +1141,7 @@ final class PcmSampleStream extends PcmStream {
         return param1 < 0 ? -param0 : (int)((double)param0 * Math.sqrt((double)param1 * 0.0001220703125) + 0.5);
     }
 
-    final synchronized void d(int param0) {
+    final synchronized void setSpeed(int param0) {
         if (this.field_l < 0) {
           this.field_l = -param0;
         } else {
@@ -1149,7 +1149,7 @@ final class PcmSampleStream extends PcmStream {
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void fill(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -1165,7 +1165,7 @@ final class PcmSampleStream extends PcmStream {
         int var10Lifetime1;
         if (this.field_w == 0 &&
           this.field_v == 0) {
-          this.a(param2);
+          this.skip(param2);
           return;
         }
         var4 = (PcmSample) (this.field_k);
@@ -1416,7 +1416,7 @@ final class PcmSampleStream extends PcmStream {
         }
     }
 
-    final synchronized int f() {
+    final synchronized int getSpeed() {
         return this.field_l < 0 ? -this.field_l : this.field_l;
     }
 
@@ -1576,7 +1576,7 @@ final class PcmSampleStream extends PcmStream {
         return false;
     }
 
-    final synchronized int l() {
+    final synchronized int getPan() {
         return this.field_z < 0 ? -1 : this.field_z;
     }
 
@@ -1638,8 +1638,8 @@ final class PcmSampleStream extends PcmStream {
         return param5;
     }
 
-    final synchronized void e(int param0) {
-        this.c(param0, this.l());
+    final synchronized void setVolume(int param0) {
+        this.c(param0, this.getPan());
     }
 
     private PcmSampleStream(PcmSample param0, int param1, int param2) {
@@ -1666,7 +1666,7 @@ final class PcmSampleStream extends PcmStream {
         this.k();
     }
 
-    final synchronized void f(int param0) {
+    final synchronized void setLoopMode(int param0) {
         this.field_q = param0;
     }
 

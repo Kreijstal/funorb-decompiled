@@ -7,11 +7,11 @@ final class PcmStreamMixer extends PcmStream {
     private int field_m;
     private int field_n;
 
-    final PcmStream b() {
+    final PcmStream firstChild() {
         return (PcmStream) (this.field_l.startForward(0));
     }
 
-    private final void e() {
+    private final void commitElapsed() {
         PcmMixerListener var1 = null;
         if (this.field_n > 0) {
           var1 = (PcmMixerListener) (this.field_o.startForward(0));
@@ -28,7 +28,7 @@ final class PcmStreamMixer extends PcmStream {
         return 0;
     }
 
-    private final void a(PcmMixerListener param0) {
+    private final void fireListener(PcmMixerListener param0) {
         param0.unlink((byte) -122);
         param0.a();
         IntrusiveNode var2 = this.field_o.field_h.next;
@@ -39,7 +39,7 @@ final class PcmStreamMixer extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var2 = 0;
         PcmMixerListener var3 = null;
         int var5 = 0;
@@ -47,19 +47,19 @@ final class PcmStreamMixer extends PcmStream {
         Object var4 = null;
         do {
           if (this.field_m < 0) {
-            this.d(param0);
+            this.skipChildren(param0);
             return;
           }
           if (this.field_n + param0 < this.field_m) {
             this.field_n = this.field_n + param0;
-            this.d(param0);
+            this.skipChildren(param0);
             return;
           }
           var2 = this.field_m - this.field_n;
-          this.d(var2);
+          this.skipChildren(var2);
           param0 = param0 - var2;
           this.field_n = this.field_n + var2;
-          this.e();
+          this.commitElapsed();
           var3 = (PcmMixerListener) (this.field_o.startForward(0));
           var4 = var3;
           synchronized (var4) {
@@ -69,18 +69,18 @@ final class PcmStreamMixer extends PcmStream {
               this.a(var3.next, var3);
             } else {
               var3.field_h = 0;
-              this.a(var3);
+              this.fireListener(var3);
             }
           }
         } while (param0 != 0);
         return;
     }
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void addChild(PcmStream param0) {
         this.field_l.addFirst(param0, 0);
     }
 
-    final PcmStream d() {
+    final PcmStream nextChild() {
         return (PcmStream) (this.field_l.nextForward((byte) -71));
     }
 
@@ -102,23 +102,23 @@ final class PcmStreamMixer extends PcmStream {
         return;
     }
 
-    private final void d(int param0) {
+    private final void skipChildren(int param0) {
         PcmStream var2 = (PcmStream) (this.field_l.startForward(0));
         while (var2 != null) {
-          var2.a(param0);
+          var2.skip(param0);
           var2 = (PcmStream) (this.field_l.nextForward((byte) -71));
         }
     }
 
-    private final void c(int[] param0, int param1, int param2) {
+    private final void fillChildren(int[] param0, int param1, int param2) {
         PcmStream var4 = (PcmStream) (this.field_l.startForward(0));
         while (var4 != null) {
-          var4.a(param0, param1, param2);
+          var4.render(param0, param1, param2);
           var4 = (PcmStream) (this.field_l.nextForward((byte) -71));
         }
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void fill(int[] param0, int param1, int param2) {
         int var4 = 0;
         PcmMixerListener var5 = null;
         int var7 = 0;
@@ -126,20 +126,20 @@ final class PcmStreamMixer extends PcmStream {
         Object var6 = null;
         do {
           if (this.field_m < 0) {
-            this.c(param0, param1, param2);
+            this.fillChildren(param0, param1, param2);
             return;
           }
           if (this.field_n + param2 < this.field_m) {
             this.field_n = this.field_n + param2;
-            this.c(param0, param1, param2);
+            this.fillChildren(param0, param1, param2);
             return;
           }
           var4 = this.field_m - this.field_n;
-          this.c(param0, param1, var4);
+          this.fillChildren(param0, param1, var4);
           param1 = param1 + var4;
           param2 = param2 - var4;
           this.field_n = this.field_n + var4;
-          this.e();
+          this.commitElapsed();
           var5 = (PcmMixerListener) (this.field_o.startForward(0));
           var6 = var5;
           synchronized (var6) {
@@ -149,7 +149,7 @@ final class PcmStreamMixer extends PcmStream {
               this.a(var5.next, var5);
             } else {
               var5.field_h = 0;
-              this.a(var5);
+              this.fireListener(var5);
             }
           }
         } while (param2 != 0);

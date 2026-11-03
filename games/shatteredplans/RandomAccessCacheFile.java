@@ -16,7 +16,7 @@ final class RandomAccessCacheFile {
     static int field_k;
     private RandomAccessFile field_d;
 
-    final int a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final int read(int param0, int param1, int param2, byte[] param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
@@ -76,14 +76,14 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final long b(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != 3) {
           field_c = (String) null;
         }
         return this.field_d.length();
     }
 
-    final void c(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 != 10) {
           RandomAccessCacheFile.a(-125, 93);
         }
@@ -185,7 +185,7 @@ final class RandomAccessCacheFile {
     protected final void finalize() throws Throwable {
         if (this.field_d != null) {
           System.out.println("");
-          this.c(10);
+          this.close(10);
         }
     }
 
@@ -197,7 +197,7 @@ final class RandomAccessCacheFile {
         int var2 = -27 % ((param0 + 56) / 49);
     }
 
-    final void a(long param0, byte param1) throws IOException {
+    final void seek(long param0, byte param1) throws IOException {
         this.field_d.seek(param0);
         if (param1 <= 25) {
           RandomAccessCacheFile.a(false);
@@ -216,7 +216,7 @@ final class RandomAccessCacheFile {
         field_c = null;
     }
 
-    final void a(byte[] param0, int param1, byte param2, int param3) throws IOException {
+    final void write(byte[] param0, int param1, byte param2, int param3) throws IOException {
         try {
           if (param2 != 11) {
             field_g = -73;

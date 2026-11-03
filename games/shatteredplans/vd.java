@@ -117,7 +117,7 @@ class vd extends IntrusiveNode {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param1.a(param0, -1, param2);
+          var5 = param1.getFile(param0, -1, param2);
           var4 = var5;
           if (var5 == null) {
             return false;

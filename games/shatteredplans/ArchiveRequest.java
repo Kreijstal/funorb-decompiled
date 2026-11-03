@@ -83,7 +83,7 @@ abstract class ArchiveRequest extends DualLinkNode {
     final static void a(int param0, Archive param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.b(param1.a(true, "", "headers.packvorbis"));
+          VorbisSample.b(param1.getFileByName(true, "", "headers.packvorbis"));
           var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
           var2.b();
           int var3 = 38 / ((param0 - 28) / 50);

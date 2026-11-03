@@ -103,8 +103,8 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param2.a(126, param1);
-          var6 = param2.a(var5_int, (byte) 106, param0);
+          var5_int = param2.getGroupIdByName(126, param1);
+          var6 = param2.getFileIdByName(var5_int, (byte) 106, param0);
           var7 = 72 % ((38 - param4) / 49);
           stackIn_1_0 = EmailValidator.a(var6, var5_int, param2, param3, -121);
           return stackIn_1_0;

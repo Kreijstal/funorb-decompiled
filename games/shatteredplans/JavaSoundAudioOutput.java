@@ -8,18 +8,18 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
     private int field_v;
     private static String field_z;
 
-    final void d() {
+    final void closeLine() {
         if (this.field_y != null) {
           this.field_y.close();
           this.field_y = null;
         }
     }
 
-    final int a() {
+    final int queuedFrames() {
         return this.field_v - (this.field_y.available() >> (field_h ? 2 : 1));
     }
 
-    final void b() {
+    final void writeBuffer() {
         int var2 = 0;
         int var3 = 0;
         int var1 = 256;
@@ -40,7 +40,7 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
     JavaSoundAudioOutput() {
     }
 
-    final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
+    final void openLine(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
           var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_w, param0 << (field_h ? 2 : 1));
@@ -50,7 +50,7 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
           this.field_v = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (ArchiveSource.a(12330, param0) != 1) {
-            this.a(js.a(param0, (byte) 122));
+            this.openLine(js.a(param0, (byte) 122));
             return;
           }
           this.field_y = null;
@@ -58,7 +58,7 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
         }
     }
 
-    final void a(java.awt.Component param0) {
+    final void prepare(java.awt.Component param0) {
         int var4 = 0;
         javax.sound.sampled.Mixer.Info[] var2;
         javax.sound.sampled.Mixer.Info[] var3;

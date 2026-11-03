@@ -65,7 +65,7 @@ final class MusicCrossfadeStream extends PcmStream {
         field_t = null;
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void fill(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -89,7 +89,7 @@ final class MusicCrossfadeStream extends PcmStream {
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (this.field_B <= 0) {
-            this.a(param2);
+            this.skip(param2);
             return;
           }
           if (this.field_C) {
@@ -155,8 +155,8 @@ final class MusicCrossfadeStream extends PcmStream {
                   this.field_p = new int[var6];
                   this.field_D = new int[var6];
                 }
-                this.field_u.b(this.field_D, 0, param2);
-                this.field_r.b(this.field_p, 0, param2);
+                this.field_u.fill(this.field_D, 0, param2);
+                this.field_r.fill(this.field_p, 0, param2);
                 if (!PcmPlayerService.field_h) {
                   stackIn_50_0 = param1;
                 } else {
@@ -169,10 +169,10 @@ final class MusicCrossfadeStream extends PcmStream {
                   param0[var7 + var8] = param0[var7 + var8] + (this.field_p[var8] * var5 + this.field_D[var8] * var4_int >> 8);
                 }
               } else {
-                this.field_r.b(param0, param1, param2);
+                this.field_r.fill(param0, param1, param2);
               }
             } else {
-              this.field_u.b(param0, param1, param2);
+              this.field_u.fill(param0, param1, param2);
             }
           }
           if (this.field_o != null) {
@@ -186,7 +186,7 @@ final class MusicCrossfadeStream extends PcmStream {
               this.field_p = new int[var6];
               this.field_D = new int[var6];
             }
-            this.field_m.b(this.field_D, 0, param2);
+            this.field_m.fill(this.field_D, 0, param2);
             if (PcmPlayerService.field_h) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
@@ -216,17 +216,17 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var3;
         boolean decompiledFrameRemainder0 = true;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (this.field_n > 0) {
           if (this.field_z != null) {
-            this.field_u.a(param0);
+            this.field_u.skip(param0);
             if (this.field_n >= 1048576) {
               if ((!(this.field_y <= 0)) &&
                 ((this.field_o != null))) {
-                this.field_m.a(param0);
+                this.field_m.skip(param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -234,19 +234,19 @@ final class MusicCrossfadeStream extends PcmStream {
               if (this.field_E == null) {
                 if ((!(this.field_y <= 0)) &&
                   ((this.field_o != null))) {
-                  this.field_m.a(param0);
+                  this.field_m.skip(param0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_r.a(param0);
+                this.field_r.skip(param0);
               }
             }
           } else {
             if (this.field_n >= 1048576) {
               if ((!(this.field_y <= 0)) &&
                 ((this.field_o != null))) {
-                this.field_m.a(param0);
+                this.field_m.skip(param0);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -254,12 +254,12 @@ final class MusicCrossfadeStream extends PcmStream {
               if (this.field_E == null) {
                 if ((!(this.field_y <= 0)) &&
                   ((this.field_o != null))) {
-                  this.field_m.a(param0);
+                  this.field_m.skip(param0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_r.a(param0);
+                this.field_r.skip(param0);
               }
             }
           }
@@ -267,7 +267,7 @@ final class MusicCrossfadeStream extends PcmStream {
           if (this.field_n >= 1048576) {
             if ((!(this.field_y <= 0)) &&
               ((this.field_o != null))) {
-              this.field_m.a(param0);
+              this.field_m.skip(param0);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -275,18 +275,18 @@ final class MusicCrossfadeStream extends PcmStream {
             if (this.field_E == null) {
               if ((!(this.field_y <= 0)) &&
                 ((this.field_o != null))) {
-                this.field_m.a(param0);
+                this.field_m.skip(param0);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_r.a(param0);
+              this.field_r.skip(param0);
             }
           }
         }
         if ((decompiledFrameRemainder0) && (this.field_y > 0 &&
           this.field_o != null)) {
-          this.field_m.a(param0);
+          this.field_m.skip(param0);
         }
         if (this.field_C) {
           if (this.field_l > 0 &&
@@ -392,7 +392,7 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final PcmStream d() {
+    final PcmStream nextChild() {
         return null;
     }
 
@@ -421,7 +421,7 @@ final class MusicCrossfadeStream extends PcmStream {
         return 2;
     }
 
-    final PcmStream b() {
+    final PcmStream firstChild() {
         return null;
     }
 

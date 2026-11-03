@@ -98,7 +98,7 @@ final class e {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 13 / ((-40 - param1) / 39);
-          stackIn_1_0 = DebouncedValidator.a(-128, PcmSampleStream.a(param2, 100, param0));
+          stackIn_1_0 = DebouncedValidator.a(-128, PcmSampleStream.createScaled(param2, 100, param0));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

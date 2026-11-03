@@ -107,29 +107,29 @@ final class vj extends SingleChildWidget {
           return de.field_h;
         }
         if (StarAnnotation.field_j != null) {
-          if (!StarAnnotation.field_j.b((byte) 107)) {
+          if (!StarAnnotation.field_j.isIndexLoaded((byte) 107)) {
             return DialPainter.field_a;
           }
           return ns.field_xb;
         }
-        if (!LinkPainter.field_g.b((byte) 13)) {
+        if (!LinkPainter.field_g.isIndexLoaded((byte) 13)) {
           return fa.field_J;
         }
         if (!LinkPainter.field_g.a("commonui", 77)) {
           return SpriteState.field_r + " - " + LinkPainter.field_g.a("commonui", (byte) 65) + "%";
         }
-        if (!tq.field_f.b((byte) -69)) {
+        if (!tq.field_f.isIndexLoaded((byte) -69)) {
           return LinkPainter.field_h;
         }
         if (!tq.field_f.a("commonui", -91)) {
           return IntrusiveDequeCursor.field_h + " - " + tq.field_f.a("commonui", (byte) 28) + "%";
         }
         int var1 = 32 % ((param0 - 15) / 52);
-        if (!GalaxyMap.field_g.b((byte) -2)) {
+        if (!GalaxyMap.field_g.isIndexLoaded((byte) -2)) {
           return MouseInputHandler.field_e;
         }
-        if (!GalaxyMap.field_g.a(-1)) {
-          return jh.field_v + " - " + GalaxyMap.field_g.d(100) + "%";
+        if (!GalaxyMap.field_g.preloadAll(-1)) {
+          return jh.field_v + " - " + GalaxyMap.field_g.getOverallProgress(100) + "%";
         }
         return IsaacBackedRandom.field_d;
     }

@@ -613,13 +613,13 @@ public final class ShatteredPlansClient extends tl {
           }
           if (null != ai.field_c) {
             ph.a(ai.field_c, param0 - 167);
-            IsaacRandom.field_h = oq.a(ai.field_c.a(true, "starnames.txt", ""), (byte) -17);
+            IsaacRandom.field_h = oq.a(ai.field_c.getFileByName(true, "starnames.txt", ""), (byte) -17);
             ai.field_c = null;
             ValidationState.c(121);
             return false;
           }
           if (null != oi.field_h) {
-            CellVertex.a(1, new fm(oi.field_h.a(true, "huffman", "")));
+            CellVertex.a(1, new fm(oi.field_h.getFileByName(true, "huffman", "")));
             oi.field_h = null;
             ValidationState.c(126);
             return false;
@@ -645,32 +645,32 @@ public final class ShatteredPlansClient extends tl {
           jo.a(32767, hk.field_nb, true, 1048576);
           return true;
         }
-        if (AttackTask.field_s.b((byte) 127) &&
+        if (AttackTask.field_s.isIndexLoaded((byte) 127) &&
           AttackTask.field_s.a("basic", -70)) {
-          if (AttackTask.field_s.b((byte) -45) &&
+          if (AttackTask.field_s.isIndexLoaded((byte) -45) &&
             AttackTask.field_s.a("lobby", param0 + 16)) {
-            if (rl.field_f.b((byte) 120) &&
+            if (rl.field_f.isIndexLoaded((byte) 120) &&
               rl.field_f.a("lobby", param0 ^ -62)) {
-              if (cm.field_a.b((byte) 120) &&
-                cm.field_a.a(param0 - 83)) {
-                if (ld.field_m.b((byte) -70) &&
-                  ld.field_m.a(param0 - 83)) {
-                  if (DualLinkNode.field_n.b((byte) 111) &&
-                    DualLinkNode.field_n.a(param0 - 83)) {
-                    if (StrongCacheEntry.field_z.b((byte) -121) &&
-                      StrongCacheEntry.field_z.a(-1)) {
-                      if (ms.field_d.b((byte) -81) &&
+              if (cm.field_a.isIndexLoaded((byte) 120) &&
+                cm.field_a.preloadAll(param0 - 83)) {
+                if (ld.field_m.isIndexLoaded((byte) -70) &&
+                  ld.field_m.preloadAll(param0 - 83)) {
+                  if (DualLinkNode.field_n.isIndexLoaded((byte) 111) &&
+                    DualLinkNode.field_n.preloadAll(param0 - 83)) {
+                    if (StrongCacheEntry.field_z.isIndexLoaded((byte) -121) &&
+                      StrongCacheEntry.field_z.preloadAll(-1)) {
+                      if (ms.field_d.isIndexLoaded((byte) -81) &&
                         ms.field_d.a("", -67)) {
-                        if (PointsVictoryChecker.field_l.b((byte) -19) &&
-                          PointsVictoryChecker.field_l.a(param0 ^ -83)) {
-                          if (IntrusiveNodeHashTable.field_g.b((byte) -79) &&
-                            IntrusiveNodeHashTable.field_g.a(-1)) {
-                            if (ai.field_c.b((byte) -40) &&
-                              ai.field_c.a(param0 ^ -83)) {
-                              if (oi.field_h.b((byte) -125) &&
-                                oi.field_h.a(-1)) {
-                                if (la.field_k.b((byte) -87) &&
-                                  la.field_k.a(-1)) {
+                        if (PointsVictoryChecker.field_l.isIndexLoaded((byte) -19) &&
+                          PointsVictoryChecker.field_l.preloadAll(param0 ^ -83)) {
+                          if (IntrusiveNodeHashTable.field_g.isIndexLoaded((byte) -79) &&
+                            IntrusiveNodeHashTable.field_g.preloadAll(-1)) {
+                            if (ai.field_c.isIndexLoaded((byte) -40) &&
+                              ai.field_c.preloadAll(param0 ^ -83)) {
+                              if (oi.field_h.isIndexLoaded((byte) -125) &&
+                                oi.field_h.preloadAll(-1)) {
+                                if (la.field_k.isIndexLoaded((byte) -87) &&
+                                  la.field_k.preloadAll(-1)) {
                                   dp.e(-23771);
                                   nj.a(65.0f, 2, jp.field_xb);
                                   this.draw(param0 - 81);

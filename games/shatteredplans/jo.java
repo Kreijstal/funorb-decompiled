@@ -44,8 +44,8 @@ final class jo {
             var2 = var6;
             if (vc.field_a != null) {
               try {
-                vc.field_a.a((byte) 95, 0L);
-                vc.field_a.a(var6, true);
+                vc.field_a.seek((byte) 95, 0L);
+                vc.field_a.readFully(var6, true);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;
@@ -115,10 +115,10 @@ final class jo {
           this.field_h = param2;
           this.field_f = param1;
           if (this.field_f != null) {
-            this.field_f.a(0, -26268);
+            this.field_f.getFileCount(0, -26268);
           }
           if (this.field_h != null) {
-            this.field_h.a(0, -26268);
+            this.field_h.getFileCount(0, -26268);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,9 +152,9 @@ final class jo {
           return var3;
         }
         if (param0 < 32768) {
-          var4 = this.field_f.a(0, -1, param0);
+          var4 = this.field_f.getFile(0, -1, param0);
         } else {
-          var4 = this.field_h.a(0, param1 ^ -101, param0 & 32767);
+          var4 = this.field_h.getFile(0, param1 ^ -101, param0 & 32767);
         }
         si var6 = new si();
         if (var4 != null) {

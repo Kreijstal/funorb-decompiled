@@ -37,7 +37,7 @@ final class uq extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = param0.a(-1);
+            stackIn_4_0 = param0.preloadAll(-1);
             return stackIn_4_0;
           }
           return false;

@@ -568,8 +568,8 @@ class TextFieldWidget extends FocusableWidget {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param2.a(126, param4);
-          var6 = param2.a(var5_int, (byte) 106, param1);
+          var5_int = param2.getGroupIdByName(126, param4);
+          var6 = param2.getFileIdByName(var5_int, (byte) 106, param1);
           if (param0 >= 94) {
             stackIn_4_0 = cf.a(param3, 1, param2, var5_int, var6);
             return stackIn_4_0;

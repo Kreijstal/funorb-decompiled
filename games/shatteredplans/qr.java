@@ -998,7 +998,7 @@ class qr extends hm {
         int var3 = 0;
         int var4 = 0;
         try {
-          var6 = new Sprite(param0.a(true, "", "final_frame.jpg"), (java.awt.Component) ((Object) tm.field_i));
+          var6 = new Sprite(param0.getFileByName(true, "", "final_frame.jpg"), (java.awt.Component) ((Object) tm.field_i));
           var3 = var6.field_z;
           var4 = var6.field_w;
           wh.a(false);

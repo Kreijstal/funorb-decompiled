@@ -7,7 +7,7 @@ final class MusicVoiceMixer extends PcmStream {
     private MidiPcmStream field_m;
     PcmStreamMixer field_o;
 
-    final PcmStream b() {
+    final PcmStream firstChild() {
         MusicVoice var1 = (MusicVoice) (this.field_n.startForward(0));
         if (var1 == null) {
           return null;
@@ -15,19 +15,19 @@ final class MusicVoiceMixer extends PcmStream {
         if (null != var1.field_K) {
           return (PcmStream) ((Object) var1.field_K);
         }
-        return this.d();
+        return this.nextChild();
     }
 
     final int a() {
         return 0;
     }
 
-    final void a(int param0) {
+    final void skip(int param0) {
         int var2;
         MusicVoice var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        this.field_o.a(param0);
+        this.field_o.skip(param0);
         var3 = (MusicVoice) (this.field_n.startForward(0));
         while (var3 != null) {
           if (!this.field_m.a((byte) 124, var3)) {
@@ -46,7 +46,7 @@ final class MusicVoiceMixer extends PcmStream {
         }
     }
 
-    final void b(int[] param0, int param1, int param2) {
+    final void fill(int[] param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         MusicVoice var6 = null;
@@ -59,7 +59,7 @@ final class MusicVoiceMixer extends PcmStream {
         RuntimeException var4 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.field_o.b(param0, param1, param2);
+          this.field_o.fill(param0, param1, param2);
           var6 = (MusicVoice) (this.field_n.startForward(0));
           while (var6 != null) {
             stackIn_4_0 = this.field_m.a((byte) 122, var6);
@@ -248,7 +248,7 @@ final class MusicVoiceMixer extends PcmStream {
         }
     }
 
-    final PcmStream d() {
+    final PcmStream nextChild() {
         MusicVoice var1;
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -281,7 +281,7 @@ final class MusicVoiceMixer extends PcmStream {
           }
           if ((4 & this.field_m.field_F[param1.field_y]) != 0) {
             if (param1.field_E >= 0) {
-              param1.field_K.a(param2);
+              param1.field_K.skip(param2);
               return;
             }
             var4_int = this.field_m.field_u[param1.field_y] / PcmPlayerService.field_j;
@@ -289,22 +289,22 @@ final class MusicVoiceMixer extends PcmStream {
             param1.field_j = 1048575 & param1.field_j + param2 * var4_int;
             if (var5 <= param2) {
               if (this.field_m.field_t[param1.field_y] != 0) {
-                param1.field_K = PcmSampleStream.a(param1.field_M, param1.field_K.f(), 0, param1.field_K.l());
+                param1.field_K = PcmSampleStream.create(param1.field_M, param1.field_K.getSpeed(), 0, param1.field_K.getPan());
                 stackIn_10_0 = this.field_m;
                 stackIn_10_1 = -2139009338;
                 stackIn_10_2 = (MusicVoice) (param1);
                 stackIn_11_3 = !(param1.field_A.field_k[param1.field_H] >= 0);
                 ((MidiPcmStream) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_11_3);
               } else {
-                param1.field_K = PcmSampleStream.a(param1.field_M, param1.field_K.f(), param1.field_K.i(), param1.field_K.l());
+                param1.field_K = PcmSampleStream.create(param1.field_M, param1.field_K.getSpeed(), param1.field_K.getVolume(), param1.field_K.getPan());
               }
               if (param1.field_A.field_k[param1.field_H] < 0) {
-                param1.field_K.f(-1);
+                param1.field_K.setLoopMode(-1);
               }
               param2 = param1.field_j / var4_int;
             }
           }
-          param1.field_K.a(param2);
+          param1.field_K.skip(param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -349,7 +349,7 @@ final class MusicVoiceMixer extends PcmStream {
                 param2.field_j = param2.field_j + var7_int * param3;
                 break;
               }
-              param2.field_K.b(param0, param1, var8);
+              param2.field_K.fill(param0, param1, var8);
               param2.field_j = param2.field_j + (-1048576 + var8 * var7_int);
               param1 = param1 + var8;
               param3 = param3 - var8;
@@ -360,31 +360,31 @@ final class MusicVoiceMixer extends PcmStream {
               }
               var11 = param2.field_K;
               if (this.field_m.field_t[param2.field_y] == 0) {
-                param2.field_K = PcmSampleStream.a(param2.field_M, var11.f(), var11.i(), var11.l());
+                param2.field_K = PcmSampleStream.create(param2.field_M, var11.getSpeed(), var11.getVolume(), var11.getPan());
               } else {
-                param2.field_K = PcmSampleStream.a(param2.field_M, var11.f(), 0, var11.l());
+                param2.field_K = PcmSampleStream.create(param2.field_M, var11.getSpeed(), 0, var11.getPan());
                 stackIn_13_0 = this.field_m;
                 stackIn_13_1 = param4 ^ -2139009345;
                 stackIn_13_2 = (MusicVoice) (param2);
                 stackIn_14_3 = !(param2.field_A.field_k[param2.field_H] >= 0);
                 ((MidiPcmStream) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, stackIn_14_3);
-                param2.field_K.a(var9, var11.i());
+                param2.field_K.a(var9, var11.getVolume());
               }
               if (0 > param2.field_A.field_k[param2.field_H]) {
-                param2.field_K.f(-1);
+                param2.field_K.setLoopMode(-1);
               }
               var11.g(var9);
-              var11.b(param0, param1, param5 - param1);
-              if (!var11.e()) {
+              var11.fill(param0, param1, param5 - param1);
+              if (!var11.isRamping()) {
                 continue;
               }
-              this.field_o.a(var11);
+              this.field_o.addChild(var11);
             }
           }
           if (param4 != 121) {
             return;
           }
-          param2.field_K.b(param0, param1, param3);
+          param2.field_K.fill(param0, param1, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

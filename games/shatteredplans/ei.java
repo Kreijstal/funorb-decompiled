@@ -232,27 +232,27 @@ final class ei {
           return 0;
         }
         if (0 == ai.field_e) {
-          if (!LinkPainter.field_g.b((byte) 122)) {
+          if (!LinkPainter.field_g.isIndexLoaded((byte) 122)) {
             return 20;
           }
           if (!LinkPainter.field_g.a("commonui", 60)) {
             return 40;
           }
-          if (!tq.field_f.b((byte) -109)) {
+          if (!tq.field_f.isIndexLoaded((byte) -109)) {
             return 50;
           }
           if (!tq.field_f.a("commonui", -112)) {
             return 60;
           }
-          if (!GalaxyMap.field_g.b((byte) -85)) {
+          if (!GalaxyMap.field_g.isIndexLoaded((byte) -85)) {
             return 70;
           }
-          if (!GalaxyMap.field_g.a(param0 - 83)) {
+          if (!GalaxyMap.field_g.preloadAll(param0 - 83)) {
             return 80;
           }
         } else {
           if (StarAnnotation.field_j != null) {
-            if (!StarAnnotation.field_j.b((byte) -122)) {
+            if (!StarAnnotation.field_j.isIndexLoaded((byte) -122)) {
               return 14;
             }
             if (!StarAnnotation.field_j.b("", (byte) -122)) {
@@ -262,22 +262,22 @@ final class ei {
               return 29;
             }
           }
-          if (!LinkPainter.field_g.b((byte) 125)) {
+          if (!LinkPainter.field_g.isIndexLoaded((byte) 125)) {
             return 43;
           }
           if (!LinkPainter.field_g.a("commonui", 127)) {
             return 57;
           }
-          if (!tq.field_f.b((byte) -90)) {
+          if (!tq.field_f.isIndexLoaded((byte) -90)) {
             return 71;
           }
           if (!tq.field_f.a("commonui", -105)) {
             return 80;
           }
-          if (!GalaxyMap.field_g.b((byte) -95)) {
+          if (!GalaxyMap.field_g.isIndexLoaded((byte) -95)) {
             return 82;
           }
-          if (!GalaxyMap.field_g.a(-1)) {
+          if (!GalaxyMap.field_g.preloadAll(-1)) {
             return 86;
           }
         }

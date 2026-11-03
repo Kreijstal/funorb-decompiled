@@ -70,7 +70,7 @@ abstract class DebouncedValidator implements ValidationSource {
             stackIn_2_0 = (gm) null;
             return stackIn_2_0;
           }
-          jp.field_Bb.a(param1);
+          jp.field_Bb.addChild(param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -158,19 +158,19 @@ abstract class DebouncedValidator implements ValidationSource {
 
     final static void a(java.awt.Component param0, PlatformTaskDispatcher param1, MusicCrossfadeStream param2, int param3, boolean param4, int param5, int param6, boolean param7) {
         try {
-          PcmPlayerService.a(param5, param7, 10);
-          aj.field_e = PcmPlayerService.a(param1, param0, 0, param6);
+          PcmPlayerService.configure(param5, param7, 10);
+          aj.field_e = PcmPlayerService.create(param1, param0, 0, param6);
           if (param4) {
             java.applet.Applet var9 = (java.applet.Applet) null;
             DebouncedValidator.a(-84, (java.applet.Applet) null);
           }
-          IsolationistAi.field_q = PcmPlayerService.a(param1, param0, 1, param3);
+          IsolationistAi.field_q = PcmPlayerService.create(param1, param0, 1, param3);
           jp.field_Bb = new PcmStreamMixer();
           AttackTask.field_t = param3;
-          IsolationistAi.field_q.a(jp.field_Bb);
+          IsolationistAi.field_q.setSourceStream(jp.field_Bb);
           ValidationState.field_b = param2;
           ValidationState.field_b.a(wm.field_b, 0);
-          aj.field_e.a(ValidationState.field_b);
+          aj.field_e.setSourceStream(ValidationState.field_b);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "da.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }

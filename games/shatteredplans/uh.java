@@ -29,13 +29,13 @@ final class uh {
         }
         while (this.field_j < this.field_f) {
           var4 = this.field_b[this.field_j];
-          if (!var4.field_a.b((byte) -42)) {
+          if (!var4.field_a.isIndexLoaded((byte) -42)) {
             this.a(true, 0, var4);
             return false;
           }
           if (var4.field_e >= 0 &&
             !var4.field_a.b(109, var4.field_e)) {
-            this.a(true, var4.field_a.c((byte) 36, var4.field_e), var4);
+            this.a(true, var4.field_a.getGroupProgress((byte) 36, var4.field_e), var4);
             return false;
           }
           if (var4.field_d != null &&
@@ -46,8 +46,8 @@ final class uh {
           if (var4.field_e < 0 &&
             null == var4.field_d &&
             var4.field_c != null &&
-            !var4.field_a.a(-1)) {
-            this.a(true, var4.field_a.d(100), var4);
+            !var4.field_a.preloadAll(-1)) {
+            this.a(true, var4.field_a.getOverallProgress(100), var4);
             return false;
           }
           this.field_j = this.field_j + 1;

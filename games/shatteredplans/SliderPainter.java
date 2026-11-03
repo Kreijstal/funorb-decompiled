@@ -92,11 +92,11 @@ final class SliderPainter implements WidgetPainter {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(126, param0);
+          var4_int = param1.getGroupIdByName(126, param0);
           if (param3 != -118) {
             field_j = -121;
           }
-          var5 = param1.a(var4_int, (byte) 106, param2);
+          var5 = param1.getFileIdByName(var4_int, (byte) 106, param2);
           stackIn_3_0 = lg.a(param3 ^ 20391, param1, var5, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

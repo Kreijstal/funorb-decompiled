@@ -249,8 +249,8 @@ final class ae {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(122, param1);
-          var5 = param2.a(var4_int, (byte) 106, param3);
+          var4_int = param2.getGroupIdByName(122, param1);
+          var5 = param2.getFileIdByName(var4_int, (byte) 106, param3);
           var6 = -106 / ((-22 - param0) / 53);
           stackIn_1_0 = ch.a(var5, (byte) 87, param2, var4_int);
           return stackIn_1_0;

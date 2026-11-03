@@ -71,7 +71,7 @@ final class oa {
             }
             if (null != oq.field_g) {
               try {
-                oq.field_g.b((byte) 127);
+                oq.field_g.close((byte) 127);
               } catch (IOException iOException) {
               }
             }
@@ -79,7 +79,7 @@ final class oa {
               for (var1_int = 0; var1_int < MapView.field_Eb.length; var1_int++) {
                 if (MapView.field_Eb[var1_int] != null) {
                   try {
-                    MapView.field_Eb[var1_int].b((byte) -65);
+                    MapView.field_Eb[var1_int].close((byte) -65);
                   } catch (IOException var2_ref) {
                   }
                 }

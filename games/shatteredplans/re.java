@@ -155,9 +155,9 @@ final class re {
           return var3;
         }
         if (param1 >= 32768) {
-          var4 = this.field_c.a(1, -1, 32767 & param1);
+          var4 = this.field_c.getFile(1, -1, 32767 & param1);
         } else {
-          var4 = this.field_e.a(1, param0 - 48, param1);
+          var4 = this.field_e.getFile(1, param0 - 48, param1);
         }
         var3 = new dp();
         if (var4 != null) {
@@ -194,10 +194,10 @@ final class re {
           this.field_e = param1;
           this.field_c = param2;
           if (null != this.field_e) {
-            this.field_e.a(1, -26268);
+            this.field_e.getFileCount(1, -26268);
           }
           if (this.field_c != null) {
-            this.field_c.a(1, -26268);
+            this.field_c.getFileCount(1, -26268);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

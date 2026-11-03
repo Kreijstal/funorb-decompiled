@@ -31,7 +31,7 @@ final class cf extends WidgetContainer implements ButtonListener {
             return (hh) (stackIn_2_0);
           }
           if (param1 == 1) {
-            stackIn_7_0 = uc.a(param0.a(param3, -1, param4), 0);
+            stackIn_7_0 = uc.a(param0.getFile(param3, -1, param4), 0);
             return stackIn_7_0;
           }
           stackIn_5_0 = (hh) null;

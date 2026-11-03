@@ -81,7 +81,7 @@ final class BoundsRect extends IntrusiveNode {
             var6 = (String) null;
             BoundsRect.a((String) null, (Archive) null, (byte) -117, (String) null, (String) null);
           }
-          if (!param1.b((byte) -109)) {
+          if (!param1.isIndexLoaded((byte) -109)) {
             stackIn_5_0 = (String) (param3);
             return stackIn_5_0;
           }

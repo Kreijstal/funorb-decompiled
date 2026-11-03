@@ -503,7 +503,7 @@ abstract class tl extends GameApplet {
         }
         if (DefensiveAi.field_p == 2) {
           if (null != StarAnnotation.field_j &&
-            StarAnnotation.field_j.b((byte) 122)) {
+            StarAnnotation.field_j.isIndexLoaded((byte) 122)) {
             if (StarAnnotation.field_j.b("", (byte) -116)) {
               if (StarAnnotation.field_j.a("", 51)) {
                 TutorialMapGenerator.a(StarAnnotation.field_j, true);
@@ -557,8 +557,8 @@ abstract class tl extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (DefensiveAi.field_p == 11) {
-          if (StandardAi.field_e != null && (!StandardAi.field_e.b((byte) -88) ||
-            !StandardAi.field_e.a(-1))) {
+          if (StandardAi.field_e != null && (!StandardAi.field_e.isIndexLoaded((byte) -88) ||
+            !StandardAi.field_e.preloadAll(-1))) {
             nj.a(0.0f, 2, nc.a(DialPainter.field_a, StandardAi.field_e, -80, ns.field_xb));
             decompiledFrameRemainder0 = false;
           }

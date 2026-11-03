@@ -347,16 +347,16 @@ final class gm extends IntrusiveNode {
 
     final void a(byte param0, int param1) {
         this.field_h = param1;
-        this.field_p.e(128 + CheckboxPainter.field_p * param1 >> 8);
+        this.field_p.setVolume(128 + CheckboxPainter.field_p * param1 >> 8);
         int var3 = 85 % ((param0 - 59) / 59);
     }
 
     gm(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_p = param0;
-          this.field_h = param0.i();
+          this.field_h = param0.getVolume();
           this.field_n = param1;
-          this.field_p.e(128 + this.field_h * CheckboxPainter.field_p >> 8);
+          this.field_p.setVolume(128 + this.field_h * CheckboxPainter.field_p >> 8);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

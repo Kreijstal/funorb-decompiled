@@ -30,7 +30,7 @@ final class oj extends ns implements ButtonListener {
         int var4Lifetime1;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var8 = new CipherPacketBuffer(param1.a(true, "", "logo.fo3d"));
+          var8 = new CipherPacketBuffer(param1.getFileByName(true, "", "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte(-108);
           var10.m(-84);

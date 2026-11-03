@@ -32,7 +32,7 @@ final class EmailValidator extends TextFieldValidator {
           if (param4 > -83) {
             EmailValidator.e(87);
           }
-          stackIn_7_0 = SecondaryNodeHashTable.a(15, param3.a(param1, -1, param0));
+          stackIn_7_0 = SecondaryNodeHashTable.a(15, param3.getFile(param1, -1, param0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -380,14 +380,14 @@ final class EmailValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          if (!param0.a((byte) 96, param2, param1)) {
+          if (!param0.containsFile((byte) 96, param2, param1)) {
             param2 = param2 + ".jpg";
-            if (!param0.a((byte) 127, param2, param1)) {
+            if (!param0.containsFile((byte) 127, param2, param1)) {
               stackIn_3_0 = null;
               return (Sprite) (stackIn_3_0);
             }
           }
-          var5 = param0.a(true, param2, param1);
+          var5 = param0.getFileByName(true, param2, param1);
           var4 = var5;
           if (param3) {
             EmailValidator.a(false, true);

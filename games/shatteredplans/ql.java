@@ -87,8 +87,8 @@ final class ql extends IntrusiveNode {
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         gm var1Lifetime1;
         try {
-          aj.field_e.e();
-          IsolationistAi.field_q.e();
+          aj.field_e.service();
+          IsolationistAi.field_q.service();
           if (param0 != -26848) {
             ql.a((byte) 108);
           }
