@@ -119,7 +119,7 @@ final class pc extends PacketBuffer {
           var5 = null;
           if (ValidatedTextWidget.field_db != 2) {
             wa.field_f.field_rb = false;
-            SceneWidget.field_E.field_cb = wd.field_b;
+            SceneWidget.field_E.field_cb = GrowableIntList.field_b;
             if (ValidatedTextWidget.field_db != 1) {
               ma.field_z.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
               if (var19 != 0) {
@@ -128,7 +128,7 @@ final class pc extends PacketBuffer {
             } else {
               ma.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
             }
-            wd.a(ma.field_z.field_Fb, false);
+            GrowableIntList.a(ma.field_z.field_Fb, false);
             decompiledFrameRemainder0 = (var19 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -235,11 +235,11 @@ final class pc extends PacketBuffer {
                       if (!IsaacRandom.field_g) {
                         var17 = ProxySocketConnector.field_n;
                         var18 = sd.a(nf.field_e, 46, new String[]{var16});
-                        var17.field_b.a(var18, (byte) -105, 8);
+                        var17.field_b.addAction(var18, (byte) -105, 8);
                       }
                       var17Lifetime1 = ProxySocketConnector.field_n;
                       var18Lifetime1 = sd.a(ho.field_f, 101, new String[]{var16});
-                      var17Lifetime1.field_b.a(var18Lifetime1, (byte) -102, 18);
+                      var17Lifetime1.field_b.addAction(var18Lifetime1, (byte) -102, 18);
                     }
                   }
                   var7 = (im) (var4.last(1504642273));

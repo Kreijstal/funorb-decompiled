@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am {
+final class Js5ArchiveManager {
     private PacketBuffer field_d;
     static int[] field_i;
     private DiskCacheWorker field_a;
@@ -153,10 +153,10 @@ final class am {
         if (param0 != -13565) {
           field_i = (int[]) null;
         }
-        return kd.field_a;
+        return TextLayout.field_a;
     }
 
-    am(Js5Transport param0, DiskCacheWorker param1) {
+    Js5ArchiveManager(Js5Transport param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -188,7 +188,7 @@ final class am {
         return;
     }
 
-    private am(Js5Transport param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private Js5ArchiveManager(Js5Transport param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -319,7 +319,7 @@ final class am {
           ro.a(param3, true);
         }
         if (param1 != -26931) {
-          am.a((byte) -107);
+          Js5ArchiveManager.a((byte) -107);
         }
     }
 

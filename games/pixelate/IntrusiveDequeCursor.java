@@ -279,7 +279,7 @@ final class IntrusiveDequeCursor {
         if (ce.field_a) {
           wh.field_p = null;
           nj.field_h = new IntrusiveDeque();
-          go.field_k = 0;
+          EmailCredentials.field_k = 0;
           ce.field_a = false;
           de.field_n = 0;
         }

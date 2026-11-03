@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends SceneWidget {
+final class ContextActionMenu extends SceneWidget {
     private int field_Qb;
     static QuickChatMenu field_Rb;
     private int field_Nb;
@@ -12,10 +12,10 @@ final class pi extends SceneWidget {
     static int field_Fb;
     private int field_Gb;
     private int field_Ob;
-    private lo[] field_Ib;
+    private lo[] items;
     private SceneWidget field_Jb;
     private Sprite[] field_Kb;
-    private int field_Hb;
+    private int itemCount;
 
     final static String a(CharSequence[] param0, int param1, int param2, int param3) {
         int var6_int = 0;
@@ -99,26 +99,26 @@ final class pi extends SceneWidget {
         field_Rb = null;
         if (param0 < 121) {
           CharSequence[] var2 = (CharSequence[]) null;
-          pi.a((CharSequence[]) null, -85, 35, 38);
+          ContextActionMenu.a((CharSequence[]) null, -85, 35, 38);
         }
     }
 
-    pi(pi param0) {
+    ContextActionMenu(ContextActionMenu param0) {
         this(param0, param0.field_Kb, param0.field_Pb, param0.field_Jb, param0.field_Ob, param0.field_Nb, param0.field_Lb, param0.field_Eb, param0.field_Qb);
     }
 
-    final void a(String param0, byte param1, int param2) {
+    final void addAction(String param0, byte param1, int param2) {
         try {
-          this.field_Ib[this.field_Hb] = new lo(0L, (SceneWidget) null, (SceneWidget) null, this.field_Jb, (Sprite) null, param0);
-          this.field_Ib[this.field_Hb].field_ab = this.field_Kb;
-          this.field_Ib[this.field_Hb].field_A = true;
-          this.field_Ib[this.field_Hb].verticalAlignment = 1;
-          this.a(this.field_Ib[this.field_Hb], (byte) 26);
-          this.field_Mb[this.field_Hb] = param2;
+          this.items[this.itemCount] = new lo(0L, (SceneWidget) null, (SceneWidget) null, this.field_Jb, (Sprite) null, param0);
+          this.items[this.itemCount].field_ab = this.field_Kb;
+          this.items[this.itemCount].field_A = true;
+          this.items[this.itemCount].verticalAlignment = 1;
+          this.a(this.items[this.itemCount], (byte) 26);
+          this.field_Mb[this.itemCount] = param2;
           if (param1 > -23) {
             this.field_Pb = (SceneWidget) null;
           }
-          this.field_Hb = this.field_Hb + 1;
+          this.itemCount = this.itemCount + 1;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "pi.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -128,21 +128,21 @@ final class pi extends SceneWidget {
         Boolean var1 = ArchiveIndex.field_j;
         if (param0 != 104) {
           CharSequence[] var2 = (CharSequence[]) null;
-          pi.a((CharSequence[]) null, 88, -25, -27);
+          ContextActionMenu.a((CharSequence[]) null, 88, -25, -27);
         }
         ArchiveIndex.field_j = null;
         return var1;
     }
 
-    final void a(int param0, int param1, Sprite param2, String param3) {
+    final void addIconAction(int param0, int param1, Sprite param2, String param3) {
         try {
-          this.field_Ib[this.field_Hb] = new lo((long)param0, (SceneWidget) null, (SceneWidget) null, this.field_Jb, param2, param3);
-          this.field_Ib[this.field_Hb].field_ab = this.field_Kb;
-          this.field_Ib[this.field_Hb].field_A = true;
-          this.field_Ib[this.field_Hb].verticalAlignment = 1;
-          this.a(this.field_Ib[this.field_Hb], (byte) 26);
-          this.field_Mb[this.field_Hb] = param1;
-          this.field_Hb = this.field_Hb + 1;
+          this.items[this.itemCount] = new lo((long)param0, (SceneWidget) null, (SceneWidget) null, this.field_Jb, param2, param3);
+          this.items[this.itemCount].field_ab = this.field_Kb;
+          this.items[this.itemCount].field_A = true;
+          this.items[this.itemCount].verticalAlignment = 1;
+          this.a(this.items[this.itemCount], (byte) 26);
+          this.field_Mb[this.itemCount] = param1;
+          this.itemCount = this.itemCount + 1;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "pi.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -158,8 +158,8 @@ final class pi extends SceneWidget {
         if (param0 != -12487) {
           return 40;
         }
-        for (var3 = 0; this.field_Hb > var3; var3++) {
-          if (this.field_Ib[var3].field_P != 0) {
+        for (var3 = 0; this.itemCount > var3; var3++) {
+          if (this.items[var3].field_P != 0) {
             return this.field_Mb[var3];
           }
         }
@@ -181,11 +181,11 @@ final class pi extends SceneWidget {
         return true;
     }
 
-    pi(SceneWidget param0, Sprite[] param1, SceneWidget param2, SceneWidget param3, int param4, int param5, int param6, int param7, int param8) {
+    ContextActionMenu(SceneWidget param0, Sprite[] param1, SceneWidget param2, SceneWidget param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Mb = new int[256];
         this.field_Gb = -2;
-        this.field_Ib = new lo[256];
+        this.items = new lo[256];
         try {
           this.field_Kb = param1;
           this.field_Jb = param3;
@@ -210,30 +210,30 @@ final class pi extends SceneWidget {
         int var7Lifetime1;
         int var8Lifetime1;
         var11 = Pixelate.field_H ? 1 : 0;
-        if (this.field_Hb == 0) {
-          this.field_Ib[this.field_Hb] = new lo(0L, (SceneWidget) null, (SceneWidget) null, this.field_Pb, (Sprite) null, ln.field_l);
-          this.field_Ib[this.field_Hb].verticalAlignment = 1;
-          this.a(this.field_Ib[this.field_Hb], (byte) 26);
-          this.field_Mb[this.field_Hb] = -1;
-          this.field_Hb = this.field_Hb + 1;
+        if (this.itemCount == 0) {
+          this.items[this.itemCount] = new lo(0L, (SceneWidget) null, (SceneWidget) null, this.field_Pb, (Sprite) null, ln.field_l);
+          this.items[this.itemCount].verticalAlignment = 1;
+          this.a(this.items[this.itemCount], (byte) 26);
+          this.field_Mb[this.itemCount] = -1;
+          this.itemCount = this.itemCount + 1;
         }
         var6 = 0;
         if (param2 < 12) {
-          this.field_Hb = 83;
+          this.itemCount = 83;
         }
-        for (var7 = 0; var7 < this.field_Hb; var7++) {
-          var8 = this.field_Ib[var7].c(-25469, this.field_Lb, this.field_Nb);
+        for (var7 = 0; var7 < this.itemCount; var7++) {
+          var8 = this.items[var7].c(-25469, this.field_Lb, this.field_Nb);
           if (var6 < var8) {
             var6 = var8;
           }
         }
         var6 = var6 + 2 * this.field_Ob;
-        var7Lifetime1 = this.field_Qb * this.field_Hb + (this.field_Eb + this.field_Eb);
+        var7Lifetime1 = this.field_Qb * this.itemCount + (this.field_Eb + this.field_Eb);
         var8Lifetime1 = ui.a(param4, param1, var6, (byte) -1);
         var9 = pj.a(var7Lifetime1, param3, param0, (byte) 45);
         this.a(var9, var7Lifetime1, var8Lifetime1, 256, var6);
-        for (var10 = 0; var10 < this.field_Hb; var10++) {
-          this.field_Ib[var10].a(this.field_Qb, this.field_Nb, this.field_Lb, this.field_Eb + this.field_Qb * var10, this.field_Ob, var6 - 2 * this.field_Ob, -2147483648);
+        for (var10 = 0; var10 < this.itemCount; var10++) {
+          this.items[var10].a(this.field_Qb, this.field_Nb, this.field_Lb, this.field_Eb + this.field_Qb * var10, this.field_Ob, var6 - 2 * this.field_Ob, -2147483648);
         }
     }
 

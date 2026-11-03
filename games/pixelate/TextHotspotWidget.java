@@ -39,14 +39,14 @@ class TextHotspotWidget extends TextButton {
         int stackIn_15_0 = 0;
         int var2;
         WidgetTextLayout var3;
-        kd var4;
+        TextLayout var4;
         int var5;
         String var6;
         int var7;
         int var8;
         int var9;
         Object var10;
-        mn var12;
+        TextLayoutLine var12;
         int var13;
         int var14;
         ni var15;
@@ -69,11 +69,11 @@ class TextHotspotWidget extends TextButton {
           var6 = this.field_q.substring(var5 + 9, var7);
           var7Lifetime1 = Integer.parseInt(var6);
           var2 = this.field_q.indexOf("</hotspot>", var5);
-          var8 = var4.a(false, var5);
-          var9 = var4.a(false, var2);
+          var8 = var4.getLineIndex(false, var5);
+          var9 = var4.getLineIndex(false, var2);
           var10 = null;
           for (var11 = var8; var11 <= var9; var11++) {
-            var12 = var4.field_b[var11];
+            var12 = var4.lines[var11];
             if (var11 == var8) {
               stackIn_10_0 = var4.b(true, var5);
             } else {

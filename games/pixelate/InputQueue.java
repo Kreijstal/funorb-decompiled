@@ -64,7 +64,7 @@ final class InputQueue {
           var2 = var1.f(255);
           if (var2 == 0) {
             if (null == hq.field_q) {
-              hq.field_q = new vg(128);
+              hq.field_q = new SecondaryNodeHashTable(128);
               aj.field_t = 0;
             }
             stackIn_11_0 = (var1.f(255) != 1) ? 0 : 1;
@@ -131,7 +131,7 @@ final class InputQueue {
             return;
           }
           if (null == vm.field_b) {
-            vm.field_b = new vg(128);
+            vm.field_b = new SecondaryNodeHashTable(128);
             DialWidgetPainter.field_q = 0;
           }
           var3Lifetime1 = var1.h(5);

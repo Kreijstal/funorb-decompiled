@@ -337,7 +337,7 @@ final class AccountNamePrompt extends SceneWidget {
           return this.field_Hb;
         }
         while (true) {
-          if (!bh.$cfr$intArgs$b$c4997cb15529(108)) {
+          if (!DirectByteStorage.$cfr$intArgs$b$c4997cb15529(108)) {
             this.field_Lb.field_cb = this.field_Eb.toString();
             if (!param1) {
               return this.field_Hb;
@@ -468,7 +468,7 @@ final class AccountNamePrompt extends SceneWidget {
         cd.field_e[4] = UiContainer.field_G;
         if (param0 == 1565) {
           cd.field_e[11] = nj.field_d;
-          cd.field_e[13] = no.field_n;
+          cd.field_e[13] = CachedTextLayout.field_n;
           cd.field_e[9] = ke.field_c;
           cd.field_e[6] = ae.field_j;
           cd.field_e[16] = StatefulTextPainter.field_u;

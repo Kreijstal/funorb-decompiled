@@ -3,9 +3,9 @@
  */
 final class il {
     private ResourceArchive field_a;
-    static vg field_d;
+    static SecondaryNodeHashTable field_d;
     static boolean field_g;
-    private le field_h;
+    private WeightedLruCache field_h;
     static String field_c;
     private ResourceArchive field_b;
     static int field_e;
@@ -162,7 +162,7 @@ final class il {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_h = new le(64);
+        this.field_h = new WeightedLruCache(64);
         try {
           this.field_a = param1;
           this.field_b = param2;

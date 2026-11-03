@@ -8,7 +8,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
     static int[] field_N;
     private String[] suggestions;
     static String field_J;
-    static pi field_O;
+    static ContextActionMenu field_O;
     private TextButton[] buttons;
     static String field_M;
 
@@ -113,7 +113,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
           ri.field_f = null;
         }
         if (param1 <= 56) {
-          field_O = (pi) null;
+          field_O = (ContextActionMenu) null;
         }
     }
 

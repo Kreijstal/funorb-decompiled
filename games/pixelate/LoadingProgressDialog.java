@@ -24,7 +24,7 @@ final class LoadingProgressDialog extends ResizableModalPanel {
         }
     }
 
-    LoadingProgressDialog(kn param0, String param1) {
+    LoadingProgressDialog(ModalStack param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {

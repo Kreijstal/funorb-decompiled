@@ -76,7 +76,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 this.field_x = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
                   var6 = param2.a((byte) 52);
-                  var7 = go.a(var6, -52);
+                  var7 = EmailCredentials.a(var6, -52);
                   if (var7 != null) {
                     this.field_x[var5] = var6;
                     array$0 = new int[var7.field_e];

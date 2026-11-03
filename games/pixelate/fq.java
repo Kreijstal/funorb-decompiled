@@ -251,14 +251,14 @@ final class fq extends de {
                 if (((null != wh.field_p)) &&
                   ((var7 == -1))) {
                   var12Lifetime1 = wh.field_p.field_k[0];
-                  qj.field_e.drawText(kn.field_J, 180, var11, var8, var9);
+                  qj.field_e.drawText(ModalStack.field_J, 180, var11, var8, var9);
                   qj.field_e.drawRightAlignedText(Integer.toString(var12Lifetime1), 480, var11, var8, var9);
                 }
                 break regionExit1;
               }
               var2 = MenuInputState.field_l;
             } else {
-              var2 = wd.field_b;
+              var2 = GrowableIntList.field_b;
             }
           }
         }

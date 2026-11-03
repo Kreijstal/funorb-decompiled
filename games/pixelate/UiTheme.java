@@ -355,7 +355,7 @@ final class UiTheme {
     final static byte[] a(boolean param0, boolean param1, Object param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        gf var4 = null;
+        ByteStorage var4 = null;
         Object stackIn_4_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_11_0 = null;
@@ -373,11 +373,11 @@ final class UiTheme {
             return (byte[]) (stackIn_4_0);
           }
           if (!(param2 instanceof byte[])) {
-            if (!(param2 instanceof gf)) {
+            if (!(param2 instanceof ByteStorage)) {
               throw new IllegalArgumentException();
             }
-            var4 = (gf) (param2);
-            stackIn_15_0 = var4.b(32);
+            var4 = (ByteStorage) (param2);
+            stackIn_15_0 = var4.toByteArray(32);
             return stackIn_15_0;
           }
           var3 = (byte[]) (param2);

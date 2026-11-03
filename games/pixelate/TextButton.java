@@ -210,7 +210,7 @@ class TextButton extends UiComponent {
         this(param0, Checkbox.field_X.field_r, param1);
     }
 
-    final static void a(rl param0, int[] param1, boolean param2, int[] param3, byte param4, boolean param5, boolean param6) {
+    final static void a(TriangleMesh param0, int[] param1, boolean param2, int[] param3, byte param4, boolean param5, boolean param6) {
         int stackIn_67_0 = 0;
         int stackIn_67_1 = 0;
         int stackIn_76_0 = 0;
@@ -300,10 +300,10 @@ class TextButton extends UiComponent {
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (var23Lifetime2 < param0.field_A) {
-              var24Lifetime1 = param0.field_k[var23Lifetime2];
-              var25Lifetime1 = param0.field_N[var23Lifetime2];
-              var26Lifetime1 = param0.field_E[var23Lifetime2];
+            if (var23Lifetime2 < param0.vertexCount) {
+              var24Lifetime1 = param0.vertexX[var23Lifetime2];
+              var25Lifetime1 = param0.vertexY[var23Lifetime2];
+              var26Lifetime1 = param0.vertexZ[var23Lifetime2];
               var27Lifetime1 = (var18 * var26Lifetime1 + var24Lifetime1 * var12 + var25Lifetime1 * var15 >> -ai.field_x + 16) + var9;
               var28Lifetime1 = var10 + (var26Lifetime1 * var19 + var13 * var24Lifetime1 + var25Lifetime1 * var16 >> 16 - ai.field_x);
               var29Lifetime1 = var11 + (var25Lifetime1 * var17 + var24Lifetime1 * var14 + var26Lifetime1 * var20 >> 16);
@@ -369,7 +369,7 @@ class TextButton extends UiComponent {
                   var26Lifetime1Lifetime1 = param0.field_R[var23Lifetime2];
                   ProxySocketConnector.field_h[var23Lifetime2] = (var24Lifetime1Lifetime1 * var12 - (-(var15 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var18) >> 16) + var9;
                   PasswordFieldPainter.field_x[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 - (-(var16 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var19) >> 16);
-                  le.field_b[var23Lifetime2] = (var14 * var24Lifetime1Lifetime1 - (-(var25Lifetime1Lifetime1 * var17) - var26Lifetime1Lifetime1 * var20) >> 16) + var11;
+                  WeightedLruCache.field_b[var23Lifetime2] = (var14 * var24Lifetime1Lifetime1 - (-(var25Lifetime1Lifetime1 * var17) - var26Lifetime1Lifetime1 * var20) >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -401,13 +401,13 @@ class TextButton extends UiComponent {
                   if (var30 != 0) {
                     break scanLoop1;
                   }
-                  if (stackIn_76_0 >= wd.field_i.length) {
+                  if (stackIn_76_0 >= GrowableIntList.field_i.length) {
                     break;
                   }
                   var19 = param0.field_K[var18];
                   var20 = param0.field_q[var18];
                   var21Lifetime2 = param0.field_p[var18];
-                  wd.field_i[var18] = var12 * var20 + (var9 * var19 + var15 * var21Lifetime2) >> 16;
+                  GrowableIntList.field_i[var18] = var12 * var20 + (var9 * var19 + var15 * var21Lifetime2) >> 16;
                   lo.field_Ib[var18] = var16 * var21Lifetime2 + var20 * var13 + var19 * var10 >> 16;
                   SocketJs5Transport.field_q[var18] = var17 * var21Lifetime2 + var11 * var19 + var14 * var20 >> 16;
                   var18++;

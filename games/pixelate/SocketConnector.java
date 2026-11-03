@@ -10,7 +10,7 @@ abstract class SocketConnector {
     static ResourceArchive field_a;
     String field_b;
     static String field_d;
-    static vg field_f;
+    static SecondaryNodeHashTable field_f;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;

@@ -316,12 +316,12 @@ final class ae {
           if (var2 < 0) {
             throw new RuntimeException();
           }
-          return lb.a((byte) -116, var2) << 2;
+          return NetworkGameClient.a((byte) -116, var2) << 2;
         }
         if (var2 < 0) {
           throw new RuntimeException();
         }
-        return lb.a((byte) -116, var2) << 2;
+        return NetworkGameClient.a((byte) -116, var2) << 2;
     }
 
     private final void a(int param0, int param1, int param2, int param3) {

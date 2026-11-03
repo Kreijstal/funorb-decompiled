@@ -131,7 +131,7 @@ final class vf {
             1 != ValidatedTextWidget.field_db) {
             MouseWheelHandler.field_e.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
             MouseWheelHandler.field_e.field_rb = false;
-            wd.a(MouseWheelHandler.field_e.field_Fb, false);
+            GrowableIntList.a(MouseWheelHandler.field_e.field_Fb, false);
             return;
           }
           MouseWheelHandler.field_e.field_rb = true;
@@ -193,7 +193,7 @@ final class vf {
               em.a(var6.field_Fb, 0L, var6.field_Ib, -1, var6, -163, MouseWheelHandler.field_e.field_Gb, (int[]) null, -1);
               var17 = ProxySocketConnector.field_n;
               var13_ref_String = k.field_n;
-              var17.field_b.a(var13_ref_String, (byte) -107, 7);
+              var17.field_b.addAction(var13_ref_String, (byte) -107, 7);
               var18 = ProxySocketConnector.field_n;
               var13 = BufferedRandomAccessFile.field_a;
               var14 = ji.field_c;

@@ -144,7 +144,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_m) {
             while (this.field_m.field_b == 0) {
-              vg.a(1L, (byte) 23);
+              SecondaryNodeHashTable.a(1L, (byte) 23);
             }
             if (this.field_m.field_b == 1) {
               try {

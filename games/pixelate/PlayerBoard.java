@@ -197,7 +197,7 @@ final class PlayerBoard {
 
     final static int a(int param0, int param1) {
         int var2 = -19 % ((param1 - 71) / 53);
-        return vg.a(param0, -1) >> 8;
+        return SecondaryNodeHashTable.a(param0, -1) >> 8;
     }
 
     final boolean isFullyPainted(int param0) {

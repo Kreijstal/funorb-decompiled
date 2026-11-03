@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rg {
+abstract class LoginCredentials {
     static jj field_e;
     static IntrusiveDeque field_c;
     static String[] field_a;
@@ -17,7 +17,7 @@ abstract class rg {
           field_d = null;
           return;
         }
-        rg.a(-41);
+        LoginCredentials.a(-41);
         field_c = null;
         field_e = null;
         field_d = null;

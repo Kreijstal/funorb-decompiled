@@ -253,8 +253,8 @@ final class sd extends SingleChildContainer {
           var18.position = -2 + param1.length;
           im.field_Qb = var18.a((byte) 97);
           gd.field_k = new byte[im.field_Qb][];
-          rl.field_m = new boolean[im.field_Qb];
-          gf.field_g = new int[im.field_Qb];
+          TriangleMesh.field_m = new boolean[im.field_Qb];
+          ByteStorage.field_g = new int[im.field_Qb];
           ge.field_c = new int[im.field_Qb];
           IntrusiveNode.field_b = new int[im.field_Qb];
           e.field_b = new int[im.field_Qb];
@@ -274,7 +274,7 @@ final class sd extends SingleChildContainer {
             e.field_b[var4Lifetime1] = var18.a((byte) -122);
           }
           for (var4Lifetime2 = 0; im.field_Qb > var4Lifetime2; var4Lifetime2++) {
-            gf.field_g[var4Lifetime2] = var18.a((byte) -14);
+            ByteStorage.field_g[var4Lifetime2] = var18.a((byte) -14);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < im.field_Qb; var4Lifetime3++) {
             ge.field_c[var4Lifetime3] = var18.a((byte) -116);
@@ -289,7 +289,7 @@ final class sd extends SingleChildContainer {
           }
           var18.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < im.field_Qb; var4Lifetime5++) {
-            var5 = gf.field_g[var4Lifetime5];
+            var5 = ByteStorage.field_g[var4Lifetime5];
             var6 = ge.field_c[var4Lifetime5];
             var7 = var5 * var6;
             var21 = new byte[var7];
@@ -343,7 +343,7 @@ final class sd extends SingleChildContainer {
                 }
               }
             }
-            rl.field_m[var4Lifetime5] = var10 != 0;
+            TriangleMesh.field_m[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -163,7 +163,7 @@ final class MatchController {
               var5_int = -1;
             }
             stackIn_21_0 = var8;
-            stackIn_22_1 = (go.field_k == 0) ? false : true;
+            stackIn_22_1 = (EmailCredentials.field_k == 0) ? false : true;
             ((hq) (Object) stackIn_21_0).a(stackIn_22_1, un.field_j.field_n, gb.field_f[1], gb.field_f[0], (byte) 34, var5_int, un.field_j.a((byte) -117));
           }
         } else {
@@ -174,7 +174,7 @@ final class MatchController {
           stackIn_6_3 = (wh.field_p == null) ? false : true;
           stackIn_8_4 = param0;
           stackIn_8_5 = ArrayWidgetContainer.a((byte) 85);
-          stackIn_9_6 = (go.field_k == 0) ? false : true;
+          stackIn_9_6 = (EmailCredentials.field_k == 0) ? false : true;
           ((hq) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3, stackIn_8_4, stackIn_8_5, stackIn_9_6, gb.field_f[3], 2, gb.field_f[2], this.field_a.scores[0]);
         }
         if (DateOfBirthValidator.field_j != 1) {
@@ -194,7 +194,7 @@ final class MatchController {
           return;
         }
         de.field_n = de.field_n | var4;
-        go.field_k = go.field_k | var4;
+        EmailCredentials.field_k = EmailCredentials.field_k | var4;
         if (param1 != 58) {
           discarded$0 = this.a(-117, 64);
         }
@@ -437,7 +437,7 @@ final class MatchController {
           this.field_h = false;
           this.a(82, (byte) 123);
         }
-        rg.field_e.c(param0 + 109);
+        LoginCredentials.field_e.c(param0 + 109);
         ih.a(false);
         if (param0 != -110) {
           this.field_A = (pb) null;
@@ -508,7 +508,7 @@ final class MatchController {
           BinaryBitmapFont var17 = null;
           var15 = Pixelate.field_H ? 1 : 0;
           try {
-            rg.field_e.a(false);
+            LoginCredentials.field_e.a(false);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -538,7 +538,7 @@ final class MatchController {
             if (param0) {
               rm.a(0);
             }
-            rg.field_e.a((byte) -119);
+            LoginCredentials.field_e.a((byte) -119);
             if (null != fq.field_o) {
               fq.field_o.a((byte) -108);
             }
@@ -761,8 +761,8 @@ final class MatchController {
                                   }
                                 }
                               } else {
-                                stackIn_38_0 = !(gf.field_b);
-                                gf.field_b = stackIn_38_0;
+                                stackIn_38_0 = !(ByteStorage.field_b);
+                                ByteStorage.field_b = stackIn_38_0;
                               }
                             }
                           } else {
@@ -1290,7 +1290,7 @@ final class MatchController {
           sb.field_a = 22178;
           stackIn_4_0 = (DateOfBirthValidator.field_j == 2);
           AgeValidator.field_p = stackIn_4_0;
-          go.field_k = 0;
+          EmailCredentials.field_k = 0;
           DialWidgetPainter.field_o = 2359467;
           ln.field_n = 1426010794;
           ra.field_a = 1947508858;
@@ -1301,10 +1301,10 @@ final class MatchController {
             stackIn_7_0 = array$0;
             stackIn_7_1 = array$0;
             stackIn_7_2 = 0;
-            if (null == kn.field_J) {
+            if (null == ModalStack.field_J) {
               stackIn_8_3 = UiComponent.field_t;
             } else {
-              stackIn_8_3 = kn.field_J;
+              stackIn_8_3 = ModalStack.field_J;
             }
             stackIn_7_1[stackIn_7_2] = stackIn_8_3;
             param0 = stackIn_7_0;
@@ -1315,7 +1315,7 @@ final class MatchController {
           PlayerController.field_r = 16042;
           UiComponent.i(0);
           gb.field_f = new int[4];
-          le.a(true);
+          WeightedLruCache.a(true);
           if (DateOfBirthValidator.field_j != 0) {
             if (DateOfBirthValidator.field_j == 1) {
               this.field_a = new Match(param0, 0, DateOfBirthValidator.field_j, param3, 0, un.field_j.field_a);

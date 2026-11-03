@@ -247,7 +247,7 @@ final class nn {
           ba.field_d = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo14bold", param3));
           var17 = new Sprite(param1.a((byte) 24, "", "button.gif"), (java.awt.Component) ((Object) NameAvailabilityValidator.field_u));
           dq.a((byte) 31, "dropdown", "commonui", param2);
-          var5 = lb.a(param2, param0 ^ 4767934, "commonui", "screen_options");
+          var5 = NetworkGameClient.a(param2, param0 ^ 4767934, "commonui", "screen_options");
           UiComponent.field_A = new IndexedSprite[4];
           UiComponent.field_o = new IndexedSprite[4];
           qg.field_a = new IndexedSprite[4];

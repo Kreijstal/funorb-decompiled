@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class co {
+final class ViewportController {
     private int field_n;
     static String field_k;
     private int field_x;
@@ -217,7 +217,7 @@ final class co {
         this.field_s.a(this.field_i, 127, this.field_p);
     }
 
-    private co() throws Throwable {
+    private ViewportController() throws Throwable {
         throw new Error();
     }
 

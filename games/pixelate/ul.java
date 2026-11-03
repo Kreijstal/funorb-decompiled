@@ -75,7 +75,7 @@ final class ul extends bg {
         var5 = Pixelate.field_H ? 1 : 0;
         super.a((byte) 21);
         stackIn_3_0 = param1;
-        stackIn_4_1 = (MenuInputState.field_e) && (gf.field_b);
+        stackIn_4_1 = (MenuInputState.field_e) && (ByteStorage.field_b);
         param1 = stackIn_3_0 | stackIn_4_1;
         if (this.field_s > this.field_r) {
           this.field_s = this.field_r;

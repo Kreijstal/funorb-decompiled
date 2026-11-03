@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fd {
-    static vh field_b;
+    static GzipDecoder field_b;
     static String field_d;
     static Sprite field_a;
     static Sprite[] field_c;
@@ -162,7 +162,7 @@ final class fd {
     }
 
     static {
-        field_b = new vh();
+        field_b = new GzipDecoder();
         field_d = "If you are not, please change your password to something more obscure!";
     }
 }

@@ -122,7 +122,7 @@ final class HuffmanCodec {
           ProxySocketConnector.field_n.b(false, (byte) -98);
           var4 = ProxySocketConnector.field_n;
           var5_ref_String = op.field_q;
-          var4.field_b.a(var5_ref_String, (byte) -68, 5);
+          var4.field_b.addAction(var5_ref_String, (byte) -68, 5);
           var4Lifetime1 = ProxySocketConnector.field_n;
           var5 = BufferedRandomAccessFile.field_a;
           var6 = ji.field_c;

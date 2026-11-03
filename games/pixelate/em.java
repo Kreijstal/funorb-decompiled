@@ -48,7 +48,7 @@ final class em {
           hf.field_k = var2_int;
           lo.field_Jb = (800 - var2_int) / 2;
           PasswordFieldPainter.field_A = rk.field_e.maxAscent + rk.field_e.maxDescent;
-          bh.field_k = PasswordFieldPainter.field_A * 50 - 163;
+          DirectByteStorage.field_k = PasswordFieldPainter.field_A * 50 - 163;
           if (param1 >= -75) {
             field_b = (String) null;
           }

@@ -29,7 +29,7 @@ final class rb extends de {
         if (param0 >= -95) {
           return -69;
         }
-        return this.field_l == 9 ? go.field_k : de.field_n;
+        return this.field_l == 9 ? EmailCredentials.field_k : de.field_n;
     }
 
     private final boolean c(int param0, byte param1) {
@@ -125,7 +125,7 @@ final class rb extends de {
           var7Lifetime1 = var4.field_D + (var4.maxDescent + 3);
           var3.drawCentered(GameApplet.field_n[var5Lifetime1], 320, 280, 0, -1);
           if (this.a((byte) 66, var5Lifetime1)) {
-            var3.drawCentered(co.field_d, 320, 280 + var6, 0, -1);
+            var3.drawCentered(ViewportController.field_d, 320, 280 + var6, 0, -1);
           } else {
             var3.drawCentered(bf.field_t, 320, var6 + 280, 1, -1);
           }

@@ -66,7 +66,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         try {
           if (param0 != 69) {
             var5 = (UiComponent) null;
-            this.a(113, (UiComponent) null);
+            this.getPreferredWidth(113, (UiComponent) null);
           }
           stackIn_3_0 = this.b(param2, param1, 2, 0);
           return stackIn_3_0;
@@ -144,7 +144,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           }
           var11 = param0.a(param1, param3, param2, 27705, param4);
           while (var11.field_b == 0) {
-            vg.a(10L, (byte) 23);
+            SecondaryNodeHashTable.a(10L, (byte) 23);
           }
           var7 = (java.awt.Frame) (var11.field_e);
           if (var7 == null) {
@@ -222,8 +222,8 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               var3 = "[" + sd.a(fk.field_q, 106, new String[]{param0.field_h}) + "] ";
             }
             if (param0.field_j == 4 &&
-              null != mn.field_f) {
-              var3 = "[" + mn.field_f + "] ";
+              null != TextLayoutLine.field_f) {
+              var3 = "[" + TextLayoutLine.field_f + "] ";
             }
             if (param0.field_j == 3) {
               var3 = "[#" + param0.field_h + "] ";
@@ -312,19 +312,19 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final kd getTextLayout(int param0, UiComponent param1) {
+    public final TextLayout getTextLayout(int param0, UiComponent param1) {
         RuntimeException var3 = null;
-        kd stackIn_8_0 = null;
+        TextLayout stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1.field_r == null) {
-            param1.field_r = (kd) ((Object) new no());
+            param1.field_r = (TextLayout) ((Object) new CachedTextLayout());
           }
           if (this.field_i) {
-            ((no) (param1.field_r)).a(this.getAvailableTextHeight(true, param1), -1, this.getDisplayText(param1, -472248767), this.field_a, this.c(-114, param1), this.field_l, this.field_d, this.field_j);
+            ((CachedTextLayout) (param1.field_r)).a(this.getAvailableTextHeight(true, param1), -1, this.getDisplayText(param1, -472248767), this.field_a, this.c(-114, param1), this.field_l, this.field_d, this.field_j);
           } else {
             this.d(3, param1);
           }
@@ -386,13 +386,13 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        mn var13 = null;
+        TextLayoutLine var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
         UiComponent var17 = null;
-        kd var18 = null;
-        kd var19 = null;
+        TextLayout var18 = null;
+        TextLayout var19 = null;
         var16 = Pixelate.field_H ? 1 : 0;
         try {
           if (param2 != -1) {
@@ -412,11 +412,11 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               var9 = param3;
               var8 = param0;
             }
-            var10 = var19.a(false, var8);
-            var11 = var19.a(false, var9);
+            var10 = var19.getLineIndex(false, var8);
+            var11 = var19.getLineIndex(false, var9);
             hp.a(param1.field_z + param5, param4 + (param1.field_p + param1.field_C), param1.field_E + (param5 + param1.field_z), (byte) -104, param4 + param1.field_p);
             for (var12 = var10; var11 >= var12; var12++) {
-              var13 = var18.field_b[var12];
+              var13 = var18.lines[var12];
               if (var10 != var12) {
                 stackIn_15_0 = var13.field_g[0];
               } else {
@@ -585,9 +585,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
     }
 
     public final void a(int param0, int param1, byte param2, UiComponent param3, int param4) {
-        kd var7 = null;
+        TextLayout var7 = null;
         int var8 = 0;
-        mn var9 = null;
+        TextLayoutLine var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -596,12 +596,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           int var6_int = 97 % ((-46 - param2) / 40);
           if (param3.b(true)) {
             var7 = this.getTextLayout(-86, param3);
-            var8 = var7.a(false, param4);
-            var9 = var7.field_b[var8];
+            var8 = var7.getLineIndex(false, param4);
+            var9 = var7.lines[var8];
             var10 = var7.b(true, param4);
             var11 = this.b(param0, param3, 2, var10);
             var12 = this.a(param1, param3, (byte) 80) + Math.max(0, var9.field_b);
-            var13 = this.a(param1, param3, (byte) -57) + Math.min(this.c(101, param3), Math.min(var9.field_d, var7.field_b.length <= 1 + var8 ? var9.field_d : var7.field_b[1 + var8].field_b));
+            var13 = this.a(param1, param3, (byte) -57) + Math.min(this.c(101, param3), Math.min(var9.field_d, var7.lines.length <= 1 + var8 ? var9.field_d : var7.lines[1 + var8].field_b));
             hp.a(param0 + param3.field_z, param3.field_p + param1 + param3.field_C, param3.field_E + param0 + param3.field_z, (byte) -91, param1 + param3.field_p);
             Checkbox.field_X.a(var12, var13, var11, var11, this.field_e, false);
             LinkButtonPainter.a((byte) 92);
@@ -640,7 +640,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         }
     }
 
-    public final int a(int param0, UiComponent param1) {
+    public final int getPreferredWidth(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -815,7 +815,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           if (null == param1.field_r) {
-            param1.field_r = (kd) ((Object) new no());
+            param1.field_r = (TextLayout) ((Object) new CachedTextLayout());
           }
           var3_int = this.getAvailableTextHeight(true, param1);
           var4 = this.c(-94, param1);
@@ -839,23 +839,23 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (var6Lifetime1 != 0 &&
             var6Lifetime1 != 3) {
             if (1 == var6Lifetime1) {
-              if (!(param1.field_r instanceof no)) {
+              if (!(param1.field_r instanceof CachedTextLayout)) {
                 return;
               }
-              ((no) (param1.field_r)).a(this.getDisplayText(param1, param0 - 472248770), false, var5, this.field_a, var3_int >> 1);
+              ((CachedTextLayout) (param1.field_r)).a(this.getDisplayText(param1, param0 - 472248770), false, var5, this.field_a, var3_int >> 1);
               return;
             }
             if (var6Lifetime1 != 2) {
               return;
             }
-            if (!(param1.field_r instanceof no)) {
+            if (!(param1.field_r instanceof CachedTextLayout)) {
               return;
             }
-            ((no) (param1.field_r)).a(this.field_a, var5, var3_int, false, this.getDisplayText(param1, -472248767));
+            ((CachedTextLayout) (param1.field_r)).a(this.field_a, var5, var3_int, false, this.getDisplayText(param1, -472248767));
             return;
           }
-          if (param1.field_r instanceof no) {
-            ((no) (param1.field_r)).a(this.getDisplayText(param1, -472248767), var5, this.field_a, 0, 61);
+          if (param1.field_r instanceof CachedTextLayout) {
+            ((CachedTextLayout) (param1.field_r)).a(this.getDisplayText(param1, -472248767), var5, this.field_a, 0, 61);
             return;
           }
           return;

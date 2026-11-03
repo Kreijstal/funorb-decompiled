@@ -26,7 +26,7 @@ final class kf extends bg {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new BinaryBitmapFont(param0, IntrusiveNode.field_b, e.field_b, gf.field_g, ge.field_c, wo.field_f);
+          var2 = new BinaryBitmapFont(param0, IntrusiveNode.field_b, e.field_b, ByteStorage.field_g, ge.field_c, wo.field_f);
           re.b(140);
           var3 = -91 % ((77 - param1) / 37);
           stackIn_4_0 = var2;

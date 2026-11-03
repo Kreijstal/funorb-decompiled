@@ -316,7 +316,7 @@ class EditableTextWidget extends TextButton {
     }
 
     private final void q(int param0) {
-        kd var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;

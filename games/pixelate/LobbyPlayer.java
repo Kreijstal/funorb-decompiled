@@ -85,10 +85,10 @@ final class LobbyPlayer extends SceneWidget {
         cd.field_g = var8.a(false);
         if (fk.field_o == 2) {
           qf.field_b = var8.a((byte) 2);
-          kn.field_I = var8.readUnsignedMedium((byte) 13);
+          ModalStack.field_I = var8.readUnsignedMedium((byte) 13);
         } else {
           qf.field_b = 0;
-          kn.field_I = 0;
+          ModalStack.field_I = 0;
         }
         stackIn_11_0 = (var8.f(255) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
@@ -119,7 +119,7 @@ final class LobbyPlayer extends SceneWidget {
         try {
           var9 = jd.field_k.a(-21209, var5);
           pb.field_j = var9.getPreview((byte) -54);
-          if (op.field_t.equals(kn.field_J)) {
+          if (op.field_t.equals(ModalStack.field_J)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var9.field_u;
@@ -143,7 +143,7 @@ final class LobbyPlayer extends SceneWidget {
             LobbyPlayer.a((ae) null, 99, -60);
           }
           kh.a(false, param1);
-          LoadingProgressDialog.a(false, rl.field_e, -26027);
+          LoadingProgressDialog.a(false, TriangleMesh.field_e, -26027);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "uj.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

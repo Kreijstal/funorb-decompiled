@@ -20,18 +20,18 @@ final class ke {
     final static boolean a(boolean param0) {
         if (param0) {
           field_e = (String) null;
-          if (vh.field_c == null) {
+          if (GzipDecoder.field_c == null) {
             return false;
           }
-          if (vh.field_c.a((byte) 99)) {
+          if (GzipDecoder.field_c.a((byte) 99)) {
             return true;
           }
           return false;
         }
-        if (vh.field_c == null) {
+        if (GzipDecoder.field_c == null) {
           return false;
         }
-        if (vh.field_c.a((byte) 99)) {
+        if (GzipDecoder.field_c.a((byte) 99)) {
           return true;
         }
         return false;

@@ -75,7 +75,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               gb.field_d = stackIn_11_0;
               MarkerSlider.field_U = stackIn_11_0;
               FallingPieceView.a(pc.field_q, (byte) 66, bj.field_a, aa.field_f, hf.field_n);
-              vg.b(-1, 10000);
+              SecondaryNodeHashTable.b(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
@@ -330,15 +330,15 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         bi var1Lifetime1;
         bi var1Lifetime2;
         var2 = Pixelate.field_H ? 1 : 0;
-        if (le.field_j > 0) {
-          le.field_j = le.field_j - 1;
+        if (WeightedLruCache.field_j > 0) {
+          WeightedLruCache.field_j = WeightedLruCache.field_j - 1;
           return;
         }
         if (!sd.field_N) {
           if (param0 == 5) {
             if (of.field_d == ql.field_m) {
-              if (lb.field_D > 0) {
-                lb.field_D = lb.field_D - 1;
+              if (NetworkGameClient.field_D > 0) {
+                NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
               } else {
                 if (AccountRegistrationPanel.field_S > 0) {
                   AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
@@ -350,14 +350,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               if (fieldTemp$6 >= 15) {
                 of.field_d = ql.field_m;
                 stackIn_10_0 = (5 != ql.field_m) ? 15 : 75;
-                lb.field_D = stackIn_10_0;
+                NetworkGameClient.field_D = stackIn_10_0;
               }
             }
           } else {
             field_c = -69;
             if (of.field_d == ql.field_m) {
-              if (lb.field_D > 0) {
-                lb.field_D = lb.field_D - 1;
+              if (NetworkGameClient.field_D > 0) {
+                NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
               } else {
                 if (AccountRegistrationPanel.field_S > 0) {
                   AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
@@ -369,7 +369,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               if (fieldTemp$5 >= 15) {
                 of.field_d = ql.field_m;
                 stackIn_23_0 = (5 != ql.field_m) ? 15 : 75;
-                lb.field_D = stackIn_23_0;
+                NetworkGameClient.field_D = stackIn_23_0;
               }
             }
           }
@@ -377,8 +377,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (GameApplet.field_i == StatefulTextPainter.field_v.puzzle.pictureIndex) {
             if (param0 == 5) {
               if (of.field_d == ql.field_m) {
-                if (lb.field_D > 0) {
-                  lb.field_D = lb.field_D - 1;
+                if (NetworkGameClient.field_D > 0) {
+                  NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 } else {
                   if (AccountRegistrationPanel.field_S > 0) {
                     AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
@@ -390,14 +390,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 if (fieldTemp$4 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_39_0 = (5 != ql.field_m) ? 15 : 75;
-                  lb.field_D = stackIn_39_0;
+                  NetworkGameClient.field_D = stackIn_39_0;
                 }
               }
             } else {
               field_c = -69;
               if (of.field_d == ql.field_m) {
-                if (lb.field_D > 0) {
-                  lb.field_D = lb.field_D - 1;
+                if (NetworkGameClient.field_D > 0) {
+                  NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 } else {
                   if (AccountRegistrationPanel.field_S > 0) {
                     AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
@@ -409,7 +409,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 if (fieldTemp$3 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_52_0 = (5 != ql.field_m) ? 15 : 75;
-                  lb.field_D = stackIn_52_0;
+                  NetworkGameClient.field_D = stackIn_52_0;
                 }
               }
             }
@@ -426,7 +426,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 if (fieldTemp$0 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_107_0 = (5 != ql.field_m) ? 15 : 75;
-                  lb.field_D = stackIn_107_0;
+                  NetworkGameClient.field_D = stackIn_107_0;
                 }
                 if (-1 != of.field_d) {
                   var1 = jb.field_b[of.field_d];
@@ -434,8 +434,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 }
                 return;
               }
-              if (lb.field_D > 0) {
-                lb.field_D = lb.field_D - 1;
+              if (NetworkGameClient.field_D > 0) {
+                NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 if (-1 != of.field_d) {
                   var1Lifetime2 = jb.field_b[of.field_d];
                   var1Lifetime2.field_f = -(AccountRegistrationPanel.field_S * (AccountRegistrationPanel.field_S * 270) / 225) + 20;
@@ -462,8 +462,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 field_c = -69;
               }
               if (of.field_d == ql.field_m) {
-                if (lb.field_D > 0) {
-                  lb.field_D = lb.field_D - 1;
+                if (NetworkGameClient.field_D > 0) {
+                  NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 } else {
                   if (AccountRegistrationPanel.field_S > 0) {
                     AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
@@ -475,7 +475,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 if (fieldTemp$2 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_70_0 = (5 != ql.field_m) ? 15 : 75;
-                  lb.field_D = stackIn_70_0;
+                  NetworkGameClient.field_D = stackIn_70_0;
                 }
               }
             } else {
@@ -485,8 +485,8 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 field_c = -69;
               }
               if (of.field_d == ql.field_m) {
-                if (lb.field_D > 0) {
-                  lb.field_D = lb.field_D - 1;
+                if (NetworkGameClient.field_D > 0) {
+                  NetworkGameClient.field_D = NetworkGameClient.field_D - 1;
                 } else {
                   if (AccountRegistrationPanel.field_S > 0) {
                     AccountRegistrationPanel.field_S = AccountRegistrationPanel.field_S - 1;
@@ -498,7 +498,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 if (fieldTemp$1 >= 15) {
                   of.field_d = ql.field_m;
                   stackIn_88_0 = (5 != ql.field_m) ? 15 : 75;
-                  lb.field_D = stackIn_88_0;
+                  NetworkGameClient.field_D = stackIn_88_0;
                 }
               }
             }

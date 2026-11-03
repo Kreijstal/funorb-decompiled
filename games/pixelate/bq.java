@@ -94,7 +94,7 @@ final class bq {
           } else if (CanvasRasterBuffer.field_h != 2) {
             if (3 == CanvasRasterBuffer.field_h) {
               if (!mc.field_k.field_x) {
-                var3_int = qn.a(mn.field_a, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -120, bg.field_j);
+                var3_int = qn.a(TextLayoutLine.field_a, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -120, bg.field_j);
               } else {
                 var3_int = qn.a(el.field_c, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -115, bg.field_j);
               }
@@ -206,7 +206,7 @@ final class bq {
             vm.field_e[0] = vf.field_c;
             vm.field_e[1] = MusicPatch.field_q;
             jj.field_h = new int[2];
-            vm.field_e[4] = bh.field_m;
+            vm.field_e[4] = DirectByteStorage.field_m;
             vm.field_e[5] = "";
             fo.field_a[3] = 1;
             vm.field_e[3] = vm.field_g;

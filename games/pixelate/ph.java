@@ -52,11 +52,11 @@ final class ph extends IntrusiveNode {
               var2.d(fj.field_a, -76);
               sc.field_d.a(13, -103, 0, var2.payload);
               rb.field_q = rb.field_q + 1;
-              co.field_a = 30000L + hm.a(64);
+              ViewportController.field_a = 30000L + hm.a(64);
             }
             if (rb.field_q == 3) {
               if (sc.field_d.a(-120) <= 0) {
-                if (co.field_a < hm.a(64)) {
+                if (ViewportController.field_a < hm.a(64)) {
                   stackIn_30_0 = ce.a((byte) -124, -2);
                   return stackIn_30_0;
                 }
@@ -76,7 +76,7 @@ final class ph extends IntrusiveNode {
             if (rb.field_q != 4) {
               return -1;
             }
-            Match.field_h.a(sc.field_d, kn.field_L, 8);
+            Match.field_h.a(sc.field_d, ModalStack.field_L, 8);
             sc.field_d = null;
             se.field_o = null;
             rb.field_q = 0;

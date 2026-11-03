@@ -34,7 +34,7 @@ abstract class nc {
         if (var5 <= 0L) {
           return this.a(false, param1);
         }
-        vg.a(var5, (byte) 23);
+        SecondaryNodeHashTable.a(var5, (byte) 23);
         return this.a(false, param1);
     }
 

@@ -8,9 +8,9 @@ interface WidgetTextLayout {
 
     public abstract int a(int param0, int param1, int param2, int param3, int param4, UiComponent param5);
 
-    public abstract kd getTextLayout(int param0, UiComponent param1);
+    public abstract TextLayout getTextLayout(int param0, UiComponent param1);
 
-    public abstract int a(int param0, UiComponent param1);
+    public abstract int getPreferredWidth(int param0, UiComponent param1);
 
     public abstract int getAvailableTextHeight(boolean param0, UiComponent param1);
 

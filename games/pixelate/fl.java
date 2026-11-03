@@ -49,7 +49,7 @@ final class fl {
         if (IsaacRandom.field_g) {
           return false;
         }
-        return go.a(param0, -35, param1);
+        return EmailCredentials.a(param0, -35, param1);
     }
 
     final boolean d(int param0) {

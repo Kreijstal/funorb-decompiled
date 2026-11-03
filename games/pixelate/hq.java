@@ -10,7 +10,7 @@ final class hq extends de {
     private String field_o;
     private String field_K;
     private String field_s;
-    static vg field_q;
+    static SecondaryNodeHashTable field_q;
     private String field_w;
     private int field_H;
     private boolean field_B;
@@ -56,7 +56,7 @@ final class hq extends de {
           if (!param5 &&
             !param2) {
             if (param3) {
-              stackIn_8_1 = gf.field_c;
+              stackIn_8_1 = ByteStorage.field_c;
             } else {
               stackIn_8_1 = gq.field_m;
             }
@@ -64,7 +64,7 @@ final class hq extends de {
             this.field_I = 0;
           } else {
             if (param3) {
-              stackIn_12_1 = gf.field_c;
+              stackIn_12_1 = ByteStorage.field_c;
             } else {
               stackIn_12_1 = MusicCrossfadeStream.field_J;
             }
@@ -101,9 +101,9 @@ final class hq extends de {
           this.a((String) null, 91, (Match) null);
         }
         for (var5_int = 0; 5 > var5_int; var5_int++) {
-          rg.field_e.field_a[0].f(var3, var4);
+          LoginCredentials.field_e.field_a[0].f(var3, var4);
           var4 = var4 + var2;
-          rg.field_e.field_a[1].f(var3 + (var2 >> 2), var4);
+          LoginCredentials.field_e.field_a[1].f(var3 + (var2 >> 2), var4);
           var4 = var4 + var2;
         }
         var5 = rk.field_e;
@@ -227,7 +227,7 @@ final class hq extends de {
         }
         this.field_v = this.e(param4 - 24, param3);
         if (this.field_x != -1) {
-          this.field_s = !param1 ? vm.field_f : kn.field_P;
+          this.field_s = !param1 ? vm.field_f : ModalStack.field_P;
         }
         if (!param0) {
           this.field_I = 17;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gf {
+abstract class ByteStorage {
     static String field_f;
     static String field_e;
     static int[] field_g;
@@ -32,9 +32,9 @@ abstract class gf {
           return;
         }
         try {
-          kd.field_a = param0;
+          TextLayout.field_a = param0;
           Checkbox.field_U = param3;
-          LoadingProgressDialog.a(param1, rl.field_e, -26027);
+          LoadingProgressDialog.a(param1, TriangleMesh.field_e, -26027);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "gf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -122,9 +122,9 @@ abstract class gf {
         }
     }
 
-    abstract void a(byte[] param0, boolean param1);
+    abstract void setBytes(byte[] param0, boolean param1);
 
-    abstract byte[] b(int param0);
+    abstract byte[] toByteArray(int param0);
 
     static {
         field_a = new long[32];

@@ -88,7 +88,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         var3 = var3 + this.addLabeledField(AccountRequestDialog.field_qb, -86, this.field_V, 170, var3);
         var3 = var3 + (5 + this.a(pb.field_i, var3, this.field_X, 35, 170, r.field_b));
         var3 = var3 + (this.a(na.field_a, var3, this.field_U, 35, 170, BufferedSocket.field_i) + 5);
-        var3 = var3 + this.addLabeledFieldWithValidationIcon((byte) 85, 170, this.field_Q, var3, rl.field_O);
+        var3 = var3 + this.addLabeledFieldWithValidationIcon((byte) 85, 170, this.field_Q, var3, TriangleMesh.field_O);
         LabeledField var4 = new LabeledField(46, var3, this.field_E - 90, 25, this.field_T, true, this.field_E - 120, 5, ep.field_b, 11579568, CanvasRasterBuffer.field_j);
         this.b(var4, 80);
         var3 = var3 + var4.field_C;
@@ -206,7 +206,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         boolean stackIn_56_1 = false;
         pc stackIn_100_0 = null;
         boolean stackIn_101_1 = false;
-        vg stackIn_105_0 = null;
+        SecondaryNodeHashTable stackIn_105_0 = null;
         boolean stackIn_106_1 = false;
         LobbyPlayer stackIn_109_0 = null;
         boolean stackIn_110_1 = false;
@@ -350,7 +350,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                 var4 = new LobbyGame(fj.field_b);
                 dg.field_f.a(false, var4, (long)var3_int);
               }
-              kd.a(true, var4, (byte) 120, var1);
+              TextLayout.a(true, var4, (byte) 120, var1);
               StatefulTextPainter.a((byte) -48, var4);
               return;
             }
@@ -422,7 +422,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                       return;
                     }
                     if (20 == var2) {
-                      kd.a(false, io.field_c, (byte) 120, var1);
+                      TextLayout.a(false, io.field_c, (byte) 120, var1);
                       return;
                     }
                     if (var2 == 21) {
@@ -457,7 +457,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                     var7 = new LobbyPlayer(var24, var25, var3Lifetime2);
                     stackIn_105_0 = SocketConnector.field_f;
                     stackIn_106_1 = !(param0);
-                    ((vg) (Object) stackIn_105_0).a(stackIn_106_1, var7, var3Lifetime2);
+                    ((SecondaryNodeHashTable) (Object) stackIn_105_0).a(stackIn_106_1, var7, var3Lifetime2);
                     io.field_c.field_mc = io.field_c.field_mc + 1;
                   }
                   var7.field_Rb = ((PacketBuffer) ((Object) var1)).a((byte) 25);
@@ -550,7 +550,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             var3_intLifetime1 = ((PacketBuffer) ((Object) var1)).a((byte) 49);
             io.field_c = new LobbyGame(fj.field_b);
             io.field_c.a((long)var3_intLifetime1, 29574);
-            kd.a(false, io.field_c, (byte) 120, var1);
+            TextLayout.a(false, io.field_c, (byte) 120, var1);
             bo.field_e = 0L;
           } else {
             io.field_c = null;
@@ -564,10 +564,10 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             }
           }
           if (var2 != 3) {
-            rl.field_r = false;
+            TriangleMesh.field_r = false;
             return;
           }
-          rl.field_r = true;
+          TriangleMesh.field_r = true;
           for (var3_intLifetime2 = 0; var3_intLifetime2 < TextButton.field_J.length; var3_intLifetime2++) {
             TextButton.field_J[var3_intLifetime2] = ((PacketBuffer) ((Object) var1)).a(0);
           }

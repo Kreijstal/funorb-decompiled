@@ -6,7 +6,7 @@ abstract class ModalPanel extends UiContainer {
     private int field_J;
     static up[] field_I;
     boolean field_N;
-    private kn field_M;
+    private ModalStack field_M;
     static int[] field_L;
     static boolean field_K;
 
@@ -50,8 +50,8 @@ abstract class ModalPanel extends UiContainer {
         return !this.field_N ? 0 : this == this.field_M.n(640) ? 256 : 0;
     }
 
-    ModalPanel(kn param0, int param1, int param2) {
-        super(kn.field_O - param1 >> 1, IndexedSpriteState.field_c - param2 >> 1, param1, param2, (WidgetPainter) null);
+    ModalPanel(ModalStack param0, int param1, int param2) {
+        super(ModalStack.field_O - param1 >> 1, IndexedSpriteState.field_c - param2 >> 1, param1, param2, (WidgetPainter) null);
         try {
           this.field_M = param0;
           this.field_N = false;
@@ -191,7 +191,7 @@ abstract class ModalPanel extends UiContainer {
     }
 
     final void a(int param0, byte param1, int param2) {
-        this.a(param2, (byte) 88, -param0 + IndexedSpriteState.field_c >> 1, kn.field_O - param2 >> 1, param0);
+        this.a(param2, (byte) 88, -param0 + IndexedSpriteState.field_c >> 1, ModalStack.field_O - param2 >> 1, param0);
         if (param1 != -110) {
           field_K = true;
         }

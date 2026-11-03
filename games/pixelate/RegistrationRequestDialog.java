@@ -21,7 +21,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
         field_zb = (int[]) null;
     }
 
-    RegistrationRequestDialog(kn param0, AccountRegistrationPanel param1) {
+    RegistrationRequestDialog(ModalStack param0, AccountRegistrationPanel param1) {
         super(param0, ba.field_d, hm.field_e, false, false);
         try {
           this.field_Ab = param1;

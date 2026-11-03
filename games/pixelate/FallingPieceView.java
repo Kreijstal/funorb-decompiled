@@ -262,8 +262,8 @@ final class FallingPieceView {
         }
         var21 = stackIn_27_0;
         if (var21 == 0) {
-          var19_ref = rg.field_e.field_f[0];
-          var20_ref = rg.field_e.field_f[1];
+          var19_ref = LoginCredentials.field_e.field_f[0];
+          var20_ref = LoginCredentials.field_e.field_f[1];
         } else {
           if (var21 == 1) {
             var20_ref = fq.field_o.field_f[1];
@@ -274,10 +274,10 @@ final class FallingPieceView {
             var24 = im.field_Hb[1];
             var20_ref = var24;
             var23.c();
-            rg.field_e.field_f[0].f(0, 0);
+            LoginCredentials.field_e.field_f[0].f(0, 0);
             fq.field_o.field_f[0].a(0, 0, var21);
             var24.c();
-            rg.field_e.field_f[1].f(0, 0);
+            LoginCredentials.field_e.field_f[1].f(0, 0);
             fq.field_o.field_f[1].a(0, 0, var21);
             ClientException.field_f.a(param2 ^ 19692);
           }

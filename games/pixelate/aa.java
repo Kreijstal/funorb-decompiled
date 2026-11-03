@@ -91,7 +91,7 @@ final class aa {
         this.field_j = fk.field_o;
         this.field_m = Puzzle.field_a;
         this.field_i = BoundedRandomAccessFile.field_d;
-        this.field_e = kn.field_I;
+        this.field_e = ModalStack.field_I;
         this.field_a = TextWidgetPainter.field_n;
         this.field_k = cd.field_g;
         this.field_d = qf.field_b;

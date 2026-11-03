@@ -42,27 +42,27 @@ final class l extends de {
           if (MarkerSlider.a((byte) 127)) {
             param1 = false;
           }
-          am.a((byte) 29, param1);
+          Js5ArchiveManager.a((byte) 29, param1);
           if (dk.field_b) {
             SoftwareRasterizer.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
             nd.field_b.field_g.a(param1, 0);
-            no.a(param1, (byte) 34);
+            CachedTextLayout.a(param1, (byte) 34);
             return;
           }
-          no.a(param1, (byte) 34);
+          CachedTextLayout.a(param1, (byte) 34);
           return;
         }
         if (MarkerSlider.a((byte) 127)) {
           param1 = false;
         }
-        am.a((byte) 29, param1);
+        Js5ArchiveManager.a((byte) 29, param1);
         if (!dk.field_b) {
-          no.a(param1, (byte) 34);
+          CachedTextLayout.a(param1, (byte) 34);
           return;
         }
         SoftwareRasterizer.a(nd.field_b.field_g.field_D, nd.field_b.field_g.field_S, nd.field_b.field_g.field_K, nd.field_b.field_g.height);
         nd.field_b.field_g.a(param1, 0);
-        no.a(param1, (byte) 34);
+        CachedTextLayout.a(param1, (byte) 34);
     }
 
     final void a(byte param0, boolean param1, int param2) {

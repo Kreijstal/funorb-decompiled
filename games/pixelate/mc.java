@@ -33,7 +33,7 @@ final class mc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           UiTheme.field_f = param0;
-          var12 = vg.a((byte) 96, param3);
+          var12 = SecondaryNodeHashTable.a((byte) 96, param3);
           if (!param2) {
             stackIn_3_0 = ga.a(param3, 10);
           } else {
@@ -125,7 +125,7 @@ final class mc extends IntrusiveNode {
             kf.field_p != null &&
             kf.field_p.b(param0 - 15) &&
             kf.field_p.ensureGroupAvailableByName("benefits", -1)) {
-            go.field_i = bi.a("benefits", "headline", pb.field_n, (byte) -79);
+            EmailCredentials.field_i = bi.a("benefits", "headline", pb.field_n, (byte) -79);
             SpriteCheckboxPainter.field_a = bi.a("benefits", "blurbpane", pb.field_n, (byte) -97);
             wo.field_c = bi.a("benefits", "button", pb.field_n, (byte) -57);
             ro.field_b = bi.a("benefits", "signup_text", pb.field_n, (byte) -119);
@@ -281,8 +281,8 @@ final class mc extends IntrusiveNode {
           SoftwareRasterizer.a(wi.field_f);
           SoftwareRasterizer.a(16, 16, 608, 112, 15, MusicPatchNode.field_t, gq.field_n);
           SoftwareRasterizer.a(231, 144, 393, 232, 15, MusicPatchNode.field_t, gq.field_n);
-          if (go.field_i != null) {
-            go.field_i.b(0, 0);
+          if (EmailCredentials.field_i != null) {
+            EmailCredentials.field_i.b(0, 0);
           }
           if (SpriteCheckboxPainter.field_a != null) {
             SpriteCheckboxPainter.field_a.b(0, 0);
@@ -310,7 +310,7 @@ final class mc extends IntrusiveNode {
             } else {
               stackIn_52_2 = 3;
             }
-            var2Lifetime4 = stackIn_51_0 + (wd.b(stackIn_51_1 << stackIn_52_2, 0) * 40 >> 16);
+            var2Lifetime4 = stackIn_51_0 + (GrowableIntList.b(stackIn_51_1 << stackIn_52_2, 0) * 40 >> 16);
             if (var2Lifetime4 > 0) {
               wo.field_c.b(230, 389, var2Lifetime4);
               wo.field_c.b(232, 389, var2Lifetime4);
@@ -344,7 +344,7 @@ final class mc extends IntrusiveNode {
             hf.field_m.b(586, var1_int);
             if (bg.field_k > var1_int &&
               ScrollContainer.field_Kb.field_E + var1_int > bg.field_k) {
-              var2Lifetime5 = (40 * wd.b(qk.field_e << 4, 0) >> 16) + 40;
+              var2Lifetime5 = (40 * GrowableIntList.b(qk.field_e << 4, 0) >> 16) + 40;
               if (var2Lifetime5 > 0) {
                 if (ProxyAuthenticationException.field_d > -ScrollContainer.field_Kb.field_F + 269 &&
                   ProxyAuthenticationException.field_d < 269) {
@@ -355,7 +355,7 @@ final class mc extends IntrusiveNode {
                 } else {
                   if (ProxyAuthenticationException.field_d > 586) {
                     if (ScrollContainer.field_Kb.field_F + 586 <= ProxyAuthenticationException.field_d) {
-                      no.e(param0 - 19320);
+                      CachedTextLayout.e(param0 - 19320);
                       li.field_a[ae.field_b].b(269, 340);
                       return;
                     }
@@ -368,7 +368,7 @@ final class mc extends IntrusiveNode {
               }
             }
           }
-          no.e(param0 - 19320);
+          CachedTextLayout.e(param0 - 19320);
           li.field_a[ae.field_b].b(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

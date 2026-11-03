@@ -88,7 +88,7 @@ final class ai {
           if (BufferedRandomAccessFile.field_j <= 0) {
             if (!ArrayWidgetContainer.a((byte) 58)) {
               var2 = 1;
-              if (vh.field_c != null) {
+              if (GzipDecoder.field_c != null) {
                 return;
               }
               if (dg.field_a) {
@@ -98,10 +98,10 @@ final class ai {
             }
             var2 = 0;
           } else {
-            if (vh.field_c == null) {
+            if (GzipDecoder.field_c == null) {
               ib.field_f = wo.a(mc.field_k, 150, 480, 0, 640, 0);
             } else {
-              ib.field_f = vh.field_c.b(false);
+              ib.field_f = GzipDecoder.field_c.b(false);
               ah.a(2, (byte) 114);
             }
             if (ib.field_f == null) {
@@ -120,10 +120,10 @@ final class ai {
               var2 = 0;
             }
           } else {
-            if (vh.field_c == null) {
+            if (GzipDecoder.field_c == null) {
               ib.field_f = wo.a(mc.field_k, 150, 480, 0, 640, 0);
             } else {
-              ib.field_f = vh.field_c.b(false);
+              ib.field_f = GzipDecoder.field_c.b(false);
               ah.a(2, (byte) 114);
             }
             if (ib.field_f == null) {
@@ -134,7 +134,7 @@ final class ai {
             }
           }
         }
-        if (vh.field_c != null) {
+        if (GzipDecoder.field_c != null) {
           return;
         }
         if (dg.field_a) {

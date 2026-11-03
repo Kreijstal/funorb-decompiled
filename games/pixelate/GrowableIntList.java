@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd {
+final class GrowableIntList {
     static String field_h;
     static String field_e;
     private int field_a;
@@ -187,7 +187,7 @@ final class wd {
 
     public static void a(int param0) {
         if (param0 != 1) {
-          wd.a(23);
+          GrowableIntList.a(23);
         }
         field_e = null;
         field_h = null;
@@ -241,7 +241,7 @@ final class wd {
         return 1 + this.field_a;
     }
 
-    private wd() throws Throwable {
+    private GrowableIntList() throws Throwable {
         throw new Error();
     }
 

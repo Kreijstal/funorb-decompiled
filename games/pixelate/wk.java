@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wk extends rg {
+final class wk extends LoginCredentials {
     static ResourceArchive field_j;
     private String field_k;
     static String[] field_i;

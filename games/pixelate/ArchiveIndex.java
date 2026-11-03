@@ -34,7 +34,7 @@ final class ArchiveIndex {
         LobbyPlayer var3 = null;
         int var2 = Pixelate.field_H ? 1 : 0;
         try {
-          rl.field_r = false;
+          TriangleMesh.field_r = false;
           io.field_c = null;
           DraggableWidget.field_S = null;
           if (null != ImageProducerRasterBuffer.field_n) {

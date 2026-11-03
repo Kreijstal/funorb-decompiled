@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class vg {
+final class SecondaryNodeHashTable {
     private int field_h;
     private int field_d;
     private DualLinkNode[] field_a;
@@ -68,7 +68,7 @@ final class vg {
           param1.field_p = var5;
           param1.field_r.field_p = param1;
           if (param0) {
-            vg.b(-98, -4);
+            SecondaryNodeHashTable.b(-98, -4);
           }
           param1.field_p.field_r = param1;
           param1.field_q = param2;
@@ -164,7 +164,7 @@ final class vg {
             this.field_c = var58.field_p;
             return var58;
           }
-          vg.a(-20, -121);
+          SecondaryNodeHashTable.a(-20, -121);
           do {
             if (this.field_d >= this.field_h) {
               return null;
@@ -195,7 +195,7 @@ final class vg {
           this.field_c = var5.field_p;
           return var5;
         }
-        vg.a(-20, -121);
+        SecondaryNodeHashTable.a(-20, -121);
         do {
           if (this.field_d >= this.field_h) {
             return null;
@@ -348,7 +348,7 @@ final class vg {
               if (param1 == 10000) {
                 return;
               }
-              vg.a(true);
+              SecondaryNodeHashTable.a(true);
               return;
             }
           }
@@ -360,7 +360,7 @@ final class vg {
         }
     }
 
-    vg(int param0) {
+    SecondaryNodeHashTable(int param0) {
         int var2 = 0;
         DualLinkNode dupTemp$1 = null;
         DualLinkNode var3;
@@ -378,7 +378,7 @@ final class vg {
 
     public static void a(boolean param0) {
         if (!param0) {
-          vg.a(-87L, (byte) 117);
+          SecondaryNodeHashTable.a(-87L, (byte) 117);
           field_e = null;
           field_f = null;
           return;

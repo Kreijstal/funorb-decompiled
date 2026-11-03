@@ -197,7 +197,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
               return null;
             }
           } else {
-            stackIn_4_0 = sd.a(kd.field_d, 120, new String[]{"1890", Integer.toString(-3 + var5)});
+            stackIn_4_0 = sd.a(TextLayout.field_d, 120, new String[]{"1890", Integer.toString(-3 + var5)});
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

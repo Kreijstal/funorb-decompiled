@@ -52,7 +52,7 @@ final class ho {
           PacketBuffer.field_o[25] = PasswordFieldPainter.field_z;
           PacketBuffer.field_o[18] = dg.field_c[1];
           PacketBuffer.field_o[14] = re.field_k[0];
-          wc.field_m[3] = vh.field_b;
+          wc.field_m[3] = GzipDecoder.field_b;
           wc.field_m[6] = ReportAbuseDialog.field_Vb;
           wc.field_m[2] = bo.field_a;
           wc.field_m[4] = ce.field_e;

@@ -84,7 +84,7 @@ final class ln extends IntrusiveNode {
 
     ln(int param0) {
         this.field_o = PcmSampleStream.a(SecondaryNodeDeque.field_f[param0], 100, ci.field_m[param0]);
-        mn.a(-21317, this.field_o);
+        TextLayoutLine.a(-21317, this.field_o);
     }
 
     final static void a(int param0) {
@@ -97,8 +97,8 @@ final class ln extends IntrusiveNode {
         MenuInputState.a(ib.field_f, 0);
         ib.field_f.a(6511, mc.field_k);
         ib.field_f = null;
-        if (vh.field_c != null) {
-          vh.field_c.b(-101);
+        if (GzipDecoder.field_c != null) {
+          GzipDecoder.field_c.b(-101);
         }
         NameAvailabilityValidator.field_u.requestFocus();
     }

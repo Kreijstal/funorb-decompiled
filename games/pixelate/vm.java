@@ -5,7 +5,7 @@ final class vm {
     static String[] field_c;
     static String[] field_e;
     static String field_f;
-    static vg field_b;
+    static SecondaryNodeHashTable field_b;
     static io field_a;
     static boolean field_d;
     static String field_g;

@@ -16,7 +16,7 @@ final class ql extends jj {
 
     final static void b(boolean param0) {
         Checkbox.field_X = bi.b(4);
-        wa.field_c = new kn();
+        wa.field_c = new ModalStack();
         QueuedInput.a(true, -17130, true);
         if (param0) {
           ql.d(-24);
@@ -35,18 +35,18 @@ final class ql extends jj {
     final static boolean e(int param0) {
         if (param0 < 94) {
           ql.f(30);
-          if (null == lb.field_x) {
+          if (null == NetworkGameClient.field_x) {
             return false;
           }
-          if (null != lb.field_x.n(640)) {
+          if (null != NetworkGameClient.field_x.n(640)) {
             return true;
           }
           return false;
         }
-        if (null == lb.field_x) {
+        if (null == NetworkGameClient.field_x) {
           return false;
         }
-        if (null != lb.field_x.n(640)) {
+        if (null != NetworkGameClient.field_x.n(640)) {
           return true;
         }
         return false;

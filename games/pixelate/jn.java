@@ -28,10 +28,10 @@ final class jn extends IntrusiveNode {
 
     final static double a(double param0, int param1) {
         if (param1 == 6802) {
-          return rl.field_G[65535 & (int)(param0 * 32768.0 / 3.141592653589793)];
+          return TriangleMesh.field_G[65535 & (int)(param0 * 32768.0 / 3.141592653589793)];
         }
         jn.a(-0.09855271478809768, -30);
-        return rl.field_G[65535 & (int)(param0 * 32768.0 / 3.141592653589793)];
+        return TriangleMesh.field_G[65535 & (int)(param0 * 32768.0 / 3.141592653589793)];
     }
 
     jn(int param0, int param1) {

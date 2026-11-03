@@ -81,7 +81,7 @@ final class oi {
             String var4 = (String) null;
             oi.a((AccountRegistrationPanel) null, -20, true, (String) null, (byte) -44, (String) null, (String) null);
           }
-          gf.a(param1, false, 32, param0);
+          ByteStorage.a(param1, false, 32, param0);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

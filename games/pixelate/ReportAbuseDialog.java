@@ -117,7 +117,7 @@ final class ReportAbuseDialog extends SceneWidget {
             this.field_Tb.field_N = 11184810;
             this.field_Tb.horizontalAlignment = 1;
             this.field_Qb.a(this.field_Tb, (byte) 26);
-            this.field_Fb = new SceneWidget(0L, param8, no.field_j);
+            this.field_Fb = new SceneWidget(0L, param8, CachedTextLayout.field_j);
             this.field_Fb.field_N = 11184810;
             this.field_Fb.horizontalAlignment = 1;
             this.field_Qb.a(this.field_Fb, (byte) 26);
@@ -176,7 +176,7 @@ final class ReportAbuseDialog extends SceneWidget {
               discarded$0 = this.field_Ib.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.font.textWidth(bh.field_l);
+            var17 = param6.font.textWidth(DirectByteStorage.field_l);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
@@ -202,7 +202,7 @@ final class ReportAbuseDialog extends SceneWidget {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.appendReasonHeading((byte) 126, var18Lifetime3, param6, var16Lifetime2, var28[0], bh.field_l);
+            var18Lifetime3 = this.appendReasonHeading((byte) 126, var18Lifetime3, param6, var16Lifetime2, var28[0], DirectByteStorage.field_l);
             var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 110, var16Lifetime2, this.offenceButtons[6]);
             var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 112, var16Lifetime2, this.offenceButtons[9]);
             var18Lifetime3 = this.a(var28[0], var18Lifetime3, (byte) 101, var16Lifetime2, this.offenceButtons[5]);
@@ -489,7 +489,7 @@ final class ReportAbuseDialog extends SceneWidget {
         int var7_intLifetime3;
         var18 = Pixelate.field_H ? 1 : 0;
         try {
-          var20 = lb.a(param1, 47, "lobby", "crowns");
+          var20 = NetworkGameClient.a(param1, 47, "lobby", "crowns");
           var5 = var20;
           BoardView.field_s = var20.length;
           if (param2 != null) {
@@ -603,7 +603,7 @@ final class ReportAbuseDialog extends SceneWidget {
           SceneWidget.field_T = new SceneWidget(0L, qk.field_d);
           SceneWidget.field_T.applyStyle(-27813, dn.field_c);
           var16 = SocketConnector.a("button_mouseover", "lobby", (byte) 47, param1);
-          NameSuggestionsPanel.field_O = new pi(SoundCache.field_c, var12, TextFieldValidator.field_h, dn.field_c, 3, 2, PlayerBoard.field_q, 3, fq.field_q);
+          NameSuggestionsPanel.field_O = new ContextActionMenu(SoundCache.field_c, var12, TextFieldValidator.field_h, dn.field_c, 3, 2, PlayerBoard.field_q, 3, fq.field_q);
           lc.field_q = new SceneWidget(0L, dn.field_c);
           lc.field_q.selectedOffsetX = 1;
           lc.field_q.field_Q = 1;

@@ -73,7 +73,7 @@ final class tj extends ah {
     }
 
     final static IndexedSprite b(byte param0) {
-        IndexedSprite var1 = new IndexedSprite(field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], gf.field_g[0], ge.field_c[0], wo.field_f[0], fl.field_g);
+        IndexedSprite var1 = new IndexedSprite(field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], ByteStorage.field_g[0], ge.field_c[0], wo.field_f[0], fl.field_g);
         if (param0 >= -78) {
           return (IndexedSprite) null;
         }

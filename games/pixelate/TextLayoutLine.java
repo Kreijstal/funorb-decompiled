@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mn {
+final class TextLayoutLine {
     int field_b;
     static String field_a;
     static bd field_c;
@@ -37,7 +37,7 @@ final class mn {
             return -1 + this.field_g.length;
           }
           var5 = (String) null;
-          mn.a(-39, (ResourceArchive) null, (String) null, (String) null, (String) null);
+          TextLayoutLine.a(-39, (ResourceArchive) null, (String) null, (String) null, (String) null);
           return -1 + this.field_g.length;
         }
         return 0;
@@ -167,7 +167,7 @@ final class mn {
         }
     }
 
-    mn(int param0, int param1, int param2) {
+    TextLayoutLine(int param0, int param1, int param2) {
         this.field_b = param0;
         this.field_d = param1;
         this.field_g = new int[param2 + 1];

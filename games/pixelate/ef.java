@@ -87,7 +87,7 @@ final class ef {
             var5 = var28.f(255);
             if (0 != var5) {
               var6 = var4.field_m;
-              rh.field_u[0].field_e = kn.field_J;
+              rh.field_u[0].field_e = ModalStack.field_J;
               rh.field_u[0].field_f = null;
               var7 = var4.field_s;
               rh.field_u[0].field_c = false;
@@ -136,7 +136,7 @@ final class ef {
                   }
                   if (var21 != null &&
                     sm.a(var21, -1)) {
-                    var8[1][var13] = kn.field_J;
+                    var8[1][var13] = ModalStack.field_J;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var28.position = var24;

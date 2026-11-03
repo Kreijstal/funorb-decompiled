@@ -369,7 +369,7 @@ final class QuickChatMenu extends SceneWidget {
                 var6 = 1;
               }
               if (IterableNodeHashTable.a(var6, 0) == 2) {
-                am.a(1, -26931, var6, param1);
+                Js5ArchiveManager.a(1, -26931, var6, param1);
               }
               var8 = (String) null;
               dg.a(true, ce.field_d, var5, (String) null, CheckboxPainter.field_k, param3);

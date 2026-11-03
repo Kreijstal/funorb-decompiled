@@ -235,7 +235,7 @@ final class op extends de {
                 this.field_o = 0;
               } else {
                 this.field_g.a(false, 52);
-                this.field_o = bh.field_k;
+                this.field_o = DirectByteStorage.field_k;
               }
             } else {
               if ((3 != var3 ||
@@ -257,8 +257,8 @@ final class op extends de {
                   if (this.b(69, this.field_g.field_j) > var4) {
                     this.field_o = this.field_o + PasswordFieldPainter.field_A;
                   }
-                  if (this.field_o > bh.field_k) {
-                    this.field_o = bh.field_k;
+                  if (this.field_o > DirectByteStorage.field_k) {
+                    this.field_o = DirectByteStorage.field_k;
                     break regionExit1;
                   }
                 }
@@ -324,8 +324,8 @@ final class op extends de {
         if (param0 > -64) {
           return;
         }
-        if (!(bh.field_k >= this.field_o)) {
-          this.field_o = bh.field_k;
+        if (!(DirectByteStorage.field_k >= this.field_o)) {
+          this.field_o = DirectByteStorage.field_k;
         }
         if (0 > this.field_u) {
           this.field_u = this.field_u + 1;
@@ -430,7 +430,7 @@ final class op extends de {
                 SoftwareRasterizer.c();
               }
             } else {
-              if (bh.field_k == this.field_o) {
+              if (DirectByteStorage.field_k == this.field_o) {
                 this.field_v = 1;
               }
               jm.field_i[this.field_v + 4].b(lo.field_Jb, 355);

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rl {
+final class TriangleMesh {
     static boolean[] field_m;
     static String field_O;
     short[] field_I;
     int[] field_R;
     short[] field_D;
-    short[] field_k;
-    short[] field_N;
+    short[] vertexX;
+    short[] vertexY;
     int field_t;
     int[] field_P;
     int[] field_M;
@@ -35,12 +35,12 @@ final class rl {
     int field_F;
     private boolean field_Q;
     short[] field_z;
-    short field_A;
+    short vertexCount;
     static String field_e;
     short[] field_q;
     int[] field_C;
     short[] field_i;
-    short[] field_E;
+    short[] vertexZ;
     byte[] field_n;
     int[] field_w;
     int[] field_u;
@@ -54,10 +54,10 @@ final class rl {
         if (!param3) {
           field_G = (double[]) null;
         }
-        while (this.field_A > var6) {
-          this.field_k[var6] = (short)(param2 * this.field_k[var6] / param4);
-          this.field_N[var6] = (short)(this.field_N[var6] * param0 / param4);
-          this.field_E[var6] = (short)(this.field_E[var6] * param1 / param4);
+        while (this.vertexCount > var6) {
+          this.vertexX[var6] = (short)(param2 * this.vertexX[var6] / param4);
+          this.vertexY[var6] = (short)(this.vertexY[var6] * param0 / param4);
+          this.vertexZ[var6] = (short)(this.vertexZ[var6] * param1 / param4);
           var6++;
         }
         this.a(-125);
@@ -74,7 +74,7 @@ final class rl {
         }
     }
 
-    final void a(byte param0) {
+    final void ensureBounds(byte param0) {
         int var8 = 0;
         int var2;
         int var3;
@@ -100,10 +100,10 @@ final class rl {
         if (param0 != -17) {
           this.field_j = (short) -116;
         }
-        for (var8 = 0; this.field_A > var8; var8++) {
-          var9 = this.field_k[var8];
-          var10 = this.field_N[var8];
-          var11 = this.field_E[var8];
+        for (var8 = 0; this.vertexCount > var8; var8++) {
+          var9 = this.vertexX[var8];
+          var10 = this.vertexY[var8];
+          var11 = this.vertexZ[var8];
           if (var9 < var2) {
             var2 = var9;
           }
@@ -131,16 +131,16 @@ final class rl {
         this.field_c = var5;
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void translateVertices(int param0, int param1, int param2, byte param3) {
         int var5 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
         if (param3 != -83) {
-          this.a((byte) 65);
+          this.ensureBounds((byte) 65);
         }
-        for (var5 = 0; this.field_A > var5; var5++) {
-          this.field_k[var5] = (short)(this.field_k[var5] + param0);
-          this.field_N[var5] = (short)(this.field_N[var5] + param2);
-          this.field_E[var5] = (short)(this.field_E[var5] + param1);
+        for (var5 = 0; this.vertexCount > var5; var5++) {
+          this.vertexX[var5] = (short)(this.vertexX[var5] + param0);
+          this.vertexY[var5] = (short)(this.vertexY[var5] + param2);
+          this.vertexZ[var5] = (short)(this.vertexZ[var5] + param1);
         }
         this.a(-126);
     }
@@ -166,7 +166,7 @@ final class rl {
         try {
           var1_int = 0;
           var2 = 0;
-          while (bh.$cfr$intArgs$b$c4997cb15529(123)) {
+          while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(123)) {
             mj.field_c.a((byte) -48);
             if (mj.field_c.isActivated(84)) {
               var1_int = 1;
@@ -178,7 +178,7 @@ final class rl {
           }
           mj.field_c.a(mi.a(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, bg.field_k, (byte) -73), -1);
           if (param0 <= 74) {
-            rl.b((byte) -77);
+            TriangleMesh.b((byte) -77);
           }
           if (mj.field_c.isActivated(17)) {
             var1_int = 1;
@@ -215,7 +215,7 @@ final class rl {
         }
     }
 
-    rl() {
+    TriangleMesh() {
         this.field_B = (byte) 0;
         this.field_Q = false;
     }

@@ -114,11 +114,11 @@ final class mj {
             return stackIn_3_0;
           }
           if (sm.a(param1, -1)) {
-            stackIn_6_0 = wd.field_h;
+            stackIn_6_0 = GrowableIntList.field_h;
             return stackIn_6_0;
           }
           if (ValidatedTextWidget.field_db != 2) {
-            stackIn_9_0 = le.field_d;
+            stackIn_9_0 = WeightedLruCache.field_d;
             return stackIn_9_0;
           }
           if (ImageProducerRasterBuffer.a(-640, param1)) {
@@ -126,7 +126,7 @@ final class mj {
             return stackIn_13_0;
           }
           if (aj.field_t >= 100) {
-            stackIn_17_0 = co.field_k;
+            stackIn_17_0 = ViewportController.field_k;
             return stackIn_17_0;
           }
           if (CanvasRasterBuffer.a(param1, (byte) 37)) {

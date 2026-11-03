@@ -59,7 +59,7 @@ final class ib {
     }
 
     final static void b(int param0) {
-        mh.a(pi.field_Rb, (byte) 95);
+        mh.a(ContextActionMenu.field_Rb, (byte) 95);
         if (param0 != 20558) {
           ib.a(-8);
         }

@@ -50,8 +50,8 @@ final class jf {
               }
               oj.field_G = gb.field_d;
               gb.field_d = MarkerSlider.field_U;
-              MarkerSlider.field_U = mn.field_e;
-              mn.field_e = var4_ref_ug.field_m;
+              MarkerSlider.field_U = TextLayoutLine.field_e;
+              TextLayoutLine.field_e = var4_ref_ug.field_m;
               return true;
             }
           }
@@ -71,8 +71,8 @@ final class jf {
             if (0 == ij.field_s) {
               oj.field_G = gb.field_d;
               gb.field_d = MarkerSlider.field_U;
-              MarkerSlider.field_U = mn.field_e;
-              mn.field_e = AudioService.field_c;
+              MarkerSlider.field_U = TextLayoutLine.field_e;
+              TextLayoutLine.field_e = AudioService.field_c;
               AudioService.field_c = -1;
               return true;
             }
@@ -132,7 +132,7 @@ final class jf {
             return stackIn_6_0;
           }
           if (sm.a(param0, -1)) {
-            stackIn_9_0 = wd.field_h;
+            stackIn_9_0 = GrowableIntList.field_h;
             return stackIn_9_0;
           }
           if (CanvasRasterBuffer.a(param0, (byte) 37)) {

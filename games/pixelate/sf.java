@@ -19,7 +19,7 @@ final class sf {
             rh.field_x[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
-            gf.field_a[var1_intLifetime1] = 0L;
+            ByteStorage.field_a[var1_intLifetime1] = 0L;
           }
           id.field_b = 0;
         } catch (RuntimeException runtimeException) {

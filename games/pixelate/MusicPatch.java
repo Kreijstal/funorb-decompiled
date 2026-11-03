@@ -227,7 +227,7 @@ final class MusicPatch extends IntrusiveNode {
         ep.c(-26721);
         if (se.b(true)) {
           aa.field_f.g(1, 15514);
-          vg.b(0, param0 + 10091);
+          SecondaryNodeHashTable.b(0, param0 + 10091);
         }
         na.a(true);
     }

@@ -139,18 +139,18 @@ final class fb extends SceneWidget {
             !(wo.field_h < 2))) {
             var9 = ProxySocketConnector.field_n;
             var10 = sd.a(ReportAbuseDialog.field_Kb, 103, new String[]{param1});
-            var9.field_b.a(var10, (byte) -112, 10);
+            var9.field_b.addAction(var10, (byte) -112, 10);
           }
           ProxySocketConnector.field_n.c(-107);
           if (param0) {
             if (NameAvailabilityValidator.field_r == ProxySocketConnector.field_n.field_m) {
               var13 = ProxySocketConnector.field_n;
               var14 = sd.a(DateInputWidget.field_M, 77, new String[]{param1});
-              var13.field_b.a(var14, (byte) -111, 16);
+              var13.field_b.addAction(var14, (byte) -111, 16);
             } else {
               var11 = ProxySocketConnector.field_n;
               var12 = sd.a(sd.field_J, 89, new String[]{param1});
-              var11.field_b.a(var12, (byte) -61, 15);
+              var11.field_b.addAction(var12, (byte) -61, 15);
             }
           }
           var6 = -41 / ((23 - param3) / 40);

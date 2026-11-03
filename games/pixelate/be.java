@@ -173,7 +173,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         var26 = Pixelate.field_H ? 1 : 0;
         try {
           if (param0) {
-            stackIn_8_0 = (rl.field_r) ? 0 : 1;
+            stackIn_8_0 = (TriangleMesh.field_r) ? 0 : 1;
             var4_int = stackIn_8_0;
           }
           if (!param0 ||
@@ -477,9 +477,9 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                     }
                   }
                   if (param0 &&
-                    bh.field_h != null &&
-                    bh.field_h[var7] != null &&
-                    bh.field_h[var7][var9]) {
+                    DirectByteStorage.field_h != null &&
+                    DirectByteStorage.field_h[var7] != null &&
+                    DirectByteStorage.field_h[var7][var9]) {
                     stackIn_339_0 = 1;
                   } else {
                     stackIn_339_0 = 0;
@@ -508,7 +508,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                 if (var16Lifetime1 == 0 &&
                   var9 >= 0 &&
                   null != Checkbox.field_Z && (!param0 ||
-                  !rl.field_r)) {
+                  !TriangleMesh.field_r)) {
                   pb.field_f = false;
                   ib.field_b = false;
                   if (kf.field_o == null) {
@@ -522,7 +522,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                       var17_int++;
                       continue;
                     }
-                    no.a(var7, 0, (byte) 91, param0, -1, var9, param1, -1);
+                    CachedTextLayout.a(var7, 0, (byte) 91, param0, -1, var9, param1, -1);
                     if (wo.field_h >= 2 &&
                       EmailValidator.field_m[12]) {
                       pb.field_f = true;
@@ -591,7 +591,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                   }
                   var21 = null;
                   if (var13 != 0) {
-                    var21 = gf.field_f;
+                    var21 = ByteStorage.field_f;
                   } else {
                     if (var10 == 0) {
                       if (var11 != 0) {
@@ -1422,7 +1422,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           var2Lifetime88 = ContentTransitionDialog.a("end_of_free_game", (byte) 116);
           if (null != var2Lifetime88) {
-            gf.field_c = of.a(var2Lifetime88, 1);
+            ByteStorage.field_c = of.a(var2Lifetime88, 1);
           }
           var2Lifetime89 = ContentTransitionDialog.a("achievement_hidden", (byte) 108);
           if (var2Lifetime89 != null) {
@@ -1454,7 +1454,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           var2Lifetime96 = ContentTransitionDialog.a("skin_twotone", (byte) -18);
           if (null != var2Lifetime96) {
-            vh.field_b = of.a(var2Lifetime96, 1);
+            GzipDecoder.field_b = of.a(var2Lifetime96, 1);
           }
           var2Lifetime97 = ContentTransitionDialog.a("skin_bouncedown", (byte) -110);
           if (var2Lifetime97 != null) {
@@ -1610,7 +1610,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           var2Lifetime135 = ContentTransitionDialog.a("next_puzzle", (byte) 114);
           if (null != var2Lifetime135) {
-            kn.field_P = of.a(var2Lifetime135, 1);
+            ModalStack.field_P = of.a(var2Lifetime135, 1);
           }
           var2Lifetime136 = ContentTransitionDialog.a("try_again", (byte) 118);
           if (null != var2Lifetime136) {

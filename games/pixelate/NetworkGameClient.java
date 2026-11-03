@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lb extends GameApplet {
+abstract class NetworkGameClient extends GameApplet {
     private boolean field_A;
     private long field_s;
     private int field_u;
@@ -16,7 +16,7 @@ abstract class lb extends GameApplet {
     private boolean field_F;
     private int field_q;
     static int field_D;
-    static kn field_x;
+    static ModalStack field_x;
 
     final int a(boolean param0, byte param1) {
         if (param1 != 96) {
@@ -62,13 +62,13 @@ abstract class lb extends GameApplet {
               gi.field_b = null;
               MatchController.field_y = null;
             }
-            var11 = pi.c((byte) 104);
+            var11 = ContextActionMenu.c((byte) 104);
             if (var11 != null) {
               nk.a(param0 + 0, var11.booleanValue());
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = dn.a(wc.d(param0 + 0), (byte) 5, this.field_t, am.a(-13565), MusicCrossfadeStream.b((byte) 127), pd.k(0), ProxySocketConnector.f(8192));
+            var5_intLifetime1 = dn.a(wc.d(param0 + 0), (byte) 5, this.field_t, Js5ArchiveManager.a(-13565), MusicCrossfadeStream.b((byte) 127), pd.k(0), ProxySocketConnector.f(8192));
             if (-1 != var5_intLifetime1) {
               rh.a(true, gi.field_b, MatchController.field_y, var5_intLifetime1);
               gi.field_b = null;
@@ -84,7 +84,7 @@ abstract class lb extends GameApplet {
             if (param2) {
               ol.field_o = false;
             } else {
-              var5_intLifetime2 = mi.a(this.field_A, (byte) 28, am.a(-13565), this.field_t, false, ProxySocketConnector.f(8192));
+              var5_intLifetime2 = mi.a(this.field_A, (byte) 28, Js5ArchiveManager.a(-13565), this.field_t, false, ProxySocketConnector.f(8192));
               if (-1 != var5_intLifetime2) {
                 if (0 == var5_intLifetime2) {
                   ff.field_d = vn.field_b;
@@ -186,13 +186,13 @@ abstract class lb extends GameApplet {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = Pixelate.field_H ? 1 : 0;
-        if (null != vh.field_c) {
+        if (null != GzipDecoder.field_c) {
           if (null == ib.field_f) {
             var6 = GameApplet.b((byte) 99);
             var4 = var6.getSize();
-            vh.field_c.a(var4.width, 13756, var4.height);
+            GzipDecoder.field_c.a(var4.width, 13756, var4.height);
           }
-          vh.field_c.c(85);
+          GzipDecoder.field_c.c(85);
         }
         re.a((byte) 85);
         cm.e(-118);
@@ -237,20 +237,20 @@ abstract class lb extends GameApplet {
           0 != mj.field_b) {
           if (10 > hf.field_q) {
             if (mj.field_b == 3) {
-              this.a(-18310, "js5crc");
+              this.redirectToErrorPage(-18310, "js5crc");
             } else {
               if (mj.field_b != 4) {
                 if (mj.field_b != 2) {
                   if (mj.field_b == 5) {
-                    this.a(-18310, "outofdate");
+                    this.redirectToErrorPage(-18310, "outofdate");
                   } else {
-                    this.a(param0 - 18310, "js5connect");
+                    this.redirectToErrorPage(param0 - 18310, "js5connect");
                   }
                 } else {
-                  this.a(param0 - 18310, "js5connect_full");
+                  this.redirectToErrorPage(param0 - 18310, "js5connect_full");
                 }
               } else {
-                this.a(-18310, "js5io");
+                this.redirectToErrorPage(-18310, "js5io");
               }
             }
           } else {
@@ -290,7 +290,7 @@ abstract class lb extends GameApplet {
         }
         if (0 == mj.field_b &&
           !PlayerController.a((byte) -59)) {
-          go.field_f = false;
+          EmailCredentials.field_f = false;
         }
         if (hf.field_q == 0 &&
           SecondaryNodeDeque.b(param0 ^ 916440577)) {
@@ -325,7 +325,7 @@ abstract class lb extends GameApplet {
           }
         }
         if (hf.field_q == 3 &&
-          gf.a(io.field_g, -123, wk.field_j, MatchingTextValidator.field_u) &&
+          ByteStorage.a(io.field_g, -123, wk.field_j, MatchingTextValidator.field_u) &&
           pe.a(MatchingTextValidator.field_u, (byte) -91)) {
           CachedArchiveProvider.c((byte) 24);
           SectorCacheStore.a((byte) 119);
@@ -390,7 +390,7 @@ abstract class lb extends GameApplet {
         if (!param1 &&
           wl.field_i) {
           MenuInputState.a(NameAvailabilityValidator.field_u, param0 ^ 0);
-          this.a(-27106);
+          this.recreateCanvas(-27106);
           he.a(0, NameAvailabilityValidator.field_u);
         }
         if (Checkbox.field_P[8]) {
@@ -418,7 +418,7 @@ abstract class lb extends GameApplet {
         il.field_f = param7;
         lo.field_Hb = param3;
         ro.field_c = param2;
-        this.n(-2);
+        this.initializeAccountPacketLengths(-2);
         an.a(0);
     }
 
@@ -428,7 +428,7 @@ abstract class lb extends GameApplet {
         aa var3;
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
-        var2 = mn.field_e;
+        var2 = TextLayoutLine.field_e;
         if (64 > var2 &&
           Checkbox.field_P[var2]) {
           if (param0 != -12) {
@@ -577,7 +577,7 @@ abstract class lb extends GameApplet {
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             CheckboxPainter.a(1, (String) null, (Throwable) ((Object) var6_ref));
-            this.a(-18310, "crash");
+            this.redirectToErrorPage(-18310, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -611,23 +611,23 @@ abstract class lb extends GameApplet {
         }
     }
 
-    private final void n(int param0) {
-        wd.field_d[17] = -1;
-        wd.field_d[18] = 1;
-        wd.field_d[10] = -1;
-        wd.field_d[3] = -1;
-        wd.field_d[1] = 16;
-        wd.field_d[12] = -1;
-        wd.field_d[9] = -1;
-        wd.field_d[7] = -1;
-        wd.field_d[6] = param0;
-        wd.field_d[13] = -1;
-        wd.field_d[2] = -2;
-        wd.field_d[4] = -1;
-        wd.field_d[5] = -1;
-        wd.field_d[8] = -2;
-        wd.field_d[16] = -1;
-        wd.field_d[11] = -1;
+    private final void initializeAccountPacketLengths(int param0) {
+        GrowableIntList.field_d[17] = -1;
+        GrowableIntList.field_d[18] = 1;
+        GrowableIntList.field_d[10] = -1;
+        GrowableIntList.field_d[3] = -1;
+        GrowableIntList.field_d[1] = 16;
+        GrowableIntList.field_d[12] = -1;
+        GrowableIntList.field_d[9] = -1;
+        GrowableIntList.field_d[7] = -1;
+        GrowableIntList.field_d[6] = param0;
+        GrowableIntList.field_d[13] = -1;
+        GrowableIntList.field_d[2] = -2;
+        GrowableIntList.field_d[4] = -1;
+        GrowableIntList.field_d[5] = -1;
+        GrowableIntList.field_d[8] = -2;
+        GrowableIntList.field_d[16] = -1;
+        GrowableIntList.field_d[11] = -1;
     }
 
     private final void i(int param0) {
@@ -714,14 +714,14 @@ abstract class lb extends GameApplet {
         if (ol.field_o) {
           return -1;
         }
-        var2 = mi.a(this.field_A, (byte) 91, am.a(-13565), this.field_t, true, ProxySocketConnector.f(8192));
+        var2 = mi.a(this.field_A, (byte) 91, Js5ArchiveManager.a(-13565), this.field_t, true, ProxySocketConnector.f(8192));
         if (-1 == var2) {
           return -1;
         }
         if (var2 != 0 &&
           var2 != 1) {
-          if (!am.field_e) {
-            this.a(-18310, "reconnect");
+          if (!Js5ArchiveManager.field_e) {
+            this.redirectToErrorPage(-18310, "reconnect");
           }
           to.g((byte) 47);
           ScrollContainer.a(true, gi.field_b, var2);
@@ -741,7 +741,7 @@ abstract class lb extends GameApplet {
         Checkbox.field_P[12] = true;
         Checkbox.field_P[13] = true;
         if (param0 >= -61) {
-          lb.a((byte) -22, 47);
+          NetworkGameClient.a((byte) -22, 47);
         }
     }
 
@@ -814,7 +814,7 @@ abstract class lb extends GameApplet {
         String var3;
         if (param0 > -88) {
           var3 = (String) null;
-          lb.a((ResourceArchive) null, 29, (String) null, (String) null);
+          NetworkGameClient.a((ResourceArchive) null, 29, (String) null, (String) null);
         }
         if (65536L > (long)param1) {
           if (256L > (long)param1) {
@@ -863,7 +863,7 @@ abstract class lb extends GameApplet {
         int var2 = 1 / ((-44 - param0) / 49);
     }
 
-    protected lb() {
+    protected NetworkGameClient() {
     }
 
     private final void a(byte param0, boolean param1) {

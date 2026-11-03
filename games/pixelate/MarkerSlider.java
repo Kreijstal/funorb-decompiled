@@ -13,7 +13,7 @@ final class MarkerSlider extends TextButton {
     static int[] field_O;
     private int field_P;
     static int field_V;
-    private wd field_W;
+    private GrowableIntList field_W;
 
     final static boolean a(byte param0) {
         boolean stackIn_9_0 = false;

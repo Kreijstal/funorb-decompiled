@@ -254,7 +254,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.a(5, (Runnable) (this), (byte) -123);
           while (var2.field_b == 0) {
-            vg.a(10L, (byte) 23);
+            SecondaryNodeHashTable.a(10L, (byte) 23);
           }
           if (2 == var2.field_b) {
             throw new RuntimeException();

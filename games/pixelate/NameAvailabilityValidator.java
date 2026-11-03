@@ -98,7 +98,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
               var6 = ArchiveProvider.a(AccountRegistrationPanel.field_J[var3_int], 8192, true);
               var4 = var4 + ki.field_e;
               var7 = bq.field_d - (var6 >> 1);
-              if (mn.a(param1, var4, 59, (lf.field_b << 1) + dk.field_d, -ProxyAuthenticationException.field_a + var7, param2, (ProxyAuthenticationException.field_a << 1) + var6)) {
+              if (TextLayoutLine.a(param1, var4, 59, (lf.field_b << 1) + dk.field_d, -ProxyAuthenticationException.field_a + var7, param2, (ProxyAuthenticationException.field_a << 1) + var6)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }

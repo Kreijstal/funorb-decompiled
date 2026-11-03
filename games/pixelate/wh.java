@@ -321,7 +321,7 @@ final class wh extends de {
                     var7 += 4;
                     var8 = 16711680;
                   }
-                  this.a(var9, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7, kn.field_J, WhirlpoolHasher.field_f.field_n, var21, -1, var8, WhirlpoolHasher.field_f.field_v);
+                  this.a(var9, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var21, -1, var8, WhirlpoolHasher.field_f.field_v);
                   break;
                 }
                 if (var15 != 0) {
@@ -335,7 +335,7 @@ final class wh extends de {
                 }
               }
             } else {
-              var18 = wd.field_b;
+              var18 = GrowableIntList.field_b;
               if (var15 == 0) {
                 var17.drawParagraph(var18, 50, 150, 540, 200, 0, -1, 1, 1, var3);
                 return;
@@ -365,7 +365,7 @@ final class wh extends de {
                     var7 += 4;
                     var8 = 16711680;
                   }
-                  this.a(var9, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7, kn.field_J, WhirlpoolHasher.field_f.field_n, var21, -1, var8, WhirlpoolHasher.field_f.field_v);
+                  this.a(var9, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var21, -1, var8, WhirlpoolHasher.field_f.field_v);
                   break;
                 }
               }
@@ -429,7 +429,7 @@ final class wh extends de {
                       var7Lifetime1 += 4;
                       var8Lifetime1 = 16711680;
                     }
-                    this.a(var9Lifetime1, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime1, kn.field_J, WhirlpoolHasher.field_f.field_n, var25, -1, var8Lifetime1, WhirlpoolHasher.field_f.field_v);
+                    this.a(var9Lifetime1, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime1, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var25, -1, var8Lifetime1, WhirlpoolHasher.field_f.field_v);
                     break;
                   }
                   if (var15 != 0) {
@@ -443,7 +443,7 @@ final class wh extends de {
                   }
                 }
               } else {
-                var33 = wd.field_b;
+                var33 = GrowableIntList.field_b;
                 if (var15 == 0) {
                   var24.drawParagraph(var33, 50, 150, 540, 200, 0, -1, 1, 1, var3Lifetime1);
                   return;
@@ -475,7 +475,7 @@ final class wh extends de {
                       var7Lifetime1 += 4;
                       var8Lifetime1 = 16711680;
                     }
-                    this.a(var9Lifetime1, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime1, kn.field_J, WhirlpoolHasher.field_f.field_n, var29, -1, var8Lifetime1, WhirlpoolHasher.field_f.field_v);
+                    this.a(var9Lifetime1, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime1, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var29, -1, var8Lifetime1, WhirlpoolHasher.field_f.field_v);
                     break;
                   }
                 }
@@ -533,7 +533,7 @@ final class wh extends de {
                   var7Lifetime2 += 4;
                   var8Lifetime2 = 16711680;
                 }
-                this.a(var9Lifetime2, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime2, kn.field_J, WhirlpoolHasher.field_f.field_n, var37, -1, var8Lifetime2, WhirlpoolHasher.field_f.field_v);
+                this.a(var9Lifetime2, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime2, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var37, -1, var8Lifetime2, WhirlpoolHasher.field_f.field_v);
                 break;
               }
               if (var15 != 0) {
@@ -547,7 +547,7 @@ final class wh extends de {
               }
             }
           } else {
-            var36 = wd.field_b;
+            var36 = GrowableIntList.field_b;
             if (var15 == 0) {
               var24.drawParagraph(var36, 50, 150, 540, 200, 0, -1, 1, 1, var3Lifetime1);
               return;
@@ -577,7 +577,7 @@ final class wh extends de {
                   var7Lifetime2 += 4;
                   var8Lifetime2 = 16711680;
                 }
-                this.a(var9Lifetime2, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime2, kn.field_J, WhirlpoolHasher.field_f.field_n, var37, -1, var8Lifetime2, WhirlpoolHasher.field_f.field_v);
+                this.a(var9Lifetime2, WhirlpoolHasher.field_f.field_m, param0 ^ 535, WhirlpoolHasher.field_f.field_p, var7Lifetime2, ModalStack.field_J, WhirlpoolHasher.field_f.field_n, var37, -1, var8Lifetime2, WhirlpoolHasher.field_f.field_v);
                 break;
               }
             }
@@ -605,7 +605,7 @@ final class wh extends de {
           var2 = 20 / ((10 - param0) / 32);
           return;
         }
-        if (Js5NetworkRequest.field_C[param1] != rg.field_e) {
+        if (Js5NetworkRequest.field_C[param1] != LoginCredentials.field_e) {
           fq.field_o = Js5NetworkRequest.field_C[param1];
           fq.field_o.field_d = RegistrationRequestDialog.field_Cb;
           ci.field_o = param1;

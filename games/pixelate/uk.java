@@ -128,7 +128,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_chat_off", 0);
                 if (null != var2) {
-                  wd.field_e = of.a(var2, param0 ^ 31872);
+                  GrowableIntList.field_e = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("mu_chat_lobby", 0);
                 if (var2 != null) {
@@ -188,7 +188,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_x_withdrew_request", 0);
                 if (null != var2) {
-                  vg.field_e = of.a(var2, 1);
+                  SecondaryNodeHashTable.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_x_removed", param0 ^ 31873);
                 if (var2 != null) {
@@ -268,7 +268,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_gamelist_owner", 0);
                 if (null != var2) {
-                  co.field_u = of.a(var2, 1);
+                  ViewportController.field_u = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_gamelist_players", 0);
                 if (null != var2) {
@@ -372,7 +372,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("join_xs_game", param0 ^ 31873);
                 if (null != var2) {
-                  vg.field_f = of.a(var2, 1);
+                  SecondaryNodeHashTable.field_f = of.a(var2, 1);
                 }
                 var2 = vd.a("join_request_xs_game", 0);
                 if (var2 != null) {
@@ -452,7 +452,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_chat_pm_friends_only", param0 - 31873);
                 if (null != var2) {
-                  gf.field_d = of.a(var2, 1);
+                  ByteStorage.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_chat_pm_friends", 0);
                 if (null != var2) {
@@ -572,7 +572,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("inviting_x", 0);
                 if (var2 != null) {
-                  gf.field_e = of.a(var2, 1);
+                  ByteStorage.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("x_wants_to_join", 0);
                 if (var2 != null) {
@@ -596,7 +596,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("status_spectate", param0 - 31873);
                 if (null != var2) {
-                  wd.field_g = of.a(var2, 1);
+                  GrowableIntList.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("status_playing", param0 ^ 31873);
                 if (var2 != null) {
@@ -792,7 +792,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_unratedonly", param0 - 31873);
                 if (null != var2) {
-                  gf.field_f = of.a(var2, param0 ^ 31872);
+                  ByteStorage.field_f = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("gameopt_notunlocked", 0);
                 if (var2 != null) {
@@ -852,7 +852,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_trychanging2", 0);
                 if (null != var2) {
-                  le.field_i = of.a(var2, 1);
+                  WeightedLruCache.field_i = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_needchanging1", param0 ^ 31873);
                 if (null != var2) {
@@ -860,7 +860,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_needchanging2", 0);
                 if (null != var2) {
-                  bh.field_i = of.a(var2, 1);
+                  DirectByteStorage.field_i = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_mightchange", param0 - 31873);
                 if (null != var2) {
@@ -928,11 +928,11 @@ final class uk extends de {
                 }
                 var2 = vd.a("ra_explanation", param0 ^ 31873);
                 if (var2 != null) {
-                  no.field_j = of.a(var2, param0 ^ 31872);
+                  CachedTextLayout.field_j = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("rule_pillar_0", 0);
                 if (var2 != null) {
-                  bh.field_l = of.a(var2, 1);
+                  DirectByteStorage.field_l = of.a(var2, 1);
                 }
                 var2 = vd.a("rule_0_0", 0);
                 if (null != var2) {
@@ -990,7 +990,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("rule_2_0", 0);
                 if (null != var2) {
-                  no.field_n = of.a(var2, param0 - 31872);
+                  CachedTextLayout.field_n = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("rule_2_1", 0);
                 if (null != var2) {
@@ -1090,7 +1090,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("logging_in", param0 - 31873);
                 if (null != var2) {
-                  rl.field_e = of.a(var2, 1);
+                  TriangleMesh.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("reconnect", 0);
                 if (var2 != null) {
@@ -1418,7 +1418,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_age", 0);
                 if (null != var2) {
-                  rl.field_O = of.a(var2, 1);
+                  TriangleMesh.field_O = of.a(var2, 1);
                 }
                 var2 = vd.a("create_u13_email", 0);
                 if (var2 != null) {
@@ -1646,7 +1646,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_alert_yearrange", 0);
                 if (null != var2) {
-                  kd.field_d = of.a(var2, 1);
+                  TextLayout.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("create_alert_mismatch", 0);
                 if (var2 != null) {
@@ -1670,7 +1670,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("cannot_add_yourself", param0 - 31873);
                 if (null != var2) {
-                  wd.field_h = of.a(var2, param0 - 31872);
+                  GrowableIntList.field_h = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("unable_to_add_friend", 0);
                 if (var2 != null) {
@@ -1678,7 +1678,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("unable_to_add_ignore", 0);
                 if (var2 != null) {
-                  le.field_d = of.a(var2, param0 - 31872);
+                  WeightedLruCache.field_d = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("unable_to_delete_friend", 0);
                 if (null != var2) {
@@ -1702,7 +1702,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("ignorelistfull", 0);
                 if (null != var2) {
-                  co.field_k = of.a(var2, 1);
+                  ViewportController.field_k = of.a(var2, 1);
                 }
                 var2 = vd.a("ignorelistdupe", 0);
                 if (null != var2) {
@@ -1846,7 +1846,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("unpacking_graphics", 0);
                 if (null != var2) {
-                  no.field_g = of.a(var2, 1);
+                  CachedTextLayout.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("unpacking_models", 0);
                 if (null != var2) {
@@ -2264,7 +2264,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("achieved", param0 - 31873);
                 if (var2 != null) {
-                  co.field_d = of.a(var2, 1);
+                  ViewportController.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("orbpoints", 0);
                 if (null != var2) {
@@ -2472,27 +2472,27 @@ final class uk extends de {
                 }
                 var2 = vd.a("quickchat_shortcut_help,0", param0 - 31873);
                 if (null != var2) {
-                  kd.field_c[0] = of.a(var2, 1);
+                  TextLayout.field_c[0] = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_shortcut_help,1", param0 - 31873);
                 if (null != var2) {
-                  kd.field_c[1] = of.a(var2, 1);
+                  TextLayout.field_c[1] = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_shortcut_help,2", param0 ^ 31873);
                 if (null != var2) {
-                  kd.field_c[2] = of.a(var2, param0 - 31872);
+                  TextLayout.field_c[2] = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("quickchat_shortcut_help,3", 0);
                 if (var2 != null) {
-                  kd.field_c[3] = of.a(var2, 1);
+                  TextLayout.field_c[3] = of.a(var2, 1);
                 }
                 var2 = vd.a("quickchat_shortcut_help,4", 0);
                 if (var2 != null) {
-                  kd.field_c[4] = of.a(var2, DraggableWidget.a(param0, 31872));
+                  TextLayout.field_c[4] = of.a(var2, DraggableWidget.a(param0, 31872));
                 }
                 var2 = vd.a("quickchat_shortcut_help,5", 0);
                 if (null != var2) {
-                  kd.field_c[5] = of.a(var2, DraggableWidget.a(param0, 31872));
+                  TextLayout.field_c[5] = of.a(var2, DraggableWidget.a(param0, 31872));
                 }
                 var2 = vd.a("quickchat_shortcut_keys,0", 0);
                 if (null != var2) {
@@ -2660,7 +2660,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("fs_accept_aftercancel", param0 ^ 31873);
                 if (var2 != null) {
-                  bh.field_m = of.a(var2, param0 - 31872);
+                  DirectByteStorage.field_m = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("fs_accept_countdown_sing", 0);
                 if (null != var2) {
@@ -2688,7 +2688,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("fs_unavailable_try_signed_applet", param0 - 31873);
                 if (var2 != null) {
-                  mn.field_a = of.a(var2, param0 ^ 31872);
+                  TextLayoutLine.field_a = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("fs_focus", 0);
                 if (null != var2) {
@@ -2696,7 +2696,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("fs_focus_or_resolution", param0 ^ 31873);
                 if (var2 != null) {
-                  co.field_e = of.a(var2, 1);
+                  ViewportController.field_e = of.a(var2, 1);
                 }
                 var2 = vd.a("fs_timeout", 0);
                 if (var2 != null) {
@@ -2816,7 +2816,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("pleasewait_dotdotdot", param0 ^ param0);
                 if (var2 != null) {
-                  wd.field_b = of.a(var2, 1);
+                  GrowableIntList.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("serviceunavailable", param0 - 31873);
                 if (null != var2) {
@@ -3130,7 +3130,7 @@ final class uk extends de {
         }
     }
 
-    final static void a(int param0, rl param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, TriangleMesh param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_26_0 = 0;
         int[] stackIn_29_0 = null;
         int stackIn_30_1 = 0;
@@ -3146,7 +3146,7 @@ final class uk extends de {
         StringBuilder stackIn_84_1 = null;
         String stackIn_85_2 = null;
         RuntimeException decompiledCaughtException = null;
-        rl var8 = null;
+        TriangleMesh var8 = null;
         int[] var8_array = null;
         RuntimeException var8_ref = null;
         byte[] var9 = null;
@@ -3210,7 +3210,7 @@ final class uk extends de {
           }
           var8_array = new int[param1.field_a];
           var9_array = new int[param1.field_a];
-          var10 = wd.field_i;
+          var10 = GrowableIntList.field_i;
           var11 = lo.field_Ib;
           var12 = SocketJs5Transport.field_q;
           var13 = 0;
@@ -3272,19 +3272,19 @@ final class uk extends de {
             if (var40 != 0) {
               return;
             }
-            if (param1.field_J[var14Lifetime1] < wd.field_i.length) {
+            if (param1.field_J[var14Lifetime1] < GrowableIntList.field_i.length) {
               stackIn_41_0 = param1.field_J[var14Lifetime1];
             } else {
               stackIn_41_0 = -1;
             }
             var18 = stackIn_41_0;
-            if (param1.field_s[var14Lifetime1] >= wd.field_i.length) {
+            if (param1.field_s[var14Lifetime1] >= GrowableIntList.field_i.length) {
               stackIn_45_0 = -1;
             } else {
               stackIn_45_0 = param1.field_s[var14Lifetime1];
             }
             var19 = stackIn_45_0;
-            if (wd.field_i.length > param1.field_i[var14Lifetime1]) {
+            if (GrowableIntList.field_i.length > param1.field_i[var14Lifetime1]) {
               stackIn_49_0 = param1.field_i[var14Lifetime1];
             } else {
               stackIn_49_0 = -1;

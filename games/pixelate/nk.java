@@ -249,8 +249,8 @@ final class nk {
           if (param0 != 16711935) {
             nk.a(true);
           }
-          kn.field_J = MusicCrossfadeStream.field_o.h(5);
-          LobbyGame.field_Hb = dh.a((CharSequence) ((Object) kn.field_J), (byte) 44);
+          ModalStack.field_J = MusicCrossfadeStream.field_o.h(5);
+          LobbyGame.field_Hb = dh.a((CharSequence) ((Object) ModalStack.field_J), (byte) 44);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -323,7 +323,7 @@ final class nk {
                   var2.c(2779);
                 }
                 var2.field_n.setVolumeQ6(var2.field_p * LinkButtonPainter.field_h + 128 >> 8);
-                var2 = (cm) (rg.field_b.last(1504642273));
+                var2 = (cm) (LoginCredentials.field_b.last(1504642273));
                 return;
               }
             }
@@ -340,8 +340,8 @@ final class nk {
             }
             break;
           }
-          if (rg.field_b != null) {
-            var2Lifetime1 = (cm) (rg.field_b.c(1504642273));
+          if (LoginCredentials.field_b != null) {
+            var2Lifetime1 = (cm) (LoginCredentials.field_b.c(1504642273));
             while (null != var2Lifetime1) {
               if (var3 != 0) {
                 return;
@@ -352,7 +352,7 @@ final class nk {
               } else {
                 var2Lifetime1.field_n.setVolumeQ6(var2Lifetime1.field_p * LinkButtonPainter.field_h + 128 >> 8);
               }
-              var2Lifetime1 = (cm) (rg.field_b.last(1504642273));
+              var2Lifetime1 = (cm) (LoginCredentials.field_b.last(1504642273));
             }
           }
           return;

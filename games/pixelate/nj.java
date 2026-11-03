@@ -75,14 +75,14 @@ final class nj {
             if (null != ib.field_f &&
               ib.field_f.field_g) {
               ln.a(49);
-              lb.field_x.b(param0 - 55844, new AccountNoticeDialog(lb.field_x, LinkButtonPainter.field_c));
+              NetworkGameClient.field_x.b(param0 - 55844, new AccountNoticeDialog(NetworkGameClient.field_x, LinkButtonPainter.field_c));
             }
             return;
           }
-          lb.field_x.a(qk.field_i, true, (byte) 99, nh.field_b);
-          lb.field_x.d((byte) 111);
-          while (bh.$cfr$intArgs$b$c4997cb15529(126)) {
-            lb.field_x.a(field_f, ke.field_a, false);
+          NetworkGameClient.field_x.a(qk.field_i, true, (byte) 99, nh.field_b);
+          NetworkGameClient.field_x.d((byte) 111);
+          while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(126)) {
+            NetworkGameClient.field_x.a(field_f, ke.field_a, false);
           }
           if (param0 == 49661) {
             return;

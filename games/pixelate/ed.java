@@ -18,7 +18,7 @@ final class ed {
           if (param0 == null) {
             return null;
           }
-          var2 = new PaletteBitmapFont(param0, IntrusiveNode.field_b, e.field_b, gf.field_g, ge.field_c, fl.field_g, wo.field_f);
+          var2 = new PaletteBitmapFont(param0, IntrusiveNode.field_b, e.field_b, ByteStorage.field_g, ge.field_c, fl.field_g, wo.field_f);
           re.b(param1 ^ -28512);
           if (param1 == -28628) {
             stackIn_7_0 = var2;

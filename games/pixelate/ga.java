@@ -148,7 +148,7 @@ final class ga {
           um.field_k = param8;
           fj.field_b = param6.length;
           DraggableWidget.field_S = null;
-          rl.field_r = false;
+          TriangleMesh.field_r = false;
           TextButton.field_J = new byte[(7 + um.field_k) / 8];
           io.field_c = null;
           var10_int = 0;
@@ -162,7 +162,7 @@ final class ga {
           }
           ImageProducerRasterBuffer.field_n = param5.children;
           ImageProducerRasterBuffer.field_n.e(param3 ^ -121);
-          il.field_d = new vg(param1);
+          il.field_d = new SecondaryNodeHashTable(param1);
           ResizableModalPanel.field_X = 0;
           NameAvailabilityValidator.field_r = 0;
           gi.field_a = -1;
@@ -172,7 +172,7 @@ final class ga {
           }
           nk.field_a = param9.children;
           nk.field_a.e(123);
-          dg.field_f = new vg(param2);
+          dg.field_f = new SecondaryNodeHashTable(param2);
           if (null == param4.children) {
             param4.children = new IntrusiveDeque();
           }
@@ -181,7 +181,7 @@ final class ga {
             field_d = 20;
           }
           wi.field_a.e(param3 ^ 91);
-          SocketConnector.field_f = new vg(param7);
+          SocketConnector.field_f = new SecondaryNodeHashTable(param7);
           bo.field_e = 0L;
           mh.field_b = param0;
           return;

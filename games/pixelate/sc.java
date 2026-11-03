@@ -59,7 +59,7 @@ final class sc {
         if (!MatchingTextValidator.field_u.a((byte) 92)) {
           return em.field_a + " - " + MatchingTextValidator.field_u.c(0) + "%";
         }
-        return wd.field_b;
+        return GrowableIntList.field_b;
     }
 
     sc(String param0) {

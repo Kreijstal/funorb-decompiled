@@ -266,7 +266,7 @@ final class AudioService implements Runnable {
                 var2.serviceOutput();
               }
             }
-            vg.a(10L, (byte) 23);
+            SecondaryNodeHashTable.a(10L, (byte) 23);
             Object var5 = (Object) null;
             ResourceArchive.a(this.field_g, (Object) null, (byte) -52);
           }

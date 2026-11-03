@@ -211,7 +211,7 @@ final class cl {
         if (AccountTermsPanel.field_M != null) {
           AccountTermsPanel.field_M.a(param1, 0);
         }
-        kd.c(param1, -24721);
+        TextLayout.c(param1, -24721);
     }
 
     static {

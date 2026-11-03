@@ -185,9 +185,9 @@ final class fk extends de {
         if (param0 != 11) {
           return;
         }
-        var2 = rg.field_e;
+        var2 = LoginCredentials.field_e;
         var3 = DebouncedValidator.field_d;
-        rg.field_e = Js5NetworkRequest.field_C[0];
+        LoginCredentials.field_e = Js5NetworkRequest.field_C[0];
         DebouncedValidator.field_d = 0;
         NumericDateInputWidget.field_W[1].b(0, 45);
         this.d((byte) 59);
@@ -285,14 +285,14 @@ final class fk extends de {
               var7 = var7 + var9_int;
               var4.drawRightAlignedText(ln.field_m[this.field_r][1], var8_int, 2 + var7, 0, -1);
               var5.drawCentered(ln.field_m[this.field_r][4], (var11 >> 1) + (pk.field_c[0].field_A + var8_int) + var10_int, -4 + var7, 16777215, 0);
-              no.field_p[0].b(var10_int + var8_int, var7 - no.field_p[0].field_B);
-              no.field_p[1].b(var11 + (var10_int + var8_int) + pk.field_c[0].field_A, -no.field_p[1].field_B + var7);
+              CachedTextLayout.field_p[0].b(var10_int + var8_int, var7 - CachedTextLayout.field_p[0].field_B);
+              CachedTextLayout.field_p[1].b(var11 + (var10_int + var8_int) + pk.field_c[0].field_A, -CachedTextLayout.field_p[1].field_B + var7);
               var7 = var7 + var9_int;
               var4.drawRightAlignedText(ln.field_m[this.field_r][2], var8_int, var7 + 2, 0, -1);
-              no.field_p[2].b(var8_int + var10_int, -no.field_p[0].field_B + var7);
+              CachedTextLayout.field_p[2].b(var8_int + var10_int, -CachedTextLayout.field_p[0].field_B + var7);
               var7 = var7 + var9_int;
               var4.drawRightAlignedText(ln.field_m[this.field_r][3], var8_int, 4 + var7, 0, -1);
-              no.field_p[3].b(var8_int + var10_int, -no.field_p[0].field_B + var7);
+              CachedTextLayout.field_p[3].b(var8_int + var10_int, -CachedTextLayout.field_p[0].field_B + var7);
               var12 = 6;
               Js5NetworkRequest.field_C[var12].field_f[0].b(70, 160);
               Js5NetworkRequest.field_C[var12].field_f[1].b(470, 300);
@@ -308,7 +308,7 @@ final class fk extends de {
         var4.drawCentered(pk.field_d[this.field_r], 320, 180, 0, -1);
         var5.drawRightAlignedText(mj.a(4067, this.field_r), 590, 375, 16777215, 0);
         DebouncedValidator.field_d = var3;
-        rg.field_e = var2;
+        LoginCredentials.field_e = var2;
     }
 
     final void a(boolean param0, int param1) {

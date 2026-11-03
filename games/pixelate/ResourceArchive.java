@@ -33,7 +33,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNameLookup.a(le.a(var4, (byte) 103), (byte) -67);
+          var3_int = this.index.groupNameLookup.a(WeightedLruCache.a(var4, (byte) 103), (byte) -67);
           if (param0 < 114) {
             stackIn_5_0 = 73;
             return stackIn_5_0;
@@ -78,7 +78,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNameLookup.a(le.a(var4, (byte) 104), (byte) -67);
+          var3_int = this.index.groupNameLookup.a(WeightedLruCache.a(var4, (byte) 104), (byte) -67);
           stackIn_7_0 = this.a(var3_int, (byte) -78);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -135,7 +135,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNameLookup.a(le.a(var4, (byte) -111), (byte) -67);
+          var3_int = this.index.groupNameLookup.a(WeightedLruCache.a(var4, (byte) -111), (byte) -67);
           if (param0 <= 124) {
             return false;
           }
@@ -176,7 +176,7 @@ final class ResourceArchive {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param0.field_w.peekEvent()) {
-              vg.a(1L, (byte) 23);
+              SecondaryNodeHashTable.a(1L, (byte) 23);
               continue;
             }
             break;
@@ -237,12 +237,12 @@ final class ResourceArchive {
           param1 = param1.toLowerCase();
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param1);
-          var4_int = this.index.groupNameLookup.a(le.a(var6, (byte) -125), (byte) -67);
+          var4_int = this.index.groupNameLookup.a(WeightedLruCache.a(var6, (byte) -125), (byte) -67);
           if (!this.a(var4_int, -1)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.index.fileNameLookups[var4_int].a(le.a(var7, (byte) 77), (byte) -67);
+          var5 = this.index.fileNameLookups[var4_int].a(WeightedLruCache.a(var7, (byte) 77), (byte) -67);
           stackIn_10_0 = this.a(var4_int, var5, -2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -727,7 +727,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.index.groupNameLookup.a(le.a(var4, (byte) -97), (byte) -67);
+          var3_int = this.index.groupNameLookup.a(WeightedLruCache.a(var4, (byte) -97), (byte) -67);
           if (param1 == -1) {
             stackIn_7_0 = this.a(var3_int, false);
             return stackIn_7_0;
@@ -828,7 +828,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var4_int = this.index.fileNameLookups[param2].a(le.a(var5, (byte) 110), (byte) -67);
+          var4_int = this.index.fileNameLookups[param2].a(WeightedLruCache.a(var5, (byte) 110), (byte) -67);
           if (this.b(var4_int, 0, param2)) {
             return var4_int;
           }
@@ -910,12 +910,12 @@ final class ResourceArchive {
           param2 = param2.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.index.groupNameLookup.a(le.a(var6, (byte) 67), (byte) -67);
+          var4_int = this.index.groupNameLookup.a(WeightedLruCache.a(var6, (byte) 67), (byte) -67);
           if (!this.a(var4_int, -1)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.index.fileNameLookups[var4_int].a(le.a(var7, (byte) 61), (byte) -67);
+          var5 = this.index.fileNameLookups[var4_int].a(WeightedLruCache.a(var7, (byte) 61), (byte) -67);
           stackIn_9_0 = this.a(var4_int, var5, true);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

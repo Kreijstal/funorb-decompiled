@@ -56,7 +56,7 @@ final class bd {
               }
               var6 = IterableNodeHashTable.a(var4_int, 0);
               ResourceArchive.field_h[var4_int].field_H = Checkbox.field_V[var6];
-              DelegatingCanvas.field_e[var4_int].field_cb = rg.field_a[var6];
+              DelegatingCanvas.field_e[var4_int].field_cb = LoginCredentials.field_a[var6];
             }
           }
           if (0 != GradientOutlineTextPainter.field_u.field_P) {

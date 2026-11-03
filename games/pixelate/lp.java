@@ -31,7 +31,7 @@ final class lp {
         var3 = Pixelate.field_H ? 1 : 0;
         try {
           var1_int = 0;
-          while (bh.$cfr$intArgs$b$c4997cb15529(107)) {
+          while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(107)) {
             VerticalScrollbar.field_Gb.a((byte) -48);
             if (!VerticalScrollbar.field_Gb.isActivated(121)) {
               continue;

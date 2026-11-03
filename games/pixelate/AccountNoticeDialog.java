@@ -87,7 +87,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         this.field_N = false;
     }
 
-    AccountNoticeDialog(kn param0, fp param1) {
+    AccountNoticeDialog(ModalStack param0, fp param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -100,7 +100,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
         try {
           var3 = null;
           if (ArrayWidgetContainer.field_F == param1) {
-            var3 = mn.field_a;
+            var3 = TextLayoutLine.field_a;
           } else {
             if (LinkButtonPainter.field_c != param1) {
               if (param1 == DisplayNameForm.field_Q) {
@@ -112,7 +112,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
               var3 = l.field_o;
               if (ke.a(false)) {
                 this.field_C = this.field_C + 20;
-                var3 = co.field_e;
+                var3 = ViewportController.field_e;
               }
             }
           }
@@ -229,7 +229,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
               }
             }
             ep.field_a.field_rb = true;
-            if (!rl.field_r) {
+            if (!TriangleMesh.field_r) {
               stackIn_34_0 = ep.field_a;
               if (var8 == 0) {
                 stackIn_35_1 = EmailValidator.field_n;
@@ -260,7 +260,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                   lc.field_t[var13] = false;
                   var13++;
                 }
-                no.a(fj.field_b, 0, (byte) 91, true, -1, -1, DraggableWidget.field_S, -1);
+                CachedTextLayout.a(fj.field_b, 0, (byte) 91, true, -1, -1, DraggableWidget.field_S, -1);
                 if (!(wo.field_h < 2) &&
                   EmailValidator.field_m[12]) {
                   pb.field_f = true;
@@ -341,7 +341,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
               fb.a(1, param0);
             }
             if (ep.field_a.field_P != 0) {
-              if (!rl.field_r) {
+              if (!TriangleMesh.field_r) {
                 r.a(param2 - 3, param0);
               } else {
                 wo.c(-1, param0);

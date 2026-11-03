@@ -143,7 +143,7 @@ final class re {
         e.field_b = null;
         wo.field_f = (byte[][]) null;
         ge.field_c = null;
-        gf.field_g = null;
+        ByteStorage.field_g = null;
         fl.field_g = null;
     }
 

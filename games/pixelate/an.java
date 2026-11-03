@@ -8,7 +8,7 @@ final class an {
     static fl field_e;
     static BoardView field_b;
 
-    final static void a(BitmapFont param0, int param1, byte param2, mn param3, String param4) {
+    final static void a(BitmapFont param0, int param1, byte param2, TextLayoutLine param3, String param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;

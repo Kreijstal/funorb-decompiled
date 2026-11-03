@@ -10,7 +10,7 @@ final class u {
     private ResourceArchive field_m;
     static volatile int field_b;
     static String field_e;
-    private le field_i;
+    private WeightedLruCache field_i;
     static String field_g;
     static int field_h;
     static SceneWidget field_a;
@@ -82,7 +82,7 @@ final class u {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_i = new le(64);
+        this.field_i = new WeightedLruCache(64);
         try {
           this.field_c = param1;
           this.field_m = param2;

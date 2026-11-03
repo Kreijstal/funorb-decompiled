@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gq extends go {
+final class gq extends EmailCredentials {
     static String field_l;
     static String field_m;
     static int field_n;

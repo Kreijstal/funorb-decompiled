@@ -199,7 +199,7 @@ final class bf extends IntrusiveNode {
           for (var8 = 0; var8 < this.field_n; var8++) {
             if (var6 != 0) {
               if (var6 != 256) {
-                stackIn_23_0 = rg.field_e.field_a;
+                stackIn_23_0 = LoginCredentials.field_e.field_a;
                 if (this.field_p[var8 + var7 * this.field_n]) {
                   stackIn_24_1 = 1;
                 } else {
@@ -223,7 +223,7 @@ final class bf extends IntrusiveNode {
                 ((Sprite) (Object) stackIn_18_0[stackIn_19_1]).f(var4, var5);
               }
             } else {
-              stackIn_12_0 = rg.field_e.field_a;
+              stackIn_12_0 = LoginCredentials.field_e.field_a;
               if (!this.field_p[this.field_n * var7 + var8]) {
                 stackIn_13_1 = 0;
               } else {

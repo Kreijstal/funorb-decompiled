@@ -80,7 +80,7 @@ final class so {
             pk.field_f = wg.b(255, 4);
           }
           if (pk.field_f.field_p) {
-            go.field_k = go.field_k & ~pk.field_f.field_s;
+            EmailCredentials.field_k = EmailCredentials.field_k & ~pk.field_f.field_s;
             de.field_n = de.field_n | pk.field_f.field_s;
             ik.field_a = true;
             pk.field_f = null;
@@ -104,7 +104,7 @@ final class so {
           SocketConnector.c(5);
           ni.a(-31470);
           if (fc.field_e == 9 &&
-            go.field_k == 0) {
+            EmailCredentials.field_k == 0) {
             fc.field_e = 5;
             la.a(MidiPcmStream.field_t, 5, false, -25528);
           }
@@ -154,28 +154,28 @@ final class so {
         }
         for (var3 = 0; var3 < this.field_i.length; var3++) {
           var4 = vn.field_e[this.field_i[var3]];
-          stackIn_6_0 = rg.field_e.field_a;
+          stackIn_6_0 = LoginCredentials.field_e.field_a;
           if (!var4[0]) {
             stackIn_7_1 = 0;
           } else {
             stackIn_7_1 = 1;
           }
           ((Sprite) (Object) stackIn_6_0[stackIn_7_1]).b(550, var2);
-          stackIn_9_0 = rg.field_e.field_a;
+          stackIn_9_0 = LoginCredentials.field_e.field_a;
           if (var4[1]) {
             stackIn_10_1 = 1;
           } else {
             stackIn_10_1 = 0;
           }
           ((Sprite) (Object) stackIn_9_0[stackIn_10_1]).b(566, var2);
-          stackIn_12_0 = rg.field_e.field_a;
+          stackIn_12_0 = LoginCredentials.field_e.field_a;
           if (var4[2]) {
             stackIn_13_1 = 1;
           } else {
             stackIn_13_1 = 0;
           }
           ((Sprite) (Object) stackIn_12_0[stackIn_13_1]).b(550, var2 + 16);
-          stackIn_15_0 = rg.field_e.field_a;
+          stackIn_15_0 = LoginCredentials.field_e.field_a;
           if (!var4[3]) {
             stackIn_16_1 = 0;
           } else {

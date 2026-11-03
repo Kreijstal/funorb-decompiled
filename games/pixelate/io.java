@@ -61,10 +61,10 @@ final class io {
         try {
           var15 = MusicCrossfadeStream.field_o;
           var2 = var15.f(255);
-          var3 = (lc) (rg.field_c.c(1504642273));
+          var3 = (lc) (LoginCredentials.field_c.c(1504642273));
           while (var3 != null) {
             if (~var2 != ~var3.field_k) {
-              var3 = (lc) (rg.field_c.last(1504642273));
+              var3 = (lc) (LoginCredentials.field_c.last(1504642273));
               continue;
             }
             break;
@@ -76,7 +76,7 @@ final class io {
           var5 = 106 / ((-61 - param0) / 53);
           var4 = var15.f(255);
           if (var4 != 0) {
-            lg.field_b[0] = kn.field_J;
+            lg.field_b[0] = ModalStack.field_J;
             var6 = var3.field_s;
             for (var7_int = 1; var4 > var7_int; var7_int++) {
               lg.field_b[var7_int] = var15.h(5);
@@ -377,7 +377,7 @@ final class io {
         throw new IllegalStateException();
     }
 
-    final static void a(boolean param0, int param1, rg param2, int param3, boolean param4) {
+    final static void a(boolean param0, int param1, LoginCredentials param2, int param3, boolean param4) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -438,7 +438,7 @@ final class io {
           }
           wh.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, uk.field_v, 12556);
           aa.field_f.c(7519, aa.field_f.position - var5_int);
-          vg.b(-1, 10000);
+          SecondaryNodeHashTable.b(-1, 10000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

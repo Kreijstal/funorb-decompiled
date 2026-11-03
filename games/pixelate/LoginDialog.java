@@ -69,7 +69,7 @@ final class LoginDialog extends ContentTransitionDialog {
             return stackIn_25_0;
           }
           if (param0 == 11) {
-            stackIn_29_0 = sd.a(vg.field_e, param2 ^ -17208, new String[]{param1});
+            stackIn_29_0 = sd.a(SecondaryNodeHashTable.field_e, param2 ^ -17208, new String[]{param1});
             return stackIn_29_0;
           }
           if (param0 == 12) {
@@ -98,7 +98,7 @@ final class LoginDialog extends ContentTransitionDialog {
         }
     }
 
-    LoginDialog(kn param0, UiComponent param1) {
+    LoginDialog(ModalStack param0, UiComponent param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -129,7 +129,7 @@ final class LoginDialog extends ContentTransitionDialog {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new CoverageBitmapFont(param0, IntrusiveNode.field_b, e.field_b, gf.field_g, ge.field_c, fl.field_g, wo.field_f);
+          var2 = new CoverageBitmapFont(param0, IntrusiveNode.field_b, e.field_b, ByteStorage.field_g, ge.field_c, fl.field_g, wo.field_f);
           re.b(140);
           if (param1 <= 25) {
             var3 = (byte[]) null;

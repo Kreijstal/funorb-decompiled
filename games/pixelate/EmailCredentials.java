@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class go extends rg {
+class EmailCredentials extends LoginCredentials {
     private long field_g;
     static boolean field_f;
     private String field_j;
@@ -98,7 +98,7 @@ class go extends rg {
                 var6 = 1;
               }
               if (IterableNodeHashTable.a(var6, 0) == 2) {
-                am.a(1, -26931, var6, param2);
+                Js5ArchiveManager.a(1, -26931, var6, param2);
               }
               dg.a(true, ce.field_d, -1, var5_ref_String, CheckboxPainter.field_k, param0);
               nd.a((byte) -23);
@@ -136,7 +136,7 @@ class go extends rg {
         regionExit1: {
           discarded$0 = mp.field_a.append((char) var5);
           var6Lifetime1 = 485;
-          var32 = kn.field_J;
+          var32 = ModalStack.field_J;
           var8Lifetime1 = var32;
           var8Lifetime1Lifetime1 = var32;
           var17 = th.a(2, var32);
@@ -163,13 +163,13 @@ class go extends rg {
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var38);
                 break regionExit1;
               }
-              if (mn.field_f == null) {
+              if (TextLayoutLine.field_f == null) {
                 var35 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var36 = var35 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var36);
                 break regionExit1;
               }
-              var8Lifetime1Lifetime6 = "[" + mn.field_f + "] ";
+              var8Lifetime1Lifetime6 = "[" + TextLayoutLine.field_f + "] ";
             }
             var39 = var8Lifetime1Lifetime6 + var33 + ": ";
             var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var39);
@@ -232,7 +232,7 @@ class go extends rg {
         return null;
     }
 
-    go(long param0, String param1) {
+    EmailCredentials(long param0, String param1) {
         try {
           this.field_j = param1;
           this.field_g = param0;

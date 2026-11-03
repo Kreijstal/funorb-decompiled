@@ -347,7 +347,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         try {
           wa.field_c.a(hf.field_w, true, (byte) 99, ph.field_o);
           wa.field_c.d((byte) 112);
-          while (bh.$cfr$intArgs$b$c4997cb15529(120)) {
+          while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(120)) {
             wa.field_c.a(nj.field_f, ke.field_a, false);
           }
           if (u.field_h != -1) {

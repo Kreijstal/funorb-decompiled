@@ -275,9 +275,9 @@ final class lg {
             var4 = var3;
             var4 = var3;
           }
-          if (null != bh.field_n &&
-            !bh.field_n.equals(param1.getParameter("session"))) {
-            var4 = bh.field_n;
+          if (null != DirectByteStorage.field_n &&
+            !DirectByteStorage.field_n.equals(param1.getParameter("session"))) {
+            var4 = DirectByteStorage.field_n;
           }
           stackIn_10_0 = ub.a(-102, param2, (String) (var3), (String) (var4), -1);
           return stackIn_10_0;

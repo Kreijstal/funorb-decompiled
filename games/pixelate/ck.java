@@ -12,9 +12,9 @@ final class ck {
     static String field_g;
     private int field_k;
     private float field_a;
-    static am field_j;
+    static Js5ArchiveManager field_j;
     private float field_e;
-    static rl[] field_b;
+    static TriangleMesh[] field_b;
 
     public static void a(byte param0) {
         field_g = null;
@@ -26,12 +26,12 @@ final class ck {
         }
     }
 
-    final static rg a(String param0, String param1, boolean param2, long param3, int param4) {
+    final static LoginCredentials a(String param0, String param1, boolean param2, long param3, int param4) {
         RuntimeException var6 = null;
         gq stackIn_5_0 = null;
         wk stackIn_7_0 = null;
-        rg stackIn_10_0 = null;
-        go stackIn_12_0 = null;
+        LoginCredentials stackIn_10_0 = null;
+        EmailCredentials stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -42,17 +42,17 @@ final class ck {
           if (param3 == 0L &&
             param1 != null) {
             stackIn_7_0 = new wk(param1, param0);
-            return (rg) ((Object) stackIn_7_0);
+            return (LoginCredentials) ((Object) stackIn_7_0);
           }
           if (param2) {
             stackIn_5_0 = new gq(param3, param0);
-            return (rg) ((Object) stackIn_5_0);
+            return (LoginCredentials) ((Object) stackIn_5_0);
           }
           if (param4 >= 60) {
-            stackIn_12_0 = new go(param3, param0);
-            return (rg) ((Object) stackIn_12_0);
+            stackIn_12_0 = new EmailCredentials(param3, param0);
+            return (LoginCredentials) ((Object) stackIn_12_0);
           }
-          stackIn_10_0 = (rg) null;
+          stackIn_10_0 = (LoginCredentials) null;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -227,7 +227,7 @@ final class ck {
             SoftwareRasterizer.g(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.a(var16, var5, var6);
-          pi.field_Rb = BoundedRandomAccessFile.a(ue.field_t, AccountNamePrompt.field_Ib, -55, AccountMessagePanel.field_L, var4);
+          ContextActionMenu.field_Rb = BoundedRandomAccessFile.a(ue.field_t, AccountNamePrompt.field_Ib, -55, AccountMessagePanel.field_L, var4);
           DraggableWidget.field_I.children = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

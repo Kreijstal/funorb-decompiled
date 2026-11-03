@@ -179,7 +179,7 @@ final class QueuedInput extends IntrusiveNode {
           try {
             if (false) throw (IOException) null;
             if (var2_int >= 0 &&
-              no.d(8) <= 30000L) {
+              CachedTextLayout.d(8) <= 30000L) {
               return false;
             }
             na.a(true);

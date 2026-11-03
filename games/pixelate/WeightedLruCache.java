@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class le {
+final class WeightedLruCache {
     static int field_j;
-    private int field_f;
+    private int remainingCapacity;
     static SceneWidget field_h;
     private SecondaryNodeDeque field_g;
     static int[] field_b;
@@ -25,10 +25,10 @@ final class le {
           return;
         }
         try {
-          this.field_f = this.field_f - param3;
-          while (this.field_f < 0) {
+          this.remainingCapacity = this.remainingCapacity - param3;
+          while (this.remainingCapacity < 0) {
             var6 = (ah) (this.field_g.a(113));
-            this.a(var6, -26133);
+            this.removeEntry(var6, -26133);
           }
           var6_ref = new tj(param0, param3);
           this.field_e.a(var6_ref, param2, -1);
@@ -43,7 +43,7 @@ final class le {
         try {
           this.a(param1, true, param0, 1);
           if (param2 <= 75) {
-            le.a(false);
+            WeightedLruCache.a(false);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "le.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -53,18 +53,18 @@ final class le {
     final static void a(boolean param0) {
         jd.field_r = 0;
         if (!param0) {
-          le.a(-100);
+          WeightedLruCache.a(-100);
         }
     }
 
     private final void a(long param0, byte param1) {
         ah var4 = (ah) (this.field_e.a(1, param0));
         if (param1 == 11) {
-          this.a(var4, -26133);
+          this.removeEntry(var4, -26133);
           return;
         }
         field_j = -95;
-        this.a(var4, -26133);
+        this.removeEntry(var4, -26133);
     }
 
     final Object a(long param0, int param1) {
@@ -81,7 +81,7 @@ final class le {
           if (var5 == null) {
             var7.c(2779);
             var7.e(17);
-            this.field_f = this.field_f + var7.field_t;
+            this.remainingCapacity = this.remainingCapacity + var7.field_t;
             return null;
           }
           if (var7.b(true)) {
@@ -97,11 +97,11 @@ final class le {
           }
           return var5;
         }
-        le.a(107);
+        WeightedLruCache.a(107);
         if (var5 == null) {
           var7.c(2779);
           var7.e(17);
-          this.field_f = this.field_f + var7.field_t;
+          this.remainingCapacity = this.remainingCapacity + var7.field_t;
           return null;
         }
         if (var7.b(true)) {
@@ -118,7 +118,7 @@ final class le {
         return var5;
     }
 
-    private final void a(ah param0, int param1) {
+    private final void removeEntry(ah param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -133,7 +133,7 @@ final class le {
           }
           param0.c(2779);
           param0.e(17);
-          this.field_f = this.field_f + param0.field_t;
+          this.remainingCapacity = this.remainingCapacity + param0.field_t;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -200,14 +200,14 @@ final class le {
         field_d = null;
     }
 
-    le(int param0) {
+    WeightedLruCache(int param0) {
         this(param0, param0);
     }
 
-    private le(int param0, int param1) {
+    private WeightedLruCache(int param0, int param1) {
         int var3;
         this.field_g = new SecondaryNodeDeque();
-        this.field_f = param0;
+        this.remainingCapacity = param0;
         this.field_a = param0;
         var3 = 1;
         while (true) {

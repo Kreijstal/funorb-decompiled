@@ -44,16 +44,16 @@ final class dj {
         int var2Lifetime1;
         if (param0 == -1501881951) {
           var1 = ResizableModalPanel.m(param0 + 1501881973);
-          var2 = go.c(107);
+          var2 = EmailCredentials.c(107);
           NodeHashTable.field_c.a(-AudioService.field_d + ce.field_c, (AudioService.field_d << 1) + var2, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1, -MouseWheelHandler.field_d + qn.field_o);
-          vh.a(88);
+          GzipDecoder.a(88);
           return;
         }
         dj.b(-112);
         var1Lifetime1 = ResizableModalPanel.m(param0 + 1501881973);
-        var2Lifetime1 = go.c(107);
+        var2Lifetime1 = EmailCredentials.c(107);
         NodeHashTable.field_c.a(-AudioService.field_d + ce.field_c, (AudioService.field_d << 1) + var2Lifetime1, param0 + 1501881950, (MouseWheelHandler.field_d << 1) + var1Lifetime1, -MouseWheelHandler.field_d + qn.field_o);
-        vh.a(88);
+        GzipDecoder.a(88);
     }
 
     public static void b(int param0) {

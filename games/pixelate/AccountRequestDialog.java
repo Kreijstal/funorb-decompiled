@@ -58,7 +58,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
         field_tb = null;
     }
 
-    AccountRequestDialog(kn param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    AccountRequestDialog(ModalStack param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new AccountMessagePanel((AccountRequestDialog) null, param1, param2), 77, 10, 10);
         try {
           this.field_pb = param3 ? true : false;

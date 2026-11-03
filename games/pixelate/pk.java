@@ -123,10 +123,10 @@ final class pk {
         }
     }
 
-    final static rl a(pc param0, int param1) {
+    final static TriangleMesh a(pc param0, int param1) {
         int stackIn_29_0 = 0;
         int stackIn_29_1 = 0;
-        rl stackIn_36_0 = null;
+        TriangleMesh stackIn_36_0 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -135,7 +135,7 @@ final class pk {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        rl var5 = null;
+        TriangleMesh var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -147,11 +147,11 @@ final class pk {
           }
           var3 = tj.a(param0, -32) ? 1 : 0;
           var4 = tj.a(param0, -32) ? 1 : 0;
-          var5 = new rl();
-          var5.field_A = (short)param0.c(16, (byte) -34);
-          var5.field_k = bm.a(var5.field_k, (byte) -128, param0, 16);
-          var5.field_N = bm.a(var5.field_N, (byte) -128, param0, 16);
-          var5.field_E = bm.a(var5.field_E, (byte) -128, param0, 16);
+          var5 = new TriangleMesh();
+          var5.vertexCount = (short)param0.c(16, (byte) -34);
+          var5.vertexX = bm.a(var5.vertexX, (byte) -128, param0, 16);
+          var5.vertexY = bm.a(var5.vertexY, (byte) -128, param0, 16);
+          var5.vertexZ = bm.a(var5.vertexZ, (byte) -128, param0, 16);
           var5.field_j = (short)param0.c(16, (byte) -34);
           var5.field_h = bm.a(var5.field_h, (byte) -128, param0, 16);
           var5.field_I = bm.a(var5.field_I, (byte) -128, param0, 16);
@@ -293,7 +293,7 @@ final class pk {
           if (null != var2) {
             ap.a((String) null, 0, VerticalScrollbar.field_Ib, 24092, (String) (var2));
           } else {
-            var3 = kn.field_J;
+            var3 = ModalStack.field_J;
             var3 = th.a(2, var3);
             var4 = "";
             var5 = "|";
@@ -316,13 +316,13 @@ final class pk {
                 }
                 if (null != io.field_c) {
                   if (!nc.field_b ||
-                    mn.field_f == null) {
+                    TextLayoutLine.field_f == null) {
                     var4 = "[" + sd.a(fk.field_q, 40, new String[]{io.field_c.field_pc}) + "] ";
                     if (var10 != 0) {
-                      var4 = "[" + mn.field_f + "] ";
+                      var4 = "[" + TextLayoutLine.field_f + "] ";
                     }
                   } else {
-                    var4 = "[" + mn.field_f + "] ";
+                    var4 = "[" + TextLayoutLine.field_f + "] ";
                   }
                   var6 = 1;
                 }

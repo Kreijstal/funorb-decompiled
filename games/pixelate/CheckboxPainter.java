@@ -84,7 +84,7 @@ final class CheckboxPainter implements WidgetPainter {
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_15_0).a((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, ((StringBuilder) (Object) stackIn_15_5).append(stackIn_16_6).append("&v1=").append(PlatformTaskDispatcher.field_o).append("&v2=").append(PlatformTaskDispatcher.field_l).append("&e=").append(var10).toString()));
             while (0 == var4.field_b) {
-              vg.a(1L, (byte) 23);
+              SecondaryNodeHashTable.a(1L, (byte) 23);
             }
             if (var4.field_b != 1) {
               return;

@@ -102,7 +102,7 @@ final class hm {
         oo.field_f = -1;
         qg.field_b = null;
         re.field_h = false;
-        no.field_h = 0;
+        CachedTextLayout.field_h = 0;
         MarkerSlider.field_V = -1;
         int var1 = -61 / ((17 - param0) / 55);
     }

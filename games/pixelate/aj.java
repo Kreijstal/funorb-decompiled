@@ -19,9 +19,9 @@ final class aj extends IntrusiveNode {
     final static Object a(boolean param0, byte[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        bh var4 = null;
+        DirectByteStorage var4 = null;
         Object stackIn_2_0 = null;
-        bh stackIn_5_0 = null;
+        DirectByteStorage stackIn_5_0 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -35,8 +35,8 @@ final class aj extends IntrusiveNode {
           }
           var3_int = -39 / ((param2 + 35) / 52);
           if (param1.length > 136) {
-            var4 = new bh();
-            ((gf) ((Object) var4)).a(param1, true);
+            var4 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var4)).setBytes(param1, true);
             stackIn_5_0 = var4;
             return stackIn_5_0;
           }
@@ -72,10 +72,10 @@ final class aj extends IntrusiveNode {
         try {
           nk.a(ProxySocketConnector.field_k, EditableTextWidget.field_Y, ug.field_s, sc.field_g, (byte) 125, ArchiveIndex.field_l, dn.field_c, bl.field_d, qk.field_d, param2, TextFieldValidator.field_h, l.field_q);
           Checkbox.field_V = SocketConnector.a("chatfilter", "lobby", (byte) 47, param1);
-          rg.field_a[1] = NameSuggestionsPanel.field_J;
+          LoginCredentials.field_a[1] = NameSuggestionsPanel.field_J;
           int var4_int = -115 % ((param3 - 44) / 59);
-          rg.field_a[0] = EmailConfirmationValidator.field_m;
-          rg.field_a[2] = wd.field_e;
+          LoginCredentials.field_a[0] = EmailConfirmationValidator.field_m;
+          LoginCredentials.field_a[2] = GrowableIntList.field_e;
           ck.a(65793, ig.field_d, param0);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "aj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

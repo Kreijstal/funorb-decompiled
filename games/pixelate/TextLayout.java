@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kd {
+abstract class TextLayout {
     static String field_a;
     static String[] field_c;
     static String field_d;
-    mn[] field_b;
+    TextLayoutLine[] lines;
 
     final int a(int param0, int param1, int param2) {
         int var5 = 0;
-        mn var6 = null;
+        TextLayoutLine var6 = null;
         int var7 = 0;
         int var8 = Pixelate.field_H ? 1 : 0;
-        if (null == this.field_b ||
-          0 == this.field_b.length ||
-          this.field_b[0].field_b > param0) {
+        if (null == this.lines ||
+          0 == this.lines.length ||
+          this.lines[0].field_b > param0) {
           return -1;
         }
-        if (!(this.field_b[this.field_b.length - 1].field_d >= param0)) {
+        if (!(this.lines[this.lines.length - 1].field_d >= param0)) {
           return -1;
         }
-        if (this.field_b.length == 1) {
-          return this.field_b[0].a(param2, 27760);
+        if (this.lines.length == 1) {
+          return this.lines[0].a(param2, 27760);
         }
         int var4 = 0;
         if (param1 <= 116) {
           return 63;
         }
-        for (var5 = 0; this.field_b.length > var5; var5++) {
-          var6 = this.field_b[var5];
+        for (var5 = 0; this.lines.length > var5; var5++) {
+          var6 = this.lines[var5];
           if (param0 >= var6.field_b &&
             param0 <= var6.field_d) {
             var7 = var6.a(param2, 27760);
@@ -54,12 +54,12 @@ abstract class kd {
 
     final int b(boolean param0, int param1) {
         int var4 = 0;
-        mn var5 = null;
+        TextLayoutLine var5 = null;
         int var6 = Pixelate.field_H ? 1 : 0;
-        mn[] var7 = this.field_b;
-        mn[] var3 = var7;
+        TextLayoutLine[] var7 = this.lines;
+        TextLayoutLine[] var3 = var7;
         if (!param0) {
-          this.field_b = (mn[]) null;
+          this.lines = (TextLayoutLine[]) null;
         }
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
@@ -182,9 +182,9 @@ abstract class kd {
         if (param0 != 1) {
           field_d = (String) null;
         }
-        if (null != this.field_b &&
-          this.field_b.length > 0) {
-          stackIn_7_0 = -this.field_b[0].field_b + this.field_b[this.field_b.length - 1].field_d;
+        if (null != this.lines &&
+          this.lines.length > 0) {
+          stackIn_7_0 = -this.lines[0].field_b + this.lines[this.lines.length - 1].field_d;
         } else {
           stackIn_7_0 = 0;
         }
@@ -194,8 +194,8 @@ abstract class kd {
     final int a(int param0) {
         int var4 = 0;
         int var2;
-        mn[] var3;
-        mn var5;
+        TextLayoutLine[] var3;
+        TextLayoutLine var5;
         int var7;
         int var6;
         var7 = Pixelate.field_H ? 1 : 0;
@@ -203,8 +203,8 @@ abstract class kd {
           this.a(-37);
         }
         var2 = -1;
-        if (this.field_b != null) {
-          var3 = this.field_b;
+        if (this.lines != null) {
+          var3 = this.lines;
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5 != null) {
@@ -218,12 +218,12 @@ abstract class kd {
         return var2;
     }
 
-    final int a(boolean param0, int param1) {
+    final int getLineIndex(boolean param0, int param1) {
         int var3 = 0;
-        mn var4 = null;
+        TextLayoutLine var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
-        for (var3 = 0; this.field_b.length > var3; var3++) {
-          var4 = this.field_b[var3];
+        for (var3 = 0; this.lines.length > var3; var3++) {
+          var4 = this.lines[var3];
           if (!(var4.field_g.length <= param1)) {
             return var3;
           }
@@ -232,10 +232,10 @@ abstract class kd {
         if (param0) {
           field_a = (String) null;
         }
-        return this.field_b.length;
+        return this.lines.length;
     }
 
-    final int a(String param0, int param1, int param2, int param3) {
+    final int justificationStep(String param0, int param1, int param2, int param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;

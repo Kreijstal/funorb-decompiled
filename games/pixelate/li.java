@@ -11,7 +11,7 @@ final class li {
     static Sprite field_d;
     static Sprite[] field_h;
     static String field_j;
-    static rg field_g;
+    static LoginCredentials field_g;
 
     public static void a(byte param0) {
         field_a = null;

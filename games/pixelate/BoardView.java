@@ -45,10 +45,10 @@ final class BoardView {
             jb.field_b[var2_int] = new bi(GradientOutlineTextPainter.field_w[var2_int], dn.field_a[var2_int], var2_int == 5 ? true : false);
           }
           ql.field_m = -1;
-          lb.field_D = 15;
+          NetworkGameClient.field_D = 15;
           AccountRegistrationPanel.field_S = 0;
           of.field_d = -1;
-          le.field_j = 45;
+          WeightedLruCache.field_j = 45;
           GameApplet.field_i = -1;
           sd.field_N = true;
         } catch (RuntimeException runtimeException) {
@@ -306,10 +306,10 @@ final class BoardView {
                 }
                 var12 = stackIn_29_0;
                 if (var12 == 0) {
-                  rg.field_e.field_k[var7 - 1].f(var10, var11);
+                  LoginCredentials.field_e.field_k[var7 - 1].f(var10, var11);
                 } else {
                   if (var12 != 256) {
-                    rg.field_e.field_k[-1 + var7].f(var10, var11);
+                    LoginCredentials.field_e.field_k[-1 + var7].f(var10, var11);
                     fq.field_o.field_k[var7 - 1].a(var10, var11, var12);
                   } else {
                     fq.field_o.field_k[var7 - 1].f(var10, var11);

@@ -179,10 +179,10 @@ final class bm extends jj {
         }
         int fieldTemp$0 = this.field_s + 1;
         this.field_s = this.field_s + 1;
-        if (fieldTemp$0 >= am.field_i.length) {
+        if (fieldTemp$0 >= Js5ArchiveManager.field_i.length) {
           this.field_s = 0;
         }
-        this.a(am.field_i[this.field_s], 0);
+        this.a(Js5ArchiveManager.field_i[this.field_s], 0);
     }
 
     static {

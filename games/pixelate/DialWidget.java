@@ -15,12 +15,12 @@ final class DialWidget extends TextButton {
     final static void a(int param0, java.awt.Canvas param1) {
         try {
           if (11 == el.field_b) {
-            am.b(98);
+            Js5ArchiveManager.b(98);
           }
           if (param0 != -1913) {
             DialWidget.a((byte) -51);
           }
-          mi.a(go.field_f, bf.field_o, -1, ThreeSliceButtonPainter.field_r);
+          mi.a(EmailCredentials.field_f, bf.field_o, -1, ThreeSliceButtonPainter.field_r);
           fj.a(0, 0, (byte) 113, param1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "si.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -31,7 +31,7 @@ final class DialWidget extends TextButton {
         if (param1) {
           return -0.8130049379793588;
         }
-        return rl.field_f[(int)(param0 * 32768.0 / 3.141592653589793) & 65535];
+        return TriangleMesh.field_f[(int)(param0 * 32768.0 / 3.141592653589793) & 65535];
     }
 
     final static void a(int param0, byte[] param1, int param2, int param3, boolean param4, byte param5) {

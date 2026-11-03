@@ -89,13 +89,13 @@ final class ig {
               }
               var2 = (cm) (bo.field_d.last(1504642273));
             }
-            if (rg.field_b != null) {
-              var2Lifetime1 = (cm) (rg.field_b.c(1504642273));
+            if (LoginCredentials.field_b != null) {
+              var2Lifetime1 = (cm) (LoginCredentials.field_b.c(1504642273));
               while (var2Lifetime1 != null) {
                 if (!var2Lifetime1.field_k.b(0)) {
                   var2Lifetime1.c(2779);
                 }
-                var2Lifetime1 = (cm) (rg.field_b.last(1504642273));
+                var2Lifetime1 = (cm) (LoginCredentials.field_b.last(1504642273));
               }
             }
           }

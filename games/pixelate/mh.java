@@ -63,7 +63,7 @@ final class mh {
           return;
         }
         if (var6 > 0) {
-          wd.a(SoftwareRasterizer.field_k, param3 ^ -123, param1, var6, var9, var4, var5, var7, var8, hp.field_Gb.field_G);
+          GrowableIntList.a(SoftwareRasterizer.field_k, param3 ^ -123, param1, var6, var9, var4, var5, var7, var8, hp.field_Gb.field_G);
           return;
         }
     }

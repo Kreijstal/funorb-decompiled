@@ -44,11 +44,11 @@ final class fj {
             if (!IsaacRandom.field_g) {
               var5 = ProxySocketConnector.field_n;
               var6 = EmailConfirmationValidator.field_s;
-              var5.field_b.a(var6, (byte) -33, 14);
+              var5.field_b.addAction(var6, (byte) -33, 14);
             }
             var7 = ProxySocketConnector.field_n;
             var8 = nn.field_h;
-            var7.field_b.a(var8, (byte) -128, 20);
+            var7.field_b.addAction(var8, (byte) -128, 20);
           }
           if (param0.field_j == 1 &&
             !pk.b(120) &&
@@ -57,11 +57,11 @@ final class fj {
             if (!IsaacRandom.field_g) {
               var9 = ProxySocketConnector.field_n;
               var10 = InputQueue.field_c;
-              var9.field_b.a(var10, (byte) -60, 14);
+              var9.field_b.addAction(var10, (byte) -60, 14);
             }
             var11 = ProxySocketConnector.field_n;
             var12 = TabbedPanel.field_Eb;
-            var11.field_b.a(var12, (byte) -73, 20);
+            var11.field_b.addAction(var12, (byte) -73, 20);
           }
           ProxySocketConnector.field_n.c(-24);
           ProxySocketConnector.field_n.b(false, (byte) -98);

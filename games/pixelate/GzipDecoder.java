@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class vh {
-    private java.util.zip.Inflater field_a;
-    static co field_c;
+final class GzipDecoder {
+    private java.util.zip.Inflater inflater;
+    static ViewportController field_c;
     static String field_b;
 
     final static void a(int param0) {
@@ -81,24 +81,24 @@ final class vh {
         }
     }
 
-    final void a(int param0, byte[] param1, PacketBuffer param2) {
+    final void decompress(int param0, byte[] param1, PacketBuffer param2) {
         try {
           try {
             if (31 != param2.payload[param2.position] ||
               param2.payload[param2.position + 1] != -117) {
               throw new RuntimeException("");
             }
-            if (null == this.field_a) {
-              this.field_a = new java.util.zip.Inflater(true);
+            if (null == this.inflater) {
+              this.inflater = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_a.setInput(param2.payload, param2.position + 10, param0 - param2.position - (10 - param2.payload.length));
-              this.field_a.inflate(param1);
+              this.inflater.setInput(param2.payload, param2.position + 10, param0 - param2.position - (10 - param2.payload.length));
+              this.inflater.inflate(param1);
             } catch (Exception exception) {
-              this.field_a.reset();
+              this.inflater.reset();
               throw new RuntimeException("");
             }
-            this.field_a.reset();
+            this.inflater.reset();
           } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) ((Object) runtimeException), "vh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
@@ -111,16 +111,16 @@ final class vh {
 
     public static void b(int param0) {
         if (param0 != -8) {
-          vh.a(-33);
+          GzipDecoder.a(-33);
         }
         field_b = null;
         field_c = null;
     }
 
-    private vh(int param0, int param1, int param2) {
+    private GzipDecoder(int param0, int param1, int param2) {
     }
 
-    public vh() {
+    public GzipDecoder() {
         this(-1, 1000000, 1000000);
     }
 

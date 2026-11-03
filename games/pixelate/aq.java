@@ -148,7 +148,7 @@ final class aq {
     }
 
     final static void a(int param0, boolean param1) {
-        rg.field_e = Js5NetworkRequest.field_C[param0];
+        LoginCredentials.field_e = Js5NetworkRequest.field_C[param0];
         fq.field_o = null;
         if (!param1) {
           ci.field_o = param0;

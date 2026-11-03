@@ -21,7 +21,7 @@ class UiComponent extends IntrusiveNode {
     static String field_v;
     static int[] field_m;
     static String field_w;
-    kd field_r;
+    TextLayout field_r;
     static IndexedSprite[] field_o;
     int field_C;
     UiListener field_n;
@@ -913,7 +913,7 @@ class UiComponent extends IntrusiveNode {
           this.field_q = param0;
           if (this.field_y instanceof WidgetTextLayout) {
             var4 = (WidgetTextLayout) ((Object) this.field_y);
-            this.field_E = var4.a(14871, this);
+            this.field_E = var4.getPreferredWidth(14871, this);
             this.field_C = var4.getPreferredWidth(this, 4592);
           }
         } catch (RuntimeException runtimeException) {

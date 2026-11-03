@@ -54,7 +54,7 @@ final class ih {
             DebouncedValidator.field_d = -2 + ce.field_f;
             return;
           }
-          rg.field_e = fq.field_o;
+          LoginCredentials.field_e = fq.field_o;
           DebouncedValidator.field_d = 0;
           fq.field_o = null;
           fo.field_t = DebouncedValidator.field_d - 128;
@@ -74,7 +74,7 @@ final class ih {
           fieldTemp$1 = DebouncedValidator.field_d + 1;
           DebouncedValidator.field_d = DebouncedValidator.field_d + 1;
           if (fieldTemp$1 >= ce.field_f) {
-            rg.field_e = fq.field_o;
+            LoginCredentials.field_e = fq.field_o;
             DebouncedValidator.field_d = 0;
             fq.field_o = null;
             fo.field_t = DebouncedValidator.field_d - 128;

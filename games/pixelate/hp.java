@@ -75,10 +75,10 @@ final class hp extends SceneWidget {
           var9.horizontalAlignment = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; var12 < kd.field_c.length; var12++) {
+          for (var12 = 0; var12 < TextLayout.field_c.length; var12++) {
             var13 = new SceneWidget(0L, param3, SpriteState.field_I[var12]);
-            var14 = new SceneWidget(0L, param3, kd.field_c[var12]);
-            var15 = param3.font.textWidth(kd.field_c[var12]);
+            var14 = new SceneWidget(0L, param3, TextLayout.field_c[var12]);
+            var15 = param3.font.textWidth(TextLayout.field_c[var12]);
             var13.a(var10, 15, 20, 256, 65);
             if (var11 < var15) {
               var11 = var15;

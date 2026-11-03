@@ -111,10 +111,10 @@ final class cn {
               wh.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, uk.field_v, 12556);
               aa.field_f.f(aa.field_f.position - var9, -1);
             }
-            vg.b(-1, 10000);
-            uk.field_s = mn.field_c;
+            SecondaryNodeHashTable.b(-1, 10000);
+            uk.field_s = TextLayoutLine.field_c;
           }
-          if (mn.field_c == uk.field_s &&
+          if (TextLayoutLine.field_c == uk.field_s &&
             QueuedInput.a(1, false)) {
             var9Lifetime1 = MusicCrossfadeStream.field_o.f(255);
             MusicCrossfadeStream.field_o.position = 0;
@@ -132,7 +132,7 @@ final class cn {
                 return stackIn_33_0;
               }
               if (var9Lifetime1 != 99) {
-                mn.field_e = var9Lifetime1;
+                TextLayoutLine.field_e = var9Lifetime1;
                 uk.field_s = bg.field_l;
                 jj.field_b = -1;
               } else {
@@ -161,7 +161,7 @@ final class cn {
           }
           if (uk.field_s == bg.field_l &&
             MusicPatchNode.e(-18481)) {
-            if (mn.field_e == 255) {
+            if (TextLayoutLine.field_e == 255) {
               var9_ref_String = MusicCrossfadeStream.field_o.e((byte) 40);
               if (var9_ref_String != null) {
                 QueuedInput.a(var9_ref_String, 126, AudioService.a(13867));
@@ -171,12 +171,12 @@ final class cn {
             }
             na.a(true);
             qj.field_b = false;
-            stackIn_56_0 = mn.field_e;
+            stackIn_56_0 = TextLayoutLine.field_e;
             return stackIn_56_0;
           }
           if (NodeHashTableIterator.field_e == null) {
             if (qj.field_b) {
-              if (no.d(8) > 30000L) {
+              if (CachedTextLayout.d(8) > 30000L) {
                 gi.field_b = ValidationIndicator.field_N;
               } else {
                 gi.field_b = ho.field_b;
@@ -424,12 +424,12 @@ final class cn {
 
     final static lc a(int param0, int param1, int param2, int param3) {
         int var5 = Pixelate.field_H ? 1 : 0;
-        lc var4 = (lc) (rg.field_c.c(1504642273));
+        lc var4 = (lc) (LoginCredentials.field_c.c(1504642273));
         while (var4 != null) {
           if (~param0 == ~var4.field_k) {
             return var4;
           }
-          var4 = (lc) (rg.field_c.last(1504642273));
+          var4 = (lc) (LoginCredentials.field_c.last(1504642273));
         }
         var4 = new lc();
         if (param3 > -16) {
@@ -437,7 +437,7 @@ final class cn {
         }
         var4.field_k = param0;
         var4.field_s = param2;
-        rg.field_c.addFirst(22125, var4);
+        LoginCredentials.field_c.addFirst(22125, var4);
         em.a((byte) -7, var4, param1);
         return var4;
     }

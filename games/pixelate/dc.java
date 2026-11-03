@@ -25,10 +25,10 @@ final class dc {
           while (true) {
             var3 = param2.a(param1, -84);
             while (var3.field_b == 0) {
-              vg.a(10L, (byte) 23);
+              SecondaryNodeHashTable.a(10L, (byte) 23);
             }
             if (var3.field_b != 1) {
-              vg.a(100L, (byte) 23);
+              SecondaryNodeHashTable.a(100L, (byte) 23);
               continue;
             }
             break;

@@ -14,7 +14,7 @@ final class mi extends de {
 
     final void a(int param0) {
         this.b((byte) -71);
-        int var2 = go.field_k != 0 ? 1 : 0;
+        int var2 = EmailCredentials.field_k != 0 ? 1 : 0;
         int var3 = null != wh.field_p ? 1 : 0;
         String var7 = EmailValidator.field_p;
         if (param0 != 11) {
@@ -158,7 +158,7 @@ final class mi extends de {
               aa.field_f.position = 0;
               aa.field_f.writeByte(160, 14);
               aa.field_f.writeByte(160, li.field_g.b(-27096).field_a);
-              vg.b(-1, 10000);
+              SecondaryNodeHashTable.b(-1, 10000);
               uk.field_s = cn.field_a;
             }
             if (uk.field_s == cn.field_a &&
@@ -166,7 +166,7 @@ final class mi extends de {
               var6_int = MusicCrossfadeStream.field_o.f(255);
               MusicCrossfadeStream.field_o.position = 0;
               if (var6_int != 0) {
-                mn.field_e = var6_int;
+                TextLayoutLine.field_e = var6_int;
                 uk.field_s = IndexedSpriteState.field_b;
                 jj.field_b = -1;
               } else {
@@ -186,7 +186,7 @@ final class mi extends de {
               var6_intLifetime1 = MusicCrossfadeStream.field_o.f(255);
               sc.field_a = null;
               MusicCrossfadeStream.field_o.position = 0;
-              mn.field_e = var6_intLifetime1;
+              TextLayoutLine.field_e = var6_intLifetime1;
               if (0 != var6_intLifetime1 &&
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
@@ -241,8 +241,8 @@ final class mi extends de {
                   dc.field_b[var8] = MusicCrossfadeStream.field_o.a(0);
                 }
               }
-              kn.field_J = MusicCrossfadeStream.field_o.h(5);
-              var11 = (CharSequence) ((Object) kn.field_J);
+              ModalStack.field_J = MusicCrossfadeStream.field_o.h(5);
+              var11 = (CharSequence) ((Object) ModalStack.field_J);
               LobbyGame.field_Hb = dh.a(var11, (byte) 54);
               ra.field_g = MusicCrossfadeStream.field_o.f(255);
               uk.field_s = Pixelate.field_G;
@@ -281,30 +281,30 @@ final class mi extends de {
                 ModalPanel.field_L[var8Lifetime1] = ModalPanel.field_L[var8Lifetime1] + 50;
               }
               MusicCrossfadeStream.field_o.a(0, ModalPanel.field_L);
-              stackIn_79_0 = mn.field_e;
+              stackIn_79_0 = TextLayoutLine.field_e;
               return stackIn_79_0;
             }
             if (IndexedSpriteState.field_b == uk.field_s &&
               MusicPatchNode.e(-18481)) {
               na.a(true);
-              if (mn.field_e == 7 &&
+              if (TextLayoutLine.field_e == 7 &&
                 !qj.field_b) {
                 qj.field_b = true;
                 stackIn_92_0 = -1;
                 return stackIn_92_0;
               }
-              if (mn.field_e == 7) {
-                mn.field_e = 3;
+              if (TextLayoutLine.field_e == 7) {
+                TextLayoutLine.field_e = 3;
               }
               gi.field_b = MusicCrossfadeStream.field_o.h(5);
               qj.field_b = false;
-              stackIn_90_0 = mn.field_e;
+              stackIn_90_0 = TextLayoutLine.field_e;
               return stackIn_90_0;
             }
             var6_intLifetime2 = 51 % ((-18 - param1) / 46);
             if (null == NodeHashTableIterator.field_e) {
               if (qj.field_b) {
-                if (no.d(8) <= 30000L) {
+                if (CachedTextLayout.d(8) <= 30000L) {
                   gi.field_b = ho.field_b;
                 } else {
                   gi.field_b = ValidationIndicator.field_N;
@@ -386,7 +386,7 @@ final class mi extends de {
               var6 = sb.a(3, vm.field_e[var3_int], true);
               var4 = var4 + LoadingProgressDialog.field_fb;
               var7 = -(var6 >> 1) + QuickChatCategory.field_u;
-              if (mn.a(param0, var4, 9, ValidatedTextWidget.field_fb + (bd.field_c << 1), var7 - AccountTermsPanel.field_J, param1, (AccountTermsPanel.field_J << 1) + var6)) {
+              if (TextLayoutLine.a(param0, var4, 9, ValidatedTextWidget.field_fb + (bd.field_c << 1), var7 - AccountTermsPanel.field_J, param1, (AccountTermsPanel.field_J << 1) + var6)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }

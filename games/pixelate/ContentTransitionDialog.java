@@ -208,7 +208,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
             this.field_bb.field_O = 256 - (this.field_cb << 8) / this.field_ab;
             return super.c(false);
           }
-          this.field_lb = co.field_h;
+          this.field_lb = ViewportController.field_h;
           this.a(this.field_db.field_C + this.field_fb + 12, 12 + this.field_db.field_E, this.field_gb, 57);
           this.field_cb = 0;
           this.field_bb.field_O = 0;
@@ -238,14 +238,14 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
           this.field_bb.field_O = 256 - (this.field_cb << 8) / this.field_ab;
           return super.c(false);
         }
-        this.field_lb = co.field_h;
+        this.field_lb = ViewportController.field_h;
         this.a(this.field_db.field_C + this.field_fb + 12, 12 + this.field_db.field_E, this.field_gb, 57);
         this.field_cb = 0;
         this.field_bb.field_O = 0;
         return super.c(false);
     }
 
-    ContentTransitionDialog(kn param0, UiComponent param1, int param2, int param3, int param4) {
+    ContentTransitionDialog(ModalStack param0, UiComponent param1, int param2, int param3, int param4) {
         super(param0, param1.field_E + 12, param2 + 12 + param1.field_C);
         try {
           this.field_gb = param4;
@@ -267,7 +267,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_db = param0;
-          if (co.field_h != this.field_lb) {
+          if (ViewportController.field_h != this.field_lb) {
             if (DisplayNameForm.field_I != this.field_lb) {
               this.field_lb = DisplayNameForm.field_I;
               this.field_cb = 0;
@@ -353,10 +353,10 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         if (re.field_h) {
           return null;
         }
-        if (am.field_c > no.field_h) {
+        if (Js5ArchiveManager.field_c > CachedTextLayout.field_h) {
           return null;
         }
-        if (!(am.field_c + pc.field_s <= no.field_h)) {
+        if (!(Js5ArchiveManager.field_c + pc.field_s <= CachedTextLayout.field_h)) {
           return qg.field_b;
         }
         return null;

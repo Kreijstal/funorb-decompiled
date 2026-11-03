@@ -538,7 +538,7 @@ abstract class de {
         var3 = Pixelate.field_H ? 1 : 0;
         if (!dj.field_c &&
           !LinkButtonPainter.field_d) {
-          while (bh.$cfr$intArgs$b$c4997cb15529(121)) {
+          while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(121)) {
             if (ke.field_a == 13) {
               this.c((byte) -16);
               continue;
@@ -831,7 +831,7 @@ abstract class de {
                                       break;
                                     }
                                     stackIn_190_0 = null;
-                                    if (go.field_k == 0) {
+                                    if (EmailCredentials.field_k == 0) {
                                       stackIn_191_1 = 5;
                                     } else {
                                       stackIn_191_1 = 9;

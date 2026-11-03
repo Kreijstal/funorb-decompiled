@@ -96,7 +96,7 @@ class jj {
           }
           var8 = param0.a(true);
           while (0 == var8.field_b) {
-            vg.a(10L, (byte) 23);
+            SecondaryNodeHashTable.a(10L, (byte) 23);
           }
           if (var8.field_b == 2) {
             stackIn_13_0 = new bo[]{};

@@ -96,7 +96,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         field_W = null;
     }
 
-    ResizableModalPanel(kn param0, int param1, int param2) {
+    ResizableModalPanel(ModalStack param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_Q = 0;
         this.field_S = 0;

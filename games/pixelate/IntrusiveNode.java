@@ -81,7 +81,7 @@ class IntrusiveNode {
           dk.field_a = param4;
           DraggableWidget.field_P = SocketConnector.a("gameprivacy", "lobby", (byte) 47, param1);
           fd.field_c = SocketConnector.a("ratedgame", "lobby", (byte) 47, param1);
-          go.field_h = SocketConnector.a("opentome", "lobby", (byte) 47, param1);
+          EmailCredentials.field_h = SocketConnector.a("opentome", "lobby", (byte) 47, param1);
           so.field_d = SocketConnector.a("allowspectators", "lobby", (byte) 47, param1);
           rb.field_p = new String[5];
           rb.field_p[3] = il.field_c;
@@ -112,7 +112,7 @@ class IntrusiveNode {
           if (param3 < 108) {
             IntrusiveNode.d(41);
           }
-          IsaacRandom.field_b = new SceneWidget(0L, AccountRequestDialog.field_mb, co.field_u);
+          IsaacRandom.field_b = new SceneWidget(0L, AccountRequestDialog.field_mb, ViewportController.field_u);
           LoginDialog.field_pb = new SceneWidget(0L, AccountRequestDialog.field_mb, nk.field_c);
           be.field_P = new SceneWidget(0L, AccountRequestDialog.field_mb, MusicPatchPcmStream.field_q);
           PasswordValidator.field_o = new SceneWidget(0L, AccountRequestDialog.field_mb, MatchController.field_b);
@@ -165,11 +165,11 @@ class IntrusiveNode {
           vd.field_a = new SceneWidget(0L, (SceneWidget) null);
           MatchingTextValidator.field_q = new SceneWidget(0L, TextFieldValidator.field_h);
           MatchingTextValidator.field_q.horizontalAlignment = 1;
-          le.field_h = new SceneWidget(0L, u.field_l, qn.field_m);
+          WeightedLruCache.field_h = new SceneWidget(0L, u.field_l, qn.field_m);
           wa.field_g = new SceneWidget(0L, ni.field_s, rh.field_m);
           ae.field_c = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
           vd.field_a.a(MatchingTextValidator.field_q, (byte) 26);
-          vd.field_a.a(le.field_h, (byte) 26);
+          vd.field_a.a(WeightedLruCache.field_h, (byte) 26);
           if (DialWidgetPainter.field_n) {
             vd.field_a.a(wa.field_g, (byte) 26);
           }

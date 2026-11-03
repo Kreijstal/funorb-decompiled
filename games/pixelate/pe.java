@@ -57,7 +57,7 @@ final class pe {
     }
 
     final static boolean a(boolean param0) {
-        am.field_e = true;
+        Js5ArchiveManager.field_e = true;
         if (!param0) {
           mc.field_q = 15000L + hm.a(64);
           return el.field_b == 11 ? true : false;

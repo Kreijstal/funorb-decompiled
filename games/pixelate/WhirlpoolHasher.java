@@ -53,7 +53,7 @@ final class WhirlpoolHasher {
         }
     }
 
-    final static void a(int param0, rl param1, boolean param2, int param3, boolean param4) {
+    final static void a(int param0, TriangleMesh param1, boolean param2, int param3, boolean param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_13_0 = false;
         int stackIn_34_0 = 0;
@@ -325,7 +325,7 @@ final class WhirlpoolHasher {
         RuntimeException decompiledCaughtException = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
-          var1_int = ge.field_c[0] * gf.field_g[0];
+          var1_int = ge.field_c[0] * ByteStorage.field_g[0];
           var2 = wo.field_f[param0];
           var3 = new int[var1_int];
           var4_int = 0;
@@ -337,7 +337,7 @@ final class WhirlpoolHasher {
             }
             break;
           }
-          var4 = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], gf.field_g[0], ge.field_c[0], var3);
+          var4 = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[0], e.field_b[0], ByteStorage.field_g[0], ge.field_c[0], var3);
           re.b(140);
           stackIn_5_0 = var4;
           return stackIn_5_0;

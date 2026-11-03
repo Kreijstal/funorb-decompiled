@@ -47,7 +47,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           String var5Lifetime3;
           String var5Lifetime4;
           try {
-            bh.field_n = param0;
+            DirectByteStorage.field_n = param0;
             try {
               var3 = param1.getParameter("cookieprefix");
               var5 = var3;

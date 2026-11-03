@@ -7,7 +7,7 @@ final class wi {
     static String field_g;
     private long field_l;
     SceneWidget field_o;
-    pi field_b;
+    ContextActionMenu field_b;
     String field_h;
     private String field_i;
     int field_m;
@@ -72,31 +72,31 @@ final class wi {
             var6 = ImageProducerRasterBuffer.a(-640, this.field_h) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_b.a(sd.a(ji.field_d, 52, new String[]{var7}), (byte) -106, 4);
-              this.field_b.a(sd.a(ff.field_e, 18, new String[]{var7}), (byte) -53, 6);
+              this.field_b.addAction(sd.a(ji.field_d, 52, new String[]{var7}), (byte) -106, 4);
+              this.field_b.addAction(sd.a(ff.field_e, 18, new String[]{var7}), (byte) -53, 6);
               if (param1 != null &&
                 param0 != 2 &&
                 !ln.field_q) {
                 this.field_j = param1;
-                this.field_b.a(sd.a(NodeHashTable.field_d, 61, new String[]{var7}), (byte) -80, 19);
+                this.field_b.addAction(sd.a(NodeHashTable.field_d, 61, new String[]{var7}), (byte) -80, 19);
               }
             }
             if (var5 != null) {
               if (!ul.a(57, this.field_h) &&
                 !ln.field_q) {
                 if (!IsaacRandom.field_g) {
-                  this.field_b.a(sd.a(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
+                  this.field_b.addAction(sd.a(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
                 }
-                this.field_b.a(sd.a(ho.field_f, 83, new String[]{var7}), (byte) -33, 18);
+                this.field_b.addAction(sd.a(ho.field_f, 83, new String[]{var7}), (byte) -33, 18);
                 if (param1 != null) {
                   this.field_j = param1;
-                  this.field_b.a(sd.a(NodeHashTable.field_d, 22, new String[]{var7}), (byte) -95, 19);
+                  this.field_b.addAction(sd.a(NodeHashTable.field_d, 22, new String[]{var7}), (byte) -95, 19);
                 }
               }
-              this.field_b.a(sd.a(ni.field_p, 18, new String[]{var7}), (byte) -33, 5);
+              this.field_b.addAction(sd.a(ni.field_p, 18, new String[]{var7}), (byte) -33, 5);
             }
             if (var6 != 0) {
-              this.field_b.a(sd.a(DelegatingCanvas.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
+              this.field_b.addAction(sd.a(DelegatingCanvas.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
               return;
             }
           }
@@ -256,7 +256,7 @@ final class wi {
         var5 = this.a((byte) 27);
         if (var4 != null) {
           if (!io.field_c.field_dc) {
-            this.field_b.a(sd.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
+            this.field_b.addAction(sd.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
             if (param1 == -98) {
               return;
             }
@@ -270,7 +270,7 @@ final class wi {
             discarded$1 = this.a(48, 58, -125);
             return;
           }
-          this.field_b.a(sd.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
+          this.field_b.addAction(sd.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
           if (param1 == -98) {
             return;
           }
@@ -299,7 +299,7 @@ final class wi {
           return;
         }
         if (var7.field_Vb) {
-          this.field_b.a(sd.a(ResourceArchive.field_j, param1 + 180, new String[]{var5}), (byte) -111, 1);
+          this.field_b.addAction(sd.a(ResourceArchive.field_j, param1 + 180, new String[]{var5}), (byte) -111, 1);
           if (param1 == -98) {
             return;
           }
@@ -307,7 +307,7 @@ final class wi {
           return;
         }
         if (!param0) {
-          this.field_b.a(sd.a(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
+          this.field_b.addAction(sd.a(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
           if (param1 == -98) {
             return;
           }
@@ -315,15 +315,15 @@ final class wi {
           return;
         }
         if (!var7.field_Jb) {
-          this.field_b.a(sd.a(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
+          this.field_b.addAction(sd.a(ImageProducerRasterBuffer.field_m, 67, new String[]{var5}), (byte) -83, 0);
           if (param1 == -98) {
             return;
           }
           discarded$6 = this.a(48, 58, -125);
           return;
         }
-        this.field_b.a(sd.a(ValidationHelpWidget.field_V, 59, new String[]{var5}), (byte) -70, 0);
-        this.field_b.a(sd.a(SoundCache.field_f, 101, new String[]{var5}), (byte) -41, 1);
+        this.field_b.addAction(sd.a(ValidationHelpWidget.field_V, 59, new String[]{var5}), (byte) -70, 0);
+        this.field_b.addAction(sd.a(SoundCache.field_f, 101, new String[]{var5}), (byte) -41, 1);
         if (param1 == -98) {
           return;
         }
@@ -423,21 +423,21 @@ final class wi {
           this.field_k = param1.field_j;
           if (param1.field_j == 0) {
             if (io.field_e == 0) {
-              this.field_b.a(gd.field_j, (byte) -31, 12);
+              this.field_b.addAction(gd.field_j, (byte) -31, 12);
             }
-            this.field_b.a(BufferedRandomAccessFile.field_d, (byte) -127, 13);
+            this.field_b.addAction(BufferedRandomAccessFile.field_d, (byte) -127, 13);
           }
           if (1 == param1.field_j) {
             if (0 == GradientOutlineTextPainter.field_v) {
-              this.field_b.a(m.field_l, (byte) -97, 12);
+              this.field_b.addAction(m.field_l, (byte) -97, 12);
             }
-            this.field_b.a(NameAvailabilityValidator.field_n, (byte) -106, 13);
+            this.field_b.addAction(NameAvailabilityValidator.field_n, (byte) -106, 13);
           }
           if (2 == param1.field_j) {
             if (0 == ib.field_e) {
-              this.field_b.a(gf.field_d, (byte) -78, 12);
+              this.field_b.addAction(ByteStorage.field_d, (byte) -78, 12);
             }
-            this.field_b.a(sf.field_a, (byte) -62, 13);
+            this.field_b.addAction(sf.field_a, (byte) -62, 13);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -469,13 +469,13 @@ final class wi {
             qj.a(this.field_h, this.field_l, (byte) 8);
           } else {
             if (param0 == 11) {
-              am.a(0, -26931, this.field_k, param2);
+              Js5ArchiveManager.a(0, -26931, this.field_k, param2);
             } else {
               if (param0 == 12) {
-                am.a(1, -26931, this.field_k, param2);
+                Js5ArchiveManager.a(1, -26931, this.field_k, param2);
               } else {
                 if (param0 == 13) {
-                  am.a(2, -26931, this.field_k, param2);
+                  Js5ArchiveManager.a(2, -26931, this.field_k, param2);
                 } else {
                   if (param0 == 14) {
                     IterableNodeHashTable.a(7500);
@@ -529,20 +529,20 @@ final class wi {
         }
         var4 = var3.field_pc;
         if (var3.field_cc) {
-          this.field_b.a(sd.a(fp.field_b, 97, new String[]{var4}), (byte) -105, 2);
-          this.field_b.a(sd.a(oi.field_a, 52, new String[]{var4}), (byte) -118, 3);
+          this.field_b.addAction(sd.a(fp.field_b, 97, new String[]{var4}), (byte) -105, 2);
+          this.field_b.addAction(sd.a(oi.field_a, 52, new String[]{var4}), (byte) -118, 3);
           return;
         }
         if (var3.field_hc) {
-          this.field_b.a(sd.a(vg.field_f, 53, new String[]{var4}), (byte) -106, 2);
+          this.field_b.addAction(sd.a(SecondaryNodeHashTable.field_f, 53, new String[]{var4}), (byte) -106, 2);
         } else {
           if (!var3.field_Ob &&
             var3.field_Mb) {
             if (!var3.field_dc) {
-              this.field_b.a(sd.a(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
+              this.field_b.addAction(sd.a(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
             } else {
               if (var3.field_hc) {
-                this.field_b.a(sd.a(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
+                this.field_b.addAction(sd.a(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
               }
             }
           }
@@ -550,12 +550,12 @@ final class wi {
         if (!var3.field_Ob) {
           return;
         }
-        this.field_b.a(sd.a(AccountNamePrompt.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
+        this.field_b.addAction(sd.a(AccountNamePrompt.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
     }
 
     wi(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_b = new pi(NameSuggestionsPanel.field_O);
+          this.field_b = new ContextActionMenu(NameSuggestionsPanel.field_O);
           param0.field_U = true;
           this.field_o = param0;
           this.field_k = param5;
@@ -582,7 +582,7 @@ final class wi {
           }
           var3 = this.a((byte) 43);
           String var2 = var3;
-          this.field_b.a(sd.a(IndexedSpriteState.field_j, param0 - 8830, new String[]{var3}), (byte) -72, 17);
+          this.field_b.addAction(sd.a(IndexedSpriteState.field_j, param0 - 8830, new String[]{var3}), (byte) -72, 17);
         }
         if (param0 == 8893) {
           return;

@@ -4,7 +4,7 @@
 final class dg {
     static boolean field_a;
     static ResourceArchive field_d;
-    static vg field_f;
+    static SecondaryNodeHashTable field_f;
     static String field_b;
     static String[] field_c;
     static String field_e;

@@ -1018,7 +1018,7 @@ final class MenuInputState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          am.a(-7749, (java.awt.Component) ((Object) param0));
+          Js5ArchiveManager.a(-7749, (java.awt.Component) ((Object) param0));
           QuickChatMenu.a((byte) -47, (java.awt.Component) ((Object) param0));
           if (null != ScrollContainer.field_Lb) {
             ScrollContainer.field_Lb.a(param1 + 18421, (java.awt.Component) ((Object) param0));

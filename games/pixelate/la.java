@@ -425,7 +425,7 @@ final class la {
                 }
               } else {
                 if (var12.field_Vb) {
-                  var12.field_Hb.field_cb = sd.a(gf.field_e, 111, new String[]{var20});
+                  var12.field_Hb.field_cb = sd.a(ByteStorage.field_e, 111, new String[]{var20});
                   var12.field_Mb.field_cb = IntrusiveNode.field_f;
                 } else {
                   if (var12.field_Jb) {
@@ -648,13 +648,13 @@ final class la {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var34 + "<br>" + sd.a(BoardParticle.field_q, 96, new String[]{(String) (var25)});
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + le.field_i + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + WeightedLruCache.field_i + (String) (var25);
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
                     var24Lifetime2 = var34 + "<br>" + sd.a(PacketBuffer.field_l, 102, new String[]{(String) (var25)});
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + bh.field_i + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + DirectByteStorage.field_i + (String) (var25);
                   }
                 }
                 if (param2 == ae.field_c &&
@@ -764,7 +764,7 @@ final class la {
               } else {
                 var7 = fd.field_b;
                 synchronized (var7) {
-                  fd.field_b.a(param1 ^ -8, var12, var9);
+                  fd.field_b.decompress(param1 ^ -8, var12, var9);
                 }
               }
               stackIn_19_0 = var6;

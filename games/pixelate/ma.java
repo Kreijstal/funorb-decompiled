@@ -25,7 +25,7 @@ final class ma extends bg {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        rl var4_ref_rl = null;
+        TriangleMesh var4_ref_rl = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -39,14 +39,14 @@ final class ma extends bg {
         int var13 = 0;
         int var14 = 0;
         int var16 = 0;
-        rl var17 = null;
+        TriangleMesh var17 = null;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        rl var17Lifetime1;
-        rl var17Lifetime2;
+        TriangleMesh var17Lifetime1;
+        TriangleMesh var17Lifetime2;
         int var3Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -67,7 +67,7 @@ final class ma extends bg {
             var4_ref_rl = ck.field_b[var3];
             var17 = var4_ref_rl;
             var17Lifetime2 = var4_ref_rl;
-            var4_ref_rl.a((byte) -17);
+            var4_ref_rl.ensureBounds((byte) -17);
             PasswordValidator.a(var3, 67);
             var5 = var4_ref_rl.field_c + var4_ref_rl.field_b >> 1;
             var6 = var4_ref_rl.field_F + var4_ref_rl.field_t >> 1;

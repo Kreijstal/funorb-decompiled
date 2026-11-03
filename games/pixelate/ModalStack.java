@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kn extends SingleChildContainer {
+final class ModalStack extends SingleChildContainer {
     static int field_O;
     static boolean field_L;
     static volatile boolean field_K;
@@ -78,7 +78,7 @@ final class kn extends SingleChildContainer {
         }
     }
 
-    public kn() {
+    public ModalStack() {
         super(0, 0, field_O, IndexedSpriteState.field_c, (WidgetPainter) null, (UiListener) null);
         this.field_N = new IntrusiveDeque();
     }

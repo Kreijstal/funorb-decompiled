@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class no extends kd {
+final class CachedTextLayout extends TextLayout {
     private int field_f;
     static String field_n;
     static Sprite[] field_p;
@@ -253,7 +253,7 @@ final class no extends kd {
                       }
                       if (var12 != 0) {
                         var10Lifetime1 = 1;
-                        no.a(param0, param1, (byte) 124, param3, param4, param5, param6, 1 + param7);
+                        CachedTextLayout.a(param0, param1, (byte) 124, param3, param4, param5, param6, 1 + param7);
                       }
                       if (pb.field_f) {
                         return;
@@ -278,7 +278,7 @@ final class no extends kd {
                       } else {
                         param4 = var11Lifetime1;
                       }
-                      no.a(param0, param1, (byte) 83, param3, param4, param5, param6, param7 + 1);
+                      CachedTextLayout.a(param0, param1, (byte) 83, param3, param4, param5, param6, param7 + 1);
                       if (pb.field_f) {
                         return;
                       }
@@ -334,12 +334,12 @@ final class no extends kd {
     }
 
     final void a(int param0, int param1, String param2, BitmapFont param3, int param4, int param5, int param6, int param7) {
-        mn stackIn_34_0;
-        mn stackIn_34_1;
+        TextLayoutLine stackIn_34_0;
+        TextLayoutLine stackIn_34_1;
         int stackIn_34_2;
         int stackIn_34_3;
-        mn stackIn_35_0 = null;
-        mn stackIn_35_1 = null;
+        TextLayoutLine stackIn_35_0 = null;
+        TextLayoutLine stackIn_35_1 = null;
         int stackIn_35_4 = 0;
         BitmapFont stackIn_39_0 = null;
         int stackIn_40_1 = 0;
@@ -354,7 +354,7 @@ final class no extends kd {
         int var11 = 0;
         int var12 = 0;
         String var13 = null;
-        mn var14 = null;
+        TextLayoutLine var14 = null;
         int var15 = 0;
         String[] var16 = null;
         String[] var17 = null;
@@ -365,7 +365,7 @@ final class no extends kd {
             param7 = param3.lineAdvance;
           }
           if (param2 == null) {
-            this.field_b = null;
+            this.lines = null;
             return;
           }
           if (param3 == this.field_l &&
@@ -422,7 +422,7 @@ final class no extends kd {
           } else {
             var11 = param3.maxAscent;
           }
-          this.field_b = new mn[var10];
+          this.lines = new TextLayoutLine[var10];
           var12Lifetime1 = 0;
           while (var10 > var12Lifetime1) {
             var13 = var16[var12Lifetime1];
@@ -442,7 +442,7 @@ final class no extends kd {
               stackIn_35_1 = null;
               stackIn_35_4 = 0;
             }
-            var14 = new mn(stackIn_34_2, stackIn_34_3, stackIn_35_4);
+            var14 = new TextLayoutLine(stackIn_34_2, stackIn_34_3, stackIn_35_4);
             var14.field_g[0] = 0;
             if (var13 != null) {
               var14.field_g[var13.length()] = param3.textWidth(var13);
@@ -450,12 +450,12 @@ final class no extends kd {
               if (param5 != 3) {
                 stackIn_40_1 = 0;
               } else {
-                stackIn_40_1 = this.a(var13, param0, param3.textWidth(var13), 60);
+                stackIn_40_1 = this.justificationStep(var13, param0, param3.textWidth(var13), 60);
               }
               an.a(stackIn_39_0, stackIn_40_1, (byte) -92, var14, var13);
             }
             var11 = var11 + param7;
-            this.field_b[var12Lifetime1] = var14;
+            this.lines[var12Lifetime1] = var14;
             var12Lifetime1++;
           }
           return;
@@ -480,10 +480,10 @@ final class no extends kd {
     }
 
     final void a(String param0, boolean param1, int param2, BitmapFont param3, int param4) {
-        mn var8 = null;
+        TextLayoutLine var8 = null;
         int var7 = 0;
         if (param0 == null) {
-          this.field_b = null;
+          this.lines = null;
           return;
         }
         if (param1) {
@@ -497,7 +497,7 @@ final class no extends kd {
           this.field_i = 1;
           this.field_o = true;
           this.field_l = param3;
-          var8 = this.a(param0, 0, param3, param2);
+          var8 = this.createSingleLine(param0, 0, param3, param2);
           var7 = param3.textWidth(param0);
           var8.field_g[0] = param4 - (var7 >> 1);
           var8.field_g[param0.length()] = param4 + (var7 >> 1);
@@ -1073,10 +1073,10 @@ final class no extends kd {
     }
 
     final void a(BitmapFont param0, int param1, int param2, boolean param3, String param4) {
-        mn var8 = null;
-        mn var9 = null;
+        TextLayoutLine var8 = null;
+        TextLayoutLine var9 = null;
         if (param4 == null) {
-          this.field_b = null;
+          this.lines = null;
           return;
         }
         if (this.field_l == param0 &&
@@ -1094,7 +1094,7 @@ final class no extends kd {
           return;
         }
         try {
-          var8 = this.a(param4, 0, param0, param1);
+          var8 = this.createSingleLine(param4, 0, param0, param1);
           var9 = var8;
           var9.field_g[0] = -param0.textWidth(param4) + param2;
           var9.field_g[param4.length()] = param2;
@@ -1104,12 +1104,12 @@ final class no extends kd {
         }
     }
 
-    private final mn a(String param0, int param1, BitmapFont param2, int param3) {
-        mn var5 = null;
+    private final TextLayoutLine createSingleLine(String param0, int param1, BitmapFont param2, int param3) {
+        TextLayoutLine var5 = null;
         RuntimeException var5_ref = null;
-        mn var6 = null;
-        mn stackIn_2_0 = null;
-        mn stackIn_4_0 = null;
+        TextLayoutLine var6 = null;
+        TextLayoutLine stackIn_2_0 = null;
+        TextLayoutLine stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -1117,13 +1117,13 @@ final class no extends kd {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new mn(-param2.maxAscent + param3, param3 + param2.maxDescent, param0.length());
+          var6 = new TextLayoutLine(-param2.maxAscent + param3, param3 + param2.maxDescent, param0.length());
           var5 = var6;
           if (param1 != 0) {
-            stackIn_2_0 = (mn) null;
+            stackIn_2_0 = (TextLayoutLine) null;
             return stackIn_2_0;
           }
-          this.field_b = new mn[]{var6};
+          this.lines = new TextLayoutLine[]{var6};
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1147,10 +1147,10 @@ final class no extends kd {
     }
 
     final void a(String param0, int param1, BitmapFont param2, int param3, int param4) {
-        mn var7 = null;
+        TextLayoutLine var7 = null;
         int var6_int = -72 % ((param4 + 70) / 49);
         if (param0 == null) {
-          this.field_b = null;
+          this.lines = null;
           return;
         }
         if (this.field_l == param2 &&
@@ -1165,7 +1165,7 @@ final class no extends kd {
           this.field_l = param2;
           this.field_i = 0;
           this.field_m = param0;
-          var7 = this.a(param0, 0, param2, param1);
+          var7 = this.createSingleLine(param0, 0, param2, param1);
           var7.field_g[0] = param3;
           var7.field_g[param0.length()] = param2.textWidth(param0) + param3;
           an.a(param2, 0, (byte) -92, var7, param0);
@@ -1174,7 +1174,7 @@ final class no extends kd {
         }
     }
 
-    public no() {
+    public CachedTextLayout() {
     }
 
     static {
