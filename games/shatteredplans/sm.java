@@ -61,7 +61,7 @@ final class sm {
         MidiPcmStream.a(var10, var9, var7, (byte) -102, var8);
         SoftwareRasterizer.saveClip(GzipInflater.field_f);
         SoftwareRasterizer.setClip(var7, var9, var7 + var8, var9 + var10);
-        this.e(var5, 7903);
+        this.drawItems(var5, 7903);
         SoftwareRasterizer.restoreClip(GzipInflater.field_f);
         return;
     }
@@ -344,7 +344,7 @@ final class sm {
         return;
     }
 
-    private final int d(int param0, int param1, int param2) {
+    private final int findHexAt(int param0, int param1, int param2) {
         int var7 = 0;
         int var4;
         int var5;
@@ -352,7 +352,7 @@ final class sm {
         int var8;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 < 53) {
-          this.e(93, -98);
+          this.drawItems(93, -98);
         }
         var4 = 140;
         var5 = 52;
@@ -456,7 +456,7 @@ final class sm {
         }
     }
 
-    private final void e(int param0, int param1) {
+    private final void drawItems(int param0, int param1) {
         int var6 = 0;
         int stackIn_12_1 = 0;
         boolean stackIn_13_2 = false;
@@ -494,16 +494,16 @@ final class sm {
                   stackIn_17_0 = this;
                   stackIn_17_3 = true;
                 }
-                this.a(stackIn_16_1, stackIn_16_2, stackIn_17_3);
+                this.drawItem(stackIn_16_1, stackIn_16_2, stackIn_17_3);
               } else {
                 stackIn_12_1 = var6;
                 stackIn_13_2 = (var6 == this.field_d.field_c);
-                this.a(stackIn_12_1, stackIn_13_2, var7, false);
+                this.drawItem(stackIn_12_1, stackIn_13_2, var7, false);
               }
             }
             if (TutorialVictoryChecker.field_p[this.field_a][var6] != 29 &&
               TutorialVictoryChecker.field_p[this.field_a][var6] != 28) {
-              var4Lifetime1 = this.c(var6, true);
+              var4Lifetime1 = this.itemY(var6, true);
               if (var6 == this.field_d.field_c) {
                 hn.field_c.draw(25 + var3, (TutorialVictoryChecker.field_l[this.field_a] - hn.field_c.field_w) / 2 + var4Lifetime1);
               } else {
@@ -556,7 +556,7 @@ final class sm {
         SoftwareRasterizer.restoreClip(MusicEnvelope.field_m);
     }
 
-    private final void a(int param0, boolean param1, int param2, boolean param3) {
+    private final void drawItem(int param0, boolean param1, int param2, boolean param3) {
         int discarded$0 = 0;
         int discarded$1 = 0;
         int stackIn_5_0 = 0;
@@ -573,12 +573,12 @@ final class sm {
         if (param3) {
           this.field_d = (np) null;
         }
-        var6 = this.c(-22609, var5);
+        var6 = this.itemLabel(-22609, var5);
         stackIn_5_0 = (param1) ? 2805974 : 2458760;
         var7 = stackIn_5_0;
         var8 = TutorialVictoryChecker.field_l[this.field_a];
-        var9 = this.b(param0, true);
-        var10 = this.c(param0, true);
+        var9 = this.itemX(param0, true);
+        var10 = this.itemY(param0, true);
         if (21 != var5 &&
           var5 != 22) {
           mp.field_b.drawStringAlpha(var6, var9, var10 + mp.field_b.field_J, var7, -1, param2);
@@ -741,9 +741,9 @@ final class sm {
         stackIn_8_1 = var13;
         stackIn_9_2 = (var15 < var16) ? var15 : var16;
         SoftwareRasterizer.setClip(stackIn_8_0, stackIn_8_1, stackIn_9_2, var14 + var13);
-        this.e(var5, param1 + 14372);
+        this.drawItems(var5, param1 + 14372);
         SoftwareRasterizer.setClip(var11, var13, var11 + var12, var14 + var13);
-        mj.field_Hb[param0].e(var5, 7903);
+        mj.field_Hb[param0].drawItems(var5, 7903);
         SoftwareRasterizer.restoreClip(GzipInflater.field_f);
     }
 
@@ -769,7 +769,7 @@ final class sm {
         SoftwareRasterizer.saveClip(MusicEnvelope.field_m);
         SoftwareRasterizer.resetClip();
         if (param0 != -23) {
-          discarded$0 = this.c(72, -48);
+          discarded$0 = this.itemLabel(72, -48);
         }
         if (Dialog.d(true)) {
           this.d(param0 ^ -21);
@@ -889,7 +889,7 @@ final class sm {
         }
     }
 
-    private final void a(int param0, int param1, boolean param2) {
+    private final void drawItem(int param0, int param1, boolean param2) {
         int discarded$2 = 0;
         int discarded$3 = 0;
         int var4;
@@ -905,12 +905,12 @@ final class sm {
           field_b = 112;
         }
         var4 = TutorialVictoryChecker.field_p[this.field_a][param0];
-        var5 = this.c(-22609, var4);
+        var5 = this.itemLabel(-22609, var4);
         stackIn_5_0 = (!param2) ? 2458760 : 2805974;
         var6 = stackIn_5_0;
         var7 = TutorialVictoryChecker.field_l[this.field_a];
-        var8 = this.b(param0, true);
-        var9 = this.c(param0, true);
+        var8 = this.itemX(param0, true);
+        var9 = this.itemY(param0, true);
         if (var4 != 21 &&
           var4 != 22) {
           mp.field_b.drawString(var5, var8, mp.field_b.field_J + var9, var6, -1);
@@ -998,7 +998,7 @@ final class sm {
         }
     }
 
-    private final int a(int param0, boolean param1) {
+    private final int itemWidth(int param0, boolean param1) {
         int discarded$0 = 0;
         int var3 = TutorialVictoryChecker.field_p[this.field_a][param0];
         if (param1) {
@@ -1008,7 +1008,7 @@ final class sm {
           22 == var3) {
           return 120 + IsolationistAi.field_t;
         }
-        return mp.field_b.stringWidth(this.c(-22609, var3));
+        return mp.field_b.stringWidth(this.itemLabel(-22609, var3));
     }
 
     private final void a(int param0, boolean param1, int param2, int param3) {
@@ -1472,10 +1472,10 @@ final class sm {
         if (!param0) {
           this.field_f = true;
         }
-        return this.b(false) + 65 + this.a(param1, false);
+        return this.b(false) + 65 + this.itemWidth(param1, false);
     }
 
-    private final int f(int param0, int param1) {
+    private final int rowHeight(int param0, int param1) {
         if (param0 != -20) {
           this.e((byte) 56);
         }
@@ -1662,13 +1662,13 @@ final class sm {
     private final void a(int param0) {
         int discarded$0 = 0;
         int var2 = 0;
-        RasterBuffer.field_e = this.d(param0 + 16191, TertiaryListSequence.field_k, bb.field_b);
+        RasterBuffer.field_e = this.findHexAt(param0 + 16191, TertiaryListSequence.field_k, bb.field_b);
         if (param0 != -16084) {
           discarded$0 = this.b(true);
         }
         if (je.field_d == 0) {
         } else {
-          var2 = this.d(84, PointsVictoryChecker.field_p, SliderWidget.field_P);
+          var2 = this.findHexAt(84, PointsVictoryChecker.field_p, SliderWidget.field_P);
           if (var2 == an.field_c) {
             an.field_c = -1;
           } else {
@@ -1735,7 +1735,7 @@ final class sm {
         int var9 = var3 + 10;
         int var10 = 127 / ((param0 - 15) / 60);
         MidiPcmStream.a(var9, var8, var6, (byte) -72, var7);
-        this.e(var4, 7903);
+        this.drawItems(var4, 7903);
     }
 
     private final boolean a(byte param0, int param1) {
@@ -1788,7 +1788,7 @@ final class sm {
               js.a(256, 197126152);
             }
             if (this.field_d.b((byte) -50)) {
-              var6 = this.b(param1, true) + this.a(true, param1) + IsolationistAi.field_t - 120 >> 1;
+              var6 = this.itemX(param1, true) + this.a(true, param1) + IsolationistAi.field_t - 120 >> 1;
               var7 = TertiaryListSequence.field_k - var6;
               var8 = 256 * var7 / 120;
               if (0 < var8) {
@@ -1829,7 +1829,7 @@ final class sm {
               }
               if (this.field_d.b((byte) -73)) {
                 stackIn_92_0 = -120;
-                stackIn_92_1 = this.b(param1, true);
+                stackIn_92_1 = this.itemX(param1, true);
                 stackIn_93_3 = !(param2);
                 var6 = stackIn_92_0 + (stackIn_92_1 - (-this.a(stackIn_93_3, param1) - IsolationistAi.field_t)) >> 1;
                 var7Lifetime1 = TertiaryListSequence.field_k - var6;
@@ -2102,7 +2102,7 @@ final class sm {
         SoftwareRasterizer.restoreClip(MusicEnvelope.field_m);
     }
 
-    private final int b(int param0, boolean param1) {
+    private final int itemX(int param0, boolean param1) {
         if (!param1) {
           return -70;
         }
@@ -2518,7 +2518,7 @@ final class sm {
         return TutorialVictoryChecker.field_m[this.field_a];
     }
 
-    private final String c(int param0, int param1) {
+    private final String itemLabel(int param0, int param1) {
         String var3;
         int var4;
         String var5;
@@ -2574,7 +2574,7 @@ final class sm {
         return null;
     }
 
-    private final int c(int param0, boolean param1) {
+    private final int itemY(int param0, boolean param1) {
         if (!param1) {
           return 40;
         }
@@ -2768,12 +2768,12 @@ final class sm {
           this.field_h = 86;
         }
         for (var4 = 0; TutorialVictoryChecker.field_p[this.field_a].length > var4; var4++) {
-          var5 = this.c(var4, true);
+          var5 = this.itemY(var4, true);
           if (this.a((byte) 44, var4) &&
-            param2 >= this.b(var4, true) &&
+            param2 >= this.itemX(var4, true) &&
             param2 < this.a(true, var4) &&
             var5 <= param0 &&
-            param0 < var5 + this.f(-20, var4)) {
+            param0 < var5 + this.rowHeight(-20, var4)) {
             return var4;
           }
         }

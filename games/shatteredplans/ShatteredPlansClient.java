@@ -60,8 +60,8 @@ public final class ShatteredPlansClient extends tl {
         MusicCrossfadeStream var3 = new MusicCrossfadeStream();
         var3.field_u.d(128, (byte) -110, 9);
         var3.field_r.d(128, (byte) -110, 9);
-        var3.field_u.c(598, wm.field_b);
-        var3.field_r.c(param0 ^ -599, wm.field_b);
+        var3.field_u.setMasterVolume(598, wm.field_b);
+        var3.field_r.setMasterVolume(param0 ^ -599, wm.field_b);
         DebouncedValidator.a((java.awt.Component) ((Object) tm.field_i), fa.field_W, var3, 1102, false, 22050, 22050, true);
         IterableNodeHashTable.field_b = 2458760;
         wo.field_a = 2805974;

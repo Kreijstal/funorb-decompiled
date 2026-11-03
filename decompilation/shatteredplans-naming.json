@@ -5700,6 +5700,22 @@
       "renamedSymbol": "M:MidiPcmStream.skip(I)V"
     },
     {
+      "symbol": "M:ga.a(IB)V",
+      "originalName": "a",
+      "to": "handleMessage",
+      "evidence": "Decodes a packed MIDI short message and dispatches note, pressure, controller, program and pitch wheel events.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.handleMessage(IB)V"
+    },
+    {
+      "symbol": "M:ga.a(IBI)V",
+      "originalName": "a",
+      "to": "onChannelPressure",
+      "evidence": "Receives a channel pressure event and ignores it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.onChannelPressure(IBI)V"
+    },
+    {
       "symbol": "M:ga.a(II)V",
       "originalName": "a",
       "to": "allNotesOff",
@@ -5718,10 +5734,10 @@
     {
       "symbol": "M:ga.a(III)V",
       "originalName": "a",
-      "to": "setPitchBend",
-      "evidence": "Stores the bend value of a channel and the matching 2 to the power of its scaled value.",
+      "to": "setFineTuning",
+      "evidence": "Stores the data-entry value of a channel and the frequency ratio 2 to the power of its scaled value.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:MidiPcmStream.setPitchBend(III)V"
+      "renamedSymbol": "M:MidiPcmStream.setFineTuning(III)V"
     },
     {
       "symbol": "M:ga.a(IIIB)V",
@@ -5730,6 +5746,14 @@
       "evidence": "Releases any matching note, then starts a voice for the note and velocity on the channel.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MidiPcmStream.noteOn(IIIB)V"
+    },
+    {
+      "symbol": "M:ga.a(IIZI)V",
+      "originalName": "a",
+      "to": "onPolyPressure",
+      "evidence": "Receives a polyphonic key pressure event and ignores it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.onPolyPressure(IIZI)V"
     },
     {
       "symbol": "M:ga.a(Lbc;Lgh;IILio;)Z",
@@ -5788,6 +5812,14 @@
       "renamedSymbol": "M:MidiPcmStream.removeChannelVoices(IB)V"
     },
     {
+      "symbol": "M:ga.b(IBI)V",
+      "originalName": "b",
+      "to": "setPitchWheel",
+      "evidence": "Stores the pitch wheel value of a channel.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.setPitchWheel(IBI)V"
+    },
+    {
       "symbol": "M:ga.b(IZ)V",
       "originalName": "b",
       "to": "stopTrack",
@@ -5812,6 +5844,14 @@
       "renamedSymbol": "M:MidiPcmStream.fill([III)V"
     },
     {
+      "symbol": "M:ga.c(II)V",
+      "originalName": "c",
+      "to": "setMasterVolume",
+      "evidence": "Stores the master volume that scales every voice.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.setMasterVolume(II)V"
+    },
+    {
       "symbol": "M:ga.c(IZ)V",
       "originalName": "c",
       "to": "setTempoScale",
@@ -5834,6 +5874,14 @@
       "evidence": "Assigns null to 4 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MidiPcmStream.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:ga.e(I)V",
+      "originalName": "e",
+      "to": "stop",
+      "evidence": "Stops the current track and releases its voices.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MidiPcmStream.stop(I)V"
     },
     {
       "symbol": "M:ga.h(I)Z",
@@ -12468,12 +12516,84 @@
       "renamedSymbol": "M:CipherPacketBuffer.clearStatics(I)V"
     },
     {
+      "symbol": "M:sm.a(IIZ)V",
+      "originalName": "a",
+      "to": "drawItem",
+      "evidence": "Draws one menu item with its label or slider at the item position.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sm.drawItem(IIZ)V"
+    },
+    {
+      "symbol": "M:sm.a(IZ)I",
+      "originalName": "a",
+      "to": "itemWidth",
+      "evidence": "Returns the width of a menu item, a fixed width for sliders.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sm.itemWidth(IZ)I"
+    },
+    {
+      "symbol": "M:sm.a(IZIZ)V",
+      "originalName": "a",
+      "to": "drawItem",
+      "evidence": "Draws one menu item with its label or slider at the item position with an alpha.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sm.drawItem(IZIZ)V"
+    },
+    {
+      "symbol": "M:sm.b(IZ)I",
+      "originalName": "b",
+      "to": "itemX",
+      "evidence": "Returns the horizontal position of a menu item.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sm.itemX(IZ)I"
+    },
+    {
+      "symbol": "M:sm.c(II)Ljava/lang/String;",
+      "originalName": "c",
+      "to": "itemLabel",
+      "evidence": "Returns the label text for a menu item kind.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sm.itemLabel(II)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:sm.c(IZ)I",
+      "originalName": "c",
+      "to": "itemY",
+      "evidence": "Returns the vertical position of a menu item.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sm.itemY(IZ)I"
+    },
+    {
+      "symbol": "M:sm.d(III)I",
+      "originalName": "d",
+      "to": "findHexAt",
+      "evidence": "Returns the index of the hexagonal button under the pointer or minus one.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sm.findHexAt(III)I"
+    },
+    {
+      "symbol": "M:sm.e(II)V",
+      "originalName": "e",
+      "to": "drawItems",
+      "evidence": "Draws every menu item with its reveal animation and highlight.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sm.drawItems(II)V"
+    },
+    {
       "symbol": "M:sm.f(I)V",
       "originalName": "f",
       "to": "clearStatics",
       "evidence": "Assigns null to 1 static field of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:sm.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:sm.f(II)I",
+      "originalName": "f",
+      "to": "rowHeight",
+      "evidence": "Returns the row height of the current menu screen.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sm.rowHeight(II)I"
     },
     {
       "symbol": "M:sn.a(CB)Ljava/lang/String;",
@@ -125646,7 +125766,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#0",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#0",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -125657,7 +125777,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#1",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#1",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -125668,7 +125788,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#10",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#10",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#10",
       "originalName": "var5Lifetime4",
       "renamedName": "var5Lifetime4",
       "declaration": {
@@ -125679,7 +125799,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#11",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#11",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#11",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -125690,7 +125810,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#12",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#12",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#12",
       "originalName": "var6Lifetime2",
       "renamedName": "var6Lifetime2",
       "declaration": {
@@ -125701,7 +125821,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#13",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#13",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#13",
       "originalName": "var6Lifetime3",
       "renamedName": "var6Lifetime3",
       "declaration": {
@@ -125712,7 +125832,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#14",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#14",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#14",
       "originalName": "var6Lifetime4",
       "renamedName": "var6Lifetime4",
       "declaration": {
@@ -125723,7 +125843,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#15",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#15",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#15",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -125734,7 +125854,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#16",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#16",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#16",
       "originalName": "var7Lifetime2",
       "renamedName": "var7Lifetime2",
       "declaration": {
@@ -125745,7 +125865,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#17",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#17",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#17",
       "originalName": "var7Lifetime3",
       "renamedName": "var7Lifetime3",
       "declaration": {
@@ -125756,7 +125876,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#18",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#18",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#18",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -125767,7 +125887,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#19",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#19",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#19",
       "originalName": "var5Lifetime3Lifetime1",
       "renamedName": "var5Lifetime3Lifetime1",
       "declaration": {
@@ -125778,7 +125898,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#2",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#2",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -125789,7 +125909,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#20",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#20",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#20",
       "originalName": "var5Lifetime3Lifetime2",
       "renamedName": "var5Lifetime3Lifetime2",
       "declaration": {
@@ -125800,7 +125920,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#21",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#21",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#21",
       "originalName": "var6Lifetime3Lifetime1",
       "renamedName": "var6Lifetime3Lifetime1",
       "declaration": {
@@ -125811,7 +125931,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#22",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#22",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#22",
       "originalName": "var6Lifetime3Lifetime2",
       "renamedName": "var6Lifetime3Lifetime2",
       "declaration": {
@@ -125822,7 +125942,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#3",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#3",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -125833,7 +125953,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#4",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#4",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -125844,7 +125964,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#5",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#5",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -125855,7 +125975,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#6",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#6",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -125866,7 +125986,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#7",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#7",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#7",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -125877,7 +125997,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#8",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#8",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#8",
       "originalName": "var5Lifetime2",
       "renamedName": "var5Lifetime2",
       "declaration": {
@@ -125888,7 +126008,7 @@
     },
     {
       "symbol": "L:ga.a(IB)V#9",
-      "renamedSymbol": "L:MidiPcmStream.a(IB)V#9",
+      "renamedSymbol": "L:MidiPcmStream.handleMessage(IB)V#9",
       "originalName": "var5Lifetime3",
       "renamedName": "var5Lifetime3",
       "declaration": {
@@ -125954,7 +126074,7 @@
     },
     {
       "symbol": "L:ga.a(III)V#0",
-      "renamedSymbol": "L:MidiPcmStream.setPitchBend(III)V#0",
+      "renamedSymbol": "L:MidiPcmStream.setFineTuning(III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -266567,7 +266687,7 @@
     },
     {
       "symbol": "L:sm.a(IIZ)V#0",
-      "renamedSymbol": "L:sm.a(IIZ)V#0",
+      "renamedSymbol": "L:sm.drawItem(IIZ)V#0",
       "originalName": "discarded$2",
       "renamedName": "discarded$2",
       "declaration": {
@@ -266578,7 +266698,7 @@
     },
     {
       "symbol": "L:sm.a(IIZ)V#1",
-      "renamedSymbol": "L:sm.a(IIZ)V#1",
+      "renamedSymbol": "L:sm.drawItem(IIZ)V#1",
       "originalName": "discarded$3",
       "renamedName": "discarded$3",
       "declaration": {
@@ -266589,7 +266709,7 @@
     },
     {
       "symbol": "L:sm.a(IIZ)V#10",
-      "renamedSymbol": "L:sm.a(IIZ)V#10",
+      "renamedSymbol": "L:sm.drawItem(IIZ)V#10",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -266600,7 +266720,7 @@
     },
     {
       "symbol": "L:sm.a(IIZ)V#2",
-      "renamedSymbol": "L:sm.a(IIZ)V#2",
+      "renamedSymbol": "L:sm.drawItem(IIZ)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -266611,7 +266731,7 @@
     },
     {
       "symbol": "L:sm.a(IIZ)V#3",
-      "renamedSymbol": "L:sm.a(IIZ)V#3",
+      "renamedSymbol": "L:sm.drawItem(IIZ)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -266622,7 +266742,7 @@
     },
     {
       "symbol": "L:sm.a(IIZ)V#4",
-      "renamedSymbol": "L:sm.a(IIZ)V#4",
+      "renamedSymbol": "L:sm.drawItem(IIZ)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -266633,7 +266753,7 @@
     },
     {
       "symbol": "L:sm.a(IIZ)V#5",
-      "renamedSymbol": "L:sm.a(IIZ)V#5",
+      "renamedSymbol": "L:sm.drawItem(IIZ)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -266644,7 +266764,7 @@
     },
     {
       "symbol": "L:sm.a(IIZ)V#6",
-      "renamedSymbol": "L:sm.a(IIZ)V#6",
+      "renamedSymbol": "L:sm.drawItem(IIZ)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -266655,7 +266775,7 @@
     },
     {
       "symbol": "L:sm.a(IIZ)V#7",
-      "renamedSymbol": "L:sm.a(IIZ)V#7",
+      "renamedSymbol": "L:sm.drawItem(IIZ)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -266666,7 +266786,7 @@
     },
     {
       "symbol": "L:sm.a(IIZ)V#8",
-      "renamedSymbol": "L:sm.a(IIZ)V#8",
+      "renamedSymbol": "L:sm.drawItem(IIZ)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -266677,7 +266797,7 @@
     },
     {
       "symbol": "L:sm.a(IIZ)V#9",
-      "renamedSymbol": "L:sm.a(IIZ)V#9",
+      "renamedSymbol": "L:sm.drawItem(IIZ)V#9",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -266798,7 +266918,7 @@
     },
     {
       "symbol": "L:sm.a(IZ)I#0",
-      "renamedSymbol": "L:sm.a(IZ)I#0",
+      "renamedSymbol": "L:sm.itemWidth(IZ)I#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -266809,7 +266929,7 @@
     },
     {
       "symbol": "L:sm.a(IZ)I#1",
-      "renamedSymbol": "L:sm.a(IZ)I#1",
+      "renamedSymbol": "L:sm.itemWidth(IZ)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -267887,7 +268007,7 @@
     },
     {
       "symbol": "L:sm.a(IZIZ)V#0",
-      "renamedSymbol": "L:sm.a(IZIZ)V#0",
+      "renamedSymbol": "L:sm.drawItem(IZIZ)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -267898,7 +268018,7 @@
     },
     {
       "symbol": "L:sm.a(IZIZ)V#1",
-      "renamedSymbol": "L:sm.a(IZIZ)V#1",
+      "renamedSymbol": "L:sm.drawItem(IZIZ)V#1",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -267909,7 +268029,7 @@
     },
     {
       "symbol": "L:sm.a(IZIZ)V#10",
-      "renamedSymbol": "L:sm.a(IZIZ)V#10",
+      "renamedSymbol": "L:sm.drawItem(IZIZ)V#10",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -267920,7 +268040,7 @@
     },
     {
       "symbol": "L:sm.a(IZIZ)V#11",
-      "renamedSymbol": "L:sm.a(IZIZ)V#11",
+      "renamedSymbol": "L:sm.drawItem(IZIZ)V#11",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -267931,7 +268051,7 @@
     },
     {
       "symbol": "L:sm.a(IZIZ)V#2",
-      "renamedSymbol": "L:sm.a(IZIZ)V#2",
+      "renamedSymbol": "L:sm.drawItem(IZIZ)V#2",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -267942,7 +268062,7 @@
     },
     {
       "symbol": "L:sm.a(IZIZ)V#3",
-      "renamedSymbol": "L:sm.a(IZIZ)V#3",
+      "renamedSymbol": "L:sm.drawItem(IZIZ)V#3",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -267953,7 +268073,7 @@
     },
     {
       "symbol": "L:sm.a(IZIZ)V#4",
-      "renamedSymbol": "L:sm.a(IZIZ)V#4",
+      "renamedSymbol": "L:sm.drawItem(IZIZ)V#4",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -267964,7 +268084,7 @@
     },
     {
       "symbol": "L:sm.a(IZIZ)V#5",
-      "renamedSymbol": "L:sm.a(IZIZ)V#5",
+      "renamedSymbol": "L:sm.drawItem(IZIZ)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -267975,7 +268095,7 @@
     },
     {
       "symbol": "L:sm.a(IZIZ)V#6",
-      "renamedSymbol": "L:sm.a(IZIZ)V#6",
+      "renamedSymbol": "L:sm.drawItem(IZIZ)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -267986,7 +268106,7 @@
     },
     {
       "symbol": "L:sm.a(IZIZ)V#7",
-      "renamedSymbol": "L:sm.a(IZIZ)V#7",
+      "renamedSymbol": "L:sm.drawItem(IZIZ)V#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -267997,7 +268117,7 @@
     },
     {
       "symbol": "L:sm.a(IZIZ)V#8",
-      "renamedSymbol": "L:sm.a(IZIZ)V#8",
+      "renamedSymbol": "L:sm.drawItem(IZIZ)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -268008,7 +268128,7 @@
     },
     {
       "symbol": "L:sm.a(IZIZ)V#9",
-      "renamedSymbol": "L:sm.a(IZIZ)V#9",
+      "renamedSymbol": "L:sm.drawItem(IZIZ)V#9",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -268932,7 +269052,7 @@
     },
     {
       "symbol": "L:sm.c(II)Ljava/lang/String;#0",
-      "renamedSymbol": "L:sm.c(II)Ljava/lang/String;#0",
+      "renamedSymbol": "L:sm.itemLabel(II)Ljava/lang/String;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -268943,7 +269063,7 @@
     },
     {
       "symbol": "L:sm.c(II)Ljava/lang/String;#1",
-      "renamedSymbol": "L:sm.c(II)Ljava/lang/String;#1",
+      "renamedSymbol": "L:sm.itemLabel(II)Ljava/lang/String;#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -268954,7 +269074,7 @@
     },
     {
       "symbol": "L:sm.c(II)Ljava/lang/String;#2",
-      "renamedSymbol": "L:sm.c(II)Ljava/lang/String;#2",
+      "renamedSymbol": "L:sm.itemLabel(II)Ljava/lang/String;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -268965,7 +269085,7 @@
     },
     {
       "symbol": "L:sm.c(II)Ljava/lang/String;#3",
-      "renamedSymbol": "L:sm.c(II)Ljava/lang/String;#3",
+      "renamedSymbol": "L:sm.itemLabel(II)Ljava/lang/String;#3",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -268976,7 +269096,7 @@
     },
     {
       "symbol": "L:sm.c(II)Ljava/lang/String;#4",
-      "renamedSymbol": "L:sm.c(II)Ljava/lang/String;#4",
+      "renamedSymbol": "L:sm.itemLabel(II)Ljava/lang/String;#4",
       "originalName": "var3Lifetime2",
       "renamedName": "var3Lifetime2",
       "declaration": {
@@ -268987,7 +269107,7 @@
     },
     {
       "symbol": "L:sm.c(II)Ljava/lang/String;#5",
-      "renamedSymbol": "L:sm.c(II)Ljava/lang/String;#5",
+      "renamedSymbol": "L:sm.itemLabel(II)Ljava/lang/String;#5",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -269361,7 +269481,7 @@
     },
     {
       "symbol": "L:sm.d(III)I#0",
-      "renamedSymbol": "L:sm.d(III)I#0",
+      "renamedSymbol": "L:sm.findHexAt(III)I#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -269372,7 +269492,7 @@
     },
     {
       "symbol": "L:sm.d(III)I#1",
-      "renamedSymbol": "L:sm.d(III)I#1",
+      "renamedSymbol": "L:sm.findHexAt(III)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -269383,7 +269503,7 @@
     },
     {
       "symbol": "L:sm.d(III)I#2",
-      "renamedSymbol": "L:sm.d(III)I#2",
+      "renamedSymbol": "L:sm.findHexAt(III)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -269394,7 +269514,7 @@
     },
     {
       "symbol": "L:sm.d(III)I#3",
-      "renamedSymbol": "L:sm.d(III)I#3",
+      "renamedSymbol": "L:sm.findHexAt(III)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -269405,7 +269525,7 @@
     },
     {
       "symbol": "L:sm.d(III)I#4",
-      "renamedSymbol": "L:sm.d(III)I#4",
+      "renamedSymbol": "L:sm.findHexAt(III)I#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -269471,7 +269591,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#0",
-      "renamedSymbol": "L:sm.e(II)V#0",
+      "renamedSymbol": "L:sm.drawItems(II)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -269482,7 +269602,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#1",
-      "renamedSymbol": "L:sm.e(II)V#1",
+      "renamedSymbol": "L:sm.drawItems(II)V#1",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -269493,7 +269613,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#10",
-      "renamedSymbol": "L:sm.e(II)V#10",
+      "renamedSymbol": "L:sm.drawItems(II)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -269504,7 +269624,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#11",
-      "renamedSymbol": "L:sm.e(II)V#11",
+      "renamedSymbol": "L:sm.drawItems(II)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -269515,7 +269635,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#12",
-      "renamedSymbol": "L:sm.e(II)V#12",
+      "renamedSymbol": "L:sm.drawItems(II)V#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -269526,7 +269646,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#13",
-      "renamedSymbol": "L:sm.e(II)V#13",
+      "renamedSymbol": "L:sm.drawItems(II)V#13",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -269537,7 +269657,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#14",
-      "renamedSymbol": "L:sm.e(II)V#14",
+      "renamedSymbol": "L:sm.drawItems(II)V#14",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -269548,7 +269668,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#15",
-      "renamedSymbol": "L:sm.e(II)V#15",
+      "renamedSymbol": "L:sm.drawItems(II)V#15",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -269559,7 +269679,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#2",
-      "renamedSymbol": "L:sm.e(II)V#2",
+      "renamedSymbol": "L:sm.drawItems(II)V#2",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -269570,7 +269690,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#3",
-      "renamedSymbol": "L:sm.e(II)V#3",
+      "renamedSymbol": "L:sm.drawItems(II)V#3",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -269581,7 +269701,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#4",
-      "renamedSymbol": "L:sm.e(II)V#4",
+      "renamedSymbol": "L:sm.drawItems(II)V#4",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -269592,7 +269712,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#5",
-      "renamedSymbol": "L:sm.e(II)V#5",
+      "renamedSymbol": "L:sm.drawItems(II)V#5",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -269603,7 +269723,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#6",
-      "renamedSymbol": "L:sm.e(II)V#6",
+      "renamedSymbol": "L:sm.drawItems(II)V#6",
       "originalName": "stackIn_17_3",
       "renamedName": "stackIn_17_3",
       "declaration": {
@@ -269614,7 +269734,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#7",
-      "renamedSymbol": "L:sm.e(II)V#7",
+      "renamedSymbol": "L:sm.drawItems(II)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -269625,7 +269745,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#8",
-      "renamedSymbol": "L:sm.e(II)V#8",
+      "renamedSymbol": "L:sm.drawItems(II)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -269636,7 +269756,7 @@
     },
     {
       "symbol": "L:sm.e(II)V#9",
-      "renamedSymbol": "L:sm.e(II)V#9",
+      "renamedSymbol": "L:sm.drawItems(II)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -320742,9 +320862,9 @@
     },
     {
       "symbol": "M:ga.a(IB)V",
-      "renamedSymbol": "M:MidiPcmStream.a(IB)V",
+      "renamedSymbol": "M:MidiPcmStream.handleMessage(IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleMessage",
       "declaration": {
         "file": "ga.java",
         "start": 47760,
@@ -320753,9 +320873,9 @@
     },
     {
       "symbol": "M:ga.a(IBI)V",
-      "renamedSymbol": "M:MidiPcmStream.a(IBI)V",
+      "renamedSymbol": "M:MidiPcmStream.onChannelPressure(IBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onChannelPressure",
       "declaration": {
         "file": "ga.java",
         "start": 6909,
@@ -320786,9 +320906,9 @@
     },
     {
       "symbol": "M:ga.a(III)V",
-      "renamedSymbol": "M:MidiPcmStream.setPitchBend(III)V",
+      "renamedSymbol": "M:MidiPcmStream.setFineTuning(III)V",
       "originalName": "a",
-      "renamedName": "setPitchBend",
+      "renamedName": "setFineTuning",
       "declaration": {
         "file": "ga.java",
         "start": 1396,
@@ -320819,9 +320939,9 @@
     },
     {
       "symbol": "M:ga.a(IIZI)V",
-      "renamedSymbol": "M:MidiPcmStream.a(IIZI)V",
+      "renamedSymbol": "M:MidiPcmStream.onPolyPressure(IIZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "onPolyPressure",
       "declaration": {
         "file": "ga.java",
         "start": 55377,
@@ -320984,9 +321104,9 @@
     },
     {
       "symbol": "M:ga.b(IBI)V",
-      "renamedSymbol": "M:MidiPcmStream.b(IBI)V",
+      "renamedSymbol": "M:MidiPcmStream.setPitchWheel(IBI)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "setPitchWheel",
       "declaration": {
         "file": "ga.java",
         "start": 1123,
@@ -321039,9 +321159,9 @@
     },
     {
       "symbol": "M:ga.c(II)V",
-      "renamedSymbol": "M:MidiPcmStream.c(II)V",
+      "renamedSymbol": "M:MidiPcmStream.setMasterVolume(II)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "setMasterVolume",
       "declaration": {
         "file": "ga.java",
         "start": 34904,
@@ -321105,9 +321225,9 @@
     },
     {
       "symbol": "M:ga.e(I)V",
-      "renamedSymbol": "M:MidiPcmStream.e(I)V",
+      "renamedSymbol": "M:MidiPcmStream.stop(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "stop",
       "declaration": {
         "file": "ga.java",
         "start": 971,
@@ -342709,9 +342829,9 @@
     },
     {
       "symbol": "M:sm.a(IIZ)V",
-      "renamedSymbol": "M:sm.a(IIZ)V",
+      "renamedSymbol": "M:sm.drawItem(IIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawItem",
       "declaration": {
         "file": "sm.java",
         "start": 30898,
@@ -342731,9 +342851,9 @@
     },
     {
       "symbol": "M:sm.a(IZ)I",
-      "renamedSymbol": "M:sm.a(IZ)I",
+      "renamedSymbol": "M:sm.itemWidth(IZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "itemWidth",
       "declaration": {
         "file": "sm.java",
         "start": 34201,
@@ -342753,9 +342873,9 @@
     },
     {
       "symbol": "M:sm.a(IZIZ)V",
-      "renamedSymbol": "M:sm.a(IZIZ)V",
+      "renamedSymbol": "M:sm.drawItem(IZIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawItem",
       "declaration": {
         "file": "sm.java",
         "start": 18398,
@@ -342852,9 +342972,9 @@
     },
     {
       "symbol": "M:sm.b(IZ)I",
-      "renamedSymbol": "M:sm.b(IZ)I",
+      "renamedSymbol": "M:sm.itemX(IZ)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "itemX",
       "declaration": {
         "file": "sm.java",
         "start": 80232,
@@ -342907,9 +343027,9 @@
     },
     {
       "symbol": "M:sm.c(II)Ljava/lang/String;",
-      "renamedSymbol": "M:sm.c(II)Ljava/lang/String;",
+      "renamedSymbol": "M:sm.itemLabel(II)Ljava/lang/String;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "itemLabel",
       "declaration": {
         "file": "sm.java",
         "start": 99830,
@@ -342929,9 +343049,9 @@
     },
     {
       "symbol": "M:sm.c(IZ)I",
-      "renamedSymbol": "M:sm.c(IZ)I",
+      "renamedSymbol": "M:sm.itemY(IZ)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "itemY",
       "declaration": {
         "file": "sm.java",
         "start": 101437,
@@ -342973,9 +343093,9 @@
     },
     {
       "symbol": "M:sm.d(III)I",
-      "renamedSymbol": "M:sm.d(III)I",
+      "renamedSymbol": "M:sm.findHexAt(III)I",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "findHexAt",
       "declaration": {
         "file": "sm.java",
         "start": 11528,
@@ -343006,9 +343126,9 @@
     },
     {
       "symbol": "M:sm.e(II)V",
-      "renamedSymbol": "M:sm.e(II)V",
+      "renamedSymbol": "M:sm.drawItems(II)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "drawItems",
       "declaration": {
         "file": "sm.java",
         "start": 14645,
@@ -343039,9 +343159,9 @@
     },
     {
       "symbol": "M:sm.f(II)I",
-      "renamedSymbol": "M:sm.f(II)I",
+      "renamedSymbol": "M:sm.rowHeight(II)I",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "rowHeight",
       "declaration": {
         "file": "sm.java",
         "start": 58492,
@@ -376589,7 +376709,7 @@
     },
     {
       "symbol": "P:ga.a(IB)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(IB)V#0",
+      "renamedSymbol": "P:MidiPcmStream.handleMessage(IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376600,7 +376720,7 @@
     },
     {
       "symbol": "P:ga.a(IB)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(IB)V#1",
+      "renamedSymbol": "P:MidiPcmStream.handleMessage(IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -376611,7 +376731,7 @@
     },
     {
       "symbol": "P:ga.a(IBI)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(IBI)V#0",
+      "renamedSymbol": "P:MidiPcmStream.onChannelPressure(IBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376622,7 +376742,7 @@
     },
     {
       "symbol": "P:ga.a(IBI)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(IBI)V#1",
+      "renamedSymbol": "P:MidiPcmStream.onChannelPressure(IBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -376633,7 +376753,7 @@
     },
     {
       "symbol": "P:ga.a(IBI)V#2",
-      "renamedSymbol": "P:MidiPcmStream.a(IBI)V#2",
+      "renamedSymbol": "P:MidiPcmStream.onChannelPressure(IBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -376699,7 +376819,7 @@
     },
     {
       "symbol": "P:ga.a(III)V#0",
-      "renamedSymbol": "P:MidiPcmStream.setPitchBend(III)V#0",
+      "renamedSymbol": "P:MidiPcmStream.setFineTuning(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376710,7 +376830,7 @@
     },
     {
       "symbol": "P:ga.a(III)V#1",
-      "renamedSymbol": "P:MidiPcmStream.setPitchBend(III)V#1",
+      "renamedSymbol": "P:MidiPcmStream.setFineTuning(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -376721,7 +376841,7 @@
     },
     {
       "symbol": "P:ga.a(III)V#2",
-      "renamedSymbol": "P:MidiPcmStream.setPitchBend(III)V#2",
+      "renamedSymbol": "P:MidiPcmStream.setFineTuning(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -376831,7 +376951,7 @@
     },
     {
       "symbol": "P:ga.a(IIZI)V#0",
-      "renamedSymbol": "P:MidiPcmStream.a(IIZI)V#0",
+      "renamedSymbol": "P:MidiPcmStream.onPolyPressure(IIZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -376842,7 +376962,7 @@
     },
     {
       "symbol": "P:ga.a(IIZI)V#1",
-      "renamedSymbol": "P:MidiPcmStream.a(IIZI)V#1",
+      "renamedSymbol": "P:MidiPcmStream.onPolyPressure(IIZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -376853,7 +376973,7 @@
     },
     {
       "symbol": "P:ga.a(IIZI)V#2",
-      "renamedSymbol": "P:MidiPcmStream.a(IIZI)V#2",
+      "renamedSymbol": "P:MidiPcmStream.onPolyPressure(IIZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -376864,7 +376984,7 @@
     },
     {
       "symbol": "P:ga.a(IIZI)V#3",
-      "renamedSymbol": "P:MidiPcmStream.a(IIZI)V#3",
+      "renamedSymbol": "P:MidiPcmStream.onPolyPressure(IIZI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -377513,7 +377633,7 @@
     },
     {
       "symbol": "P:ga.b(IBI)V#0",
-      "renamedSymbol": "P:MidiPcmStream.b(IBI)V#0",
+      "renamedSymbol": "P:MidiPcmStream.setPitchWheel(IBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -377524,7 +377644,7 @@
     },
     {
       "symbol": "P:ga.b(IBI)V#1",
-      "renamedSymbol": "P:MidiPcmStream.b(IBI)V#1",
+      "renamedSymbol": "P:MidiPcmStream.setPitchWheel(IBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -377535,7 +377655,7 @@
     },
     {
       "symbol": "P:ga.b(IBI)V#2",
-      "renamedSymbol": "P:MidiPcmStream.b(IBI)V#2",
+      "renamedSymbol": "P:MidiPcmStream.setPitchWheel(IBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -377656,7 +377776,7 @@
     },
     {
       "symbol": "P:ga.c(II)V#0",
-      "renamedSymbol": "P:MidiPcmStream.c(II)V#0",
+      "renamedSymbol": "P:MidiPcmStream.setMasterVolume(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -377667,7 +377787,7 @@
     },
     {
       "symbol": "P:ga.c(II)V#1",
-      "renamedSymbol": "P:MidiPcmStream.c(II)V#1",
+      "renamedSymbol": "P:MidiPcmStream.setMasterVolume(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -377766,7 +377886,7 @@
     },
     {
       "symbol": "P:ga.e(I)V#0",
-      "renamedSymbol": "P:MidiPcmStream.e(I)V#0",
+      "renamedSymbol": "P:MidiPcmStream.stop(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430027,7 +430147,7 @@
     },
     {
       "symbol": "P:sm.a(IIZ)V#0",
-      "renamedSymbol": "P:sm.a(IIZ)V#0",
+      "renamedSymbol": "P:sm.drawItem(IIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430038,7 +430158,7 @@
     },
     {
       "symbol": "P:sm.a(IIZ)V#1",
-      "renamedSymbol": "P:sm.a(IIZ)V#1",
+      "renamedSymbol": "P:sm.drawItem(IIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430049,7 +430169,7 @@
     },
     {
       "symbol": "P:sm.a(IIZ)V#2",
-      "renamedSymbol": "P:sm.a(IIZ)V#2",
+      "renamedSymbol": "P:sm.drawItem(IIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -430170,7 +430290,7 @@
     },
     {
       "symbol": "P:sm.a(IZ)I#0",
-      "renamedSymbol": "P:sm.a(IZ)I#0",
+      "renamedSymbol": "P:sm.itemWidth(IZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430181,7 +430301,7 @@
     },
     {
       "symbol": "P:sm.a(IZ)I#1",
-      "renamedSymbol": "P:sm.a(IZ)I#1",
+      "renamedSymbol": "P:sm.itemWidth(IZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430236,7 +430356,7 @@
     },
     {
       "symbol": "P:sm.a(IZIZ)V#0",
-      "renamedSymbol": "P:sm.a(IZIZ)V#0",
+      "renamedSymbol": "P:sm.drawItem(IZIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430247,7 +430367,7 @@
     },
     {
       "symbol": "P:sm.a(IZIZ)V#1",
-      "renamedSymbol": "P:sm.a(IZIZ)V#1",
+      "renamedSymbol": "P:sm.drawItem(IZIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430258,7 +430378,7 @@
     },
     {
       "symbol": "P:sm.a(IZIZ)V#2",
-      "renamedSymbol": "P:sm.a(IZIZ)V#2",
+      "renamedSymbol": "P:sm.drawItem(IZIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -430269,7 +430389,7 @@
     },
     {
       "symbol": "P:sm.a(IZIZ)V#3",
-      "renamedSymbol": "P:sm.a(IZIZ)V#3",
+      "renamedSymbol": "P:sm.drawItem(IZIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -430533,7 +430653,7 @@
     },
     {
       "symbol": "P:sm.b(IZ)I#0",
-      "renamedSymbol": "P:sm.b(IZ)I#0",
+      "renamedSymbol": "P:sm.itemX(IZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430544,7 +430664,7 @@
     },
     {
       "symbol": "P:sm.b(IZ)I#1",
-      "renamedSymbol": "P:sm.b(IZ)I#1",
+      "renamedSymbol": "P:sm.itemX(IZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430632,7 +430752,7 @@
     },
     {
       "symbol": "P:sm.c(II)Ljava/lang/String;#0",
-      "renamedSymbol": "P:sm.c(II)Ljava/lang/String;#0",
+      "renamedSymbol": "P:sm.itemLabel(II)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430643,7 +430763,7 @@
     },
     {
       "symbol": "P:sm.c(II)Ljava/lang/String;#1",
-      "renamedSymbol": "P:sm.c(II)Ljava/lang/String;#1",
+      "renamedSymbol": "P:sm.itemLabel(II)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430687,7 +430807,7 @@
     },
     {
       "symbol": "P:sm.c(IZ)I#0",
-      "renamedSymbol": "P:sm.c(IZ)I#0",
+      "renamedSymbol": "P:sm.itemY(IZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430698,7 +430818,7 @@
     },
     {
       "symbol": "P:sm.c(IZ)I#1",
-      "renamedSymbol": "P:sm.c(IZ)I#1",
+      "renamedSymbol": "P:sm.itemY(IZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430753,7 +430873,7 @@
     },
     {
       "symbol": "P:sm.d(III)I#0",
-      "renamedSymbol": "P:sm.d(III)I#0",
+      "renamedSymbol": "P:sm.findHexAt(III)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430764,7 +430884,7 @@
     },
     {
       "symbol": "P:sm.d(III)I#1",
-      "renamedSymbol": "P:sm.d(III)I#1",
+      "renamedSymbol": "P:sm.findHexAt(III)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430775,7 +430895,7 @@
     },
     {
       "symbol": "P:sm.d(III)I#2",
-      "renamedSymbol": "P:sm.d(III)I#2",
+      "renamedSymbol": "P:sm.findHexAt(III)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -430808,7 +430928,7 @@
     },
     {
       "symbol": "P:sm.e(II)V#0",
-      "renamedSymbol": "P:sm.e(II)V#0",
+      "renamedSymbol": "P:sm.drawItems(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430819,7 +430939,7 @@
     },
     {
       "symbol": "P:sm.e(II)V#1",
-      "renamedSymbol": "P:sm.e(II)V#1",
+      "renamedSymbol": "P:sm.drawItems(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430852,7 +430972,7 @@
     },
     {
       "symbol": "P:sm.f(II)I#0",
-      "renamedSymbol": "P:sm.f(II)I#0",
+      "renamedSymbol": "P:sm.rowHeight(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430863,7 +430983,7 @@
     },
     {
       "symbol": "P:sm.f(II)I#1",
-      "renamedSymbol": "P:sm.f(II)I#1",
+      "renamedSymbol": "P:sm.rowHeight(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -447928,7 +448048,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "97d41a3ed42325e0af27b3f424d0e83bde7d001c2d40718783d586243194f5e9",
+      "outputSha256": "47301b77ed2fdcd919131a27b64d5504b969b531b3207ac81fa551b28d0f6325",
       "edits": [
         {
           "start": 128,
@@ -448034,6 +448154,20 @@
           "symbol": "C:h",
           "original": "h",
           "renamed": "MusicCrossfadeStream"
+        },
+        {
+          "start": 2083,
+          "end": 2084,
+          "symbol": "M:ga.c(II)V",
+          "original": "c",
+          "renamed": "setMasterVolume"
+        },
+        {
+          "start": 2124,
+          "end": 2125,
+          "symbol": "M:ga.c(II)V",
+          "original": "c",
+          "renamed": "setMasterVolume"
         },
         {
           "start": 2162,
@@ -458757,7 +458891,7 @@
       "original": "ak.java",
       "renamed": "DiskArchiveRequest.java",
       "inputSha256": "09c28e7df6409321535742b0c5b649a5cbd10bf228af3331bc1b4c912af18bc5",
-      "outputSha256": "4c86086b16fcb564141dbcacdb13d792121d7a88da89fc306bc488ba316babb8",
+      "outputSha256": "9e97154901a25d70399e0ee2a26cd8893688513c040d7ba73ec5a0e98e550d57",
       "edits": [
         {
           "start": 50,
@@ -459031,6 +459165,13 @@
           "symbol": "C:jh",
           "original": "jh",
           "renamed": "ToggleButton"
+        },
+        {
+          "start": 5360,
+          "end": 5361,
+          "symbol": "M:ga.c(II)V",
+          "original": "c",
+          "renamed": "setMasterVolume"
         },
         {
           "start": 5396,
@@ -509000,7 +509141,7 @@
       "original": "ga.java",
       "renamed": "MidiPcmStream.java",
       "inputSha256": "a4f1043bfc2558a011823ee61a17a1a0e0dcbc141e274a03098199deadcb7532",
-      "outputSha256": "32340202763ca375cea6d89f9fe288d4c7605cf6c530e15341463a29985fd6f7",
+      "outputSha256": "839b440764c9ad10aeede2da4724af092a47f07879505a0753302348a95e6c9b",
       "edits": [
         {
           "start": 50,
@@ -509059,11 +509200,25 @@
           "renamed": "MusicTrack"
         },
         {
+          "start": 971,
+          "end": 972,
+          "symbol": "M:ga.e(I)V",
+          "original": "e",
+          "renamed": "stop"
+        },
+        {
           "start": 1000,
           "end": 1001,
           "symbol": "M:ga.b(IZ)V",
           "original": "b",
           "renamed": "stopTrack"
+        },
+        {
+          "start": 1123,
+          "end": 1124,
+          "symbol": "M:ga.b(IBI)V",
+          "original": "b",
+          "renamed": "setPitchWheel"
         },
         {
           "start": 1258,
@@ -509098,7 +509253,7 @@
           "end": 1397,
           "symbol": "M:ga.a(III)V",
           "original": "a",
-          "renamed": "setPitchBend"
+          "renamed": "setFineTuning"
         },
         {
           "start": 1653,
@@ -509248,6 +509403,13 @@
           "renamed": "allNotesOff"
         },
         {
+          "start": 5534,
+          "end": 5535,
+          "symbol": "M:ga.b(IBI)V",
+          "original": "b",
+          "renamed": "setPitchWheel"
+        },
+        {
           "start": 5576,
           "end": 5578,
           "symbol": "C:qq",
@@ -509339,6 +509501,13 @@
           "renamed": "setTempoScale"
         },
         {
+          "start": 6909,
+          "end": 6910,
+          "symbol": "M:ga.a(IBI)V",
+          "original": "a",
+          "renamed": "onChannelPressure"
+        },
+        {
           "start": 6993,
           "end": 6994,
           "symbol": "M:ga.b()Ltn;",
@@ -509365,6 +509534,13 @@
           "symbol": "M:ga.a(BII)V",
           "original": "a",
           "renamed": "setChannelVolume"
+        },
+        {
+          "start": 7458,
+          "end": 7459,
+          "symbol": "M:ga.b(IBI)V",
+          "original": "b",
+          "renamed": "setPitchWheel"
         },
         {
           "start": 7723,
@@ -510767,6 +510943,20 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 34904,
+          "end": 34905,
+          "symbol": "M:ga.c(II)V",
+          "original": "c",
+          "renamed": "setMasterVolume"
+        },
+        {
+          "start": 35007,
+          "end": 35008,
+          "symbol": "M:ga.a(IIZI)V",
+          "original": "a",
+          "renamed": "onPolyPressure"
+        },
+        {
           "start": 35071,
           "end": 35073,
           "symbol": "C:nk",
@@ -511170,7 +511360,7 @@
           "end": 45750,
           "symbol": "M:ga.a(III)V",
           "original": "a",
-          "renamed": "setPitchBend"
+          "renamed": "setFineTuning"
         },
         {
           "start": 45986,
@@ -511229,6 +511419,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 47760,
+          "end": 47761,
+          "symbol": "M:ga.a(IB)V",
+          "original": "a",
+          "renamed": "handleMessage"
+        },
+        {
           "start": 48663,
           "end": 48664,
           "symbol": "M:ga.a(BIII)V",
@@ -511250,11 +511447,32 @@
           "renamed": "noteOn"
         },
         {
+          "start": 49295,
+          "end": 49296,
+          "symbol": "M:ga.a(IIZI)V",
+          "original": "a",
+          "renamed": "onPolyPressure"
+        },
+        {
           "start": 49542,
           "end": 49543,
           "symbol": "M:ga.a(IIB)V",
           "original": "a",
           "renamed": "setProgram"
+        },
+        {
+          "start": 49801,
+          "end": 49802,
+          "symbol": "M:ga.a(IBI)V",
+          "original": "a",
+          "renamed": "onChannelPressure"
+        },
+        {
+          "start": 50073,
+          "end": 50074,
+          "symbol": "M:ga.b(IBI)V",
+          "original": "b",
+          "renamed": "setPitchWheel"
         },
         {
           "start": 50541,
@@ -511485,14 +511703,14 @@
           "end": 54807,
           "symbol": "M:ga.a(III)V",
           "original": "a",
-          "renamed": "setPitchBend"
+          "renamed": "setFineTuning"
         },
         {
           "start": 54952,
           "end": 54953,
           "symbol": "M:ga.a(III)V",
           "original": "a",
-          "renamed": "setPitchBend"
+          "renamed": "setFineTuning"
         },
         {
           "start": 55225,
@@ -511521,6 +511739,13 @@
           "symbol": "C:rq",
           "original": "rq",
           "renamed": "LinkPainter"
+        },
+        {
+          "start": 55377,
+          "end": 55378,
+          "symbol": "M:ga.a(IIZI)V",
+          "original": "a",
+          "renamed": "onPolyPressure"
         },
         {
           "start": 55548,
@@ -511905,7 +512130,7 @@
           "end": 64692,
           "symbol": "M:ga.a(III)V",
           "original": "a",
-          "renamed": "setPitchBend"
+          "renamed": "setFineTuning"
         },
         {
           "start": 64750,
@@ -512060,6 +512285,13 @@
           "symbol": "M:pi.a(I)I",
           "original": "a",
           "renamed": "readEvent"
+        },
+        {
+          "start": 69665,
+          "end": 69666,
+          "symbol": "M:ga.a(IB)V",
+          "original": "a",
+          "renamed": "handleMessage"
         },
         {
           "start": 69730,
@@ -518873,7 +519105,7 @@
       "original": "h.java",
       "renamed": "MusicCrossfadeStream.java",
       "inputSha256": "a729cb5b2c8eb9981959a273f43436a7b1ac1f258a6f73a34078448db5dd32f7",
-      "outputSha256": "e2161a33db069951ed4309f61f854ecc9c0603ed1101b5efc3e44fd84bf82066",
+      "outputSha256": "a53d2283a028cbac431a7f99eb1497aa379e8f8e34f3d307e0ba4e6649ce6a3c",
       "edits": [
         {
           "start": 50,
@@ -519042,6 +519274,20 @@
           "symbol": "M:ga.h(I)Z",
           "original": "h",
           "renamed": "isPlaying"
+        },
+        {
+          "start": 3836,
+          "end": 3837,
+          "symbol": "M:ga.e(I)V",
+          "original": "e",
+          "renamed": "stop"
+        },
+        {
+          "start": 4204,
+          "end": 4205,
+          "symbol": "M:ga.e(I)V",
+          "original": "e",
+          "renamed": "stop"
         },
         {
           "start": 4344,
@@ -519252,6 +519498,20 @@
           "symbol": "M:ga.h(I)Z",
           "original": "h",
           "renamed": "isPlaying"
+        },
+        {
+          "start": 10563,
+          "end": 10564,
+          "symbol": "M:ga.e(I)V",
+          "original": "e",
+          "renamed": "stop"
+        },
+        {
+          "start": 10907,
+          "end": 10908,
+          "symbol": "M:ga.e(I)V",
+          "original": "e",
+          "renamed": "stop"
         },
         {
           "start": 11077,
@@ -519478,6 +519738,13 @@
           "renamed": "MusicTrack"
         },
         {
+          "start": 15574,
+          "end": 15575,
+          "symbol": "M:ga.e(I)V",
+          "original": "e",
+          "renamed": "stop"
+        },
+        {
           "start": 15699,
           "end": 15700,
           "symbol": "M:ga.a(Lgh;BZ)V",
@@ -519485,11 +519752,25 @@
           "renamed": "playTrack"
         },
         {
+          "start": 15897,
+          "end": 15898,
+          "symbol": "M:ga.e(I)V",
+          "original": "e",
+          "renamed": "stop"
+        },
+        {
           "start": 16022,
           "end": 16023,
           "symbol": "M:ga.a(Lgh;BZ)V",
           "original": "a",
           "renamed": "playTrack"
+        },
+        {
+          "start": 17034,
+          "end": 17035,
+          "symbol": "M:ga.e(I)V",
+          "original": "e",
+          "renamed": "stop"
         },
         {
           "start": 17197,
@@ -519511,6 +519792,13 @@
           "symbol": "M:ga.a(Lgh;BZ)V",
           "original": "a",
           "renamed": "playTrack"
+        },
+        {
+          "start": 17573,
+          "end": 17574,
+          "symbol": "M:ga.e(I)V",
+          "original": "e",
+          "renamed": "stop"
         },
         {
           "start": 17736,
@@ -625543,7 +625831,7 @@
       "original": "sm.java",
       "renamed": "sm.java",
       "inputSha256": "9739292f089216d03db6d4d0e3d0393dd9a2aabc9027886834ddaf5b1b0464bf",
-      "outputSha256": "e245126fe15a8b4b1afe5cac0bec8d76701d924ff96852a630dd3a543d092d24",
+      "outputSha256": "7a5c80b6385aa1290f0ac40fe725b13dc4a81cb05b84d4452aa9fd562d9c9706",
       "edits": [
         {
           "start": 710,
@@ -625684,6 +625972,13 @@
           "symbol": "M:gf.d(IIII)V",
           "original": "d",
           "renamed": "setClip"
+        },
+        {
+          "start": 1931,
+          "end": 1932,
+          "symbol": "M:sm.e(II)V",
+          "original": "e",
+          "renamed": "drawItems"
         },
         {
           "start": 1954,
@@ -626449,6 +626744,20 @@
           "renamed": "drawAdditive"
         },
         {
+          "start": 11528,
+          "end": 11529,
+          "symbol": "M:sm.d(III)I",
+          "original": "d",
+          "renamed": "findHexAt"
+        },
+        {
+          "start": 11759,
+          "end": 11760,
+          "symbol": "M:sm.e(II)V",
+          "original": "e",
+          "renamed": "drawItems"
+        },
+        {
           "start": 11855,
           "end": 11857,
           "symbol": "C:gf",
@@ -626589,11 +626898,32 @@
           "renamed": "WhirlpoolHasher"
         },
         {
+          "start": 14645,
+          "end": 14646,
+          "symbol": "M:sm.e(II)V",
+          "original": "e",
+          "renamed": "drawItems"
+        },
+        {
           "start": 15154,
           "end": 15156,
           "symbol": "C:qg",
           "original": "qg",
           "renamed": "TutorialVictoryChecker"
+        },
+        {
+          "start": 15906,
+          "end": 15907,
+          "symbol": "M:sm.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawItem"
+        },
+        {
+          "start": 16095,
+          "end": 16096,
+          "symbol": "M:sm.a(IZIZ)V",
+          "original": "a",
+          "renamed": "drawItem"
         },
         {
           "start": 16185,
@@ -626608,6 +626938,13 @@
           "symbol": "C:qg",
           "original": "qg",
           "renamed": "TutorialVictoryChecker"
+        },
+        {
+          "start": 16314,
+          "end": 16315,
+          "symbol": "M:sm.c(IZ)I",
+          "original": "c",
+          "renamed": "itemY"
         },
         {
           "start": 16406,
@@ -626757,6 +627094,13 @@
           "renamed": "MusicEnvelope"
         },
         {
+          "start": 18398,
+          "end": 18399,
+          "symbol": "M:sm.a(IZIZ)V",
+          "original": "a",
+          "renamed": "drawItem"
+        },
+        {
           "start": 18759,
           "end": 18761,
           "symbol": "C:qg",
@@ -626764,11 +627108,32 @@
           "renamed": "TutorialVictoryChecker"
         },
         {
+          "start": 18881,
+          "end": 18882,
+          "symbol": "M:sm.c(II)Ljava/lang/String;",
+          "original": "c",
+          "renamed": "itemLabel"
+        },
+        {
           "start": 18993,
           "end": 18995,
           "symbol": "C:qg",
           "original": "qg",
           "renamed": "TutorialVictoryChecker"
+        },
+        {
+          "start": 19039,
+          "end": 19040,
+          "symbol": "M:sm.b(IZ)I",
+          "original": "b",
+          "renamed": "itemX"
+        },
+        {
+          "start": 19077,
+          "end": 19078,
+          "symbol": "M:sm.c(IZ)I",
+          "original": "c",
+          "renamed": "itemY"
         },
         {
           "start": 19165,
@@ -627156,6 +627521,13 @@
           "renamed": "setClip"
         },
         {
+          "start": 25846,
+          "end": 25847,
+          "symbol": "M:sm.e(II)V",
+          "original": "e",
+          "renamed": "drawItems"
+        },
+        {
           "start": 25879,
           "end": 25881,
           "symbol": "C:gf",
@@ -627168,6 +627540,13 @@
           "symbol": "M:gf.d(IIII)V",
           "original": "d",
           "renamed": "setClip"
+        },
+        {
+          "start": 25957,
+          "end": 25958,
+          "symbol": "M:sm.e(II)V",
+          "original": "e",
+          "renamed": "drawItems"
         },
         {
           "start": 25980,
@@ -627224,6 +627603,13 @@
           "symbol": "M:gf.a()V",
           "original": "a",
           "renamed": "resetClip"
+        },
+        {
+          "start": 26579,
+          "end": 26580,
+          "symbol": "M:sm.c(II)Ljava/lang/String;",
+          "original": "c",
+          "renamed": "itemLabel"
         },
         {
           "start": 26613,
@@ -627564,6 +627950,13 @@
           "renamed": "Star"
         },
         {
+          "start": 30898,
+          "end": 30899,
+          "symbol": "M:sm.a(IIZ)V",
+          "original": "a",
+          "renamed": "drawItem"
+        },
+        {
           "start": 31268,
           "end": 31270,
           "symbol": "C:qg",
@@ -627571,11 +627964,32 @@
           "renamed": "TutorialVictoryChecker"
         },
         {
+          "start": 31322,
+          "end": 31323,
+          "symbol": "M:sm.c(II)Ljava/lang/String;",
+          "original": "c",
+          "renamed": "itemLabel"
+        },
+        {
           "start": 31435,
           "end": 31437,
           "symbol": "C:qg",
           "original": "qg",
           "renamed": "TutorialVictoryChecker"
+        },
+        {
+          "start": 31481,
+          "end": 31482,
+          "symbol": "M:sm.b(IZ)I",
+          "original": "b",
+          "renamed": "itemX"
+        },
+        {
+          "start": 31518,
+          "end": 31519,
+          "symbol": "M:sm.c(IZ)I",
+          "original": "c",
+          "renamed": "itemY"
         },
         {
           "start": 31606,
@@ -627746,6 +628160,13 @@
           "renamed": "ArrayWidgetGroup"
         },
         {
+          "start": 34201,
+          "end": 34202,
+          "symbol": "M:sm.a(IZ)I",
+          "original": "a",
+          "renamed": "itemWidth"
+        },
+        {
           "start": 34281,
           "end": 34283,
           "symbol": "C:qg",
@@ -627765,6 +628186,13 @@
           "symbol": "M:nq.c(Ljava/lang/String;)I",
           "original": "c",
           "renamed": "stringWidth"
+        },
+        {
+          "start": 34527,
+          "end": 34528,
+          "symbol": "M:sm.c(II)Ljava/lang/String;",
+          "original": "c",
+          "renamed": "itemLabel"
         },
         {
           "start": 34751,
@@ -628523,6 +628951,20 @@
           "renamed": "CellVertex"
         },
         {
+          "start": 58445,
+          "end": 58446,
+          "symbol": "M:sm.a(IZ)I",
+          "original": "a",
+          "renamed": "itemWidth"
+        },
+        {
+          "start": 58492,
+          "end": 58493,
+          "symbol": "M:sm.f(II)I",
+          "original": "f",
+          "renamed": "rowHeight"
+        },
+        {
           "start": 58603,
           "end": 58605,
           "symbol": "C:qg",
@@ -628691,11 +629133,25 @@
           "renamed": "RasterBuffer"
         },
         {
+          "start": 63951,
+          "end": 63952,
+          "symbol": "M:sm.d(III)I",
+          "original": "d",
+          "renamed": "findHexAt"
+        },
+        {
           "start": 63969,
           "end": 63971,
           "symbol": "C:pd",
           "original": "pd",
           "renamed": "TertiaryListSequence"
+        },
+        {
+          "start": 64144,
+          "end": 64145,
+          "symbol": "M:sm.d(III)I",
+          "original": "d",
+          "renamed": "findHexAt"
         },
         {
           "start": 64150,
@@ -628915,6 +629371,13 @@
           "renamed": "MidiPcmStream"
         },
         {
+          "start": 66323,
+          "end": 66324,
+          "symbol": "M:sm.e(II)V",
+          "original": "e",
+          "renamed": "drawItems"
+        },
+        {
           "start": 66947,
           "end": 66949,
           "symbol": "C:qg",
@@ -628934,6 +629397,13 @@
           "symbol": "C:tf",
           "original": "tf",
           "renamed": "CheckboxPainter"
+        },
+        {
+          "start": 68057,
+          "end": 68058,
+          "symbol": "M:sm.b(IZ)I",
+          "original": "b",
+          "renamed": "itemX"
         },
         {
           "start": 68098,
@@ -629018,6 +629488,13 @@
           "symbol": "C:ak",
           "original": "ak",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 69395,
+          "end": 69396,
+          "symbol": "M:sm.b(IZ)I",
+          "original": "b",
+          "renamed": "itemX"
         },
         {
           "start": 69541,
@@ -629790,6 +630267,13 @@
           "renamed": "MusicEnvelope"
         },
         {
+          "start": 80232,
+          "end": 80233,
+          "symbol": "M:sm.b(IZ)I",
+          "original": "b",
+          "renamed": "itemX"
+        },
+        {
           "start": 80726,
           "end": 80728,
           "symbol": "C:em",
@@ -630471,6 +630955,13 @@
           "renamed": "TutorialVictoryChecker"
         },
         {
+          "start": 99830,
+          "end": 99831,
+          "symbol": "M:sm.c(II)Ljava/lang/String;",
+          "original": "c",
+          "renamed": "itemLabel"
+        },
+        {
           "start": 100342,
           "end": 100344,
           "symbol": "C:br",
@@ -630532,6 +631023,13 @@
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "SectorCacheStore"
+        },
+        {
+          "start": 101437,
+          "end": 101438,
+          "symbol": "M:sm.c(IZ)I",
+          "original": "c",
+          "renamed": "itemY"
         },
         {
           "start": 101554,
@@ -630847,6 +631345,27 @@
           "symbol": "C:qg",
           "original": "qg",
           "renamed": "TutorialVictoryChecker"
+        },
+        {
+          "start": 109255,
+          "end": 109256,
+          "symbol": "M:sm.c(IZ)I",
+          "original": "c",
+          "renamed": "itemY"
+        },
+        {
+          "start": 109338,
+          "end": 109339,
+          "symbol": "M:sm.b(IZ)I",
+          "original": "b",
+          "renamed": "itemX"
+        },
+        {
+          "start": 109461,
+          "end": 109462,
+          "symbol": "M:sm.f(II)I",
+          "original": "f",
+          "renamed": "rowHeight"
         },
         {
           "start": 110065,
@@ -679208,10 +679727,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "739063b0515cdaebc14bd54456e4c57788069df0028d148555e6425f24c9c719",
+    "rulesSha256": "95892e95492af1f83bf76887cef6900b2de03944ccdfb98a6a55e3ca8766ec26",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "628d3ec646259d136155d66240d8f132a59c6d6d0089c510fd303932e60a7cf1",
+    "outputTreeSha256": "fb89f98ac07951b8be2d7d2cf94dd4b1207a7666b1d38959a066141f4abfb23b",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

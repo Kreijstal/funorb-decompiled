@@ -155,7 +155,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           var2 = -9 / ((62 - param0) / 62);
           return;
         }
-        ToggleButton.field_B.c(598, param1);
+        ToggleButton.field_B.setMasterVolume(598, param1);
         if (null != ValidationState.field_b) {
           ValidationState.field_b.a(param1, 0);
         }
