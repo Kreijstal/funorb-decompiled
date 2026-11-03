@@ -11,7 +11,7 @@ final class StandardMapReader implements MapGenerator {
     private int field_f;
     private int field_c;
 
-    public final GalaxyMap a(byte param0) throws jn {
+    public final GalaxyMap generate(byte param0) throws jn {
         int var5 = 0;
         StandardMapGenerator var3;
         Star[] var4_ref_ln__;
@@ -28,7 +28,7 @@ final class StandardMapReader implements MapGenerator {
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         var12 = new GalaxyMap(pe.a((byte) 34, this.field_f), ls.a(this.field_c, 2), this.field_a, this.field_b);
         var3 = new StandardMapGenerator(this.field_f, this.field_c, this.field_a, this.field_b, 1);
-        var3.a(false, var12);
+        var3.placeStars(false, var12);
         var4_ref_ln__ = var12.field_e;
         for (var5 = 0; var5 < var4_ref_ln__.length; var5++) {
           var6 = var4_ref_ln__[var5];

@@ -18,7 +18,7 @@ class StandardMapGenerator implements MapGenerator {
     static String field_g;
     int field_a;
 
-    private final void a(GalaxyMap param0, int param1) {
+    private final void finishMap(GalaxyMap param0, int param1) {
         int var3_int = 0;
         Star[] var8 = null;
         Star var11 = null;
@@ -92,7 +92,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    final void a(int param0) {
+    final void findHexNeighbours(int param0) {
         int var2 = 0;
         int var8 = 0;
         int stackIn_10_0 = 0;
@@ -394,13 +394,13 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    public GalaxyMap a(byte param0) throws jn {
+    public GalaxyMap generate(byte param0) throws jn {
         int var6 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         GalaxyMap var8 = new GalaxyMap(pe.a((byte) 34, this.field_c), ls.a(this.field_b, 2), this.field_h, this.field_d);
         int var6Lifetime1;
-        this.a(false, var8);
-        this.a(var8, 0);
+        this.placeStars(false, var8);
+        this.finishMap(var8, 0);
         int[] var14 = this.a(var8.field_j, var8.field_e, var8.field_c, 4, (byte) -84, 4, 4, (int[]) null, this.field_a);
         int[] var5 = this.a(var8.field_j, var8.field_e, var8.field_c, 2, (byte) -126, 16, 2, var14, this.field_e + this.field_a);
         int[] var12 = new int[this.field_e];
@@ -422,10 +422,10 @@ class StandardMapGenerator implements MapGenerator {
         try {
           if (param0 != 95) {
             Random var6 = (Random) null;
-            this.a((Star) null, (byte) 67, (Random) null);
+            this.assignRichResources((Star) null, (byte) 67, (Random) null);
           }
           this.a(param1, param3, 4);
-          this.a(param3, param2, 0);
+          this.assignStarResources(param3, param2, 0);
           this.b(param3, param0 ^ 92);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "hs.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -459,7 +459,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    void a(boolean param0, GalaxyMap param1) throws jn {
+    void placeStars(boolean param0, GalaxyMap param1) throws jn {
         Star stackIn_39_0 = null;
         Object stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
@@ -572,7 +572,7 @@ class StandardMapGenerator implements MapGenerator {
           param1.field_e = var6Lifetime1;
           var7 = new t(param1.field_e);
           var7.a(true, 1);
-          this.a(-11);
+          this.findHexNeighbours(-11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -588,7 +588,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    private final void a(GalaxyMap param0, int[] param1, int param2) {
+    private final void assignStarResources(GalaxyMap param0, int[] param1, int param2) {
         int var4_int = 0;
         int dupTemp$1 = 0;
         Star var5 = null;
@@ -635,7 +635,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    private final void a(Star param0, byte param1, Random param2) {
+    private final void assignRichResources(Star param0, byte param1, Random param2) {
         int dupTemp$2 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -693,7 +693,7 @@ class StandardMapGenerator implements MapGenerator {
           for (var4_int = 0; var4_int < param0.length; var4_int++) {
             var5 = param0[var4_int];
             var6 = param1.field_e[var5];
-            this.a(var6, (byte) 84, param1.field_j);
+            this.assignRichResources(var6, (byte) 84, param1.field_j);
           }
           this.a(1, 0, param0, param1, 2, (byte) 96, param2);
           this.a(4, 4, param0, param1, 4, (byte) 105, 12);
@@ -1116,7 +1116,7 @@ class StandardMapGenerator implements MapGenerator {
           }
           if (param4 >= -3) {
             var25 = (GalaxyMap) null;
-            this.a((GalaxyMap) null, -72);
+            this.finishMap((GalaxyMap) null, -72);
           }
           for (var15Lifetime2 = 0; var15Lifetime2 < var10_int; var15Lifetime2++) {
             for (var16Lifetime1 = var14Lifetime1; param8 > var16Lifetime1; var16Lifetime1++) {

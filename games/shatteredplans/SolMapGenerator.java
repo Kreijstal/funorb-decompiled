@@ -201,7 +201,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         }
     }
 
-    final void a(boolean param0, GalaxyMap param1) throws jn {
+    final void placeStars(boolean param0, GalaxyMap param1) throws jn {
         Object stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -269,7 +269,7 @@ final class SolMapGenerator extends StandardMapGenerator {
           param1.field_e = var4;
           var6 = new t(param1.field_e);
           var6.a(true, 1);
-          this.a(-11);
+          this.findHexNeighbours(-11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

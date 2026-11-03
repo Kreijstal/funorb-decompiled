@@ -80,7 +80,7 @@ class ns extends il implements ButtonListener {
             this.field_sb = false;
           }
           if (!this.field_sb) {
-            CipherPacketBuffer.a("tochangedisplayname.ws", GameScreen.f((byte) 126), (byte) 63);
+            CipherPacketBuffer.a("tochangedisplayname.ws", GameScreen.getHostApplet((byte) 126), (byte) 63);
             return;
           }
           qj.a((byte) -127, 3);

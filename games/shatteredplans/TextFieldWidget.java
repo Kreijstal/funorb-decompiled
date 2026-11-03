@@ -361,7 +361,7 @@ class TextFieldWidget extends FocusableWidget {
         if (param0 != 0) {
           return false;
         }
-        return js.a(-83, GameScreen.f((byte) 127));
+        return js.a(-83, GameScreen.getHostApplet((byte) 127));
     }
 
     private final int a(int param0) {

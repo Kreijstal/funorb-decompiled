@@ -277,7 +277,7 @@ final class GameScreen {
         int var4Lifetime3;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.field_s.a(param0, 24);
+          this.field_s.cancelProjects(param0, 24);
           if (param1 != 4705) {
             discarded$0 = this.j(59);
           }
@@ -400,18 +400,18 @@ final class GameScreen {
           if (qj.a(true, (CharSequence) ((Object) "stage"), (CharSequence) ((Object) param0))) {
             var2_int = Integer.parseInt(param0.substring(6));
             no.a(-92, var2_int);
-            oq.field_a.a(2);
+            oq.field_a.refreshMapView(2);
             return;
           }
           if (param1 != 7) {
             return;
           }
           if (param0.equalsIgnoreCase("zoomtohome")) {
-            oq.field_a.field_z.a(39, ho.field_d.field_m.field_q, 200.0f);
+            oq.field_a.field_z.centerOnStar(39, ho.field_d.field_m.field_q, 200.0f);
             return;
           }
           if (param0.equalsIgnoreCase("closetohome")) {
-            oq.field_a.field_z.a(ho.field_d.field_m.field_q, 126);
+            oq.field_a.field_z.focusOnStar(ho.field_d.field_m.field_q, 126);
             return;
           }
           if (param0.equalsIgnoreCase("zoomtowarning")) {
@@ -421,7 +421,7 @@ final class GameScreen {
               var4 = var2[var3];
               if (var4.field_y == ho.field_d &&
                 !oq.field_a.field_V[var4.field_p]) {
-                oq.field_a.field_z.a(92, var4, 300.0f);
+                oq.field_a.field_z.centerOnStar(92, var4, 300.0f);
                 return;
               }
               var3++;
@@ -433,11 +433,11 @@ final class GameScreen {
             return;
           }
           if (param0.equalsIgnoreCase("zoomOut")) {
-            oq.field_a.field_z.c(false);
+            oq.field_a.field_z.resetCamera(false);
             return;
           }
           if (param0.equalsIgnoreCase("zoom12")) {
-            oq.field_a.field_z.a(oq.field_a.field_P.field_g.field_e[12], 124);
+            oq.field_a.field_z.focusOnStar(oq.field_a.field_P.field_g.field_e[12], 124);
           }
           boolean decompiledFrameCompleted0 = true;
           if (param0.equalsIgnoreCase("zoomDerelict")) {
@@ -451,7 +451,7 @@ final class GameScreen {
                 break;
               }
               if (stackIn_48_0 >= 6) {
-                oq.field_a.field_z.a(var4Lifetime1, param1 ^ 121);
+                oq.field_a.field_z.focusOnStar(var4Lifetime1, param1 ^ 121);
                 break;
               }
               var3Lifetime1++;
@@ -2450,7 +2450,7 @@ final class GameScreen {
         }
     }
 
-    final boolean a(String param0, int param1) {
+    final boolean isPanelVisible(String param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_2_0 = false;
         boolean stackIn_7_0 = false;
@@ -2625,15 +2625,15 @@ final class GameScreen {
           var2_int = 94 % ((param0 + 45) / 39);
           if (this.field_N.f(244874369) &&
             this.field_s.field_Q != null) {
-            this.field_s.field_z.a(0, this.field_s.field_Q.field_a, false);
+            this.field_s.field_z.beginReplayPhase(0, this.field_s.field_Q.field_a, false);
             this.field_X.g(114);
             this.field_X.field_o = SecondaryNodeDequeIterator.field_h;
             if (!ShatteredPlansClient.field_F) {
               return;
             }
           }
-          this.field_s.field_z.a(-1, new IntrusiveDeque(), false);
-          this.field_s.a(2);
+          this.field_s.field_z.beginReplayPhase(-1, new IntrusiveDeque(), false);
+          this.field_s.refreshMapView(2);
           this.field_X.d(false);
           this.field_X.field_o = DebouncedValidator.field_f;
           return;
@@ -2674,8 +2674,8 @@ final class GameScreen {
             DefensiveAi.j(param0 ^ -25141);
           }
           if (oq.field_j == 84) {
-            this.field_s.field_z.e(param0 - 18640);
-            this.field_s.a(2);
+            this.field_s.field_z.endReplay(param0 - 18640);
+            this.field_s.refreshMapView(2);
           }
           boolean decompiledFrameCompleted0 = true;
           if (oq.field_j == 83) {
@@ -3089,7 +3089,7 @@ final class GameScreen {
         }
     }
 
-    final static java.applet.Applet f(byte param0) {
+    final static java.applet.Applet getHostApplet(byte param0) {
         RuntimeException var1 = null;
         java.applet.Applet stackIn_2_0 = null;
         GameApplet stackIn_7_0 = null;
@@ -3457,7 +3457,7 @@ final class GameScreen {
                   } else {
                     stackIn_175_2 = null;
                   }
-                  ((MapView) (Object) stackIn_174_0).a(stackIn_174_1, stackIn_175_2, false);
+                  ((MapView) (Object) stackIn_174_0).beginReplayPhase(stackIn_174_1, stackIn_175_2, false);
                   decompiledFrameRemainder0 = !(this.field_X.f(244874369));
                   if (decompiledFrameRemainder0) {
                     this.field_X.e((byte) 8);
@@ -3479,8 +3479,8 @@ final class GameScreen {
                 } else {
                   stackIn_188_2 = null;
                 }
-                ((MapView) (Object) stackIn_187_0).a(stackIn_187_1, stackIn_188_2, false);
-                this.field_s.a(2);
+                ((MapView) (Object) stackIn_187_0).beginReplayPhase(stackIn_187_1, stackIn_188_2, false);
+                this.field_s.refreshMapView(2);
               }
               this.m(101);
               stackIn_190_0 = var3_int;
@@ -3500,7 +3500,7 @@ final class GameScreen {
                 } else {
                   stackIn_204_2 = null;
                 }
-                ((MapView) (Object) stackIn_203_0).a(stackIn_203_1, stackIn_204_2, false);
+                ((MapView) (Object) stackIn_203_0).beginReplayPhase(stackIn_203_1, stackIn_204_2, false);
                 decompiledSharedTail0 = (var9 != 0);
               }
               if (decompiledSharedTail0) {
@@ -3512,8 +3512,8 @@ final class GameScreen {
                 } else {
                   stackIn_211_2 = this.field_s.field_Q.field_a;
                 }
-                ((MapView) (Object) stackIn_210_0).a(stackIn_210_1, stackIn_211_2, false);
-                this.field_s.a(2);
+                ((MapView) (Object) stackIn_210_0).beginReplayPhase(stackIn_210_1, stackIn_211_2, false);
+                this.field_s.refreshMapView(2);
               }
               stackIn_213_0 = var3_int;
               return stackIn_213_0 != 0;
@@ -3598,7 +3598,7 @@ final class GameScreen {
                     var9 != 0) &&
                     (var7_ref.a((byte) -118, dn.field_h) &&
                     !this.field_s.field_n.field_h[var8.field_x])) {
-                    this.field_s.a(var8, (byte) 54);
+                    this.field_s.proposeAlliance(var8, (byte) 54);
                   }
                   var6++;
                 }
@@ -4754,8 +4754,8 @@ final class GameScreen {
         int var4 = 0;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.field_s.field_z.e(-18641);
-          this.field_s.a(2);
+          this.field_s.field_z.endReplay(-18641);
+          this.field_s.refreshMapView(2);
           if (this.field_s.field_n == null) {
             return;
           }
@@ -4792,7 +4792,7 @@ final class GameScreen {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.field_s.m(124);
+            this.field_s.submitTurn(124);
             this.field_bb.g(81);
             var2.field_e.a(-2948, (Sprite) null);
             stackIn_28_0 = this.field_s.field_N;

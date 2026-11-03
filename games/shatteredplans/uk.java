@@ -183,7 +183,7 @@ final class uk {
           } else {
             var14 = new StandardMapReader(param2, var8_int, var12, var13, var11);
           }
-          var15 = ((MapGenerator) (var14)).a((byte) -115);
+          var15 = ((MapGenerator) (var14)).generate((byte) -115);
           var16_ref_ln__ = var15.field_e;
           for (var17_int = 0; var16_ref_ln__.length > var17_int; var17_int++) {
             var18_ref_ln = var16_ref_ln__[var17_int];

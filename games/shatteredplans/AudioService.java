@@ -90,7 +90,7 @@ final class AudioService implements Runnable {
             try {
               if (false) throw (jn) null;
               var6 = new TutorialMapGenerator();
-              var5.field_g = var6.a((byte) -116);
+              var5.field_g = var6.generate((byte) -116);
               if (param3 != -22379) {
                 stackIn_3_0 = (GameState) null;
                 return stackIn_3_0;

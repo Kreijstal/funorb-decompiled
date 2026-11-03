@@ -7,7 +7,7 @@ final class SolMapReader implements MapGenerator {
     static int field_b;
     private int field_d;
 
-    public final GalaxyMap a(byte param0) throws jn {
+    public final GalaxyMap generate(byte param0) throws jn {
         int var8 = 0;
         int var2;
         int var3;
@@ -29,7 +29,7 @@ final class SolMapReader implements MapGenerator {
         var5 = -65 / ((-67 - param0) / 44);
         var4 = new GalaxyMap(var2, var3, this.field_d, 73);
         var6 = new SolMapGenerator(this.field_d, 2);
-        var6.a(false, var4);
+        var6.placeStars(false, var4);
         var7 = var4.field_e;
         for (var8 = 0; var8 < var7.length; var8++) {
           var9 = var7[var8];

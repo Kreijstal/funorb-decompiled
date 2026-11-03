@@ -123,7 +123,7 @@ final class si extends DualLinkNode {
               js.field_f.writeByte(18, (byte) -76);
               js.field_f.position = js.field_f.position + 2;
               var10 = js.field_f.position;
-              var11_ref_String = ck.a((byte) -128, GameScreen.f((byte) 124));
+              var11_ref_String = ck.a((byte) -128, GameScreen.getHostApplet((byte) 124));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -144,7 +144,7 @@ final class si extends DualLinkNode {
               ae.field_e = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                ce.a(GameScreen.f((byte) 125), true);
+                ce.a(GameScreen.getHostApplet((byte) 125), true);
                 nl.field_c = dh.field_b;
                 q.g(-125);
                 BufferedSocket.field_j = false;
@@ -184,7 +184,7 @@ final class si extends DualLinkNode {
             if (BufferedCacheFile.field_e == 255) {
               var9_ref_String = sa.field_a.readNullableString(1910283844);
               if (var9_ref_String != null) {
-                jf.a(-25602, var9_ref_String, GameScreen.f((byte) 125));
+                jf.a(-25602, var9_ref_String, GameScreen.getHostApplet((byte) 125));
               }
             } else {
               nl.field_c = sa.field_a.readString(-1);

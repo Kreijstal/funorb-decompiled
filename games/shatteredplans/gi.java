@@ -218,7 +218,7 @@ final class gi {
             var6 = var6 | 16;
           }
           js.field_f.writeByte(var6, (byte) -93);
-          var7 = ck.a((byte) 70, GameScreen.f((byte) 125));
+          var7 = ck.a((byte) 70, GameScreen.getHostApplet((byte) 125));
           if (var7 == null) {
             var7 = "";
           }

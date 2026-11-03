@@ -596,7 +596,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               ArchiveSourceManager.field_h = param6;
               SliderWidget.field_G = param5;
               NanoFrameTimer.field_k = 0;
-              ei.field_c = GameScreen.f((byte) 126);
+              ei.field_c = GameScreen.getHostApplet((byte) 126);
               dupTemp$0 = new PlatformTaskDispatcher(param3, param4, param1, true);
               fa.field_W = dupTemp$0;
               jl.field_S = dupTemp$0;
@@ -765,7 +765,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_e = true;
             System.out.println("error_game_" + param1);
             try {
-              ll.a("loggedout", GameScreen.f((byte) 126), (byte) 55);
+              ll.a("loggedout", GameScreen.getHostApplet((byte) 126), (byte) 55);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

@@ -90,7 +90,7 @@ class kp extends ms {
     }
 
     final static void c(int param0) {
-        ce.a(GameScreen.f((byte) 126), true);
+        ce.a(GameScreen.getHostApplet((byte) 126), true);
         if (param0 != -1) {
           field_n = 16;
         }

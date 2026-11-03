@@ -349,7 +349,7 @@ public final class ShatteredPlansClient extends tl {
                   var4_ref = ce.field_x;
                 }
                 if (var4_ref != null &&
-                  ((GameSession) (var4_ref)).c(14759)) {
+                  ((GameSession) (var4_ref)).handleTurnResultPacket(14759)) {
                   continue;
                 }
                 this.e((byte) -84);

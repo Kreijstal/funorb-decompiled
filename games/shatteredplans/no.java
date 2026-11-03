@@ -234,7 +234,7 @@ final class no {
               var28.field_q = new PlayerStats(var31.field_x + var8.field_x + (var30.field_x + var29Lifetime2.field_x) + var10.field_x);
             }
             if (var5 != null) {
-              oq.field_a.a(2, (Player) (var5));
+              oq.field_a.addPlayer(2, (Player) (var5));
               oq.field_a.field_z.a(-128, oq.field_a.field_P.field_v);
               oq.field_a.field_Y.a(oq.field_a.field_P.field_v, 1);
               uq.field_m.a(re.a("<col=<%0>>" + ((Player) (var5)).name + "</col>", 4371, new String[]{Integer.toString(((Player) (var5)).field_s, 16)}), 27275, "player" + ((Player) (var5)).field_x);

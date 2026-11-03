@@ -69,7 +69,7 @@ abstract class MapViewState {
     IntrusiveDeque field_V;
     IntrusiveDeque field_mb;
 
-    final void a(Star param0, int param1, int param2, Player param3) {
+    final void addAnnotation(Star param0, int param1, int param2, Player param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -84,7 +84,7 @@ abstract class MapViewState {
           if (param1 > -116) {
             this.field_E = 0.7882997989654541f;
           }
-          for (var5_int = 0; !this.a(var5_int, 0, param0); var5_int++) {
+          for (var5_int = 0; !this.isSlotFree(var5_int, 0, param0); var5_int++) {
           }
           this.field_ab.addLast((byte) -113, new StarAnnotation(param0, param3, param2, var5_int));
           if (this.field_W <= var5_int) {
@@ -111,7 +111,7 @@ abstract class MapViewState {
         }
     }
 
-    final void b(boolean param0) {
+    final void captureStarState(boolean param0) {
         int var3 = 0;
         Star var4 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -135,7 +135,7 @@ abstract class MapViewState {
         }
     }
 
-    final void a(GalaxyMap param0, int param1) {
+    final void setMap(GalaxyMap param0, int param1) {
         int[] var7 = null;
         int[] var3 = null;
         boolean[] var4 = null;
@@ -153,13 +153,13 @@ abstract class MapViewState {
           }
           this.field_z = var3;
           this.field_P = var4;
-          this.a(false);
+          this.projectStars(false);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ia.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0) {
+    final void clearReplay(int param0) {
         this.field_c.clear(0);
         this.field_m.clear(0);
         this.field_ab.clear(0);
@@ -170,7 +170,7 @@ abstract class MapViewState {
         this.field_W = 0;
     }
 
-    final void a(GameScreen param0, int param1) {
+    final void setScreen(GameScreen param0, int param1) {
         if (param1 < 93) {
           return;
         }
@@ -181,7 +181,7 @@ abstract class MapViewState {
         }
     }
 
-    final void a(Territory param0, int param1) {
+    final void focusOnTerritory(Territory param0, int param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -230,7 +230,7 @@ abstract class MapViewState {
               return;
             }
           }
-          var10 = this.a(22770, param0);
+          var10 = this.territoryBounds(22770, param0);
           var4 = this.field_o.b((byte) 57);
           var5Lifetime1 = -var4.field_l + var4.field_o;
           var6 = var4.field_i - var4.field_q;
@@ -266,7 +266,7 @@ abstract class MapViewState {
         }
     }
 
-    final void a(Player param0, Star param1, boolean param2, int param3) {
+    final void addCountAnnotation(Player param0, Star param1, boolean param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -279,7 +279,7 @@ abstract class MapViewState {
           if (param2) {
             return;
           }
-          for (var5_int = 0; !this.a(var5_int, 0, param1); var5_int++) {
+          for (var5_int = 0; !this.isSlotFree(var5_int, 0, param1); var5_int++) {
           }
           this.field_ab.addLast((byte) -113, new StarAnnotation(param1, param0, -1, param3, var5_int));
           if (var5_int >= this.field_W) {
@@ -313,14 +313,14 @@ abstract class MapViewState {
           this.field_kb = param4;
           this.field_A = param3;
           if (param8 != 0) {
-            this.a(true);
+            this.projectStars(true);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ia.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
-    final void a(Player param0, Star param1, byte param2, Star param3) {
+    final void addWormholeAnnotation(Player param0, Star param1, byte param2, Star param3) {
         int var5_int = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -338,8 +338,8 @@ abstract class MapViewState {
           var5_int = 0;
           while (true) {
             if (this.a(-4, var5_int) &&
-              this.a(var5_int, 0, param3) &&
-              this.a(var5_int, 0, param1)) {
+              this.isSlotFree(var5_int, 0, param3) &&
+              this.isSlotFree(var5_int, 0, param1)) {
               this.field_ab.addLast((byte) -113, new StarAnnotation(param3, param0, 3, var5_int));
               this.field_ab.addLast((byte) -113, new StarAnnotation(param1, param0, 3, var5_int));
               if (var5_int >= this.field_W) {
@@ -375,7 +375,7 @@ abstract class MapViewState {
         }
     }
 
-    private final BoundsRect a(int param0, Territory param1) {
+    private final BoundsRect territoryBounds(int param0, Territory param1) {
         int var6 = 0;
         BoundsRect stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
@@ -445,7 +445,7 @@ abstract class MapViewState {
         }
     }
 
-    final void a(Star param0, int param1) {
+    final void focusOnStar(Star param0, int param1) {
         BoundsRect var3 = null;
         float var4 = 0.0f;
         try {
@@ -455,23 +455,23 @@ abstract class MapViewState {
             var4 = this.field_g;
           }
           int var5 = 80 / ((72 - param1) / 52);
-          this.a(78, param0, var4);
+          this.centerOnStar(78, param0, var4);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ia.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void e(int param0) {
+    final void endReplay(int param0) {
         this.field_T = -1;
         this.field_t = 0;
         this.field_o.field_X.d(false);
         this.field_o.field_X.field_o = DebouncedValidator.field_f;
         if (param0 != -18641) {
-          this.a(17, false, -42);
+          this.findStarAt(17, false, -42);
         }
     }
 
-    private final boolean a(int param0, int param1, Star param2) {
+    private final boolean isSlotFree(int param0, int param1, Star param2) {
         StarAnnotation var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -504,7 +504,7 @@ abstract class MapViewState {
         }
     }
 
-    final Star a(int param0, boolean param1, int param2) {
+    final Star findStarAt(int param0, boolean param1, int param2) {
         int var5 = 0;
         Star var6 = null;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -526,11 +526,11 @@ abstract class MapViewState {
           return null;
         }
         Star var8 = (Star) null;
-        boolean discarded$0 = this.a(-16, -79, (Star) null);
+        boolean discarded$0 = this.isSlotFree(-16, -79, (Star) null);
         return null;
     }
 
-    final void a(int param0, Star param1, float param2) {
+    final void centerOnStar(int param0, Star param1, float param2) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -592,7 +592,7 @@ abstract class MapViewState {
         }
     }
 
-    final void b(int param0) {
+    final void scrollBackground(int param0) {
         int var2 = -640 + Star.field_K.field_z;
         int var3 = -480 + Star.field_K.field_w;
         int var5 = -108 % ((-29 - param0) / 51);
@@ -601,7 +601,7 @@ abstract class MapViewState {
         Star.field_K.draw(var4 >> 4, var6 >> 4);
     }
 
-    final void c(boolean param0) {
+    final void resetCamera(boolean param0) {
         this.field_fb = null;
         if (param0) {
           return;
@@ -620,7 +620,7 @@ abstract class MapViewState {
         field_M = null;
     }
 
-    final void a(int[] param0, boolean param1, Territory[] param2, Player[] param3, boolean param4) {
+    final void setDisplayState(int[] param0, boolean param1, Territory[] param2, Player[] param3, boolean param4) {
         try {
           if (param4) {
             this.field_Z = (Player[]) ((Object) param3.clone());
@@ -638,7 +638,7 @@ abstract class MapViewState {
         }
     }
 
-    final void a(int param0, IntrusiveDeque param1, boolean param2) {
+    final void beginReplayPhase(int param0, IntrusiveDeque param1, boolean param2) {
         RuntimeException stackIn_68_0 = null;
         StringBuilder stackIn_68_1 = null;
         String stackIn_69_2 = null;
@@ -723,7 +723,7 @@ abstract class MapViewState {
               if (param0 != 2) {
                 if (param0 != 3) {
                   if (param0 == -1) {
-                    this.a(this.field_G, true, this.field_w, this.field_q, true);
+                    this.setDisplayState(this.field_G, true, this.field_w, this.field_q, true);
                     this.field_o.a(10, 0, (String) null);
                   }
                 } else {
@@ -792,7 +792,7 @@ abstract class MapViewState {
         }
     }
 
-    void a(boolean param0) {
+    void projectStars(boolean param0) {
         int[] array$0 = null;
         int var8 = 0;
         int var2;
@@ -863,7 +863,7 @@ abstract class MapViewState {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         StarAnnotation var3 = (StarAnnotation) (this.field_ab.startForward(0));
         if (param0 != -4) {
-          this.c(false);
+          this.resetCamera(false);
         }
         while (var3 != null) {
           if (var3.field_o == 3 &&

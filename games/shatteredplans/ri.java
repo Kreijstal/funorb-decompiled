@@ -295,7 +295,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
             this.field_q = this.field_q + (var7.textHeight(this.field_J, this.field_x - 40, var7.field_J) + 5);
           }
           var8 = ph.field_e;
-          var9 = ArchiveRequest.a(GameScreen.f((byte) 124), true);
+          var9 = ArchiveRequest.a(GameScreen.getHostApplet((byte) 124), true);
           if (var9 == og.field_b) {
             var8 = QuaternaryLinkNode.field_v;
           } else {

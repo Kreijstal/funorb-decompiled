@@ -21,7 +21,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         this.field_e = this.field_a;
     }
 
-    public final GalaxyMap a(byte param0) throws jn {
+    public final GalaxyMap generate(byte param0) throws jn {
         int var7_int = 0;
         int var9 = 0;
         int var11 = 0;
@@ -82,7 +82,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         int stackIn_38_1 = 0;
         int var5Lifetime1;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
-        var13 = super.a((byte) 119);
+        var13 = super.generate((byte) 119);
         var3 = this.field_c * this.field_b / 2;
         if (0 == this.field_b * this.field_c % 2) {
           var3 = var3 - this.field_c / 2;
@@ -252,7 +252,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
         return sa.field_a.readString(-1);
     }
 
-    final void a(boolean param0, GalaxyMap param1) throws jn {
+    final void placeStars(boolean param0, GalaxyMap param1) throws jn {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -281,7 +281,7 @@ final class DerelictMapGenerator extends StandardMapGenerator {
             this.field_f[1 + (-this.field_c + var3_int)] = SocketConnector.field_b;
             this.field_f[var3_int + this.field_c + 1] = SocketConnector.field_b;
           }
-          super.a(param0, param1);
+          super.placeStars(param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

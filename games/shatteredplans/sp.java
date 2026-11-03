@@ -164,7 +164,7 @@ final class sp {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0.equalsIgnoreCase("openProduction")) {
-            stackIn_3_0 = oq.field_a.field_Y.a("production", -125);
+            stackIn_3_0 = oq.field_a.field_Y.isPanelVisible("production", -125);
             return stackIn_3_0;
           }
           if (param0.equalsIgnoreCase("placeAllFleets")) {

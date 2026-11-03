@@ -3860,7 +3860,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
         }
     }
 
-    public final GalaxyMap a(byte param0) throws jn {
+    public final GalaxyMap generate(byte param0) throws jn {
         GalaxyMap stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         GalaxyMap var2 = null;
@@ -3880,7 +3880,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
           var2.b((byte) 80);
           var4 = new t(var2.field_e);
           var4.a(true, 1);
-          this.a(-11);
+          this.findHexNeighbours(-11);
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4097,7 +4097,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
             var4.b((byte) 80);
             var6 = new t(var4.field_e);
             var6.a(true, 1);
-            this.a(-11);
+            this.findHexNeighbours(-11);
           }
           stackIn_96_0 = var4;
           return stackIn_96_0;

@@ -2344,7 +2344,7 @@ final class sm {
                                         } else {
                                           if (13 == var5) {
                                             this.field_g = param0;
-                                            ce.field_x.b(-123);
+                                            ce.field_x.sendReady(-123);
                                             var5 = param1 ? 1 : 0;
                                             ta.a(0, -1, (byte) 96, var5 != 0);
                                           } else {
@@ -2362,7 +2362,7 @@ final class sm {
                                                       if (this.field_a != 8 &&
                                                         5 != GameRules.field_c) {
                                                         if ((this.field_a == 11)) {
-                                                          ts.a(GameScreen.f((byte) 126), (byte) 51);
+                                                          ts.a(GameScreen.getHostApplet((byte) 126), (byte) 51);
                                                         }
                                                       } else {
                                                         qk.a(AchievementProgress.field_a, this.field_a, (byte) 123);
@@ -2379,7 +2379,7 @@ final class sm {
                                                     } else {
                                                       if (var5 == 20) {
                                                         this.field_g = param0;
-                                                        DebouncedValidator.a(param3 ^ -32579, GameScreen.f((byte) 127));
+                                                        DebouncedValidator.a(param3 ^ -32579, GameScreen.getHostApplet((byte) 127));
                                                       } else {
                                                         if (27 == var5) {
                                                           var5 = param1 ? 1 : 0;

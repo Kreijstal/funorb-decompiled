@@ -111,33 +111,33 @@ abstract class tl extends GameApplet {
               gm.field_i = 10;
               eh.field_P = true;
             } else {
-              oj.a(0, GameScreen.f((byte) 127));
+              oj.a(0, GameScreen.getHostApplet((byte) 127));
             }
           }
           if (5 == var4) {
-            DebouncedValidator.a(param1 + 0, GameScreen.f((byte) 126));
+            DebouncedValidator.a(param1 + 0, GameScreen.getHostApplet((byte) 126));
           }
           if (var4 == 6 &&
             or.field_a) {
             gm.field_i = 10;
           }
           if (var4 == 7) {
-            id.a(GameScreen.f((byte) 127), (byte) -119);
+            id.a(GameScreen.getHostApplet((byte) 127), (byte) -119);
           }
           if (8 == var4) {
-            oj.a(param1 ^ 1, GameScreen.f((byte) 126));
+            oj.a(param1 ^ 1, GameScreen.getHostApplet((byte) 126));
           }
           if (9 == var4) {
-            de.a(115, GameScreen.f((byte) 125));
+            de.a(115, GameScreen.getHostApplet((byte) 125));
           }
           if (10 == var4) {
             js.field_f.h(17, 255);
           }
           if (var4 == 11) {
-            hr.a(GameScreen.f((byte) 126), (byte) -105);
+            hr.a(GameScreen.getHostApplet((byte) 126), (byte) -105);
           }
           if (var4 == 12) {
-            CipherPacketBuffer.a(SolVictoryChecker.c(false), GameScreen.f((byte) 126), (byte) 88);
+            CipherPacketBuffer.a(SolVictoryChecker.c(false), GameScreen.getHostApplet((byte) 126), (byte) 88);
           }
           if (var4 == 13) {
             try {
@@ -605,7 +605,7 @@ abstract class tl extends GameApplet {
           return;
         }
         String var2 = DerelictMapGenerator.a(param0);
-        DerelictVictoryChecker.a((byte) 112, GameScreen.f((byte) 126), var2);
+        DerelictVictoryChecker.a((byte) 112, GameScreen.getHostApplet((byte) 126), var2);
     }
 
     private final void allowOpcode5(byte param0) {
@@ -771,7 +771,7 @@ abstract class tl extends GameApplet {
         int var4 = rr.field_t - 1;
         byte[] var5 = new byte[var4];
         sa.field_a.b(var4, ~param0, 0, var5);
-        ue.a(GameScreen.f((byte) 126), var3 != 0, IterableNodeHashTable.a(var5, 17746), -128);
+        ue.a(GameScreen.getHostApplet((byte) 126), var3 != 0, IterableNodeHashTable.a(var5, 17746), -128);
     }
 
     private final void allowOpcode6(int param0) {

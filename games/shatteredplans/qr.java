@@ -190,17 +190,17 @@ class qr extends hm {
                   var13 != 2) {
                   if (1 == var13) {
                     var17 = new SolMapGenerator(var10_int, var15.field_v.length);
-                    var15.field_g = var17.a((byte) -128);
+                    var15.field_g = var17.generate((byte) -128);
                   } else {
                     if (var13 != 3) {
                       throw new RuntimeException("Cannot generate map for unknown gametype " + param4);
                     }
                     var18 = new DerelictMapGenerator(var12, var12, var10_int, var8, var15.field_v.length);
-                    var15.field_g = var18.a((byte) -127);
+                    var15.field_g = var18.generate((byte) -127);
                   }
                 } else {
                   var16 = new StandardMapGenerator(var12, var12, var10_int, var8, var15.field_v.length);
-                  var15.field_g = var16.a((byte) -126);
+                  var15.field_g = var16.generate((byte) -126);
                 }
                 var15.field_g.a(var15.field_v, param3, param1 - 46);
                 var15.e(param1 - 50);

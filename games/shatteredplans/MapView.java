@@ -686,7 +686,7 @@ final class MapView extends MapViewState {
             this.field_E = this.field_E + 0.10000000149011612f * var4_float;
             this.field_k = this.field_k + 0.10000000149011612f * var3_float;
           }
-          this.a(false);
+          this.projectStars(false);
           var3 = (so) (this.field_Y.startForward(0));
           while (var3 != null) {
             fieldTemp$0 = var3.field_u + 1;
@@ -2349,7 +2349,7 @@ final class MapView extends MapViewState {
               var5Lifetime1 = 200;
               this.field_t = this.field_t + var3_int;
               if (!(var5Lifetime1 > this.field_t)) {
-                this.a(2, param1, false);
+                this.beginReplayPhase(2, param1, false);
               }
               decompiledFrameRemainder1 = false;
             }
@@ -2361,7 +2361,7 @@ final class MapView extends MapViewState {
                   }
                   this.field_t = this.field_t + var3_int;
                   if (this.field_t >= 200) {
-                    this.a(-1, param1, false);
+                    this.beginReplayPhase(-1, param1, false);
                     this.field_o.field_X.d(false);
                     this.field_o.field_X.field_o = DebouncedValidator.field_f;
                   }
@@ -2369,7 +2369,7 @@ final class MapView extends MapViewState {
               } else {
                 this.field_t = this.field_t + var3_int;
                 if (150 <= this.field_t) {
-                  this.a(3, param1, false);
+                  this.beginReplayPhase(3, param1, false);
                 }
               }
             }
@@ -2388,7 +2388,7 @@ final class MapView extends MapViewState {
             }
             this.field_t = this.field_t + var3_int;
             if (this.field_t >= var4_int) {
-              this.a(1, param1, false);
+              this.beginReplayPhase(1, param1, false);
             }
           }
           if (param0 != -3) {
@@ -2659,7 +2659,7 @@ final class MapView extends MapViewState {
             }
             cg.i(0);
           }
-          this.b(-94);
+          this.scrollBackground(-94);
           if (param3 != 12114) {
             this.field_Bb = true;
           }
@@ -2685,7 +2685,7 @@ final class MapView extends MapViewState {
         }
     }
 
-    final void a(boolean param0) {
+    final void projectStars(boolean param0) {
         int var5 = 0;
         int[] dupTemp$0 = null;
         int[] dupTemp$1 = null;
@@ -2698,7 +2698,7 @@ final class MapView extends MapViewState {
         int[] dupTemp$8 = null;
         int[] dupTemp$9 = null;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        super.a(param0);
+        super.projectStars(param0);
         this.field_Hb = this.field_n;
         if (!(UiWidget.field_t.field_z / 2 <= this.field_Hb)) {
           this.field_Hb = UiWidget.field_t.field_z / 2;
@@ -3121,7 +3121,7 @@ final class MapView extends MapViewState {
             this.field_p = null;
             return;
           }
-          this.field_p = this.a(param2, false, param3);
+          this.field_p = this.findStarAt(param2, false, param3);
           if (param0 == param1) {
             var5 = null;
             if (this.field_p != null) {
@@ -3151,7 +3151,7 @@ final class MapView extends MapViewState {
         this.field_nb[1] = -1;
         this.field_S = null;
         this.field_nb[0] = -1;
-        this.field_p = this.a(param2, false, param3);
+        this.field_p = this.findStarAt(param2, false, param3);
     }
 
     private final void b(int param0, int param1, int param2) {

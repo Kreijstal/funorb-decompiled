@@ -488,26 +488,26 @@ final class SolVictoryChecker extends VictoryChecker {
               Wormhole.field_j = ih.field_f;
               if (mq.field_c.a((byte) 115) != IsolationistAi.field_u) {
                 if (mq.field_c.a((byte) 123) == oi.field_b) {
-                  dm.field_f.a(GameScreen.f((byte) 126), true);
+                  dm.field_f.a(GameScreen.getHostApplet((byte) 126), true);
                 }
               } else {
-                og.field_b.a(GameScreen.f((byte) 127), true);
+                og.field_b.a(GameScreen.getHostApplet((byte) 127), true);
               }
               BufferedSocket.field_j = false;
               if (var6 != null) {
-                jf.a(-25602, var6, GameScreen.f((byte) 125));
+                jf.a(-25602, var6, GameScreen.getHostApplet((byte) 125));
               }
               if (StarAnnotation.field_m <= 0 &&
                 !si.field_v) {
                 try {
-                  ll.a("unzap", GameScreen.f((byte) 127), (byte) 121);
+                  ll.a("unzap", GameScreen.getHostApplet((byte) 127), (byte) 121);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ll.a(GameScreen.f((byte) 125), "zap", new Object[]{pd.a((byte) -67, pd.field_l)}, -116);
+                  ll.a(GameScreen.getHostApplet((byte) 125), "zap", new Object[]{pd.a((byte) -67, pd.field_l)}, -116);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

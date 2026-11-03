@@ -16,7 +16,7 @@ final class DerelictMapReader implements MapGenerator {
     private int field_e;
     private int field_j;
 
-    public final GalaxyMap a(byte param0) throws jn {
+    public final GalaxyMap generate(byte param0) throws jn {
         int var6 = 0;
         GalaxyMap var3;
         Star[] var4;
@@ -34,7 +34,7 @@ final class DerelictMapReader implements MapGenerator {
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_e = this.field_e - 1;
         var13 = new DerelictMapGenerator(this.field_b, this.field_j, this.field_l, this.field_e, this.field_k);
-        var3 = var13.a((byte) 77);
+        var3 = var13.generate((byte) 77);
         var4 = var3.field_e;
         var5 = -23 % ((-67 - param0) / 44);
         for (var6 = 0; var4.length > var6; var6++) {
