@@ -5,7 +5,7 @@ final class GameplayScreen extends MenuScreen {
     static String field_p;
     static boolean[] field_o;
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         if (param0 > -13) {
           return;
         }
@@ -50,7 +50,7 @@ final class GameplayScreen extends MenuScreen {
         SpriteEffectHelpers.a(EditableTextWidget.field_R.field_e, var4, var5);
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         int stackIn_14_0 = 0;
         int stackIn_25_0 = 0;
         int var2;
@@ -77,8 +77,8 @@ final class GameplayScreen extends MenuScreen {
             stackIn_14_0 = 0;
           }
           var3 = stackIn_14_0;
-          this.a(var2, (byte) -128, var3);
-          this.b((byte) -71);
+          this.drawBackdrop(var2, (byte) -128, var3);
+          this.drawRows((byte) -71);
           return;
         }
         field_p = (String) null;
@@ -98,25 +98,25 @@ final class GameplayScreen extends MenuScreen {
           stackIn_25_0 = 0;
         }
         var3Lifetime1 = stackIn_25_0;
-        this.a(var2Lifetime1, (byte) -128, var3Lifetime1);
-        this.b((byte) -71);
+        this.drawBackdrop(var2Lifetime1, (byte) -128, var3Lifetime1);
+        this.drawRows((byte) -71);
         return;
     }
 
-    final void a(int[] param0, byte param1) {
+    final void setItems(int[] param0, byte param1) {
         int var3_int = 0;
         try {
           if (this.field_k != null) {
             var3_int = param0.length - this.field_k.length;
             this.field_d = this.field_d - this.field_i * var3_int / 2;
           }
-          super.a(param0, param1);
+          super.setItems(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dp.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getRowY(int param0, int param1) {
         int var4 = 122 % ((-13 - param0) / 37);
         int var3 = 0;
         if (this.field_l == 2) {
@@ -125,7 +125,7 @@ final class GameplayScreen extends MenuScreen {
         if (this.field_l == 4) {
           var3 = 70;
         }
-        return super.b(118, param1) - var3;
+        return super.getRowY(118, param1) - var3;
     }
 
     public static void releaseStatics(int param0) {
@@ -160,10 +160,10 @@ final class GameplayScreen extends MenuScreen {
         }
     }
 
-    final void e(byte param0) {
-        super.e((byte) -101);
+    final void handleInput(byte param0) {
+        super.handleInput((byte) -101);
         if (param0 > -64) {
-          this.a(125);
+          this.draw(125);
         }
     }
 

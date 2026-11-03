@@ -113,7 +113,7 @@ final class ui {
           aa.field_f.position = aa.field_f.position + 1;
           var4 = fieldTemp$0;
           aa.field_f.writeBytes(GameModeSelectScreen.field_v.position, 0, -3493, GameModeSelectScreen.field_v.payload);
-          aa.field_f.f(-var4 + aa.field_f.position, -1);
+          aa.field_f.backpatchByteLength(-var4 + aa.field_f.position, -1);
           return;
         }
     }

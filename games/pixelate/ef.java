@@ -71,7 +71,7 @@ final class ef {
           var28 = MusicCrossfadeStream.field_o;
           var2 = var28.readUnsignedByte(255);
           if (var2 == 0) {
-            var3 = var28.a((byte) 86);
+            var3 = var28.readUnsignedShort((byte) 86);
             var4 = (ue) (DialWidgetPainter.field_c.c(1504642273));
             while (var4 != null) {
               if (var4.field_o != var3) {
@@ -167,7 +167,7 @@ final class ef {
             var4.field_n = true;
             var4.unlink(2779);
           } else if (var2 == 1) {
-            var3 = var28.a((byte) -125);
+            var3 = var28.readUnsignedShort((byte) -125);
             var4_long = var28.readLong(false);
             var6_ref_rh = (rh) (MenuScreen.field_b.c(1504642273));
             while (var6_ref_rh != null) {

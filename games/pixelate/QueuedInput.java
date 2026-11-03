@@ -202,11 +202,11 @@ final class QueuedInput extends IntrusiveNode {
           if (param0 > -111) {
             QueuedInput.a(-27);
           }
-          aj.field_n = param1.a((byte) -121) << 5;
+          aj.field_n = param1.readUnsignedShort((byte) -121) << 5;
           var2_int = param1.readUnsignedByte(255);
           bq.field_c = (7 & var2_int) << 18;
           aj.field_n = aj.field_n + (var2_int >> 3);
-          bq.field_c = bq.field_c + (param1.a((byte) 47) << 2);
+          bq.field_c = bq.field_c + (param1.readUnsignedShort((byte) 47) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(255);
           bq.field_c = bq.field_c + (var2_intLifetime1 >> 6);
           of.field_g = var2_intLifetime1 << 15 & 2064384;
@@ -214,7 +214,7 @@ final class QueuedInput extends IntrusiveNode {
           var2_intLifetime2 = param1.readUnsignedByte(255);
           of.field_b = var2_intLifetime2 << 16 & 65536;
           of.field_g = of.field_g + (var2_intLifetime2 >> 1);
-          of.field_b = of.field_b + param1.a((byte) 96);
+          of.field_b = of.field_b + param1.readUnsignedShort((byte) 96);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "rd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

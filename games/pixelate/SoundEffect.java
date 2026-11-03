@@ -71,7 +71,7 @@ final class SoundEffect {
             this.instruments[var2].decode(param0);
           }
         }
-        this.field_c = param0.a((byte) -116);
-        this.field_a = param0.a((byte) -112);
+        this.field_c = param0.readUnsignedShort((byte) -116);
+        this.field_a = param0.readUnsignedShort((byte) -112);
     }
 }

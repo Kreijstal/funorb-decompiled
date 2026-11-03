@@ -25,7 +25,7 @@ abstract class DebouncedValidator implements ValidationSource {
           var3_int = param2.position;
           var5 = (CharSequence) ((Object) param1);
           var4 = ValidatedTextWidget.encodeSingleByteText(var5, 353);
-          param2.a((byte) 81, var4.length);
+          param2.writeUnsignedSmart((byte) 81, var4.length);
           param2.position = param2.position + QuickChatPhraseDefinition.field_v.compress(param2.position, var4.length, param2.payload, 0, var4, param0);
           stackIn_1_0 = -var3_int + param2.position;
           return stackIn_1_0;

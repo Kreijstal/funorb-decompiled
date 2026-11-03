@@ -3361,11 +3361,11 @@ final class GameModeSelectScreen extends MenuScreen {
         }
     }
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         try {
           la.a(this.field_l, TickClock.field_a, false, -25528);
           if (param0 > -13) {
-            this.a(57);
+            this.draw(57);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "uk.L(" + param0 + ')');
@@ -3383,7 +3383,7 @@ final class GameModeSelectScreen extends MenuScreen {
         }
     }
 
-    final void e(byte param0) {
+    final void handleInput(byte param0) {
         GameModeCard stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
@@ -3393,7 +3393,7 @@ final class GameModeSelectScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          super.e((byte) -95);
+          super.handleInput((byte) -95);
           stackIn_3_0 = this.field_p;
           stackIn_3_1 = -127;
           stackIn_4_2 = (this.field_g.selectedIndex == 0);
@@ -3455,7 +3455,7 @@ final class GameModeSelectScreen extends MenuScreen {
         }
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         GameModeCard var2 = null;
         String var3 = null;
         GameModeCard stackIn_12_0 = null;
@@ -3468,7 +3468,7 @@ final class GameModeSelectScreen extends MenuScreen {
             return;
           }
           this.d((byte) -110);
-          this.b((byte) -71);
+          this.drawRows((byte) -71);
           if (0 >= this.field_p.field_c &&
             this.field_o.field_c <= 0) {
             return;
@@ -3526,7 +3526,7 @@ final class GameModeSelectScreen extends MenuScreen {
         }
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int rowAt(int param0, int param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_5_0 = 0;
@@ -3547,7 +3547,7 @@ final class GameModeSelectScreen extends MenuScreen {
             stackIn_8_0 = -123;
             return stackIn_8_0;
           }
-          if (super.a(param0, param1, -128) == 2) {
+          if (super.rowAt(param0, param1, -128) == 2) {
             stackIn_13_0 = 2;
             return stackIn_13_0;
           }

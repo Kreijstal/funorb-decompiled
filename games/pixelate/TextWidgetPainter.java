@@ -44,7 +44,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
         int var4 = io.field_c.field_Ib + (io.field_c.field_Tb << 6);
         var2.writeByte(160, var4);
         var2.writeBytes(io.field_c.field_Eb.length, 0, -3493, io.field_c.field_Eb);
-        var2.f(var2.position - var3, -1);
+        var2.backpatchByteLength(var2.position - var3, -1);
     }
 
     public final int a(int param0) {

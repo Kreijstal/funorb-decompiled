@@ -53,7 +53,7 @@ final class pe {
         int var5 = var4.position;
         var4.writeByte(160, param0);
         var4.writeLong(false, param2);
-        var4.f(var4.position - var5, -1);
+        var4.backpatchByteLength(var4.position - var5, -1);
     }
 
     final static boolean a(boolean param0) {

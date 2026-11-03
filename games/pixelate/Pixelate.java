@@ -322,9 +322,9 @@ public final class Pixelate extends NetworkGameClient {
                 continue;
               }
               if (TextLayoutLine.field_e == 69) {
-                var4Lifetime1Lifetime1 = MusicCrossfadeStream.field_o.a((byte) 41);
-                var5Lifetime2 = MusicCrossfadeStream.field_o.a((byte) 14);
-                var6 = MusicCrossfadeStream.field_o.a((byte) -117);
+                var4Lifetime1Lifetime1 = MusicCrossfadeStream.field_o.readUnsignedShort((byte) 41);
+                var5Lifetime2 = MusicCrossfadeStream.field_o.readUnsignedShort((byte) 14);
+                var6 = MusicCrossfadeStream.field_o.readUnsignedShort((byte) -117);
                 var7Lifetime2 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
                 var8 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
                 var9 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
@@ -344,8 +344,8 @@ public final class Pixelate extends NetworkGameClient {
               }
               if (62 == TextLayoutLine.field_e) {
                 var4Lifetime1Lifetime2 = MusicCrossfadeStream.field_o.readByte(0);
-                var5Lifetime3 = MusicCrossfadeStream.field_o.a((byte) -116);
-                var6 = MusicCrossfadeStream.field_o.a((byte) -121);
+                var5Lifetime3 = MusicCrossfadeStream.field_o.readUnsignedShort((byte) -116);
+                var6 = MusicCrossfadeStream.field_o.readUnsignedShort((byte) -121);
                 ((MatchController) (var3_ref)).a(var5Lifetime3, var4Lifetime1Lifetime2, var6, false);
                 continue;
               }
@@ -359,7 +359,7 @@ public final class Pixelate extends NetworkGameClient {
                 }
                 stackIn_138_0 = (var5Lifetime4 == 1) ? 0 : 1;
                 var6 = stackIn_138_0;
-                var16_ref.a(AlphaContainer.a(e.field_e, 76, new String[]{((MatchController) (var3_ref)).field_a.playerNames[var6]}), (byte) -4);
+                var16_ref.setStatusMessage(AlphaContainer.a(e.field_e, 76, new String[]{((MatchController) (var3_ref)).field_a.playerNames[var6]}), (byte) -4);
                 continue;
               }
               if (TextLayoutLine.field_e == 65) {
@@ -384,7 +384,7 @@ public final class Pixelate extends NetworkGameClient {
                 }
                 stackIn_150_0 = (var5Lifetime5 != 1) ? 1 : 0;
                 var6 = stackIn_150_0;
-                var16_ref.a(AlphaContainer.a(ArrayWidgetContainer.field_M, 75, new String[]{((MatchController) (var3_ref)).field_a.playerNames[var6]}), (byte) -4);
+                var16_ref.setStatusMessage(AlphaContainer.a(ArrayWidgetContainer.field_M, 75, new String[]{((MatchController) (var3_ref)).field_a.playerNames[var6]}), (byte) -4);
                 continue;
               }
               if (71 == TextLayoutLine.field_e) {
@@ -433,13 +433,13 @@ public final class Pixelate extends NetworkGameClient {
             ro.field_e = null;
             MatchingTextValidator.field_r = var15;
             var16_ref.f(-120);
-            var16_ref.a((String) null, (byte) -4);
+            var16_ref.setStatusMessage((String) null, (byte) -4);
           } else {
             MatchingTextValidator.field_r = null;
             ro.field_e = var15;
             ValidationHelpWidget.field_Y = true;
             var16_ref.e(1);
-            var16_ref.a((String) null, (byte) -4);
+            var16_ref.setStatusMessage((String) null, (byte) -4);
           }
           LinkButtonPainter.field_d = false;
           MidiPcmStream.field_t = -1;
@@ -802,13 +802,13 @@ public final class Pixelate extends NetworkGameClient {
           var4 = var5.position;
           var5.writeByte(160, 1);
           var5.writeByte(160, param2.field_p);
-          var5.a(param2.field_k, -14596);
+          var5.writeSignedSmart(param2.field_k, -14596);
           var5.writeInt(param2.field_l, -108);
           var5.writeInt(param2.field_n, -43);
           var5.writeInt(param2.field_o, -104);
           var5.writeInt(param2.field_q, -106);
-          var5.b(var4, (byte) 43);
-          var5.f(-var4 + var5.position, -1);
+          var5.appendCrc32(var4, (byte) 43);
+          var5.backpatchByteLength(-var4 + var5.position, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "Pixelate.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -1851,7 +1851,7 @@ public final class Pixelate extends NetworkGameClient {
               } else {
                 if (fc.field_e != -2) {
                   if (BoardParticle.a((byte) -104, fc.field_e)) {
-                    wo.b(-79, fc.field_e).e((byte) -83);
+                    wo.b(-79, fc.field_e).handleInput((byte) -83);
                     DialWidgetPainter.b(0);
                   }
                 } else {

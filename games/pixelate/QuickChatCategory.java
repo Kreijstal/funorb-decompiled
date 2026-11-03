@@ -139,7 +139,7 @@ final class QuickChatCategory extends DualLinkNode {
               this.field_x = new char[var4_int];
               this.subcategoryIds = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.subcategoryIds[var5] = param2.a((byte) -128);
+                this.subcategoryIds[var5] = param2.readUnsignedShort((byte) -128);
                 var6 = param2.readByte(0);
                 stackIn_18_0 = this.field_x;
                 stackIn_18_1 = var5;
@@ -156,7 +156,7 @@ final class QuickChatCategory extends DualLinkNode {
                 this.field_t = new char[var4_int];
                 this.phraseIds = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  this.phraseIds[var5] = param2.a((byte) -113);
+                  this.phraseIds[var5] = param2.readUnsignedShort((byte) -113);
                   var6 = param2.readByte(0);
                   stackIn_9_0 = this.field_t;
                   stackIn_9_1 = var5;

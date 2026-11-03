@@ -14,7 +14,7 @@ final class fq extends MenuScreen {
         field_o = null;
     }
 
-    final int b(int param0, int param1) {
+    final int getRowY(int param0, int param1) {
         int var3 = -58 % ((-13 - param0) / 37);
         if (ArrayWidgetContainer.a((byte) 88)) {
           return (this.field_i >> 1) + this.field_d;
@@ -29,7 +29,7 @@ final class fq extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final int a(int param0, byte param1) {
+    final int getRowLeft(int param0, byte param1) {
         if (param1 != 90) {
           return 74;
         }
@@ -159,21 +159,21 @@ final class fq extends MenuScreen {
         }
     }
 
-    final int a(int param0, boolean param1) {
+    final int getRowRight(int param0, boolean param1) {
         if (param1) {
           field_q = -11;
         }
         int var3 = (-(2 * this.field_m) + 640) / 2;
         if (!ArrayWidgetContainer.a((byte) 116)) {
-          return this.a(param0, (byte) 90) + var3;
+          return this.getRowLeft(param0, (byte) 90) + var3;
         }
         if (0 == param0) {
-          return this.a(param0, (byte) 90) + 350;
+          return this.getRowLeft(param0, (byte) 90) + 350;
         }
-        return 100 + this.a(param0, (byte) 90);
+        return 100 + this.getRowLeft(param0, (byte) 90);
     }
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         la.a(this.field_l, TickClock.field_a, false, -25528);
         if (param0 >= -13) {
           field_q = -93;
@@ -187,7 +187,7 @@ final class fq extends MenuScreen {
         }
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         int stackIn_15_0 = 0;
         String stackIn_28_0 = null;
         String var2;
@@ -211,7 +211,7 @@ final class fq extends MenuScreen {
         regionExit1: {
           var16 = Pixelate.field_H ? 1 : 0;
           NumericDateInputWidget.field_W[5].drawTransparent(0, 45);
-          this.b((byte) -71);
+          this.drawRows((byte) -71);
           this.d((byte) -63);
           if (ArrayWidgetContainer.a((byte) 74)) {
             var2 = wo.field_a;

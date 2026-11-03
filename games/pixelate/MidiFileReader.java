@@ -76,8 +76,8 @@ final class MidiFileReader {
         int var3Lifetime1;
         this.buffer.payload = param0;
         this.buffer.position = 10;
-        int var2 = this.buffer.a((byte) 85);
-        this.field_i = this.buffer.a((byte) 55);
+        int var2 = this.buffer.readUnsignedShort((byte) 85);
+        this.field_i = this.buffer.readUnsignedShort((byte) 55);
         this.tempoMicrosPerQuarter = 500000;
         this.trackStarts = new int[var2];
         int var3 = 0;

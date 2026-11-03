@@ -77,7 +77,7 @@ final class HighscoresScreen extends MenuScreen {
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getRowY(int param0, int param1) {
         int var3 = 51 % ((param0 + 13) / 37);
         if (ArrayWidgetContainer.a((byte) 64)) {
           return this.field_d + param1 * this.field_i;
@@ -88,10 +88,10 @@ final class HighscoresScreen extends MenuScreen {
         return this.field_i + this.field_d;
     }
 
-    final int a(int param0, byte param1) {
+    final int getRowLeft(int param0, byte param1) {
         this.field_m = 30;
         if (param1 != 90) {
-          this.a(-116, false);
+          this.getRowRight(-116, false);
           this.field_a = 640 - this.field_m;
           if (ArrayWidgetContainer.a((byte) 123)) {
             return -(this.d(param0, 29) >> 1) + 320;
@@ -177,7 +177,7 @@ final class HighscoresScreen extends MenuScreen {
             }
           }
           if (var3 == 1) {
-            var5 = var11.l(-20729);
+            var5 = var11.readSignedSmart(-20729);
             var6 = (df) (he.field_b.c(1504642273));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
@@ -214,7 +214,7 @@ final class HighscoresScreen extends MenuScreen {
         }
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         int var3;
         String var4;
         BinaryBitmapFont var5;
@@ -265,7 +265,7 @@ final class HighscoresScreen extends MenuScreen {
         PaletteBitmapFont var16Lifetime1;
         var15 = Pixelate.field_H ? 1 : 0;
         NumericDateInputWidget.field_W[8].drawTransparent(0, 45);
-        this.b((byte) -71);
+        this.drawRows((byte) -71);
         if (param0 != 11) {
           this.a((byte) -95, false, 89);
           this.d((byte) 74);
@@ -617,9 +617,9 @@ final class HighscoresScreen extends MenuScreen {
         var2Lifetime2 = 20 / ((10 - param0) / 32);
     }
 
-    final int a(int param0, boolean param1) {
+    final int getRowRight(int param0, boolean param1) {
         if (param1) {
-          this.c((byte) -54);
+          this.onCancel((byte) -54);
           if (ArrayWidgetContainer.a((byte) 115)) {
             return (this.d(param0, 53) >> 1) + 320;
           }
@@ -643,7 +643,7 @@ final class HighscoresScreen extends MenuScreen {
         return this.field_a;
     }
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         if (param0 < -13) {
           la.a(this.field_l, TickClock.field_a, false, -25528);
           return;

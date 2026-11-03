@@ -118,7 +118,7 @@ final class DialWidgetPainter implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          if (!PacketBuffer.a(param2, 5832, param0)) {
+          if (!PacketBuffer.isValidAccountName(param2, 5832, param0)) {
             return false;
           }
           if (param1 >= -60) {

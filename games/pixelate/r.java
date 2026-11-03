@@ -57,7 +57,7 @@ final class r {
         var2.writeByte(160, ib.field_a);
         var2.writeByte(160, TextFieldValidator.field_i);
         var2.writeBytes(NanoTickClock.field_k.length, param0, -3493, NanoTickClock.field_k);
-        var2.f(var2.position - var3, -1);
+        var2.backpatchByteLength(var2.position - var3, -1);
     }
 
     static {

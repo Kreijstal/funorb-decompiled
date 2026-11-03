@@ -51,13 +51,13 @@ final class ni extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        StripedProgressBar.field_H[5].a(ug.field_n, (byte) -24);
-        StripedProgressBar.field_H[6].a(DualLinkNode.field_s, (byte) -24);
-        StripedProgressBar.field_H[8].a(TextHotspotWidget.field_T, (byte) -24);
+        StripedProgressBar.field_H[5].setItems(ug.field_n, (byte) -24);
+        StripedProgressBar.field_H[6].setItems(DualLinkNode.field_s, (byte) -24);
+        StripedProgressBar.field_H[8].setItems(TextHotspotWidget.field_T, (byte) -24);
         if (!gq.d(121)) {
-          StripedProgressBar.field_H[1].a(BirthDateEntryPanel.field_N, (byte) -24);
-          StripedProgressBar.field_H[2].a(VerticalScrollbar.field_Sb, (byte) -24);
-          StripedProgressBar.field_H[4].a(UiComponent.field_m, (byte) -24);
+          StripedProgressBar.field_H[1].setItems(BirthDateEntryPanel.field_N, (byte) -24);
+          StripedProgressBar.field_H[2].setItems(VerticalScrollbar.field_Sb, (byte) -24);
+          StripedProgressBar.field_H[4].setItems(UiComponent.field_m, (byte) -24);
         }
         if (param0 == -31470) {
           return;

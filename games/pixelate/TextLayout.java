@@ -137,7 +137,7 @@ abstract class TextLayout {
           stackIn_31_0 = ((2 & var4_int) == 0) ? 0 : 1;
           var6 = stackIn_31_0;
           param3.readBytes(param1.field_Eb, 0, -77, param1.field_Eb.length);
-          param1.field_bc = param3.a((byte) -11);
+          param1.field_bc = param3.readUnsignedShort((byte) -11);
           param1.field_Lb = hm.a(64) - (long)param3.readInt(param2 - 120);
           if (var5 == 0) {
             param1.field_nc = -1;

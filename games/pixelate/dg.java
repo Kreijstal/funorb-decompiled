@@ -21,14 +21,14 @@ final class dg {
           var7 = var8.position;
           var8.writeByte(160, param1);
           if (param1 == 2) {
-            var8.writeString((byte) -41, param4);
+            var8.b((byte) -41, param4);
           }
           if (param3 != null) {
             DebouncedValidator.a(!param0 ? true : false, param3, var8);
           } else {
             var8.writeShort(1276387944, param2);
           }
-          var8.f(var8.position - var7, -1);
+          var8.backpatchByteLength(var8.position - var7, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

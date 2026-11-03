@@ -111,9 +111,9 @@ final class ij extends MenuScreen {
         SoftwareRasterizer.clear();
     }
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         if (param0 >= -13) {
-          this.c((byte) -53);
+          this.onCancel((byte) -53);
         }
     }
 
@@ -126,7 +126,7 @@ final class ij extends MenuScreen {
         int var1 = 8 / ((-77 - param0) / 47);
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         if (param0 != 11) {
           field_t = (String) null;
         }

@@ -50,8 +50,8 @@ final class PlayerBoard {
             PlayerBoard.d(-62);
           }
           this.pieceRow = param1.readUnsignedByte(255);
-          this.field_u = param1.a((byte) 76);
-          this.field_b = param1.a((byte) -117);
+          this.field_u = param1.readUnsignedShort((byte) 76);
+          this.field_b = param1.readUnsignedShort((byte) -117);
           stackIn_6_1 = (1 == param1.readUnsignedByte(255));
           this.fastDrop = stackIn_6_1;
           for (var3_int = 0; var3_int < 4; var3_int++) {

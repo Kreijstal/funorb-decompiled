@@ -130,10 +130,10 @@ final class cm extends IntrusiveNode {
           aa.field_f.position = aa.field_f.position + 1;
           var8 = aa.field_f.position;
           aa.field_f.writeLong(false, param2);
-          aa.field_f.writeString((byte) -41, param3);
+          aa.field_f.b((byte) -41, param3);
           aa.field_f.writeByte(160, param4);
           aa.field_f.writeByte(160, param1 ? 1 : 0);
-          aa.field_f.f(aa.field_f.position - var8, -1);
+          aa.field_f.backpatchByteLength(aa.field_f.position - var8, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "cm.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

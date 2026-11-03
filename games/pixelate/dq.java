@@ -46,10 +46,10 @@ final class dq {
           } else {
             var5.writeByte(160, 0);
           }
-          var5.b(var4, (byte) 48);
+          var5.appendCrc32(var4, (byte) 48);
           var5.position = var5.position - 4;
           param2.field_m = var5.readInt(param1 + 18989);
-          var5.f(var5.position - var4, param1 + 18988);
+          var5.backpatchByteLength(var5.position - var4, param1 + 18988);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "dq.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

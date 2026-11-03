@@ -331,7 +331,7 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
               decompiledFrameRemainder0 = false;
             }
             else {
-              wo.b(-73, param2).a(11);
+              wo.b(-73, param2).draw(11);
             }
           }
         } else {

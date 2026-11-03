@@ -148,7 +148,7 @@ final class MatchController {
               if (this.field_a.field_j >= 0) {
                 var5 = this.field_a.playerNames[this.field_a.field_j];
               }
-              var8.a((String) (var5), -10, this.field_a);
+              var8.showMultiplayerResults((String) (var5), -10, this.field_a);
             }
           } else {
             var5_int = un.field_j.field_e;
@@ -175,7 +175,7 @@ final class MatchController {
           stackIn_8_4 = param0;
           stackIn_8_5 = ArrayWidgetContainer.a((byte) 85);
           stackIn_9_6 = (EmailCredentials.field_k == 0) ? false : true;
-          ((GameResultsScreen) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3, stackIn_8_4, stackIn_8_5, stackIn_9_6, gb.field_f[3], 2, gb.field_f[2], this.field_a.scores[0]);
+          ((GameResultsScreen) (Object) stackIn_5_0).showSinglePlayerResults(stackIn_5_1, stackIn_5_2, stackIn_6_3, stackIn_8_4, stackIn_8_5, stackIn_9_6, gb.field_f[3], 2, gb.field_f[2], this.field_a.scores[0]);
         }
         if (DateOfBirthValidator.field_j != 1) {
           dg.a(1, (byte) -97);

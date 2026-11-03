@@ -122,7 +122,7 @@ final class BoundedRandomAccessFile {
             if (param1 > -28) {
               field_b = (String) null;
             }
-            var3_int = param2.g(21231);
+            var3_int = param2.readUnsignedSmart(21231);
             if (var3_int > param0) {
               var3_int = param0;
             }

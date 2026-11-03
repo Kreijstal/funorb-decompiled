@@ -54,7 +54,7 @@ final class MusicPatchNode extends IntrusiveNode {
           if (!QueuedInput.a(2, false)) {
             return false;
           }
-          BackgroundScene.field_b = MusicCrossfadeStream.field_o.a((byte) -113);
+          BackgroundScene.field_b = MusicCrossfadeStream.field_o.readUnsignedShort((byte) -113);
           MusicCrossfadeStream.field_o.position = 0;
         }
         if (param0 == -18481) {

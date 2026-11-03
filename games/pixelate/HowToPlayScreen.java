@@ -32,9 +32,9 @@ final class HowToPlayScreen extends MenuScreen {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         var4 = Pixelate.field_H ? 1 : 0;
-        stackIn_3_0 = (this.c(-123, 0)) ? 0 : 1;
+        stackIn_3_0 = (this.isRowEnabled(-123, 0)) ? 0 : 1;
         var2 = stackIn_3_0;
-        stackIn_6_0 = (this.c(-119, 2)) ? 2 : 1;
+        stackIn_6_0 = (this.isRowEnabled(-119, 2)) ? 2 : 1;
         var3 = stackIn_6_0;
         if (param0 > -35) {
           return;
@@ -96,7 +96,7 @@ final class HowToPlayScreen extends MenuScreen {
         int var3 = 0;
         this.field_r = this.field_r + 1;
         if (param0) {
-          this.a(-73, (byte) -53);
+          this.getRowLeft(-73, (byte) -53);
         }
         if (!param1 &&
           ln.field_m.length - 1 == this.field_r) {
@@ -107,7 +107,7 @@ final class HowToPlayScreen extends MenuScreen {
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getRowY(int param0, int param1) {
         int var3 = 14 / ((param0 + 13) / 37);
         return this.field_d;
     }
@@ -123,15 +123,15 @@ final class HowToPlayScreen extends MenuScreen {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getRowLeft(int param0, byte param1) {
         if (param1 != 90) {
           return 61;
         }
         return param0 * 180 + this.field_m;
     }
 
-    final void e(byte param0) {
-        super.e((byte) -107);
+    final void handleInput(byte param0) {
+        super.handleInput((byte) -107);
         if (this.field_r == 3) {
           SpriteState.field_u.a((byte) 21);
         }
@@ -143,14 +143,14 @@ final class HowToPlayScreen extends MenuScreen {
         }
     }
 
-    final int a(int param0, boolean param1) {
+    final int getRowRight(int param0, boolean param1) {
         if (param1) {
           this.field_r = 79;
         }
-        return this.a(param0, (byte) 90) + 140;
+        return this.getRowLeft(param0, (byte) 90) + 140;
     }
 
-    final boolean c(int param0, int param1) {
+    final boolean isRowEnabled(int param0, int param1) {
         boolean stackIn_10_0 = false;
         if (param0 >= -112) {
           return false;
@@ -162,7 +162,7 @@ final class HowToPlayScreen extends MenuScreen {
         return stackIn_10_0;
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         BackgroundScene var2;
         int var3;
         PaletteBitmapFont var4;
@@ -191,7 +191,7 @@ final class HowToPlayScreen extends MenuScreen {
         DebouncedValidator.field_d = 0;
         NumericDateInputWidget.field_W[1].drawTransparent(0, 45);
         this.d((byte) 59);
-        this.b((byte) -71);
+        this.drawRows((byte) -71);
         var4 = rk.field_e;
         var5 = qj.field_e;
         var6 = var5.maxAscent + (var5.maxDescent + 1);
@@ -326,7 +326,7 @@ final class HowToPlayScreen extends MenuScreen {
         }
     }
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         if (param0 >= -13) {
           this.b(-19);
         }

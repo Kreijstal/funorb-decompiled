@@ -54,8 +54,8 @@ final class SoundEnvelope {
         this.segmentTimes = new int[this.segmentCount];
         this.field_j = new int[this.segmentCount];
         for (var2 = 0; var2 < this.segmentCount; var2++) {
-          this.segmentTimes[var2] = param0.a((byte) -120);
-          this.field_j[var2] = param0.a((byte) -125);
+          this.segmentTimes[var2] = param0.readUnsignedShort((byte) -120);
+          this.field_j[var2] = param0.readUnsignedShort((byte) -125);
         }
     }
 

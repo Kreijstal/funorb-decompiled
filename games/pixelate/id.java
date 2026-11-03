@@ -33,8 +33,8 @@ final class id {
           var5.writeInt(param1.field_r, -102);
           var5.writeInt(param1.field_l, -112);
           var5.writeInt(param1.field_p, -120);
-          var5.b(var4, (byte) 84);
-          var5.f(var5.position - var4, -1);
+          var5.appendCrc32(var4, (byte) 84);
+          var5.backpatchByteLength(var5.position - var4, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

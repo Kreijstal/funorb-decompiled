@@ -750,7 +750,7 @@ class UiComponent extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = PacketBuffer.b(nh.a(param0, -29667), -7067);
+          var2 = PacketBuffer.decodeBase37Name(nh.a(param0, -29667), -7067);
           if (var2 == null) {
             var2 = "";
           }

@@ -67,7 +67,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               var4_int = param2.readUnsignedByte(255);
               this.field_u = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_u[var5] = param2.a((byte) -115);
+                this.field_u[var5] = param2.readUnsignedShort((byte) -115);
               }
             } else {
               if (param0 == 3) {
@@ -75,14 +75,14 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
                 this.field_B = new int[var4_int][];
                 this.field_x = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param2.a((byte) 52);
+                  var6 = param2.readUnsignedShort((byte) 52);
                   var7 = EmailCredentials.a(var6, -52);
                   if (var7 != null) {
                     this.field_x[var5] = var6;
                     array$0 = new int[var7.field_e];
                     this.field_B[var5] = array$0;
                     for (var8 = 0; var7.field_e > var8; var8++) {
-                      this.field_B[var5][var8] = param2.a((byte) -118);
+                      this.field_B[var5][var8] = param2.readUnsignedShort((byte) -118);
                     }
                   }
                 }

@@ -84,7 +84,7 @@ final class LobbyPlayer extends SceneWidget {
         BoundedRandomAccessFile.field_d = var8.readUnsignedByte(255);
         cd.field_g = var8.readLong(false);
         if (HowToPlayScreen.field_o == 2) {
-          qf.field_b = var8.a((byte) 2);
+          qf.field_b = var8.readUnsignedShort((byte) 2);
           ModalStack.field_I = var8.readUnsignedMedium((byte) 13);
         } else {
           qf.field_b = 0;
@@ -99,11 +99,11 @@ final class LobbyPlayer extends SceneWidget {
           OptionsScreen.field_t = var8.readString(5);
         }
         if (HowToPlayScreen.field_o == 1) {
-          OptionsScreen.field_s = var8.a((byte) -4);
+          OptionsScreen.field_s = var8.readUnsignedShort((byte) -4);
           cl.field_h = var8.readString(5);
         } else {
           if (HowToPlayScreen.field_o == 4) {
-            OptionsScreen.field_s = var8.a((byte) -4);
+            OptionsScreen.field_s = var8.readUnsignedShort((byte) -4);
             cl.field_h = var8.readString(5);
           } else {
             OptionsScreen.field_s = 0;
@@ -115,7 +115,7 @@ final class LobbyPlayer extends SceneWidget {
           HuffmanCodec.field_g = null;
           return new aa(param0);
         }
-        var5 = var8.a((byte) 127);
+        var5 = var8.readUnsignedShort((byte) 127);
         try {
           var9 = jd.field_k.a(-21209, var5);
           PictureStrip.field_j = var9.getPreview((byte) -54);

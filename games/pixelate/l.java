@@ -80,7 +80,7 @@ final class l extends MenuScreen {
         this.a(param1, true);
     }
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         la.a(TickClock.field_a, TickClock.field_a, false, -25528);
         if (param0 > -13) {
           l.releaseStatics(-78);
@@ -178,13 +178,13 @@ final class l extends MenuScreen {
         }
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         BinaryBitmapFont var2 = null;
         int var3 = 0;
         BinaryBitmapFont var2Lifetime1;
         int var3Lifetime1;
         this.d((byte) -65);
-        this.b((byte) -71);
+        this.drawRows((byte) -71);
         if (param0 == 11) {
           var2 = qj.field_e;
           var3 = 1 + (var2.maxAscent + var2.maxDescent);

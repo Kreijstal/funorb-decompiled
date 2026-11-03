@@ -6,13 +6,13 @@ final class PauseMenuScreen extends MenuScreen {
     static boolean field_o;
     static int field_q;
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         if (param0 >= -13) {
           PauseMenuScreen.b(false);
         }
     }
 
-    final void e(byte param0) {
+    final void handleInput(byte param0) {
         int var2 = ro.b(-36, !pe.a(false) ? true : false);
         if (param0 >= -64) {
           return;
@@ -31,7 +31,7 @@ final class PauseMenuScreen extends MenuScreen {
         }
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         if (KiteBackground.d(3782)) {
           mc.e(12);
         }

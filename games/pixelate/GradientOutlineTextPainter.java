@@ -40,7 +40,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             AudioService.a(var1, -20);
-            aa.field_f.f(var1.position - var2, param0 ^ -9);
+            aa.field_f.backpatchByteLength(var1.position - var2, param0 ^ -9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

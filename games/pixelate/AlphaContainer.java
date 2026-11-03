@@ -197,8 +197,8 @@ final class AlphaContainer extends SingleChildContainer {
           if (param0 >= -37) {
             field_I = false;
           }
-          var8.b(var4, (byte) 86);
-          var8.f(var8.position - var4, -1);
+          var8.appendCrc32(var4, (byte) 86);
+          var8.backpatchByteLength(var8.position - var4, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "sd.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -251,7 +251,7 @@ final class AlphaContainer extends SingleChildContainer {
           var17 = new PacketBuffer(param1);
           var18 = var17;
           var18.position = -2 + param1.length;
-          SocialListEntry.field_Qb = var18.a((byte) 97);
+          SocialListEntry.field_Qb = var18.readUnsignedShort((byte) 97);
           gd.field_k = new byte[SocialListEntry.field_Qb][];
           TriangleMesh.field_m = new boolean[SocialListEntry.field_Qb];
           ByteStorage.field_g = new int[SocialListEntry.field_Qb];
@@ -260,24 +260,24 @@ final class AlphaContainer extends SingleChildContainer {
           e.field_b = new int[SocialListEntry.field_Qb];
           wo.field_f = new byte[SocialListEntry.field_Qb][];
           var18.position = -7 + (param1.length - 8 * SocialListEntry.field_Qb);
-          tj.field_y = var18.a((byte) 38);
-          jb.field_a = var18.a((byte) 46);
+          tj.field_y = var18.readUnsignedShort((byte) 38);
+          jb.field_a = var18.readUnsignedShort((byte) 46);
           var3 = 1 + (var18.readUnsignedByte(255) & 255);
           for (var4 = 0; var4 < SocialListEntry.field_Qb; var4++) {
-            IntrusiveNode.field_b[var4] = var17.a((byte) 88);
+            IntrusiveNode.field_b[var4] = var17.readUnsignedShort((byte) 88);
           }
           if (param0 != -95) {
             var16 = (String[]) null;
             AlphaContainer.a((String) null, 80, (String[]) null);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < SocialListEntry.field_Qb; var4Lifetime1++) {
-            e.field_b[var4Lifetime1] = var18.a((byte) -122);
+            e.field_b[var4Lifetime1] = var18.readUnsignedShort((byte) -122);
           }
           for (var4Lifetime2 = 0; SocialListEntry.field_Qb > var4Lifetime2; var4Lifetime2++) {
-            ByteStorage.field_g[var4Lifetime2] = var18.a((byte) -14);
+            ByteStorage.field_g[var4Lifetime2] = var18.readUnsignedShort((byte) -14);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < SocialListEntry.field_Qb; var4Lifetime3++) {
-            ge.field_c[var4Lifetime3] = var18.a((byte) -116);
+            ge.field_c[var4Lifetime3] = var18.readUnsignedShort((byte) -116);
           }
           var18.position = param1.length - (7 - (-(8 * SocialListEntry.field_Qb) - 3 * (-1 + var3)));
           fl.field_g = new int[var3];

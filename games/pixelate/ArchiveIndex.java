@@ -173,9 +173,9 @@ final class ArchiveIndex {
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (var4 >= 7) {
-              this.groupCount = var17.i(9997);
+              this.groupCount = var17.readUnsignedShortOrInt(9997);
             } else {
-              this.groupCount = var17.a((byte) -119);
+              this.groupCount = var17.readUnsignedShort((byte) -119);
             }
             stackIn_17_0 = ((var5 & 2) == 0) ? 0 : 1;
             var7 = stackIn_17_0;
@@ -184,7 +184,7 @@ final class ArchiveIndex {
             this.groupIds = new int[this.groupCount];
             if (var4 < 7) {
               for (var10 = 0; this.groupCount > var10; var10++) {
-                dupTemp$0 = var8 + var17.a((byte) -111);
+                dupTemp$0 = var8 + var17.readUnsignedShort((byte) -111);
                 var8 = dupTemp$0;
                 this.groupIds[var10] = dupTemp$0;
                 if (this.groupIds[var10] > var9) {
@@ -193,7 +193,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10 = 0; this.groupCount > var10; var10++) {
-                dupTemp$1 = var8 + var17.i(9997);
+                dupTemp$1 = var8 + var17.readUnsignedShortOrInt(9997);
                 var8 = dupTemp$1;
                 this.groupIds[var10] = dupTemp$1;
                 if (var9 < this.groupIds[var10]) {
@@ -236,7 +236,7 @@ final class ArchiveIndex {
             }
             if (var4 >= 7) {
               for (var10Lifetime5 = 0; this.groupCount > var10Lifetime5; var10Lifetime5++) {
-                this.fileCounts[this.groupIds[var10Lifetime5]] = var17.i(9997);
+                this.fileCounts[this.groupIds[var10Lifetime5]] = var17.readUnsignedShortOrInt(9997);
               }
               for (var10Lifetime5 = 0; this.groupCount > var10Lifetime5; var10Lifetime5++) {
                 var11Lifetime1 = this.groupIds[var10Lifetime5];
@@ -246,7 +246,7 @@ final class ArchiveIndex {
                 array$2 = new int[var12];
                 this.fileIds[var11Lifetime1] = array$2;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.i(9997);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShortOrInt(9997);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.fileIds[var11Lifetime1];
                   dupTemp$4[var14] = dupTemp$3;
@@ -262,7 +262,7 @@ final class ArchiveIndex {
               }
             } else {
               for (var10Lifetime5 = 0; this.groupCount > var10Lifetime5; var10Lifetime5++) {
-                this.fileCounts[this.groupIds[var10Lifetime5]] = var17.a((byte) -123);
+                this.fileCounts[this.groupIds[var10Lifetime5]] = var17.readUnsignedShort((byte) -123);
               }
               for (var10Lifetime5 = 0; this.groupCount > var10Lifetime5; var10Lifetime5++) {
                 var11Lifetime1 = this.groupIds[var10Lifetime5];
@@ -272,7 +272,7 @@ final class ArchiveIndex {
                 this.fileIds[var11Lifetime1] = array$5;
                 var13 = -1;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.a((byte) -119);
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort((byte) -119);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.fileIds[var11Lifetime1];
                   dupTemp$7[var14] = dupTemp$6;

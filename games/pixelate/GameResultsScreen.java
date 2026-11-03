@@ -25,7 +25,7 @@ final class GameResultsScreen extends MenuScreen {
     private String[] field_p;
     static String field_t;
 
-    final void a(int param0, int param1, boolean param2, boolean param3, boolean param4, boolean param5, int param6, int param7, int param8, int param9) {
+    final void showSinglePlayerResults(int param0, int param1, boolean param2, boolean param3, boolean param4, boolean param5, int param6, int param7, int param8, int param9) {
         int var12;
         String stackIn_8_1 = null;
         String stackIn_12_1 = null;
@@ -34,7 +34,7 @@ final class GameResultsScreen extends MenuScreen {
         if (param7 != 2) {
           GameResultsScreen.releaseStatics((byte) -64);
         }
-        this.field_v = this.e(10, param0);
+        this.field_v = this.formatTime(10, param0);
         this.field_E = param1;
         this.field_H = param8;
         this.field_J = param6;
@@ -75,7 +75,7 @@ final class GameResultsScreen extends MenuScreen {
         this.field_x = -1;
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         int var5_int = 0;
         int var2;
         int var3;
@@ -92,13 +92,13 @@ final class GameResultsScreen extends MenuScreen {
           NumericDateInputWidget.field_W[4].drawTransparent(0, 45);
         }
         this.d((byte) -81);
-        this.b((byte) -71);
+        this.drawRows((byte) -71);
         var2 = 20;
         var3 = 70;
         var4 = 167;
         if (param0 != 11) {
           var9 = (Match) null;
-          this.a((String) null, 91, (Match) null);
+          this.showMultiplayerResults((String) null, 91, (Match) null);
         }
         for (var5_int = 0; 5 > var5_int; var5_int++) {
           LoginCredentials.field_e.field_a[0].drawOpaque(var3, var4);
@@ -164,7 +164,7 @@ final class GameResultsScreen extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    private final String e(int param0, int param1) {
+    private final String formatTime(int param0, int param1) {
         if (param0 != 10) {
           this.field_H = -21;
         }
@@ -189,7 +189,7 @@ final class GameResultsScreen extends MenuScreen {
         }
     }
 
-    final boolean c(int param0, int param1) {
+    final boolean isRowEnabled(int param0, int param1) {
         boolean stackIn_11_0 = false;
         if (param0 >= -112) {
           this.f(-55);
@@ -208,13 +208,13 @@ final class GameResultsScreen extends MenuScreen {
         return stackIn_11_0;
     }
 
-    final int b(int param0, int param1) {
+    final int getRowY(int param0, int param1) {
         int var3 = 120 / ((-13 - param0) / 37);
         return this.field_d;
     }
 
     final void a(int param0, int param1, boolean param2) {
-        super.a(param0, !this.c(-113, 1) ? 0 : 1, param2);
+        super.a(param0, !this.isRowEnabled(-113, 1) ? 0 : 1, param2);
     }
 
     final void a(boolean param0, boolean param1, int param2, int param3, byte param4, int param5, int param6) {
@@ -225,7 +225,7 @@ final class GameResultsScreen extends MenuScreen {
         if (param4 != 34) {
           return;
         }
-        this.field_v = this.e(param4 - 24, param3);
+        this.field_v = this.formatTime(param4 - 24, param3);
         if (this.field_x != -1) {
           this.field_s = !param1 ? vm.field_f : ModalStack.field_P;
         }
@@ -238,7 +238,7 @@ final class GameResultsScreen extends MenuScreen {
         }
     }
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         this.b((byte) 12, false);
         if (param0 > -13) {
           GameResultsScreen.releaseStatics((byte) 29);
@@ -254,11 +254,11 @@ final class GameResultsScreen extends MenuScreen {
         return var2;
     }
 
-    final int a(int param0, boolean param1) {
+    final int getRowRight(int param0, boolean param1) {
         if (param1) {
           field_r = -93;
         }
-        return this.a(param0, (byte) 90) + this.d(-112, param0);
+        return this.getRowLeft(param0, (byte) 90) + this.d(-112, param0);
     }
 
     final void c(int param0) {
@@ -292,7 +292,7 @@ final class GameResultsScreen extends MenuScreen {
         }
     }
 
-    final void a(String param0, int param1, Match param2) {
+    final void showMultiplayerResults(String param0, int param1, Match param2) {
         int var4_int = 0;
         int stackIn_10_1 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -352,9 +352,9 @@ final class GameResultsScreen extends MenuScreen {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getRowLeft(int param0, byte param1) {
         int var3 = 0;
-        if (this.c(-122, 1)) {
+        if (this.isRowEnabled(-122, 1)) {
           var3 = 60;
           if (0 == param0) {
             return var3;
@@ -416,7 +416,7 @@ final class GameResultsScreen extends MenuScreen {
         }
     }
 
-    final void a(String param0, byte param1) {
+    final void setStatusMessage(String param0, byte param1) {
         try {
           this.field_o = param0;
           if (param1 != -4) {
@@ -429,7 +429,7 @@ final class GameResultsScreen extends MenuScreen {
 
     final void a(byte param0, boolean param1, int param2) {
         if (param2 == 0) {
-          this.a(param1, this.field_A, StripedProgressBar.field_N, -6, this.a(0, (byte) 90) + this.a(0, false) >> 1);
+          this.drawFooterButton(param1, this.field_A, StripedProgressBar.field_N, -6, this.getRowLeft(0, (byte) 90) + this.getRowRight(0, false) >> 1);
         } else {
           super.a(this.field_s, param1, param2, StripedProgressBar.field_N, (byte) 99);
         }
@@ -484,7 +484,7 @@ final class GameResultsScreen extends MenuScreen {
             var2 == 99)) {
             stackIn_16_0 = this.field_g;
             stackIn_16_1 = false;
-            if (!this.c(-118, 1)) {
+            if (!this.isRowEnabled(-118, 1)) {
               stackIn_17_2 = 0;
             } else {
               stackIn_17_2 = 1;
@@ -495,7 +495,7 @@ final class GameResultsScreen extends MenuScreen {
           else {
             if (this.field_g.selectedIndex == 0 &&
               var2 == 97) {
-              if (!(!this.c(-119, 1))) {
+              if (!(!this.isRowEnabled(-119, 1))) {
                 this.field_g.a(false, 1);
               }
               decompiledFrameRemainder0 = false;

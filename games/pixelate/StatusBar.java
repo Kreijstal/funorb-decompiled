@@ -25,7 +25,7 @@ abstract class StatusBar {
           var5 = var4.position;
           var4.writeByte(160, 6);
           var4.writeLong(false, param0);
-          var4.f(var4.position - var5, -1);
+          var4.backpatchByteLength(var4.position - var5, -1);
           return;
         }
         StatusBar.a(18L, -62, 23);
@@ -33,7 +33,7 @@ abstract class StatusBar {
         var5Lifetime1 = var4.position;
         var4.writeByte(160, 6);
         var4.writeLong(false, param0);
-        var4.f(var4.position - var5Lifetime1, -1);
+        var4.backpatchByteLength(var4.position - var5Lifetime1, -1);
     }
 
     void a(byte param0) {

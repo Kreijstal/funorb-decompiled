@@ -77,13 +77,13 @@ final class AudioFilter {
         this.pairCounts[0] = var3 >> 4;
         this.pairCounts[1] = var3 & 15;
         if (var3 != 0) {
-          this.gainEndpoints[0] = param0.a((byte) -124);
-          this.gainEndpoints[1] = param0.a((byte) 111);
+          this.gainEndpoints[0] = param0.readUnsignedShort((byte) -124);
+          this.gainEndpoints[1] = param0.readUnsignedShort((byte) 111);
           var4 = param0.readUnsignedByte(255);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.pairCounts[var5]; var6++) {
-              this.frequencies[var5][0][var6] = param0.a((byte) -3);
-              this.field_d[var5][0][var6] = param0.a((byte) 62);
+              this.frequencies[var5][0][var6] = param0.readUnsignedShort((byte) -3);
+              this.field_d[var5][0][var6] = param0.readUnsignedShort((byte) 62);
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
@@ -94,8 +94,8 @@ final class AudioFilter {
                 this.frequencies[var5Lifetime1][1][var7] = this.frequencies[var5Lifetime1][0][var7];
                 this.field_d[var5Lifetime1][1][var7] = this.field_d[var5Lifetime1][0][var7];
               } else {
-                this.frequencies[var5Lifetime1][1][var7] = param0.a((byte) -121);
-                this.field_d[var5Lifetime1][1][var7] = param0.a((byte) 86);
+                this.frequencies[var5Lifetime1][1][var7] = param0.readUnsignedShort((byte) -121);
+                this.field_d[var5Lifetime1][1][var7] = param0.readUnsignedShort((byte) 86);
               }
               var7++;
             }

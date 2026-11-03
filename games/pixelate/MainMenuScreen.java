@@ -26,12 +26,12 @@ final class MainMenuScreen extends MenuScreen {
         MainMenuScreen.g((byte) 72);
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         NumericDateInputWidget.field_W[0].drawTransparent(0, 45);
         if (param0 != 11) {
           return;
         }
-        this.b((byte) -71);
+        this.drawRows((byte) -71);
     }
 
     public static void releaseStatics(byte param0) {
@@ -47,7 +47,7 @@ final class MainMenuScreen extends MenuScreen {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         if (param0 > -13) {
           field_t = (AudioOutput) null;
         }

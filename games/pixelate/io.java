@@ -428,16 +428,16 @@ final class io {
           if (var7 == null) {
             var7 = "";
           }
-          aa.field_f.writeString((byte) -41, var7);
+          aa.field_f.b((byte) -41, var7);
           if (ConditionalTextValue.field_a != null) {
-            aa.field_f.a((byte) -66, ConditionalTextValue.field_a);
+            aa.field_f.writeString((byte) -66, ConditionalTextValue.field_a);
           }
           if (param1 >= -40) {
             var8 = (BinaryBitmapFont) null;
             io.a((BinaryBitmapFont) null, (byte) 105);
           }
           HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
-          aa.field_f.c(7519, aa.field_f.position - var5_int);
+          aa.field_f.backpatchShortLength(7519, aa.field_f.position - var5_int);
           SecondaryNodeHashTable.b(-1, 10000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

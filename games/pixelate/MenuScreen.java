@@ -17,7 +17,7 @@ abstract class MenuScreen {
     static aa[] field_e;
     static Sprite field_c;
 
-    int b(int param0, int param1) {
+    int getRowY(int param0, int param1) {
         if (this.field_l == 6 &&
           !ArrayWidgetContainer.a((byte) 88)) {
           if (param1 < 2) {
@@ -29,7 +29,7 @@ abstract class MenuScreen {
         return param1 * this.field_i + this.field_d;
     }
 
-    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7) {
+    final static void drawSpriteOutline(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_42_0 = null;
@@ -120,9 +120,9 @@ abstract class MenuScreen {
         }
     }
 
-    abstract void a(int param0);
+    abstract void draw(int param0);
 
-    final void a(int param0, byte param1, int param2) {
+    final void drawBackdrop(int param0, byte param1, int param2) {
         SpriteEffectHelpers.a(320, param0, param2 + 290, StripedProgressBar.field_S);
         if (param1 >= -82) {
           field_e = (aa[]) null;
@@ -131,25 +131,25 @@ abstract class MenuScreen {
         SoftwareRasterizer.drawRectangleAlpha(30, param0 + 20, 580, 250 + param2, 16777215, 192);
     }
 
-    final void b(byte param0) {
+    final void drawRows(byte param0) {
         int var2 = 0;
         int var3;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
         var3 = Pixelate.field_H ? 1 : 0;
         for (var2 = 0; this.field_g.field_h > var2; var2++) {
-          if (this.c(param0 - 47, var2)) {
+          if (this.isRowEnabled(param0 - 47, var2)) {
             stackIn_7_1 = -125;
             stackIn_8_2 = (var2 == this.field_g.selectedIndex);
             this.a((byte) stackIn_7_1, stackIn_8_2, var2);
           }
         }
         if (param0 != -71) {
-          this.a(27, false);
+          this.getRowRight(27, false);
         }
     }
 
-    private final void a(byte param0) {
+    private final void handleNavigationKeys(byte param0) {
         int var2;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
@@ -201,20 +201,20 @@ abstract class MenuScreen {
 
     void a(byte param0, boolean param1, int param2) {
         if (param0 > -116) {
-          this.b((byte) 11);
+          this.drawRows((byte) 11);
         }
         this.a((byte) 35, StripedProgressBar.field_S, param1, param2);
     }
 
     void a(int param0, int param1, boolean param2) {
-        this.field_g.initializeSelection(param2, this.a(ProxyAuthenticationException.field_d, StatusBar.field_k, -119), 17068, param1);
+        this.field_g.initializeSelection(param2, this.rowAt(ProxyAuthenticationException.field_d, StatusBar.field_k, -119), 17068, param1);
         nk.field_i = pa.field_b;
         if (param0 != 2) {
           field_h = -13;
         }
     }
 
-    int a(int param0, int param1, int param2) {
+    int rowAt(int param0, int param1, int param2) {
         int var4 = 0;
         int var5;
         int var6;
@@ -223,19 +223,19 @@ abstract class MenuScreen {
           field_c = (Sprite) null;
         }
         for (var4 = 0; var4 < this.field_k.length; var4++) {
-          var5 = this.b(-108, var4);
-          if (this.c(-113, var4) &&
-            this.a(var4, (byte) 90) <= param0 &&
-            param0 < this.a(var4, false) &&
+          var5 = this.getRowY(-108, var4);
+          if (this.isRowEnabled(-113, var4) &&
+            this.getRowLeft(var4, (byte) 90) <= param0 &&
+            param0 < this.getRowRight(var4, false) &&
             var5 <= param1 &&
-            param1 < var5 + this.a(-28071, var4)) {
+            param1 < var5 + this.getRowHeight(-28071, var4)) {
             return var4;
           }
         }
         return -1;
     }
 
-    int a(int param0, int param1) {
+    int getRowHeight(int param0, int param1) {
         if (param0 != -28071) {
           MenuScreen.a((byte) -105, true);
         }
@@ -266,7 +266,7 @@ abstract class MenuScreen {
           return;
         }
         try {
-          this.a(param3, param0, param1, -6, 320);
+          this.drawFooterButton(param3, param0, param1, -6, 320);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "de.NA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -277,7 +277,7 @@ abstract class MenuScreen {
         rh.b((byte) -67);
     }
 
-    int a(int param0, boolean param1) {
+    int getRowRight(int param0, boolean param1) {
         if (this.field_l == 5 &&
           !ArrayWidgetContainer.a((byte) 78)) {
           return 3 <= param0 ? 380 : 200 + 200 * param0;
@@ -307,13 +307,13 @@ abstract class MenuScreen {
         }
         if (this.field_l == 6 &&
           !ArrayWidgetContainer.a((byte) 84)) {
-          this.a((byte) 81);
+          this.handleNavigationKeys((byte) 81);
         } else {
           this.field_g.a((byte) -48);
         }
     }
 
-    int a(int param0, byte param1) {
+    int getRowLeft(int param0, byte param1) {
         if (param1 != 90) {
           this.field_a = -74;
         }
@@ -335,13 +335,13 @@ abstract class MenuScreen {
           this.field_i = param4;
           this.field_d = param3;
           this.field_a = param2;
-          this.a(param5, (byte) -24);
+          this.setItems(param5, (byte) -24);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "de.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract void c(byte param0);
+    abstract void onCancel(byte param0);
 
     final void a(byte param0, Sprite param1, boolean param2, int param3) {
         try {
@@ -354,7 +354,7 @@ abstract class MenuScreen {
         }
     }
 
-    void a(int[] param0, byte param1) {
+    void setItems(int[] param0, byte param1) {
         try {
           this.field_k = param0;
           this.field_g = new MenuInputState(this.field_k.length);
@@ -366,7 +366,7 @@ abstract class MenuScreen {
         }
     }
 
-    boolean c(int param0, int param1) {
+    boolean isRowEnabled(int param0, int param1) {
         if (param0 >= -112) {
           this.field_i = 64;
           return true;
@@ -375,7 +375,7 @@ abstract class MenuScreen {
     }
 
     final void d(byte param0) {
-        this.a(120, (byte) -102, 0);
+        this.drawBackdrop(120, (byte) -102, 0);
         int var2 = -125 % ((param0 - 5) / 39);
     }
 
@@ -428,16 +428,16 @@ abstract class MenuScreen {
             }
           }
           var7 = ConditionalTextValue.field_h.textWidth(param0);
-          var8 = this.a(param2, (byte) 90);
-          var9 = this.a(param2, false);
-          var10 = this.b(-98, param2);
+          var8 = this.getRowLeft(param2, (byte) 90);
+          var9 = this.getRowRight(param2, false);
+          var10 = this.getRowY(-98, param2);
           if (var6_int == 20 ||
             21 == var6_int) {
             var7 = 120 + Checkbox.field_T;
           }
           var11 = -128 % ((param4 - 21) / 46);
           var12 = -var7 + var9 + var8 >> 1;
-          var13 = this.a(-28071, param2);
+          var13 = this.getRowHeight(-28071, param2);
           if (param1) {
             SpriteEffectHelpers.a(var9 + var8 >> 1, var10 - 2, 35, param3);
           }
@@ -487,7 +487,7 @@ abstract class MenuScreen {
         }
     }
 
-    final void a(boolean param0, String param1, Sprite param2, int param3, int param4) {
+    final void drawFooterButton(boolean param0, String param1, Sprite param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -517,7 +517,7 @@ abstract class MenuScreen {
         int var6 = 0;
         if (!param1) {
           int[] var7 = (int[]) null;
-          this.a((int[]) null, (byte) 12);
+          this.setItems((int[]) null, (byte) 12);
         }
         int var4 = param0 * 2;
         int var5 = param0 < 128 ? 0 : -256 + 2 * param0;
@@ -532,7 +532,7 @@ abstract class MenuScreen {
         SpriteEffectHelpers.a(pe.field_b.pixels, var4, var5);
     }
 
-    void e(byte param0) {
+    void handleInput(byte param0) {
         int var3;
         boolean stackIn_14_0 = false;
         var3 = Pixelate.field_H ? 1 : 0;
@@ -540,7 +540,7 @@ abstract class MenuScreen {
           !LinkButtonPainter.field_d) {
           while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(121)) {
             if (ke.field_a == 13) {
-              this.c((byte) -16);
+              this.onCancel((byte) -16);
               continue;
             }
             if (EmailValidator.field_m[82] &&
@@ -553,11 +553,11 @@ abstract class MenuScreen {
             if (-1 == this.field_g.selectedIndex) {
               continue;
             }
-            this.a(this.field_g.selectedIndex, (byte) -114, false);
+            this.activateRow(this.field_g.selectedIndex, (byte) -114, false);
           }
-          this.field_g.updatePointer(this.a(BufferedRandomAccessFile.field_a, ji.field_c, -125), this.a(ProxyAuthenticationException.field_d, StatusBar.field_k, -115), -1);
+          this.field_g.updatePointer(this.rowAt(BufferedRandomAccessFile.field_a, ji.field_c, -125), this.rowAt(ProxyAuthenticationException.field_d, StatusBar.field_k, -115), -1);
           if (-1 != this.field_g.selectedIndex) {
-            this.a(this.field_g.selectedIndex, (byte) -128, true);
+            this.activateRow(this.field_g.selectedIndex, (byte) -128, true);
           }
         }
         if (param0 > -64) {
@@ -565,7 +565,7 @@ abstract class MenuScreen {
         }
     }
 
-    void a(int param0, byte param1, boolean param2) {
+    void activateRow(int param0, byte param1, boolean param2) {
         int stackIn_52_0 = 0;
         int stackIn_61_0 = 0;
         int stackIn_74_0 = 0;
@@ -636,13 +636,13 @@ abstract class MenuScreen {
                   }
                   if (var6 == 25) {
                     if (this.field_g.isActivated(74) &&
-                      this.c(-119, param0)) {
+                      this.isRowEnabled(-119, param0)) {
                       ((HowToPlayScreen) (StripedProgressBar.field_H[7])).a(param2, 97);
                     }
                   } else {
                     if (var6 == 26) {
                       if (this.field_g.isActivated(20) &&
-                        this.c(-128, param0)) {
+                        this.isRowEnabled(-128, param0)) {
                         ((HowToPlayScreen) (StripedProgressBar.field_H[7])).b(false, param2);
                       }
                     } else {
@@ -694,7 +694,7 @@ abstract class MenuScreen {
                               nk.a((byte) 93, 256);
                             }
                             if (this.field_g.c((byte) 35)) {
-                              var6 = this.a(param0, (byte) 90) + this.a(param0, false) + (Checkbox.field_T - 120) >> 1;
+                              var6 = this.getRowLeft(param0, (byte) 90) + this.getRowRight(param0, false) + (Checkbox.field_T - 120) >> 1;
                               var7_int = -var6 + ProxyAuthenticationException.field_d;
                               var8 = 256 * var7_int / 120;
                               var5 = 1;
@@ -732,7 +732,7 @@ abstract class MenuScreen {
                                 ArrayWidgetContainer.a(256, -54);
                               }
                               if (this.field_g.c((byte) 35)) {
-                                var6 = -120 + (this.a(param0, (byte) 90) + (this.a(param0, false) + Checkbox.field_T)) >> 1;
+                                var6 = -120 + (this.getRowLeft(param0, (byte) 90) + (this.getRowRight(param0, false) + Checkbox.field_T)) >> 1;
                                 var7_int = ProxyAuthenticationException.field_d - var6;
                                 var8 = var7_int * 256 / 120;
                                 if (var8 <= 0) {

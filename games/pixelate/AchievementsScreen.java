@@ -43,19 +43,19 @@ final class AchievementsScreen extends MenuScreen {
         return stackIn_9_0;
     }
 
-    final int a(int param0, boolean param1) {
+    final int getRowRight(int param0, boolean param1) {
         if (param1) {
           field_r = (String) null;
         }
-        return this.a(param0, (byte) 90) + this.e(-112, param0);
+        return this.getRowLeft(param0, (byte) 90) + this.e(-112, param0);
     }
 
-    final int b(int param0, int param1) {
+    final int getRowY(int param0, int param1) {
         int var3 = 25 / ((param0 + 13) / 37);
         return this.field_d;
     }
 
-    private final int e(int param0) {
+    private final int countUnlockedFrom(int param0) {
         int var3 = 0;
         int var2;
         int var4;
@@ -69,7 +69,7 @@ final class AchievementsScreen extends MenuScreen {
         return var2;
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         int var14 = 0;
         int stackIn_3_0 = 0;
         int stackIn_24_0 = 0;
@@ -98,7 +98,7 @@ final class AchievementsScreen extends MenuScreen {
         }
         var4 = qj.field_e;
         NumericDateInputWidget.field_W[6].drawTransparent(0, 45);
-        this.b((byte) -71);
+        this.drawRows((byte) -71);
         for (var5 = 0; var5 < GameApplet.field_n.length; var5++) {
           var6_ref_tf = this.b((byte) 37, var5);
           if ((this.a((byte) 66, var5) ||
@@ -176,7 +176,7 @@ final class AchievementsScreen extends MenuScreen {
         return -1;
     }
 
-    final int a(int param0, byte param1) {
+    final int getRowLeft(int param0, byte param1) {
         int var5 = 0;
         int var6 = Pixelate.field_H ? 1 : 0;
         int var3 = -40;
@@ -207,7 +207,7 @@ final class AchievementsScreen extends MenuScreen {
         return ClientException.field_a[param1];
     }
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         if (param0 >= -13) {
           return;
         }
@@ -228,7 +228,7 @@ final class AchievementsScreen extends MenuScreen {
         if (16 > param0) {
           return 264 + 40 * (param0 % 8);
         }
-        var3 = 40 * this.e(16);
+        var3 = 40 * this.countUnlockedFrom(16);
         var4 = (-var3 + 320) / 2 + 264;
         var5 = 68 % ((39 - param1) / 56);
         for (var6 = 16; param0 > var6; var6++) {
@@ -262,12 +262,12 @@ final class AchievementsScreen extends MenuScreen {
 
     private final int f(int param0, int param1) {
         int var4 = -118 / ((param0 - 91) / 33);
-        int var3 = this.e(16) != 0 ? 130 : 150;
+        int var3 = this.countUnlockedFrom(16) != 0 ? 130 : 150;
         return var3 + param1 / 8 * 40;
     }
 
-    final void e(byte param0) {
-        super.e((byte) -94);
+    final void handleInput(byte param0) {
+        super.handleInput((byte) -94);
         if (param0 > -64) {
           field_q = 92;
         }
@@ -328,7 +328,7 @@ final class AchievementsScreen extends MenuScreen {
         }
         var5 = stackIn_5_0;
         if (param2 == 0) {
-          this.a(param1, var4, var5, -6, this.a(0, (byte) 90) + this.a(0, false) >> 1);
+          this.drawFooterButton(param1, var4, var5, -6, this.getRowLeft(0, (byte) 90) + this.getRowRight(0, false) >> 1);
         } else {
           super.a(var4, param1, param2, var5, (byte) 124);
         }

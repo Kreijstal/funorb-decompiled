@@ -6,14 +6,14 @@ import java.util.*;
 final class mi extends MenuScreen {
     static boolean field_o;
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         if (param0 >= -13) {
           mi.e(-14);
         }
     }
 
-    final void a(int param0) {
-        this.b((byte) -71);
+    final void draw(int param0) {
+        this.drawRows((byte) -71);
         int var2 = EmailCredentials.field_k != 0 ? 1 : 0;
         int var3 = null != HighscoresScreen.field_p ? 1 : 0;
         String var7 = EmailValidator.field_p;
@@ -212,7 +212,7 @@ final class mi extends MenuScreen {
               GameResultsScreen.field_t = param2;
               wo.field_h = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               Js5NetworkRequest.field_I = MusicCrossfadeStream.field_o.readUnsignedByte(255);
-              BufferedRandomAccessFile.field_j = MusicCrossfadeStream.field_o.a((byte) -116);
+              BufferedRandomAccessFile.field_j = MusicCrossfadeStream.field_o.readUnsignedShort((byte) -116);
               var6 = MusicCrossfadeStream.field_o.readOptionalString((byte) 79);
               var7 = MusicCrossfadeStream.field_o.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
@@ -235,7 +235,7 @@ final class mi extends MenuScreen {
                 MusicCrossfadeStream.field_o.readUnsignedByte(255);
                 MusicCrossfadeStream.field_o.readUnsignedByte(255);
                 MusicCrossfadeStream.field_o.readInt(0);
-                BufferedSocket.field_k = MusicCrossfadeStream.field_o.a((byte) -115);
+                BufferedSocket.field_k = MusicCrossfadeStream.field_o.readUnsignedShort((byte) -115);
                 dc.field_b = new byte[BufferedSocket.field_k];
                 for (var8 = 0; BufferedSocket.field_k > var8; var8++) {
                   dc.field_b[var8] = MusicCrossfadeStream.field_o.readByte(0);
@@ -267,7 +267,7 @@ final class mi extends MenuScreen {
                 }
               } else {
                 try {
-                  JavaScriptBridge.a(AudioService.a(13867), (byte) -37, new Object[]{PacketBuffer.b(vn.field_b, -7067)}, "zap");
+                  JavaScriptBridge.a(AudioService.a(13867), (byte) -37, new Object[]{PacketBuffer.decodeBase37Name(vn.field_b, -7067)}, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

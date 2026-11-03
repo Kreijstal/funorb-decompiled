@@ -107,8 +107,8 @@ final class ff {
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.writeByte(160, 1);
-          var9.writeString((byte) -41, param1);
-          var9.f(-var5 + var9.position, -1);
+          var9.b((byte) -41, param1);
+          var9.backpatchByteLength(-var5 + var9.position, -1);
           stackIn_19_0 = null;
           return (String) (stackIn_19_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

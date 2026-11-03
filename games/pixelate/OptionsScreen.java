@@ -77,7 +77,7 @@ final class OptionsScreen extends MenuScreen {
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
-    final void a(int param0, byte param1, boolean param2) {
+    final void activateRow(int param0, byte param1, boolean param2) {
         int var7;
         int var4;
         int var5;
@@ -116,7 +116,7 @@ final class OptionsScreen extends MenuScreen {
                   return;
                 }
               }
-              super.a(param0, (byte) -128, param2);
+              super.activateRow(param0, (byte) -128, param2);
             } else {
               if (param2) {
                 if (1 != ef.field_b) {
@@ -130,16 +130,16 @@ final class OptionsScreen extends MenuScreen {
           }
         }
         if (param1 >= -103) {
-          this.a(125, (byte) 57);
+          this.getRowLeft(125, (byte) 57);
         }
     }
 
-    final void a(int param0) {
+    final void draw(int param0) {
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         NumericDateInputWidget.field_W[4].drawTransparent(0, 45);
         this.d((byte) 50);
-        this.b((byte) -71);
+        this.drawRows((byte) -71);
         if (param0 != 11) {
           return;
         }
@@ -148,14 +148,14 @@ final class OptionsScreen extends MenuScreen {
         }
     }
 
-    final int a(int param0, boolean param1) {
+    final int getRowRight(int param0, boolean param1) {
         if (param1) {
           this.a(103, -99, false);
         }
         if (param0 != 1 &&
           2 != param0) {
           if (param0 <= 2) {
-            return super.a(param0, false);
+            return super.getRowRight(param0, false);
           }
           return 500;
         }
@@ -183,7 +183,7 @@ final class OptionsScreen extends MenuScreen {
         Match.field_h.field_m = 0;
     }
 
-    final int a(int param0, int param1) {
+    final int getRowHeight(int param0, int param1) {
         if (param0 != -28071) {
           OptionsScreen.releaseStatics((byte) -35);
         }
@@ -191,10 +191,10 @@ final class OptionsScreen extends MenuScreen {
           2 == param1) {
           return SectorCacheStore.field_b;
         }
-        return super.a(-28071, param1);
+        return super.getRowHeight(-28071, param1);
     }
 
-    final void c(byte param0) {
+    final void onCancel(byte param0) {
         if (param0 > -13) {
           this.field_v = 86;
         }
@@ -245,7 +245,7 @@ final class OptionsScreen extends MenuScreen {
                 var4 = (-PasswordFieldPainter.field_A + 532) / 2;
                 if (var2 != 0) {
                   this.field_g.a(false, -1 + var3);
-                  if (this.b(115, this.field_g.selectedIndex) < var4) {
+                  if (this.getRowY(115, this.field_g.selectedIndex) < var4) {
                     this.field_o = this.field_o - PasswordFieldPainter.field_A;
                   }
                   if (0 <= this.field_o) {
@@ -254,7 +254,7 @@ final class OptionsScreen extends MenuScreen {
                   this.field_o = 0;
                 } else {
                   this.field_g.a(false, var3 + 1);
-                  if (this.b(69, this.field_g.selectedIndex) > var4) {
+                  if (this.getRowY(69, this.field_g.selectedIndex) > var4) {
                     this.field_o = this.field_o + PasswordFieldPainter.field_A;
                   }
                   if (this.field_o > DirectByteStorage.field_k) {
@@ -272,12 +272,12 @@ final class OptionsScreen extends MenuScreen {
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getRowY(int param0, int param1) {
         int var3 = 43 % ((-13 - param0) / 37);
         if (1 != param1) {
           if (param1 != 2) {
             if (param1 <= 2) {
-              return super.b(120, param1);
+              return super.getRowY(120, param1);
             }
             return (-3 + param1) * PasswordFieldPainter.field_A + (-this.field_o + 184);
           }
@@ -286,11 +286,11 @@ final class OptionsScreen extends MenuScreen {
         return 150;
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int rowAt(int param0, int param1, int param2) {
         if (param2 >= -110) {
           return -71;
         }
-        int var4 = super.a(param0, param1, -112);
+        int var4 = super.rowAt(param0, param1, -112);
         if (2 < var4 &&
           (param1 < 182 || param1 > 350)) {
           var4 = -1;
@@ -298,7 +298,7 @@ final class OptionsScreen extends MenuScreen {
         return var4;
     }
 
-    final int a(int param0, byte param1) {
+    final int getRowLeft(int param0, byte param1) {
         boolean discarded$0 = false;
         if (param1 != 90) {
           discarded$0 = this.a(false, 70);
@@ -306,14 +306,14 @@ final class OptionsScreen extends MenuScreen {
         if (1 != param0 &&
           param0 != 2) {
           if (2 >= param0) {
-            return super.a(param0, (byte) 90);
+            return super.getRowLeft(param0, (byte) 90);
           }
           return 300;
         }
         return IconTextComponent.field_Jb;
     }
 
-    final void e(byte param0) {
+    final void handleInput(byte param0) {
         int var3 = 0;
         int var4 = Pixelate.field_H ? 1 : 0;
         this.field_o = this.field_o + this.field_u;
@@ -335,7 +335,7 @@ final class OptionsScreen extends MenuScreen {
           this.field_u = this.field_u - 1;
         }
         this.field_r = 0;
-        super.e((byte) -100);
+        super.handleInput((byte) -100);
         int var2 = this.field_g.selectedIndex < 3 ? -1 : -3 + this.field_g.selectedIndex;
         for (var3 = 0; ModalPanel.field_I.length > var3; var3++) {
           ModalPanel.field_I[var3].a(var3 == var2 ? true : false, 20);
@@ -409,10 +409,10 @@ final class OptionsScreen extends MenuScreen {
                 SoftwareRasterizer.setClip(0, 182, 640, 350);
                 var5 = -2 + param2;
                 var6 = ki.field_m + ' ' + var5;
-                var7 = this.a(param2, (byte) 90);
-                var8 = this.a(param2, false);
+                var7 = this.getRowLeft(param2, (byte) 90);
+                var8 = this.getRowRight(param2, false);
                 var9 = var7 + var8 >> 1;
-                var10 = this.b(58, param2);
+                var10 = this.getRowY(58, param2);
                 if (param1) {
                   SpriteEffectHelpers.a(var9, -2 + var10, 35, StripedProgressBar.field_N);
                 }
@@ -425,7 +425,7 @@ final class OptionsScreen extends MenuScreen {
                 if (this.a(true, param2 - 3)) {
                   stackIn_20_0 = ih.field_a;
                   stackIn_21_1 = (!param1) ? 0 : 1;
-                  ((Sprite) (Object) stackIn_20_0[stackIn_21_1]).drawTransparent(var8, this.b(118, param2));
+                  ((Sprite) (Object) stackIn_20_0[stackIn_21_1]).drawTransparent(var8, this.getRowY(118, param2));
                 }
                 SoftwareRasterizer.resetClip();
               }
@@ -454,7 +454,7 @@ final class OptionsScreen extends MenuScreen {
           var9[2] = 31;
           var9[1] = 30;
           var9[0] = 7;
-          this.a(var9, (byte) -24);
+          this.setItems(var9, (byte) -24);
           this.field_r = 0;
           this.field_v = 0;
         } catch (RuntimeException runtimeException) {
