@@ -629,11 +629,11 @@ final class AggressiveAi extends StandardAi {
                 wg.field_d = false;
                 if (lr.field_c == null) {
                   lr.field_c = new byte[ProductionContent.field_k];
-                  ek.field_F = new boolean[ProductionContent.field_k];
+                  ArrayWidgetGroup.field_F = new boolean[ProductionContent.field_k];
                 }
                 RasterBuffer.field_h = false;
                 for (var18_int = 0; var18_int < var8; var18_int++) {
-                  ek.field_F[var18_int] = false;
+                  ArrayWidgetGroup.field_F[var18_int] = false;
                 }
                 js.a(-1, 1, param2, var8, 0, param1, var10, -1);
                 if (bs.field_b >= 2 &&
@@ -760,7 +760,7 @@ final class AggressiveAi extends StandardAi {
                     var22 = var23;
                   }
                   for (var25 = 0; var8 > var25; var25++) {
-                    if (ek.field_F[var25]) {
+                    if (ArrayWidgetGroup.field_F[var25]) {
                       var26_refLifetime1 = "</col>" + SoundPlayback.field_l[var25] + "<col=A00000>";
                       var23 = var26_refLifetime1;
                       var22 = var23;

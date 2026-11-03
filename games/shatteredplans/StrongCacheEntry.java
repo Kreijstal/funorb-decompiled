@@ -301,7 +301,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           GzipInflater.field_i = 11;
           tg.field_a = 4;
           cr.field_c = 15;
-          qo.field_b = 2;
+          TextLayout.field_b = 2;
           var7 = TextFieldWidget.a(115, "largefont", param4, param2, "lobby");
           ImageProducerRasterBuffer.field_p = TextFieldWidget.a(117, "generalfont", param4, param2, "lobby");
           ul.field_xb = TextFieldWidget.a(123, "chatfont", param4, param2, "lobby");
@@ -372,10 +372,10 @@ final class StrongCacheEntry extends WeightedCacheEntry {
           ObjectList.field_h.field_kb = 2;
           oj.field_zb = new AnimatedPanel(0L, fg.field_b);
           oj.field_zb.copyFrom(gn.field_w, false);
-          ek.field_E = new AnimatedPanel(0L, ObjectList.field_h);
-          ek.field_E.copyFrom(gn.field_w, false);
+          ArrayWidgetGroup.field_E = new AnimatedPanel(0L, ObjectList.field_h);
+          ArrayWidgetGroup.field_E.copyFrom(gn.field_w, false);
           var16 = ae.a(-82, "lobby", param4, "button_mouseover");
-          hd.field_t = new ul(MusicCrossfadeStream.field_v, var12, SpriteState.field_u, gn.field_w, 3, 2, qo.field_b, 3, cr.field_c);
+          hd.field_t = new ul(MusicCrossfadeStream.field_v, var12, SpriteState.field_u, gn.field_w, 3, 2, TextLayout.field_b, 3, cr.field_c);
           StandardMapReader.field_h = new AnimatedPanel(0L, gn.field_w);
           StandardMapReader.field_h.field_lb = var16;
           StandardMapReader.field_h.field_T = 1;

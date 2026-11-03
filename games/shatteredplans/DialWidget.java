@@ -467,7 +467,7 @@ final class DialWidget extends FocusableWidget {
           }
           if (var2 == 1 &&
             null != np.field_a) {
-            la.field_h = np.field_a.field_Xb;
+            RichTextLayout.field_h = np.field_a.field_Xb;
           }
           if (4 != var2) {
             np.field_a = null;

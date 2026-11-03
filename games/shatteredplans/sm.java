@@ -959,12 +959,12 @@ final class sm {
             MapView.field_sb[var2] = null;
           }
         }
-        if (ek.field_A != 0) {
-          fieldTemp$1 = ek.field_A + 1;
-          ek.field_A = ek.field_A + 1;
+        if (ArrayWidgetGroup.field_A != 0) {
+          fieldTemp$1 = ArrayWidgetGroup.field_A + 1;
+          ArrayWidgetGroup.field_A = ArrayWidgetGroup.field_A + 1;
           if (32 <= fieldTemp$1) {
             SecondaryNodeDeque.field_d = q.field_Bb;
-            ek.field_A = 0;
+            ArrayWidgetGroup.field_A = 0;
           }
         }
         if (an.field_c == -1) {
@@ -990,10 +990,10 @@ final class sm {
           var3 = stackIn_31_0;
         }
         if (q.field_Bb != var3) {
-          if (ek.field_A != 0) {
-            SecondaryNodeDeque.field_d = QuickChatCategoryRegistry.a(SecondaryNodeDeque.field_d, 32, ek.field_A, q.field_Bb, 0);
+          if (ArrayWidgetGroup.field_A != 0) {
+            SecondaryNodeDeque.field_d = QuickChatCategoryRegistry.a(SecondaryNodeDeque.field_d, 32, ArrayWidgetGroup.field_A, q.field_Bb, 0);
           }
-          ek.field_A = 1;
+          ArrayWidgetGroup.field_A = 1;
           q.field_Bb = var3;
         }
     }
@@ -2068,8 +2068,8 @@ final class sm {
             }
           }
         }
-        if (ek.field_A != 0) {
-          var21 = QuickChatCategoryRegistry.a(SecondaryNodeDeque.field_d, 32, ek.field_A, q.field_Bb, 0);
+        if (ArrayWidgetGroup.field_A != 0) {
+          var21 = QuickChatCategoryRegistry.a(SecondaryNodeDeque.field_d, 32, ArrayWidgetGroup.field_A, q.field_Bb, 0);
         } else {
           var21 = q.field_Bb;
         }
@@ -2396,7 +2396,7 @@ final class sm {
                                                                 oq.field_i[28] = lm.field_a;
                                                                 break regionExit1;
                                                               case 1:
-                                                                oq.field_i[28] = la.field_n;
+                                                                oq.field_i[28] = RichTextLayout.field_n;
                                                                 break regionExit1;
                                                               case 2:
                                                                 oq.field_i[28] = ue.field_c;
@@ -2552,7 +2552,7 @@ final class sm {
                 var3Lifetime2 = ep.field_d;
               }
             } else {
-              var3Lifetime2 = ha.field_d;
+              var3Lifetime2 = TextLayoutLine.field_d;
             }
             decompiledFrameRemainder0 = false;
           }

@@ -461,7 +461,7 @@ final class pe extends WidgetContainer implements op, ButtonListener {
                   var26Lifetime1 = param6.field_Q[var23Lifetime2];
                   aq.field_o[var23Lifetime2] = var9 + (var18 * var26Lifetime1 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16);
                   ByteArrayNode.field_h[var23Lifetime2] = var10 + (var24Lifetime1 * var13 + var16 * var25Lifetime1 + var19 * var26Lifetime1 >> 16);
-                  qo.field_c[var23Lifetime2] = var11 + (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var26Lifetime1 * var20) >> 16);
+                  TextLayout.field_c[var23Lifetime2] = var11 + (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var26Lifetime1 * var20) >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
                     return;

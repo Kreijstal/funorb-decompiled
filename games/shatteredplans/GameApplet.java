@@ -813,9 +813,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Insets var6 = null;
         try {
           var2_long = pr.currentTimeMillis(param0 ^ 14328);
-          var4 = nm.field_b[qo.field_a];
-          nm.field_b[qo.field_a] = var2_long;
-          qo.field_a = 1 + qo.field_a & 31;
+          var4 = nm.field_b[TextLayout.field_a];
+          nm.field_b[TextLayout.field_a] = var2_long;
+          TextLayout.field_a = 1 + TextLayout.field_a & 31;
           if (param0 != 58) {
             return;
           }

@@ -227,7 +227,7 @@ final class js {
                       RasterBuffer.field_h = true;
                     } else {
                       if (var13 < param0) {
-                        ek.field_F[var13] = true;
+                        ArrayWidgetGroup.field_F[var13] = true;
                       }
                     }
                   }

@@ -146,7 +146,7 @@ final class ee extends ms {
                 this.var5 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                ek.field_D = param1;
+                ArrayWidgetGroup.field_D = param1;
                 var2 = nb.a("text_game_name", 96);
                 if (var2 != null) {
                   IterableNodeHashTable.a(var2, 17746);
@@ -805,7 +805,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("turn_name_first", 114);
                 if (null != var2) {
-                  ek.field_H = IterableNodeHashTable.a(var2, 17746);
+                  ArrayWidgetGroup.field_H = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turnObjective", 105);
                 if (null != var2) {
@@ -1756,7 +1756,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_map_sol", 95);
                 if (null != var2) {
-                  la.field_n = IterableNodeHashTable.a(var2, 17746);
+                  RichTextLayout.field_n = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_map_points", 96);
                 if (null != var2) {
@@ -2132,7 +2132,7 @@ final class ee extends ms {
                 if (null != var2) {
                   ms.field_h = IterableNodeHashTable.a(var2, 17746);
                 }
-                ek.field_D = null;
+                ArrayWidgetGroup.field_D = null;
             }
             void run() {
                 var4 = ShatteredPlansClient.field_F ? 1 : 0;

@@ -93,7 +93,7 @@ class TextFieldWidget extends FocusableWidget {
         try {
           if (super.handlePress(param0, param1, (byte) 100, param3, param4, param5, param6) &&
             this.field_p instanceof WidgetMetrics) {
-            var8_int = ((WidgetMetrics) ((Object) this.field_p)).a(param4, pd.field_k, param5, (UiWidget) (this), true, bb.field_b);
+            var8_int = ((WidgetMetrics) ((Object) this.field_p)).getCharacterIndexAt(param4, pd.field_k, param5, (UiWidget) (this), true, bb.field_b);
             stackIn_5_1 = 119;
             if (var8_int == -1) {
               stackIn_6_2 = 0;
@@ -136,7 +136,7 @@ class TextFieldWidget extends FocusableWidget {
     }
 
     private final void j(byte param0) {
-        qo var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
@@ -153,13 +153,13 @@ class TextFieldWidget extends FocusableWidget {
           return;
         }
         var9 = (WidgetMetrics) ((Object) this.field_p);
-        var3 = var9.a((UiWidget) (this), true);
-        var4 = var3.c(126);
+        var3 = var9.getTextLayout((UiWidget) (this), true);
+        var4 = var3.getMaxLineWidth(126);
         if (param0 != -59) {
           return;
         }
-        var5 = var9.a(120, (UiWidget) (this));
-        var6 = var9.a(false) >> 1;
+        var5 = var9.getInnerWidth(120, (UiWidget) (this));
+        var6 = var9.getLineHeight(false) >> 1;
         if (var4 < -var6 + var5) {
           this.field_l = 0;
           this.field_h = 0;
@@ -200,11 +200,11 @@ class TextFieldWidget extends FocusableWidget {
         }
         WidgetMetrics var5 = (WidgetMetrics) ((Object) this.field_p);
         if (this.field_H != this.field_N) {
-          var5.a(this.field_N, param2, param3, this.field_H, 0, (UiWidget) (this));
+          var5.drawSelection(this.field_N, param2, param3, this.field_H, 0, (UiWidget) (this));
         }
         long var6 = pr.currentTimeMillis(param1 + 26131);
         if ((var6 - this.field_Q) % 1000L < 500L) {
-          var5.a(this.field_H, param3, -127, param2, (UiWidget) (this));
+          var5.drawCaret(this.field_H, param3, -127, param2, (UiWidget) (this));
           return;
         }
     }
@@ -420,7 +420,7 @@ class TextFieldWidget extends FocusableWidget {
           if (1 == this.field_o) {
             if (this.field_p instanceof WidgetMetrics) {
               var5 = (WidgetMetrics) ((Object) this.field_p);
-              var6 = var5.a(param0, pd.field_k, param1, (UiWidget) (this), true, bb.field_b);
+              var6 = var5.getCharacterIndexAt(param0, pd.field_k, param1, (UiWidget) (this), true, bb.field_b);
               if (var6 != -1) {
                 if (this.field_P &&
                   this.field_R > var6 &&

@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qo {
+abstract class TextLayout {
     static int field_b;
     static int field_a;
     static int[] field_c;
-    ha[] field_d;
+    TextLayoutLine[] field_d;
     static Star field_e;
 
-    final int a(byte param0, int param1) {
-        ha var4 = null;
+    final int getLineIndexOfCharacter(byte param0, int param1) {
+        TextLayoutLine var4 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3 = 0;
         if (param0 < 43) {
-          qo.clearStatics(55);
+          TextLayout.clearStatics(55);
         }
         while (this.field_d.length > var3) {
           var4 = this.field_d[var3];
@@ -43,7 +43,7 @@ abstract class qo {
         int var1 = -47 % ((param0 + 43) / 59);
     }
 
-    final int b(int param0) {
+    final int getHeight(int param0) {
         int stackIn_6_0 = 0;
         if (param0 != 438) {
           return 23;
@@ -57,11 +57,11 @@ abstract class qo {
         return stackIn_6_0;
     }
 
-    final int c(int param0) {
+    final int getMaxLineWidth(int param0) {
         int var4 = 0;
         int var2;
-        ha[] var3_ref_ha__;
-        ha var5;
+        TextLayoutLine[] var3_ref_ha__;
+        TextLayoutLine var5;
         int var7;
         int var3;
         int var6;
@@ -72,7 +72,7 @@ abstract class qo {
           for (var4 = 0; var3_ref_ha__.length > var4; var4++) {
             var5 = var3_ref_ha__[var4];
             if (var5 != null) {
-              var6 = var5.b(35);
+              var6 = var5.getWidth(35);
               if (var6 > var2) {
                 var2 = var6;
               }
@@ -145,7 +145,7 @@ abstract class qo {
     final int a(int param0, int param1, int param2) {
         int var5 = 0;
         int var4;
-        ha var6;
+        TextLayoutLine var6;
         int var7;
         int var8;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -156,17 +156,17 @@ abstract class qo {
             return -1;
           }
           if (this.field_d.length == 1) {
-            return this.field_d[0].a(false, param0);
+            return this.field_d[0].getCharacterIndexAtX(false, param0);
           }
           var4 = 0;
           if (param1 != 3357) {
-            this.b(-63);
+            this.getHeight(-63);
           }
           for (var5 = 0; var5 < this.field_d.length; var5++) {
             var6 = this.field_d[var5];
             if (param2 >= var6.field_e &&
               var6.field_c >= param2) {
-              var7 = var6.a(false, param0);
+              var7 = var6.getCharacterIndexAtX(false, param0);
               if (var7 == -1) {
                 return -1;
               }
@@ -180,9 +180,9 @@ abstract class qo {
     }
 
     final int a(boolean param0, int param1) {
-        ha var5 = null;
+        TextLayoutLine var5 = null;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        ha[] var3 = this.field_d;
+        TextLayoutLine[] var3 = this.field_d;
         int var4 = 0;
         if (!param0) {
           field_c = (int[]) null;

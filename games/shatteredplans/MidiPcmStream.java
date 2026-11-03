@@ -470,7 +470,7 @@ final class MidiPcmStream extends PcmStream {
               var12.field_Ub = new AnimatedPanel(0L, oj.field_zb);
               var12.addChild(4, var12.field_Ub);
               var12.field_Ub.field_y = 1;
-              var12.field_Pb = new AnimatedPanel(0L, ek.field_E);
+              var12.field_Pb = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
               var12.addChild(4, var12.field_Pb);
               var12.field_Rb = new AnimatedPanel(0L, oj.field_zb);
               var12.addChild(4, var12.field_Rb);
@@ -478,7 +478,7 @@ final class MidiPcmStream extends PcmStream {
               var12.field_Wb = new AnimatedPanel(0L, oj.field_zb);
               var12.addChild(4, var12.field_Wb);
               var12.field_Wb.field_kb = 0;
-              var12.field_Ib = new AnimatedPanel(0L, ek.field_E);
+              var12.field_Ib = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
               var12.addChild(4, var12.field_Ib);
               var12.field_Ib.field_y = 2;
               stackIn_12_0 = var12;
@@ -492,7 +492,7 @@ final class MidiPcmStream extends PcmStream {
               } else {
                 stackIn_13_1 = null;
                 stackIn_13_2 = null;
-                stackIn_13_4 = ek.field_E;
+                stackIn_13_4 = ArrayWidgetGroup.field_E;
               }
               stackIn_12_0.field_Mb = new AnimatedPanel(stackIn_12_3, stackIn_13_4);
               var12.addChild(4, var12.field_Mb);
@@ -534,7 +534,7 @@ final class MidiPcmStream extends PcmStream {
               if (ns.field_pb) {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
-                stackIn_32_4 = ek.field_E;
+                stackIn_32_4 = ArrayWidgetGroup.field_E;
               } else {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
@@ -543,7 +543,7 @@ final class MidiPcmStream extends PcmStream {
               stackIn_31_0.field_Ob = new AnimatedPanel(stackIn_31_3, stackIn_32_4);
               var12.addChild(4, var12.field_Ob);
               var12.field_Ob.field_y = 2;
-              var12.field_Tb = new AnimatedPanel(0L, ek.field_E);
+              var12.field_Tb = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
               var12.addChild(4, var12.field_Tb);
               var12.field_Sb = new AnimatedPanel(0L, gn.field_w);
               var12.addChild(4, var12.field_Sb);
@@ -691,12 +691,12 @@ final class MidiPcmStream extends PcmStream {
               stackIn_71_0 = (!ns.field_pb) ? 200 : 250;
               var33_intLifetime1 = stackIn_71_0;
               var12.field_Mb.setTarget(-2 + (365 - var33_intLifetime1), cr.field_c, (byte) 46, var31, var33_intLifetime1);
-              var34_int = qo.field_b;
+              var34_int = TextLayout.field_b;
               if ((var14Lifetime1 & 1 << cp.field_q) != 0) {
                 var50_ref = uk.field_b[var12.field_nc];
                 var12.field_Bb.field_pb = var50_ref;
                 var12.field_Bb.setTarget(var50_ref.field_o, var12.field_Mb.field_mb, (byte) 111, 0, var34_int);
-                var34_int = var34_int + (var50_ref.field_o + qo.field_b);
+                var34_int = var34_int + (var50_ref.field_o + TextLayout.field_b);
               }
               if ((var14Lifetime1 & 1 << GameRules.field_g) != 0) {
                 if (!var12.field_cc) {
@@ -714,13 +714,13 @@ final class MidiPcmStream extends PcmStream {
                 var51_ref = stackIn_82_0[stackIn_83_1];
                 var12.field_oc.field_pb = var51_ref;
                 var12.field_oc.setTarget(var51_ref.field_o, var12.field_Mb.field_mb, (byte) 124, 0, var34_int);
-                var34_int = var34_int + (qo.field_b + var51_ref.field_o);
+                var34_int = var34_int + (TextLayout.field_b + var51_ref.field_o);
               }
               if (0 != (1 << GameApplet.field_i & var14Lifetime1)) {
                 var52_ref = LegacyAi.field_s[-1 + var12.field_Fb];
                 var12.field_ac.field_pb = var52_ref;
                 var12.field_ac.setTarget(var52_ref.field_o, var12.field_Mb.field_mb, (byte) 41, 0, var34_int);
-                var34_int = var34_int + (qo.field_b + var52_ref.field_o);
+                var34_int = var34_int + (TextLayout.field_b + var52_ref.field_o);
               }
               if ((1 << v.field_e & var14Lifetime1) != 0) {
                 stackIn_88_0 = CheckboxPainter.field_l;
@@ -732,7 +732,7 @@ final class MidiPcmStream extends PcmStream {
                 var53_ref = stackIn_88_0[stackIn_91_1];
                 var12.field_Kb.field_pb = var53_ref;
                 var12.field_Kb.setTarget(var53_ref.field_o, var12.field_Mb.field_mb, (byte) 127, 0, var34_int);
-                var34_int = var34_int + (qo.field_b + var53_ref.field_o);
+                var34_int = var34_int + (TextLayout.field_b + var53_ref.field_o);
               }
               if (null != Star.field_O) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < ProductionContent.field_k; var36Lifetime1++) {
@@ -742,7 +742,7 @@ final class MidiPcmStream extends PcmStream {
                     var54 = var42;
                     var12.field_xb[var36Lifetime1].field_pb = var42;
                     var12.field_xb[var36Lifetime1].setTarget(var54.field_o, var12.field_Mb.field_mb, (byte) 92, 0, var34_int);
-                    var34_int = var34_int + (qo.field_b + var54.field_o);
+                    var34_int = var34_int + (TextLayout.field_b + var54.field_o);
                   }
                 }
               }
@@ -843,7 +843,7 @@ final class MidiPcmStream extends PcmStream {
             }
             if (var12.field_Kb.field_L) {
               if (!var12.field_ec) {
-                stackIn_155_0 = ek.field_G;
+                stackIn_155_0 = ArrayWidgetGroup.field_G;
               } else {
                 stackIn_155_0 = le.field_c;
               }

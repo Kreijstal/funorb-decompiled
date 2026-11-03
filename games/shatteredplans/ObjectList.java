@@ -150,7 +150,7 @@ final class ObjectList {
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_M) {
-              var12.field_Ab = new AnimatedPanel(0L, ek.field_E);
+              var12.field_Ab = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
               var12.addChild(4, var12.field_Ab);
               var12.field_Ob = new AnimatedPanel(0L, oj.field_zb);
               if (ns.field_pb) {

@@ -24,8 +24,8 @@ class ts extends FocusableWidget {
         WidgetMetrics var5 = (WidgetMetrics) ((Object) this.field_p);
         ql var6 = this.field_I;
         if (var6 != null) {
-          var7 = var5.b(0, (UiWidget) (this), param3);
-          var8 = var5.a(param2, (UiWidget) (this), 100);
+          var7 = var5.getTextX(0, (UiWidget) (this), param3);
+          var8 = var5.getTextY(param2, (UiWidget) (this), 100);
           do {
             dd.a(2 + var6.field_l, param1 ^ -11858, 2 + var6.field_j, var6.field_k + var7 - 2, var8 + (var6.field_m - 2));
             var6 = var6.field_h;
@@ -221,7 +221,7 @@ class ts extends FocusableWidget {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        this.setBounds(param1, ((WidgetMetrics) ((Object) this.field_p)).a(true, (UiWidget) (this)), (byte) 100, param0, param3);
+        this.setBounds(param1, ((WidgetMetrics) ((Object) this.field_p)).getTextWidth(true, (UiWidget) (this)), (byte) 100, param0, param3);
         if (param2 != 57) {
           field_E = (String) null;
         }
@@ -282,8 +282,8 @@ class ts extends FocusableWidget {
         Object var17;
         Object var22;
         String var23;
-        qo var24;
-        ha var25;
+        TextLayout var24;
+        TextLayoutLine var25;
         ql var26;
         WidgetMetrics var27;
         int stackIn_9_0 = 0;
@@ -291,8 +291,8 @@ class ts extends FocusableWidget {
         int stackIn_29_0 = 0;
         int stackIn_34_0 = 0;
         String var18;
-        qo var19;
-        ha var20;
+        TextLayout var19;
+        TextLayoutLine var20;
         ql var21;
         WidgetMetrics var28;
         int var2Lifetime1;
@@ -313,7 +313,7 @@ class ts extends FocusableWidget {
         if (!param0) {
           var2 = 0;
           var27 = (WidgetMetrics) ((Object) this.field_p);
-          var24 = var27.a((UiWidget) (this), true);
+          var24 = var27.getTextLayout((UiWidget) (this), true);
           while (true) {
             var5 = this.field_s.indexOf("<hotspot=", var2);
             if (var5 == -1) {
@@ -323,8 +323,8 @@ class ts extends FocusableWidget {
             var23 = this.field_s.substring(var5 + 9, var7);
             var7Lifetime2 = Integer.parseInt(var23);
             var2 = this.field_s.indexOf("</hotspot>", var5);
-            var8 = var24.a((byte) 87, var5);
-            var9 = var24.a((byte) 103, var2);
+            var8 = var24.getLineIndexOfCharacter((byte) 87, var5);
+            var9 = var24.getLineIndexOfCharacter((byte) 103, var2);
             var10 = null;
             for (var11 = var8; var9 >= var11; var11++) {
               var25 = var24.field_d[var11];
@@ -344,7 +344,7 @@ class ts extends FocusableWidget {
                 }
               }
               var14 = stackIn_14_0;
-              var26 = new ql(var7Lifetime2, var13, var25.field_e, var14 - var13, Math.max(var27.a(false), -var25.field_e + var25.field_c));
+              var26 = new ql(var7Lifetime2, var13, var25.field_e, var14 - var13, Math.max(var27.getLineHeight(false), -var25.field_e + var25.field_c));
               if (var10 == null) {
                 var10 = var26;
                 this.field_D.addLast((byte) -113, var26);
@@ -359,7 +359,7 @@ class ts extends FocusableWidget {
         field_L = (Sprite[]) null;
         var2Lifetime1 = 0;
         var28 = (WidgetMetrics) ((Object) this.field_p);
-        var19 = var28.a((UiWidget) (this), true);
+        var19 = var28.getTextLayout((UiWidget) (this), true);
         while (true) {
           var5Lifetime1 = this.field_s.indexOf("<hotspot=", var2Lifetime1);
           if (var5Lifetime1 == -1) {
@@ -369,8 +369,8 @@ class ts extends FocusableWidget {
           var18 = this.field_s.substring(var5Lifetime1 + 9, var7Lifetime1);
           var7Lifetime1Lifetime1 = Integer.parseInt(var18);
           var2Lifetime1 = this.field_s.indexOf("</hotspot>", var5Lifetime1);
-          var8Lifetime1 = var19.a((byte) 87, var5Lifetime1);
-          var9Lifetime1 = var19.a((byte) 103, var2Lifetime1);
+          var8Lifetime1 = var19.getLineIndexOfCharacter((byte) 87, var5Lifetime1);
+          var9Lifetime1 = var19.getLineIndexOfCharacter((byte) 103, var2Lifetime1);
           var10Lifetime1 = null;
           for (var11Lifetime1 = var8Lifetime1; var9Lifetime1 >= var11Lifetime1; var11Lifetime1++) {
             var20 = var19.field_d[var11Lifetime1];
@@ -390,7 +390,7 @@ class ts extends FocusableWidget {
               }
             }
             var14Lifetime1 = stackIn_34_0;
-            var21 = new ql(var7Lifetime1Lifetime1, var13Lifetime1, var20.field_e, var14Lifetime1 - var13Lifetime1, Math.max(var28.a(false), -var20.field_e + var20.field_c));
+            var21 = new ql(var7Lifetime1Lifetime1, var13Lifetime1, var20.field_e, var14Lifetime1 - var13Lifetime1, Math.max(var28.getLineHeight(false), -var20.field_e + var20.field_c));
             if (var10Lifetime1 == null) {
               var10Lifetime1 = var21;
               this.field_D.addLast((byte) -113, var21);

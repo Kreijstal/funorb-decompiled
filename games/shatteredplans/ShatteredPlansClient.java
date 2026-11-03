@@ -598,10 +598,10 @@ public final class ShatteredPlansClient extends tl {
           if (IntrusiveNodeHashTable.field_g != null) {
             nj.a(90.0f, 2, PasswordValidator.field_p);
             this.draw(1);
-            ck.a(ms.field_d, (java.applet.Applet) (this), AttackTask.field_s, rl.field_f, IntrusiveNodeHashTable.field_g, la.field_k, (byte) -8);
+            ck.a(ms.field_d, (java.applet.Applet) (this), AttackTask.field_s, rl.field_f, IntrusiveNodeHashTable.field_g, RichTextLayout.field_k, (byte) -8);
             rl.field_f = null;
             IntrusiveNodeHashTable.field_g = null;
-            la.field_k = null;
+            RichTextLayout.field_k = null;
             ValidationState.c(122);
             return false;
           }
@@ -669,8 +669,8 @@ public final class ShatteredPlansClient extends tl {
                               ai.field_c.preloadAll(param0 ^ -83)) {
                               if (oi.field_h.isIndexLoaded((byte) -125) &&
                                 oi.field_h.preloadAll(-1)) {
-                                if (la.field_k.isIndexLoaded((byte) -87) &&
-                                  la.field_k.preloadAll(-1)) {
+                                if (RichTextLayout.field_k.isIndexLoaded((byte) -87) &&
+                                  RichTextLayout.field_k.preloadAll(-1)) {
                                   QuickChatCategoryDefinition.e(-23771);
                                   nj.a(65.0f, 2, jp.field_xb);
                                   this.draw(param0 - 81);
@@ -683,7 +683,7 @@ public final class ShatteredPlansClient extends tl {
                                   ValidationState.c(122);
                                   return false;
                                 }
-                                nj.a(75.0f, 2, CandidateLink.a(MouseInputHandler.field_e, la.field_k, param0 ^ 118, ToggleButton.field_v));
+                                nj.a(75.0f, 2, CandidateLink.a(MouseInputHandler.field_e, RichTextLayout.field_k, param0 ^ 118, ToggleButton.field_v));
                                 return false;
                               }
                               nj.a(75.0f, 2, BoundsRect.a("", oi.field_h, (byte) 77, MouseInputHandler.field_e, ToggleButton.field_v));
@@ -960,7 +960,7 @@ public final class ShatteredPlansClient extends tl {
         gn.clearStatics(true);
         DialPainter.clearStatics(16711935);
         SliderPainter.a((byte) 49);
-        qo.clearStatics(-109);
+        TextLayout.clearStatics(-109);
         UiWidget.clearStatics(0);
         FocusableWidget.clearStatics(true);
         SingleChildWidget.clearStatics((byte) 109);
@@ -1030,7 +1030,7 @@ public final class ShatteredPlansClient extends tl {
         js.clearStatics((byte) 115);
         ja.clearStatics((byte) 124);
         wd.clearStatics(false);
-        ek.clearStatics(-1);
+        ArrayWidgetGroup.clearStatics(-1);
         TutorialAi.clearStatics(false);
         LegacyAi.clearStatics(19333);
         AggressiveAi.clearStatics((byte) 97);
@@ -1039,7 +1039,7 @@ public final class ShatteredPlansClient extends tl {
         DefensiveAi.clearStatics(30);
         PlayerEliminatedEvent.clearStatics(2105376);
         ji.clearStatics((byte) -113);
-        la.clearStatics((byte) 36);
+        RichTextLayout.clearStatics((byte) 36);
         cb.a((byte) 104);
         hn.a(19568);
         fr.clearStatics(-950540796);
@@ -1099,7 +1099,7 @@ public final class ShatteredPlansClient extends tl {
         rk.clearStatics(-13095);
         aq.clearStatics((byte) 107);
         wk.clearStatics((byte) 70);
-        ha.clearStatics(4324);
+        TextLayoutLine.clearStatics(4324);
         UsernameAvailabilityValidator.clearStatics(true);
         PasswordValidator.clearStatics(param0 + 24324);
         mm.clearStatics(param0 + 23978);
@@ -1342,7 +1342,7 @@ public final class ShatteredPlansClient extends tl {
         DualLinkNode.field_n = SoundCache.a(10, 55);
         StrongCacheEntry.field_z = SoundCache.a(11, 67);
         ai.field_c = SoundCache.a(12, 28);
-        la.field_k = SoundCache.a(13, 52);
+        RichTextLayout.field_k = SoundCache.a(13, 52);
     }
 
     final void draw(int param0) {

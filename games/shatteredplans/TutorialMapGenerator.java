@@ -1206,7 +1206,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("unrated_game", 511);
                 if (null != var2) {
-                  ek.field_G = IterableNodeHashTable.a(var2, 17746);
+                  ArrayWidgetGroup.field_G = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("rated_game_tips", 511);
                 if (null != var2) {
@@ -1682,7 +1682,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("rule_0_5", 511);
                 if (var2 != null) {
-                  la.field_o = IterableNodeHashTable.a(var2, 17746);
+                  RichTextLayout.field_o = IterableNodeHashTable.a(var2, 17746);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
@@ -2686,7 +2686,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("pausemenu", 511);
                 if (null != var2) {
-                  ha.field_d = IterableNodeHashTable.a(var2, 17746);
+                  TextLayoutLine.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("optionsmenu_notpaused", 511);
                 if (var2 != null) {
@@ -3130,7 +3130,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
                 }
                 var2 = TertiaryLinkNode.a("mp_x_hasresigned", 511);
                 if (var2 != null) {
-                  ek.field_y = IterableNodeHashTable.a(var2, 17746);
+                  ArrayWidgetGroup.field_y = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = TertiaryLinkNode.a("mp_x_hasleft", 511);
                 if (var2 != null) {

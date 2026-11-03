@@ -54,7 +54,7 @@ abstract class bq {
         int var2 = var1 - pg.field_J * pg.field_J;
         int var4 = NodeHashTableIterator.field_f + var2 * (-NodeHashTableIterator.field_f + DerelictMapGenerator.field_m) / var1;
         tg.field_c.setTarget(640, 120, (byte) 121, var4, tm.field_h);
-        SocketArchiveNetworkClient.a(-24 + DerelictMapGenerator.field_m, 0, tg.field_a, 3, 640, 5, qo.field_b);
+        SocketArchiveNetworkClient.a(-24 + DerelictMapGenerator.field_m, 0, tg.field_a, 3, 640, 5, TextLayout.field_b);
     }
 
     public static void clearStatics(int param0) {

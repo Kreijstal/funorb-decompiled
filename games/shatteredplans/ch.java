@@ -80,7 +80,7 @@ final class ch implements wr {
               var6 = or.a(true, StarLinkPlanner.field_c[var3_int], true);
               var4 = var4 + js.field_e;
               var7 = -(var6 >> 1) + WeightedLruCache.field_e;
-              if (ek.a((uo.field_g << 1) + vh.field_b, param2, var7 - js.field_g, (byte) -100, var4, (js.field_g << 1) + var6, param1)) {
+              if (ArrayWidgetGroup.a((uo.field_g << 1) + vh.field_b, param2, var7 - js.field_g, (byte) -100, var4, (js.field_g << 1) + var6, param1)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }

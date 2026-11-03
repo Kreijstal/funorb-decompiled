@@ -114,7 +114,7 @@ final class ah extends ts {
           var6 = this.field_M.c(-123);
           var43 = (WidgetMetrics) ((Object) this.field_p);
           var9 = this.field_m + param3;
-          var10 = var43.a(param2, (UiWidget) (this), 66) + (var43.a((UiWidget) (this), true).b(438) >> 1);
+          var10 = var43.getTextY(param2, (UiWidget) (this), 66) + (var43.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);
           if (pd.field_h == var6) {
             var20 = MenuList.field_w[0];
             var11 = var20.field_o << 1;
@@ -181,7 +181,7 @@ final class ah extends ts {
           var6 = this.field_M.c(-123);
           var44 = (WidgetMetrics) ((Object) this.field_p);
           var9Lifetime1 = this.field_m + param3;
-          var10Lifetime1 = var44.a(param2, (UiWidget) (this), 66) + (var44.a((UiWidget) (this), true).b(438) >> 1);
+          var10Lifetime1 = var44.getTextY(param2, (UiWidget) (this), 66) + (var44.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);
           if (pd.field_h == var6) {
             var26 = MenuList.field_w[0];
             var11Lifetime1 = var26.field_o << 1;
@@ -250,7 +250,7 @@ final class ah extends ts {
           var6Lifetime1 = this.field_M.c(-123);
           var45 = (WidgetMetrics) ((Object) this.field_p);
           var9Lifetime2 = this.field_m + param3;
-          var10Lifetime2 = var45.a(param2, (UiWidget) (this), 66) + (var45.a((UiWidget) (this), true).b(438) >> 1);
+          var10Lifetime2 = var45.getTextY(param2, (UiWidget) (this), 66) + (var45.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);
           if (pd.field_h != var6Lifetime1 &&
             var6Lifetime1 != lm.field_d) {
             if (var6Lifetime1 == ArchiveSourceManager.field_b) {
@@ -299,7 +299,7 @@ final class ah extends ts {
         var6Lifetime2 = this.field_M.c(-123);
         var46 = (WidgetMetrics) ((Object) this.field_p);
         var9Lifetime3 = this.field_m + param3;
-        var10Lifetime3 = var46.a(param2, (UiWidget) (this), 66) + (var46.a((UiWidget) (this), true).b(438) >> 1);
+        var10Lifetime3 = var46.getTextY(param2, (UiWidget) (this), 66) + (var46.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);
         if (pd.field_h == var6Lifetime2) {
           var40 = MenuList.field_w[0];
           var11Lifetime3 = var40.field_o << 1;

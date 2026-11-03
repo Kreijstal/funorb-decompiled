@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class ek extends UiWidget implements ni {
+abstract class ArrayWidgetGroup extends UiWidget implements ni {
     static String field_H;
     static String field_y;
     static Sprite field_z;
@@ -106,7 +106,7 @@ abstract class ek extends UiWidget implements ni {
         }
     }
 
-    ek(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+    ArrayWidgetGroup(int param0, int param1, int param2, int param3, WidgetPainter param4) {
         super(param0, param1, param2, param3, param4, (WidgetListener) null);
     }
 
@@ -129,7 +129,7 @@ abstract class ek extends UiWidget implements ni {
             return false;
           }
           if (param2 != 13) {
-            ek.a(12, 50, -9, 113, (byte) 82);
+            ArrayWidgetGroup.a(12, 50, -9, 113, (byte) 82);
           }
           var9 = this.field_B;
           var5 = var9;
@@ -174,7 +174,7 @@ abstract class ek extends UiWidget implements ni {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -1) {
-            ek.a(-30, 122, -111, (byte) 51, -17, -36, -28);
+            ArrayWidgetGroup.a(-30, 122, -111, (byte) 51, -17, -36, -28);
           }
           stackIn_3_0 = this.a(param0, (byte) -110, 1);
           return stackIn_3_0;
@@ -266,7 +266,7 @@ abstract class ek extends UiWidget implements ni {
     final static boolean a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
         boolean stackIn_8_0 = false;
         if (param3 >= -66) {
-          ek.clearStatics(-78);
+          ArrayWidgetGroup.clearStatics(-78);
         }
         stackIn_8_0 = (param2 <= param1) && (param2 + param5 > param1) && (param6 >= param4) && (param6 < param0 + param4);
         return stackIn_8_0;

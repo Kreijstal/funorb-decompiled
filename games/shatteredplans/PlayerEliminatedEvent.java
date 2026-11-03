@@ -70,11 +70,11 @@ final class PlayerEliminatedEvent extends IntrusiveNode {
         Sprite[][] var10 = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var9 = new Sprite[la.field_r.length][];
+          var9 = new Sprite[RichTextLayout.field_r.length][];
           var10 = var9;
-          for (var7 = 0; var7 < la.field_r.length; var7++) {
-            if (la.field_r[var7] != null) {
-              var9[var7] = ae.a(69, "", param5, la.field_r[var7]);
+          for (var7 = 0; var7 < RichTextLayout.field_r.length; var7++) {
+            if (RichTextLayout.field_r[var7] != null) {
+              var9[var7] = ae.a(69, "", param5, RichTextLayout.field_r[var7]);
             }
           }
           wl.field_b = ah.field_Q;

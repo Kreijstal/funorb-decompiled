@@ -76,11 +76,11 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
         }
         tg.field_c.setTarget(640, 120, (byte) 66, param0, tm.field_h);
         if (param1 <= -35) {
-          SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, tg.field_a, 3, 640, 5, qo.field_b);
+          SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, tg.field_a, 3, 640, 5, TextLayout.field_b);
           return;
         }
         fa.a(-2, (byte) -122);
-        SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, tg.field_a, 3, 640, 5, qo.field_b);
+        SocketArchiveNetworkClient.a(DerelictMapGenerator.field_m - 24, 0, tg.field_a, 3, 640, 5, TextLayout.field_b);
     }
 
     public static void clearStatics(int param0) {

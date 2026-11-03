@@ -183,10 +183,10 @@ final class DiskArchiveRequest extends ArchiveRequest {
           nj.a(438);
         }
         if (Archive.field_b > 0) {
-          qo.a(22353, Archive.field_b);
+          TextLayout.a(22353, Archive.field_b);
         }
         if (ee.field_k > 0) {
-          qo.a(22353, ee.field_k);
+          TextLayout.a(22353, ee.field_k);
         }
     }
 

@@ -316,7 +316,7 @@ final class ks {
           }
           SliderPainter.a((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ScrollPane) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_n == 0 &&
-            !ha.a((byte) 95) &&
+            !TextLayoutLine.a((byte) 95) &&
             null == np.field_a &&
             he.field_p == null) {
             if (!ae.field_b) {
@@ -329,7 +329,7 @@ final class ks {
             var7.field_j.a(param1 + 1, 20, var8);
           }
           if (1 == param0.field_n &&
-            !ha.a((byte) 111) &&
+            !TextLayoutLine.a((byte) 111) &&
             null != np.field_a &&
             param0.field_g == np.field_a.g(-101)) {
             if (!ae.field_b) {

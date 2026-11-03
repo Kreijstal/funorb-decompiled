@@ -1682,24 +1682,24 @@ final class GameScreen {
           SoftwareRasterizer.fillRoundedRectAlpha((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + rs.field_Cb.field_J), var6 + 20, 10 + UiWidget.field_t.field_w * 3, 5, 0, 128);
           var7 = 29 + (rs.field_Cb.field_J + param1);
           var8 = UiWidget.field_t.field_z + rs.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}));
-          ek.field_z.draw((-ek.field_z.field_z + UiWidget.field_t.field_z) / 2 + (param0 - var8) / 2 + param3, var7);
+          ArrayWidgetGroup.field_z.draw((-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2 + (param0 - var8) / 2 + param3, var7);
           UiWidget.field_t.draw((-var8 + param0) / 2 + param3, var7 - 9);
-          SoftwareRasterizer.b(ProductionContent.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
-          SoftwareRasterizer.b((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + ProductionContent.field_c[2], (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, MusicCrossfadeStream.field_s);
-          SoftwareRasterizer.b(ProductionContent.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.b(ProductionContent.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.b((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + ProductionContent.field_c[2], (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.b(ProductionContent.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
           rs.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}), UiWidget.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), UiWidget.field_t.field_w / 2 + var7 - 4, 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
-          ek.field_z.draw(param3 + ((-var8 + param0) / 2 + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
+          ArrayWidgetGroup.field_z.draw(param3 + ((-var8 + param0) / 2 + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.draw((param0 - var8) / 2 + param3, var7 - 9);
           int var9 = 87 % ((-25 - param2) / 51);
-          SoftwareRasterizer.b((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + ProductionContent.field_c[0], ul.field_Db[0] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
-          SoftwareRasterizer.b(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + ProductionContent.field_c[1], ul.field_Db[1] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.b((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + ProductionContent.field_c[0], ul.field_Db[0] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.b(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + ProductionContent.field_c[1], ul.field_Db[1] + (ArrayWidgetGroup.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
           rs.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 5 + UiWidget.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + UiWidget.field_t.field_w / 2), 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
-          ek.field_z.draw(-5 + (param3 + (-var6 + param0) / 2 + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
+          ArrayWidgetGroup.field_z.draw(-5 + (param3 + (-var6 + param0) / 2 + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.draw((-var6 + param0) / 2 + param3 - 5, var7 - 9);
-          SoftwareRasterizer.b(ProductionContent.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
-          ek.field_z.draw(-5 + (UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3) + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2, var7);
+          SoftwareRasterizer.b(ProductionContent.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ArrayWidgetGroup.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          ArrayWidgetGroup.field_z.draw(-5 + (UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3) + (-ArrayWidgetGroup.field_z.field_z + UiWidget.field_t.field_z) / 2, var7);
           UiWidget.field_t.draw(param3 + (-var6 + param0) / 2 + (UiWidget.field_t.field_z - 5), var7 - 9);
           rs.field_Cb.drawString("= " + vs.field_a, 2 * UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3, UiWidget.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
         } catch (RuntimeException runtimeException) {
@@ -2865,7 +2865,7 @@ final class GameScreen {
           SoftwareRasterizer.setClip(var4 + rs.field_Cb.field_J / 2, var5, -(rs.field_Cb.field_J / 2) + var4 + var3, var5 + var6);
           var9 = this.field_s.field_P.field_x;
           if (var9 instanceof SolVictoryChecker) {
-            var8 = la.field_n;
+            var8 = RichTextLayout.field_n;
             decompiledFrameRemainder0 = (var16 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -3806,7 +3806,7 @@ final class GameScreen {
                     if ((1 << var5 & this.field_s.field_i) == 0) {
                       if (0 == (var3.field_e & 1 << var5)) {
                         if ((var3.field_f & 1 << var5) != 0) {
-                          var6_ref = QuickChatCategoryRegistry.a(ek.field_y, 4371, new String[]{(String) (var6_ref)});
+                          var6_ref = QuickChatCategoryRegistry.a(ArrayWidgetGroup.field_y, 4371, new String[]{(String) (var6_ref)});
                           break regionExit2;
                         }
                         if ((this.field_s.field_P.field_w & 1 << var5) != 0) {
@@ -4325,7 +4325,7 @@ final class GameScreen {
                 var6 = vm.a(kr.field_f[var3_int], 0, true);
                 var7 = QuaternaryLinkNode.field_w - (var6 >> 1);
                 var4 = var4 + sm.field_b;
-                if (ek.a(id.field_b + (ArchiveNetworkClient.field_i << 1), param0, var7 - MapView.field_Lb, (byte) -99, var4, (MapView.field_Lb << 1) + var6, param1)) {
+                if (ArrayWidgetGroup.a(id.field_b + (ArchiveNetworkClient.field_i << 1), param0, var7 - MapView.field_Lb, (byte) -99, var4, (MapView.field_Lb << 1) + var6, param1)) {
                   stackIn_11_0 = var5;
                   return stackIn_11_0;
                 }

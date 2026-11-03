@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la extends qo {
+final class RichTextLayout extends TextLayout {
     private int field_l;
     private int field_m;
     static String field_h;
@@ -16,8 +16,8 @@ final class la extends qo {
     private int field_q;
     private int field_i;
 
-    final void a(int param0, String param1, int param2, nq param3, int param4) {
-        ha var8 = null;
+    final void layoutSingleLine(int param0, String param1, int param2, nq param3, int param4) {
+        TextLayoutLine var8 = null;
         int var7 = 0;
         if (param1 == null) {
           this.field_d = null;
@@ -31,7 +31,7 @@ final class la extends qo {
           this.field_p = 1;
           this.field_f = true;
           this.field_j = param3;
-          var8 = this.a(param0, param3, param1, (byte) 15);
+          var8 = this.createLine(param0, param3, param1, (byte) 15);
           var7 = param3.stringWidth(param1);
           var8.field_b[param2] = -(var7 >> 1) + param4;
           var8.field_b[param1.length()] = param4 + (var7 >> 1);
@@ -42,15 +42,15 @@ final class la extends qo {
     }
 
     final void a(String param0, int param1, int param2, int param3, int param4, int param5, nq param6, int param7) {
-        ha stackIn_33_0;
-        ha stackIn_33_1;
+        TextLayoutLine stackIn_33_0;
+        TextLayoutLine stackIn_33_1;
         int stackIn_33_2;
         int stackIn_33_3;
-        ha stackIn_34_0 = null;
-        ha stackIn_34_1 = null;
+        TextLayoutLine stackIn_34_0 = null;
+        TextLayoutLine stackIn_34_1 = null;
         int stackIn_34_4 = 0;
         String stackIn_38_0 = null;
-        ha stackIn_38_1 = null;
+        TextLayoutLine stackIn_38_1 = null;
         int stackIn_38_2 = 0;
         int stackIn_39_3;
         RuntimeException stackIn_44_0 = null;
@@ -64,7 +64,7 @@ final class la extends qo {
         int var11 = 0;
         int var12 = 0;
         String var13 = null;
-        ha var14 = null;
+        TextLayoutLine var14 = null;
         int var15 = 0;
         String[] var16 = null;
         String[] var17 = null;
@@ -122,7 +122,7 @@ final class la extends qo {
               }
             }
           }
-          this.field_d = new ha[var10];
+          this.field_d = new TextLayoutLine[var10];
           for (var12Lifetime1 = 0; var12Lifetime1 < var10; var12Lifetime1++) {
             var13 = var16[var12Lifetime1];
             stackIn_33_0 = null;
@@ -138,7 +138,7 @@ final class la extends qo {
               stackIn_34_1 = null;
               stackIn_34_4 = 0;
             }
-            var14 = new ha(stackIn_33_2, stackIn_33_3, stackIn_34_4);
+            var14 = new TextLayoutLine(stackIn_33_2, stackIn_33_3, stackIn_34_4);
             var14.field_b[0] = 0;
             if (var13 != null) {
               var14.field_b[var13.length()] = param6.stringWidth(var13);
@@ -176,12 +176,12 @@ final class la extends qo {
         }
     }
 
-    private final ha a(int param0, nq param1, String param2, byte param3) {
-        ha var5 = null;
+    private final TextLayoutLine createLine(int param0, nq param1, String param2, byte param3) {
+        TextLayoutLine var5 = null;
         RuntimeException var5_ref = null;
-        ha var6 = null;
-        ha stackIn_2_0 = null;
-        ha stackIn_4_0 = null;
+        TextLayoutLine var6 = null;
+        TextLayoutLine stackIn_2_0 = null;
+        TextLayoutLine stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -189,14 +189,14 @@ final class la extends qo {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new ha(-param1.field_J + param0, param0 + param1.field_q, param2.length());
+          var6 = new TextLayoutLine(-param1.field_J + param0, param0 + param1.field_q, param2.length());
           var5 = var6;
-          this.field_d = new ha[]{var6};
+          this.field_d = new TextLayoutLine[]{var6};
           if (param3 == 15) {
             stackIn_4_0 = var5;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (ha) null;
+          stackIn_2_0 = (TextLayoutLine) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -221,7 +221,7 @@ final class la extends qo {
     public static void clearStatics(byte param0) {
         field_h = null;
         if (param0 != 36) {
-          la.clearStatics((byte) 14);
+          RichTextLayout.clearStatics((byte) 14);
         }
         field_k = null;
         field_r = null;
@@ -230,8 +230,8 @@ final class la extends qo {
     }
 
     final void a(nq param0, int param1, int param2, String param3, int param4) {
-        ha var7 = null;
-        ha var8 = null;
+        TextLayoutLine var7 = null;
+        TextLayoutLine var8 = null;
         if (param3 == null) {
           this.field_d = null;
           return;
@@ -248,7 +248,7 @@ final class la extends qo {
           if (param2 != -4) {
             this.field_p = -108;
           }
-          var7 = this.a(param1, param0, param3, (byte) 15);
+          var7 = this.createLine(param1, param0, param3, (byte) 15);
           var8 = var7;
           var7.field_b[0] = param4;
           var8.field_b[param3.length()] = param0.stringWidth(param3) + param4;
@@ -259,8 +259,8 @@ final class la extends qo {
     }
 
     final void a(int param0, int param1, nq param2, String param3, int param4) {
-        ha var9 = null;
-        ha var10 = null;
+        TextLayoutLine var9 = null;
+        TextLayoutLine var10 = null;
         if (param3 == null) {
           this.field_d = null;
           return;
@@ -278,7 +278,7 @@ final class la extends qo {
           this.field_p = 2;
           this.field_g = param3;
           int var7 = 79 / ((59 - param0) / 47);
-          var9 = this.a(param1, param2, param3, (byte) 15);
+          var9 = this.createLine(param1, param2, param3, (byte) 15);
           var10 = var9;
           var10.field_b[0] = -param2.stringWidth(param3) + param4;
           var10.field_b[param3.length()] = param4;
@@ -288,7 +288,7 @@ final class la extends qo {
         }
     }
 
-    public la() {
+    public RichTextLayout() {
     }
 
     final static void a(boolean param0) {

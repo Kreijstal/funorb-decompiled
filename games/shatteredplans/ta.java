@@ -8,7 +8,7 @@ final class ta {
     static String field_c;
     static String field_e;
 
-    final static void a(String param0, ha param1, int param2, int param3, nq param4) {
+    final static void a(String param0, TextLayoutLine param1, int param2, int param3, nq param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

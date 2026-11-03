@@ -185,7 +185,7 @@ final class uo {
         var18 = null;
         var19 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          qo.a(22353, ee.field_k);
+          TextLayout.a(22353, ee.field_k);
           if (null != np.field_a) {
             boolean decompiledFrameRemainder0 = true;
             DialPainter.field_g.field_s = true;
@@ -239,10 +239,10 @@ final class uo {
               if (pe.field_D != null) {
                 if (lr.field_c == null) {
                   lr.field_c = new byte[ProductionContent.field_k];
-                  ek.field_F = new boolean[ProductionContent.field_k];
+                  ArrayWidgetGroup.field_F = new boolean[ProductionContent.field_k];
                 }
                 for (var11_int = 0; var11_int < ProductionContent.field_k; var11_int++) {
-                  ek.field_F[var11_int] = false;
+                  ArrayWidgetGroup.field_F[var11_int] = false;
                 }
                 var10 = 0;
                 scanLoop1: while (true) {
@@ -271,7 +271,7 @@ final class uo {
                               var14_int = var16;
                             }
                           }
-                          ek.field_F[var14_int] = true;
+                          ArrayWidgetGroup.field_F[var14_int] = true;
                         } else {
                           var15 = var24[var14_int];
                           var16 = var13[var14_int + 1];
@@ -405,7 +405,7 @@ final class uo {
                   var11 = null;
                   var12Lifetime2 = 0;
                   for (var13_intLifetime1 = 0; ProductionContent.field_k > var13_intLifetime1; var13_intLifetime1++) {
-                    if (ek.field_F[var13_intLifetime1]) {
+                    if (ArrayWidgetGroup.field_F[var13_intLifetime1]) {
                       var23 = "<col=A00000>" + SoundPlayback.field_l[var13_intLifetime1] + "</col>";
                       if (var11 == null) {
                         var11 = var23;

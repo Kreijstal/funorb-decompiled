@@ -33,8 +33,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           try {
             var9 = tm.field_i.getGraphics();
-            if (ha.field_a == null) {
-              ha.field_a = new java.awt.Font("Helvetica", 1, 13);
+            if (TextLayoutLine.field_a == null) {
+              TextLayoutLine.field_a = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param2) {
               var9.setColor(java.awt.Color.black);
@@ -54,7 +54,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(3 * param1 + 2, 2, 300 - param1 * 3, 30);
-              var10.setFont(ha.field_a);
+              var10.setFont(TextLayoutLine.field_a);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(6 * param0.length()) + 304) / 2, 22);
               var9.drawImage(IterableNodeHashTable.field_a, VictoryChecker.field_e / 2 - 152, -18 + nn.field_b / 2, (java.awt.image.ImageObserver) null);
@@ -69,12 +69,12 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               var9.setColor(java.awt.Color.black);
               var9.drawRect(1 + var7, var8 + 1, 301, 31);
               var9.fillRect(param1 * 3 + (var7 + 2), 2 + var8, 300 - 3 * param1, 30);
-              var9.setFont(ha.field_a);
+              var9.setFont(TextLayoutLine.field_a);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param0, (304 - 6 * param0.length()) / 2 + var7, 22 + var8);
             }
             if (gd.field_a != null) {
-              var9.setFont(ha.field_a);
+              var9.setFont(TextLayoutLine.field_a);
               var9.setColor(java.awt.Color.white);
               var9.drawString(gd.field_a, VictoryChecker.field_e / 2 - 6 * gd.field_a.length() / 2, -26 + nn.field_b / 2);
             }

@@ -301,9 +301,9 @@ final class di extends IntrusiveNode {
           while (var6 != null) {
             var7 = 0;
             if (null == var6.field_M) {
-              var6.field_Cb = new AnimatedPanel(0L, ek.field_E);
+              var6.field_Cb = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
               var6.addChild(param0 ^ -7900, var6.field_Cb);
-              var6.field_Db = new AnimatedPanel(0L, ek.field_E);
+              var6.field_Db = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
               var6.addChild(4, var6.field_Db);
               var7 = 1;
               var6.markDirty((byte) -123);

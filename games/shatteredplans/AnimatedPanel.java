@@ -519,7 +519,7 @@ class AnimatedPanel extends PanelNode {
     }
 
     final static void f(int param0) {
-        ha.field_a = null;
+        TextLayoutLine.field_a = null;
         if (param0 > -40) {
           field_R = (String) null;
         }

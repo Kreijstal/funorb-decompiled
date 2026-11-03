@@ -212,11 +212,11 @@ final class LinkPainter implements WidgetPainter {
                 var8 = 0;
                 if (var19 == 0) {
                   if (null == var7.field_M) {
-                    var7.field_Cb = new AnimatedPanel(0L, ek.field_E);
+                    var7.field_Cb = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
                     var7.addChild(4, var7.field_Cb);
                     var7.field_Fb = new AnimatedPanel(0L, oj.field_zb);
                     var7.addChild(4, var7.field_Fb);
-                    var7.field_Db = new AnimatedPanel(0L, ek.field_E);
+                    var7.field_Db = new AnimatedPanel(0L, ArrayWidgetGroup.field_E);
                     var7.addChild(4, var7.field_Db);
                     var7.field_Fb.field_y = 2;
                     var8 = 1;

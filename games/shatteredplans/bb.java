@@ -109,7 +109,7 @@ final class bb {
         int var10Lifetime1;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          qo.a(22353, Archive.field_b);
+          TextLayout.a(22353, Archive.field_b);
           if (param2 != -2) {
             field_d = (String) null;
           }
@@ -207,12 +207,12 @@ final class bb {
                 RasterBuffer.field_h = false;
                 if (lr.field_c == null) {
                   lr.field_c = new byte[ProductionContent.field_k];
-                  ek.field_F = new boolean[ProductionContent.field_k];
+                  ArrayWidgetGroup.field_F = new boolean[ProductionContent.field_k];
                 }
                 var13 = 0;
                 var9_intLifetime1 = var13;
                 while (var13 < ProductionContent.field_k) {
-                  ek.field_F[var13] = false;
+                  ArrayWidgetGroup.field_F[var13] = false;
                   var13++;
                 }
                 js.a(-1, param2 + 3, he.field_p, ProductionContent.field_k, 0, true, -1, -1);
@@ -233,7 +233,7 @@ final class bb {
                     var9 = var11Lifetime1;
                   }
                   for (var10Lifetime1 = 0; ProductionContent.field_k > var10Lifetime1; var10Lifetime1++) {
-                    if (ek.field_F[var10Lifetime1]) {
+                    if (ArrayWidgetGroup.field_F[var10Lifetime1]) {
                       var11_ref = "<col=A00000>" + SoundPlayback.field_l[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;

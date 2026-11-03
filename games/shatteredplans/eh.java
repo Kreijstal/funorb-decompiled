@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh extends ek implements ButtonListener {
+final class eh extends ArrayWidgetGroup implements ButtonListener {
     static Sprite[] field_L;
     static int field_C;
     private wd field_J;

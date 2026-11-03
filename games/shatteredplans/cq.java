@@ -137,7 +137,7 @@ final class cq extends WidgetContainer implements ButtonListener {
             return;
           }
           if (this.field_J == param0) {
-            la.a(false);
+            RichTextLayout.a(false);
             return;
           }
           if (this.field_H == param0) {

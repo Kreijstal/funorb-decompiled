@@ -1256,7 +1256,7 @@ final class TaskAi implements Ai {
             }
             vj.field_E.addLast((byte) -113, new ProjectUse(0, this.field_w, param0));
             no.field_b = true;
-            qo.field_e = param0;
+            TextLayout.field_e = param0;
             if (param1 != 31308) {
               this.field_t = -21;
             }
@@ -2313,7 +2313,7 @@ final class TaskAi implements Ai {
             if (no.field_f[var10_ref_ln.field_p]) {
               var8 = var10_ref_ln.field_J;
               if (var10_ref_ln.field_u ||
-                var10_ref_ln == qo.field_e) {
+                var10_ref_ln == TextLayout.field_e) {
                 var8 = var8 * 2;
               }
               if (var9_int < var8) {
@@ -2335,7 +2335,7 @@ final class TaskAi implements Ai {
             if (no.field_f[var10_ref_lnLifetime1.field_p]) {
               var8Lifetime2 = var10_ref_lnLifetime1.field_J;
               if (var10_ref_lnLifetime1.field_u ||
-                qo.field_e == var10_ref_lnLifetime1) {
+                TextLayout.field_e == var10_ref_lnLifetime1) {
                 var8Lifetime2 = var8Lifetime2 * 2;
               }
               if (var8Lifetime2 > var9_intLifetime1) {
@@ -2372,7 +2372,7 @@ final class TaskAi implements Ai {
         while (var7Lifetime1 != null) {
           var4 = ((Star) (var7Lifetime1)).field_x;
           if (((Star) (var7Lifetime1)).field_u ||
-            qo.field_e == var7Lifetime1) {
+            TextLayout.field_e == var7Lifetime1) {
             var4 = var4 * 2;
           }
           if (var4 > var5) {

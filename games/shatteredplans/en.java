@@ -45,7 +45,7 @@ final class en {
           } else {
             stackIn_4_1 = Archive.field_b;
           }
-          qo.a(stackIn_3_0, stackIn_4_1);
+          TextLayout.a(stackIn_3_0, stackIn_4_1);
           n.field_h.a(0, -42 + am.field_xb.field_mb, (byte) 95, am.field_xb.field_K, 0);
           DefendTask.field_x.setTarget(so.field_t.field_K, cr.field_c, (byte) 107, 0, 0);
           stackIn_6_0 = lr.field_a;
@@ -141,7 +141,7 @@ final class en {
                   QuickChatCategoryRegistry.field_g[var6].setTarget(103, var3, (byte) 74, var5, 5);
                   var8 = 110;
                   if (param1) {
-                    ByteArrayNode.field_p[var6][0].a(50, var3, var5, 2, qo.field_b, 38, var8);
+                    ByteArrayNode.field_p[var6][0].a(50, var3, var5, 2, TextLayout.field_b, 38, var8);
                     var8 += 40;
                   } else {
                     if (ByteArrayNode.field_p[var6][0] != null) {
@@ -154,7 +154,7 @@ final class en {
                   var10 = ByteArrayNode.field_p[var6].length - 1;
                   for (var11 = 0; var11 < var10; var11++) {
                     var12 = var11 * var9 / var10;
-                    ByteArrayNode.field_p[var6][1 + var11].a(50, var3, var5, 2, qo.field_b, -var12 + (-2 + (1 + var11) * var9 / var10), var12 + var8);
+                    ByteArrayNode.field_p[var6][1 + var11].a(50, var3, var5, 2, TextLayout.field_b, -var12 + (-2 + (1 + var11) * var9 / var10), var12 + var8);
                   }
                   var5 = var5 + (var3 + 2);
                 }

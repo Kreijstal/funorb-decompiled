@@ -110,7 +110,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
         FullscreenFocusCanvas.field_f[7] = ls.field_c;
         FullscreenFocusCanvas.field_f[16] = MidiPcmStream.field_o;
         FullscreenFocusCanvas.field_f[18] = no.field_a;
-        FullscreenFocusCanvas.field_f[4] = la.field_o;
+        FullscreenFocusCanvas.field_f[4] = RichTextLayout.field_o;
         FullscreenFocusCanvas.field_f[9] = qj.field_a;
         FullscreenFocusCanvas.field_f[15] = Archive.field_h;
         if (param0 == 1062) {
@@ -143,7 +143,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
               this.a((byte) -1);
             }
           } else {
-            la.a(false);
+            RichTextLayout.a(false);
           }
           if (param1 == 6) {
             return;

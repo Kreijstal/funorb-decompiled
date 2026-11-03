@@ -2155,7 +2155,7 @@ final class MapView extends MapViewState {
             if (!(this.field_I < 1024.0f)) {
               return;
             }
-            ek.field_z.drawTinted(-(ek.field_z.field_z / 2) + this.field_i[param0.field_p], this.field_J[param0.field_p] - ek.field_z.field_w / 2, var5);
+            ArrayWidgetGroup.field_z.drawTinted(-(ArrayWidgetGroup.field_z.field_z / 2) + this.field_i[param0.field_p], this.field_J[param0.field_p] - ArrayWidgetGroup.field_z.field_w / 2, var5);
             UiWidget.field_t.draw(this.field_i[param0.field_p] - UiWidget.field_t.field_z / 2, -3 + this.field_J[param0.field_p] - UiWidget.field_t.field_w / 2);
             rs.field_Cb.drawCentred(Integer.toString(this.field_eb[var3_int]), this.field_i[var3_int], this.field_J[var3_int] + 4, 16777215, -1);
             if (param0.field_L > 0 &&
@@ -2171,10 +2171,10 @@ final class MapView extends MapViewState {
               }
             }
           } else {
-            ek.field_z.drawTinted(-(ek.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, var5);
+            ArrayWidgetGroup.field_z.drawTinted(-(ArrayWidgetGroup.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, var5);
             if (this.field_X &&
               VictoryChecker.field_j) {
-              ek.field_z.drawAlpha(-(ek.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, RasterBuffer.field_f);
+              ArrayWidgetGroup.field_z.drawAlpha(-(ArrayWidgetGroup.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, RasterBuffer.field_f);
             }
             SpriteState.field_y.draw(-(SpriteState.field_y.field_z / 2) + this.field_i[param0.field_p], -72 + (-(this.field_n * 7 / 10) + this.field_J[param0.field_p]));
             rs.field_Cb.drawCentred(Integer.toString(this.field_eb[var3_int]), this.field_i[var3_int], -41 + this.field_J[var3_int] - 7 * this.field_n / 10, 16777215, -1);

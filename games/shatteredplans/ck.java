@@ -146,7 +146,7 @@ final class ck {
           e.field_e = id.a(param6 ^ -6, param0, "", "beaker");
           UiWidget.field_t = ds.a(true, param0, "", "factionring");
           SpriteState.field_y = ds.a(true, param0, "", "factionringtag");
-          ek.field_z = ds.a(true, param0, "", "factionringcentre");
+          ArrayWidgetGroup.field_z = ds.a(true, param0, "", "factionringcentre");
           MatchingTextValidator.field_p = ds.a(true, param0, "", "arrowship");
           eq.field_o = ds.a(true, param0, "", "arrowshipdamaged");
           cf.field_F = ds.a(true, param0, "", "fleetsarrowship");

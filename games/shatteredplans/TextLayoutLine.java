@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ha {
+final class TextLayoutLine {
     int field_c;
     static String field_d;
     int[] field_b;
     static java.awt.Font field_a;
     int field_e;
 
-    final int a(boolean param0, int param1) {
+    final int getCharacterIndexAtX(boolean param0, int param1) {
         int var3 = 0;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -29,7 +29,7 @@ final class ha {
         return this.field_b.length - 1;
     }
 
-    final int b(int param0) {
+    final int getWidth(int param0) {
         if (param0 < 20) {
           return -36;
         }
@@ -44,7 +44,7 @@ final class ha {
 
     public static void clearStatics(int param0) {
         if (param0 != 4324) {
-          ha.clearStatics(-34);
+          TextLayoutLine.clearStatics(-34);
           field_a = null;
           field_d = null;
           return;
@@ -58,7 +58,7 @@ final class ha {
           return false;
         }
         if (param0 <= 94) {
-          ha.a((byte) 11);
+          TextLayoutLine.a((byte) 11);
           if (ProductionContent.field_h == 0) {
             return true;
           }
@@ -70,7 +70,7 @@ final class ha {
         return false;
     }
 
-    ha(int param0, int param1, int param2) {
+    TextLayoutLine(int param0, int param1, int param2) {
         this.field_e = param0;
         this.field_c = param1;
         this.field_b = new int[1 + param2];

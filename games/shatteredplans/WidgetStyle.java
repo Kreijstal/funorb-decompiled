@@ -74,7 +74,7 @@ final class WidgetStyle {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.a(98, 4).a(true, -28639).a(var5, -108);
-          var4.a(22, 5).a(ek.a(0, 0, 65793, 0, (byte) -92), -91).a(true, -28639).a((byte) 75, -1);
+          var4.a(22, 5).a(ArrayWidgetGroup.a(0, 0, 65793, 0, (byte) -92), -91).a(true, -28639).a((byte) 75, -1);
           this.field_q = (WidgetPainter) ((Object) var4);
           var6 = new gn(var4, true);
           var6.field_r = 0;

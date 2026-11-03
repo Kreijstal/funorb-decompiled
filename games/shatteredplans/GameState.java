@@ -1189,7 +1189,7 @@ final class GameState {
           return (String) null;
         }
         if (0 >= this.field_O) {
-          return ek.field_H;
+          return ArrayWidgetGroup.field_H;
         }
         return QuickChatCategoryRegistry.a(tq.field_i, 4371, new String[]{QuickChatCategoryRegistry.a(BattleEvent.field_x[this.field_G], 4371, new String[]{ScrollBar.field_Bb[this.field_n]})});
     }

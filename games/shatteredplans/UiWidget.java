@@ -4,7 +4,7 @@
 import java.util.*;
 
 class UiWidget extends IntrusiveNode {
-    qo field_j;
+    TextLayout field_j;
     WidgetListener field_u;
     String field_v;
     int field_x;
@@ -523,8 +523,8 @@ class UiWidget extends IntrusiveNode {
           this.field_u = param2;
           if (this.field_p instanceof WidgetMetrics) {
             var4 = (WidgetMetrics) ((Object) this.field_p);
-            this.field_x = var4.a((byte) -52, this);
-            this.field_n = var4.a(true, this);
+            this.field_x = var4.getTextHeight((byte) -52, this);
+            this.field_n = var4.getTextWidth(true, this);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
