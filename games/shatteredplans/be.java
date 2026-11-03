@@ -43,8 +43,8 @@ final class be extends IntrusiveNode {
             param1 = param8 - param1;
           }
           var9_int = 0;
-          if (gf.field_i <= param2 &&
-            param6 <= gf.field_l) {
+          if (SoftwareRasterizer.field_i <= param2 &&
+            param6 <= SoftwareRasterizer.field_l) {
             if (param4 > param7) {
               var10Lifetime1 = param6;
               param6 = param2;
@@ -54,8 +54,8 @@ final class be extends IntrusiveNode {
               param7 = var10Lifetime1;
               param1 = param8 - param1;
             }
-            if (param7 >= gf.field_a &&
-              param4 <= gf.field_f) {
+            if (param7 >= SoftwareRasterizer.field_a &&
+              param4 <= SoftwareRasterizer.field_f) {
               var9_int = var9_int + param1 / param8;
               param1 = param1 % param8;
               if (param1 < 0) {
@@ -80,7 +80,7 @@ final class be extends IntrusiveNode {
                 } else {
                   stackIn_23_4 = param3;
                 }
-                gf.g(stackIn_22_0, stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_23_4);
+                SoftwareRasterizer.drawLine(stackIn_22_0, stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_23_4);
                 var12 = var14;
                 var11 = var13;
                 var9_int++;
@@ -95,7 +95,7 @@ final class be extends IntrusiveNode {
               } else {
                 stackIn_27_4 = param5;
               }
-              gf.g(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4);
+              SoftwareRasterizer.drawLine(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_27_4);
               return;
             }
             return;

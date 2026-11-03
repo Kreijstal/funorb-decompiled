@@ -13,7 +13,7 @@ final class wc {
         int var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 >= 128) {
-            gf.d(param2, 0, -128 + (param2 + param1), param4 + 480);
+            SoftwareRasterizer.setClip(param2, 0, -128 + (param2 + param1), param4 + 480);
             param3.c(param2, param4, param5);
           }
           var6_int = 128 > param1 ? 0 : -128 + param1;
@@ -22,11 +22,11 @@ final class wc {
             field_b = (String) null;
           }
           for (var8 = var6_int; var7 > var8; var8++) {
-            gf.d(param2 + var8, 0, param2 + (var8 + 1), 480 + param4);
+            SoftwareRasterizer.setClip(param2 + var8, 0, param2 + (var8 + 1), 480 + param4);
             var9 = param5 * (-var8 + param1) >> 7;
             param3.c(param2, param4, var9);
           }
-          gf.a();
+          SoftwareRasterizer.resetClip();
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "wc.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

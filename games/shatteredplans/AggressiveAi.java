@@ -344,7 +344,7 @@ final class AggressiveAi extends StandardAi {
               for (var9_int = 0; var9_int < id.field_c.length; var9_int++) {
                 id.field_c[var9_int] = (byte) 0;
               }
-              id.field_c[var8 / 8] = (byte)ee.a((int) id.field_c[var8 / 8], 1 << var8 % 8);
+              id.field_c[var8 / 8] = (byte)ee.intOr((int) id.field_c[var8 / 8], 1 << var8 % 8);
             }
             stackIn_52_0 = (param1) ? -1 : 0;
             for (var8 = stackIn_52_0; var8 < nl.field_a.length; var8++) {
@@ -426,7 +426,7 @@ final class AggressiveAi extends StandardAi {
                           id.field_c[var10] = (byte) 0;
                         }
                       } else {
-                        id.field_c[var8 / 8] = (byte)CandidateLink.a((int) id.field_c[var8 / 8], 1 << we.a(7, var8));
+                        id.field_c[var8 / 8] = (byte)CandidateLink.intXor((int) id.field_c[var8 / 8], 1 << we.intAnd(7, var8));
                       }
                     }
                   } else {
@@ -551,7 +551,7 @@ final class AggressiveAi extends StandardAi {
                   null != ji.field_D[var8] &&
                   (~GameRules.field_m & ji.field_D[var8][var10]) > 0) {
                   var15 = 1;
-                  var16 = DualLinkDeque.a(107, ji.field_D[var8][var10] & ~GameRules.field_m);
+                  var16 = DualLinkDeque.highestOneBit(107, ji.field_D[var8][var10] & ~GameRules.field_m);
                 }
                 if (SliderWidget.field_E != null &&
                   SliderWidget.field_E[var8] != null &&
@@ -650,10 +650,10 @@ final class AggressiveAi extends StandardAi {
                 if (param1) {
                   if (var10 == -1) {
                     for (var19 = var7Lifetime4; var19 < var31.length + (var7Lifetime4 - 1); var19++) {
-                      qj.field_f[var19 / 8] = (byte)we.a((int) qj.field_f[var19 / 8], ~(1 << we.a(var19, 7)));
+                      qj.field_f[var19 / 8] = (byte)we.intAnd((int) qj.field_f[var19 / 8], ~(1 << we.intAnd(var19, 7)));
                     }
                   } else {
-                    qj.field_f[(var10 + var7Lifetime4) / 8] = (byte)CandidateLink.a((int) qj.field_f[(var10 + var7Lifetime4) / 8], 1 << we.a(var10 + var7Lifetime4, 7));
+                    qj.field_f[(var10 + var7Lifetime4) / 8] = (byte)CandidateLink.intXor((int) qj.field_f[(var10 + var7Lifetime4) / 8], 1 << we.intAnd(var10 + var7Lifetime4, 7));
                   }
                 } else {
                   if (var17Lifetime1 == 0 &&
@@ -665,7 +665,7 @@ final class AggressiveAi extends StandardAi {
               }
               if (param1 &&
                 var17Lifetime1 != 0) {
-                qj.field_f[(var10 + var7Lifetime4) / 8] = (byte)we.a((int) qj.field_f[(var10 + var7Lifetime4) / 8], ~(1 << we.a(7, var7Lifetime4 + var10)));
+                qj.field_f[(var10 + var7Lifetime4) / 8] = (byte)we.intAnd((int) qj.field_f[(var10 + var7Lifetime4) / 8], ~(1 << we.intAnd(7, var7Lifetime4 + var10)));
               }
               if (var10 >= 0 &&
                 var18.field_v) {

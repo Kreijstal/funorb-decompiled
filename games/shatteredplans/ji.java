@@ -83,14 +83,14 @@ abstract class ji extends WidgetContainer implements ValidatableWidget {
           var2_int = 0;
           var3 = param0.length();
           while (var2_int < var3) {
-            if (DialogRoot.a(param0.charAt(var2_int), 2)) {
+            if (DialogRoot.isNameSeparator(param0.charAt(var2_int), 2)) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var3 > var2_int) {
-            if (DialogRoot.a(param0.charAt(-1 + var3), 2)) {
+            if (DialogRoot.isNameSeparator(param0.charAt(-1 + var3), 2)) {
               var3--;
               continue;
             }
@@ -161,7 +161,7 @@ abstract class ji extends WidgetContainer implements ValidatableWidget {
           while (var3 < args.length) {
             var4 = args[var3];
             if (var2_int != -1) {
-              args[var3] = QuickChatCategoryRegistry.a("<col=<%0>>", CandidateLink.a(param1, 4397), new String[]{Integer.toString(var2_int, 16)}) + var4;
+              args[var3] = QuickChatCategoryRegistry.a("<col=<%0>>", CandidateLink.intXor(param1, 4397), new String[]{Integer.toString(var2_int, 16)}) + var4;
             }
             var5 = SectorCacheStore.a(var4, "<col=", 0);
             var6 = SectorCacheStore.a(var4, "</col>", param1 - 62);

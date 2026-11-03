@@ -38,27 +38,27 @@ final class kb extends MenuComponent {
           this.field_C.bindAsRenderTarget();
           for (var8_int = 0; this.field_C.field_w > var8_int; var8_int++) {
             var9 = (this.field_C.field_w / 2 - var8_int) * (this.field_C.field_w / 2 - var8_int);
-            gf.f(0, var8_int, this.field_C.field_z, SolVictoryChecker.a(0, this.field_D, -80, -(256 * var9 / (this.field_C.field_w / 2 * (this.field_C.field_w / 2))) + 256));
+            SoftwareRasterizer.drawHorizontalLine(0, var8_int, this.field_C.field_z, SolVictoryChecker.blendColours(0, this.field_D, -80, -(256 * var9 / (this.field_C.field_w / 2 * (this.field_C.field_w / 2))) + 256));
           }
           var11 = 0;
           var8_intLifetime1 = var11;
           while (var11 < this.field_C.field_w) {
-            gf.a(0, var11, SolVictoryChecker.a(0, this.field_C.field_B[var11 * this.field_C.field_z], -105, 128));
-            gf.a(-1 + this.field_C.field_z, var11, SolVictoryChecker.a(0, this.field_C.field_B[-1 + this.field_C.field_z * (1 + var11)], -112, 128));
+            SoftwareRasterizer.setPixel(0, var11, SolVictoryChecker.blendColours(0, this.field_C.field_B[var11 * this.field_C.field_z], -105, 128));
+            SoftwareRasterizer.setPixel(-1 + this.field_C.field_z, var11, SolVictoryChecker.blendColours(0, this.field_C.field_B[-1 + this.field_C.field_z * (1 + var11)], -112, 128));
             var11++;
           }
-          gf.a(1, 1, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z], -93, 128));
-          gf.a(2, 1, SolVictoryChecker.a(0, this.field_C.field_B[this.field_C.field_z + 2], -113, 192));
-          gf.a(1, 2, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z * 2], -87, 192));
-          gf.a(1, this.field_C.field_w - 2, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z * (-2 + this.field_C.field_w)], -90, 128));
-          gf.a(2, -2 + this.field_C.field_w, SolVictoryChecker.a(0, this.field_C.field_B[2 + (-2 + this.field_C.field_w) * this.field_C.field_z], -82, 192));
-          gf.a(1, this.field_C.field_w - 3, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z * (-3 + this.field_C.field_w)], -78, 192));
-          gf.a(-2 + this.field_C.field_z, 1, SolVictoryChecker.a(0, this.field_C.field_B[2 * this.field_C.field_z - 2], -99, 128));
-          gf.a(-3 + this.field_C.field_z, 1, SolVictoryChecker.a(0, this.field_C.field_B[-3 + this.field_C.field_z * 2], -85, 192));
-          gf.a(this.field_C.field_z - 2, 2, SolVictoryChecker.a(0, this.field_C.field_B[-2 + 3 * this.field_C.field_z], -124, 192));
-          gf.a(this.field_C.field_z - 2, this.field_C.field_w - 2, SolVictoryChecker.a(0, this.field_C.field_B[-2 + this.field_C.field_z * (this.field_C.field_w - 1)], -88, 128));
-          gf.a(-3 + this.field_C.field_z, -2 + this.field_C.field_w, SolVictoryChecker.a(0, this.field_C.field_B[-3 + (this.field_C.field_w - 1) * this.field_C.field_z], -83, 192));
-          gf.a(-2 + this.field_C.field_z, this.field_C.field_w - 3, SolVictoryChecker.a(0, this.field_C.field_B[-2 + (this.field_C.field_w - 2) * this.field_C.field_z], -94, 192));
+          SoftwareRasterizer.setPixel(1, 1, SolVictoryChecker.blendColours(0, this.field_C.field_B[1 + this.field_C.field_z], -93, 128));
+          SoftwareRasterizer.setPixel(2, 1, SolVictoryChecker.blendColours(0, this.field_C.field_B[this.field_C.field_z + 2], -113, 192));
+          SoftwareRasterizer.setPixel(1, 2, SolVictoryChecker.blendColours(0, this.field_C.field_B[1 + this.field_C.field_z * 2], -87, 192));
+          SoftwareRasterizer.setPixel(1, this.field_C.field_w - 2, SolVictoryChecker.blendColours(0, this.field_C.field_B[1 + this.field_C.field_z * (-2 + this.field_C.field_w)], -90, 128));
+          SoftwareRasterizer.setPixel(2, -2 + this.field_C.field_w, SolVictoryChecker.blendColours(0, this.field_C.field_B[2 + (-2 + this.field_C.field_w) * this.field_C.field_z], -82, 192));
+          SoftwareRasterizer.setPixel(1, this.field_C.field_w - 3, SolVictoryChecker.blendColours(0, this.field_C.field_B[1 + this.field_C.field_z * (-3 + this.field_C.field_w)], -78, 192));
+          SoftwareRasterizer.setPixel(-2 + this.field_C.field_z, 1, SolVictoryChecker.blendColours(0, this.field_C.field_B[2 * this.field_C.field_z - 2], -99, 128));
+          SoftwareRasterizer.setPixel(-3 + this.field_C.field_z, 1, SolVictoryChecker.blendColours(0, this.field_C.field_B[-3 + this.field_C.field_z * 2], -85, 192));
+          SoftwareRasterizer.setPixel(this.field_C.field_z - 2, 2, SolVictoryChecker.blendColours(0, this.field_C.field_B[-2 + 3 * this.field_C.field_z], -124, 192));
+          SoftwareRasterizer.setPixel(this.field_C.field_z - 2, this.field_C.field_w - 2, SolVictoryChecker.blendColours(0, this.field_C.field_B[-2 + this.field_C.field_z * (this.field_C.field_w - 1)], -88, 128));
+          SoftwareRasterizer.setPixel(-3 + this.field_C.field_z, -2 + this.field_C.field_w, SolVictoryChecker.blendColours(0, this.field_C.field_B[-3 + (this.field_C.field_w - 1) * this.field_C.field_z], -83, 192));
+          SoftwareRasterizer.setPixel(-2 + this.field_C.field_z, this.field_C.field_w - 3, SolVictoryChecker.blendColours(0, this.field_C.field_B[-2 + (this.field_C.field_w - 2) * this.field_C.field_z], -94, 192));
           cg.i(0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
@@ -204,8 +204,8 @@ final class kb extends MenuComponent {
         int[] var6 = var8;
         int[] var5 = var6;
         int[] var11 = var5;
-        gf.a(var8);
-        gf.i(this.field_k, this.field_t, this.field_m + this.field_k, this.field_i + this.field_t);
+        SoftwareRasterizer.saveClip(var8);
+        SoftwareRasterizer.intersectClip(this.field_k, this.field_t, this.field_m + this.field_k, this.field_i + this.field_t);
         int var3 = rs.field_Cb.field_J;
         int var4 = -24 / ((param0 - 67) / 47);
         this.field_C.draw(this.field_k, this.field_t);
@@ -216,7 +216,7 @@ final class kb extends MenuComponent {
             rs.field_Cb.drawString(this.field_z, this.field_k + var3 / 2, (rs.field_Cb.field_q + rs.field_Cb.field_J) / 2 + this.field_t + 3, this.field_u, -1);
           }
         }
-        gf.b(var11);
+        SoftwareRasterizer.restoreClip(var11);
     }
 
     static {

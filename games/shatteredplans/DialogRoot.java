@@ -464,7 +464,7 @@ final class DialogRoot extends SingleChildWidget {
         am.field_xb.a(4, DialPainter.field_g);
         MouseInputHandler.field_d = new qr(0L, ho.field_j);
         if (!param0) {
-          DialogRoot.a('x', 117);
+          DialogRoot.isNameSeparator('x', 117);
         }
         QuickChatPhraseRegistry.field_a = new qr(0L, (qr) null);
         MouseInputHandler.field_d.a(4, ValidationIndicator.field_K);
@@ -495,7 +495,7 @@ final class DialogRoot extends SingleChildWidget {
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isNameSeparator(char param0, int param1) {
         boolean stackIn_9_0 = false;
         if (param1 != 2) {
           return false;
@@ -505,8 +505,8 @@ final class DialogRoot extends SingleChildWidget {
     }
 
     final static void j(int param0) {
-        TertiaryNodeList.field_c = gf.field_k;
-        kh.field_Mb = gf.field_b;
+        TertiaryNodeList.field_c = SoftwareRasterizer.field_k;
+        kh.field_Mb = SoftwareRasterizer.field_b;
         nj.a(438);
         Archive.field_g.a(0, MapViewState.field_j.field_mb - 42, (byte) 95, MapViewState.field_j.field_K, 0);
         nm.field_c.a(cp.field_a.field_K, cr.field_c, (byte) 76, 0, 0);

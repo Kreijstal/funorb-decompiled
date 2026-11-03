@@ -27,15 +27,15 @@ final class sa {
         int var15 = 0;
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var6_int = gf.field_a;
+          var6_int = SoftwareRasterizer.field_a;
           if (param2 <= 71) {
             return;
           }
-          var7 = gf.field_f;
-          var8 = gf.field_i;
-          var9 = gf.field_l;
+          var7 = SoftwareRasterizer.field_f;
+          var8 = SoftwareRasterizer.field_i;
+          var9 = SoftwareRasterizer.field_l;
           if (param0 >= param3) {
-            gf.i(param1, var6_int, -param3 + param1 + param0, var7);
+            SoftwareRasterizer.intersectClip(param1, var6_int, -param3 + param1 + param0, var7);
             param4.c(param1, param5, 256);
           }
           var10 = var9 - var8 - 1;
@@ -54,10 +54,10 @@ final class sa {
           }
           for (var13 = var11; var13 < var12; var13++) {
             var14 = (param0 - var13 << 8) / param3;
-            gf.d(var13 + param1, var6_int, var13 + (param1 + 1), var7);
+            SoftwareRasterizer.setClip(var13 + param1, var6_int, var13 + (param1 + 1), var7);
             param4.c(param1, param5, var14);
           }
-          gf.d(var8, var6_int, var9, var7);
+          SoftwareRasterizer.setClip(var8, var6_int, var9, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

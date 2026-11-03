@@ -144,7 +144,7 @@ class PcmPlayerService {
         if (this.field_k != null) {
           this.field_k.fill(param0, 0, param1);
         }
-        this.field_m = pr.a(14274);
+        this.field_m = pr.currentTimeMillis(14274);
     }
 
     private final void skip(int param0) {
@@ -180,7 +180,7 @@ class PcmPlayerService {
           if (this.field_i) {
             return;
           }
-          var1 = pr.a(14274);
+          var1 = pr.currentTimeMillis(14274);
           try {
             if (var1 > this.field_m + 6000L) {
               this.field_m = var1 - 6000L;
@@ -188,7 +188,7 @@ class PcmPlayerService {
             while (var1 > this.field_m + 5000L) {
               this.skip(256);
               this.field_m = this.field_m + (long)(256000 / field_j);
-              var1 = pr.a(14274);
+              var1 = pr.currentTimeMillis(14274);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -356,7 +356,7 @@ class PcmPlayerService {
           if (var1 != 0) {
             field_f.field_b = true;
             while (field_f.field_a) {
-              jb.a((byte) -100, 50L);
+              jb.sleep((byte) -100, 50L);
             }
             field_f = null;
           }
@@ -404,7 +404,7 @@ class PcmPlayerService {
     PcmPlayerService() {
         this.field_i = false;
         this.field_c = 32;
-        this.field_m = pr.a(14274);
+        this.field_m = pr.currentTimeMillis(14274);
         this.field_r = 0;
         this.field_a = 0;
         this.field_l = 0;

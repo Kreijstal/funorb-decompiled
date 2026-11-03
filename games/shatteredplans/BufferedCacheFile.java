@@ -592,7 +592,7 @@ final class BufferedCacheFile {
           }
           var7 = 0;
           while (var5 > var7) {
-            var6[var7 >> 2] = var6[var7 >> 2] + (var1.readUnsignedByte(-106) << (we.a(3, var7) << 8));
+            var6[var7 >> 2] = var6[var7 >> 2] + (var1.readUnsignedByte(-106) << (we.intAnd(3, var7) << 8));
             var7++;
             if (var8 != 0) {
               return;

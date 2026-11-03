@@ -44,7 +44,7 @@ final class BattleSnapshot extends IntrusiveNode {
             break;
           }
           if (param0 != -14145) {
-            BattleSnapshot.e(-71);
+            BattleSnapshot.getCurrentYear(-71);
           }
           Star.f((byte) -101);
           return;
@@ -55,7 +55,7 @@ final class BattleSnapshot extends IntrusiveNode {
         }
     }
 
-    final static int e(int param0) {
+    final static int getCurrentYear(int param0) {
         if (param0 != -13299) {
           BattleSnapshot.clearStatics((byte) 41);
         }
@@ -158,7 +158,7 @@ final class BattleSnapshot extends IntrusiveNode {
         field_A = null;
         field_i = null;
         if (param0 != 68) {
-          BattleSnapshot.e(52);
+          BattleSnapshot.getCurrentYear(52);
         }
     }
 

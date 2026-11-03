@@ -84,7 +84,7 @@ final class IsolationistAi extends StandardAi {
               stackIn_33_0 = -1;
               return stackIn_33_0;
             }
-            var8 = ArchiveSource.a(param1 + 12330, (1 << this.field_g.field_r) - 1 ^ this.field_g.field_w);
+            var8 = ArchiveSource.bitCount(param1 + 12330, (1 << this.field_g.field_r) - 1 ^ this.field_g.field_w);
             if (var8 * var6 < var7 &&
               this.field_g.field_D[this.field_n.field_x] > this.field_g.field_D[var4_int] * var8) {
               stackIn_38_0 = 4;

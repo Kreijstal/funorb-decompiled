@@ -26,11 +26,11 @@ final class StarAbandonedEvent extends IntrusiveNode {
         field_h = null;
         field_q = (boolean[][]) null;
         if (param0 != 48) {
-          StarAbandonedEvent.a(-27);
+          StarAbandonedEvent.getAppletContainer(-27);
         }
     }
 
-    final static java.awt.Container a(int param0) {
+    final static java.awt.Container getAppletContainer(int param0) {
         if (param0 < 53) {
           return (java.awt.Container) null;
         }

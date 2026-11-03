@@ -34,7 +34,7 @@ final class hd extends IntrusiveNode {
         int var4Lifetime1;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          gf.b();
+          SoftwareRasterizer.clear();
           var2 = 300 - di.field_m;
           var1_int = -25 + var2 / 8;
           DualLinkDeque.field_a.b(var1_int, 0, 33023);
@@ -46,7 +46,7 @@ final class hd extends IntrusiveNode {
           for (var4 = 0; var4 < var7.length; var4++) {
             var9 = var7[var4];
             if (var9.field_a != 0) {
-              gf.b(var1_intLifetime1 + var9.field_e << 4, var9.field_j << 4, var9.field_f, var9.field_a, MenuButton.field_u);
+              SoftwareRasterizer.b(var1_intLifetime1 + var9.field_e << 4, var9.field_j << 4, var9.field_f, var9.field_a, MenuButton.field_u);
             }
           }
           var1_intLifetime2 = -250 + var2 / 4;
@@ -59,7 +59,7 @@ final class hd extends IntrusiveNode {
           while (var3Lifetime1.length > var8) {
             var10 = var3Lifetime1[var8];
             if (0 != var10.field_a) {
-              gf.b(var10.field_e + var1_intLifetime2 << 4, var10.field_j + 120 << 4, var10.field_f, var10.field_a, MenuButton.field_u);
+              SoftwareRasterizer.b(var10.field_e + var1_intLifetime2 << 4, var10.field_j + 120 << 4, var10.field_f, var10.field_a, MenuButton.field_u);
             }
             var8++;
           }
@@ -118,10 +118,10 @@ final class hd extends IntrusiveNode {
           }
           this.field_o.bindAsRenderTarget();
           this.field_i.drawOpaque(3, 3);
-          gf.b(1, 1, 0, 0, 6 + var4_int, var5 + 6);
+          SoftwareRasterizer.b(1, 1, 0, 0, 6 + var4_int, var5 + 6);
           for (var7 = (var4_int + 6) * (6 + var5) - 1; var7 >= 0; var7--) {
-            if (0 == (128 & gf.field_h[var7])) {
-              gf.field_h[var7] = gf.field_h[var7] << 1;
+            if (0 == (128 & SoftwareRasterizer.field_h[var7])) {
+              SoftwareRasterizer.field_h[var7] = SoftwareRasterizer.field_h[var7] << 1;
             }
           }
           cg.i(0);

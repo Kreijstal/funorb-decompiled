@@ -197,11 +197,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               }
               var3 = var3 + param2;
             }
-            aj.a(var3, false);
-            var7 = nf.a(":", var3, (byte) 103, "%3a");
-            var8 = nf.a("@", var7, (byte) 121, "%40");
-            var9 = nf.a("&", var8, (byte) 80, "%26");
-            var10 = nf.a("#", var9, (byte) 112, "%23");
+            aj.printError(var3, false);
+            var7 = nf.replaceAll(":", var3, (byte) 103, "%3a");
+            var8 = nf.replaceAll("@", var7, (byte) 121, "%40");
+            var9 = nf.replaceAll("&", var8, (byte) 80, "%26");
+            var10 = nf.replaceAll("#", var9, (byte) 112, "%23");
             if (null == ei.field_c) {
               return;
             }
@@ -221,7 +221,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrl(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_i).append("&e=").append(var10).toString()), false);
             while (0 == var4.field_d) {
-              jb.a((byte) -106, 1L);
+              jb.sleep((byte) -106, 1L);
             }
             if (var4.field_d == 1) {
               var5 = (DataInputStream) (var4.field_e);
@@ -290,26 +290,26 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var8_int = param2 - var9 - 1;
             }
             stackIn_12_0 = (param6) ? 1 : 0;
-            gf.f(stackIn_12_0 + param4 + var9, param5 + 1, var8_int, param7, param0 * (param2 - var9 * var9 / param2) / param2);
+            SoftwareRasterizer.drawHorizontalLineAlpha(stackIn_12_0 + param4 + var9, param5 + 1, var8_int, param7, param0 * (param2 - var9 * var9 / param2) / param2);
           }
           if (param1 < 74) {
             field_c = (Sprite) null;
           }
           for (var9Lifetime1 = 4; var9Lifetime1 < param2; var9Lifetime1 += 16) {
-            gf.g(param4 + var9Lifetime1, param5 + 6, param4 + var9Lifetime1 + 3, param5 + 1, param7, param0 * (param2 - var9Lifetime1 * var9Lifetime1 / param2) / param2);
-            gf.g(3 + param4 + var9Lifetime1, 11 + param5, var9Lifetime1 + param4, 6 + param5, param7, (param3 + param0) * (-(var9Lifetime1 * var9Lifetime1 / param2) + param2) / 2 / param2);
+            SoftwareRasterizer.drawLineAlphaExclusive(param4 + var9Lifetime1, param5 + 6, param4 + var9Lifetime1 + 3, param5 + 1, param7, param0 * (param2 - var9Lifetime1 * var9Lifetime1 / param2) / param2);
+            SoftwareRasterizer.drawLineAlphaExclusive(3 + param4 + var9Lifetime1, 11 + param5, var9Lifetime1 + param4, 6 + param5, param7, (param3 + param0) * (-(var9Lifetime1 * var9Lifetime1 / param2) + param2) / 2 / param2);
           }
           for (var9Lifetime2 = 12; param2 > var9Lifetime2; var9Lifetime2 += 16) {
-            gf.g(3 + (param4 + var9Lifetime2), 6 + param5, param4 + var9Lifetime2, 1 + param5, param7, param0 * (-(var9Lifetime2 * var9Lifetime2 / param2) + param2) / param2);
-            gf.g(param4 + var9Lifetime2, param5 + 11, param4 + var9Lifetime2 + 3, param5 + 6, param7, (param0 + param3) * (-(var9Lifetime2 * var9Lifetime2 / param2) + param2) / 2 / param2);
+            SoftwareRasterizer.drawLineAlphaExclusive(3 + (param4 + var9Lifetime2), 6 + param5, param4 + var9Lifetime2, 1 + param5, param7, param0 * (-(var9Lifetime2 * var9Lifetime2 / param2) + param2) / param2);
+            SoftwareRasterizer.drawLineAlphaExclusive(param4 + var9Lifetime2, param5 + 11, param4 + var9Lifetime2 + 3, param5 + 6, param7, (param0 + param3) * (-(var9Lifetime2 * var9Lifetime2 / param2) + param2) / 2 / param2);
           }
-          gf.h(1 + param4, param5 + 6, param4 + 3, param5 + 6, param7, (param0 + param3) / 2);
+          SoftwareRasterizer.drawLineAlpha(1 + param4, param5 + 6, param4 + 3, param5 + 6, param7, (param0 + param3) / 2);
           for (var9Lifetime3 = 16; var9Lifetime3 < param2; var9Lifetime3 += 16) {
             var8_intLifetime1 = 4;
             if (param2 <= 1 + var8_intLifetime1 + var9Lifetime3) {
               var8_intLifetime1 = -1 + (param2 - var9Lifetime3);
             }
-            gf.f(var9Lifetime3 + param4, 6 + param5, var8_intLifetime1, param7, (param0 + param3) * (param2 - var9Lifetime3 * var9Lifetime3 / param2) / 2 / param2);
+            SoftwareRasterizer.drawHorizontalLineAlpha(var9Lifetime3 + param4, 6 + param5, var8_intLifetime1, param7, (param0 + param3) * (param2 - var9Lifetime3 * var9Lifetime3 / param2) / 2 / param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

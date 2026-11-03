@@ -42,10 +42,10 @@ final class StandardMapReader implements MapGenerator {
           var8Lifetime1 = 0;
           while (var8Lifetime1 < 4) {
             var9Lifetime1 = this.field_e.readUnsignedByte(-91);
-            var6.field_G[var8Lifetime1] = we.a(15, var9Lifetime1);
+            var6.field_G[var8Lifetime1] = we.intAnd(15, var9Lifetime1);
             var8Lifetime1++;
             if (4 > var8Lifetime1) {
-              var6.field_G[var8Lifetime1] = we.a(var9Lifetime1, 240) >> 4;
+              var6.field_G[var8Lifetime1] = we.intAnd(var9Lifetime1, 240) >> 4;
               var8Lifetime1++;
               continue;
             }

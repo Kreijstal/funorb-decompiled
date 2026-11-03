@@ -260,8 +260,8 @@ abstract class il extends jl {
         var18 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (null == RandomAccessCacheFile.field_a ||
-            RandomAccessCacheFile.field_a.length != gf.field_b) {
-            RandomAccessCacheFile.field_a = new int[gf.field_b];
+            RandomAccessCacheFile.field_a.length != SoftwareRasterizer.field_b) {
+            RandomAccessCacheFile.field_a = new int[SoftwareRasterizer.field_b];
           }
           var4_int = param2 & 15;
           param2 = param2 >> 4;
@@ -269,11 +269,11 @@ abstract class il extends jl {
           param0 = param0 >> 4;
           var12 = param1;
           var13 = param3.field_z * param2 + param0;
-          var14 = -gf.field_b + param3.field_z;
-          var15 = -gf.field_k;
+          var14 = -SoftwareRasterizer.field_b + param3.field_z;
+          var15 = -SoftwareRasterizer.field_k;
           while (0 > var15) {
             var16 = 0;
-            for (var17 = -1 + gf.field_b; 0 <= var17; var17--) {
+            for (var17 = -1 + SoftwareRasterizer.field_b; 0 <= var17; var17--) {
               var6 = param3.field_B[var13];
               var8 = var6 & 65280;
               var7 = var6 & 16711935;
@@ -287,7 +287,7 @@ abstract class il extends jl {
               var10Lifetime1 = -16711936 & var4_int * var7Lifetime1;
               var11Lifetime1 = 16711680 & var6Lifetime1 * var4_int;
               var9Lifetime1 = var10Lifetime1 | var11Lifetime1;
-              gf.field_h[var12] = RandomAccessCacheFile.field_a[var17] + var9Lifetime1 >> 8;
+              SoftwareRasterizer.field_h[var12] = RandomAccessCacheFile.field_a[var17] + var9Lifetime1 >> 8;
               RandomAccessCacheFile.field_a[var17] = (var8Lifetime1 << 4) - var9Lifetime1;
               var12++;
               var13++;

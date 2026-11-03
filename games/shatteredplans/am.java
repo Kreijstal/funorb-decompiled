@@ -124,7 +124,7 @@ final class am extends qr {
           param3 = param3 - param2.field_t;
           var8 = 103 / ((param6 - 72) / 52);
           var7_int = param1 * param2.field_z + param3;
-          var9 = gf.field_b * param5 + param0;
+          var9 = SoftwareRasterizer.field_b * param5 + param0;
           while (true) {
             param4--;
             if (param4 < 0) {
@@ -134,7 +134,7 @@ final class am extends qr {
             var9++;
             incrementValue$5 = var7_int;
             var7_int++;
-            gf.field_h[incrementValue$4] = param2.field_B[incrementValue$5];
+            SoftwareRasterizer.field_h[incrementValue$4] = param2.field_B[incrementValue$5];
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

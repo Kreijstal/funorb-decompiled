@@ -73,7 +73,7 @@ final class mi {
           var6 = stackIn_30_0;
           param2.readBytes(param1.field_dc.length, 0, 17469032, param1.field_dc);
           param1.field_Zb = param2.readUnsignedShort(-20976);
-          param1.field_Gb = pr.a(param0 + 14363) - (long)param2.readInt(16711680);
+          param1.field_Gb = pr.currentTimeMillis(param0 + 14363) - (long)param2.readInt(16711680);
           if (var5 == 0) {
             param1.field_lc = -1;
           } else {

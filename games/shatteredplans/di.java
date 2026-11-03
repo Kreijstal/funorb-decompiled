@@ -31,7 +31,7 @@ final class di extends IntrusiveNode {
           if (Wormhole.field_j != ih.field_f) {
             return false;
           }
-          var2_long = pr.a(14274);
+          var2_long = pr.currentTimeMillis(14274);
           if (0 != ArchiveRequest.field_o &&
             ArchiveNetworkClient.field_b < 0) {
             var4_ref_sk = (sk) (oe.field_h.startForward(0));
@@ -218,7 +218,7 @@ final class di extends IntrusiveNode {
         boolean stackIn_25_1 = false;
         qr stackIn_28_0 = null;
         boolean stackIn_29_1 = false;
-        BufferedSocket.a(-6187, gf.field_b + 640 >> 1, gf.field_k, 0, -640 + gf.field_b >> 1);
+        BufferedSocket.a(-6187, SoftwareRasterizer.field_b + 640 >> 1, SoftwareRasterizer.field_k, 0, -640 + SoftwareRasterizer.field_b >> 1);
         if (PlacementOrder.field_t > 0) {
           if (gn.field_y != null) {
             gn.field_y.drawOpaque(MapViewState.field_j.field_hb, 0);

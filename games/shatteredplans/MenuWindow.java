@@ -60,15 +60,15 @@ final class MenuWindow extends MenuComponent {
             !(param5 <= param0.field_w)) {
             param0 = new Sprite(param2, param5);
           }
-          var8 = gf.field_b - param2;
+          var8 = SoftwareRasterizer.field_b - param2;
           var9 = param0.field_z - param2;
-          var10 = -1 + param1 * gf.field_b + param3;
+          var10 = -1 + param1 * SoftwareRasterizer.field_b + param3;
           var11 = -1;
           for (var12 = -param5; 0 > var12; var12++) {
             for (var13 = -param2; 0 > var13; var13++) {
               var11++;
               var10++;
-              param0.field_B[var11] = gf.field_h[var10];
+              param0.field_B[var11] = SoftwareRasterizer.field_h[var10];
             }
             var10 = var10 + var8;
             var11 = var11 + var9;
@@ -122,50 +122,50 @@ final class MenuWindow extends MenuComponent {
             var6 = 64 - var6;
           }
           var6 = var6 * 10;
-          var3 = SolVictoryChecker.a(2052949, 12993090, -108, var6);
-          var4 = SolVictoryChecker.a(var4, 12993090, -122, var6);
-          var5 = SolVictoryChecker.a(var5, 12993090, -128, var6);
+          var3 = SolVictoryChecker.blendColours(2052949, 12993090, -108, var6);
+          var4 = SolVictoryChecker.blendColours(var4, 12993090, -122, var6);
+          var5 = SolVictoryChecker.blendColours(var5, 12993090, -128, var6);
         }
-        gf.a(this.field_k, this.field_t, this.field_m, this.field_i, 10, 0, 200);
+        SoftwareRasterizer.fillRoundedRectAlpha(this.field_k, this.field_t, this.field_m, this.field_i, 10, 0, 200);
         am.a(-10 + this.field_m, var5, -79, 15, this.field_k, this.field_t);
-        gf.f(10 + this.field_k, this.field_t, this.field_m - 20, var3);
-        gf.f(10 + this.field_k, this.field_i + this.field_t, -20 + this.field_m, 0);
-        gf.d(this.field_k, this.field_t, this.field_k + 10, this.field_t + 10);
-        gf.b(this.field_k + 10, this.field_t + 10, 10, var3);
-        gf.d(-10 + (this.field_k + this.field_m), this.field_t, this.field_m + this.field_k, 10 + this.field_t);
-        gf.b(-1 + this.field_m + (this.field_k - 10), this.field_t + 10, 10, var3);
-        gf.d(this.field_k, -10 + this.field_t + this.field_i, this.field_k + 10, this.field_t + this.field_i);
-        gf.b(10 + this.field_k, -1 + (-10 + (this.field_t + this.field_i)), 10, 0);
-        gf.d(this.field_m + this.field_k - 10, this.field_t + this.field_i - 10, this.field_m + this.field_k, this.field_t + this.field_i);
-        gf.b(this.field_k + this.field_m - 11, this.field_i + (this.field_t - 10 - 1), 10, 0);
-        gf.a();
+        SoftwareRasterizer.drawHorizontalLine(10 + this.field_k, this.field_t, this.field_m - 20, var3);
+        SoftwareRasterizer.drawHorizontalLine(10 + this.field_k, this.field_i + this.field_t, -20 + this.field_m, 0);
+        SoftwareRasterizer.setClip(this.field_k, this.field_t, this.field_k + 10, this.field_t + 10);
+        SoftwareRasterizer.drawCircle(this.field_k + 10, this.field_t + 10, 10, var3);
+        SoftwareRasterizer.setClip(-10 + (this.field_k + this.field_m), this.field_t, this.field_m + this.field_k, 10 + this.field_t);
+        SoftwareRasterizer.drawCircle(-1 + this.field_m + (this.field_k - 10), this.field_t + 10, 10, var3);
+        SoftwareRasterizer.setClip(this.field_k, -10 + this.field_t + this.field_i, this.field_k + 10, this.field_t + this.field_i);
+        SoftwareRasterizer.drawCircle(10 + this.field_k, -1 + (-10 + (this.field_t + this.field_i)), 10, 0);
+        SoftwareRasterizer.setClip(this.field_m + this.field_k - 10, this.field_t + this.field_i - 10, this.field_m + this.field_k, this.field_t + this.field_i);
+        SoftwareRasterizer.drawCircle(this.field_k + this.field_m - 11, this.field_i + (this.field_t - 10 - 1), 10, 0);
+        SoftwareRasterizer.resetClip();
         for (var6Lifetime1 = 0; var6Lifetime1 < this.field_i - 20; var6Lifetime1++) {
-          var7 = SolVictoryChecker.a(var3, 0, -109, var6Lifetime1 * 256 / (-20 + this.field_i));
-          gf.a(this.field_k, var6Lifetime1 + this.field_t + 10, var7);
-          gf.a(this.field_m + (this.field_k - 1), this.field_t + 10 + var6Lifetime1, var7);
+          var7 = SolVictoryChecker.blendColours(var3, 0, -109, var6Lifetime1 * 256 / (-20 + this.field_i));
+          SoftwareRasterizer.setPixel(this.field_k, var6Lifetime1 + this.field_t + 10, var7);
+          SoftwareRasterizer.setPixel(this.field_m + (this.field_k - 1), this.field_t + 10 + var6Lifetime1, var7);
         }
-        gf.a(3 + this.field_k, 15 + this.field_t, this.field_m - 6, -3 + (this.field_i - 15), 10, 0);
-        gf.f(3 + (10 + this.field_k), 15 + this.field_t, -20 + this.field_m - 6, var3);
-        gf.f(10 + (this.field_k + 3), -3 + this.field_t - (-this.field_i + 1), -6 + (this.field_m - 20), var4);
-        gf.d(this.field_k + 3, this.field_t + 15, 3 + (this.field_k + 10), this.field_t + 25);
-        gf.b(13 + this.field_k, 25 + this.field_t, 10, var3);
-        gf.d(-3 + this.field_m + (this.field_k - 10), 15 + this.field_t, -3 + this.field_k + this.field_m, this.field_t + 15 + 10);
-        gf.b(this.field_m + (this.field_k - 14), this.field_t + 25, 10, var3);
-        gf.d(3 + this.field_k, this.field_i + this.field_t - 13, this.field_k + 10 + 3, -3 + (this.field_t + this.field_i));
-        gf.b(3 + this.field_k + 10, -4 + (-10 + this.field_t + this.field_i), 10, var4);
-        gf.d(this.field_m + this.field_k - 13, -13 + (this.field_i + this.field_t), -3 + this.field_m + this.field_k, this.field_t - (-this.field_i + 3));
-        gf.b(-10 + this.field_m + (this.field_k - 4), -3 + this.field_t + this.field_i - 10 - 1, 10, var4);
-        gf.a();
+        SoftwareRasterizer.fillRoundedRect(3 + this.field_k, 15 + this.field_t, this.field_m - 6, -3 + (this.field_i - 15), 10, 0);
+        SoftwareRasterizer.drawHorizontalLine(3 + (10 + this.field_k), 15 + this.field_t, -20 + this.field_m - 6, var3);
+        SoftwareRasterizer.drawHorizontalLine(10 + (this.field_k + 3), -3 + this.field_t - (-this.field_i + 1), -6 + (this.field_m - 20), var4);
+        SoftwareRasterizer.setClip(this.field_k + 3, this.field_t + 15, 3 + (this.field_k + 10), this.field_t + 25);
+        SoftwareRasterizer.drawCircle(13 + this.field_k, 25 + this.field_t, 10, var3);
+        SoftwareRasterizer.setClip(-3 + this.field_m + (this.field_k - 10), 15 + this.field_t, -3 + this.field_k + this.field_m, this.field_t + 15 + 10);
+        SoftwareRasterizer.drawCircle(this.field_m + (this.field_k - 14), this.field_t + 25, 10, var3);
+        SoftwareRasterizer.setClip(3 + this.field_k, this.field_i + this.field_t - 13, this.field_k + 10 + 3, -3 + (this.field_t + this.field_i));
+        SoftwareRasterizer.drawCircle(3 + this.field_k + 10, -4 + (-10 + this.field_t + this.field_i), 10, var4);
+        SoftwareRasterizer.setClip(this.field_m + this.field_k - 13, -13 + (this.field_i + this.field_t), -3 + this.field_m + this.field_k, this.field_t - (-this.field_i + 3));
+        SoftwareRasterizer.drawCircle(-10 + this.field_m + (this.field_k - 4), -3 + this.field_t + this.field_i - 10 - 1, 10, var4);
+        SoftwareRasterizer.resetClip();
         for (var6Lifetime2 = 0; 2 * (-38 + this.field_i) / 3 > var6Lifetime2; var6Lifetime2++) {
-          var7Lifetime1 = SolVictoryChecker.a(var3, 0, -82, 256 * var6Lifetime2 / ((-76 + 2 * this.field_i) / 3));
-          gf.a(this.field_k + 3, this.field_t + 25 + var6Lifetime2, var7Lifetime1);
-          gf.a(-1 + this.field_k - (-this.field_m + 3), var6Lifetime2 + (this.field_t + 15 + 10), var7Lifetime1);
+          var7Lifetime1 = SolVictoryChecker.blendColours(var3, 0, -82, 256 * var6Lifetime2 / ((-76 + 2 * this.field_i) / 3));
+          SoftwareRasterizer.setPixel(this.field_k + 3, this.field_t + 25 + var6Lifetime2, var7Lifetime1);
+          SoftwareRasterizer.setPixel(-1 + this.field_k - (-this.field_m + 3), var6Lifetime2 + (this.field_t + 15 + 10), var7Lifetime1);
         }
         var6Lifetime3 = (this.field_i * 2 - 76) / 3;
         for (var7Lifetime2 = 0; -var6Lifetime3 + this.field_i - 38 > var7Lifetime2; var7Lifetime2++) {
-          var8 = SolVictoryChecker.a(0, var4, -117, 256 * var7Lifetime2 / (-38 + this.field_i - var6Lifetime3));
-          gf.a(this.field_k + 3, var6Lifetime3 + var7Lifetime2 + (15 + this.field_t + 10), var8);
-          gf.a(-1 + (this.field_k + this.field_m - 3), 25 + this.field_t - (-var7Lifetime2 - var6Lifetime3), var8);
+          var8 = SolVictoryChecker.blendColours(0, var4, -117, 256 * var7Lifetime2 / (-38 + this.field_i - var6Lifetime3));
+          SoftwareRasterizer.setPixel(this.field_k + 3, var6Lifetime3 + var7Lifetime2 + (15 + this.field_t + 10), var8);
+          SoftwareRasterizer.setPixel(-1 + (this.field_k + this.field_m - 3), 25 + this.field_t - (-var7Lifetime2 - var6Lifetime3), var8);
         }
         jl.field_W.c(4 + this.field_k, this.field_t + 3, 256);
         var7Lifetime3 = jl.field_W.field_z + 1 + (this.field_k + 3);

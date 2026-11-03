@@ -40,11 +40,11 @@ final class pr {
         field_f = null;
     }
 
-    final synchronized static long a(int param0) {
+    final synchronized static long currentTimeMillis(int param0) {
         long var1 = 0L;
         long var1Lifetime1;
         if (param0 != 14274) {
-          pr.a(81);
+          pr.currentTimeMillis(81);
           var1 = System.currentTimeMillis();
           if (lh.field_z > var1) {
             wd.field_N = wd.field_N + (-var1 + lh.field_z);

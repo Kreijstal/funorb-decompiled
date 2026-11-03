@@ -63,10 +63,10 @@ final class cl extends IntrusiveNode {
             var13 = var12 - var11;
             var11 = var11 + param0;
             var12 = var12 + param0;
-            gf.f(5 + var11, 5 + var10, var13, 0, 128);
+            SoftwareRasterizer.drawHorizontalLineAlpha(5 + var11, 5 + var10, var13, 0, 128);
           }
-          gf.f(param8 + param0, param7, -param8 + param3, 16777215);
-          gf.f(param0, param4 + (param7 - 1), 1 - param8 + param3, 16777215);
+          SoftwareRasterizer.drawHorizontalLine(param8 + param0, param7, -param8 + param3, 16777215);
+          SoftwareRasterizer.drawHorizontalLine(param0, param4 + (param7 - 1), 1 - param8 + param3, 16777215);
           if (param2 != -22466) {
             cl.a(73, -126, -112, 94, -98, 98, 92, 119, -99);
           }
@@ -74,7 +74,7 @@ final class cl extends IntrusiveNode {
             var10Lifetime1 = param7 + var9_intLifetime1;
             var11Lifetime1 = (var9_intLifetime1 - 1) * 256 / (param4 - 2);
             if (var9_intLifetime1 >= 2) {
-              stackIn_18_0 = SolVictoryChecker.a(param6, param1, param2 + 22363, var11Lifetime1);
+              stackIn_18_0 = SolVictoryChecker.blendColours(param6, param1, param2 + 22363, var11Lifetime1);
             } else {
               stackIn_18_0 = param5;
             }
@@ -90,10 +90,10 @@ final class cl extends IntrusiveNode {
             var15 = var14 - var13Lifetime1;
             var13Lifetime1 = var13Lifetime1 + param0;
             var14 = var14 + param0;
-            gf.a(var13Lifetime1, var10Lifetime1, 16777215);
-            gf.f(1 + var13Lifetime1, var10Lifetime1, var15 - 4, var12Lifetime1);
-            gf.f(-4 + var14, var10Lifetime1, 3, param5);
-            gf.a(var14 - 1, var10Lifetime1, 16777215);
+            SoftwareRasterizer.setPixel(var13Lifetime1, var10Lifetime1, 16777215);
+            SoftwareRasterizer.drawHorizontalLine(1 + var13Lifetime1, var10Lifetime1, var15 - 4, var12Lifetime1);
+            SoftwareRasterizer.drawHorizontalLine(-4 + var14, var10Lifetime1, 3, param5);
+            SoftwareRasterizer.setPixel(var14 - 1, var10Lifetime1, 16777215);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

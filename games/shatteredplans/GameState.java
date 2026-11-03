@@ -1133,7 +1133,7 @@ final class GameState {
           }
           var8 = param0.requestDisplayModes(12);
           while (0 == var8.field_d) {
-            jb.a((byte) -100, 10L);
+            jb.sleep((byte) -100, 10L);
           }
           if (var8.field_d == 2) {
             stackIn_10_0 = new DisplayModeInfo[]{};
@@ -1195,7 +1195,7 @@ final class GameState {
     }
 
     final static void a(int param0) {
-        NetworkArchiveRequest.field_z = pr.a(14274);
+        NetworkArchiveRequest.field_z = pr.currentTimeMillis(14274);
         vj.field_C = 0;
         if (param0 != -5883) {
           GameState.clearStatics((byte) 95);
@@ -1336,7 +1336,7 @@ final class GameState {
         }
         while (0 <= var4) {
           for (var5 = this.field_r - 1; var5 > var4; var5--) {
-            this.field_v[var4].field_h[var5] = we.a(param0, 1) != 0 ? true : false;
+            this.field_v[var4].field_h[var5] = we.intAnd(param0, 1) != 0 ? true : false;
             param0 = param0 >> 1;
           }
           var4--;

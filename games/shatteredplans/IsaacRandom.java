@@ -59,11 +59,11 @@ final class IsaacRandom {
               var2.writeInt(11135, sg.field_Cb);
               js.field_a.write(13, 0, var2.payload, -13976);
               gb.field_i = gb.field_i + 1;
-              am.field_Cb = 30000L + pr.a(14274);
+              am.field_Cb = 30000L + pr.currentTimeMillis(14274);
             }
             if (gb.field_i == 3) {
               if (js.field_a.available(-1) <= 0) {
-                if (am.field_Cb < pr.a(14274)) {
+                if (am.field_Cb < pr.currentTimeMillis(14274)) {
                   stackIn_31_0 = is.a((byte) -94, -2);
                   return stackIn_31_0;
                 }
@@ -248,27 +248,27 @@ final class IsaacRandom {
         int var7 = 0;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (gf.field_i <= param1 &&
-            param1 < gf.field_l) {
-            if (gf.field_a > param2) {
-              param0 = param0 + (param2 - gf.field_a);
-              param2 = gf.field_a;
+          if (SoftwareRasterizer.field_i <= param1 &&
+            param1 < SoftwareRasterizer.field_l) {
+            if (SoftwareRasterizer.field_a > param2) {
+              param0 = param0 + (param2 - SoftwareRasterizer.field_a);
+              param2 = SoftwareRasterizer.field_a;
             }
-            if (gf.field_f < param0 + param2) {
-              param0 = -param2 + gf.field_f;
+            if (SoftwareRasterizer.field_f < param0 + param2) {
+              param0 = -param2 + SoftwareRasterizer.field_f;
             }
-            var6 = param1 + gf.field_b * param2;
+            var6 = param1 + SoftwareRasterizer.field_b * param2;
             if (param4) {
               field_b = (Sprite[]) null;
             }
             while (param0 > 0) {
-              param1 = gf.field_h[var6];
+              param1 = SoftwareRasterizer.field_h[var6];
               var5_int = param3;
               param2 = var5_int + param1;
               var5_int = (var5_int & 16711935) + (param1 & 16711935);
               param1 = (var5_int & 16777472) + (65536 & param2 - var5_int);
-              gf.field_h[var6] = ee.a(-(param1 >>> 8) + param1, -param1 + param2);
-              var6 = var6 + gf.field_b;
+              SoftwareRasterizer.field_h[var6] = ee.intOr(-(param1 >>> 8) + param1, -param1 + param2);
+              var6 = var6 + SoftwareRasterizer.field_b;
               param0--;
             }
             return;
@@ -317,10 +317,10 @@ final class IsaacRandom {
             }
           }
           this.field_g = this.field_g + this.field_e[255 & var2 + 128];
-          dupTemp$1 = this.field_g + (this.field_e[we.a(var3 >> 2, 255)] + this.field_i);
+          dupTemp$1 = this.field_g + (this.field_e[we.intAnd(var3 >> 2, 255)] + this.field_i);
           var4 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_e[we.a(255, var4 >> 8 >> 2)];
+          dupTemp$2 = var3 + this.field_e[we.intAnd(255, var4 >> 8 >> 2)];
           this.field_i = dupTemp$2;
           this.field_j[var2] = dupTemp$2;
         }

@@ -84,7 +84,7 @@ final class SolVictoryChecker extends VictoryChecker {
           this.field_g = new Player[var4];
           var6Lifetime2 = 0;
           if (param1 <= 23) {
-            SolVictoryChecker.a(116, -102, -108, -15);
+            SolVictoryChecker.blendColours(116, -102, -108, -15);
           }
           for (var7 = 0; this.field_i.length > var7; var7++) {
             if (this.field_n[var7] == var3_intLifetime1) {
@@ -107,7 +107,7 @@ final class SolVictoryChecker extends VictoryChecker {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int blendColours(int param0, int param1, int param2, int param3) {
         int var4 = 16711935 & param0;
         param0 = param0 & 65280;
         if (param2 >= -77) {
@@ -500,14 +500,14 @@ final class SolVictoryChecker extends VictoryChecker {
               if (StarAnnotation.field_m <= 0 &&
                 !QuickChatPhraseDefinition.field_v) {
                 try {
-                  ll.a("unzap", GameScreen.getHostApplet((byte) 127), (byte) 121);
+                  ll.callJavaScript("unzap", GameScreen.getHostApplet((byte) 127), (byte) 121);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ll.a(GameScreen.getHostApplet((byte) 125), "zap", new Object[]{pd.a((byte) -67, pd.field_l)}, -116);
+                  ll.callJavaScriptWithArguments(GameScreen.getHostApplet((byte) 125), "zap", new Object[]{pd.a((byte) -67, pd.field_l)}, -116);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -542,7 +542,7 @@ final class SolVictoryChecker extends VictoryChecker {
               return stackIn_92_0;
             }
             if (param1 > -48) {
-              SolVictoryChecker.a(-26, -48, -112, -53);
+              SolVictoryChecker.blendColours(-26, -48, -112, -53);
             }
             if (wg.field_f == null) {
               if (BufferedSocket.field_j) {

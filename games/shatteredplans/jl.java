@@ -65,15 +65,15 @@ abstract class jl extends Dialog {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
-        gf.i(param0 + 6, param2 + 35, -12 + this.field_x, -40 + this.field_n, 2105376, 0);
+        SoftwareRasterizer.fillRectGradient(param0 + 6, param2 + 35, -12 + this.field_x, -40 + this.field_n, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param2;
         while (var4 > var7) {
-          if (gf.field_a <= var8 &&
-            var8 < gf.field_f) {
+          if (SoftwareRasterizer.field_a <= var8 &&
+            var8 < SoftwareRasterizer.field_f) {
             var9 = var5 + var7 * (-var5 + var6) / var4;
             var10 = 0;
             var11 = this.field_x;
@@ -86,7 +86,7 @@ abstract class jl extends Dialog {
                   }
                   var13 = (-var12 + 462) * var9 / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  gf.field_h[var10 + (var8 * gf.field_b + param0)] = var13;
+                  SoftwareRasterizer.field_h[var10 + (var8 * SoftwareRasterizer.field_b + param0)] = var13;
                 }
                 var10++;
               }
@@ -103,7 +103,7 @@ abstract class jl extends Dialog {
                   } else {
                     var15 = var9 * (462 - var14) / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    gf.field_h[var11 + param0 + gf.field_b * var8] = var15;
+                    SoftwareRasterizer.field_h[var11 + param0 + SoftwareRasterizer.field_b * var8] = var15;
                   }
                   var13Lifetime1++;
                   var11++;
@@ -114,7 +114,7 @@ abstract class jl extends Dialog {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            gf.f(var10 + param0, var8, var11 - var10, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param0, var8, var11 - var10, var9);
           }
           var7++;
           var8++;
@@ -127,8 +127,8 @@ abstract class jl extends Dialog {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          gf.f(param0, var8Lifetime1, 6, var9Lifetime1);
-          gf.f(-6 + (this.field_x + param0), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (this.field_x + param0), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
@@ -146,8 +146,8 @@ abstract class jl extends Dialog {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          gf.f(param0, var8Lifetime2, 6, var9Lifetime2);
-          gf.f(param0 + this.field_x - 6, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param0 + this.field_x - 6, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

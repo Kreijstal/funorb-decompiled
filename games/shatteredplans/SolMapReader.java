@@ -43,10 +43,10 @@ final class SolMapReader implements MapGenerator {
           var11Lifetime1 = 0;
           while (var11Lifetime1 < 4) {
             var12Lifetime1 = this.field_a.readUnsignedByte(-75);
-            var9.field_G[var11Lifetime1] = we.a(var12Lifetime1, 15);
+            var9.field_G[var11Lifetime1] = we.intAnd(var12Lifetime1, 15);
             var11Lifetime1++;
             if (var11Lifetime1 < 4) {
-              var9.field_G[var11Lifetime1] = we.a(var12Lifetime1, 240) >> 4;
+              var9.field_G[var11Lifetime1] = we.intAnd(var12Lifetime1, 240) >> 4;
               var11Lifetime1++;
               continue;
             }
@@ -123,7 +123,7 @@ final class SolMapReader implements MapGenerator {
         int var7;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var1 = 52 / ((param0 + 16) / 49);
-        var2 = pr.a(14274);
+        var2 = pr.currentTimeMillis(14274);
         var4 = var2 - NetworkArchiveRequest.field_z;
         if (var4 > 30000L) {
           vj.field_C = 0;

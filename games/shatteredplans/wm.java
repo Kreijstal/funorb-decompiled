@@ -62,7 +62,7 @@ final class wm {
         nj.b(-120);
     }
 
-    final static double a(int param0, byte param1, int param2) {
+    final static double smoothStep(int param0, byte param1, int param2) {
         if (param1 > 90) {
           return (double)(param0 * param0) * (double)(param2 * 3 - param0 * 2) / (double)(param2 * (param2 * param2));
         }

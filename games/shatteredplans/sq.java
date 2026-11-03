@@ -195,7 +195,7 @@ final class sq {
           if (param0 < 0) {
             return;
           }
-          if (gf.field_k <= param0) {
+          if (SoftwareRasterizer.field_k <= param0) {
             return;
           }
           if (param5 != -27259) {

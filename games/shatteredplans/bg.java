@@ -10,7 +10,7 @@ final class bg {
     static int[] field_c;
     static int[] field_e;
 
-    static long a(long param0, long param1) {
+    static long longXor(long param0, long param1) {
         return param0 ^ param1;
     }
 
@@ -84,15 +84,15 @@ final class bg {
         IntrusiveDeque.field_d = new Sprite(var2 + IntrusiveDeque.field_a[0].field_z / 4, 2);
         RandomAccessCacheFile.a(param0 + 2499);
         GameState.field_F.bindAsRenderTarget();
-        gf.f(0, 0, GameState.field_F.field_z, 10790052);
-        gf.f(0, 1, GameState.field_F.field_z, 16777215);
-        GameState.field_F.field_B[0] = SolVictoryChecker.a(0, GameState.field_F.field_B[0], -90, 185);
-        GameState.field_F.field_B[1] = SolVictoryChecker.a(0, GameState.field_F.field_B[1], -94, 220);
-        GameState.field_F.field_B[var2] = SolVictoryChecker.a(0, GameState.field_F.field_B[var2], -118, 185);
-        GameState.field_F.field_B[1 + var2] = SolVictoryChecker.a(0, GameState.field_F.field_B[var2 + 1], -96, 220);
+        SoftwareRasterizer.drawHorizontalLine(0, 0, GameState.field_F.field_z, 10790052);
+        SoftwareRasterizer.drawHorizontalLine(0, 1, GameState.field_F.field_z, 16777215);
+        GameState.field_F.field_B[0] = SolVictoryChecker.blendColours(0, GameState.field_F.field_B[0], -90, 185);
+        GameState.field_F.field_B[1] = SolVictoryChecker.blendColours(0, GameState.field_F.field_B[1], -94, 220);
+        GameState.field_F.field_B[var2] = SolVictoryChecker.blendColours(0, GameState.field_F.field_B[var2], -118, 185);
+        GameState.field_F.field_B[1 + var2] = SolVictoryChecker.blendColours(0, GameState.field_F.field_B[var2 + 1], -96, 220);
         IntrusiveDeque.field_d.bindAsRenderTarget();
-        gf.f(0, 0, IntrusiveDeque.field_d.field_z, 10790052);
-        gf.f(0, 1, IntrusiveDeque.field_d.field_z, 16777215);
+        SoftwareRasterizer.drawHorizontalLine(0, 0, IntrusiveDeque.field_d.field_z, 10790052);
+        SoftwareRasterizer.drawHorizontalLine(0, 1, IntrusiveDeque.field_d.field_z, 16777215);
         cg.i(0);
         if (param0 == -2612) {
           return;

@@ -52,7 +52,7 @@ final class hc {
         int var5 = 112 / ((param1 - 89) / 37);
         RandomAccessCacheFile.a(-107);
         vc.field_b.bindAsRenderTarget();
-        gf.d(0, 0, var4, 2, 16777215);
+        SoftwareRasterizer.fillRect(0, 0, var4, 2, 16777215);
         cg.i(0);
         SpriteButton var6 = new SpriteButton(5 + param0, var9.field_i / 2 + param2, vc.field_b);
         SpriteButton var7 = new SpriteButton(-vc.field_b.field_z + (var9.field_m + (param0 - 5)), var9.field_i / 2 + param2, vc.field_b);

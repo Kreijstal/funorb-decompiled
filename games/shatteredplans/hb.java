@@ -25,7 +25,7 @@ abstract class hb {
           for (var2_int = 0; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
             if (!hq.a(-95, (char) var3) &&
-              !dk.a((byte) -66, (char) var3)) {
+              !dk.isDigit((byte) -66, (char) var3)) {
               return true;
             }
           }

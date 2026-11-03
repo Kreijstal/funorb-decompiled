@@ -201,7 +201,7 @@ final class nf {
         }
     }
 
-    final static String a(String param0, String param1, byte param2, String param3) {
+    final static String replaceAll(String param0, String param1, byte param2, String param3) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var4 = param1.indexOf(param0);
         if (param2 <= 57) {

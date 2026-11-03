@@ -346,7 +346,7 @@ final class ObjectList {
                   if (var12.field_Fb >= var7) {
                     if (var6 <= var12.field_Qb) {
                       if ((var8 & ~var12.field_Wb) != 0) {
-                        var25_int = DualLinkDeque.a(param1 + 38, var8 & ~var12.field_Wb);
+                        var25_int = DualLinkDeque.highestOneBit(param1 + 38, var8 & ~var12.field_Wb);
                         var24Lifetime2 = QuickChatCategoryRegistry.a(RandomAccessCacheFile.field_j, 4371, new String[]{var20});
                         if (0 < var25_int &&
                           null != PlacementOrder.field_s &&
@@ -380,7 +380,7 @@ final class ObjectList {
                   } else {
                     if (var6 <= var12.field_Qb) {
                       if ((var8 & ~var12.field_Wb) != 0) {
-                        var25_int = DualLinkDeque.a(param1 + 31, var8 & ~var12.field_Wb);
+                        var25_int = DualLinkDeque.highestOneBit(param1 + 31, var8 & ~var12.field_Wb);
                         var24Lifetime2 = ub.field_Eb;
                         if (0 < var25_int &&
                           null != PlacementOrder.field_s &&

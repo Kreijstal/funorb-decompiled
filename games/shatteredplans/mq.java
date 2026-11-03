@@ -53,7 +53,7 @@ final class mq {
           }
           if (-e.field_f + ei.field_e > 20 &&
             -ByteArrayNode.field_k + AttackTask.field_o > 20) {
-            ei.a(true, -ByteArrayNode.field_k + AttackTask.field_o, -e.field_f + ei.field_e, param0 - 12350, ByteArrayNode.field_k, e.field_f, SolVictoryChecker.a(3974311, 0, -120, 128));
+            ei.a(true, -ByteArrayNode.field_k + AttackTask.field_o, -e.field_f + ei.field_e, param0 - 12350, ByteArrayNode.field_k, e.field_f, SolVictoryChecker.blendColours(3974311, 0, -120, 128));
           }
           if (WeightedLruCache.field_g == hm.field_q) {
             var1_int = e.field_f + 13;

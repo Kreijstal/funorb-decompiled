@@ -93,11 +93,11 @@ final class uq extends IntrusiveNode {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (!(gf.field_k < param2 + param0 + param3)) {
+        if (!(SoftwareRasterizer.field_k < param2 + param0 + param3)) {
           return param3 + param0;
         }
         if (param1 > -param2 + param3) {
-          return gf.field_k - param2;
+          return SoftwareRasterizer.field_k - param2;
         }
         return -param2 + param3;
     }

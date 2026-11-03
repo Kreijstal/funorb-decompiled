@@ -272,7 +272,7 @@ final class no {
             ImageProducerRasterBuffer.a(vj.g((byte) 120), ei.a(82), var3_int != 0, 0, po.field_h);
           } else {
             if (!or.a(250)) {
-              gf.b();
+              SoftwareRasterizer.clear();
               sn.a(240, 28318, 320);
               WeightedCacheEntry.a(param1 ^ 37, 0, param2, 0);
             } else {

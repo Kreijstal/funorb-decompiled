@@ -129,7 +129,7 @@ final class ah extends ts {
               } else {
                 if (this.field_V.field_w >= var12) {
                   aq.a((byte) 106, this.field_V);
-                  gf.b();
+                  SoftwareRasterizer.clear();
                 } else {
                   this.field_V = new Sprite(var11, var12);
                   aq.a((byte) -31, this.field_V);
@@ -161,7 +161,7 @@ final class ah extends ts {
             this.field_V.field_z >= var11Lifetime5 &&
             this.field_V.field_w >= var12Lifetime5) {
             aq.a((byte) 106, this.field_V);
-            gf.b();
+            SoftwareRasterizer.clear();
           } else {
             this.field_V = new Sprite(var11Lifetime5, var12Lifetime5);
             aq.a((byte) -31, this.field_V);
@@ -196,7 +196,7 @@ final class ah extends ts {
               } else {
                 if (this.field_V.field_w >= var12Lifetime1) {
                   aq.a((byte) 106, this.field_V);
-                  gf.b();
+                  SoftwareRasterizer.clear();
                 } else {
                   this.field_V = new Sprite(var11Lifetime1, var12Lifetime1);
                   aq.a((byte) -31, this.field_V);
@@ -228,7 +228,7 @@ final class ah extends ts {
             this.field_V.field_z >= var11Lifetime1Lifetime1 &&
             this.field_V.field_w >= var12Lifetime1Lifetime1) {
             aq.a((byte) 106, this.field_V);
-            gf.b();
+            SoftwareRasterizer.clear();
           } else {
             this.field_V = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
             aq.a((byte) -31, this.field_V);
@@ -282,7 +282,7 @@ final class ah extends ts {
                 aq.a((byte) -31, this.field_V);
               } else {
                 aq.a((byte) 106, this.field_V);
-                gf.b();
+                SoftwareRasterizer.clear();
               }
             }
           }
@@ -308,7 +308,7 @@ final class ah extends ts {
             this.field_V.field_z >= var11Lifetime3 &&
             this.field_V.field_w >= var12Lifetime3) {
             aq.a((byte) 106, this.field_V);
-            gf.b();
+            SoftwareRasterizer.clear();
           } else {
             this.field_V = new Sprite(var11Lifetime3, var12Lifetime3);
             aq.a((byte) -31, this.field_V);
@@ -338,7 +338,7 @@ final class ah extends ts {
           this.field_V.field_z >= var11Lifetime4 &&
           this.field_V.field_w >= var12Lifetime4) {
           aq.a((byte) 106, this.field_V);
-          gf.b();
+          SoftwareRasterizer.clear();
         } else {
           this.field_V = new Sprite(var11Lifetime4, var12Lifetime4);
           aq.a((byte) -31, this.field_V);

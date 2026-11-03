@@ -379,7 +379,7 @@ abstract class tl extends GameApplet {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (BoundsRect.field_p != null) {
           if (null == bj.field_K) {
-            var6 = StarAbandonedEvent.a(76);
+            var6 = StarAbandonedEvent.getAppletContainer(76);
             var4 = var6.getSize();
             BoundsRect.field_p.a(var4.width, var4.height, -28);
           }
@@ -395,7 +395,7 @@ abstract class tl extends GameApplet {
           so.field_o = aj.field_b.takeRotation(86);
         }
         if (cb.b((byte) -117)) {
-          var3 = ArchiveSourceManager.a(0) * 1200;
+          var3 = ArchiveSourceManager.getTargetFrameRate(0) * 1200;
           if (this.field_y ||
             !(var3 >= ik.a(-26918)) &&
             !(po.b(123) <= var3)) {
@@ -405,7 +405,7 @@ abstract class tl extends GameApplet {
             bf.a((byte) -124, 2, he.field_n);
             ClientException.b(false);
             md.field_B = true;
-            SecondaryNodeDequeIterator.field_b = 15000L + pr.a(14274);
+            SecondaryNodeDequeIterator.field_b = 15000L + pr.currentTimeMillis(14274);
           }
         }
         if (-1 == qj.field_g ||
@@ -421,7 +421,7 @@ abstract class tl extends GameApplet {
           }
           if (qj.field_g != -1 &&
             qj.field_g != 0) {
-            SecondaryNodeDequeIterator.field_b = pr.a(14274) + 15000L;
+            SecondaryNodeDequeIterator.field_b = pr.currentTimeMillis(14274) + 15000L;
           }
         }
         if (-1 != qj.field_g &&
@@ -471,7 +471,7 @@ abstract class tl extends GameApplet {
         if ((qj.field_g != -1 &&
           qj.field_g != 0 ||
           ArchiveRequest.f(-11)) &&
-          SecondaryNodeDequeIterator.field_b <= pr.a(14274)) {
+          SecondaryNodeDequeIterator.field_b <= pr.currentTimeMillis(14274)) {
           md.field_B = false;
           if (-1 != qj.field_g &&
             qj.field_g != 0) {
@@ -692,7 +692,7 @@ abstract class tl extends GameApplet {
         IntrusiveNode.b(-11);
         bf.a((byte) -126, var2, nl.field_c);
         md.field_B = true;
-        SecondaryNodeDequeIterator.field_b = pr.a(14274) + 15000L;
+        SecondaryNodeDequeIterator.field_b = pr.currentTimeMillis(14274) + 15000L;
         return var2;
     }
 
@@ -832,7 +832,7 @@ abstract class tl extends GameApplet {
             field_o = (String) null;
           }
           while (var11.field_d == 0) {
-            jb.a((byte) -122, 10L);
+            jb.sleep((byte) -122, 10L);
           }
           var7 = (java.awt.Frame) (var11.field_e);
           if (var7 == null) {

@@ -29,7 +29,7 @@ final class DualLinkDeque {
         field_d = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int highestOneBit(int param0, int param1) {
         if (param0 <= 26) {
           field_d = (String) null;
         }

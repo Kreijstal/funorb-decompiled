@@ -44,7 +44,7 @@ final class eo extends jl {
         }
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isPowerOfTwo(int param0, int param1) {
         if (param1 != 7433) {
           field_Z = (ih) null;
         }
@@ -203,9 +203,9 @@ final class eo extends jl {
                   if (decompiledSharedTail0) {
                     var17 = (int)(160.0 * (var18 - var30) / var18);
                     if (!param0) {
-                      gf.c(var13 + var57, var56 + var15, 16777215, var17);
+                      SoftwareRasterizer.blendPixel(var13 + var57, var56 + var15, 16777215, var17);
                     } else {
-                      gf.a(var57, var56, var17 << 24 | 16777215);
+                      SoftwareRasterizer.setPixel(var57, var56, var17 << 24 | 16777215);
                     }
                   }
                 }
@@ -224,7 +224,7 @@ final class eo extends jl {
         super.a(param0, param1 + 0, param2);
         CipherPacketBuffer.field_p.drawCentred(this.field_eb, (this.field_x >> 1) + param0, param1 + param2, 16777215, -1);
         if (null != this.field_gb) {
-          gf.f(20 + param0, param2 + 113, 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(20 + param0, param2 + 113, 260, 8421504);
           CipherPacketBuffer.field_p.a(this.field_gb, param0 + 20, 8 + (param2 + 120), 260, 100, 16777215, -1, 1, 0, CipherPacketBuffer.field_p.field_J);
         }
     }

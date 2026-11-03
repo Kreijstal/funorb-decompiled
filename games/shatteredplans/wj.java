@@ -132,7 +132,7 @@ final class wj extends IntrusiveNode {
           var6 = 256;
           if (512 > di.field_m) {
             var6 = di.field_m >> 1;
-            gf.g(320, var4 + 528, 400, 16777215);
+            SoftwareRasterizer.fillCircle(320, var4 + 528, 400, 16777215);
           }
           if (param0 != 128) {
             return;
@@ -159,7 +159,7 @@ final class wj extends IntrusiveNode {
           for (var8 = 0; var11.length > var8; var8++) {
             var9_ref_nd = var11[var8];
             if (0 != var9_ref_nd.field_a) {
-              gf.b(var9_ref_nd.field_e + var1_intLifetime1 << 4, var9_ref_nd.field_j + var2Lifetime1 << 4, var9_ref_nd.field_f, var9_ref_nd.field_a, MenuButton.field_u);
+              SoftwareRasterizer.b(var9_ref_nd.field_e + var1_intLifetime1 << 4, var9_ref_nd.field_j + var2Lifetime1 << 4, var9_ref_nd.field_f, var9_ref_nd.field_a, MenuButton.field_u);
             }
           }
           var7_ref = (Particle) (DialWidget.field_K.startForward(0));
@@ -168,14 +168,14 @@ final class wj extends IntrusiveNode {
             var1_intLifetime2 = (int)var7_ref.field_l;
             for (var8Lifetime1 = 1; var8Lifetime1 < 50; var8Lifetime1++) {
               var9 = -var8Lifetime1 + var7_ref.field_q;
-              gf.b(var1_intLifetime2 << 4, var2Lifetime2 << 4, -var8Lifetime1 + 50, -(var8Lifetime1 * 2) + 100, MenuButton.field_u);
+              SoftwareRasterizer.b(var1_intLifetime2 << 4, var2Lifetime2 << 4, -var8Lifetime1 + 50, -(var8Lifetime1 * 2) + 100, MenuButton.field_u);
               if (var9 < 0) {
                 var9 += 50;
               }
               var1_intLifetime2 = (int)var7_ref.field_o[var9];
               var2Lifetime2 = (int)var7_ref.field_i[var9];
             }
-            gf.b((int)var7_ref.field_l << 4, (int)var7_ref.field_n << 4, 128, 100, MenuButton.field_u);
+            SoftwareRasterizer.b((int)var7_ref.field_l << 4, (int)var7_ref.field_n << 4, 128, 100, MenuButton.field_u);
             var7_ref = (Particle) (DialWidget.field_K.nextForward((byte) -71));
           }
           return;

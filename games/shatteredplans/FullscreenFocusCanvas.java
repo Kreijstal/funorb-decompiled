@@ -171,7 +171,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var1_int = -(int)(200.0 * Math.sin((double)var3));
           var2 = -200 + (int)(200.0 * Math.cos((double)var3));
           ks.field_j.draw(var1_int, var2);
-          gf.h(0, 0, gf.field_b, gf.field_k);
+          SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k);
           var4 = 125;
           var5 = 400;
           var6 = var5 + 150;
@@ -208,7 +208,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var15 = -var13 + (var10 + 374 + var2Lifetime1 << 4);
           var16 = 32 + vc.a((byte) -39, 32);
           if (var6 > di.field_m) {
-            gf.b(var14, var15, var16, 128, MenuButton.field_u);
+            SoftwareRasterizer.b(var14, var15, var16, 128, MenuButton.field_u);
           }
           var17 = 454 + (var1_intLifetime1 + 3);
           var18 = var17 << 4;
@@ -235,8 +235,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           var24Lifetime1 = var24Lifetime1 + (-var7 + 950) * (-(var7 * 16) + 15200) / (1000 - var7);
           var22Lifetime1 = var22Lifetime1 + var24Lifetime1;
           var23Lifetime1 = var23Lifetime1 - (var24Lifetime1 >> 4);
-          gf.d(0, 0, var22Lifetime1 + 320 >> 4, 480);
-          gf.d(var17, var19, 20, 4, 0);
+          SoftwareRasterizer.setClip(0, 0, var22Lifetime1 + 320 >> 4, 480);
+          SoftwareRasterizer.fillRect(var17, var19, 20, 4, 0);
           if (di.field_m >= var9) {
             var25 = -var9 + di.field_m;
             var26 = var6 - var9;
@@ -248,7 +248,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (255 < var28) {
               var28 = 255;
             }
-            gf.a(16 + var17, var19 + 2, (var28 >> 2) * 65793);
+            SoftwareRasterizer.setPixel(16 + var17, var19 + 2, (var28 >> 2) * 65793);
             var28Lifetime1 = -40 + (var27_int + ClientException.a(64, -64, (byte) 114));
             if (var28Lifetime1 < 0) {
               var28Lifetime1 = 0;
@@ -256,7 +256,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var28Lifetime1 > 255) {
               var28Lifetime1 = 255;
             }
-            gf.a(3 + var17, var19 + 3, 65793 * (var28Lifetime1 >> 2));
+            SoftwareRasterizer.setPixel(3 + var17, var19 + 3, 65793 * (var28Lifetime1 >> 2));
             var28Lifetime2 = ClientException.a(64, -64, (byte) 98) + (var27_int - 80);
             if (var28Lifetime2 < 0) {
               var28Lifetime2 = 0;
@@ -264,7 +264,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var28Lifetime2 > 255) {
               var28Lifetime2 = 255;
             }
-            gf.a(var17 + 12, var19, 65793 * (var28Lifetime2 >> 2));
+            SoftwareRasterizer.setPixel(var17 + 12, var19, 65793 * (var28Lifetime2 >> 2));
             var28Lifetime3 = -120 + var27_int + ClientException.a(64, -64, (byte) 126);
             if (var28Lifetime3 < 0) {
               var28Lifetime3 = 0;
@@ -272,9 +272,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var28Lifetime3 > 255) {
               var28Lifetime3 = 255;
             }
-            gf.a(var17 + 7, 1 + var19, (var28Lifetime3 >> 2) * 65793);
+            SoftwareRasterizer.setPixel(var17 + 7, 1 + var19, (var28Lifetime3 >> 2) * 65793);
           }
-          gf.a();
+          SoftwareRasterizer.resetClip();
           if (var9 <= di.field_m) {
             var25Lifetime1 = -var9 + di.field_m;
             var26Lifetime1 = -var9 + var8;
@@ -291,8 +291,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               var32 = (int)((double)var21 * Math.sin(var27 + 3.141592653589793 * (double)(var30 * 2) / 3.0));
               var32 = var32 + var20;
               if ((var22Lifetime1 + 320) >= var31) {
-                gf.g(var17, var19, var31 >> 4, var32 >> 4, 0);
-                gf.b(var31, var32, 64, var29, MenuButton.field_x);
+                SoftwareRasterizer.drawLine(var17, var19, var31 >> 4, var32 >> 4, 0);
+                SoftwareRasterizer.b(var31, var32, 64, var29, MenuButton.field_x);
                 CachedArchiveSource.field_A[Territory.field_p] = var31;
                 np.field_f[Territory.field_p] = var32;
                 fieldTemp$0 = Territory.field_p + 1;
@@ -310,8 +310,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 var31Lifetime1 += 600;
               }
               var33 = 256 * (var30Lifetime1 - var32Lifetime1) / 600;
-              gf.b(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33, 12, MenuButton.field_x);
-              gf.b(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33 >> 2, 128, MenuButton.field_x);
+              SoftwareRasterizer.b(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33, 12, MenuButton.field_x);
+              SoftwareRasterizer.b(CachedArchiveSource.field_A[var31Lifetime1], np.field_f[var31Lifetime1], var33 >> 2, 128, MenuButton.field_x);
               var31Lifetime1--;
             }
           }
@@ -321,9 +321,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             } else {
               var16Lifetime1 = QuickChatCategoryRegistry.a(256, 50, -950 + di.field_m, 0, 0);
             }
-            gf.a(var22Lifetime1, var23Lifetime1, var16Lifetime1, 12, MenuButton.field_v);
-            gf.a(var22Lifetime1 + 128, var23Lifetime1 - 16, var16Lifetime1 >> 1, 12, MenuButton.field_v);
-            gf.a(var22Lifetime1 + 256, var23Lifetime1 - 32, var16Lifetime1 >> 2, 12, MenuButton.field_v);
+            SoftwareRasterizer.a(var22Lifetime1, var23Lifetime1, var16Lifetime1, 12, MenuButton.field_v);
+            SoftwareRasterizer.a(var22Lifetime1 + 128, var23Lifetime1 - 16, var16Lifetime1 >> 1, 12, MenuButton.field_v);
+            SoftwareRasterizer.a(var22Lifetime1 + 256, var23Lifetime1 - 32, var16Lifetime1 >> 2, 12, MenuButton.field_v);
           }
           var25Lifetime2 = -var22Lifetime1 + var18;
           if (var25Lifetime2 > 0) {
@@ -333,7 +333,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               var18 = var18 + (var16Lifetime2 - 320 << 1);
               var16Lifetime2 = -(var16Lifetime2 >> 2) + 320;
             }
-            gf.b(var18, var20, var16Lifetime2, 256, MenuButton.field_u);
+            SoftwareRasterizer.b(var18, var20, var16Lifetime2, 256, MenuButton.field_u);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -153,13 +153,13 @@ final class aj {
         }
     }
 
-    final static void a(String param0, boolean param1) {
+    final static void printError(String param0, boolean param1) {
         if (!param1) {
-          System.out.println("Error: " + nf.a("%0a", param0, (byte) 82, "\n"));
+          System.out.println("Error: " + nf.replaceAll("%0a", param0, (byte) 82, "\n"));
           return;
         }
         field_f = -71;
-        System.out.println("Error: " + nf.a("%0a", param0, (byte) 82, "\n"));
+        System.out.println("Error: " + nf.replaceAll("%0a", param0, (byte) 82, "\n"));
     }
 
     final static ms a(String param0, boolean param1, boolean param2, String param3) {

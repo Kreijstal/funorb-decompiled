@@ -84,13 +84,13 @@ final class d {
               return;
             }
             if (js.field_f.position == 0 &&
-              (mj.field_Pb + 10000L) < pr.a(param1 + 14192)) {
+              (mj.field_Pb + 10000L) < pr.currentTimeMillis(param1 + 14192)) {
               js.field_f.h(param0, param1 ^ 173);
             }
             if (js.field_f.position > 0) {
               try {
                 wg.field_f.write(js.field_f.position, 0, js.field_f.payload, param1 ^ -14022);
-                mj.field_Pb = pr.a(14274);
+                mj.field_Pb = pr.currentTimeMillis(14274);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -150,13 +150,13 @@ final class d {
               return;
             }
             if (js.field_f.position == 0 &&
-              (mj.field_Pb + 10000L) < pr.a(param1 + 14192)) {
+              (mj.field_Pb + 10000L) < pr.currentTimeMillis(param1 + 14192)) {
               js.field_f.h(param0, param1 ^ 173);
             }
             if (js.field_f.position > 0) {
               try {
                 wg.field_f.write(js.field_f.position, 0, js.field_f.payload, param1 ^ -14022);
-                mj.field_Pb = pr.a(14274);
+                mj.field_Pb = pr.currentTimeMillis(14274);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

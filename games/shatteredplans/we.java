@@ -9,7 +9,7 @@ final class we {
     static String field_b;
     static Sprite field_f;
 
-    static int a(int param0, int param1) {
+    static int intAnd(int param0, int param1) {
         return param0 & param1;
     }
 
@@ -144,8 +144,8 @@ final class we {
           }
           var10 = 0;
           var11 = 0;
-          var12 = gf.field_i << 4;
-          var13 = gf.field_l << 4;
+          var12 = SoftwareRasterizer.field_i << 4;
+          var13 = SoftwareRasterizer.field_l << 4;
           if (param3 > param1) {
             var14_int = param3;
             param3 = param1;
@@ -169,8 +169,8 @@ final class we {
           param2 = param2 + (int)((long)var10 * var16 >> 16);
           param1 = param1 - (int)((long)var11 * var14 >> 16);
           param6 = param6 - (int)((long)var11 * var16 >> 16);
-          var13Lifetime1 = gf.field_f << 4;
-          var12Lifetime1 = gf.field_a << 4;
+          var13Lifetime1 = SoftwareRasterizer.field_f << 4;
+          var12Lifetime1 = SoftwareRasterizer.field_a << 4;
           var11Lifetime1 = 0;
           var10Lifetime1 = 0;
           if (param2 > param6) {

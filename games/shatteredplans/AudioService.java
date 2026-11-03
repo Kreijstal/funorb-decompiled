@@ -50,7 +50,7 @@ final class AudioService implements Runnable {
             var13 = param4;
             var14 = param1;
             var15 = (var17[var11] & 16711422) >> 1;
-            var10[var11] = var15 + (we.a(33471547, var14) >> 17) - (-we.a(65280, var13 >> 9) - (we.a(33423360, var12) >> 1));
+            var10[var11] = var15 + (we.intAnd(33471547, var14) >> 17) - (-we.intAnd(65280, var13 >> 9) - (we.intAnd(33423360, var12) >> 1));
             param2++;
             param1 = param1 + param7;
             param6 = param6 + param9;
@@ -151,7 +151,7 @@ final class AudioService implements Runnable {
                   var2.service();
                 }
               }
-              jb.a((byte) -98, 10L);
+              jb.sleep((byte) -98, 10L);
               var5 = (Object) null;
               ud.a(-106, this.field_c, (Object) null);
             }

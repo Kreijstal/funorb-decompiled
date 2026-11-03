@@ -230,7 +230,7 @@ final class DialWidget extends FocusableWidget {
                 var8_ref_mj = new mj(var20, var21, var3_long);
                 ShatteredPlansClient.field_H.put(var3_long, var8_ref_mj, true);
               }
-              var8_ref_mj.field_zb = pr.a(14274) - (long)((PacketBuffer) ((Object) var1)).readInt(16711680);
+              var8_ref_mj.field_zb = pr.currentTimeMillis(14274) - (long)((PacketBuffer) ((Object) var1)).readInt(16711680);
               var8_ref_mj.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
               var10 = ((PacketBuffer) ((Object) var1)).readVariableInt(false);
               var8_ref_mj.field_Fb = var10 >> 1;
@@ -376,7 +376,7 @@ final class DialWidget extends FocusableWidget {
                   if (var2 == 21) {
                     var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-20976);
                     if (var3Lifetime5 != 0) {
-                      sf.field_e = pr.a(14274) + (long)var3Lifetime5;
+                      sf.field_e = pr.currentTimeMillis(14274) + (long)var3Lifetime5;
                       return;
                     }
                     sf.field_e = 0L;
@@ -528,7 +528,7 @@ final class DialWidget extends FocusableWidget {
           var7 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             try {
-              var3 = (String) (ll.a("getcookies", param2, (byte) 70));
+              var3 = (String) (ll.callJavaScript("getcookies", param2, (byte) 70));
               var4 = so.a(var3, ';', -116);
               var5 = 0;
               if (param0) {

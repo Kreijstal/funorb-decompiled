@@ -124,7 +124,7 @@ final class CandidateLink extends IntrusiveNode {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int intXor(int param0, int param1) {
         return param0 ^ param1;
     }
 

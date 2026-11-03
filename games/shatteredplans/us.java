@@ -35,14 +35,14 @@ final class us {
             us.a(false, true);
             return;
           }
-          BattleContribution.a(0, gf.field_b, (byte) 24, 0, 256, 5 * param1, gf.field_k);
+          BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 256, 5 * param1, SoftwareRasterizer.field_k);
           if (param0 == 0) {
             return;
           }
           us.a(false, true);
           return;
         }
-        BattleContribution.a(0, gf.field_b, (byte) 24, 0, 256, 5 * param1, gf.field_k);
+        BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 256, 5 * param1, SoftwareRasterizer.field_k);
         if (param0 == 0) {
           return;
         }

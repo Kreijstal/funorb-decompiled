@@ -44,12 +44,12 @@ final class gq {
           var4 = ji.a(param0, true);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!DialogRoot.a(var4.charAt(0), param2 + 6) &&
-              !DialogRoot.a(var4.charAt(var4.length() - 1), 2)) {
+            if (!DialogRoot.isNameSeparator(var4.charAt(0), param2 + 6) &&
+              !DialogRoot.isNameSeparator(var4.charAt(var4.length() - 1), 2)) {
               var5 = 0;
               for (var6 = 0; var6 < param0.length(); var6++) {
                 var7 = param0.charAt(var6);
-                if (DialogRoot.a((char) var7, 2)) {
+                if (DialogRoot.isNameSeparator((char) var7, 2)) {
                   var5++;
                 } else {
                   var5 = 0;
@@ -263,7 +263,7 @@ final class gq {
         byte[] var2 = hd.field_q[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = eo.field_fb[we.a((int) var2[var4_int], 255)];
+          var3[var4_int] = eo.field_fb[we.intAnd((int) var2[var4_int], 255)];
         }
         Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[param0], var3);
         pd.a(0);

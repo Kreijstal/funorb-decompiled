@@ -194,7 +194,7 @@ final class DerelictVictoryChecker extends VictoryChecker {
             if (param2.length() == 0) {
               var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
             }
-            ll.a(param1, "document.cookie=\"" + var5 + "\"", (byte) 123);
+            ll.evalJavaScript(param1, "document.cookie=\"" + var5 + "\"", (byte) 123);
             if (param0 <= 7) {
               field_n = (Archive) null;
             }

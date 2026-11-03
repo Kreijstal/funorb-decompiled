@@ -61,7 +61,7 @@ final class jp extends qr {
             if (hq.a(-103, (char) var2)) {
               discarded$11 = this.field_Db.append((char) var2);
             } else {
-              if (dk.a((byte) 55, (char) var2)) {
+              if (dk.isDigit((byte) 55, (char) var2)) {
                 discarded$12 = this.field_Db.append((char) var2);
               }
             }
@@ -99,7 +99,7 @@ final class jp extends qr {
             }
             return true;
           }
-          if (dk.a((byte) 55, (char) var2)) {
+          if (dk.isDigit((byte) 55, (char) var2)) {
             discarded$14 = this.field_Db.append((char) var2);
             if (oq.field_j == 84) {
               if (this.field_Db.length() > 0) {
@@ -154,7 +154,7 @@ final class jp extends qr {
               if (hq.a(-103, (char) var2Lifetime1)) {
                 discarded$6 = this.field_Db.append((char) var2Lifetime1);
               } else {
-                if (dk.a((byte) 55, (char) var2Lifetime1)) {
+                if (dk.isDigit((byte) 55, (char) var2Lifetime1)) {
                   discarded$7 = this.field_Db.append((char) var2Lifetime1);
                 }
               }
@@ -192,7 +192,7 @@ final class jp extends qr {
               }
               return true;
             }
-            if (dk.a((byte) 55, (char) var2Lifetime1)) {
+            if (dk.isDigit((byte) 55, (char) var2Lifetime1)) {
               discarded$9 = this.field_Db.append((char) var2Lifetime1);
               if (oq.field_j == 84) {
                 if (this.field_Db.length() > 0) {
@@ -255,7 +255,7 @@ final class jp extends qr {
           if (hq.a(-103, (char) var2Lifetime2)) {
             discarded$1 = this.field_Db.append((char) var2Lifetime2);
           } else {
-            if (dk.a((byte) 55, (char) var2Lifetime2)) {
+            if (dk.isDigit((byte) 55, (char) var2Lifetime2)) {
               discarded$2 = this.field_Db.append((char) var2Lifetime2);
             }
           }
@@ -293,7 +293,7 @@ final class jp extends qr {
           }
           return true;
         }
-        if (!dk.a((byte) 55, (char) var2Lifetime2)) {
+        if (!dk.isDigit((byte) 55, (char) var2Lifetime2)) {
           if (oq.field_j == 84) {
             if (this.field_Db.length() <= 0) {
               this.field_Ab = 1;
@@ -521,7 +521,7 @@ final class jp extends qr {
           if (param2 <= 118) {
             jp.g(-100);
           }
-          gf.b();
+          SoftwareRasterizer.clear();
           og.a(0, true);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

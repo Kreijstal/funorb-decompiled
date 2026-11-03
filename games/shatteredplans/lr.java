@@ -249,7 +249,7 @@ final class lr {
         }
     }
 
-    final static int a(byte param0) {
+    final static int nextRandomInt(byte param0) {
         if (param0 != 27) {
           Object[] var2 = (Object[]) null;
           lr.a(-35, -18, (int[]) null, (byte) 95, (Object[]) null);
@@ -622,7 +622,7 @@ final class lr {
                   var18 = var18 + var20;
                   var22 = var22 + var24;
                   var25 = var25 + var27;
-                  var36Lifetime2 = var36Lifetime2 + gf.field_b;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_b;
                   var26 = var26 + var28;
                   var30 = var30 + var32;
                 }
@@ -706,7 +706,7 @@ final class lr {
               var25 = var25 + var27;
               var21 = var21 + var23;
               var26 = var26 + var28;
-              var35Lifetime1 = var35Lifetime1 + gf.field_b;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_b;
               var22 = var22 + var24;
               var17_int = var17_int + var19;
               var18 = var18 + var20;

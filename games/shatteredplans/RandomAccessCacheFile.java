@@ -115,7 +115,7 @@ final class RandomAccessCacheFile {
         int var9Lifetime1;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var7_int = ef.a(param6, 57);
+          var7_int = ef.roundUpToMultipleOfEight(param6, 57);
           if (ro.field_b == null) {
             ro.field_b = new java.security.SecureRandom();
           }
@@ -234,16 +234,16 @@ final class RandomAccessCacheFile {
     }
 
     final static void a(int param0) {
-        Archive.field_c[field_k] = gf.field_h;
-        cb.field_f[field_k] = gf.field_i;
-        dk.field_b[field_k] = gf.field_l;
+        Archive.field_c[field_k] = SoftwareRasterizer.field_h;
+        cb.field_f[field_k] = SoftwareRasterizer.field_i;
+        dk.field_b[field_k] = SoftwareRasterizer.field_l;
         if (param0 >= -103) {
           RandomAccessCacheFile.a(109, 107);
         }
-        bf.field_c[field_k] = gf.field_a;
-        DebouncedValidator.field_d[field_k] = gf.field_f;
-        oj.field_Cb[field_k] = gf.field_b;
-        TertiaryLinkNode.field_s[field_k] = gf.field_k;
+        bf.field_c[field_k] = SoftwareRasterizer.field_a;
+        DebouncedValidator.field_d[field_k] = SoftwareRasterizer.field_f;
+        oj.field_Cb[field_k] = SoftwareRasterizer.field_b;
+        TertiaryLinkNode.field_s[field_k] = SoftwareRasterizer.field_k;
         field_k = field_k + 1;
     }
 

@@ -776,7 +776,7 @@ final class TaskAi implements Ai {
           var2Lifetime1++;
           var4_ref = (AttackTask) (this.field_k.nextForward((byte) -71));
         }
-        DiskArchiveRequest.a(var10, -43, this.field_e);
+        DiskArchiveRequest.sortParallel(var10, -43, this.field_e);
         return;
     }
 
@@ -1646,7 +1646,7 @@ final class TaskAi implements Ai {
           if (param0 <= 0) {
             throw new IllegalArgumentException();
           }
-          if (eo.a(param0, 7433)) {
+          if (eo.isPowerOfTwo(param0, 7433)) {
             stackIn_5_0 = (int)((long)param0 * ((long)param1.nextInt() & 4294967295L) >> 32);
             return stackIn_5_0;
           }
@@ -1657,7 +1657,7 @@ final class TaskAi implements Ai {
           do {
             var4 = param1.nextInt();
           } while (var4 >= var3_int);
-          stackIn_11_0 = jf.a(param0, var4, -102);
+          stackIn_11_0 = jf.floorMod(param0, var4, -102);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

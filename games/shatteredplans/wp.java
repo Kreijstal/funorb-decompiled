@@ -131,12 +131,12 @@ final class wp {
                 stackIn_16_0 = (String) null;
                 return stackIn_16_0;
               }
-              if (!DialogRoot.a(var4.charAt(0), 2) &&
-                !DialogRoot.a(var4.charAt(-1 + var4.length()), 2)) {
+              if (!DialogRoot.isNameSeparator(var4.charAt(0), 2) &&
+                !DialogRoot.isNameSeparator(var4.charAt(-1 + var4.length()), 2)) {
                 var5 = 0;
                 for (var6 = 0; param1.length() > var6; var6++) {
                   var7 = param1.charAt(var6);
-                  if (!DialogRoot.a((char) var7, 2)) {
+                  if (!DialogRoot.isNameSeparator((char) var7, 2)) {
                     var5 = 0;
                   } else {
                     var5++;

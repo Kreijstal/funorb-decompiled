@@ -236,7 +236,7 @@ final class kd {
           var1_int = uq.field_k;
           var2 = 0;
           if (2 == eh.field_C) {
-            var3_long = pr.a(14274) - MusicPatch.field_p;
+            var3_long = pr.currentTimeMillis(14274) - MusicPatch.field_p;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;

@@ -166,7 +166,7 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
           gn.field_u.a(this.field_J, 20 + (param3 + this.field_m), 15 + this.field_q + param2, -40 + this.field_x, this.field_n, 16777215, -1, 1, 0, gn.field_u.field_J);
         }
         if (this.field_Q != null) {
-          gf.f(param3 + 10, 134 + param2, this.field_x - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param3 + 10, 134 + param2, this.field_x - 20, 4210752);
         }
         super.drawLayer(param0, param1, param2, param3);
     }

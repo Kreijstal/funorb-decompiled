@@ -28,11 +28,11 @@ final class DiskCacheWorker implements Runnable {
         oi.field_d = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow");
         SliderPainter.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow_fg");
         DualLinkDeque.field_a.bindAsRenderTarget();
-        BattleContribution.a(0, gf.field_b, (byte) 24, 0, 0, 64, gf.field_k);
+        BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 64, SoftwareRasterizer.field_k);
         Dialog.field_D.bindAsRenderTarget();
-        BattleContribution.a(0, gf.field_b, (byte) 24, 0, 0, 128, gf.field_k);
+        BattleContribution.a(0, SoftwareRasterizer.field_b, (byte) 24, 0, 0, 128, SoftwareRasterizer.field_k);
         vm.field_Jb.bindAsRenderTarget();
-        MouseWheelInput.a(0, 0, gf.field_k, 0, gf.field_b, param0 + 24024);
+        MouseWheelInput.a(0, 0, SoftwareRasterizer.field_k, 0, SoftwareRasterizer.field_b, param0 + 24024);
         id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_glow");
         DefendTask.field_s = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_earth");
         oe.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_clouds");
@@ -42,9 +42,9 @@ final class DiskCacheWorker implements Runnable {
         ds.field_b.bindAsRenderTarget();
         for (var1_int = 1; var1_int < 64; var1_int++) {
           var2 = (int)(20.0 * Math.log((double)(63.0f / (float)var1_int)) / Math.log(2.0));
-          gf.g(320, 527, var2 + 400, (var1_int << 2) * 65793);
+          SoftwareRasterizer.fillCircle(320, 527, var2 + 400, (var1_int << 2) * 65793);
         }
-        gf.b(4, 4, 0, 0, gf.field_b, gf.field_k);
+        SoftwareRasterizer.b(4, 4, 0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k);
         DefensiveAi.field_r = new Sprite(640, 624 - DefendTask.field_s.field_x);
         DefensiveAi.field_r.bindAsRenderTarget();
         for (var1_int = 254; var1_int >= 1; var1_int--) {
@@ -80,9 +80,9 @@ final class DiskCacheWorker implements Runnable {
           return;
         }
         try {
-          gf.b(60, 60, 0, 0, he.field_h.field_z, he.field_h.field_w);
+          SoftwareRasterizer.b(60, 60, 0, 0, he.field_h.field_z, he.field_h.field_w);
           we.field_f.bindAsRenderTarget();
-          gf.b(60, 60, 0, 0, we.field_f.field_z, we.field_f.field_w);
+          SoftwareRasterizer.b(60, 60, 0, 0, we.field_f.field_z, we.field_f.field_w);
           ks.field_j = va.field_e.copy();
           ks.field_j.rotate180();
           for (var3 = 0; var3 < ks.field_j.field_B.length; var3++) {
@@ -96,7 +96,7 @@ final class DiskCacheWorker implements Runnable {
               var6 = 65280;
             }
             var7 = 255 & var4;
-            ks.field_j.field_B[var3] = ee.a(ee.a(var6, var5), var7);
+            ks.field_j.field_B[var3] = ee.intOr(ee.intOr(var6, var5), var7);
           }
           MusicVoice.field_n = DefendTask.field_s.flippedCopy();
           uo.a((byte) 110, MusicVoice.field_n, 32768);
@@ -105,7 +105,7 @@ final class DiskCacheWorker implements Runnable {
           CheckboxPainter.field_b = new Sprite(var1_int, var2);
           CheckboxPainter.field_b.bindAsRenderTarget();
           MusicVoice.field_n.drawSilhouette(0, 120, 4259648);
-          gf.b(120, 120, 0, 0, var1_int, var2);
+          SoftwareRasterizer.b(120, 120, 0, 0, var1_int, var2);
           cg.i(0);
           jn.field_a = true;
         } catch (RuntimeException runtimeException) {
@@ -434,7 +434,7 @@ final class DiskCacheWorker implements Runnable {
 
     final static void a(PcmStreamMixer param0, int param1, int param2, Archive param3) {
         try {
-          aj.field_c = param1 * ArchiveSourceManager.a(param2 ^ param2) / 1000;
+          aj.field_c = param1 * ArchiveSourceManager.getTargetFrameRate(param2 ^ param2) / 1000;
           ArchiveRequest.a(param2 - 1102, param3);
           oj.a(param2 ^ 902, param3);
           qr.a(param3, (byte) 56);
@@ -454,7 +454,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.requestThread(true, 5, (Runnable) (this));
           while (var2.field_d == 0) {
-            jb.a((byte) -107, 10L);
+            jb.sleep((byte) -107, 10L);
           }
           if (var2.field_d == 2) {
             throw new RuntimeException();

@@ -36,15 +36,15 @@ final class dk {
           var7 = 2 + var4 * cr.field_c;
           var8 = uh.a(-38, var2_int, var6, 12);
           var9 = uq.a(20, 0, var7, var3);
-          gf.b(var8, var9, var6, var7, 0);
-          gf.d(1 + var8, 1 + var9, -2 + var6, var7 - 2, 16777088);
+          SoftwareRasterizer.drawRect(var8, var9, var6, var7, 0);
+          SoftwareRasterizer.fillRect(1 + var8, 1 + var9, -2 + var6, var7 - 2, 16777088);
           SpriteState.field_u.field_nb.a(param1, var8 + 3, GzipInflater.field_i + (1 + var9 - SpriteState.field_u.field_nb.field_J), 500, 1000, 0, -1, 0, 0, cr.field_c);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "dk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isDigit(byte param0, char param1) {
         int var2 = 56 % ((param0 + 3) / 56);
         if (param1 < 48) {
           return false;

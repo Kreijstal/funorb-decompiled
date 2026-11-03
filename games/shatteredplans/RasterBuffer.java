@@ -14,7 +14,7 @@ abstract class RasterBuffer {
     abstract void allocate(int param0, java.awt.Component param1, byte param2, int param3);
 
     final void bindAsRenderTarget(byte param0) {
-        gf.a(this.field_c, this.field_g, this.field_d);
+        SoftwareRasterizer.setTarget(this.field_c, this.field_g, this.field_d);
         if (param0 != 109) {
           this.field_b = (java.awt.Image) null;
         }

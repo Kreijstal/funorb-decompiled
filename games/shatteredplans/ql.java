@@ -135,10 +135,10 @@ final class ql extends IntrusiveNode {
           while (true) {
             var3 = param2.requestFrame(param0, (byte) 127);
             while (var3.field_d == 0) {
-              jb.a((byte) -94, 10L);
+              jb.sleep((byte) -94, 10L);
             }
             if (var3.field_d != 1) {
-              jb.a((byte) -93, 100L);
+              jb.sleep((byte) -93, 100L);
               continue;
             }
             break;

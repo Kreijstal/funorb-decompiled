@@ -128,13 +128,13 @@ final class WidgetStyle {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        gf.c(param3, param6, param0, param4, param2, param1);
+        SoftwareRasterizer.fillRectAlpha(param3, param6, param0, param4, param2, param1);
         int var8 = 31 % ((46 - param5) / 58);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = -70 / ((param1 + 2) / 63);
-        gf.g(param0, param4, param2, param5, param3);
+        SoftwareRasterizer.drawLine(param0, param4, param2, param5, param3);
     }
 
     final static boolean a(String param0, byte param1) {
@@ -314,7 +314,7 @@ final class WidgetStyle {
           if (var7 == -1) {
             var7 = this.field_h.field_q + this.field_h.field_J;
           }
-          var8 = gf.field_b >> 2;
+          var8 = SoftwareRasterizer.field_b >> 2;
           var9 = this.field_h.stringWidth(param0);
           var10 = this.field_h.field_J + this.field_h.field_q;
           var11 = 1;
@@ -340,15 +340,15 @@ final class WidgetStyle {
             }
           }
           var12 = param2;
-          if (gf.field_b < var9 + var12 + var5_int) {
-            var12 = -var9 + (gf.field_b - var5_int);
+          if (SoftwareRasterizer.field_b < var9 + var12 + var5_int) {
+            var12 = -var9 + (SoftwareRasterizer.field_b - var5_int);
           }
           var13Lifetime1 = param1 - this.field_h.field_K + 32;
-          if (var6 + (var13Lifetime1 + var10) > gf.field_k) {
+          if (var6 + (var13Lifetime1 + var10) > SoftwareRasterizer.field_k) {
             var13Lifetime1 = param1 + (-var10 - var6);
           }
-          gf.b(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_i);
-          gf.d(1 + var12, 1 + var13Lifetime1, var9 - (-var5_int + 2), var10 + var6 - 2, this.field_k);
+          SoftwareRasterizer.drawRect(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_i);
+          SoftwareRasterizer.fillRect(1 + var12, 1 + var13Lifetime1, var9 - (-var5_int + 2), var10 + var6 - 2, this.field_k);
           this.field_h.a(param0, this.field_d + var12, this.field_t + var13Lifetime1, var9, var10, this.field_p, -1, param3, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -379,15 +379,15 @@ final class WidgetStyle {
           var5_int = this.field_h.stringWidth(param2);
           var6 = this.field_h.field_K + this.field_h.field_q;
           var7 = param3;
-          if (gf.field_b < 6 + var5_int + var7) {
-            var7 = -var5_int + gf.field_b - 6;
+          if (SoftwareRasterizer.field_b < 6 + var5_int + var7) {
+            var7 = -var5_int + SoftwareRasterizer.field_b - 6;
           }
           var8 = 32 - this.field_h.field_K + param1;
-          if (var8 + var6 + 6 > gf.field_k) {
-            var8 = gf.field_k + (-var6 - 6);
+          if (var8 + var6 + 6 > SoftwareRasterizer.field_k) {
+            var8 = SoftwareRasterizer.field_k + (-var6 - 6);
           }
-          gf.b(var7, var8, var5_int + 6, var6 + 6, this.field_p);
-          gf.d(1 + var7, 1 + var8, var5_int + 4, var6 + 4, this.field_k);
+          SoftwareRasterizer.drawRect(var7, var8, var5_int + 6, var6 + 6, this.field_p);
+          SoftwareRasterizer.fillRect(1 + var7, 1 + var8, var5_int + 4, var6 + 4, this.field_k);
           this.field_h.drawString(param2, var7 + 3, 3 + (var8 + this.field_h.field_K), this.field_p, -1);
           if (param0 > -98) {
             this.field_h = (nq) null;

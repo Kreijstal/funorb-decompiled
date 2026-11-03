@@ -33,22 +33,22 @@ final class ClientException extends RuntimeException {
         RuntimeException var5 = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          gf.f(param3, param1, param4 + 1, 10000536);
-          gf.f(param3, param2 + param1, 1 + param4, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param3, param1, param4 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param3, param2 + param1, 1 + param4, 12105912);
           var5_int = 1;
           var6 = param2;
-          if (var5_int + param1 < gf.field_a) {
-            var5_int = -param1 + gf.field_a;
+          if (var5_int + param1 < SoftwareRasterizer.field_a) {
+            var5_int = -param1 + SoftwareRasterizer.field_a;
           }
-          if (gf.field_f < param1 + var6) {
-            var6 = -param1 + gf.field_f;
+          if (SoftwareRasterizer.field_f < param1 + var6) {
+            var6 = -param1 + SoftwareRasterizer.field_f;
           }
           var7 = -57 % ((param0 - 36) / 45);
           for (var8 = var5_int; var8 < var6; var8++) {
             var9 = 48 * var8 / param2 + 152;
             var10 = var9 << 8 | var9 << 16 | var9;
-            gf.field_h[param3 + gf.field_b * (var8 + param1)] = var10;
-            gf.field_h[param4 + param3 + (param1 + var8) * gf.field_b] = var10;
+            SoftwareRasterizer.field_h[param3 + SoftwareRasterizer.field_b * (var8 + param1)] = var10;
+            SoftwareRasterizer.field_h[param4 + param3 + (param1 + var8) * SoftwareRasterizer.field_b] = var10;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

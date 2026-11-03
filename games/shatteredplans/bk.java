@@ -80,8 +80,8 @@ final class bk {
               }
               var5_int++;
               if (WhirlpoolHasher.field_i < var5_int) {
-                if (gf.field_k <= var5_int) {
-                  stackIn_19_0 = -1 + gf.field_k;
+                if (SoftwareRasterizer.field_k <= var5_int) {
+                  stackIn_19_0 = -1 + SoftwareRasterizer.field_k;
                 } else {
                   stackIn_19_0 = var5_int;
                 }

@@ -183,7 +183,7 @@ final class SolMapGenerator extends StandardMapGenerator {
           var9 = var17.field_w;
           wh.a(false);
           var17.bindAsRenderTarget();
-          gf.e(0, 0, gf.field_b, gf.field_k);
+          SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k);
           var15 = new Sprite(var9, var9);
           var18 = var15;
           var18.bindAsRenderTarget();

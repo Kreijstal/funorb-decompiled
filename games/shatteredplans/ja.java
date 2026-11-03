@@ -132,7 +132,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
             this.a((TextFieldWidget) null, 80);
           }
           var4 = this.field_m.l(115);
-          var5 = BattleSnapshot.e(-13299);
+          var5 = BattleSnapshot.getCurrentYear(-13299);
           if (1890 <= var4 &&
             var4 <= -3 + var5) {
             if (tg.a(var2_int, var3, (byte) -126, var4)) {
@@ -167,7 +167,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
           var2_int = this.field_m.d(param0);
           var3 = this.field_m.f((byte) 108);
           var4 = this.field_m.l(66);
-          var5 = BattleSnapshot.e(-13299);
+          var5 = BattleSnapshot.getCurrentYear(-13299);
           if (1890 > var4) {
             stackIn_3_0 = ArchiveSourceManager.field_b;
             return stackIn_3_0;

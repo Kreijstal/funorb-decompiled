@@ -8,8 +8,8 @@ final class nj {
         int var1 = (kh.field_Mb - 640) / 2;
         int var2 = MouseInputHandler.field_f * MouseInputHandler.field_f;
         int var3 = var2 - PlacementOrder.field_t * PlacementOrder.field_t;
-        MapViewState.field_j.a(199, -124 + (gf.field_k - 90), (byte) 49, 90, -(199 * var3 / var2) + var1);
-        AchievementProgress.field_i.a(param0, gf.field_k - 124, (byte) 56, 0, var1 + (202 + var3 * 438 / var2));
+        MapViewState.field_j.a(199, -124 + (SoftwareRasterizer.field_k - 90), (byte) 49, 90, -(199 * var3 / var2) + var1);
+        AchievementProgress.field_i.a(param0, SoftwareRasterizer.field_k - 124, (byte) 56, 0, var1 + (202 + var3 * 438 / var2));
     }
 
     final static String a(String param0, int param1, byte param2) {

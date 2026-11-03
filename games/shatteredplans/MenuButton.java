@@ -39,7 +39,7 @@ final class MenuButton extends MenuComponent {
           return;
         }
         if (this.field_K != -1) {
-          gf.d(this.field_k, this.field_t, this.field_m, this.field_i, this.field_K);
+          SoftwareRasterizer.fillRect(this.field_k, this.field_t, this.field_m, this.field_i, this.field_K);
         }
         if (null != this.field_D) {
           this.field_D.draw((this.field_m - this.field_D.field_z) / 2 + this.field_k, (-this.field_D.field_w + this.field_i) / 2 + this.field_t);
@@ -237,7 +237,7 @@ final class MenuButton extends MenuComponent {
         field_v = new int[7];
         for (var0_int = 0; var0_int < 256; var0_int++) {
           field_u[var0_int] = 65793 * var0_int;
-          field_x[var0_int] = ee.a(ee.a(var0_int >> 1 << 8, var0_int), var0_int >> 2 << 16);
+          field_x[var0_int] = ee.intOr(ee.intOr(var0_int >> 1 << 8, var0_int), var0_int >> 2 << 16);
         }
         int var5 = 0;
         var0_intLifetime1 = var5;

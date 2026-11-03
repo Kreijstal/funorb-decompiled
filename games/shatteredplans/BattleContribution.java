@@ -44,11 +44,11 @@ final class BattleContribution extends IntrusiveNode {
             param1 = param1 + param3;
             param3 = 0;
           }
-          if (param1 + param3 > gf.field_b) {
-            param1 = gf.field_b - param3;
+          if (param1 + param3 > SoftwareRasterizer.field_b) {
+            param1 = SoftwareRasterizer.field_b - param3;
           }
-          if (gf.field_k < param6 + param0) {
-            param6 = -param0 + gf.field_k;
+          if (SoftwareRasterizer.field_k < param6 + param0) {
+            param6 = -param0 + SoftwareRasterizer.field_k;
           }
           var7_int = param4 * param5 >> 8;
           var8 = -var7_int + param5;
@@ -57,9 +57,9 @@ final class BattleContribution extends IntrusiveNode {
             return;
           }
           for (var10 = param0; var10 < var9; var10++) {
-            var11 = param3 + var10 * gf.field_b;
+            var11 = param3 + var10 * SoftwareRasterizer.field_b;
             for (var12 = param1; var12 > 0; var12--) {
-              var13 = gf.field_h[var11];
+              var13 = SoftwareRasterizer.field_h[var11];
               var14 = (16711680 & var13) >> 16;
               var15 = 255 & var13 >> 8;
               var16 = 255 & var13;
@@ -68,7 +68,7 @@ final class BattleContribution extends IntrusiveNode {
               var19 = (var15 * var7_int >> 8) + (var8 * var17 >> 12);
               var20 = (var16 * var7_int >> 8) + (var17 * var8 >> 12);
               var21 = var20 | (var19 << 8 | var18 << 16);
-              gf.field_h[var11] = var21;
+              SoftwareRasterizer.field_h[var11] = var21;
               var11++;
             }
           }
@@ -169,15 +169,15 @@ final class BattleContribution extends IntrusiveNode {
           if (param1 != -64) {
             field_j = -87;
           }
-          var5 = gf.field_b;
-          var6 = gf.field_k;
-          var14 = gf.field_h;
+          var5 = SoftwareRasterizer.field_b;
+          var6 = SoftwareRasterizer.field_k;
+          var14 = SoftwareRasterizer.field_h;
           GameKeyHandler.field_c = new Sprite(10, 14);
           GameKeyHandler.field_c.bindAsRenderTarget();
           for (var8 = 2; 7 > var8; var8++) {
-            gf.j(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
+            SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
-          gf.a(var14, var5, var6);
+          SoftwareRasterizer.setTarget(var14, var5, var6);
           of.field_b = gn.a(0, var4, ValidationIndicator.field_I, nl.field_d, kh.field_Nb);
           SectorCacheStore.field_f.field_M = new IntrusiveDeque();
           return;

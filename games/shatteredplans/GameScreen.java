@@ -965,7 +965,7 @@ final class GameScreen {
             sn.a(var4, -104, var7, (32 - var3_int << 7) / 32 + 128, var5, var6);
             var8 = MenuWindow.a((Sprite) null, var6, var4, var5, -1, var7);
             bs.a(var8, 93);
-            gf.b(3, 3, 0, 0, var4, var7);
+            SoftwareRasterizer.b(3, 3, 0, 0, var4, var7);
             cg.i(0);
             var8.drawAlpha(var5, var6, (var3_int << 7) / 32);
             decompiledFrameRemainder1 = (var40 != 0);
@@ -974,13 +974,13 @@ final class GameScreen {
             if (MatchingTextValidator.field_t.field_h != 1) {
               if (MatchingTextValidator.field_t.field_h == 0) {
                 if (var3_int != 32) {
-                  gf.c(var5, var6, var4, var7, 855316, (var3_int << 8) / 32);
+                  SoftwareRasterizer.fillRectAlpha(var5, var6, var4, var7, 855316, (var3_int << 8) / 32);
                   if (var40 != 0) {
-                    gf.d(var5, var6, var4, var7, 855316);
+                    SoftwareRasterizer.fillRect(var5, var6, var4, var7, 855316);
                     sn.a(var4, -117, var7, 128 + (-var3_int + 32 << 7) / 32, var5, var6);
                   }
                 } else {
-                  gf.d(var5, var6, var4, var7, 855316);
+                  SoftwareRasterizer.fillRect(var5, var6, var4, var7, 855316);
                   if (var40 != 0) {
                     sn.a(var4, -117, var7, 128 + (-var3_int + 32 << 7) / 32, var5, var6);
                   }
@@ -992,8 +992,8 @@ final class GameScreen {
           }
           MidiPcmStream.a(var7, var6, var5, (byte) -60, var4);
           var8_array = new int[4];
-          gf.a(var8_array);
-          gf.d(var5, var6, var5 + var4, var6 + var7);
+          SoftwareRasterizer.saveClip(var8_array);
+          SoftwareRasterizer.setClip(var5, var6, var5 + var4, var6 + var7);
           var9 = 0;
           var10 = 0;
           var11 = this.field_s.field_P.field_z ? 1 : 0;
@@ -1047,8 +1047,8 @@ final class GameScreen {
               var22 = 0;
               if (var21 >= 0) {
                 am.a(var20_int, var18, var14, var22, var21, var19, (byte) -107);
-                gf.a(-1 + var20_int, var19, 16777215);
-                gf.a(var20_int + var21, var19, 16777215);
+                SoftwareRasterizer.setPixel(-1 + var20_int, var19, 16777215);
+                SoftwareRasterizer.setPixel(var20_int + var21, var19, 16777215);
               }
               var18++;
             }
@@ -1076,9 +1076,9 @@ final class GameScreen {
               if (var21Lifetime4 >= 0 ||
                 var40 != 0) {
                 TextFieldValidator.a(var19Lifetime3, var21Lifetime4, var18Lifetime3, var20_intLifetime2, var14, var22Lifetime3, 16403);
-                gf.f(var20_intLifetime2, var19Lifetime3, var21Lifetime4, 0, 192);
-                gf.a(var20_intLifetime2 - 1, var19Lifetime3, 16777215);
-                gf.a(var20_intLifetime2 + var21Lifetime4, var19Lifetime3, 16777215);
+                SoftwareRasterizer.drawHorizontalLineAlpha(var20_intLifetime2, var19Lifetime3, var21Lifetime4, 0, 192);
+                SoftwareRasterizer.setPixel(var20_intLifetime2 - 1, var19Lifetime3, 16777215);
+                SoftwareRasterizer.setPixel(var20_intLifetime2 + var21Lifetime4, var19Lifetime3, 16777215);
               }
               var18Lifetime3++;
             }
@@ -1117,8 +1117,8 @@ final class GameScreen {
             }
           }
           if (decompiledFrameCompleted2) {
-            gf.f(20 + var5 - 1, 20 + var6 - 1, 322, 16777215);
-            gf.f(-1 + (20 + var5), 20 + var6 + 240, 322, 16777215);
+            SoftwareRasterizer.drawHorizontalLine(20 + var5 - 1, 20 + var6 - 1, 322, 16777215);
+            SoftwareRasterizer.drawHorizontalLine(-1 + (20 + var5), 20 + var6 + 240, 322, 16777215);
             stackIn_102_0 = var5 + 320;
             stackIn_102_1 = 125;
           }
@@ -1169,7 +1169,7 @@ final class GameScreen {
             break;
           }
           regionExit2: {
-            gf.d(20 + var5, var6 + 20, var17Lifetime2 + (var5 + 20), var6 + 20 + 240);
+            SoftwareRasterizer.setClip(20 + var5, var6 + 20, var17Lifetime2 + (var5 + 20), var6 + 20 + 240);
             if (this.field_Q != 0 &&
               var16 != null) {
               var24_intLifetime1 = var16[0].length;
@@ -1230,7 +1230,7 @@ final class GameScreen {
                         var38 = stackIn_156_0;
                         while (var38 < (var36 - var31)) {
                           var39 = QuickChatCategoryRegistry.a(var32, -var31 + var36, var38, var33_int, 0);
-                          gf.g(var31 - (-var38 + 1), var34, var31 + var38, var39, var19Lifetime2, this.field_Q);
+                          SoftwareRasterizer.drawLineAlphaExclusive(var31 - (-var38 + 1), var34, var31 + var38, var39, var19Lifetime2, this.field_Q);
                           var34 = var39;
                           var38++;
                         }
@@ -1273,7 +1273,7 @@ final class GameScreen {
                       var38Lifetime1 = stackIn_173_0Lifetime1;
                       while (var38Lifetime1 < (var36Lifetime1 - var31Lifetime2)) {
                         var39Lifetime1 = QuickChatCategoryRegistry.a(var32Lifetime2, var36Lifetime1 - var31Lifetime2, var38Lifetime1, var33_intLifetime1, 0);
-                        gf.g(-1 + var31Lifetime2 + var38Lifetime1, var34Lifetime2, var38Lifetime1 + var31Lifetime2, var39Lifetime1, var19Lifetime2Lifetime1);
+                        SoftwareRasterizer.drawLine(-1 + var31Lifetime2 + var38Lifetime1, var34Lifetime2, var38Lifetime1 + var31Lifetime2, var39Lifetime1, var19Lifetime2Lifetime1);
                         var34Lifetime2 = var39Lifetime1;
                         var38Lifetime1++;
                       }
@@ -1314,7 +1314,7 @@ final class GameScreen {
                     rs.field_Cb.drawString(Integer.toString(var31Lifetime1), var35Lifetime1, 20 + var6 + (var27Lifetime1 + rs.field_Cb.field_J), 16777215, -1);
                     var34Lifetime1Lifetime1 = 0;
                   }
-                  gf.a(var32Lifetime1, 20 + var6, var27Lifetime1, 789516);
+                  SoftwareRasterizer.addVerticalLine(var32Lifetime1, 20 + var6, var27Lifetime1, 789516);
                   var31Lifetime1++;
                 }
                 break;
@@ -1323,7 +1323,7 @@ final class GameScreen {
             stackIn_206_0 = var5;
             stackIn_206_1 = var6;
           }
-          gf.d(stackIn_206_0, stackIn_206_1, var5 + var4, var7 + var6);
+          SoftwareRasterizer.setClip(stackIn_206_0, stackIn_206_1, var5 + var4, var7 + var6);
           if (this.field_s.field_P.field_z ||
             this.field_s.field_n != null &&
             (1 << this.field_s.field_n.field_x & this.field_s.field_P.field_w) != 0) {
@@ -1332,7 +1332,7 @@ final class GameScreen {
           var24 = (MenuComponent) (this.field_B.startForward(0));
           do {
             if (var24 == null) {
-              gf.b(var8_array);
+              SoftwareRasterizer.restoreClip(var8_array);
               break;
             }
             var24.a(127);
@@ -1679,26 +1679,26 @@ final class GameScreen {
           var5 = cl.field_m.toUpperCase() + ": " + DialogRoot.field_E[2];
           rs.field_Cb.a(var5, param3 + 5, param1 + 5, param0 - 10, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
           var6 = UiWidget.field_t.field_z * 2 + rs.field_Cb.stringWidth("= " + vs.field_a);
-          gf.a((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + rs.field_Cb.field_J), var6 + 20, 10 + UiWidget.field_t.field_w * 3, 5, 0, 128);
+          SoftwareRasterizer.fillRoundedRectAlpha((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + rs.field_Cb.field_J), var6 + 20, 10 + UiWidget.field_t.field_w * 3, 5, 0, 128);
           var7 = 29 + (rs.field_Cb.field_J + param1);
           var8 = UiWidget.field_t.field_z + rs.field_Cb.stringWidth("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}));
           ek.field_z.draw((-ek.field_z.field_z + UiWidget.field_t.field_z) / 2 + (param0 - var8) / 2 + param3, var7);
           UiWidget.field_t.draw((-var8 + param0) / 2 + param3, var7 - 9);
-          gf.b(ProductionContent.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
-          gf.b((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + ProductionContent.field_c[2], (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, MusicCrossfadeStream.field_s);
-          gf.b(ProductionContent.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.b(ProductionContent.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.b((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + ProductionContent.field_c[2], (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.b(ProductionContent.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
           rs.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(3)}), UiWidget.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), UiWidget.field_t.field_w / 2 + var7 - 4, 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
           ek.field_z.draw(param3 + ((-var8 + param0) / 2 + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.draw((param0 - var8) / 2 + param3, var7 - 9);
           int var9 = 87 % ((-25 - param2) / 51);
-          gf.b((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + ProductionContent.field_c[0], ul.field_Db[0] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
-          gf.b(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + ProductionContent.field_c[1], ul.field_Db[1] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.b((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + ProductionContent.field_c[0], ul.field_Db[0] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.b(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + ProductionContent.field_c[1], ul.field_Db[1] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
           rs.field_Cb.drawString("= " + QuickChatCategoryRegistry.a(IsolationistAi.field_s, 4371, new String[]{Integer.toString(2)}), 5 + UiWidget.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + UiWidget.field_t.field_w / 2), 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
           ek.field_z.draw(-5 + (param3 + (-var6 + param0) / 2 + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.draw((-var6 + param0) / 2 + param3 - 5, var7 - 9);
-          gf.b(ProductionContent.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          SoftwareRasterizer.b(ProductionContent.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
           ek.field_z.draw(-5 + (UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3) + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2, var7);
           UiWidget.field_t.draw(param3 + (-var6 + param0) / 2 + (UiWidget.field_t.field_z - 5), var7 - 9);
           rs.field_Cb.drawString("= " + vs.field_a, 2 * UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3, UiWidget.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
@@ -1714,7 +1714,7 @@ final class GameScreen {
           var5 = cl.field_m.toUpperCase() + ": " + DialogRoot.field_E[1];
           rs.field_Cb.a(var5, 5 + param0, param2 + 5, -10 + param3, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
           var6 = qe.field_j.field_z + rs.field_Cb.stringWidth("= " + vs.field_a);
-          gf.a(-5 + (param3 - var6) / 2 + param0, 20 + rs.field_Cb.field_J + param2, var6 + 15, qe.field_j.field_w + 10, 5, 0, 128);
+          SoftwareRasterizer.fillRoundedRectAlpha(-5 + (param3 - var6) / 2 + param0, 20 + rs.field_Cb.field_J + param2, var6 + 15, qe.field_j.field_w + 10, 5, 0, 128);
           qe.field_j.draw(param0 + (param3 - var6) / 2, rs.field_Cb.field_J + (param2 + 20));
           rs.field_Cb.drawString("= " + vs.field_a, (param3 - var6) / 2 + (param0 + qe.field_j.field_z), 25 + rs.field_Cb.field_J + (qe.field_j.field_w / 2 + param2), 16777215, param1);
         } catch (RuntimeException runtimeException) {
@@ -2225,7 +2225,7 @@ final class GameScreen {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_s.field_f &&
             !this.field_s.field_P.field_z) {
-            gf.a(MusicCrossfadeStream.field_F.field_z * 3 + 521, 4, rk.field_j.field_z, -2 + rs.field_Cb.field_J, 2, 0, 128);
+            SoftwareRasterizer.fillRoundedRectAlpha(MusicCrossfadeStream.field_F.field_z * 3 + 521, 4, rk.field_j.field_z, -2 + rs.field_Cb.field_J, 2, 0, 128);
             var2_int = (this.field_s.field_S + 49) / 50;
             if (this.field_s.field_S < 0) {
               rs.field_Cb.drawCentred(this.formatMinutesSeconds(false, Math.abs(var2_int)), 521 + MusicCrossfadeStream.field_F.field_z * 3 + rk.field_j.field_z / 2, rs.field_Cb.field_J * 3 / 4 + 3, 16711680, -1);
@@ -2276,8 +2276,8 @@ final class GameScreen {
           if (this.field_U != -1) {
             var4 = this.field_x;
             var5 = 5 + (this.field_k.field_i + this.field_k.field_t);
-            gf.a(this.field_k.field_k + 1, var5, this.field_T.field_z + 10, rs.field_Cb.field_J, 5, 0);
-            gf.f(this.field_k.field_k, -1 + var5, 12 + this.field_T.field_z, rs.field_Cb.field_J + 2, 6, 2052949);
+            SoftwareRasterizer.fillRoundedRect(this.field_k.field_k + 1, var5, this.field_T.field_z + 10, rs.field_Cb.field_J, 5, 0);
+            SoftwareRasterizer.drawRoundedRect(this.field_k.field_k, -1 + var5, 12 + this.field_T.field_z, rs.field_Cb.field_J + 2, 6, 2052949);
             sa.a(var4 * 5, this.field_k.field_k + 6, (byte) 116, 32, this.field_T, var5 - 4);
             if (this.field_ib) {
               var6 = this.field_x - 125;
@@ -2300,7 +2300,7 @@ final class GameScreen {
             var4Lifetime1 = 64 - var4Lifetime1;
           }
           var4Lifetime1 = 10 * var4Lifetime1;
-          var5Lifetime1 = SolVictoryChecker.a(16777215, 16711680, -125, var4Lifetime1);
+          var5Lifetime1 = SolVictoryChecker.blendColours(16777215, 16711680, -125, var4Lifetime1);
           if (this.field_e.field_A &&
             this.field_mb.field_s) {
             GameKeyHandler.field_b.b(this.field_mb.field_k, this.field_mb.field_t, var5Lifetime1);
@@ -2417,7 +2417,7 @@ final class GameScreen {
         try {
           if (PlacementOrder.field_t > 0 &&
             IntrusiveDequeCursor.field_b) {
-            gf.h(0, 0, gf.field_b, tg.field_c.field_N);
+            SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, tg.field_c.field_N);
             so.field_v.b(param1, -66);
           }
           if (param0 != -57) {
@@ -2428,7 +2428,7 @@ final class GameScreen {
             return;
           }
           if (IntrusiveNodeHashTable.field_e) {
-            gf.h(0, 0, gf.field_b, tg.field_c.field_N);
+            SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, tg.field_c.field_N);
             MouseInputHandler.field_d.b(param1, -83);
           }
           return;
@@ -2861,8 +2861,8 @@ final class GameScreen {
           var6 = 250;
           ei.a(true, var6, var3, -12394, var5, var4, 3974311);
           var7 = new int[4];
-          gf.a(var7);
-          gf.d(var4 + rs.field_Cb.field_J / 2, var5, -(rs.field_Cb.field_J / 2) + var4 + var3, var5 + var6);
+          SoftwareRasterizer.saveClip(var7);
+          SoftwareRasterizer.setClip(var4 + rs.field_Cb.field_J / 2, var5, -(rs.field_Cb.field_J / 2) + var4 + var3, var5 + var6);
           var9 = this.field_s.field_P.field_x;
           if (var9 instanceof SolVictoryChecker) {
             var8 = la.field_n;
@@ -2908,7 +2908,7 @@ final class GameScreen {
           var11 = new Sprite(hb.field_b[0].field_w, -rs.field_Cb.field_J + 450 - (10 + hb.field_b[0].field_z / 2));
           RandomAccessCacheFile.a(param0 ^ -5630);
           var11.bindAsRenderTarget();
-          gf.i(0, 0, var11.field_z, var11.field_w, this.field_s.field_P.field_v[var10].field_k, 0);
+          SoftwareRasterizer.fillRectGradient(0, 0, var11.field_z, var11.field_w, this.field_s.field_P.field_v[var10].field_k, 0);
           cg.i(param0 ^ param0);
           var11.rotate90();
           var11.drawAlpha(5 + (rs.field_Cb.field_J / 2 + var4), rs.field_Cb.field_J + var5 + 10, 64);
@@ -2957,7 +2957,7 @@ final class GameScreen {
           if (var9 instanceof DerelictVictoryChecker) {
             this.a(5 + rs.field_Cb.field_J / 2 + var4, -rs.field_Cb.field_J + 439, -117, rs.field_Cb.field_J + var5);
           }
-          gf.b(var7);
+          SoftwareRasterizer.restoreClip(var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3030,7 +3030,7 @@ final class GameScreen {
               var8 = new int[var3];
               var9 = 0;
               while (var3 > var9) {
-                var8[var9] = QuickChatCategoryRegistry.a(var6[var9], 32, this.field_kb, var7[var9], CandidateLink.a(param0, 410));
+                var8[var9] = QuickChatCategoryRegistry.a(var6[var9], 32, this.field_kb, var7[var9], CandidateLink.intXor(param0, 410));
                 var9++;
               }
               var4[var5] = var8;
@@ -3651,8 +3651,8 @@ final class GameScreen {
           if (10 + (var5 + var3_int) > 639) {
             var3_int = -1 - var5 + 630;
           }
-          gf.a(var3_int, var4, var5 + 10, 13, 5, 0, 192);
-          gf.f(-1 + var3_int, var4 - 1, var5 + 12, 15, 6, 3974311);
+          SoftwareRasterizer.fillRoundedRectAlpha(var3_int, var4, var5 + 10, 13, 5, 0, 192);
+          SoftwareRasterizer.drawRoundedRect(-1 + var3_int, var4 - 1, var5 + 12, 15, 6, 3974311);
           rs.field_Cb.drawString(param1, 6 + var3_int, 3 + (var4 + rs.field_Cb.field_J / 2), 16777215, -1);
           if (param0) {
             this.field_ob = (int[]) null;
@@ -3916,13 +3916,13 @@ final class GameScreen {
                   var6 = rs.field_Cb.stringWidth(this.field_o);
                   this.field_T = new Sprite(var6, rs.field_Cb.field_q + rs.field_Cb.field_J);
                   bs.a(this.field_T, 92);
-                  gf.b();
+                  SoftwareRasterizer.clear();
                   rs.field_Cb.drawRightAligned(this.field_o, this.field_T.field_z, rs.field_Cb.field_J, 16777215, -1);
                   this.field_eb = this.field_T.copy();
                   this.field_eb.bindAsRenderTarget();
-                  gf.b();
+                  SoftwareRasterizer.clear();
                   rs.field_Cb.drawRightAligned(this.field_o, this.field_T.field_z, rs.field_Cb.field_J, 16777215, -1);
-                  gf.b(1, 1, 0, 0, this.field_eb.field_z, this.field_eb.field_w);
+                  SoftwareRasterizer.b(1, 1, 0, 0, this.field_eb.field_z, this.field_eb.field_w);
                   cg.i(0);
                 }
               }
@@ -3967,27 +3967,27 @@ final class GameScreen {
             gi.a(false);
             RandomAccessCacheFile.a(-127);
             MatchingTextValidator.field_r.bindAsRenderTarget();
-            gf.d(0, 0, MatchingTextValidator.field_r.field_z, MatchingTextValidator.field_r.field_w, 0);
+            SoftwareRasterizer.fillRect(0, 0, MatchingTextValidator.field_r.field_z, MatchingTextValidator.field_r.field_w, 0);
             if (AchievementProgress.field_k) {
               aq.field_i.draw(10, 10);
-              var5Lifetime1 = SolVictoryChecker.a(0, 16777215, -96, RasterBuffer.field_f);
+              var5Lifetime1 = SolVictoryChecker.blendColours(0, 16777215, -96, RasterBuffer.field_f);
               MatchingTextValidator.field_r.addOutline(var5Lifetime1);
               MatchingTextValidator.field_r.addOutline(var5Lifetime1);
               MatchingTextValidator.field_r.bindAsRenderTarget();
-              gf.b(5, 5, 0, 0, MatchingTextValidator.field_r.field_z, MatchingTextValidator.field_r.field_w);
+              SoftwareRasterizer.b(5, 5, 0, 0, MatchingTextValidator.field_r.field_z, MatchingTextValidator.field_r.field_w);
             }
             kb.field_w.bindAsRenderTarget();
-            gf.d(0, 0, kb.field_w.field_z, kb.field_w.field_w, 0);
+            SoftwareRasterizer.fillRect(0, 0, kb.field_w.field_z, kb.field_w.field_w, 0);
             if (ListContent.field_g) {
               rk.field_j.draw(10, 10);
-              var5Lifetime1Lifetime1 = SolVictoryChecker.a(0, 16777215, -103, RasterBuffer.field_f);
+              var5Lifetime1Lifetime1 = SolVictoryChecker.blendColours(0, 16777215, -103, RasterBuffer.field_f);
               kb.field_w.addOutline(var5Lifetime1Lifetime1);
               kb.field_w.addOutline(var5Lifetime1Lifetime1);
               kb.field_w.bindAsRenderTarget();
-              gf.b(2, 2, 0, 0, kb.field_w.field_z, kb.field_w.field_w);
+              SoftwareRasterizer.b(2, 2, 0, 0, kb.field_w.field_z, kb.field_w.field_w);
               var6Lifetime1 = 0;
               while (!(var6Lifetime1 >= kb.field_w.field_B.length)) {
-                kb.field_w.field_B[var6Lifetime1] = 16777215 + we.a(kb.field_w.field_B[var6Lifetime1] << 8, -16777216);
+                kb.field_w.field_B[var6Lifetime1] = 16777215 + we.intAnd(kb.field_w.field_B[var6Lifetime1] << 8, -16777216);
                 var6Lifetime1++;
                 if (var7 != 0) {
                   return;
@@ -5163,8 +5163,8 @@ final class GameScreen {
                 break scanLoop1;
               }
               if (stackIn_45_0 != stackIn_45_1) {
-                gf.c(var3 % this.field_t.field_z, var3 / this.field_t.field_z, 16711680, 128);
-                this.field_t.field_B[var3] = ee.a(this.field_t.field_B[var3], -16777216);
+                SoftwareRasterizer.blendPixel(var3 % this.field_t.field_z, var3 / this.field_t.field_z, 16711680, 128);
+                this.field_t.field_B[var3] = ee.intOr(this.field_t.field_B[var3], -16777216);
               }
               var3++;
               continue;

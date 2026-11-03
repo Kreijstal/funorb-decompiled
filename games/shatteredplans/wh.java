@@ -10,9 +10,9 @@ final class wh {
     final static long a(int param0) {
         if (param0 != 18) {
           field_c = (kj) null;
-          return pr.a(14274) - IntrusiveDeque.field_e;
+          return pr.currentTimeMillis(14274) - IntrusiveDeque.field_e;
         }
-        return pr.a(14274) - IntrusiveDeque.field_e;
+        return pr.currentTimeMillis(14274) - IntrusiveDeque.field_e;
     }
 
     final static void a(boolean param0) {
@@ -23,7 +23,7 @@ final class wh {
           if (var1 == null) {
             var1 = new cl();
           }
-          var1.a(gf.field_i, gf.field_f, gf.field_h, gf.field_k, gf.field_a, 5, gf.field_b, gf.field_l);
+          var1.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, 5, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
           ta.field_b.addLast((byte) -113, var1);
           return;
         }
@@ -33,7 +33,7 @@ final class wh {
         if (var1Lifetime1 == null) {
           var1Lifetime1 = new cl();
         }
-        var1Lifetime1.a(gf.field_i, gf.field_f, gf.field_h, gf.field_k, gf.field_a, 5, gf.field_b, gf.field_l);
+        var1Lifetime1.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, 5, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
         ta.field_b.addLast((byte) -113, var1Lifetime1);
     }
 
@@ -70,14 +70,14 @@ final class wh {
             var7 = param0[1].field_o;
             param0[0].draw(param4, param1);
             param0[2].draw(param2 + param4 - var6, param1);
-            gf.a(fc.field_g);
-            gf.i(var5_int + param4, param1, -var6 + param2 + param4, param0[1].field_p + param1);
+            SoftwareRasterizer.saveClip(fc.field_g);
+            SoftwareRasterizer.intersectClip(var5_int + param4, param1, -var6 + param2 + param4, param0[1].field_p + param1);
             var8 = var5_int + param4;
             var9 = -var6 + param4 + param2;
             for (param4 = var8; param4 < var9; param4 = param4 + var7) {
               param0[1].draw(param4, param1);
             }
-            gf.b(fc.field_g);
+            SoftwareRasterizer.restoreClip(fc.field_g);
             return;
           }
           return;

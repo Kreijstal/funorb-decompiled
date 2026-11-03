@@ -44,7 +44,7 @@ final class SpriteButton extends MenuComponent {
         }
     }
 
-    static long a(long param0, long param1) {
+    static long longOr(long param0, long param1) {
         return param0 | param1;
     }
 

@@ -93,7 +93,7 @@ final class IntrusiveNodeHashTable {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var3 > var6_int; var6_int++) {
-              var9[var6_int] = eo.field_fb[we.a((int) var20[var6_int], 255)];
+              var9[var6_int] = eo.field_fb[we.intAnd((int) var20[var6_int], 255)];
             }
             var1[var2] = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var21);
           } else {
@@ -102,7 +102,7 @@ final class IntrusiveNodeHashTable {
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = ee.a(eo.field_fb[we.a((int) var20[var7], 255)], we.a(255, (int) var22[var7]) << 24);
+              var6[var7] = ee.intOr(eo.field_fb[we.intAnd((int) var20[var7], 255)], we.intAnd(255, (int) var22[var7]) << 24);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], IntHashIndex.field_g[var2], var16));
           }

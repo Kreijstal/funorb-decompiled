@@ -182,7 +182,7 @@ class qr extends hm {
             var9 = 0;
             while (50 > var9) {
               try {
-                var10_int = lr.a((byte) 27);
+                var10_int = lr.nextRandomInt((byte) 27);
                 var11 = var8 * 100 / 45;
                 var12 = (int)Math.sqrt((double)var11);
                 var13 = param4;
@@ -330,7 +330,7 @@ class qr extends hm {
     }
 
     final void b(boolean param0, int param1) {
-        this.a(false, true, false, 0, 0, -2147483648, false, gf.field_k, false, param0, gf.field_b);
+        this.a(false, true, false, 0, 0, -2147483648, false, SoftwareRasterizer.field_k, false, param0, SoftwareRasterizer.field_b);
         int var3 = 114 % ((param1 - 25) / 62);
     }
 
@@ -450,19 +450,19 @@ class qr extends hm {
         this.field_B = param0 + this.field_hb;
         this.field_mb = this.field_mb + var7Lifetime3;
         this.field_N = this.field_db + param1;
-        var9 = gf.field_i;
-        var10 = gf.field_a;
-        var11 = gf.field_l;
-        var12 = gf.field_f;
-        gf.i(this.field_B, this.field_N, this.field_B + this.field_K, this.field_N + this.field_mb);
+        var9 = SoftwareRasterizer.field_i;
+        var10 = SoftwareRasterizer.field_a;
+        var11 = SoftwareRasterizer.field_l;
+        var12 = SoftwareRasterizer.field_f;
+        SoftwareRasterizer.intersectClip(this.field_B, this.field_N, this.field_B + this.field_K, this.field_N + this.field_mb);
         var13 = 0;
         if (!us.field_c &&
           param3 &&
           je.field_d != 0 &&
-          gf.field_i <= PointsVictoryChecker.field_p &&
-          gf.field_l > PointsVictoryChecker.field_p &&
-          SliderWidget.field_P >= gf.field_a &&
-          SliderWidget.field_P < gf.field_f) {
+          SoftwareRasterizer.field_i <= PointsVictoryChecker.field_p &&
+          SoftwareRasterizer.field_l > PointsVictoryChecker.field_p &&
+          SliderWidget.field_P >= SoftwareRasterizer.field_a &&
+          SliderWidget.field_P < SoftwareRasterizer.field_f) {
           this.field_Q = -this.field_B + PointsVictoryChecker.field_p;
           var13 = 1;
           this.field_X = -this.field_N + SliderWidget.field_P;
@@ -477,7 +477,7 @@ class qr extends hm {
         if (AllianceExpiredEvent.field_n == 0) {
           this.field_ub = 0;
         }
-        stackIn_34_1 = (!ProxySocketConnector.field_j) && (gf.field_i <= pd.field_k) && (gf.field_l > pd.field_k) && (gf.field_a <= bb.field_b) && (gf.field_f > bb.field_b);
+        stackIn_34_1 = (!ProxySocketConnector.field_j) && (SoftwareRasterizer.field_i <= pd.field_k) && (SoftwareRasterizer.field_l > pd.field_k) && (SoftwareRasterizer.field_a <= bb.field_b) && (SoftwareRasterizer.field_f > bb.field_b);
         this.field_v = stackIn_34_1;
         stackIn_39_1 = (this.field_v) && (this.field_ub == AllianceExpiredEvent.field_n) && (param3);
         this.field_L = stackIn_39_1;
@@ -494,7 +494,7 @@ class qr extends hm {
         if (var13 != 0) {
           us.field_c = true;
         }
-        gf.d(var9, var10, var11, var12);
+        SoftwareRasterizer.setClip(var9, var10, var11, var12);
         if (this.field_ub != 0 &&
           this.field_P) {
           this.field_db = -param1 + (bb.field_b - this.field_X);
@@ -807,7 +807,7 @@ class qr extends hm {
         if (param1 != -20429) {
           this.field_z = (String) null;
         }
-        this.a(0, 0, gf.field_b, true, -98, gf.field_k);
+        this.a(0, 0, SoftwareRasterizer.field_b, true, -98, SoftwareRasterizer.field_k);
     }
 
     private final void a(boolean param0, boolean param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9, int param10) {
@@ -834,11 +834,11 @@ class qr extends hm {
         var25 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_B = param3 + this.field_hb;
         this.field_N = param4 + this.field_db;
-        var12 = gf.field_i;
-        var13 = gf.field_a;
-        var14 = gf.field_l;
-        var15 = gf.field_f;
-        gf.i(this.field_B, this.field_N, this.field_B + this.field_K, this.field_mb + this.field_N);
+        var12 = SoftwareRasterizer.field_i;
+        var13 = SoftwareRasterizer.field_a;
+        var14 = SoftwareRasterizer.field_l;
+        var15 = SoftwareRasterizer.field_f;
+        SoftwareRasterizer.intersectClip(this.field_B, this.field_N, this.field_B + this.field_K, this.field_mb + this.field_N);
         param1 = param1 & this.field_s;
         if (param5 != -2147483648) {
           qr.a((int[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, 117, (String[][]) null, (Archive) null, (Archive) null, 119, (Archive) null, (Sprite[][]) null, 82, false, (Sprite[][]) null);
@@ -990,7 +990,7 @@ class qr extends hm {
             var23_ref = (qr) (this.field_M.nextForward((byte) -71));
           }
         }
-        gf.d(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
     final static void a(Archive param0, byte param1) {

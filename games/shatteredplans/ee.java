@@ -104,7 +104,7 @@ final class ee extends ms {
         }
     }
 
-    static int a(int param0, int param1) {
+    static int intOr(int param0, int param1) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;

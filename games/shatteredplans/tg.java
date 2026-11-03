@@ -77,35 +77,35 @@ final class tg {
           var4_int = 0;
           var5 = 0;
           var6 = param1.field_z;
-          if (gf.field_i > param3) {
-            var6 = var6 + (param3 - gf.field_i);
-            var4_int = -param3 + gf.field_i;
-            param3 = gf.field_i;
+          if (SoftwareRasterizer.field_i > param3) {
+            var6 = var6 + (param3 - SoftwareRasterizer.field_i);
+            var4_int = -param3 + SoftwareRasterizer.field_i;
+            param3 = SoftwareRasterizer.field_i;
           }
           var7 = param1.field_w;
-          if (param0 < gf.field_a) {
-            var5 = -param0 + gf.field_a;
-            var7 = var7 + (-gf.field_a + param0);
-            param0 = gf.field_a;
+          if (param0 < SoftwareRasterizer.field_a) {
+            var5 = -param0 + SoftwareRasterizer.field_a;
+            var7 = var7 + (-SoftwareRasterizer.field_a + param0);
+            param0 = SoftwareRasterizer.field_a;
           }
-          if (var6 + param3 > gf.field_l) {
-            var6 = gf.field_l - param3;
+          if (var6 + param3 > SoftwareRasterizer.field_l) {
+            var6 = SoftwareRasterizer.field_l - param3;
           }
           var8 = -74 % ((param2 + 81) / 43);
-          if (var7 + param0 > gf.field_f) {
-            var7 = -param0 + gf.field_f;
+          if (var7 + param0 > SoftwareRasterizer.field_f) {
+            var7 = -param0 + SoftwareRasterizer.field_f;
           }
           var9 = var4_int + var5 * param1.field_z;
           var10 = -var6 + param1.field_z;
-          var11 = gf.field_b * param0 + param3;
-          var12 = -var6 + gf.field_b;
+          var11 = SoftwareRasterizer.field_b * param0 + param3;
+          var12 = -var6 + SoftwareRasterizer.field_b;
           for (param0 = -var7; 0 > param0; param0++) {
             for (param3 = -var6; 0 > param3; param3++) {
               incrementValue$0 = var9;
               var9++;
               var13 = 255 & param1.field_B[incrementValue$0];
               if (var13 != 0) {
-                var14 = gf.field_h[var11];
+                var14 = SoftwareRasterizer.field_h[var11];
                 if (255 > var13) {
                   var13 = var13 >> 2;
                   var15 = var14 & 65280;
@@ -121,7 +121,7 @@ final class tg {
                 }
                 incrementValue$1 = var11;
                 var11++;
-                gf.field_h[incrementValue$1] = var14;
+                SoftwareRasterizer.field_h[incrementValue$1] = var14;
               } else {
                 var11++;
               }

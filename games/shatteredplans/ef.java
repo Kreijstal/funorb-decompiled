@@ -65,7 +65,7 @@ final class ef {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int roundUpToMultipleOfEight(int param0, int param1) {
         int var3 = 0;
         int var2 = 0;
         if ((param0 & 7) != 0) {

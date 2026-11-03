@@ -63,7 +63,7 @@ final class ce extends rr {
           if (!param0) {
             field_w = (String) null;
           }
-          stackIn_3_0 = StatusContent.a('*', param1.field_s.length(), -34);
+          stackIn_3_0 = StatusContent.repeatChar('*', param1.field_s.length(), -34);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

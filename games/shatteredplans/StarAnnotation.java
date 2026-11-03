@@ -44,7 +44,7 @@ final class StarAnnotation extends IntrusiveNode {
               var2_int = param1 - sa.field_a.position;
             }
             wg.field_f.readFully(sa.field_a.payload, var2_int, sa.field_a.position, (byte) 119);
-            IntrusiveDeque.field_e = pr.a(14274);
+            IntrusiveDeque.field_e = pr.currentTimeMillis(14274);
             sa.field_a.position = sa.field_a.position + var2_int;
             if (sa.field_a.position < param1) {
               return false;

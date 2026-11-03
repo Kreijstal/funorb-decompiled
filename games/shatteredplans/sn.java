@@ -37,10 +37,10 @@ final class sn {
         }
         aq.a((byte) -40, SecondaryNodeHashTable.field_i);
         wn.c();
-        gf.b();
+        SoftwareRasterizer.clear();
         gq.e(-70);
         if (var5 < 256) {
-          gf.c(0, 0, gf.field_b, gf.field_k, 0, 256 - var5);
+          SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k, 0, 256 - var5);
         }
         Star.f((byte) -47);
         if (param1 != 28318) {
@@ -77,7 +77,7 @@ final class sn {
         return;
     }
 
-    final static String a(char param0, byte param1) {
+    final static String charToString(char param0, byte param1) {
         if (param1 >= -25) {
           return (String) null;
         }
@@ -147,11 +147,11 @@ final class sn {
             return;
           }
           if (param3 == 0) {
-            gf.d(param4, param5, param0, param2, 0);
+            SoftwareRasterizer.fillRect(param4, param5, param0, param2, 0);
             return;
           }
           if (param3 == 128) {
-            gf.h(param4, param5, param0, param2);
+            SoftwareRasterizer.clearRect(param4, param5, param0, param2);
             return;
           }
           if (param4 < 0) {
@@ -162,20 +162,20 @@ final class sn {
             param2 = param2 + param5;
             param5 = 0;
           }
-          if (param4 + param0 > gf.field_b) {
-            param0 = gf.field_b - param4;
+          if (param4 + param0 > SoftwareRasterizer.field_b) {
+            param0 = SoftwareRasterizer.field_b - param4;
           }
           var6_int = 49 / ((param1 - 38) / 61);
-          if (param2 + param5 > gf.field_k) {
-            param2 = gf.field_k - param5;
+          if (param2 + param5 > SoftwareRasterizer.field_k) {
+            param2 = SoftwareRasterizer.field_k - param5;
           }
           param4--;
           var7 = param5 + param2;
           for (var8 = param5; var8 < var7; var8++) {
-            var9 = param4 + var8 * gf.field_b;
+            var9 = param4 + var8 * SoftwareRasterizer.field_b;
             for (var10 = param0; 0 < var10; var10--) {
               var9++;
-              var11 = gf.field_h[var9];
+              var11 = SoftwareRasterizer.field_h[var9];
               var12 = var11 & 16711935;
               var13 = var11 & 65280;
               var12 = var12 * param3;
@@ -183,7 +183,7 @@ final class sn {
               var13 = var13 * param3;
               var13 = var13 & 16711680;
               var11Lifetime1 = (var13 | var12) >> 8;
-              gf.field_h[var9] = var11Lifetime1;
+              SoftwareRasterizer.field_h[var9] = var11Lifetime1;
             }
           }
           return;

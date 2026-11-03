@@ -2289,7 +2289,7 @@ class StandardAi implements Ai {
           this.d(-52);
         }
         for (var5Lifetime1 = 0; var2 > var5Lifetime1; var5Lifetime1++) {
-          this.field_b[var5Lifetime1] = this.a(var4, CandidateLink.a(param0, -18484), this.field_g.field_v[var5Lifetime1]);
+          this.field_b[var5Lifetime1] = this.a(var4, CandidateLink.intXor(param0, -18484), this.field_g.field_v[var5Lifetime1]);
         }
         for (var5Lifetime2 = 0; var2 > var5Lifetime2; var5Lifetime2++) {
           var6Lifetime1 = this.field_g.field_m[var5Lifetime2];

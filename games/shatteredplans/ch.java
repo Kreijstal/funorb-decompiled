@@ -22,31 +22,31 @@ final class ch implements wr {
           var13 = var14;
           var12 = var13;
           var8 = var12;
-          gf.a(var14);
+          SoftwareRasterizer.saveClip(var14);
           if (param2 * 2 > param3) {
             return;
           }
-          gf.f(param2 + param4, param5, param3 - 2 * param2, param1);
-          gf.f(param2 + param4, param5 + param7, -(2 * param2) + param3, param6);
-          gf.i(param4, param5, param4 + param2, param5 + param2);
-          gf.b(param2 + param4, param5 + param2, param2, param1);
-          gf.b(var14);
-          gf.i(param4 + (param3 - param2), param5, param4 + param3, param5 + param2);
-          gf.b(-param2 + param3 + (param4 - 1), param5 + param2, param2, param1);
-          gf.b(var14);
-          gf.i(param4, -param2 + (param7 + param5), param4 + param2, param5 + param7);
-          gf.b(param4 + param2, -1 + (param7 + param5 - param2), param2, param6);
-          gf.b(var14);
-          gf.i(-param2 + (param3 + param4), param5 + param7 - param2, param4 + param3, param5 + param7);
-          gf.b(-1 + param4 - (-param3 + param2), param7 + param5 - (param2 + 1), param2, param6);
-          gf.b(var14);
+          SoftwareRasterizer.drawHorizontalLine(param2 + param4, param5, param3 - 2 * param2, param1);
+          SoftwareRasterizer.drawHorizontalLine(param2 + param4, param5 + param7, -(2 * param2) + param3, param6);
+          SoftwareRasterizer.intersectClip(param4, param5, param4 + param2, param5 + param2);
+          SoftwareRasterizer.drawCircle(param2 + param4, param5 + param2, param2, param1);
+          SoftwareRasterizer.restoreClip(var14);
+          SoftwareRasterizer.intersectClip(param4 + (param3 - param2), param5, param4 + param3, param5 + param2);
+          SoftwareRasterizer.drawCircle(-param2 + param3 + (param4 - 1), param5 + param2, param2, param1);
+          SoftwareRasterizer.restoreClip(var14);
+          SoftwareRasterizer.intersectClip(param4, -param2 + (param7 + param5), param4 + param2, param5 + param7);
+          SoftwareRasterizer.drawCircle(param4 + param2, -1 + (param7 + param5 - param2), param2, param6);
+          SoftwareRasterizer.restoreClip(var14);
+          SoftwareRasterizer.intersectClip(-param2 + (param3 + param4), param5 + param7 - param2, param4 + param3, param5 + param7);
+          SoftwareRasterizer.drawCircle(-1 + param4 - (-param3 + param2), param7 + param5 - (param2 + 1), param2, param6);
+          SoftwareRasterizer.restoreClip(var14);
           if (param0 != 20) {
             field_a = (String) null;
           }
           for (var9 = 0; -20 + param7 > var9; var9++) {
-            var10 = SolVictoryChecker.a(param1, param6, param0 ^ -72, 256 * var9 / (param7 - 20));
-            gf.a(param4, param2 + (param5 + var9), var10);
-            gf.a(-1 + (param3 + param4), var9 + (param5 + param2), var10);
+            var10 = SolVictoryChecker.blendColours(param1, param6, param0 ^ -72, 256 * var9 / (param7 - 20));
+            SoftwareRasterizer.setPixel(param4, param2 + (param5 + var9), var10);
+            SoftwareRasterizer.setPixel(-1 + (param3 + param4), var9 + (param5 + param2), var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

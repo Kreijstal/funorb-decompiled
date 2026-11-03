@@ -143,7 +143,7 @@ final class GameRules {
     final static void a(int param0, int param1) {
         try {
           try {
-            ll.a(GameScreen.getHostApplet((byte) 124), "resizing", new Object[]{new Integer(param1)}, param0 + 15355);
+            ll.callJavaScriptWithArguments(GameScreen.getHostApplet((byte) 124), "resizing", new Object[]{new Integer(param1)}, param0 + 15355);
           } catch (Throwable throwable) {
           }
           if (param0 == -15469) {

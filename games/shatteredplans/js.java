@@ -99,7 +99,7 @@ final class js {
             }
             try {
               var3 = "tuhstatbut";
-              var4 = (String) (ll.a("getcookies", param1, (byte) 127));
+              var4 = (String) (ll.callJavaScript("getcookies", param1, (byte) 127));
               var5 = so.a(var4, ';', 116);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -140,7 +140,7 @@ final class js {
         return d.field_a.field_Eb;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int nextPowerOfTwo(int param0, byte param1) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;

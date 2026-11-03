@@ -29,40 +29,40 @@ final class so extends qe {
         int var10Lifetime1;
         int var10Lifetime2;
         try {
-          var4_int = param1 + gf.field_b * param2;
+          var4_int = param1 + SoftwareRasterizer.field_b * param2;
           var5 = param0;
           var6 = param3.field_w;
           var7 = param3.field_z;
-          var8 = -var7 + gf.field_b;
+          var8 = -var7 + SoftwareRasterizer.field_b;
           var9 = 0;
-          if (gf.field_a > param2) {
-            var10 = gf.field_a - param2;
+          if (SoftwareRasterizer.field_a > param2) {
+            var10 = SoftwareRasterizer.field_a - param2;
             var6 = var6 - var10;
-            param2 = gf.field_a;
+            param2 = SoftwareRasterizer.field_a;
             var5 = var5 + var10 * var7;
-            var4_int = var4_int + gf.field_b * var10;
+            var4_int = var4_int + SoftwareRasterizer.field_b * var10;
           }
-          if (param1 < gf.field_i) {
-            var10Lifetime1 = -param1 + gf.field_i;
+          if (param1 < SoftwareRasterizer.field_i) {
+            var10Lifetime1 = -param1 + SoftwareRasterizer.field_i;
             var5 = var5 + var10Lifetime1;
             var9 = var9 + var10Lifetime1;
             var8 = var8 + var10Lifetime1;
             var4_int = var4_int + var10Lifetime1;
             var7 = var7 - var10Lifetime1;
-            param1 = gf.field_i;
+            param1 = SoftwareRasterizer.field_i;
           }
-          if (var6 + param2 > gf.field_f) {
-            var6 = var6 - (param2 - (-var6 + gf.field_f));
+          if (var6 + param2 > SoftwareRasterizer.field_f) {
+            var6 = var6 - (param2 - (-var6 + SoftwareRasterizer.field_f));
           }
-          if (gf.field_l < param1 + var7) {
-            var10Lifetime2 = -gf.field_l + (param1 + var7);
+          if (SoftwareRasterizer.field_l < param1 + var7) {
+            var10Lifetime2 = -SoftwareRasterizer.field_l + (param1 + var7);
             var7 = var7 - var10Lifetime2;
             var9 = var9 + var10Lifetime2;
             var8 = var8 + var10Lifetime2;
           }
           if (0 < var7 &&
             var6 > 0) {
-            ImageProducerRasterBuffer.a(param3.field_B, var5, gf.field_h, 0, param0 - 28646, var7, var4_int, var9, var6, var8);
+            ImageProducerRasterBuffer.a(param3.field_B, var5, SoftwareRasterizer.field_h, 0, param0 - 28646, var7, var4_int, var9, var6, var8);
             return;
           }
           return;

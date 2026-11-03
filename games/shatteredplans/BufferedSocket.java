@@ -88,7 +88,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.field_p != null) {
             while (this.field_p.field_d == 0) {
-              jb.a((byte) -111, 1L);
+              jb.sleep((byte) -111, 1L);
             }
             if (this.field_p.field_d == 1) {
               try {
@@ -151,7 +151,7 @@ final class BufferedSocket implements Runnable {
         if (param0 != -6187) {
           BufferedSocket.clearStatics((byte) 13);
         }
-        gf.i(param4, param3, param1, param2);
+        SoftwareRasterizer.intersectClip(param4, param3, param1, param2);
     }
 
     final int available(int param0) throws IOException {
@@ -368,16 +368,16 @@ final class BufferedSocket implements Runnable {
             var10 = var10 ^ 285L;
           }
           var12 = var10 ^ var2;
-          field_l[0][var0] = SpriteButton.a(var12, SpriteButton.a(SpriteButton.a(var8 << 16, SpriteButton.a(var10 << 24, SpriteButton.a(var2 << 32, SpriteButton.a(SpriteButton.a(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8));
+          field_l[0][var0] = SpriteButton.longOr(var12, SpriteButton.longOr(SpriteButton.longOr(var8 << 16, SpriteButton.longOr(var10 << 24, SpriteButton.longOr(var2 << 32, SpriteButton.longOr(SpriteButton.longOr(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8));
           for (var14 = 1; var14 < 8; var14++) {
-            field_l[var14][var0] = SpriteButton.a(field_l[-1 + var14][var0] >>> 8, field_l[-1 + var14][var0] << 56);
+            field_l[var14][var0] = SpriteButton.longOr(field_l[-1 + var14][var0] >>> 8, field_l[-1 + var14][var0] << 56);
           }
           var0++;
         }
         field_k[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
           var1 = (var0 - 1) * 8;
-          field_k[var0] = bg.a(bg.a(GarrisonTask.a(65280L, field_l[6][var1 + 6]), bg.a(bg.a(GarrisonTask.a(4278190080L, field_l[4][var1 + 4]), bg.a(GarrisonTask.a(1095216660480L, field_l[3][var1 + 3]), bg.a(GarrisonTask.a(field_l[2][2 + var1], 280375465082880L), bg.a(GarrisonTask.a(field_l[1][var1 + 1], 71776119061217280L), GarrisonTask.a(field_l[0][var1], -72057594037927936L))))), GarrisonTask.a(field_l[5][var1 + 5], 16711680L))), GarrisonTask.a(field_l[7][var1 + 7], 255L));
+          field_k[var0] = bg.longXor(bg.longXor(GarrisonTask.longAnd(65280L, field_l[6][var1 + 6]), bg.longXor(bg.longXor(GarrisonTask.longAnd(4278190080L, field_l[4][var1 + 4]), bg.longXor(GarrisonTask.longAnd(1095216660480L, field_l[3][var1 + 3]), bg.longXor(GarrisonTask.longAnd(field_l[2][2 + var1], 280375465082880L), bg.longXor(GarrisonTask.longAnd(field_l[1][var1 + 1], 71776119061217280L), GarrisonTask.longAnd(field_l[0][var1], -72057594037927936L))))), GarrisonTask.longAnd(field_l[5][var1 + 5], 16711680L))), GarrisonTask.longAnd(field_l[7][var1 + 7], 255L));
         }
     }
 }

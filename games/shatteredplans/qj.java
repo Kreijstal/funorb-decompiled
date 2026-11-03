@@ -84,7 +84,7 @@ final class qj {
                 rs.field_Cb.drawString(var13[var10], 0, rs.field_Cb.field_J, 16777215, -1);
                 WidgetStyle.field_m[var8][var10] = oi.field_i[var8][var10].copy();
                 WidgetStyle.field_m[var8][var10].bindAsRenderTarget();
-                gf.b(1, 1, 0, 0, var3, var2_int);
+                SoftwareRasterizer.b(1, 1, 0, 0, var3, var2_int);
               }
             }
           } else {

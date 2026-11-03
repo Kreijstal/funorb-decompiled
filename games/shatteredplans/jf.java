@@ -48,9 +48,9 @@ final class jf {
               if (param1.length() == 0) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               } else {
-                var5Lifetime6 = var8 + "; Expires=" + vm.a(94608000000L + pr.a(param0 ^ -21444), param0 + 25612) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + vm.a(94608000000L + pr.currentTimeMillis(param0 ^ -21444), param0 + 25612) + "; Max-Age=" + 94608000L;
               }
-              ll.a(param2, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 123);
+              ll.evalJavaScript(param2, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 123);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -91,14 +91,14 @@ final class jf {
           field_e = null;
           return;
         }
-        jf.a(96, 113, -78);
+        jf.floorMod(96, 113, -78);
         field_b = null;
         field_c = (byte[][]) null;
         field_d = null;
         field_e = null;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int floorMod(int param0, int param1, int param2) {
         int var3 = 79 % ((param2 - 39) / 60);
         int var4 = -1 + param0 & param1 >> 31;
         return (param1 + (param1 >>> 31)) % param0 + var4;

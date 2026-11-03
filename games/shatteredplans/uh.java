@@ -62,19 +62,19 @@ final class uh {
     final static int a(int param0, int param1, int param2, int param3) {
         if (param0 >= -8) {
           field_e = (String) null;
-          if (!(gf.field_b < param2 + param1)) {
+          if (!(SoftwareRasterizer.field_b < param2 + param1)) {
             return param1;
           }
           if (param3 + param1 - param2 < 0) {
-            return -param2 + gf.field_b;
+            return -param2 + SoftwareRasterizer.field_b;
           }
           return -param2 + param3 + param1;
         }
-        if (!(gf.field_b < param2 + param1)) {
+        if (!(SoftwareRasterizer.field_b < param2 + param1)) {
           return param1;
         }
         if (param3 + param1 - param2 < 0) {
-          return -param2 + gf.field_b;
+          return -param2 + SoftwareRasterizer.field_b;
         }
         return -param2 + param3 + param1;
     }

@@ -273,11 +273,11 @@ final class AttackTask extends AiTask {
           if (param5 > param6) {
             param5 = param6;
           }
-          gf.f(3 + param2, param1, 4 + param6 - 3, 16777215);
+          SoftwareRasterizer.drawHorizontalLine(3 + param2, param1, 4 + param6 - 3, 16777215);
           var8 = param3 & 65280;
-          gf.a(param2 + 3 - 1, 1 + param1, 16777215);
-          gf.f(3 + param2, 1 + param1, -3 + (param6 + 2), 0);
-          gf.a(3 + (param6 + param2), 1 + param1, 16777215);
+          SoftwareRasterizer.setPixel(param2 + 3 - 1, 1 + param1, 16777215);
+          SoftwareRasterizer.drawHorizontalLine(3 + param2, 1 + param1, -3 + (param6 + 2), 0);
+          SoftwareRasterizer.setPixel(3 + (param6 + param2), 1 + param1, 16777215);
           for (var9 = 2; var9 < 3; var9++) {
             var10 = (var9 * 256 - 512) / (param4 - 4);
             var11 = (-16711936 & (var10 >> 1) * 16711935 + (-var10 + 256) * var7_int | 16711680 & (256 - var10) * var8 + (var10 >> 1) * 65280) >>> 8;
@@ -291,13 +291,13 @@ final class AttackTask extends AiTask {
             if (var17 > var18) {
               var17 = var18;
             }
-            gf.a(var15, var14, 16777215);
-            gf.a(1 + var15, var14, 0);
-            gf.f(2 + var15, var14, var16 - var15 - 2, var11);
-            gf.f(var16, var14, var17 - var16, var13);
-            gf.f(var17, var14, var18 - var17, var12);
-            gf.a(var18, var14, 16777215);
-            gf.a(var18 - 1, var14, 0);
+            SoftwareRasterizer.setPixel(var15, var14, 16777215);
+            SoftwareRasterizer.setPixel(1 + var15, var14, 0);
+            SoftwareRasterizer.drawHorizontalLine(2 + var15, var14, var16 - var15 - 2, var11);
+            SoftwareRasterizer.drawHorizontalLine(var16, var14, var17 - var16, var13);
+            SoftwareRasterizer.drawHorizontalLine(var17, var14, var18 - var17, var12);
+            SoftwareRasterizer.setPixel(var18, var14, 16777215);
+            SoftwareRasterizer.setPixel(var18 - 1, var14, 0);
           }
           if (param0 < 12) {
             field_r = (String) null;
@@ -314,13 +314,13 @@ final class AttackTask extends AiTask {
             if (var17Lifetime1 < var16Lifetime1) {
               var16Lifetime1 = var17Lifetime1;
             }
-            gf.a(param2, var14Lifetime1, 16777215);
-            gf.a(1 + param2, var14Lifetime1, 0);
-            gf.f(2 + param2, var14Lifetime1, var15Lifetime1 - param2 - 2, var11Lifetime1);
-            gf.f(var15Lifetime1, var14Lifetime1, var16Lifetime1 - var15Lifetime1, var13Lifetime1);
-            gf.f(var16Lifetime1, var14Lifetime1, -var16Lifetime1 + var17Lifetime1, var12Lifetime1);
-            gf.a(3 + (param6 + param2), var14Lifetime1, 16777215);
-            gf.a(2 + (param6 + param2), var14Lifetime1, 0);
+            SoftwareRasterizer.setPixel(param2, var14Lifetime1, 16777215);
+            SoftwareRasterizer.setPixel(1 + param2, var14Lifetime1, 0);
+            SoftwareRasterizer.drawHorizontalLine(2 + param2, var14Lifetime1, var15Lifetime1 - param2 - 2, var11Lifetime1);
+            SoftwareRasterizer.drawHorizontalLine(var15Lifetime1, var14Lifetime1, var16Lifetime1 - var15Lifetime1, var13Lifetime1);
+            SoftwareRasterizer.drawHorizontalLine(var16Lifetime1, var14Lifetime1, -var16Lifetime1 + var17Lifetime1, var12Lifetime1);
+            SoftwareRasterizer.setPixel(3 + (param6 + param2), var14Lifetime1, 16777215);
+            SoftwareRasterizer.setPixel(2 + (param6 + param2), var14Lifetime1, 0);
           }
           for (var9Lifetime2 = param4 - 3; var9Lifetime2 < -2 + param4; var9Lifetime2++) {
             var10Lifetime2 = (var9Lifetime2 * 256 - 512) / (param4 - 4);
@@ -331,21 +331,21 @@ final class AttackTask extends AiTask {
             var15Lifetime2 = -var9Lifetime2 + (param4 + param2 + (param5 + 2 - 3));
             var16Lifetime2 = var15Lifetime2 + 5;
             var17Lifetime2 = -3 + param4 + (param2 + param6) - (-2 + var9Lifetime2);
-            gf.a(param2, var14Lifetime2, 16777215);
+            SoftwareRasterizer.setPixel(param2, var14Lifetime2, 16777215);
             if (var17Lifetime2 < var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            gf.a(1 + param2, var14Lifetime2, 0);
-            gf.f(2 + param2, var14Lifetime2, var15Lifetime2 - (param2 + 2), var11Lifetime2);
-            gf.f(var15Lifetime2, var14Lifetime2, -var15Lifetime2 + var16Lifetime2, var13Lifetime2);
-            gf.f(var16Lifetime2, var14Lifetime2, -var16Lifetime2 + var17Lifetime2, var12Lifetime2);
-            gf.a(var17Lifetime2, var14Lifetime2, 16777215);
-            gf.a(-1 + var17Lifetime2, var14Lifetime2, 0);
+            SoftwareRasterizer.setPixel(1 + param2, var14Lifetime2, 0);
+            SoftwareRasterizer.drawHorizontalLine(2 + param2, var14Lifetime2, var15Lifetime2 - (param2 + 2), var11Lifetime2);
+            SoftwareRasterizer.drawHorizontalLine(var15Lifetime2, var14Lifetime2, -var15Lifetime2 + var16Lifetime2, var13Lifetime2);
+            SoftwareRasterizer.drawHorizontalLine(var16Lifetime2, var14Lifetime2, -var16Lifetime2 + var17Lifetime2, var12Lifetime2);
+            SoftwareRasterizer.setPixel(var17Lifetime2, var14Lifetime2, 16777215);
+            SoftwareRasterizer.setPixel(-1 + var17Lifetime2, var14Lifetime2, 0);
           }
-          gf.f(param2, param1 - (-param4 + 1), 1 + param6, 16777215);
-          gf.a(param2, param1 + param4 - 2, 16777215);
-          gf.f(param2 + 1, param1 + (param4 - 2), param6 - 1, 0);
-          gf.a(-3 + param2 + param6 + 4, param1 + param4 - 2, 16777215);
+          SoftwareRasterizer.drawHorizontalLine(param2, param1 - (-param4 + 1), 1 + param6, 16777215);
+          SoftwareRasterizer.setPixel(param2, param1 + param4 - 2, 16777215);
+          SoftwareRasterizer.drawHorizontalLine(param2 + 1, param1 + (param4 - 2), param6 - 1, 0);
+          SoftwareRasterizer.setPixel(-3 + param2 + param6 + 4, param1 + param4 - 2, 16777215);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "kl.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }

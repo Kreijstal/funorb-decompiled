@@ -380,7 +380,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVariableInt(false);
             }
-            this.field_k[var23] = (short)(this.field_k[var23] + (we.a(-1 + var22, 2) << 14));
+            this.field_k[var23] = (short)(this.field_k[var23] + (we.intAnd(-1 + var22, 2) << 14));
             var20Lifetime2--;
             this.field_n[var23] = var22;
           }
@@ -529,7 +529,7 @@ final class MusicPatch extends IntrusiveNode {
               var31 = var15[var29Lifetime3 + 1];
               var32 = (-var27Lifetime6 + var30) / 2 + var28 * (var30 - var27Lifetime6);
               for (var33 = var27Lifetime6; var30 > var33; var33++) {
-                var34 = QuaternaryLinkNode.a((byte) -118, var32, var30 - var27Lifetime6);
+                var34 = QuaternaryLinkNode.floorDiv((byte) -118, var32, var30 - var27Lifetime6);
                 this.field_s[var33] = (byte)(32 + this.field_s[var33] * var34 >> 6);
                 var32 = var32 + (-var28 + var31);
               }
@@ -572,7 +572,7 @@ final class MusicPatch extends IntrusiveNode {
               var37 = var27Lifetime6Lifetime1;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime2) {
-                var34Lifetime1 = QuaternaryLinkNode.a((byte) -78, var32Lifetime1, -var27Lifetime6Lifetime1 + var30Lifetime2);
+                var34Lifetime1 = QuaternaryLinkNode.floorDiv((byte) -78, var32Lifetime1, -var27Lifetime6Lifetime1 + var30Lifetime2);
                 var35 = var34Lifetime1 + (255 & this.field_t[var37]);
                 if (var35 < 0) {
                   var35 = 0;

@@ -58,9 +58,9 @@ final class ck {
           RandomAccessCacheFile.a(-110);
           jf.field_a = new Sprite(var7_int, var8);
           jf.field_a.bindAsRenderTarget();
-          gf.d(0, 0, var7_int, var8, 16777215);
+          SoftwareRasterizer.fillRect(0, 0, var7_int, var8, 16777215);
           SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 0);
-          gf.b(3, 3, 0, 0, var7_int, var8);
+          SoftwareRasterizer.b(3, 3, 0, 0, var7_int, var8);
           SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 255);
           cg.i(param6 + 8);
           HuffmanCodec.field_d = ae.a(101, "", param0, "edge_orbs");
@@ -71,7 +71,7 @@ final class ck {
             var20 = new Sprite(var19.field_z + 32, 32 + var19.field_w);
             var20.bindAsRenderTarget();
             var19.drawSilhouette(16 - var19.field_t, 16 - var19.field_x, 16777215);
-            gf.b(8, 8, 0, 0, var20.field_z, var20.field_w);
+            SoftwareRasterizer.b(8, 8, 0, 0, var20.field_z, var20.field_w);
             var19.drawSilhouette(16 - var19.field_t, 16 - var19.field_x, 0);
             IsaacRandom.field_b[var9_int] = var20;
           }
@@ -259,8 +259,8 @@ final class ck {
           TextFieldWidget.field_L.draw(0, 0);
           for (var13_intLifetime7 = 0; var13_intLifetime7 < wa.field_b.field_B.length; var13_intLifetime7++) {
             if (wa.field_b.field_B[var13_intLifetime7] != 0) {
-              gf.c(var13_intLifetime7 % wa.field_b.field_z, var13_intLifetime7 / wa.field_b.field_z, 16777215, 128);
-              wa.field_b.field_B[var13_intLifetime7] = ee.a(wa.field_b.field_B[var13_intLifetime7], -16777216);
+              SoftwareRasterizer.blendPixel(var13_intLifetime7 % wa.field_b.field_z, var13_intLifetime7 / wa.field_b.field_z, 16777215, 128);
+              wa.field_b.field_B[var13_intLifetime7] = ee.intOr(wa.field_b.field_B[var13_intLifetime7], -16777216);
             }
           }
           fb.field_Vb = new Sprite(18, 12);
@@ -291,13 +291,13 @@ final class ck {
           PlayerEliminatedEvent.a(param1, param2, param3, param5, true, param0);
           GameScreen.field_R = new Sprite(15, 15);
           bs.a(GameScreen.field_R, 78);
-          gf.g(15, 15, 15, 65793);
-          gf.g(15, 15, 5, 0);
+          SoftwareRasterizer.fillCircle(15, 15, 15, 65793);
+          SoftwareRasterizer.fillCircle(15, 15, 5, 0);
           le.field_d = new Sprite(15, 20);
           le.field_d.bindAsRenderTarget();
-          gf.d(0, 0, 15, 20, 65793);
-          gf.g(0, -1, 5, 0);
-          gf.g(0, 20, 5, 0);
+          SoftwareRasterizer.fillRect(0, 0, 15, 20, 65793);
+          SoftwareRasterizer.fillCircle(0, -1, 5, 0);
+          SoftwareRasterizer.fillCircle(0, 20, 5, 0);
           var15Lifetime1 = id.a(2, param0, "", "menu_pip");
           GameKeyHandler.field_e = new Sprite(2 + var15Lifetime1.field_z, 2 + var15Lifetime1.field_w);
           GameKeyHandler.field_e.bindAsRenderTarget();
@@ -306,7 +306,7 @@ final class ck {
           bg.field_a.bindAsRenderTarget();
           for (var16 = 0; var16 < 20; var16++) {
             var17 = var16 > 10 ? 20 - var16 : 3;
-            gf.f(11 - var17, 1 + var16, 2 * var17, 65793);
+            SoftwareRasterizer.drawHorizontalLine(11 - var17, 1 + var16, 2 * var17, 65793);
           }
           cg.i(0);
           GameKeyHandler.field_e.addOutline(2458760);
@@ -376,7 +376,7 @@ final class ck {
               var10 = param1.getParameter("cookieprefix");
               var3 = var10 + "settings";
               var6 = -67 / ((-84 - param0) / 42);
-              var4 = (String) (ll.a("getcookies", param1, (byte) 53));
+              var4 = (String) (ll.callJavaScript("getcookies", param1, (byte) 53));
               var5 = so.a(var4, ';', 111);
               for (var7 = 0; var5.length > var7; var7++) {
                 var8 = var5[var7].indexOf('=');

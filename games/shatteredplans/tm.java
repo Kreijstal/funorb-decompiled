@@ -59,7 +59,7 @@ final class tm extends IntrusiveNode {
         if (this.field_q == 0) {
           return;
         }
-        gf.a(88, 1 + param1, this.field_s, 17, 6, 0, this.field_q);
+        SoftwareRasterizer.fillRoundedRectAlpha(88, 1 + param1, this.field_s, 17, 6, 0, this.field_q);
         if (param0 != -208410008) {
           field_r = (Sprite) null;
         }

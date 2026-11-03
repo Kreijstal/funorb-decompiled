@@ -31,7 +31,7 @@ final class jb {
         im.a(true, param0);
     }
 
-    final static void a(byte param0, long param1) {
+    final static void sleep(byte param0, long param1) {
         if (0L >= param1) {
           return;
         }

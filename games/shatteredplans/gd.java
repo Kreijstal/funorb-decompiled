@@ -18,7 +18,7 @@ final class gd {
         if (null == va.field_d) {
           va.field_d = new Sprite[]{lg.a(0, MusicVoice.field_w[0]), lg.a(0, MusicVoice.field_w[1])};
         }
-        gf.b();
+        SoftwareRasterizer.clear();
         int var1 = 240;
         wc.a(-27030, di.field_m << 1, -va.field_d[0].field_z + 640 >> 1, va.field_d[0], var1, 256);
         wc.a(-27030, -128 + (di.field_m << 1), -va.field_d[1].field_z + 640 >> 1, va.field_d[1], var1 + va.field_d[1].field_w, 256);

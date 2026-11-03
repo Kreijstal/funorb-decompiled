@@ -48,8 +48,8 @@ class TertiaryLinkNode extends DualLinkNode {
               }
               return;
             }
-            var5 = gf.field_b * SolVictoryChecker.field_p + var4.field_g;
-            if (gf.field_b <= var4.field_g) {
+            var5 = SoftwareRasterizer.field_b * SolVictoryChecker.field_p + var4.field_g;
+            if (SoftwareRasterizer.field_b <= var4.field_g) {
               continue;
             }
             var6 = 511 & var4.field_e;
@@ -66,17 +66,17 @@ class TertiaryLinkNode extends DualLinkNode {
               var9 = var9 - var11 * var4.field_a;
               var4.field_g = 0;
             } else {
-              var10 = gf.field_h[var5];
+              var10 = SoftwareRasterizer.field_h[var5];
               var10 = ((var7 * (16711935 & var10) & -16711936) + (-16711936 & var2_int * var6) | (var7 * (var10 & 65280) & 16711680) + (16711680 & var3 * var6)) >>> 8;
               incrementValue$1 = var5;
               var5++;
-              gf.field_h[incrementValue$1] = var10;
+              SoftwareRasterizer.field_h[incrementValue$1] = var10;
             }
             if (1000 < var8) {
               var8 = 1000;
             }
-            if (var8 + var4.field_g > gf.field_b) {
-              var8 = -var4.field_g + gf.field_b;
+            if (var8 + var4.field_g > SoftwareRasterizer.field_b) {
+              var8 = -var4.field_g + SoftwareRasterizer.field_b;
             }
             while (true) {
               var8--;
@@ -87,12 +87,12 @@ class TertiaryLinkNode extends DualLinkNode {
               if (var6Lifetime1 > 256) {
                 var6Lifetime1 = 512 - var6Lifetime1;
               }
-              var10Lifetime1 = gf.field_h[var5];
+              var10Lifetime1 = SoftwareRasterizer.field_h[var5];
               var7Lifetime1 = -var6Lifetime1 + 256;
               var10Lifetime1 = ((16711680 & var6Lifetime1 * var3) + (var7Lifetime1 * (65280 & var10Lifetime1) & 16711680) | (var2_int * var6Lifetime1 & -16711936) + (-16711936 & (16711935 & var10Lifetime1) * var7Lifetime1)) >>> 8;
               incrementValue$2 = var5;
               var5++;
-              gf.field_h[incrementValue$2] = var10Lifetime1;
+              SoftwareRasterizer.field_h[incrementValue$2] = var10Lifetime1;
               var9 = var9 + var4.field_a;
             }
           }

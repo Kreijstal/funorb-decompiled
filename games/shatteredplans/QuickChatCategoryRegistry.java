@@ -16,7 +16,7 @@ final class QuickChatCategoryRegistry {
           String[] var6 = (String[]) null;
           QuickChatCategoryRegistry.a((String) null, -43, (String[]) null);
         }
-        return (int)((double)(-param0 + param3) * wm.a(param2, (byte) 114, param1)) + param0;
+        return (int)((double)(-param0 + param3) * wm.smoothStep(param2, (byte) 114, param1)) + param0;
     }
 
     final static void a(java.awt.Canvas param0, boolean param1) {
@@ -68,7 +68,7 @@ final class QuickChatCategoryRegistry {
             var6_int = param0.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = var6_int + 2; var5 < var3_int; var5++) {
-                if (dk.a((byte) -83, param0.charAt(var5))) {
+                if (dk.isDigit((byte) -83, param0.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -104,7 +104,7 @@ final class QuickChatCategoryRegistry {
               return stackIn_30_0;
             }
             for (var5Lifetime1 = 2 + var8Lifetime1; var3_int > var5Lifetime1; var5Lifetime1++) {
-              if (dk.a((byte) 115, param0.charAt(var5Lifetime1))) {
+              if (dk.isDigit((byte) 115, param0.charAt(var5Lifetime1))) {
                 continue;
               }
               break;

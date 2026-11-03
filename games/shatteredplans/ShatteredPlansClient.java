@@ -287,7 +287,7 @@ public final class ShatteredPlansClient extends tl {
             }
             if (BufferedCacheFile.field_e == 14) {
               DiskCacheWorker.a(1048576);
-              be.a(a.a(20605), js.a(2000, (byte) 122), pe.m(42), 1024, js.a(6, (byte) 122), (byte) -122, hn.field_j.length, bb.a((byte) 100), pg.field_C, 150);
+              be.a(a.a(20605), js.nextPowerOfTwo(2000, (byte) 122), pe.m(42), 1024, js.nextPowerOfTwo(6, (byte) 122), (byte) -122, hn.field_j.length, bb.a((byte) 100), pg.field_C, 150);
               sj.a((byte) 77, js.b((byte) 121), NodeHashTableIterator.a(83));
               EmailValidator.field_p = true;
               md.field_Q = false;
@@ -639,7 +639,7 @@ public final class ShatteredPlansClient extends tl {
           uc.field_A = -1;
           GameRules.field_c = 0;
           de.field_j = -1;
-          hk.a(50, (byte) 52);
+          hk.setTargetFrameRate(50, (byte) 52);
           UsernameAvailabilityValidator.b(param0 ^ -86, 50);
           ValidationState.c(122);
           QuickChatPhraseRegistry.a(32767, hk.field_nb, true, 1048576);
@@ -749,7 +749,7 @@ public final class ShatteredPlansClient extends tl {
         UrlLoader.clearStatics(0);
         MouseInputHandler.a(param0 ^ -24150);
         MouseWheelInput.clearStatics(param0 ^ -24163);
-        gf.clearStatics();
+        SoftwareRasterizer.clearStatics();
         Archive.clearStatics(-466);
         gg.clearStatics(param0 + 24069);
         PacketBuffer.clearStatics((byte) 78);
@@ -1427,15 +1427,15 @@ public final class ShatteredPlansClient extends tl {
               mj.field_Hb[GameRules.field_c].g(-121);
             }
           } else {
-            gf.b();
+            SoftwareRasterizer.clear();
           }
         }
         if (gr.field_o != GameRules.field_c) {
           if (gr.field_o == -2) {
-            gf.c(0, 0, 640, 480, 0, 256 * eh.field_Q / 32);
+            SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, 256 * eh.field_Q / 32);
           } else {
             if (GameRules.field_c == -2) {
-              gf.c(0, 0, 640, 480, 0, -(256 * eh.field_Q / 32) + 256);
+              SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, -(256 * eh.field_Q / 32) + 256);
             }
           }
         }
@@ -1444,7 +1444,7 @@ public final class ShatteredPlansClient extends tl {
           qr.a(VictoryChecker.a(30), (byte) 111);
         }
         if (FullscreenFocusCanvas.field_b > 0) {
-          gf.c(0, 0, 640, 480, 0, FullscreenFocusCanvas.field_b);
+          SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, FullscreenFocusCanvas.field_b);
         }
         if (sq.a(false)) {
           ts.a(sa.a(-27572), param0 ^ -2, FleetMove.e(param0 ^ -84));
@@ -1474,13 +1474,13 @@ public final class ShatteredPlansClient extends tl {
                 var10 = QuickChatCategoryRegistry.a(0, 32, var9, var5_int, param0 ^ 1);
                 var11 = 10 + (var5_int - var10 >> 1);
                 var18 = new int[4];
-                gf.a(var18);
+                SoftwareRasterizer.saveClip(var18);
                 MidiPcmStream.a(var6, var8, var11, (byte) -78, var10);
-                gf.d(var11, var8, var10 + var11, var8 + var6);
+                SoftwareRasterizer.setClip(var11, var8, var10 + var11, var8 + var6);
                 var13 = oi.a(var3_ref_he.field_k, (byte) 66);
                 var13.draw(-36 + (var7_int + var5_int / 2), 4 + var8);
                 mp.field_b.drawString(var4, -(var5_int / 2) + (var7_int + 10), -2 + (mp.field_b.field_J + var6 >> 1) + var8, 2805974, -1);
-                gf.b(var18);
+                SoftwareRasterizer.restoreClip(var18);
               }
             } else {
               ts.a(gq.c(-118), param0 - 2, ah.h(param0 + 107));
@@ -1491,7 +1491,7 @@ public final class ShatteredPlansClient extends tl {
         if (jb.field_g != jb.field_c) {
           var3_int = na.field_F * 256 / 16;
           if (var3_int > 0) {
-            gf.c(0, 0, gf.field_b, gf.field_k, 0, var3_int);
+            SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k, 0, var3_int);
           }
         }
         if (mm.field_n &&

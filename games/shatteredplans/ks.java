@@ -232,30 +232,30 @@ final class ks {
         nf var11 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (gf.field_a > param5) {
-            param4 = param4 + (param5 - gf.field_a) * param3;
-            param1 = param1 + (param5 - gf.field_a);
-            param5 = gf.field_a;
+          if (SoftwareRasterizer.field_a > param5) {
+            param4 = param4 + (param5 - SoftwareRasterizer.field_a) * param3;
+            param1 = param1 + (param5 - SoftwareRasterizer.field_a);
+            param5 = SoftwareRasterizer.field_a;
           }
-          if (gf.field_f < param5 + param1) {
-            param1 = gf.field_f - param5;
+          if (SoftwareRasterizer.field_f < param5 + param1) {
+            param1 = SoftwareRasterizer.field_f - param5;
           }
-          var6_int = gf.field_b + param3;
+          var6_int = SoftwareRasterizer.field_b + param3;
           if (param0 != -18166) {
             var11 = (nf) null;
             ks.a((nf) null, -32);
           }
-          var8 = gf.field_b * param5 + param4;
+          var8 = SoftwareRasterizer.field_b * param5 + param4;
           var9 = param4;
           while (param1 > 0) {
-            if (gf.field_i <= var9 &&
-              var9 < gf.field_l) {
-              param4 = gf.field_h[var8];
+            if (SoftwareRasterizer.field_i <= var9 &&
+              var9 < SoftwareRasterizer.field_l) {
+              param4 = SoftwareRasterizer.field_h[var8];
               var7 = param2;
               param5 = var7 + param4;
               var7 = (16711935 & param4) + (16711935 & var7);
               param4 = (16777472 & var7) + (param5 - var7 & 65536);
-              gf.field_h[var8] = ee.a(-(param4 >>> 8) + param4, param5 - param4);
+              SoftwareRasterizer.field_h[var8] = ee.intOr(-(param4 >>> 8) + param4, param5 - param4);
             }
             var8 = var8 + var6_int;
             param1--;

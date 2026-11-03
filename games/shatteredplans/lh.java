@@ -107,7 +107,7 @@ final class lh extends MenuComponent {
         super(param0, param1, 11, param2);
         this.field_C = 5;
         this.field_F = param3;
-        this.field_B = SolVictoryChecker.a(this.field_F, 0, -85, 128);
+        this.field_B = SolVictoryChecker.blendColours(this.field_F, 0, -85, 128);
     }
 
     final static void a(byte param0, int[] param1, int[] param2) {
@@ -123,10 +123,10 @@ final class lh extends MenuComponent {
         if (!this.field_s) {
           return;
         }
-        gf.j(this.field_k + 5, this.field_t, this.field_i, this.field_p ? this.field_F : this.field_B);
+        SoftwareRasterizer.drawVerticalLine(this.field_k + 5, this.field_t, this.field_i, this.field_p ? this.field_F : this.field_B);
         int var2 = 28 / ((param0 - 67) / 47);
         if (this.field_p) {
-          gf.g(this.field_k + 5, this.field_p ? this.field_C + this.field_t : 5 + this.field_t, 5, !this.field_p ? this.field_B : this.field_F);
+          SoftwareRasterizer.fillCircle(this.field_k + 5, this.field_p ? this.field_C + this.field_t : 5 + this.field_t, 5, !this.field_p ? this.field_B : this.field_F);
         }
     }
 

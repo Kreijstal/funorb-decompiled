@@ -38,7 +38,7 @@ final class ud {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param1.field_q.peekEvent()) {
-              jb.a((byte) -113, 1L);
+              jb.sleep((byte) -113, 1L);
               continue;
             }
             break;

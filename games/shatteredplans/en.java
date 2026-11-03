@@ -37,8 +37,8 @@ final class en {
         qr var14 = null;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          kh.field_Mb = gf.field_b;
-          TertiaryNodeList.field_c = gf.field_k;
+          kh.field_Mb = SoftwareRasterizer.field_b;
+          TertiaryNodeList.field_c = SoftwareRasterizer.field_k;
           stackIn_3_0 = 22353;
           if (!param1) {
             stackIn_4_1 = ee.field_k;
@@ -161,7 +161,7 @@ final class en {
               }
             }
           }
-          MouseInputHandler.field_d.a(360, -10 + gf.field_k - 120 - 4 - 10, (byte) 122, 10, -360 + gf.field_b >> 1);
+          MouseInputHandler.field_d.a(360, -10 + SoftwareRasterizer.field_k - 120 - 4 - 10, (byte) 122, 10, -360 + SoftwareRasterizer.field_b >> 1);
           ValidationIndicator.field_K.a(MouseInputHandler.field_d.field_K, 24, (byte) 80, 0, 0);
           QuickChatPhraseRegistry.field_a.a(MouseInputHandler.field_d.field_K, -24 + MouseInputHandler.field_d.field_mb, (byte) 106, 24, 0);
           QuickChatPhraseRegistry.field_a.field_F = Wormhole.a(16, 3, QuickChatPhraseRegistry.field_a.field_mb, 11579568, 8421504, 1);

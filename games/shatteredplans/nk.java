@@ -11,33 +11,33 @@ final class nk extends bq {
         int var9Lifetime2;
         param0 = param0 + this.field_a;
         param1 = param1 + this.field_b;
-        int var3 = param0 + param1 * gf.field_b;
+        int var3 = param0 + param1 * SoftwareRasterizer.field_b;
         int var4 = 0;
         int var5 = this.field_g;
         int var6 = this.field_i;
-        int var7 = gf.field_b - var6;
+        int var7 = SoftwareRasterizer.field_b - var6;
         int var8 = 0;
-        if (param1 < gf.field_a) {
-          var9 = gf.field_a - param1;
+        if (param1 < SoftwareRasterizer.field_a) {
+          var9 = SoftwareRasterizer.field_a - param1;
           var5 = var5 - var9;
-          param1 = gf.field_a;
+          param1 = SoftwareRasterizer.field_a;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * gf.field_b;
+          var3 = var3 + var9 * SoftwareRasterizer.field_b;
         }
-        if (param1 + var5 > gf.field_f) {
-          var5 = var5 - (param1 + var5 - gf.field_f);
+        if (param1 + var5 > SoftwareRasterizer.field_f) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.field_f);
         }
-        if (param0 < gf.field_i) {
-          var9Lifetime1 = gf.field_i - param0;
+        if (param0 < SoftwareRasterizer.field_i) {
+          var9Lifetime1 = SoftwareRasterizer.field_i - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = gf.field_i;
+          param0 = SoftwareRasterizer.field_i;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > gf.field_l) {
-          var9Lifetime2 = param0 + var6 - gf.field_l;
+        if (param0 + var6 > SoftwareRasterizer.field_l) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.field_l;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -46,7 +46,7 @@ final class nk extends bq {
           var5 <= 0) {
           return;
         }
-        nk.b(gf.field_h, this.field_j, this.field_k, 0, var4, var3, var6, var5, var7, var8);
+        nk.b(SoftwareRasterizer.field_h, this.field_j, this.field_k, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -154,33 +154,33 @@ final class nk extends bq {
         int var10Lifetime2;
         param0 = param0 + this.field_a;
         param1 = param1 + this.field_b;
-        int var4 = param0 + param1 * gf.field_b;
+        int var4 = param0 + param1 * SoftwareRasterizer.field_b;
         int var5 = 0;
         int var6 = this.field_g;
         int var7 = this.field_i;
-        int var8 = gf.field_b - var7;
+        int var8 = SoftwareRasterizer.field_b - var7;
         int var9 = 0;
-        if (param1 < gf.field_a) {
-          var10 = gf.field_a - param1;
+        if (param1 < SoftwareRasterizer.field_a) {
+          var10 = SoftwareRasterizer.field_a - param1;
           var6 = var6 - var10;
-          param1 = gf.field_a;
+          param1 = SoftwareRasterizer.field_a;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * gf.field_b;
+          var4 = var4 + var10 * SoftwareRasterizer.field_b;
         }
-        if (param1 + var6 > gf.field_f) {
-          var6 = var6 - (param1 + var6 - gf.field_f);
+        if (param1 + var6 > SoftwareRasterizer.field_f) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.field_f);
         }
-        if (param0 < gf.field_i) {
-          var10Lifetime1 = gf.field_i - param0;
+        if (param0 < SoftwareRasterizer.field_i) {
+          var10Lifetime1 = SoftwareRasterizer.field_i - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = gf.field_i;
+          param0 = SoftwareRasterizer.field_i;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > gf.field_l) {
-          var10Lifetime2 = param0 + var7 - gf.field_l;
+        if (param0 + var7 > SoftwareRasterizer.field_l) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.field_l;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -189,7 +189,7 @@ final class nk extends bq {
           var6 <= 0) {
           return;
         }
-        nk.a(gf.field_h, this.field_j, this.field_k, var5, var4, var7, var6, var8, var9, param2);
+        nk.a(SoftwareRasterizer.field_h, this.field_j, this.field_k, var5, var4, var7, var6, var8, var9, param2);
     }
 
     nk(int param0, int param1, int param2) {

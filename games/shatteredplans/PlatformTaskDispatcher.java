@@ -215,7 +215,7 @@ final class PlatformTaskDispatcher implements Runnable {
                 var2_int = var8.field_c;
                 switch (var2_int) {
                   case 22:
-                    if (field_u > pr.a(14274)) {
+                    if (field_u > pr.currentTimeMillis(14274)) {
                       throw new IOException();
                     }
                     try {
@@ -252,7 +252,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (pr.a(14274) < field_u) {
+                        if (pr.currentTimeMillis(14274) < field_u) {
                           throw new IOException();
                         }
                         var15 = (255 & var8.field_g >> 24) + "." + ((16756253 & var8.field_g) >> 16) + "." + ((var8.field_g & 65287) >> 8) + "." + (255 & var8.field_g);
@@ -349,7 +349,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         var8.field_e = var3_ref3;
                         break;
                       case 21:
-                        if (pr.a(14274) < field_u) {
+                        if (pr.currentTimeMillis(14274) < field_u) {
                           throw new IOException();
                         }
                         var8.field_e = java.net.InetAddress.getByName((String) (var8.field_b)).getAddress();
@@ -365,7 +365,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_e = ((Class) (var10[0])).getDeclaredField((String) (var10[1]));
                     break;
                   case 4:
-                    if (field_u > pr.a(14274)) {
+                    if (field_u > pr.currentTimeMillis(14274)) {
                       throw new IOException();
                     }
                     var8.field_e = new DataInputStream(((java.net.URL) (var8.field_b)).openStream());
@@ -378,7 +378,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     var8.field_e = var9;
                     break;
                   case 1:
-                    if (pr.a(14274) < field_u) {
+                    if (pr.currentTimeMillis(14274) < field_u) {
                       throw new IOException();
                     }
                     var8.field_e = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.field_b)), var8.field_g);

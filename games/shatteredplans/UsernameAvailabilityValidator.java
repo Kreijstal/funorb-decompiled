@@ -139,16 +139,16 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         RandomAccessCacheFile.a(-104);
         var4.bindAsRenderTarget();
         for (var5 = 0; var4.field_z > var5; var5++) {
-          gf.j(var5, 0, var4.field_w, SolVictoryChecker.a(0, SoundPlayback.field_k[param0], -81, 128 + 128 * var5 / var4.field_z));
+          SoftwareRasterizer.drawVerticalLine(var5, 0, var4.field_w, SolVictoryChecker.blendColours(0, SoundPlayback.field_k[param0], -81, 128 + 128 * var5 / var4.field_z));
         }
         for (var5Lifetime1 = 0; -1 + var4.field_z > var5Lifetime1; var5Lifetime1++) {
-          var4.field_B[var5Lifetime1] = SolVictoryChecker.a(0, var4.field_B[var5Lifetime1], -92, 128);
-          var4.field_B[var4.field_z * (var4.field_w - 1) + var5Lifetime1] = SolVictoryChecker.a(0, var4.field_B[var4.field_z * (var4.field_w - 1) + var5Lifetime1], -118, 64);
+          var4.field_B[var5Lifetime1] = SolVictoryChecker.blendColours(0, var4.field_B[var5Lifetime1], -92, 128);
+          var4.field_B[var4.field_z * (var4.field_w - 1) + var5Lifetime1] = SolVictoryChecker.blendColours(0, var4.field_B[var4.field_z * (var4.field_w - 1) + var5Lifetime1], -118, 64);
         }
         for (var5Lifetime2 = 0; var5Lifetime2 < var4.field_w; var5Lifetime2++) {
-          var4.field_B[var4.field_z - 1 + var5Lifetime2 * var4.field_z] = SolVictoryChecker.a(0, var4.field_B[var5Lifetime2 * var4.field_z + (-1 + var4.field_z)], -86, 128);
+          var4.field_B[var4.field_z - 1 + var5Lifetime2 * var4.field_z] = SolVictoryChecker.blendColours(0, var4.field_B[var5Lifetime2 * var4.field_z + (-1 + var4.field_z)], -86, 128);
         }
-        var4.field_B[var4.field_z * var4.field_w - 1] = SolVictoryChecker.a(0, var4.field_B[-1 + var4.field_w * var4.field_z], -85, 190);
+        var4.field_B[var4.field_z * var4.field_w - 1] = SolVictoryChecker.blendColours(0, var4.field_B[-1 + var4.field_w * var4.field_z], -85, 190);
         cg.i(0);
         if (!param2) {
           field_r = (boolean[]) null;

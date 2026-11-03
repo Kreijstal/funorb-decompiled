@@ -493,7 +493,7 @@ final class ProxySocketConnector extends SocketConnector {
         var2 = di.field_m * 240 / 800 + 20;
         var1 = 0;
         ch.field_c.draw(var1, var2);
-        gf.d(0, ch.field_c.field_p + var2, 640, 480, 0);
+        SoftwareRasterizer.fillRect(0, ch.field_c.field_p + var2, 640, 480, 0);
         if (param0 != 8421504) {
           Star var4 = (Star) null;
           ProxySocketConnector.a((Star) null, 30);

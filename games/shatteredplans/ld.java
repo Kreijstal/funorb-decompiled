@@ -57,7 +57,7 @@ final class ld extends IntrusiveNode {
           }
           param0 = param0 - param7.field_x;
           var8_int = param5 + param7.field_z * param0;
-          var9 = param1 + gf.field_b * param3;
+          var9 = param1 + SoftwareRasterizer.field_b * param3;
           var14 = -param6 + 256;
           while (true) {
             param2--;
@@ -67,7 +67,7 @@ final class ld extends IntrusiveNode {
             incrementValue$4 = var8_int;
             var8_int++;
             var10 = param7.field_B[incrementValue$4];
-            var11 = gf.field_h[var9];
+            var11 = SoftwareRasterizer.field_h[var9];
             var12 = 16711935 & var10;
             var10 = var10 & 65280;
             var13 = 16711935 & var11;
@@ -77,7 +77,7 @@ final class ld extends IntrusiveNode {
             var10 = (var10 | var12) >>> 8;
             incrementValue$5 = var9;
             var9++;
-            gf.field_h[incrementValue$5] = var10;
+            SoftwareRasterizer.field_h[incrementValue$5] = var10;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

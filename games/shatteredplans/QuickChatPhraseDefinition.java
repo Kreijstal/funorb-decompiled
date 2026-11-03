@@ -254,13 +254,13 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var2Lifetime1;
         if (this.field_x != null) {
           for (var2 = 0; var2 < this.field_x.length; var2++) {
-            this.field_x[var2] = ee.a(this.field_x[var2], 32768);
+            this.field_x[var2] = ee.intOr(this.field_x[var2], 32768);
           }
         }
         var2Lifetime1 = 123 % ((-18 - param0) / 55);
         if (this.field_r != null) {
           for (var3 = 0; this.field_r.length > var3; var3++) {
-            this.field_r[var3] = ee.a(this.field_r[var3], 32768);
+            this.field_r[var3] = ee.intOr(this.field_r[var3], 32768);
           }
         }
     }

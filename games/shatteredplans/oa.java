@@ -27,23 +27,23 @@ final class oa {
             param0 = param0 + param4;
             param4 = 0;
           }
-          if (gf.field_k < param0 + param4) {
-            param0 = gf.field_k - param4;
+          if (SoftwareRasterizer.field_k < param0 + param4) {
+            param0 = SoftwareRasterizer.field_k - param4;
           }
-          if (gf.field_b < param2 + param1) {
-            param2 = gf.field_b - param1;
+          if (SoftwareRasterizer.field_b < param2 + param1) {
+            param2 = SoftwareRasterizer.field_b - param1;
           }
           param1--;
           var5_int = param0 + param4;
           var6 = param4;
           var7 = -15 % ((6 - param3) / 48);
           while (var5_int > var6) {
-            var8 = param1 + gf.field_b * var6;
+            var8 = param1 + SoftwareRasterizer.field_b * var6;
             for (var9 = param2; var9 > 0; var9--) {
               var8++;
-              var10 = gf.field_h[var8];
+              var10 = SoftwareRasterizer.field_h[var8];
               var10 = (var10 >> 2 & 4144959) + (8355711 & var10 >> 1);
-              gf.field_h[var8] = var10;
+              SoftwareRasterizer.field_h[var8] = var10;
             }
             var6++;
           }

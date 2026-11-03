@@ -359,15 +359,15 @@ final class MusicCrossfadeStream extends PcmStream {
             try {
               var4 = param1.getCodeBase();
               var3 = AudioService.a(param1, false, var4).getFile();
-              ll.a(param1, "updatelinks", new Object[]{"home", var3 + "home.ws"}, -95);
-              ll.a(param1, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, -65);
-              ll.a(param1, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, -88);
-              ll.a(param1, "updatelinks", new Object[]{"options", var3 + "options.ws"}, -118);
-              ll.a(param1, "updatelinks", new Object[]{"terms", var3 + "terms.ws"}, param0 ^ 81);
+              ll.callJavaScriptWithArguments(param1, "updatelinks", new Object[]{"home", var3 + "home.ws"}, -95);
+              ll.callJavaScriptWithArguments(param1, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, -65);
+              ll.callJavaScriptWithArguments(param1, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, -88);
+              ll.callJavaScriptWithArguments(param1, "updatelinks", new Object[]{"options", var3 + "options.ws"}, -118);
+              ll.callJavaScriptWithArguments(param1, "updatelinks", new Object[]{"terms", var3 + "terms.ws"}, param0 ^ 81);
               if (param0 != -1) {
                 field_w = (String[]) null;
               }
-              ll.a(param1, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, -104);
+              ll.callJavaScriptWithArguments(param1, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, -104);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;

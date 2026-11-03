@@ -435,7 +435,7 @@ final class uo {
               }
             }
             if (sf.field_e != 0L) {
-              var9 = (int)(sf.field_e - pr.a(14274));
+              var9 = (int)(sf.field_e - pr.currentTimeMillis(14274));
               var9 = (var9 + 999) / 1000;
               if (var9 < 1) {
                 var9 = 1;

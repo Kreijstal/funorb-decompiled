@@ -99,7 +99,7 @@ final class CheckboxPainter implements WidgetPainter {
           ql.field_n = param1;
           PlayerStats.field_c = param3;
           FrameTimer.field_c = param2;
-          BattleEvent.b(gf.field_b / 2, gf.field_k / 2, 0);
+          BattleEvent.b(SoftwareRasterizer.field_b / 2, SoftwareRasterizer.field_k / 2, 0);
           id.a(param3.field_K + param3.field_q, param3.field_K, 26883, param1.field_K, param1.field_q + param1.field_K);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -256,20 +256,20 @@ final class CheckboxPainter implements WidgetPainter {
             param2 = param2 & var6.field_y;
           }
           var7 = 5592405;
-          gf.d(param0.field_m + param1, param0.field_q + param3, param0.field_x, param0.field_n, this.field_m);
+          SoftwareRasterizer.fillRect(param0.field_m + param1, param0.field_q + param3, param0.field_x, param0.field_n, this.field_m);
           if (param2) {
             var7 = 16777215;
           }
           var8 = this.field_h + param0.field_m + param1;
           var9 = this.field_k + param0.field_q + param3;
-          gf.a(var8, var9, this.field_e, this.field_s, 5592405);
-          gf.d(var8, var9, this.field_e, this.field_s, var7);
+          SoftwareRasterizer.drawFadingBorder(var8, var9, this.field_e, this.field_s, 5592405);
+          SoftwareRasterizer.fillRect(var8, var9, this.field_e, this.field_s, var7);
           if (param4 != 12) {
             return;
           }
           if (var6.field_z) {
-            gf.g(var8, var9, this.field_e + var8, this.field_s + var9, 1);
-            gf.g(this.field_e + var8, var9, var8, var9 + this.field_s, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_e + var8, this.field_s + var9, 1);
+            SoftwareRasterizer.drawLine(this.field_e + var8, var9, var8, var9 + this.field_s, 1);
           }
           if (this.field_i != null) {
             var10 = this.field_q + this.field_e + this.field_h;

@@ -157,14 +157,14 @@ final class mj extends qr {
             var8 = param5[1].field_o;
             param5[0].drawTinted(param4, param3, param2);
             param5[2].drawTinted(-var7 + (param4 + param0), param3, param2);
-            gf.a(fc.field_g);
-            gf.i(var6_int + param4, param3, param4 + (param0 - var7), param5[1].field_p + param3);
+            SoftwareRasterizer.saveClip(fc.field_g);
+            SoftwareRasterizer.intersectClip(var6_int + param4, param3, param4 + (param0 - var7), param5[1].field_p + param3);
             var9 = param4 + var6_int;
             var10 = param0 + param4 - var7;
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
               param5[1].drawTinted(param4, param3, param2);
             }
-            gf.b(fc.field_g);
+            SoftwareRasterizer.restoreClip(fc.field_g);
             return;
           }
           return;

@@ -46,13 +46,13 @@ final class md extends UiWidget {
           var11 = var7 - var6;
           var12 = 128 + (int)(Math.sqrt((double)(-(var11 * var11) + var6 * var6)) / (double)var6 * 128.0);
           var13 = var12 >= 256 ? var9 | var10 : (var12 * var10 & 16711680 | -16711936 & var12 * var9) >>> 8;
-          gf.f(var8, var7, this.field_H, var13);
-          gf.f(var8 - this.field_H * 2, var7, this.field_H, var13);
+          SoftwareRasterizer.drawHorizontalLine(var8, var7, this.field_H, var13);
+          SoftwareRasterizer.drawHorizontalLine(var8 - this.field_H * 2, var7, this.field_H, var13);
           var10Lifetime1 = 65280 & param2;
           var9Lifetime1 = 16711935 & param2;
           var13Lifetime1 = 256 <= var12 ? var10Lifetime1 | var9Lifetime1 : (16711680 & var12 * var10Lifetime1 | var9Lifetime1 * var12 & -16711936) >>> 8;
-          gf.f(var8 + this.field_H, var7, this.field_H, var13Lifetime1);
-          gf.f(-this.field_H + var8, var7, this.field_H, var13Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(var8 + this.field_H, var7, this.field_H, var13Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_H + var8, var7, this.field_H, var13Lifetime1);
         }
         Star.f((byte) 111);
         return var15;
@@ -145,7 +145,7 @@ final class md extends UiWidget {
             param0.draw(var6, param1);
           }
           Star.f((byte) -64);
-          if (gf.field_i <= param2 + this.field_R.field_z) {
+          if (SoftwareRasterizer.field_i <= param2 + this.field_R.field_z) {
             aq.a((byte) -90, this.field_S);
             param0.draw(-this.field_P, 0);
             param0.draw(-this.field_P + this.field_H * 2, 0);
@@ -153,7 +153,7 @@ final class md extends UiWidget {
             Star.f((byte) -91);
             this.field_S.draw(param2, param1);
           }
-          if (gf.field_l >= -this.field_R.field_z + var5_int) {
+          if (SoftwareRasterizer.field_l >= -this.field_R.field_z + var5_int) {
             aq.a((byte) 98, this.field_S);
             for (var7 = -this.field_R.field_z + this.field_x + this.field_P; 2 * this.field_H < var7; var7 = var7 - 2 * this.field_H) {
             }
@@ -238,19 +238,19 @@ final class md extends UiWidget {
         Star.field_F.bindAsRenderTarget();
         for (var1 = 1; -1 + Star.field_F.field_w > var1; var1++) {
           var2 = (-var1 + Star.field_F.field_w / 2) * (Star.field_F.field_w / 2 - var1);
-          gf.f(0, var1, Star.field_F.field_z, 328965 * (Star.field_F.field_w / 2 * (Star.field_F.field_w / 2) - var2));
+          SoftwareRasterizer.drawHorizontalLine(0, var1, Star.field_F.field_z, 328965 * (Star.field_F.field_w / 2 * (Star.field_F.field_w / 2) - var2));
         }
-        gf.f(param0, 0, Star.field_F.field_z, 1052688);
-        gf.f(0, -1 + Star.field_F.field_w, Star.field_F.field_z, 1052688);
+        SoftwareRasterizer.drawHorizontalLine(param0, 0, Star.field_F.field_z, 1052688);
+        SoftwareRasterizer.drawHorizontalLine(0, -1 + Star.field_F.field_w, Star.field_F.field_z, 1052688);
         for (var1Lifetime1 = 0; var1Lifetime1 < Star.field_F.field_w; var1Lifetime1++) {
-          gf.a(-1 + Star.field_F.field_z, var1Lifetime1, SolVictoryChecker.a(1052688, Star.field_F.field_B[-1 + (var1Lifetime1 + 1) * Star.field_F.field_z], -114, 128));
+          SoftwareRasterizer.setPixel(-1 + Star.field_F.field_z, var1Lifetime1, SolVictoryChecker.blendColours(1052688, Star.field_F.field_B[-1 + (var1Lifetime1 + 1) * Star.field_F.field_z], -114, 128));
         }
-        gf.a(Star.field_F.field_z - 2, 1, SolVictoryChecker.a(1052688, Star.field_F.field_B[Star.field_F.field_z * 2 - 2], -83, 128));
-        gf.a(Star.field_F.field_z - 3, 1, SolVictoryChecker.a(1052688, Star.field_F.field_B[-3 + Star.field_F.field_z * 2], -78, 192));
-        gf.a(-2 + Star.field_F.field_z, 2, SolVictoryChecker.a(1052688, Star.field_F.field_B[-2 + Star.field_F.field_z * 3], -110, 192));
-        gf.a(Star.field_F.field_z - 2, Star.field_F.field_w - 2, SolVictoryChecker.a(1052688, Star.field_F.field_B[Star.field_F.field_z * (Star.field_F.field_w - 1) - 2], param0 - 117, 128));
-        gf.a(-3 + Star.field_F.field_z, -2 + Star.field_F.field_w, SolVictoryChecker.a(1052688, Star.field_F.field_B[-3 + (-1 + Star.field_F.field_w) * Star.field_F.field_z], -125, 192));
-        gf.a(-2 + Star.field_F.field_z, -3 + Star.field_F.field_w, SolVictoryChecker.a(1052688, Star.field_F.field_B[-2 + Star.field_F.field_z * (-2 + Star.field_F.field_w)], -111, 192));
+        SoftwareRasterizer.setPixel(Star.field_F.field_z - 2, 1, SolVictoryChecker.blendColours(1052688, Star.field_F.field_B[Star.field_F.field_z * 2 - 2], -83, 128));
+        SoftwareRasterizer.setPixel(Star.field_F.field_z - 3, 1, SolVictoryChecker.blendColours(1052688, Star.field_F.field_B[-3 + Star.field_F.field_z * 2], -78, 192));
+        SoftwareRasterizer.setPixel(-2 + Star.field_F.field_z, 2, SolVictoryChecker.blendColours(1052688, Star.field_F.field_B[-2 + Star.field_F.field_z * 3], -110, 192));
+        SoftwareRasterizer.setPixel(Star.field_F.field_z - 2, Star.field_F.field_w - 2, SolVictoryChecker.blendColours(1052688, Star.field_F.field_B[Star.field_F.field_z * (Star.field_F.field_w - 1) - 2], param0 - 117, 128));
+        SoftwareRasterizer.setPixel(-3 + Star.field_F.field_z, -2 + Star.field_F.field_w, SolVictoryChecker.blendColours(1052688, Star.field_F.field_B[-3 + (-1 + Star.field_F.field_w) * Star.field_F.field_z], -125, 192));
+        SoftwareRasterizer.setPixel(-2 + Star.field_F.field_z, -3 + Star.field_F.field_w, SolVictoryChecker.blendColours(1052688, Star.field_F.field_B[-2 + Star.field_F.field_z * (-2 + Star.field_F.field_w)], -111, 192));
         cg.i(param0 + 0);
         return Star.field_F;
     }
@@ -273,7 +273,7 @@ final class md extends UiWidget {
               var7 = Math.sqrt(-var7 + 1.0);
               var9 = !(1.0 <= var7) ? (int)(255.0 * var7) : 255;
             }
-            gf.a(var6, var5, var9 << 8 | var9 | var9 << 16);
+            SoftwareRasterizer.setPixel(var6, var5, var9 << 8 | var9 | var9 << 16);
           }
         }
         Star.f((byte) 110);
@@ -294,7 +294,7 @@ final class md extends UiWidget {
         }
         for (var6 = 0; param2 > var6; var6++) {
           var7 = (param2 - var6) * 256 / param2;
-          var10[var6] = ee.a(we.a(var7 * var4, -16711936), we.a(16711680, var7 * var5)) >>> 8;
+          var10[var6] = ee.intOr(we.intAnd(var7 * var4, -16711936), we.intAnd(16711680, var7 * var5)) >>> 8;
         }
         return var3;
     }

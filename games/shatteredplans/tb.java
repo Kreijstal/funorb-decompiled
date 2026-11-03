@@ -200,7 +200,7 @@ final class tb {
           }
           for (var17_intLifetime3 = 0; param0 > var17_intLifetime3; var17_intLifetime3++) {
             QuickChatCategoryRegistry.field_g[4 + var17_intLifetime3] = new qr(0L, ObjectList.field_h, SoundPlayback.field_l[var17_intLifetime3]);
-            array$2 = new sg[1 + we.a(255, (int) so.field_r[var17_intLifetime3])];
+            array$2 = new sg[1 + we.intAnd(255, (int) so.field_r[var17_intLifetime3])];
             ByteArrayNode.field_p[var17_intLifetime3 + 4] = array$2;
             ByteArrayNode.field_p[4 + var17_intLifetime3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, DefendTask.field_r);
             for (var18 = 0; var18 < (255 & so.field_r[var17_intLifetime3]); var18++) {

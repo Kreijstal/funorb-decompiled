@@ -32,19 +32,19 @@ final class bj extends WidgetContainer implements ButtonListener {
         RuntimeException var1 = null;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          nm.field_a = -1 + gf.field_k;
+          nm.field_a = -1 + SoftwareRasterizer.field_k;
           if (param0 != 26987) {
             field_H = (Sprite) null;
           }
           WhirlpoolHasher.field_i = 0;
           if (field_J != null &&
-            gf.field_k <= field_J.length) {
-            for (var1_int = 0; var1_int < gf.field_k; var1_int++) {
+            SoftwareRasterizer.field_k <= field_J.length) {
+            for (var1_int = 0; var1_int < SoftwareRasterizer.field_k; var1_int++) {
               field_J[var1_int] = null;
             }
             return;
           }
-          field_J = new wa[gf.field_k];
+          field_J = new wa[SoftwareRasterizer.field_k];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

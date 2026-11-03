@@ -101,7 +101,7 @@ class TextFieldWidget extends FocusableWidget {
               stackIn_6_2 = var8_int;
             }
             this.a(stackIn_5_1, stackIn_6_2);
-            var8_long = pr.a(14274);
+            var8_long = pr.currentTimeMillis(14274);
             stackIn_9_1 = !(-this.field_F + var8_long >= 250L);
             this.field_P = stackIn_9_1;
             if (this.field_P) {
@@ -202,7 +202,7 @@ class TextFieldWidget extends FocusableWidget {
         if (this.field_H != this.field_N) {
           var5.a(this.field_N, param2, param3, this.field_H, 0, (UiWidget) (this));
         }
-        long var6 = pr.a(param1 + 26131);
+        long var6 = pr.currentTimeMillis(param1 + 26131);
         if ((var6 - this.field_Q) % 1000L < 500L) {
           var5.a(this.field_H, param3, -127, param2, (UiWidget) (this));
           return;
@@ -235,7 +235,7 @@ class TextFieldWidget extends FocusableWidget {
           if (param2 != 13) {
             this.field_F = -52L;
           }
-          this.field_Q = pr.a(param2 ^ 14287);
+          this.field_Q = pr.currentTimeMillis(param2 ^ 14287);
           if (param1 != 60 &&
             62 != param1) {
             if (param1 >= 32 &&
@@ -405,7 +405,7 @@ class TextFieldWidget extends FocusableWidget {
           this.field_O = param2;
           this.a(67, param0, true);
           this.field_M = true;
-          this.field_Q = pr.a(14274);
+          this.field_Q = pr.currentTimeMillis(14274);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -430,7 +430,7 @@ class TextFieldWidget extends FocusableWidget {
                 this.field_H = var6;
               }
             }
-            this.field_Q = pr.a(14274);
+            this.field_Q = pr.currentTimeMillis(14274);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "go.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

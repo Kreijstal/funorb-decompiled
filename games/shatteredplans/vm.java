@@ -310,7 +310,7 @@ final class vm extends qr {
           var12 = "</col>";
           for (var13 = 0; this.field_Pb > var13; var13++) {
             if (0 < this.field_zb[var13]) {
-              param6[var13] = var11 + sn.a(this.field_zb[var13], (byte) -86).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + sn.charToString(this.field_zb[var13], (byte) -86).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (this.field_yb[var13] != null ||

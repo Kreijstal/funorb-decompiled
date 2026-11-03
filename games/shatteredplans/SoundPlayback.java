@@ -243,7 +243,7 @@ final class SoundPlayback extends IntrusiveNode {
               }
               stackIn_52_0[stackIn_52_1] = stackIn_55_2;
             }
-            MusicPatch.field_p = pr.a(14274);
+            MusicPatch.field_p = pr.currentTimeMillis(14274);
           }
           GameState.field_l.field_b = ShatteredPlansClient.field_E.length;
           var3_intLifetime1 = 0;

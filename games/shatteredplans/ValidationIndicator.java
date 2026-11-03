@@ -166,7 +166,7 @@ final class ValidationIndicator extends FocusableWidget {
         }
         while (var4 < param1) {
           var3.bindAsRenderTarget();
-          gf.b();
+          SoftwareRasterizer.clear();
           for (var5 = 0; var5 < 4; var5++) {
             var6 = (double)(param1 * (3 + var5) + var4) * 6.283185307179586;
             var8 = Math.sin(var6 / (double)(param1 * 4));
@@ -227,7 +227,7 @@ final class ValidationIndicator extends FocusableWidget {
           var9 <= gg.field_e.field_z &&
           gg.field_e.field_w >= var10) {
           aq.a((byte) 90, gg.field_e);
-          gf.b();
+          SoftwareRasterizer.clear();
         } else {
           gg.field_e = new Sprite(var9, var10);
           aq.a((byte) -107, gg.field_e);

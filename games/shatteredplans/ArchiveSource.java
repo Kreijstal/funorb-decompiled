@@ -7,7 +7,7 @@ abstract class ArchiveSource {
     static volatile int field_c;
     static String field_a;
 
-    final static int a(int param0, int param1) {
+    final static int bitCount(int param0, int param1) {
         param1 = (1431655765 & param1) + (param1 >>> 1 & -715827883);
         param1 = ((-858993460 & param1) >>> 2) + (param1 & 858993459);
         param1 = 252645135 & param1 + (param1 >>> 4);

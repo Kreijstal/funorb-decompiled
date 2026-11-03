@@ -172,8 +172,8 @@ final class c {
         }
         c.a(0, field_g);
         int var0 = field_f[1];
-        if (var0 < gf.field_a) {
-          var0 = gf.field_a;
+        if (var0 < SoftwareRasterizer.field_a) {
+          var0 = SoftwareRasterizer.field_a;
         }
         int var1 = 0;
         for (var2 = 0; var2 < field_g; var2 += 4) {
@@ -224,7 +224,7 @@ final class c {
           }
           var2++;
           field_h = var2;
-          if (var2 >= gf.field_f) {
+          if (var2 >= SoftwareRasterizer.field_f) {
             return false;
           }
           var3 = field_c;

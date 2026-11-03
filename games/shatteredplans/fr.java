@@ -22,7 +22,7 @@ final class fr extends SingleChildWidget {
         }
         if (MatchingTextValidator.field_t.field_k) {
           il.a(var1, 0, var2, Star.field_K);
-          gf.f(0, 0, 640, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 0, 640, 0);
           return;
         }
         Star.field_K.drawOpaque(-var1 >> 4, -var2 >> 4);

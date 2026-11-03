@@ -257,10 +257,10 @@ abstract class nq extends DualLinkNode {
               }
               param1 = param1 + this.field_y[var8];
               if (field_w != -1) {
-                gf.f(var11, param2 + (int)((double)this.field_L * 0.7), param1 - var11, field_w);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_L * 0.7), param1 - var11, field_w);
               }
               if (field_p != -1) {
-                gf.f(var11, param2 + this.field_L + 1, param1 - var11, field_p);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_L + 1, param1 - var11, field_p);
               }
               var5 = var8;
             }
@@ -487,10 +487,10 @@ abstract class nq extends DualLinkNode {
                 }
               }
               if (field_w != -1) {
-                gf.j(param1 + (int)((double)this.field_L * 0.7), param2, var10, field_w);
+                SoftwareRasterizer.drawVerticalLine(param1 + (int)((double)this.field_L * 0.7), param2, var10, field_w);
               }
               if (field_p != -1) {
-                gf.j(param1 + this.field_L + 1, param2, var10, field_p);
+                SoftwareRasterizer.drawVerticalLine(param1 + this.field_L + 1, param2, var10, field_p);
               }
               var5 = var8;
             }

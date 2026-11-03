@@ -62,8 +62,8 @@ final class IsaacBackedRandom extends Random {
     public final void setSeed(long param0) {
         int[] var4 = new int[2];
         int[] var3 = var4;
-        var4[0] = (int)GarrisonTask.a(65535L, param0);
-        var4[1] = (int)GarrisonTask.a(param0 >> 32, 65535L);
+        var4[0] = (int)GarrisonTask.longAnd(65535L, param0);
+        var4[1] = (int)GarrisonTask.longAnd(param0 >> 32, 65535L);
         this.field_f = new IsaacRandom(var4);
     }
 

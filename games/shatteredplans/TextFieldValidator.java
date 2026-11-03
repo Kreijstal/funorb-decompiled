@@ -60,7 +60,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
             field_k = (String) null;
           }
           var7_int = param5 + param4.field_z * param2;
-          var8 = param3 + param0 * gf.field_b;
+          var8 = param3 + param0 * SoftwareRasterizer.field_b;
           while (true) {
             param1--;
             if (param1 < 0) {
@@ -69,13 +69,13 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
             incrementValue$4 = var7_int;
             var7_int++;
             var9 = param4.field_B[incrementValue$4];
-            var10 = gf.field_h[var8];
+            var10 = SoftwareRasterizer.field_h[var8];
             var11 = var9 + var10;
             var9 = (var9 & 16711935) + (var10 & 16711935);
             var10Lifetime1 = (var9 & 16777472) + (-var9 + var11 & 65536);
             incrementValue$5 = var8;
             var8++;
-            gf.field_h[incrementValue$5] = ee.a(-(var10Lifetime1 >>> 8) + var10Lifetime1, var11 - var10Lifetime1);
+            SoftwareRasterizer.field_h[incrementValue$5] = ee.intOr(-(var10Lifetime1 >>> 8) + var10Lifetime1, var11 - var10Lifetime1);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

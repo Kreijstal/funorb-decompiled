@@ -21,7 +21,7 @@ final class VorbisCodebook {
         return ~this.field_f[var1];
     }
 
-    private final static int a(int param0, int param1) {
+    private final static int floorRoot(int param0, int param1) {
         int var2 = 0;
         for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; ProductionContent.a(var2, (byte) 121, param1) > param0; var2--) {
         }
@@ -197,7 +197,7 @@ final class VorbisCodebook {
           if (var2Lifetime1 != 1) {
             var7 = this.field_c * this.field_a;
           } else {
-            var7 = VorbisCodebook.a(this.field_c, this.field_a);
+            var7 = VorbisCodebook.floorRoot(this.field_c, this.field_a);
           }
           this.field_e = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {

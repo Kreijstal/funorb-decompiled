@@ -40,7 +40,7 @@ abstract class FrameTimer {
     final int a(long param0, int param1) {
         long var4 = this.a(0);
         if (var4 > 0L) {
-          jb.a((byte) -115, var4);
+          jb.sleep((byte) -115, var4);
         }
         if (param1 == -1) {
           return this.a(18907, param0);
@@ -187,7 +187,7 @@ abstract class FrameTimer {
                     return;
                   }
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + gf.field_b;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_b;
                   var9_int = var9_int + var11;
                 }
               }
@@ -237,7 +237,7 @@ abstract class FrameTimer {
               if (param7 >= wn.field_e) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + gf.field_b;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_b;
               var10 = var10 + var12;
               var9_int = var9_int + var11;
             }

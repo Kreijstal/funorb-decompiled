@@ -71,7 +71,7 @@ abstract class ms {
     final static void b(int param0) {
         if (param0 == 20975) {
           if (QuickChatCategoryDefinition.field_t) {
-            gf.h(gf.field_i, gf.field_a, -gf.field_i + gf.field_l, -gf.field_a + gf.field_f);
+            SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_l, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
             SectorCacheStore.field_f.b(false, -104);
           }
           return;
@@ -79,7 +79,7 @@ abstract class ms {
         String var2 = (String) null;
         ms.a((String) null, (byte) -111, (String) null);
         if (QuickChatCategoryDefinition.field_t) {
-          gf.h(gf.field_i, gf.field_a, -gf.field_i + gf.field_l, -gf.field_a + gf.field_f);
+          SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_l, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
           SectorCacheStore.field_f.b(false, -104);
         }
     }

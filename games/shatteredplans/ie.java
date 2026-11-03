@@ -8,33 +8,33 @@ final class ie {
         int var9Lifetime2;
         param1 = param1 + param0.field_t;
         param2 = param2 + param0.field_x;
-        int var3 = param1 + param2 * gf.field_b;
+        int var3 = param1 + param2 * SoftwareRasterizer.field_b;
         int var4 = 0;
         int var5 = param0.field_w;
         int var6 = param0.field_z;
-        int var7 = gf.field_b - var6;
+        int var7 = SoftwareRasterizer.field_b - var6;
         int var8 = 0;
-        if (param2 < gf.field_a) {
-          var9 = gf.field_a - param2;
+        if (param2 < SoftwareRasterizer.field_a) {
+          var9 = SoftwareRasterizer.field_a - param2;
           var5 = var5 - var9;
-          param2 = gf.field_a;
+          param2 = SoftwareRasterizer.field_a;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * gf.field_b;
+          var3 = var3 + var9 * SoftwareRasterizer.field_b;
         }
-        if (param2 + var5 > gf.field_f) {
-          var5 = var5 - (param2 + var5 - gf.field_f);
+        if (param2 + var5 > SoftwareRasterizer.field_f) {
+          var5 = var5 - (param2 + var5 - SoftwareRasterizer.field_f);
         }
-        if (param1 < gf.field_i) {
-          var9Lifetime1 = gf.field_i - param1;
+        if (param1 < SoftwareRasterizer.field_i) {
+          var9Lifetime1 = SoftwareRasterizer.field_i - param1;
           var6 = var6 - var9Lifetime1;
-          param1 = gf.field_i;
+          param1 = SoftwareRasterizer.field_i;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param1 + var6 > gf.field_l) {
-          var9Lifetime2 = param1 + var6 - gf.field_l;
+        if (param1 + var6 > SoftwareRasterizer.field_l) {
+          var9Lifetime2 = param1 + var6 - SoftwareRasterizer.field_l;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -43,7 +43,7 @@ final class ie {
           if (var5 <= 0) {
             return;
           }
-          ie.a(gf.field_h, param0.field_B, 0, var4, var3, var6, var5, var7, var8);
+          ie.a(SoftwareRasterizer.field_h, param0.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -175,17 +175,17 @@ final class ie {
         var20 = var20 + 15 >> 4;
         var21 = var21 >> 4;
         var22 = var22 + 15 >> 4;
-        if (var19 < gf.field_i) {
-          var19 = gf.field_i;
+        if (var19 < SoftwareRasterizer.field_i) {
+          var19 = SoftwareRasterizer.field_i;
         }
-        if (var20 > gf.field_l) {
-          var20 = gf.field_l;
+        if (var20 > SoftwareRasterizer.field_l) {
+          var20 = SoftwareRasterizer.field_l;
         }
-        if (var21 < gf.field_a) {
-          var21 = gf.field_a;
+        if (var21 < SoftwareRasterizer.field_a) {
+          var21 = SoftwareRasterizer.field_a;
         }
-        if (var22 > gf.field_f) {
-          var22 = gf.field_f;
+        if (var22 > SoftwareRasterizer.field_f) {
+          var22 = SoftwareRasterizer.field_f;
         }
         var20 = var19 - var20;
         if (var20 >= 0) {
@@ -195,8 +195,8 @@ final class ie {
         if (var22 >= 0) {
           return;
         }
-        var23 = var21 * gf.field_b + var19;
-        var24 = gf.field_b + var20;
+        var23 = var21 * SoftwareRasterizer.field_b + var19;
+        var24 = SoftwareRasterizer.field_b + var20;
         var25 = 16777216.0 / (double)param6;
         var27 = (int)Math.floor(Math.sin(var7) * var25 + 0.5);
         var28 = (int)Math.floor(Math.cos(var7) * var25 + 0.5);
@@ -589,8 +589,8 @@ final class ie {
         var19 = var19 & 65280;
         if (var20 != 0) {
           var21 = 256 - var20;
-          var22 = gf.field_h[param3];
-          gf.field_h[param3] = (var18 * var20 + (var22 & 16711935) * var21 & -16711936) + (var19 * var20 + (var22 & 65280) * var21 & 16711680) >>> 8;
+          var22 = SoftwareRasterizer.field_h[param3];
+          SoftwareRasterizer.field_h[param3] = (var18 * var20 + (var22 & 16711935) * var21 & -16711936) + (var19 * var20 + (var22 & 65280) * var21 & 16711680) >>> 8;
         }
         return;
     }

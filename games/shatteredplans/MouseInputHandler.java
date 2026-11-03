@@ -123,13 +123,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var11 = var13;
             var5_ref_int__ = var11;
             for (var6 = 0; var1 > var6; var6++) {
-              var5_ref_int__[var6] = ee.a(eo.field_fb[we.a((int) var20[var6], 255)], we.a(-16777216, var21[var6] << 24));
+              var5_ref_int__[var6] = ee.intOr(eo.field_fb[we.intAnd((int) var20[var6], 255)], we.intAnd(-16777216, var21[var6] << 24));
             }
             var3 = new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var13);
           } else {
             var9 = new int[var1];
             for (var5 = 0; var1 > var5; var5++) {
-              var9[var5] = eo.field_fb[we.a(255, (int) var20[var5])];
+              var9[var5] = eo.field_fb[we.intAnd(255, (int) var20[var5])];
             }
             var3 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var9);
           }
@@ -144,13 +144,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           var11Lifetime1 = var13Lifetime1;
           var5_ref_int__Lifetime1 = var11Lifetime1;
           for (var6Lifetime1 = 0; var1 > var6Lifetime1; var6Lifetime1++) {
-            var5_ref_int__Lifetime1[var6Lifetime1] = ee.a(eo.field_fb[we.a((int) var18[var6Lifetime1], 255)], we.a(-16777216, var19[var6Lifetime1] << 24));
+            var5_ref_int__Lifetime1[var6Lifetime1] = ee.intOr(eo.field_fb[we.intAnd((int) var18[var6Lifetime1], 255)], we.intAnd(-16777216, var19[var6Lifetime1] << 24));
           }
           var3Lifetime1 = new ArgbSprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var13Lifetime1);
         } else {
           var9Lifetime1 = new int[var1];
           for (var5Lifetime1 = 0; var1 > var5Lifetime1; var5Lifetime1++) {
-            var9Lifetime1[var5Lifetime1] = eo.field_fb[we.a(255, (int) var18[var5Lifetime1])];
+            var9Lifetime1[var5Lifetime1] = eo.field_fb[we.intAnd(255, (int) var18[var5Lifetime1])];
           }
           var3Lifetime1 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], IntHashIndex.field_g[0], var9Lifetime1);
         }
@@ -328,7 +328,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             ql.field_q = 0;
             ArchiveSource.field_c = param0.getX();
             TertiaryNodeList.field_e = param0.getY();
-            pr.a(14274);
+            pr.currentTimeMillis(14274);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               vh.field_c = 2;
               v.field_d = 2;

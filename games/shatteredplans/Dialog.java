@@ -80,7 +80,7 @@ abstract class Dialog extends WidgetContainer {
           ArchiveIndex.field_r = new Sprite(this.field_x, this.field_n);
         }
         aq.a((byte) 110, ArchiveIndex.field_r);
-        gf.b();
+        SoftwareRasterizer.clear();
         this.a(0, 103, 0);
         super.drawLayer(param0, param1, -param2 - this.field_q, -param3 - this.field_m);
         Star.f((byte) -50);

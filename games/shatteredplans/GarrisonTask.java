@@ -20,7 +20,7 @@ final class GarrisonTask extends AiTask {
         field_s = null;
     }
 
-    static long a(long param0, long param1) {
+    static long longAnd(long param0, long param1) {
         return param0 & param1;
     }
 

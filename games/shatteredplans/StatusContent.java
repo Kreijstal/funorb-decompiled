@@ -17,11 +17,11 @@ final class StatusContent implements MenuContent {
         field_b = null;
         field_g = null;
         if (param0 != 18973) {
-          StatusContent.a('`', 73, -40);
+          StatusContent.repeatChar('`', 73, -40);
         }
     }
 
-    final static String a(char param0, int param1, int param2) {
+    final static String repeatChar(char param0, int param1, int param2) {
         int var4 = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param2 > -33) {

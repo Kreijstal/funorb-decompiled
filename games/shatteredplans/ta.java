@@ -80,7 +80,7 @@ final class ta {
         }
         di.a(false, param0);
         if (WidgetContainer.field_C) {
-          gf.h(n.field_h.field_d.field_hb, n.field_h.field_d.field_db, n.field_h.field_d.field_K, n.field_h.field_d.field_mb);
+          SoftwareRasterizer.clearRect(n.field_h.field_d.field_hb, n.field_h.field_d.field_db, n.field_h.field_d.field_K, n.field_h.field_d.field_mb);
           n.field_h.field_d.b(param0, -68);
           TextFieldValidator.a((byte) 99, param0);
           if (param1 < 38) {

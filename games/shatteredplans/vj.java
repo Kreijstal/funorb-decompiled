@@ -213,7 +213,7 @@ final class vj extends SingleChildWidget {
           field_F[var0] = 65793 * var0;
           field_A[var0] = 65793 * (var0 >> 2);
           field_I[var0] = var0 * 65536;
-          field_G[var0] = ee.a(we.a(var0, -1912602370) << 7, var0);
+          field_G[var0] = ee.intOr(we.intAnd(var0, -1912602370) << 7, var0);
           field_H[var0] = (var0 >> 1) * 65537;
         }
     }

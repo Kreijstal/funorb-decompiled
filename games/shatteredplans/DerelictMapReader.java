@@ -51,10 +51,10 @@ final class DerelictMapReader implements MapGenerator {
           var9Lifetime1 = 0;
           while (var9Lifetime1 < 4) {
             var10Lifetime1 = this.field_m.readUnsignedByte(-119);
-            var7.field_G[var9Lifetime1] = we.a(15, var10Lifetime1);
+            var7.field_G[var9Lifetime1] = we.intAnd(15, var10Lifetime1);
             var9Lifetime1++;
             if (var9Lifetime1 < 4) {
-              var7.field_G[var9Lifetime1] = we.a(var10Lifetime1, 240) >> 4;
+              var7.field_G[var9Lifetime1] = we.intAnd(var10Lifetime1, 240) >> 4;
               var9Lifetime1++;
               continue;
             }
@@ -99,7 +99,7 @@ final class DerelictMapReader implements MapGenerator {
           MapView.field_sb[param0] = dupTemp$0;
           bs.a(var3, 100);
           CellVertex.field_j[param0].draw(64, 64);
-          gf.b(12, 12, 0, 0, 256, 256);
+          SoftwareRasterizer.b(12, 12, 0, 0, 256, 256);
           cg.i(0);
         }
         if (param1 >= -28) {

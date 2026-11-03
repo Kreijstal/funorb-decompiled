@@ -34,22 +34,22 @@ final class oo {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 >= param3) {
           if (param0 < param2) {
-            FrameTimer.a(param1, param7, -99, param5, param4, param0, gf.field_h, param3, param2);
+            FrameTimer.a(param1, param7, -99, param5, param4, param0, SoftwareRasterizer.field_h, param3, param2);
           } else {
             if (param3 < param2) {
-              FrameTimer.a(param7, param1, -116, param5, param4, param2, gf.field_h, param3, param0);
+              FrameTimer.a(param7, param1, -116, param5, param4, param2, SoftwareRasterizer.field_h, param3, param0);
             } else {
-              FrameTimer.a(param7, param5, -92, param1, param4, param3, gf.field_h, param2, param0);
+              FrameTimer.a(param7, param5, -92, param1, param4, param3, SoftwareRasterizer.field_h, param2, param0);
             }
           }
         } else {
           if (param3 < param2) {
-            FrameTimer.a(param1, param5, -113, param7, param4, param3, gf.field_h, param0, param2);
+            FrameTimer.a(param1, param5, -113, param7, param4, param3, SoftwareRasterizer.field_h, param0, param2);
           } else {
             if (param0 >= param2) {
-              FrameTimer.a(param5, param7, -98, param1, param4, param0, gf.field_h, param2, param3);
+              FrameTimer.a(param5, param7, -98, param1, param4, param0, SoftwareRasterizer.field_h, param2, param3);
             } else {
-              FrameTimer.a(param5, param1, -101, param7, param4, param2, gf.field_h, param0, param3);
+              FrameTimer.a(param5, param1, -101, param7, param4, param2, SoftwareRasterizer.field_h, param0, param3);
             }
           }
         }

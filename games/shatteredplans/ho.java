@@ -15,7 +15,7 @@ final class ho {
 
     final static void a(boolean param0, int param1) {
         if (null != bq.field_h) {
-          gf.h(gf.field_i, gf.field_a, gf.field_l - gf.field_i, -gf.field_a + gf.field_f);
+          SoftwareRasterizer.clearRect(SoftwareRasterizer.field_i, SoftwareRasterizer.field_a, SoftwareRasterizer.field_l - SoftwareRasterizer.field_i, -SoftwareRasterizer.field_a + SoftwareRasterizer.field_f);
           bq.field_h.b(param0, -100);
           if (param1 != 8323199) {
             ho.a(-86);

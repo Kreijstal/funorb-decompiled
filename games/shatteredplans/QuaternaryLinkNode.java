@@ -87,7 +87,7 @@ class QuaternaryLinkNode extends TertiaryLinkNode {
     protected QuaternaryLinkNode() {
     }
 
-    final static int a(byte param0, int param1, int param2) {
+    final static int floorDiv(byte param0, int param1, int param2) {
         if (param0 > -67) {
           field_v = (String) null;
         }

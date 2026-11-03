@@ -47,7 +47,7 @@ final class ToggleButton extends MenuComponent implements ok {
         }
         if (this.field_y) {
           if (-1 != this.field_z) {
-            gf.d(this.field_k, this.field_t, this.field_m, this.field_i, this.field_z);
+            SoftwareRasterizer.fillRect(this.field_k, this.field_t, this.field_m, this.field_i, this.field_z);
             if (this.field_F != null) {
               this.field_F.draw(this.field_k + (this.field_m - this.field_F.field_z) / 2, (this.field_i - this.field_F.field_w) / 2 + this.field_t);
             }
@@ -67,7 +67,7 @@ final class ToggleButton extends MenuComponent implements ok {
           return;
         }
         if (this.field_w != -1) {
-          gf.d(this.field_k, this.field_t, this.field_m, this.field_i, this.field_w);
+          SoftwareRasterizer.fillRect(this.field_k, this.field_t, this.field_m, this.field_i, this.field_w);
           if (this.field_E == null) {
             if (null != this.field_C) {
               rs.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);

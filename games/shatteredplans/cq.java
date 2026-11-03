@@ -60,7 +60,7 @@ final class cq extends WidgetContainer implements ButtonListener {
           }
           if (var3 == 0 &&
             eh.field_C == 2) {
-            var4 = pr.a(14274) - MusicPatch.field_p;
+            var4 = pr.currentTimeMillis(14274) - MusicPatch.field_p;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;

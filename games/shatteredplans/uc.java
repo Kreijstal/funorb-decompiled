@@ -199,8 +199,8 @@ final class uc extends MenuComponent {
           return;
         }
         for (var3 = 0; this.field_m > var3; var3++) {
-          var2 = SolVictoryChecker.a(this.field_x, this.field_u, -115, 256 * var3 / this.field_m);
-          gf.j(var3 + this.field_k, this.field_t, this.field_i, var2);
+          var2 = SolVictoryChecker.blendColours(this.field_x, this.field_u, -115, 256 * var3 / this.field_m);
+          SoftwareRasterizer.drawVerticalLine(var3 + this.field_k, this.field_t, this.field_i, var2);
         }
         int var4 = 3 % ((67 - param0) / 47);
     }

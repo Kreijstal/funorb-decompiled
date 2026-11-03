@@ -49,8 +49,8 @@ final class JavaSoundAudioOutput extends PcmPlayerService {
           this.field_y.start();
           this.field_v = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-          if (ArchiveSource.a(12330, param0) != 1) {
-            this.openLine(js.a(param0, (byte) 122));
+          if (ArchiveSource.bitCount(12330, param0) != 1) {
+            this.openLine(js.nextPowerOfTwo(param0, (byte) 122));
             return;
           }
           this.field_y = null;

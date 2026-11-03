@@ -3189,8 +3189,8 @@ final class GameSession implements AiHost {
               this.field_n = this.field_P.field_v[0];
               this.field_h = 0;
               this.field_P.c(0);
-              this.b(lr.a((byte) 27), 79);
-              this.field_z.field_d = lr.a((byte) 27);
+              this.b(lr.nextRandomInt((byte) 27), 79);
+              this.field_z.field_d = lr.nextRandomInt((byte) 27);
               this.field_P.chooseYearName((byte) 119);
               var2_int = 0;
               while (!(this.field_P.field_r <= var2_int)) {

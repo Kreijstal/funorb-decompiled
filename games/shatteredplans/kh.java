@@ -393,7 +393,7 @@ final class kh extends qr {
         if (param0 != -67) {
           kh.a(false, false);
         }
-        SecondaryNodeDequeIterator.field_b = pr.a(param0 + 14341) + 15000L;
+        SecondaryNodeDequeIterator.field_b = pr.currentTimeMillis(param0 + 14341) + 15000L;
         return SoundPlayback.field_i == 11 ? true : false;
     }
 

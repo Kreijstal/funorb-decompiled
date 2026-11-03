@@ -188,9 +188,9 @@ final class fb extends qr {
     final static void a(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9) {
         int var11;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (!param5 && (kh.field_Mb != gf.field_b ||
-          TertiaryNodeList.field_c != gf.field_k) && (so.field_q.field_d == gf.field_k &&
-          gf.field_b == so.field_q.field_g)) {
+        if (!param5 && (kh.field_Mb != SoftwareRasterizer.field_b ||
+          TertiaryNodeList.field_c != SoftwareRasterizer.field_k) && (so.field_q.field_d == SoftwareRasterizer.field_k &&
+          SoftwareRasterizer.field_b == so.field_q.field_g)) {
           if (null == np.field_a) {
             if (null == he.field_p) {
               DialogRoot.j(param9 ^ 97);

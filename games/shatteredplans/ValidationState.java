@@ -73,10 +73,10 @@ final class ValidationState {
           param0 = param4;
           param4 = var6Lifetime2;
         }
-        if (param2 < gf.field_i) {
+        if (param2 < SoftwareRasterizer.field_i) {
           return;
         }
-        if (param3 > gf.field_l) {
+        if (param3 > SoftwareRasterizer.field_l) {
           return;
         }
         if (param4 < param0) {
@@ -90,13 +90,13 @@ final class ValidationState {
         if (param1 > -7) {
           return;
         }
-        if (param4 < gf.field_a) {
+        if (param4 < SoftwareRasterizer.field_a) {
           return;
         }
-        if (!(gf.field_f >= param0)) {
+        if (!(SoftwareRasterizer.field_f >= param0)) {
           return;
         }
-        gf.g(param3, param0, param2, param4, param5);
+        SoftwareRasterizer.drawLine(param3, param0, param2, param4, param5);
     }
 
     final static void c(int param0) {

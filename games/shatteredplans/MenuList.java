@@ -221,14 +221,14 @@ final class MenuList extends MenuComponent implements gj {
           return;
         }
         int[] var3 = new int[4];
-        gf.a(var3);
-        gf.i(this.field_k, this.field_t, this.field_m + this.field_k, this.field_t + this.field_i);
+        SoftwareRasterizer.saveClip(var3);
+        SoftwareRasterizer.intersectClip(this.field_k, this.field_t, this.field_m + this.field_k, this.field_t + this.field_i);
         MenuComponent var4 = (MenuComponent) (this.field_l.startReverse(3725));
         while (var4 != null) {
           var4.a(116);
           var4 = (MenuComponent) (this.field_l.nextReverse(-124));
         }
-        gf.b(var3);
+        SoftwareRasterizer.restoreClip(var3);
     }
 
     static {

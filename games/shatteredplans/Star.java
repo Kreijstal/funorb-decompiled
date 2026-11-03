@@ -292,8 +292,8 @@ final class Star extends DualLinkNode {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        gf.a(var1.field_i, var1.field_r, var1.field_k);
-        gf.d(var1.field_o, var1.field_h, var1.field_j, var1.field_l);
+        SoftwareRasterizer.setTarget(var1.field_i, var1.field_r, var1.field_k);
+        SoftwareRasterizer.setClip(var1.field_o, var1.field_h, var1.field_j, var1.field_l);
         var1.field_i = null;
         ql.field_p.addLast((byte) -113, var1);
     }

@@ -209,7 +209,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void c(int param0, byte param1, int param2) {
         this.field_m[param2] = param0;
-        this.field_P[param2] = we.a(-128, param0);
+        this.field_P[param2] = we.intAnd(-128, param0);
         int var4 = 120 % ((51 - param1) / 40);
         this.a(param2, param0, (byte) -16);
     }
@@ -460,7 +460,7 @@ final class MidiPcmStream extends PcmStream {
           if (param1 <= 109) {
             MidiPcmStream.a((nk[]) null, -36, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, 119, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (Sprite[][]) null);
           }
-          var9 = pr.a(14274);
+          var9 = pr.currentTimeMillis(14274);
           var11 = null;
           var12 = (fb) (var8.startForward(0));
           while (var12 != null) {
@@ -1198,7 +1198,7 @@ final class MidiPcmStream extends PcmStream {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (16 > var5) {
-          this.field_P[var5] = we.a(this.field_m[var5], -128);
+          this.field_P[var5] = we.intAnd(this.field_m[var5], -128);
           var5++;
         }
     }
@@ -1320,67 +1320,67 @@ final class MidiPcmStream extends PcmStream {
         var6Lifetime4 = 127 & param0 >> 8;
         var7Lifetime3 = 127 & param0 >> 16;
         if (var6Lifetime4 == 0) {
-          this.field_P[var5Lifetime4] = (var7Lifetime3 << 14) + we.a(-2080769, this.field_P[var5Lifetime4]);
+          this.field_P[var5Lifetime4] = (var7Lifetime3 << 14) + we.intAnd(-2080769, this.field_P[var5Lifetime4]);
         }
         if (var6Lifetime4 == 32) {
-          this.field_P[var5Lifetime4] = (var7Lifetime3 << 7) + we.a(-16257, this.field_P[var5Lifetime4]);
+          this.field_P[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(-16257, this.field_P[var5Lifetime4]);
         }
         if (var6Lifetime4 == 1) {
-          this.field_p[var5Lifetime4] = we.a(-16257, this.field_p[var5Lifetime4]) + (var7Lifetime3 << 7);
+          this.field_p[var5Lifetime4] = we.intAnd(-16257, this.field_p[var5Lifetime4]) + (var7Lifetime3 << 7);
         }
         if (33 == var6Lifetime4) {
-          this.field_p[var5Lifetime4] = var7Lifetime3 + we.a(this.field_p[var5Lifetime4], -128);
+          this.field_p[var5Lifetime4] = var7Lifetime3 + we.intAnd(this.field_p[var5Lifetime4], -128);
         }
         if (var6Lifetime4 == 5) {
-          this.field_J[var5Lifetime4] = we.a(-16257, this.field_J[var5Lifetime4]) + (var7Lifetime3 << 7);
+          this.field_J[var5Lifetime4] = we.intAnd(-16257, this.field_J[var5Lifetime4]) + (var7Lifetime3 << 7);
         }
         if (37 == var6Lifetime4) {
-          this.field_J[var5Lifetime4] = var7Lifetime3 + we.a(this.field_J[var5Lifetime4], -128);
+          this.field_J[var5Lifetime4] = var7Lifetime3 + we.intAnd(this.field_J[var5Lifetime4], -128);
         }
         if (var6Lifetime4 == 7) {
-          this.field_y[var5Lifetime4] = (var7Lifetime3 << 7) + we.a(-16257, this.field_y[var5Lifetime4]);
+          this.field_y[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(-16257, this.field_y[var5Lifetime4]);
         }
         if (39 == var6Lifetime4) {
-          this.field_y[var5Lifetime4] = we.a(-128, this.field_y[var5Lifetime4]) + var7Lifetime3;
+          this.field_y[var5Lifetime4] = we.intAnd(-128, this.field_y[var5Lifetime4]) + var7Lifetime3;
         }
         if (var6Lifetime4 == 10) {
-          this.field_G[var5Lifetime4] = (var7Lifetime3 << 7) + we.a(this.field_G[var5Lifetime4], -16257);
+          this.field_G[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(this.field_G[var5Lifetime4], -16257);
         }
         if (42 == var6Lifetime4) {
-          this.field_G[var5Lifetime4] = we.a(this.field_G[var5Lifetime4], -128) + var7Lifetime3;
+          this.field_G[var5Lifetime4] = we.intAnd(this.field_G[var5Lifetime4], -128) + var7Lifetime3;
         }
         if (var6Lifetime4 == 11) {
-          this.field_s[var5Lifetime4] = (var7Lifetime3 << 7) + we.a(-16257, this.field_s[var5Lifetime4]);
+          this.field_s[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(-16257, this.field_s[var5Lifetime4]);
         }
         if (var6Lifetime4 == 43) {
-          this.field_s[var5Lifetime4] = var7Lifetime3 + we.a(this.field_s[var5Lifetime4], -128);
+          this.field_s[var5Lifetime4] = var7Lifetime3 + we.intAnd(this.field_s[var5Lifetime4], -128);
         }
         if (var6Lifetime4 == 64) {
           if (var7Lifetime3 < 64) {
-            this.field_F[var5Lifetime4] = we.a(this.field_F[var5Lifetime4], -2);
+            this.field_F[var5Lifetime4] = we.intAnd(this.field_F[var5Lifetime4], -2);
           } else {
-            this.field_F[var5Lifetime4] = ee.a(this.field_F[var5Lifetime4], 1);
+            this.field_F[var5Lifetime4] = ee.intOr(this.field_F[var5Lifetime4], 1);
           }
         }
         if (var6Lifetime4 == 65) {
           if (var7Lifetime3 < 64) {
             this.a(true, var5Lifetime4);
-            this.field_F[var5Lifetime4] = we.a(this.field_F[var5Lifetime4], -3);
+            this.field_F[var5Lifetime4] = we.intAnd(this.field_F[var5Lifetime4], -3);
           } else {
-            this.field_F[var5Lifetime4] = ee.a(this.field_F[var5Lifetime4], 2);
+            this.field_F[var5Lifetime4] = ee.intOr(this.field_F[var5Lifetime4], 2);
           }
         }
         if (var6Lifetime4 == 99) {
-          this.field_q[var5Lifetime4] = (var7Lifetime3 << 7) + we.a(127, this.field_q[var5Lifetime4]);
+          this.field_q[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(127, this.field_q[var5Lifetime4]);
         }
         if (98 == var6Lifetime4) {
-          this.field_q[var5Lifetime4] = var7Lifetime3 + we.a(16256, this.field_q[var5Lifetime4]);
+          this.field_q[var5Lifetime4] = var7Lifetime3 + we.intAnd(16256, this.field_q[var5Lifetime4]);
         }
         if (var6Lifetime4 == 101) {
-          this.field_q[var5Lifetime4] = we.a(this.field_q[var5Lifetime4], 127) + (16384 + (var7Lifetime3 << 7));
+          this.field_q[var5Lifetime4] = we.intAnd(this.field_q[var5Lifetime4], 127) + (16384 + (var7Lifetime3 << 7));
         }
         if (var6Lifetime4 == 100) {
-          this.field_q[var5Lifetime4] = 16384 + (we.a(this.field_q[var5Lifetime4], 16256) + var7Lifetime3);
+          this.field_q[var5Lifetime4] = 16384 + (we.intAnd(this.field_q[var5Lifetime4], 16256) + var7Lifetime3);
         }
         if (var6Lifetime4 == 120) {
           this.removeChannelVoices(var5Lifetime4, (byte) 68);
@@ -1394,27 +1394,27 @@ final class MidiPcmStream extends PcmStream {
         if (var6Lifetime4 == 6) {
           var8 = this.field_q[var5Lifetime4];
           if (var8 == 16384) {
-            this.field_r[var5Lifetime4] = we.a(this.field_r[var5Lifetime4], -16257) + (var7Lifetime3 << 7);
+            this.field_r[var5Lifetime4] = we.intAnd(this.field_r[var5Lifetime4], -16257) + (var7Lifetime3 << 7);
           }
         }
         if (var6Lifetime4 == 38) {
           var8Lifetime1 = this.field_q[var5Lifetime4];
           if (var8Lifetime1 == 16384) {
-            this.field_r[var5Lifetime4] = var7Lifetime3 + we.a(this.field_r[var5Lifetime4], -128);
+            this.field_r[var5Lifetime4] = var7Lifetime3 + we.intAnd(this.field_r[var5Lifetime4], -128);
           }
         }
         if (var6Lifetime4 == 16) {
-          this.field_t[var5Lifetime4] = (var7Lifetime3 << 7) + we.a(this.field_t[var5Lifetime4], -16257);
+          this.field_t[var5Lifetime4] = (var7Lifetime3 << 7) + we.intAnd(this.field_t[var5Lifetime4], -16257);
         }
         if (var6Lifetime4 == 48) {
-          this.field_t[var5Lifetime4] = we.a(this.field_t[var5Lifetime4], -128) + var7Lifetime3;
+          this.field_t[var5Lifetime4] = we.intAnd(this.field_t[var5Lifetime4], -128) + var7Lifetime3;
         }
         if (81 == var6Lifetime4) {
           if (var7Lifetime3 < 64) {
             this.d(0, var5Lifetime4);
-            this.field_F[var5Lifetime4] = we.a(this.field_F[var5Lifetime4], -5);
+            this.field_F[var5Lifetime4] = we.intAnd(this.field_F[var5Lifetime4], -5);
           } else {
-            this.field_F[var5Lifetime4] = ee.a(this.field_F[var5Lifetime4], 4);
+            this.field_F[var5Lifetime4] = ee.intOr(this.field_F[var5Lifetime4], 4);
           }
         }
         if (var6Lifetime4 == 17) {

@@ -26,7 +26,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           }
           c.d();
           while (c.a()) {
-            gf.f(c.field_e, c.field_h, -c.field_e + c.field_a, param0, param3);
+            SoftwareRasterizer.drawHorizontalLineAlpha(c.field_e, c.field_h, -c.field_e + c.field_a, param0, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -72,7 +72,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           NetworkArchiveRequest var2Lifetime1;
           var16 = ShatteredPlansClient.field_F ? 1 : 0;
           if (this.field_v != null) {
-            var2_long = pr.a(14274);
+            var2_long = pr.currentTimeMillis(14274);
             var4 = (int)(-this.field_k + var2_long);
             this.field_k = var2_long;
             if (var4 > 200) {
@@ -145,7 +145,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                     var17 = 0;
                     var7 = var17;
                     while (var6 > var17) {
-                      this.field_l.field_D.payload[this.field_l.field_D.position + var17] = (byte)CandidateLink.a((int) this.field_l.field_D.payload[this.field_l.field_D.position + var17], (int) this.field_d);
+                      this.field_l.field_D.payload[this.field_l.field_D.position + var17] = (byte)CandidateLink.intXor((int) this.field_l.field_D.payload[this.field_l.field_D.position + var17], (int) this.field_d);
                       var17++;
                     }
                   }
@@ -168,7 +168,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   this.field_v.readFully(this.field_q.payload, var5, this.field_q.position, (byte) -52);
                   if (0 != this.field_d) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_q.payload[this.field_q.position + var6] = (byte)CandidateLink.a((int) this.field_q.payload[this.field_q.position + var6], (int) this.field_d);
+                      this.field_q.payload[this.field_q.position + var6] = (byte)CandidateLink.intXor((int) this.field_q.payload[this.field_q.position + var6], (int) this.field_d);
                     }
                   }
                   this.field_q.position = this.field_q.position + var5;
@@ -339,7 +339,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               }
             }
             this.field_n = 0;
-            this.field_k = pr.a(14274);
+            this.field_k = pr.currentTimeMillis(14274);
             var4_int = 50 % ((-11 - param0) / 48);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {

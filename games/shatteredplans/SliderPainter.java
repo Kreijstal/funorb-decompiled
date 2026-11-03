@@ -37,7 +37,7 @@ final class SliderPainter implements WidgetPainter {
             stackIn_4_0 = (UiWidget) (param0);
           }
           var12 = (SliderWidget) (stackIn_4_0);
-          gf.d(param1 + param0.field_m, param3 + param0.field_q, param0.field_x, param0.field_n, this.field_l);
+          SoftwareRasterizer.fillRect(param1 + param0.field_m, param3 + param0.field_q, param0.field_x, param0.field_n, this.field_l);
           if (var12 != null) {
           }
           var7 = -(2 * var12.field_M) + param0.field_x;
@@ -46,9 +46,9 @@ final class SliderPainter implements WidgetPainter {
           if (param4 != 12) {
             return;
           }
-          gf.g(var8, var9, var7 + var8, var9, this.field_f);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_f);
           for (var10 = -1 + var12.g((byte) 93); var10 >= 0; var10--) {
-            gf.g(var8 + var12.a(var10, (byte) -58) * var7 / var12.a((byte) -13), var9, this.field_a, this.field_h);
+            SoftwareRasterizer.fillCircle(var8 + var12.a(var10, (byte) -58) * var7 / var12.a((byte) -13), var9, this.field_a, this.field_h);
           }
           if (null == this.field_c) {
             return;

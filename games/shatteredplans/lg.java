@@ -127,11 +127,11 @@ final class lg extends IOException {
               var7Lifetime2 = var9;
               var7Lifetime3 = var9;
               if (0L <= param0) {
-                var7Lifetime4 = var9 + "; Expires=" + vm.a(pr.a(14274) + 1000L * param0, 10) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + vm.a(pr.currentTimeMillis(14274) + 1000L * param0, 10) + "; Max-Age=" + param0;
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              ll.a(param1, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) 123);
+              ll.evalJavaScript(param1, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) 123);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

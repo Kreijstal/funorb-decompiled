@@ -111,7 +111,7 @@ final class CachedArchiveSource extends ArchiveSource {
             else {
               decompiledFrameRemainder0 = (this.field_s);
               if ((decompiledFrameRemainder0) &&
-                (decompiledFrameRemainder0 = !(pr.a(14274) < this.field_e))) {
+                (decompiledFrameRemainder0 = !(pr.currentTimeMillis(14274) < this.field_e))) {
                 var2 = (ArchiveRequest) (this.field_f.startTraversal(77));
                 while (var2 != null) {
                   if (!var2.field_u) {
@@ -183,7 +183,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
         if ((decompiledFrameRemainder1) && ((decompiledFrameRemainder0) &&
           (decompiledFrameRemainder0 = (this.field_s)) &&
-          (decompiledFrameRemainder0 = !(pr.a(14274) < this.field_e)))) {
+          (decompiledFrameRemainder0 = !(pr.currentTimeMillis(14274) < this.field_e)))) {
           var2Lifetime1 = (ArchiveRequest) (this.field_f.startTraversal(77));
           while (var2Lifetime1 != null) {
             if (!var2Lifetime1.field_u) {
@@ -200,7 +200,7 @@ final class CachedArchiveSource extends ArchiveSource {
           }
         }
         if (decompiledFrameRemainder0) {
-          this.field_e = pr.a(14274) + 1000L;
+          this.field_e = pr.currentTimeMillis(14274) + 1000L;
         }
 
     }

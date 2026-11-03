@@ -12,22 +12,22 @@ final class bf {
         var17 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param14 < param8) {
           if (param8 < param10) {
-            lr.a(param12, param9, -31232, param6, param14, gf.field_h, param2, param13, param10, param4, param1, param0, param11, param7, param5, param8, param3);
+            lr.a(param12, param9, -31232, param6, param14, SoftwareRasterizer.field_h, param2, param13, param10, param4, param1, param0, param11, param7, param5, param8, param3);
           } else {
             if (param14 < param10) {
-              lr.a(param5, param7, -31232, param6, param14, gf.field_h, param13, param2, param8, param4, param1, param11, param0, param9, param12, param10, param3);
+              lr.a(param5, param7, -31232, param6, param14, SoftwareRasterizer.field_h, param13, param2, param8, param4, param1, param11, param0, param9, param12, param10, param3);
             } else {
-              lr.a(param6, param1, param15 ^ -30976, param5, param10, gf.field_h, param13, param4, param8, param2, param7, param3, param0, param9, param12, param14, param11);
+              lr.a(param6, param1, param15 ^ -30976, param5, param10, SoftwareRasterizer.field_h, param13, param4, param8, param2, param7, param3, param0, param9, param12, param14, param11);
             }
           }
         } else {
           if (param10 > param14) {
-            lr.a(param6, param1, -31232, param12, param8, gf.field_h, param2, param4, param10, param13, param9, param3, param11, param7, param5, param14, param0);
+            lr.a(param6, param1, -31232, param12, param8, SoftwareRasterizer.field_h, param2, param4, param10, param13, param9, param3, param11, param7, param5, param14, param0);
           } else {
             if (param8 < param10) {
-              lr.a(param5, param7, -31232, param12, param8, gf.field_h, param4, param2, param14, param13, param9, param11, param3, param1, param6, param10, param0);
+              lr.a(param5, param7, -31232, param12, param8, SoftwareRasterizer.field_h, param4, param2, param14, param13, param9, param11, param3, param1, param6, param10, param0);
             } else {
-              lr.a(param12, param9, param15 ^ -30976, param5, param10, gf.field_h, param4, param13, param14, param2, param7, param0, param3, param1, param6, param8, param11);
+              lr.a(param12, param9, param15 ^ -30976, param5, param10, SoftwareRasterizer.field_h, param4, param13, param14, param2, param7, param0, param3, param1, param6, param8, param11);
             }
           }
         }

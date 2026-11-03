@@ -3798,7 +3798,7 @@ final class TutorialMapGenerator extends StandardMapGenerator {
           if (var3_int >= 12) {
             return false;
           }
-          if (DialogRoot.a(param0, 2) &&
+          if (DialogRoot.isNameSeparator(param0, 2) &&
             var3_int == 0) {
             return false;
           }
