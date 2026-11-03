@@ -196,12 +196,12 @@ final class DialWidgetPainter implements WidgetPainter {
           var2 = -var1 + 255;
           if (256 <= var0) {
             if (var0 >= 512) {
-              field_f[var0] = bq.a(bq.a(65280, var2), var0 << 16);
+              field_f[var0] = bq.bitOr(bq.bitOr(65280, var2), var0 << 16);
             } else {
-              field_f[var0] = bq.a(var0 << 8, bq.a(255, var2 << 16));
+              field_f[var0] = bq.bitOr(var0 << 8, bq.bitOr(255, var2 << 16));
             }
           } else {
-            field_f[var0] = bq.a(bq.a(-1560215808, var2) << 8, var0);
+            field_f[var0] = bq.bitOr(bq.bitOr(-1560215808, var2) << 8, var0);
           }
         }
         field_j = "Playing";

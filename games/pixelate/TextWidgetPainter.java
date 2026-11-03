@@ -550,12 +550,12 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 DialWidget.a(-1913, param2);
               } else {
                 RegistrationRequestDialog.a(false, param0, 0);
-                fj.a(0, 0, (byte) -82, param2);
+                fj.presentToCanvas(0, 0, (byte) -82, param2);
               }
             } else {
               SoftwareRasterizer.clear();
               io.a(240, (byte) -99, 320);
-              fj.a(0, 0, (byte) 119, param2);
+              fj.presentToCanvas(0, 0, (byte) 119, param2);
             }
           } else {
             var4 = 0;

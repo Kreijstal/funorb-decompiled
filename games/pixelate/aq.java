@@ -50,7 +50,7 @@ final class aq {
           var5.position = var5.position + 1;
           var6 = var5.position;
           var5.writeByte(160, 3);
-          var5.writeString((byte) -41, param0);
+          var5.b((byte) -41, param0);
           var5.backpatchByteLength(var5.position - var6, -1);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);
@@ -166,7 +166,7 @@ final class aq {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vf.a((byte) -3, param0)) {
+          if (!vf.isAllowedChar((byte) -3, param0)) {
             return false;
           }
           if (param1 == null) {

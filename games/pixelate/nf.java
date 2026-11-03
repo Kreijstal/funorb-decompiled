@@ -3,7 +3,7 @@
  */
 final class nf {
     static int field_f;
-    static be field_b;
+    static LoginForm field_b;
     static SceneWidget field_d;
     static int field_c;
     static int field_a;

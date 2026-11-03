@@ -44,7 +44,7 @@ final class gb {
         }
     }
 
-    final static IndexedSprite[] a(byte param0) {
+    final static IndexedSprite[] buildIndexedSprites(byte param0) {
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[SocialListEntry.field_Qb];

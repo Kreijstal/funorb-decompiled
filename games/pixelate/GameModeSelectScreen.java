@@ -2520,7 +2520,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("keychar_the_character_under_questionmark", 0);
                 if (null != var2) {
-                  rk.field_d = cm.a(var2[0], 63);
+                  rk.field_d = cm.decodeCp1252Byte(var2[0], 63);
                 }
                 var2 = vd.a("rating_noratings", 0);
                 if (var2 != null) {
@@ -3363,7 +3363,7 @@ final class GameModeSelectScreen extends MenuScreen {
 
     final void onCancel(byte param0) {
         try {
-          la.a(this.field_l, TickClock.field_a, false, -25528);
+          la.changeScreen(this.field_l, TickClock.field_a, false, -25528);
           if (param0 > -13) {
             this.draw(57);
           }
@@ -3432,11 +3432,11 @@ final class GameModeSelectScreen extends MenuScreen {
           var8 = new int[128];
           var9 = 16742912;
           for (var10 = 0; var7.length > var10; var10++) {
-            var7[var10] = cm.a(var10 * cm.a(var9, 65280), 16711680) + cm.a(-16711936, cm.a(16711935, var9) * var10) >> 8;
+            var7[var10] = cm.bitAnd(var10 * cm.bitAnd(var9, 65280), 16711680) + cm.bitAnd(-16711936, cm.bitAnd(16711935, var9) * var10) >> 8;
           }
           var9Lifetime1 = 39168;
           for (var10Lifetime1 = 0; var8.length > var10Lifetime1; var10Lifetime1++) {
-            var8[var10Lifetime1] = cm.a(cm.a(var9Lifetime1, 16711935) * var10Lifetime1, -16711936) + cm.a(cm.a(var9Lifetime1, 65280) * var10Lifetime1, 16711680) >> 8;
+            var8[var10Lifetime1] = cm.bitAnd(cm.bitAnd(var9Lifetime1, 16711935) * var10Lifetime1, -16711936) + cm.bitAnd(cm.bitAnd(var9Lifetime1, 65280) * var10Lifetime1, 16711680) >> 8;
           }
           this.field_p = new GameModeCard(0, 126, var7);
           this.field_o = new GameModeCard(1, 370, var8);

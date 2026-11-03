@@ -66,19 +66,19 @@ final class gd {
         int var0 = 307;
         for (var2 = 0; var0 > var2; var2++) {
           var3 = 255 & 255 * var2 / var0;
-          field_h[var2] = bq.a(var3 << 16, 65280);
+          field_h[var2] = bq.bitOr(var3 << 16, 65280);
         }
         int var1 = 153;
         for (var2Lifetime1 = var0; var1 + var0 > var2Lifetime1; var2Lifetime1++) {
           var3Lifetime1 = 255 * (-var0 + var2Lifetime1) / var1;
-          field_h[var2Lifetime1] = bq.a(-cm.a(255, var3Lifetime1) + 255 << 8, 16711680);
+          field_h[var2Lifetime1] = bq.bitOr(-cm.bitAnd(255, var3Lifetime1) + 255 << 8, 16711680);
         }
         for (var2Lifetime2 = var1 + var0; var2Lifetime2 < 615; var2Lifetime2++) {
           var3Lifetime2 = 255 * (-var1 + var2Lifetime2 - var0) / var1;
           if (var3Lifetime2 > 255) {
             var3Lifetime2 = 255;
           }
-          field_h[var2Lifetime2] = -(cm.a(255, var3Lifetime2) / 2) + 255 << 16;
+          field_h[var2Lifetime2] = -(cm.bitAnd(255, var3Lifetime2) / 2) + 255 << 16;
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
           field_b[var2Lifetime3] = 65793 * (var2Lifetime3 << 4);

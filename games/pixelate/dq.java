@@ -63,7 +63,7 @@ final class dq {
         int var1 = -55 % ((param0 + 67) / 53);
     }
 
-    final static IndexedSprite a(byte param0, String param1, String param2, ResourceArchive param3) {
+    final static IndexedSprite loadIndexedSprite(byte param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

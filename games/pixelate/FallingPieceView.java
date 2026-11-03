@@ -30,7 +30,7 @@ final class FallingPieceView {
           if (MainMenuScreen.field_r != null) {
             MainMenuScreen.field_r.p(-92);
           }
-          nf.field_b = new be(param0, param2, false, true, true);
+          nf.field_b = new LoginForm(param0, param2, false, true, true);
           ph.field_l.transitionToContent(nf.field_b, -120);
           if (param1 > -30) {
             field_d = (String) null;
@@ -146,7 +146,7 @@ final class FallingPieceView {
         if (param1 != 0) {
           return;
         }
-        System.out.println("Error: " + qk.a(param0, "%0a", "\n", -127));
+        System.out.println("Error: " + qk.replaceAll(param0, "%0a", "\n", -127));
     }
 
     FallingPieceView(Puzzle param0, PlayerBoard param1, BoardView param2) {

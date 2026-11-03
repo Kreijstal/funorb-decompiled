@@ -161,7 +161,7 @@ final class Puzzle {
     final static String a(int param0) {
         String var1 = "";
         if (nf.field_b != null) {
-          var1 = nf.field_b.l(-24832);
+          var1 = nf.field_b.getUsername(-24832);
         }
         if (param0 == var1.length()) {
           var1 = DiskCacheRequest.b(false);

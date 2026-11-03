@@ -29,7 +29,7 @@ final class vn {
     final static void a(int param0, boolean param1, boolean param2, String param3) {
         LobbyPlayer.j(param0 - 705633292);
         wa.field_c.refreshPanelVisibility((byte) 54);
-        nf.field_b = new be(Checkbox.field_U, (String) null, MainMenuScreen.field_s, param1, param2);
+        nf.field_b = new LoginForm(Checkbox.field_U, (String) null, MainMenuScreen.field_s, param1, param2);
         ph.field_l = new LoginDialog(wa.field_c, nf.field_b);
         if (param0 != -20) {
           return;

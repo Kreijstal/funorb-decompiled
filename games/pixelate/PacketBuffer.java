@@ -46,7 +46,7 @@ class PacketBuffer extends IntrusiveNode {
         try {
           if (param2 > -71) {
             var7 = (String) null;
-            this.writeString((byte) -93, (String) null);
+            this.b((byte) -93, (String) null);
           }
           for (var5_int = param1; param1 + param3 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
@@ -80,7 +80,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void writeString(byte param0, String param1) {
+    final void b(byte param0, String param1) {
         int var3_int = 0;
         CharSequence var4 = null;
         int fieldTemp$0 = 0;
@@ -320,7 +320,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var4 == 0) {
           return "";
         }
-        return ui.a(true, this.payload, var3, var4);
+        return ui.decodeText(true, this.payload, var3, var4);
     }
 
     final boolean verifyCrc32(byte param0) {
@@ -522,7 +522,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return ui.a(true, this.payload, var2, var3);
+        return ui.decodeText(true, this.payload, var2, var3);
     }
 
     final void xteaEncrypt(boolean param0, int[] param1) {
@@ -611,7 +611,7 @@ class PacketBuffer extends IntrusiveNode {
         BlastFromThePastBackground.field_n.setBounds(5, 30, 5, 256, 68);
         IsaacRandom.field_b.setBounds(5, 30, 75, 256, 78);
         LoginDialog.field_pb.setBounds(5, 30, 155, 256, 48);
-        be.field_P.setBounds(5, 30, 205, 256, 48);
+        LoginForm.field_P.setBounds(5, 30, 205, 256, 48);
         int var2 = DialWidgetPainter.field_n ? 250 : 200;
         PasswordValidator.field_o.setBounds(5, 30, var2 + 5, 256, 363 - var2);
         SocketJs5Transport.field_t.setBounds(5, 30, 370, 256, -375 + MidiPcmStream.field_E.field_K);
@@ -799,7 +799,7 @@ class PacketBuffer extends IntrusiveNode {
         return var6.toString();
     }
 
-    final void a(byte param0, String param1) {
+    final void writeString(byte param0, String param1) {
         int var3_int = 0;
         int fieldTemp$0 = 0;
         CharSequence var4 = null;

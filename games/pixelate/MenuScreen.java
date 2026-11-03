@@ -597,7 +597,7 @@ abstract class MenuScreen {
                 if (var6 == 28) {
                   if (this.field_g.isActivated(74)) {
                     var6 = param2 ? 1 : 0;
-                    la.a(MidiPcmStream.field_t, 16, var6 != 0, -25528);
+                    la.changeScreen(MidiPcmStream.field_t, 16, var6 != 0, -25528);
                   }
                 } else {
                   if (1 == var6) {
@@ -606,7 +606,7 @@ abstract class MenuScreen {
                         MatchController.a(param2, 0, -4, (byte) 91, QuickChatMenu.field_Ib);
                       } else {
                         var6 = param2 ? 1 : 0;
-                        la.a(MidiPcmStream.field_t, -4, var6 != 0, -25528);
+                        la.changeScreen(MidiPcmStream.field_t, -4, var6 != 0, -25528);
                       }
                     }
                     break regionExit1;
@@ -615,21 +615,21 @@ abstract class MenuScreen {
                     if (!(!this.field_g.isActivated(86))) {
                       var6 = param2 ? 1 : 0;
                       stackIn_74_0 = (!gq.d(107)) ? 0 : 12;
-                      la.a(stackIn_74_0, -1, var6 != 0, -25528);
+                      la.changeScreen(stackIn_74_0, -1, var6 != 0, -25528);
                     }
                     break regionExit1;
                   }
                   if (var6 == 7) {
                     if (!(!this.field_g.isActivated(91))) {
                       var6 = param2 ? 1 : 0;
-                      la.a(MidiPcmStream.field_t, 0, var6 != 0, -25528);
+                      la.changeScreen(MidiPcmStream.field_t, 0, var6 != 0, -25528);
                     }
                     break regionExit1;
                   }
                   if (24 == var6) {
                     if (!(!this.field_g.isActivated(84))) {
                       var6 = param2 ? 1 : 0;
-                      la.a(MidiPcmStream.field_t, 12, var6 != 0, -25528);
+                      la.changeScreen(MidiPcmStream.field_t, 12, var6 != 0, -25528);
                       ce.field_a = true;
                     }
                     break regionExit1;
@@ -649,14 +649,14 @@ abstract class MenuScreen {
                       if (var6 == 22) {
                         if (this.field_g.isActivated(23)) {
                           var6 = param2 ? 1 : 0;
-                          la.a(MidiPcmStream.field_t, 8, var6 != 0, -25528);
+                          la.changeScreen(MidiPcmStream.field_t, 8, var6 != 0, -25528);
                         }
                       } else {
                         if (var6 == 5) {
                           if (!(!this.field_g.isActivated(45))) {
                             ((HowToPlayScreen) (StripedProgressBar.field_H[7])).a(2, 1, param2);
                             var6 = param2 ? 1 : 0;
-                            la.a(MidiPcmStream.field_t, 7, var6 != 0, -25528);
+                            la.changeScreen(MidiPcmStream.field_t, 7, var6 != 0, -25528);
                           }
                           break regionExit1;
                         }
@@ -664,7 +664,7 @@ abstract class MenuScreen {
                           if (var6 == 4) {
                             if (!(!this.field_g.isActivated(26))) {
                               var6 = param2 ? 1 : 0;
-                              la.a(MidiPcmStream.field_t, 6, var6 != 0, -25528);
+                              la.changeScreen(MidiPcmStream.field_t, 6, var6 != 0, -25528);
                             }
                             break regionExit1;
                           }
@@ -672,11 +672,11 @@ abstract class MenuScreen {
                             if (!(!this.field_g.isActivated(62))) {
                               if (this.field_l != 9) {
                                 var6 = param2 ? 1 : 0;
-                                la.a(MidiPcmStream.field_t, 5, var6 != 0, -25528);
+                                la.changeScreen(MidiPcmStream.field_t, 5, var6 != 0, -25528);
                               } else {
                                 var6 = param2 ? 1 : 0;
                                 stackIn_105_0 = (!gq.d(75)) ? 0 : 12;
-                                la.a(stackIn_105_0, 5, var6 != 0, -25528);
+                                la.changeScreen(stackIn_105_0, 5, var6 != 0, -25528);
                               }
                             }
                             break regionExit1;
@@ -771,7 +771,7 @@ abstract class MenuScreen {
                                     ro.field_e.e(6);
                                     var6 = param2 ? 1 : 0;
                                     stackIn_162_0 = (!gq.d(71)) ? 0 : 12;
-                                    la.a(stackIn_162_0, -1, var6 != 0, -25528);
+                                    la.changeScreen(stackIn_162_0, -1, var6 != 0, -25528);
                                   }
                                   break regionExit1;
                                 }
@@ -779,7 +779,7 @@ abstract class MenuScreen {
                                   if (!(!this.field_g.isActivated(117))) {
                                     if (ValidationHelpWidget.field_Y) {
                                       var6 = param2 ? 1 : 0;
-                                      la.a(MidiPcmStream.field_t, -5, var6 != 0, -25528);
+                                      la.changeScreen(MidiPcmStream.field_t, -5, var6 != 0, -25528);
                                     }
                                     if (!(!DateOfBirthValidator.field_i)) {
                                       qj.a(false, 0, 11);
@@ -859,7 +859,7 @@ abstract class MenuScreen {
                                     break;
                                   case 19:
                                     if (this.field_g.isActivated(77)) {
-                                      d.a(0, AudioService.a(13867));
+                                      d.openQuitPage(0, AudioService.a(13867));
                                     }
                                     break;
                                   case 34:
@@ -879,7 +879,7 @@ abstract class MenuScreen {
                           if (this.field_g.isActivated(59)) {
                             var6 = TickClock.field_a;
                             var7_int = param2 ? 1 : 0;
-                            la.a(MidiPcmStream.field_t, var6, var7_int != 0, -25528);
+                            la.changeScreen(MidiPcmStream.field_t, var6, var7_int != 0, -25528);
                           }
                         }
                       }
@@ -891,14 +891,14 @@ abstract class MenuScreen {
                   ArchiveIndex.a(-3 + param0, (byte) 127);
                   var6 = param2 ? 1 : 0;
                   stackIn_61_0 = (!gq.d(90)) ? 0 : 12;
-                  la.a(stackIn_61_0, -3, var6 != 0, -25528);
+                  la.changeScreen(stackIn_61_0, -3, var6 != 0, -25528);
                 }
               }
             } else {
               if (this.field_g.isActivated(6)) {
                 ((OptionsScreen) (StripedProgressBar.field_H[17])).f(76);
                 var6 = param2 ? 1 : 0;
-                la.a(MidiPcmStream.field_t, 17, var6 != 0, -25528);
+                la.changeScreen(MidiPcmStream.field_t, 17, var6 != 0, -25528);
               }
             }
           } else {
@@ -906,7 +906,7 @@ abstract class MenuScreen {
               em.a((byte) -101);
               var6 = param2 ? 1 : 0;
               stackIn_52_0 = (gq.d(117)) ? 12 : 0;
-              la.a(stackIn_52_0, -3, var6 != 0, -25528);
+              la.changeScreen(stackIn_52_0, -3, var6 != 0, -25528);
             }
           }
         }

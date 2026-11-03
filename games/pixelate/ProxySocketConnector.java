@@ -393,7 +393,7 @@ final class ProxySocketConnector extends SocketConnector {
             var5 = var9;
             var6 = param2;
             var7 = param4;
-            var9[var6] = var7 + cm.a(var9[var6] >> 1, 8355711);
+            var9[var6] = var7 + cm.bitAnd(var9[var6] >> 1, 8355711);
             param2++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

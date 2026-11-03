@@ -81,7 +81,7 @@ final class DiskCacheRequest extends ArchiveRequest {
         Sprite var30Lifetime5;
         Sprite var30Lifetime6;
         try {
-          em.a((String) null, 0L, (String) null, -1, param1, -163, (ScrollContainer) null, (int[]) null, param2);
+          em.openContextMenu((String) null, 0L, (String) null, -1, param1, -163, (ScrollContainer) null, (int[]) null, param2);
           if (0 == param2) {
             var11 = ProxySocketConnector.field_n;
             var12 = Checkbox.field_V[0];

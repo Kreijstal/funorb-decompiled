@@ -153,7 +153,7 @@ final class ViewportController {
         this.field_l = wp.field_c;
         this.field_s.a(this.field_q, 126, this.field_x);
         wl.field_i = param0 ? true : false;
-        FullscreenFocusCanvas var2 = wo.a(mc.field_k, 150, this.field_x, 0, this.field_q, 0);
+        FullscreenFocusCanvas var2 = wo.openFullscreenWindow(mc.field_k, 150, this.field_x, 0, this.field_q, 0);
         if (var2 == null) {
           this.b(89);
         }

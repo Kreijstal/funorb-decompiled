@@ -35,7 +35,7 @@ final class d {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openQuitPage(int param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;

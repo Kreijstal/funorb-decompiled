@@ -95,7 +95,7 @@ final class mi extends MenuScreen {
         return var7;
     }
 
-    final static int d(int param0, int param1) {
+    final static int fixedSine(int param0, int param1) {
         if (param0 != -4096) {
           mi.a(126, 19, (byte) -117);
         }

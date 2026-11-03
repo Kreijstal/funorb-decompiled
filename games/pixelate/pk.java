@@ -88,7 +88,7 @@ final class pk {
         try {
           field_b = null;
           if (param0 != 4194303) {
-            pk.a((CipherPacketBuffer) null, -21);
+            pk.readTriangleMesh((CipherPacketBuffer) null, -21);
           }
           field_c = null;
           field_e = null;
@@ -123,7 +123,7 @@ final class pk {
         }
     }
 
-    final static TriangleMesh a(CipherPacketBuffer param0, int param1) {
+    final static TriangleMesh readTriangleMesh(CipherPacketBuffer param0, int param1) {
         int stackIn_29_0 = 0;
         int stackIn_29_1 = 0;
         TriangleMesh stackIn_36_0 = null;

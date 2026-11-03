@@ -44,7 +44,7 @@ final class ScrollContainer extends SceneWidget {
                 param1 = mp.field_e;
               }
               param2 = 2;
-              nf.field_b.a(Checkbox.field_U, -13939);
+              nf.field_b.setUsername(Checkbox.field_U, -13939);
             }
             var3_int = 1;
             if (param2 == 10) {
@@ -63,7 +63,7 @@ final class ScrollContainer extends SceneWidget {
             if (256 != param2 &&
               param2 != 10 &&
               !MainMenuScreen.field_s) {
-              nf.field_b.m(-10515);
+              nf.field_b.clearFields(-10515);
             }
           }
           if (!param0) {

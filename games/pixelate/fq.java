@@ -174,7 +174,7 @@ final class fq extends MenuScreen {
     }
 
     final void onCancel(byte param0) {
-        la.a(this.field_l, TickClock.field_a, false, -25528);
+        la.changeScreen(this.field_l, TickClock.field_a, false, -25528);
         if (param0 >= -13) {
           field_q = -93;
         }

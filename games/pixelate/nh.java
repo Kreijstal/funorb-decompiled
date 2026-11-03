@@ -170,7 +170,7 @@ final class nh {
                   var10 = 65280 & var8;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = (255 & var8) >> 3;
-                  SoftwareRasterizer.field_k[var6_int] = bq.a(var11, bq.a(var10, var9 << 16));
+                  SoftwareRasterizer.field_k[var6_int] = bq.bitOr(var11, bq.bitOr(var10, var9 << 16));
                 }
                 var6_int++;
               }

@@ -75,7 +75,7 @@ final class lg {
         }
     }
 
-    final static String a(int param0, boolean param1, CharSequence param2) {
+    final static String normalizeAccountName(int param0, boolean param1, CharSequence param2) {
         int var6 = 0;
         String stackIn_4_0 = null;
         String stackIn_9_0 = null;
@@ -110,7 +110,7 @@ final class lg {
                 !MatchController.a((byte) 126, var4.charAt(-1 + var4.length()))) {
                 if (param0 != 11) {
                   var9 = (ResourceArchive) null;
-                  lg.a(55, (ResourceArchive) null);
+                  lg.loadMusicTracks(55, (ResourceArchive) null);
                 }
                 var5 = 0;
                 for (var6 = 0; param2.length() > var6; var6++) {
@@ -154,7 +154,7 @@ final class lg {
         }
     }
 
-    final static io a(java.applet.Applet param0, int param1) {
+    final static io readLastLoginMethodCookie(java.applet.Applet param0, int param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
@@ -175,7 +175,7 @@ final class lg {
             var7 = (sb) null;
             lg.a((sb) null, -23, -37, (sb) null, 119, 116);
           }
-          var2 = qn.a(param0, "jagex-last-login-method", (byte) -85);
+          var2 = qn.readCookie(param0, "jagex-last-login-method", (byte) -85);
           if (var2 == null) {
             stackIn_6_0 = cd.field_c;
             return stackIn_6_0;
@@ -211,7 +211,7 @@ final class lg {
         int var1 = -115 / ((param0 + 84) / 35);
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadMusicTracks(int param0, ResourceArchive param1) {
         try {
           bj.field_c[0] = MusicTrack.load(param1, "", "pix_title");
           bj.field_c[1] = MusicTrack.load(param1, "", "pix_end_game");
@@ -265,7 +265,7 @@ final class lg {
         try {
           if (param0) {
             var5 = (CharSequence) null;
-            lg.a(-66, true, (CharSequence) null);
+            lg.normalizeAccountName(-66, true, (CharSequence) null);
           }
           var3 = null;
           var4 = null;

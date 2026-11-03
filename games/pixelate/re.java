@@ -51,7 +51,7 @@ final class re {
           QuickChatPhraseDefinition.field_v = param1;
           if (!param0) {
             byte[] var3 = (byte[]) null;
-            re.a(true, (byte[]) null);
+            re.copyBytes(true, (byte[]) null);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "re.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -161,7 +161,7 @@ final class re {
         field_g = null;
     }
 
-    final static byte[] a(boolean param0, byte[] param1) {
+    final static byte[] copyBytes(boolean param0, byte[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;

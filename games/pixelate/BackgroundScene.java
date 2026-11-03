@@ -262,7 +262,7 @@ class BackgroundScene {
               var13 = 255 & var17 * var8_int / 32;
               var14 = var9 * var17 / 32 & 255;
               var15 = 255 & var10 * var17 / 32;
-              this.field_g[var7][var17] = bq.a(bq.a(var13 << 16, var14 << 8), var15);
+              this.field_g[var7][var17] = bq.bitOr(bq.bitOr(var13 << 16, var14 << 8), var15);
               var17++;
             }
           }

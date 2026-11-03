@@ -8,7 +8,7 @@ final class ig {
     static Sprite[][] field_a;
     static ResourceArchive field_b;
 
-    final static String a(int param0, char param1) {
+    final static String charToString(int param0, char param1) {
         if (param0 < 123) {
           return (String) null;
         }

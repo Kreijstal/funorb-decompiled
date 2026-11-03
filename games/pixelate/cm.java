@@ -60,13 +60,13 @@ final class cm extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int floorDivide(int param0, byte param1, int param2) {
         int var4 = -77 % ((param1 - 28) / 58);
         int var3 = param2 >>> 31;
         return (param2 + var3) / param0 - var3;
     }
 
-    final static char a(byte param0, int param1) {
+    final static char decodeCp1252Byte(byte param0, int param1) {
         int var2;
         int var3;
         int var2Lifetime1;
@@ -106,7 +106,7 @@ final class cm extends IntrusiveNode {
         return (char)var2Lifetime1;
     }
 
-    static int a(int param0, int param1) {
+    static int bitAnd(int param0, int param1) {
         return param0 & param1;
     }
 
@@ -130,7 +130,7 @@ final class cm extends IntrusiveNode {
           aa.field_f.position = aa.field_f.position + 1;
           var8 = aa.field_f.position;
           aa.field_f.writeLong(false, param2);
-          aa.field_f.writeString((byte) -41, param3);
+          aa.field_f.b((byte) -41, param3);
           aa.field_f.writeByte(160, param4);
           aa.field_f.writeByte(160, param1 ? 1 : 0);
           aa.field_f.backpatchByteLength(aa.field_f.position - var8, -1);

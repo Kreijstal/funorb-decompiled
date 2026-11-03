@@ -239,14 +239,14 @@ final class MatchHud {
         try {
           HowToPlayScreen.field_s = SocketConnector.loadRgbSpritesByName("frame_top", "commonui", (byte) 47, param2);
           PlayerBoard.field_v = SocketConnector.loadRgbSpritesByName("frame_bottom", "commonui", (byte) 47, param2);
-          ge.field_g = bi.a("commonui", "jagex_logo_grey", param2, (byte) -74);
+          ge.field_g = bi.loadSprite("commonui", "jagex_logo_grey", param2, (byte) -74);
           fc.field_d = SocketConnector.loadRgbSpritesByName("button", "commonui", (byte) 47, param2);
           CanvasRasterBuffer.field_g = MusicCrossfadeStream.a(param2, 20049, "validation", "commonui");
           ep.field_b = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo12", param3));
           he.field_d = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo14", param3));
           ba.field_d = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo14bold", param3));
           var17 = new Sprite(param1.getNamedFile((byte) 24, "", "button.gif"), (java.awt.Component) ((Object) NameAvailabilityValidator.field_u));
-          dq.a((byte) 31, "dropdown", "commonui", param2);
+          dq.loadIndexedSprite((byte) 31, "dropdown", "commonui", param2);
           var5 = NetworkGameClient.a(param2, param0 ^ 4767934, "commonui", "screen_options");
           UiComponent.field_A = new IndexedSprite[4];
           UiComponent.field_o = new IndexedSprite[4];

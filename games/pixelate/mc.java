@@ -125,13 +125,13 @@ final class mc extends IntrusiveNode {
             TimerBarDemo.field_p != null &&
             TimerBarDemo.field_p.ensureIndex(param0 - 15) &&
             TimerBarDemo.field_p.ensureGroupAvailableByName("benefits", -1)) {
-            EmailCredentials.field_i = bi.a("benefits", "headline", PictureStrip.field_n, (byte) -79);
-            SpriteCheckboxPainter.field_a = bi.a("benefits", "blurbpane", PictureStrip.field_n, (byte) -97);
-            wo.field_c = bi.a("benefits", "button", PictureStrip.field_n, (byte) -57);
-            ro.field_b = bi.a("benefits", "signup_text", PictureStrip.field_n, (byte) -119);
-            ResizableModalPanel.field_P = bi.a("benefits", "menu_text", PictureStrip.field_n, (byte) -20);
-            AccountChoicePanel.field_O = bi.a("benefits", "button_frame", PictureStrip.field_n, (byte) -63);
-            ScrollContainer.field_Kb = bi.a("benefits", "arrow", PictureStrip.field_n, (byte) -125);
+            EmailCredentials.field_i = bi.loadSprite("benefits", "headline", PictureStrip.field_n, (byte) -79);
+            SpriteCheckboxPainter.field_a = bi.loadSprite("benefits", "blurbpane", PictureStrip.field_n, (byte) -97);
+            wo.field_c = bi.loadSprite("benefits", "button", PictureStrip.field_n, (byte) -57);
+            ro.field_b = bi.loadSprite("benefits", "signup_text", PictureStrip.field_n, (byte) -119);
+            ResizableModalPanel.field_P = bi.loadSprite("benefits", "menu_text", PictureStrip.field_n, (byte) -20);
+            AccountChoicePanel.field_O = bi.loadSprite("benefits", "button_frame", PictureStrip.field_n, (byte) -63);
+            ScrollContainer.field_Kb = bi.loadSprite("benefits", "arrow", PictureStrip.field_n, (byte) -125);
             EmailConfirmationValidator.field_r = (BitmapFont) ((Object) PicturePreview.a(0, TimerBarDemo.field_p, "large_font", PictureStrip.field_n, "benefits"));
             QuickChatCategory.field_A = (BitmapFont) ((Object) PicturePreview.a(0, TimerBarDemo.field_p, "small_font", PictureStrip.field_n, "benefits"));
             var28 = SoftwareRasterizer.field_k;

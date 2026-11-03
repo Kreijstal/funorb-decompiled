@@ -76,7 +76,7 @@ final class um extends IntrusiveNode {
         }
     }
 
-    final static BinaryBitmapFont a(ResourceArchive param0, ResourceArchive param1, int param2, int param3, int param4) {
+    final static BinaryBitmapFont loadBinaryBitmapFont(ResourceArchive param0, ResourceArchive param1, int param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
         BinaryBitmapFont stackIn_6_0 = null;

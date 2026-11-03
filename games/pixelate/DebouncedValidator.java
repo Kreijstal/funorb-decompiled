@@ -84,7 +84,7 @@ abstract class DebouncedValidator implements ValidationSource {
             if (param2 >= 100 &&
               param2 <= 105) {
               var7 = param1;
-              ro.a(var7, 2);
+              ro.setNameSuggestions(var7, 2);
               SpriteCheckboxPainter.field_f = HowToPlayScreen.a((byte) -65, param1);
             } else {
               SpriteCheckboxPainter.field_f = pa.a(param2, param3, (byte) -97);
@@ -92,7 +92,7 @@ abstract class DebouncedValidator implements ValidationSource {
           } else {
             stackIn_5_0 = !(um.field_r >= 13);
             SpriteCheckboxPainter.field_f = pk.a(stackIn_5_0, 5731);
-            ro.a((String[]) null, param0 ^ -99);
+            ro.setNameSuggestions((String[]) null, param0 ^ -99);
           }
           if (param0 != -97) {
             var6 = (String) null;

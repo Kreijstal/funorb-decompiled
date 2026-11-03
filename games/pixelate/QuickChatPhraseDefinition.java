@@ -143,7 +143,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
         if (null != this.field_u) {
           for (var2 = 0; this.field_u.length > var2; var2++) {
-            this.field_u[var2] = bq.a(this.field_u[var2], 32768);
+            this.field_u[var2] = bq.bitOr(this.field_u[var2], 32768);
           }
         }
     }

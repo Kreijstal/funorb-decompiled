@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends UiContainer implements TextInputListener, ButtonListener {
+final class LoginForm extends UiContainer implements TextInputListener, ButtonListener {
     private String field_S;
     private TextButton field_Q;
     private EditableTextWidget field_O;
@@ -25,10 +25,10 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
             this.field_O.focusNext((UiComponent) (this), 27);
           }
           if (param1 != 4) {
-            be.a(-101, (ResourceArchive) null);
+            LoginForm.loadTextResources(-101, (ResourceArchive) null);
           }
           if (this.field_O == param0) {
-            this.a((byte) 125);
+            this.submit((byte) 125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -45,7 +45,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         }
     }
 
-    final void m(int param0) {
+    final void clearFields(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -251,7 +251,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                 }
               }
               if (decompiledFrameCompleted2) {
-                TextButton.field_J[var7 / 8] = (byte)bq.a((int) TextButton.field_J[var7 / 8], 1 << var7 % 8);
+                TextButton.field_J[var7 / 8] = (byte)bq.bitOr((int) TextButton.field_J[var7 / 8], 1 << var7 % 8);
               }
             }
             stackIn_82_0 = (param0) ? -1 : 0;
@@ -281,7 +281,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                         var9++;
                       }
                     } else {
-                      TextButton.field_J[var7 / 8] = (byte)DraggableWidget.a((int) TextButton.field_J[var7 / 8], 1 << cm.a(var7, 7));
+                      TextButton.field_J[var7 / 8] = (byte)DraggableWidget.a((int) TextButton.field_J[var7 / 8], 1 << cm.bitAnd(var7, 7));
                     }
                   }
                   decompiledFrameRemainder0 = false;
@@ -548,11 +548,11 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                   }
                   else {
                     if (var9 != -1) {
-                      NanoTickClock.field_k[(var6Lifetime2 + var9) / 8] = (byte)DraggableWidget.a((int) NanoTickClock.field_k[(var6Lifetime2 + var9) / 8], 1 << cm.a(7, var6Lifetime2 + var9));
+                      NanoTickClock.field_k[(var6Lifetime2 + var9) / 8] = (byte)DraggableWidget.a((int) NanoTickClock.field_k[(var6Lifetime2 + var9) / 8], 1 << cm.bitAnd(7, var6Lifetime2 + var9));
                     } else {
                       var18 = var6Lifetime2;
                       while ((var8_array.length + (var6Lifetime2 - 1)) > var18) {
-                        NanoTickClock.field_k[var18 / 8] = (byte)cm.a((int) NanoTickClock.field_k[var18 / 8], ~(1 << cm.a(7, var18)));
+                        NanoTickClock.field_k[var18 / 8] = (byte)cm.bitAnd((int) NanoTickClock.field_k[var18 / 8], ~(1 << cm.bitAnd(7, var18)));
                         var18++;
                       }
                     }
@@ -560,7 +560,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                 }
                 if (param0 &&
                   var16Lifetime1 != 0) {
-                  NanoTickClock.field_k[(var9 + var6Lifetime2) / 8] = (byte)cm.a((int) NanoTickClock.field_k[(var9 + var6Lifetime2) / 8], ~(1 << cm.a(var6Lifetime2 + var9, 7)));
+                  NanoTickClock.field_k[(var9 + var6Lifetime2) / 8] = (byte)cm.bitAnd((int) NanoTickClock.field_k[(var9 + var6Lifetime2) / 8], ~(1 << cm.bitAnd(var6Lifetime2 + var9, 7)));
                 }
                 if (0 <= var9 &&
                   var17.field_R) {
@@ -753,7 +753,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         }
     }
 
-    final String l(int param0) {
+    final String getUsername(int param0) {
         RuntimeException var2 = null;
         String stackIn_7_0 = null;
         String stackIn_9_0 = null;
@@ -807,7 +807,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         try {
           boolean decompiledFrameRemainder0 = true;
           if (param0 == this.field_L) {
-            this.a((byte) 121);
+            this.submit((byte) 121);
             decompiledFrameRemainder0 = (var7 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -840,7 +840,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
             }
           }
           if (param2 != 11) {
-            this.l(81);
+            this.getUsername(81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -857,7 +857,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         }
     }
 
-    private final void a(byte param0) {
+    private final void submit(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -867,7 +867,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
             oi.a(this.field_J.field_q, this.field_O.field_q, (byte) -33);
           }
           if (param0 <= 115) {
-            be.a(-52);
+            LoginForm.a(-52);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -877,7 +877,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         }
     }
 
-    final void a(String param0, int param1) {
+    final void setUsername(String param0, int param1) {
         RuntimeException runtimeException = null;
         EditableTextWidget var3 = null;
         String var4 = null;
@@ -908,7 +908,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadTextResources(int param0, ResourceArchive param1) {
         RuntimeException stackIn_529_0 = null;
         StringBuilder stackIn_529_1 = null;
         String stackIn_530_2 = null;
@@ -1718,7 +1718,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         RuntimeException var1 = null;
         try {
           if (param0 < 112) {
-            be.a(true, (LobbyGame) null, 0, 10);
+            LoginForm.a(true, (LobbyGame) null, 0, 10);
           }
           field_P = null;
           field_R = null;
@@ -1730,7 +1730,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         }
     }
 
-    be(String param0, String param1, boolean param2, boolean param3, boolean param4) {
+    LoginForm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (WidgetPainter) null);
         LabeledField dupTemp$0 = null;
         LabeledField dupTemp$1 = null;
@@ -1829,7 +1829,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
             this.field_p = this.field_p + (var7.paragraphHeight(this.field_S, this.field_E - 40, var7.maxAscent) + 5);
           }
           var8 = ui.field_d;
-          var9 = lg.a(AudioService.a(13867), -18992);
+          var9 = lg.readLastLoginMethodCookie(AudioService.a(13867), -18992);
           if (ig.field_e == var9) {
             var8 = AchievementsScreen.field_r;
             if ((var11 != 0) &&

@@ -139,7 +139,7 @@ final class MatchController {
           return;
         }
         this.field_g = true;
-        var7 = (GameResultsScreen) (wo.b(-119, 13));
+        var7 = (GameResultsScreen) (wo.getScreen(-119, 13));
         var8 = var7;
         if (0 != DateOfBirthValidator.field_j) {
           if (DateOfBirthValidator.field_j != 1) {
@@ -183,7 +183,7 @@ final class MatchController {
         if (param1 != 250) {
           this.field_h = false;
         }
-        la.a(MidiPcmStream.field_t, 13, false, -25528);
+        la.changeScreen(MidiPcmStream.field_t, 13, false, -25528);
         return;
     }
 
@@ -707,7 +707,7 @@ final class MatchController {
           }
           var5 = var4;
           stackIn_10_0 = (!gq.d(83)) ? 0 : 12;
-          la.a(stackIn_10_0, var5, false, -25528);
+          la.changeScreen(stackIn_10_0, var5, false, -25528);
           return;
         }
         if (MenuInputState.field_e) {

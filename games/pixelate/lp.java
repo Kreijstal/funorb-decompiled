@@ -125,7 +125,7 @@ final class lp {
     }
 
     static {
-        field_d = of.a(0.9, 65536);
+        field_d = of.toFixedPoint(0.9, 65536);
         field_c = new String[][]{new String[]{"Easy", "Medium", "Hard"}, new String[]{"", "", ""}};
     }
 }

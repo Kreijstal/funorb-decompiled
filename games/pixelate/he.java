@@ -71,7 +71,7 @@ final class he {
             field_e = (String) null;
           }
           MusicPatchNode.a((java.awt.Component) ((Object) param1), 57);
-          tj.a((byte) -128, (java.awt.Component) ((Object) param1));
+          tj.attachMouseInput((byte) -128, (java.awt.Component) ((Object) param1));
           if (ScrollContainer.field_Lb == null) {
             return;
           }

@@ -66,7 +66,7 @@ final class ni extends IntrusiveNode {
         ni.a((Sprite) null, -53, -40, -46, -15, true, 64, 51, (BitmapFont) null, -14, -74);
     }
 
-    final static int a(byte param0, int param1) {
+    final static int bitCount(byte param0, int param1) {
         param1 = (1431655765 & param1) + (-715827883 & param1 >>> 1);
         param1 = (param1 >>> 2 & -214748365) + (858993459 & param1);
         param1 = (param1 >>> 4) + param1 & 252645135;

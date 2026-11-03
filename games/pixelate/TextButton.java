@@ -601,9 +601,9 @@ class TextButton extends UiComponent {
           if (param2 != 7) {
             field_F = 18;
           }
-          var3_int = mi.d(-4096, param1);
+          var3_int = mi.fixedSine(-4096, param1);
           var4 = th.a(param1, 8191);
-          var5 = mi.d(-4096, param0);
+          var5 = mi.fixedSine(-4096, param0);
           var6 = th.a(param0, 8191);
           var7 = (int)((long)var3_int * (long)var5 >> 16);
           var8 = (int)((long)var3_int * (long)var6 >> 16);

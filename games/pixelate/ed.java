@@ -5,7 +5,7 @@ final class ed {
     static String field_a;
     static PacketBuffer field_b;
 
-    final static PaletteBitmapFont a(byte[] param0, int param1) {
+    final static PaletteBitmapFont createPaletteBitmapFont(byte[] param0, int param1) {
         PaletteBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         PaletteBitmapFont stackIn_5_0 = null;

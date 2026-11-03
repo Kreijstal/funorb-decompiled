@@ -57,13 +57,13 @@ final class CheckboxPainter implements WidgetPainter {
               var3 = var3 + param1;
             }
             FallingPieceView.a(var3, 0);
-            var7 = qk.a(var3, ":", "%3a", -123);
-            var8 = qk.a(var7, "@", "%40", -128);
+            var7 = qk.replaceAll(var3, ":", "%3a", -123);
+            var8 = qk.replaceAll(var7, "@", "%40", -128);
             if (param0 != 1) {
               CheckboxPainter.a(-53);
             }
-            var9 = qk.a(var8, "&", "%26", -126);
-            var10 = qk.a(var9, "#", "%23", -127);
+            var9 = qk.replaceAll(var8, "&", "%26", -126);
+            var10 = qk.replaceAll(var9, "#", "%23", -127);
             if (null == TextButton.field_L) {
               return;
             }

@@ -17,7 +17,7 @@ final class m extends IntrusiveNode {
         throw new Error();
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSubscribePage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -66,7 +66,7 @@ final class m extends IntrusiveNode {
           MainMenuScreen.field_r.p(param0 ^ 15);
         }
         String var1 = Puzzle.a(0);
-        nf.field_b = new be(var1, (String) null, true, false, false);
+        nf.field_b = new LoginForm(var1, (String) null, true, false, false);
         if (param0 == -102) {
           wa.field_c.b(param0 - 6081, ph.field_l);
           ph.field_l.transitionToContent(nf.field_b, param0 ^ 27);
@@ -74,7 +74,7 @@ final class m extends IntrusiveNode {
           return;
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
-        m.a((java.applet.Applet) null, -43);
+        m.openSubscribePage((java.applet.Applet) null, -43);
         wa.field_c.b(param0 - 6081, ph.field_l);
         ph.field_l.transitionToContent(nf.field_b, param0 ^ 27);
         ph.field_l.e(false);

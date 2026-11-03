@@ -235,7 +235,7 @@ final class LobbyPlayer extends SceneWidget {
           var3_long = (long)param0.field_h;
           var5 = (long)param0.field_g;
           var7 = (long)param0.field_i;
-          var9 = mi.d(-4096, param1);
+          var9 = mi.fixedSine(-4096, param1);
           var10 = th.a(param1, 8191);
           var11 = (int)((long)var9 * var3_long >> 16);
           var12 = (int)(var5 * (long)var9 >> 16);

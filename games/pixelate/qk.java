@@ -56,13 +56,13 @@ final class qk {
           return;
         }
         String var2 = (String) null;
-        qk.a((String) null, (String) null, (String) null, -71);
+        qk.replaceAll((String) null, (String) null, (String) null, -71);
         field_d = null;
         field_c = null;
         field_g = null;
     }
 
-    final static String a(String param0, String param1, String param2, int param3) {
+    final static String replaceAll(String param0, String param1, String param2, int param3) {
         int var5 = Pixelate.field_H ? 1 : 0;
         int var4 = param0.indexOf(param1);
         while (var4 != -1) {

@@ -134,7 +134,7 @@ final class PairedTextColumns extends SceneWidget {
         String var14 = null;
         ClientContextMenu var15 = null;
         try {
-          em.a((String) null, 0L, (String) null, param2.c((byte) 8), param2, -163, aj.field_k, (int[]) null, -1);
+          em.openContextMenu((String) null, 0L, (String) null, param2.c((byte) 8), param2, -163, aj.field_k, (int[]) null, -1);
           if (param2.field_dc && (param2.field_Tb == 2 ||
             !(wo.field_h < 2))) {
             var9 = ProxySocketConnector.field_n;

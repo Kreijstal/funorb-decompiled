@@ -161,7 +161,7 @@ final class PlayerController {
           }
           var6 = stackIn_4_0;
           if (ProxyAuthenticationException.field_g == 0) {
-            var7 = qn.a(var11, 480, TickClock.field_c, -121, DualLinkNode.field_o);
+            var7 = qn.wrapText(var11, 480, TickClock.field_c, -121, DualLinkNode.field_o);
             var8 = var7 + 3;
             AccountRegistrationPanel.field_J = new String[var8];
             ProxyAuthenticationException.field_e = new int[var8];
@@ -183,7 +183,7 @@ final class PlayerController {
             if (1 != ProxyAuthenticationException.field_g) {
               throw new IllegalArgumentException();
             }
-            var7 = qn.a(var11, 480, TickClock.field_c, -109, DualLinkNode.field_o);
+            var7 = qn.wrapText(var11, 480, TickClock.field_c, -109, DualLinkNode.field_o);
             var8 = var7 + 2;
             AccountRegistrationPanel.field_J = new String[var8];
             ProxyAuthenticationException.field_e = new int[var8];

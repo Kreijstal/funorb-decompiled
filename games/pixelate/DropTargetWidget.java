@@ -82,7 +82,7 @@ final class DropTargetWidget extends SingleChildContainer {
         RuntimeException var3_ref = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
-          var3 = lg.a(11, param1, param2);
+          var3 = lg.normalizeAccountName(11, param1, param2);
           if (param0 < 56) {
             stackIn_3_0 = (String) null;
             return stackIn_3_0;

@@ -347,7 +347,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                 wo.c(-1, param0);
               }
             }
-            be.a(true, DraggableWidget.field_S, param0, -1);
+            LoginForm.a(true, DraggableWidget.field_S, param0, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

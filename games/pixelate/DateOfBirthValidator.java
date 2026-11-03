@@ -139,7 +139,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           var2_int = this.field_g.getDay((byte) 90);
           var3 = this.field_g.getMonthIndex(25);
           var4 = this.field_g.c(param0);
-          var5 = wa.b(-80);
+          var5 = wa.currentYear(-80);
           if (1890 > var4) {
             stackIn_3_0 = sk.field_a;
             return stackIn_3_0;
@@ -190,7 +190,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements TextInput
           var2_int = this.field_g.getDay((byte) -84);
           var3 = this.field_g.getMonthIndex(25);
           var4 = this.field_g.c(true);
-          var5 = wa.b(-127);
+          var5 = wa.currentYear(-127);
           if (var4 >= 1890 &&
             var5 - 3 >= var4) {
             if (dq.a(var2_int, var3, param0 + param0, var4)) {

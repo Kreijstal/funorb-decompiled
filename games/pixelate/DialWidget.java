@@ -21,7 +21,7 @@ final class DialWidget extends TextButton {
             DialWidget.releaseStatics((byte) -51);
           }
           mi.a(EmailCredentials.field_f, PicturePreview.field_o, -1, ThreeSliceButtonPainter.field_r);
-          fj.a(0, 0, (byte) 113, param1);
+          fj.presentToCanvas(0, 0, (byte) 113, param1);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "si.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

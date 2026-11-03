@@ -284,7 +284,7 @@ final class GameResultsScreen extends MenuScreen {
           ArchiveIndex.a(this.field_x, (byte) 126);
           fc.field_e = 14;
           var3 = param0 ? 1 : 0;
-          la.a(!gq.d(121) ? 0 : 12, -3, var3 != 0, -25528);
+          la.changeScreen(!gq.d(121) ? 0 : 12, -3, var3 != 0, -25528);
         } else {
           if (DateOfBirthValidator.field_j == 2) {
             ro.field_e.g(46);
@@ -446,11 +446,11 @@ final class GameResultsScreen extends MenuScreen {
           var3 = this.field_I;
           var4 = param1 ? 1 : 0;
           stackIn_8_0 = (!gq.d(104)) ? 0 : 12;
-          la.a(stackIn_8_0, var3, var4 != 0, -25528);
+          la.changeScreen(stackIn_8_0, var3, var4 != 0, -25528);
         } else {
           if (ValidationHelpWidget.field_Y) {
             var3 = param1 ? 1 : 0;
-            la.a(MidiPcmStream.field_t, -5, var3 != 0, -25528);
+            la.changeScreen(MidiPcmStream.field_t, -5, var3 != 0, -25528);
           }
           if (DateOfBirthValidator.field_i) {
             qj.a(false, 0, 11);

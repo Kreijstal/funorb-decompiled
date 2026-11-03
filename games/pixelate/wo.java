@@ -25,22 +25,22 @@ final class wo {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void setFrameRate(int param0, int param1) {
         if (param1 <= -11) {
           wa.field_b = 1000000000L / (long)param0;
           return;
         }
         Random var3 = (Random) null;
-        wo.a(-98, -125, (Random) null, (byte) -68);
+        wo.createPuzzle(-98, -125, (Random) null, (byte) -68);
         wa.field_b = 1000000000L / (long)param0;
     }
 
-    final static MenuScreen b(int param0, int param1) {
+    final static MenuScreen getScreen(int param0, int param1) {
         int var2 = -108 / ((34 - param0) / 49);
         return StripedProgressBar.field_H[param1];
     }
 
-    final static Puzzle a(int param0, int param1, Random param2, byte param3) {
+    final static Puzzle createPuzzle(int param0, int param1, Random param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
@@ -121,7 +121,7 @@ final class wo {
         var2Lifetime1.writeByte(160, 3);
     }
 
-    final static void a(int param0) {
+    final static void buildCountdownSprites(int param0) {
         Sprite var1 = null;
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
@@ -144,7 +144,7 @@ final class wo {
         }
     }
 
-    final static FullscreenFocusCanvas a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas openFullscreenWindow(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;

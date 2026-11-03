@@ -106,7 +106,7 @@ final class PuzzlePieceQueue {
           if (fc.field_e == 9 &&
             EmailCredentials.field_k == 0) {
             fc.field_e = 5;
-            la.a(MidiPcmStream.field_t, 5, false, -25528);
+            la.changeScreen(MidiPcmStream.field_t, 5, false, -25528);
           }
         }
     }

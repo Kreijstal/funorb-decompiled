@@ -45,7 +45,7 @@ final class ValidationHelpWidget extends TextHotspotWidget {
             } else {
               var6 = -(var5 / SoftwareRasterizer.field_j) + SoftwareRasterizer.field_d;
               var7 = 255 * var6 / var4;
-              SoftwareRasterizer.field_k[var5] = bq.a(bq.a(var7 << 8, var7 << 16), var7 >> 1);
+              SoftwareRasterizer.field_k[var5] = bq.bitOr(bq.bitOr(var7 << 8, var7 << 16), var7 >> 1);
             }
           }
           ClientException.field_g = new Sprite(640, 480);

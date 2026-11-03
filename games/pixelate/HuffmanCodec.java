@@ -53,7 +53,7 @@ final class HuffmanCodec {
             var7_int = var7_int & -var13 >> 31;
             var14 = (var11 + var13 - 1 >> 3) + var12;
             var13 += 24;
-            dupTemp$0 = bq.a(var7_int, var10 >>> var13);
+            dupTemp$0 = bq.bitOr(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param2[var12] = (byte)dupTemp$0;
             if (var14 > var12) {
@@ -177,7 +177,7 @@ final class HuffmanCodec {
                   if (var11 == var8) {
                     var12 = 1 << 32 - var10;
                     if ((var12 & var11) == 0) {
-                      var3[var10] = bq.a(var12, var11);
+                      var3[var10] = bq.bitOr(var12, var11);
                       continue;
                     }
                     var3[var10] = var3[var10 - 1];

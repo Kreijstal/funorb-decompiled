@@ -343,7 +343,7 @@ final class MidiPcmStream extends PcmStream {
         if (param1 != 4200) {
           this.channelVolume = (int[]) null;
         }
-        this.channelBank[param2] = cm.a(-128, param0);
+        this.channelBank[param2] = cm.bitAnd(-128, param0);
         this.selectChannelInstrument(param0, false, param2);
     }
 
@@ -367,7 +367,7 @@ final class MidiPcmStream extends PcmStream {
         int var6 = 0;
         var3Lifetime1 = var6;
         while (var6 < 16) {
-          this.channelBank[var6] = cm.a(this.field_V[var6], -128);
+          this.channelBank[var6] = cm.bitAnd(this.field_V[var6], -128);
           var6++;
         }
     }
@@ -1103,67 +1103,67 @@ final class MidiPcmStream extends PcmStream {
         var5Lifetime4 = (param0 & 32655) >> 8;
         var6Lifetime3 = (8347431 & param0) >> 16;
         if (var5Lifetime4 == 0) {
-          this.channelBank[var4Lifetime4] = cm.a(-2080769, this.channelBank[var4Lifetime4]) + (var6Lifetime3 << 14);
+          this.channelBank[var4Lifetime4] = cm.bitAnd(-2080769, this.channelBank[var4Lifetime4]) + (var6Lifetime3 << 14);
         }
         if (var5Lifetime4 == 32) {
-          this.channelBank[var4Lifetime4] = cm.a(this.channelBank[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelBank[var4Lifetime4] = cm.bitAnd(this.channelBank[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (1 == var5Lifetime4) {
-          this.channelModulation[var4Lifetime4] = cm.a(this.channelModulation[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelModulation[var4Lifetime4] = cm.bitAnd(this.channelModulation[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 33) {
-          this.channelModulation[var4Lifetime4] = var6Lifetime3 + cm.a(-128, this.channelModulation[var4Lifetime4]);
+          this.channelModulation[var4Lifetime4] = var6Lifetime3 + cm.bitAnd(-128, this.channelModulation[var4Lifetime4]);
         }
         if (var5Lifetime4 == 5) {
-          this.channelPortamentoTime[var4Lifetime4] = cm.a(this.channelPortamentoTime[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelPortamentoTime[var4Lifetime4] = cm.bitAnd(this.channelPortamentoTime[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 37) {
-          this.channelPortamentoTime[var4Lifetime4] = var6Lifetime3 + cm.a(-128, this.channelPortamentoTime[var4Lifetime4]);
+          this.channelPortamentoTime[var4Lifetime4] = var6Lifetime3 + cm.bitAnd(-128, this.channelPortamentoTime[var4Lifetime4]);
         }
         if (var5Lifetime4 == 7) {
-          this.channelVolume[var4Lifetime4] = cm.a(this.channelVolume[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelVolume[var4Lifetime4] = cm.bitAnd(this.channelVolume[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (39 == var5Lifetime4) {
-          this.channelVolume[var4Lifetime4] = var6Lifetime3 + cm.a(-128, this.channelVolume[var4Lifetime4]);
+          this.channelVolume[var4Lifetime4] = var6Lifetime3 + cm.bitAnd(-128, this.channelVolume[var4Lifetime4]);
         }
         if (var5Lifetime4 == 10) {
-          this.channelPan[var4Lifetime4] = (var6Lifetime3 << 7) + cm.a(-16257, this.channelPan[var4Lifetime4]);
+          this.channelPan[var4Lifetime4] = (var6Lifetime3 << 7) + cm.bitAnd(-16257, this.channelPan[var4Lifetime4]);
         }
         if (var5Lifetime4 == 42) {
-          this.channelPan[var4Lifetime4] = var6Lifetime3 + cm.a(this.channelPan[var4Lifetime4], -128);
+          this.channelPan[var4Lifetime4] = var6Lifetime3 + cm.bitAnd(this.channelPan[var4Lifetime4], -128);
         }
         if (11 == var5Lifetime4) {
-          this.channelExpression[var4Lifetime4] = cm.a(this.channelExpression[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelExpression[var4Lifetime4] = cm.bitAnd(this.channelExpression[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (43 == var5Lifetime4) {
-          this.channelExpression[var4Lifetime4] = var6Lifetime3 + cm.a(-128, this.channelExpression[var4Lifetime4]);
+          this.channelExpression[var4Lifetime4] = var6Lifetime3 + cm.bitAnd(-128, this.channelExpression[var4Lifetime4]);
         }
         if (var5Lifetime4 == 64) {
           if (64 > var6Lifetime3) {
-            this.channelFlags[var4Lifetime4] = cm.a(this.channelFlags[var4Lifetime4], -2);
+            this.channelFlags[var4Lifetime4] = cm.bitAnd(this.channelFlags[var4Lifetime4], -2);
           } else {
-            this.channelFlags[var4Lifetime4] = bq.a(this.channelFlags[var4Lifetime4], 1);
+            this.channelFlags[var4Lifetime4] = bq.bitOr(this.channelFlags[var4Lifetime4], 1);
           }
         }
         if (65 == var5Lifetime4) {
           if (var6Lifetime3 < 64) {
             this.b(var4Lifetime4, 16383);
-            this.channelFlags[var4Lifetime4] = cm.a(this.channelFlags[var4Lifetime4], -3);
+            this.channelFlags[var4Lifetime4] = cm.bitAnd(this.channelFlags[var4Lifetime4], -3);
           } else {
-            this.channelFlags[var4Lifetime4] = bq.a(this.channelFlags[var4Lifetime4], 2);
+            this.channelFlags[var4Lifetime4] = bq.bitOr(this.channelFlags[var4Lifetime4], 2);
           }
         }
         if (99 == var5Lifetime4) {
-          this.channelParameter[var4Lifetime4] = (var6Lifetime3 << 7) + cm.a(127, this.channelParameter[var4Lifetime4]);
+          this.channelParameter[var4Lifetime4] = (var6Lifetime3 << 7) + cm.bitAnd(127, this.channelParameter[var4Lifetime4]);
         }
         if (98 == var5Lifetime4) {
-          this.channelParameter[var4Lifetime4] = cm.a(16256, this.channelParameter[var4Lifetime4]) + var6Lifetime3;
+          this.channelParameter[var4Lifetime4] = cm.bitAnd(16256, this.channelParameter[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 101) {
-          this.channelParameter[var4Lifetime4] = (var6Lifetime3 << 7) + 16384 + cm.a(this.channelParameter[var4Lifetime4], 127);
+          this.channelParameter[var4Lifetime4] = (var6Lifetime3 << 7) + 16384 + cm.bitAnd(this.channelParameter[var4Lifetime4], 127);
         }
         if (var5Lifetime4 == 100) {
-          this.channelParameter[var4Lifetime4] = var6Lifetime3 + cm.a(16256, this.channelParameter[var4Lifetime4]) + 16384;
+          this.channelParameter[var4Lifetime4] = var6Lifetime3 + cm.bitAnd(16256, this.channelParameter[var4Lifetime4]) + 16384;
         }
         if (var5Lifetime4 == 120) {
           this.allSoundOff(var4Lifetime4, 0);
@@ -1177,27 +1177,27 @@ final class MidiPcmStream extends PcmStream {
         if (var5Lifetime4 == 6) {
           var7 = this.channelParameter[var4Lifetime4];
           if (var7 == 16384) {
-            this.channelPitchBendRange[var4Lifetime4] = (var6Lifetime3 << 7) + cm.a(this.channelPitchBendRange[var4Lifetime4], -16257);
+            this.channelPitchBendRange[var4Lifetime4] = (var6Lifetime3 << 7) + cm.bitAnd(this.channelPitchBendRange[var4Lifetime4], -16257);
           }
         }
         if (var5Lifetime4 == 38) {
           var7Lifetime1 = this.channelParameter[var4Lifetime4];
           if (var7Lifetime1 == 16384) {
-            this.channelPitchBendRange[var4Lifetime4] = var6Lifetime3 + cm.a(this.channelPitchBendRange[var4Lifetime4], -128);
+            this.channelPitchBendRange[var4Lifetime4] = var6Lifetime3 + cm.bitAnd(this.channelPitchBendRange[var4Lifetime4], -128);
           }
         }
         if (16 == var5Lifetime4) {
-          this.channelSampleOffset[var4Lifetime4] = (var6Lifetime3 << 7) + cm.a(-16257, this.channelSampleOffset[var4Lifetime4]);
+          this.channelSampleOffset[var4Lifetime4] = (var6Lifetime3 << 7) + cm.bitAnd(-16257, this.channelSampleOffset[var4Lifetime4]);
         }
         if (var5Lifetime4 == 48) {
-          this.channelSampleOffset[var4Lifetime4] = var6Lifetime3 + cm.a(-128, this.channelSampleOffset[var4Lifetime4]);
+          this.channelSampleOffset[var4Lifetime4] = var6Lifetime3 + cm.bitAnd(-128, this.channelSampleOffset[var4Lifetime4]);
         }
         if (var5Lifetime4 == 81) {
           if (64 > var6Lifetime3) {
             this.resetRetriggerPhase(true, var4Lifetime4);
-            this.channelFlags[var4Lifetime4] = cm.a(this.channelFlags[var4Lifetime4], -5);
+            this.channelFlags[var4Lifetime4] = cm.bitAnd(this.channelFlags[var4Lifetime4], -5);
           } else {
-            this.channelFlags[var4Lifetime4] = bq.a(this.channelFlags[var4Lifetime4], 4);
+            this.channelFlags[var4Lifetime4] = bq.bitOr(this.channelFlags[var4Lifetime4], 4);
           }
         }
         if (var5Lifetime4 == 17) {

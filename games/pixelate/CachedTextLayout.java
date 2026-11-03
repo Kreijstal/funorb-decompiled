@@ -968,7 +968,7 @@ final class CachedTextLayout extends TextLayout {
             if (0 != ContentTransitionDialog.field_eb.field_P) {
               EmergentBehaviourBackground.field_o = false;
             }
-            be.a(false, io.field_c, param2, -1);
+            LoginForm.a(false, io.field_c, param2, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -81,7 +81,7 @@ final class mj {
         }
     }
 
-    final static String a(int param0, int param1) {
+    final static String formatPageNumber(int param0, int param1) {
         if (param0 == 4067) {
           return param1 + 1 + "/" + ln.field_m.length;
         }
@@ -138,7 +138,7 @@ final class mj {
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(160, 2);
-          var6.writeString((byte) -41, param1);
+          var6.b((byte) -41, param1);
           var6.backpatchByteLength(var6.position - var4, -1);
           var5 = 55 / ((param0 - 16) / 45);
           stackIn_22_0 = null;

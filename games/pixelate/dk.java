@@ -103,7 +103,7 @@ final class dk {
         field_a = (Sprite[][]) null;
     }
 
-    final static void a(boolean param0, ResourceArchive param1) {
+    final static void loadLogoMesh(boolean param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         TriangleMesh var5 = null;
@@ -129,7 +129,7 @@ final class dk {
           ck.field_b = new TriangleMesh[var3];
           BlastFromThePastBackground.field_p = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            ck.field_b[var4] = pk.a(var9, -1);
+            ck.field_b[var4] = pk.readTriangleMesh(var9, -1);
           }
           var11.endBitAccess(7);
           var10 = 0;

@@ -59,7 +59,7 @@ final class tj extends ah {
         return false;
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void attachMouseInput(byte param0, java.awt.Component param1) {
         try {
           if (param0 != -128) {
             field_v = -81;
@@ -96,7 +96,7 @@ final class tj extends ah {
         try {
           if (param11 != 122) {
             java.awt.Component var16 = (java.awt.Component) null;
-            tj.a((byte) 102, (java.awt.Component) null);
+            tj.attachMouseInput((byte) 102, (java.awt.Component) null);
           }
           Sprite[] var17 = (Sprite[]) null;
           BouncedownBackground.a((Sprite[]) null, param6, param8, 0, param10, 0, ce.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, IndexedSpriteState.field_l, MatchingTextValidator.field_s, param7);
@@ -113,7 +113,7 @@ final class tj extends ah {
         return this.field_x;
     }
 
-    final static int a(int param0, CharSequence param1, boolean param2, boolean param3) {
+    final static int parseInt(int param0, CharSequence param1, boolean param2, boolean param3) {
         int var8 = 0;
         int stackIn_42_0 = 0;
         RuntimeException stackIn_45_0 = null;

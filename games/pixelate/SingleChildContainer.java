@@ -325,13 +325,13 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
           if (param2 == -2) {
             QuickChatMenu.b(true, -116);
           } else {
-            wo.b(107, param2).c(0);
+            wo.getScreen(107, param2).c(0);
             if (Match.field_u) {
               var3 = 81 % ((-12 - param1) / 42);
               decompiledFrameRemainder0 = false;
             }
             else {
-              wo.b(-73, param2).draw(11);
+              wo.getScreen(-73, param2).draw(11);
             }
           }
         } else {

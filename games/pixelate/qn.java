@@ -32,7 +32,7 @@ final class qn extends IntrusiveNode {
         field_l = null;
     }
 
-    final static String a(java.applet.Applet param0, String param1, byte param2) {
+    final static String readCookie(java.applet.Applet param0, String param1, byte param2) {
         try {
           int var5 = 0;
           String var3 = null;
@@ -106,7 +106,7 @@ final class qn extends IntrusiveNode {
         }
     }
 
-    final static int a(String param0, int param1, String[] param2, int param3, BitmapFont param4) {
+    final static int wrapText(String param0, int param1, String[] param2, int param3, BitmapFont param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

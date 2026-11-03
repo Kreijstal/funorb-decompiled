@@ -306,7 +306,7 @@ final class HowToPlayScreen extends MenuScreen {
           QuickChatMenu.field_Qb.a(50, 0, 0);
         }
         var4.drawCentered(pk.field_d[this.field_r], 320, 180, 0, -1);
-        var5.drawRightAlignedText(mj.a(4067, this.field_r), 590, 375, 16777215, 0);
+        var5.drawRightAlignedText(mj.formatPageNumber(4067, this.field_r), 590, 375, 16777215, 0);
         DebouncedValidator.field_d = var3;
         LoginCredentials.field_e = var2;
     }
@@ -330,7 +330,7 @@ final class HowToPlayScreen extends MenuScreen {
         if (param0 >= -13) {
           this.handleNavigation(-19);
         }
-        la.a(this.field_l, TickClock.field_a, false, -25528);
+        la.changeScreen(this.field_l, TickClock.field_a, false, -25528);
     }
 
     static {

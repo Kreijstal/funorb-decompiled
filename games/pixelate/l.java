@@ -81,7 +81,7 @@ final class l extends MenuScreen {
     }
 
     final void onCancel(byte param0) {
-        la.a(TickClock.field_a, TickClock.field_a, false, -25528);
+        la.changeScreen(TickClock.field_a, TickClock.field_a, false, -25528);
         if (param0 > -13) {
           l.releaseStatics(-78);
         }

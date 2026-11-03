@@ -32,7 +32,7 @@ final class MusicCrossfadeStream extends PcmStream {
           if (param1 != 22770) {
             MusicCrossfadeStream.b((byte) -76);
           }
-          vf.a(param0, param1 ^ 21565);
+          vf.reloadPage(param0, param1 ^ 21565);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "vi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

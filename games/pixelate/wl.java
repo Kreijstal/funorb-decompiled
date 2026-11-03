@@ -118,7 +118,7 @@ final class wl {
           }
           var5_double = (double)(JavaRandomHelpers.a(ea.field_b, -124, 10) + 15) / 10.0;
           this.field_d = var5_double * DialWidget.a(3.141592653589793 * (double)param2 / 512.0, false);
-          this.field_c = var5_double * jn.a((double)param2 * 3.141592653589793 / 512.0, 6802);
+          this.field_c = var5_double * jn.sine((double)param2 * 3.141592653589793 / 512.0, 6802);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wl.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

@@ -96,7 +96,7 @@ abstract class SocketConnector {
           if (param2 != 47) {
             field_g = (String[]) null;
           }
-          stackIn_3_0 = ff.a(param3, var4_int, var5, param2 - 50);
+          stackIn_3_0 = ff.loadSprites(param3, var4_int, var5, param2 - 50);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

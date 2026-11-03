@@ -76,7 +76,7 @@ final class KiteBackground extends BackgroundScene {
             return null;
           }
           if (param2 == 1000) {
-            stackIn_7_0 = wa.c(param2 - 1119);
+            stackIn_7_0 = wa.buildSprites(param2 - 1119);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite[]) null;
@@ -166,9 +166,9 @@ final class KiteBackground extends BackgroundScene {
         if (!MenuInputState.field_d.ensureGroupAvailableByName("benefits", -1)) {
           return false;
         }
-        PasswordFieldPainter.field_y = bi.a("benefits", "members_benefits_borders", MenuInputState.field_d, (byte) -89);
-        MusicPatchPcmStream.field_p = bi.a("benefits", "members_benefits_price", MenuInputState.field_d, (byte) -70);
-        SpriteState.field_t = bi.a("benefits", "members_benefits_logo", MenuInputState.field_d, (byte) -118);
+        PasswordFieldPainter.field_y = bi.loadSprite("benefits", "members_benefits_borders", MenuInputState.field_d, (byte) -89);
+        MusicPatchPcmStream.field_p = bi.loadSprite("benefits", "members_benefits_price", MenuInputState.field_d, (byte) -70);
+        SpriteState.field_t = bi.loadSprite("benefits", "members_benefits_logo", MenuInputState.field_d, (byte) -118);
         li.field_h = SocketConnector.loadRgbSpritesByName("members_benefits_screenshots", "benefits", (byte) 47, MenuInputState.field_d);
         bl.a(11833, PasswordFieldPainter.field_y, SoundCache.field_e);
         ni.a(MusicPatchPcmStream.field_p, 2, 40, 40, 80, false, -2400, 15, rk.field_e, 80, 0);

@@ -160,7 +160,7 @@ final class ArchiveIndex {
         int var13Lifetime1Lifetime1;
         var16 = Pixelate.field_H ? 1 : 0;
         try {
-          var17 = new PacketBuffer(la.a(param1, 0));
+          var17 = new PacketBuffer(la.decompressContainer(param1, 0));
           var4 = var17.readUnsignedByte(255);
           if (5 <= var4 &&
             var4 <= 7) {
@@ -423,7 +423,7 @@ final class ArchiveIndex {
                     } else {
                       var19 = SoftwareRasterizer.field_k[var9];
                       var20 = 16711935 & (var19 & 16711935) * var17 + (16711935 & var18) * var16 >> 8;
-                      SoftwareRasterizer.field_k[var9] = var20 + (cm.a(var17 * cm.a(65280, var19) + var16 * cm.a(65280, var18), 16711874) >> 8);
+                      SoftwareRasterizer.field_k[var9] = var20 + (cm.bitAnd(var17 * cm.bitAnd(65280, var19) + var16 * cm.bitAnd(65280, var18), 16711874) >> 8);
                     }
                   }
                   var9++;

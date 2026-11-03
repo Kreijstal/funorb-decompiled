@@ -9,7 +9,7 @@ final class GameplayScreen extends MenuScreen {
         if (param0 > -13) {
           return;
         }
-        la.a(!gq.d(127) ? 0 : 12, -1, false, -25528);
+        la.changeScreen(!gq.d(127) ? 0 : 12, -1, false, -25528);
     }
 
     GameplayScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {

@@ -13,7 +13,7 @@ final class ff {
     static String field_b;
     static SceneWidget field_a;
 
-    final static Sprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
+    final static Sprite[] loadSprites(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -26,7 +26,7 @@ final class ff {
             return stackIn_2_0;
           }
           if (rk.a(param2, false, param0, param1)) {
-            return ff.b(0);
+            return ff.buildSprites(0);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -107,7 +107,7 @@ final class ff {
           var9.position = var9.position + 1;
           var5 = var9.position;
           var9.writeByte(160, 1);
-          var9.writeString((byte) -41, param1);
+          var9.b((byte) -41, param1);
           var9.backpatchByteLength(-var5 + var9.position, -1);
           stackIn_19_0 = null;
           return (String) (stackIn_19_0);
@@ -125,7 +125,7 @@ final class ff {
         }
     }
 
-    private final static Sprite[] b(int param0) {
+    private final static Sprite[] buildSprites(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -138,7 +138,7 @@ final class ff {
           var4 = wo.field_f[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = fl.field_g[cm.a((int) var4[var6], 255)];
+            var5[var6] = fl.field_g[cm.bitAnd((int) var4[var6], 255)];
           }
           var1[var2] = new Sprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], var5);
         }
@@ -146,7 +146,7 @@ final class ff {
         return var1;
     }
 
-    final static IndexedSprite[] a(ResourceArchive param0, int param1, int param2, byte param3) {
+    final static IndexedSprite[] loadIndexedSprites(ResourceArchive param0, int param1, int param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         IndexedSprite[] stackIn_4_0 = null;
@@ -159,7 +159,7 @@ final class ff {
             return null;
           }
           var4_int = 101 % ((-49 - param3) / 52);
-          stackIn_4_0 = gb.a((byte) -96);
+          stackIn_4_0 = gb.buildIndexedSprites((byte) -96);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

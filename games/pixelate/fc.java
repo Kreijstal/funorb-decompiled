@@ -42,7 +42,7 @@ final class fc {
         }
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void openSupportPage(java.applet.Applet param0, byte param1) {
         try {
           java.net.URL var2 = null;
           RuntimeException var2_ref = null;
@@ -65,7 +65,7 @@ final class fc {
               return;
             }
             var3 = (java.applet.Applet) null;
-            fc.a((java.applet.Applet) null, (byte) -14);
+            fc.openSupportPage((java.applet.Applet) null, (byte) -14);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

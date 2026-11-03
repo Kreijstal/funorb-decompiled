@@ -162,7 +162,7 @@ final class HighscoresScreen extends MenuScreen {
             var8 = 0;
             while (true) {
               if (var8 < var6_int) {
-                var7[var8 >> 2] = var7[var8 >> 2] + (var11.readUnsignedByte(255) << (cm.a(var8, 3) << 8));
+                var7[var8 >> 2] = var7[var8 >> 2] + (var11.readUnsignedByte(255) << (cm.bitAnd(var8, 3) << 8));
                 var8++;
                 if (var9 == 0) {
                   continue;
@@ -645,11 +645,11 @@ final class HighscoresScreen extends MenuScreen {
 
     final void onCancel(byte param0) {
         if (param0 < -13) {
-          la.a(this.field_l, TickClock.field_a, false, -25528);
+          la.changeScreen(this.field_l, TickClock.field_a, false, -25528);
           return;
         }
         field_s = (String) null;
-        la.a(this.field_l, TickClock.field_a, false, -25528);
+        la.changeScreen(this.field_l, TickClock.field_a, false, -25528);
     }
 
     HighscoresScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {

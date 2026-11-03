@@ -41,7 +41,7 @@ final class bi {
         }
     }
 
-    final static Sprite a(String param0, String param1, ResourceArchive param2, byte param3) {
+    final static Sprite loadSprite(String param0, String param1, ResourceArchive param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -57,7 +57,7 @@ final class bi {
         try {
           var4_int = param2.getGroupId(127, param0);
           if (param3 >= -19) {
-            bi.b(25);
+            bi.getUiTheme(25);
           }
           var5 = param2.getFileId((byte) -105, param1, var4_int);
           stackIn_3_0 = dk.a(var5, param2, var4_int, -1);
@@ -98,7 +98,7 @@ final class bi {
         field_d = null;
     }
 
-    final static UiTheme b(int param0) {
+    final static UiTheme getUiTheme(int param0) {
         if (param0 != 4) {
           bi.releaseStatics(-128);
           if (null == JaggrabDownloader.field_c) {

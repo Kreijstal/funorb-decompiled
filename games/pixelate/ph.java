@@ -113,7 +113,7 @@ final class ph extends IntrusiveNode {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          dk.field_e = bi.a("basic", "display_name_changed", param0, (byte) -25);
+          dk.field_e = bi.loadSprite("basic", "display_name_changed", param0, (byte) -25);
           ScoreMarkerBar.field_z = new ScrollPaneWithFooter(0L, rm.field_a, SceneWidgetNode.field_u, OptionsScreen.field_q);
           MouseWheelHandler.field_e = new ScrollPaneWithFooter(0L, rm.field_a, qh.field_e, NanoTickClock.field_n);
           wa.field_f = new SceneWidget(0L, (SceneWidget) null);

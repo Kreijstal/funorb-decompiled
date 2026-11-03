@@ -256,7 +256,7 @@ final class QuickChatMenu extends SceneWidget {
           var12 = "</col>";
           for (var13 = 0; var13 < this.field_Mb; var13++) {
             if (this.field_Hb[var13] > 0) {
-              param6[var13] = var11 + ig.a(124, this.field_Hb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + ig.charToString(124, this.field_Hb[var13]).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (null != this.field_Gb[var13] ||

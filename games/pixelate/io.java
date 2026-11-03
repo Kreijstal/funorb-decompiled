@@ -428,9 +428,9 @@ final class io {
           if (var7 == null) {
             var7 = "";
           }
-          aa.field_f.writeString((byte) -41, var7);
+          aa.field_f.b((byte) -41, var7);
           if (ConditionalTextValue.field_a != null) {
-            aa.field_f.a((byte) -66, ConditionalTextValue.field_a);
+            aa.field_f.writeString((byte) -66, ConditionalTextValue.field_a);
           }
           if (param1 >= -40) {
             var8 = (BinaryBitmapFont) null;

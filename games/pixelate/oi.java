@@ -104,7 +104,7 @@ final class oi {
         int var11 = 0;
         int var12 = 0;
         try {
-          em.a(param4.field_Fb, param4.field_Nb, param4.field_Ub, -1, param4, -163, param6, (int[]) null, -1);
+          em.openContextMenu(param4.field_Fb, param4.field_Nb, param4.field_Ub, -1, param4, -163, param6, (int[]) null, -1);
           ProxySocketConnector.field_n.b(true, (byte) -98);
           ProxySocketConnector.field_n.a(0, (int[]) null, -3);
           int var7_int = -127 / ((param3 - 0) / 38);

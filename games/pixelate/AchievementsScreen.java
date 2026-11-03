@@ -211,7 +211,7 @@ final class AchievementsScreen extends MenuScreen {
         if (param0 >= -13) {
           return;
         }
-        la.a(this.field_l, TickClock.field_a, false, -25528);
+        la.changeScreen(this.field_l, TickClock.field_a, false, -25528);
     }
 
     AchievementsScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
@@ -297,7 +297,7 @@ final class AchievementsScreen extends MenuScreen {
         }
         int var3 = 3 + JavaRandomHelpers.a(UiTheme.field_f, -124, 17);
         double var4 = (double)(param0 - 10) / 10.0 + 7.0;
-        return new rk(var2, var3, of.a(var4, 65536));
+        return new rk(var2, var3, of.toFixedPoint(var4, 65536));
     }
 
     public static void releaseStatics(boolean param0) {

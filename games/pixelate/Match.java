@@ -237,9 +237,9 @@ final class Match {
                 var12 = this.puzzle.columns - var9 - 1 + var8 * this.puzzle.columns;
                 var13 = var15.cells[var11] & 3;
                 if (~var13 == ~(255 & var7.indices[var10])) {
-                  var15.cells[var11] = (byte)bq.a((int) var15.cells[var11], 4);
+                  var15.cells[var11] = (byte)bq.bitOr((int) var15.cells[var11], 4);
                 } else {
-                  var15.cells[var11] = (byte)cm.a((int) var15.cells[var11], -5);
+                  var15.cells[var11] = (byte)cm.bitAnd((int) var15.cells[var11], -5);
                   if (0 != var13) {
                     this.field_o = this.field_o + 1;
                   }
@@ -362,7 +362,7 @@ final class Match {
           }
           if (param2 == 2) {
             var9 = new Random((long)this.field_c);
-            this.puzzle = wo.a(this.field_r, cl.field_e[this.field_n], var9, (byte) 116);
+            this.puzzle = wo.createPuzzle(this.field_r, cl.field_e[this.field_n], var9, (byte) 116);
             this.puzzle.field_e = 1000;
             JavaRandomHelpers.a(var9, -98, 2147483647);
           }

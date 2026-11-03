@@ -48,7 +48,7 @@ final class QueuedInput extends IntrusiveNode {
             var13 = param4;
             var14 = param7;
             var15 = 8355711 & var17[var11] >> 1;
-            var10[var11] = (cm.a(33423531, var13) >> 9) + cm.a(var12 >> 1, 16711680) + cm.a(255, var14 >> 17) + var15;
+            var10[var11] = (cm.bitAnd(33423531, var13) >> 9) + cm.bitAnd(var12 >> 1, 16711680) + cm.bitAnd(255, var14 >> 17) + var15;
             param1++;
             param7 = param7 + param6;
             param4 = param4 + param9;

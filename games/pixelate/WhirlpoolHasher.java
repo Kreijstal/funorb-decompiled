@@ -256,7 +256,7 @@ final class WhirlpoolHasher {
                 stackIn_32_0 = 56;
                 var5 = stackIn_32_0;
                 while (var4 < 8) {
-                  this.field_b[var3] = fp.a(this.field_b[var3], SecondaryNodeDeque.field_b[var4][cm.a(255, (int)(this.field_d[cm.a(-var4 + var3, 7)] >>> var5))]);
+                  this.field_b[var3] = fp.a(this.field_b[var3], SecondaryNodeDeque.field_b[var4][cm.bitAnd(255, (int)(this.field_d[cm.bitAnd(-var4 + var3, 7)] >>> var5))]);
                   var4++;
                   var5 -= 8;
                 }
@@ -276,7 +276,7 @@ final class WhirlpoolHasher {
                 stackIn_51_0 = 56;
                 var5Lifetime1 = stackIn_51_0;
                 while (var4Lifetime1 < 8) {
-                  this.field_b[var3] = fp.a(this.field_b[var3], SecondaryNodeDeque.field_b[var4Lifetime1][cm.a((int)(this.field_e[cm.a(7, var3 - var4Lifetime1)] >>> var5Lifetime1), 255)]);
+                  this.field_b[var3] = fp.a(this.field_b[var3], SecondaryNodeDeque.field_b[var4Lifetime1][cm.bitAnd((int)(this.field_e[cm.bitAnd(7, var3 - var4Lifetime1)] >>> var5Lifetime1), 255)]);
                   var5Lifetime1 -= 8;
                   var4Lifetime1++;
                 }
@@ -330,7 +330,7 @@ final class WhirlpoolHasher {
           var3 = new int[var1_int];
           var4_int = 0;
           while (var4_int < var1_int) {
-            var3[var4_int] = fl.field_g[cm.a((int) var2[var4_int], 255)];
+            var3[var4_int] = fl.field_g[cm.bitAnd((int) var2[var4_int], 255)];
             var4_int++;
             if (var5 == 0) {
               continue;
@@ -391,7 +391,7 @@ final class WhirlpoolHasher {
                 }
                 if (stackIn_24_0 >= 0 &&
                   256 > var8) {
-                  this.inputBlock[this.field_i] = (byte)bq.a((int) this.inputBlock[this.field_i], var8 >>> var7);
+                  this.inputBlock[this.field_i] = (byte)bq.bitOr((int) this.inputBlock[this.field_i], var8 >>> var7);
                   this.field_h = this.field_h + (8 - var7);
                   this.field_i = this.field_i + 1;
                   if (this.field_h == 512) {
@@ -399,7 +399,7 @@ final class WhirlpoolHasher {
                     this.field_i = 0;
                     this.field_h = 0;
                   }
-                  this.inputBlock[this.field_i] = (byte)cm.a(var8 << -var7 + 8, 255);
+                  this.inputBlock[this.field_i] = (byte)cm.bitAnd(var8 << -var7 + 8, 255);
                   param1 = param1 - 8L;
                   this.field_h = this.field_h + var7;
                   var5_int++;
@@ -417,7 +417,7 @@ final class WhirlpoolHasher {
           if (stackIn_24_0 < 0 ||
             var13 != 0) {
             var8 = param0[var5_int] << var6 & 255;
-            this.inputBlock[this.field_i] = (byte)bq.a((int) this.inputBlock[this.field_i], var8 >>> var7);
+            this.inputBlock[this.field_i] = (byte)bq.bitOr((int) this.inputBlock[this.field_i], var8 >>> var7);
           }
           var11Lifetime1 = -86 % ((param2 - 39) / 48);
           if ((long)var7 + param1 < 8L) {
@@ -434,7 +434,7 @@ final class WhirlpoolHasher {
             this.field_h = 0;
             this.field_i = 0;
           }
-          this.inputBlock[this.field_i] = (byte)cm.a(var8 << -var7 + 8, 255);
+          this.inputBlock[this.field_i] = (byte)cm.bitAnd(var8 << -var7 + 8, 255);
           this.field_h = this.field_h + (int)param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -465,7 +465,7 @@ final class WhirlpoolHasher {
         int var8 = 0;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
-          this.inputBlock[this.field_i] = (byte)bq.a((int) this.inputBlock[this.field_i], 128 >>> cm.a(this.field_h, 7));
+          this.inputBlock[this.field_i] = (byte)bq.bitOr((int) this.inputBlock[this.field_i], 128 >>> cm.bitAnd(this.field_h, 7));
           this.field_i = this.field_i + 1;
           if (this.field_i > 32) {
             while (true) {

@@ -161,7 +161,7 @@ final class dh {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param0.charAt(var6);
-            if (vf.a((byte) -3, (char) var7)) {
+            if (vf.isAllowedChar((byte) -3, (char) var7)) {
               var8 = Vector3.a(124, (char) var7);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);

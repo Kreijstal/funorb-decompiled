@@ -43,7 +43,7 @@ final class ro {
         }
     }
 
-    final static void a(String[] args, int param1) {
+    final static void setNameSuggestions(String[] args, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -112,7 +112,7 @@ final class ro {
           d.a(param16, param13, true, param11, param7, param2, param8, param6, (String[]) null, 1, param0, param12, param9, param10, param1, param4, param5, param15, param14);
           if (param3 != -15690) {
             var18 = (String[]) null;
-            ro.a((String[]) null, -104);
+            ro.setNameSuggestions((String[]) null, -104);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

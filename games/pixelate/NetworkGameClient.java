@@ -107,7 +107,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (5 == var4) {
-            d.a(0, AudioService.a(13867));
+            d.openQuitPage(0, AudioService.a(13867));
           }
           if (var4 == 6 &&
             AlphaContainer.field_I) {
@@ -120,13 +120,13 @@ abstract class NetworkGameClient extends GameApplet {
             MusicCrossfadeStream.a(AudioService.a(13867), 22770);
           }
           if (var4 == 9) {
-            fc.a(AudioService.a(param0 + 13867), (byte) 19);
+            fc.openSupportPage(AudioService.a(param0 + 13867), (byte) 19);
           }
           if (var4 == 10) {
             aa.field_f.writeOpcode(17, 15514);
           }
           if (var4 == 11) {
-            vf.a(AudioService.a(13867), 3279);
+            vf.reloadPage(AudioService.a(13867), 3279);
           }
           if (12 == var4) {
             Vector3.a((byte) 71, AudioService.a(13867), MusicPatch.b((byte) 11));
@@ -142,7 +142,7 @@ abstract class NetworkGameClient extends GameApplet {
                   var9 = (String) null;
                   ri.a((String) null, true);
                 } else {
-                  var7 = ui.a(true, var12.payload, 0, var12.position);
+                  var7 = ui.decodeText(true, var12.payload, 0, var12.position);
                   ri.a(var7, true);
                 }
                 QuickChatCategory.field_w = null;
@@ -410,8 +410,8 @@ abstract class NetworkGameClient extends GameApplet {
         MenuInputState.b(wo.field_d, -31383);
         l.a(false, wo.field_d, 5000, this.field_v, this.field_u, this.field_s, this.field_w, param0, 5000, param1, this.field_y, this.field_q, this.field_B, mc.field_k);
         KeyboardInputHandler.initializeArchiveServices(this.field_u, param0, wo.field_d, this.field_y, mc.field_k, this.field_q, this.field_w, -21462, this.field_B);
-        qf.a(31171);
-        ScrollContainer.field_Lb = bl.a(71);
+        qf.initialiseKeyMap(31171);
+        ScrollContainer.field_Lb = bl.createMouseWheelHandler(71);
         he.a(0, NameAvailabilityValidator.field_u);
         Matrix3.field_e = param6;
         SocketJs5Transport.field_r = param5;
@@ -782,7 +782,7 @@ abstract class NetworkGameClient extends GameApplet {
           var4_int = param0.getGroupId(127, param2);
           var6 = 95 % ((param1 + 53) / 49);
           var5 = param0.getFileId((byte) -126, param3, var4_int);
-          stackIn_1_0 = ff.a(param0, var5, var4_int, (byte) 18);
+          stackIn_1_0 = ff.loadIndexedSprites(param0, var5, var4_int, (byte) 18);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

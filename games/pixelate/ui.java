@@ -39,7 +39,7 @@ final class ui {
         return param1 + param0 - param2;
     }
 
-    final static String a(boolean param0, byte[] param1, int param2, int param3) {
+    final static String decodeText(boolean param0, byte[] param1, int param2, int param3) {
         int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;

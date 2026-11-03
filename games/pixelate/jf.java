@@ -160,7 +160,7 @@ final class jf {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(160, 0);
-          var5.writeString((byte) -41, param0);
+          var5.b((byte) -41, param0);
           var5.backpatchByteLength(-var4 + var5.position, -1);
           stackIn_29_0 = null;
           return (String) (stackIn_29_0);
@@ -259,7 +259,7 @@ final class jf {
             jf.requestAddFriend((String) null, -39, (byte) 9);
           }
           if (rk.a(param3, false, param2, param1)) {
-            stackIn_6_0 = ed.a(param0.getFile(param1, param3, true), -28628);
+            stackIn_6_0 = ed.createPaletteBitmapFont(param0.getFile(param1, param3, true), -28628);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

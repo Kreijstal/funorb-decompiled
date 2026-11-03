@@ -128,7 +128,7 @@ final class BoundedRandomAccessFile {
             }
             var4 = new byte[var3_int];
             param2.position = param2.position + QuickChatPhraseDefinition.field_v.decompress(-1, var3_int, param2.payload, 0, param2.position, var4);
-            var5 = ui.a(true, var4, 0, var3_int);
+            var5 = ui.decodeText(true, var4, 0, var3_int);
             stackIn_5_0 = var5;
             return stackIn_5_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

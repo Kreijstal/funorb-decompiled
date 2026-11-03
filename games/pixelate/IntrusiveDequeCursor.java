@@ -267,7 +267,7 @@ final class IntrusiveDequeCursor {
           return;
         }
         if (BoardParticle.a((byte) -104, fc.field_e)) {
-          wo.b(126, fc.field_e).a(true);
+          wo.getScreen(126, fc.field_e).a(true);
         }
         fc.field_e = MidiPcmStream.field_t;
         if (og.field_l) {

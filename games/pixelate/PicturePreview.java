@@ -36,7 +36,7 @@ final class PicturePreview extends IntrusiveNode {
           }
           var5_int = param3.getGroupId(param0 ^ 122, param4);
           var6 = param3.getFileId((byte) -111, param2, var5_int);
-          stackIn_4_0 = um.a(param3, param1, var5_int, 121, var6);
+          stackIn_4_0 = um.loadBinaryBitmapFont(param3, param1, var5_int, 121, var6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -21,13 +21,13 @@ final class PauseMenuScreen extends MenuScreen {
           if (null != ib.field_f) {
             ln.a(75);
           }
-          m.a(AudioService.a(13867), -60);
+          m.openSubscribePage(AudioService.a(13867), -60);
         }
         if (var2 == 1) {
-          la.a(MidiPcmStream.field_t, 0, false, -25528);
+          la.changeScreen(MidiPcmStream.field_t, 0, false, -25528);
         }
         if (var2 == 2) {
-          la.a(MidiPcmStream.field_t, 0, true, -25528);
+          la.changeScreen(MidiPcmStream.field_t, 0, true, -25528);
         }
     }
 
@@ -73,7 +73,7 @@ final class PauseMenuScreen extends MenuScreen {
             var4 = Js5ArchiveManager.field_i.length >> 2;
             var5 = var1_int % var4;
             var6 = var4 - var5;
-            Js5ArchiveManager.field_i[var1_int] = cm.a(cm.a(var3, 65280) * var5 / var4, 65280) + (cm.a(16711935, var5 * cm.a(16711935, var3) / var4) + cm.a(var6 * cm.a(var2, 65280) / var4, 65280) + cm.a(16711935, cm.a(var2, 16711935) * var6 / var4));
+            Js5ArchiveManager.field_i[var1_int] = cm.bitAnd(cm.bitAnd(var3, 65280) * var5 / var4, 65280) + (cm.bitAnd(16711935, var5 * cm.bitAnd(16711935, var3) / var4) + cm.bitAnd(var6 * cm.bitAnd(var2, 65280) / var4, 65280) + cm.bitAnd(16711935, cm.bitAnd(var2, 16711935) * var6 / var4));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

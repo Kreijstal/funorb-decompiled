@@ -105,7 +105,7 @@ class IntrusiveNode {
           var24.horizontalAlignment = 1;
           ValidatedTextWidget.field_lb = new SceneWidget(0L, TextFieldValidator.field_h);
           ValidatedTextWidget.field_lb.horizontalAlignment = 1;
-          ValidatedTextWidget.field_cb = new SceneWidget(0L, be.field_R, AccountChoicePanel.field_K.toUpperCase());
+          ValidatedTextWidget.field_cb = new SceneWidget(0L, LoginForm.field_R, AccountChoicePanel.field_K.toUpperCase());
           AlphaContainer.field_P = new SceneWidget(0L, io.field_f, TimerBar.field_n.toUpperCase());
           DiskCacheWorker.field_a = new SceneWidget(0L, ff.field_a);
           BlastFromThePastBackground.field_n = new SceneWidget(0L, QuickChatPhraseCache.field_l, OptionsScreen.field_w);
@@ -114,7 +114,7 @@ class IntrusiveNode {
           }
           IsaacRandom.field_b = new SceneWidget(0L, AccountRequestDialog.field_mb, ViewportController.field_u);
           LoginDialog.field_pb = new SceneWidget(0L, AccountRequestDialog.field_mb, nk.field_c);
-          be.field_P = new SceneWidget(0L, AccountRequestDialog.field_mb, MusicPatchPcmStream.field_q);
+          LoginForm.field_P = new SceneWidget(0L, AccountRequestDialog.field_mb, MusicPatchPcmStream.field_q);
           PasswordValidator.field_o = new SceneWidget(0L, AccountRequestDialog.field_mb, MatchController.field_b);
           SocketJs5Transport.field_t = new SceneWidget(0L, ni.field_s, df.field_m);
           aj.field_k = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
@@ -141,7 +141,7 @@ class IntrusiveNode {
           DiskCacheWorker.field_a.addChild(IsaacRandom.field_b, (byte) 26);
           DiskCacheWorker.field_a.addChild(LoginDialog.field_pb, (byte) 26);
           if (DialWidgetPainter.field_n) {
-            DiskCacheWorker.field_a.addChild(be.field_P, (byte) 26);
+            DiskCacheWorker.field_a.addChild(LoginForm.field_P, (byte) 26);
           }
           DiskCacheWorker.field_a.addChild(PasswordValidator.field_o, (byte) 26);
           DiskCacheWorker.field_a.addChild(SocketJs5Transport.field_t, (byte) 26);
@@ -174,7 +174,7 @@ class IntrusiveNode {
             vd.field_a.addChild(wa.field_g, (byte) 26);
           }
           vd.field_a.addChild(Vector3.field_c, (byte) 26);
-          ValidatedTextWidget.field_kb = new SceneWidget(0L, be.field_R, ra.field_f.toUpperCase());
+          ValidatedTextWidget.field_kb = new SceneWidget(0L, LoginForm.field_R, ra.field_f.toUpperCase());
           VerticalScrollbar.field_Qb = new SceneWidget(0L, io.field_f);
           dc.field_a = new SceneWidget(0L, ff.field_a);
           sm.field_m = new SceneWidget(0L, ff.field_j, og.field_n.toUpperCase());
@@ -207,7 +207,7 @@ class IntrusiveNode {
           }
           for (var17_intLifetime3 = 0; param12 > var17_intLifetime3; var17_intLifetime3++) {
             dh.field_b[4 + var17_intLifetime3] = new SceneWidget(0L, qk.field_d, jk.field_e[var17_intLifetime3]);
-            array$2 = new IconTextComponent[1 + cm.a(255, (int) PasswordValidator.field_s[var17_intLifetime3])];
+            array$2 = new IconTextComponent[1 + cm.bitAnd(255, (int) PasswordValidator.field_s[var17_intLifetime3])];
             AccountTermsPanel.field_L[4 + var17_intLifetime3] = array$2;
             AccountTermsPanel.field_L[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, fg.field_a);
             for (var18 = 0; (PasswordValidator.field_s[var17_intLifetime3] & 255) > var18; var18++) {

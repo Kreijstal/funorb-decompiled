@@ -88,7 +88,7 @@ final class ScoreMarkerBar extends StatusBar {
           var5Lifetime1 = StatusBar.field_a[11] >> 8;
           var6Lifetime1 = GameModeCard.field_f << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = mi.d(-4096, var6Lifetime1) >> 8;
+          var8Lifetime1 = mi.fixedSine(-4096, var6Lifetime1) >> 8;
           var9Lifetime1 = th.a(var6Lifetime1, param0 + 8085) >> 8;
           if (ProxyAuthenticationException.field_d != -1 &&
             -1 != StatusBar.field_k) {

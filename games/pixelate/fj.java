@@ -36,7 +36,7 @@ final class fj {
           } else {
             stackIn_3_3 = param0.field_b;
           }
-          em.a(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, param0.field_q, -163, (ScrollContainer) null, (int[]) null, param0.field_j);
+          em.openContextMenu(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, param0.field_q, -163, (ScrollContainer) null, (int[]) null, param0.field_j);
           if (0 == param0.field_j &&
             !pk.b(121) &&
             io.field_c == null &&
@@ -90,7 +90,7 @@ final class fj {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, java.awt.Canvas param3) {
+    final static void presentToCanvas(int param0, int param1, byte param2, java.awt.Canvas param3) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;

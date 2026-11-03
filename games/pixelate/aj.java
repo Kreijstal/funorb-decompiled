@@ -16,7 +16,7 @@ final class aj extends IntrusiveNode {
     PlatformTask[] field_l;
     static int[] field_o;
 
-    final static Object a(boolean param0, byte[] param1, int param2) {
+    final static Object createByteStorage(boolean param0, byte[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         DirectByteStorage var4 = null;
@@ -41,7 +41,7 @@ final class aj extends IntrusiveNode {
             return stackIn_5_0;
           }
           if (param0) {
-            stackIn_10_0 = re.a(true, param1);
+            stackIn_10_0 = re.copyBytes(true, param1);
             return stackIn_10_0;
           }
           stackIn_8_0 = (byte[]) (param1);
@@ -85,7 +85,7 @@ final class aj extends IntrusiveNode {
     final static boolean b(byte param0) {
         if (param0 > -42) {
           byte[] var2 = (byte[]) null;
-          aj.a(false, (byte[]) null, -36);
+          aj.createByteStorage(false, (byte[]) null, -36);
           if (!ik.field_a) {
             return ArrayWidgetContainer.a((byte) 78) ? true : false;
           }

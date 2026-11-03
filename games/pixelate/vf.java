@@ -9,7 +9,7 @@ final class vf {
     public static void a(int param0) {
         if (param0 > -104) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          vf.a((java.applet.Applet) null, 33);
+          vf.reloadPage((java.applet.Applet) null, 33);
         }
         field_a = null;
         field_c = null;
@@ -51,7 +51,7 @@ final class vf {
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isAllowedChar(byte param0, char param1) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -190,7 +190,7 @@ final class vf {
               }
             }
             if (var6.field_P != 0) {
-              em.a(var6.field_Fb, 0L, var6.field_Ib, -1, var6, -163, MouseWheelHandler.field_e.field_Gb, (int[]) null, -1);
+              em.openContextMenu(var6.field_Fb, 0L, var6.field_Ib, -1, var6, -163, MouseWheelHandler.field_e.field_Gb, (int[]) null, -1);
               var17 = ProxySocketConnector.field_n;
               var13_ref_String = NanoTickClock.field_n;
               var17.field_b.addAction(var13_ref_String, (byte) -107, 7);
@@ -219,7 +219,7 @@ final class vf {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void reloadPage(java.applet.Applet param0, int param1) {
         try {
           String var2 = null;
           int var3 = 0;

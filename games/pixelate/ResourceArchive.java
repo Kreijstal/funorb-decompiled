@@ -434,7 +434,7 @@ final class ResourceArchive {
             var9 = UiTheme.a(false, false, this.packedGroups[param1]);
           }
           try {
-            var36 = la.a(var9, param3);
+            var36 = la.decompressContainer(var9, param3);
             var27 = var36;
             var23 = var27;
             var43 = var23;
@@ -544,7 +544,7 @@ final class ResourceArchive {
               if (this.field_e != 0) {
                 var7[var18Lifetime2] = var39[var17Lifetime3];
               } else {
-                var7[var18Lifetime2] = aj.a(false, var39[var17Lifetime3], -123);
+                var7[var18Lifetime2] = aj.createByteStorage(false, var39[var17Lifetime3], -123);
               }
             }
           } else {
@@ -554,7 +554,7 @@ final class ResourceArchive {
               var11 = var34[0];
             }
             if (this.field_e == 0) {
-              var7[var11] = aj.a(false, var43, 124);
+              var7[var11] = aj.createByteStorage(false, var43, 124);
             } else {
               var7[var11] = var36;
             }
@@ -800,7 +800,7 @@ final class ResourceArchive {
           this.ensureAllGroupsAvailable(((byte[]) (this.packedGroups[4]))[1]);
         }
         if (!this.discardPackedGroups) {
-          this.packedGroups[param0] = aj.a(false, this.field_a.getEncodedGroup(param0, 103), -116);
+          this.packedGroups[param0] = aj.createByteStorage(false, this.field_a.getEncodedGroup(param0, 103), -116);
         } else {
           this.packedGroups[param0] = this.field_a.getEncodedGroup(param0, -94);
         }

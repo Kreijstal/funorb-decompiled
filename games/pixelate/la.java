@@ -685,7 +685,7 @@ final class la {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
+    final static void changeScreen(int param0, int param1, boolean param2, int param3) {
         int var4;
         NameAvailabilityValidator.field_t = 0;
         TickClock.field_a = param0;
@@ -703,7 +703,7 @@ final class la {
           if (MidiPcmStream.field_t == 12) {
             var4 = -1;
           }
-          wo.b(-92, MidiPcmStream.field_t).a(2, var4, param2);
+          wo.getScreen(-92, MidiPcmStream.field_t).a(2, var4, param2);
           if (MidiPcmStream.field_t == 12) {
             id.a(param2, (byte) 110);
           }
@@ -720,7 +720,7 @@ final class la {
         return ib.field_g - LoadingProgressDialog.field_cb;
     }
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] decompressContainer(byte[] param0, int param1) {
         byte[] stackIn_19_0 = null;
         byte[] stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;

@@ -128,7 +128,7 @@ final class GrowableIntList {
                 var10_int = param9[incrementValue$0] & 255;
                 incrementValue$1 = param5;
                 param5++;
-                param0[incrementValue$1] = bq.a(cm.a(var10_int * cm.a(param2, 16711935) >> 8, 16711935), cm.a(16711802, var10_int * cm.a(param2, 65280)) >> 8);
+                param0[incrementValue$1] = bq.bitOr(cm.bitAnd(var10_int * cm.bitAnd(param2, 16711935) >> 8, 16711935), cm.bitAnd(16711802, var10_int * cm.bitAnd(param2, 65280)) >> 8);
               }
               {
                 param5 = param5 + param8;

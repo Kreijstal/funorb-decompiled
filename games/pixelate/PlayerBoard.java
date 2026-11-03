@@ -162,7 +162,7 @@ final class PlayerBoard {
                       var6[0] = this.pieceRow * this.paddedWidth + this.pieceColumn;
                       var6[3] = this.paddedWidth * (1 + this.pieceRow) + (1 + this.pieceColumn);
                       for (var4 = 0; var4 < 4; var4++) {
-                        this.cells[var8[var4]] = (byte)cm.a((int) this.cells[var8[var4]], -4);
+                        this.cells[var8[var4]] = (byte)cm.bitAnd((int) this.cells[var8[var4]], -4);
                         stackIn_18_0 = this.cells;
                         stackIn_18_1 = var8[var4];
                         stackIn_18_2 = this.cells[var8[var4]];
@@ -171,7 +171,7 @@ final class PlayerBoard {
                         } else {
                           stackIn_19_3 = 2;
                         }
-                        stackIn_18_0[stackIn_18_1] = (byte)bq.a((int) stackIn_18_2, stackIn_19_3);
+                        stackIn_18_0[stackIn_18_1] = (byte)bq.bitOr((int) stackIn_18_2, stackIn_19_3);
                       }
                       this.spawnPiece(-91);
                       if (this.pieceColumn == 0 ||
@@ -415,9 +415,9 @@ final class PlayerBoard {
           for (var4 = 0; param0.field_a > var4; var4++) {
             for (var5 = 0; var5 < param0.field_f; var5++) {
               var6 = 1 + var5 + (1 + var4) * this.paddedWidth;
-              this.cells[var6] = (byte)cm.a((int) this.cells[var6], -4);
-              this.cells[var6] = (byte)bq.a((int) this.cells[var6], (int) var3[param0.field_f * var4 + var5]);
-              this.cells[var6] = (byte)bq.a((int) this.cells[var6], 4);
+              this.cells[var6] = (byte)cm.bitAnd((int) this.cells[var6], -4);
+              this.cells[var6] = (byte)bq.bitOr((int) this.cells[var6], (int) var3[param0.field_f * var4 + var5]);
+              this.cells[var6] = (byte)bq.bitOr((int) this.cells[var6], 4);
             }
           }
           var5Lifetime1 = -8 % ((param1 + 13) / 43);

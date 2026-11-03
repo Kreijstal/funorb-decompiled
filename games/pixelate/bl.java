@@ -62,7 +62,7 @@ final class bl {
         return MouseInputHandler.field_b;
     }
 
-    final static MouseWheelHandler a(int param0) {
+    final static MouseWheelHandler createMouseWheelHandler(int param0) {
         try {
           Throwable var1 = null;
           MouseWheelHandler stackIn_2_0 = null;

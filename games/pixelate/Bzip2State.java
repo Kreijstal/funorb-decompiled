@@ -60,7 +60,7 @@ final class Bzip2State {
             Bzip2State.releaseStatics((byte) 125);
           }
           while (param1.length() > var2_int) {
-            if (!vf.a((byte) -3, param1.charAt(var2_int))) {
+            if (!vf.isAllowedChar((byte) -3, param1.charAt(var2_int))) {
               return false;
             }
             var2_int++;
@@ -99,7 +99,7 @@ final class Bzip2State {
             var2 = 0;
           } else {
             if (GzipDecoder.field_c == null) {
-              ib.field_f = wo.a(mc.field_k, 150, 480, 0, 640, 0);
+              ib.field_f = wo.openFullscreenWindow(mc.field_k, 150, 480, 0, 640, 0);
             } else {
               ib.field_f = GzipDecoder.field_c.b(false);
               ah.a(2, (byte) 114);
@@ -121,7 +121,7 @@ final class Bzip2State {
             }
           } else {
             if (GzipDecoder.field_c == null) {
-              ib.field_f = wo.a(mc.field_k, 150, 480, 0, 640, 0);
+              ib.field_f = wo.openFullscreenWindow(mc.field_k, 150, 480, 0, 640, 0);
             } else {
               ib.field_f = GzipDecoder.field_c.b(false);
               ah.a(2, (byte) 114);

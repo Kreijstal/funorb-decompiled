@@ -20,7 +20,7 @@ final class em {
         try {
           if (param0 != -7) {
             int[] var4 = (int[]) null;
-            em.a((String) null, 12L, (String) null, 43, (SceneWidget) null, -102, (ScrollContainer) null, (int[]) null, 46);
+            em.openContextMenu((String) null, 12L, (String) null, 43, (SceneWidget) null, -102, (ScrollContainer) null, (int[]) null, 46);
           }
           var3 = aa.field_f;
           var3.writeOpcode(param2, 15514);
@@ -70,7 +70,7 @@ final class em {
         }
     }
 
-    final static void a(String param0, long param1, String param2, int param3, SceneWidget param4, int param5, ScrollContainer param6, int[] param7, int param8) {
+    final static void openContextMenu(String param0, long param1, String param2, int param3, SceneWidget param4, int param5, ScrollContainer param6, int[] param7, int param8) {
         try {
           if (param5 != -163) {
             em.a((byte) 53);
@@ -95,7 +95,7 @@ final class em {
         try {
           ub.field_a = MenuInputState.a(true) * param2 / 1000;
           DualLinkDeque.a(param3, (byte) 14);
-          dk.a(false, param3);
+          dk.loadLogoMesh(false, param3);
           NameAvailabilityValidator.a(false, param3);
           OptionsScreen.e(260);
           UiComponent.g(0);

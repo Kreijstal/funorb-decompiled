@@ -385,7 +385,7 @@ final class UiTheme {
             stackIn_11_0 = var3;
             return stackIn_11_0;
           }
-          stackIn_9_0 = re.a(true, var3);
+          stackIn_9_0 = re.copyBytes(true, var3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

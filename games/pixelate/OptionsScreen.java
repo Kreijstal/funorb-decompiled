@@ -86,7 +86,7 @@ final class OptionsScreen extends MenuScreen {
         if (param0 == 0) {
           if (this.field_g.isActivated(79)) {
             var4 = param2 ? 1 : 0;
-            la.a(MidiPcmStream.field_t, 16, var4 != 0, -25528);
+            la.changeScreen(MidiPcmStream.field_t, 16, var4 != 0, -25528);
           }
         } else {
           if (param0 == 1) {
@@ -198,7 +198,7 @@ final class OptionsScreen extends MenuScreen {
         if (param0 > -13) {
           this.field_v = 86;
         }
-        la.a(0, 16, false, -25528);
+        la.changeScreen(0, 16, false, -25528);
     }
 
     final void handleNavigation(int param0) {

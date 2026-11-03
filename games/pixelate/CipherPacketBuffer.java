@@ -227,7 +227,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                     }
                   } else {
                     var16 = var7.field_Fb;
-                    em.a((String) null, 0L, var16, -1, var7, -163, ScoreMarkerBar.field_z.field_Gb, (int[]) null, -1);
+                    em.openContextMenu((String) null, 0L, var16, -1, var7, -163, ScoreMarkerBar.field_z.field_Gb, (int[]) null, -1);
                     var5 = var7;
                     if (var7.field_Nb != null &&
                       !TimerBar.a(75, ProxySocketConnector.field_n.field_h) &&
