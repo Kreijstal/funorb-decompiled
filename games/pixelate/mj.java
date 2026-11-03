@@ -70,7 +70,7 @@ final class mj {
           BufferedRandomAccessFile.field_m = param1;
           ProxyAuthenticationException.field_a = param2;
           WidgetStyleLayer.field_b = param4;
-          wg.field_d = param5;
+          Matrix3.field_d = param5;
           if (param3 != 300) {
             sb var7 = (sb) null;
             mj.a(-68, (sb) null, -42, 67, -94, (sb) null);
@@ -109,7 +109,7 @@ final class mj {
         RuntimeException decompiledCaughtException = null;
         try {
           var7 = (CharSequence) ((Object) param1);
-          if (!ai.a((byte) -128, var7)) {
+          if (!Bzip2State.a((byte) -128, var7)) {
             stackIn_3_0 = qn.field_n;
             return stackIn_3_0;
           }
@@ -122,7 +122,7 @@ final class mj {
             return stackIn_9_0;
           }
           if (ImageProducerRasterBuffer.a(-640, param1)) {
-            stackIn_13_0 = sd.a(SpriteState.field_H, 45, new String[]{param1});
+            stackIn_13_0 = AlphaContainer.a(SpriteState.field_H, 45, new String[]{param1});
             return stackIn_13_0;
           }
           if (aj.field_t >= 100) {
@@ -130,7 +130,7 @@ final class mj {
             return stackIn_17_0;
           }
           if (CanvasRasterBuffer.a(param1, (byte) 37)) {
-            stackIn_20_0 = sd.a(ArchiveProvider.field_b, 89, new String[]{param1});
+            stackIn_20_0 = AlphaContainer.a(ArchiveProvider.field_b, 89, new String[]{param1});
             return stackIn_20_0;
           }
           var6 = aa.field_f;

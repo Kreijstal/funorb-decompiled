@@ -152,7 +152,7 @@ final class bq {
               BackgroundScene.field_h[1] = 5;
             }
           } else {
-            var3_int = qn.a(sd.a(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, bg.field_j);
+            var3_int = qn.a(AlphaContainer.a(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, bg.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(EmailConfirmationValidator.field_p[var5])) {
@@ -168,7 +168,7 @@ final class bq {
             ArraySupport.a(EmailConfirmationValidator.field_p, 0, df.field_r, 0, var4);
             GameModeSelectScreen.field_r = new String[-1 + (var3_int - var4)];
             ArraySupport.a(EmailConfirmationValidator.field_p, var4 + 1, GameModeSelectScreen.field_r, 0, var3_int + (-var4 - 1));
-            var3_int = qn.a(sd.a(oj.field_R, 44, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -106, bg.field_j);
+            var3_int = qn.a(AlphaContainer.a(BirthDateEntryPanel.field_R, 44, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -106, bg.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(EmailConfirmationValidator.field_p[var5])) {
@@ -210,7 +210,7 @@ final class bq {
             vm.field_e[5] = "";
             fo.field_a[3] = 1;
             vm.field_e[3] = vm.field_g;
-            vm.field_e[2] = u.field_n;
+            vm.field_e[2] = QuickChatPhraseCache.field_n;
             BackgroundScene.field_h[1] = 2;
             BackgroundScene.field_h[0] = 5;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
@@ -285,7 +285,7 @@ final class bq {
             MouseInputHandler.field_b = stackIn_115_0 + stackIn_116_1;
           }
           MenuScreen.field_h = IntrusiveDeque.field_b - (MouseInputHandler.field_b >> 1);
-          so.field_c = new int[vm.field_e.length][];
+          PuzzlePieceQueue.field_c = new int[vm.field_e.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = MenuScreen.field_h;
           while (var4Lifetime3 < vm.field_e.length) {
@@ -296,12 +296,12 @@ final class bq {
               var7Lifetime2 = sb.a(3, vm.field_e[var4Lifetime3], true);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + QuickChatCategory.field_u;
               var5Lifetime3 = var5Lifetime3 + LoadingProgressDialog.field_fb;
-              so.field_c[var4Lifetime3] = new int[4];
-              so.field_c[var4Lifetime3][0] = var8Lifetime1 - AccountTermsPanel.field_J;
-              so.field_c[var4Lifetime3][1] = var5Lifetime3;
-              so.field_c[var4Lifetime3][2] = (AccountTermsPanel.field_J << 1) + var7Lifetime2;
+              PuzzlePieceQueue.field_c[var4Lifetime3] = new int[4];
+              PuzzlePieceQueue.field_c[var4Lifetime3][0] = var8Lifetime1 - AccountTermsPanel.field_J;
+              PuzzlePieceQueue.field_c[var4Lifetime3][1] = var5Lifetime3;
+              PuzzlePieceQueue.field_c[var4Lifetime3][2] = (AccountTermsPanel.field_J << 1) + var7Lifetime2;
               var5Lifetime3 = var5Lifetime3 + (ValidatedTextWidget.field_fb + (bd.field_c << 1) + LoadingProgressDialog.field_fb);
-              so.field_c[var4Lifetime3][3] = (bd.field_c << 1) + ValidatedTextWidget.field_fb;
+              PuzzlePieceQueue.field_c[var4Lifetime3][3] = (bd.field_c << 1) + ValidatedTextWidget.field_fb;
             }
             var4Lifetime3++;
           }

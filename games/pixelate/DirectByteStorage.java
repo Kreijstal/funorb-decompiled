@@ -29,7 +29,7 @@ final class DirectByteStorage extends ByteStorage {
             return false;
           }
           ke.field_a = ArchiveRequest.field_z[qn.field_p];
-          nj.field_f = ResourceArchive.field_d[qn.field_p];
+          DualLinkDeque.field_f = ResourceArchive.field_d[qn.field_p];
           qn.field_p = 1 + qn.field_p & 127;
           stackIn_8_0 = true;
         }
@@ -109,7 +109,7 @@ final class DirectByteStorage extends ByteStorage {
             return false;
           }
           ke.field_a = ArchiveRequest.field_z[qn.field_p];
-          nj.field_f = ResourceArchive.field_d[qn.field_p];
+          DualLinkDeque.field_f = ResourceArchive.field_d[qn.field_p];
           qn.field_p = 1 + qn.field_p & 127;
           stackIn_8_0 = true;
         }

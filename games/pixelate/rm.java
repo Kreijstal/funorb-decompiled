@@ -3,7 +3,7 @@
  */
 final class rm {
     static String field_c;
-    static pd field_a;
+    static ScrollPaneWithFooter field_a;
     static String[] field_b;
 
     final static void a(int param0) {

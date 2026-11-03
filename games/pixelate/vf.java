@@ -29,7 +29,7 @@ final class vf {
           if (param0 != -37) {
             return;
           }
-          var5 = sc.field_i;
+          var5 = ConditionalTextValue.field_i;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;
@@ -108,7 +108,7 @@ final class vf {
         RuntimeException var3 = null;
         IntrusiveDeque var4 = null;
         Object var5 = null;
-        im var6 = null;
+        SocialListEntry var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -137,7 +137,7 @@ final class vf {
           MouseWheelHandler.field_e.field_rb = true;
           MouseWheelHandler.field_e.field_Gb.field_Ib.field_cb = null;
           var5 = null;
-          var6 = (im) (var4.c(1504642273));
+          var6 = (SocialListEntry) (var4.c(1504642273));
           while (var6 != null) {
             var7 = 0;
             if (null == var6.children) {
@@ -200,17 +200,17 @@ final class vf {
               var18.field_b.b(0, var13, 43, var14, 0);
             }
             var5 = var6;
-            var6 = (im) (var4.last(1504642273));
+            var6 = (SocialListEntry) (var4.last(1504642273));
           }
           if (MouseWheelHandler.field_e.field_Ib.field_P != 0) {
             he.field_f = new AccountNamePrompt(MouseWheelHandler.field_e.field_Ib.field_tb, MouseWheelHandler.field_e.field_Ib.screenY, MouseWheelHandler.field_e.field_Ib.field_K, MouseWheelHandler.field_e.field_Ib.height, GameplayScreen.field_p, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
-            il.field_e = 2;
+            QuickChatCategoryCache.field_e = 2;
           }
           if (MouseWheelHandler.field_e.field_Hb.field_P == 0) {
             return;
           }
           he.field_f = new AccountNamePrompt(MouseWheelHandler.field_e.field_Hb.field_tb, MouseWheelHandler.field_e.field_Hb.screenY, MouseWheelHandler.field_e.field_Hb.field_K, MouseWheelHandler.field_e.field_Hb.height, ProxyAuthenticationException.field_f, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
-          il.field_e = 3;
+          QuickChatCategoryCache.field_e = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

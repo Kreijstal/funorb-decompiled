@@ -25,7 +25,7 @@ final class Puzzle {
         if (param0 != 62) {
           Puzzle.a('￑', (byte) 81);
         }
-        return new wm[]{SectorCacheStore.field_f, ej.field_b, StatefulTextPainter.field_w, NumericDateInputWidget.field_T, NetworkGameClient.field_r, DualLinkNode.field_l, NetworkGameClient.field_C, ArchiveRequest.field_u, MenuInputState.field_f, of.field_e, ModalStack.field_M, u.field_d, GradientOutlineTextPainter.field_s, ThreeSliceButtonPainter.field_u};
+        return new wm[]{SectorCacheStore.field_f, ej.field_b, StatefulTextPainter.field_w, NumericDateInputWidget.field_T, NetworkGameClient.field_r, DualLinkNode.field_l, NetworkGameClient.field_C, ArchiveRequest.field_u, MenuInputState.field_f, of.field_e, ModalStack.field_M, QuickChatPhraseCache.field_d, GradientOutlineTextPainter.field_s, ThreeSliceButtonPainter.field_u};
     }
 
     final void shufflePictures(byte param0, Random param1) {

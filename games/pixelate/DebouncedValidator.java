@@ -121,7 +121,7 @@ abstract class DebouncedValidator implements ValidationSource {
 
     abstract dj a(boolean param0);
 
-    final static boolean a(byte param0, im param1, im param2) {
+    final static boolean a(byte param0, SocialListEntry param1, SocialListEntry param2) {
         int var3_int = 0;
         int var5 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -182,7 +182,7 @@ abstract class DebouncedValidator implements ValidationSource {
         int stackIn_8_4;
         int stackIn_9_5 = 0;
         Object stackIn_32_0 = null;
-        lo stackIn_32_1 = null;
+        IconTextComponent stackIn_32_1 = null;
         int stackIn_50_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -193,23 +193,23 @@ abstract class DebouncedValidator implements ValidationSource {
         int var7 = 0;
         int var8 = 0;
         SceneWidget var8_ref_ak = null;
-        lo var9 = null;
+        IconTextComponent var9 = null;
         int var9_int = 0;
-        lo var10 = null;
+        IconTextComponent var10 = null;
         int var10_int = 0;
         int var12 = 0;
         int var13 = 0;
-        im var14 = null;
+        SocialListEntry var14 = null;
         SceneWidget var15 = null;
         SceneWidget var16 = null;
         int var17 = 0;
         var13 = Pixelate.field_H ? 1 : 0;
         try {
           ni.field_q = SoftwareRasterizer.field_j;
-          wg.field_b = SoftwareRasterizer.field_d;
+          Matrix3.field_b = SoftwareRasterizer.field_d;
           if (param0 != 32) {
-            var14 = (im) null;
-            DebouncedValidator.a((byte) -25, (im) null, (im) null);
+            var14 = (SocialListEntry) null;
+            DebouncedValidator.a((byte) -25, (SocialListEntry) null, (SocialListEntry) null);
           }
           if (!param1) {
             stackIn_6_0 = Checkbox.field_W;
@@ -231,10 +231,10 @@ abstract class DebouncedValidator implements ValidationSource {
           }
           ((SceneWidget) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, -stackIn_9_5 + vd.field_a.field_K);
           wa.field_g.a(2 + fq.field_q, 18, -40 + vd.field_a.field_K - (DelegatingCanvas.field_b + 2), 256, 42 + DelegatingCanvas.field_b);
-          ae.field_c.a(0, 2, (byte) 90, vd.field_a.field_K, fq.field_q + 22, -22 + (-fq.field_q + vd.field_a.height), DelegatingCanvas.field_b);
+          Vector3.field_c.a(0, 2, (byte) 90, vd.field_a.field_K, fq.field_q + 22, -22 + (-fq.field_q + vd.field_a.height), DelegatingCanvas.field_b);
           ValidatedTextWidget.field_kb.a(ff.field_h.height - 40, 40, 0, 256, ff.field_h.field_K);
-          VerticalScrollbar.field_Qb.a(0, 30, 0, 256, ai.field_A.field_K);
-          dc.field_a.a(30, -40 + (ai.field_A.height - 2 - 30), 0, 256, ai.field_A.field_K);
+          VerticalScrollbar.field_Qb.a(0, 30, 0, 256, Bzip2State.field_A.field_K);
+          dc.field_a.a(30, -40 + (Bzip2State.field_A.height - 2 - 30), 0, 256, Bzip2State.field_A.field_K);
           var2_int = 3 + fj.field_b;
           if (LinkButtonPainter.field_a.length < 2) {
             var2_int--;
@@ -324,7 +324,7 @@ abstract class DebouncedValidator implements ValidationSource {
                     AccountTermsPanel.field_L[var6][0].a(var3, 2, PlayerBoard.field_q, var5, var8, 38, param0 ^ -2147483616);
                     var8 += 40;
                   }
-                  var9_int = -var8 + (ai.field_A.field_K - 3);
+                  var9_int = -var8 + (Bzip2State.field_A.field_K - 3);
                   var10_int = AccountTermsPanel.field_L[var6].length - 1;
                   for (var11 = 0; var11 < var10_int; var11++) {
                     var12 = var9_int * var11 / var10_int;

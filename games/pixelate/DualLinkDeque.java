@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nj {
+final class DualLinkDeque {
     static IntrusiveDeque field_h;
     private DualLinkNode field_b;
     private DualLinkNode field_a;
@@ -87,7 +87,7 @@ final class nj {
           if (param0 == 49661) {
             return;
           }
-          nj.b((byte) -125);
+          DualLinkDeque.b((byte) -125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -137,7 +137,7 @@ final class nj {
         return (DualLinkNode) null;
     }
 
-    public nj() {
+    public DualLinkDeque() {
         this.field_b = new DualLinkNode();
         this.field_b.field_r = this.field_b;
         this.field_b.field_p = this.field_b;

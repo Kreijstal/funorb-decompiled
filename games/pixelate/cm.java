@@ -55,7 +55,7 @@ final class cm extends IntrusiveNode {
         int var4 = -(param0 * param0) + var3;
         if (param1 == 4740) {
           ff.field_h.a(90, -124 + (SoftwareRasterizer.field_d - 90), -(var4 * 199 / var3) + var2, 256, 199);
-          ai.field_A.a(0, SoftwareRasterizer.field_d - 124, var4 * 438 / var3 + (var2 + 202), 256, 438);
+          Bzip2State.field_A.a(0, SoftwareRasterizer.field_d - 124, var4 * 438 / var3 + (var2 + 202), 256, 438);
           return;
         }
     }
@@ -151,10 +151,10 @@ final class cm extends IntrusiveNode {
         synchronized (var1) {
           oi.field_c = oi.field_c + 1;
           ef.field_b = jm.field_o;
-          ProxyAuthenticationException.field_d = u.field_b;
+          ProxyAuthenticationException.field_d = QuickChatPhraseCache.field_b;
           bg.field_k = ra.field_d;
-          im.field_Jb = u.field_j;
-          u.field_j = false;
+          SocialListEntry.field_Jb = QuickChatPhraseCache.field_j;
+          QuickChatPhraseCache.field_j = false;
           IntrusiveDequeCursor.field_c = tl.field_a;
           BufferedRandomAccessFile.field_a = EditableTextWidget.field_X;
           ji.field_c = IntrusiveNode.field_j;

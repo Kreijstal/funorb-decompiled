@@ -139,8 +139,8 @@ final class LobbyPlayer extends SceneWidget {
     final static void a(int param0, String param1) {
         try {
           if (param0 != -1710418464) {
-            ae var3 = (ae) null;
-            LobbyPlayer.a((ae) null, 99, -60);
+            Vector3 var3 = (Vector3) null;
+            LobbyPlayer.a((Vector3) null, 99, -60);
           }
           kh.a(false, param1);
           LoadingProgressDialog.a(false, TriangleMesh.field_e, -26027);
@@ -209,7 +209,7 @@ final class LobbyPlayer extends SceneWidget {
         return !this.f(0) ? true : false;
     }
 
-    final static wg a(ae param0, int param1, int param2) {
+    final static Matrix3 a(Vector3 param0, int param1, int param2) {
         long var3_long = 0L;
         RuntimeException var3 = null;
         long var5 = 0L;
@@ -225,8 +225,8 @@ final class LobbyPlayer extends SceneWidget {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        sc var20 = null;
-        wg stackIn_3_0 = null;
+        ConditionalTextValue var20 = null;
+        Matrix3 stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -242,15 +242,15 @@ final class LobbyPlayer extends SceneWidget {
           var13 = (int)((long)var9 * var7 >> 16);
           var14 = (int)(var3_long * (var3_long * (long)(65536 - var10)) >> 32);
           if (param2 != 0) {
-            var20 = (sc) null;
-            LobbyPlayer.a((byte) -55, (sc) null, (sc) null);
+            var20 = (ConditionalTextValue) null;
+            LobbyPlayer.a((byte) -55, (ConditionalTextValue) null, (ConditionalTextValue) null);
           }
           var15 = (int)((long)(65536 - var10) * var5 * var3_long >> 32);
           var16 = (int)((long)(65536 - var10) * (var3_long * var7) >> 32);
           var17 = (int)((long)(65536 - var10) * var5 * var5 >> 32);
           var18 = (int)((long)(-var10 + 65536) * var5 * var7 >> 32);
           var19 = (int)(var7 * (var7 * (long)(-var10 + 65536)) >> 32);
-          stackIn_3_0 = new wg(var14 + var10, var15 + var13, var16 - var12, var15 - var13, var10 + var17, var11 + var18, var12 + var16, var18 - var11, var19 + var10);
+          stackIn_3_0 = new Matrix3(var14 + var10, var15 + var13, var16 - var12, var15 - var13, var10 + var17, var11 + var18, var12 + var16, var18 - var11, var19 + var10);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -275,7 +275,7 @@ final class LobbyPlayer extends SceneWidget {
         field_Kb = null;
     }
 
-    final static int a(byte param0, sc param1, sc param2) {
+    final static int a(byte param0, ConditionalTextValue param1, ConditionalTextValue param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_3_0 = 0;

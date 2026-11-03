@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pd extends SceneWidget {
+final class ScrollPaneWithFooter extends SceneWidget {
     SceneWidget field_Ib;
     static el field_Kb;
     static int field_Jb;
@@ -13,7 +13,7 @@ final class pd extends SceneWidget {
     public static void b(byte param0) {
         field_Kb = null;
         if (param0 >= -79) {
-          pd.b((byte) -19);
+          ScrollPaneWithFooter.b((byte) -19);
         }
     }
 
@@ -24,7 +24,7 @@ final class pd extends SceneWidget {
         this.field_K = param1;
         this.a(param2, true, param6, param5);
         if (param4) {
-          pd.j(74);
+          ScrollPaneWithFooter.j(74);
         }
     }
 
@@ -46,11 +46,11 @@ final class pd extends SceneWidget {
     }
 
     final static void j(int param0) {
-        ri.field_f = new hp(cm.field_o, pj.field_i, ae.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c);
+        ri.field_f = new hp(cm.field_o, pj.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c);
         int var1 = 40 / ((param0 + 90) / 35);
     }
 
-    pd(long param0, SceneWidget param1, SceneWidget param2, VerticalScrollbar param3, SceneWidget param4, String param5, String param6) {
+    ScrollPaneWithFooter(long param0, SceneWidget param1, SceneWidget param2, VerticalScrollbar param3, SceneWidget param4, String param5, String param6) {
         super(param0, param1);
         try {
           this.field_Fb = new SceneWidget(0L, (SceneWidget) null);
@@ -69,13 +69,13 @@ final class pd extends SceneWidget {
 
     final static boolean k(int param0) {
         if (param0 != 0) {
-          pd.k(-125);
+          ScrollPaneWithFooter.k(-125);
           return StripedProgressBar.field_J;
         }
         return StripedProgressBar.field_J;
     }
 
-    pd(long param0, pd param1, String param2, String param3) {
+    ScrollPaneWithFooter(long param0, ScrollPaneWithFooter param1, String param2, String param3) {
         this(param0, param1, param1.field_Gb.field_Ib, param1.field_Gb.field_Gb, param1.field_Ib, param2, param3);
     }
 

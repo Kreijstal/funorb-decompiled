@@ -22,7 +22,7 @@ final class CachedTextLayout extends TextLayout {
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
         int stackIn_36_0 = 0;
-        lo[][] stackIn_41_0 = null;
+        IconTextComponent[][] stackIn_41_0 = null;
         int stackIn_42_1 = 0;
         int stackIn_52_0 = 0;
         int stackIn_65_0 = 0;
@@ -36,7 +36,7 @@ final class CachedTextLayout extends TextLayout {
         String stackIn_116_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
-        lo[] var8 = null;
+        IconTextComponent[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
         int[] var10_ref_int__ = null;
@@ -44,10 +44,10 @@ final class CachedTextLayout extends TextLayout {
         int var11 = 0;
         int var12 = 0;
         int var13_int = 0;
-        lo var13 = null;
+        IconTextComponent var13 = null;
         int var14 = 0;
         int var15 = 0;
-        lo[] var16 = null;
+        IconTextComponent[] var16 = null;
         int[] var17 = null;
         int[] var18 = null;
         int stackIn_25_0Lifetime1;
@@ -327,7 +327,7 @@ final class CachedTextLayout extends TextLayout {
         if (param1 != 34) {
           field_n = (String) null;
         }
-        oj var2 = td.field_b;
+        BirthDateEntryPanel var2 = td.field_b;
         if (var2 != null) {
           var2.a(ui.field_i.screenY, ui.field_i.field_tb, 104);
         }
@@ -592,16 +592,16 @@ final class CachedTextLayout extends TextLayout {
             var7.field_K = 0;
             if (!AccountRegistrationPanel.m(param1 + 98)) {
               var9_ref_String = io.field_c.field_pc;
-              VerticalScrollbar.field_Qb.field_cb = sd.a(HowToPlayScreen.field_q, param1 ^ 62, new String[]{var9_ref_String}).toUpperCase();
-              nk.field_e.a(ai.field_A.height - 40, 40, 0, param1 + 255, ai.field_A.field_K);
-              nk.field_e.field_cb = sd.a(qh.field_a, param1 + 23, new String[]{var9_ref_String});
+              VerticalScrollbar.field_Qb.field_cb = AlphaContainer.a(HowToPlayScreen.field_q, param1 ^ 62, new String[]{var9_ref_String}).toUpperCase();
+              nk.field_e.a(Bzip2State.field_A.height - 40, 40, 0, param1 + 255, Bzip2State.field_A.field_K);
+              nk.field_e.field_cb = AlphaContainer.a(qh.field_a, param1 + 23, new String[]{var9_ref_String});
               var8 = nk.field_e;
               decompiledFrameRemainder3 = (var19 != 0);
             }
             if (decompiledFrameRemainder3) {
               VerticalScrollbar.field_Qb.field_cb = DelegatingCanvas.field_g.toUpperCase();
-              var9 = (ai.field_A.field_K + 2) / 2;
-              wm.field_d.a(ai.field_A.height - 40, 40, 0, 256, var9 - 2);
+              var9 = (Bzip2State.field_A.field_K + 2) / 2;
+              wm.field_d.a(Bzip2State.field_A.height - 40, 40, 0, 256, var9 - 2);
               if (io.field_c.field_ec <= io.field_c.field_mc) {
                 wm.field_d.field_cb = fo.field_m.toUpperCase();
                 wm.field_d.field_rb = false;
@@ -613,7 +613,7 @@ final class CachedTextLayout extends TextLayout {
                 wm.field_d.field_cb = WhirlpoolHasher.field_k.toUpperCase();
                 wm.field_d.field_rb = true;
               }
-              wm.field_d.field_zb = bf.field_k.field_zb;
+              wm.field_d.field_zb = AchievementIcon.field_k.field_zb;
               if (ResizableModalPanel.field_X > 0) {
                 boolean decompiledSharedTail1 = (ResizableModalPanel.field_X != 1);
                 if (!decompiledSharedTail1) {
@@ -621,15 +621,15 @@ final class CachedTextLayout extends TextLayout {
                   decompiledSharedTail1 = (var19 != 0);
                 }
                 if (decompiledSharedTail1) {
-                  var10_ref_String = sd.a(d.field_a, 99, new String[]{Integer.toString(ResizableModalPanel.field_X)});
+                  var10_ref_String = AlphaContainer.a(d.field_a, 99, new String[]{Integer.toString(ResizableModalPanel.field_X)});
                 }
                 wm.field_d.field_cb = wm.field_d.field_cb + "<br>" + var10_ref_String;
                 if (0 == (16 & AchievementsScreen.field_o) &&
                   !EmergentBehaviourBackground.field_o) {
-                  wm.field_d.field_zb = bf.field_k.field_ab;
+                  wm.field_d.field_zb = AchievementIcon.field_k.field_ab;
                 }
               }
-              ep.field_a.a(-40 + ai.field_A.height, 40, var9, 256, -var9 + ai.field_A.field_K);
+              ep.field_a.a(-40 + Bzip2State.field_A.height, 40, var9, 256, -var9 + Bzip2State.field_A.field_K);
               ep.field_a.field_cb = DateInputWidget.field_J.toUpperCase();
               var8 = ep.field_a;
               stackIn_21_0 = ep.field_a;
@@ -784,7 +784,7 @@ final class CachedTextLayout extends TextLayout {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = ae.field_c.field_Fb.children;
+                var17 = Vector3.field_c.field_Fb.children;
                 var18_ref = (LobbyPlayer) (var17.c(1504642273));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
@@ -866,7 +866,7 @@ final class CachedTextLayout extends TextLayout {
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {
-                      up.field_o = sd.a(li.field_b, 107, new String[]{fb.field_Gb});
+                      up.field_o = AlphaContainer.a(li.field_b, 107, new String[]{PairedTextColumns.field_Gb});
                     }
                   }
                   decompiledFrameRemainder3 = (var19 != 0);
@@ -911,7 +911,7 @@ final class CachedTextLayout extends TextLayout {
                 if (stackIn_162_0 == var10) {
                   var13_ref = ji.field_a;
                   if (var12 == 0) {
-                    var14 = sd.a(sm.field_n, 80, new String[]{(String) (var11)});
+                    var14 = AlphaContainer.a(sm.field_n, 80, new String[]{(String) (var11)});
                     if (var19 != 0) {
                       var14 = SpriteState.field_x + (String) (var11);
                     }
@@ -921,7 +921,7 @@ final class CachedTextLayout extends TextLayout {
                 } else {
                   var13_ref = aq.field_c;
                   if (var12 == 0) {
-                    var14 = sd.a(ff.field_b, 31, new String[]{(String) (var11)});
+                    var14 = AlphaContainer.a(ff.field_b, 31, new String[]{(String) (var11)});
                     if (var19 != 0) {
                       var14 = fg.field_b + (String) (var11);
                     }
@@ -938,15 +938,15 @@ final class CachedTextLayout extends TextLayout {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_cb = sd.a(AudioService.field_i, 100, new String[]{Integer.toString(var9)});
+              var8.field_cb = AlphaContainer.a(AudioService.field_i, 100, new String[]{Integer.toString(var9)});
             }
-            MatchingTextValidator.field_q.field_cb = sd.a(ReportAbuseDialog.field_Gb, param1 + 68, new String[]{Integer.toString(io.field_c.field_mc), Integer.toString(io.field_c.field_ec)});
+            MatchingTextValidator.field_q.field_cb = AlphaContainer.a(ReportAbuseDialog.field_Gb, param1 + 68, new String[]{Integer.toString(io.field_c.field_mc), Integer.toString(io.field_c.field_ec)});
           }
           stackIn_181_0 = ff.field_h;
           stackIn_181_1 = -28476;
           stackIn_182_2 = (param4) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_181_0).a(stackIn_181_1, stackIn_182_2);
-          stackIn_186_0 = ai.field_A;
+          stackIn_186_0 = Bzip2State.field_A;
           stackIn_186_1 = -28476;
           stackIn_187_2 = (param4) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_186_0).a(stackIn_186_1, stackIn_187_2);
@@ -994,7 +994,7 @@ final class CachedTextLayout extends TextLayout {
         try {
           SoftwareRasterizer.a(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.d(244, 198, 367, 141, 0);
-          if (wg.field_g == null) {
+          if (Matrix3.field_g == null) {
             if (null != QuickChatCategory.field_A) {
               QuickChatCategory.field_A.drawParagraph(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
@@ -1003,7 +1003,7 @@ final class CachedTextLayout extends TextLayout {
           if (param0 != -19308) {
             field_p = (Sprite[]) null;
           }
-          var5 = wg.field_g[ae.field_b];
+          var5 = Matrix3.field_g[Vector3.field_b];
           boolean decompiledSharedTail1 = (var5 == null);
           if (!decompiledSharedTail1) {
             var5.b(245, 199);
@@ -1014,7 +1014,7 @@ final class CachedTextLayout extends TextLayout {
             QuickChatCategory.field_A.drawParagraph(FullscreenFocusCanvas.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
           }
           if (ui.field_k > jn.field_q) {
-            var6 = wg.field_g[SpriteCheckboxPainter.field_b];
+            var6 = Matrix3.field_g[SpriteCheckboxPainter.field_b];
             if (var6 != null) {
               var2_int = jn.field_q * (var6.field_A + 60) / ui.field_k;
               var3 = var2_int - 30;
@@ -1032,8 +1032,8 @@ final class CachedTextLayout extends TextLayout {
             var2 = null;
             var3Lifetime1 = 0;
             while (true) {
-              if (var3Lifetime1 < wg.field_g.length) {
-                var7 = wg.field_g[var3Lifetime1];
+              if (var3Lifetime1 < Matrix3.field_g.length) {
+                var7 = Matrix3.field_g[var3Lifetime1];
                 stackIn_33_0 = null;
                 if (var4 == 0) {
                   if (stackIn_33_0 != var7 && (var7.field_A != 365 ||

@@ -20,7 +20,7 @@ final class MarkerSlider extends TextButton {
         if (param0 < 108) {
           field_U = -99;
         }
-        stackIn_9_0 = (null != ProxySocketConnector.field_n) || (sc.b(-10093)) || (null != AccountTermsPanel.field_M) || (CanvasRasterBuffer.b(12742));
+        stackIn_9_0 = (null != ProxySocketConnector.field_n) || (ConditionalTextValue.b(-10093)) || (null != AccountTermsPanel.field_M) || (CanvasRasterBuffer.b(12742));
         return stackIn_9_0;
     }
 
@@ -30,10 +30,10 @@ final class MarkerSlider extends TextButton {
     }
 
     final static void a(int param0) {
-        if (!lo.field_Nb) {
+        if (!IconTextComponent.field_Nb) {
           throw new IllegalStateException();
         }
-        sd.field_I = true;
+        AlphaContainer.field_I = true;
         if (param0 != -20822) {
           MarkerSlider.a(-68);
         }

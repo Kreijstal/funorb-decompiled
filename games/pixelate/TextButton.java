@@ -292,8 +292,8 @@ class TextButton extends UiComponent {
           if (param4 < 3) {
             TextButton.a(112, (sb) null, 29, 72, (sb) null, 76, -127, -121, (sb) null, -76, 4, (BitmapFont) null, -119, 13, (BitmapFont) null, 46, -72, 8, -22, -67);
           }
-          var9 = var21Lifetime1 * param1[3] + param1[4] * var22Lifetime1 + var23Lifetime1 * param1[5] >> -ai.field_x + 16;
-          var10 = var23Lifetime1 * param1[8] + (param1[7] * var22Lifetime1 + param1[6] * var21Lifetime1) >> 16 - ai.field_x;
+          var9 = var21Lifetime1 * param1[3] + param1[4] * var22Lifetime1 + var23Lifetime1 * param1[5] >> -Bzip2State.field_x + 16;
+          var10 = var23Lifetime1 * param1[8] + (param1[7] * var22Lifetime1 + param1[6] * var21Lifetime1) >> 16 - Bzip2State.field_x;
           var11 = param1[11] * var23Lifetime1 + param1[9] * var21Lifetime1 + param1[10] * var22Lifetime1 >> 16;
           var21Lifetime2 = MeshRasterState.field_b;
           var22Lifetime2 = MeshRasterState.field_i;
@@ -304,8 +304,8 @@ class TextButton extends UiComponent {
               var24Lifetime1 = param0.vertexX[var23Lifetime2];
               var25Lifetime1 = param0.vertexY[var23Lifetime2];
               var26Lifetime1 = param0.vertexZ[var23Lifetime2];
-              var27Lifetime1 = (var18 * var26Lifetime1 + var24Lifetime1 * var12 + var25Lifetime1 * var15 >> -ai.field_x + 16) + var9;
-              var28Lifetime1 = var10 + (var26Lifetime1 * var19 + var13 * var24Lifetime1 + var25Lifetime1 * var16 >> 16 - ai.field_x);
+              var27Lifetime1 = (var18 * var26Lifetime1 + var24Lifetime1 * var12 + var25Lifetime1 * var15 >> -Bzip2State.field_x + 16) + var9;
+              var28Lifetime1 = var10 + (var26Lifetime1 * var19 + var13 * var24Lifetime1 + var25Lifetime1 * var16 >> 16 - Bzip2State.field_x);
               var29Lifetime1 = var11 + (var25Lifetime1 * var17 + var24Lifetime1 * var14 + var26Lifetime1 * var20 >> 16);
               stackIn_67_0 = -51;
               stackIn_67_1 = ~var29Lifetime1;
@@ -331,9 +331,9 @@ class TextButton extends UiComponent {
                   }
                 }
                 if (param6) {
-                  ih.field_c[var23Lifetime2] = var27Lifetime1 >> ai.field_x;
-                  MatchingTextValidator.field_w[var23Lifetime2] = var28Lifetime1 >> ai.field_x;
-                  ai.field_e[var23Lifetime2] = var29Lifetime1;
+                  ih.field_c[var23Lifetime2] = var27Lifetime1 >> Bzip2State.field_x;
+                  MatchingTextValidator.field_w[var23Lifetime2] = var28Lifetime1 >> Bzip2State.field_x;
+                  Bzip2State.field_e[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -408,7 +408,7 @@ class TextButton extends UiComponent {
                   var20 = param0.field_q[var18];
                   var21Lifetime2 = param0.field_p[var18];
                   GrowableIntList.field_i[var18] = var12 * var20 + (var9 * var19 + var15 * var21Lifetime2) >> 16;
-                  lo.field_Ib[var18] = var16 * var21Lifetime2 + var20 * var13 + var19 * var10 >> 16;
+                  IconTextComponent.field_Ib[var18] = var16 * var21Lifetime2 + var20 * var13 + var19 * var10 >> 16;
                   SocketJs5Transport.field_q[var18] = var17 * var21Lifetime2 + var11 * var19 + var14 * var20 >> 16;
                   var18++;
                 }

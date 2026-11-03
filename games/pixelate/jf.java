@@ -48,7 +48,7 @@ final class jf {
               for (var5_int = 0; BackgroundScene.field_b > var5_int; var5_int++) {
                 MusicCrossfadeStream.field_o.payload[var5_int] = var4_ref_ug.field_r[var5_int];
               }
-              oj.field_G = gb.field_d;
+              BirthDateEntryPanel.field_G = gb.field_d;
               gb.field_d = MarkerSlider.field_U;
               MarkerSlider.field_U = TextLayoutLine.field_e;
               TextLayoutLine.field_e = var4_ref_ug.field_m;
@@ -69,7 +69,7 @@ final class jf {
               return false;
             }
             if (0 == ij.field_s) {
-              oj.field_G = gb.field_d;
+              BirthDateEntryPanel.field_G = gb.field_d;
               gb.field_d = MarkerSlider.field_U;
               MarkerSlider.field_U = TextLayoutLine.field_e;
               TextLayoutLine.field_e = AudioService.field_c;
@@ -78,7 +78,7 @@ final class jf {
             }
             var4 = ij.field_s;
             if (NanoTickClock.field_h != 0.0) {
-              var4 = (int)((double)var4 + ai.field_d.nextGaussian() * NanoTickClock.field_h);
+              var4 = (int)((double)var4 + Bzip2State.field_d.nextGaussian() * NanoTickClock.field_h);
               if (var4 < 0) {
                 var4 = 0;
               }
@@ -123,12 +123,12 @@ final class jf {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          if (!ai.a((byte) -126, var6)) {
+          if (!Bzip2State.a((byte) -126, var6)) {
             stackIn_3_0 = qn.field_n;
             return stackIn_3_0;
           }
           if (ValidatedTextWidget.field_db != 2) {
-            stackIn_6_0 = ai.field_C;
+            stackIn_6_0 = Bzip2State.field_C;
             return stackIn_6_0;
           }
           if (sm.a(param0, -1)) {
@@ -136,7 +136,7 @@ final class jf {
             return stackIn_9_0;
           }
           if (CanvasRasterBuffer.a(param0, (byte) 37)) {
-            stackIn_13_0 = sd.a(BufferedSocket.field_b, 34, new String[]{param0});
+            stackIn_13_0 = AlphaContainer.a(BufferedSocket.field_b, 34, new String[]{param0});
             return stackIn_13_0;
           }
           if (DialWidgetPainter.field_q >= 100 &&
@@ -152,7 +152,7 @@ final class jf {
             return stackIn_24_0;
           }
           if (ImageProducerRasterBuffer.a(-640, param0)) {
-            stackIn_27_0 = sd.a(EmergentBehaviourBackground.field_r, 85, new String[]{param0});
+            stackIn_27_0 = AlphaContainer.a(EmergentBehaviourBackground.field_r, 85, new String[]{param0});
             return stackIn_27_0;
           }
           var5 = aa.field_f;
@@ -201,7 +201,7 @@ final class jf {
         try {
           var2_int = param0.length();
           if (0 == var2_int) {
-            stackIn_4_0 = pd.field_Kb;
+            stackIn_4_0 = ScrollPaneWithFooter.field_Kb;
             return stackIn_4_0;
           }
           if (var2_int > 255) {
@@ -210,7 +210,7 @@ final class jf {
           }
           var3 = Puzzle.a(param0, (byte) -96, '.');
           if (2 > var3.length) {
-            stackIn_10_0 = pd.field_Kb;
+            stackIn_10_0 = ScrollPaneWithFooter.field_Kb;
             return stackIn_10_0;
           }
           var4 = var3;

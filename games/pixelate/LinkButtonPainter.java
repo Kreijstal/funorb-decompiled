@@ -65,7 +65,7 @@ final class LinkButtonPainter implements WidgetPainter {
     }
 
     final static void a(byte param0) {
-        jd var1 = (jd) (oj.field_P.b(param0 - 174));
+        jd var1 = (jd) (BirthDateEntryPanel.field_P.b(param0 - 174));
         if (param0 != 92) {
           field_i = -106;
           if (var1 == null) {

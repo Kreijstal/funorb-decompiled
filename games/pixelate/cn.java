@@ -5,7 +5,7 @@ final class cn {
     static bd field_a;
     static LoadingProgressDialog field_b;
 
-    final static int a(String param0, int param1, int param2, boolean param3, sc param4, int param5, sc param6) {
+    final static int a(String param0, int param1, int param2, boolean param3, ConditionalTextValue param4, int param5, ConditionalTextValue param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
         PacketBuffer stackIn_13_0 = null;
@@ -66,8 +66,8 @@ final class cn {
               if (param3) {
                 var9 = var9 | 1;
               }
-              GameModeSelectScreen.field_v.d(ai.field_d.nextInt(), -49);
-              GameModeSelectScreen.field_v.d(ai.field_d.nextInt(), -62);
+              GameModeSelectScreen.field_v.d(Bzip2State.field_d.nextInt(), -49);
+              GameModeSelectScreen.field_v.d(Bzip2State.field_d.nextInt(), -62);
               GameModeSelectScreen.field_v.a((byte) -66, var14);
               GameModeSelectScreen.field_v.a((byte) -66, var8);
               var15 = (CharSequence) ((Object) param0);
@@ -87,8 +87,8 @@ final class cn {
               aa.field_f.c(7519, aa.field_f.position - var10);
             } else {
               GameModeSelectScreen.field_v.position = 0;
-              GameModeSelectScreen.field_v.d(ai.field_d.nextInt(), -90);
-              GameModeSelectScreen.field_v.d(ai.field_d.nextInt(), -68);
+              GameModeSelectScreen.field_v.d(Bzip2State.field_d.nextInt(), -90);
+              GameModeSelectScreen.field_v.d(Bzip2State.field_d.nextInt(), -68);
               stackIn_13_0 = GameModeSelectScreen.field_v;
               stackIn_13_1 = -66;
               if (!param6.b((byte) -25)) {

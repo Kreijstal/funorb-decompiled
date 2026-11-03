@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd extends SingleChildContainer {
+final class AlphaContainer extends SingleChildContainer {
     int field_O;
     static int[] field_Q;
     static String field_J;
@@ -20,7 +20,7 @@ final class sd extends SingleChildContainer {
         field_P = null;
     }
 
-    sd(UiComponent param0) {
+    AlphaContainer(UiComponent param0) {
         super(param0.field_z, param0.field_p, param0.field_E, param0.field_C, (WidgetPainter) null, (UiListener) null);
         try {
           param0.a(this.field_E, (byte) 89, 0, 0, this.field_C);
@@ -204,7 +204,7 @@ final class sd extends SingleChildContainer {
         }
     }
 
-    public sd() {
+    public AlphaContainer() {
         super(0, 0, 0, 0, (WidgetPainter) null, (UiListener) null);
         this.field_O = 256;
     }
@@ -251,35 +251,35 @@ final class sd extends SingleChildContainer {
           var17 = new PacketBuffer(param1);
           var18 = var17;
           var18.position = -2 + param1.length;
-          im.field_Qb = var18.a((byte) 97);
-          gd.field_k = new byte[im.field_Qb][];
-          TriangleMesh.field_m = new boolean[im.field_Qb];
-          ByteStorage.field_g = new int[im.field_Qb];
-          ge.field_c = new int[im.field_Qb];
-          IntrusiveNode.field_b = new int[im.field_Qb];
-          e.field_b = new int[im.field_Qb];
-          wo.field_f = new byte[im.field_Qb][];
-          var18.position = -7 + (param1.length - 8 * im.field_Qb);
+          SocialListEntry.field_Qb = var18.a((byte) 97);
+          gd.field_k = new byte[SocialListEntry.field_Qb][];
+          TriangleMesh.field_m = new boolean[SocialListEntry.field_Qb];
+          ByteStorage.field_g = new int[SocialListEntry.field_Qb];
+          ge.field_c = new int[SocialListEntry.field_Qb];
+          IntrusiveNode.field_b = new int[SocialListEntry.field_Qb];
+          e.field_b = new int[SocialListEntry.field_Qb];
+          wo.field_f = new byte[SocialListEntry.field_Qb][];
+          var18.position = -7 + (param1.length - 8 * SocialListEntry.field_Qb);
           tj.field_y = var18.a((byte) 38);
           jb.field_a = var18.a((byte) 46);
           var3 = 1 + (var18.f(255) & 255);
-          for (var4 = 0; var4 < im.field_Qb; var4++) {
+          for (var4 = 0; var4 < SocialListEntry.field_Qb; var4++) {
             IntrusiveNode.field_b[var4] = var17.a((byte) 88);
           }
           if (param0 != -95) {
             var16 = (String[]) null;
-            sd.a((String) null, 80, (String[]) null);
+            AlphaContainer.a((String) null, 80, (String[]) null);
           }
-          for (var4Lifetime1 = 0; var4Lifetime1 < im.field_Qb; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < SocialListEntry.field_Qb; var4Lifetime1++) {
             e.field_b[var4Lifetime1] = var18.a((byte) -122);
           }
-          for (var4Lifetime2 = 0; im.field_Qb > var4Lifetime2; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; SocialListEntry.field_Qb > var4Lifetime2; var4Lifetime2++) {
             ByteStorage.field_g[var4Lifetime2] = var18.a((byte) -14);
           }
-          for (var4Lifetime3 = 0; var4Lifetime3 < im.field_Qb; var4Lifetime3++) {
+          for (var4Lifetime3 = 0; var4Lifetime3 < SocialListEntry.field_Qb; var4Lifetime3++) {
             ge.field_c[var4Lifetime3] = var18.a((byte) -116);
           }
-          var18.position = param1.length - (7 - (-(8 * im.field_Qb) - 3 * (-1 + var3)));
+          var18.position = param1.length - (7 - (-(8 * SocialListEntry.field_Qb) - 3 * (-1 + var3)));
           fl.field_g = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             fl.field_g[var4Lifetime4] = var18.readUnsignedMedium((byte) 13);
@@ -288,7 +288,7 @@ final class sd extends SingleChildContainer {
             }
           }
           var18.position = 0;
-          for (var4Lifetime5 = 0; var4Lifetime5 < im.field_Qb; var4Lifetime5++) {
+          for (var4Lifetime5 = 0; var4Lifetime5 < SocialListEntry.field_Qb; var4Lifetime5++) {
             var5 = ByteStorage.field_g[var4Lifetime5];
             var6 = ge.field_c[var4Lifetime5];
             var7 = var5 * var6;

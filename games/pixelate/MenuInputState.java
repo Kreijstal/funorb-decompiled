@@ -357,7 +357,7 @@ final class MenuInputState {
           }
           while (var3 > var5) {
             if (!tj.a(param0, -32)) {
-              var6 = param0.c(wg.a(var5 - 1, 15598), (byte) -34);
+              var6 = param0.c(Matrix3.a(var5 - 1, 15598), (byte) -34);
               var4[var5] = var4[var6];
             } else {
               var6_ref_jk = new jk();
@@ -413,7 +413,7 @@ final class MenuInputState {
             return;
           }
           if (!this.field_c &&
-            !im.field_Jb) {
+            !SocialListEntry.field_Jb) {
             return;
           }
           if (0 > param1) {
@@ -441,7 +441,7 @@ final class MenuInputState {
           }
           if (this.field_i == 0) {
             if (!this.field_c &&
-              !im.field_Jb) {
+              !SocialListEntry.field_Jb) {
               return;
             }
             if (0 > param1) {
@@ -467,7 +467,7 @@ final class MenuInputState {
           }
           if (this.field_i == 0) {
             if (!this.field_c &&
-              !im.field_Jb) {
+              !SocialListEntry.field_Jb) {
               return;
             }
             if (0 > param1) {
@@ -508,7 +508,7 @@ final class MenuInputState {
           if (param1 != this.field_j) {
           }
         } else {
-          if (!im.field_Jb) {
+          if (!SocialListEntry.field_Jb) {
             return;
           }
           if (0 > param1) {

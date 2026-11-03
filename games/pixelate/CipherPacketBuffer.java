@@ -73,27 +73,27 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static im a(int param0, boolean param1, byte param2) {
+    final static SocialListEntry a(int param0, boolean param1, byte param2) {
         ScrollContainer stackIn_4_0 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_5_2 = false;
-        im stackIn_18_0 = null;
+        SocialListEntry stackIn_18_0 = null;
         SceneWidget stackIn_45_0 = null;
         String stackIn_46_1 = null;
         SceneWidget stackIn_49_0 = null;
         String stackIn_50_1 = null;
         int stackIn_54_0 = 0;
         Object stackIn_95_0 = null;
-        im stackIn_103_0 = null;
+        SocialListEntry stackIn_103_0 = null;
         Object stackIn_105_0 = null;
         RuntimeException decompiledCaughtException = null;
-        im stackOut_17_0;
+        SocialListEntry stackOut_17_0;
         int var3_int = 0;
         RuntimeException var3 = null;
         IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
-        im var7 = null;
+        SocialListEntry var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -133,10 +133,10 @@ final class CipherPacketBuffer extends PacketBuffer {
           }
           if (decompiledFrameRemainder0) {
             wa.field_f.field_rb = true;
-            SceneWidget.field_E.field_cb = sd.a(ke.field_e, 78, new String[]{LabeledField.field_L});
+            SceneWidget.field_E.field_cb = AlphaContainer.a(ke.field_e, 78, new String[]{LabeledField.field_L});
             ma.field_z.field_Gb.field_Ib.field_cb = null;
             var6 = null;
-            var7 = (im) (var4.c(1504642273));
+            var7 = (SocialListEntry) (var4.c(1504642273));
             while (true) {
               if (var7 != null) {
                 var8 = 0;
@@ -234,15 +234,15 @@ final class CipherPacketBuffer extends PacketBuffer {
                       !ln.field_q) {
                       if (!IsaacRandom.field_g) {
                         var17 = ProxySocketConnector.field_n;
-                        var18 = sd.a(nf.field_e, 46, new String[]{var16});
+                        var18 = AlphaContainer.a(nf.field_e, 46, new String[]{var16});
                         var17.field_b.addAction(var18, (byte) -105, 8);
                       }
                       var17Lifetime1 = ProxySocketConnector.field_n;
-                      var18Lifetime1 = sd.a(TextTableInitializer.field_f, 101, new String[]{var16});
+                      var18Lifetime1 = AlphaContainer.a(TextTableInitializer.field_f, 101, new String[]{var16});
                       var17Lifetime1.field_b.addAction(var18Lifetime1, (byte) -102, 18);
                     }
                   }
-                  var7 = (im) (var4.last(1504642273));
+                  var7 = (SocialListEntry) (var4.last(1504642273));
                   continue;
                 }
               } else {
@@ -250,21 +250,21 @@ final class CipherPacketBuffer extends PacketBuffer {
               }
               if (((SceneWidget) (stackIn_95_0)).field_P != 0) {
                 he.field_f = new AccountNamePrompt(ma.field_z.field_Ib.field_tb, ma.field_z.field_Ib.screenY, ma.field_z.field_Ib.field_K, ma.field_z.field_Ib.height, BackgroundScene.field_j, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
-                il.field_e = 0;
+                QuickChatCategoryCache.field_e = 0;
               }
               if (ma.field_z.field_Hb.field_P == 0) {
                 break;
               }
               he.field_f = new AccountNamePrompt(ma.field_z.field_Hb.field_tb, ma.field_z.field_Hb.screenY, ma.field_z.field_Hb.field_K, ma.field_z.field_Hb.height, hp.field_Fb, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
-              il.field_e = 1;
+              QuickChatCategoryCache.field_e = 1;
               break;
             }
           }
           if (param2 >= 47) {
             stackIn_105_0 = var5;
-            return (im) (stackIn_105_0);
+            return (SocialListEntry) (stackIn_105_0);
           }
-          stackIn_103_0 = (im) null;
+          stackIn_103_0 = (SocialListEntry) null;
           return stackIn_103_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class u {
+final class QuickChatPhraseCache {
     static SceneWidget field_l;
     static wm field_d;
     static volatile boolean field_j;
@@ -72,7 +72,7 @@ final class u {
         field_l = null;
     }
 
-    u(int param0, ResourceArchive param1, ResourceArchive param2, hj param3) {
+    QuickChatPhraseCache(int param0, ResourceArchive param1, ResourceArchive param2, hj param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -123,7 +123,7 @@ final class u {
     final static void a(boolean param0, int param1) {
         qh.a((byte) -110, 10, bj.field_c[param1], true);
         if (param0) {
-          u.a(-24);
+          QuickChatPhraseCache.a(-24);
         }
     }
 

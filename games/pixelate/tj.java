@@ -100,7 +100,7 @@ final class tj extends ah {
           }
           Sprite[] var17 = (Sprite[]) null;
           BouncedownBackground.a((Sprite[]) null, param6, param8, 0, param10, 0, ce.field_b, param4, 480, param2, (byte) -100, param14, param3, param0, param12, param13, param5, param9, IndexedSpriteState.field_l, MatchingTextValidator.field_s, param7);
-          ai.a(param1, param11 ^ 124);
+          Bzip2State.a(param1, param11 ^ 124);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "tj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ',' + param12 + ',' + param13 + ',' + param14 + ')');
         }

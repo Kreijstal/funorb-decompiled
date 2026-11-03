@@ -269,12 +269,12 @@ final class pk {
           if (ce.field_d == 2 &&
             !ra.a((byte) -99)) {
             if (CanvasRasterBuffer.a(fp.field_d, (byte) 37)) {
-              var2 = sd.a(GameApplet.field_m, 34, new String[]{CheckboxPainter.field_k});
+              var2 = AlphaContainer.a(GameApplet.field_m, 34, new String[]{CheckboxPainter.field_k});
               if (var10 != 0) {
-                var2 = sd.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
+                var2 = AlphaContainer.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
               }
             } else {
-              var2 = sd.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
+              var2 = AlphaContainer.a(fg.field_d, 34, new String[]{CheckboxPainter.field_k});
             }
             if (un.field_l) {
               MidiPcmStream.a(0, (String) null, (String) null, (byte) -82, 2, (String) (var2));
@@ -291,7 +291,7 @@ final class pk {
             var2 = NameSuggestionsPanel.field_M;
           }
           if (null != var2) {
-            ap.a((String) null, 0, VerticalScrollbar.field_Ib, 24092, (String) (var2));
+            IntKeyLookup.a((String) null, 0, VerticalScrollbar.field_Ib, 24092, (String) (var2));
           } else {
             var3 = ModalStack.field_J;
             var3 = th.a(2, var3);
@@ -300,8 +300,8 @@ final class pk {
             var6 = ce.field_d;
             var7 = 0;
             if (2 == var6) {
-              var4 = sd.a(dg.field_b, 73, new String[]{CheckboxPainter.field_k});
-              var8 = sd.a(sk.field_c, 69, new String[]{var3});
+              var4 = AlphaContainer.a(dg.field_b, 73, new String[]{CheckboxPainter.field_k});
+              var8 = AlphaContainer.a(sk.field_c, 69, new String[]{var3});
               var7 = -485 + (nf.field_d.field_K + rh.field_y.field_K + AccountMessagePanel.field_Q.textWidth(var8) - AccountMessagePanel.field_Q.textWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
@@ -317,7 +317,7 @@ final class pk {
                 if (null != io.field_c) {
                   if (!TickClock.field_b ||
                     TextLayoutLine.field_f == null) {
-                    var4 = "[" + sd.a(HowToPlayScreen.field_q, 40, new String[]{io.field_c.field_pc}) + "] ";
+                    var4 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 40, new String[]{io.field_c.field_pc}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + TextLayoutLine.field_f + "] ";
                     }
@@ -362,12 +362,12 @@ final class pk {
                 }
               }
             }
-            ap.a(var5, var7, ib.field_i[var6], 24092, var4 + BitmapFont.b(mp.field_a.toString()));
+            IntKeyLookup.a(var5, var7, ib.field_i[var6], 24092, var4 + BitmapFont.b(mp.field_a.toString()));
             if (!oo.field_d) {
               rh.field_y.field_W = false;
             }
             if (rh.field_y.field_W) {
-              var1 = sd.a(MatchHud.field_m, 78, new String[]{var3, CheckboxPainter.field_k});
+              var1 = AlphaContainer.a(MatchHud.field_m, 78, new String[]{var3, CheckboxPainter.field_k});
             }
           }
           stackIn_96_0 = var1;

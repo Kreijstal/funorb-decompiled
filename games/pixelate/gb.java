@@ -47,8 +47,8 @@ final class gb {
     final static IndexedSprite[] a(byte param0) {
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
-        IndexedSprite[] var1 = new IndexedSprite[im.field_Qb];
-        for (var2 = 0; var2 < im.field_Qb; var2++) {
+        IndexedSprite[] var1 = new IndexedSprite[SocialListEntry.field_Qb];
+        for (var2 = 0; var2 < SocialListEntry.field_Qb; var2++) {
           var1[var2] = new IndexedSprite(tj.field_y, jb.field_a, IntrusiveNode.field_b[var2], e.field_b[var2], ByteStorage.field_g[var2], ge.field_c[var2], wo.field_f[var2], fl.field_g);
         }
         re.b(140);

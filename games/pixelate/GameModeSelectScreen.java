@@ -148,7 +148,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mu_chat_game", param0 ^ 31873);
                 if (null != var2) {
-                  fb.field_Gb = of.a(var2, param0 - 31872);
+                  PairedTextColumns.field_Gb = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mu_chat_private", 0);
                 if (null != var2) {
@@ -212,7 +212,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mu_you_declined_invite", 0);
                 if (var2 != null) {
-                  fb.field_Eb = of.a(var2, param0 - 31872);
+                  PairedTextColumns.field_Eb = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mu_invite_withdrawn", 0);
                 if (null != var2) {
@@ -424,7 +424,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mu_chat_lobby_friends", param0 ^ 31873);
                 if (var2 != null) {
-                  ap.field_b = of.a(var2, 1);
+                  IntKeyLookup.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_chat_lobby_hide", 0);
                 if (null != var2) {
@@ -584,7 +584,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("reject", 0);
                 if (var2 != null) {
-                  u.field_e = of.a(var2, param0 - 31872);
+                  QuickChatPhraseCache.field_e = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("invite", 0);
                 if (var2 != null) {
@@ -592,7 +592,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("status_concluded", 0);
                 if (null != var2) {
-                  ap.field_g = of.a(var2, 1);
+                  IntKeyLookup.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("status_spectate", param0 - 31873);
                 if (null != var2) {
@@ -660,7 +660,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("show_players_in_xs_game", 0);
                 if (var2 != null) {
-                  sd.field_J = of.a(var2, param0 - 31872);
+                  AlphaContainer.field_J = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("connecting_to_friend_server_twoline", 0);
                 if (var2 != null) {
@@ -688,11 +688,11 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("multiconst_similar_rating", 0);
                 if (null != var2) {
-                  il.field_c = of.a(var2, 1);
+                  QuickChatCategoryCache.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("multiconst_open", 0);
                 if (var2 != null) {
-                  u.field_g = of.a(var2, 1);
+                  QuickChatPhraseCache.field_g = of.a(var2, 1);
                 }
                 var2 = vd.a("no_options_available", 0);
                 if (var2 != null) {
@@ -784,7 +784,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("gameopt_moreratedgames", 0);
                 if (var2 != null) {
-                  nj.field_c = of.a(var2, 1);
+                  DualLinkDeque.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_needrating", 0);
                 if (var2 != null) {
@@ -900,7 +900,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("gameopt_novalidcombos", 0);
                 if (var2 != null) {
-                  lo.field_Gb = of.a(var2, 1);
+                  IconTextComponent.field_Gb = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_pleasetrychanging", 0);
                 if (null != var2) {
@@ -924,7 +924,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("ra_intro_no_name", param0 - 31873);
                 if (null != var2) {
-                  im.field_Lb = of.a(var2, 1);
+                  SocialListEntry.field_Lb = of.a(var2, 1);
                 }
                 var2 = vd.a("ra_explanation", param0 ^ 31873);
                 if (var2 != null) {
@@ -936,7 +936,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("rule_0_0", 0);
                 if (null != var2) {
-                  ae.field_j = of.a(var2, 1);
+                  Vector3.field_j = of.a(var2, 1);
                 }
                 var2 = vd.a("rule_0_1", 0);
                 if (null != var2) {
@@ -970,7 +970,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("rule_1_1", param0 ^ 31873);
                 if (var2 != null) {
-                  ap.field_i = of.a(var2, 1);
+                  IntKeyLookup.field_i = of.a(var2, 1);
                 }
                 var2 = vd.a("rule_1_2", 0);
                 if (var2 != null) {
@@ -998,7 +998,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("rule_2_2", 0);
                 if (null != var2) {
-                  nj.field_d = of.a(var2, param0 ^ 31872);
+                  DualLinkDeque.field_d = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("createafreeaccount", param0 - 31873);
                 if (var2 != null) {
@@ -1390,7 +1390,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("create_createanaccount", 0);
                 if (var2 != null) {
-                  sd.field_M = of.a(var2, param0 ^ 31872);
+                  AlphaContainer.field_M = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("create_username", 0);
                 if (null != var2) {
@@ -1590,7 +1590,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("create_alert_namechars", 0);
                 if (null != var2) {
-                  nj.field_g = of.a(var2, param0 - 31872);
+                  DualLinkDeque.field_g = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("create_alert_nameleadingspace", 0);
                 if (null != var2) {
@@ -1674,7 +1674,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("unable_to_add_friend", 0);
                 if (var2 != null) {
-                  ai.field_C = of.a(var2, 1);
+                  Bzip2State.field_C = of.a(var2, 1);
                 }
                 var2 = vd.a("unable_to_add_ignore", 0);
                 if (var2 != null) {
@@ -1758,7 +1758,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("waitingfor_graphics", param0 ^ 31873);
                 if (null != var2) {
-                  im.field_Mb = of.a(var2, 1);
+                  SocialListEntry.field_Mb = of.a(var2, 1);
                 }
                 var2 = vd.a("waitingfor_models", 0);
                 if (var2 != null) {
@@ -2260,7 +2260,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("notyetachieved", param0 ^ 31873);
                 if (null != var2) {
-                  bf.field_t = of.a(var2, 1);
+                  AchievementIcon.field_t = of.a(var2, 1);
                 }
                 var2 = vd.a("achieved", param0 - 31873);
                 if (var2 != null) {
@@ -2340,7 +2340,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mp_acceptrematch", 0);
                 if (var2 != null) {
-                  sc.field_c = of.a(var2, 1);
+                  ConditionalTextValue.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("mp_acceptrematch_unrated", param0 - 31873);
                 if (null != var2) {
@@ -2652,7 +2652,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("fs_accept_afteraccept", 0);
                 if (var2 != null) {
-                  u.field_n = of.a(var2, 1);
+                  QuickChatPhraseCache.field_n = of.a(var2, 1);
                 }
                 var2 = vd.a("fs_button_cancel", param0 - 31873);
                 if (var2 != null) {
@@ -2668,7 +2668,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("fs_accept_countdown_pl", 0);
                 if (var2 != null) {
-                  oj.field_R = of.a(var2, 1);
+                  BirthDateEntryPanel.field_R = of.a(var2, 1);
                 }
                 var2 = vd.a("fs_nonmember", 0);
                 if (var2 != null) {
@@ -3198,7 +3198,7 @@ final class GameModeSelectScreen extends MenuScreen {
           if (var8.field_n != null &&
             1 < var8.field_B) {
             var9 = var8.field_n;
-            pk.a(var9, 0, sc.field_i, 77, 0);
+            pk.a(var9, 0, ConditionalTextValue.field_i, 77, 0);
             if (var40 != 0) {
               InputQueue.c(0);
             }
@@ -3211,7 +3211,7 @@ final class GameModeSelectScreen extends MenuScreen {
           var8_array = new int[param1.field_a];
           var9_array = new int[param1.field_a];
           var10 = GrowableIntList.field_i;
-          var11 = lo.field_Ib;
+          var11 = IconTextComponent.field_Ib;
           var12 = SocketJs5Transport.field_q;
           var13 = 0;
           while (param1.field_a > var13) {

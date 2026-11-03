@@ -7,7 +7,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
     static String field_t;
     static int field_s;
     private WidgetStyleLayer field_x;
-    static il field_y;
+    static QuickChatCategoryCache field_y;
     static int[][] field_z;
     private WidgetStyleLayer[] field_r;
     static String field_u;
@@ -264,7 +264,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
         }
     }
 
-    final static void a(int param0, int param1, ae param2, int param3, ae param4, ae param5, ae param6, int param7, byte param8, int param9) {
+    final static void a(int param0, int param1, Vector3 param2, int param3, Vector3 param4, Vector3 param5, Vector3 param6, int param7, byte param8, int param9) {
         int var10_int = 0;
         int var11 = 0;
         int var12 = 0;
@@ -372,12 +372,12 @@ final class StatefulTextPainter extends TextWidgetPainter {
         WidgetStyleLayer var5 = null;
         WidgetStyleLayer var6 = null;
         int var7 = 0;
-        ae var8 = null;
+        Vector3 var8 = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
           if (!param1) {
-            var8 = (ae) null;
-            StatefulTextPainter.a(-78, 30, (ae) null, 86, (ae) null, (ae) null, (ae) null, -17, (byte) 54, -98);
+            var8 = (Vector3) null;
+            StatefulTextPainter.a(-78, 30, (Vector3) null, 86, (Vector3) null, (Vector3) null, (Vector3) null, -17, (byte) 54, -98);
           }
           super.copyStyleTo(param0, (byte) 126);
           if (param2) {

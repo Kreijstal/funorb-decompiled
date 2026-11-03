@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ae {
+final class Vector3 {
     static ScrollContainer field_c;
     int field_h;
     static int field_a;
@@ -20,7 +20,7 @@ final class ae {
           aa.field_f.writeByte(160, param0);
           return;
         }
-        ae.a(-17, -36, -89);
+        Vector3.a(-17, -36, -89);
         aa.field_f.writeShort(1276387944, param2);
         aa.field_f.writeByte(160, param0);
     }
@@ -133,7 +133,7 @@ final class ae {
           }
           return param1;
         }
-        ae.a(-103, 27, 37);
+        Vector3.a(-103, 27, 37);
         var2Lifetime1 = param1;
         if (var2Lifetime1 == 32) {
           return '_';
@@ -274,7 +274,7 @@ final class ae {
               var3 = new java.net.URL(param1.getCodeBase(), param2);
               if (param0 != 71) {
                 var4 = (String) null;
-                ae.a((byte) -4, (java.applet.Applet) null, (String) null);
+                Vector3.a((byte) -4, (java.applet.Applet) null, (String) null);
               }
               var3 = lg.a(false, param1, var3);
               LinkButtonPainter.a(true, var3.toString(), -72, param1);
@@ -312,7 +312,7 @@ final class ae {
     private final int a(boolean param0) {
         int var2 = (this.field_h >> 2) * (this.field_h >> 2) - (-((this.field_g >> 2) * (this.field_g >> 2)) - (this.field_i >> 2) * (this.field_i >> 2));
         if (!param0) {
-          ae.b((byte) 96);
+          Vector3.b((byte) 96);
           if (var2 < 0) {
             throw new RuntimeException();
           }
@@ -365,7 +365,7 @@ final class ae {
         field_f = null;
     }
 
-    ae(int param0, int param1, int param2) {
+    Vector3(int param0, int param1, int param2) {
         this.a(param1, -33, param2, param0);
     }
 

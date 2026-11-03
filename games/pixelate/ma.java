@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ma extends bg {
-    static pd field_z;
+    static ScrollPaneWithFooter field_z;
     private int field_x;
     private int field_v;
     private int field_A;
@@ -81,7 +81,7 @@ final class ma extends bg {
             var2[var3] = var13 * var7 + var11 * var5 + var12 * var6 >> 16;
           }
           if (param0 != 106) {
-            field_z = (pd) null;
+            field_z = (ScrollPaneWithFooter) null;
           }
           var3Lifetime1 = bg.field_a[9] >> 8;
           var4 = bg.field_a[10] >> 8;

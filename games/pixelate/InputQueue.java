@@ -49,15 +49,15 @@ final class InputQueue {
         String var4_ref_String = null;
         int var4 = 0;
         String var5 = null;
-        im var6 = null;
+        SocialListEntry var6 = null;
         String var7 = null;
-        im var7_ref = null;
+        SocialListEntry var7_ref = null;
         String var8 = null;
         int var9 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
         String var5Lifetime1;
-        im var6Lifetime1;
+        SocialListEntry var6Lifetime1;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           var1 = MusicCrossfadeStream.field_o;
@@ -90,7 +90,7 @@ final class InputQueue {
               }
             }
             if (var6 == null) {
-              var6 = new im();
+              var6 = new SocialListEntry();
               GameResultsScreen.field_q.a(false, var6, (long)var8.hashCode());
               fieldTemp$0 = aj.field_t;
               aj.field_t = aj.field_t + 1;
@@ -148,7 +148,7 @@ final class InputQueue {
             }
           }
           if (null == var6Lifetime1) {
-            var6Lifetime1 = new im();
+            var6Lifetime1 = new SocialListEntry();
             vm.field_b.a(false, var6Lifetime1, (long)dh.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 70).hashCode());
             fieldTemp$1 = DialWidgetPainter.field_q;
             DialWidgetPainter.field_q = DialWidgetPainter.field_q + 1;
@@ -162,7 +162,7 @@ final class InputQueue {
           var6Lifetime1.field_Nb = (String) (var3Lifetime1);
           var6Lifetime1.field_Gb = var5Lifetime1;
           var6Lifetime1.c(2779);
-          var7_ref = (im) (VerticalScrollbar.field_Hb.c(1504642273));
+          var7_ref = (SocialListEntry) (VerticalScrollbar.field_Hb.c(1504642273));
           scanLoop1: while (true) {
             if (null != var7_ref) {
               stackOut_49_0 = DebouncedValidator.a((byte) 115, var6Lifetime1, var7_ref);
@@ -172,7 +172,7 @@ final class InputQueue {
                 break scanLoop1;
               }
               if (stackIn_50_0) {
-                var7_ref = (im) (VerticalScrollbar.field_Hb.last(1504642273));
+                var7_ref = (SocialListEntry) (VerticalScrollbar.field_Hb.last(1504642273));
                 continue;
               }
             }

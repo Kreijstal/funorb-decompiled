@@ -29,7 +29,7 @@ final class NightToRememberBackground extends BackgroundScene {
         if (param0) {
           return;
         }
-        u.field_f.b(0, -u.field_f.field_B + 480, lg.field_a);
+        QuickChatPhraseCache.field_f.b(0, -QuickChatPhraseCache.field_f.field_B + 480, lg.field_a);
     }
 
     NightToRememberBackground(String param0, Sprite[] param1) {

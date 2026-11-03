@@ -60,7 +60,7 @@ final class AccountNamePrompt extends SceneWidget {
             }
             return true;
           }
-          var3 = Character.toLowerCase(nj.field_f);
+          var3 = Character.toLowerCase(DualLinkDeque.field_f);
           if (var3 == 32) {
             var3 = 95;
           }
@@ -129,7 +129,7 @@ final class AccountNamePrompt extends SceneWidget {
             this.field_Hb = 1;
             return true;
           }
-          var3Lifetime1 = Character.toLowerCase(nj.field_f);
+          var3Lifetime1 = Character.toLowerCase(DualLinkDeque.field_f);
           if (var3Lifetime1 == 32) {
             var3Lifetime1 = 95;
           }
@@ -197,7 +197,7 @@ final class AccountNamePrompt extends SceneWidget {
           this.field_Hb = 1;
           return true;
         }
-        var3Lifetime2 = Character.toLowerCase(nj.field_f);
+        var3Lifetime2 = Character.toLowerCase(DualLinkDeque.field_f);
         if (var3Lifetime2 == 32) {
           var3Lifetime2 = 95;
         }
@@ -355,19 +355,19 @@ final class AccountNamePrompt extends SceneWidget {
             this.field_Eb.length() > 0) {
             nk.a(this.field_Eb, -1 + this.field_Eb.length(), ' ', 16736352);
           }
-          if (aq.a(nj.field_f, (CharSequence) ((Object) this.field_Eb), (byte) -117)) {
-            discarded$0 = this.field_Eb.append(nj.field_f);
+          if (aq.a(DualLinkDeque.field_f, (CharSequence) ((Object) this.field_Eb), (byte) -117)) {
+            discarded$0 = this.field_Eb.append(DualLinkDeque.field_f);
           } else {
             if (this.field_Eb.length() == 0 &&
-              nj.field_f == 91) {
-              discarded$1 = this.field_Eb.append(nj.field_f);
+              DualLinkDeque.field_f == 91) {
+              discarded$1 = this.field_Eb.append(DualLinkDeque.field_f);
             } else {
               if (this.field_Eb.length() == 1 &&
-                nj.field_f == 35) {
-                discarded$2 = this.field_Eb.append(nj.field_f);
+                DualLinkDeque.field_f == 35) {
+                discarded$2 = this.field_Eb.append(DualLinkDeque.field_f);
               } else {
-                if (nj.field_f == 93) {
-                  discarded$3 = this.field_Eb.append(nj.field_f);
+                if (DualLinkDeque.field_f == 93) {
+                  discarded$3 = this.field_Eb.append(DualLinkDeque.field_f);
                 }
               }
             }
@@ -457,7 +457,7 @@ final class AccountNamePrompt extends SceneWidget {
 
     final static void j(int param0) {
         cd.field_e = new String[d.field_b];
-        cd.field_e[17] = ap.field_i;
+        cd.field_e[17] = IntKeyLookup.field_i;
         cd.field_e[20] = NodeHashTableIterator.field_c;
         cd.field_e[21] = nk.field_g;
         cd.field_e[5] = wf.field_a;
@@ -467,10 +467,10 @@ final class AccountNamePrompt extends SceneWidget {
         cd.field_e[19] = nk.field_h;
         cd.field_e[4] = UiContainer.field_G;
         if (param0 == 1565) {
-          cd.field_e[11] = nj.field_d;
+          cd.field_e[11] = DualLinkDeque.field_d;
           cd.field_e[13] = CachedTextLayout.field_n;
           cd.field_e[9] = ke.field_c;
-          cd.field_e[6] = ae.field_j;
+          cd.field_e[6] = Vector3.field_j;
           cd.field_e[16] = StatefulTextPainter.field_u;
           return;
         }

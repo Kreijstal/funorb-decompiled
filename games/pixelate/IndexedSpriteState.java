@@ -62,7 +62,7 @@ abstract class IndexedSpriteState {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = pd.field_Kb;
+            stackIn_3_0 = ScrollPaneWithFooter.field_Kb;
             return stackIn_3_0;
           }
           if (var2_int > 63) {

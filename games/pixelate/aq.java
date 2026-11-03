@@ -12,7 +12,7 @@ final class aq {
         RuntimeException var4 = null;
         CipherPacketBuffer var5 = null;
         int var6 = 0;
-        im var7 = null;
+        SocialListEntry var7 = null;
         CharSequence var8 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -26,7 +26,7 @@ final class aq {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = (CharSequence) ((Object) param0);
-          if (!ai.a((byte) -128, var8)) {
+          if (!Bzip2State.a((byte) -128, var8)) {
             stackIn_2_0 = qn.field_n;
             return stackIn_2_0;
           }
@@ -39,7 +39,7 @@ final class aq {
           }
           var7 = DisplayNameForm.a(param2, 114);
           if (var7 == null) {
-            stackIn_10_0 = sd.a(ug.field_p, param3 + 20935, new String[]{param2});
+            stackIn_10_0 = AlphaContainer.a(ug.field_p, param3 + 20935, new String[]{param2});
             return stackIn_10_0;
           }
           var7.c(param3 ^ -23386);

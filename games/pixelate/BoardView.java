@@ -50,7 +50,7 @@ final class BoardView {
           of.field_d = -1;
           WeightedLruCache.field_j = 45;
           GameApplet.field_i = -1;
-          sd.field_N = true;
+          AlphaContainer.field_N = true;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "kk.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -465,8 +465,8 @@ final class BoardView {
           SoftwareRasterizer.a(DialWidgetPainter.field_d);
           SoftwareRasterizer.f(var2 + this.field_g * 32, this.field_p * 32 + var3, (this.field_h - this.field_f) * 32 + var2, var3 + 32 * (-this.field_e + this.field_j));
           for (var6Lifetime3 = 0; 20 > var6Lifetime3; var6Lifetime3 += 3) {
-            SpriteEffectHelpers.a(this.field_g * 32 + (this.field_t - (-this.field_A - var6Lifetime3 * 2 + 40)), -20 + var3, this.field_A + 32 * this.field_g + this.field_t - 2 * (-var6Lifetime3 + 20), this.field_j * 32 + var3 + 20, 4, var6Lifetime3 * 3, sd.field_Q);
-            SpriteEffectHelpers.a(var2 - 20, -(2 * (-var6Lifetime3 + 20)) + this.field_x + (this.field_u + this.field_p * 32), this.field_h * 32 + (var2 + 20), var6Lifetime3 * 2 - 40 + (this.field_p * 32 + this.field_u) + this.field_x, 4, 3 * var6Lifetime3, sd.field_Q);
+            SpriteEffectHelpers.a(this.field_g * 32 + (this.field_t - (-this.field_A - var6Lifetime3 * 2 + 40)), -20 + var3, this.field_A + 32 * this.field_g + this.field_t - 2 * (-var6Lifetime3 + 20), this.field_j * 32 + var3 + 20, 4, var6Lifetime3 * 3, AlphaContainer.field_Q);
+            SpriteEffectHelpers.a(var2 - 20, -(2 * (-var6Lifetime3 + 20)) + this.field_x + (this.field_u + this.field_p * 32), this.field_h * 32 + (var2 + 20), var6Lifetime3 * 2 - 40 + (this.field_p * 32 + this.field_u) + this.field_x, 4, 3 * var6Lifetime3, AlphaContainer.field_Q);
           }
           SoftwareRasterizer.b(DialWidgetPainter.field_d);
         }

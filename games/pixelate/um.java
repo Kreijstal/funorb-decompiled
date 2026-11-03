@@ -6,12 +6,12 @@ final class um extends IntrusiveNode {
     static int field_r;
     static String field_o;
     byte[] field_n;
-    static fb field_q;
+    static PairedTextColumns field_q;
     static volatile long field_m;
     static String[] field_l;
     boolean field_p;
 
-    final static void a(int param0, int param1, wg param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void a(int param0, int param1, Matrix3 param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9, int param10) {
         int var12 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
@@ -20,17 +20,17 @@ final class um extends IntrusiveNode {
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ae[] var11 = null;
+        Vector3[] var11 = null;
         RuntimeException var11_ref = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        ae[] var17 = null;
-        ae[] var18 = null;
+        Vector3[] var17 = null;
+        Vector3[] var18 = null;
         var16 = Pixelate.field_H ? 1 : 0;
         try {
-          var17 = new ae[8];
+          var17 = new Vector3[8];
           var18 = var17;
           var11 = var18;
           for (var12 = 0; var12 < 8; var12++) {
@@ -40,7 +40,7 @@ final class um extends IntrusiveNode {
             var14 = stackIn_11_0;
             stackIn_14_0 = ((var12 & 4) != 0) ? param3 : param1;
             var15 = stackIn_14_0;
-            var11[var12] = new ae(var13 * 2 - 2 << 12, var14 * 2 - 2 << 12, var15 * 2 - 2 << 12);
+            var11[var12] = new Vector3(var13 * 2 - 2 << 12, var14 * 2 - 2 << 12, var15 * 2 - 2 << 12);
             var17[var12] = param2.a(var17[var12], (byte) 83);
           }
           if (param2.field_f[8] > 0) {

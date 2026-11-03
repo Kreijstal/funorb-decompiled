@@ -12,7 +12,7 @@ final class un {
     int field_d;
     int field_e;
     static String[] field_k;
-    static so field_j;
+    static PuzzlePieceQueue field_j;
     byte[] field_b;
     int field_i;
 
@@ -56,7 +56,7 @@ final class un {
     final static void a(boolean param0) {
         ek.field_c = false;
         if (!param0) {
-          field_j = (so) null;
+          field_j = (PuzzlePieceQueue) null;
         }
     }
 

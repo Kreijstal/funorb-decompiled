@@ -121,7 +121,7 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
         if (param0 < 56) {
           field_F = (fp) null;
         }
-        return lo.field_Nb;
+        return IconTextComponent.field_Nb;
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
@@ -348,10 +348,10 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
           wa.field_c.a(hf.field_w, true, (byte) 99, ph.field_o);
           wa.field_c.d((byte) 112);
           while (DirectByteStorage.$cfr$intArgs$b$c4997cb15529(120)) {
-            wa.field_c.a(nj.field_f, ke.field_a, false);
+            wa.field_c.a(DualLinkDeque.field_f, ke.field_a, false);
           }
-          if (u.field_h != -1) {
-            var1_int = u.field_h;
+          if (QuickChatPhraseCache.field_h != -1) {
+            var1_int = QuickChatPhraseCache.field_h;
             QuickChatMenu.a(-1, -2671);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;

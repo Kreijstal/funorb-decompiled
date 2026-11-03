@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wg {
+final class Matrix3 {
     static sb field_d;
     static int[] field_c;
     int[] field_f;
@@ -85,7 +85,7 @@ final class wg {
           }
           if (param2 != -4) {
             var4 = (byte[]) null;
-            wg.a((byte[]) null, 103, 27);
+            Matrix3.a((byte[]) null, 103, 27);
           }
           if (ep.a((byte) 34, param0)) {
             return false;
@@ -123,12 +123,12 @@ final class wg {
         }
     }
 
-    final ae a(ae param0, byte param1) {
+    final Vector3 a(Vector3 param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        ae stackIn_3_0 = null;
+        Vector3 stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -137,10 +137,10 @@ final class wg {
           var3_int = param0.field_h >> 2;
           var4 = param0.field_g >> 2;
           if (param1 < 35) {
-            wg.b(-124, 49);
+            Matrix3.b(-124, 49);
           }
           var5 = param0.field_i >> 2;
-          stackIn_3_0 = new ae(this.field_f[0] * var3_int - (-(var4 * this.field_f[1]) - var5 * this.field_f[2]) >> 14, var3_int * this.field_f[3] + (this.field_f[4] * var4 + var5 * this.field_f[5]) >> 14, var5 * this.field_f[8] + this.field_f[7] * var4 + this.field_f[6] * var3_int >> 14);
+          stackIn_3_0 = new Vector3(this.field_f[0] * var3_int - (-(var4 * this.field_f[1]) - var5 * this.field_f[2]) >> 14, var3_int * this.field_f[3] + (this.field_f[4] * var4 + var5 * this.field_f[5]) >> 14, var5 * this.field_f[8] + this.field_f[7] * var4 + this.field_f[6] * var3_int >> 14);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -189,7 +189,7 @@ final class wg {
         if (param0 == -5057) {
           return !an.field_e.d(125) ? true : false;
         }
-        wg.a(26, 126);
+        Matrix3.a(26, 126);
         return !an.field_e.d(125) ? true : false;
     }
 
@@ -200,13 +200,13 @@ final class wg {
           ro.a(127, param1);
           return var2;
         }
-        wg.a((byte) 74);
+        Matrix3.a((byte) 74);
         tj.field_z.addFirst(22125, var2);
         ro.a(127, param1);
         return var2;
     }
 
-    private wg(int[] param0) {
+    private Matrix3(int[] param0) {
         try {
           if (param0.length != 9) {
             throw new RuntimeException();
@@ -217,7 +217,7 @@ final class wg {
         }
     }
 
-    wg(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    Matrix3(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         this.field_f = new int[9];
         this.field_f[4] = param4;
         this.field_f[5] = param5;
@@ -230,7 +230,7 @@ final class wg {
         this.field_f[0] = param0;
     }
 
-    final wg a(int param0, wg param1) {
+    final Matrix3 a(int param0, Matrix3 param1) {
         int var4 = 0;
         int var5 = 0;
         int var8 = 0;
@@ -240,8 +240,8 @@ final class wg {
         int var9 = 0;
         int[] var10 = null;
         int[] var11 = null;
-        wg stackIn_3_0 = null;
-        wg stackIn_14_0 = null;
+        Matrix3 stackIn_3_0 = null;
+        Matrix3 stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -252,7 +252,7 @@ final class wg {
           var10 = var11;
           var3 = var10;
           if (param0 != 8) {
-            stackIn_3_0 = (wg) null;
+            stackIn_3_0 = (Matrix3) null;
             return stackIn_3_0;
           }
           for (var4 = 0; var4 < 3; var4++) {
@@ -264,7 +264,7 @@ final class wg {
               var3[3 * var4 + var5] = (int)(var6 >> 16);
             }
           }
-          stackIn_14_0 = new wg(var11);
+          stackIn_14_0 = new Matrix3(var11);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

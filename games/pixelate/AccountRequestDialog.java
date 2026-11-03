@@ -25,7 +25,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
             field_ub = (int[]) null;
           }
           if (!this.field_nb) {
-            ae.a((byte) 71, AudioService.a(13867), "tochangedisplayname.ws");
+            Vector3.a((byte) 71, AudioService.a(13867), "tochangedisplayname.ws");
             return;
           }
           QuickChatMenu.a(3, -2671);

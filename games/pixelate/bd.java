@@ -60,7 +60,7 @@ final class bd {
             }
           }
           if (0 != GradientOutlineTextPainter.field_u.field_P) {
-            AccountTermsPanel.field_M = new ReportAbuseDialog(GradientOutlineTextPainter.field_u.field_tb, GradientOutlineTextPainter.field_u.screenY, GradientOutlineTextPainter.field_u.field_K, GradientOutlineTextPainter.field_u.height, param3, cm.field_o, pj.field_i, ae.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, (String) null, 0L);
+            AccountTermsPanel.field_M = new ReportAbuseDialog(GradientOutlineTextPainter.field_u.field_tb, GradientOutlineTextPainter.field_u.screenY, GradientOutlineTextPainter.field_u.field_K, GradientOutlineTextPainter.field_u.height, param3, cm.field_o, pj.field_i, Vector3.field_f, TextFieldValidator.field_h, um.field_q, dn.field_c, (String) null, 0L);
           }
           var9 = ah.a((byte) -110, fq.field_q, param2, MouseWheelHandler.field_c);
           if (var9 != null) {

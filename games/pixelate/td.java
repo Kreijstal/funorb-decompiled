@@ -5,7 +5,7 @@ final class td {
     static String field_a;
     static String field_c;
     static String field_d;
-    static oj field_b;
+    static BirthDateEntryPanel field_b;
 
     final static boolean a(int param0, CharSequence param1) {
         RuntimeException var2 = null;
@@ -69,14 +69,14 @@ final class td {
             if (param4 != 121) {
               return;
             }
-            SoftwareRasterizer.a(wg.field_c);
+            SoftwareRasterizer.a(Matrix3.field_c);
             SoftwareRasterizer.d(var6_int + param0, param1, -var7 + param2 + param0, param1 + param3[1].field_B);
             var9 = param0 + var6_int;
             var10 = -var7 + (param0 + param2);
             for (param0 = var9; var10 > param0; param0 = param0 + var8) {
               param3[1].d(param0, param1, param5);
             }
-            SoftwareRasterizer.b(wg.field_c);
+            SoftwareRasterizer.b(Matrix3.field_c);
             return;
           }
           return;

@@ -70,7 +70,7 @@ final class aj extends IntrusiveNode {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, int param3) {
         try {
-          nk.a(ProxySocketConnector.field_k, EditableTextWidget.field_Y, ug.field_s, sc.field_g, (byte) 125, ArchiveIndex.field_l, dn.field_c, bl.field_d, qk.field_d, param2, TextFieldValidator.field_h, l.field_q);
+          nk.a(ProxySocketConnector.field_k, EditableTextWidget.field_Y, ug.field_s, ConditionalTextValue.field_g, (byte) 125, ArchiveIndex.field_l, dn.field_c, bl.field_d, qk.field_d, param2, TextFieldValidator.field_h, l.field_q);
           Checkbox.field_V = SocketConnector.a("chatfilter", "lobby", (byte) 47, param1);
           LoginCredentials.field_a[1] = NameSuggestionsPanel.field_J;
           int var4_int = -115 % ((param3 - 44) / 59);

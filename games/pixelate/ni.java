@@ -27,7 +27,7 @@ final class ni extends IntrusiveNode {
     final static um a(int param0, int param1) {
         um var2 = new um();
         bq.field_a.addFirst(22125, var2);
-        sd.a(true, param0);
+        AlphaContainer.a(true, param0);
         int var3 = -62 / ((param1 - 48) / 62);
         return var2;
     }
@@ -55,7 +55,7 @@ final class ni extends IntrusiveNode {
         StripedProgressBar.field_H[6].a(DualLinkNode.field_s, (byte) -24);
         StripedProgressBar.field_H[8].a(TextHotspotWidget.field_T, (byte) -24);
         if (!gq.d(121)) {
-          StripedProgressBar.field_H[1].a(oj.field_N, (byte) -24);
+          StripedProgressBar.field_H[1].a(BirthDateEntryPanel.field_N, (byte) -24);
           StripedProgressBar.field_H[2].a(VerticalScrollbar.field_Sb, (byte) -24);
           StripedProgressBar.field_H[4].a(UiComponent.field_m, (byte) -24);
         }

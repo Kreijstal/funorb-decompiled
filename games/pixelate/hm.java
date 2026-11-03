@@ -58,7 +58,7 @@ final class hm {
             0 != param1.length()) {
             var2_int = param1.indexOf('@');
             if (var2_int == -1) {
-              stackIn_7_0 = pd.field_Kb;
+              stackIn_7_0 = ScrollPaneWithFooter.field_Kb;
               return stackIn_7_0;
             }
             var3 = param1.substring(param0, var2_int);

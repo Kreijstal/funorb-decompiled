@@ -71,7 +71,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               GameModeSelectScreen.field_s = ij.field_o;
               var5.position = 0;
               stackIn_11_0 = (param1) ? -2 : -1;
-              oj.field_G = stackIn_11_0;
+              BirthDateEntryPanel.field_G = stackIn_11_0;
               gb.field_d = stackIn_11_0;
               MarkerSlider.field_U = stackIn_11_0;
               FallingPieceView.a(CipherPacketBuffer.field_q, (byte) 66, bj.field_a, aa.field_f, hf.field_n);
@@ -97,9 +97,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != fj.field_c) {
             oi.field_c = 0;
-            u.field_b = param0.getX();
+            QuickChatPhraseCache.field_b = param0.getX();
             ra.field_d = param0.getY();
-            u.field_j = true;
+            QuickChatPhraseCache.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wb.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
@@ -115,9 +115,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != fj.field_c) {
             oi.field_c = 0;
-            u.field_b = -1;
+            QuickChatPhraseCache.field_b = -1;
             ra.field_d = -1;
-            u.field_j = true;
+            QuickChatPhraseCache.field_j = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -148,9 +148,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (fj.field_c != null) {
             oi.field_c = 0;
-            u.field_b = param0.getX();
+            QuickChatPhraseCache.field_b = param0.getX();
             ra.field_d = param0.getY();
-            u.field_j = true;
+            QuickChatPhraseCache.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wb.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
@@ -184,7 +184,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             if ((var2_int & 16) == 0) {
             }
-            u.field_j = true;
+            QuickChatPhraseCache.field_j = true;
           }
           if (param0.isPopupTrigger()) {
             param0.consume();
@@ -208,9 +208,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (fj.field_c != null) {
             oi.field_c = 0;
-            u.field_b = param0.getX();
+            QuickChatPhraseCache.field_b = param0.getX();
             ra.field_d = param0.getY();
-            u.field_j = true;
+            QuickChatPhraseCache.field_j = true;
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "wb.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
@@ -228,7 +228,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != fj.field_c) {
             oi.field_c = 0;
             jm.field_o = 0;
-            u.field_j = true;
+            QuickChatPhraseCache.field_j = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 16) == 0) {
             }
@@ -334,7 +334,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           WeightedLruCache.field_j = WeightedLruCache.field_j - 1;
           return;
         }
-        if (!sd.field_N) {
+        if (!AlphaContainer.field_N) {
           if (param0 == 5) {
             if (of.field_d == GreenGrowTheRushesBackground.field_m) {
               if (NetworkGameClient.field_D > 0) {

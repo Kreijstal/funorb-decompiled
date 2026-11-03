@@ -76,7 +76,7 @@ final class ij extends MenuScreen {
           qg.field_b = param1;
           if (!re.field_h &&
             CachedTextLayout.field_h < Js5ArchiveManager.field_c &&
-            im.field_Jb) {
+            SocialListEntry.field_Jb) {
             MarkerSlider.field_V = DisplayNameForm.field_L;
             oo.field_f = Checkbox.field_Q;
             CachedTextLayout.field_h = 0;

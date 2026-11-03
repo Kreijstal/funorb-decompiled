@@ -18,16 +18,16 @@ final class d {
     final static void a(int param0) {
         if (param0 != -17540) {
           field_b = -91;
-          if (lo.field_Nb) {
-            sd.field_I = true;
+          if (IconTextComponent.field_Nb) {
+            AlphaContainer.field_I = true;
             NodeHashTable.a(0, false);
             el.field_b = 0;
             return;
           }
           throw new IllegalStateException();
         }
-        if (lo.field_Nb) {
-          sd.field_I = true;
+        if (IconTextComponent.field_Nb) {
+          AlphaContainer.field_I = true;
           NodeHashTable.a(0, false);
           el.field_b = 0;
           return;

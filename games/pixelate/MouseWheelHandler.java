@@ -3,7 +3,7 @@
  */
 abstract class MouseWheelHandler {
     static String[] field_a;
-    static pd field_e;
+    static ScrollPaneWithFooter field_e;
     static int field_d;
     static int field_c;
     static id field_b;

@@ -205,8 +205,8 @@ final class ck {
           }
           param2.discardPackedGroups = false;
           param2.field_e = 0;
-          StatefulTextPainter.field_y = new il(var3_int, param2, param2);
-          jd.field_k = new u(var3_int, param2, param2, new dn());
+          StatefulTextPainter.field_y = new QuickChatCategoryCache(var3_int, param2, param2);
+          jd.field_k = new QuickChatPhraseCache(var3_int, param2, param2, new dn());
           var4 = fl.c(-3060);
           if (var4 == null) {
             var11 = (Throwable) null;

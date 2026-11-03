@@ -116,7 +116,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   if (stackIn_81_0 < stackIn_81_1) {
                     break;
                   }
-                  il.field_g = true;
+                  QuickChatCategoryCache.field_g = true;
                   break;
                 }
               }
@@ -141,8 +141,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 ArchiveRequest.field_y = Js5NetworkRequest.j(-30272);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (bf.field_m != 0L) {
-                    stackIn_100_0 = $cfr$lcmp(~hm.a(64), ~bf.field_m);
+                  if (AchievementIcon.field_m != 0L) {
+                    stackIn_100_0 = $cfr$lcmp(~hm.a(64), ~AchievementIcon.field_m);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_100_0 <= 0)) {
@@ -263,12 +263,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             boolean decompiledSharedTail0 = (ProxySocketConnector.field_j != null &&
               ProxySocketConnector.field_i == null);
             if (!decompiledSharedTail0) {
-              NameAvailabilityValidator.field_u.setLocation(ae.field_a, mc.field_m);
+              NameAvailabilityValidator.field_u.setLocation(Vector3.field_a, mc.field_m);
               decompiledSharedTail0 = (Pixelate.field_H);
             }
             if (decompiledSharedTail0) {
               var6 = ProxySocketConnector.field_j.getInsets();
-              NameAvailabilityValidator.field_u.setLocation(var6.left + ae.field_a, var6.top + mc.field_m);
+              NameAvailabilityValidator.field_u.setLocation(var6.left + Vector3.field_a, var6.top + mc.field_m);
             }
           }
           this.renderClient(124);
@@ -329,7 +329,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 return;
               }
               DropTargetWidget.field_I = this;
-              ae.field_a = 0;
+              Vector3.field_a = 0;
               BufferedRandomAccessFile.field_i = param2;
               ValidatedTextWidget.field_ib = param2;
               wp.field_c = param0;
@@ -423,7 +423,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (this == DropTargetWidget.field_I &&
             !DialWidget.field_U) {
             MusicPatch.field_s = true;
-            if (il.field_g &&
+            if (QuickChatCategoryCache.field_g &&
               hm.a(64) - um.field_m > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
@@ -468,7 +468,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          bf.field_m = 0L;
+          AchievementIcon.field_m = 0L;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "tn.start()");
         }
@@ -554,7 +554,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == DropTargetWidget.field_I &&
             !DialWidget.field_U) {
-            bf.field_m = hm.a(64);
+            AchievementIcon.field_m = hm.a(64);
             SecondaryNodeHashTable.a(5000L, (byte) 23);
             fp.field_c = null;
             this.shutdownApplet(false, -238);
@@ -672,12 +672,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           NameAvailabilityValidator.field_u.setVisible(true);
           if (var2 == ProxySocketConnector.field_j) {
             var3 = ProxySocketConnector.field_j.getInsets();
-            NameAvailabilityValidator.field_u.setLocation(ae.field_a + var3.left, var3.top + mc.field_m);
+            NameAvailabilityValidator.field_u.setLocation(Vector3.field_a + var3.left, var3.top + mc.field_m);
             if (var4 != 0) {
-              NameAvailabilityValidator.field_u.setLocation(ae.field_a, mc.field_m);
+              NameAvailabilityValidator.field_u.setLocation(Vector3.field_a, mc.field_m);
             }
           } else {
-            NameAvailabilityValidator.field_u.setLocation(ae.field_a, mc.field_m);
+            NameAvailabilityValidator.field_u.setLocation(Vector3.field_a, mc.field_m);
           }
           NameAvailabilityValidator.field_u.addFocusListener((java.awt.event.FocusListener) (this));
           NameAvailabilityValidator.field_u.requestFocus();
@@ -705,7 +705,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          bf.field_m = 4000L + hm.a(64);
+          AchievementIcon.field_m = 4000L + hm.a(64);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "tn.stop()");
         }

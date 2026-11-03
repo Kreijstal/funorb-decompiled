@@ -11,7 +11,7 @@ final class kh {
           if (param0) {
             field_a = (SceneWidget) null;
           }
-          sc.field_a = param1;
+          ConditionalTextValue.field_a = param1;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "kh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

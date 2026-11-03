@@ -93,7 +93,7 @@ final class DiskCacheRequest extends ArchiveRequest {
             var15 = Checkbox.field_V[1];
             var30Lifetime3 = var15;
             var30Lifetime4 = var15;
-            var16 = ap.field_b;
+            var16 = IntKeyLookup.field_b;
             var14.field_b.addIconAction(param0 + 13, 12, var15, var16);
             var17 = ProxySocketConnector.field_n;
             var18 = Checkbox.field_V[2];

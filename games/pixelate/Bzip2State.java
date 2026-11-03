@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ai {
+final class Bzip2State {
     int[] field_b;
     byte[] field_J;
     int field_r;
@@ -57,7 +57,7 @@ final class ai {
           }
           var2_int = 0;
           if (param0 >= -125) {
-            ai.a((byte) 125);
+            Bzip2State.a((byte) 125);
           }
           while (param1.length() > var2_int) {
             if (!vf.a((byte) -3, param1.charAt(var2_int))) {
@@ -156,7 +156,7 @@ final class ai {
         field_d = null;
     }
 
-    ai() {
+    Bzip2State() {
         this.field_b = new int[257];
         this.field_y = new int[6];
         this.field_h = new byte[6][258];

@@ -40,7 +40,7 @@ class BackgroundScene {
             var4 = 640 * (-this.field_d + RegistrationRequestDialog.field_Cb) / var5;
             SoftwareRasterizer.f(var2, 0, var4, 480);
           }
-          SpriteEffectHelpers.a(this.field_i, 0, -DateInputWidget.field_L.maxAscent + (140 - pd.field_Jb * 2));
+          SpriteEffectHelpers.a(this.field_i, 0, -DateInputWidget.field_L.maxAscent + (140 - ScrollPaneWithFooter.field_Jb * 2));
           DateInputWidget.field_L.drawCentered(this.field_l, 320, 140, 0, 0);
           SoftwareRasterizer.b(nh.field_a);
           if (var4 > 0) {
@@ -220,15 +220,15 @@ class BackgroundScene {
             this.field_f[var5].c();
             SoftwareRasterizer.a(0, 0, 128, 128, 0, 48);
           }
-          this.field_i = new Sprite(640, 4 * pd.field_Jb + (DateInputWidget.field_L.maxAscent + DateInputWidget.field_L.maxDescent));
+          this.field_i = new Sprite(640, 4 * ScrollPaneWithFooter.field_Jb + (DateInputWidget.field_L.maxAscent + DateInputWidget.field_L.maxDescent));
           this.field_i.c();
           var5Lifetime1 = 320;
-          var6 = this.field_i.field_E - pd.field_Jb * 2 - DateInputWidget.field_L.maxDescent;
+          var6 = this.field_i.field_E - ScrollPaneWithFooter.field_Jb * 2 - DateInputWidget.field_L.maxDescent;
           DateInputWidget.field_L.drawCentered(this.field_l, -1 + var5Lifetime1, var6 - 1, 0, -1);
           DateInputWidget.field_L.drawCentered(this.field_l, var5Lifetime1 + 1, var6 - 1, 0, -1);
           DateInputWidget.field_L.drawCentered(this.field_l, var5Lifetime1 - 1, var6 + 1, 0, -1);
           DateInputWidget.field_L.drawCentered(this.field_l, 1 + var5Lifetime1, var6 + 1, 0, -1);
-          SoftwareRasterizer.c(pd.field_Jb, pd.field_Jb, 0, 0, this.field_i.field_F, this.field_i.field_E);
+          SoftwareRasterizer.c(ScrollPaneWithFooter.field_Jb, ScrollPaneWithFooter.field_Jb, 0, 0, this.field_i.field_F, this.field_i.field_E);
           DateInputWidget.field_L.drawCentered(this.field_l, var5Lifetime1, var6, 0, -1);
           ClientException.field_f.a(19692);
           this.field_g = new int[2][];

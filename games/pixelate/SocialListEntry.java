@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class im extends SceneWidget {
+final class SocialListEntry extends SceneWidget {
     String field_Nb;
     static boolean field_Jb;
     static int field_Qb;
@@ -19,7 +19,7 @@ final class im extends SceneWidget {
 
     public static void j(int param0) {
         if (param0 != -25942) {
-          im.j(-7);
+          SocialListEntry.j(-7);
           field_Hb = null;
           field_Lb = null;
           field_Mb = null;
@@ -30,7 +30,7 @@ final class im extends SceneWidget {
         field_Mb = null;
     }
 
-    im() {
+    SocialListEntry() {
         super(0L, (SceneWidget) null);
     }
 

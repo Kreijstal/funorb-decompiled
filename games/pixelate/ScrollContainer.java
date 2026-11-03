@@ -53,7 +53,7 @@ final class ScrollContainer extends SceneWidget {
             }
             if (var3_int != 0) {
               if (NumericDateInputWidget.field_V) {
-                param1 = sd.a(vf.field_a, 79, new String[]{param1});
+                param1 = AlphaContainer.a(vf.field_a, 79, new String[]{param1});
               }
               if (ke.field_d) {
                 param1 = IsaacRandom.field_a;
@@ -207,11 +207,11 @@ final class ScrollContainer extends SceneWidget {
 
     final static LobbyPlayer a(int param0, long param1) {
         if (param0 == 2) {
-          return (LobbyPlayer) (il.field_d.a(param0 - 11436, param1));
+          return (LobbyPlayer) (QuickChatCategoryCache.field_d.a(param0 - 11436, param1));
         }
         String var4 = (String) null;
         ScrollContainer.a(true, (String) null, -69);
-        return (LobbyPlayer) (il.field_d.a(param0 - 11436, param1));
+        return (LobbyPlayer) (QuickChatCategoryCache.field_d.a(param0 - 11436, param1));
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Bzip2Decoder {
-    private static ai field_a;
+    private static Bzip2State field_a;
 
-    private final static void c(ai param0) {
+    private final static void c(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -376,11 +376,11 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static byte e(ai param0) {
+    private final static byte e(Bzip2State param0) {
         return (byte)Bzip2Decoder.a(1, param0);
     }
 
-    private final static void b(ai param0) {
+    private final static void b(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -515,7 +515,7 @@ final class Bzip2Decoder {
         field_a = null;
     }
 
-    private final static byte a(ai param0) {
+    private final static byte a(Bzip2State param0) {
         return (byte)Bzip2Decoder.a(8, param0);
     }
 
@@ -543,7 +543,7 @@ final class Bzip2Decoder {
         return stackIn_2_0;
     }
 
-    private final static int a(int param0, ai param1) {
+    private final static int a(int param0, Bzip2State param1) {
         int var2;
         while (param1.field_i < param0) {
           param1.field_K = param1.field_K << 8 | param1.field_k[param1.field_I] & 255;
@@ -559,7 +559,7 @@ final class Bzip2Decoder {
         return var2;
     }
 
-    private final static void d(ai param0) {
+    private final static void d(Bzip2State param0) {
         int var1 = 0;
         param0.field_D = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -616,6 +616,6 @@ final class Bzip2Decoder {
     }
 
     static {
-        field_a = new ai();
+        field_a = new Bzip2State();
     }
 }

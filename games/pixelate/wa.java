@@ -29,8 +29,8 @@ final class wa {
         int[] var21;
         byte[] var22;
         var8 = Pixelate.field_H ? 1 : 0;
-        var1 = new Sprite[im.field_Qb];
-        for (var2 = 0; im.field_Qb > var2; var2++) {
+        var1 = new Sprite[SocialListEntry.field_Qb];
+        for (var2 = 0; SocialListEntry.field_Qb > var2; var2++) {
           var3 = ge.field_c[var2] * ByteStorage.field_g[var2];
           var20 = wo.field_f[var2];
           if (!TriangleMesh.field_m[var2]) {

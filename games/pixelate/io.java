@@ -81,7 +81,7 @@ final class io {
             for (var7_int = 1; var4 > var7_int; var7_int++) {
               lg.field_b[var7_int] = var15.h(5);
             }
-            lo.a(2147483647, var6, var4);
+            IconTextComponent.a(2147483647, var6, var4);
             for (var7_intLifetime1 = 0; var4 > var7_intLifetime1; var7_intLifetime1++) {
               QueuedInput.a(-112, var15);
               if (var7_intLifetime1 != 0) {
@@ -388,8 +388,8 @@ final class io {
         String var7 = null;
         BinaryBitmapFont var8 = null;
         try {
-          ModalPanel.field_L[0] = ai.field_d.nextInt();
-          ModalPanel.field_L[1] = ai.field_d.nextInt();
+          ModalPanel.field_L[0] = Bzip2State.field_d.nextInt();
+          ModalPanel.field_L[1] = Bzip2State.field_d.nextInt();
           GameModeSelectScreen.field_v.position = 0;
           ModalPanel.field_L[3] = (int)NumericDateInputWidget.field_P;
           ModalPanel.field_L[2] = (int)(NumericDateInputWidget.field_P >> 32);
@@ -420,7 +420,7 @@ final class io {
           if (param4) {
             var6 = var6 | 8;
           }
-          if (sc.field_a != null) {
+          if (ConditionalTextValue.field_a != null) {
             var6 = var6 | 16;
           }
           aa.field_f.writeByte(160, var6);
@@ -429,8 +429,8 @@ final class io {
             var7 = "";
           }
           aa.field_f.b((byte) -41, var7);
-          if (sc.field_a != null) {
-            aa.field_f.a((byte) -66, sc.field_a);
+          if (ConditionalTextValue.field_a != null) {
+            aa.field_f.a((byte) -66, ConditionalTextValue.field_a);
           }
           if (param1 >= -40) {
             var8 = (BinaryBitmapFont) null;

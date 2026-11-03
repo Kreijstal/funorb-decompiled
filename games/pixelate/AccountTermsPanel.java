@@ -5,7 +5,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
     static ReportAbuseDialog field_M;
     private RegistrationRequestDialog field_O;
     static int field_J;
-    static lo[][] field_L;
+    static IconTextComponent[][] field_L;
     private TextHotspotWidget field_N;
     private TextButton field_K;
 
@@ -54,7 +54,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
 
     public static void a(byte param0) {
         field_M = null;
-        field_L = (lo[][]) null;
+        field_L = (IconTextComponent[][]) null;
         if (param0 <= 76) {
           int[] var2 = (int[]) null;
           AccountTermsPanel.a(68, 58, 42, 23, 122, -39, -94, -82, 19, 50, 36, (int[]) null, -6, -18, 58, -21, 11);
@@ -73,7 +73,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
             this.field_O.p(-128);
           }
           if (param2 != 11) {
-            field_L = (lo[][]) null;
+            field_L = (IconTextComponent[][]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -485,7 +485,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
           this.field_O = param0;
           this.field_K = new TextButton(MusicCrossfadeStream.field_J, (UiListener) null);
           this.field_K.field_y = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
-          var7 = sd.a(IndexedSpriteState.field_e, 102, new String[]{this.e((byte) 62), this.a(-21)});
+          var7 = AlphaContainer.a(IndexedSpriteState.field_e, 102, new String[]{this.e((byte) 62), this.a(-21)});
           var3 = 20;
           var4 = new TextWidgetPainter(he.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, he.field_d.maxAscent, -1, 2147483647, true);
           this.field_N = new TextHotspotWidget(var7, var4);

@@ -8,7 +8,7 @@ final class QuickChatMenu extends SceneWidget {
     static String field_Eb;
     private int[] field_Tb;
     private int field_Ob;
-    private lo[] field_Sb;
+    private IconTextComponent[] field_Sb;
     private int field_Kb;
     private QuickChatMenu field_Pb;
     static String field_Ib;
@@ -48,15 +48,15 @@ final class QuickChatMenu extends SceneWidget {
         if (param1 != -2671) {
           field_Nb = (ea) null;
         }
-        u.field_h = param0;
+        QuickChatPhraseCache.field_h = param0;
     }
 
     final void l(int param0) {
         int var3 = 0;
-        lo var4 = null;
+        IconTextComponent var4 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
-        lo[] var6 = this.field_Sb;
-        lo[] var2 = var6;
+        IconTextComponent[] var6 = this.field_Sb;
+        IconTextComponent[] var2 = var6;
         if (param0 != 17872) {
           this.field_Hb = (char[]) null;
         }
@@ -139,7 +139,7 @@ final class QuickChatMenu extends SceneWidget {
           mj.a(false);
           return true;
         }
-        var5 = nj.field_f;
+        var5 = DualLinkDeque.field_f;
         if (var5 > param1) {
           if (rk.field_d == var5) {
             var5 = 63;
@@ -159,9 +159,9 @@ final class QuickChatMenu extends SceneWidget {
 
     final void b(int param0, int param1, int param2) {
         int var4_int = 0;
-        lo var5;
+        IconTextComponent var5;
         int var6;
-        lo stackIn_7_0 = null;
+        IconTextComponent stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         QuickChatMenu var4;
         QuickChatMenu var7;
@@ -196,10 +196,10 @@ final class QuickChatMenu extends SceneWidget {
 
     final boolean m(int param0) {
         int var4 = 0;
-        lo var5 = null;
+        IconTextComponent var5 = null;
         int var6 = Pixelate.field_H ? 1 : 0;
         int var2 = 0;
-        lo[] var3 = this.field_Sb;
+        IconTextComponent[] var3 = this.field_Sb;
         if (param0 != 14685) {
           return false;
         }
@@ -251,7 +251,7 @@ final class QuickChatMenu extends SceneWidget {
           this.field_Jb = var18.maxAscent + (2 + var18.maxDescent);
           this.field_Rb = 0;
           this.field_Ob = this.field_Jb * this.field_Mb;
-          this.field_Sb = new lo[this.field_Mb];
+          this.field_Sb = new IconTextComponent[this.field_Mb];
           var11 = "<col=999999>";
           var12 = "</col>";
           for (var13 = 0; var13 < this.field_Mb; var13++) {
@@ -263,7 +263,7 @@ final class QuickChatMenu extends SceneWidget {
               -1 == this.field_Tb[var13]) {
               var14 = fe.field_b;
             }
-            this.field_Sb[var13] = new lo(0L, param2, (SceneWidget) null, param3, (Sprite) (var14), param6[var13]);
+            this.field_Sb[var13] = new IconTextComponent(0L, param2, (SceneWidget) null, param3, (Sprite) (var14), param6[var13]);
             this.a(this.field_Sb[var13], (byte) 26);
             var15 = var17.textWidth(param6[var13]);
             if (var15 > this.field_Rb) {
@@ -377,7 +377,7 @@ final class QuickChatMenu extends SceneWidget {
               mj.a(false);
               SocketJs5Transport.d(-93);
             } else {
-              pd.j(-127);
+              ScrollPaneWithFooter.j(-127);
               mj.a(false);
             }
           }

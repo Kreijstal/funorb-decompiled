@@ -36,7 +36,7 @@ final class lg {
             return stackIn_10_0;
           }
           if (param2 == 8) {
-            stackIn_14_0 = fb.field_Eb;
+            stackIn_14_0 = PairedTextColumns.field_Eb;
             return stackIn_14_0;
           }
           if (param2 == 9) {
@@ -52,7 +52,7 @@ final class lg {
             return stackIn_26_0;
           }
           if (param2 == 14) {
-            stackIn_29_0 = sd.a(Puzzle.field_m, 28, new String[]{param1});
+            stackIn_29_0 = AlphaContainer.a(Puzzle.field_m, 28, new String[]{param1});
             return stackIn_29_0;
           }
           if (param0 > 113) {

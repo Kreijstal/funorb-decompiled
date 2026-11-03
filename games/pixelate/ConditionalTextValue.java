@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sc {
+final class ConditionalTextValue {
     private boolean field_b;
     static int[] field_i;
     static SceneWidget field_g;
@@ -22,7 +22,7 @@ final class sc {
 
     final static boolean b(int param0) {
         if (param0 != -10093) {
-          sc.b(-27);
+          ConditionalTextValue.b(-27);
           return he.field_f != null ? true : false;
         }
         return he.field_f != null ? true : false;
@@ -39,7 +39,7 @@ final class sc {
           return wa.field_a;
         }
         if (!wk.field_j.b(-3)) {
-          return im.field_Mb;
+          return SocialListEntry.field_Mb;
         }
         if (!wk.field_j.ensureGroupAvailableByName("commonui", -1)) {
           return PasswordValidator.field_q + " - " + wk.field_j.getGroupProgressByName(119, "commonui") + "%";
@@ -54,7 +54,7 @@ final class sc {
           return jd.field_p;
         }
         if (param0 != 16422) {
-          sc.b(34);
+          ConditionalTextValue.b(34);
         }
         if (!MatchingTextValidator.field_u.a((byte) 92)) {
           return em.field_a + " - " + MatchingTextValidator.field_u.c(0) + "%";
@@ -62,11 +62,11 @@ final class sc {
         return GrowableIntList.field_b;
     }
 
-    sc(String param0) {
+    ConditionalTextValue(String param0) {
         this(param0, false);
     }
 
-    sc(String param0, boolean param1) {
+    ConditionalTextValue(String param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_1 = false;
         RuntimeException stackIn_12_0 = null;

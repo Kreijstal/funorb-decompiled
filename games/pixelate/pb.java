@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pb {
-    private bf[] field_l;
+    private AchievementIcon[] field_l;
     private int field_c;
     private int field_e;
     private int field_d;
@@ -49,8 +49,8 @@ final class pb {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          wg.field_g = param1;
-          if (null != wg.field_g &&
+          Matrix3.field_g = param1;
+          if (null != Matrix3.field_g &&
             param1.length < 3) {
             throw new IllegalArgumentException("");
           }
@@ -272,9 +272,9 @@ final class pb {
           this.field_d = 16 * var7[0].field_g;
           this.field_a = -this.field_g + gb.field_b.field_B >> 1;
           this.field_h = gb.field_b.field_A - this.field_d >> 1;
-          this.field_l = new bf[var7.length];
+          this.field_l = new AchievementIcon[var7.length];
           for (var5 = 0; var7.length > var5; var5++) {
-            this.field_l[var5] = new bf(var7[var5]);
+            this.field_l[var5] = new AchievementIcon(var7[var5]);
           }
           this.field_e = 200 + this.field_o;
           this.field_k = param1;

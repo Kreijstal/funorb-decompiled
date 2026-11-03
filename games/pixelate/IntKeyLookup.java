@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ap {
+final class IntKeyLookup {
     static int field_a;
     static int field_c;
     static String[][] field_d;
@@ -73,7 +73,7 @@ final class ap {
         return var5;
     }
 
-    ap(int[] param0) {
+    IntKeyLookup(int[] param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;

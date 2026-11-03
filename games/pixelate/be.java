@@ -63,37 +63,37 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
     }
 
     final static void a(boolean param0, LobbyGame param1, int param2, int param3) {
-        lo dupTemp$0 = null;
+        IconTextComponent dupTemp$0 = null;
         int stackIn_8_0 = 0;
         int stackIn_18_0 = 0;
-        lo stackIn_46_0 = null;
+        IconTextComponent stackIn_46_0 = null;
         boolean stackIn_47_1 = false;
         int stackIn_49_0 = 0;
         int stackIn_68_0 = 0;
         int stackIn_82_0 = 0;
         int stackIn_94_0 = 0;
-        lo stackIn_123_0 = null;
+        IconTextComponent stackIn_123_0 = null;
         boolean stackIn_124_1 = false;
         boolean stackIn_131_1 = false;
         boolean stackIn_137_2 = false;
-        lo stackIn_141_0 = null;
+        IconTextComponent stackIn_141_0 = null;
         int stackIn_141_1 = 0;
         int stackIn_141_2 = 0;
         int stackIn_141_3 = 0;
         boolean stackIn_145_1 = false;
-        lo stackIn_152_0 = null;
+        IconTextComponent stackIn_152_0 = null;
         boolean stackIn_153_1 = false;
         int stackIn_155_0 = 0;
         int stackIn_159_0 = 0;
-        lo stackIn_191_0 = null;
+        IconTextComponent stackIn_191_0 = null;
         boolean stackIn_192_1 = false;
-        lo stackIn_201_0 = null;
+        IconTextComponent stackIn_201_0 = null;
         boolean stackIn_202_1 = false;
-        lo stackIn_208_0 = null;
+        IconTextComponent stackIn_208_0 = null;
         boolean stackIn_209_1 = false;
         int stackIn_212_0 = 0;
         String stackIn_240_0 = null;
-        lo stackIn_246_0 = null;
+        IconTextComponent stackIn_246_0 = null;
         boolean stackIn_247_1 = false;
         int stackIn_249_0 = 0;
         boolean stackIn_252_0 = false;
@@ -104,18 +104,18 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         String stackIn_451_0 = null;
         boolean stackIn_499_0 = false;
         int stackIn_507_0 = 0;
-        lo stackIn_526_0 = null;
+        IconTextComponent stackIn_526_0 = null;
         boolean stackIn_527_1 = false;
         boolean stackIn_531_1 = false;
         boolean stackIn_537_2 = false;
-        lo stackIn_544_0 = null;
+        IconTextComponent stackIn_544_0 = null;
         int stackIn_544_1 = 0;
         int stackIn_544_2 = 0;
         int stackIn_544_3 = 0;
-        lo stackIn_547_0 = null;
-        lo stackIn_548_0 = null;
+        IconTextComponent stackIn_547_0 = null;
+        IconTextComponent stackIn_548_0 = null;
         boolean stackIn_548_1 = false;
-        lo stackIn_555_0 = null;
+        IconTextComponent stackIn_555_0 = null;
         boolean stackIn_556_1 = false;
         int stackIn_558_0 = 0;
         int stackIn_560_0 = 0;
@@ -132,10 +132,10 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        lo var7_ref_lo = null;
+        IconTextComponent var7_ref_lo = null;
         int var8_int = 0;
         String var8 = null;
-        lo[] var8_array = null;
+        IconTextComponent[] var8_array = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -145,7 +145,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        lo var17 = null;
+        IconTextComponent var17 = null;
         int var18 = 0;
         String var18_ref_String = null;
         String var19 = null;
@@ -157,8 +157,8 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         int var24 = 0;
         String var25 = null;
         int var26 = 0;
-        lo stackIn_544_0Lifetime1;
-        lo var7_ref_loLifetime1;
+        IconTextComponent stackIn_544_0Lifetime1;
+        IconTextComponent var7_ref_loLifetime1;
         int stackIn_507_0Lifetime1;
         int stackIn_544_1Lifetime1;
         int stackIn_544_2Lifetime1;
@@ -225,7 +225,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                   break;
                 }
               }
-              up.field_o = sd.a(IterableNodeHashTable.field_c, 96, new String[]{io.field_c.field_pc});
+              up.field_o = AlphaContainer.a(IterableNodeHashTable.field_c, 96, new String[]{io.field_c.field_pc});
               break;
             }
           }
@@ -564,11 +564,11 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                 }
                 if (0 <= var9 &&
                   var17.field_R) {
-                  if (null != bf.field_q) {
-                    if (bf.field_q[var7] == null) {
+                  if (null != AchievementIcon.field_q) {
+                    if (AchievementIcon.field_q[var7] == null) {
                       stackIn_443_0 = null;
                     } else {
-                      stackIn_443_0 = bf.field_q[var7][var9];
+                      stackIn_443_0 = AchievementIcon.field_q[var7][var9];
                     }
                   } else {
                     stackIn_443_0 = null;
@@ -599,11 +599,11 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                         if (1 == var22_int) {
                           var21 = PlayerBoard.field_l;
                         } else {
-                          var21 = sd.a(nj.field_c, 45, new String[]{Integer.toString(var22_int)});
+                          var21 = AlphaContainer.a(DualLinkDeque.field_c, 45, new String[]{Integer.toString(var22_int)});
                         }
                       }
                       if (var12 != 0) {
-                        var22 = sd.a(SocketConnector.field_d, 103, new String[]{Integer.toString(gi.field_a), Integer.toString(StatefulTextPainter.field_z[var7][var9])});
+                        var22 = AlphaContainer.a(SocketConnector.field_d, 103, new String[]{Integer.toString(gi.field_a), Integer.toString(StatefulTextPainter.field_z[var7][var9])});
                         if (null != var21) {
                           var21 = (String) (var21) + "<br>" + (String) (var22);
                         } else {
@@ -658,7 +658,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                         var21 = LobbyPlayer.field_Kb + (String) (var22);
                         break;
                       }
-                      var21 = sd.a(ki.field_a, 41, new String[]{(String) (var22)});
+                      var21 = AlphaContainer.a(ki.field_a, 41, new String[]{(String) (var22)});
                       break;
                     }
                   }
@@ -1542,27 +1542,27 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           var2Lifetime118 = ContentTransitionDialog.a("gameopttooltips,0,0", (byte) -114);
           if (null != var2Lifetime118) {
-            ap.field_d[0][0] = of.a(var2Lifetime118, 1);
+            IntKeyLookup.field_d[0][0] = of.a(var2Lifetime118, 1);
           }
           var2Lifetime119 = ContentTransitionDialog.a("gameopttooltips,0,1", (byte) -48);
           if (var2Lifetime119 != null) {
-            ap.field_d[0][1] = of.a(var2Lifetime119, 1);
+            IntKeyLookup.field_d[0][1] = of.a(var2Lifetime119, 1);
           }
           var2Lifetime120 = ContentTransitionDialog.a("gameopttooltips,0,2", (byte) -93);
           if (null != var2Lifetime120) {
-            ap.field_d[0][2] = of.a(var2Lifetime120, 1);
+            IntKeyLookup.field_d[0][2] = of.a(var2Lifetime120, 1);
           }
           var2Lifetime121 = ContentTransitionDialog.a("gameopttooltips,1,0", (byte) -6);
           if (null != var2Lifetime121) {
-            ap.field_d[1][0] = of.a(var2Lifetime121, 1);
+            IntKeyLookup.field_d[1][0] = of.a(var2Lifetime121, 1);
           }
           var2Lifetime122 = ContentTransitionDialog.a("gameopttooltips,1,1", (byte) -122);
           if (null != var2Lifetime122) {
-            ap.field_d[1][1] = of.a(var2Lifetime122, 1);
+            IntKeyLookup.field_d[1][1] = of.a(var2Lifetime122, 1);
           }
           var2Lifetime123 = ContentTransitionDialog.a("gameopttooltips,1,2", (byte) -41);
           if (null != var2Lifetime123) {
-            ap.field_d[1][2] = of.a(var2Lifetime123, 1);
+            IntKeyLookup.field_d[1][2] = of.a(var2Lifetime123, 1);
           }
           var2Lifetime124 = ContentTransitionDialog.a("high_detail", (byte) -93);
           if (var2Lifetime124 != null) {
@@ -1602,7 +1602,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           var2Lifetime133 = ContentTransitionDialog.a("picturescompleted", (byte) 116);
           if (var2Lifetime133 != null) {
-            lo.field_Lb = of.a(var2Lifetime133, 1);
+            IconTextComponent.field_Lb = of.a(var2Lifetime133, 1);
           }
           var2Lifetime134 = ContentTransitionDialog.a("finalscore", (byte) 124);
           if (var2Lifetime134 != null) {
@@ -1626,7 +1626,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           var2Lifetime139 = ContentTransitionDialog.a("score", (byte) -12);
           if (null != var2Lifetime139) {
-            lo.field_Kb = of.a(var2Lifetime139, 1);
+            IconTextComponent.field_Kb = of.a(var2Lifetime139, 1);
           }
           var2Lifetime140 = ContentTransitionDialog.a("challengemode", (byte) 111);
           if (var2Lifetime140 != null) {
@@ -1650,7 +1650,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           var2Lifetime145 = ContentTransitionDialog.a("keycode_s", (byte) -11);
           if (null != var2Lifetime145) {
-            ae.field_d = var2Lifetime145[0] & 255;
+            Vector3.field_d = var2Lifetime145[0] & 255;
           }
           var2Lifetime146 = ContentTransitionDialog.a("keycode_d", (byte) 126);
           if (var2Lifetime146 != null) {
@@ -1658,7 +1658,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           var2Lifetime147 = ContentTransitionDialog.a("keycode_x", (byte) 127);
           if (var2Lifetime147 != null) {
-            ap.field_e = 255 & var2Lifetime147[0];
+            IntKeyLookup.field_e = 255 & var2Lifetime147[0];
           }
           ig.field_b = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1780,7 +1780,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
             }
             this.field_N = new TextButton(stackIn_15_3, (UiListener) null);
             if (this.field_M) {
-              this.field_Q = new TextButton(sd.field_M, (UiListener) (this));
+              this.field_Q = new TextButton(AlphaContainer.field_M, (UiListener) (this));
               if (var11 != 0) {
                 this.field_L = new TextButton(bo.field_k, (UiListener) null);
                 this.field_N = new TextButton(FullscreenFocusCanvas.field_e, (UiListener) null);

@@ -61,7 +61,7 @@ final class LabeledField extends SingleChildContainer {
     }
 
     final static boolean a(boolean param0, long param1, String param2) {
-        im var4 = null;
+        SocialListEntry var4 = null;
         RuntimeException var4_ref = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;

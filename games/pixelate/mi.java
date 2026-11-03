@@ -20,7 +20,7 @@ final class mi extends MenuScreen {
         if (param0 != 11) {
           mi.b(false);
         }
-        String var8 = var7 + " " + ub.a(sd.a(bf.a(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{mj.field_i}), param0 - 11, "<br><br>", '#');
+        String var8 = var7 + " " + ub.a(AlphaContainer.a(AchievementIcon.a(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{mj.field_i}), param0 - 11, "<br><br>", '#');
         BinaryBitmapFont var5 = qj.field_e;
         int var6 = 1 + var5.maxDescent + var5.maxAscent;
         var5.drawParagraph(var8, 50, 150, 540, 10 * var6, 16777215, 0, 1, 0, var6);
@@ -184,7 +184,7 @@ final class mi extends MenuScreen {
             if (BoardView.field_b == GameModeSelectScreen.field_s &&
               QueuedInput.a(1, false)) {
               var6_intLifetime1 = MusicCrossfadeStream.field_o.f(255);
-              sc.field_a = null;
+              ConditionalTextValue.field_a = null;
               MusicCrossfadeStream.field_o.position = 0;
               TextLayoutLine.field_e = var6_intLifetime1;
               if (0 != var6_intLifetime1 &&
@@ -226,7 +226,7 @@ final class mi extends MenuScreen {
                 stackIn_47_0 = ((8 & var7) != 0);
                 ln.field_q = stackIn_47_0;
                 stackIn_50_0 = ((4 & var7) != 0);
-                wg.field_a = stackIn_50_0;
+                Matrix3.field_a = stackIn_50_0;
                 if (ln.field_q) {
                   IsaacRandom.field_g = true;
                 }
@@ -258,7 +258,7 @@ final class mi extends MenuScreen {
                 QueuedInput.a(var6, 126, AudioService.a(13867));
               }
               if (BufferedRandomAccessFile.field_j <= 0 &&
-                !wg.field_a) {
+                !Matrix3.field_a) {
                 try {
                   JavaScriptBridge.a("unzap", (byte) -56, AudioService.a(13867));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {

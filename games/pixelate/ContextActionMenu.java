@@ -12,7 +12,7 @@ final class ContextActionMenu extends SceneWidget {
     static int field_Fb;
     private int field_Gb;
     private int field_Ob;
-    private lo[] items;
+    private IconTextComponent[] items;
     private SceneWidget field_Jb;
     private Sprite[] field_Kb;
     private int itemCount;
@@ -109,7 +109,7 @@ final class ContextActionMenu extends SceneWidget {
 
     final void addAction(String param0, byte param1, int param2) {
         try {
-          this.items[this.itemCount] = new lo(0L, (SceneWidget) null, (SceneWidget) null, this.field_Jb, (Sprite) null, param0);
+          this.items[this.itemCount] = new IconTextComponent(0L, (SceneWidget) null, (SceneWidget) null, this.field_Jb, (Sprite) null, param0);
           this.items[this.itemCount].field_ab = this.field_Kb;
           this.items[this.itemCount].field_A = true;
           this.items[this.itemCount].verticalAlignment = 1;
@@ -136,7 +136,7 @@ final class ContextActionMenu extends SceneWidget {
 
     final void addIconAction(int param0, int param1, Sprite param2, String param3) {
         try {
-          this.items[this.itemCount] = new lo((long)param0, (SceneWidget) null, (SceneWidget) null, this.field_Jb, param2, param3);
+          this.items[this.itemCount] = new IconTextComponent((long)param0, (SceneWidget) null, (SceneWidget) null, this.field_Jb, param2, param3);
           this.items[this.itemCount].field_ab = this.field_Kb;
           this.items[this.itemCount].field_A = true;
           this.items[this.itemCount].verticalAlignment = 1;
@@ -185,7 +185,7 @@ final class ContextActionMenu extends SceneWidget {
         super(0L, param0);
         this.field_Mb = new int[256];
         this.field_Gb = -2;
-        this.items = new lo[256];
+        this.items = new IconTextComponent[256];
         try {
           this.field_Kb = param1;
           this.field_Jb = param3;
@@ -211,7 +211,7 @@ final class ContextActionMenu extends SceneWidget {
         int var8Lifetime1;
         var11 = Pixelate.field_H ? 1 : 0;
         if (this.itemCount == 0) {
-          this.items[this.itemCount] = new lo(0L, (SceneWidget) null, (SceneWidget) null, this.field_Pb, (Sprite) null, ln.field_l);
+          this.items[this.itemCount] = new IconTextComponent(0L, (SceneWidget) null, (SceneWidget) null, this.field_Pb, (Sprite) null, ln.field_l);
           this.items[this.itemCount].verticalAlignment = 1;
           this.a(this.items[this.itemCount], (byte) 26);
           this.field_Mb[this.itemCount] = -1;

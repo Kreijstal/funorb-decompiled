@@ -9,7 +9,7 @@ final class MusicPatchPcmStream extends PcmStream {
     private MidiPcmStream sequencer;
     PcmStreamMixer field_o;
 
-    final static sc e(int param0) {
+    final static ConditionalTextValue e(int param0) {
         String var1 = null;
         String var1Lifetime1;
         if (param0 == 100) {
@@ -18,7 +18,7 @@ final class MusicPatchPcmStream extends PcmStream {
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new sc(ProxySocketConnector.f(8192), OptionsScreen.g(120));
+          return new ConditionalTextValue(ProxySocketConnector.f(8192), OptionsScreen.g(120));
         }
         field_p = (Sprite) null;
         var1Lifetime1 = ProxySocketConnector.f(8192);
@@ -26,7 +26,7 @@ final class MusicPatchPcmStream extends PcmStream {
           var1Lifetime1.indexOf('@') >= 0) {
           var1Lifetime1 = "";
         }
-        return new sc(ProxySocketConnector.f(8192), OptionsScreen.g(120));
+        return new ConditionalTextValue(ProxySocketConnector.f(8192), OptionsScreen.g(120));
     }
 
     final PcmStream nextSubStream() {

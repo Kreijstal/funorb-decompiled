@@ -121,23 +121,23 @@ abstract class bg {
         int var6 = ui.field_f.field_A + var5;
         int var7 = var5 - (-param3 + ui.field_f.field_A);
         SoftwareRasterizer.d(var6, param2, param3 - 2 * ui.field_f.field_A, 25, 16711935);
-        SoftwareRasterizer.a(bf.field_r);
+        SoftwareRasterizer.a(AchievementIcon.field_r);
         SoftwareRasterizer.f(0, 0, 320, 480);
         ui.field_f.b(var5, param2);
         SoftwareRasterizer.f(320, 0, 640, 480);
         ui.field_f.a(var7, param2);
-        SoftwareRasterizer.b(bf.field_r);
+        SoftwareRasterizer.b(AchievementIcon.field_r);
         SoftwareRasterizer.b(var6, param2, -(2 * ui.field_f.field_A) + param3, 0);
         SoftwareRasterizer.b(var6, 25 + param2 - 1, param3 - 2 * ui.field_f.field_A, 0);
         int var8 = this.field_e >> 16;
         mh.a(param2, gd.field_h[param1], var8 - hp.field_Gb.field_A, 0);
         mh.a(param2, gd.field_h[param1], var8, 0);
-        SoftwareRasterizer.a(bf.field_r);
+        SoftwareRasterizer.a(AchievementIcon.field_r);
         SoftwareRasterizer.f(0, 0, 320, 480);
         NameAvailabilityValidator.field_q.a(var5 + 2, param2, 128);
         SoftwareRasterizer.f(320, 0, 640, 480);
         di.field_c.a(-1 + param3 + (var5 - di.field_c.field_A), param2, 128);
-        SoftwareRasterizer.b(bf.field_r);
+        SoftwareRasterizer.b(AchievementIcon.field_r);
         if (var7 <= var6) {
           return;
         }

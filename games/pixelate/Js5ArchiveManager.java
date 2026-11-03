@@ -77,7 +77,7 @@ final class Js5ArchiveManager {
           stackIn_23_0 = ff.field_h;
           stackIn_24_1 = (param1) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_23_0).a(stackIn_24_1, 0);
-          stackIn_27_0 = ai.field_A;
+          stackIn_27_0 = Bzip2State.field_A;
           stackIn_28_1 = (param1) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_27_0).a(stackIn_28_1, 0);
         }

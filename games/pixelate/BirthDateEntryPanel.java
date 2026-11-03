@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends ArrayWidgetContainer implements ButtonListener {
+final class BirthDateEntryPanel extends ArrayWidgetContainer implements ButtonListener {
     private TextButton field_O;
     static IntrusiveDeque field_P;
     static int field_G;
@@ -78,7 +78,7 @@ final class oj extends ArrayWidgetContainer implements ButtonListener {
         }
     }
 
-    oj(int param0, int param1, int param2, int param3) {
+    BirthDateEntryPanel(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_Q = new NumericDateInputWidget(new GradientOutlineTextPainter(10000536), TextFieldValidator.field_l, 0, 0, 140, 25);
         this.field_Q.a(new DateOfBirthValidator(), 20672);

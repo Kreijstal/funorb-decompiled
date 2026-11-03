@@ -128,7 +128,7 @@ final class fq extends MenuScreen {
           }
           if (param0.field_d != 0 ||
             param0.field_e != 0) {
-            for (var2_int = 0; var2_int < sd.field_L; var2_int++) {
+            for (var2_int = 0; var2_int < AlphaContainer.field_L; var2_int++) {
               var3 = MenuScreen.field_e[var2_int];
               if (var3.field_j == 2 &&
                 var3.field_d == param0.field_d &&
@@ -233,7 +233,7 @@ final class fq extends MenuScreen {
                 var11 = var3_ref_ob.maxAscent + 150;
                 var3_ref_ob.drawRightAlignedText(kh.field_b, 150, var11, 0, 0);
                 var3_ref_ob.drawText(ij.field_q, 170, var11, 0, 0);
-                var3_ref_ob.drawRightAlignedText(lo.field_Kb, 500, var11, 0, 0);
+                var3_ref_ob.drawRightAlignedText(IconTextComponent.field_Kb, 500, var11, 0, 0);
                 var11 += 20;
                 for (var12 = 0; var12 < 10; var12++) {
                   if (var5[var12] != null) {

@@ -116,7 +116,7 @@ final class HuffmanCodec {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        im var3 = CipherPacketBuffer.a(param2, param0, (byte) 113);
+        SocialListEntry var3 = CipherPacketBuffer.a(param2, param0, (byte) 113);
         ClientContextMenu var4Lifetime1;
         if (var3 != null) {
           ProxySocketConnector.field_n.b(false, (byte) -98);

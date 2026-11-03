@@ -128,7 +128,7 @@ final class nk {
               if (stackIn_34_0 != ~var18) {
                 if (var18 == 1 &&
                   ge.field_f) {
-                  var19 = fb.field_Gb;
+                  var19 = PairedTextColumns.field_Gb;
                 } else {
                   decompiledFrameRemainder0 = (2 == var18);
                   if (decompiledFrameRemainder0) {
@@ -172,7 +172,7 @@ final class nk {
             !ln.field_q) {
             return;
           }
-          td.field_b = new oj(0, 0, 0, 0);
+          td.field_b = new BirthDateEntryPanel(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

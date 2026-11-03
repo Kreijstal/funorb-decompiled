@@ -81,7 +81,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         if (param0 != 16) {
           return (SceneWidget) null;
         }
-        return ae.field_c.field_Fb;
+        return Vector3.field_c.field_Fb;
     }
 
     final dj validateText(String param0, boolean param1) {

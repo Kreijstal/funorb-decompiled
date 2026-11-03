@@ -58,14 +58,14 @@ final class re {
         }
     }
 
-    final static im a(String param0, int param1) {
+    final static SocialListEntry a(String param0, int param1) {
         String var2 = null;
-        im var3 = null;
+        SocialListEntry var3 = null;
         String var4 = null;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        im stackIn_19_0 = null;
+        SocialListEntry stackIn_19_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -90,7 +90,7 @@ final class re {
           if (var2 == null) {
             return null;
           }
-          var3 = (im) (vm.field_b.a(-11434, (long)var2.hashCode()));
+          var3 = (SocialListEntry) (vm.field_b.a(-11434, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Fb);
             var4 = dh.a(var7, (byte) 41);
@@ -98,7 +98,7 @@ final class re {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (im) (vm.field_b.b((byte) 47));
+            var3 = (SocialListEntry) (vm.field_b.b((byte) 47));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -68,16 +68,16 @@ final class sm extends IntrusiveNode {
               var4 = he.field_f.field_cb;
             }
             var5 = null;
-            if (il.field_e == 0) {
+            if (QuickChatCategoryCache.field_e == 0) {
               var5 = jf.a((String) (var4), param0, (byte) 108);
             }
-            if (il.field_e == 1) {
+            if (QuickChatCategoryCache.field_e == 1) {
               var5 = ff.a(param0, (String) (var4), (byte) -106);
             }
-            if (il.field_e == 2) {
+            if (QuickChatCategoryCache.field_e == 2) {
               var5 = mj.a(-34, (String) (var4), param0);
             }
-            if (il.field_e == 3) {
+            if (QuickChatCategoryCache.field_e == 3) {
               var5 = aq.a((String) (var4), param0, (String) (var4), -20867);
               var4 = var5;
               var4 = var5;
@@ -88,7 +88,7 @@ final class sm extends IntrusiveNode {
             }
           }
           he.field_f = null;
-          il.field_e = -1;
+          QuickChatCategoryCache.field_e = -1;
           return;
         }
         if (he.field_f == null) {
@@ -100,17 +100,17 @@ final class sm extends IntrusiveNode {
         }
         if (2 != var3Lifetime1) {
           he.field_f = null;
-          il.field_e = -1;
+          QuickChatCategoryCache.field_e = -1;
           return;
         }
         if (he.field_f.field_cb == null) {
           he.field_f = null;
-          il.field_e = -1;
+          QuickChatCategoryCache.field_e = -1;
           return;
         }
         if (he.field_f.field_cb.equals("")) {
           he.field_f = null;
-          il.field_e = -1;
+          QuickChatCategoryCache.field_e = -1;
           return;
         }
         if (91 != he.field_f.field_cb.charAt(0)) {
@@ -120,27 +120,27 @@ final class sm extends IntrusiveNode {
           var4Lifetime1 = he.field_f.field_cb;
         }
         var5Lifetime1 = null;
-        if (il.field_e == 0) {
+        if (QuickChatCategoryCache.field_e == 0) {
           var5Lifetime1 = jf.a((String) (var4Lifetime1), param0, (byte) 108);
         }
-        if (il.field_e == 1) {
+        if (QuickChatCategoryCache.field_e == 1) {
           var5Lifetime1 = ff.a(param0, (String) (var4Lifetime1), (byte) -106);
         }
-        if (il.field_e == 2) {
+        if (QuickChatCategoryCache.field_e == 2) {
           var5Lifetime1 = mj.a(-34, (String) (var4Lifetime1), param0);
         }
-        if (il.field_e == 3) {
+        if (QuickChatCategoryCache.field_e == 3) {
           var5Lifetime1 = aq.a((String) (var4Lifetime1), param0, (String) (var4Lifetime1), -20867);
         }
         if (var5Lifetime1 == null) {
           he.field_f = null;
-          il.field_e = -1;
+          QuickChatCategoryCache.field_e = -1;
           return;
         }
         var6Lifetime1 = (String) null;
         MidiPcmStream.a(0, (String) null, (String) (var4Lifetime1), (byte) -59, 2, (String) (var5Lifetime1));
         he.field_f = null;
-        il.field_e = -1;
+        QuickChatCategoryCache.field_e = -1;
         return;
     }
 

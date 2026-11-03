@@ -9,7 +9,7 @@ final class jd extends IntrusiveNode {
     int field_q;
     static byte[][][] field_o;
     int field_l;
-    static u field_k;
+    static QuickChatPhraseCache field_k;
     static int field_n;
     int[] field_t;
     int field_u;
@@ -48,7 +48,7 @@ final class jd extends IntrusiveNode {
           return;
         }
         GreenGrowTheRushesBackground.field_m = -1;
-        sd.field_N = false;
+        AlphaContainer.field_N = false;
     }
 
     jd() {

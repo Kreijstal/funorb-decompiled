@@ -196,9 +196,9 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
             nk.field_e.height = 0;
             var6.field_K = 0;
             VerticalScrollbar.field_Qb.field_cb = vn.field_d.toUpperCase();
-            var7 = (ai.field_A.field_K + 2) / 2;
-            nk.field_e.a(ai.field_A.height - 40, 40, 0, 256, -2 + var7);
-            ep.field_a.a(ai.field_A.height - 40, 40, var7, 256, ai.field_A.field_K - var7);
+            var7 = (Bzip2State.field_A.field_K + 2) / 2;
+            nk.field_e.a(Bzip2State.field_A.height - 40, 40, 0, 256, -2 + var7);
+            ep.field_a.a(Bzip2State.field_A.height - 40, 40, var7, 256, Bzip2State.field_A.field_K - var7);
             if (LinkButtonPainter.field_a.length == 1 &&
               LinkButtonPainter.field_a[0] == 2) {
               var8 = 0;
@@ -243,7 +243,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
               } else {
                 stackIn_38_1 = AccountRequestDialog.field_sb;
               }
-              stackIn_37_0.field_cb = sd.a(stackIn_38_1, 59, new String[]{ep.field_a.field_cb});
+              stackIn_37_0.field_cb = AlphaContainer.a(stackIn_38_1, 59, new String[]{ep.field_a.field_cb});
               ValidatedTextWidget.field_kb.field_rb = true;
               nk.field_e.field_cb = dn.field_b;
               pb.field_f = true;
@@ -289,7 +289,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                       }
                     }
                   }
-                  up.field_o = "<col=A00000>" + lo.field_Gb + "<br>" + ij.field_p + (String) (var9);
+                  up.field_o = "<col=A00000>" + IconTextComponent.field_Gb + "<br>" + ij.field_p + (String) (var9);
                 }
               }
             } else {
@@ -324,7 +324,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           stackIn_69_1 = -28476;
           stackIn_70_2 = (param1) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_69_0).a(stackIn_69_1, stackIn_70_2);
-          stackIn_74_0 = ai.field_A;
+          stackIn_74_0 = Bzip2State.field_A;
           stackIn_74_1 = param2 - 28479;
           stackIn_75_2 = (param1) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_74_0).a(stackIn_74_1, stackIn_75_2);
@@ -338,7 +338,7 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           nd.field_b.field_g.b((byte) -108);
           if (null != DraggableWidget.field_S) {
             if (0 != ValidatedTextWidget.field_kb.field_P) {
-              fb.a(1, param0);
+              PairedTextColumns.a(1, param0);
             }
             if (ep.field_a.field_P != 0) {
               if (!TriangleMesh.field_r) {

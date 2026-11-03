@@ -58,7 +58,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           bl.field_e = param6;
           SceneWidget.field_ib = param2;
           GreenGrowTheRushesBackground.field_o = param8;
-          pd.field_Eb = param5;
+          ScrollPaneWithFooter.field_Eb = param5;
           AcidSunsetBackground.field_n = param1;
           ef.field_e = param4;
           Match.field_h = (Js5Transport) ((Object) new SocketJs5Transport());

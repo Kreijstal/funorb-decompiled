@@ -34,7 +34,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_5_0 = sk.field_a;
             return stackIn_5_0;
           }
-          if (!wg.a(var4, var3, (byte) -4)) {
+          if (!Matrix3.a(var4, var3, (byte) -4)) {
             stackIn_8_0 = sk.field_a;
             return stackIn_8_0;
           }

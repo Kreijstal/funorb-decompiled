@@ -45,23 +45,23 @@ final class ph extends IntrusiveNode {
               }
             }
             if (AchievementsScreen.field_q == 2) {
-              sc.field_d = new BufferedSocket((java.net.Socket) (KiteBackground.field_o.field_e), ef.field_e);
+              ConditionalTextValue.field_d = new BufferedSocket((java.net.Socket) (KiteBackground.field_o.field_e), ef.field_e);
               var2 = new PacketBuffer(13);
               FallingPieceView.a(GreenGrowTheRushesBackground.field_o, (byte) 66, SceneWidget.field_ib, var2, AcidSunsetBackground.field_n);
               var2.writeByte(160, 15);
               var2.d(fj.field_a, -76);
-              sc.field_d.a(13, -103, 0, var2.payload);
+              ConditionalTextValue.field_d.a(13, -103, 0, var2.payload);
               AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
               ViewportController.field_a = 30000L + hm.a(64);
             }
             if (AchievementsScreen.field_q == 3) {
-              if (sc.field_d.a(-120) <= 0) {
+              if (ConditionalTextValue.field_d.a(-120) <= 0) {
                 if (ViewportController.field_a < hm.a(64)) {
                   stackIn_30_0 = ce.a((byte) -124, -2);
                   return stackIn_30_0;
                 }
               } else {
-                var1_int = sc.field_d.c((byte) -81);
+                var1_int = ConditionalTextValue.field_d.c((byte) -81);
                 if (0 != var1_int) {
                   stackIn_26_0 = ce.a((byte) -124, var1_int);
                   return stackIn_26_0;
@@ -76,8 +76,8 @@ final class ph extends IntrusiveNode {
             if (AchievementsScreen.field_q != 4) {
               return -1;
             }
-            Match.field_h.a(sc.field_d, ModalStack.field_L, 8);
-            sc.field_d = null;
+            Match.field_h.a(ConditionalTextValue.field_d, ModalStack.field_L, 8);
+            ConditionalTextValue.field_d = null;
             KiteBackground.field_o = null;
             AchievementsScreen.field_q = 0;
             stackIn_37_0 = 0;
@@ -114,17 +114,17 @@ final class ph extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           dk.field_e = bi.a("basic", "display_name_changed", param0, (byte) -25);
-          ma.field_z = new pd(0L, rm.field_a, SceneWidgetNode.field_u, OptionsScreen.field_q);
-          MouseWheelHandler.field_e = new pd(0L, rm.field_a, qh.field_e, NanoTickClock.field_n);
+          ma.field_z = new ScrollPaneWithFooter(0L, rm.field_a, SceneWidgetNode.field_u, OptionsScreen.field_q);
+          MouseWheelHandler.field_e = new ScrollPaneWithFooter(0L, rm.field_a, qh.field_e, NanoTickClock.field_n);
           wa.field_f = new SceneWidget(0L, (SceneWidget) null);
           SceneWidget.field_E = new SceneWidget(0L, TextFieldValidator.field_h);
           SceneWidget.field_E.horizontalAlignment = 1;
-          EmailConfirmationValidator.field_u = new SceneWidget(0L, u.field_l, qn.field_m);
-          ae.field_e = new SceneWidget(0L, ni.field_s, ScrollContainer.field_Jb);
+          EmailConfirmationValidator.field_u = new SceneWidget(0L, QuickChatPhraseCache.field_l, qn.field_m);
+          Vector3.field_e = new SceneWidget(0L, ni.field_s, ScrollContainer.field_Jb);
           sk.field_e = new SceneWidget(0L, dn.field_c);
           wa.field_f.a(SceneWidget.field_E, (byte) 26);
           wa.field_f.a(EmailConfirmationValidator.field_u, (byte) 26);
-          wa.field_f.a(ae.field_e, (byte) 26);
+          wa.field_f.a(Vector3.field_e, (byte) 26);
           wa.field_f.a(ma.field_z, (byte) 26);
           wa.field_f.a(sk.field_e, (byte) 26);
           ma.field_z.field_Gb.field_Ib.applyStyle(param1 ^ 27853, TextFieldValidator.field_h);

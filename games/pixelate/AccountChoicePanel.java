@@ -51,7 +51,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           stackIn_21_2 = (param2) && (!param3) && (LobbyPlayer.field_Wb);
           ((SceneWidget) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_21_2);
         } else {
-          ValidatedTextWidget.field_lb.field_cb = sd.a(oi.field_d, 89, new String[]{Integer.toString(gi.field_a)});
+          ValidatedTextWidget.field_lb.field_cb = AlphaContainer.a(oi.field_d, 89, new String[]{Integer.toString(gi.field_a)});
           if (param0 != 2) {
             return;
           }
@@ -188,7 +188,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
 
     public AccountChoicePanel() {
         super(0, 0, 476, 225, (WidgetPainter) null);
-        this.field_J = new TextButton(sd.field_M, (UiListener) null);
+        this.field_J = new TextButton(AlphaContainer.field_M, (UiListener) null);
         this.field_N = new TextButton(MatchController.field_v, (UiListener) null);
         this.field_L = new TextButton(fc.field_c, (UiListener) null);
         ThreeSliceButtonPainter var1 = new ThreeSliceButtonPainter();

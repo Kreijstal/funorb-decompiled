@@ -119,7 +119,7 @@ final class GameResultsScreen extends MenuScreen {
           var5.drawText(MusicCrossfadeStream.field_E, 120, var6, 0, -1);
           var5.drawRightAlignedText(Integer.toString(this.field_H), 540, var6, 1, -1);
           var6 = var6 + var7;
-          var5.drawText(lo.field_Lb, 120, var6, 0, -1);
+          var5.drawText(IconTextComponent.field_Lb, 120, var6, 0, -1);
           var5.drawRightAlignedText(Integer.toString(this.field_J), 540, var6, 1, -1);
           var6 = var6 + var7;
           SoftwareRasterizer.d(118, var6 - 5, 424, 9, 0);
@@ -221,7 +221,7 @@ final class GameResultsScreen extends MenuScreen {
         this.field_u = !param1 ? qj.field_c : MouseInputHandler.field_a;
         this.field_G = 1;
         this.field_x = param5;
-        this.field_y = sd.a(BoundedRandomAccessFile.field_b, param4 + 21, new String[]{Integer.toString(param2), Integer.toString(param6)});
+        this.field_y = AlphaContainer.a(BoundedRandomAccessFile.field_b, param4 + 21, new String[]{Integer.toString(param2), Integer.toString(param6)});
         if (param4 != 34) {
           return;
         }
@@ -307,7 +307,7 @@ final class GameResultsScreen extends MenuScreen {
         try {
           this.field_G = 2;
           if (param0 != null) {
-            this.field_w = sd.a(TextButton.field_G, param1 ^ -47, new String[]{param0});
+            this.field_w = AlphaContainer.a(TextButton.field_G, param1 ^ -47, new String[]{param0});
           } else {
             this.field_w = td.field_c;
           }
@@ -411,7 +411,7 @@ final class GameResultsScreen extends MenuScreen {
               this.field_s = dq.field_c;
             }
           } else {
-            this.field_s = sc.field_c;
+            this.field_s = ConditionalTextValue.field_c;
           }
         }
     }

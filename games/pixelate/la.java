@@ -42,7 +42,7 @@ final class la {
           }
           var2 = var13.f(255);
           if (var2 == 0) {
-            var11 = bf.a(false);
+            var11 = AchievementIcon.a(false);
             var17 = var11;
             var14 = var17;
             var3 = var14;
@@ -74,7 +74,7 @@ final class la {
                 na.a(true);
                 return;
               }
-              var16_ref.field_l = bf.a(false);
+              var16_ref.field_l = AchievementIcon.a(false);
               var16_ref.field_p = true;
               var16_ref.field_s = var16_ref.field_l[0];
               var16_ref.c(2779);
@@ -419,19 +419,19 @@ final class la {
               var12.field_Zb.field_Cb = var24_int;
               var12.field_Zb.field_pb = var24_int;
               var12.field_Zb.field_y = var24_int;
-              if (param2 == ae.field_c) {
+              if (param2 == Vector3.field_c) {
                 if (!io.field_c.field_dc) {
                   var12.field_Mb.field_cb = MenuInputState.field_m;
                 }
               } else {
                 if (var12.field_Vb) {
-                  var12.field_Hb.field_cb = sd.a(ByteStorage.field_e, 111, new String[]{var20});
+                  var12.field_Hb.field_cb = AlphaContainer.a(ByteStorage.field_e, 111, new String[]{var20});
                   var12.field_Mb.field_cb = IntrusiveNode.field_f;
                 } else {
                   if (var12.field_Jb) {
-                    var12.field_Hb.field_cb = sd.a(ModalPanel.field_O, 58, new String[]{var20});
+                    var12.field_Hb.field_cb = AlphaContainer.a(ModalPanel.field_O, 58, new String[]{var20});
                     var12.field_Zb.field_cb = DisplayNameForm.field_M;
-                    var12.field_Mb.field_cb = u.field_e;
+                    var12.field_Mb.field_cb = QuickChatPhraseCache.field_e;
                   } else {
                     var12.field_Zb.field_cb = ih.field_b;
                   }
@@ -447,7 +447,7 @@ final class la {
                   var25_int = var25_int + var26;
                 }
                 if (null != var12.field_Mb.field_cb) {
-                  if (param2 == ae.field_c) {
+                  if (param2 == Vector3.field_c) {
                     var26Lifetime2 = 40;
                   } else {
                     var26Lifetime2 = var12.field_Mb.g(0) + 2 * MouseWheelHandler.field_c;
@@ -522,18 +522,18 @@ final class la {
               if (~DebouncedValidator.field_f != ~var12.field_Nb) {
                 if (var5_int != 0 &&
                   !var12.field_Xb) {
-                  var24Lifetime2 = sd.a(rh.field_w, 46, new String[]{var20});
+                  var24Lifetime2 = AlphaContainer.a(rh.field_w, 46, new String[]{var20});
                 } else {
                   if (var7 <= var12.field_Yb) {
                     if (var6 <= var12.field_Rb) {
                       if ((var8 & ~var12.field_Ib) != 0) {
                         var25_int = cl.a((byte) -101, var8 & ~var12.field_Ib);
-                        var24Lifetime2 = sd.a(MarkerSliderPainter.field_i, 27, new String[]{var20});
+                        var24Lifetime2 = AlphaContainer.a(MarkerSliderPainter.field_i, 27, new String[]{var20});
                         if (var25_int > 0 &&
                           null != lc.field_l &&
                           var25_int <= lc.field_l.length &&
                           lc.field_l[var25_int - 1] != null) {
-                          var24Lifetime2 = sd.a(lc.field_l[var25_int - 1][2], 62, new String[]{var20});
+                          var24Lifetime2 = AlphaContainer.a(lc.field_l[var25_int - 1][2], 62, new String[]{var20});
                           var30Lifetime1 = var24Lifetime2;
                           var25 = var30Lifetime1;
                           var24Lifetime2 = var25;
@@ -542,14 +542,14 @@ final class la {
                         }
                       }
                     } else {
-                      var24Lifetime2 = sd.a(BackgroundScene.field_e, 40, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = AlphaContainer.a(BackgroundScene.field_e, 40, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.field_Yb + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = sd.a(jm.field_k, 22, new String[]{var20});
+                      var24Lifetime2 = AlphaContainer.a(jm.field_k, 22, new String[]{var20});
                     }
-                    var24Lifetime2 = sd.a(UiTheme.field_l, 62, new String[]{var20, Integer.toString(var25_int)});
+                    var24Lifetime2 = AlphaContainer.a(UiTheme.field_l, 62, new String[]{var20, Integer.toString(var25_int)});
                   }
                 }
               } else {
@@ -562,7 +562,7 @@ final class la {
                     if (var25_int == 1) {
                       var24Lifetime2 = ReportAbuseDialog.field_Mb;
                     }
-                    var24Lifetime2 = sd.a(JaggrabDownloader.field_f, 95, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = AlphaContainer.a(JaggrabDownloader.field_f, 95, new String[]{null, Integer.toString(var25_int)});
                   } else {
                     if (var6 <= var12.field_Rb) {
                       if (0 != (var8 & ~var12.field_Ib)) {
@@ -576,7 +576,7 @@ final class la {
                         }
                       }
                     } else {
-                      var24Lifetime2 = sd.a(jn.field_m, 63, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = AlphaContainer.a(jn.field_m, 63, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
@@ -643,24 +643,24 @@ final class la {
                     }
                   }
                 }
-                if (param2 == ae.field_c &&
+                if (param2 == Vector3.field_c &&
                   AccountRegistrationPanel.m(99)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + sd.a(BoardParticle.field_q, 96, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + AlphaContainer.a(BoardParticle.field_q, 96, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + WeightedLruCache.field_i + (String) (var25);
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + sd.a(PacketBuffer.field_l, 102, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + AlphaContainer.a(PacketBuffer.field_l, 102, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + DirectByteStorage.field_i + (String) (var25);
                   }
                 }
-                if (param2 == ae.field_c &&
+                if (param2 == Vector3.field_c &&
                   !AccountRegistrationPanel.m(99)) {
                   var27 = io.field_c.field_pc;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + sd.a(ff.field_c, 93, new String[]{var27});
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + AlphaContainer.a(ff.field_c, 93, new String[]{var27});
                 }
                 up.field_o = (String) (var24Lifetime2);
               }

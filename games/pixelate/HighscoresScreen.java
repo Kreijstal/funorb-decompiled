@@ -610,7 +610,7 @@ final class HighscoresScreen extends MenuScreen {
           fq.field_o.field_d = RegistrationRequestDialog.field_Cb;
           NightToRememberBackground.field_o = param1;
           DebouncedValidator.field_d = 0;
-          u.a(false, 2 + param1);
+          QuickChatPhraseCache.a(false, 2 + param1);
           var2Lifetime1 = 20 / ((10 - param0) / 32);
           return;
         }

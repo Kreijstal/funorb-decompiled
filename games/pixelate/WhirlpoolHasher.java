@@ -156,7 +156,7 @@ final class WhirlpoolHasher {
                         if (param1.field_B > 0 &&
                           null != param1.field_n) {
                           dupTemp$0 = param1.field_n[var8];
-                          sc.field_i[dupTemp$0] = sc.field_i[dupTemp$0] + 1;
+                          ConditionalTextValue.field_i[dupTemp$0] = ConditionalTextValue.field_i[dupTemp$0] + 1;
                         }
                         mp.field_b = mp.field_b + 1;
                         break;
@@ -177,9 +177,9 @@ final class WhirlpoolHasher {
             param1.field_n != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(sc.field_i.length <= var9Lifetime1)) {
-              var10Lifetime1 = sc.field_i[var9Lifetime1];
-              sc.field_i[var9Lifetime1] = var8Lifetime1;
+            while (!(ConditionalTextValue.field_i.length <= var9Lifetime1)) {
+              var10Lifetime1 = ConditionalTextValue.field_i[var9Lifetime1];
+              ConditionalTextValue.field_i[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

@@ -597,7 +597,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static void b(boolean param0) {
-        wg.field_b = SoftwareRasterizer.field_d;
+        Matrix3.field_b = SoftwareRasterizer.field_d;
         ni.field_q = SoftwareRasterizer.field_j;
         EditableTextWidget.m(21);
         cl.field_g.a(GreenGrowTheRushesBackground.field_n.field_K, -2 + (-40 + GreenGrowTheRushesBackground.field_n.height), 0, 0, 5);
@@ -606,7 +606,7 @@ class PacketBuffer extends IntrusiveNode {
         StripedProgressBar.field_O.a(!DialWidgetPainter.field_n ? 0 : var1, vd.field_c.height - (!DialWidgetPainter.field_n ? 0 : var1), 0, 256, vd.field_c.field_K);
         mi.b(param0);
         ValidatedTextWidget.field_cb.a(-40 + GreenGrowTheRushesBackground.field_n.height, 40, 0, 256, GreenGrowTheRushesBackground.field_n.field_K);
-        sd.field_P.a(0, 30, 0, 256, MidiPcmStream.field_E.field_K);
+        AlphaContainer.field_P.a(0, 30, 0, 256, MidiPcmStream.field_E.field_K);
         DiskCacheWorker.field_a.a(30, -70 + MidiPcmStream.field_E.height - 2, 0, 256, MidiPcmStream.field_E.field_K);
         BlastFromThePastBackground.field_n.a(5, 30, 5, 256, 68);
         IsaacRandom.field_b.a(5, 30, 75, 256, 78);

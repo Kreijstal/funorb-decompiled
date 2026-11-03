@@ -159,7 +159,7 @@ final class OptionsScreen extends MenuScreen {
           }
           return 500;
         }
-        return lo.field_Jb + hf.field_k;
+        return IconTextComponent.field_Jb + hf.field_k;
     }
 
     final void f(int param0) {
@@ -310,7 +310,7 @@ final class OptionsScreen extends MenuScreen {
           }
           return 300;
         }
-        return lo.field_Jb;
+        return IconTextComponent.field_Jb;
     }
 
     final void e(byte param0) {
@@ -356,7 +356,7 @@ final class OptionsScreen extends MenuScreen {
             field_p = (PlatformTaskDispatcher) null;
           }
           MeshRasterState.a();
-          ai.field_x = 11;
+          Bzip2State.field_x = 11;
           nk.field_d = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
@@ -402,7 +402,7 @@ final class OptionsScreen extends MenuScreen {
             if (0 == this.field_o) {
               this.field_r = 1;
             }
-            jm.field_i[this.field_r].b(lo.field_Jb, 150);
+            jm.field_i[this.field_r].b(IconTextComponent.field_Jb, 150);
           } else {
             if (var4 != 31) {
               if (var4 == 32) {
@@ -433,7 +433,7 @@ final class OptionsScreen extends MenuScreen {
               if (DirectByteStorage.field_k == this.field_o) {
                 this.field_v = 1;
               }
-              jm.field_i[this.field_v + 4].b(lo.field_Jb, 355);
+              jm.field_i[this.field_v + 4].b(IconTextComponent.field_Jb, 355);
             }
           }
         } else {

@@ -538,7 +538,7 @@ final class MidiPcmStream extends PcmStream {
           MidiPcmStream.a(-80, 'ￆ');
         }
         var1.a(SoftwareRasterizer.field_k, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, SoftwareRasterizer.field_e, (byte) -102, SoftwareRasterizer.field_h, SoftwareRasterizer.field_f, SoftwareRasterizer.field_j);
-        oj.field_P.addFirst(22125, var1);
+        BirthDateEntryPanel.field_P.addFirst(22125, var1);
     }
 
     final boolean a(int param0, MusicPatchNode param1, int param2, boolean param3, int[] param4) {

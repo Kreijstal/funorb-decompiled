@@ -278,7 +278,7 @@ final class IntrusiveDequeCursor {
         NameAvailabilityValidator.field_t = param0;
         if (ce.field_a) {
           HighscoresScreen.field_p = null;
-          nj.field_h = new IntrusiveDeque();
+          DualLinkDeque.field_h = new IntrusiveDeque();
           EmailCredentials.field_k = 0;
           ce.field_a = false;
           MenuScreen.field_n = 0;

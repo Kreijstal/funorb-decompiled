@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lo extends SceneWidget {
+final class IconTextComponent extends SceneWidget {
     static int field_Mb;
     static String field_Kb;
     static int[] field_Ib;
@@ -23,7 +23,7 @@ final class lo extends SceneWidget {
         this.b(param6 ^ 0, param2, param1);
     }
 
-    lo(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, Sprite param4, String param5) {
+    IconTextComponent(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -106,7 +106,7 @@ final class lo extends SceneWidget {
           }
           return param2 + var4 + (param2 + param1) + var5;
         }
-        lo.j(1);
+        IconTextComponent.j(1);
         var4Lifetime1 = -param1;
         var5Lifetime1 = -param1;
         if (this.field_Fb != null) {

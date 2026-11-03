@@ -144,7 +144,7 @@ final class ViewportController {
           }
         }
         if (this.field_n > 0) {
-          ae.field_a = (this.field_n - BufferedRandomAccessFile.field_i) / 2;
+          Vector3.field_a = (this.field_n - BufferedRandomAccessFile.field_i) / 2;
         }
     }
 
@@ -204,10 +204,10 @@ final class ViewportController {
           return;
         }
         if (BufferedRandomAccessFile.field_i < this.field_n) {
-          ae.field_a = (this.field_n - BufferedRandomAccessFile.field_i) / 2;
+          Vector3.field_a = (this.field_n - BufferedRandomAccessFile.field_i) / 2;
         } else {
           if (this.field_n > 0) {
-            ae.field_a = 0;
+            Vector3.field_a = 0;
           }
         }
         if (BufferedRandomAccessFile.field_i == this.field_i &&

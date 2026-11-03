@@ -68,7 +68,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = dn.a(BlastFromThePastBackground.d(param0 + 0), (byte) 5, this.field_t, Js5ArchiveManager.a(-13565), MusicCrossfadeStream.b((byte) 127), pd.k(0), ProxySocketConnector.f(8192));
+            var5_intLifetime1 = dn.a(BlastFromThePastBackground.d(param0 + 0), (byte) 5, this.field_t, Js5ArchiveManager.a(-13565), MusicCrossfadeStream.b((byte) 127), ScrollPaneWithFooter.k(0), ProxySocketConnector.f(8192));
             if (-1 != var5_intLifetime1) {
               rh.a(true, gi.field_b, MatchController.field_y, var5_intLifetime1);
               gi.field_b = null;
@@ -90,7 +90,7 @@ abstract class NetworkGameClient extends GameApplet {
                   ff.field_d = vn.field_b;
                   GreenGrowTheRushesBackground.d(123);
                   el.field_b = 10;
-                  lo.field_Nb = false;
+                  IconTextComponent.field_Nb = false;
                 } else {
                   ScrollContainer.a(true, gi.field_b, var5_intLifetime2);
                   gi.field_b = null;
@@ -103,14 +103,14 @@ abstract class NetworkGameClient extends GameApplet {
               MusicCrossfadeStream.a(AudioService.a(param0 ^ 13867), 22770);
             } else {
               el.field_b = 10;
-              lo.field_Nb = true;
+              IconTextComponent.field_Nb = true;
             }
           }
           if (5 == var4) {
             d.a(0, AudioService.a(13867));
           }
           if (var4 == 6 &&
-            sd.field_I) {
+            AlphaContainer.field_I) {
             el.field_b = 10;
           }
           if (var4 == 7) {
@@ -129,7 +129,7 @@ abstract class NetworkGameClient extends GameApplet {
             vf.a(AudioService.a(13867), 3279);
           }
           if (12 == var4) {
-            ae.a((byte) 71, AudioService.a(13867), MusicPatch.b((byte) 11));
+            Vector3.a((byte) 71, AudioService.a(13867), MusicPatch.b((byte) 11));
           }
           if (13 == var4) {
             try {
@@ -198,7 +198,7 @@ abstract class NetworkGameClient extends GameApplet {
         cm.e(-118);
         if (!bd.a(true) &&
           el.field_b != 11) {
-          nj.d(param0 ^ 49661);
+          DualLinkDeque.d(param0 ^ 49661);
         }
         if (null != ScrollContainer.field_Lb) {
           lp.field_i = ScrollContainer.field_Lb.b(true);
@@ -206,7 +206,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (PauseMenuScreen.b(true)) {
           var3 = MenuInputState.a(true) * 1200;
           if (this.field_F ||
-            !(il.a(-115) <= var3) &&
+            !(QuickChatCategoryCache.a(-115) <= var3) &&
             !(var3 >= GreenGrowTheRushesBackground.g(13428))) {
             this.field_F = false;
             na.a(true);
@@ -298,10 +298,10 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (hf.field_q == 1) {
           if (0 != wo.field_d) {
-            DebouncedValidator.field_e = MouseInputHandler.a(il.field_f, (byte) 124);
+            DebouncedValidator.field_e = MouseInputHandler.a(QuickChatCategoryCache.field_f, (byte) 124);
           }
-          wk.field_j = vm.a(true, (byte) 22, false, wg.field_e, 1);
-          io.field_g = vm.a(true, (byte) 22, false, lo.field_Hb, 1);
+          wk.field_j = vm.a(true, (byte) 22, false, Matrix3.field_e, 1);
+          io.field_g = vm.a(true, (byte) 22, false, IconTextComponent.field_Hb, 1);
           MatchingTextValidator.field_u = vm.a(true, (byte) 22, false, SocketJs5Transport.field_r, 1);
           qn.field_l = wk.field_j;
           dg.field_d = io.field_g;
@@ -330,7 +330,7 @@ abstract class NetworkGameClient extends GameApplet {
           CachedArchiveProvider.c((byte) 24);
           SectorCacheStore.a((byte) 119);
           ThreeSliceButtonPainter.field_r = FullscreenFocusCanvas.field_c;
-          sd.field_I = false;
+          AlphaContainer.field_I = false;
           DebouncedValidator.a(io.field_g, param0 + 27848, wk.field_j, MatchingTextValidator.field_u, LobbyPlayer.field_Lb);
           if (ri.field_b ||
             null != LobbyGame.field_fc) {
@@ -413,10 +413,10 @@ abstract class NetworkGameClient extends GameApplet {
         qf.a(31171);
         ScrollContainer.field_Lb = bl.a(71);
         he.a(0, NameAvailabilityValidator.field_u);
-        wg.field_e = param6;
+        Matrix3.field_e = param6;
         SocketJs5Transport.field_r = param5;
-        il.field_f = param7;
-        lo.field_Hb = param3;
+        QuickChatCategoryCache.field_f = param7;
+        IconTextComponent.field_Hb = param3;
         ro.field_c = param2;
         this.initializeAccountPacketLengths(-2);
         an.a(0);
@@ -819,43 +819,43 @@ abstract class NetworkGameClient extends GameApplet {
         if (65536L > (long)param1) {
           if (256L > (long)param1) {
             if (param1 >= 0) {
-              return nj.field_e[param1] >> 12;
+              return DualLinkDeque.field_e[param1] >> 12;
             }
             return -1;
           }
           if ((long)param1 >= 4096L) {
             if (16384L <= (long)param1) {
-              return nj.field_e[param1 >> 8] >> 8;
+              return DualLinkDeque.field_e[param1 >> 8] >> 8;
             }
-            return nj.field_e[param1 >> 6] >> 9;
+            return DualLinkDeque.field_e[param1 >> 6] >> 9;
           }
           if ((long)param1 < 1024L) {
-            return nj.field_e[param1 >> 2] >> 11;
+            return DualLinkDeque.field_e[param1 >> 2] >> 11;
           }
-          return nj.field_e[param1 >> 4] >> 10;
+          return DualLinkDeque.field_e[param1 >> 4] >> 10;
         }
         if ((long)param1 >= 16777216L) {
           if (268435456L <= (long)param1) {
             if ((long)param1 < 1073741824L) {
-              return nj.field_e[param1 >> 22] >> 1;
+              return DualLinkDeque.field_e[param1 >> 22] >> 1;
             }
-            return nj.field_e[param1 >> 24];
+            return DualLinkDeque.field_e[param1 >> 24];
           }
           if ((long)param1 >= 67108864L) {
-            return nj.field_e[param1 >> 20] >> 2;
+            return DualLinkDeque.field_e[param1 >> 20] >> 2;
           }
-          return nj.field_e[param1 >> 18] >> 3;
+          return DualLinkDeque.field_e[param1 >> 18] >> 3;
         }
         if ((long)param1 < 1048576L) {
           if ((long)param1 < 262144L) {
-            return nj.field_e[param1 >> 10] >> 7;
+            return DualLinkDeque.field_e[param1 >> 10] >> 7;
           }
-          return nj.field_e[param1 >> 12] >> 6;
+          return DualLinkDeque.field_e[param1 >> 12] >> 6;
         }
         if ((long)param1 >= 4194304L) {
-          return nj.field_e[param1 >> 16] >> 4;
+          return DualLinkDeque.field_e[param1 >> 16] >> 4;
         }
-        return nj.field_e[param1 >> 14] >> 5;
+        return DualLinkDeque.field_e[param1 >> 14] >> 5;
     }
 
     private final void g(int param0) {

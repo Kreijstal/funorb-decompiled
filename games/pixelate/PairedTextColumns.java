@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb extends SceneWidget {
+final class PairedTextColumns extends SceneWidget {
     static String field_Eb;
     static String field_Gb;
     private SceneWidget field_Ib;
@@ -12,7 +12,7 @@ final class fb extends SceneWidget {
         field_Eb = null;
         field_Gb = null;
         if (param0 < 78) {
-          fb.b((byte) -20);
+          PairedTextColumns.b((byte) -20);
         }
     }
 
@@ -39,7 +39,7 @@ final class fb extends SceneWidget {
           return;
         }
         LobbyGame var4 = (LobbyGame) null;
-        fb.a(false, (String) null, (LobbyGame) null, 102);
+        PairedTextColumns.a(false, (String) null, (LobbyGame) null, 102);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -59,7 +59,7 @@ final class fb extends SceneWidget {
         var2.writeByte(160, 1);
     }
 
-    fb(long param0, Sprite param1, Sprite param2, int param3, SceneWidget param4, String param5) {
+    PairedTextColumns(long param0, Sprite param1, Sprite param2, int param3, SceneWidget param4, String param5) {
         this(param0, (SceneWidget) null, param4, param5);
         try {
           this.field_Fb.verticalAlignment = param3;
@@ -77,7 +77,7 @@ final class fb extends SceneWidget {
         return fd.a(0);
     }
 
-    private fb(long param0, SceneWidget param1, SceneWidget param2, String param3) {
+    private PairedTextColumns(long param0, SceneWidget param1, SceneWidget param2, String param3) {
         super(param0, (SceneWidget) null);
         try {
           this.field_Fb = new SceneWidget(0L, param1);
@@ -91,7 +91,7 @@ final class fb extends SceneWidget {
         }
     }
 
-    fb(long param0, fb param1, String param2) {
+    PairedTextColumns(long param0, PairedTextColumns param1, String param2) {
         this(param0, param1.field_Fb, param1.field_Ib, param2);
     }
 
@@ -138,18 +138,18 @@ final class fb extends SceneWidget {
           if (param2.field_dc && (param2.field_Tb == 2 ||
             !(wo.field_h < 2))) {
             var9 = ProxySocketConnector.field_n;
-            var10 = sd.a(ReportAbuseDialog.field_Kb, 103, new String[]{param1});
+            var10 = AlphaContainer.a(ReportAbuseDialog.field_Kb, 103, new String[]{param1});
             var9.field_b.addAction(var10, (byte) -112, 10);
           }
           ProxySocketConnector.field_n.c(-107);
           if (param0) {
             if (NameAvailabilityValidator.field_r == ProxySocketConnector.field_n.field_m) {
               var13 = ProxySocketConnector.field_n;
-              var14 = sd.a(DateInputWidget.field_M, 77, new String[]{param1});
+              var14 = AlphaContainer.a(DateInputWidget.field_M, 77, new String[]{param1});
               var13.field_b.addAction(var14, (byte) -111, 16);
             } else {
               var11 = ProxySocketConnector.field_n;
-              var12 = sd.a(sd.field_J, 89, new String[]{param1});
+              var12 = AlphaContainer.a(AlphaContainer.field_J, 89, new String[]{param1});
               var11.field_b.addAction(var12, (byte) -61, 15);
             }
           }

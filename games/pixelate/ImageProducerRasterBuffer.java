@@ -332,7 +332,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           }
         } else {
           if (ni.field_q == SoftwareRasterizer.field_j) {
-            if (SoftwareRasterizer.field_d != wg.field_b &&
+            if (SoftwareRasterizer.field_d != Matrix3.field_b &&
               ClientException.field_f.field_i == SoftwareRasterizer.field_d &&
               ClientException.field_f.field_a == SoftwareRasterizer.field_j) {
               if (io.field_c != null) {
@@ -572,7 +572,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
           }
         }
         Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
-        la.a(58, param0, ae.field_c, param8, param3);
+        la.a(58, param0, Vector3.field_c, param8, param3);
         AchievementsScreen.field_o = AchievementsScreen.field_o + 1;
     }
 

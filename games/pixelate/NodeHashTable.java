@@ -42,7 +42,7 @@ final class NodeHashTable {
     }
 
     final static void a(boolean param0, int param1) {
-        nd.field_b = param0 ? new wo(UiContainer.field_H, an.field_a) : new wo(fb.field_Gb, vd.field_a);
+        nd.field_b = param0 ? new wo(UiContainer.field_H, an.field_a) : new wo(PairedTextColumns.field_Gb, vd.field_a);
         ff.field_h = new SceneWidget(0L, (SceneWidget) null);
         if (param1 >= -68) {
           NodeHashTable.b(-102);

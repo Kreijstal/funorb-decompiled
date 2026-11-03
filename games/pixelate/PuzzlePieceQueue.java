@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class so {
+final class PuzzlePieceQueue {
     int field_a;
     boolean field_f;
     private int field_o;
@@ -50,7 +50,7 @@ final class so {
           this.field_g = this.field_l;
         }
         if (param0 != 27420) {
-          so.a(true);
+          PuzzlePieceQueue.a(true);
         }
     }
 
@@ -77,7 +77,7 @@ final class so {
         }
         if (!ik.field_a) {
           if (null == pk.field_f) {
-            pk.field_f = wg.b(255, 4);
+            pk.field_f = Matrix3.b(255, 4);
           }
           if (pk.field_f.field_p) {
             EmailCredentials.field_k = EmailCredentials.field_k & ~pk.field_f.field_s;
@@ -190,7 +190,7 @@ final class so {
         rk.field_e.drawText("Puzzle " + (this.field_e + 1), 30, 50, 0, -1);
     }
 
-    so(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    PuzzlePieceQueue(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         this.field_f = false;
         this.field_p = 0;
         try {

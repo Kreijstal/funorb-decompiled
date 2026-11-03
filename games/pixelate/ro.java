@@ -223,8 +223,8 @@ final class ro {
             qk.field_e = qk.field_e + 1;
           }
           var2_int = -1;
-          if (wg.field_g != null) {
-            var2_int = wg.field_g.length;
+          if (Matrix3.field_g != null) {
+            var2_int = Matrix3.field_g.length;
           } else {
             if (li.field_a != null) {
               var2_int = li.field_a.length;
@@ -234,29 +234,29 @@ final class ro {
             boolean decompiledFrameRemainder0 = true;
             if (ui.field_a > jn.field_q) {
               jn.field_q = jn.field_q + 1;
-              if (ui.field_k < jn.field_q && (null == wg.field_g ||
-                null == wg.field_g[ae.field_b])) {
+              if (ui.field_k < jn.field_q && (null == Matrix3.field_g ||
+                null == Matrix3.field_g[Vector3.field_b])) {
                 jn.field_q = jn.field_q - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (jn.field_q >= ui.field_a &&
-                  wg.field_g[(ae.field_b + 1) % var2_int] == null) {
+                  Matrix3.field_g[(Vector3.field_b + 1) % var2_int] == null) {
                   jn.field_q = jn.field_q - 1;
                 }
               }
             }
             if (ui.field_a <= jn.field_q) {
-              SpriteCheckboxPainter.field_b = ae.field_b;
+              SpriteCheckboxPainter.field_b = Vector3.field_b;
               if (!Match.field_e) {
-                ae.field_b = ae.field_b - 1;
-                if (ae.field_b < 0) {
-                  ae.field_b = ae.field_b + var2_int;
+                Vector3.field_b = Vector3.field_b - 1;
+                if (Vector3.field_b < 0) {
+                  Vector3.field_b = Vector3.field_b + var2_int;
                 }
               } else {
-                ae.field_b = ae.field_b + 1;
-                if (ae.field_b >= var2_int) {
-                  ae.field_b = ae.field_b - var2_int;
+                Vector3.field_b = Vector3.field_b + 1;
+                if (Vector3.field_b >= var2_int) {
+                  Vector3.field_b = Vector3.field_b - var2_int;
                 }
               }
               jn.field_q = jn.field_q - ui.field_a;

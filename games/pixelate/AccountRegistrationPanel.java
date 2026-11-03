@@ -81,7 +81,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         PasswordFieldPainter dupTemp$1 = new PasswordFieldPainter(10000536);
         this.field_X.field_y = (WidgetPainter) ((Object) dupTemp$1);
         this.field_V.field_y = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = sd.a(DelegatingCanvas.field_f, 27, new String[]{this.n(3), this.l(0)});
+        String var2 = AlphaContainer.a(DelegatingCanvas.field_f, 27, new String[]{this.n(3), this.l(0)});
         int var3 = 20;
         var3 = var3 + this.addLabeledField(DialWidget.field_S, -21, this.field_P, 170, var3);
         var3 = var3 + (5 + this.addFieldWithHelp(mp.field_d, this.field_L, 20, 170, var3, 126, ""));
@@ -299,7 +299,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                 }
               } else {
                 var8_ref_uj = new LobbyPlayer(var21, var22, var3);
-                il.field_d.a(false, var8_ref_uj, var3);
+                QuickChatCategoryCache.field_d.a(false, var8_ref_uj, var3);
               }
               var8_ref_uj.field_Pb = hm.a(64) - (long)((PacketBuffer) ((Object) var1)).readInt(0);
               var8_ref_uj.field_Rb = ((PacketBuffer) ((Object) var1)).a((byte) 105);
@@ -310,7 +310,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
               stackIn_55_0.field_Xb = stackIn_56_1;
               var8_ref_uj.field_Qb = ((PacketBuffer) ((Object) var1)).f(255);
               var8_ref_uj.field_Ib = ((PacketBuffer) ((Object) var1)).f(255);
-              il.a(-28, var8_ref_uj);
+              QuickChatCategoryCache.a(-28, var8_ref_uj);
               return;
             }
             if (6 == var2) {
@@ -490,7 +490,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                     var26.field_Tb = mh.field_b;
                     var26.field_Eb = var5Lifetime1Lifetime1;
                   }
-                  il.a(-124, var26);
+                  QuickChatCategoryCache.a(-124, var26);
                 }
                 return;
               }
@@ -505,7 +505,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                     var27.field_Jb = true;
                   }
                 }
-                il.a(-97, var27);
+                QuickChatCategoryCache.a(-97, var27);
               }
               return;
             }
@@ -529,7 +529,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
             var3_ref_uj.e(17);
             var3_ref_uj = (LobbyPlayer) (ClientContextMenu.field_a.last(1504642273));
           }
-          var3_ref_ujLifetime1 = (LobbyPlayer) (il.field_d.a(-110));
+          var3_ref_ujLifetime1 = (LobbyPlayer) (QuickChatCategoryCache.field_d.a(-110));
           while (var3_ref_ujLifetime1 != null) {
             if (var3_ref_ujLifetime1.field_Vb ||
               var3_ref_ujLifetime1.field_Jb) {
@@ -538,9 +538,9 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
                 var3_ref_ujLifetime1.field_Jb = false;
               }
               var3_ref_ujLifetime1.field_Vb = false;
-              il.a(-117, var3_ref_ujLifetime1);
+              QuickChatCategoryCache.a(-117, var3_ref_ujLifetime1);
             }
-            var3_ref_ujLifetime1 = (LobbyPlayer) (il.field_d.a((byte) 50));
+            var3_ref_ujLifetime1 = (LobbyPlayer) (QuickChatCategoryCache.field_d.a((byte) 50));
           }
           if (var2 == 1 &&
             null != io.field_c) {

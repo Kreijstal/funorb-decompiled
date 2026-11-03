@@ -6,7 +6,7 @@ final class ReportAbuseDialog extends SceneWidget {
     private SceneWidget field_Tb;
     private SceneWidget field_Eb;
     private SceneWidget field_Fb;
-    private fb muteControl;
+    private PairedTextColumns muteControl;
     private SceneWidget[] offenceButtons;
     private int field_Jb;
     private SceneWidget targetNameComponent;
@@ -35,18 +35,18 @@ final class ReportAbuseDialog extends SceneWidget {
         return true;
     }
 
-    ReportAbuseDialog(int param0, int param1, int param2, int param3, int param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, fb param9, SceneWidget param10, String param11, long param12) {
+    ReportAbuseDialog(int param0, int param1, int param2, int param3, int param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, PairedTextColumns param9, SceneWidget param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         Object stackIn_6_0;
-        fb stackIn_6_1;
-        fb stackIn_6_2;
+        PairedTextColumns stackIn_6_1;
+        PairedTextColumns stackIn_6_2;
         long stackIn_6_3;
-        fb stackIn_6_4;
+        PairedTextColumns stackIn_6_4;
         Object stackIn_7_0;
         Object stackIn_8_0;
-        fb stackIn_8_1;
-        fb stackIn_8_2;
+        PairedTextColumns stackIn_8_1;
+        PairedTextColumns stackIn_8_2;
         String stackIn_8_5;
         SceneWidget stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
@@ -83,8 +83,8 @@ final class ReportAbuseDialog extends SceneWidget {
         SceneWidget[] var28 = null;
         Object stackIn_6_0Lifetime1;
         Object stackIn_8_0Lifetime1;
-        fb stackIn_8_1Lifetime1;
-        fb stackIn_8_2Lifetime1;
+        PairedTextColumns stackIn_8_1Lifetime1;
+        PairedTextColumns stackIn_8_2Lifetime1;
         int var16Lifetime1;
         int var17Lifetime1;
         int var18Lifetime1;
@@ -132,7 +132,7 @@ final class ReportAbuseDialog extends SceneWidget {
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
                 stackIn_6_3 = 0L;
-                stackIn_6_4 = (fb) (param9);
+                stackIn_6_4 = (PairedTextColumns) (param9);
                 if (Js5NetworkRequest.field_I < 7) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
@@ -149,7 +149,7 @@ final class ReportAbuseDialog extends SceneWidget {
                 stackIn_8_2Lifetime1 = null;
                 stackIn_8_5 = nh.field_d;
               }
-              this.muteControl = new fb(stackIn_6_3, stackIn_6_4, stackIn_8_5);
+              this.muteControl = new PairedTextColumns(stackIn_6_3, stackIn_6_4, stackIn_8_5);
               this.field_Qb.a(this.muteControl, (byte) 26);
             }
             var28 = new SceneWidget[3];
@@ -268,7 +268,7 @@ final class ReportAbuseDialog extends SceneWidget {
             this.a(var26, var24, var25, 256, var23);
             return;
           }
-          this.field_Tb = new SceneWidget(0L, param8, im.field_Lb);
+          this.field_Tb = new SceneWidget(0L, param8, SocialListEntry.field_Lb);
           this.field_Tb.horizontalAlignment = 1;
           this.field_Tb.field_N = 11184810;
           this.field_Qb.a(this.field_Tb, (byte) 26);
@@ -391,7 +391,7 @@ final class ReportAbuseDialog extends SceneWidget {
 
     final int pollOffence(byte param0, boolean param1) {
         int var3 = 0;
-        fb stackIn_7_0 = null;
+        PairedTextColumns stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         SceneWidget stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
@@ -527,9 +527,9 @@ final class ReportAbuseDialog extends SceneWidget {
           TickClock.field_d = 11;
           r.field_c = 2;
           PlayerBoard.field_q = 2;
-          var7 = bf.a(0, param4, "largefont", param1, "lobby");
-          ig.field_d = bf.a(0, param4, "generalfont", param1, "lobby");
-          EditableTextWidget.field_Y = bf.a(0, param4, "chatfont", param1, "lobby");
+          var7 = AchievementIcon.a(0, param4, "largefont", param1, "lobby");
+          ig.field_d = AchievementIcon.a(0, param4, "generalfont", param1, "lobby");
+          EditableTextWidget.field_Y = AchievementIcon.a(0, param4, "chatfont", param1, "lobby");
           var7.a(var5, var24);
           ig.field_d.a(var5, var24);
           EditableTextWidget.field_Y.a(var5, var24);
@@ -551,8 +551,8 @@ final class ReportAbuseDialog extends SceneWidget {
           io.field_f.field_zb = FallingPieceView.a(false, SocketConnector.a("heading", "lobby", (byte) 47, param1));
           ProxySocketConnector.field_k = new SceneWidget(0L, (SceneWidget) null);
           ProxySocketConnector.field_k.field_zb = AccountNamePrompt.a(false, false, 4210752, 120, true, 8421504);
-          sc.field_g = new SceneWidget(0L, (SceneWidget) null);
-          sc.field_g.field_zb = OptionsScreen.a(6316128, 16, 6316128, 114, 1, 3);
+          ConditionalTextValue.field_g = new SceneWidget(0L, (SceneWidget) null);
+          ConditionalTextValue.field_g.field_zb = OptionsScreen.a(6316128, 16, 6316128, 114, 1, 3);
           SoundCache.field_c = new SceneWidget(0L, (SceneWidget) null);
           SoundCache.field_c.field_zb = FallingPieceView.a(false, SocketConnector.a("popup", "lobby", (byte) 47, param1));
           var12 = FallingPieceView.a(false, SocketConnector.a("popup_mouseover", "lobby", (byte) 47, param1));
@@ -560,14 +560,14 @@ final class ReportAbuseDialog extends SceneWidget {
           var14 = FallingPieceView.a(false, SocketConnector.a("tab_active", "lobby", (byte) 47, param1));
           pj.field_i = new SceneWidget(0L, var8);
           pj.field_i.field_zb = var14;
-          ae.field_f = new SceneWidget(0L, (SceneWidget) null);
-          ae.field_f.field_H = bi.a("lobby", "closebutton", param1, (byte) -127);
-          ae.field_f.field_B = bi.a("lobby", "closebutton_mouseover", param1, (byte) -106);
+          Vector3.field_f = new SceneWidget(0L, (SceneWidget) null);
+          Vector3.field_f.field_H = bi.a("lobby", "closebutton", param1, (byte) -127);
+          Vector3.field_f.field_B = bi.a("lobby", "closebutton_mouseover", param1, (byte) -106);
           ff.field_j = new SceneWidget(0L, var8);
           ff.field_j.field_zb = AccountNamePrompt.a(true, true, 2039583, 40, true, 3815994);
-          u.field_l = new SceneWidget(0L, var10);
-          u.field_l.field_C = 2;
-          u.field_l.field_zb = AccountNamePrompt.a(true, false, 2039583, 30, true, 3815994);
+          QuickChatPhraseCache.field_l = new SceneWidget(0L, var10);
+          QuickChatPhraseCache.field_l.field_C = 2;
+          QuickChatPhraseCache.field_l.field_zb = AccountNamePrompt.a(true, false, 2039583, 30, true, 3815994);
           AccountRequestDialog.field_mb = new SceneWidget(0L, var10);
           AccountRequestDialog.field_mb.field_C = 2;
           AccountRequestDialog.field_mb.field_zb = AccountNamePrompt.a(false, false, 2039583, 30, true, 3815994);
@@ -624,38 +624,38 @@ final class ReportAbuseDialog extends SceneWidget {
           AccountMessagePanel.field_J.field_zb = OptionsScreen.a(1127256, 16, 1856141, 206, -1, 3);
           ff.field_a = new SceneWidget(0L, (SceneWidget) null);
           ff.field_a.field_zb = OptionsScreen.a(6052956, 16, 11579568, 290, -1, 3);
-          bf.field_k = new SceneWidget(0L, var15);
-          bf.field_k.field_V = 1;
-          bf.field_k.selectedOffsetX = 1;
-          bf.field_k.horizontalAlignment = 1;
-          bf.field_k.field_hb = 1;
-          bf.field_k.field_Q = 1;
-          nk.field_f = new SceneWidget(0L, bf.field_k);
-          u.field_a = new SceneWidget(0L, dn.field_c);
-          u.field_a.field_Q = 1;
-          u.field_a.selectedOffsetX = 1;
-          u.field_a.field_V = 1;
-          u.field_a.field_hb = 1;
-          u.field_a.horizontalAlignment = 1;
-          ul.field_p = new SceneWidget(0L, u.field_a);
-          ge.field_h = new SceneWidget(0L, u.field_a);
-          be.field_R = new SceneWidget(0L, bf.field_k);
-          bl.field_d = new SceneWidget(0L, u.field_a);
-          l.field_q = new SceneWidget(0L, u.field_a);
-          EmailValidator.field_o = new SceneWidget(0L, u.field_a);
-          u.field_a.field_zb = FallingPieceView.a(false, SocketConnector.a("smallbutton", "lobby", (byte) 47, param1));
-          u.field_a.field_ab = FallingPieceView.a(false, SocketConnector.a("smallbutton_mouseover", "lobby", (byte) 47, param1));
+          AchievementIcon.field_k = new SceneWidget(0L, var15);
+          AchievementIcon.field_k.field_V = 1;
+          AchievementIcon.field_k.selectedOffsetX = 1;
+          AchievementIcon.field_k.horizontalAlignment = 1;
+          AchievementIcon.field_k.field_hb = 1;
+          AchievementIcon.field_k.field_Q = 1;
+          nk.field_f = new SceneWidget(0L, AchievementIcon.field_k);
+          QuickChatPhraseCache.field_a = new SceneWidget(0L, dn.field_c);
+          QuickChatPhraseCache.field_a.field_Q = 1;
+          QuickChatPhraseCache.field_a.selectedOffsetX = 1;
+          QuickChatPhraseCache.field_a.field_V = 1;
+          QuickChatPhraseCache.field_a.field_hb = 1;
+          QuickChatPhraseCache.field_a.horizontalAlignment = 1;
+          ul.field_p = new SceneWidget(0L, QuickChatPhraseCache.field_a);
+          ge.field_h = new SceneWidget(0L, QuickChatPhraseCache.field_a);
+          be.field_R = new SceneWidget(0L, AchievementIcon.field_k);
+          bl.field_d = new SceneWidget(0L, QuickChatPhraseCache.field_a);
+          l.field_q = new SceneWidget(0L, QuickChatPhraseCache.field_a);
+          EmailValidator.field_o = new SceneWidget(0L, QuickChatPhraseCache.field_a);
+          QuickChatPhraseCache.field_a.field_zb = FallingPieceView.a(false, SocketConnector.a("smallbutton", "lobby", (byte) 47, param1));
+          QuickChatPhraseCache.field_a.field_ab = FallingPieceView.a(false, SocketConnector.a("smallbutton_mouseover", "lobby", (byte) 47, param1));
           dupTemp$0 = FallingPieceView.a(false, SocketConnector.a("smallbutton_active", "lobby", (byte) 47, param1));
-          u.field_a.field_eb = dupTemp$0;
-          u.field_a.field_bb = dupTemp$0;
-          u.field_a.field_M = FallingPieceView.a(false, SocketConnector.a("smallbutton_disabled", "lobby", (byte) 47, param1));
+          QuickChatPhraseCache.field_a.field_eb = dupTemp$0;
+          QuickChatPhraseCache.field_a.field_bb = dupTemp$0;
+          QuickChatPhraseCache.field_a.field_M = FallingPieceView.a(false, SocketConnector.a("smallbutton_disabled", "lobby", (byte) 47, param1));
           nk.field_f.field_zb = FallingPieceView.a(false, SocketConnector.a("mediumbutton", "lobby", (byte) 47, param1));
           nk.field_f.field_ab = FallingPieceView.a(false, SocketConnector.a("mediumbutton_mouseover", "lobby", (byte) 47, param1));
           nk.field_f.field_bb = FallingPieceView.a(false, SocketConnector.a("mediumbutton_mouseheld", "lobby", (byte) 47, param1));
-          bf.field_k.field_zb = FallingPieceView.a(false, SocketConnector.a("bigbutton", "lobby", (byte) 47, param1));
-          bf.field_k.field_ab = FallingPieceView.a(false, SocketConnector.a("bigbutton_mouseover", "lobby", (byte) 47, param1));
-          bf.field_k.field_bb = FallingPieceView.a(false, SocketConnector.a("bigbutton_mouseheld", "lobby", (byte) 47, param1));
-          bf.field_k.field_M = FallingPieceView.a(false, SocketConnector.a("bigbutton_disabled", "lobby", (byte) 47, param1));
+          AchievementIcon.field_k.field_zb = FallingPieceView.a(false, SocketConnector.a("bigbutton", "lobby", (byte) 47, param1));
+          AchievementIcon.field_k.field_ab = FallingPieceView.a(false, SocketConnector.a("bigbutton_mouseover", "lobby", (byte) 47, param1));
+          AchievementIcon.field_k.field_bb = FallingPieceView.a(false, SocketConnector.a("bigbutton_mouseheld", "lobby", (byte) 47, param1));
+          AchievementIcon.field_k.field_M = FallingPieceView.a(false, SocketConnector.a("bigbutton_disabled", "lobby", (byte) 47, param1));
           ul.field_p.field_zb = FallingPieceView.a(false, SocketConnector.a("greenbutton", "lobby", (byte) 47, param1));
           ul.field_p.field_ab = FallingPieceView.a(false, SocketConnector.a("greenbutton_mouseover", "lobby", (byte) 47, param1));
           ul.field_p.field_bb = FallingPieceView.a(false, SocketConnector.a("greenbutton_mouseheld", "lobby", (byte) 47, param1));
@@ -683,7 +683,7 @@ final class ReportAbuseDialog extends SceneWidget {
           l.field_q.field_eb = dupTemp$3;
           l.field_q.field_bb = dupTemp$3;
           var17 = SocketConnector.a("checkbox", "lobby", (byte) 47, param1);
-          um.field_q = new fb(0L, var17[1], var17[0], 1, dn.field_c, (String) null);
+          um.field_q = new PairedTextColumns(0L, var17[1], var17[0], 1, dn.field_c, (String) null);
           LoginDialog.field_mb = new SceneWidget(0L, (SceneWidget) null);
           LoginDialog.field_mb.field_zb = TextHotspotWidget.a(24414, bi.a("lobby", "slideregion", param1, (byte) -73));
           LoginDialog.field_mb.field_ab = TextHotspotWidget.a(24414, bi.a("lobby", "slideregion_mouseover", param1, (byte) -123));
@@ -705,7 +705,7 @@ final class ReportAbuseDialog extends SceneWidget {
           ek.field_b.field_ob = bi.a("lobby", "downbutton_mouseheld", param1, (byte) -83);
           ek.field_b.field_xb = bi.a("lobby", "downbutton_disabled", param1, (byte) -97);
           ug.field_s = new VerticalScrollbar(0L, dj.field_a, ek.field_b, LoginDialog.field_mb, jn.field_p);
-          rm.field_a = new pd(0L, (SceneWidget) null, ff.field_g, ug.field_s, u.field_a, (String) null, (String) null);
+          rm.field_a = new ScrollPaneWithFooter(0L, (SceneWidget) null, ff.field_g, ug.field_s, QuickChatPhraseCache.field_a, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

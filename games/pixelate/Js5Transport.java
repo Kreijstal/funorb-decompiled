@@ -3,13 +3,13 @@
  */
 abstract class Js5Transport {
     static dq field_i;
-    nj field_e;
-    nj field_f;
-    nj field_l;
+    DualLinkDeque field_e;
+    DualLinkDeque field_f;
+    DualLinkDeque field_l;
     static TextWidgetPainter field_d;
     static String[] field_j;
     static int field_n;
-    nj field_p;
+    DualLinkDeque field_p;
     int field_o;
     PacketBuffer field_b;
     long field_k;
@@ -57,7 +57,7 @@ abstract class Js5Transport {
         if (param0 > 9) {
           return this.a((byte) 34) >= 20 ? true : false;
         }
-        this.field_f = (nj) null;
+        this.field_f = (DualLinkDeque) null;
         return this.a((byte) 34) >= 20 ? true : false;
     }
 
@@ -134,10 +134,10 @@ abstract class Js5Transport {
     }
 
     Js5Transport() {
-        this.field_e = new nj();
-        this.field_f = new nj();
-        this.field_l = new nj();
-        this.field_p = new nj();
+        this.field_e = new DualLinkDeque();
+        this.field_f = new DualLinkDeque();
+        this.field_l = new DualLinkDeque();
+        this.field_p = new DualLinkDeque();
         this.field_b = new PacketBuffer(6);
         this.field_h = 0;
         this.field_a = (byte) 0;

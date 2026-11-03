@@ -37,43 +37,43 @@ final class LoginDialog extends ContentTransitionDialog {
         RuntimeException var3 = null;
         try {
           if (param0 == 1) {
-            stackIn_3_0 = sd.a(bg.field_f, param2 + 17311, new String[]{param1});
+            stackIn_3_0 = AlphaContainer.a(bg.field_f, param2 + 17311, new String[]{param1});
             return stackIn_3_0;
           }
           if (param0 == 2) {
-            stackIn_6_0 = sd.a(SpriteState.field_w, param2 + 17402, new String[]{param1});
+            stackIn_6_0 = AlphaContainer.a(SpriteState.field_w, param2 + 17402, new String[]{param1});
             return stackIn_6_0;
           }
           if (param0 == 3) {
-            stackIn_9_0 = sd.a(CachedArchiveProvider.field_v, param2 + 17298, new String[]{param1});
+            stackIn_9_0 = AlphaContainer.a(CachedArchiveProvider.field_v, param2 + 17298, new String[]{param1});
             return stackIn_9_0;
           }
           if (param0 == 4) {
-            stackIn_12_0 = sd.a(KeyboardInputHandler.field_b, 85, new String[]{param1});
+            stackIn_12_0 = AlphaContainer.a(KeyboardInputHandler.field_b, 85, new String[]{param1});
             return stackIn_12_0;
           }
           if (param0 == 5) {
-            stackIn_16_0 = sd.a(JaggrabDownloader.field_p, 38, new String[]{param1});
+            stackIn_16_0 = AlphaContainer.a(JaggrabDownloader.field_p, 38, new String[]{param1});
             return stackIn_16_0;
           }
           if (param0 == 6) {
-            stackIn_19_0 = sd.a(EmailConfirmationValidator.field_n, 123, new String[]{param1});
+            stackIn_19_0 = AlphaContainer.a(EmailConfirmationValidator.field_n, 123, new String[]{param1});
             return stackIn_19_0;
           }
           if (param0 == 7) {
-            stackIn_22_0 = sd.a(ClientContextMenu.field_e, 41, new String[]{param1});
+            stackIn_22_0 = AlphaContainer.a(ClientContextMenu.field_e, 41, new String[]{param1});
             return stackIn_22_0;
           }
           if (param0 == 8) {
-            stackIn_25_0 = sd.a(an.field_d, param2 ^ -17206, new String[]{param1});
+            stackIn_25_0 = AlphaContainer.a(an.field_d, param2 ^ -17206, new String[]{param1});
             return stackIn_25_0;
           }
           if (param0 == 11) {
-            stackIn_29_0 = sd.a(SecondaryNodeHashTable.field_e, param2 ^ -17208, new String[]{param1});
+            stackIn_29_0 = AlphaContainer.a(SecondaryNodeHashTable.field_e, param2 ^ -17208, new String[]{param1});
             return stackIn_29_0;
           }
           if (param0 == 12) {
-            stackIn_32_0 = sd.a(li.field_j, 59, new String[]{param1});
+            stackIn_32_0 = AlphaContainer.a(li.field_j, 59, new String[]{param1});
             return stackIn_32_0;
           }
           if (param2 != -17279) {
@@ -82,7 +82,7 @@ final class LoginDialog extends ContentTransitionDialog {
           if (13 != param0) {
             return null;
           }
-          stackIn_38_0 = sd.a(un.field_c, 118, new String[]{param1});
+          stackIn_38_0 = AlphaContainer.a(un.field_c, 118, new String[]{param1});
           return stackIn_38_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -35,7 +35,7 @@ final class el {
         if (null == AccountChoicePanel.field_O) {
           return -1;
         }
-        if (sd.field_K > param2) {
+        if (AlphaContainer.field_K > param2) {
           var3 = 98 / ((38 - param1) / 61);
           if (JaggrabDownloader.field_a > param2) {
             return -1;
@@ -51,7 +51,7 @@ final class el {
           }
           return 1;
         }
-        if (param2 >= sd.field_K + AccountChoicePanel.field_O.field_F) {
+        if (param2 >= AlphaContainer.field_K + AccountChoicePanel.field_O.field_F) {
           var3Lifetime1 = 98 / ((38 - param1) / 61);
           if (JaggrabDownloader.field_a > param2) {
             return -1;

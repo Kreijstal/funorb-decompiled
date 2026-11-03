@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DiskCacheWorker implements Runnable {
-    private nj field_b;
+    private DualLinkDeque field_b;
     static el field_f;
     static SceneWidget field_a;
     private Thread field_d;
@@ -248,7 +248,7 @@ final class DiskCacheWorker implements Runnable {
 
     DiskCacheWorker(PlatformTaskDispatcher param0) {
         PlatformTask var2 = null;
-        this.field_b = new nj();
+        this.field_b = new DualLinkDeque();
         this.field_c = 0;
         this.field_e = false;
         try {

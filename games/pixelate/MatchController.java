@@ -64,7 +64,7 @@ final class MatchController {
           this.field_r = true;
         }
         this.field_d[param0].field_c = false;
-        gq.a(0, 200, 320, sd.a(TextButton.field_G, 35, new String[]{this.field_a.playerNames[param0]}));
+        gq.a(0, 200, 320, AlphaContainer.a(TextButton.field_G, 35, new String[]{this.field_a.playerNames[param0]}));
     }
 
     private final void h(int param0) {
@@ -200,7 +200,7 @@ final class MatchController {
         }
         AccountRegistrationPanel.field_Y.addFirst(22125, new ph(param0));
         if (!this.field_l) {
-          nj.field_h.addFirst(param1 ^ 22103, new hf(param0, param2, sb.field_a, DialWidgetPainter.field_o, ap.field_f, lo.field_Mb));
+          DualLinkDeque.field_h.addFirst(param1 ^ 22103, new hf(param0, param2, sb.field_a, DialWidgetPainter.field_o, IntKeyLookup.field_f, IconTextComponent.field_Mb));
         }
     }
 
@@ -375,7 +375,7 @@ final class MatchController {
             var7 = param4[1].field_A;
             param4[0].b(param3, param1);
             param4[2].b(-var6 + param0 + param3, param1);
-            SoftwareRasterizer.a(wg.field_c);
+            SoftwareRasterizer.a(Matrix3.field_c);
             SoftwareRasterizer.d(param3 + var5_int, param1, param0 + param3 - var6, param1 + param4[1].field_B);
             var8 = var5_int + param3;
             var9 = param3 + param0 - var6;
@@ -387,7 +387,7 @@ final class MatchController {
               param4[1].b(param3, param1);
               param3 = param3 + var7;
             }
-            SoftwareRasterizer.b(wg.field_c);
+            SoftwareRasterizer.b(Matrix3.field_c);
             return;
           }
           return;
@@ -639,12 +639,12 @@ final class MatchController {
             if (var3 != 0) {
               this.field_d[this.field_z].applyInput(param0 ^ 34, 6);
               if (AgeValidator.field_p) {
-                ae.a(6, -18656, this.field_d[this.field_z].a(-119));
+                Vector3.a(6, -18656, this.field_d[this.field_z].a(-119));
               }
             } else {
               this.field_d[this.field_z].applyInput(param0 - 34, 7);
               if (AgeValidator.field_p) {
-                ae.a(7, -18656, this.field_d[this.field_z].a(-84));
+                Vector3.a(7, -18656, this.field_d[this.field_z].a(-84));
               }
             }
           }
@@ -792,7 +792,7 @@ final class MatchController {
         if (this.a(14098, this.field_z)) {
           var4Lifetime1 = -1;
           if (82 == param0 ||
-            ap.field_e == param0) {
+            IntKeyLookup.field_e == param0) {
             var4Lifetime1 = 4;
           }
           if (param0 == 98 ||
@@ -800,7 +800,7 @@ final class MatchController {
             var4Lifetime1 = 0;
           }
           if (param0 == 99 ||
-            param0 == ae.field_d) {
+            param0 == Vector3.field_d) {
             var4Lifetime1 = 1;
           }
           if (param0 == 96 ||
@@ -828,7 +828,7 @@ final class MatchController {
             var5Lifetime2 = stackIn_96_0;
             if (AgeValidator.field_p &&
               var5Lifetime2 != 0) {
-              ae.a(var4Lifetime1, -18656, this.field_d[this.field_z].a(-110));
+              Vector3.a(var4Lifetime1, -18656, this.field_d[this.field_z].a(-110));
             }
             if (var4Lifetime1 == 4 &&
               var5Lifetime2 == 0 &&
@@ -879,9 +879,9 @@ final class MatchController {
 
     private final void i(int param0) {
         ra.field_a = ra.field_a + 7;
-        ap.field_f = ap.field_f + sb.field_a;
+        IntKeyLookup.field_f = IntKeyLookup.field_f + sb.field_a;
         ln.field_n = ln.field_n + 7;
-        lo.field_Mb = lo.field_Mb + 1;
+        IconTextComponent.field_Mb = IconTextComponent.field_Mb + 1;
         if (param0 <= 93) {
           this.c(-83);
         }
@@ -1112,7 +1112,7 @@ final class MatchController {
         PlayerController var8;
         int var5Lifetime1;
         sb.field_a = sb.field_a - 1;
-        DialWidgetPainter.field_o = DialWidgetPainter.field_o - lo.field_Mb;
+        DialWidgetPainter.field_o = DialWidgetPainter.field_o - IconTextComponent.field_Mb;
         mj.field_j = mj.field_j + 1;
         PlayerController.field_r = PlayerController.field_r + this.field_a.scores[0];
         var8 = this.field_d[this.field_z];
@@ -1187,7 +1187,7 @@ final class MatchController {
             var6 = var5Lifetime1;
             this.field_a.scores[0] = this.field_a.scores[0] + var6;
             ra.field_a = ra.field_a - mj.field_j * var6;
-            ap.field_f = ap.field_f + (var6 << 7);
+            IntKeyLookup.field_f = IntKeyLookup.field_f + (var6 << 7);
             if (this.field_a.scores[0] >= 10000) {
               this.a(0, (byte) 58, 255);
             }
@@ -1286,7 +1286,7 @@ final class MatchController {
         this.field_g = false;
         this.field_r = true;
         try {
-          ap.field_f = 770566011;
+          IntKeyLookup.field_f = 770566011;
           sb.field_a = 22178;
           stackIn_4_0 = (DateOfBirthValidator.field_j == 2);
           AgeValidator.field_p = stackIn_4_0;
@@ -1295,7 +1295,7 @@ final class MatchController {
           ln.field_n = 1426010794;
           ra.field_a = 1947508858;
           this.field_z = param1;
-          lo.field_Mb = 34851;
+          IconTextComponent.field_Mb = 34851;
           if (param0 == null) {
             array$0 = new String[1];
             stackIn_7_0 = array$0;

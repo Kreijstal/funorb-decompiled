@@ -123,7 +123,7 @@ class EmailCredentials extends LoginCredentials {
           nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
           return true;
         }
-        var5 = nj.field_f;
+        var5 = DualLinkDeque.field_f;
         if (!MatchController.a(1, (char) var5)) {
           return false;
         }
@@ -158,13 +158,13 @@ class EmailCredentials extends LoginCredentials {
                 break regionExit1;
               }
               if (!TickClock.field_b) {
-                var37 = "[" + sd.a(HowToPlayScreen.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
+                var37 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var38 = var37 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var38);
                 break regionExit1;
               }
               if (TextLayoutLine.field_f == null) {
-                var35 = "[" + sd.a(HowToPlayScreen.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
+                var35 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var36 = var35 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var36);
                 break regionExit1;
@@ -176,8 +176,8 @@ class EmailCredentials extends LoginCredentials {
             break regionExit1;
           }
           var44 = (CharSequence) ((Object) CheckboxPainter.field_k);
-          var40 = sd.a(dg.field_b, 116, new String[]{UiComponent.a(var44, -1)});
-          var41 = sd.a(sk.field_c, 43, new String[]{var17});
+          var40 = AlphaContainer.a(dg.field_b, 116, new String[]{UiComponent.a(var44, -1)});
+          var41 = AlphaContainer.a(sk.field_c, 43, new String[]{var17});
           var10 = AccountMessagePanel.field_Q.textWidth(var40);
           var11 = AccountMessagePanel.field_Q.textWidth(var41);
           if (var11 >= var10) {

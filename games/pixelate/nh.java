@@ -7,12 +7,12 @@ final class nh {
     static int[] field_a;
     static int field_b;
 
-    final static ae c(byte param0) {
+    final static Vector3 c(byte param0) {
         int var1;
         int var2;
         int var3;
         int var4;
-        ae var5;
+        Vector3 var5;
         int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         var3 = -63 / ((param0 + 27) / 63);
@@ -23,7 +23,7 @@ final class nh {
         } while (0 == var1 &&
           0 == var2 &&
           var4 == 0);
-        var5 = new ae(var1, var2, var4);
+        var5 = new Vector3(var1, var2, var4);
         var5.a((byte) -7);
         return var5;
     }

@@ -14,10 +14,10 @@ final class dn implements hj {
     }
 
     final static int a(String param0, byte param1, int param2, String param3, int param4, boolean param5, String param6) {
-        sc var7 = null;
+        ConditionalTextValue var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
-        sc var9 = null;
+        ConditionalTextValue var9 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -29,8 +29,8 @@ final class dn implements hj {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = 111 / ((75 - param1) / 39);
-          var7 = new sc(param6);
-          var9 = new sc(param0);
+          var7 = new ConditionalTextValue(param6);
+          var9 = new ConditionalTextValue(param0);
           stackIn_1_0 = cn.a(param3, param2, -124, param5, var9, param4, var7);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

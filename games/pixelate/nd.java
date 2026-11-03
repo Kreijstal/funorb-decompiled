@@ -89,12 +89,12 @@ final class nd {
     }
 
     final static void a(int param0) {
-        sc.field_h = rk.field_e;
-        Checkbox.field_T = 10 + sc.field_h.textWidth(PacketBuffer.field_o[20]);
+        ConditionalTextValue.field_h = rk.field_e;
+        Checkbox.field_T = 10 + ConditionalTextValue.field_h.textWidth(PacketBuffer.field_o[20]);
         if (param0 != 3) {
           field_c = (int[]) null;
         }
-        int var1 = sc.field_h.textWidth(PacketBuffer.field_o[21]);
+        int var1 = ConditionalTextValue.field_h.textWidth(PacketBuffer.field_o[21]);
         if (var1 > Checkbox.field_T) {
           Checkbox.field_T = var1;
         }

@@ -67,14 +67,14 @@ final class ff {
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;
-        im var7 = null;
-        im var8 = null;
+        SocialListEntry var7 = null;
+        SocialListEntry var8 = null;
         CipherPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param1);
-          if (!ai.a((byte) -126, var10)) {
+          if (!Bzip2State.a((byte) -126, var10)) {
             stackIn_4_0 = qn.field_n;
             return stackIn_4_0;
           }
@@ -84,12 +84,12 @@ final class ff {
           }
           var8 = re.a(param1, -1);
           if (var8 == null) {
-            stackIn_11_0 = sd.a(AccountMessagePanel.field_R, 41, new String[]{param1});
+            stackIn_11_0 = AlphaContainer.a(AccountMessagePanel.field_R, 41, new String[]{param1});
             return stackIn_11_0;
           }
           VerticalScrollbar.field_Hb.traverseFrom(var8, param2 + 1504642379);
           while (true) {
-            var7 = (im) (VerticalScrollbar.field_Hb.last(param2 ^ -1504642185));
+            var7 = (SocialListEntry) (VerticalScrollbar.field_Hb.last(param2 ^ -1504642185));
             if (var7 != null) {
               var7.field_Kb = var7.field_Kb - 1;
               continue;
@@ -132,8 +132,8 @@ final class ff {
         int[] var5 = null;
         int var6 = 0;
         int var7 = Pixelate.field_H ? 1 : 0;
-        Sprite[] var1 = new Sprite[im.field_Qb];
-        for (var2 = param0; var2 < im.field_Qb; var2++) {
+        Sprite[] var1 = new Sprite[SocialListEntry.field_Qb];
+        for (var2 = param0; var2 < SocialListEntry.field_Qb; var2++) {
           var3 = ge.field_c[var2] * ByteStorage.field_g[var2];
           var4 = wo.field_f[var2];
           var5 = new int[var3];

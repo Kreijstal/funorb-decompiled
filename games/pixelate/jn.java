@@ -3,7 +3,7 @@
  */
 final class jn extends IntrusiveNode {
     static SceneWidget field_p;
-    ae field_o;
+    Vector3 field_o;
     boolean field_k;
     int field_r;
     static String field_m;

@@ -46,7 +46,7 @@ final class em {
           var2_int = param0[0].field_A;
           SectorCacheStore.field_b = var2_int;
           hf.field_k = var2_int;
-          lo.field_Jb = (800 - var2_int) / 2;
+          IconTextComponent.field_Jb = (800 - var2_int) / 2;
           PasswordFieldPainter.field_A = rk.field_e.maxAscent + rk.field_e.maxDescent;
           DirectByteStorage.field_k = PasswordFieldPainter.field_A * 50 - 163;
           if (param1 >= -75) {
@@ -94,7 +94,7 @@ final class em {
     final static void a(PcmStreamMixer param0, int param1, int param2, ResourceArchive param3) {
         try {
           ub.field_a = MenuInputState.a(true) * param2 / 1000;
-          nj.a(param3, (byte) 14);
+          DualLinkDeque.a(param3, (byte) 14);
           dk.a(false, param3);
           NameAvailabilityValidator.a(false, param3);
           OptionsScreen.e(260);

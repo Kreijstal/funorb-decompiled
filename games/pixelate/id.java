@@ -58,9 +58,9 @@ final class id {
         int var1_intLifetime2;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          im.field_Hb = new Sprite[param0];
+          SocialListEntry.field_Hb = new Sprite[param0];
           for (var1_int = 0; var1_int < 2; var1_int++) {
-            im.field_Hb[var1_int] = new Sprite(64, 64);
+            SocialListEntry.field_Hb[var1_int] = new Sprite(64, 64);
           }
           ProxySocketConnector.a((byte) 99);
           ClientException.field_f.a(19692);
@@ -86,7 +86,7 @@ final class id {
 
     final static void a(boolean param0, byte param1) {
         qk.field_e = 0;
-        ae.field_b = 0;
+        Vector3.field_b = 0;
         if (param1 <= 104) {
           return;
         }

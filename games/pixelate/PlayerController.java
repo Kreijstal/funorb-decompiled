@@ -85,7 +85,7 @@ final class PlayerController {
         if (param0 != -59) {
           PlayerController.a((byte) 49);
         }
-        stackIn_7_0 = (10 <= el.field_b) && (!lo.field_Nb) && (!PauseMenuScreen.b(true));
+        stackIn_7_0 = (10 <= el.field_b) && (!IconTextComponent.field_Nb) && (!PauseMenuScreen.b(true));
         return stackIn_7_0;
     }
 
@@ -306,7 +306,7 @@ final class PlayerController {
         }
         if (this.field_h <= this.field_u) {
           if (AgeValidator.field_p) {
-            ae.a(5, param0 ^ 18655, this.field_e);
+            Vector3.a(5, param0 ^ 18655, this.field_e);
           }
           this.applyInput(0, 5);
         }

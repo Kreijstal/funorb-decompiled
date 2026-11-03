@@ -205,7 +205,7 @@ final class MatchHud {
         if (!(var2 <= this.field_g.puzzle.pictures.length)) {
           var2--;
         }
-        this.field_e = sd.a(field_b, 73, new String[]{Integer.toString(var2), Integer.toString(this.field_g.puzzle.pictures.length)});
+        this.field_e = AlphaContainer.a(field_b, 73, new String[]{Integer.toString(var2), Integer.toString(this.field_g.puzzle.pictures.length)});
     }
 
     public static void c(int param0) {

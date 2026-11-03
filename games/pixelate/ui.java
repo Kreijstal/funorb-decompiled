@@ -101,8 +101,8 @@ final class ui {
         int var4 = 0;
         GameModeSelectScreen.field_v.position = 0;
         GameModeSelectScreen.field_v.writeByte(160, 12);
-        GameModeSelectScreen.field_v.d(ai.field_d.nextInt(), -42);
-        GameModeSelectScreen.field_v.d(ai.field_d.nextInt(), -97);
+        GameModeSelectScreen.field_v.d(Bzip2State.field_d.nextInt(), -42);
+        GameModeSelectScreen.field_v.d(Bzip2State.field_d.nextInt(), -97);
         GameModeSelectScreen.field_v.writeByte(160, param1);
         if (param0 > 79) {
           GameModeSelectScreen.field_v.writeByte(160, param3);

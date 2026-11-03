@@ -37,9 +37,9 @@ final class MusicPatch extends IntrusiveNode {
     }
 
     final static void a(jn param0, int param1) {
-        ae stackIn_12_0 = null;
+        Vector3 stackIn_12_0 = null;
         int stackIn_15_0 = 0;
-        ae stackIn_19_0 = null;
+        Vector3 stackIn_19_0 = null;
         int stackIn_20_1 = 0;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
@@ -48,7 +48,7 @@ final class MusicPatch extends IntrusiveNode {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        ae var5 = null;
+        Vector3 var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
@@ -64,9 +64,9 @@ final class MusicPatch extends IntrusiveNode {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        wg var22 = null;
-        wg var23 = null;
-        wg var24 = null;
+        Matrix3 var22 = null;
+        Matrix3 var23 = null;
+        Matrix3 var24 = null;
         var21 = Pixelate.field_H ? 1 : 0;
         try {
           var22 = LobbyPlayer.a(param0.field_o, param0.field_l, 0);
@@ -74,24 +74,24 @@ final class MusicPatch extends IntrusiveNode {
           var4 = 14;
           if (param0.field_n != 0) {
             if (param0.field_n == 1) {
-              stackIn_12_0 = new ae(0, var3 << var4, 0);
+              stackIn_12_0 = new Vector3(0, var3 << var4, 0);
             } else {
               if (2 == param0.field_n) {
-                stackIn_12_0 = new ae(0, 0, var3 << var4);
+                stackIn_12_0 = new Vector3(0, 0, var3 << var4);
               } else {
                 if (3 == param0.field_n) {
-                  stackIn_12_0 = new ae(-var3 << var4, 0, 0);
+                  stackIn_12_0 = new Vector3(-var3 << var4, 0, 0);
                 } else {
                   if (param0.field_n != 4) {
-                    stackIn_12_0 = new ae(0, 0, -var3 << var4);
+                    stackIn_12_0 = new Vector3(0, 0, -var3 << var4);
                   } else {
-                    stackIn_12_0 = new ae(0, -var3 << var4, 0);
+                    stackIn_12_0 = new Vector3(0, -var3 << var4, 0);
                   }
                 }
               }
             }
           } else {
-            stackIn_12_0 = new ae(var3 << var4, 0, 0);
+            stackIn_12_0 = new Vector3(var3 << var4, 0, 0);
           }
           var5 = stackIn_12_0;
           stackIn_15_0 = (0 >= var22.a(var5, (byte) 106).field_i) ? 0 : 1;

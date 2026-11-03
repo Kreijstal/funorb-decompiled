@@ -48,7 +48,7 @@ final class ri {
         InputQueue.field_d = param0;
         MarkerSlider.field_O = new int[3];
         int var2 = 20 / ((param1 + 94) / 32);
-        sd.field_L = 0;
+        AlphaContainer.field_L = 0;
     }
 
     static {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il {
+final class QuickChatCategoryCache {
     private ResourceArchive field_a;
     static SecondaryNodeHashTable field_d;
     static boolean field_g;
@@ -154,7 +154,7 @@ final class il {
         field_c = null;
     }
 
-    il(int param0, ResourceArchive param1, ResourceArchive param2) {
+    QuickChatCategoryCache(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

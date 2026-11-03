@@ -90,11 +90,11 @@ final class fd {
           }
           return new byte[param1];
         }
-        if (0 < fb.field_Hb) {
-          fieldTemp$8 = fb.field_Hb - 1;
-          fb.field_Hb = fb.field_Hb - 1;
-          var2_ref_byte__Lifetime1 = sc.field_e[fieldTemp$8];
-          sc.field_e[fb.field_Hb] = null;
+        if (0 < PairedTextColumns.field_Hb) {
+          fieldTemp$8 = PairedTextColumns.field_Hb - 1;
+          PairedTextColumns.field_Hb = PairedTextColumns.field_Hb - 1;
+          var2_ref_byte__Lifetime1 = ConditionalTextValue.field_e[fieldTemp$8];
+          ConditionalTextValue.field_e[PairedTextColumns.field_Hb] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (~param1 == param0 &&

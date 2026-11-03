@@ -287,16 +287,16 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         this.a(496, (byte) 89, 0, 0, var4 + 55 + var3);
     }
 
-    final static im a(String param0, int param1) {
+    final static SocialListEntry a(String param0, int param1) {
         String var2 = null;
         int var3 = 0;
-        im var4 = null;
+        SocialListEntry var4 = null;
         String var5 = null;
         int var6 = 0;
         CharSequence var7 = null;
         CharSequence var8 = null;
         Object stackIn_3_0 = null;
-        im stackIn_15_0 = null;
+        SocialListEntry stackIn_15_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -306,7 +306,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         try {
           if (null == GameResultsScreen.field_q) {
             stackIn_3_0 = null;
-            return (im) (stackIn_3_0);
+            return (SocialListEntry) (stackIn_3_0);
           }
           var3 = -109 % ((13 - param1) / 46);
           var7 = (CharSequence) ((Object) param0);
@@ -314,7 +314,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
           if (var2 == null) {
             var2 = param0;
           }
-          var4 = (im) (GameResultsScreen.field_q.a(-11434, (long)var2.hashCode()));
+          var4 = (SocialListEntry) (GameResultsScreen.field_q.a(-11434, (long)var2.hashCode()));
           while (var4 != null) {
             var8 = (CharSequence) ((Object) var4.field_Fb);
             var5 = dh.a(var8, (byte) 27);
@@ -325,7 +325,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
               stackIn_15_0 = var4;
               return stackIn_15_0;
             }
-            var4 = (im) (GameResultsScreen.field_q.b((byte) 47));
+            var4 = (SocialListEntry) (GameResultsScreen.field_q.b((byte) 47));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

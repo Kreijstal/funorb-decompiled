@@ -105,7 +105,7 @@ final class KiteBackground extends BackgroundScene {
         try {
           var4 = (rh) (MenuScreen.field_b.c(1504642273));
           while (var4 != null) {
-            sd.a((byte) -76, var4, param1);
+            AlphaContainer.a((byte) -76, var4, param1);
             var4 = (rh) (MenuScreen.field_b.last(1504642273));
           }
           var5 = (ue) (DialWidgetPainter.field_c.c(1504642273));

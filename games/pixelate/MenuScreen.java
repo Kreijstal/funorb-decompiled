@@ -427,7 +427,7 @@ abstract class MenuScreen {
               param0 = PacketBuffer.field_o[7];
             }
           }
-          var7 = sc.field_h.textWidth(param0);
+          var7 = ConditionalTextValue.field_h.textWidth(param0);
           var8 = this.a(param2, (byte) 90);
           var9 = this.a(param2, false);
           var10 = this.b(-98, param2);
@@ -451,7 +451,7 @@ abstract class MenuScreen {
             of.field_a == 2)) {
             var14 = 1;
           }
-          sc.field_h.drawText(param0, var12, var10 + sc.field_h.maxAscent, var14, -1);
+          ConditionalTextValue.field_h.drawText(param0, var12, var10 + ConditionalTextValue.field_h.maxAscent, var14, -1);
           if (var6_int != 20 &&
             var6_int != 21) {
             return;
@@ -495,7 +495,7 @@ abstract class MenuScreen {
         int var10 = 0;
         try {
           var6_int = 6;
-          var7 = var6_int + sc.field_h.textWidth(param1) + MusicPatch.field_m.field_A;
+          var7 = var6_int + ConditionalTextValue.field_h.textWidth(param1) + MusicPatch.field_m.field_A;
           var8 = param4 - var7 / 2;
           var9 = 420;
           var10 = 2;
@@ -507,7 +507,7 @@ abstract class MenuScreen {
             field_n = -115;
           }
           MusicPatch.field_m.b(var8, var9);
-          sc.field_h.drawText(param1, var6_int + var8 + MusicPatch.field_m.field_A, var9 + sc.field_h.maxAscent, var10, -1);
+          ConditionalTextValue.field_h.drawText(param1, var6_int + var8 + MusicPatch.field_m.field_A, var9 + ConditionalTextValue.field_h.maxAscent, var10, -1);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "de.AB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -761,7 +761,7 @@ abstract class MenuScreen {
                                   var6 = param2 ? 1 : 0;
                                   wl.field_b = false;
                                   var7 = qj.field_e;
-                                  u.a(((BitmapFont) ((Object) var7)).maxAscent + ((BitmapFont) ((Object) var7)).maxDescent, -879, ((BitmapFont) ((Object) var7)).maxAscent, 2, 320, 8, ab.field_c, var7, 240, bi.field_g, 8, var6 != 0);
+                                  QuickChatPhraseCache.a(((BitmapFont) ((Object) var7)).maxAscent + ((BitmapFont) ((Object) var7)).maxDescent, -879, ((BitmapFont) ((Object) var7)).maxAscent, 2, 320, 8, ab.field_c, var7, 240, bi.field_g, 8, var6 != 0);
                                 }
                               }
                             } else {

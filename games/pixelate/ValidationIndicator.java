@@ -145,26 +145,26 @@ final class ValidationIndicator extends TextButton {
           var17 = CanvasRasterBuffer.field_g[0];
           var10 = var17.field_A << 1;
           var11 = var17.field_B << 1;
-          if (null == u.field_k) {
-            u.field_k = new Sprite(var10, var11);
-            Checkbox.a(-83, u.field_k);
+          if (null == QuickChatPhraseCache.field_k) {
+            QuickChatPhraseCache.field_k = new Sprite(var10, var11);
+            Checkbox.a(-83, QuickChatPhraseCache.field_k);
           } else {
-            if (var10 > u.field_k.field_F) {
-              u.field_k = new Sprite(var10, var11);
-              Checkbox.a(-83, u.field_k);
+            if (var10 > QuickChatPhraseCache.field_k.field_F) {
+              QuickChatPhraseCache.field_k = new Sprite(var10, var11);
+              Checkbox.a(-83, QuickChatPhraseCache.field_k);
             } else {
-              if (u.field_k.field_E >= var11) {
-                Checkbox.a(-71, u.field_k);
+              if (QuickChatPhraseCache.field_k.field_E >= var11) {
+                Checkbox.a(-71, QuickChatPhraseCache.field_k);
                 SoftwareRasterizer.d();
               } else {
-                u.field_k = new Sprite(var10, var11);
-                Checkbox.a(-83, u.field_k);
+                QuickChatPhraseCache.field_k = new Sprite(var10, var11);
+                Checkbox.a(-83, QuickChatPhraseCache.field_k);
               }
             }
           }
           var17.a(112, 144, var17.field_A << 4, var17.field_B << 4, -this.field_Q << 10, 4096);
           LinkButtonPainter.a((byte) 92);
-          u.field_k.b(var5 - var17.field_A, var7 - var17.field_B, 256);
+          QuickChatPhraseCache.field_k.b(var5 - var17.field_A, var7 - var17.field_B, 256);
           return;
         }
         if (var9 != UiTheme.field_j) {
@@ -183,26 +183,26 @@ final class ValidationIndicator extends TextButton {
         var16 = CanvasRasterBuffer.field_g[0];
         var10Lifetime1 = var16.field_A << 1;
         var11Lifetime1 = var16.field_B << 1;
-        if (null == u.field_k) {
-          u.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
-          Checkbox.a(-83, u.field_k);
+        if (null == QuickChatPhraseCache.field_k) {
+          QuickChatPhraseCache.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
+          Checkbox.a(-83, QuickChatPhraseCache.field_k);
         } else {
-          if (var10Lifetime1 > u.field_k.field_F) {
-            u.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
-            Checkbox.a(-83, u.field_k);
+          if (var10Lifetime1 > QuickChatPhraseCache.field_k.field_F) {
+            QuickChatPhraseCache.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
+            Checkbox.a(-83, QuickChatPhraseCache.field_k);
           } else {
-            if (u.field_k.field_E >= var11Lifetime1) {
-              Checkbox.a(-71, u.field_k);
+            if (QuickChatPhraseCache.field_k.field_E >= var11Lifetime1) {
+              Checkbox.a(-71, QuickChatPhraseCache.field_k);
               SoftwareRasterizer.d();
             } else {
-              u.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
-              Checkbox.a(-83, u.field_k);
+              QuickChatPhraseCache.field_k = new Sprite(var10Lifetime1, var11Lifetime1);
+              Checkbox.a(-83, QuickChatPhraseCache.field_k);
             }
           }
         }
         var16.a(112, 144, var16.field_A << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
         LinkButtonPainter.a((byte) 92);
-        u.field_k.b(var5 - var16.field_A, var7 - var16.field_B, 256);
+        QuickChatPhraseCache.field_k.b(var5 - var16.field_A, var7 - var16.field_B, 256);
     }
 
     public static void a(byte param0) {

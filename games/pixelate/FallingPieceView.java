@@ -269,9 +269,9 @@ final class FallingPieceView {
             var20_ref = fq.field_o.field_f[1];
             var19_ref = fq.field_o.field_f[0];
           } else {
-            var23 = im.field_Hb[0];
+            var23 = SocialListEntry.field_Hb[0];
             var19_ref = var23;
-            var24 = im.field_Hb[1];
+            var24 = SocialListEntry.field_Hb[1];
             var20_ref = var24;
             var23.c();
             LoginCredentials.field_e.field_f[0].f(0, 0);

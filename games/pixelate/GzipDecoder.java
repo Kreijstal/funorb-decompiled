@@ -56,7 +56,7 @@ final class GzipDecoder {
               if (VerticalScrollbar.field_Gb.field_j != var4) {
                 stackIn_18_0 = BufferedRandomAccessFile.field_m;
               } else {
-                stackIn_18_0 = wg.field_d;
+                stackIn_18_0 = Matrix3.field_d;
               }
               var9 = stackIn_18_0;
               var2 = var2 + ki.field_e;

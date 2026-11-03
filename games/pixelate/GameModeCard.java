@@ -44,7 +44,7 @@ final class GameModeCard {
           if (this.field_c >= NodeHashTableIterator.field_f) {
             return;
           }
-          this.field_c = this.field_c + ap.field_a;
+          this.field_c = this.field_c + IntKeyLookup.field_a;
           if (NodeHashTableIterator.field_f >= this.field_c) {
             return;
           }
@@ -54,7 +54,7 @@ final class GameModeCard {
         if (this.field_c <= 0) {
           return;
         }
-        this.field_c = this.field_c - ap.field_c;
+        this.field_c = this.field_c - IntKeyLookup.field_c;
         if (this.field_c < 0) {
           this.field_c = 0;
           return;
@@ -162,7 +162,7 @@ final class GameModeCard {
           }
           ImageProducerRasterBuffer.field_n = param5.children;
           ImageProducerRasterBuffer.field_n.e(param3 ^ -121);
-          il.field_d = new SecondaryNodeHashTable(param1);
+          QuickChatCategoryCache.field_d = new SecondaryNodeHashTable(param1);
           ResizableModalPanel.field_X = 0;
           NameAvailabilityValidator.field_r = 0;
           gi.field_a = -1;

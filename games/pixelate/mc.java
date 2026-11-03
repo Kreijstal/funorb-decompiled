@@ -132,8 +132,8 @@ final class mc extends IntrusiveNode {
             ResizableModalPanel.field_P = bi.a("benefits", "menu_text", pb.field_n, (byte) -20);
             AccountChoicePanel.field_O = bi.a("benefits", "button_frame", pb.field_n, (byte) -63);
             ScrollContainer.field_Kb = bi.a("benefits", "arrow", pb.field_n, (byte) -125);
-            EmailConfirmationValidator.field_r = (BitmapFont) ((Object) bf.a(0, kf.field_p, "large_font", pb.field_n, "benefits"));
-            QuickChatCategory.field_A = (BitmapFont) ((Object) bf.a(0, kf.field_p, "small_font", pb.field_n, "benefits"));
+            EmailConfirmationValidator.field_r = (BitmapFont) ((Object) AchievementIcon.a(0, kf.field_p, "large_font", pb.field_n, "benefits"));
+            QuickChatCategory.field_A = (BitmapFont) ((Object) AchievementIcon.a(0, kf.field_p, "small_font", pb.field_n, "benefits"));
             var28 = SoftwareRasterizer.field_k;
             var2 = SoftwareRasterizer.field_j;
             var3 = SoftwareRasterizer.field_d;
@@ -147,10 +147,10 @@ final class mc extends IntrusiveNode {
             var13 = new Sprite(195, 221);
             var6 = var13.field_F / 2;
             var13.c();
-            EmailConfirmationValidator.field_r.drawCentered(sd.a(MusicCrossfadeStream.field_s, param0 + 24, new String[]{FallingPieceView.field_g}), var6, 40, 16777215, -1);
-            QuickChatCategory.field_A.drawCentered(sd.a(kf.field_n, 76, new String[]{FallingPieceView.field_g}), var6, 60, 16777215, -1);
-            EmailConfirmationValidator.field_r.drawCentered(sd.a(ab.field_d, 73, new String[]{bl.field_g}), var6, 110, 16777215, -1);
-            QuickChatCategory.field_A.drawCentered(sd.a(BoardView.field_l, 44, new String[]{bl.field_g}), var6, 130, 16777215, -1);
+            EmailConfirmationValidator.field_r.drawCentered(AlphaContainer.a(MusicCrossfadeStream.field_s, param0 + 24, new String[]{FallingPieceView.field_g}), var6, 40, 16777215, -1);
+            QuickChatCategory.field_A.drawCentered(AlphaContainer.a(kf.field_n, 76, new String[]{FallingPieceView.field_g}), var6, 60, 16777215, -1);
+            EmailConfirmationValidator.field_r.drawCentered(AlphaContainer.a(ab.field_d, 73, new String[]{bl.field_g}), var6, 110, 16777215, -1);
+            QuickChatCategory.field_A.drawCentered(AlphaContainer.a(BoardView.field_l, 44, new String[]{bl.field_g}), var6, 130, 16777215, -1);
             EmailConfirmationValidator.field_r.drawCentered(UiComponent.field_w, var6, 180, 16777215, -1);
             QuickChatCategory.field_A.drawCentered(ri.field_d, var6, 200, 16777215, -1);
             MenuScreen.a(0, 0, 1, var13, var13.field_F, -1, 3, var13.field_E);
@@ -171,7 +171,7 @@ final class mc extends IntrusiveNode {
             JaggrabDownloader.field_a = (wo.field_c.field_F - AccountChoicePanel.field_O.field_F) / 2 + 434;
             DraggableWidget.field_Q = (wo.field_c.field_E - AccountChoicePanel.field_O.field_E) / 2 + 390;
             ui.field_b = (wo.field_c.field_E - AccountChoicePanel.field_O.field_E) / 2 + 390;
-            sd.field_K = 231 + (wo.field_c.field_F - AccountChoicePanel.field_O.field_F) / 2;
+            AlphaContainer.field_K = 231 + (wo.field_c.field_F - AccountChoicePanel.field_O.field_F) / 2;
           }
           if (qf.field_c == null) {
             return;
@@ -182,7 +182,7 @@ final class mc extends IntrusiveNode {
             var2Lifetime1 = SoftwareRasterizer.field_j;
             var3Lifetime1 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.a(ClientContextMenu.field_f);
-            var15 = sd.a(jm.field_p, 93, new String[]{wp.field_b[gb.field_c]});
+            var15 = AlphaContainer.a(jm.field_p, 93, new String[]{wp.field_b[gb.field_c]});
             var5 = EmailConfirmationValidator.field_r.getWrappedWidth(var15, mp.field_f);
             var6Lifetime1 = EmailConfirmationValidator.field_r.paragraphHeight(var15, mp.field_f, EmailConfirmationValidator.field_r.maxAscent + EmailConfirmationValidator.field_r.maxDescent);
             var7Lifetime1 = (mp.field_f - var5) / 2 + bl.field_c;
@@ -249,7 +249,7 @@ final class mc extends IntrusiveNode {
             var3Lifetime2 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.a(ClientContextMenu.field_f);
             var17 = new Sprite(412, 43);
-            var5_ref_String = sd.a(dk.field_f, param0 + 18, new String[]{IntrusiveNode.field_i});
+            var5_ref_String = AlphaContainer.a(dk.field_f, param0 + 18, new String[]{IntrusiveNode.field_i});
             IntrusiveNode.field_i = null;
             var17.c();
             QuickChatCategory.field_A.drawParagraph(var5_ref_String, 3, 3, var17.field_F - 6, -6 + var17.field_E, 16777215, -1, 0, 1, QuickChatCategory.field_A.maxAscent + QuickChatCategory.field_A.maxDescent);
@@ -322,7 +322,7 @@ final class mc extends IntrusiveNode {
               var1.b(-1, -1, var2Lifetime4);
             }
             stackIn_57_0 = ui.field_b;
-            stackIn_57_1 = sd.field_K;
+            stackIn_57_1 = AlphaContainer.field_K;
             stackIn_58_2 = (NameSuggestionsPanel.field_I.field_j == 0);
             r.a(stackIn_57_0, stackIn_57_1, stackIn_58_2, param0 ^ -44);
           }
@@ -356,7 +356,7 @@ final class mc extends IntrusiveNode {
                   if (ProxyAuthenticationException.field_d > 586) {
                     if (ScrollContainer.field_Kb.field_F + 586 <= ProxyAuthenticationException.field_d) {
                       CachedTextLayout.e(param0 - 19320);
-                      li.field_a[ae.field_b].b(269, 340);
+                      li.field_a[Vector3.field_b].b(269, 340);
                       return;
                     }
                     hf.field_m.b(585, -1 + var1_int, var2Lifetime5);
@@ -369,7 +369,7 @@ final class mc extends IntrusiveNode {
             }
           }
           CachedTextLayout.e(param0 - 19320);
-          li.field_a[ae.field_b].b(269, 340);
+          li.field_a[Vector3.field_b].b(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

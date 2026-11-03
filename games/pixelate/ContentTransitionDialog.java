@@ -7,7 +7,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
     static boolean field_kb;
     private int field_ib;
     private dq field_lb;
-    private sd field_bb;
+    private AlphaContainer field_bb;
     private UiComponent field_db;
     private int field_fb;
     private int field_cb;
@@ -306,9 +306,9 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
         try {
           if (param0 != null) {
             param0.a(param0.field_E, (byte) 55, this.field_fb + 6, 6, param0.field_C);
-            this.field_bb = new sd(param0);
+            this.field_bb = new AlphaContainer(param0);
           } else {
-            this.field_bb = new sd();
+            this.field_bb = new AlphaContainer();
           }
           this.b(this.field_bb, 80);
           this.field_db = null;

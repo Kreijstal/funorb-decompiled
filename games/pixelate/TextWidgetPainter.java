@@ -219,7 +219,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               var3 = "[" + ul.field_m + "] ";
             }
             if (1 == param0.field_j) {
-              var3 = "[" + sd.a(HowToPlayScreen.field_q, 106, new String[]{param0.field_h}) + "] ";
+              var3 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 106, new String[]{param0.field_h}) + "] ";
             }
             if (param0.field_j == 4 &&
               null != TextLayoutLine.field_f) {
@@ -235,9 +235,9 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             if (!param0.field_a) {
               if (param0.field_d == 0 &&
                 param0.field_e == 0) {
-                var3 = sd.a(dg.field_b, 77, new String[]{(String) (var2)});
+                var3 = AlphaContainer.a(dg.field_b, 77, new String[]{(String) (var2)});
               } else {
-                var3 = sd.a(sk.field_c, 109, new String[]{(String) (var2)});
+                var3 = AlphaContainer.a(sk.field_c, 109, new String[]{(String) (var2)});
               }
             }
           }
@@ -563,7 +563,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               MusicPatch.field_s = false;
               var4 = 1;
             }
-            LoginDialog.a(true, var4 != 0, IndexedSpriteState.field_i, NodeHashTable.a(false), sc.c(16422));
+            LoginDialog.a(true, var4 != 0, IndexedSpriteState.field_i, NodeHashTable.a(false), ConditionalTextValue.c(16422));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
