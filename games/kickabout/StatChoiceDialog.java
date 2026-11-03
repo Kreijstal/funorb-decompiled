@@ -22,7 +22,7 @@ final class StatChoiceDialog extends MessageDialog {
         boolean stackIn_13_1 = false;
         int var3Lifetime1;
         var4 = Kickabout.field_G;
-        this.field_I.g((byte) 125);
+        this.field_I.resetPose((byte) 125);
         this.field_L.b(0, param1);
         for (var3 = 0; 3 > var3; var3++) {
           if (1 == this.field_O[var3].field_sb) {
@@ -47,7 +47,7 @@ final class StatChoiceDialog extends MessageDialog {
         if (this.field_H == 2) {
           var3Lifetime1 = 9;
         }
-        this.field_I.b((byte) -128, var3Lifetime1);
+        this.field_I.setAnimationClip((byte) -128, var3Lifetime1);
         this.field_I.field_R = 128;
     }
 
@@ -329,7 +329,7 @@ final class StatChoiceDialog extends MessageDialog {
         this.field_L.b(0, true);
         PacketBuffer.a(-65, c.field_b);
         SoftwareRasterizer.b();
-        this.field_I.a(1200, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 10, (byte) -68);
+        this.field_I.renderModel(1200, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 10, (byte) -68);
         if (param0 >= -11) {
           this.field_P = 5;
         }
@@ -358,13 +358,13 @@ final class StatChoiceDialog extends MessageDialog {
           }
           var9 = 0;
           if (0 == var4) {
-            var9 = this.field_J.c(true, IntValueNode.b(-79));
+            var9 = this.field_J.trinketPowerBonus(true, IntValueNode.b(-79));
           }
           if (var4 == 1) {
-            var9 = this.field_J.a(5205, IntValueNode.b(-79));
+            var9 = this.field_J.trinketSpeedBonus(5205, IntValueNode.b(-79));
           }
           if (var4 == 2) {
-            var9 = this.field_J.b((byte) 120, IntValueNode.b(27));
+            var9 = this.field_J.trinketTackleBonus((byte) 120, IntValueNode.b(27));
           }
           eo.a(16 + var5, 9 + var6, this.field_M[var4], var4, true, var9);
         }

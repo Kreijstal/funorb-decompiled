@@ -217,15 +217,15 @@ final class MySquadScreen extends TeamManagementScreen {
           var5.a(var26.getDisplayName(100), var10 + var12, var11, 268435455, -1);
           var11 += 22;
           var5.c(PromotionDialog.field_H, var10, var11, 268435455, -1);
-          var5.a(uf.field_e[var26.playerType], var10 + var12, var11, 268435455, -1);
+          var5.a(uf.field_e[var26.archetype], var10 + var12, var11, 268435455, -1);
           var11Lifetime1 = -10 + (this.field_I.field_T + this.field_I.field_mb);
           var13 = this.field_W.field_F + (-100 + this.field_W.field_q >> 1);
           var14 = this.field_W.field_T + 32;
-          eo.a(var13, var14, var26.power, 0, true, var26.c(true, IntValueNode.b(param0 - 73)));
+          eo.a(var13, var14, var26.power, 0, true, var26.trinketPowerBonus(true, IntValueNode.b(param0 - 73)));
           var14 += 18;
-          eo.a(var13, var14, var26.speed, 1, true, var26.a(param0 + 5210, IntValueNode.b(-89)));
+          eo.a(var13, var14, var26.speed, 1, true, var26.trinketSpeedBonus(param0 + 5210, IntValueNode.b(-89)));
           var14 += 18;
-          eo.a(var13, var14, var26.tackle, 2, true, var26.b((byte) 108, IntValueNode.b(param0 ^ 95)));
+          eo.a(var13, var14, var26.tackle, 2, true, var26.trinketTackleBonus((byte) 108, IntValueNode.b(param0 ^ 95)));
           if (var26.power == 100 &&
             100 == var26.tackle &&
             var26.speed == 100) {

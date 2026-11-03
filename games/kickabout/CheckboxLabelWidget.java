@@ -72,7 +72,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
           ic.field_i = false;
           et.field_d.participantStatus[1].controlledSlot = 0;
           if (HuffmanCodec.field_e == 1) {
-            EmailAvailabilityValidator.field_k.a(29360128, false, 0, 107085824);
+            EmailAvailabilityValidator.field_k.setPosition(29360128, false, 0, 107085824);
             EmailAvailabilityValidator.field_k.field_R = 1024;
             EmailAvailabilityValidator.field_k.setDirectionFromMask(4, 26214);
             et.field_d.field_V.a(29360128, 0, (byte) 26, 44040192);
@@ -83,20 +83,20 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                 if (4 != HuffmanCodec.field_e) {
                   if (HuffmanCodec.field_e != 5) {
                     if (6 == HuffmanCodec.field_e) {
-                      ld.field_f.a(655360, param1, 0, 19005440);
+                      ld.field_f.setPosition(655360, param1, 0, 19005440);
                       vb.field_d = 1;
                       var5 = 0;
                       var2_intLifetime1 = var5;
                       while (3 > var5) {
                         KitStyleTile.field_zb[var5] = 740;
-                        ((RenderedFootballer) (et.field_d.field_P[1][1 + var5])).a(400 + var5 * 100 << 16, param1, 0, -(var5 * 40) + 330 << 16);
+                        ((RenderedFootballer) (et.field_d.field_P[1][1 + var5])).setPosition(400 + var5 * 100 << 16, param1, 0, -(var5 * 40) + 330 << 16);
                         var5++;
                       }
                     } else {
                       if (HuffmanCodec.field_e == 7) {
                         vb.field_d = 3;
                         var8 = (RenderedFootballer) (et.field_d.field_P[1][4]);
-                        var8.a(-13107200, false, 0, 22937600);
+                        var8.setPosition(-13107200, false, 0, 22937600);
                         et.field_d.participantStatus[1].controlledSlot = 4;
                         var8.directionMask = 8;
                         ld.field_f.directionMask = 4;
@@ -121,7 +121,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                                   } else {
                                     vb.field_d = 4;
                                     var7 = (RenderedFootballer) (et.field_d.field_P[1][0]);
-                                    var7.a(29360128, false, 0, -19005440);
+                                    var7.setPosition(29360128, false, 0, -19005440);
                                     var7.field_o = 8;
                                     var7.directionMask = 0;
                                   }
@@ -129,11 +129,11 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                               }
                             } else {
                               vb.field_d = 1;
-                              fc.field_c.a(1310720, false, 0, 36438016);
+                              fc.field_c.setPosition(1310720, false, 0, 36438016);
                             }
                           } else {
                             vb.field_d = 3;
-                            EmailAvailabilityValidator.field_k.a(0, false, 0, 44040192);
+                            EmailAvailabilityValidator.field_k.setPosition(0, false, 0, 44040192);
                           }
                         }
                       }
@@ -142,7 +142,7 @@ final class CheckboxLabelWidget extends UiLayoutNode {
                     vb.field_d = 3;
                   }
                 } else {
-                  ld.field_f.a(42270720, false, 0, 41287680);
+                  ld.field_f.setPosition(42270720, false, 0, 41287680);
                   vb.field_d = 1;
                 }
               } else {

@@ -90,12 +90,12 @@ final class WelcomeDialog extends MessageDialog {
         var9 = new PlayerStats();
         var9.field_c = true;
         if (param4 == -1) {
-          var9.playerType = param1 / 2;
-          if (var9.playerType == 2) {
-            var9.playerType = 3;
+          var9.archetype = param1 / 2;
+          if (var9.archetype == 2) {
+            var9.archetype = 3;
           } else {
-            if (var9.playerType == 3) {
-              var9.playerType = 2;
+            if (var9.archetype == 3) {
+              var9.archetype = 2;
             }
           }
           var10 = 50 + param1 % 2 * 50;
@@ -104,11 +104,11 @@ final class WelcomeDialog extends MessageDialog {
           var9.experience = 0;
           var9.speed = var10;
           var11 = 1;
-          if (2 == var9.playerType) {
+          if (2 == var9.archetype) {
             var11 = 3;
           }
           var9.trinketIds = new int[var11];
-          if (var9.playerType == 2) {
+          if (var9.archetype == 2) {
             var9.trinketIds[0] = 3;
             for (var12 = 1; var9.trinketIds.length > var12; var12++) {
               var9.trinketIds[var12] = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-115, 4, var8);
@@ -130,20 +130,20 @@ final class WelcomeDialog extends MessageDialog {
         } else {
           stackIn_6_0 = (3 <= param4) ? 2 : 3;
           var10 = stackIn_6_0;
-          var9.playerType = param1 / var10;
-          if (var9.playerType == 2) {
-            var9.playerType = 3;
+          var9.archetype = param1 / var10;
+          if (var9.archetype == 2) {
+            var9.archetype = 3;
           } else {
-            if (var9.playerType == 3) {
-              var9.playerType = 2;
+            if (var9.archetype == 3) {
+              var9.archetype = 2;
             }
           }
           if (param4 < 2 &&
-            var9.playerType == 2) {
-            var9.playerType = 3;
+            var9.archetype == 2) {
+            var9.archetype = 3;
           }
           var11 = 40 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-69, 4, var8) * 10;
-          if (var9.playerType == 0) {
+          if (var9.archetype == 0) {
             stackIn_18_0 = var9;
             stackIn_18_1 = ng.field_d[param4];
             stackIn_18_2 = 86;
@@ -156,7 +156,7 @@ final class WelcomeDialog extends MessageDialog {
             var9.speed = var11 * var9.tackle / 100;
             var9.power = (100 - var11) * var9.tackle / 100;
           }
-          if (var9.playerType == 3) {
+          if (var9.archetype == 3) {
             stackIn_24_0 = var9;
             stackIn_24_1 = ng.field_d[param4];
             stackIn_24_2 = -60;
@@ -169,7 +169,7 @@ final class WelcomeDialog extends MessageDialog {
             var9.tackle = var11 * var9.speed / 100;
             var9.power = (100 - var11) * var9.speed / 100;
           }
-          if (var9.playerType == 1) {
+          if (var9.archetype == 1) {
             stackIn_30_0 = var9;
             stackIn_30_1 = ng.field_d[param4];
             stackIn_30_2 = -66;
@@ -182,7 +182,7 @@ final class WelcomeDialog extends MessageDialog {
             var9.speed = var9.power * var11 / 100;
             var9.tackle = (-var11 + 100) * var9.power / 100;
           }
-          if (2 == var9.playerType) {
+          if (2 == var9.archetype) {
             var12 = ng.field_d[param4] + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-41, 11, var8);
             var11 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(81, 3, var8) * 10 + 60;
             var9.tackle = var12 * var11 / 100;
@@ -202,7 +202,7 @@ final class WelcomeDialog extends MessageDialog {
             var9.power = 80;
           }
           var12 = 0;
-          if (var9.playerType != 2) {
+          if (var9.archetype != 2) {
             var12++;
             if (param4 >= 4 &&
               ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(89, 2, var8) == 0) {
@@ -218,7 +218,7 @@ final class WelcomeDialog extends MessageDialog {
             }
           }
           var9.trinketIds = new int[var12];
-          if (2 == var9.playerType) {
+          if (2 == var9.archetype) {
             var9.trinketIds[0] = 3;
             for (var13 = 1; var9.trinketIds.length > var13; var13++) {
               var14 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-89, 100, var8);
@@ -254,7 +254,7 @@ final class WelcomeDialog extends MessageDialog {
           }
         }
         var9.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-67, TrinketCatalog.field_a.length, var8);
-        var9.surnameIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-98, BuyPlayerDialog.field_G[var9.playerType].length - 1, var8) + 1;
+        var9.surnameIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-98, BuyPlayerDialog.field_G[var9.archetype].length - 1, var8) + 1;
         var10Lifetime1 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, 5, var8);
         var11Lifetime1 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-114, 3, var8);
         var12Lifetime1 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-41, 3, var8);

@@ -154,7 +154,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           for (var4 = 0; var4 < 2; var4++) {
             var5_ref_gmLifetime2 = bk.field_a[var4];
             var5_ref_gmLifetime2.stepMovement(2, (PlayArea[]) null, false, false);
-            var5_ref_gmLifetime2.g((byte) 126);
+            var5_ref_gmLifetime2.resetPose((byte) 126);
             if (var5_ref_gmLifetime2.action != 0 &&
               0 >= var5_ref_gmLifetime2.actionTime) {
               var5_ref_gmLifetime2.setAction((byte) -31, 0);
@@ -175,7 +175,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
             }
           }
           for (var5Lifetime2 = 0; var5Lifetime2 < ip.field_b.length; var5Lifetime2++) {
-            ip.field_b[var5Lifetime2].g((byte) 125);
+            ip.field_b[var5Lifetime2].resetPose((byte) 125);
           }
         }
         if (ArrayWidgetContainer.field_x == -1 ||
@@ -248,7 +248,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           var3 = stackIn_9_0;
           var4 = SoftwareRasterizer.field_g >> 1;
           var5 = SoftwareRasterizer.field_f - 15;
-          ip.field_b[var2].a(var3, 128, var4, var5, (byte) -87);
+          ip.field_b[var2].renderModel(var3, 128, var4, var5, (byte) -87);
           TeamManagementScreen.e(param0 - 204);
           var6 = ChatMessage.field_f[var2][0] + this.slideOffsetX;
           var7 = ChatMessage.field_f[var2][1];
@@ -391,12 +391,12 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           }
           ip.field_b[var2] = new RenderedFootballer(AuctionItem.a(11, 16, 0, var3_int, 0, 0, 31, false, false, false), var3_int, true);
           ip.field_b[var2].archetype = var3_int;
-          ip.field_b[var2].g((byte) 127);
+          ip.field_b[var2].resetPose((byte) 127);
           ip.field_b[var2].field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, ip.field_b[var2].field_mb.a(true), new Random()), -61);
         }
         bk.field_a = new RenderedFootballer[2];
         PlayerStats var6 = new PlayerStats();
-        var6.playerType = 0;
+        var6.archetype = 0;
         var6.speed = 100;
         for (var3_intLifetime1 = 0; var3_intLifetime1 < 2; var3_intLifetime1++) {
           bk.field_a[var3_intLifetime1] = new RenderedFootballer(AuctionItem.a(4, 16, var3_intLifetime1, 0, var3_intLifetime1, var3_intLifetime1, 31, false, false, false), 0, true);
@@ -415,10 +415,10 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var3.surnameIndex = 12;
         var3.tackle = 25;
         var3.initialIndex = 10;
-        var3.playerType = 3;
+        var3.archetype = 3;
         var3.experience = 24;
         var3 = this.field_F[2];
-        var3.playerType = 0;
+        var3.archetype = 0;
         var3.experience = 14;
         var3.power = 21;
         var3.speed = 12;
@@ -431,7 +431,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         if (param0 != -38) {
           this.field_K = (SquadSlotWidget[]) null;
         }
-        var3.playerType = 0;
+        var3.archetype = 0;
         var3.initialIndex = 30;
         var3.speed = 7;
         var3.tackle = 35;
@@ -442,7 +442,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var3.surnameIndex = 14;
         var3.power = 82;
         var3.tackle = 12;
-        var3.playerType = 1;
+        var3.archetype = 1;
         var3.experience = 98;
         var3.speed = 35;
         UiLayoutNode var4 = new UiLayoutNode();
@@ -521,7 +521,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           un.field_d.a(DelegatingCanvas.field_d[var4].toUpperCase(), var3 + 20, 180, 16777215, -1);
           PacketBuffer.a(param0 ^ -19, UrlRequest.field_k);
           SoftwareRasterizer.b();
-          bk.field_a[var4].a(950, 300, SoftwareRasterizer.field_g >> 1, (SoftwareRasterizer.field_f >> 1) + 60, (byte) -71);
+          bk.field_a[var4].renderModel(950, 300, SoftwareRasterizer.field_g >> 1, (SoftwareRasterizer.field_f >> 1) + 60, (byte) -71);
           TeamManagementScreen.e(param0 ^ 24);
           var6 = bk.field_a[var4].directionMask;
           array$0 = new boolean[4];

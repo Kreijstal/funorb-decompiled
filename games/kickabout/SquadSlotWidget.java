@@ -87,7 +87,7 @@ final class SquadSlotWidget extends UiLayoutNode {
         var5[3] = 1260;
         var5[2] = 1400;
         var5[1] = 1400;
-        this.field_Db.a(var3[this.field_Eb.playerType], 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, (byte) -122);
+        this.field_Db.renderModel(var3[this.field_Eb.archetype], 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, (byte) -122);
         TeamManagementScreen.e(117);
         if (this.field_zb) {
           eo.a(dc.field_b, 1);
@@ -164,7 +164,7 @@ final class SquadSlotWidget extends UiLayoutNode {
             }
           } else {
             this.field_Db.stepMovement(2, (PlayArea[]) null, false, false);
-            this.field_Db.g((byte) 127);
+            this.field_Db.resetPose((byte) 127);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

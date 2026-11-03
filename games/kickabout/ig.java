@@ -124,7 +124,7 @@ final class ig {
         int var7 = !param0 ? 80 + TextLayoutLine.a(-6779, 480) : TextLayoutLine.a(-6779, 0) - 50;
         if (var6.positionY != var5 &&
           tc.advanceToPoint(4, (byte) 106, var6.positionX, var6, var7 << 16)) {
-          var6.a(var4, false, 0, var5);
+          var6.setPosition(var4, false, 0, var5);
         }
     }
 

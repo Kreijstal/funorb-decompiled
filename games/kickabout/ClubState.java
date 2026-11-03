@@ -599,27 +599,27 @@ final class ClubState {
           var13 = new PlayerStats();
           var15 = var13;
           if (var4 == 0) {
-            var13.playerType = 0;
+            var13.archetype = 0;
           }
           if (1 == var4) {
             if (0 != var3) {
-              var15.playerType = 3;
+              var15.archetype = 3;
             } else {
-              var13.playerType = 0;
+              var13.archetype = 0;
             }
           }
           if (var4 == 2) {
             if (var3 != 2) {
-              var15.playerType = 3;
+              var15.archetype = 3;
             } else {
-              var15.playerType = 1;
+              var15.archetype = 1;
             }
           }
           if (var4 == 3) {
-            var15.playerType = 1;
+            var15.archetype = 1;
           }
           var15.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, TrinketCatalog.field_a.length, var14);
-          var15.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(106, -1 + BuyPlayerDialog.field_G[var15.playerType].length, var14);
+          var15.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(106, -1 + BuyPlayerDialog.field_G[var15.archetype].length, var14);
           var15.power = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-86, 10, var14) + 6;
           var15.tackle = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(97, 10, var14) + 6;
           var15.speed = 6 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-111, 10, var14);

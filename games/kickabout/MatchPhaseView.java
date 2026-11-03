@@ -355,7 +355,7 @@ abstract class MatchPhaseView {
         return true;
     }
 
-    void a(boolean param0) {
+    void updateCamera(boolean param0) {
         mj.a(140.0, 60, 448.0, 672.0);
         if (!param0) {
           this.positionButtons(69);

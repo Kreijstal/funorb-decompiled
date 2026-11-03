@@ -117,7 +117,7 @@ final class vs {
           var12.field_mb.a(0, 99);
           PacketBuffer.a(-81, ConsoleCommand.field_u);
           SoftwareRasterizer.b();
-          var12.a(var8[this.field_d.playerType], 0, SoftwareRasterizer.field_g >> 1, var17[this.field_d.playerType], (byte) -118);
+          var12.renderModel(var8[this.field_d.archetype], 0, SoftwareRasterizer.field_g >> 1, var17[this.field_d.archetype], (byte) -118);
           TeamManagementScreen.e(122);
           eo.downscaleByHalf(ConsoleCommand.field_u, this.field_h);
           var13 = (this.field_h.field_v - 2) * this.field_h.field_o;

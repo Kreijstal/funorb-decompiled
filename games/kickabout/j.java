@@ -68,7 +68,7 @@ final class j {
           this.field_b.field_R = (this.field_b.field_R + 1024) % 2048;
           PacketBuffer.a(param0 + 39, wa.field_a);
           SoftwareRasterizer.b();
-          this.field_b.a(1200, 300, 48, 90, (byte) -105);
+          this.field_b.renderModel(1200, 300, 48, 90, (byte) -105);
           TeamManagementScreen.e(127);
           wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
           if (ia.field_c) {
@@ -79,7 +79,7 @@ final class j {
         }
         PacketBuffer.a(param0 + 39, wa.field_a);
         SoftwareRasterizer.b();
-        this.field_b.a(1200, 300, 48, 90, (byte) -105);
+        this.field_b.renderModel(1200, 300, 48, 90, (byte) -105);
         TeamManagementScreen.e(127);
         wa.field_a.drawHalfSize(param2 - param0, -47 + param1);
         if (!ia.field_c) {
@@ -96,21 +96,21 @@ final class j {
           if (param0 != 129) {
             this.field_b.stepMovement(2, (PlayArea[]) null, false, false);
             if (param1 == 1) {
-              this.field_b.g((byte) 125);
+              this.field_b.resetPose((byte) 125);
               return;
             }
             field_a = (String[]) null;
-            this.field_b.g((byte) 125);
+            this.field_b.resetPose((byte) 125);
             return;
           }
           this.field_b.directionMask = 3;
           this.field_b.stepMovement(2, (PlayArea[]) null, false, false);
           if (param1 != 1) {
             field_a = (String[]) null;
-            this.field_b.g((byte) 125);
+            this.field_b.resetPose((byte) 125);
             return;
           }
-          this.field_b.g((byte) 125);
+          this.field_b.resetPose((byte) 125);
           return;
         }
         this.field_b.directionMask = 8;
@@ -118,20 +118,20 @@ final class j {
           this.field_b.directionMask = 3;
           this.field_b.stepMovement(2, (PlayArea[]) null, false, false);
           if (param1 == 1) {
-            this.field_b.g((byte) 125);
+            this.field_b.resetPose((byte) 125);
             return;
           }
           field_a = (String[]) null;
-          this.field_b.g((byte) 125);
+          this.field_b.resetPose((byte) 125);
           return;
         }
         this.field_b.stepMovement(2, (PlayArea[]) null, false, false);
         if (param1 == 1) {
-          this.field_b.g((byte) 125);
+          this.field_b.resetPose((byte) 125);
           return;
         }
         field_a = (String[]) null;
-        this.field_b.g((byte) 125);
+        this.field_b.resetPose((byte) 125);
     }
 
     j(int param0) {
@@ -149,7 +149,7 @@ final class j {
         this.field_b = new RenderedFootballer(var4, var2, false);
         this.field_b.directionMask = 8;
         this.field_b.field_R = 1536;
-        this.field_b.b((byte) -128, 5);
+        this.field_b.setAnimationClip((byte) -128, 5);
         if (param0 == 0) {
           this.field_b.field_mb.a(10, 126);
         }

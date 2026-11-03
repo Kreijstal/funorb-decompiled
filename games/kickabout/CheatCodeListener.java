@@ -26,7 +26,7 @@ final class CheatCodeListener implements OverlayLayer {
           var6 = MatchPhaseView.a(false, var4 % 3, var3, LongPlusOneCommand.field_B[-(2 * param1) + 12], var11[0], var4 % 3, var11[1], (byte) -89, -var4 + 3, false, LongPlusOneCommand.field_B[31]);
           this.field_i[var4] = new RenderedFootballer(var6, var3, true);
           this.field_i[var4].directionMask = 1;
-          this.field_i[var4].g((byte) 127);
+          this.field_i[var4].resetPose((byte) 127);
           this.field_i[var4].field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(85, this.field_i[var4].field_mb.a(true), new Random()), 123);
         }
         if (param0 >= -10) {
@@ -153,7 +153,7 @@ final class CheatCodeListener implements OverlayLayer {
           var9 = (int)var7 + 140;
           PacketBuffer.a(-102, this.field_b);
           SoftwareRasterizer.b();
-          this.field_i[var4].a(var3, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, (byte) -105);
+          this.field_i[var4].renderModel(var3, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, (byte) -105);
           TeamManagementScreen.e(120);
           if (this.field_f > 136) {
             this.field_b.b(-(this.field_b.field_o >> 1) + var8, -(this.field_b.field_v >> 1) + var9, 200 - this.field_f << 2);
@@ -200,7 +200,7 @@ final class CheatCodeListener implements OverlayLayer {
         }
         for (var3 = 0; var3 < 4; var3++) {
           this.field_i[var3].stepMovement(param0 ^ -27, (PlayArea[]) null, false, false);
-          this.field_i[var3].g((byte) 126);
+          this.field_i[var3].resetPose((byte) 126);
         }
     }
 

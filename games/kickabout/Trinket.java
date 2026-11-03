@@ -20,7 +20,7 @@ final class Trinket {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -21636) {
-            this.b(41);
+            this.speedBonus(41);
           }
           stackIn_7_0 = (56 == this.field_h);
           return stackIn_7_0;
@@ -107,7 +107,7 @@ final class Trinket {
         }
     }
 
-    final int b(int param0) {
+    final int speedBonus(int param0) {
         int stackIn_1_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -250,7 +250,7 @@ final class Trinket {
           if (!hq.field_a) {
             return;
           }
-          var2_int = ug.a(0, param0.g(1606384336));
+          var2_int = ug.a(0, param0.getRenderedX(1606384336));
           var3 = IntKeyLookup.a((byte) -64, param0.field_bb >> 16);
           if (param1 != 100) {
             return;
@@ -729,7 +729,7 @@ final class Trinket {
         }
     }
 
-    final int b(byte param0) {
+    final int powerBonus(byte param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -835,7 +835,7 @@ final class Trinket {
         }
     }
 
-    final int o(int param0) {
+    final int tackleBonus(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;

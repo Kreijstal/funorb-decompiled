@@ -40,11 +40,11 @@ final class rl extends SortCriterion {
           var8 = ((ShopPlayerSlot) (param1)).field_Sb;
           var4 = var8;
           var5 = ((ShopPlayerSlot) (param2)).field_Sb;
-          var6 = uf.field_e[var8.playerType];
+          var6 = uf.field_e[var8.archetype];
           if (param0 != 2) {
             field_q = 3;
           }
-          var7 = uf.field_e[var5.playerType];
+          var7 = uf.field_e[var5.archetype];
           stackIn_3_0 = var6.compareTo(var7) ^ this.field_i << 31;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

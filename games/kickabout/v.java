@@ -43,7 +43,7 @@ final class v {
           PacketBuffer.a(74, this.field_f);
           SoftwareRasterizer.b();
           var4_int = 486400 / InstrumentNoteMask.field_i;
-          param0.a(var4_int, 300, this.field_g, this.field_h, (byte) -74);
+          param0.renderModel(var4_int, 300, this.field_g, this.field_h, (byte) -74);
           TeamManagementScreen.e(124);
           if (param2) {
             return;

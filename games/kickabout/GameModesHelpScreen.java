@@ -487,9 +487,9 @@ final class GameModesHelpScreen extends PagedHelpScreen {
           var5.experience = 0;
           var5.power = 50;
           var5.speed = 50;
-          var5.playerType = var4;
+          var5.archetype = var4;
           var5.tackle = 50;
-          var5.surnameIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-110, BuyPlayerDialog.field_G[var5.playerType].length, var7);
+          var5.surnameIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-110, BuyPlayerDialog.field_G[var5.archetype].length, var7);
           var5.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-92, TrinketCatalog.field_a.length, var7);
           var5.appearance = var5.appearance | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, 3, var7);
           var5.appearance = var5.appearance | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(95, 3, var7) << 4;

@@ -175,7 +175,7 @@ final class bt {
             if (var2Lifetime3Lifetime2 != 0) {
               for (var3 = 0; var3 < 4; var3++) {
                 var4 = (RenderedFootballer) (et.field_d.field_P[1][1 + var3]);
-                var4.a(th.field_c[var3] << 16, false, 0, te.field_a[var3] << 16);
+                var4.setPosition(th.field_c[var3] << 16, false, 0, te.field_a[var3] << 16);
                 var4.directionMask = 0;
                 stackIn_60_0 = var4;
                 if (var3 == 1) {

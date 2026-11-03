@@ -198,7 +198,7 @@ final class RenderedBall extends BallAgent {
         EmailSyntaxValidator.field_l[this.modelId].a(this.field_D, this.field_G);
     }
 
-    private final int k(int param0) {
+    private final int getRenderedX(int param0) {
         if (param0 != 14963) {
           return -121;
         }
@@ -651,7 +651,7 @@ final class RenderedBall extends BallAgent {
           return;
         }
         int var2 = this.j(-1);
-        int var3 = ug.a(0, this.k(param0 + 14899));
+        int var3 = ug.a(0, this.getRenderedX(param0 + 14899));
         int var4 = IntKeyLookup.a((byte) -107, this.c(true));
         if (tb.field_v != 1) {
           var2 = (var2 << 8) / InstrumentNoteMask.field_i;

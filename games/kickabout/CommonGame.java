@@ -900,7 +900,7 @@ final class CommonGame {
                           var8_intLifetime1Lifetime1 = var7Lifetime2Lifetime1 * var7Lifetime2Lifetime1 + var6Lifetime1Lifetime1 * var6Lifetime1Lifetime1;
                           if (var8_intLifetime1Lifetime1 < 1600) {
                             this.field_V.a((MatchAgent) (var5), (byte) 84);
-                            var9Lifetime1 = (4 * var5.stats.d(var5.member, 0) << 16) / 100 + 524288;
+                            var9Lifetime1 = (4 * var5.stats.effectivePower(var5.member, 0) << 16) / 100 + 524288;
                             var10_long = (long)(var9Lifetime1 + Math.max(var5.field_q, pc.a(this.field_V.horizontalSpeedSquared(-127), -524289)));
                             this.field_V.uncatchable = 5;
                             this.field_V.velocityY = (int)((long)var5.field_m * var10_long / (long)var5.field_q);

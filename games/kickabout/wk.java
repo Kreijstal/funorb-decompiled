@@ -138,21 +138,21 @@ final class wk {
         }
         while (var4 < 5) {
           var5 = new PlayerStats();
-          var5.playerType = 0;
+          var5.archetype = 0;
           if (var4 == 0) {
-            var5.playerType = 0;
+            var5.archetype = 0;
           }
           if (var4 == 2) {
-            var5.playerType = 3;
+            var5.archetype = 3;
           }
           if (var4 == 3) {
-            var5.playerType = 1;
+            var5.archetype = 1;
           }
           if (param0) {
-            var5.playerType = 0;
+            var5.archetype = 0;
           }
           var5.initialIndex = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-126, TrinketCatalog.field_a.length, var3);
-          var5.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, -1 + BuyPlayerDialog.field_G[var5.playerType].length, var3);
+          var5.surnameIndex = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, -1 + BuyPlayerDialog.field_G[var5.archetype].length, var3);
           var5.experience = 0;
           if (param0 &&
             var4 != 3) {

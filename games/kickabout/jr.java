@@ -188,7 +188,7 @@ final class jr extends im {
                 ConsoleTokenCursor.field_d.c(bk.field_g.toUpperCase(), -10 + var4, this.field_T - (-this.field_mb + 7), 16737894, -1);
               }
             }
-            this.field_X.a(uf.field_e[var12.playerType], 12 + var4, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
+            this.field_X.a(uf.field_e[var12.archetype], 12 + var4, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
             var4 = var4 + this.field_Db[1];
             var6 = 7 + var4;
             for (var7 = 0; 3 > var7; var7++) {
@@ -205,12 +205,12 @@ final class jr extends im {
               var9_int = stackIn_36_0;
               if (var7 != 0) {
                 if (var7 == 1) {
-                  stackIn_41_0 = var12.a(5205, IntValueNode.b(87));
+                  stackIn_41_0 = var12.trinketSpeedBonus(5205, IntValueNode.b(87));
                 } else {
-                  stackIn_41_0 = var12.b((byte) -51, IntValueNode.b(-112));
+                  stackIn_41_0 = var12.trinketTackleBonus((byte) -51, IntValueNode.b(-112));
                 }
               } else {
-                stackIn_41_0 = var12.c(true, IntValueNode.b(-113));
+                stackIn_41_0 = var12.trinketPowerBonus(true, IntValueNode.b(-113));
               }
               var10 = stackIn_41_0;
               stackIn_44_0 = var6;

@@ -103,7 +103,7 @@ final class ShopPlayerSlot extends im {
           }
           this.field_X.a(this.field_Sb.getDisplayName(100), var3Lifetime1 + 40, 4 + (this.field_mb >> 1) + this.field_T, this.field_y, -1);
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[param0];
-          this.field_X.a(uf.field_e[this.field_Sb.playerType], 8 + var3Lifetime1, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
+          this.field_X.a(uf.field_e[this.field_Sb.archetype], 8 + var3Lifetime1, this.field_T + (this.field_mb >> 1) + 4, this.field_y, -1);
           var3Lifetime1 = var3Lifetime1 + this.field_Pb[1];
           var5 = 6 + var3Lifetime1;
           for (var6 = 0; 3 > var6; var6++) {
@@ -119,12 +119,12 @@ final class ShopPlayerSlot extends im {
             }
             var8 = stackIn_16_0;
             if (0 == var6) {
-              stackIn_21_0 = this.field_Sb.c(true, IntValueNode.b(-91));
+              stackIn_21_0 = this.field_Sb.trinketPowerBonus(true, IntValueNode.b(-91));
             } else {
               if (var6 != 1) {
-                stackIn_21_0 = this.field_Sb.b((byte) 84, IntValueNode.b(99));
+                stackIn_21_0 = this.field_Sb.trinketTackleBonus((byte) 84, IntValueNode.b(99));
               } else {
-                stackIn_21_0 = this.field_Sb.a(5205, IntValueNode.b(param0 + 118));
+                stackIn_21_0 = this.field_Sb.trinketSpeedBonus(5205, IntValueNode.b(param0 + 118));
               }
             }
             var9 = stackIn_21_0;

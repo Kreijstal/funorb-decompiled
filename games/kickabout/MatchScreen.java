@@ -208,7 +208,7 @@ final class MatchScreen extends AppScreen {
         }
         SellPlayerDialog.g(-128);
         re.b(101);
-        this.phaseController.a(true);
+        this.phaseController.updateCamera(true);
         this.phaseController.update(-117, param1);
         if (this.isOnlineMatch &&
           !SquadPickerDialog.field_K) {

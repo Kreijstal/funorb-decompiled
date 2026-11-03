@@ -14,7 +14,7 @@ final class mv {
           var1.power = 50;
           var1.speed = 50;
           var2.trinketIds = new int[]{110};
-          var1.playerType = 4;
+          var1.archetype = 4;
           var1.tackle = 50;
           return var1;
         }

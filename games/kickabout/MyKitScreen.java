@@ -427,9 +427,9 @@ final class MyKitScreen extends TeamManagementScreen {
           this.field_N = ic.field_h.field_k;
           this.field_bb = ic.field_h.field_w;
           this.field_Q = ic.field_h.field_R;
-          this.field_cb.a(HelpTipDialog.field_I[((PlayerStats) (var3)).playerType][3], (byte) -107);
+          this.field_cb.a(HelpTipDialog.field_I[((PlayerStats) (var3)).archetype][3], (byte) -107);
           this.field_cb.a(30, -81);
-          if (((PlayerStats) (var3)).playerType == 2) {
+          if (((PlayerStats) (var3)).archetype == 2) {
             this.field_cb.a(10, param0 - 36);
           }
         }

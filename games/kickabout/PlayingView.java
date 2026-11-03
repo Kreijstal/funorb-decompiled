@@ -33,7 +33,7 @@ final class PlayingView extends MatchPhaseView {
     private boolean field_x;
     private int field_p;
 
-    private final void b(int param0, int param1, int param2) {
+    private final void switchToNearestTeammate(int param0, int param1, int param2) {
         int var8 = 0;
         int var4;
         int var5;
@@ -62,7 +62,7 @@ final class PlayingView extends MatchPhaseView {
             var5 = var8;
           }
         }
-        this.g(var5 + param2, -1);
+        this.queueKeypress(var5 + param2, -1);
     }
 
     private final int a(byte param0, int param1) {
@@ -72,7 +72,7 @@ final class PlayingView extends MatchPhaseView {
         return ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-61, param1, MidiPcmStream.field_l);
     }
 
-    private final void a(boolean param0, int param1, int param2) {
+    private final void playCrowdReaction(boolean param0, int param1, int param2) {
         boolean stackIn_12_0;
         int stackIn_12_1;
         int stackIn_12_2;
@@ -135,7 +135,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    private final int h(int param0) {
+    private final int getFocusedParticipant(int param0) {
         if (param0 != -41) {
           this.field_m = false;
         }
@@ -264,7 +264,7 @@ final class PlayingView extends MatchPhaseView {
           }
         }
         if (NanoTickClock.field_n) {
-          this.a(var3 != 0, param0 - 2112, var2);
+          this.playCrowdReaction(var3 != 0, param0 - 2112, var2);
         }
         if (NanoTickClock.field_n && (this.field_a.field_V.field_y ||
           this.field_a.field_V.field_x)) {
@@ -403,9 +403,9 @@ final class PlayingView extends MatchPhaseView {
 
     final void m(int param0) {
         if (param0 > -77) {
-          this.g(-34, -31);
+          this.queueKeypress(-34, -31);
         }
-        this.a(this.field_a, this.field_f, 370);
+        this.wrapAgentsForRendering(this.field_a, this.field_f, 370);
         this.a((IntrusiveDeque) null, (byte) -126);
     }
 
@@ -552,7 +552,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    private final void i(int param0) {
+    private final void pollLocalInput(int param0) {
         boolean stackIn_10_1 = false;
         boolean stackIn_11_2 = false;
         boolean stackIn_13_1 = false;
@@ -622,16 +622,16 @@ final class PlayingView extends MatchPhaseView {
                     this.field_k = false;
                   }
                   if (this.field_m) {
-                    this.b(TextLayoutLine.a(-6779, us.field_j), AccountTermsPanel.a(ArrayWidgetContainer.field_x, 6784), 1);
+                    this.switchToNearestTeammate(TextLayoutLine.a(-6779, us.field_j), AccountTermsPanel.a(ArrayWidgetContainer.field_x, 6784), 1);
                     this.field_m = false;
                   }
                 } else {
                   if (var2 == 0) {
                     if (var3 != 0) {
-                      this.g(7, -1);
+                      this.queueKeypress(7, -1);
                     }
                   } else {
-                    this.g(6, param0 - 16624);
+                    this.queueKeypress(6, param0 - 16624);
                   }
                 }
                 if (var2 == 0) {
@@ -741,7 +741,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    private final void a(CommonGame param0, boolean param1, int param2) {
+    private final void wrapAgentsForRendering(CommonGame param0, boolean param1, int param2) {
         int var4_int = 0;
         int var8 = 0;
         boolean stackIn_5_0 = false;
@@ -793,7 +793,7 @@ final class PlayingView extends MatchPhaseView {
                 var12 = 0;
               } else {
                 var13_ref_up = param0.field_b[var4_int][var8 - 1];
-                var9 = var13_ref_up.playerType;
+                var9 = var13_ref_up.archetype;
                 var14_int = var13_ref_up.appearance;
                 var12 = (var14_int & 15) >> 0;
                 var10 = var14_int >> 8 & 15;
@@ -854,7 +854,7 @@ final class PlayingView extends MatchPhaseView {
             this.field_a.c(this.field_g, -7) &&
             ei.field_n &&
             !MyKitScreen.field_O) {
-            this.a(InstrumentNoteMask.a(param1.participant, param1.value, -115, param1.field_p, param1.field_o), -122);
+            this.switchToPredictedReceiver(InstrumentNoteMask.a(param1.participant, param1.value, -115, param1.field_p, param1.field_o), -122);
             return;
           }
           return;
@@ -872,7 +872,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    final void a(boolean param0) {
+    final void updateCamera(boolean param0) {
         int var2;
         RenderedFootballer var3;
         int var4;
@@ -898,12 +898,12 @@ final class PlayingView extends MatchPhaseView {
           return;
         }
         if (!param0) {
-          this.a(false, 114, -8);
+          this.playCrowdReaction(false, 114, -8);
         }
-        var2 = this.h(-41);
+        var2 = this.getFocusedParticipant(-41);
         var3 = (RenderedFootballer) (this.field_a.getControlledFootballer((byte) -70, var2));
         if (this.field_a.c(var2, -67)) {
-          var4 = var3.g(1606384336);
+          var4 = var3.getRenderedX(1606384336);
           var5 = var3.h(1000);
           var6 = var3.directionX * 0;
           var7 = 50 * var3.directionY;
@@ -926,7 +926,7 @@ final class PlayingView extends MatchPhaseView {
         return;
     }
 
-    private final void e(byte param0) {
+    private final void updateAimIndicator(byte param0) {
         int var2;
         int var3;
         RenderedFootballer var4;
@@ -990,7 +990,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    private final void a(PlayerInputEvent param0, int param1) {
+    private final void switchToPredictedReceiver(PlayerInputEvent param0, int param1) {
         int var11 = 0;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
@@ -1068,7 +1068,7 @@ final class PlayingView extends MatchPhaseView {
             }
           }
           if (this.field_a.findControllingParticipant((byte) 6, var8, var9) == -1) {
-            this.g(var9 + 1, -1);
+            this.queueKeypress(var9 + 1, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1150,9 +1150,9 @@ final class PlayingView extends MatchPhaseView {
           this.field_x = stackIn_4_1;
           stackIn_7_1 = !(param3);
           this.field_B = stackIn_7_1;
-          this.a(param0, param3, 370);
+          this.wrapAgentsForRendering(param0, param3, 370);
           this.a((IntrusiveDeque) null, (byte) -97);
-          var6_int = this.h(-41);
+          var6_int = this.getFocusedParticipant(-41);
           this.field_C = SetLagCommand.a((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].field_p);
           this.field_l = true;
           MainMenuScreen.a(this.field_h, param1, param0, true);
@@ -1193,7 +1193,7 @@ final class PlayingView extends MatchPhaseView {
         }
     }
 
-    private final void g(int param0, int param1) {
+    private final void queueKeypress(int param0, int param1) {
         if (param1 != -1) {
           this.field_q = -15;
         }
@@ -1256,7 +1256,7 @@ final class PlayingView extends MatchPhaseView {
         LeaguesHelpScreen.i(-126);
         if (this.field_u &&
           this.isLocalParticipantActive((byte) 13)) {
-          this.e((byte) 107);
+          this.updateAimIndicator((byte) 107);
         }
         ReceivedAuctionItem.i((byte) 45);
         for (var2 = 0; 2 > var2; var2++) {
@@ -1283,7 +1283,7 @@ final class PlayingView extends MatchPhaseView {
           for (var3Lifetime1 = 0; this.field_a.playerCount > var3Lifetime1; var3Lifetime1++) {
             if (this.field_a.participantStatus[var3Lifetime1].isActive(3511)) {
               var4_ref_gm = (RenderedFootballer) (this.field_a.getControlledFootballer((byte) 112, var3Lifetime1));
-              this.field_C[var3Lifetime1].c(ug.a(0, var4_ref_gm.g(1606384336)) - (this.field_C[var3Lifetime1].field_o >> 1), IntKeyLookup.a((byte) -85, var4_ref_gm.h(1000)) - var2Lifetime1);
+              this.field_C[var3Lifetime1].c(ug.a(0, var4_ref_gm.getRenderedX(1606384336)) - (this.field_C[var3Lifetime1].field_o >> 1), IntKeyLookup.a((byte) -85, var4_ref_gm.h(1000)) - var2Lifetime1);
             }
           }
         }
@@ -1373,7 +1373,7 @@ final class PlayingView extends MatchPhaseView {
         if (this.field_a.participantStatus[this.field_g].isActive(param1 ^ 2865)) {
           if (param2 == 83 ||
             param2 == 82) {
-            this.g(0, param1 - 1671);
+            this.queueKeypress(0, param1 - 1671);
           }
           if (!this.field_f ||
             !this.field_x) {
@@ -1411,11 +1411,11 @@ final class PlayingView extends MatchPhaseView {
         this.field_u = param1 ? true : false;
         if (this.field_u) {
           this.n(-122);
-          this.i(16623);
+          this.pollLocalInput(16623);
         }
         if (this.field_g == this.field_a.field_V.field_j &&
           ei.field_n) {
-          this.a((PlayerInputEvent) null, -123);
+          this.switchToPredictedReceiver((PlayerInputEvent) null, -123);
         }
         this.a(true, this.field_a);
         if (this.field_a.bigHeadMode != this.field_n) {
@@ -1471,7 +1471,7 @@ final class PlayingView extends MatchPhaseView {
               var9 = 0;
             } else {
               var11_ref_up = this.field_a.field_b[var2][var6 - 1];
-              var7 = var11_ref_up.playerType;
+              var7 = var11_ref_up.archetype;
               var12_int = var11_ref_up.appearance;
               var8 = var12_int >> 8 & 15;
               var10 = (var12_int & 15) >> 0;
@@ -1488,7 +1488,7 @@ final class PlayingView extends MatchPhaseView {
             }
             var11 = stackIn_27_0;
             var12 = AuctionItem.a(var3, var4, var8, var7, var9, var10, var5, false, this.field_n, var11 != 0);
-            ((RenderedFootballer) (this.field_a.field_P[var2][var6])).a(var12, (byte) -115);
+            ((RenderedFootballer) (this.field_a.field_P[var2][var6])).setModel(var12, (byte) -115);
           }
           var2++;
         }
@@ -1512,7 +1512,7 @@ final class PlayingView extends MatchPhaseView {
               var6 = ~param1.field_X.goalScorer == ~var3_int ? 1 : 0;
               var7 = param1.findControllingParticipant((byte) 6, var3_int, var4);
               var8 = var7 == -1 ? 0 : param1.participantStatus[var7].field_l;
-              var5.a(var6 != 0, false, var8);
+              var5.updateAnimationFlags(var6 != 0, false, var8);
             }
           }
           ((RenderedBall) (param1.field_V)).a((RenderedFootballer) (param1.getBallCarrier((byte) -96)), (byte) 50);

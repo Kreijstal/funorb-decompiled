@@ -64,7 +64,7 @@ final class pi {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = param3.playerType;
+          var6_int = param3.archetype;
           if (param0 <= 90) {
             stackIn_2_0 = (vn) null;
             return stackIn_2_0;

@@ -56,7 +56,7 @@ final class mg {
             var8 = (PlayerStats) null;
             mg.a((PlayerStats) null, 111, 43, false, 111, (byte) 15);
           }
-          var7 = new RenderedFootballer(var6, param0.playerType, true);
+          var7 = new RenderedFootballer(var6, param0.archetype, true);
           var7.setAction((byte) -31, 0);
           var7.field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-121, var7.field_mb.a(true), new Random()), -38);
           stackIn_3_0 = var7;
