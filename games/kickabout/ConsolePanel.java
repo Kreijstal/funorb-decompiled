@@ -70,7 +70,7 @@ abstract class ConsolePanel implements OverlayLayer {
         }
     }
 
-    public void drawConsole(int param0) {
+    public void paint(int param0) {
         int var6 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -228,7 +228,7 @@ abstract class ConsolePanel implements OverlayLayer {
         }
     }
 
-    public final boolean a(byte param0) {
+    public final boolean capturesInput(byte param0) {
         UiLayoutNode discarded$0 = null;
         if (param0 < 63) {
           discarded$0 = this.a(40, -60, 5);
@@ -236,7 +236,7 @@ abstract class ConsolePanel implements OverlayLayer {
         return this.field_h;
     }
 
-    public boolean a(int param0, int param1, char param2) {
+    public boolean handleKeyTyped(int param0, int param1, char param2) {
         IntrusiveNode stackIn_26_1 = null;
         UiLayoutNode var5;
         int var6;
@@ -445,7 +445,7 @@ abstract class ConsolePanel implements OverlayLayer {
         }
     }
 
-    public final void a(int param0, boolean param1) {
+    public final void update(int param0, boolean param1) {
         int var4 = 0;
         int var3;
         int var5;

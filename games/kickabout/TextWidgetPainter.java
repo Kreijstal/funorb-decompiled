@@ -211,7 +211,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
             }
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
             AuctionListing.a(param1 - (-param4.field_t - param4.field_n), -22914, param1 + param4.field_t, param4.field_i + (param2 + param4.field_g), param2 + param4.field_g);
-            GameSoundEffect.field_i.a(this.field_i, var12, var10, var11, var10, param3);
+            GameSoundEffect.field_i.drawWidgetLine(this.field_i, var12, var10, var11, var10, param3);
             TeamManagementScreen.e(127);
           }
           if (!param3) {
@@ -781,7 +781,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
                 }
               }
               var15 = stackIn_19_0;
-              GameSoundEffect.field_i.a(this.textXForOffset(-31112, param3, param0, var14), var13.field_d, this.field_c, var15 - var14, var13.field_g + (this.field_q + param5) + (param3.field_g + param3.field_o), this.field_c >>> 24, (byte) -2);
+              GameSoundEffect.field_i.fillWidgetRectangleAlpha(this.textXForOffset(-31112, param3, param0, var14), var13.field_d, this.field_c, var15 - var14, var13.field_g + (this.field_q + param5) + (param3.field_g + param3.field_o), this.field_c >>> 24, (byte) -2);
             }
             TeamManagementScreen.e(125);
             return;

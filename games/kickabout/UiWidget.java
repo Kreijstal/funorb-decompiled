@@ -514,7 +514,7 @@ class UiWidget extends IntrusiveNode {
         }
         String var5 = JaggrabDownloader.a(true);
         if (var5 != null) {
-          GameSoundEffect.field_i.a(ws.field_e, (byte) 115, TrinketCatalog.field_d, var5);
+          GameSoundEffect.field_i.drawTooltip(ws.field_e, (byte) 115, TrinketCatalog.field_d, var5);
         }
     }
 

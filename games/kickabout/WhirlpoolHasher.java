@@ -260,7 +260,7 @@ final class WhirlpoolHasher {
               ValidatedTextWidget.field_X = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                wc.a((byte) -50, so.a(-71));
+                WidgetTheme.a((byte) -50, so.a(-71));
                 ListingRowCache.field_b = ld.field_i;
                 FormationView.b((byte) -116);
                 ContextMenuItem.field_Db = false;

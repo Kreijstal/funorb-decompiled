@@ -23,7 +23,7 @@ final class tr implements OverlayLayer {
         IntDoubleCommand.field_C.addLast(var1, 3);
     }
 
-    public final boolean a(byte param0) {
+    public final boolean capturesInput(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 <= 63) {
           field_e = (int[]) null;
@@ -32,7 +32,7 @@ final class tr implements OverlayLayer {
         return stackIn_6_0;
     }
 
-    public final void drawConsole(int param0) {
+    public final void paint(int param0) {
         int var2;
         int var3;
         int var4;
@@ -46,7 +46,7 @@ final class tr implements OverlayLayer {
         var4 = 125 / ((param0 - 50) / 45);
         SortCriterion.a(var2 != 0, (byte) -89);
         var3 = g.field_a.field_T;
-        if (!this.a((byte) 103) &&
+        if (!this.capturesInput((byte) 103) &&
           480 > var3) {
           SoftwareRasterizer.c(0, var3, 640, 0, 128);
         }
@@ -250,7 +250,7 @@ final class tr implements OverlayLayer {
           this.field_a = -6;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (!this.a((byte) 94) && (!bt.field_e ||
+        if (!this.capturesInput((byte) 94) && (!bt.field_e ||
           !MainMenuScreen.isScreenShown(-1, -1) &&
           !MainMenuScreen.isScreenShown(-2, -1))) {
           stackIn_9_0 = false;
@@ -262,7 +262,7 @@ final class tr implements OverlayLayer {
         return stackIn_9_0;
     }
 
-    public final void a(int param0, boolean param1) {
+    public final void update(int param0, boolean param1) {
         int stackIn_19_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_21_1 = 0;
@@ -317,7 +317,7 @@ final class tr implements OverlayLayer {
           stackIn_24_8 = 11;
           stackIn_24_9 = true;
           stackIn_24_10 = 13;
-          stackIn_25_11 = (this.a((byte) 121)) ? false : true;
+          stackIn_25_11 = (this.capturesInput((byte) 121)) ? false : true;
           te.$cfr$intArgs$a$20586b1b86c8(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_22_3, stackIn_24_4, stackIn_24_5 != 0, stackIn_24_6, stackIn_24_7, stackIn_24_8, stackIn_24_9, stackIn_24_10, stackIn_25_11);
           if (gs.field_e) {
             or.field_d.b(50, (byte) 105);
@@ -345,7 +345,7 @@ final class tr implements OverlayLayer {
         }
     }
 
-    public final boolean a(int param0, int param1, char param2) {
+    public final boolean handleKeyTyped(int param0, int param1, char param2) {
         if (param0 != 11516) {
           this.field_a = -5;
         }
@@ -361,7 +361,7 @@ final class tr implements OverlayLayer {
             return true;
           }
         }
-        if (!this.a((byte) 73)) {
+        if (!this.capturesInput((byte) 73)) {
           return false;
         }
         return ss.a((byte) 88, 12, 15, 13);

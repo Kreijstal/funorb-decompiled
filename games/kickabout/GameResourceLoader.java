@@ -273,7 +273,7 @@ final class GameResourceLoader implements LoadingSequence {
         if (param0 != 115) {
           return;
         }
-        wc.field_k = new UrlRequest(AnimationClip.field_g);
+        WidgetTheme.field_k = new UrlRequest(AnimationClip.field_g);
     }
 
     final static void a(byte param0) {
@@ -579,14 +579,14 @@ final class GameResourceLoader implements LoadingSequence {
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
         var7 = Kickabout.field_G;
-        if (wc.field_k == null) {
+        if (WidgetTheme.field_k == null) {
           return true;
         }
-        if (!wc.field_k.isDone((byte) -109)) {
+        if (!WidgetTheme.field_k.isDone((byte) -109)) {
           return false;
         }
-        var8 = wc.field_k.getResult(false);
-        wc.field_k = null;
+        var8 = WidgetTheme.field_k.getResult(false);
+        WidgetTheme.field_k = null;
         if (var8 == null) {
           IntKeyLookup.field_b = null;
           DelayedServerPacket.field_g = null;

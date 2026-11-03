@@ -7,7 +7,7 @@ final class GameSoundEffect {
     static int field_b;
     static int field_k;
     static String field_g;
-    static wc field_i;
+    static WidgetTheme field_i;
     PcmSample field_l;
     static int[] field_e;
     static Sprite[] field_j;

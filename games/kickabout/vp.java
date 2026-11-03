@@ -148,7 +148,7 @@ final class vp implements OverlayLayer {
         }
     }
 
-    public final void a(int param0, boolean param1) {
+    public final void update(int param0, boolean param1) {
         String var4;
         pe.b(0);
         var4 = (String) null;
@@ -175,7 +175,7 @@ final class vp implements OverlayLayer {
         }
     }
 
-    public final boolean a(byte param0) {
+    public final boolean capturesInput(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 <= 63) {
           vp.b((byte) 99);
@@ -184,7 +184,7 @@ final class vp implements OverlayLayer {
         return stackIn_6_0;
     }
 
-    public final boolean a(int param0, int param1, char param2) {
+    public final boolean handleKeyTyped(int param0, int param1, char param2) {
         boolean stackIn_6_0 = false;
         if (param0 != 11516) {
           return true;
@@ -193,9 +193,9 @@ final class vp implements OverlayLayer {
         return stackIn_6_0;
     }
 
-    public final void drawConsole(int param0) {
+    public final void paint(int param0) {
         int var2 = 83 % ((50 - param0) / 45);
-        if (this.a((byte) 87)) {
+        if (this.capturesInput((byte) 87)) {
           ei.a((this.field_i & 8) == 0 ? true : false, false);
         }
     }

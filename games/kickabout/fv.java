@@ -7,7 +7,7 @@ final class fv implements OverlayLayer {
     static boolean field_d;
     static String field_c;
 
-    public final boolean a(byte param0) {
+    public final boolean capturesInput(byte param0) {
         if (param0 < 63) {
           field_b = (Sprite) null;
           return false;
@@ -122,7 +122,7 @@ final class fv implements OverlayLayer {
         }
     }
 
-    public final void drawConsole(int param0) {
+    public final void paint(int param0) {
         int var12 = 0;
         String[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
@@ -234,7 +234,7 @@ final class fv implements OverlayLayer {
         }
     }
 
-    public final void a(int param0, boolean param1) {
+    public final void update(int param0, boolean param1) {
         if (!et.field_b) {
           AuctionItem.field_e = -1;
         }
@@ -253,7 +253,7 @@ final class fv implements OverlayLayer {
         field_a = null;
     }
 
-    public final boolean a(int param0, int param1, char param2) {
+    public final boolean handleKeyTyped(int param0, int param1, char param2) {
         if (param0 != 11516) {
           field_a = (String) null;
           return false;

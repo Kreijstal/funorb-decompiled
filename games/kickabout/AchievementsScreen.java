@@ -106,10 +106,10 @@ final class AchievementsScreen extends ButtonMenuScreen {
             var11 += 16;
             var13 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
             var18.c(ImageProducerRasterBuffer.field_l, var7 + var13, var11, 16777215, -1);
-            var18.a(Integer.toString(wc.field_g[var5]), 5 + var13 + var7, var11, 16777215, -1);
+            var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13 + var7, var11, 16777215, -1);
             var11 += 18;
             var18.c(po.field_d, var7 + var13, var11, 16777215, -1);
-            for (var14 = wc.field_g[var5] / 100; var14 > 0; var14--) {
+            for (var14 = WidgetTheme.field_g[var5] / 100; var14 > 0; var14--) {
               var15 = 5 * var14 + (var13 + (var7 - 2));
               PlayerShopScreen.field_R.drawHalfSize(var15, -14 + var11);
             }
@@ -134,10 +134,10 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var11Lifetime2 += 16;
           var13Lifetime2 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
           var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
-          var18.a(Integer.toString(wc.field_g[var5]), 5 + var13Lifetime2 + var7, var11Lifetime2, 16777215, -1);
+          var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime2 + var7, var11Lifetime2, 16777215, -1);
           var11Lifetime2 += 18;
           var18.c(po.field_d, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
-          for (var14Lifetime3 = wc.field_g[var5] / 100; var14Lifetime3 > 0; var14Lifetime3--) {
+          for (var14Lifetime3 = WidgetTheme.field_g[var5] / 100; var14Lifetime3 > 0; var14Lifetime3--) {
             var15Lifetime2 = 5 * var14Lifetime3 + (var13Lifetime2 + (var7 - 2));
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime2, -14 + var11Lifetime2);
           }
@@ -163,10 +163,10 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var11Lifetime1 += 16;
           var13Lifetime1 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
           var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
-          var18.a(Integer.toString(wc.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
+          var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
           var11Lifetime1 += 18;
           var18.c(po.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
-          for (var14Lifetime1 = wc.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
+          for (var14Lifetime1 = WidgetTheme.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
             var15Lifetime1 = 5 * var14Lifetime1 + (var13Lifetime1 + (var7 - 2));
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime1, -14 + var11Lifetime1);
           }
@@ -179,10 +179,10 @@ final class AchievementsScreen extends ButtonMenuScreen {
           var11Lifetime1 += 16;
           var13Lifetime1 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
           var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
-          var18.a(Integer.toString(wc.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
+          var18.a(Integer.toString(WidgetTheme.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
           var11Lifetime1 += 18;
           var18.c(po.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
-          for (var14Lifetime1 = wc.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
+          for (var14Lifetime1 = WidgetTheme.field_g[var5] / 100; var14Lifetime1 > 0; var14Lifetime1--) {
             var15Lifetime1 = 5 * var14Lifetime1 + (var13Lifetime1 + (var7 - 2));
             PlayerShopScreen.field_R.drawHalfSize(var15Lifetime1, -14 + var11Lifetime1);
           }

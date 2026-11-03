@@ -2362,7 +2362,7 @@ final class ad {
                 }
                 var2 = DateOfBirthPanel.a("name_is_offering_draw", param1 ^ -99);
                 if (var2 != null) {
-                  wc.field_q = BlackFadeScreen.a(var2, true);
+                  WidgetTheme.field_q = BlackFadeScreen.a(var2, true);
                 }
                 var2 = DateOfBirthPanel.a("name_has_resigned_and_left", -121);
                 if (null != var2) {

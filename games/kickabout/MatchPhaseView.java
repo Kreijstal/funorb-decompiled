@@ -125,7 +125,7 @@ abstract class MatchPhaseView {
           var27 = new MeshData(new MeshData[]{WidgetContainer.field_v[param2][param8]}, 1);
           var29 = var27;
           if (param9) {
-            var12_int = wc.field_e[param2];
+            var12_int = WidgetTheme.field_e[param2];
             for (var13 = 0; var13 < var29.field_H.length; var13++) {
               var27.field_H[var13] = var27.field_H[var13] * 3;
               var29.field_l[var13] = 3 * (var27.field_l[var13] - var12_int) + var12_int;

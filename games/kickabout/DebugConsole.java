@@ -274,7 +274,7 @@ final class DebugConsole extends ConsolePanel {
         }
     }
 
-    public final boolean a(int param0, int param1, char param2) {
+    public final boolean handleKeyTyped(int param0, int param1, char param2) {
         boolean discarded$0 = false;
         boolean stackIn_3_0 = false;
         int stackIn_19_0 = 0;
@@ -299,8 +299,8 @@ final class DebugConsole extends ConsolePanel {
         int var10Lifetime1;
         var11 = Kickabout.field_G;
         try {
-          if (!this.a((byte) 114)) {
-            stackIn_3_0 = super.a(11516, param1, param2);
+          if (!this.capturesInput((byte) 114)) {
+            stackIn_3_0 = super.handleKeyTyped(11516, param1, param2);
             return stackIn_3_0;
           }
           var12 = this.field_k.getText((byte) -16);
@@ -376,7 +376,7 @@ final class DebugConsole extends ConsolePanel {
               var10Lifetime1 == 39)) {
               this.field_k.handleKey(101, '￿', 875);
             }
-            discarded$0 = super.a(11516, param1, param2);
+            discarded$0 = super.handleKeyTyped(11516, param1, param2);
             var4 = this.field_k.getText((byte) -16);
             var5 = this.field_k.getCaretPosition(-1);
             if (var6 == 0 &&
@@ -623,14 +623,14 @@ final class DebugConsole extends ConsolePanel {
         }
     }
 
-    public final void drawConsole(int param0) {
+    public final void paint(int param0) {
         String var4 = null;
         try {
           var4 = this.field_k.field_Lb.field_E;
           String var2 = var4;
           this.field_k.field_Lb.field_E = MeshObject.field_c;
           int var3 = 114 % ((param0 - 50) / 45);
-          super.drawConsole(-76);
+          super.paint(-76);
           this.field_k.field_Lb.field_E = var4;
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kd.L(" + param0 + ')');

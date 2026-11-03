@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wc {
+final class WidgetTheme {
     int field_j;
     private boolean field_r;
     WidgetPainter field_h;
@@ -23,7 +23,7 @@ final class wc {
     int field_t;
     private static int[] field_s;
 
-    private final void a(int param0, int param1, byte param2, String param3) {
+    private final void drawSingleLineTooltip(int param0, int param1, byte param2, String param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -48,14 +48,14 @@ final class wc {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final void drawWidgetLine(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         SoftwareRasterizer.drawLine(param2, param3, param4, param1, param0);
         if (!param5) {
-          this.a(-95, 103, -98, -54, -82, true);
+          this.drawWidgetLine(-95, 103, -98, -54, -82, true);
         }
     }
 
-    final void a(int param0, byte param1, int param2, String param3) {
+    final void drawTooltip(int param0, byte param1, int param2, String param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -66,9 +66,9 @@ final class wc {
             return;
           }
           if (this.field_r) {
-            this.a(param0, param3, param1 - 243, param2);
+            this.drawWrappedTooltip(param0, param3, param1 - 243, param2);
           } else {
-            this.a(param0, param2, (byte) 121, param3);
+            this.drawSingleLineTooltip(param0, param2, (byte) 121, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,14 +85,14 @@ final class wc {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
+    final void fillWidgetRectangleAlpha(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         if (param6 != -2) {
           return;
         }
         SoftwareRasterizer.a(param0, param4, param3, param1, param2, param5);
     }
 
-    final void a(BitmapFont param0, int param1) {
+    final void initializeRenderers(BitmapFont param0, int param1) {
         int var7_int = 0;
         StatefulTextPainter var6 = null;
         StatefulTextPainter var7 = null;
@@ -194,7 +194,7 @@ final class wc {
           TextHotspotWidget.field_F = true;
           var2 = "tuhstatbut";
           if (param0 > -37) {
-            wc.releaseStatics(48);
+            WidgetTheme.releaseStatics(48);
           }
           var3 = "rvnadlm";
           var4 = -1L;
@@ -215,11 +215,11 @@ final class wc {
         field_k = null;
     }
 
-    public wc() {
+    public WidgetTheme() {
         this.field_r = true;
     }
 
-    private final void a(int param0, String param1, int param2, int param3) {
+    private final void drawWrappedTooltip(int param0, String param1, int param2, int param3) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -242,7 +242,7 @@ final class wc {
         var15 = Kickabout.field_G;
         try {
           if (param2 >= -98) {
-            this.a(-74, -63, -60, 76, -4, 127, (byte) 103);
+            this.fillWidgetRectangleAlpha(-74, -63, -60, 76, -4, 127, (byte) 103);
           }
           var5_int = this.field_d + this.field_i;
           var6 = this.field_p + this.field_m;

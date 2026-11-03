@@ -74,13 +74,13 @@ final class LeaguesHelpScreen extends PagedHelpScreen {
         field_G = null;
     }
 
-    final static wc h(int param0) {
+    final static WidgetTheme h(int param0) {
         if (param0 >= -58) {
           field_E = (UiLayoutNode) null;
         }
         if (TeamSelectionView.field_p == null) {
-          TeamSelectionView.field_p = new wc();
-          TeamSelectionView.field_p.a(gf.field_a, 3422);
+          TeamSelectionView.field_p = new WidgetTheme();
+          TeamSelectionView.field_p.initializeRenderers(gf.field_a, 3422);
           TeamSelectionView.field_p.field_a = EmailSyntaxValidator.field_k;
           TeamSelectionView.field_p.field_m = 0;
           TeamSelectionView.field_p.field_p = 4;

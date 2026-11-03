@@ -16,7 +16,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
             this.enableHandlerGroup1((byte) 105);
             this.enableHandlerGroup2(-1);
             if (param0 < 97) {
-              this.a(108, false);
+              this.update(108, false);
             }
             this.enableHandlerGroup5(10);
             this.enableHandlerGroup4(13);
@@ -53,7 +53,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
     }
 
-    public final boolean a(byte param0) {
+    public final boolean capturesInput(byte param0) {
         if (param0 < 63) {
           GameLoopApplet.n((byte) -47);
         }
@@ -120,7 +120,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
           }
         }
         if (param0 > -25) {
-          this.drawConsole(120);
+          this.paint(120);
         }
         gw.b(5);
         TextFieldNode.c(0, 0);
@@ -146,7 +146,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
     }
 
-    public abstract void a(int param0, boolean param1);
+    public abstract void update(int param0, boolean param1);
 
     abstract boolean isConnectionBusy(byte param0);
 
@@ -181,7 +181,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
               } else {
                 UiWidget.h(0);
               }
-              this.a(param0 - 18886, false);
+              this.update(param0 - 18886, false);
             }
           } else {
             if (PlayerStats.a((byte) -3)) {
@@ -190,16 +190,16 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
               var3 = this.b(stackIn_28_1, stackIn_29_2);
               if (var3 != 1 &&
                 var3 != 2) {
-                this.a(param0 ^ -18870, false);
+                this.update(param0 ^ -18870, false);
               } else {
                 if (null != SplashScreen.field_m) {
                   UiWidget.h(0);
                 }
                 if (var3 != 2) {
-                  this.a(param0 ^ -18870, false);
+                  this.update(param0 ^ -18870, false);
                 } else {
                   AppScreen.openQuitPage(param0 + 1477, so.a(-79));
-                  this.a(param0 ^ -18870, false);
+                  this.update(param0 ^ -18870, false);
                 }
               }
             } else {
@@ -209,7 +209,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                   if (var3 == 1) {
                     ql.a((byte) 50, true, dg.field_f);
                   }
-                  this.a(-25, false);
+                  this.update(-25, false);
                 } else {
                   ScrollPane.h(-1);
                 }
@@ -232,7 +232,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
                     }
                     var4 = 0;
                     while (UrlRequest.field_g.size() > var4) {
-                      if (((OverlayLayer) (UrlRequest.field_g.elementAt(var4))).a(param0 - 7345, FixedQuaternion.field_e, il.field_c)) {
+                      if (((OverlayLayer) (UrlRequest.field_g.elementAt(var4))).handleKeyTyped(param0 - 7345, FixedQuaternion.field_e, il.field_c)) {
                         break;
                       }
                       var4++;
@@ -245,7 +245,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
             }
           }
         } else {
-          this.a(-25, false);
+          this.update(-25, false);
         }
         var3Lifetime1 = 0;
         if (param0 != 18861) {
@@ -253,9 +253,9 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
         while (var3Lifetime1 < UrlRequest.field_g.size()) {
           var6 = (OverlayLayer) (UrlRequest.field_g.elementAt(var3Lifetime1));
-          var6.a(param0 - 18886, var2 != 0);
+          var6.update(param0 - 18886, var2 != 0);
           stackIn_54_0 = var2;
-          if (var6.a((byte) 81)) {
+          if (var6.capturesInput((byte) 81)) {
             stackIn_55_1 = 0;
           } else {
             stackIn_55_1 = 1;
@@ -290,10 +290,10 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
         TextFieldNode.field_Rb = true;
         for (var3 = -1 + UrlRequest.field_g.size(); var3 >= 0; var3--) {
-          ((OverlayLayer) (UrlRequest.field_g.elementAt(var3))).drawConsole(109);
+          ((OverlayLayer) (UrlRequest.field_g.elementAt(var3))).paint(109);
         }
         if (param0 < 50) {
-          this.a(34, 72, 'ￆ');
+          this.handleKeyTyped(34, 72, 'ￆ');
         }
         if (!TextFieldNode.field_Rb) {
           this.r(10);
@@ -329,7 +329,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         }
     }
 
-    public abstract boolean a(int param0, int param1, char param2);
+    public abstract boolean handleKeyTyped(int param0, int param1, char param2);
 
     final static int fixedPointDistance(int param0, int param1, int param2) {
         if (param2 != -23146) {
@@ -349,7 +349,7 @@ abstract class GameLoopApplet extends NetworkGameClient implements OverlayLayer 
         field_E = null;
     }
 
-    public abstract void drawConsole(int param0);
+    public abstract void paint(int param0);
 
     private final void processIncomingPackets(int param0) {
         int var2;

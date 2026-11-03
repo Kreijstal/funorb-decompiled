@@ -11,7 +11,7 @@ final class TeamSelectionView extends MatchPhaseView {
     private UiLayoutNode field_s;
     static int field_q;
     private UiLayoutNode field_o;
-    static wc field_p;
+    static WidgetTheme field_p;
     private CheckboxLabelWidget field_l;
     static int[] field_r;
 

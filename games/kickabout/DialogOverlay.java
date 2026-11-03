@@ -46,7 +46,7 @@ final class DialogOverlay implements OverlayLayer {
         }
     }
 
-    public final void drawConsole(int param0) {
+    public final void paint(int param0) {
         int var2 = 8 / ((50 - param0) / 45);
         if (null != su.field_c) {
           su.field_c.b(false);
@@ -686,7 +686,7 @@ final class DialogOverlay implements OverlayLayer {
         field_c = null;
     }
 
-    public final void a(int param0, boolean param1) {
+    public final void update(int param0, boolean param1) {
         PopupDialog var3;
         int var4;
         boolean stackIn_22_0 = false;
@@ -727,7 +727,7 @@ final class DialogOverlay implements OverlayLayer {
         }
     }
 
-    public final boolean a(int param0, int param1, char param2) {
+    public final boolean handleKeyTyped(int param0, int param1, char param2) {
         if (null != su.field_c) {
           return su.field_c.handleKey(param1, (byte) -21, param2);
         }
@@ -737,7 +737,7 @@ final class DialogOverlay implements OverlayLayer {
         return false;
     }
 
-    public final boolean a(byte param0) {
+    public final boolean capturesInput(byte param0) {
         if (param0 <= 63) {
           field_e = (UiLayoutNode) null;
         }

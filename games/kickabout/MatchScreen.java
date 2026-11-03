@@ -439,7 +439,7 @@ final class MatchScreen extends AppScreen {
         } else {
           if (!var7.offerDraw &&
             var5.offerDraw) {
-            var6 = wc.field_q;
+            var6 = WidgetTheme.field_q;
           }
         }
         if (var6 != null) {

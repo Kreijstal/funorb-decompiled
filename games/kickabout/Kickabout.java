@@ -9,7 +9,7 @@ public final class Kickabout extends GameLoopApplet {
     static String field_F;
     public static int field_G;
 
-    public final void a(int param0, boolean param1) {
+    public final void update(int param0, boolean param1) {
         boolean stackIn_3_1 = false;
         boolean stackIn_17_0 = false;
         AppScreen stackIn_30_0 = null;
@@ -234,7 +234,7 @@ public final class Kickabout extends GameLoopApplet {
         }
     }
 
-    public final boolean a(int param0, int param1, char param2) {
+    public final boolean handleKeyTyped(int param0, int param1, char param2) {
         int var8 = 0;
         int var7 = 0;
         int fieldTemp$0 = 0;
@@ -322,7 +322,7 @@ public final class Kickabout extends GameLoopApplet {
             if (param2 == 96) {
               r.field_d = new DebugConsole(EmailSyntaxValidator.d((byte) 26), IsSixCommand.field_C, oo.field_c);
               oa.registerOverlay(false, r.field_d);
-              return r.field_d.a(11516, param1, param2);
+              return r.field_d.handleKeyTyped(11516, param1, param2);
             }
             if (param1 == 89) {
               System.gc();
@@ -1300,7 +1300,7 @@ public final class Kickabout extends GameLoopApplet {
         }
     }
 
-    public final void drawConsole(int param0) {
+    public final void paint(int param0) {
         int incrementValue$0 = 0;
         int stackIn_4_0 = 0;
         int stackIn_14_0 = 0;
@@ -1706,7 +1706,7 @@ public final class Kickabout extends GameLoopApplet {
         AccountChoicePanel.k(2);
         LoginForm.k(param0 ^ -11205);
         DisplayNameForm.a((byte) -94);
-        wc.releaseStatics(10);
+        WidgetTheme.releaseStatics(10);
         ee.releaseStatics((byte) -100);
         th.a(false);
         ve.j((byte) 77);

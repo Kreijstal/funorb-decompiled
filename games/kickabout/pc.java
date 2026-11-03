@@ -119,7 +119,7 @@ final class pc {
     }
 
     final static void a(int param0) {
-        wc.a((byte) -44, so.a(param0 ^ -536871029));
+        WidgetTheme.a((byte) -44, so.a(param0 ^ -536871029));
         if (param0 != 536870912) {
           pc.a(36);
         }

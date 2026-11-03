@@ -101,7 +101,7 @@ final class TrinketSlot extends UiLayoutNode implements PopupCard {
           var24 = new MeshData(new MeshData[]{IndexedSpriteState.field_j[param1]}, 1);
           var26 = var24;
           if (param0) {
-            var8_int = wc.field_e[param1];
+            var8_int = WidgetTheme.field_e[param1];
             for (var9 = 0; var9 < var26.field_H.length; var9++) {
               var24.field_H[var9] = var24.field_H[var9] * 3;
               var26.field_l[var9] = var8_int + (-var8_int + var24.field_l[var9]) * 3;

@@ -81,7 +81,7 @@ final class CheatCodeListener implements OverlayLayer {
         return var1 != 0;
     }
 
-    public final boolean a(int param0, int param1, char param2) {
+    public final boolean handleKeyTyped(int param0, int param1, char param2) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
         int var4Lifetime1;
@@ -115,7 +115,7 @@ final class CheatCodeListener implements OverlayLayer {
         return false;
     }
 
-    public final void drawConsole(int param0) {
+    public final void paint(int param0) {
         int stackIn_6_0 = 0;
         float stackIn_13_0 = 0.0f;
         float stackIn_16_0 = 0.0f;
@@ -175,15 +175,15 @@ final class CheatCodeListener implements OverlayLayer {
         field_d = null;
     }
 
-    public final boolean a(byte param0) {
+    public final boolean capturesInput(byte param0) {
         if (param0 <= 63) {
-          this.a(121, -18, '�');
+          this.handleKeyTyped(121, -18, '�');
           return false;
         }
         return false;
     }
 
-    public final void a(int param0, boolean param1) {
+    public final void update(int param0, boolean param1) {
         int var3 = 0;
         int var4 = Kickabout.field_G;
         if (this.field_f == 0) {
