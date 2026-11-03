@@ -195,13 +195,13 @@ final class ei {
               SoftwareRasterizer.setPixel(param2 + (param5 - 1), var8 + (10 + param4), var9);
             }
             if (param0) {
-              jl.field_W.c(param5 + 4, param4 + 3, 256);
+              jl.field_W.drawAdditive(param5 + 4, param4 + 3, 256);
               var8Lifetime1 = param5 + 4 + jl.field_W.field_z;
               var9Lifetime1 = param5 + param2 - 3 - DerelictMapReader.field_g.field_z;
-              DerelictMapReader.field_g.c(var9Lifetime1, 3 + param4, 64);
+              DerelictMapReader.field_g.drawAdditive(var9Lifetime1, 3 + param4, 64);
               for (var11 = var8Lifetime1; var11 < var9Lifetime1; var11++) {
                 var10 = 192 * (var9Lifetime1 - var11) / (-var8Lifetime1 + var9Lifetime1) + 64;
-                VictoryChecker.field_h.c(var11, 3 + param4, var10);
+                VictoryChecker.field_h.drawAdditive(var11, 3 + param4, var10);
               }
               return;
             }
@@ -215,7 +215,7 @@ final class ei {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_f = (String[][]) null;
         field_b = null;
         if (param0 >= -67) {

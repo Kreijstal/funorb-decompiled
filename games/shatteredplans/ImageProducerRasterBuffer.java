@@ -138,7 +138,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
             param6 = param6 + param9;
           }
           if (param4 != -28646) {
-            ImageProducerRasterBuffer.a(69);
+            ImageProducerRasterBuffer.clearStatics(69);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -290,7 +290,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    public static void a(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 != 6) {
           int[] var2 = (int[]) null;
           ImageProducerRasterBuffer.a((int[]) null, -98, (int[]) null, -45, 88, 3, -20, 17, 70, -82);
@@ -350,7 +350,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           this.b(101);
           if (param2 >= -56) {
-            ImageProducerRasterBuffer.a(-40);
+            ImageProducerRasterBuffer.clearStatics(-40);
           }
           param0.drawImage(this.field_b, param1, param3, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {

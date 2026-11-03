@@ -145,7 +145,7 @@ final class no {
                 var16.unlinkSecondary(16);
               }
             }
-            oq.field_a.a(var3, 6);
+            oq.field_a.setGalaxyMap(var3, 6);
             if (id.field_d != null) {
               id.field_d = var3.field_e[id.field_d.field_p];
             }

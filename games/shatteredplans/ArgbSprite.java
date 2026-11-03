@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArgbSprite extends Sprite {
-    final void c(int param0, int param1, int param2) {
+    final void drawAdditive(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -74,7 +74,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void drawColourised(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

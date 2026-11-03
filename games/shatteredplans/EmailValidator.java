@@ -265,7 +265,7 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearStatics(int param0) {
         try {
           field_u = null;
           field_o = null;

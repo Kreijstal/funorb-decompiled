@@ -210,14 +210,14 @@ final class ValidationIndicator extends FocusableWidget {
           lm.field_d != var8) {
           if (ArchiveSourceManager.field_b == var8) {
             var13 = MenuList.field_w[2];
-            var13.c(-(var13.field_z >> 1) + var5, var6 - (var13.field_w >> 1), 256);
+            var13.drawAdditive(-(var13.field_z >> 1) + var5, var6 - (var13.field_w >> 1), 256);
             return;
           }
           if (CachedArchiveSource.field_g != var8) {
             return;
           }
           var12 = MenuList.field_w[1];
-          var12.c(-(var12.field_z >> 1) + var5, -(var12.field_w >> 1) + var6, 256);
+          var12.drawAdditive(-(var12.field_z >> 1) + var5, -(var12.field_w >> 1) + var6, 256);
           return;
         }
         var14 = MenuList.field_w[0];
@@ -234,7 +234,7 @@ final class ValidationIndicator extends FocusableWidget {
         }
         var14.drawRotatedAbout(112, 144, var14.field_o << 4, var14.field_p << 4, -this.field_F << 10, 4096);
         Star.f((byte) -94);
-        gg.field_e.c(var5 - var14.field_o, -var14.field_p + var6, 256);
+        gg.field_e.drawAdditive(var5 - var14.field_o, -var14.field_p + var6, 256);
         return;
     }
 

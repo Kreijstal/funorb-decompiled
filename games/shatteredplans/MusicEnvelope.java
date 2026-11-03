@@ -18,7 +18,7 @@ final class MusicEnvelope {
     static byte[][] field_l;
     static int[] field_m;
 
-    public static void a(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_l = (byte[][]) null;
         field_b = null;
         field_m = null;

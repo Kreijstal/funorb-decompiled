@@ -125,7 +125,7 @@ final class ck {
           SpriteState.field_q = MessageKind.a(true, param0, "", "combat_hex_white");
           RandomAccessCacheFile.a(-116);
           SpriteState.field_q.bindAsRenderTarget();
-          SpriteState.field_q.b(0, 0, 2105376);
+          SpriteState.field_q.drawColourised(0, 0, 2105376);
           cg.i(0);
           bj.field_H = MessageKind.a(true, param0, "", "planet_burnt");
           qe.field_j = MessageKind.a(true, param0, "", "planet_scorchedearth");
@@ -244,16 +244,16 @@ final class ck {
           bs.a(AllianceExpiredEvent.field_k, 98);
           kb.field_y.drawHalfSize(0, 0);
           pr.field_a.bindAsRenderTarget();
-          AllianceExpiredEvent.field_k.b(1, 1, 8421504);
+          AllianceExpiredEvent.field_k.drawColourised(1, 1, 8421504);
           HuffmanCodec.field_b = new Sprite(10, 12);
           HuffmanCodec.field_b.bindAsRenderTarget();
-          wo.field_b.b(1, 1, 8421504);
+          wo.field_b.drawColourised(1, 1, 8421504);
           ef.field_f = new Sprite(12, 12);
           ef.field_f.bindAsRenderTarget();
-          oo.field_a.b(1, 1, 8421504);
+          oo.field_a.drawColourised(1, 1, 8421504);
           mj.field_Kb = new Sprite(12, 12);
           mj.field_Kb.bindAsRenderTarget();
-          ab.field_e.b(1, 1, 8421504);
+          ab.field_e.drawColourised(1, 1, 8421504);
           wa.field_b = new Sprite(128, 128);
           wa.field_b.bindAsRenderTarget();
           TextFieldWidget.field_L.draw(0, 0);
@@ -265,7 +265,7 @@ final class ck {
           }
           fb.field_Vb = new Sprite(18, 12);
           fb.field_Vb.bindAsRenderTarget();
-          bd.field_G.b(1, 1, 8421504);
+          bd.field_G.drawColourised(1, 1, 8421504);
           cg.i(0);
           pr.field_a.addOutline(16777215);
           HuffmanCodec.field_b.addOutline(16777215);

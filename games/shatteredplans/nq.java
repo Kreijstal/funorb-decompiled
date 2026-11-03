@@ -97,7 +97,7 @@ abstract class nq extends DualLinkNode {
             if (param8 != 1) {
               if (param8 != 2) {
                 if (var15Lifetime1 != var13 - 1) {
-                  this.b(field_D[var15Lifetime1], param3);
+                  this.computeJustifySpacing(field_D[var15Lifetime1], param3);
                   this.b(field_D[var15Lifetime1], param1, var14);
                   field_F = 0;
                 } else {
@@ -175,7 +175,7 @@ abstract class nq extends DualLinkNode {
                           if (!var9_ref_String.equals("copy")) {
                             if (!var9_ref_String.equals("reg")) {
                               if (!var9_ref_String.startsWith("img=")) {
-                                this.b(var9_ref_String);
+                                this.applyTag(var9_ref_String);
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
@@ -274,7 +274,7 @@ abstract class nq extends DualLinkNode {
         return this.a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
     }
 
-    final static String a(String param0) {
+    final static String escapeMarkup(String param0) {
         int var3_int = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -323,7 +323,7 @@ abstract class nq extends DualLinkNode {
 
     abstract void b(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
-    private final void b(String param0) {
+    private final void applyTag(String param0) {
         Throwable decompiledCaughtException = null;
         Exception var2 = null;
         CharSequence var3 = null;
@@ -428,7 +428,7 @@ abstract class nq extends DualLinkNode {
                         if (!var9_ref_String.equals("euro")) {
                           if (!var9_ref_String.equals("copy")) {
                             if (!var9_ref_String.equals("reg")) {
-                              this.b(var9_ref_String);
+                              this.applyTag(var9_ref_String);
                               decompiledFrameRemainder0 = false;
                             }
                             else {
@@ -540,7 +540,7 @@ abstract class nq extends DualLinkNode {
         field_v = 0;
     }
 
-    final static String a(nq param0, String param1, int param2) {
+    final static String truncateWithEllipsis(nq param0, String param1, int param2) {
         int var6 = 0;
         int var3;
         int var4;
@@ -934,7 +934,7 @@ abstract class nq extends DualLinkNode {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
-    private final void b(String param0, int param1) {
+    private final void computeJustifySpacing(String param0, int param1) {
         int var6 = 0;
         int var3;
         int var4;
@@ -1070,12 +1070,12 @@ abstract class nq extends DualLinkNode {
         }
     }
 
-    final void b(String param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawJustified(String param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 == null) {
           return;
         }
         this.setColours(param3, param4);
-        this.b(param0, param5);
+        this.computeJustifySpacing(param0, param5);
         this.b(param0, param1, param2);
     }
 

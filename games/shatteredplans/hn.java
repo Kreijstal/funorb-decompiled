@@ -13,20 +13,20 @@ final class hn {
     static int[] field_j;
     static String field_d;
 
-    private final void a(int param0, int param1, int param2) {
+    private final void set(int param0, int param1, int param2) {
         if (param1 > this.field_b) {
           this.field_b = param1;
         }
         if (param2 > -21) {
-          this.a(-36, -84, -23);
+          this.set(-36, -84, -23);
         }
         if (this.field_e.length <= param1) {
-          this.b((byte) 107, param1);
+          this.grow((byte) 107, param1);
         }
         this.field_e[param1] = param0;
     }
 
-    final int a(byte param0) {
+    final int size(byte param0) {
         if (param0 != 56) {
           field_c = (Sprite) null;
           return this.field_b + 1;
@@ -34,11 +34,11 @@ final class hn {
         return this.field_b + 1;
     }
 
-    final void a(int param0, int param1) {
+    final void add(int param0, int param1) {
         if (param0 != 13378) {
           return;
         }
-        this.a(param1, this.field_b + 1, -23);
+        this.set(param1, this.field_b + 1, -23);
     }
 
     public static void a(int param0) {
@@ -57,7 +57,7 @@ final class hn {
         field_d = null;
     }
 
-    private final int b(int param0, int param1) {
+    private final int nextCapacity(int param0, int param1) {
         int var3;
         int var4;
         int var3Lifetime1;
@@ -93,7 +93,7 @@ final class hn {
         return var3Lifetime1;
     }
 
-    final void a(int param0, boolean param1) {
+    final void removeAt(int param0, boolean param1) {
         if (0 > param0) {
           throw new ArrayIndexOutOfBoundsException(param0);
         }
@@ -110,7 +110,7 @@ final class hn {
         this.field_e = (int[]) null;
     }
 
-    final int a(byte param0, int param1) {
+    final int get(byte param0, int param1) {
         if (this.field_b >= param1) {
           int var3 = 3 % ((param0 + 52) / 63);
           return this.field_e[param1];
@@ -118,8 +118,8 @@ final class hn {
         throw new ArrayIndexOutOfBoundsException(param1);
     }
 
-    private final void b(byte param0, int param1) {
-        int[] var4 = new int[this.b(param1, 0)];
+    private final void grow(byte param0, int param1) {
+        int[] var4 = new int[this.nextCapacity(param1, 0)];
         int[] var3 = var4;
         ArrayOperations.copyInts(this.field_e, 0, var4, 0, this.field_e.length);
         this.field_e = var4;

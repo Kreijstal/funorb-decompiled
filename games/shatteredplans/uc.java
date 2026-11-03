@@ -141,7 +141,7 @@ final class uc extends MenuComponent {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearStatics(byte param0) {
         field_z = null;
         field_w = null;
         if (param0 <= 61) {
@@ -154,7 +154,7 @@ final class uc extends MenuComponent {
     final static void a(int param0, int param1, int param2, int param3, int param4, String param5, boolean param6, Sprite[] param7, byte param8, int param9, Sprite[] param10, nq param11, boolean param12, int param13, int param14) {
         try {
           if (param8 != -87) {
-            uc.e((byte) -47);
+            uc.clearStatics((byte) -47);
           }
           ScrollPane.a(param2, param11, StarAbandonedEvent.field_h, param1, param3, param9, param11, param4, ProductionContent.field_j, 0, param1, new v(param10), param2, ih.field_b, wo.field_a, param13, param0, DualLinkDequeSequence.field_l, StellarBombEvent.field_j, new v(param7));
           kb.a(param6, true, param12, param14, param5);

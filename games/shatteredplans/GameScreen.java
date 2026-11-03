@@ -488,7 +488,7 @@ final class GameScreen {
           if (qj.a(true, (CharSequence) ((Object) "enable"), (CharSequence) ((Object) param0))) {
             var2_ref = param0.substring(7).trim();
             if (var2_ref.endsWith("Button")) {
-              oq.field_a.field_Y.a(var2_ref, true, param1 - 15023);
+              oq.field_a.field_Y.setPanelVisible(var2_ref, true, param1 - 15023);
             }
             if (var2_ref.equalsIgnoreCase("animationControls")) {
               oq.field_a.field_Y.field_K.field_s = true;
@@ -499,17 +499,17 @@ final class GameScreen {
           if (qj.a(true, (CharSequence) ((Object) "disable"), (CharSequence) ((Object) param0))) {
             var2_refLifetime1 = param0.substring(8).trim();
             if (var2_refLifetime1.endsWith("Button")) {
-              oq.field_a.field_Y.a(var2_refLifetime1, false, param1 ^ -15009);
+              oq.field_a.field_Y.setPanelVisible(var2_refLifetime1, false, param1 ^ -15009);
             }
           }
           if (qj.a(true, (CharSequence) ((Object) "hide"), (CharSequence) ((Object) param0))) {
             var2_refLifetime2 = param0.substring(4).trim();
-            oq.field_a.field_Y.a(var2_refLifetime2, false, (byte) 31);
+            oq.field_a.field_Y.setPanelVisible(var2_refLifetime2, false, (byte) 31);
             return;
           }
           if (qj.a(true, (CharSequence) ((Object) "show"), (CharSequence) ((Object) param0))) {
             var2_refLifetime3 = param0.substring(4).trim();
-            oq.field_a.field_Y.a(var2_refLifetime3, true, (byte) 31);
+            oq.field_a.field_Y.setPanelVisible(var2_refLifetime3, true, (byte) 31);
             return;
           }
           if (qj.a(true, (CharSequence) ((Object) "highlight"), (CharSequence) ((Object) param0))) {
@@ -808,7 +808,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(String param0, boolean param1, int param2) {
+    private final void setPanelVisible(String param0, boolean param1, int param2) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -1340,7 +1340,7 @@ final class GameScreen {
           } while (var40 == 0);
           if (this.field_r != null &&
             this.field_jb > 60) {
-            this.a(false, this.field_r);
+            this.drawTooltip(false, this.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1565,7 +1565,7 @@ final class GameScreen {
             this.field_jb = 0;
           }
           if (param0 >= -26) {
-            this.a(102, 27, (byte) -57, -80);
+            this.drawConquestObjectiveHelp(102, 27, (byte) -57, -80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1591,7 +1591,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(String param0, boolean param1, byte param2) {
+    private final void setPanelVisible(String param0, boolean param1, byte param2) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -1670,7 +1670,7 @@ final class GameScreen {
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3) {
+    private final void drawPointsObjectiveHelp(int param0, int param1, int param2, int param3) {
         String var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -1707,7 +1707,7 @@ final class GameScreen {
         }
     }
 
-    private final void c(int param0, int param1, int param2, int param3) {
+    private final void drawSolObjectiveHelp(int param0, int param1, int param2, int param3) {
         String var5 = null;
         int var6 = 0;
         try {
@@ -1917,7 +1917,7 @@ final class GameScreen {
         }
     }
 
-    private final void e(int param0) {
+    private final void refreshFleetsPanel(int param0) {
         int stackIn_9_0 = 0;
         int stackIn_9_1 = 0;
         boolean stackIn_11_0 = false;
@@ -2096,12 +2096,12 @@ final class GameScreen {
               var4[var4.length - 1] = this.field_z[this.field_z.length - 1];
               this.field_ab = var3;
               this.field_z = var4;
-              this.e(param1 - 1);
+              this.refreshFleetsPanel(param1 - 1);
               var5 = this.field_cb.field_i;
               this.field_cb.resize(true, this.field_cb.field_z.field_y + 28, this.field_cb.field_m);
               this.field_cb.field_z.resize(true, this.field_cb.field_z.field_y + 10, this.field_cb.field_z.field_m);
               this.field_cb.translate(-this.field_cb.field_i + var5, 0, 0);
-              this.f(param1 - 15908);
+              this.refreshProductionPanel(param1 - 15908);
               this.i(6);
               break;
             }
@@ -2287,7 +2287,7 @@ final class GameScreen {
                 if (256 < var7) {
                   var7 = 512 - var7;
                 }
-                this.field_eb.c(6 + this.field_k.field_k, var5 - 4, var7);
+                this.field_eb.drawAdditive(6 + this.field_k.field_k, var5 - 4, var7);
               }
             }
           }
@@ -2303,25 +2303,25 @@ final class GameScreen {
           var5Lifetime1 = SolVictoryChecker.blendColours(16777215, 16711680, -125, var4Lifetime1);
           if (this.field_e.field_A &&
             this.field_mb.field_s) {
-            GameKeyHandler.field_b.b(this.field_mb.field_k, this.field_mb.field_t, var5Lifetime1);
+            GameKeyHandler.field_b.drawColourised(this.field_mb.field_k, this.field_mb.field_t, var5Lifetime1);
           }
           if (null != this.field_j &&
             this.field_j.field_A &&
             this.field_S.field_s) {
-            ArchiveIndex.field_p.b(this.field_S.field_k, this.field_S.field_t, var5Lifetime1);
+            ArchiveIndex.field_p.drawColourised(this.field_S.field_k, this.field_S.field_t, var5Lifetime1);
           }
           if (this.field_cb.field_A &&
             this.field_W.field_s) {
-            us.field_a.b(this.field_W.field_k, this.field_W.field_t, var5Lifetime1);
+            us.field_a.drawColourised(this.field_W.field_k, this.field_W.field_t, var5Lifetime1);
           }
           if (this.field_J.field_A &&
             this.field_n.field_s) {
-            NodeHashTableIterator.field_b.b(this.field_n.field_k, this.field_n.field_t, var5Lifetime1);
+            NodeHashTableIterator.field_b.drawColourised(this.field_n.field_k, this.field_n.field_t, var5Lifetime1);
           }
           if (null != this.field_nb &&
             this.field_nb.field_A &&
             this.field_g.field_s) {
-            je.field_f.b(this.field_g.field_k, this.field_g.field_t, var5Lifetime1);
+            je.field_f.drawColourised(this.field_g.field_k, this.field_g.field_t, var5Lifetime1);
           }
           var3 = (MenuComponent) (this.field_y.startReverse(3725));
           boolean decompiledNaturalLoopExit0 = false;
@@ -2401,7 +2401,7 @@ final class GameScreen {
           }
           if (PlacementOrder.field_w != null &&
             PlacementOrder.field_w.field_o != null) {
-            this.a(false, PlacementOrder.field_w.field_o);
+            this.drawTooltip(false, PlacementOrder.field_w.field_o);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2439,7 +2439,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(int param0, int param1, byte param2, int param3) {
+    private final void drawConquestObjectiveHelp(int param0, int param1, byte param2, int param3) {
         String var5 = null;
         try {
           var5 = cl.field_m.toUpperCase() + ": " + DialogRoot.field_E[0];
@@ -2501,7 +2501,7 @@ final class GameScreen {
         }
     }
 
-    final void e(byte param0) {
+    final void refreshTerritoryRows(byte param0) {
         ToggleButton dupTemp$0 = null;
         StringBuilder stackIn_15_0 = null;
         String stackIn_16_1 = null;
@@ -2549,7 +2549,7 @@ final class GameScreen {
         }
     }
 
-    final void a(byte param0, GameSession param1) {
+    final void setSession(byte param0, GameSession param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -2946,13 +2946,13 @@ final class GameScreen {
             }
           }
           if (var9 instanceof ConquestVictoryChecker) {
-            this.a(var4 + (rs.field_Cb.field_J / 2 + 5), 439 - rs.field_Cb.field_J, (byte) 122, var5 + rs.field_Cb.field_J);
+            this.drawConquestObjectiveHelp(var4 + (rs.field_Cb.field_J / 2 + 5), 439 - rs.field_Cb.field_J, (byte) 122, var5 + rs.field_Cb.field_J);
           }
           if (var9 instanceof SolVictoryChecker) {
-            this.c(rs.field_Cb.field_J / 2 + (var4 + 5), -1, rs.field_Cb.field_J + var5, -11 + (450 - rs.field_Cb.field_J));
+            this.drawSolObjectiveHelp(rs.field_Cb.field_J / 2 + (var4 + 5), -1, rs.field_Cb.field_J + var5, -11 + (450 - rs.field_Cb.field_J));
           }
           if (var9 instanceof PointsVictoryChecker) {
-            this.b(-rs.field_Cb.field_J + 450 - 11, rs.field_Cb.field_J + var5, 27, rs.field_Cb.field_J / 2 + (var4 + 5));
+            this.drawPointsObjectiveHelp(-rs.field_Cb.field_J + 450 - 11, rs.field_Cb.field_J + var5, 27, rs.field_Cb.field_J / 2 + (var4 + 5));
           }
           if (var9 instanceof DerelictVictoryChecker) {
             this.drawResourceHelp(5 + rs.field_Cb.field_J / 2 + var4, -rs.field_Cb.field_J + 439, -117, rs.field_Cb.field_J + var5);
@@ -3120,7 +3120,7 @@ final class GameScreen {
         int var5 = 0;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.f(-15907);
+          this.refreshProductionPanel(-15907);
           if (null != this.field_j) {
             this.buildProjectButtons(428);
           }
@@ -3133,7 +3133,7 @@ final class GameScreen {
             if (var3 >= var2.length) {
               this.field_J.field_A = false;
               this.field_n.setSelected(false);
-              this.e(0);
+              this.refreshFleetsPanel(0);
               break;
             }
             var4 = var2[var3];
@@ -3631,7 +3631,7 @@ final class GameScreen {
         }
     }
 
-    private final void a(boolean param0, String param1) {
+    private final void drawTooltip(boolean param0, String param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
@@ -4587,7 +4587,7 @@ final class GameScreen {
         }
     }
 
-    private final void f(int param0) {
+    private final void refreshProductionPanel(int param0) {
         int stackIn_40_0 = 0;
         int stackIn_40_1 = 0;
         RuntimeException decompiledCaughtException = null;

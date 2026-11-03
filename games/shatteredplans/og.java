@@ -128,7 +128,7 @@ final class og implements WidgetPainter {
           var8 = MenuList.field_w[1];
           if (param0 instanceof FocusableWidget &&
             ((FocusableWidget) (param0)).field_z) {
-            var8.c(1 + (var6_int + (param0.field_x - var8.field_o >> 1)), (-var8.field_p + param0.field_n >> 1) + 1 + var7, 256);
+            var8.drawAdditive(1 + (var6_int + (param0.field_x - var8.field_o >> 1)), (-var8.field_p + param0.field_n >> 1) + 1 + var7, 256);
           }
           if (!param0.isFocused(param4 ^ 13)) {
             return;

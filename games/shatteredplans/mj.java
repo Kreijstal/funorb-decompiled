@@ -36,7 +36,7 @@ final class mj extends AnimatedPanel {
         if (DerelictVictoryChecker.field_m != null) {
           DerelictVictoryChecker.field_m.a(13505, param1);
           if (param0 == 0) {
-            UrlLoader.a((byte) -82, param1);
+            UrlLoader.clearStatics((byte) -82, param1);
             if (null != DialogRoot.field_G) {
               DialogRoot.field_G.drawFullRaster(param1, -68);
             }
@@ -46,7 +46,7 @@ final class mj extends AnimatedPanel {
           return;
         }
         if (param0 == 0) {
-          UrlLoader.a((byte) -82, param1);
+          UrlLoader.clearStatics((byte) -82, param1);
           if (null != DialogRoot.field_G) {
             DialogRoot.field_G.drawFullRaster(param1, -68);
           }

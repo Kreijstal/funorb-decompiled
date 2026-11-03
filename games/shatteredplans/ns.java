@@ -32,7 +32,7 @@ class ns extends il implements ButtonListener {
         this.b(var2Lifetime1, param0 + 6907);
     }
 
-    public static void j(byte param0) {
+    public static void clearStatics(byte param0) {
         field_nb = null;
         field_rb = null;
         field_qb = null;

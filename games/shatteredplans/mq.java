@@ -96,8 +96,8 @@ final class mq {
                     while (var5.length > var10) {
                       var2 += 13;
                       var3 = var3 - WeightedLruCache.field_g.field_j;
-                      var5[var10].c(var1_int, var2, 256);
-                      var7[var10].c(var1_int, var2, var6);
+                      var5[var10].drawAdditive(var1_int, var2, 256);
+                      var7[var10].drawAdditive(var1_int, var2, var6);
                       var10++;
                     }
                   } else {
@@ -110,8 +110,8 @@ final class mq {
                     for (var8 = 0; var5.length > var8; var8++) {
                       var3 = var3 - WeightedLruCache.field_g.field_j;
                       var2 += 13;
-                      var5[var8].c(var1_int, var2, var6);
-                      var7[var8].c(var1_int, var2, var6);
+                      var5[var8].drawAdditive(var1_int, var2, var6);
+                      var7[var8].drawAdditive(var1_int, var2, var6);
                     }
                   }
                   if (0 > var3) {

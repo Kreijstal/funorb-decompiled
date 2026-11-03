@@ -138,20 +138,20 @@ final class ah extends ts {
             }
             var20.drawRotatedAbout(112, 144, var20.field_o << 4, var20.field_p << 4, -this.field_N << 10, 4096);
             Star.f((byte) -63);
-            this.field_V.c(var9 - (var20.field_o >> 1), -var20.field_p + var10, 256);
+            this.field_V.drawAdditive(var9 - (var20.field_o >> 1), -var20.field_p + var10, 256);
             return;
           }
           if (var6 != lm.field_d) {
             if (var6 == ArchiveSourceManager.field_b) {
               var22 = MenuList.field_w[2];
-              var22.c(var9, var10 - (var22.field_w >> 1), 256);
+              var22.drawAdditive(var9, var10 - (var22.field_w >> 1), 256);
               return;
             }
             if (CachedArchiveSource.field_g != var6) {
               return;
             }
             var21 = MenuList.field_w[1];
-            var21.c(var9, -(var21.field_w >> 1) + var10, 256);
+            var21.drawAdditive(var9, -(var21.field_w >> 1) + var10, 256);
             return;
           }
           var19 = MenuList.field_w[0];
@@ -168,7 +168,7 @@ final class ah extends ts {
           }
           var19.drawRotatedAbout(112, 144, var19.field_o << 4, var19.field_p << 4, -this.field_N << 10, 4096);
           Star.f((byte) -63);
-          this.field_V.c(var9 - (var19.field_o >> 1), -var19.field_p + var10, 256);
+          this.field_V.drawAdditive(var9 - (var19.field_o >> 1), -var19.field_p + var10, 256);
           return;
         }
         if (var6 == lm.field_d) {
@@ -205,20 +205,20 @@ final class ah extends ts {
             }
             var26.drawRotatedAbout(112, 144, var26.field_o << 4, var26.field_p << 4, -this.field_N << 10, 4096);
             Star.f((byte) -63);
-            this.field_V.c(var9Lifetime1 - (var26.field_o >> 1), -var26.field_p + var10Lifetime1, 256);
+            this.field_V.drawAdditive(var9Lifetime1 - (var26.field_o >> 1), -var26.field_p + var10Lifetime1, 256);
             return;
           }
           if (var6 != lm.field_d) {
             if (var6 == ArchiveSourceManager.field_b) {
               var28 = MenuList.field_w[2];
-              var28.c(var9Lifetime1, var10Lifetime1 - (var28.field_w >> 1), 256);
+              var28.drawAdditive(var9Lifetime1, var10Lifetime1 - (var28.field_w >> 1), 256);
               return;
             }
             if (CachedArchiveSource.field_g != var6) {
               return;
             }
             var27 = MenuList.field_w[1];
-            var27.c(var9Lifetime1, -(var27.field_w >> 1) + var10Lifetime1, 256);
+            var27.drawAdditive(var9Lifetime1, -(var27.field_w >> 1) + var10Lifetime1, 256);
             return;
           }
           var25 = MenuList.field_w[0];
@@ -235,7 +235,7 @@ final class ah extends ts {
           }
           var25.drawRotatedAbout(112, 144, var25.field_o << 4, var25.field_p << 4, -this.field_N << 10, 4096);
           Star.f((byte) -63);
-          this.field_V.c(var9Lifetime1 - (var25.field_o >> 1), -var25.field_p + var10Lifetime1, 256);
+          this.field_V.drawAdditive(var9Lifetime1 - (var25.field_o >> 1), -var25.field_p + var10Lifetime1, 256);
           return;
         }
         var5 = this.field_M.getMessage((byte) -63);
@@ -255,14 +255,14 @@ final class ah extends ts {
             var6Lifetime1 != lm.field_d) {
             if (var6Lifetime1 == ArchiveSourceManager.field_b) {
               var37 = MenuList.field_w[2];
-              var37.c(var9Lifetime2, var10Lifetime2 - (var37.field_w >> 1), 256);
+              var37.drawAdditive(var9Lifetime2, var10Lifetime2 - (var37.field_w >> 1), 256);
               return;
             }
             if (CachedArchiveSource.field_g != var6Lifetime1) {
               return;
             }
             var35 = MenuList.field_w[1];
-            var35.c(var9Lifetime2, -(var35.field_w >> 1) + var10Lifetime2, 256);
+            var35.drawAdditive(var9Lifetime2, -(var35.field_w >> 1) + var10Lifetime2, 256);
             return;
           }
           var31 = MenuList.field_w[0];
@@ -288,7 +288,7 @@ final class ah extends ts {
           }
           var31.drawRotatedAbout(112, 144, var31.field_o << 4, var31.field_p << 4, -this.field_N << 10, 4096);
           Star.f((byte) -63);
-          this.field_V.c(var9Lifetime2 - (var31.field_o >> 1), -var31.field_p + var10Lifetime2, 256);
+          this.field_V.drawAdditive(var9Lifetime2 - (var31.field_o >> 1), -var31.field_p + var10Lifetime2, 256);
           return;
         }
         if (!var5.equals(this.field_s)) {
@@ -315,17 +315,17 @@ final class ah extends ts {
           }
           var40.drawRotatedAbout(112, 144, var40.field_o << 4, var40.field_p << 4, -this.field_N << 10, 4096);
           Star.f((byte) -63);
-          this.field_V.c(var9Lifetime3 - (var40.field_o >> 1), -var40.field_p + var10Lifetime3, 256);
+          this.field_V.drawAdditive(var9Lifetime3 - (var40.field_o >> 1), -var40.field_p + var10Lifetime3, 256);
           return;
         }
         if (var6Lifetime2 != lm.field_d) {
           if (var6Lifetime2 == ArchiveSourceManager.field_b) {
             var42 = MenuList.field_w[2];
-            var42.c(var9Lifetime3, var10Lifetime3 - (var42.field_w >> 1), 256);
+            var42.drawAdditive(var9Lifetime3, var10Lifetime3 - (var42.field_w >> 1), 256);
           } else {
             if (CachedArchiveSource.field_g == var6Lifetime2) {
               var41 = MenuList.field_w[1];
-              var41.c(var9Lifetime3, -(var41.field_w >> 1) + var10Lifetime3, 256);
+              var41.drawAdditive(var9Lifetime3, -(var41.field_w >> 1) + var10Lifetime3, 256);
               return;
             }
           }
@@ -345,7 +345,7 @@ final class ah extends ts {
         }
         var39.drawRotatedAbout(112, 144, var39.field_o << 4, var39.field_p << 4, -this.field_N << 10, 4096);
         Star.f((byte) -63);
-        this.field_V.c(var9Lifetime3 - (var39.field_o >> 1), -var39.field_p + var10Lifetime3, 256);
+        this.field_V.drawAdditive(var9Lifetime3 - (var39.field_o >> 1), -var39.field_p + var10Lifetime3, 256);
     }
 
     final boolean containsWidget(byte param0, UiWidget param1) {

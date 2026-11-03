@@ -22,7 +22,7 @@ final class ToggleButton extends MenuComponent implements ok {
         }
     }
 
-    public static void d(byte param0) {
+    public static void clearStatics(byte param0) {
         field_v = null;
         if (param0 < 74) {
           field_D = false;

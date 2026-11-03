@@ -24,7 +24,7 @@ final class wq {
           }
           if (param2.length > 136) {
             var3 = new cb();
-            ((le) ((Object) var3)).a(param2, (byte) 95);
+            ((le) ((Object) var3)).setBytes(param2, (byte) 95);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }

@@ -261,7 +261,7 @@ final class bk {
                 }
               }
             }
-            cq.a(-110, BufferedSocket.field_q[var7], var6, var5 + nq.a(cg.field_E.toString()), var8);
+            cq.a(-110, BufferedSocket.field_q[var7], var6, var5 + nq.escapeMarkup(cg.field_E.toString()), var8);
             if (!sr.field_h) {
               cg.field_C.field_L = false;
             }

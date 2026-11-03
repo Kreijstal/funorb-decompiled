@@ -93,7 +93,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final int b(MusicVoice param0, byte param1) {
+    private final int computePitch(MusicVoice param0, byte param1) {
         int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -152,7 +152,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void allNotesOff(int param0, int param1) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 != 2) {
           this.b(-91, (byte) 112, -1);
@@ -168,7 +168,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(byte param0, int param1, int param2, int param3) {
+    private final void noteOff(byte param0, int param1, int param2, int param3) {
         MusicVoice var6 = null;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         MusicVoice var8 = this.field_N[param2][param3];
@@ -211,7 +211,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_m[param2] = param0;
         this.field_P[param2] = we.intAnd(-128, param0);
         int var4 = 120 % ((51 - param1) / 40);
-        this.a(param2, param0, (byte) -16);
+        this.setProgram(param2, param0, (byte) -16);
     }
 
     final synchronized void setChannelVolume(byte param0, int param1, int param2) {
@@ -330,7 +330,7 @@ final class MidiPcmStream extends PcmStream {
               this.field_O = this.field_O + (long)var5 * (long)var2;
               this.field_l.skip(var5);
               param0 = param0 - var5;
-              this.a((byte) 42);
+              this.tickSequencer((byte) 42);
               if (this.field_x.isLoaded()) {
                 continue;
               }
@@ -669,7 +669,7 @@ final class MidiPcmStream extends PcmStream {
               } else {
                 var12.field_Db.setTarget(68, cr.field_c, (byte) 72, var31, 0);
               }
-              var12.field_Pb.field_z = nq.a(var12.field_Pb.field_nb, var32, 78);
+              var12.field_Pb.field_z = nq.truncateWithEllipsis(var12.field_Pb.field_nb, var32, 78);
               var12.field_Pb.setTarget(78, cr.field_c, (byte) 85, var31, 70);
               if (var12.field_Pb.field_L &&
                 !var12.field_Pb.field_z.equals(var32)) {
@@ -1131,7 +1131,7 @@ final class MidiPcmStream extends PcmStream {
               this.field_l.fill(param0, param1, var7);
               param1 = param1 + var7;
               param2 = param2 - var7;
-              this.a((byte) -64);
+              this.tickSequencer((byte) -64);
               if (this.field_x.isLoaded()) {
                 continue;
               }
@@ -1187,7 +1187,7 @@ final class MidiPcmStream extends PcmStream {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3Lifetime1;
         if (!param1) {
-          this.a(-1, 2);
+          this.allNotesOff(-1, 2);
         } else {
           this.removeChannelVoices(-1, (byte) 68);
         }
@@ -1269,7 +1269,7 @@ final class MidiPcmStream extends PcmStream {
           var5 = 15 & param0;
           var6 = (32672 & param0) >> 8;
           var7 = (8354916 & param0) >> 16;
-          this.a((byte) 29, var7, var5, var6);
+          this.noteOff((byte) 29, var7, var5, var6);
           return;
         }
         if (144 == var4) {
@@ -1277,9 +1277,9 @@ final class MidiPcmStream extends PcmStream {
           var6Lifetime1 = param0 >> 8 & 127;
           var7Lifetime1 = 127 & param0 >> 16;
           if (var7Lifetime1 <= 0) {
-            this.a((byte) 29, 64, var5Lifetime1, var6Lifetime1);
+            this.noteOff((byte) 29, 64, var5Lifetime1, var6Lifetime1);
           } else {
-            this.a(var6Lifetime1, var5Lifetime1, var7Lifetime1, (byte) -49);
+            this.noteOn(var6Lifetime1, var5Lifetime1, var7Lifetime1, (byte) -49);
           }
           return;
         }
@@ -1294,7 +1294,7 @@ final class MidiPcmStream extends PcmStream {
           if (var4 == 192) {
             var5Lifetime3 = param0 & 15;
             var6Lifetime3 = (32569 & param0) >> 8;
-            this.a(var5Lifetime3, this.field_P[var5Lifetime3] + var6Lifetime3, (byte) 119);
+            this.setProgram(var5Lifetime3, this.field_P[var5Lifetime3] + var6Lifetime3, (byte) 119);
             return;
           }
           if (var4 == 208) {
@@ -1389,7 +1389,7 @@ final class MidiPcmStream extends PcmStream {
           this.resetChannel((byte) -63, var5Lifetime4);
         }
         if (var6Lifetime4 == 123) {
-          this.a(var5Lifetime4, 2);
+          this.allNotesOff(var5Lifetime4, 2);
         }
         if (var6Lifetime4 == 6) {
           var8 = this.field_q[var5Lifetime4];
@@ -1508,7 +1508,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, int param2, byte param3) {
+    private final void noteOn(int param0, int param1, int param2, byte param3) {
         int stackIn_17_1 = 0;
         MusicVoice stackIn_17_2 = null;
         Object stackIn_18_0;
@@ -1523,7 +1523,7 @@ final class MidiPcmStream extends PcmStream {
         MusicPatch var11;
         MusicPatch var12;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
-        this.a((byte) 29, 64, param1, param0);
+        this.noteOff((byte) 29, 64, param1, param0);
         if (0 != (this.field_F[param1] & 2)) {
           var5 = (MusicVoice) (this.field_l.field_n.startReverse(3725));
           while (var5 != null) {
@@ -1567,7 +1567,7 @@ final class MidiPcmStream extends PcmStream {
         var7.field_h = 0;
         var7.field_v = 0;
         if (this.field_t[param1] != 0) {
-          var7.field_K = PcmSampleStream.create(var6, this.b(var7, (byte) -123), 0, this.a(var7, (byte) 120));
+          var7.field_K = PcmSampleStream.create(var6, this.computePitch(var7, (byte) -123), 0, this.computePan(var7, (byte) 120));
           stackIn_17_1 = -2139009338;
           stackIn_17_2 = var7;
           if (var12.field_k[param0] >= 0) {
@@ -1579,7 +1579,7 @@ final class MidiPcmStream extends PcmStream {
           }
           this.a(stackIn_17_1, stackIn_17_2, stackIn_18_3);
         } else {
-          var7.field_K = PcmSampleStream.create(var6, this.b(var7, (byte) -6), this.a(var7, -1481279096), this.a(var7, (byte) 124));
+          var7.field_K = PcmSampleStream.create(var6, this.computePitch(var7, (byte) -6), this.computeVolume(var7, -1481279096), this.computePan(var7, (byte) 124));
         }
         if (0 > var12.field_k[param0]) {
           var7.field_K.setLoopMode(-1);
@@ -1633,7 +1633,7 @@ final class MidiPcmStream extends PcmStream {
             }
             param3.field_G = var6_int;
           }
-          param3.field_K.setSpeed(this.b(param3, (byte) -1));
+          param3.field_K.setSpeed(this.computePitch(param3, (byte) -1));
           var7 = param3.field_u;
           param3.field_i = param3.field_i + var7.field_o;
           param3.field_C = param3.field_C + 1;
@@ -1691,7 +1691,7 @@ final class MidiPcmStream extends PcmStream {
             if (param2 != 2) {
               this.setPitchBend(-71, -84, -11);
             }
-            param3.field_K.a(param3.field_p, this.a(param3, -1481279096), this.a(param3, (byte) 122));
+            param3.field_K.rampVolume(param3.field_p, this.computeVolume(param3, -1481279096), this.computePan(param3, (byte) 122));
             return false;
           }
           param3.field_K.g(param3.field_p);
@@ -1732,7 +1732,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void setProgram(int param0, int param1, byte param2) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         int var4 = -35 / ((51 - param2) / 61);
@@ -1753,7 +1753,7 @@ final class MidiPcmStream extends PcmStream {
         field_L = null;
     }
 
-    private final int a(MusicVoice param0, byte param1) {
+    private final int computePan(MusicVoice param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
@@ -1787,7 +1787,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(byte param0) {
+    private final void tickSequencer(byte param0) {
         int stackIn_24_0 = 0;
         int stackIn_24_1 = 0;
         int var2;
@@ -1803,7 +1803,7 @@ final class MidiPcmStream extends PcmStream {
         if (null != this.field_z &&
           this.field_S == var3) {
           this.startTrack(this.field_v, this.field_z, 33, this.field_B);
-          this.a((byte) 109);
+          this.tickSequencer((byte) 109);
           return;
         }
         var6 = -102 / ((-15 - param0) / 34);
@@ -1839,7 +1839,7 @@ final class MidiPcmStream extends PcmStream {
             if (this.field_x.isFinished()) {
               if (null != this.field_z) {
                 this.playTrack(this.field_z, (byte) 101, this.field_v);
-                this.a((byte) 29);
+                this.tickSequencer((byte) 29);
                 return;
               }
               if (this.field_v &&
@@ -1901,7 +1901,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final int a(MusicVoice param0, int param1) {
+    private final int computeVolume(MusicVoice param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;

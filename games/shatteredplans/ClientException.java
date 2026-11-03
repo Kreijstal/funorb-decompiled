@@ -214,7 +214,7 @@ final class ClientException extends RuntimeException {
         return TaskAi.a(param0 + (-param1 + 1), tg.field_b, -11) + param1;
     }
 
-    public static void b(int param0) {
+    public static void clearStatics(int param0) {
         if (param0 <= 54) {
           field_d = 111;
           field_g = null;

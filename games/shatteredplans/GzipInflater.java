@@ -200,7 +200,7 @@ final class GzipInflater {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         try {
           field_a = null;
           field_h = null;

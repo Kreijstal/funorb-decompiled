@@ -89,7 +89,7 @@ final class so extends qe {
         PasswordValidator.a(-115, param7, param12, param13);
     }
 
-    public static void d(int param0) {
+    public static void clearStatics(int param0) {
         field_t = null;
         field_s = null;
         field_q = null;

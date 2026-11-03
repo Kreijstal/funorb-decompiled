@@ -326,7 +326,7 @@ final class di extends IntrusiveNode {
             }
             stackIn_20_0 = var6.field_Cb;
             if (0 < var10) {
-              stackIn_21_1 = nq.a(var6.field_Cb.field_nb, var6.field_Ab, var10);
+              stackIn_21_1 = nq.truncateWithEllipsis(var6.field_Cb.field_nb, var6.field_Ab, var10);
             } else {
               stackIn_21_1 = var6.field_Ab;
             }

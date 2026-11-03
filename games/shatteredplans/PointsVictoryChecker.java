@@ -172,7 +172,7 @@ final class PointsVictoryChecker extends VictoryChecker {
             param1.drawCentred(param6, param0 >> 1, (param9 + param1.field_J >> 1) + 1, 16777215, -1);
             param1.drawCentred(param6, param0 >> 1, -1 + (param1.field_J + param9 >> 1), 16777215, -1);
             cg.i(0);
-            var13.c(param5, param3, 64);
+            var13.drawAdditive(param5, param3, 64);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

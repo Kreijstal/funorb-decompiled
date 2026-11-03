@@ -167,13 +167,13 @@ final class MenuWindow extends MenuComponent {
           SoftwareRasterizer.setPixel(this.field_k + 3, var6Lifetime3 + var7Lifetime2 + (15 + this.field_t + 10), var8);
           SoftwareRasterizer.setPixel(-1 + (this.field_k + this.field_m - 3), 25 + this.field_t - (-var7Lifetime2 - var6Lifetime3), var8);
         }
-        jl.field_W.c(4 + this.field_k, this.field_t + 3, 256);
+        jl.field_W.drawAdditive(4 + this.field_k, this.field_t + 3, 256);
         var7Lifetime3 = jl.field_W.field_z + 1 + (this.field_k + 3);
         var8Lifetime1 = -DerelictMapReader.field_g.field_z - 3 + (this.field_m + this.field_k);
-        DerelictMapReader.field_g.c(var8Lifetime1, 3 + this.field_t, 64);
+        DerelictMapReader.field_g.drawAdditive(var8Lifetime1, 3 + this.field_t, 64);
         for (var10 = var7Lifetime3; var10 < var8Lifetime1; var10++) {
           var9 = 64 + 192 * (-var10 + var8Lifetime1) / (var8Lifetime1 - var7Lifetime3);
-          VictoryChecker.field_h.c(var10, this.field_t + 3, var9);
+          VictoryChecker.field_h.drawAdditive(var10, this.field_t + 3, var9);
         }
         rs.field_Cb.drawCentred(this.field_y, this.field_k + this.field_m / 2, this.field_t + 12, 16777215, -1);
         MenuComponent var12 = (MenuComponent) (this.field_l.startReverse(3725));

@@ -480,10 +480,10 @@ final class ProxySocketConnector extends SocketConnector {
         va.field_e.draw(var1, var2);
         var2 = -(di.field_m * 40 / 800) + 200;
         var1 = -62;
-        he.field_h.c(var1, -60 + var2, 256);
+        he.field_h.drawAdditive(var1, -60 + var2, 256);
         var2 = 300 - 150 * di.field_m / 800;
         var1 = -120;
-        we.field_f.c(var1, -60 + var2, 256);
+        we.field_f.drawAdditive(var1, -60 + var2, 256);
         var1 = -62;
         var2 = -(di.field_m * 40 / 800) + 200;
         q.field_Cb.draw(var1, var2);

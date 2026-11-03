@@ -80,7 +80,7 @@ final class BattleContribution extends IntrusiveNode {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearStatics(boolean param0) {
         field_q = null;
         field_m = null;
         field_l = null;
@@ -97,7 +97,7 @@ final class BattleContribution extends IntrusiveNode {
         Sprite var2 = new Sprite(IntrusiveDeque.field_d.field_z, IntrusiveDeque.field_d.field_w);
         RandomAccessCacheFile.a(-127);
         var2.bindAsRenderTarget();
-        IntrusiveDeque.field_d.b(0, 0, param0 >= 0 ? param0 : 2105376);
+        IntrusiveDeque.field_d.drawColourised(0, 0, param0 >= 0 ? param0 : 2105376);
         cg.i(0);
         return var2;
     }

@@ -14,7 +14,7 @@ final class lq extends IntrusiveNode {
     int field_i;
     static Sprite field_o;
 
-    public static void a(byte param0) {
+    public static void clearStatics(byte param0) {
         field_p = null;
         field_k = null;
         field_r = null;

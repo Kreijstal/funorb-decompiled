@@ -51,7 +51,7 @@ class WidgetTheme implements WidgetPainter, WidgetMetrics {
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3) {
-        pl.a(param0, (byte) -26);
+        pl.clearStatics(param0, (byte) -26);
         MapView.a(param3, param0, param2, param1);
     }
 

@@ -14,7 +14,7 @@ final class wc {
         try {
           if (param1 >= 128) {
             SoftwareRasterizer.setClip(param2, 0, -128 + (param2 + param1), param4 + 480);
-            param3.c(param2, param4, param5);
+            param3.drawAdditive(param2, param4, param5);
           }
           var6_int = 128 > param1 ? 0 : -128 + param1;
           var7 = param1;
@@ -24,7 +24,7 @@ final class wc {
           for (var8 = var6_int; var7 > var8; var8++) {
             SoftwareRasterizer.setClip(param2 + var8, 0, param2 + (var8 + 1), 480 + param4);
             var9 = param5 * (-var8 + param1) >> 7;
-            param3.c(param2, param4, var9);
+            param3.drawAdditive(param2, param4, var9);
           }
           SoftwareRasterizer.resetClip();
         } catch (RuntimeException runtimeException) {
