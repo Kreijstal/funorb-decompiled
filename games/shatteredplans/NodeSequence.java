@@ -117,11 +117,11 @@ abstract class NodeSequence {
         field_a = null;
     }
 
-    abstract int b(byte param0);
+    abstract int size(byte param0);
 
-    abstract IntrusiveNode a(byte param0);
+    abstract IntrusiveNode first(byte param0);
 
-    abstract IntrusiveNode a(boolean param0);
+    abstract IntrusiveNode next(boolean param0);
 
     static {
         field_e = 0;

@@ -11,7 +11,7 @@ abstract class DebouncedValidator implements ValidationSource {
     static int[] field_d;
     static String field_f;
 
-    abstract ValidationState a(boolean param0);
+    abstract ValidationState computeState(boolean param0);
 
     final static boolean a(int param0, String param1) {
         RuntimeException var2 = null;
@@ -40,18 +40,18 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    public final String a(byte param0) {
+    public final String getMessage(byte param0) {
         if (param0 != -63) {
           MusicCrossfadeStream var3 = (MusicCrossfadeStream) null;
           DebouncedValidator.a((java.awt.Component) null, (PlatformTaskDispatcher) null, (MusicCrossfadeStream) null, -88, true, -43, 7, true);
         }
-        if (this.a(16647)) {
+        if (this.isEmpty(16647)) {
           return null;
         }
         if (pr.currentTimeMillis(14274) < (this.field_b + 350L)) {
           return null;
         }
-        return this.c((byte) 125);
+        return this.computeMessage((byte) 125);
     }
 
     final static SoundPlayback a(int param0, PcmSampleStream param1) {
@@ -99,20 +99,20 @@ abstract class DebouncedValidator implements ValidationSource {
         field_f = null;
     }
 
-    public final void b(int param0) {
+    public final void notifyChanged(int param0) {
         this.field_b = pr.currentTimeMillis(14274);
         int var2 = -57 / ((param0 + 1) / 58);
     }
 
-    public final ValidationState c(int param0) {
-        if (this.a(16647)) {
+    public final ValidationState getState(int param0) {
+        if (this.isEmpty(16647)) {
           return IntrusiveDequeSequence.field_i;
         }
         int var2 = -29 / ((-80 - param0) / 35);
         if (!(this.field_b + 350L <= pr.currentTimeMillis(14274))) {
           return TertiaryListSequence.field_h;
         }
-        return this.a(false);
+        return this.computeState(false);
     }
 
     final static void a(int param0, java.applet.Applet param1) {
@@ -176,7 +176,7 @@ abstract class DebouncedValidator implements ValidationSource {
         }
     }
 
-    abstract String c(byte param0);
+    abstract String computeMessage(byte param0);
 
     static {
         int var2 = 0;

@@ -38,9 +38,9 @@ final class AchievementProgress {
         FleetMove var12 = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5_int = param0.b((byte) -61);
-          var6 = param3.b((byte) -61);
-          var7 = (ProjectUse) (param2.a((byte) 124));
+          var5_int = param0.size((byte) -61);
+          var6 = param3.size((byte) -61);
+          var7 = (ProjectUse) (param2.first((byte) 124));
           if (param1 != -256) {
             AchievementProgress.clearStatics((byte) -9);
           }
@@ -51,14 +51,14 @@ final class AchievementProgress {
             if (var7.field_o == 3) {
               di.writeStar(var7.field_r, false, param4);
             }
-            var7 = (ProjectUse) (param2.a(false));
+            var7 = (ProjectUse) (param2.next(false));
           }
-          var8 = (PlacementOrder) (param0.a((byte) 111));
+          var8 = (PlacementOrder) (param0.first((byte) 111));
           while (var5_int >= 59) {
             param4.writeByte(250, (byte) -61);
             for (var9 = 0; var9 < 59; var9++) {
               PanelNode.writePlacementOrder(var8, param4, true);
-              var8 = (PlacementOrder) (param0.a(false));
+              var8 = (PlacementOrder) (param0.next(false));
             }
             var5_int -= 59;
           }
@@ -66,15 +66,15 @@ final class AchievementProgress {
             param4.writeByte(192 + var5_int - 1, (byte) -86);
             while (var8 != null) {
               PanelNode.writePlacementOrder(var8, param4, true);
-              var8 = (PlacementOrder) (param0.a(false));
+              var8 = (PlacementOrder) (param0.next(false));
             }
           }
-          var12 = (FleetMove) (param3.a((byte) 110));
+          var12 = (FleetMove) (param3.first((byte) 110));
           while (var6 >= 192) {
             param4.writeByte(191, (byte) -104);
             for (var10 = 0; var10 < 192; var10++) {
               MenuList.writeFleetMove(var12, (byte) -106, param4);
-              var12 = (FleetMove) (param3.a(false));
+              var12 = (FleetMove) (param3.next(false));
             }
             var6 -= 192;
           }
@@ -82,7 +82,7 @@ final class AchievementProgress {
             param4.writeByte(var6 - 1, (byte) -103);
             while (var12 != null) {
               MenuList.writeFleetMove(var12, (byte) -88, param4);
-              var12 = (FleetMove) (param3.a(false));
+              var12 = (FleetMove) (param3.next(false));
             }
             return;
           }

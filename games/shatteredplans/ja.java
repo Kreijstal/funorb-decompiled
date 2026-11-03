@@ -12,9 +12,9 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
     public final void a(TextFieldWidget param0, int param1) {
         try {
           if (param1 != 95) {
-            this.a(25);
+            this.isEmpty(25);
           }
-          this.b(param1 - 158);
+          this.notifyChanged(param1 - 158);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ja.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -114,7 +114,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
         }
     }
 
-    final String c(byte param0) {
+    final String computeMessage(byte param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -153,7 +153,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
     public ja() {
     }
 
-    final ValidationState a(boolean param0) {
+    final ValidationState computeState(boolean param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -198,7 +198,7 @@ final class ja extends DebouncedValidator implements TextFieldListener, g {
         }
     }
 
-    public final boolean a(int param0) {
+    public final boolean isEmpty(int param0) {
         if (param0 != 16647) {
           return true;
         }

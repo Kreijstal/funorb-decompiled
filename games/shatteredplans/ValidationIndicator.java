@@ -106,7 +106,7 @@ final class ValidationIndicator extends FocusableWidget {
 
     final String getTooltip(boolean param0) {
         if (this.field_k) {
-          return this.field_G.a((byte) -63);
+          return this.field_G.getMessage((byte) -63);
         }
         if (param0) {
           return null;
@@ -205,7 +205,7 @@ final class ValidationIndicator extends FocusableWidget {
         if (param1 != -11857) {
           return;
         }
-        var8 = this.field_G.c(param1 + 11730);
+        var8 = this.field_G.getState(param1 + 11730);
         if (TertiaryListSequence.field_h != var8 &&
           lm.field_d != var8) {
           if (ArchiveSourceManager.field_b == var8) {

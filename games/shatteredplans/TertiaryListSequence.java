@@ -11,12 +11,12 @@ final class TertiaryListSequence extends NodeSequence {
     static long field_l;
     static String field_g;
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         if (param0 <= 99) {
           TertiaryListSequence.clearStatics(11);
-          return (IntrusiveNode) ((Object) this.field_i.a(true));
+          return (IntrusiveNode) ((Object) this.field_i.startForward(true));
         }
-        return (IntrusiveNode) ((Object) this.field_i.a(true));
+        return (IntrusiveNode) ((Object) this.field_i.startForward(true));
     }
 
     final static String a(byte param0, long param1) {
@@ -61,12 +61,12 @@ final class TertiaryListSequence extends NodeSequence {
         return null;
     }
 
-    final int b(byte param0) {
+    final int size(byte param0) {
         if (param0 != -61) {
-          this.b((byte) 6);
-          return this.field_i.b(0);
+          this.size((byte) 6);
+          return this.field_i.size(0);
         }
-        return this.field_i.b(0);
+        return this.field_i.size(0);
     }
 
     TertiaryListSequence(TertiaryNodeList param0) {
@@ -77,7 +77,7 @@ final class TertiaryListSequence extends NodeSequence {
         }
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode next(boolean param0) {
         if (param0) {
           field_l = -98L;
           return (IntrusiveNode) ((Object) this.field_i.a((byte) -68));

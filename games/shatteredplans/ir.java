@@ -28,7 +28,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           }
           var10 = new pg(20, param1, 120 + param2, 25, param3, false, 120, 3, gn.field_u, 16777215, param5);
           this.b((byte) -68, var10);
-          var9 = new ah(((ValidatableWidget) ((Object) param3)).a((byte) 80), param4, 126, var10.field_n + param1, param2 + 25, param0);
+          var9 = new ah(((ValidatableWidget) ((Object) param3)).getValidationSource((byte) 80), param4, 126, var10.field_n + param1, param2 + 25, param0);
           var9.field_u = (WidgetListener) (this);
           this.b((byte) -100, var9);
           stackIn_3_0 = var9.field_n + var10.field_n;
@@ -70,12 +70,12 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
 
     public final void a(int param0) {
         if (param0 == 2147483647) {
-          ((UsernameAvailabilityValidator) (this.field_H.a((byte) 63))).d(0);
+          ((UsernameAvailabilityValidator) (this.field_H.getValidationSource((byte) 63))).d(0);
           return;
         }
         String var3 = (String) null;
         int discarded$0 = this.a(-61, -100, -33, (UiWidget) null, (String) null, (String) null, true);
-        ((UsernameAvailabilityValidator) (this.field_H.a((byte) 63))).d(0);
+        ((UsernameAvailabilityValidator) (this.field_H.getValidationSource((byte) 63))).d(0);
     }
 
     public final void a(int param0, String param1) {
@@ -276,11 +276,11 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           if (param1 != 13) {
             return true;
           }
-          var3 = param0.a((byte) 92);
+          var3 = param0.getValidationSource((byte) 92);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.c(param1 ^ 26);
+          var4 = var3.getState(param1 ^ 26);
           stackIn_9_0 = (var4 == CachedArchiveSource.field_g);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

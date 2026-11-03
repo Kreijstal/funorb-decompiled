@@ -230,7 +230,7 @@ final class WidgetStyle {
             stackIn_60_0 = sr.a(0, param0);
             return stackIn_60_0;
           }
-          var3_ref = (FleetMove) (oq.field_a.field_P.field_p.a(true));
+          var3_ref = (FleetMove) (oq.field_a.field_P.field_p.startForward(true));
           while (true) {
             if (var3_ref == null) {
               return false;

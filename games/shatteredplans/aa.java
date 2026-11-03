@@ -97,7 +97,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
           }
           var11 = new pg(20, param2, 120 + param1, 25, param3, false, 120, 3, gn.field_u, 16777215, param5);
           this.b((byte) -120, var11);
-          var9 = new ah(((ValidatableWidget) ((Object) param3)).a((byte) 96), param4, 126, param2 + var11.field_n, 50 + param1, param6);
+          var9 = new ah(((ValidatableWidget) ((Object) param3)).getValidationSource((byte) 96), param4, 126, param2 + var11.field_n, 50 + param1, param6);
           var9.field_u = (WidgetListener) (this);
           this.b((byte) -52, var9);
           stackIn_3_0 = var9.field_n + var11.field_n;
@@ -137,11 +137,11 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param1.a((byte) 103);
+          var3 = param1.getValidationSource((byte) 103);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.c(-123);
+          var4 = var3.getState(-123);
           if (param0) {
             field_P = (String) null;
           }
@@ -383,7 +383,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
     }
 
     public final void a(int param0) {
-        ((UsernameAvailabilityValidator) (this.field_Q.a((byte) 117))).d(0);
+        ((UsernameAvailabilityValidator) (this.field_Q.getValidationSource((byte) 117))).d(0);
         if (param0 != 2147483647) {
           field_P = (String) null;
         }
@@ -618,7 +618,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         try {
           var9 = new pg(20, param2, 120 + param4, 25, param1, false, 120, 3, gn.field_u, 16777215, param0);
           this.b((byte) -51, var9);
-          var7 = new ValidationIndicator(((ValidatableWidget) ((Object) param1)).a((byte) 106));
+          var7 = new ValidationIndicator(((ValidatableWidget) ((Object) param1)).getValidationSource((byte) 106));
           var8 = -33 / ((param3 + 88) / 35);
           this.b((byte) -116, var7);
           var7.setBounds(var9.field_q + (-15 + var9.field_n >> 1), 15, (byte) 118, var9.field_x + (var9.field_m + 3), 15);

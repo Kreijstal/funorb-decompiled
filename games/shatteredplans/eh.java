@@ -14,7 +14,7 @@ final class eh extends ArrayWidgetGroup implements ButtonListener {
     final void updateHover(int param0, int param1, UiWidget param2, byte param3) {
         try {
           super.updateHover(param0, param1, param2, param3);
-          this.field_M.field_y = this.field_J.a((byte) 127).c(100) == CachedArchiveSource.field_g ? true : false;
+          this.field_M.field_y = this.field_J.getValidationSource((byte) 127).getState(100) == CachedArchiveSource.field_g ? true : false;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "eh.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -67,7 +67,7 @@ final class eh extends ArrayWidgetGroup implements ButtonListener {
     }
 
     public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
-        if (this.field_J.a((byte) 111).c(-123) != CachedArchiveSource.field_g) {
+        if (this.field_J.getValidationSource((byte) 111).getState(-123) != CachedArchiveSource.field_g) {
           return;
         }
         try {

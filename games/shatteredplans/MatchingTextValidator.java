@@ -47,7 +47,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final String a(boolean param0, String param1) {
+    final String computeMessageFor(boolean param0, String param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         String stackIn_2_0 = null;
@@ -64,14 +64,14 @@ final class MatchingTextValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (this.field_n instanceof ValidatableWidget) {
-            var3 = ((ValidatableWidget) ((Object) this.field_n)).a((byte) 73);
+            var3 = ((ValidatableWidget) ((Object) this.field_n)).getValidationSource((byte) 73);
             if (var3 != null) {
-              if (var3.c(-126) == CachedArchiveSource.field_g &&
+              if (var3.getState(-126) == CachedArchiveSource.field_g &&
                 !param1.equals(this.field_n.field_s)) {
                 stackIn_8_0 = IsaacRandom.field_a;
                 return stackIn_8_0;
               }
-              stackIn_10_0 = var3.a((byte) -63);
+              stackIn_10_0 = var3.getMessage((byte) -63);
               return stackIn_10_0;
             }
           }
@@ -94,7 +94,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
     }
 
-    final ValidationState b(int param0, String param1) {
+    final ValidationState computeStateFor(int param0, String param1) {
         ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         ValidationState stackIn_5_0 = null;
@@ -105,9 +105,9 @@ final class MatchingTextValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_n instanceof ValidatableWidget) {
-            var3 = ((ValidatableWidget) ((Object) this.field_n)).a((byte) 120);
+            var3 = ((ValidatableWidget) ((Object) this.field_n)).getValidationSource((byte) 120);
             if (var3 != null &&
-              var3.c(param0 + 11321) != CachedArchiveSource.field_g) {
+              var3.getState(param0 + 11321) != CachedArchiveSource.field_g) {
               stackIn_5_0 = ArchiveSourceManager.field_b;
               return stackIn_5_0;
             }

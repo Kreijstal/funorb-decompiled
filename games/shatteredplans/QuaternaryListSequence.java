@@ -263,11 +263,11 @@ final class QuaternaryListSequence extends NodeSequence {
         }
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode next(boolean param0) {
         if (param0) {
           QuaternaryListSequence.d((byte) 82);
         }
-        return (IntrusiveNode) ((Object) this.field_g.d(-115));
+        return (IntrusiveNode) ((Object) this.field_g.nextForward(-115));
     }
 
     final static void a(int param0, Territory param1) {
@@ -314,18 +314,18 @@ final class QuaternaryListSequence extends NodeSequence {
         }
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         if (param0 < 99) {
           return (IntrusiveNode) null;
         }
-        return (IntrusiveNode) ((Object) this.field_g.e(-31364));
+        return (IntrusiveNode) ((Object) this.field_g.startForward(-31364));
     }
 
-    final int b(byte param0) {
+    final int size(byte param0) {
         if (param0 != -61) {
           this.field_g = (QuaternaryNodeList) null;
         }
-        return this.field_g.c(-7432);
+        return this.field_g.size(-7432);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {

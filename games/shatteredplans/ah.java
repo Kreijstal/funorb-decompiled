@@ -103,7 +103,7 @@ final class ah extends ts {
         var30 = null;
         var38 = null;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
-        var6 = this.field_M.c(126);
+        var6 = this.field_M.getState(126);
         if (var6 == TertiaryListSequence.field_h) {
           var17 = AnimatedPanel.field_R;
           if (!var17.equals(this.field_s)) {
@@ -111,7 +111,7 @@ final class ah extends ts {
             this.e(false);
           }
           super.drawLayer(param0, param1, param2, param3);
-          var6 = this.field_M.c(-123);
+          var6 = this.field_M.getState(-123);
           var43 = (WidgetMetrics) ((Object) this.field_p);
           var9 = this.field_m + param3;
           var10 = var43.getTextY(param2, (UiWidget) (this), 66) + (var43.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);
@@ -178,7 +178,7 @@ final class ah extends ts {
             this.e(false);
           }
           super.drawLayer(param0, param1, param2, param3);
-          var6 = this.field_M.c(-123);
+          var6 = this.field_M.getState(-123);
           var44 = (WidgetMetrics) ((Object) this.field_p);
           var9Lifetime1 = this.field_m + param3;
           var10Lifetime1 = var44.getTextY(param2, (UiWidget) (this), 66) + (var44.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);
@@ -238,7 +238,7 @@ final class ah extends ts {
           this.field_V.c(var9Lifetime1 - (var25.field_o >> 1), -var25.field_p + var10Lifetime1, 256);
           return;
         }
-        var5 = this.field_M.a((byte) -63);
+        var5 = this.field_M.getMessage((byte) -63);
         if (var5 == null) {
           var29 = this.field_W;
           var5 = var29;
@@ -247,7 +247,7 @@ final class ah extends ts {
             this.e(false);
           }
           super.drawLayer(param0, param1, param2, param3);
-          var6Lifetime1 = this.field_M.c(-123);
+          var6Lifetime1 = this.field_M.getState(-123);
           var45 = (WidgetMetrics) ((Object) this.field_p);
           var9Lifetime2 = this.field_m + param3;
           var10Lifetime2 = var45.getTextY(param2, (UiWidget) (this), 66) + (var45.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);
@@ -296,7 +296,7 @@ final class ah extends ts {
           this.e(false);
         }
         super.drawLayer(param0, param1, param2, param3);
-        var6Lifetime2 = this.field_M.c(-123);
+        var6Lifetime2 = this.field_M.getState(-123);
         var46 = (WidgetMetrics) ((Object) this.field_p);
         var9Lifetime3 = this.field_m + param3;
         var10Lifetime3 = var46.getTextY(param2, (UiWidget) (this), 66) + (var46.getTextLayout((UiWidget) (this), true).getHeight(438) >> 1);

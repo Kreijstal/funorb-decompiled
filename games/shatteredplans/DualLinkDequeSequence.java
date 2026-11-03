@@ -97,15 +97,15 @@ final class DualLinkDequeSequence extends NodeSequence {
         field_h = null;
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode next(boolean param0) {
         if (param0) {
-          this.a((byte) -124);
+          this.first((byte) -124);
           return (IntrusiveNode) ((Object) this.field_i.nextForward(32));
         }
         return (IntrusiveNode) ((Object) this.field_i.nextForward(32));
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         if (param0 < 99) {
           field_k = (String) null;
           return (IntrusiveNode) ((Object) this.field_i.startForward(-127));
@@ -113,7 +113,7 @@ final class DualLinkDequeSequence extends NodeSequence {
         return (IntrusiveNode) ((Object) this.field_i.startForward(-127));
     }
 
-    final int b(byte param0) {
+    final int size(byte param0) {
         if (param0 != -61) {
           return -111;
         }

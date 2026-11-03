@@ -120,7 +120,7 @@ final class so extends qe {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param0);
-          var3_int = DiskArchiveRequest.a(-116, var10, param1);
+          var3_int = DiskArchiveRequest.countChar(-116, var10, param1);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;

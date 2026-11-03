@@ -24,7 +24,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final ValidationState b(int param0, String param1) {
+    final ValidationState computeStateFor(int param0, String param1) {
         kj var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
@@ -332,7 +332,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final String a(boolean param0, String param1) {
+    final String computeMessageFor(boolean param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         kj var4 = null;

@@ -9,7 +9,7 @@ final class aj {
     static IntrusiveDeque field_a;
     static int[] field_d;
 
-    final static StringBuilder a(StringBuilder param0, int param1, int param2, char param3) {
+    final static StringBuilder padWithChar(StringBuilder param0, int param1, int param2, char param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

@@ -8,7 +8,7 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
     static AnimatedPanel field_l;
     private TextFieldWidget field_i;
 
-    public final boolean a(int param0) {
+    public final boolean isEmpty(int param0) {
         if (param0 != 16647) {
           field_l = (AnimatedPanel) null;
           if (null != this.field_i.field_s) {
@@ -25,17 +25,17 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
         return true;
     }
 
-    final ValidationState a(boolean param0) {
+    final ValidationState computeState(boolean param0) {
         if (!param0) {
-          return this.b(-11196, this.field_i.field_s);
+          return this.computeStateFor(-11196, this.field_i.field_s);
         }
         field_m = (String) null;
-        return this.b(-11196, this.field_i.field_s);
+        return this.computeStateFor(-11196, this.field_i.field_s);
     }
 
-    abstract ValidationState b(int param0, String param1);
+    abstract ValidationState computeStateFor(int param0, String param1);
 
-    abstract String a(boolean param0, String param1);
+    abstract String computeMessageFor(boolean param0, String param1);
 
     final static void a(int param0, int param1, int param2, int param3, Sprite param4, int param5, int param6) {
         int incrementValue$4 = 0;
@@ -104,9 +104,9 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
 
     public final void a(TextFieldWidget param0, int param1) {
         try {
-          this.b(-85);
+          this.notifyChanged(-85);
           if (param1 != 95) {
-            this.c((byte) -44);
+            this.computeMessage((byte) -44);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ml.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -143,12 +143,12 @@ abstract class TextFieldValidator extends DebouncedValidator implements TextFiel
         field_k = null;
     }
 
-    final String c(byte param0) {
+    final String computeMessage(byte param0) {
         if (param0 > 61) {
-          return this.a(false, this.field_i.field_s);
+          return this.computeMessageFor(false, this.field_i.field_s);
         }
         field_k = (String) null;
-        return this.a(false, this.field_i.field_s);
+        return this.computeMessageFor(false, this.field_i.field_s);
     }
 
     TextFieldValidator(TextFieldWidget param0) {

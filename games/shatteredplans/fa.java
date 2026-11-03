@@ -42,7 +42,7 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
     final void notifyTextChanged(int param0) {
         super.notifyTextChanged(param0);
         if (this.field_V != null) {
-          this.field_V.b(-72);
+          this.field_V.notifyChanged(-72);
         }
     }
 
@@ -57,9 +57,9 @@ final class fa extends TextFieldWidget implements ValidatableWidget {
         }
     }
 
-    public final ValidationSource a(byte param0) {
+    public final ValidationSource getValidationSource(byte param0) {
         if (param0 <= 58) {
-          this.a((byte) -52);
+          this.getValidationSource((byte) -52);
           return this.field_V;
         }
         return this.field_V;

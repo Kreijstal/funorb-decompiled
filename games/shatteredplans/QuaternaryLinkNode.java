@@ -63,14 +63,14 @@ class QuaternaryLinkNode extends TertiaryLinkNode {
         }
     }
 
-    final void f(byte param0) {
+    final void unlinkQuaternary(byte param0) {
         if (this.field_u == null) {
           return;
         }
         this.field_u.field_x = this.field_x;
         this.field_x.field_u = this.field_u;
         if (param0 != -62) {
-          this.f((byte) -89);
+          this.unlinkQuaternary((byte) -89);
         }
         this.field_x = null;
         this.field_u = null;

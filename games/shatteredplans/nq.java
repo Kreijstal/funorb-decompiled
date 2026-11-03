@@ -603,7 +603,7 @@ abstract class nq extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        aj.a(field_B, 0, -127, ' ');
+        aj.padWithChar(field_B, 0, -127, ' ');
         var4 = 0;
         var5 = 0;
         var6 = -1;

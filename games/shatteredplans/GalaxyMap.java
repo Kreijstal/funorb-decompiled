@@ -18,7 +18,7 @@ final class GalaxyMap {
     static int field_f;
 
     final void computeDistances(byte param0) {
-        this.field_h = QuaternaryNodeList.a(this.field_e, 0);
+        this.field_h = QuaternaryNodeList.computeShortestHops(this.field_e, 0);
         if (param0 != 80) {
           PacketBuffer var3 = (PacketBuffer) null;
           this.a((byte) 42, (Player[]) null, (PacketBuffer) null);

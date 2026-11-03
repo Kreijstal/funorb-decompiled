@@ -97,7 +97,7 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    final String a(boolean param0, String param1) {
+    final String computeMessageFor(boolean param0, String param1) {
         String stackIn_4_0 = null;
         String stackIn_7_0 = null;
         String stackIn_12_0 = null;
@@ -108,15 +108,15 @@ final class EmailValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.field_s.b(-11196, param1) == ArchiveSourceManager.field_b) {
-            stackIn_4_0 = this.field_s.a(false, param1);
+          if (this.field_s.computeStateFor(-11196, param1) == ArchiveSourceManager.field_b) {
+            stackIn_4_0 = this.field_s.computeMessageFor(false, param1);
             return stackIn_4_0;
           }
           if (param0) {
             stackIn_7_0 = (String) null;
             return stackIn_7_0;
           }
-          if (this.b(-11196, param1) == ArchiveSourceManager.field_b) {
+          if (this.computeStateFor(-11196, param1) == ArchiveSourceManager.field_b) {
             stackIn_12_0 = ab.field_d;
             return stackIn_12_0;
           }
@@ -136,7 +136,7 @@ final class EmailValidator extends TextFieldValidator {
         }
     }
 
-    final ValidationState b(int param0, String param1) {
+    final ValidationState computeStateFor(int param0, String param1) {
         ValidationState stackIn_2_0 = null;
         ValidationState stackIn_8_0 = null;
         ValidationState stackIn_14_0 = null;
@@ -147,7 +147,7 @@ final class EmailValidator extends TextFieldValidator {
         ks var3 = null;
         RuntimeException var3_ref = null;
         try {
-          if (this.field_s.b(param0, param1) == ArchiveSourceManager.field_b) {
+          if (this.field_s.computeStateFor(param0, param1) == ArchiveSourceManager.field_b) {
             stackIn_2_0 = ArchiveSourceManager.field_b;
             return stackIn_2_0;
           }

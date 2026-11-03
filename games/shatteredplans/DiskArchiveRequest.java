@@ -91,7 +91,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         int fieldTemp$0 = 0;
         if (param0 != 118) {
           CharSequence var2 = (CharSequence) null;
-          DiskArchiveRequest.a(22, (CharSequence) null, '\001');
+          DiskArchiveRequest.countChar(22, (CharSequence) null, '\001');
           if (di.field_m == 0) {
             sg.a(true, false, 50, GameRules.field_d, NetworkArchiveRequest.field_C);
           }
@@ -190,7 +190,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         }
     }
 
-    final static int a(int param0, CharSequence param1, char param2) {
+    final static int countChar(int param0, CharSequence param1, char param2) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;

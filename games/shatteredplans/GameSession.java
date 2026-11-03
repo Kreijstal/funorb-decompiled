@@ -598,7 +598,7 @@ final class GameSession implements AiHost {
           if (decompiledNaturalLoopExit1) {
             stackIn_14_0 = this.field_P;
           }
-          var5 = (FleetMove) (((TertiaryNodeList) (Object) stackIn_14_0.field_p).a(true));
+          var5 = (FleetMove) (((TertiaryNodeList) (Object) stackIn_14_0.field_p).startForward(true));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5 == null))) {
             var5.field_y.field_J = var5.field_y.field_J - var5.field_z;
@@ -1526,7 +1526,7 @@ final class GameSession implements AiHost {
               var5 = new FleetMove(param3, param2, param1);
               param3.field_T.addLast((byte) -113, var5);
               param2.field_s.addLast(var5, 32);
-              this.field_P.field_p.a((byte) 62, var5);
+              this.field_P.field_p.addLast((byte) 62, var5);
               if (var6 != 0) {
                 var5.field_z = var5.field_z + param1;
               }
@@ -1543,7 +1543,7 @@ final class GameSession implements AiHost {
           NodeHashTableIterator.a(param2, (byte) 75);
           this.a(this.field_n, -95);
           if (this.field_f) {
-            this.field_v.a((byte) 9, var5);
+            this.field_v.addLast((byte) 9, var5);
             this.e(0);
           }
           return;
@@ -1584,7 +1584,7 @@ final class GameSession implements AiHost {
           AchievementProgress.a(MapView.a((byte) 81, this.field_o), -256, MapView.a((byte) 93, this.field_ab), DialWidget.a(-125, this.field_v), var2);
           this.field_ab.clear((byte) 35);
           this.field_o.clear((byte) 87);
-          this.field_v.a((byte) 112);
+          this.field_v.clear((byte) 112);
           var2.patchLengthShort(-549342136, -var3 + var2.position);
           this.field_g = -1;
           this.field_k = -1;
@@ -1618,11 +1618,11 @@ final class GameSession implements AiHost {
           if (0 == param0.field_z) {
             param0.unlink((byte) -106);
             param0.unlinkSecondary(16);
-            param0.d(true);
+            param0.unlinkTertiary(true);
           }
           this.a(this.field_n, -117);
           if (this.field_f) {
-            this.field_v.a((byte) 9, param0);
+            this.field_v.addLast((byte) 9, param0);
             this.e(0);
           }
           return;
@@ -2085,7 +2085,7 @@ final class GameSession implements AiHost {
           if (decompiledNaturalLoopExit1) {
             stackIn_13_0 = this.field_P;
           }
-          var6 = (FleetMove) (((TertiaryNodeList) (Object) stackIn_13_0.field_p).a(true));
+          var6 = (FleetMove) (((TertiaryNodeList) (Object) stackIn_13_0.field_p).startForward(true));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var6 == null))) {
             stackIn_18_0 = var2_int + ((1 + var6.field_y.field_p) * (1 + (var6.field_B.field_p + 65536)) + var6.field_z * ((1 + var6.field_B.field_p) * (1 + var6.field_y.field_p)));
@@ -2745,7 +2745,7 @@ final class GameSession implements AiHost {
             sm.field_e = true;
             ProductionContent.a(mq.c((byte) 73), 1);
             this.field_s[this.field_h] = (Ai) ((Object) new TaskAi(this.field_n, this.field_P, (AiHost) (this)));
-            var2_ref = (FleetMove) (this.field_P.field_p.a(true));
+            var2_ref = (FleetMove) (this.field_P.field_p.startForward(true));
             while (null != var2_ref) {
               this.changeMoveSize(var2_ref, -var2_ref.field_z, 10755);
               var2_ref = (FleetMove) (this.field_P.field_p.a((byte) -68));
@@ -2783,7 +2783,7 @@ final class GameSession implements AiHost {
             var6 = 0;
             do {
               if (var6 >= var5.length) {
-                var2_ref = (FleetMove) (this.field_P.field_p.a(true));
+                var2_ref = (FleetMove) (this.field_P.field_p.startForward(true));
                 break;
               }
               var7 = var5[var6];
@@ -2796,7 +2796,7 @@ final class GameSession implements AiHost {
                 var3 = (PlacementOrder) (this.field_P.field_q.startForward(0));
                 break;
               }
-              this.field_v.a((byte) 9, var2_ref);
+              this.field_v.addLast((byte) 9, var2_ref);
               var2_ref = (FleetMove) (this.field_P.field_p.a((byte) -68));
             } while (var8 == 0);
             do {
@@ -3623,9 +3623,9 @@ final class GameSession implements AiHost {
                   break scanLoop1;
                 }
               }
-              var2_ref2 = (FleetMove) (this.field_P.field_p.a(true));
+              var2_ref2 = (FleetMove) (this.field_P.field_p.startForward(true));
               while (var2_ref2 != null) {
-                this.field_v.a((byte) 9, var2_ref2);
+                this.field_v.addLast((byte) 9, var2_ref2);
                 var2_ref2 = (FleetMove) (this.field_P.field_p.a((byte) -68));
                 if (var6 != 0) {
                   break scanLoop1;
@@ -3887,7 +3887,7 @@ final class GameSession implements AiHost {
           AchievementProgress.a(FrameTimer.a(this.field_P.field_q, -71), -256, FrameTimer.a(this.field_P.field_i, -88), eh.a(25, this.field_P.field_p), var2);
           this.field_ab.clear((byte) 108);
           this.field_o.clear((byte) 127);
-          this.field_v.a((byte) 112);
+          this.field_v.clear((byte) 112);
           var2.patchLengthShort(-549342136, -var3 + var2.position);
           this.field_k = -1;
           this.field_g = -1;

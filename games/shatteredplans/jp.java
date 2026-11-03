@@ -227,7 +227,7 @@ final class jp extends AnimatedPanel {
           }
           return true;
         }
-        aj.a(this.field_Db, this.field_Db.length() - 1, -121, ' ');
+        aj.padWithChar(this.field_Db, this.field_Db.length() - 1, -121, ' ');
         if (this.field_Db.length() >= 12) {
           if (oq.field_j == 84) {
             if (this.field_Db.length() > 0) {
@@ -477,7 +477,7 @@ final class jp extends AnimatedPanel {
           }
           if (85 == oq.field_j &&
             0 < this.field_Db.length()) {
-            aj.a(this.field_Db, this.field_Db.length() - 1, 29, ' ');
+            aj.padWithChar(this.field_Db, this.field_Db.length() - 1, 29, ' ');
           }
           if (TutorialMapGenerator.a(ho.field_h, (CharSequence) ((Object) this.field_Db), (byte) 119)) {
             discarded$0 = this.field_Db.append(ho.field_h);

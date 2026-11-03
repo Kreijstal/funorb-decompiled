@@ -9,21 +9,21 @@ final class IntrusiveDequeSequence extends NodeSequence {
     static ValidationState field_i;
     static String field_j;
 
-    final int b(byte param0) {
+    final int size(byte param0) {
         if (param0 != -61) {
           this.field_h = (IntrusiveDeque) null;
         }
         return this.field_h.size(0);
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         if (param0 <= 99) {
           field_j = (String) null;
         }
         return this.field_h.startForward(0);
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode next(boolean param0) {
         if (param0) {
           return (IntrusiveNode) null;
         }

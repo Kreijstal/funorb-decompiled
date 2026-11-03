@@ -989,7 +989,7 @@ final class TaskAi implements Ai {
               }
               var5.unlink((byte) -82);
               var5.unlinkSecondary(16);
-              var5.d(true);
+              var5.unlinkTertiary(true);
               var5.field_y.field_J = var5.field_y.field_J + var5.field_z;
               param0 = param0 - var5.field_z;
             }

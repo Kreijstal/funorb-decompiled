@@ -995,7 +995,7 @@ final class GameState {
             var8 = (AchievementProgress) null;
             this.processTurn(-110, -110, (TurnEventLog) null, (AchievementProgress) null);
           }
-          var4 = (FleetMove) (this.field_p.a(true));
+          var4 = (FleetMove) (this.field_p.startForward(true));
           while (var4 != null) {
             var4.field_y = this.field_g.field_e[var4.field_y.field_p];
             var4.field_B = this.field_g.field_e[var4.field_B.field_p];
@@ -1538,7 +1538,7 @@ final class GameState {
             var5Lifetime2 = 1 + var4_int;
             for (var6Lifetime1 = 0; var6Lifetime1 < var5Lifetime2; var6Lifetime1++) {
               var11 = MusicVoice.readFleetMove(this, 65, param2);
-              this.field_p.a((byte) 48, var11);
+              this.field_p.addLast((byte) 48, var11);
               var11.field_y.field_T.addLast((byte) -113, var11);
               var11.field_B.field_s.addLast(var11, 32);
             }
@@ -2244,7 +2244,7 @@ final class GameState {
           param2.transferAllTo((byte) -90, this.field_q);
           var5 = (FleetMove) (param0.startForward(param1));
           while (var5 != null) {
-            this.field_p.a((byte) 36, var5);
+            this.field_p.addLast((byte) 36, var5);
             var5.field_y.field_T.addLast((byte) -113, var5);
             var5.field_B.field_s.addLast(var5, 32);
             var5 = (FleetMove) (param0.nextForward((byte) -71));
@@ -2564,7 +2564,7 @@ final class GameState {
           while (var4 != null) {
             var4.unlink((byte) -113);
             var4.unlinkSecondary(16);
-            var4.d(true);
+            var4.unlinkTertiary(true);
             var4 = (FleetMove) (param1.field_T.nextForward((byte) -71));
           }
           stackIn_12_0 = var3_int;

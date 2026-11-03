@@ -106,7 +106,7 @@ abstract class le {
           if (cg.field_E.length() <= 0) {
             return true;
           }
-          aj.a(cg.field_E, cg.field_E.length() - 1, 83, ' ');
+          aj.padWithChar(cg.field_E, cg.field_E.length() - 1, 83, ' ');
           return true;
         }
         var4 = ho.field_h;
@@ -137,7 +137,7 @@ abstract class le {
           if (var9 <= var10) {
             var5Lifetime1 = var5Lifetime1 - var10;
             if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-              aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+              aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
             }
             return true;
           }
@@ -148,7 +148,7 @@ abstract class le {
             var59 = var7 + var18 + ": ";
             var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var59);
             if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-              aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+              aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
             }
             return true;
           }
@@ -160,7 +160,7 @@ abstract class le {
                 if (var5Lifetime1 >= ho.field_f.stringWidth(cg.field_E.toString())) {
                   return true;
                 }
-                aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                 return true;
               }
               if (!DialPainter.field_c) {
@@ -168,7 +168,7 @@ abstract class le {
                 var51 = var50 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var51);
                 if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-                  aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                  aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                 }
                 return true;
               }
@@ -177,7 +177,7 @@ abstract class le {
                 var49 = var48 + var18 + ": ";
                 var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var49);
                 if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-                  aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                  aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                 }
                 return true;
               }
@@ -185,7 +185,7 @@ abstract class le {
               var53 = var52 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var53);
               if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-                aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
               }
               return true;
             }
@@ -197,7 +197,7 @@ abstract class le {
               var58 = var57 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var58);
               if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-                aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
               }
               return true;
             }
@@ -206,7 +206,7 @@ abstract class le {
               var56 = var55 + var18 + ": ";
               var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var56);
               if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-                aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+                aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
               }
               return true;
             }
@@ -214,7 +214,7 @@ abstract class le {
             var59Lifetime1 = var7 + var18 + ": ";
             var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var59Lifetime1);
             if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
-              aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+              aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
             }
             return true;
           }
@@ -224,7 +224,7 @@ abstract class le {
         if (var5Lifetime1 >= ho.field_f.stringWidth(cg.field_E.toString())) {
           return true;
         }
-        aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
+        aj.padWithChar(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
         return true;
     }
 

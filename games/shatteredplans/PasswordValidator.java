@@ -177,7 +177,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final ValidationState b(int param0, String param1) {
+    final ValidationState computeStateFor(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -263,7 +263,7 @@ final class PasswordValidator extends TextFieldValidator {
         var1Lifetime1 = -41 % ((param0 - 29) / 57);
     }
 
-    final String a(boolean param0, String param1) {
+    final String computeMessageFor(boolean param0, String param1) {
         RuntimeException var3 = null;
         String var4 = null;
         String var5 = null;

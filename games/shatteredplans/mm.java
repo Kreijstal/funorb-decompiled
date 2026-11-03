@@ -7,7 +7,7 @@ final class mm extends TextFieldValidator {
     static boolean field_n;
     static String field_q;
 
-    final String a(boolean param0, String param1) {
+    final String computeMessageFor(boolean param0, String param1) {
         RuntimeException var3 = null;
         String var4 = null;
         String stackIn_2_0 = null;
@@ -17,13 +17,13 @@ final class mm extends TextFieldValidator {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.b(-11196, param1) == ArchiveSourceManager.field_b) {
+          if (this.computeStateFor(-11196, param1) == ArchiveSourceManager.field_b) {
             stackIn_2_0 = ig.field_b;
             return stackIn_2_0;
           }
           if (param0) {
             var4 = (String) null;
-            this.a(true, (String) null);
+            this.computeMessageFor(true, (String) null);
           }
           stackIn_6_0 = DualLinkDequeSequence.field_g;
           return stackIn_6_0;
@@ -76,7 +76,7 @@ final class mm extends TextFieldValidator {
         IndexedSpriteState.field_h = new dg(ho.field_j, IntrusiveDequeSequence.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w);
     }
 
-    final ValidationState b(int param0, String param1) {
+    final ValidationState computeStateFor(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;

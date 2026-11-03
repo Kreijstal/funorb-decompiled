@@ -26,7 +26,7 @@ abstract class ji extends WidgetContainer implements ValidatableWidget {
 
     abstract int f(byte param0);
 
-    public final ValidationSource a(byte param0) {
+    public final ValidationSource getValidationSource(byte param0) {
         if (param0 < 58) {
           field_I = (ScrollPane) null;
         }

@@ -6,7 +6,7 @@ final class AgeValidator extends TextFieldValidator {
     static int[] field_p;
     static AnimatedPanel field_n;
 
-    final String a(boolean param0, String param1) {
+    final String computeMessageFor(boolean param0, String param1) {
         RuntimeException var3 = null;
         String stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -17,7 +17,7 @@ final class AgeValidator extends TextFieldValidator {
           if (param0) {
             field_o = (int[]) null;
           }
-          if (this.b(-11196, param1) != ArchiveSourceManager.field_b) {
+          if (this.computeStateFor(-11196, param1) != ArchiveSourceManager.field_b) {
             return null;
           }
           stackIn_5_0 = hr.field_f;
@@ -186,7 +186,7 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final ValidationState b(int param0, String param1) {
+    final ValidationState computeStateFor(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;

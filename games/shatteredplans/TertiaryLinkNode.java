@@ -103,7 +103,7 @@ class TertiaryLinkNode extends DualLinkNode {
         }
     }
 
-    final void d(boolean param0) {
+    final void unlinkTertiary(boolean param0) {
         if (this.field_p == null) {
           return;
         }
