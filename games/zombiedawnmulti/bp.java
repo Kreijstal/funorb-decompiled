@@ -147,11 +147,11 @@ final class bp extends un {
             var19 = new lp();
             var19.field_n = param1.readUnsignedByte(31365);
             var19.field_r = param1.readInt(param3 - 1478490340);
-            var19.field_m = new di[var19.field_n];
+            var19.field_m = new PlatformTask[var19.field_n];
             var19.field_o = new byte[var19.field_n][][];
             var19.field_g = new int[var19.field_n];
             var19.field_q = new int[var19.field_n];
-            var19.field_l = new di[var19.field_n];
+            var19.field_l = new PlatformTask[var19.field_n];
             var19.field_i = new int[var19.field_n];
             for (var5 = 0; var19.field_n > var5; var5++) {
               try {

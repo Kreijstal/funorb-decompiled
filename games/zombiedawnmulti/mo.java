@@ -8,7 +8,7 @@ final class mo extends cj {
     cj field_Mb;
     static IntrusiveDeque field_Fb;
     static cj field_Hb;
-    static ri[] field_Ob;
+    static IndexedSprite[] field_Ob;
     static int field_Kb;
     static String field_Nb;
     static int field_Ib;
@@ -54,7 +54,7 @@ final class mo extends cj {
           }
           return param0 + param2 + param0 - (-var4 - var5);
         }
-        field_Ob = (ri[]) null;
+        field_Ob = (IndexedSprite[]) null;
         var4Lifetime1 = -param2;
         if (this.field_Pb != null) {
           var4Lifetime1 = this.field_Pb.e(0);
@@ -213,22 +213,22 @@ final class mo extends cj {
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param4 <= param2) {
           if (param2 < param6) {
-            ld.a(-12628, param6, param2, param5, param3, param4, param0, oo.field_i, param1);
+            ld.a(-12628, param6, param2, param5, param3, param4, param0, SoftwareRasterizer.field_i, param1);
           } else {
             if (param4 < param6) {
-              ld.a(-12628, param2, param6, param0, param3, param4, param5, oo.field_i, param1);
+              ld.a(-12628, param2, param6, param0, param3, param4, param5, SoftwareRasterizer.field_i, param1);
             } else {
-              ld.a(-12628, param2, param4, param0, param5, param6, param3, oo.field_i, param1);
+              ld.a(-12628, param2, param4, param0, param5, param6, param3, SoftwareRasterizer.field_i, param1);
             }
           }
         } else {
           if (param4 < param6) {
-            ld.a(-12628, param6, param4, param5, param0, param2, param3, oo.field_i, param1);
+            ld.a(-12628, param6, param4, param5, param0, param2, param3, SoftwareRasterizer.field_i, param1);
           } else {
             if (param6 > param2) {
-              ld.a(-12628, param4, param6, param3, param0, param2, param5, oo.field_i, param1);
+              ld.a(-12628, param4, param6, param3, param0, param2, param5, SoftwareRasterizer.field_i, param1);
             } else {
-              ld.a(-12628, param4, param2, param3, param5, param6, param0, oo.field_i, param1);
+              ld.a(-12628, param4, param2, param3, param5, param6, param0, SoftwareRasterizer.field_i, param1);
             }
           }
         }

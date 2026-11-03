@@ -8,45 +8,45 @@ final class el extends rg {
     private int field_L;
     private int field_F;
     static int field_M;
-    static ri field_E;
+    static IndexedSprite field_E;
     private BitmapFont field_G;
     static Sprite[] field_H;
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
         Sprite var13 = null;
         Sprite var14 = null;
-        int[] var16 = oo.field_i;
+        int[] var16 = SoftwareRasterizer.field_i;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = oo.field_b;
-        int var8 = oo.field_l;
+        int var7 = SoftwareRasterizer.field_b;
+        int var8 = SoftwareRasterizer.field_l;
         Sprite var9 = new Sprite(16, param0);
         var9.a();
-        oo.a(param2, 0, 16, param0, param1, param3);
+        SoftwareRasterizer.fillRectGradient(param2, 0, 16, param0, param1, param3);
         Object var10 = null;
         Object var11 = null;
         if (param5) {
           var13 = var9.c();
           var10 = var13;
           var13.a();
-          oo.b(0, 0, 5, 0);
-          oo.b(0, 1, 3, 0);
-          oo.b(0, 2, 2, 0);
-          oo.b(0, 3, 1, 0);
-          oo.b(0, 4, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
         }
         if (param4) {
           var14 = var9.c();
           var11 = var14;
           var14.a();
-          oo.b(11, 0, 5, 0);
-          oo.b(13, 1, 3, 0);
-          oo.b(14, 2, 2, 0);
-          oo.b(15, 3, 1, 0);
-          oo.b(15, 4, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
+          SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
+          SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 3, 1, 0);
+          SoftwareRasterizer.drawHorizontalLine(15, 4, 1, 0);
         }
-        oo.a(var16, var7, var8);
+        SoftwareRasterizer.setTarget(var16, var7, var8);
         return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 
@@ -142,10 +142,10 @@ final class el extends rg {
             }
           }
         } else {
-          if (kp.field_l == oo.field_b) {
-            if (oo.field_l != dm.field_Qb &&
-              oo.field_l == SocketConnector.field_h.field_f &&
-              SocketConnector.field_h.field_h == oo.field_b) {
+          if (kp.field_l == SoftwareRasterizer.field_b) {
+            if (SoftwareRasterizer.field_l != dm.field_Qb &&
+              SoftwareRasterizer.field_l == SocketConnector.field_h.field_f &&
+              SocketConnector.field_h.field_h == SoftwareRasterizer.field_b) {
               if (null != mh.field_c) {
                 ci.a(false, -83);
               } else {
@@ -211,8 +211,8 @@ final class el extends rg {
               }
             }
           } else {
-            if (oo.field_l == SocketConnector.field_h.field_f &&
-              SocketConnector.field_h.field_h == oo.field_b) {
+            if (SoftwareRasterizer.field_l == SocketConnector.field_h.field_f &&
+              SocketConnector.field_h.field_h == SoftwareRasterizer.field_b) {
               if (null != mh.field_c) {
                 ci.a(false, -83);
               } else {

@@ -7,17 +7,17 @@ final class w extends PcmStream {
     private int[] field_w;
     private gd field_j;
     private int field_u;
-    private ug field_p;
+    private MusicTrack field_p;
     static String field_n;
     private int field_k;
-    private ug field_o;
+    private MusicTrack field_o;
     private boolean field_y;
     static BitmapFont field_A;
     private boolean field_l;
     private gd field_t;
-    private ug field_x;
+    private MusicTrack field_x;
     private gd field_v;
-    static ri field_z;
+    static IndexedSprite field_z;
     static int field_m;
     private int field_q;
 
@@ -30,14 +30,14 @@ final class w extends PcmStream {
         }
     }
 
-    final synchronized void a(ug param0, int param1, boolean param2, int param3, int param4, boolean param5) {
+    final synchronized void a(MusicTrack param0, int param1, boolean param2, int param3, int param4, boolean param5) {
         boolean stackIn_17_1 = false;
         int stackIn_32_0 = 0;
         gd stackIn_40_0 = null;
-        ug stackIn_40_1 = null;
+        MusicTrack stackIn_40_1 = null;
         boolean stackIn_41_2 = false;
         gd stackIn_49_0 = null;
-        ug stackIn_49_1 = null;
+        MusicTrack stackIn_49_1 = null;
         boolean stackIn_50_2 = false;
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
@@ -103,7 +103,7 @@ final class w extends PcmStream {
             this.field_o = param0;
             if (param0 != null) {
               stackIn_49_0 = this.field_v;
-              stackIn_49_1 = (ug) (param0);
+              stackIn_49_1 = (MusicTrack) (param0);
               stackIn_50_2 = !(param2);
               ((gd) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_50_2, 8361407);
               this.a(this.field_v, -1, param3, param1);
@@ -116,7 +116,7 @@ final class w extends PcmStream {
             this.field_p = param0;
             if (param0 != null) {
               stackIn_40_0 = this.field_j;
-              stackIn_40_1 = (ug) (param0);
+              stackIn_40_1 = (MusicTrack) (param0);
               stackIn_41_2 = !(param2);
               ((gd) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_41_2, 8361407);
               this.a(this.field_j, -1, param3, param1);
@@ -600,8 +600,8 @@ final class w extends PcmStream {
               if (256 != var5) {
                 if (this.field_w != null &&
                   this.field_w.length >= var6) {
-                  d.a(this.field_w, 0, var6);
-                  d.a(this.field_r, 0, var6);
+                  ArrayOperations.clearInts(this.field_w, 0, var6);
+                  ArrayOperations.clearInts(this.field_r, 0, var6);
                 } else {
                   this.field_w = new int[var6];
                   this.field_r = new int[var6];
@@ -630,7 +630,7 @@ final class w extends PcmStream {
             }
             if (null != this.field_w &&
               this.field_w.length >= var6) {
-              d.a(this.field_w, 0, var6);
+              ArrayOperations.clearInts(this.field_w, 0, var6);
             } else {
               this.field_r = new int[var6];
               this.field_w = new int[var6];

@@ -17,7 +17,7 @@ abstract class RasterBuffer {
         if (param0 < 94) {
           return;
         }
-        oo.a(this.field_b, this.field_h, this.field_f);
+        SoftwareRasterizer.setTarget(this.field_b, this.field_h, this.field_f);
     }
 
     final static boolean a(int param0, int param1) {

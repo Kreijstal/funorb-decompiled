@@ -184,10 +184,10 @@ final class fb {
           var4 = wa.field_b[this.field_n].height - wa.field_b[this.field_n].height * (-this.field_c + this.field_l) / this.field_l;
           wa.field_b[this.field_n].c(this.field_m + 8, -this.field_h + 504, var3);
           var9 = new int[4];
-          oo.a(var9);
-          oo.h(8 + this.field_m, -var4 + (wa.field_b[this.field_n].height + 24) + (480 - this.field_h), wa.field_b[this.field_n].width + 8 + this.field_m, wa.field_b[this.field_n].height + (24 - this.field_h + 480));
+          SoftwareRasterizer.saveClip(var9);
+          SoftwareRasterizer.setClip(8 + this.field_m, -var4 + (wa.field_b[this.field_n].height + 24) + (480 - this.field_h), wa.field_b[this.field_n].width + 8 + this.field_m, wa.field_b[this.field_n].height + (24 - this.field_h + 480));
           wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 504);
-          oo.b(var9);
+          SoftwareRasterizer.restoreClip(var9);
           return;
         }
         if (this.field_l > this.field_c) {
@@ -203,8 +203,8 @@ final class fb {
         }
         var4Lifetime1 = (this.field_i + this.field_m / 3) % 50;
         if (25 < var4Lifetime1) {
-          oo.d(wa.field_b[this.field_n].width / 2 + 8 + this.field_m, 504 - (this.field_h - wa.field_b[this.field_n].height / 2), lh.field_b[var4Lifetime1] * 5 / 8, 13421772, 68 - var4Lifetime1);
-          oo.d(wa.field_b[this.field_n].width / 2 + (this.field_m + 8), -this.field_h + 480 + (24 + wa.field_b[this.field_n].height / 2), 4 * lh.field_b[var4Lifetime1] / 8, 11206570, 118 - var4Lifetime1);
+          SoftwareRasterizer.fillCircleAlpha(wa.field_b[this.field_n].width / 2 + 8 + this.field_m, 504 - (this.field_h - wa.field_b[this.field_n].height / 2), lh.field_b[var4Lifetime1] * 5 / 8, 13421772, 68 - var4Lifetime1);
+          SoftwareRasterizer.fillCircleAlpha(wa.field_b[this.field_n].width / 2 + (this.field_m + 8), -this.field_h + 480 + (24 + wa.field_b[this.field_n].height / 2), 4 * lh.field_b[var4Lifetime1] / 8, 11206570, 118 - var4Lifetime1);
           if (this.field_k) {
             el.field_H[this.field_a].e(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
             wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);

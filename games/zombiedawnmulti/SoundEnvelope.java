@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe {
+final class SoundEnvelope {
     int field_h;
     private int[] field_c;
     private int field_i;
@@ -21,7 +21,7 @@ final class pe {
         this.a(param0);
     }
 
-    final int a(int param0) {
+    final int advance(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_f >= this.field_j) {
           fieldTemp$0 = this.field_d;
@@ -51,7 +51,7 @@ final class pe {
         }
     }
 
-    final void a() {
+    final void reset() {
         this.field_j = 0;
         this.field_d = 0;
         this.field_k = 0;
@@ -59,7 +59,7 @@ final class pe {
         this.field_f = 0;
     }
 
-    pe() {
+    SoundEnvelope() {
         this.field_b = 2;
         this.field_a = new int[2];
         this.field_c = new int[2];

@@ -807,7 +807,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          di var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;

@@ -24,16 +24,16 @@ final class ke {
         RuntimeException var5 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          array$1 = new int[ah.field_e.field_P[0].length];
-          ah.field_e.field_P[param1] = array$1;
-          ah.field_e.field_P[param1][ia.field_s] = param0;
-          ah.field_e.field_P[param1][rj.field_F] = param3;
-          ah.field_e.field_P[param1][wm.field_Q[0]] = param4;
+          array$1 = new int[ah.field_e.colorPalettes[0].length];
+          ah.field_e.colorPalettes[param1] = array$1;
+          ah.field_e.colorPalettes[param1][ia.field_s] = param0;
+          ah.field_e.colorPalettes[param1][rj.field_F] = param3;
+          ah.field_e.colorPalettes[param1][wm.field_Q[0]] = param4;
           if (param2 != -17895) {
             ke.a(92, -5L);
           }
           for (var5_int = 1; wm.field_Q.length > var5_int; var5_int++) {
-            ah.field_e.field_P[param1][wm.field_Q[var5_int]] = ui.a(ah.field_e.field_P[param1][wm.field_Q[var5_int - 1]], false);
+            ah.field_e.colorPalettes[param1][wm.field_Q[var5_int]] = ui.a(ah.field_e.colorPalettes[param1][wm.field_Q[var5_int - 1]], false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

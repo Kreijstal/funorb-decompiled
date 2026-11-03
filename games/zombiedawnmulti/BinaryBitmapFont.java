@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ef extends BitmapFont {
+final class BinaryBitmapFont extends BitmapFont {
     private byte[][] field_O;
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blitBinaryGlyphWithAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -27,35 +27,35 @@ final class ef extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
-        int var9 = param1 + param2 * oo.field_b;
-        int var10 = oo.field_b - param3;
+        int var9 = param1 + param2 * SoftwareRasterizer.field_b;
+        int var10 = SoftwareRasterizer.field_b - param3;
         int var11 = 0;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
-        if (param2 < oo.field_e) {
-          var13 = oo.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var13 = SoftwareRasterizer.field_e - param2;
           param4 = param4 - var13;
-          param2 = oo.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * oo.field_b;
+          var9 = var9 + var13 * SoftwareRasterizer.field_b;
         }
-        if (param2 + param4 > oo.field_d) {
-          param4 = param4 - (param2 + param4 - oo.field_d);
+        if (param2 + param4 > SoftwareRasterizer.field_d) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_d);
         }
-        if (param1 < oo.field_f) {
-          var13Lifetime1 = oo.field_f - param1;
+        if (param1 < SoftwareRasterizer.field_f) {
+          var13Lifetime1 = SoftwareRasterizer.field_f - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = oo.field_f;
+          param1 = SoftwareRasterizer.field_f;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > oo.field_g) {
-          var13Lifetime2 = param1 + param3 - oo.field_g;
+        if (param1 + param3 > SoftwareRasterizer.field_g) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.field_g;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -64,10 +64,10 @@ final class ef extends BitmapFont {
           param4 <= 0) {
           return;
         }
-        ef.a(oo.field_i, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.field_i, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+    private final static void blitMaskedGlyph(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
         int var15 = 0;
         int var20 = 0;
         int incrementValue$1 = 0;
@@ -78,8 +78,8 @@ final class ef extends BitmapFont {
         int var18;
         int var19;
         int var19Lifetime1;
-        var13 = param2 - oo.field_f;
-        var14 = param3 - oo.field_e;
+        var13 = param2 - SoftwareRasterizer.field_f;
+        var14 = param3 - SoftwareRasterizer.field_e;
         for (var15 = var14; var15 < var14 + param5; var15++) {
           boolean decompiledFrameRemainder0 = true;
           var16 = param11[var15];
@@ -121,7 +121,7 @@ final class ef extends BitmapFont {
               } else {
                 incrementValue$1 = param8;
                 param8++;
-                oo.field_i[incrementValue$1] = param6;
+                SoftwareRasterizer.field_i[incrementValue$1] = param6;
               }
             }
             param7 = param7 + (var19Lifetime1 + param10);
@@ -138,47 +138,47 @@ final class ef extends BitmapFont {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * oo.field_b;
-        var9 = oo.field_b - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.field_b;
+        var9 = SoftwareRasterizer.field_b - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < oo.field_e) {
-          var12 = oo.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var12 = SoftwareRasterizer.field_e - param2;
           param4 = param4 - var12;
-          param2 = oo.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * oo.field_b;
+          var8 = var8 + var12 * SoftwareRasterizer.field_b;
         }
-        if (param2 + param4 > oo.field_d) {
-          param4 = param4 - (param2 + param4 - oo.field_d);
+        if (param2 + param4 > SoftwareRasterizer.field_d) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_d);
         }
-        if (param1 < oo.field_f) {
-          var12Lifetime1 = oo.field_f - param1;
+        if (param1 < SoftwareRasterizer.field_f) {
+          var12Lifetime1 = SoftwareRasterizer.field_f - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = oo.field_f;
+          param1 = SoftwareRasterizer.field_f;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > oo.field_g) {
-          var12Lifetime2 = param1 + param3 - oo.field_g;
+        if (param1 + param3 > SoftwareRasterizer.field_g) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.field_g;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
         if (param3 > 0 &&
           param4 > 0) {
-          if (oo.field_h == null) {
-            ef.a(oo.field_i, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
+          if (SoftwareRasterizer.field_h == null) {
+            BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.field_i, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            ef.a(oo.field_i, this.field_O[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, oo.field_h, oo.field_a);
+            BinaryBitmapFont.blitMaskedGlyph(SoftwareRasterizer.field_i, this.field_O[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_h, SoftwareRasterizer.field_a);
           }
           return;
         }
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void blitBinaryGlyph(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -220,7 +220,7 @@ final class ef extends BitmapFont {
         }
     }
 
-    ef(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
+    BinaryBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
         super(param0, param1, param2, param3, param4);
         this.field_O = new byte[256][];
         this.field_O = param5;

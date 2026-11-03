@@ -154,38 +154,38 @@ final class tg implements Runnable {
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
         Sprite var16 = null;
-        int[] var18 = oo.field_i;
+        int[] var18 = SoftwareRasterizer.field_i;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
-        int var7 = oo.field_b;
-        int var8 = oo.field_l;
+        int var7 = SoftwareRasterizer.field_b;
+        int var8 = SoftwareRasterizer.field_l;
         Sprite var9 = new Sprite(param3, -(param3 * 2) + param1);
         var9.a();
-        oo.a(0, 0, param3, -(param3 * 2) + param1, param4, param2);
+        SoftwareRasterizer.fillRectGradient(0, 0, param3, -(param3 * 2) + param1, param4, param2);
         Sprite var10 = new Sprite(param3, param3);
         if (param5 <= 25) {
           field_d = (cj) null;
         }
         var10.a();
-        oo.e(0, 0, param3, param3, param4);
+        SoftwareRasterizer.fillRect(0, 0, param3, param3, param4);
         Sprite var11 = new Sprite(16, param3);
         var11.a();
-        oo.e(0, 0, 16, param3, param4);
+        SoftwareRasterizer.fillRect(0, 0, 16, param3, param4);
         Sprite var12 = new Sprite(param3, param3);
         var12.a();
-        oo.e(0, 0, param3, param3, param2);
+        SoftwareRasterizer.fillRect(0, 0, param3, param3, param2);
         Sprite var13 = new Sprite(16, param3);
         var13.a();
-        oo.e(0, 0, 16, param3, param2);
+        SoftwareRasterizer.fillRect(0, 0, 16, param3, param2);
         Object var14 = null;
         if (param0 > 0) {
           var16 = new Sprite(16, 16);
           var14 = var16;
           var16.a();
-          oo.e(0, 0, 16, 16, param0);
+          SoftwareRasterizer.fillRect(0, 0, 16, 16, param0);
         }
-        oo.a(var18, var7, var8);
+        SoftwareRasterizer.setTarget(var18, var7, var8);
         return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
     }
 
@@ -416,12 +416,12 @@ final class tg implements Runnable {
         } else {
           if (param2 == -2) {
             gk.a(2, 1).b(0);
-            oo.f(0, 0, 640, 480, 0, 128);
+            SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, 128);
             var18 = vb.a(21262);
             if (var18 != null) {
               var4 = var18.field_zb / 2 + var18.field_w;
               var5 = -6 + (var18.field_qb + var18.field_z - 48);
-              oo.h(3 + var18.field_w, var18.field_qb, -6 + var18.field_w + var18.field_zb, var18.field_qb + var18.field_z - 3);
+              SoftwareRasterizer.setClip(3 + var18.field_w, var18.field_qb, -6 + var18.field_w + var18.field_zb, var18.field_qb + var18.field_z - 3);
               SecondaryNodeDeque.field_e.field_g = 0;
               SecondaryNodeDeque.field_e.field_k = 420 - var4 - var18.field_zb / 4;
               kk.field_w.a(-10136, SecondaryNodeDeque.field_e);
@@ -440,7 +440,7 @@ final class tg implements Runnable {
               var20 = nk.a(no.field_Hb[var6Lifetime2][var10Lifetime1], FullscreenFocusCanvas.field_k.field_c[1], 255, FullscreenFocusCanvas.field_k.field_p[1]);
               og.h((byte) 119);
               var20.b(var18.field_zb / 4 + var4, var5);
-              oo.h(3 + var18.field_w, var18.field_qb, var18.field_zb + (var18.field_w - 6), -3 + (var18.field_qb + var18.field_z));
+              SoftwareRasterizer.setClip(3 + var18.field_w, var18.field_qb, var18.field_zb + (var18.field_w - 6), -3 + (var18.field_qb + var18.field_z));
               var12 = 1;
               var6Lifetime3 = (int)(1.1 * (double)wf.field_m) / 64 % 10;
               var8Lifetime2 = gg.field_l[var12];
@@ -475,7 +475,7 @@ final class tg implements Runnable {
               ((Sprite) (Object) stackIn_10_0).c(stackIn_10_1, stackIn_10_2, stackIn_11_3);
               if (400 > wf.field_m % 1000) {
                 qp.field_w.a(SpriteState.field_A, 80 + var4, -30 + var5, 100, 50, 16777215, 65793, 1, 0, 0);
-                oo.c();
+                SoftwareRasterizer.resetClip();
                 tm.a(vk.i((byte) -39), false);
                 IntrusiveNode.a(vk.i((byte) -39), 2);
                 pm.a(false, vk.i((byte) -39));
@@ -484,14 +484,14 @@ final class tg implements Runnable {
               else {
                 if ((500 + wf.field_m) % 1000 < 400) {
                   qp.field_w.a(wm.field_P, -130 + var4, var5 - 30, 100, 50, 16777215, 65793, 1, 0, 0);
-                  oo.c();
+                  SoftwareRasterizer.resetClip();
                   tm.a(vk.i((byte) -39), false);
                   IntrusiveNode.a(vk.i((byte) -39), 2);
                   pm.a(false, vk.i((byte) -39));
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  oo.c();
+                  SoftwareRasterizer.resetClip();
                 }
               }
             }
@@ -527,8 +527,8 @@ final class tg implements Runnable {
             }
             var4Lifetime1 = -310 + var8Lifetime1 * 10;
           }
-          oo.b(var4Lifetime1, var5Lifetime1, var7Lifetime1, 40, 6, 0, 160);
-          oo.b(var4Lifetime1, var5Lifetime1, var7Lifetime1, 40, 6, 7829367);
+          SoftwareRasterizer.fillRoundedRectAlpha(var4Lifetime1, var5Lifetime1, var7Lifetime1, 40, 6, 0, 160);
+          SoftwareRasterizer.drawRoundedRect(var4Lifetime1, var5Lifetime1, var7Lifetime1, 40, 6, 7829367);
           la.field_l[var6Lifetime1].b(var4Lifetime1 + 9, var5Lifetime1 + 5);
           pb.field_e.c(dg.field_G[var6Lifetime1], var4Lifetime1 + 50, 25 + var5Lifetime1, 16777215, 3355443);
         }

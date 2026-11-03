@@ -3,7 +3,7 @@
  */
 final class dd implements dr {
     static String field_a;
-    static ri field_g;
+    static IndexedSprite field_g;
     static String field_b;
     static String field_e;
     static String field_c;

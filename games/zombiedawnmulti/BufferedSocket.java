@@ -9,7 +9,7 @@ final class BufferedSocket implements Runnable {
     static jh field_n;
     static int field_e;
     private PlatformTaskDispatcher field_s;
-    private di field_c;
+    private PlatformTask field_c;
     private int field_m;
     private int field_h;
     static Sprite field_j;

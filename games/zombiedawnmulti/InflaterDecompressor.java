@@ -176,11 +176,11 @@ final class InflaterDecompressor {
         this(-1, 1000000, 1000000);
     }
 
-    final static ri[] a(String param0, ul param1, byte param2, String param3) {
+    final static IndexedSprite[] a(String param0, ul param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ri[] stackIn_3_0 = null;
+        IndexedSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -224,7 +224,7 @@ final class InflaterDecompressor {
     }
 
     final static Sprite a(int param0, String param1) {
-        ef var2 = null;
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Sprite var3 = null;
         int var4 = 0;

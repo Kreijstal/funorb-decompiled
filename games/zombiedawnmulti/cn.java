@@ -126,7 +126,7 @@ final class cn extends ng {
           var2 = this.field_q.b(6);
         }
         if (param0 <= 64) {
-          cn.a((ul) null, -84, (byte[]) null, (int[]) null, (byte[]) null, -44, (String[]) null, (ul) null, (ri[]) null, (ul) null, 116, (Sprite[][]) null, true, (String[][]) null, (int[]) null, (Sprite[][]) null, (String[][]) null);
+          cn.a((ul) null, -84, (byte[]) null, (int[]) null, (byte[]) null, -44, (String[]) null, (ul) null, (IndexedSprite[]) null, (ul) null, 116, (Sprite[][]) null, true, (String[][]) null, (int[]) null, (Sprite[][]) null, (String[][]) null);
         }
         return;
     }
@@ -594,7 +594,7 @@ final class cn extends ng {
         return -var3 + (var3 + param2) / param0;
     }
 
-    final static void a(ul param0, int param1, byte[] param2, int[] param3, byte[] param4, int param5, String[] param6, ul param7, ri[] param8, ul param9, int param10, Sprite[][] param11, boolean param12, String[][] param13, int[] param14, Sprite[][] param15, String[][] param16) {
+    final static void a(ul param0, int param1, byte[] param2, int[] param3, byte[] param4, int param5, String[] param6, ul param7, IndexedSprite[] param8, ul param9, int param10, Sprite[][] param11, boolean param12, String[][] param13, int[] param14, Sprite[][] param15, String[][] param16) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

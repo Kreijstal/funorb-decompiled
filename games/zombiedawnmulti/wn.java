@@ -65,8 +65,8 @@ final class wn extends pp {
         int var3 = 0;
         int var2Lifetime1;
         int var3Lifetime1;
-        dm.field_Qb = oo.field_l;
-        kp.field_l = oo.field_b;
+        dm.field_Qb = SoftwareRasterizer.field_l;
+        kp.field_l = SoftwareRasterizer.field_b;
         v.a(param0 ^ 196);
         de.field_b.a(0, qe.field_k.field_zb, 0, (byte) -74, -40 + (qe.field_k.field_z - 2));
         ql.field_b.a(jk.field_f, 0, lo.field_g.field_zb, 0, param0 - 3347);

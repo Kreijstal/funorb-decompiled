@@ -7,7 +7,7 @@ final class td {
     int[] field_e;
     static Sprite[] field_c;
     static long field_g;
-    static ug field_b;
+    static MusicTrack field_b;
     static hi field_f;
     int field_h;
 

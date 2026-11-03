@@ -13,7 +13,7 @@ final class qe {
     private int field_a;
     static cj field_k;
     private int field_d;
-    private sl field_i;
+    private PaletteBitmapFont field_i;
     private int field_l;
     private boolean field_j;
     private boolean field_b;
@@ -97,12 +97,12 @@ final class qe {
 
     final static void a(ul param0, int param1, ul param2, ul param3) {
         Sprite var17 = null;
-        ri[] var5 = null;
-        ri[][] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var19 = null;
         int[][] var16 = null;
         int[][] var7 = null;
-        ri[] var14 = null;
+        IndexedSprite[] var14 = null;
         int var11_int = 0;
         Sprite var15 = null;
         Sprite var18 = null;
@@ -125,10 +125,10 @@ final class qe {
           var17 = new Sprite(param3.a("button.gif", "", false), (java.awt.Component) ((Object) dk.field_Ib));
           wq.a(-121, "commonui", param2, "dropdown");
           var5 = InflaterDecompressor.a("screen_options", param2, (byte) 19, "commonui");
-          RandomAccessCacheFile.field_h = new ri[4];
-          lo.field_a = new ri[4];
-          mo.field_Ob = new ri[4];
-          var6 = new ri[][]{lo.field_a, mo.field_Ob, RandomAccessCacheFile.field_h};
+          RandomAccessCacheFile.field_h = new IndexedSprite[4];
+          lo.field_a = new IndexedSprite[4];
+          mo.field_Ob = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{lo.field_a, mo.field_Ob, RandomAccessCacheFile.field_h};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -145,7 +145,7 @@ final class qe {
           var19[3][var8Lifetime1] = 4767999;
           for (var9 = 0; var9 < 3; var9++) {
             var14 = var6[var9];
-            ri[] var10 = var14;
+            IndexedSprite[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
               var14[var11_int] = nk.a(96, var19[var11_int], var5[var9]);
             }
@@ -153,7 +153,7 @@ final class qe {
           var9Lifetime1 = var17.height;
           m.c(540);
           var17.a();
-          oo.a(0, 0, oo.field_b, oo.field_l);
+          SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.a();
@@ -196,7 +196,7 @@ final class qe {
           g.a(jj.field_F[5], 430, 40);
           rb.field_e[5].g(430, 40);
         }
-        oo.e(0, 440, 640, 40, 0);
+        SoftwareRasterizer.fillRect(0, 440, 640, 40, 0);
         g.a(jj.field_F[0], 0, 410);
         rb.field_e[0].g(5, 415);
         g.a(jj.field_F[2], 70, 400);
@@ -206,8 +206,8 @@ final class qe {
           qp.field_w.c("L" + var5.field_r, 12, 468, 16777215, 1);
         }
         g.c();
-        oo.h(0, 0, 640, 40);
-        oo.e(0, 0, 640, 40, 0);
+        SoftwareRasterizer.setClip(0, 0, 640, 40);
+        SoftwareRasterizer.fillRect(0, 0, 640, 40, 0);
         for (var3 = 0; var5.field_t > var3; var3++) {
           this.a((byte) -126, var3);
         }
@@ -224,7 +224,7 @@ final class qe {
         int var5;
         int var7;
         int var8;
-        ef var9;
+        BinaryBitmapFont var9;
         int var10;
         int var11;
         int var12;
@@ -251,8 +251,8 @@ final class qe {
         var11 = param1 * var10;
         var12 = 20;
         var13 = var10 + var11;
-        oo.a(var11, 0, -var11 + var13, 38, 65793, 1981188);
-        oo.g(var13, 0, 38, 3102221);
+        SoftwareRasterizer.fillRectGradient(var11, 0, -var11 + var13, 38, 65793, 1981188);
+        SoftwareRasterizer.drawVerticalLine(var13, 0, 38, 3102221);
         var14 = am.a(0, var18.field_D[param1][1], 0, 1, var18.field_D[param1][0]);
         var14.g(var11, -1 + (-24 + var12));
         var21 = var18.field_b[param1];
@@ -271,10 +271,10 @@ final class qe {
           ((BitmapFont) ((Object) var9)).c(var16, var11 + 48, 3 + (((BitmapFont) ((Object) var9)).field_w + var12), var8, 0);
           ((BitmapFont) ((Object) var9)).a(var17, var13, var12 + ((BitmapFont) ((Object) var9)).field_w + 3, 16777215, 0);
         }
-        oo.b(var11, 38, 1 + var13, 2763045);
-        oo.b(var11, 39, var13 + 1, 2763045);
+        SoftwareRasterizer.drawHorizontalLine(var11, 38, 1 + var13, 2763045);
+        SoftwareRasterizer.drawHorizontalLine(var11, 39, var13 + 1, 2763045);
         if (var4 != 0) {
-          oo.f(var11, 0, var13 - var11, 38, 65793, 196);
+          SoftwareRasterizer.fillRectAlpha(var11, 0, var13 - var11, 38, 65793, 196);
           ((BitmapFont) ((Object) var9)).a(vl.a(uf.field_i, new String[]{var18.field_b[param1]}, 2), var11, 0, var13 - var11, 40, 16777215, 1, 1, 1, 0);
         }
         if (param0 != -126) {
@@ -288,10 +288,10 @@ final class qe {
         if (param0) {
           return;
         }
-        oo.b();
-        this.field_i.a(Integer.toString(this.field_h), -5 + oo.field_b, 5 + this.field_i.field_C, 1, 65793);
+        SoftwareRasterizer.clear();
+        this.field_i.a(Integer.toString(this.field_h), -5 + SoftwareRasterizer.field_b, 5 + this.field_i.field_C, 1, 65793);
         jj.field_F[3].a();
-        oo.b();
+        SoftwareRasterizer.clear();
         rb.field_e[3].f(0, 0, 16777215);
         jm.d((byte) -18);
         rb.field_e[3].f(0, 0, 0);
@@ -301,13 +301,13 @@ final class qe {
     private final void b(int param0, int param1) {
         g.c();
         rb.field_e[4].a();
-        oo.b();
-        this.field_i.a(this.a(param0, 98), oo.field_b - 5, 5 + this.field_i.field_C, 3, -1);
+        SoftwareRasterizer.clear();
+        this.field_i.a(this.a(param0, 98), SoftwareRasterizer.field_b - 5, 5 + this.field_i.field_C, 3, -1);
         if (param1 != 2394342) {
           return;
         }
         jj.field_F[4].a();
-        oo.b();
+        SoftwareRasterizer.clear();
         rb.field_e[4].f(0, 0, 16777215);
         jm.d((byte) -18);
         rb.field_e[4].f(0, 0, 0);
@@ -325,10 +325,10 @@ final class qe {
     private final void e(byte param0) {
         g.c();
         rb.field_e[6].a();
-        oo.b();
-        this.field_i.b(vl.a(ra.field_g, new String[]{Integer.toString(this.field_m), Integer.toString(this.field_m + this.field_h)}, 2), oo.field_b / 2, 5 + this.field_i.field_C, 2, 65793);
+        SoftwareRasterizer.clear();
+        this.field_i.b(vl.a(ra.field_g, new String[]{Integer.toString(this.field_m), Integer.toString(this.field_m + this.field_h)}, 2), SoftwareRasterizer.field_b / 2, 5 + this.field_i.field_C, 2, 65793);
         jj.field_F[6].a();
-        oo.b();
+        SoftwareRasterizer.clear();
         if (param0 != 30) {
           this.c(-19);
         }
@@ -353,20 +353,20 @@ final class qe {
         int var2 = -1;
         if (this.field_n != 1.0f) {
           eg.field_D.a();
-          oo.b();
-          this.field_i.a(this.d((byte) 51), -5 + oo.field_b, this.field_i.field_C + 5, 2, var2);
-          var3 = (int)((float)oo.field_b * this.field_n);
-          var4 = (int)((float)oo.field_l * this.field_n);
+          SoftwareRasterizer.clear();
+          this.field_i.a(this.d((byte) 51), -5 + SoftwareRasterizer.field_b, this.field_i.field_C + 5, 2, var2);
+          var3 = (int)((float)SoftwareRasterizer.field_b * this.field_n);
+          var4 = (int)((float)SoftwareRasterizer.field_l * this.field_n);
           rb.field_e[5].a();
-          oo.b();
-          eg.field_D.f(oo.field_b - var3, 0, var3, var4);
+          SoftwareRasterizer.clear();
+          eg.field_D.f(SoftwareRasterizer.field_b - var3, 0, var3, var4);
         } else {
           rb.field_e[5].a();
-          oo.b();
-          this.field_i.a(this.d((byte) -51), oo.field_b - 5, this.field_i.field_C + 5, 0, var2);
+          SoftwareRasterizer.clear();
+          this.field_i.a(this.d((byte) -51), SoftwareRasterizer.field_b - 5, this.field_i.field_C + 5, 0, var2);
         }
         jj.field_F[5].a();
-        oo.b();
+        SoftwareRasterizer.clear();
         rb.field_e[5].f(0, 0, 16777215);
         jm.d((byte) -18);
         rb.field_e[5].f(0, 0, 0);
@@ -454,21 +454,21 @@ final class qe {
         if (param8 < param12) {
           if (param12 >= param5) {
             if (param8 >= param5) {
-              un.a(oo.field_i, param13, param1, -10423, param12, param0, param9, param8, param2, param5, param6, param7, param14, param4, param3, param11, param10);
+              un.a(SoftwareRasterizer.field_i, param13, param1, -10423, param12, param0, param9, param8, param2, param5, param6, param7, param14, param4, param3, param11, param10);
             } else {
-              un.a(oo.field_i, param13, param4, -10423, param12, param2, param3, param5, param0, param8, param6, param14, param7, param1, param9, param11, param10);
+              un.a(SoftwareRasterizer.field_i, param13, param4, -10423, param12, param2, param3, param5, param0, param8, param6, param14, param7, param1, param9, param11, param10);
             }
           } else {
-            un.a(oo.field_i, param7, param6, -10423, param5, param2, param3, param12, param11, param8, param4, param14, param13, param1, param10, param0, param9);
+            un.a(SoftwareRasterizer.field_i, param7, param6, -10423, param5, param2, param3, param12, param11, param8, param4, param14, param13, param1, param10, param0, param9);
           }
         } else {
           if (param8 < param5) {
-            un.a(oo.field_i, param7, param1, -10423, param5, param11, param10, param8, param2, param12, param4, param13, param14, param6, param3, param0, param9);
+            un.a(SoftwareRasterizer.field_i, param7, param1, -10423, param5, param11, param10, param8, param2, param12, param4, param13, param14, param6, param3, param0, param9);
           } else {
             if (param12 >= param5) {
-              un.a(oo.field_i, param14, param6, -10423, param8, param0, param9, param12, param11, param5, param1, param7, param13, param4, param10, param2, param3);
+              un.a(SoftwareRasterizer.field_i, param14, param6, -10423, param8, param0, param9, param12, param11, param5, param1, param7, param13, param4, param10, param2, param3);
             } else {
-              un.a(oo.field_i, param14, param4, -10423, param8, param11, param10, param5, param0, param12, param1, param13, param7, param6, param9, param2, param3);
+              un.a(SoftwareRasterizer.field_i, param14, param4, -10423, param8, param11, param10, param5, param0, param12, param1, param13, param7, param6, param9, param2, param3);
             }
           }
         }
@@ -486,7 +486,7 @@ final class qe {
         if (param0 != 430) {
           this.b(-1, -30);
         }
-        oo.b();
+        SoftwareRasterizer.clear();
         int var2 = op.field_m.field_I;
         int var3 = op.field_m.field_g;
         if (99 < var2) {
@@ -496,7 +496,7 @@ final class qe {
           this.field_i.c(var3 + "/" + var2, 20, -3 + 2 * this.field_i.field_C, 2, 65793);
         }
         jj.field_F[2].a();
-        oo.b();
+        SoftwareRasterizer.clear();
         rb.field_e[2].f(0, 0, 16777215);
         jm.d((byte) -18);
         rb.field_e[2].f(0, 0, 0);

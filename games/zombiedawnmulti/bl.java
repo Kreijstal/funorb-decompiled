@@ -9,7 +9,7 @@ final class bl {
     static String field_e;
     static int field_c;
     static int field_a;
-    static ri field_g;
+    static IndexedSprite field_g;
 
     public static void b(int param0) {
         field_e = null;

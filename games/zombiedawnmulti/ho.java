@@ -385,10 +385,10 @@ final class ho extends nc {
         int var2_int = 0;
         try {
           var2_int = (wn.a(-125, wf.field_m << 3) * 24 >> 16) + (175 + (4 * on.a(wf.field_m << 7, -18924) >> 16));
-          oo.f(0, 0, 640, 480, 0, var2_int);
-          oo.h(5, 5, 635, 475);
+          SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, var2_int);
+          SoftwareRasterizer.setClip(5, 5, 635, 475);
           GameKeyHandler.a(6, 3 + this.field_n, 469, 640 + (-this.field_n - this.field_n), (byte) 122);
-          oo.c();
+          SoftwareRasterizer.resetClip();
           vh.field_Lb.a(this.field_n, 136);
           vh.field_Lb.a(this.field_n, 6);
           dm.field_Wb.a(640 - this.field_n, 6);

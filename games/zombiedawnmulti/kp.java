@@ -88,7 +88,7 @@ final class kp extends nc {
     final void a(boolean param0) {
         int var4Lifetime1;
         super.a(param0);
-        sl var2 = ah.field_e;
+        PaletteBitmapFont var2 = ah.field_e;
         int var3 = 500;
         int var4 = 200;
         int var5 = 320 - var3 / 2;

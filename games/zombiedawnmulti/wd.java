@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wd extends WidgetContainer implements in {
-    static ri field_P;
+    static IndexedSprite field_P;
     static id field_G;
     static int[] field_Q;
     private String field_O;

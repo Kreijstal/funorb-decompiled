@@ -6,11 +6,11 @@ import java.util.*;
 
 final class jq {
     static re field_b;
-    static ri field_c;
+    static IndexedSprite field_c;
     static int field_a;
     static int field_f;
-    static uj field_d;
-    static ri field_e;
+    static PcmSampleStream field_d;
+    static IndexedSprite field_e;
 
     public static void a(int param0) {
         if (param0 != 8) {
@@ -33,15 +33,15 @@ final class jq {
         if (null == uf.field_h) {
           uf.field_h = new Sprite(8, 21);
           g.c(uf.field_h);
-          oo.a(0, 0, 8, 10, 65280, 16776960);
-          oo.a(0, 10, 8, 11, 16776960, 16711680);
+          SoftwareRasterizer.fillRectGradient(0, 0, 8, 10, 65280, 16776960);
+          SoftwareRasterizer.fillRectGradient(0, 10, 8, 11, 16776960, 16711680);
           g.d();
         }
         uf.field_h.c(param5, param1, param4);
         if (param2 != 2) {
           return;
         }
-        oo.f(param5, param1, 8, 21 - var6, 0, param4);
+        SoftwareRasterizer.fillRectAlpha(param5, param1, 8, 21 - var6, 0, param4);
         Random var7 = new Random();
         if (param3 >= param0 &&
           hp.a((byte) 11, var7, 7) == 0) {

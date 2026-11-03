@@ -86,15 +86,15 @@ final class ap extends qb {
           tg.field_d = GameScreen.a(1127256, (BitmapFont) null, 65793, 1513239, 8947848, 4020342, 65793, (byte) 123, 0, 2245737, 65793, 1513239, 5138823);
           bb.field_k = GameScreen.a(0, param2, 0, 0, 0, 0, 0, (byte) 127, 16764006, 0, 0, 0, 0);
           GameWorld.field_x = GameScreen.a(0, param2, 0, 0, 0, 0, 0, (byte) 122, 16777215, 0, 0, 0, 0);
-          var6 = oo.field_b;
-          var7 = oo.field_l;
-          var17 = oo.field_i;
+          var6 = SoftwareRasterizer.field_b;
+          var7 = SoftwareRasterizer.field_l;
+          var17 = SoftwareRasterizer.field_i;
           tb.field_v = new Sprite(10, 14);
           tb.field_v.a();
           for (var9 = 2; 7 > var9; var9++) {
-            oo.g(var9, var9 + 1, 14 - (var9 << 1), 16777215);
+            SoftwareRasterizer.drawVerticalLine(var9, var9 + 1, 14 - (var9 << 1), 16777215);
           }
-          oo.a(var17, var6, var7);
+          SoftwareRasterizer.setTarget(var17, var6, var7);
           tl.field_t = eh.a(false, tg.field_d, bb.field_k, GameWorld.field_x, var5);
           rp.field_l.field_Cb = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
@@ -322,12 +322,12 @@ final class ap extends qb {
         }
     }
 
-    final static sl a(ul param0, ul param1, String param2, int param3, String param4) {
+    final static PaletteBitmapFont a(ul param0, ul param1, String param2, int param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        sl stackIn_2_0 = null;
-        sl stackIn_4_0 = null;
+        PaletteBitmapFont stackIn_2_0 = null;
+        PaletteBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -340,7 +340,7 @@ final class ap extends qb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 4) {
-            stackIn_2_0 = (sl) null;
+            stackIn_2_0 = (PaletteBitmapFont) null;
             return stackIn_2_0;
           }
           var5_int = param0.a(param2, (byte) 123);

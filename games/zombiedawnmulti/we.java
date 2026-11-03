@@ -10,7 +10,7 @@ final class we extends IntrusiveNode {
     static Sprite[] field_j;
     static String field_i;
     IntrusiveNode field_h;
-    uj field_f;
+    PcmSampleStream field_f;
 
     public static void a(byte param0) {
         field_i = null;
@@ -35,7 +35,7 @@ final class we extends IntrusiveNode {
         return param2;
     }
 
-    we(uj param0, IntrusiveNode param1) {
+    we(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_f = param0;
           this.field_m = param0.h();

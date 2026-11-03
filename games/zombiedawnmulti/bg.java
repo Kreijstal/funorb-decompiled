@@ -93,12 +93,12 @@ final class bg implements WidgetActionListener {
         int var12Lifetime1;
         try {
           var15 = !(param4 instanceof ud) ? null : (ud) (param4);
-          oo.e(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, this.field_j);
+          SoftwareRasterizer.fillRect(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, this.field_j);
           if (var15 != null) {
           }
           var7 = var15.field_R + (param4.field_y + param3);
           var8 = param1 + param4.field_i + var15.field_bb;
-          oo.d(var7, var8, var15.field_X, this.field_f);
+          SoftwareRasterizer.fillCircle(var7, var8, var15.field_X, this.field_f);
           if (param2 != -15112) {
             UiWidget var14 = (UiWidget) null;
             this.a(true, 88, 109, -117, (UiWidget) null);
@@ -107,13 +107,13 @@ final class bg implements WidgetActionListener {
             var9 = 3.141592653589793 * (double)var15.field_W * 2.0 / (double)var15.field_U;
             var11 = (int)(-Math.sin(var9) * (double)var15.field_X);
             var12 = (int)(Math.cos(var9) * (double)var15.field_X);
-            oo.d(var11 + var7, var12 + var8, 1, this.field_b);
+            SoftwareRasterizer.fillCircle(var11 + var7, var12 + var8, 1, this.field_b);
           }
-          oo.d(var7, var8, 2, 1);
+          SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var15.field_T * 2.0 / (double)var15.field_U;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_X);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_X);
-          oo.g(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_g != null) {
             var13 = this.field_h + (var15.field_X + var15.field_R);
             this.field_g.a(param4.field_j, var13 + (param4.field_y + param3), this.field_l + (param1 + param4.field_i), param4.field_n - this.field_h - var13, -(this.field_h << 1) + param4.field_w, this.field_c, this.field_i, 1, 1, 0);

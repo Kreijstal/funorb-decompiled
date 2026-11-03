@@ -15,7 +15,7 @@ final class ul {
     static String field_d;
     static String field_h;
     static boolean field_e;
-    static ri field_f;
+    static IndexedSprite field_f;
 
     final synchronized byte[] a(String param0, String param1, boolean param2) {
         int var4_int = 0;
@@ -383,7 +383,7 @@ final class ul {
                     var21 = var20;
                   }
                   if (var21 == param3) {
-                    d.a(var43, var17, var44, var14_intLifetime1, var19);
+                    ArrayOperations.a(var43, var17, var44, var14_intLifetime1, var19);
                     var14_intLifetime1 = var14_intLifetime1 + var19;
                   }
                   var17 = var17 + var19;
@@ -421,7 +421,7 @@ final class ul {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
                   var18 = var18 + var31.readInt(-1478490344);
-                  d.a(var43, var16, var40[var19], var39[var19], var18);
+                  ArrayOperations.a(var43, var16, var40[var19], var39[var19], var18);
                   var16 = var16 + var18;
                   var14[var19] = var14[var19] + var18;
                 }

@@ -15,12 +15,12 @@ final class lc extends IntrusiveNode {
     static String field_i;
     static String field_g;
 
-    final static ri c(byte param0) {
+    final static IndexedSprite c(byte param0) {
         if (param0 != 89) {
           ul var2 = (ul) null;
-          lc.a(-40, (ul) null, (int[]) null, (ri[]) null, (ul) null);
+          lc.a(-40, (ul) null, (int[]) null, (IndexedSprite[]) null, (ul) null);
         }
-        ri var1 = new ri(ie.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], qp.field_t[0], tp.field_t);
+        IndexedSprite var1 = new IndexedSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], qp.field_t[0], tp.field_t);
         fd.h((byte) 126);
         return var1;
     }
@@ -82,10 +82,10 @@ final class lc extends IntrusiveNode {
           var4 = param1.c(this.field_k, param0 - 16731806);
           var5 = param1.d(this.field_j, 106);
           if (this.field_f == -1) {
-            oo.d(var4, var5, 50 - var3_int / 2, 12071039, var3_int);
+            SoftwareRasterizer.fillCircleAlpha(var4, var5, 50 - var3_int / 2, 12071039, var3_int);
             return true;
           }
-          oo.d(var4, var5, var3_int, 16711680, 70);
+          SoftwareRasterizer.fillCircleAlpha(var4, var5, var3_int, 16711680, 70);
           var10 = new int[64];
           var9 = var10;
           var6 = var9;
@@ -93,7 +93,7 @@ final class lc extends IntrusiveNode {
             var6[var7] = var7 * 196864;
           }
           var7Lifetime1 = 3 * var3_int / 4;
-          oo.a(var4 << 4, var5 << 4, var3_int << 4, 33, var10);
+          SoftwareRasterizer.a(var4 << 4, var5 << 4, var3_int << 4, 33, var10);
           wa.field_b[this.field_h].a(-var7Lifetime1 + var4, var5 - var7Lifetime1, var7Lifetime1 * 2, var7Lifetime1 * 2, 40 + var3_int);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,7 +134,7 @@ final class lc extends IntrusiveNode {
         this.field_o = null;
         if (param4 < 103) {
           ul var7 = (ul) null;
-          lc.a(83, (ul) null, (int[]) null, (ri[]) null, (ul) null);
+          lc.a(83, (ul) null, (int[]) null, (IndexedSprite[]) null, (ul) null);
         }
         this.field_k = param2;
         this.field_j = param0;
@@ -142,18 +142,18 @@ final class lc extends IntrusiveNode {
         this.field_f = param1;
     }
 
-    final static void a(int param0, ul param1, int[] param2, ri[] param3, ul param4) {
+    final static void a(int param0, ul param1, int[] param2, IndexedSprite[] param3, ul param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
         Sprite[] dupTemp$3 = null;
-        ri[] var5 = null;
-        ri[] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[] var6 = null;
         int[] var6_array = null;
         int var7_int = 0;
         int var18 = 0;
         int[] var19 = null;
-        ri[] var20 = null;
+        IndexedSprite[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
@@ -169,7 +169,7 @@ final class lc extends IntrusiveNode {
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        ef var7 = null;
+        BinaryBitmapFont var7 = null;
         cj var8 = null;
         cj var9 = null;
         cj var10 = null;
@@ -189,7 +189,7 @@ final class lc extends IntrusiveNode {
           var5 = var20;
           hg.field_ub = var20.length;
           if (param3 != null) {
-            var6 = new ri[param3.length + hg.field_ub];
+            var6 = new IndexedSprite[param3.length + hg.field_ub];
             for (var7_int = 0; hg.field_ub > var7_int; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }

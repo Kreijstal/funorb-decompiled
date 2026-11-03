@@ -60,15 +60,15 @@ final class bc {
         }
     }
 
-    final static ri[] a(int param0) {
+    final static IndexedSprite[] a(int param0) {
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
-        ri[] var1 = new ri[qc.field_v];
+        IndexedSprite[] var1 = new IndexedSprite[qc.field_v];
         int var2 = 0;
         if (param0 != 2) {
-          return (ri[]) null;
+          return (IndexedSprite[]) null;
         }
         while (var2 < qc.field_v) {
-          var1[var2] = new ri(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], qp.field_t[var2], tp.field_t);
+          var1[var2] = new IndexedSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], qp.field_t[var2], tp.field_t);
           var2++;
         }
         fd.h((byte) 125);

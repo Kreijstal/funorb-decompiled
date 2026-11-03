@@ -5,17 +5,17 @@ final class wc extends id {
     static int field_N;
     static int field_O;
     static Sprite[] field_M;
-    private uj field_R;
+    private PcmSampleStream field_R;
     static String field_G;
     static boolean field_J;
     private String field_P;
     private int field_F;
     static IntrusiveDeque field_K;
     static char field_I;
-    private uj field_L;
+    private PcmSampleStream field_L;
     static cj field_H;
 
-    final static uj b(int param0, int param1) {
+    final static PcmSampleStream b(int param0, int param1) {
         wj var2 = new wj(param1);
         var2.field_m.g(param0);
         fd.field_M.a(var2, false);

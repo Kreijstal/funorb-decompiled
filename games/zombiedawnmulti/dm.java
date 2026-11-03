@@ -16,7 +16,7 @@ final class dm extends cj {
     int field_Vb;
     boolean field_Nb;
     int field_Sb;
-    static ri field_Wb;
+    static IndexedSprite field_Wb;
     int field_Fb;
     String field_Jb;
     static cj field_ac;

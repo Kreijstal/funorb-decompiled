@@ -37,7 +37,7 @@ final class wa implements WidgetActionListener {
             stackIn_4_0 = null;
           }
           var12 = (wm) (stackIn_4_0);
-          oo.e(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, this.field_i);
+          SoftwareRasterizer.fillRect(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, this.field_i);
           if (var12 != null) {
           }
           if (param2 != -15112) {
@@ -46,9 +46,9 @@ final class wa implements WidgetActionListener {
           var7 = -(var12.field_M * 2) + param4.field_n;
           var8 = param4.field_y + param3 + var12.field_M;
           var9 = param1 + (param4.field_i + var12.field_N);
-          oo.g(var8, var9, var8 + var7, var9, this.field_c);
+          SoftwareRasterizer.drawLine(var8, var9, var8 + var7, var9, this.field_c);
           for (var10 = var12.a((byte) -72) - 1; 0 <= var10; var10--) {
-            oo.d(var8 + var7 * var12.a(var10, false) / var12.g((byte) -106), var9, this.field_f, this.field_l);
+            SoftwareRasterizer.fillCircle(var8 + var7 * var12.a(var10, false) / var12.g((byte) -106), var9, this.field_f, this.field_l);
           }
           if (null == this.field_h) {
             return;

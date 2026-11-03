@@ -150,12 +150,12 @@ final class hg extends gm {
         RuntimeException decompiledCaughtException = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          oo.c(param0.c(this.g(58), -20126), param0.d(this.h(102), 109), this.field_kb, 16711680);
+          SoftwareRasterizer.drawCircle(param0.c(this.g(58), -20126), param0.d(this.h(102), 109), this.field_kb, 16711680);
           for (var3_int = 0; this.field_fb > var3_int; var3_int++) {
             var4 = param0.c(this.field_cb[var3_int], -20126);
             var5 = param0.d(this.field_hb[var3_int], 126);
-            oo.e(-1 + var4, -1 + var5, 3, 3, 0);
-            oo.a(var4, var5, 65280);
+            SoftwareRasterizer.fillRect(-1 + var4, -1 + var5, 3, 3, 0);
+            SoftwareRasterizer.setPixel(var4, var5, 65280);
           }
           if (param1 > 58) {
             return;

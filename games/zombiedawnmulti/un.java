@@ -143,15 +143,15 @@ abstract class un extends gf implements fi {
         var42 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (0 <= param4 &&
-            ep.field_h > param9) {
+            TriangleRasterizer.field_h > param9) {
             if (0 > param11 &&
               param12 < 0 &&
               0 > param1) {
               return;
             }
-            if (ep.field_i <= param11 &&
-              ep.field_i <= param12 &&
-              ep.field_i <= param1) {
+            if (TriangleRasterizer.field_i <= param11 &&
+              TriangleRasterizer.field_i <= param12 &&
+              TriangleRasterizer.field_i <= param1) {
               return;
             }
             var34 = param4 - param9;
@@ -219,17 +219,17 @@ abstract class un extends gf implements fi {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = ep.field_a[param9];
+                var36Lifetime2 = TriangleRasterizer.field_a[param9];
                 while (param9 < param7) {
                   var37 = var17_int >> 16;
-                  if (var37 < ep.field_i) {
+                  if (var37 < TriangleRasterizer.field_i) {
                     var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (var38 != 0) {
                       var39 = (-var21 + var22) / var38;
                       var40 = (-var25 + var26) / var38;
                       var41 = (-var29 + var30) / var38;
-                      if (ep.field_i <= var37 + var38) {
-                        var38 = -1 + (ep.field_i - var37);
+                      if (TriangleRasterizer.field_i <= var37 + var38) {
+                        var38 = -1 + (TriangleRasterizer.field_i - var37);
                       }
                       if (var37 >= 0) {
                         ub.a(var38, var21, var29, (byte) 116, param0, var40, var41, var25, var37 + var36Lifetime2, var39);
@@ -238,18 +238,18 @@ abstract class un extends gf implements fi {
                       }
                     } else {
                       if (0 <= var37 &&
-                        var37 < ep.field_i) {
+                        var37 < TriangleRasterizer.field_i) {
                         ub.a(var38, var21, var29, (byte) 102, param0, 0, 0, var25, var37 + var36Lifetime2, 0);
                       }
                     }
                   }
                   param9++;
-                  if (param9 >= ep.field_h) {
+                  if (param9 >= TriangleRasterizer.field_h) {
                     return;
                   }
                   var25 = var25 + var27;
                   var17_int = var17_int + var19;
-                  var36Lifetime2 = var36Lifetime2 + oo.field_b;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_b;
                   var21 = var21 + var23;
                   var29 = var29 + var31;
                   var26 = var26 + var28;
@@ -375,17 +375,17 @@ abstract class un extends gf implements fi {
               var26 = var26 + var28 * param9;
               param9 = 0;
             }
-            var35Lifetime1 = ep.field_a[param9];
+            var35Lifetime1 = TriangleRasterizer.field_a[param9];
             while (param9 < param4) {
               var36Lifetime1 = var17_int >> 16;
-              if (var36Lifetime1 < ep.field_i) {
+              if (var36Lifetime1 < TriangleRasterizer.field_i) {
                 var37Lifetime1 = (var18 >> 16) - (var17_int >> 16);
                 if (var37Lifetime1 != 0) {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
                   var39Lifetime1 = (var26 - var25) / var37Lifetime1;
                   var40Lifetime1 = (var30 - var29) / var37Lifetime1;
-                  if (var36Lifetime1 + var37Lifetime1 >= ep.field_i) {
-                    var37Lifetime1 = -1 + (ep.field_i - var36Lifetime1);
+                  if (var36Lifetime1 + var37Lifetime1 >= TriangleRasterizer.field_i) {
+                    var37Lifetime1 = -1 + (TriangleRasterizer.field_i - var36Lifetime1);
                   }
                   if (var36Lifetime1 >= 0) {
                     ub.a(var37Lifetime1, var21, var29, (byte) -24, param0, var39Lifetime1, var40Lifetime1, var25, var35Lifetime1 + var36Lifetime1, var38Lifetime1);
@@ -394,16 +394,16 @@ abstract class un extends gf implements fi {
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
-                    ep.field_i > var36Lifetime1) {
+                    TriangleRasterizer.field_i > var36Lifetime1) {
                     ub.a(var37Lifetime1, var21, var29, (byte) -84, param0, 0, 0, var25, var35Lifetime1 + var36Lifetime1, 0);
                   }
                 }
               }
               param9++;
-              if (param9 >= ep.field_h) {
+              if (param9 >= TriangleRasterizer.field_h) {
                 return;
               }
-              var35Lifetime1 = var35Lifetime1 + oo.field_b;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_b;
               var22 = var22 + var24;
               var26 = var26 + var28;
               var18 = var18 + var20;

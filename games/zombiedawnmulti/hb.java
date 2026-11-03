@@ -53,7 +53,7 @@ final class hb {
               var10 = var12;
               var6 = var10;
               if (var3 == 1) {
-                wo.a(var12, var5_int, param0, var4, 9);
+                Bzip2Decoder.a(var12, var5_int, param0, var4, 9);
               } else {
                 var7 = hg.field_wb;
                 synchronized (var7) {

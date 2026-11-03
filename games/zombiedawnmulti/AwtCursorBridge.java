@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class to {
+final class AwtCursorBridge {
     private java.awt.Robot field_a;
     private java.awt.Component field_b;
 
@@ -20,7 +20,7 @@ final class to {
         }
     }
 
-    public to() throws Exception {
+    public AwtCursorBridge() throws Exception {
         java.awt.Robot var2 = new java.awt.Robot();
         this.field_a = var2;
     }

@@ -47,15 +47,15 @@ final class sk {
           var5_int = this.field_h.a(param1);
           var6 = this.field_h.field_J + this.field_h.field_r;
           var7 = param2;
-          if (var7 + var5_int + 6 > oo.field_b) {
-            var7 = -var5_int + (oo.field_b - 6);
+          if (var7 + var5_int + 6 > SoftwareRasterizer.field_b) {
+            var7 = -var5_int + (SoftwareRasterizer.field_b - 6);
           }
           var8 = 32 + (-this.field_h.field_J + param3);
-          if (!(var6 + var8 + param0 <= oo.field_l)) {
-            var8 = -var6 + oo.field_l - 6;
+          if (!(var6 + var8 + param0 <= SoftwareRasterizer.field_l)) {
+            var8 = -var6 + SoftwareRasterizer.field_l - 6;
           }
-          oo.a(var7, var8, 6 + var5_int, 6 + var6, this.field_f);
-          oo.e(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_d);
+          SoftwareRasterizer.drawRect(var7, var8, 6 + var5_int, 6 + var6, this.field_f);
+          SoftwareRasterizer.fillRect(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_d);
           this.field_h.c(param1, 3 + var7, this.field_h.field_J + (3 + var8), this.field_f, -1);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "sk.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -64,7 +64,7 @@ final class sk {
 
     final void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
         int var8 = -11 % ((param3 + 28) / 57);
-        oo.f(param0, param6, param2, param1, param4, param5);
+        SoftwareRasterizer.fillRectAlpha(param0, param6, param2, param1, param4, param5);
     }
 
     final void a(int param0, BitmapFont param1) {
@@ -216,11 +216,11 @@ final class sk {
 
     final void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
         if (param4 == 100) {
-          oo.g(param1, param2, param5, param0, param3);
+          SoftwareRasterizer.drawLine(param1, param2, param5, param0, param3);
           return;
         }
         this.field_c = 52;
-        oo.g(param1, param2, param5, param0, param3);
+        SoftwareRasterizer.drawLine(param1, param2, param5, param0, param3);
     }
 
     private final void a(int param0, int param1, String param2, int param3) {
@@ -254,7 +254,7 @@ final class sk {
           if (param1 != 2) {
             return;
           }
-          var8 = oo.field_b >> 2;
+          var8 = SoftwareRasterizer.field_b >> 2;
           var9 = this.field_h.a(param2);
           var10 = this.field_h.field_r + this.field_h.field_C;
           var11 = 1;
@@ -280,15 +280,15 @@ final class sk {
             }
           }
           var12 = param3;
-          if (var9 + var12 + var5_int > oo.field_b) {
-            var12 = oo.field_b - (var9 + var5_int);
+          if (var9 + var12 + var5_int > SoftwareRasterizer.field_b) {
+            var12 = SoftwareRasterizer.field_b - (var9 + var5_int);
           }
           var13Lifetime1 = -this.field_h.field_J + (param0 + 32);
-          if (var13Lifetime1 - (-var10 - var6) > oo.field_l) {
+          if (var13Lifetime1 - (-var10 - var6) > SoftwareRasterizer.field_l) {
             var13Lifetime1 = -var10 + param0 - var6;
           }
-          oo.a(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_b);
-          oo.e(1 + var12, var13Lifetime1 + 1, -2 + (var5_int + var9), var6 + var10 - 2, this.field_d);
+          SoftwareRasterizer.drawRect(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_b);
+          SoftwareRasterizer.fillRect(1 + var12, var13Lifetime1 + 1, -2 + (var5_int + var9), var6 + var10 - 2, this.field_d);
           this.field_h.a(param2, var12 + this.field_l, var13Lifetime1 + this.field_e, var9, var10, this.field_f, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

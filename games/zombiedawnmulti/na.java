@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class na extends rg {
-    static ri field_I;
+    static IndexedSprite field_I;
     static String field_F;
     int field_E;
     static Sprite[] field_G;
     static int[][] field_J;
     static int[] field_K;
-    static ri[][] field_H;
+    static IndexedSprite[][] field_H;
 
     na(UiWidget param0) {
         super(param0.field_y, param0.field_i, param0.field_n, param0.field_w, (WidgetActionListener) null, (bj) null);
@@ -23,7 +23,7 @@ final class na extends rg {
 
     public static void g(byte param0) {
         field_K = null;
-        field_H = (ri[][]) null;
+        field_H = (IndexedSprite[][]) null;
         field_F = null;
         field_G = null;
         field_I = null;
@@ -185,6 +185,6 @@ final class na extends rg {
 
     static {
         field_F = "Confuse clueless humans with smoke and mirrors...";
-        field_H = new ri[1][];
+        field_H = new IndexedSprite[1][];
     }
 }

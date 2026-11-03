@@ -14,7 +14,7 @@ final class nj {
     int field_g;
     static String[] field_a;
     int field_k;
-    static ri field_d;
+    static IndexedSprite field_d;
 
     public static void a(byte param0) {
         if (param0 != 78) {

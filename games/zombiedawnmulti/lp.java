@@ -9,10 +9,10 @@ final class lp extends IntrusiveNode {
     int[] field_g;
     int[] field_q;
     byte[][][] field_o;
-    di[] field_m;
-    di[] field_l;
+    PlatformTask[] field_m;
+    PlatformTask[] field_l;
     int field_r;
-    static uj field_k;
+    static PcmSampleStream field_k;
     static String field_h;
     static boolean field_p;
     static int field_j;
@@ -30,7 +30,7 @@ final class lp extends IntrusiveNode {
         field_s = null;
         field_h = null;
         if (param0 > -76) {
-          field_k = (uj) null;
+          field_k = (PcmSampleStream) null;
         }
     }
 

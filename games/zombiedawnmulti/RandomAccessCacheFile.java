@@ -7,7 +7,7 @@ final class RandomAccessCacheFile {
     static vg field_i;
     private long field_c;
     static pd field_a;
-    static ri[] field_h;
+    static IndexedSprite[] field_h;
     static String field_g;
     static String field_b;
     static int field_e;

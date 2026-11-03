@@ -31,15 +31,15 @@ final class mq extends nc {
         String[] var3;
         String var4;
         String var5;
-        sl var6;
-        ef var7;
+        PaletteBitmapFont var6;
+        BinaryBitmapFont var7;
         int var8;
         int var9;
-        ri var10;
+        IndexedSprite var10;
         int var10_int;
         int var11;
         int var12;
-        ri var12_ref_ri;
+        IndexedSprite var12_ref_ri;
         int var13;
         int var14;
         int var15;
@@ -67,10 +67,10 @@ final class mq extends nc {
             var10_int = this.field_m[var9];
             var11 = this.field_s[var9];
             if (this.field_t == var9) {
-              oo.b(-3 + var10_int, -3 + var11, 38, 38, 6, 0, 128);
+              SoftwareRasterizer.fillRoundedRectAlpha(-3 + var10_int, -3 + var11, 38, 38, 6, 0, 128);
             }
             if (this.field_n == var9) {
-              oo.b(var10_int - 3, var11 - 3, 38, 38, 6, 16777215);
+              SoftwareRasterizer.drawRoundedRect(var10_int - 3, var11 - 3, 38, 38, 6, 16777215);
             }
             var12_ref_ri = this.g(0, var9);
             var12_ref_ri.b(var10_int, var11);
@@ -244,12 +244,12 @@ final class mq extends nc {
         }
     }
 
-    private final ri g(int param0, int param1) {
+    private final IndexedSprite g(int param0, int param1) {
         if (this.h(param1, 29)) {
           return la.field_l[param1];
         }
         if (param0 != 0) {
-          return (ri) null;
+          return (IndexedSprite) null;
         }
         return wl.field_l;
     }

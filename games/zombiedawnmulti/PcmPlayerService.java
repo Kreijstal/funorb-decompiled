@@ -313,7 +313,7 @@ class PcmPlayerService {
         if (field_j) {
           var3 = var3 << 1;
         }
-        d.a(param0, 0, var3);
+        ArrayOperations.clearInts(param0, 0, var3);
         this.field_h = this.field_h - param1;
         if (this.field_s != null &&
           this.field_h <= 0) {

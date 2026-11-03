@@ -71,8 +71,8 @@ final class qk extends IntrusiveNode {
           var6 = 2 + var4 * jk.field_f;
           var7 = qp.a(var2_int, (byte) 126, var5, 12);
           var8 = IntrusiveNode.a(true, var3, 20, var6);
-          oo.a(var7, var8, var5, var6, 0);
-          oo.e(var7 + 1, var8 + 1, -2 + var5, var6 - 2, 16777088);
+          SoftwareRasterizer.drawRect(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.fillRect(var7 + 1, var8 + 1, -2 + var5, var6 - 2, 16777088);
           if (param1 > -109) {
             field_j = 23;
           }

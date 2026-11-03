@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ug extends IntrusiveNode {
+final class MusicTrack extends IntrusiveNode {
     byte[] field_g;
     f field_f;
 
@@ -12,7 +12,7 @@ final class ug extends IntrusiveNode {
     final void a() {
         int[] var1;
         int[] var2;
-        mm var4;
+        MidiFileReader var4;
         int var5;
         int var6;
         int var7;
@@ -48,26 +48,26 @@ final class ug extends IntrusiveNode {
         var23 = var1;
         var19[9] = 128;
         var23[9] = 128;
-        var4 = new mm(this.field_g);
+        var4 = new MidiFileReader(this.field_g);
         var5 = var4.g();
         for (var6 = 0; var6 < var5; var6++) {
-          var4.b(var6);
+          var4.seekTrack(var6);
           var4.d(var6);
-          var4.e(var6);
+          var4.saveTrackPosition(var6);
         }
         while (true) {
-          var6Lifetime1 = var4.a();
-          var7 = var4.field_h[var6Lifetime1];
+          var6Lifetime1 = var4.nextTrack();
+          var7 = var4.trackTicks[var6Lifetime1];
           while (true) {
-            if (var4.field_h[var6Lifetime1] != var7) {
+            if (var4.trackTicks[var6Lifetime1] != var7) {
               break;
             }
-            var4.b(var6Lifetime1);
-            var8 = var4.a(var6Lifetime1);
+            var4.seekTrack(var6Lifetime1);
+            var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
-              var4.e();
-              var4.e(var6Lifetime1);
-              if (var4.c()) {
+              var4.markTrackDone();
+              var4.saveTrackPosition(var6Lifetime1);
+              if (var4.isDone()) {
                 return;
               }
               break;
@@ -105,12 +105,12 @@ final class ug extends IntrusiveNode {
               }
             }
             var4.d(var6Lifetime1);
-            var4.e(var6Lifetime1);
+            var4.saveTrackPosition(var6Lifetime1);
           }
         }
     }
 
-    private ug(PacketBuffer param0) {
+    private MusicTrack(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -632,11 +632,11 @@ final class ug extends IntrusiveNode {
         }
     }
 
-    final static ug a(ul param0, String param1, String param2) {
+    final static MusicTrack a(ul param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, param2, false);
         if (var3 == null) {
           return null;
         }
-        return new ug(new PacketBuffer(var3));
+        return new MusicTrack(new PacketBuffer(var3));
     }
 }

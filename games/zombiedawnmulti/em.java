@@ -12,7 +12,7 @@ final class em extends wk {
     static long field_N;
     static String field_V;
     static qh field_U;
-    static ri field_X;
+    static IndexedSprite field_X;
     static int[][][] field_Y;
     static int field_bb;
     static volatile int field_cb;

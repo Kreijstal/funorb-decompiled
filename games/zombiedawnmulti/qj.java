@@ -7,7 +7,7 @@ final class qj extends IntrusiveNode {
     static int[] field_o;
     int field_h;
     int field_g;
-    static ri field_m;
+    static IndexedSprite field_m;
     static String field_l;
     int field_k;
     static boolean field_p;

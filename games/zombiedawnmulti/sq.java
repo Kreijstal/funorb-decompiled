@@ -35,33 +35,33 @@ class sq extends gn {
         int[] var30 = null;
         var19 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (param6 < oo.field_f) {
-            param1 = param1 - (oo.field_f - param6);
-            param6 = oo.field_f;
+          if (param6 < SoftwareRasterizer.field_f) {
+            param1 = param1 - (SoftwareRasterizer.field_f - param6);
+            param6 = SoftwareRasterizer.field_f;
           }
-          if (param7 < oo.field_e) {
-            param3 = param3 - (oo.field_e - param7);
-            param7 = oo.field_e;
+          if (param7 < SoftwareRasterizer.field_e) {
+            param3 = param3 - (SoftwareRasterizer.field_e - param7);
+            param7 = SoftwareRasterizer.field_e;
           }
-          if (oo.field_g < param6 + param1) {
-            param1 = oo.field_g - param6;
+          if (SoftwareRasterizer.field_g < param6 + param1) {
+            param1 = SoftwareRasterizer.field_g - param6;
           }
-          if (oo.field_d < param7 + param3) {
-            param3 = -param7 + oo.field_d;
+          if (SoftwareRasterizer.field_d < param7 + param3) {
+            param3 = -param7 + SoftwareRasterizer.field_d;
           }
           if (param1 > 0 &&
             param3 > 0) {
             var21 = param4.c();
-            var30 = oo.field_i;
+            var30 = SoftwareRasterizer.field_i;
             if (param0 != 5) {
               sq.g(-57);
             }
-            var10 = oo.field_b;
-            var11 = oo.field_l;
+            var10 = SoftwareRasterizer.field_b;
+            var11 = SoftwareRasterizer.field_l;
             var29 = new int[4];
-            oo.a(var29);
+            SoftwareRasterizer.saveClip(var29);
             param4.a();
-            oo.e(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param6 + param7 * param4.width;
             var14 = param4.width - param1;
             var25 = var21.pixels;
@@ -73,19 +73,19 @@ class sq extends gn {
                 if (var18 != 0) {
                   if (0 < var17 &&
                     var15[-1 + var13] == 0) {
-                    oo.d(var17, var16, param2, param5);
+                    SoftwareRasterizer.fillCircle(var17, var16, param2, param5);
                   } else {
                     if (var16 > 0 &&
                       0 == var15[var13 - param4.width]) {
-                      oo.d(var17, var16, param2, param5);
+                      SoftwareRasterizer.fillCircle(var17, var16, param2, param5);
                     } else {
                       if (param4.width - 1 > var17 &&
                         var15[var13 + 1] == 0) {
-                        oo.d(var17, var16, param2, param5);
+                        SoftwareRasterizer.fillCircle(var17, var16, param2, param5);
                       } else {
                         if (-1 + param4.height > var16 &&
                           var15[var13 + param4.width] == 0) {
-                          oo.d(var17, var16, param2, param5);
+                          SoftwareRasterizer.fillCircle(var17, var16, param2, param5);
                         }
                       }
                     }
@@ -96,8 +96,8 @@ class sq extends gn {
               var13 = var13 + var14;
             }
             var21.g(-param4.offsetX, -param4.field_y);
-            oo.a(var30, var10, var11);
-            oo.b(var29);
+            SoftwareRasterizer.setTarget(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;
@@ -503,7 +503,7 @@ class sq extends gn {
           }
           if (0 == param0) {
             param1[6].a();
-            oo.e(0, 0, 24, 24, 0);
+            SoftwareRasterizer.fillRect(0, 0, 24, 24, 0);
             qc.a(2, (byte) -126, param1, 79, 3);
             qc.a(2, (byte) -126, param1, 78, 4);
             qc.a(2, (byte) -126, param1, 77, 1);

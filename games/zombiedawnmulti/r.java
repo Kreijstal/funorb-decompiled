@@ -16,7 +16,7 @@ final class r {
           return;
         }
         try {
-          oo.a(param1.pixels, param1.fullWidth, param1.field_u);
+          SoftwareRasterizer.setTarget(param1.pixels, param1.fullWidth, param1.field_u);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "r.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

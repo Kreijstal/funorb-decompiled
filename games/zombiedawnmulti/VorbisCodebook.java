@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ni {
+final class VorbisCodebook {
     private int[] field_a;
     private int[] field_c;
     private int field_f;
@@ -23,7 +23,7 @@ final class ni {
     final int a() {
         int var1 = 0;
         while (this.field_a[var1] >= 0) {
-          var1 = ac.b() != 0 ? this.field_a[var1] : var1 + 1;
+          var1 = VorbisSample.b() != 0 ? this.field_a[var1] : var1 + 1;
         }
         return ~this.field_a[var1];
     }
@@ -128,7 +128,7 @@ final class ni {
         }
     }
 
-    ni() {
+    VorbisCodebook() {
         int incrementValue$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
@@ -153,17 +153,17 @@ final class ni {
         int var2Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
-        ac.a(24);
-        this.field_e = ac.a(16);
-        this.field_f = ac.a(24);
+        VorbisSample.a(24);
+        this.field_e = VorbisSample.a(16);
+        this.field_f = VorbisSample.a(24);
         this.field_c = new int[this.field_f];
-        stackIn_3_0 = (ac.b() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisSample.b() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 != 0) {
           var2 = 0;
-          var3_int = ac.a(5) + 1;
+          var3_int = VorbisSample.a(5) + 1;
           while (var2 < this.field_f) {
-            var4_int = ac.a(mb.a((byte) -31, this.field_f - var2));
+            var4_int = VorbisSample.a(mb.a((byte) -31, this.field_f - var2));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
@@ -172,36 +172,36 @@ final class ni {
             var3_int++;
           }
         } else {
-          stackIn_13_0 = (ac.b() == 0) ? 0 : 1;
+          stackIn_13_0 = (VorbisSample.b() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           var14 = 0;
           var3_int = var14;
           while (var14 < this.field_f) {
             if (var2 != 0 &&
-              ac.b() == 0) {
+              VorbisSample.b() == 0) {
               this.field_c[var14] = 0;
             } else {
-              this.field_c[var14] = ac.a(5) + 1;
+              this.field_c[var14] = VorbisSample.a(5) + 1;
             }
             var14++;
           }
         }
         this.b();
-        var2Lifetime1 = ac.a(4);
+        var2Lifetime1 = VorbisSample.a(4);
         if (var2Lifetime1 > 0) {
-          var3 = ac.d(ac.a(32));
-          var4 = ac.d(ac.a(32));
-          var5Lifetime1 = ac.a(4) + 1;
-          stackIn_25_0 = (ac.b() == 0) ? 0 : 1;
+          var3 = VorbisSample.d(VorbisSample.a(32));
+          var4 = VorbisSample.d(VorbisSample.a(32));
+          var5Lifetime1 = VorbisSample.a(4) + 1;
+          stackIn_25_0 = (VorbisSample.b() == 0) ? 0 : 1;
           var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
             var7 = this.field_f * this.field_e;
           } else {
-            var7 = ni.a(this.field_f, this.field_e);
+            var7 = VorbisCodebook.a(this.field_f, this.field_e);
           }
           this.field_b = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {
-            this.field_b[var8] = ac.a(var5Lifetime1);
+            this.field_b[var8] = VorbisSample.a(var5Lifetime1);
           }
           this.field_d = new float[this.field_f][this.field_e];
           if (var2Lifetime1 != 1) {

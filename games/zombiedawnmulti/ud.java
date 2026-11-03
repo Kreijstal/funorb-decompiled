@@ -14,7 +14,7 @@ final class ud extends gn {
     static String[] field_N;
     static Sprite field_P;
     static String field_Y;
-    static ri field_Q;
+    static IndexedSprite field_Q;
     static cj field_M;
     static int[] field_V;
     static String field_Z;
@@ -111,7 +111,7 @@ final class ud extends gn {
     final static void a(int param0, int param1, ul param2, vp param3) {
         try {
           if (param0 != -3758) {
-            field_Q = (ri) null;
+            field_Q = (IndexedSprite) null;
           }
           vm.field_hb = param1 * wq.a((byte) 72) / 1000;
           ui.a(7478, param2);

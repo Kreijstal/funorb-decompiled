@@ -30,8 +30,8 @@ final class tf extends ne implements in {
         gh var2 = null;
         gh var2Lifetime1;
         if (param0 != -27388) {
-          uj var3 = (uj) null;
-          tf.a((uj) null, (byte) -100);
+          PcmSampleStream var3 = (PcmSampleStream) null;
+          tf.a((PcmSampleStream) null, (byte) -100);
           if (!this.field_R) {
             return super.i(-27388);
           }
@@ -135,10 +135,10 @@ final class tf extends ne implements in {
         }
     }
 
-    final static we a(uj param0, byte param1) {
+    final static we a(PcmSampleStream param0, byte param1) {
         we var2 = null;
         RuntimeException var2_ref = null;
-        uj var3 = null;
+        PcmSampleStream var3 = null;
         we stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -146,8 +146,8 @@ final class tf extends ne implements in {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -62) {
-            var3 = (uj) null;
-            tf.a((uj) null, (byte) 86);
+            var3 = (PcmSampleStream) null;
+            tf.a((PcmSampleStream) null, (byte) 86);
           }
           var2 = new we(param0, param0);
           GameKeyHandler.field_e.a(var2, false);

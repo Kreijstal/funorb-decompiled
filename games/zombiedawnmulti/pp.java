@@ -3,7 +3,7 @@
  */
 class pp extends ic {
     private long field_p;
-    static ri[] field_q;
+    static IndexedSprite[] field_q;
     static boolean field_n;
     static String field_o;
     private String field_m;

@@ -8,9 +8,9 @@ final class pq extends IntrusiveNode {
     static ip field_p;
     private int field_j;
     private int field_g;
-    private uj field_q;
+    private PcmSampleStream field_q;
     private int field_l;
-    static ri field_o;
+    static IndexedSprite field_o;
     private int field_i;
     static int field_f;
     static int[] field_m;
@@ -21,7 +21,7 @@ final class pq extends IntrusiveNode {
           this.field_k = this.field_i;
           return;
         }
-        field_o = (ri) null;
+        field_o = (IndexedSprite) null;
         this.field_k = this.field_i;
     }
 
@@ -49,7 +49,7 @@ final class pq extends IntrusiveNode {
               stackIn_9_0 = 256 - this.field_h >> 2;
             }
             var5 = stackIn_9_0;
-            oo.d(var3_int, var4, this.field_h, 0, var5);
+            SoftwareRasterizer.fillCircleAlpha(var3_int, var4, this.field_h, 0, var5);
             g.a(ud.field_P, var3_int - 256, -256 + var4, this.field_j);
             return;
           }

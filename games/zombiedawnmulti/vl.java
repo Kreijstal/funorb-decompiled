@@ -7,7 +7,7 @@ final class vl extends IntrusiveNode {
     int field_i;
     static String[] field_j;
     static int field_h;
-    static ri field_f;
+    static IndexedSprite field_f;
 
     final static String a(String param0, String[] param1, int param2) {
         StringBuilder discarded$0 = null;
@@ -140,7 +140,7 @@ final class vl extends IntrusiveNode {
 
     public static void a(int param0) {
         if (param0 != 0) {
-          field_f = (ri) null;
+          field_f = (IndexedSprite) null;
         }
         field_j = null;
         field_k = null;

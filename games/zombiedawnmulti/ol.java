@@ -131,14 +131,14 @@ final class ol extends nc {
 
     final void a(boolean param0) {
         int stackIn_3_0 = 0;
-        ef stackIn_18_0;
+        BinaryBitmapFont stackIn_18_0;
         String stackIn_18_1;
         int stackIn_18_2;
         int stackIn_18_3;
         int stackIn_19_4 = 0;
         int stackIn_27_0 = 0;
         int stackIn_68_0 = 0;
-        ef stackIn_68_1 = null;
+        BinaryBitmapFont stackIn_68_1 = null;
         String stackIn_68_2 = null;
         int stackIn_69_3 = 0;
         int stackIn_71_4;
@@ -189,7 +189,7 @@ final class ol extends nc {
                 } else {
                   stackIn_19_4 = var3 - 70;
                 }
-                var4 = ((ef) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_19_4, 440, 16777215, 0, 0, 0, var2);
+                var4 = ((BinaryBitmapFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_19_4, 440, 16777215, 0, 0, 0, var2);
                 var5 = var2 * var4;
                 if (var7 != 0) {
                   var5 -= 20;
@@ -228,9 +228,9 @@ final class ol extends nc {
                 ig.field_d[0].c(var11 - 8, var12 - 4, 128);
                 ig.field_d[0].c(var11 + 13, var12 + 14, 128);
                 ig.field_d[0].c(var11 + 41, var12 + 11, 128);
-                oo.a(var11 + 3, 14 + var12, 77, 47, 16777215);
-                oo.h(4 + var11, 15 + var12, 75, 45, 10066431, 32);
-                oo.f(5 + var11, var12 + 16, 73, 43, 3355647, 32);
+                SoftwareRasterizer.drawRect(var11 + 3, 14 + var12, 77, 47, 16777215);
+                SoftwareRasterizer.drawRectAlpha(4 + var11, 15 + var12, 75, 45, 10066431, 32);
+                SoftwareRasterizer.fillRectAlpha(5 + var11, var12 + 16, 73, 43, 3355647, 32);
                 if (var16 == 0) {
                   break;
                 }
@@ -336,7 +336,7 @@ final class ol extends nc {
                   } else {
                     stackIn_72_5 = var3;
                   }
-                  var5 = stackIn_68_0 + (((ef) (Object) stackIn_68_1).a(stackIn_68_2, stackIn_69_3, stackIn_71_4, stackIn_72_5, 400, 16777215, 0, 0, 0, var2) * var2 + 15);
+                  var5 = stackIn_68_0 + (((BinaryBitmapFont) (Object) stackIn_68_1).a(stackIn_68_2, stackIn_69_3, stackIn_71_4, stackIn_72_5, 400, 16777215, 0, 0, 0, var2) * var2 + 15);
                   var14++;
                 }
                 if (var16 == 0) {

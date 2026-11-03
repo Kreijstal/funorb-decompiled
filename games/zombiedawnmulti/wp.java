@@ -11,7 +11,7 @@ final class wp {
     static Sprite[] field_j;
     static int[] field_i;
     static int[] field_c;
-    static di field_g;
+    static PlatformTask field_g;
 
     final static void a(int param0) {
         int fieldTemp$0 = 0;

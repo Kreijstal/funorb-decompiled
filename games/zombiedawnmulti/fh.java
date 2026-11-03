@@ -459,7 +459,7 @@ final class fh {
                   rn.field_a.length > var15Lifetime1) {
                   rn.field_a[var15Lifetime1].c(var3_int, var4);
                 } else {
-                  oo.e(var3_int, var4, 24, 24, 7631988);
+                  SoftwareRasterizer.fillRect(var3_int, var4, 24, 24, 7631988);
                 }
                 if (qq.field_h) {
                   qp.field_w.c(Integer.toString(this.field_i.field_k[var6][var5]), 12 + var3_int, 12 + var4, 16777215, 1);
@@ -468,7 +468,7 @@ final class fh {
                 this.field_l[var13][var12] = var14Lifetime1;
                 var12++;
               } else {
-                oo.e(var3_int, var4, 24, 24, 1);
+                SoftwareRasterizer.fillRect(var3_int, var4, 24, 24, 1);
                 var12++;
                 var3_int += 24;
               }
@@ -491,13 +491,13 @@ final class fh {
                 var20 = param1.c(this.field_q[var19].field_g, -20126);
                 var21 = param1.d(this.field_q[var19].field_h, 107);
                 if (this.field_a[var16][var19] > 0) {
-                  oo.g(var17, var18, var20, var21, 65280, 48);
+                  SoftwareRasterizer.drawLineAlpha(var17, var18, var20, var21, 65280, 48);
                 }
               }
               if (-1 != this.a(var15Lifetime2, 113, var14Lifetime2, this.field_q[var16].field_h, this.field_q[var16].field_g)) {
                 var19Lifetime1 = param1.c(var14Lifetime2, -20126);
                 var20Lifetime1 = param1.d(var15Lifetime2, 122);
-                oo.g(var17, var18, var19Lifetime1, var20Lifetime1, 16711680);
+                SoftwareRasterizer.drawLine(var17, var18, var19Lifetime1, var20Lifetime1, 16711680);
               }
             }
             var23 = 0;
@@ -505,7 +505,7 @@ final class fh {
             while (var23 < this.field_q.length) {
               var17Lifetime1 = 320 + this.field_q[var23].field_g - param1.field_k;
               var18Lifetime1 = -param1.field_g + (this.field_q[var23].field_h + 240);
-              oo.d(var17Lifetime1, var18Lifetime1, 2, 16711680, 256);
+              SoftwareRasterizer.fillCircleAlpha(var17Lifetime1, var18Lifetime1, 2, 16711680, 256);
               qp.field_w.b(Integer.toString(var23), var17Lifetime1, var18Lifetime1, 16777215, 0, 64);
               var23++;
             }
@@ -869,9 +869,9 @@ final class fh {
                       if ((-2147483648 & var10) != 0) {
                         if (param1) {
                           if ((67108864 & var10) == 0) {
-                            oo.f(var5_int, var6, 24, 24, 16711935, 128);
+                            SoftwareRasterizer.fillRectAlpha(var5_int, var6, 24, 24, 16711935, 128);
                           } else {
-                            oo.f(var5_int, var6, 24, 24, 65280, 128);
+                            SoftwareRasterizer.fillRectAlpha(var5_int, var6, 24, 24, 65280, 128);
                           }
                         } else {
                           if ((var10 & 67108864) != 0) {
@@ -893,16 +893,16 @@ final class fh {
                               var11 < ne.field_Ab.length) {
                               ne.field_Ab[var11].c(var5_int, var6, 128);
                             } else {
-                              oo.f(var5_int, var6, 24, 24, 0, 128);
+                              SoftwareRasterizer.fillRectAlpha(var5_int, var6, 24, 24, 0, 128);
                               ne.field_Ab[21].c(var5_int, var6 + 24, 128);
                             }
                           } else {
-                            oo.f(var5_int, var6, 24, 24, 0, 128);
+                            SoftwareRasterizer.fillRectAlpha(var5_int, var6, 24, 24, 0, 128);
                           }
                         }
                       }
                       if (IterableNodeHashTable.field_c) {
-                        oo.a(var5_int, var6, 25, 25, 7864183);
+                        SoftwareRasterizer.drawRect(var5_int, var6, 25, 25, 7864183);
                       }
                     }
                   }
@@ -916,7 +916,7 @@ final class fh {
                     if (var11 >= 0 &&
                       var11 < od.field_Ab.length) {
                       if (param1) {
-                        oo.e(var5_int, var6, 24, 24, 16711935);
+                        SoftwareRasterizer.fillRect(var5_int, var6, 24, 24, 16711935);
                       }
                       var15 = od.field_Ab[var11];
                       var16 = var15;
@@ -941,7 +941,7 @@ final class fh {
                       }
                       if (po.field_p &&
                         (var10 & 33554432) != 0) {
-                        oo.f(var5_int, var6, 24, 24, 8425216, 96);
+                        SoftwareRasterizer.fillRectAlpha(var5_int, var6, 24, 24, 8425216, 96);
                       }
                     }
                   }

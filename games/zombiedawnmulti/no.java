@@ -7,7 +7,7 @@ final class no extends cj {
     static Sprite[][] field_Hb;
     private cj field_Ib;
     static String field_Kb;
-    static ri field_Jb;
+    static IndexedSprite field_Jb;
 
     final static void c(byte param0) {
         String var2 = null;

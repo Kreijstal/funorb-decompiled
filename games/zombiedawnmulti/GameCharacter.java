@@ -394,7 +394,7 @@ final class GameCharacter extends ti {
         int stackIn_330_0 = 0;
         int stackIn_370_0 = 0;
         int stackIn_370_1 = 0;
-        ri stackIn_389_0 = null;
+        IndexedSprite stackIn_389_0 = null;
         int stackIn_389_1 = 0;
         int stackIn_390_2 = 0;
         RuntimeException stackIn_459_0 = null;
@@ -619,8 +619,8 @@ final class GameCharacter extends ti {
                   g.d();
                 }
                 g.c(bb.field_n);
-                oo.b();
-                oo.d(oo.field_l / 2, oo.field_l / 2, oo.field_l / 2, 1);
+                SoftwareRasterizer.clear();
+                SoftwareRasterizer.fillCircle(SoftwareRasterizer.field_l / 2, SoftwareRasterizer.field_l / 2, SoftwareRasterizer.field_l / 2, 1);
                 if (0 >= this.field_yb) {
                   var14_ref_int__ = nk.a(1052800, 455739624, 8454143);
                   var15 = 1073741824 + this.field_y - wf.field_m;
@@ -767,10 +767,10 @@ final class GameCharacter extends ti {
                   var22++;
                   var21 -= 3;
                 }
-                oo.b();
+                SoftwareRasterizer.clear();
                 var20_ref_ja.g(3, 3);
                 no.field_Hb[var16][var19].g(var21, var22);
-                var23 = oo.field_i;
+                var23 = SoftwareRasterizer.field_i;
                 var24 = 0;
                 while (var24 < var23.length) {
                   var25 = var23[var24];
@@ -822,7 +822,7 @@ final class GameCharacter extends ti {
                   } else {
                     stackIn_390_2 = -2;
                   }
-                  ((ri) (Object) stackIn_389_0).a(stackIn_389_1 + stackIn_390_2, var20 - 7);
+                  ((IndexedSprite) (Object) stackIn_389_0).a(stackIn_389_1 + stackIn_390_2, var20 - 7);
                 } else {
                   if (this.field_ub > 0) {
                     var21 = 72;
@@ -846,7 +846,7 @@ final class GameCharacter extends ti {
                 if (this.field_K == 23 ||
                   this.field_Nb > 0) {
                   g.c();
-                  oo.h(var7, var20 + aa.field_h[var19].field_b / 2, 640, aa.field_h[var19].field_b + var20);
+                  SoftwareRasterizer.setClip(var7, var20 + aa.field_h[var19].field_b / 2, 640, aa.field_h[var19].field_b + var20);
                   if (23 == this.field_K) {
                     aa.field_h[var19].a(var7, var20);
                   }

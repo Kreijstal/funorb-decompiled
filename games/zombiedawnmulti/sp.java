@@ -281,7 +281,7 @@ final class sp extends mp {
     }
 
     final static void a(PlatformTaskDispatcher param0, int param1, java.awt.Frame param2) {
-        di var3 = null;
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;

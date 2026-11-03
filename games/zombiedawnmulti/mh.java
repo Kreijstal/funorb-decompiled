@@ -5,13 +5,13 @@ import java.io.*;
 
 final class mh implements Runnable {
     private PacketBuffer field_g;
-    private di field_b;
+    private PlatformTask field_b;
     private DataInputStream field_f;
     private int field_k;
-    private di field_e;
+    private PlatformTask field_e;
     private PlatformTaskDispatcher field_j;
     static IntrusiveDeque field_l;
-    private di field_d;
+    private PlatformTask field_d;
     static jh field_c;
     static cj field_i;
     private java.net.URL field_a;

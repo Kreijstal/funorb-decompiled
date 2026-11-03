@@ -132,15 +132,15 @@ abstract class al extends df {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
-        oo.a(6 + param1, param2 + 35, -12 + this.field_n, this.field_w - 40, 2105376, 0);
+        SoftwareRasterizer.fillRectGradient(6 + param1, param2 + 35, -12 + this.field_n, this.field_w - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
         var7 = 0;
         var8 = param2;
         while (var4 > var7) {
-          if (oo.field_e <= var8 &&
-            oo.field_d > var8) {
+          if (SoftwareRasterizer.field_e <= var8 &&
+            SoftwareRasterizer.field_d > var8) {
             var9 = (-var5 + var6) * var7 / var4 + var5;
             var10 = 0;
             var11 = this.field_n;
@@ -153,7 +153,7 @@ abstract class al extends df {
                   }
                   var13 = var9 * (462 - var12) / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  oo.field_i[param1 + oo.field_b * var8 + var10] = var13;
+                  SoftwareRasterizer.field_i[param1 + SoftwareRasterizer.field_b * var8 + var10] = var13;
                 }
                 var10++;
               }
@@ -169,7 +169,7 @@ abstract class al extends df {
                   } else {
                     var15 = (462 - var14) * var9 / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    oo.field_i[var11 + (param1 + var8 * oo.field_b)] = var15;
+                    SoftwareRasterizer.field_i[var11 + (param1 + var8 * SoftwareRasterizer.field_b)] = var15;
                   }
                   var11++;
                   continue;
@@ -179,7 +179,7 @@ abstract class al extends df {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            oo.b(var10 + param1, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param1, var8, -var10 + var11, var9);
           }
           var8++;
           var7++;
@@ -192,8 +192,8 @@ abstract class al extends df {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          oo.b(param1, var8Lifetime1, 6, var9Lifetime1);
-          oo.b(param1 + (this.field_n - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param1 + (this.field_n - 6), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
@@ -208,8 +208,8 @@ abstract class al extends df {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
-          oo.b(param1, var8Lifetime2, 6, var9Lifetime2);
-          oo.b(this.field_n + (param1 - 6), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(this.field_n + (param1 - 6), var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }

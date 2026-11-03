@@ -9,13 +9,13 @@ final class vo extends nc {
     static String field_s;
     static boolean field_q;
     static Sprite field_p;
-    static di field_o;
+    static PlatformTask field_o;
     static ip field_l;
 
     private final void a(String param0, int param1, int param2, int param3) {
         try {
           ClientException.field_e.a();
-          oo.b();
+          SoftwareRasterizer.clear();
           if (param1 != -5) {
             this.h(-39);
           }
@@ -24,7 +24,7 @@ final class vo extends nc {
           g.a(16777215);
           g.a(16777215);
           g.a(16777215);
-          oo.i(5, 5, 0, 0, 640, 480);
+          SoftwareRasterizer.i(5, 5, 0, 0, 640, 480);
           ah.field_e.a(param0, 60, param3, 520, 200, 5, 0, 1, 0, param2);
           SocketConnector.field_h.b((byte) 100);
         } catch (RuntimeException runtimeException) {
@@ -123,7 +123,7 @@ final class vo extends nc {
 
     final void b(byte param0) {
         if (param0 != 69) {
-          field_o = (di) null;
+          field_o = (PlatformTask) null;
         }
         bl.field_g = null;
         wd.field_P = null;
@@ -138,7 +138,7 @@ final class vo extends nc {
 
     private final void h(int param0) {
         if (param0 > -59) {
-          field_o = (di) null;
+          field_o = (PlatformTask) null;
         }
         LevelActorSpawner.a(true, 1, 127, sp.field_g);
     }
@@ -161,7 +161,7 @@ final class vo extends nc {
           field_m = (cj) null;
         }
         boolean decompiledFrameRemainder0 = true;
-        oo.b();
+        SoftwareRasterizer.clear();
         if (260 <= this.field_t) {
           if (this.field_t >= 388) {
             if (508 > this.field_t) {
@@ -178,7 +178,7 @@ final class vo extends nc {
                     var2 = 924;
                     this.b(-264, 0, -115);
                     bl.field_g.a(622 - var2, 0);
-                    oo.f(0, 0, 640, 480, 0, 2 * (-1724 + this.field_t));
+                    SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, 2 * (-1724 + this.field_t));
                   } else {
                     if (this.field_t < 2152) {
                       this.g(520);
@@ -202,7 +202,7 @@ final class vo extends nc {
           } else {
             this.b(0, 0, -115);
             wd.field_P.a(0, -wd.field_P.field_a + 480);
-            oo.f(0, 0, 640, 480, 0, 256 - (-520 + 2 * this.field_t));
+            SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, 256 - (-520 + 2 * this.field_t));
           }
           if (decompiledFrameRemainder0) {
             this.g(520);

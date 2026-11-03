@@ -13,7 +13,7 @@ final class hn {
     private int field_c;
     private int field_e;
     static String field_b;
-    static ri field_i;
+    static IndexedSprite field_i;
 
     final void a(boolean param0) {
         int fieldTemp$1 = 0;

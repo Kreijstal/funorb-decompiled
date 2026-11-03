@@ -485,7 +485,7 @@ final class ai implements Runnable {
     }
 
     ai(PlatformTaskDispatcher param0) {
-        di var2 = null;
+        PlatformTask var2 = null;
         this.field_e = new lq();
         this.field_f = false;
         this.field_h = 0;

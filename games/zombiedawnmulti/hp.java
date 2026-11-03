@@ -18,7 +18,7 @@ final class hp extends IntrusiveNode {
     static String field_o;
     static String field_m;
     static String[] field_p;
-    static ri field_t;
+    static IndexedSprite field_t;
     static String field_h;
     static int field_k;
 

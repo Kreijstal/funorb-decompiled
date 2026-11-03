@@ -164,7 +164,7 @@ final class lf {
         throw new IllegalStateException();
     }
 
-    final static void a(ef param0, int param1) {
+    final static void a(BinaryBitmapFont param0, int param1) {
         int var2_int = 0;
         Sprite var3 = null;
         if (null == of.field_k) {

@@ -31,7 +31,7 @@ final class tn extends qc {
             return;
           }
           if (!GameKeyHandler.a(250)) {
-            oo.b();
+            SoftwareRasterizer.clear();
             eh.a(320, 240, 122);
             t.a(false, 0, param2, 0);
             return;

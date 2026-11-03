@@ -35,17 +35,17 @@ class IntrusiveNode {
     }
 
     final static int a(boolean param0, int param1, int param2, int param3) {
-        if (!(param1 + param2 + param3 > oo.field_l)) {
+        if (!(param1 + param2 + param3 > SoftwareRasterizer.field_l)) {
           return param2 + param1;
         }
         if (-param3 + param1 >= 0) {
           return param1 - param3;
         }
         if (param0) {
-          return oo.field_l - param3;
+          return SoftwareRasterizer.field_l - param3;
         }
         IntrusiveNode.a(false, -49, -96, 42);
-        return oo.field_l - param3;
+        return SoftwareRasterizer.field_l - param3;
     }
 
     final static void a(boolean param0, int param1) {

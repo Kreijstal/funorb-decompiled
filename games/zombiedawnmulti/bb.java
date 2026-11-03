@@ -9,7 +9,7 @@ final class bb extends IntrusiveNode {
     static Sprite field_n;
     int field_l;
     static String field_m;
-    static ug field_g;
+    static MusicTrack field_g;
     static String field_i;
     byte[] field_f;
 

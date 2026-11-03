@@ -111,13 +111,13 @@ final class nm {
         this.field_g = var5Lifetime1;
     }
 
-    final static uj b(int param0, int param1) {
+    final static PcmSampleStream b(int param0, int param1) {
         wj var2 = new wj(param1);
         fd.field_M.a(var2, false);
         if (param0 <= -125) {
           return var2.field_m;
         }
-        return (uj) null;
+        return (PcmSampleStream) null;
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
@@ -125,7 +125,7 @@ final class nm {
           return;
         }
         m.c(540);
-        oo.e(param0, param4, param3, param1);
+        SoftwareRasterizer.intersectClip(param0, param4, param3, param1);
     }
 
     public static void a(int param0) {

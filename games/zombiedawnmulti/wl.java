@@ -14,7 +14,7 @@ final class wl {
     private long[] field_h;
     static String field_i;
     private int field_f;
-    static ri field_l;
+    static IndexedSprite field_l;
 
     final void b(int param0) {
         int var2 = 0;
@@ -66,7 +66,7 @@ final class wl {
             this.field_c = this.field_c + 1;
             this.field_m[fieldTemp$1] = (byte) 0;
           }
-          d.a(this.field_e, 0, this.field_m, 32, 32);
+          ArrayOperations.a(this.field_e, 0, this.field_m, 32, 32);
           this.a(-2);
           var4_int = 0;
           if (param1 != 1) {
@@ -123,7 +123,7 @@ final class wl {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         var2 = 0;
         if (param0 != -2) {
-          field_l = (ri) null;
+          field_l = (IndexedSprite) null;
         }
         var3 = 0;
         while (var2 < 8) {

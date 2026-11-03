@@ -5,7 +5,7 @@ final class pf {
     static cj[] field_d;
     static int field_c;
     static Sprite[][] field_e;
-    static ri field_a;
+    static IndexedSprite field_a;
     static ul field_b;
 
     public static void b(int param0) {
@@ -20,11 +20,11 @@ final class pf {
         field_d = null;
     }
 
-    final static ri[] a(int param0, ul param1, int param2, int param3) {
+    final static IndexedSprite[] a(int param0, ul param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        ri[] stackIn_5_0 = null;
-        ri[] stackIn_7_0 = null;
+        IndexedSprite[] stackIn_5_0 = null;
+        IndexedSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -32,13 +32,13 @@ final class pf {
         try {
           if (!ud.a(param0, param1, param3, (byte) -42)) {
             stackIn_2_0 = null;
-            return (ri[]) (stackIn_2_0);
+            return (IndexedSprite[]) (stackIn_2_0);
           }
           if (param2 <= -50) {
             stackIn_7_0 = bc.a(2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ri[]) null;
+          stackIn_5_0 = (IndexedSprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

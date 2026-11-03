@@ -81,27 +81,27 @@ final class ij implements WidgetActionListener {
           var9_int = -param2 + param5 + (param7.offsetX + param3);
           var10 = param1 + (param5 + (param3 + param7.offsetX));
           var11 = (param7.height >> 1) + (param7.field_y + param0);
-          oo.e(var9_int, 0, var10, var11 + param6);
+          SoftwareRasterizer.intersectClip(var9_int, 0, var10, var11 + param6);
           param7.e(param3 - 1, -1 + param0, param8);
           param7.e(-1 + param3, 1 + param0, param8);
-          oo.b(b.field_f);
-          oo.e(1 + var9_int, 0, 1 + var10, param6 + var11);
+          SoftwareRasterizer.restoreClip(b.field_f);
+          SoftwareRasterizer.intersectClip(1 + var9_int, 0, 1 + var10, param6 + var11);
           param7.e(1 + param3, param0 - 1, param8);
           param7.e(1 + param3, param0 + 1, param8);
-          oo.b(b.field_f);
+          SoftwareRasterizer.restoreClip(b.field_f);
           var10Lifetime1 = param7.width + (param7.offsetX + (param3 - param5)) - param2;
           var9_intLifetime1 = param7.offsetX + param7.width - (-param3 - (-param5 - param1));
-          oo.e(var9_intLifetime1, -param6 + var11, var10Lifetime1, 480);
+          SoftwareRasterizer.intersectClip(var9_intLifetime1, -param6 + var11, var10Lifetime1, 480);
           param7.e(-1 + param3, param0 - 1, param8);
           param7.e(param3 - 1, 1 + param0, param8);
-          oo.b(b.field_f);
-          oo.e(1 + var9_intLifetime1, -param6 + var11, 1 + var10Lifetime1, 480);
+          SoftwareRasterizer.restoreClip(b.field_f);
+          SoftwareRasterizer.intersectClip(1 + var9_intLifetime1, -param6 + var11, 1 + var10Lifetime1, 480);
           param7.e(1 + param3, param0 - 1, param8);
           param7.e(1 + param3, param0 + 1, param8);
           if (param4) {
             field_a = (String) null;
           }
-          oo.b(b.field_f);
+          SoftwareRasterizer.restoreClip(b.field_f);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ij.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
@@ -144,18 +144,18 @@ final class ij implements WidgetActionListener {
           if (param0) {
             var7 = 16777215;
           }
-          oo.e(param4.field_y + param3, param1 + param4.field_i, param4.field_n, param4.field_w, this.field_o);
+          SoftwareRasterizer.fillRect(param4.field_y + param3, param1 + param4.field_i, param4.field_n, param4.field_w, this.field_o);
           var8 = this.field_g + (param4.field_y + param3);
           var9 = this.field_e + (param1 + param4.field_i);
-          oo.f(var8, var9, this.field_l, this.field_i, 5592405);
-          oo.e(var8, var9, this.field_l, this.field_i, var7);
+          SoftwareRasterizer.drawFadingBorder(var8, var9, this.field_l, this.field_i, 5592405);
+          SoftwareRasterizer.fillRect(var8, var9, this.field_l, this.field_i, var7);
           if (param2 != -15112) {
             var11 = (Sprite) null;
             ij.a(100, -43, 108, -70, true, -27, -48, (Sprite) null, -23);
           }
           if (var12.field_G) {
-            oo.g(var8, var9, this.field_l + var8, var9 + this.field_i, 1);
-            oo.g(var8 + this.field_l, var9, var8, var9 + this.field_i, 1);
+            SoftwareRasterizer.drawLine(var8, var9, this.field_l + var8, var9 + this.field_i, 1);
+            SoftwareRasterizer.drawLine(var8 + this.field_l, var9, var8, var9 + this.field_i, 1);
           }
           if (this.field_n != null) {
             var10 = this.field_b + this.field_g + this.field_l;

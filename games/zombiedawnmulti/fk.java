@@ -45,7 +45,7 @@ final class fk extends nc {
             param2.a(param1 + 1 + ". ", 60, param9, param5, param3);
           }
           if ((param1 & 1) == 0) {
-            oo.f(30, 3 + param9, 580, 1 + (param2.field_r + param2.field_C), 0, 64);
+            SoftwareRasterizer.fillRectAlpha(30, 3 + param9, 580, 1 + (param2.field_r + param2.field_C), 0, 64);
           }
           var14 = BitmapFont.a(param2, param4, 200);
           param2.c(var14, 60, param9, param5, param3);
@@ -90,10 +90,10 @@ final class fk extends nc {
     }
 
     final void a(boolean param0) {
-        sl var2;
+        PaletteBitmapFont var2;
         int var3;
         String var4;
-        ef var5;
+        BinaryBitmapFont var5;
         int var6;
         int var7;
         int var8;
@@ -138,8 +138,8 @@ final class fk extends nc {
         String var4Lifetime1;
         String var4Lifetime2;
         String var4Lifetime3;
-        ef var5Lifetime1;
-        ef var5Lifetime2;
+        BinaryBitmapFont var5Lifetime1;
+        BinaryBitmapFont var5Lifetime2;
         int[] var12Lifetime1;
         int[] var12Lifetime2;
         String[] var11Lifetime1;
@@ -161,11 +161,11 @@ final class fk extends nc {
                   var7 = var6 + 150;
                   var8 = 16777215;
                   var9 = 0;
-                  oo.f(30, var7 - 35, 580, ((BitmapFont) ((Object) var2)).field_C + (((BitmapFont) ((Object) var2)).field_r + 1), 0, 64);
+                  SoftwareRasterizer.fillRectAlpha(30, var7 - 35, 580, ((BitmapFont) ((Object) var2)).field_C + (((BitmapFont) ((Object) var2)).field_r + 1), 0, 64);
                   var10 = 11;
-                  oo.f(30, -35 + var7, 186, 225, 0, 64);
-                  oo.f(SpriteState.field_q[2] - 58, -35 + var7, 111, 225, 0, 64);
-                  oo.f(-32 + SpriteState.field_q[4], var7 - 35, 65, 225, 0, 64);
+                  SoftwareRasterizer.fillRectAlpha(30, -35 + var7, 186, 225, 0, 64);
+                  SoftwareRasterizer.fillRectAlpha(SpriteState.field_q[2] - 58, -35 + var7, 111, 225, 0, 64);
+                  SoftwareRasterizer.fillRectAlpha(-32 + SpriteState.field_q[4], var7 - 35, 65, 225, 0, 64);
                   ah.field_e.b(gn.field_C, SpriteState.field_q[0], var7, var10, 1);
                   ah.field_e.b(ub.field_tb, SpriteState.field_q[1], var7, var10, 1);
                   ah.field_e.b(ke.field_e, SpriteState.field_q[2], var7, var10, 1);
@@ -221,11 +221,11 @@ final class fk extends nc {
                   var7Lifetime1 = var6Lifetime1 + 150;
                   var8Lifetime1 = 16777215;
                   var9Lifetime1 = 0;
-                  oo.f(30, var7Lifetime1 - 35, 580, ((BitmapFont) ((Object) var2)).field_C + (((BitmapFont) ((Object) var2)).field_r + 1), 0, 64);
+                  SoftwareRasterizer.fillRectAlpha(30, var7Lifetime1 - 35, 580, ((BitmapFont) ((Object) var2)).field_C + (((BitmapFont) ((Object) var2)).field_r + 1), 0, 64);
                   var10Lifetime1 = 11;
-                  oo.f(30, -35 + var7Lifetime1, 186, 225, 0, 64);
-                  oo.f(SpriteState.field_q[2] - 58, -35 + var7Lifetime1, 111, 225, 0, 64);
-                  oo.f(-32 + SpriteState.field_q[4], var7Lifetime1 - 35, 65, 225, 0, 64);
+                  SoftwareRasterizer.fillRectAlpha(30, -35 + var7Lifetime1, 186, 225, 0, 64);
+                  SoftwareRasterizer.fillRectAlpha(SpriteState.field_q[2] - 58, -35 + var7Lifetime1, 111, 225, 0, 64);
+                  SoftwareRasterizer.fillRectAlpha(-32 + SpriteState.field_q[4], var7Lifetime1 - 35, 65, 225, 0, 64);
                   ah.field_e.b(gn.field_C, SpriteState.field_q[0], var7Lifetime1, var10Lifetime1, 1);
                   ah.field_e.b(ub.field_tb, SpriteState.field_q[1], var7Lifetime1, var10Lifetime1, 1);
                   ah.field_e.b(ke.field_e, SpriteState.field_q[2], var7Lifetime1, var10Lifetime1, 1);
@@ -289,11 +289,11 @@ final class fk extends nc {
         var7Lifetime2 = var6Lifetime2 + 150;
         var8Lifetime2 = 16777215;
         var9Lifetime2 = 0;
-        oo.f(30, var7Lifetime2 - 35, 580, ((BitmapFont) ((Object) var2)).field_C + (((BitmapFont) ((Object) var2)).field_r + 1), 0, 64);
+        SoftwareRasterizer.fillRectAlpha(30, var7Lifetime2 - 35, 580, ((BitmapFont) ((Object) var2)).field_C + (((BitmapFont) ((Object) var2)).field_r + 1), 0, 64);
         var10Lifetime2 = 11;
-        oo.f(30, -35 + var7Lifetime2, 186, 225, 0, 64);
-        oo.f(SpriteState.field_q[2] - 58, -35 + var7Lifetime2, 111, 225, 0, 64);
-        oo.f(-32 + SpriteState.field_q[4], var7Lifetime2 - 35, 65, 225, 0, 64);
+        SoftwareRasterizer.fillRectAlpha(30, -35 + var7Lifetime2, 186, 225, 0, 64);
+        SoftwareRasterizer.fillRectAlpha(SpriteState.field_q[2] - 58, -35 + var7Lifetime2, 111, 225, 0, 64);
+        SoftwareRasterizer.fillRectAlpha(-32 + SpriteState.field_q[4], var7Lifetime2 - 35, 65, 225, 0, 64);
         ah.field_e.b(gn.field_C, SpriteState.field_q[0], var7Lifetime2, var10Lifetime2, 1);
         ah.field_e.b(ub.field_tb, SpriteState.field_q[1], var7Lifetime2, var10Lifetime2, 1);
         ah.field_e.b(ke.field_e, SpriteState.field_q[2], var7Lifetime2, var10Lifetime2, 1);
@@ -378,7 +378,7 @@ final class fk extends nc {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ug var11 = null;
+        MusicTrack var11 = null;
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param3 != null &&
@@ -388,17 +388,17 @@ final class fk extends nc {
             var7 = param3[1].fullWidth;
             param3[0].g(param0, param4);
             param3[2].g(-var6 + (param1 + param0), param4);
-            oo.a(ki.field_d);
-            oo.e(var5_int + param0, param4, -var6 + param0 + param1, param4 + param3[1].field_u);
+            SoftwareRasterizer.saveClip(ki.field_d);
+            SoftwareRasterizer.intersectClip(var5_int + param0, param4, -var6 + param0 + param1, param4 + param3[1].field_u);
             var8 = var5_int + param0;
             var9 = param0 + param1 - var6;
             for (param0 = var8; param0 < var9; param0 = param0 + var7) {
               param3[1].g(param0, param4);
             }
-            oo.b(ki.field_d);
+            SoftwareRasterizer.restoreClip(ki.field_d);
             if (!param2) {
-              var11 = (ug) null;
-              fk.a((ug) null, false);
+              var11 = (MusicTrack) null;
+              fk.a((MusicTrack) null, false);
             }
             return;
           }
@@ -417,7 +417,7 @@ final class fk extends nc {
         }
     }
 
-    final static void a(ug param0, boolean param1) {
+    final static void a(MusicTrack param0, boolean param1) {
         try {
           ih.a(param1, 256, param0);
         } catch (RuntimeException runtimeException) {

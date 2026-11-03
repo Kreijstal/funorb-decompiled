@@ -5,7 +5,7 @@ final class fd extends id {
     static int field_F;
     boolean field_K;
     static cj field_O;
-    static ef field_G;
+    static BinaryBitmapFont field_G;
     boolean field_H;
     static IntrusiveDeque field_M;
     private boolean field_J;
@@ -144,7 +144,7 @@ final class fd extends id {
         vj.field_p = null;
         PacketBuffer.field_i = null;
         if (param0 <= 124) {
-          field_G = (ef) null;
+          field_G = (BinaryBitmapFont) null;
         }
         tp.field_t = null;
     }

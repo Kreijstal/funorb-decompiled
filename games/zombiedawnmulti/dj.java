@@ -4,7 +4,7 @@
 final class dj extends gf implements fi, qg {
     wk field_n;
     static ak field_k;
-    static ri field_p;
+    static IndexedSprite field_p;
     static int field_m;
     static boolean field_l;
     static String field_o;

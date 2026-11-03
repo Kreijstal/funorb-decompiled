@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rd implements je {
+final class MicrosoftDirectSoundInitializer implements je {
     private com.ms.directX.DSCursors[] field_b;
     private com.ms.directX.DSBufferDesc[] field_a;
 
-    public rd() throws Exception {
+    public MicrosoftDirectSoundInitializer() throws Exception {
         int var1 = 0;
         int var1Lifetime1;
         this.field_b = new com.ms.directX.DSCursors[2];

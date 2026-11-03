@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class rg extends UiWidget implements dh {
     UiWidget field_B;
-    static ri field_C;
+    static IndexedSprite field_C;
     static String field_D;
 
     final void a(Hashtable param0, boolean param1, StringBuilder param2, int param3) {
@@ -135,7 +135,7 @@ abstract class rg extends UiWidget implements dh {
             this.field_B.a(param0, param1, this.field_i + param2, param3, true, this.field_y + param5);
           }
           if (!param4) {
-            field_C = (ri) null;
+            field_C = (IndexedSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -211,7 +211,7 @@ abstract class rg extends UiWidget implements dh {
 
     UiWidget f(int param0) {
         if (param0 != -1963) {
-          field_C = (ri) null;
+          field_C = (IndexedSprite) null;
         }
         UiWidget var2 = this.field_B;
         if (var2 == null) {
@@ -266,7 +266,7 @@ abstract class rg extends UiWidget implements dh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -6208) {
-            field_C = (ri) null;
+            field_C = (IndexedSprite) null;
           }
           if (this.field_B != null &&
             this.field_B.c(127) &&

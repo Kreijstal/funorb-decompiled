@@ -10,7 +10,7 @@ final class q {
 
     final static int a(byte param0, int param1) {
         int var2 = 106 / ((param0 - 18) / 56);
-        return ep.field_k[param1 & 2047];
+        return TriangleRasterizer.field_k[param1 & 2047];
     }
 
     final static void a(int param0) {
@@ -63,6 +63,6 @@ final class q {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static int $cfr$intArgs$a$f0c91481eb80(int param0, int param1) {
         int var2 = 106 / ((param0 - 18) / 56);
-        return ep.field_k[param1 & 2047];
+        return TriangleRasterizer.field_k[param1 & 2047];
     }
 }

@@ -293,8 +293,8 @@ final class sa extends IntrusiveNode {
           var9 = var23 * param1[5] + (var21 * param1[3] + var22 * param1[4]) >> 16 - eq.field_g;
           var10 = param1[8] * var23 + param1[7] * var22 + var21 * param1[6] >> 16 - eq.field_g;
           var11 = param1[11] * var23 + var22 * param1[10] + var21 * param1[9] >> 16;
-          var21 = ep.field_d;
-          var22 = ep.field_c;
+          var21 = TriangleRasterizer.field_d;
+          var22 = TriangleRasterizer.field_c;
           if (param4 != -121) {
             field_n = (ip) null;
           }

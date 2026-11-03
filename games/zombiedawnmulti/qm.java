@@ -144,7 +144,7 @@ final class qm extends WidgetContainer implements fi, in {
           ke.field_h.a(this.field_O, param3 - (-this.field_y - 20), 15 + (this.field_i + param1), this.field_n - 40, this.field_w, 16777215, -1, 1, 0, ke.field_h.field_C);
         }
         if (null != this.field_P) {
-          oo.b(param3 + 10, param1 + 134, -20 + this.field_n, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param3 + 10, param1 + 134, -20 + this.field_n, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

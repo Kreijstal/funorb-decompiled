@@ -8,7 +8,7 @@ final class wj extends IntrusiveNode {
     static String field_j;
     static boolean[] field_l;
     static String field_k;
-    uj field_m;
+    PcmSampleStream field_m;
     static int field_g;
     static String field_f;
 
@@ -72,7 +72,7 @@ final class wj extends IntrusiveNode {
 
     wj(int param0) {
         if (df.field_H) {
-          this.field_m = uj.a(ei.field_a[param0], 100, 256);
+          this.field_m = PcmSampleStream.a(ei.field_a[param0], 100, 256);
           tf.a(this.field_m, (byte) -93);
         }
         if (93 == param0) {

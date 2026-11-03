@@ -159,10 +159,10 @@ final class er extends IntrusiveNode {
         return false;
     }
 
-    final static ef a(ul param0, int param1, int param2, int param3, ul param4) {
+    final static BinaryBitmapFont a(ul param0, int param1, int param2, int param3, ul param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        ef stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -172,7 +172,7 @@ final class er extends IntrusiveNode {
         try {
           if (!ud.a(param1, param4, param3, (byte) -42)) {
             stackIn_2_0 = null;
-            return (ef) (stackIn_2_0);
+            return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param2 != 0) {
             er.a(5);

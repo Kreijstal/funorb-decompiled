@@ -20,7 +20,7 @@ final class ih {
           }
           ud.field_P.a();
           for (var1_int = param0; 0 < var1_int; var1_int--) {
-            oo.d(256, 256, var1_int, -var1_int + 256);
+            SoftwareRasterizer.fillCircle(256, 256, var1_int, -var1_int + 256);
           }
           SocketConnector.field_h.b((byte) 125);
         } catch (RuntimeException runtimeException) {
@@ -28,7 +28,7 @@ final class ih {
         }
     }
 
-    final static void a(boolean param0, int param1, ug param2) {
+    final static void a(boolean param0, int param1, MusicTrack param2) {
         try {
           nc.a(param0, param1, 92, param2);
         } catch (RuntimeException runtimeException) {

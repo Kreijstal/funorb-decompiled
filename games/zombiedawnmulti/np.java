@@ -31,7 +31,7 @@ final class np extends ae {
           }
           pb.field_e.c(Integer.toString(this.field_f - param3), this.field_i >> -param2 + 16, this.field_o >> -param0 + 16, 4, -1);
           pb.field_e.c(Integer.toString(-param3 + this.field_f), -param2 + this.field_n, -param0 + this.field_p, 0, -1);
-          oo.d(this.field_i >> -param2 + 16, this.field_o >> 16 - param0, -param2 + this.field_n, this.field_p - param0, 16711680, 10);
+          SoftwareRasterizer.d(this.field_i >> -param2 + 16, this.field_o >> 16 - param0, -param2 + this.field_n, this.field_p - param0, 16711680, 10);
           return;
         }
         if (this.field_j == 1) {
@@ -39,7 +39,7 @@ final class np extends ae {
         }
         pb.field_e.c(Integer.toString(this.field_f - param3), this.field_i >> -param2 + 16, this.field_o >> -param0 + 16, 4, -1);
         pb.field_e.c(Integer.toString(-param3 + this.field_f), -param2 + this.field_n, -param0 + this.field_p, 0, -1);
-        oo.d(this.field_i >> -param2 + 16, this.field_o >> 16 - param0, -param2 + this.field_n, this.field_p - param0, 16711680, 10);
+        SoftwareRasterizer.d(this.field_i >> -param2 + 16, this.field_o >> 16 - param0, -param2 + this.field_n, this.field_p - param0, 16711680, 10);
     }
 
     np(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

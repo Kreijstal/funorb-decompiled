@@ -10,12 +10,12 @@ final class wq {
     static String[][] field_g;
     static String field_b;
 
-    final static ri a(int param0, String param1, ul param2, String param3) {
+    final static IndexedSprite a(int param0, String param1, ul param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        ri stackIn_1_0 = null;
+        IndexedSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

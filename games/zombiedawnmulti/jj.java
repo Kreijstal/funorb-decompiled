@@ -7,7 +7,7 @@ final class jj extends id {
     private int field_H;
     boolean field_O;
     static String field_I;
-    static ef field_L;
+    static BinaryBitmapFont field_L;
     private int field_N;
     private int field_K;
     int field_Q;

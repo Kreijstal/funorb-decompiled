@@ -193,12 +193,12 @@ final class ki {
               }
             }
             var9 = var9 * 131 / cr.a(param0, -110);
-            oo.a(1, 1, 135, 47, var4, var5);
-            oo.f(2, 2, 133, 30, 16777215, 32);
-            oo.f(3, 3, 101, 28, 65793, 128);
-            oo.f(106, 3, 28, 28, 65793, 128);
-            oo.e(2, 33, 133, 14, 65793);
-            oo.e(3, 34, var9, 12, var6);
+            SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4, var5);
+            SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+            SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+            SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+            SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+            SoftwareRasterizer.fillRect(3, 34, var9, 12, var6);
             if (var7 != null) {
               ((Sprite) (var7)).g(108, 5);
             }
@@ -226,12 +226,12 @@ final class ki {
             var8Lifetime3 = var10Lifetime4;
             var9 = cr.a(param0, -117);
             var9 = var9 * 131 / cr.a(param0, -110);
-            oo.a(1, 1, 135, 47, var4Lifetime3, var5Lifetime3);
-            oo.f(2, 2, 133, 30, 16777215, 32);
-            oo.f(3, 3, 101, 28, 65793, 128);
-            oo.f(106, 3, 28, 28, 65793, 128);
-            oo.e(2, 33, 133, 14, 65793);
-            oo.e(3, 34, var9, 12, var6Lifetime3);
+            SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime3, var5Lifetime3);
+            SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+            SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+            SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+            SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+            SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime3);
             if (var7 != null) {
               ((Sprite) (var7)).g(108, 5);
             }
@@ -252,12 +252,12 @@ final class ki {
             var8Lifetime3 = var10Lifetime5;
           }
           var9 = var9 * 131 / cr.a(param0, -110);
-          oo.a(1, 1, 135, 47, var4Lifetime3, var5Lifetime3);
-          oo.f(2, 2, 133, 30, 16777215, 32);
-          oo.f(3, 3, 101, 28, 65793, 128);
-          oo.f(106, 3, 28, 28, 65793, 128);
-          oo.e(2, 33, 133, 14, 65793);
-          oo.e(3, 34, var9, 12, var6Lifetime3);
+          SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime3, var5Lifetime3);
+          SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+          SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+          SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+          SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+          SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime3);
           if (var7 != null) {
             ((Sprite) (var7)).g(108, 5);
           }
@@ -293,12 +293,12 @@ final class ki {
               }
             }
             var9 = var9 * 131 / cr.a(param0, -110);
-            oo.a(1, 1, 135, 47, var4Lifetime1, var5Lifetime1);
-            oo.f(2, 2, 133, 30, 16777215, 32);
-            oo.f(3, 3, 101, 28, 65793, 128);
-            oo.f(106, 3, 28, 28, 65793, 128);
-            oo.e(2, 33, 133, 14, 65793);
-            oo.e(3, 34, var9, 12, var6Lifetime1);
+            SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime1, var5Lifetime1);
+            SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+            SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+            SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+            SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+            SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime1);
             if (var7 != null) {
               ((Sprite) (var7)).g(108, 5);
             }
@@ -326,12 +326,12 @@ final class ki {
             var8Lifetime1Lifetime1 = var10Lifetime1Lifetime1;
             var9 = cr.a(param0, -117);
             var9 = var9 * 131 / cr.a(param0, -110);
-            oo.a(1, 1, 135, 47, var4Lifetime1Lifetime1, var5Lifetime1Lifetime1);
-            oo.f(2, 2, 133, 30, 16777215, 32);
-            oo.f(3, 3, 101, 28, 65793, 128);
-            oo.f(106, 3, 28, 28, 65793, 128);
-            oo.e(2, 33, 133, 14, 65793);
-            oo.e(3, 34, var9, 12, var6Lifetime1Lifetime1);
+            SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime1Lifetime1, var5Lifetime1Lifetime1);
+            SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+            SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+            SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+            SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+            SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime1Lifetime1);
             if (var7 != null) {
               ((Sprite) (var7)).g(108, 5);
             }
@@ -351,12 +351,12 @@ final class ki {
             var8Lifetime1Lifetime1 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
           }
           var9 = var9 * 131 / cr.a(param0, -110);
-          oo.a(1, 1, 135, 47, var4Lifetime1Lifetime1, var5Lifetime1Lifetime1);
-          oo.f(2, 2, 133, 30, 16777215, 32);
-          oo.f(3, 3, 101, 28, 65793, 128);
-          oo.f(106, 3, 28, 28, 65793, 128);
-          oo.e(2, 33, 133, 14, 65793);
-          oo.e(3, 34, var9, 12, var6Lifetime1Lifetime1);
+          SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime1Lifetime1, var5Lifetime1Lifetime1);
+          SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+          SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+          SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+          SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+          SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime1Lifetime1);
           if (var7 != null) {
             ((Sprite) (var7)).g(108, 5);
           }
@@ -382,12 +382,12 @@ final class ki {
           var8Lifetime2 = vo.field_n;
           var9 = cr.a(param0, -117);
           var9 = var9 * 131 / cr.a(param0, -110);
-          oo.a(1, 1, 135, 47, var4Lifetime2, var5Lifetime2);
-          oo.f(2, 2, 133, 30, 16777215, 32);
-          oo.f(3, 3, 101, 28, 65793, 128);
-          oo.f(106, 3, 28, 28, 65793, 128);
-          oo.e(2, 33, 133, 14, 65793);
-          oo.e(3, 34, var9, 12, var6Lifetime2);
+          SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime2, var5Lifetime2);
+          SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+          SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+          SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+          SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+          SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime2);
           if (var7 != null) {
             ((Sprite) (var7)).g(108, 5);
           }
@@ -405,12 +405,12 @@ final class ki {
           var8Lifetime2 = vl.a(fh.field_d, new String[]{Integer.toString(var9), Integer.toString(cr.a(param0, -83))}, 2);
         }
         var9 = var9 * 131 / cr.a(param0, -110);
-        oo.a(1, 1, 135, 47, var4Lifetime2, var5Lifetime2);
-        oo.f(2, 2, 133, 30, 16777215, 32);
-        oo.f(3, 3, 101, 28, 65793, 128);
-        oo.f(106, 3, 28, 28, 65793, 128);
-        oo.e(2, 33, 133, 14, 65793);
-        oo.e(3, 34, var9, 12, var6Lifetime2);
+        SoftwareRasterizer.fillRectGradient(1, 1, 135, 47, var4Lifetime2, var5Lifetime2);
+        SoftwareRasterizer.fillRectAlpha(2, 2, 133, 30, 16777215, 32);
+        SoftwareRasterizer.fillRectAlpha(3, 3, 101, 28, 65793, 128);
+        SoftwareRasterizer.fillRectAlpha(106, 3, 28, 28, 65793, 128);
+        SoftwareRasterizer.fillRect(2, 33, 133, 14, 65793);
+        SoftwareRasterizer.fillRect(3, 34, var9, 12, var6Lifetime2);
         if (var7 != null) {
           ((Sprite) (var7)).g(108, 5);
         }

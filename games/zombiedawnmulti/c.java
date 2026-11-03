@@ -328,7 +328,7 @@ final class c {
             nb.field_a.b(3016, pj.field_I);
           }
           pj.field_I.a(param3, param2, 66, param0);
-          oo.b();
+          SoftwareRasterizer.clear();
           int var4_int = 30 % ((param1 + 45) / 37);
           wj.b(true, -114);
         } catch (RuntimeException runtimeException) {

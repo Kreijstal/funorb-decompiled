@@ -12,7 +12,7 @@ final class mb extends IntrusiveNode {
     static Sprite field_j;
     static int[] field_n;
     int field_o;
-    uj field_C;
+    PcmSampleStream field_C;
     int field_B;
     nj field_h;
     int field_l;
@@ -24,7 +24,7 @@ final class mb extends IntrusiveNode {
     int field_w;
     static String field_u;
     int field_y;
-    jd field_f;
+    PcmSample field_f;
     int field_r;
     int field_s;
     int field_z;

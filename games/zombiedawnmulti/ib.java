@@ -91,7 +91,7 @@ final class ib implements WidgetActionListener {
         eb.field_p = true;
     }
 
-    final static we a(byte param0, jd param1) {
+    final static we a(byte param0, PcmSample param1) {
         RuntimeException var2 = null;
         we stackIn_2_0 = null;
         we stackIn_4_0 = null;
@@ -101,7 +101,7 @@ final class ib implements WidgetActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 112) {
-            stackIn_4_0 = tf.a(uj.a(param1, 100, 96), (byte) -98);
+            stackIn_4_0 = tf.a(PcmSampleStream.a(param1, 100, 96), (byte) -98);
             return stackIn_4_0;
           }
           stackIn_2_0 = (we) null;

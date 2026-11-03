@@ -27,7 +27,7 @@ final class qh {
     }
 
     final static void a(int param0, int param1, rp param2, int param3, int param4, int param5) {
-        ef var6 = null;
+        BinaryBitmapFont var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -51,8 +51,8 @@ final class qh {
           if (hh.field_h == null) {
             hh.field_h = new Sprite(12, 32);
             g.c(hh.field_h);
-            oo.a(0, 0, 12, 16, 65280, 16776960);
-            oo.a(0, 16, 12, 17, 16776960, 16711680);
+            SoftwareRasterizer.fillRectGradient(0, 0, 12, 16, 65280, 16776960);
+            SoftwareRasterizer.fillRectGradient(0, 16, 12, 17, 16776960, 16711680);
             g.d();
           }
           if (param1 != -29990) {
@@ -60,7 +60,7 @@ final class qh {
           }
           hh.field_h.c(param4 + 80, 36 + param3, param5);
           var9 = var7 * 31 / var8;
-          oo.f(param4 + 80, param3 + 36, 12, 31 - var9, 1, param5);
+          SoftwareRasterizer.fillRectAlpha(param4 + 80, param3 + 36, 12, 31 - var9, 1, param5);
           wa.field_b[-44 + param0 + 26].c(18 + param4, param3 + 44, param5);
           ((BitmapFont) ((Object) var6)).a(gh.field_f[param0], param4 + 4, -7 + param3, 54, 90, 16777215, 1, param5, 1, 1, ((BitmapFont) ((Object) var6)).field_C + ((BitmapFont) ((Object) var6)).field_r);
           var10 = new Random();

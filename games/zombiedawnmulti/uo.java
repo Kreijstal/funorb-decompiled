@@ -6,7 +6,7 @@ final class uo extends ae {
     private int field_l;
     private int field_k;
     private int field_m;
-    static ri field_n;
+    static IndexedSprite field_n;
     private int field_i;
 
     public static void c(byte param0) {

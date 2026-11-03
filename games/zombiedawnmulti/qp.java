@@ -8,7 +8,7 @@ final class qp extends un {
     static String[] field_s;
     static String field_r;
     static Sprite[] field_u;
-    static ef field_w;
+    static BinaryBitmapFont field_w;
 
     public static void h(int param0) {
         field_s = null;
@@ -23,14 +23,14 @@ final class qp extends un {
     }
 
     final static int a(int param0, byte param1, int param2, int param3) {
-        if (!(oo.field_b < param0 + param2)) {
+        if (!(SoftwareRasterizer.field_b < param0 + param2)) {
           return param0;
         }
         int var4 = -6 % ((-7 - param1) / 32);
         if (-param2 + (param3 + param0) >= 0) {
           return -param2 + param0 + param3;
         }
-        return oo.field_b - param2;
+        return SoftwareRasterizer.field_b - param2;
     }
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {

@@ -265,12 +265,12 @@ final class gg {
     final static void a(int param0, boolean param1) {
         if (mh.field_h > 0 &&
           ee.field_a) {
-          oo.f(0, 0, oo.field_b, ImageProducerRasterBuffer.field_k.field_qb);
+          SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, ImageProducerRasterBuffer.field_k.field_qb);
           lm.field_gb.c(param1, -1);
         }
         if ((sq.field_Q > 0 || InflaterDecompressor.field_a > 0) &&
           io.field_b) {
-          oo.f(0, 0, oo.field_b, ImageProducerRasterBuffer.field_k.field_qb);
+          SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, ImageProducerRasterBuffer.field_k.field_qb);
           qf.field_b.c(param1, -1);
         }
         int var2 = 2 / ((param0 + 11) / 49);

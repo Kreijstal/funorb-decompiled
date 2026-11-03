@@ -100,7 +100,7 @@ public final class ZombieDawnMulti extends aq {
             field_L = (Sprite[][]) null;
           }
           if (n.a((byte) -50)) {
-            oo.f(0, 0, oo.field_b, oo.field_l);
+            SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
             sc.a(0);
             var3 = iq.a(45);
             var4 = 0;
@@ -133,7 +133,7 @@ public final class ZombieDawnMulti extends aq {
           if (0 != er.field_i) {
             var3_intLifetime1 = gk.field_b * 256 / 32;
             if (0 < var3_intLifetime1) {
-              oo.f(0, 0, oo.field_b, oo.field_l, 0, var3_intLifetime1);
+              SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l, 0, var3_intLifetime1);
             }
           }
           boolean decompiledSharedTail0 = (!(cq.a(15000)) ||
@@ -150,7 +150,7 @@ public final class ZombieDawnMulti extends aq {
           }
           if ((decompiledSharedTail0) && (GameCharacter.k((byte) 113) &&
             !n.a((byte) -39))) {
-            oo.f(0, 0, oo.field_b, oo.field_l);
+            SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
             oe.a(oi.field_h[0].width, oi.field_h[0].height, oi.field_h, (byte) -21);
           }
           if (kj.field_q >= 2 &&
@@ -1120,10 +1120,10 @@ public final class ZombieDawnMulti extends aq {
 
     private final boolean c(boolean param0, int param1) {
         int var3_int = 0;
-        ri[] var3 = null;
+        IndexedSprite[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        ri var5 = null;
+        IndexedSprite var5 = null;
         int var6 = 0;
         Sprite[] stackIn_160_0 = null;
         int stackIn_160_1 = 0;
@@ -1175,45 +1175,45 @@ public final class ZombieDawnMulti extends aq {
                                         ub.m(-121);
                                         this.g(-30169);
                                         gd.field_Q = new me(pf.field_b, rn.field_e);
-                                        ei.field_a[68] = jc.a(pf.field_b, "", "zombie_dawn_menu_button").a();
-                                        ei.field_a[69] = jc.a(pf.field_b, "", "zombie_dawn_menu_screen_mouseover").a();
-                                        ei.field_a[0] = jc.a(pf.field_b, "", "zombie_detonate").a();
-                                        ei.field_a[44] = jc.a(pf.field_b, "", "zombie_dawn_gunfire").a();
-                                        ei.field_a[45] = jc.a(pf.field_b, "", "zombie_dawn_shotgun_fire").a();
-                                        ei.field_a[8] = jc.a(pf.field_b, "", "zombie_dawn_machinegun_fire").a();
-                                        ei.field_a[20] = jc.a(pf.field_b, "", "zombie_dawn_click_mouse").a();
-                                        ei.field_a[30] = jc.a(pf.field_b, "", "zombie_dawn_thump_1").a();
-                                        ei.field_a[31] = jc.a(pf.field_b, "", "zombie_dawn_thump_2").a();
-                                        ei.field_a[32] = jc.a(pf.field_b, "", "zombie_dawn_swipe_1").a();
-                                        ei.field_a[33] = jc.a(pf.field_b, "", "zombie_dawn_swipe_2").a();
-                                        ei.field_a[34] = jc.a(pf.field_b, "", "zombie_dawn_slap_1").a();
-                                        ei.field_a[47] = jc.a(pf.field_b, "", "zombie_dawn_second_tick").a();
-                                        ei.field_a[53] = jc.a(pf.field_b, "", "zombie_dawn_reactor_ambience").a();
-                                        ei.field_a[54] = jc.a(pf.field_b, "", "zombie_dawn_score_10").a();
-                                        ei.field_a[55] = jc.a(pf.field_b, "", "zombie_dawn_score_20").a();
-                                        ei.field_a[56] = jc.a(pf.field_b, "", "zombie_dawn_score_30").a();
-                                        ei.field_a[57] = jc.a(pf.field_b, "", "zombie_dawn_countup_victims").a();
-                                        ei.field_a[58] = jc.a(pf.field_b, "", "zombie_dawn_countup_score").a();
-                                        ei.field_a[59] = jc.a(pf.field_b, "", "zombie_dawn_click_mouse_wrong").a();
-                                        ei.field_a[63] = jc.a(pf.field_b, "", "zombie_dawn_gun_empty").a();
-                                        ei.field_a[12] = jc.a(pf.field_b, "", "zombie_dawn_squelch_3").a();
-                                        ei.field_a[66] = jc.a(pf.field_b, "", "zombie_dawn_squelch_2_AND_3").a();
-                                        ei.field_a[64] = jc.a(pf.field_b, "", "zombie_dawn_smash_wood_and_glass_1").a();
-                                        ei.field_a[65] = jc.a(pf.field_b, "", "zombie_dawn_smash_wood_and_glass_2").a();
-                                        ei.field_a[67] = jc.a(pf.field_b, "", "zombie_dawn_use_powerup").a();
-                                        ei.field_a[36] = jc.a(pf.field_b, "", "zombie_dawn_bounce").a();
-                                        ei.field_a[35] = jc.a(pf.field_b, "", "zd_multi_hammer").a();
-                                        ei.field_a[81] = jc.a(pf.field_b, "", "zd_multi_barrier").a();
-                                        ei.field_a[82] = jc.a(pf.field_b, "", "zd_multi_bonefall").a();
-                                        ei.field_a[83] = jc.a(pf.field_b, "", "zd_multi_breach").a();
-                                        ei.field_a[84] = jc.a(pf.field_b, "", "zd_multi_charm").a();
-                                        ei.field_a[85] = jc.a(pf.field_b, "", "zd_multi_fireball").a();
-                                        ei.field_a[86] = jc.a(pf.field_b, "", "zd_multi_haze").a();
-                                        ei.field_a[87] = jc.a(pf.field_b, "", "zd_multi_place_ability").a();
-                                        ei.field_a[88] = jc.a(pf.field_b, "", "zd_multi_portal_ambience").a();
-                                        ei.field_a[89] = jc.a(pf.field_b, "", "zd_multi_quake").a();
-                                        ei.field_a[90] = jc.a(pf.field_b, "", "zd_multi_select_ability").a();
-                                        ei.field_a[91] = jc.a(pf.field_b, "", "zd_multi_select_tree").a();
+                                        ei.field_a[68] = SoundEffect.a(pf.field_b, "", "zombie_dawn_menu_button").toPcmSample();
+                                        ei.field_a[69] = SoundEffect.a(pf.field_b, "", "zombie_dawn_menu_screen_mouseover").toPcmSample();
+                                        ei.field_a[0] = SoundEffect.a(pf.field_b, "", "zombie_detonate").toPcmSample();
+                                        ei.field_a[44] = SoundEffect.a(pf.field_b, "", "zombie_dawn_gunfire").toPcmSample();
+                                        ei.field_a[45] = SoundEffect.a(pf.field_b, "", "zombie_dawn_shotgun_fire").toPcmSample();
+                                        ei.field_a[8] = SoundEffect.a(pf.field_b, "", "zombie_dawn_machinegun_fire").toPcmSample();
+                                        ei.field_a[20] = SoundEffect.a(pf.field_b, "", "zombie_dawn_click_mouse").toPcmSample();
+                                        ei.field_a[30] = SoundEffect.a(pf.field_b, "", "zombie_dawn_thump_1").toPcmSample();
+                                        ei.field_a[31] = SoundEffect.a(pf.field_b, "", "zombie_dawn_thump_2").toPcmSample();
+                                        ei.field_a[32] = SoundEffect.a(pf.field_b, "", "zombie_dawn_swipe_1").toPcmSample();
+                                        ei.field_a[33] = SoundEffect.a(pf.field_b, "", "zombie_dawn_swipe_2").toPcmSample();
+                                        ei.field_a[34] = SoundEffect.a(pf.field_b, "", "zombie_dawn_slap_1").toPcmSample();
+                                        ei.field_a[47] = SoundEffect.a(pf.field_b, "", "zombie_dawn_second_tick").toPcmSample();
+                                        ei.field_a[53] = SoundEffect.a(pf.field_b, "", "zombie_dawn_reactor_ambience").toPcmSample();
+                                        ei.field_a[54] = SoundEffect.a(pf.field_b, "", "zombie_dawn_score_10").toPcmSample();
+                                        ei.field_a[55] = SoundEffect.a(pf.field_b, "", "zombie_dawn_score_20").toPcmSample();
+                                        ei.field_a[56] = SoundEffect.a(pf.field_b, "", "zombie_dawn_score_30").toPcmSample();
+                                        ei.field_a[57] = SoundEffect.a(pf.field_b, "", "zombie_dawn_countup_victims").toPcmSample();
+                                        ei.field_a[58] = SoundEffect.a(pf.field_b, "", "zombie_dawn_countup_score").toPcmSample();
+                                        ei.field_a[59] = SoundEffect.a(pf.field_b, "", "zombie_dawn_click_mouse_wrong").toPcmSample();
+                                        ei.field_a[63] = SoundEffect.a(pf.field_b, "", "zombie_dawn_gun_empty").toPcmSample();
+                                        ei.field_a[12] = SoundEffect.a(pf.field_b, "", "zombie_dawn_squelch_3").toPcmSample();
+                                        ei.field_a[66] = SoundEffect.a(pf.field_b, "", "zombie_dawn_squelch_2_AND_3").toPcmSample();
+                                        ei.field_a[64] = SoundEffect.a(pf.field_b, "", "zombie_dawn_smash_wood_and_glass_1").toPcmSample();
+                                        ei.field_a[65] = SoundEffect.a(pf.field_b, "", "zombie_dawn_smash_wood_and_glass_2").toPcmSample();
+                                        ei.field_a[67] = SoundEffect.a(pf.field_b, "", "zombie_dawn_use_powerup").toPcmSample();
+                                        ei.field_a[36] = SoundEffect.a(pf.field_b, "", "zombie_dawn_bounce").toPcmSample();
+                                        ei.field_a[35] = SoundEffect.a(pf.field_b, "", "zd_multi_hammer").toPcmSample();
+                                        ei.field_a[81] = SoundEffect.a(pf.field_b, "", "zd_multi_barrier").toPcmSample();
+                                        ei.field_a[82] = SoundEffect.a(pf.field_b, "", "zd_multi_bonefall").toPcmSample();
+                                        ei.field_a[83] = SoundEffect.a(pf.field_b, "", "zd_multi_breach").toPcmSample();
+                                        ei.field_a[84] = SoundEffect.a(pf.field_b, "", "zd_multi_charm").toPcmSample();
+                                        ei.field_a[85] = SoundEffect.a(pf.field_b, "", "zd_multi_fireball").toPcmSample();
+                                        ei.field_a[86] = SoundEffect.a(pf.field_b, "", "zd_multi_haze").toPcmSample();
+                                        ei.field_a[87] = SoundEffect.a(pf.field_b, "", "zd_multi_place_ability").toPcmSample();
+                                        ei.field_a[88] = SoundEffect.a(pf.field_b, "", "zd_multi_portal_ambience").toPcmSample();
+                                        ei.field_a[89] = SoundEffect.a(pf.field_b, "", "zd_multi_quake").toPcmSample();
+                                        ei.field_a[90] = SoundEffect.a(pf.field_b, "", "zd_multi_select_ability").toPcmSample();
+                                        ei.field_a[91] = SoundEffect.a(pf.field_b, "", "zd_multi_select_tree").toPcmSample();
                                         pf.field_b = null;
                                         IsaacRandom.d(26673);
                                         return false;
@@ -1263,39 +1263,39 @@ public final class ZombieDawnMulti extends aq {
           if (rn.field_e != null) {
             qm.a(70.0f, 80, dn.field_b);
             this.g(-30169);
-            ei.field_a[37] = ac.a(rn.field_e, "", "zombie_dawn_human_female_ow").c();
-            ei.field_a[38] = ac.a(rn.field_e, "", "zombie_dawn_human_female_eek").c();
-            ei.field_a[39] = ac.a(rn.field_e, "", "zombie_dawn_human_female_oof").c();
-            ei.field_a[40] = ac.a(rn.field_e, "", "zombie_dawn_human_male_oof").c();
-            ei.field_a[41] = ac.a(rn.field_e, "", "zombie_dawn_human_male_argh").c();
-            ei.field_a[42] = ac.a(rn.field_e, "", "zombie_dawn_human_male_urgh").c();
-            ei.field_a[43] = ac.a(rn.field_e, "", "zombie_dawn_human_male_uuh").c();
-            ei.field_a[46] = ac.a(rn.field_e, "", "zombie_dawn_use_powerup").c();
-            ei.field_a[48] = ac.a(rn.field_e, "", "zombie_dawn_cinema_ambience").c();
-            ei.field_a[26] = ac.a(rn.field_e, "", "zombie_dawn_female_scream_1").c();
-            ei.field_a[27] = ac.a(rn.field_e, "", "zombie_dawn_female_scream_2").c();
-            ei.field_a[28] = ac.a(rn.field_e, "", "zombie_dawn_female_scream_4").c();
+            ei.field_a[37] = VorbisSample.a(rn.field_e, "", "zombie_dawn_human_female_ow").decodeAllToPcm();
+            ei.field_a[38] = VorbisSample.a(rn.field_e, "", "zombie_dawn_human_female_eek").decodeAllToPcm();
+            ei.field_a[39] = VorbisSample.a(rn.field_e, "", "zombie_dawn_human_female_oof").decodeAllToPcm();
+            ei.field_a[40] = VorbisSample.a(rn.field_e, "", "zombie_dawn_human_male_oof").decodeAllToPcm();
+            ei.field_a[41] = VorbisSample.a(rn.field_e, "", "zombie_dawn_human_male_argh").decodeAllToPcm();
+            ei.field_a[42] = VorbisSample.a(rn.field_e, "", "zombie_dawn_human_male_urgh").decodeAllToPcm();
+            ei.field_a[43] = VorbisSample.a(rn.field_e, "", "zombie_dawn_human_male_uuh").decodeAllToPcm();
+            ei.field_a[46] = VorbisSample.a(rn.field_e, "", "zombie_dawn_use_powerup").decodeAllToPcm();
+            ei.field_a[48] = VorbisSample.a(rn.field_e, "", "zombie_dawn_cinema_ambience").decodeAllToPcm();
+            ei.field_a[26] = VorbisSample.a(rn.field_e, "", "zombie_dawn_female_scream_1").decodeAllToPcm();
+            ei.field_a[27] = VorbisSample.a(rn.field_e, "", "zombie_dawn_female_scream_2").decodeAllToPcm();
+            ei.field_a[28] = VorbisSample.a(rn.field_e, "", "zombie_dawn_female_scream_4").decodeAllToPcm();
             ei.field_a[29] = ei.field_a[28];
-            ei.field_a[49] = ac.a(rn.field_e, "", "zombie_dawn_male_scream_1").c();
-            ei.field_a[50] = ac.a(rn.field_e, "", "zombie_dawn_male_scream_2").c();
-            ei.field_a[51] = ac.a(rn.field_e, "", "zombie_dawn_male_scream_3").c();
-            ei.field_a[52] = ac.a(rn.field_e, "", "zombie_dawn_female_scream_3").c();
-            ei.field_a[9] = ac.a(rn.field_e, "", "zombie_dawn_collect_powerup").c();
-            ei.field_a[15] = ac.a(rn.field_e, "", "zombie_chase_human_male").c();
-            ei.field_a[25] = ac.a(rn.field_e, "", "zombie_chase_human_female").c();
-            ei.field_a[17] = ac.a(rn.field_e, "", "zombie_screech").c();
-            ei.field_a[70] = ac.a(rn.field_e, "", "zombie_groan_short_1").c();
-            ei.field_a[71] = ac.a(rn.field_e, "", "zombie_groan_short_2").c();
-            ei.field_a[72] = ac.a(rn.field_e, "", "zombie_groan_female_3").c();
-            ei.field_a[73] = ac.a(rn.field_e, "", "zombie_groan_female_4").c();
-            ei.field_a[93] = ac.a(rn.field_e, "", "zd_multi_bird_twitter").c();
-            ei.field_a[92] = ac.a(rn.field_e, "", "zd_multi_cloak_of_fear").c();
-            ei.field_a[75] = ac.a(rn.field_e, "", "zd_multi_counter").c();
-            ei.field_a[76] = ac.a(rn.field_e, "", "ZD_multi_human_into_portal_female").c();
-            ei.field_a[77] = ac.a(rn.field_e, "", "ZD_multi_human_into_portal_male").c();
-            ei.field_a[78] = ac.a(rn.field_e, "", "zd_multi_zombie_into_portal").c();
-            ei.field_a[79] = ac.a(rn.field_e, "", "zd_multi_into_portal_opponent").c();
-            ei.field_a[80] = ac.a(rn.field_e, "", "zd_multi_shackles").c();
+            ei.field_a[49] = VorbisSample.a(rn.field_e, "", "zombie_dawn_male_scream_1").decodeAllToPcm();
+            ei.field_a[50] = VorbisSample.a(rn.field_e, "", "zombie_dawn_male_scream_2").decodeAllToPcm();
+            ei.field_a[51] = VorbisSample.a(rn.field_e, "", "zombie_dawn_male_scream_3").decodeAllToPcm();
+            ei.field_a[52] = VorbisSample.a(rn.field_e, "", "zombie_dawn_female_scream_3").decodeAllToPcm();
+            ei.field_a[9] = VorbisSample.a(rn.field_e, "", "zombie_dawn_collect_powerup").decodeAllToPcm();
+            ei.field_a[15] = VorbisSample.a(rn.field_e, "", "zombie_chase_human_male").decodeAllToPcm();
+            ei.field_a[25] = VorbisSample.a(rn.field_e, "", "zombie_chase_human_female").decodeAllToPcm();
+            ei.field_a[17] = VorbisSample.a(rn.field_e, "", "zombie_screech").decodeAllToPcm();
+            ei.field_a[70] = VorbisSample.a(rn.field_e, "", "zombie_groan_short_1").decodeAllToPcm();
+            ei.field_a[71] = VorbisSample.a(rn.field_e, "", "zombie_groan_short_2").decodeAllToPcm();
+            ei.field_a[72] = VorbisSample.a(rn.field_e, "", "zombie_groan_female_3").decodeAllToPcm();
+            ei.field_a[73] = VorbisSample.a(rn.field_e, "", "zombie_groan_female_4").decodeAllToPcm();
+            ei.field_a[93] = VorbisSample.a(rn.field_e, "", "zd_multi_bird_twitter").decodeAllToPcm();
+            ei.field_a[92] = VorbisSample.a(rn.field_e, "", "zd_multi_cloak_of_fear").decodeAllToPcm();
+            ei.field_a[75] = VorbisSample.a(rn.field_e, "", "zd_multi_counter").decodeAllToPcm();
+            ei.field_a[76] = VorbisSample.a(rn.field_e, "", "ZD_multi_human_into_portal_female").decodeAllToPcm();
+            ei.field_a[77] = VorbisSample.a(rn.field_e, "", "ZD_multi_human_into_portal_male").decodeAllToPcm();
+            ei.field_a[78] = VorbisSample.a(rn.field_e, "", "zd_multi_zombie_into_portal").decodeAllToPcm();
+            ei.field_a[79] = VorbisSample.a(rn.field_e, "", "zd_multi_into_portal_opponent").decodeAllToPcm();
+            ei.field_a[80] = VorbisSample.a(rn.field_e, "", "zd_multi_shackles").decodeAllToPcm();
             rn.field_e = null;
             IsaacRandom.d(26673);
             return false;
@@ -1303,17 +1303,17 @@ public final class ZombieDawnMulti extends aq {
           if (null != df.field_M) {
             qm.a(75.0f, 80, me.field_e);
             this.g(-30169);
-            hl.field_d[0] = ug.a(df.field_M, "", "ZD_multi_TITLESCREEn");
-            hl.field_d[10] = ug.a(df.field_M, "", "ZD_multi_laboratory");
-            hl.field_d[12] = ug.a(df.field_M, "", "ZD_multi_PANIC_LOOP");
-            hl.field_d[11] = ug.a(df.field_M, "", "ZD_multi_GAME_FINISH");
-            hl.field_d[13] = ug.a(df.field_M, "", "ZD_multi_GAME_WIN");
-            hl.field_d[14] = ug.a(df.field_M, "", "ZD_multi_GAME_LOSE");
-            hl.field_d[1] = ug.a(df.field_M, "", "zombie dawn mall");
-            hl.field_d[2] = ug.a(df.field_M, "", "zombie dawn powerplant");
-            hl.field_d[3] = ug.a(df.field_M, "", "zombie dawn precinct");
-            hl.field_d[4] = ug.a(df.field_M, "", "zombie dawn white house");
-            hl.field_d[9] = ug.a(df.field_M, "", "zombie dawn instructions loop");
+            hl.field_d[0] = MusicTrack.a(df.field_M, "", "ZD_multi_TITLESCREEn");
+            hl.field_d[10] = MusicTrack.a(df.field_M, "", "ZD_multi_laboratory");
+            hl.field_d[12] = MusicTrack.a(df.field_M, "", "ZD_multi_PANIC_LOOP");
+            hl.field_d[11] = MusicTrack.a(df.field_M, "", "ZD_multi_GAME_FINISH");
+            hl.field_d[13] = MusicTrack.a(df.field_M, "", "ZD_multi_GAME_WIN");
+            hl.field_d[14] = MusicTrack.a(df.field_M, "", "ZD_multi_GAME_LOSE");
+            hl.field_d[1] = MusicTrack.a(df.field_M, "", "zombie dawn mall");
+            hl.field_d[2] = MusicTrack.a(df.field_M, "", "zombie dawn powerplant");
+            hl.field_d[3] = MusicTrack.a(df.field_M, "", "zombie dawn precinct");
+            hl.field_d[4] = MusicTrack.a(df.field_M, "", "zombie dawn white house");
+            hl.field_d[9] = MusicTrack.a(df.field_M, "", "zombie dawn instructions loop");
             df.field_M = null;
             IsaacRandom.d(26673);
             return false;
@@ -1388,7 +1388,7 @@ public final class ZombieDawnMulti extends aq {
             pb.field_e = pj.a(ii.field_a, 4, cg.field_n, "font_medium", "");
             lf.a(pb.field_e, 0);
             vc.a(true);
-            a.field_a = new ri[7][];
+            a.field_a = new IndexedSprite[7][];
             a.field_a[0] = InflaterDecompressor.a("cursor_grab", ii.field_a, (byte) 19, "");
             a.field_a[1] = InflaterDecompressor.a("cursor_point", ii.field_a, (byte) 19, "");
             a.field_a[6] = InflaterDecompressor.a("cursor_point_forbidden", ii.field_a, (byte) 19, "");
@@ -1756,7 +1756,7 @@ public final class ZombieDawnMulti extends aq {
           mh.a(17);
           MouseInputHandler.a(-1);
           MouseWheelInput.a(54);
-          oo.a();
+          SoftwareRasterizer.clearStatics();
           PacketBuffer.b(false);
           bl.b(0);
           v.a(true);
@@ -1783,7 +1783,7 @@ public final class ZombieDawnMulti extends aq {
           IntrusiveNode.b((byte) 48);
           SpriteState.e(-119);
           DualLinkNode.a((byte) 43);
-          ep.c();
+          TriangleRasterizer.c();
           pk.a(619119521);
           qf.a(241);
           jk.a(2);
@@ -1821,7 +1821,7 @@ public final class ZombieDawnMulti extends aq {
           gd.e(0);
           f.a((byte) -44);
           mb.b(false);
-          mm.d();
+          MidiFileReader.d();
           ba.d(16652);
           PcmPlayerService.b();
           w.a((byte) -83);
@@ -1858,8 +1858,8 @@ public final class ZombieDawnMulti extends aq {
           sk.a(-1020346174);
           wp.a((byte) 26);
           rh.a();
-          ac.a();
-          kl.a();
+          VorbisSample.releaseStatics();
+          VorbisFloor1.releaseStatics();
           jp.b((byte) -80);
           hh.a(true);
           vo.f(-14680);
@@ -1934,7 +1934,7 @@ public final class ZombieDawnMulti extends aq {
           qc.c((byte) 109);
           qq.a((byte) 21);
           t.a((byte) 4);
-          wo.a();
+          Bzip2Decoder.a();
           eb.a(true);
           lp.a(-97);
           hj.a(27964);
@@ -2014,7 +2014,7 @@ public final class ZombieDawnMulti extends aq {
           pj.c(true);
           ud.f(38);
           wm.h((byte) 107);
-          uh.a();
+          AudioFilter.releaseStatics();
           bi.a(4302);
           nb.a((byte) 119);
           wk.h(-127);

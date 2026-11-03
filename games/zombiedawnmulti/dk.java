@@ -58,7 +58,7 @@ final class dk extends cj {
         boolean stackIn_125_1 = false;
         cj stackIn_128_0 = null;
         boolean stackIn_129_1 = false;
-        nm.a(oo.field_b - 640 >> 1, oo.field_l, (byte) 105, 640 + oo.field_b >> 1, 0);
+        nm.a(SoftwareRasterizer.field_b - 640 >> 1, SoftwareRasterizer.field_l, (byte) 105, 640 + SoftwareRasterizer.field_b >> 1, 0);
         if (param1 != -7579) {
           dk.c((byte) -88);
           if (0 < mh.field_h) {

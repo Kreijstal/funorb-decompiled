@@ -178,7 +178,7 @@ final class m extends tb {
         if (var1 == null) {
           var1 = new il();
         }
-        var1.a(oo.field_e, oo.field_d, oo.field_g, (byte) -120, oo.field_i, oo.field_f, oo.field_b, oo.field_l);
+        var1.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_d, SoftwareRasterizer.field_g, (byte) -120, SoftwareRasterizer.field_i, SoftwareRasterizer.field_f, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
         if (param0 == 540) {
           mo.field_Fb.a(var1, false);
           return;
@@ -201,7 +201,7 @@ final class m extends tb {
         java.awt.Frame var7 = null;
         int var9 = 0;
         sm[] var10 = null;
-        di var11 = null;
+        PlatformTask var11 = null;
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (!param1.a(-96)) {

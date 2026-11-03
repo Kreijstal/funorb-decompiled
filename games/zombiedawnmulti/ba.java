@@ -77,7 +77,7 @@ final class ba extends PcmStream {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        uj var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -104,9 +104,9 @@ final class ba extends PcmStream {
               }
               var11 = param3.field_C;
               if (this.field_n.field_y[param3.field_o] == 0) {
-                param3.field_C = uj.a(param3.field_f, var11.l(), var11.h(), var11.g());
+                param3.field_C = PcmSampleStream.a(param3.field_f, var11.l(), var11.h(), var11.g());
               } else {
-                param3.field_C = uj.a(param3.field_f, var11.l(), 0, var11.g());
+                param3.field_C = PcmSampleStream.a(param3.field_f, var11.l(), 0, var11.g());
                 stackIn_13_0 = this.field_n;
                 stackIn_14_1 = !(param3.field_x.field_g[param3.field_p] >= 0);
                 ((gd) (Object) stackIn_13_0).a(stackIn_14_1, (byte) -76, param3);
@@ -174,12 +174,12 @@ final class ba extends PcmStream {
             param0.field_w = param0.field_w + var4_int * param1 & 1048575;
             if (param1 >= var5) {
               if (0 != this.field_n.field_y[param0.field_o]) {
-                param0.field_C = uj.a(param0.field_f, param0.field_C.l(), 0, param0.field_C.g());
+                param0.field_C = PcmSampleStream.a(param0.field_f, param0.field_C.l(), 0, param0.field_C.g());
                 stackIn_7_0 = this.field_n;
                 stackIn_8_1 = !(0 <= param0.field_x.field_g[param0.field_p]);
                 ((gd) (Object) stackIn_7_0).a(stackIn_8_1, (byte) -80, param0);
               } else {
-                param0.field_C = uj.a(param0.field_f, param0.field_C.l(), param0.field_C.h(), param0.field_C.g());
+                param0.field_C = PcmSampleStream.a(param0.field_f, param0.field_C.l(), param0.field_C.h(), param0.field_C.g());
               }
               if (param0.field_x.field_g[param0.field_p] < 0) {
                 param0.field_C.g(-1);

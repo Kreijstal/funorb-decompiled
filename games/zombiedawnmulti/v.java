@@ -3,7 +3,7 @@
  */
 final class v {
     static String field_g;
-    static ri field_e;
+    static IndexedSprite field_e;
     static int field_f;
     static int[] field_b;
     private static long[] field_d;
@@ -14,8 +14,8 @@ final class v {
         int var1 = (kp.field_l - 640) / 2;
         int var2 = b.field_d * b.field_d;
         int var3 = var2 - mh.field_h * mh.field_h;
-        qe.field_k.a(-4 + (-120 + oo.field_l) - 90, 90, 199, -(var3 * param0 / var2) + var1, -3344);
-        cm.field_a.a(-120 + (oo.field_l - 4), 0, 438, var1 + 202 + var3 * 438 / var2, -3344);
+        qe.field_k.a(-4 + (-120 + SoftwareRasterizer.field_l) - 90, 90, 199, -(var3 * param0 / var2) + var1, -3344);
+        cm.field_a.a(-120 + (SoftwareRasterizer.field_l - 4), 0, 438, var1 + 202 + var3 * 438 / var2, -3344);
     }
 
     public static void a(boolean param0) {

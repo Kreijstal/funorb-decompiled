@@ -368,12 +368,12 @@ final class si extends nc {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackIn_31_0 = 0;
-        sl stackIn_33_0;
+        PaletteBitmapFont stackIn_33_0;
         String stackIn_33_1;
         int stackIn_33_2;
         int stackIn_33_3;
         int stackIn_34_4 = 0;
-        sl stackIn_40_0;
+        PaletteBitmapFont stackIn_40_0;
         String stackIn_40_1;
         int stackIn_40_2;
         int stackIn_40_3;
@@ -385,24 +385,24 @@ final class si extends nc {
         int stackIn_45_4;
         int stackIn_46_5;
         int stackIn_51_0 = 0;
-        ef stackIn_65_0;
+        BinaryBitmapFont stackIn_65_0;
         String stackIn_65_1;
         int stackIn_65_2;
         int stackIn_65_3;
         int stackIn_66_4;
         int stackIn_87_0 = 0;
         int stackIn_102_0 = 0;
-        ef stackIn_116_0;
+        BinaryBitmapFont stackIn_116_0;
         String stackIn_116_1;
         int stackIn_116_2;
         int stackIn_116_3;
         int stackIn_117_4 = 0;
-        ef stackIn_125_0;
+        BinaryBitmapFont stackIn_125_0;
         String stackIn_125_1;
         int stackIn_125_2;
         int stackIn_125_3;
         int stackIn_126_4;
-        ef stackIn_144_0;
+        BinaryBitmapFont stackIn_144_0;
         String stackIn_144_1;
         int stackIn_144_2;
         int stackIn_144_3;
@@ -518,10 +518,10 @@ final class si extends nc {
             } else {
               stackIn_34_4 = 0;
             }
-            ((sl) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, var3, var6);
+            ((PaletteBitmapFont) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, var3, var6);
             if (var17 != 0) {
-              oo.e(33, var10 - 14, qp.field_w.a(ak.field_d) + 14, 15, 7, 16777215);
-              oo.b(33, -15 + var10, qp.field_w.a(ak.field_d) + 16, 17, 7, 65793);
+              SoftwareRasterizer.fillRoundedRect(33, var10 - 14, qp.field_w.a(ak.field_d) + 14, 15, 7, 16777215);
+              SoftwareRasterizer.drawRoundedRect(33, -15 + var10, qp.field_w.a(ak.field_d) + 16, 17, 7, 65793);
               qp.field_w.b(ak.field_d, 40, var10 - 2, 65793, -1, var6);
             }
             if (var16 != 0) {
@@ -536,10 +536,10 @@ final class si extends nc {
               } else {
                 stackIn_41_4 = 0;
               }
-              ((sl) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, var3, var6);
+              ((PaletteBitmapFont) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, var3, var6);
             }
             qb.field_h.a(135, 4 + var10, var6);
-            oo.h(138, 0, var15Lifetime2 + 138, 480);
+            SoftwareRasterizer.setClip(138, 0, var15Lifetime2 + 138, 480);
             stackIn_45_0 = 140;
             stackIn_45_1 = 9 + var10;
             stackIn_45_2 = qb.field_h.field_e - 10;
@@ -550,8 +550,8 @@ final class si extends nc {
             } else {
               stackIn_46_5 = 65535;
             }
-            oo.b(stackIn_45_0, stackIn_45_1, stackIn_45_2, stackIn_45_3, stackIn_45_4, stackIn_46_5, var6 / 2);
-            oo.h(0, 0, 640, 480);
+            SoftwareRasterizer.fillRoundedRectAlpha(stackIn_45_0, stackIn_45_1, stackIn_45_2, stackIn_45_3, stackIn_45_4, stackIn_46_5, var6 / 2);
+            SoftwareRasterizer.setClip(0, 0, 640, 480);
             var18 = 436;
             for (var19 = 0; var19 < 63; var19++) {
               stackIn_51_0 = (!this.field_z.b((byte) -121, var19, var13)) ? 0 : 1;
@@ -577,7 +577,7 @@ final class si extends nc {
               } else {
                 stackIn_66_4 = 16711680;
               }
-              ((ef) (Object) stackIn_65_0).a(stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, 1, var6);
+              ((BinaryBitmapFont) (Object) stackIn_65_0).a(stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4, 1, var6);
             } else {
               qp.field_w.a(Integer.toString(var20Lifetime1), var8_int, var10 + 22, 16777215, 1, var6);
             }
@@ -593,11 +593,11 @@ final class si extends nc {
             var11 = -var11 + 1;
             var25.c(575, -11 + var10, var6);
             if (var17 != 0) {
-              oo.g(44, 4 + var10, 47, var10 + 1, 16777215);
-              oo.g(43, 4 + var10, 46, var10 + 1, 16777215);
-              oo.g(45, var10 + 4, 48, var10 + 1, 16777215);
-              oo.g(42, var10 + 4, 45, var10 + 1, 65793);
-              oo.g(46, var10 + 4, 49, var10 + 1, 65793);
+              SoftwareRasterizer.drawLine(44, 4 + var10, 47, var10 + 1, 16777215);
+              SoftwareRasterizer.drawLine(43, 4 + var10, 46, var10 + 1, 16777215);
+              SoftwareRasterizer.drawLine(45, var10 + 4, 48, var10 + 1, 16777215);
+              SoftwareRasterizer.drawLine(42, var10 + 4, 45, var10 + 1, 65793);
+              SoftwareRasterizer.drawLine(46, var10 + 4, 49, var10 + 1, 65793);
             }
             var7 = var7 + (var4 + 1);
             var10 += 58;
@@ -648,11 +648,11 @@ final class si extends nc {
               var7Lifetime1 = stackIn_102_0;
             }
           }
-          oo.h(0, 0, var7Lifetime1, 480);
+          SoftwareRasterizer.setClip(0, 0, var7Lifetime1, 480);
           for (var9Lifetime1Lifetime2 = 0; var9Lifetime1Lifetime2 < 64; var9Lifetime1Lifetime2++) {
-            oo.a(-176 + ((var9Lifetime1Lifetime2 / 11 + 25) * wf.field_m + 1000 * var9Lifetime1Lifetime2) % 10560, 3952, 176, var6Lifetime1 * 125 >> 8, wp.field_f);
+            SoftwareRasterizer.a(-176 + ((var9Lifetime1Lifetime2 / 11 + 25) * wf.field_m + 1000 * var9Lifetime1Lifetime2) % 10560, 3952, 176, var6Lifetime1 * 125 >> 8, wp.field_f);
           }
-          oo.c();
+          SoftwareRasterizer.resetClip();
           rq.field_l.a(30, 231, var6Lifetime1);
           rq.field_l.a(239, 231, var6Lifetime1);
           rq.field_l.a(448, 231, var6Lifetime1);
@@ -666,7 +666,7 @@ final class si extends nc {
               63 > var12Lifetime1) {
               pq.field_o.a(ga.field_v[var11Lifetime1], 166, var6Lifetime1);
               for (var14Lifetime1 = 0; var14Lifetime1 < 8; var14Lifetime1++) {
-                oo.a(10 + ga.field_v[var11Lifetime1] << 4, -(((var14Lifetime1 / 5 + 19) * wf.field_m + var14Lifetime1 * 300) % 960) + 3728, 96, 125 * var6Lifetime1 >> 8, wp.field_f);
+                SoftwareRasterizer.a(10 + ga.field_v[var11Lifetime1] << 4, -(((var14Lifetime1 / 5 + 19) * wf.field_m + var14Lifetime1 * 300) % 960) + 3728, 96, 125 * var6Lifetime1 >> 8, wp.field_f);
               }
               w.field_z.a(ga.field_v[var11Lifetime1], 166, var6Lifetime1);
               mg.a(var12Lifetime1, var13Lifetime1, (byte) 46, 106, FullscreenFocusCanvas.field_k, var6Lifetime1, -28 + ga.field_v[var11Lifetime1]);
@@ -683,7 +683,7 @@ final class si extends nc {
               } else {
                 stackIn_117_4 = 16711680;
               }
-              ((ef) (Object) stackIn_116_0).b(stackIn_116_1, stackIn_116_2, stackIn_116_3, stackIn_117_4, 1, var6Lifetime1);
+              ((BinaryBitmapFont) (Object) stackIn_116_0).b(stackIn_116_1, stackIn_116_2, stackIn_116_3, stackIn_117_4, 1, var6Lifetime1);
               if (255 != var13Lifetime1 &&
                 var13Lifetime1 < 63) {
                 var14Lifetime1Lifetime3 = FullscreenFocusCanvas.field_k.field_t[var13Lifetime1];
@@ -699,7 +699,7 @@ final class si extends nc {
                 } else {
                   stackIn_126_4 = 16777215;
                 }
-                ((ef) (Object) stackIn_125_0).b(stackIn_125_1, stackIn_125_2, stackIn_125_3, stackIn_126_4, 1, var6Lifetime1);
+                ((BinaryBitmapFont) (Object) stackIn_125_0).b(stackIn_125_1, stackIn_125_2, stackIn_125_3, stackIn_126_4, 1, var6Lifetime1);
               }
             } else {
               tm.field_f.a(ga.field_v[var11Lifetime1], 166, var6Lifetime1);
@@ -709,15 +709,15 @@ final class si extends nc {
             var12Lifetime1Lifetime1 = FullscreenFocusCanvas.field_k.field_s[var11Lifetime1Lifetime1];
             if (var12Lifetime1Lifetime1 != 255) {
               qj.field_m.a(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
-              oo.h(0, 0, 640, 366);
+              SoftwareRasterizer.setClip(0, 0, 640, 366);
               for (var13Lifetime1Lifetime1 = 0; 16 > var13Lifetime1Lifetime1; var13Lifetime1Lifetime1++) {
-                oo.a((48 + 209 * var11Lifetime1Lifetime1 << 4) + 8, 4000 + (wf.field_m * (var13Lifetime1Lifetime1 / 5 + 19) + 300 * var13Lifetime1Lifetime1) % 1920, 112, 125 * var6Lifetime1 >> 8, wp.field_f);
+                SoftwareRasterizer.a((48 + 209 * var11Lifetime1Lifetime1 << 4) + 8, 4000 + (wf.field_m * (var13Lifetime1Lifetime1 / 5 + 19) + 300 * var13Lifetime1Lifetime1) % 1920, 112, 125 * var6Lifetime1 >> 8, wp.field_f);
               }
               for (var13Lifetime1Lifetime1Lifetime1 = 0; var13Lifetime1Lifetime1Lifetime1 < 8; var13Lifetime1Lifetime1Lifetime1++) {
-                oo.a(((var13Lifetime1Lifetime1Lifetime1 / 5 + 19) * wf.field_m + var13Lifetime1Lifetime1Lifetime1 * 300) % 720 + 8 + (209 * var11Lifetime1Lifetime1 + 48 << 4), 5744, 112, var6Lifetime1 * 125 >> 8, wp.field_f);
+                SoftwareRasterizer.a(((var13Lifetime1Lifetime1Lifetime1 / 5 + 19) * wf.field_m + var13Lifetime1Lifetime1Lifetime1 * 300) % 720 + 8 + (209 * var11Lifetime1Lifetime1 + 48 << 4), 5744, 112, var6Lifetime1 * 125 >> 8, wp.field_f);
               }
               pm.field_N.a(var11Lifetime1Lifetime1 * 209 + 38, 244, var6Lifetime1);
-              oo.c();
+              SoftwareRasterizer.resetClip();
               qh.a(var12Lifetime1Lifetime1, -29990, FullscreenFocusCanvas.field_k, 280, var11Lifetime1Lifetime1 * 209 + 91, var6Lifetime1);
               var13Lifetime1Lifetime1Lifetime2 = FullscreenFocusCanvas.field_k.field_t[var12Lifetime1Lifetime1];
               var14Lifetime1Lifetime1 = cr.a(var12Lifetime1Lifetime1, -95);
@@ -732,7 +732,7 @@ final class si extends nc {
               } else {
                 stackIn_145_4 = 16711680;
               }
-              ((ef) (Object) stackIn_144_0).b(stackIn_144_1, stackIn_144_2, stackIn_144_3, stackIn_145_4, 1, var6Lifetime1);
+              ((BinaryBitmapFont) (Object) stackIn_144_0).b(stackIn_144_1, stackIn_144_2, stackIn_144_3, stackIn_145_4, 1, var6Lifetime1);
             } else {
               wk.field_J.a(38 + 209 * var11Lifetime1Lifetime1, 244, var6Lifetime1);
               hn.field_i.a(var11Lifetime1Lifetime1 * 209 + 91, 280, var6Lifetime1);
@@ -798,9 +798,9 @@ final class si extends nc {
             }
             var4 = 32 + bo.field_d;
             if (var9 > 250) {
-              oo.b(var3 + 2, var4 + 2, var6, var5, 4, 0, var9 / 2);
+              SoftwareRasterizer.fillRoundedRectAlpha(var3 + 2, var4 + 2, var6, var5, 4, 0, var9 / 2);
             }
-            oo.b(var3, var4, var6, var5, 4, 10061892, var9);
+            SoftwareRasterizer.fillRoundedRectAlpha(var3, var4, var6, var5, 4, 10061892, var9);
             qp.field_w.a(var7, var3, var4, var6, var5, 16777215, 0, var9, 1, 1, 0);
           }
         } else {

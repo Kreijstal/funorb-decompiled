@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jl extends hq {
-    static ri field_u;
+    static IndexedSprite field_u;
     private mk field_w;
     private mk[] field_s;
     static String field_v;
@@ -50,7 +50,7 @@ final class jl extends hq {
               }
             }
           } else {
-            d.a(this.field_s, 0, param0.field_s, 0, 6);
+            ArrayOperations.a(this.field_s, 0, param0.field_s, 0, 6);
           }
           if (param2 < -107) {
             return;

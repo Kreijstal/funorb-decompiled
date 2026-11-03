@@ -201,7 +201,7 @@ abstract class gm extends ti {
                 var10 = aa.field_h[var9];
               }
               if (var10 != null) {
-                ((ri) (var10)).a(var3_int, var8);
+                ((IndexedSprite) (var10)).a(var3_int, var8);
               }
               if (var6 >= 0 &&
                 var6 < var7.length) {
@@ -225,8 +225,8 @@ abstract class gm extends ti {
               }
               if (var10 != null) {
                 g.c();
-                oo.h(var3_int, ((ri) (var10)).field_b / 2 + var8, 640, ((ri) (var10)).field_b + var8);
-                ((ri) (var10)).a(var3_int, var8);
+                SoftwareRasterizer.setClip(var3_int, ((IndexedSprite) (var10)).field_b / 2 + var8, 640, ((IndexedSprite) (var10)).field_b + var8);
+                ((IndexedSprite) (var10)).a(var3_int, var8);
                 g.b();
               }
             }

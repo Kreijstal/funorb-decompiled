@@ -12,7 +12,7 @@ final class lh {
     private int field_c;
     static int[] field_b;
     static String field_e;
-    static ri field_m;
+    static IndexedSprite field_m;
     static float field_i;
     static String field_a;
 
@@ -144,7 +144,7 @@ final class lh {
             this.field_j = param2.field_h;
           }
           if (param1 != 30) {
-            field_m = (ri) null;
+            field_m = (IndexedSprite) null;
           }
           this.field_d = (float)this.field_h * var4_float / (float)(1 + this.field_c);
         } catch (RuntimeException runtimeException) {

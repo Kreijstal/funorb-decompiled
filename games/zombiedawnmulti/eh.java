@@ -34,11 +34,11 @@ final class eh {
           var5 = (-f.field_a + 250 << 8) / 50;
         }
         r.a(0, m.field_w);
-        ep.e();
-        oo.b();
+        TriangleRasterizer.e();
+        SoftwareRasterizer.clear();
         GameSimulation.a((byte) 125);
         if (var5 < 256) {
-          oo.f(0, 0, oo.field_b, oo.field_l, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectAlpha(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l, 0, -var5 + 256);
         }
         ql.a(true);
         if (f.field_a < 150) {
@@ -211,14 +211,14 @@ final class eh {
         try {
           var1 = new Sprite(540, 140);
           r.a(0, var1);
-          ep.e();
-          oo.b();
+          TriangleRasterizer.e();
+          SoftwareRasterizer.clear();
           f.field_a = 0;
           GameSimulation.a((byte) 120);
           var2 = var1.c();
           for (var3 = 0; var3 < 15; var3++) {
             var2.f(-2, -2, 16777215);
-            oo.i(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.i(4, 4, 0, 0, 540, 140);
           }
           kk.field_r.a();
           var1.f(0, 0);

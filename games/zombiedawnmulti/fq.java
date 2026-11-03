@@ -93,7 +93,7 @@ final class fq extends ae {
         }
     }
 
-    final static void a(boolean param0, int param1, ug param2, int param3, int param4) {
+    final static void a(boolean param0, int param1, MusicTrack param2, int param3, int param4) {
         try {
           ra.field_m.a(param2, 1000000, !param0 ? true : false, param4, param1, true);
           int var5_int = 95 / ((5 - param3) / 60);

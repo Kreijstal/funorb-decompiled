@@ -16,7 +16,7 @@ abstract class ti extends id {
     static String field_H;
     int field_S;
     int field_G;
-    uj field_U;
+    PcmSampleStream field_U;
     static int field_I;
     int field_N;
     int field_bb;

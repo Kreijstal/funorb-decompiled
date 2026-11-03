@@ -76,12 +76,12 @@ final class ub extends ie {
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        ri[] var16 = null;
+        IndexedSprite[] var16 = null;
         int[] var17 = null;
         try {
           var17 = (int[]) null;
-          var16 = (ri[]) null;
-          cn.a(param8, 0, param7, (int[]) null, param11, param6, param4, param5, (ri[]) null, param1, param9, param14, param12, param0, param10, param13, param3);
+          var16 = (IndexedSprite[]) null;
+          cn.a(param8, 0, param7, (int[]) null, param11, param6, param4, param5, (IndexedSprite[]) null, param1, param9, param14, param12, param0, param10, param13, param3);
           if (!param2) {
             field_ub = (int[]) null;
           }

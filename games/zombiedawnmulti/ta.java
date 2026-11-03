@@ -112,7 +112,7 @@ final class ta extends al {
           super.a(param0, param1, param2);
           ci.field_d.b(this.field_rb, param1 + (this.field_n >> 1), 103 + param2, 16777215, -1);
           if (null != this.field_mb) {
-            oo.b(param1 + 20, 120 + (param2 - 7), 260, 8421504);
+            SoftwareRasterizer.drawHorizontalLine(param1 + 20, 120 + (param2 - 7), 260, 8421504);
             ci.field_d.a(this.field_mb, param1 + 20, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ci.field_d.field_C);
           }
           return;
@@ -121,7 +121,7 @@ final class ta extends al {
         super.a(param0, param1, param2);
         ci.field_d.b(this.field_rb, param1 + (this.field_n >> 1), 103 + param2, 16777215, -1);
         if (null != this.field_mb) {
-          oo.b(param1 + 20, 120 + (param2 - 7), 260, 8421504);
+          SoftwareRasterizer.drawHorizontalLine(param1 + 20, 120 + (param2 - 7), 260, 8421504);
           ci.field_d.a(this.field_mb, param1 + 20, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ci.field_d.field_C);
         }
     }

@@ -145,10 +145,10 @@ final class ok {
             fa.field_Tb = fl.a("benefits", "arrow", pl.field_C, 11091);
             dc.field_Lb = (BitmapFont) ((Object) pj.a(pl.field_C, 4, lb.field_d, "large_font", "benefits"));
             gf.field_e = (BitmapFont) ((Object) pj.a(pl.field_C, 4, lb.field_d, "small_font", "benefits"));
-            var27 = oo.field_i;
-            var2 = oo.field_b;
-            var3 = oo.field_l;
-            oo.a(b.field_f);
+            var27 = SoftwareRasterizer.field_i;
+            var2 = SoftwareRasterizer.field_b;
+            var3 = SoftwareRasterizer.field_l;
+            SoftwareRasterizer.saveClip(b.field_f);
             var11 = new Sprite(fa.field_Tb.width + 4, 4 + fa.field_Tb.height);
             var11.a();
             fa.field_Tb.i(2, 2, PlayerLoadout.field_e);
@@ -175,9 +175,9 @@ final class ok {
             nj.field_a = null;
             kg.field_j = ig.field_e.c();
             kg.field_j.a();
-            pi.a((byte) -115, 0, 64, oo.field_b, oo.field_l * 2 / 3, 0);
-            oo.a(var27, var2, var3);
-            oo.b(b.field_f);
+            pi.a((byte) -115, 0, 64, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l * 2 / 3, 0);
+            SoftwareRasterizer.setTarget(var27, var2, var3);
+            SoftwareRasterizer.restoreClip(b.field_f);
             jp.field_d = (ha.field_l.width - er.field_j.width) / 2 + 231;
             cr.field_j = (-er.field_j.height + ha.field_l.height) / 2 + 390;
             sq.field_O = (-er.field_j.height + ha.field_l.height) / 2 + 390;
@@ -189,10 +189,10 @@ final class ok {
           }
           if (q.field_c != null &&
             dc.field_Lb != null) {
-            var28 = oo.field_i;
-            var2Lifetime1 = oo.field_b;
-            var3Lifetime1 = oo.field_l;
-            oo.a(b.field_f);
+            var28 = SoftwareRasterizer.field_i;
+            var2Lifetime1 = SoftwareRasterizer.field_b;
+            var3Lifetime1 = SoftwareRasterizer.field_l;
+            SoftwareRasterizer.saveClip(b.field_f);
             var14 = vl.a(eh.field_h, new String[]{vk.field_L[hj.field_f]}, 2);
             var5 = dc.field_Lb.c(var14, ol.field_p);
             var6Lifetime1 = dc.field_Lb.a(var14, ol.field_p, dc.field_Lb.field_C + dc.field_Lb.field_r);
@@ -250,15 +250,15 @@ final class ok {
             q.field_c.d(LevelFileCatalog.field_b + (q.field_c.fullWidth >> 1), pn.field_e + (q.field_c.field_u >> 1), GameScreen.field_N, 4096);
             q.field_c = null;
             BufferedSocket.field_j.d();
-            oo.a(var28, var2Lifetime1, var3Lifetime1);
-            oo.b(b.field_f);
+            SoftwareRasterizer.setTarget(var28, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.restoreClip(b.field_f);
           }
           if (null != ie.field_ib &&
             null != gf.field_e) {
-            var29 = oo.field_i;
-            var2Lifetime2 = oo.field_b;
-            var3Lifetime2 = oo.field_l;
-            oo.a(b.field_f);
+            var29 = SoftwareRasterizer.field_i;
+            var2Lifetime2 = SoftwareRasterizer.field_b;
+            var3Lifetime2 = SoftwareRasterizer.field_l;
+            SoftwareRasterizer.saveClip(b.field_f);
             var16 = new Sprite(412, 43);
             var5_ref_String = vl.a(vk.field_F, new String[]{ie.field_ib}, 2);
             ie.field_ib = null;
@@ -267,15 +267,15 @@ final class ok {
             sq.a(5, var16.width, 3, var16.height, var16, 1, 0, 0);
             rq.field_v.a();
             var16.g(-rq.field_v.offsetX + 199, -rq.field_v.field_y + 83);
-            oo.a(var29, var2Lifetime2, var3Lifetime2);
-            oo.b(b.field_f);
+            SoftwareRasterizer.setTarget(var29, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.restoreClip(b.field_f);
           }
           if (null != MouseInputHandler.field_e &&
             null != gf.field_e) {
-            var30 = oo.field_i;
-            var2Lifetime3 = oo.field_b;
-            var3Lifetime3 = oo.field_l;
-            oo.a(b.field_f);
+            var30 = SoftwareRasterizer.field_i;
+            var2Lifetime3 = SoftwareRasterizer.field_b;
+            var3Lifetime3 = SoftwareRasterizer.field_l;
+            SoftwareRasterizer.saveClip(b.field_f);
             var4 = 6 + gf.field_e.c(tf.field_Cb, 640);
             var5Lifetime1 = 20 + (var4 + MouseInputHandler.field_e.fullWidth);
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
@@ -285,13 +285,13 @@ final class ok {
             sq.a(5, var4, 3, 50, rq.field_v, 1, -4 + var7Lifetime2 - rq.field_v.offsetX, -rq.field_v.field_y + 155);
             var8Lifetime1 = -rq.field_v.field_y + (155 - (-gf.field_e.field_r + (-gf.field_e.field_C + (-3 + MouseInputHandler.field_e.field_u))) / 2);
             MouseInputHandler.field_e.g(var6Lifetime2 - rq.field_v.offsetX, var8Lifetime1);
-            oo.a(var30, var2Lifetime3, var3Lifetime3);
-            oo.b(b.field_f);
+            SoftwareRasterizer.setTarget(var30, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.restoreClip(b.field_f);
             MouseInputHandler.field_e = null;
           }
-          oo.a(b.field_f);
-          oo.b(16, 16, 608, 112, 15, gg.field_c, pf.field_c);
-          oo.b(231, 144, 393, 232, 15, gg.field_c, pf.field_c);
+          SoftwareRasterizer.saveClip(b.field_f);
+          SoftwareRasterizer.fillRoundedRectAlpha(16, 16, 608, 112, 15, gg.field_c, pf.field_c);
+          SoftwareRasterizer.fillRoundedRectAlpha(231, 144, 393, 232, 15, gg.field_c, pf.field_c);
           if (null != GameApplet.field_b) {
             GameApplet.field_b.g(0, 0);
           }

@@ -31,7 +31,7 @@ final class uf {
     }
 
     final void a(nm param0, byte param1) {
-        ri[] stackIn_3_0 = null;
+        IndexedSprite[] stackIn_3_0 = null;
         int stackIn_4_1 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -46,7 +46,7 @@ final class uf {
             } else {
               stackIn_4_1 = 6;
             }
-            ((ri) (Object) stackIn_3_0[stackIn_4_1]).a(param0.c(this.field_e, -20126) - 12, -12 + param0.d(this.field_j, 111), this.field_a);
+            ((IndexedSprite) (Object) stackIn_3_0[stackIn_4_1]).a(param0.c(this.field_e, -20126) - 12, -12 + param0.d(this.field_j, 111), this.field_a);
           }
           if (param1 < 33) {
             this.field_a = -63;

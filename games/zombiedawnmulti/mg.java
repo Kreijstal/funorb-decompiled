@@ -296,7 +296,7 @@ final class mg extends id {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, rp param4, int param5, int param6) {
-        ef var8 = null;
+        BinaryBitmapFont var8 = null;
         try {
           int var7_int = 73 % ((param2 + 45) / 36);
           var8 = qp.field_w;
@@ -368,11 +368,11 @@ final class mg extends id {
             var10 = 2;
             for (var11 = 0; var11 < 6; var11++) {
               var8 = (6 * var11 + this.field_G) % 120;
-              oo.d(hp.field_l[var8] + var6, var7 + hp.field_g[var8], 6, 0, var11 * var9);
-              oo.a(hp.field_l[var8] + var6 << 4, var7 + hp.field_g[var8] << 4, 96, var11 * var10, hp.field_j[this.field_C]);
+              SoftwareRasterizer.fillCircleAlpha(hp.field_l[var8] + var6, var7 + hp.field_g[var8], 6, 0, var11 * var9);
+              SoftwareRasterizer.a(hp.field_l[var8] + var6 << 4, var7 + hp.field_g[var8] << 4, 96, var11 * var10, hp.field_j[this.field_C]);
               var8 = (60 + var8) % 120;
-              oo.d(hp.field_l[var8] + var6, hp.field_g[var8] + var7, 6, 0, var11 * var9);
-              oo.a(hp.field_l[var8] + var6 << 4, var7 + hp.field_g[var8] << 4, 96, var10 * var11, hp.field_j[this.field_C]);
+              SoftwareRasterizer.fillCircleAlpha(hp.field_l[var8] + var6, hp.field_g[var8] + var7, 6, 0, var11 * var9);
+              SoftwareRasterizer.a(hp.field_l[var8] + var6 << 4, var7 + hp.field_g[var8] << 4, 96, var10 * var11, hp.field_j[this.field_C]);
             }
             wa.field_b[this.field_C].g(var4, var5);
             return;

@@ -4,7 +4,7 @@
 final class eq {
     private ai field_d;
     private java.math.BigInteger field_e;
-    static ri field_c;
+    static IndexedSprite field_c;
     private qb field_i;
     static int field_g;
     private tn field_h;

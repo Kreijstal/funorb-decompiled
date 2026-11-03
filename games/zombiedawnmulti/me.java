@@ -16,11 +16,11 @@ final class me {
     static String field_j;
     private f field_a;
 
-    final jd a(int param0, byte param1, int[] param2) {
+    final PcmSample a(int param0, byte param1, int[] param2) {
         RuntimeException var4 = null;
         byte[] var5 = null;
-        jd stackIn_2_0 = null;
-        jd stackIn_5_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_5_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -53,10 +53,10 @@ final class me {
         }
     }
 
-    final jd a(int param0, int[] param1, int param2) {
+    final PcmSample a(int param0, int[] param1, int param2) {
         RuntimeException var4 = null;
-        jd stackIn_3_0 = null;
-        jd stackIn_9_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -163,10 +163,10 @@ final class me {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    final static sl a(byte[] param0, boolean param1) {
-        sl var2 = null;
+    final static PaletteBitmapFont a(byte[] param0, boolean param1) {
+        PaletteBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        sl stackIn_6_0 = null;
+        PaletteBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -175,7 +175,7 @@ final class me {
           if (param0 == null) {
             return null;
           }
-          var2 = new sl(param0, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, tp.field_t, qp.field_t);
+          var2 = new PaletteBitmapFont(param0, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, tp.field_t, qp.field_t);
           if (!param1) {
             field_h = -18;
           }
@@ -196,14 +196,14 @@ final class me {
         }
     }
 
-    private final jd a(int param0, int param1, boolean param2, int[] param3) {
-        jd stackIn_4_0 = null;
+    private final PcmSample a(int param0, int param1, boolean param2, int[] param3) {
+        PcmSample stackIn_4_0 = null;
         Object stackIn_8_0 = null;
         f stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
-        ac stackIn_22_0 = null;
+        VorbisSample stackIn_22_0 = null;
         boolean stackIn_23_1 = false;
-        jd stackIn_24_0 = null;
+        PcmSample stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -211,9 +211,9 @@ final class me {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        jd var8 = null;
-        ac var9 = null;
-        jd var8Lifetime1;
+        PcmSample var8 = null;
+        VorbisSample var9 = null;
+        PcmSample var8Lifetime1;
         try {
           var5_int = ((536875007 & param0) << 4 | param0 >>> 12) ^ param1;
           var5_int = var5_int | param0 << 16;
@@ -221,7 +221,7 @@ final class me {
             field_h = -103;
           }
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (jd) (this.field_a.a(0, var6));
+          var8 = (PcmSample) (this.field_a.a(0, var6));
           if (var8 != null) {
             stackIn_4_0 = var8;
             return stackIn_4_0;
@@ -229,11 +229,11 @@ final class me {
           if (param3 != null &&
             param3[0] <= 0) {
             stackIn_8_0 = null;
-            return (jd) (stackIn_8_0);
+            return (PcmSample) (stackIn_8_0);
           }
-          var9 = (ac) (this.field_i.a(0, var6));
+          var9 = (VorbisSample) (this.field_i.a(0, var6));
           if (var9 == null) {
-            var9 = ac.a(this.field_l, param0, param1);
+            var9 = VorbisSample.a(this.field_l, param0, param1);
             if (var9 == null) {
               return null;
             }
@@ -241,13 +241,13 @@ final class me {
             stackIn_16_1 = !(param2);
             ((f) (Object) stackIn_15_0).a(stackIn_16_1, var6, var9);
           }
-          var8Lifetime1 = var9.a(param3);
+          var8Lifetime1 = var9.decodeToPcm(param3);
           if (var8Lifetime1 == null) {
             return null;
           }
           stackIn_22_0 = var9;
           stackIn_23_1 = !(param2);
-          ((ac) (Object) stackIn_22_0).unlink(stackIn_23_1);
+          ((VorbisSample) (Object) stackIn_22_0).unlink(stackIn_23_1);
           this.field_a.a(true, var6, var8Lifetime1);
           stackIn_24_0 = var8Lifetime1;
           return stackIn_24_0;
@@ -265,27 +265,27 @@ final class me {
         }
     }
 
-    private final jd a(int param0, int[] param1, int param2, int param3) {
+    private final PcmSample a(int param0, int[] param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        jd var8 = null;
-        jc var9 = null;
-        jd var10 = null;
-        jd stackIn_2_0 = null;
+        PcmSample var8 = null;
+        SoundEffect var9 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_2_0 = null;
         Object stackIn_9_0 = null;
-        jd stackIn_14_0 = null;
-        jd stackIn_16_0 = null;
+        PcmSample stackIn_14_0 = null;
+        PcmSample stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jd var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param2 << 4 & 65526 | param2 >>> 12) ^ param3;
           var5_int = var5_int | param2 << 16;
           var6 = (long)var5_int;
-          var8 = (jd) (this.field_a.a(0, var6));
+          var8 = (PcmSample) (this.field_a.a(0, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -294,12 +294,12 @@ final class me {
             param1[0] <= 0) {
             return null;
           }
-          var9 = jc.a(this.field_b, param2, param3);
+          var9 = SoundEffect.a(this.field_b, param2, param3);
           if (var9 == null) {
             stackIn_9_0 = null;
-            return (jd) (stackIn_9_0);
+            return (PcmSample) (stackIn_9_0);
           }
-          var10 = var9.a();
+          var10 = var9.toPcmSample();
           var8Lifetime1 = var10;
           this.field_a.a(true, var6, var8Lifetime1);
           if (param1 != null) {
@@ -309,7 +309,7 @@ final class me {
             stackIn_16_0 = var8Lifetime1;
             return stackIn_16_0;
           }
-          stackIn_14_0 = (jd) null;
+          stackIn_14_0 = (PcmSample) null;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

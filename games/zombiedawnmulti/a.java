@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class a {
-    static ri[][] field_a;
+    static IndexedSprite[][] field_a;
     static IntrusiveDeque field_c;
     static int field_b;
 
     public static void a(boolean param0) {
         if (!param0) {
-          field_a = (ri[][]) null;
+          field_a = (IndexedSprite[][]) null;
           field_c = null;
           return;
         }
         ul var2 = (ul) null;
         a.a(-28, (byte) -5, (ul) null, -70);
-        field_a = (ri[][]) null;
+        field_a = (IndexedSprite[][]) null;
         field_c = null;
     }
 

@@ -76,7 +76,7 @@ final class nn {
     }
 
     final static void a(boolean param0) {
-        oo.f(0, 84, 640, 335, 0, 128);
+        SoftwareRasterizer.fillRectAlpha(0, 84, 640, 335, 0, 128);
         cc.field_c.a(0, 84);
         if (param0) {
           nn.b(126);

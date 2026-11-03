@@ -17,7 +17,7 @@ final class pg {
         int var1_intLifetime1;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          ep.e();
+          TriangleRasterizer.e();
           na.field_K = new int[260];
           eq.field_g = 11;
           for (var1_int = 0; 256 > var1_int; var1_int++) {

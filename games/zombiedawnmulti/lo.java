@@ -10,7 +10,7 @@ final class lo {
     static int[] field_j;
     static String field_e;
     static String field_i;
-    static ri[] field_a;
+    static IndexedSprite[] field_a;
     static int field_d;
 
     final static short[] a(int param0, short[] param1, ga param2, byte param3) {

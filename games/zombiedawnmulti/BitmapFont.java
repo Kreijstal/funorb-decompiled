@@ -39,7 +39,7 @@ abstract class BitmapFont extends DualLinkNode {
         this.b(param0, param1 - this.a(param0) / 2, param2);
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
+    abstract void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
     private final void b(String param0, int param1, int param2) {
         int var7 = 0;
@@ -148,9 +148,9 @@ abstract class BitmapFont extends DualLinkNode {
               } else {
                 if (field_H != 256) {
                   if (field_M != -1) {
-                    this.a(var8, param1 + this.field_B[var8] + 1, param2 + this.field_G[var8] + 1, var9, var10, field_M, field_H, true);
+                    this.drawGlyphAlpha(var8, param1 + this.field_B[var8] + 1, param2 + this.field_G[var8] + 1, var9, var10, field_M, field_H, true);
                   }
-                  this.a(var8, param1 + this.field_B[var8], param2 + this.field_G[var8], var9, var10, field_z, field_H, false);
+                  this.drawGlyphAlpha(var8, param1 + this.field_B[var8], param2 + this.field_G[var8], var9, var10, field_z, field_H, false);
                 } else {
                   if (field_M != -1) {
                     this.a(var8, param1 + this.field_B[var8] + 1, param2 + this.field_G[var8] + 1, var9, var10, field_M, true);
@@ -160,10 +160,10 @@ abstract class BitmapFont extends DualLinkNode {
               }
               param1 = param1 + this.field_N[var8];
               if (field_u != -1) {
-                oo.b(var11, param2 + (int)((double)this.field_w * 0.7), param1 - var11, field_u);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + (int)((double)this.field_w * 0.7), param1 - var11, field_u);
               }
               if (field_v != -1) {
-                oo.b(var11, param2 + this.field_w + 1, param1 - var11, field_v);
+                SoftwareRasterizer.drawHorizontalLine(var11, param2 + this.field_w + 1, param1 - var11, field_v);
               }
               var5 = var8;
             }

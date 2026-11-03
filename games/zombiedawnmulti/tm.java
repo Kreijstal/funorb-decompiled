@@ -4,7 +4,7 @@
 final class tm {
     static String field_g;
     static String field_c;
-    static ri field_f;
+    static IndexedSprite field_f;
     static String field_d;
     static String field_e;
     static String[] field_a;
@@ -33,7 +33,7 @@ final class tm {
         }
         dk.e(param0, -7579);
         if (sa.field_f) {
-          oo.f(em.field_U.field_c.field_x, em.field_U.field_c.field_Q, em.field_U.field_c.field_zb, em.field_U.field_c.field_z);
+          SoftwareRasterizer.clearRect(em.field_U.field_c.field_x, em.field_U.field_c.field_Q, em.field_U.field_c.field_zb, em.field_U.field_c.field_z);
           em.field_U.field_c.c(param0, -1);
           if (param1) {
             field_a = (String[]) null;

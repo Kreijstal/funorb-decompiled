@@ -71,7 +71,7 @@ final class uk extends gn {
             return;
           }
           r.a(0, bp.field_s);
-          oo.b();
+          SoftwareRasterizer.clear();
           var15.a(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
           ql.a(true);
           bp.field_s.e(var5 - var15.fullWidth, var6 - var15.field_u, 256);
@@ -106,7 +106,7 @@ final class uk extends gn {
             return;
           }
           r.a(0, bp.field_s);
-          oo.b();
+          SoftwareRasterizer.clear();
           var18.a(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
           ql.a(true);
           bp.field_s.e(var5 - var18.fullWidth, var6 - var18.field_u, 256);

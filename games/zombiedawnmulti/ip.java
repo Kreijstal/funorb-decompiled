@@ -7,7 +7,7 @@ final class ip {
     static String field_a;
     static String field_c;
     static int field_f;
-    static ri field_e;
+    static IndexedSprite field_e;
 
     final static void a(int param0, int param1) {
         if (param0 > -119) {

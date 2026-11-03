@@ -4,7 +4,7 @@
 final class pb {
     static String field_g;
     static int field_h;
-    static ef field_e;
+    static BinaryBitmapFont field_e;
     static boolean field_f;
     static int field_b;
     static String field_i;
@@ -114,7 +114,7 @@ final class pb {
         }
     }
 
-    final static uj a(byte param0, int param1) {
+    final static PcmSampleStream a(byte param0, int param1) {
         if (!df.field_H) {
           return null;
         }
@@ -159,7 +159,7 @@ final class pb {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static uj $cfr$intArgs$a$90ed9136db05(int param0, int param1) {
+    final static PcmSampleStream $cfr$intArgs$a$90ed9136db05(int param0, int param1) {
         if (!df.field_H) {
           return null;
         }

@@ -10,7 +10,7 @@ final class h extends id {
     static int field_G;
     private int field_M;
     private int field_Q;
-    private uj field_N;
+    private PcmSampleStream field_N;
     int[] field_P;
     static re field_H;
     private ea field_O;
@@ -2453,7 +2453,7 @@ final class h extends id {
               var5 = 9796223;
             }
           }
-          oo.d(var3_int, var4, 54, var5, 80);
+          SoftwareRasterizer.fillCircleAlpha(var3_int, var4, 54, var5, 80);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2582,7 +2582,7 @@ final class h extends id {
             this.a(107, -17, (byte) 63);
           }
           g.c(vn.field_h);
-          oo.b();
+          SoftwareRasterizer.clear();
           boolean decompiledSharedTail0 = (this.field_J == 1);
           if (!decompiledSharedTail0) {
             na.field_H[this.field_C][var5].c((vn.field_h.width - this.field_Q) / 2, (-this.field_M + vn.field_h.height) / 2, this.field_Q, this.field_M);

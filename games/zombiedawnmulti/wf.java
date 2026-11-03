@@ -39,7 +39,7 @@ final class wf extends ae {
     }
 
     final void a(int param0, boolean param1, int param2, int param3) {
-        oo.d(-24 + (this.field_p >> 16) - param2, -24 - param0 + (this.field_s >> 16), 1 + (-param3 + this.field_f) / 5, 16711680, 128);
+        SoftwareRasterizer.fillCircleAlpha(-24 + (this.field_p >> 16) - param2, -24 - param0 + (this.field_s >> 16), 1 + (-param3 + this.field_f) / 5, 16711680, 128);
         if (!param1) {
           GameScreen var6 = (GameScreen) null;
           this.a(106, (GameScreen) null);

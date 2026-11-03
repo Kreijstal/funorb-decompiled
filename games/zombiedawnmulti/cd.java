@@ -72,8 +72,8 @@ final class cd extends cj {
         int var3Lifetime1;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          oo.a(243, 197, 369, 143, 16777215);
-          oo.e(244, 198, 367, 141, 0);
+          SoftwareRasterizer.drawRect(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.fillRect(244, 198, 367, 141, 0);
           if (param0 > -20) {
             return;
           }

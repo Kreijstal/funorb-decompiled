@@ -7,8 +7,8 @@ final class lj extends IntrusiveNode {
     static String[] field_t;
     static String field_q;
     static String field_m;
-    private uj field_g;
-    private uj field_i;
+    private PcmSampleStream field_g;
+    private PcmSampleStream field_i;
     static cj field_v;
     static String field_k;
     private int field_j;
@@ -149,7 +149,7 @@ final class lj extends IntrusiveNode {
           int var4_int = 43 / ((12 - param3) / 47);
           ib.field_b = param1;
           uq.field_f = param2;
-          uo.a(oo.field_l / 2, oo.field_b / 2, 1633);
+          uo.a(SoftwareRasterizer.field_l / 2, SoftwareRasterizer.field_b / 2, 1633);
           ek.a(param0.field_J, param2.field_r + param2.field_J, 1829947600, param2.field_J, param0.field_r + param0.field_J);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "lj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

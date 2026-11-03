@@ -56,42 +56,42 @@ final class vj extends nc {
     }
 
     final void a(boolean param0) {
-        ef var20 = null;
+        BinaryBitmapFont var20 = null;
         Sprite var21 = null;
         Sprite var22 = null;
         Sprite var23 = null;
         Sprite var24 = null;
-        ef var25 = null;
+        BinaryBitmapFont var25 = null;
         Sprite var26 = null;
         Sprite var27 = null;
         Sprite var28 = null;
         Sprite var29 = null;
-        ef var30 = null;
+        BinaryBitmapFont var30 = null;
         Sprite var31 = null;
         Sprite var32 = null;
         Sprite var33 = null;
         Sprite var34 = null;
-        ef var35 = null;
+        BinaryBitmapFont var35 = null;
         Sprite var36 = null;
         Sprite var37 = null;
         Sprite var38 = null;
         Sprite var39 = null;
-        ef var40 = null;
+        BinaryBitmapFont var40 = null;
         Sprite var41 = null;
         Sprite var42 = null;
         Sprite var43 = null;
         Sprite var44 = null;
-        ef var45 = null;
+        BinaryBitmapFont var45 = null;
         Sprite var46 = null;
         Sprite var47 = null;
         Sprite var48 = null;
         Sprite var49 = null;
-        ef var50 = null;
+        BinaryBitmapFont var50 = null;
         Sprite var51 = null;
         Sprite var52 = null;
         Sprite var53 = null;
         Sprite var54 = null;
-        ef var55 = null;
+        BinaryBitmapFont var55 = null;
         Sprite var56 = null;
         Sprite var57 = null;
         Sprite var58 = null;
@@ -204,13 +204,13 @@ final class vj extends nc {
         int var14Lifetime6;
         int var14Lifetime7;
         int var14Lifetime8;
-        oo.b();
+        SoftwareRasterizer.clear();
         this.b(0);
         super.a(param0);
-        oo.a(30, 60, 60, 52, 3381555);
-        oo.f(32, 62, 56, 48, 8947814, 128);
-        oo.a(30, 142, 60, 52, 3381555);
-        oo.f(32, 144, 56, 48, 8947814, 128);
+        SoftwareRasterizer.drawRect(30, 60, 60, 52, 3381555);
+        SoftwareRasterizer.fillRectAlpha(32, 62, 56, 48, 8947814, 128);
+        SoftwareRasterizer.drawRect(30, 142, 60, 52, 3381555);
+        SoftwareRasterizer.fillRectAlpha(32, 144, 56, 48, 8947814, 128);
         if (kd.field_b != 1) {
           if (kd.field_b == 1 &&
             30 < vb.field_f &&
@@ -576,7 +576,7 @@ final class vj extends nc {
         var4Lifetime8 = 20;
         var5Lifetime8 = 20;
         var6Lifetime8 = 2;
-        ef var60 = qp.field_w;
+        BinaryBitmapFont var60 = qp.field_w;
         var8Lifetime8 = 2 + (var60.field_r + var60.field_C);
         var60.c("Skin", var2Lifetime8, -2 + (-var60.field_r + var3Lifetime8), 16777215, 0);
         this.a(var4Lifetime8, 1, var6Lifetime8, this.field_o, (byte) -64, var5Lifetime8, var2Lifetime8, var3Lifetime8);
@@ -713,8 +713,8 @@ final class vj extends nc {
                 stackIn_49_0 = ((1 & jf.field_e) > 0) ? 16777215 : 14540219;
                 var9 = stackIn_49_0;
               }
-              oo.e(param6, param7, param0, param5, var9);
-              oo.e(param6 + param2, param7 + param2, -(param2 * 2) + param0, param5 - param2 * 2, param3);
+              SoftwareRasterizer.fillRect(param6, param7, param0, param5, var9);
+              SoftwareRasterizer.fillRect(param6 + param2, param7 + param2, -(param2 * 2) + param0, param5 - param2 * 2, param3);
               if (param4 <= 0) {
                 return;
               }
@@ -732,8 +732,8 @@ final class vj extends nc {
             }
           }
         }
-        oo.e(param6, param7, param0, param5, var9);
-        oo.e(param6 + param2, param7 + param2, -(param2 * 2) + param0, param5 - param2 * 2, param3);
+        SoftwareRasterizer.fillRect(param6, param7, param0, param5, var9);
+        SoftwareRasterizer.fillRect(param6 + param2, param7 + param2, -(param2 * 2) + param0, param5 - param2 * 2, param3);
         if (param4 <= 0) {
           return;
         }

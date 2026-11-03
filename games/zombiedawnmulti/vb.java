@@ -38,7 +38,7 @@ final class vb {
         field_b = null;
     }
 
-    final static void a(int param0, String[][] param1, String[] param2, String[] param3, boolean param4, String[][] param5, int[] param6, String[] param7, byte[] param8, ul param9, int[] param10, int param11, Sprite[][] param12, int param13, ul param14, boolean param15, Sprite[][] param16, ul param17, byte[] param18, ri[] param19) {
+    final static void a(int param0, String[][] param1, String[] param2, String[] param3, boolean param4, String[][] param5, int[] param6, String[] param7, byte[] param8, ul param9, int[] param10, int param11, Sprite[][] param12, int param13, ul param14, boolean param15, Sprite[][] param16, ul param17, byte[] param18, IndexedSprite[] param19) {
         String[] stackIn_4_0;
         int stackIn_4_1;
         int[] stackIn_4_2;

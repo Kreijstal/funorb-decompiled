@@ -85,7 +85,7 @@ final class qq {
         }
     }
 
-    final static uj b(int param0, int param1) {
+    final static PcmSampleStream b(int param0, int param1) {
         if (!df.field_H) {
           return null;
         }

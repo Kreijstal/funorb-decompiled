@@ -4,7 +4,7 @@
 final class s {
     static String field_g;
     static volatile int field_b;
-    static ri field_c;
+    static IndexedSprite field_c;
     static String field_a;
     static volatile int field_f;
     static ga field_e;
@@ -182,75 +182,75 @@ final class s {
             }
             var18 = var14;
             var19 = var15;
-            oo.a(DualLinkNode.field_f);
+            SoftwareRasterizer.saveClip(DualLinkNode.field_f);
             if (var18 > var19) {
               var19 = param0 + param4 * var8 / (var8 + var9);
               var18 = param0 + param4 * var8 / (var8 + var9);
             }
             if (null != param2[param1]) {
-              oo.e(param3, param0, var16, var18);
+              SoftwareRasterizer.intersectClip(param3, param0, var16, var18);
               param2[0].g(param3, param0);
-              oo.b(DualLinkNode.field_f);
+              SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             if (param2[2] != null) {
-              oo.e(var17, param0, var10, var18);
+              SoftwareRasterizer.intersectClip(var17, param0, var10, var18);
               param2[2].g(var13, param0);
-              oo.b(DualLinkNode.field_f);
+              SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             if (param2[6] != null) {
-              oo.e(param3, var19, var16, var11);
+              SoftwareRasterizer.intersectClip(param3, var19, var16, var11);
               param2[6].g(param3, var15);
-              oo.b(DualLinkNode.field_f);
+              SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             if (param2[8] != null) {
-              oo.e(var17, var19, var10, var11);
+              SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
               param2[8].g(var13, var15);
-              oo.b(DualLinkNode.field_f);
+              SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             if (param2[1] != null &&
               param2[1].fullWidth != 0) {
-              oo.e(var16, param0, var17, var18);
+              SoftwareRasterizer.intersectClip(var16, param0, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param2[1].fullWidth) {
                 param2[1].g(var20, param0);
               }
-              oo.b(DualLinkNode.field_f);
+              SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             if (param2[7] != null &&
               0 != param2[7].fullWidth) {
-              oo.e(var16, var19, var17, var11);
+              SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param2[7].fullWidth) {
                 param2[7].g(var20Lifetime1, var15);
               }
-              oo.b(DualLinkNode.field_f);
+              SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             if (null != param2[3] &&
               param2[3].field_u != 0) {
-              oo.e(param3, var18, var16, var19);
+              SoftwareRasterizer.intersectClip(param3, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param2[3].field_u) {
                 param2[3].g(param3, var20Lifetime2);
               }
-              oo.b(DualLinkNode.field_f);
+              SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             if (param2[5] != null &&
               param2[5].field_u != 0) {
-              oo.e(var17, var18, var10, var19);
+              SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param2[5].field_u) {
                 param2[5].g(var13, var20Lifetime3);
               }
-              oo.b(DualLinkNode.field_f);
+              SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             if (null != param2[4] &&
               param2[4].fullWidth != 0) {
               if (param2[4].field_u == 0) {
                 return;
               }
-              oo.e(var16, var18, var17, var19);
+              SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param2[4].field_u) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param2[4].fullWidth) {
                   param2[4].g(var21, var20Lifetime4);
                 }
               }
-              oo.b(DualLinkNode.field_f);
+              SoftwareRasterizer.restoreClip(DualLinkNode.field_f);
             }
             return;
           }

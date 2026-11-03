@@ -20,7 +20,7 @@ final class rq extends IntrusiveNode {
     static String field_q;
     static String field_r;
     private int field_j;
-    static ri field_l;
+    static IndexedSprite field_l;
     private int field_p;
 
     final boolean a(int param0, byte param1, int param2) {
@@ -161,8 +161,8 @@ final class rq extends IntrusiveNode {
           var2Lifetime1 = 20 + WidgetContainer.field_E + 20;
           g.c();
           var3Lifetime1 = 45;
-          oo.h(var1Lifetime1, var3Lifetime1, var2Lifetime1 + var1Lifetime1, var3Lifetime1 + hj.field_g);
-          oo.f(var1Lifetime1, var3Lifetime1, var2Lifetime1, hj.field_g, 2560, 160);
+          SoftwareRasterizer.setClip(var1Lifetime1, var3Lifetime1, var2Lifetime1 + var1Lifetime1, var3Lifetime1 + hj.field_g);
+          SoftwareRasterizer.fillRectAlpha(var1Lifetime1, var3Lifetime1, var2Lifetime1, hj.field_g, 2560, 160);
           g.a(IsaacRandom.field_h, 10, var3Lifetime1, 192);
           sj.field_j.g(10, var3Lifetime1);
           sj.field_j.a(10, -5 + (hj.field_g + var3Lifetime1));
@@ -219,7 +219,7 @@ final class rq extends IntrusiveNode {
           ve.field_b.a();
           el.field_H[2].f(5, -5, param1);
           el.field_H[3].f(5, -5, 16777215);
-          oo.i(4, 4, 0, 0, oo.field_b, oo.field_l);
+          SoftwareRasterizer.i(4, 4, 0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
           el.field_H[2].f(5, -5, 0);
           el.field_H[3].f(5, -5, 0);
           oj.field_M = new Sprite[39];

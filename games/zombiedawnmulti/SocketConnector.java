@@ -145,13 +145,13 @@ abstract class SocketConnector {
           }
           pk.field_c = new Sprite(60, 60);
           pk.field_c.a();
-          oo.d(30, 30, 28, 4521728);
+          SoftwareRasterizer.fillCircle(30, 30, 28, 4521728);
           wi.field_g = new Sprite[8];
           for (var1_int = 0; var1_int < 8; var1_int++) {
             wi.field_g[var1_int] = new Sprite(22, 22);
             wi.field_g[var1_int].a();
-            oo.d(11, 11, var1_int + 2, 5622784);
-            oo.d(11, 11, var1_int, 65793);
+            SoftwareRasterizer.fillCircle(11, 11, var1_int + 2, 5622784);
+            SoftwareRasterizer.fillCircle(11, 11, var1_int, 65793);
           }
           g.b();
         } catch (RuntimeException runtimeException) {

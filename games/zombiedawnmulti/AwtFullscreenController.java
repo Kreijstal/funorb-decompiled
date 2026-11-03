@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te {
+final class AwtFullscreenController {
     private java.awt.GraphicsDevice field_b;
     private java.awt.DisplayMode field_a;
 
@@ -73,7 +73,7 @@ final class te {
         this.a((byte) 87, (java.awt.Frame) null);
     }
 
-    public te() throws Exception {
+    public AwtFullscreenController() throws Exception {
         int var4 = 0;
         java.awt.GraphicsEnvironment var1;
         java.awt.GraphicsDevice[] var2;
@@ -94,7 +94,7 @@ final class te {
             return;
           }
         }
-        throw te.<RuntimeException>$cfr$sneakyThrow(new Exception());
+        throw AwtFullscreenController.<RuntimeException>$cfr$sneakyThrow(new Exception());
     }
 
     @SuppressWarnings("unchecked")

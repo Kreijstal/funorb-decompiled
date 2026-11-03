@@ -5,7 +5,7 @@ final class pi {
     static String field_c;
     int field_d;
     static String field_b;
-    static ri field_f;
+    static IndexedSprite field_f;
     static String field_h;
     static String field_e;
     static int field_i;
@@ -132,30 +132,30 @@ final class pi {
         int var12 = 0;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (param1 < oo.field_f) {
-            param3 = param3 - (oo.field_f - param1);
-            param1 = oo.field_f;
+          if (param1 < SoftwareRasterizer.field_f) {
+            param3 = param3 - (SoftwareRasterizer.field_f - param1);
+            param1 = SoftwareRasterizer.field_f;
           }
-          if (oo.field_e > param5) {
-            param4 = param4 - (-param5 + oo.field_e);
-            param5 = oo.field_e;
+          if (SoftwareRasterizer.field_e > param5) {
+            param4 = param4 - (-param5 + SoftwareRasterizer.field_e);
+            param5 = SoftwareRasterizer.field_e;
           }
-          if (oo.field_g < param1 + param3) {
-            param3 = oo.field_g - param1;
+          if (SoftwareRasterizer.field_g < param1 + param3) {
+            param3 = SoftwareRasterizer.field_g - param1;
           }
           if (param0 > -88) {
             return;
           }
-          if (oo.field_d < param4 + param5) {
-            param4 = oo.field_d - param5;
+          if (SoftwareRasterizer.field_d < param4 + param5) {
+            param4 = SoftwareRasterizer.field_d - param5;
           }
           if (param3 > 0 &&
             param4 > 0) {
-            var6_int = oo.field_b * param5 + param1;
-            var7 = oo.field_b - param3;
+            var6_int = SoftwareRasterizer.field_b * param5 + param1;
+            var7 = SoftwareRasterizer.field_b - param3;
             for (param5 = -param4; param5 < 0; param5++) {
               for (param1 = -param3; param1 < 0; param1++) {
-                var8 = oo.field_i[var6_int];
+                var8 = SoftwareRasterizer.field_i[var6_int];
                 if ((255 & var8 >> 8) > param2 &&
                   (255 & var8 >> 16) <= (var8 & 65280) >> 8) {
                   var9 = ((16711680 & var8) >> 15) - 60;
@@ -165,7 +165,7 @@ final class pi {
                   var10 = 65280 & var8;
                   var10 = -(var10 >> 5) + (var10 >> 1) & 65280;
                   var11 = 31 & var8 >> 3;
-                  oo.field_i[var6_int] = cr.b(cr.b(var9 << 16, var10), var11);
+                  SoftwareRasterizer.field_i[var6_int] = cr.b(cr.b(var9 << 16, var10), var11);
                 }
                 var6_int++;
               }

@@ -115,21 +115,21 @@ abstract class ng {
         RuntimeException var5 = null;
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          oo.b(param1, param3, param2 + param0, 10000536);
-          oo.b(param1, param4 + param3, 1 + param2, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param1, param3, param2 + param0, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param1, param4 + param3, 1 + param2, 12105912);
           var5_int = 1;
-          if (var5_int + param3 < oo.field_e) {
-            var5_int = oo.field_e - param3;
+          if (var5_int + param3 < SoftwareRasterizer.field_e) {
+            var5_int = SoftwareRasterizer.field_e - param3;
           }
           var6 = param4;
-          if (oo.field_d < param3 + var6) {
-            var6 = -param3 + oo.field_d;
+          if (SoftwareRasterizer.field_d < param3 + var6) {
+            var6 = -param3 + SoftwareRasterizer.field_d;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = var7 * 48 / param4 + 152;
             var9 = var8 | (var8 << 16 | var8 << 8);
-            oo.field_i[oo.field_b * (param3 + var7) + param1] = var9;
-            oo.field_i[(param3 + var7) * oo.field_b - (-param1 - param2)] = var9;
+            SoftwareRasterizer.field_i[SoftwareRasterizer.field_b * (param3 + var7) + param1] = var9;
+            SoftwareRasterizer.field_i[(param3 + var7) * SoftwareRasterizer.field_b - (-param1 - param2)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -5,7 +5,7 @@ final class hl {
     static int[] field_c;
     static db field_b;
     static int[] field_e;
-    static ug[] field_d;
+    static MusicTrack[] field_d;
     static int field_a;
     static int[] field_f;
 
@@ -35,82 +35,82 @@ final class hl {
         try {
           var5_int = param3 + param1;
           var6 = param0 + param4;
-          if (oo.field_f >= param1) {
-            stackIn_4_0 = oo.field_f;
+          if (SoftwareRasterizer.field_f >= param1) {
+            stackIn_4_0 = SoftwareRasterizer.field_f;
           } else {
             stackIn_4_0 = param1;
           }
           var7 = stackIn_4_0;
-          if (oo.field_e < param0) {
+          if (SoftwareRasterizer.field_e < param0) {
             stackIn_7_0 = param0;
           } else {
-            stackIn_7_0 = oo.field_e;
+            stackIn_7_0 = SoftwareRasterizer.field_e;
           }
           var8 = stackIn_7_0;
-          if (var5_int < oo.field_g) {
+          if (var5_int < SoftwareRasterizer.field_g) {
             stackIn_10_0 = var5_int;
           } else {
-            stackIn_10_0 = oo.field_g;
+            stackIn_10_0 = SoftwareRasterizer.field_g;
           }
           var9 = stackIn_10_0;
-          if (oo.field_d > var6) {
+          if (SoftwareRasterizer.field_d > var6) {
             stackIn_13_0 = var6;
           } else {
-            stackIn_13_0 = oo.field_d;
+            stackIn_13_0 = SoftwareRasterizer.field_d;
           }
           var10 = stackIn_13_0;
-          if (param1 >= oo.field_f &&
-            oo.field_g > param1) {
-            var11 = param1 + oo.field_b * var8;
+          if (param1 >= SoftwareRasterizer.field_f &&
+            SoftwareRasterizer.field_g > param1) {
+            var11 = param1 + SoftwareRasterizer.field_b * var8;
             var12 = var10 + 1 - var8 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              oo.field_i[var11] = 16777215;
-              var11 = var11 + oo.field_b * 2;
+              SoftwareRasterizer.field_i[var11] = 16777215;
+              var11 = var11 + SoftwareRasterizer.field_b * 2;
             }
           }
-          if (param0 >= oo.field_e &&
-            var6 < oo.field_d) {
-            var11Lifetime1 = oo.field_b * param0 + var7;
+          if (param0 >= SoftwareRasterizer.field_e &&
+            var6 < SoftwareRasterizer.field_d) {
+            var11Lifetime1 = SoftwareRasterizer.field_b * param0 + var7;
             var12Lifetime1 = -var7 + var9 + 1 >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              oo.field_i[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.field_i[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
           if (param2 < 82) {
             return;
           }
-          if (var5_int >= oo.field_f &&
-            var5_int < oo.field_g) {
-            var11Lifetime2 = var5_int + ((var5_int - param1 & 1) + var8) * oo.field_b;
+          if (var5_int >= SoftwareRasterizer.field_f &&
+            var5_int < SoftwareRasterizer.field_g) {
+            var11Lifetime2 = var5_int + ((var5_int - param1 & 1) + var8) * SoftwareRasterizer.field_b;
             var12Lifetime2 = -var8 + var10 + 1 >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              oo.field_i[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + oo.field_b * 2;
+              SoftwareRasterizer.field_i[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.field_b * 2;
             }
           }
-          if (oo.field_e <= param0 &&
-            oo.field_d > var6) {
-            var11Lifetime3 = (1 & var6 - param0) + (var7 + oo.field_b * var6);
+          if (SoftwareRasterizer.field_e <= param0 &&
+            SoftwareRasterizer.field_d > var6) {
+            var11Lifetime3 = (1 & var6 - param0) + (var7 + SoftwareRasterizer.field_b * var6);
             var12Lifetime3 = var9 + 1 - var7 >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 return;
               }
-              oo.field_i[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.field_i[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -234,7 +234,7 @@ final class hl {
     static {
         field_e = new int[1024];
         field_b = new db();
-        field_d = new ug[15];
+        field_d = new MusicTrack[15];
         field_a = -1;
         field_f = new int[8192];
     }

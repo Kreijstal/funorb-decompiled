@@ -59,7 +59,7 @@ final class tk extends nc {
             } else {
               stackIn_18_4 = param0;
             }
-            oo.e(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_18_4);
+            SoftwareRasterizer.fillRect(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_18_4);
             if (h.i(51603) &&
               jk.a((byte) -70, var6)) {
               el.field_E.a(var5 + 419, 345);
@@ -99,7 +99,7 @@ final class tk extends nc {
         cp.field_O = -1;
         kn.field_b = -1;
         q.field_d = -1;
-        oo.h(0, 53, 640, 85);
+        SoftwareRasterizer.setClip(0, 53, 640, 85);
         var2 = 112;
         for (var3 = 0; var3 < 3; var3++) {
           if (bo.field_d >= 43 &&
@@ -124,8 +124,8 @@ final class tk extends nc {
               var5 = 44800;
             }
           }
-          oo.e(var2, 43, 120, 35, 10, var4);
-          oo.a(var2 + 2, 45, 116, 31, 10, var5, var6_int);
+          SoftwareRasterizer.fillRoundedRect(var2, 43, 120, 35, 10, var4);
+          SoftwareRasterizer.fillRoundedRectGradient(var2 + 2, 45, 116, 31, 10, var5, var6_int);
           pb.field_e.b(fl.field_b[var3], 60 + var2, 69, 16646020, -1);
           var2 += 141;
         }
@@ -158,17 +158,17 @@ final class tk extends nc {
         stackIn_37_2 = 328;
         stackIn_37_3 = 80;
         stackIn_38_4 = (var3Lifetime1 != 0) ? 16711680 : 0;
-        oo.f(stackIn_37_0, stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_38_4, 128);
+        SoftwareRasterizer.fillRectAlpha(stackIn_37_0, stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_38_4, 128);
         stackIn_40_0 = 337;
         stackIn_40_1 = 337;
         stackIn_40_2 = 296;
         stackIn_40_3 = 80;
         stackIn_41_4 = (var4Lifetime1 == 0) ? 0 : 16711680;
-        oo.f(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, 128);
-        oo.a(9, 339, 74, 76, 0);
-        oo.a(10, 340, 72, 74, 6575425, 3354915);
-        oo.a(339, 339, 74, 76, 0);
-        oo.a(340, 340, 72, 74, 1989419, 597262);
+        SoftwareRasterizer.fillRectAlpha(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, 128);
+        SoftwareRasterizer.drawRect(9, 339, 74, 76, 0);
+        SoftwareRasterizer.fillRectGradient(10, 340, 72, 74, 6575425, 3354915);
+        SoftwareRasterizer.drawRect(339, 339, 74, 76, 0);
+        SoftwareRasterizer.fillRectGradient(340, 340, 72, 74, 1989419, 597262);
         qp.field_w.a(ve.field_a, 10, 340, 72, 74, 16777215, -1, 1, 1, 0);
         qp.field_w.a(en.field_f, 339, 339, 72, 74, 16777215, -1, 1, 1, 0);
         this.a(var5Lifetime1 != 0, (byte) -120, 14680064, 53248);
@@ -432,7 +432,7 @@ final class tk extends nc {
                 } else {
                   stackIn_28_4 = param3;
                 }
-                oo.e(stackIn_27_0, stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_28_4);
+                SoftwareRasterizer.fillRect(stackIn_27_0, stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_28_4);
                 if (var9 != 255) {
                   if (63 > var9) {
                     wa.field_b[-13 + var9].g(90 + var7, 384);
@@ -452,7 +452,7 @@ final class tk extends nc {
                     } else {
                       stackIn_42_4 = param3;
                     }
-                    oo.e(stackIn_41_0, stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_42_4);
+                    SoftwareRasterizer.fillRect(stackIn_41_0, stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_42_4);
                   }
                   if (FullscreenFocusCanvas.field_k.a(45, -126) &&
                     var8 != 255 &&
@@ -538,7 +538,7 @@ final class tk extends nc {
         int var9 = q.$cfr$intArgs$a$f0c91481eb80(-126, (var7 << 10) / 29) >> 9;
         int var10 = (var7 * param0 + param5 * var8 << 4) / 29;
         int var11 = (param3 * var7 + var8 * param4 << 4) / 29;
-        oo.a(var10, var11, 64, var9, rq.field_u);
+        SoftwareRasterizer.a(var10, var11, 64, var9, rq.field_u);
     }
 
     private final void e(byte param0) {
@@ -553,7 +553,7 @@ final class tk extends nc {
         int var8;
         int var9;
         String var10;
-        ef var11;
+        BinaryBitmapFont var11;
         int var12;
         int var13;
         String[] var14;
@@ -666,8 +666,8 @@ final class tk extends nc {
             if (var3 + var4Lifetime1 > 475) {
               var3 = -5 + (-var4Lifetime1 + 480);
             }
-            oo.b(var2 - 2, -2 + var3, var5 + 8, var4Lifetime1 + 8, 4, 0, var13 / 2);
-            oo.b(-4 + var2, var3 - 4, 8 + var5, var4Lifetime1 + 8, 4, 5005603, var13);
+            SoftwareRasterizer.fillRoundedRectAlpha(var2 - 2, -2 + var3, var5 + 8, var4Lifetime1 + 8, 4, 0, var13 / 2);
+            SoftwareRasterizer.fillRoundedRectAlpha(-4 + var2, var3 - 4, 8 + var5, var4Lifetime1 + 8, 4, 5005603, var13);
             var11.a(var10, var2, var3, var5, var4Lifetime1, 16777215, 0, var13, 1, 1, 0);
           }
         }
@@ -727,7 +727,7 @@ final class tk extends nc {
         int var19Lifetime1;
         int var23Lifetime1;
         var24 = ZombieDawnMulti.field_E ? 1 : 0;
-        oo.h(5, 54, 635, 330);
+        SoftwareRasterizer.setClip(5, 54, 635, 330);
         var34 = em.field_Y[ao.field_d];
         var7 = 0;
         var8 = -9 / ((-16 - param4) / 50);
@@ -786,17 +786,17 @@ final class tk extends nc {
                         var21 = on.field_bb[var13].field_b.width + (on.field_bb[var18].field_q + 3);
                         var22 = on.field_bb[var13].field_b.height / 2 + on.field_bb[var18].field_g;
                         for (var23 = -1; var23 < 1; var23++) {
-                          oo.g(var19Lifetime1, var20 + var23, var21, var23 + var22, 11528032);
+                          SoftwareRasterizer.drawLine(var19Lifetime1, var20 + var23, var21, var23 + var22, 11528032);
                         }
                         if (FullscreenFocusCanvas.field_k.c(127, var14Lifetime1)) {
                           for (var23Lifetime1 = 0; var23Lifetime1 < 3; var23Lifetime1++) {
                             this.b(var19Lifetime1, -562798775, var23Lifetime1, var20, var22, var21);
                           }
                         }
-                        oo.a(var19Lifetime1, -4 + var20, 4, 9, 1);
-                        oo.a(var19Lifetime1 + 1, -3 + var20, 2, 7, 11316396, 5066061);
-                        oo.a(var21 - 4, -4 + var22, 4, 9, 1);
-                        oo.a(-3 + var21, -3 + var22, 2, 7, 11316396, 5066061);
+                        SoftwareRasterizer.drawRect(var19Lifetime1, -4 + var20, 4, 9, 1);
+                        SoftwareRasterizer.fillRectGradient(var19Lifetime1 + 1, -3 + var20, 2, 7, 11316396, 5066061);
+                        SoftwareRasterizer.drawRect(var21 - 4, -4 + var22, 4, 9, 1);
+                        SoftwareRasterizer.fillRectGradient(-3 + var21, -3 + var22, 2, 7, 11316396, 5066061);
                       }
                     }
                   }
@@ -806,7 +806,7 @@ final class tk extends nc {
           }
           var7++;
         }
-        oo.c();
+        SoftwareRasterizer.resetClip();
     }
 
     public static void c(byte param0) {
@@ -820,11 +820,11 @@ final class tk extends nc {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        oo.h(param5, param2, param4 + param5 + (param1 << 1), (param1 << 1) + param2 + param0);
+        SoftwareRasterizer.setClip(param5, param2, param4 + param5 + (param1 << 1), (param1 << 1) + param2 + param0);
         IsaacRandom.field_h.c(param5, param2);
-        oo.f(param5, param2, param4 + (param1 << 1), param0 + (param1 << 1), 2560, 160);
+        SoftwareRasterizer.fillRectAlpha(param5, param2, param4 + (param1 << 1), param0 + (param1 << 1), 2560, 160);
         ak.a((param1 << 1) + param4, param0 + (param1 << 1), -5, param5, param2);
-        oo.c();
+        SoftwareRasterizer.resetClip();
         if (param3 >= -55) {
           this.b((byte) 22);
         }
@@ -1106,12 +1106,12 @@ final class tk extends nc {
         int var5Lifetime4Lifetime1;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         if (u.field_i) {
-          oo.d(610, 20, 9, 16777215);
+          SoftwareRasterizer.fillCircle(610, 20, 9, 16777215);
         } else {
           if (ud.field_S) {
-            oo.d(610, 20, 9, 65280);
+            SoftwareRasterizer.fillCircle(610, 20, 9, 65280);
           } else {
-            oo.d(610, 20, 9, 16711680, (q.$cfr$intArgs$a$f0c91481eb80(-104, wf.field_m << 5) >> 9) + 128);
+            SoftwareRasterizer.fillCircleAlpha(610, 20, 9, 16711680, (q.$cfr$intArgs$a$f0c91481eb80(-104, wf.field_m << 5) >> 9) + 128);
           }
         }
         if (param0 >= -85) {
@@ -1119,7 +1119,7 @@ final class tk extends nc {
         }
         jl.field_u.c(600, 10);
         if (ud.field_S) {
-          oo.f(0, 0, 640, 480, 0, 64);
+          SoftwareRasterizer.fillRectAlpha(0, 0, 640, 480, 0, 64);
           var6 = 10;
           var2 = 445;
           var3 = 2;

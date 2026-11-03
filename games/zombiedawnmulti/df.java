@@ -152,7 +152,7 @@ abstract class df extends WidgetContainer {
         if (null == BufferedSocket.field_g) {
           BufferedSocket.field_g = new Sprite(this.field_n, this.field_w);
           r.a(0, BufferedSocket.field_g);
-          oo.b();
+          SoftwareRasterizer.clear();
           this.a(true, 0, 0);
           super.a(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
           ql.a(true);
@@ -166,7 +166,7 @@ abstract class df extends WidgetContainer {
         if (BufferedSocket.field_g.width < this.field_n) {
           BufferedSocket.field_g = new Sprite(this.field_n, this.field_w);
           r.a(0, BufferedSocket.field_g);
-          oo.b();
+          SoftwareRasterizer.clear();
           this.a(true, 0, 0);
           super.a(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
           ql.a(true);
@@ -180,7 +180,7 @@ abstract class df extends WidgetContainer {
         if (BufferedSocket.field_g.height < this.field_w) {
           BufferedSocket.field_g = new Sprite(this.field_n, this.field_w);
           r.a(0, BufferedSocket.field_g);
-          oo.b();
+          SoftwareRasterizer.clear();
           this.a(true, 0, 0);
           super.a(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
           ql.a(true);
@@ -192,7 +192,7 @@ abstract class df extends WidgetContainer {
           return;
         }
         r.a(0, BufferedSocket.field_g);
-        oo.b();
+        SoftwareRasterizer.clear();
         this.a(true, 0, 0);
         super.a(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
         ql.a(true);

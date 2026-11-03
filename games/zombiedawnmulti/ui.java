@@ -13,18 +13,18 @@ final class ui extends IntrusiveNode {
 
     final static void a(int param0, ul param1) {
         RuntimeException runtimeException = null;
-        ac var2 = null;
+        VorbisSample var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ac.b(param1.a("headers.packvorbis", "", false));
+          VorbisSample.b(param1.a("headers.packvorbis", "", false));
           if (param0 != 7478) {
             field_k = (Sprite[]) null;
           }
-          var2 = ac.a(param1, "jagex logo2.packvorbis", "");
-          var2.c();
+          var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class ui extends IntrusiveNode {
         int stackIn_14_0 = 0;
         int stackIn_26_0 = 0;
         Sprite[] stackIn_30_0 = null;
-        ef stackIn_33_0;
+        BinaryBitmapFont stackIn_33_0;
         String stackIn_33_1;
         int stackIn_33_2;
         int stackIn_33_3;
@@ -143,8 +143,8 @@ final class ui extends IntrusiveNode {
             var7 = qp.field_w.field_C + var5[6].height + var5[0].height;
             s.a(-var7 + ImageProducerRasterBuffer.field_k.field_qb - 5, 0, var5, -5 - var6 + 640, var7, var6);
             var13 = new int[4];
-            oo.a(var13);
-            oo.e(-5 - nf.field_d + 640 - var5[0].width, ImageProducerRasterBuffer.field_k.field_qb - var7 + var5[0].height - 5, 635 - var5[2].width, ImageProducerRasterBuffer.field_k.field_qb - var5[6].height);
+            SoftwareRasterizer.saveClip(var13);
+            SoftwareRasterizer.intersectClip(-5 - nf.field_d + 640 - var5[0].width, ImageProducerRasterBuffer.field_k.field_qb - var7 + var5[0].height - 5, 635 - var5[2].width, ImageProducerRasterBuffer.field_k.field_qb - var5[6].height);
             stackIn_33_0 = qp.field_w;
             stackIn_33_1 = pb.field_i;
             stackIn_33_2 = -var5[2].width + 635;
@@ -154,8 +154,8 @@ final class ui extends IntrusiveNode {
             } else {
               stackIn_34_4 = 1;
             }
-            ((ef) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, -1);
-            oo.b(var13);
+            ((BinaryBitmapFont) (Object) stackIn_33_0).a(stackIn_33_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, -1);
+            SoftwareRasterizer.restoreClip(var13);
             if (hh.field_b &&
               sq.field_N &&
               !df.field_I) {

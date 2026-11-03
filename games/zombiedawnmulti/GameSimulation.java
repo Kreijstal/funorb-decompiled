@@ -2003,7 +2003,7 @@ final class GameSimulation {
           g.field_a.setSeed((long)((param4 << 5) + param3 + param2));
           var6 = new pa[this.field_u.a(0)];
           var7 = new int[this.field_u.a(0)];
-          d.a(var7, 0, var7.length, 32767);
+          ArrayOperations.a(var7, 0, var7.length, 32767);
           if (param1 > -36) {
             field_r = (of[]) null;
           }

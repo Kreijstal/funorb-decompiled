@@ -7,7 +7,7 @@ final class ah {
     static String field_b;
     static double[] field_a;
     static double[] field_d;
-    static sl field_e;
+    static PaletteBitmapFont field_e;
 
     public static void a(byte param0) {
         RuntimeException decompiledCaughtException = null;

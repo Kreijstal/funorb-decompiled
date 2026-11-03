@@ -96,7 +96,7 @@ class cj extends qo {
 
     final void c(boolean param0, int param1) {
         if (param1 == -1) {
-          this.a(oo.field_b, true, oo.field_l, false, false, false, param0, false, 0, param1 ^ -80, 0);
+          this.a(SoftwareRasterizer.field_b, true, SoftwareRasterizer.field_l, false, false, false, param0, false, 0, param1 ^ -80, 0);
           return;
         }
     }
@@ -105,7 +105,7 @@ class cj extends qo {
         if (param0 == -11838) {
           me.field_g = !param1 ? true : false;
           bp.field_q = !param1 ? true : false;
-          this.a(-100, true, oo.field_l, 0, 0, oo.field_b);
+          this.a(-100, true, SoftwareRasterizer.field_l, 0, 0, SoftwareRasterizer.field_b);
           return;
         }
     }
@@ -358,14 +358,14 @@ class cj extends qo {
         var25 = ZombieDawnMulti.field_E ? 1 : 0;
         this.field_w = this.field_x + param10;
         this.field_qb = this.field_Q + param8;
-        var12 = oo.field_f;
-        var13 = oo.field_e;
-        var14 = oo.field_g;
-        var15 = oo.field_d;
+        var12 = SoftwareRasterizer.field_f;
+        var13 = SoftwareRasterizer.field_e;
+        var14 = SoftwareRasterizer.field_g;
+        var15 = SoftwareRasterizer.field_d;
         if (param9 < 73) {
           this.a(73, true, 27, false, true, false, false, false, -51, 107, 60);
         }
-        oo.e(this.field_w, this.field_qb, this.field_zb + this.field_w, this.field_qb + this.field_z);
+        SoftwareRasterizer.intersectClip(this.field_w, this.field_qb, this.field_zb + this.field_w, this.field_qb + this.field_z);
         if (!this.field_W) {
           param5 = this.field_Ab;
           param7 = this.field_L;
@@ -514,7 +514,7 @@ class cj extends qo {
             var23_ref = (cj) (this.field_Cb.b(6));
           }
         }
-        oo.h(var12, var13, var14, var15);
+        SoftwareRasterizer.setClip(var12, var13, var14, var15);
     }
 
     public static void c(boolean param0) {
@@ -612,19 +612,19 @@ class cj extends qo {
         this.field_z = this.field_z + var7Lifetime3;
         param1 = param1 & this.field_Z;
         this.field_I = this.field_I - var7Lifetime3;
-        var8 = oo.field_f;
-        var9 = oo.field_e;
-        var10 = oo.field_g;
-        var11 = oo.field_d;
-        oo.e(this.field_w, this.field_qb, this.field_zb + this.field_w, this.field_z + this.field_qb);
+        var8 = SoftwareRasterizer.field_f;
+        var9 = SoftwareRasterizer.field_e;
+        var10 = SoftwareRasterizer.field_g;
+        var11 = SoftwareRasterizer.field_d;
+        SoftwareRasterizer.intersectClip(this.field_w, this.field_qb, this.field_zb + this.field_w, this.field_z + this.field_qb);
         var12 = 0;
         if (!bp.field_q &&
           param1 &&
           kd.field_b != 0 &&
-          oo.field_f <= vb.field_f &&
-          vb.field_f < oo.field_g &&
-          ka.field_t >= oo.field_e &&
-          ka.field_t < oo.field_d) {
+          SoftwareRasterizer.field_f <= vb.field_f &&
+          vb.field_f < SoftwareRasterizer.field_g &&
+          ka.field_t >= SoftwareRasterizer.field_e &&
+          ka.field_t < SoftwareRasterizer.field_d) {
           this.field_T = kd.field_b;
           this.field_G = -this.field_qb + ka.field_t;
           this.field_jb = kd.field_b;
@@ -639,7 +639,7 @@ class cj extends qo {
         if (pq.field_f == 0) {
           this.field_jb = 0;
         }
-        stackIn_34_1 = (!me.field_g) && (oo.field_f <= MouseInputHandler.field_g) && (MouseInputHandler.field_g < oo.field_g) && (oo.field_e <= bo.field_d) && (oo.field_d > bo.field_d);
+        stackIn_34_1 = (!me.field_g) && (SoftwareRasterizer.field_f <= MouseInputHandler.field_g) && (MouseInputHandler.field_g < SoftwareRasterizer.field_g) && (SoftwareRasterizer.field_e <= bo.field_d) && (SoftwareRasterizer.field_d > bo.field_d);
         this.field_pb = stackIn_34_1;
         stackIn_39_1 = (this.field_pb) && (this.field_jb == pq.field_f) && (param1);
         this.field_L = stackIn_39_1;
@@ -659,7 +659,7 @@ class cj extends qo {
         if (var12 != 0) {
           bp.field_q = true;
         }
-        oo.h(var8, var9, var10, var11);
+        SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (0 != this.field_jb &&
           this.field_fb) {
           this.field_x = -param3 - this.field_U + MouseInputHandler.field_g;

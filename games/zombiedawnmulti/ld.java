@@ -881,15 +881,15 @@ final class ld extends cj {
         var19 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param1 >= 0 &&
-            param5 < ep.field_h) {
+            param5 < TriangleRasterizer.field_h) {
             if (param4 < 0 &&
               param6 < 0 &&
               0 > param3) {
               return;
             }
-            if (ep.field_i <= param4 &&
-              param6 >= ep.field_i &&
-              ep.field_i <= param3) {
+            if (TriangleRasterizer.field_i <= param4 &&
+              param6 >= TriangleRasterizer.field_i &&
+              TriangleRasterizer.field_i <= param3) {
               return;
             }
             if (param0 != -12628) {
@@ -954,14 +954,14 @@ final class ld extends cj {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = ep.field_a[param5];
+                var16Lifetime2 = TriangleRasterizer.field_a[param5];
                 while (param5 < param2) {
                   var17 = var9_int >> 16;
-                  if (var17 < ep.field_i) {
+                  if (var17 < TriangleRasterizer.field_i) {
                     var18 = -(var9_int >> 16) + (var10 >> 16);
                     if (var18 != 0) {
-                      if (ep.field_i <= var18 + var17) {
-                        var18 = -1 - var17 + ep.field_i;
+                      if (TriangleRasterizer.field_i <= var18 + var17) {
+                        var18 = -1 - var17 + TriangleRasterizer.field_i;
                       }
                       if (var17 < 0) {
                         so.a(param7, true, var16Lifetime2, var18 + var17, param8);
@@ -970,17 +970,17 @@ final class ld extends cj {
                       }
                     } else {
                       if (0 <= var17 &&
-                        ep.field_i > var17) {
+                        TriangleRasterizer.field_i > var17) {
                         so.a(param7, true, var16Lifetime2 + var17, var18, param8);
                       }
                     }
                   }
                   param5++;
-                  if (param5 >= ep.field_h) {
+                  if (param5 >= TriangleRasterizer.field_h) {
                     return;
                   }
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + oo.field_b;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_b;
                   var10 = var10 + var12;
                 }
               }
@@ -1005,14 +1005,14 @@ final class ld extends cj {
               var9_int = var9_int + param5 * var11;
               param5 = 0;
             }
-            var15Lifetime1 = ep.field_a[param5];
+            var15Lifetime1 = TriangleRasterizer.field_a[param5];
             while (param1 > param5) {
               var16Lifetime1 = var9_int >> 16;
-              if (var16Lifetime1 < ep.field_i) {
+              if (var16Lifetime1 < TriangleRasterizer.field_i) {
                 var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (0 != var17Lifetime1) {
-                  if (var16Lifetime1 + var17Lifetime1 >= ep.field_i) {
-                    var17Lifetime1 = -1 - var16Lifetime1 + ep.field_i;
+                  if (var16Lifetime1 + var17Lifetime1 >= TriangleRasterizer.field_i) {
+                    var17Lifetime1 = -1 - var16Lifetime1 + TriangleRasterizer.field_i;
                   }
                   if (var16Lifetime1 >= 0) {
                     so.a(param7, true, var15Lifetime1 + var16Lifetime1, var17Lifetime1, param8);
@@ -1021,17 +1021,17 @@ final class ld extends cj {
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
-                    var16Lifetime1 < ep.field_i) {
+                    var16Lifetime1 < TriangleRasterizer.field_i) {
                     so.a(param7, true, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param8);
                   }
                 }
               }
               param5++;
-              if (ep.field_h <= param5) {
+              if (TriangleRasterizer.field_h <= param5) {
                 return;
               }
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + oo.field_b;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_b;
               var10 = var10 + var12;
             }
             return;

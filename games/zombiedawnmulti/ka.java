@@ -83,10 +83,10 @@ final class ka {
         field_c = null;
     }
 
-    final static ri a(int param0, int param1, int param2, ul param3) {
+    final static IndexedSprite a(int param0, int param1, int param2, ul param3) {
         RuntimeException var4 = null;
         ul var5 = null;
-        ri stackIn_6_0 = null;
+        IndexedSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

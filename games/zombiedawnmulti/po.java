@@ -5,7 +5,7 @@ import java.util.*;
 
 final class po extends IntrusiveNode {
     private int[] field_r;
-    jd[] field_s;
+    PcmSample[] field_s;
     static int field_n;
     static String field_i;
     static pd field_l;
@@ -206,7 +206,7 @@ final class po extends IntrusiveNode {
         try {
           this.field_q = new nj[128];
           this.field_h = new byte[128];
-          this.field_s = new jd[128];
+          this.field_s = new PcmSample[128];
           this.field_m = new byte[128];
           this.field_r = new int[128];
           this.field_g = new short[128];
@@ -627,7 +627,7 @@ final class po extends IntrusiveNode {
                   }
                 }
                 if (var7 != null) {
-                  this.field_s[var8] = (jd) (var7);
+                  this.field_s[var8] = (PcmSample) (var7);
                   this.field_r[var8] = 0;
                 }
               }

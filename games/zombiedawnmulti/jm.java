@@ -17,7 +17,7 @@ final class jm extends ae {
         if (param0 != -18) {
           return;
         }
-        oo.i(4, 4, 0, 0, oo.field_b, oo.field_l);
+        SoftwareRasterizer.i(4, 4, 0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
     }
 
     final void a(byte param0) {
@@ -149,14 +149,14 @@ final class jm extends ae {
             var8 = param3[1].fullWidth;
             param3[0].g(param2, param4, param0);
             param3[2].g(-var7 + (param2 + param5), param4, param0);
-            oo.a(ki.field_d);
-            oo.e(var6_int + param2, param4, param2 + (param5 - var7), param4 + param3[1].field_u);
+            SoftwareRasterizer.saveClip(ki.field_d);
+            SoftwareRasterizer.intersectClip(var6_int + param2, param4, param2 + (param5 - var7), param4 + param3[1].field_u);
             var9 = param2 + var6_int;
             var10 = param5 + param2 - var7;
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param3[1].g(param2, param4, param0);
             }
-            oo.b(ki.field_d);
+            SoftwareRasterizer.restoreClip(ki.field_d);
             return;
           }
           return;

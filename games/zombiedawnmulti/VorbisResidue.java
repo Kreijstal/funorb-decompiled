@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc {
-    private int field_c;
-    private int field_f;
-    private int[] field_g;
-    private int field_a;
-    private int field_e;
-    private int field_d;
-    private int field_b;
+final class VorbisResidue {
+    private int end;
+    private int partitionSize;
+    private int[] cascadeBooks;
+    private int begin;
+    private int classificationCount;
+    private int classbookId;
+    private int residueType;
 
-    final void a(float[] param0, int param1, boolean param2) {
+    final void decode(float[] param0, int param1, boolean param2) {
         int var8 = 0;
         int var17 = 0;
         int var16 = 0;
@@ -24,7 +24,7 @@ final class oc {
         int var11;
         int var12;
         int var13;
-        ni var14;
+        VorbisCodebook var14;
         int var15;
         int[] var19;
         int[] var22;
@@ -40,9 +40,9 @@ final class oc {
         if (param2) {
           return;
         }
-        var4Lifetime1 = ac.field_o[this.field_d].field_e;
-        var5 = this.field_c - this.field_a;
-        var6 = var5 / this.field_f;
+        var4Lifetime1 = VorbisSample.codebooks[this.classbookId].field_e;
+        var5 = this.end - this.begin;
+        var6 = var5 / this.partitionSize;
         var22 = new int[var6];
         var19 = var22;
         var7 = var19;
@@ -50,25 +50,25 @@ final class oc {
           var9 = 0;
           while (var9 < var6) {
             if (var8 == 0) {
-              var10 = ac.field_o[this.field_d].a();
+              var10 = VorbisSample.codebooks[this.classbookId].a();
               for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
-                  var7[var9 + var11] = var10 % this.field_e;
+                  var7[var9 + var11] = var10 % this.classificationCount;
                 }
-                var10 = var10 / this.field_e;
+                var10 = var10 / this.classificationCount;
               }
             }
             var22Lifetime1 = var19;
             var10Lifetime1 = 0;
             while (var10Lifetime1 < var4Lifetime1) {
               var11Lifetime1 = var22Lifetime1[var9];
-              var12 = this.field_g[var11Lifetime1 * 8 + var8];
+              var12 = this.cascadeBooks[var11Lifetime1 * 8 + var8];
               if (var12 >= 0) {
-                var13 = this.field_a + var9 * this.field_f;
-                var14 = ac.field_o[var12];
-                if (this.field_b != 0) {
+                var13 = this.begin + var9 * this.partitionSize;
+                var14 = VorbisSample.codebooks[var12];
+                if (this.residueType != 0) {
                   var15 = 0;
-                  while (var15 < this.field_f) {
+                  while (var15 < this.partitionSize) {
                     var28 = var14.c();
                     for (var17 = 0; var17 < var14.field_e; var17++) {
                       param0[var13 + var15] = param0[var13 + var15] + var28[var17];
@@ -76,7 +76,7 @@ final class oc {
                     }
                   }
                 } else {
-                  var15 = this.field_f / var14.field_e;
+                  var15 = this.partitionSize / var14.field_e;
                   for (var16 = 0; var16 < var15; var16++) {
                     var27 = var14.c();
                     for (var18 = 0; var18 < var14.field_e; var18++) {
@@ -96,33 +96,33 @@ final class oc {
         return;
     }
 
-    oc() {
+    VorbisResidue() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_b = ac.a(16);
-        this.field_a = ac.a(24);
-        this.field_c = ac.a(24);
-        this.field_f = ac.a(24) + 1;
-        this.field_e = ac.a(6) + 1;
-        this.field_d = ac.a(8);
-        int[] var1 = new int[this.field_e];
-        for (var2 = 0; var2 < this.field_e; var2++) {
+        this.residueType = VorbisSample.a(16);
+        this.begin = VorbisSample.a(24);
+        this.end = VorbisSample.a(24);
+        this.partitionSize = VorbisSample.a(24) + 1;
+        this.classificationCount = VorbisSample.a(6) + 1;
+        this.classbookId = VorbisSample.a(8);
+        int[] var1 = new int[this.classificationCount];
+        for (var2 = 0; var2 < this.classificationCount; var2++) {
           var3 = 0;
-          var4 = ac.a(3);
-          var5 = ac.b() != 0 ? 1 : 0;
+          var4 = VorbisSample.a(3);
+          var5 = VorbisSample.b() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = ac.a(5);
+            var3 = VorbisSample.a(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
-        this.field_g = new int[this.field_e * 8];
+        this.cascadeBooks = new int[this.classificationCount * 8];
         int var6 = 0;
         var2Lifetime1 = var6;
-        while (var6 < this.field_e * 8) {
-          this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? ac.a(8) : -1;
+        while (var6 < this.classificationCount * 8) {
+          this.cascadeBooks[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisSample.a(8) : -1;
           var6++;
         }
     }

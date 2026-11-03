@@ -64,8 +64,8 @@ final class ql {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        oo.a(var1.field_o, var1.field_i, var1.field_f);
-        oo.h(var1.field_m, var1.field_h, var1.field_p, var1.field_g);
+        SoftwareRasterizer.setTarget(var1.field_o, var1.field_i, var1.field_f);
+        SoftwareRasterizer.setClip(var1.field_m, var1.field_h, var1.field_p, var1.field_g);
         var1.field_o = null;
         db.field_a.a(var1, false);
     }

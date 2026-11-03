@@ -89,7 +89,7 @@ class hq implements WidgetActionListener, rk {
 
     final static void b(byte param0) {
         if (ee.field_b) {
-          oo.f(oo.field_f, oo.field_e, -oo.field_f + oo.field_g, oo.field_d - oo.field_e);
+          SoftwareRasterizer.clearRect(SoftwareRasterizer.field_f, SoftwareRasterizer.field_e, -SoftwareRasterizer.field_f + SoftwareRasterizer.field_g, SoftwareRasterizer.field_d - SoftwareRasterizer.field_e);
           rp.field_l.c(false, -1);
           if (param0 < 12) {
             field_o = (char[]) null;

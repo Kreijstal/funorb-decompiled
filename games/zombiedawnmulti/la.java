@@ -15,7 +15,7 @@ final class la {
     static byte[] field_g;
     private int field_f;
     static int[] field_c;
-    static ri[] field_l;
+    static IndexedSprite[] field_l;
     static Sprite field_j;
 
     private final void b(int param0, byte param1) {
@@ -26,14 +26,14 @@ final class la {
         if (param1 > 21) {
           var4 = new int[this.a(param0, (byte) 104)];
           var3 = var4;
-          d.a(this.field_o, 0, var4, 0, this.field_o.length);
+          ArrayOperations.a(this.field_o, 0, var4, 0, this.field_o.length);
           this.field_o = var4;
           return;
         }
-        field_l = (ri[]) null;
+        field_l = (IndexedSprite[]) null;
         var4Lifetime1 = new int[this.a(param0, (byte) 104)];
         var3Lifetime1 = var4Lifetime1;
-        d.a(this.field_o, 0, var4Lifetime1, 0, this.field_o.length);
+        ArrayOperations.a(this.field_o, 0, var4Lifetime1, 0, this.field_o.length);
         this.field_o = var4Lifetime1;
     }
 
@@ -143,7 +143,7 @@ final class la {
           this.field_a = this.field_a - 1;
           return;
         }
-        d.a(this.field_o, param1 + 1, this.field_o, param1, -param1 + this.field_a);
+        ArrayOperations.a(this.field_o, param1 + 1, this.field_o, param1, -param1 + this.field_a);
         var3Lifetime1 = -95 / ((param0 - 37) / 32);
         this.field_a = this.field_a - 1;
     }

@@ -4,7 +4,7 @@
 final class sh extends ek {
     static String field_M;
     int field_O;
-    static ri[] field_N;
+    static IndexedSprite[] field_N;
     static String field_P;
     static boolean field_L;
 

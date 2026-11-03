@@ -7,7 +7,7 @@ final class oi {
     static Sprite[] field_h;
     static String field_b;
     static ak field_j;
-    static ri field_k;
+    static IndexedSprite field_k;
     String field_c;
     static String field_a;
     static int field_i;

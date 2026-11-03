@@ -42,7 +42,7 @@ final class re {
             re.a(80);
           }
           var3 = new byte[var2_int];
-          d.a(param1, 0, var3, 0, var2_int);
+          ArrayOperations.a(param1, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

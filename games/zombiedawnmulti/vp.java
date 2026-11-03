@@ -9,7 +9,7 @@ final class vp extends PcmStream {
 
     final synchronized void a(int param0) {
         int var2 = 0;
-        rc var3 = null;
+        PcmMixerListener var3 = null;
         int var5 = 0;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -28,7 +28,7 @@ final class vp extends PcmStream {
           param0 = param0 - var2;
           this.field_j = this.field_j + var2;
           this.e();
-          var3 = (rc) (this.field_k.c(126));
+          var3 = (PcmMixerListener) (this.field_k.c(126));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -44,21 +44,21 @@ final class vp extends PcmStream {
         return;
     }
 
-    private final void a(IntrusiveNode param0, rc param1) {
+    private final void a(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.field_k.sentinel) {
             vc.a(param0, param1, true);
-            this.field_m = ((rc) (this.field_k.sentinel.previous)).field_f;
+            this.field_m = ((PcmMixerListener) (this.field_k.sentinel.previous)).field_f;
             return;
           }
-          if (((rc) (param0)).field_f <= param1.field_f) {
+          if (((PcmMixerListener) (param0)).field_f <= param1.field_f) {
             param0 = param0.previous;
             continue;
           }
           break;
         }
         vc.a(param0, param1, true);
-        this.field_m = ((rc) (this.field_k.sentinel.previous)).field_f;
+        this.field_m = ((PcmMixerListener) (this.field_k.sentinel.previous)).field_f;
         return;
     }
 
@@ -66,14 +66,14 @@ final class vp extends PcmStream {
         return (PcmStream) (this.field_l.b(6));
     }
 
-    private final void a(rc param0) {
+    private final void a(PcmMixerListener param0) {
         param0.unlink(true);
         param0.a();
         IntrusiveNode var2 = this.field_k.sentinel.previous;
         if (var2 == this.field_k.sentinel) {
           this.field_m = -1;
         } else {
-          this.field_m = ((rc) (var2)).field_f;
+          this.field_m = ((PcmMixerListener) (var2)).field_f;
         }
     }
 
@@ -95,7 +95,7 @@ final class vp extends PcmStream {
 
     final synchronized void b(int[] param0, int param1, int param2) {
         int var4 = 0;
-        rc var5 = null;
+        PcmMixerListener var5 = null;
         int var7 = 0;
         Throwable decompiledCaughtException = null;
         Object var6 = null;
@@ -115,7 +115,7 @@ final class vp extends PcmStream {
           param2 = param2 - var4;
           this.field_j = this.field_j + var4;
           this.e();
-          var5 = (rc) (this.field_k.c(84));
+          var5 = (PcmMixerListener) (this.field_k.c(84));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -132,12 +132,12 @@ final class vp extends PcmStream {
     }
 
     private final void e() {
-        rc var1 = null;
+        PcmMixerListener var1 = null;
         if (this.field_j > 0) {
-          var1 = (rc) (this.field_k.c(39));
+          var1 = (PcmMixerListener) (this.field_k.c(39));
           while (var1 != null) {
             var1.field_f = var1.field_f - this.field_j;
-            var1 = (rc) (this.field_k.b(6));
+            var1 = (PcmMixerListener) (this.field_k.b(6));
           }
           this.field_m = this.field_m - this.field_j;
           this.field_j = 0;

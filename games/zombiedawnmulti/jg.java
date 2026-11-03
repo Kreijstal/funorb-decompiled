@@ -131,7 +131,7 @@ final class jg {
         int var5 = 0;
         sm var7 = null;
         int var8 = 0;
-        di var9 = null;
+        PlatformTask var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;

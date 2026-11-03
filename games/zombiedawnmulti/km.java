@@ -63,7 +63,7 @@ final class km extends sq {
                 r.a(0, this.field_Z);
               } else {
                 r.a(0, this.field_Z);
-                oo.b();
+                SoftwareRasterizer.clear();
               }
             }
           }
@@ -100,7 +100,7 @@ final class km extends sq {
               r.a(0, this.field_Z);
             } else {
               r.a(0, this.field_Z);
-              oo.b();
+              SoftwareRasterizer.clear();
             }
           }
         }

@@ -9,7 +9,7 @@ final class vh extends cj {
     private int field_Jb;
     static String field_Fb;
     static boolean field_Hb;
-    static ri field_Lb;
+    static IndexedSprite field_Lb;
     static String[] field_Ib;
     private Sprite field_Kb;
 
@@ -90,14 +90,14 @@ final class vh extends cj {
         int var3;
         int var4;
         this.field_Kb.c(this.field_x, this.field_Q);
-        oo.a(4 + this.field_zb + this.field_x, this.field_Q, 8, this.field_z, 16777215, 4671303);
+        SoftwareRasterizer.fillRectGradient(4 + this.field_zb + this.field_x, this.field_Q, 8, this.field_z, 16777215, 4671303);
         var4 = 18 / ((param0 - 16) / 42);
         var2 = -this.field_x + MouseInputHandler.field_g;
         var3 = bo.field_d - this.field_Q;
         if ((jf.field_e & 1) != 0 &&
           var3 >= 0 && !(this.field_z <= var3) && (var2 >= 0 &&
           var2 < this.field_zb)) {
-          oo.c(MouseInputHandler.field_g, bo.field_d, 2, 0);
+          SoftwareRasterizer.drawCircle(MouseInputHandler.field_g, bo.field_d, 2, 0);
         }
     }
 

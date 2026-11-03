@@ -7,7 +7,7 @@ final class kj extends IntrusiveNode {
     int field_x;
     int field_w;
     static Sprite field_o;
-    static ri field_m;
+    static IndexedSprite field_m;
     int field_t;
     static int field_q;
     int field_k;

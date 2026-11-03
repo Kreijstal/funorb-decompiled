@@ -84,7 +84,7 @@ final class ce extends IntrusiveNode {
               var6_ref_nm.field_k = this.field_m * 24 + 320;
               this.field_i.a((byte) -12, var6_ref_nm);
               if (0 == this.field_q) {
-                oo.b();
+                SoftwareRasterizer.clear();
               }
               this.field_i.a(1, false, var6_ref_nm, -1);
               var7 = fb.field_e.field_H;

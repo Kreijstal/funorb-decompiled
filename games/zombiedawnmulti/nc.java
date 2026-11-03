@@ -123,17 +123,17 @@ class nc {
                 14 != this.field_d &&
                 8 != this.field_d) {
                 if (this.field_d == 15) {
-                  oo.e(0, 0, 640, 480, 16777215);
-                  oo.h(0, 0, 640, 5);
+                  SoftwareRasterizer.fillRect(0, 0, 640, 480, 16777215);
+                  SoftwareRasterizer.setClip(0, 0, 640, 5);
                   dd.field_g.d(0, 0);
-                  oo.h(0, 5, 640, 480);
+                  SoftwareRasterizer.setClip(0, 5, 640, 480);
                   dd.field_g.d(0, -32);
                   v.field_e.d(0, 448 - (pi.field_f.field_b + v.field_e.field_b));
-                  oo.h(4, 330, 636, 335);
+                  SoftwareRasterizer.setClip(4, 330, 636, 335);
                   dd.field_g.d(0, 330);
-                  oo.h(0, 335, 640, 419);
+                  SoftwareRasterizer.setClip(0, 335, 640, 419);
                   v.field_e.d(0, 300);
-                  oo.c();
+                  SoftwareRasterizer.resetClip();
                   pi.field_f.d(0, 480 - pi.field_f.field_b);
                   break regionExit1;
                 }
@@ -151,10 +151,10 @@ class nc {
                       of.field_e[4].c(0, 0);
                     } else {
                       if (this.field_d == 11) {
-                        oo.e(0, 0, 640, 480, 65793);
+                        SoftwareRasterizer.fillRect(0, 0, 640, 480, 65793);
                       } else {
                         if ((this.field_d == 12)) {
-                          oo.e(0, 0, 640, 480, 65793);
+                          SoftwareRasterizer.fillRect(0, 0, 640, 480, 65793);
                         }
                       }
                     }
@@ -530,8 +530,8 @@ class nc {
 
     int d(int param0, int param1) {
         if (param0 > -65) {
-          ug var4 = (ug) null;
-          nc.a(true, -108, -32, (ug) null);
+          MusicTrack var4 = (MusicTrack) null;
+          nc.a(true, -108, -32, (MusicTrack) null);
         }
         if (!this.field_f) {
           return this.a((byte) -118, param1) + this.field_k;
@@ -599,7 +599,7 @@ class nc {
           }
           if (2 == this.field_d) {
             wp.field_h.b(true, 1);
-            oo.f(0, 0, 640, 480);
+            SoftwareRasterizer.clearRect(0, 0, 640, 480);
             nn.a(!param0);
           }
         } else {
@@ -671,7 +671,7 @@ class nc {
           mj.field_Hb[var6Lifetime1].b(0);
         } else {
           wp.field_h.b(true, 1);
-          oo.f(0, 0, 640, 480);
+          SoftwareRasterizer.clearRect(0, 0, 640, 480);
           ClientException.field_e.h();
         }
         SocketConnector.field_h.b((byte) 99);
@@ -686,8 +686,8 @@ class nc {
 
     int a(int param0, int param1) {
         if (param1 != 23697) {
-          ug var4 = (ug) null;
-          nc.a(true, 65, 23, (ug) null);
+          MusicTrack var4 = (MusicTrack) null;
+          nc.a(true, 65, 23, (MusicTrack) null);
         }
         if (this.field_f) {
           return this.field_b + param0 * this.field_k;
@@ -705,7 +705,7 @@ class nc {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, ug param3) {
+    final static void a(boolean param0, int param1, int param2, MusicTrack param3) {
         int var4_int = 0;
         Object var5 = null;
         RuntimeException stackIn_20_0 = null;
@@ -999,7 +999,7 @@ class nc {
           var15 = var5 + (-var14 + var8 >> 1);
           ah.field_e.c(var7Lifetime2, var15, (var12 >> 1) + ah.field_e.field_C + var4 + ZombieDawnMulti.field_I[0].field_u, var10, 0);
           var15 = var15 + (8 + ok.field_l);
-          oo.a(var15, var9 / 2 + var4 - 1, 129, 2, var10);
+          SoftwareRasterizer.drawRect(var15, var9 / 2 + var4 - 1, 129, 2, var10);
           if (12 != var6) {
             stackIn_62_0 = uk.field_S;
           } else {

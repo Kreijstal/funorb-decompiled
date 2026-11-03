@@ -10,7 +10,7 @@ final class aa extends ii {
     static int field_o;
     static cj field_l;
     static String field_p;
-    static ri[] field_h;
+    static IndexedSprite[] field_h;
     private int field_q;
     private long[] field_g;
     private long field_i;
@@ -18,8 +18,8 @@ final class aa extends ii {
     final static ra b(int param0, int param1) {
         ra var2 = new ra();
         if (param0 != -19300) {
-          uj var3 = (uj) null;
-          aa.a(true, (uj) null);
+          PcmSampleStream var3 = (PcmSampleStream) null;
+          aa.a(true, (PcmSampleStream) null);
         }
         so.field_j.a(var2, false);
         qo.b(true, param1);
@@ -109,7 +109,7 @@ final class aa extends ii {
         return var4;
     }
 
-    final static void a(boolean param0, uj param1) {
+    final static void a(boolean param0, PcmSampleStream param1) {
         if (!param0) {
           return;
         }

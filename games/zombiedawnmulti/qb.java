@@ -7,7 +7,7 @@ abstract class qb {
     static String field_o;
     lq field_g;
     lq field_j;
-    static ri field_h;
+    static IndexedSprite field_h;
     lq field_c;
     lq field_l;
     PacketBuffer field_b;

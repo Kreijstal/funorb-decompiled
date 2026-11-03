@@ -1011,12 +1011,12 @@ final class GameScreen {
             return;
           }
           if (!he.field_a) {
-            oo.h(0, 40, 640, 440);
+            SoftwareRasterizer.setClip(0, 40, 640, 440);
             if (var4 != 0) {
-              oo.c();
+              SoftwareRasterizer.resetClip();
             }
           } else {
-            oo.c();
+            SoftwareRasterizer.resetClip();
           }
           if (1.0f == this.field_k.field_d) {
             ki.field_k.c(0, 0);
@@ -2045,7 +2045,7 @@ final class GameScreen {
         try {
           var5 = am.a(0, op.field_m.field_D[param3][1], 0, 1, op.field_m.field_D[param3][0]);
           og.h((byte) 116);
-          oo.h(320 - this.field_l / 2, 0, 320 + this.field_l / 2, 480);
+          SoftwareRasterizer.setClip(320 - this.field_l / 2, 0, 320 + this.field_l / 2, 480);
           if (param1 != -99) {
             this.b(95, (byte) 85, -97);
           }
@@ -2296,7 +2296,7 @@ final class GameScreen {
         h var9 = null;
         GameCharacter var9_ref = null;
         int var9_int = 0;
-        sl var9_ref2 = null;
+        PaletteBitmapFont var9_ref2 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -2545,9 +2545,9 @@ final class GameScreen {
           this.field_l = 640;
           var9_ref2.b(var8_ref4, this.field_y.width / 2, this.field_y.height - var9_ref2.field_r, 2, -1);
           this.field_L.a();
-          oo.b(0, 0, this.field_L.width, this.field_L.height, 12, 8421504, 80);
+          SoftwareRasterizer.fillRoundedRectAlpha(0, 0, this.field_L.width, this.field_L.height, 12, 8421504, 80);
           this.field_y.f(6, param0, 16777215);
-          oo.i(4, 4, 0, 0, oo.field_b, oo.field_l);
+          SoftwareRasterizer.i(4, 4, 0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
           this.field_y.f(6, 6, 0);
           g.d();
           if (op.field_m.field_t == 1) {
@@ -2623,7 +2623,7 @@ final class GameScreen {
         si var5 = null;
         boolean stackIn_6_0 = false;
         int stackIn_6_1 = 0;
-        ug[] stackIn_6_2 = null;
+        MusicTrack[] stackIn_6_2 = null;
         int stackIn_7_3;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -3044,7 +3044,7 @@ final class GameScreen {
           }
           var6 = new ti[this.field_H.a(0)];
           var7 = new int[this.field_H.a(0)];
-          d.a(var7, 0, var7.length, 32767);
+          ArrayOperations.a(var7, 0, var7.length, 32767);
           var8 = 0;
           var9_ref_br = this.field_H.c(94);
           boolean decompiledNaturalLoopExit0 = false;
@@ -3344,7 +3344,7 @@ final class GameScreen {
         int var7 = 0;
         GameCharacter var7_ref_wb = null;
         int var8_int = 0;
-        sl var8 = null;
+        PaletteBitmapFont var8 = null;
         int var9_int = 0;
         int[] var9 = null;
         String var9_ref = null;
@@ -3378,12 +3378,12 @@ final class GameScreen {
         try {
           g.c(ki.field_k);
           if (!he.field_a) {
-            oo.h(0, 40, (int)(640.0f * this.field_k.field_d), (int)(480.0f * this.field_k.field_d) - 40);
+            SoftwareRasterizer.setClip(0, 40, (int)(640.0f * this.field_k.field_d), (int)(480.0f * this.field_k.field_d) - 40);
             if (var20 != 0) {
-              oo.c();
+              SoftwareRasterizer.resetClip();
             }
           } else {
-            oo.c();
+            SoftwareRasterizer.resetClip();
           }
           var3_int = 0;
           var4 = 0;
@@ -3559,7 +3559,7 @@ final class GameScreen {
                     } else {
                       stackIn_113_4 = 3390259;
                     }
-                    oo.f(stackIn_112_0, stackIn_112_1, stackIn_112_2, stackIn_112_3, stackIn_113_4, 128);
+                    SoftwareRasterizer.fillRectAlpha(stackIn_112_0, stackIn_112_1, stackIn_112_2, stackIn_112_3, stackIn_113_4, 128);
                   }
                   var16++;
                 }
@@ -3594,7 +3594,7 @@ final class GameScreen {
               var16Lifetime1 = var12 + var13 >> 1;
               var17Lifetime1 = this.field_k.c(24 * var15Lifetime1, -20126);
               var18Lifetime1 = this.field_k.d(var16Lifetime1 * 24, 126);
-              oo.d(var17Lifetime1, var18Lifetime1, 120, 0, 128);
+              SoftwareRasterizer.fillCircleAlpha(var17Lifetime1, var18Lifetime1, 120, 0, 128);
             }
           }
           if (~(1280 / ke.field_b) != ~so.field_l.width) {
@@ -3713,7 +3713,7 @@ final class GameScreen {
                       var10_ref_wb.field_K != 21 &&
                       var10_ref_wb.i((byte) 0)) {
                       g.c(so.field_l);
-                      oo.d(var11 / ke.field_b, var12 / ke.field_b, var9_int, 0);
+                      SoftwareRasterizer.fillCircle(var11 / ke.field_b, var12 / ke.field_b, var9_int, 0);
                       g.d();
                     }
                   }
@@ -3730,7 +3730,7 @@ final class GameScreen {
                 var10_ref_h = this.field_o;
                 var11 = this.field_k.c(var10_ref_h.g(param1 - 97), param1 - 20127);
                 var12 = this.field_k.d(var10_ref_h.h(-51), 108);
-                oo.d(var11 / ke.field_b, var12 / ke.field_b, var9_int, 0);
+                SoftwareRasterizer.fillCircle(var11 / ke.field_b, var12 / ke.field_b, var9_int, 0);
                 var6 = this.field_c.c((byte) 127);
                 while (var6 != null) {
                   var10_ref_hLifetime1 = (h) (var6);
@@ -3743,7 +3743,7 @@ final class GameScreen {
                   if (stackIn_261_0 != stackIn_261_1) {
                     var11 = this.field_k.c(var10_ref_hLifetime1.g(param1 ^ -82), -20126);
                     var12 = this.field_k.d(var10_ref_hLifetime1.h(103), 121);
-                    oo.d(var11 / ke.field_b, var12 / ke.field_b, var9_int, var7);
+                    SoftwareRasterizer.fillCircle(var11 / ke.field_b, var12 / ke.field_b, var9_int, var7);
                   }
                   var6 = this.field_c.b((byte) 96);
                 }
@@ -3792,8 +3792,8 @@ final class GameScreen {
             if (0 == (wf.field_m & 1)) {
               g.c(this.field_B);
               this.field_i = nk.a(2154560, 455739624, 16724223);
-              oo.b();
-              oo.e(0, 0, oo.field_b, oo.field_l, 1);
+              SoftwareRasterizer.clear();
+              SoftwareRasterizer.fillRect(0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l, 1);
               this.field_S.a(1, (double)wf.field_m / 6.25, this.field_i);
               g.d();
             }
@@ -3829,9 +3829,9 @@ final class GameScreen {
             } else {
               var9_int = this.field_p;
             }
-            oo.a(var8_int, var9_int, var10, var11, 16777215);
-            oo.h(var8_int + 1, 1 + var9_int, -2 + var10, var11 - 2, 10066431, 32);
-            oo.f(2 + var8_int, var9_int + 2, -4 + var10, -4 + var11, 3355647, 32);
+            SoftwareRasterizer.drawRect(var8_int, var9_int, var10, var11, 16777215);
+            SoftwareRasterizer.drawRectAlpha(var8_int + 1, 1 + var9_int, -2 + var10, var11 - 2, 10066431, 32);
+            SoftwareRasterizer.fillRectAlpha(2 + var8_int, var9_int + 2, -4 + var10, -4 + var11, 3355647, 32);
           }
           boolean decompiledFrameRemainder0 = true;
           var8 = ah.field_e;
@@ -3891,9 +3891,9 @@ final class GameScreen {
             if (decompiledFrameRemainder0) {
               var9_int = -(this.field_l / 2) + 320;
               var10 = 320 + this.field_l / 2;
-              oo.h(var9_int, 0, var10, 480);
+              SoftwareRasterizer.setClip(var9_int, 0, var10, 480);
               var11 = 140;
-              oo.b(var11, 80, 640 - 2 * var11, 260, 1, 3355443, 120);
+              SoftwareRasterizer.fillRoundedRectAlpha(var11, 80, 640 - 2 * var11, 260, 1, 3355443, 120);
               if ((-5 + var11) > var9_int) {
                 stackIn_348_0 = -5 + var11;
               } else {
@@ -3905,7 +3905,7 @@ final class GameScreen {
               } else {
                 stackIn_352_2 = var10;
               }
-              oo.h(stackIn_348_0, stackIn_351_1, stackIn_352_2, 345);
+              SoftwareRasterizer.setClip(stackIn_348_0, stackIn_351_1, stackIn_352_2, 345);
               sj.field_j.c(var11 - 5, 75);
               sj.field_j.a(-5 + var11, 340);
               lm.field_fb.c(var11 - 5, 75);
@@ -3938,7 +3938,7 @@ final class GameScreen {
               }
               this.field_y.g(-(this.field_y.width / 2) + 320, 235 - this.field_y.height);
               g.a(this.field_L, -(this.field_y.width / 2) + 320 - 6, 235 + (-this.field_y.height - 6));
-              oo.c();
+              SoftwareRasterizer.resetClip();
             }
           }
           if (param0) {
@@ -3952,7 +3952,7 @@ final class GameScreen {
           if (sc.field_a ||
             wj.field_n ||
             n.field_g) {
-            oo.f(0, 0, 640, 17, 0, 100);
+            SoftwareRasterizer.fillRectAlpha(0, 0, 640, 17, 0, 100);
           }
           if (sc.field_a) {
             qp.field_w.c("cam=(" + this.field_k.field_k + ", " + this.field_k.field_g + ") bk=" + kd.field_b + " k=" + pq.field_f + " mouse=(" + MouseInputHandler.field_g + "," + bo.field_d + ")", 5, 13, 16777215, 0);
@@ -4641,7 +4641,7 @@ final class GameScreen {
           if (param1) {
             this.field_A = 96;
           }
-          d.a(param0, 0, op.field_m.field_d, 0, param0.length);
+          ArrayOperations.a(param0, 0, op.field_m.field_d, 0, param0.length);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

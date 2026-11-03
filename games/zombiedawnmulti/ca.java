@@ -62,7 +62,7 @@ final class ca extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var9;
         int var10;
         int var11;
@@ -70,31 +70,31 @@ final class ca extends BitmapFont {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var9 = param1 + param2 * oo.field_b;
-        var10 = oo.field_b - param3;
+        var9 = param1 + param2 * SoftwareRasterizer.field_b;
+        var10 = SoftwareRasterizer.field_b - param3;
         var11 = 0;
         var12 = 0;
-        if (param2 < oo.field_e) {
-          var13 = oo.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var13 = SoftwareRasterizer.field_e - param2;
           param4 = param4 - var13;
-          param2 = oo.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * oo.field_b;
+          var9 = var9 + var13 * SoftwareRasterizer.field_b;
         }
-        if (param2 + param4 > oo.field_d) {
-          param4 = param4 - (param2 + param4 - oo.field_d);
+        if (param2 + param4 > SoftwareRasterizer.field_d) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_d);
         }
-        if (param1 < oo.field_f) {
-          var13Lifetime1 = oo.field_f - param1;
+        if (param1 < SoftwareRasterizer.field_f) {
+          var13Lifetime1 = SoftwareRasterizer.field_f - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = oo.field_f;
+          param1 = SoftwareRasterizer.field_f;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > oo.field_g) {
-          var13Lifetime2 = param1 + param3 - oo.field_g;
+        if (param1 + param3 > SoftwareRasterizer.field_g) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.field_g;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -102,9 +102,9 @@ final class ca extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            ca.a(oo.field_i, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            ca.a(SoftwareRasterizer.field_i, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
-            ef.a(oo.field_i, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.field_i, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
@@ -118,31 +118,31 @@ final class ca extends BitmapFont {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * oo.field_b;
-        var9 = oo.field_b - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.field_b;
+        var9 = SoftwareRasterizer.field_b - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < oo.field_e) {
-          var12 = oo.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var12 = SoftwareRasterizer.field_e - param2;
           param4 = param4 - var12;
-          param2 = oo.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * oo.field_b;
+          var8 = var8 + var12 * SoftwareRasterizer.field_b;
         }
-        if (param2 + param4 > oo.field_d) {
-          param4 = param4 - (param2 + param4 - oo.field_d);
+        if (param2 + param4 > SoftwareRasterizer.field_d) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_d);
         }
-        if (param1 < oo.field_f) {
-          var12Lifetime1 = oo.field_f - param1;
+        if (param1 < SoftwareRasterizer.field_f) {
+          var12Lifetime1 = SoftwareRasterizer.field_f - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = oo.field_f;
+          param1 = SoftwareRasterizer.field_f;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > oo.field_g) {
-          var12Lifetime2 = param1 + param3 - oo.field_g;
+        if (param1 + param3 > SoftwareRasterizer.field_g) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.field_g;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
@@ -150,9 +150,9 @@ final class ca extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            ca.a(oo.field_i, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
+            ca.a(SoftwareRasterizer.field_i, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            ef.a(oo.field_i, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
+            BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.field_i, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }

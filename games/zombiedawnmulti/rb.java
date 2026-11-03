@@ -8,11 +8,11 @@ final class rb {
     static String field_b;
     static cj field_d;
 
-    final static ef a(int param0, byte[] param1) {
-        ef var2 = null;
+    final static BinaryBitmapFont a(int param0, byte[] param1) {
+        BinaryBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
-        ef stackIn_6_0 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -25,7 +25,7 @@ final class rb {
           if (param1 == null) {
             return null;
           }
-          var2 = new ef(param1, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, qp.field_t);
+          var2 = new BinaryBitmapFont(param1, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, qp.field_t);
           fd.h((byte) 126);
           stackIn_6_0 = var2;
           return stackIn_6_0;

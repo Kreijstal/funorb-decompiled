@@ -838,7 +838,7 @@ final class so extends ae {
         if (!param1) {
           field_k = (PacketBuffer) null;
         }
-        oo.d(this.field_q >> 16 - param2, this.field_u >> 16 - param0, this.field_i - param2, -param0 + this.field_m, 16711680, 10);
+        SoftwareRasterizer.d(this.field_q >> 16 - param2, this.field_u >> 16 - param0, this.field_i - param2, -param0 + this.field_m, 16711680, 10);
     }
 
     final static void a(int[] param0, boolean param1, int param2, int param3, int param4) {

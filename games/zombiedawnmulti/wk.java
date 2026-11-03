@@ -3,7 +3,7 @@
  */
 abstract class wk extends WidgetContainer implements kh {
     static String field_K;
-    static ri field_J;
+    static IndexedSprite field_J;
     static mh field_I;
     private dj field_H;
     static int[] field_L;

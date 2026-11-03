@@ -126,8 +126,8 @@ final class ci {
         cj var15 = null;
         var13 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          dm.field_Qb = oo.field_l;
-          kp.field_l = oo.field_b;
+          dm.field_Qb = SoftwareRasterizer.field_l;
+          kp.field_l = SoftwareRasterizer.field_b;
           if (param0) {
             stackIn_4_0 = sq.field_Q;
           } else {
@@ -247,7 +247,7 @@ final class ci {
               }
             }
           }
-          qf.field_b.a(-10 + (-4 + oo.field_l - 130), 10, 360, oo.field_b - 360 >> 1, -3344);
+          qf.field_b.a(-10 + (-4 + SoftwareRasterizer.field_l - 130), 10, 360, SoftwareRasterizer.field_b - 360 >> 1, -3344);
           mq.field_l.a(24, 0, qf.field_b.field_zb, 0, -3344);
           vb.field_c.a(-24 + qf.field_b.field_z, 24, qf.field_b.field_zb, 0, -3344);
           vb.field_c.field_ab = tg.a(1, vb.field_c.field_z, 8421504, 3, 11579568, 35);

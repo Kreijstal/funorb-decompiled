@@ -50,7 +50,7 @@ final class nk extends IntrusiveNode {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ri var9 = null;
+        IndexedSprite var9 = null;
         jm stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -62,8 +62,8 @@ final class nk extends IntrusiveNode {
           var4 = param1.readUnsignedShort((byte) 69);
           var5 = param1.readUnsignedShort((byte) 69);
           if (param0 != 20399) {
-            var9 = (ri) null;
-            nk.a(-34, (int[]) null, (ri) null);
+            var9 = (IndexedSprite) null;
+            nk.a(-34, (int[]) null, (IndexedSprite) null);
           }
           var6 = param1.readUnsignedShort((byte) 69);
           var7 = param1.readUnsignedShort((byte) 69);
@@ -94,11 +94,11 @@ final class nk extends IntrusiveNode {
         }
     }
 
-    final static ri a(int param0, int[] param1, ri param2) {
-        ri var3 = null;
+    final static IndexedSprite a(int param0, int[] param1, IndexedSprite param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        ri stackIn_2_0 = null;
-        ri stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -106,13 +106,13 @@ final class nk extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ri(0, 0, 0);
+          var3 = new IndexedSprite(0, 0, 0);
           var3.field_b = param2.field_b;
           var3.field_f = param2.field_f;
           var3.field_m = param2.field_m;
           var3.field_h = param2.field_h;
           if (param0 < 84) {
-            stackIn_2_0 = (ri) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
           var3.field_j = param2.field_j;
@@ -159,9 +159,9 @@ final class nk extends IntrusiveNode {
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           g.c(vb.field_b);
-          oo.b();
+          SoftwareRasterizer.clear();
           param0.g(3, 3);
-          var10 = oo.field_i;
+          var10 = SoftwareRasterizer.field_i;
           var9 = var10;
           var4 = var9;
           for (var5 = 0; var5 < var10.length; var5++) {
@@ -273,8 +273,8 @@ final class nk extends IntrusiveNode {
         int var6 = 255 & param2;
         int var7 = (16766674 & param0) >> 16;
         if (param1 != 455739624) {
-          ri var13 = (ri) null;
-          nk.a(-88, (int[]) null, (ri) null);
+          IndexedSprite var13 = (IndexedSprite) null;
+          nk.a(-88, (int[]) null, (IndexedSprite) null);
         }
         int var8 = param0 >> 8 & 255;
         int var9 = 255 & param0;

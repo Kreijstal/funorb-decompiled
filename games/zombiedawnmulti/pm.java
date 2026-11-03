@@ -13,7 +13,7 @@ class pm extends gn {
     private boolean field_M;
     private int field_W;
     private int field_S;
-    static ri field_N;
+    static IndexedSprite field_N;
 
     final boolean a(int param0, char param1, UiWidget param2, int param3) {
         int dupTemp$0 = 0;
@@ -507,9 +507,9 @@ class pm extends gn {
         ie.a(param1, param0);
     }
 
-    final static sl a(ul param0, int param1, int param2, ul param3, int param4) {
+    final static PaletteBitmapFont a(ul param0, int param1, int param2, ul param3, int param4) {
         RuntimeException var5 = null;
-        sl stackIn_6_0 = null;
+        PaletteBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
