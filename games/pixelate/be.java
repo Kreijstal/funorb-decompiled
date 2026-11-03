@@ -440,8 +440,8 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                   var9 >= 0) {
                   if (oo.field_e != null &&
                     null != oo.field_e[var7] &&
-                    0 < (oo.field_e[var7][var9] & ~ii.field_t)) {
-                    var15 = cl.a((byte) -99, ~ii.field_t & oo.field_e[var7][var9]);
+                    0 < (oo.field_e[var7][var9] & ~MatchController.field_t)) {
+                    var15 = cl.a((byte) -99, ~MatchController.field_t & oo.field_e[var7][var9]);
                     var14 = 1;
                   }
                   if (null != jm.field_r &&
@@ -597,7 +597,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                       if (var11 != 0) {
                         var22_int = pa.field_a[var7][var9] - ui.field_e;
                         if (1 == var22_int) {
-                          var21 = hd.field_l;
+                          var21 = PlayerBoard.field_l;
                         } else {
                           var21 = sd.a(nj.field_c, 45, new String[]{Integer.toString(var22_int)});
                         }

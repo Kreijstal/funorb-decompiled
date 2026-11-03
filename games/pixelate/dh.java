@@ -138,14 +138,14 @@ final class dh {
           var2_int = 0;
           var3 = param0.length();
           while (var3 > var2_int) {
-            if (ii.a((byte) 116, param0.charAt(var2_int))) {
+            if (MatchController.a((byte) 116, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (ii.a((byte) 121, param0.charAt(var3 - 1))) {
+            if (MatchController.a((byte) 121, param0.charAt(var3 - 1))) {
               var3--;
               continue;
             }

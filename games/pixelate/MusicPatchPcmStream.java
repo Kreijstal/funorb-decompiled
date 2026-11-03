@@ -62,7 +62,7 @@ final class MusicPatchPcmStream extends PcmStream {
           param0 = param0 + var3 * (MatchingTextValidator.field_o - param0) / var2;
         }
         ui.field_i.a(param0, 120, ho.field_c, 256, 640);
-        ArchiveProvider.a(MatchingTextValidator.field_o - 24, (byte) 123, 640, hd.field_q, 5, 0, MouseWheelHandler.field_c);
+        ArchiveProvider.a(MatchingTextValidator.field_o - 24, (byte) 123, 640, PlayerBoard.field_q, 5, 0, MouseWheelHandler.field_c);
         if (param1 != 112) {
           MusicPatchPcmStream.e(92);
           return;

@@ -259,7 +259,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.field_O = new ValidatedTextWidget("", (UiListener) null, 12);
         TextWidgetPainter var1 = new TextWidgetPainter(ep.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, he.field_d.maxAscent, -1, 2147483647, true);
-        UiComponent var2 = new UiComponent(uh.field_d, var1, (UiListener) null);
+        UiComponent var2 = new UiComponent(PlayerController.field_d, var1, (UiListener) null);
         this.field_P = new TextButton(ig.field_c, (UiListener) null);
         this.field_N = new TextButton(IntrusiveNode.field_f, (UiListener) null);
         this.field_O.field_l = bg.field_i;

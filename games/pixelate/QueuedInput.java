@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class rd extends IntrusiveNode {
+final class QueuedInput extends IntrusiveNode {
     static byte[] field_l;
     int field_k;
     int field_m;
@@ -12,7 +12,7 @@ final class rd extends IntrusiveNode {
         field_l = null;
         if (param0 != -5778) {
           PacketBuffer var2 = (PacketBuffer) null;
-          rd.a(-60, (PacketBuffer) null);
+          QueuedInput.a(-60, (PacketBuffer) null);
         }
     }
 
@@ -38,7 +38,7 @@ final class rd extends IntrusiveNode {
               if (param2 <= -92) {
                 return;
               }
-              rd.a(true, 41, true);
+              QueuedInput.a(true, 41, true);
               return;
             }
             var17 = param3;
@@ -94,7 +94,7 @@ final class rd extends IntrusiveNode {
             try {
               if (param1 <= 124) {
                 var6 = (java.applet.Applet) null;
-                rd.a((String) null, -73, (java.applet.Applet) null);
+                QueuedInput.a((String) null, -73, (java.applet.Applet) null);
               }
               var7 = param2.getParameter("cookieprefix");
               var5 = var7;
@@ -200,7 +200,7 @@ final class rd extends IntrusiveNode {
         int var2_intLifetime2;
         try {
           if (param0 > -111) {
-            rd.a(-27);
+            QueuedInput.a(-27);
           }
           aj.field_n = param1.a((byte) -121) << 5;
           var2_int = param1.f(255);
@@ -220,7 +220,7 @@ final class rd extends IntrusiveNode {
         }
     }
 
-    rd() {
+    QueuedInput() {
     }
 
     static {

@@ -13,7 +13,7 @@ class GradientOutlineTextPainter extends TextWidgetPainter {
     public final void drawWidget(UiComponent param0, byte param1, int param2, int param3, boolean param4) {
         try {
           if (param4) {
-            kk.a(param3 + param0.field_z, param0.field_C, param0.field_p + param2, param0.field_E, (byte) -51);
+            BoardView.a(param3 + param0.field_z, param0.field_C, param0.field_p + param2, param0.field_E, (byte) -51);
           }
           super.drawWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

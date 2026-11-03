@@ -258,7 +258,7 @@ final class HuffmanCodec {
         if (Character.isISOControl(param0)) {
           return false;
         }
-        if (dd.a(param0, (byte) 126)) {
+        if (Puzzle.a(param0, (byte) 126)) {
           return true;
         }
         int var2 = -37 % ((-11 - param1) / 41);

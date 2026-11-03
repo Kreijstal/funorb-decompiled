@@ -33,13 +33,13 @@ final class ig {
             return (id) (stackIn_4_0);
           }
           if (MatchingTextValidator.field_n == Checkbox.field_N &&
-            param1.equals(uh.field_m)) {
+            param1.equals(PlayerController.field_m)) {
             MatchingTextValidator.field_n = wm.field_a;
             stackIn_8_0 = SpriteCheckboxPainter.field_f;
             return stackIn_8_0;
           }
           MatchingTextValidator.field_n = Js5NetworkRequest.field_F;
-          uh.field_m = param1;
+          PlayerController.field_m = param1;
           SpriteCheckboxPainter.field_f = null;
           stackIn_10_0 = null;
           return (id) (stackIn_10_0);

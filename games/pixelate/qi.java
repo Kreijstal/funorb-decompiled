@@ -53,7 +53,7 @@ final class qi extends jj {
           var2.field_x = var2.field_x + 1;
           if (var2.field_w <= fieldTemp$1) {
             var2.field_x = 0;
-            var3 = ii.c(5, (byte) -120);
+            var3 = MatchController.c(5, (byte) -120);
             stackIn_7_0 = var2;
             if (var3 != var2.field_n) {
               stackIn_8_1 = var3;

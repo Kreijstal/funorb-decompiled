@@ -68,7 +68,7 @@ final class AccountNamePrompt extends SceneWidget {
             this.field_Eb.length() > 0) {
             discarded$6 = this.field_Eb.append((char) var3);
           }
-          if (tk.a(-66, (char) var3)) {
+          if (BoardParticle.a(-66, (char) var3)) {
             discarded$8 = this.field_Eb.append((char) var3);
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
@@ -137,7 +137,7 @@ final class AccountNamePrompt extends SceneWidget {
             this.field_Eb.length() > 0) {
             discarded$3 = this.field_Eb.append((char) var3Lifetime1);
           }
-          if (tk.a(-66, (char) var3Lifetime1)) {
+          if (BoardParticle.a(-66, (char) var3Lifetime1)) {
             discarded$5 = this.field_Eb.append((char) var3Lifetime1);
             if (ke.field_a == 84) {
               if (this.field_Eb.length() <= 0) {
@@ -205,7 +205,7 @@ final class AccountNamePrompt extends SceneWidget {
           this.field_Eb.length() > 0) {
           discarded$0 = this.field_Eb.append((char) var3Lifetime2);
         }
-        if (tk.a(-66, (char) var3Lifetime2)) {
+        if (BoardParticle.a(-66, (char) var3Lifetime2)) {
           discarded$1 = this.field_Eb.append((char) var3Lifetime2);
           if (ke.field_a == 84) {
             if (this.field_Eb.length() <= 0) {

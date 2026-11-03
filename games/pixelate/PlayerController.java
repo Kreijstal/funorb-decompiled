@@ -3,21 +3,21 @@
  */
 import java.util.*;
 
-final class uh {
+final class PlayerController {
     static String field_m;
-    private dd field_n;
+    private Puzzle field_n;
     static String field_d;
     private int field_j;
-    private al field_q;
+    private FallingPieceView field_q;
     private int field_h;
-    private kk field_f;
+    private BoardView field_f;
     boolean field_o;
     private int field_a;
     static int field_r;
-    private ee field_g;
+    private InputQueue field_g;
     private int field_e;
     private boolean field_t;
-    private pm field_k;
+    private Match field_k;
     boolean field_l;
     private int field_u;
     private int field_s;
@@ -39,14 +39,14 @@ final class uh {
           if (dupTemp$0 == -1) {
             break;
           }
-          this.a(0, var2);
+          this.applyInput(0, var2);
         }
     }
 
     final void a(int param0, int param1, int param2) {
         this.field_g.a(param2, 0, param1);
         if (param0 != 6364) {
-          uh.a((byte) -64);
+          PlayerController.a((byte) -64);
         }
     }
 
@@ -69,7 +69,7 @@ final class uh {
     final void b(int param0) {
         this.field_f.a(false);
         if (param0 != -1) {
-          uh.f(88);
+          PlayerController.f(88);
         }
         if (!this.field_f.c(-127) &&
           !this.field_l &&
@@ -83,7 +83,7 @@ final class uh {
     final static boolean a(byte param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -59) {
-          uh.a((byte) 49);
+          PlayerController.a((byte) 49);
         }
         stackIn_7_0 = (10 <= el.field_b) && (!lo.field_Nb) && (!ol.b(true));
         return stackIn_7_0;
@@ -93,8 +93,8 @@ final class uh {
         int var5 = 0;
         int var4 = 0;
         if (param2) {
-          var4 = this.field_k.field_a[this.field_j].field_e;
-          var5 = this.field_k.field_a[this.field_j].field_h;
+          var4 = this.field_k.boards[this.field_j].pieceColumn;
+          var5 = this.field_k.boards[this.field_j].pieceRow;
           ki.a(this.field_f.field_t - (-32 - 32 * var4), -1, param1, var5 * 32 + (32 + this.field_f.field_u));
         } else {
           ki.a(this.field_i, -1, param1, this.field_s);
@@ -113,7 +113,7 @@ final class uh {
           this.field_p = -49;
         }
         this.field_u = 0;
-        this.field_k.field_a[this.field_j].field_p = false;
+        this.field_k.boards[this.field_j].fastDrop = false;
     }
 
     final void e(int param0) {
@@ -121,7 +121,7 @@ final class uh {
           this.field_j = -80;
         }
         this.field_e = !this.field_o ? 0 : -50;
-        this.field_n = this.field_k.field_d;
+        this.field_n = this.field_k.puzzle;
         this.field_f.a((byte) 71);
         this.field_t = true;
         this.field_h = 16777216 / this.field_n.field_j + (this.field_n.field_n + this.field_n.field_h) + 10;
@@ -246,10 +246,10 @@ final class uh {
         if (param0 != 9236) {
           this.field_i = 83;
         }
-        this.field_e = this.field_k.field_a[this.field_j].field_b;
+        this.field_e = this.field_k.boards[this.field_j].field_b;
     }
 
-    final void c(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -269,8 +269,8 @@ final class uh {
           return;
         }
         if (this.field_t) {
-          this.field_f = new kk(this.field_k.field_a[this.field_j], this.field_i, this.field_s);
-          this.field_q = new al(this.field_n, this.field_k.field_a[this.field_j], this.field_f);
+          this.field_f = new BoardView(this.field_k.boards[this.field_j], this.field_i, this.field_s);
+          this.field_q = new FallingPieceView(this.field_n, this.field_k.boards[this.field_j], this.field_f);
           this.field_u = 0;
           this.field_t = false;
         }
@@ -283,7 +283,7 @@ final class uh {
           return;
         }
         this.field_u = this.field_u + 1;
-        if (this.field_k.field_a[this.field_j].field_p &&
+        if (this.field_k.boards[this.field_j].fastDrop &&
           this.field_u > 20) {
           var2 = this.field_n.field_h + 10 + this.field_n.field_n;
           if (this.field_u < var2) {
@@ -301,14 +301,14 @@ final class uh {
             if (-1 == dupTemp$2) {
               return;
             }
-            this.a(~param0, var2Lifetime1);
+            this.applyInput(~param0, var2Lifetime1);
           }
         }
         if (this.field_h <= this.field_u) {
           if (AgeValidator.field_p) {
             ae.a(5, param0 ^ 18655, this.field_e);
           }
-          this.a(0, 5);
+          this.applyInput(0, 5);
         }
         return;
     }
@@ -320,7 +320,7 @@ final class uh {
         return this.field_e;
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean applyInput(int param0, int param1) {
         int stackIn_13_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_32_0 = 0;
@@ -333,14 +333,14 @@ final class uh {
         boolean decompiledFrameRemainder0 = true;
         var3 = 0;
         if (param1 == 5) {
-          stackIn_32_0 = (!this.field_k.a(param1, this.field_j, param0 + 92, this.field_e)) ? 0 : 1;
+          stackIn_32_0 = (!this.field_k.applyAction(param1, this.field_j, param0 + 92, this.field_e)) ? 0 : 1;
           var3 = stackIn_32_0;
           this.field_f.d(param0 - 16);
           this.field_q.a(param0 - 122);
           this.field_u = 0;
-          this.field_l = this.field_k.field_a[this.field_j].c(param0 + 26745);
-          if (50 != this.field_k.field_a[this.field_j].field_f) {
-            if (this.field_k.field_a[this.field_j].field_f > 0) {
+          this.field_l = this.field_k.boards[this.field_j].isFullyPainted(param0 + 26745);
+          if (50 != this.field_k.boards[this.field_j].field_f) {
+            if (this.field_k.boards[this.field_j].field_f > 0) {
               EmailValidator.a((byte) 96, 5);
             }
           } else {
@@ -351,7 +351,7 @@ final class uh {
             if (this.field_p != 0) {
               return false;
             }
-            if (this.field_k.a(param1, this.field_j, 127, this.field_e)) {
+            if (this.field_k.applyAction(param1, this.field_j, 127, this.field_e)) {
               EmailValidator.a((byte) 96, 4);
               this.field_p = 1;
               return true;
@@ -367,13 +367,13 @@ final class uh {
               1 != param1) {
               if ((param1 == 6 ||
                 param1 == 7)) {
-                stackIn_22_0 = (!this.field_k.a(param1, this.field_j, 28, this.field_e)) ? 0 : 1;
+                stackIn_22_0 = (!this.field_k.applyAction(param1, this.field_j, 28, this.field_e)) ? 0 : 1;
                 var3 = stackIn_22_0;
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              stackIn_13_0 = (!this.field_k.a(param1, this.field_j, 117, this.field_e)) ? 0 : 1;
+              stackIn_13_0 = (!this.field_k.applyAction(param1, this.field_j, 117, this.field_e)) ? 0 : 1;
               var3 = stackIn_13_0;
               if (var3 != 0) {
                 EmailValidator.a((byte) 96, ok.a(ea.field_b, -101, 4) + 0);
@@ -391,7 +391,7 @@ final class uh {
         return this.field_f.a(6);
     }
 
-    uh(pm param0, int param1, boolean param2, dd param3, int param4, int param5) {
+    PlayerController(Match param0, int param1, boolean param2, Puzzle param3, int param4, int param5) {
         boolean stackIn_4_1 = false;
         int stackIn_7_1 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -419,10 +419,10 @@ final class uh {
             stackIn_7_1 = 0;
           }
           this.field_e = stackIn_7_1;
-          this.field_f = new kk(this.field_k.field_a[this.field_j], this.field_i, this.field_s);
-          this.field_q = new al(this.field_n, this.field_k.field_a[this.field_j], this.field_f);
+          this.field_f = new BoardView(this.field_k.boards[this.field_j], this.field_i, this.field_s);
+          this.field_q = new FallingPieceView(this.field_n, this.field_k.boards[this.field_j], this.field_f);
           this.field_h = 16777216 / this.field_n.field_j + (this.field_n.field_h + 10) + this.field_n.field_n;
-          this.field_g = new ee();
+          this.field_g = new InputQueue();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -446,7 +446,7 @@ final class uh {
 
     final boolean i(int param0) {
         if (param0 >= -116) {
-          this.a(-27, -5);
+          this.applyInput(-27, -5);
         }
         return this.field_f.c(-123);
     }

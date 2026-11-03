@@ -276,14 +276,14 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
                         var38 = -var37 + (ja.field_d - 1);
                       }
                       if (var37 < 0) {
-                        rd.a(var37 + var38, var36Lifetime2, (byte) -105, param11, -(var40 * var37) + var25, var39, var41, var29 - var37 * var41, -(var37 * var39) + var21, var40);
+                        QueuedInput.a(var37 + var38, var36Lifetime2, (byte) -105, param11, -(var40 * var37) + var25, var39, var41, var29 - var37 * var41, -(var37 * var39) + var21, var40);
                       } else {
-                        rd.a(var38, var37 + var36Lifetime2, (byte) -108, param11, var25, var39, var41, var29, var21, var40);
+                        QueuedInput.a(var38, var37 + var36Lifetime2, (byte) -108, param11, var25, var39, var41, var29, var21, var40);
                       }
                     } else {
                       if (var37 >= 0 &&
                         ja.field_d > var37) {
-                        rd.a(var38, var37 + var36Lifetime2, (byte) -104, param11, var25, 0, 0, var29, var21, 0);
+                        QueuedInput.a(var38, var37 + var36Lifetime2, (byte) -104, param11, var25, 0, 0, var29, var21, 0);
                       }
                     }
                   }
@@ -427,7 +427,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
                 if (0 == var37Lifetime1) {
                   if (var36Lifetime1 >= 0 &&
                     var36Lifetime1 < ja.field_d) {
-                    rd.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, (byte) -114, param11, var25, 0, 0, var29, var21, 0);
+                    QueuedInput.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, (byte) -114, param11, var25, 0, 0, var29, var21, 0);
                   }
                 } else {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
@@ -437,9 +437,9 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
                     var37Lifetime1 = -var36Lifetime1 + (ja.field_d - 1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    rd.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, (byte) -108, param11, var25, var38Lifetime1, var40Lifetime1, var29, var21, var39Lifetime1);
+                    QueuedInput.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, (byte) -108, param11, var25, var38Lifetime1, var40Lifetime1, var29, var21, var39Lifetime1);
                   } else {
-                    rd.a(var36Lifetime1 + var37Lifetime1, var35Lifetime1, (byte) -118, param11, var25 - var36Lifetime1 * var39Lifetime1, var38Lifetime1, var40Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, -(var38Lifetime1 * var36Lifetime1) + var21, var39Lifetime1);
+                    QueuedInput.a(var36Lifetime1 + var37Lifetime1, var35Lifetime1, (byte) -118, param11, var25 - var36Lifetime1 * var39Lifetime1, var38Lifetime1, var40Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, -(var38Lifetime1 * var36Lifetime1) + var21, var39Lifetime1);
                   }
                 }
               }

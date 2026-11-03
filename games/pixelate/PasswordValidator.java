@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PasswordValidator extends TextFieldValidator {
-    static kk field_r;
+    static BoardView field_r;
     static SceneWidget field_o;
     static byte[] field_s;
     private EditableTextWidget field_n;

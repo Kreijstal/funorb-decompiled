@@ -84,7 +84,7 @@ final class hq extends de {
         int var6;
         int var7;
         int var8;
-        pm var9;
+        Match var9;
         var8 = Pixelate.field_H ? 1 : 0;
         if (this.field_G != 1) {
           NumericDateInputWidget.field_W[7].b(0, 45);
@@ -97,8 +97,8 @@ final class hq extends de {
         var3 = 70;
         var4 = 167;
         if (param0 != 11) {
-          var9 = (pm) null;
-          this.a((String) null, 91, (pm) null);
+          var9 = (Match) null;
+          this.a((String) null, 91, (Match) null);
         }
         for (var5_int = 0; 5 > var5_int; var5_int++) {
           rg.field_e.field_a[0].f(var3, var4);
@@ -292,7 +292,7 @@ final class hq extends de {
         }
     }
 
-    final void a(String param0, int param1, pm param2) {
+    final void a(String param0, int param1, Match param2) {
         int var4_int = 0;
         int stackIn_10_1 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -314,10 +314,10 @@ final class hq extends de {
           this.field_M = new String[2];
           this.field_p = new String[2];
           for (var4_int = 0; var4_int < 2; var4_int++) {
-            this.field_M[var4_int] = param2.field_i[var4_int];
-            this.field_p[var4_int] = di.a(false, param2.field_v[var4_int]);
+            this.field_M[var4_int] = param2.playerNames[var4_int];
+            this.field_p[var4_int] = di.a(false, param2.scores[var4_int]);
           }
-          if (param2.field_v[0] >= param2.field_v[1]) {
+          if (param2.scores[0] >= param2.scores[1]) {
             stackIn_10_1 = 0;
           } else {
             stackIn_10_1 = 1;

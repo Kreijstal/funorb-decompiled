@@ -66,7 +66,7 @@ final class vf {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (dd.a(param1, (byte) 122)) {
+          if (Puzzle.a(param1, (byte) 122)) {
             return true;
           }
           var2 = wh.field_r;
@@ -81,7 +81,7 @@ final class vf {
             }
             var3++;
           }
-          var2Lifetime1 = uh.field_b;
+          var2Lifetime1 = PlayerController.field_b;
           for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime1.length; var3Lifetime1++) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (param1 == var4Lifetime1) {

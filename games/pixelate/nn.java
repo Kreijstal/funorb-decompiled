@@ -9,7 +9,7 @@ final class nn {
     static String field_h;
     static String field_m;
     static String field_b;
-    private pm field_g;
+    private Match field_g;
     private String field_e;
     static int field_a;
     private int field_k;
@@ -81,7 +81,7 @@ final class nn {
               var10.drawCenteredAlpha(this.field_e, 320, -var4Lifetime1 + 130, 0, -1, var5Lifetime1);
             }
             if (this.field_d > 0) {
-              pm.field_l[3 - this.field_d].d(-(this.field_c >> 1) + 320, 40, this.field_c, 90);
+              Match.field_l[3 - this.field_d].d(-(this.field_c >> 1) + 320, 40, this.field_c, 90);
             }
           }
         } else {
@@ -104,18 +104,18 @@ final class nn {
           this.field_r = (int[]) null;
         }
         while (var2 < this.field_r.length) {
-          if (this.field_r[var2] < -100 + this.field_g.field_v[var2]) {
+          if (this.field_r[var2] < -100 + this.field_g.scores[var2]) {
             this.field_r[var2] = this.field_r[var2] + 40;
           }
-          if (this.field_g.field_v[var2] - 1000 <= this.field_r[var2]) {
-            if (this.field_r[var2] < this.field_g.field_v[var2]) {
+          if (this.field_g.scores[var2] - 1000 <= this.field_r[var2]) {
+            if (this.field_r[var2] < this.field_g.scores[var2]) {
               this.field_r[var2] = this.field_r[var2] + 5;
             }
           } else {
             this.field_r[var2] = this.field_r[var2] + 320;
           }
-          if (this.field_r[var2] > this.field_g.field_v[var2]) {
-            this.field_r[var2] = this.field_g.field_v[var2];
+          if (this.field_r[var2] > this.field_g.scores[var2]) {
+            this.field_r[var2] = this.field_g.scores[var2];
           }
           var2++;
         }
@@ -201,11 +201,11 @@ final class nn {
 
     final void b(int param0) {
         this.field_k = param0;
-        int var2 = 1 + this.field_g.field_d.field_d;
-        if (!(var2 <= this.field_g.field_d.field_l.length)) {
+        int var2 = 1 + this.field_g.puzzle.pictureIndex;
+        if (!(var2 <= this.field_g.puzzle.pictures.length)) {
           var2--;
         }
-        this.field_e = sd.a(field_b, 73, new String[]{Integer.toString(var2), Integer.toString(this.field_g.field_d.field_l.length)});
+        this.field_e = sd.a(field_b, 73, new String[]{Integer.toString(var2), Integer.toString(this.field_g.puzzle.pictures.length)});
     }
 
     public static void c(int param0) {
@@ -238,13 +238,13 @@ final class nn {
         int var9Lifetime1;
         try {
           fk.field_s = SocketConnector.a("frame_top", "commonui", (byte) 47, param2);
-          hd.field_v = SocketConnector.a("frame_bottom", "commonui", (byte) 47, param2);
+          PlayerBoard.field_v = SocketConnector.a("frame_bottom", "commonui", (byte) 47, param2);
           ge.field_g = bi.a("commonui", "jagex_logo_grey", param2, (byte) -74);
           fc.field_d = SocketConnector.a("button", "commonui", (byte) 47, param2);
           CanvasRasterBuffer.field_g = MusicCrossfadeStream.a(param2, 20049, "validation", "commonui");
-          ep.field_b = (BitmapFont) ((Object) kk.a(param2, "commonui", 0, "arezzo12", param3));
-          he.field_d = (BitmapFont) ((Object) kk.a(param2, "commonui", 0, "arezzo14", param3));
-          ba.field_d = (BitmapFont) ((Object) kk.a(param2, "commonui", 0, "arezzo14bold", param3));
+          ep.field_b = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo12", param3));
+          he.field_d = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo14", param3));
+          ba.field_d = (BitmapFont) ((Object) BoardView.a(param2, "commonui", 0, "arezzo14bold", param3));
           var17 = new Sprite(param1.a((byte) 24, "", "button.gif"), (java.awt.Component) ((Object) NameAvailabilityValidator.field_u));
           dq.a((byte) 31, "dropdown", "commonui", param2);
           var5 = lb.a(param2, param0 ^ 4767934, "commonui", "screen_options");
@@ -317,7 +317,7 @@ final class nn {
         }
     }
 
-    nn(pm param0, int[] param1, int[] param2, boolean param3) {
+    nn(Match param0, int[] param1, int[] param2, boolean param3) {
         int var5_int = 0;
         this.field_d = 0;
         this.field_k = 0;
@@ -328,14 +328,14 @@ final class nn {
           this.field_q = param2;
           this.field_n = DateOfBirthValidator.field_j;
           this.field_o = param3 ? true : false;
-          this.field_r = new int[this.field_g.field_v.length];
+          this.field_r = new int[this.field_g.scores.length];
           this.field_p = 0;
           this.field_k = 0;
           this.field_f = null;
           if (this.field_n == 2) {
-            this.field_s = new String[this.field_g.field_i.length];
+            this.field_s = new String[this.field_g.playerNames.length];
             for (var5_int = 0; var5_int < this.field_s.length; var5_int++) {
-              this.field_s[var5_int] = this.field_g.field_i[var5_int];
+              this.field_s[var5_int] = this.field_g.playerNames[var5_int];
             }
           }
         } catch (RuntimeException runtimeException) {

@@ -64,12 +64,12 @@ final class id {
           }
           ProxySocketConnector.a((byte) 99);
           ClientException.field_f.a(19692);
-          ii.field_p = new IndexedSprite[10];
-          for (var1_intLifetime1 = 0; var1_intLifetime1 < ii.field_p.length; var1_intLifetime1++) {
-            ii.field_p[var1_intLifetime1] = new IndexedSprite(64, 64, 2);
-            for (var2 = 0; ii.field_p[var1_intLifetime1].indices.length > var2; var2++) {
+          MatchController.field_p = new IndexedSprite[10];
+          for (var1_intLifetime1 = 0; var1_intLifetime1 < MatchController.field_p.length; var1_intLifetime1++) {
+            MatchController.field_p[var1_intLifetime1] = new IndexedSprite(64, 64, 2);
+            for (var2 = 0; MatchController.field_p[var1_intLifetime1].indices.length > var2; var2++) {
               if (ok.a(ea.field_b, param0 ^ -124, 9) > var1_intLifetime1) {
-                ii.field_p[var1_intLifetime1].indices[var2] = (byte) 1;
+                MatchController.field_p[var1_intLifetime1].indices[var2] = (byte) 1;
               }
             }
           }

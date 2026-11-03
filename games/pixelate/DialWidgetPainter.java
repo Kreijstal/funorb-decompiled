@@ -15,7 +15,7 @@ final class DialWidgetPainter implements WidgetPainter {
     private BitmapFont field_g;
     static int[] field_d;
     static int[] field_f;
-    static al field_a;
+    static FallingPieceView field_a;
     static int[] field_p;
     static String field_j;
     static int field_q;

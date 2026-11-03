@@ -262,7 +262,7 @@ final class SectorCacheStore {
         try {
           if (an.field_e.d(param1 ^ -49) &&
             !param0.equals(an.field_e.b((byte) 81))) {
-            an.field_e = ii.a((byte) 119, param0);
+            an.field_e = MatchController.a((byte) 119, param0);
           }
           if (param1 == -99) {
             stackIn_8_0 = an.field_e;

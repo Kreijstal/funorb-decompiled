@@ -33,7 +33,7 @@ final class oi {
             StripedProgressBar.field_J = param2;
             nk.field_b = param3;
             um.field_r = param1;
-            pm.field_s = param5;
+            Match.field_s = param5;
             VerticalScrollbar.field_Nb = param6;
           } else {
             var8.h((byte) -118);

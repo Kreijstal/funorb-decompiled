@@ -124,7 +124,7 @@ class go extends rg {
           return true;
         }
         var5 = nj.field_f;
-        if (!ii.a(1, (char) var5)) {
+        if (!MatchController.a(1, (char) var5)) {
           return false;
         }
         if (var3 == 0) {
@@ -222,7 +222,7 @@ class go extends rg {
         if (param1 > -50) {
           return (wm) null;
         }
-        var5 = dd.b((byte) 62);
+        var5 = Puzzle.b((byte) 62);
         var2 = var5;
         for (var3 = 0; var5.length > var3; var3++) {
           if (var5[var3].field_b == param0) {

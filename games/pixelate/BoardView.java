@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kk {
+final class BoardView {
     private int field_d;
     int field_u;
     private int field_z;
@@ -9,7 +9,7 @@ final class kk {
     private int field_h;
     private int field_r;
     private int field_j;
-    private hd field_B;
+    private PlayerBoard field_B;
     private int field_o;
     private int field_n;
     int field_t;
@@ -31,7 +31,7 @@ final class kk {
     static int field_k;
     static int field_a;
 
-    final static void a(int param0, pm param1) {
+    final static void a(int param0, Match param1) {
         int var2_int = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         StatefulTextPainter.field_v = param1;
@@ -66,12 +66,12 @@ final class kk {
         int var4;
         int var5;
         int var6;
-        tk var7;
+        BoardParticle var7;
         var6 = Pixelate.field_H ? 1 : 0;
-        var7 = (tk) (this.field_q.c(1504642273));
+        var7 = (BoardParticle) (this.field_q.c(1504642273));
         while (var7 != null) {
           var7.e(-123);
-          var7 = (tk) (this.field_q.last(1504642273));
+          var7 = (BoardParticle) (this.field_q.last(1504642273));
         }
         if (param0 >= -18) {
           this.a(-66, 3, -15, (byte) 3, 14);
@@ -137,13 +137,13 @@ final class kk {
         if (param0 != -16) {
           return;
         }
-        for (var2 = this.field_B.field_h; var2 < this.field_B.field_h + 2; var2++) {
-          for (var3 = this.field_B.field_e; var3 < this.field_B.field_e + 2; var3++) {
+        for (var2 = this.field_B.pieceRow; var2 < this.field_B.pieceRow + 2; var2++) {
+          for (var3 = this.field_B.pieceColumn; var3 < this.field_B.pieceColumn + 2; var3++) {
             var4 = var3 + this.field_h * var2;
             this.field_m[var4] = 1;
-            if ((this.field_B.field_r[var4] & 4) != 0) {
-              var5 = -1 + (3 & this.field_B.field_r[var4]);
-              this.field_q.addFirst(22125, new tk(16 + (this.field_t + var3 * 32), var2 * 32 + (this.field_u + 16), var5, 0));
+            if ((this.field_B.cells[var4] & 4) != 0) {
+              var5 = -1 + (3 & this.field_B.cells[var4]);
+              this.field_q.addFirst(22125, new BoardParticle(16 + (this.field_t + var3 * 32), var2 * 32 + (this.field_u + 16), var5, 0));
             }
           }
         }
@@ -184,9 +184,9 @@ final class kk {
           var6 = 1;
           var3Lifetime1 = var6;
           while (this.field_j - 1 > var6) {
-            var4 = this.field_B.field_r[this.field_h * var6 + var2Lifetime1];
+            var4 = this.field_B.cells[this.field_h * var6 + var2Lifetime1];
             if (0 != (4 & var4)) {
-              this.field_q.addFirst(22125, new tk(32 * var2Lifetime1 + (16 + this.field_t), 32 * var6 + (16 + this.field_u), -1 + (3 & var4), var2Lifetime1 * 6 - 6));
+              this.field_q.addFirst(22125, new BoardParticle(32 * var2Lifetime1 + (16 + this.field_t), 32 * var6 + (16 + this.field_u), -1 + (3 & var4), var2Lifetime1 * 6 - 6));
             }
             var6++;
           }
@@ -276,7 +276,7 @@ final class kk {
         var14 = Pixelate.field_H ? 1 : 0;
         for (var4 = 0; var4 < this.field_j; var4++) {
           for (var5 = 0; this.field_h > var5; var5++) {
-            var6 = this.field_B.field_r[var5 + var4 * this.field_h];
+            var6 = this.field_B.cells[var5 + var4 * this.field_h];
             var7 = var6 & 3;
             if (-1 != var6 &&
               var7 != 0) {
@@ -345,7 +345,7 @@ final class kk {
 
     public static void b(boolean param0) {
         if (!param0) {
-          kk.b(true);
+          BoardView.b(true);
         }
         field_l = null;
         field_b = null;
@@ -370,7 +370,7 @@ final class kk {
         int var14;
         int var15;
         Object var16;
-        tk var17;
+        BoardParticle var17;
         int var4Lifetime1;
         int var6Lifetime1;
         int var6Lifetime2;
@@ -411,7 +411,7 @@ final class kk {
         }
         for (var6Lifetime2 = 0; var6Lifetime2 < this.field_j; var6Lifetime2++) {
           for (var7 = 0; var7 < this.field_h; var7++) {
-            var8 = this.field_B.field_r[this.field_h * var6Lifetime2 + var7];
+            var8 = this.field_B.cells[this.field_h * var6Lifetime2 + var7];
             if (var8 != -1) {
               if (var7 != 0) {
                 if (var6Lifetime2 != 0) {
@@ -454,10 +454,10 @@ final class kk {
         if (param0) {
           this.field_h = 38;
         }
-        var17 = (tk) (this.field_q.c(1504642273));
+        var17 = (BoardParticle) (this.field_q.c(1504642273));
         while (var17 != null) {
           var17.a((byte) -127);
-          var17 = (tk) (this.field_q.last(1504642273));
+          var17 = (BoardParticle) (this.field_q.last(1504642273));
         }
         if (0 < this.field_v &&
           this.field_i == 0 &&
@@ -534,7 +534,7 @@ final class kk {
         }
     }
 
-    kk(hd param0, int param1, int param2) {
+    BoardView(PlayerBoard param0, int param1, int param2) {
         int stackIn_4_1 = 0;
         int stackIn_7_1 = 0;
         int stackIn_10_1 = 0;
@@ -551,11 +551,11 @@ final class kk {
         this.field_i = 0;
         try {
           this.field_B = param0;
-          this.field_m = new int[this.field_B.field_r.length];
-          this.field_t = -(32 * this.field_B.field_i >> 1) + param1;
-          this.field_u = param2 - (this.field_B.field_a * 32 >> 1);
-          this.field_j = this.field_B.field_a;
-          this.field_h = this.field_B.field_i;
+          this.field_m = new int[this.field_B.cells.length];
+          this.field_t = -(32 * this.field_B.paddedWidth >> 1) + param1;
+          this.field_u = param2 - (this.field_B.paddedHeight * 32 >> 1);
+          this.field_j = this.field_B.paddedHeight;
+          this.field_h = this.field_B.paddedWidth;
           this.field_q = new IntrusiveDeque();
           this.field_c = new Sprite(this.field_h * 32, 32 * this.field_j);
           this.field_z = 1;

@@ -15,18 +15,18 @@ final class mc extends IntrusiveNode {
     static String field_o;
     static long field_q;
 
-    final static dd a(Random param0, int param1, boolean param2, int param3, int param4) {
+    final static Puzzle a(Random param0, int param1, boolean param2, int param3, int param4) {
         RuntimeException var5 = null;
         rk var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         IndexedSprite[] var10 = null;
-        dd var11 = null;
+        Puzzle var11 = null;
         ib var12 = null;
         rk stackIn_3_0 = null;
-        dd stackIn_5_0 = null;
-        dd stackIn_7_0 = null;
+        Puzzle stackIn_5_0 = null;
+        Puzzle stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -42,14 +42,14 @@ final class mc extends IntrusiveNode {
           var6 = stackIn_3_0;
           var7 = el.a(param3, (byte) -24);
           if (param4 >= -31) {
-            stackIn_5_0 = (dd) null;
+            stackIn_5_0 = (Puzzle) null;
             return stackIn_5_0;
           }
           var8 = SpriteState.a(false, param3);
           var9 = hq.a((byte) 124, param3);
           var10 = mi.a(var12.field_d, param1, var12.field_j, 20);
-          var11 = new dd(var12.field_j, var12.field_d, var7, var6.field_a, var6.field_b, var6.field_c, var9, var8, var10);
-          var11.a((byte) 58, UiTheme.field_f);
+          var11 = new Puzzle(var12.field_j, var12.field_d, var7, var6.field_a, var6.field_b, var6.field_c, var9, var8, var10);
+          var11.shufflePictures((byte) 58, UiTheme.field_f);
           stackIn_7_0 = var11;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,10 +147,10 @@ final class mc extends IntrusiveNode {
             var13 = new Sprite(195, 221);
             var6 = var13.field_F / 2;
             var13.c();
-            EmailConfirmationValidator.field_r.drawCentered(sd.a(MusicCrossfadeStream.field_s, param0 + 24, new String[]{al.field_g}), var6, 40, 16777215, -1);
-            QuickChatCategory.field_A.drawCentered(sd.a(kf.field_n, 76, new String[]{al.field_g}), var6, 60, 16777215, -1);
+            EmailConfirmationValidator.field_r.drawCentered(sd.a(MusicCrossfadeStream.field_s, param0 + 24, new String[]{FallingPieceView.field_g}), var6, 40, 16777215, -1);
+            QuickChatCategory.field_A.drawCentered(sd.a(kf.field_n, 76, new String[]{FallingPieceView.field_g}), var6, 60, 16777215, -1);
             EmailConfirmationValidator.field_r.drawCentered(sd.a(ab.field_d, 73, new String[]{bl.field_g}), var6, 110, 16777215, -1);
-            QuickChatCategory.field_A.drawCentered(sd.a(kk.field_l, 44, new String[]{bl.field_g}), var6, 130, 16777215, -1);
+            QuickChatCategory.field_A.drawCentered(sd.a(BoardView.field_l, 44, new String[]{bl.field_g}), var6, 130, 16777215, -1);
             EmailConfirmationValidator.field_r.drawCentered(UiComponent.field_w, var6, 180, 16777215, -1);
             QuickChatCategory.field_A.drawCentered(ri.field_d, var6, 200, 16777215, -1);
             de.a(0, 0, 1, var13, var13.field_F, -1, 3, var13.field_E);

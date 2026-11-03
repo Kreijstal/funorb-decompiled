@@ -175,7 +175,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
 
     public final void onAction(TextButton param0, int param1, int param2, int param3, int param4) {
         if (this.field_yb) {
-          rd.a(false, -17130, true);
+          QueuedInput.a(false, -17130, true);
           return;
         }
         th.a(param2 ^ 8180);

@@ -50,7 +50,7 @@ abstract class DebouncedValidator implements ValidationSource {
     }
 
     final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
-        an.field_e = ii.a((byte) 122, "");
+        an.field_e = MatchController.a((byte) 122, "");
         an.field_e.a(param1 - 27848, false);
         nn.a(param1 + 4740151, param3, param2, param0);
         ql.b(false);
@@ -321,14 +321,14 @@ abstract class DebouncedValidator implements ValidationSource {
                       var9.field_K = 0;
                     }
                   } else {
-                    AccountTermsPanel.field_L[var6][0].a(var3, 2, hd.field_q, var5, var8, 38, param0 ^ -2147483616);
+                    AccountTermsPanel.field_L[var6][0].a(var3, 2, PlayerBoard.field_q, var5, var8, 38, param0 ^ -2147483616);
                     var8 += 40;
                   }
                   var9_int = -var8 + (ai.field_A.field_K - 3);
                   var10_int = AccountTermsPanel.field_L[var6].length - 1;
                   for (var11 = 0; var11 < var10_int; var11++) {
                     var12 = var9_int * var11 / var10_int;
-                    AccountTermsPanel.field_L[var6][var11 + 1].a(var3, 2, hd.field_q, var5, var8 + var12, var9_int * (var11 + 1) / var10_int + (-2 - var12), param0 ^ -2147483616);
+                    AccountTermsPanel.field_L[var6][var11 + 1].a(var3, 2, PlayerBoard.field_q, var5, var8 + var12, var9_int * (var11 + 1) / var10_int + (-2 - var12), param0 ^ -2147483616);
                   }
                   var5 = var5 + (var3 + 2);
                 }
@@ -414,11 +414,11 @@ abstract class DebouncedValidator implements ValidationSource {
         }
         if (11 == ke.field_a &&
           CheckboxPainter.field_r) {
-          if (2 == kk.field_a &&
+          if (2 == BoardView.field_a &&
             !LabeledField.a(true, ej.field_a, ck.field_g)) {
             return false;
           }
-          if (kk.field_a != 2 &&
+          if (BoardView.field_a != 2 &&
             var3 != 0) {
             return false;
           }
@@ -426,7 +426,7 @@ abstract class DebouncedValidator implements ValidationSource {
             return true;
           }
           String var4 = (String) null;
-          dg.a(true, kk.field_a, ih.field_f, (String) null, ck.field_g, param1);
+          dg.a(true, BoardView.field_a, ih.field_f, (String) null, ck.field_g, param1);
           return true;
         }
         return false;

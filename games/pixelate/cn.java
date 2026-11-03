@@ -115,12 +115,12 @@ final class cn {
             uk.field_s = mn.field_c;
           }
           if (mn.field_c == uk.field_s &&
-            rd.a(1, false)) {
+            QueuedInput.a(1, false)) {
             var9Lifetime1 = MusicCrossfadeStream.field_o.f(255);
             MusicCrossfadeStream.field_o.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              ii.field_y = new String[-100 + var9Lifetime1];
+              MatchController.field_y = new String[-100 + var9Lifetime1];
               uk.field_s = EditableTextWidget.field_Z;
             } else {
               if (248 == var9Lifetime1) {
@@ -136,7 +136,7 @@ final class cn {
                 uk.field_s = bg.field_l;
                 jj.field_b = -1;
               } else {
-                rd.a(wl.a(23062), false);
+                QueuedInput.a(wl.a(23062), false);
                 ArchiveIndex.field_j = new Boolean(SectorCacheStore.a((byte) 107, MusicCrossfadeStream.field_o));
                 MusicCrossfadeStream.field_o.position = 0;
               }
@@ -144,13 +144,13 @@ final class cn {
           }
           if (uk.field_s == EditableTextWidget.field_Z) {
             var9Lifetime2 = 2;
-            if (rd.a(var9Lifetime2, false)) {
+            if (QueuedInput.a(var9Lifetime2, false)) {
               var10Lifetime1 = MusicCrossfadeStream.field_o.a((byte) 82);
               MusicCrossfadeStream.field_o.position = 0;
-              if (rd.a(var10Lifetime1, false)) {
-                var11 = ii.field_y.length;
+              if (QueuedInput.a(var10Lifetime1, false)) {
+                var11 = MatchController.field_y.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  ii.field_y[var12] = MusicCrossfadeStream.field_o.e(122);
+                  MatchController.field_y[var12] = MusicCrossfadeStream.field_o.e(122);
                 }
                 na.a(true);
                 qj.field_b = false;
@@ -164,7 +164,7 @@ final class cn {
             if (mn.field_e == 255) {
               var9_ref_String = MusicCrossfadeStream.field_o.e((byte) 40);
               if (var9_ref_String != null) {
-                rd.a(var9_ref_String, 126, AudioService.a(13867));
+                QueuedInput.a(var9_ref_String, 126, AudioService.a(13867));
               }
             } else {
               gi.field_b = MusicCrossfadeStream.field_o.h(5);

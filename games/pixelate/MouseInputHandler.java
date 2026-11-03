@@ -52,7 +52,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (ra.field_b == null) {
-            ra.field_b = op.field_p.a(param0 ^ 20278, ii.field_B, gd.field_g);
+            ra.field_b = op.field_p.a(param0 ^ 20278, MatchController.field_B, gd.field_g);
           }
           if (param0 == ra.field_b.field_b) {
             return false;
@@ -74,7 +74,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               oj.field_G = stackIn_11_0;
               gb.field_d = stackIn_11_0;
               MarkerSlider.field_U = stackIn_11_0;
-              al.a(pc.field_q, (byte) 66, bj.field_a, aa.field_f, hf.field_n);
+              FallingPieceView.a(pc.field_q, (byte) 66, bj.field_a, aa.field_f, hf.field_n);
               vg.b(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -374,7 +374,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
           }
         } else {
-          if (GameApplet.field_i == StatefulTextPainter.field_v.field_d.field_d) {
+          if (GameApplet.field_i == StatefulTextPainter.field_v.puzzle.pictureIndex) {
             if (param0 == 5) {
               if (of.field_d == ql.field_m) {
                 if (lb.field_D > 0) {
@@ -414,9 +414,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               }
             }
           } else {
-            GameApplet.field_i = StatefulTextPainter.field_v.field_d.field_d;
+            GameApplet.field_i = StatefulTextPainter.field_v.puzzle.pictureIndex;
             if (StatefulTextPainter.field_v.field_r == 0) {
-              ql.field_m = StatefulTextPainter.field_v.field_d.field_d;
+              ql.field_m = StatefulTextPainter.field_v.puzzle.pictureIndex;
               if (param0 != 5) {
                 field_c = -69;
               }
@@ -479,7 +479,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
                 }
               }
             } else {
-              stackIn_81_0 = (0 != StatefulTextPainter.field_v.field_d.field_d) ? -1 : 5;
+              stackIn_81_0 = (0 != StatefulTextPainter.field_v.puzzle.pictureIndex) ? -1 : 5;
               ql.field_m = stackIn_81_0;
               if (param0 != 5) {
                 field_c = -69;

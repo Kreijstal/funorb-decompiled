@@ -110,7 +110,7 @@ final class l extends de {
             cd.field_b = param11;
             pc.field_q = param12;
             ra.field_c = param4;
-            ii.field_B = param6;
+            MatchController.field_B = param6;
             gd.field_g = param10;
             if (param0) {
               var16 = (PlatformTaskDispatcher) null;

@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class dd {
-    int field_o;
+final class Puzzle {
+    int columns;
     int field_b;
     int field_n;
     int field_e;
-    int field_k;
-    int field_p;
+    int rows;
+    int borderFlags;
     boolean field_i;
     private static long[] field_c;
     int field_h;
-    IndexedSprite[] field_l;
+    IndexedSprite[] pictures;
     int field_g;
-    int field_d;
+    int pictureIndex;
     int field_j;
     static String field_m;
     static String field_a;
@@ -23,12 +23,12 @@ final class dd {
 
     final static wm[] b(byte param0) {
         if (param0 != 62) {
-          dd.a('￑', (byte) 81);
+          Puzzle.a('￑', (byte) 81);
         }
         return new wm[]{SectorCacheStore.field_f, ej.field_b, StatefulTextPainter.field_w, NumericDateInputWidget.field_T, lb.field_r, DualLinkNode.field_l, lb.field_C, ArchiveRequest.field_u, MenuInputState.field_f, of.field_e, kn.field_M, u.field_d, GradientOutlineTextPainter.field_s, ThreeSliceButtonPainter.field_u};
     }
 
-    final void a(byte param0, Random param1) {
+    final void shufflePictures(byte param0, Random param1) {
         int var3_int = 0;
         int[] var12 = null;
         int[] var11 = null;
@@ -44,7 +44,7 @@ final class dd {
         int var6Lifetime1;
         int var7Lifetime1;
         try {
-          var3_int = this.field_l.length;
+          var3_int = this.pictures.length;
           var12 = new int[var3_int];
           var11 = var12;
           var4 = var11;
@@ -65,10 +65,10 @@ final class dd {
           var10 = 0;
           var7Lifetime1 = var10;
           while (var3_int > var10) {
-            var5[var10] = this.field_l[var12[var10]];
+            var5[var10] = this.pictures[var12[var10]];
             var10++;
           }
-          this.field_l = var5;
+          this.pictures = var5;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -82,13 +82,13 @@ final class dd {
         field_f = null;
     }
 
-    final boolean a(byte param0) {
+    final boolean advancePicture(byte param0) {
         if (param0 > -113) {
           field_a = (String) null;
         }
-        int fieldTemp$0 = this.field_d + 1;
-        this.field_d = this.field_d + 1;
-        return fieldTemp$0 == this.field_l.length ? true : false;
+        int fieldTemp$0 = this.pictureIndex + 1;
+        this.pictureIndex = this.pictureIndex + 1;
+        return fieldTemp$0 == this.pictures.length ? true : false;
     }
 
     final static String[] a(String param0, byte param1, char param2) {
@@ -111,7 +111,7 @@ final class dd {
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           var11 = (CharSequence) ((Object) param0);
-          var3_int = al.a(0, param2, var11);
+          var3_int = FallingPieceView.a(0, param2, var11);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
@@ -126,7 +126,7 @@ final class dd {
           var4[var3_int] = param0.substring(var6);
           if (param1 > -28) {
             var10 = (String) null;
-            dd.a((String) null, (byte) -32, 'k');
+            Puzzle.a((String) null, (byte) -32, 'k');
           }
           stackIn_10_0 = var4;
           return stackIn_10_0;
@@ -147,7 +147,7 @@ final class dd {
     final static boolean a(char param0, byte param1) {
         boolean stackIn_13_0 = false;
         if (param1 < 44) {
-          dd.a('ﾰ', (byte) -89);
+          Puzzle.a('ﾰ', (byte) -89);
         }
         stackIn_13_0 = ((!(param0 < 48) &&
           !(param0 > 57)) ||
@@ -172,21 +172,21 @@ final class dd {
         return var1;
     }
 
-    dd(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, IndexedSprite[] param8) {
+    Puzzle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, IndexedSprite[] param8) {
         try {
-          this.field_l = param8;
+          this.pictures = param8;
           if ((30 & param2) == 30) {
             this.field_i = true;
           }
           this.field_e = 10 * param7;
           this.field_b = param6;
-          this.field_p = param2;
+          this.borderFlags = param2;
           this.field_h = param3;
-          this.field_k = param1;
+          this.rows = param1;
           this.field_n = param4;
           this.field_j = param5;
           this.field_g = param1 * param0;
-          this.field_o = param0;
+          this.columns = param0;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

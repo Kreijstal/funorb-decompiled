@@ -228,7 +228,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_all_players_have_left", 0);
                 if (null != var2) {
-                  dd.field_m = of.a(var2, 1);
+                  Puzzle.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_lobby_name", 0);
                 if (null != var2) {
@@ -280,7 +280,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_gamelist_options", 0);
                 if (null != var2) {
-                  ii.field_b = of.a(var2, param0 - 31872);
+                  MatchController.field_b = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mu_gamelist_elapsed_time", 0);
                 if (null != var2) {
@@ -316,7 +316,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mu_options_ratedgametype", 0);
                 if (null != var2) {
-                  ii.field_c = of.a(var2, 1);
+                  MatchController.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("yes", 0);
                 if (var2 != null) {
@@ -376,7 +376,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("join_request_xs_game", 0);
                 if (var2 != null) {
-                  hd.field_o = of.a(var2, param0 ^ 31872);
+                  PlayerBoard.field_o = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("join_withdraw_request_xs_game", 0);
                 if (null != var2) {
@@ -556,7 +556,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("message_game", 0);
                 if (var2 != null) {
-                  ee.field_c = of.a(var2, 1);
+                  InputQueue.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("message_team", 0);
                 if (var2 != null) {
@@ -780,7 +780,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_1moreratedgame", 0);
                 if (null != var2) {
-                  hd.field_l = of.a(var2, 1);
+                  PlayerBoard.field_l = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_moreratedgames", 0);
                 if (var2 != null) {
@@ -848,7 +848,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("gameopt_trychanging1", 0);
                 if (var2 != null) {
-                  tk.field_q = of.a(var2, 1);
+                  BoardParticle.field_q = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_trychanging2", 0);
                 if (null != var2) {
@@ -1018,7 +1018,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("pleaselogin_member", 0);
                 if (null != var2) {
-                  ee.field_a = of.a(var2, 1);
+                  InputQueue.field_a = of.a(var2, 1);
                 }
                 var2 = vd.a("invaliduserorpass", param0 - 31873);
                 if (null != var2) {
@@ -1070,7 +1070,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("goback", 0);
                 if (var2 != null) {
-                  ii.field_v = of.a(var2, 1);
+                  MatchController.field_v = of.a(var2, 1);
                 }
                 var2 = vd.a("otheroptions", 0);
                 if (null != var2) {
@@ -1506,7 +1506,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("login_no_displayname", 0);
                 if (null != var2) {
-                  uh.field_d = of.a(var2, 1);
+                  PlayerController.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("create_username_tooltip", 0);
                 if (null != var2) {
@@ -1534,7 +1534,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_password_confirm_tooltip", param0 - 31873);
                 if (var2 != null) {
-                  dd.field_f = of.a(var2, 1);
+                  Puzzle.field_f = of.a(var2, 1);
                 }
                 var2 = vd.a("create_email_tooltip", 0);
                 if (null != var2) {
@@ -1594,7 +1594,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("create_alert_nameleadingspace", 0);
                 if (null != var2) {
-                  ii.field_k = of.a(var2, 1);
+                  MatchController.field_k = of.a(var2, 1);
                 }
                 var2 = vd.a("create_alert_doublespace", 0);
                 if (var2 != null) {
@@ -2084,7 +2084,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("resign", 0);
                 if (null != var2) {
-                  al.field_d = of.a(var2, 1);
+                  FallingPieceView.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("returntolobby", 0);
                 if (null != var2) {
@@ -2732,7 +2732,7 @@ final class uk extends de {
                 }
                 var2 = vd.a("mb_achievement_count_2", 0);
                 if (var2 != null) {
-                  kk.field_l = of.a(var2, 1);
+                  BoardView.field_l = of.a(var2, 1);
                 }
                 var2 = vd.a("mb_exclusive_1", 0);
                 if (var2 != null) {
@@ -3200,10 +3200,10 @@ final class uk extends de {
             var9 = var8.field_n;
             pk.a(var9, 0, sc.field_i, 77, 0);
             if (var40 != 0) {
-              ee.c(0);
+              InputQueue.c(0);
             }
           } else {
-            ee.c(0);
+            InputQueue.c(0);
           }
           if (param6 != 20126) {
             field_u = (ResourceArchive) null;
@@ -3301,11 +3301,11 @@ final class uk extends de {
             }
             var21 = stackIn_65_0;
             var22 = ArchiveProvider.field_a[var15Lifetime1];
-            var23 = al.field_m[var15Lifetime1];
+            var23 = FallingPieceView.field_m[var15Lifetime1];
             var24 = ArchiveProvider.field_a[var16Lifetime1];
-            var25 = al.field_m[var16Lifetime1];
+            var25 = FallingPieceView.field_m[var16Lifetime1];
             var26 = ArchiveProvider.field_a[var17Lifetime1];
-            var27 = al.field_m[var17Lifetime1];
+            var27 = FallingPieceView.field_m[var17Lifetime1];
             if (~var19 == ~var18 &&
               ~var20 == ~var19) {
               var28 = var8_array[var18];

@@ -3,33 +3,33 @@
  */
 import java.util.*;
 
-final class hd {
-    int field_h;
-    boolean[] field_s;
-    int field_d;
+final class PlayerBoard {
+    int pieceRow;
+    boolean[] pieceTones;
+    int piecesPlaced;
     boolean field_x;
-    private dd field_j;
-    int field_a;
+    private Puzzle field_j;
+    int paddedHeight;
     static Sprite field_w;
     static String field_l;
     boolean field_m;
     private Random field_t;
     static boolean field_g;
     int field_f;
-    boolean field_p;
+    boolean fastDrop;
     static String field_o;
     private int field_u;
-    byte[] field_r;
+    byte[] cells;
     int field_b;
     boolean field_k;
     static Sprite[] field_v;
     static int field_n;
-    int field_i;
+    int paddedWidth;
     static int field_q;
     static ResourceArchive field_c;
-    int field_e;
+    int pieceColumn;
 
-    final void a(int param0, PacketBuffer param1) {
+    final void readState(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         boolean stackIn_6_1 = false;
@@ -45,23 +45,23 @@ final class hd {
         int var3_intLifetime2;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          this.field_e = param1.f(param0 + 257);
+          this.pieceColumn = param1.f(param0 + 257);
           if (param0 != -2) {
-            hd.d(-62);
+            PlayerBoard.d(-62);
           }
-          this.field_h = param1.f(255);
+          this.pieceRow = param1.f(255);
           this.field_u = param1.a((byte) 76);
           this.field_b = param1.a((byte) -117);
           stackIn_6_1 = (1 == param1.f(255));
-          this.field_p = stackIn_6_1;
+          this.fastDrop = stackIn_6_1;
           for (var3_int = 0; var3_int < 4; var3_int++) {
-            stackIn_10_0 = this.field_s;
+            stackIn_10_0 = this.pieceTones;
             stackIn_10_1 = var3_int;
             stackIn_11_2 = (param1.f(255) == 1);
             stackIn_10_0[stackIn_10_1] = stackIn_11_2;
           }
-          for (var3_intLifetime1 = 0; this.field_r.length > var3_intLifetime1; var3_intLifetime1++) {
-            this.field_r[var3_intLifetime1] = param1.a(0);
+          for (var3_intLifetime1 = 0; this.cells.length > var3_intLifetime1; var3_intLifetime1++) {
+            this.cells[var3_intLifetime1] = param1.a(0);
           }
           for (var3_intLifetime2 = 0; this.field_u > var3_intLifetime2; var3_intLifetime2++) {
             ok.a(this.field_t, -104, 1);
@@ -81,7 +81,7 @@ final class hd {
         }
     }
 
-    final boolean a(int param0, byte param1) {
+    final boolean applyAction(int param0, byte param1) {
         int var4 = 0;
         byte[] stackIn_18_0 = null;
         int stackIn_18_1 = 0;
@@ -94,14 +94,14 @@ final class hd {
         int[] var8;
         var5 = Pixelate.field_H ? 1 : 0;
         if (param1 >= -79) {
-          this.c(120);
+          this.isFullyPainted(120);
         }
         boolean decompiledFrameRemainder0 = true;
         if (param0 == 2) {
-          if (this.field_e != 0 &&
-            this.field_r[this.field_i * this.field_h + (-1 + this.field_e)] != -1 &&
-            -1 != this.field_r[this.field_i * this.field_h + this.field_e + (-1 + this.field_i)]) {
-            this.field_e = this.field_e - 1;
+          if (this.pieceColumn != 0 &&
+            this.cells[this.paddedWidth * this.pieceRow + (-1 + this.pieceColumn)] != -1 &&
+            -1 != this.cells[this.paddedWidth * this.pieceRow + this.pieceColumn + (-1 + this.paddedWidth)]) {
+            this.pieceColumn = this.pieceColumn - 1;
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -110,10 +110,10 @@ final class hd {
         }
         if (decompiledFrameRemainder0) {
           if (param0 == 3) {
-            if (-2 + this.field_i != this.field_e &&
-              -1 != this.field_r[2 + (this.field_e + this.field_i * this.field_h)] &&
-              this.field_r[this.field_i + this.field_i * this.field_h + this.field_e + 2] != -1) {
-              this.field_e = this.field_e + 1;
+            if (-2 + this.paddedWidth != this.pieceColumn &&
+              -1 != this.cells[2 + (this.pieceColumn + this.paddedWidth * this.pieceRow)] &&
+              this.cells[this.paddedWidth + this.paddedWidth * this.pieceRow + this.pieceColumn + 2] != -1) {
+              this.pieceColumn = this.pieceColumn + 1;
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -122,10 +122,10 @@ final class hd {
           }
           if (decompiledFrameRemainder0) {
             if (param0 == 0) {
-              if (this.field_h != 0 &&
-                -1 != this.field_r[this.field_h * this.field_i + this.field_e - this.field_i] &&
-                -1 != this.field_r[-this.field_i + (1 + (this.field_e + this.field_i * this.field_h))]) {
-                this.field_h = this.field_h - 1;
+              if (this.pieceRow != 0 &&
+                -1 != this.cells[this.pieceRow * this.paddedWidth + this.pieceColumn - this.paddedWidth] &&
+                -1 != this.cells[-this.paddedWidth + (1 + (this.pieceColumn + this.paddedWidth * this.pieceRow))]) {
+                this.pieceRow = this.pieceRow - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -134,10 +134,10 @@ final class hd {
             }
             if (decompiledFrameRemainder0) {
               if (param0 == 1) {
-                if (this.field_a - 2 != this.field_h &&
-                  -1 != this.field_r[this.field_i * (2 + this.field_h) + this.field_e] &&
-                  this.field_r[this.field_i * (this.field_h + 2) + 1 + this.field_e] != -1) {
-                  this.field_h = this.field_h + 1;
+                if (this.paddedHeight - 2 != this.pieceRow &&
+                  -1 != this.cells[this.paddedWidth * (2 + this.pieceRow) + this.pieceColumn] &&
+                  this.cells[this.paddedWidth * (this.pieceRow + 2) + 1 + this.pieceColumn] != -1) {
+                  this.pieceRow = this.pieceRow + 1;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -146,7 +146,7 @@ final class hd {
               }
               if (decompiledFrameRemainder0) {
                 if (4 == param0) {
-                  wm.a(-11825, this.field_s);
+                  wm.a(-11825, this.pieceTones);
                   this.field_x = true;
                   return true;
                 }
@@ -157,36 +157,36 @@ final class hd {
                       var7 = var8;
                       var6 = var7;
                       var3 = var6;
-                      var6[1] = this.field_e - (-1 - this.field_i * this.field_h);
-                      var6[2] = this.field_e + (1 + this.field_h) * this.field_i;
-                      var6[0] = this.field_h * this.field_i + this.field_e;
-                      var6[3] = this.field_i * (1 + this.field_h) + (1 + this.field_e);
+                      var6[1] = this.pieceColumn - (-1 - this.paddedWidth * this.pieceRow);
+                      var6[2] = this.pieceColumn + (1 + this.pieceRow) * this.paddedWidth;
+                      var6[0] = this.pieceRow * this.paddedWidth + this.pieceColumn;
+                      var6[3] = this.paddedWidth * (1 + this.pieceRow) + (1 + this.pieceColumn);
                       for (var4 = 0; var4 < 4; var4++) {
-                        this.field_r[var8[var4]] = (byte)cm.a((int) this.field_r[var8[var4]], -4);
-                        stackIn_18_0 = this.field_r;
+                        this.cells[var8[var4]] = (byte)cm.a((int) this.cells[var8[var4]], -4);
+                        stackIn_18_0 = this.cells;
                         stackIn_18_1 = var8[var4];
-                        stackIn_18_2 = this.field_r[var8[var4]];
-                        if (!this.field_s[var4]) {
+                        stackIn_18_2 = this.cells[var8[var4]];
+                        if (!this.pieceTones[var4]) {
                           stackIn_19_3 = 1;
                         } else {
                           stackIn_19_3 = 2;
                         }
                         stackIn_18_0[stackIn_18_1] = (byte)bq.a((int) stackIn_18_2, stackIn_19_3);
                       }
-                      this.b(-91);
-                      if (this.field_e == 0 ||
-                        this.field_h == 0 ||
-                        this.field_e == -2 + this.field_i ||
-                        -2 + this.field_a == this.field_h) {
+                      this.spawnPiece(-91);
+                      if (this.pieceColumn == 0 ||
+                        this.pieceRow == 0 ||
+                        this.pieceColumn == -2 + this.paddedWidth ||
+                        -2 + this.paddedHeight == this.pieceRow) {
                         this.field_m = true;
                       }
-                      this.field_d = this.field_d + 1;
+                      this.piecesPlaced = this.piecesPlaced + 1;
                     }
                   } else {
-                    this.field_p = false;
+                    this.fastDrop = false;
                   }
                 } else {
-                  this.field_p = true;
+                  this.fastDrop = true;
                 }
               }
             }
@@ -200,14 +200,14 @@ final class hd {
         return vg.a(param0, -1) >> 8;
     }
 
-    final boolean c(int param0) {
+    final boolean isFullyPainted(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
         int var2 = 1;
-        for (var3 = 1; -1 + this.field_a > var3; var3++) {
-          for (var4 = 1; -1 + this.field_i > var4; var4++) {
-            var2 = var2 & ((4 & this.field_r[var3 * this.field_i + var4]) != 0 ? 1 : 0);
+        for (var3 = 1; -1 + this.paddedHeight > var3; var3++) {
+          for (var4 = 1; -1 + this.paddedWidth > var4; var4++) {
+            var2 = var2 & ((4 & this.cells[var3 * this.paddedWidth + var4]) != 0 ? 1 : 0);
           }
         }
         if (param0 != 26745) {
@@ -218,7 +218,7 @@ final class hd {
 
     final static void d(int param0) {
         if (param0 >= -72) {
-          hd.a((byte) -16);
+          PlayerBoard.a((byte) -16);
         }
         lg.field_a = lg.field_a + 100;
         if (255 < lg.field_a) {
@@ -226,7 +226,7 @@ final class hd {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void seedPieces(int param0, int param1) {
         this.field_u = 0;
         if (param0 >= -13) {
           field_o = (String) null;
@@ -234,7 +234,7 @@ final class hd {
         this.field_t = new Random((long)param1);
     }
 
-    final void b(int param0) {
+    final void spawnPiece(int param0) {
         int var5 = 0;
         int var2;
         int var3;
@@ -265,16 +265,16 @@ final class hd {
           }
         }
         if (param0 >= -72) {
-          this.field_s = (boolean[]) null;
+          this.pieceTones = (boolean[]) null;
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < 4; var3Lifetime1++) {
-          this.field_s[var3Lifetime1] = vn.field_e[var2][var3Lifetime1];
+          this.pieceTones[var3Lifetime1] = vn.field_e[var2][var3Lifetime1];
         }
         if (DateOfBirthValidator.field_j != 1) {
           this.field_u = this.field_u + 1;
           var3Lifetime2 = ok.a(this.field_t, -116, 4);
           for (var4Lifetime1 = 0; var3Lifetime2 > var4Lifetime1; var4Lifetime1++) {
-            wm.a(-11825, this.field_s);
+            wm.a(-11825, this.pieceTones);
           }
         }
     }
@@ -290,15 +290,15 @@ final class hd {
         field_w = null;
     }
 
-    final void a(int param0) {
+    final void clear(int param0) {
         int var3 = 0;
         int var2;
         int var4;
         var4 = Pixelate.field_H ? 1 : 0;
         var2 = -59 % ((14 - param0) / 37);
-        for (var3 = 0; this.field_r.length > var3; var3++) {
-          if (this.field_r[var3] != -1) {
-            this.field_r[var3] = (byte) 0;
+        for (var3 = 0; this.cells.length > var3; var3++) {
+          if (this.cells[var3] != -1) {
+            this.cells[var3] = (byte) 0;
           }
         }
         this.field_x = false;
@@ -306,7 +306,7 @@ final class hd {
         this.field_k = false;
     }
 
-    final void a(int param0, byte[] param1) {
+    final void loadCells(int param0, byte[] param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -317,7 +317,7 @@ final class hd {
         var4 = Pixelate.field_H ? 1 : 0;
         try {
           for (var3_int = param0; var3_int < param1.length; var3_int++) {
-            this.field_r[var3_int] = param1[var3_int];
+            this.cells[var3_int] = param1[var3_int];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -338,10 +338,10 @@ final class hd {
         if (param0 >= -10) {
           return -115;
         }
-        return this.field_j.field_p;
+        return this.field_j.borderFlags;
     }
 
-    hd(dd param0) {
+    PlayerBoard(Puzzle param0) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -355,39 +355,39 @@ final class hd {
         this.field_m = false;
         this.field_k = false;
         try {
-          this.field_s = new boolean[4];
+          this.pieceTones = new boolean[4];
           this.field_j = param0;
-          this.field_i = this.field_j.field_o + 2;
-          this.field_a = 2 + this.field_j.field_k;
-          this.field_r = new byte[this.field_a * this.field_i];
-          if ((this.field_j.field_p & 1) != 0) {
-            this.field_r[0] = (byte)-1;
-            this.field_r[this.field_i - 1] = (byte)-1;
-            this.field_r[-this.field_i + this.field_a * this.field_i] = (byte)-1;
-            this.field_r[this.field_a * this.field_i - 1] = (byte)-1;
+          this.paddedWidth = this.field_j.columns + 2;
+          this.paddedHeight = 2 + this.field_j.rows;
+          this.cells = new byte[this.paddedHeight * this.paddedWidth];
+          if ((this.field_j.borderFlags & 1) != 0) {
+            this.cells[0] = (byte)-1;
+            this.cells[this.paddedWidth - 1] = (byte)-1;
+            this.cells[-this.paddedWidth + this.paddedHeight * this.paddedWidth] = (byte)-1;
+            this.cells[this.paddedHeight * this.paddedWidth - 1] = (byte)-1;
           }
-          if ((2 & this.field_j.field_p) != 0) {
-            for (var2_int = 0; this.field_a > var2_int; var2_int++) {
-              this.field_r[this.field_i * var2_int] = (byte)-1;
+          if ((2 & this.field_j.borderFlags) != 0) {
+            for (var2_int = 0; this.paddedHeight > var2_int; var2_int++) {
+              this.cells[this.paddedWidth * var2_int] = (byte)-1;
             }
           }
-          if ((this.field_j.field_p & 4) != 0) {
-            for (var2_intLifetime1 = 0; this.field_i > var2_intLifetime1; var2_intLifetime1++) {
-              this.field_r[var2_intLifetime1] = (byte)-1;
+          if ((this.field_j.borderFlags & 4) != 0) {
+            for (var2_intLifetime1 = 0; this.paddedWidth > var2_intLifetime1; var2_intLifetime1++) {
+              this.cells[var2_intLifetime1] = (byte)-1;
             }
           }
-          if ((8 & this.field_j.field_p) != 0) {
-            for (var2_intLifetime2 = 0; var2_intLifetime2 < this.field_a; var2_intLifetime2++) {
-              this.field_r[var2_intLifetime2 * this.field_i + this.field_i - 1] = (byte)-1;
+          if ((8 & this.field_j.borderFlags) != 0) {
+            for (var2_intLifetime2 = 0; var2_intLifetime2 < this.paddedHeight; var2_intLifetime2++) {
+              this.cells[var2_intLifetime2 * this.paddedWidth + this.paddedWidth - 1] = (byte)-1;
             }
           }
-          if ((16 & this.field_j.field_p) != 0) {
-            for (var2_intLifetime3 = 0; this.field_i > var2_intLifetime3; var2_intLifetime3++) {
-              this.field_r[var2_intLifetime3 + (this.field_a - 1) * this.field_i] = (byte)-1;
+          if ((16 & this.field_j.borderFlags) != 0) {
+            for (var2_intLifetime3 = 0; this.paddedWidth > var2_intLifetime3; var2_intLifetime3++) {
+              this.cells[var2_intLifetime3 + (this.paddedHeight - 1) * this.paddedWidth] = (byte)-1;
             }
           }
-          this.field_h = -1 + this.field_a / 2;
-          this.field_e = -1 + this.field_i / 2;
+          this.pieceRow = -1 + this.paddedHeight / 2;
+          this.pieceColumn = -1 + this.paddedWidth / 2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -403,7 +403,7 @@ final class hd {
         }
     }
 
-    final void a(IndexedSprite param0, int param1) {
+    final void loadPicture(IndexedSprite param0, int param1) {
         byte[] var3 = null;
         int var4 = 0;
         int var6 = 0;
@@ -414,10 +414,10 @@ final class hd {
           var3 = param0.indices;
           for (var4 = 0; param0.field_a > var4; var4++) {
             for (var5 = 0; var5 < param0.field_f; var5++) {
-              var6 = 1 + var5 + (1 + var4) * this.field_i;
-              this.field_r[var6] = (byte)cm.a((int) this.field_r[var6], -4);
-              this.field_r[var6] = (byte)bq.a((int) this.field_r[var6], (int) var3[param0.field_f * var4 + var5]);
-              this.field_r[var6] = (byte)bq.a((int) this.field_r[var6], 4);
+              var6 = 1 + var5 + (1 + var4) * this.paddedWidth;
+              this.cells[var6] = (byte)cm.a((int) this.cells[var6], -4);
+              this.cells[var6] = (byte)bq.a((int) this.cells[var6], (int) var3[param0.field_f * var4 + var5]);
+              this.cells[var6] = (byte)bq.a((int) this.cells[var6], 4);
             }
           }
           var5Lifetime1 = -8 % ((param1 + 13) / 43);

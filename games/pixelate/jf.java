@@ -58,7 +58,7 @@ final class jf {
           while (true) {
             if (AudioService.field_c < 0) {
               MusicCrossfadeStream.field_o.position = 0;
-              if (!rd.a(1, false)) {
+              if (!QueuedInput.a(1, false)) {
                 return false;
               }
               AudioService.field_c = MusicCrossfadeStream.field_o.f((byte) 114);
@@ -208,7 +208,7 @@ final class jf {
             stackIn_7_0 = FullscreenFocusCanvas.field_a;
             return stackIn_7_0;
           }
-          var3 = dd.a(param0, (byte) -96, '.');
+          var3 = Puzzle.a(param0, (byte) -96, '.');
           if (2 > var3.length) {
             stackIn_10_0 = pd.field_Kb;
             return stackIn_10_0;

@@ -178,9 +178,9 @@ final class fk extends de {
         int stackIn_29_0 = 0;
         jj[] stackIn_31_0 = null;
         int stackIn_32_1 = 0;
-        dd var8;
-        hd var9;
-        kk var10;
+        Puzzle var8;
+        PlayerBoard var9;
+        BoardView var10;
         var13 = Pixelate.field_H ? 1 : 0;
         if (param0 != 11) {
           return;
@@ -199,14 +199,14 @@ final class fk extends de {
         if (this.field_r != 0) {
           if (1 == this.field_r) {
             var7 = var7 + var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 540, 400, 16777215, 0, 0, 0, var6) * var6;
-            var8 = new dd(3, 3, 0, 0, 0, 262144, 0, 0, new IndexedSprite[]{});
-            var9 = new hd(var8);
-            var10 = new kk(var9, 320, 350);
+            var8 = new Puzzle(3, 3, 0, 0, 0, 262144, 0, 0, new IndexedSprite[]{});
+            var9 = new PlayerBoard(var8);
+            var10 = new BoardView(var9, 320, 350);
             var10.a(0, 0, 0, (byte) -68, 0);
-            var9.field_r[8] = (byte)2;
-            var9.field_r[3] = (byte)2;
-            var9.field_r[2] = (byte) 1;
-            var9.field_r[7] = (byte) 1;
+            var9.cells[8] = (byte)2;
+            var9.cells[3] = (byte)2;
+            var9.cells[2] = (byte) 1;
+            var9.cells[7] = (byte) 1;
             SoftwareRasterizer.f(0, 0, 640, 389);
             var10.a(false);
             SoftwareRasterizer.c();

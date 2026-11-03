@@ -83,7 +83,7 @@ final class io {
             }
             lo.a(2147483647, var6, var4);
             for (var7_intLifetime1 = 0; var4 > var7_intLifetime1; var7_intLifetime1++) {
-              rd.a(-112, var15);
+              QueuedInput.a(-112, var15);
               if (var7_intLifetime1 != 0) {
                 ui.a(aj.field_n, 0, of.field_g, of.field_b, var7_intLifetime1, bq.field_c);
               } else {

@@ -12,7 +12,7 @@ final class up {
     private int field_m;
     static int[] field_c;
     static String field_q;
-    static dd[] field_d;
+    static Puzzle[] field_d;
     static int[] field_i;
     static pj[] field_n;
     static int[] field_h;
@@ -79,8 +79,8 @@ final class up {
         if (BufferedRandomAccessFile.field_j <= 0 &&
           10 <= this.field_m) {
           var3 = 3 * this.field_b >> 2;
-          hd.field_w.a(-var2 + 96, 196, var3);
-          hd.field_w.b(-var2 + 96, 196, var3);
+          PlayerBoard.field_w.a(-var2 + 96, 196, var3);
+          PlayerBoard.field_w.b(-var2 + 96, 196, var3);
         }
     }
 
@@ -114,7 +114,7 @@ final class up {
         field_q = "Play the game without logging in just yet";
         field_i = new int[10];
         field_k = new int[10];
-        field_d = new dd[10];
+        field_d = new Puzzle[10];
         field_f = new int[10];
         field_e = new int[10];
         field_p = new int[10];

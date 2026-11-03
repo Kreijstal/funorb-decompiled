@@ -133,7 +133,7 @@ final class k extends nc {
         }
         mj.field_k = param3;
         mh.field_a = param0;
-        hd.field_n = param1;
+        PlayerBoard.field_n = param1;
     }
 
     final int a(boolean param0, long param1) {

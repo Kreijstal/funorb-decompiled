@@ -69,7 +69,7 @@ final class di {
             field_c = (Sprite) null;
           }
           CheckboxPainter.field_r = true;
-          kk.field_a = param4;
+          BoardView.field_a = param4;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

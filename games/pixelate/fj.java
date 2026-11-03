@@ -56,7 +56,7 @@ final class fj {
             param0.field_b == io.field_c.c((byte) 8)) {
             if (!IsaacRandom.field_g) {
               var9 = ProxySocketConnector.field_n;
-              var10 = ee.field_c;
+              var10 = InputQueue.field_c;
               var9.field_b.a(var10, (byte) -60, 14);
             }
             var11 = ProxySocketConnector.field_n;

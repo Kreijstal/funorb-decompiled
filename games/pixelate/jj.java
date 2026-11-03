@@ -62,7 +62,7 @@ class jj {
         if (param1) {
           return;
         }
-        ii.field_i = param3;
+        MatchController.field_i = param3;
         ul.field_q = param2;
     }
 

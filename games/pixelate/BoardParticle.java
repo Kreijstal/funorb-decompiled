@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tk extends IntrusiveNode {
+final class BoardParticle extends IntrusiveNode {
     private int field_k;
     private int field_l;
     private int field_r;
@@ -63,14 +63,14 @@ final class tk extends IntrusiveNode {
 
     final static boolean a(byte param0, int param1) {
         if (param0 != -104) {
-          tk.a(103, 85, false, -53);
+          BoardParticle.a(103, 85, false, -53);
         }
         return 0 <= param1 ? true : false;
     }
 
     public static void a(int param0) {
         if (param0 != 7) {
-          tk.a((byte) -48, 5);
+          BoardParticle.a((byte) -48, 5);
         }
         field_q = null;
     }
@@ -87,7 +87,7 @@ final class tk extends IntrusiveNode {
         return stackIn_10_0;
     }
 
-    tk(int param0, int param1, int param2, int param3) {
+    BoardParticle(int param0, int param1, int param2, int param3) {
         this.field_o = param3;
         this.field_k = param1;
         this.field_p = 16.0;

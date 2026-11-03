@@ -40,12 +40,12 @@ final class wo {
         return StripedProgressBar.field_H[param1];
     }
 
-    final static dd a(int param0, int param1, Random param2, byte param3) {
+    final static Puzzle a(int param0, int param1, Random param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
-        dd stackIn_9_0 = null;
-        dd stackIn_11_0 = null;
+        Puzzle stackIn_9_0 = null;
+        Puzzle stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -63,7 +63,7 @@ final class wo {
             stackIn_11_0 = mc.a(param2, param1, var4_int != 0, MarkerSlider.field_Y[param0], -67);
             return stackIn_11_0;
           }
-          stackIn_9_0 = (dd) null;
+          stackIn_9_0 = (Puzzle) null;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -127,13 +127,13 @@ final class wo {
         int var3 = Pixelate.field_H ? 1 : 0;
         try {
           var1 = new Sprite(50, 30);
-          pm.field_l = new Sprite[param0];
+          Match.field_l = new Sprite[param0];
           for (var2 = 3; var2 > 0; var2--) {
             var1.c();
             SoftwareRasterizer.d();
             rk.field_e.drawCentered(Integer.toString(var2), SoftwareRasterizer.field_j >> 1, SoftwareRasterizer.field_d, 0, -1);
-            pm.field_l[-var2 + 3] = new Sprite(150, 90);
-            pm.field_l[3 - var2].c();
+            Match.field_l[-var2 + 3] = new Sprite(150, 90);
+            Match.field_l[3 - var2].c();
             var1.d(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           }
           ClientException.field_f.a(param0 ^ 19695);

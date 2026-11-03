@@ -80,12 +80,12 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
               AudioService.a(83, param1);
             } else {
               if (2 > wo.field_h) {
-                hd.field_g = true;
+                PlayerBoard.field_g = true;
               } else {
                 if (EmailValidator.field_m[12]) {
                   AudioService.a(83, param1);
                 } else {
-                  hd.field_g = true;
+                  PlayerBoard.field_g = true;
                 }
               }
             }
@@ -189,7 +189,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
     public AccountChoicePanel() {
         super(0, 0, 476, 225, (WidgetPainter) null);
         this.field_J = new TextButton(sd.field_M, (UiListener) null);
-        this.field_N = new TextButton(ii.field_v, (UiListener) null);
+        this.field_N = new TextButton(MatchController.field_v, (UiListener) null);
         this.field_L = new TextButton(fc.field_c, (UiListener) null);
         ThreeSliceButtonPainter var1 = new ThreeSliceButtonPainter();
         this.field_J.field_y = (WidgetPainter) ((Object) var1);

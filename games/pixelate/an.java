@@ -6,7 +6,7 @@ final class an {
     static SceneWidget field_a;
     static int[] field_c;
     static fl field_e;
-    static kk field_b;
+    static BoardView field_b;
 
     final static void a(BitmapFont param0, int param1, byte param2, mn param3, String param4) {
         int var7 = 0;
@@ -89,7 +89,7 @@ final class an {
           field_a = null;
           return;
         }
-        field_b = (kk) null;
+        field_b = (BoardView) null;
         field_e = null;
         field_b = null;
         field_a = null;

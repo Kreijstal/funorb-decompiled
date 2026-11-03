@@ -250,7 +250,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (var4 != 0L &&
             var2_long > var4) {
             var6_int = (int)(var2_long - var4);
-            kk.field_k = ((var6_int >> 1) + 32000) / var6_int;
+            BoardView.field_k = ((var6_int >> 1) + 32000) / var6_int;
           }
           la.field_b = la.field_b - param0 & 31;
           fieldTemp$1 = HuffmanCodec.field_e;

@@ -115,7 +115,7 @@ final class bd {
         if (param0 != -21) {
           return true;
         }
-        if (kk.field_b == this) {
+        if (BoardView.field_b == this) {
           return true;
         }
         if (e.field_d == this) {

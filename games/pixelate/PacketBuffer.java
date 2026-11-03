@@ -373,8 +373,8 @@ class PacketBuffer extends IntrusiveNode {
           var4 = dh.a(param2, (byte) 58);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!ii.a((byte) 123, var4.charAt(0)) &&
-              !ii.a((byte) 124, var4.charAt(var4.length() - 1))) {
+            if (!MatchController.a((byte) 123, var4.charAt(0)) &&
+              !MatchController.a((byte) 124, var4.charAt(var4.length() - 1))) {
               var5 = 0;
               var6 = 0;
               if (param1 != 5832) {
@@ -383,7 +383,7 @@ class PacketBuffer extends IntrusiveNode {
               stackIn_25_0 = (CharSequence) (param2);
               while (((CharSequence) (Object) stackIn_25_0).length() > var6) {
                 var7 = param2.charAt(var6);
-                if (!ii.a((byte) 119, (char) var7)) {
+                if (!MatchController.a((byte) 119, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;

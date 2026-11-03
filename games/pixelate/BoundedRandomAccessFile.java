@@ -9,7 +9,7 @@ final class BoundedRandomAccessFile {
     static String field_b;
     private long field_a;
     private long field_f;
-    static al field_g;
+    static FallingPieceView field_g;
     static ResourceArchive field_c;
 
     final static String a(ResourceArchive param0, String param1, String param2, int param3, int param4) {

@@ -463,7 +463,7 @@ final class wi {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         if (param0 == 8) {
-          pm.a((byte) 85, this.field_h, this.field_l);
+          Match.a((byte) 85, this.field_h, this.field_l);
         } else {
           if (param0 == 18) {
             qj.a(this.field_h, this.field_l, (byte) 8);
@@ -539,10 +539,10 @@ final class wi {
           if (!var3.field_Ob &&
             var3.field_Mb) {
             if (!var3.field_dc) {
-              this.field_b.a(sd.a(hd.field_o, 87, new String[]{var4}), (byte) -32, 2);
+              this.field_b.a(sd.a(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
             } else {
               if (var3.field_hc) {
-                this.field_b.a(sd.a(hd.field_o, 87, new String[]{var4}), (byte) -32, 2);
+                this.field_b.a(sd.a(PlayerBoard.field_o, 87, new String[]{var4}), (byte) -32, 2);
               }
             }
           }

@@ -38,7 +38,7 @@ final class vh {
           for (var3 = 0; var3 < AccountRegistrationPanel.field_J.length; var3++) {
             var4 = ProxyAuthenticationException.field_e[var3];
             if (var4 < 0) {
-              var5 = hd.field_n;
+              var5 = PlayerBoard.field_n;
             } else {
               if (var4 == VerticalScrollbar.field_Gb.field_j) {
                 var5 = mj.field_k;

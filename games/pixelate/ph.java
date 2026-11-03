@@ -21,11 +21,11 @@ final class ph extends IntrusiveNode {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (pm.field_h.field_h >= 4) {
-            if (pm.field_h.field_m == -1) {
+          if (Match.field_h.field_h >= 4) {
+            if (Match.field_h.field_m == -1) {
               return 3;
             }
-            if (-2 != pm.field_h.field_m) {
+            if (-2 != Match.field_h.field_m) {
               return 1;
             }
             return 4;
@@ -47,7 +47,7 @@ final class ph extends IntrusiveNode {
             if (rb.field_q == 2) {
               sc.field_d = new BufferedSocket((java.net.Socket) (se.field_o.field_e), ef.field_e);
               var2 = new PacketBuffer(13);
-              al.a(ql.field_o, (byte) 66, SceneWidget.field_ib, var2, lk.field_n);
+              FallingPieceView.a(ql.field_o, (byte) 66, SceneWidget.field_ib, var2, lk.field_n);
               var2.writeByte(160, 15);
               var2.d(fj.field_a, -76);
               sc.field_d.a(13, -103, 0, var2.payload);
@@ -76,7 +76,7 @@ final class ph extends IntrusiveNode {
             if (rb.field_q != 4) {
               return -1;
             }
-            pm.field_h.a(sc.field_d, kn.field_L, 8);
+            Match.field_h.a(sc.field_d, kn.field_L, 8);
             sc.field_d = null;
             se.field_o = null;
             rb.field_q = 0;

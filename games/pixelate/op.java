@@ -110,9 +110,9 @@ final class op extends de {
                   var6 = QuickChatMenu.field_Ib;
                   if (!ArrayWidgetContainer.a((byte) 105)) {
                     var5 = 1;
-                    var6 = ee.field_a;
+                    var6 = InputQueue.field_a;
                   }
-                  ii.a(param2, var5, 17, (byte) 71, var6);
+                  MatchController.a(param2, var5, 17, (byte) 71, var6);
                   return;
                 }
               }
@@ -176,11 +176,11 @@ final class op extends de {
     }
 
     final static void g(byte param0) {
-        pm.field_h.field_h = 0;
+        Match.field_h.field_h = 0;
         if (param0 != 68) {
           return;
         }
-        pm.field_h.field_m = 0;
+        Match.field_h.field_m = 0;
     }
 
     final int a(int param0, int param1) {

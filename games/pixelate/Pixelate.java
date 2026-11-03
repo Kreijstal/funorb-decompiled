@@ -16,7 +16,7 @@ public final class Pixelate extends lb {
         mh.field_a = 2;
         ce.field_b = 13421772;
         mj.field_k = 0;
-        hd.field_n = 0;
+        PlayerBoard.field_n = 0;
         MatchingTextValidator.field_s = 16777215;
         this.a(true, true, true, true, true, true, -80);
         wd.field_d[69] = -1;
@@ -67,7 +67,7 @@ public final class Pixelate extends lb {
         int var12;
         byte[] var13;
         hf var14;
-        ii var15;
+        MatchController var15;
         Object var16;
         hq var16_ref;
         byte[] var17;
@@ -165,7 +165,7 @@ public final class Pixelate extends lb {
                   } else {
                     if (var2 == 4) {
                       wl.field_b = true;
-                      gi.a(ee.field_a, 0, (byte) 89);
+                      gi.a(InputQueue.field_a, 0, (byte) 89);
                     }
                   }
                 }
@@ -201,7 +201,7 @@ public final class Pixelate extends lb {
             vg.b(0, 10000);
             if (ContentTransitionDialog.field_kb) {
             }
-            if (uh.a((byte) -59)) {
+            if (PlayerController.a((byte) -59)) {
               var3 = this.j(1272);
               if (0 == var3 ||
                 var3 == 1) {
@@ -240,7 +240,7 @@ public final class Pixelate extends lb {
                 LinkButtonPainter.field_d) {
                 var4 = 1;
               }
-              if (!uh.a((byte) -59)) {
+              if (!PlayerController.a((byte) -59)) {
                 var4 = 0;
               }
               if (var4 != 0) {
@@ -318,7 +318,7 @@ public final class Pixelate extends lb {
                 var5 = var4Lifetime1 >> 8;
                 var6 = (128 & var4Lifetime1) >> 7;
                 var7 = 127 & var4Lifetime1;
-                ((ii) (var3_ref)).a(var6, var7, var5, -62);
+                ((MatchController) (var3_ref)).a(var6, var7, var5, -62);
                 continue;
               }
               if (mn.field_e == 69) {
@@ -335,35 +335,35 @@ public final class Pixelate extends lb {
                 for (var11 = 0; var19.length > var11; var11++) {
                   var13[var11] = MusicCrossfadeStream.field_o.a(0);
                 }
-                ((ii) (var3_ref)).a(var8, var6, var7Lifetime2, var4Lifetime1Lifetime1, (byte) 125, var5Lifetime2, var22);
+                ((MatchController) (var3_ref)).a(var8, var6, var7Lifetime2, var4Lifetime1Lifetime1, (byte) 125, var5Lifetime2, var22);
                 continue;
               }
               if (mn.field_e == 70) {
-                ((ii) (var3_ref)).a(-102);
+                ((MatchController) (var3_ref)).a(-102);
                 continue;
               }
               if (62 == mn.field_e) {
                 var4Lifetime1Lifetime2 = MusicCrossfadeStream.field_o.a(0);
                 var5Lifetime3 = MusicCrossfadeStream.field_o.a((byte) -116);
                 var6 = MusicCrossfadeStream.field_o.a((byte) -121);
-                ((ii) (var3_ref)).a(var5Lifetime3, var4Lifetime1Lifetime2, var6, false);
+                ((MatchController) (var3_ref)).a(var5Lifetime3, var4Lifetime1Lifetime2, var6, false);
                 continue;
               }
               if (mn.field_e == 64) {
                 var4Lifetime1Lifetime3 = MusicCrossfadeStream.field_o.f(255);
-                var5Lifetime4 = var4Lifetime1Lifetime3 & ~((ii) (var3_ref)).field_a.field_k;
-                ((ii) (var3_ref)).field_a.field_k = var4Lifetime1Lifetime3;
+                var5Lifetime4 = var4Lifetime1Lifetime3 & ~((MatchController) (var3_ref)).field_a.field_k;
+                ((MatchController) (var3_ref)).field_a.field_k = var4Lifetime1Lifetime3;
                 if (var5Lifetime4 != 1 &&
                   2 != var5Lifetime4) {
                   continue;
                 }
                 stackIn_138_0 = (var5Lifetime4 == 1) ? 0 : 1;
                 var6 = stackIn_138_0;
-                var16_ref.a(sd.a(e.field_e, 76, new String[]{((ii) (var3_ref)).field_a.field_i[var6]}), (byte) -4);
+                var16_ref.a(sd.a(e.field_e, 76, new String[]{((MatchController) (var3_ref)).field_a.playerNames[var6]}), (byte) -4);
                 continue;
               }
               if (mn.field_e == 65) {
-                ((ii) (var3_ref)).field_a.field_p = MusicCrossfadeStream.field_o.f(255);
+                ((MatchController) (var3_ref)).field_a.field_p = MusicCrossfadeStream.field_o.f(255);
                 if (null == ro.field_e) {
                   continue;
                 }
@@ -372,8 +372,8 @@ public final class Pixelate extends lb {
               }
               if (mn.field_e == 66) {
                 var4Lifetime1Lifetime4 = MusicCrossfadeStream.field_o.f(255);
-                var5Lifetime5 = ~((ii) (var3_ref)).field_o & var4Lifetime1Lifetime4;
-                ((ii) (var3_ref)).field_o = var4Lifetime1Lifetime4;
+                var5Lifetime5 = ~((MatchController) (var3_ref)).field_o & var4Lifetime1Lifetime4;
+                ((MatchController) (var3_ref)).field_o = var4Lifetime1Lifetime4;
                 if (ro.field_e == null) {
                   continue;
                 }
@@ -384,7 +384,7 @@ public final class Pixelate extends lb {
                 }
                 stackIn_150_0 = (var5Lifetime5 != 1) ? 1 : 0;
                 var6 = stackIn_150_0;
-                var16_ref.a(sd.a(ArrayWidgetContainer.field_M, 75, new String[]{((ii) (var3_ref)).field_a.field_i[var6]}), (byte) -4);
+                var16_ref.a(sd.a(ArrayWidgetContainer.field_M, 75, new String[]{((MatchController) (var3_ref)).field_a.playerNames[var6]}), (byte) -4);
                 continue;
               }
               if (71 == mn.field_e) {
@@ -424,7 +424,7 @@ public final class Pixelate extends lb {
           stackIn_100_0 = (mn.field_e == 58);
           DateOfBirthValidator.field_i = stackIn_100_0;
           bg.a(2);
-          var15 = new ii(var4_ref_String__, var5Lifetime1, var3Lifetime1 != 0, var9Lifetime1, var6, var7Lifetime1, var8Lifetime1);
+          var15 = new MatchController(var4_ref_String__, var5Lifetime1, var3Lifetime1 != 0, var9Lifetime1, var6, var7Lifetime1, var8Lifetime1);
           var15.a((byte) 20, MusicCrossfadeStream.field_o);
           if (1 == MusicCrossfadeStream.field_o.f(255)) {
             var15.f(-57);
@@ -491,7 +491,7 @@ public final class Pixelate extends lb {
         re.a(true);
         FullscreenFocusCanvas.a((byte) -85);
         co.a(true);
-        ii.b((byte) -101);
+        MatchController.b((byte) -101);
         dg.a(1048576);
         aq.a((byte) 119);
         Js5Transport.c((byte) -53);
@@ -551,19 +551,19 @@ public final class Pixelate extends lb {
         jb.a((byte) 33);
         kh.a(21601);
         ig.a((byte) 2);
-        dd.b(116);
+        Puzzle.b(116);
         so.a(true);
         op.f((byte) 122);
         bg.b((byte) -101);
         ma.c((byte) -112);
         rb.b(true);
         fk.e(108);
-        al.a((byte) 51);
-        kk.b(true);
+        FallingPieceView.a((byte) 51);
+        BoardView.b(true);
         pb.c(0);
         mj.a(param0 ^ 3805);
         kf.d(126);
-        hd.a((byte) 125);
+        PlayerBoard.a((byte) 125);
         ql.f(0);
         wc.b((byte) 34);
         da.b((byte) -13);
@@ -591,14 +591,14 @@ public final class Pixelate extends lb {
         HuffmanCodec.a(false);
         bf.a((byte) -91);
         nn.c(param0 - 23119);
-        pm.b(0);
+        Match.b(0);
         IndexedSpriteState.a(false);
         bj.b((byte) 109);
         fc.a(32);
         hq.f((byte) -49);
         l.e(param0 - 20899);
         mp.a(true);
-        uh.f(103);
+        PlayerController.f(103);
         fe.a(param0 ^ -23078);
         hp.b((byte) -15);
         aj.a((byte) -38);
@@ -676,7 +676,7 @@ public final class Pixelate extends lb {
         pj.a(false);
         ul.c((byte) -69);
         jf.a(-31476);
-        ee.d(-3);
+        InputQueue.d(-3);
         WhirlpoolHasher.b(64);
         td.a(param0 - 23112);
         qn.a(-1);
@@ -753,7 +753,7 @@ public final class Pixelate extends lb {
         ib.a(2);
         rk.a(10934);
         up.a((byte) 104);
-        tk.a(7);
+        BoardParticle.a(7);
         qk.a(6);
         vn.a(false);
         jm.a(-1345);
@@ -774,7 +774,7 @@ public final class Pixelate extends lb {
         lf.a(0);
         mn.b((byte) -26);
         bi.a(-8);
-        rd.a(-5778);
+        QueuedInput.a(-5778);
         NameAvailabilityValidator.e(0);
         PasswordValidator.e(-30055);
         EmailValidator.e(param0 ^ 23056);
@@ -1166,12 +1166,12 @@ public final class Pixelate extends lb {
               stackIn_69_0 = (!DialWidgetPainter.field_n) ? 200 : 250;
               var33_intLifetime1 = stackIn_69_0;
               var12.field_Zb.a(var31, fq.field_q, var33_intLifetime1, param1 + 187, -2 + (-var33_intLifetime1 + 365));
-              var34_int = hd.field_q;
+              var34_int = PlayerBoard.field_q;
               if ((1 << ek.field_a & var14Lifetime1) != 0) {
                 var50_ref = DraggableWidget.field_P[var12.field_Ib];
                 var12.field_ic.field_H = var50_ref;
                 var12.field_ic.a(0, var12.field_Zb.height, var34_int, 256, var50_ref.field_A);
-                var34_int = var34_int + (var50_ref.field_A + hd.field_q);
+                var34_int = var34_int + (var50_ref.field_A + PlayerBoard.field_q);
               }
               if ((var14Lifetime1 & 1 << ef.field_f) != 0) {
                 if (!var12.field_hc) {
@@ -1189,13 +1189,13 @@ public final class Pixelate extends lb {
                 var51_ref = stackIn_80_0[stackIn_81_1];
                 var12.field_Jb.field_H = var51_ref;
                 var12.field_Jb.a(0, var12.field_Zb.height, var34_int, 256, var51_ref.field_A);
-                var34_int = var34_int + (hd.field_q + var51_ref.field_A);
+                var34_int = var34_int + (PlayerBoard.field_q + var51_ref.field_A);
               }
               if ((1 << PasswordValidator.field_m & var14Lifetime1) != 0) {
                 var52_ref = so.field_d[-1 + var12.field_Tb];
                 var12.field_Fb.field_H = var52_ref;
                 var12.field_Fb.a(0, var12.field_Zb.height, var34_int, 256, var52_ref.field_A);
-                var34_int = var34_int + (hd.field_q + var52_ref.field_A);
+                var34_int = var34_int + (PlayerBoard.field_q + var52_ref.field_A);
               }
               if ((var14Lifetime1 & 1 << ClientException.field_e) != 0) {
                 stackIn_88_0 = fd.field_c;
@@ -1207,7 +1207,7 @@ public final class Pixelate extends lb {
                 var53_ref = stackIn_88_0[stackIn_89_1];
                 var12.field_Vb.field_H = var53_ref;
                 var12.field_Vb.a(0, var12.field_Zb.height, var34_int, 256, var53_ref.field_A);
-                var34_int = var34_int + (hd.field_q + var53_ref.field_A);
+                var34_int = var34_int + (PlayerBoard.field_q + var53_ref.field_A);
               }
               if (ig.field_a != null) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < fj.field_b; var36Lifetime1++) {
@@ -1217,7 +1217,7 @@ public final class Pixelate extends lb {
                     var54 = var42;
                     var12.field_ac[var36Lifetime1].field_H = var42;
                     var12.field_ac[var36Lifetime1].a(0, var12.field_Zb.height, var34_int, 256, var54.field_A);
-                    var34_int = var34_int + (hd.field_q + var54.field_A);
+                    var34_int = var34_int + (PlayerBoard.field_q + var54.field_A);
                   }
                 }
               }
@@ -1520,8 +1520,8 @@ public final class Pixelate extends lb {
                             BoundedRandomAccessFile.field_c.a((byte) 92)) {
                             if (MenuInputState.field_d.b(-3) &&
                               MenuInputState.field_d.ensureGroupAvailableByName("basic", -1)) {
-                              if (hd.field_c.b(param1 ^ -7) &&
-                                hd.field_c.ensureGroupAvailableByName("basic", -1)) {
+                              if (PlayerBoard.field_c.b(param1 ^ -7) &&
+                                PlayerBoard.field_c.ensureGroupAvailableByName("basic", -1)) {
                                 if (SocketConnector.field_a.b(-3) &&
                                   SocketConnector.field_a.a((byte) 92)) {
                                   if (uk.field_u.b(-3) &&
@@ -1543,7 +1543,7 @@ public final class Pixelate extends lb {
                                 li.a(75.0f, -1, mn.a(120, SocketConnector.field_a, em.field_a, "", jd.field_p));
                                 return false;
                               }
-                              li.a(75.0f, -1, mn.a(53, hd.field_c, pc.field_x, "basic", CanvasRasterBuffer.field_f));
+                              li.a(75.0f, -1, mn.a(53, PlayerBoard.field_c, pc.field_x, "basic", CanvasRasterBuffer.field_f));
                               return false;
                             }
                             li.a(75.0f, -1, mn.a(param1 + 113, MenuInputState.field_d, PasswordValidator.field_q, "basic", im.field_Mb));
@@ -1606,7 +1606,7 @@ public final class Pixelate extends lb {
           sf.a(0);
           return false;
         }
-        if (null == hd.field_c) {
+        if (null == PlayerBoard.field_c) {
           if (SocketConnector.field_a != null) {
             re.a(true, new HuffmanCodec(SocketConnector.field_a.a((byte) 24, "huffman", "")));
             SocketConnector.field_a = null;
@@ -1632,28 +1632,28 @@ public final class Pixelate extends lb {
         }
         li.a(96.0f, -1, no.field_g);
         this.d(param1 ^ 123);
-        rk.field_e = vn.a(MenuInputState.field_d, "basic", "font", hd.field_c, 22510);
+        rk.field_e = vn.a(MenuInputState.field_d, "basic", "font", PlayerBoard.field_c, 22510);
         qj.field_e = bf.a(param1 ^ 4, dg.field_d, "", qn.field_l, "arial13");
         nh.a((byte) 117);
         bm.field_u = bi.a("basic", "background", MenuInputState.field_d, (byte) -36);
-        pm.a(13728, 0, lb.a(MenuInputState.field_d, 23, "basic", "level1"));
-        pm.a(13728, 1, lb.a(MenuInputState.field_d, -128, "basic", "level2"));
-        pm.a(13728, 2, lb.a(MenuInputState.field_d, -4, "basic", "level3"));
-        pm.a(13728, 3, lb.a(MenuInputState.field_d, 41, "basic", "level4"));
-        pm.a(13728, 4, lb.a(MenuInputState.field_d, -114, "basic", "level5"));
-        pm.a(13728, 5, lb.a(MenuInputState.field_d, 66, "basic", "level6"));
-        pm.a(param1 + 13724, 6, lb.a(MenuInputState.field_d, param1 ^ 122, "basic", "level7"));
-        pm.a(13728, 7, lb.a(MenuInputState.field_d, 0, "basic", "level8"));
-        pm.a(13728, 8, lb.a(MenuInputState.field_d, 59, "basic", "level9"));
-        pm.a(13728, 9, lb.a(MenuInputState.field_d, -121, "basic", "level10"));
-        al.field_c[3][4] = lb.a(MenuInputState.field_d, -106, "basic", "set34");
-        al.field_c[4][3] = lb.a(MenuInputState.field_d, param1 + 28, "basic", "set43");
-        al.field_c[3][5] = lb.a(MenuInputState.field_d, 125, "basic", "set35");
-        al.field_c[5][3] = lb.a(MenuInputState.field_d, 80, "basic", "set53");
-        al.field_c[4][4] = lb.a(MenuInputState.field_d, 47, "basic", "set44");
-        al.field_c[5][4] = lb.a(MenuInputState.field_d, 77, "basic", "set54");
-        al.field_c[4][5] = lb.a(MenuInputState.field_d, -105, "basic", "set45");
-        al.field_c[5][5] = lb.a(MenuInputState.field_d, -111, "basic", "set55");
+        Match.a(13728, 0, lb.a(MenuInputState.field_d, 23, "basic", "level1"));
+        Match.a(13728, 1, lb.a(MenuInputState.field_d, -128, "basic", "level2"));
+        Match.a(13728, 2, lb.a(MenuInputState.field_d, -4, "basic", "level3"));
+        Match.a(13728, 3, lb.a(MenuInputState.field_d, 41, "basic", "level4"));
+        Match.a(13728, 4, lb.a(MenuInputState.field_d, -114, "basic", "level5"));
+        Match.a(13728, 5, lb.a(MenuInputState.field_d, 66, "basic", "level6"));
+        Match.a(param1 + 13724, 6, lb.a(MenuInputState.field_d, param1 ^ 122, "basic", "level7"));
+        Match.a(13728, 7, lb.a(MenuInputState.field_d, 0, "basic", "level8"));
+        Match.a(13728, 8, lb.a(MenuInputState.field_d, 59, "basic", "level9"));
+        Match.a(13728, 9, lb.a(MenuInputState.field_d, -121, "basic", "level10"));
+        FallingPieceView.field_c[3][4] = lb.a(MenuInputState.field_d, -106, "basic", "set34");
+        FallingPieceView.field_c[4][3] = lb.a(MenuInputState.field_d, param1 + 28, "basic", "set43");
+        FallingPieceView.field_c[3][5] = lb.a(MenuInputState.field_d, 125, "basic", "set35");
+        FallingPieceView.field_c[5][3] = lb.a(MenuInputState.field_d, 80, "basic", "set53");
+        FallingPieceView.field_c[4][4] = lb.a(MenuInputState.field_d, 47, "basic", "set44");
+        FallingPieceView.field_c[5][4] = lb.a(MenuInputState.field_d, 77, "basic", "set54");
+        FallingPieceView.field_c[4][5] = lb.a(MenuInputState.field_d, -105, "basic", "set45");
+        FallingPieceView.field_c[5][5] = lb.a(MenuInputState.field_d, -111, "basic", "set55");
         td.a(127, lb.a(MenuInputState.field_d, 44, "basic", "puzzle"));
         lg.field_d[0] = bi.a("basic", "icon_singleplayer", MenuInputState.field_d, (byte) -45);
         lg.field_d[1] = bi.a("basic", "icon_puzzle", MenuInputState.field_d, (byte) -73);
@@ -1667,7 +1667,7 @@ public final class Pixelate extends lb {
         ab.field_c = bf.a(param1 + 1, "basic", "frame_filled");
         bi.field_g = bf.a(5, "basic", "frame_raised");
         MusicPatchNode.field_B = bi.a("basic", "gameframe", MenuInputState.field_d, (byte) -25);
-        hd.field_w = var3;
+        PlayerBoard.field_w = var3;
         gd.field_i = var3;
         MatchingTextValidator.field_v = bi.a("basic", "instructions6", MenuInputState.field_d, (byte) -121);
         pk.field_c = SocketConnector.a("instructions_keys", "basic", (byte) 47, MenuInputState.field_d);
@@ -1741,7 +1741,7 @@ public final class Pixelate extends lb {
         ri.a(200, (byte) -126);
         am.a(qn.field_l, true, dg.field_d);
         ProxySocketConnector.a((byte) -94, 0, 0, 16777215, (java.applet.Applet) (this), AccountNoticeDialog.field_bb);
-        hd.field_c = null;
+        PlayerBoard.field_c = null;
         dg.field_d = null;
         sf.a(0);
         return false;
@@ -1762,7 +1762,7 @@ public final class Pixelate extends lb {
         }
         SocketConnector.field_a = MouseInputHandler.a(3, (byte) 124);
         MenuInputState.field_d = MouseInputHandler.a(5, (byte) 124);
-        hd.field_c = MouseInputHandler.a(6, (byte) 124);
+        PlayerBoard.field_c = MouseInputHandler.a(6, (byte) 124);
         ji.field_b = MouseInputHandler.a(7, (byte) 124);
         PacketBuffer.field_p = MouseInputHandler.a(8, (byte) 124);
         ab.field_f = MouseInputHandler.a(9, (byte) 124);
@@ -1796,10 +1796,10 @@ public final class Pixelate extends lb {
               } else {
                 MarkerSlider.a(-20822);
               }
-              ga.field_a = kk.field_y;
+              ga.field_a = BoardView.field_y;
             }
           } else {
-            if (kk.field_y != ga.field_a) {
+            if (BoardView.field_y != ga.field_a) {
               hf.field_o = hf.field_o - 1;
               if (hf.field_o == 0) {
                 ga.field_a = ga.field_d;
@@ -1818,7 +1818,7 @@ public final class Pixelate extends lb {
                   var3_ref_tc = qj.field_e;
                   u.a(((BitmapFont) ((Object) var3_ref_tc)).maxDescent + ((BitmapFont) ((Object) var3_ref_tc)).maxAscent, -879, ((BitmapFont) ((Object) var3_ref_tc)).maxAscent, 2, 320, 8, ab.field_c, var3_ref_tc, 240, bi.field_g, 8, false);
                 }
-                if (tk.a((byte) -104, MidiPcmStream.field_t)) {
+                if (BoardParticle.a((byte) -104, MidiPcmStream.field_t)) {
                   IntrusiveDequeCursor.a(0);
                 }
                 ga.field_a = MatchingTextValidator.field_A;
@@ -1838,8 +1838,8 @@ public final class Pixelate extends lb {
                   while (bh.$cfr$intArgs$b$c4997cb15529(123)) {
                     if (EmailValidator.field_m[82] &&
                       ke.field_a == 11) {
-                      stackIn_24_0 = !(pm.field_u);
-                      pm.field_u = stackIn_24_0;
+                      stackIn_24_0 = !(Match.field_u);
+                      Match.field_u = stackIn_24_0;
                     }
                     ro.field_e.a(ke.field_a, (byte) -79);
                   }
@@ -1850,7 +1850,7 @@ public final class Pixelate extends lb {
                 }
               } else {
                 if (fc.field_e != -2) {
-                  if (tk.a((byte) -104, fc.field_e)) {
+                  if (BoardParticle.a((byte) -104, fc.field_e)) {
                     wo.b(-79, fc.field_e).e((byte) -83);
                     DialWidgetPainter.b(0);
                   }
@@ -1875,9 +1875,9 @@ public final class Pixelate extends lb {
             !dj.field_c &&
             !LinkButtonPainter.field_d) {
             bl.a(-55, var3 != 0);
-            if (hd.field_g) {
-              ii.a(true, 1, fc.field_e, (byte) -68, ee.field_a);
-              hd.field_g = false;
+            if (PlayerBoard.field_g) {
+              MatchController.a(true, 1, fc.field_e, (byte) -68, InputQueue.field_a);
+              PlayerBoard.field_g = false;
             }
             if (DateOfBirthValidator.field_i) {
               MatchingTextValidator.field_r.a(-110, var4 != 0);
@@ -1939,7 +1939,7 @@ public final class Pixelate extends lb {
         }
         if (MidiPcmStream.field_t == -3) {
           wh.field_p = null;
-          ro.field_e = new ii();
+          ro.field_e = new MatchController();
           stackIn_97_0 = (!de.field_f) ? 0 : 1;
           var3Lifetime1 = stackIn_97_0;
           stackIn_100_0 = (gq.d(108)) ? 12 : 0;

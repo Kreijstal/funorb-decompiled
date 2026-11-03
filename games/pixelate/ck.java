@@ -129,7 +129,7 @@ final class ck {
         }
         var4 = 320 - (int)this.field_h;
         var5 = 240 - (int)this.field_a;
-        this.field_c = (float)hd.a(var4 * var4 + var5 * var5, param0 + 23096);
+        this.field_c = (float)PlayerBoard.a(var4 * var4 + var5 * var5, param0 + 23096);
         var6 = this.field_d / this.field_c;
         this.field_i = var6 * (float)var4;
         if (param0 != -22970) {
@@ -276,7 +276,7 @@ final class ck {
                 return true;
               }
               var3 = (String) (cq.a("getcookies", (byte) -113, param1));
-              var4 = dd.a(var3, (byte) -52, ';');
+              var4 = Puzzle.a(var3, (byte) -52, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (0 <= var6 &&

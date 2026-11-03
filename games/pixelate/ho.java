@@ -28,7 +28,7 @@ final class ho {
           PacketBuffer.field_o[0] = jm.field_s;
           PacketBuffer.field_o[28] = TabbedPanel.field_Nb;
           PacketBuffer.field_o[1] = CheckboxPainter.field_c;
-          PacketBuffer.field_o[11] = al.field_d;
+          PacketBuffer.field_o[11] = FallingPieceView.field_d;
           PacketBuffer.field_o[29] = ge.field_a;
           if (param0 != -29810) {
             ho.a(false, -69);
@@ -76,7 +76,7 @@ final class ho {
     }
 
     final static void a(boolean param0, int param1) {
-        kk.a((byte) -61, param0);
+        BoardView.a((byte) -61, param0);
         if (param1 != 12402) {
           return;
         }

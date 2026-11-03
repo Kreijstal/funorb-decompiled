@@ -3,7 +3,7 @@
  */
 final class ro {
     static Sprite field_b;
-    static ii field_e;
+    static MatchController field_e;
     static boolean field_d;
     static int field_a;
     static int field_c;
@@ -248,7 +248,7 @@ final class ro {
             }
             if (ui.field_a <= jn.field_q) {
               SpriteCheckboxPainter.field_b = ae.field_b;
-              if (!pm.field_e) {
+              if (!Match.field_e) {
                 ae.field_b = ae.field_b - 1;
                 if (ae.field_b < 0) {
                   ae.field_b = ae.field_b + var2_int;
@@ -262,7 +262,7 @@ final class ro {
               jn.field_q = jn.field_q - ui.field_a;
             }
             if (jn.field_q > ui.field_k) {
-              pm.field_e = true;
+              Match.field_e = true;
             }
           }
           if (param0 >= -21) {
@@ -277,13 +277,13 @@ final class ro {
               if (-ScrollContainer.field_Kb.field_F + 269 < BufferedRandomAccessFile.field_a &&
                 269 > BufferedRandomAccessFile.field_a) {
                 jn.field_q = ui.field_a;
-                pm.field_e = false;
+                Match.field_e = false;
                 var4 = 1;
               }
               if (586 < BufferedRandomAccessFile.field_a &&
                 BufferedRandomAccessFile.field_a < 586 + ScrollContainer.field_Kb.field_F) {
                 var4 = 1;
-                pm.field_e = true;
+                Match.field_e = true;
                 jn.field_q = ui.field_a;
               }
             }

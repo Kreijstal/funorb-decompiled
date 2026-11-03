@@ -57,12 +57,12 @@ final class th {
 
     final static void a(int param0) {
         if (param0 == 8191) {
-          gf.a(pm.field_s, true, 32, nk.field_b);
+          gf.a(Match.field_s, true, 32, nk.field_b);
           ke.field_d = true;
           return;
         }
         th.a(17);
-        gf.a(pm.field_s, true, 32, nk.field_b);
+        gf.a(Match.field_s, true, 32, nk.field_b);
         ke.field_d = true;
     }
 

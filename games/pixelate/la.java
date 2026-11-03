@@ -389,7 +389,7 @@ final class la {
             stackIn_61_0 = (var33.equals(var12.field_Fb)) ? 0 : 1;
             var22 = stackIn_61_0;
             if (4 <= var12.field_Qb) {
-              var20 = "<img=" + (-4 + var12.field_Qb + kk.field_s) + ">" + var33;
+              var20 = "<img=" + (-4 + var12.field_Qb + BoardView.field_s) + ">" + var33;
             } else {
               if (var12.field_Qb > 0) {
                 var20 = "<img=" + (var12.field_Qb - 1) + ">" + var33;
@@ -646,7 +646,7 @@ final class la {
                 if (param2 == ae.field_c &&
                   AccountRegistrationPanel.m(99)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + sd.a(tk.field_q, 96, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + sd.a(BoardParticle.field_q, 96, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + le.field_i + (String) (var25);
                   }
@@ -698,7 +698,7 @@ final class la {
           MidiPcmStream.field_t == 17) {
           dg.a(0, (byte) -91);
         }
-        if (tk.a((byte) -104, MidiPcmStream.field_t)) {
+        if (BoardParticle.a((byte) -104, MidiPcmStream.field_t)) {
           var4 = 0;
           if (MidiPcmStream.field_t == 12) {
             var4 = -1;

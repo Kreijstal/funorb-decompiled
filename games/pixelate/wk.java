@@ -12,9 +12,9 @@ final class wk extends rg {
     final static Sprite[] a(int param0, int param1, int param2) {
         if (param2 != 1) {
           wk.c(-57);
-          return tk.a(1, param1, true, param0);
+          return BoardParticle.a(1, param1, true, param0);
         }
-        return tk.a(1, param1, true, param0);
+        return BoardParticle.a(1, param1, true, param0);
     }
 
     public static void c(int param0) {

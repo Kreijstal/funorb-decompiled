@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class al {
+final class FallingPieceView {
     private int field_i;
     private int field_k;
     private int field_h;
     private int field_o;
     private int field_l;
     private int field_b;
-    private hd field_f;
+    private PlayerBoard field_f;
     static String field_g;
     private int field_j;
     static String field_d;
@@ -100,8 +100,8 @@ final class al {
         int var6;
         var6 = Pixelate.field_H ? 1 : 0;
         var2 = 20 / ((param0 + 63) / 56);
-        var3 = 32 * this.field_f.field_i;
-        var4 = 32 * this.field_f.field_a;
+        var3 = 32 * this.field_f.paddedWidth;
+        var4 = 32 * this.field_f.paddedHeight;
         if (DateOfBirthValidator.field_j == 0) {
           this.field_e = this.field_e + this.field_n;
           if (this.field_e > var4 + var3 ||
@@ -131,7 +131,7 @@ final class al {
           param3.writeByte(160, 12);
           if (param1 != 66) {
             Sprite[] var6 = (Sprite[]) null;
-            al.a(true, (Sprite[]) null);
+            FallingPieceView.a(true, (Sprite[]) null);
           }
           param3.writeShort(param1 + 1276387878, 17);
           param3.writeShort(1276387944, param4);
@@ -149,7 +149,7 @@ final class al {
         System.out.println("Error: " + qk.a(param0, "%0a", "\n", -127));
     }
 
-    al(dd param0, hd param1, kk param2) {
+    FallingPieceView(Puzzle param0, PlayerBoard param1, BoardView param2) {
         try {
           this.field_f = param1;
           this.field_n = 20;
@@ -200,7 +200,7 @@ final class al {
         int var22;
         Sprite var23;
         Sprite var24;
-        var4 = this.field_f.field_s;
+        var4 = this.field_f.pieceTones;
         if (this.field_h < param0) {
           if (this.field_a >= param0) {
             stackIn_8_0 = (0 == param0 % 2) ? 1 : 0;
@@ -211,8 +211,8 @@ final class al {
           stackIn_8_0 = 0;
         }
         var5 = stackIn_8_0;
-        var6 = this.field_f.field_e;
-        var7 = this.field_f.field_h;
+        var6 = this.field_f.pieceColumn;
+        var7 = this.field_f.pieceRow;
         var8 = -param0 + 10;
         if (param0 >= 10) {
           stackIn_11_0 = 256;
@@ -288,25 +288,25 @@ final class al {
           } else {
             stackIn_51_0 = var19_ref;
           }
-          fi.a(stackIn_51_0, ii.field_p[var8 - 1], var16, var17);
+          fi.a(stackIn_51_0, MatchController.field_p[var8 - 1], var16, var17);
           if (!var4[1]) {
             stackIn_54_0 = var19_ref;
           } else {
             stackIn_54_0 = var20_ref;
           }
-          fi.a(stackIn_54_0, ii.field_p[-1 + var8], var16 + var15, var17);
+          fi.a(stackIn_54_0, MatchController.field_p[-1 + var8], var16 + var15, var17);
           if (!var4[2]) {
             stackIn_57_0 = var19_ref;
           } else {
             stackIn_57_0 = var20_ref;
           }
-          fi.a(stackIn_57_0, ii.field_p[var8 - 1], var16, var15 + var17);
+          fi.a(stackIn_57_0, MatchController.field_p[var8 - 1], var16, var15 + var17);
           if (var4[3]) {
             stackIn_60_0 = var20_ref;
           } else {
             stackIn_60_0 = var19_ref;
           }
-          fi.a(stackIn_60_0, ii.field_p[-1 + var8], var16 + var15, var17 + var15);
+          fi.a(stackIn_60_0, MatchController.field_p[-1 + var8], var16 + var15, var17 + var15);
         } else {
           var22 = 0;
           if (param1 != 0) {
@@ -356,7 +356,7 @@ final class al {
           var2_int = 0;
           if (param0) {
             var5 = (PacketBuffer) null;
-            al.a(99, (byte) 118, 123, (PacketBuffer) null, -60);
+            FallingPieceView.a(99, (byte) 118, 123, (PacketBuffer) null, -60);
           }
           while (var2_int < param1.length) {
             var3 = param1[var2_int];

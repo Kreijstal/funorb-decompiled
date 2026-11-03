@@ -92,9 +92,9 @@ final class LobbyPlayer extends SceneWidget {
         }
         stackIn_11_0 = (var8.f(255) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        dd.field_a = var8.h(5);
+        Puzzle.field_a = var8.h(5);
         if (var4 == 0) {
-          op.field_t = dd.field_a;
+          op.field_t = Puzzle.field_a;
         } else {
           op.field_t = var8.h(5);
         }

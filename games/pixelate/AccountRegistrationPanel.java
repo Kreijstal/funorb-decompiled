@@ -55,12 +55,12 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         int var1 = 1;
         this.field_T = new Checkbox("", (UiListener) null, var1 != 0);
         this.field_R = new TextButton(hm.field_d, (UiListener) null);
-        this.field_K = new TextButton(ii.field_v, (UiListener) null);
+        this.field_K = new TextButton(MatchController.field_v, (UiListener) null);
         this.field_U.field_l = bg.field_i;
         this.field_P.field_l = LabeledField.field_N;
         this.field_L.field_l = jf.field_b;
         this.field_V.field_l = QuickChatMenu.field_Eb;
-        this.field_X.field_l = dd.field_f;
+        this.field_X.field_l = Puzzle.field_f;
         this.field_Q.field_l = IntrusiveDeque.field_d;
         this.field_T.field_l = mc.field_o;
         this.field_U.a((byte) 101, new NameAvailabilityValidator(this.field_U));

@@ -56,7 +56,7 @@ final class CheckboxPainter implements WidgetPainter {
               }
               var3 = var3 + param1;
             }
-            al.a(var3, 0);
+            FallingPieceView.a(var3, 0);
             var7 = qk.a(var3, ":", "%3a", -123);
             var8 = qk.a(var7, "@", "%40", -128);
             if (param0 != 1) {

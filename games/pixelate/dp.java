@@ -169,10 +169,10 @@ final class dp extends de {
 
     final void c(int param0) {
         Object var2;
-        ii var2_ref;
-        ii var3;
-        ii var4;
-        ii var5;
+        MatchController var2_ref;
+        MatchController var3;
+        MatchController var4;
+        MatchController var5;
         var2 = null;
         if (this.field_l == 1) {
           var4 = ro.field_e;
@@ -203,7 +203,7 @@ final class dp extends de {
               if (var2 == null) {
                 super.c(0);
               } else {
-                ((ii) (var2)).a(false, param0 + param0);
+                ((MatchController) (var2)).a(false, param0 + param0);
                 if (this.field_l == 1) {
                   SoftwareRasterizer.a(0, 0, 640, 480);
                   rh.b((byte) 121);

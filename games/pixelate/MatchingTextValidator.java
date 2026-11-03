@@ -9,7 +9,7 @@ final class MatchingTextValidator extends TextFieldValidator {
     static int field_s;
     static String field_m;
     static boolean field_z;
-    static ii field_r;
+    static MatchController field_r;
     static String[] field_t;
     static Sprite field_v;
     static int field_A;

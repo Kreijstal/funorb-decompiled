@@ -1018,7 +1018,7 @@ final class no extends kd {
             if (var6 != null) {
               var2_int = jn.field_q * (var6.field_A + 60) / ui.field_k;
               var3 = var2_int - 30;
-              boolean decompiledSharedTail0 = !(pm.field_e);
+              boolean decompiledSharedTail0 = !(Match.field_e);
               if (!decompiledSharedTail0) {
                 ArchiveIndex.a(var3 * -256 / 30, var6, 245, -123, 199, (var6.field_A - var3) * 256 / 30);
                 decompiledSharedTail0 = (var4 != 0);

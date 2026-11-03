@@ -321,7 +321,7 @@ class TextButton extends UiComponent {
                   QuickChatCategory.field_v[var23Lifetime2] = -2147483648;
                 } else {
                   ArchiveProvider.field_a[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
-                  al.field_m[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
+                  FallingPieceView.field_m[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   QuickChatCategory.field_v[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 < var7_int) {
                     var7_int = var29Lifetime1;

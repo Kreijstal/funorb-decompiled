@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class StatefulTextPainter extends TextWidgetPainter {
-    static pm field_v;
+    static Match field_v;
     static wm field_w;
     static String field_t;
     static int field_s;

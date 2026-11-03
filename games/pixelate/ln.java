@@ -36,7 +36,7 @@ final class ln extends IntrusiveNode {
                 ln.a(122);
               }
               var4 = (String) (cq.a("getcookies", (byte) -43, param0));
-              var5 = dd.a(var4, (byte) -37, ';');
+              var5 = Puzzle.a(var4, (byte) -37, ';');
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&

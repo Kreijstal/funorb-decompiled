@@ -65,7 +65,7 @@ final class m extends IntrusiveNode {
         if (to.field_r != null) {
           to.field_r.p(param0 ^ 15);
         }
-        String var1 = dd.a(0);
+        String var1 = Puzzle.a(0);
         nf.field_b = new be(var1, (String) null, true, false, false);
         if (param0 == -102) {
           wa.field_c.b(param0 - 6081, ph.field_l);

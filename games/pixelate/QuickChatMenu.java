@@ -18,7 +18,7 @@ final class QuickChatMenu extends SceneWidget {
     private int field_Rb;
     private int field_Ub;
     private int field_Mb;
-    static al field_Qb;
+    static FallingPieceView field_Qb;
 
     final static void b(boolean param0, int param1) {
         int var4 = 0;

@@ -115,7 +115,7 @@ class IntrusiveNode {
           IsaacRandom.field_b = new SceneWidget(0L, AccountRequestDialog.field_mb, co.field_u);
           LoginDialog.field_pb = new SceneWidget(0L, AccountRequestDialog.field_mb, nk.field_c);
           be.field_P = new SceneWidget(0L, AccountRequestDialog.field_mb, MusicPatchPcmStream.field_q);
-          PasswordValidator.field_o = new SceneWidget(0L, AccountRequestDialog.field_mb, ii.field_b);
+          PasswordValidator.field_o = new SceneWidget(0L, AccountRequestDialog.field_mb, MatchController.field_b);
           SocketJs5Transport.field_t = new SceneWidget(0L, ni.field_s, df.field_m);
           aj.field_k = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
           lg.field_c = new SceneWidget(0L, bf.field_k, DualLinkNode.field_m.toUpperCase());
@@ -197,7 +197,7 @@ class IntrusiveNode {
           dh.field_b[2] = new SceneWidget(0L, qk.field_d, LobbyGame.field_Xb);
           AccountTermsPanel.field_L[2] = new lo[]{new lo(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, fg.field_a), new lo(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, so.field_d[0], ValidatedTextWidget.field_eb), new lo(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, so.field_d[1], ij.field_t)};
           if (ff.field_i > 1) {
-            dh.field_b[3] = new SceneWidget(0L, qk.field_d, ii.field_c);
+            dh.field_b[3] = new SceneWidget(0L, qk.field_d, MatchController.field_c);
             array$1 = new lo[1 + ff.field_i];
             AccountTermsPanel.field_L[3] = array$1;
             AccountTermsPanel.field_L[3][0] = new lo(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, (Sprite) null, fg.field_a);

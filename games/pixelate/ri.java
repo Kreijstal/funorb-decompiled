@@ -45,7 +45,7 @@ final class ri {
 
     final static void a(int param0, byte param1) {
         de.field_e = new aa[param0 * 15];
-        ee.field_d = param0;
+        InputQueue.field_d = param0;
         MarkerSlider.field_O = new int[3];
         int var2 = 20 / ((param1 + 94) / 32);
         sd.field_L = 0;

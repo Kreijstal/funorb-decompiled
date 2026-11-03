@@ -181,7 +181,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
 
     final static void l(int param0) {
         String var2 = (String) null;
-        al.a(nk.field_b, -116, (String) null);
+        FallingPieceView.a(nk.field_b, -116, (String) null);
         if (param0 != 20700) {
           NameSuggestionsPanel.a((byte) -98, -12);
         }

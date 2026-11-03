@@ -17,7 +17,7 @@ final class ql extends jj {
     final static void b(boolean param0) {
         Checkbox.field_X = bi.b(4);
         wa.field_c = new kn();
-        rd.a(true, -17130, true);
+        QueuedInput.a(true, -17130, true);
         if (param0) {
           ql.d(-24);
         }

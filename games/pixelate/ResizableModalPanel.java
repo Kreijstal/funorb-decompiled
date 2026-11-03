@@ -235,8 +235,8 @@ abstract class ResizableModalPanel extends ModalPanel {
           this.field_U = -54;
         }
         ge.field_g.b(param0 + (this.field_E - 90), 10 + param1);
-        ii.a(-10 + this.field_E, param1 + 35, 19571, 5 + param0, fk.field_s);
-        ii.a(this.field_E, param1 + this.field_C - 22, 19571, param0, hd.field_v);
+        MatchController.a(-10 + this.field_E, param1 + 35, 19571, 5 + param0, fk.field_s);
+        MatchController.a(this.field_E, param1 + this.field_C - 22, 19571, param0, PlayerBoard.field_v);
         var5Lifetime2 = 169;
         var6Lifetime2 = 127;
         var4Lifetime2 = -79 + this.field_C;

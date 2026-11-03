@@ -114,11 +114,11 @@ final class WhirlpoolHasher {
             if (var19 == 0) {
               if (stackIn_13_0) {
                 var12 = ArchiveProvider.field_a[var9];
-                var13 = al.field_m[var9];
+                var13 = FallingPieceView.field_m[var9];
                 var14 = -var12 + ArchiveProvider.field_a[var10];
                 var15 = -var12 + ArchiveProvider.field_a[var11];
-                var16 = -var13 + al.field_m[var10];
-                var17 = al.field_m[var11] - var13;
+                var16 = -var13 + FallingPieceView.field_m[var10];
+                var17 = FallingPieceView.field_m[var11] - var13;
               }
               if (!stackIn_13_0 ||
                 !(var17 * var14 - var15 * var16 >= 0)) {

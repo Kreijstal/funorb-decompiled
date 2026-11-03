@@ -49,7 +49,7 @@ final class SpriteCheckboxPainter implements WidgetPainter {
           }
           var6_int = param0.field_z + param3;
           var7 = param2 + param0.field_p;
-          kk.a(var6_int, param0.field_C, var7, param0.field_E, (byte) -51);
+          BoardView.a(var6_int, param0.field_C, var7, param0.field_E, (byte) -51);
           var8 = CanvasRasterBuffer.field_g[1];
           if (param0 instanceof TextButton &&
             ((TextButton) (param0)).field_M) {

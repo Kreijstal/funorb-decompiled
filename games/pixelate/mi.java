@@ -32,14 +32,14 @@ final class mi extends de {
         ph var3;
         var2 = Pixelate.field_H ? 1 : 0;
         if (0 == ki.field_f) {
-          if (ii.field_q != -1) {
-            ii.field_q = -1;
+          if (MatchController.field_q != -1) {
+            MatchController.field_q = -1;
           }
           var3 = (ph) (AccountRegistrationPanel.field_Y.d(-28918));
           if (var3 != null) {
-            ii.field_q = var3.field_k;
+            MatchController.field_q = var3.field_k;
             ki.field_f = 300;
-            nn.field_a = qj.field_e.textWidth(GameApplet.field_n[ii.field_q]) + 56;
+            nn.field_a = qj.field_e.textWidth(GameApplet.field_n[MatchController.field_q]) + 56;
             ValidatedTextWidget.field_bb = 50 + nn.field_a;
           }
         } else {
@@ -69,7 +69,7 @@ final class mi extends de {
         int var10;
         IndexedSprite[] var11;
         var10 = Pixelate.field_H ? 1 : 0;
-        var11 = al.field_c[param2][param0];
+        var11 = FallingPieceView.field_c[param2][param0];
         var4 = var11;
         if (var4 == null) {
           return null;
@@ -162,7 +162,7 @@ final class mi extends de {
               uk.field_s = cn.field_a;
             }
             if (uk.field_s == cn.field_a &&
-              rd.a(1, false)) {
+              QueuedInput.a(1, false)) {
               var6_int = MusicCrossfadeStream.field_o.f(255);
               MusicCrossfadeStream.field_o.position = 0;
               if (var6_int != 0) {
@@ -174,15 +174,15 @@ final class mi extends de {
               }
             }
             if (uk.field_s == ke.field_b &&
-              rd.a(8, false)) {
+              QueuedInput.a(8, false)) {
               NumericDateInputWidget.field_P = MusicCrossfadeStream.field_o.a(false);
               MusicCrossfadeStream.field_o.position = 0;
               io.a(param4, -67, li.field_g, param3, param0);
-              uk.field_s = kk.field_b;
+              uk.field_s = BoardView.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (kk.field_b == uk.field_s &&
-              rd.a(1, false)) {
+            if (BoardView.field_b == uk.field_s &&
+              QueuedInput.a(1, false)) {
               var6_intLifetime1 = MusicCrossfadeStream.field_o.f(255);
               sc.field_a = null;
               MusicCrossfadeStream.field_o.position = 0;
@@ -255,7 +255,7 @@ final class mi extends de {
               }
               qj.field_b = false;
               if (var6 != null) {
-                rd.a(var6, 126, AudioService.a(13867));
+                QueuedInput.a(var6, 126, AudioService.a(13867));
               }
               if (BufferedRandomAccessFile.field_j <= 0 &&
                 !wg.field_a) {

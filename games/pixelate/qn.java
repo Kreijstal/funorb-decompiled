@@ -16,7 +16,7 @@ final class qn extends IntrusiveNode {
         if (param0 != 59) {
           qn.a(-63);
         }
-        if (pm.field_h.pollTransport(false)) {
+        if (Match.field_h.pollTransport(false)) {
           return 0;
         }
         return ph.e(param0 + 25901);
@@ -54,7 +54,7 @@ final class qn extends IntrusiveNode {
           try {
             try {
               var3 = (String) (cq.a("getcookies", (byte) -114, param0));
-              var4 = dd.a(var3, (byte) -61, ';');
+              var4 = Puzzle.a(var3, (byte) -61, ';');
               if (param2 != -85) {
                 stackIn_3_0 = (String) null;
                 return stackIn_3_0;

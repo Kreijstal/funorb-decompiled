@@ -89,7 +89,7 @@ final class aa {
           this.field_l = null;
         }
         this.field_j = fk.field_o;
-        this.field_m = dd.field_a;
+        this.field_m = Puzzle.field_a;
         this.field_i = BoundedRandomAccessFile.field_d;
         this.field_e = kn.field_I;
         this.field_a = TextWidgetPainter.field_n;

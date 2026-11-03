@@ -359,8 +359,8 @@ final class ep {
           IOException var2 = null;
           var3 = Pixelate.field_H ? 1 : 0;
           try {
-            if (pm.field_h != null) {
-              pm.field_h.b((byte) 119);
+            if (Match.field_h != null) {
+              Match.field_h.b((byte) 119);
             }
             if (param0 != -26721) {
               return;

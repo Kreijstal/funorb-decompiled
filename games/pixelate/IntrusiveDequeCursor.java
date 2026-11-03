@@ -152,7 +152,7 @@ final class IntrusiveDequeCursor {
 
     final static void b(boolean param0) {
         String var2 = (String) null;
-        al.a("", -110, (String) null);
+        FallingPieceView.a("", -110, (String) null);
         if (!param0) {
           field_f = (Sprite) null;
         }
@@ -229,7 +229,7 @@ final class IntrusiveDequeCursor {
           }
           for (var2_int = 0; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
-            if (!tk.a(-66, (char) var3) &&
+            if (!BoardParticle.a(-66, (char) var3) &&
               !MidiPcmStream.a(57, (char) var3)) {
               return true;
             }
@@ -266,7 +266,7 @@ final class IntrusiveDequeCursor {
         if (fc.field_e == MidiPcmStream.field_t) {
           return;
         }
-        if (tk.a((byte) -104, fc.field_e)) {
+        if (BoardParticle.a((byte) -104, fc.field_e)) {
           wo.b(126, fc.field_e).a(true);
         }
         fc.field_e = MidiPcmStream.field_t;

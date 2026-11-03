@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee {
+final class InputQueue {
     private IntrusiveDeque field_b;
-    private rd[] field_e;
+    private QueuedInput[] field_e;
     static String field_c;
     static String field_a;
     static int field_d;
 
     final int a(boolean param0) {
-        rd var2 = null;
+        QueuedInput var2 = null;
         RuntimeException var2_ref = null;
         int stackIn_7_0 = 0;
         int stackIn_9_0 = 0;
@@ -18,7 +18,7 @@ final class ee {
           if (!param0) {
             field_c = (String) null;
           }
-          var2 = (rd) (this.field_b.c(1504642273));
+          var2 = (QueuedInput) (this.field_b.c(1504642273));
           if (null == var2) {
             stackIn_9_0 = -1;
             return stackIn_9_0;
@@ -206,14 +206,14 @@ final class ee {
     }
 
     final int a(int param0, byte param1) {
-        rd discarded$1 = null;
-        rd var3 = null;
+        QueuedInput discarded$1 = null;
+        QueuedInput var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_10_0 = 0;
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (rd) (this.field_b.c(1504642273));
+          var3 = (QueuedInput) (this.field_b.c(1504642273));
           if (param1 >= -14) {
             discarded$1 = this.a(-71, -29, (byte) 37);
           }
@@ -249,7 +249,7 @@ final class ee {
         }
     }
 
-    private final rd a(int param0, int param1, byte param2) {
+    private final QueuedInput a(int param0, int param1, byte param2) {
         Object var4 = null;
         int var5 = 0;
         Object stackIn_12_0 = null;
@@ -265,13 +265,13 @@ final class ee {
             break;
           }
           if (null == var4) {
-            var4 = new rd();
+            var4 = new QueuedInput();
           }
-          ((rd) (var4)).field_k = param1;
-          ((rd) (var4)).field_m = param0;
+          ((QueuedInput) (var4)).field_k = param1;
+          ((QueuedInput) (var4)).field_m = param0;
           var5Lifetime1 = -104 / ((-22 - param2) / 50);
           stackIn_12_0 = var4;
-          return (rd) (stackIn_12_0);
+          return (QueuedInput) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -279,7 +279,7 @@ final class ee {
         }
     }
 
-    ee() {
+    InputQueue() {
         RuntimeException runtimeException = null;
         int var1_int = 0;
         int var2 = 0;
@@ -287,10 +287,10 @@ final class ee {
         var2 = Pixelate.field_H ? 1 : 0;
         try {
           this.field_b = new IntrusiveDeque();
-          this.field_e = new rd[10];
+          this.field_e = new QueuedInput[10];
           var1_int = 0;
           while (var1_int < 10) {
-            this.field_e[var1_int] = new rd();
+            this.field_e[var1_int] = new QueuedInput();
             var1_int++;
             if (var2 != 0) {
               return;

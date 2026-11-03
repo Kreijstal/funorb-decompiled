@@ -61,9 +61,9 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           pd.field_Eb = param5;
           lk.field_n = param1;
           ef.field_e = param4;
-          pm.field_h = (Js5Transport) ((Object) new SocketJs5Transport());
+          Match.field_h = (Js5Transport) ((Object) new SocketJs5Transport());
           DisplayNameForm.field_J = new DiskCacheWorker(param4);
-          ck.field_j = new am(pm.field_h, DisplayNameForm.field_J);
+          ck.field_j = new am(Match.field_h, DisplayNameForm.field_J);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "rp.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }

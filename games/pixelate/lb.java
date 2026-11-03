@@ -58,9 +58,9 @@ abstract class lb extends GameApplet {
           if (var4 == 1) {
             var5_int = LobbyPlayer.a((byte) -127, BoundedRandomAccessFile.a((byte) 108), MusicPatchPcmStream.e(100));
             if (var5_int != -1) {
-              DebouncedValidator.a((byte) -97, ii.field_y, var5_int, gi.field_b);
+              DebouncedValidator.a((byte) -97, MatchController.field_y, var5_int, gi.field_b);
               gi.field_b = null;
-              ii.field_y = null;
+              MatchController.field_y = null;
             }
             var11 = pi.c((byte) 104);
             if (var11 != null) {
@@ -70,9 +70,9 @@ abstract class lb extends GameApplet {
           if (var4 == 2) {
             var5_intLifetime1 = dn.a(wc.d(param0 + 0), (byte) 5, this.field_t, am.a(-13565), MusicCrossfadeStream.b((byte) 127), pd.k(0), ProxySocketConnector.f(8192));
             if (-1 != var5_intLifetime1) {
-              rh.a(true, gi.field_b, ii.field_y, var5_intLifetime1);
+              rh.a(true, gi.field_b, MatchController.field_y, var5_intLifetime1);
               gi.field_b = null;
-              ii.field_y = null;
+              MatchController.field_y = null;
             }
           }
           if (var4 == 3) {
@@ -225,7 +225,7 @@ abstract class lb extends GameApplet {
           if (var3Lifetime1 != 0 &&
             0 == mj.field_b &&
             el.field_b == 11 &&
-            !uh.a((byte) -59)) {
+            !PlayerController.a((byte) -59)) {
             ql.d(param0 ^ 47);
           }
           if (mj.field_b != -1 &&
@@ -279,7 +279,7 @@ abstract class lb extends GameApplet {
         }
         if ((param0 != ~mj.field_b &&
           mj.field_b != 0 ||
-          uh.a((byte) -59)) &&
+          PlayerController.a((byte) -59)) &&
           mc.field_q <= hm.a(64)) {
           ol.field_o = false;
           if (mj.field_b != -1 &&
@@ -289,7 +289,7 @@ abstract class lb extends GameApplet {
           }
         }
         if (0 == mj.field_b &&
-          !uh.a((byte) -59)) {
+          !PlayerController.a((byte) -59)) {
           go.field_f = false;
         }
         if (hf.field_q == 0 &&
@@ -457,7 +457,7 @@ abstract class lb extends GameApplet {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (13 == var2) {
-                                ee.b(-123);
+                                InputQueue.b(-123);
                                 return;
                               }
                               if (var2 == 17) {
@@ -705,7 +705,7 @@ abstract class lb extends GameApplet {
         if (this.field_c) {
           return -1;
         }
-        if (!uh.a((byte) -59)) {
+        if (!PlayerController.a((byte) -59)) {
           return -1;
         }
         if (param0 >= -73) {

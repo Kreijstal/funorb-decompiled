@@ -92,7 +92,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               }
             }
           } else {
-            this.fragments = dd.a(param2.h(5), (byte) -117, '<');
+            this.fragments = Puzzle.a(param2.h(5), (byte) -117, '<');
           }
           var4_intLifetime1 = -125 / ((param1 + 17) / 39);
           return;

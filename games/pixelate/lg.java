@@ -52,7 +52,7 @@ final class lg {
             return stackIn_26_0;
           }
           if (param2 == 14) {
-            stackIn_29_0 = sd.a(dd.field_m, 28, new String[]{param1});
+            stackIn_29_0 = sd.a(Puzzle.field_m, 28, new String[]{param1});
             return stackIn_29_0;
           }
           if (param0 > 113) {
@@ -106,8 +106,8 @@ final class lg {
             var4 = dh.a(param2, (byte) 97);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!ii.a((byte) 122, var4.charAt(0)) &&
-                !ii.a((byte) 126, var4.charAt(-1 + var4.length()))) {
+              if (!MatchController.a((byte) 122, var4.charAt(0)) &&
+                !MatchController.a((byte) 126, var4.charAt(-1 + var4.length()))) {
                 if (param0 != 11) {
                   var9 = (ResourceArchive) null;
                   lg.a(55, (ResourceArchive) null);
@@ -115,7 +115,7 @@ final class lg {
                 var5 = 0;
                 for (var6 = 0; param2.length() > var6; var6++) {
                   var7 = param2.charAt(var6);
-                  if (!ii.a((byte) 118, (char) var7)) {
+                  if (!MatchController.a((byte) 118, (char) var7)) {
                     var5 = 0;
                   } else {
                     var5++;
@@ -129,10 +129,10 @@ final class lg {
                 if (var5 <= 0) {
                   return null;
                 }
-                stackIn_36_0 = ii.field_k;
+                stackIn_36_0 = MatchController.field_k;
                 return stackIn_36_0;
               }
-              stackIn_19_0 = ii.field_k;
+              stackIn_19_0 = MatchController.field_k;
               return stackIn_19_0;
             }
             stackIn_14_0 = em.field_b;

@@ -54,11 +54,11 @@ final class so {
         }
     }
 
-    final dd b(int param0) {
+    final Puzzle b(int param0) {
         if (param0 != -3060) {
           this.field_a = 17;
         }
-        return new dd(this.field_m, this.field_k, this.field_j, 60, 30, lp.field_d, 0, 0, new IndexedSprite[]{lk.field_o[this.field_e]});
+        return new Puzzle(this.field_m, this.field_k, this.field_j, 60, 30, lp.field_d, 0, 0, new IndexedSprite[]{lk.field_o[this.field_e]});
     }
 
     final void b(boolean param0) {

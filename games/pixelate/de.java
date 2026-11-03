@@ -545,8 +545,8 @@ abstract class de {
             }
             if (EmailValidator.field_m[82] &&
               ke.field_a == 11) {
-              stackIn_14_0 = !(pm.field_u);
-              pm.field_u = stackIn_14_0;
+              stackIn_14_0 = !(Match.field_u);
+              Match.field_u = stackIn_14_0;
               continue;
             }
             this.b(-36);
@@ -603,7 +603,7 @@ abstract class de {
                   if (1 == var6) {
                     if (!(!this.field_g.isActivated(38))) {
                       if (ArrayWidgetContainer.a((byte) 66)) {
-                        ii.a(param2, 0, -4, (byte) 91, QuickChatMenu.field_Ib);
+                        MatchController.a(param2, 0, -4, (byte) 91, QuickChatMenu.field_Ib);
                       } else {
                         var6 = param2 ? 1 : 0;
                         la.a(MidiPcmStream.field_t, -4, var6 != 0, -25528);

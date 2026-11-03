@@ -130,9 +130,9 @@ final class ProxySocketConnector extends SocketConnector {
         RuntimeException var6_ref = null;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
-          al.field_g = param4.getParameter("overxgames");
-          if (null == al.field_g) {
-            al.field_g = "0";
+          FallingPieceView.field_g = param4.getParameter("overxgames");
+          if (null == FallingPieceView.field_g) {
+            FallingPieceView.field_g = "0";
           }
           bl.field_g = param4.getParameter("overxachievements");
           if (null == bl.field_g) {
@@ -188,10 +188,10 @@ final class ProxySocketConnector extends SocketConnector {
           field_n = (wi) null;
         }
         if (MatchingTextValidator.field_n == Js5NetworkRequest.field_F) {
-          return uh.field_m;
+          return PlayerController.field_m;
         }
         if (!an.field_e.d(79)) {
-          return uh.field_m;
+          return PlayerController.field_m;
         }
         return Checkbox.field_U;
     }

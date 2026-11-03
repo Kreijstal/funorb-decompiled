@@ -491,14 +491,14 @@ final class ReportAbuseDialog extends SceneWidget {
         try {
           var20 = lb.a(param1, 47, "lobby", "crowns");
           var5 = var20;
-          kk.field_s = var20.length;
+          BoardView.field_s = var20.length;
           if (param2 != null) {
-            var6 = new IndexedSprite[param2.length + kk.field_s];
-            for (var7_int = 0; kk.field_s > var7_int; var7_int++) {
+            var6 = new IndexedSprite[param2.length + BoardView.field_s];
+            for (var7_int = 0; BoardView.field_s > var7_int; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
             for (var7_intLifetime3 = 0; var7_intLifetime3 < param2.length; var7_intLifetime3++) {
-              var6[var7_intLifetime3 + kk.field_s] = param2[var7_intLifetime3];
+              var6[var7_intLifetime3 + BoardView.field_s] = param2[var7_intLifetime3];
             }
             var5 = var6;
           }
@@ -508,17 +508,17 @@ final class ReportAbuseDialog extends SceneWidget {
           var24 = var19;
           var22 = var24;
           var6_array = var22;
-          for (var7_intLifetime1 = 0; kk.field_s > var7_intLifetime1; var7_intLifetime1++) {
+          for (var7_intLifetime1 = 0; BoardView.field_s > var7_intLifetime1; var7_intLifetime1++) {
             var23[var7_intLifetime1] = 10;
           }
           if (param2 != null) {
             if (param3 != null) {
               for (var7_intLifetime2 = 0; param2.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[var7_intLifetime2 + kk.field_s] = param3[var7_intLifetime2];
+                var6_array[var7_intLifetime2 + BoardView.field_s] = param3[var7_intLifetime2];
               }
             } else {
               for (var7_intLifetime2 = 0; var7_intLifetime2 < param2.length; var7_intLifetime2++) {
-                var6_array[var7_intLifetime2 + kk.field_s] = param2[var7_intLifetime2].field_a;
+                var6_array[var7_intLifetime2 + BoardView.field_s] = param2[var7_intLifetime2].field_a;
               }
             }
           }
@@ -526,7 +526,7 @@ final class ReportAbuseDialog extends SceneWidget {
           fq.field_q = 15;
           nc.field_d = 11;
           r.field_c = 2;
-          hd.field_q = 2;
+          PlayerBoard.field_q = 2;
           var7 = bf.a(0, param4, "largefont", param1, "lobby");
           ig.field_d = bf.a(0, param4, "generalfont", param1, "lobby");
           EditableTextWidget.field_Y = bf.a(0, param4, "chatfont", param1, "lobby");
@@ -548,16 +548,16 @@ final class ReportAbuseDialog extends SceneWidget {
           var11 = var10;
           var11.horizontalAlignment = 1;
           io.field_f = new SceneWidget(0L, var8);
-          io.field_f.field_zb = al.a(false, SocketConnector.a("heading", "lobby", (byte) 47, param1));
+          io.field_f.field_zb = FallingPieceView.a(false, SocketConnector.a("heading", "lobby", (byte) 47, param1));
           ProxySocketConnector.field_k = new SceneWidget(0L, (SceneWidget) null);
           ProxySocketConnector.field_k.field_zb = AccountNamePrompt.a(false, false, 4210752, 120, true, 8421504);
           sc.field_g = new SceneWidget(0L, (SceneWidget) null);
           sc.field_g.field_zb = op.a(6316128, 16, 6316128, 114, 1, 3);
           SoundCache.field_c = new SceneWidget(0L, (SceneWidget) null);
-          SoundCache.field_c.field_zb = al.a(false, SocketConnector.a("popup", "lobby", (byte) 47, param1));
-          var12 = al.a(false, SocketConnector.a("popup_mouseover", "lobby", (byte) 47, param1));
+          SoundCache.field_c.field_zb = FallingPieceView.a(false, SocketConnector.a("popup", "lobby", (byte) 47, param1));
+          var12 = FallingPieceView.a(false, SocketConnector.a("popup_mouseover", "lobby", (byte) 47, param1));
           var13 = SocketConnector.a("button", "lobby", (byte) 47, param1);
-          var14 = al.a(false, SocketConnector.a("tab_active", "lobby", (byte) 47, param1));
+          var14 = FallingPieceView.a(false, SocketConnector.a("tab_active", "lobby", (byte) 47, param1));
           pj.field_i = new SceneWidget(0L, var8);
           pj.field_i.field_zb = var14;
           ae.field_f = new SceneWidget(0L, (SceneWidget) null);
@@ -603,7 +603,7 @@ final class ReportAbuseDialog extends SceneWidget {
           SceneWidget.field_T = new SceneWidget(0L, qk.field_d);
           SceneWidget.field_T.applyStyle(-27813, dn.field_c);
           var16 = SocketConnector.a("button_mouseover", "lobby", (byte) 47, param1);
-          NameSuggestionsPanel.field_O = new pi(SoundCache.field_c, var12, TextFieldValidator.field_h, dn.field_c, 3, 2, hd.field_q, 3, fq.field_q);
+          NameSuggestionsPanel.field_O = new pi(SoundCache.field_c, var12, TextFieldValidator.field_h, dn.field_c, 3, 2, PlayerBoard.field_q, 3, fq.field_q);
           lc.field_q = new SceneWidget(0L, dn.field_c);
           lc.field_q.selectedOffsetX = 1;
           lc.field_q.field_Q = 1;
@@ -617,8 +617,8 @@ final class ReportAbuseDialog extends SceneWidget {
           lc.field_q.horizontalAlignment = 1;
           ab.field_a = new SceneWidget(0L, dn.field_c);
           ab.field_a.horizontalAlignment = 1;
-          ab.field_a.field_zb = al.a(false, SocketConnector.a("tab_inactive", "lobby", (byte) 47, param1));
-          ab.field_a.field_ab = al.a(false, SocketConnector.a("tab_mouseover", "lobby", (byte) 47, param1));
+          ab.field_a.field_zb = FallingPieceView.a(false, SocketConnector.a("tab_inactive", "lobby", (byte) 47, param1));
+          ab.field_a.field_ab = FallingPieceView.a(false, SocketConnector.a("tab_mouseover", "lobby", (byte) 47, param1));
           ab.field_a.field_eb = var14;
           AccountMessagePanel.field_J = new SceneWidget(0L, (SceneWidget) null);
           AccountMessagePanel.field_J.field_zb = op.a(1127256, 16, 1856141, 206, -1, 3);
@@ -643,43 +643,43 @@ final class ReportAbuseDialog extends SceneWidget {
           bl.field_d = new SceneWidget(0L, u.field_a);
           l.field_q = new SceneWidget(0L, u.field_a);
           EmailValidator.field_o = new SceneWidget(0L, u.field_a);
-          u.field_a.field_zb = al.a(false, SocketConnector.a("smallbutton", "lobby", (byte) 47, param1));
-          u.field_a.field_ab = al.a(false, SocketConnector.a("smallbutton_mouseover", "lobby", (byte) 47, param1));
-          dupTemp$0 = al.a(false, SocketConnector.a("smallbutton_active", "lobby", (byte) 47, param1));
+          u.field_a.field_zb = FallingPieceView.a(false, SocketConnector.a("smallbutton", "lobby", (byte) 47, param1));
+          u.field_a.field_ab = FallingPieceView.a(false, SocketConnector.a("smallbutton_mouseover", "lobby", (byte) 47, param1));
+          dupTemp$0 = FallingPieceView.a(false, SocketConnector.a("smallbutton_active", "lobby", (byte) 47, param1));
           u.field_a.field_eb = dupTemp$0;
           u.field_a.field_bb = dupTemp$0;
-          u.field_a.field_M = al.a(false, SocketConnector.a("smallbutton_disabled", "lobby", (byte) 47, param1));
-          nk.field_f.field_zb = al.a(false, SocketConnector.a("mediumbutton", "lobby", (byte) 47, param1));
-          nk.field_f.field_ab = al.a(false, SocketConnector.a("mediumbutton_mouseover", "lobby", (byte) 47, param1));
-          nk.field_f.field_bb = al.a(false, SocketConnector.a("mediumbutton_mouseheld", "lobby", (byte) 47, param1));
-          bf.field_k.field_zb = al.a(false, SocketConnector.a("bigbutton", "lobby", (byte) 47, param1));
-          bf.field_k.field_ab = al.a(false, SocketConnector.a("bigbutton_mouseover", "lobby", (byte) 47, param1));
-          bf.field_k.field_bb = al.a(false, SocketConnector.a("bigbutton_mouseheld", "lobby", (byte) 47, param1));
-          bf.field_k.field_M = al.a(false, SocketConnector.a("bigbutton_disabled", "lobby", (byte) 47, param1));
-          ul.field_p.field_zb = al.a(false, SocketConnector.a("greenbutton", "lobby", (byte) 47, param1));
-          ul.field_p.field_ab = al.a(false, SocketConnector.a("greenbutton_mouseover", "lobby", (byte) 47, param1));
-          ul.field_p.field_bb = al.a(false, SocketConnector.a("greenbutton_mouseheld", "lobby", (byte) 47, param1));
-          ge.field_h.field_zb = al.a(false, SocketConnector.a("redbutton", "lobby", (byte) 47, param1));
-          ge.field_h.field_ab = al.a(false, SocketConnector.a("redbutton_mouseover", "lobby", (byte) 47, param1));
-          ge.field_h.field_bb = al.a(false, SocketConnector.a("redbutton_mouseheld", "lobby", (byte) 47, param1));
-          be.field_R.field_zb = al.a(false, SocketConnector.a("backbutton", "lobby", (byte) 47, param1));
-          be.field_R.field_ab = al.a(false, SocketConnector.a("backbutton_mouseover", "lobby", (byte) 47, param1));
-          be.field_R.field_bb = al.a(false, SocketConnector.a("backbutton_mouseheld", "lobby", (byte) 47, param1));
-          be.field_R.field_M = al.a(false, SocketConnector.a("backbutton_disabled", "lobby", (byte) 47, param1));
-          EmailValidator.field_o.field_zb = al.a(false, SocketConnector.a("gameoptionbutton", "lobby", (byte) 47, param1));
-          EmailValidator.field_o.field_ab = al.a(false, SocketConnector.a("gameoptionbutton_mouseover", "lobby", (byte) 47, param1));
-          dupTemp$1 = al.a(false, SocketConnector.a("gameoptionbutton_active", "lobby", (byte) 47, param1));
+          u.field_a.field_M = FallingPieceView.a(false, SocketConnector.a("smallbutton_disabled", "lobby", (byte) 47, param1));
+          nk.field_f.field_zb = FallingPieceView.a(false, SocketConnector.a("mediumbutton", "lobby", (byte) 47, param1));
+          nk.field_f.field_ab = FallingPieceView.a(false, SocketConnector.a("mediumbutton_mouseover", "lobby", (byte) 47, param1));
+          nk.field_f.field_bb = FallingPieceView.a(false, SocketConnector.a("mediumbutton_mouseheld", "lobby", (byte) 47, param1));
+          bf.field_k.field_zb = FallingPieceView.a(false, SocketConnector.a("bigbutton", "lobby", (byte) 47, param1));
+          bf.field_k.field_ab = FallingPieceView.a(false, SocketConnector.a("bigbutton_mouseover", "lobby", (byte) 47, param1));
+          bf.field_k.field_bb = FallingPieceView.a(false, SocketConnector.a("bigbutton_mouseheld", "lobby", (byte) 47, param1));
+          bf.field_k.field_M = FallingPieceView.a(false, SocketConnector.a("bigbutton_disabled", "lobby", (byte) 47, param1));
+          ul.field_p.field_zb = FallingPieceView.a(false, SocketConnector.a("greenbutton", "lobby", (byte) 47, param1));
+          ul.field_p.field_ab = FallingPieceView.a(false, SocketConnector.a("greenbutton_mouseover", "lobby", (byte) 47, param1));
+          ul.field_p.field_bb = FallingPieceView.a(false, SocketConnector.a("greenbutton_mouseheld", "lobby", (byte) 47, param1));
+          ge.field_h.field_zb = FallingPieceView.a(false, SocketConnector.a("redbutton", "lobby", (byte) 47, param1));
+          ge.field_h.field_ab = FallingPieceView.a(false, SocketConnector.a("redbutton_mouseover", "lobby", (byte) 47, param1));
+          ge.field_h.field_bb = FallingPieceView.a(false, SocketConnector.a("redbutton_mouseheld", "lobby", (byte) 47, param1));
+          be.field_R.field_zb = FallingPieceView.a(false, SocketConnector.a("backbutton", "lobby", (byte) 47, param1));
+          be.field_R.field_ab = FallingPieceView.a(false, SocketConnector.a("backbutton_mouseover", "lobby", (byte) 47, param1));
+          be.field_R.field_bb = FallingPieceView.a(false, SocketConnector.a("backbutton_mouseheld", "lobby", (byte) 47, param1));
+          be.field_R.field_M = FallingPieceView.a(false, SocketConnector.a("backbutton_disabled", "lobby", (byte) 47, param1));
+          EmailValidator.field_o.field_zb = FallingPieceView.a(false, SocketConnector.a("gameoptionbutton", "lobby", (byte) 47, param1));
+          EmailValidator.field_o.field_ab = FallingPieceView.a(false, SocketConnector.a("gameoptionbutton_mouseover", "lobby", (byte) 47, param1));
+          dupTemp$1 = FallingPieceView.a(false, SocketConnector.a("gameoptionbutton_active", "lobby", (byte) 47, param1));
           EmailValidator.field_o.field_eb = dupTemp$1;
           EmailValidator.field_o.field_bb = dupTemp$1;
-          EmailValidator.field_o.field_M = al.a(false, SocketConnector.a("gameoptionbutton_disabled", "lobby", (byte) 47, param1));
-          bl.field_d.field_zb = al.a(false, SocketConnector.a("chatbutton", "lobby", (byte) 47, param1));
-          bl.field_d.field_ab = al.a(false, SocketConnector.a("chatbutton_mouseover", "lobby", (byte) 47, param1));
-          dupTemp$2 = al.a(false, SocketConnector.a("chatbutton_active", "lobby", (byte) 47, param1));
+          EmailValidator.field_o.field_M = FallingPieceView.a(false, SocketConnector.a("gameoptionbutton_disabled", "lobby", (byte) 47, param1));
+          bl.field_d.field_zb = FallingPieceView.a(false, SocketConnector.a("chatbutton", "lobby", (byte) 47, param1));
+          bl.field_d.field_ab = FallingPieceView.a(false, SocketConnector.a("chatbutton_mouseover", "lobby", (byte) 47, param1));
+          dupTemp$2 = FallingPieceView.a(false, SocketConnector.a("chatbutton_active", "lobby", (byte) 47, param1));
           bl.field_d.field_eb = dupTemp$2;
           bl.field_d.field_bb = dupTemp$2;
-          l.field_q.field_zb = al.a(false, SocketConnector.a("chatfilterbutton", "lobby", (byte) 47, param1));
-          l.field_q.field_ab = al.a(false, SocketConnector.a("chatfilterbutton_mouseover", "lobby", (byte) 47, param1));
-          dupTemp$3 = al.a(false, SocketConnector.a("chatfilterbutton_active", "lobby", (byte) 47, param1));
+          l.field_q.field_zb = FallingPieceView.a(false, SocketConnector.a("chatfilterbutton", "lobby", (byte) 47, param1));
+          l.field_q.field_ab = FallingPieceView.a(false, SocketConnector.a("chatfilterbutton_mouseover", "lobby", (byte) 47, param1));
+          dupTemp$3 = FallingPieceView.a(false, SocketConnector.a("chatfilterbutton_active", "lobby", (byte) 47, param1));
           l.field_q.field_eb = dupTemp$3;
           l.field_q.field_bb = dupTemp$3;
           var17 = SocketConnector.a("checkbox", "lobby", (byte) 47, param1);
@@ -690,10 +690,10 @@ final class ReportAbuseDialog extends SceneWidget {
           LoginDialog.field_mb.field_bb = TextHotspotWidget.a(24414, bi.a("lobby", "slideregion_mouseheld", param1, (byte) -64));
           LoginDialog.field_mb.field_M = TextHotspotWidget.a(24414, bi.a("lobby", "slideregion_disabled", param1, (byte) -50));
           jn.field_p = new SceneWidget(0L, (SceneWidget) null);
-          jn.field_p.field_zb = al.a(false, SocketConnector.a("dragbar", "lobby", (byte) 47, param1));
-          jn.field_p.field_ab = al.a(false, SocketConnector.a("dragbar_mouseover", "lobby", (byte) 47, param1));
-          jn.field_p.field_bb = al.a(false, SocketConnector.a("dragbar_mouseheld", "lobby", (byte) 47, param1));
-          jn.field_p.field_M = al.a(false, SocketConnector.a("dragbar_disabled", "lobby", (byte) 47, param1));
+          jn.field_p.field_zb = FallingPieceView.a(false, SocketConnector.a("dragbar", "lobby", (byte) 47, param1));
+          jn.field_p.field_ab = FallingPieceView.a(false, SocketConnector.a("dragbar_mouseover", "lobby", (byte) 47, param1));
+          jn.field_p.field_bb = FallingPieceView.a(false, SocketConnector.a("dragbar_mouseheld", "lobby", (byte) 47, param1));
+          jn.field_p.field_M = FallingPieceView.a(false, SocketConnector.a("dragbar_disabled", "lobby", (byte) 47, param1));
           dj.field_a = new SceneWidget(0L, (SceneWidget) null);
           dj.field_a.field_H = bi.a("lobby", "upbutton", param1, (byte) -78);
           dj.field_a.field_B = bi.a("lobby", "upbutton_mouseover", param1, (byte) -126);

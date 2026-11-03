@@ -48,7 +48,7 @@ abstract class ah extends DualLinkNode {
           var8_ref_aa = de.field_e[var7];
           var9 = 0;
           if (!ln.field_q &&
-            var5 < ee.field_d) {
+            var5 < InputQueue.field_d) {
             var10_int = IterableNodeHashTable.a(var8_ref_aa.field_j, 0);
             if (var8_ref_aa.a((byte) -54) >= var10_int && (var8_ref_aa.field_a ||
               !ImageProducerRasterBuffer.a(-640, var8_ref_aa.field_n))) {

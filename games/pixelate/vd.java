@@ -70,7 +70,7 @@ final class vd {
             boolean decompiledFrameRemainder0 = true;
             if (de.field_e[var3].field_j == param1.field_j) {
               var4 = de.field_e[var3].a((byte) -27);
-              if (MarkerSlider.field_O[var4] > ee.field_d) {
+              if (MarkerSlider.field_O[var4] > InputQueue.field_d) {
                 MarkerSlider.field_O[var4] = MarkerSlider.field_O[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

@@ -12,7 +12,7 @@ final class pb {
     static String field_j;
     private int field_a;
     private int field_h;
-    private dd field_m;
+    private Puzzle field_m;
     private int field_g;
     static ResourceArchive field_n;
     private int field_o;
@@ -118,15 +118,15 @@ final class pb {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 != -37) {
-          this.field_m = (dd) null;
-          var2 = this.field_m.field_d;
-          if (!(this.field_m.field_d < this.field_m.field_l.length)) {
+          this.field_m = (Puzzle) null;
+          var2 = this.field_m.pictureIndex;
+          if (!(this.field_m.pictureIndex < this.field_m.pictures.length)) {
             return this.field_o - (100 * var2 + 100);
           }
           return this.field_o - var2 * 100;
         }
-        var2Lifetime1 = this.field_m.field_d;
-        if (!(this.field_m.field_d < this.field_m.field_l.length)) {
+        var2Lifetime1 = this.field_m.pictureIndex;
+        if (!(this.field_m.pictureIndex < this.field_m.pictures.length)) {
           return this.field_o - (100 * var2Lifetime1 + 100);
         }
         return this.field_o - var2Lifetime1 * 100;
@@ -168,7 +168,7 @@ final class pb {
         if (var2 == 0) {
           SoftwareRasterizer.f(0, -100 + this.field_o, 640, this.field_o + 100);
         }
-        for (var7 = 0; this.field_m.field_l.length > var7; var7++) {
+        for (var7 = 0; this.field_m.pictures.length > var7; var7++) {
           var8 = var7;
           if (var8 < 0) {
             var8 = var8 + this.field_l.length;
@@ -260,13 +260,13 @@ final class pb {
         this.field_c = 30;
     }
 
-    pb(dd param0, int param1, int param2) {
+    pb(Puzzle param0, int param1, int param2) {
         IndexedSprite[] var7 = null;
         int var5 = 0;
         try {
           this.field_o = param2;
           this.field_m = param0;
-          var7 = this.field_m.field_l;
+          var7 = this.field_m.pictures;
           IndexedSprite[] var4 = var7;
           this.field_g = var7[0].field_d * 16;
           this.field_d = 16 * var7[0].field_g;

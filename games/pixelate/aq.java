@@ -179,7 +179,7 @@ final class aq {
           if (var3_int >= 12) {
             return false;
           }
-          if (ii.a((byte) 125, param0) &&
+          if (MatchController.a((byte) 125, param0) &&
             0 == var3_int) {
             return false;
           }
