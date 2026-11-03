@@ -135,7 +135,7 @@ final class TrinketShopDialog extends MessageDialog {
         }
         var3 = this.field_L.field_Db.field_J;
         this.field_L.b(0, param1);
-        this.field_L.a(StatefulTextPainter.field_v * 32, true, (byte) -78, 32);
+        this.field_L.advanceScroll(StatefulTextPainter.field_v * 32, true, (byte) -78, 32);
         if (var3 < this.field_L.field_Db.field_J &&
           this.field_K == 0) {
           ShopPlayerSlot.c(59, 52);
@@ -174,7 +174,7 @@ final class TrinketShopDialog extends MessageDialog {
         this.field_I = param1;
         CharSequence var5 = (CharSequence) ((Object) "trinkets");
         this.field_L = new ScrollContainer(vb.a(0, var5), this.g((byte) -119), ConsolePanel.field_q, rr.field_b, it.field_m);
-        this.field_L.a(15, 0, 2, (byte) 2, 240, 210, 0);
+        this.field_L.setLayout(15, 0, 2, (byte) 2, 240, 210, 0);
         this.field_i[0].field_lb = false;
     }
 

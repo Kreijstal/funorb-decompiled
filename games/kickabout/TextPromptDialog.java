@@ -110,7 +110,7 @@ final class TextPromptDialog extends UiLayoutNode {
         if (dg.field_a) {
           AuctionSettingsDialog.field_G.field_Ab.field_v = var9Lifetime1 - AuctionSettingsDialog.field_G.field_Ab.field_J;
         }
-        AuctionSettingsDialog.field_G.a(param1, param0 * param1 * 2, true, param2 ^ 26);
+        AuctionSettingsDialog.field_G.updateScroll(param1, param0 * param1 * 2, true, param2 ^ 26);
         stackIn_47_0 = (AuctionSettingsDialog.field_G.field_Ab.field_J + AuctionSettingsDialog.field_G.field_Ab.field_v == var9Lifetime1);
         dg.field_a = stackIn_47_0;
         return (ChatMessage) (var4);

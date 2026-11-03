@@ -55,7 +55,7 @@ final class ContextMenu extends UiLayoutNode {
         return -1;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void layoutItems(int param0, int param1, int param2, int param3, int param4) {
         int var10 = 0;
         int var6;
         int var7;
@@ -103,7 +103,7 @@ final class ContextMenu extends UiLayoutNode {
         }
     }
 
-    final boolean a(int param0) {
+    final boolean consumeSelection(int param0) {
         if (this.field_Gb != param0) {
           return false;
         }

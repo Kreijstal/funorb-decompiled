@@ -487,7 +487,7 @@ abstract class ConsolePanel implements OverlayLayer {
         }
         this.field_n = this.field_n + 1;
         this.field_l.b(0, param1);
-        this.field_g.a(this.field_f, StatefulTextPainter.field_v * (this.field_f * 2), true, 0);
+        this.field_g.updateScroll(this.field_f, StatefulTextPainter.field_v * (this.field_f * 2), true, 0);
         this.field_k.updatePointer(11570);
     }
 
@@ -531,7 +531,7 @@ abstract class ConsolePanel implements OverlayLayer {
           var14.field_jb = new IntrusiveDeque();
           this.field_g = new ScrollPane(0L, var14, var6, var13);
           this.field_g.field_Ab.field_jb = new IntrusiveDeque();
-          this.field_g.a(0, 94, -var3_int + 185, 5, 5, -10 + this.field_l.field_q, 15);
+          this.field_g.setLayout(0, 94, -var3_int + 185, 5, 5, -10 + this.field_l.field_q, 15);
           this.field_l.addChild((byte) -118, (UiLayoutNode) (this.field_g));
           var15 = new UiLayoutNode();
           var15.field_y = 13421772;

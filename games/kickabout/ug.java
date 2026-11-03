@@ -150,7 +150,7 @@ final class ug {
               var17 = TextButton.field_v;
               var13 = sm.field_q;
               var14 = ReceivedAuctionItem.field_y;
-              var17.field_j.a(0, 0, var13, var14, 0);
+              var17.field_j.layoutItems(0, 0, var13, var14, 0);
             }
             var5 = var6;
             var6 = (gg) (var4.c(33));

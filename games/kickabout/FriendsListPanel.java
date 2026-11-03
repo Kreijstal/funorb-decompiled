@@ -97,7 +97,7 @@ final class FriendsListPanel extends UiLayoutNode {
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = (this.field_q + param0) / 2;
         int var6 = -param3 + this.field_mb;
-        this.field_Cb.a(param0, 117, var6 - param0, 0, 0, this.field_q, param1);
+        this.field_Cb.setLayout(param0, 117, var6 - param0, 0, 0, this.field_q, param1);
         this.field_Eb.field_s = 0;
         this.field_Eb.field_J = var6;
         if (param2 == 19) {

@@ -80,7 +80,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         }
     }
 
-    final int a(int param0, boolean param1, int param2, int param3) {
+    final int getDraggedScrollOffset(int param0, boolean param1, int param2, int param3) {
         int var5;
         int var6;
         int var7;
@@ -113,9 +113,9 @@ final class VerticalScrollbar extends UiLayoutNode {
         return var5;
     }
 
-    final boolean b(int param0) {
+    final boolean pollPageUp(int param0) {
         if (param0 != 23028) {
-          this.m(124);
+          this.pollPageDown(124);
         }
         if (0 != this.field_Fb.field_sb) {
           this.field_Db = 20;
@@ -135,7 +135,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         return false;
     }
 
-    final boolean m(int param0) {
+    final boolean pollPageDown(int param0) {
         if (this.field_yb.field_sb != 0) {
           this.field_Db = 20;
           return true;
@@ -155,7 +155,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         return false;
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setLayout(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.field_q = param3;
         this.field_J = param6;
         this.field_s = param0;
@@ -163,7 +163,7 @@ final class VerticalScrollbar extends UiLayoutNode {
           return;
         }
         this.field_mb = param2;
-        this.a(param4, param5, (byte) 64, param7);
+        this.layoutThumb(param4, param5, (byte) 64, param7);
     }
 
     final static void h(int param0) {
@@ -179,7 +179,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         CipherPacketBuffer.c(false);
     }
 
-    final boolean j(int param0) {
+    final boolean pollScrollUp(int param0) {
         if (this.field_Bb.field_sb != 0) {
           this.field_Db = 20;
           return true;
@@ -206,7 +206,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         field_Eb = null;
     }
 
-    final boolean h(byte param0) {
+    final boolean pollScrollDown(byte param0) {
         if (this.field_Gb.field_sb != 0) {
           this.field_Db = 20;
           return true;
@@ -231,7 +231,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         this(param0, param1.field_Bb, param1.field_Gb, param1.field_Fb, param1.field_Hb);
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void layoutThumb(int param0, int param1, byte param2, int param3) {
         UiLayoutNode stackIn_16_0 = null;
         UiLayoutNode stackIn_16_1 = null;
         UiLayoutNode stackIn_16_2 = null;
@@ -384,7 +384,7 @@ final class VerticalScrollbar extends UiLayoutNode {
         }
     }
 
-    final boolean l(int param0) {
+    final boolean isThumbHeld(int param0) {
         if (param0 >= -30) {
           this.field_yb = (UiLayoutNode) null;
         }

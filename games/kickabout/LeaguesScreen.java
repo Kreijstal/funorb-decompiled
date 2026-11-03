@@ -123,7 +123,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         }
         PlayerContextMenu.field_f = stackIn_29_0;
         AuctionTableWidget.field_Hb.b(0, param1);
-        AuctionTableWidget.field_Hb.a(32 * StatefulTextPainter.field_v, false, (byte) -111, 32);
+        AuctionTableWidget.field_Hb.advanceScroll(32 * StatefulTextPainter.field_v, false, (byte) -111, 32);
         if (var6 == 0) {
           var7 = ReceivedAuctionItem.a(18, -(AuctionTableWidget.field_Hb.field_Db.field_J + 5), (byte) -72);
           LineupView.field_y.evictExpired(30 + var7, -20 + var7, -108);
@@ -178,7 +178,7 @@ final class LeaguesScreen extends ButtonMenuScreen {
         UiLayoutNode var3 = new UiLayoutNode();
         var3.a(true, 317, 5, 5, 18);
         AuctionTableWidget.field_Hb = new ScrollContainer(0L, var3, var8, rr.field_b);
-        AuctionTableWidget.field_Hb.a(15, 20, 2, (byte) 37, 230, 344, 175);
+        AuctionTableWidget.field_Hb.setLayout(15, 20, 2, (byte) 37, 230, 344, 175);
         AuctionTableWidget.field_Hb.field_A = 1;
         AuctionTableWidget.field_Hb.field_y = 16777215;
         AuctionTableWidget.field_Hb.field_p = 1;

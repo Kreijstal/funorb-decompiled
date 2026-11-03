@@ -211,7 +211,7 @@ final class AchievementsScreen extends ButtonMenuScreen {
         }
         bq.field_d.field_lb = false;
         ContextMenuItem.field_Ib = new ScrollContainer("Cabinet", GameplayHelpScreen.j((byte) 15), ConsolePanel.field_q, it.field_m);
-        ContextMenuItem.field_Ib.a(16, 100, 4, (byte) -114, 200, 300, 70);
+        ContextMenuItem.field_Ib.setLayout(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 == -38) {
           ResourceArchive.field_g = true;
           return;

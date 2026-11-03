@@ -190,7 +190,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
           }
           this.field_E.field_s = this.slideOffsetX + 220;
           this.field_E.b(0, param1);
-          this.field_E.a(32 * StatefulTextPainter.field_v, true, (byte) -115, 32);
+          this.field_E.advanceScroll(32 * StatefulTextPainter.field_v, true, (byte) -115, 32);
         }
     }
 
@@ -448,7 +448,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         UiLayoutNode var4 = new UiLayoutNode();
         var4.a(true, 350, 0, 0, 350);
         this.field_E = new ScrollContainer(0L, var4, new UiLayoutNode(), rr.field_b);
-        this.field_E.a(15, 220 + this.slideOffsetX, 0, (byte) 6, 220, this.field_E.field_Db.field_q + 15, 180);
+        this.field_E.setLayout(15, 220 + this.slideOffsetX, 0, (byte) 6, 220, this.field_E.field_Db.field_q + 15, 180);
     }
 
     public static void g(int param0) {
@@ -696,7 +696,7 @@ final class GameplayHelpScreen extends PagedHelpScreen {
         var6Lifetime1 = -10 - var4 + var5;
         if (var6Lifetime1 != this.field_E.field_Db.field_mb) {
           this.field_E.field_Db.field_mb = var6Lifetime1;
-          this.field_E.a(15, 0, 0);
+          this.field_E.layoutScrollbars(15, 0, 0);
         }
         TeamManagementScreen.e(param0 + 8617);
     }

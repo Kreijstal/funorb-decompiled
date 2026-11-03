@@ -20,7 +20,7 @@ class ColumnTableWidget extends UiLayoutNode {
         ListRow var5;
         ListRow[] var7;
         var6 = Kickabout.field_G;
-        this.field_Cb.a(32 * StatefulTextPainter.field_v, param1, (byte) -108, 32);
+        this.field_Cb.advanceScroll(32 * StatefulTextPainter.field_v, param1, (byte) -108, 32);
         for (var3_int = 0; var3_int < this.field_Bb.length; var3_int++) {
           if (this.field_Bb[var3_int].field_sb == 1) {
             ShopPlayerSlot.c(45, 81);
@@ -202,9 +202,9 @@ class ColumnTableWidget extends UiLayoutNode {
           this.field_Fb = (ListRow[]) null;
         }
         this.field_Ab.a(true, this.field_q - 25, 0, 0, this.field_Ab.field_mb);
-        this.field_Cb.a(15, 5, 0, (byte) -103, -20 + param0, 15 + this.field_Ab.field_q, 20);
+        this.field_Cb.setLayout(15, 5, 0, (byte) -103, -20 + param0, 15 + this.field_Ab.field_q, 20);
         this.field_Cb.field_Eb.a(true, 15, -15 + this.field_Cb.field_q, 5, this.field_Cb.field_mb - 10);
-        this.field_Cb.field_Eb.b(-this.field_Cb.field_Db.field_J, this.field_Cb.field_Db.field_mb, 100, this.field_Cb.field_Gb.field_mb);
+        this.field_Cb.field_Eb.layoutThumb(-this.field_Cb.field_Db.field_J, this.field_Cb.field_Db.field_mb, 100, this.field_Cb.field_Gb.field_mb);
     }
 
     final int h(byte param0) {

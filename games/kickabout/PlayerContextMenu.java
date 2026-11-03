@@ -298,7 +298,7 @@ final class PlayerContextMenu {
         if (null == this.field_j) {
           return false;
         }
-        if (this.field_j.a(-2)) {
+        if (this.field_j.consumeSelection(-2)) {
           return true;
         }
         return false;

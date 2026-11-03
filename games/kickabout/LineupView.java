@@ -358,7 +358,7 @@ final class LineupView extends MatchPhaseView {
           }
           var3 = sm.field_q;
           var4 = ReceivedAuctionItem.field_y;
-          var13.field_j.a(0, 0, var3, var4, 0);
+          var13.field_j.layoutItems(0, 0, var3, var4, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

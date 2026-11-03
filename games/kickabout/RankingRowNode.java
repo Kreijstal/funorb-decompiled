@@ -102,7 +102,7 @@ final class RankingRowNode extends UiLayoutNode {
           var7 = 80 / ((68 - param0) / 48);
           return;
         }
-        dr.field_g.a(false, param4, param4 - NumericDateInputWidget.field_I, param1, param5, param5);
+        dr.field_g.setLayout(false, param4, param4 - NumericDateInputWidget.field_I, param1, param5, param5);
         var7Lifetime1 = 80 / ((68 - param0) / 48);
     }
 

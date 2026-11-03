@@ -12,7 +12,7 @@ final class ClientException extends RuntimeException {
     final static void a(int param0) {
         StatefulTextPainter.field_s.a(true, -(ui.field_t ? 40 + (2 + (TeamSelectionAgent.field_f + 2)) : 0) + TickClock.field_d.field_q, param0, 0, 18);
         ck.field_c.a(true, TeamSelectionAgent.field_f + 42, -40 + (-2 - TeamSelectionAgent.field_f + TickClock.field_d.field_q), 0, 18);
-        LineupView.field_u.a(2, param0 ^ 118, TickClock.field_d.field_mb - 20, 20, 0, TickClock.field_d.field_q, TeamSelectionAgent.field_f);
+        LineupView.field_u.setLayout(2, param0 ^ 118, TickClock.field_d.field_mb - 20, 20, 0, TickClock.field_d.field_q, TeamSelectionAgent.field_f);
     }
 
     public static void releaseStatics(byte param0) {

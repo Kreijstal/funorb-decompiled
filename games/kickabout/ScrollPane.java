@@ -15,17 +15,17 @@ final class ScrollPane extends UiLayoutNode {
     static String field_Ib;
     static String field_Gb;
 
-    private final void a(boolean param0, int param1, int param2, int param3, boolean param4) {
-        if (this.field_Fb.j(-819561055)) {
+    private final void advanceScroll(boolean param0, int param1, int param2, int param3, boolean param4) {
+        if (this.field_Fb.pollScrollUp(-819561055)) {
           this.field_Ab.field_v = this.field_Ab.field_v + param2;
         }
-        if (this.field_Fb.h((byte) -40)) {
+        if (this.field_Fb.pollScrollDown((byte) -40)) {
           this.field_Ab.field_v = this.field_Ab.field_v - param2;
         }
-        if (this.field_Fb.b(23028)) {
+        if (this.field_Fb.pollPageUp(23028)) {
           this.field_Ab.field_v = this.field_Ab.field_v + param3;
         }
-        if (this.field_Fb.m(-1)) {
+        if (this.field_Fb.pollPageDown(-1)) {
           this.field_Ab.field_v = this.field_Ab.field_v - param3;
           if (this.field_gb) {
             this.field_Ab.field_v = this.field_Ab.field_v - param1;
@@ -53,11 +53,11 @@ final class ScrollPane extends UiLayoutNode {
                 this.field_Ab.field_v = -this.field_Ab.field_J - (-this.field_zb.field_mb + this.field_Ab.field_mb + this.field_Ab.field_L);
               }
               if (-(this.field_Ab.field_v + this.field_Ab.field_J) >= 0) {
-                if (this.field_Fb.l(-103)) {
-                  this.field_Ab.field_J = -this.field_Fb.a(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
+                if (this.field_Fb.isThumbHeld(-103)) {
+                  this.field_Ab.field_J = -this.field_Fb.getDraggedScrollOffset(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
                   this.field_Ab.field_v = 0;
                 }
-                this.field_Fb.a(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
+                this.field_Fb.layoutThumb(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
                 if (param0) {
                   ScrollPane.a(-14);
                 }
@@ -69,11 +69,11 @@ final class ScrollPane extends UiLayoutNode {
                 this.field_Ab.field_v = -this.field_Ab.field_J;
               }
               if (-this.field_zb.field_mb + this.field_Ab.field_mb + this.field_Ab.field_L >= -(this.field_Ab.field_v + this.field_Ab.field_J)) {
-                if (this.field_Fb.l(-103)) {
-                  this.field_Ab.field_J = -this.field_Fb.a(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
+                if (this.field_Fb.isThumbHeld(-103)) {
+                  this.field_Ab.field_J = -this.field_Fb.getDraggedScrollOffset(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
                   this.field_Ab.field_v = 0;
                 }
-                this.field_Fb.a(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
+                this.field_Fb.layoutThumb(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
                 if (param0) {
                   ScrollPane.a(-14);
                 }
@@ -81,11 +81,11 @@ final class ScrollPane extends UiLayoutNode {
               }
               this.field_Ab.field_v = -(-this.field_zb.field_mb + this.field_Ab.field_mb + this.field_Ab.field_L) - this.field_Ab.field_J;
             }
-            if (this.field_Fb.l(-103)) {
-              this.field_Ab.field_J = -this.field_Fb.a(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
+            if (this.field_Fb.isThumbHeld(-103)) {
+              this.field_Ab.field_J = -this.field_Fb.getDraggedScrollOffset(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
               this.field_Ab.field_v = 0;
             }
-            this.field_Fb.a(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
+            this.field_Fb.layoutThumb(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
             if (!param0) {
               return;
             }
@@ -99,11 +99,11 @@ final class ScrollPane extends UiLayoutNode {
             if (-(this.field_Ab.field_v + this.field_Ab.field_J) < 0) {
               this.field_Ab.field_v = -this.field_Ab.field_J;
             }
-            if (this.field_Fb.l(-103)) {
-              this.field_Ab.field_J = -this.field_Fb.a(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
+            if (this.field_Fb.isThumbHeld(-103)) {
+              this.field_Ab.field_J = -this.field_Fb.getDraggedScrollOffset(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
               this.field_Ab.field_v = 0;
             }
-            this.field_Fb.a(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
+            this.field_Fb.layoutThumb(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
             if (!param0) {
               return;
             }
@@ -114,11 +114,11 @@ final class ScrollPane extends UiLayoutNode {
             if (-this.field_zb.field_mb + this.field_Ab.field_mb + this.field_Ab.field_L < -(this.field_Ab.field_v + this.field_Ab.field_J)) {
               this.field_Ab.field_v = -(-this.field_zb.field_mb + this.field_Ab.field_mb + this.field_Ab.field_L) - this.field_Ab.field_J;
             }
-            if (this.field_Fb.l(-103)) {
-              this.field_Ab.field_J = -this.field_Fb.a(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
+            if (this.field_Fb.isThumbHeld(-103)) {
+              this.field_Ab.field_J = -this.field_Fb.getDraggedScrollOffset(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
               this.field_Ab.field_v = 0;
             }
-            this.field_Fb.a(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
+            this.field_Fb.layoutThumb(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
             if (!param0) {
               return;
             }
@@ -127,11 +127,11 @@ final class ScrollPane extends UiLayoutNode {
           }
           this.field_Ab.field_v = -this.field_Ab.field_J;
           if (-this.field_zb.field_mb + this.field_Ab.field_mb + this.field_Ab.field_L >= -(this.field_Ab.field_v + this.field_Ab.field_J)) {
-            if (this.field_Fb.l(-103)) {
-              this.field_Ab.field_J = -this.field_Fb.a(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
+            if (this.field_Fb.isThumbHeld(-103)) {
+              this.field_Ab.field_J = -this.field_Fb.getDraggedScrollOffset(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
               this.field_Ab.field_v = 0;
             }
-            this.field_Fb.a(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
+            this.field_Fb.layoutThumb(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
             if (!param0) {
               return;
             }
@@ -140,11 +140,11 @@ final class ScrollPane extends UiLayoutNode {
           }
           this.field_Ab.field_v = -(-this.field_zb.field_mb + this.field_Ab.field_mb + this.field_Ab.field_L) - this.field_Ab.field_J;
         }
-        if (this.field_Fb.l(-103)) {
-          this.field_Ab.field_J = -this.field_Fb.a(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
+        if (this.field_Fb.isThumbHeld(-103)) {
+          this.field_Ab.field_J = -this.field_Fb.getDraggedScrollOffset(124, param4, this.field_Ab.field_mb, this.field_zb.field_mb);
           this.field_Ab.field_v = 0;
         }
-        this.field_Fb.a(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
+        this.field_Fb.layoutThumb(this.field_Ab.field_mb, this.field_zb.field_mb, (byte) 83, -this.field_Ab.field_J);
         if (param0) {
           ScrollPane.a(-14);
         }
@@ -155,17 +155,17 @@ final class ScrollPane extends UiLayoutNode {
         return TickClock.a(wq.field_d, true);
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void layoutViewport(int param0, byte param1, int param2) {
         int var4 = 20 % ((78 - param1) / 45);
         this.field_zb.field_q = -param2 - param0 + this.field_q;
         this.field_Ab.field_s = 0;
         this.field_zb.field_mb = this.field_mb;
         this.field_Ab.field_q = -param2 - param0 + this.field_q;
-        this.field_Fb.a(-param0 + this.field_q, true, this.field_mb, param0, this.field_Ab.field_mb, this.field_zb.field_mb, 0, -this.field_Ab.field_J);
+        this.field_Fb.setLayout(-param0 + this.field_q, true, this.field_mb, param0, this.field_Ab.field_mb, this.field_zb.field_mb, 0, -this.field_Ab.field_J);
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
-        this.a(false, param1, param0, this.field_zb.field_mb, param2);
+    final void updateScroll(int param0, int param1, boolean param2, int param3) {
+        this.advanceScroll(false, param1, param0, this.field_zb.field_mb, param2);
         if (param3 != 0) {
           field_Cb = (UiLayoutNode) null;
         }
@@ -243,24 +243,24 @@ final class ScrollPane extends UiLayoutNode {
         if (param6) {
           var8 = 1;
           this.field_Ab.a(19, param2, this.field_zb.field_mb, var8 != 0);
-          this.a(false, param5, param3, param4, false);
+          this.advanceScroll(false, param5, param3, param4, false);
           return var8 != 0;
         }
         if (!this.field_gb) {
           var8Lifetime1 = 0;
           this.field_Ab.a(19, param2, this.field_zb.field_mb, var8Lifetime1 != 0);
-          this.a(false, param5, param3, param4, false);
+          this.advanceScroll(false, param5, param3, param4, false);
           return var8Lifetime1 != 0;
         }
         if (!param0) {
           var8Lifetime2 = 1;
           this.field_Ab.a(19, param2, this.field_zb.field_mb, var8Lifetime2 != 0);
-          this.a(false, param5, param3, param4, false);
+          this.advanceScroll(false, param5, param3, param4, false);
           return var8Lifetime2 != 0;
         }
         var8Lifetime3 = 0;
         this.field_Ab.a(19, param2, this.field_zb.field_mb, var8Lifetime3 != 0);
-        this.a(false, param5, param3, param4, false);
+        this.advanceScroll(false, param5, param3, param4, false);
         return var8Lifetime3 != 0;
     }
 
@@ -311,12 +311,12 @@ final class ScrollPane extends UiLayoutNode {
         WeightedLruCache.field_a = LeaguesScreen.field_A;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.field_q = param5;
         this.field_J = param3;
         this.field_mb = param2;
         this.field_s = param4;
-        this.a(param6, (byte) 124, param0);
+        this.layoutViewport(param6, (byte) 124, param0);
         if (param1 < 36) {
           ScrollPane.h((byte) 12);
         }

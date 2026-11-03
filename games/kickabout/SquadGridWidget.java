@@ -217,7 +217,7 @@ final class SquadGridWidget extends UiLayoutNode {
           if (param0 != -105) {
             return;
           }
-          AuctionTableWidget.field_Hb.a(15, 20, 2, (byte) -114, 230, 344, 170);
+          AuctionTableWidget.field_Hb.setLayout(15, 20, 2, (byte) -114, 230, 344, 170);
           AuctionTableWidget.field_Hb.field_Db.field_J = var8Lifetime1;
           if (param2) {
             var9 = -1;
@@ -800,7 +800,7 @@ final class SquadGridWidget extends UiLayoutNode {
           if (param0 != -105) {
             return;
           }
-          AuctionTableWidget.field_Hb.a(15, 20, 2, (byte) -114, 230, 344, 170);
+          AuctionTableWidget.field_Hb.setLayout(15, 20, 2, (byte) -114, 230, 344, 170);
           AuctionTableWidget.field_Hb.field_Db.field_J = var8Lifetime1;
           if (param2) {
             var9 = -1;

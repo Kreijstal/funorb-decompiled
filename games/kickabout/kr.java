@@ -125,7 +125,7 @@ final class kr {
           var5 = param0.field_T;
           var6 = param0.field_q;
           var7 = param0.field_mb;
-          var36.field_j.a(0, var6, var4, var5, var7);
+          var36.field_j.layoutItems(0, var6, var4, var5, var7);
         } catch (RuntimeException runtimeException) {
           throw GameSoundEffect.wrapException((Throwable) ((Object) runtimeException), "kr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

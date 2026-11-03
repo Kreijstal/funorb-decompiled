@@ -5068,6 +5068,62 @@
       "renamedSymbol": "M:ba.compare(ILjava/lang/Object;Ljava/lang/Object;)I"
     },
     {
+      "symbol": "M:bb.a(I)V",
+      "originalName": "a",
+      "to": "resetSelection",
+      "evidence": "Clears every item's press and highlight state, closes the open submenu and restarts the slide animation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CascadingMenu.resetSelection(I)V"
+    },
+    {
+      "symbol": "M:bb.a(IBII)V",
+      "originalName": "a",
+      "to": "selectItem",
+      "evidence": "Closes the item if it is already open, opens its submenu, or runs the item's menu action.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CascadingMenu.selectItem(IBII)V"
+    },
+    {
+      "symbol": "M:bb.a(IIB)Z",
+      "originalName": "a",
+      "to": "handleKeyShortcut",
+      "evidence": "Routes the pressed key to the submenu or to the item whose shortcut character matches.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CascadingMenu.handleKeyShortcut(IIB)Z"
+    },
+    {
+      "symbol": "M:bb.a(ZIIIII)V",
+      "originalName": "a",
+      "to": "setLayout",
+      "evidence": "Computes the menu width, positions the rows and places the open submenu beside the selected row.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CascadingMenu.setLayout(ZIIIII)V"
+    },
+    {
+      "symbol": "M:bb.b(II)V",
+      "originalName": "b",
+      "to": "setSlideProgress",
+      "evidence": "Stores the animation step and interpolates each row's y position from stacked to final using its square.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CascadingMenu.setSlideProgress(II)V"
+    },
+    {
+      "symbol": "M:bb.b(IIB)V",
+      "originalName": "b",
+      "to": "processClicks",
+      "evidence": "Activates each item whose click flag is 1, forwards to the open submenu and advances the slide-in animation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CascadingMenu.processClicks(IIB)V"
+    },
+    {
+      "symbol": "M:bb.h(B)I",
+      "originalName": "h",
+      "to": "getTotalWidth",
+      "evidence": "Returns this menu's width plus the width of any open submenu.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CascadingMenu.getTotalWidth(B)I"
+    },
+    {
       "symbol": "M:bd.a(BZ)V",
       "originalName": "a",
       "to": "updateScreen",
@@ -7348,6 +7404,22 @@
       "renamedSymbol": "M:ContextMenu.getSelectedActionId(BZ)I"
     },
     {
+      "symbol": "M:gu.a(I)Z",
+      "originalName": "a",
+      "to": "consumeSelection",
+      "evidence": "Returns whether the given action id is the selected one and clears it when Enter was pressed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContextMenu.consumeSelection(I)Z"
+    },
+    {
+      "symbol": "M:gu.a(IIIII)V",
+      "originalName": "a",
+      "to": "layoutItems",
+      "evidence": "Adds a placeholder item when empty, measures the widest row and positions each row.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContextMenu.layoutItems(IIIII)V"
+    },
+    {
       "symbol": "M:gu.a(IILjava/lang/String;)V",
       "originalName": "a",
       "to": "addItem",
@@ -8442,6 +8514,86 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AuctionTableWidget.releaseStatics(B)V"
+    },
+    {
+      "symbol": "M:ji.a(IIZI)I",
+      "originalName": "a",
+      "to": "getDraggedOffsetHorizontal",
+      "evidence": "Converts thumb travel along the x axis into a clamped scroll offset.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.getDraggedOffsetHorizontal(IIZI)I"
+    },
+    {
+      "symbol": "M:ji.a(IZBI)I",
+      "originalName": "a",
+      "to": "getDraggedOffsetVertical",
+      "evidence": "Converts thumb travel along the y axis into a clamped scroll offset.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.getDraggedOffsetVertical(IZBI)I"
+    },
+    {
+      "symbol": "M:ji.a(ZIII)V",
+      "originalName": "a",
+      "to": "layoutVertical",
+      "evidence": "Lays out arrow buttons, track halves and thumb along the y axis.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.layoutVertical(ZIII)V"
+    },
+    {
+      "symbol": "M:ji.b(I)Z",
+      "originalName": "b",
+      "to": "pollScrollBackward",
+      "evidence": "Reports a press or held-repeat of the first arrow button using the shared 20/3 tick countdown.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.pollScrollBackward(I)Z"
+    },
+    {
+      "symbol": "M:ji.b(IIII)V",
+      "originalName": "b",
+      "to": "layoutThumb",
+      "evidence": "Dispatches to the vertical or horizontal thumb layout depending on the orientation flag.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.layoutThumb(IIII)V"
+    },
+    {
+      "symbol": "M:ji.c(IIII)V",
+      "originalName": "c",
+      "to": "layoutHorizontal",
+      "evidence": "Lays out arrow buttons, track halves and thumb along the x axis.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.layoutHorizontal(IIII)V"
+    },
+    {
+      "symbol": "M:ji.c(Z)Z",
+      "originalName": "c",
+      "to": "pollPageBackward",
+      "evidence": "Reports a press or held-repeat on the track area before the thumb while the mouse is before it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.pollPageBackward(Z)Z"
+    },
+    {
+      "symbol": "M:ji.h(I)Z",
+      "originalName": "h",
+      "to": "pollScrollForward",
+      "evidence": "Reports a press or held-repeat of the second arrow button using the shared 20/3 tick countdown.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.pollScrollForward(I)Z"
+    },
+    {
+      "symbol": "M:ji.i(I)Z",
+      "originalName": "i",
+      "to": "pollPageForward",
+      "evidence": "Reports a press or held-repeat on the track area after the thumb while the mouse is past it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.pollPageForward(I)Z"
+    },
+    {
+      "symbol": "M:ji.j(I)Z",
+      "originalName": "j",
+      "to": "isThumbHeld",
+      "evidence": "Returns whether the thumb component is currently held by the pointer.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBar.isThumbHeld(I)Z"
     },
     {
       "symbol": "M:jj.a(B)V",
@@ -9580,6 +9732,70 @@
       "renamedSymbol": "M:ArchiveManager.releaseStatics(I)V"
     },
     {
+      "symbol": "M:na.a(IIBI)V",
+      "originalName": "a",
+      "to": "layoutThumb",
+      "evidence": "Sizes buttons, track halves and thumb proportionally to content and viewport extents.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VerticalScrollbar.layoutThumb(IIBI)V"
+    },
+    {
+      "symbol": "M:na.a(IZII)I",
+      "originalName": "a",
+      "to": "getDraggedScrollOffset",
+      "evidence": "Converts thumb travel into a rounded scroll offset clamped to content minus viewport.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VerticalScrollbar.getDraggedScrollOffset(IZII)I"
+    },
+    {
+      "symbol": "M:na.a(IZIIIIII)V",
+      "originalName": "a",
+      "to": "setLayout",
+      "evidence": "Stores x, y, width and height then lays out the thumb.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VerticalScrollbar.setLayout(IZIIIIII)V"
+    },
+    {
+      "symbol": "M:na.b(I)Z",
+      "originalName": "b",
+      "to": "pollPageUp",
+      "evidence": "Reports a press or held-repeat on the track area above the thumb while the mouse is above it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VerticalScrollbar.pollPageUp(I)Z"
+    },
+    {
+      "symbol": "M:na.h(B)Z",
+      "originalName": "h",
+      "to": "pollScrollDown",
+      "evidence": "Reports a press or held-repeat of the down button using the shared 20/3 tick countdown.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VerticalScrollbar.pollScrollDown(B)Z"
+    },
+    {
+      "symbol": "M:na.j(I)Z",
+      "originalName": "j",
+      "to": "pollScrollUp",
+      "evidence": "Reports a press or held-repeat of the up button using the shared 20/3 tick countdown.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VerticalScrollbar.pollScrollUp(I)Z"
+    },
+    {
+      "symbol": "M:na.l(I)Z",
+      "originalName": "l",
+      "to": "isThumbHeld",
+      "evidence": "Returns whether the thumb component is currently held by the pointer.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VerticalScrollbar.isThumbHeld(I)Z"
+    },
+    {
+      "symbol": "M:na.m(I)Z",
+      "originalName": "m",
+      "to": "pollPageDown",
+      "evidence": "Reports a press or held-repeat on the track area below the thumb while the mouse is below it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VerticalScrollbar.pollPageDown(I)Z"
+    },
+    {
       "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
       "originalName": "a",
       "to": "wrapException",
@@ -9930,6 +10146,38 @@
       "evidence": "Called with the pressed button result; the base class plays a sound, closes the dialog and subclasses add their action. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:LeagueWinnerDialog.handleResult(II)V"
+    },
+    {
+      "symbol": "M:np.a(IBI)V",
+      "originalName": "a",
+      "to": "layoutViewport",
+      "evidence": "Reserves the scrollbar width and a gap on the right and sizes the scrollbar to the content.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.layoutViewport(IBI)V"
+    },
+    {
+      "symbol": "M:np.a(IIIIIII)V",
+      "originalName": "a",
+      "to": "setLayout",
+      "evidence": "Stores x, y, width and height then lays out the viewport and scrollbar.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.setLayout(IIIIIII)V"
+    },
+    {
+      "symbol": "M:np.a(IIZI)V",
+      "originalName": "a",
+      "to": "updateScroll",
+      "evidence": "Runs advanceScroll with the viewport height as the page distance.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.updateScroll(IIZI)V"
+    },
+    {
+      "symbol": "M:np.a(ZIIIZ)V",
+      "originalName": "a",
+      "to": "advanceScroll",
+      "evidence": "Applies arrow, page and wheel steps to the content offset, clamps it, then syncs the scrollbar thumb.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollPane.advanceScroll(ZIIIZ)V"
     },
     {
       "symbol": "M:np.i(B)V",
@@ -12218,6 +12466,38 @@
       "evidence": "True only when uncatchable is zero, height is under 30 and the ball is on the pitch.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BallAgent.canBeCaught(I)Z"
+    },
+    {
+      "symbol": "M:tk.a(III)V",
+      "originalName": "a",
+      "to": "layoutScrollbars",
+      "evidence": "Shows the horizontal and vertical scrollbars only when needed and shrinks the viewport to leave room.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollContainer.layoutScrollbars(III)V"
+    },
+    {
+      "symbol": "M:tk.a(IIIBIII)V",
+      "originalName": "a",
+      "to": "setLayout",
+      "evidence": "Stores width, height, x and y then lays out the two scrollbars around the viewport.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollContainer.setLayout(IIIBIII)V"
+    },
+    {
+      "symbol": "M:tk.a(IZBI)V",
+      "originalName": "a",
+      "to": "advanceScroll",
+      "evidence": "Runs the scroll input step with the viewport size as the page distance.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollContainer.advanceScroll(IZBI)V"
+    },
+    {
+      "symbol": "M:tk.a(ZIIIII)V",
+      "originalName": "a",
+      "to": "applyScrollInput",
+      "evidence": "Applies arrow, page, wheel and thumb input to the content offsets and clamps them to the viewport.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollContainer.applyScrollInput(ZIIIII)V"
     },
     {
       "symbol": "M:tl.c(I)V",
@@ -85856,7 +86136,7 @@
     },
     {
       "symbol": "L:bb.a(I)V#0",
-      "renamedSymbol": "L:CascadingMenu.a(I)V#0",
+      "renamedSymbol": "L:CascadingMenu.resetSelection(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -85867,7 +86147,7 @@
     },
     {
       "symbol": "L:bb.a(I)V#1",
-      "renamedSymbol": "L:CascadingMenu.a(I)V#1",
+      "renamedSymbol": "L:CascadingMenu.resetSelection(I)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -85878,7 +86158,7 @@
     },
     {
       "symbol": "L:bb.a(I)V#2",
-      "renamedSymbol": "L:CascadingMenu.a(I)V#2",
+      "renamedSymbol": "L:CascadingMenu.resetSelection(I)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -85889,7 +86169,7 @@
     },
     {
       "symbol": "L:bb.a(I)V#3",
-      "renamedSymbol": "L:CascadingMenu.a(I)V#3",
+      "renamedSymbol": "L:CascadingMenu.resetSelection(I)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -85900,7 +86180,7 @@
     },
     {
       "symbol": "L:bb.a(I)V#4",
-      "renamedSymbol": "L:CascadingMenu.a(I)V#4",
+      "renamedSymbol": "L:CascadingMenu.resetSelection(I)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -85911,7 +86191,7 @@
     },
     {
       "symbol": "L:bb.a(IBII)V#0",
-      "renamedSymbol": "L:CascadingMenu.a(IBII)V#0",
+      "renamedSymbol": "L:CascadingMenu.selectItem(IBII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -85922,7 +86202,7 @@
     },
     {
       "symbol": "L:bb.a(IBII)V#1",
-      "renamedSymbol": "L:CascadingMenu.a(IBII)V#1",
+      "renamedSymbol": "L:CascadingMenu.selectItem(IBII)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -85933,7 +86213,7 @@
     },
     {
       "symbol": "L:bb.a(IBII)V#2",
-      "renamedSymbol": "L:CascadingMenu.a(IBII)V#2",
+      "renamedSymbol": "L:CascadingMenu.selectItem(IBII)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -85944,7 +86224,7 @@
     },
     {
       "symbol": "L:bb.a(IBII)V#3",
-      "renamedSymbol": "L:CascadingMenu.a(IBII)V#3",
+      "renamedSymbol": "L:CascadingMenu.selectItem(IBII)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -85955,7 +86235,7 @@
     },
     {
       "symbol": "L:bb.a(IIB)Z#0",
-      "renamedSymbol": "L:CascadingMenu.a(IIB)Z#0",
+      "renamedSymbol": "L:CascadingMenu.handleKeyShortcut(IIB)Z#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -85966,7 +86246,7 @@
     },
     {
       "symbol": "L:bb.a(IIB)Z#1",
-      "renamedSymbol": "L:CascadingMenu.a(IIB)Z#1",
+      "renamedSymbol": "L:CascadingMenu.handleKeyShortcut(IIB)Z#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -85977,7 +86257,7 @@
     },
     {
       "symbol": "L:bb.a(IIB)Z#2",
-      "renamedSymbol": "L:CascadingMenu.a(IIB)Z#2",
+      "renamedSymbol": "L:CascadingMenu.handleKeyShortcut(IIB)Z#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -85988,7 +86268,7 @@
     },
     {
       "symbol": "L:bb.a(IIB)Z#3",
-      "renamedSymbol": "L:CascadingMenu.a(IIB)Z#3",
+      "renamedSymbol": "L:CascadingMenu.handleKeyShortcut(IIB)Z#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -85999,7 +86279,7 @@
     },
     {
       "symbol": "L:bb.a(IIB)Z#4",
-      "renamedSymbol": "L:CascadingMenu.a(IIB)Z#4",
+      "renamedSymbol": "L:CascadingMenu.handleKeyShortcut(IIB)Z#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -86010,7 +86290,7 @@
     },
     {
       "symbol": "L:bb.a(IIB)Z#5",
-      "renamedSymbol": "L:CascadingMenu.a(IIB)Z#5",
+      "renamedSymbol": "L:CascadingMenu.handleKeyShortcut(IIB)Z#5",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -86021,7 +86301,7 @@
     },
     {
       "symbol": "L:bb.a(ZIIIII)V#0",
-      "renamedSymbol": "L:CascadingMenu.a(ZIIIII)V#0",
+      "renamedSymbol": "L:CascadingMenu.setLayout(ZIIIII)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -86032,7 +86312,7 @@
     },
     {
       "symbol": "L:bb.a(ZIIIII)V#1",
-      "renamedSymbol": "L:CascadingMenu.a(ZIIIII)V#1",
+      "renamedSymbol": "L:CascadingMenu.setLayout(ZIIIII)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -86043,7 +86323,7 @@
     },
     {
       "symbol": "L:bb.a(ZIIIII)V#2",
-      "renamedSymbol": "L:CascadingMenu.a(ZIIIII)V#2",
+      "renamedSymbol": "L:CascadingMenu.setLayout(ZIIIII)V#2",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -86054,7 +86334,7 @@
     },
     {
       "symbol": "L:bb.a(ZIIIII)V#3",
-      "renamedSymbol": "L:CascadingMenu.a(ZIIIII)V#3",
+      "renamedSymbol": "L:CascadingMenu.setLayout(ZIIIII)V#3",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -86065,7 +86345,7 @@
     },
     {
       "symbol": "L:bb.b(II)V#0",
-      "renamedSymbol": "L:CascadingMenu.b(II)V#0",
+      "renamedSymbol": "L:CascadingMenu.setSlideProgress(II)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -86076,7 +86356,7 @@
     },
     {
       "symbol": "L:bb.b(II)V#1",
-      "renamedSymbol": "L:CascadingMenu.b(II)V#1",
+      "renamedSymbol": "L:CascadingMenu.setSlideProgress(II)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -86087,7 +86367,7 @@
     },
     {
       "symbol": "L:bb.b(II)V#2",
-      "renamedSymbol": "L:CascadingMenu.b(II)V#2",
+      "renamedSymbol": "L:CascadingMenu.setSlideProgress(II)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -86098,7 +86378,7 @@
     },
     {
       "symbol": "L:bb.b(II)V#3",
-      "renamedSymbol": "L:CascadingMenu.b(II)V#3",
+      "renamedSymbol": "L:CascadingMenu.setSlideProgress(II)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -86109,7 +86389,7 @@
     },
     {
       "symbol": "L:bb.b(IIB)V#0",
-      "renamedSymbol": "L:CascadingMenu.b(IIB)V#0",
+      "renamedSymbol": "L:CascadingMenu.processClicks(IIB)V#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -86120,7 +86400,7 @@
     },
     {
       "symbol": "L:bb.b(IIB)V#1",
-      "renamedSymbol": "L:CascadingMenu.b(IIB)V#1",
+      "renamedSymbol": "L:CascadingMenu.processClicks(IIB)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -86131,7 +86411,7 @@
     },
     {
       "symbol": "L:bb.b(IIB)V#2",
-      "renamedSymbol": "L:CascadingMenu.b(IIB)V#2",
+      "renamedSymbol": "L:CascadingMenu.processClicks(IIB)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -86142,7 +86422,7 @@
     },
     {
       "symbol": "L:bb.b(IIB)V#3",
-      "renamedSymbol": "L:CascadingMenu.b(IIB)V#3",
+      "renamedSymbol": "L:CascadingMenu.processClicks(IIB)V#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -86153,7 +86433,7 @@
     },
     {
       "symbol": "L:bb.b(IIB)V#4",
-      "renamedSymbol": "L:CascadingMenu.b(IIB)V#4",
+      "renamedSymbol": "L:CascadingMenu.processClicks(IIB)V#4",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -86164,7 +86444,7 @@
     },
     {
       "symbol": "L:bb.b(IIB)V#5",
-      "renamedSymbol": "L:CascadingMenu.b(IIB)V#5",
+      "renamedSymbol": "L:CascadingMenu.processClicks(IIB)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -86175,7 +86455,7 @@
     },
     {
       "symbol": "L:bb.b(IIB)V#6",
-      "renamedSymbol": "L:CascadingMenu.b(IIB)V#6",
+      "renamedSymbol": "L:CascadingMenu.processClicks(IIB)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -86186,7 +86466,7 @@
     },
     {
       "symbol": "L:bb.h(B)I#0",
-      "renamedSymbol": "L:CascadingMenu.h(B)I#0",
+      "renamedSymbol": "L:CascadingMenu.getTotalWidth(B)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -144409,7 +144689,7 @@
     },
     {
       "symbol": "L:gu.a(IIIII)V#0",
-      "renamedSymbol": "L:ContextMenu.a(IIIII)V#0",
+      "renamedSymbol": "L:ContextMenu.layoutItems(IIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -144420,7 +144700,7 @@
     },
     {
       "symbol": "L:gu.a(IIIII)V#1",
-      "renamedSymbol": "L:ContextMenu.a(IIIII)V#1",
+      "renamedSymbol": "L:ContextMenu.layoutItems(IIIII)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -144431,7 +144711,7 @@
     },
     {
       "symbol": "L:gu.a(IIIII)V#2",
-      "renamedSymbol": "L:ContextMenu.a(IIIII)V#2",
+      "renamedSymbol": "L:ContextMenu.layoutItems(IIIII)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -144442,7 +144722,7 @@
     },
     {
       "symbol": "L:gu.a(IIIII)V#3",
-      "renamedSymbol": "L:ContextMenu.a(IIIII)V#3",
+      "renamedSymbol": "L:ContextMenu.layoutItems(IIIII)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -144453,7 +144733,7 @@
     },
     {
       "symbol": "L:gu.a(IIIII)V#4",
-      "renamedSymbol": "L:ContextMenu.a(IIIII)V#4",
+      "renamedSymbol": "L:ContextMenu.layoutItems(IIIII)V#4",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -144464,7 +144744,7 @@
     },
     {
       "symbol": "L:gu.a(IIIII)V#5",
-      "renamedSymbol": "L:ContextMenu.a(IIIII)V#5",
+      "renamedSymbol": "L:ContextMenu.layoutItems(IIIII)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -144475,7 +144755,7 @@
     },
     {
       "symbol": "L:gu.a(IIIII)V#6",
-      "renamedSymbol": "L:ContextMenu.a(IIIII)V#6",
+      "renamedSymbol": "L:ContextMenu.layoutItems(IIIII)V#6",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -144486,7 +144766,7 @@
     },
     {
       "symbol": "L:gu.a(IIIII)V#7",
-      "renamedSymbol": "L:ContextMenu.a(IIIII)V#7",
+      "renamedSymbol": "L:ContextMenu.layoutItems(IIIII)V#7",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -168609,7 +168889,7 @@
     },
     {
       "symbol": "L:ji.a(IIZI)I#0",
-      "renamedSymbol": "L:ScrollBar.a(IIZI)I#0",
+      "renamedSymbol": "L:ScrollBar.getDraggedOffsetHorizontal(IIZI)I#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -168620,7 +168900,7 @@
     },
     {
       "symbol": "L:ji.a(IIZI)I#1",
-      "renamedSymbol": "L:ScrollBar.a(IIZI)I#1",
+      "renamedSymbol": "L:ScrollBar.getDraggedOffsetHorizontal(IIZI)I#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -168631,7 +168911,7 @@
     },
     {
       "symbol": "L:ji.a(IIZI)I#2",
-      "renamedSymbol": "L:ScrollBar.a(IIZI)I#2",
+      "renamedSymbol": "L:ScrollBar.getDraggedOffsetHorizontal(IIZI)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -168642,7 +168922,7 @@
     },
     {
       "symbol": "L:ji.a(IIZI)I#3",
-      "renamedSymbol": "L:ScrollBar.a(IIZI)I#3",
+      "renamedSymbol": "L:ScrollBar.getDraggedOffsetHorizontal(IIZI)I#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -168653,7 +168933,7 @@
     },
     {
       "symbol": "L:ji.a(IZBI)I#0",
-      "renamedSymbol": "L:ScrollBar.a(IZBI)I#0",
+      "renamedSymbol": "L:ScrollBar.getDraggedOffsetVertical(IZBI)I#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -168664,7 +168944,7 @@
     },
     {
       "symbol": "L:ji.a(IZBI)I#1",
-      "renamedSymbol": "L:ScrollBar.a(IZBI)I#1",
+      "renamedSymbol": "L:ScrollBar.getDraggedOffsetVertical(IZBI)I#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -168675,7 +168955,7 @@
     },
     {
       "symbol": "L:ji.a(IZBI)I#2",
-      "renamedSymbol": "L:ScrollBar.a(IZBI)I#2",
+      "renamedSymbol": "L:ScrollBar.getDraggedOffsetVertical(IZBI)I#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -168686,7 +168966,7 @@
     },
     {
       "symbol": "L:ji.a(IZBI)I#3",
-      "renamedSymbol": "L:ScrollBar.a(IZBI)I#3",
+      "renamedSymbol": "L:ScrollBar.getDraggedOffsetVertical(IZBI)I#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -168697,7 +168977,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#0",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#0",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -168708,7 +168988,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#1",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#1",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -168719,7 +168999,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#10",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#10",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#10",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -168730,7 +169010,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#11",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#11",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#11",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -168741,7 +169021,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#12",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#12",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#12",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -168752,7 +169032,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#13",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#13",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#13",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -168763,7 +169043,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#14",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#14",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#14",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -168774,7 +169054,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#15",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#15",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#15",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -168785,7 +169065,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#16",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#16",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#16",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -168796,7 +169076,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#17",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#17",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#17",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -168807,7 +169087,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#18",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#18",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#18",
       "originalName": "stackIn_14_3",
       "renamedName": "stackIn_14_3",
       "declaration": {
@@ -168818,7 +169098,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#19",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#19",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#19",
       "originalName": "stackIn_23_0",
       "renamedName": "stackIn_23_0",
       "declaration": {
@@ -168829,7 +169109,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#2",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#2",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -168840,7 +169120,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#20",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#20",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#20",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -168851,7 +169131,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#21",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#21",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#21",
       "originalName": "stackIn_23_2",
       "renamedName": "stackIn_23_2",
       "declaration": {
@@ -168862,7 +169142,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#22",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#22",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#22",
       "originalName": "stackIn_24_3",
       "renamedName": "stackIn_24_3",
       "declaration": {
@@ -168873,7 +169153,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#23",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#23",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#23",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -168884,7 +169164,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#24",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#24",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#24",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -168895,7 +169175,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#25",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#25",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#25",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -168906,7 +169186,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#26",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#26",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#26",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -168917,7 +169197,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#27",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#27",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#27",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -168928,7 +169208,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#28",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#28",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#28",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -168939,7 +169219,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#29",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#29",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#29",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -168950,7 +169230,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#3",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#3",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -168961,7 +169241,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#30",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#30",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#30",
       "originalName": "var18Lifetime1",
       "renamedName": "var18Lifetime1",
       "declaration": {
@@ -168972,7 +169252,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#31",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#31",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#31",
       "originalName": "var19Lifetime1",
       "renamedName": "var19Lifetime1",
       "declaration": {
@@ -168983,7 +169263,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#32",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#32",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#32",
       "originalName": "var20Lifetime1",
       "renamedName": "var20Lifetime1",
       "declaration": {
@@ -168994,7 +169274,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#4",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#4",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -169005,7 +169285,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#5",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#5",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -169016,7 +169296,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#6",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#6",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#6",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -169027,7 +169307,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#7",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#7",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -169038,7 +169318,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#8",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#8",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#8",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -169049,7 +169329,7 @@
     },
     {
       "symbol": "L:ji.a(ZIII)V#9",
-      "renamedSymbol": "L:ScrollBar.a(ZIII)V#9",
+      "renamedSymbol": "L:ScrollBar.layoutVertical(ZIII)V#9",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -169060,7 +169340,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#0",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#0",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -169071,7 +169351,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#1",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#1",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -169082,7 +169362,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#10",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#10",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#10",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -169093,7 +169373,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#11",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#11",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#11",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -169104,7 +169384,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#12",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#12",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#12",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -169115,7 +169395,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#13",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#13",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#13",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -169126,7 +169406,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#14",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#14",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#14",
       "originalName": "var15Lifetime2",
       "renamedName": "var15Lifetime2",
       "declaration": {
@@ -169137,7 +169417,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#15",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#15",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#15",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -169148,7 +169428,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#16",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#16",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#16",
       "originalName": "var16Lifetime2",
       "renamedName": "var16Lifetime2",
       "declaration": {
@@ -169159,7 +169439,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#17",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#17",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#17",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -169170,7 +169450,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#18",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#18",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#18",
       "originalName": "var17Lifetime2",
       "renamedName": "var17Lifetime2",
       "declaration": {
@@ -169181,7 +169461,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#19",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#19",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#19",
       "originalName": "var18Lifetime1",
       "renamedName": "var18Lifetime1",
       "declaration": {
@@ -169192,7 +169472,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#2",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#2",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#2",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -169203,7 +169483,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#20",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#20",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#20",
       "originalName": "var18Lifetime2",
       "renamedName": "var18Lifetime2",
       "declaration": {
@@ -169214,7 +169494,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#21",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#21",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#21",
       "originalName": "var19Lifetime1",
       "renamedName": "var19Lifetime1",
       "declaration": {
@@ -169225,7 +169505,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#22",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#22",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#22",
       "originalName": "var19Lifetime2",
       "renamedName": "var19Lifetime2",
       "declaration": {
@@ -169236,7 +169516,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#23",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#23",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#23",
       "originalName": "var20Lifetime1",
       "renamedName": "var20Lifetime1",
       "declaration": {
@@ -169247,7 +169527,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#24",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#24",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#24",
       "originalName": "var20Lifetime2",
       "renamedName": "var20Lifetime2",
       "declaration": {
@@ -169258,7 +169538,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#25",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#25",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#25",
       "originalName": "var9Lifetime1",
       "renamedName": "var9Lifetime1",
       "declaration": {
@@ -169269,7 +169549,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#26",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#26",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#26",
       "originalName": "var9Lifetime2",
       "renamedName": "var9Lifetime2",
       "declaration": {
@@ -169280,7 +169560,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#27",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#27",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#27",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -169291,7 +169571,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#28",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#28",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#28",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -169302,7 +169582,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#29",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#29",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#29",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -169313,7 +169593,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#3",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#3",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -169324,7 +169604,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#30",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#30",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#30",
       "originalName": "var11Lifetime2",
       "renamedName": "var11Lifetime2",
       "declaration": {
@@ -169335,7 +169615,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#31",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#31",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#31",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -169346,7 +169626,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#32",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#32",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#32",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -169357,7 +169637,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#33",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#33",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#33",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -169368,7 +169648,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#34",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#34",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#34",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -169379,7 +169659,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#4",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#4",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#4",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -169390,7 +169670,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#5",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#5",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#5",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -169401,7 +169681,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#6",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#6",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#6",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -169412,7 +169692,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#7",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#7",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#7",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -169423,7 +169703,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#8",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#8",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#8",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -169434,7 +169714,7 @@
     },
     {
       "symbol": "L:ji.c(IIII)V#9",
-      "renamedSymbol": "L:ScrollBar.c(IIII)V#9",
+      "renamedSymbol": "L:ScrollBar.layoutHorizontal(IIII)V#9",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -208385,7 +208665,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#0",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#0",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#0",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -208396,7 +208676,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#1",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#1",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#1",
       "originalName": "stackIn_16_1",
       "renamedName": "stackIn_16_1",
       "declaration": {
@@ -208407,7 +208687,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#10",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#10",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -208418,7 +208698,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#11",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#11",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -208429,7 +208709,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#12",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#12",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#12",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -208440,7 +208720,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#13",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#13",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#13",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -208451,7 +208731,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#14",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#14",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#14",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -208462,7 +208742,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#15",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#15",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#15",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -208473,7 +208753,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#16",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#16",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#16",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -208484,7 +208764,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#17",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#17",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#17",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -208495,7 +208775,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#2",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#2",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#2",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -208506,7 +208786,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#3",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#3",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#3",
       "originalName": "stackIn_17_3",
       "renamedName": "stackIn_17_3",
       "declaration": {
@@ -208517,7 +208797,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#4",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#4",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -208528,7 +208808,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#5",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#5",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -208539,7 +208819,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#6",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#6",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -208550,7 +208830,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#7",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#7",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -208561,7 +208841,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#8",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#8",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -208572,7 +208852,7 @@
     },
     {
       "symbol": "L:na.a(IIBI)V#9",
-      "renamedSymbol": "L:VerticalScrollbar.a(IIBI)V#9",
+      "renamedSymbol": "L:VerticalScrollbar.layoutThumb(IIBI)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -208583,7 +208863,7 @@
     },
     {
       "symbol": "L:na.a(IZII)I#0",
-      "renamedSymbol": "L:VerticalScrollbar.a(IZII)I#0",
+      "renamedSymbol": "L:VerticalScrollbar.getDraggedScrollOffset(IZII)I#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -208594,7 +208874,7 @@
     },
     {
       "symbol": "L:na.a(IZII)I#1",
-      "renamedSymbol": "L:VerticalScrollbar.a(IZII)I#1",
+      "renamedSymbol": "L:VerticalScrollbar.getDraggedScrollOffset(IZII)I#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -208605,7 +208885,7 @@
     },
     {
       "symbol": "L:na.a(IZII)I#2",
-      "renamedSymbol": "L:VerticalScrollbar.a(IZII)I#2",
+      "renamedSymbol": "L:VerticalScrollbar.getDraggedScrollOffset(IZII)I#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -208616,7 +208896,7 @@
     },
     {
       "symbol": "L:na.a(IZII)I#3",
-      "renamedSymbol": "L:VerticalScrollbar.a(IZII)I#3",
+      "renamedSymbol": "L:VerticalScrollbar.getDraggedScrollOffset(IZII)I#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -216492,7 +216772,7 @@
     },
     {
       "symbol": "L:np.a(IBI)V#0",
-      "renamedSymbol": "L:ScrollPane.a(IBI)V#0",
+      "renamedSymbol": "L:ScrollPane.layoutViewport(IBI)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -293921,7 +294201,7 @@
     },
     {
       "symbol": "L:tk.a(III)V#0",
-      "renamedSymbol": "L:ScrollContainer.a(III)V#0",
+      "renamedSymbol": "L:ScrollContainer.layoutScrollbars(III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -293932,7 +294212,7 @@
     },
     {
       "symbol": "L:tk.a(III)V#1",
-      "renamedSymbol": "L:ScrollContainer.a(III)V#1",
+      "renamedSymbol": "L:ScrollContainer.layoutScrollbars(III)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -293943,7 +294223,7 @@
     },
     {
       "symbol": "L:tk.a(III)V#2",
-      "renamedSymbol": "L:ScrollContainer.a(III)V#2",
+      "renamedSymbol": "L:ScrollContainer.layoutScrollbars(III)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -293954,7 +294234,7 @@
     },
     {
       "symbol": "L:tk.a(III)V#3",
-      "renamedSymbol": "L:ScrollContainer.a(III)V#3",
+      "renamedSymbol": "L:ScrollContainer.layoutScrollbars(III)V#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -293965,7 +294245,7 @@
     },
     {
       "symbol": "L:tk.a(III)V#4",
-      "renamedSymbol": "L:ScrollContainer.a(III)V#4",
+      "renamedSymbol": "L:ScrollContainer.layoutScrollbars(III)V#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -293976,7 +294256,7 @@
     },
     {
       "symbol": "L:tk.a(IIIBIII)V#0",
-      "renamedSymbol": "L:ScrollContainer.a(IIIBIII)V#0",
+      "renamedSymbol": "L:ScrollContainer.setLayout(IIIBIII)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -293987,7 +294267,7 @@
     },
     {
       "symbol": "L:tk.a(ZIIIII)V#0",
-      "renamedSymbol": "L:ScrollContainer.a(ZIIIII)V#0",
+      "renamedSymbol": "L:ScrollContainer.applyScrollInput(ZIIIII)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -342431,9 +342711,9 @@
     },
     {
       "symbol": "M:bb.a(I)V",
-      "renamedSymbol": "M:CascadingMenu.a(I)V",
+      "renamedSymbol": "M:CascadingMenu.resetSelection(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetSelection",
       "declaration": {
         "file": "bb.java",
         "start": 7325,
@@ -342442,9 +342722,9 @@
     },
     {
       "symbol": "M:bb.a(IBII)V",
-      "renamedSymbol": "M:CascadingMenu.a(IBII)V",
+      "renamedSymbol": "M:CascadingMenu.selectItem(IBII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "selectItem",
       "declaration": {
         "file": "bb.java",
         "start": 8875,
@@ -342453,9 +342733,9 @@
     },
     {
       "symbol": "M:bb.a(IIB)Z",
-      "renamedSymbol": "M:CascadingMenu.a(IIB)Z",
+      "renamedSymbol": "M:CascadingMenu.handleKeyShortcut(IIB)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleKeyShortcut",
       "declaration": {
         "file": "bb.java",
         "start": 10186,
@@ -342464,9 +342744,9 @@
     },
     {
       "symbol": "M:bb.a(ZIIIII)V",
-      "renamedSymbol": "M:CascadingMenu.a(ZIIIII)V",
+      "renamedSymbol": "M:CascadingMenu.setLayout(ZIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setLayout",
       "declaration": {
         "file": "bb.java",
         "start": 11325,
@@ -342486,9 +342766,9 @@
     },
     {
       "symbol": "M:bb.b(II)V",
-      "renamedSymbol": "M:CascadingMenu.b(II)V",
+      "renamedSymbol": "M:CascadingMenu.setSlideProgress(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "setSlideProgress",
       "declaration": {
         "file": "bb.java",
         "start": 8362,
@@ -342497,9 +342777,9 @@
     },
     {
       "symbol": "M:bb.b(IIB)V",
-      "renamedSymbol": "M:CascadingMenu.b(IIB)V",
+      "renamedSymbol": "M:CascadingMenu.processClicks(IIB)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "processClicks",
       "declaration": {
         "file": "bb.java",
         "start": 1723,
@@ -342508,9 +342788,9 @@
     },
     {
       "symbol": "M:bb.h(B)I",
-      "renamedSymbol": "M:CascadingMenu.h(B)I",
+      "renamedSymbol": "M:CascadingMenu.getTotalWidth(B)I",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "getTotalWidth",
       "declaration": {
         "file": "bb.java",
         "start": 550,
@@ -353838,9 +354118,9 @@
     },
     {
       "symbol": "M:gu.a(I)Z",
-      "renamedSymbol": "M:ContextMenu.a(I)Z",
+      "renamedSymbol": "M:ContextMenu.consumeSelection(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "consumeSelection",
       "declaration": {
         "file": "gu.java",
         "start": 3598,
@@ -353860,9 +354140,9 @@
     },
     {
       "symbol": "M:gu.a(IIIII)V",
-      "renamedSymbol": "M:ContextMenu.a(IIIII)V",
+      "renamedSymbol": "M:ContextMenu.layoutItems(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutItems",
       "declaration": {
         "file": "gu.java",
         "start": 1416,
@@ -358997,9 +359277,9 @@
     },
     {
       "symbol": "M:ji.a(IIZI)I",
-      "renamedSymbol": "M:ScrollBar.a(IIZI)I",
+      "renamedSymbol": "M:ScrollBar.getDraggedOffsetHorizontal(IIZI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getDraggedOffsetHorizontal",
       "declaration": {
         "file": "ji.java",
         "start": 367,
@@ -359008,9 +359288,9 @@
     },
     {
       "symbol": "M:ji.a(IZBI)I",
-      "renamedSymbol": "M:ScrollBar.a(IZBI)I",
+      "renamedSymbol": "M:ScrollBar.getDraggedOffsetVertical(IZBI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getDraggedOffsetVertical",
       "declaration": {
         "file": "ji.java",
         "start": 15103,
@@ -359019,9 +359299,9 @@
     },
     {
       "symbol": "M:ji.a(ZIII)V",
-      "renamedSymbol": "M:ScrollBar.a(ZIII)V",
+      "renamedSymbol": "M:ScrollBar.layoutVertical(ZIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutVertical",
       "declaration": {
         "file": "ji.java",
         "start": 16131,
@@ -359030,9 +359310,9 @@
     },
     {
       "symbol": "M:ji.b(I)Z",
-      "renamedSymbol": "M:ScrollBar.b(I)Z",
+      "renamedSymbol": "M:ScrollBar.pollScrollBackward(I)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "pollScrollBackward",
       "declaration": {
         "file": "ji.java",
         "start": 1154,
@@ -359041,9 +359321,9 @@
     },
     {
       "symbol": "M:ji.b(IIII)V",
-      "renamedSymbol": "M:ScrollBar.b(IIII)V",
+      "renamedSymbol": "M:ScrollBar.layoutThumb(IIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "layoutThumb",
       "declaration": {
         "file": "ji.java",
         "start": 2472,
@@ -359052,9 +359332,9 @@
     },
     {
       "symbol": "M:ji.c(IIII)V",
-      "renamedSymbol": "M:ScrollBar.c(IIII)V",
+      "renamedSymbol": "M:ScrollBar.layoutHorizontal(IIII)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "layoutHorizontal",
       "declaration": {
         "file": "ji.java",
         "start": 7463,
@@ -359063,9 +359343,9 @@
     },
     {
       "symbol": "M:ji.c(Z)Z",
-      "renamedSymbol": "M:ScrollBar.c(Z)Z",
+      "renamedSymbol": "M:ScrollBar.pollPageBackward(Z)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "pollPageBackward",
       "declaration": {
         "file": "ji.java",
         "start": 21270,
@@ -359074,9 +359354,9 @@
     },
     {
       "symbol": "M:ji.h(I)Z",
-      "renamedSymbol": "M:ScrollBar.h(I)Z",
+      "renamedSymbol": "M:ScrollBar.pollScrollForward(I)Z",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "pollScrollForward",
       "declaration": {
         "file": "ji.java",
         "start": 1760,
@@ -359085,9 +359365,9 @@
     },
     {
       "symbol": "M:ji.i(I)Z",
-      "renamedSymbol": "M:ScrollBar.i(I)Z",
+      "renamedSymbol": "M:ScrollBar.pollPageForward(I)Z",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "pollPageForward",
       "declaration": {
         "file": "ji.java",
         "start": 14267,
@@ -359096,9 +359376,9 @@
     },
     {
       "symbol": "M:ji.j(I)Z",
-      "renamedSymbol": "M:ScrollBar.j(I)Z",
+      "renamedSymbol": "M:ScrollBar.isThumbHeld(I)Z",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "isThumbHeld",
       "declaration": {
         "file": "ji.java",
         "start": 15965,
@@ -366169,9 +366449,9 @@
     },
     {
       "symbol": "M:na.a(IIBI)V",
-      "renamedSymbol": "M:VerticalScrollbar.a(IIBI)V",
+      "renamedSymbol": "M:VerticalScrollbar.layoutThumb(IIBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutThumb",
       "declaration": {
         "file": "na.java",
         "start": 7157,
@@ -366180,9 +366460,9 @@
     },
     {
       "symbol": "M:na.a(IZII)I",
-      "renamedSymbol": "M:VerticalScrollbar.a(IZII)I",
+      "renamedSymbol": "M:VerticalScrollbar.getDraggedScrollOffset(IZII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getDraggedScrollOffset",
       "declaration": {
         "file": "na.java",
         "start": 3042,
@@ -366202,9 +366482,9 @@
     },
     {
       "symbol": "M:na.a(IZIIIIII)V",
-      "renamedSymbol": "M:VerticalScrollbar.a(IZIIIIII)V",
+      "renamedSymbol": "M:VerticalScrollbar.setLayout(IZIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setLayout",
       "declaration": {
         "file": "na.java",
         "start": 5021,
@@ -366213,9 +366493,9 @@
     },
     {
       "symbol": "M:na.b(I)Z",
-      "renamedSymbol": "M:VerticalScrollbar.b(I)Z",
+      "renamedSymbol": "M:VerticalScrollbar.pollPageUp(I)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "pollPageUp",
       "declaration": {
         "file": "na.java",
         "start": 3861,
@@ -366224,9 +366504,9 @@
     },
     {
       "symbol": "M:na.h(B)Z",
-      "renamedSymbol": "M:VerticalScrollbar.h(B)Z",
+      "renamedSymbol": "M:VerticalScrollbar.pollScrollDown(B)Z",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "pollScrollDown",
       "declaration": {
         "file": "na.java",
         "start": 6509,
@@ -366257,9 +366537,9 @@
     },
     {
       "symbol": "M:na.j(I)Z",
-      "renamedSymbol": "M:VerticalScrollbar.j(I)Z",
+      "renamedSymbol": "M:VerticalScrollbar.pollScrollUp(I)Z",
       "originalName": "j",
-      "renamedName": "j",
+      "renamedName": "pollScrollUp",
       "declaration": {
         "file": "na.java",
         "start": 5831,
@@ -366279,9 +366559,9 @@
     },
     {
       "symbol": "M:na.l(I)Z",
-      "renamedSymbol": "M:VerticalScrollbar.l(I)Z",
+      "renamedSymbol": "M:VerticalScrollbar.isThumbHeld(I)Z",
       "originalName": "l",
-      "renamedName": "l",
+      "renamedName": "isThumbHeld",
       "declaration": {
         "file": "na.java",
         "start": 12031,
@@ -366290,9 +366570,9 @@
     },
     {
       "symbol": "M:na.m(I)Z",
-      "renamedSymbol": "M:VerticalScrollbar.m(I)Z",
+      "renamedSymbol": "M:VerticalScrollbar.pollPageDown(I)Z",
       "originalName": "m",
-      "renamedName": "m",
+      "renamedName": "pollPageDown",
       "declaration": {
         "file": "na.java",
         "start": 4430,
@@ -367621,9 +367901,9 @@
     },
     {
       "symbol": "M:np.a(IBI)V",
-      "renamedSymbol": "M:ScrollPane.a(IBI)V",
+      "renamedSymbol": "M:ScrollPane.layoutViewport(IBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutViewport",
       "declaration": {
         "file": "np.java",
         "start": 7421,
@@ -367643,9 +367923,9 @@
     },
     {
       "symbol": "M:np.a(IIIIIII)V",
-      "renamedSymbol": "M:ScrollPane.a(IIIIIII)V",
+      "renamedSymbol": "M:ScrollPane.setLayout(IIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setLayout",
       "declaration": {
         "file": "np.java",
         "start": 12371,
@@ -367654,9 +367934,9 @@
     },
     {
       "symbol": "M:np.a(IIZI)V",
-      "renamedSymbol": "M:ScrollPane.a(IIZI)V",
+      "renamedSymbol": "M:ScrollPane.updateScroll(IIZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateScroll",
       "declaration": {
         "file": "np.java",
         "start": 7896,
@@ -367687,9 +367967,9 @@
     },
     {
       "symbol": "M:np.a(ZIIIZ)V",
-      "renamedSymbol": "M:ScrollPane.a(ZIIIZ)V",
+      "renamedSymbol": "M:ScrollPane.advanceScroll(ZIIIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "advanceScroll",
       "declaration": {
         "file": "np.java",
         "start": 378,
@@ -379853,9 +380133,9 @@
     },
     {
       "symbol": "M:tk.a(III)V",
-      "renamedSymbol": "M:ScrollContainer.a(III)V",
+      "renamedSymbol": "M:ScrollContainer.layoutScrollbars(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "layoutScrollbars",
       "declaration": {
         "file": "tk.java",
         "start": 1124,
@@ -379864,9 +380144,9 @@
     },
     {
       "symbol": "M:tk.a(IIIBIII)V",
-      "renamedSymbol": "M:ScrollContainer.a(IIIBIII)V",
+      "renamedSymbol": "M:ScrollContainer.setLayout(IIIBIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setLayout",
       "declaration": {
         "file": "tk.java",
         "start": 428,
@@ -379875,9 +380155,9 @@
     },
     {
       "symbol": "M:tk.a(IZBI)V",
-      "renamedSymbol": "M:ScrollContainer.a(IZBI)V",
+      "renamedSymbol": "M:ScrollContainer.advanceScroll(IZBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "advanceScroll",
       "declaration": {
         "file": "tk.java",
         "start": 890,
@@ -379886,9 +380166,9 @@
     },
     {
       "symbol": "M:tk.a(ZIIIII)V",
-      "renamedSymbol": "M:ScrollContainer.a(ZIIIII)V",
+      "renamedSymbol": "M:ScrollContainer.applyScrollInput(ZIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "applyScrollInput",
       "declaration": {
         "file": "tk.java",
         "start": 3579,
@@ -392888,7 +393168,7 @@
     },
     {
       "symbol": "P:bb.a(I)V#0",
-      "renamedSymbol": "P:CascadingMenu.a(I)V#0",
+      "renamedSymbol": "P:CascadingMenu.resetSelection(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392899,7 +393179,7 @@
     },
     {
       "symbol": "P:bb.a(IBII)V#0",
-      "renamedSymbol": "P:CascadingMenu.a(IBII)V#0",
+      "renamedSymbol": "P:CascadingMenu.selectItem(IBII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392910,7 +393190,7 @@
     },
     {
       "symbol": "P:bb.a(IBII)V#1",
-      "renamedSymbol": "P:CascadingMenu.a(IBII)V#1",
+      "renamedSymbol": "P:CascadingMenu.selectItem(IBII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392921,7 +393201,7 @@
     },
     {
       "symbol": "P:bb.a(IBII)V#2",
-      "renamedSymbol": "P:CascadingMenu.a(IBII)V#2",
+      "renamedSymbol": "P:CascadingMenu.selectItem(IBII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -392932,7 +393212,7 @@
     },
     {
       "symbol": "P:bb.a(IBII)V#3",
-      "renamedSymbol": "P:CascadingMenu.a(IBII)V#3",
+      "renamedSymbol": "P:CascadingMenu.selectItem(IBII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -392943,7 +393223,7 @@
     },
     {
       "symbol": "P:bb.a(IIB)Z#0",
-      "renamedSymbol": "P:CascadingMenu.a(IIB)Z#0",
+      "renamedSymbol": "P:CascadingMenu.handleKeyShortcut(IIB)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392954,7 +393234,7 @@
     },
     {
       "symbol": "P:bb.a(IIB)Z#1",
-      "renamedSymbol": "P:CascadingMenu.a(IIB)Z#1",
+      "renamedSymbol": "P:CascadingMenu.handleKeyShortcut(IIB)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392965,7 +393245,7 @@
     },
     {
       "symbol": "P:bb.a(IIB)Z#2",
-      "renamedSymbol": "P:CascadingMenu.a(IIB)Z#2",
+      "renamedSymbol": "P:CascadingMenu.handleKeyShortcut(IIB)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -392976,7 +393256,7 @@
     },
     {
       "symbol": "P:bb.a(ZIIIII)V#0",
-      "renamedSymbol": "P:CascadingMenu.a(ZIIIII)V#0",
+      "renamedSymbol": "P:CascadingMenu.setLayout(ZIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -392987,7 +393267,7 @@
     },
     {
       "symbol": "P:bb.a(ZIIIII)V#1",
-      "renamedSymbol": "P:CascadingMenu.a(ZIIIII)V#1",
+      "renamedSymbol": "P:CascadingMenu.setLayout(ZIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -392998,7 +393278,7 @@
     },
     {
       "symbol": "P:bb.a(ZIIIII)V#2",
-      "renamedSymbol": "P:CascadingMenu.a(ZIIIII)V#2",
+      "renamedSymbol": "P:CascadingMenu.setLayout(ZIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -393009,7 +393289,7 @@
     },
     {
       "symbol": "P:bb.a(ZIIIII)V#3",
-      "renamedSymbol": "P:CascadingMenu.a(ZIIIII)V#3",
+      "renamedSymbol": "P:CascadingMenu.setLayout(ZIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -393020,7 +393300,7 @@
     },
     {
       "symbol": "P:bb.a(ZIIIII)V#4",
-      "renamedSymbol": "P:CascadingMenu.a(ZIIIII)V#4",
+      "renamedSymbol": "P:CascadingMenu.setLayout(ZIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -393031,7 +393311,7 @@
     },
     {
       "symbol": "P:bb.a(ZIIIII)V#5",
-      "renamedSymbol": "P:CascadingMenu.a(ZIIIII)V#5",
+      "renamedSymbol": "P:CascadingMenu.setLayout(ZIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -393053,7 +393333,7 @@
     },
     {
       "symbol": "P:bb.b(II)V#0",
-      "renamedSymbol": "P:CascadingMenu.b(II)V#0",
+      "renamedSymbol": "P:CascadingMenu.setSlideProgress(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -393064,7 +393344,7 @@
     },
     {
       "symbol": "P:bb.b(II)V#1",
-      "renamedSymbol": "P:CascadingMenu.b(II)V#1",
+      "renamedSymbol": "P:CascadingMenu.setSlideProgress(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -393075,7 +393355,7 @@
     },
     {
       "symbol": "P:bb.b(IIB)V#0",
-      "renamedSymbol": "P:CascadingMenu.b(IIB)V#0",
+      "renamedSymbol": "P:CascadingMenu.processClicks(IIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -393086,7 +393366,7 @@
     },
     {
       "symbol": "P:bb.b(IIB)V#1",
-      "renamedSymbol": "P:CascadingMenu.b(IIB)V#1",
+      "renamedSymbol": "P:CascadingMenu.processClicks(IIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -393097,7 +393377,7 @@
     },
     {
       "symbol": "P:bb.b(IIB)V#2",
-      "renamedSymbol": "P:CascadingMenu.b(IIB)V#2",
+      "renamedSymbol": "P:CascadingMenu.processClicks(IIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -393108,7 +393388,7 @@
     },
     {
       "symbol": "P:bb.h(B)I#0",
-      "renamedSymbol": "P:CascadingMenu.h(B)I#0",
+      "renamedSymbol": "P:CascadingMenu.getTotalWidth(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -419442,7 +419722,7 @@
     },
     {
       "symbol": "P:gu.a(I)Z#0",
-      "renamedSymbol": "P:ContextMenu.a(I)Z#0",
+      "renamedSymbol": "P:ContextMenu.consumeSelection(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -419486,7 +419766,7 @@
     },
     {
       "symbol": "P:gu.a(IIIII)V#0",
-      "renamedSymbol": "P:ContextMenu.a(IIIII)V#0",
+      "renamedSymbol": "P:ContextMenu.layoutItems(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -419497,7 +419777,7 @@
     },
     {
       "symbol": "P:gu.a(IIIII)V#1",
-      "renamedSymbol": "P:ContextMenu.a(IIIII)V#1",
+      "renamedSymbol": "P:ContextMenu.layoutItems(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -419508,7 +419788,7 @@
     },
     {
       "symbol": "P:gu.a(IIIII)V#2",
-      "renamedSymbol": "P:ContextMenu.a(IIIII)V#2",
+      "renamedSymbol": "P:ContextMenu.layoutItems(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -419519,7 +419799,7 @@
     },
     {
       "symbol": "P:gu.a(IIIII)V#3",
-      "renamedSymbol": "P:ContextMenu.a(IIIII)V#3",
+      "renamedSymbol": "P:ContextMenu.layoutItems(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -419530,7 +419810,7 @@
     },
     {
       "symbol": "P:gu.a(IIIII)V#4",
-      "renamedSymbol": "P:ContextMenu.a(IIIII)V#4",
+      "renamedSymbol": "P:ContextMenu.layoutItems(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -431212,7 +431492,7 @@
     },
     {
       "symbol": "P:ji.a(IIZI)I#0",
-      "renamedSymbol": "P:ScrollBar.a(IIZI)I#0",
+      "renamedSymbol": "P:ScrollBar.getDraggedOffsetHorizontal(IIZI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431223,7 +431503,7 @@
     },
     {
       "symbol": "P:ji.a(IIZI)I#1",
-      "renamedSymbol": "P:ScrollBar.a(IIZI)I#1",
+      "renamedSymbol": "P:ScrollBar.getDraggedOffsetHorizontal(IIZI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -431234,7 +431514,7 @@
     },
     {
       "symbol": "P:ji.a(IIZI)I#2",
-      "renamedSymbol": "P:ScrollBar.a(IIZI)I#2",
+      "renamedSymbol": "P:ScrollBar.getDraggedOffsetHorizontal(IIZI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -431245,7 +431525,7 @@
     },
     {
       "symbol": "P:ji.a(IIZI)I#3",
-      "renamedSymbol": "P:ScrollBar.a(IIZI)I#3",
+      "renamedSymbol": "P:ScrollBar.getDraggedOffsetHorizontal(IIZI)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -431256,7 +431536,7 @@
     },
     {
       "symbol": "P:ji.a(IZBI)I#0",
-      "renamedSymbol": "P:ScrollBar.a(IZBI)I#0",
+      "renamedSymbol": "P:ScrollBar.getDraggedOffsetVertical(IZBI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431267,7 +431547,7 @@
     },
     {
       "symbol": "P:ji.a(IZBI)I#1",
-      "renamedSymbol": "P:ScrollBar.a(IZBI)I#1",
+      "renamedSymbol": "P:ScrollBar.getDraggedOffsetVertical(IZBI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -431278,7 +431558,7 @@
     },
     {
       "symbol": "P:ji.a(IZBI)I#2",
-      "renamedSymbol": "P:ScrollBar.a(IZBI)I#2",
+      "renamedSymbol": "P:ScrollBar.getDraggedOffsetVertical(IZBI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -431289,7 +431569,7 @@
     },
     {
       "symbol": "P:ji.a(IZBI)I#3",
-      "renamedSymbol": "P:ScrollBar.a(IZBI)I#3",
+      "renamedSymbol": "P:ScrollBar.getDraggedOffsetVertical(IZBI)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -431300,7 +431580,7 @@
     },
     {
       "symbol": "P:ji.a(ZIII)V#0",
-      "renamedSymbol": "P:ScrollBar.a(ZIII)V#0",
+      "renamedSymbol": "P:ScrollBar.layoutVertical(ZIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431311,7 +431591,7 @@
     },
     {
       "symbol": "P:ji.a(ZIII)V#1",
-      "renamedSymbol": "P:ScrollBar.a(ZIII)V#1",
+      "renamedSymbol": "P:ScrollBar.layoutVertical(ZIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -431322,7 +431602,7 @@
     },
     {
       "symbol": "P:ji.a(ZIII)V#2",
-      "renamedSymbol": "P:ScrollBar.a(ZIII)V#2",
+      "renamedSymbol": "P:ScrollBar.layoutVertical(ZIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -431333,7 +431613,7 @@
     },
     {
       "symbol": "P:ji.a(ZIII)V#3",
-      "renamedSymbol": "P:ScrollBar.a(ZIII)V#3",
+      "renamedSymbol": "P:ScrollBar.layoutVertical(ZIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -431344,7 +431624,7 @@
     },
     {
       "symbol": "P:ji.b(I)Z#0",
-      "renamedSymbol": "P:ScrollBar.b(I)Z#0",
+      "renamedSymbol": "P:ScrollBar.pollScrollBackward(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431355,7 +431635,7 @@
     },
     {
       "symbol": "P:ji.b(IIII)V#0",
-      "renamedSymbol": "P:ScrollBar.b(IIII)V#0",
+      "renamedSymbol": "P:ScrollBar.layoutThumb(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431366,7 +431646,7 @@
     },
     {
       "symbol": "P:ji.b(IIII)V#1",
-      "renamedSymbol": "P:ScrollBar.b(IIII)V#1",
+      "renamedSymbol": "P:ScrollBar.layoutThumb(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -431377,7 +431657,7 @@
     },
     {
       "symbol": "P:ji.b(IIII)V#2",
-      "renamedSymbol": "P:ScrollBar.b(IIII)V#2",
+      "renamedSymbol": "P:ScrollBar.layoutThumb(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -431388,7 +431668,7 @@
     },
     {
       "symbol": "P:ji.b(IIII)V#3",
-      "renamedSymbol": "P:ScrollBar.b(IIII)V#3",
+      "renamedSymbol": "P:ScrollBar.layoutThumb(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -431399,7 +431679,7 @@
     },
     {
       "symbol": "P:ji.c(IIII)V#0",
-      "renamedSymbol": "P:ScrollBar.c(IIII)V#0",
+      "renamedSymbol": "P:ScrollBar.layoutHorizontal(IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431410,7 +431690,7 @@
     },
     {
       "symbol": "P:ji.c(IIII)V#1",
-      "renamedSymbol": "P:ScrollBar.c(IIII)V#1",
+      "renamedSymbol": "P:ScrollBar.layoutHorizontal(IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -431421,7 +431701,7 @@
     },
     {
       "symbol": "P:ji.c(IIII)V#2",
-      "renamedSymbol": "P:ScrollBar.c(IIII)V#2",
+      "renamedSymbol": "P:ScrollBar.layoutHorizontal(IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -431432,7 +431712,7 @@
     },
     {
       "symbol": "P:ji.c(IIII)V#3",
-      "renamedSymbol": "P:ScrollBar.c(IIII)V#3",
+      "renamedSymbol": "P:ScrollBar.layoutHorizontal(IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -431443,7 +431723,7 @@
     },
     {
       "symbol": "P:ji.c(Z)Z#0",
-      "renamedSymbol": "P:ScrollBar.c(Z)Z#0",
+      "renamedSymbol": "P:ScrollBar.pollPageBackward(Z)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431454,7 +431734,7 @@
     },
     {
       "symbol": "P:ji.h(I)Z#0",
-      "renamedSymbol": "P:ScrollBar.h(I)Z#0",
+      "renamedSymbol": "P:ScrollBar.pollScrollForward(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431465,7 +431745,7 @@
     },
     {
       "symbol": "P:ji.i(I)Z#0",
-      "renamedSymbol": "P:ScrollBar.i(I)Z#0",
+      "renamedSymbol": "P:ScrollBar.pollPageForward(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431476,7 +431756,7 @@
     },
     {
       "symbol": "P:ji.j(I)Z#0",
-      "renamedSymbol": "P:ScrollBar.j(I)Z#0",
+      "renamedSymbol": "P:ScrollBar.isThumbHeld(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446557,7 +446837,7 @@
     },
     {
       "symbol": "P:na.a(IIBI)V#0",
-      "renamedSymbol": "P:VerticalScrollbar.a(IIBI)V#0",
+      "renamedSymbol": "P:VerticalScrollbar.layoutThumb(IIBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446568,7 +446848,7 @@
     },
     {
       "symbol": "P:na.a(IIBI)V#1",
-      "renamedSymbol": "P:VerticalScrollbar.a(IIBI)V#1",
+      "renamedSymbol": "P:VerticalScrollbar.layoutThumb(IIBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -446579,7 +446859,7 @@
     },
     {
       "symbol": "P:na.a(IIBI)V#2",
-      "renamedSymbol": "P:VerticalScrollbar.a(IIBI)V#2",
+      "renamedSymbol": "P:VerticalScrollbar.layoutThumb(IIBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -446590,7 +446870,7 @@
     },
     {
       "symbol": "P:na.a(IIBI)V#3",
-      "renamedSymbol": "P:VerticalScrollbar.a(IIBI)V#3",
+      "renamedSymbol": "P:VerticalScrollbar.layoutThumb(IIBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -446601,7 +446881,7 @@
     },
     {
       "symbol": "P:na.a(IZII)I#0",
-      "renamedSymbol": "P:VerticalScrollbar.a(IZII)I#0",
+      "renamedSymbol": "P:VerticalScrollbar.getDraggedScrollOffset(IZII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446612,7 +446892,7 @@
     },
     {
       "symbol": "P:na.a(IZII)I#1",
-      "renamedSymbol": "P:VerticalScrollbar.a(IZII)I#1",
+      "renamedSymbol": "P:VerticalScrollbar.getDraggedScrollOffset(IZII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -446623,7 +446903,7 @@
     },
     {
       "symbol": "P:na.a(IZII)I#2",
-      "renamedSymbol": "P:VerticalScrollbar.a(IZII)I#2",
+      "renamedSymbol": "P:VerticalScrollbar.getDraggedScrollOffset(IZII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -446634,7 +446914,7 @@
     },
     {
       "symbol": "P:na.a(IZII)I#3",
-      "renamedSymbol": "P:VerticalScrollbar.a(IZII)I#3",
+      "renamedSymbol": "P:VerticalScrollbar.getDraggedScrollOffset(IZII)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -446722,7 +447002,7 @@
     },
     {
       "symbol": "P:na.a(IZIIIIII)V#0",
-      "renamedSymbol": "P:VerticalScrollbar.a(IZIIIIII)V#0",
+      "renamedSymbol": "P:VerticalScrollbar.setLayout(IZIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446733,7 +447013,7 @@
     },
     {
       "symbol": "P:na.a(IZIIIIII)V#1",
-      "renamedSymbol": "P:VerticalScrollbar.a(IZIIIIII)V#1",
+      "renamedSymbol": "P:VerticalScrollbar.setLayout(IZIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -446744,7 +447024,7 @@
     },
     {
       "symbol": "P:na.a(IZIIIIII)V#2",
-      "renamedSymbol": "P:VerticalScrollbar.a(IZIIIIII)V#2",
+      "renamedSymbol": "P:VerticalScrollbar.setLayout(IZIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -446755,7 +447035,7 @@
     },
     {
       "symbol": "P:na.a(IZIIIIII)V#3",
-      "renamedSymbol": "P:VerticalScrollbar.a(IZIIIIII)V#3",
+      "renamedSymbol": "P:VerticalScrollbar.setLayout(IZIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -446766,7 +447046,7 @@
     },
     {
       "symbol": "P:na.a(IZIIIIII)V#4",
-      "renamedSymbol": "P:VerticalScrollbar.a(IZIIIIII)V#4",
+      "renamedSymbol": "P:VerticalScrollbar.setLayout(IZIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -446777,7 +447057,7 @@
     },
     {
       "symbol": "P:na.a(IZIIIIII)V#5",
-      "renamedSymbol": "P:VerticalScrollbar.a(IZIIIIII)V#5",
+      "renamedSymbol": "P:VerticalScrollbar.setLayout(IZIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -446788,7 +447068,7 @@
     },
     {
       "symbol": "P:na.a(IZIIIIII)V#6",
-      "renamedSymbol": "P:VerticalScrollbar.a(IZIIIIII)V#6",
+      "renamedSymbol": "P:VerticalScrollbar.setLayout(IZIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -446799,7 +447079,7 @@
     },
     {
       "symbol": "P:na.a(IZIIIIII)V#7",
-      "renamedSymbol": "P:VerticalScrollbar.a(IZIIIIII)V#7",
+      "renamedSymbol": "P:VerticalScrollbar.setLayout(IZIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -446810,7 +447090,7 @@
     },
     {
       "symbol": "P:na.b(I)Z#0",
-      "renamedSymbol": "P:VerticalScrollbar.b(I)Z#0",
+      "renamedSymbol": "P:VerticalScrollbar.pollPageUp(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446821,7 +447101,7 @@
     },
     {
       "symbol": "P:na.h(B)Z#0",
-      "renamedSymbol": "P:VerticalScrollbar.h(B)Z#0",
+      "renamedSymbol": "P:VerticalScrollbar.pollScrollDown(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446854,7 +447134,7 @@
     },
     {
       "symbol": "P:na.j(I)Z#0",
-      "renamedSymbol": "P:VerticalScrollbar.j(I)Z#0",
+      "renamedSymbol": "P:VerticalScrollbar.pollScrollUp(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446876,7 +447156,7 @@
     },
     {
       "symbol": "P:na.l(I)Z#0",
-      "renamedSymbol": "P:VerticalScrollbar.l(I)Z#0",
+      "renamedSymbol": "P:VerticalScrollbar.isThumbHeld(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446887,7 +447167,7 @@
     },
     {
       "symbol": "P:na.m(I)Z#0",
-      "renamedSymbol": "P:VerticalScrollbar.m(I)Z#0",
+      "renamedSymbol": "P:VerticalScrollbar.pollPageDown(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -450176,7 +450456,7 @@
     },
     {
       "symbol": "P:np.a(IBI)V#0",
-      "renamedSymbol": "P:ScrollPane.a(IBI)V#0",
+      "renamedSymbol": "P:ScrollPane.layoutViewport(IBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -450187,7 +450467,7 @@
     },
     {
       "symbol": "P:np.a(IBI)V#1",
-      "renamedSymbol": "P:ScrollPane.a(IBI)V#1",
+      "renamedSymbol": "P:ScrollPane.layoutViewport(IBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -450198,7 +450478,7 @@
     },
     {
       "symbol": "P:np.a(IBI)V#2",
-      "renamedSymbol": "P:ScrollPane.a(IBI)V#2",
+      "renamedSymbol": "P:ScrollPane.layoutViewport(IBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -450242,7 +450522,7 @@
     },
     {
       "symbol": "P:np.a(IIIIIII)V#0",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#0",
+      "renamedSymbol": "P:ScrollPane.setLayout(IIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -450253,7 +450533,7 @@
     },
     {
       "symbol": "P:np.a(IIIIIII)V#1",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#1",
+      "renamedSymbol": "P:ScrollPane.setLayout(IIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -450264,7 +450544,7 @@
     },
     {
       "symbol": "P:np.a(IIIIIII)V#2",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#2",
+      "renamedSymbol": "P:ScrollPane.setLayout(IIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -450275,7 +450555,7 @@
     },
     {
       "symbol": "P:np.a(IIIIIII)V#3",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#3",
+      "renamedSymbol": "P:ScrollPane.setLayout(IIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -450286,7 +450566,7 @@
     },
     {
       "symbol": "P:np.a(IIIIIII)V#4",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#4",
+      "renamedSymbol": "P:ScrollPane.setLayout(IIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -450297,7 +450577,7 @@
     },
     {
       "symbol": "P:np.a(IIIIIII)V#5",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#5",
+      "renamedSymbol": "P:ScrollPane.setLayout(IIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -450308,7 +450588,7 @@
     },
     {
       "symbol": "P:np.a(IIIIIII)V#6",
-      "renamedSymbol": "P:ScrollPane.a(IIIIIII)V#6",
+      "renamedSymbol": "P:ScrollPane.setLayout(IIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -450319,7 +450599,7 @@
     },
     {
       "symbol": "P:np.a(IIZI)V#0",
-      "renamedSymbol": "P:ScrollPane.a(IIZI)V#0",
+      "renamedSymbol": "P:ScrollPane.updateScroll(IIZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -450330,7 +450610,7 @@
     },
     {
       "symbol": "P:np.a(IIZI)V#1",
-      "renamedSymbol": "P:ScrollPane.a(IIZI)V#1",
+      "renamedSymbol": "P:ScrollPane.updateScroll(IIZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -450341,7 +450621,7 @@
     },
     {
       "symbol": "P:np.a(IIZI)V#2",
-      "renamedSymbol": "P:ScrollPane.a(IIZI)V#2",
+      "renamedSymbol": "P:ScrollPane.updateScroll(IIZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -450352,7 +450632,7 @@
     },
     {
       "symbol": "P:np.a(IIZI)V#3",
-      "renamedSymbol": "P:ScrollPane.a(IIZI)V#3",
+      "renamedSymbol": "P:ScrollPane.updateScroll(IIZI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -450506,7 +450786,7 @@
     },
     {
       "symbol": "P:np.a(ZIIIZ)V#0",
-      "renamedSymbol": "P:ScrollPane.a(ZIIIZ)V#0",
+      "renamedSymbol": "P:ScrollPane.advanceScroll(ZIIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -450517,7 +450797,7 @@
     },
     {
       "symbol": "P:np.a(ZIIIZ)V#1",
-      "renamedSymbol": "P:ScrollPane.a(ZIIIZ)V#1",
+      "renamedSymbol": "P:ScrollPane.advanceScroll(ZIIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -450528,7 +450808,7 @@
     },
     {
       "symbol": "P:np.a(ZIIIZ)V#2",
-      "renamedSymbol": "P:ScrollPane.a(ZIIIZ)V#2",
+      "renamedSymbol": "P:ScrollPane.advanceScroll(ZIIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -450539,7 +450819,7 @@
     },
     {
       "symbol": "P:np.a(ZIIIZ)V#3",
-      "renamedSymbol": "P:ScrollPane.a(ZIIIZ)V#3",
+      "renamedSymbol": "P:ScrollPane.advanceScroll(ZIIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -450550,7 +450830,7 @@
     },
     {
       "symbol": "P:np.a(ZIIIZ)V#4",
-      "renamedSymbol": "P:ScrollPane.a(ZIIIZ)V#4",
+      "renamedSymbol": "P:ScrollPane.advanceScroll(ZIIIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -479667,7 +479947,7 @@
     },
     {
       "symbol": "P:tk.a(III)V#0",
-      "renamedSymbol": "P:ScrollContainer.a(III)V#0",
+      "renamedSymbol": "P:ScrollContainer.layoutScrollbars(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -479678,7 +479958,7 @@
     },
     {
       "symbol": "P:tk.a(III)V#1",
-      "renamedSymbol": "P:ScrollContainer.a(III)V#1",
+      "renamedSymbol": "P:ScrollContainer.layoutScrollbars(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -479689,7 +479969,7 @@
     },
     {
       "symbol": "P:tk.a(III)V#2",
-      "renamedSymbol": "P:ScrollContainer.a(III)V#2",
+      "renamedSymbol": "P:ScrollContainer.layoutScrollbars(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -479700,7 +479980,7 @@
     },
     {
       "symbol": "P:tk.a(IIIBIII)V#0",
-      "renamedSymbol": "P:ScrollContainer.a(IIIBIII)V#0",
+      "renamedSymbol": "P:ScrollContainer.setLayout(IIIBIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -479711,7 +479991,7 @@
     },
     {
       "symbol": "P:tk.a(IIIBIII)V#1",
-      "renamedSymbol": "P:ScrollContainer.a(IIIBIII)V#1",
+      "renamedSymbol": "P:ScrollContainer.setLayout(IIIBIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -479722,7 +480002,7 @@
     },
     {
       "symbol": "P:tk.a(IIIBIII)V#2",
-      "renamedSymbol": "P:ScrollContainer.a(IIIBIII)V#2",
+      "renamedSymbol": "P:ScrollContainer.setLayout(IIIBIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -479733,7 +480013,7 @@
     },
     {
       "symbol": "P:tk.a(IIIBIII)V#3",
-      "renamedSymbol": "P:ScrollContainer.a(IIIBIII)V#3",
+      "renamedSymbol": "P:ScrollContainer.setLayout(IIIBIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -479744,7 +480024,7 @@
     },
     {
       "symbol": "P:tk.a(IIIBIII)V#4",
-      "renamedSymbol": "P:ScrollContainer.a(IIIBIII)V#4",
+      "renamedSymbol": "P:ScrollContainer.setLayout(IIIBIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -479755,7 +480035,7 @@
     },
     {
       "symbol": "P:tk.a(IIIBIII)V#5",
-      "renamedSymbol": "P:ScrollContainer.a(IIIBIII)V#5",
+      "renamedSymbol": "P:ScrollContainer.setLayout(IIIBIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -479766,7 +480046,7 @@
     },
     {
       "symbol": "P:tk.a(IIIBIII)V#6",
-      "renamedSymbol": "P:ScrollContainer.a(IIIBIII)V#6",
+      "renamedSymbol": "P:ScrollContainer.setLayout(IIIBIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -479777,7 +480057,7 @@
     },
     {
       "symbol": "P:tk.a(IZBI)V#0",
-      "renamedSymbol": "P:ScrollContainer.a(IZBI)V#0",
+      "renamedSymbol": "P:ScrollContainer.advanceScroll(IZBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -479788,7 +480068,7 @@
     },
     {
       "symbol": "P:tk.a(IZBI)V#1",
-      "renamedSymbol": "P:ScrollContainer.a(IZBI)V#1",
+      "renamedSymbol": "P:ScrollContainer.advanceScroll(IZBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -479799,7 +480079,7 @@
     },
     {
       "symbol": "P:tk.a(IZBI)V#2",
-      "renamedSymbol": "P:ScrollContainer.a(IZBI)V#2",
+      "renamedSymbol": "P:ScrollContainer.advanceScroll(IZBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -479810,7 +480090,7 @@
     },
     {
       "symbol": "P:tk.a(IZBI)V#3",
-      "renamedSymbol": "P:ScrollContainer.a(IZBI)V#3",
+      "renamedSymbol": "P:ScrollContainer.advanceScroll(IZBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -479821,7 +480101,7 @@
     },
     {
       "symbol": "P:tk.a(ZIIIII)V#0",
-      "renamedSymbol": "P:ScrollContainer.a(ZIIIII)V#0",
+      "renamedSymbol": "P:ScrollContainer.applyScrollInput(ZIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -479832,7 +480112,7 @@
     },
     {
       "symbol": "P:tk.a(ZIIIII)V#1",
-      "renamedSymbol": "P:ScrollContainer.a(ZIIIII)V#1",
+      "renamedSymbol": "P:ScrollContainer.applyScrollInput(ZIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -479843,7 +480123,7 @@
     },
     {
       "symbol": "P:tk.a(ZIIIII)V#2",
-      "renamedSymbol": "P:ScrollContainer.a(ZIIIII)V#2",
+      "renamedSymbol": "P:ScrollContainer.applyScrollInput(ZIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -479854,7 +480134,7 @@
     },
     {
       "symbol": "P:tk.a(ZIIIII)V#3",
-      "renamedSymbol": "P:ScrollContainer.a(ZIIIII)V#3",
+      "renamedSymbol": "P:ScrollContainer.applyScrollInput(ZIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -479865,7 +480145,7 @@
     },
     {
       "symbol": "P:tk.a(ZIIIII)V#4",
-      "renamedSymbol": "P:ScrollContainer.a(ZIIIII)V#4",
+      "renamedSymbol": "P:ScrollContainer.applyScrollInput(ZIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -479876,7 +480156,7 @@
     },
     {
       "symbol": "P:tk.a(ZIIIII)V#5",
-      "renamedSymbol": "P:ScrollContainer.a(ZIIIII)V#5",
+      "renamedSymbol": "P:ScrollContainer.applyScrollInput(ZIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -532545,7 +532825,7 @@
       "original": "al.java",
       "renamed": "FriendsListPanel.java",
       "inputSha256": "a70f51400f0fdb499e6e70b34856813f3b00202851b0c8d294a855b1b9ad7545",
-      "outputSha256": "3a581d64ad048822ffa4ae44815e642d6938eb504610ea725119ca1ed2c4c3ef",
+      "outputSha256": "55e10e06daada0f5696a61ca84721961f871d8028a6a491898a98eecd0e6a6d4",
       "edits": [
         {
           "start": 50,
@@ -532763,6 +533043,13 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "FriendsListPanel"
+        },
+        {
+          "start": 3435,
+          "end": 3436,
+          "symbol": "M:np.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "setLayout"
         },
         {
           "start": 3901,
@@ -540130,7 +540417,7 @@
       "original": "bb.java",
       "renamed": "CascadingMenu.java",
       "inputSha256": "96b15d1c980936197a2a6cae3f36ff1e7bc555f4dd014834b7b21674f9ac3774",
-      "outputSha256": "4fdf4057421bfcabea0dbc8f7b7300e1e495682137dcd56e862cd2a32a81fd84",
+      "outputSha256": "002e7acbc52c145aaed15fa3ea375a4285394f6075ee73a72f3b52e2fba5e337",
       "edits": [
         {
           "start": 50,
@@ -540168,6 +540455,20 @@
           "renamed": "CascadingMenu"
         },
         {
+          "start": 550,
+          "end": 551,
+          "symbol": "M:bb.h(B)I",
+          "original": "h",
+          "renamed": "getTotalWidth"
+        },
+        {
+          "start": 688,
+          "end": 689,
+          "symbol": "M:bb.h(B)I",
+          "original": "h",
+          "renamed": "getTotalWidth"
+        },
+        {
           "start": 771,
           "end": 773,
           "symbol": "C:vu",
@@ -540180,6 +540481,13 @@
           "symbol": "C:vu",
           "original": "vu",
           "renamed": "ContextMenuItem"
+        },
+        {
+          "start": 1723,
+          "end": 1724,
+          "symbol": "M:bb.b(IIB)V",
+          "original": "b",
+          "renamed": "processClicks"
         },
         {
           "start": 1798,
@@ -540208,6 +540516,27 @@
           "symbol": "C:bb",
           "original": "bb",
           "renamed": "CascadingMenu"
+        },
+        {
+          "start": 2130,
+          "end": 2131,
+          "symbol": "M:bb.a(IBII)V",
+          "original": "a",
+          "renamed": "selectItem"
+        },
+        {
+          "start": 2479,
+          "end": 2480,
+          "symbol": "M:bb.b(IIB)V",
+          "original": "b",
+          "renamed": "processClicks"
+        },
+        {
+          "start": 2581,
+          "end": 2582,
+          "symbol": "M:bb.b(II)V",
+          "original": "b",
+          "renamed": "setSlideProgress"
         },
         {
           "start": 2873,
@@ -540329,6 +540658,13 @@
           "renamed": "IterableDualLinkDeque"
         },
         {
+          "start": 5276,
+          "end": 5277,
+          "symbol": "M:bb.b(II)V",
+          "original": "b",
+          "renamed": "setSlideProgress"
+        },
+        {
           "start": 7165,
           "end": 7167,
           "symbol": "C:nb",
@@ -540341,6 +540677,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 7325,
+          "end": 7326,
+          "symbol": "M:bb.a(I)V",
+          "original": "a",
+          "renamed": "resetSelection"
         },
         {
           "start": 7371,
@@ -540362,6 +540705,76 @@
           "symbol": "C:vu",
           "original": "vu",
           "renamed": "ContextMenuItem"
+        },
+        {
+          "start": 7684,
+          "end": 7685,
+          "symbol": "M:bb.b(II)V",
+          "original": "b",
+          "renamed": "setSlideProgress"
+        },
+        {
+          "start": 7767,
+          "end": 7768,
+          "symbol": "M:bb.a(I)V",
+          "original": "a",
+          "renamed": "resetSelection"
+        },
+        {
+          "start": 7897,
+          "end": 7898,
+          "symbol": "M:bb.b(II)V",
+          "original": "b",
+          "renamed": "setSlideProgress"
+        },
+        {
+          "start": 8362,
+          "end": 8363,
+          "symbol": "M:bb.b(II)V",
+          "original": "b",
+          "renamed": "setSlideProgress"
+        },
+        {
+          "start": 8875,
+          "end": 8876,
+          "symbol": "M:bb.a(IBII)V",
+          "original": "a",
+          "renamed": "selectItem"
+        },
+        {
+          "start": 9064,
+          "end": 9065,
+          "symbol": "M:bb.a(I)V",
+          "original": "a",
+          "renamed": "resetSelection"
+        },
+        {
+          "start": 9088,
+          "end": 9089,
+          "symbol": "M:bb.b(II)V",
+          "original": "b",
+          "renamed": "setSlideProgress"
+        },
+        {
+          "start": 9180,
+          "end": 9181,
+          "symbol": "M:bb.a(I)V",
+          "original": "a",
+          "renamed": "resetSelection"
+        },
+        {
+          "start": 9206,
+          "end": 9207,
+          "symbol": "M:bb.b(II)V",
+          "original": "b",
+          "renamed": "setSlideProgress"
+        },
+        {
+          "start": 9375,
+          "end": 9376,
+          "symbol": "M:bb.b(II)V",
+          "original": "b",
+          "renamed": "setSlideProgress"
         },
         {
           "start": 9526,
@@ -540434,6 +540847,13 @@
           "renamed": "DelayedServerPacket"
         },
         {
+          "start": 10186,
+          "end": 10187,
+          "symbol": "M:bb.a(IIB)Z",
+          "original": "a",
+          "renamed": "handleKeyShortcut"
+        },
+        {
           "start": 10407,
           "end": 10409,
           "symbol": "C:cc",
@@ -540441,11 +540861,60 @@
           "renamed": "FixedQuaternion"
         },
         {
+          "start": 10587,
+          "end": 10588,
+          "symbol": "M:bb.a(I)V",
+          "original": "a",
+          "renamed": "resetSelection"
+        },
+        {
+          "start": 10613,
+          "end": 10614,
+          "symbol": "M:bb.b(II)V",
+          "original": "b",
+          "renamed": "setSlideProgress"
+        },
+        {
+          "start": 10693,
+          "end": 10694,
+          "symbol": "M:bb.a(IIB)Z",
+          "original": "a",
+          "renamed": "handleKeyShortcut"
+        },
+        {
           "start": 11027,
           "end": 11029,
           "symbol": "C:ml",
           "original": "ml",
           "renamed": "CipherPacketBuffer"
+        },
+        {
+          "start": 11196,
+          "end": 11197,
+          "symbol": "M:bb.a(IBII)V",
+          "original": "a",
+          "renamed": "selectItem"
+        },
+        {
+          "start": 11325,
+          "end": 11326,
+          "symbol": "M:bb.a(ZIIIII)V",
+          "original": "a",
+          "renamed": "setLayout"
+        },
+        {
+          "start": 11744,
+          "end": 11745,
+          "symbol": "M:bb.b(II)V",
+          "original": "b",
+          "renamed": "setSlideProgress"
+        },
+        {
+          "start": 12386,
+          "end": 12387,
+          "symbol": "M:bb.a(ZIIIII)V",
+          "original": "a",
+          "renamed": "setLayout"
         }
       ]
     },
@@ -540868,7 +541337,7 @@
       "original": "be.java",
       "renamed": "ConsolePanel.java",
       "inputSha256": "e93f54ea8a15dbba25ed430188a5361a10c57942fde1d2cc0edb7465bef096fa",
-      "outputSha256": "cc354cc9aaa23a6ddb267b633fd5dad61089059e7ffd8d4b5c8302fe4672e6f6",
+      "outputSha256": "49d66b35e7219d891f1594fbd3ddfc88510a74f1d280ce09983675a7244e348f",
       "edits": [
         {
           "start": 53,
@@ -541578,6 +542047,13 @@
           "renamed": "getCaretPosition"
         },
         {
+          "start": 17502,
+          "end": 17503,
+          "symbol": "M:np.a(IIZI)V",
+          "original": "a",
+          "renamed": "updateScroll"
+        },
+        {
           "start": 17518,
           "end": 17520,
           "symbol": "C:id",
@@ -541746,6 +542222,13 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 18962,
+          "end": 18963,
+          "symbol": "M:np.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "setLayout"
+        },
+        {
           "start": 19050,
           "end": 19051,
           "symbol": "M:hd.a(BLhd;)V",
@@ -541821,7 +542304,7 @@
       "original": "bf.java",
       "renamed": "LineupView.java",
       "inputSha256": "50140a75f23ed37236da8d4890a8149e39cdc6edfd658b68d1d8426a89d8e1b3",
-      "outputSha256": "bf0489591ed7bee12b7ac54ab15ed88ac2ae796aa58329d67cad7937aed95d48",
+      "outputSha256": "19641a6d220d7e6f0efb3a6903320a9fe57754c31788d9b513225470a6d59018",
       "edits": [
         {
           "start": 50,
@@ -542431,6 +542914,13 @@
           "symbol": "C:vc",
           "original": "vc",
           "renamed": "ReceivedAuctionItem"
+        },
+        {
+          "start": 12360,
+          "end": 12361,
+          "symbol": "M:gu.a(IIIII)V",
+          "original": "a",
+          "renamed": "layoutItems"
         },
         {
           "start": 12829,
@@ -544335,7 +544825,7 @@
       "original": "bn.java",
       "renamed": "LeaguesScreen.java",
       "inputSha256": "f4f24a5ffbb3afa4a110f68315545723dcf27763f9b8d03bcb9b123588d36179",
-      "outputSha256": "d1418b311a9593e8c11c34a53280413fe8dae214948429bb0f3887b1c96d64b7",
+      "outputSha256": "071ac6f0629a97d226290bea91160c1bbb0fde08150d05e6b2f4bb78109e348e",
       "edits": [
         {
           "start": 50,
@@ -544765,6 +545255,13 @@
           "renamed": "AuctionTableWidget"
         },
         {
+          "start": 3811,
+          "end": 3812,
+          "symbol": "M:tk.a(IZBI)V",
+          "original": "a",
+          "renamed": "advanceScroll"
+        },
+        {
           "start": 3818,
           "end": 3820,
           "symbol": "C:id",
@@ -545057,6 +545554,13 @@
           "symbol": "C:jh",
           "original": "jh",
           "renamed": "AuctionTableWidget"
+        },
+        {
+          "start": 5603,
+          "end": 5604,
+          "symbol": "M:tk.a(IIIBIII)V",
+          "original": "a",
+          "renamed": "setLayout"
         },
         {
           "start": 5651,
@@ -546675,7 +547179,7 @@
       "original": "bp.java",
       "renamed": "ColumnTableWidget.java",
       "inputSha256": "8ef6f26b8eb0108ee4ac4e3f1e23f8dd238f060b9a5bfbcd26bcee2e21e17b7e",
-      "outputSha256": "ecb0f61e181aa73067eaf2afe33e5cf936d5f58bd691168888e99885dce21568",
+      "outputSha256": "467333fe80e81ce331c6e1240856f9b53452c354c784e065a2a0d9edf8a3133f",
       "edits": [
         {
           "start": 44,
@@ -546746,6 +547250,13 @@
           "symbol": "C:im",
           "original": "im",
           "renamed": "ListRow"
+        },
+        {
+          "start": 509,
+          "end": 510,
+          "symbol": "M:tk.a(IZBI)V",
+          "original": "a",
+          "renamed": "advanceScroll"
         },
         {
           "start": 516,
@@ -546921,6 +547432,20 @@
           "symbol": "C:im",
           "original": "im",
           "renamed": "ListRow"
+        },
+        {
+          "start": 7076,
+          "end": 7077,
+          "symbol": "M:tk.a(IIIBIII)V",
+          "original": "a",
+          "renamed": "setLayout"
+        },
+        {
+          "start": 7284,
+          "end": 7285,
+          "symbol": "M:ji.b(IIII)V",
+          "original": "b",
+          "renamed": "layoutThumb"
         },
         {
           "start": 7679,
@@ -547306,7 +547831,7 @@
       "original": "bq.java",
       "renamed": "bq.java",
       "inputSha256": "58fd9b6b20c51ed7f6273a261bb5574224bf2e017ae157256c58831781214db0",
-      "outputSha256": "f2bb3c21283bce0f53475dcffb315dd1d740264f45ca4a18b37e1b8538a97f9b",
+      "outputSha256": "98c6a0809926285c170904d0129334ebfe607e468393f9ae28eac9171101e7f0",
       "edits": [
         {
           "start": 93,
@@ -547475,6 +548000,13 @@
           "symbol": "C:bs",
           "original": "bs",
           "renamed": "ClientException"
+        },
+        {
+          "start": 1927,
+          "end": 1928,
+          "symbol": "M:np.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "setLayout"
         },
         {
           "start": 1956,
@@ -547777,7 +548309,7 @@
       "original": "bs.java",
       "renamed": "ClientException.java",
       "inputSha256": "92debfec2d505970d524aec8b5d7c6a4022140ade4e2e7fc23fa5f349d9afcd2",
-      "outputSha256": "745fb7b313735dc0d4abc1e826166f4005dac033749ec80e35d170a11ef73ca6",
+      "outputSha256": "53b966f70a8808bf93a060ee0dcac909340cf61f1564030e81008fe7213daa88",
       "edits": [
         {
           "start": 50,
@@ -547848,6 +548380,13 @@
           "symbol": "C:bf",
           "original": "bf",
           "renamed": "LineupView"
+        },
+        {
+          "start": 489,
+          "end": 490,
+          "symbol": "M:np.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "setLayout"
         },
         {
           "start": 508,
@@ -549377,7 +549916,7 @@
       "original": "bv.java",
       "renamed": "AccountNameAvailabilityValidator.java",
       "inputSha256": "3156a08ac3eb51189247f5a387742e91301d68b8ef2b3352bf57bf108d908b11",
-      "outputSha256": "4c865c77b56fae71ae0875895e1a75bd58e84154335e21da1a33c4a5b21d3313",
+      "outputSha256": "cf7e0a02f7ba09a9b66934fb9e754abc72db96e21513c9636f9e483fc241abd4",
       "edits": [
         {
           "start": 50,
@@ -549651,6 +550190,13 @@
           "symbol": "C:wi",
           "original": "wi",
           "renamed": "TextButton"
+        },
+        {
+          "start": 6834,
+          "end": 6835,
+          "symbol": "M:gu.a(IIIII)V",
+          "original": "a",
+          "renamed": "layoutItems"
         },
         {
           "start": 6936,
@@ -550925,7 +551471,7 @@
       "original": "cf.java",
       "renamed": "RankingRowNode.java",
       "inputSha256": "60f9ccb7b77f91c9f67ca4b96108b8cbf2bcbebf18a0d3be415e9cf5164d3e4c",
-      "outputSha256": "d09a697dea94198e9858e6f5d3063fc796340a21dfe08428e7116c7c0a7e28dd",
+      "outputSha256": "8f806b518de1593b0a92a38f916ce700c824b4e4b68c4bd4fac2e6bb4c46c6fe",
       "edits": [
         {
           "start": 50,
@@ -551038,6 +551584,13 @@
           "symbol": "C:qa",
           "original": "qa",
           "renamed": "LeaguesHelpScreen"
+        },
+        {
+          "start": 3347,
+          "end": 3348,
+          "symbol": "M:bb.a(ZIIIII)V",
+          "original": "a",
+          "renamed": "setLayout"
         },
         {
           "start": 3373,
@@ -571875,7 +572428,7 @@
       "original": "ek.java",
       "renamed": "TrinketShopDialog.java",
       "inputSha256": "6838375e63b9b37cf3ac50f9323833681f3f0e7ae78a9b7ab391c7d07e8b6db3",
-      "outputSha256": "2fc53ca98386d0ecbd63b6471e2ffecbf1d7260eb599793ce0c59a59166b3964",
+      "outputSha256": "ffc4a48a89c4ea47faacf8c25ca696b951a7955634b506a168cecc6112032648",
       "edits": [
         {
           "start": 50,
@@ -572165,6 +572718,13 @@
           "renamed": "TrinketTile"
         },
         {
+          "start": 4701,
+          "end": 4702,
+          "symbol": "M:tk.a(IZBI)V",
+          "original": "a",
+          "renamed": "advanceScroll"
+        },
+        {
           "start": 4703,
           "end": 4705,
           "symbol": "C:id",
@@ -572219,6 +572779,13 @@
           "symbol": "C:be",
           "original": "be",
           "renamed": "ConsolePanel"
+        },
+        {
+          "start": 6079,
+          "end": 6080,
+          "symbol": "M:tk.a(IIIBIII)V",
+          "original": "a",
+          "renamed": "setLayout"
         },
         {
           "start": 6308,
@@ -578644,7 +579211,7 @@
       "original": "fa.java",
       "renamed": "fa.java",
       "inputSha256": "b2a1004735ff620171335fd5ba1cee91314d5b4a22e63d72f845df6f5fe92aac",
-      "outputSha256": "2516589186a02543a84b572f877220e5593754751fd741b420d0b24c3c1a4c47",
+      "outputSha256": "dd1464f5a269d93cc87a57e3acd6bf4aa85178f7b7be0cd3aa2bd4e5f6018306",
       "edits": [
         {
           "start": 61,
@@ -578659,6 +579226,13 @@
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "DebugConsole"
+        },
+        {
+          "start": 364,
+          "end": 365,
+          "symbol": "M:bb.a(I)V",
+          "original": "a",
+          "renamed": "resetSelection"
         },
         {
           "start": 448,
@@ -580902,7 +581476,7 @@
       "original": "fm.java",
       "renamed": "AchievementsScreen.java",
       "inputSha256": "0c9b1aa687aab76301f463ee3a50f8cc09af7fd9eb3f512922aacc3e8f5f7ff7",
-      "outputSha256": "410439ff96b844026b2f31d914e4cd95ba275d44eb18d68aff560c2df50c05bc",
+      "outputSha256": "f7d003dd663a7d54699ed389889ffb41270e5c0ec9380bd5eba645fa1f8704fe",
       "edits": [
         {
           "start": 50,
@@ -581519,6 +582093,13 @@
           "symbol": "C:vu",
           "original": "vu",
           "renamed": "ContextMenuItem"
+        },
+        {
+          "start": 8628,
+          "end": 8629,
+          "symbol": "M:tk.a(IIIBIII)V",
+          "original": "a",
+          "renamed": "setLayout"
         },
         {
           "start": 8709,
@@ -596817,7 +597398,7 @@
       "original": "gu.java",
       "renamed": "ContextMenu.java",
       "inputSha256": "49d22f637607175482e43a0b337cb50f3aca5de9483830be12ecda6d3018d627",
-      "outputSha256": "1958c723ff99b1d1a2096d1d18902afadbbe174910b7abf60cf9b207e36e23e8",
+      "outputSha256": "f16a0dcff6812e1e73085420005f7082f183dc10514a6ce19b0568760cf4863b",
       "edits": [
         {
           "start": 50,
@@ -596888,6 +597469,13 @@
           "symbol": "C:wj",
           "original": "wj",
           "renamed": "WidgetContainer"
+        },
+        {
+          "start": 1416,
+          "end": 1417,
+          "symbol": "M:gu.a(IIIII)V",
+          "original": "a",
+          "renamed": "layoutItems"
         },
         {
           "start": 1762,
@@ -597007,6 +597595,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 3598,
+          "end": 3599,
+          "symbol": "M:gu.a(I)Z",
+          "original": "a",
+          "renamed": "consumeSelection"
         },
         {
           "start": 3699,
@@ -623280,7 +623875,7 @@
       "original": "jg.java",
       "renamed": "DraggableWidget.java",
       "inputSha256": "3c2c8b6ac21d16bdc3d9ee2326b2305e8b97115520b6e4fbad7b099d389c1d0a",
-      "outputSha256": "4d9eb7ddd822f9a6b48f0e66d6d03c947cf3f30467e4174e608d36baf70d400c",
+      "outputSha256": "a7c9b0d0ed33542fcfa3c2678a657cea10c72ffb8faf9ceac7913c16bd859c94",
       "edits": [
         {
           "start": 71,
@@ -623689,11 +624284,25 @@
           "renamed": "WidgetContainer"
         },
         {
+          "start": 12054,
+          "end": 12055,
+          "symbol": "M:bb.b(IIB)V",
+          "original": "b",
+          "renamed": "processClicks"
+        },
+        {
           "start": 12179,
           "end": 12181,
           "symbol": "C:qa",
           "original": "qa",
           "renamed": "LeaguesHelpScreen"
+        },
+        {
+          "start": 12244,
+          "end": 12245,
+          "symbol": "M:bb.h(B)I",
+          "original": "h",
+          "renamed": "getTotalWidth"
         },
         {
           "start": 12315,
@@ -624087,7 +624696,7 @@
       "original": "ji.java",
       "renamed": "ScrollBar.java",
       "inputSha256": "fd180c93072c372c0bb8009b6a737b26a297dfd48e0860da6110bb334e6b2cfd",
-      "outputSha256": "d1e5f31d4de7fa3fc449ce07ed798de5739fc6a5e1986e956be507144d035ba7",
+      "outputSha256": "92c328fc49ff3a9f3558e894a3ae12e9c704b978deb7df40ccbae47d7dc1d169",
       "edits": [
         {
           "start": 50,
@@ -624146,6 +624755,41 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 367,
+          "end": 368,
+          "symbol": "M:ji.a(IIZI)I",
+          "original": "a",
+          "renamed": "getDraggedOffsetHorizontal"
+        },
+        {
+          "start": 1154,
+          "end": 1155,
+          "symbol": "M:ji.b(I)Z",
+          "original": "b",
+          "renamed": "pollScrollBackward"
+        },
+        {
+          "start": 1366,
+          "end": 1367,
+          "symbol": "M:ji.j(I)Z",
+          "original": "j",
+          "renamed": "isThumbHeld"
+        },
+        {
+          "start": 1672,
+          "end": 1673,
+          "symbol": "M:ji.j(I)Z",
+          "original": "j",
+          "renamed": "isThumbHeld"
+        },
+        {
+          "start": 1760,
+          "end": 1761,
+          "symbol": "M:ji.h(I)Z",
+          "original": "h",
+          "renamed": "pollScrollForward"
+        },
+        {
           "start": 2307,
           "end": 2309,
           "symbol": "M:ji.<init>(JLji;Z)V",
@@ -624158,6 +624802,27 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "ScrollBar"
+        },
+        {
+          "start": 2472,
+          "end": 2473,
+          "symbol": "M:ji.b(IIII)V",
+          "original": "b",
+          "renamed": "layoutThumb"
+        },
+        {
+          "start": 2568,
+          "end": 2569,
+          "symbol": "M:ji.a(ZIII)V",
+          "original": "a",
+          "renamed": "layoutVertical"
+        },
+        {
+          "start": 2740,
+          "end": 2741,
+          "symbol": "M:ji.c(IIII)V",
+          "original": "c",
+          "renamed": "layoutHorizontal"
         },
         {
           "start": 3142,
@@ -624482,6 +625147,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 7463,
+          "end": 7464,
+          "symbol": "M:ji.c(IIII)V",
+          "original": "c",
+          "renamed": "layoutHorizontal"
+        },
+        {
           "start": 7658,
           "end": 7660,
           "symbol": "C:hd",
@@ -624615,6 +625287,13 @@
           "renamed": "ScrollBar"
         },
         {
+          "start": 14267,
+          "end": 14268,
+          "symbol": "M:ji.i(I)Z",
+          "original": "i",
+          "renamed": "pollPageForward"
+        },
+        {
           "start": 14699,
           "end": 14700,
           "symbol": "C:n",
@@ -624655,6 +625334,34 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 15103,
+          "end": 15104,
+          "symbol": "M:ji.a(IZBI)I",
+          "original": "a",
+          "renamed": "getDraggedOffsetVertical"
+        },
+        {
+          "start": 15898,
+          "end": 15899,
+          "symbol": "M:ji.c(IIII)V",
+          "original": "c",
+          "renamed": "layoutHorizontal"
+        },
+        {
+          "start": 15965,
+          "end": 15966,
+          "symbol": "M:ji.j(I)Z",
+          "original": "j",
+          "renamed": "isThumbHeld"
+        },
+        {
+          "start": 16131,
+          "end": 16132,
+          "symbol": "M:ji.a(ZIII)V",
+          "original": "a",
+          "renamed": "layoutVertical"
         },
         {
           "start": 16361,
@@ -624781,6 +625488,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 21270,
+          "end": 21271,
+          "symbol": "M:ji.c(Z)Z",
+          "original": "c",
+          "renamed": "pollPageBackward"
         },
         {
           "start": 21629,
@@ -632095,7 +632809,7 @@
       "original": "kd.java",
       "renamed": "DebugConsole.java",
       "inputSha256": "8324b03fbf81a74085513a50b4be9f3cd503fd5f1c245f64b224e773bcbb9e63",
-      "outputSha256": "6bdec6b15adc6040d20b0333e1c67b927c2cb91d4119053147be2cddfd5cbebf",
+      "outputSha256": "dbb092f0d9acbd129f701f84ac323c2da02cfb66af38a81c5b3ba3a8de1e5b80",
       "edits": [
         {
           "start": 71,
@@ -632964,6 +633678,13 @@
           "symbol": "C:vc",
           "original": "vc",
           "renamed": "ReceivedAuctionItem"
+        },
+        {
+          "start": 21229,
+          "end": 21230,
+          "symbol": "M:gu.a(IIIII)V",
+          "original": "a",
+          "renamed": "layoutItems"
         },
         {
           "start": 22107,
@@ -637632,7 +638353,7 @@
       "original": "kr.java",
       "renamed": "kr.java",
       "inputSha256": "76adb6d3e67943a72cb40114ea112fbf6fe44e0517d18dedfefb4a8aed81caff",
-      "outputSha256": "699c9c77e57071d9c88a91762d7d4a85be26b3317d7a2a70faee3749c6cbcac5",
+      "outputSha256": "b89ece2f3756e4d002f842b6617b17509bce994f8d217729e5a06db93206509d",
       "edits": [
         {
           "start": 121,
@@ -638067,6 +638788,13 @@
           "symbol": "C:wi",
           "original": "wi",
           "renamed": "TextButton"
+        },
+        {
+          "start": 3842,
+          "end": 3843,
+          "symbol": "M:gu.a(IIIII)V",
+          "original": "a",
+          "renamed": "layoutItems"
         },
         {
           "start": 3942,
@@ -653551,7 +654279,7 @@
       "original": "mf.java",
       "renamed": "SquadGridWidget.java",
       "inputSha256": "3e6c7471ee75dfd91fe741ab3ae4ac73acebe34cddb939de76d94c19d892a8af",
-      "outputSha256": "61ce8dfb24e5f4e76d8e6611a2f8920dee84a740f35b93328fceaa1d72ef72af",
+      "outputSha256": "0e95ea07d360f9d5a2ad0f241259bccbec17478f3e694807add42f071120daee",
       "edits": [
         {
           "start": 50,
@@ -653965,6 +654693,13 @@
           "symbol": "C:jh",
           "original": "jh",
           "renamed": "AuctionTableWidget"
+        },
+        {
+          "start": 7960,
+          "end": 7961,
+          "symbol": "M:tk.a(IIIBIII)V",
+          "original": "a",
+          "renamed": "setLayout"
         },
         {
           "start": 8012,
@@ -655829,6 +656564,13 @@
           "renamed": "AuctionTableWidget"
         },
         {
+          "start": 27868,
+          "end": 27869,
+          "symbol": "M:tk.a(IIIBIII)V",
+          "original": "a",
+          "renamed": "setLayout"
+        },
+        {
           "start": 27920,
           "end": 27922,
           "symbol": "C:jh",
@@ -657281,7 +658023,7 @@
       "original": "ml.java",
       "renamed": "CipherPacketBuffer.java",
       "inputSha256": "58a50040d505d76e3de5daa783402d7710eea499e43a2527291f8c6212b2b50e",
-      "outputSha256": "0f4ae9e6e8e0baa6e0afe650b5d1122303ace6428a1e7d48304ea8c1e0ab49d6",
+      "outputSha256": "0467b0d3f7bd1a09677b09e55ed95db3ca4b4ba7c2a9f6d8ad83f87efe29a430",
       "edits": [
         {
           "start": 50,
@@ -657716,6 +658458,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "ShopPlayerSlot"
+        },
+        {
+          "start": 7091,
+          "end": 7092,
+          "symbol": "M:np.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "setLayout"
         },
         {
           "start": 7170,
@@ -661248,7 +661997,7 @@
       "original": "na.java",
       "renamed": "VerticalScrollbar.java",
       "inputSha256": "242b57878fe39b3136bbaaa10186fde3be459b8a7900ff423ac4409bb555b66b",
-      "outputSha256": "569d2cda9205042aa9623ebdc57bbd4efa84081393a3ef44904dd4e66e410295",
+      "outputSha256": "5da4842136c2e19e7d1a2dc515da0d11a391141d44531b19c7649bfee3d55e3d",
       "edits": [
         {
           "start": 50,
@@ -661468,6 +662217,27 @@
           "renamed": "wrapException"
         },
         {
+          "start": 3042,
+          "end": 3043,
+          "symbol": "M:na.a(IZII)I",
+          "original": "a",
+          "renamed": "getDraggedScrollOffset"
+        },
+        {
+          "start": 3861,
+          "end": 3862,
+          "symbol": "M:na.b(I)Z",
+          "original": "b",
+          "renamed": "pollPageUp"
+        },
+        {
+          "start": 3923,
+          "end": 3924,
+          "symbol": "M:na.m(I)Z",
+          "original": "m",
+          "renamed": "pollPageDown"
+        },
+        {
           "start": 4258,
           "end": 4259,
           "symbol": "C:n",
@@ -661475,11 +662245,32 @@
           "renamed": "ArchiveManager"
         },
         {
+          "start": 4430,
+          "end": 4431,
+          "symbol": "M:na.m(I)Z",
+          "original": "m",
+          "renamed": "pollPageDown"
+        },
+        {
           "start": 4844,
           "end": 4845,
           "symbol": "C:n",
           "original": "n",
           "renamed": "ArchiveManager"
+        },
+        {
+          "start": 5021,
+          "end": 5022,
+          "symbol": "M:na.a(IZIIIIII)V",
+          "original": "a",
+          "renamed": "setLayout"
+        },
+        {
+          "start": 5314,
+          "end": 5315,
+          "symbol": "M:na.a(IIBI)V",
+          "original": "a",
+          "renamed": "layoutThumb"
         },
         {
           "start": 5405,
@@ -661608,6 +662399,20 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 5831,
+          "end": 5832,
+          "symbol": "M:na.j(I)Z",
+          "original": "j",
+          "renamed": "pollScrollUp"
+        },
+        {
+          "start": 6509,
+          "end": 6510,
+          "symbol": "M:na.h(B)Z",
+          "original": "h",
+          "renamed": "pollScrollDown"
+        },
+        {
           "start": 6939,
           "end": 6941,
           "symbol": "C:hd",
@@ -661627,6 +662432,13 @@
           "symbol": "C:na",
           "original": "na",
           "renamed": "VerticalScrollbar"
+        },
+        {
+          "start": 7157,
+          "end": 7158,
+          "symbol": "M:na.a(IIBI)V",
+          "original": "a",
+          "renamed": "layoutThumb"
         },
         {
           "start": 7218,
@@ -661893,6 +662705,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 12031,
+          "end": 12032,
+          "symbol": "M:na.l(I)Z",
+          "original": "l",
+          "renamed": "isThumbHeld"
         },
         {
           "start": 12103,
@@ -663800,7 +664619,7 @@
       "original": "ne.java",
       "renamed": "GameplayHelpScreen.java",
       "inputSha256": "ebe21bfb602be8a898d012a1bd68cfeed7a01a3ca7c6f45f8d7a9e9a4c424e64",
-      "outputSha256": "e7fed7ca0d6ccbfc04faead14bbbd492b8c0f431ad28deaaca30135ea9dbb1d6",
+      "outputSha256": "d725418618b97249ed717b1f71398ec53443adc8255ff3c95987af94c0684e01",
       "edits": [
         {
           "start": 71,
@@ -664410,6 +665229,13 @@
           "symbol": "F:qt.field_j:I",
           "original": "field_j",
           "renamed": "slideOffsetX"
+        },
+        {
+          "start": 6159,
+          "end": 6160,
+          "symbol": "M:tk.a(IZBI)V",
+          "original": "a",
+          "renamed": "advanceScroll"
         },
         {
           "start": 6166,
@@ -665294,6 +666120,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 14404,
+          "end": 14405,
+          "symbol": "M:tk.a(IIIBIII)V",
+          "original": "a",
+          "renamed": "setLayout"
+        },
+        {
           "start": 14421,
           "end": 14428,
           "symbol": "F:qt.field_j:I",
@@ -665775,6 +666608,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "IsSixCommand"
+        },
+        {
+          "start": 23309,
+          "end": 23310,
+          "symbol": "M:tk.a(III)V",
+          "original": "a",
+          "renamed": "layoutScrollbars"
         },
         {
           "start": 23340,
@@ -671077,7 +671917,7 @@
       "original": "np.java",
       "renamed": "ScrollPane.java",
       "inputSha256": "5d905b086d9b64e8b9ee7699bf1bd31e3e04d67c29a39bbb0f5158492fa1656b",
-      "outputSha256": "7f5433a32f767bf987e51101801d38ffae67c2547563c279d1b19447e3b4d7f2",
+      "outputSha256": "32a17c006aa8b1ec772701828a4ceeff172451663f753a626b6d01190f6f5717",
       "edits": [
         {
           "start": 50,
@@ -671136,11 +671976,88 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 378,
+          "end": 379,
+          "symbol": "M:np.a(ZIIIZ)V",
+          "original": "a",
+          "renamed": "advanceScroll"
+        },
+        {
+          "start": 476,
+          "end": 477,
+          "symbol": "M:na.j(I)Z",
+          "original": "j",
+          "renamed": "pollScrollUp"
+        },
+        {
+          "start": 595,
+          "end": 596,
+          "symbol": "M:na.h(B)Z",
+          "original": "h",
+          "renamed": "pollScrollDown"
+        },
+        {
+          "start": 714,
+          "end": 715,
+          "symbol": "M:na.b(I)Z",
+          "original": "b",
+          "renamed": "pollPageUp"
+        },
+        {
+          "start": 828,
+          "end": 829,
+          "symbol": "M:na.m(I)Z",
+          "original": "m",
+          "renamed": "pollPageDown"
+        },
+        {
+          "start": 2516,
+          "end": 2517,
+          "symbol": "M:na.l(I)Z",
+          "original": "l",
+          "renamed": "isThumbHeld"
+        },
+        {
+          "start": 2584,
+          "end": 2585,
+          "symbol": "M:na.a(IZII)I",
+          "original": "a",
+          "renamed": "getDraggedScrollOffset"
+        },
+        {
+          "start": 2741,
+          "end": 2742,
+          "symbol": "M:na.a(IIBI)V",
+          "original": "a",
+          "renamed": "layoutThumb"
+        },
+        {
           "start": 2875,
           "end": 2877,
           "symbol": "C:np",
           "original": "np",
           "renamed": "ScrollPane"
+        },
+        {
+          "start": 3361,
+          "end": 3362,
+          "symbol": "M:na.l(I)Z",
+          "original": "l",
+          "renamed": "isThumbHeld"
+        },
+        {
+          "start": 3429,
+          "end": 3430,
+          "symbol": "M:na.a(IZII)I",
+          "original": "a",
+          "renamed": "getDraggedScrollOffset"
+        },
+        {
+          "start": 3586,
+          "end": 3587,
+          "symbol": "M:na.a(IIBI)V",
+          "original": "a",
+          "renamed": "layoutThumb"
         },
         {
           "start": 3720,
@@ -671150,11 +672067,53 @@
           "renamed": "ScrollPane"
         },
         {
+          "start": 3972,
+          "end": 3973,
+          "symbol": "M:na.l(I)Z",
+          "original": "l",
+          "renamed": "isThumbHeld"
+        },
+        {
+          "start": 4036,
+          "end": 4037,
+          "symbol": "M:na.a(IZII)I",
+          "original": "a",
+          "renamed": "getDraggedScrollOffset"
+        },
+        {
+          "start": 4181,
+          "end": 4182,
+          "symbol": "M:na.a(IIBI)V",
+          "original": "a",
+          "renamed": "layoutThumb"
+        },
+        {
           "start": 4342,
           "end": 4344,
           "symbol": "C:np",
           "original": "np",
           "renamed": "ScrollPane"
+        },
+        {
+          "start": 4886,
+          "end": 4887,
+          "symbol": "M:na.l(I)Z",
+          "original": "l",
+          "renamed": "isThumbHeld"
+        },
+        {
+          "start": 4950,
+          "end": 4951,
+          "symbol": "M:na.a(IZII)I",
+          "original": "a",
+          "renamed": "getDraggedScrollOffset"
+        },
+        {
+          "start": 5095,
+          "end": 5096,
+          "symbol": "M:na.a(IIBI)V",
+          "original": "a",
+          "renamed": "layoutThumb"
         },
         {
           "start": 5256,
@@ -671164,6 +672123,27 @@
           "renamed": "ScrollPane"
         },
         {
+          "start": 5696,
+          "end": 5697,
+          "symbol": "M:na.l(I)Z",
+          "original": "l",
+          "renamed": "isThumbHeld"
+        },
+        {
+          "start": 5760,
+          "end": 5761,
+          "symbol": "M:na.a(IZII)I",
+          "original": "a",
+          "renamed": "getDraggedScrollOffset"
+        },
+        {
+          "start": 5905,
+          "end": 5906,
+          "symbol": "M:na.a(IIBI)V",
+          "original": "a",
+          "renamed": "layoutThumb"
+        },
+        {
           "start": 6066,
           "end": 6068,
           "symbol": "C:np",
@@ -671171,11 +672151,53 @@
           "renamed": "ScrollPane"
         },
         {
+          "start": 6339,
+          "end": 6340,
+          "symbol": "M:na.l(I)Z",
+          "original": "l",
+          "renamed": "isThumbHeld"
+        },
+        {
+          "start": 6403,
+          "end": 6404,
+          "symbol": "M:na.a(IZII)I",
+          "original": "a",
+          "renamed": "getDraggedScrollOffset"
+        },
+        {
+          "start": 6548,
+          "end": 6549,
+          "symbol": "M:na.a(IIBI)V",
+          "original": "a",
+          "renamed": "layoutThumb"
+        },
+        {
           "start": 6709,
           "end": 6711,
           "symbol": "C:np",
           "original": "np",
           "renamed": "ScrollPane"
+        },
+        {
+          "start": 6923,
+          "end": 6924,
+          "symbol": "M:na.l(I)Z",
+          "original": "l",
+          "renamed": "isThumbHeld"
+        },
+        {
+          "start": 6983,
+          "end": 6984,
+          "symbol": "M:na.a(IZII)I",
+          "original": "a",
+          "renamed": "getDraggedScrollOffset"
+        },
+        {
+          "start": 7116,
+          "end": 7117,
+          "symbol": "M:na.a(IIBI)V",
+          "original": "a",
+          "renamed": "layoutThumb"
         },
         {
           "start": 7234,
@@ -671190,6 +672212,34 @@
           "symbol": "C:mc",
           "original": "mc",
           "renamed": "TickClock"
+        },
+        {
+          "start": 7421,
+          "end": 7422,
+          "symbol": "M:np.a(IBI)V",
+          "original": "a",
+          "renamed": "layoutViewport"
+        },
+        {
+          "start": 7743,
+          "end": 7744,
+          "symbol": "M:na.a(IZIIIIII)V",
+          "original": "a",
+          "renamed": "setLayout"
+        },
+        {
+          "start": 7896,
+          "end": 7897,
+          "symbol": "M:np.a(IIZI)V",
+          "original": "a",
+          "renamed": "updateScroll"
+        },
+        {
+          "start": 7965,
+          "end": 7966,
+          "symbol": "M:np.a(ZIIIZ)V",
+          "original": "a",
+          "renamed": "advanceScroll"
         },
         {
           "start": 8072,
@@ -671344,6 +672394,34 @@
           "symbol": "C:np",
           "original": "np",
           "renamed": "ScrollPane"
+        },
+        {
+          "start": 10411,
+          "end": 10412,
+          "symbol": "M:np.a(ZIIIZ)V",
+          "original": "a",
+          "renamed": "advanceScroll"
+        },
+        {
+          "start": 10647,
+          "end": 10648,
+          "symbol": "M:np.a(ZIIIZ)V",
+          "original": "a",
+          "renamed": "advanceScroll"
+        },
+        {
+          "start": 10885,
+          "end": 10886,
+          "symbol": "M:np.a(ZIIIZ)V",
+          "original": "a",
+          "renamed": "advanceScroll"
+        },
+        {
+          "start": 11094,
+          "end": 11095,
+          "symbol": "M:np.a(ZIIIZ)V",
+          "original": "a",
+          "renamed": "advanceScroll"
         },
         {
           "start": 11407,
@@ -671519,6 +672597,20 @@
           "symbol": "C:bn",
           "original": "bn",
           "renamed": "LeaguesScreen"
+        },
+        {
+          "start": 12371,
+          "end": 12372,
+          "symbol": "M:np.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "setLayout"
+        },
+        {
+          "start": 12597,
+          "end": 12598,
+          "symbol": "M:np.a(IBI)V",
+          "original": "a",
+          "renamed": "layoutViewport"
         },
         {
           "start": 12665,
@@ -683996,7 +685088,7 @@
       "original": "og.java",
       "renamed": "RasterBuffer.java",
       "inputSha256": "0bde417c9ca30ca67f7352de53f9ec0aa5be690bf9030634664aec7188a7f944",
-      "outputSha256": "652c6a101535ab159919433fd60d65d87c002f2bfb3631f820728e68515699d4",
+      "outputSha256": "1cf9393d4121192898a8acbdaf735a57cf61ab4153f7a45ec151df2a1015359a",
       "edits": [
         {
           "start": 53,
@@ -684249,6 +685341,13 @@
           "symbol": "C:vu",
           "original": "vu",
           "renamed": "ContextMenuItem"
+        },
+        {
+          "start": 4519,
+          "end": 4520,
+          "symbol": "M:tk.a(IIIBIII)V",
+          "original": "a",
+          "renamed": "setLayout"
         },
         {
           "start": 4652,
@@ -692014,7 +693113,7 @@
       "original": "ov.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "d1137c9defbd34dc28a7b067ff369e3a1cf4fcf4d03593821b1de89f4252d2da",
-      "outputSha256": "d5a243c823a62adc79cd109d93fb941498452b20ab960c0294949a1ab999e05c",
+      "outputSha256": "4372715b0f78f5592bfad3dd9d8c3023ff5614a1579baf22ff93487f759f6504",
       "edits": [
         {
           "start": 71,
@@ -692141,6 +693240,20 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "FixedQuaternion"
+        },
+        {
+          "start": 4341,
+          "end": 4342,
+          "symbol": "M:bb.a(I)V",
+          "original": "a",
+          "renamed": "resetSelection"
+        },
+        {
+          "start": 4474,
+          "end": 4475,
+          "symbol": "M:bb.a(IIB)Z",
+          "original": "a",
+          "renamed": "handleKeyShortcut"
         },
         {
           "start": 4574,
@@ -714234,7 +715347,7 @@
       "original": "qn.java",
       "renamed": "qn.java",
       "inputSha256": "8b459e940267b19559a3d24d9c1e0b2904ac50d766cadf14af2f2a53f8e0a4f1",
-      "outputSha256": "d026a82f1e1be1b23ffdd772688b66cbb3003dd9b1b5a0545a6d77a904b218f0",
+      "outputSha256": "6e4ee1a0fb40a3deed3f96afb8b89401feaa09a07537d5181b6bca60f4057eb5",
       "edits": [
         {
           "start": 143,
@@ -714284,6 +715397,13 @@
           "symbol": "C:pw",
           "original": "pw",
           "renamed": "AuctionSettingsDialog"
+        },
+        {
+          "start": 1228,
+          "end": 1229,
+          "symbol": "M:np.a(IIIIIII)V",
+          "original": "a",
+          "renamed": "setLayout"
         },
         {
           "start": 1317,
@@ -720654,7 +721774,7 @@
       "original": "rb.java",
       "renamed": "TextPromptDialog.java",
       "inputSha256": "d62ec832370afef7382e5351545d832af3082a2cdef7d7f66d75c054cbf4ad57",
-      "outputSha256": "8a5c0f5517122b338e1cdc1653239bb4009e6137b93b2a7c20ea97d365aca29d",
+      "outputSha256": "dad8db223ccb9241fc27e2474a251c47760b400022f59c0e6734d2b39dc3a1bc",
       "edits": [
         {
           "start": 50,
@@ -721026,6 +722146,13 @@
           "symbol": "C:pw",
           "original": "pw",
           "renamed": "AuctionSettingsDialog"
+        },
+        {
+          "start": 4040,
+          "end": 4041,
+          "symbol": "M:np.a(IIZI)V",
+          "original": "a",
+          "renamed": "updateScroll"
         },
         {
           "start": 4115,
@@ -733177,7 +734304,7 @@
       "original": "sb.java",
       "renamed": "StringCursor.java",
       "inputSha256": "51fd1f8d3e7a0b53d30bf8cd926f2817f771ecf97a0e9f0a722c4524a8552788",
-      "outputSha256": "27b50a3249c4f9dffc842e542bc01934de908e211532f8df2ee0a83b15307d09",
+      "outputSha256": "10d0136602c495d135e284966188b40f57cd2ece90075ccb992ac88dd835eb3c",
       "edits": [
         {
           "start": 50,
@@ -733262,6 +734389,13 @@
           "symbol": "C:vc",
           "original": "vc",
           "renamed": "ReceivedAuctionItem"
+        },
+        {
+          "start": 1039,
+          "end": 1040,
+          "symbol": "M:gu.a(IIIII)V",
+          "original": "a",
+          "renamed": "layoutItems"
         },
         {
           "start": 1269,
@@ -750420,7 +751554,7 @@
       "original": "tk.java",
       "renamed": "ScrollContainer.java",
       "inputSha256": "7d6db23466c722f0ba65cc30ccbd2eb1ed8cfaf46ecdb9eb64b2a5fd17251dde",
-      "outputSha256": "527ff0d1080fd35cf600b4d932d3c28c263d25c9587be96cebeb4c04736a1dfb",
+      "outputSha256": "df6e52f31f7c91af70aab658edb496c7fecc0fbb88c63578dbf6cc167b3c5c98",
       "edits": [
         {
           "start": 50,
@@ -750479,6 +751613,20 @@
           "renamed": "ArgbSprite"
         },
         {
+          "start": 428,
+          "end": 429,
+          "symbol": "M:tk.a(IIIBIII)V",
+          "original": "a",
+          "renamed": "setLayout"
+        },
+        {
+          "start": 701,
+          "end": 702,
+          "symbol": "M:tk.a(III)V",
+          "original": "a",
+          "renamed": "layoutScrollbars"
+        },
+        {
           "start": 734,
           "end": 736,
           "symbol": "M:tk.<init>(Ljava/lang/String;Lhd;Lhd;Lji;)V",
@@ -750505,6 +751653,27 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "ScrollBar"
+        },
+        {
+          "start": 890,
+          "end": 891,
+          "symbol": "M:tk.a(IZBI)V",
+          "original": "a",
+          "renamed": "advanceScroll"
+        },
+        {
+          "start": 960,
+          "end": 961,
+          "symbol": "M:tk.a(ZIIIII)V",
+          "original": "a",
+          "renamed": "applyScrollInput"
+        },
+        {
+          "start": 1124,
+          "end": 1125,
+          "symbol": "M:tk.a(III)V",
+          "original": "a",
+          "renamed": "layoutScrollbars"
         },
         {
           "start": 1836,
@@ -750535,6 +751704,20 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 2199,
+          "end": 2200,
+          "symbol": "M:ji.b(IIII)V",
+          "original": "b",
+          "renamed": "layoutThumb"
+        },
+        {
+          "start": 2401,
+          "end": 2402,
+          "symbol": "M:ji.b(IIII)V",
+          "original": "b",
+          "renamed": "layoutThumb"
+        },
+        {
           "start": 2572,
           "end": 2573,
           "symbol": "M:hd.a(BLhd;)V",
@@ -750549,6 +751732,13 @@
           "renamed": "UiLayoutNode"
         },
         {
+          "start": 2805,
+          "end": 2806,
+          "symbol": "M:ji.b(IIII)V",
+          "original": "b",
+          "renamed": "layoutThumb"
+        },
+        {
           "start": 2934,
           "end": 2935,
           "symbol": "M:hd.a(BLhd;)V",
@@ -750561,6 +751751,13 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "UiLayoutNode"
+        },
+        {
+          "start": 3164,
+          "end": 3165,
+          "symbol": "M:ji.b(IIII)V",
+          "original": "b",
+          "renamed": "layoutThumb"
         },
         {
           "start": 3317,
@@ -750596,6 +751793,118 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "ScrollContainer"
+        },
+        {
+          "start": 3579,
+          "end": 3580,
+          "symbol": "M:tk.a(ZIIIII)V",
+          "original": "a",
+          "renamed": "applyScrollInput"
+        },
+        {
+          "start": 3737,
+          "end": 3738,
+          "symbol": "M:ji.b(I)Z",
+          "original": "b",
+          "renamed": "pollScrollBackward"
+        },
+        {
+          "start": 3849,
+          "end": 3850,
+          "symbol": "M:ji.h(I)Z",
+          "original": "h",
+          "renamed": "pollScrollForward"
+        },
+        {
+          "start": 3959,
+          "end": 3960,
+          "symbol": "M:ji.c(Z)Z",
+          "original": "c",
+          "renamed": "pollPageBackward"
+        },
+        {
+          "start": 4072,
+          "end": 4073,
+          "symbol": "M:ji.i(I)Z",
+          "original": "i",
+          "renamed": "pollPageForward"
+        },
+        {
+          "start": 4184,
+          "end": 4185,
+          "symbol": "M:ji.b(I)Z",
+          "original": "b",
+          "renamed": "pollScrollBackward"
+        },
+        {
+          "start": 4298,
+          "end": 4299,
+          "symbol": "M:ji.h(I)Z",
+          "original": "h",
+          "renamed": "pollScrollForward"
+        },
+        {
+          "start": 4428,
+          "end": 4429,
+          "symbol": "M:tk.a(III)V",
+          "original": "a",
+          "renamed": "layoutScrollbars"
+        },
+        {
+          "start": 4483,
+          "end": 4484,
+          "symbol": "M:ji.c(Z)Z",
+          "original": "c",
+          "renamed": "pollPageBackward"
+        },
+        {
+          "start": 4598,
+          "end": 4599,
+          "symbol": "M:ji.i(I)Z",
+          "original": "i",
+          "renamed": "pollPageForward"
+        },
+        {
+          "start": 6768,
+          "end": 6769,
+          "symbol": "M:ji.j(I)Z",
+          "original": "j",
+          "renamed": "isThumbHeld"
+        },
+        {
+          "start": 6825,
+          "end": 6826,
+          "symbol": "M:ji.a(IZBI)I",
+          "original": "a",
+          "renamed": "getDraggedOffsetVertical"
+        },
+        {
+          "start": 6969,
+          "end": 6970,
+          "symbol": "M:ji.j(I)Z",
+          "original": "j",
+          "renamed": "isThumbHeld"
+        },
+        {
+          "start": 7026,
+          "end": 7027,
+          "symbol": "M:ji.a(IIZI)I",
+          "original": "a",
+          "renamed": "getDraggedOffsetHorizontal"
+        },
+        {
+          "start": 7156,
+          "end": 7157,
+          "symbol": "M:ji.b(IIII)V",
+          "original": "b",
+          "renamed": "layoutThumb"
+        },
+        {
+          "start": 7258,
+          "end": 7259,
+          "symbol": "M:ji.b(IIII)V",
+          "original": "b",
+          "renamed": "layoutThumb"
         },
         {
           "start": 7346,
@@ -758050,7 +759359,7 @@
       "original": "ug.java",
       "renamed": "ug.java",
       "inputSha256": "c1d4dfead514837b4880f670337e2ef66f33733d5a2bc77b64c5718da89496aa",
-      "outputSha256": "dd16d0a4655e27b7f1f939f353dc9d0b0d38b980f73c619d24abecd19a6c83d9",
+      "outputSha256": "45f0fb509b33d1a7ab4be83974bc82da951545c9152dcc18ad2eb3ce8d679e80",
       "edits": [
         {
           "start": 66,
@@ -758394,6 +759703,13 @@
           "symbol": "C:vc",
           "original": "vc",
           "renamed": "ReceivedAuctionItem"
+        },
+        {
+          "start": 5264,
+          "end": 5265,
+          "symbol": "M:gu.a(IIIII)V",
+          "original": "a",
+          "renamed": "layoutItems"
         },
         {
           "start": 5393,
@@ -765620,7 +766936,7 @@
       "original": "uv.java",
       "renamed": "PlayerContextMenu.java",
       "inputSha256": "6e122f9eb2e8f11d136af29fe441272f2d3b90ac869ece0034411e90a887ab73",
-      "outputSha256": "a35d7c5a744fe8489108a63b3f412a8e2d5ddf65810b9fde3cb3311e3c7019c7",
+      "outputSha256": "383ffca678807d2a440ae480bf62d81993839453bff9c440db363543ed70b4c5",
       "edits": [
         {
           "start": 69,
@@ -766132,6 +767448,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 9746,
+          "end": 9747,
+          "symbol": "M:gu.a(I)Z",
+          "original": "a",
+          "renamed": "consumeSelection"
         },
         {
           "start": 9843,
@@ -791829,10 +793152,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/kickabout"
     },
-    "rulesSha256": "c048566eb62df68a32a5506ed17c33c438c9e3d710be16bd98f111231e4eef54",
+    "rulesSha256": "7bef94b23d2e82786954f9ccd934f0bf1aa8949cc4550bfdd46c6ab601e21518",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f",
-    "outputTreeSha256": "fe9ce79db869af7efa8c71b84c6515f03957c219fbf03035ce2ae2b0113ac6cd",
+    "outputTreeSha256": "5ec66f740061e3215bc5245ea76f4650f16696470e58a43f8586e3150edcd77b",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

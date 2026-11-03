@@ -598,7 +598,7 @@ final class DebugConsole extends ConsolePanel {
             field_x = (String) null;
           }
           var6 = ReceivedAuctionItem.field_y;
-          var13.field_j.a(0, 0, var5, var6, 0);
+          var13.field_j.layoutItems(0, 0, var5, var6, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

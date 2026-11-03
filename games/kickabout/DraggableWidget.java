@@ -313,13 +313,13 @@ final class DraggableWidget extends SingleChildContainer {
           hq.b((byte) 114);
         }
         if (param2) {
-          dr.field_g.b(param3, param0, (byte) -127);
+          dr.field_g.processClicks(param3, param0, (byte) -127);
         }
         int var6 = -116 % ((param1 - 17) / 36);
         if (var4 != 0) {
           LeaguesHelpScreen.field_E.b(0, param2);
         }
-        int var5 = dr.field_g.h((byte) 49) + dr.field_g.field_F;
+        int var5 = dr.field_g.getTotalWidth((byte) 49) + dr.field_g.field_F;
         if (var5 > 640) {
           NumericDateInputWidget.field_I = NumericDateInputWidget.field_I + 5;
         } else {

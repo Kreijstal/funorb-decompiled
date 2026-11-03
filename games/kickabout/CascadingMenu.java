@@ -20,9 +20,9 @@ final class CascadingMenu extends UiLayoutNode {
     private int field_Ab;
     private int field_Lb;
 
-    final int h(byte param0) {
+    final int getTotalWidth(byte param0) {
         int var2 = 22 % ((-56 - param0) / 60);
-        return this.field_Bb + (null == this.field_Kb ? 0 : this.field_Kb.h((byte) 107));
+        return this.field_Bb + (null == this.field_Kb ? 0 : this.field_Kb.getTotalWidth((byte) 107));
     }
 
     final boolean h(int param0) {
@@ -63,7 +63,7 @@ final class CascadingMenu extends UiLayoutNode {
         return var2 != 0;
     }
 
-    final void b(int param0, int param1, byte param2) {
+    final void processClicks(int param0, int param1, byte param2) {
         int var4_int = 0;
         ContextMenuItem var5;
         int var6;
@@ -75,7 +75,7 @@ final class CascadingMenu extends UiLayoutNode {
         for (var4_int = 0; this.field_Eb.length > var4_int; var4_int++) {
           var5 = this.field_Eb[var4_int];
           if (1 == var5.field_sb) {
-            this.a(var4_int, (byte) -51, param1, param0);
+            this.selectItem(var4_int, (byte) -51, param1, param0);
             stackIn_7_0 = var5;
             stackIn_8_1 = (var4_int == this.field_Cb);
             stackIn_7_0.field_I = stackIn_8_1;
@@ -85,11 +85,11 @@ final class CascadingMenu extends UiLayoutNode {
           var7 = this.field_Ob[this.field_Cb];
           var4 = var7;
           if (var4 != null) {
-            var7.b(param0, param1, (byte) -127);
+            var7.processClicks(param0, param1, (byte) -127);
           }
         }
         if (this.field_zb > 0) {
-          this.b(param2 ^ 4, this.field_zb - 1);
+          this.setSlideProgress(param2 ^ 4, this.field_zb - 1);
         }
         if (param2 != -127) {
           field_Nb = (java.math.BigInteger) null;
@@ -163,7 +163,7 @@ final class CascadingMenu extends UiLayoutNode {
             }
           }
           this.field_Gb = this.field_Gb + (IterableDualLinkDeque.field_g.field_o + 10);
-          this.b(-88, 12);
+          this.setSlideProgress(-88, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -215,7 +215,7 @@ final class CascadingMenu extends UiLayoutNode {
         }
     }
 
-    final void a(int param0) {
+    final void resetSelection(int param0) {
         int var3 = 0;
         ContextMenuItem var4 = null;
         int var5 = Kickabout.field_G;
@@ -227,15 +227,15 @@ final class CascadingMenu extends UiLayoutNode {
           var4.field_I = false;
         }
         if (param0 != 5075) {
-          this.b(-73, 28);
+          this.setSlideProgress(-73, 28);
         }
         if (null != this.field_Kb) {
-          this.field_Kb.a(5075);
+          this.field_Kb.resetSelection(5075);
           this.field_Kb.c((byte) -109);
         }
         this.field_Cb = -1;
         this.field_Kb = null;
-        this.b(param0 ^ -5005, 12);
+        this.setSlideProgress(param0 ^ -5005, 12);
     }
 
     final static ff a(byte param0, int param1) {
@@ -254,7 +254,7 @@ final class CascadingMenu extends UiLayoutNode {
         return null;
     }
 
-    private final void b(int param0, int param1) {
+    private final void setSlideProgress(int param0, int param1) {
         int var5 = 0;
         int var4 = 0;
         int var3 = 0;
@@ -270,21 +270,21 @@ final class CascadingMenu extends UiLayoutNode {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, int param3) {
+    private final void selectItem(int param0, byte param1, int param2, int param3) {
         int var6 = 0;
         int var5 = 0;
         int var7 = Kickabout.field_G;
         if (this.field_Cb == param0) {
-          this.a(5075);
-          this.b(-90, 0);
+          this.resetSelection(5075);
+          this.setSlideProgress(-90, 0);
         } else {
           if (this.field_Ob[param0] != null) {
-            this.a(5075);
-            this.b(-117, 0);
+            this.resetSelection(5075);
+            this.setSlideProgress(-117, 0);
             this.field_Cb = param0;
             this.field_Kb = this.field_Ob[this.field_Cb];
             ds.a(-1, this.field_Kb);
-            this.field_Kb.b(-94, 12);
+            this.field_Kb.setSlideProgress(-94, 12);
           } else {
             if (this.field_Jb[param0] != -1) {
               var5 = this.field_Jb[param0] | 32768;
@@ -312,7 +312,7 @@ final class CascadingMenu extends UiLayoutNode {
         }
     }
 
-    final boolean a(int param0, int param1, byte param2) {
+    final boolean handleKeyShortcut(int param0, int param1, byte param2) {
         int var7 = 0;
         int var4;
         int var5;
@@ -325,11 +325,11 @@ final class CascadingMenu extends UiLayoutNode {
         if (null != this.field_Kb) {
           if (var4 != 0 &&
             -1 == this.field_Kb.field_Cb) {
-            this.a(5075);
-            this.b(-105, 0);
+            this.resetSelection(5075);
+            this.setSlideProgress(-105, 0);
             return true;
           }
-          return this.field_Kb.a(param0, param1, (byte) -18);
+          return this.field_Kb.handleKeyShortcut(param0, param1, (byte) -18);
         }
         if (null == this.field_Kb &&
           dr.field_g == this &&
@@ -347,14 +347,14 @@ final class CascadingMenu extends UiLayoutNode {
         }
         for (var7 = 0; this.field_Hb.length > var7; var7++) {
           if (var5 == this.field_Hb[var7]) {
-            this.a(var7, (byte) -115, param1, param0);
+            this.selectItem(var7, (byte) -115, param1, param0);
             return true;
           }
         }
         return false;
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
+    final void setLayout(boolean param0, int param1, int param2, int param3, int param4, int param5) {
         int var7;
         int var8;
         int var9;
@@ -364,7 +364,7 @@ final class CascadingMenu extends UiLayoutNode {
         this.a(true, this.field_Bb, param2, param4 - this.field_yb, this.field_yb);
         if (this.field_Lb != param5) {
           this.field_Lb = param5;
-          this.b(-119, this.field_zb);
+          this.setSlideProgress(-119, this.field_zb);
         }
         var7 = 0;
         if (param0) {
@@ -379,7 +379,7 @@ final class CascadingMenu extends UiLayoutNode {
           var7Lifetime1 = this.field_Ob[this.field_Cb].field_Fb;
           for (var8 = (var7Lifetime1 + this.field_Cb) * this.field_Ab + this.field_J; param4 < var8; var8 = var8 - this.field_Ab) {
           }
-          this.field_Ob[this.field_Cb].a(param0, param1, this.field_Bb + param2, param3, var8, this.field_Eb[this.field_Cb].field_T);
+          this.field_Ob[this.field_Cb].setLayout(param0, param1, this.field_Bb + param2, param3, var8, this.field_Eb[this.field_Cb].field_T);
         }
     }
 
