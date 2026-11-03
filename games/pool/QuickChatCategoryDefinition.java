@@ -110,14 +110,14 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         int var2Lifetime1;
         if (this.phraseIds != null) {
           for (var2 = 0; var2 < this.phraseIds.length; var2++) {
-            this.phraseIds[var2] = md.a(this.phraseIds[var2], 32768);
+            this.phraseIds[var2] = md.bitwiseOr(this.phraseIds[var2], 32768);
           }
         }
         if (null != this.subcategoryIds) {
           var5 = 0;
           var2Lifetime1 = var5;
           while (this.subcategoryIds.length > var5) {
-            this.subcategoryIds[var5] = md.a(this.subcategoryIds[var5], 32768);
+            this.subcategoryIds[var5] = md.bitwiseOr(this.subcategoryIds[var5], 32768);
             var5++;
           }
         }

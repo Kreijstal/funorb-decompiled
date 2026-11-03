@@ -432,7 +432,7 @@ final class SceneNode {
             var7 = this.field_c[this.field_j[var6]];
             this.field_f[var6] = param3[11] * (-param3[2] + var7[2]) + ((var7[0] - param3[0]) * param3[9] + param3[10] * (var7[1] - param3[1]));
           }
-          kf.a(param2, (byte) -104, this.field_f, this.field_j, param1);
+          PlayingSound.sortParallelArrays(param2, (byte) -104, this.field_f, this.field_j, param1);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "so.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

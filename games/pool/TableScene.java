@@ -703,7 +703,7 @@ abstract class TableScene {
     }
 
     final void prepareMusic(int param0, SoundCache param1, ResourceArchive param2) {
-        kf[] var5 = null;
+        PlayingSound[] var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -713,8 +713,8 @@ abstract class TableScene {
         RuntimeException var4 = null;
         try {
           if (param0 != 3) {
-            var5 = (kf[]) null;
-            this.updateRollingSounds(-23, -100, (byte) -87, (PcmSample[]) null, (kf[]) null);
+            var5 = (PlayingSound[]) null;
+            this.updateRollingSounds(-23, -100, (byte) -87, (PcmSample[]) null, (PlayingSound[]) null);
           }
           if (this.field_b != null) {
             RankingsScreen.field_N.prepareScoreInstruments(param1, param2, this.field_b, param0 ^ 79, 0);
@@ -937,7 +937,7 @@ abstract class TableScene {
           return;
         }
         this.stopSounds((byte) 120);
-        QuickChatPhraseDefinition.field_D = new kf[param1];
+        QuickChatPhraseDefinition.field_D = new PlayingSound[param1];
     }
 
     final void stopSounds(byte param0) {
@@ -957,7 +957,7 @@ abstract class TableScene {
         }
     }
 
-    final void updateRollingSounds(int param0, int param1, byte param2, PcmSample[] param3, kf[] param4) {
+    final void updateRollingSounds(int param0, int param1, byte param2, PcmSample[] param3, PlayingSound[] param4) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -982,7 +982,7 @@ abstract class TableScene {
               if (var8 > var6_int) {
                 var9 = var6_int - var8;
               }
-              param4[var7].a(var9 + ga.nextRandomInt(64, true, ea.field_r) + var8, 441, 128);
+              param4[var7].setPanAndRampVolume(var9 + ga.nextRandomInt(64, true, ea.field_r) + var8, 441, 128);
             } else if ((param4[var7] == null ||
               param4[var7].field_o.isSamplePositionOutOfRange()) && ga.nextRandomInt(param1, true, ea.field_r) == 0) {
               param4[var7] = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentPan(param3[ga.nextRandomInt(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
@@ -1212,7 +1212,7 @@ abstract class TableScene {
             GrowableIntList.field_d[var4_int] = w.field_a[var4_int].viewDepth(param1, -114);
             var4_int++;
           }
-          th.a(0, -30916, GrowableIntList.field_d, LinkButtonPainter.field_f, param2.length - (-QuickChatPhraseRegistry.field_g + 1));
+          th.quickSortRange(0, -30916, GrowableIntList.field_d, LinkButtonPainter.field_f, param2.length - (-QuickChatPhraseRegistry.field_g + 1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

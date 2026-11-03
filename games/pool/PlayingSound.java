@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends IntrusiveNode {
+final class PlayingSound extends IntrusiveNode {
     PcmSampleStream field_o;
     static String rule05;
     int field_n;
@@ -16,12 +16,12 @@ final class kf extends IntrusiveNode {
         rule05 = null;
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setPanAndRampVolume(int param0, int param1, int param2) {
         this.field_n = param0;
         this.field_o.rampVolume(param1, param2 + BallDebugOverlay.field_b * param0 >> 8);
     }
 
-    final static void a(int param0, byte param1, int[] param2, int[] param3, int param4) {
+    final static void sortParallelArrays(int param0, byte param1, int[] param2, int[] param3, int param4) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
@@ -61,7 +61,7 @@ final class kf extends IntrusiveNode {
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
                         continue scanLoop1;
@@ -83,7 +83,7 @@ final class kf extends IntrusiveNode {
                     } catch (Throwable stateCaught_4) {
                         statePc = ((Object) stateCaught_4 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
+                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
                         }
                         caughtException = stateCaught_4;
                         continue scanLoop1;
@@ -99,7 +99,7 @@ final class kf extends IntrusiveNode {
                     } catch (Throwable stateCaught_5) {
                         statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
+                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
                         }
                         caughtException = stateCaught_5;
                         continue scanLoop1;
@@ -150,7 +150,7 @@ final class kf extends IntrusiveNode {
                     } catch (Throwable stateCaught_6) {
                         statePc = ((Object) stateCaught_6 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
+                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
                         }
                         caughtException = stateCaught_6;
                         continue scanLoop1;
@@ -164,7 +164,7 @@ final class kf extends IntrusiveNode {
                     } catch (Throwable stateCaught_11) {
                         statePc = ((Object) stateCaught_11 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_11);
+                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_11);
                         }
                         caughtException = stateCaught_11;
                         continue scanLoop1;
@@ -213,7 +213,7 @@ final class kf extends IntrusiveNode {
                     } catch (Throwable stateCaught_16) {
                         statePc = ((Object) stateCaught_16 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_16);
+                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_16);
                         }
                         caughtException = stateCaught_16;
                         continue scanLoop1;
@@ -227,7 +227,7 @@ final class kf extends IntrusiveNode {
                     } catch (Throwable stateCaught_20) {
                         statePc = ((Object) stateCaught_20 instanceof RuntimeException ? 24 : -1);
                         if (statePc == -1) {
-                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_20);
+                            throw PlayingSound.<RuntimeException>$cfr$sneakyThrow(stateCaught_20);
                         }
                         caughtException = stateCaught_20;
                         continue scanLoop1;
@@ -296,7 +296,7 @@ final class kf extends IntrusiveNode {
         }
     }
 
-    kf(PcmSampleStream param0, IntrusiveNode param1) {
+    PlayingSound(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_o = param0;
           this.field_n = param0.getVolume();

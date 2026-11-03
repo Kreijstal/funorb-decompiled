@@ -287,7 +287,7 @@ final class wp implements si {
         }
     }
 
-    final static FullscreenFocusCanvas a(int param0, PlatformTaskDispatcher param1, byte param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas openFullscreenCanvas(int param0, PlatformTaskDispatcher param1, byte param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;

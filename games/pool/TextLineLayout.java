@@ -148,9 +148,9 @@ final class TextLineLayout {
         }
     }
 
-    final static kf a(byte param0, PcmSample param1) {
+    final static PlayingSound a(byte param0, PcmSample param1) {
         RuntimeException var2 = null;
-        kf stackIn_3_0 = null;
+        PlayingSound stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

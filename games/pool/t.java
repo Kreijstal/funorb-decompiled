@@ -8,7 +8,7 @@ final class t {
     static int field_e;
     static int[][][] field_a;
 
-    final static boolean a(int param0, int[] param1, int param2) {
+    final static boolean isBitClear(int param0, int[] param1, int param2) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;

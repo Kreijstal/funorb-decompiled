@@ -16,11 +16,11 @@ final class md {
         return LoginPayload.field_b;
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseOr(int param0, int param1) {
         return param0 | param1;
     }
 
-    final static void a(int param0) {
+    final static void initializeRendering(int param0) {
         TriangleRasterizer.setBrightness(0.6000000238418579f);
         TriangleRasterizer.useRasterClip();
         TriangleRasterizer.setProjectionCenter(320, 240);

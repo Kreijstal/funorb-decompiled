@@ -919,7 +919,7 @@ final class HuffmanCodec {
             var7_int = var7_int & -var13 >> 31;
             var14 = (var11 + var13 - 1 >> 3) + var12;
             var13 += 24;
-            dupTemp$0 = md.a(var7_int, var10 >>> var13);
+            dupTemp$0 = md.bitwiseOr(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param2[var12] = (byte)dupTemp$0;
             if (var14 > var12) {
@@ -1148,7 +1148,7 @@ final class HuffmanCodec {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var3[var10] = md.a(var12, var11);
+                  var3[var10] = md.bitwiseOr(var12, var11);
                   var10--;
                 }
                 if (decompiledFrameCompleted1) {

@@ -203,18 +203,18 @@ final class jd {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int atan2Angle(int param0, int param1, int param2) {
         if (param1 != 1164778608) {
           field_h = (int[]) null;
           if (param0 < param2) {
-            return 2048 - bo.b(-65536, (param0 << 16) / param2);
+            return 2048 - bo.arcTangent(-65536, (param0 << 16) / param2);
           }
-          return bo.b(-65536, (param2 << 16) / param0);
+          return bo.arcTangent(-65536, (param2 << 16) / param0);
         }
         if (param0 < param2) {
-          return 2048 - bo.b(-65536, (param0 << 16) / param2);
+          return 2048 - bo.arcTangent(-65536, (param0 << 16) / param2);
         }
-        return bo.b(-65536, (param2 << 16) / param0);
+        return bo.arcTangent(-65536, (param2 << 16) / param0);
     }
 
     static {

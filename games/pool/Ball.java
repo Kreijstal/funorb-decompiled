@@ -458,9 +458,9 @@ final class Ball {
         }
         if (this.inPlay) {
           System.out.print("{");
-          System.out.print(lo.a((long)this.positionX, 7697781));
+          System.out.print(lo.toHexString((long)this.positionX, 7697781));
           System.out.print(",");
-          System.out.print(lo.a((long)this.positionY, 7697781));
+          System.out.print(lo.toHexString((long)this.positionY, 7697781));
           System.out.print(" ");
           this.orientation.print(param0 ^ -79);
           System.out.print("}");

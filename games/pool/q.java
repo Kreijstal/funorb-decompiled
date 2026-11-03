@@ -10,7 +10,7 @@ final class q {
         field_b = null;
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void loadLogoJingle(ResourceArchive param0, int param1) {
         VorbisSample var2 = null;
         try {
           if (param1 <= 4) {

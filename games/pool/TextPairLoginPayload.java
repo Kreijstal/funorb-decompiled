@@ -6,7 +6,7 @@ final class TextPairLoginPayload extends LoginPayload {
     static boolean[][] field_j;
     static int field_l;
     static String tutorialNineBallStartPlaceCueball;
-    static kf[] field_g;
+    static PlayingSound[] field_g;
     private String base38Text;
     static int field_i;
     private String loginText;
@@ -52,6 +52,6 @@ final class TextPairLoginPayload extends LoginPayload {
         field_l = 128;
         tutorialNineBallStartPlaceCueball = "The objective of nine-ball pool is to legally \"pot\" the 9 ball. Before we get to that, we \"break\", but the first thing you might want to do is <u=ffffff>move the cue ball</u>. <col=99ff99>Hold</col> down the <img=0> <col=99ff99>left mouse button over the cue ball and drag</col> it to where you would like to place it.";
         field_i = -1;
-        field_g = new kf[2];
+        field_g = new PlayingSound[2];
     }
 }

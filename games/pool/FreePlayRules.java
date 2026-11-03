@@ -4,7 +4,7 @@
 final class FreePlayRules extends GameRules {
     static int[] field_h;
     static int field_l;
-    static kf[] field_j;
+    static PlayingSound[] field_j;
     static Sprite field_k;
     static PaletteBitmapFont field_e;
     static String muChatPmFriendsOnly;
@@ -252,7 +252,7 @@ final class FreePlayRules extends GameRules {
     }
 
     static {
-        field_j = new kf[5];
+        field_j = new PlayingSound[5];
         muChatPmFriendsOnly = "Only show private chat from my friends and opponents";
     }
 }

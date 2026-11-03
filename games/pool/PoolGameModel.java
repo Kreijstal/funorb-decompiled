@@ -704,7 +704,7 @@ final class PoolGameModel {
           var11_long = IterableNodeHashTable.a(param3 ^ -314, FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)var10, false));
           if (-2147483648L > var11_long ||
             var11_long > 2147483647L) {
-            System.out.println("Wall normal overflow " + lo.a(var11_long, 7697781));
+            System.out.println("Wall normal overflow " + lo.toHexString(var11_long, 7697781));
           }
           boolean decompiledFrameRemainder0 = true;
           var9 = ArchiveProvider.divideFixed16((int)var11_long, (byte) -128, (long)var9);

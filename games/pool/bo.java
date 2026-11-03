@@ -5,7 +5,7 @@ final class bo {
     static String tooltipBreak;
     static Sprite[] field_a;
 
-    final static int b(int param0, int param1) {
+    final static int arcTangent(int param0, int param1) {
         if (param0 != -65536) {
           bo.a((byte) -16);
           if (param1 < 0) {

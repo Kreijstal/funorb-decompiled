@@ -381,7 +381,7 @@ abstract class NetworkGameClient extends GameApplet {
         TimeTrialRules.configureClientConnection(this.field_u, this.field_D, (byte) 86, this.field_r, ProgressBarWidget.field_S, this.field_B, param5, this.field_t, StatefulTextPainter.field_s, 5000, this.field_q, 5000, param6, this.field_o);
         je.a(StatefulTextPainter.field_s, param6, this.field_D, this.field_B, this.field_t, (byte) -96, this.field_u, ProgressBarWidget.field_S, this.field_q);
         fl.registerPunctuationKeyCodes(true);
-        ClientException.field_a = nn.b(96);
+        ClientException.field_a = nn.createMouseWheelInput(96);
         kc.attachInputListeners(TimeTrialSelectScreen.field_K, param4 + param4);
         jd.field_d = param2;
         mk.field_c = param0;
@@ -827,7 +827,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (QuickChatCategoryDefinition.field_y == 11) {
           if (GameApplet.field_m != null && (!GameApplet.field_m.isIndexReady(param0 ^ -52) ||
             !GameApplet.field_m.ensureAllGroupsAvailable(param0 ^ 61))) {
-            KeyHandler.a(hp.a(GameApplet.field_m, BufferedFile.field_b, -641, SingleChildWidget.field_F), 0.0f, false);
+            KeyHandler.a(hp.formatProgressLabel(GameApplet.field_m, BufferedFile.field_b, -641, SingleChildWidget.field_F), 0.0f, false);
             decompiledFrameRemainder0 = false;
           }
           else {

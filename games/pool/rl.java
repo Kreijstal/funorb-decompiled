@@ -94,7 +94,7 @@ final class rl {
               var23 = ((PacketBuffer) ((Object) var1)).j(-68);
               var22 = ((PacketBuffer) ((Object) var1)).j(-104);
               var24 = ((PacketBuffer) ((Object) var1)).j(-29);
-              var25 = mg.a(0, var4_long);
+              var25 = mg.findLobbyPlayer(0, var4_long);
               var9_ref_im = var25;
               stackIn_44_0 = (var22.equals("")) ? 0 : 1;
               var10 = stackIn_44_0;
@@ -121,7 +121,7 @@ final class rl {
             if (6 == var2) {
               var4_longLifetime1 = ((PacketBuffer) ((Object) var1)).readLong(-412303328);
               var6 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-113);
-              var26 = mg.a(0, var4_longLifetime1);
+              var26 = mg.findLobbyPlayer(0, var4_longLifetime1);
               if (var26 != null) {
                 if (var26.field_Yb) {
                   PoolMatchController.field_jb = PoolMatchController.field_jb - 1;
@@ -274,7 +274,7 @@ final class rl {
                 }
                 var4_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(-412303328);
                 var6Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-77);
-                var30 = mg.a(0, var4_longLifetime2);
+                var30 = mg.findLobbyPlayer(0, var4_longLifetime2);
                 if (var30 == null) {
                   return;
                 }
@@ -294,7 +294,7 @@ final class rl {
                 return;
               }
               var4_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(-412303328);
-              var31 = mg.a(0, var4_longLifetime2Lifetime1);
+              var31 = mg.findLobbyPlayer(0, var4_longLifetime2Lifetime1);
               if (var31 == null) {
                 return;
               }

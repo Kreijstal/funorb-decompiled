@@ -272,7 +272,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           var12 = var14;
           var5 = var12;
           for (var6 = 0; var6 < var1; var6++) {
-            var5[var6] = md.a(ArchiveLoadSequence.b(-16777216, var18[var6] << 24), IntrusiveNode.field_h[ArchiveLoadSequence.b(255, (int) var17[var6])]);
+            var5[var6] = md.bitwiseOr(ArchiveLoadSequence.b(-16777216, var18[var6] << 24), IntrusiveNode.field_h[ArchiveLoadSequence.b(255, (int) var17[var6])]);
           }
           var3 = new ArgbSprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[0], ih.field_d[0], LinkButtonPainter.field_a[0], rc.field_f[0], var14);
         }
@@ -367,7 +367,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             var11 = var13;
             var6 = var11;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = md.a(ArchiveLoadSequence.b((int) var17[var7], 255) << 24, IntrusiveNode.field_h[ArchiveLoadSequence.b(255, (int) var16[var7])]);
+              var6[var7] = md.bitwiseOr(ArchiveLoadSequence.b((int) var17[var7], 255) << 24, IntrusiveNode.field_h[ArchiveLoadSequence.b(255, (int) var16[var7])]);
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[var2], ih.field_d[var2], LinkButtonPainter.field_a[var2], rc.field_f[var2], var13));
           }

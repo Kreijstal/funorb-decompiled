@@ -1006,12 +1006,12 @@ final class MidiPcmStream extends PcmStream {
           if (var6Lifetime3 < 64) {
             this.field_F[var4Lifetime4] = ArchiveLoadSequence.b(this.field_F[var4Lifetime4], -2);
           } else {
-            this.field_F[var4Lifetime4] = md.a(this.field_F[var4Lifetime4], 1);
+            this.field_F[var4Lifetime4] = md.bitwiseOr(this.field_F[var4Lifetime4], 1);
           }
         }
         if (var5Lifetime4 == 65) {
           if (var6Lifetime3 >= 64) {
-            this.field_F[var4Lifetime4] = md.a(this.field_F[var4Lifetime4], 2);
+            this.field_F[var4Lifetime4] = md.bitwiseOr(this.field_F[var4Lifetime4], 2);
           } else {
             this.d(var4Lifetime4, param1 ^ -122);
             this.field_F[var4Lifetime4] = ArchiveLoadSequence.b(this.field_F[var4Lifetime4], -3);
@@ -1061,7 +1061,7 @@ final class MidiPcmStream extends PcmStream {
             this.resetChannelRetriggerPhases(var4Lifetime4, false);
             this.field_F[var4Lifetime4] = ArchiveLoadSequence.b(this.field_F[var4Lifetime4], -5);
           } else {
-            this.field_F[var4Lifetime4] = md.a(this.field_F[var4Lifetime4], 4);
+            this.field_F[var4Lifetime4] = md.bitwiseOr(this.field_F[var4Lifetime4], 4);
           }
         }
         if (var5Lifetime4 == 17) {

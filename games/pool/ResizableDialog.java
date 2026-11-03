@@ -64,17 +64,17 @@ abstract class ResizableDialog extends FadingDialog {
             return 0;
           }
           if (param1 < 0) {
-            return -jd.a(param0, 1164778608, -param1);
+            return -jd.atan2Angle(param0, 1164778608, -param1);
           }
-          return jd.a(param0, 1164778608, param1);
+          return jd.atan2Angle(param0, 1164778608, param1);
         }
         if (0 == param1) {
           return 4096;
         }
         if (param1 >= 0) {
-          return -jd.a(-param0, 1164778608, param1) + 4096;
+          return -jd.atan2Angle(-param0, 1164778608, param1) + 4096;
         }
-        return -4096 + jd.a(-param0, 1164778608, -param1);
+        return -4096 + jd.atan2Angle(-param0, 1164778608, -param1);
     }
 
     final void startResizeTransition(byte param0, int param1, int param2, int param3) {

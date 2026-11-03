@@ -154,7 +154,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (lo) null;
-                      var9.field_e = ii.a(114, (String) (var9.field_g), var9.field_a).a((byte) -108);
+                      var9.field_e = ii.createProxyConnector(114, (String) (var9.field_g), var9.field_a).a((byte) -108);
                     } catch (lo decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (lo) (Object) decompiledCaughtException;

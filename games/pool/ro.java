@@ -114,7 +114,7 @@ final class ro {
             var1 = var5;
             var16 = ta.field_g.field_l;
             for (var3 = 0; var3 < 8; var3++) {
-              var5[var3] = md.a(var12[var3], var16[var3]);
+              var5[var3] = md.bitwiseOr(var12[var3], var16[var3]);
             }
             var13 = hp.field_c;
             var11 = var13;

@@ -210,7 +210,7 @@ final class StrongCacheEntry extends CacheEntry {
 
     final static void a(int[] param0, int[] param1, byte param2) {
         try {
-          th.a(0, param2 ^ 30966, param0, param1, param0.length - 1);
+          th.quickSortRange(0, param2 ^ 30966, param0, param1, param0.length - 1);
           if (param2 != -54) {
             int[] var4 = (int[]) null;
             StrongCacheEntry.a((int[]) null, (int[]) null, (byte) -96);

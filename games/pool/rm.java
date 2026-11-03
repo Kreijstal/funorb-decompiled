@@ -10,7 +10,7 @@ final class rm {
     static Sprite[] field_g;
     static long field_c;
 
-    final static double[][] a(double[] param0, int param1) {
+    final static double[][] createSymmetricCopies(double[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         double[][] stackIn_1_0 = null;

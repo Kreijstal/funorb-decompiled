@@ -231,9 +231,9 @@ final class ModernTableScene extends ModelTableScene {
           var4[0] = ArchiveLoadSequence.b(var36[0], -4);
           this.e(true);
           this.a(false, var36, var20);
-          kf.a(ag.field_c, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ChatMessageLine.field_m);
-          kf.a(ol.field_a, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, w.field_h);
-          kf.a(CushionSegment.field_k, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, NodeHashTableIterator.field_l);
+          PlayingSound.sortParallelArrays(ag.field_c, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ChatMessageLine.field_m);
+          PlayingSound.sortParallelArrays(ol.field_a, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, w.field_h);
+          PlayingSound.sortParallelArrays(CushionSegment.field_k, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, NodeHashTableIterator.field_l);
           var21 = this.field_bb;
           var54 = GzipDecoder.field_d;
           var21.sortModelsByDepth((byte) -123, 0, var21.field_j.length, var54);

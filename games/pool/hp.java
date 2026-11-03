@@ -36,7 +36,7 @@ final class hp {
             }
             if (param0 != 83) {
               var3 = (String) null;
-              hp.a((ResourceArchive) null, (String) null, -87, (String) null);
+              hp.formatProgressLabel((ResourceArchive) null, (String) null, -87, (String) null);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -94,7 +94,7 @@ final class hp {
         }
     }
 
-    final static String a(ResourceArchive param0, String param1, int param2, String param3) {
+    final static String formatProgressLabel(ResourceArchive param0, String param1, int param2, String param3) {
         RuntimeException var4 = null;
         int[] var5 = null;
         String stackIn_3_0 = null;

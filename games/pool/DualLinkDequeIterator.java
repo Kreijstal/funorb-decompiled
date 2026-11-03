@@ -12,16 +12,16 @@ final class DualLinkDequeIterator implements Iterator {
     static String progressJungleFinishing;
     private IterableDualLinkDeque deque;
 
-    final static kf a(int param0, PcmSampleStream param1) {
-        kf var2 = null;
+    final static PlayingSound a(int param0, PcmSampleStream param1) {
+        PlayingSound var2 = null;
         RuntimeException var2_ref = null;
-        kf stackIn_3_0 = null;
+        PlayingSound stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new kf(param1, param1);
+          var2 = new PlayingSound(param1, param1);
           oj.field_o.addFirst((byte) -74, var2);
           if (param0 != -24296) {
             DualLinkDequeIterator.releaseStatics(-16);

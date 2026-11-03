@@ -305,7 +305,7 @@ final class PoolMatchController {
             JaggrabDownloader.field_j.writeCipheredOpcode(false, 72);
             var3.writeCueBallPlacement(this.gameModel, JaggrabDownloader.field_j, -7478);
             if ((LinkButtonPainter.field_i & 2097152L) != 0L) {
-              System.out.println("->C2S_MANHANDLE_BALL: " + vi.a((byte) 108, 16, 4, (long)var3.cueBallX) + "," + vi.a((byte) 64, 16, 4, (long)var3.cueBallY));
+              System.out.println("->C2S_MANHANDLE_BALL: " + vi.toHexString((byte) 108, 16, 4, (long)var3.cueBallX) + "," + vi.toHexString((byte) 64, 16, 4, (long)var3.cueBallY));
             }
             this.ballManhandled = false;
             this.placementSyncTicks = 0;
@@ -665,9 +665,9 @@ final class PoolMatchController {
           EmailAvailabilityValidator.field_p = WidgetStyleLayer.loadSprite("commonui", (byte) 124, "jagex_logo_grey", param2);
           jj.field_S = NameEntryPopup.a(0, "commonui", param2, "button");
           bo.field_a = NetworkGameClient.a(param1 ^ -22692, param2, "validation", "commonui");
-          PoolUiText.field_a = (BitmapFont) ((Object) hn.a(param3, "commonui", "arezzo12", -25154, param2));
-          ValidationIconWidget.field_O = (BitmapFont) ((Object) hn.a(param3, "commonui", "arezzo14", -25154, param2));
-          bi.field_e = (BitmapFont) ((Object) hn.a(param3, "commonui", "arezzo14bold", -25154, param2));
+          PoolUiText.field_a = (BitmapFont) ((Object) hn.loadAlphaFont(param3, "commonui", "arezzo12", -25154, param2));
+          ValidationIconWidget.field_O = (BitmapFont) ((Object) hn.loadAlphaFont(param3, "commonui", "arezzo14", -25154, param2));
+          bi.field_e = (BitmapFont) ((Object) hn.loadAlphaFont(param3, "commonui", "arezzo14bold", -25154, param2));
           var4 = new Sprite(param0.getFileByName(false, "", "button.gif"), (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
           RankingsScreen.a(param2, 3812, "dropdown", "commonui");
           var5 = ArchiveRequest.a(param2, "commonui", -24155, "screen_options");
@@ -766,10 +766,10 @@ final class PoolMatchController {
           }
           var4 = ClientException.field_g;
           var5 = achievementId;
-          var4[var5 >> 5] = md.a(var4[var5 >> 5], 1 << ArchiveLoadSequence.b(var5, 31));
+          var4[var5 >> 5] = md.bitwiseOr(var4[var5 >> 5], 1 << ArchiveLoadSequence.b(var5, 31));
           var4Lifetime1 = hp.field_c;
           var5Lifetime1 = achievementId;
-          var4Lifetime1[var5Lifetime1 >> 5] = md.a(var4Lifetime1[var5Lifetime1 >> 5], 1 << ArchiveLoadSequence.b(var5Lifetime1, 31));
+          var4Lifetime1[var5Lifetime1 >> 5] = md.bitwiseOr(var4Lifetime1[var5Lifetime1 >> 5], 1 << ArchiveLoadSequence.b(var5Lifetime1, 31));
           if (param0 != 104) {
             this.idleOrbitDistance = 100;
           }
@@ -7904,34 +7904,34 @@ final class PoolMatchController {
                     if (Ball.field_B != null &&
                       Ball.field_B.length > 0) {
                       if (var4 != 0 &&
-                        t.a(0, ClientException.field_g, 21)) {
+                        t.isBitClear(0, ClientException.field_g, 21)) {
                         this.awardAchievement((byte) 104, 21, 234);
                       }
                       if (var5 != 0 &&
-                        t.a(param1 - 1, ClientException.field_g, 22)) {
+                        t.isBitClear(param1 - 1, ClientException.field_g, 22)) {
                         this.awardAchievement((byte) 104, 22, 233);
                       }
                       if (var3_int == 0) {
                         break;
                       }
-                      if (!t.a(0, ClientException.field_g, 20)) {
+                      if (!t.isBitClear(0, ClientException.field_g, 20)) {
                         break;
                       }
                       this.awardAchievement((byte) 104, 20, 235);
                       break;
                     }
                     if (var4 != 0 &&
-                      t.a(0, ClientException.field_g, 24)) {
+                      t.isBitClear(0, ClientException.field_g, 24)) {
                       this.awardAchievement((byte) 104, 24, 231);
                     }
                     if (var5 != 0 &&
-                      t.a(0, ClientException.field_g, 25)) {
+                      t.isBitClear(0, ClientException.field_g, 25)) {
                       this.awardAchievement((byte) 104, 25, 230);
                     }
                     if (var3_int == 0) {
                       break;
                     }
-                    if (!t.a(param1 ^ 1, ClientException.field_g, 23)) {
+                    if (!t.isBitClear(param1 ^ 1, ClientException.field_g, 23)) {
                       break;
                     }
                     this.awardAchievement((byte) 104, 23, 232);
@@ -8537,7 +8537,7 @@ final class PoolMatchController {
                 break;
               }
               if (stackIn_19_0 != 0) {
-                System.out.println("bbmom: " + lo.a((long)var3_int, 7697781));
+                System.out.println("bbmom: " + lo.toHexString((long)var3_int, 7697781));
               }
               if (var3_int > 16777216) {
                 var3_int = 192;
@@ -8575,7 +8575,7 @@ final class PoolMatchController {
                 break;
               }
               if (stackIn_38_0 != 0) {
-                System.out.println("bwmom: " + lo.a((long)var3_intLifetime1, 7697781));
+                System.out.println("bwmom: " + lo.toHexString((long)var3_intLifetime1, 7697781));
               }
               if (var3_intLifetime1 <= 134217728) {
                 var3_intLifetime1 = 192 * var3_intLifetime1 >> 26;
@@ -8927,7 +8927,7 @@ final class PoolMatchController {
           var4.cueBallX = var5.readInt(true);
           var4.cueBallY = var5.readInt(true);
           if (0L != (LinkButtonPainter.field_i & 2097152L)) {
-            System.out.println("<-S2C_BALL_MANHANDLED: " + vi.a((byte) 111, 16, 4, (long)var3.cueBallX) + "," + vi.a((byte) 55, 16, 4, (long)var3.cueBallY));
+            System.out.println("<-S2C_BALL_MANHANDLED: " + vi.toHexString((byte) 111, 16, 4, (long)var3.cueBallX) + "," + vi.toHexString((byte) 55, 16, 4, (long)var3.cueBallY));
           }
           MouseWheelInput.field_c.field_g = true;
           hh.field_c = true;

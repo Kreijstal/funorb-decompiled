@@ -4,7 +4,7 @@
 import java.util.*;
 
 public final class Pool extends NetworkGameClient {
-    static kf[] field_N;
+    static PlayingSound[] field_N;
     static long field_Q;
     static NineSliceFrame field_I;
     static String potBallsInAnyOrderFinishOnBlack;
@@ -806,7 +806,7 @@ public final class Pool extends NetworkGameClient {
         oj.releaseStatics(-19382);
         tg.releaseStatics(-10562);
         ea.releaseStatics((byte) 124);
-        kf.releaseStatics(-1);
+        PlayingSound.releaseStatics(-1);
         vm.a(false);
         bj.a(param0 - 4275);
         ThreeSliceButtonPainter.releaseStatics(-1);
@@ -1056,7 +1056,7 @@ public final class Pool extends NetworkGameClient {
             var13 = var18;
             var4_ref = var13;
             for (var5Lifetime3 = 0; 8 > var5Lifetime3; var5Lifetime3++) {
-              var12[var5Lifetime3] = md.a(var12[var5Lifetime3], var23[var5Lifetime3]);
+              var12[var5Lifetime3] = md.bitwiseOr(var12[var5Lifetime3], var23[var5Lifetime3]);
             }
             var14 = hp.field_c;
             var24 = (int[]) var2;
@@ -1064,7 +1064,7 @@ public final class Pool extends NetworkGameClient {
             var15 = var19;
             var4_refLifetime1 = var15;
             for (var5Lifetime4 = 0; var5Lifetime4 < 8; var5Lifetime4++) {
-              var14[var5Lifetime4] = md.a(var14[var5Lifetime4], var24[var5Lifetime4]);
+              var14[var5Lifetime4] = md.bitwiseOr(var14[var5Lifetime4], var24[var5Lifetime4]);
             }
             continue;
           }
@@ -1639,7 +1639,7 @@ public final class Pool extends NetworkGameClient {
             ArrayWidgetGroup.a(0);
             return false;
           }
-          md.a(32);
+          md.initializeRendering(32);
           DateInputWidget.i((byte) 124);
           MatchingTextValidator.field_w = 0;
           GameRules.field_b = 0;
@@ -1693,7 +1693,7 @@ public final class Pool extends NetworkGameClient {
                                               var61 = NetworkGameClient.field_F;
                                               var62 = de.waitingforExtradata;
                                               var63 = SoundCache.loadingExtradata;
-                                              KeyHandler.a(hp.a(var61, var62, -641, var63), (float)(w.field_i[18] + (w.field_i[19] - w.field_i[18]) * var61.getOverallProgress(0) / 100), false);
+                                              KeyHandler.a(hp.formatProgressLabel(var61, var62, -641, var63), (float)(w.field_i[18] + (w.field_i[19] - w.field_i[18]) * var61.getOverallProgress(0) / 100), false);
                                               return false;
                                             }
                                             ue.a(true);
@@ -1724,25 +1724,25 @@ public final class Pool extends NetworkGameClient {
                                           var58 = NetworkGameClient.field_F;
                                           var59 = de.waitingforExtradata;
                                           var60 = SoundCache.loadingExtradata;
-                                          KeyHandler.a(hp.a(var58, var59, -641, var60), (float)(w.field_i[18] + (-w.field_i[18] + w.field_i[19]) * var58.getOverallProgress(0) / 100), false);
+                                          KeyHandler.a(hp.formatProgressLabel(var58, var59, -641, var60), (float)(w.field_i[18] + (-w.field_i[18] + w.field_i[19]) * var58.getOverallProgress(0) / 100), false);
                                           return false;
                                         }
                                         var55 = s.field_a;
                                         var56 = de.waitingforExtradata;
                                         var57 = SoundCache.loadingExtradata;
-                                        KeyHandler.a(hp.a(var55, var56, -641, var57), (float)(w.field_i[17] + (w.field_i[18] - w.field_i[17]) * var55.getOverallProgress(0) / 100), false);
+                                        KeyHandler.a(hp.formatProgressLabel(var55, var56, -641, var57), (float)(w.field_i[17] + (w.field_i[18] - w.field_i[17]) * var55.getOverallProgress(0) / 100), false);
                                         return false;
                                       }
                                       var52 = cp.field_a;
                                       var53 = de.waitingforExtradata;
                                       var54 = SoundCache.loadingExtradata;
-                                      KeyHandler.a(hp.a(var52, var53, -641, var54), (float)(w.field_i[16] + (-w.field_i[16] + w.field_i[17]) * var52.getOverallProgress(0) / 100), false);
+                                      KeyHandler.a(hp.formatProgressLabel(var52, var53, -641, var54), (float)(w.field_i[16] + (-w.field_i[16] + w.field_i[17]) * var52.getOverallProgress(0) / 100), false);
                                       return false;
                                     }
                                     var49 = fh.field_b;
                                     var50 = de.waitingforExtradata;
                                     var51 = SoundCache.loadingExtradata;
-                                    KeyHandler.a(hp.a(var49, var50, -641, var51), (float)(w.field_i[15] + (w.field_i[16] - w.field_i[15]) * var49.getOverallProgress(0) / 100), false);
+                                    KeyHandler.a(hp.formatProgressLabel(var49, var50, -641, var51), (float)(w.field_i[15] + (w.field_i[16] - w.field_i[15]) * var49.getOverallProgress(0) / 100), false);
                                     return false;
                                   }
                                   var46 = Ball.field_z;
@@ -1766,25 +1766,25 @@ public final class Pool extends NetworkGameClient {
                             var37 = jc.field_a;
                             var38 = NameEntryPopup.waitingforMusic;
                             var39 = Camera.loadingMusic;
-                            KeyHandler.a(hp.a(var37, var38, -641, var39), (float)(w.field_i[11] + (w.field_i[12] - w.field_i[11]) * var37.getOverallProgress(0) / 100), false);
+                            KeyHandler.a(hp.formatProgressLabel(var37, var38, -641, var39), (float)(w.field_i[11] + (w.field_i[12] - w.field_i[11]) * var37.getOverallProgress(0) / 100), false);
                             return false;
                           }
                           var34 = gf.field_g;
                           var35 = NameEntryPopup.waitingforMusic;
                           var36 = Camera.loadingMusic;
-                          KeyHandler.a(hp.a(var34, var35, -641, var36), (float)(w.field_i[10] + (-w.field_i[10] + w.field_i[11]) * var34.getOverallProgress(0) / 100), false);
+                          KeyHandler.a(hp.formatProgressLabel(var34, var35, -641, var36), (float)(w.field_i[10] + (-w.field_i[10] + w.field_i[11]) * var34.getOverallProgress(0) / 100), false);
                           return false;
                         }
                         var31 = he.field_b;
                         var32 = HuffmanCodec.waitingforSoundeffects;
                         var33 = AudioService.loadingSoundeffects;
-                        KeyHandler.a(hp.a(var31, var32, -641, var33), (float)(w.field_i[9] + (-w.field_i[9] + w.field_i[10]) * var31.getOverallProgress(0) / 100), false);
+                        KeyHandler.a(hp.formatProgressLabel(var31, var32, -641, var33), (float)(w.field_i[9] + (-w.field_i[9] + w.field_i[10]) * var31.getOverallProgress(0) / 100), false);
                         return false;
                       }
                       var28 = WeightedLruCache.field_d;
                       var29 = HuffmanCodec.waitingforSoundeffects;
                       var30 = AudioService.loadingSoundeffects;
-                      KeyHandler.a(hp.a(var28, var29, -641, var30), (float)(w.field_i[8] + (w.field_i[9] - w.field_i[8]) * var28.getOverallProgress(0) / 100), false);
+                      KeyHandler.a(hp.formatProgressLabel(var28, var29, -641, var30), (float)(w.field_i[8] + (w.field_i[9] - w.field_i[8]) * var28.getOverallProgress(0) / 100), false);
                       return false;
                     }
                     var25 = QuickChatMenu.field_Zb;
@@ -1831,7 +1831,7 @@ public final class Pool extends NetworkGameClient {
     }
 
     static {
-        field_N = new kf[2];
+        field_N = new PlayingSound[2];
         potBallsInAnyOrderFinishOnBlack = "Pot the balls in any order and finish on the black.";
         muChatLobbyHide = "Hide lobby chat";
         field_L = new int[4];

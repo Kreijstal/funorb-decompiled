@@ -260,7 +260,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         field_Z[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = (-1 + var0) * 8;
-            field_Z[var0] = LobbyPlayer.a(LobbyPlayer.a(LobbyPlayer.a(mj.a(16711680L, field_N[5][5 + var1]), LobbyPlayer.a(LobbyPlayer.a(LobbyPlayer.a(LobbyPlayer.a(mj.a(field_N[0][var1], -72057594037927936L), mj.a(field_N[1][1 + var1], 71776119061217280L)), mj.a(280375465082880L, field_N[2][var1 + 2])), mj.a(field_N[3][var1 + 3], 1095216660480L)), mj.a(4278190080L, field_N[4][4 + var1]))), mj.a(field_N[6][var1 + 6], 65280L)), mj.a(255L, field_N[7][var1 + 7]));
+            field_Z[var0] = LobbyPlayer.a(LobbyPlayer.a(LobbyPlayer.a(mj.bitwiseAnd(16711680L, field_N[5][5 + var1]), LobbyPlayer.a(LobbyPlayer.a(LobbyPlayer.a(LobbyPlayer.a(mj.bitwiseAnd(field_N[0][var1], -72057594037927936L), mj.bitwiseAnd(field_N[1][1 + var1], 71776119061217280L)), mj.bitwiseAnd(280375465082880L, field_N[2][var1 + 2])), mj.bitwiseAnd(field_N[3][var1 + 3], 1095216660480L)), mj.bitwiseAnd(4278190080L, field_N[4][4 + var1]))), mj.bitwiseAnd(field_N[6][var1 + 6], 65280L)), mj.bitwiseAnd(255L, field_N[7][var1 + 7]));
         }
     }
 }

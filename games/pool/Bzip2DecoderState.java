@@ -62,9 +62,9 @@ final class Bzip2DecoderState {
     }
 
     final static void a(byte param0) {
-        kf var1 = null;
+        PlayingSound var1 = null;
         int var2 = Pool.field_O;
-        kf var1Lifetime1;
+        PlayingSound var1Lifetime1;
         try {
           MidiNoteMixer.field_s.serviceOutput();
           CacheEntry.field_D.serviceOutput();
@@ -74,20 +74,20 @@ final class Bzip2DecoderState {
           LobbyGame.field_Pb = LobbyGame.field_Pb - 1;
           if (LobbyGame.field_Pb == 0) {
             LobbyGame.field_Pb = 200;
-            var1 = (kf) (oj.field_o.last((byte) 116));
+            var1 = (PlayingSound) (oj.field_o.last((byte) 116));
             while (var1 != null) {
               if (!var1.field_m.b(-126)) {
                 var1.unlink((byte) -117);
               }
-              var1 = (kf) (oj.field_o.previous((byte) -5));
+              var1 = (PlayingSound) (oj.field_o.previous((byte) -5));
             }
             if (UsernameSuggestionsPanel.field_R != null) {
-              var1Lifetime1 = (kf) (UsernameSuggestionsPanel.field_R.last((byte) -84));
+              var1Lifetime1 = (PlayingSound) (UsernameSuggestionsPanel.field_R.last((byte) -84));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_m.b(-117)) {
                   var1Lifetime1.unlink((byte) -117);
                 }
-                var1Lifetime1 = (kf) (UsernameSuggestionsPanel.field_R.previous((byte) -5));
+                var1Lifetime1 = (PlayingSound) (UsernameSuggestionsPanel.field_R.previous((byte) -5));
               }
             }
           }

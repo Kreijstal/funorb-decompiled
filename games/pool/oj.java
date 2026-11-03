@@ -31,7 +31,7 @@ final class oj extends IntrusiveNode {
         field_r = null;
     }
 
-    final static void a(ResourceArchive param0, byte param1) {
+    final static void loadLogoModel(ResourceArchive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         TriangleMesh var5 = null;

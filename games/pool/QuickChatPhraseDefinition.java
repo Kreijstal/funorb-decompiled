@@ -8,7 +8,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
     static long field_y;
     static int[] field_B;
     private int[][] field_x;
-    static kf[] field_D;
+    static PlayingSound[] field_D;
     static int field_E;
     static int field_G;
     static String retry;
@@ -37,7 +37,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         int var3 = Pool.field_O;
         if (this.field_C != null) {
           for (var2 = 0; this.field_C.length > var2; var2++) {
-            this.field_C[var2] = md.a(this.field_C[var2], 32768);
+            this.field_C[var2] = md.bitwiseOr(this.field_C[var2], 32768);
           }
         }
         if (!param0) {
@@ -99,7 +99,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         var4 = Pool.field_O;
         try {
           if (param0 != -20678) {
-            field_D = (kf[]) null;
+            field_D = (PlayingSound[]) null;
           }
           while (true) {
             var3_int = param1.readUnsignedByte(param0 ^ 20652);

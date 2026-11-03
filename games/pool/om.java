@@ -15,7 +15,7 @@ class om extends TextWidgetPainter {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.maxAscent, -1, 2147483647, false);
     }
 
-    final static double[] a(int param0, double[] param1) {
+    final static double[] scaleTableCoordinates(int param0, double[] param1) {
         RuntimeException var2 = null;
         double[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

@@ -68,7 +68,7 @@ final class ii {
         }
     }
 
-    final static SocketConnector a(int param0, String param1, int param2) {
+    final static SocketConnector createProxyConnector(int param0, String param1, int param2) {
         ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         ProxySocketConnector stackIn_3_0 = null;

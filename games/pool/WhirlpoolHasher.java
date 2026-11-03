@@ -32,7 +32,7 @@ final class WhirlpoolHasher {
         int var8 = 0;
         var8 = Pool.field_O;
         try {
-          this.field_a[this.field_k] = (byte)md.a((int) this.field_a[this.field_k], 128 >>> ArchiveLoadSequence.b(this.field_j, 7));
+          this.field_a[this.field_k] = (byte)md.bitwiseOr((int) this.field_a[this.field_k], 128 >>> ArchiveLoadSequence.b(this.field_j, 7));
           this.field_k = this.field_k + 1;
           if (this.field_k > 32) {
             while (this.field_k < 64) {
@@ -218,7 +218,7 @@ final class WhirlpoolHasher {
             var8 = 255 & param0[var5_int] << var6 | (param0[1 + var5_int] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               256 > var8) {
-              this.field_a[this.field_k] = (byte)md.a((int) this.field_a[this.field_k], var8 >>> var7);
+              this.field_a[this.field_k] = (byte)md.bitwiseOr((int) this.field_a[this.field_k], var8 >>> var7);
               this.field_k = this.field_k + 1;
               this.field_j = this.field_j + (8 - var7);
               if (512 == this.field_j) {
@@ -238,7 +238,7 @@ final class WhirlpoolHasher {
             stackIn_16_0 = param0[var5_int] << var6;
             stackIn_16_1 = 255;
             var8Lifetime1 = stackIn_16_0 & stackIn_16_1;
-            this.field_a[this.field_k] = (byte)md.a((int) this.field_a[this.field_k], var8Lifetime1 >>> var7);
+            this.field_a[this.field_k] = (byte)md.bitwiseOr((int) this.field_a[this.field_k], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -313,7 +313,7 @@ final class WhirlpoolHasher {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_n[var2] = LobbyPlayer.a(mj.a((long)this.field_a[7 + var3], 255L), LobbyPlayer.a(LobbyPlayer.a(mj.a((long)this.field_a[var3 + 5], 255L) << 16, LobbyPlayer.a(mj.a((long)this.field_a[var3 + 4], 255L) << 24, LobbyPlayer.a(LobbyPlayer.a(LobbyPlayer.a(mj.a((long)this.field_a[1 + var3] << 48, 71776119061217280L), (long)this.field_a[var3] << 56), mj.a((long)this.field_a[2 + var3], 255L) << 40), mj.a(1095216660480L, (long)this.field_a[3 + var3] << 32)))), mj.a(65280L, (long)this.field_a[var3 + 6] << 8)));
+          this.field_n[var2] = LobbyPlayer.a(mj.bitwiseAnd((long)this.field_a[7 + var3], 255L), LobbyPlayer.a(LobbyPlayer.a(mj.bitwiseAnd((long)this.field_a[var3 + 5], 255L) << 16, LobbyPlayer.a(mj.bitwiseAnd((long)this.field_a[var3 + 4], 255L) << 24, LobbyPlayer.a(LobbyPlayer.a(LobbyPlayer.a(mj.bitwiseAnd((long)this.field_a[1 + var3] << 48, 71776119061217280L), (long)this.field_a[var3] << 56), mj.bitwiseAnd((long)this.field_a[2 + var3], 255L) << 40), mj.bitwiseAnd(1095216660480L, (long)this.field_a[3 + var3] << 32)))), mj.bitwiseAnd(65280L, (long)this.field_a[var3 + 6] << 8)));
           var2++;
           var3 += 8;
         }

@@ -137,7 +137,7 @@ final class ef {
         LocalGameSetupScreen.field_L[15] = jd.rule04;
         LocalGameSetupScreen.field_L[9] = ab.rule01;
         LocalGameSetupScreen.field_L[20] = ModelInstance.rule14;
-        LocalGameSetupScreen.field_L[4] = kf.rule05;
+        LocalGameSetupScreen.field_L[4] = PlayingSound.rule05;
         if (param0 >= -12) {
           String var2 = (String) null;
           ef.a(20, (Sprite) null, (String) null);

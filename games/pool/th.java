@@ -249,7 +249,7 @@ final class th {
         xsGame = null;
     }
 
-    final static void a(int param0, int param1, int[] param2, int[] param3, int param4) {
+    final static void quickSortRange(int param0, int param1, int[] param2, int[] param3, int param4) {
         int var10 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -292,8 +292,8 @@ final class th {
             param2[var6] = var7;
             param3[param4] = param3[var6];
             param3[var6] = var8;
-            th.a(param0, -30916, param2, param3, var6 - 1);
-            th.a(var6 + 1, param1 + 0, param2, param3, param4);
+            th.quickSortRange(param0, -30916, param2, param3, var6 - 1);
+            th.quickSortRange(var6 + 1, param1 + 0, param2, param3, param4);
           }
           if (param1 != -30916) {
             th.handleChatKey(-19, 83, -97);

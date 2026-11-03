@@ -168,13 +168,13 @@ final class Quaternion {
 
     final void print(int param0) {
         System.out.print("[");
-        System.out.print(lo.a((long)this.w, 7697781));
+        System.out.print(lo.toHexString((long)this.w, 7697781));
         System.out.print(",");
-        System.out.print(lo.a((long)this.x, 7697781));
+        System.out.print(lo.toHexString((long)this.x, 7697781));
         System.out.print(",");
-        System.out.print(lo.a((long)this.y, 7697781));
+        System.out.print(lo.toHexString((long)this.y, 7697781));
         System.out.print(",");
-        System.out.print(lo.a((long)this.z, 7697781));
+        System.out.print(lo.toHexString((long)this.z, 7697781));
         System.out.print("]");
         if (param0 >= -19) {
           field_i = -79;

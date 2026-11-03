@@ -645,7 +645,7 @@ final class TutorialController {
                 SoftwareRasterizer.pixels[SoftwareRasterizer.width * var13 + var17] = var18;
               } else {
                 if (this.currentStep == var7) {
-                  SoftwareRasterizer.pixels[SoftwareRasterizer.width * var13 + var17] = md.a(md.a(ArchiveLoadSequence.b(16711898, (-nj.field_c + 256) * (ArchiveLoadSequence.b(16744119, var18) >> 16) + (ArchiveLoadSequence.b(var19, 16714394) >> 16) * nj.field_c << 8), ArchiveLoadSequence.b((256 - nj.field_c) * ArchiveLoadSequence.b(var18 >> 8, 255) + (ArchiveLoadSequence.b(65295, var19) >> 8) * nj.field_c, 65280)), ArchiveLoadSequence.b(nj.field_c * ArchiveLoadSequence.b(var19, 255) + (256 - nj.field_c) * ArchiveLoadSequence.b(var18, 255) >> 8, 255));
+                  SoftwareRasterizer.pixels[SoftwareRasterizer.width * var13 + var17] = md.bitwiseOr(md.bitwiseOr(ArchiveLoadSequence.b(16711898, (-nj.field_c + 256) * (ArchiveLoadSequence.b(16744119, var18) >> 16) + (ArchiveLoadSequence.b(var19, 16714394) >> 16) * nj.field_c << 8), ArchiveLoadSequence.b((256 - nj.field_c) * ArchiveLoadSequence.b(var18 >> 8, 255) + (ArchiveLoadSequence.b(65295, var19) >> 8) * nj.field_c, 65280)), ArchiveLoadSequence.b(nj.field_c * ArchiveLoadSequence.b(var19, 255) + (256 - nj.field_c) * ArchiveLoadSequence.b(var18, 255) >> 8, 255));
                 } else {
                   if (var7.field_u > var7.field_l) {
                     SoftwareRasterizer.pixels[var17 + SoftwareRasterizer.width * var13] = var18;

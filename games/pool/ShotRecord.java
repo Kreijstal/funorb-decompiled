@@ -271,7 +271,7 @@ final class ShotRecord extends IntrusiveNode {
                   var10 = 65280 & var8;
                   var10 = 65280 & (var10 >> 1) - (var10 >> 5);
                   var11 = (255 & var8) >> 3;
-                  SoftwareRasterizer.pixels[var6_int] = md.a(var11, md.a(var9 << 16, var10));
+                  SoftwareRasterizer.pixels[var6_int] = md.bitwiseOr(var11, md.bitwiseOr(var9 << 16, var10));
                 }
                 var6_int++;
               }

@@ -204,7 +204,7 @@ final class ViewportController {
         this.field_o.a(this.field_p, this.field_a, 117);
         int var2 = 35 % ((58 - param0) / 41);
         TabbedPane.field_Sb = false;
-        FullscreenFocusCanvas var3 = wp.a(this.field_a, StatefulTextPainter.field_s, (byte) 0, this.field_p, 0, 0);
+        FullscreenFocusCanvas var3 = wp.openFullscreenCanvas(this.field_a, StatefulTextPainter.field_s, (byte) 0, this.field_p, 0, 0);
         if (var3 == null) {
           this.d(22472);
         }

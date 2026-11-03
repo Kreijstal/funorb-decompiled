@@ -26,7 +26,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
             for (var2 = 0; var2 < PotEvent.field_m.field_D.length; var2++) {
               if ((PotEvent.field_m.field_D[var2] & -16777216) == 0 &&
                 0 != (PotEvent.field_m.field_D[var2] & 16777215)) {
-                PotEvent.field_m.field_D[var2] = md.a(PotEvent.field_m.field_D[var2], -16777216);
+                PotEvent.field_m.field_D[var2] = md.bitwiseOr(PotEvent.field_m.field_D[var2], -16777216);
               }
             }
             ea.field_l = true;

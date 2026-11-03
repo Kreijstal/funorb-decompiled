@@ -34,10 +34,10 @@ final class kp {
         field_h = null;
     }
 
-    final static kf a(int param0, PcmSample param1, int param2, int param3) {
+    final static PlayingSound a(int param0, PcmSample param1, int param2, int param3) {
         RuntimeException var4 = null;
-        kf stackIn_2_0 = null;
-        kf stackIn_4_0 = null;
+        PlayingSound stackIn_2_0 = null;
+        PlayingSound stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -47,7 +47,7 @@ final class kp {
             stackIn_4_0 = DualLinkDequeIterator.a(-24296, PcmSampleStream.createAtRatePercentQ6(param1, 100, param3, param2));
             return stackIn_4_0;
           }
-          stackIn_2_0 = (kf) null;
+          stackIn_2_0 = (PlayingSound) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

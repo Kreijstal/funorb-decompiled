@@ -7,7 +7,7 @@ final class mg {
     static String playerX2AreOut;
     static UiComponent field_c;
 
-    final static LobbyPlayer a(int param0, long param1) {
+    final static LobbyPlayer findLobbyPlayer(int param0, long param1) {
         if (param0 != 0) {
           mg.a(-80);
           return (LobbyPlayer) (ln.field_n.findFirst(param1, false));

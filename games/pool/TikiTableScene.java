@@ -899,11 +899,11 @@ final class TikiTableScene extends ModelTableScene {
             var19.sortModelsByDepth((byte) 112, 0, var19.field_j.length, var39);
           }
           this.a(false, var30, var21);
-          kf.a(ta.field_c, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, cq.field_c);
-          kf.a(TextWidgetPainter.field_h, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, c.field_b);
-          kf.a(gf.field_d, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, CheckboxPainter.field_n);
-          kf.a(DelegatingCanvas.field_d, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ClientException.field_e);
-          kf.a(wn.field_j, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ue.field_a);
+          PlayingSound.sortParallelArrays(ta.field_c, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, cq.field_c);
+          PlayingSound.sortParallelArrays(TextWidgetPainter.field_h, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, c.field_b);
+          PlayingSound.sortParallelArrays(gf.field_d, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, CheckboxPainter.field_n);
+          PlayingSound.sortParallelArrays(DelegatingCanvas.field_d, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ClientException.field_e);
+          PlayingSound.sortParallelArrays(wn.field_j, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ue.field_a);
           this.drawSky(param1, 9291);
           pr.a(ArchiveRequest.field_w, false);
           this.a(256, 3, 256, (byte) -86);
@@ -1134,7 +1134,7 @@ final class TikiTableScene extends ModelTableScene {
         for (var5 = 0; ThemeSelectScreen.field_K > var5; var5++) {
           var6 = 63 + var5 * 192 / ThemeSelectScreen.field_K;
           var7 = 128;
-          dn.field_m[var5] = tq.a(md.a(var7, md.a(var7 << 16, var7 << 8)), var6, false);
+          dn.field_m[var5] = tq.a(md.bitwiseOr(var7, md.bitwiseOr(var7 << 16, var7 << 8)), var6, false);
           ah.field_e[var5] = new SceneNode();
           ah.field_e[var5].setChildren((byte) -112, var3[var5]);
           ck.field_Y[var5].addFirst((byte) -52, new pm(ah.field_e[var5]));

@@ -84,7 +84,7 @@ final class ie {
         }
     }
 
-    final static boolean a(byte param0, java.applet.Applet param1) {
+    final static boolean loadBrowserCookies(byte param0, java.applet.Applet param1) {
         try {
           int var5 = 0;
           String var2 = null;

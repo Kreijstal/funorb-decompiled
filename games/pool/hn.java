@@ -33,7 +33,7 @@ final class hn {
         return kc.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + AimTarget.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    final static AlphaFont a(ResourceArchive param0, String param1, String param2, int param3, ResourceArchive param4) {
+    final static AlphaFont loadAlphaFont(ResourceArchive param0, String param1, String param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -110,7 +110,7 @@ final class hn {
         try {
           if (param0 != -3143) {
             var4 = (ResourceArchive) null;
-            hn.a((ResourceArchive) null, (String) null, (String) null, 35, (ResourceArchive) null);
+            hn.loadAlphaFont((ResourceArchive) null, (String) null, (String) null, 35, (ResourceArchive) null);
           }
           var1_int = 0;
           var2 = -7 + SoftwareRasterizer.width * SoftwareRasterizer.height;

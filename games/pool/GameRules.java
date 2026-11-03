@@ -21,7 +21,7 @@ abstract class GameRules {
           String var2 = (String) null;
           GameRules.a((String[]) null, false, -52, (String) null);
         }
-        return ie.a((byte) 28, NanoTickClock.getApplet(71));
+        return ie.loadBrowserCookies((byte) 28, NanoTickClock.getApplet(71));
     }
 
     void initializeShot(ShotRecord param0, boolean param1) {

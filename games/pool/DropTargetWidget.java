@@ -82,7 +82,7 @@ final class DropTargetWidget extends SingleChildWidget {
 
     final static void a(int[] param0, byte param1, int[] param2) {
         try {
-          kf.a(param2.length, (byte) -104, param2, param0, 0);
+          PlayingSound.sortParallelArrays(param2.length, (byte) -104, param2, param0, 0);
           if (param1 != -121) {
             field_O = (BallDebugOverlay[]) null;
           }

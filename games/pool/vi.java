@@ -29,14 +29,14 @@ final class vi {
                 if (402 == param0) {
                   var2 = -125;
                   if (!param1) {
-                    vi.a((byte) -101, 91, -44, 41L);
+                    vi.toHexString((byte) -101, 91, -44, 41L);
                   }
                   return (byte) var2;
                 }
                 if (8222 == param0) {
                   var2 = -124;
                   if (!param1) {
-                    vi.a((byte) -101, 91, -44, 41L);
+                    vi.toHexString((byte) -101, 91, -44, 41L);
                   }
                   return (byte) var2;
                 }
@@ -44,7 +44,7 @@ final class vi {
                   if (param0 == 8224) {
                     var2 = -122;
                     if (!param1) {
-                      vi.a((byte) -101, 91, -44, 41L);
+                      vi.toHexString((byte) -101, 91, -44, 41L);
                     }
                     return (byte) var2;
                   }
@@ -53,7 +53,7 @@ final class vi {
                       if (param0 == 8240) {
                         var2 = -119;
                         if (!param1) {
-                          vi.a((byte) -101, 91, -44, 41L);
+                          vi.toHexString((byte) -101, 91, -44, 41L);
                         }
                         return (byte) var2;
                       }
@@ -63,7 +63,7 @@ final class vi {
                             if (param0 == 381) {
                               var2 = -114;
                               if (!param1) {
-                                vi.a((byte) -101, 91, -44, 41L);
+                                vi.toHexString((byte) -101, 91, -44, 41L);
                               }
                               return (byte) var2;
                             }
@@ -268,7 +268,7 @@ final class vi {
                       if (param1) {
                         return (byte) var2;
                       }
-                      vi.a((byte) -101, 91, -44, 41L);
+                      vi.toHexString((byte) -101, 91, -44, 41L);
                       return (byte) var2;
                     }
                     if (8222 == param0) {
@@ -276,7 +276,7 @@ final class vi {
                       if (param1) {
                         return (byte) var2;
                       }
-                      vi.a((byte) -101, 91, -44, 41L);
+                      vi.toHexString((byte) -101, 91, -44, 41L);
                       return (byte) var2;
                     }
                     if (param0 != 8230) {
@@ -285,7 +285,7 @@ final class vi {
                         if (param1) {
                           return (byte) var2;
                         }
-                        vi.a((byte) -101, 91, -44, 41L);
+                        vi.toHexString((byte) -101, 91, -44, 41L);
                         return (byte) var2;
                       }
                       if (8225 != param0) {
@@ -295,7 +295,7 @@ final class vi {
                             if (param1) {
                               return (byte) var2;
                             }
-                            vi.a((byte) -101, 91, -44, 41L);
+                            vi.toHexString((byte) -101, 91, -44, 41L);
                             return (byte) var2;
                           }
                           if (param0 != 352) {
@@ -306,7 +306,7 @@ final class vi {
                                   if (param1) {
                                     return (byte) var2;
                                   }
-                                  vi.a((byte) -101, 91, -44, 41L);
+                                  vi.toHexString((byte) -101, 91, -44, 41L);
                                   return (byte) var2;
                                 }
                                 if (param0 != 8216) {
@@ -315,7 +315,7 @@ final class vi {
                                     if (param1) {
                                       return (byte) var2;
                                     }
-                                    vi.a((byte) -101, 91, -44, 41L);
+                                    vi.toHexString((byte) -101, 91, -44, 41L);
                                     return (byte) var2;
                                   }
                                   if (param0 == 8220) {
@@ -323,7 +323,7 @@ final class vi {
                                     if (param1) {
                                       return (byte) var2;
                                     }
-                                    vi.a((byte) -101, 91, -44, 41L);
+                                    vi.toHexString((byte) -101, 91, -44, 41L);
                                     return (byte) var2;
                                   }
                                   if (param0 != 8221) {
@@ -332,7 +332,7 @@ final class vi {
                                       if (param1) {
                                         return (byte) var2;
                                       }
-                                      vi.a((byte) -101, 91, -44, 41L);
+                                      vi.toHexString((byte) -101, 91, -44, 41L);
                                       return (byte) var2;
                                     }
                                     if (param0 == 8211) {
@@ -340,7 +340,7 @@ final class vi {
                                       if (param1) {
                                         return (byte) var2;
                                       }
-                                      vi.a((byte) -101, 91, -44, 41L);
+                                      vi.toHexString((byte) -101, 91, -44, 41L);
                                       return (byte) var2;
                                     }
                                     if (param0 != 8212) {
@@ -352,7 +352,7 @@ final class vi {
                                               if (param1) {
                                                 return (byte) var2;
                                               }
-                                              vi.a((byte) -101, 91, -44, 41L);
+                                              vi.toHexString((byte) -101, 91, -44, 41L);
                                               return (byte) var2;
                                             }
                                             if (param0 != 339) {
@@ -365,7 +365,7 @@ final class vi {
                                                 if (param1) {
                                                   return (byte) var2;
                                                 }
-                                                vi.a((byte) -101, 91, -44, 41L);
+                                                vi.toHexString((byte) -101, 91, -44, 41L);
                                                 return (byte) var2;
                                               }
                                               var2 = -98;
@@ -421,7 +421,7 @@ final class vi {
         if (param1) {
           return (byte) var2;
         }
-        vi.a((byte) -101, 91, -44, 41L);
+        vi.toHexString((byte) -101, 91, -44, 41L);
         return (byte) var2;
     }
 
@@ -435,7 +435,7 @@ final class vi {
         }
     }
 
-    final static String a(byte param0, int param1, int param2, long param3) {
+    final static String toHexString(byte param0, int param1, int param2, long param3) {
         if (param0 <= 45) {
           return (String) null;
         }

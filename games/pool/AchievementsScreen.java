@@ -57,11 +57,11 @@ final class AchievementsScreen extends MenuScreen {
         }
         if (var2 != 0) {
           if (IntrusiveNodeHashTable.field_j != -1 &&
-            t.a(0, var15, IntrusiveNodeHashTable.field_j)) {
+            t.isBitClear(0, var15, IntrusiveNodeHashTable.field_j)) {
             IntrusiveNodeHashTable.field_j = -1;
           }
           if (LobbyGame.field_Gc != -1 &&
-            t.a(0, var15, LobbyGame.field_Gc)) {
+            t.isBitClear(0, var15, LobbyGame.field_Gc)) {
             LobbyGame.field_Gc = -1;
           }
         }
@@ -195,7 +195,7 @@ final class AchievementsScreen extends MenuScreen {
         var10 = stackIn_3_0;
         var5 = var10;
         for (var6 = 0; NineBallRules.achievementNameCount((byte) -108) > var6; var6++) {
-          if (!t.a(0, var10, var6) ||
+          if (!t.isBitClear(0, var10, var6) ||
             !param1) {
             var7 = this.getIconX(-55, var6);
             var8 = this.getIconY(var6, true);

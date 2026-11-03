@@ -1038,7 +1038,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 107, "rule_0_5");
                 if (var2 != null) {
-                  kf.rule05 = a.decodeBytesToString(var2, 126);
+                  PlayingSound.rule05 = a.decodeBytesToString(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 108, "rule_pillar_1");
                 if (var2 != null) {

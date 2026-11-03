@@ -97,7 +97,7 @@ final class ta {
             while (var8 > var5) {
               var17 = -var5 + var8;
               var18 = var5 - var4;
-              var3[var5] = md.a((var13 * var17 + var18 * var16) / var10, md.a((var15 * var18 + var12 * var17) / var10 << 8, (var18 * var14 + var11 * var17) / var10 << 16));
+              var3[var5] = md.bitwiseOr((var13 * var17 + var18 * var16) / var10, md.bitwiseOr((var15 * var18 + var12 * var17) / var10 << 8, (var18 * var14 + var11 * var17) / var10 << 16));
               var5++;
             }
             var4 = var8;
@@ -130,7 +130,7 @@ final class ta {
         return var2;
     }
 
-    final static PaletteBitmapFont a(int param0, byte[] param1) {
+    final static PaletteBitmapFont createPaletteFont(int param0, byte[] param1) {
         PaletteBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;

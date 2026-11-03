@@ -647,7 +647,7 @@ final class RankingsScreen extends MenuScreen {
               for (var8_int = 0; var8_int < md.field_c.length; var8_int++) {
                 md.field_c[var8_int] = (byte) 0;
               }
-              md.field_c[var7 / 8] = (byte)md.a((int) md.field_c[var7 / 8], 1 << var7 % 8);
+              md.field_c[var7 / 8] = (byte)md.bitwiseOr((int) md.field_c[var7 / 8], 1 << var7 % 8);
             }
             stackIn_51_0 = (param3) ? -1 : 0;
             for (var7 = stackIn_51_0; dg.field_T.length > var7; var7++) {

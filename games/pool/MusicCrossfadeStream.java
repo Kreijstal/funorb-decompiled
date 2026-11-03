@@ -181,19 +181,19 @@ final class MusicCrossfadeStream extends PcmStream {
         }
     }
 
-    final static kf a(int param0, PcmSampleStream param1) {
-        kf var2 = null;
+    final static PlayingSound a(int param0, PcmSampleStream param1) {
+        PlayingSound var2 = null;
         RuntimeException var2_ref = null;
-        kf stackIn_2_0 = null;
-        kf stackIn_4_0 = null;
+        PlayingSound stackIn_2_0 = null;
+        PlayingSound stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new kf(param1, param1);
+          var2 = new PlayingSound(param1, param1);
           if (param0 < 93) {
-            stackIn_2_0 = (kf) null;
+            stackIn_2_0 = (PlayingSound) null;
             return stackIn_2_0;
           }
           UsernameSuggestionsPanel.field_R.addFirst((byte) -108, var2);

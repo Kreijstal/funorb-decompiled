@@ -127,7 +127,7 @@ abstract class BallSkin {
           var14 = var15;
           var12 = var14;
           for (var13 = 0; var13 < var15.length; var13++) {
-            ff.field_a[var13] = md.a(md.a(ArchiveLoadSequence.b(Js5Transport.field_n[param2] * ArchiveLoadSequence.b(var15[var13], 65280) >>> 8, 973143808), ArchiveLoadSequence.b(-16776974, ArchiveLoadSequence.b(16711680, var15[var13]) * Js5Transport.field_n[param2]) >>> 8), ArchiveLoadSequence.b(-1912602369, Js5Transport.field_n[param2] * ArchiveLoadSequence.b(255, var15[var13]) >>> 8));
+            ff.field_a[var13] = md.bitwiseOr(md.bitwiseOr(ArchiveLoadSequence.b(Js5Transport.field_n[param2] * ArchiveLoadSequence.b(var15[var13], 65280) >>> 8, 973143808), ArchiveLoadSequence.b(-16776974, ArchiveLoadSequence.b(16711680, var15[var13]) * Js5Transport.field_n[param2]) >>> 8), ArchiveLoadSequence.b(-1912602369, Js5Transport.field_n[param2] * ArchiveLoadSequence.b(255, var15[var13]) >>> 8));
           }
           if (2147483647L > 64L * ((long)var11 * (long)var11)) {
             SoftwareRasterizer.fillRadialGlow(var6_intLifetime1, var7Lifetime1, var11, 64, ff.field_a);

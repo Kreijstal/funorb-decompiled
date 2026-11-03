@@ -75,7 +75,7 @@ final class qr {
           }
         } else {
           if (PlasmaTableScene.field_gb == null) {
-            MatchingTextValidator.field_u = wp.a(640, StatefulTextPainter.field_s, (byte) 0, 480, 0, 0);
+            MatchingTextValidator.field_u = wp.openFullscreenCanvas(640, StatefulTextPainter.field_s, (byte) 0, 480, 0, 0);
             if (null != MatchingTextValidator.field_u) {
               var2 = 2;
               kc.attachInputListeners(MatchingTextValidator.field_u, param0 ^ -28040);

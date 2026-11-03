@@ -151,8 +151,8 @@ final class hi extends ByteStorage {
     }
 
     final static void g(int param0) {
-        f.field_c = uc.a(true, new double[][][]{new double[][]{om.a(-93, new double[]{0.5, 0.5, -1.0, 0.5, 0.5, 0.0})}, BufferedFile.a(-122, om.a(-100, new double[]{1.22, 0.5, -0.45, 0.73, 0.5, 0.0})), rm.a(om.a(-84, new double[]{1.22, 1.323, -0.402, 0.83, 0.72, 0.0}), 123), rm.a(om.a(-77, new double[]{0.79, 1.6, -0.804, 0.55, 0.67, 0.0}), 126)});
-        f.field_a = uc.a(true, new double[][][]{new double[][]{om.a(-92, new double[]{0.5, 0.65, -1.0, 0.5, 0.65, 0.0})}, BufferedFile.a(-101, om.a(-62, new double[]{1.41, 0.5, -0.6, 0.81, 0.5, 0.0})), rm.a(om.a(-107, new double[]{1.28, 1.48, -0.478, 0.85, 0.81, 0.0}), 126), rm.a(om.a(-83, new double[]{0.761, 1.846, -0.865, 0.593, 0.831, 0.0}), -115)});
+        f.field_c = uc.a(true, new double[][][]{new double[][]{om.scaleTableCoordinates(-93, new double[]{0.5, 0.5, -1.0, 0.5, 0.5, 0.0})}, BufferedFile.a(-122, om.scaleTableCoordinates(-100, new double[]{1.22, 0.5, -0.45, 0.73, 0.5, 0.0})), rm.createSymmetricCopies(om.scaleTableCoordinates(-84, new double[]{1.22, 1.323, -0.402, 0.83, 0.72, 0.0}), 123), rm.createSymmetricCopies(om.scaleTableCoordinates(-77, new double[]{0.79, 1.6, -0.804, 0.55, 0.67, 0.0}), 126)});
+        f.field_a = uc.a(true, new double[][][]{new double[][]{om.scaleTableCoordinates(-92, new double[]{0.5, 0.65, -1.0, 0.5, 0.65, 0.0})}, BufferedFile.a(-101, om.scaleTableCoordinates(-62, new double[]{1.41, 0.5, -0.6, 0.81, 0.5, 0.0})), rm.createSymmetricCopies(om.scaleTableCoordinates(-107, new double[]{1.28, 1.48, -0.478, 0.85, 0.81, 0.0}), 126), rm.createSymmetricCopies(om.scaleTableCoordinates(-83, new double[]{0.761, 1.846, -0.865, 0.593, 0.831, 0.0}), -115)});
         if (param0 >= -127) {
           ballsetPlasmaGroup1 = (String) null;
         }
@@ -232,7 +232,7 @@ final class hi extends ByteStorage {
             return (PaletteBitmapFont) (stackIn_2_0);
           }
           var5_int = 41 / ((param0 + 73) / 41);
-          stackIn_4_0 = ta.a(16908, param3.getFileBytesUnkeyed(105, param2, param1));
+          stackIn_4_0 = ta.createPaletteFont(16908, param3.getFileBytesUnkeyed(105, param2, param1));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

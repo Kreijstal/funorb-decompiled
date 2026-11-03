@@ -9,7 +9,7 @@ final class lo extends IOException {
     static String createEmailConfirm;
     static boolean field_a;
 
-    final static UiTheme b(int param0) {
+    final static UiTheme createUiTheme(int param0) {
         if (null == ae.field_c) {
           ae.field_c = new UiTheme();
           ae.field_c.initializePainters(ValidationIconWidget.field_O, -76);
@@ -45,7 +45,7 @@ final class lo extends IOException {
         createEmailConfirm = null;
     }
 
-    final static String a(long param0, int param1) {
+    final static String toHexString(long param0, int param1) {
         if (param1 == 7697781) {
           return ResourceArchive.a(param0, 16, false, -112, 6, 10);
         }

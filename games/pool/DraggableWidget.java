@@ -142,8 +142,8 @@ final class DraggableWidget extends SingleChildWidget {
           if (param2) {
             field_S = (String[]) null;
           }
-          q.a(param0, 102);
-          oj.a(param0, (byte) -106);
+          q.loadLogoJingle(param0, 102);
+          oj.loadLogoModel(param0, (byte) -106);
           dr.loadFinalFrame((byte) -65, param0);
           MessageDialogContent.a(-257);
           SpaceBallSkin.i(23);
