@@ -87,7 +87,7 @@ final class ClientContextMenu {
                 if (!IsaacRandom.field_g) {
                   this.field_b.addAction(sd.a(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
                 }
-                this.field_b.addAction(sd.a(ho.field_f, 83, new String[]{var7}), (byte) -33, 18);
+                this.field_b.addAction(sd.a(TextTableInitializer.field_f, 83, new String[]{var7}), (byte) -33, 18);
                 if (param1 != null) {
                   this.field_j = param1;
                   this.field_b.addAction(sd.a(NodeHashTable.field_d, 22, new String[]{var7}), (byte) -95, 19);

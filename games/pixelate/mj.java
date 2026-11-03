@@ -36,7 +36,7 @@ final class mj {
             return;
           }
           this.field_a[0] = 0;
-          this.field_a[1] = 300 + ok.a(ea.field_b, DraggableWidget.a(param0, -327), 300);
+          this.field_a[1] = 300 + JavaRandomHelpers.a(ea.field_b, DraggableWidget.a(param0, -327), 300);
           this.field_d = 0;
           if (param0 != 300) {
             mj.c(43);
@@ -44,7 +44,7 @@ final class mj {
           }
           return;
         }
-        this.field_a[0] = ok.a(ea.field_b, -100, 300) + 300;
+        this.field_a[0] = JavaRandomHelpers.a(ea.field_b, -100, 300) + 300;
         this.field_a[1] = 0;
         if (param0 == 300) {
           return;

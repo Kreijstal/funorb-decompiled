@@ -124,7 +124,7 @@ final class cn {
               GameModeSelectScreen.field_s = EditableTextWidget.field_Z;
             } else {
               if (248 == var9Lifetime1) {
-                ql.a(AudioService.a(13867), -7624);
+                GreenGrowTheRushesBackground.a(AudioService.a(13867), -7624);
                 gi.field_b = ph.field_m;
                 na.a(true);
                 qj.field_b = false;
@@ -179,7 +179,7 @@ final class cn {
               if (CachedTextLayout.d(8) > 30000L) {
                 gi.field_b = ValidationIndicator.field_N;
               } else {
-                gi.field_b = ho.field_b;
+                gi.field_b = TextTableInitializer.field_b;
               }
               qj.field_b = false;
               stackIn_64_0 = 249;
@@ -252,15 +252,15 @@ final class cn {
         var19 = Pixelate.field_H ? 1 : 0;
         try {
           if (param2 >= 0 &&
-            ja.field_e > param8) {
+            MeshRasterState.field_e > param8) {
             if (0 > param7 &&
               param0 < 0 &&
               0 > param4) {
               return;
             }
-            if (ja.field_d <= param7 &&
-              ja.field_d <= param0 &&
-              ja.field_d <= param4) {
+            if (MeshRasterState.field_d <= param7 &&
+              MeshRasterState.field_d <= param0 &&
+              MeshRasterState.field_d <= param4) {
               return;
             }
             if (param6) {
@@ -298,19 +298,19 @@ final class cn {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = ja.field_g[param8];
+                var16Lifetime2 = MeshRasterState.field_g[param8];
                 while (param8 < param1) {
                   var17 = var9_int >> 16;
-                  if (var17 < ja.field_d) {
+                  if (var17 < MeshRasterState.field_d) {
                     var18 = (var10 >> 16) - (var9_int >> 16);
                     if (0 == var18) {
                       if (var17 >= 0 &&
-                        var17 < ja.field_d) {
+                        var17 < MeshRasterState.field_d) {
                         ProxySocketConnector.a(var18, 1022226145, var17 + var16Lifetime2, param5, param3);
                       }
                     } else {
-                      if (var17 + var18 >= ja.field_d) {
-                        var18 = -1 + (-var17 + ja.field_d);
+                      if (var17 + var18 >= MeshRasterState.field_d) {
+                        var18 = -1 + (-var17 + MeshRasterState.field_d);
                       }
                       if (0 <= var17) {
                         ProxySocketConnector.a(var18, 1022226145, var16Lifetime2 + var17, param5, param3);
@@ -320,7 +320,7 @@ final class cn {
                     }
                   }
                   param8++;
-                  if (ja.field_e <= param8) {
+                  if (MeshRasterState.field_e <= param8) {
                     return;
                   }
                   var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_j;
@@ -376,14 +376,14 @@ final class cn {
               var10 = var10 + var12 * param8;
               param8 = 0;
             }
-            var15Lifetime1 = ja.field_g[param8];
+            var15Lifetime1 = MeshRasterState.field_g[param8];
             while (param2 > param8) {
               var16Lifetime1 = var9_int >> 16;
-              if (var16Lifetime1 < ja.field_d) {
+              if (var16Lifetime1 < MeshRasterState.field_d) {
                 var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (0 != var17Lifetime1) {
-                  if (var17Lifetime1 + var16Lifetime1 >= ja.field_d) {
-                    var17Lifetime1 = ja.field_d - var16Lifetime1 - 1;
+                  if (var17Lifetime1 + var16Lifetime1 >= MeshRasterState.field_d) {
+                    var17Lifetime1 = MeshRasterState.field_d - var16Lifetime1 - 1;
                   }
                   if (var16Lifetime1 >= 0) {
                     ProxySocketConnector.a(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
@@ -392,13 +392,13 @@ final class cn {
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
-                    ja.field_d > var16Lifetime1) {
+                    MeshRasterState.field_d > var16Lifetime1) {
                     ProxySocketConnector.a(var17Lifetime1, 1022226145, var15Lifetime1 + var16Lifetime1, param5, param3);
                   }
                 }
               }
               param8++;
-              if (ja.field_e <= param8) {
+              if (MeshRasterState.field_e <= param8) {
                 return;
               }
               var10 = var10 + var12;

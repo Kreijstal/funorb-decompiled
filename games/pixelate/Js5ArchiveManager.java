@@ -60,9 +60,9 @@ final class Js5ArchiveManager {
         hp.a(SoftwareRasterizer.field_j - 640 >> 1, SoftwareRasterizer.field_d, 640 + SoftwareRasterizer.field_j >> 1, (byte) -91, 0);
         if (oo.field_b > 0) {
           if (CheckboxPainter.field_j != null) {
-            CheckboxPainter.field_j.f(ql.field_n.field_D, 0);
+            CheckboxPainter.field_j.f(GreenGrowTheRushesBackground.field_n.field_D, 0);
           }
-          stackIn_8_0 = ql.field_n;
+          stackIn_8_0 = GreenGrowTheRushesBackground.field_n;
           stackIn_9_1 = (param1) && (!LobbyPlayer.field_Wb);
           ((SceneWidget) (Object) stackIn_8_0).a(stackIn_9_1, 0);
           stackIn_12_0 = MidiPcmStream.field_E;
@@ -75,10 +75,10 @@ final class Js5ArchiveManager {
             CheckboxPainter.field_j.f(ff.field_h.field_D, 0);
           }
           stackIn_23_0 = ff.field_h;
-          stackIn_24_1 = (param1) && (!bm.field_o);
+          stackIn_24_1 = (param1) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_23_0).a(stackIn_24_1, 0);
           stackIn_27_0 = ai.field_A;
-          stackIn_28_1 = (param1) && (!bm.field_o);
+          stackIn_28_1 = (param1) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_27_0).a(stackIn_28_1, 0);
         }
         var2 = 127 / ((param0 + 31) / 55);

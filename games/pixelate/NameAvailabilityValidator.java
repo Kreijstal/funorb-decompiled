@@ -104,7 +104,7 @@ final class NameAvailabilityValidator extends TextFieldValidator {
               }
               var4 = var4 + ((WidgetStyleLayer.field_b << 1) + ki.field_e + dk.field_d);
             } else {
-              var4 = var4 + da.field_m;
+              var4 = var4 + BouncedownBackground.field_m;
             }
             var3_int++;
           }

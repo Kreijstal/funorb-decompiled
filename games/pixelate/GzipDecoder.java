@@ -70,7 +70,7 @@ final class GzipDecoder {
               var2 = var2 + (dk.field_d + WidgetStyleLayer.field_b + ki.field_e);
             } else {
               DualLinkNode.field_o.drawText(var6, var8, ab.field_b + var2, var5, -1);
-              var2 = var2 + da.field_m;
+              var2 = var2 + BouncedownBackground.field_m;
             }
           }
           return;

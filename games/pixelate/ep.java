@@ -298,7 +298,7 @@ final class ep {
           var15 = new int[ef.field_g];
           var14 = var15;
           var8 = var14;
-          qb.a(qj.field_a, 0, var15, 0, ef.field_g);
+          ArraySupport.a(qj.field_a, 0, var15, 0, ef.field_g);
           stackIn_61_0 = var8;
           return stackIn_61_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

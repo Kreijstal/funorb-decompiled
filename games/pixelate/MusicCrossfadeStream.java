@@ -289,7 +289,7 @@ final class MusicCrossfadeStream extends PcmStream {
           var4_int = param0.getGroupId(127, param3);
           var5 = param0.getFileId((byte) -114, param2, var4_int);
           if (param1 == 20049) {
-            stackIn_4_0 = se.a(var5, var4_int, 1000, param0);
+            stackIn_4_0 = KiteBackground.a(var5, var4_int, 1000, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (Sprite[]) null;
@@ -449,8 +449,8 @@ final class MusicCrossfadeStream extends PcmStream {
               if (var5 != 256) {
                 if (null != this.field_v &&
                   var6 <= this.field_v.length) {
-                  qb.a(this.field_v, 0, var6);
-                  qb.a(this.field_B, 0, var6);
+                  ArraySupport.a(this.field_v, 0, var6);
+                  ArraySupport.a(this.field_B, 0, var6);
                 } else {
                   this.field_B = new int[var6];
                   this.field_v = new int[var6];
@@ -481,7 +481,7 @@ final class MusicCrossfadeStream extends PcmStream {
             }
             if (null != this.field_v &&
               this.field_v.length >= var6) {
-              qb.a(this.field_v, 0, var6);
+              ArraySupport.a(this.field_v, 0, var6);
             } else {
               this.field_v = new int[var6];
               this.field_B = new int[var6];

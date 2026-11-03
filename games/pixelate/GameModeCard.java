@@ -22,11 +22,11 @@ final class GameModeCard {
         try {
           var3_int = this.field_b != 0 ? 65280 : 16762115;
           if (NodeHashTableIterator.field_f <= this.field_c) {
-            fi.a(320, 332, 35, StripedProgressBar.field_S, var3_int);
+            SpriteEffectHelpers.a(320, 332, 35, StripedProgressBar.field_S, var3_int);
           } else {
             var4 = this.field_c * 35 / 1000;
             var5 = var4 >> 1;
-            fi.a(320, 349 - var5, var4, StripedProgressBar.field_S, var3_int);
+            SpriteEffectHelpers.a(320, 349 - var5, var4, StripedProgressBar.field_S, var3_int);
             SoftwareRasterizer.f(0, -var5 + 355, 640, var4 / 2 + 343);
           }
           rk.field_e.drawCentered(param1, 320, 360, 0, -1);
@@ -122,8 +122,8 @@ final class GameModeCard {
 
     final static rk a(int param0, int param1) {
         double var2 = 1.0;
-        var2 = var2 + (((double)param0 - (double)param1) / 16.0 + ((double)ok.a(UiTheme.field_f, -99, 7) - 3.0) / 10.0);
-        return new rk(1 + ok.a(UiTheme.field_f, param1 ^ -102, 14), 10, of.a(var2, 65536));
+        var2 = var2 + (((double)param0 - (double)param1) / 16.0 + ((double)JavaRandomHelpers.a(UiTheme.field_f, -99, 7) - 3.0) / 10.0);
+        return new rk(1 + JavaRandomHelpers.a(UiTheme.field_f, param1 ^ -102, 14), 10, of.a(var2, 65536));
     }
 
     final static void a(int param0, int param1, int param2, int param3, SceneWidget param4, SceneWidget param5, byte[] param6, int param7, int param8, SceneWidget param9) {

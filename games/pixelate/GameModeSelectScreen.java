@@ -44,7 +44,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("loginm2", param0 ^ 31873);
                 if (var2 != null) {
-                  ho.field_b = of.a(var2, param0 - 31872);
+                  TextTableInitializer.field_b = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("loginm1", 0);
                 if (var2 != null) {
@@ -292,7 +292,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mu_create_unrated", param0 - 31873);
                 if (var2 != null) {
-                  ci.field_r = of.a(var2, 1);
+                  NightToRememberBackground.field_r = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_options", 0);
                 if (null != var2) {
@@ -356,7 +356,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("send_qc_to_x", 0);
                 if (null != var2) {
-                  ho.field_f = of.a(var2, 1);
+                  TextTableInitializer.field_f = of.a(var2, 1);
                 }
                 var2 = vd.a("send_pm", param0 ^ 31873);
                 if (var2 != null) {
@@ -432,7 +432,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mu_chat_game_show_all", 0);
                 if (null != var2) {
-                  bm.field_m = of.a(var2, 1);
+                  EmergentBehaviourBackground.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_chat_game_friends_only", param0 ^ 31873);
                 if (null != var2) {
@@ -620,7 +620,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("you_are_invited_to_xs_game", 0);
                 if (null != var2) {
-                  ok.field_a = of.a(var2, 1);
+                  JavaRandomHelpers.field_a = of.a(var2, 1);
                 }
                 var2 = vd.a("asking_to_join_xs_game", 0);
                 if (var2 != null) {
@@ -796,7 +796,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("gameopt_notunlocked", 0);
                 if (var2 != null) {
-                  qi.field_o = of.a(var2, 1);
+                  TwistedLogicBackground.field_o = of.a(var2, 1);
                 }
                 var2 = vd.a("gameopt_cannotbecombined1", param0 - 31873);
                 if (null != var2) {
@@ -1046,7 +1046,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("tocustomersupport", 0);
                 if (var2 != null) {
-                  ho.field_d = of.a(var2, 1);
+                  TextTableInitializer.field_d = of.a(var2, 1);
                 }
                 var2 = vd.a("changedisplayname", param0 - 31873);
                 if (var2 != null) {
@@ -1446,7 +1446,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("create_suggestions", 0);
                 if (null != var2) {
-                  ok.field_c = of.a(var2, param0 ^ 31872);
+                  JavaRandomHelpers.field_c = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("create_more_suggestions", param0 ^ 31873);
                 if (null != var2) {
@@ -1686,7 +1686,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("unable_to_delete_ignore", 0);
                 if (null != var2) {
-                  ok.field_b = of.a(var2, 1);
+                  JavaRandomHelpers.field_b = of.a(var2, 1);
                 }
                 var2 = vd.a("friendlistfull", 0);
                 if (null != var2) {
@@ -1714,7 +1714,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("removeignorefirst", 0);
                 if (null != var2) {
-                  bm.field_r = of.a(var2, 1);
+                  EmergentBehaviourBackground.field_r = of.a(var2, 1);
                 }
                 var2 = vd.a("removefriendfirst", 0);
                 if (null != var2) {
@@ -1814,7 +1814,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("loading_soundeffects", param0 ^ 31873);
                 if (null != var2) {
-                  bm.field_n = of.a(var2, 1);
+                  EmergentBehaviourBackground.field_n = of.a(var2, 1);
                 }
                 var2 = vd.a("loading_music", 0);
                 if (null != var2) {
@@ -2356,7 +2356,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mp_rematchnewgame", 0);
                 if (var2 != null) {
-                  bm.field_t = of.a(var2, 1);
+                  EmergentBehaviourBackground.field_t = of.a(var2, 1);
                 }
                 var2 = vd.a("mp_rematchnewgame_unrated", 0);
                 if (var2 != null) {
@@ -2904,33 +2904,33 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mustlogin4,1", 0);
                 if (var2 != null) {
-                  ho.field_a[1] = of.a(var2, 1);
+                  TextTableInitializer.field_a[1] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin4,2", param0 ^ 31873);
                 if (null != var2) {
-                  ho.field_a[2] = of.a(var2, DraggableWidget.a(param0, 31872));
+                  TextTableInitializer.field_a[2] = of.a(var2, DraggableWidget.a(param0, 31872));
                 }
                 var2 = vd.a("mustlogin4,3", 0);
                 if (null != var2) {
-                  ho.field_a[3] = of.a(var2, 1);
+                  TextTableInitializer.field_a[3] = of.a(var2, 1);
                 }
             }
             void runChunk3() throws java.lang.RuntimeException {
                 var2 = vd.a("mustlogin4,4", 0);
                 if (var2 != null) {
-                  ho.field_a[4] = of.a(var2, param0 - 31872);
+                  TextTableInitializer.field_a[4] = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("mustlogin4,5", 0);
                 if (null != var2) {
-                  ho.field_a[5] = of.a(var2, 1);
+                  TextTableInitializer.field_a[5] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin4,6", 0);
                 if (null != var2) {
-                  ho.field_a[6] = of.a(var2, 1);
+                  TextTableInitializer.field_a[6] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin4,7", 0);
                 if (var2 != null) {
-                  ho.field_a[7] = of.a(var2, 1);
+                  TextTableInitializer.field_a[7] = of.a(var2, 1);
                 }
                 var2 = vd.a("mustlogin_notloggedin", 0);
                 if (null != var2) {

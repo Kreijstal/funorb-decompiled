@@ -68,7 +68,7 @@ final class NameSuggestionsPanel extends UiContainer implements ButtonListener {
         int var5 = 118 / ((param3 - 70) / 49);
         BitmapFont var6 = he.field_d;
         if (null != this.suggestions) {
-          var6.drawParagraph(ok.field_c, param2 + this.field_z, param0 + this.field_p, this.field_E, 20, 16777215, -1, 0, 0, var6.maxAscent + var6.maxDescent);
+          var6.drawParagraph(JavaRandomHelpers.field_c, param2 + this.field_z, param0 + this.field_p, this.field_E, 20, 16777215, -1, 0, 0, var6.maxAscent + var6.maxDescent);
         }
     }
 

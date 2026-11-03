@@ -12,7 +12,7 @@ final class dh {
           dh.a(true);
           if (oo.field_b <= 0) {
             if (0 < vn.field_g) {
-              if (bm.field_o) {
+              if (EmergentBehaviourBackground.field_o) {
                 SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
                 ra.field_e.a(param1, 0);
                 return;
@@ -22,7 +22,7 @@ final class dh {
             if (Checkbox.field_W <= 0) {
               return;
             }
-            if (bm.field_o) {
+            if (EmergentBehaviourBackground.field_o) {
               SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
               ra.field_e.a(param1, 0);
               return;
@@ -31,7 +31,7 @@ final class dh {
           }
           if (!LobbyPlayer.field_Wb) {
             if (0 < vn.field_g) {
-              if (!bm.field_o) {
+              if (!EmergentBehaviourBackground.field_o) {
                 return;
               }
               SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
@@ -39,7 +39,7 @@ final class dh {
               return;
             }
             if (Checkbox.field_W > 0) {
-              if (!bm.field_o) {
+              if (!EmergentBehaviourBackground.field_o) {
                 return;
               }
               SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
@@ -54,7 +54,7 @@ final class dh {
             Checkbox.field_W <= 0) {
             return;
           }
-          if (!bm.field_o) {
+          if (!EmergentBehaviourBackground.field_o) {
             return;
           }
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
@@ -69,7 +69,7 @@ final class dh {
             Checkbox.field_W <= 0) {
             return;
           }
-          if (!bm.field_o) {
+          if (!EmergentBehaviourBackground.field_o) {
             return;
           }
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);
@@ -80,7 +80,7 @@ final class dh {
           Checkbox.field_W <= 0) {
           return;
         }
-        if (!bm.field_o) {
+        if (!EmergentBehaviourBackground.field_o) {
           return;
         }
         SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, ui.field_i.screenY);

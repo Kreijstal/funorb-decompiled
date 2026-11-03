@@ -54,7 +54,7 @@ final class Puzzle {
           var9 = 0;
           var5_intLifetime1 = var9;
           while (var9 < var3_int) {
-            var6 = var9 + ok.a(param1, -120, var3_int - var9);
+            var6 = var9 + JavaRandomHelpers.a(param1, -120, var3_int - var9);
             var7 = var12[var9];
             var4[var9] = var12[var6];
             var12[var6] = var7;

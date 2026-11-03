@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ho {
+final class TextTableInitializer {
     static int field_e;
     static SceneWidget field_g;
     static String[] field_a;
@@ -31,7 +31,7 @@ final class ho {
           PacketBuffer.field_o[11] = FallingPieceView.field_d;
           PacketBuffer.field_o[29] = ge.field_a;
           if (param0 != -29810) {
-            ho.a(false, -69);
+            TextTableInitializer.a(false, -69);
           }
           PacketBuffer.field_o[8] = null;
           PacketBuffer.field_o[5] = cm.field_l;
@@ -52,19 +52,19 @@ final class ho {
           PacketBuffer.field_o[25] = PasswordFieldPainter.field_z;
           PacketBuffer.field_o[18] = dg.field_c[1];
           PacketBuffer.field_o[14] = re.field_k[0];
-          wc.field_m[3] = GzipDecoder.field_b;
-          wc.field_m[6] = ReportAbuseDialog.field_Vb;
-          wc.field_m[2] = bo.field_a;
-          wc.field_m[4] = ce.field_e;
-          wc.field_m[1] = ro.field_f;
-          wc.field_m[7] = qf.field_d;
+          BlastFromThePastBackground.field_m[3] = GzipDecoder.field_b;
+          BlastFromThePastBackground.field_m[6] = ReportAbuseDialog.field_Vb;
+          BlastFromThePastBackground.field_m[2] = bo.field_a;
+          BlastFromThePastBackground.field_m[4] = ce.field_e;
+          BlastFromThePastBackground.field_m[1] = ro.field_f;
+          BlastFromThePastBackground.field_m[7] = qf.field_d;
           dn.field_a = new String[][]{hm.field_f, MatchingTextValidator.field_t, um.field_l, PauseMenuScreen.field_p, ui.field_h, qg.field_d};
           ln.field_m = new String[][]{up.field_a, ScrollContainer.field_Hb, qh.field_d, wk.field_i, GameApplet.field_k, NumericDateInputWidget.field_R, GameModeSelectScreen.field_q, vd.field_d};
-          wc.field_m[0] = DraggableWidget.field_L;
-          wc.field_m[5] = wa.field_e;
-          for (var1_int = 0; var1_int < wc.field_m.length; var1_int++) {
-            if (null == wc.field_m[var1_int]) {
-              wc.field_m[var1_int] = bl.field_f;
+          BlastFromThePastBackground.field_m[0] = DraggableWidget.field_L;
+          BlastFromThePastBackground.field_m[5] = wa.field_e;
+          for (var1_int = 0; var1_int < BlastFromThePastBackground.field_m.length; var1_int++) {
+            if (null == BlastFromThePastBackground.field_m[var1_int]) {
+              BlastFromThePastBackground.field_m[var1_int] = bl.field_f;
             }
           }
           return;
@@ -89,7 +89,7 @@ final class ho {
         field_a = null;
         field_d = null;
         if (param0 != 11799) {
-          ho.a(-116);
+          TextTableInitializer.a(-116);
         }
         field_g = null;
     }

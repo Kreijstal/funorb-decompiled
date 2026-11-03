@@ -127,7 +127,7 @@ final class dk {
           var11.n(-110);
           qn.field_q = MenuInputState.a(var11, (byte) 77);
           ck.field_b = new TriangleMesh[var3];
-          wc.field_p = new int[var3][];
+          BlastFromThePastBackground.field_p = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
             ck.field_b[var4] = pk.a(var9, -1);
           }
@@ -139,7 +139,7 @@ final class dk {
             var5.a(6, 6, 6, true, 1);
             var5.ensureBounds((byte) -17);
             var6 = new int[]{var5.field_b + var5.field_c >> 1, var5.field_F + var5.field_t >> 1, var5.field_x + var5.field_g >> 1};
-            wc.field_p[var10] = var6;
+            BlastFromThePastBackground.field_p[var10] = var6;
             var5.translateVertices(-var6[0], -var6[2], -var6[1], (byte) -83);
             var10++;
           }

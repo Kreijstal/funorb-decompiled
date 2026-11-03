@@ -11,7 +11,7 @@ final class r {
         int var1 = qh.field_c * qh.field_c;
         int var2 = -(HuffmanCodec.field_b * HuffmanCodec.field_b) + var1;
         int var4 = var2 * (MatchingTextValidator.field_o - wa.field_i) / var1 + wa.field_i;
-        ui.field_i.a(var4, 120, ho.field_c, 256, 640);
+        ui.field_i.a(var4, 120, TextTableInitializer.field_c, 256, 640);
         ArchiveProvider.a(-24 + MatchingTextValidator.field_o, (byte) 116, 640, PlayerBoard.field_q, 5, 0, MouseWheelHandler.field_c);
     }
 

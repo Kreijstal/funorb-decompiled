@@ -24,7 +24,7 @@ final class pj {
           }
           if (param1 ||
             io.field_c == null) {
-            bm.field_o = false;
+            EmergentBehaviourBackground.field_o = false;
           }
           if (param1) {
             if (0 < oo.field_b) {
@@ -77,7 +77,7 @@ final class pj {
             vn.field_g = vn.field_g + 1;
             return;
           }
-          bm.field_o = false;
+          EmergentBehaviourBackground.field_o = false;
           if (vn.field_g > 0) {
             vn.field_g = vn.field_g - 1;
             return;

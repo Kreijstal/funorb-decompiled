@@ -146,7 +146,7 @@ abstract class bg {
         SoftwareRasterizer.e(2 + var6, 25 + param2 - 2, var9, 16777215, 128);
         SoftwareRasterizer.e(var6 + 2, param2 + 2, var9, 0, 128);
         SoftwareRasterizer.e(2 + var6, param2 + 22, var9, 0, 128);
-        fi.a(var6, 7 + param2, var7, param2 + 7, 4, 7, gd.field_b);
+        SpriteEffectHelpers.a(var6, 7 + param2, var7, param2 + 7, 4, 7, gd.field_b);
         if (this.field_h <= 0) {
           return;
         }
@@ -155,7 +155,7 @@ abstract class bg {
         if (var10 <= 0) {
           return;
         }
-        fi.a(var6, 12 + param2, var7, param2 + 12, 12, var10, gd.field_c);
+        SpriteEffectHelpers.a(var6, 12 + param2, var7, param2 + 12, 12, var10, gd.field_c);
     }
 
     abstract void c(int param0);

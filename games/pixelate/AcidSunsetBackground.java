@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lk extends BackgroundScene {
+final class AcidSunsetBackground extends BackgroundScene {
     static int field_n;
     private int field_p;
     private int field_m;
@@ -27,14 +27,14 @@ final class lk extends BackgroundScene {
 
     public static void d(int param0) {
         if (param0 != 0) {
-          lk.d(35);
+          AcidSunsetBackground.d(35);
           field_o = null;
           return;
         }
         field_o = null;
     }
 
-    lk(String param0, Sprite[] param1) {
+    AcidSunsetBackground(String param0, Sprite[] param1) {
         super(param0, param1);
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wc extends BackgroundScene {
+final class BlastFromThePastBackground extends BackgroundScene {
     static int[][] field_p;
     static SceneWidget field_n;
     static String[] field_m;
@@ -29,7 +29,7 @@ final class wc extends BackgroundScene {
         field_p = (int[][]) null;
     }
 
-    wc(String param0, Sprite[] param1) {
+    BlastFromThePastBackground(String param0, Sprite[] param1) {
         super(param0, param1);
         try {
           this.c((byte) 97);
@@ -50,7 +50,7 @@ final class wc extends BackgroundScene {
           var4.b(73);
         }
         if (param0) {
-          wc.b((byte) 76);
+          BlastFromThePastBackground.b((byte) 76);
         }
     }
 

@@ -188,7 +188,7 @@ class SceneWidget extends SceneWidgetNode {
 
     final void a(int param0, boolean param1) {
         DiskCacheRequest.field_I = !param1 ? true : false;
-        bm.field_q = !param1 ? true : false;
+        EmergentBehaviourBackground.field_q = !param1 ? true : false;
         if (param0 != -28476) {
           SceneWidget var4 = (SceneWidget) null;
           this.a((SceneWidget) null, (byte) 61);
@@ -499,7 +499,7 @@ class SceneWidget extends SceneWidgetNode {
           }
           this.field_P = 0;
         }
-        stackIn_31_1 = (!bm.field_q) && (SoftwareRasterizer.field_e <= ProxyAuthenticationException.field_d) && (ProxyAuthenticationException.field_d < SoftwareRasterizer.field_h) && (bg.field_k >= SoftwareRasterizer.field_f) && (SoftwareRasterizer.field_a > bg.field_k);
+        stackIn_31_1 = (!EmergentBehaviourBackground.field_q) && (SoftwareRasterizer.field_e <= ProxyAuthenticationException.field_d) && (ProxyAuthenticationException.field_d < SoftwareRasterizer.field_h) && (bg.field_k >= SoftwareRasterizer.field_f) && (SoftwareRasterizer.field_a > bg.field_k);
         this.field_R = stackIn_31_1;
         if (0 == ef.field_b) {
           this.heldPressButton = 0;
@@ -514,7 +514,7 @@ class SceneWidget extends SceneWidgetNode {
           }
         }
         if (this.field_R) {
-          bm.field_q = true;
+          EmergentBehaviourBackground.field_q = true;
         }
         if (var13 != 0) {
           DiskCacheRequest.field_I = true;

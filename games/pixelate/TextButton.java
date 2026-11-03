@@ -295,8 +295,8 @@ class TextButton extends UiComponent {
           var9 = var21Lifetime1 * param1[3] + param1[4] * var22Lifetime1 + var23Lifetime1 * param1[5] >> -ai.field_x + 16;
           var10 = var23Lifetime1 * param1[8] + (param1[7] * var22Lifetime1 + param1[6] * var21Lifetime1) >> 16 - ai.field_x;
           var11 = param1[11] * var23Lifetime1 + param1[9] * var21Lifetime1 + param1[10] * var22Lifetime1 >> 16;
-          var21Lifetime2 = ja.field_b;
-          var22Lifetime2 = ja.field_i;
+          var21Lifetime2 = MeshRasterState.field_b;
+          var22Lifetime2 = MeshRasterState.field_i;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;

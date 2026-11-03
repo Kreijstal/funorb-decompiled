@@ -337,9 +337,9 @@ final class StripedProgressBar extends UiComponent {
         ContentTransitionDialog.a(true, 360, 16, 460, new int[]{0, 29, 7}, 30, 180);
         ContentTransitionDialog.a(true, 420, 17, 460, new int[]{7}, 30, 180);
         ContentTransitionDialog.a(true, 175, 14, 460, new int[]{}, 30, 180);
-        field_S = fi.a(600);
-        field_W = fi.a(180);
-        field_N = fi.a(300);
+        field_S = SpriteEffectHelpers.a(600);
+        field_W = SpriteEffectHelpers.a(180);
+        field_N = SpriteEffectHelpers.a(300);
         field_X = "Play free version";
     }
 }

@@ -608,7 +608,7 @@ final class HighscoresScreen extends MenuScreen {
         if (Js5NetworkRequest.field_C[param1] != LoginCredentials.field_e) {
           fq.field_o = Js5NetworkRequest.field_C[param1];
           fq.field_o.field_d = RegistrationRequestDialog.field_Cb;
-          ci.field_o = param1;
+          NightToRememberBackground.field_o = param1;
           DebouncedValidator.field_d = 0;
           u.a(false, 2 + param1);
           var2Lifetime1 = 20 / ((10 - param0) / 32);

@@ -183,7 +183,7 @@ final class pb {
             var4 = this.a(false, 100 + var10);
             if (var3 > 0 ||
               var4 > 0) {
-              fi.a(gb.field_b, var9, var10, var3 >> 1, var4 >> 1);
+              SpriteEffectHelpers.a(gb.field_b, var9, var10, var3 >> 1, var4 >> 1);
               var5 = this.a(false, var10 + this.field_a);
               var6 = this.a(false, this.field_g + (var10 + this.field_a));
               this.field_l[var8].a(0, this.field_h + var9, var6, this.field_a + var10, var5);

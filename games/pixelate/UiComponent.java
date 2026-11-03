@@ -240,7 +240,7 @@ class UiComponent extends IntrusiveNode {
         try {
           var1 = new Sprite(540, 140);
           Checkbox.a(-126, var1);
-          ja.a();
+          MeshRasterState.a();
           SoftwareRasterizer.d();
           GameModeCard.field_f = param0;
           ma.d((byte) 106);
@@ -383,8 +383,8 @@ class UiComponent extends IntrusiveNode {
                     this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                     var10 = qf.field_a;
                     if (var10 != null) {
-                      if (var10.field_n instanceof s) {
-                        ((s) (var10.field_n)).a(-92, var10, (DropTargetWidget) null);
+                      if (var10.field_n instanceof WidgetDropListener) {
+                        ((WidgetDropListener) (var10.field_n)).a(-92, var10, (DropTargetWidget) null);
                       }
                       qf.field_a = null;
                     }
@@ -403,8 +403,8 @@ class UiComponent extends IntrusiveNode {
                       var8 = qf.field_a;
                       var6 = var8;
                       if (var8 != null) {
-                        if (var8.field_n instanceof s) {
-                          ((s) (var8.field_n)).a(-92, var8, (DropTargetWidget) null);
+                        if (var8.field_n instanceof WidgetDropListener) {
+                          ((WidgetDropListener) (var8.field_n)).a(-92, var8, (DropTargetWidget) null);
                         }
                         qf.field_a = null;
                       }
@@ -421,8 +421,8 @@ class UiComponent extends IntrusiveNode {
                       var9 = qf.field_a;
                       var6Lifetime3 = var9;
                       if (var9 != null) {
-                        if (var9.field_n instanceof s) {
-                          ((s) (var9.field_n)).a(-92, var9, (DropTargetWidget) null);
+                        if (var9.field_n instanceof WidgetDropListener) {
+                          ((WidgetDropListener) (var9.field_n)).a(-92, var9, (DropTargetWidget) null);
                         }
                         qf.field_a = null;
                       }
@@ -445,8 +445,8 @@ class UiComponent extends IntrusiveNode {
                 var11 = qf.field_a;
                 var6Lifetime1 = var11;
                 if (var11 != null) {
-                  if (var11.field_n instanceof s) {
-                    ((s) (var11.field_n)).a(-92, var11, (DropTargetWidget) null);
+                  if (var11.field_n instanceof WidgetDropListener) {
+                    ((WidgetDropListener) (var11.field_n)).a(-92, var11, (DropTargetWidget) null);
                   }
                   qf.field_a = null;
                 }
@@ -481,8 +481,8 @@ class UiComponent extends IntrusiveNode {
                   this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                   var12 = qf.field_a;
                   if (var12 != null) {
-                    if (var12.field_n instanceof s) {
-                      ((s) (var12.field_n)).a(-92, var12, (DropTargetWidget) null);
+                    if (var12.field_n instanceof WidgetDropListener) {
+                      ((WidgetDropListener) (var12.field_n)).a(-92, var12, (DropTargetWidget) null);
                     }
                     qf.field_a = null;
                   }
@@ -520,8 +520,8 @@ class UiComponent extends IntrusiveNode {
                   var14 = qf.field_a;
                   var6Lifetime2 = var14;
                   if (var14 != null) {
-                    if (var14.field_n instanceof s) {
-                      ((s) (var14.field_n)).a(-92, var14, (DropTargetWidget) null);
+                    if (var14.field_n instanceof WidgetDropListener) {
+                      ((WidgetDropListener) (var14.field_n)).a(-92, var14, (DropTargetWidget) null);
                     }
                     qf.field_a = null;
                   }
@@ -562,8 +562,8 @@ class UiComponent extends IntrusiveNode {
                 var13 = qf.field_a;
                 var6Lifetime2Lifetime1 = var13;
                 if (var13 != null) {
-                  if (var13.field_n instanceof s) {
-                    ((s) (var13.field_n)).a(-92, var13, (DropTargetWidget) null);
+                  if (var13.field_n instanceof WidgetDropListener) {
+                    ((WidgetDropListener) (var13.field_n)).a(-92, var13, (DropTargetWidget) null);
                   }
                   qf.field_a = null;
                 }
@@ -607,8 +607,8 @@ class UiComponent extends IntrusiveNode {
             this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
             var15 = qf.field_a;
             if (var15 != null) {
-              if (var15.field_n instanceof s) {
-                ((s) (var15.field_n)).a(-92, var15, (DropTargetWidget) null);
+              if (var15.field_n instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var15.field_n)).a(-92, var15, (DropTargetWidget) null);
               }
               qf.field_a = null;
             }

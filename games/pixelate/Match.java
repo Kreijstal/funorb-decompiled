@@ -364,7 +364,7 @@ final class Match {
             var9 = new Random((long)this.field_c);
             this.puzzle = wo.a(this.field_r, cl.field_e[this.field_n], var9, (byte) 116);
             this.puzzle.field_e = 1000;
-            ok.a(var9, -98, 2147483647);
+            JavaRandomHelpers.a(var9, -98, 2147483647);
           }
           for (var7_int = 0; this.field_m > var7_int; var7_int++) {
             this.boards[var7_int] = new PlayerBoard(this.puzzle);

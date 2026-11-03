@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends BackgroundScene {
+final class TwistedLogicBackground extends BackgroundScene {
     private int field_m;
     private IntrusiveDeque field_n;
     static String field_o;
@@ -79,7 +79,7 @@ final class qi extends BackgroundScene {
         this.field_m = TabbedPanel.a((byte) 41, 75, 25);
     }
 
-    qi(String param0, Sprite[] param1) {
+    TwistedLogicBackground(String param0, Sprite[] param1) {
         super(param0, param1);
         int var3_int = 0;
         try {

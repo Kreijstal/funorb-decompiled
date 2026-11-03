@@ -29,13 +29,13 @@ final class DropTargetWidget extends SingleChildContainer {
             if (!this.a(param3 ^ 96, param1, param4, param0, param5)) {
               return;
             }
-            if (this.field_n instanceof s) {
-              ((s) (this.field_n)).a(116, var8, this);
+            if (this.field_n instanceof WidgetDropListener) {
+              ((WidgetDropListener) (this.field_n)).a(116, var8, this);
               qf.field_a = null;
               return;
             }
-            if (var8.field_n instanceof s) {
-              ((s) (var8.field_n)).a(param3 ^ -106, var8, this);
+            if (var8.field_n instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var8.field_n)).a(param3 ^ -106, var8, this);
               qf.field_a = null;
               return;
             }

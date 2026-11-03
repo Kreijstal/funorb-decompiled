@@ -172,8 +172,8 @@ final class DraggableWidget extends SingleChildContainer {
               var6 != this.field_p)) {
               this.field_p = var6;
               this.field_z = var5_int;
-              if (!(!(this.field_n instanceof eo))) {
-                ((eo) (this.field_n)).a(param2, this, param1, 31);
+              if (!(!(this.field_n instanceof WidgetDragListener))) {
+                ((WidgetDragListener) (this.field_n)).a(param2, this, param1, 31);
               }
             }
             decompiledFrameRemainder0 = false;

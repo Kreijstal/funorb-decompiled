@@ -47,7 +47,7 @@ final class jd extends IntrusiveNode {
         if (param0 != 0) {
           return;
         }
-        ql.field_m = -1;
+        GreenGrowTheRushesBackground.field_m = -1;
         sd.field_N = false;
     }
 

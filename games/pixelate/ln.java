@@ -35,7 +35,7 @@ final class ln extends IntrusiveNode {
               if (param1 != -85) {
                 ln.a(122);
               }
-              var4 = (String) (cq.a("getcookies", (byte) -43, param0));
+              var4 = (String) (JavaScriptBridge.a("getcookies", (byte) -43, param0));
               var5 = Puzzle.a(var4, (byte) -37, ';');
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -83,7 +83,7 @@ final class ln extends IntrusiveNode {
     }
 
     ln(int param0) {
-        this.field_o = PcmSampleStream.a(SecondaryNodeDeque.field_f[param0], 100, ci.field_m[param0]);
+        this.field_o = PcmSampleStream.a(SecondaryNodeDeque.field_f[param0], 100, NightToRememberBackground.field_m[param0]);
         TextLayoutLine.a(-21317, this.field_o);
     }
 

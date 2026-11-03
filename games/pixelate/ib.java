@@ -27,12 +27,12 @@ final class ib {
             try {
               var4 = param0.getCodeBase();
               var3 = lg.a(param1, param0, var4).getFile();
-              cq.a(param0, (byte) -62, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
-              cq.a(param0, (byte) -115, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
-              cq.a(param0, (byte) 108, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
-              cq.a(param0, (byte) -44, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
-              cq.a(param0, (byte) 78, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
-              cq.a(param0, (byte) 66, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
+              JavaScriptBridge.a(param0, (byte) -62, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
+              JavaScriptBridge.a(param0, (byte) -115, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
+              JavaScriptBridge.a(param0, (byte) 108, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
+              JavaScriptBridge.a(param0, (byte) -44, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
+              JavaScriptBridge.a(param0, (byte) 78, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
+              JavaScriptBridge.a(param0, (byte) 66, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

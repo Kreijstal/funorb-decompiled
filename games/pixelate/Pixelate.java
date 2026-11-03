@@ -91,7 +91,7 @@ public final class Pixelate extends NetworkGameClient {
         int var9Lifetime1;
         var16 = null;
         var12 = field_H ? 1 : 0;
-        ce.field_g = ql.g(13428);
+        ce.field_g = GreenGrowTheRushesBackground.g(13428);
         ByteStorage.a(-29949);
         if (ib.field_f != null &&
           ib.field_f.field_g) {
@@ -457,7 +457,7 @@ public final class Pixelate extends NetworkGameClient {
         ab.a(false);
         oo.a(true);
         MusicCrossfadeStream.e(-97);
-        ho.b(11799);
+        TextTableInitializer.b(11799);
         BackgroundScene.b(-4136);
         KeyboardInputHandler.a(-1);
         vf.a(-109);
@@ -547,7 +547,7 @@ public final class Pixelate extends NetworkGameClient {
         fg.a(9882);
         VorbisSample.releaseStatics();
         nd.b(param0 - 23110);
-        fi.a();
+        SpriteEffectHelpers.a();
         jb.a((byte) 33);
         kh.a(21601);
         ig.a((byte) 2);
@@ -564,10 +564,10 @@ public final class Pixelate extends NetworkGameClient {
         mj.a(param0 ^ 3805);
         kf.d(126);
         PlayerBoard.a((byte) 125);
-        ql.f(0);
-        wc.b((byte) 34);
-        da.b((byte) -13);
-        se.f(21476);
+        GreenGrowTheRushesBackground.f(0);
+        BlastFromThePastBackground.b((byte) 34);
+        BouncedownBackground.b((byte) -13);
+        KiteBackground.f(21476);
         pe.a(7);
         an.b(-1);
         ek.a(14);
@@ -582,7 +582,7 @@ public final class Pixelate extends NetworkGameClient {
         ClientContextMenu.c((byte) 121);
         ReportAbuseDialog.m(1);
         wo.a(true);
-        ci.d(-12424);
+        NightToRememberBackground.d(-12424);
         ep.b(param0 - 23120);
         pk.a(4194303);
         of.a((byte) 79);
@@ -612,11 +612,11 @@ public final class Pixelate extends NetworkGameClient {
         wa.a(0);
         ra.a(false);
         AudioService.a(true);
-        qi.b((byte) 106);
+        TwistedLogicBackground.b((byte) 106);
         dc.a(param0 ^ -23119);
-        ta.a();
-        lk.d(0);
-        bm.d(0);
+        IntArraySorter.a();
+        AcidSunsetBackground.d(0);
+        EmergentBehaviourBackground.d(0);
         SocketJs5Transport.f(111);
         nj.b((byte) 97);
         Js5NetworkRequest.c((byte) -104);
@@ -628,7 +628,7 @@ public final class Pixelate extends NetworkGameClient {
         qf.a(false);
         AccountNoticeDialog.e((byte) -63);
         TextWidgetPainter.b(-120);
-        ja.c();
+        MeshRasterState.c();
         jk.a(20);
         TriangleMesh.c((byte) -79);
         cl.a(938035464);
@@ -642,7 +642,7 @@ public final class Pixelate extends NetworkGameClient {
         Bzip2Decoder.a();
         ai.a((byte) -92);
         fd.b(-24465);
-        ok.a((byte) -118);
+        JavaRandomHelpers.a((byte) -118);
         CheckboxPainter.a((byte) -123);
         StatefulTextPainter.c(param0 - 23174);
         DialWidgetPainter.a(-26570);
@@ -1266,7 +1266,7 @@ public final class Pixelate extends NetworkGameClient {
                 var31 = var31 + fq.field_q * var39Lifetime1;
               }
               if (var12.field_cc) {
-                var12.field_Wb.field_cb = sd.a(ok.field_a, param1 - 22, new String[]{var32});
+                var12.field_Wb.field_cb = sd.a(JavaRandomHelpers.field_a, param1 - 22, new String[]{var32});
                 var12.field_Wb.a(var31, fq.field_q, MouseWheelHandler.field_c, 256, -(2 * MouseWheelHandler.field_c) + var12.field_K);
                 var31 = var31 + fq.field_q;
               }
@@ -1428,7 +1428,7 @@ public final class Pixelate extends NetworkGameClient {
             var4.a(NameAvailabilityValidator.field_t << 4, true, false);
           }
         }
-        ho.a(ep.a(30022), 12402);
+        TextTableInitializer.a(ep.a(30022), 12402);
         if (fc.field_e == 4 ||
           MidiPcmStream.field_t == 4) {
           var3Lifetime1 = 192;
@@ -1498,7 +1498,7 @@ public final class Pixelate extends NetworkGameClient {
         Sprite var6;
         Sprite[][] var7;
         var9 = field_H ? 1 : 0;
-        ho.a(-29810);
+        TextTableInitializer.a(-29810);
         if (ji.field_b != null) {
           if (qn.field_l.b(-3) &&
             qn.field_l.ensureGroupAvailableByName("basic", -1)) {
@@ -1555,10 +1555,10 @@ public final class Pixelate extends NetworkGameClient {
                         li.a(45.0f, -1, BoundedRandomAccessFile.a(ab.field_f, fq.field_p, AccountChoicePanel.field_I, -22165, 0));
                         return false;
                       }
-                      li.a(40.0f, -1, TextLayoutLine.a(83, PacketBuffer.field_p, bm.field_n, "", l.field_u));
+                      li.a(40.0f, -1, TextLayoutLine.a(83, PacketBuffer.field_p, EmergentBehaviourBackground.field_n, "", l.field_u));
                       return false;
                     }
-                    li.a(20.0f, -1, TextLayoutLine.a(125, ji.field_b, bm.field_n, "", l.field_u));
+                    li.a(20.0f, -1, TextLayoutLine.a(125, ji.field_b, EmergentBehaviourBackground.field_n, "", l.field_u));
                     return false;
                   }
                   li.a(17.0f, -1, TextLayoutLine.a(107, dg.field_d, CipherPacketBuffer.field_x, "lobby", CanvasRasterBuffer.field_f));
@@ -1635,7 +1635,7 @@ public final class Pixelate extends NetworkGameClient {
         rk.field_e = vn.a(MenuInputState.field_d, "basic", "font", PlayerBoard.field_c, 22510);
         qj.field_e = bf.a(param1 ^ 4, dg.field_d, "", qn.field_l, "arial13");
         nh.a((byte) 117);
-        bm.field_u = bi.a("basic", "background", MenuInputState.field_d, (byte) -36);
+        EmergentBehaviourBackground.field_u = bi.a("basic", "background", MenuInputState.field_d, (byte) -36);
         Match.a(13728, 0, NetworkGameClient.a(MenuInputState.field_d, 23, "basic", "level1"));
         Match.a(13728, 1, NetworkGameClient.a(MenuInputState.field_d, -128, "basic", "level2"));
         Match.a(13728, 2, NetworkGameClient.a(MenuInputState.field_d, -4, "basic", "level3"));
@@ -1768,7 +1768,7 @@ public final class Pixelate extends NetworkGameClient {
         ab.field_f = MouseInputHandler.a(9, (byte) 124);
         BoundedRandomAccessFile.field_c = MouseInputHandler.a(10, (byte) 124);
         GameModeSelectScreen.field_u = MouseInputHandler.a(11, (byte) 124);
-        ho.a(-29810);
+        TextTableInitializer.a(-29810);
     }
 
     private final void advanceClientState(boolean param0, boolean param1) {
@@ -1788,7 +1788,7 @@ public final class Pixelate extends NetworkGameClient {
         int var3Lifetime1;
         var8 = field_H ? 1 : 0;
         if (GameModeCard.field_d != GameModeCard.field_a) {
-          if (GameModeCard.field_a == ho.field_e) {
+          if (GameModeCard.field_a == TextTableInitializer.field_e) {
             hf.field_o = hf.field_o + 1;
             if (16 == hf.field_o) {
               if (wl.field_b) {

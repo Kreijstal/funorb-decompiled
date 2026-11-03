@@ -53,7 +53,7 @@ final class qn extends IntrusiveNode {
           var7 = Pixelate.field_H ? 1 : 0;
           try {
             try {
-              var3 = (String) (cq.a("getcookies", (byte) -114, param0));
+              var3 = (String) (JavaScriptBridge.a("getcookies", (byte) -114, param0));
               var4 = Puzzle.a(var3, (byte) -61, ';');
               if (param2 != -85) {
                 stackIn_3_0 = (String) null;

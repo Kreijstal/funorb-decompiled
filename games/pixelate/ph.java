@@ -32,22 +32,22 @@ final class ph extends IntrusiveNode {
           }
           try {
             if (0 == AchievementsScreen.field_q) {
-              se.field_o = ef.field_e.a(20278, bl.field_e, ArchiveIndex.field_s);
+              KiteBackground.field_o = ef.field_e.a(20278, bl.field_e, ArchiveIndex.field_s);
               AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
             }
             if (1 == AchievementsScreen.field_q) {
-              if (se.field_o.field_b == 2) {
+              if (KiteBackground.field_o.field_b == 2) {
                 stackIn_14_0 = ce.a((byte) -124, -1);
                 return stackIn_14_0;
               }
-              if (se.field_o.field_b == 1) {
+              if (KiteBackground.field_o.field_b == 1) {
                 AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
               }
             }
             if (AchievementsScreen.field_q == 2) {
-              sc.field_d = new BufferedSocket((java.net.Socket) (se.field_o.field_e), ef.field_e);
+              sc.field_d = new BufferedSocket((java.net.Socket) (KiteBackground.field_o.field_e), ef.field_e);
               var2 = new PacketBuffer(13);
-              FallingPieceView.a(ql.field_o, (byte) 66, SceneWidget.field_ib, var2, lk.field_n);
+              FallingPieceView.a(GreenGrowTheRushesBackground.field_o, (byte) 66, SceneWidget.field_ib, var2, AcidSunsetBackground.field_n);
               var2.writeByte(160, 15);
               var2.d(fj.field_a, -76);
               sc.field_d.a(13, -103, 0, var2.payload);
@@ -78,7 +78,7 @@ final class ph extends IntrusiveNode {
             }
             Match.field_h.a(sc.field_d, ModalStack.field_L, 8);
             sc.field_d = null;
-            se.field_o = null;
+            KiteBackground.field_o = null;
             AchievementsScreen.field_q = 0;
             stackIn_37_0 = 0;
             return stackIn_37_0;

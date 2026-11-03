@@ -53,7 +53,7 @@ final class wo {
         try {
           var4_int = 0;
           if (param0 == 1) {
-            stackIn_4_0 = (ok.a(param2, -108, 4) != 0) ? 0 : 1;
+            stackIn_4_0 = (JavaRandomHelpers.a(param2, -108, 4) != 0) ? 0 : 1;
             var4_int = stackIn_4_0;
           }
           if (2 == param0) {

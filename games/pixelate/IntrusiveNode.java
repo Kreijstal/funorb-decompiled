@@ -90,10 +90,10 @@ class IntrusiveNode {
           AchievementsScreen.field_p[0] = CipherPacketBuffer.field_t;
           AchievementsScreen.field_p[1] = IntrusiveDequeCursor.field_b;
           StripedProgressBar.field_O = new SceneWidget(0L, (SceneWidget) null);
-          ho.field_g = new SceneWidget(0L, u.field_l, qn.field_m);
+          TextTableInitializer.field_g = new SceneWidget(0L, u.field_l, qn.field_m);
           l.field_s = new SceneWidget(0L, ni.field_s, rh.field_m);
           jm.field_b = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
-          StripedProgressBar.field_O.a(ho.field_g, (byte) 26);
+          StripedProgressBar.field_O.a(TextTableInitializer.field_g, (byte) 26);
           if (DialWidgetPainter.field_n) {
             StripedProgressBar.field_O.a(l.field_s, (byte) 26);
           }
@@ -108,7 +108,7 @@ class IntrusiveNode {
           ValidatedTextWidget.field_cb = new SceneWidget(0L, be.field_R, AccountChoicePanel.field_K.toUpperCase());
           sd.field_P = new SceneWidget(0L, io.field_f, ul.field_n.toUpperCase());
           DiskCacheWorker.field_a = new SceneWidget(0L, ff.field_a);
-          wc.field_n = new SceneWidget(0L, u.field_l, OptionsScreen.field_w);
+          BlastFromThePastBackground.field_n = new SceneWidget(0L, u.field_l, OptionsScreen.field_w);
           if (param3 < 108) {
             IntrusiveNode.d(41);
           }
@@ -127,7 +127,7 @@ class IntrusiveNode {
           if (DialWidgetPainter.field_n) {
             stackIn_9_0 = null;
             stackIn_9_1 = null;
-            stackIn_9_4 = ci.field_r;
+            stackIn_9_4 = NightToRememberBackground.field_r;
           } else {
             stackIn_9_0 = null;
             stackIn_9_1 = null;
@@ -137,7 +137,7 @@ class IntrusiveNode {
           MidiPcmStream.field_E = new SceneWidget(0L, (SceneWidget) null);
           MidiPcmStream.field_E.a(sd.field_P, (byte) 26);
           MidiPcmStream.field_E.a(DiskCacheWorker.field_a, (byte) 26);
-          DiskCacheWorker.field_a.a(wc.field_n, (byte) 26);
+          DiskCacheWorker.field_a.a(BlastFromThePastBackground.field_n, (byte) 26);
           DiskCacheWorker.field_a.a(IsaacRandom.field_b, (byte) 26);
           DiskCacheWorker.field_a.a(LoginDialog.field_pb, (byte) 26);
           if (DialWidgetPainter.field_n) {

@@ -19,7 +19,7 @@ final class ce {
           return 3;
         }
         AchievementsScreen.field_q = 0;
-        se.field_o = null;
+        KiteBackground.field_o = null;
         var2 = ArchiveIndex.field_s;
         ArchiveIndex.field_s = pd.field_Eb;
         Match.field_h.field_h = Match.field_h.field_h + 1;

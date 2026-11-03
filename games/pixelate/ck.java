@@ -104,14 +104,14 @@ final class ck {
         int var4;
         int var5;
         float var6;
-        this.field_f = ok.a(ea.field_b, -101, 50) + 20;
-        this.field_d = 1.5f + (float)ok.a(ea.field_b, -125, 100) / 100.0f;
-        stackIn_3_0 = (ok.a(ea.field_b, param0 ^ 22979, 2) != 1) ? 0 : 1;
+        this.field_f = JavaRandomHelpers.a(ea.field_b, -101, 50) + 20;
+        this.field_d = 1.5f + (float)JavaRandomHelpers.a(ea.field_b, -125, 100) / 100.0f;
+        stackIn_3_0 = (JavaRandomHelpers.a(ea.field_b, param0 ^ 22979, 2) != 1) ? 0 : 1;
         var2 = stackIn_3_0;
-        stackIn_6_0 = (ok.a(ea.field_b, -115, 2) != 1) ? 0 : 1;
+        stackIn_6_0 = (JavaRandomHelpers.a(ea.field_b, -115, 2) != 1) ? 0 : 1;
         var3 = stackIn_6_0;
         if (var2 == 0) {
-          this.field_h = (float)(-100 + ok.a(ea.field_b, param0 ^ 22992, 740));
+          this.field_h = (float)(-100 + JavaRandomHelpers.a(ea.field_b, param0 ^ 22992, 740));
           if (var3 != 0) {
             stackIn_14_1 = 480.0f;
           } else {
@@ -125,7 +125,7 @@ final class ck {
             stackIn_10_1 = 640.0f;
           }
           this.field_h = stackIn_10_1;
-          this.field_a = (float)(ok.a(ea.field_b, -109, 580) - 100);
+          this.field_a = (float)(JavaRandomHelpers.a(ea.field_b, -109, 580) - 100);
         }
         var4 = 320 - (int)this.field_h;
         var5 = 240 - (int)this.field_a;
@@ -275,7 +275,7 @@ final class ck {
               if (!param0) {
                 return true;
               }
-              var3 = (String) (cq.a("getcookies", (byte) -113, param1));
+              var3 = (String) (JavaScriptBridge.a("getcookies", (byte) -113, param1));
               var4 = Puzzle.a(var3, (byte) -52, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -312,9 +312,9 @@ final class ck {
     ck() {
         int var1;
         this.a(-22970);
-        var1 = ok.a(ea.field_b, -128, 250);
+        var1 = JavaRandomHelpers.a(ea.field_b, -128, 250);
         if (var1 >= 180) {
-          this.field_f = this.field_f + ok.a(ea.field_b, -116, 50);
+          this.field_f = this.field_f + JavaRandomHelpers.a(ea.field_b, -116, 50);
         } else {
           this.field_f = 0;
           this.field_a = this.field_a + this.field_e * (float)var1;

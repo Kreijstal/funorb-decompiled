@@ -44,7 +44,7 @@ final class BoardView {
           for (var2_int = 0; var2_int < dn.field_a.length; var2_int++) {
             jb.field_b[var2_int] = new bi(GradientOutlineTextPainter.field_w[var2_int], dn.field_a[var2_int], var2_int == 5 ? true : false);
           }
-          ql.field_m = -1;
+          GreenGrowTheRushesBackground.field_m = -1;
           NetworkGameClient.field_D = 15;
           AccountRegistrationPanel.field_S = 0;
           of.field_d = -1;
@@ -438,7 +438,7 @@ final class BoardView {
               var13 = 33;
               if (var9 == 0) {
                 if (var10 != 0) {
-                  fi.a(var11, var12, var13, var13, 16777215, 40);
+                  SpriteEffectHelpers.a(var11, var12, var13, var13, 16777215, 40);
                 }
               } else {
                 SoftwareRasterizer.a(var11, var12, var13, var13, 0, 192);
@@ -465,8 +465,8 @@ final class BoardView {
           SoftwareRasterizer.a(DialWidgetPainter.field_d);
           SoftwareRasterizer.f(var2 + this.field_g * 32, this.field_p * 32 + var3, (this.field_h - this.field_f) * 32 + var2, var3 + 32 * (-this.field_e + this.field_j));
           for (var6Lifetime3 = 0; 20 > var6Lifetime3; var6Lifetime3 += 3) {
-            fi.a(this.field_g * 32 + (this.field_t - (-this.field_A - var6Lifetime3 * 2 + 40)), -20 + var3, this.field_A + 32 * this.field_g + this.field_t - 2 * (-var6Lifetime3 + 20), this.field_j * 32 + var3 + 20, 4, var6Lifetime3 * 3, sd.field_Q);
-            fi.a(var2 - 20, -(2 * (-var6Lifetime3 + 20)) + this.field_x + (this.field_u + this.field_p * 32), this.field_h * 32 + (var2 + 20), var6Lifetime3 * 2 - 40 + (this.field_p * 32 + this.field_u) + this.field_x, 4, 3 * var6Lifetime3, sd.field_Q);
+            SpriteEffectHelpers.a(this.field_g * 32 + (this.field_t - (-this.field_A - var6Lifetime3 * 2 + 40)), -20 + var3, this.field_A + 32 * this.field_g + this.field_t - 2 * (-var6Lifetime3 + 20), this.field_j * 32 + var3 + 20, 4, var6Lifetime3 * 3, sd.field_Q);
+            SpriteEffectHelpers.a(var2 - 20, -(2 * (-var6Lifetime3 + 20)) + this.field_x + (this.field_u + this.field_p * 32), this.field_h * 32 + (var2 + 20), var6Lifetime3 * 2 - 40 + (this.field_p * 32 + this.field_u) + this.field_x, 4, 3 * var6Lifetime3, sd.field_Q);
           }
           SoftwareRasterizer.b(DialWidgetPainter.field_d);
         }

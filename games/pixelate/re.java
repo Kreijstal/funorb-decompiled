@@ -174,7 +174,7 @@ final class re {
         try {
           var2_int = param1.length;
           var3 = new byte[var2_int];
-          qb.a(param1, 0, var3, 0, var2_int);
+          ArraySupport.a(param1, 0, var3, 0, var2_int);
           if (param0) {
             stackIn_4_0 = var3;
             return stackIn_4_0;

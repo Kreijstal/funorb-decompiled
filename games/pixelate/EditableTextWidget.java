@@ -143,7 +143,7 @@ class EditableTextWidget extends TextButton {
         }
         int var2 = qh.field_c * qh.field_c;
         int var3 = var2 - oo.field_b * oo.field_b;
-        ql.field_n.a(90, -210 + SoftwareRasterizer.field_d - 4, -(var3 * 199 / var2) + var1, 256, 199);
+        GreenGrowTheRushesBackground.field_n.a(90, -210 + SoftwareRasterizer.field_d - 4, -(var3 * 199 / var2) + var1, 256, 199);
         MidiPcmStream.field_E.a(0, -120 + SoftwareRasterizer.field_d - 4, 438 * var3 / var2 + var1 + 202, 256, 438);
     }
 

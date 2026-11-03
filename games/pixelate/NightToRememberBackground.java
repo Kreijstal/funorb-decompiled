@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ci extends BackgroundScene {
+final class NightToRememberBackground extends BackgroundScene {
     private li field_q;
     static boolean field_n;
     static int[] field_m;
@@ -32,7 +32,7 @@ final class ci extends BackgroundScene {
         u.field_f.b(0, -u.field_f.field_B + 480, lg.field_a);
     }
 
-    ci(String param0, Sprite[] param1) {
+    NightToRememberBackground(String param0, Sprite[] param1) {
         super(param0, param1);
         int var4 = 0;
         RuntimeException stackIn_31_0 = null;

@@ -388,7 +388,7 @@ final class GameResultsScreen extends MenuScreen {
         this.c(0);
         ClientException.field_f = var6;
         ClientException.field_f.a(19692);
-        fi.a(EditableTextWidget.field_R.field_e, var4, var5);
+        SpriteEffectHelpers.a(EditableTextWidget.field_R.field_e, var4, var5);
     }
 
     final void e(int param0) {
@@ -406,7 +406,7 @@ final class GameResultsScreen extends MenuScreen {
         } else {
           if (var3 == 0) {
             if (3 == (1 << ro.field_e.field_z | var4)) {
-              this.field_s = bm.field_t;
+              this.field_s = EmergentBehaviourBackground.field_t;
             } else {
               this.field_s = dq.field_c;
             }

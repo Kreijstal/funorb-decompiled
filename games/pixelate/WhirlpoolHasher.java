@@ -96,7 +96,7 @@ final class WhirlpoolHasher {
             WhirlpoolHasher.a(-91);
           }
           var7 = var5_int - 10;
-          da.e(-98);
+          BouncedownBackground.e(-98);
           if (param1.field_B > 0 &&
             null != param1.field_n) {
             vf.a((byte) -37);
@@ -488,7 +488,7 @@ final class WhirlpoolHasher {
               if (param2 != 16157) {
                 return;
               }
-              qb.a(this.bitLength, 0, this.inputBlock, 32, 32);
+              ArraySupport.a(this.bitLength, 0, this.inputBlock, 32, 32);
               this.b((byte) 41);
               break;
             }

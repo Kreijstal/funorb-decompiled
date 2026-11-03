@@ -116,11 +116,11 @@ final class lp {
     }
 
     lp() {
-        this.field_g = ok.a(ea.field_b, -118, 640) << 16;
-        this.field_b = ok.a(ea.field_b, -100, 480) << 16;
-        this.field_e = ok.a(ea.field_b, -99, 90) + 10;
-        this.field_h = -65536 + ok.a(ea.field_b, -111, 131072);
-        this.field_a = -65536 + ok.a(ea.field_b, -123, 131072);
+        this.field_g = JavaRandomHelpers.a(ea.field_b, -118, 640) << 16;
+        this.field_b = JavaRandomHelpers.a(ea.field_b, -100, 480) << 16;
+        this.field_e = JavaRandomHelpers.a(ea.field_b, -99, 90) + 10;
+        this.field_h = -65536 + JavaRandomHelpers.a(ea.field_b, -111, 131072);
+        this.field_a = -65536 + JavaRandomHelpers.a(ea.field_b, -123, 131072);
         this.field_f = this.field_e << 16;
     }
 

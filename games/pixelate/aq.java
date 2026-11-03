@@ -31,7 +31,7 @@ final class aq {
             return stackIn_2_0;
           }
           if (2 != ValidatedTextWidget.field_db) {
-            stackIn_5_0 = ok.field_b;
+            stackIn_5_0 = JavaRandomHelpers.field_b;
             return stackIn_5_0;
           }
           if (param3 != -20867) {
@@ -94,7 +94,7 @@ final class aq {
           var6 = 1;
           var2Lifetime1 = var6;
           while (var1_int > var6) {
-            var3 = var6 + ok.a(ea.field_b, -109, var1_int - var6);
+            var3 = var6 + JavaRandomHelpers.a(ea.field_b, -109, var1_int - var6);
             var4 = jm.field_g[var6];
             jm.field_g[var6] = jm.field_g[var3];
             jm.field_g[var3] = var4;
@@ -151,7 +151,7 @@ final class aq {
         LoginCredentials.field_e = Js5NetworkRequest.field_C[param0];
         fq.field_o = null;
         if (!param1) {
-          ci.field_o = param0;
+          NightToRememberBackground.field_o = param0;
           DebouncedValidator.field_d = 0;
           dg.a(param0 + 2, (byte) -100);
           return;

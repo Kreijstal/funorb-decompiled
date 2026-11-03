@@ -40,7 +40,7 @@ class BackgroundScene {
             var4 = 640 * (-this.field_d + RegistrationRequestDialog.field_Cb) / var5;
             SoftwareRasterizer.f(var2, 0, var4, 480);
           }
-          fi.a(this.field_i, 0, -DateInputWidget.field_L.maxAscent + (140 - pd.field_Jb * 2));
+          SpriteEffectHelpers.a(this.field_i, 0, -DateInputWidget.field_L.maxAscent + (140 - pd.field_Jb * 2));
           DateInputWidget.field_L.drawCentered(this.field_l, 320, 140, 0, 0);
           SoftwareRasterizer.b(nh.field_a);
           if (var4 > 0) {

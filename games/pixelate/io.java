@@ -178,7 +178,7 @@ final class io {
             var5 = (250 - GameModeCard.field_f << 8) / 50;
           }
           Checkbox.a(-113, re.field_b);
-          ja.a();
+          MeshRasterState.a();
           SoftwareRasterizer.d();
           ma.d((byte) 106);
           if (256 > var5) {
@@ -229,7 +229,7 @@ final class io {
           var5 = (250 - GameModeCard.field_f << 8) / 50;
         }
         Checkbox.a(-113, re.field_b);
-        ja.a();
+        MeshRasterState.a();
         SoftwareRasterizer.d();
         ma.d((byte) 106);
         if (256 > var5) {

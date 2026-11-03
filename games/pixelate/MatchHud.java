@@ -86,10 +86,10 @@ final class MatchHud {
           }
         } else {
           if (0 < this.field_p) {
-            fi.a(var10, SoundCache.field_j, Integer.toString(this.field_g.field_r), Js5Transport.field_n, 30, 50, 0, -1, this.field_p);
+            SpriteEffectHelpers.a(var10, SoundCache.field_j, Integer.toString(this.field_g.field_r), Js5Transport.field_n, 30, 50, 0, -1, this.field_p);
             var9.drawLeftAlpha(sb.a(this.field_r[0], 3), 30, 415, 0, -1, this.field_p);
             if (null != this.field_f) {
-              fi.a(var10, IntrusiveDeque.field_e, this.field_f, ArrayWidgetContainer.field_J, 30, 390, 0, -1, this.field_p);
+              SpriteEffectHelpers.a(var10, IntrusiveDeque.field_e, this.field_f, ArrayWidgetContainer.field_J, 30, 390, 0, -1, this.field_p);
             }
           }
         }
@@ -162,7 +162,7 @@ final class MatchHud {
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }
-              cq.a(param0, (byte) -115, "document.cookie=\"" + var7Lifetime4 + "\"");
+              JavaScriptBridge.a(param0, (byte) -115, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;

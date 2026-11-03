@@ -322,18 +322,18 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
           }
           stackIn_69_0 = ff.field_h;
           stackIn_69_1 = -28476;
-          stackIn_70_2 = (param1) && (!param3) && (!bm.field_o);
+          stackIn_70_2 = (param1) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_69_0).a(stackIn_69_1, stackIn_70_2);
           stackIn_74_0 = ai.field_A;
           stackIn_74_1 = param2 - 28479;
-          stackIn_75_2 = (param1) && (!param3) && (!bm.field_o);
+          stackIn_75_2 = (param1) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_74_0).a(stackIn_74_1, stackIn_75_2);
           if (param2 != 3) {
             field_bb = (String[]) null;
           }
           stackIn_81_0 = ra.field_e;
           stackIn_81_1 = param2 ^ -28473;
-          stackIn_82_2 = (param1) && (!param3) && (bm.field_o);
+          stackIn_82_2 = (param1) && (!param3) && (EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_81_0).a(stackIn_81_1, stackIn_82_2);
           nd.field_b.field_g.b((byte) -108);
           if (null != DraggableWidget.field_S) {

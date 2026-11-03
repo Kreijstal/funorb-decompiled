@@ -244,7 +244,7 @@ final class AchievementsScreen extends MenuScreen {
           return oo.field_c[param1];
         }
         if (gq.d(param0 ^ 96) &&
-          qi.field_p[param1]) {
+          TwistedLogicBackground.field_p[param1]) {
           return gd.field_i;
         }
         if (param0 == 37) {
@@ -295,7 +295,7 @@ final class AchievementsScreen extends MenuScreen {
         if (param1 < 26) {
           field_o = 88;
         }
-        int var3 = 3 + ok.a(UiTheme.field_f, -124, 17);
+        int var3 = 3 + JavaRandomHelpers.a(UiTheme.field_f, -124, 17);
         double var4 = (double)(param0 - 10) / 10.0 + 7.0;
         return new rk(var2, var3, of.a(var4, 65536));
     }

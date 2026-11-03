@@ -39,10 +39,10 @@ final class BoardParticle extends IntrusiveNode {
           return;
         }
         int var2 = (int)this.field_p;
-        fi.a(-var2 + this.field_r, -var2 + this.field_k, this.field_r + var2, this.field_k - var2, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
-        fi.a(this.field_r - var2, var2 + this.field_k, var2 + this.field_r, this.field_k + var2, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
-        fi.a(-var2 + this.field_r, this.field_k - var2, -var2 + this.field_r, this.field_k + var2, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
-        fi.a(this.field_r + var2, -var2 + this.field_k, this.field_r + var2, var2 + this.field_k, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
+        SpriteEffectHelpers.a(-var2 + this.field_r, -var2 + this.field_k, this.field_r + var2, this.field_k - var2, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
+        SpriteEffectHelpers.a(this.field_r - var2, var2 + this.field_k, var2 + this.field_r, this.field_k + var2, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
+        SpriteEffectHelpers.a(-var2 + this.field_r, this.field_k - var2, -var2 + this.field_r, this.field_k + var2, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
+        SpriteEffectHelpers.a(this.field_r + var2, -var2 + this.field_k, this.field_r + var2, var2 + this.field_k, 7, this.field_n, LoginCredentials.field_e.field_g[this.field_l]);
     }
 
     final static Sprite[] a(int param0, int param1, boolean param2, int param3) {

@@ -180,7 +180,7 @@ final class BoundedRandomAccessFile {
 
     final static sc a(byte param0) {
         int var1 = 125 / ((param0 - 14) / 56);
-        return new sc(wc.d(0), wg.a(-5057));
+        return new sc(BlastFromThePastBackground.d(0), wg.a(-5057));
     }
 
     final long b(byte param0) throws IOException {

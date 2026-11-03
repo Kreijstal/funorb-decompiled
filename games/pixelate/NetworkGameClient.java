@@ -51,7 +51,7 @@ abstract class NetworkGameClient extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Pixelate.field_H ? 1 : 0;
-          var4 = qi.a(param0 + 6388, lp.field_i, wo.field_d, param1);
+          var4 = TwistedLogicBackground.a(param0 + 6388, lp.field_i, wo.field_d, param1);
           if (param0 == var4) {
             throw new IllegalStateException();
           }
@@ -68,7 +68,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = dn.a(wc.d(param0 + 0), (byte) 5, this.field_t, Js5ArchiveManager.a(-13565), MusicCrossfadeStream.b((byte) 127), pd.k(0), ProxySocketConnector.f(8192));
+            var5_intLifetime1 = dn.a(BlastFromThePastBackground.d(param0 + 0), (byte) 5, this.field_t, Js5ArchiveManager.a(-13565), MusicCrossfadeStream.b((byte) 127), pd.k(0), ProxySocketConnector.f(8192));
             if (-1 != var5_intLifetime1) {
               rh.a(true, gi.field_b, MatchController.field_y, var5_intLifetime1);
               gi.field_b = null;
@@ -88,7 +88,7 @@ abstract class NetworkGameClient extends GameApplet {
               if (-1 != var5_intLifetime2) {
                 if (0 == var5_intLifetime2) {
                   ff.field_d = vn.field_b;
-                  ql.d(123);
+                  GreenGrowTheRushesBackground.d(123);
                   el.field_b = 10;
                   lo.field_Nb = false;
                 } else {
@@ -207,7 +207,7 @@ abstract class NetworkGameClient extends GameApplet {
           var3 = MenuInputState.a(true) * 1200;
           if (this.field_F ||
             !(il.a(-115) <= var3) &&
-            !(var3 >= ql.g(13428))) {
+            !(var3 >= GreenGrowTheRushesBackground.g(13428))) {
             this.field_F = false;
             na.a(true);
             MainMenuScreen.g((byte) 81);
@@ -226,7 +226,7 @@ abstract class NetworkGameClient extends GameApplet {
             0 == mj.field_b &&
             el.field_b == 11 &&
             !PlayerController.a((byte) -59)) {
-            ql.d(param0 ^ 47);
+            GreenGrowTheRushesBackground.d(param0 ^ 47);
           }
           if (mj.field_b != -1 &&
             mj.field_b != 0) {
@@ -339,7 +339,7 @@ abstract class NetworkGameClient extends GameApplet {
             stackIn_104_2 = !(ri.field_b);
             vn.a(stackIn_100_0, stackIn_101_1, stackIn_104_2, LobbyGame.field_fc);
           }
-          if (ci.field_n) {
+          if (NightToRememberBackground.field_n) {
             CheckboxPainter.a(-22218);
           }
           if (null == QuickChatPhraseDefinition.field_t) {
@@ -567,7 +567,7 @@ abstract class NetworkGameClient extends GameApplet {
             if (var9 != null) {
               this.field_t = Integer.parseInt(var9);
             }
-            ci.field_n = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            NightToRememberBackground.field_n = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.a(param1, (byte) -104, param2, param3, this.field_u, param4, 32);
             if (param0 != -128) {
               this.m(-94);
@@ -649,7 +649,7 @@ abstract class NetworkGameClient extends GameApplet {
             io.a(2, -20304);
           }
           if (Checkbox.field_P[2]) {
-            se.a((byte) 32, 3);
+            KiteBackground.a((byte) 32, 3);
           }
           if (Checkbox.field_P[3]) {
             ue.b(4, (byte) 42);
@@ -731,7 +731,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (el.field_b == 11 &&
           mj.field_b == 0) {
-          ql.d(44);
+          GreenGrowTheRushesBackground.d(44);
         }
         return var2;
     }

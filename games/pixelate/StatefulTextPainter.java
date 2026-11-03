@@ -302,7 +302,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             return;
           }
           var18 = new int[]{var10_int, var11, var12, var13, var14, var15, var16, var17};
-          ta.a(var18, 12632256);
+          IntArraySorter.a(var18, 12632256);
           for (var19 = 0; var19 <= param1; var19++) {
             el.a((var17 - var11) * var19 / param1 + var11, var19 * (var14 - var12) / param1 + var12, 8421504, -20, var10_int + (-var10_int + var16) * var19 / param1, (-var13 + var15) * var19 / param1 + var13, 3.0f);
           }
@@ -400,7 +400,7 @@ final class StatefulTextPainter extends TextWidgetPainter {
             }
             return;
           }
-          qb.a(this.field_r, 0, param0.field_r, 0, 6);
+          ArraySupport.a(this.field_r, 0, param0.field_r, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

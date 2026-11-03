@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se extends BackgroundScene {
+final class KiteBackground extends BackgroundScene {
     private fo[] field_m;
     static PlatformTask field_o;
     private jm[] field_n;
@@ -114,7 +114,7 @@ final class se extends BackgroundScene {
             var5 = (ue) (DialWidgetPainter.field_c.last(1504642273));
           }
           if (param0 <= 3) {
-            se.b(true);
+            KiteBackground.b(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,7 +161,7 @@ final class se extends BackgroundScene {
           return true;
         }
         if (param0 != 3782) {
-          se.b(true);
+          KiteBackground.b(true);
         }
         if (!MenuInputState.field_d.ensureGroupAvailableByName("benefits", -1)) {
           return false;
@@ -200,7 +200,7 @@ final class se extends BackgroundScene {
         }
     }
 
-    se(String param0, Sprite[] param1) {
+    KiteBackground(String param0, Sprite[] param1) {
         super(param0, param1);
         int var3_int = 0;
         try {

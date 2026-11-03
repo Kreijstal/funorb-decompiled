@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ta {
+final class IntArraySorter {
     private static int field_d;
     private static int[] field_c;
     private static int field_a;
@@ -26,7 +26,7 @@ final class ta {
           field_a = 2147483646;
           return;
         }
-        ta.a(0, field_h);
+        IntArraySorter.a(0, field_h);
         int var0 = field_c[1];
         if (var0 < SoftwareRasterizer.field_f) {
           var0 = SoftwareRasterizer.field_f;
@@ -52,7 +52,7 @@ final class ta {
     }
 
     final static void a(int[] param0, int param1) {
-        ta.a(param0, 0, param0.length, param1);
+        IntArraySorter.a(param0, 0, param0.length, param1);
     }
 
     private final static void a(int[] param0, int param1, int param2) {
@@ -188,7 +188,7 @@ final class ta {
             field_h = 0;
             return false;
           }
-          ta.b(var3, var0);
+          IntArraySorter.b(var3, var0);
           field_b = var3;
           field_d = var0;
           var1 = var3;
@@ -229,8 +229,8 @@ final class ta {
         field_c[var2 + 1] = var4;
         field_c[var2 + 2] = var5;
         field_c[var2 + 3] = var6;
-        ta.a(param0, var2);
-        ta.a(var2 + 4, param1);
+        IntArraySorter.a(param0, var2);
+        IntArraySorter.a(var2 + 4, param1);
     }
 
     public static void a() {
@@ -242,17 +242,17 @@ final class ta {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3) {
-        ta.c();
-        ta.a(param0, param1, param2);
-        ta.a(param3);
+        IntArraySorter.c();
+        IntArraySorter.a(param0, param1, param2);
+        IntArraySorter.a(param3);
     }
 
     private final static void a(int param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
-        ta.b();
-        while (ta.d()) {
+        IntArraySorter.b();
+        while (IntArraySorter.d()) {
           var1 = field_f;
           var2 = field_e;
           var3 = field_a;

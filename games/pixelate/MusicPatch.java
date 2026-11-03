@@ -225,7 +225,7 @@ final class MusicPatch extends IntrusiveNode {
         MusicCrossfadeStream.a((byte) -109);
         TextHotspotWidget.a((byte) -94);
         ep.c(-26721);
-        if (se.b(true)) {
+        if (KiteBackground.b(true)) {
           aa.field_f.g(1, 15514);
           SecondaryNodeHashTable.b(0, param0 + 10091);
         }

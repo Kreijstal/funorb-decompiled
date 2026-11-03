@@ -71,7 +71,7 @@ final class nj {
         RuntimeException decompiledCaughtException = null;
         var2 = Pixelate.field_H ? 1 : 0;
         try {
-          if (!ql.e(114)) {
+          if (!GreenGrowTheRushesBackground.e(114)) {
             if (null != ib.field_f &&
               ib.field_f.field_g) {
               ln.a(49);

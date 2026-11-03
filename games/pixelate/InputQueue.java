@@ -317,7 +317,7 @@ final class InputQueue {
           var2 = 1;
           while (var2 < DateInputWidget.field_N.length) {
             var3 = DateInputWidget.field_N[var2];
-            qb.a(nd.field_c, var2 << 4, nd.field_c, var1_int, var3);
+            ArraySupport.a(nd.field_c, var2 << 4, nd.field_c, var1_int, var3);
             var1_int = var1_int + var3;
             var2++;
             if (var4 != 0) {

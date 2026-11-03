@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fi {
+final class SpriteEffectHelpers {
     private static int field_a;
     private static int field_e;
     private static int field_g;
@@ -27,7 +27,7 @@ final class fi {
               param3.b(param0, param1 + var7, 256);
             }
           } else {
-            fi.a(param3, param0, param1 + var7, param4);
+            SpriteEffectHelpers.a(param3, param0, param1 + var7, param4);
           }
         }
     }
@@ -162,7 +162,7 @@ final class fi {
           var6 <= 0) {
           return;
         }
-        fi.a(SoftwareRasterizer.field_k, param0.field_G, 0, var5, var4, var7, var6, var8, var9, param1.indices);
+        SpriteEffectHelpers.a(SoftwareRasterizer.field_k, param0.field_G, 0, var5, var4, var7, var6, var8, var9, param1.indices);
     }
 
     final static void a(int[] param0, int param1, int param2) {
@@ -262,7 +262,7 @@ final class fi {
           var6 <= 0) {
           return;
         }
-        fi.a(0, 0, 0, SoftwareRasterizer.field_k, param0.field_G, var5, 0, var4, 0, var7, var6, var8, var9, param3);
+        SpriteEffectHelpers.a(0, 0, 0, SoftwareRasterizer.field_k, param0.field_G, var5, 0, var4, 0, var7, var6, var8, var9, param3);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
@@ -315,7 +315,7 @@ final class fi {
         field_f = (var11 - param0) * var7;
         field_c = (var11 - param0) * var8;
         field_b = param6;
-        fi.a(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_k, var12 * SoftwareRasterizer.field_j + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_j - (var13 - var11));
+        SpriteEffectHelpers.a(param0, param1, param4, 0, 0, var9, SoftwareRasterizer.field_k, var12 * SoftwareRasterizer.field_j + var11, param5, var7, var8, var12 - var14, var11 - var13, SoftwareRasterizer.field_j - (var13 - var11));
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -490,11 +490,11 @@ final class fi {
           var5 <= 0) {
           return;
         }
-        fi.a(SoftwareRasterizer.field_k, param0.field_G, 0, var4, var3, var6, var5, var7, var8);
+        SpriteEffectHelpers.a(SoftwareRasterizer.field_k, param0.field_G, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final static void a(int param0, int param1, int param2, Sprite param3) {
-        fi.a(param0, param1, param2, param3, 65280);
+        SpriteEffectHelpers.a(param0, param1, param2, param3, 65280);
     }
 
     final static void a(BitmapFont param0, String param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -581,6 +581,6 @@ final class fi {
           var7 <= 0) {
           return;
         }
-        fi.a(SoftwareRasterizer.field_k, param0.field_G, 0, var6, var5, var8, var7, var9, var10, var11, var12);
+        SpriteEffectHelpers.a(SoftwareRasterizer.field_k, param0.field_G, 0, var6, var5, var8, var7, var9, var10, var11, var12);
     }
 }

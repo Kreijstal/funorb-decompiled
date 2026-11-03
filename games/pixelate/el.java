@@ -16,14 +16,14 @@ final class el {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 >= 87) {
           StatefulTextPainter.field_q = param1;
-          da.field_m = param4;
+          BouncedownBackground.field_m = param4;
           dk.field_d = param0;
           ab.field_b = param2;
           return;
         }
         field_b = -89;
         StatefulTextPainter.field_q = param1;
-        da.field_m = param4;
+        BouncedownBackground.field_m = param4;
         dk.field_d = param0;
         ab.field_b = param2;
     }
@@ -122,7 +122,7 @@ final class el {
         if (var14 == null) {
           return;
         }
-        ta.a(var18, param2);
+        IntArraySorter.a(var18, param2);
         if (param3 <= -8) {
           SoftwareRasterizer.c(param4, param0, (int)(param6 - 0.5f), param2);
           SoftwareRasterizer.c(param1, param5, (int)(-0.5f + param6), param2);
@@ -183,19 +183,19 @@ final class el {
         int var2;
         var2 = 0;
         var2 = var2 | 1;
-        if (0 == ok.a(UiTheme.field_f, -105, 2)) {
+        if (0 == JavaRandomHelpers.a(UiTheme.field_f, -105, 2)) {
           var2 = var2 | 2;
         }
-        if (ok.a(UiTheme.field_f, -124, 2) == 0) {
+        if (JavaRandomHelpers.a(UiTheme.field_f, -124, 2) == 0) {
           var2 = var2 | 8;
         }
         if (param1 != -24) {
           el.a(-13);
         }
-        if (ok.a(UiTheme.field_f, param1 ^ 110, 2) == 0) {
+        if (JavaRandomHelpers.a(UiTheme.field_f, param1 ^ 110, 2) == 0) {
           var2 = var2 | 4;
         }
-        if (ok.a(UiTheme.field_f, -116, 2) == 0) {
+        if (JavaRandomHelpers.a(UiTheme.field_f, -116, 2) == 0) {
           var2 = var2 | 16;
         }
         return var2;

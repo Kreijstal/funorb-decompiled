@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bm extends BackgroundScene {
+final class EmergentBehaviourBackground extends BackgroundScene {
     static String field_r;
     static String field_t;
     static boolean field_o;
@@ -151,7 +151,7 @@ final class bm extends BackgroundScene {
         field_m = null;
     }
 
-    bm(String param0, Sprite[] param1) {
+    EmergentBehaviourBackground(String param0, Sprite[] param1) {
         super(param0, param1);
         int var3_int = 0;
         this.field_s = 0;

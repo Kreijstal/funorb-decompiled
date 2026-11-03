@@ -163,7 +163,7 @@ final class bf extends IntrusiveNode {
           this.a(0, 0, (byte) 98);
           ClientException.field_f.a(19692);
           SoftwareRasterizer.b(NameSuggestionsPanel.field_N);
-          fi.a(this.field_l, param1, param3, param4, param2);
+          SpriteEffectHelpers.a(this.field_l, param1, param3, param4, param2);
         }
     }
 

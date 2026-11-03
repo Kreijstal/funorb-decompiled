@@ -186,15 +186,15 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
         var42 = Pixelate.field_H ? 1 : 0;
         try {
           if (param1 >= 0 &&
-            param10 < ja.field_e) {
+            param10 < MeshRasterState.field_e) {
             if (param2 < 0 &&
               param14 < 0 &&
               param12 < 0) {
               return;
             }
-            if (param2 >= ja.field_d &&
-              ja.field_d <= param14 &&
-              param12 >= ja.field_d) {
+            if (param2 >= MeshRasterState.field_d &&
+              MeshRasterState.field_d <= param14 &&
+              param12 >= MeshRasterState.field_d) {
               return;
             }
             if (param4 != -94333456) {
@@ -263,17 +263,17 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = ja.field_g[param10];
+                var36Lifetime2 = MeshRasterState.field_g[param10];
                 while (param13 > param10) {
                   var37 = var17_int >> 16;
-                  if (var37 < ja.field_d) {
+                  if (var37 < MeshRasterState.field_d) {
                     var38 = (var18 >> 16) - (var17_int >> 16);
                     if (0 != var38) {
                       var39 = (-var21 + var22) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (-var29 + var30) / var38;
-                      if (var38 + var37 >= ja.field_d) {
-                        var38 = -var37 + (ja.field_d - 1);
+                      if (var38 + var37 >= MeshRasterState.field_d) {
+                        var38 = -var37 + (MeshRasterState.field_d - 1);
                       }
                       if (var37 < 0) {
                         QueuedInput.a(var37 + var38, var36Lifetime2, (byte) -105, param11, -(var40 * var37) + var25, var39, var41, var29 - var37 * var41, -(var37 * var39) + var21, var40);
@@ -282,13 +282,13 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
                       }
                     } else {
                       if (var37 >= 0 &&
-                        ja.field_d > var37) {
+                        MeshRasterState.field_d > var37) {
                         QueuedInput.a(var38, var37 + var36Lifetime2, (byte) -104, param11, var25, 0, 0, var29, var21, 0);
                       }
                     }
                   }
                   param10++;
-                  if (param10 >= ja.field_e) {
+                  if (param10 >= MeshRasterState.field_e) {
                     return;
                   }
                   var18 = var18 + var20;
@@ -419,22 +419,22 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
               var18 = var18 + var20 * param10;
               param10 = 0;
             }
-            var35Lifetime1 = ja.field_g[param10];
+            var35Lifetime1 = MeshRasterState.field_g[param10];
             while (param1 > param10) {
               var36Lifetime1 = var17_int >> 16;
-              if (ja.field_d > var36Lifetime1) {
+              if (MeshRasterState.field_d > var36Lifetime1) {
                 var37Lifetime1 = (var18 >> 16) - (var17_int >> 16);
                 if (0 == var37Lifetime1) {
                   if (var36Lifetime1 >= 0 &&
-                    var36Lifetime1 < ja.field_d) {
+                    var36Lifetime1 < MeshRasterState.field_d) {
                     QueuedInput.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, (byte) -114, param11, var25, 0, 0, var29, var21, 0);
                   }
                 } else {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
                   var39Lifetime1 = (var26 - var25) / var37Lifetime1;
                   var40Lifetime1 = (-var29 + var30) / var37Lifetime1;
-                  if (ja.field_d <= var36Lifetime1 + var37Lifetime1) {
-                    var37Lifetime1 = -var36Lifetime1 + (ja.field_d - 1);
+                  if (MeshRasterState.field_d <= var36Lifetime1 + var37Lifetime1) {
+                    var37Lifetime1 = -var36Lifetime1 + (MeshRasterState.field_d - 1);
                   }
                   if (var36Lifetime1 >= 0) {
                     QueuedInput.a(var37Lifetime1, var36Lifetime1 + var35Lifetime1, (byte) -108, param11, var25, var38Lifetime1, var40Lifetime1, var29, var21, var39Lifetime1);
@@ -444,7 +444,7 @@ final class AccountTermsPanel extends UiContainer implements TextHotspotListener
                 }
               }
               param10++;
-              if (ja.field_e <= param10) {
+              if (MeshRasterState.field_e <= param10) {
                 return;
               }
               var18 = var18 + var20;

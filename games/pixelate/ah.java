@@ -220,7 +220,7 @@ abstract class ah extends DualLinkNode {
     final static void a(int param0, byte param1) {
         try {
           try {
-            cq.a(AudioService.a(13867), (byte) -64, new Object[]{new Integer(param0)}, "resizing");
+            JavaScriptBridge.a(AudioService.a(13867), (byte) -64, new Object[]{new Integer(param0)}, "resizing");
           } catch (Throwable throwable) {
           }
           if (param1 > 69) {

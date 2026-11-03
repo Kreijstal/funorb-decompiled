@@ -110,7 +110,7 @@ final class QueuedInput extends IntrusiveNode {
               } else {
                 var5Lifetime6 = var8 + "; Expires=" + SoundCache.a(10, hm.a(64) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
-              cq.a(param2, (byte) -121, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.a(param2, (byte) -121, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

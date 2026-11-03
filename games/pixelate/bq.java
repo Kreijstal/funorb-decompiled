@@ -165,9 +165,9 @@ final class bq {
               throw new IllegalStateException();
             }
             df.field_r = new String[var4];
-            qb.a(EmailConfirmationValidator.field_p, 0, df.field_r, 0, var4);
+            ArraySupport.a(EmailConfirmationValidator.field_p, 0, df.field_r, 0, var4);
             GameModeSelectScreen.field_r = new String[-1 + (var3_int - var4)];
-            qb.a(EmailConfirmationValidator.field_p, var4 + 1, GameModeSelectScreen.field_r, 0, var3_int + (-var4 - 1));
+            ArraySupport.a(EmailConfirmationValidator.field_p, var4 + 1, GameModeSelectScreen.field_r, 0, var3_int + (-var4 - 1));
             var3_int = qn.a(sd.a(oj.field_R, 44, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -106, bg.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -181,9 +181,9 @@ final class bq {
               throw new IllegalStateException();
             }
             jk.field_d = new String[var4];
-            qb.a(EmailConfirmationValidator.field_p, 0, jk.field_d, 0, var4);
+            ArraySupport.a(EmailConfirmationValidator.field_p, 0, jk.field_d, 0, var4);
             ContentTransitionDialog.field_jb = new String[-var4 + (var3_int - 1)];
-            qb.a(EmailConfirmationValidator.field_p, 1 + var4, ContentTransitionDialog.field_jb, 0, -1 + (-var4 + var3_int));
+            ArraySupport.a(EmailConfirmationValidator.field_p, 1 + var4, ContentTransitionDialog.field_jb, 0, -1 + (-var4 + var3_int));
             if (df.field_r.length < jk.field_d.length) {
               stackIn_23_0 = jk.field_d.length;
             } else {

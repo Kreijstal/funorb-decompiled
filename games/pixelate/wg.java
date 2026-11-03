@@ -166,7 +166,7 @@ final class wg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 124) {
-            stackIn_4_0 = da.a(param0, (byte) 110, 0, param2);
+            stackIn_4_0 = BouncedownBackground.a(param0, (byte) 110, 0, param2);
             return stackIn_4_0;
           }
           stackIn_2_0 = -91;

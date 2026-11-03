@@ -37,7 +37,7 @@ final class GameplayScreen extends MenuScreen {
           this.c(0);
           ClientException.field_f = var6;
           ClientException.field_f.a(19692);
-          fi.a(EditableTextWidget.field_R.field_e, var4, var5);
+          SpriteEffectHelpers.a(EditableTextWidget.field_R.field_e, var4, var5);
           return;
         }
         field_p = (String) null;
@@ -47,7 +47,7 @@ final class GameplayScreen extends MenuScreen {
         this.c(0);
         ClientException.field_f = var6Lifetime1;
         ClientException.field_f.a(19692);
-        fi.a(EditableTextWidget.field_R.field_e, var4, var5);
+        SpriteEffectHelpers.a(EditableTextWidget.field_R.field_e, var4, var5);
     }
 
     final void a(int param0) {

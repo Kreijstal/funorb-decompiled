@@ -105,7 +105,7 @@ final class DiskCacheRequest extends ArchiveRequest {
           if (1 == param2) {
             var20 = ProxySocketConnector.field_n;
             var21 = Checkbox.field_V[0];
-            var22 = bm.field_m;
+            var22 = EmergentBehaviourBackground.field_m;
             var20.field_b.addIconAction(param0 + 13, 11, var21, var22);
             var23 = ProxySocketConnector.field_n;
             var24 = Checkbox.field_V[1];

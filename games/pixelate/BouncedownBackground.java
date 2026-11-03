@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class da extends BackgroundScene {
+final class BouncedownBackground extends BackgroundScene {
     private vn[] field_n;
     static ea field_o;
     static int field_m;
@@ -63,7 +63,7 @@ final class da extends BackgroundScene {
         }
     }
 
-    da(String param0, Sprite[] param1) {
+    BouncedownBackground(String param0, Sprite[] param1) {
         super(param0, param1);
         try {
           this.d(-14116);
@@ -109,7 +109,7 @@ final class da extends BackgroundScene {
 
     public static void b(byte param0) {
         if (param0 != -13) {
-          da.b((byte) 16);
+          BouncedownBackground.b((byte) 16);
           field_o = null;
           return;
         }

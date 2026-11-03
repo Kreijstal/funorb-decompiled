@@ -221,7 +221,7 @@ final class PlayerController {
             if (ProxyAuthenticationException.field_e[var8Lifetime2] >= 0) {
               stackIn_37_1 = dk.field_d;
             } else {
-              stackIn_37_1 = da.field_m;
+              stackIn_37_1 = BouncedownBackground.field_m;
             }
             nf.field_c = stackIn_36_0 + stackIn_37_1;
           }
@@ -376,7 +376,7 @@ final class PlayerController {
               stackIn_13_0 = (!this.field_k.applyAction(param1, this.field_j, 117, this.field_e)) ? 0 : 1;
               var3 = stackIn_13_0;
               if (var3 != 0) {
-                EmailValidator.a((byte) 96, ok.a(ea.field_b, -101, 4) + 0);
+                EmailValidator.a((byte) 96, JavaRandomHelpers.a(ea.field_b, -101, 4) + 0);
               }
             }
           }

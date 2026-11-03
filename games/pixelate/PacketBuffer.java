@@ -288,7 +288,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final int b(int param0, byte param1) {
-        int var3 = da.a(this.payload, (byte) 122, param0, this.position);
+        int var3 = BouncedownBackground.a(this.payload, (byte) 122, param0, this.position);
         if (param1 <= 27) {
           field_p = (ResourceArchive) null;
         }
@@ -325,7 +325,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean d(byte param0) {
         this.position = this.position - 4;
-        int var2 = da.a(this.payload, (byte) 117, 0, this.position);
+        int var2 = BouncedownBackground.a(this.payload, (byte) 117, 0, this.position);
         int var3 = this.readInt(param0 ^ 124);
         if (param0 != 124) {
           return false;
@@ -600,15 +600,15 @@ class PacketBuffer extends IntrusiveNode {
         wg.field_b = SoftwareRasterizer.field_d;
         ni.field_q = SoftwareRasterizer.field_j;
         EditableTextWidget.m(21);
-        cl.field_g.a(ql.field_n.field_K, -2 + (-40 + ql.field_n.height), 0, 0, 5);
+        cl.field_g.a(GreenGrowTheRushesBackground.field_n.field_K, -2 + (-40 + GreenGrowTheRushesBackground.field_n.height), 0, 0, 5);
         ValidatedTextWidget.field_lb.a(0, fq.field_q, 0, 256, vd.field_c.field_K);
         int var1 = 2 + fq.field_q;
         StripedProgressBar.field_O.a(!DialWidgetPainter.field_n ? 0 : var1, vd.field_c.height - (!DialWidgetPainter.field_n ? 0 : var1), 0, 256, vd.field_c.field_K);
         mi.b(param0);
-        ValidatedTextWidget.field_cb.a(-40 + ql.field_n.height, 40, 0, 256, ql.field_n.field_K);
+        ValidatedTextWidget.field_cb.a(-40 + GreenGrowTheRushesBackground.field_n.height, 40, 0, 256, GreenGrowTheRushesBackground.field_n.field_K);
         sd.field_P.a(0, 30, 0, 256, MidiPcmStream.field_E.field_K);
         DiskCacheWorker.field_a.a(30, -70 + MidiPcmStream.field_E.height - 2, 0, 256, MidiPcmStream.field_E.field_K);
-        wc.field_n.a(5, 30, 5, 256, 68);
+        BlastFromThePastBackground.field_n.a(5, 30, 5, 256, 68);
         IsaacRandom.field_b.a(5, 30, 75, 256, 78);
         LoginDialog.field_pb.a(5, 30, 155, 256, 48);
         be.field_P.a(5, 30, 205, 256, 48);

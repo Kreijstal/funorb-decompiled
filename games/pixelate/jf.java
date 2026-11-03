@@ -152,7 +152,7 @@ final class jf {
             return stackIn_24_0;
           }
           if (ImageProducerRasterBuffer.a(-640, param0)) {
-            stackIn_27_0 = sd.a(bm.field_r, 85, new String[]{param0});
+            stackIn_27_0 = sd.a(EmergentBehaviourBackground.field_r, 85, new String[]{param0});
             return stackIn_27_0;
           }
           var5 = aa.field_f;

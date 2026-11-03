@@ -149,32 +149,32 @@ final class pk {
           var4 = tj.a(param0, -32) ? 1 : 0;
           var5 = new TriangleMesh();
           var5.vertexCount = (short)param0.c(16, (byte) -34);
-          var5.vertexX = bm.a(var5.vertexX, (byte) -128, param0, 16);
-          var5.vertexY = bm.a(var5.vertexY, (byte) -128, param0, 16);
-          var5.vertexZ = bm.a(var5.vertexZ, (byte) -128, param0, 16);
+          var5.vertexX = EmergentBehaviourBackground.a(var5.vertexX, (byte) -128, param0, 16);
+          var5.vertexY = EmergentBehaviourBackground.a(var5.vertexY, (byte) -128, param0, 16);
+          var5.vertexZ = EmergentBehaviourBackground.a(var5.vertexZ, (byte) -128, param0, 16);
           var5.field_j = (short)param0.c(16, (byte) -34);
-          var5.field_h = bm.a(var5.field_h, (byte) -128, param0, 16);
-          var5.field_I = bm.a(var5.field_I, (byte) -128, param0, 16);
-          var5.field_o = bm.a(var5.field_o, (byte) -128, param0, 16);
+          var5.field_h = EmergentBehaviourBackground.a(var5.field_h, (byte) -128, param0, 16);
+          var5.field_I = EmergentBehaviourBackground.a(var5.field_I, (byte) -128, param0, 16);
+          var5.field_o = EmergentBehaviourBackground.a(var5.field_o, (byte) -128, param0, 16);
           if (var3 != 0) {
             var5.field_a = (short)param0.c(16, (byte) -34);
-            var5.field_K = bm.a(var5.field_K, (byte) -128, param0, 16);
-            var5.field_q = bm.a(var5.field_q, (byte) -128, param0, 16);
-            var5.field_p = bm.a(var5.field_p, (byte) -128, param0, 16);
-            var5.field_J = bm.a(var5.field_J, (byte) -128, param0, 16);
-            var5.field_s = bm.a(var5.field_s, (byte) -128, param0, 16);
-            var5.field_i = bm.a(var5.field_i, (byte) -128, param0, 16);
+            var5.field_K = EmergentBehaviourBackground.a(var5.field_K, (byte) -128, param0, 16);
+            var5.field_q = EmergentBehaviourBackground.a(var5.field_q, (byte) -128, param0, 16);
+            var5.field_p = EmergentBehaviourBackground.a(var5.field_p, (byte) -128, param0, 16);
+            var5.field_J = EmergentBehaviourBackground.a(var5.field_J, (byte) -128, param0, 16);
+            var5.field_s = EmergentBehaviourBackground.a(var5.field_s, (byte) -128, param0, 16);
+            var5.field_i = EmergentBehaviourBackground.a(var5.field_i, (byte) -128, param0, 16);
           }
           if (var4 != 0) {
             param0.c(16, (byte) -34);
-            var5.field_D = bm.a(var5.field_D, (byte) -128, param0, 16);
-            var5.field_L = bm.a(var5.field_L, (byte) -128, param0, 16);
-            var5.field_S = bm.a(var5.field_S, (byte) -128, param0, 16);
-            var5.field_d = bm.a(var5.field_d, (byte) -128, param0, 16);
-            var5.field_z = bm.a(var5.field_z, (byte) -128, param0, 16);
+            var5.field_D = EmergentBehaviourBackground.a(var5.field_D, (byte) -128, param0, 16);
+            var5.field_L = EmergentBehaviourBackground.a(var5.field_L, (byte) -128, param0, 16);
+            var5.field_S = EmergentBehaviourBackground.a(var5.field_S, (byte) -128, param0, 16);
+            var5.field_d = EmergentBehaviourBackground.a(var5.field_d, (byte) -128, param0, 16);
+            var5.field_z = EmergentBehaviourBackground.a(var5.field_z, (byte) -128, param0, 16);
           }
           if (tj.a(param0, -32)) {
-            var5.field_l = bm.a(var5.field_l, (byte) -128, param0, 16);
+            var5.field_l = EmergentBehaviourBackground.a(var5.field_l, (byte) -128, param0, 16);
           }
           if (tj.a(param0, -32)) {
             var5.field_n = NodeHashTable.a(param0, var5.field_n, 16, param1 ^ -122);

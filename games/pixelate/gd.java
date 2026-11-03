@@ -22,12 +22,12 @@ final class gd {
         }
         vd.field_c.a(StripedProgressBar.field_O, (byte) 26);
         cl.field_g = new wo(ul.field_m, vd.field_c);
-        ql.field_n = new SceneWidget(0L, (SceneWidget) null);
+        GreenGrowTheRushesBackground.field_n = new SceneWidget(0L, (SceneWidget) null);
         if (param0 != -7) {
           gd.a(-71);
         }
-        ql.field_n.a(cl.field_g.field_g, (byte) 26);
-        ql.field_n.a(ValidatedTextWidget.field_cb, (byte) 26);
+        GreenGrowTheRushesBackground.field_n.a(cl.field_g.field_g, (byte) 26);
+        GreenGrowTheRushesBackground.field_n.a(ValidatedTextWidget.field_cb, (byte) 26);
         PacketBuffer.b(false);
     }
 

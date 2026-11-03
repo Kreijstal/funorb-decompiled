@@ -53,7 +53,7 @@ abstract class DebouncedValidator implements ValidationSource {
         an.field_e = MatchController.a((byte) 122, "");
         an.field_e.a(param1 - 27848, false);
         MatchHud.a(param1 + 4740151, param3, param2, param0);
-        ql.b(false);
+        GreenGrowTheRushesBackground.b(false);
         if (param1 != 27848) {
           return;
         }

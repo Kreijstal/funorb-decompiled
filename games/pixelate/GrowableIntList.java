@@ -55,7 +55,7 @@ final class GrowableIntList {
             return;
           }
           if (this.field_a != param1) {
-            qb.a(this.field_j, 1 + param1, this.field_j, param1, -param1 + this.field_a);
+            ArraySupport.a(this.field_j, 1 + param1, this.field_j, param1, -param1 + this.field_a);
           }
           this.field_a = this.field_a - 1;
           return;
@@ -88,7 +88,7 @@ final class GrowableIntList {
         if (param1 != 0) {
           return -64;
         }
-        return ja.field_h[param0 & 2047];
+        return MeshRasterState.field_h[param0 & 2047];
     }
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
@@ -230,7 +230,7 @@ final class GrowableIntList {
         int[] var5 = new int[this.a(param1, (byte) 120)];
         int[] var3 = var5;
         int var4 = 66 % ((55 - param0) / 63);
-        qb.a(this.field_j, 0, var5, 0, this.field_j.length);
+        ArraySupport.a(this.field_j, 0, var5, 0, this.field_j.length);
         this.field_j = var5;
     }
 

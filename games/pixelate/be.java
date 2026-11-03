@@ -611,7 +611,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                         }
                       }
                       if (var14 != 0) {
-                        var22 = qi.field_o;
+                        var22 = TwistedLogicBackground.field_o;
                         if (var15 > 0 &&
                           null != lc.field_l &&
                           var15 <= lc.field_l.length &&

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mf implements rc {
+final class LegacyDirectSoundBackend implements NativeAudioBackend {
     private com.ms.directX.DSBufferDesc[] field_a;
     private com.ms.directX.DSCursors[] field_b;
 
-    public mf() throws Exception {
+    public LegacyDirectSoundBackend() throws Exception {
         int var1 = 0;
         int var1Lifetime1;
         this.field_a = new com.ms.directX.DSBufferDesc[2];

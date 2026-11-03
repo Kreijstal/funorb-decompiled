@@ -911,11 +911,11 @@ final class MatchController {
         if (param1 != -120) {
           field_b = (String) null;
         }
-        return ok.a(SceneWidgetNode.field_v, -100, param0);
+        return JavaRandomHelpers.a(SceneWidgetNode.field_v, -100, param0);
     }
 
     MatchController() {
-        this((String[]) null, 0, false, ok.a(ea.field_b, -115, 2147483647), 0, 0, 0);
+        this((String[]) null, 0, false, JavaRandomHelpers.a(ea.field_b, -115, 2147483647), 0, 0, 0);
     }
 
     final void a(int param0) {

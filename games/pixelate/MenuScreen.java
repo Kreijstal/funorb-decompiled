@@ -123,7 +123,7 @@ abstract class MenuScreen {
     abstract void a(int param0);
 
     final void a(int param0, byte param1, int param2) {
-        fi.a(320, param0, param2 + 290, StripedProgressBar.field_S);
+        SpriteEffectHelpers.a(320, param0, param2 + 290, StripedProgressBar.field_S);
         if (param1 >= -82) {
           field_e = (aa[]) null;
         }
@@ -273,7 +273,7 @@ abstract class MenuScreen {
     }
 
     void c(int param0) {
-        bm.field_u.f(0, param0);
+        EmergentBehaviourBackground.field_u.f(0, param0);
         rh.b((byte) -67);
     }
 
@@ -439,7 +439,7 @@ abstract class MenuScreen {
           var12 = -var7 + var9 + var8 >> 1;
           var13 = this.a(-28071, param2);
           if (param1) {
-            fi.a(var9 + var8 >> 1, var10 - 2, 35, param3);
+            SpriteEffectHelpers.a(var9 + var8 >> 1, var10 - 2, 35, param3);
           }
           stackIn_27_0 = (!param1) ? 2 : 0;
           var14 = stackIn_27_0;
@@ -500,7 +500,7 @@ abstract class MenuScreen {
           var9 = 420;
           var10 = 2;
           if (param0) {
-            fi.a(param4, -7 + var9, 46, param2);
+            SpriteEffectHelpers.a(param4, -7 + var9, 46, param2);
             var10 = 0;
           }
           if (param3 != -6) {
@@ -529,7 +529,7 @@ abstract class MenuScreen {
         pe.field_b.c();
         this.c(0);
         ClientException.field_f.a(19692);
-        fi.a(pe.field_b.field_G, var4, var5);
+        SpriteEffectHelpers.a(pe.field_b.field_G, var4, var5);
     }
 
     void e(byte param0) {

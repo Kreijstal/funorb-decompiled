@@ -88,7 +88,7 @@ final class up {
         int var7 = 0;
         int var8 = 0;
         int var9 = Pixelate.field_H ? 1 : 0;
-        IndexedSprite var10 = lk.field_o[this.field_m];
+        IndexedSprite var10 = AcidSunsetBackground.field_o[this.field_m];
         IndexedSprite var11 = var10;
         BackgroundScene var3 = Js5NetworkRequest.field_C[gd.field_e[this.field_m].field_a];
         this.field_l = new Sprite(160, 160);

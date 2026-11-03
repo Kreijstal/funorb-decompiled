@@ -625,7 +625,7 @@ final class CachedTextLayout extends TextLayout {
                 }
                 wm.field_d.field_cb = wm.field_d.field_cb + "<br>" + var10_ref_String;
                 if (0 == (16 & AchievementsScreen.field_o) &&
-                  !bm.field_o) {
+                  !EmergentBehaviourBackground.field_o) {
                   wm.field_d.field_zb = bf.field_k.field_ab;
                 }
               }
@@ -944,15 +944,15 @@ final class CachedTextLayout extends TextLayout {
           }
           stackIn_181_0 = ff.field_h;
           stackIn_181_1 = -28476;
-          stackIn_182_2 = (param4) && (!param3) && (!bm.field_o);
+          stackIn_182_2 = (param4) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_181_0).a(stackIn_181_1, stackIn_182_2);
           stackIn_186_0 = ai.field_A;
           stackIn_186_1 = -28476;
-          stackIn_187_2 = (param4) && (!param3) && (!bm.field_o);
+          stackIn_187_2 = (param4) && (!param3) && (!EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_186_0).a(stackIn_186_1, stackIn_187_2);
           stackIn_191_0 = ra.field_e;
           stackIn_191_1 = -28476;
-          stackIn_192_2 = (param4) && (!param3) && (bm.field_o);
+          stackIn_192_2 = (param4) && (!param3) && (EmergentBehaviourBackground.field_o);
           ((SceneWidget) (Object) stackIn_191_0).a(stackIn_191_1, stackIn_192_2);
           nd.field_b.field_g.b((byte) -122);
           if (null != io.field_c) {
@@ -960,13 +960,13 @@ final class CachedTextLayout extends TextLayout {
               qg.a(io.field_c.c((byte) 8), param2, false);
             }
             if (0 != wm.field_d.field_P) {
-              bm.field_o = true;
+              EmergentBehaviourBackground.field_o = true;
             }
             if (ep.field_a.field_P != 0) {
               of.field_c = true;
             }
             if (0 != ContentTransitionDialog.field_eb.field_P) {
-              bm.field_o = false;
+              EmergentBehaviourBackground.field_o = false;
             }
             be.a(false, io.field_c, param2, -1);
           }

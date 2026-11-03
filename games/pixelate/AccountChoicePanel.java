@@ -38,7 +38,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           if (param0 != 2) {
             return;
           }
-          stackIn_8_0 = ql.field_n;
+          stackIn_8_0 = GreenGrowTheRushesBackground.field_n;
           stackIn_8_1 = -28476;
           stackIn_9_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (null == io.field_c) && (null == DraggableWidget.field_S);
           ((SceneWidget) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2);
@@ -55,7 +55,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
           if (param0 != 2) {
             return;
           }
-          stackIn_56_0 = ql.field_n;
+          stackIn_56_0 = GreenGrowTheRushesBackground.field_n;
           stackIn_56_1 = -28476;
           stackIn_57_2 = (param2) && (!param3) && (!LobbyPlayer.field_Wb) && (null == io.field_c) && (null == DraggableWidget.field_S);
           ((SceneWidget) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_57_2);

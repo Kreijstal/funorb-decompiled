@@ -111,14 +111,14 @@ final class td {
         int var3Lifetime1;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          lk.field_o = new IndexedSprite[param1.length];
-          for (var2_int = 0; lk.field_o.length > var2_int; var2_int++) {
+          AcidSunsetBackground.field_o = new IndexedSprite[param1.length];
+          for (var2_int = 0; AcidSunsetBackground.field_o.length > var2_int; var2_int++) {
             var3 = gd.field_e[var2_int].field_m;
             var4 = gd.field_e[var2_int].field_k;
-            lk.field_o[var2_int] = new IndexedSprite(var3, var4, 2);
+            AcidSunsetBackground.field_o[var2_int] = new IndexedSprite(var3, var4, 2);
             for (var5 = 0; var5 < var4; var5++) {
               for (var6 = 0; var3 > var6; var6++) {
-                lk.field_o[var2_int].indices[var6 + var5 * var3] = param1[var2_int].indices[var6 + var5 * 5];
+                AcidSunsetBackground.field_o[var2_int].indices[var6 + var5 * var3] = param1[var2_int].indices[var6 + var5 * 5];
               }
             }
           }

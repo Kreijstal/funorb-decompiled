@@ -10,7 +10,7 @@ final class gq extends EmailCredentials {
         if (param0 != -27096) {
           field_n = -3;
         }
-        return da.field_o;
+        return BouncedownBackground.field_o;
     }
 
     final static void a(int param0, int param1, int param2, String param3) {

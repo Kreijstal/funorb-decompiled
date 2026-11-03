@@ -46,7 +46,7 @@ final class EmailValidator extends TextFieldValidator {
     }
 
     final static void a(byte param0, int param1) {
-        mc.a(8 * ci.field_o + param1, -127);
+        mc.a(8 * NightToRememberBackground.field_o + param1, -127);
         if (param0 != 96) {
           field_n = (String) null;
         }

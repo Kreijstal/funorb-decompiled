@@ -355,7 +355,7 @@ final class OptionsScreen extends MenuScreen {
           if (param0 != 260) {
             field_p = (PlatformTaskDispatcher) null;
           }
-          ja.a();
+          MeshRasterState.a();
           ai.field_x = 11;
           nk.field_d = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {
@@ -414,7 +414,7 @@ final class OptionsScreen extends MenuScreen {
                 var9 = var7 + var8 >> 1;
                 var10 = this.b(58, param2);
                 if (param1) {
-                  fi.a(var9, -2 + var10, 35, StripedProgressBar.field_N);
+                  SpriteEffectHelpers.a(var9, -2 + var10, 35, StripedProgressBar.field_N);
                 }
                 stackIn_16_0 = rk.field_e;
                 stackIn_16_1 = var6;

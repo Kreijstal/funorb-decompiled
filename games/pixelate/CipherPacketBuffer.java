@@ -238,7 +238,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                         var17.field_b.addAction(var18, (byte) -105, 8);
                       }
                       var17Lifetime1 = ProxySocketConnector.field_n;
-                      var18Lifetime1 = sd.a(ho.field_f, 101, new String[]{var16});
+                      var18Lifetime1 = sd.a(TextTableInitializer.field_f, 101, new String[]{var16});
                       var17Lifetime1.field_b.addAction(var18Lifetime1, (byte) -102, 18);
                     }
                   }

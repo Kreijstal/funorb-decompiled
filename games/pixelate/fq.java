@@ -181,7 +181,7 @@ final class fq extends MenuScreen {
     }
 
     final static void g(byte param0) {
-        ql.a(AudioService.a(13867), -7624);
+        GreenGrowTheRushesBackground.a(AudioService.a(13867), -7624);
         if (param0 >= -46) {
           fq.g((byte) -70);
         }

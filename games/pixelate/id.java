@@ -68,7 +68,7 @@ final class id {
           for (var1_intLifetime1 = 0; var1_intLifetime1 < MatchController.field_p.length; var1_intLifetime1++) {
             MatchController.field_p[var1_intLifetime1] = new IndexedSprite(64, 64, 2);
             for (var2 = 0; MatchController.field_p[var1_intLifetime1].indices.length > var2; var2++) {
-              if (ok.a(ea.field_b, param0 ^ -124, 9) > var1_intLifetime1) {
+              if (JavaRandomHelpers.a(ea.field_b, param0 ^ -124, 9) > var1_intLifetime1) {
                 MatchController.field_p[var1_intLifetime1].indices[var2] = (byte) 1;
               }
             }

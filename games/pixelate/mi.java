@@ -78,7 +78,7 @@ final class mi extends MenuScreen {
         var6 = new boolean[var5];
         var7 = new IndexedSprite[param1];
         for (var8 = 0; var7.length > var8; var8++) {
-          var9 = ok.a(UiTheme.field_f, param3 ^ -118, var5);
+          var9 = JavaRandomHelpers.a(UiTheme.field_f, param3 ^ -118, var5);
           while (var6[var9]) {
             var9++;
             if (var5 > var9) {
@@ -260,14 +260,14 @@ final class mi extends MenuScreen {
               if (BufferedRandomAccessFile.field_j <= 0 &&
                 !wg.field_a) {
                 try {
-                  cq.a("unzap", (byte) -56, AudioService.a(13867));
+                  JavaScriptBridge.a("unzap", (byte) -56, AudioService.a(13867));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  cq.a(AudioService.a(13867), (byte) -37, new Object[]{PacketBuffer.b(vn.field_b, -7067)}, "zap");
+                  JavaScriptBridge.a(AudioService.a(13867), (byte) -37, new Object[]{PacketBuffer.b(vn.field_b, -7067)}, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -305,7 +305,7 @@ final class mi extends MenuScreen {
             if (null == NodeHashTableIterator.field_e) {
               if (qj.field_b) {
                 if (CachedTextLayout.d(8) <= 30000L) {
-                  gi.field_b = ho.field_b;
+                  gi.field_b = TextTableInitializer.field_b;
                 } else {
                   gi.field_b = ValidationIndicator.field_N;
                 }
@@ -406,7 +406,7 @@ final class mi extends MenuScreen {
     }
 
     final static void b(boolean param0) {
-        ho.field_g.a(0, 18, 0, 256, -(!DialWidgetPainter.field_n ? 0 : 40 + DelegatingCanvas.field_b + 4) + StripedProgressBar.field_O.field_K);
+        TextTableInitializer.field_g.a(0, 18, 0, 256, -(!DialWidgetPainter.field_n ? 0 : 40 + DelegatingCanvas.field_b + 4) + StripedProgressBar.field_O.field_K);
         if (param0) {
           field_o = false;
         }

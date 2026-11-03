@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ql extends BackgroundScene {
+final class GreenGrowTheRushesBackground extends BackgroundScene {
     static int field_m;
     static int field_o;
     static SceneWidget field_n;
@@ -19,7 +19,7 @@ final class ql extends BackgroundScene {
         wa.field_c = new ModalStack();
         QueuedInput.a(true, -17130, true);
         if (param0) {
-          ql.d(-24);
+          GreenGrowTheRushesBackground.d(-24);
         }
     }
 
@@ -34,7 +34,7 @@ final class ql extends BackgroundScene {
 
     final static boolean e(int param0) {
         if (param0 < 94) {
-          ql.f(30);
+          GreenGrowTheRushesBackground.f(30);
           if (null == NetworkGameClient.field_x) {
             return false;
           }
@@ -102,7 +102,7 @@ final class ql extends BackgroundScene {
         }
     }
 
-    ql(String param0, Sprite[] param1) {
+    GreenGrowTheRushesBackground(String param0, Sprite[] param1) {
         super(param0, param1);
     }
 

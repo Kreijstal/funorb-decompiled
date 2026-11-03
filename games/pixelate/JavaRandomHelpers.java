@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ok {
+final class JavaRandomHelpers {
     static String field_b;
     static String field_c;
     static String field_a;
@@ -12,7 +12,7 @@ final class ok {
         field_a = null;
         field_c = null;
         if (param0 > -105) {
-          ok.a((byte) -61);
+          JavaRandomHelpers.a((byte) -61);
           field_b = null;
           return;
         }

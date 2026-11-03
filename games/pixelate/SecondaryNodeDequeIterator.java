@@ -76,39 +76,39 @@ final class SecondaryNodeDequeIterator implements Iterator {
           }
           var6 = new Sprite[]{param1[0], param1[1]};
           var7 = var6;
-          var4 = wc.field_m[param0];
+          var4 = BlastFromThePastBackground.field_m[param0];
           if (param0 == 0) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new ql(var4, var6));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new GreenGrowTheRushesBackground(var4, var6));
             return;
           }
           if (1 == param0) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new qi(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new TwistedLogicBackground(var4, var7));
             return;
           }
           if (param0 == 2) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new ci(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new NightToRememberBackground(var4, var7));
             return;
           }
           if (param0 == 3) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new lk(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new AcidSunsetBackground(var4, var7));
             return;
           }
           if (param0 == 4) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new se(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new KiteBackground(var4, var7));
             return;
           }
           if (param0 == 5) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new da(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new BouncedownBackground(var4, var7));
             return;
           }
           if (param0 == 6) {
-            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new bm(var4, var7));
+            Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new EmergentBehaviourBackground(var4, var7));
             return;
           }
           if (param0 != 7) {
             return;
           }
-          Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new wc(var4, var7));
+          Js5NetworkRequest.field_C[param0] = (BackgroundScene) ((Object) new BlastFromThePastBackground(var4, var7));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

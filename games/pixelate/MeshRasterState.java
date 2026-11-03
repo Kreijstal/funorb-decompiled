@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja {
+final class MeshRasterState {
     static int field_i;
     static int field_e;
     private static int[] field_a;
@@ -13,7 +13,7 @@ final class ja {
     private static int[] field_f;
 
     final static void a() {
-        ja.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_a);
+        MeshRasterState.a(SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_a);
     }
 
     private final static void b() {
@@ -25,7 +25,7 @@ final class ja {
         int var5 = 0;
         field_d = param2 - param0;
         field_e = param3 - param1;
-        ja.b();
+        MeshRasterState.b();
         if (field_g.length < field_e) {
           field_g = new int[DropTargetWidget.a(-1879863704, field_e)];
         }

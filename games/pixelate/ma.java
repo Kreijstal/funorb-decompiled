@@ -118,7 +118,7 @@ final class ma extends bg {
             var17Lifetime1 = ck.field_b[var16];
             PasswordValidator.a(var16, 100);
             for (var18 = 0; var18 < 3; var18++) {
-              ReportAbuseDialog.field_Hb[var18] = ReportAbuseDialog.field_Hb[var18] + wc.field_p[var15][var18];
+              ReportAbuseDialog.field_Hb[var18] = ReportAbuseDialog.field_Hb[var18] + BlastFromThePastBackground.field_p[var15][var18];
             }
             TextButton.a(var17Lifetime1, bg.field_a, false, ReportAbuseDialog.field_Hb, (byte) 98, true, false);
             GameModeSelectScreen.a(var14, var17Lifetime1, var12Lifetime1, var9Lifetime1, var8Lifetime1, var13Lifetime1, 20126, var7Lifetime1);

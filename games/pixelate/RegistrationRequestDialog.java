@@ -125,7 +125,7 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
             }
             if (3 != param0.field_a) {
               if (param0.field_a == 6) {
-                var5.a(9, -1, ho.field_d);
+                var5.a(9, -1, TextTableInitializer.field_d);
               }
             } else {
               var5.a(7, -1, gd.field_d);

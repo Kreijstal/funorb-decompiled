@@ -10972,17 +10972,17 @@
       "inputTreeSha256": "bbe81e06d5b464eab92a6b6bf59f014012750ba4b945989ca378209286aa16a7",
       "sources": {
         "files": 397,
-        "sha256": "a5a007dee690fd9cf9f5401177fb9924ffbae5e90391540f149511ce549cb66c"
+        "sha256": "4bd8750a02fa1e8e1ca01a6c8bb0932a7cdb5e80f8f26b1974b39b6f7c4993df"
       },
       "dictionary": {
         "path": "decompilation/pixelate-naming.json",
-        "sha256": "a9bc1444bf8e2a94e4b039e4411e03e3432fd4e6b78df04a98bad972de56b86c"
+        "sha256": "b75e74c7144bcff5ecb33d04684d5126d9ad33068e5eb17c135cf670a38451b0"
       },
       "readingGuide": {
         "path": "games/pixelate/README.md",
-        "sha256": "70eda3c6a8617b823fe4765f05bbbcaad5e92b19b1b943ded82dc3be5c165854"
+        "sha256": "2d42ff61aa3dfc778cbcb3fc3877eba171e2d9e2f235dedfebb2ae427e3f1902"
       },
-      "rulesSha256": "3e0b7d545c56ab46a529d22a025581f17463919a5acf4c4e10a0db930ab9d6b0",
+      "rulesSha256": "222075d3940dff2cc284893c84f647ed913d6ea65e24e09e66b36f850dd3eeee",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12785,7 +12785,7 @@
         },
         "publishedSources": {
           "files": 397,
-          "sha256": "a5a007dee690fd9cf9f5401177fb9924ffbae5e90391540f149511ce549cb66c"
+          "sha256": "4bd8750a02fa1e8e1ca01a6c8bb0932a7cdb5e80f8f26b1974b39b6f7c4993df"
         }
       },
       "pool": {

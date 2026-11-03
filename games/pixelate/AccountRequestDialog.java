@@ -187,7 +187,7 @@ class AccountRequestDialog extends ContentTransitionDialog implements ButtonList
           } else {
             if (param0 != 4) {
               if (param0 == 6) {
-                var6.a(9, -1, ho.field_d);
+                var6.a(9, -1, TextTableInitializer.field_d);
               } else {
                 if (param0 != 9) {
                   this.transitionToContent(var6, -124);
