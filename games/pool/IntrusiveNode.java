@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class IntrusiveNode {
-    static String field_f;
+    static String invitingX;
     static String field_j;
     static int field_g;
     IntrusiveNode next;
-    static bl[][][] field_b;
+    static WireframeQuad[][][] field_b;
     long key;
-    static vh field_e;
+    static UiComponent field_e;
     static int[] field_h;
     static PcmSample field_a;
     static IntrusiveDeque field_i;
     IntrusiveNode previous;
 
-    public static void b(byte param0) {
-        field_f = null;
+    public static void releaseStatics(byte param0) {
+        invitingX = null;
         if (param0 >= 56) {
-          field_b = (bl[][][]) null;
+          field_b = (WireframeQuad[][][]) null;
           field_a = null;
           field_h = null;
           field_j = null;
@@ -25,8 +25,8 @@ class IntrusiveNode {
           field_e = null;
           return;
         }
-        IntrusiveNode.b((byte) -106);
-        field_b = (bl[][][]) null;
+        IntrusiveNode.releaseStatics((byte) -106);
+        field_b = (WireframeQuad[][][]) null;
         field_a = null;
         field_h = null;
         field_j = null;
@@ -73,17 +73,17 @@ class IntrusiveNode {
           var6 = var5 * param2[5] + param2[4] * var4 + var3_int * param2[3] >> 16;
           var7 = var4 * param2[7] + var3_int * param2[6] + param2[8] * var5 >> 16;
           var8 = var5 * param2[11] + var3_int * param2[9] + param2[10] * var4 >> 16;
-          var9 = rf.a(var7 * var7 + var8 * var8 >> 16, -125);
+          var9 = rf.inverseSquareRoot(var7 * var7 + var8 * var8 >> 16, -125);
           if (var9 < 0) {
             var9 = -var9;
           }
-          br.field_I = 128 + (tj.c(var9, var6, param0 ^ 4098) >> 4);
+          LoginRequiredScreen.field_I = 128 + (ResizableDialog.c(var9, var6, param0 ^ 4098) >> 4);
           var10 = IterableNodeHashTable.a(-112, (long)var7 * (long)var7 + ((long)var6 * (long)var6 + (long)var8 * (long)var8) >> 16);
-          if (var10 > (long)re.field_a) {
-            mn.field_g = (int)((long)(256 * ue.field_e) / ((long)ue.field_e + ((long)ap.field_G * (var10 - (long)re.field_a) >> 8)));
+          if (var10 > (long)LoginPayload.field_a) {
+            DualLinkDequeIterator.field_g = (int)((long)(256 * ue.field_e) / ((long)ue.field_e + ((long)QuickChatPhraseDefinition.field_G * (var10 - (long)LoginPayload.field_a) >> 8)));
             return;
           }
-          mn.field_g = 256;
+          DualLinkDequeIterator.field_g = 256;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,7 +101,7 @@ class IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -120,6 +120,6 @@ class IntrusiveNode {
     }
 
     static {
-        field_f = "Inviting <%0>";
+        invitingX = "Inviting <%0>";
     }
 }

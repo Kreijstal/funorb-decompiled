@@ -3,12 +3,12 @@
  */
 final class pc {
     static int field_b;
-    static pq[] field_a;
-    static String field_c;
+    static Ball[] field_a;
+    static String month;
     private static String field_z;
 
-    public static void a(int param0) {
-        field_c = null;
+    public static void releaseStatics(int param0) {
+        month = null;
         field_a = null;
         if (param0 != -24420) {
           field_b = 0;
@@ -17,6 +17,6 @@ final class pc {
 
     static {
         field_z = "pc.A(";
-        field_c = "Month";
+        month = "Month";
     }
 }

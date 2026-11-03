@@ -4,18 +4,18 @@
 final class sb {
     static Sprite[] field_c;
     static int field_d;
-    static vh field_a;
+    static UiComponent field_a;
     static int field_b;
 
     final static int a(float param0, boolean param1) {
         if (!param1) {
-          sb.a((byte) -61);
-          return j.a(3, param0, (byte) 126);
+          sb.releaseStatics((byte) -61);
+          return ButtonPainter.a(3, param0, (byte) 126);
         }
-        return j.a(3, param0, (byte) 126);
+        return ButtonPainter.a(3, param0, (byte) 126);
     }
 
-    final static qb a(int param0, di param1, int param2) {
+    final static IndexedSprite a(int param0, ResourceArchive param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -26,7 +26,7 @@ final class sb {
             sb.a(0.49575117230415344f, true);
           }
           if (jl.a((byte) 81, param1, param2)) {
-            return fo.a((byte) 108);
+            return KeyHandler.a((byte) 108);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -39,11 +39,11 @@ final class sb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         field_a = null;
         if (param0 < 13) {

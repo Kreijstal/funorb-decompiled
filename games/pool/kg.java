@@ -7,14 +7,14 @@ final class kg extends IntrusiveNode {
     static int field_m;
     static String field_q;
     static int field_n;
-    static vh field_r;
+    static UiComponent field_r;
     static int[] field_s;
     static int[] field_t;
     static vn field_l;
 
     final static String c(byte param0) {
-        if (wd.field_Lb == ra.field_e) {
-          return eo.field_Rb;
+        if (TabbedPane.field_Lb == ra.field_e) {
+          return SocialListEntry.field_Rb;
         }
         if (param0 <= 44) {
           kg.c((byte) 49);
@@ -23,7 +23,7 @@ final class kg extends IntrusiveNode {
         return qg.field_a;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_q = null;
         field_r = null;
         field_t = null;
@@ -37,18 +37,18 @@ final class kg extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          hr.field_c = new ro[param0];
+          ViewportController.field_c = new ro[param0];
           if (param1 != 49) {
-            kg.d((byte) -107);
+            kg.releaseStatics((byte) -107);
           }
-          for (var2_int = 0; hr.field_c.length > var2_int; var2_int++) {
-            hr.field_c[var2_int] = new ro();
+          for (var2_int = 0; ViewportController.field_c.length > var2_int; var2_int++) {
+            ViewportController.field_c[var2_int] = new ro();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "kg.A(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "kg.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -57,17 +57,17 @@ final class kg extends IntrusiveNode {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
-        qe.field_y = param2;
+        ShotRecord.field_y = param2;
         if (param1) {
-          vc.field_K = param4;
-          ch.field_I = param3;
-          mm.field_b = param0;
+          ModelTableScene.field_K = param4;
+          WidgetContainer.field_I = param3;
+          Camera.field_b = param0;
           return;
         }
         kg.a(-104, true, -107, 21, 17);
-        vc.field_K = param4;
-        ch.field_I = param3;
-        mm.field_b = param0;
+        ModelTableScene.field_K = param4;
+        WidgetContainer.field_I = param3;
+        Camera.field_b = param0;
     }
 
     static {

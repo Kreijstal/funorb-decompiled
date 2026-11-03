@@ -6,13 +6,13 @@ import java.io.*;
 final class BufferedSocket implements Runnable {
     private InputStream field_l;
     private int field_i;
-    static String field_c;
+    static String mbFullAccess2;
     static int field_f;
     private java.net.Socket field_n;
     private AsyncRequest field_d;
     private int field_a;
     private boolean field_e;
-    static of field_m;
+    static ScrollPane field_m;
     private int field_k;
     private byte[] field_j;
     private boolean field_h;
@@ -59,12 +59,12 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
-        field_c = null;
+    public static void releaseStatics(boolean param0) {
+        mbFullAccess2 = null;
         field_p = null;
         field_m = null;
         field_b = null;
@@ -79,7 +79,7 @@ final class BufferedSocket implements Runnable {
           return 0;
         }
         if (param0 != 14528) {
-          BufferedSocket.a(false);
+          BufferedSocket.releaseStatics(false);
           return this.field_l.read();
         }
         return this.field_l.read();
@@ -189,7 +189,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            tc.a((Throwable) ((Object) var1_ref), (String) null, -8555);
+            GrowableIntList.reportClientError((Throwable) ((Object) var1_ref), (String) null, -8555);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -198,10 +198,10 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static boolean a(boolean param0, String param1, byte param2, nf param3, int param4, String param5, String param6) {
+    final static boolean a(boolean param0, String param1, byte param2, AccountCreationForm param3, int param4, String param5, String param6) {
         RuntimeException var7 = null;
         int var8 = 0;
-        fq var9 = null;
+        AccountCreationDialog var9 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -213,23 +213,23 @@ final class BufferedSocket implements Runnable {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wd.field_Lb != aa.field_c) {
+          if (TabbedPane.field_Lb != IntrusiveDequeCursor.field_c) {
             return false;
           }
-          var9 = new fq(wd.field_Ub, param3);
+          var9 = new AccountCreationDialog(TabbedPane.field_Ub, param3);
           var8 = 91 / ((48 - param2) / 53);
-          wd.field_Ub.b(var9, 30000);
-          if (sq.k(0)) {
+          TabbedPane.field_Ub.showDialog(var9, 30000);
+          if (GameRules.k(0)) {
             var9.p((byte) -52);
             return true;
           }
-          qi.field_c = param0;
-          j.field_b = param4;
-          re.field_d = param5;
-          vq.field_Xb = param6;
-          wd.field_Lb = ra.field_e;
-          sf.field_B = null;
-          eo.field_Rb = param1;
+          IterableDualLinkDeque.field_c = param0;
+          ButtonPainter.field_b = param4;
+          LoginPayload.field_d = param5;
+          ContextMenu.field_Xb = param6;
+          TabbedPane.field_Lb = ra.field_e;
+          QuickChatCategoryDefinition.field_B = null;
+          SocialListEntry.field_Rb = param1;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -259,11 +259,11 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
-    final int d(int param0) throws IOException {
+    final int readByte(int param0) throws IOException {
         if (this.field_h) {
           return 0;
         }
@@ -274,9 +274,9 @@ final class BufferedSocket implements Runnable {
         return this.field_l.available();
     }
 
-    final static ai b(int param0) {
+    final static PcmStreamMixer b(int param0) {
         int var1 = 52 / ((param0 - 41) / 41);
-        return qf.field_d;
+        return SpaceObject.field_d;
     }
 
     final void c(int param0) {
@@ -297,7 +297,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_d) {
             while (0 == this.field_d.field_f) {
-              cf.a(-126, 1L);
+              SoundCache.a(-126, 1L);
             }
             if (this.field_d.field_f == 1) {
               try {
@@ -323,11 +323,11 @@ final class BufferedSocket implements Runnable {
         this.c(-119);
     }
 
-    final static or a(int param0, pq param1) {
-        or dupTemp$1 = null;
+    final static BallEvent a(int param0, Ball param1) {
+        BallEvent dupTemp$1 = null;
         RuntimeException var2 = null;
         String var3 = null;
-        or stackIn_3_0 = null;
+        BallEvent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -335,9 +335,9 @@ final class BufferedSocket implements Runnable {
         try {
           if (param0 != -6584) {
             var3 = (String) null;
-            BufferedSocket.a(false, (String) null, (byte) 126, (nf) null, -39, (String) null, (String) null);
+            BufferedSocket.a(false, (String) null, (byte) 126, (AccountCreationForm) null, -39, (String) null, (String) null);
           }
-          dupTemp$1 = new or(0, (or) null);
+          dupTemp$1 = new BallEvent(0, (BallEvent) null);
           param1.field_q = dupTemp$1;
           stackIn_3_0 = dupTemp$1;
           return stackIn_3_0;
@@ -351,7 +351,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -386,7 +386,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_d) {
-              this.field_d = this.field_o.a(33, 3, (Runnable) (this));
+              this.field_d = this.field_o.startThread(33, 3, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -401,7 +401,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -419,11 +419,11 @@ final class BufferedSocket implements Runnable {
           this.field_g = this.field_n.getOutputStream();
           this.field_k = param2;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        field_c = "to over <%0> great games";
+        mbFullAccess2 = "to over <%0> great games";
     }
 }

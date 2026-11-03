@@ -3,34 +3,34 @@
  */
 final class tp {
     static int field_b;
-    static vh field_i;
+    static UiComponent field_i;
     static int[] field_h;
     static String field_g;
-    static kh field_e;
-    static String field_c;
-    static String field_a;
-    static String field_f;
-    static String field_d;
+    static LobbyGame field_e;
+    static String privatechatFriendNotlisted;
+    static String statusVersus;
+    static String muLobbyNameRm;
+    static String gameoptNeedchanging2;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
-        field_d = null;
+        gameoptNeedchanging2 = null;
         if (param0 == 0) {
           field_h = null;
-          field_a = null;
+          statusVersus = null;
           field_i = null;
-          field_c = null;
+          privatechatFriendNotlisted = null;
           field_e = null;
-          field_f = null;
+          muLobbyNameRm = null;
           return;
         }
         field_g = (String) null;
         field_h = null;
-        field_a = null;
+        statusVersus = null;
         field_i = null;
-        field_c = null;
+        privatechatFriendNotlisted = null;
         field_e = null;
-        field_f = null;
+        muLobbyNameRm = null;
     }
 
     final static void a(boolean param0, int param1) {
@@ -40,29 +40,29 @@ final class tp {
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          var4 = (bj) (tm.field_i.c((byte) 73));
+          var4 = (bj) (BallSkin.field_i.last((byte) 73));
           while (var4 != null) {
             un.a(param1, var4, (byte) -51);
-            var4 = (bj) (tm.field_i.f((byte) -5));
+            var4 = (bj) (BallSkin.field_i.previous((byte) -5));
           }
           if (param0) {
             return;
           }
-          field_f = (String) null;
+          muLobbyNameRm = (String) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "tp.A(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "tp.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
         field_b = 0;
         field_h = new int[12];
-        field_a = "<col=bbbbcc>Versus</col>";
-        field_f = "Remove name";
-        field_c = "You cannot chat to <%0> because <%0> is not in your friend list.";
-        field_d = "The following settings need to be changed:  ";
+        statusVersus = "<col=bbbbcc>Versus</col>";
+        muLobbyNameRm = "Remove name";
+        privatechatFriendNotlisted = "You cannot chat to <%0> because <%0> is not in your friend list.";
+        gameoptNeedchanging2 = "The following settings need to be changed:  ";
     }
 }

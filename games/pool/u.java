@@ -11,18 +11,18 @@ final class u {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 72) {
-            u.a(-96, 16, 11, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -65, (int[]) null, (int[]) null, -114, 112, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, 52, (int[]) null, -56, (int[]) null, (eg) null, 52, (int[]) null);
+            u.a(-96, 16, 11, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -65, (int[]) null, (int[]) null, -114, 112, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, 52, (int[]) null, -56, (int[]) null, (MeshBuilder) null, 52, (int[]) null);
           }
-          stackIn_7_0 = !(im.field_fc <= 250);
+          stackIn_7_0 = !(LobbyPlayer.field_fc <= 250);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "u.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "u.C(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int[] param4, int[] param5, int[] param6, int[] param7, int param8, int[] param9, int[] param10, int param11, int param12, int[] param13, byte[] param14, int[] param15, int[] param16, int param17, int[] param18, int param19, int[] param20, eg param21, int param22, int[] param23) {
+    final static void a(int param0, int param1, int param2, boolean param3, int[] param4, int[] param5, int[] param6, int[] param7, int param8, int[] param9, int[] param10, int param11, int param12, int[] param13, byte[] param14, int[] param15, int[] param16, int param17, int[] param18, int param19, int[] param20, MeshBuilder param21, int param22, int[] param23) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -179,43 +179,43 @@ final class u {
         int var38Lifetime1Lifetime1;
         var65 = Pool.field_O;
         try {
-          if (wh.field_j == null ||
-            !(wh.field_j.length >= param22)) {
+          if (QuickChatPhraseRegistry.field_j == null ||
+            !(QuickChatPhraseRegistry.field_j.length >= param22)) {
             var24_int = 100 + param22;
-            va.field_T = new int[var24_int];
-            wh.field_j = new int[var24_int];
+            MultiHandleSliderWidget.field_T = new int[var24_int];
+            QuickChatPhraseRegistry.field_j = new int[var24_int];
           }
-          if (null == hr.field_n ||
-            !(param12 * 2 <= hr.field_n.length)) {
+          if (null == ViewportController.field_n ||
+            !(param12 * 2 <= ViewportController.field_n.length)) {
             var24_intLifetime1 = 100 + param12 * 2;
-            gr.field_B = new int[var24_intLifetime1];
-            hr.field_n = new int[var24_intLifetime1];
+            ArchiveRequest.field_B = new int[var24_intLifetime1];
+            ViewportController.field_n = new int[var24_intLifetime1];
           }
-          var24 = wh.field_j;
+          var24 = QuickChatPhraseRegistry.field_j;
           if (cd.field_d == null) {
             cd.field_d = new int[16];
           }
-          var25 = va.field_T;
+          var25 = MultiHandleSliderWidget.field_T;
           var26 = cd.field_d;
           if (!param3) {
             u.a((byte) 100, -4, 66, true, 88);
           }
-          var27 = hr.field_n;
-          nk.field_a = 0;
+          var27 = ViewportController.field_n;
+          TranslatedUiText.field_a = 0;
           PoolMatchController.field_W = 0;
           de.field_a = 0;
-          var28 = gr.field_B;
-          eq.field_R = 0;
-          if (qp.field_Yb == null ||
-            !(qp.field_Yb.length >= param22)) {
+          var28 = ArchiveRequest.field_B;
+          DateInputWidget.field_R = 0;
+          if (QuickChatMenu.field_Yb == null ||
+            !(QuickChatMenu.field_Yb.length >= param22)) {
             sa.field_r = new int[100 + param22];
-            qp.field_Yb = new int[param22 + 100];
+            QuickChatMenu.field_Yb = new int[param22 + 100];
             ro.field_d = new int[100 + param22];
           }
-          if (null == hi.field_k ||
-            !(param12 <= hi.field_k.length)) {
-            nr.field_P = new int[100 + param12];
-            hi.field_k = new int[100 + param12];
+          if (null == DirectByteStorage.field_k ||
+            !(param12 <= DirectByteStorage.field_k.length)) {
+            AccountWelcomePanel.field_P = new int[100 + param12];
+            DirectByteStorage.field_k = new int[100 + param12];
             vn.field_h = new int[param12 + 100];
           }
           if (param5 != null && (null == gp.field_e ||
@@ -232,15 +232,15 @@ final class u {
           }
           if (wn.field_d == null ||
             !(wn.field_d.length >= param12)) {
-            nk.field_b = new int[100 + param12];
+            TranslatedUiText.field_b = new int[100 + param12];
             wn.field_d = new int[param12 + 100];
             f.field_b = new int[param12 + 100];
           }
           if (param5 != null && (la.field_d == null ||
             !(la.field_d.length >= param12))) {
-            sl.field_V = new int[param12 + 100];
+            TextInputWidget.field_V = new int[param12 + 100];
             la.field_d = new int[100 + param12];
-            rb.field_b = new int[param12 + 100];
+            ArchiveLoadSequence.field_b = new int[param12 + 100];
           }
           var29 = 0;
           var30 = 0;
@@ -290,29 +290,29 @@ final class u {
             if (var65 == 0) {
               if (stackIn_266_0 > stackIn_266_1) {
                 if ((-var53 | (-var52 | -var51)) < 0) {
-                  if (4 + var29 + param22 > qp.field_Yb.length) {
+                  if (4 + var29 + param22 > QuickChatMenu.field_Yb.length) {
                     var54 = new int[var29 + (param22 + 104)];
-                    qn.a(qp.field_Yb, 0, var54, 0, nk.field_a);
-                    qp.field_Yb = var54;
+                    ArrayOperations.copy(QuickChatMenu.field_Yb, 0, var54, 0, TranslatedUiText.field_a);
+                    QuickChatMenu.field_Yb = var54;
                     var54Lifetime4 = new int[104 + param22 + var29];
-                    qn.a(sa.field_r, 0, var54Lifetime4, 0, nk.field_a);
+                    ArrayOperations.copy(sa.field_r, 0, var54Lifetime4, 0, TranslatedUiText.field_a);
                     sa.field_r = var54Lifetime4;
                     var54Lifetime5 = new int[param22 - (-var29 - 104)];
-                    qn.a(ro.field_d, 0, var54Lifetime5, 0, nk.field_a);
+                    ArrayOperations.copy(ro.field_d, 0, var54Lifetime5, 0, TranslatedUiText.field_a);
                     ro.field_d = var54Lifetime5;
                   }
                   if ((4 + (var31 + param22)) > eh.field_w.length) {
                     var54Lifetime1 = new int[104 + (var31 + param22)];
-                    qn.a(eh.field_w, 0, var54Lifetime1, 0, de.field_a);
+                    ArrayOperations.copy(eh.field_w, 0, var54Lifetime1, 0, de.field_a);
                     eh.field_w = var54Lifetime1;
                     var54Lifetime1Lifetime1 = new int[var31 + (param22 + 104)];
-                    qn.a(mj.field_a, 0, var54Lifetime1Lifetime1, 0, de.field_a);
+                    ArrayOperations.copy(mj.field_a, 0, var54Lifetime1Lifetime1, 0, de.field_a);
                     mj.field_a = var54Lifetime1Lifetime1;
                     var54Lifetime1Lifetime2 = new int[var31 + param22 + 104];
-                    qn.a(sa.field_w, 0, var54Lifetime1Lifetime2, 0, de.field_a);
+                    ArrayOperations.copy(sa.field_w, 0, var54Lifetime1Lifetime2, 0, de.field_a);
                     sa.field_w = var54Lifetime1Lifetime2;
                   }
-                  var55 = nk.field_a;
+                  var55 = TranslatedUiText.field_a;
                   var56 = de.field_a;
                   var57 = 0;
                   var58 = 0;
@@ -350,7 +350,7 @@ final class u {
                       var55++;
                       var34 = incrementValue$0;
                       var24[var39] = incrementValue$0;
-                      qp.field_Yb[var34] = var42;
+                      QuickChatMenu.field_Yb[var34] = var42;
                       sa.field_r[var34] = var43;
                       ro.field_d[var34] = var44;
                     }
@@ -384,7 +384,7 @@ final class u {
                     var34 = incrementValue$2;
                     var61 = (-(var47 * var51) + var44 * var52) / var63;
                     var62 = (-(var51 * var36) + var52 * var35) / var63;
-                    qp.field_Yb[var34] = var59;
+                    QuickChatMenu.field_Yb[var34] = var59;
                     sa.field_r[var34] = var60;
                     ro.field_d[var34] = var61;
                     var26[var57 + 0] = var34;
@@ -407,7 +407,7 @@ final class u {
                       var55++;
                       var34 = incrementValue$4;
                       var24[var40] = incrementValue$4;
-                      qp.field_Yb[var34] = var45;
+                      QuickChatMenu.field_Yb[var34] = var45;
                       sa.field_r[var34] = var46;
                       ro.field_d[var34] = var47;
                     }
@@ -441,7 +441,7 @@ final class u {
                     var34 = incrementValue$6;
                     var62Lifetime1 = (var53 * var36 - var52 * var37) / var63Lifetime1;
                     var59Lifetime1 = (var53 * var45 - var48 * var52) / var63Lifetime1;
-                    qp.field_Yb[var34] = var59Lifetime1;
+                    QuickChatMenu.field_Yb[var34] = var59Lifetime1;
                     sa.field_r[var34] = var60Lifetime1;
                     ro.field_d[var34] = var61Lifetime1;
                     var26[0 + var57] = var34;
@@ -464,7 +464,7 @@ final class u {
                       var55++;
                       var34 = incrementValue$8;
                       var24[var41] = incrementValue$8;
-                      qp.field_Yb[var34] = var48;
+                      QuickChatMenu.field_Yb[var34] = var48;
                       sa.field_r[var34] = var49;
                       ro.field_d[var34] = var50;
                     }
@@ -497,7 +497,7 @@ final class u {
                     var34 = incrementValue$10;
                     var62Lifetime2 = (var37 * var51 - var53 * var35) / var63Lifetime2;
                     var60Lifetime2 = (-(var53 * var43) + var51 * var49) / var63Lifetime2;
-                    qp.field_Yb[var34] = var59Lifetime2;
+                    QuickChatMenu.field_Yb[var34] = var59Lifetime2;
                     sa.field_r[var34] = var60Lifetime2;
                     ro.field_d[var34] = var61Lifetime2;
                     var26[0 + var57] = var34;
@@ -513,34 +513,34 @@ final class u {
                     var26[var58 + 12] = var62Lifetime2;
                     var58++;
                   }
-                  var29 = var29 + (var55 - nk.field_a);
+                  var29 = var29 + (var55 - TranslatedUiText.field_a);
                   var33Lifetime2 = PoolMatchController.field_W;
-                  nk.field_a = var55;
-                  if (hi.field_k.length < (-2 + (var30 + param12 + var57))) {
+                  TranslatedUiText.field_a = var55;
+                  if (DirectByteStorage.field_k.length < (-2 + (var30 + param12 + var57))) {
                     var54Lifetime2 = new int[98 + param12 - (-var30 - var57)];
-                    qn.a(hi.field_k, 0, var54Lifetime2, 0, var33Lifetime2);
-                    hi.field_k = var54Lifetime2;
+                    ArrayOperations.copy(DirectByteStorage.field_k, 0, var54Lifetime2, 0, var33Lifetime2);
+                    DirectByteStorage.field_k = var54Lifetime2;
                     var54Lifetime2Lifetime1 = new int[var57 + (var30 + param12 + 98)];
-                    qn.a(vn.field_h, 0, var54Lifetime2Lifetime1, 0, var33Lifetime2);
+                    ArrayOperations.copy(vn.field_h, 0, var54Lifetime2Lifetime1, 0, var33Lifetime2);
                     vn.field_h = var54Lifetime2Lifetime1;
                     var54Lifetime2Lifetime2 = new int[98 + (var30 + param12) + var57];
-                    qn.a(nr.field_P, 0, var54Lifetime2Lifetime2, 0, var33Lifetime2);
-                    nr.field_P = var54Lifetime2Lifetime2;
+                    ArrayOperations.copy(AccountWelcomePanel.field_P, 0, var54Lifetime2Lifetime2, 0, var33Lifetime2);
+                    AccountWelcomePanel.field_P = var54Lifetime2Lifetime2;
                     if (null != param5) {
                       var54Lifetime2Lifetime3 = new int[param12 + var30 + var57 + 98];
-                      qn.a(gp.field_e, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
+                      ArrayOperations.copy(gp.field_e, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
                       gp.field_e = var54Lifetime2Lifetime3;
                       var54Lifetime2Lifetime3 = new int[var57 + (var30 + param12 + 98)];
-                      qn.a(te.field_o, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
+                      ArrayOperations.copy(te.field_o, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
                       te.field_o = var54Lifetime2Lifetime3;
                       var54Lifetime2Lifetime3 = new int[var57 + (var30 + param12) + 98];
-                      qn.a(hf.field_d, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
+                      ArrayOperations.copy(hf.field_d, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
                       hf.field_d = var54Lifetime2Lifetime3;
                     }
                   }
-                  hi.field_k[var33Lifetime2] = var26[0];
+                  DirectByteStorage.field_k[var33Lifetime2] = var26[0];
                   vn.field_h[var33Lifetime2] = var26[1];
-                  nr.field_P[var33Lifetime2] = var26[2];
+                  AccountWelcomePanel.field_P[var33Lifetime2] = var26[2];
                   if (null != param5) {
                     if (var64 != 0) {
                       gp.field_e[var33Lifetime2] = var26[8];
@@ -553,9 +553,9 @@ final class u {
                   }
                   var27[var33Lifetime2++] = var38;
                   if (4 == var57) {
-                    hi.field_k[var33Lifetime2] = var26[2];
+                    DirectByteStorage.field_k[var33Lifetime2] = var26[2];
                     vn.field_h[var33Lifetime2] = var26[3];
-                    nr.field_P[var33Lifetime2] = var26[0];
+                    AccountWelcomePanel.field_P[var33Lifetime2] = var26[0];
                     if (null != param5) {
                       if (var64 == 0) {
                         gp.field_e[var33Lifetime2] = var35;
@@ -572,64 +572,64 @@ final class u {
                   var31 = var31 + (var56 - de.field_a);
                   PoolMatchController.field_W = var33Lifetime2;
                   de.field_a = var56;
-                  var33Lifetime2 = eq.field_R;
+                  var33Lifetime2 = DateInputWidget.field_R;
                   if (wn.field_d.length < (-2 + var58 + param12 + var32)) {
                     var54Lifetime3 = new int[param12 + (var32 + var58 + 98)];
-                    qn.a(wn.field_d, 0, var54Lifetime3, 0, var33Lifetime2);
+                    ArrayOperations.copy(wn.field_d, 0, var54Lifetime3, 0, var33Lifetime2);
                     wn.field_d = var54Lifetime3;
                     var54Lifetime3Lifetime1 = new int[98 + (var58 + var32) + param12];
-                    qn.a(f.field_b, 0, var54Lifetime3Lifetime1, 0, var33Lifetime2);
+                    ArrayOperations.copy(f.field_b, 0, var54Lifetime3Lifetime1, 0, var33Lifetime2);
                     f.field_b = var54Lifetime3Lifetime1;
                     var54Lifetime3Lifetime2 = new int[98 + (var58 + (var32 + param12))];
-                    qn.a(nk.field_b, 0, var54Lifetime3Lifetime2, 0, var33Lifetime2);
-                    nk.field_b = var54Lifetime3Lifetime2;
+                    ArrayOperations.copy(TranslatedUiText.field_b, 0, var54Lifetime3Lifetime2, 0, var33Lifetime2);
+                    TranslatedUiText.field_b = var54Lifetime3Lifetime2;
                     if (param5 != null) {
                       var54Lifetime3Lifetime3 = new int[98 + (var32 + param12) + var58];
-                      qn.a(la.field_d, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
+                      ArrayOperations.copy(la.field_d, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
                       la.field_d = var54Lifetime3Lifetime3;
                       var54Lifetime3Lifetime3 = new int[98 + var58 + (var32 + param12)];
-                      qn.a(sl.field_V, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
-                      sl.field_V = var54Lifetime3Lifetime3;
+                      ArrayOperations.copy(TextInputWidget.field_V, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
+                      TextInputWidget.field_V = var54Lifetime3Lifetime3;
                       var54Lifetime3Lifetime3 = new int[98 + var58 + (var32 + param12)];
-                      qn.a(rb.field_b, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
-                      rb.field_b = var54Lifetime3Lifetime3;
+                      ArrayOperations.copy(ArchiveLoadSequence.field_b, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
+                      ArchiveLoadSequence.field_b = var54Lifetime3Lifetime3;
                     }
                   }
                   wn.field_d[var33Lifetime2] = var26[4];
                   f.field_b[var33Lifetime2] = var26[5];
-                  nk.field_b[var33Lifetime2] = var26[6];
+                  TranslatedUiText.field_b[var33Lifetime2] = var26[6];
                   if (null != param5) {
                     if (var64 != 0) {
                       la.field_d[var33Lifetime2] = var26[12];
-                      sl.field_V[var33Lifetime2] = var26[13];
-                      rb.field_b[var33Lifetime2] = var26[14];
+                      TextInputWidget.field_V[var33Lifetime2] = var26[13];
+                      ArchiveLoadSequence.field_b[var33Lifetime2] = var26[14];
                     } else {
                       la.field_d[var33Lifetime2] = var35;
-                      rb.field_b[var33Lifetime2] = var37;
+                      ArchiveLoadSequence.field_b[var33Lifetime2] = var37;
                     }
                   }
                   var28[var33Lifetime2++] = var38;
                   if (var58 == 4) {
                     wn.field_d[var33Lifetime2] = var26[6];
                     f.field_b[var33Lifetime2] = var26[7];
-                    nk.field_b[var33Lifetime2] = var26[4];
+                    TranslatedUiText.field_b[var33Lifetime2] = var26[4];
                     if (param5 != null) {
                       if (var64 == 0) {
                         la.field_d[var33Lifetime2] = var35;
-                        rb.field_b[var33Lifetime2] = var37;
+                        ArchiveLoadSequence.field_b[var33Lifetime2] = var37;
                       } else {
                         la.field_d[var33Lifetime2] = var26[14];
-                        sl.field_V[var33Lifetime2] = var26[15];
-                        rb.field_b[var33Lifetime2] = var26[12];
+                        TextInputWidget.field_V[var33Lifetime2] = var26[15];
+                        ArchiveLoadSequence.field_b[var33Lifetime2] = var26[12];
                       }
                     }
                     var28[var33Lifetime2++] = var38;
                     var32++;
                   }
-                  eq.field_R = var33Lifetime2;
+                  DateInputWidget.field_R = var33Lifetime2;
                 } else {
-                  fieldTemp$16 = eq.field_R;
-                  eq.field_R = eq.field_R + 1;
+                  fieldTemp$16 = DateInputWidget.field_R;
+                  DateInputWidget.field_R = DateInputWidget.field_R + 1;
                   var33Lifetime2 = fieldTemp$16;
                   var34 = var25[var39];
                   if (var34 < 0) {
@@ -663,11 +663,11 @@ final class u {
                     mj.field_a[var34] = var49;
                     sa.field_w[var34] = var50;
                   }
-                  nk.field_b[var33Lifetime2] = var34;
+                  TranslatedUiText.field_b[var33Lifetime2] = var34;
                   if (null != param5) {
                     la.field_d[var33Lifetime2] = param5[var38];
-                    sl.field_V[var33Lifetime2] = param23[var38];
-                    rb.field_b[var33Lifetime2] = param20[var38];
+                    TextInputWidget.field_V[var33Lifetime2] = param23[var38];
+                    ArchiveLoadSequence.field_b[var33Lifetime2] = param20[var38];
                   }
                   var28[var33Lifetime2] = var38;
                 }
@@ -677,37 +677,37 @@ final class u {
                 var33Lifetime2 = fieldTemp$20;
                 var34 = var24[var39];
                 if (var34 < 0) {
-                  fieldTemp$21 = nk.field_a;
-                  nk.field_a = nk.field_a + 1;
+                  fieldTemp$21 = TranslatedUiText.field_a;
+                  TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                   var34 = fieldTemp$21;
                   var24[var39] = fieldTemp$21;
-                  qp.field_Yb[var34] = var42;
+                  QuickChatMenu.field_Yb[var34] = var42;
                   sa.field_r[var34] = var43;
                   ro.field_d[var34] = var44;
                 }
-                hi.field_k[var33Lifetime2] = var34;
+                DirectByteStorage.field_k[var33Lifetime2] = var34;
                 var34 = var24[var40];
                 if (var34 < 0) {
-                  fieldTemp$22 = nk.field_a;
-                  nk.field_a = nk.field_a + 1;
+                  fieldTemp$22 = TranslatedUiText.field_a;
+                  TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                   var34 = fieldTemp$22;
                   var24[var40] = fieldTemp$22;
-                  qp.field_Yb[var34] = var45;
+                  QuickChatMenu.field_Yb[var34] = var45;
                   sa.field_r[var34] = var46;
                   ro.field_d[var34] = var47;
                 }
                 vn.field_h[var33Lifetime2] = var34;
                 var34 = var24[var41];
                 if (0 > var34) {
-                  fieldTemp$23 = nk.field_a;
-                  nk.field_a = nk.field_a + 1;
+                  fieldTemp$23 = TranslatedUiText.field_a;
+                  TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                   var34 = fieldTemp$23;
                   var24[var41] = fieldTemp$23;
-                  qp.field_Yb[var34] = var48;
+                  QuickChatMenu.field_Yb[var34] = var48;
                   sa.field_r[var34] = var49;
                   ro.field_d[var34] = var50;
                 }
-                nr.field_P[var33Lifetime2] = var34;
+                AccountWelcomePanel.field_P[var33Lifetime2] = var34;
                 if (param5 != null) {
                   gp.field_e[var33Lifetime2] = param5[var38];
                   te.field_o[var33Lifetime2] = param23[var38];
@@ -722,9 +722,9 @@ final class u {
           }
           if (decompiledNaturalLoopExit0) {
             ja.field_a = param19;
-            ld.field_g = param19;
-            vk.field_bb = de.field_a;
-            nj.field_d = nk.field_a;
+            WhirlpoolHasher.field_g = param19;
+            MidiPcmStream.field_bb = de.field_a;
+            nj.field_d = TranslatedUiText.field_a;
             stackIn_266_0 = -1;
             stackIn_266_1 = ~param19;
           }
@@ -753,11 +753,11 @@ final class u {
                       var33Lifetime3 = param21.field_p[var38Lifetime1];
                       var34Lifetime1 = var24[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
-                        fieldTemp$25 = nk.field_a;
-                        nk.field_a = nk.field_a + 1;
+                        fieldTemp$25 = TranslatedUiText.field_a;
+                        TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                         var34Lifetime1 = fieldTemp$25;
                         var24[var33Lifetime3] = fieldTemp$25;
-                        qp.field_Yb[var34Lifetime1] = param6[var33Lifetime3];
+                        QuickChatMenu.field_Yb[var34Lifetime1] = param6[var33Lifetime3];
                         sa.field_r[var34Lifetime1] = param13[var33Lifetime3];
                         ro.field_d[var34Lifetime1] = param10[var33Lifetime3];
                       }
@@ -776,11 +776,11 @@ final class u {
                       var33Lifetime3 = param21.field_H[var38Lifetime1];
                       var34Lifetime1 = var24[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
-                        fieldTemp$27 = nk.field_a;
-                        nk.field_a = nk.field_a + 1;
+                        fieldTemp$27 = TranslatedUiText.field_a;
+                        TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                         var34Lifetime1 = fieldTemp$27;
                         var24[var33Lifetime3] = fieldTemp$27;
-                        qp.field_Yb[var34Lifetime1] = param6[var33Lifetime3];
+                        QuickChatMenu.field_Yb[var34Lifetime1] = param6[var33Lifetime3];
                         sa.field_r[var34Lifetime1] = param13[var33Lifetime3];
                         ro.field_d[var34Lifetime1] = param10[var33Lifetime3];
                       }
@@ -799,11 +799,11 @@ final class u {
                       var33Lifetime3 = param21.field_C[var38Lifetime1];
                       var34Lifetime1 = var24[var33Lifetime3];
                       if (var34Lifetime1 < 0) {
-                        fieldTemp$29 = nk.field_a;
-                        nk.field_a = nk.field_a + 1;
+                        fieldTemp$29 = TranslatedUiText.field_a;
+                        TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                         var34Lifetime1 = fieldTemp$29;
                         var24[var33Lifetime3] = fieldTemp$29;
-                        qp.field_Yb[var34Lifetime1] = param6[var33Lifetime3];
+                        QuickChatMenu.field_Yb[var34Lifetime1] = param6[var33Lifetime3];
                         sa.field_r[var34Lifetime1] = param13[var33Lifetime3];
                         ro.field_d[var34Lifetime1] = param10[var33Lifetime3];
                       }
@@ -865,17 +865,17 @@ final class u {
                 return;
               }
             }
-            if (ve.field_w == null ||
-              !(param19 <= ve.field_w.length)) {
-              jk.field_h = new int[param19];
+            if (BitmapTextLayout.field_w == null ||
+              !(param19 <= BitmapTextLayout.field_w.length)) {
+              CueStick.field_h = new int[param19];
               kc.field_e = new int[param19];
-              ve.field_w = new int[param19];
+              BitmapTextLayout.field_w = new int[param19];
             }
-            if (dp.field_e == null ||
-              !(param19 <= dp.field_e.length)) {
-              tk.field_e = new int[param19];
-              dp.field_e = new int[param19];
-              up.field_p = new int[param19];
+            if (TextureCache.field_e == null ||
+              !(param19 <= TextureCache.field_e.length)) {
+              DualLinkNodeHashTable.field_e = new int[param19];
+              TextureCache.field_e = new int[param19];
+              CachedArchiveSource.field_p = new int[param19];
             }
             var38Lifetime1Lifetime1 = 0;
             while (param19 > var38Lifetime1Lifetime1) {
@@ -885,15 +885,15 @@ final class u {
                 return;
               }
               if (var34Lifetime1Lifetime1 < 0) {
-                fieldTemp$42 = nk.field_a;
-                nk.field_a = nk.field_a + 1;
+                fieldTemp$42 = TranslatedUiText.field_a;
+                TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                 var34Lifetime1Lifetime1 = fieldTemp$42;
                 var24[var33Lifetime3Lifetime1] = fieldTemp$42;
-                qp.field_Yb[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
+                QuickChatMenu.field_Yb[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
                 sa.field_r[var34Lifetime1Lifetime1] = param13[var33Lifetime3Lifetime1];
                 ro.field_d[var34Lifetime1Lifetime1] = param10[var33Lifetime3Lifetime1];
               }
-              ve.field_w[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
+              BitmapTextLayout.field_w[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
               var34Lifetime1Lifetime1 = var25[var33Lifetime3Lifetime1];
               if (var34Lifetime1Lifetime1 < 0) {
                 fieldTemp$43 = de.field_a;
@@ -904,15 +904,15 @@ final class u {
                 mj.field_a[var34Lifetime1Lifetime1] = param13[var33Lifetime3Lifetime1];
                 sa.field_w[var34Lifetime1Lifetime1] = param10[var33Lifetime3Lifetime1];
               }
-              dp.field_e[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
+              TextureCache.field_e[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
               var33Lifetime3Lifetime1 = param4[var38Lifetime1Lifetime1];
               var34Lifetime1Lifetime1 = var24[var33Lifetime3Lifetime1];
               if (var34Lifetime1Lifetime1 < 0) {
-                fieldTemp$44 = nk.field_a;
-                nk.field_a = nk.field_a + 1;
+                fieldTemp$44 = TranslatedUiText.field_a;
+                TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                 var34Lifetime1Lifetime1 = fieldTemp$44;
                 var24[var33Lifetime3Lifetime1] = fieldTemp$44;
-                qp.field_Yb[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
+                QuickChatMenu.field_Yb[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
                 sa.field_r[var34Lifetime1Lifetime1] = param13[var33Lifetime3Lifetime1];
                 ro.field_d[var34Lifetime1Lifetime1] = param10[var33Lifetime3Lifetime1];
               }
@@ -927,19 +927,19 @@ final class u {
                 mj.field_a[var34Lifetime1Lifetime1] = param13[var33Lifetime3Lifetime1];
                 sa.field_w[var34Lifetime1Lifetime1] = param10[var33Lifetime3Lifetime1];
               }
-              up.field_p[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
+              CachedArchiveSource.field_p[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
               var33Lifetime3Lifetime1 = param16[var38Lifetime1Lifetime1];
               var34Lifetime1Lifetime1 = var24[var33Lifetime3Lifetime1];
               if (0 > var34Lifetime1Lifetime1) {
-                fieldTemp$46 = nk.field_a;
-                nk.field_a = nk.field_a + 1;
+                fieldTemp$46 = TranslatedUiText.field_a;
+                TranslatedUiText.field_a = TranslatedUiText.field_a + 1;
                 var34Lifetime1Lifetime1 = fieldTemp$46;
                 var24[var33Lifetime3Lifetime1] = fieldTemp$46;
-                qp.field_Yb[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
+                QuickChatMenu.field_Yb[var34Lifetime1Lifetime1] = param6[var33Lifetime3Lifetime1];
                 sa.field_r[var34Lifetime1Lifetime1] = param13[var33Lifetime3Lifetime1];
                 ro.field_d[var34Lifetime1Lifetime1] = param10[var33Lifetime3Lifetime1];
               }
-              jk.field_h[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
+              CueStick.field_h[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
               var34Lifetime1Lifetime1 = var25[var33Lifetime3Lifetime1];
               if (var34Lifetime1Lifetime1 < 0) {
                 fieldTemp$47 = de.field_a;
@@ -950,7 +950,7 @@ final class u {
                 mj.field_a[var34Lifetime1Lifetime1] = param13[var33Lifetime3Lifetime1];
                 sa.field_w[var34Lifetime1Lifetime1] = param10[var33Lifetime3Lifetime1];
               }
-              tk.field_e[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
+              DualLinkNodeHashTable.field_e[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
               var38Lifetime1Lifetime1++;
             }
           }
@@ -1043,53 +1043,53 @@ final class u {
           } else {
             stackIn_410_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_357_0), ((StringBuilder) (Object) stackIn_409_1).append(stackIn_410_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_357_0), ((StringBuilder) (Object) stackIn_409_1).append(stackIn_410_2).append(')').toString());
         }
     }
 
-    final static vh a(byte param0, int param1, int param2, boolean param3, int param4) {
+    final static UiComponent a(byte param0, int param1, int param2, boolean param3, int param4) {
         Sprite var5 = null;
         RuntimeException var5_ref = null;
-        vh var6 = null;
+        UiComponent var6 = null;
         Sprite stackIn_7_0 = null;
-        vh stackIn_10_0 = null;
+        UiComponent stackIn_10_0 = null;
         Sprite stackIn_11_1 = null;
-        vh stackIn_14_0 = null;
+        UiComponent stackIn_14_0 = null;
         Sprite stackIn_15_1 = null;
-        vh stackIn_16_0 = null;
+        UiComponent stackIn_16_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 53) {
-            u.a(-58, -76, -84, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -35, (int[]) null, (int[]) null, -23, 17, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, -54, (int[]) null, 18, (int[]) null, (eg) null, 89, (int[]) null);
+            u.a(-58, -76, -84, false, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -35, (int[]) null, (int[]) null, -23, 17, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, -54, (int[]) null, 18, (int[]) null, (MeshBuilder) null, 89, (int[]) null);
           }
           if (param3) {
-            stackIn_7_0 = bf.field_h;
+            stackIn_7_0 = CushionSegment.field_h;
           } else {
             stackIn_7_0 = hp.field_b;
           }
           var5 = stackIn_7_0;
-          var6 = new vh((long)param4, (vh) null, param1, param2, var5.field_z, var5.field_A, (String) null);
-          var6.field_hb = var5;
+          var6 = new UiComponent((long)param4, (UiComponent) null, param1, param2, var5.field_z, var5.field_A, (String) null);
+          var6.sprite = var5;
           stackIn_10_0 = var6;
           if (!param3) {
-            stackIn_11_1 = gj.field_T;
+            stackIn_11_1 = ProgressBarWidget.field_T;
           } else {
             stackIn_11_1 = ag.field_b;
           }
-          stackIn_10_0.field_ab = stackIn_11_1;
+          stackIn_10_0.disabledSprite = stackIn_11_1;
           stackIn_14_0 = var6;
           if (param3) {
             stackIn_15_1 = wf.field_a;
           } else {
             stackIn_15_1 = eh.field_y;
           }
-          stackIn_14_0.field_yb = stackIn_15_1;
+          stackIn_14_0.selectedSprite = stackIn_15_1;
           stackIn_16_0 = var6;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var5_ref), "u.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5_ref), "u.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

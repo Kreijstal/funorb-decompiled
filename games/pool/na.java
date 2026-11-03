@@ -3,8 +3,8 @@
  */
 final class na {
     static int field_c;
-    static String field_b;
-    static String field_d;
+    static String tutorialShotModePower;
+    static String connectionlostReconnecting;
     static vn field_e;
     static int field_a;
     static int field_f;
@@ -25,15 +25,15 @@ final class na {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        kn var6 = null;
+        PlayerContextMenu var6 = null;
         String var7 = null;
-        kn var8 = null;
+        PlayerContextMenu var8 = null;
         String var9 = null;
-        kn var10 = null;
+        PlayerContextMenu var10 = null;
         String var11 = null;
-        kn var12 = null;
+        PlayerContextMenu var12 = null;
         String var13 = null;
-        kn var14 = null;
+        PlayerContextMenu var14 = null;
         try {
           stackIn_2_0 = param0.field_j;
           stackIn_2_1 = param0.field_p;
@@ -43,45 +43,45 @@ final class na {
           } else {
             stackIn_3_3 = 0;
           }
-          dr.a(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, (of) null, param0.field_q, param1 ^ 32614, param0.field_u, (int[]) null);
+          dr.openPlayerContextMenu(stackIn_2_0, stackIn_2_1, stackIn_2_2, stackIn_3_3, (ScrollPane) null, param0.field_q, param1 ^ 32614, param0.field_u, (int[]) null);
           if (param0.field_p == 0 &&
             !tq.c((byte) -75) &&
-            em.field_L == null &&
+            HighscoresScreen.field_L == null &&
             tp.field_e == null) {
-            if (!hr.field_y) {
-              var6 = vl.field_m;
-              var7 = jo.field_L;
-              var6.field_n.a(var7, 17130, 14);
+            if (!ViewportController.field_y) {
+              var6 = PlasmaBallSkin.field_m;
+              var7 = PauseMenuScreen.messageLobby;
+              var6.field_n.addAction(var7, 17130, 14);
             }
-            var8 = vl.field_m;
-            var9 = fl.field_n;
-            var8.field_n.a(var9, 17130, 20);
+            var8 = PlasmaBallSkin.field_m;
+            var9 = fl.quickchatLobby;
+            var8.field_n.addAction(var9, 17130, 20);
           }
           if (1 == param0.field_p &&
             !tq.c((byte) -75) &&
-            em.field_L != null &&
-            param0.field_o == em.field_L.g(20872)) {
-            if (!hr.field_y) {
-              var10 = vl.field_m;
-              var11 = vd.field_f;
-              var10.field_n.a(var11, 17130, 14);
+            HighscoresScreen.field_L != null &&
+            param0.field_o == HighscoresScreen.field_L.getGameId(20872)) {
+            if (!ViewportController.field_y) {
+              var10 = PlasmaBallSkin.field_m;
+              var11 = DialRenderer.messageGame;
+              var10.field_n.addAction(var11, 17130, 14);
             }
-            var12 = vl.field_m;
-            var13 = br.field_K;
-            var12.field_n.a(var13, 17130, 20);
+            var12 = PlasmaBallSkin.field_m;
+            var13 = LoginRequiredScreen.quickchatGame;
+            var12.field_n.addAction(var13, 17130, 20);
           }
-          vl.field_m.b(2616);
-          vl.field_m.a((byte) 124, false);
+          PlasmaBallSkin.field_m.addInviteActions(2616);
+          PlasmaBallSkin.field_m.addGameInviteActions((byte) 124, false);
           if (param1 != 122) {
             na.a((byte) -50);
           }
-          vl.field_m.a(param0.field_p, param0.field_d, (byte) 64);
-          vl.field_m.a((byte) 95);
-          vl.field_m.a(param0, false);
-          var14 = vl.field_m;
-          var3 = lq.field_W;
-          var4 = ua.field_o;
-          var14.field_n.c(0, 0, var3, param1 - 122, var4);
+          PlasmaBallSkin.field_m.buildPlayerMenu(param0.field_p, param0.field_d, (byte) 64);
+          PlasmaBallSkin.field_m.addReportAbuseAction((byte) 95);
+          PlasmaBallSkin.field_m.addChatFilterActions(param0, false);
+          var14 = PlasmaBallSkin.field_m;
+          var3 = DialogLayer.field_W;
+          var4 = UsernameAvailabilityValidator.field_o;
+          var14.field_n.layoutAtAnchor(0, 0, var3, param1 - 122, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,11 +93,11 @@ final class na {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static boolean a(int param0, boolean param1, CharSequence param2, int param3) {
+    final static boolean isValidInteger(int param0, boolean param1, CharSequence param2, int param3) {
         int var8 = 0;
         int stackIn_43_0 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -176,25 +176,25 @@ final class na {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(int param0, String param1) {
         try {
-          ri.field_N = param1;
+          CheckboxWidget.field_N = param1;
           if (param0 != -58) {
             na.a((byte) -95);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "na.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "na.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         field_e = null;
-        field_b = null;
-        field_d = null;
+        tutorialShotModePower = null;
+        connectionlostReconnecting = null;
         if (param0 != 43) {
           String var2 = (String) null;
           na.a(-87, (String) null);
@@ -202,7 +202,7 @@ final class na {
     }
 
     static {
-        field_b = "To set the <u=ffffff>power</u>, use the <img=1> <col=99ff99>mouse wheel</col>, or the <img=7> and <img=8> cursor keys, or <img=12> and <img=14>.";
-        field_d = "Connection lost - attempting to reconnect";
+        tutorialShotModePower = "To set the <u=ffffff>power</u>, use the <img=1> <col=99ff99>mouse wheel</col>, or the <img=7> and <img=8> cursor keys, or <img=12> and <img=14>.";
+        connectionlostReconnecting = "Connection lost - attempting to reconnect";
     }
 }

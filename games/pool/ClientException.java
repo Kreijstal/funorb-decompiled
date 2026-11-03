@@ -4,7 +4,7 @@
 final class ClientException extends RuntimeException {
     private static int field_k;
     static int field_b;
-    static id field_a;
+    static MouseWheelInput field_a;
     static int field_e;
     static String field_d;
     static int field_h;
@@ -21,15 +21,15 @@ final class ClientException extends RuntimeException {
         if (oj.c(param1 ^ 48)) {
           param0 = false;
         }
-        jk.a(param0, 118);
+        CueStick.a(param0, 118);
         if (ji.field_f) {
-          qh.g(na.field_e.field_i.field_qb, na.field_e.field_i.field_eb, na.field_e.field_i.field_gb, na.field_e.field_i.field_Db);
-          na.field_e.field_i.a((byte) -79, param0);
+          SoftwareRasterizer.darkenRectangle(na.field_e.field_i.localX, na.field_e.field_i.localY, na.field_e.field_i.width, na.field_e.field_i.height);
+          na.field_e.field_i.drawRoot((byte) -79, param0);
         }
-        tl.d(param1 ^ -5, param0);
+        RankingsScreen.d(param1 ^ -5, param0);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           byte[] var2 = (byte[]) null;
           ClientException.a(0, -103, 105, (byte[]) null);
@@ -81,25 +81,25 @@ final class ClientException extends RuntimeException {
           var17 = var16;
           var17.position = -2 + param1.length;
           wf.field_d = var17.readUnsignedShort(-1034);
-          wg.field_Sb = new byte[wf.field_d][];
+          StateIconLabel.field_Sb = new byte[wf.field_d][];
           rc.field_f = new int[wf.field_d];
-          v.field_b = new byte[wf.field_d][];
-          pd.field_a = new int[wf.field_d];
-          el.field_I = new int[wf.field_d];
+          LimitedRandomAccessFile.field_b = new byte[wf.field_d][];
+          LinkButtonPainter.field_a = new int[wf.field_d];
+          AchievementsScreen.field_I = new int[wf.field_d];
           ih.field_d = new int[wf.field_d];
-          gg.field_d = new boolean[wf.field_d];
+          DebouncedValidationProvider.field_d = new boolean[wf.field_d];
           var17.position = param1.length - 7 - wf.field_d * 8;
-          vd.field_c = var17.readUnsignedShort(-1034);
+          DialRenderer.field_c = var17.readUnsignedShort(-1034);
           tq.field_r = var17.readUnsignedShort(-1034);
           var3 = (var17.readUnsignedByte(-97) & 255) + 1;
           for (var4 = 0; wf.field_d > var4; var4++) {
-            el.field_I[var4] = var16.readUnsignedShort(-1034);
+            AchievementsScreen.field_I[var4] = var16.readUnsignedShort(-1034);
           }
           for (var4Lifetime1 = 0; wf.field_d > var4Lifetime1; var4Lifetime1++) {
             ih.field_d[var4Lifetime1] = var16.readUnsignedShort(-1034);
           }
           for (var4Lifetime2 = 0; wf.field_d > var4Lifetime2; var4Lifetime2++) {
-            pd.field_a[var4Lifetime2] = var16.readUnsignedShort(-1034);
+            LinkButtonPainter.field_a[var4Lifetime2] = var16.readUnsignedShort(-1034);
           }
           for (var4Lifetime3 = 0; wf.field_d > var4Lifetime3; var4Lifetime3++) {
             rc.field_f[var4Lifetime3] = var16.readUnsignedShort(-1034);
@@ -118,17 +118,17 @@ final class ClientException extends RuntimeException {
             ClientException.a(true, (byte[]) null);
           }
           for (var4Lifetime5 = 0; wf.field_d > var4Lifetime5; var4Lifetime5++) {
-            var5 = pd.field_a[var4Lifetime5];
+            var5 = LinkButtonPainter.field_a[var4Lifetime5];
             var6 = rc.field_f[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];
             var18 = var20;
             var8 = var18;
-            v.field_b[var4Lifetime5] = var20;
+            LimitedRandomAccessFile.field_b[var4Lifetime5] = var20;
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            wg.field_Sb[var4Lifetime5] = var21;
+            StateIconLabel.field_Sb[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.readUnsignedByte(-121);
             if ((1 & var11) == 0) {
@@ -172,7 +172,7 @@ final class ClientException extends RuntimeException {
                 }
               }
             }
-            gg.field_d[var4Lifetime5] = var10 != 0;
+            DebouncedValidationProvider.field_d[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -185,7 +185,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class ClientException extends RuntimeException {
         try {
           var4_int = -1;
           for (var5 = param0; var5 < param1; var5++) {
-            var4_int = var4_int >>> 8 ^ fo.field_e[255 & (var4_int ^ param3[var5])];
+            var4_int = var4_int >>> 8 ^ KeyHandler.crcTable[255 & (var4_int ^ param3[var5])];
           }
           var4_int = var4_int ^ param2;
           stackIn_4_0 = var4_int;
@@ -216,7 +216,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -238,26 +238,26 @@ final class ClientException extends RuntimeException {
         int var2_intLifetime2;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            g.field_l[var2_int] = 0;
+            MusicPatch.field_l[var2_int] = 0;
           }
           if (param0 > -30) {
-            ClientException.a(-9);
+            ClientException.releaseStatics(-9);
           }
-          for (var2_intLifetime1 = 0; aa.field_e > var2_intLifetime1; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; IntrusiveDequeCursor.field_e > var2_intLifetime1; var2_intLifetime1++) {
             if (param1.field_p == wb.field_e[var2_intLifetime1].field_p) {
               dupTemp$4 = wb.field_e[var2_intLifetime1].b(14842);
-              g.field_l[dupTemp$4] = g.field_l[dupTemp$4] + 1;
+              MusicPatch.field_l[dupTemp$4] = MusicPatch.field_l[dupTemp$4] + 1;
             }
           }
           dupTemp$0 = param1.b(14842);
-          g.field_l[dupTemp$0] = g.field_l[dupTemp$0] + 1;
+          MusicPatch.field_l[dupTemp$0] = MusicPatch.field_l[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; var3 < aa.field_e; var3++) {
+          for (var3 = 0; var3 < IntrusiveDequeCursor.field_e; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (wb.field_e[var3].field_p == param1.field_p) {
               var4 = wb.field_e[var3].b(14842);
-              if (g.field_l[var4] > ap.field_E) {
-                g.field_l[var4] = g.field_l[var4] - 1;
+              if (MusicPatch.field_l[var4] > QuickChatPhraseDefinition.field_E) {
+                MusicPatch.field_l[var4] = MusicPatch.field_l[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
@@ -267,10 +267,10 @@ final class ClientException extends RuntimeException {
               wb.field_e[incrementValue$3] = wb.field_e[var3];
             }
           }
-          aa.field_e = var2_intLifetime2;
+          IntrusiveDequeCursor.field_e = var2_intLifetime2;
           fieldTemp$1 = wb.field_e;
-          fieldTemp$2 = aa.field_e;
-          aa.field_e = aa.field_e + 1;
+          fieldTemp$2 = IntrusiveDequeCursor.field_e;
+          IntrusiveDequeCursor.field_e = IntrusiveDequeCursor.field_e + 1;
           fieldTemp$1[fieldTemp$2] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -283,7 +283,7 @@ final class ClientException extends RuntimeException {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

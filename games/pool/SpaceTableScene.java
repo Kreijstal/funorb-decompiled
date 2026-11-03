@@ -1,0 +1,1091 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class SpaceTableScene extends ModelTableScene {
+    static String waitingforFonts;
+
+    final void setViewMatrix(byte param0, int[] param1) {
+        int[] var3 = null;
+        int var11 = 0;
+        int[] var12 = null;
+        int[] var19 = null;
+        int[] var20 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3_ref = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        var11 = Pool.field_O;
+        try {
+          var12 = param1;
+          var3 = var12;
+          ml.field_l[6] = var12[6];
+          ml.field_l[10] = var12[10];
+          ml.field_l[9] = var12[9];
+          ml.field_l[4] = var12[4];
+          ml.field_l[5] = var12[5];
+          ml.field_l[8] = var12[8];
+          ml.field_l[11] = var12[11];
+          if (0L != (LinkButtonPainter.field_i & 256L) &&
+            TextLineLayout.field_c[58]) {
+            ml.field_l[1] = -1152 + var12[1] >> 4;
+            ml.field_l[2] = var12[2] >> 4;
+            ml.field_l[0] = var12[0] - 2304 >> 4;
+          } else {
+            var20 = ml.field_l;
+            ml.field_l[2] = 0;
+            var19 = ml.field_l;
+            var19[1] = 0;
+            var20[0] = 0;
+          }
+          ml.field_l[7] = var12[7];
+          ml.field_l[3] = var12[3];
+          var4 = 24 / ((-64 - param0) / 52);
+          var3_int = 0;
+          var5 = 0;
+          while (CacheEntry.field_C[0].length > var3_int) {
+            if (var5 < CacheEntry.field_C[0].length) {
+              var6 = -ml.field_l[0] + CacheEntry.field_C[0][var3_int];
+              var7 = -ml.field_l[1] + CacheEntry.field_C[1][var3_int];
+              var8 = CacheEntry.field_C[2][var3_int] - ml.field_l[2];
+              var9 = ml.field_l[3] * var6 - (-(var7 * ml.field_l[4]) - var8 * ml.field_l[5]) >> 3;
+              var10 = var8 * ml.field_l[8] + var7 * ml.field_l[7] + ml.field_l[6] * var6 >> 3;
+              var8 = var8 * ml.field_l[11] + ml.field_l[9] * var6 + ml.field_l[10] * var7 >> 16;
+              if (var8 == 0) {
+                var8 = -1;
+              }
+              s.field_b[0][var3_int] = var9 / var8 + 5120;
+              s.field_b[1][var3_int] = 3840 + var10 / var8;
+              s.field_b[2][var3_int] = var8;
+              var3_int++;
+              var5++;
+              continue;
+            }
+            break;
+          }
+          CushionSegment.b((byte) 98);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_17_0 = var3_ref;
+          stackIn_17_1 = new StringBuilder().append("gh.N(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+        }
+    }
+
+    final void loadSounds(SoundCache param0, int param1) {
+        try {
+          ie.field_f = param0.getVorbisSound("space_ball_1", true, "");
+          Bzip2DecoderState.field_i = param0.getVorbisSound("space_ball_2", true, "");
+          IntrusiveNode.field_a = param0.getVorbisSound("space_ball_3", true, "");
+          int var3_int = -40 / ((39 - param1) / 38);
+          hj.field_j = param0.getVorbisSound("space_ball_4", true, "");
+          wn.field_b = param0.getVorbisSound("space_ball_cushion1", true, "");
+          PotEvent.field_o = param0.getVorbisSound("space_ball_cushion2", true, "");
+          PacketBuffer.field_q = param0.getVorbisSound("space_ball_cushion3", true, "");
+          IterableDualLinkDeque.field_f = param0.getVorbisSound("space_ball_cushion4", true, "");
+          PolarBallSkin.field_l = param0.getVorbisSound("space_respot_the_white", true, "");
+          bh.field_a = param0.getSynthesizedSound("", "space_ball_pot", (byte) 125);
+          Ball.field_L = param0.getSynthesizedSound("", "space_cue_hard", (byte) 126);
+          IsaacCipher.field_l = param0.getSynthesizedSound("", "space_cue_soft", (byte) 126);
+          param0.getSynthesizedSound("", "cueball_rolling_loop", (byte) 125);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gh.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final void clampCamera(boolean param0, Camera param1) {
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        double var3_double = 0.0;
+        RuntimeException var3 = null;
+        int var5 = 0;
+        var5 = Pool.field_O;
+        try {
+          if (!(param1.targetX < 0.0)) {
+            if (576.0 < param1.targetX) {
+              param1.targetX = 576.0;
+            }
+          } else {
+            param1.targetX = 0.0;
+          }
+          if (!(0.0 > param1.targetY)) {
+            if (288.0 < param1.targetY) {
+              param1.targetY = 288.0;
+            }
+          } else {
+            param1.targetY = 0.0;
+          }
+          if (param0) {
+            waitingforFonts = (String) null;
+          }
+          var3_double = param1.getDistance(8);
+          if (var3_double > 2048.0) {
+            param1.eyeY = param1.targetY + 2048.0 * (param1.eyeY - param1.targetY) / var3_double;
+            param1.eyeX = 2048.0 * (-param1.targetX + param1.eyeX) / var3_double + param1.targetX;
+            param1.eyeZ = 2048.0 * (param1.eyeZ - param1.targetZ) / var3_double + param1.targetZ;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_17_0 = var3;
+          stackIn_17_1 = new StringBuilder().append("gh.VA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+        }
+    }
+
+    private final void a(PoolMatchController param0, int param1) {
+        int var3_int = 0;
+        int var4 = 0;
+        int var5 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          var3_int = param0.camera.b(-127) + (this.field_B.field_A >> 1);
+          if (param1 != 10) {
+            waitingforFonts = (String) null;
+          }
+          if (var3_int > 0) {
+            var4 = (int)(-param0.camera.getYaw(true) * (double)this.field_B.field_z / 2.0 / 3.141592653589793);
+            var5 = -this.field_B.field_A + var3_int;
+            this.field_B.a(-this.field_B.field_z + var4, var5);
+            if (-640 + this.field_B.field_z > var4) {
+              this.field_B.a(var4, var5);
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("gh.UA(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void releaseModels(boolean param0) {
+        super.releaseModels(param0);
+        ra.field_f = null;
+        TextInputValidator.field_h = null;
+        DialogLayer.field_R = null;
+        s.field_b = (int[][]) null;
+        CacheEntry.field_C = (int[][]) null;
+    }
+
+    final void loadBackdrop(int param0, ResourceArchive param1) {
+        try {
+          this.field_B = new Sprite(param1.getFileByName(false, "nebula.jpg", ""), (java.awt.Component) ((Object) TextLineLayout.a((byte) -73)));
+          if (param0 != 5) {
+            waitingforFonts = (String) null;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gh.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void buildTableGeometry(PoolGameModel param0, int param1) {
+        int var3_int = 0;
+        int var4 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        var4 = Pool.field_O;
+        try {
+          super.buildTableGeometry(param0, param1);
+          ra.field_f = new SpaceObject[32];
+          ReportAbuseDialog.field_Ub = new int[ra.field_f.length];
+          MultiHandleSliderWidget.field_N = new int[ra.field_f.length];
+          for (var3_int = 0; var3_int < ra.field_f.length; var3_int++) {
+            ra.field_f[var3_int] = new SpaceObject(this.field_O[om.field_w]);
+            ReportAbuseDialog.field_Ub[var3_int] = var3_int;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("gh.B(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void b(boolean param0) {
+        super.b(param0);
+        int var2 = -220 - gd.field_g;
+        TextInputValidator.field_h.translate(0, (byte) -97, var2, 0);
+        gd.field_g = gd.field_g + var2;
+    }
+
+    final void updatePottedBalls(int param0, PoolMatchController param1) {
+        int var3_int = 0;
+        int var4 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        var4 = Pool.field_O;
+        try {
+          super.updatePottedBalls(param0, param1);
+          for (var3_int = 0; var3_int < ra.field_f.length; var3_int++) {
+            ra.field_f[var3_int].move(2115785453);
+          }
+          if (gd.field_g < 0) {
+            TextInputValidator.field_h.translate(0, (byte) -96, 1, 0);
+            gd.field_g = gd.field_g + 1;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("gh.T(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    final static UiComponent f(boolean param0) {
+        if (!param0) {
+          return (UiComponent) null;
+        }
+        return DebugTuningSlider.field_c.content;
+    }
+
+    public static void e(byte param0) {
+        waitingforFonts = null;
+        if (param0 != -116) {
+          String var2 = (String) null;
+          SpaceTableScene.hasInvalidPasswordLength((String) null, 16);
+        }
+    }
+
+    final void playTableSound(int param0, int param1, byte param2, int param3) {
+        int var5;
+        int var6;
+        int var7;
+        var7 = Pool.field_O;
+        var5 = 22 / ((-44 - param2) / 56);
+        super.playTableSound(param0, param1, (byte) -107, param3);
+        var6 = param0;
+        if (var6 != 5) {
+          if (2 == var6) {
+            var6 = MaxLengthTextInputWidget.nextRandomInt(2, true, ea.field_r);
+            if (var6 == 0) {
+              kp.a(100, ie.field_f, param3, param1);
+            } else {
+              if (var6 == 1) {
+                kp.a(100, IntrusiveNode.field_a, param3, param1);
+              }
+            }
+          } else {
+            if (var6 == 3) {
+              var6 = MaxLengthTextInputWidget.nextRandomInt(2, true, ea.field_r);
+              if (var6 != 0) {
+                if (var6 == 1) {
+                  kp.a(100, hj.field_j, param3, param1);
+                }
+              } else {
+                kp.a(100, Bzip2DecoderState.field_i, param3, param1);
+              }
+            } else {
+              if (var6 == 7) {
+                kp.a(100, Ball.field_L, param3, param1);
+              } else {
+                if (var6 == 8) {
+                  kp.a(100, IsaacCipher.field_l, param3, param1);
+                } else {
+                  if (var6 == 6) {
+                    kp.a(100, PolarBallSkin.field_l, param3, param1);
+                  } else {
+                    if (var6 == 4) {
+                      kp.a(100, bh.field_a, param3, param1);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        } else {
+          var6 = MaxLengthTextInputWidget.nextRandomInt(4, true, ea.field_r);
+          if (var6 == 0) {
+            kp.a(100, wn.field_b, param3, param1);
+          } else {
+            if (1 != var6) {
+              if (var6 == 2) {
+                kp.a(100, PacketBuffer.field_q, param3, param1);
+              } else {
+                if (var6 == 3) {
+                  kp.a(100, IterableDualLinkDeque.field_f, param3, param1);
+                }
+              }
+            } else {
+              kp.a(100, PotEvent.field_o, param3, param1);
+            }
+          }
+        }
+    }
+
+    final void drawScene(byte param0, PoolMatchController param1) {
+        boolean[] stackIn_21_0 = null;
+        int stackIn_21_1 = 0;
+        int stackIn_22_2 = 0;
+        int stackIn_26_2;
+        int stackIn_26_3;
+        int stackIn_27_4 = 0;
+        boolean stackIn_30_2 = false;
+        Object stackIn_47_0;
+        int[] stackIn_47_1;
+        int stackIn_47_2;
+        boolean stackIn_47_3;
+        Ball[] stackIn_47_4;
+        Object stackIn_48_0;
+        boolean stackIn_48_5;
+        RuntimeException stackIn_58_0 = null;
+        StringBuilder stackIn_58_1 = null;
+        String stackIn_59_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Ball[] var3 = null;
+        RuntimeException var3_ref = null;
+        int[] var4 = null;
+        int[] var5_ref_int__ = null;
+        int var5 = 0;
+        int[] var6_ref_int__ = null;
+        int var6 = 0;
+        int[] var7_ref_int__ = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var10 = 0;
+        int[] var11 = null;
+        int[] var12 = null;
+        int[] var13 = null;
+        int[] var14 = null;
+        int[] var15 = null;
+        int[] var16 = null;
+        int[] var19 = null;
+        int[] var20 = null;
+        int[] var21 = null;
+        int[] var22 = null;
+        int[] var23 = null;
+        int[] var24 = null;
+        Ball[] var25 = null;
+        SceneNode var26 = null;
+        SceneNode var28 = null;
+        SceneNode var30 = null;
+        SceneNode var32 = null;
+        SceneNode var35 = null;
+        SceneNode var38 = null;
+        SceneNode var40 = null;
+        SceneNode var42 = null;
+        SceneNode var44 = null;
+        SceneNode var47 = null;
+        SceneNode var49 = null;
+        int[] var52 = null;
+        int[] var53 = null;
+        int[] var54 = null;
+        int[] var55 = null;
+        int[] var56 = null;
+        int[] var57 = null;
+        int[] var88 = null;
+        int[] var89 = null;
+        int[] var90 = null;
+        int[] var91 = null;
+        int[] var92 = null;
+        int[] var93 = null;
+        int[] var94 = null;
+        int[] var95 = null;
+        int[] var96 = null;
+        int[] var97 = null;
+        int[] var98 = null;
+        boolean[] var99 = null;
+        int[] var100 = null;
+        int[] var101 = null;
+        boolean[] var102 = null;
+        int[] var5_ref_int__Lifetime1;
+        int[] var5_ref_int__Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        var10 = Pool.field_O;
+        try {
+          var25 = param1.gameModel.balls;
+          var3 = var25;
+          var57 = f.a((byte) 109, param1.viewMatrix);
+          var24 = var57;
+          var4 = var24;
+          var52 = var4;
+          var19 = var52;
+          var11 = var19;
+          var5_ref_int__ = var11;
+          GzipDecoder.field_d[0] = var52[0] - sb.a(288.0f, true) >> 2;
+          GzipDecoder.field_d[1] = var52[1] - sb.a(144.0f, true) >> 2;
+          GzipDecoder.field_d[2] = var52[2] >> 2;
+          if (var5_ref_int__ != GzipDecoder.field_d) {
+            GzipDecoder.field_d[7] = var52[7];
+            GzipDecoder.field_d[4] = var52[4];
+            GzipDecoder.field_d[3] = var52[3];
+            GzipDecoder.field_d[9] = var52[9];
+            GzipDecoder.field_d[10] = var52[10];
+            GzipDecoder.field_d[8] = var52[8];
+            GzipDecoder.field_d[5] = var52[5];
+            GzipDecoder.field_d[6] = var52[6];
+            GzipDecoder.field_d[11] = var52[11];
+          }
+          var53 = var4;
+          var20 = var53;
+          var12 = var20;
+          var5_ref_int__Lifetime1 = var12;
+          eh.field_s[1] = -1152 + var53[1] >> 3;
+          eh.field_s[2] = var53[2] >> 3;
+          if (var5_ref_int__Lifetime1 != eh.field_s) {
+            eh.field_s[6] = var53[6];
+            eh.field_s[7] = var53[7];
+            eh.field_s[8] = var53[8];
+            eh.field_s[10] = var53[10];
+            eh.field_s[5] = var53[5];
+            eh.field_s[4] = var53[4];
+            eh.field_s[3] = var53[3];
+            eh.field_s[11] = var53[11];
+            eh.field_s[9] = var53[9];
+          }
+          eh.field_s[0] = -2304 + var53[0] >> 3;
+          var54 = var4;
+          var21 = var54;
+          var13 = var21;
+          var5_ref_int__Lifetime2 = var13;
+          ml.field_l[7] = var54[7];
+          ml.field_l[4] = var54[4];
+          if ((256L & LinkButtonPainter.field_i) != 0L &&
+            TextLineLayout.field_c[58]) {
+            ml.field_l[0] = var54[0] - 2304 >> 4;
+            ml.field_l[1] = var54[1] - 1152 >> 4;
+            ml.field_l[2] = var54[2] >> 4;
+          } else {
+            var55 = ml.field_l;
+            var22 = var55;
+            var14 = var22;
+            var6_ref_int__ = var14;
+            ml.field_l[2] = 0;
+            var56 = ml.field_l;
+            var23 = var56;
+            var15 = var23;
+            var7_ref_int__ = var15;
+            var55[0] = 0;
+            var56[1] = 0;
+          }
+          ml.field_l[8] = var54[8];
+          ml.field_l[5] = var54[5];
+          ml.field_l[6] = var54[6];
+          ml.field_l[9] = var54[9];
+          ml.field_l[11] = var54[11];
+          ml.field_l[10] = var54[10];
+          ml.field_l[3] = var54[3];
+          var4[1] = ArchiveLoadSequence.b(var57[1], -4);
+          var4[0] = ArchiveLoadSequence.b(var57[0], -4);
+          var4[2] = ArchiveLoadSequence.b(var57[2], -4);
+          this.prepareBallDrawOrder(false, var57, var25);
+          for (var5 = 0; var5 < ra.field_f.length; var5++) {
+            MultiHandleSliderWidget.field_N[var5] = ra.field_f[ReportAbuseDialog.field_Ub[var5]].viewDepth(var57, (byte) 91);
+          }
+          DropTargetWidget.a(ReportAbuseDialog.field_Ub, (byte) -121, MultiHandleSliderWidget.field_N);
+          PacketBuffer.field_l = var57[11] * -var57[2] + -var57[1] * var57[10] + -var57[0] * var57[9];
+          var26 = TextInputValidator.field_h;
+          var88 = GzipDecoder.field_d;
+          if (param0 != -55) {
+            waitingforFonts = (String) null;
+          }
+          var26.sortModelsByDepth((byte) -108, 0, var26.field_j.length, var88);
+          var28 = ff.field_d;
+          var89 = GzipDecoder.field_d;
+          var28.sortModelsByDepth((byte) 18, 0, var28.field_j.length, var89);
+          var30 = wb.field_c;
+          var90 = GzipDecoder.field_d;
+          var30.sortModelsByDepth((byte) 120, 0, var30.field_j.length, var90);
+          var32 = tq.field_o;
+          var91 = GzipDecoder.field_d;
+          var32.sortModelsByDepth((byte) 48, 0, var32.field_j.length, var91);
+          for (var5Lifetime1 = 0; var5Lifetime1 < LobbyGame.field_rc.length; var5Lifetime1++) {
+            var92 = tq.field_o.field_c[var5Lifetime1];
+            var7 = 576;
+            var8 = 288;
+            stackIn_21_0 = LobbyGame.field_rc;
+            stackIn_21_1 = var5Lifetime1;
+            if (var92[0] < -var7) {
+              stackIn_22_2 = 1;
+            } else {
+              if (var92[0] <= var7) {
+                stackIn_22_2 = 0;
+              } else {
+                stackIn_22_2 = -1;
+              }
+            }
+            stackIn_26_2 = stackIn_22_2 * (var92[0] - GzipDecoder.field_d[0]);
+            stackIn_26_3 = var92[1] - GzipDecoder.field_d[1];
+            if (-var8 > var92[1]) {
+              stackIn_27_4 = 1;
+            } else {
+              if (var92[1] <= var8) {
+                stackIn_27_4 = 0;
+              } else {
+                stackIn_27_4 = -1;
+              }
+            }
+            stackIn_30_2 = !(stackIn_26_2 + stackIn_26_3 * stackIn_27_4 <= 0);
+            stackIn_21_0[stackIn_21_1] = stackIn_30_2;
+          }
+          var35 = ij.field_o;
+          var93 = GzipDecoder.field_d;
+          var35.sortModelsByDepth((byte) -116, 0, var35.field_j.length, var93);
+          SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 51);
+          this.a(param1, param0 ^ -61);
+          for (var5Lifetime2 = 0; var5Lifetime2 < CacheEntry.field_C[0].length; var5Lifetime2++) {
+            if (s.field_b[2][var5Lifetime2] >= 0) {
+              SoftwareRasterizer.fillRadialGlow(s.field_b[0][var5Lifetime2], s.field_b[1][var5Lifetime2], var5Lifetime2 % ThreeSliceButtonPainter.field_t.length + 2 << 3, 255, DiskArchiveRequest.field_K);
+            }
+          }
+          NodeHashTableIterator.field_k.a(PoolUiText.field_d, PasswordValidator.field_t[1], 4096, (byte) 113, PasswordValidator.field_t[0]);
+          var16 = f.a((byte) -68, var57);
+          var94 = var16;
+          var16[0] = var16[0] - 2304;
+          var16[1] = var16[1] - 1152;
+          for (var6 = ra.field_f.length - 1; 0 <= var6; var6--) {
+            if (PacketBuffer.field_l <= MultiHandleSliderWidget.field_N[var6]) {
+              ra.field_f[ReportAbuseDialog.field_Ub[var6]].prepareModel(var94, this, 126);
+              continue;
+            }
+            break;
+          }
+          var38 = TextInputValidator.field_h;
+          var95 = GzipDecoder.field_d;
+          var38.drawModelRange((byte) -105, 0, var38.field_j.length, var95);
+          var40 = ij.field_o;
+          var96 = GzipDecoder.field_d;
+          var40.drawModelRange((byte) -97, 0, var40.field_j.length, var96);
+          var42 = wb.field_c;
+          var97 = GzipDecoder.field_d;
+          var42.drawModelRange((byte) -81, 0, var42.field_j.length, var97);
+          if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
+            this.drawBallsInOrder(var57, (byte) 126, false, var25, false);
+          }
+          var44 = tq.field_o;
+          var98 = GzipDecoder.field_d;
+          var99 = LobbyGame.field_rc;
+          var44.drawSortedModels(false, 0, var44.field_j.length, (byte) -24, var98, var99);
+          var47 = ff.field_d;
+          var100 = GzipDecoder.field_d;
+          var47.drawModelRange((byte) -114, 0, var47.field_j.length, var100);
+          if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
+            stackIn_47_0 = this;
+            stackIn_47_1 = var4;
+            stackIn_47_2 = 73;
+            stackIn_47_3 = true;
+            stackIn_47_4 = var3;
+            if (param1.gameModel.currentShot(76).phase != 0) {
+              stackIn_48_0 = this;
+              stackIn_48_5 = false;
+            } else {
+              stackIn_48_0 = this;
+              stackIn_48_5 = true;
+            }
+            this.drawBallsInOrder(stackIn_47_1, (byte) stackIn_47_2, stackIn_47_3, stackIn_47_4, stackIn_48_5);
+          }
+          var49 = tq.field_o;
+          var101 = GzipDecoder.field_d;
+          var102 = LobbyGame.field_rc;
+          var49.drawSortedModels(true, 0, var49.field_j.length, (byte) -83, var101, var102);
+          if ((256L & LinkButtonPainter.field_i) != 0L) {
+            TextInputValidator.field_h.drawAllModels(GzipDecoder.field_d, 0);
+          }
+          if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
+            param1.updateCueStick(-1);
+            param1.buildAimPreviewTrail(param0 - 70);
+          }
+          while (var6 >= 0) {
+            ra.field_f[ReportAbuseDialog.field_Ub[var6]].prepareModel(var94, this, 99);
+            var6--;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_58_0 = var3_ref;
+          stackIn_58_1 = new StringBuilder().append("gh.W(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_59_2 = "null";
+          } else {
+            stackIn_59_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
+        }
+    }
+
+    final void loadSceneSprites(int param0, ResourceArchive param1) {
+        ThreeSliceButtonPainter.field_t = NameEntryPopup.a(0, "", param1, "space_stars");
+        NodeHashTableIterator.field_k = WidgetStyleLayer.loadSprite("", (byte) 103, "shuttle_planet", param1);
+        if (param0 != -23569) {
+          return;
+        }
+        try {
+          this.m(0);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gh.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static boolean hasInvalidPasswordLength(String param0, int param1) {
+        RuntimeException var2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != null &&
+            param0.length() >= DualLinkDeque.field_a) {
+            if (param0.length() > GameApplet.field_c) {
+              return true;
+            }
+            if (param1 != 28350) {
+              waitingforFonts = (String) null;
+            }
+            return false;
+          }
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_12_0 = var2;
+          stackIn_12_1 = new StringBuilder().append("gh.AB(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void loadModels(ResourceArchive param0, int param1) {
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
+        int incrementValue$17 = 0;
+        int incrementValue$18 = 0;
+        int incrementValue$19 = 0;
+        int incrementValue$20 = 0;
+        int incrementValue$21 = 0;
+        int incrementValue$22 = 0;
+        int incrementValue$23 = 0;
+        int incrementValue$24 = 0;
+        int incrementValue$25 = 0;
+        int var14 = 0;
+        int var3_int = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var15 = 0;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        String stackIn_40_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var4Lifetime3;
+        int var4Lifetime4;
+        var15 = Pool.field_O;
+        try {
+          this.field_O = new MeshBuilder[13];
+          var3_int = 0;
+          om.field_w = var3_int;
+          incrementValue$13 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$13] = MeshBuilder.loadFromArchive(param0, "", "space_table/asteroid");
+          SectorCacheStore.field_d = var3_int;
+          incrementValue$14 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$14] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_shuttle");
+          da.field_b = var3_int;
+          incrementValue$15 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$15] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_door_a");
+          StatefulTextPainter.field_x = var3_int;
+          incrementValue$16 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$16] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_door_b");
+          ph.field_e = var3_int;
+          incrementValue$17 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$17] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_table_post");
+          AccountWelcomePanel.field_eb = var3_int;
+          incrementValue$18 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$18] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_hole_a");
+          ShotRecord.field_J = var3_int;
+          TimeTrialRules.field_f = var3_int;
+          incrementValue$19 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$19] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_hole_b");
+          vn.field_f = var3_int;
+          CachedArchiveSource.field_l = var3_int;
+          incrementValue$20 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$20] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_corner");
+          incrementValue$21 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$21] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_side_a");
+          incrementValue$22 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$22] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_side_b");
+          incrementValue$23 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$23] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_side_c");
+          PolarBallSkin.field_o = var3_int;
+          HuffmanCodec.field_d = var3_int;
+          incrementValue$24 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$24] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_top_a");
+          incrementValue$25 = var3_int;
+          var3_int++;
+          this.field_O[incrementValue$25] = MeshBuilder.loadFromArchive(param0, "", "space_table/space_top_b");
+          pc.field_b = var3_int;
+          this.field_A = new CueStick();
+          this.field_A.a(MeshBuilder.loadFromArchive(param0, "", "cues/space_cue"), (byte) -115);
+          for (var4 = 0; this.field_O.length > var4; var4++) {
+            VerticalScrollbar.a(0, this.field_O[var4]);
+          }
+          var5 = 2147483647;
+          var6 = -2147483648;
+          var7 = 2147483647;
+          var8 = -2147483648;
+          var9 = 2147483647;
+          var10 = -2147483648;
+          for (var4Lifetime1 = HuffmanCodec.field_d; pc.field_b > var4Lifetime1; var4Lifetime1++) {
+            d.computeMeshBounds(this.field_O[var4Lifetime1], -23109);
+            if (var7 > this.field_O[var4Lifetime1].field_y) {
+              var7 = this.field_O[var4Lifetime1].field_y;
+            }
+            if (var6 < this.field_O[var4Lifetime1].field_w) {
+              var6 = this.field_O[var4Lifetime1].field_w;
+            }
+            if (this.field_O[var4Lifetime1].field_D < var5) {
+              var5 = this.field_O[var4Lifetime1].field_D;
+            }
+            if (this.field_O[var4Lifetime1].field_V < var9) {
+              var9 = this.field_O[var4Lifetime1].field_V;
+            }
+            if (this.field_O[var4Lifetime1].field_S > var8) {
+              var8 = this.field_O[var4Lifetime1].field_S;
+            }
+            if (var10 < this.field_O[var4Lifetime1].field_x) {
+              var10 = this.field_O[var4Lifetime1].field_x;
+            }
+          }
+          var7 = var7 * 2 - var8;
+          var5 = var5 * 2 - var6;
+          var11 = var6 + var5 >> 1;
+          var12 = var7 + var8 >> 1;
+          var13 = var10;
+          for (var4Lifetime2 = 0; this.field_O.length > var4Lifetime2; var4Lifetime2++) {
+            cq.a(var11, 70, var13, this.field_O[var4Lifetime2], var12);
+          }
+          this.field_M = new int[this.field_O.length][3];
+          for (var4Lifetime3 = 0; var4Lifetime3 < this.field_O.length; var4Lifetime3++) {
+            ln.recenterModel(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
+          }
+          pp.a(this.field_O[da.field_b], (short) -8246, true, this.field_M[da.field_b], SingleChildWidget.field_I);
+          if (param1 >= -43) {
+            this.initializeScene(false);
+          }
+          pp.a(this.field_O[StatefulTextPainter.field_x], (short) -8246, true, this.field_M[StatefulTextPainter.field_x], ContextMenu.field_Ub);
+          DirectByteStorage.field_h = new byte[32][this.field_O[om.field_w].faceCount];
+          for (var4Lifetime4 = 0; DirectByteStorage.field_h.length > var4Lifetime4; var4Lifetime4++) {
+            for (var14 = 0; var14 < DirectByteStorage.field_h[var4Lifetime4].length; var14++) {
+              DirectByteStorage.field_h[var4Lifetime4][var14] = (byte)(var4Lifetime4 * 255 / DirectByteStorage.field_h.length);
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_39_0 = var3;
+          stackIn_39_1 = new StringBuilder().append("gh.KA(");
+          if (param0 == null) {
+            stackIn_40_2 = "null";
+          } else {
+            stackIn_40_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    private final void m(int param0) {
+        if (param0 != 0) {
+          SpaceTableScene.f(false);
+        }
+    }
+
+    final void initializeScene(boolean param0) {
+        SceneNode[] var12 = null;
+        int[] var25 = null;
+        SceneNode[] var14 = null;
+        SceneNode[] var15 = null;
+        int[] var26 = null;
+        SceneNode[] var17 = null;
+        int[] var27 = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var2 = 0;
+        int var4 = 0;
+        int var6 = 0;
+        int var5 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var11 = Pool.field_O;
+        int var3 = 0;
+        SceneNode dupTemp$0 = new SceneNode((TimeTrialRules.field_f - AccountWelcomePanel.field_eb) * 4 + 2 * (-ShotRecord.field_J + CachedArchiveSource.field_l));
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var2Lifetime3;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        wb.field_c = dupTemp$0;
+        SceneNode dupTemp$1 = new SceneNode(4 * (-HuffmanCodec.field_d + pc.field_b));
+        ff.field_d = dupTemp$1;
+        SceneNode dupTemp$2 = new SceneNode(4 * (-vn.field_f + PolarBallSkin.field_o));
+        tq.field_o = dupTemp$2;
+        SceneNode dupTemp$3 = hc.a(this.field_O[ph.field_e], this.field_M[ph.field_e], (byte) 101);
+        ij.field_o = dupTemp$3;
+        DialogLayer.field_R = new SceneNode(new SceneNode[]{dupTemp$0, dupTemp$1, dupTemp$2, dupTemp$3});
+        var3 = 0;
+        for (var2 = AccountWelcomePanel.field_eb; var2 < TimeTrialRules.field_f; var2++) {
+          var4 = var2;
+          var12 = wb.field_c.field_b;
+          var6 = var3;
+          var25 = this.field_M[var4];
+          bh.a(var12, false, var25[1], var25[2], this.field_O[var4], var25[0], var6);
+          var3 += 4;
+        }
+        for (var2Lifetime1 = ShotRecord.field_J; CachedArchiveSource.field_l > var2Lifetime1; var2Lifetime1++) {
+          var4 = var2Lifetime1;
+          var14 = wb.field_c.field_b;
+          var6 = var3;
+          OptionsScreen.a(var6, this.field_M[var4][1], this.field_M[var4][2], 1, var14, this.field_M[var4][0], this.field_O[var4]);
+          var3 += 2;
+        }
+        if (!param0) {
+          waitingforFonts = (String) null;
+        }
+        var3Lifetime1 = 0;
+        for (var2Lifetime2 = HuffmanCodec.field_d; var2Lifetime2 < pc.field_b; var2Lifetime2++) {
+          var4 = var2Lifetime2;
+          var15 = ff.field_d.field_b;
+          var6 = var3Lifetime1;
+          var26 = this.field_M[var4];
+          bh.a(var15, false, var26[1], var26[2], this.field_O[var4], var26[0], var6);
+          var3Lifetime1 += 4;
+        }
+        var3Lifetime2 = 0;
+        for (var2Lifetime3 = vn.field_f; var2Lifetime3 < PolarBallSkin.field_o; var2Lifetime3++) {
+          var4 = var2Lifetime3;
+          var17 = tq.field_o.field_b;
+          var6 = var3Lifetime2;
+          var27 = this.field_M[var4];
+          bh.a(var17, false, var27[1], var27[2], this.field_O[var4], var27[0], var6);
+          var3Lifetime2 += 4;
+        }
+        TextInputValidator.field_h = new SceneNode(new SceneNode[]{hc.a(this.field_O[SectorCacheStore.field_d], this.field_M[SectorCacheStore.field_d], (byte) 101), hc.a(this.field_O[da.field_b], this.field_M[da.field_b], (byte) 101), hc.a(this.field_O[StatefulTextPainter.field_x], this.field_M[StatefulTextPainter.field_x], (byte) 101)});
+        TextInputValidator.field_h.mergeChildMeshes(false);
+        TextInputValidator.field_h.normalizeOffsets(0);
+        TextInputValidator.field_h.bakeModels(this.field_q, this.field_e, this.field_F, (byte) -101, this.field_u, this.field_C);
+        TextInputValidator.field_h.allocateModelArrays(118);
+        DialogLayer.field_R.mergeChildMeshes(false);
+        DialogLayer.field_R.normalizeOffsets(0);
+        DialogLayer.field_R.bakeModels(this.field_q, this.field_e, this.field_F, (byte) -124, this.field_u, this.field_C);
+        ij.field_o.allocateModelArrays(109);
+        ff.field_d.allocateModelArrays(97);
+        wb.field_c.allocateModelArrays(118);
+        tq.field_o.allocateModelArrays(90);
+        LobbyGame.field_rc = new boolean[tq.field_o.field_j.length];
+        CacheEntry.field_C = new int[3][4096];
+        s.field_b = new int[3][CacheEntry.field_C[0].length];
+        for (var9 = 0; var9 < CacheEntry.field_C[0].length; var9++) {
+          do {
+            var4 = MaxLengthTextInputWidget.nextRandomInt(255, param0, ea.field_r) - 127;
+            var5 = MaxLengthTextInputWidget.nextRandomInt(255, param0, ea.field_r) - 127;
+            var6 = MaxLengthTextInputWidget.nextRandomInt(255, param0, ea.field_r) - 127;
+            var7 = 256;
+            var10 = var4 * var4 + (var5 * var5 + var6 * var6);
+            var8 = rf.inverseSquareRoot(var10, -121);
+          } while (var8 == 0);
+          CacheEntry.field_C[0][var9] = (var7 * var4 << 8) / var8;
+          CacheEntry.field_C[1][var9] = (var5 * var7 << 8) / var8;
+          CacheEntry.field_C[2][var9] = (var7 * var6 << 8) / var8;
+        }
+    }
+
+    final void loadMusicTracks(int param0, ResourceArchive param1) {
+        try {
+          if (param0 != 1) {
+            ResourceArchive var4 = (ResourceArchive) null;
+            this.loadSceneSprites(63, (ResourceArchive) null);
+          }
+          this.field_b = MusicTrack.loadFromArchive(param1, "", "pool_space");
+          this.field_i = MusicTrack.loadFromArchive(param1, "", "pool_space_win_jingle");
+          this.field_n = MusicTrack.loadFromArchive(param1, "", "pool_space_lose_jingle");
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gh.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void buildPalettes(int param0) {
+        super.buildPalettes(param0);
+        int[] var3 = ta.buildGradientPalette(new int[]{0, 0, 9, 13426175}, 47);
+        int[] var2 = var3;
+        DiskArchiveRequest.field_K = ta.buildGradientPalette(new int[]{0, var3[0], 128, var3[1], 192, var3[2], 224, var3[4], 256, var3[8]}, -122);
+    }
+
+    final void a(byte param0, boolean param1, int param2) {
+        int var4 = -109 / ((-47 - param0) / 45);
+        if (param2 != 9) {
+        } else {
+          if (null != BufferedSocket.field_b) {
+            if (!param1) {
+              BufferedSocket.field_b.fadeOutAndUnlink(4096);
+            } else {
+              BufferedSocket.field_b.fadeOutAndUnlink(64);
+            }
+            BufferedSocket.field_b = null;
+          }
+        }
+    }
+
+    final static int n(int param0) {
+        int stackIn_31_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
+        long var4 = 0L;
+        int var6 = 0;
+        int var7 = 0;
+        long var4Lifetime1;
+        int var6Lifetime1;
+        var7 = Pool.field_O;
+        try {
+          var1_int = 0;
+          var2 = 0;
+          while (LabeledChildWidget.h(127)) {
+            LabeledChildWidget.field_W.navigateVertical(-15525);
+            if (LabeledChildWidget.field_W.isPressActivated((byte) 126)) {
+              var1_int = 1;
+            }
+            if (IterableDualLinkDeque.field_a != 13) {
+              continue;
+            }
+            var2 = 1;
+          }
+          LabeledChildWidget.field_W.a(AlternateLongAndTextLoginPayload.a(DialogLayer.field_W, UsernameAvailabilityValidator.field_o, 0), AlternateLongAndTextLoginPayload.a(wn.field_i, DebouncedValidationProvider.field_f, ~param0), -41);
+          if (LabeledChildWidget.field_W.isPressActivated((byte) 93)) {
+            var1_int = 1;
+          }
+          var3 = 0;
+          if (var1_int != 0 &&
+            LabeledChildWidget.field_W.selectedIndex >= 0) {
+            var3 = ByteStorage.field_c[LabeledChildWidget.field_W.selectedIndex];
+            if (2 == var3 ||
+              var3 == 5) {
+              ArchiveRequest.g(param0 + 127);
+            }
+          } else {
+            if (var2 != 0) {
+              if (ClientException.field_h == 2) {
+                if (param0 == ~var3 &&
+                  ClientException.field_h == 2) {
+                  var4 = -QuickChatPhraseDefinition.field_y + rl.monotonicTimeMillis((byte) -128);
+                  var6 = (int)((10999L - var4) / 1000L);
+                  if (var6 <= 0) {
+                    var3 = 2;
+                    CacheEntry.a(true, 4, 5);
+                  }
+                }
+                return var3;
+              }
+              ArchiveRequest.g(116);
+            }
+          }
+          if (param0 == ~var3 &&
+            ClientException.field_h == 2) {
+            var4Lifetime1 = -QuickChatPhraseDefinition.field_y + rl.monotonicTimeMillis((byte) -128);
+            var6Lifetime1 = (int)((10999L - var4Lifetime1) / 1000L);
+            if (var6Lifetime1 <= 0) {
+              var3 = 2;
+              CacheEntry.a(true, 4, 5);
+            }
+          }
+          stackIn_31_0 = var3;
+          return stackIn_31_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "gh.WA(" + param0 + ')');
+        }
+    }
+
+    SpaceTableScene() {
+    }
+
+    static {
+        waitingforFonts = "Waiting for fonts";
+    }
+}

@@ -3,24 +3,24 @@
  */
 final class ah {
     static int[] field_c;
-    static String field_b;
+    static String mpXHasresigned;
     static int field_i;
     int field_d;
-    static String field_g;
+    static String gameoptUnselectedoptions;
     int field_f;
-    static String field_h;
+    static String tickerHintEnterShotMode;
     int field_a;
-    static so[] field_e;
+    static SceneNode[] field_e;
     int field_j;
 
-    public static void a(boolean param0) {
-        field_g = null;
+    public static void releaseStatics(boolean param0) {
+        gameoptUnselectedoptions = null;
         field_e = null;
         field_c = null;
-        field_h = null;
-        field_b = null;
+        tickerHintEnterShotMode = null;
+        mpXHasresigned = null;
         if (param0) {
-          field_g = (String) null;
+          gameoptUnselectedoptions = (String) null;
         }
     }
 
@@ -34,13 +34,13 @@ final class ah {
           this.field_f = param0.field_f;
           this.field_d = param0.field_d;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_g = "The game options are not all set.";
-        field_b = "<%0> has resigned.";
-        field_h = "Press <img=4> or <img=0> click on the cue ball to enter shot mode.";
+        gameoptUnselectedoptions = "The game options are not all set.";
+        mpXHasresigned = "<%0> has resigned.";
+        tickerHintEnterShotMode = "Press <img=4> or <img=0> click on the cue ball to enter shot mode.";
     }
 }

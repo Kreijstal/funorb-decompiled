@@ -2,32 +2,32 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jc {
-    static hm field_e;
+    static Quaternion field_e;
     static int field_h;
-    static String field_f;
-    static String field_d;
-    static String field_g;
+    static String on;
+    static String pleaseloginMember;
+    static String fsButtonAccept;
     static boolean field_c;
-    static ia field_j;
+    static MenuSelection field_j;
     static int[] field_i;
-    static String field_b;
-    static di field_a;
+    static String youAreInvitedToXsGame;
+    static ResourceArchive field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
-        field_f = null;
+        on = null;
         field_e = null;
         if (param0 == 0) {
-          field_g = null;
+          fsButtonAccept = null;
           field_j = null;
-          field_d = null;
-          field_b = null;
+          pleaseloginMember = null;
+          youAreInvitedToXsGame = null;
           field_i = null;
           return;
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1, String param2, boolean param3) {
+    final static void openUrl(int param0, java.applet.Applet param1, String param2, boolean param3) {
         try {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;
@@ -40,7 +40,7 @@ final class jc {
           Throwable decompiledCaughtException = null;
           try {
             if (PlatformTaskDispatcher.field_w.startsWith("win") &&
-              ll.a(param2, param0 ^ -10570)) {
+              ll.openUrlInBrowser(param2, param0 ^ -10570)) {
               return;
             }
             try {
@@ -49,12 +49,12 @@ final class jc {
                 return;
               }
               var5 = (String) null;
-              jc.a(113, (String) null, 'h');
+              jc.splitString(113, (String) null, 'h');
               return;
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              tc.a((Throwable) null, "MGR1: " + param2, -8555);
+              GrowableIntList.reportClientError((Throwable) null, "MGR1: " + param2, -8555);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -73,7 +73,7 @@ final class jc {
             } else {
               stackIn_14_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -82,21 +82,21 @@ final class jc {
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyListeners(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
           param1.addKeyListener(wn.field_a);
           param1.addFocusListener(wn.field_a);
           if (param0 != 0) {
             String var3 = (String) null;
-            jc.a(-84, (java.applet.Applet) null, (String) null, false);
+            jc.openUrl(-84, (java.applet.Applet) null, (String) null, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static String[] a(int param0, String param1, char param2) {
+    final static String[] splitString(int param0, String param1, char param2) {
         int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -114,14 +114,14 @@ final class jc {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = (CharSequence) ((Object) param1);
-          var3_int = pl.a(var10, -115, param2);
+          var3_int = pl.countOccurrences(var10, -115, param2);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
           var7 = 0;
           if (param0 != 30634) {
             var9 = (String) null;
-            jc.a(111, (java.applet.Applet) null, (String) null, false);
+            jc.openUrl(111, (java.applet.Applet) null, (String) null, false);
           }
           while (var3_int > var7) {
             for (var8 = var6; param2 != param1.charAt(var8); var8++) {
@@ -145,14 +145,14 @@ final class jc {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
     static {
-        field_g = "Accept";
-        field_f = "ON";
-        field_b = "You are invited to <%0>'s game.";
-        field_d = "Please log in as a subscribing member to access this feature.";
+        fsButtonAccept = "Accept";
+        on = "ON";
+        youAreInvitedToXsGame = "You are invited to <%0>'s game.";
+        pleaseloginMember = "Please log in as a subscribing member to access this feature.";
     }
 }

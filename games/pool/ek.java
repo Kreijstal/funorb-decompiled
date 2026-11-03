@@ -6,7 +6,7 @@ final class ek {
     static int field_a;
     static char[] field_c;
 
-    final static String a(int param0, int param1, int param2) {
+    final static String formatMinutesSeconds(int param0, int param1, int param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -16,9 +16,9 @@ final class ek {
         int var5Lifetime2;
         int var5Lifetime3;
         if (param0 >= 60) {
-          return p.a(param0 % 60, param1, 45, param0 / 60);
+          return ModelInstance.a(param0 % 60, param1, 45, param0 / 60);
         }
-        String var7 = lq.field_S;
+        String var7 = DialogLayer.timerMinutesSeconds;
         char[] var9 = var7.toCharArray();
         char[] var8 = var9;
         char[] var4 = var8;
@@ -39,8 +39,8 @@ final class ek {
           var4[incrementValue$3] = (char)(param1 < 0 ? 45 : param1 % 10 + 48);
           return new String(var9);
         }
-        vh var6 = (vh) null;
-        ek.a((vh) null, (byte) 119, -128);
+        UiComponent var6 = (UiComponent) null;
+        ek.a((UiComponent) null, (byte) 119, -128);
         var5Lifetime1 = var7.indexOf("mm");
         int incrementValue$4 = var5Lifetime1;
         var5Lifetime1++;
@@ -63,7 +63,7 @@ final class ek {
         return new int[8];
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 >= -39) {
@@ -71,11 +71,11 @@ final class ek {
         }
     }
 
-    final static void a(vh param0, byte param1, int param2) {
+    final static void a(UiComponent param0, byte param1, int param2) {
         RuntimeException runtimeException = null;
-        aa var3 = null;
-        vh var4 = null;
-        vh stackIn_5_0 = null;
+        IntrusiveDequeCursor var3 = null;
+        UiComponent var4 = null;
+        UiComponent stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -85,16 +85,16 @@ final class ek {
           if (param1 > -38) {
             return;
           }
-          stackIn_5_0 = (vh) (param0);
+          stackIn_5_0 = (UiComponent) (param0);
           stackIn_6_1 = (param2 != -1) && ((long)param2 == param0.key);
-          stackIn_5_0.field_Ib = stackIn_6_1;
-          if (null != param0.field_T &&
-            !param0.field_T.c(0)) {
-            var3 = new aa(param0.field_T);
-            var4 = (vh) (var3.b((byte) -92));
+          stackIn_5_0.selected = stackIn_6_1;
+          if (null != param0.children &&
+            !param0.children.isEmpty(0)) {
+            var3 = new IntrusiveDequeCursor(param0.children);
+            var4 = (UiComponent) (var3.last((byte) -92));
             while (var4 != null) {
               ek.a(var4, (byte) -69, param2);
-              var4 = (vh) (var3.b(-111));
+              var4 = (UiComponent) (var3.previous(-111));
             }
             return;
           }
@@ -109,7 +109,7 @@ final class ek {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

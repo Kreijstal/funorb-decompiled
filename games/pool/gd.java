@@ -8,9 +8,9 @@ final class gd {
     static boolean field_b;
     static Sprite field_e;
     static int[] field_a;
-    static tk field_c;
+    static DualLinkNodeHashTable field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == -2182) {
           field_f = null;
           field_e = null;
@@ -28,19 +28,19 @@ final class gd {
     }
 
     final static String a(boolean param0) {
-        if (wd.field_Lb == ra.field_e) {
-          return re.field_d;
+        if (TabbedPane.field_Lb == ra.field_e) {
+          return LoginPayload.field_d;
         }
-        if (!ig.field_j.a(98)) {
-          return ig.field_j.b(2);
+        if (!TextInputValidator.field_j.a(98)) {
+          return TextInputValidator.field_j.b(2);
         }
-        if (pa.field_I == ra.field_e) {
-          return ig.field_j.b(2);
+        if (TimeTrialSelectScreen.field_I == ra.field_e) {
+          return TextInputValidator.field_j.b(2);
         }
         if (param0) {
           return SpriteState.field_x;
         }
-        gd.a(-107);
+        gd.releaseStatics(-107);
         return SpriteState.field_x;
     }
 

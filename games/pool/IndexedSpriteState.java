@@ -1,0 +1,156 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class IndexedSpriteState {
+    int height;
+    int width;
+    int trimX;
+    int fullHeight;
+    int trimY;
+    static UiComponent field_c;
+    int fullWidth;
+    static String year;
+
+    final static void drawProjectedLine(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        if (param3 != -28361) {
+          return;
+        }
+        param7 = param7 - param1[2];
+        param5 = param5 - param1[0];
+        param8 = param8 - param1[2];
+        param2 = param2 - param1[0];
+        param0 = param0 - param1[1];
+        param6 = param6 - param1[1];
+        int var9_int = param7 * param1[11] + (param1[9] * param2 + param1[10] * param6) >> 16;
+        if (var9_int <= 0) {
+          return;
+        }
+        int var10 = param1[10] * param0 + param5 * param1[9] + param1[11] * param8 >> 16;
+        if (var10 <= 0) {
+          return;
+        }
+        try {
+          var11 = param1[3] * param2 - (-(param6 * param1[4]) - param1[5] * param7) >> 7;
+          var12 = param7 * param1[8] + param6 * param1[7] + param1[6] * param2 >> 7;
+          var13 = param0 * param1[4] + param1[3] * param5 + param8 * param1[5] >> 7;
+          var13 = SoftwareRasterizer.clipLeft - (-TriangleRasterizer.projectionCenterX - var13 / var10);
+          var12 = var12 / var9_int + (SoftwareRasterizer.clipTop + TriangleRasterizer.projectionCenterY);
+          var11 = var11 / var9_int + SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX;
+          var14 = param8 * param1[8] + param1[6] * param5 + param0 * param1[7] >> 7;
+          var14 = SoftwareRasterizer.clipTop - (-TriangleRasterizer.projectionCenterY - var14 / var10);
+          SoftwareRasterizer.drawLine(var11, var12, var13, var14, param4);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, boolean param6) {
+        int var11 = 0;
+        int incrementValue$0 = 0;
+        int stackIn_27_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var7_intLifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        var14 = Pool.field_O;
+        try {
+          if (param4 <= param2) {
+            return;
+          }
+          if (param1 <= param2 + 1) {
+            return;
+          }
+          if (param2 + 5 < param1 &&
+            param3 != param0) {
+            var7_int = (param3 & param0 & 1) + ((param0 >> 1) + (param3 >> 1));
+            var8 = param2;
+            var9 = param3;
+            var10 = param0;
+            if (param5 > -34) {
+              return;
+            }
+            for (var11 = param2; var11 < param1; var11++) {
+              var12 = NetworkGameClient.field_H[var11];
+              if (param6) {
+                stackIn_27_0 = TickClock.field_g[var12];
+              } else {
+                stackIn_27_0 = ah.field_c[var12];
+              }
+              var13 = stackIn_27_0;
+              if (var13 <= var7_int) {
+                if (var13 > var10) {
+                  var10 = var13;
+                }
+              } else {
+                NetworkGameClient.field_H[var11] = NetworkGameClient.field_H[var8];
+                incrementValue$0 = var8;
+                var8++;
+                NetworkGameClient.field_H[incrementValue$0] = var12;
+                if (var9 > var13) {
+                  var9 = var13;
+                }
+              }
+            }
+            IndexedSpriteState.a(var9, var8, param2, param3, param4, (byte) -95, param6);
+            IndexedSpriteState.a(param0, param1, var8, var10, param4, (byte) -99, param6);
+            return;
+          }
+          for (var7_intLifetime1 = param1 - 1; var7_intLifetime1 > param2; var7_intLifetime1--) {
+            for (var8Lifetime1 = param2; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
+              var9Lifetime1 = NetworkGameClient.field_H[var8Lifetime1];
+              var10Lifetime1 = NetworkGameClient.field_H[var8Lifetime1 + 1];
+              if (he.a(var9Lifetime1, param6, var10Lifetime1, 0)) {
+                NetworkGameClient.field_H[var8Lifetime1] = var10Lifetime1;
+                NetworkGameClient.field_H[var8Lifetime1 + 1] = var9Lifetime1;
+              }
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var7), "bb.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+    }
+
+    final static double a(byte param0, int param1, long param2) {
+        int var4 = -8 % ((param0 + 43) / 55);
+        return (double)param2 / (double)(1 << param1);
+    }
+
+    abstract void drawAlpha(int param0, int param1, int param2);
+
+    abstract void draw(int param0, int param1);
+
+    public static void a(byte param0) {
+        if (param0 >= -43) {
+          IndexedSpriteState.a((byte) 122);
+        }
+        year = null;
+        field_c = null;
+    }
+
+    final static int a(int param0, int param1, byte param2) {
+        if (param2 != 99) {
+          IndexedSpriteState.a((byte) 28, -74, 125L);
+        }
+        return (SoftwareRasterizer.clipLeft + TriangleRasterizer.projectionCenterX << 2) + (param1 << 11) / param0;
+    }
+
+    static {
+        year = "Year";
+    }
+}

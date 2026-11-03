@@ -3,25 +3,25 @@
  */
 final class qa extends IntrusiveNode {
     int field_s;
-    static String field_u;
+    static String reject;
     qa field_l;
-    static lr field_t;
+    static BitmapFont field_t;
     int field_p;
-    static String field_m;
+    static String rulePillar1;
     int field_q;
-    static vh field_v;
+    static UiComponent field_v;
     int field_n;
     int field_w;
     static int field_r;
-    static String field_o;
+    static String playersXOfY;
 
-    final static void a(int[][] param0, bf[] param1, pq[] param2, int param3) {
+    final static void a(int[][] param0, CushionSegment[] param1, Ball[] param2, int param3) {
         int dupTemp$1 = 0;
-        pq[] var4 = null;
+        Ball[] var4 = null;
         int var4_int = 0;
         int var5 = 0;
-        pq[] var6 = null;
-        pq[] var7 = null;
+        Ball[] var6 = null;
+        Ball[] var7 = null;
         int var8 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -32,20 +32,20 @@ final class qa extends IntrusiveNode {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        pq[] var4Lifetime1;
+        Ball[] var4Lifetime1;
         int var5Lifetime1;
         try {
-          hb.field_s = -1;
+          NodeHashTableIterator.field_s = -1;
           td.field_b = 0;
-          or.field_l = 0;
+          BallEvent.field_l = 0;
           var6 = param2;
           var4 = var6;
           for (var5 = 0; var6.length > var5; var5++) {
-            var6[var5].field_w = 0;
+            var6[var5].lastAdvanceTime = 0;
           }
           var4_int = 0;
           do {
-            dupTemp$1 = oe.a(param1, var4_int, param2, param0, param3 + 0);
+            dupTemp$1 = FadingDialog.detectAndApplyBallCollisions(param1, var4_int, param2, param0, param3 + 0);
             var4_int = dupTemp$1;
           } while (dupTemp$1 != -1);
           var7 = param2;
@@ -53,7 +53,7 @@ final class qa extends IntrusiveNode {
           var8 = param3;
           var5Lifetime1 = var8;
           while (var8 < var7.length) {
-            if (var7[var8].field_s) {
+            if (var7[var8].inPlay) {
               var7[var8].a(false);
             }
             var8++;
@@ -81,18 +81,18 @@ final class qa extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void c(byte param0) {
-        field_o = null;
+    public static void releaseStatics(byte param0) {
+        playersXOfY = null;
         field_t = null;
-        field_m = null;
-        field_u = null;
+        rulePillar1 = null;
+        reject = null;
         field_v = null;
         if (param0 < 4) {
-          field_u = (String) null;
+          reject = (String) null;
         }
     }
 
@@ -100,10 +100,10 @@ final class qa extends IntrusiveNode {
         try {
           SpriteState.field_x = param1;
           qg.field_a = param3;
-          wf.a(param0, gg.field_a, -126);
+          wf.a(param0, DebouncedValidationProvider.loggingIn, -126);
           int var4_int = -110 % ((param2 + 30) / 57);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "qa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,8 +123,8 @@ final class qa extends IntrusiveNode {
           }
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!vq.a((char) var3, 22987) &&
-              !kh.a((char) var3, (byte) 120)) {
+            if (!ContextMenu.a((char) var3, 22987) &&
+              !LobbyGame.a((char) var3, (byte) 120)) {
               return true;
             }
           }
@@ -139,7 +139,7 @@ final class qa extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -147,12 +147,12 @@ final class qa extends IntrusiveNode {
         ClientException.a(param1, (byte) 80);
         if (param0 != 55) {
           String var3 = (String) null;
-          qa.a((String) null, 95);
+          qa.reverseString((String) null, 95);
         }
-        hm.a(param1, param0 - 19268);
+        Quaternion.a(param1, param0 - 19268);
     }
 
-    final static String a(String param0, int param1) {
+    final static String reverseString(String param0, int param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -180,11 +180,11 @@ final class qa extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(byte param0, int param1, lr param2, String param3, int param4, int param5) {
+    final static void a(byte param0, int param1, BitmapFont param2, String param3, int param4, int param5) {
         int var11 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -205,19 +205,19 @@ final class qa extends IntrusiveNode {
         var13 = Pool.field_O;
         try {
           var6_int = param2.b(param3);
-          var7 = param2.field_w + param2.field_C;
+          var7 = param2.maxDescent + param2.maxAscent;
           var8 = 1;
           if (var6_int > param1) {
             var9 = var6_int / param1;
             var10 = 2 * ((-1 + (var6_int % param1 + var9)) / var9) + param1;
-            if (null == wg.field_Mb) {
-              wg.field_Mb = new String[16];
+            if (null == StateIconLabel.field_Mb) {
+              StateIconLabel.field_Mb = new String[16];
             }
-            var8Lifetime1 = param2.a(param3, new int[]{var10}, wg.field_Mb);
+            var8Lifetime1 = param2.wrapText(param3, new int[]{var10}, StateIconLabel.field_Mb);
             var7 = var7 * var8Lifetime1;
             var6_int = 0;
             for (var11 = 0; var11 < var8Lifetime1; var11++) {
-              var12 = param2.b(wg.field_Mb[var11]);
+              var12 = param2.b(StateIconLabel.field_Mb[var11]);
               if (var12 > var6_int) {
                 var6_int = var12;
               }
@@ -226,17 +226,17 @@ final class qa extends IntrusiveNode {
           if (param0 != 71) {
             return;
           }
-          var9Lifetime1 = pa.field_H;
-          if (var9Lifetime1 + var6_int + 6 > qh.field_l) {
-            var9Lifetime1 = -6 - var6_int + qh.field_l;
+          var9Lifetime1 = TimeTrialSelectScreen.field_H;
+          if (var9Lifetime1 + var6_int + 6 > SoftwareRasterizer.width) {
+            var9Lifetime1 = -6 - var6_int + SoftwareRasterizer.width;
           }
           var10 = -param2.field_L + (pm.field_p + 32);
-          if (qh.field_f < var7 + (var10 + 6)) {
+          if (SoftwareRasterizer.height < var7 + (var10 + 6)) {
             var10 = pm.field_p + (-var7 - 6);
           }
-          qh.b(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param4);
-          qh.f(1 + var9Lifetime1, 1 + var10, var6_int + 4, 4 + var7, param5);
-          param2.a(param3, 3 + var9Lifetime1, var10 + 3, var6_int, var7, param4, -1, 0, 0, param2.field_w + param2.field_C);
+          SoftwareRasterizer.drawRectangle(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param4);
+          SoftwareRasterizer.fillRectangle(1 + var9Lifetime1, 1 + var10, var6_int + 4, 4 + var7, param5);
+          param2.drawParagraph(param3, 3 + var9Lifetime1, var10 + 3, var6_int, var7, param4, -1, 0, 0, param2.maxDescent + param2.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -254,7 +254,7 @@ final class qa extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -267,8 +267,8 @@ final class qa extends IntrusiveNode {
     }
 
     static {
-        field_u = "Reject";
-        field_m = "Respect";
-        field_o = "Players: <%0>/<%1>";
+        reject = "Reject";
+        rulePillar1 = "Respect";
+        playersXOfY = "Players: <%0>/<%1>";
     }
 }

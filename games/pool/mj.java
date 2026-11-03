@@ -8,18 +8,18 @@ final class mj {
     static String[][] field_c;
     static boolean field_e;
 
-    final static int[] a(int param0) {
+    final static int[] identityTransform(int param0) {
         if (param0 == -31121) {
           return new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
         }
         return (int[]) null;
     }
 
-    static long a(long param0, long param1) {
+    static long bitwiseAnd(long param0, long param1) {
         return param0 & param1;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_a = null;
         int var1 = 34 % ((param0 + 21) / 40);
@@ -29,74 +29,74 @@ final class mj {
 
     final static void a(boolean param0) {
         if (!param0) {
-          mj.a(-35);
-          ld.a((byte) -120);
-          ia.h(-13953);
+          mj.identityTransform(-35);
+          WhirlpoolHasher.a((byte) -120);
+          MenuSelection.h(-13953);
           return;
         }
-        ld.a((byte) -120);
-        ia.h(-13953);
+        WhirlpoolHasher.a((byte) -120);
+        MenuSelection.h(-13953);
     }
 
     final static void b(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
-        im var3 = null;
+        LobbyPlayer var3 = null;
         RuntimeException decompiledCaughtException = null;
         var2 = Pool.field_O;
         try {
-          kh.field_Ac = false;
+          LobbyGame.field_Ac = false;
           tp.field_e = null;
-          em.field_L = null;
+          HighscoresScreen.field_L = null;
           if (param0 != 0) {
             mj.a(99, 12);
           }
           if (null != IntrusiveNode.field_i) {
-            IntrusiveNode.field_i.d((byte) 49);
+            IntrusiveNode.field_i.clear((byte) 49);
             IntrusiveNode.field_i = null;
           }
           ln.field_n = null;
-          if (ep.field_A != null) {
-            ep.field_A.d((byte) 117);
-            ep.field_A = null;
+          if (NetworkGameClient.field_A != null) {
+            NetworkGameClient.field_A.clear((byte) 117);
+            NetworkGameClient.field_A = null;
           }
           lf.field_a = null;
-          if (ck.field_W != null) {
-            ck.field_W.d((byte) 78);
-            ck.field_W = null;
+          if (ValidationMessageWidget.field_W != null) {
+            ValidationMessageWidget.field_W.clear((byte) 78);
+            ValidationMessageWidget.field_W = null;
           }
-          im.field_Qb = null;
+          LobbyPlayer.field_Qb = null;
           if (ln.field_n == null) {
             return;
           }
-          var3 = (im) (ln.field_n.a((byte) -127));
+          var3 = (LobbyPlayer) (ln.field_n.firstForIteration((byte) -127));
           while (var3 != null) {
-            var3.a(false);
-            var3 = (im) (ln.field_n.b(param0 ^ 29));
+            var3.unlinkNode(false);
+            var3 = (LobbyPlayer) (ln.field_n.nextForIteration(param0 ^ 29));
           }
           ln.field_n = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "mj.D(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "mj.D(" + param0 + ')');
         }
     }
 
     final static void a(int param0, int param1) {
-        oq var2 = ej.field_j;
+        CipherPacketBuffer var2 = JaggrabDownloader.field_j;
         if (param1 == 27712) {
-          var2.b(false, param0);
-          var2.a(2, false);
-          var2.a(4, false);
-          var2.a(rk.b(true), false);
+          var2.writeCipheredOpcode(false, param0);
+          var2.writeByte(2, false);
+          var2.writeByte(4, false);
+          var2.writeByte(HuffmanCodec.b(true), false);
           return;
         }
         mj.a(true);
-        var2.b(false, param0);
-        var2.a(2, false);
-        var2.a(4, false);
-        var2.a(rk.b(true), false);
+        var2.writeCipheredOpcode(false, param0);
+        var2.writeByte(2, false);
+        var2.writeByte(4, false);
+        var2.writeByte(HuffmanCodec.b(true), false);
     }
 
     static {

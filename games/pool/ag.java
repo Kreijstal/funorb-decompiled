@@ -2,27 +2,27 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ag {
-    static String field_g;
+    static String connectionrestored;
     private static int field_h;
     static Sprite field_b;
-    static vh field_f;
+    static UiComponent field_f;
     static int field_e;
     static int field_a;
-    static String field_d;
+    static String muLobbyNameAdd;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 0) {
           IntrusiveDeque var2 = (IntrusiveDeque) null;
-          ag.a(105, (IntrusiveDeque) null, -112, 90);
+          ag.findHotspotRegion(105, (IntrusiveDeque) null, -112, 90);
         }
-        field_g = null;
-        field_d = null;
+        connectionrestored = null;
+        muLobbyNameAdd = null;
         field_f = null;
     }
 
-    final static void a(int[] param0, float[] param1, int param2) {
+    final static void projectToScreen(int[] param0, float[] param1, int param2) {
         float var3_float = 0.0f;
         float var4 = 0.0f;
         float var5 = 0.0f;
@@ -33,22 +33,22 @@ final class ag {
           var3_float = param1[1] * (float)param0[4] / 65536.0f + param1[0] * (float)param0[3] / 65536.0f + (float)param0[5] * param1[2] / 65536.0f;
           var4 = param1[0] * (float)param0[6] / 65536.0f + param1[1] * (float)param0[7] / 65536.0f + (float)param0[8] * param1[2] / 65536.0f;
           var5 = param1[0] * (float)param0[param2] / 65536.0f + param1[1] * (float)param0[10] / 65536.0f + param1[2] * (float)param0[11] / 65536.0f;
-          param1[0] = (float)fb.field_q + 512.0f * var3_float / var5;
-          param1[1] = 512.0f * var4 / var5 + (float)fb.field_d;
+          param1[0] = (float)TriangleRasterizer.projectionCenterX + 512.0f * var3_float / var5;
+          param1[1] = 512.0f * var4 / var5 + (float)TriangleRasterizer.projectionCenterY;
           param1[2] = var5;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ag.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ag.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static gi a(int param0, IntrusiveDeque param1, int param2, int param3) {
+    final static TextHotspotRegion findHotspotRegion(int param0, IntrusiveDeque param1, int param2, int param3) {
         RuntimeException var4 = null;
-        gi var5 = null;
-        gi var6 = null;
+        TextHotspotRegion var5 = null;
+        TextHotspotRegion var6 = null;
         int var7 = 0;
         IntrusiveDeque var8 = null;
-        aa var9 = null;
-        gi stackIn_12_0 = null;
+        IntrusiveDequeCursor var9 = null;
+        TextHotspotRegion stackIn_12_0 = null;
         Object stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -56,8 +56,8 @@ final class ag {
         RuntimeException decompiledCaughtException = null;
         var7 = Pool.field_O;
         try {
-          var9 = new aa(param1);
-          var5 = (gi) (var9.b((byte) -92));
+          var9 = new IntrusiveDequeCursor(param1);
+          var5 = (TextHotspotRegion) (var9.last((byte) -92));
           while (var5 != null) {
             var6 = var5;
             while (var5 != null) {
@@ -68,17 +68,17 @@ final class ag {
                 stackIn_12_0 = var5;
                 return stackIn_12_0;
               }
-              var5 = var5.field_s;
+              var5 = var5.next;
             }
-            var5 = (gi) (var9.b(-81));
+            var5 = (TextHotspotRegion) (var9.previous(-81));
           }
           if (param3 == 15395) {
             return null;
           }
           var8 = (IntrusiveDeque) null;
-          ag.a(15, (IntrusiveDeque) null, 110, 38);
+          ag.findHotspotRegion(15, (IntrusiveDeque) null, 110, 38);
           stackIn_18_0 = null;
-          return (gi) (stackIn_18_0);
+          return (TextHotspotRegion) (stackIn_18_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -89,11 +89,11 @@ final class ag {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static Sprite a(byte param0, int param1, String param2) {
+    final static Sprite createTextLabelSprite(byte param0, int param1, String param2) {
         RuntimeException var3 = null;
         int var6 = 0;
         int var7 = 0;
@@ -107,26 +107,26 @@ final class ag {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new Sprite(4 + ni.field_Z.b(param2), 4 + ni.field_Z.field_C + ni.field_Z.field_w);
+          var10 = new Sprite(4 + ModernTableScene.field_Z.b(param2), 4 + ModernTableScene.field_Z.maxAscent + ModernTableScene.field_Z.maxDescent);
           var10.field_G = -2;
           var10.field_B = -2;
           var16 = new int[4];
-          var17 = qh.field_d;
-          var6 = qh.field_l;
-          var7 = qh.field_f;
-          qh.a(var16);
-          var10.e();
-          ni.field_Z.d(param2, 2, 2 + ni.field_Z.field_C, param1, -1);
-          var10.e(4144959);
-          qh.a(var17, var6, var7);
-          qh.b(var16);
+          var17 = SoftwareRasterizer.pixels;
+          var6 = SoftwareRasterizer.width;
+          var7 = SoftwareRasterizer.height;
+          SoftwareRasterizer.saveClip(var16);
+          var10.bindAsRenderTarget();
+          ModernTableScene.field_Z.d(param2, 2, 2 + ModernTableScene.field_Z.maxAscent, param1, -1);
+          var10.addOutline(4144959);
+          SoftwareRasterizer.setTarget(var17, var6, var7);
+          SoftwareRasterizer.restoreClip(var16);
           var10.field_y = var10.field_A;
           var10.field_w = var10.field_z;
           var10.field_B = 0;
           var8 = var10;
           var8.field_G = 0;
           if (param0 != 89) {
-            ag.a(-120);
+            ag.releaseStatics(-120);
           }
           stackIn_3_0 = var10;
           return stackIn_3_0;
@@ -140,14 +140,14 @@ final class ag {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     static {
         field_h = 7;
         field_e = 1 << field_h;
-        field_g = "Connection restored.";
-        field_d = "Add name";
+        connectionrestored = "Connection restored.";
+        muLobbyNameAdd = "Add name";
     }
 }

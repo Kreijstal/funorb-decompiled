@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uc {
-    static vh field_b;
-    static vh field_a;
+    static UiComponent field_b;
+    static UiComponent field_a;
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 112) {
-          uc.a((byte) 104);
+          uc.pushRasterSnapshot((byte) 104);
         }
         field_b = null;
         field_a = null;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isNameCharacter(char param0, byte param1) {
         if (Character.isISOControl(param0)) {
           return false;
         }
-        if (td.a(param0, (byte) 5)) {
+        if (td.isAlphanumeric(param0, (byte) 5)) {
           return true;
         }
         if (param1 != -51) {
@@ -41,14 +41,14 @@ final class uc {
         return true;
     }
 
-    final static void a(byte param0) {
-        tn var1 = (tn) (cb.field_e.b(-1));
+    final static void pushRasterSnapshot(byte param0) {
+        RasterSnapshot var1 = (RasterSnapshot) (cb.field_e.removeFirst(-1));
         int var2 = 34 % ((-56 - param0) / 50);
         if (var1 == null) {
-          var1 = new tn();
+          var1 = new RasterSnapshot();
         }
-        var1.a(qh.field_l, qh.field_f, qh.field_b, qh.field_g, -95, qh.field_j, qh.field_d, qh.field_c);
-        nf.field_S.b((byte) 83, var1);
+        var1.setRasterState(SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom, -95, SoftwareRasterizer.clipRight, SoftwareRasterizer.pixels, SoftwareRasterizer.clipTop);
+        AccountCreationForm.field_S.addFirst((byte) 83, var1);
     }
 
     final static double[][] a(boolean param0, double[][][] param1) {
@@ -68,7 +68,7 @@ final class uc {
         try {
           var2_int = 0;
           if (!param0) {
-            uc.a((byte) 42);
+            uc.pushRasterSnapshot((byte) 42);
           }
           for (var3_int = 0; param1.length > var3_int; var3_int++) {
             var2_int = var2_int + param1[var3_int].length;
@@ -94,7 +94,7 @@ final class uc {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

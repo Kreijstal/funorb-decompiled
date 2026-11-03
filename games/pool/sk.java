@@ -4,33 +4,33 @@
 final class sk {
     static int field_a;
     static Sprite field_b;
-    static String field_e;
-    static String field_c;
+    static String playerListHaveWon;
+    static String pressf10toquickchat;
     static int field_d;
 
     final static int a(byte param0) {
         if (param0 < 33) {
           return 3;
         }
-        return qk.field_g;
+        return PoolUiText.field_g;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
-        field_c = null;
+        pressf10toquickchat = null;
         if (param0 != 1) {
           field_b = (Sprite) null;
-          field_e = null;
+          playerListHaveWon = null;
           return;
         }
-        field_e = null;
+        playerListHaveWon = null;
     }
 
-    final static kl a(di param0, int param1, String param2, String param3, di param4) {
+    final static PaletteBitmapFont loadPaletteFont(ResourceArchive param0, int param1, String param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        kl stackIn_3_0 = null;
+        PaletteBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -45,9 +45,9 @@ final class sk {
           if (param1 != 32362) {
             field_d = 16;
           }
-          var5_int = param4.b(param2, -1);
-          var6 = param4.a(var5_int, 0, param3);
-          stackIn_3_0 = hi.a(107, var5_int, var6, param0, param4);
+          var5_int = param4.getGroupId(param2, -1);
+          var6 = param4.getFileId(var5_int, 0, param3);
+          stackIn_3_0 = DirectByteStorage.loadPaletteFont(107, var5_int, var6, param0, param4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,11 +77,11 @@ final class sk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final static short[] a(byte param0, int param1, short[] param2, short param3) {
+    final static short[] extendShortArray(byte param0, int param1, short[] param2, short param3) {
         short[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -118,13 +118,13 @@ final class sk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
     static {
-        field_c = "Press F10 to open Quick Chat.";
+        pressf10toquickchat = "Press F10 to open Quick Chat.";
         field_d = 1;
-        field_e = "<%0> have won!";
+        playerListHaveWon = "<%0> have won!";
     }
 }

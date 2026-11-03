@@ -5,24 +5,24 @@ final class dq {
     static String[] field_j;
     static int[] field_i;
     static Sprite[] field_e;
-    static String field_c;
-    static tm field_a;
+    static String gameoptPlayernotmember;
+    static BallSkin field_a;
     static long[] field_d;
-    static lr field_f;
+    static BitmapFont field_f;
     static Sprite field_k;
-    static String field_b;
+    static String raIntro;
     static String field_g;
     static BufferedSocket field_h;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_f = null;
-        field_b = null;
+        raIntro = null;
         field_g = null;
         field_h = null;
         if (param0 == 80) {
           field_d = null;
-          field_c = null;
+          gameoptPlayernotmember = null;
           field_j = null;
           field_a = null;
           field_i = null;
@@ -32,7 +32,7 @@ final class dq {
         int[] var2 = (int[]) null;
         dq.a((byte) 23, (int[]) null);
         field_d = null;
-        field_c = null;
+        gameoptPlayernotmember = null;
         field_j = null;
         field_a = null;
         field_i = null;
@@ -69,11 +69,11 @@ final class dq {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
-    final static Sprite a(int param0, int param1, String param2) {
+    final static Sprite createTextLabelSprite(int param0, int param1, String param2) {
         Sprite var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
@@ -87,18 +87,18 @@ final class dq {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new Sprite(4 + mc.field_e.b(param2), mc.field_e.field_C - (-mc.field_e.field_w - 4));
+          var3 = new Sprite(4 + FreePlayRules.field_e.b(param2), FreePlayRules.field_e.maxAscent - (-FreePlayRules.field_e.maxDescent - 4));
           var4 = new int[4];
-          var5 = qh.field_d;
-          var6 = qh.field_l;
-          var7 = qh.field_f;
-          qh.a(var4);
-          var3.e();
-          mc.field_e.d(param2, 2, mc.field_e.field_C + 2, param0, -1);
-          var3.e(4144959);
-          var3.e(65793);
-          qh.a(var5, var6, var7);
-          qh.b(var4);
+          var5 = SoftwareRasterizer.pixels;
+          var6 = SoftwareRasterizer.width;
+          var7 = SoftwareRasterizer.height;
+          SoftwareRasterizer.saveClip(var4);
+          var3.bindAsRenderTarget();
+          FreePlayRules.field_e.d(param2, 2, FreePlayRules.field_e.maxAscent + 2, param0, -1);
+          var3.addOutline(4144959);
+          var3.addOutline(65793);
+          SoftwareRasterizer.setTarget(var5, var6, var7);
+          SoftwareRasterizer.restoreClip(var4);
           var3.field_y = var3.field_A;
           var3.field_w = var3.field_z;
           var8 = var3;
@@ -116,14 +116,14 @@ final class dq {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
     static {
         field_d = new long[1000];
-        field_b = "To report a player, click on the most suitable option from the Rules of Conduct. Please do not abuse this form.";
-        field_c = "<%0> is not a member, and cannot play with the current options.";
+        raIntro = "To report a player, click on the most suitable option from the Rules of Conduct. Please do not abuse this form.";
+        gameoptPlayernotmember = "<%0> is not a member, and cannot play with the current options.";
         field_g = "Stripes";
     }
 }

@@ -6,14 +6,14 @@ final class wc {
     int field_g;
     boolean field_f;
     static String field_a;
-    static String field_d;
+    static String rule22;
     boolean field_e;
     String[] field_c;
 
-    final static an a(di param0, int param1, int param2, di param3, int param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
-        di var6 = null;
-        an stackIn_6_0 = null;
+        ResourceArchive var6 = null;
+        BinaryBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -22,13 +22,13 @@ final class wc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 40) {
-            var6 = (di) null;
-            wc.a((di) null, -35, -8, (di) null, -32);
+            var6 = (ResourceArchive) null;
+            wc.a((ResourceArchive) null, -35, -8, (ResourceArchive) null, -32);
           }
-          if (!vj.a(param2, param0, param4, (byte) 121)) {
+          if (!TextLineLayout.a(param2, param0, param4, (byte) 121)) {
             return null;
           }
-          stackIn_6_0 = fn.a((byte) 126, param3.a(123, param4, param2));
+          stackIn_6_0 = QuickChatHelpDialog.a((byte) 126, param3.getFileBytesUnkeyed(123, param4, param2));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,15 +46,15 @@ final class wc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
-        field_d = null;
+        rule22 = null;
         if (param0 <= 65) {
-          field_d = (String) null;
+          rule22 = (String) null;
         }
     }
 
@@ -68,16 +68,16 @@ final class wc {
         try {
           var1_int = 0;
           var2 = 101 % ((32 - param0) / 49);
-          while (var1_int < no.field_n.length) {
-            if (no.field_n[var1_int] != 0 ||
+          while (var1_int < Js5Transport.field_n.length) {
+            if (Js5Transport.field_n[var1_int] != 0 ||
               !(0 >= ji.field_b[var1_int])) {
-              no.field_n[var1_int] = no.field_n[var1_int] + ji.field_b[var1_int];
-              if (256 < no.field_n[var1_int]) {
-                no.field_n[var1_int] = 256;
+              Js5Transport.field_n[var1_int] = Js5Transport.field_n[var1_int] + ji.field_b[var1_int];
+              if (256 < Js5Transport.field_n[var1_int]) {
+                Js5Transport.field_n[var1_int] = 256;
               }
               if (ji.field_b[var1_int] < 0 &&
-                no.field_n[var1_int] <= 0) {
-                no.field_n[var1_int] = 0;
+                Js5Transport.field_n[var1_int] <= 0) {
+                Js5Transport.field_n[var1_int] = 0;
                 ji.field_b[var1_int] = 0;
               }
               if (ji.field_b[var1_int] > -32) {
@@ -90,7 +90,7 @@ final class wc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "wc.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "wc.C(" + param0 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class wc {
     }
 
     static {
-        field_d = "Advertising websites";
+        rule22 = "Advertising websites";
         field_a = "There are no valid types of game that match your preferences.";
     }
 }

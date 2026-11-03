@@ -57,11 +57,11 @@ final class ji {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_b = null;
         field_h = null;
         if (param0) {
@@ -69,41 +69,41 @@ final class ji {
         }
     }
 
-    final static di a(int param0, boolean param1, byte param2, int param3, boolean param4, boolean param5) {
+    final static ResourceArchive a(int param0, boolean param1, byte param2, int param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
-          up var8 = null;
-          di stackIn_5_0 = null;
-          di stackIn_16_0 = null;
+          CachedArchiveSource var8 = null;
+          ResourceArchive stackIn_5_0 = null;
+          ResourceArchive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
             var7 = null;
-            if (null != fe.field_M.field_x) {
-              ih.field_a = new ir(fe.field_M.field_x, 5200, 0);
-              fe.field_M.field_x = null;
-              var6 = new np(255, ih.field_a, new ir(fe.field_M.field_e, 12000, 0), 2097152);
+            if (null != ButtonWidget.field_M.field_x) {
+              ih.field_a = new BufferedFile(ButtonWidget.field_M.field_x, 5200, 0);
+              ButtonWidget.field_M.field_x = null;
+              var6 = new SectorCacheStore(255, ih.field_a, new BufferedFile(ButtonWidget.field_M.field_e, 12000, 0), 2097152);
             }
             if (param2 != -56) {
-              stackIn_5_0 = (di) null;
+              stackIn_5_0 = (ResourceArchive) null;
               return stackIn_5_0;
             }
             if (ih.field_a != null) {
-              if (null == ia.field_d) {
-                ia.field_d = new ir[fe.field_M.field_n.length];
+              if (null == MenuSelection.field_d) {
+                MenuSelection.field_d = new BufferedFile[ButtonWidget.field_M.field_n.length];
               }
-              if (null == ia.field_d[param3]) {
-                ia.field_d[param3] = new ir(fe.field_M.field_n[param3], 12000, 0);
-                fe.field_M.field_n[param3] = null;
+              if (null == MenuSelection.field_d[param3]) {
+                MenuSelection.field_d[param3] = new BufferedFile(ButtonWidget.field_M.field_n[param3], 12000, 0);
+                ButtonWidget.field_M.field_n[param3] = null;
               }
-              var7 = new np(param3, ih.field_a, ia.field_d[param3], 2097152);
+              var7 = new SectorCacheStore(param3, ih.field_a, MenuSelection.field_d[param3], 2097152);
             }
-            var8 = nk.field_m.a(param4, (np) (var7), param3, (byte) 0, (np) (var6));
+            var8 = TranslatedUiText.field_m.archiveProvider(param4, (SectorCacheStore) (var7), param3, (byte) 0, (SectorCacheStore) (var6));
             if (param5) {
-              var8.b(117);
+              var8.requestAllGroups(117);
             }
-            stackIn_16_0 = new di(var8, param1, param0);
+            stackIn_16_0 = new ResourceArchive(var8, param1, param0);
             return stackIn_16_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,8 +144,8 @@ final class ji {
           if (this.field_j == 0) {
             this.field_e = true;
           }
-          this.field_a = sl.field_Y[this.field_c];
-          this.field_c = (byte)((this.field_c + 1) % sl.field_Y.length);
+          this.field_a = TextInputWidget.field_Y[this.field_c];
+          this.field_c = (byte)((this.field_c + 1) % TextInputWidget.field_Y.length);
         }
         for (var2 = 0; var2 < this.field_l.length; var2++) {
           if (!this.field_l[var2].field_c) {
@@ -168,9 +168,9 @@ final class ji {
             } else {
               this.field_l[var2].field_c = true;
               dupTemp$1 = this.field_l[var2];
-              dupTemp$1.field_b = (short)(dupTemp$1.field_b + (ga.a(17, true, ea.field_r) - 8));
+              dupTemp$1.field_b = (short)(dupTemp$1.field_b + (MaxLengthTextInputWidget.nextRandomInt(17, true, ea.field_r) - 8));
               dupTemp$2 = this.field_l[var2];
-              dupTemp$2.field_k = (short)(dupTemp$2.field_k + (-8 + ga.a(17, true, ea.field_r)));
+              dupTemp$2.field_k = (short)(dupTemp$2.field_k + (-8 + MaxLengthTextInputWidget.nextRandomInt(17, true, ea.field_r)));
             }
           } else {
             dupTemp$3 = this.field_l[var2];
@@ -236,7 +236,7 @@ final class ji {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

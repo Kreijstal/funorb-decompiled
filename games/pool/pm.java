@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pm extends IntrusiveNode {
-    static String field_o;
+    static String tickerHintRotate;
     static int field_p;
-    so field_n;
-    static vh field_m;
+    SceneNode field_n;
+    static UiComponent field_m;
     static int field_l;
 
-    final static void a(byte[] param0, byte[] param1, String[][] param2, di param3, Sprite[][] param4, int param5, qb[] param6, int[] param7, Sprite[][] param8, int param9, String[] param10, di param11, boolean param12, int[] param13, di param14, String[][] param15, int param16) {
+    final static void a(byte[] param0, byte[] param1, String[][] param2, ResourceArchive param3, Sprite[][] param4, int param5, IndexedSprite[] param6, int[] param7, Sprite[][] param8, int param9, String[] param10, ResourceArchive param11, boolean param12, int[] param13, ResourceArchive param14, String[][] param15, int param16) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -40,9 +40,9 @@ final class pm extends IntrusiveNode {
         RuntimeException var17 = null;
         try {
           if (param16 != -6103) {
-            field_m = (vh) null;
+            field_m = (UiComponent) null;
           }
-          so.a(param2, param9, param11, param8, param15, param16 ^ 6094, 1, param4, param10, param0, param5, param7, param14, (String[]) null, param1, param13, param3, param12, param6);
+          SceneNode.a(param2, param9, param11, param8, param15, param16 ^ 6094, 1, param4, param10, param0, param5, param7, param14, (String[]) null, param1, param13, param3, param12, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,55 +126,55 @@ final class pm extends IntrusiveNode {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param16).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param16).append(')').toString());
         }
     }
 
     final static int a(int param0) {
         if (param0 != -27011) {
-          pm.a((byte[]) null, (byte[]) null, (String[][]) null, (di) null, (Sprite[][]) null, 100, (qb[]) null, (int[]) null, (Sprite[][]) null, 104, (String[]) null, (di) null, false, (int[]) null, (di) null, (String[][]) null, 112);
-          if (cl.a(1, pl.field_b)) {
+          pm.a((byte[]) null, (byte[]) null, (String[][]) null, (ResourceArchive) null, (Sprite[][]) null, 100, (IndexedSprite[]) null, (int[]) null, (Sprite[][]) null, 104, (String[]) null, (ResourceArchive) null, false, (int[]) null, (ResourceArchive) null, (String[][]) null, 112);
+          if (cl.isPointerInside(1, pl.field_b)) {
             return 0;
           }
-          if (cl.a(1, jq.field_d)) {
+          if (cl.isPointerInside(1, jq.field_d)) {
             return 1;
           }
-          if (!cl.a(1, qa.field_v)) {
+          if (!cl.isPointerInside(1, qa.field_v)) {
             return -1;
           }
-          if (vm.field_d[5] == qa.field_v.field_hb) {
+          if (PolarObject.field_d[5] == qa.field_v.sprite) {
             return 3;
           }
           return 2;
         }
-        if (cl.a(1, pl.field_b)) {
+        if (cl.isPointerInside(1, pl.field_b)) {
           return 0;
         }
-        if (cl.a(1, jq.field_d)) {
+        if (cl.isPointerInside(1, jq.field_d)) {
           return 1;
         }
-        if (!cl.a(1, qa.field_v)) {
+        if (!cl.isPointerInside(1, qa.field_v)) {
           return -1;
         }
-        if (vm.field_d[5] == qa.field_v.field_hb) {
+        if (PolarObject.field_d[5] == qa.field_v.sprite) {
           return 3;
         }
         return 2;
     }
 
     final static void a(fl param0, int param1, boolean param2) {
-        oq var3 = null;
+        CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = ej.field_j;
-          var3.b(false, param1);
-          var3.a(2, false);
-          var3.a(0, false);
-          var3.a(param0.field_o, false);
+          var3 = JaggrabDownloader.field_j;
+          var3.writeCipheredOpcode(false, param1);
+          var3.writeByte(2, false);
+          var3.writeByte(0, false);
+          var3.writeByte(param0.field_o, false);
           if (param2) {
             return;
           }
@@ -190,28 +190,28 @@ final class pm extends IntrusiveNode {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
-        field_o = null;
+        tickerHintRotate = null;
         field_m = null;
     }
 
-    pm(so param0) {
+    pm(SceneNode param0) {
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "pm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_p = -1;
-        field_o = "Drag <img=2> or <img=9><img=0> to rotate.";
+        tickerHintRotate = "Drag <img=2> or <img=9><img=0> to rotate.";
     }
 }

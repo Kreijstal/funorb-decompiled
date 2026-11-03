@@ -1,0 +1,189 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+    static String decisionButtonPlay;
+    static String ratingPlayed;
+    static String field_o;
+    private java.awt.image.ImageConsumer field_p;
+    private java.awt.image.ColorModel field_m;
+
+    final static void a(MeshBuilder param0, byte param1) {
+        int[] var3 = null;
+        try {
+          var3 = param0.faceVertexB;
+          int[] var2 = var3;
+          param0.faceVertexB = param0.faceVertexC;
+          if (param1 != 38) {
+            ratingPlayed = (String) null;
+          }
+          param0.faceVertexC = var3;
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jf.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    private final synchronized void d(int param0) {
+        if (null != this.field_p) {
+          this.field_p.setPixels(0, 0, this.width, this.height, this.field_m, this.pixels, 0, this.width);
+          this.field_p.imageComplete(2);
+          if (param0 <= 59) {
+            ratingPlayed = (String) null;
+          }
+          return;
+        }
+    }
+
+    public final void startProduction(java.awt.image.ImageConsumer param0) {
+        try {
+          this.addConsumer(param0);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
+        RuntimeException var7 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_4_0 = var7;
+          stackIn_4_1 = new StringBuilder().append("jf.imageUpdate(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 == 2) {
+          ratingPlayed = null;
+          decisionButtonPlay = null;
+          field_o = null;
+          return;
+        }
+        ImageProducerRasterBuffer.releaseStatics(-27);
+        ratingPlayed = null;
+        decisionButtonPlay = null;
+        field_o = null;
+    }
+
+    public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
+    }
+
+    final void drawTo(java.awt.Graphics param0, int param1, int param2, int param3) {
+        this.d(60);
+        if (param3 != -23820) {
+          return;
+        }
+        try {
+          param0.drawImage(this.field_c, param1, param2, (java.awt.image.ImageObserver) (this));
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
+        return this.field_p == param0;
+    }
+
+    final void initialize(int param0, int param1, int param2, java.awt.Component param3) {
+        try {
+          this.pixels = new int[1 + param0 * param1];
+          this.width = param1;
+          this.height = param0;
+          this.field_m = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+          this.field_c = param3.createImage((java.awt.image.ImageProducer) (this));
+          this.d(84);
+          param3.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
+          this.d(105);
+          param3.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
+          this.d(65);
+          param3.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
+          this.bindAsRenderTarget(15100);
+          if (param2 != -6980) {
+            ImageProducerRasterBuffer.releaseStatics(68);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
+        try {
+          this.field_p = param0;
+          param0.setDimensions(this.width, this.height);
+          param0.setProperties((Hashtable) null);
+          param0.setColorModel(this.field_m);
+          param0.setHints(14);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
+        RuntimeException var2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (this.field_p != param0) {
+            return;
+          }
+          this.field_p = null;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("jf.removeConsumer(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    ImageProducerRasterBuffer() {
+    }
+
+    final static eh a(int param0, int param1, int param2, int param3, int param4) {
+        int var7 = Pool.field_O;
+        eh var5 = (eh) (StateIconLabel.field_Lb.last((byte) 118));
+        while (var5 != null) {
+          if (~var5.field_A == ~param2) {
+            return var5;
+          }
+          var5 = (eh) (StateIconLabel.field_Lb.previous((byte) -5));
+        }
+        eh var8 = new eh();
+        var5 = var8;
+        var8.field_A = param2;
+        int var6 = -73 / ((param0 - 60) / 49);
+        var5.field_r = param4;
+        var5.field_v = param1;
+        StateIconLabel.field_Lb.addFirst((byte) -24, var5);
+        AlternateLongAndTextLoginPayload.a(var5, param3, (byte) -117);
+        return var5;
+    }
+
+    static {
+        decisionButtonPlay = "Play";
+        field_o = null;
+        ratingPlayed = "Played";
+    }
+}

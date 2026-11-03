@@ -8,12 +8,12 @@ final class vn {
     static Sprite field_j;
     static int field_c;
     static int field_b;
-    wd field_i;
+    TabbedPane field_i;
     static int field_e;
     static int[] field_h;
-    static String[] field_a;
+    static String[] membersExpansionBenefits;
 
-    final static void a(byte param0, int param1, PlatformTaskDispatcher param2, PacketBuffer param3) {
+    final static void readReflectionCheckRequest(byte param0, int param1, PlatformTaskDispatcher param2, PacketBuffer param3) {
         try {
           int var6 = 0;
           int var12_int = 0;
@@ -93,10 +93,10 @@ final class vn {
                     var18 = 0;
                     var14Lifetime1 = var18;
                     while (var18 < var10) {
-                      var13[var18] = fm.a(true, var11[var18]);
+                      var13[var18] = ArrayWidgetGroup.a(true, var11[var18]);
                       var18++;
                     }
-                    var19.field_p[var6] = param2.a((byte) 16, fm.a(true, var21), var13, var22);
+                    var19.field_p[var6] = param2.getDeclaredMethod((byte) 16, ArrayWidgetGroup.a(true, var21), var13, var22);
                     var19.field_w[var6] = var23;
                   }
                 } else {
@@ -110,7 +110,7 @@ final class vn {
                   }
                   var19.field_m[var6] = var7_int;
                   var19.field_r[var6] = var10;
-                  var19.field_n[var6] = param2.a(fm.a(true, var16), var17, (byte) -88);
+                  var19.field_n[var6] = param2.getDeclaredField(ArrayWidgetGroup.a(true, var16), var17, (byte) -88);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -134,7 +134,7 @@ final class vn {
                 var19.field_q[var6] = -5;
               }
             }
-            pj.field_H.b((byte) 82, var19);
+            MessageScreen.field_H.addFirst((byte) 82, var19);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -152,7 +152,7 @@ final class vn {
             } else {
               stackIn_41_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -165,48 +165,48 @@ final class vn {
         if (param1 != 0) {
           return -51;
         }
-        return aj.a(param3, false, aj.a(param2, false, param0));
+        return NameEntryPopup.a(param3, false, NameEntryPopup.a(param2, false, param0));
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {
         int var6 = 24;
         int var7 = 5;
-        this.field_i.a(param2, param1, -82, param0, param3, var7, var6);
-        ba.field_sb.b(0, 2147483647, 0, ud.field_J.field_gb, ad.field_x);
-        qk.field_e.b(2 + ad.field_x, 2147483647, 0, -80 + (-2 - nk.field_n) + (ud.field_J.field_gb - 2), 18);
-        mb.field_f.b(ad.field_x + 2, 2147483647, -2 + ud.field_J.field_gb + (-nk.field_n - 80), 82 + nk.field_n, 18);
-        aj.field_Mb.a(0, ud.field_J.field_gb, 8, 2, nk.field_n, 20, -22 - ad.field_x + ud.field_J.field_Db, 20 + (2 + ad.field_x));
-        cp.field_c.a(20, nk.field_n, 0, 2);
+        this.field_i.setTabbedPaneBounds(param2, param1, -82, param0, param3, var7, var6);
+        AccountContentDialog.field_sb.setBounds(0, 2147483647, 0, SingleChildWidget.field_J.width, ArchiveIndex.field_x);
+        PoolUiText.field_e.setBounds(2 + ArchiveIndex.field_x, 2147483647, 0, -80 + (-2 - TranslatedUiText.field_n) + (SingleChildWidget.field_J.width - 2), 18);
+        ByteStorage.field_f.setBounds(ArchiveIndex.field_x + 2, 2147483647, -2 + SingleChildWidget.field_J.width + (-TranslatedUiText.field_n - 80), 82 + TranslatedUiText.field_n, 18);
+        NameEntryPopup.field_Mb.setPaneFooterBounds(0, SingleChildWidget.field_J.width, 8, 2, TranslatedUiText.field_n, 20, -22 - ArchiveIndex.field_x + SingleChildWidget.field_J.height, 20 + (2 + ArchiveIndex.field_x));
+        cp.field_c.layoutPaneFooter(20, TranslatedUiText.field_n, 0, 2);
         int var8 = 111 % ((param4 + 58) / 45);
     }
 
-    vn(String param0, vh param1) {
+    vn(String param0, UiComponent param1) {
         String[] var3 = null;
-        vh[] var4 = null;
+        UiComponent[] var4 = null;
         try {
-          var3 = new String[]{param0, cl.field_i, ll.field_e};
-          var4 = new vh[]{param1, ud.field_J, (vh) ((Object) cp.field_c)};
-          this.field_i = new wd(0L, bb.field_c, var3, ea.field_u, var4, 0);
+          var3 = new String[]{param0, cl.muChatFriends, ll.muChatIgnore};
+          var4 = new UiComponent[]{param1, SingleChildWidget.field_J, (UiComponent) ((Object) cp.field_c)};
+          this.field_i = new TabbedPane(0L, IndexedSpriteState.field_c, var3, ea.field_u, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_d = null;
-        field_a = null;
+        membersExpansionBenefits = null;
         field_h = null;
         field_j = null;
         field_g = null;
         if (!param0) {
           PacketBuffer var2 = (PacketBuffer) null;
-          vn.a((byte) -54, -128, (PlatformTaskDispatcher) null, (PacketBuffer) null);
+          vn.readReflectionCheckRequest((byte) -54, -128, (PlatformTaskDispatcher) null, (PacketBuffer) null);
         }
     }
 
     static {
         field_d = new nl();
         field_b = -1;
-        field_a = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
+        membersExpansionBenefits = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
     }
 }

@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class PacketBuffer extends IntrusiveNode {
-    static String field_o;
-    static String field_n;
+    static String achievements;
+    static String statusWantsARematch;
     static PcmSample field_q;
-    static String field_m;
+    static String muLobbyFriendRm;
     static int[] field_p;
-    static String field_r;
+    static String mpXHaswon;
     static AsyncRequest field_u;
     int position;
-    static vh field_s;
-    static String field_w;
-    static String field_x;
+    static UiComponent field_s;
+    static String spectateXsGame;
+    static String muAllPlayersHaveLeft;
     byte[] payload;
     static int field_l;
 
@@ -44,7 +44,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ class PacketBuffer extends IntrusiveNode {
         RuntimeException var5 = null;
         try {
           if (param1 != 0) {
-            field_n = (String) null;
+            statusWantsARematch = (String) null;
           }
           for (var5_int = param2; var5_int < param3 + param2; var5_int++) {
             fieldTemp$0 = this.position;
@@ -84,14 +84,14 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean verifyChecksum(boolean param0) {
         this.position = this.position - 4;
         if (param0) {
-          this.a(true);
+          this.verifyChecksum(true);
         }
         int var2 = ClientException.a(0, this.position, -1, this.payload);
         int var3 = this.readInt(true);
@@ -101,7 +101,7 @@ class PacketBuffer extends IntrusiveNode {
         return false;
     }
 
-    final int i(int param0) {
+    final int readSignedSmart(int param0) {
         if (param0 >= -2) {
           return 77;
         }
@@ -112,7 +112,7 @@ class PacketBuffer extends IntrusiveNode {
         return this.readUnsignedShort(-1034) - 49152;
     }
 
-    final String m(int param0) {
+    final String readNullableString(int param0) {
         if (this.payload[this.position] == 0) {
           this.position = this.position + 1;
           return null;
@@ -199,7 +199,7 @@ class PacketBuffer extends IntrusiveNode {
         return 255 & this.payload[fieldTemp$0];
     }
 
-    final int c(byte param0) {
+    final int readUnsignedSmart(byte param0) {
         if (param0 != -115) {
           String var3 = (String) null;
           this.a((String) null, 68);
@@ -268,7 +268,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -316,8 +316,8 @@ class PacketBuffer extends IntrusiveNode {
               break;
             }
             this.position = this.position - 8;
-            this.a(true, var5);
-            this.a(true, var6);
+            this.writeInt(true, var5);
+            this.writeInt(true, var6);
             var4++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -330,11 +330,11 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    final void b(int param0, int param1) {
+    final void writeMedium(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(param0 >> 16);
@@ -349,7 +349,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$2] = (byte)param0;
     }
 
-    final int k(int param0) {
+    final int readVarInt(int param0) {
         int fieldTemp$1 = 0;
         int var2;
         int var3;
@@ -368,7 +368,7 @@ class PacketBuffer extends IntrusiveNode {
         return var3 | var2;
     }
 
-    final void a(boolean param0, int param1) {
+    final void writeInt(boolean param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(param1 >> 24);
@@ -388,18 +388,18 @@ class PacketBuffer extends IntrusiveNode {
 
     public static void e(int param0) {
         if (param0 != 4109) {
-          field_m = (String) null;
+          muLobbyFriendRm = (String) null;
         }
-        field_o = null;
-        field_m = null;
+        achievements = null;
+        muLobbyFriendRm = null;
         field_s = null;
-        field_r = null;
-        field_n = null;
+        mpXHaswon = null;
+        statusWantsARematch = null;
         field_u = null;
-        field_x = null;
+        muAllPlayersHaveLeft = null;
         field_p = null;
         field_q = null;
-        field_w = null;
+        spectateXsGame = null;
     }
 
     final int readInt(boolean obfuscationGuard) {
@@ -410,7 +410,7 @@ class PacketBuffer extends IntrusiveNode {
         return (255 & this.payload[this.position - 1]) + (65280 & this.payload[-2 + this.position] << 8) + (this.payload[-4 + this.position] << 24 & -16777216) + (16711680 & this.payload[-3 + this.position] << 16);
     }
 
-    final void a(int param0, byte param1) {
+    final void writeIntLengthPrefix(int param0, byte param1) {
         this.payload[-4 + (this.position - param0)] = (byte)(param0 >> 24);
         this.payload[this.position - param0 - 3] = (byte)(param0 >> 16);
         if (param1 > -90) {
@@ -421,7 +421,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[-param0 + this.position - 1] = (byte)param0;
     }
 
-    final void a(int param0, int param1) {
+    final void writeVarInt(int param0, int param1) {
         if (param1 != -32768) {
           return;
         }
@@ -429,20 +429,20 @@ class PacketBuffer extends IntrusiveNode {
           if (0 != (-16384 & param0)) {
             if ((-2097152 & param0) != 0) {
               if ((param0 & -268435456) != 0) {
-                this.a(param0 >>> 28 | 128, false);
+                this.writeByte(param0 >>> 28 | 128, false);
               }
-              this.a(128 | param0 >>> 21, false);
+              this.writeByte(128 | param0 >>> 21, false);
             }
-            this.a(128 | param0 >>> 14, false);
+            this.writeByte(128 | param0 >>> 14, false);
           }
-          this.a(param0 >>> 7 | 128, false);
+          this.writeByte(param0 >>> 7 | 128, false);
         }
-        this.a(param0 & 127, false);
+        this.writeByte(param0 & 127, false);
     }
 
-    final int d(int param0, int param1) {
+    final int appendChecksum(int param0, int param1) {
         int var3 = ClientException.a(param1, this.position, param0, this.payload);
-        this.a(true, var3);
+        this.writeInt(true, var3);
         return var3;
     }
 
@@ -462,13 +462,13 @@ class PacketBuffer extends IntrusiveNode {
     final long readLong(int obfuscationGuard) {
         long var2 = 4294967295L & (long)this.readInt(true);
         if (obfuscationGuard != -412303328) {
-          field_s = (vh) null;
+          field_s = (UiComponent) null;
         }
         long var4 = (long)this.readInt(true) & 4294967295L;
         return (var2 << 32) + var4;
     }
 
-    final void b(int param0, byte param1) {
+    final void padWithZeros(int param0, byte param1) {
         int fieldTemp$0 = 0;
         if (param1 != -8) {
           return;
@@ -502,16 +502,16 @@ class PacketBuffer extends IntrusiveNode {
           this.writeShort((byte) -81, var8.length);
           this.a(var8, (byte) 0, 0, var8.length);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ge.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ge.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void writeByte(int param0, boolean param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)param0;
         if (param1) {
-          this.c(-68);
+          this.readSmartInt(-68);
         }
     }
 
@@ -541,7 +541,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$0] != 0);
         var3 = -var2 + this.position - 1;
         if (0 != var3) {
-          return tl.a(var3, -7510, this.payload, var2);
+          return RankingsScreen.a(var3, -7510, this.payload, var2);
         }
         return "";
     }
@@ -598,18 +598,18 @@ class PacketBuffer extends IntrusiveNode {
           param3[1] = var33Lifetime1 * (var22 * var31Lifetime1 + var30Lifetime1 * var21 + var23 * var32Lifetime1);
           param3[2] = (var31Lifetime1 * var25 + var24 * var30Lifetime1 + var26 * var32Lifetime1) * var33Lifetime1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ge.AA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ge.AA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(byte param0, int param1) {
+    final void writeUnsignedSmart(byte param0, int param1) {
         if (param1 >= 0 &&
           128 > param1) {
-          this.a(param1, false);
+          this.writeByte(param1, false);
           return;
         }
         if (param0 != -49) {
-          field_x = (String) null;
+          muAllPlayersHaveLeft = (String) null;
         }
         if (0 <= param1 &&
           param1 < 32768) {
@@ -619,7 +619,7 @@ class PacketBuffer extends IntrusiveNode {
         throw new IllegalArgumentException();
     }
 
-    final void c(int param0, byte param1) {
+    final void writeShortLengthPrefix(int param0, byte param1) {
         this.payload[this.position + (-param0 - 2)] = (byte)(param0 >> 8);
         if (param1 != -92) {
           String var4 = (String) null;
@@ -628,7 +628,7 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[-1 + (this.position - param0)] = (byte)param0;
     }
 
-    final String a(int param0) {
+    final String readString(int param0) {
         int fieldTemp$1 = 0;
         int var2;
         int var3;
@@ -649,7 +649,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$1] != 0);
         var4 = -1 + (-var3 + this.position);
         if (0 != var4) {
-          return tl.a(var4, param0 - 18272, this.payload, var3);
+          return RankingsScreen.a(var4, param0 - 18272, this.payload, var3);
         }
         return "";
     }
@@ -668,7 +668,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + o.a(this.payload, var4, -24984, param1.length(), 0, this.position);
+          this.position = this.position + UiComponentNode.encodeCp1252(this.payload, var4, -24984, param1.length(), 0, this.position);
           if (param0) {
             this.payload = (byte[]) null;
           }
@@ -676,16 +676,16 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ge.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ge.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(long param0, int param1) {
+    final void writeLong40(long param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(int)(param0 >> 32);
         if (param1 != 24136) {
-          this.i(-128);
+          this.readSignedSmart(-128);
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
@@ -704,12 +704,12 @@ class PacketBuffer extends IntrusiveNode {
     final int readUnsignedShort(int obfuscationGuard) {
         this.position = this.position + 2;
         if (obfuscationGuard != -1034) {
-          field_s = (vh) null;
+          field_s = (UiComponent) null;
         }
         return (this.payload[-2 + this.position] << 8 & 65280) + (this.payload[this.position - 1] & 255);
     }
 
-    final int c(int param0) {
+    final int readSmartInt(int param0) {
         int var2 = -95 / ((9 - param0) / 59);
         if (0 > this.payload[this.position]) {
           return this.readInt(true) & 2147483647;
@@ -718,7 +718,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int capacity) {
-        this.payload = ja.a(capacity, -1);
+        this.payload = ja.acquireByteArray(capacity, -1);
         this.position = 0;
     }
 
@@ -727,14 +727,14 @@ class PacketBuffer extends IntrusiveNode {
           this.position = 0;
           this.payload = payload;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ge.<init>(" + (payload != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ge.<init>(" + (payload != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void c(int param0, int param1) {
+    final void writeSignedSmart(int param0, int param1) {
         if (param1 < 64 &&
           -64 <= param1) {
-          this.a(param1 + 64, false);
+          this.writeByte(param1 + 64, false);
           return;
         }
         if (param1 < 16384 &&
@@ -789,22 +789,22 @@ class PacketBuffer extends IntrusiveNode {
             if (!param1.field_g) {
               if (param1.field_m == 0 &&
                 param1.field_e == 0) {
-                var3Lifetime1 = nr.a(new String[]{(String) (var2)}, -1, jl.field_a);
+                var3Lifetime1 = AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var2)}, -1, jl.privatequickchatToX);
               } else {
-                var3Lifetime1 = nr.a(new String[]{(String) (var2)}, -1, vh.field_S);
+                var3Lifetime1 = AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var2)}, -1, UiComponent.privatequickchatFromX);
               }
             }
           } else {
             if (param1.field_p == 0 &&
-              ej.field_l) {
-              var3Lifetime1 = "[" + sn.field_l + "] ";
+              JaggrabDownloader.field_l) {
+              var3Lifetime1 = "[" + BirthDateValidator.muChatLobby + "] ";
             }
             if (param1.field_p == 1) {
-              var3Lifetime1 = "[" + nr.a(new String[]{param1.field_n}, -1, th.field_c) + "] ";
+              var3Lifetime1 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{param1.field_n}, -1, th.xsGame) + "] ";
             }
             if (param1.field_p == 4 &&
-              null != kn.field_g) {
-              var3Lifetime1 = "[" + kn.field_g + "] ";
+              null != PlayerContextMenu.field_g) {
+              var3Lifetime1 = "[" + PlayerContextMenu.field_g + "] ";
             }
             if (param1.field_p == 3) {
               var3Lifetime1 = "[#" + param1.field_n + "] ";
@@ -825,7 +825,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw wm.a((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -842,12 +842,12 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param1);
-          this.position = this.position + o.a(this.payload, var4, param0 - 15038, param1.length(), 0, this.position);
+          this.position = this.position + UiComponentNode.encodeCp1252(this.payload, var4, param0 - 15038, param1.length(), 0, this.position);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ge.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ge.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -883,19 +883,19 @@ class PacketBuffer extends IntrusiveNode {
               var9 = var9 - (var11 + param2[var11 & 3] ^ (var10 << 4 ^ var10 >>> 5) + var10);
             }
             this.position = this.position - 8;
-            this.a(true, var9);
-            this.a(true, var10);
+            this.writeInt(true, var9);
+            this.writeInt(true, var10);
           }
           this.position = var5_int;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ge.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ge.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final void b(int param0, boolean param1) {
+    final void writeByteLengthPrefix(int param0, boolean param1) {
         this.payload[-1 - param0 + this.position] = (byte)param0;
         if (!param1) {
-          field_o = (String) null;
+          achievements = (String) null;
         }
     }
 
@@ -909,12 +909,12 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     static {
-        field_o = "Achievements";
-        field_m = "Remove friend";
-        field_r = "<%0> has won!";
-        field_w = "Spectate <%0>'s game";
-        field_x = "All players have left <%0>'s game.";
-        field_n = "Wants a rematch.";
+        achievements = "Achievements";
+        muLobbyFriendRm = "Remove friend";
+        mpXHaswon = "<%0> has won!";
+        spectateXsGame = "Spectate <%0>'s game";
+        muAllPlayersHaveLeft = "All players have left <%0>'s game.";
+        statusWantsARematch = "Wants a rematch.";
         field_p = new int[8192];
     }
 }

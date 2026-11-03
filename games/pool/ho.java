@@ -5,7 +5,7 @@ final class ho extends IntrusiveNode {
     int field_t;
     int[] field_m;
     int[] field_q;
-    static String[] field_u;
+    static String[] eightBallNumbers;
     int field_o;
     byte[][][] field_w;
     AsyncRequest[] field_n;
@@ -16,70 +16,70 @@ final class ho extends IntrusiveNode {
     static volatile int field_v;
 
     final static int a(byte param0, int param1, int param2) {
-        if (o.field_C == null) {
+        if (UiComponentNode.field_C == null) {
           return -1;
         }
         if (param0 > 0) {
           return -12;
         }
-        if (ir.field_n > param1) {
-          if (param1 < tn.field_o) {
+        if (BufferedFile.field_n > param1) {
+          if (param1 < RasterSnapshot.field_o) {
             return -1;
           }
-          if (o.field_C.field_z + tn.field_o <= param1) {
+          if (UiComponentNode.field_C.field_z + RasterSnapshot.field_o <= param1) {
             return -1;
           }
           if (param2 < ln.field_o) {
             return -1;
           }
-          if (ln.field_o + o.field_C.field_A <= param2) {
+          if (ln.field_o + UiComponentNode.field_C.field_A <= param2) {
             return -1;
           }
           return 1;
         }
-        if (ir.field_n + o.field_C.field_z <= param1) {
-          if (param1 < tn.field_o) {
+        if (BufferedFile.field_n + UiComponentNode.field_C.field_z <= param1) {
+          if (param1 < RasterSnapshot.field_o) {
             return -1;
           }
-          if (o.field_C.field_z + tn.field_o <= param1) {
+          if (UiComponentNode.field_C.field_z + RasterSnapshot.field_o <= param1) {
             return -1;
           }
           if (param2 < ln.field_o) {
             return -1;
           }
-          if (ln.field_o + o.field_C.field_A <= param2) {
+          if (ln.field_o + UiComponentNode.field_C.field_A <= param2) {
             return -1;
           }
           return 1;
         }
         if (oj.field_s <= param2 &&
-          param2 < oj.field_s + o.field_C.field_A) {
+          param2 < oj.field_s + UiComponentNode.field_C.field_A) {
           return 0;
         }
-        if (param1 < tn.field_o) {
+        if (param1 < RasterSnapshot.field_o) {
           return -1;
         }
-        if (o.field_C.field_z + tn.field_o <= param1) {
+        if (UiComponentNode.field_C.field_z + RasterSnapshot.field_o <= param1) {
           return -1;
         }
         if (param2 < ln.field_o) {
           return -1;
         }
-        if (ln.field_o + o.field_C.field_A > param2) {
+        if (ln.field_o + UiComponentNode.field_C.field_A > param2) {
           return 1;
         }
         return -1;
     }
 
     final static void c(byte param0) {
-        wa.l(23323);
+        ProgressDialog.l(23323);
         int var1 = 95 / ((param0 - 47) / 60);
-        af.a(sg.field_M[0].field_w, kj.field_j, ad.field_x, nk.field_n, (byte) 36, tk.field_i);
+        EightBallRules.a(ThemeSelectScreen.field_M[0].field_w, CueAim.field_j, ArchiveIndex.field_x, TranslatedUiText.field_n, (byte) 36, DualLinkNodeHashTable.field_i);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_s = null;
-        field_u = null;
+        eightBallNumbers = null;
         field_l = null;
         if (!param0) {
           field_s = (int[]) null;
@@ -90,7 +90,7 @@ final class ho extends IntrusiveNode {
     }
 
     static {
-        field_u = new String[]{"<col=ffffff>Cue ball</col>", "<col=ffff99>1: Spots</col>", "<col=9999ff>2: Spots</col>", "<col=ff9999>3: Spots</col>", "<col=cc99ff>4: Spots</col>", "<col=ffcc99>5: Spots</col>", "<col=99ff99>6: Spots</col>", "<col=cc9966>7: Spots</col>", "<col=999999>8: Black</col>", "<col=ffff99>9: Stripes</col>", "<col=9999ff>10: Stripes</col>", "<col=ff9999>11: Stripes</col>", "<col=cc99ff>12: Stripes</col>", "<col=ffcc99>13: Stripes</col>", "<col=99ff99>14: Stripes</col>", "<col=cc9966>15: Stripes</col>"};
+        eightBallNumbers = new String[]{"<col=ffffff>Cue ball</col>", "<col=ffff99>1: Spots</col>", "<col=9999ff>2: Spots</col>", "<col=ff9999>3: Spots</col>", "<col=cc99ff>4: Spots</col>", "<col=ffcc99>5: Spots</col>", "<col=99ff99>6: Spots</col>", "<col=cc9966>7: Spots</col>", "<col=999999>8: Black</col>", "<col=ffff99>9: Stripes</col>", "<col=9999ff>10: Stripes</col>", "<col=ff9999>11: Stripes</col>", "<col=cc99ff>12: Stripes</col>", "<col=ffcc99>13: Stripes</col>", "<col=99ff99>14: Stripes</col>", "<col=cc9966>15: Stripes</col>"};
         field_s = new int[4];
         field_v = 0;
     }

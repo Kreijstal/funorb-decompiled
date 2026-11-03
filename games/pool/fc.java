@@ -2,32 +2,32 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fc {
-    static String field_d;
-    static String field_a;
+    static String loginCreateTooltip;
+    static String muPlayRated;
     static int field_c;
-    static String field_e;
-    static wm field_b;
+    static String tutorialTitleEightBall;
+    static ReportAbuseDialog field_b;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == -43) {
-          field_d = null;
-          field_a = null;
+          loginCreateTooltip = null;
+          muPlayRated = null;
           field_b = null;
-          field_e = null;
+          tutorialTitleEightBall = null;
           return;
         }
-        field_d = (String) null;
-        field_d = null;
-        field_a = null;
+        loginCreateTooltip = (String) null;
+        loginCreateTooltip = null;
+        muPlayRated = null;
         field_b = null;
-        field_e = null;
+        tutorialTitleEightBall = null;
     }
 
     static {
         field_z = "fc.A(";
-        field_d = "Create your own free Jagex account";
-        field_a = "Play rated game";
-        field_e = "Eight-ball Tutorial";
+        loginCreateTooltip = "Create your own free Jagex account";
+        muPlayRated = "Play rated game";
+        tutorialTitleEightBall = "Eight-ball Tutorial";
     }
 }

@@ -5,17 +5,17 @@ final class hp {
     static long field_a;
     static int[] field_c;
     static Sprite field_b;
-    static String field_e;
+    static String playerX2AreOfferingRematch;
     static int[] field_d;
 
     final static boolean a(boolean param0) {
         if (param0) {
           hp.a(-113, false, -92, -109);
         }
-        return tq.a(false, c.field_d, di.field_a);
+        return tq.a(false, c.field_d, ResourceArchive.field_a);
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void openSupportPage(byte param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           String var3 = null;
@@ -28,7 +28,7 @@ final class hp {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-              param1.getAppletContext().showDocument(p.a((byte) 79, var2, param1), "_top");
+              param1.getAppletContext().showDocument(ModelInstance.a((byte) 79, var2, param1), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -36,7 +36,7 @@ final class hp {
             }
             if (param0 != 83) {
               var3 = (String) null;
-              hp.a((di) null, (String) null, -87, (String) null);
+              hp.formatProgressLabel((ResourceArchive) null, (String) null, -87, (String) null);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -49,7 +49,7 @@ final class hp {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -58,7 +58,7 @@ final class hp {
         }
     }
 
-    final static int[] a(int[] param0, byte param1) {
+    final static int[] copyIntArray(int[] param0, byte param1) {
         int var3 = 0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
@@ -90,11 +90,11 @@ final class hp {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static String a(di param0, String param1, int param2, String param3) {
+    final static String formatProgressLabel(ResourceArchive param0, String param1, int param2, String param3) {
         RuntimeException var4 = null;
         int[] var5 = null;
         String stackIn_3_0 = null;
@@ -108,15 +108,15 @@ final class hp {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.d(-40)) {
+          if (!param0.isIndexReady(-40)) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;
           }
           if (param2 != -641) {
             var5 = (int[]) null;
-            hp.a((int[]) null, (byte) 39);
+            hp.copyIntArray((int[]) null, (byte) 39);
           }
-          stackIn_7_0 = param3 + " - " + param0.b(0) + "%";
+          stackIn_7_0 = param3 + " - " + param0.getOverallProgress(0) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,14 +140,14 @@ final class hp {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_c = null;
-        field_e = null;
+        playerX2AreOfferingRematch = null;
         if (param0 > -31) {
           return;
         }
@@ -158,36 +158,36 @@ final class hp {
         int var4;
         int var5;
         int var6;
-        if (!fm.field_H) {
+        if (!ArrayWidgetGroup.field_H) {
           return;
         }
-        e.field_a.a(param1, false);
+        e.field_a.updateRoot(param1, false);
         var5 = -29 / ((param3 + 12) / 33);
-        var4 = im.field_Ub.i(-1) ? 1 : 0;
-        if (ne.field_s != 0 &&
+        var4 = LobbyPlayer.field_Ub.hasPressedItem(-1) ? 1 : 0;
+        if (MatchingTextValidator.field_s != 0 &&
           var4 == 0) {
           param1 = false;
           th.b(-1);
         }
         if (param1) {
-          im.field_Ub.a((byte) 86, param2, param0);
+          LobbyPlayer.field_Ub.processPressedItems((byte) 86, param2, param0);
         }
         if (var4 != 0) {
-          e.field_a.a(param1, false);
+          e.field_a.updateRoot(param1, false);
         }
-        var6 = im.field_Ub.g(-1) + im.field_Ub.field_sb;
+        var6 = LobbyPlayer.field_Ub.getOpenChainWidth(-1) + LobbyPlayer.field_Ub.screenX;
         if (var6 > 640) {
-          gj.field_G = gj.field_G + 5;
+          ProgressBarWidget.field_G = ProgressBarWidget.field_G + 5;
         } else {
           if (635 > var6 &&
-            gj.field_G > 0) {
-            gj.field_G = gj.field_G - 5;
+            ProgressBarWidget.field_G > 0) {
+            ProgressBarWidget.field_G = ProgressBarWidget.field_G - 5;
           }
         }
     }
 
     static {
-        field_e = "<%0> and <%1> are offering a rematch.";
+        playerX2AreOfferingRematch = "<%0> and <%1> are offering a rematch.";
         field_d = new int[8192];
     }
 }

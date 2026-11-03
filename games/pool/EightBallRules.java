@@ -1,0 +1,1141 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class EightBallRules extends GameRules {
+    static String muYouDeclinedInvite;
+    int[] field_g;
+    static int field_e;
+    private int[] field_f;
+
+    final boolean isPotLegal(int param0, byte param1, ShotRecord param2) {
+        int var4_int = 0;
+        boolean stackIn_13_0 = false;
+        boolean stackIn_17_0 = false;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var4 = null;
+        try {
+          if (param1 != 9) {
+            muYouDeclinedInvite = (String) null;
+          }
+          if (param0 == 0) {
+            return false;
+          }
+          if (param0 == 8) {
+            stackIn_17_0 = (param2.groupBefore == 2);
+            return stackIn_17_0;
+          }
+          var4_int = this.ballGroup(param0, 30554);
+          if (param2.groupBefore == -1) {
+            stackIn_13_0 = (var4_int == 0 ||
+              var4_int == 1);
+          } else {
+            stackIn_13_0 = (param2.groupBefore == var4_int);
+          }
+          return stackIn_13_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_22_0 = var4;
+          stackIn_22_1 = new StringBuilder().append("af.EA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
+        int var12 = 0;
+        int var6_int = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        int var7Lifetime1;
+        var14 = Pool.field_O;
+        try {
+          var6_int = 8 + param1 + 8 + 487 + param3;
+          ProgressDialog.field_hb.setBounds(3, 2147483647, 3, var6_int - 6, fl.field_q.height - 6);
+          var7 = -5 + ProgressDialog.field_hb.height;
+          ph.field_d.setBounds(-param2 + var7, 2147483647, 5, param3 + 2 + 485 + param1, param2);
+          TimeTrialSelectScreen.field_J.setBounds(0, 2147483647, param1, -param1 + (ph.field_d.width - NineBallRules.field_j.width), param2);
+          NineBallRules.field_j.setBounds(0, 2147483647, param1 + TimeTrialSelectScreen.field_J.width, NineBallRules.field_j.width, param2);
+          var7 = var7 - (2 + param2);
+          Js5ArchiveManager.field_b.setScrollPaneBounds(param3, -5 + var7, (byte) -112, 2, param3 + 2 + (485 + param1), 5, 5);
+          if (ThemeSelectScreen.field_J != null) {
+            ThemeSelectScreen.field_J.setWidgetBounds(Js5ArchiveManager.field_b.width, Js5ArchiveManager.field_b.localX, Js5ArchiveManager.field_b.height, false, Js5ArchiveManager.field_b.localY);
+          }
+          var8 = fl.field_q.width + (-param1 - var6_int);
+          var9 = var8 / 2;
+          if (param4 != 36) {
+            muYouDeclinedInvite = (String) null;
+          }
+          var10 = var9 + param0 + param1;
+          var11 = 0;
+          for (var12 = 0; var12 < 6; var12++) {
+            if (var12 >= 5 ||
+              il.field_g[var12] != null) {
+              var13 = var11 * (-6 + (fl.field_q.height + 2)) / (bq.field_m + 1) + 3;
+              var11++;
+              var7Lifetime1 = -var13 + 1 + (2 + (-6 + fl.field_q.height)) * var11 / (1 + bq.field_m);
+              if (5 > var12) {
+                il.field_g[var12].setBounds(var13, 2147483647, var6_int, var8, var7Lifetime1);
+                ln.field_v[var12].setBounds(0, param4 ^ 2147483611, param1, var9 - param1, var7Lifetime1);
+                AlignedIconLabel.field_Mb[var12].setBounds(param5, 2147483647, var9, param0, var7Lifetime1 - param5 - param5);
+                ta.field_b[var12].setBounds(param5, 2147483647, var10, -var10 + var8 - param1, -param5 + (var7Lifetime1 - param5));
+              } else {
+                d.field_e.setBounds(var13, 2147483647, var6_int, var8, var7Lifetime1);
+              }
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var6), "af.RA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    EightBallRules(PoolGameModel param0) {
+        super(param0);
+        try {
+          if (param0.playerCount >= 2) {
+            this.field_f = new int[]{-1, -1};
+          }
+          this.field_g = new int[]{-1, -1};
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "af.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void h(byte param0) {
+        muYouDeclinedInvite = null;
+        if (param0 >= -2) {
+          EightBallRules.a(-47, 110, -56, 55, 78);
+        }
+    }
+
+    final int nextPlayerIndex(ShotRecord param0, byte param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var9 = Pool.field_O;
+        try {
+          if (param1 <= 82) {
+            EightBallRules.a(66, 112, 38, -91, 125);
+          }
+          if (this.field_f == null) {
+            stackIn_13_0 = (1 + param0.playerIndex) % this.field_d.playerCount;
+            return stackIn_13_0;
+          }
+          var3_int = this.field_d.playerCount / 2;
+          var4 = param0.playerIndex / var3_int;
+          var5 = (var4 + 1) % 2;
+          var7 = 1;
+          while (true) {
+            if (var7 > var3_int) {
+              stackIn_11_0 = param0.playerIndex;
+              return stackIn_11_0;
+            }
+            var8 = (this.field_f[var5] + var7) % var3_int;
+            var6 = var3_int * var5 + var8;
+            if (0 != (1 << var6 & this.field_d.field_p)) {
+              var7++;
+              continue;
+            }
+            break;
+          }
+          this.field_f[var5] = var8;
+          stackIn_8_0 = var6;
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_16_0 = var3;
+          stackIn_16_1 = new StringBuilder().append("af.I(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void updateGroupLabels(int param0) {
+        if (param0 > -25) {
+          return;
+        }
+        DraggableWidget.field_S[10] = dq.field_a.groupName((byte) 96, 0);
+        DraggableWidget.field_S[11] = dq.field_a.groupName((byte) 40, 1);
+    }
+
+    final int b(int param0) {
+        int var2 = 90 % ((-79 - param0) / 38);
+        return 1;
+    }
+
+    private final boolean r(int param0) {
+        if (param0 != 9) {
+          return false;
+        }
+        return true;
+    }
+
+    private final int foulFlagsPottedOpponentBall(byte param0) {
+        if (param0 != 116) {
+          this.field_f = (int[]) null;
+        }
+        return this.baseResolutionFlags(4);
+    }
+
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        if (param1 != 64) {
+          EightBallRules.a(-37, true);
+        }
+        Sprite dupTemp$0 = ArchiveIndex.a(param3, param4, 7);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        Sprite dupTemp$1 = ArchiveIndex.a(param2, param4, 7);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
+        if (param0 != 0) {
+          var6[4] = ArchiveIndex.a(param0, 64, 7);
+        }
+        return var5;
+    }
+
+    private final int d(byte param0) {
+        int var2 = -75 % ((27 - param0) / 44);
+        return 0;
+    }
+
+    final int evaluateShot(byte param0) {
+        int stackIn_98_0 = 0;
+        int stackIn_99_1 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        IntrusiveDequeCursor var6_ref_aa;
+        int var7;
+        PotEvent var7_ref_cr;
+        int var8;
+        int var9_int;
+        IntrusiveDequeCursor var9;
+        PotEvent var10_ref_cr;
+        int var10;
+        int var11;
+        int var12;
+        ShotRecord var13;
+        ShotRecord var14;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var5Lifetime2;
+        var12 = Pool.field_O;
+        var13 = this.field_d.currentShot(76);
+        var14 = var13;
+        if (var14 == null) {
+          throw new IllegalStateException("Couldn't get the last shot to examine!");
+        }
+        if (var14.phase != 2) {
+          throw new IllegalStateException("Shot not finished yet, foo!");
+        }
+        var3 = var14.groupBefore;
+        var4 = 0;
+        if (this.field_d.isCueBallPotted((byte) 123)) {
+          var14.addEvent(3, -14, new int[]{this.field_d.field_A});
+          var14.field_t = true;
+          var4 = var4 | (this.foulFlagsCueBallPotted(1) | um.field_c);
+          var14.field_w = (byte)(var14.field_w - 1);
+        }
+        if (var14.field_n != 8) {
+          if (var14.field_n == -1) {
+            var14.addEvent(7, -14, new int[]{var13.playerIndex});
+            var14.field_t = true;
+            var4 = var4 | this.foulFlagsNoContact(-2);
+            var14.field_w = (byte)(var14.field_w - 1);
+          } else {
+            if (var3 != -1 &&
+              this.ballGroup(var14.field_n, 30554) != var3) {
+              var14.addEvent(1, -14, new int[]{var13.playerIndex});
+              var14.field_t = true;
+              var4 = var4 | this.foulFlagsOpponentBallFirst(true);
+              var14.field_w = (byte)(var14.field_w - 1);
+            }
+          }
+        } else {
+          if (var3 != 2) {
+            var14.addEvent(2, -14, new int[]{var13.playerIndex});
+            var14.field_t = true;
+            var4 = var4 | this.foulFlagsEightBallFirst(-17);
+            var14.field_w = (byte)(var14.field_w - 1);
+          }
+        }
+        boolean decompiledFrameRemainder1 = true;
+        boolean decompiledFrameCompleted0 = true;
+        if (!var14.pottedBalls.isEmpty(0)) {
+          var5 = var14.pottedBalls.size(45);
+          if (0 == var4 &&
+            var5 == 1 &&
+            8 == ((PotEvent) (var14.pottedBalls.last((byte) -25))).ballIndex &&
+            var3 == 2) {
+            return ag.field_e;
+          }
+          var6_ref_aa = new IntrusiveDequeCursor(var14.pottedBalls);
+          var7_ref_cr = (PotEvent) (var6_ref_aa.last((byte) -92));
+          while (true) {
+            if (var7_ref_cr == null) {
+              decompiledFrameCompleted0 = false;
+              break;
+            }
+            if (var7_ref_cr.ballIndex != 8) {
+              var7_ref_cr = (PotEvent) (var6_ref_aa.previous(-97));
+              continue;
+            }
+            break;
+          }
+          if (decompiledFrameCompleted0) {
+            var14.addEvent(5, -14, new int[]{this.field_d.field_A});
+            return Quaternion.field_e;
+          }
+        }
+        if (decompiledFrameCompleted0) {
+          var5Lifetime2 = 0;
+          var6 = 0;
+          var7 = 0;
+          for (var8 = 0; var8 < this.field_d.balls.length; var8++) {
+            if (0 < this.field_d.balls[var8].field_c) {
+              var5Lifetime2++;
+              var9_int = this.ballGroup(var8, 30554);
+              if (var9_int == var3) {
+                var6++;
+              }
+              if (var9_int != 0) {
+                if (var9_int == 1) {
+                  var7++;
+                }
+              } else {
+                var7++;
+              }
+            }
+          }
+          if (this.requiredCushionTouches(-91) > var5Lifetime2) {
+            if (0 == var5Lifetime2) {
+              var14.addEvent(12, -14, new int[]{});
+              var14.field_t = true;
+              var4 = var4 | this.foulFlagsNotEnoughCushions(0);
+            } else {
+              var14.addEvent(6, -14, new int[]{});
+              var14.field_t = true;
+              var4 = var4 | this.foulFlagsNotEnoughCushions(0);
+            }
+            decompiledFrameRemainder1 = false;
+          }
+          else {
+            if (var7 < this.d((byte) 87)) {
+              if (var7 != 0) {
+                var14.addEvent(14, -14, new int[]{});
+              } else {
+                var14.addEvent(13, -14, new int[]{});
+              }
+              var14.field_t = true;
+              var4 = var4 | this.e((byte) 91);
+            } else {
+              if (!(var6 >= this.p(89))) {
+                if (var6 != 0) {
+                  var14.addEvent(16, -14, new int[]{});
+                  var14.field_t = true;
+                  var4 = var4 | this.g((byte) -46);
+                } else {
+                  var14.addEvent(15, -14, new int[]{});
+                  var14.field_t = true;
+                  var4 = var4 | this.g((byte) -46);
+                }
+              }
+            }
+          }
+        }
+        var5Lifetime1 = -52 % ((param0 + 37) / 60);
+        if (var14.field_t &&
+          0 == (AccountWelcomePanel.field_Y & var4) &&
+          this.isTargetVisible((1 + this.field_d.field_A) % this.field_d.playerCount, -119)) {
+          var14.addEvent(11, -14, new int[]{});
+          var4 = this.f((byte) -30);
+        }
+        boolean decompiledFrameRemainder0 = true;
+        if (!var14.pottedBalls.isEmpty(0)) {
+          var6Lifetime1 = 0;
+          var7Lifetime1 = 0;
+          var8Lifetime1 = ((PotEvent) (var14.pottedBalls.last((byte) 109))).ballIndex;
+          var9 = new IntrusiveDequeCursor(var14.pottedBalls);
+          var10_ref_cr = (PotEvent) (var9.last((byte) -92));
+          while (var10_ref_cr != null) {
+            if (0 != (var10_ref_cr.ballIndex & 7)) {
+              if (var3 != -1) {
+                if (this.ballGroup(var10_ref_cr.ballIndex, 30554) == var3) {
+                  var14.field_w = (byte)(var14.field_w + 1);
+                  var6Lifetime1++;
+                } else {
+                  var14.field_w = (byte)(var14.field_w - 1);
+                  var7Lifetime1++;
+                }
+              } else {
+                if (this.areSameGroup(var8Lifetime1, var10_ref_cr.ballIndex, (byte) 35)) {
+                  var14.field_w = (byte)(var14.field_w + 1);
+                  var6Lifetime1++;
+                } else {
+                  var7Lifetime1++;
+                  var14.field_w = (byte)(var14.field_w + 1);
+                }
+              }
+            }
+            var10_ref_cr = (PotEvent) (var9.previous(-108));
+          }
+          if (var4 == 0 &&
+            var3 == -1) {
+            if (var7Lifetime1 <= 0) {
+              this.assignGroups((int) this.ballGroup(var8Lifetime1, 30554), -1, var14.playerIndex);
+              stackIn_98_0 = var4;
+              if (this.r(9)) {
+                stackIn_99_1 = MarkerSliderPainter.field_j;
+              } else {
+                stackIn_99_1 = 0;
+              }
+              var4 = stackIn_98_0 | stackIn_99_1;
+              var4 = var4 | i.field_m;
+              decompiledFrameRemainder0 = false;
+            }
+            else {
+              var10 = this.v(-13243);
+              var11 = 3 & var10;
+              if (var11 != 0) {
+                if (var11 == 1) {
+                  var4 = var4 | (ClientException.field_b | i.field_m);
+                }
+              } else {
+                var4 = var4 | i.field_m;
+                this.assignGroups((int) this.ballGroup(var8Lifetime1, 30554), -1, var14.playerIndex);
+              }
+              if ((8 & var10) == 8) {
+                var4 = var4 | MarkerSliderPainter.field_j;
+              }
+              return var4;
+            }
+          }
+          if (decompiledFrameRemainder0) {
+            if (var7Lifetime1 > 0) {
+              var14.addEvent(4, -14, new int[]{this.field_d.field_A});
+              var14.field_t = true;
+              var4 = var4 | this.foulFlagsPottedOpponentBall((byte) 116);
+            } else {
+              if (var4 == 0 &&
+                0 < var6Lifetime1) {
+                var4 = var4 | MarkerSliderPainter.field_j;
+              }
+            }
+          }
+        }
+        if (!this.field_d.shouldChangePlayer(false, (byte) 69, var14)) {
+          if (this.isTargetVisible(var14.playerIndex % this.field_d.playerCount, -57)) {
+            var14.field_w = (byte)(var14.field_w - 1);
+          }
+        } else {
+          if (this.isTargetVisible((1 + var14.playerIndex) % this.field_d.playerCount, -122)) {
+            var14.field_w = (byte)(var14.field_w + 1);
+          }
+        }
+        return var4;
+    }
+
+    final int[] rackOrder(int param0, byte param1) {
+        if (param1 != -32) {
+          field_e = -117;
+        }
+        return uj.field_a;
+    }
+
+    private final boolean areSameGroup(int param0, int param1, byte param2) {
+        boolean stackIn_9_0 = false;
+        if (param2 <= 25) {
+          this.field_g = (int[]) null;
+        }
+        if ((param0 & 7) != 0 &&
+          (param1 & 7) != 0) {
+          stackIn_9_0 = (this.ballGroup(param0, 30554) == this.ballGroup(param1, 30554));
+          return stackIn_9_0;
+        }
+        return false;
+    }
+
+    final int sideMask(byte param0, int param1) {
+        int var5 = 0;
+        int var3;
+        int var4;
+        int var6;
+        int var7;
+        var7 = Pool.field_O;
+        if (param0 >= -113) {
+          return -16;
+        }
+        var3 = this.field_d.playerCount / 2;
+        param1 = param1 % 2;
+        var4 = 0;
+        for (var5 = 0; var3 > var5; var5++) {
+          var6 = var5 + var3 * param1;
+          if (this.isPlayerActive((byte) 36, var6) &&
+            (1 << var6 & this.field_d.field_p) == 0) {
+            var4 = var4 | 1 << var6;
+          }
+        }
+        return var4;
+    }
+
+    final boolean isTargetVisible(int param0, int param1) {
+        int[] stackIn_2_0 = null;
+        int stackIn_3_1 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var6Lifetime1;
+        var9 = Pool.field_O;
+        this.field_d.computeAimTargets(12226, 0);
+        var3 = 1;
+        var4 = 1;
+        stackIn_2_0 = this.field_g;
+        if (this.field_d.playerCount == 1) {
+          stackIn_3_1 = 0;
+        } else {
+          stackIn_3_1 = param0 / (this.field_d.playerCount >> 1);
+        }
+        var5 = stackIn_2_0[stackIn_3_1];
+        if (param1 > -28) {
+          muYouDeclinedInvite = (String) null;
+        }
+        {
+          if (var5 == -1) {
+            var10 = 1;
+            var6 = var10;
+            while (16 > var10) {
+              if (var10 != 8 &&
+                this.field_d.field_r[var10].field_j) {
+                var3 = 0;
+                break;
+              }
+              var10++;
+            }
+          } else {
+            var6Lifetime1 = (var5 << 3) + 1;
+            var7 = var6Lifetime1 + 7;
+            var8 = var6Lifetime1;
+            while (true) {
+              boolean decompiledFrameRemainder0 = true;
+              if (var7 > var8) {
+                if (this.field_d.balls[var8].inPlay) {
+                  var4 = 0;
+                  if (this.field_d.field_r[var8].field_j) {
+                    var3 = 0;
+                    decompiledFrameRemainder0 = false;
+                  }
+                }
+                if (decompiledFrameRemainder0) {
+                  var8++;
+                  continue;
+                }
+              }
+              if (var4 == 0) {
+                break;
+              }
+              if (!this.field_d.field_r[8].field_j) {
+                break;
+              }
+              var3 = 0;
+              break;
+            }
+          }
+        }
+        return var3 != 0;
+    }
+
+    private final int foulFlagsNoContact(int param0) {
+        if (param0 != -2) {
+          return -119;
+        }
+        return this.baseResolutionFlags(4);
+    }
+
+    private final int baseResolutionFlags(int param0) {
+        if (param0 != 4) {
+          ShotRecord var3 = (ShotRecord) null;
+          this.nextPlayerIndex((ShotRecord) null, (byte) 56);
+        }
+        return ThemeSelectScreen.field_O | ll.field_f;
+    }
+
+    private final int p(int param0) {
+        if (param0 <= 46) {
+          ShotRecord var3 = (ShotRecord) null;
+          this.targetBallSprite((ShotRecord) null, -66);
+          return 0;
+        }
+        return 0;
+    }
+
+    final static void a(int param0, boolean param1) {
+        oi var3 = null;
+        fl var4 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        try {
+          var3 = (oi) (qr.field_a.last((byte) 69));
+          while (var3 != null) {
+            ra.a(param0, var3, -102);
+            var3 = (oi) (qr.field_a.previous((byte) -5));
+          }
+          if (!param1) {
+            return;
+          }
+          var4 = (fl) (cq.field_g.last((byte) 83));
+          while (var4 != null) {
+            pm.a(var4, param0, true);
+            var4 = (fl) (cq.field_g.previous((byte) -5));
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "af.HB(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    final byte ballGroup(int param0, int param1) {
+        if (param1 != 30554) {
+          field_e = -70;
+        }
+        if (0 == param0) {
+          return (byte) -1;
+        }
+        if (param0 == 8) {
+          return (byte) 2;
+        }
+        if (0 > param0 ||
+          param0 > 16) {
+          return (byte) -1;
+        }
+        return (byte)((param0 & 9) >> 3);
+    }
+
+    final void initializeShot(ShotRecord param0, boolean param1) {
+        int var3_int = 0;
+        try {
+          super.initializeShot(param0, param1);
+          if (null != this.field_f) {
+            var3_int = this.field_d.playerCount / 2;
+            this.field_f[this.teamIndex(-125, param0.playerIndex)] = param0.playerIndex % var3_int;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "af.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final int groupMessageIndex(ShotRecord param0, int param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var5 = Pool.field_O;
+        try {
+          var3_int = 34 % ((param1 + 32) / 40);
+          var4 = param0.groupBefore;
+          if (var4 == -1) {
+            stackIn_8_0 = 9;
+            return stackIn_8_0;
+          }
+          if (var4 == 0) {
+            stackIn_10_0 = 10;
+            return stackIn_10_0;
+          }
+          if (var4 == 1) {
+            return 11;
+          }
+          if (var4 == 2) {
+            return 12;
+          }
+          stackIn_12_0 = -1;
+          return stackIn_12_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_15_0 = var3;
+          stackIn_15_1 = new StringBuilder().append("af.CA(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    private final int foulFlagsNotEnoughCushions(int param0) {
+        if (param0 != 0) {
+          this.field_f = (int[]) null;
+        }
+        return this.field_d.currentShot(46).breakSeed < 0 ? this.baseResolutionFlags(4) : MenuScreen.field_F | ThemeSelectScreen.field_O;
+    }
+
+    private final int foulFlagsOpponentBallFirst(boolean param0) {
+        if (!param0) {
+          return 115;
+        }
+        return this.baseResolutionFlags(4);
+    }
+
+    final Sprite targetBallSprite(ShotRecord param0, int param1) {
+        int var3_int = 0;
+        int var4 = 0;
+        Sprite stackIn_6_0 = null;
+        Sprite stackIn_15_0 = null;
+        Sprite stackIn_17_0 = null;
+        Sprite stackIn_19_0 = null;
+        Sprite stackIn_21_0 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        var4 = Pool.field_O;
+        try {
+          if (param1 != 1) {
+            this.field_f = (int[]) null;
+          }
+          if (param0.groupBefore == -1) {
+            stackIn_6_0 = ClassicBallSkin.field_n;
+            return stackIn_6_0;
+          }
+          if (dq.field_a instanceof ClassicBallSkin) {
+            var3_int = param0.groupBefore;
+            if (0 == var3_int) {
+              stackIn_15_0 = dq.field_a.field_e[1];
+              return stackIn_15_0;
+            }
+            if (var3_int == 1) {
+              stackIn_17_0 = dq.field_a.field_e[10];
+              return stackIn_17_0;
+            }
+            if (var3_int == 2) {
+              stackIn_19_0 = dq.field_a.field_e[8];
+              return stackIn_19_0;
+            }
+          }
+          stackIn_21_0 = dq.field_a.field_e[param0.groupBefore];
+          return stackIn_21_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_24_0 = var3;
+          stackIn_24_1 = new StringBuilder().append("af.JA(");
+          if (param0 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final boolean showsTargetBall(int param0) {
+        if (param0 <= 113) {
+          return true;
+        }
+        return true;
+    }
+
+    private final int v(int param0) {
+        if (param0 != -13243) {
+          field_e = 18;
+        }
+        return 9;
+    }
+
+    final boolean isBallInGroup(int param0, byte param1, int param2) {
+        if (param1 <= 122) {
+          this.b(-73);
+        }
+        return this.ballMatchesGroup(param0, (byte) 122, param2);
+    }
+
+    private final int requiredCushionTouches(int param0) {
+        int var2 = -15 % ((-49 - param0) / 40);
+        return this.field_d.currentShot(106).breakSeed < 0 ? 0 : 1;
+    }
+
+    final int sideCount(int param0) {
+        if (param0 <= 64) {
+          this.field_g = (int[]) null;
+        }
+        return 2;
+    }
+
+    private final int foulFlagsCueBallPotted(int param0) {
+        if (param0 != 1) {
+          return -95;
+        }
+        return this.baseResolutionFlags(param0 ^ 5) | AccountWelcomePanel.field_R;
+    }
+
+    private final boolean ballMatchesGroup(int param0, byte param1, int param2) {
+        boolean stackIn_12_0 = false;
+        boolean stackIn_16_0 = false;
+        if (param1 < 19) {
+          return true;
+        }
+        if (param0 == -1) {
+          stackIn_16_0 = ((param2 & 7) != 0);
+          return stackIn_16_0;
+        }
+        if (param0 == 2) {
+          return (8 == param2);
+        }
+        stackIn_12_0 = (0 != (param2 & 7)) && ((1 & param2 >> 3) == param0);
+        return stackIn_12_0;
+    }
+
+    final int m(int param0) {
+        if (param0 != 0) {
+          EightBallRules.a(108, false);
+        }
+        return 1;
+    }
+
+    private final boolean isGroupCleared(int param0, int param1) {
+        int var3 = 0;
+        int var4 = Pool.field_O;
+        if (param0 != 85884769) {
+          return false;
+        }
+        for (var3 = 1 + (param1 << 3); (param1 << 3) + 8 > var3; var3++) {
+          if (this.field_d.balls[var3].inPlay) {
+            return false;
+          }
+        }
+        return true;
+    }
+
+    final void assignGroups(int param0, int param1, int param2) {
+        int discarded$0 = 0;
+        int var4 = this.field_d.playerCount != 1 ? param2 / (this.field_d.playerCount >> 1) : 0;
+        this.field_g[var4] = param0;
+        if (param1 != -1) {
+          discarded$0 = this.foulFlagsPottedOpponentBall((byte) 2);
+        }
+        this.field_g[1 - var4] = 1 - param0;
+    }
+
+    final int ballCount(int param0) {
+        if (param0 != 26840) {
+          return -37;
+        }
+        return 16;
+    }
+
+    final int initialBallInHandMode(boolean param0) {
+        if (param0) {
+          return 0;
+        }
+        return 1;
+    }
+
+    final boolean isFirstContactLegal(ShotRecord param0, int param1) {
+        int var3_int = 0;
+        int var4 = 0;
+        boolean stackIn_12_0 = false;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          var3_int = this.ballGroup(param0.field_n, 30554);
+          if (param1 > -33) {
+            return true;
+          }
+          var4 = param0.groupBefore;
+          if (-1 != var4) {
+            stackIn_12_0 = (var3_int == var4);
+          } else {
+            stackIn_12_0 = (var3_int == 0 ||
+              1 == var3_int);
+          }
+          return stackIn_12_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_15_0 = var3;
+          stackIn_15_1 = new StringBuilder().append("af.C(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    private final int f(byte param0) {
+        if (param0 != -30) {
+          this.initialGroup(-100);
+        }
+        return ThemeSelectScreen.field_O | ll.field_f | AccountWelcomePanel.field_R | BitmapTextLayout.field_j;
+    }
+
+    final String joinPlayerNames(int param0, String[] param1) {
+        int var5 = 0;
+        Object stackIn_3_0 = null;
+        String stackIn_14_0 = null;
+        String stackIn_16_0 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        String[][] var4 = null;
+        int var6 = 0;
+        int var7 = 0;
+        var7 = Pool.field_O;
+        try {
+          if (this.field_d.playerCount <= param0) {
+            stackIn_3_0 = null;
+            return (String) (stackIn_3_0);
+          }
+          if (2 == this.field_d.playerCount) {
+            stackIn_16_0 = AccountWelcomePanel.substituteTemplateArguments(param1, param0 ^ -2, w.playerVsPlayer);
+            return stackIn_16_0;
+          }
+          var3_int = param1.length >> 1;
+          var4 = new String[2][var3_int];
+          for (var5 = 0; var5 < param1.length; var5++) {
+            var6 = var5 % var3_int;
+            if (var6 != 0) {
+              if (var3_int - 1 != var6) {
+                var4[var5 / var3_int][var6] = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1[var5]}, param0 - 2, bc.playerListMiddle);
+              } else {
+                var4[var5 / var3_int][var6] = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1[var5]}, param0 - 2, DialogLayer.playerListLast);
+              }
+            } else {
+              var4[var5 / var3_int][var6] = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1[var5]}, -1, en.playerListFirst);
+            }
+          }
+          stackIn_14_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{aq.joinCharSequences(-107, (CharSequence[]) ((Object) var4[0])), aq.joinCharSequences(-86, (CharSequence[]) ((Object) var4[1]))}, -1, AlternateLongAndTextLoginPayload.playerListVsPlayerList);
+          return stackIn_14_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_19_0 = var3;
+          stackIn_19_1 = new StringBuilder().append("af.P(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+        }
+    }
+
+    private final int foulFlagsEightBallFirst(int param0) {
+        if (param0 != -17) {
+          this.field_g = (int[]) null;
+        }
+        return this.baseResolutionFlags(4);
+    }
+
+    final int pottedBallCount(int param0, int param1) {
+        int var4 = 0;
+        int var3;
+        if (param1 <= 119) {
+          this.field_g = (int[]) null;
+        }
+        var3 = 0;
+        for (var4 = 1 + (param0 << 3); var4 < (param0 << 3) + 8; var4++) {
+          if (!this.field_d.balls[var4].inPlay) {
+            var3++;
+          }
+        }
+        return var3;
+    }
+
+    final static int sineLookup(byte param0, int param1) {
+        if (param0 > -120) {
+          return 48;
+        }
+        param1 = param1 & 8191;
+        if (param1 < 4096) {
+          return param1 >= 2048 ? wf.field_b[-param1 + 4096] : wf.field_b[param1];
+        }
+        return param1 < 6144 ? -wf.field_b[-4096 + param1] : -wf.field_b[8192 - param1];
+    }
+
+    final void readRulesState(PacketBuffer param0, boolean param1) {
+        int var3_int = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          if (!param1) {
+            this.pottedBallCount(99, 46);
+          }
+          var3_int = param0.readByte((byte) 105);
+          this.field_g[0] = var3_int >> 7;
+          if (this.field_g[0] != -1) {
+            this.field_g[1] = 1 - this.field_g[0];
+          } else {
+            this.field_g[1] = -1;
+          }
+          if (null != this.field_f) {
+            this.field_f[0] = ArchiveLoadSequence.b(7, var3_int);
+            if (this.field_f[0] == 7) {
+              this.field_f[0] = -1;
+            }
+            this.field_f[1] = ArchiveLoadSequence.b(var3_int, 63) >> 3;
+            if (this.field_f[1] != 7) {
+              return;
+            }
+            this.field_f[1] = -1;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_14_0 = var3;
+          stackIn_14_1 = new StringBuilder().append("af.M(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final int groupOfPlayer(int param0, int param1) {
+        if (param0 != 22533) {
+          EightBallRules.a(115, -64, -57, 83, -73);
+        }
+        return this.field_g[1 == this.field_d.playerCount ? 0 : param1 / (this.field_d.playerCount >> 1)];
+    }
+
+    private final int g(byte param0) {
+        if (param0 != -46) {
+          return -121;
+        }
+        return this.foulFlagsNotEnoughCushions(0);
+    }
+
+    private final int e(byte param0) {
+        boolean discarded$0 = false;
+        if (param0 <= 52) {
+          discarded$0 = this.areSameGroup(11, -35, (byte) -35);
+        }
+        return this.foulFlagsNotEnoughCushions(0);
+    }
+
+    final int timeoutResolution(int param0) {
+        int var3;
+        int var4;
+        int var5;
+        ShotRecord var6;
+        int var3Lifetime1;
+        var5 = Pool.field_O;
+        var6 = this.field_d.currentShot(param0 + 118);
+        var3 = 0;
+        var4 = var6.ballInHandMode;
+        if (2 != var4) {
+          if (var4 != 3) {
+            if (var4 != 1) {
+              var3Lifetime1 = this.baseResolutionFlags(4);
+            } else {
+              var3Lifetime1 = this.baseResolutionFlags(param0 ^ -5) | AccountWelcomePanel.field_R;
+            }
+          } else {
+            var3Lifetime1 = this.baseResolutionFlags(4) | AccountWelcomePanel.field_V;
+          }
+        } else {
+          var3Lifetime1 = this.baseResolutionFlags(4) | AccountWelcomePanel.field_Q;
+        }
+        var6.addEvent(17, param0 - 13, new int[]{var6.playerIndex});
+        if (this.isTargetVisible((var6.playerIndex - param0) % this.field_d.playerCount, -112)) {
+          var6.addEvent(11, -14, new int[]{});
+          var3Lifetime1 = this.f((byte) -30);
+        }
+        var6.field_t = true;
+        return var3Lifetime1;
+    }
+
+    final int teamIndex(int param0, int param1) {
+        if (param0 > -36) {
+          this.field_f = (int[]) null;
+        }
+        return 1 != this.field_d.playerCount ? param1 / (this.field_d.playerCount >> 1) : 0;
+    }
+
+    final int initialGroup(int param0) {
+        int var2 = this.groupOfPlayer(22533, this.field_d.field_A);
+        if (param0 != -1) {
+          muYouDeclinedInvite = (String) null;
+        }
+        if ((var2 == 0 || var2 == 1) &&
+          this.isGroupCleared(85884769, var2)) {
+          return 2;
+        }
+        return var2;
+    }
+
+    static {
+        muYouDeclinedInvite = "You have declined the invitation.";
+    }
+}

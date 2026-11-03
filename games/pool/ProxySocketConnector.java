@@ -7,10 +7,10 @@ import java.util.*;
 final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector field_f;
     static na field_e;
-    static int field_h;
+    static int keycodeDefaultDown2;
     static long field_g;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != 15296) {
           String var2 = (String) null;
@@ -18,7 +18,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
     }
 
-    private final java.net.Socket a(int param0, java.net.Proxy param1) throws IOException {
+    private final java.net.Socket connectViaProxy(int param0, java.net.Proxy param1) throws IOException {
         java.net.Socket stackIn_3_0 = null;
         java.net.Socket stackIn_16_0 = null;
         Object stackIn_19_0 = null;
@@ -101,7 +101,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class ProxySocketConnector extends SocketConnector {
             var6.write(("CONNECT " + this.field_c + ":" + this.field_a + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           }
           if (param1 != 25) {
-            ProxySocketConnector.c(-94);
+            ProxySocketConnector.releaseStatics(-94);
           }
           boolean decompiledFrameRemainder0 = true;
           var6.flush();
@@ -173,11 +173,11 @@ final class ProxySocketConnector extends SocketConnector {
                   if (var11 != -1) {
                     var8Lifetime2Lifetime2 = var15.substring(0, var11);
                   }
-                  throw new lo(var8Lifetime2Lifetime2);
+                  throw new ProxyAuthenticationRequiredException(var8Lifetime2Lifetime2);
                 }
                 break;
               }
-              throw new lo("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_12_0 = var13;
@@ -205,7 +205,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -242,7 +242,7 @@ final class ProxySocketConnector extends SocketConnector {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        lo var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = Pool.field_O;
@@ -296,15 +296,15 @@ final class ProxySocketConnector extends SocketConnector {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (lo) null;
-            var12 = this.a(-6589, var11);
+            if (false) throw (ProxyAuthenticationRequiredException) null;
+            var12 = this.connectViaProxy(-6589, var11);
             if (var12 != null) {
               stackIn_24_0 = var12;
               return stackIn_24_0;
             }
-          } catch (lo decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (lo) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -321,13 +321,13 @@ final class ProxySocketConnector extends SocketConnector {
         String var1 = null;
         if (ro.field_e) {
           if (d.field_d != null) {
-            d.field_d.k(17);
+            d.field_d.dismissDialog(17);
           }
-          var1 = ve.d(120);
-          vj.field_j = new ui(var1, (String) null, true, false, param0);
-          wd.field_Ub.b(tn.field_n, 30000);
-          tn.field_n.d(vj.field_j, 30);
-          tn.field_n.b(param0);
+          var1 = BitmapTextLayout.d(120);
+          TextLineLayout.field_j = new LoginForm(var1, (String) null, true, false, param0);
+          TabbedPane.field_Ub.showDialog(RasterSnapshot.field_n, 30000);
+          RasterSnapshot.field_n.replaceContent(TextLineLayout.field_j, 30);
+          RasterSnapshot.field_n.finishTransition(param0);
           return;
         }
         throw new IllegalStateException();
@@ -339,19 +339,19 @@ final class ProxySocketConnector extends SocketConnector {
           if (param0 >= -58) {
             field_e = (na) null;
           }
-          fm.field_I = param2;
+          ArrayWidgetGroup.field_I = param2;
           hn.field_b = 2;
           var5 = (CharSequence) ((Object) param2);
-          di.field_a = hq.a(88, var5);
+          ResourceArchive.field_a = TutorialController.normalizeDisplayName(88, var5);
           c.field_d = param1;
           DualLinkNode.field_p = true;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "kr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_h = 99;
+        keycodeDefaultDown2 = 99;
         field_e = new na();
     }
 

@@ -5,16 +5,16 @@ final class ie {
     static String field_c;
     static int[] field_d;
     static int field_g;
-    static String field_i;
+    static String tutorialCameraRecentre;
     static String field_e;
-    static String field_b;
+    static String accept;
     static int field_h;
     static int[][] field_a;
     static PcmSample field_f;
 
     final static void a(boolean param0, int param1, int param2) {
         int fieldTemp$0 = 0;
-        lk stackIn_21_0 = null;
+        ChatMessageLine stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_22_2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -23,37 +23,37 @@ final class ie {
         int var4 = 0;
         int var5 = 0;
         Sprite var6 = null;
-        aa var7 = null;
-        lk var8 = null;
+        IntrusiveDequeCursor var7 = null;
+        ChatMessageLine var8 = null;
         try {
-          if (ne.field_r.c(0)) {
+          if (MatchingTextValidator.field_r.isEmpty(0)) {
             return;
           }
           var3_int = param0 ? 1 : 0;
           var4 = 0;
           var5 = 0;
-          var6 = ((lk) (ne.field_r.c((byte) 63))).field_n;
+          var6 = ((ChatMessageLine) (MatchingTextValidator.field_r.last((byte) 63))).renderedSprite;
           if (var6 != null) {
             param1 = param1 - (var6.field_A >> 1);
-            if (gg.field_f >= param1 &&
+            if (DebouncedValidationProvider.field_f >= param1 &&
               wn.field_i >= param2 &&
               230 + param2 >= wn.field_i &&
-              gg.field_f <= param1 + var6.field_A) {
-              if (eq.field_W != -1) {
-                var5 = -wn.field_i + eq.field_W;
+              DebouncedValidationProvider.field_f <= param1 + var6.field_A) {
+              if (DateInputWidget.field_W != -1) {
+                var5 = -wn.field_i + DateInputWidget.field_W;
               }
-              eq.field_W = wn.field_i;
+              DateInputWidget.field_W = wn.field_i;
               var3_int = 1;
             } else {
-              eq.field_W = -1;
+              DateInputWidget.field_W = -1;
             }
           }
-          var7 = new aa(ne.field_r);
-          var8 = (lk) (var7.b((byte) -92));
+          var7 = new IntrusiveDequeCursor(MatchingTextValidator.field_r);
+          var8 = (ChatMessageLine) (var7.last((byte) -92));
           while (var8 != null &&
             var4 < 230) {
-            if (var8.field_n == null) {
-              var8.c(-1);
+            if (var8.renderedSprite == null) {
+              var8.renderSprite(-1);
               return;
             }
             stackIn_21_0 = var8;
@@ -64,27 +64,27 @@ final class ie {
               stackIn_22_2 = var8.field_q;
             }
             stackIn_21_0.field_p = stackIn_21_1 - stackIn_22_2;
-            if (var8.field_p < -var8.field_n.field_z) {
+            if (var8.field_p < -var8.renderedSprite.field_z) {
               fieldTemp$0 = var8.field_l - 1;
               var8.field_l = var8.field_l - 1;
               if (fieldTemp$0 == 0) {
                 var8.unlink((byte) -117);
               } else {
-                var8.field_p = var8.field_p + (4 + var8.field_n.field_z);
+                var8.field_p = var8.field_p + (4 + var8.renderedSprite.field_z);
               }
             }
-            var4 = var8.field_l * (4 + var8.field_n.field_z) + var8.field_p;
-            var8 = (lk) (var7.b(-86));
+            var4 = var8.field_l * (4 + var8.renderedSprite.field_z) + var8.field_p;
+            var8 = (ChatMessageLine) (var7.previous(-86));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var3), "ie.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "ie.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static boolean a(byte param0, java.applet.Applet param1) {
+    final static boolean loadBrowserCookies(byte param0, java.applet.Applet param1) {
         try {
           int var5 = 0;
           String var2 = null;
@@ -99,7 +99,7 @@ final class ie {
           Throwable var2_ref = null;
           RuntimeException var2_ref2 = null;
           try {
-            if (iq.field_j) {
+            if (RasterBuffer.field_j) {
               return true;
             }
             try {
@@ -107,8 +107,8 @@ final class ie {
                 ie.a(true, true, -103, -121);
               }
               var2 = "tuhstatbut";
-              var3 = (String) (mo.a((byte) -88, "getcookies", param1));
-              var4 = jc.a(30634, var3, ';');
+              var3 = (String) (JavaScriptBridge.callWindowFunction((byte) -88, "getcookies", param1));
+              var4 = jc.splitString(30634, var3, ';');
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -132,7 +132,7 @@ final class ie {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -141,7 +141,7 @@ final class ie {
         }
     }
 
-    final static void a(int param0, int[] param1, eg param2) {
+    final static void a(int param0, int[] param1, MeshBuilder param2) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -153,10 +153,10 @@ final class ie {
           if (param0 != -2656) {
             ie.a(true, -83, -119);
           }
-          d.a(param2, -23109);
-          param1[0] = (int)Math.ceil((double)(param2.field_w - param2.field_D) / ((double)nc.field_Y.length / 2.5));
-          param1[1] = (int)Math.ceil((double)(param2.field_S - param2.field_y) / ((double)nc.field_Y.length / 2.5));
-          param1[2] = (int)Math.ceil((double)(param2.field_x - param2.field_V) / ((double)nc.field_Y.length / 2.5));
+          d.computeMeshBounds(param2, -23109);
+          param1[0] = (int)Math.ceil((double)(param2.field_w - param2.field_D) / ((double)ModelMesh.field_Y.length / 2.5));
+          param1[1] = (int)Math.ceil((double)(param2.field_S - param2.field_y) / ((double)ModelMesh.field_Y.length / 2.5));
+          param1[2] = (int)Math.ceil((double)(param2.field_x - param2.field_V) / ((double)ModelMesh.field_Y.length / 2.5));
           if (0 == param1[1]) {
             param1[1] = 1;
           }
@@ -183,7 +183,7 @@ final class ie {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -191,13 +191,13 @@ final class ie {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -13) {
           return;
         }
-        field_i = null;
+        tutorialCameraRecentre = null;
         field_c = null;
-        field_b = null;
+        accept = null;
         field_a = (int[][]) null;
         field_f = null;
         field_e = null;
@@ -205,70 +205,70 @@ final class ie {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
-        DualLinkNode.a(tk.field_i, kj.field_j, param0, param1, param2 + 21166, ad.field_x, param3);
+        DualLinkNode.a(DualLinkNodeHashTable.field_i, CueAim.field_j, param0, param1, param2 + 21166, ArchiveIndex.field_x, param3);
         if (param2 != -17156) {
-          field_b = (String) null;
+          accept = (String) null;
         }
     }
 
     final static void a(boolean param0, boolean param1, int param2, int param3) {
-        vh stackIn_9_0 = null;
+        UiComponent stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        vh stackIn_16_0 = null;
+        UiComponent stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
-        vh stackIn_21_0 = null;
+        UiComponent stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
-        qi.a((byte) -100);
+        IterableDualLinkDeque.a((byte) -100);
         if (mg.field_d >= 0) {
-          pm.field_m.field_nb = nr.a(new String[]{Integer.toString(mg.field_d)}, -1, m.field_a);
+          pm.field_m.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(mg.field_d)}, -1, m.yourRatingIsX);
         } else {
-          pm.field_m.field_nb = null;
+          pm.field_m.text = null;
         }
-        stackIn_9_0 = ir.field_a;
-        stackIn_10_1 = (param1) && (!param0) && (!tf.field_d) && (em.field_L == null) && (tp.field_e == null);
-        ((vh) (Object) stackIn_9_0).a(stackIn_10_1, false);
+        stackIn_9_0 = BufferedFile.field_a;
+        stackIn_10_1 = (param1) && (!param0) && (!LoginPayloadKind.field_d) && (HighscoresScreen.field_L == null) && (tp.field_e == null);
+        ((UiComponent) (Object) stackIn_9_0).updateRoot(stackIn_10_1, false);
         stackIn_16_0 = oi.field_n;
-        stackIn_17_1 = (param1) && (!param0) && (!tf.field_d) && (em.field_L == null) && (null == tp.field_e);
-        ((vh) (Object) stackIn_16_0).a(stackIn_17_1, false);
+        stackIn_17_1 = (param1) && (!param0) && (!LoginPayloadKind.field_d) && (HighscoresScreen.field_L == null) && (null == tp.field_e);
+        ((UiComponent) (Object) stackIn_16_0).updateRoot(stackIn_17_1, false);
         stackIn_21_0 = ln.field_q;
-        stackIn_22_1 = (param1) && (!param0) && (tf.field_d);
-        ((vh) (Object) stackIn_21_0).a(stackIn_22_1, false);
-        kg.field_l.field_i.c(true);
-        if (gj.field_K.field_R != 0) {
-          jo.field_H = true;
+        stackIn_22_1 = (param1) && (!param0) && (LoginPayloadKind.field_d);
+        ((UiComponent) (Object) stackIn_21_0).updateRoot(stackIn_22_1, false);
+        kg.field_l.field_i.processTabPresses(true);
+        if (ProgressBarWidget.field_K.pressedButton != 0) {
+          PauseMenuScreen.field_H = true;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (rn.field_f.field_R != 0) {
+        if (DiskCacheWorker.field_f.pressedButton != 0) {
           if (!DualLinkNode.field_s &&
-            mp.field_V <= 0 && (!(hq.field_i >= 2) ||
-            !vj.field_c[12])) {
+            UsernameSuggestionsPanel.field_V <= 0 && (!(TutorialController.field_i >= 2) ||
+            !TextLineLayout.field_c[12])) {
             gn.field_f = true;
             decompiledFrameRemainder0 = false;
           }
           else {
-            rb.c(param3, 100);
+            ArchiveLoadSequence.c(param3, 100);
           }
         }
-        if (uc.field_b.field_R != 0) {
-          if (dg.field_T.length == 1 &&
-            cr.field_l != dg.field_T[0]) {
-            cr.field_l = dg.field_T[0];
+        if (uc.field_b.pressedButton != 0) {
+          if (DiskArchiveRequest.field_T.length == 1 &&
+            PotEvent.field_l != DiskArchiveRequest.field_T[0]) {
+            PotEvent.field_l = DiskArchiveRequest.field_T[0];
           }
-          je.a(param3, cr.field_l, true, tq.field_u, 0, false);
+          je.a(param3, PotEvent.field_l, true, tq.field_u, 0, false);
         }
         if (param2 > -126) {
           ie.a(true, -43, -89);
         }
-        if (sb.field_a.field_R != 0) {
-          tf.field_d = false;
+        if (sb.field_a.pressedButton != 0) {
+          LoginPayloadKind.field_d = false;
         }
     }
 
     static {
-        field_i = "To <u=ffffff>look at</u> a different part of the table: <img=0> <col=99ff99>Click on</col> that <col=99ff99>part of the table</col>, as long as it's not the cue ball.";
+        tutorialCameraRecentre = "To <u=ffffff>look at</u> a different part of the table: <img=0> <col=99ff99>Click on</col> that <col=99ff99>part of the table</col>, as long as it's not the cue ball.";
         field_d = new int[8192];
         field_h = 0;
         field_c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        field_b = "Accept";
+        accept = "Accept";
     }
 }

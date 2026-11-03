@@ -5,10 +5,10 @@ final class cb {
     static String[] field_f;
     static int field_d;
     static IntrusiveDeque field_e;
-    static String field_c;
+    static String previous;
     static java.security.SecureRandom field_a;
     static int field_g;
-    static String[] field_b;
+    static String[] themeNames;
 
     final static void a(Object param0, PlatformTaskDispatcher param1, int param2) {
         int var3_int = 0;
@@ -31,7 +31,7 @@ final class cb {
           }
           for (var3_int = 0; 50 > var3_int; var3_int++) {
             if (null != param1.field_a.peekEvent()) {
-              cf.a(-121, 1L);
+              SoundCache.a(-121, 1L);
               continue;
             }
             break;
@@ -61,11 +61,11 @@ final class cb {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static byte[] a(int param0, int param1, oq param2, byte[] param3) {
+    final static byte[] a(int param0, int param1, CipherPacketBuffer param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -80,7 +80,7 @@ final class cb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var4_int = param2.e(param1, param0 - 28);
+          var4_int = param2.readBits(param1, param0 - 28);
           if (0 == var4_int) {
             return null;
           }
@@ -88,11 +88,11 @@ final class cb {
             param3.length != var4_int) {
             param3 = new byte[var4_int];
           }
-          var5 = param2.e(3, 66);
-          var6 = (byte)param2.e(8, 77);
+          var5 = param2.readBits(3, 66);
+          var6 = (byte)param2.readBits(8, 77);
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (byte)(param2.e(var5, 49) + var6);
+              param3[var7] = (byte)(param2.readBits(var5, 49) + var6);
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
@@ -121,27 +121,27 @@ final class cb {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         if (param0 != 28555) {
-          field_c = (String) null;
+          previous = (String) null;
         }
         field_a = null;
         field_e = null;
-        field_b = null;
-        field_c = null;
+        themeNames = null;
+        previous = null;
     }
 
     static {
         field_f = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
-        field_c = "Previous";
+        previous = "Previous";
         field_g = 480;
         field_d = 0;
         field_e = new IntrusiveDeque();
-        field_b = new String[]{"Modern", "Plasma", "Aztec", "Polar", "Space"};
+        themeNames = new String[]{"Modern", "Plasma", "Aztec", "Polar", "Space"};
     }
 }

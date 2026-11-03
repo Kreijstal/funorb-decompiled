@@ -2,47 +2,47 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fl extends IntrusiveNode {
-    static vh field_q;
-    static int field_p;
+    static UiComponent field_q;
+    static int keycodeDefaultUp2;
     int[] field_r;
-    static String field_m;
+    static String endOfGamePressEscapeToContinue;
     int field_o;
     static int field_l;
-    static String field_n;
+    static String quickchatLobby;
 
-    public static void a(int param0) {
-        field_m = null;
+    public static void clearSharedReferences(int param0) {
+        endOfGamePressEscapeToContinue = null;
         field_q = null;
         if (param0 != 59) {
-          fl.a(-121);
-          field_n = null;
+          fl.clearSharedReferences(-121);
+          quickchatLobby = null;
           return;
         }
-        field_n = null;
+        quickchatLobby = null;
     }
 
-    final static void a(boolean param0) {
-        el.field_H[44] = 71;
-        el.field_H[47] = 73;
-        el.field_H[222] = 58;
-        el.field_H[192] = 28;
-        el.field_H[520] = 59;
-        el.field_H[91] = 42;
-        el.field_H[93] = 43;
+    final static void registerPunctuationKeyCodes(boolean param0) {
+        AchievementsScreen.field_H[44] = 71;
+        AchievementsScreen.field_H[47] = 73;
+        AchievementsScreen.field_H[222] = 58;
+        AchievementsScreen.field_H[192] = 28;
+        AchievementsScreen.field_H[520] = 59;
+        AchievementsScreen.field_H[91] = 42;
+        AchievementsScreen.field_H[93] = 43;
         if (param0) {
-          el.field_H[59] = 57;
-          el.field_H[46] = 72;
-          el.field_H[45] = 26;
-          el.field_H[92] = 74;
-          el.field_H[61] = 27;
+          AchievementsScreen.field_H[59] = 57;
+          AchievementsScreen.field_H[46] = 72;
+          AchievementsScreen.field_H[45] = 26;
+          AchievementsScreen.field_H[92] = 74;
+          AchievementsScreen.field_H[61] = 27;
           return;
         }
-        field_q = (vh) null;
-        el.field_H[59] = 57;
-        el.field_H[46] = 72;
-        el.field_H[45] = 26;
-        el.field_H[92] = 74;
-        el.field_H[61] = 27;
+        field_q = (UiComponent) null;
+        AchievementsScreen.field_H[59] = 57;
+        AchievementsScreen.field_H[46] = 72;
+        AchievementsScreen.field_H[45] = 26;
+        AchievementsScreen.field_H[92] = 74;
+        AchievementsScreen.field_H[61] = 27;
     }
 
     private fl() throws Throwable {
@@ -50,9 +50,9 @@ final class fl extends IntrusiveNode {
     }
 
     static {
-        field_p = 98;
-        field_m = "Press <img=3> to continue.";
-        field_n = "Quick Chat lobby";
+        keycodeDefaultUp2 = 98;
+        endOfGamePressEscapeToContinue = "Press <img=3> to continue.";
+        quickchatLobby = "Quick Chat lobby";
         field_l = 2000;
     }
 }

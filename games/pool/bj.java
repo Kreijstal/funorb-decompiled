@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bj extends IntrusiveNode {
-    static String[] field_o;
+    static String[] quickchatShortcutHelp;
     int field_l;
     static int field_m;
     int field_n;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawDottedRectangle(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -36,79 +36,79 @@ final class bj extends IntrusiveNode {
           }
           var5_int = param3 + param2;
           var6 = param0 + param1;
-          if (param3 > qh.field_b) {
+          if (param3 > SoftwareRasterizer.clipLeft) {
             stackIn_6_0 = param3;
           } else {
-            stackIn_6_0 = qh.field_b;
+            stackIn_6_0 = SoftwareRasterizer.clipLeft;
           }
           var7 = stackIn_6_0;
-          if (param0 > qh.field_c) {
+          if (param0 > SoftwareRasterizer.clipTop) {
             stackIn_9_0 = param0;
           } else {
-            stackIn_9_0 = qh.field_c;
+            stackIn_9_0 = SoftwareRasterizer.clipTop;
           }
           var8 = stackIn_9_0;
-          if (qh.field_j > var5_int) {
+          if (SoftwareRasterizer.clipRight > var5_int) {
             stackIn_12_0 = var5_int;
           } else {
-            stackIn_12_0 = qh.field_j;
+            stackIn_12_0 = SoftwareRasterizer.clipRight;
           }
           var9 = stackIn_12_0;
-          if (var6 >= qh.field_g) {
-            stackIn_15_0 = qh.field_g;
+          if (var6 >= SoftwareRasterizer.clipBottom) {
+            stackIn_15_0 = SoftwareRasterizer.clipBottom;
           } else {
             stackIn_15_0 = var6;
           }
           var10 = stackIn_15_0;
-          if (qh.field_b <= param3 &&
-            param3 < qh.field_j) {
-            var11 = var8 * qh.field_l + param3;
+          if (SoftwareRasterizer.clipLeft <= param3 &&
+            param3 < SoftwareRasterizer.clipRight) {
+            var11 = var8 * SoftwareRasterizer.width + param3;
             var12 = var10 + (1 - var8) >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              qh.field_d[var11] = 16777215;
-              var11 = var11 + 2 * qh.field_l;
+              SoftwareRasterizer.pixels[var11] = 16777215;
+              var11 = var11 + 2 * SoftwareRasterizer.width;
             }
           }
-          if (param0 >= qh.field_c &&
-            var6 < qh.field_g) {
-            var11Lifetime1 = qh.field_l * param0 + var7;
+          if (param0 >= SoftwareRasterizer.clipTop &&
+            var6 < SoftwareRasterizer.clipBottom) {
+            var11Lifetime1 = SoftwareRasterizer.width * param0 + var7;
             var12Lifetime1 = 1 + (var9 - var7) >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              qh.field_d[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.pixels[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (var5_int >= qh.field_b &&
-            qh.field_j > var5_int) {
-            var11Lifetime2 = var5_int + qh.field_l * (var8 + (1 & -param3 + var5_int));
+          if (var5_int >= SoftwareRasterizer.clipLeft &&
+            SoftwareRasterizer.clipRight > var5_int) {
+            var11Lifetime2 = var5_int + SoftwareRasterizer.width * (var8 + (1 & -param3 + var5_int));
             var12Lifetime2 = -var8 + 1 + var10 >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              qh.field_d[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + 2 * qh.field_l;
+              SoftwareRasterizer.pixels[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + 2 * SoftwareRasterizer.width;
             }
           }
-          if (param0 >= qh.field_c &&
-            var6 < qh.field_g) {
-            var11Lifetime3 = qh.field_l * var6 + var7 + (1 & -param0 + var6);
+          if (param0 >= SoftwareRasterizer.clipTop &&
+            var6 < SoftwareRasterizer.clipBottom) {
+            var11Lifetime3 = SoftwareRasterizer.width * var6 + var7 + (1 & -param0 + var6);
             var12Lifetime3 = -var7 + 1 + var9 >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 return;
               }
-              qh.field_d[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.pixels[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -116,7 +116,7 @@ final class bj extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var5), "bj.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5), "bj.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -124,11 +124,11 @@ final class bj extends IntrusiveNode {
         if (param0 != 1) {
           return false;
         }
-        return lk.field_o;
+        return ChatMessageLine.field_o;
     }
 
     public static void a(int param0) {
-        field_o = null;
+        quickchatShortcutHelp = null;
         if (param0 != -4303) {
           bj.c(-44);
         }
@@ -139,6 +139,6 @@ final class bj extends IntrusiveNode {
     }
 
     static {
-        field_o = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
+        quickchatShortcutHelp = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
     }
 }

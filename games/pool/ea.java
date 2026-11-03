@@ -16,23 +16,23 @@ final class ea extends IntrusiveNode {
     static int field_p;
     static boolean field_z;
     int field_w;
-    static vh field_u;
+    static UiComponent field_u;
     int field_y;
-    static String field_m;
+    static String tutorialEightBallAfterbreak;
 
     final static void c(byte param0) {
         int var1 = 27 / ((param0 - 59) / 62);
-        di.field_j = kn.field_e.j(-100);
-        CharSequence var2 = (CharSequence) ((Object) di.field_j);
-        oj.field_y = hq.a(110, var2);
+        ResourceArchive.field_j = PlayerContextMenu.field_e.j(-100);
+        CharSequence var2 = (CharSequence) ((Object) ResourceArchive.field_j);
+        oj.field_y = TutorialController.normalizeDisplayName(110, var2);
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_u = null;
         if (param0 <= 115) {
           return;
         }
-        field_m = null;
+        tutorialEightBallAfterbreak = null;
         field_r = null;
     }
 
@@ -43,7 +43,7 @@ final class ea extends IntrusiveNode {
         field_l = false;
         field_p = 0;
         field_z = true;
-        field_m = "In a proper game, we would now take turns to try to \"pot\" balls, but for the purposes of this tutorial you're on your own. Try to \"pot\" any ball (make it go into a pocket) on the table, but don't hit the black ball first or pot it.";
+        tutorialEightBallAfterbreak = "In a proper game, we would now take turns to try to \"pot\" balls, but for the purposes of this tutorial you're on your own. Try to \"pot\" any ball (make it go into a pocket) on the table, but don't hit the black ball first or pot it.";
         field_r = new Random();
     }
 }

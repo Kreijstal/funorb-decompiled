@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class t {
-    static String field_c;
+    static String gameoptPlayersdontqualifySelectgametab;
     static int field_d;
-    static vh field_b;
+    static UiComponent field_b;
     static int field_e;
     static int[][][] field_a;
 
-    final static boolean a(int param0, int[] param1, int param2) {
+    final static boolean isBitClear(int param0, int[] param1, int param2) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -31,11 +31,11 @@ final class t {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static String a(int param0) {
+    final static String formatPacketDump(int param0) {
         String var1;
         int var2;
         int var3;
@@ -53,15 +53,15 @@ final class t {
         String var1Lifetime2;
         String var1Lifetime3;
         if (param0 > 81) {
-          var14 = "(" + hb.field_e + " " + vd.field_g + " " + ia.field_l + ") " + uq.field_c;
+          var14 = "(" + NodeHashTableIterator.field_e + " " + DialRenderer.field_g + " " + MenuSelection.field_l + ") " + Bzip2DecoderState.field_c;
           var1 = var14;
-          if (of.field_Pb <= 0) {
+          if (ScrollPane.field_Pb <= 0) {
             return var1;
           }
           var1Lifetime3 = var14 + ":";
-          for (var2 = 0; of.field_Pb > var2; var2++) {
+          for (var2 = 0; ScrollPane.field_Pb > var2; var2++) {
             var15 = var1Lifetime3 + ' ';
-            var3 = kn.field_e.payload[var2] & 255;
+            var3 = PlayerContextMenu.field_e.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {
@@ -79,16 +79,16 @@ final class t {
           }
           return var1Lifetime3;
         }
-        field_b = (vh) null;
-        var8 = "(" + hb.field_e + " " + vd.field_g + " " + ia.field_l + ") " + uq.field_c;
+        field_b = (UiComponent) null;
+        var8 = "(" + NodeHashTableIterator.field_e + " " + DialRenderer.field_g + " " + MenuSelection.field_l + ") " + Bzip2DecoderState.field_c;
         var1Lifetime1 = var8;
-        if (of.field_Pb <= 0) {
+        if (ScrollPane.field_Pb <= 0) {
           return var1Lifetime1;
         }
         var1Lifetime2 = var8 + ":";
-        for (var2Lifetime1 = 0; of.field_Pb > var2Lifetime1; var2Lifetime1++) {
+        for (var2Lifetime1 = 0; ScrollPane.field_Pb > var2Lifetime1; var2Lifetime1++) {
           var12 = var1Lifetime2 + ' ';
-          var3Lifetime1 = kn.field_e.payload[var2Lifetime1] & 255;
+          var3Lifetime1 = PlayerContextMenu.field_e.payload[var2Lifetime1] & 255;
           var4Lifetime1 = var3Lifetime1 >> 4;
           var3Lifetime1 = var3Lifetime1 & 15;
           if (var4Lifetime1 >= 10) {
@@ -107,7 +107,7 @@ final class t {
         return var1Lifetime2;
     }
 
-    final static int a(int param0, CharSequence param1) {
+    final static int hashString(int param0, CharSequence param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -121,10 +121,10 @@ final class t {
           var2_int = param1.length();
           var3 = 0;
           if (param0 != 29050) {
-            field_c = (String) null;
+            gameoptPlayersdontqualifySelectgametab = (String) null;
           }
           for (var4 = 0; var2_int > var4; var4++) {
-            var3 = (var3 << 5) + (-var3 + vi.a(param1.charAt(var4), true));
+            var3 = (var3 << 5) + (-var3 + vi.encodeCp1252Char(param1.charAt(var4), true));
           }
           stackIn_6_0 = var3;
           return stackIn_6_0;
@@ -138,7 +138,7 @@ final class t {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -146,33 +146,33 @@ final class t {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (!MouseHandler.a(param0 - 6709)) {
-            if (ne.field_u != null &&
-              ne.field_u.field_e) {
+          if (!MouseHandler.hasAccountOverlay(param0 - 6709)) {
+            if (MatchingTextValidator.field_u != null &&
+              MatchingTextValidator.field_u.focusLost) {
               tq.d((byte) -124);
-              fk.field_cb.b(new gk(fk.field_cb, el.field_K), 30000);
+              PlasmaTableScene.field_cb.showDialog(new FullscreenErrorDialog(PlasmaTableScene.field_cb, AchievementsScreen.field_K), 30000);
             }
             return;
           }
           if (param0 != -11) {
             t.b(-62);
           }
-          fk.field_cb.a(-122, sa.field_p, true, tl.field_M);
-          fk.field_cb.h((byte) 122);
-          while (n.h(127)) {
-            fk.field_cb.a(-81, qi.field_a, ml.field_b);
+          PlasmaTableScene.field_cb.processPointerFrame(-122, sa.field_p, true, RankingsScreen.field_M);
+          PlasmaTableScene.field_cb.advanceDialogAnimations((byte) 122);
+          while (LabeledChildWidget.h(127)) {
+            PlasmaTableScene.field_cb.dispatchKeyInputOrRequestFocus(-81, IterableDualLinkDeque.field_a, ml.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "t.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "t.F(" + param0 + ')');
         }
     }
 
     public static void c(int param0) {
         field_a = (int[][][]) null;
-        field_c = null;
+        gameoptPlayersdontqualifySelectgametab = null;
         field_b = null;
         if (param0 > -16) {
           field_a = (int[][][]) null;
@@ -181,8 +181,8 @@ final class t {
 
     final static void a(int param0, boolean param1) {
         if (null != sa.field_f) {
-          qh.g(qh.field_b, qh.field_c, qh.field_j - qh.field_b, qh.field_g - qh.field_c);
-          sa.field_f.a((byte) -79, param1);
+          SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
+          sa.field_f.drawRoot((byte) -79, param1);
         }
         if (param0 == 48) {
           return;
@@ -197,7 +197,7 @@ final class t {
     }
 
     static {
-        field_c = "Some players haven't unlocked the currently selected game options.<br>Please view the '<%0>' tab on the left for details.";
+        gameoptPlayersdontqualifySelectgametab = "Some players haven't unlocked the currently selected game options.<br>Please view the '<%0>' tab on the left for details.";
         field_e = 0;
     }
 }

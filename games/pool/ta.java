@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta {
-    static gl field_h;
+    static ReverbPcmStream field_h;
     static nl field_a;
-    static vh[] field_b;
+    static UiComponent[] field_b;
     static Sprite field_e;
     static int field_c;
     static IntrusiveDeque field_i;
@@ -13,26 +13,26 @@ final class ta {
     static tq field_g;
 
     final static void a(byte param0, int param1, int param2, int param3) {
-        tm.field_f = param3;
+        BallSkin.field_f = param3;
         vn.field_c = param2;
-        ch.field_H = param1;
+        WidgetContainer.field_H = param1;
         int var4 = 5 / ((param0 + 30) / 63);
     }
 
     final static void a(int param0) {
         if (d.field_d != null) {
-          d.field_d.k(17);
+          d.field_d.dismissDialog(17);
         }
-        tg.field_a = new jp();
+        tg.field_a = new DisplayNamePanel();
         if (param0 == -984040272) {
-          tn.field_n.d(tg.field_a, param0 + 984040302);
+          RasterSnapshot.field_n.replaceContent(tg.field_a, param0 + 984040302);
           return;
         }
         field_c = 99;
-        tn.field_n.d(tg.field_a, param0 + 984040302);
+        RasterSnapshot.field_n.replaceContent(tg.field_a, param0 + 984040302);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_a = null;
         field_g = null;
@@ -50,7 +50,7 @@ final class ta {
         field_i = null;
     }
 
-    final static int[] a(int[] param0, int param1) {
+    final static int[] buildGradientPalette(int[] param0, int param1) {
         int var7 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -97,7 +97,7 @@ final class ta {
             while (var8 > var5) {
               var17 = -var5 + var8;
               var18 = var5 - var4;
-              var3[var5] = md.a((var13 * var17 + var18 * var16) / var10, md.a((var15 * var18 + var12 * var17) / var10 << 8, (var18 * var14 + var11 * var17) / var10 << 16));
+              var3[var5] = md.bitwiseOr((var13 * var17 + var18 * var16) / var10, md.bitwiseOr((var15 * var18 + var12 * var17) / var10 << 8, (var18 * var14 + var11 * var17) / var10 << 16));
               var5++;
             }
             var4 = var8;
@@ -116,7 +116,7 @@ final class ta {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -130,11 +130,11 @@ final class ta {
         return var2;
     }
 
-    final static kl a(int param0, byte[] param1) {
-        kl var2 = null;
+    final static PaletteBitmapFont createPaletteFont(int param0, byte[] param1) {
+        PaletteBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        kl stackIn_6_0 = null;
+        PaletteBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -142,13 +142,13 @@ final class ta {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (kl) (stackIn_2_0);
+            return (PaletteBitmapFont) (stackIn_2_0);
           }
-          var2 = new kl(param1, el.field_I, ih.field_d, pd.field_a, rc.field_f, IntrusiveNode.field_h, v.field_b);
+          var2 = new PaletteBitmapFont(param1, AchievementsScreen.field_I, ih.field_d, LinkButtonPainter.field_a, rc.field_f, IntrusiveNode.field_h, LimitedRandomAccessFile.field_b);
           if (param0 != 16908) {
             field_f = -3;
           }
-          sh.h(-1);
+          OpacityWidget.h(-1);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,29 +161,29 @@ final class ta {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         if (param6 < param13) {
           if (param13 < param1) {
-            tl.a(param10, param13, param6, param15, param3, param11, param14, param2, param7, param5, (byte) -49, param4, param12, param9, param1, param8, qh.field_d);
+            RankingsScreen.a(param10, param13, param6, param15, param3, param11, param14, param2, param7, param5, (byte) -49, param4, param12, param9, param1, param8, SoftwareRasterizer.pixels);
           } else {
             if (param6 >= param1) {
-              tl.a(param3, param6, param1, param10, param15, param2, param11, param14, param12, param9, (byte) -49, param7, param4, param8, param13, param5, qh.field_d);
+              RankingsScreen.a(param3, param6, param1, param10, param15, param2, param11, param14, param12, param9, (byte) -49, param7, param4, param8, param13, param5, SoftwareRasterizer.pixels);
             } else {
-              tl.a(param15, param1, param6, param10, param3, param14, param11, param2, param4, param8, (byte) -49, param7, param12, param9, param13, param5, qh.field_d);
+              RankingsScreen.a(param15, param1, param6, param10, param3, param14, param11, param2, param4, param8, (byte) -49, param7, param12, param9, param13, param5, SoftwareRasterizer.pixels);
             }
           }
         } else {
           if (param6 < param1) {
-            tl.a(param3, param6, param13, param15, param10, param2, param14, param11, param12, param9, (byte) -49, param4, param7, param5, param1, param8, qh.field_d);
+            RankingsScreen.a(param3, param6, param13, param15, param10, param2, param14, param11, param12, param9, (byte) -49, param4, param7, param5, param1, param8, SoftwareRasterizer.pixels);
           } else {
             if (param13 >= param1) {
-              tl.a(param10, param13, param1, param3, param15, param11, param2, param14, param7, param5, (byte) -49, param12, param4, param8, param6, param9, qh.field_d);
+              RankingsScreen.a(param10, param13, param1, param3, param15, param11, param2, param14, param7, param5, (byte) -49, param12, param4, param8, param6, param9, SoftwareRasterizer.pixels);
             } else {
-              tl.a(param15, param1, param13, param3, param10, param14, param2, param11, param4, param8, (byte) -49, param12, param7, param5, param6, param9, qh.field_d);
+              RankingsScreen.a(param15, param1, param13, param3, param10, param14, param2, param11, param4, param8, (byte) -49, param12, param7, param5, param6, param9, SoftwareRasterizer.pixels);
             }
           }
         }

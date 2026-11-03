@@ -4,101 +4,101 @@
 import java.io.*;
 
 final class de {
-    static vh field_b;
-    static lr field_d;
-    static String field_f;
-    static String field_c;
-    static String field_e;
+    static UiComponent field_b;
+    static BitmapFont field_d;
+    static String discard;
+    static String fsTimeout;
+    static String waitingforExtradata;
     static boolean field_g;
     static int field_a;
 
-    final static float a(int param0, int param1, int param2) {
+    final static float scaleByPowerOfTwo(int param0, int param1, int param2) {
         if (param0 != -1) {
           return -0.7121016979217529f;
         }
         return (float)param2 / (float)(1 << param1);
     }
 
-    public static void b(int param0) {
-        field_f = null;
+    public static void releaseStatics(int param0) {
+        discard = null;
         field_d = null;
-        field_e = null;
+        waitingforExtradata = null;
         field_b = null;
-        field_c = null;
+        fsTimeout = null;
         if (param0 != -1) {
-          de.b(73);
+          de.releaseStatics(73);
         }
     }
 
     final static void c(int param0) {
-        if (fk.field_ab == 10) {
-          ga.b(false);
-          fk.field_ab = 11;
+        if (PlasmaTableScene.field_ab == 10) {
+          MaxLengthTextInputWidget.b(false);
+          PlasmaTableScene.field_ab = 11;
         } else {
           if (!uc.a(-114)) {
-            ga.b(false);
-            fk.field_ab = 11;
+            MaxLengthTextInputWidget.b(false);
+            PlasmaTableScene.field_ab = 11;
           }
         }
         if (param0 != 11) {
-          de.a(48, 16, -49);
+          de.scaleByPowerOfTwo(48, 16, -49);
         }
-        uh.field_o = true;
+        PasswordValidator.field_o = true;
     }
 
-    final static void a(int param0) {
+    final static void createDebugSliders(int param0) {
         if (aq.field_a != null) {
-          if (!vj.field_c[59]) {
+          if (!TextLineLayout.field_c[59]) {
             return;
           }
-          aq.field_a = new ci[11];
-          aq.field_a[0] = new ci(0.0f, 1.0f, 0);
-          aq.field_a[1] = new ci(0.0f, 1.0f, 1);
-          aq.field_a[2] = new ci(0.0f, 1.0f, 2);
-          aq.field_a[3] = new ci(0.0f, 1.0f, 3);
+          aq.field_a = new DebugTuningSlider[11];
+          aq.field_a[0] = new DebugTuningSlider(0.0f, 1.0f, 0);
+          aq.field_a[1] = new DebugTuningSlider(0.0f, 1.0f, 1);
+          aq.field_a[2] = new DebugTuningSlider(0.0f, 1.0f, 2);
+          aq.field_a[3] = new DebugTuningSlider(0.0f, 1.0f, 3);
           if (param0 >= -73) {
             field_a = -42;
-            aq.field_a[4] = new ci(0.0f, 0.5f, 4);
-            aq.field_a[5] = new ci(0.0f, 0.0625f, 5);
-            aq.field_a[6] = new ci(0.0f, 4.0f, 6);
-            aq.field_a[7] = new ci(0.0f, 2.0f, 7);
-            aq.field_a[8] = new ci(0.5f, 1.0f, 8);
-            aq.field_a[9] = new ci(0.0f, 15.0f, 9);
-            aq.field_a[10] = new ci(0.0f, 0.25f, 10);
+            aq.field_a[4] = new DebugTuningSlider(0.0f, 0.5f, 4);
+            aq.field_a[5] = new DebugTuningSlider(0.0f, 0.0625f, 5);
+            aq.field_a[6] = new DebugTuningSlider(0.0f, 4.0f, 6);
+            aq.field_a[7] = new DebugTuningSlider(0.0f, 2.0f, 7);
+            aq.field_a[8] = new DebugTuningSlider(0.5f, 1.0f, 8);
+            aq.field_a[9] = new DebugTuningSlider(0.0f, 15.0f, 9);
+            aq.field_a[10] = new DebugTuningSlider(0.0f, 0.25f, 10);
             return;
           }
-          aq.field_a[4] = new ci(0.0f, 0.5f, 4);
-          aq.field_a[5] = new ci(0.0f, 0.0625f, 5);
-          aq.field_a[6] = new ci(0.0f, 4.0f, 6);
-          aq.field_a[7] = new ci(0.0f, 2.0f, 7);
-          aq.field_a[8] = new ci(0.5f, 1.0f, 8);
-          aq.field_a[9] = new ci(0.0f, 15.0f, 9);
-          aq.field_a[10] = new ci(0.0f, 0.25f, 10);
+          aq.field_a[4] = new DebugTuningSlider(0.0f, 0.5f, 4);
+          aq.field_a[5] = new DebugTuningSlider(0.0f, 0.0625f, 5);
+          aq.field_a[6] = new DebugTuningSlider(0.0f, 4.0f, 6);
+          aq.field_a[7] = new DebugTuningSlider(0.0f, 2.0f, 7);
+          aq.field_a[8] = new DebugTuningSlider(0.5f, 1.0f, 8);
+          aq.field_a[9] = new DebugTuningSlider(0.0f, 15.0f, 9);
+          aq.field_a[10] = new DebugTuningSlider(0.0f, 0.25f, 10);
           return;
         }
-        aq.field_a = new ci[11];
-        aq.field_a[0] = new ci(0.0f, 1.0f, 0);
-        aq.field_a[1] = new ci(0.0f, 1.0f, 1);
-        aq.field_a[2] = new ci(0.0f, 1.0f, 2);
-        aq.field_a[3] = new ci(0.0f, 1.0f, 3);
+        aq.field_a = new DebugTuningSlider[11];
+        aq.field_a[0] = new DebugTuningSlider(0.0f, 1.0f, 0);
+        aq.field_a[1] = new DebugTuningSlider(0.0f, 1.0f, 1);
+        aq.field_a[2] = new DebugTuningSlider(0.0f, 1.0f, 2);
+        aq.field_a[3] = new DebugTuningSlider(0.0f, 1.0f, 3);
         if (param0 < -73) {
-          aq.field_a[4] = new ci(0.0f, 0.5f, 4);
-          aq.field_a[5] = new ci(0.0f, 0.0625f, 5);
-          aq.field_a[6] = new ci(0.0f, 4.0f, 6);
-          aq.field_a[7] = new ci(0.0f, 2.0f, 7);
-          aq.field_a[8] = new ci(0.5f, 1.0f, 8);
-          aq.field_a[9] = new ci(0.0f, 15.0f, 9);
-          aq.field_a[10] = new ci(0.0f, 0.25f, 10);
+          aq.field_a[4] = new DebugTuningSlider(0.0f, 0.5f, 4);
+          aq.field_a[5] = new DebugTuningSlider(0.0f, 0.0625f, 5);
+          aq.field_a[6] = new DebugTuningSlider(0.0f, 4.0f, 6);
+          aq.field_a[7] = new DebugTuningSlider(0.0f, 2.0f, 7);
+          aq.field_a[8] = new DebugTuningSlider(0.5f, 1.0f, 8);
+          aq.field_a[9] = new DebugTuningSlider(0.0f, 15.0f, 9);
+          aq.field_a[10] = new DebugTuningSlider(0.0f, 0.25f, 10);
           return;
         }
         field_a = -42;
-        aq.field_a[4] = new ci(0.0f, 0.5f, 4);
-        aq.field_a[5] = new ci(0.0f, 0.0625f, 5);
-        aq.field_a[6] = new ci(0.0f, 4.0f, 6);
-        aq.field_a[7] = new ci(0.0f, 2.0f, 7);
-        aq.field_a[8] = new ci(0.5f, 1.0f, 8);
-        aq.field_a[9] = new ci(0.0f, 15.0f, 9);
-        aq.field_a[10] = new ci(0.0f, 0.25f, 10);
+        aq.field_a[4] = new DebugTuningSlider(0.0f, 0.5f, 4);
+        aq.field_a[5] = new DebugTuningSlider(0.0f, 0.0625f, 5);
+        aq.field_a[6] = new DebugTuningSlider(0.0f, 4.0f, 6);
+        aq.field_a[7] = new DebugTuningSlider(0.0f, 2.0f, 7);
+        aq.field_a[8] = new DebugTuningSlider(0.5f, 1.0f, 8);
+        aq.field_a[9] = new DebugTuningSlider(0.0f, 15.0f, 9);
+        aq.field_a[10] = new DebugTuningSlider(0.0f, 0.25f, 10);
     }
 
     final static void a(int param0, int param1) {
@@ -111,33 +111,33 @@ final class de {
           boolean decompiledFrameRemainder0 = true;
           if (jd.field_c != null) {
             if (param0 >= 0) {
-              decompiledFrameRemainder0 = (tl.field_J == ta.field_a);
-              if ((decompiledFrameRemainder0) && (ej.field_j.position == 0 &&
-                rl.a((byte) -108) > nf.field_Q + 10000L)) {
-                ej.field_j.b(false, param0);
+              decompiledFrameRemainder0 = (RankingsScreen.field_J == ta.field_a);
+              if ((decompiledFrameRemainder0) && (JaggrabDownloader.field_j.position == 0 &&
+                rl.monotonicTimeMillis((byte) -108) > AccountCreationForm.field_Q + 10000L)) {
+                JaggrabDownloader.field_j.writeCipheredOpcode(false, param0);
               }
             } else {
-              if (ej.field_j.position == 0 &&
-                rl.a((byte) -108) > nf.field_Q + 10000L) {
-                ej.field_j.b(false, param0);
+              if (JaggrabDownloader.field_j.position == 0 &&
+                rl.monotonicTimeMillis((byte) -108) > AccountCreationForm.field_Q + 10000L) {
+                JaggrabDownloader.field_j.writeCipheredOpcode(false, param0);
               }
             }
             if (decompiledFrameRemainder0) {
-              if (ej.field_j.position > 0) {
+              if (JaggrabDownloader.field_j.position > 0) {
                 try {
-                  jd.field_c.a(ej.field_j.payload, (byte) 70, ej.field_j.position, 0);
-                  nf.field_Q = rl.a((byte) -111);
+                  jd.field_c.a(JaggrabDownloader.field_j.payload, (byte) 70, JaggrabDownloader.field_j.position, 0);
+                  AccountCreationForm.field_Q = rl.monotonicTimeMillis((byte) -111);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   dn.c(-74);
                 }
-                ej.field_j.position = 0;
+                JaggrabDownloader.field_j.position = 0;
               }
               return;
             }
           }
-          ej.field_j.position = 0;
+          JaggrabDownloader.field_j.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -145,7 +145,7 @@ final class de {
         }
     }
 
-    final static boolean a(byte param0, PacketBuffer param1) {
+    final static boolean readBoolean(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -173,28 +173,28 @@ final class de {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (!(param0 + param2 > qh.field_l)) {
+        if (!(param0 + param2 > SoftwareRasterizer.width)) {
           return param2;
         }
         if (param1 + param2 - param0 >= 0) {
           return param2 + (param1 - param0);
         }
         if (param3 == 0) {
-          return qh.field_l - param0;
+          return SoftwareRasterizer.width - param0;
         }
-        field_f = (String) null;
-        return qh.field_l - param0;
+        discard = (String) null;
+        return SoftwareRasterizer.width - param0;
     }
 
     static {
-        field_e = "Waiting for extra data";
-        field_c = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
-        field_f = "Discard";
+        waitingforExtradata = "Waiting for extra data";
+        fsTimeout = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
+        discard = "Discard";
         field_g = false;
     }
 }

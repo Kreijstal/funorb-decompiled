@@ -3,23 +3,23 @@
  */
 final class il {
     static PacketBuffer field_b;
-    static String field_d;
-    static String field_h;
+    static String rule21;
+    static String mpYouhavewon;
     static Sprite field_a;
     static PcmSample[] field_c;
-    static String field_e;
-    static vh[] field_g;
+    static String off;
+    static UiComponent[] field_g;
     static Sprite field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
-        field_d = null;
-        field_h = null;
+        rule21 = null;
+        mpYouhavewon = null;
         field_f = null;
         int var1 = -94 % ((param0 - 54) / 32);
         field_g = null;
-        field_e = null;
+        off = null;
         field_b = null;
     }
 
@@ -109,7 +109,7 @@ final class il {
         var4 = Pool.field_O;
         try {
           if (param0 < 72) {
-            il.a(-2);
+            il.releaseStatics(-2);
           }
           if (param1 != null &&
             param1.length != 0) {
@@ -141,14 +141,14 @@ final class il {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     static {
         field_c = new PcmSample[4];
-        field_h = "You have won!";
-        field_e = "OFF";
-        field_d = "Breaking real-world laws";
+        mpYouhavewon = "You have won!";
+        off = "OFF";
+        rule21 = "Breaking real-world laws";
     }
 }

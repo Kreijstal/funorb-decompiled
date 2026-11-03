@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntrusiveDeque {
-    static vq field_c;
-    static String field_b;
+    static ContextMenu field_c;
+    static String resign;
     IntrusiveNode field_e;
     private IntrusiveNode field_f;
-    static String field_a;
-    static String field_d;
+    static String menuSettings;
+    static String muChatLobbyShowAll;
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode removeFirst(int param0) {
         IntrusiveNode var2 = this.field_e.next;
         if (var2 == this.field_e) {
           return null;
@@ -21,14 +21,14 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final boolean c(int param0) {
+    final boolean isEmpty(int param0) {
         if (param0 != 0) {
-          this.a(-24);
+          this.size(-24);
         }
         return this.field_e == this.field_e.previous ? true : false;
     }
 
-    final void d(byte param0) {
+    final void clear(byte param0) {
         IntrusiveNode var2;
         if (param0 <= 20) {
           return;
@@ -45,7 +45,7 @@ final class IntrusiveDeque {
         return;
     }
 
-    final IntrusiveNode e(byte param0) {
+    final IntrusiveNode removeLast(byte param0) {
         IntrusiveNode var2 = this.field_e.previous;
         if (this.field_e == var2) {
           return null;
@@ -57,7 +57,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode first(byte param0) {
         if (param0 != -127) {
           this.field_e = (IntrusiveNode) null;
         }
@@ -70,30 +70,30 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    public static void d(int param0) {
-        field_a = null;
-        field_b = null;
-        field_d = null;
+    public static void releaseStatics(int param0) {
+        menuSettings = null;
+        resign = null;
+        muChatLobbyShowAll = null;
         if (param0 >= -63) {
-          field_a = (String) null;
+          menuSettings = (String) null;
         }
         field_c = null;
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode next(byte param0) {
         IntrusiveNode var2 = this.field_f;
         if (this.field_e == var2) {
           this.field_f = null;
           return null;
         }
         if (param0 != -46) {
-          field_a = (String) null;
+          menuSettings = (String) null;
         }
         this.field_f = var2.next;
         return var2;
     }
 
-    final IntrusiveNode c(byte param0) {
+    final IntrusiveNode last(byte param0) {
         IntrusiveNode var2 = this.field_e.previous;
         if (this.field_e == var2) {
           this.field_f = null;
@@ -118,19 +118,19 @@ final class IntrusiveDeque {
         try {
           var1_int = 0;
           if (param0 < 73) {
-            field_d = (String) null;
+            muChatLobbyShowAll = (String) null;
           }
-          while (aa.field_e > var1_int) {
+          while (IntrusiveDequeCursor.field_e > var1_int) {
             wb.field_e[var1_int] = null;
             var1_int++;
           }
-          aa.field_e = 0;
+          IntrusiveDequeCursor.field_e = 0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ko.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ko.B(" + param0 + ')');
         }
     }
 
-    final void a(byte param0, IntrusiveNode param1) {
+    final void addLast(byte param0, IntrusiveNode param1) {
         try {
           if (null != param1.next) {
             param1.unlink((byte) -117);
@@ -143,15 +143,15 @@ final class IntrusiveDeque {
           param1.next.previous = param1;
           param1.previous.next = param1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ko.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ko.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int a(int param0) {
+    final int size(int param0) {
         int var2 = 0;
         IntrusiveNode var3 = this.field_e.previous;
         if (param0 < 15) {
-          field_d = (String) null;
+          muChatLobbyShowAll = (String) null;
         }
         while (var3 != this.field_e) {
           var2++;
@@ -160,10 +160,10 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode f(byte param0) {
+    final IntrusiveNode previous(byte param0) {
         IntrusiveNode var2 = this.field_f;
         if (param0 != -5) {
-          this.b(63);
+          this.removeFirst(63);
         }
         if (var2 == this.field_e) {
           this.field_f = null;
@@ -211,11 +211,11 @@ final class IntrusiveDeque {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void b(byte param0, IntrusiveNode param1) {
+    final void addFirst(byte param0, IntrusiveNode param1) {
         try {
           if (param1.next != null) {
             param1.unlink((byte) -117);
@@ -226,7 +226,7 @@ final class IntrusiveDeque {
           param1.previous.next = param1;
           int var3_int = -68 / ((param0 - 40) / 40);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ko.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ko.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -250,10 +250,10 @@ final class IntrusiveDeque {
             return;
           }
           while (true) {
-            if (var5_int >= lq.field_T.length) {
+            if (var5_int >= DialogLayer.field_T.length) {
               return;
             }
-            param3 = lq.field_T[var5_int];
+            param3 = DialogLayer.field_T[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param3;
@@ -264,11 +264,11 @@ final class IntrusiveDeque {
               }
               incrementValue$1 = var6;
               var6++;
-              param1 = tl.field_I[incrementValue$1];
+              param1 = RankingsScreen.field_I[incrementValue$1];
               dupTemp$2 = param2[param1];
               dupTemp$3 = param0[dupTemp$2];
               param0[dupTemp$2] = dupTemp$3 + 1;
-              tl.field_I[dupTemp$3] = param1;
+              RankingsScreen.field_I[dupTemp$3] = param1;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -287,7 +287,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -298,8 +298,8 @@ final class IntrusiveDeque {
     }
 
     static {
-        field_b = "Resign";
-        field_a = "Options";
-        field_d = "Show all lobby chat";
+        resign = "Resign";
+        menuSettings = "Options";
+        muChatLobbyShowAll = "Show all lobby chat";
     }
 }

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj extends fm implements tb {
-    private fe field_O;
-    private co field_N;
-    static String field_P;
+final class jj extends ArrayWidgetGroup implements ButtonActivationListener {
+    private ButtonWidget field_O;
+    private BirthDateInputWidget field_N;
+    static String hidePlayersInXsGame;
     static Sprite[] field_S;
-    static String field_R;
+    static String enterignoreDel;
     static int field_F;
-    static String field_Q;
+    static String tutorialTitleBasics;
 
     final static ie a(int param0, String param1) {
         int var2_int = 0;
@@ -40,7 +40,7 @@ final class jj extends fm implements tb {
             stackIn_8_0 = la.field_h;
             return stackIn_8_0;
           }
-          var3 = jc.a(30634, param1, '.');
+          var3 = jc.splitString(30634, param1, '.');
           if (var3.length < 2) {
             stackIn_12_0 = uj.field_e;
             return stackIn_12_0;
@@ -54,7 +54,7 @@ final class jj extends fm implements tb {
               return stackIn_20_0;
             }
             var7 = var5[var6];
-            var8 = dl.a(105, var7);
+            var8 = Pocket.a(105, var7);
             if (var8 == null) {
               var6++;
               continue;
@@ -73,24 +73,24 @@ final class jj extends fm implements tb {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
     jj(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (fp) null);
-        this.field_N = new co(new om(10000536), nm.field_b, 0, 0, 140, 25);
-        this.field_N.a(-15309, new sn());
-        this.field_O = new fe(fg.field_c, (cc) (this));
-        this.field_L = new ei[]{(ei) ((Object) this.field_N), (ei) ((Object) this.field_O)};
-        this.field_O.field_z = (fp) ((Object) new ng());
-        this.e((byte) -72);
+        super(param0, param1, param2, param3, (WidgetPainter) null);
+        this.field_N = new BirthDateInputWidget(new om(10000536), NineSliceFrame.field_b, 0, 0, 140, 25);
+        this.field_N.setBirthDateValidator(-15309, new BirthDateValidator());
+        this.field_O = new ButtonWidget(WeightedLruCache.cont, (WidgetListener) (this));
+        this.children = new UiWidget[]{(UiWidget) ((Object) this.field_N), (UiWidget) ((Object) this.field_O)};
+        this.field_O.renderer = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
+        this.refreshLayout((byte) -72);
     }
 
     final static void h(int param0) {
         int var3 = 0;
         boolean stackIn_10_0 = false;
-        nm stackIn_15_0 = null;
+        NineSliceFrame stackIn_15_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -100,48 +100,48 @@ final class jj extends fm implements tb {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        nm var9 = null;
+        NineSliceFrame var9 = null;
         byte[] var10 = null;
         try {
-          var1_int = -kk.field_z + gp.field_c;
-          kk.field_z = -(var1_int >> 1) + ad.field_u;
-          gp.field_c = kk.field_z + var1_int;
-          ba.field_wb = m.field_f - (er.field_R >> 1);
-          var2 = ba.field_wb;
-          for (var3 = 0; var3 < qp.field_Sb.length; var3++) {
+          var1_int = -CacheEntry.field_z + gp.field_c;
+          CacheEntry.field_z = -(var1_int >> 1) + ArchiveIndex.field_u;
+          gp.field_c = CacheEntry.field_z + var1_int;
+          AccountContentDialog.field_wb = m.field_f - (DialWidget.field_R >> 1);
+          var2 = AccountContentDialog.field_wb;
+          for (var3 = 0; var3 < QuickChatMenu.field_Sb.length; var3++) {
             var4 = ll.field_a[var3];
             if (var4 >= 0) {
-              if (un.field_f.field_h == var4) {
+              if (un.field_f.selectedIndex == var4) {
                 var5 = SocketConnector.field_d;
               } else {
-                var5 = hd.field_H;
+                var5 = MembershipBenefitsScreen.field_H;
               }
             } else {
-              var5 = lq.field_V;
+              var5 = DialogLayer.field_V;
             }
-            var6 = qp.field_Sb[var3];
+            var6 = QuickChatMenu.field_Sb[var3];
             stackIn_10_0 = !(var4 < 0);
-            var7 = wm.a(stackIn_10_0, param0 ^ -9377, var6);
-            var8 = ad.field_u - (var7 >> 1);
+            var7 = ReportAbuseDialog.a(stackIn_10_0, param0 ^ -9377, var6);
+            var8 = ArchiveIndex.field_u - (var7 >> 1);
             if (var4 >= 0) {
               var2 = var2 + bj.field_m;
-              if (un.field_f.field_h == var4) {
-                stackIn_15_0 = uk.field_d;
+              if (un.field_f.selectedIndex == var4) {
+                stackIn_15_0 = IntrusiveNodeHashTable.field_d;
               } else {
                 stackIn_15_0 = rm.field_e;
               }
               var9 = stackIn_15_0;
               if (var9 != null) {
-                var9.a((qi.field_g << 1) + var7, var2, -6316, -qi.field_g + var8, (oc.field_B << 1) + kh.field_yc);
+                var9.draw((IterableDualLinkDeque.field_g << 1) + var7, var2, -6316, -IterableDualLinkDeque.field_g + var8, (TriangleMesh.field_B << 1) + LobbyGame.field_yc);
               }
-              var2 = var2 + oc.field_B;
+              var2 = var2 + TriangleMesh.field_B;
             }
             if (var4 >= 0) {
               qa.field_t.d(var6, var8, var2 + qr.field_g, var5, -1);
-              var2 = var2 + (kh.field_yc + (oc.field_B + bj.field_m));
+              var2 = var2 + (LobbyGame.field_yc + (TriangleMesh.field_B + bj.field_m));
             } else {
-              qp.field_ec.d(var6, var8, un.field_h + var2, var5, -1);
-              var2 = var2 + ob.field_u;
+              QuickChatMenu.field_ec.d(var6, var8, un.field_h + var2, var5, -1);
+              var2 = var2 + MenuScreen.field_u;
             }
           }
           if (param0 != -9395) {
@@ -152,40 +152,40 @@ final class jj extends fm implements tb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "jj.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "jj.C(" + param0 + ')');
         }
     }
 
-    final void a(ei param0, int param1, int param2, int param3) {
+    final void updatePointerState(UiWidget param0, int param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_O.field_I = this.field_N.a(param1 - 997).c(-31873) == ProxySocketConnector.field_e ? true : false;
+          super.updatePointerState(param0, param1, param2, param3);
+          this.field_O.enabled = this.field_N.getValidationProvider(param1 - 997).getDebouncedValidationState(-31873) == ProxySocketConnector.field_e ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "jj.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jj.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_S = null;
-        field_R = null;
-        field_P = null;
-        field_Q = null;
+        enterignoreDel = null;
+        hidePlayersInXsGame = null;
+        tutorialTitleBasics = null;
         if (param0 != 100) {
           field_S = (Sprite[]) null;
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, fe param3, int param4) {
-        if (this.field_N.a(-41).c(-31873) != ProxySocketConnector.field_e) {
+    public final void onButtonActivated(boolean param0, int param1, int param2, ButtonWidget param3, int param4) {
+        if (this.field_N.getValidationProvider(-41).getDebouncedValidationState(-31873) != ProxySocketConnector.field_e) {
           return;
         }
         try {
           if (!param0) {
-            jj.i(82);
+            jj.releaseStatics(82);
           }
-          wm.a(-121, this.field_N.h(37), this.field_N.j(25), this.field_N.h((byte) -119));
+          ReportAbuseDialog.a(-121, this.field_N.getYear(37), this.field_N.getMonthIndex(25), this.field_N.getDay((byte) -119));
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "jj.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jj.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class jj extends fm implements tb {
           if (param1 != 91) {
             field_S = (Sprite[]) null;
           }
-          qn.a(param0, 0, var3, 0, var2_int);
+          ArrayOperations.copy(param0, 0, var3, 0, var2_int);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -217,29 +217,29 @@ final class jj extends fm implements tb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void renderWidget(int param0, byte param1, int param2, int param3) {
         int var5 = 17 % ((-42 - param1) / 53);
-        super.a(param0, (byte) 110, param2, param3);
-        qk.field_a.d(bl.field_t, this.field_C + (param2 + 4), 4 + (param3 + this.field_D) + qk.field_a.field_C, 16777215, -1);
+        super.renderWidget(param0, (byte) 110, param2, param3);
+        PoolUiText.field_a.d(WireframeQuad.dobEnterforchat, this.widgetX + (param2 + 4), 4 + (param3 + this.widgetY) + PoolUiText.field_a.maxAscent, 16777215, -1);
     }
 
     final void f(byte param0) {
         int var2 = 250;
-        this.field_N.a(140, -var2 + this.field_l >> 1, 25, false, -25 + (20 + this.field_y) >> 1);
-        this.field_O.a(100, (this.field_l - var2 >> 1) + 140 + 10, 30, false, 2 + (this.field_y + 20 - 30 >> 1));
+        this.field_N.setWidgetBounds(140, -var2 + this.widgetWidth >> 1, 25, false, -25 + (20 + this.widgetHeight) >> 1);
+        this.field_O.setWidgetBounds(100, (this.widgetWidth - var2 >> 1) + 140 + 10, 30, false, 2 + (this.widgetHeight + 20 - 30 >> 1));
         if (param0 > -68) {
-          ei var3 = (ei) null;
-          this.a((ei) null, 99, -2, 11);
+          UiWidget var3 = (UiWidget) null;
+          this.updatePointerState((UiWidget) null, 99, -2, 11);
         }
     }
 
     static {
-        field_R = "Enter name of player to delete from list";
-        field_P = "Hide players in <%0>'s game";
-        field_Q = "Basics Tutorial";
+        enterignoreDel = "Enter name of player to delete from list";
+        hidePlayersInXsGame = "Hide players in <%0>'s game";
+        tutorialTitleBasics = "Basics Tutorial";
     }
 }

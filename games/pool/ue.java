@@ -3,7 +3,7 @@
  */
 final class ue {
     static Sprite field_c;
-    static String field_d;
+    static String next;
     static IntrusiveDeque field_b;
     static int field_a;
     static int field_e;
@@ -17,25 +17,25 @@ final class ue {
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          jo.field_J = jo.field_J + 1;
+          PauseMenuScreen.field_J = PauseMenuScreen.field_J + 1;
           if (param0 != 70) {
             ue.a((byte) 11);
           }
-          if (ci.field_i == -1 &&
-            -1 == gg.field_g) {
-            gg.field_g = gg.field_f;
-            ci.field_i = wn.field_i;
+          if (DebugTuningSlider.field_i == -1 &&
+            -1 == DebouncedValidationProvider.field_g) {
+            DebouncedValidationProvider.field_g = DebouncedValidationProvider.field_f;
+            DebugTuningSlider.field_i = wn.field_i;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 == null) {
-            decompiledFrameRemainder0 = (pj.field_I == null);
+            decompiledFrameRemainder0 = (MessageScreen.field_I == null);
           } else {
-            decompiledFrameRemainder0 = !(param1.equals(pj.field_I));
+            decompiledFrameRemainder0 = !(param1.equals(MessageScreen.field_I));
           }
           if (decompiledFrameRemainder0) {
             if (!nn.field_d) {
-              if (wp.field_c <= jo.field_J) {
-                stackIn_18_0 = (jo.field_J < ji.field_d + wp.field_c) ? 1 : 0;
+              if (wp.field_c <= PauseMenuScreen.field_J) {
+                stackIn_18_0 = (PauseMenuScreen.field_J < ji.field_d + wp.field_c) ? 1 : 0;
               } else {
                 stackIn_18_0 = 0;
               }
@@ -46,18 +46,18 @@ final class ue {
             var2_int = stackIn_18_0;
             if (param1 != null) {
               if (nn.field_d) {
-                jo.field_J = wp.field_c;
+                PauseMenuScreen.field_J = wp.field_c;
                 decompiledFrameRemainder1 = false;
               }
               else {
                 if (var2_int != 0) {
-                  jo.field_J = wp.field_c;
+                  PauseMenuScreen.field_J = wp.field_c;
                   decompiledFrameRemainder1 = false;
                 }
               }
             }
             if (decompiledFrameRemainder1) {
-              jo.field_J = 0;
+              PauseMenuScreen.field_J = 0;
             }
             if (param1 == null) {
               if (var2_int != 0) {
@@ -66,24 +66,24 @@ final class ue {
             } else {
               nn.field_d = false;
             }
-            id.field_b = ci.field_i;
-            ne.field_n = gg.field_g;
+            MouseWheelInput.field_b = DebugTuningSlider.field_i;
+            MatchingTextValidator.field_n = DebouncedValidationProvider.field_g;
           }
-          pj.field_I = param1;
+          MessageScreen.field_I = param1;
           if (!nn.field_d &&
-            jo.field_J < wp.field_c &&
-            re.field_c) {
-            ne.field_n = gg.field_g;
-            id.field_b = ci.field_i;
-            jo.field_J = 0;
+            PauseMenuScreen.field_J < wp.field_c &&
+            LoginPayload.field_c) {
+            MatchingTextValidator.field_n = DebouncedValidationProvider.field_g;
+            MouseWheelInput.field_b = DebugTuningSlider.field_i;
+            PauseMenuScreen.field_J = 0;
           }
           if (nn.field_d &&
-            la.field_e == jo.field_J) {
+            la.field_e == PauseMenuScreen.field_J) {
             nn.field_d = false;
-            jo.field_J = 0;
+            PauseMenuScreen.field_J = 0;
           }
-          ci.field_i = -1;
-          gg.field_g = -1;
+          DebugTuningSlider.field_i = -1;
+          DebouncedValidationProvider.field_g = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -95,16 +95,16 @@ final class ue {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
     final static void a(boolean param0) {
-        if (wd.field_Ub != null) {
-          wd.field_Ub.h(11741);
+        if (TabbedPane.field_Ub != null) {
+          TabbedPane.field_Ub.settleDialogAnimations(11741);
         }
-        if (null != of.field_Nb) {
-          of.field_Nb.k(0);
+        if (null != ScrollPane.field_Nb) {
+          ScrollPane.field_Nb.stopNormalAnimation(0);
           ja.a(param0);
           return;
         }
@@ -114,15 +114,15 @@ final class ue {
     final static boolean a(int param0) {
         if (param0 == 11) {
           bi.field_f = true;
-          ia.field_k = rl.a((byte) -110) + 15000L;
-          return 11 == fk.field_ab ? true : false;
+          MenuSelection.field_k = rl.monotonicTimeMillis((byte) -110) + 15000L;
+          return 11 == PlasmaTableScene.field_ab ? true : false;
         }
         return false;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
-        field_d = null;
+        next = null;
         field_b = null;
         if (param0) {
           String var2 = (String) null;
@@ -133,13 +133,13 @@ final class ue {
     final static boolean a(byte param0) {
         if (param0 > -70) {
           field_e = -55;
-          if (sf.field_y < 20) {
+          if (QuickChatCategoryDefinition.field_y < 20) {
             return true;
           }
-          if (!gg.a(true)) {
+          if (!DebouncedValidationProvider.a(true)) {
             return true;
           }
-          if (0 >= no.field_l) {
+          if (0 >= Js5Transport.field_l) {
             return false;
           }
           if (!uc.a(-128)) {
@@ -147,13 +147,13 @@ final class ue {
           }
           return false;
         }
-        if (sf.field_y < 20) {
+        if (QuickChatCategoryDefinition.field_y < 20) {
           return true;
         }
-        if (!gg.a(true)) {
+        if (!DebouncedValidationProvider.a(true)) {
           return true;
         }
-        if (0 >= no.field_l) {
+        if (0 >= Js5Transport.field_l) {
           return false;
         }
         if (!uc.a(-128)) {
@@ -163,7 +163,7 @@ final class ue {
     }
 
     static {
-        field_d = "Next";
+        next = "Next";
         field_e = 2048;
         field_b = new IntrusiveDeque();
     }

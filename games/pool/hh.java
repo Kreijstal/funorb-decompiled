@@ -5,32 +5,32 @@ final class hh {
     static int field_a;
     static Sprite[] field_f;
     static boolean field_c;
-    static String field_d;
-    static String field_b;
+    static String unratedGame;
+    static String errorJs5connectFull;
     static int field_e;
 
-    final static vh a(byte param0) {
+    final static UiComponent a(byte param0) {
         if (param0 != 1) {
           field_a = 112;
-          return BufferedSocket.field_m.field_Rb;
+          return BufferedSocket.field_m.content;
         }
-        return BufferedSocket.field_m.field_Rb;
+        return BufferedSocket.field_m.content;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 28882) {
-          field_b = null;
-          field_d = null;
+          errorJs5connectFull = null;
+          unratedGame = null;
           field_f = null;
           return;
         }
-        hh.a((byte) -23, -113);
-        field_b = null;
-        field_d = null;
+        hh.rgbToPackedHsl((byte) -23, -113);
+        errorJs5connectFull = null;
+        unratedGame = null;
         field_f = null;
     }
 
-    final static short a(byte param0, int param1) {
+    final static short rgbToPackedHsl(byte param0, int param1) {
         float stackIn_7_0 = 0.0f;
         float stackIn_14_0 = 0.0f;
         float stackIn_34_0 = 0.0f;
@@ -104,14 +104,14 @@ final class hh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "hh.B(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "hh.B(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
         field_c = true;
         field_a = 0;
-        field_b = "Data server full or too many connections from your address. Please try again in a few minutes.";
-        field_d = "Unrated game";
+        errorJs5connectFull = "Data server full or too many connections from your address. Please try again in a few minutes.";
+        unratedGame = "Unrated game";
     }
 }

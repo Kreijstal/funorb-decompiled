@@ -2,27 +2,27 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cq {
-    static String field_e;
+    static String unpackingSoundeffects;
     static int field_a;
     static Sprite[] field_b;
-    static vh field_d;
+    static UiComponent field_d;
     static IntrusiveDeque field_g;
     static int field_c;
-    static String field_f;
+    static String enterfriendAdd;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -90) {
-          cq.a(-5);
+          cq.createTutorials(-5);
         }
         field_g = null;
         field_d = null;
-        field_f = null;
+        enterfriendAdd = null;
         field_b = null;
-        field_e = null;
+        unpackingSoundeffects = null;
     }
 
     final static void a(boolean param0, int param1) {
-        ig.field_j.a(param0, (byte) 118);
+        TextInputValidator.field_j.a(param0, (byte) 118);
         if (param1 < 27) {
           field_a = -63;
         }
@@ -36,7 +36,7 @@ final class cq {
         int var6 = Pool.field_O;
         Sprite[] var7 = new Sprite[9];
         Sprite[] var4 = var7;
-        var7[0] = ad.a(param2, param0, 7);
+        var7[0] = ArchiveIndex.a(param2, param0, 7);
         int var5 = 1;
         if (param1 != 4578) {
           cq.a(true, -89);
@@ -45,7 +45,7 @@ final class cq {
           var4[var5] = var4[0];
           var5++;
         }
-        var4[4] = ad.a(param3, 64, param1 - 4571);
+        var4[4] = ArchiveIndex.a(param3, 64, param1 - 4571);
         return var4;
     }
 
@@ -58,12 +58,12 @@ final class cq {
           return -1;
         }
         boolean decompiledFrameRemainder0 = true;
-        var11 = lh.a(param8, (byte) -75, (long)(param0 + ((param1 << 16) - param3)));
-        var12 = lh.a(param8, (byte) -81, (long)(-param3 + (-(param1 << 16) + param0)));
+        var11 = ArchiveProvider.divideFixed16(param8, (byte) -75, (long)(param0 + ((param1 << 16) - param3)));
+        var12 = ArchiveProvider.divideFixed16(param8, (byte) -81, (long)(-param3 + (-(param1 << 16) + param0)));
         if (0 < var11 &&
           -param6 + 65536 >= var11 &&
           var12 > var11) {
-          var10 = param5 + aj.a(var11, false, param4);
+          var10 = param5 + NameEntryPopup.a(var11, false, param4);
           if (param7 < param9) {
             decompiledFrameRemainder0 = !(param7 > var10);
             if (decompiledFrameRemainder0) {
@@ -82,7 +82,7 @@ final class cq {
         regionExit1: {
           if (var12 > 0 &&
             65536 - param6 >= var12) {
-            var10Lifetime1 = param5 + aj.a(var12, false, param4);
+            var10Lifetime1 = param5 + NameEntryPopup.a(var12, false, param4);
             if (param7 >= param9) {
               if (var10Lifetime1 < param9) {
                 break regionExit1;
@@ -107,50 +107,50 @@ final class cq {
         return -43;
     }
 
-    final static void a(int param0) {
-        al.i(-27397);
-        so.field_g = new hq[3];
-        so.field_g[0] = new hq(jj.field_Q, -1, 3);
-        so.field_g[0].field_d.b((byte) 110, new bk(fn.field_Ob, 100, 0));
-        so.field_g[0].field_d.b((byte) -114, new bk(tj.field_eb, 50, 1, so.field_g[0].field_d));
-        so.field_g[0].field_d.b((byte) -80, new bk(ie.field_i, 3, 2, so.field_g[0].field_d));
-        so.field_g[0].field_d.b((byte) -50, new bk(je.field_a, 1, 3, so.field_g[0].field_d));
-        so.field_g[0].field_d.b((byte) 91, new bk(en.field_d, 300, 4, so.field_g[0].field_d));
-        so.field_g[0].field_d.b((byte) 88, new bk(na.field_b, 150, 5, so.field_g[0].field_d));
-        so.field_g[0].field_d.b((byte) -78, new bk(el.field_L, 1, 7, so.field_g[0].field_d));
-        so.field_g[0].field_d.b((byte) -110, new bk(om.field_t, 1, 6, so.field_g[0].field_d));
-        so.field_g[0].field_d.b((byte) -74, new bk(vj.field_f, 1, -1, so.field_g[0].field_d));
-        so.field_g[0].a(false);
-        hq dupTemp$0 = new hq(fc.field_e, 2, 0);
-        hq arrayValue$1 = so.field_g[0];
-        so.field_g[1] = dupTemp$0;
+    final static void createTutorials(int param0) {
+        PoolGameModel.i(-27397);
+        SceneNode.field_g = new TutorialController[3];
+        SceneNode.field_g[0] = new TutorialController(jj.tutorialTitleBasics, -1, 3);
+        SceneNode.field_g[0].field_d.addFirst((byte) 110, new TutorialStep(QuickChatHelpDialog.tutorialCameraRotate, 100, 0));
+        SceneNode.field_g[0].field_d.addFirst((byte) -114, new TutorialStep(ResizableDialog.tutorialCameraZoom, 50, 1, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) -80, new TutorialStep(ie.tutorialCameraRecentre, 3, 2, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) -50, new TutorialStep(je.tutorialShotModeEnter, 1, 3, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) 91, new TutorialStep(en.tutorialShotModeRotate, 300, 4, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) 88, new TutorialStep(na.tutorialShotModePower, 150, 5, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) -78, new TutorialStep(AchievementsScreen.tutorialShotModeTake, 1, 7, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) -110, new TutorialStep(om.tutorialShotModeLeave, 1, 6, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].field_d.addFirst((byte) -74, new TutorialStep(TextLineLayout.tutorialBasicComplete, 1, -1, SceneNode.field_g[0].field_d));
+        SceneNode.field_g[0].updateStepCount(false);
+        TutorialController dupTemp$0 = new TutorialController(fc.tutorialTitleEightBall, 2, 0);
+        TutorialController arrayValue$1 = SceneNode.field_g[0];
+        SceneNode.field_g[1] = dupTemp$0;
         arrayValue$1.field_j = dupTemp$0;
         if (param0 != 4313) {
           return;
         }
-        so.field_g[1].field_d.b((byte) -59, new bk(qq.field_yb, 40, 13, 128));
-        so.field_g[1].field_d.b((byte) -43, new bk(dr.field_e, 1, 8, 0));
-        so.field_g[1].field_d.b((byte) 99, new bk(ea.field_m, 1, 9, 0));
-        so.field_g[1].field_d.b((byte) 87, new bk(gn.field_a, 7, 11, 0));
-        so.field_g[1].field_d.b((byte) 99, new bk(lk.field_r, 1, 12, 0));
-        so.field_g[1].field_d.b((byte) -6, new bk(g.field_w, 1, -1, 0));
-        so.field_g[1].a(false);
-        so.field_g[2] = new hq(ep.field_G, 2, 1);
-        so.field_g[2].field_d.b((byte) -90, new bk(ca.field_m, 40, 13, 128));
-        so.field_g[2].field_d.b((byte) -99, new bk(cf.field_i, 1, 8, 0));
-        so.field_g[2].field_d.b((byte) -21, new bk(eq.field_N, 1, 14, 0));
-        so.field_g[2].field_d.b((byte) -9, new bk(pl.field_c, 1, 15, 0));
-        so.field_g[2].field_d.b((byte) -62, new bk(ui.field_N, 1, 16, 0));
-        so.field_g[2].field_d.b((byte) 92, new bk(rc.field_a, 1, -1, 0));
-        so.field_g[2].a(false);
+        SceneNode.field_g[1].field_d.addFirst((byte) -59, new TutorialStep(MessageDialog.tutorialEightBallStartPlaceCueball, 40, 13, 128));
+        SceneNode.field_g[1].field_d.addFirst((byte) -43, new TutorialStep(dr.tutorialEightBallBreak, 1, 8, 0));
+        SceneNode.field_g[1].field_d.addFirst((byte) 99, new TutorialStep(ea.tutorialEightBallAfterbreak, 1, 9, 0));
+        SceneNode.field_g[1].field_d.addFirst((byte) 87, new TutorialStep(gn.tutorialEightBallAfterfirstpot, 7, 11, 0));
+        SceneNode.field_g[1].field_d.addFirst((byte) 99, new TutorialStep(ChatMessageLine.tutorialEightBallAftergrouppot, 1, 12, 0));
+        SceneNode.field_g[1].field_d.addFirst((byte) -6, new TutorialStep(MusicPatch.tutorialEightBallComplete, 1, -1, 0));
+        SceneNode.field_g[1].updateStepCount(false);
+        SceneNode.field_g[2] = new TutorialController(NetworkGameClient.tutorialTitleNineBall, 2, 1);
+        SceneNode.field_g[2].field_d.addFirst((byte) -90, new TutorialStep(TextPairLoginPayload.tutorialNineBallStartPlaceCueball, 40, 13, 128));
+        SceneNode.field_g[2].field_d.addFirst((byte) -99, new TutorialStep(SoundCache.tutorialNineBallBreak, 1, 8, 0));
+        SceneNode.field_g[2].field_d.addFirst((byte) -21, new TutorialStep(DateInputWidget.tutorialNineBallAfterbreak, 1, 14, 0));
+        SceneNode.field_g[2].field_d.addFirst((byte) -9, new TutorialStep(pl.tutorialNineBallPottingABall, 1, 15, 0));
+        SceneNode.field_g[2].field_d.addFirst((byte) -62, new TutorialStep(LoginForm.tutorialNineBallPottingNine, 1, 16, 0));
+        SceneNode.field_g[2].field_d.addFirst((byte) 92, new TutorialStep(rc.tutorialNineBallFinal, 1, -1, 0));
+        SceneNode.field_g[2].updateStepCount(false);
     }
 
-    final static eg a(int param0, int param1, int param2, eg param3, int param4) {
+    final static MeshBuilder a(int param0, int param1, int param2, MeshBuilder param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        eg stackIn_3_0 = null;
-        eg stackIn_13_0 = null;
+        MeshBuilder stackIn_3_0 = null;
+        MeshBuilder stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -161,21 +161,21 @@ final class cq {
         try {
           var5_int = 0;
           if (param1 <= 53) {
-            stackIn_3_0 = (eg) null;
+            stackIn_3_0 = (MeshBuilder) null;
             return stackIn_3_0;
           }
-          while (var5_int < param3.field_g.length) {
-            param3.field_g[var5_int] = param3.field_g[var5_int] - param0;
+          while (var5_int < param3.vertexX.length) {
+            param3.vertexX[var5_int] = param3.vertexX[var5_int] - param0;
             var5_int++;
           }
-          for (var5_intLifetime1 = 0; param3.field_Y.length > var5_intLifetime1; var5_intLifetime1++) {
-            param3.field_Y[var5_intLifetime1] = param3.field_Y[var5_intLifetime1] - param4;
+          for (var5_intLifetime1 = 0; param3.vertexY.length > var5_intLifetime1; var5_intLifetime1++) {
+            param3.vertexY[var5_intLifetime1] = param3.vertexY[var5_intLifetime1] - param4;
           }
-          for (var5_intLifetime2 = 0; var5_intLifetime2 < param3.field_q.length; var5_intLifetime2++) {
-            param3.field_q[var5_intLifetime2] = param3.field_q[var5_intLifetime2] - param2;
+          for (var5_intLifetime2 = 0; var5_intLifetime2 < param3.vertexZ.length; var5_intLifetime2++) {
+            param3.vertexZ[var5_intLifetime2] = param3.vertexZ[var5_intLifetime2] - param2;
           }
-          param3.a();
-          stackIn_13_0 = (eg) (param3);
+          param3.clearCaches();
+          stackIn_13_0 = (MeshBuilder) (param3);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,13 +187,13 @@ final class cq {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
         }
     }
 
     static {
-        field_e = "Unpacking sound effects";
+        unpackingSoundeffects = "Unpacking sound effects";
         field_g = new IntrusiveDeque();
-        field_f = "Enter name of friend to add to list";
+        enterfriendAdd = "Enter name of friend to add to list";
     }
 }

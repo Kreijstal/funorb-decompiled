@@ -2,28 +2,28 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fh {
-    static di field_b;
-    static String field_a;
+    static ResourceArchive field_b;
+    static String serviceunavailable;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         if (param0 != 62) {
           fh.a(-19, (byte) -76);
-          field_a = null;
+          serviceunavailable = null;
           return;
         }
-        field_a = null;
+        serviceunavailable = null;
     }
 
-    final static di a(int param0, byte param1) {
+    final static ResourceArchive a(int param0, byte param1) {
         if (param1 == 103) {
           return ji.a(1, true, (byte) -56, param0, false, false);
         }
-        fh.a((byte) 116);
+        fh.releaseStatics((byte) 116);
         return ji.a(1, true, (byte) -56, param0, false, false);
     }
 
     static {
-        field_a = "Service unavailable";
+        serviceunavailable = "Service unavailable";
     }
 }

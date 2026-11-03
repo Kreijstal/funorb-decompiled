@@ -9,7 +9,7 @@ final class ro {
     private int field_n;
     int field_k;
     private int field_a;
-    static String field_p;
+    static String gameFull;
     static boolean field_e;
     static String field_s;
     int field_m;
@@ -21,11 +21,11 @@ final class ro {
     int[] field_h;
     byte field_r;
     int field_i;
-    static String field_g;
+    static String muGameoptRejectXFromGame;
     static int[][][] field_v;
     private int[] field_c;
 
-    final static nj[] a(int param0, oq param1) {
+    final static nj[] a(int param0, CipherPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -40,7 +40,7 @@ final class ro {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.e(8, 92);
+          var2_int = param1.readBits(8, 92);
           if (param0 != 24) {
             field_s = (String) null;
           }
@@ -48,21 +48,21 @@ final class ro {
             stackIn_4_0 = null;
             return (nj[]) (stackIn_4_0);
           }
-          var3 = param1.e(12, 82);
+          var3 = param1.readBits(12, 82);
           var4 = new nj[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (!gk.a((byte) 118, param1)) {
-              var6 = param1.e(fr.a(16, -1 + var5), 105);
+            if (!FullscreenErrorDialog.readBooleanBit((byte) 118, param1)) {
+              var6 = param1.readBits(fr.bitLength(16, -1 + var5), 105);
               var4[var5] = var4[var6];
             } else {
               var6_ref_nj = new nj();
-              param1.e(24, 22);
-              param1.e(24, param0 + 38);
-              var6_ref_nj.field_a = param1.e(24, 28);
-              param1.e(9, 44);
-              param1.e(12, 104);
-              param1.e(12, 125);
-              param1.e(12, 99);
+              param1.readBits(24, 22);
+              param1.readBits(24, param0 + 38);
+              var6_ref_nj.field_a = param1.readBits(24, 28);
+              param1.readBits(9, 44);
+              param1.readBits(12, 104);
+              param1.readBits(12, 125);
+              param1.readBits(12, 99);
               var4[var5] = var6_ref_nj;
             }
           }
@@ -78,7 +78,7 @@ final class ro {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class ro {
         int var3Lifetime1;
         var4 = Pool.field_O;
         try {
-          if (em.field_K) {
+          if (HighscoresScreen.field_K) {
             return;
           }
           if (null == ta.field_g) {
@@ -114,7 +114,7 @@ final class ro {
             var1 = var5;
             var16 = ta.field_g.field_l;
             for (var3 = 0; var3 < 8; var3++) {
-              var5[var3] = md.a(var12[var3], var16[var3]);
+              var5[var3] = md.bitwiseOr(var12[var3], var16[var3]);
             }
             var13 = hp.field_c;
             var11 = var13;
@@ -124,23 +124,23 @@ final class ro {
             var9 = 0;
             var3Lifetime1 = var9;
             while (var9 < 8) {
-              var7[var9] = rb.b(var13[var9], ~var17[var9]);
+              var7[var9] = ArchiveLoadSequence.b(var13[var9], ~var17[var9]);
               var9++;
             }
-            em.field_K = true;
+            HighscoresScreen.field_K = true;
             ta.field_g = null;
           }
           if (param0 > -18) {
             return;
           }
-          if (em.field_K) {
-            kk.g(47);
-            if (ne.field_w == 18) {
-              if (oe.a(false, hp.field_c)) {
-                s.field_c[18].a(0, 0, false);
+          if (HighscoresScreen.field_K) {
+            CacheEntry.g(47);
+            if (MatchingTextValidator.field_w == 18) {
+              if (FadingDialog.a(false, hp.field_c)) {
+                s.field_c[18].onEnter(0, 0, false);
               } else {
-                ne.field_w = 16;
-                fq.a(-3405, 16, sq.field_b, false);
+                MatchingTextValidator.field_w = 16;
+                AccountCreationDialog.a(-3405, 16, GameRules.field_b, false);
               }
             }
           }
@@ -148,7 +148,7 @@ final class ro {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1_ref), "ro.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ro.A(" + param0 + ')');
         }
     }
 
@@ -166,14 +166,14 @@ final class ro {
           this.field_l = param2;
           if (this.field_a != 0 &&
             this.field_a != 1) {
-            this.field_b = bb.a(this.field_a, this.field_n, (byte) 99);
-            this.field_o = vd.a(this.field_a, (byte) 103, this.field_u);
-            this.field_t = lo.a(this.field_l, this.field_a, (byte) 123);
+            this.field_b = IndexedSpriteState.a(this.field_a, this.field_n, (byte) 99);
+            this.field_o = DialRenderer.a(this.field_a, (byte) 103, this.field_u);
+            this.field_t = ProxyAuthenticationRequiredException.divideFixed12(this.field_l, this.field_a, (byte) 123);
           }
           this.field_k = 0;
           this.field_i = 0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ro.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ro.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class ro {
             this.field_k == 0) {
             return;
           }
-          var3_int = ke.a(false, this.field_k * this.field_k + this.field_i * this.field_i);
+          var3_int = LoginTextValue.a(false, this.field_k * this.field_k + this.field_i * this.field_i);
           if (var3_int != 0) {
             this.field_i = (this.field_i << 8) / var3_int;
             this.field_k = (this.field_k << 8) / var3_int;
@@ -210,7 +210,7 @@ final class ro {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -227,7 +227,7 @@ final class ro {
             var4 = (ro) null;
             this.b((ro) null, -17);
           }
-          stackIn_3_0 = hk.a(99, param0.field_n, this.field_n, param0.field_u, param0.field_a, this.field_a, this.field_u);
+          stackIn_3_0 = NanoTickClock.a(99, param0.field_n, this.field_n, param0.field_u, param0.field_a, this.field_a, this.field_u);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -239,19 +239,19 @@ final class ro {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         if (param0 != 240) {
           ro.b(-41);
         }
-        field_g = null;
+        muGameoptRejectXFromGame = null;
         field_v = (int[][][]) null;
         field_s = null;
-        field_p = null;
+        gameFull = null;
     }
 
     final void a(byte param0, ro param1) {
@@ -276,18 +276,18 @@ final class ro {
             this.field_j[0] = this.field_o;
             this.field_h[0] = this.field_t;
           } else {
-            this.field_q[0] = bb.a(this.field_c[0], this.field_q[0], (byte) 99);
-            this.field_j[0] = vd.a(this.field_c[0], (byte) 69, this.field_j[0]);
-            this.field_h[0] = lo.a(this.field_h[0], this.field_c[0], (byte) 84);
+            this.field_q[0] = IndexedSpriteState.a(this.field_c[0], this.field_q[0], (byte) 99);
+            this.field_j[0] = DialRenderer.a(this.field_c[0], (byte) 69, this.field_j[0]);
+            this.field_h[0] = ProxyAuthenticationRequiredException.divideFixed12(this.field_h[0], this.field_c[0], (byte) 84);
           }
           if ((this.field_r & 240) == 0) {
             this.field_q[1] = param1.field_b;
             this.field_j[1] = param1.field_o;
             this.field_h[1] = param1.field_t;
           } else {
-            this.field_q[1] = bb.a(this.field_c[1], this.field_q[1], (byte) 99);
-            this.field_j[1] = vd.a(this.field_c[1], (byte) 68, this.field_j[1]);
-            this.field_h[1] = lo.a(this.field_h[1], this.field_c[1], (byte) 83);
+            this.field_q[1] = IndexedSpriteState.a(this.field_c[1], this.field_q[1], (byte) 99);
+            this.field_j[1] = DialRenderer.a(this.field_c[1], (byte) 68, this.field_j[1]);
+            this.field_h[1] = ProxyAuthenticationRequiredException.divideFixed12(this.field_h[1], this.field_c[1], (byte) 83);
           }
           this.field_m = this.field_j[1] - this.field_j[0];
           if (param0 != 60) {
@@ -296,7 +296,7 @@ final class ro {
           this.field_f = this.field_q[1] - this.field_q[0];
           if (0 != this.field_f ||
             this.field_m != 0) {
-            var3_int = ke.a(false, this.field_m * this.field_m + this.field_f * this.field_f);
+            var3_int = LoginTextValue.a(false, this.field_m * this.field_m + this.field_f * this.field_f);
             if (var3_int != 0) {
               this.field_m = (this.field_m << 8) / var3_int;
               this.field_f = (this.field_f << 8) / var3_int;
@@ -314,7 +314,7 @@ final class ro {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -326,7 +326,7 @@ final class ro {
     }
 
     static {
-        field_p = "Game full";
-        field_g = "Reject <%0> from this game";
+        gameFull = "Game full";
+        muGameoptRejectXFromGame = "Reject <%0> from this game";
     }
 }

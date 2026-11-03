@@ -3,25 +3,25 @@
  */
 final class uj {
     static ie field_e;
-    static di field_d;
+    static ResourceArchive field_d;
     static Sprite field_c;
-    static String field_b;
+    static String rankings;
     static int[] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_d = null;
         field_a = null;
-        field_b = null;
+        rankings = null;
         if (param0 > 13) {
           field_c = null;
           return;
         }
-        uj.a((byte) 78);
+        uj.releaseStatics((byte) 78);
         field_c = null;
     }
 
-    final static void a(PoolMatchController param0, ij param1, int[] param2, int[] param3, int param4) {
+    final static void projectWorldPointToScreen(PoolMatchController param0, ij param1, int[] param2, int[] param3, int param4) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -46,7 +46,7 @@ final class uj {
         int[] var15 = null;
         var12 = Pool.field_O;
         try {
-          var15 = param0.field_ab;
+          var15 = param0.viewMatrix;
           var14 = var15;
           var13 = var14;
           var5 = var13;
@@ -55,26 +55,26 @@ final class uj {
           var8 = -var15[2] + param3[2];
           var9 = var8 * var15[11] + var15[9] * var6 + var15[10] * var7 >> 16;
           if (0 >= var9) {
-            param2[1] = qh.field_f >> 1;
-            param2[0] = qh.field_l >> 1;
+            param2[1] = SoftwareRasterizer.height >> 1;
+            param2[0] = SoftwareRasterizer.width >> 1;
             return;
           }
           param2[1] = var15[8] * var8 + (var6 * var15[6] + var15[7] * var7) >> 7;
           param2[0] = var7 * var15[4] + (var6 * var15[3] + var15[5] * var8) >> 7;
-          param2[1] = fb.field_d + param2[1] / var9;
-          param2[0] = fb.field_q + param2[0] / var9;
+          param2[1] = TriangleRasterizer.projectionCenterY + param2[1] / var9;
+          param2[0] = TriangleRasterizer.projectionCenterX + param2[0] / var9;
           var10 = param1.field_K.field_A >> 1;
           param2[1] = param2[1] - var10;
           var11 = param1.field_K.field_z >> 1;
-          if (-var11 + qh.field_l < param2[0]) {
-            param2[0] = qh.field_l - var11;
+          if (-var11 + SoftwareRasterizer.width < param2[0]) {
+            param2[0] = SoftwareRasterizer.width - var11;
           } else {
             if (var11 > param2[0]) {
               param2[0] = var11;
             }
           }
-          if (-var10 + qh.field_f < param2[1]) {
-            param2[1] = qh.field_f - var10;
+          if (-var10 + SoftwareRasterizer.height < param2[1]) {
+            param2[1] = SoftwareRasterizer.height - var10;
             return;
           }
           if (param2[1] >= var10) {
@@ -111,13 +111,13 @@ final class uj {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 
     static {
         field_e = new ie();
-        field_b = "Rankings";
+        rankings = "Rankings";
         field_a = new int[]{0, 1, 3, 9, 10, 8, 7, 5, 15, 2, 12, 14, 4, 13, 11, 6};
     }
 }

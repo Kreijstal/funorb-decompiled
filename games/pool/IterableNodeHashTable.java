@@ -2,21 +2,21 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IterableNodeHashTable {
-    static String field_a;
+    static String createAlertPasschars;
     private IntrusiveNode field_f;
-    static String field_i;
-    static String field_d;
+    static String endgame;
+    static String privatechatFriendOffline;
     private IntrusiveNode[] field_g;
-    static String field_l;
-    static di field_k;
+    static String idlemessage20min;
+    static ResourceArchive field_k;
     private IntrusiveNode field_j;
     static int field_h;
     private int field_m;
-    static vh field_e;
+    static UiComponent field_e;
     private int field_b;
     static int[] field_c;
 
-    final void a(byte param0, IntrusiveNode param1, long param2) {
+    final void put(byte param0, IntrusiveNode param1, long param2) {
         IntrusiveNode var5 = null;
         try {
           if (param1.next != null) {
@@ -32,19 +32,19 @@ final class IterableNodeHashTable {
           param1.previous.next = param1;
           param1.key = param2;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "bm.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bm.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        createAlertPasschars = null;
         if (param0 <= 30) {
           field_h = 17;
         }
-        field_d = null;
+        privatechatFriendOffline = null;
         field_c = null;
-        field_i = null;
-        field_l = null;
+        endgame = null;
+        idlemessage20min = null;
         field_k = null;
         field_e = null;
     }
@@ -61,7 +61,7 @@ final class IterableNodeHashTable {
           if (param0 != 524288) {
             field_c = (int[]) null;
           }
-          var2_int = nj.b(hq.field_i, ta.field_f, -21223);
+          var2_int = nj.b(TutorialController.field_i, ta.field_f, -21223);
           if (1 == var2_int) {
             param1 = "<img=0>" + param1;
           }
@@ -80,7 +80,7 @@ final class IterableNodeHashTable {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -90,18 +90,18 @@ final class IterableNodeHashTable {
         if (param0) {
           return;
         }
-        if ((1 << ba.field_ub.field_db & ba.field_ub.field_I.field_x) != 0) {
-          nk.field_f[10] = dj.field_h;
+        if ((1 << AccountContentDialog.field_ub.localPlayerIndex & AccountContentDialog.field_ub.gameModel.field_x) != 0) {
+          TranslatedUiText.field_f[10] = dj.canceldraw;
         } else {
-          if (ba.field_ub.field_I.field_x == 0) {
-            nk.field_f[10] = eq.field_O;
+          if (AccountContentDialog.field_ub.gameModel.field_x == 0) {
+            TranslatedUiText.field_f[10] = DateInputWidget.offerdraw;
           } else {
-            nk.field_f[10] = ff.field_g;
+            TranslatedUiText.field_f[10] = ff.acceptdraw;
           }
         }
     }
 
-    final IntrusiveNode a(boolean param0, long param1) {
+    final IntrusiveNode get(boolean param0, long param1) {
         IntrusiveNode var5 = null;
         int var6 = Pool.field_O;
         IntrusiveNode var4 = this.field_g[(int)(param1 & (long)(this.field_b - 1))];
@@ -121,12 +121,12 @@ final class IterableNodeHashTable {
         return null;
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode first(int param0) {
         this.field_m = param0;
-        return this.b(-1);
+        return this.next(-1);
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode next(int param0) {
         int fieldTemp$0 = 0;
         IntrusiveNode var2;
         int var3;
@@ -166,7 +166,7 @@ final class IterableNodeHashTable {
           var2_int = param0.charAt(0);
           var3 = 1;
           if (param1 > -103) {
-            field_i = (String) null;
+            endgame = (String) null;
           }
           while (true) {
             if (var3 >= param0.length()) {
@@ -189,7 +189,7 @@ final class IterableNodeHashTable {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -229,10 +229,10 @@ final class IterableNodeHashTable {
             }
           }
           param1 = param1 << (var3 << 1);
-          return (long)(ac.field_o[(int)(param1 - 32768L)] >> var3);
+          return (long)(KillerBallSkin.field_o[(int)(param1 - 32768L)] >> var3);
         }
         if (131072L > param1) {
-          return (long)ac.field_o[(int)(-32768L + param1)];
+          return (long)KillerBallSkin.field_o[(int)(-32768L + param1)];
         }
         if (param1 < 549755813888L) {
           if (param1 < 134217728L) {
@@ -292,7 +292,7 @@ final class IterableNodeHashTable {
           }
         }
         param1 = param1 >> (var3Lifetime1 << 1);
-        return (long)ac.field_o[(int)(-32768L + param1)] << var3Lifetime1;
+        return (long)KillerBallSkin.field_o[(int)(-32768L + param1)] << var3Lifetime1;
     }
 
     IterableNodeHashTable(int param0) {
@@ -312,9 +312,9 @@ final class IterableNodeHashTable {
     }
 
     static {
-        field_a = "Passwords can only contain letters and numbers";
-        field_i = "End Game";
-        field_d = "You cannot chat to <%0> because <%0> is offline in your friend list.";
-        field_l = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
+        createAlertPasschars = "Passwords can only contain letters and numbers";
+        endgame = "End Game";
+        privatechatFriendOffline = "You cannot chat to <%0> because <%0> is offline in your friend list.";
+        idlemessage20min = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
     }
 }

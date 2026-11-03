@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pp {
-    static vh field_c;
+    static UiComponent field_c;
     static int field_b;
     static double field_d;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         int var1 = -30 / ((29 - param0) / 47);
     }
 
-    final static void a(eg param0, short param1, boolean param2, int[] param3, int[] param4) {
+    final static void a(MeshBuilder param0, short param1, boolean param2, int[] param3, int[] param4) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -45,8 +45,8 @@ final class pp {
           var7 = 0;
           var8 = 0;
           var5_int = 0;
-          while (param0.field_K > var5_int) {
-            if (param1 != param0.field_n[var5_int]) {
+          while (param0.faceCount > var5_int) {
+            if (param1 != param0.faceColors[var5_int]) {
               var5_int++;
               continue;
             }
@@ -56,19 +56,19 @@ final class pp {
               if (null != param0.field_f) {
                 param0.field_f[var5_int] = (byte)-1;
               } else {
-                param0.field_Q = new byte[param0.field_K];
+                param0.field_Q = new byte[param0.faceCount];
                 param0.field_Q[var5_int] = (byte)2;
               }
             }
-            var9 = param0.field_g[param0.field_N[var5_int]];
-            var10 = param0.field_Y[param0.field_N[var5_int]];
-            var11 = param0.field_q[param0.field_N[var5_int]];
-            var12 = param0.field_g[param0.field_v[var5_int]];
-            var13 = param0.field_Y[param0.field_v[var5_int]];
-            var14 = param0.field_q[param0.field_v[var5_int]];
-            var15 = param0.field_g[param0.field_X[var5_int]];
-            var16 = param0.field_Y[param0.field_X[var5_int]];
-            var17 = param0.field_q[param0.field_X[var5_int]];
+            var9 = param0.vertexX[param0.faceVertexA[var5_int]];
+            var10 = param0.vertexY[param0.faceVertexA[var5_int]];
+            var11 = param0.vertexZ[param0.faceVertexA[var5_int]];
+            var12 = param0.vertexX[param0.faceVertexB[var5_int]];
+            var13 = param0.vertexY[param0.faceVertexB[var5_int]];
+            var14 = param0.vertexZ[param0.faceVertexB[var5_int]];
+            var15 = param0.vertexX[param0.faceVertexC[var5_int]];
+            var16 = param0.vertexY[param0.faceVertexC[var5_int]];
+            var17 = param0.vertexZ[param0.faceVertexC[var5_int]];
             var6 = var9 - var12;
             var8 = -var14 + var11;
             var7 = -var13 + var10;
@@ -149,7 +149,7 @@ final class pp {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class pp {
         if (!param0) {
           return true;
         }
-        stackIn_6_0 = (fe.a(ClientException.field_g, -13671, 26)) || (IntrusiveDeque.a(0, (byte) -127));
+        stackIn_6_0 = (ButtonWidget.a(ClientException.field_g, -13671, 26)) || (IntrusiveDeque.a(0, (byte) -127));
         return stackIn_6_0;
     }
 
@@ -169,21 +169,21 @@ final class pp {
         int var7 = 0;
         int var8 = 0;
         int var2_int = wn.field_i;
-        int var3 = gg.field_f;
+        int var3 = DebouncedValidationProvider.field_f;
         if (param1 != 1259627265) {
           return;
         }
         try {
-          var4 = uo.field_Lb.field_I.b(param0, 500);
-          var5 = 6 + uo.field_Lb.field_I.a(param0, 500);
-          var6 = 2 + var4 * ad.field_x;
+          var4 = AlignedIconLabel.field_Lb.font.countWrappedLines(param0, 500);
+          var5 = 6 + AlignedIconLabel.field_Lb.font.a(param0, 500);
+          var6 = 2 + var4 * ArchiveIndex.field_x;
           var7 = de.a(var5, 12, var2_int, 0);
-          var8 = sh.a(var6, var3, -1, 20);
-          qh.b(var7, var8, var5, var6, 0);
-          qh.f(1 + var7, 1 + var8, var5 - 2, -2 + var6, 16777088);
-          uo.field_Lb.field_I.a(param0, 3 + var7, wh.field_b + (var8 + 1 - uo.field_Lb.field_I.field_C), 500, 1000, 0, -1, 0, 0, ad.field_x);
+          var8 = OpacityWidget.a(var6, var3, -1, 20);
+          SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
+          SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, var5 - 2, -2 + var6, 16777088);
+          AlignedIconLabel.field_Lb.font.drawParagraph(param0, 3 + var7, QuickChatPhraseRegistry.field_b + (var8 + 1 - AlignedIconLabel.field_Lb.font.maxAscent), 500, 1000, 0, -1, 0, 0, ArchiveIndex.field_x);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "pp.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pp.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

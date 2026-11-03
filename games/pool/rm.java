@@ -3,14 +3,14 @@
  */
 final class rm {
     static boolean field_d;
-    static String field_a;
-    static nm field_e;
-    static String field_f;
+    static String muChatPmFriends;
+    static NineSliceFrame field_e;
+    static String yes;
     static int field_b;
     static Sprite[] field_g;
     static long field_c;
 
-    final static double[][] a(double[] param0, int param1) {
+    final static double[][] createSymmetricCopies(double[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         double[][] stackIn_1_0 = null;
@@ -32,23 +32,23 @@ final class rm {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
-        field_a = null;
+    public static void releaseStatics(byte param0) {
+        muChatPmFriends = null;
         field_g = null;
-        field_f = null;
+        yes = null;
         field_e = null;
         if (param0 > -12) {
-          rm.a((byte) -85);
+          rm.releaseStatics((byte) -85);
         }
     }
 
     static {
-        field_a = "Show private chat from my friends and opponents";
-        field_f = "Yes";
+        muChatPmFriends = "Show private chat from my friends and opponents";
+        yes = "Yes";
         field_c = 0L;
     }
 }

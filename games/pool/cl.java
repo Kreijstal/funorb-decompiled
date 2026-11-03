@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cl {
-    static vh field_d;
+    static UiComponent field_d;
     static Sprite field_k;
     static int field_h;
     static Sprite field_m;
     static int field_g;
     static java.awt.Font field_c;
-    static String field_i;
+    static String muChatFriends;
     static int field_e;
     static boolean field_f;
-    static String field_l;
-    static String field_a;
-    static String field_b;
-    static String field_j;
-    static String field_n;
+    static String publicchatUnavailableRatedgame;
+    static String muChatLobbyFriendsOnly;
+    static String fsAcceptBeforeaccept;
+    static String pleasewaitDotdotdot;
+    static String memberslevelName;
 
-    final static boolean a(int param0, vh param1) {
+    final static boolean isPointerInside(int param0, UiComponent param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -27,12 +27,12 @@ final class cl {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.field_sb;
+          var2_int = param1.screenX;
           if (param0 != 1) {
-            field_n = (String) null;
+            memberslevelName = (String) null;
           }
-          var3 = param1.field_ib;
-          stackIn_8_0 = (wn.field_i >= var2_int) && (var2_int + param1.field_gb > wn.field_i) && (var3 <= gg.field_f) && (var3 + param1.field_Db > gg.field_f);
+          var3 = param1.screenY;
+          stackIn_8_0 = (wn.field_i >= var2_int) && (var2_int + param1.width > wn.field_i) && (var3 <= DebouncedValidationProvider.field_f) && (var3 + param1.height > DebouncedValidationProvider.field_f);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -44,19 +44,19 @@ final class cl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     public static void a(byte param0) {
-        field_i = null;
-        field_j = null;
+        muChatFriends = null;
+        pleasewaitDotdotdot = null;
         field_k = null;
-        field_a = null;
-        field_n = null;
-        field_l = null;
+        muChatLobbyFriendsOnly = null;
+        memberslevelName = null;
+        publicchatUnavailableRatedgame = null;
         if (param0 <= -43) {
-          field_b = null;
+          fsAcceptBeforeaccept = null;
           field_m = null;
           field_d = null;
           field_c = null;
@@ -64,11 +64,11 @@ final class cl {
         }
     }
 
-    final static wl a(byte[] param0, boolean param1) {
-        wl var2 = null;
+    final static AlphaFont createAlphaFont(byte[] param0, boolean param1) {
+        AlphaFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        wl stackIn_6_0 = null;
+        AlphaFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -76,12 +76,12 @@ final class cl {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (wl) (stackIn_2_0);
+            return (AlphaFont) (stackIn_2_0);
           }
-          var2 = new wl(param0, el.field_I, ih.field_d, pd.field_a, rc.field_f, IntrusiveNode.field_h, v.field_b);
-          sh.h(-1);
+          var2 = new AlphaFont(param0, AchievementsScreen.field_I, ih.field_d, LinkButtonPainter.field_a, rc.field_f, IntrusiveNode.field_h, LimitedRandomAccessFile.field_b);
+          OpacityWidget.h(-1);
           if (!param1) {
-            field_j = (String) null;
+            pleasewaitDotdotdot = (String) null;
           }
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -95,7 +95,7 @@ final class cl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -103,31 +103,31 @@ final class cl {
         td.field_c.setLength(0);
         hn.field_b = 0;
         if (param0 != 14851) {
-          field_n = (String) null;
+          memberslevelName = (String) null;
         }
     }
 
-    final static void a(int param0, int param1, int[] param2, float[] param3, float[] param4) {
-        if (!am.a((byte) 107, param2, param3)) {
+    final static void drawProjectedLine(int param0, int param1, int[] param2, float[] param3, float[] param4) {
+        if (!TextWidgetPainter.projectPointIfVisible((byte) 107, param2, param3)) {
           return;
         }
-        if (!am.a((byte) 127, param2, param4)) {
+        if (!TextWidgetPainter.projectPointIfVisible((byte) 127, param2, param4)) {
           return;
         }
         try {
-          qh.d((int)param3[0], (int)param3[param1], (int)param4[0], (int)param4[1], param0);
+          SoftwareRasterizer.drawLine((int)param3[0], (int)param3[param1], (int)param4[0], (int)param4[1], param0);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "cl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_e = 0;
-        field_l = "Public chat is unavailable while setting up a rated game.";
-        field_b = "Click";
-        field_a = "Only show lobby chat from my friends";
-        field_j = "Please wait...";
-        field_i = "Friends";
-        field_n = "Members only";
+        publicchatUnavailableRatedgame = "Public chat is unavailable while setting up a rated game.";
+        fsAcceptBeforeaccept = "Click";
+        muChatLobbyFriendsOnly = "Only show lobby chat from my friends";
+        pleasewaitDotdotdot = "Please wait...";
+        muChatFriends = "Friends";
+        memberslevelName = "Members only";
     }
 }

@@ -4,13 +4,13 @@
 final class td {
     static Sprite field_g;
     static StringBuilder field_c;
-    static nm field_e;
+    static NineSliceFrame field_e;
     static ph field_f;
     static Sprite field_a;
     static boolean field_d;
     static int field_b;
 
-    final static long a(byte param0, CharSequence param1) {
+    final static long encodeBase37(byte param0, CharSequence param1) {
         int var5 = 0;
         long var2_long = 0L;
         int var4 = 0;
@@ -66,11 +66,11 @@ final class td {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         if (param0 <= 56) {
           field_f = (ph) null;
@@ -84,12 +84,12 @@ final class td {
     final static boolean a(boolean param0) {
         if (!param0) {
           CharSequence var2 = (CharSequence) null;
-          td.a((byte) 6, (CharSequence) null);
+          td.encodeBase37((byte) 6, (CharSequence) null);
         }
         return ro.field_e;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isAlphanumeric(char param0, byte param1) {
         int var2;
         boolean stackIn_11_0 = false;
         boolean decompiledFrameRemainder0 = true;

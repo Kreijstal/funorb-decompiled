@@ -3,16 +3,16 @@
  */
 final class mg {
     static int field_d;
-    static String field_b;
-    static String field_a;
-    static vh field_c;
+    static String ignorelistdupe;
+    static String playerX2AreOut;
+    static UiComponent field_c;
 
-    final static im a(int param0, long param1) {
+    final static LobbyPlayer findLobbyPlayer(int param0, long param1) {
         if (param0 != 0) {
           mg.a(-80);
-          return (im) (ln.field_n.a(param1, false));
+          return (LobbyPlayer) (ln.field_n.findFirst(param1, false));
         }
-        return (im) (ln.field_n.a(param1, false));
+        return (LobbyPlayer) (ln.field_n.findFirst(param1, false));
     }
 
     final static boolean a(int param0) {
@@ -20,16 +20,16 @@ final class mg {
         if (jd.field_c == null) {
           return false;
         }
-        if (ta.field_a == tl.field_J) {
+        if (ta.field_a == RankingsScreen.field_J) {
           return true;
         }
         return false;
     }
 
-    public static void a(byte param0) {
-        field_a = null;
+    public static void releaseStatics(byte param0) {
+        playerX2AreOut = null;
         field_c = null;
-        field_b = null;
+        ignorelistdupe = null;
         if (param0 >= -40) {
           mg.a(true);
         }
@@ -40,10 +40,10 @@ final class mg {
         if (!param0) {
           return false;
         }
-        if (hk.b(-18)) {
+        if (NanoTickClock.b(-18)) {
           stackIn_7_0 = true;
         } else {
-          if (0 >= mp.field_V) {
+          if (0 >= UsernameSuggestionsPanel.field_V) {
             return true;
           }
           stackIn_7_0 = false;
@@ -52,7 +52,7 @@ final class mg {
     }
 
     static {
-        field_b = "<%0> is already on your ignore list.";
-        field_a = "<%0> and <%1> are out of lives!";
+        ignorelistdupe = "<%0> is already on your ignore list.";
+        playerX2AreOut = "<%0> and <%1> are out of lives!";
     }
 }

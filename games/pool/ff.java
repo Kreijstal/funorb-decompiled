@@ -4,25 +4,25 @@
 final class ff {
     static int[] field_i;
     static int[] field_a;
-    static String field_g;
+    static String acceptdraw;
     static Sprite[][] field_f;
     static int[] field_h;
     static Sprite[] field_e;
-    static so field_d;
+    static SceneNode field_d;
     static nl field_b;
-    static String field_j;
+    static String escCancelthisline;
     static boolean field_c;
 
     final static void a(int param0, boolean param1) {
         if (param0 != 0) {
           field_c = false;
-          uq.field_D.a((byte) -79, param1);
+          Bzip2DecoderState.field_D.drawRoot((byte) -79, param1);
           return;
         }
-        uq.field_D.a((byte) -79, param1);
+        Bzip2DecoderState.field_D.drawRoot((byte) -79, param1);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         field_h = null;
         field_d = null;
@@ -30,8 +30,8 @@ final class ff {
         field_e = null;
         if (param0 > 56) {
           field_a = null;
-          field_g = null;
-          field_j = null;
+          acceptdraw = null;
+          escCancelthisline = null;
           field_f = (Sprite[][]) null;
           return;
         }
@@ -40,24 +40,24 @@ final class ff {
     final static void a(int param0, int param1) {
         int var2 = 0;
         int var3 = 0;
-        fd.field_J = param1;
-        if (em.field_P != ir.field_h) {
-          var2 = ir.field_h * ir.field_h;
-          var3 = -(em.field_P * em.field_P) + var2;
+        StrongCacheEntry.field_J = param1;
+        if (HighscoresScreen.field_P != BufferedFile.field_h) {
+          var2 = BufferedFile.field_h * BufferedFile.field_h;
+          var3 = -(HighscoresScreen.field_P * HighscoresScreen.field_P) + var2;
           param1 = param1 + var3 * (-param1 + cb.field_g) / var2;
         }
-        fl.field_q.b(param1, param0 - 2147483625, tn.field_u, 640, 120);
-        mm.a(ja.field_b, param0 + cb.field_g, 0, 640, 5, 125, kj.field_j);
+        fl.field_q.setBounds(param1, param0 - 2147483625, RasterSnapshot.field_u, 640, 120);
+        Camera.a(ja.field_b, param0 + cb.field_g, 0, 640, 5, 125, CueAim.field_j);
     }
 
     static {
         field_f = new Sprite[][]{null, null, null, null};
-        field_g = "Accept draw";
-        field_h = ta.a(new int[]{0, 0, 8, 16777215, 32, 0, 65, 0}, -120);
-        field_i = ta.a(new int[]{0, 0, 8, 16724753, 32, 0, 65, 0}, -120);
+        acceptdraw = "Accept draw";
+        field_h = ta.buildGradientPalette(new int[]{0, 0, 8, 16777215, 32, 0, 65, 0}, -120);
+        field_i = ta.buildGradientPalette(new int[]{0, 0, 8, 16724753, 32, 0, 65, 0}, -120);
         field_a = new int[field_h.length];
         field_b = new nl();
-        field_j = "ESC - cancel this line";
+        escCancelthisline = "ESC - cancel this line";
         field_c = true;
     }
 }

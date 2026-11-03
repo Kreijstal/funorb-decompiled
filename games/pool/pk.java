@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pk {
-    static vh field_a;
-    static String field_c;
+    static UiComponent field_a;
+    static String muOptionsRatedgametype;
     static Sprite field_b;
 
     final static String a(CharSequence param0, int param1) {
@@ -16,7 +16,7 @@ final class pk {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 1 % ((param1 - 27) / 33);
-          stackIn_1_0 = fe.a(false, (byte) 70, param0);
+          stackIn_1_0 = ButtonWidget.a(false, (byte) 70, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -28,38 +28,38 @@ final class pk {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
-        field_c = null;
+        muOptionsRatedgametype = null;
         int var1 = 77 % ((1 - param0) / 46);
         field_a = null;
     }
 
     final static boolean b(byte param0) {
         if (param0 != 109) {
-          field_a = (vh) null;
-          if (fk.field_ab < 10) {
+          field_a = (UiComponent) null;
+          if (PlasmaTableScene.field_ab < 10) {
             return false;
           }
-          if (!gk.field_kb) {
+          if (!FullscreenErrorDialog.field_kb) {
             return !mg.a(-114) ? true : false;
           }
           return false;
         }
-        if (fk.field_ab < 10) {
+        if (PlasmaTableScene.field_ab < 10) {
           return false;
         }
-        if (!gk.field_kb) {
+        if (!FullscreenErrorDialog.field_kb) {
           return !mg.a(-114) ? true : false;
         }
         return false;
     }
 
     static {
-        field_c = "Match by...";
+        muOptionsRatedgametype = "Match by...";
     }
 }

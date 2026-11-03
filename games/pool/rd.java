@@ -6,7 +6,7 @@ abstract class rd extends IntrusiveNode {
 
     abstract void a();
 
-    abstract int a(ai param0);
+    abstract int a(PcmStreamMixer param0);
 
     private rd() throws Throwable {
         throw new Error();

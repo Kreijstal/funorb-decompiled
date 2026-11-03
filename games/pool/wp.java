@@ -3,15 +3,15 @@
  */
 final class wp implements si {
     static MouseHandler field_g;
-    static String field_h;
+    static String fsButtonMembers;
     static String[] field_f;
-    static String field_b;
+    static String returntomainmenu;
     static int field_d;
     static int field_c;
     static Sprite field_a;
-    static String field_e;
+    static String createEmailConfirmTooltip;
 
-    final static byte[] a(int param0, byte[] param1) {
+    final static byte[] decompressContainer(int param0, byte[] param1) {
         PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -43,11 +43,11 @@ final class wp implements si {
               !(var5 > sb.field_b))) {
               var6 = new byte[var5];
               if (1 == var3) {
-                rh.a(var6, var5, param1, var4, 9);
+                Bzip2Decoder.decompressInto(var6, var5, param1, var4, 9);
               } else {
-                var7 = db.field_Qb;
+                var7 = VerticalScrollbar.field_Qb;
                 synchronized (var7) {
-                  db.field_Qb.a(var6, true, var2);
+                  VerticalScrollbar.field_Qb.decompress(var6, true, var2);
                 }
               }
               stackIn_32_0 = var6;
@@ -66,17 +66,17 @@ final class wp implements si {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
-    final static eo a(boolean param0, int param1, int param2) {
-        of stackIn_3_0 = null;
+    final static SocialListEntry a(boolean param0, int param1, int param2) {
+        ScrollPane stackIn_3_0 = null;
         boolean stackIn_3_1 = false;
         boolean stackIn_4_2 = false;
-        vh stackIn_30_0 = null;
+        UiComponent stackIn_30_0 = null;
         String stackIn_31_1 = null;
-        vh stackIn_34_0 = null;
+        UiComponent stackIn_34_0 = null;
         String stackIn_35_1 = null;
         int stackIn_39_0 = 0;
         Object stackIn_88_0 = null;
@@ -87,7 +87,7 @@ final class wp implements si {
         Object var5 = null;
         Object var6_ref = null;
         int var6 = 0;
-        eo var7 = null;
+        SocialListEntry var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -97,40 +97,40 @@ final class wp implements si {
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
-        kn var17 = null;
+        PlayerContextMenu var17 = null;
         String var18 = null;
-        kn var17Lifetime1;
+        PlayerContextMenu var17Lifetime1;
         String var18Lifetime1;
         try {
-          stackIn_3_0 = aj.field_Mb.field_Sb;
+          stackIn_3_0 = NameEntryPopup.field_Mb.scrollPane;
           stackIn_3_1 = param0;
-          stackIn_4_2 = (aj.field_Mb.field_Sb == pf.field_c);
-          var3_int = ((of) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, 2, (byte) 80, 2 + ad.field_x, (ad.field_x + 2) * (3 * param1)) ? 1 : 0;
-          var4 = aj.field_Mb.field_Mb.field_T;
+          stackIn_4_2 = (NameEntryPopup.field_Mb.scrollPane == WidgetStyleLayer.field_c);
+          var3_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_4_2, 2, (byte) 80, 2 + ArchiveIndex.field_x, (ArchiveIndex.field_x + 2) * (3 * param1)) ? 1 : 0;
+          var4 = NameEntryPopup.field_Mb.content.children;
           var5 = null;
           if (2 == th.field_a) {
-            ud.field_J.field_pb = true;
-            ba.field_sb.field_nb = nr.a(new String[]{cm.field_J}, -1, ei.field_w);
-            aj.field_Mb.field_Sb.field_Sb.field_nb = null;
+            SingleChildWidget.field_J.enabled = true;
+            AccountContentDialog.field_sb.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{LocalGameSetupScreen.field_J}, -1, UiWidget.youAreOnXServer);
+            NameEntryPopup.field_Mb.scrollPane.viewport.text = null;
             var6_ref = null;
-            var7 = (eo) (var4.c((byte) 60));
+            var7 = (SocialListEntry) (var4.last((byte) 60));
             while (null != var7) {
               var8 = 0;
-              if (var7.field_T == null) {
-                var7.field_Pb = new vh(0L, PacketBuffer.field_s);
-                var7.a(94, var7.field_Pb);
-                var7.field_Nb = new vh(0L, tm.field_d);
-                var7.a(-103, var7.field_Nb);
-                var7.field_Ob = new vh(0L, PacketBuffer.field_s);
-                var7.a(-120, var7.field_Ob);
-                var7.field_Nb.field_Fb = 2;
-                var7.d((byte) -127);
+              if (var7.children == null) {
+                var7.field_Pb = new UiComponent(0L, PacketBuffer.field_s);
+                var7.addChild(94, var7.field_Pb);
+                var7.field_Nb = new UiComponent(0L, BallSkin.field_d);
+                var7.addChild(-103, var7.field_Nb);
+                var7.field_Ob = new UiComponent(0L, PacketBuffer.field_s);
+                var7.addChild(-120, var7.field_Ob);
+                var7.field_Nb.horizontalAlignment = 2;
+                var7.markDescendantsToInheritVisualState((byte) -127);
                 var8 = 1;
               }
-              var7.field_gb = aj.field_Mb.field_Mb.field_gb;
+              var7.width = NameEntryPopup.field_Mb.content.width;
               var9 = 0;
-              if (var7.field_Wb != null) {
-                if (cm.field_J != var7.field_Wb) {
+              if (var7.serverName != null) {
+                if (LocalGameSetupScreen.field_J != var7.serverName) {
                   var10 = 13421568;
                   var11 = 16777062;
                 } else {
@@ -142,107 +142,107 @@ final class wp implements si {
                 var10 = 13369344;
               }
               var12 = 0;
-              if (var7.field_Sb != null &&
-                !var7.field_Sb.equals("")) {
-                var7.field_Ob.field_hb = oi.field_o;
-                var7.field_Ob.field_K = var11;
+              if (var7.previousName != null &&
+                !var7.previousName.equals("")) {
+                var7.field_Ob.sprite = oi.field_o;
+                var7.field_Ob.activeTextColor = var11;
                 var12 = 1;
-                var7.field_Ob.b(var9, 2147483647, 0, 3 + oi.field_o.field_w, ad.field_x);
+                var7.field_Ob.setBounds(var9, 2147483647, 0, 3 + oi.field_o.field_w, ArchiveIndex.field_x);
               }
-              var7.field_Nb.field_Bb = var11;
-              var7.field_Pb.field_Bb = var11;
-              var7.field_Nb.field_P = var11;
-              var7.field_Pb.field_P = var11;
-              var7.field_Nb.field_N = var10;
-              var7.field_Pb.field_N = var10;
-              var7.field_Nb.field_K = var11;
-              var7.field_Pb.field_K = var11;
+              var7.field_Nb.selectedTextColor = var11;
+              var7.field_Pb.selectedTextColor = var11;
+              var7.field_Nb.capturedTextColor = var11;
+              var7.field_Pb.capturedTextColor = var11;
+              var7.field_Nb.textColor = var10;
+              var7.field_Pb.textColor = var10;
+              var7.field_Nb.activeTextColor = var11;
+              var7.field_Pb.activeTextColor = var11;
               var13 = 0;
-              var14 = -80 + (var7.field_gb - 2);
+              var14 = -80 + (var7.width - 2);
               if (var12 != 0) {
                 var13 = oi.field_o.field_w + 3;
                 var14 = var14 - var13;
               }
               stackIn_30_0 = var7.field_Pb;
               if (var14 <= 0) {
-                stackIn_31_1 = var7.field_Zb;
+                stackIn_31_1 = var7.name;
               } else {
-                stackIn_31_1 = lr.a(var7.field_Pb.field_I, var7.field_Zb, var14);
+                stackIn_31_1 = BitmapFont.truncateText(var7.field_Pb.font, var7.name, var14);
               }
-              stackIn_30_0.field_nb = stackIn_31_1;
-              var7.field_Pb.b(var9, 2147483647, var13, var14, ad.field_x);
+              stackIn_30_0.text = stackIn_31_1;
+              var7.field_Pb.setBounds(var9, 2147483647, var13, var14, ArchiveIndex.field_x);
               stackIn_34_0 = var7.field_Nb;
-              if (null != var7.field_Wb) {
-                stackIn_35_1 = var7.field_Wb;
+              if (null != var7.serverName) {
+                stackIn_35_1 = var7.serverName;
               } else {
-                stackIn_35_1 = we.field_j;
+                stackIn_35_1 = ArchiveLoadStep.offline;
               }
-              stackIn_34_0.field_nb = stackIn_35_1;
-              var7.field_Nb.b(var9, 2147483647, var7.field_gb - 80, 80, ad.field_x);
-              stackIn_39_0 = (var7.field_Pb.field_nb.equals(var7.field_Zb)) ? 0 : 1;
+              stackIn_34_0.text = stackIn_35_1;
+              var7.field_Nb.setBounds(var9, 2147483647, var7.width - 80, 80, ArchiveIndex.field_x);
+              stackIn_39_0 = (var7.field_Pb.text.equals(var7.name)) ? 0 : 1;
               var15 = stackIn_39_0;
-              var9 = var9 + ad.field_x;
+              var9 = var9 + ArchiveIndex.field_x;
               if (var3_int == 0) {
-                var7.field_Cb = -var7.field_Db + var9;
+                var7.remainingHeight = -var7.height + var9;
               }
               if (var8 != 0) {
-                aj.field_Mb.field_Mb.a((vh) (var6_ref), 2, var7, -78);
+                NameEntryPopup.field_Mb.content.placeBelow((UiComponent) (var6_ref), 2, var7, -78);
               }
               var6_ref = var7;
               if (null != var7.field_Ob &&
-                var7.field_Ob.field_W) {
-                kk.field_B = var7.field_Sb;
+                var7.field_Ob.activeInside) {
+                CacheEntry.field_B = var7.previousName;
               } else {
-                if (0 != var7.field_R) {
-                  var16 = var7.field_Zb;
-                  dr.a((String) null, -1, 0L, -1, aj.field_Mb.field_Sb, var16, 32540, var7, (int[]) null);
+                if (0 != var7.pressedButton) {
+                  var16 = var7.name;
+                  dr.openPlayerContextMenu((String) null, -1, 0L, -1, NameEntryPopup.field_Mb.scrollPane, var16, 32540, var7, (int[]) null);
                   var5 = var7;
-                  if (var7.field_Wb != null &&
-                    !fj.a(vl.field_m.field_m, (byte) -101) &&
+                  if (var7.serverName != null &&
+                    !NineBallRules.a(PlasmaBallSkin.field_m.field_m, (byte) -101) &&
                     !ea.field_z) {
-                    if (!hr.field_y) {
-                      var17 = vl.field_m;
-                      var18 = nr.a(new String[]{var16}, -1, rp.field_a);
-                      var17.field_n.a(var18, 17130, 8);
+                    if (!ViewportController.field_y) {
+                      var17 = PlasmaBallSkin.field_m;
+                      var18 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var16}, -1, rp.sendPmToX);
+                      var17.field_n.addAction(var18, 17130, 8);
                     }
-                    var17Lifetime1 = vl.field_m;
-                    var18Lifetime1 = nr.a(new String[]{var16}, -1, hq.field_e);
-                    var17Lifetime1.field_n.a(var18Lifetime1, 17130, 18);
+                    var17Lifetime1 = PlasmaBallSkin.field_m;
+                    var18Lifetime1 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var16}, -1, TutorialController.sendQcToX);
+                    var17Lifetime1.field_n.addAction(var18Lifetime1, 17130, 18);
                   }
                 } else {
-                  if (var7.field_Pb.field_W &&
+                  if (var7.field_Pb.activeInside &&
                     var15 != 0) {
-                    kk.field_B = var7.field_Zb;
+                    CacheEntry.field_B = var7.name;
                   }
                 }
               }
-              var7 = (eo) (var4.f((byte) -5));
+              var7 = (SocialListEntry) (var4.previous((byte) -5));
             }
-            if (0 != aj.field_Mb.field_Ob.field_R) {
-              sm.field_C = new aj(aj.field_Mb.field_Ob.field_sb, aj.field_Mb.field_Ob.field_ib, aj.field_Mb.field_Ob.field_gb, aj.field_Mb.field_Ob.field_Db, cq.field_f, wa.field_qb, uo.field_Lb, uo.field_Lb);
-              ne.field_m = 0;
+            if (0 != NameEntryPopup.field_Mb.leftFooter.pressedButton) {
+              sm.field_C = new NameEntryPopup(NameEntryPopup.field_Mb.leftFooter.screenX, NameEntryPopup.field_Mb.leftFooter.screenY, NameEntryPopup.field_Mb.leftFooter.width, NameEntryPopup.field_Mb.leftFooter.height, cq.enterfriendAdd, ProgressDialog.field_qb, AlignedIconLabel.field_Lb, AlignedIconLabel.field_Lb);
+              MatchingTextValidator.field_m = 0;
             }
-            if (aj.field_Mb.field_Qb.field_R != 0) {
-              sm.field_C = new aj(aj.field_Mb.field_Qb.field_sb, aj.field_Mb.field_Qb.field_ib, aj.field_Mb.field_Qb.field_gb, aj.field_Mb.field_Qb.field_Db, vk.field_O, wa.field_qb, uo.field_Lb, uo.field_Lb);
-              ne.field_m = 1;
+            if (NameEntryPopup.field_Mb.rightFooter.pressedButton != 0) {
+              sm.field_C = new NameEntryPopup(NameEntryPopup.field_Mb.rightFooter.screenX, NameEntryPopup.field_Mb.rightFooter.screenY, NameEntryPopup.field_Mb.rightFooter.width, NameEntryPopup.field_Mb.rightFooter.height, MidiPcmStream.enterfriendDel, ProgressDialog.field_qb, AlignedIconLabel.field_Lb, AlignedIconLabel.field_Lb);
+              MatchingTextValidator.field_m = 1;
             }
           } else {
-            ud.field_J.field_pb = false;
-            ba.field_sb.field_nb = cl.field_j;
+            SingleChildWidget.field_J.enabled = false;
+            AccountContentDialog.field_sb.text = cl.pleasewaitDotdotdot;
             if (th.field_a == 1) {
-              aj.field_Mb.field_Sb.field_Sb.field_nb = ri.field_Q;
+              NameEntryPopup.field_Mb.scrollPane.viewport.text = CheckboxWidget.connectingToFriendServerTwoline;
             } else {
-              aj.field_Mb.field_Sb.field_Sb.field_nb = o.field_A;
+              NameEntryPopup.field_Mb.scrollPane.viewport.text = UiComponentNode.loading;
             }
-            mq.a(aj.field_Mb.field_Mb, (byte) 109);
+            AudioService.a(NameEntryPopup.field_Mb.content, (byte) 109);
           }
           var6 = -31 / ((param2 - 31) / 62);
           stackIn_88_0 = var5;
-          return (eo) (stackIn_88_0);
+          return (SocialListEntry) (stackIn_88_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var3), "wp.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "wp.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class wp implements si {
         RuntimeException decompiledCaughtException = null;
         var5 = Pool.field_O;
         try {
-          var4 = (ea) (rc.field_c.c((byte) -82));
+          var4 = (ea) (rc.field_c.last((byte) -82));
           if (param2 <= 27) {
             field_g = (MouseHandler) null;
           }
@@ -266,7 +266,7 @@ final class wp implements si {
                 stackIn_12_0 = var4;
                 return stackIn_12_0;
               }
-              var4 = (ea) (rc.field_c.f((byte) -5));
+              var4 = (ea) (rc.field_c.previous((byte) -5));
               continue;
             }
             break;
@@ -275,7 +275,7 @@ final class wp implements si {
             var4 = new ea();
             var4.field_o = param1;
             var4.field_s = param0;
-            rc.field_c.b((byte) -114, var4);
+            rc.field_c.addFirst((byte) -114, var4);
             wb.a(var4, param3, (byte) -96);
           }
           stackIn_16_0 = var4;
@@ -283,16 +283,16 @@ final class wp implements si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var4_ref), "wp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4_ref), "wp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static od a(int param0, PlatformTaskDispatcher param1, byte param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas openFullscreenCanvas(int param0, PlatformTaskDispatcher param1, byte param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        od var7 = null;
+        FullscreenFocusCanvas var7 = null;
         Object stackIn_2_0 = null;
-        od stackIn_7_0 = null;
+        FullscreenFocusCanvas stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -301,11 +301,11 @@ final class wp implements si {
           var6 = nj.a(param3, param1, param0, false, param4, param5);
           if (null == var6) {
             stackIn_2_0 = null;
-            return (od) (stackIn_2_0);
+            return (FullscreenFocusCanvas) (stackIn_2_0);
           }
-          var7 = new od();
-          var7.field_b = var6;
-          var7.field_b.add((java.awt.Component) ((Object) var7));
+          var7 = new FullscreenFocusCanvas();
+          var7.frame = var6;
+          var7.frame.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param0, param3);
           var7.addFocusListener(var7);
           if (param2 != 0) {
@@ -324,7 +324,7 @@ final class wp implements si {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -332,10 +332,10 @@ final class wp implements si {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          field_h = null;
-          field_e = null;
+          fsButtonMembers = null;
+          createEmailConfirmTooltip = null;
           field_g = null;
-          field_b = null;
+          returntomainmenu = null;
           if (param0 != 0) {
             field_a = (Sprite) null;
           }
@@ -345,15 +345,15 @@ final class wp implements si {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "wp.D(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "wp.D(" + param0 + ')');
         }
     }
 
     static {
-        field_h = "Members";
-        field_b = "Return to Main Menu";
+        fsButtonMembers = "Members";
+        returntomainmenu = "Return to Main Menu";
         field_g = new MouseHandler();
         field_c = 50;
-        field_e = "Type your email address again to make sure it's correct";
+        createEmailConfirmTooltip = "Type your email address again to make sure it's correct";
     }
 }

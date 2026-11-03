@@ -2,27 +2,27 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class m {
-    static String field_a;
+    static String yourRatingIsX;
     static volatile boolean field_d;
-    static String field_b;
-    static lr field_c;
+    static String gameoptPleasetrychanging;
+    static BitmapFont field_c;
     static int field_f;
     static int field_e;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
-        field_a = null;
-        field_b = null;
+        yourRatingIsX = null;
+        gameoptPleasetrychanging = null;
         if (param0 > -31) {
-          m.a((byte) 74);
+          m.releaseStatics((byte) 74);
         }
     }
 
     static {
         field_z = "m.A(";
-        field_a = "Your rating is <%0>";
+        yourRatingIsX = "Your rating is <%0>";
         field_d = false;
-        field_b = "Please try changing the following settings:  ";
+        gameoptPleasetrychanging = "Please try changing the following settings:  ";
     }
 }

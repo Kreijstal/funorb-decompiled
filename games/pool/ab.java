@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ab {
-    static String field_b;
-    static String field_d;
-    static String field_c;
-    static String field_i;
-    static String field_a;
+    static String createOptinNews;
+    static String gameoptInviteplayersOrTrychanging2;
+    static String multiconstInviteOnly;
+    static String createSelectAlternative;
+    static String achievementsOnlyInRated;
     private static int field_f;
     static int field_g;
-    static String field_h;
-    static String field_e;
+    static String muOptionsPlayers;
+    static String rule01;
 
-    final static boolean a(di param0, boolean param1) {
+    final static boolean isArchiveFullyAvailable(ResourceArchive param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -21,7 +21,7 @@ final class ab {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_4_0 = param0.c(-63);
+            stackIn_4_0 = param0.ensureAllGroupsAvailable(-63);
             return stackIn_4_0;
           }
           return false;
@@ -35,38 +35,38 @@ final class ab {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void b(int param0) {
-        field_e = null;
-        field_a = null;
+        rule01 = null;
+        achievementsOnlyInRated = null;
         if (param0 <= -46) {
-          field_i = null;
-          field_b = null;
-          field_d = null;
-          field_h = null;
-          field_c = null;
+          createSelectAlternative = null;
+          createOptinNews = null;
+          gameoptInviteplayersOrTrychanging2 = null;
+          muOptionsPlayers = null;
+          multiconstInviteOnly = null;
           return;
         }
-        field_a = (String) null;
-        field_i = null;
-        field_b = null;
-        field_d = null;
-        field_h = null;
-        field_c = null;
+        achievementsOnlyInRated = (String) null;
+        createSelectAlternative = null;
+        createOptinNews = null;
+        gameoptInviteplayersOrTrychanging2 = null;
+        muOptionsPlayers = null;
+        multiconstInviteOnly = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void notifyBrowserResize(int param0, int param1) {
         try {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
           if (param0 != 25692) {
-            field_d = (String) null;
+            gameoptInviteplayersOrTrychanging2 = (String) null;
           }
           try {
-            mo.a("resizing", new Object[]{new Integer(param1)}, param0 ^ 25619, hk.d(116));
+            JavaScriptBridge.callWindowFunctionWithArguments("resizing", new Object[]{new Integer(param1)}, param0 ^ 25619, NanoTickClock.getApplet(116));
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;
@@ -79,15 +79,15 @@ final class ab {
     }
 
     final static void a(int param0) {
-        if (!gk.field_kb) {
+        if (!FullscreenErrorDialog.field_kb) {
           throw new IllegalStateException();
         }
-        mf.field_o = true;
+        ClassicBallSkin.field_o = true;
         ii.a(false, param0 ^ param0);
-        fk.field_ab = 0;
+        PlasmaTableScene.field_ab = 0;
     }
 
-    final static String a(int param0, byte param1) {
+    final static String describeResolutionFlags(int param0, byte param1) {
         StringBuilder stackIn_4_0 = null;
         String stackIn_5_1 = null;
         StringBuilder stackIn_7_0 = null;
@@ -113,40 +113,40 @@ final class ab {
         StringBuilder stackIn_37_0 = null;
         String stackIn_38_1 = null;
         if (param1 != 10) {
-          ab.a(-112, (byte) -4);
+          ab.describeResolutionFlags(-112, (byte) -4);
         }
         stackIn_4_0 = new StringBuilder();
-        if ((param0 & nd.field_j) != 0) {
+        if ((param0 & MarkerSliderPainter.field_j) != 0) {
           stackIn_5_1 = "cont vis|";
         } else {
           stackIn_5_1 = "";
         }
         stackIn_7_0 = ((StringBuilder) (Object) stackIn_4_0).append(stackIn_5_1);
-        if ((param0 & sg.field_O) == 0) {
+        if ((param0 & ThemeSelectScreen.field_O) == 0) {
           stackIn_8_1 = "";
         } else {
           stackIn_8_1 = "gv visit+1|";
         }
         stackIn_10_0 = ((StringBuilder) (Object) stackIn_7_0).append(stackIn_8_1);
-        if ((param0 & be.field_I) == 0) {
+        if ((param0 & OptionsScreen.field_I) == 0) {
           stackIn_11_1 = "";
         } else {
           stackIn_11_1 = "gv shot+1|";
         }
         stackIn_13_0 = ((StringBuilder) (Object) stackIn_10_0).append(stackIn_11_1);
-        if ((param0 & nr.field_Q) != 0) {
+        if ((param0 & AccountWelcomePanel.field_Q) != 0) {
           stackIn_14_1 = "gv BiH anywhere|";
         } else {
           stackIn_14_1 = "";
         }
         stackIn_16_0 = ((StringBuilder) (Object) stackIn_13_0).append(stackIn_14_1);
-        if ((param0 & nr.field_R) != 0) {
+        if ((param0 & AccountWelcomePanel.field_R) != 0) {
           stackIn_17_1 = "gv BiH kitchen|";
         } else {
           stackIn_17_1 = "";
         }
         stackIn_19_0 = ((StringBuilder) (Object) stackIn_16_0).append(stackIn_17_1);
-        if ((param0 & nr.field_V) != 0) {
+        if ((param0 & AccountWelcomePanel.field_V) != 0) {
           stackIn_20_1 = "gv BiH in D|";
         } else {
           stackIn_20_1 = "";
@@ -158,7 +158,7 @@ final class ab {
           stackIn_23_1 = "";
         }
         stackIn_25_0 = ((StringBuilder) (Object) stackIn_22_0).append(stackIn_23_1);
-        if (0 == (param0 & hm.field_e)) {
+        if (0 == (param0 & Quaternion.field_e)) {
           stackIn_26_1 = "";
         } else {
           stackIn_26_1 = "loses|";
@@ -176,7 +176,7 @@ final class ab {
           stackIn_32_1 = "respot white|";
         }
         stackIn_34_0 = ((StringBuilder) (Object) stackIn_31_0).append(stackIn_32_1);
-        if ((param0 & ob.field_F) != 0) {
+        if ((param0 & MenuScreen.field_F) != 0) {
           stackIn_35_1 = "rerack|";
         } else {
           stackIn_35_1 = "";
@@ -192,13 +192,13 @@ final class ab {
 
     static {
         field_f = 14;
-        field_i = "Use this alternative as your account name";
-        field_b = "Please send me news and updates (I can unsubscribe at any time)";
-        field_d = "Invite more players, or alternatively try changing the following settings:  ";
+        createSelectAlternative = "Use this alternative as your account name";
+        createOptinNews = "Please send me news and updates (I can unsubscribe at any time)";
+        gameoptInviteplayersOrTrychanging2 = "Invite more players, or alternatively try changing the following settings:  ";
         field_g = 1 << field_f;
-        field_h = "Players";
-        field_c = "Invite only";
-        field_a = "Achievements are only awarded in Rated games,<br>unless stated otherwise.";
-        field_e = "Encouraging rule breaking";
+        muOptionsPlayers = "Players";
+        multiconstInviteOnly = "Invite only";
+        achievementsOnlyInRated = "Achievements are only awarded in Rated games,<br>unless stated otherwise.";
+        rule01 = "Encouraging rule breaking";
     }
 }

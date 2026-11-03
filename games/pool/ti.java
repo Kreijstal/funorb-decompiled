@@ -4,15 +4,15 @@
 final class ti {
     static oj field_d;
     static int field_f;
-    static String field_a;
+    static String muEnteredOtherGame;
     static int field_b;
-    static String field_c;
+    static String returntogame;
     static int field_g;
     static volatile int field_e;
 
-    public static void a(int param0) {
-        field_c = null;
-        field_a = null;
+    public static void releaseStatics(int param0) {
+        returntogame = null;
+        muEnteredOtherGame = null;
         if (param0 != -20973) {
           field_g = 51;
           field_d = null;
@@ -29,10 +29,10 @@ final class ti {
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          if (0L == (pd.field_i & 1L)) {
+          if (0L == (LinkButtonPainter.field_i & 1L)) {
             return false;
           }
-          de.a(-105);
+          de.createDebugSliders(-105);
           var1_int = 0;
           var2 = -112 / ((-54 - param0) / 32);
           while (true) {
@@ -49,15 +49,15 @@ final class ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "ti.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ti.A(" + param0 + ')');
         }
     }
 
     static {
         field_f = 4;
         field_d = null;
-        field_a = "You have entered another game.";
-        field_c = "Return to game";
+        muEnteredOtherGame = "You have entered another game.";
+        returntogame = "Return to game";
         field_b = 3;
         field_g = -750;
         field_e = 0;

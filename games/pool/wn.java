@@ -5,11 +5,11 @@ import java.io.*;
 
 final class wn {
     static volatile int field_k;
-    static vh field_g;
-    static fo field_a;
+    static UiComponent field_g;
+    static KeyHandler field_a;
     static int field_h;
     static int field_j;
-    static String field_c;
+    static String ok;
     static int field_l;
     static PcmSample field_b;
     static Sprite field_e;
@@ -17,7 +17,7 @@ final class wn {
     static int field_i;
     static int[] field_d;
 
-    final static void a(oq param0, int param1) {
+    final static void writeReflectionCheckReplies(CipherPacketBuffer param0, int param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -67,7 +67,7 @@ final class wn {
           var22 = null;
           var12 = Pool.field_O;
           try {
-            var16_ref = (ho) (pj.field_H.c((byte) -89));
+            var16_ref = (ho) (MessageScreen.field_H.last((byte) -89));
             if (var16_ref == null) {
               return;
             }
@@ -99,7 +99,7 @@ final class wn {
               return;
             }
             var4 = param0.position;
-            param0.a(true, var16_ref.field_o);
+            param0.writeInt(true, var16_ref.field_o);
             for (var5 = 0; var5 < var16_ref.field_t; var5++) {
               if (0 == var16_ref.field_q[var5]) {
                 try {
@@ -109,20 +109,20 @@ final class wn {
                       var15 = (java.lang.reflect.Field) (var16_ref.field_n[var5].field_e);
                       var19 = var15;
                       var19.setInt((Object) null, var16_ref.field_r[var5]);
-                      param0.a(0, false);
+                      param0.writeByte(0, false);
                     } else {
                       if (var6_int == 2) {
                         var27 = (java.lang.reflect.Field) (var16_ref.field_n[var5].field_e);
                         var8 = var27.getModifiers();
-                        param0.a(0, false);
-                        param0.a(true, var8);
+                        param0.writeByte(0, false);
+                        param0.writeInt(true, var8);
                       }
                     }
                   } else {
                     var26 = (java.lang.reflect.Field) (var16_ref.field_n[var5].field_e);
                     var8 = var26.getInt((Object) null);
-                    param0.a(0, false);
-                    param0.a(true, var8);
+                    param0.writeByte(0, false);
+                    param0.writeInt(true, var8);
                   }
                   if (var6_int == 3) {
                     var28 = (java.lang.reflect.Method) (var16_ref.field_p[var5].field_e);
@@ -134,78 +134,78 @@ final class wn {
                     }
                     var10 = var28.invoke((Object) null, var9);
                     if (var10 == null) {
-                      param0.a(0, false);
+                      param0.writeByte(0, false);
                     } else if (var10 instanceof Number) {
-                      param0.a(1, false);
+                      param0.writeByte(1, false);
                       param0.writeLong(((Number) (var10)).longValue(), (byte) -116);
                     } else if (!(var10 instanceof String)) {
-                      param0.a(4, false);
+                      param0.writeByte(4, false);
                     } else {
-                      param0.a(2, false);
+                      param0.writeByte(2, false);
                       param0.a(-9946, (String) (var10));
                     }
                   } else {
                     if (var6_int == 4) {
                       var29 = (java.lang.reflect.Method) (var16_ref.field_p[var5].field_e);
                       var8Lifetime1 = var29.getModifiers();
-                      param0.a(0, false);
-                      param0.a(true, var8Lifetime1);
+                      param0.writeByte(0, false);
+                      param0.writeInt(true, var8Lifetime1);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  param0.a(-10, false);
+                  param0.writeByte(-10, false);
                 } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                  param0.a(-11, false);
+                  param0.writeByte(-11, false);
                 } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                  param0.a(-12, false);
+                  param0.writeByte(-12, false);
                 } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                  param0.a(-13, false);
+                  param0.writeByte(-13, false);
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                   decompiledCaughtException = decompiledCaughtParameter4;
                   var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                  param0.a(-14, false);
+                  param0.writeByte(-14, false);
                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                   decompiledCaughtException = decompiledCaughtParameter5;
                   var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                  param0.a(-15, false);
+                  param0.writeByte(-15, false);
                 } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                   decompiledCaughtException = decompiledCaughtParameter6;
                   var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                  param0.a(-16, false);
+                  param0.writeByte(-16, false);
                 } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                   decompiledCaughtException = decompiledCaughtParameter7;
                   var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                  param0.a(-17, false);
+                  param0.writeByte(-17, false);
                 } catch (java.io.IOException decompiledCaughtParameter8) {
                   decompiledCaughtException = decompiledCaughtParameter8;
                   var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                  param0.a(-18, false);
+                  param0.writeByte(-18, false);
                 } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                   decompiledCaughtException = decompiledCaughtParameter9;
                   var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                  param0.a(-19, false);
+                  param0.writeByte(-19, false);
                 } catch (java.lang.Exception decompiledCaughtParameter10) {
                   decompiledCaughtException = decompiledCaughtParameter10;
                   var6_ref10 = (Exception) (Object) decompiledCaughtException;
-                  param0.a(-20, false);
+                  param0.writeByte(-20, false);
                 } catch (java.lang.Throwable decompiledCaughtParameter11) {
                   decompiledCaughtException = decompiledCaughtParameter11;
                   var6_ref11 = decompiledCaughtException;
-                  param0.a(-21, false);
+                  param0.writeByte(-21, false);
                 }
               } else {
-                param0.a(var16_ref.field_q[var5], false);
+                param0.writeByte(var16_ref.field_q[var5], false);
               }
             }
-            param0.d(-1, var4);
+            param0.appendChecksum(-1, var4);
             var16_ref.unlink((byte) -117);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
@@ -218,7 +218,7 @@ final class wn {
             } else {
               stackIn_70_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -227,7 +227,7 @@ final class wn {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           int[] var2 = (int[]) null;
           wn.$cfr$intArgs$a$2435eea43ef1(51, -10, (int[]) null, (int[]) null, 92, 127, (int[]) null, (int[]) null);
@@ -235,7 +235,7 @@ final class wn {
         field_g = null;
         field_f = null;
         field_e = null;
-        field_c = null;
+        ok = null;
         field_a = null;
         field_d = null;
         field_b = null;
@@ -279,14 +279,14 @@ final class wn {
           var9 = param3[1] - param3[0];
           if (var8_int != 0 ||
             var9 != 0) {
-            var12 = ke.a(false, var9 * var9 + var8_int * var8_int);
+            var12 = LoginTextValue.a(false, var9 * var9 + var8_int * var8_int);
             if (0 != var12) {
               var8_int = (var8_int << 16) / var12;
               var9 = (var9 << 16) / var12;
             }
           }
           var10 = var8_int;
-          ng.field_w = var8_int;
+          ThreeSliceButtonPainter.field_w = var8_int;
           var11 = var9;
           fr.field_u = var9;
           var15 = 1;
@@ -297,15 +297,15 @@ final class wn {
               var10 = -param6[var15] + param6[var15 + 1];
               if (0 != var10 ||
                 0 != var11) {
-                var13 = ke.a(false, var11 * var11 + var10 * var10);
+                var13 = LoginTextValue.a(false, var11 * var11 + var10 * var10);
                 if (var13 != 0) {
                   var11 = (var11 << 16) / var13;
                   var10 = (var10 << 16) / var13;
                 }
               }
             }
-            ne.field_q = var8_int + var10 >> 1;
-            di.field_h = var11 + var9 >> 1;
+            MatchingTextValidator.field_q = var8_int + var10 >> 1;
+            ResourceArchive.field_h = var11 + var9 >> 1;
             stackIn_18_0 = param3[var15 - 1];
             stackIn_18_1 = param4;
             stackIn_18_2 = -23;
@@ -326,9 +326,9 @@ final class wn {
               stackIn_22_10 = param1;
             }
             bo.$cfr$intArgs$a$29f688675a86(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
-            ng.field_w = ne.field_q;
+            ThreeSliceButtonPainter.field_w = MatchingTextValidator.field_q;
             var9 = var11;
-            fr.field_u = di.field_h;
+            fr.field_u = ResourceArchive.field_h;
             var8_int = var10;
             var15++;
           }
@@ -361,15 +361,15 @@ final class wn {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
     static {
         field_k = -1;
-        field_c = "OK";
+        ok = "OK";
         field_l = 62259;
-        field_a = new fo();
+        field_a = new KeyHandler();
         field_i = 0;
         field_f = new int[]{3000, 2250, 1500, 1000, 750, 500};
     }
@@ -413,14 +413,14 @@ final class wn {
           var9 = param3[1] - param3[0];
           if (var8_int != 0 ||
             var9 != 0) {
-            var12 = ke.a(false, var9 * var9 + var8_int * var8_int);
+            var12 = LoginTextValue.a(false, var9 * var9 + var8_int * var8_int);
             if (0 != var12) {
               var8_int = (var8_int << 16) / var12;
               var9 = (var9 << 16) / var12;
             }
           }
           var10 = var8_int;
-          ng.field_w = var8_int;
+          ThreeSliceButtonPainter.field_w = var8_int;
           var11 = var9;
           fr.field_u = var9;
           var15 = 1;
@@ -431,15 +431,15 @@ final class wn {
               var10 = -param6[var15] + param6[var15 + 1];
               if (0 != var10 ||
                 0 != var11) {
-                var13 = ke.a(false, var11 * var11 + var10 * var10);
+                var13 = LoginTextValue.a(false, var11 * var11 + var10 * var10);
                 if (var13 != 0) {
                   var11 = (var11 << 16) / var13;
                   var10 = (var10 << 16) / var13;
                 }
               }
             }
-            ne.field_q = var8_int + var10 >> 1;
-            di.field_h = var11 + var9 >> 1;
+            MatchingTextValidator.field_q = var8_int + var10 >> 1;
+            ResourceArchive.field_h = var11 + var9 >> 1;
             stackIn_18_0 = param3[var15 - 1];
             stackIn_18_1 = param4;
             stackIn_18_2 = -23;
@@ -460,9 +460,9 @@ final class wn {
               stackIn_22_10 = param1;
             }
             bo.$cfr$intArgs$a$29f688675a86(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
-            ng.field_w = ne.field_q;
+            ThreeSliceButtonPainter.field_w = MatchingTextValidator.field_q;
             var9 = var11;
-            fr.field_u = di.field_h;
+            fr.field_u = ResourceArchive.field_h;
             var8_int = var10;
             var15++;
           }
@@ -495,7 +495,7 @@ final class wn {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 }

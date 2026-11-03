@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MouseWheelHandler extends id implements java.awt.event.MouseWheelListener {
+final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.MouseWheelListener {
     private int field_e;
 
-    final synchronized int b(int param0) {
+    final synchronized int takeRotation(int param0) {
         if (param0 != 2) {
           return 48;
         }
@@ -13,12 +13,12 @@ final class MouseWheelHandler extends id implements java.awt.event.MouseWheelLis
         return var2;
     }
 
-    final void a(java.awt.Component param0, int param1) {
+    final void detach(java.awt.Component param0, int param1) {
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         int var3 = -123 / ((-57 - param1) / 47);
     }
 
-    final void a(byte param0, java.awt.Component param1) {
+    final void attach(byte param0, java.awt.Component param1) {
         int var3 = 44 % ((param0 - 66) / 33);
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }

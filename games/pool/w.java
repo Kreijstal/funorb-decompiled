@@ -3,34 +3,34 @@
  */
 final class w {
     static int[] field_i;
-    static String field_c;
+    static String playerListAreGroupName;
     static int field_h;
-    static String field_l;
-    static String field_m;
+    static String mpCancelrematchUnrated;
+    static String quickchatHelp;
     static String[] field_k;
     static int[] field_d;
-    static qp field_b;
+    static QuickChatMenu field_b;
     static eb[] field_a;
-    static String field_e;
-    static String field_g;
+    static String playerX2HaveResigned;
+    static String playerVsPlayer;
     static int[][] field_j;
     static Sprite field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
-        field_g = null;
-        field_m = null;
+        playerVsPlayer = null;
+        quickchatHelp = null;
         field_d = null;
         field_f = null;
-        field_l = null;
+        mpCancelrematchUnrated = null;
         if (param0 < 9) {
           return;
         }
         field_j = (int[][]) null;
         field_a = null;
-        field_e = null;
+        playerX2HaveResigned = null;
         field_b = null;
-        field_c = null;
+        playerListAreGroupName = null;
         field_k = null;
     }
 
@@ -47,7 +47,7 @@ final class w {
     }
 
     final static void a(int param0, int param1, int param2) {
-        ad.field_u = param0;
+        ArchiveIndex.field_u = param0;
         m.field_f = param2;
         int var3 = 62 % ((59 - param1) / 59);
     }
@@ -62,14 +62,14 @@ final class w {
         RuntimeException decompiledCaughtException = null;
         var4 = Pool.field_O;
         try {
-          if (!p.a(param1, (byte) -113, param0)) {
+          if (!ModelInstance.isValidDisplayName(param1, (byte) -113, param0)) {
             return false;
           }
           if (param2 != -37) {
             return true;
           }
           for (var3_int = 0; var3_int < param1.length(); var3_int++) {
-            if (!uc.a(param1.charAt(var3_int), (byte) -51)) {
+            if (!uc.isNameCharacter(param1.charAt(var3_int), (byte) -51)) {
               return false;
             }
           }
@@ -84,22 +84,22 @@ final class w {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static tc a(boolean param0, int param1) {
-        tc var2 = new tc(param1, param0);
+    final static GrowableIntList createGrowableIntList(boolean param0, int param1) {
+        GrowableIntList var2 = new GrowableIntList(param1, param0);
         return var2;
     }
 
     static {
-        field_c = "<%0> are <%2>.";
+        playerListAreGroupName = "<%0> are <%2>.";
         field_i = new int[]{1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 32, 32, 34, 53, 68, 69, 69, 69, 73, 73, 83, 83, 83, 92, 97, 99};
-        field_l = "Cancel unrated rematch";
+        mpCancelrematchUnrated = "Cancel unrated rematch";
         field_d = new int[]{12, 20, 21, 49, 6, 7};
-        field_m = "Quick Chat Help";
-        field_e = "<%0> and <%1> have resigned!";
-        field_g = "<%0><br>versus<br><%1>";
+        quickchatHelp = "Quick Chat Help";
+        playerX2HaveResigned = "<%0> and <%1> have resigned!";
+        playerVsPlayer = "<%0><br>versus<br><%1>";
     }
 }

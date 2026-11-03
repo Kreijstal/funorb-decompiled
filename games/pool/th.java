@@ -2,31 +2,31 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class th {
-    static String field_d;
+    static String raIntroNoName;
     static byte[][] field_j;
-    static String field_e;
+    static String runescapeclan;
     static int field_a;
-    static String field_k;
-    static String field_i;
+    static String muXEnteredGame;
+    static String muGameoptKickXFromThisGame;
     static boolean field_h;
     static String field_g;
-    static String field_f;
-    static p[] field_l;
+    static String close;
+    static ModelInstance[] field_l;
     static int field_b;
-    static String field_c;
+    static String xsGame;
 
     final static void a(byte param0, int param1) {
         kg.field_q = kc.field_g[param1];
-        ir.field_b = kj.field_i[param1];
+        BufferedFile.field_b = CueAim.field_i[param1];
         if (param0 < -55) {
-          ud.field_F = cb.field_f[param1];
+          SingleChildWidget.field_F = cb.field_f[param1];
           return;
         }
         field_j = (byte[][]) null;
-        ud.field_F = cb.field_f[param1];
+        SingleChildWidget.field_F = cb.field_f[param1];
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleChatKey(int param0, int param1, int param2) {
         StringBuilder discarded$1 = null;
         int var3;
         int var4;
@@ -73,7 +73,7 @@ final class th {
         var3 = 1 / ((param1 - 10) / 61);
         var4 = 1;
         if (!gd.field_b &&
-          uq.field_D == null) {
+          Bzip2DecoderState.field_D == null) {
           var4 = 0;
         }
         if (hn.field_b == 0 &&
@@ -84,7 +84,7 @@ final class th {
           !hp.a(false)) {
           var4 = 0;
         }
-        if (qi.field_a == 84) {
+        if (IterableDualLinkDeque.field_a == 84) {
           if (var4 == 0) {
             if (hn.field_b == 0) {
               return true;
@@ -94,39 +94,39 @@ final class th {
               var5_ref_String = td.field_c.toString();
               var8 = var5_ref_String;
               var8Lifetime2 = var5_ref_String;
-              if (ei.a((byte) -71, var5_ref_String)) {
+              if (UiWidget.a((byte) -71, var5_ref_String)) {
                 var13 = (String) null;
                 var12 = (String) null;
-                jh.a(0, hj.field_h, (String) null, 2, (String) null, true);
+                jh.a(0, hj.unableToSendMessagePasswordA, (String) null, 2, (String) null, true);
                 var15 = (String) null;
                 var14 = (String) null;
-                jh.a(0, ci.field_m, (String) null, 2, (String) null, true);
+                jh.a(0, DebugTuningSlider.unableToSendMessagePasswordB, (String) null, 2, (String) null, true);
               } else {
                 var6 = hn.field_b;
                 if (var6 == 0 &&
-                  null != em.field_L) {
+                  null != HighscoresScreen.field_L) {
                   var6 = 1;
                 }
                 if (f.a(5, var6) == 2) {
                   om.a(1, var6, param0, (byte) -4);
                 }
-                ub.a((byte) -116, var5_ref_String, param2, fm.field_I, hn.field_b, -1);
+                AlternateLongAndTextLoginPayload.a((byte) -116, var5_ref_String, param2, ArrayWidgetGroup.field_I, hn.field_b, -1);
               }
             }
           }
           cl.a(14851);
           return true;
         }
-        if (qi.field_a == 85) {
+        if (IterableDualLinkDeque.field_a == 85) {
           if (var4 != 0 &&
             td.field_c.length() > 0) {
-            cj.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
+            TikiTableScene.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
             return true;
           }
           return true;
         }
         var5 = ml.field_b;
-        if (!nq.a((char) var5, (byte) -125)) {
+        if (!UiTheme.isRenderableCharacter((char) var5, (byte) -125)) {
           return false;
         }
         if (var4 == 0) {
@@ -135,7 +135,7 @@ final class th {
         if (80 > td.field_c.length()) {
           discarded$1 = td.field_c.append((char) var5);
           var6Lifetime1 = 485;
-          var65 = di.field_j;
+          var65 = ResourceArchive.field_j;
           var16 = IterableNodeHashTable.a(524288, var65);
           var66 = var16;
           if (hn.field_b != 2) {
@@ -145,25 +145,25 @@ final class th {
               var67 = var8Lifetime1 + var66 + ": ";
               var6Lifetime1 = var6Lifetime1 - m.field_c.b(var67);
             } else {
-              if (null == em.field_L) {
-                if (!ej.field_l) {
+              if (null == HighscoresScreen.field_L) {
+                if (!JaggrabDownloader.field_l) {
                   boolean decompiledFrameRemainder0 = true;
-                  if (em.field_L != null) {
+                  if (HighscoresScreen.field_L != null) {
                     if (!sa.field_c) {
-                      var70 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, field_c) + "] ";
+                      var70 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, xsGame) + "] ";
                       var71 = var70 + var66 + ": ";
                       var6Lifetime1 = var6Lifetime1 - m.field_c.b(var71);
                       decompiledFrameRemainder0 = false;
                     }
                     else {
-                      if (kn.field_g == null) {
-                        var68 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, field_c) + "] ";
+                      if (PlayerContextMenu.field_g == null) {
+                        var68 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, xsGame) + "] ";
                         var69 = var68 + var66 + ": ";
                         var6Lifetime1 = var6Lifetime1 - m.field_c.b(var69);
                         decompiledFrameRemainder0 = false;
                       }
                       else {
-                        var8Lifetime1 = "[" + kn.field_g + "] ";
+                        var8Lifetime1 = "[" + PlayerContextMenu.field_g + "] ";
                       }
                     }
                   }
@@ -174,26 +174,26 @@ final class th {
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var8Lifetime1 = "[" + sn.field_l + "] ";
+                  var8Lifetime1 = "[" + BirthDateValidator.muChatLobby + "] ";
                 }
               }
               if (decompiledFrameRemainder1) {
-                if (em.field_L != null) {
+                if (HighscoresScreen.field_L != null) {
                   if (!sa.field_c) {
-                    var75 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, field_c) + "] ";
+                    var75 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, xsGame) + "] ";
                     var76 = var75 + var66 + ": ";
                     var6Lifetime1 = var6Lifetime1 - m.field_c.b(var76);
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    if (kn.field_g == null) {
-                      var73 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, field_c) + "] ";
+                    if (PlayerContextMenu.field_g == null) {
+                      var73 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, xsGame) + "] ";
                       var74 = var73 + var66 + ": ";
                       var6Lifetime1 = var6Lifetime1 - m.field_c.b(var74);
                       decompiledFrameRemainder1 = false;
                     }
                     else {
-                      var8Lifetime1 = "[" + kn.field_g + "] ";
+                      var8Lifetime1 = "[" + PlayerContextMenu.field_g + "] ";
                     }
                   }
                 }
@@ -204,19 +204,19 @@ final class th {
               }
             }
             if (m.field_c.b(td.field_c.toString()) > var6Lifetime1) {
-              cj.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
+              TikiTableScene.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
             }
             return true;
           }
-          var89 = (CharSequence) ((Object) fm.field_I);
-          var78 = nr.a(new String[]{ch.a(false, var89)}, -1, jl.field_a);
-          var79 = nr.a(new String[]{var16}, -1, vh.field_S);
+          var89 = (CharSequence) ((Object) ArrayWidgetGroup.field_I);
+          var78 = AccountWelcomePanel.substituteTemplateArguments(new String[]{WidgetContainer.a(false, var89)}, -1, jl.privatequickchatToX);
+          var79 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var16}, -1, UiComponent.privatequickchatFromX);
           var10 = m.field_c.b(var78);
           var11 = m.field_c.b(var79);
           if (var10 <= var11) {
             var6Lifetime1 = var6Lifetime1 - var11;
             if (m.field_c.b(td.field_c.toString()) > var6Lifetime1) {
-              cj.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
+              TikiTableScene.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
             }
             return true;
           }
@@ -224,32 +224,32 @@ final class th {
           if (m.field_c.b(td.field_c.toString()) <= var6Lifetime1) {
             return true;
           }
-          cj.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
+          TikiTableScene.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
         }
         return true;
     }
 
-    public static void a(int param0) {
-        field_k = null;
+    public static void releaseStatics(int param0) {
+        muXEnteredGame = null;
         field_j = (byte[][]) null;
         field_g = null;
-        field_e = null;
+        runescapeclan = null;
         field_l = null;
         if (param0 == 15059) {
-          field_i = null;
-          field_f = null;
-          field_d = null;
-          field_c = null;
+          muGameoptKickXFromThisGame = null;
+          close = null;
+          raIntroNoName = null;
+          xsGame = null;
           return;
         }
-        field_c = (String) null;
-        field_i = null;
-        field_f = null;
-        field_d = null;
-        field_c = null;
+        xsGame = (String) null;
+        muGameoptKickXFromThisGame = null;
+        close = null;
+        raIntroNoName = null;
+        xsGame = null;
     }
 
-    final static void a(int param0, int param1, int[] param2, int[] param3, int param4) {
+    final static void quickSortRange(int param0, int param1, int[] param2, int[] param3, int param4) {
         int var10 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -292,11 +292,11 @@ final class th {
             param2[var6] = var7;
             param3[param4] = param3[var6];
             param3[var6] = var8;
-            th.a(param0, -30916, param2, param3, var6 - 1);
-            th.a(var6 + 1, param1 + 0, param2, param3, param4);
+            th.quickSortRange(param0, -30916, param2, param3, var6 - 1);
+            th.quickSortRange(var6 + 1, param1 + 0, param2, param3, param4);
           }
           if (param1 != -30916) {
-            th.a(-19, 83, -97);
+            th.handleChatKey(-19, 83, -97);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -315,33 +315,33 @@ final class th {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void b(int param0) {
         if (param0 == -1) {
-          if (fm.field_H) {
-            lq.i(param0 + 15976);
+          if (ArrayWidgetGroup.field_H) {
+            DialogLayer.i(param0 + 15976);
           }
           return;
         }
         th.a((byte) -3, 101);
-        if (fm.field_H) {
-          lq.i(param0 + 15976);
+        if (ArrayWidgetGroup.field_H) {
+          DialogLayer.i(param0 + 15976);
         }
     }
 
     static {
-        field_i = "Kick <%0> from this game";
+        muGameoptKickXFromThisGame = "Kick <%0> from this game";
         field_j = new byte[250][];
-        field_d = "To report a player, right-click on their name and select the option to report abuse.";
-        field_e = "RuneScape clan";
+        raIntroNoName = "To report a player, right-click on their name and select the option to report abuse.";
+        runescapeclan = "RuneScape clan";
         field_b = 1;
-        field_f = "Close";
-        field_k = "<%0> has entered a game.";
+        close = "Close";
+        muXEnteredGame = "<%0> has entered a game.";
         field_h = false;
         field_g = null;
-        field_c = "<%0>'s game";
+        xsGame = "<%0>'s game";
     }
 }
