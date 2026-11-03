@@ -33,7 +33,7 @@ final class ta {
           for (var7 = 1; param0.length() > var7; var7++) {
             var8 = param0.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) + (param1.field_b[0] + param4.c(param0.substring(0, var7)));
+              var6 = (var5_int >> 8) + (param1.field_b[0] + param4.stringWidth(param0.substring(0, var7)));
             }
             if (var6 != -1) {
               param1.field_b[var7] = var6;
@@ -41,7 +41,7 @@ final class ta {
               if (var8 == 32) {
                 var5_int = var5_int + param3;
               }
-              param1.field_b[var7] = (var5_int >> 8) - (-param1.field_b[0] + (-param4.c(param0.substring(0, var7 + 1)) + param4.a((char) var8)));
+              param1.field_b[var7] = (var5_int >> 8) - (-param1.field_b[0] + (-param4.stringWidth(param0.substring(0, var7 + 1)) + param4.charWidth((char) var8)));
             }
             if (62 == var8) {
               var6 = -1;
@@ -75,21 +75,21 @@ final class ta {
     }
 
     final static void a(boolean param0, int param1) {
-        if (ol.a(-104)) {
+        if (WeightedLruCache.a(-104)) {
           param0 = false;
         }
         di.a(false, param0);
         if (WidgetContainer.field_C) {
           gf.h(n.field_h.field_d.field_hb, n.field_h.field_d.field_db, n.field_h.field_d.field_K, n.field_h.field_d.field_mb);
           n.field_h.field_d.b(param0, -68);
-          ml.a((byte) 99, param0);
+          TextFieldValidator.a((byte) 99, param0);
           if (param1 < 38) {
             field_c = (String) null;
             return;
           }
           return;
         }
-        ml.a((byte) 99, param0);
+        TextFieldValidator.a((byte) 99, param0);
         if (param1 >= 38) {
           return;
         }
@@ -97,7 +97,7 @@ final class ta {
     }
 
     final static nk c(byte param0) {
-        nk var1 = new nk(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], hd.field_q[0], eo.field_fb);
+        nk var1 = new nk(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], hd.field_q[0], eo.field_fb);
         pd.a(0);
         if (param0 > 82) {
           return var1;
@@ -119,7 +119,7 @@ final class ta {
 
     final static boolean a(int param0) {
         int var1 = 94 / ((param0 + 29) / 49);
-        return fj.field_s == ue.field_a ? true : false;
+        return MatchingTextValidator.field_s == ue.field_a ? true : false;
     }
 
     final static void b(byte param0) {
@@ -128,7 +128,7 @@ final class ta {
         byte[] var1Lifetime1;
         byte[] var2Lifetime1;
         if (param0 == -69) {
-          if (w.d(true)) {
+          if (Dialog.d(true)) {
             return;
           }
           if (de.field_j == -1) {
@@ -146,7 +146,7 @@ final class ta {
           return;
         }
         ta.a(true, -56);
-        if (w.d(true)) {
+        if (Dialog.d(true)) {
           return;
         }
         if (de.field_j == -1) {
@@ -175,10 +175,10 @@ final class ta {
           return;
         }
         gr.field_o = param1;
-        br.field_m = param0;
-        if (nh.a((byte) -94, vr.field_c)) {
-          mj.field_Hb[vr.field_c].a(-30492, gr.field_o);
-          if (nh.a((byte) -73, gr.field_o)) {
+        MusicPatch.field_m = param0;
+        if (PointsVictoryChecker.a((byte) -94, GameRules.field_c)) {
+          mj.field_Hb[GameRules.field_c].a(-30492, gr.field_o);
+          if (PointsVictoryChecker.a((byte) -73, gr.field_o)) {
             var4 = 0;
             if (11 == gr.field_o) {
               var4 = -1;
@@ -192,7 +192,7 @@ final class ta {
           }
           return;
         }
-        if (nh.a((byte) -73, gr.field_o)) {
+        if (PointsVictoryChecker.a((byte) -73, gr.field_o)) {
           var4Lifetime1 = 0;
           if (11 == gr.field_o) {
             var4Lifetime1 = -1;

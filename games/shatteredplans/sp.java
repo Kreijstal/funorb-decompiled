@@ -6,25 +6,25 @@ final class sp {
     int field_i;
     static String field_b;
     private int field_p;
-    iq field_a;
+    WidgetPainter field_a;
     static int field_r;
     static Sprite[][] field_m;
-    iq field_o;
+    WidgetPainter field_o;
     int field_d;
     int field_l;
     nq field_h;
-    iq field_s;
+    WidgetPainter field_s;
     int field_t;
     private boolean field_n;
-    iq field_q;
+    WidgetPainter field_q;
     static long field_j;
     static int field_g;
-    iq field_f;
+    WidgetPainter field_f;
     int field_c;
     int field_k;
 
     final void a(nq param0, boolean param1) {
-        o var17 = null;
+        WidgetTheme var17 = null;
         gn var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -32,8 +32,8 @@ final class sp {
         int var7_int = 0;
         gn var6 = null;
         gn var7 = null;
-        i discarded$0 = null;
-        tp discarded$1 = null;
+        DialPainter discarded$0 = null;
+        SliderPainter discarded$1 = null;
         gn var8 = null;
         Sprite[] var9 = null;
         Sprite[] var10 = null;
@@ -47,9 +47,9 @@ final class sp {
         gn var14Lifetime1;
         gn var14Lifetime2;
         try {
-          var17 = new o(param0, 2, 2, 2236962, 1, 1, 1, 2 + param0.field_J + param0.field_q);
+          var17 = new WidgetTheme(param0, 2, 2, 2236962, 1, 1, 1, 2 + param0.field_J + param0.field_q);
           var17.field_p = 16777215;
-          this.field_s = (iq) ((Object) var17);
+          this.field_s = (WidgetPainter) ((Object) var17);
           var4 = new gn();
           var17.a(var4, (byte) 42);
           this.field_h = param0;
@@ -75,21 +75,21 @@ final class sp {
           var5[4] = (Sprite) ((Object) var18);
           var4.a(98, 4).a(true, -28639).a(var5, -108);
           var4.a(22, 5).a(ek.a(0, 0, 65793, 0, (byte) -92), -91).a(true, -28639).a((byte) 75, -1);
-          this.field_q = (iq) ((Object) var4);
+          this.field_q = (WidgetPainter) ((Object) var4);
           var6 = new gn(var4, true);
           var6.field_r = 0;
           var7 = new gn(var4, true);
           var7.field_r = 0;
           var7.a((byte) 8, TaskAi.a(8947848, (byte) -16));
           var7.a(82, 1).a(TaskAi.a(11184810, (byte) -16), -93).a((byte) 71, 2236962);
-          this.field_a = (iq) ((Object) new tf(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-          discarded$0 = new i(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          discarded$1 = new tp(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          this.field_a = (WidgetPainter) ((Object) new CheckboxPainter(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          discarded$0 = new DialPainter(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          discarded$1 = new SliderPainter(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new gn();
           var17.a(var8, (byte) 42);
           var8.a(-109, 0).a(oa.a(15658734, false, 7829367, 10066329), -106).a((byte) 64, 1118481).a(-1, 1);
           var8.a(35, 4).a(true, -28639).a(var5, -72);
-          this.field_f = (iq) ((Object) var8);
+          this.field_f = (WidgetPainter) ((Object) var8);
           var9 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
           var10 = new Sprite[9];
@@ -104,14 +104,14 @@ final class sp {
           var13 = new Sprite(7, 4);
           var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new gn(var4, true);
-          var14.a(-12, var13.g());
-          var13.f();
+          var14.a(-12, var13.copy());
+          var13.rotate90();
           var14Lifetime1 = new gn(var4, param1);
-          var14Lifetime1.a(-12, var13.g());
-          var13.f();
+          var14Lifetime1.a(-12, var13.copy());
+          var13.rotate90();
           var14Lifetime2 = new gn(var4, true);
-          var14Lifetime2.a(-12, var13.g());
-          var13.f();
+          var14Lifetime2.a(-12, var13.copy());
+          var13.rotate90();
           var19 = new gn(var4, true);
           var19.a(-12, var13);
         } catch (RuntimeException runtimeException) {
@@ -150,8 +150,8 @@ final class sp {
         int var2_int = 0;
         RuntimeException var2 = null;
         Star[] var3 = null;
-        mg var3_ref = null;
-        qm var3_ref2 = null;
+        FleetMove var3_ref = null;
+        ProjectUse var3_ref2 = null;
         int var4 = 0;
         int var6 = 0;
         Star[] var7 = null;
@@ -216,13 +216,13 @@ final class sp {
             return true;
           }
           if (param0.equalsIgnoreCase("placeTannhauser")) {
-            var3_ref2 = (qm) (oq.field_a.field_P.field_i.d(0));
+            var3_ref2 = (ProjectUse) (oq.field_a.field_P.field_i.startForward(0));
             while (var3_ref2 != null) {
               if (var3_ref2.field_o == 3 &&
                 oq.field_a.field_P.field_g.field_e[12] == var3_ref2.field_r) {
                 return true;
               }
-              var3_ref2 = (qm) (oq.field_a.field_P.field_i.a((byte) -71));
+              var3_ref2 = (ProjectUse) (oq.field_a.field_P.field_i.nextForward((byte) -71));
             }
             return false;
           }
@@ -230,13 +230,13 @@ final class sp {
             stackIn_60_0 = sr.a(0, param0);
             return stackIn_60_0;
           }
-          var3_ref = (mg) (oq.field_a.field_P.field_p.a(true));
+          var3_ref = (FleetMove) (oq.field_a.field_P.field_p.a(true));
           while (true) {
             if (var3_ref == null) {
               return false;
             }
             if (ho.field_d != var3_ref.field_G) {
-              var3_ref = (mg) (oq.field_a.field_P.field_p.a((byte) -68));
+              var3_ref = (FleetMove) (oq.field_a.field_P.field_p.a((byte) -68));
               continue;
             }
             break;
@@ -315,7 +315,7 @@ final class sp {
             var7 = this.field_h.field_q + this.field_h.field_J;
           }
           var8 = gf.field_b >> 2;
-          var9 = this.field_h.c(param0);
+          var9 = this.field_h.stringWidth(param0);
           var10 = this.field_h.field_J + this.field_h.field_q;
           var11 = 1;
           if (var8 < var9 ||
@@ -329,11 +329,11 @@ final class sp {
               var13 = var9 / var8;
               var12 = var8 + 2 * ((var13 + var9 % var8 - 1) / var13);
             }
-            var11Lifetime1 = this.field_h.a(param0, new int[]{var12}, mp.field_c);
+            var11Lifetime1 = this.field_h.wrapText(param0, new int[]{var12}, mp.field_c);
             var9 = 0;
             var10 = var10 + var7 * (-1 + var11Lifetime1);
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_h.c(mp.field_c[var13Lifetime2]);
+              var14 = this.field_h.stringWidth(mp.field_c[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -376,7 +376,7 @@ final class sp {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_h.c(param2);
+          var5_int = this.field_h.stringWidth(param2);
           var6 = this.field_h.field_K + this.field_h.field_q;
           var7 = param3;
           if (gf.field_b < 6 + var5_int + var7) {
@@ -388,7 +388,7 @@ final class sp {
           }
           gf.b(var7, var8, var5_int + 6, var6 + 6, this.field_p);
           gf.d(1 + var7, 1 + var8, var5_int + 4, var6 + 4, this.field_k);
-          this.field_h.d(param2, var7 + 3, 3 + (var8 + this.field_h.field_K), this.field_p, -1);
+          this.field_h.drawString(param2, var7 + 3, 3 + (var8 + this.field_h.field_K), this.field_p, -1);
           if (param0 > -98) {
             this.field_h = (nq) null;
           }

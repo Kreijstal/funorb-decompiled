@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vj extends qs {
+final class vj extends SingleChildWidget {
     static IntrusiveDeque field_E;
     private static int[] field_G;
     static int[] field_F;
@@ -22,22 +22,22 @@ final class vj extends qs {
         int var3 = 0;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (s.field_c == -1 &&
+          if (GzipInflater.field_c == -1 &&
             cb.field_n == -1) {
-            s.field_c = pd.field_k;
+            GzipInflater.field_c = pd.field_k;
             cb.field_n = bb.field_b;
           }
           boolean decompiledFrameRemainder0 = true;
-          rq.field_e = rq.field_e + 1;
+          LinkPainter.field_e = LinkPainter.field_e + 1;
           if (param0 == null) {
             decompiledFrameRemainder0 = (GameKeyHandler.field_d == null);
           } else {
             decompiledFrameRemainder0 = !(param0.equals(GameKeyHandler.field_d));
           }
           if (decompiledFrameRemainder0) {
-            if (!sc.field_q) {
-              if (ri.field_F <= rq.field_e) {
-                stackIn_16_0 = (rq.field_e < ri.field_F + de.field_i) ? 1 : 0;
+            if (!AggressiveAi.field_q) {
+              if (ri.field_F <= LinkPainter.field_e) {
+                stackIn_16_0 = (LinkPainter.field_e < ri.field_F + de.field_i) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -46,45 +46,45 @@ final class vj extends qs {
             }
             var2_int = stackIn_16_0;
             if (param0 == null) {
-              rq.field_e = 0;
+              LinkPainter.field_e = 0;
             } else {
-              if (sc.field_q) {
-                rq.field_e = ri.field_F;
+              if (AggressiveAi.field_q) {
+                LinkPainter.field_e = ri.field_F;
               } else {
                 if (var2_int == 0) {
-                  rq.field_e = 0;
+                  LinkPainter.field_e = 0;
                 } else {
-                  rq.field_e = ri.field_F;
+                  LinkPainter.field_e = ri.field_F;
                 }
               }
             }
             if (param0 != null) {
-              sc.field_q = false;
+              AggressiveAi.field_q = false;
             } else {
               if (var2_int != 0) {
-                sc.field_q = true;
+                AggressiveAi.field_q = true;
               }
             }
             rs.field_Fb = cb.field_n;
-            ra.field_g = s.field_c;
+            RandomAccessCacheFile.field_g = GzipInflater.field_c;
           }
           GameKeyHandler.field_d = param0;
-          if (!sc.field_q &&
-            rq.field_e < ri.field_F &&
+          if (!AggressiveAi.field_q &&
+            LinkPainter.field_e < ri.field_F &&
             r.field_d) {
-            rq.field_e = 0;
+            LinkPainter.field_e = 0;
             rs.field_Fb = cb.field_n;
-            ra.field_g = s.field_c;
+            RandomAccessCacheFile.field_g = GzipInflater.field_c;
           }
-          s.field_c = -1;
+          GzipInflater.field_c = -1;
           if (param1 != 0) {
             field_F = (int[]) null;
           }
           cb.field_n = -1;
-          if (sc.field_q &&
-            rq.field_e == t.field_f) {
-            sc.field_q = false;
-            rq.field_e = 0;
+          if (AggressiveAi.field_q &&
+            LinkPainter.field_e == t.field_f) {
+            AggressiveAi.field_q = false;
+            LinkPainter.field_e = 0;
             return;
           }
           return;
@@ -103,35 +103,35 @@ final class vj extends qs {
     }
 
     final static String g(byte param0) {
-        if (!(ma.field_p >= 2)) {
+        if (!(DefensiveAi.field_p >= 2)) {
           return de.field_h;
         }
-        if (es.field_j != null) {
-          if (!es.field_j.b((byte) 107)) {
-            return i.field_a;
+        if (StarAnnotation.field_j != null) {
+          if (!StarAnnotation.field_j.isIndexLoaded((byte) 107)) {
+            return DialPainter.field_a;
           }
           return ns.field_xb;
         }
-        if (!rq.field_g.b((byte) 13)) {
+        if (!LinkPainter.field_g.isIndexLoaded((byte) 13)) {
           return fa.field_J;
         }
-        if (!rq.field_g.a("commonui", 77)) {
-          return SpriteState.field_r + " - " + rq.field_g.a("commonui", (byte) 65) + "%";
+        if (!LinkPainter.field_g.a("commonui", 77)) {
+          return SpriteState.field_r + " - " + LinkPainter.field_g.a("commonui", (byte) 65) + "%";
         }
-        if (!tq.field_f.b((byte) -69)) {
-          return rq.field_h;
+        if (!tq.field_f.isIndexLoaded((byte) -69)) {
+          return LinkPainter.field_h;
         }
         if (!tq.field_f.a("commonui", -91)) {
           return IntrusiveDequeCursor.field_h + " - " + tq.field_f.a("commonui", (byte) 28) + "%";
         }
         int var1 = 32 % ((param0 - 15) / 52);
-        if (!l.field_g.b((byte) -2)) {
+        if (!GalaxyMap.field_g.isIndexLoaded((byte) -2)) {
           return MouseInputHandler.field_e;
         }
-        if (!l.field_g.a(-1)) {
-          return jh.field_v + " - " + l.field_g.d(100) + "%";
+        if (!GalaxyMap.field_g.preloadAll(-1)) {
+          return jh.field_v + " - " + GalaxyMap.field_g.getOverallProgress(100) + "%";
         }
-        return ea.field_d;
+        return IsaacBackedRandom.field_d;
     }
 
     public static void f(byte param0) {
@@ -177,7 +177,7 @@ final class vj extends qs {
         }
     }
 
-    private vj(int param0, int param1, int param2, int param3, iq param4, ko param5, UiWidget param6) {
+    private vj(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_z = param6;

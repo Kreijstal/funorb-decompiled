@@ -43,10 +43,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
         qh.g(83);
         if (param0 != 0) {
           field_f = (qr) null;
-          ak.i(-751);
+          DiskArchiveRequest.i(-751);
           return;
         }
-        ak.i(-751);
+        DiskArchiveRequest.i(-751);
     }
 
     public static void a(int param0) {

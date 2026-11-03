@@ -3,7 +3,7 @@
  */
 final class hk extends il {
     static int[] field_ob;
-    static gh field_nb;
+    static MusicTrack field_nb;
     static String field_pb;
 
     final void b(UiWidget param0, int param1) {
@@ -24,7 +24,7 @@ final class hk extends il {
         field_pb = null;
     }
 
-    hk(tc param0, UiWidget param1) {
+    hk(DialogRoot param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

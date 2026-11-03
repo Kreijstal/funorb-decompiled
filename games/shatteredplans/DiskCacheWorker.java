@@ -1,0 +1,473 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DiskCacheWorker implements Runnable {
+    static String field_a;
+    static int field_b;
+    static String field_g;
+    static String field_e;
+    private DualLinkDeque field_c;
+    private Thread field_h;
+    private boolean field_f;
+    int field_d;
+
+    final static void b(byte param0) {
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var1_int = 0;
+        int var2 = 0;
+        int var3 = 0;
+        int var8 = ShatteredPlansClient.field_F ? 1 : 0;
+        RandomAccessCacheFile.a(-111);
+        vm.field_Jb = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_1");
+        Dialog.field_D = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_2");
+        DualLinkDeque.field_a = id.a(param0 ^ 48, DerelictVictoryChecker.field_n, "intro", "intro1_3");
+        sr.field_F = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro1_flash");
+        oi.field_d = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow");
+        SliderPainter.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro1_glow_fg");
+        DualLinkDeque.field_a.bindAsRenderTarget();
+        BattleContribution.a(0, gf.field_b, (byte) 24, 0, 0, 64, gf.field_k);
+        Dialog.field_D.bindAsRenderTarget();
+        BattleContribution.a(0, gf.field_b, (byte) 24, 0, 0, 128, gf.field_k);
+        vm.field_Jb.bindAsRenderTarget();
+        MouseWheelInput.a(0, 0, gf.field_k, 0, gf.field_b, param0 + 24024);
+        id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_glow");
+        DefendTask.field_s = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_earth");
+        oe.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro2_clouds");
+        ja.a(-174137048, DefendTask.field_s.field_z / 2, DefendTask.field_s, DefendTask.field_s.field_w / 4);
+        ja.a(param0 ^ -174137062, oe.field_c.field_z / 2, oe.field_c, oe.field_c.field_w / 4);
+        ds.field_b = new Sprite(640, 430);
+        ds.field_b.bindAsRenderTarget();
+        for (var1_int = 1; var1_int < 64; var1_int++) {
+          var2 = (int)(20.0 * Math.log((double)(63.0f / (float)var1_int)) / Math.log(2.0));
+          gf.g(320, 527, var2 + 400, (var1_int << 2) * 65793);
+        }
+        gf.b(4, 4, 0, 0, gf.field_b, gf.field_k);
+        DefensiveAi.field_r = new Sprite(640, 624 - DefendTask.field_s.field_x);
+        DefensiveAi.field_r.bindAsRenderTarget();
+        for (var1_int = 254; var1_int >= 1; var1_int--) {
+          var2 = (int)(Math.log((double)(254.0f / (float)var1_int)) * 40.0 / Math.log(2.0));
+          DefendTask.field_s.drawSilhouette(var2 - 5, var2 - DefendTask.field_s.field_x, var1_int * 65793);
+        }
+        va.field_e = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_stars");
+        q.field_Cb = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_citybg");
+        mm.field_o = id.a(param0 - 48, DerelictVictoryChecker.field_n, "intro", "intro3_cityfg");
+        ch.field_c = id.a(2, DerelictVictoryChecker.field_n, "intro", "intro3_crater");
+        var1_int = q.field_Cb.field_z;
+        var2 = q.field_Cb.field_w + 60;
+        he.field_h = new Sprite(var1_int, var2);
+        for (var3 = 0; (var2 - 60) * var1_int > var3; var3++) {
+          he.field_h.field_B[var3 + var1_int * 60] = q.field_Cb.field_B[var3];
+        }
+        var1_int = mm.field_o.field_z;
+        he.field_h.field_o = q.field_Cb.field_o;
+        he.field_h.field_t = q.field_Cb.field_t;
+        he.field_h.field_x = -60 + q.field_Cb.field_x;
+        var2 = 60 + mm.field_o.field_w;
+        he.field_h.field_p = 60 + q.field_Cb.field_p;
+        we.field_f = new Sprite(var1_int, var2);
+        for (var3 = 0; (var2 - 60) * var1_int > var3; var3++) {
+          we.field_f.field_B[var1_int * 60 + var3] = mm.field_o.field_B[var3];
+        }
+        we.field_f.field_t = mm.field_o.field_t;
+        we.field_f.field_p = mm.field_o.field_p + 60;
+        we.field_f.field_x = -60 + mm.field_o.field_x;
+        we.field_f.field_o = mm.field_o.field_o;
+        he.field_h.bindAsRenderTarget();
+        if (param0 != 50) {
+          return;
+        }
+        try {
+          gf.b(60, 60, 0, 0, he.field_h.field_z, he.field_h.field_w);
+          we.field_f.bindAsRenderTarget();
+          gf.b(60, 60, 0, 0, we.field_f.field_z, we.field_f.field_w);
+          ks.field_j = va.field_e.copy();
+          ks.field_j.rotate180();
+          for (var3 = 0; var3 < ks.field_j.field_B.length; var3++) {
+            var4 = ks.field_j.field_B[var3];
+            var5 = 8323072 & var4 >> 1;
+            var6 = (var5 >> 9 & 32512) + (var4 & 65280);
+            var6 = var6 * 3 >> 1;
+            if (var6 <= 65280) {
+              var6 = var6 & 65280;
+            } else {
+              var6 = 65280;
+            }
+            var7 = 255 & var4;
+            ks.field_j.field_B[var3] = ee.a(ee.a(var6, var5), var7);
+          }
+          MusicVoice.field_n = DefendTask.field_s.flippedCopy();
+          uo.a((byte) 110, MusicVoice.field_n, 32768);
+          var1_int = MusicVoice.field_n.field_z;
+          var2 = MusicVoice.field_n.field_z + 120;
+          CheckboxPainter.field_b = new Sprite(var1_int, var2);
+          CheckboxPainter.field_b.bindAsRenderTarget();
+          MusicVoice.field_n.drawSilhouette(0, 120, 4259648);
+          gf.b(120, 120, 0, 0, var1_int, var2);
+          cg.i(0);
+          jn.field_a = true;
+        } catch (RuntimeException runtimeException) {
+          throw r.a((Throwable) ((Object) runtimeException), "rn.C(" + param0 + ')');
+        }
+    }
+
+    final DiskArchiveRequest a(int param0, SectorCacheStore param1, int param2) {
+        DiskArchiveRequest var4 = null;
+        RuntimeException var4_ref = null;
+        Object var5 = null;
+        DiskArchiveRequest var6 = null;
+        int var8 = 0;
+        DiskArchiveRequest stackIn_8_0 = null;
+        DiskArchiveRequest stackIn_15_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        Throwable decompiledCaughtException = null;
+        var8 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          var4 = new DiskArchiveRequest();
+          var4.field_y = param2;
+          var5 = this.field_c;
+          synchronized (var5) {
+            var6 = (DiskArchiveRequest) (this.field_c.startForward(-128));
+            while (var6 != null) {
+              if (~var6.field_l == ~(long)param0 &&
+                param1 == var6.field_B &&
+                var6.field_y == 2) {
+                var4.field_w = var6.field_w;
+                var4.field_u = false;
+                stackIn_8_0 = var4;
+                return stackIn_8_0;
+              }
+              var6 = (DiskArchiveRequest) (this.field_c.nextForward(32));
+            }
+          }
+          var4.field_w = param1.a(param0, 86);
+          var4.field_u = false;
+          var4.field_q = true;
+          stackIn_15_0 = var4;
+          return stackIn_15_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_18_0 = var4_ref;
+          stackIn_18_1 = new StringBuilder().append("rn.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw r.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public static void a(boolean param0) {
+        field_a = null;
+        if (!param0) {
+          return;
+        }
+        field_g = null;
+        field_e = null;
+    }
+
+    public final void run() {
+        try {
+          InterruptedException interruptedException = null;
+          int var5 = 0;
+          DiskArchiveRequest var7 = null;
+          int decompiledRegionSelector0 = 0;
+          Throwable decompiledCaughtException = null;
+          Object var2 = null;
+          Exception var2_ref = null;
+          String var6 = null;
+          var5 = ShatteredPlansClient.field_F ? 1 : 0;
+          while (!this.field_f) {
+            var2 = this.field_c;
+            synchronized (var2) {
+              var7 = (DiskArchiveRequest) (this.field_c.pollFirst(-49));
+              if (var7 != null) {
+                this.field_d = this.field_d - 1;
+                decompiledRegionSelector0 = 1;
+              } else {
+                try {
+                  this.field_c.wait();
+                } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+                }
+                decompiledRegionSelector0 = 0;
+              }
+            }
+            if (decompiledRegionSelector0 == 0) {
+              continue;
+            }
+            try {
+              if (var7.field_y == 2) {
+                var7.field_B.a(var7.field_w.length, (int)var7.field_l, var7.field_w, 2);
+                var7.field_u = false;
+              } else {
+                if (3 == var7.field_y) {
+                  var7.field_w = var7.field_B.a((int)var7.field_l, 119);
+                  var7.field_u = false;
+                } else {
+                  var7.field_u = false;
+                }
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var6 = (String) null;
+              GameKeyHandler.a(-29901, (Throwable) ((Object) var2_ref), (String) null);
+              var7.field_u = false;
+            }
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    private final void a(DiskArchiveRequest param0, int param1) {
+        DiskArchiveRequest var5 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        Throwable decompiledCaughtException = null;
+        Object var3 = null;
+        RuntimeException var3_ref = null;
+        try {
+          var3 = this.field_c;
+          synchronized (var3) {
+            this.field_c.addLast(param0, 32);
+            this.field_d = this.field_d + 1;
+            if (param1 != 1048576) {
+              var5 = (DiskArchiveRequest) null;
+              this.a((DiskArchiveRequest) null, 31);
+            }
+            this.field_c.notifyAll();
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_10_0 = var3_ref;
+          stackIn_10_1 = new StringBuilder().append("rn.H(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static void a(int param0) {
+        if (GameRules.field_c == gr.field_o) {
+          return;
+        }
+        if (PointsVictoryChecker.a((byte) -92, GameRules.field_c)) {
+          mj.field_Hb[GameRules.field_c].g((byte) 119);
+        }
+        TutorialAi.field_x = Wormhole.field_i;
+        eh.field_Q = 0;
+        GameRules.field_c = gr.field_o;
+        if (gr.field_o == -3) {
+          qf.a((byte) -126);
+        }
+        if (0 == gr.field_o &&
+          !ValidationState.field_b.a(hk.field_nb, (byte) -23)) {
+          jo.a(param0 - 1015809, hk.field_nb, true, 1048576);
+        }
+        if (gr.field_o == -6) {
+          js.field_f.h(9, 255);
+          md.field_Q = true;
+          gr.field_o = GameRules.field_c;
+        }
+        if (lg.field_b) {
+          if (null != ce.field_x &&
+            ce.field_x.field_Y != null) {
+            ce.field_x.field_Y.i((byte) -47);
+          }
+          if (null != SecondaryNodeHashTable.field_g &&
+            SecondaryNodeHashTable.field_g.field_Y != null) {
+            SecondaryNodeHashTable.field_g.field_Y.i((byte) -47);
+          }
+          lg.field_b = false;
+          ce.field_x = null;
+          SecondaryNodeHashTable.field_g = null;
+        }
+        if (uo.field_e) {
+          tq.field_b = null;
+          GameKeyHandler.field_a = new IntrusiveDeque();
+          vq.field_a = 0;
+          uo.field_e = false;
+        }
+        if (param0 != 1048576) {
+          return;
+        }
+        if (DiskArchiveRequest.field_A) {
+          rh.a((byte) -120);
+          UsernameAvailabilityValidator.e((byte) -66);
+          an.a(true);
+          DiskArchiveRequest.field_A = false;
+        }
+    }
+
+    final DiskArchiveRequest a(int param0, SectorCacheStore param1, int param2, byte[] param3) {
+        DiskArchiveRequest var5 = null;
+        RuntimeException var5_ref = null;
+        byte[] var6 = null;
+        DiskArchiveRequest stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var5 = new DiskArchiveRequest();
+          if (param2 >= -28) {
+            var6 = (byte[]) null;
+            this.a(9, (SectorCacheStore) null, -105, (byte[]) null);
+          }
+          var5.field_q = false;
+          var5.field_y = 2;
+          var5.field_B = param1;
+          var5.field_l = (long)param0;
+          var5.field_w = param3;
+          this.a(var5, 1048576);
+          stackIn_3_0 = var5;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5_ref = decompiledCaughtException;
+          stackIn_6_0 = var5_ref;
+          stackIn_6_1 = new StringBuilder().append("rn.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    final static void a(int param0, Archive param1, boolean param2, Archive param3, Archive param4) {
+        try {
+          wh.field_a = CheckboxPainter.a("", -12179);
+          if (param0 != 624) {
+            DiskCacheWorker.b((byte) -62);
+          }
+          wh.field_a.a(false, 37);
+          SolMapGenerator.a((byte) 87, param1, param4, param3);
+          AudioService.a(0);
+          ee.field_l = oj.field_Fb;
+          MatchingTextValidator.field_s = oj.field_Fb;
+        } catch (RuntimeException runtimeException) {
+          throw r.a((Throwable) ((Object) runtimeException), "rn.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final DiskArchiveRequest a(SectorCacheStore param0, int param1, int param2) {
+        DiskArchiveRequest var4 = null;
+        RuntimeException var4_ref = null;
+        DiskArchiveRequest stackIn_2_0 = null;
+        DiskArchiveRequest stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 != 13514) {
+            stackIn_2_0 = (DiskArchiveRequest) null;
+            return stackIn_2_0;
+          }
+          var4 = new DiskArchiveRequest();
+          var4.field_q = false;
+          var4.field_B = param0;
+          var4.field_y = 3;
+          var4.field_l = (long)param1;
+          this.a(var4, 1048576);
+          stackIn_4_0 = var4;
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_7_0 = var4_ref;
+          stackIn_7_1 = new StringBuilder().append("rn.J(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final void a(byte param0) {
+        try {
+          this.field_f = true;
+          synchronized (this.field_c) {
+            this.field_c.notifyAll();
+          }
+          int var2 = -52 % ((param0 + 10) / 61);
+          try {
+            this.field_h.join();
+          } catch (InterruptedException interruptedException) {
+          }
+          this.field_h = null;
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static void a(PcmStreamMixer param0, int param1, int param2, Archive param3) {
+        try {
+          aj.field_c = param1 * ArchiveSourceManager.a(param2 ^ param2) / 1000;
+          ArchiveRequest.a(param2 - 1102, param3);
+          oj.a(param2 ^ 902, param3);
+          qr.a(param3, (byte) 56);
+          eq.d((byte) -47);
+          r.b((byte) -112);
+          js.field_j = -aj.field_c + 0;
+        } catch (RuntimeException runtimeException) {
+          throw r.a((Throwable) ((Object) runtimeException), "rn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    DiskCacheWorker(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
+        this.field_c = new DualLinkDeque();
+        this.field_f = false;
+        this.field_d = 0;
+        try {
+          var2 = param0.a(true, 5, (Runnable) (this));
+          while (var2.field_d == 0) {
+            jb.a((byte) -107, 10L);
+          }
+          if (var2.field_d == 2) {
+            throw new RuntimeException();
+          }
+          this.field_h = (Thread) (var2.field_e);
+        } catch (RuntimeException runtimeException) {
+          throw r.a((Throwable) ((Object) runtimeException), "rn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_a = "Go Back";
+        field_g = "Shortcut Reference";
+        field_e = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
+    }
+}

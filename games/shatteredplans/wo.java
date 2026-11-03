@@ -32,13 +32,13 @@ final class wo {
             var6 = (String) null;
             wo.a(10, (byte) 112, (String[]) null, (String) null);
           }
-          fj.field_s = rh.field_g;
+          MatchingTextValidator.field_s = rh.field_g;
           if (param0 != 255) {
             if (100 <= param0 &&
               param0 <= 105) {
               var8 = param2;
               jp.a(var8, false);
-              ij.field_a = tc.a(param2, (byte) -89);
+              ij.field_a = DialogRoot.a(param2, (byte) -89);
               return;
             }
             ij.field_a = ck.a(param3, param0, param1 - 35);

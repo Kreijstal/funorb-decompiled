@@ -38,7 +38,7 @@ final class ro {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.j(-77);
+          var2_int = param1.readUnsignedByte(-77);
           stackIn_3_0 = (var2_int != 1) ? 0 : 1;
           var3 = stackIn_3_0;
           var4 = 24 / ((param0 - 29) / 49);

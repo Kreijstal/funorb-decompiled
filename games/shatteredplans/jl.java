@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jl extends w {
+abstract class jl extends Dialog {
     private int field_L;
     private int field_K;
     private int field_T;
@@ -16,7 +16,7 @@ abstract class jl extends w {
     static int field_U;
     static Sprite field_W;
 
-    jl(tc param0, int param1, int param2) {
+    jl(DialogRoot param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_P = 0;
         this.field_Q = 0;
@@ -132,7 +132,7 @@ abstract class jl extends w {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        kb.field_v.f(this.field_x + param0 - 90, 10 + param2);
+        kb.field_v.draw(this.field_x + param0 - 90, 10 + param2);
         wh.a(os.field_u, param2 + 35, this.field_x - 10, (byte) -114, 5 + param0);
         wh.a(IntrusiveNode.field_d, -22 + (this.field_n + param2), this.field_x, (byte) -99, param0);
         var5Lifetime2 = 169;
@@ -201,29 +201,29 @@ abstract class jl extends w {
                 var4 = ji.a(var7, true);
               }
               var5 = null;
-              if (0 == ia.field_b) {
+              if (0 == MapViewState.field_b) {
                 var5 = nj.a(var4, param2, (byte) -62);
               }
-              if (ia.field_b == 1) {
-                var5 = o.a((byte) -88, param2, var4);
+              if (MapViewState.field_b == 1) {
+                var5 = WidgetTheme.a((byte) -88, param2, var4);
               }
-              if (ia.field_b == 2) {
+              if (MapViewState.field_b == 2) {
                 var5 = vq.a(2, var4, param2);
               }
-              if (3 == ia.field_b) {
+              if (3 == MapViewState.field_b) {
                 var5 = os.a((byte) 117, param2, var4, var4);
               }
               if (var5 == null) {
-                ia.field_b = -1;
+                MapViewState.field_b = -1;
                 lg.field_e = null;
               } else {
                 var6 = (String) null;
                 md.a(2, (String) (var5), 0, var4, (String) null, -16169);
-                ia.field_b = -1;
+                MapViewState.field_b = -1;
                 lg.field_e = null;
               }
             } else {
-              ia.field_b = -1;
+              MapViewState.field_b = -1;
               lg.field_e = null;
             }
           }
@@ -281,7 +281,7 @@ abstract class jl extends w {
             if (param0.field_n == 4) {
               var2_intLifetime1 = hd.field_l[param0.field_n];
             } else {
-              if (~param0.field_p != ~ec.field_p) {
+              if (~param0.field_p != ~UsernameAvailabilityValidator.field_p) {
                 var2_intLifetime1 = hd.field_l[param0.field_n];
               } else {
                 var2_intLifetime1 = BufferedSocket.field_q[param0.field_n];

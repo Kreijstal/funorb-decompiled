@@ -36,7 +36,7 @@ final class of {
           if (!wh.field_a.b(14)) {
             return wh.field_a.a(98);
           }
-          if (ue.field_a != fj.field_s) {
+          if (ue.field_a != MatchingTextValidator.field_s) {
             return qh.field_B;
           }
           return wh.field_a.a(-45);
@@ -44,20 +44,20 @@ final class of {
         if (!wh.field_a.b(14)) {
           return wh.field_a.a(98);
         }
-        if (ue.field_a != fj.field_s) {
+        if (ue.field_a != MatchingTextValidator.field_s) {
           return qh.field_B;
         }
         return wh.field_a.a(-45);
     }
 
     final static e a(int param0) {
-        String var1 = bh.d(-77);
+        String var1 = BoundsRect.d(-77);
         if (param0 == 64) {
           if (var1 != null &&
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new e(bh.d(-98), ta.a(33));
+          return new e(BoundsRect.d(-98), ta.a(33));
         }
         return (e) null;
     }

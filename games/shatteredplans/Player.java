@@ -25,7 +25,7 @@ final class Player {
     int field_k;
     static fg field_l;
     Sprite field_d;
-    um field_q;
+    PlayerStats field_q;
     String name;
     static String field_j;
     static int[] field_y;
@@ -89,7 +89,7 @@ final class Player {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        ol.field_e = param0;
+        WeightedLruCache.field_e = param0;
         ri.field_O = param1;
         if (param2) {
           field_z = -11;

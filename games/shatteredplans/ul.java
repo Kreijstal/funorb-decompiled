@@ -47,7 +47,7 @@ final class ul extends qr {
         lg.field_d[wm.field_c] = wm.field_c;
         GameApplet.field_f[wm.field_c] = param1;
         if (!(us.field_b >= param1)) {
-          s.field_e = param1;
+          GzipInflater.field_e = param1;
         }
         if (!(ef.field_a <= param1)) {
           ff.field_u = param1;
@@ -58,14 +58,14 @@ final class ul extends qr {
         int var6 = param5 + param3 + param2;
         int var7 = param0 != var6 ? 1000 * param2 / var6 : 0;
         GameState.field_c[wm.field_c] = var7;
-        if (var7 <= s.field_e) {
+        if (var7 <= GzipInflater.field_e) {
           wm.field_c = wm.field_c + 1;
           if (!(ff.field_u <= var7)) {
             ff.field_u = var7;
           }
           return;
         }
-        s.field_e = var7;
+        GzipInflater.field_e = var7;
         wm.field_c = wm.field_c + 1;
         if (!(ff.field_u <= var7)) {
           ff.field_u = var7;

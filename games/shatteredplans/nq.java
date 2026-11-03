@@ -27,27 +27,27 @@ abstract class nq extends DualLinkNode {
     private static int field_G;
     private static int field_x;
 
-    final void a(String param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawCentredAlpha(String param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 == null) {
           return;
         }
-        this.a(param3, param4, param5);
-        this.b(param0, param1 - this.c(param0) / 2, param2);
+        this.setColoursAlpha(param3, param4, param5);
+        this.b(param0, param1 - this.stringWidth(param0) / 2, param2);
     }
 
-    final void b(String param0, int param1, int param2, int param3, int param4) {
+    final void drawRightAligned(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {
           return;
         }
-        this.c(param3, param4);
-        this.b(param0, param1 - this.c(param0), param2);
+        this.setColours(param3, param4);
+        this.b(param0, param1 - this.stringWidth(param0), param2);
     }
 
     final void a(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {
           return;
         }
-        this.c(param3, param4);
+        this.setColours(param3, param4);
         this.a(param0, param1, param2);
     }
 
@@ -60,7 +60,7 @@ abstract class nq extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        this.a(param5, param6, param7);
+        this.setColoursAlpha(param5, param6, param7);
         if (param10 == 0) {
           param10 = this.field_L;
         }
@@ -69,7 +69,7 @@ abstract class nq extends DualLinkNode {
           param4 < param10 + param10) {
           var12 = null;
         }
-        var13 = this.a(param0, var12, field_D);
+        var13 = this.wrapText(param0, var12, field_D);
         if (param9 == 3 &&
           var13 == 1) {
           param9 = 1;
@@ -105,11 +105,11 @@ abstract class nq extends DualLinkNode {
                 }
                 var14 = var14 + param10;
               } else {
-                this.b(field_D[var15Lifetime1], param1 + param3 - this.c(field_D[var15Lifetime1]), var14);
+                this.b(field_D[var15Lifetime1], param1 + param3 - this.stringWidth(field_D[var15Lifetime1]), var14);
                 var14 = var14 + param10;
               }
             } else {
-              this.b(field_D[var15Lifetime1], param1 + (param3 - this.c(field_D[var15Lifetime1])) / 2, var14);
+              this.b(field_D[var15Lifetime1], param1 + (param3 - this.stringWidth(field_D[var15Lifetime1])) / 2, var14);
               var14 = var14 + param10;
             }
           } else {
@@ -125,7 +125,7 @@ abstract class nq extends DualLinkNode {
         field_D = null;
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void setColoursAlpha(int param0, int param1, int param2) {
         field_w = -1;
         field_p = -1;
         field_r = param1;
@@ -179,7 +179,7 @@ abstract class nq extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = ma.a(var13, 2);
+                                  var10 = DefensiveAi.a(var13, 2);
                                   var11_ref_bq = this.field_z[var10];
                                   if (this.field_t == null) {
                                     stackIn_27_0 = var11_ref_bq.field_c;
@@ -313,11 +313,11 @@ abstract class nq extends DualLinkNode {
         return var3.toString();
     }
 
-    final void d(String param0, int param1, int param2, int param3, int param4) {
+    final void drawString(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {
           return;
         }
-        this.c(param3, param4);
+        this.setColours(param3, param4);
         this.b(param0, param1, param2);
     }
 
@@ -346,7 +346,7 @@ abstract class nq extends DualLinkNode {
                                 if (!param0.equals("shad")) {
                                   if (!param0.equals("/shad")) {
                                     if (param0.equals("br")) {
-                                      this.a(field_x, field_r, field_s);
+                                      this.setColoursAlpha(field_x, field_r, field_s);
                                     }
                                   } else {
                                     field_u = field_r;
@@ -383,7 +383,7 @@ abstract class nq extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_A = ma.a(var4, 2);
+                field_A = DefensiveAi.a(var4, 2);
               }
             } else {
               field_G = field_x;
@@ -511,23 +511,23 @@ abstract class nq extends DualLinkNode {
         this.field_t = param1;
     }
 
-    final void c(String param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRightAlignedAlpha(String param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 == null) {
           return;
         }
-        this.a(param3, param4, param5);
-        this.b(param0, param1 - this.c(param0), param2);
+        this.setColoursAlpha(param3, param4, param5);
+        this.b(param0, param1 - this.stringWidth(param0), param2);
     }
 
-    final void c(String param0, int param1, int param2, int param3, int param4) {
+    final void drawCentred(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {
           return;
         }
-        this.c(param3, param4);
-        this.b(param0, param1 - this.c(param0) / 2, param2);
+        this.setColours(param3, param4);
+        this.b(param0, param1 - this.stringWidth(param0) / 2, param2);
     }
 
-    private final void c(int param0, int param1) {
+    private final void setColours(int param0, int param1) {
         field_w = -1;
         field_p = -1;
         field_r = param1;
@@ -546,14 +546,14 @@ abstract class nq extends DualLinkNode {
         int var4;
         int var5;
         int var7;
-        if (param0.c(param1) <= param2) {
+        if (param0.stringWidth(param1) <= param2) {
           return param1;
         }
-        var3 = param0.c("...");
+        var3 = param0.stringWidth("...");
         var4 = param2 - var3;
         var5 = 0;
         for (var6 = 0; var6 < param1.length(); var6++) {
-          var7 = param0.a(param1.charAt(var6));
+          var7 = param0.charWidth(param1.charAt(var6));
           if (var5 + var7 > var4) {
             return param1.substring(0, var6 - 1) + "...";
           }
@@ -562,19 +562,19 @@ abstract class nq extends DualLinkNode {
         return null;
     }
 
-    final int a(String param0, int param1) {
-        return this.a(param0, new int[]{param1}, field_D);
+    final int lineCount(String param0, int param1) {
+        return this.wrapText(param0, new int[]{param1}, field_D);
     }
 
-    final void d(String param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawStringAlpha(String param0, int param1, int param2, int param3, int param4, int param5) {
         if (param0 == null) {
           return;
         }
-        this.a(param3, param4, param5);
+        this.setColoursAlpha(param3, param4, param5);
         this.b(param0, param1, param2);
     }
 
-    final int a(String param0, int[] param1, String[] param2) {
+    final int wrapText(String param0, int[] param1, String[] param2) {
         int var13 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -635,7 +635,7 @@ abstract class nq extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = ma.a(var18, 2);
+                                    var16_int = DefensiveAi.a(var18, 2);
                                     var4 = var4 + this.field_z[var16_int].field_d;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -644,7 +644,7 @@ abstract class nq extends DualLinkNode {
                                   }
                                 }
                               } else {
-                                var4 = var4 + this.a('®');
+                                var4 = var4 + this.charWidth('®');
                                 if (this.field_M != null &&
                                   var10 != 0) {
                                   var4 = var4 + this.field_M[(var10 << 8) + 174];
@@ -652,7 +652,7 @@ abstract class nq extends DualLinkNode {
                                 var10 = 174;
                               }
                             } else {
-                              var4 = var4 + this.a('©');
+                              var4 = var4 + this.charWidth('©');
                               if (this.field_M != null &&
                                 var10 != 0) {
                                 var4 = var4 + this.field_M[(var10 << 8) + 169];
@@ -660,7 +660,7 @@ abstract class nq extends DualLinkNode {
                               var10 = 169;
                             }
                           } else {
-                            var4 = var4 + this.a('€');
+                            var4 = var4 + this.charWidth('€');
                             if (this.field_M != null &&
                               var10 != 0) {
                               var4 = var4 + this.field_M[(var10 << 8) + 128];
@@ -668,7 +668,7 @@ abstract class nq extends DualLinkNode {
                             var10 = 8364;
                           }
                         } else {
-                          var4 = var4 + this.a('×');
+                          var4 = var4 + this.charWidth('×');
                           if (this.field_M != null &&
                             var10 != 0) {
                             var4 = var4 + this.field_M[(var10 << 8) + 215];
@@ -676,7 +676,7 @@ abstract class nq extends DualLinkNode {
                           var10 = 215;
                         }
                       } else {
-                        var4 = var4 + this.a('­');
+                        var4 = var4 + this.charWidth('­');
                         if (this.field_M != null &&
                           var10 != 0) {
                           var4 = var4 + this.field_M[(var10 << 8) + 173];
@@ -684,7 +684,7 @@ abstract class nq extends DualLinkNode {
                         var10 = 173;
                       }
                     } else {
-                      var4 = var4 + this.a(' ');
+                      var4 = var4 + this.charWidth(' ');
                       if (this.field_M != null &&
                         var10 != 0) {
                         var4 = var4 + this.field_M[(var10 << 8) + 160];
@@ -692,7 +692,7 @@ abstract class nq extends DualLinkNode {
                       var10 = 160;
                     }
                   } else {
-                    var4 = var4 + this.a('>');
+                    var4 = var4 + this.charWidth('>');
                     if (this.field_M != null &&
                       var10 != 0) {
                       var4 = var4 + this.field_M[(var10 << 8) + 62];
@@ -700,7 +700,7 @@ abstract class nq extends DualLinkNode {
                     var10 = 62;
                   }
                 } else {
-                  var4 = var4 + this.a('<');
+                  var4 = var4 + this.charWidth('<');
                   if (this.field_M != null &&
                     var10 != 0) {
                     var4 = var4 + this.field_M[(var10 << 8) + 60];
@@ -768,7 +768,7 @@ abstract class nq extends DualLinkNode {
         return var11;
     }
 
-    final int c(String param0) {
+    final int stringWidth(String param0) {
         int var6 = 0;
         Throwable decompiledCaughtException = null;
         int var2 = 0;
@@ -806,7 +806,7 @@ abstract class nq extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = ma.a(var10, 2);
+                                  var9_int = DefensiveAi.a(var10, 2);
                                   var4 = var4 + this.field_z[var9_int].field_d;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -907,15 +907,15 @@ abstract class nq extends DualLinkNode {
         return -var13;
     }
 
-    final int c(String param0, int param1) {
+    final int maxLineWidth(String param0, int param1) {
         int var5 = 0;
         int var3;
         int var4;
         int var6;
-        var3 = this.a(param0, new int[]{param1}, field_D);
+        var3 = this.wrapText(param0, new int[]{param1}, field_D);
         var4 = 0;
         for (var5 = 0; var5 < var3; var5++) {
-          var6 = this.c(field_D[var5]);
+          var6 = this.stringWidth(field_D[var5]);
           if (var6 > var4) {
             var4 = var6;
           }
@@ -923,11 +923,11 @@ abstract class nq extends DualLinkNode {
         return var4;
     }
 
-    final int c(String param0, int param1, int param2) {
+    final int textHeight(String param0, int param1, int param2) {
         if (param2 == 0) {
           param2 = this.field_L;
         }
-        int var4 = this.a(param0, new int[]{param1}, field_D);
+        int var4 = this.wrapText(param0, new int[]{param1}, field_D);
         int var5 = (var4 - 1) * param2;
         return this.field_J + var5 + this.field_q;
     }
@@ -959,7 +959,7 @@ abstract class nq extends DualLinkNode {
           }
         }
         if (var3 > 0) {
-          field_F = (param1 - this.c(param0) << 8) / var3;
+          field_F = (param1 - this.stringWidth(param0) << 8) / var3;
         }
     }
 
@@ -1074,7 +1074,7 @@ abstract class nq extends DualLinkNode {
         if (param0 == null) {
           return;
         }
-        this.c(param3, param4);
+        this.setColours(param3, param4);
         this.b(param0, param5);
         this.b(param0, param1, param2);
     }
@@ -1105,7 +1105,7 @@ abstract class nq extends DualLinkNode {
         this.field_K = this.field_L - this.field_E[88];
     }
 
-    final int a(char param0) {
+    final int charWidth(char param0) {
         return this.field_y[q.a((byte) -80, param0) & 255];
     }
 

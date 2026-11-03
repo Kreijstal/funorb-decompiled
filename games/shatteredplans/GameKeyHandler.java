@@ -29,7 +29,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (0 <= qn.field_c &&
               var2_int >= 0) {
-              m.field_x[qn.field_c] = ~var2_int;
+              StrongCacheEntry.field_x[qn.field_c] = ~var2_int;
               qn.field_c = 1 + qn.field_c & 127;
               if (qn.field_c == hb.field_e) {
                 qn.field_c = -1;
@@ -76,7 +76,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (0 <= qn.field_c &&
               0 <= var2_int) {
-              m.field_x[qn.field_c] = var2_int;
+              StrongCacheEntry.field_x[qn.field_c] = var2_int;
               qn.field_c = 1 + qn.field_c & 127;
               if (hb.field_e == qn.field_c) {
                 qn.field_c = -1;
@@ -84,7 +84,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (var2_int >= 0) {
               var3 = cg.field_I + 1 & 127;
-              if (var3 != tc.field_B) {
+              if (var3 != DialogRoot.field_B) {
                 ng.field_a[cg.field_I] = var2_int;
                 fb.field_yb[cg.field_I] = (char)0;
                 cg.field_I = var3;
@@ -129,7 +129,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var2_int != 65535 &&
               pg.a(28654, (char) var2_int)) {
               var3 = 1 + cg.field_I & 127;
-              if (var3 != tc.field_B) {
+              if (var3 != DialogRoot.field_B) {
                 ng.field_a[cg.field_I] = -1;
                 fb.field_yb[cg.field_I] = (char)var2_int;
                 cg.field_I = var3;
@@ -178,7 +178,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          pb var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -189,7 +189,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           try {
             var3 = "";
             if (param1 != null) {
-              var3 = es.a(param1, (byte) -110);
+              var3 = StarAnnotation.a(param1, (byte) -110);
             }
             if (param2 != null) {
               if (param1 != null) {
@@ -209,11 +209,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             stackIn_13_1 = null;
             stackIn_13_2 = null;
             stackIn_13_3 = ei.field_c.getCodeBase();
-            stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(td.field_G).append("&u=");
+            stackIn_13_4 = new StringBuilder().append("clienterror.ws?c=").append(SliderWidget.field_G).append("&u=");
             if (null == bj.field_E) {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
-              stackIn_14_5 = "" + co.field_o;
+              stackIn_14_5 = "" + GarrisonTask.field_o;
             } else {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
@@ -333,27 +333,27 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            sa.field_a = new sl(param4);
-            js.field_f = new sl(param2);
-            ka.field_a = param6;
+            sa.field_a = new CipherPacketBuffer(param4);
+            js.field_f = new CipherPacketBuffer(param2);
+            StandardAi.field_a = param6;
             ee.field_o = param7;
             of.field_f = param3;
-            nr.field_l = param1;
+            StarAbandonedEvent.field_l = param1;
             if (param0 != 0) {
               GameKeyHandler.a((byte) 38);
             }
             be.field_l = param13;
             bb.field_c = param5;
             mk.field_c = param12;
-            db.field_b = param8;
+            DualLinkDeque.field_b = param8;
             uk.field_a = param9;
             e.field_b = param10;
             sp.field_g = param11;
-            if (nr.field_l.field_a == null) {
+            if (StarAbandonedEvent.field_l.field_a == null) {
               return;
             }
             try {
-              vc.field_a = new ej(nr.field_l.field_a, 64, 0);
+              vc.field_a = new BufferedCacheFile(StarAbandonedEvent.field_l.field_a, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

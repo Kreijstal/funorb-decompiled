@@ -11,7 +11,7 @@ final class vs {
 
     final static gb a(byte param0, int param1) {
         gb var2 = new gb();
-        vl.field_o.a((byte) -113, var2);
+        SolMapGenerator.field_o.addLast((byte) -113, var2);
         bo.a(param1, 2);
         if (param0 == 88) {
           return var2;
@@ -36,18 +36,18 @@ final class vs {
         RuntimeException var2_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var4 = (lq) (rs.field_Bb.d(0));
+          var4 = (lq) (rs.field_Bb.startForward(0));
           while (var4 != null) {
             wj.a(320, param0, var4);
-            var4 = (lq) (rs.field_Bb.a((byte) -71));
+            var4 = (lq) (rs.field_Bb.nextForward((byte) -71));
           }
           if (param1 > -18) {
             field_b = (String) null;
           }
-          var2 = vl.field_o.d(0);
+          var2 = SolMapGenerator.field_o.startForward(0);
           while (var2 != null) {
             bo.a(param0, 2);
-            var2 = vl.field_o.a((byte) -71);
+            var2 = SolMapGenerator.field_o.nextForward((byte) -71);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

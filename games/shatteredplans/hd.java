@@ -37,10 +37,10 @@ final class hd extends IntrusiveNode {
           gf.b();
           var2 = 300 - di.field_m;
           var1_int = -25 + var2 / 8;
-          db.field_a.b(var1_int, 0, 33023);
+          DualLinkDeque.field_a.b(var1_int, 0, 33023);
           var1_intLifetime1 = var2 / 6 - 100;
-          w.field_D.b(var1_intLifetime1, 0, 4227327);
-          oi.field_d.a(var1_intLifetime1, 0, dp.field_r / 8);
+          Dialog.field_D.b(var1_intLifetime1, 0, 4227327);
+          oi.field_d.drawAlpha(var1_intLifetime1, 0, dp.field_r / 8);
           var7 = fe.field_y;
           var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
@@ -51,8 +51,8 @@ final class hd extends IntrusiveNode {
           }
           var1_intLifetime2 = -250 + var2 / 4;
           vm.field_Jb.b(var1_intLifetime2, 120, 8421631);
-          tp.field_e.a(var1_intLifetime2, param0, dp.field_r / 4);
-          sr.field_F.a(var1_intLifetime2, 120, dp.field_r);
+          SliderPainter.field_e.drawAlpha(var1_intLifetime2, param0, dp.field_r / 4);
+          sr.field_F.drawAlpha(var1_intLifetime2, 120, dp.field_r);
           var3Lifetime1 = fe.field_H;
           var8 = 0;
           var4Lifetime1 = var8;
@@ -100,7 +100,7 @@ final class hd extends IntrusiveNode {
         int var5 = 0;
         int var6 = 0;
         try {
-          var4_int = param1.c(param0);
+          var4_int = param1.stringWidth(param0);
           var5 = param1.field_J + param1.field_q;
           stackIn_4_0 = (500 >= var4_int) ? 0 : 1;
           var6 = stackIn_4_0;
@@ -109,15 +109,15 @@ final class hd extends IntrusiveNode {
           }
           this.field_i = new Sprite(var4_int, var5);
           this.field_o = new Sprite(var4_int + 6, 6 + var5);
-          ra.a(-127);
-          this.field_i.e();
+          RandomAccessCacheFile.a(-127);
+          this.field_i.bindAsRenderTarget();
           if (var6 == 0) {
-            param1.d(param0, 0, param1.field_J, 16777215, -1);
+            param1.drawString(param0, 0, param1.field_J, 16777215, -1);
           } else {
             param1.b(param0, 0, param1.field_J, 16777215, -1, 600);
           }
-          this.field_o.e();
-          this.field_i.c(3, 3);
+          this.field_o.bindAsRenderTarget();
+          this.field_i.drawOpaque(3, 3);
           gf.b(1, 1, 0, 0, 6 + var4_int, var5 + 6);
           for (var7 = (var4_int + 6) * (6 + var5) - 1; var7 >= 0; var7--) {
             if (0 == (128 & gf.field_h[var7])) {
@@ -152,7 +152,7 @@ final class hd extends IntrusiveNode {
           field_k = -43L;
         }
         ld var2 = new ld();
-        ua.field_d.a((byte) -113, var2);
+        SectorCacheStore.field_d.addLast((byte) -113, var2);
         cp.a(param0, 1);
         return var2;
     }

@@ -6,7 +6,7 @@ final class jp extends qr {
     private qr field_yb;
     private qr field_zb;
     static String field_xb;
-    static vk field_Bb;
+    static PcmStreamMixer field_Bb;
     private StringBuilder field_Db;
     private int field_Ab;
 
@@ -341,7 +341,7 @@ final class jp extends qr {
             field_Cb = (v) null;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = ci.field_d.equals(ji.a(var3, true));
+          stackIn_3_0 = ArchiveIndex.field_d.equals(ji.a(var3, true));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -446,7 +446,7 @@ final class jp extends qr {
           return this.field_Ab;
         }
         while (true) {
-          if (!cc.$cfr$intArgs$e$296a4c2b494e(55)) {
+          if (!PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (param0 < -42) {
               this.field_zb.field_z = this.field_Db.toString();
               if (!param1) {
@@ -479,7 +479,7 @@ final class jp extends qr {
             0 < this.field_Db.length()) {
             aj.a(this.field_Db, this.field_Db.length() - 1, 29, ' ');
           }
-          if (vi.a(ho.field_h, (CharSequence) ((Object) this.field_Db), (byte) 119)) {
+          if (TutorialMapGenerator.a(ho.field_h, (CharSequence) ((Object) this.field_Db), (byte) 119)) {
             discarded$0 = this.field_Db.append(ho.field_h);
           } else {
             if (this.field_Db.length() == 0 &&
@@ -532,12 +532,12 @@ final class jp extends qr {
         String[] var2 = null;
         String[] var2Lifetime1;
         dp.field_t = false;
-        if (mr.field_h != null) {
-          mr.field_h.h(0);
+        if (DerelictMapReader.field_h != null) {
+          DerelictMapReader.field_h.h(0);
           if (0 != em.field_h) {
-            qq.c(false);
+            MusicVoice.c(false);
           }
-          jj.field_m = 0;
+          ConquestVictoryChecker.field_m = 0;
           if (param0 < 83) {
             var2 = (String[]) null;
             jp.a((String[]) null, false);
@@ -546,9 +546,9 @@ final class jp extends qr {
           return;
         }
         if (0 != em.field_h) {
-          qq.c(false);
+          MusicVoice.c(false);
         }
-        jj.field_m = 0;
+        ConquestVictoryChecker.field_m = 0;
         if (param0 < 83) {
           var2Lifetime1 = (String[]) null;
           jp.a((String[]) null, false);

@@ -62,7 +62,7 @@ abstract class hb {
         RuntimeException var2_ref = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (eg.field_q == null) {
+          if (BattleEvent.field_q == null) {
             return null;
           }
           if (param1 == null) {
@@ -82,7 +82,7 @@ abstract class hb {
             stackIn_13_0 = (ve) null;
             return stackIn_13_0;
           }
-          var3 = (ve) (eg.field_q.a(65280, (long)var2.hashCode()));
+          var3 = (ve) (BattleEvent.field_q.a(65280, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Ab);
             var4 = ji.a(var7, true);
@@ -90,7 +90,7 @@ abstract class hb {
               stackIn_20_0 = var3;
               return stackIn_20_0;
             }
-            var3 = (ve) (eg.field_q.d((byte) -112));
+            var3 = (ve) (BattleEvent.field_q.d((byte) -112));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

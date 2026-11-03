@@ -18,31 +18,31 @@ final class us {
     }
 
     final static void a(int param0, int param1) {
-        if (~ui.field_m == ~(!p.field_n ? 3 : 2)) {
-          i.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
+        if (~SolVictoryChecker.field_m == ~(!CachedArchiveSource.field_n ? 3 : 2)) {
+          DialPainter.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
           if (param0 == 0) {
             return;
           }
           us.a(false, true);
           return;
         }
-        if (p.field_n) {
-          if (kc.field_i == -1) {
-            i.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
+        if (CachedArchiveSource.field_n) {
+          if (MusicEnvelope.field_i == -1) {
+            DialPainter.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
             if (param0 == 0) {
               return;
             }
             us.a(false, true);
             return;
           }
-          ne.a(0, gf.field_b, (byte) 24, 0, 256, 5 * param1, gf.field_k);
+          BattleContribution.a(0, gf.field_b, (byte) 24, 0, 256, 5 * param1, gf.field_k);
           if (param0 == 0) {
             return;
           }
           us.a(false, true);
           return;
         }
-        ne.a(0, gf.field_b, (byte) 24, 0, 256, 5 * param1, gf.field_k);
+        BattleContribution.a(0, gf.field_b, (byte) 24, 0, 256, 5 * param1, gf.field_k);
         if (param0 == 0) {
           return;
         }
@@ -63,7 +63,7 @@ final class us {
           if (param2 != 2) {
             us.a(-12);
           }
-          var3_int = param0.j(-85);
+          var3_int = param0.readUnsignedByte(-85);
           if (param1.length <= var3_int) {
             return null;
           }

@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ri extends WidgetContainer implements od, bp {
+final class ri extends WidgetContainer implements TextFieldListener, ButtonListener {
     private boolean field_L;
-    private kg field_K;
+    private FocusableWidget field_K;
     private String field_J;
     static String field_G;
     static int field_F;
     static String field_N;
-    private kg field_P;
+    private FocusableWidget field_P;
     static gr field_I;
-    private go field_H;
-    private kg field_Q;
-    private go field_R;
+    private TextFieldWidget field_H;
+    private FocusableWidget field_Q;
+    private TextFieldWidget field_R;
     private boolean field_D;
     private boolean field_E;
     static String field_M;
     static int field_O;
 
     final void a(int param0, String param1) {
-        go var3 = null;
+        TextFieldWidget var3 = null;
         String var4 = null;
         if (param0 != 16311) {
           return;
@@ -86,7 +86,7 @@ final class ri extends WidgetContainer implements od, bp {
         }
     }
 
-    final static th a(String param0, String param1, bc param2, bc param3, byte param4) {
+    final static th a(String param0, String param1, Archive param2, Archive param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -103,10 +103,10 @@ final class ri extends WidgetContainer implements od, bp {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param2.a(126, param1);
-          var6 = param2.a(var5_int, (byte) 106, param0);
+          var5_int = param2.getGroupIdByName(126, param1);
+          var6 = param2.getFileIdByName(var5_int, (byte) 106, param0);
           var7 = 72 % ((38 - param4) / 49);
-          stackIn_1_0 = mf.a(var6, var5_int, param2, param3, -121);
+          stackIn_1_0 = EmailValidator.a(var6, var5_int, param2, param3, -121);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,10 +140,10 @@ final class ri extends WidgetContainer implements od, bp {
         }
     }
 
-    public final void a(go param0, int param1) {
+    public final void a(TextFieldWidget param0, int param1) {
         try {
           if (param1 != 95) {
-            this.field_K = (kg) null;
+            this.field_K = (FocusableWidget) null;
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ri.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -151,10 +151,10 @@ final class ri extends WidgetContainer implements od, bp {
     }
 
     private final void a(int param0) {
-        if (i.a(1) ||
+        if (DialPainter.a(1) ||
           !(this.field_H.field_s.length() <= 0) &&
           !(0 >= this.field_R.field_s.length())) {
-          bh.a((byte) 81, this.field_R.field_s, this.field_H.field_s);
+          BoundsRect.a((byte) 81, this.field_R.field_s, this.field_H.field_s);
         }
         if (param0 > -126) {
           this.a(-6);
@@ -171,8 +171,8 @@ final class ri extends WidgetContainer implements od, bp {
         super.a(param0, param1, param2, param3);
     }
 
-    public final void a(int param0, go param1) {
-        bc var4 = null;
+    public final void a(int param0, TextFieldWidget param1) {
+        Archive var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -186,8 +186,8 @@ final class ri extends WidgetContainer implements od, bp {
             this.a(param0 - 4468);
           }
           if (param0 != 4340) {
-            var4 = (bc) null;
-            ri.a((String) null, (String) null, (bc) null, (bc) null, (byte) -106);
+            var4 = (Archive) null;
+            ri.a((String) null, (String) null, (Archive) null, (Archive) null, (byte) -106);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -205,16 +205,16 @@ final class ri extends WidgetContainer implements od, bp {
     }
 
     ri(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (iq) null);
+        super(0, 0, 310, 190, (WidgetPainter) null);
         pg dupTemp$0 = null;
         pg dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        kg stackIn_18_1 = null;
-        kg stackIn_18_2 = null;
-        kg stackIn_19_1 = null;
-        kg stackIn_19_2 = null;
+        FocusableWidget stackIn_18_1 = null;
+        FocusableWidget stackIn_18_2 = null;
+        FocusableWidget stackIn_19_1 = null;
+        FocusableWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -241,10 +241,10 @@ final class ri extends WidgetContainer implements od, bp {
             this.field_D)) {
             throw new IllegalStateException();
           }
-          this.field_H = (go) ((Object) new fa(param0, (ko) (this), 100));
-          this.field_R = (go) ((Object) new fa("", (ko) (this), 20));
+          this.field_H = (TextFieldWidget) ((Object) new fa(param0, (WidgetListener) (this), 100));
+          this.field_R = (TextFieldWidget) ((Object) new fa("", (WidgetListener) (this), 20));
           if (!this.field_L) {
-            this.field_K = new kg(wl.field_e, (ko) null);
+            this.field_K = new FocusableWidget(wl.field_e, (WidgetListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_D) {
@@ -254,26 +254,26 @@ final class ri extends WidgetContainer implements od, bp {
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = tr.field_Pb;
+              stackIn_19_3 = MapView.field_Pb;
             }
-            this.field_P = new kg(stackIn_19_3, (ko) null);
+            this.field_P = new FocusableWidget(stackIn_19_3, (WidgetListener) null);
             if (this.field_E) {
-              this.field_Q = new kg(oj.field_Ab, (ko) (this));
+              this.field_Q = new FocusableWidget(oj.field_Ab, (WidgetListener) (this));
             }
           } else {
-            this.field_K = new kg(ts.field_E, (ko) null);
-            this.field_P = new kg(em.field_g, (ko) null);
+            this.field_K = new FocusableWidget(ts.field_E, (WidgetListener) null);
+            this.field_P = new FocusableWidget(em.field_g, (WidgetListener) null);
             this.field_H.field_y = false;
           }
-          this.field_H.field_p = (iq) ((Object) new rr(10000536));
-          this.field_R.field_p = (iq) ((Object) new ce(10000536));
+          this.field_H.field_p = (WidgetPainter) ((Object) new rr(10000536));
+          this.field_R.field_p = (WidgetPainter) ((Object) new ce(10000536));
           var6 = new qp();
-          this.field_K.field_p = (iq) ((Object) var6);
+          this.field_K.field_p = (WidgetPainter) ((Object) var6);
           if (this.field_P != null) {
-            this.field_P.field_p = (iq) ((Object) var6);
+            this.field_P.field_p = (WidgetPainter) ((Object) var6);
           }
           if (this.field_Q != null) {
-            this.field_Q.field_p = (iq) ((Object) var6);
+            this.field_Q.field_p = (WidgetPainter) ((Object) var6);
           }
           this.field_H.field_v = sf.field_a;
           if (null != this.field_Q) {
@@ -284,20 +284,20 @@ final class ri extends WidgetContainer implements od, bp {
           } else {
             if (this.field_D) {
               this.field_P.field_v = bs.field_c;
-              this.field_P.field_p = (iq) ((Object) new rq());
+              this.field_P.field_p = (WidgetPainter) ((Object) new LinkPainter());
             } else {
-              this.field_P.field_p = (iq) ((Object) new rq());
+              this.field_P.field_p = (WidgetPainter) ((Object) new LinkPainter());
             }
           }
           this.field_q = 15;
           var7 = gn.field_u;
           if (null != this.field_J) {
-            this.field_q = this.field_q + (var7.c(this.field_J, this.field_x - 40, var7.field_J) + 5);
+            this.field_q = this.field_q + (var7.textHeight(this.field_J, this.field_x - 40, var7.field_J) + 5);
           }
           var8 = ph.field_e;
-          var9 = jc.a(kq.f((byte) 124), true);
+          var9 = ArchiveRequest.a(GameScreen.f((byte) 124), true);
           if (var9 == og.field_b) {
-            var8 = cn.field_v;
+            var8 = QuaternaryLinkNode.field_v;
           } else {
             if (dm.field_f == var9) {
               var8 = ba.field_b;
@@ -307,16 +307,16 @@ final class ri extends WidgetContainer implements od, bp {
           var12 = dupTemp$0;
           this.b((byte) -65, dupTemp$0);
           this.field_q = this.field_q + (((UiWidget) ((Object) var12)).field_n + 5);
-          dupTemp$1 = new pg(10, this.field_q, this.field_x - 20, 25, this.field_R, false, 80, 3, var7, 16777215, co.field_t);
+          dupTemp$1 = new pg(10, this.field_q, this.field_x - 20, 25, this.field_R, false, 80, 3, var7, 16777215, GarrisonTask.field_t);
           var13 = dupTemp$1;
           this.b((byte) -66, dupTemp$1);
           this.field_q = this.field_q + (((UiWidget) ((Object) var13)).field_n + 5);
-          this.field_K.field_u = (ko) (this);
+          this.field_K.field_u = (WidgetListener) (this);
           if (null != this.field_Q) {
-            this.field_Q.field_u = (ko) (this);
+            this.field_Q.field_u = (WidgetListener) (this);
           }
           if (null != this.field_P) {
-            this.field_P.field_u = (ko) (this);
+            this.field_P.field_u = (WidgetListener) (this);
           }
           if (null == this.field_Q) {
             this.field_K.a(this.field_q, 30, (byte) 106, 8, -6 + (this.field_x - 10));
@@ -368,7 +368,7 @@ final class ri extends WidgetContainer implements od, bp {
         }
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -379,16 +379,16 @@ final class ri extends WidgetContainer implements od, bp {
         try {
           if (this.field_K != param0) {
             if (this.field_Q == param0) {
-              cs.a((byte) 115);
+              Wormhole.a((byte) 115);
             } else {
               if (this.field_P == param0) {
                 if (this.field_L) {
-                  o.a(0);
+                  WidgetTheme.a(0);
                 } else {
                   if (this.field_D) {
-                    ol.b((byte) -125);
+                    WeightedLruCache.b((byte) -125);
                   } else {
-                    qc.h(30252);
+                    SocketArchiveNetworkClient.h(30252);
                   }
                 }
               }

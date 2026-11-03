@@ -10,8 +10,8 @@ final class ij {
           Throwable decompiledCaughtException = null;
           if (null != vc.field_a) {
             try {
-              vc.field_a.a((byte) -26, 0L);
-              vc.field_a.a(param0 + 84, 24, sa.field_a.position, sa.field_a.payload);
+              vc.field_a.seek((byte) -26, 0L);
+              vc.field_a.write(param0 + 84, 24, sa.field_a.position, sa.field_a.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
@@ -34,9 +34,9 @@ final class ij {
         }
     }
 
-    final static fp b(int param0) {
+    final static FrameTimer b(int param0) {
         int var1 = 55 / ((param0 - 37) / 59);
-        return (fp) ((Object) new gs());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final static qh b(byte param0) {

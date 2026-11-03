@@ -11,7 +11,7 @@ final class GameState {
     boolean field_z;
     Player[] field_v;
     private int[] field_N;
-    l field_g;
+    GalaxyMap field_g;
     int[] field_m;
     int field_e;
     private int field_M;
@@ -25,9 +25,9 @@ final class GameState {
     int field_O;
     int field_J;
     VictoryChecker field_x;
-    vr field_o;
+    GameRules field_o;
     private int field_n;
-    el field_p;
+    TertiaryNodeList field_p;
     private int[][] field_t;
     IntrusiveDeque field_i;
     IntrusiveDeque field_A;
@@ -46,12 +46,12 @@ final class GameState {
     private int[] field_H;
     static String field_a;
 
-    private final void a(boolean param0, k param1, int param2) {
+    private final void applyPlacementsAndIncome(boolean param0, TurnEventLog param1, int param2) {
         RuntimeException stackIn_85_0 = null;
         StringBuilder stackIn_85_1 = null;
         String stackIn_86_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qa var4 = null;
+        PlacementOrder var4 = null;
         RuntimeException var4_ref = null;
         int[] var5 = null;
         int var6 = 0;
@@ -72,7 +72,7 @@ final class GameState {
         int[] var19 = null;
         lo var20 = null;
         int[] var21 = null;
-        qa var4Lifetime1;
+        PlacementOrder var4Lifetime1;
         int[] var5Lifetime1;
         Territory var8Lifetime1;
         Player var10Lifetime1;
@@ -99,7 +99,7 @@ final class GameState {
         int var12Lifetime1Lifetime1;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var4 = (qa) (this.field_q.d(0));
+          var4 = (PlacementOrder) (this.field_q.startForward(0));
           while (var4 != null) {
             if (this.field_o.field_i) {
               var4.field_u.field_y.field_m.field_x = var4.field_u.field_y.field_m.field_x - var4.field_v;
@@ -107,18 +107,18 @@ final class GameState {
               var4.field_u.field_R.field_x = var4.field_u.field_R.field_x - var4.field_v;
             }
             var4.field_u.field_x = var4.field_u.field_x + var4.field_v;
-            var4 = (qa) (this.field_q.a((byte) -71));
+            var4 = (PlacementOrder) (this.field_q.nextForward((byte) -71));
           }
           var14 = this.field_v;
           for (var6 = 0; var14.length > var6; var6++) {
             var15 = var14[var6];
             if (!this.field_o.field_i) {
-              var8 = (Territory) (var15.field_i.d(0));
+              var8 = (Territory) (var15.field_i.startForward(0));
               while (var8 != null) {
                 if (0 < var8.field_x) {
                   var8.field_q.field_x = var8.field_q.field_x + var8.field_x;
                 }
-                var8 = (Territory) (var15.field_i.a((byte) -71));
+                var8 = (Territory) (var15.field_i.nextForward((byte) -71));
               }
             } else {
               var8_ref = var15.field_m;
@@ -131,32 +131,32 @@ final class GameState {
             field_s = (int[]) null;
           }
           if (param1 != null) {
-            var4Lifetime1 = (qa) (this.field_q.d(0));
+            var4Lifetime1 = (PlacementOrder) (this.field_q.startForward(0));
             while (var4Lifetime1 != null) {
-              param1.a(var4Lifetime1.field_v, var4Lifetime1.field_u, -4900);
-              var4Lifetime1 = (qa) (this.field_q.a((byte) -71));
+              param1.recordPlacement(var4Lifetime1.field_v, var4Lifetime1.field_u, -4900);
+              var4Lifetime1 = (PlacementOrder) (this.field_q.nextForward((byte) -71));
             }
             var16 = this.field_v;
             for (var6Lifetime1 = 0; var16.length > var6Lifetime1; var6Lifetime1++) {
               var17 = var16[var6Lifetime1];
               if (!this.field_o.field_i) {
-                var8Lifetime1 = (Territory) (var17.field_i.d(0));
+                var8Lifetime1 = (Territory) (var17.field_i.startForward(0));
                 while (var8Lifetime1 != null) {
                   if (var8Lifetime1.field_x > 0) {
-                    param1.a(var8Lifetime1.field_x, var8Lifetime1.field_q, -4900);
+                    param1.recordPlacement(var8Lifetime1.field_x, var8Lifetime1.field_q, -4900);
                   }
-                  var8Lifetime1 = (Territory) (var17.field_i.a((byte) -71));
+                  var8Lifetime1 = (Territory) (var17.field_i.nextForward((byte) -71));
                 }
               } else {
                 if (var17.field_m.field_x > 0) {
-                  param1.a(var17.field_m.field_x, var17.field_m.field_q, -4900);
+                  param1.recordPlacement(var17.field_m.field_x, var17.field_m.field_q, -4900);
                 }
               }
             }
             if (!this.field_o.field_h) {
               return;
             }
-            if (this.field_x instanceof qg) {
+            if (this.field_x instanceof TutorialVictoryChecker) {
               return;
             }
             var21 = new int[4];
@@ -182,7 +182,7 @@ final class GameState {
                     var6Lifetime1Lifetime1 = var6Lifetime1Lifetime1 + var21[var12];
                   }
                 } else {
-                  var11_ref_sd = (Territory) (var10.field_i.d(0));
+                  var11_ref_sd = (Territory) (var10.field_i.startForward(0));
                   while (var11_ref_sd != null) {
                     for (var12 = 0; var12 < 4; var12++) {
                       var5[var12] = var5[var12] + var11_ref_sd.field_u[var12];
@@ -190,7 +190,7 @@ final class GameState {
                         var7 = var21[var12];
                       }
                     }
-                    var11_ref_sd = (Territory) (var10.field_i.a((byte) -71));
+                    var11_ref_sd = (Territory) (var10.field_i.nextForward((byte) -71));
                   }
                   for (var12 = 0; var12 < 4; var12++) {
                     var5[var12] = var5[var12] + 1;
@@ -221,7 +221,7 @@ final class GameState {
             return;
           }
           if (this.field_o.field_h &&
-            !(this.field_x instanceof qg)) {
+            !(this.field_x instanceof TutorialVictoryChecker)) {
             var21Lifetime1 = new int[4];
             var19Lifetime1 = var21Lifetime1;
             var5Lifetime1 = var19Lifetime1;
@@ -255,7 +255,7 @@ final class GameState {
                       var6Lifetime2 = var6Lifetime2 + var21Lifetime1[var12Lifetime1];
                     }
                   } else {
-                    var11_ref_sdLifetime1 = (Territory) (var10Lifetime1.field_i.d(0));
+                    var11_ref_sdLifetime1 = (Territory) (var10Lifetime1.field_i.startForward(0));
                     while (var11_ref_sdLifetime1 != null) {
                       for (var12Lifetime1 = 0; var12Lifetime1 < 4; var12Lifetime1++) {
                         var5Lifetime1[var12Lifetime1] = var5Lifetime1[var12Lifetime1] + var11_ref_sdLifetime1.field_u[var12Lifetime1];
@@ -263,7 +263,7 @@ final class GameState {
                           var7Lifetime1 = var21Lifetime1[var12Lifetime1];
                         }
                       }
-                      var11_ref_sdLifetime1 = (Territory) (var10Lifetime1.field_i.a((byte) -71));
+                      var11_ref_sdLifetime1 = (Territory) (var10Lifetime1.field_i.nextForward((byte) -71));
                     }
                     for (var12Lifetime1 = 0; var12Lifetime1 < 4; var12Lifetime1++) {
                       var5Lifetime1[var12Lifetime1] = var5Lifetime1[var12Lifetime1] + 1;
@@ -311,7 +311,7 @@ final class GameState {
                     var6Lifetime2Lifetime1 = var6Lifetime2Lifetime1 + var21Lifetime1[var12Lifetime1Lifetime1];
                   }
                 } else {
-                  var11_ref_sdLifetime1Lifetime1 = (Territory) (var10Lifetime1.field_i.d(0));
+                  var11_ref_sdLifetime1Lifetime1 = (Territory) (var10Lifetime1.field_i.startForward(0));
                   while (var11_ref_sdLifetime1Lifetime1 != null) {
                     for (var12Lifetime1Lifetime1 = 0; var12Lifetime1Lifetime1 < 4; var12Lifetime1Lifetime1++) {
                       var5Lifetime1[var12Lifetime1Lifetime1] = var5Lifetime1[var12Lifetime1Lifetime1] + var11_ref_sdLifetime1Lifetime1.field_u[var12Lifetime1Lifetime1];
@@ -319,7 +319,7 @@ final class GameState {
                         var7Lifetime1Lifetime1 = var21Lifetime1[var12Lifetime1Lifetime1];
                       }
                     }
-                    var11_ref_sdLifetime1Lifetime1 = (Territory) (var10Lifetime1.field_i.a((byte) -71));
+                    var11_ref_sdLifetime1Lifetime1 = (Territory) (var10Lifetime1.field_i.nextForward((byte) -71));
                   }
                   for (var12Lifetime1Lifetime1 = 0; var12Lifetime1Lifetime1 < 4; var12Lifetime1Lifetime1++) {
                     var5Lifetime1[var12Lifetime1Lifetime1] = var5Lifetime1[var12Lifetime1Lifetime1] + 1;
@@ -416,7 +416,7 @@ final class GameState {
         }
     }
 
-    final void a(int param0, int param1, boolean param2) {
+    final void setYearNameIndices(int param0, int param1, boolean param2) {
         if (param2) {
           this.field_f = 124;
         }
@@ -429,7 +429,7 @@ final class GameState {
         int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0) {
-          this.field_g = (l) null;
+          this.field_g = (GalaxyMap) null;
         }
         var2 = 0;
         while (var2 < this.field_C) {
@@ -441,7 +441,7 @@ final class GameState {
         }
     }
 
-    final boolean a(Star param0, Star param1, int param2) {
+    final boolean isWithinMovementRange(Star param0, Star param1, int param2) {
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -511,10 +511,10 @@ final class GameState {
         for (var3 = param0; var2.length > var3; var3++) {
           var4 = var2[var3];
           if (!this.field_o.field_i) {
-            var5 = (Territory) (var4.field_i.d(0));
+            var5 = (Territory) (var4.field_i.startForward(0));
             while (var5 != null) {
               vf.a(127, var5);
-              var5 = (Territory) (var4.field_i.a((byte) -71));
+              var5 = (Territory) (var4.field_i.nextForward((byte) -71));
             }
           } else {
             vf.a(127, var4.field_m);
@@ -532,7 +532,7 @@ final class GameState {
         field_s = null;
     }
 
-    final void b(int param0) {
+    final void recomputePlayerTotals(int param0) {
         int var2_int = 0;
         int var3 = 0;
         Player var3_ref_fs;
@@ -550,10 +550,10 @@ final class GameState {
           var3_ref_fs = this.field_v[var2_int];
           this.field_D[var2_int] = 0;
           if (!this.field_o.field_i) {
-            var4 = (Territory) (var3_ref_fs.field_i.d(0));
+            var4 = (Territory) (var3_ref_fs.field_i.startForward(0));
             while (var4 != null) {
               this.field_D[var2_int] = this.field_D[var2_int] + var4.field_r;
-              var4 = (Territory) (var3_ref_fs.field_i.a((byte) -71));
+              var4 = (Territory) (var3_ref_fs.field_i.nextForward((byte) -71));
             }
           } else {
             this.field_D[var2_int] = var3_ref_fs.field_m.field_r;
@@ -572,7 +572,7 @@ final class GameState {
         return;
     }
 
-    final void a(PacketBuffer param0, Player param1, boolean param2) throws jn, kr {
+    final void readMap(PacketBuffer param0, Player param1, boolean param2) throws jn, kr {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -640,7 +640,7 @@ final class GameState {
         throw new RuntimeException();
     }
 
-    private final void a(byte param0, boolean[][] param1) {
+    private final void buildHostilePairs(byte param0, boolean[][] param1) {
         int var5 = 0;
         int dupTemp$0 = 0;
         int[] arrayValue$1 = null;
@@ -699,7 +699,7 @@ final class GameState {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void declareWinner(int param0, int param1) {
         this.field_z = true;
         this.field_k = param0;
         if (param1 != 3) {
@@ -707,7 +707,7 @@ final class GameState {
         }
     }
 
-    final void a(int param0, int param1, k param2, se param3) {
+    final void processTurn(int param0, int param1, TurnEventLog param2, AchievementProgress param3) {
         boolean[] array$0 = null;
         int var10 = 0;
         int var12 = 0;
@@ -757,7 +757,7 @@ final class GameState {
               var5[var6_int] = array$0;
             }
           }
-          this.a(true, param2, param0);
+          this.applyPlacementsAndIncome(true, param2, param0);
           if (param3 != null) {
             for (var6_intLifetime1 = 0; this.field_r > var6_intLifetime1; var6_intLifetime1++) {
               param3.field_l[var6_intLifetime1] = 0;
@@ -773,14 +773,14 @@ final class GameState {
               }
             }
           }
-          this.a(param2, 82, param3);
-          this.a(param1 + 12268, param2, var18, param3, param0);
+          this.applyDefensiveNetAndStellarBombProjects(param2, 82, param3);
+          this.resolveAllStarCombats(param1 + 12268, param2, var18, param3, param0);
           this.a(param2, param0, 14389);
-          this.a(param3, param0, 7377, param2);
-          this.a(param1, param2);
+          this.applyTannhauserAndTerraformProjects(param3, param0, 7377, param2);
+          this.expireAlliancesAndWormholes(param1, param2);
           this.e(0);
-          this.a(param2, 0);
-          this.h(param1 ^ -6);
+          this.markDefeatedPlayers(param2, 0);
+          this.checkVictory(param1 ^ -6);
           if (param3 != null) {
             for (var6_intLifetime2 = 0; var6_intLifetime2 < this.field_r; var6_intLifetime2++) {
               if (param3.field_f[var6_intLifetime2] < 1) {
@@ -835,7 +835,7 @@ final class GameState {
               stackIn_62_0 = ~this.field_r;
               stackIn_62_1 = -5;
               if (stackIn_62_0 <= stackIn_62_1 &&
-                this.field_x instanceof hp) {
+                this.field_x instanceof DerelictVictoryChecker) {
                 param3.field_j[((Player) (var8)).field_x][19] = true;
               }
             }
@@ -859,7 +859,7 @@ final class GameState {
             ((Star) (var8Lifetime1)).field_Q = 0;
             ((Star) (var8Lifetime1)).field_C = 0;
           }
-          this.b(-60);
+          this.recomputePlayerTotals(-60);
           this.field_O = this.field_O + 1;
           this.field_g.b((byte) 80);
           return;
@@ -883,7 +883,7 @@ final class GameState {
         }
     }
 
-    private final void a(k param0, int param1, se param2) {
+    private final void applyDefensiveNetAndStellarBombProjects(TurnEventLog param0, int param1, AchievementProgress param2) {
         int stackIn_23_0 = 0;
         int stackIn_23_1 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -892,11 +892,11 @@ final class GameState {
         StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qm var4 = null;
+        ProjectUse var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
-        qm var4Lifetime1;
+        ProjectUse var4Lifetime1;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 <= 40) {
@@ -905,15 +905,15 @@ final class GameState {
           if (!this.field_o.field_h) {
             return;
           }
-          var4 = (qm) (this.field_i.d(0));
+          var4 = (ProjectUse) (this.field_i.startForward(0));
           while (var4 != null) {
             if (0 != var4.field_o) {
-              var4 = (qm) (this.field_i.a((byte) -71));
+              var4 = (ProjectUse) (this.field_i.nextForward((byte) -71));
               continue;
             }
-            this.a(var4.field_q, true);
+            this.setDefensiveNet(var4.field_q, true);
             if (param0 != null) {
-              param0.a(0, var4.field_q, var4.field_p);
+              param0.recordProject(0, var4.field_q, var4.field_p);
             }
             if (param2 != null) {
               param2.field_h[var4.field_p.field_x] = param2.field_h[var4.field_p.field_x] + 1;
@@ -922,9 +922,9 @@ final class GameState {
                 param2.field_d[var4.field_p.field_x][0] = true;
               }
             }
-            var4 = (qm) (this.field_i.a((byte) -71));
+            var4 = (ProjectUse) (this.field_i.nextForward((byte) -71));
           }
-          var4Lifetime1 = (qm) (this.field_i.d(0));
+          var4Lifetime1 = (ProjectUse) (this.field_i.startForward(0));
           while (var4Lifetime1 != null) {
             stackIn_23_0 = var4Lifetime1.field_o;
             stackIn_23_1 = 2;
@@ -932,9 +932,9 @@ final class GameState {
               var4Lifetime1.field_q.field_y != var4Lifetime1.field_p && (null == var4Lifetime1.field_q.field_y ||
               !var4Lifetime1.field_p.field_h[var4Lifetime1.field_q.field_y.field_x])) {
               var4Lifetime1.field_p.field_u[2] = 0;
-              var5 = this.b((byte) 95, var4Lifetime1.field_q);
+              var5 = this.applyStellarBomb((byte) 95, var4Lifetime1.field_q);
               if (param0 != null) {
-                param0.a(var5, var4Lifetime1.field_q, var4Lifetime1.field_p, -81);
+                param0.recordStellarBomb(var5, var4Lifetime1.field_q, var4Lifetime1.field_p, -81);
               }
               if (param2 != null) {
                 param2.field_b[var4Lifetime1.field_p.field_x] = param2.field_b[var4Lifetime1.field_p.field_x] + var5;
@@ -948,7 +948,7 @@ final class GameState {
             if (var4Lifetime1.field_o != 2) {
               var4Lifetime1.field_p.field_u[var4Lifetime1.field_o] = 0;
             }
-            var4Lifetime1 = (qm) (this.field_i.a((byte) -71));
+            var4Lifetime1 = (ProjectUse) (this.field_i.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -971,51 +971,51 @@ final class GameState {
         }
     }
 
-    final void a(int param0, l param1) {
+    final void rebindMap(int param0, GalaxyMap param1) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qa var3 = null;
+        PlacementOrder var3 = null;
         RuntimeException var3_ref = null;
-        mg var4 = null;
-        qm var5 = null;
-        cs var6 = null;
+        FleetMove var4 = null;
+        ProjectUse var5 = null;
+        Wormhole var6 = null;
         int var7 = 0;
-        se var8 = null;
+        AchievementProgress var8 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           this.field_g = param1;
-          var3 = (qa) (this.field_q.d(0));
+          var3 = (PlacementOrder) (this.field_q.startForward(0));
           while (var3 != null) {
             var3.field_u = this.field_g.field_e[var3.field_u.field_p];
-            var3 = (qa) (this.field_q.a((byte) -71));
+            var3 = (PlacementOrder) (this.field_q.nextForward((byte) -71));
           }
           if (param0 <= 55) {
-            var8 = (se) null;
-            this.a(-110, -110, (k) null, (se) null);
+            var8 = (AchievementProgress) null;
+            this.processTurn(-110, -110, (TurnEventLog) null, (AchievementProgress) null);
           }
-          var4 = (mg) (this.field_p.a(true));
+          var4 = (FleetMove) (this.field_p.a(true));
           while (var4 != null) {
             var4.field_y = this.field_g.field_e[var4.field_y.field_p];
             var4.field_B = this.field_g.field_e[var4.field_B.field_p];
-            var4.field_B.field_s.a(var4, 32);
-            var4.field_y.field_T.a((byte) -113, var4);
-            var4 = (mg) (this.field_p.a((byte) -68));
+            var4.field_B.field_s.addLast(var4, 32);
+            var4.field_y.field_T.addLast((byte) -113, var4);
+            var4 = (FleetMove) (this.field_p.a((byte) -68));
           }
-          var5 = (qm) (this.field_i.d(0));
+          var5 = (ProjectUse) (this.field_i.startForward(0));
           while (var5 != null) {
             var5.field_q = this.field_g.field_e[var5.field_q.field_p];
             if (var5.field_r != null) {
               var5.field_r = this.field_g.field_e[var5.field_r.field_p];
             }
-            var5 = (qm) (this.field_i.a((byte) -71));
+            var5 = (ProjectUse) (this.field_i.nextForward((byte) -71));
           }
-          var6 = (cs) (this.field_A.d(0));
+          var6 = (Wormhole) (this.field_A.startForward(0));
           while (var6 != null) {
             var6.field_n = this.field_g.field_e[var6.field_n.field_p];
             var6.field_k = this.field_g.field_e[var6.field_k.field_p];
-            var6 = (cs) (this.field_A.a((byte) -71));
+            var6 = (Wormhole) (this.field_A.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1032,34 +1032,34 @@ final class GameState {
         }
     }
 
-    private final void h(int param0) {
+    private final void checkVictory(int param0) {
         Player[] var3 = null;
         Player[] var2 = null;
         if (param0 != -5) {
           this.field_t = (int[][]) null;
         }
-        if (!this.field_x.a(this, (byte) 121)) {
+        if (!this.field_x.detectWinners(this, (byte) 121)) {
         } else {
-          var3 = this.field_x.a((byte) -23);
+          var3 = this.field_x.getWinners((byte) -23);
           var2 = var3;
           if (var2 == null) {
             throw new RuntimeException("VictoryChecker claims someone has won, but winners array is null.");
           }
           if (var3.length != 1) {
-            this.a(-1, param0 + 8);
+            this.declareWinner(-1, param0 + 8);
           } else {
-            this.a(var2[0].field_x, param0 + 8);
+            this.declareWinner(var2[0].field_x, param0 + 8);
           }
         }
     }
 
-    private final void a(Star param0, eg param1, int param2) {
-        mg var4 = null;
+    private final void a(Star param0, BattleEvent param1, int param2) {
+        FleetMove var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        se var9 = null;
+        AchievementProgress var9 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -1070,10 +1070,10 @@ final class GameState {
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param2 != -30724) {
-            var9 = (se) null;
-            this.a(-115, 106, (k) null, (se) null);
+            var9 = (AchievementProgress) null;
+            this.processTurn(-115, 106, (TurnEventLog) null, (AchievementProgress) null);
           }
-          var4 = (mg) (param0.field_s.c(-127));
+          var4 = (FleetMove) (param0.field_s.startForward(-127));
           while (var4 != null) {
             if (var4.field_G != param0.field_y) {
               var5 = this.field_h[var4.field_G.field_x];
@@ -1085,7 +1085,7 @@ final class GameState {
               }
               var4.field_y.field_C = var4.field_y.field_C + var7;
             }
-            var4 = (mg) (param0.field_s.b(32));
+            var4 = (FleetMove) (param0.field_s.nextForward(32));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1108,27 +1108,27 @@ final class GameState {
         }
     }
 
-    final static gl[] a(PlatformTaskDispatcher param0, byte param1) {
+    final static DisplayModeInfo[] queryDisplayModes(PlatformTaskDispatcher param0, byte param1) {
         int var5 = 0;
-        gl[] stackIn_3_0 = null;
-        gl[] stackIn_10_0 = null;
-        gl[] stackIn_17_0 = null;
+        DisplayModeInfo[] stackIn_3_0 = null;
+        DisplayModeInfo[] stackIn_10_0 = null;
+        DisplayModeInfo[] stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int[] var3 = null;
-        gl[] var4 = null;
-        gl var6 = null;
+        DisplayModeInfo[] var4 = null;
+        DisplayModeInfo var6 = null;
         int var7 = 0;
-        pb var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (!param0.a(false)) {
-            stackIn_3_0 = new gl[]{};
+            stackIn_3_0 = new DisplayModeInfo[]{};
             return stackIn_3_0;
           }
           var8 = param0.a(12);
@@ -1136,18 +1136,18 @@ final class GameState {
             jb.a((byte) -100, 10L);
           }
           if (var8.field_d == 2) {
-            stackIn_10_0 = new gl[]{};
+            stackIn_10_0 = new DisplayModeInfo[]{};
             return stackIn_10_0;
           }
           var10 = (int[]) (var8.field_e);
           var9 = var10;
           var3 = var9;
-          var4 = new gl[var10.length >> 2];
+          var4 = new DisplayModeInfo[var10.length >> 2];
           if (param1 != -57) {
             field_a = (String) null;
           }
           for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new gl();
+            var6 = new DisplayModeInfo();
             var4[var5] = var6;
             var6.field_g = var3[var5 << 2];
             var6.field_c = var3[1 + (var5 << 2)];
@@ -1170,12 +1170,12 @@ final class GameState {
         }
     }
 
-    private final void a(int param0, Star param1) {
+    private final void abandonStar(int param0, Star param1) {
         try {
           if (param0 != -21031) {
             this.field_n = 59;
           }
-          this.a((byte) 98, param1);
+          this.detachStarFromTerritory((byte) 98, param1);
           param1.field_y = null;
           param1.field_N = 0;
           param1.field_x = 0;
@@ -1184,25 +1184,25 @@ final class GameState {
         }
     }
 
-    final String a(byte param0) {
+    final String getYearName(byte param0) {
         if (param0 >= -3) {
           return (String) null;
         }
         if (0 >= this.field_O) {
           return ek.field_H;
         }
-        return re.a(tq.field_i, 4371, new String[]{re.a(eg.field_x[this.field_G], 4371, new String[]{ur.field_Bb[this.field_n]})});
+        return re.a(tq.field_i, 4371, new String[]{re.a(BattleEvent.field_x[this.field_G], 4371, new String[]{ur.field_Bb[this.field_n]})});
     }
 
     final static void a(int param0) {
-        tk.field_z = pr.a(14274);
+        NetworkArchiveRequest.field_z = pr.a(14274);
         vj.field_C = 0;
         if (param0 != -5883) {
           GameState.e((byte) 95);
         }
     }
 
-    private final void a(int param0, k param1, boolean[][] param2, se param3, int param4) {
+    private final void resolveAllStarCombats(int param0, TurnEventLog param1, boolean[][] param2, AchievementProgress param3, int param4) {
         int var7 = 0;
         Star[] var6 = null;
         Star var8 = null;
@@ -1223,7 +1223,7 @@ final class GameState {
           var6 = var10;
           for (var7 = 0; var10.length > var7; var7++) {
             var8 = var10[var7];
-            this.a(param4, var8, param3, param1, param2, (byte) 77);
+            this.resolveStarCombat(param4, var8, param3, param1, param2, (byte) 77);
           }
           if (param0 != 12269) {
             this.field_k = -29;
@@ -1255,7 +1255,7 @@ final class GameState {
         }
     }
 
-    private final void a(Player param0, Star param1, int param2) {
+    private final void captureStar(Player param0, Star param1, int param2) {
         int var4_int = 0;
         int dupTemp$0 = 0;
         int var5 = 0;
@@ -1290,9 +1290,9 @@ final class GameState {
             }
           }
           if (null != param1.field_R) {
-            this.a((byte) 122, param1);
+            this.detachStarFromTerritory((byte) 122, param1);
           }
-          this.b(param2, param1);
+          this.updateTerritoryMembership(param2, param1);
           this.a(param1, false, (byte) 117);
           var8 = param1.field_D;
           var4 = var8;
@@ -1300,11 +1300,11 @@ final class GameState {
             var6 = var8[var5];
             this.a(var6, false, (byte) 119);
           }
-          param1.field_y.field_m.a(-21771, param1);
+          param1.field_y.field_m.addStar(-21771, param1);
           if (null == param1.field_y.field_m.field_q) {
             param1.field_y.field_m.field_q = param1;
           }
-          sh.a(param1.field_y.field_m, -5);
+          SolMapReader.a(param1.field_y.field_m, -5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1344,14 +1344,14 @@ final class GameState {
         return var3;
     }
 
-    private final void a(int param0, eg param1, Star param2) {
+    private final void a(int param0, BattleEvent param1, Star param2) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        mg var4 = null;
+        FleetMove var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
@@ -1362,9 +1362,9 @@ final class GameState {
         try {
           if (param0 != 0) {
             var9 = (Star) null;
-            this.a((Star) null, 79, (Star) null);
+            this.createTannhauserWormhole((Star) null, 79, (Star) null);
           }
-          var4 = (mg) (param2.field_s.c(-128));
+          var4 = (FleetMove) (param2.field_s.startForward(-128));
           while (var4 != null) {
             var5 = this.field_h[var4.field_G.field_x];
             var6 = this.field_B[var4.field_G.field_x];
@@ -1377,7 +1377,7 @@ final class GameState {
               param1.a(var7, 0, var4, 0);
             }
             var4.field_y.field_C = var4.field_y.field_C + var7;
-            var4 = (mg) (param2.field_s.b(32));
+            var4 = (FleetMove) (param2.field_s.nextForward(32));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1400,9 +1400,9 @@ final class GameState {
         }
     }
 
-    private final boolean a(byte param0, k param1, Star param2) {
+    private final boolean tallyShipsAtStar(byte param0, TurnEventLog param1, Star param2) {
         int var7 = 0;
-        k stackIn_18_0;
+        TurnEventLog stackIn_18_0;
         Star stackIn_18_1;
         Player stackIn_18_2;
         int stackIn_18_3;
@@ -1415,13 +1415,13 @@ final class GameState {
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
-        mg var4 = null;
+        FleetMove var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var8 = 0;
-        mg var4Lifetime1;
-        mg var4Lifetime2;
+        FleetMove var4Lifetime1;
+        FleetMove var4Lifetime2;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var5 = -118 % ((-37 - param0) / 36);
@@ -1432,7 +1432,7 @@ final class GameState {
           if (null != param2.field_y) {
             this.field_h[param2.field_y.field_x] = param2.field_x;
           }
-          var4 = (mg) (param2.field_s.c(-128));
+          var4 = (FleetMove) (param2.field_s.startForward(-128));
           while (var4 != null) {
             if (var4.field_G != null) {
               this.field_h[var4.field_G.field_x] = this.field_h[var4.field_G.field_x] + var4.field_z;
@@ -1440,27 +1440,27 @@ final class GameState {
                 var6 = 1;
               }
             }
-            var4 = (mg) (param2.field_s.b(32));
+            var4 = (FleetMove) (param2.field_s.nextForward(32));
           }
           if (param1 != null) {
-            var4Lifetime1 = (mg) (param2.field_s.c(-127));
+            var4Lifetime1 = (FleetMove) (param2.field_s.startForward(-127));
             while (var4Lifetime1 != null) {
-              stackIn_18_0 = (k) (param1);
+              stackIn_18_0 = (TurnEventLog) (param1);
               stackIn_18_1 = var4Lifetime1.field_B;
               stackIn_18_2 = var4Lifetime1.field_G;
               stackIn_18_3 = -62;
               stackIn_19_4 = (var4Lifetime1.field_G != var4Lifetime1.field_B.field_y);
-              ((k) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_18_2, (byte) stackIn_18_3, stackIn_19_4, var4Lifetime1.field_z, var4Lifetime1.field_y);
-              var4Lifetime1 = (mg) (param2.field_s.b(32));
+              ((TurnEventLog) (Object) stackIn_18_0).recordFleetMove(stackIn_18_1, stackIn_18_2, (byte) stackIn_18_3, stackIn_19_4, var4Lifetime1.field_z, var4Lifetime1.field_y);
+              var4Lifetime1 = (FleetMove) (param2.field_s.nextForward(32));
             }
           }
-          var4Lifetime2 = (mg) (param2.field_T.d(0));
+          var4Lifetime2 = (FleetMove) (param2.field_T.startForward(0));
           while (var4Lifetime2 != null) {
             stackIn_23_0 = var4Lifetime2.field_G;
             if (stackIn_23_0 != null) {
               this.field_h[var4Lifetime2.field_G.field_x] = this.field_h[var4Lifetime2.field_G.field_x] - var4Lifetime2.field_z;
             }
-            var4Lifetime2 = (mg) (param2.field_T.a((byte) -71));
+            var4Lifetime2 = (FleetMove) (param2.field_T.nextForward((byte) -71));
           }
           stackIn_27_0 = var6;
           return stackIn_27_0 != 0;
@@ -1484,7 +1484,7 @@ final class GameState {
         }
     }
 
-    final void a(int param0, byte param1, PacketBuffer param2) {
+    final void readTurnOrders(int param0, byte param1, PacketBuffer param2) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -1497,18 +1497,18 @@ final class GameState {
         Star var8 = null;
         int var9 = 0;
         Star var10 = null;
-        mg var11 = null;
+        FleetMove var11 = null;
         int var5Lifetime1;
         int var5Lifetime2;
         int var6Lifetime1;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          this.g(-7954);
+          this.clearTurnState(-7954);
           if (param1 > -121) {
-            this.field_g = (l) null;
+            this.field_g = (GalaxyMap) null;
           }
           while (param0 > 0) {
-            var4_int = param2.j(-70);
+            var4_int = param2.readUnsignedByte(-70);
             param0--;
             if (var4_int == 255) {
               throw new RuntimeException();
@@ -1516,14 +1516,14 @@ final class GameState {
             if (var4_int >= 251) {
               var5 = var4_int - 251;
               var6_ref_fs = ur.a(this, 78, param2);
-              var10 = mg.a(this, param2, 20);
+              var10 = FleetMove.a(this, param2, 20);
               if (var5 != 3) {
                 param0 -= 2;
-                this.field_i.a((byte) -113, new qm(var5, var6_ref_fs, var10));
+                this.field_i.addLast((byte) -113, new ProjectUse(var5, var6_ref_fs, var10));
                 continue;
               }
-              var8 = mg.a(this, param2, 20);
-              this.field_i.a((byte) -113, new qm(var5, var6_ref_fs, var10, var8));
+              var8 = FleetMove.a(this, param2, 20);
+              this.field_i.addLast((byte) -113, new ProjectUse(var5, var6_ref_fs, var10, var8));
               param0 -= 3;
               continue;
             }
@@ -1531,16 +1531,16 @@ final class GameState {
               var5Lifetime1 = -191 + var4_int;
               param0 = param0 - 3 * var5Lifetime1;
               for (var6 = 0; var5Lifetime1 > var6; var6++) {
-                this.field_q.a((byte) -113, qj.a((byte) -85, this, param2));
+                this.field_q.addLast((byte) -113, qj.a((byte) -85, this, param2));
               }
               continue;
             }
             var5Lifetime2 = 1 + var4_int;
             for (var6Lifetime1 = 0; var6Lifetime1 < var5Lifetime2; var6Lifetime1++) {
-              var11 = qq.a(this, 65, param2);
+              var11 = MusicVoice.a(this, 65, param2);
               this.field_p.a((byte) 48, var11);
-              var11.field_y.field_T.a((byte) -113, var11);
-              var11.field_B.field_s.a(var11, 32);
+              var11.field_y.field_T.addLast((byte) -113, var11);
+              var11.field_B.field_s.addLast(var11, 32);
             }
             param0 = param0 - var5Lifetime2 * 4;
           }
@@ -1559,7 +1559,7 @@ final class GameState {
         }
     }
 
-    private final void a(Star param0, byte param1, Random param2) {
+    private final void terraformStar(Star param0, byte param1, Random param2) {
         int var4_int = 0;
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
@@ -1585,7 +1585,7 @@ final class GameState {
         }
     }
 
-    private final void a(int param0, Star param1, se param2, k param3, boolean[][] param4, byte param5) {
+    private final void resolveStarCombat(int param0, Star param1, AchievementProgress param2, TurnEventLog param3, boolean[][] param4, byte param5) {
         int fieldTemp$2 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
@@ -1614,7 +1614,7 @@ final class GameState {
         int var11 = 0;
         Object var12_ref = null;
         int var12 = 0;
-        mg var12_ref_mg = null;
+        FleetMove var12_ref_mg = null;
         int var13 = 0;
         int[] var14 = null;
         Player var15 = null;
@@ -1632,7 +1632,7 @@ final class GameState {
         var12_ref = null;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (!this.a((byte) 38, param3, param1)) {
+          if (!this.tallyShipsAtStar((byte) 38, param3, param1)) {
             if (param1.field_y != null) {
               param1.field_x = this.field_h[param1.field_y.field_x];
             }
@@ -1710,18 +1710,18 @@ final class GameState {
               }
               stackIn_55_0[stackIn_55_1] = stackIn_56_2;
             }
-            var9 = param3.a(this.field_u, param1, 0, var16);
+            var9 = param3.recordBattle(this.field_u, param1, 0, var16);
           }
           if (param1.field_u) {
             this.field_u[var8Lifetime1] = this.field_u[var8Lifetime1] * 2;
           }
-          this.a((byte) -114, param4);
-          var20 = this.d((byte) 20);
+          this.buildHostilePairs((byte) -114, param4);
+          var20 = this.simulateCombat((byte) 20);
           var18 = var20;
           var14 = var18;
           var22 = var14;
           if (var9 != null) {
-            ((eg) (var9)).a((byte) 74, var22);
+            ((BattleEvent) (var9)).a((byte) 74, var22);
           }
           regionExit1: {
             if (param2 != null) {
@@ -1741,14 +1741,14 @@ final class GameState {
                 }
                 this.field_u[var8Lifetime1] = var11Lifetime2;
               }
-              this.a((byte) -124, param1, (eg) (var9));
+              this.a((byte) -124, param1, (BattleEvent) (var9));
               if (this.field_u[var8Lifetime1] > 0) {
                 param1.field_x = this.field_u[var8Lifetime1];
-                this.a(param1, (eg) (var9), -30724);
+                this.a(param1, (BattleEvent) (var9), -30724);
                 if (var9 != null) {
-                  ((eg) (var9)).field_m = param1.field_R;
-                  ((eg) (var9)).field_i = param1.field_y;
-                  ((eg) (var9)).field_l = param1.field_x;
+                  ((BattleEvent) (var9)).field_m = param1.field_R;
+                  ((BattleEvent) (var9)).field_i = param1.field_y;
+                  ((BattleEvent) (var9)).field_l = param1.field_x;
                 }
                 if (param2 == null) {
                   return;
@@ -1760,12 +1760,12 @@ final class GameState {
                   return;
                 }
                 var11Lifetime2 = 0;
-                var12_ref_mg = (mg) (param1.field_s.c(-127));
+                var12_ref_mg = (FleetMove) (param1.field_s.startForward(-127));
                 while (var12_ref_mg != null) {
                   if (param1.field_y != var12_ref_mg.field_G) {
                     var11Lifetime2++;
                   }
-                  var12_ref_mg = (mg) (param1.field_s.b(32));
+                  var12_ref_mg = (FleetMove) (param1.field_s.nextForward(32));
                 }
                 break regionExit1;
               }
@@ -1783,14 +1783,14 @@ final class GameState {
                 }
                 this.field_u[var8Lifetime1] = var11Lifetime2;
               }
-              this.a((byte) -124, param1, (eg) (var9));
+              this.a((byte) -124, param1, (BattleEvent) (var9));
               if (this.field_u[var8Lifetime1] > 0) {
                 param1.field_x = this.field_u[var8Lifetime1];
-                this.a(param1, (eg) (var9), -30724);
+                this.a(param1, (BattleEvent) (var9), -30724);
                 if (var9 != null) {
-                  ((eg) (var9)).field_m = param1.field_R;
-                  ((eg) (var9)).field_i = param1.field_y;
-                  ((eg) (var9)).field_l = param1.field_x;
+                  ((BattleEvent) (var9)).field_m = param1.field_R;
+                  ((BattleEvent) (var9)).field_i = param1.field_y;
+                  ((BattleEvent) (var9)).field_l = param1.field_x;
                 }
                 if (param2 == null) {
                   return;
@@ -1802,12 +1802,12 @@ final class GameState {
                   return;
                 }
                 var11Lifetime2 = 0;
-                var12_ref_mg = (mg) (param1.field_s.c(-127));
+                var12_ref_mg = (FleetMove) (param1.field_s.startForward(-127));
                 while (var12_ref_mg != null) {
                   if (param1.field_y != var12_ref_mg.field_G) {
                     var11Lifetime2++;
                   }
-                  var12_ref_mg = (mg) (param1.field_s.b(32));
+                  var12_ref_mg = (FleetMove) (param1.field_s.nextForward(32));
                 }
                 break regionExit1;
               }
@@ -1826,26 +1826,26 @@ final class GameState {
               }
             }
             if (param5 <= 15) {
-              this.a((byte) -65, (boolean[][]) null);
+              this.buildHostilePairs((byte) -65, (boolean[][]) null);
             }
             if (this.field_C == 0) {
-              this.a(-21031, param1);
+              this.abandonStar(-21031, param1);
               return;
             }
             this.b((byte) 15);
             var11Lifetime2 = this.field_K[0];
             var15 = this.field_v[var11Lifetime2];
-            this.a(var15, param1, 0);
+            this.captureStar(var15, param1, 0);
             param1.field_x = this.field_u[var11Lifetime2];
             if (var9 != null) {
-              ((eg) (var9)).field_i = var15;
-              ((eg) (var9)).field_l = param1.field_x;
-              ((eg) (var9)).field_m = param1.field_R;
+              ((BattleEvent) (var9)).field_i = var15;
+              ((BattleEvent) (var9)).field_l = param1.field_x;
+              ((BattleEvent) (var9)).field_m = param1.field_R;
             }
             if (param2 != null) {
               param2.field_f[var11Lifetime2] = param2.field_f[var11Lifetime2] + 1;
             }
-            this.a(0, (eg) (var9), param1);
+            this.a(0, (BattleEvent) (var9), param1);
             return;
           }
           if (var11Lifetime2 >= 3) {
@@ -1884,7 +1884,7 @@ final class GameState {
         }
     }
 
-    final void g(int param0) {
+    final void clearTurnState(int param0) {
         Star var4 = null;
         Player var4_ref = null;
         Player var5 = null;
@@ -1892,14 +1892,14 @@ final class GameState {
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3Lifetime1;
         this.field_q = new IntrusiveDeque();
-        this.field_p = new el();
+        this.field_p = new TertiaryNodeList();
         this.field_i = new IntrusiveDeque();
         Star[] var7 = this.field_g.field_e;
         Star[] var2 = var7;
         for (var3 = 0; var7.length > var3; var3++) {
           var4 = var7[var3];
-          var4.field_T.a(0);
-          var4.field_s.b((byte) 117);
+          var4.field_T.clear(0);
+          var4.field_s.clear((byte) 117);
         }
         if (param0 != -7954) {
           field_E = (IntrusiveDeque) null;
@@ -1917,14 +1917,14 @@ final class GameState {
         }
     }
 
-    private final void a(se param0, int param1, int param2, k param3) {
+    private final void applyTannhauserAndTerraformProjects(AchievementProgress param0, int param1, int param2, TurnEventLog param3) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qm var5 = null;
+        ProjectUse var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
@@ -1936,13 +1936,13 @@ final class GameState {
           if (param2 != 7377) {
             field_E = (IntrusiveDeque) null;
           }
-          var5 = (qm) (this.field_i.d(0));
+          var5 = (ProjectUse) (this.field_i.startForward(0));
           while (var5 != null) {
             var6 = var5.field_o;
             if (var6 == 3) {
-              this.a(var5.field_r, 4, var5.field_q);
+              this.createTannhauserWormhole(var5.field_r, 4, var5.field_q);
               if (param3 != null) {
-                param3.a(param2 - 7500, var5.field_q, var5.field_r, var5.field_p);
+                param3.recordTannhauser(param2 - 7500, var5.field_q, var5.field_r, var5.field_p);
               }
               if (param0 != null) {
                 param0.field_h[var5.field_p.field_x] = param0.field_h[var5.field_p.field_x] + 1;
@@ -1954,12 +1954,12 @@ final class GameState {
             } else {
               if (var6 == 1) {
                 this.field_L.setSeed((long)(var5.field_q.field_p ^ param1));
-                this.a(var5.field_q, (byte) 112, this.field_L);
+                this.terraformStar(var5.field_q, (byte) 112, this.field_L);
                 if (param3 != null) {
-                  param3.a(var5.field_p, var5.field_q, (byte) 120);
+                  param3.recordTerraform(var5.field_p, var5.field_q, (byte) 120);
                 }
                 if (param0 == null) {
-                  var5 = (qm) (this.field_i.a((byte) -71));
+                  var5 = (ProjectUse) (this.field_i.nextForward((byte) -71));
                   continue;
                 }
                 param0.field_h[var5.field_p.field_x] = param0.field_h[var5.field_p.field_x] + 1;
@@ -1969,7 +1969,7 @@ final class GameState {
                 }
               }
             }
-            var5 = (qm) (this.field_i.a((byte) -71));
+            var5 = (ProjectUse) (this.field_i.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1992,7 +1992,7 @@ final class GameState {
         }
     }
 
-    private final void a(Star param0, int param1, Star param2) {
+    private final void createTannhauserWormhole(Star param0, int param1, Star param2) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -2010,7 +2010,7 @@ final class GameState {
         Territory var9 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (param2.b(param0, (byte) 10)) {
+          if (param2.isNeighbour(param0, (byte) 10)) {
             return;
           }
           if (param0.field_p < param2.field_p) {
@@ -2018,11 +2018,11 @@ final class GameState {
             param2 = param0;
             param0 = var4;
           }
-          this.field_A.a((byte) -113, new cs(param2, param0, param1));
-          param2.a((byte) -127, param0);
-          param0.a((byte) -81, param2);
-          param2.e((byte) -122);
-          param0.e((byte) -110);
+          this.field_A.addLast((byte) -113, new Wormhole(param2, param0, param1));
+          param2.addNeighbour((byte) -127, param0);
+          param0.addNeighbour((byte) -81, param2);
+          param2.sortNeighboursByIndex((byte) -122);
+          param0.sortNeighboursByIndex((byte) -110);
           if (param2.field_y == param0.field_y &&
             param2.field_R != param0.field_R) {
             var9 = param2.field_R;
@@ -2034,14 +2034,14 @@ final class GameState {
               var4_ref = var8;
               var5 = var6;
             }
-            var6_ref = var5.j(18229);
+            var6_ref = var5.firstStar(18229);
             while (var6_ref != null) {
               var6_ref.field_R = var4_ref;
-              var4_ref.a(-21771, var6_ref);
-              var6_ref = var5.h(param1 ^ -23414);
+              var4_ref.addStar(-21771, var6_ref);
+              var6_ref = var5.nextStar(param1 ^ -23414);
             }
-            var5.b((byte) -118);
-            sh.a(var4_ref, -5);
+            var5.unlink((byte) -118);
+            SolMapReader.a(var4_ref, -5);
           }
           this.a(param2, false, (byte) 125);
           this.a(param0, false, (byte) 114);
@@ -2068,7 +2068,7 @@ final class GameState {
         }
     }
 
-    private final void b(int param0, Star param1) {
+    private final void updateTerritoryMembership(int param0, Star param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -2099,14 +2099,14 @@ final class GameState {
               continue;
             }
             param1.field_R = var5_ref_ln.field_R;
-            param1.field_R.a(-21771, param1);
+            param1.field_R.addStar(-21771, param1);
             break;
           }
           if (param1.field_R == null) {
             param1.field_R = new Territory(param1.field_y, param1);
-            param1.field_R.a(param0 - 21771, param1);
-            param1.field_y.field_i.a((byte) -113, param1.field_R);
-            sh.a(param1.field_R, -5);
+            param1.field_R.addStar(param0 - 21771, param1);
+            param1.field_y.field_i.addLast((byte) -113, param1.field_R);
+            SolMapReader.a(param1.field_R, -5);
             return;
           }
           var11 = param1.field_R;
@@ -2118,16 +2118,16 @@ final class GameState {
             var7 = var6.field_R;
             if (param1.field_y == var6.field_y &&
               var11 != var7) {
-              var8Lifetime1Lifetime2 = var7.j(param0 ^ 18229);
+              var8Lifetime1Lifetime2 = var7.firstStar(param0 ^ 18229);
               while (var8Lifetime1Lifetime2 != null) {
                 var8Lifetime1Lifetime2.field_R = param1.field_R;
-                var11.a(param0 ^ -21771, var8Lifetime1Lifetime2);
-                var8Lifetime1Lifetime2 = var7.h(-23410);
+                var11.addStar(param0 ^ -21771, var8Lifetime1Lifetime2);
+                var8Lifetime1Lifetime2 = var7.nextStar(-23410);
               }
-              var7.b((byte) -118);
+              var7.unlink((byte) -118);
             }
           }
-          sh.a(param1.field_R, -5);
+          SolMapReader.a(param1.field_R, -5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2143,7 +2143,7 @@ final class GameState {
         }
     }
 
-    final void c(byte param0) {
+    final void chooseYearName(byte param0) {
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -2164,7 +2164,7 @@ final class GameState {
         int var13Lifetime2;
         int var13Lifetime3;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = eg.field_x.length;
+        var2 = BattleEvent.field_x.length;
         var3 = ur.field_Bb.length;
         var4 = var2 * var3 / 2;
         var5 = var2 / 2;
@@ -2236,22 +2236,22 @@ final class GameState {
         return;
     }
 
-    final void a(IntrusiveDeque param0, int param1, IntrusiveDeque param2, IntrusiveDeque param3) {
-        mg var5 = null;
+    final void restorePendingOrders(IntrusiveDeque param0, int param1, IntrusiveDeque param2, IntrusiveDeque param3) {
+        FleetMove var5 = null;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          param3.a((byte) -90, this.field_i);
-          param2.a((byte) -90, this.field_q);
-          var5 = (mg) (param0.d(param1));
+          param3.transferAllTo((byte) -90, this.field_i);
+          param2.transferAllTo((byte) -90, this.field_q);
+          var5 = (FleetMove) (param0.startForward(param1));
           while (var5 != null) {
             this.field_p.a((byte) 36, var5);
-            var5.field_y.field_T.a((byte) -113, var5);
-            var5.field_B.field_s.a(var5, 32);
-            var5 = (mg) (param0.a((byte) -71));
+            var5.field_y.field_T.addLast((byte) -113, var5);
+            var5.field_B.field_s.addLast(var5, 32);
+            var5 = (FleetMove) (param0.nextForward((byte) -71));
           }
-          param3.a(0);
-          param2.a(0);
-          param0.a(0);
+          param3.clear(0);
+          param2.clear(0);
+          param0.clear(0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "dc.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -2261,8 +2261,8 @@ final class GameState {
         try {
           kd.a(this.field_o, param1, param0, (byte) -2);
           if (param2 <= 113) {
-            eg var5 = (eg) null;
-            this.a((Star) null, (eg) null, 39);
+            BattleEvent var5 = (BattleEvent) null;
+            this.a((Star) null, (BattleEvent) null, 39);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "dc.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -2274,13 +2274,13 @@ final class GameState {
           return;
         }
         try {
-          m.a((byte) -80, this.field_v, param0, this.field_n, this.field_A, this.field_G, this.field_x, param2, this.field_g, false);
+          StrongCacheEntry.a((byte) -80, this.field_v, param0, this.field_n, this.field_A, this.field_G, this.field_x, param2, this.field_g, false);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "dc.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int[] d(byte param0) {
+    private final int[] simulateCombat(byte param0) {
         int var5_int = 0;
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
@@ -2334,7 +2334,7 @@ final class GameState {
         }
     }
 
-    private final void a(Star param0, boolean param1) {
+    private final void setDefensiveNet(Star param0, boolean param1) {
         try {
           param0.field_u = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
@@ -2352,12 +2352,12 @@ final class GameState {
         }
         if (param0 <= 57) {
           IntrusiveDeque var5 = (IntrusiveDeque) null;
-          this.a((IntrusiveDeque) null, (Player) null, -20, (IntrusiveDeque) null, (IntrusiveDeque) null);
+          this.validatePlayerOrders((IntrusiveDeque) null, (Player) null, -20, (IntrusiveDeque) null, (IntrusiveDeque) null);
         }
         throw new RuntimeException();
     }
 
-    final void a(int param0, Player param1) {
+    final void addPlayer(int param0, Player param1) {
         Player[] var11 = null;
         int var4_int = 0;
         Player var12 = null;
@@ -2386,7 +2386,7 @@ final class GameState {
           param1.field_f = new int[this.field_r + 1];
           param1.field_h = new boolean[this.field_r + 1];
           vf.a(126, param1.field_m);
-          sh.a(param1.field_m, param0);
+          SolMapReader.a(param1.field_m, param0);
           var3 = new Player[this.field_r + 1];
           var4 = new String[this.field_r + 1];
           var10 = new int[1 + this.field_r];
@@ -2412,7 +2412,7 @@ final class GameState {
         }
     }
 
-    private final void a(int param0, k param1) {
+    private final void expireAlliancesAndWormholes(int param0, TurnEventLog param1) {
         int var4_int = 0;
         int var6 = 0;
         int dupTemp$0 = 0;
@@ -2422,7 +2422,7 @@ final class GameState {
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         Player[] var3 = null;
-        cs var3_ref = null;
+        Wormhole var3_ref = null;
         RuntimeException var3_ref2 = null;
         Territory var4 = null;
         Player var5 = null;
@@ -2443,7 +2443,7 @@ final class GameState {
                     var5.field_h[var6] = false;
                     if (param1 != null &&
                       var5.field_x < var6) {
-                      param1.a(255, var5, this.field_v[var6]);
+                      param1.recordAllianceExpired(255, var5, this.field_v[var6]);
                     }
                   }
                 }
@@ -2451,30 +2451,30 @@ final class GameState {
             }
           }
           if (this.field_o.field_h) {
-            var3_ref = (cs) (this.field_A.d(0));
+            var3_ref = (Wormhole) (this.field_A.startForward(0));
             while (var3_ref != null) {
               fieldTemp$1 = var3_ref.field_m - 1;
               var3_ref.field_m = var3_ref.field_m - 1;
               if (0 >= fieldTemp$1) {
-                var3_ref.field_n.a(var3_ref.field_k, (byte) -124);
-                var3_ref.field_n.e((byte) -98);
-                var3_ref.field_k.e((byte) -100);
+                var3_ref.field_n.removeNeighbour(var3_ref.field_k, (byte) -124);
+                var3_ref.field_n.sortNeighboursByIndex((byte) -98);
+                var3_ref.field_k.sortNeighboursByIndex((byte) -100);
                 var4 = var3_ref.field_n.field_R;
                 if (var4 != null &&
                   var4 == var3_ref.field_k.field_R) {
-                  this.a(80, var4);
+                  this.splitTerritory(80, var4);
                 }
                 this.a(var3_ref.field_n, false, (byte) 123);
                 this.a(var3_ref.field_k, false, (byte) 118);
                 this.field_g.a(26253);
                 this.field_g.b((byte) 80);
-                var3_ref.b((byte) -101);
+                var3_ref.unlink((byte) -101);
               }
-              var3_ref = (cs) (this.field_A.a((byte) -71));
+              var3_ref = (Wormhole) (this.field_A.nextForward((byte) -71));
             }
           }
           if (param0 != 1) {
-            this.b(40);
+            this.recomputePlayerTotals(40);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2491,7 +2491,7 @@ final class GameState {
         }
     }
 
-    final void a(Player param0, byte param1) {
+    final void releasePlayerStars(Player param0, byte param1) {
         int var4 = 0;
         Star[] var3 = null;
         Star var5 = null;
@@ -2505,7 +2505,7 @@ final class GameState {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 > -90) {
-            this.c((byte) 63);
+            this.chooseYearName((byte) 63);
           }
           var7 = this.field_g.field_e;
           var3 = var7;
@@ -2514,11 +2514,11 @@ final class GameState {
             if (var5.field_y == param0) {
               var5.field_R = null;
               var5.field_y = null;
-              var5.b((byte) -71);
-              var5.a(16);
+              var5.unlink((byte) -71);
+              var5.unlinkSecondary(16);
             }
           }
-          param0.field_i.a(0);
+          param0.field_i.clear(0);
           if (param0.field_m != null) {
             param0.field_m.k(0);
           }
@@ -2537,7 +2537,7 @@ final class GameState {
         }
     }
 
-    private final int b(byte param0, Star param1) {
+    private final int applyStellarBomb(byte param0, Star param1) {
         int var3_int = 0;
         int var5 = 0;
         int stackIn_12_0 = 0;
@@ -2546,7 +2546,7 @@ final class GameState {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        mg var4 = null;
+        FleetMove var4 = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 < 88) {
@@ -2560,12 +2560,12 @@ final class GameState {
             var3_int = 1 + param1.field_x >> 1;
             param1.field_x = param1.field_x - var3_int;
           }
-          var4 = (mg) (param1.field_T.d(0));
+          var4 = (FleetMove) (param1.field_T.startForward(0));
           while (var4 != null) {
-            var4.b((byte) -113);
-            var4.a(16);
+            var4.unlink((byte) -113);
+            var4.unlinkSecondary(16);
             var4.d(true);
-            var4 = (mg) (param1.field_T.a((byte) -71));
+            var4 = (FleetMove) (param1.field_T.nextForward((byte) -71));
           }
           stackIn_12_0 = var3_int;
           return stackIn_12_0;
@@ -2594,23 +2594,23 @@ final class GameState {
         for (var3 = param0; var3 < var2.length; var3++) {
           var4 = var2[var3];
           if (!this.field_o.field_i) {
-            var5 = (Territory) (var4.field_i.d(0));
+            var5 = (Territory) (var4.field_i.startForward(0));
             while (var5 != null) {
               vf.a(param0 ^ 127, var5);
-              sh.a(var5, param0 - 5);
-              var5 = (Territory) (var4.field_i.a((byte) -71));
+              SolMapReader.a(var5, param0 - 5);
+              var5 = (Territory) (var4.field_i.nextForward((byte) -71));
             }
           } else {
             vf.a(param0 ^ 125, var4.field_m);
-            sh.a(var4.field_m, -5);
+            SolMapReader.a(var4.field_m, -5);
           }
         }
     }
 
-    final int f(int param0) {
+    final int computeChecksum(int param0) {
         int stackIn_13_0 = 0;
         int var2;
-        cs var3;
+        Wormhole var3;
         int var4;
         int var6;
         int var7;
@@ -2666,18 +2666,18 @@ final class GameState {
           var7 = var7 + 37 * var16.field_x;
           var2 = var2 + 17 * (var6Lifetime1 * var7);
         }
-        var3 = (cs) (this.field_A.d(0));
+        var3 = (Wormhole) (this.field_A.startForward(0));
         while (var3 != null) {
           var4Lifetime2 = (var3.field_k.field_p + 17) * (13 + var3.field_n.field_p) ^ var3.field_m * 31;
           var2 = var2 + 23 * var4Lifetime2;
-          var3 = (cs) (this.field_A.a((byte) -71));
+          var3 = (Wormhole) (this.field_A.nextForward((byte) -71));
         }
         var2 = var2 ^ 47 * this.field_G;
         var2 = var2 ^ 61 * this.field_n;
         return var2;
     }
 
-    final boolean a(IntrusiveDeque param0, Player param1, int param2, IntrusiveDeque param3, IntrusiveDeque param4) {
+    final boolean validatePlayerOrders(IntrusiveDeque param0, Player param1, int param2, IntrusiveDeque param3, IntrusiveDeque param4) {
         int var8_int = 0;
         int var14 = 0;
         int stackIn_33_0 = 0;
@@ -2697,10 +2697,10 @@ final class GameState {
         int var6_int = 0;
         RuntimeException var6 = null;
         int[] var7 = null;
-        qa var8 = null;
+        PlacementOrder var8 = null;
         int var9 = 0;
-        qm var10 = null;
-        mg var11 = null;
+        ProjectUse var10 = null;
+        FleetMove var11 = null;
         int var11_int = 0;
         int var12 = 0;
         Object var12_ref = null;
@@ -2710,7 +2710,7 @@ final class GameState {
         int var16 = 0;
         Object var17 = null;
         Territory var18 = null;
-        qa var8Lifetime1;
+        PlacementOrder var8Lifetime1;
         int var11_intLifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
@@ -2723,15 +2723,15 @@ final class GameState {
           for (var8_int = 0; var8_int < var6_int; var8_int++) {
             var7[var8_int] = this.field_g.field_e[var8_int].field_x;
           }
-          var8 = (qa) (param3.d(0));
+          var8 = (PlacementOrder) (param3.startForward(0));
           while (var8 != null) {
             if (null != var8.field_u) {
               var7[var8.field_u.field_p] = var7[var8.field_u.field_p] + var8.field_v;
             }
-            var8 = (qa) (param3.a((byte) -71));
+            var8 = (PlacementOrder) (param3.nextForward((byte) -71));
           }
           var9 = 0;
-          var10 = (qm) (param4.d(0));
+          var10 = (ProjectUse) (param4.startForward(0));
           while (var10 != null) {
             boolean decompiledFrameRemainder0 = true;
             var11_int = 1;
@@ -2800,11 +2800,11 @@ final class GameState {
             }
             if (var11_int == 0) {
               var9 = 1;
-              var10.b((byte) -71);
+              var10.unlink((byte) -71);
             }
-            var10 = (qm) (param4.a((byte) -71));
+            var10 = (ProjectUse) (param4.nextForward((byte) -71));
           }
-          var8Lifetime1 = (qa) (param3.d(param2 ^ param2));
+          var8Lifetime1 = (PlacementOrder) (param3.startForward(param2 ^ param2));
           while (var8Lifetime1 != null) {
             boolean decompiledFrameRemainder1 = true;
             var11_intLifetime1 = 1;
@@ -2828,23 +2828,23 @@ final class GameState {
               var11_intLifetime1 = 0;
             }
             if (var11_intLifetime1 == 0) {
-              var8Lifetime1.b((byte) -93);
+              var8Lifetime1.unlink((byte) -93);
               var9 = 1;
             }
-            var8Lifetime1 = (qa) (param3.a((byte) -71));
+            var8Lifetime1 = (PlacementOrder) (param3.nextForward((byte) -71));
           }
           if (!this.field_o.field_i) {
-            var18 = (Territory) (param1.field_i.d(0));
+            var18 = (Territory) (param1.field_i.startForward(0));
             while (var18 != null) {
               vf.a(120, var18);
-              sh.a(var18, -5);
-              var18 = (Territory) (param1.field_i.a((byte) -71));
+              SolMapReader.a(var18, -5);
+              var18 = (Territory) (param1.field_i.nextForward((byte) -71));
             }
           } else {
             vf.a(122, param1.field_m);
-            sh.a(param1.field_m, -5);
+            SolMapReader.a(param1.field_m, -5);
           }
-          var11 = (mg) (param0.d(0));
+          var11 = (FleetMove) (param0.startForward(0));
           while (var11 != null) {
             var12Lifetime1 = 1;
             if (var11.field_y != null &&
@@ -2862,20 +2862,20 @@ final class GameState {
               } else if (var13Lifetime1 > var7[var11.field_y.field_p]) {
                 var12Lifetime1 = 0;
               } else if (var11.field_y.field_R == var11.field_B.field_R) {
-                if (!this.a(var11.field_y, var11.field_B, -1)) {
+                if (!this.isWithinMovementRange(var11.field_y, var11.field_B, -1)) {
                   var12Lifetime1 = 0;
                 }
-              } else if (!var11.field_y.b(var11.field_B, (byte) 10)) {
+              } else if (!var11.field_y.isNeighbour(var11.field_B, (byte) 10)) {
                 var12Lifetime1 = 0;
               }
             } else {
               var12Lifetime1 = 0;
             }
             if (var12Lifetime1 == 0) {
-              var11.b((byte) -103);
+              var11.unlink((byte) -103);
               var9 = 1;
             }
-            var11 = (mg) (param0.a((byte) -71));
+            var11 = (FleetMove) (param0.nextForward((byte) -71));
           }
           return (var9 == 0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2910,7 +2910,7 @@ final class GameState {
         }
     }
 
-    private final void a(k param0, int param1) {
+    private final void markDefeatedPlayers(TurnEventLog param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -2922,10 +2922,10 @@ final class GameState {
         try {
           for (var3_int = param1; this.field_r > var3_int; var3_int++) {
             if ((this.field_w & 1 << var3_int) == 0 &&
-              this.field_v[var3_int].field_i.g(param1 - 98)) {
+              this.field_v[var3_int].field_i.isEmpty(param1 - 98)) {
               this.field_w = this.field_w | 1 << var3_int;
               if (param0 != null) {
-                param0.a(this.field_v[var3_int], false);
+                param0.recordElimination(this.field_v[var3_int], false);
               }
             }
           }
@@ -2944,7 +2944,7 @@ final class GameState {
         }
     }
 
-    private final void a(int param0, Territory param1) {
+    private final void splitTerritory(int param0, Territory param1) {
         int var7_int = 0;
         Star dupTemp$0 = null;
         int var9 = 0;
@@ -2976,14 +2976,14 @@ final class GameState {
         try {
           var14 = new IntrusiveDeque();
           var4 = new IntrusiveDeque();
-          var4.a((byte) -113, param1.field_q);
+          var4.addLast((byte) -113, param1.field_q);
           param1.field_q.field_R = null;
           if (param0 <= 45) {
             return;
           }
-          while (!var4.g(-105)) {
-            var15 = (Star) (var4.h(118));
-            var14.a((byte) -113, var15);
+          while (!var4.isEmpty(-105)) {
+            var15 = (Star) (var4.pollFirst(118));
+            var14.addLast((byte) -113, var15);
             if (var15.field_D == null) {
               continue;
             }
@@ -2995,18 +2995,18 @@ final class GameState {
               var18Lifetime2 = var16;
               if (var16.field_R == param1) {
                 var16.field_R = null;
-                var4.a((byte) -113, var16);
+                var4.addLast((byte) -113, var16);
               }
             }
           }
-          var5 = (Star) (var14.d(0));
+          var5 = (Star) (var14.startForward(0));
           while (var5 != null) {
             var5.field_R = param1;
-            var5 = (Star) (var14.a((byte) -71));
+            var5 = (Star) (var14.nextForward((byte) -71));
           }
-          if (!param1.e(27650)) {
+          if (!param1.isEmpty(27650)) {
             while (true) {
-              dupTemp$0 = param1.i(-40);
+              dupTemp$0 = param1.removeFirstStar(-40);
               var17 = dupTemp$0;
               var19 = var17;
               var6 = var19;
@@ -3017,12 +3017,12 @@ final class GameState {
                 continue;
               }
               var7 = new Territory(param1.field_o, var19);
-              var4.a((byte) -113, var19);
+              var4.addLast((byte) -113, var19);
               var6.field_R = var7;
               {
-                while (!(var4.g(121))) {
-                  var18Lifetime1 = (Star) (var4.h(73));
-                  var7.a(-21771, var18Lifetime1);
+                while (!(var4.isEmpty(121))) {
+                  var18Lifetime1 = (Star) (var4.pollFirst(73));
+                  var7.addStar(-21771, var18Lifetime1);
                   if (var18Lifetime1.field_D == null) {
                     continue;
                   }
@@ -3033,26 +3033,26 @@ final class GameState {
                     var6Lifetime2 = var10;
                     if (var10.field_R == param1) {
                       var10.field_R = var7;
-                      var4.a((byte) -113, var10);
+                      var4.addLast((byte) -113, var10);
                     }
                   }
                 }
                 {
-                  sh.a(var7, -5);
-                  param1.field_o.field_i.a((byte) -113, var7);
+                  SolMapReader.a(var7, -5);
+                  param1.field_o.field_i.addLast((byte) -113, var7);
                 }
               }
             }
           }
-          param1.a(var14, -9332);
-          var6Lifetime1 = param1.field_o.field_m.j(18229);
+          param1.setStars(var14, -9332);
+          var6Lifetime1 = param1.field_o.field_m.firstStar(18229);
           while (var6Lifetime1 != null) {
             if (var6Lifetime1.field_y != param1.field_o) {
-              var6Lifetime1.a(16);
+              var6Lifetime1.unlinkSecondary(16);
             }
-            var6Lifetime1 = param1.field_o.field_m.h(-23410);
+            var6Lifetime1 = param1.field_o.field_m.nextStar(-23410);
           }
-          sh.a(param1.field_o.field_m, -5);
+          SolMapReader.a(param1.field_o.field_m, -5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3068,7 +3068,7 @@ final class GameState {
         }
     }
 
-    private final void a(byte param0, Star param1) {
+    private final void detachStarFromTerritory(byte param0, Star param1) {
         Territory var3 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -3084,20 +3084,20 @@ final class GameState {
             return;
           }
           param1.field_R = null;
-          param1.b((byte) -111);
-          param1.a(16);
+          param1.unlink((byte) -111);
+          param1.unlinkSecondary(16);
           if (param1 == var3.field_o.field_m.field_q) {
-            var3.field_o.field_m.field_q = var3.field_o.field_m.j(18229);
+            var3.field_o.field_m.field_q = var3.field_o.field_m.firstStar(18229);
           }
           if (var3.field_q == param1) {
-            if (var3.e(27650)) {
-              var3.b((byte) -81);
+            if (var3.isEmpty(27650)) {
+              var3.unlink((byte) -81);
             } else {
-              var3.field_q = var3.j(18229);
+              var3.field_q = var3.firstStar(18229);
             }
           }
-          if (!var3.e(27650)) {
-            this.a(72, var3);
+          if (!var3.isEmpty(27650)) {
+            this.splitTerritory(72, var3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3114,7 +3114,7 @@ final class GameState {
         }
     }
 
-    private final void a(k param0, int param1, int param2) {
+    private final void a(TurnEventLog param0, int param1, int param2) {
         int incrementValue$4 = 0;
         Star dupTemp$3 = null;
         int incrementValue$2 = 0;
@@ -3164,13 +3164,13 @@ final class GameState {
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var4_int = this.field_g.field_e.length;
-          if (ec.field_r != null &&
-            ec.field_r.length >= var4_int) {
+          if (UsernameAvailabilityValidator.field_r != null &&
+            UsernameAvailabilityValidator.field_r.length >= var4_int) {
             for (var5 = 0; var4_int > var5; var5++) {
-              ec.field_r[var5] = false;
+              UsernameAvailabilityValidator.field_r[var5] = false;
             }
           } else {
-            ec.field_r = new boolean[var4_int];
+            UsernameAvailabilityValidator.field_r = new boolean[var4_int];
           }
           do {
             var5 = 0;
@@ -3184,9 +3184,9 @@ final class GameState {
               var19Lifetime1 = var8_ref_ln;
               var11 = var19Lifetime1;
               if (var8_ref_ln.field_y != null &&
-                !ec.field_r[var8_ref_ln.field_p] &&
+                !UsernameAvailabilityValidator.field_r[var8_ref_ln.field_p] &&
                 var8_ref_ln.field_N > var8_ref_ln.field_x) {
-                ec.field_r[var8_ref_ln.field_p] = true;
+                UsernameAvailabilityValidator.field_r[var8_ref_ln.field_p] = true;
                 var5 = 1;
                 var18 = var8_ref_ln.field_D;
                 var9_ref_ln__ = var18;
@@ -3198,7 +3198,7 @@ final class GameState {
                   var11 = var23;
                   var11 = var19Lifetime2;
                   if (var8_ref_ln.field_y == var19Lifetime2.field_y &&
-                    !ec.field_r[var19Lifetime2.field_p]) {
+                    !UsernameAvailabilityValidator.field_r[var19Lifetime2.field_p]) {
                     this.a(var19Lifetime2, true, (byte) 125);
                   }
                 }
@@ -3228,7 +3228,7 @@ final class GameState {
                 var11 = var23;
                 var14_ref_ln = var22;
                 if (var22.field_y == var20.field_t &&
-                  !ec.field_r[var22.field_p]) {
+                  !UsernameAvailabilityValidator.field_r[var22.field_p]) {
                   incrementValue$4 = var8;
                   var8++;
                   var6[incrementValue$4] = var22;
@@ -3246,7 +3246,7 @@ final class GameState {
               stackIn_42_0 = var20.field_t;
               stackIn_42_1 = var20.field_y;
               if (stackIn_42_0 == stackIn_42_1 &&
-                !ec.field_r[var11.field_p]) {
+                !UsernameAvailabilityValidator.field_r[var11.field_p]) {
                 var11.field_x = var11.field_x + var11.field_C;
               }
             }
@@ -3263,14 +3263,14 @@ final class GameState {
               var7 = var23.field_D.length;
             }
             if (var23.field_y != null &&
-              ec.field_r[var23.field_p]) {
+              UsernameAvailabilityValidator.field_r[var23.field_p]) {
               var8Lifetime1 = 0;
               var12_ref_ln__Lifetime1 = var23.field_D;
               for (var13Lifetime1 = 0; var13Lifetime1 < var12_ref_ln__Lifetime1.length; var13Lifetime1++) {
                 var24 = var12_ref_ln__Lifetime1[var13Lifetime1];
                 var14_ref_lnLifetime1 = var24;
                 if (var11.field_y == var24.field_y &&
-                  !ec.field_r[var14_ref_lnLifetime1.field_p]) {
+                  !UsernameAvailabilityValidator.field_r[var14_ref_lnLifetime1.field_p]) {
                   incrementValue$2 = var8Lifetime1;
                   var8Lifetime1++;
                   var6[incrementValue$2] = var14_ref_lnLifetime1;
@@ -3292,14 +3292,14 @@ final class GameState {
                     dupTemp$0 = var6[var14];
                     dupTemp$0.field_x = dupTemp$0.field_x + 1;
                   }
-                  param0.a(var11, param2 - 14316, var28, var6);
+                  param0.recordStarAbandoned(var11, param2 - 14316, var28, var6);
                 }
               } else {
                 if (param0 != null) {
-                  param0.a(var11.field_x, var11, true);
+                  param0.recordStarAbandonedWithoutNeighbours(var11.field_x, var11, true);
                 }
               }
-              this.a(-21031, var11);
+              this.abandonStar(-21031, var11);
               if (var11.field_R != null) {
                 throw new RuntimeException();
               }
@@ -3309,7 +3309,7 @@ final class GameState {
             this.field_u = (int[]) null;
           }
           for (var9 = 0; var4_int > var9; var9++) {
-            ec.field_r[var9] = false;
+            UsernameAvailabilityValidator.field_r[var9] = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3326,14 +3326,14 @@ final class GameState {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void setTurnNumber(int param0, int param1) {
         this.field_O = param1;
         if (param0 != -9778) {
           this.field_r = -91;
         }
     }
 
-    GameState(int param0, vr param1, int param2, String[] param3) {
+    GameState(int param0, GameRules param1, int param2, String[] param3) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -3361,26 +3361,26 @@ final class GameState {
           }
           var5_intLifetime1 = this.field_M;
           if (0 == var5_intLifetime1) {
-            this.field_x = (VictoryChecker) ((Object) new jj(this.field_v));
+            this.field_x = (VictoryChecker) ((Object) new ConquestVictoryChecker(this.field_v));
           } else {
             if (1 == var5_intLifetime1) {
-              this.field_x = (VictoryChecker) ((Object) new ui(this.field_v));
+              this.field_x = (VictoryChecker) ((Object) new SolVictoryChecker(this.field_v));
             } else {
               if (var5_intLifetime1 == 2) {
-                this.field_x = (VictoryChecker) ((Object) new nh(this.field_v));
+                this.field_x = (VictoryChecker) ((Object) new PointsVictoryChecker(this.field_v));
               } else {
                 if (var5_intLifetime1 == 3) {
-                  this.field_x = (VictoryChecker) ((Object) new hp(this.field_v));
+                  this.field_x = (VictoryChecker) ((Object) new DerelictVictoryChecker(this.field_v));
                 } else {
                   if (var5_intLifetime1 != -1) {
                     throw new RuntimeException("No VictoryChecker known for gametype " + this.field_M);
                   }
-                  this.field_x = (VictoryChecker) ((Object) new qg(this.field_v));
+                  this.field_x = (VictoryChecker) ((Object) new TutorialVictoryChecker(this.field_v));
                 }
               }
             }
           }
-          this.field_p = new el();
+          this.field_p = new TertiaryNodeList();
           this.field_q = new IntrusiveDeque();
           this.field_i = new IntrusiveDeque();
           this.field_B = new int[this.field_r + 1];
@@ -3389,7 +3389,7 @@ final class GameState {
           this.field_K = new int[1 + this.field_r];
           this.field_u = new int[1 + this.field_r];
           this.field_A = new IntrusiveDeque();
-          this.field_L = (Random) ((Object) new ea());
+          this.field_L = (Random) ((Object) new IsaacBackedRandom());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3411,7 +3411,7 @@ final class GameState {
         }
     }
 
-    private final void a(byte param0, Star param1, eg param2) {
+    private final void a(byte param0, Star param1, BattleEvent param2) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -3419,7 +3419,7 @@ final class GameState {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
-        mg var4 = null;
+        FleetMove var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
@@ -3450,10 +3450,10 @@ final class GameState {
               param1.field_Q = var4_int / 2;
             }
           }
-          var4 = (mg) (param1.field_s.c(-128));
+          var4 = (FleetMove) (param1.field_s.startForward(-128));
           if (param0 > -122) {
             var11 = (Star) null;
-            this.a((Star) null, -35, (Star) null);
+            this.createTannhauserWormhole((Star) null, -35, (Star) null);
           }
           while (var4 != null) {
             if (var4.field_G != param1.field_y) {
@@ -3468,7 +3468,7 @@ final class GameState {
               }
               var4.field_y.field_C = var4.field_y.field_C + var9;
             }
-            var4 = (mg) (param1.field_s.b(32));
+            var4 = (FleetMove) (param1.field_s.nextForward(32));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

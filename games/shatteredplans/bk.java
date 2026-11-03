@@ -18,7 +18,7 @@ final class bk {
           if (param0 != -50) {
             bk.a((byte) -35);
           }
-          var1 = (eq) (kc.field_b.d(0));
+          var1 = (eq) (MusicEnvelope.field_b.startForward(0));
           if (null == var1) {
             return false;
           }
@@ -79,13 +79,13 @@ final class bk {
                 nm.field_a = stackIn_11_0;
               }
               var5_int++;
-              if (er.field_i < var5_int) {
+              if (WhirlpoolHasher.field_i < var5_int) {
                 if (gf.field_k <= var5_int) {
                   stackIn_19_0 = -1 + gf.field_k;
                 } else {
                   stackIn_19_0 = var5_int;
                 }
-                er.field_i = stackIn_19_0;
+                WhirlpoolHasher.field_i = stackIn_19_0;
               }
               var3_int++;
               continue;
@@ -105,10 +105,10 @@ final class bk {
             }
             if (var5.field_k <= var2_ref.field_k) {
               if (!(var2_ref.field_k <= var5.field_k)) {
-                tc.a(param1 ^ 24, var5, false, var2_ref);
+                DialogRoot.a(param1 ^ 24, var5, false, var2_ref);
               }
             } else {
-              tc.a(61, var2_ref, true, var5);
+              DialogRoot.a(61, var2_ref, true, var5);
             }
             var2_ref = var5;
             var4++;
@@ -173,7 +173,7 @@ final class bk {
           }
           if (em.field_h == 2 &&
             !lh.e((byte) 75)) {
-            if (!da.a(-30106, nd.field_k)) {
+            if (!DebouncedValidator.a(-30106, nd.field_k)) {
               var2 = re.a(of.field_g, 4371, new String[]{gi.field_a});
               if (var11 != 0) {
                 var2 = re.a(oi.field_g, 4371, new String[]{gi.field_a});
@@ -201,9 +201,9 @@ final class bk {
             var7 = em.field_h;
             var8 = 0;
             if (var7 == 2) {
-              var5 = re.a(fj.field_q, 4371, new String[]{gi.field_a});
+              var5 = re.a(MatchingTextValidator.field_q, 4371, new String[]{gi.field_a});
               var9 = re.a(cf.field_M, 4371, new String[]{var4});
-              var8 = -485 + uq.field_j.field_K - (-cg.field_C.field_K - ho.field_f.c(var9) + ho.field_f.c(var5));
+              var8 = -485 + uq.field_j.field_K - (-cg.field_C.field_K - ho.field_f.stringWidth(var9) + ho.field_f.stringWidth(var5));
               if (var8 < 0) {
                 var8 = 0;
               }
@@ -215,10 +215,10 @@ final class bk {
                 }
                 if (null != np.field_a) {
                   var7 = 1;
-                  boolean decompiledSharedTail1 = (!(i.field_c) ||
-                    null == wf.field_m);
+                  boolean decompiledSharedTail1 = (!(DialPainter.field_c) ||
+                    null == AiTask.field_m);
                   if (!decompiledSharedTail1) {
-                    var5 = "[" + wf.field_m + "] ";
+                    var5 = "[" + AiTask.field_m + "] ";
                     decompiledSharedTail1 = (var11 != 0);
                   }
                   if (decompiledSharedTail1) {
@@ -226,7 +226,7 @@ final class bk {
                   }
                 }
               }
-              if (eg.a((byte) 118)) {
+              if (BattleEvent.a((byte) 118)) {
                 stackIn_53_0 = ": ";
               } else {
                 stackIn_53_0 = "<img=3>: ";
@@ -244,8 +244,8 @@ final class bk {
                 var6 = "";
                 var5 = "<col=999999>" + var5 + qj.field_c + "</col>";
               }
-              var10 = ho.field_f.c(var5);
-              if (!eg.a((byte) 110)) {
+              var10 = ho.field_f.stringWidth(var5);
+              if (!BattleEvent.a((byte) 110)) {
                 if (uq.field_j.field_L &&
                   var10 > (-uq.field_j.field_B + pd.field_k)) {
                   if (bg.field_g) {
@@ -266,7 +266,7 @@ final class bk {
               cg.field_C.field_L = false;
             }
             if (cg.field_C.field_L) {
-              var1 = re.a(fi.field_m, 4371, new String[]{var4, gi.field_a});
+              var1 = re.a(StarLink.field_m, 4371, new String[]{var4, gi.field_a});
             }
           }
           stackIn_97_0 = var1;

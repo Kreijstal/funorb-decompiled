@@ -3,7 +3,7 @@
  */
 final class ai {
     static int[] field_b;
-    static bc field_c;
+    static Archive field_c;
     static String[] field_d;
     static int field_a;
     static int field_e;
@@ -117,34 +117,34 @@ final class ai {
           }
           oj.field_Ib = param3;
           qh.field_B = param2;
-          fk.a(ClientException.field_c, param1 ^ -80, param0);
+          ByteArrayNode.a(ClientException.field_c, param1 ^ -80, param0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ai.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0) {
-        if (hp.field_m == null) {
-          hp.field_l = null;
-          hp.field_m = null;
+        if (DerelictVictoryChecker.field_m == null) {
+          DerelictVictoryChecker.field_l = null;
+          DerelictVictoryChecker.field_m = null;
           if (param0 == 3) {
             return;
           }
           field_b = (int[]) null;
           return;
         }
-        if (null == hp.field_m.field_e) {
-          hp.field_l = null;
-          hp.field_m = null;
+        if (null == DerelictVictoryChecker.field_m.field_e) {
+          DerelictVictoryChecker.field_l = null;
+          DerelictVictoryChecker.field_m = null;
           if (param0 == 3) {
             return;
           }
           field_b = (int[]) null;
           return;
         }
-        hp.field_m.field_e.field_bb = false;
-        hp.field_l = null;
-        hp.field_m = null;
+        DerelictVictoryChecker.field_m.field_e.field_bb = false;
+        DerelictVictoryChecker.field_l = null;
+        DerelictVictoryChecker.field_m = null;
         if (param0 == 3) {
           return;
         }

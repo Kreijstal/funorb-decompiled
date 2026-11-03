@@ -31,8 +31,8 @@ final class ProxySocketConnector extends SocketConnector {
         byte[] var13 = null;
         try {
           var9 = new PacketBuffer(param0);
-          var3 = var9.j(-56);
-          var4 = var9.a(16711680);
+          var3 = var9.readUnsignedByte(-56);
+          var4 = var9.readInt(16711680);
           if (param1 != 200) {
             field_h = (String) null;
           }
@@ -42,11 +42,11 @@ final class ProxySocketConnector extends SocketConnector {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(var4, 0, 17469032, var13);
+              var9.readBytes(var4, 0, 17469032, var13);
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }
-            var5_int = var9.a(16711680);
+            var5_int = var9.readInt(16711680);
             if (0 <= var5_int && (ho.field_b == 0 ||
               !(var5_int > ho.field_b))) {
               var12 = new byte[var5_int];
@@ -184,8 +184,8 @@ final class ProxySocketConnector extends SocketConnector {
           return;
         }
         try {
-          jp.a(pc.field_r, il.field_cb, (byte) 121, oi.field_f);
-          mc.a(47, 0, param1, 0);
+          jp.a(DerelictMapGenerator.field_r, il.field_cb, (byte) 121, oi.field_f);
+          WeightedCacheEntry.a(47, 0, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "pa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -477,7 +477,7 @@ final class ProxySocketConnector extends SocketConnector {
         float var3 = (float)di.field_m / 1000.0f + 0.15000000596046448f;
         int var1 = -(int)(Math.sin((double)var3) * 200.0);
         int var2 = -200 + (int)(Math.cos((double)var3) * 200.0);
-        va.field_e.f(var1, var2);
+        va.field_e.draw(var1, var2);
         var2 = -(di.field_m * 40 / 800) + 200;
         var1 = -62;
         he.field_h.c(var1, -60 + var2, 256);
@@ -486,13 +486,13 @@ final class ProxySocketConnector extends SocketConnector {
         we.field_f.c(var1, -60 + var2, 256);
         var1 = -62;
         var2 = -(di.field_m * 40 / 800) + 200;
-        q.field_Cb.f(var1, var2);
+        q.field_Cb.draw(var1, var2);
         var1 = -120;
         var2 = -(di.field_m * 150 / 800) + 300;
-        mm.field_o.f(var1, var2);
+        mm.field_o.draw(var1, var2);
         var2 = di.field_m * 240 / 800 + 20;
         var1 = 0;
-        ch.field_c.f(var1, var2);
+        ch.field_c.draw(var1, var2);
         gf.d(0, ch.field_c.field_p + var2, 640, 480, 0);
         if (param0 != 8421504) {
           Star var4 = (Star) null;

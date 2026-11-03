@@ -44,7 +44,7 @@ final class ch implements wr {
             field_a = (String) null;
           }
           for (var9 = 0; -20 + param7 > var9; var9++) {
-            var10 = ui.a(param1, param6, param0 ^ -72, 256 * var9 / (param7 - 20));
+            var10 = SolVictoryChecker.a(param1, param6, param0 ^ -72, 256 * var9 / (param7 - 20));
             gf.a(param4, param2 + (param5 + var9), var10);
             gf.a(-1 + (param3 + param4), var9 + (param5 + param2), var10);
           }
@@ -79,7 +79,7 @@ final class ch implements wr {
             if (0 <= var5) {
               var6 = or.a(true, t.field_c[var3_int], true);
               var4 = var4 + js.field_e;
-              var7 = -(var6 >> 1) + ol.field_e;
+              var7 = -(var6 >> 1) + WeightedLruCache.field_e;
               if (ek.a((uo.field_g << 1) + vh.field_b, param2, var7 - js.field_g, (byte) -100, var4, (js.field_g << 1) + var6, param1)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
@@ -99,7 +99,7 @@ final class ch implements wr {
         }
     }
 
-    final static Sprite a(bc param0, int param1, int param2, int param3) {
+    final static Sprite a(Archive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite stackIn_5_0 = null;
         Sprite stackIn_7_0 = null;
@@ -132,26 +132,26 @@ final class ch implements wr {
     }
 
     final static qh a(byte param0) {
-        ne.field_l = new qh(0, 60, 238, 300, ShatteredPlansClient.field_L.toUpperCase());
-        fe var1 = new fe(-16 + ne.field_l.field_k + ne.field_l.field_m, 2 + ne.field_l.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
-        var1.field_h = ne.field_l;
-        lh var2 = new lh(-20 + ne.field_l.field_m, ne.field_l.field_t + 20, -28 + ne.field_l.field_i, 3974311);
+        BattleContribution.field_l = new qh(0, 60, 238, 300, ShatteredPlansClient.field_L.toUpperCase());
+        fe var1 = new fe(-16 + BattleContribution.field_l.field_k + BattleContribution.field_l.field_m, 2 + BattleContribution.field_l.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
+        var1.field_h = BattleContribution.field_l;
+        lh var2 = new lh(-20 + BattleContribution.field_l.field_m, BattleContribution.field_l.field_t + 20, -28 + BattleContribution.field_l.field_i, 3974311);
         int var3 = -24 / ((param0 - 57) / 47);
-        ne.field_l.a(var1, 8);
-        ne.field_l.a(var2, 8);
-        lp var4 = new lp(ne.field_l.field_k + 9, 20 + ne.field_l.field_t, 209, ne.field_l.field_i - 28);
-        ne.field_l.a(var4, 8);
-        ne.field_l.field_z = var4;
+        BattleContribution.field_l.a(var1, 8);
+        BattleContribution.field_l.a(var2, 8);
+        lp var4 = new lp(BattleContribution.field_l.field_k + 9, 20 + BattleContribution.field_l.field_t, 209, BattleContribution.field_l.field_i - 28);
+        BattleContribution.field_l.a(var4, 8);
+        BattleContribution.field_l.field_z = var4;
         var2.field_x = (gj) ((Object) var4);
         em var5 = new em();
-        ne.field_l.field_x = (jk) ((Object) var5);
+        BattleContribution.field_l.field_x = (jk) ((Object) var5);
         var5.field_e = var2;
-        return ne.field_l;
+        return BattleContribution.field_l;
     }
 
-    final static Sprite[] a(int param0, byte param1, bc param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, Archive param2, int param3) {
         RuntimeException var4 = null;
-        bc var5 = null;
+        Archive var5 = null;
         Object stackIn_4_0 = null;
         Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -160,11 +160,11 @@ final class ch implements wr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 87) {
-            var5 = (bc) null;
-            ch.a((bc) null, 22, -122, 78);
+            var5 = (Archive) null;
+            ch.a((Archive) null, 22, -122, 78);
           }
           if (vd.a(param3, param2, param0, 2)) {
-            stackIn_6_0 = rq.a(0);
+            stackIn_6_0 = LinkPainter.a(0);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -198,14 +198,14 @@ final class ch implements wr {
             stackIn_3_0 = 86;
             return stackIn_3_0;
           }
-          while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
+          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             ns.field_nb.b(0);
             if (!ns.field_nb.a((byte) -82)) {
               continue;
             }
             var1_int = 1;
           }
-          ns.field_nb.a(-1, ch.a(-15073, td.field_P, nh.field_p), ch.a(-15073, bb.field_b, pd.field_k));
+          ns.field_nb.a(-1, ch.a(-15073, SliderWidget.field_P, PointsVictoryChecker.field_p), ch.a(-15073, bb.field_b, pd.field_k));
           if (ns.field_nb.a((byte) 36)) {
             var1_int = 1;
           }

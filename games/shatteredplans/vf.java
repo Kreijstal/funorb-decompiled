@@ -5,7 +5,7 @@ import java.util.*;
 
 final class vf extends hb {
     static String field_f;
-    private wb field_g;
+    private QuaternaryNodeList field_g;
 
     final static void a(int param0, int param1, int param2, boolean param3, Star[] param4, Random param5, Star[] param6) {
         Star[] array$0 = null;
@@ -30,8 +30,8 @@ final class vf extends hb {
         Star[] var11_ref_ln__ = null;
         int var12 = 0;
         Star var13 = null;
-        fi[] var14 = null;
-        fi var16 = null;
+        StarLink[] var14 = null;
+        StarLink var16 = null;
         Star[] var17_ref_ln__ = null;
         int var17 = 0;
         int var18 = 0;
@@ -67,12 +67,12 @@ final class vf extends hb {
             for (var12 = 0; var11_ref_ln__.length > var12; var12++) {
               var22 = var11_ref_ln__[var12];
               var13 = var22;
-              var10_ref_pf.a((byte) -113, var22);
+              var10_ref_pf.addLast((byte) -113, var22);
               var8[var9] = var8[var9] + 1;
             }
             array$0 = new Star[var27[var9]];
             var7[var9] = array$0;
-            var10_ref_pf.a((byte) 112, var25[var9]);
+            var10_ref_pf.copyToArray((byte) 112, var25[var9]);
           }
           var9Lifetime1 = 0;
           while (true) {
@@ -147,8 +147,8 @@ final class vf extends hb {
                             var23++;
                           }
                           if (decompiledFrameCompleted0) {
-                            var26.a((byte) -113, var16.field_k);
-                            var16.field_k.a((byte) -111, var26);
+                            var26.addNeighbour((byte) -113, var16.field_k);
+                            var16.field_k.addNeighbour((byte) -111, var26);
                             break scanLoop1;
                           }
                         }
@@ -195,12 +195,12 @@ final class vf extends hb {
         int var2 = 0;
         int var3 = 0;
         ld var3_ref_ld = null;
-        fk var4 = null;
+        ByteArrayNode var4 = null;
         int var4_int = 0;
         Object var5 = null;
         int var6 = 0;
         byte[] var7 = null;
-        sl var8 = null;
+        CipherPacketBuffer var8 = null;
         byte[] var9 = null;
         byte[] var10 = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -209,14 +209,14 @@ final class vf extends hb {
           if (param0 != -117) {
             field_f = (String) null;
           }
-          var2 = var8.j(-121);
+          var2 = var8.readUnsignedByte(-121);
           if (0 != var2) {
             if (1 == var2) {
-              var3 = var8.a(16711680);
-              var4 = (fk) (tr.field_vb.d(param0 + 117));
+              var3 = var8.readInt(16711680);
+              var4 = (ByteArrayNode) (MapView.field_vb.startForward(param0 + 117));
               while (var4 != null) {
                 if (var4.field_j != var3) {
-                  var4 = (fk) (tr.field_vb.a((byte) -71));
+                  var4 = (ByteArrayNode) (MapView.field_vb.nextForward((byte) -71));
                   continue;
                 }
                 break;
@@ -225,35 +225,35 @@ final class vf extends hb {
                 q.g(-118);
                 return;
               }
-              var4.b((byte) -122);
+              var4.unlink((byte) -122);
               return;
             }
-            GameKeyHandler.a(-29901, (Throwable) null, "A1: " + w.a(16738));
+            GameKeyHandler.a(-29901, (Throwable) null, "A1: " + Dialog.a(16738));
             q.g(-108);
           } else {
-            var3_ref_ld = (ld) (ua.field_d.d(0));
+            var3_ref_ld = (ld) (SectorCacheStore.field_d.startForward(0));
             if (var3_ref_ld == null) {
               q.g(-96);
               return;
             }
-            var4_int = var8.j(param0 - 2);
+            var4_int = var8.readUnsignedByte(param0 - 2);
             if (var4_int != 0) {
               var10 = new byte[var4_int];
               var9 = var10;
               var7 = var9;
               var5 = var7;
-              var8.a(var4_int, 0, 17469032, var10);
+              var8.readBytes(var4_int, 0, 17469032, var10);
             } else {
               var5 = null;
             }
             var8.position = var8.position + 4;
-            if (!var8.f((byte) 104)) {
+            if (!var8.verifyChecksum((byte) 104)) {
               q.g(param0 + 17);
               return;
             }
             var3_ref_ld.field_l = true;
             var3_ref_ld.field_o = (byte[]) (var5);
-            var3_ref_ld.b((byte) -100);
+            var3_ref_ld.unlink((byte) -100);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -323,29 +323,29 @@ final class vf extends hb {
 
     final int b(byte param0) {
         if (param0 != -61) {
-          this.field_g = (wb) null;
+          this.field_g = (QuaternaryNodeList) null;
         }
         return this.field_g.c(-7432);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
         eo.field_cb.position = 0;
-        eo.field_cb.c(12, (byte) -128);
-        eo.field_cb.e(11135, na.field_u.nextInt());
-        eo.field_cb.e(11135, na.field_u.nextInt());
-        eo.field_cb.c(param3, (byte) -85);
-        eo.field_cb.c(param1, (byte) -123);
-        eo.field_cb.d(param0, 255);
-        eo.field_cb.a(jl.field_V, hr.field_a, (byte) -56);
+        eo.field_cb.writeByte(12, (byte) -128);
+        eo.field_cb.writeInt(11135, na.field_u.nextInt());
+        eo.field_cb.writeInt(11135, na.field_u.nextInt());
+        eo.field_cb.writeByte(param3, (byte) -85);
+        eo.field_cb.writeByte(param1, (byte) -123);
+        eo.field_cb.writeShort(param0, 255);
+        eo.field_cb.rsaEncrypt(jl.field_V, hr.field_a, (byte) -56);
         js.field_f.h(18, param2 + 251);
         int fieldTemp$0 = js.field_f.position + 1;
         js.field_f.position = js.field_f.position + 1;
         int var4 = fieldTemp$0;
-        js.field_f.a(0, eo.field_cb.position, eo.field_cb.payload, 22186);
+        js.field_f.writeBytes(0, eo.field_cb.position, eo.field_cb.payload, 22186);
         if (param2 != 4) {
           return;
         }
-        js.field_f.b(-var4 + js.field_f.position, (byte) 118);
+        js.field_f.patchLengthByte(-var4 + js.field_f.position, (byte) 118);
     }
 
     public static void a(int param0) {
@@ -356,7 +356,7 @@ final class vf extends hb {
         field_f = null;
     }
 
-    vf(wb param0) {
+    vf(QuaternaryNodeList param0) {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {

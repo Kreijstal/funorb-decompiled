@@ -148,7 +148,7 @@ class qr extends hm {
         }
     }
 
-    final static GameState a(int param0, int param1, String[] param2, vr param3, int param4, int param5) {
+    final static GameState a(int param0, int param1, String[] param2, GameRules param3, int param4, int param5) {
         try {
           GameState stackIn_17_0 = null;
           RuntimeException stackIn_22_0 = null;
@@ -168,9 +168,9 @@ class qr extends hm {
           int var13 = 0;
           int var14 = 0;
           GameState var15 = null;
-          hs var16 = null;
-          vl var17 = null;
-          pc var18 = null;
+          StandardMapGenerator var16 = null;
+          SolMapGenerator var17 = null;
+          DerelictMapGenerator var18 = null;
           var14 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             var15 = new GameState(param0, param3, param4, param2);
@@ -189,22 +189,22 @@ class qr extends hm {
                 if (var13 != 0 &&
                   var13 != 2) {
                   if (1 == var13) {
-                    var17 = new vl(var10_int, var15.field_v.length);
+                    var17 = new SolMapGenerator(var10_int, var15.field_v.length);
                     var15.field_g = var17.a((byte) -128);
                   } else {
                     if (var13 != 3) {
                       throw new RuntimeException("Cannot generate map for unknown gametype " + param4);
                     }
-                    var18 = new pc(var12, var12, var10_int, var8, var15.field_v.length);
+                    var18 = new DerelictMapGenerator(var12, var12, var10_int, var8, var15.field_v.length);
                     var15.field_g = var18.a((byte) -127);
                   }
                 } else {
-                  var16 = new hs(var12, var12, var10_int, var8, var15.field_v.length);
+                  var16 = new StandardMapGenerator(var12, var12, var10_int, var8, var15.field_v.length);
                   var15.field_g = var16.a((byte) -126);
                 }
                 var15.field_g.a(var15.field_v, param3, param1 - 46);
                 var15.e(param1 - 50);
-                var15.b(param1 - 151);
+                var15.recomputePlayerTotals(param1 - 151);
                 stackIn_17_0 = var15;
                 return stackIn_17_0;
               } catch (jn decompiledCaughtParameter0) {
@@ -248,7 +248,7 @@ class qr extends hm {
         int var4_intLifetime1;
         if (null != this.field_z &&
           this.field_nb != null) {
-          var4_int = this.field_nb.c(this.field_z, param0);
+          var4_int = this.field_nb.maxLineWidth(this.field_z, param0);
           if (var4_int > var3) {
             var3 = var4_int;
           }
@@ -263,13 +263,13 @@ class qr extends hm {
           this.a(false, false, true, 31, 106, -74, false, -100, false, false, -72);
         }
         if (null != this.field_M) {
-          var4 = (qr) (this.field_M.d(0));
+          var4 = (qr) (this.field_M.startForward(0));
           while (var4 != null) {
             var5 = var4.field_hb + var4.field_K;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (qr) (this.field_M.a((byte) -71));
+            var4 = (qr) (this.field_M.nextForward((byte) -71));
           }
         }
         return var3;
@@ -283,7 +283,7 @@ class qr extends hm {
           return;
         }
         try {
-          this.field_M.a((byte) -113, param1);
+          this.field_M.addLast((byte) -113, param1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "qr.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -337,8 +337,8 @@ class qr extends hm {
     final static void a(boolean param0, byte param1) {
         jb.a(param0, (byte) -27);
         if (param1 <= 107) {
-          vr var3 = (vr) null;
-          qr.a(46, -4, (String[]) null, (vr) null, -66, -4);
+          GameRules var3 = (GameRules) null;
+          qr.a(46, -4, (String[]) null, (GameRules) null, -66, -4);
         }
         mj.a(0, param0);
     }
@@ -355,11 +355,11 @@ class qr extends hm {
         int var9Lifetime1;
         if (!param2) {
           var9 = 0;
-          var10_ref_qr = (qr) (this.field_M.d(0));
+          var10_ref_qr = (qr) (this.field_M.startForward(0));
           while (var10_ref_qr != null) {
             var10_ref_qr.field_w = -var10_ref_qr.field_db + var9;
             var9 = var9 + (var10_ref_qr.field_mb + var10_ref_qr.field_gb + param3);
-            var10_ref_qr = (qr) (this.field_M.a((byte) -71));
+            var10_ref_qr = (qr) (this.field_M.nextForward((byte) -71));
           }
           var8 = -param3 + var9;
         }
@@ -390,11 +390,11 @@ class qr extends hm {
         qr var4 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (this.field_M != null) {
-          var4 = (qr) (this.field_M.f(3725));
+          var4 = (qr) (this.field_M.startReverse(3725));
           while (var4 != null) {
             var4.field_H = true;
             var4.e((byte) -123);
-            var4 = (qr) (this.field_M.b(-125));
+            var4 = (qr) (this.field_M.nextReverse(-125));
           }
         }
         if (param0 >= -122) {
@@ -459,13 +459,13 @@ class qr extends hm {
         if (!us.field_c &&
           param3 &&
           je.field_d != 0 &&
-          gf.field_i <= nh.field_p &&
-          gf.field_l > nh.field_p &&
-          td.field_P >= gf.field_a &&
-          td.field_P < gf.field_f) {
-          this.field_Q = -this.field_B + nh.field_p;
+          gf.field_i <= PointsVictoryChecker.field_p &&
+          gf.field_l > PointsVictoryChecker.field_p &&
+          SliderWidget.field_P >= gf.field_a &&
+          SliderWidget.field_P < gf.field_f) {
+          this.field_Q = -this.field_B + PointsVictoryChecker.field_p;
           var13 = 1;
-          this.field_X = -this.field_N + td.field_P;
+          this.field_X = -this.field_N + SliderWidget.field_P;
           this.field_rb = je.field_d;
           this.field_ub = je.field_d;
         } else {
@@ -474,18 +474,18 @@ class qr extends hm {
           }
           this.field_rb = 0;
         }
-        if (rf.field_n == 0) {
+        if (AllianceExpiredEvent.field_n == 0) {
           this.field_ub = 0;
         }
         stackIn_34_1 = (!ProxySocketConnector.field_j) && (gf.field_i <= pd.field_k) && (gf.field_l > pd.field_k) && (gf.field_a <= bb.field_b) && (gf.field_f > bb.field_b);
         this.field_v = stackIn_34_1;
-        stackIn_39_1 = (this.field_v) && (this.field_ub == rf.field_n) && (param3);
+        stackIn_39_1 = (this.field_v) && (this.field_ub == AllianceExpiredEvent.field_n) && (param3);
         this.field_L = stackIn_39_1;
         if (null != this.field_M) {
-          var14 = (qr) (this.field_M.f(3725));
+          var14 = (qr) (this.field_M.startReverse(3725));
           while (var14 != null) {
             var14.a(this.field_B, this.field_N, this.field_K, param3, -93, this.field_mb);
-            var14 = (qr) (this.field_M.b(-125));
+            var14 = (qr) (this.field_M.nextReverse(-125));
           }
         }
         if (this.field_v) {
@@ -681,7 +681,7 @@ class qr extends hm {
         this.field_S = 0;
     }
 
-    final static void a(int[] param0, byte[] param1, byte[] param2, String[][] param3, String[] param4, int param5, String[][] param6, bc param7, bc param8, int param9, bc param10, Sprite[][] param11, int param12, boolean param13, Sprite[][] param14) {
+    final static void a(int[] param0, byte[] param1, byte[] param2, String[][] param3, String[] param4, int param5, String[][] param6, Archive param7, Archive param8, int param9, Archive param10, Sprite[][] param11, int param12, boolean param13, Sprite[][] param14) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -714,7 +714,7 @@ class qr extends hm {
           var15_int = 87 / ((40 - param12) / 61);
           var17 = (nk[]) null;
           var16 = (int[]) null;
-          ga.a((nk[]) null, param5, param10, (int[]) null, param11, param4, param9, param7, param1, param3, param8, param2, param13, param6, 16384, param0, param14);
+          MidiPcmStream.a((nk[]) null, param5, param10, (int[]) null, param11, param4, param9, param7, param1, param3, param8, param2, param13, param6, 16384, param0, param14);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -841,7 +841,7 @@ class qr extends hm {
         gf.i(this.field_B, this.field_N, this.field_B + this.field_K, this.field_mb + this.field_N);
         param1 = param1 & this.field_s;
         if (param5 != -2147483648) {
-          qr.a((int[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, 117, (String[][]) null, (bc) null, (bc) null, 119, (bc) null, (Sprite[][]) null, 82, false, (Sprite[][]) null);
+          qr.a((int[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, 117, (String[][]) null, (Archive) null, (Archive) null, 119, (Archive) null, (Sprite[][]) null, 82, false, (Sprite[][]) null);
         }
         if (!this.field_H) {
           param6 = this.field_bb;
@@ -939,9 +939,9 @@ class qr extends hm {
             var24 = var24 + (-var17.field_p + this.field_mb);
           }
           if (256 > this.field_eb) {
-            var17.a(var23_int, var24, this.field_eb);
+            var17.drawAlpha(var23_int, var24, this.field_eb);
           } else {
-            var17.f(var23_int, var24);
+            var17.draw(var23_int, var24);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -955,7 +955,7 @@ class qr extends hm {
             this.field_u != null) {
             var23Lifetime2 = var26 + this.field_u;
           }
-          if (this.field_nb.c(var23Lifetime2) <= -(2 * this.field_kb) + this.field_K &&
+          if (this.field_nb.stringWidth(var23Lifetime2) <= -(2 * this.field_kb) + this.field_K &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.field_G == 1) {
               var22 = var22 + (-this.field_nb.field_q + this.field_mb - this.field_nb.field_J) / 2;
@@ -965,15 +965,15 @@ class qr extends hm {
               }
             }
             if (this.field_y == 0) {
-              this.field_nb.d(var23Lifetime2, var21 + (this.field_B + this.field_kb), this.field_nb.field_J + var22 + this.field_N, var18, -1, this.field_I);
+              this.field_nb.drawStringAlpha(var23Lifetime2, var21 + (this.field_B + this.field_kb), this.field_nb.field_J + var22 + this.field_N, var18, -1, this.field_I);
             } else {
               if (this.field_y == 1) {
-                this.field_nb.a(var23Lifetime2, var21 + this.field_B + this.field_kb + (this.field_K - this.field_kb * 2) / 2, this.field_N + var22 + this.field_nb.field_J, var18, -1, this.field_I);
+                this.field_nb.drawCentredAlpha(var23Lifetime2, var21 + this.field_B + this.field_kb + (this.field_K - this.field_kb * 2) / 2, this.field_N + var22 + this.field_nb.field_J, var18, -1, this.field_I);
               } else {
                 if (this.field_y != 2) {
                   this.field_nb.a(var23Lifetime2, this.field_kb + this.field_B + var21, var22 + this.field_N, this.field_K - 2 * this.field_kb, this.field_mb, var18, -1, this.field_I, this.field_y, this.field_G, this.field_Y);
                 } else {
-                  this.field_nb.c(var23Lifetime2, this.field_K + (-(this.field_kb * 2) + var21) + (this.field_B + this.field_kb), var22 + (this.field_N + this.field_nb.field_J), var18, -1, this.field_I);
+                  this.field_nb.drawRightAlignedAlpha(var23Lifetime2, this.field_K + (-(this.field_kb * 2) + var21) + (this.field_B + this.field_kb), var22 + (this.field_N + this.field_nb.field_J), var18, -1, this.field_I);
                 }
               }
             }
@@ -984,35 +984,35 @@ class qr extends hm {
           }
         }
         if (null != this.field_M) {
-          var23_ref = (qr) (this.field_M.d(0));
+          var23_ref = (qr) (this.field_M.startForward(0));
           while (var23_ref != null) {
             var23_ref.a(this.field_ib, param1, param2, this.field_B + var19, var20 + this.field_N, -2147483648, param6, this.field_mb, param8, param9, this.field_K);
-            var23_ref = (qr) (this.field_M.a((byte) -71));
+            var23_ref = (qr) (this.field_M.nextForward((byte) -71));
           }
         }
         gf.d(var12, var13, var14, var15);
     }
 
-    final static void a(bc param0, byte param1) {
+    final static void a(Archive param0, byte param1) {
         Sprite var6 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var6 = new Sprite(param0.a(true, "", "final_frame.jpg"), (java.awt.Component) ((Object) tm.field_i));
+          var6 = new Sprite(param0.getFileByName(true, "", "final_frame.jpg"), (java.awt.Component) ((Object) tm.field_i));
           var3 = var6.field_z;
           var4 = var6.field_w;
           wh.a(false);
           if (param1 <= 22) {
-            vr var5 = (vr) null;
-            qr.a(-15, 122, (String[]) null, (vr) null, -98, -12);
+            GameRules var5 = (GameRules) null;
+            qr.a(-15, 122, (String[]) null, (GameRules) null, -98, -12);
           }
-          qa.field_q = new Sprite(var3, 3 * var4 / 4);
-          qa.field_q.e();
-          var6.c(0, 0);
-          ak.field_z = new Sprite(var3, -qa.field_q.field_w + var4);
-          ak.field_z.e();
-          var6.c(0, -qa.field_q.field_w);
-          ak.field_z.field_x = qa.field_q.field_w;
+          PlacementOrder.field_q = new Sprite(var3, 3 * var4 / 4);
+          PlacementOrder.field_q.bindAsRenderTarget();
+          var6.drawOpaque(0, 0);
+          DiskArchiveRequest.field_z = new Sprite(var3, -PlacementOrder.field_q.field_w + var4);
+          DiskArchiveRequest.field_z.bindAsRenderTarget();
+          var6.drawOpaque(0, -PlacementOrder.field_q.field_w);
+          DiskArchiveRequest.field_z.field_x = PlacementOrder.field_q.field_w;
           Star.f((byte) 85);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "qr.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

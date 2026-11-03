@@ -17,14 +17,14 @@ final class ff extends vd {
           return;
         }
         if (this.field_m != this.field_w.field_z) {
-          this.field_w.b(this.field_k, this.field_t, this.field_m, this.field_i);
+          this.field_w.drawScaled(this.field_k, this.field_t, this.field_m, this.field_i);
           return;
         }
         if (this.field_i == this.field_w.field_w) {
-          this.field_w.f(this.field_k, this.field_t);
+          this.field_w.draw(this.field_k, this.field_t);
           return;
         }
-        this.field_w.b(this.field_k, this.field_t, this.field_m, this.field_i);
+        this.field_w.drawScaled(this.field_k, this.field_t, this.field_m, this.field_i);
     }
 
     ff(int param0, int param1, int param2, int param3, Sprite param4) {

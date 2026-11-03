@@ -9,7 +9,7 @@ final class sf {
     sf field_b;
     static String field_h;
     static String field_a;
-    static gh field_d;
+    static MusicTrack field_d;
 
     public static void a(byte param0) {
         field_f = null;
@@ -32,7 +32,7 @@ final class sf {
           ah.field_T = param1;
           no.field_f = new boolean[param1];
           og.field_c = new int[param1];
-          kq.field_c = new int[param1];
+          GameScreen.field_c = new int[param1];
           q.field_Ab = new int[param1];
           if (param0 < 123) {
             field_e = 41L;

@@ -79,7 +79,7 @@ final class va {
     final static void a(String[] args, byte param1, int param2, String param3) {
         RuntimeException var4 = null;
         int var5 = 0;
-        bc var6 = null;
+        Archive var6 = null;
         int stackIn_12_0 = 0;
         boolean stackIn_13_1 = false;
         RuntimeException stackIn_17_0 = null;
@@ -92,8 +92,8 @@ final class va {
         try {
           ee.field_l = rh.field_g;
           if (param1 != -113) {
-            var6 = (bc) null;
-            va.a((String) null, -24, (String) null, (bc) null);
+            var6 = (Archive) null;
+            va.a((String) null, -24, (String) null, (Archive) null);
           }
           if (param2 != 255) {
             if (100 > param2) {
@@ -101,7 +101,7 @@ final class va {
               return;
             }
             if (param2 <= 105) {
-              wh.field_c = tc.a(args, (byte) -64);
+              wh.field_c = DialogRoot.a(args, (byte) -64);
               return;
             }
             wh.field_c = ck.a(param3, param2, -80);
@@ -131,7 +131,7 @@ final class va {
         }
     }
 
-    final static Sprite[] a(String param0, int param1, String param2, bc param3) {
+    final static Sprite[] a(String param0, int param1, String param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -146,10 +146,10 @@ final class va {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(123, param2);
-          var5 = param3.a(var4_int, (byte) 106, param0);
+          var4_int = param3.getGroupIdByName(123, param2);
+          var5 = param3.getFileIdByName(var4_int, (byte) 106, param0);
           if (param1 == 0) {
-            stackIn_4_0 = um.a(var4_int, param3, var5, param1 - 84);
+            stackIn_4_0 = PlayerStats.a(var4_int, param3, var5, param1 - 84);
             return stackIn_4_0;
           }
           stackIn_2_0 = (Sprite[]) null;

@@ -31,7 +31,7 @@ final class cp {
           if (re.field_a < this.field_p) {
             return false;
           }
-          if (es.field_m > 0) {
+          if (StarAnnotation.field_m > 0) {
             return true;
           }
           return false;
@@ -39,17 +39,17 @@ final class cp {
         if (re.field_a < this.field_p) {
           return false;
         }
-        if (es.field_m > 0) {
+        if (StarAnnotation.field_m > 0) {
           return true;
         }
         return false;
     }
 
     final static void a(int param0, int param1) {
-        sl var2 = js.field_f;
+        CipherPacketBuffer var2 = js.field_f;
         var2.h(param0, 255);
-        var2.c(param1, (byte) -69);
-        var2.c(0, (byte) -119);
+        var2.writeByte(param1, (byte) -69);
+        var2.writeByte(0, (byte) -119);
     }
 
     private final void a(byte param0) {
@@ -136,13 +136,13 @@ final class cp {
           }
         }
         if (this.field_c > 0) {
-          gs.field_k = (-VictoryChecker.field_e + this.field_c) / 2;
+          NanoFrameTimer.field_k = (-VictoryChecker.field_e + this.field_c) / 2;
         }
     }
 
-    final static boolean a(int param0, int param1, int[] param2, bh param3, int param4) {
+    final static boolean a(int param0, int param1, int[] param2, BoundsRect param3, int param4) {
         RuntimeException var5 = null;
-        bh var6 = null;
+        BoundsRect var6 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -155,8 +155,8 @@ final class cp {
             return false;
           }
           if (param0 != 0) {
-            var6 = (bh) null;
-            cp.a(-93, -33, (int[]) null, (bh) null, 124);
+            var6 = (BoundsRect) null;
+            cp.a(-93, -33, (int[]) null, (BoundsRect) null, 124);
           }
           stackIn_7_0 = aj.a(1, param4, param1, param2);
           return stackIn_7_0;
@@ -196,7 +196,7 @@ final class cp {
         if (bj.field_K != null) {
           return;
         }
-        if (es.field_m <= 0) {
+        if (StarAnnotation.field_m <= 0) {
           this.field_b = false;
         }
         if (this.field_b) {
@@ -217,10 +217,10 @@ final class cp {
           return;
         }
         if (this.field_c > VictoryChecker.field_e) {
-          gs.field_k = (this.field_c - VictoryChecker.field_e) / 2;
+          NanoFrameTimer.field_k = (this.field_c - VictoryChecker.field_e) / 2;
         } else {
           if (0 < this.field_c) {
-            gs.field_k = 0;
+            NanoFrameTimer.field_k = 0;
           }
         }
         if (VictoryChecker.field_e == this.field_e &&
@@ -230,12 +230,12 @@ final class cp {
         this.field_s.a(this.field_h, this.field_e, -12725);
     }
 
-    final eb a(int param0) {
+    final FullscreenFocusCanvas a(int param0) {
         this.field_o = nn.field_b;
         this.field_n = VictoryChecker.field_e;
         this.field_s.a(this.field_g, this.field_k, param0 ^ -12725);
         IntrusiveDeque.field_c = false;
-        eb var2 = si.a(this.field_k, fa.field_W, 0, (byte) 125, param0, this.field_g);
+        FullscreenFocusCanvas var2 = si.a(this.field_k, fa.field_W, 0, (byte) 125, param0, this.field_g);
         if (var2 == null) {
           this.c(param0 ^ -115);
         }

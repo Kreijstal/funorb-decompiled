@@ -29,7 +29,7 @@ final class sm {
           return;
         }
         if (null != ce.field_x ||
-          null != in.field_g) {
+          null != SecondaryNodeHashTable.field_g) {
           sn.a(640, -46, 480, 192 + (param1 >> 1), 0, 0);
         }
         var4 = (640 - var3) / 2;
@@ -43,26 +43,26 @@ final class sm {
         var9 = var5 - 10;
         var10 = var6 + 10;
         kp.field_m = qh.a(kp.field_m, var9 - 3, 24, -3 + var7, -1, 24);
-        vl.field_q = qh.a(vl.field_q, 4 + (var9 + var10) - 24, 24, -24 + (var7 - (-var8 - 3)), -1, 24);
-        if (fj.field_t.field_a == 2) {
+        SolMapGenerator.field_q = qh.a(SolMapGenerator.field_q, 4 + (var9 + var10) - 24, 24, -24 + (var7 - (-var8 - 3)), -1, 24);
+        if (MatchingTextValidator.field_t.field_a == 2) {
           sn.a(var8, -50, var10, param1 + 128, var7, var9);
           bs.field_a = qh.a(bs.field_a, var9, var8, var7, -1, var10);
           bs.a(bs.field_a, 107);
           gf.b(3, 3, 0, 0, var8, var10);
-          bs.field_a.a(var7, var9, 128 - param1 << 1);
+          bs.field_a.drawAlpha(var7, var9, 128 - param1 << 1);
           cg.i(0);
         } else {
-          if (fj.field_t.field_a == 1) {
+          if (MatchingTextValidator.field_t.field_a == 1) {
             sn.a(var8, -29, var10, 128 + param1, var7, var9);
           } else {
             gf.c(var7, var9, var8, var10, 855316, -param1 + 128 << 1);
           }
         }
-        ga.a(var10, var9, var7, (byte) -102, var8);
-        gf.a(s.field_f);
+        MidiPcmStream.a(var10, var9, var7, (byte) -102, var8);
+        gf.a(GzipInflater.field_f);
         gf.d(var7, var9, var7 + var8, var9 + var10);
         this.e(var5, 7903);
-        gf.b(s.field_f);
+        gf.b(GzipInflater.field_f);
         return;
     }
 
@@ -71,13 +71,13 @@ final class sm {
         int var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        ne.field_o = this.b(-100, pd.field_k, bb.field_b);
+        BattleContribution.field_o = this.b(-100, pd.field_k, bb.field_b);
         if (param0 <= 115) {
           return;
         }
         var2 = 0;
         if (je.field_d != 0) {
-          var3 = this.b(107, nh.field_p, td.field_P);
+          var3 = this.b(107, PointsVictoryChecker.field_p, SliderWidget.field_P);
           if (0 <= var3) {
             this.d(4, var3);
           }
@@ -86,9 +86,9 @@ final class sm {
           var2 = so.field_o * -20;
         }
         if (ai.field_e != 0) {
-          if (rf.field_n != 0) {
-            if (ne.field_o != -2) {
-              if (-3 == ne.field_o) {
+          if (AllianceExpiredEvent.field_n != 0) {
+            if (BattleContribution.field_o != -2) {
+              if (-3 == BattleContribution.field_o) {
                 var2 -= 10;
               }
             } else {
@@ -97,8 +97,8 @@ final class sm {
           }
         } else {
           if (je.field_d != 0) {
-            if (-2 != ne.field_o) {
-              if (ne.field_o == -3) {
+            if (-2 != BattleContribution.field_o) {
+              if (BattleContribution.field_o == -3) {
                 this.a(1, (byte) -57);
               }
             } else {
@@ -106,8 +106,8 @@ final class sm {
             }
           }
         }
-        if (0 != rf.field_n &&
-          -1 == ne.field_o) {
+        if (0 != AllianceExpiredEvent.field_n &&
+          -1 == BattleContribution.field_o) {
           if (!this.field_f) {
             this.field_f = true;
             this.field_i = bb.field_b;
@@ -120,18 +120,18 @@ final class sm {
         }
         if (0 != var2) {
           pr.field_g = pr.field_g - var2;
-          ac.field_w = ac.field_w - var2;
+          DefendTask.field_w = DefendTask.field_w - var2;
           if (pr.field_g < 0) {
             pr.field_g = 0;
           }
-          if (ac.field_w < 0) {
-            ac.field_w = 0;
+          if (DefendTask.field_w < 0) {
+            DefendTask.field_w = 0;
           }
           if (kb.field_A < pr.field_g) {
             pr.field_g = kb.field_A;
           }
-          if (kb.field_A < ac.field_w) {
-            ac.field_w = kb.field_A;
+          if (kb.field_A < DefendTask.field_w) {
+            DefendTask.field_w = kb.field_A;
           }
         }
         return;
@@ -144,26 +144,26 @@ final class sm {
         if (param0 != 10) {
           this.b(-38, false, 12, 127);
         }
-        if (vr.field_c != this.field_a &&
+        if (GameRules.field_c != this.field_a &&
           this.field_a != gr.field_o) {
           return 0;
         }
-        if (vr.field_c != gr.field_o &&
-          nh.a((byte) -76, vr.field_c) &&
-          nh.a((byte) -76, gr.field_o)) {
+        if (GameRules.field_c != gr.field_o &&
+          PointsVictoryChecker.a((byte) -76, GameRules.field_c) &&
+          PointsVictoryChecker.a((byte) -76, gr.field_o)) {
           var2 = wm.a(eh.field_Q, (byte) 121, 32);
-          var4 = (int)((double)(80 + qg.field_r[vr.field_c]) * var2);
-          var5 = -(((int)(var2 * (double)(-qg.field_r[vr.field_c] + qg.field_r[gr.field_o])) + qg.field_r[vr.field_c]) / 2) + 320;
-          if (vr.field_c == this.field_a) {
-            return qg.field_r[vr.field_c] / 2 + var5 - var4;
+          var4 = (int)((double)(80 + TutorialVictoryChecker.field_r[GameRules.field_c]) * var2);
+          var5 = -(((int)(var2 * (double)(-TutorialVictoryChecker.field_r[GameRules.field_c] + TutorialVictoryChecker.field_r[gr.field_o])) + TutorialVictoryChecker.field_r[GameRules.field_c]) / 2) + 320;
+          if (GameRules.field_c == this.field_a) {
+            return TutorialVictoryChecker.field_r[GameRules.field_c] / 2 + var5 - var4;
           }
-          return -(qg.field_r[vr.field_c] / 2) + (100 - var4);
+          return -(TutorialVictoryChecker.field_r[GameRules.field_c] / 2) + (100 - var4);
         }
         return 320;
     }
 
     final void a(int param0, int param1) {
-        if (nh.a((byte) -74, param1)) {
+        if (PointsVictoryChecker.a((byte) -74, param1)) {
           if (this.field_g == -1) {
           }
           mj.field_Hb[param1].field_g = -1;
@@ -177,20 +177,20 @@ final class sm {
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
-        if (this.field_a != vr.field_c &&
+        if (this.field_a != GameRules.field_c &&
           gr.field_o != this.field_a) {
           return 0;
         }
-        if (gr.field_o != vr.field_c && nh.a((byte) -82, vr.field_c) &&
-          nh.a((byte) -126, gr.field_o)) {
+        if (gr.field_o != GameRules.field_c && PointsVictoryChecker.a((byte) -82, GameRules.field_c) &&
+          PointsVictoryChecker.a((byte) -126, gr.field_o)) {
           var2 = wm.a(eh.field_Q, (byte) 118, 32);
-          var4 = (int)((-var2 + 1.0) * (double)(80 + qg.field_r[vr.field_c]));
-          var5 = -(((int)(var2 * (double)(qg.field_r[gr.field_o] - qg.field_r[vr.field_c])) + qg.field_r[vr.field_c]) / 2) + 320;
+          var4 = (int)((-var2 + 1.0) * (double)(80 + TutorialVictoryChecker.field_r[GameRules.field_c]));
+          var5 = -(((int)(var2 * (double)(TutorialVictoryChecker.field_r[gr.field_o] - TutorialVictoryChecker.field_r[GameRules.field_c])) + TutorialVictoryChecker.field_r[GameRules.field_c]) / 2) + 320;
           var5 = var5 + var4;
-          if (vr.field_c != this.field_a) {
+          if (GameRules.field_c != this.field_a) {
             return var5;
           }
-          return -80 + (var5 - qg.field_r[vr.field_c]);
+          return -80 + (var5 - TutorialVictoryChecker.field_r[GameRules.field_c]);
         }
         if (param0) {
           return -21;
@@ -234,9 +234,9 @@ final class sm {
         int var14_intLifetime1;
         var21 = ShatteredPlansClient.field_F ? 1 : 0;
         if (jn.field_b != 0) {
-          stackIn_3_0 = re.a(pr.field_g, 32, jn.field_b, ac.field_w, 0);
+          stackIn_3_0 = re.a(pr.field_g, 32, jn.field_b, DefendTask.field_w, 0);
         } else {
-          stackIn_3_0 = ac.field_w;
+          stackIn_3_0 = DefendTask.field_w;
         }
         var4 = stackIn_3_0;
         var5 = pe.field_J.length;
@@ -246,19 +246,19 @@ final class sm {
         if (kb.field_A < var4) {
           var4 = kb.field_A;
         }
-        var6 = param0 - (-qg.field_r[this.field_a] - 18);
+        var6 = param0 - (-TutorialVictoryChecker.field_r[this.field_a] - 18);
         param0 -= 8;
-        gf.a(param0 + 20, param1 + 2, 18 + (-60 + qg.field_r[this.field_a] + o.field_k.field_z), 309, 10, 0, 92);
-        gf.f(20 + param0, 2 + param1, qg.field_r[this.field_a] - 60 + (18 + o.field_k.field_z), 309, 10, 2458760);
+        gf.a(param0 + 20, param1 + 2, 18 + (-60 + TutorialVictoryChecker.field_r[this.field_a] + WidgetTheme.field_k.field_z), 309, 10, 0, 92);
+        gf.f(20 + param0, 2 + param1, TutorialVictoryChecker.field_r[this.field_a] - 60 + (18 + WidgetTheme.field_k.field_z), 309, 10, 2458760);
         var25 = new int[4];
         gf.a(var25);
-        gf.i(25 + param0, 5 + param1, var6 - 20, param1 + qg.field_t[this.field_a] - 14);
+        gf.i(25 + param0, 5 + param1, var6 - 20, param1 + TutorialVictoryChecker.field_t[this.field_a] - 14);
         var8 = -var4;
         for (var9 = 0; var9 < var5; var9++) {
           if (var9 > 0) {
             gf.f(param0 + 30, -20 + (3 + (param1 + var8)), -param0 + var6 - 80, 16777215);
             gf.f(param0 + 30, -40 + (var8 + (param1 + 3)), -80 + (-param0 + var6), 16777215);
-            rs.field_Cb.d(pe.field_J[var9], param0 + 50, rs.field_Cb.field_J / 2 + (3 + param1) + var8 - 30, 16777215, -1);
+            rs.field_Cb.drawString(pe.field_J[var9], param0 + 50, rs.field_Cb.field_J / 2 + (3 + param1) + var8 - 30, 16777215, -1);
           }
           if (294 >= var8 &&
             var8 >= -294) {
@@ -268,15 +268,15 @@ final class sm {
         }
         gf.b(var25);
         if (kb.field_A > var4) {
-          bg.field_a.c(param0 - (-qg.field_r[this.field_a] + 26), -35 + (qg.field_t[this.field_a] + param1), 256);
-          if (ne.field_o == -3) {
-            bg.field_a.c(qg.field_r[this.field_a] + param0 - 26, param1 + qg.field_t[this.field_a] - 35, 256);
+          bg.field_a.c(param0 - (-TutorialVictoryChecker.field_r[this.field_a] + 26), -35 + (TutorialVictoryChecker.field_t[this.field_a] + param1), 256);
+          if (BattleContribution.field_o == -3) {
+            bg.field_a.c(TutorialVictoryChecker.field_r[this.field_a] + param0 - 26, param1 + TutorialVictoryChecker.field_t[this.field_a] - 35, 256);
           }
         }
         if (0 < var4) {
-          o.field_k.c(-26 + (param0 + qg.field_r[this.field_a]), 5 + param1, 256);
-          if (ne.field_o == -2) {
-            o.field_k.c(qg.field_r[this.field_a] + (param0 - 26), param1 + 5, 256);
+          WidgetTheme.field_k.c(-26 + (param0 + TutorialVictoryChecker.field_r[this.field_a]), 5 + param1, 256);
+          if (BattleContribution.field_o == -2) {
+            WidgetTheme.field_k.c(TutorialVictoryChecker.field_r[this.field_a] + (param0 - 26), param1 + 5, 256);
           }
         }
         var9Lifetime1 = -(21 * var5) + 310;
@@ -300,14 +300,14 @@ final class sm {
           var9Lifetime1 = var9Lifetime1 - var13;
           var13 += 21;
           for (var14_int = 0; var14_int <= 16; var14_int++) {
-            mh.a(var13, var6 - var14_int, param1 + var14_int, 65793, false);
+            IsaacRandom.a(var13, var6 - var14_int, param1 + var14_int, 65793, false);
           }
           ks.a(-18166, 16, 2458760, -1, var6, param1);
-          mh.a(var13, -16 + var6, 16 + param1, 2458760, false);
+          IsaacRandom.a(var13, -16 + var6, 16 + param1, 2458760, false);
           var14_intLifetime1 = -12 + Star.field_H[var11];
           if (var14_intLifetime1 > 0) {
             var15_ref_String = pe.field_J[var11];
-            var16 = rs.field_Cb.c(var15_ref_String);
+            var16 = rs.field_Cb.stringWidth(var15_ref_String);
             var17_int = rs.field_Cb.field_q + rs.field_Cb.field_J;
             var18 = var6 - 15;
             var19 = (var13 - var16 >> 1) + 8 + param1;
@@ -321,17 +321,17 @@ final class sm {
         }
         var11Lifetime1 = var9Lifetime1 + 16;
         for (var12Lifetime1 = 0; var12Lifetime1 <= 16; var12Lifetime1++) {
-          mh.a(-(var12Lifetime1 * 2) + 32 + var11Lifetime1, -var12Lifetime1 + var6, param1 + var12Lifetime1, 65793, false);
+          IsaacRandom.a(-(var12Lifetime1 * 2) + 32 + var11Lifetime1, -var12Lifetime1 + var6, param1 + var12Lifetime1, 65793, false);
         }
         ks.a(-18166, 16, 2458760, -1, var6, param1);
-        mh.a(var11Lifetime1, var6 - 16, param1 + 16, 2458760, false);
+        IsaacRandom.a(var11Lifetime1, var6 - 16, param1 + 16, 2458760, false);
         stackIn_48_0 = (this.field_a != 7) ? 16 : 8;
         var12Lifetime2 = stackIn_48_0;
         ks.a(-18166, var12Lifetime2, 2458760, 1, var6 - 16, var11Lifetime1 + 15 + param1);
         var13Lifetime1 = Star.field_H[var5 - 1] << 2;
         if (0 != var13Lifetime1) {
           var14 = pe.field_J[var5 - 1];
-          var15 = rs.field_Cb.c(var14);
+          var15 = rs.field_Cb.stringWidth(var14);
           var16Lifetime1 = rs.field_Cb.field_q + rs.field_Cb.field_J;
           var17 = new Sprite(var16Lifetime1, var15);
           bs.a(var17, 82);
@@ -389,7 +389,7 @@ final class sm {
         int var6Lifetime1;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = Star.field_H.length;
-        var3 = ac.field_w + 147;
+        var3 = DefendTask.field_w + 147;
         var4 = 0;
         if (param0 >= -31) {
           field_c = (String) null;
@@ -402,10 +402,10 @@ final class sm {
           }
           break;
         }
-        o.field_s = var4;
-        var5 = ne.field_o;
+        WidgetTheme.field_s = var4;
+        var5 = BattleContribution.field_o;
         if (var5 < 0) {
-          var5 = o.field_s;
+          var5 = WidgetTheme.field_s;
         }
         nc.field_t = 0;
         for (var4Lifetime1 = 0; var4Lifetime1 < Star.field_H.length; var4Lifetime1++) {
@@ -435,22 +435,22 @@ final class sm {
           jn.field_b = jn.field_b + 1;
           if (fieldTemp$0 == 32) {
             jn.field_b = 0;
-            pr.field_g = ac.field_w;
+            pr.field_g = DefendTask.field_w;
           }
         }
         if (oo.field_b == null) {
           oo.field_b = new int[5];
-          er.field_q = new int[5];
+          WhirlpoolHasher.field_q = new int[5];
           fg.field_c = new int[5];
           for (var4Lifetime2 = 0; var4Lifetime2 < 5; var4Lifetime2++) {
-            er.field_q[var4Lifetime2] = vc.a((byte) -39, 35);
+            WhirlpoolHasher.field_q[var4Lifetime2] = vc.a((byte) -39, 35);
             fg.field_c[var4Lifetime2] = vc.a((byte) -39, 35);
           }
         }
         var6Lifetime1 = cl.field_n % 50;
         if (var6Lifetime1 == 0) {
           for (var4Lifetime3 = 0; 5 > var4Lifetime3; var4Lifetime3++) {
-            er.field_q[var4Lifetime3] = fg.field_c[var4Lifetime3];
+            WhirlpoolHasher.field_q[var4Lifetime3] = fg.field_c[var4Lifetime3];
             fg.field_c[var4Lifetime3] = vc.a((byte) -39, 35);
           }
         }
@@ -475,7 +475,7 @@ final class sm {
         int var4Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         var3 = this.b(false);
-        var4 = qg.field_t[this.field_a];
+        var4 = TutorialVictoryChecker.field_t[this.field_a];
         var5 = this.field_h % (this.field_d.field_b * 16);
         if (param1 != 7903) {
           field_c = (String) null;
@@ -501,21 +501,21 @@ final class sm {
                 this.a(stackIn_12_1, stackIn_13_2, var7, false);
               }
             }
-            if (qg.field_p[this.field_a][var6] != 29 &&
-              qg.field_p[this.field_a][var6] != 28) {
+            if (TutorialVictoryChecker.field_p[this.field_a][var6] != 29 &&
+              TutorialVictoryChecker.field_p[this.field_a][var6] != 28) {
               var4Lifetime1 = this.c(var6, true);
               if (var6 == this.field_d.field_c) {
-                hn.field_c.f(25 + var3, (qg.field_l[this.field_a] - hn.field_c.field_w) / 2 + var4Lifetime1);
+                hn.field_c.draw(25 + var3, (TutorialVictoryChecker.field_l[this.field_a] - hn.field_c.field_w) / 2 + var4Lifetime1);
               } else {
                 var8 = this.field_d.field_b * 6 + var6 * 4;
                 var9 = Math.abs(var5 - var8);
                 if (2 * this.field_d.field_b <= var9) {
                   if (var9 < 6 * this.field_d.field_b) {
                     var10 = (6 * this.field_d.field_b - var9) * 256 / (this.field_d.field_b * 4);
-                    hn.field_c.a(25 + var3, (-hn.field_c.field_w + qg.field_l[this.field_a]) / 2 + var4Lifetime1, var10);
+                    hn.field_c.drawAlpha(25 + var3, (-hn.field_c.field_w + TutorialVictoryChecker.field_l[this.field_a]) / 2 + var4Lifetime1, var10);
                   }
                 } else {
-                  hn.field_c.a(var3 + 25, var4Lifetime1 + (qg.field_l[this.field_a] - hn.field_c.field_w) / 2, 256);
+                  hn.field_c.drawAlpha(var3 + 25, var4Lifetime1 + (TutorialVictoryChecker.field_l[this.field_a] - hn.field_c.field_w) / 2, 256);
                 }
               }
             }
@@ -536,7 +536,7 @@ final class sm {
     }
 
     private final void e(byte param0) {
-        gf.a(kc.field_m);
+        gf.a(MusicEnvelope.field_m);
         gf.a();
         int var2 = re.a(0, 32, IntrusiveDequeCursor.field_c, 320, 0);
         int var3 = 200;
@@ -546,14 +546,14 @@ final class sm {
           return;
         }
         if (var2 > 20) {
-          ga.a(var3, var5, var4, (byte) -112, var2);
+          MidiPcmStream.a(var3, var5, var4, (byte) -112, var2);
         }
         if (IntrusiveDequeCursor.field_c == 32) {
           gf.d(var4 + 8, 8 + var5, var2 + (var4 - 8), var3 + (var5 - 8));
-          mp.field_b.c(wc.field_b, (var2 >> 1) + var4, mp.field_b.field_J + 10 + var5, 2805974, -1);
+          mp.field_b.drawCentred(wc.field_b, (var2 >> 1) + var4, mp.field_b.field_J + 10 + var5, 2805974, -1);
           rs.field_Cb.a(oi.field_c, 10 + var4, mp.field_b.field_J + (var5 + 10), -20 + var2, -mp.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, rs.field_Cb.field_J);
         }
-        gf.b(kc.field_m);
+        gf.b(MusicEnvelope.field_m);
     }
 
     private final void a(int param0, boolean param1, int param2, boolean param3) {
@@ -569,25 +569,25 @@ final class sm {
         int var9;
         int var10;
         int var11;
-        var5 = qg.field_p[this.field_a][param0];
+        var5 = TutorialVictoryChecker.field_p[this.field_a][param0];
         if (param3) {
           this.field_d = (np) null;
         }
         var6 = this.c(-22609, var5);
         stackIn_5_0 = (param1) ? 2805974 : 2458760;
         var7 = stackIn_5_0;
-        var8 = qg.field_l[this.field_a];
+        var8 = TutorialVictoryChecker.field_l[this.field_a];
         var9 = this.b(param0, true);
         var10 = this.c(param0, true);
         if (21 != var5 &&
           var5 != 22) {
-          mp.field_b.d(var6, var9, var10 + mp.field_b.field_J, var7, -1, param2);
+          mp.field_b.drawStringAlpha(var6, var9, var10 + mp.field_b.field_J, var7, -1, param2);
         } else {
-          mp.field_b.d(var6, var9, mp.field_b.field_J + var10, var7, -1, param2);
-          var9 = var9 + hg.field_t;
+          mp.field_b.drawStringAlpha(var6, var9, mp.field_b.field_J + var10, var7, -1, param2);
+          var9 = var9 + IsolationistAi.field_t;
           gf.d(var9, var10 + (var8 / 2 - 1), 121, 2, var7, param2);
           if (var5 == 21) {
-            stackIn_11_0 = tf.field_p * 120 / 256;
+            stackIn_11_0 = CheckboxPainter.field_p * 120 / 256;
           } else {
             stackIn_11_0 = wm.field_b * 120 / 256;
           }
@@ -677,24 +677,24 @@ final class sm {
           }
           if (-1 != param7) {
             var13 = 1 + param7 + ".";
-            rs.field_Cb.b(var13, 15 + (vn.field_r[0] + param4), param6, param8, -1);
+            rs.field_Cb.drawRightAligned(var13, 15 + (BattleSnapshot.field_r[0] + param4), param6, param8, -1);
           }
           var12 = param0;
-          rs.field_Cb.d(var12, param4 - (-vn.field_r[0] - 20), param6, param8, -1);
+          rs.field_Cb.drawString(var12, param4 - (-BattleSnapshot.field_r[0] - 20), param6, param8, -1);
           var14 = Integer.toString(param3);
-          rs.field_Cb.c(var14, param4 + vn.field_r[1], param6, param8, -1);
+          rs.field_Cb.drawCentred(var14, param4 + BattleSnapshot.field_r[1], param6, param8, -1);
           var15 = var11_int >= 50 ? "50+" : Integer.toString(var11_int);
           var12Lifetime1 = var15;
-          rs.field_Cb.c(var15, vn.field_r[2] + param4, param6, param8, -1);
+          rs.field_Cb.drawCentred(var15, BattleSnapshot.field_r[2] + param4, param6, param8, -1);
           var12Lifetime2 = param1 + "%";
           if (param2 >= -116) {
             this.a(-46, (byte) -46, 11, -112, -101, -46, -96);
           }
-          rs.field_Cb.c(var12Lifetime2, param4 + vn.field_r[3], param6, param8, -1);
+          rs.field_Cb.drawCentred(var12Lifetime2, param4 + BattleSnapshot.field_r[3], param6, param8, -1);
           var16 = param9 + "%";
-          rs.field_Cb.c(var16, param4 + vn.field_r[4], param6, param8, -1);
+          rs.field_Cb.drawCentred(var16, param4 + BattleSnapshot.field_r[4], param6, param8, -1);
           var17 = param5 + "%";
-          rs.field_Cb.c(var17, vn.field_r[5] + param4, param6, param8, -1);
+          rs.field_Cb.drawCentred(var17, BattleSnapshot.field_r[5] + param4, param6, param8, -1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "sm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
@@ -717,7 +717,7 @@ final class sm {
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
         if (ce.field_x != null ||
-          null != in.field_g) {
+          null != SecondaryNodeHashTable.field_g) {
           oa.a(480, 0, 640, (byte) -126, 0);
         }
         var4 = this.c(32);
@@ -728,13 +728,13 @@ final class sm {
         }
         var7 = wm.a(param2, (byte) 99, 128);
         var9 = (640 - var4) / 2;
-        var10 = (int)((double)(qg.field_r[this.field_a] + 80) * (1.0 - var7));
+        var10 = (int)((double)(TutorialVictoryChecker.field_r[this.field_a] + 80) * (1.0 - var7));
         var11 = var9;
         var12 = 20 + var4;
         var13 = var5 - 10;
         var14 = var6 + 10;
-        ga.a(var14, var13, var11, (byte) -73, var12);
-        gf.a(s.field_f);
+        MidiPcmStream.a(var14, var13, var11, (byte) -73, var12);
+        gf.a(GzipInflater.field_f);
         var15 = var10 + (var9 - 20);
         var16 = var12 + var11;
         stackIn_8_0 = var11;
@@ -744,7 +744,7 @@ final class sm {
         this.e(var5, param1 + 14372);
         gf.d(var11, var13, var11 + var12, var14 + var13);
         mj.field_Hb[param0].e(var5, 7903);
-        gf.b(s.field_f);
+        gf.b(GzipInflater.field_f);
     }
 
     private final void c(byte param0) {
@@ -766,12 +766,12 @@ final class sm {
         int var6Lifetime1;
         int var6Lifetime1Lifetime1;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
-        gf.a(kc.field_m);
+        gf.a(MusicEnvelope.field_m);
         gf.a();
         if (param0 != -23) {
           discarded$0 = this.c(72, -48);
         }
-        if (w.d(true)) {
+        if (Dialog.d(true)) {
           this.d(param0 ^ -21);
           return;
         }
@@ -783,23 +783,23 @@ final class sm {
         var4 = this.b(false) - (-this.c(32) + var2 >> 1);
         var5 = this.h(param0 - 71) - var3 - 24;
         if (var2 > 20) {
-          ga.a(var3, var5, var4, (byte) -109, var2);
+          MidiPcmStream.a(var3, var5, var4, (byte) -109, var2);
         }
         regionExit1: {
           gf.d(var4 + 8, 8 + var5, var2 + (var4 - 8), -8 + (var3 + var5));
           var6 = 2805974;
           var7 = 16 + var5 + rs.field_Cb.field_J;
-          rs.field_Cb.c(bh.field_r, vn.field_r[1] + var4, var7, var6, -1);
-          rs.field_Cb.c(un.field_j, vn.field_r[2] + var4, var7, var6, -1);
-          rs.field_Cb.c(ld.field_q, var4 + vn.field_r[3], var7, var6, -1);
-          rs.field_Cb.c(hc.field_c, vn.field_r[4] + var4, var7, var6, -1);
-          rs.field_Cb.c(eo.field_X, vn.field_r[5] + var4, var7, var6, -1);
+          rs.field_Cb.drawCentred(BoundsRect.field_r, BattleSnapshot.field_r[1] + var4, var7, var6, -1);
+          rs.field_Cb.drawCentred(un.field_j, BattleSnapshot.field_r[2] + var4, var7, var6, -1);
+          rs.field_Cb.drawCentred(ld.field_q, var4 + BattleSnapshot.field_r[3], var7, var6, -1);
+          rs.field_Cb.drawCentred(hc.field_c, BattleSnapshot.field_r[4] + var4, var7, var6, -1);
+          rs.field_Cb.drawCentred(eo.field_X, BattleSnapshot.field_r[5] + var4, var7, var6, -1);
           var7 += 24;
           if (!ri.field_I.field_q) {
-            var8 = ea.field_d;
+            var8 = IsaacBackedRandom.field_d;
           } else {
             if (null != ri.field_I.field_n) {
-              var8 = ne.field_q;
+              var8 = BattleContribution.field_q;
               var9 = ri.field_I.field_n[ff.field_y];
               var10 = ri.field_I.field_m[ff.field_y];
               var11 = 0;
@@ -827,8 +827,8 @@ final class sm {
           }
         }
         var7Lifetime1 = (rs.field_Cb.field_J + var3 >> 1) + var5;
-        rs.field_Cb.c(var8, var4 + (var2 >> 1), var7Lifetime1, 2805974, -1);
-        gf.b(kc.field_m);
+        rs.field_Cb.drawCentred(var8, var4 + (var2 >> 1), var7Lifetime1, 2805974, -1);
+        gf.b(MusicEnvelope.field_m);
         return;
     }
 
@@ -842,11 +842,11 @@ final class sm {
         int var5 = this.b(false) - (var3 - this.c(32) >> 1);
         int var6 = -60 + this.h(-122) - var4 - 48;
         if (var3 > 20) {
-          ga.a(var4, var6, var5, (byte) -124, var3);
+          MidiPcmStream.a(var4, var6, var5, (byte) -124, var3);
         }
         gf.d(8 + var5, 8 + var6, var5 + var3 - 8, -8 + var6 + var4);
-        rs.field_Cb.c(fr.field_D, 320, (rs.field_Cb.field_J + var4 >> 1) + var6, 16777215, -1);
-        gf.b(kc.field_m);
+        rs.field_Cb.drawCentred(fr.field_D, 320, (rs.field_Cb.field_J + var4 >> 1) + var6, 16777215, -1);
+        gf.b(MusicEnvelope.field_m);
     }
 
     final void a(int param0, byte param1, boolean param2) {
@@ -872,15 +872,15 @@ final class sm {
         }
         RasterBuffer.field_e = -1;
         this.field_g = -1;
-        qg.field_q = cl.field_n;
+        TutorialVictoryChecker.field_q = cl.field_n;
         for (var4 = 1; 6 > var4; var4++) {
           Star.field_H[var4] = 0;
         }
-        o.field_s = 0;
+        WidgetTheme.field_s = 0;
         if (this.field_a == 8) {
           SecondaryNodeDeque.field_d = 0;
         }
-        ne.field_o = -1;
+        BattleContribution.field_o = -1;
         nc.field_t = 24;
         Star.field_H[0] = 24;
         if (cb.field_i == null && (6 == this.field_a ||
@@ -904,22 +904,22 @@ final class sm {
         if (param1 >= -34) {
           field_b = 112;
         }
-        var4 = qg.field_p[this.field_a][param0];
+        var4 = TutorialVictoryChecker.field_p[this.field_a][param0];
         var5 = this.c(-22609, var4);
         stackIn_5_0 = (!param2) ? 2458760 : 2805974;
         var6 = stackIn_5_0;
-        var7 = qg.field_l[this.field_a];
+        var7 = TutorialVictoryChecker.field_l[this.field_a];
         var8 = this.b(param0, true);
         var9 = this.c(param0, true);
         if (var4 != 21 &&
           var4 != 22) {
-          mp.field_b.d(var5, var8, mp.field_b.field_J + var9, var6, -1);
+          mp.field_b.drawString(var5, var8, mp.field_b.field_J + var9, var6, -1);
         } else {
-          mp.field_b.d(var5, var8, var9 + mp.field_b.field_J, var6, -1);
-          var8 = var8 + hg.field_t;
+          mp.field_b.drawString(var5, var8, var9 + mp.field_b.field_J, var6, -1);
+          var8 = var8 + IsolationistAi.field_t;
           gf.b(var8, -1 + (var9 + var7 / 2), 121, 2, var6);
           if (21 == var4) {
-            stackIn_11_0 = tf.field_p * 120 / 256;
+            stackIn_11_0 = CheckboxPainter.field_p * 120 / 256;
           } else {
             stackIn_11_0 = 120 * wm.field_b / 256;
           }
@@ -952,11 +952,11 @@ final class sm {
         if (!param0) {
           field_c = (String) null;
         }
-        for (var2 = 0; jd.field_j.length > var2; var2++) {
+        for (var2 = 0; CellVertex.field_j.length > var2; var2++) {
           if (var2 != RasterBuffer.field_e &&
             an.field_c != var2) {
             ql.field_o[var2] = null;
-            tr.field_sb[var2] = null;
+            MapView.field_sb[var2] = null;
           }
         }
         if (ek.field_A != 0) {
@@ -1000,15 +1000,15 @@ final class sm {
 
     private final int a(int param0, boolean param1) {
         int discarded$0 = 0;
-        int var3 = qg.field_p[this.field_a][param0];
+        int var3 = TutorialVictoryChecker.field_p[this.field_a][param0];
         if (param1) {
           discarded$0 = this.a(-113, (byte) 1, 62);
         }
         if (var3 == 21 ||
           22 == var3) {
-          return 120 + hg.field_t;
+          return 120 + IsolationistAi.field_t;
         }
-        return mp.field_b.c(this.c(-22609, var3));
+        return mp.field_b.stringWidth(this.c(-22609, var3));
     }
 
     private final void a(int param0, boolean param1, int param2, int param3) {
@@ -1114,8 +1114,8 @@ final class sm {
         if (!param1) {
           this.a(12, (byte) -40, false);
         }
-        var6 = -60 + qg.field_r[this.field_a];
-        var7 = -50 + qg.field_t[this.field_a];
+        var6 = -60 + TutorialVictoryChecker.field_r[this.field_a];
+        var7 = -50 + TutorialVictoryChecker.field_t[this.field_a];
         var8 = 1 + rs.field_Cb.field_J * 3 / 4;
         if (param2 != 0) {
           if (param2 != 1) {
@@ -1124,14 +1124,14 @@ final class sm {
                 if (ai.field_e == 1) {
                   param3 -= 5;
                 }
-                jm.field_r.c(5 + param3, 5 + param0);
+                jm.field_r.drawOpaque(5 + param3, 5 + param0);
                 var9 = param3 + 345;
                 var10 = 120;
                 this.a(0, gp.field_a, 5 + (param3 + 315), 8 + param0, param0 + 8, var9, var10, (byte) 62, 315 + (param3 + 5), 16711680);
                 this.a(16711680, 25 + param0, var9, 25 + param0, lr.field_f, 5, var10, param0 + 25, (byte) 110, 315 + param3 + 5);
                 this.a(16711680, 78 + (5 + param0), var9, 69 + param0, lh.field_u, 0, var10, 78 + param0 + 5, (byte) 110, param3 + 205);
                 this.a(16711680, 95 + (5 + param0), var9, 5 + param0 + 110, eo.field_kb, 0, var10, param0 + 115, (byte) 110, 5 + (param3 + 195));
-                this.a(16711680, param0 + 5 + 120, var9, param0 + 5 + 160, fi.field_h, 5, var10, 5 + (param0 + 200), (byte) 110, 5 + param3 + 86);
+                this.a(16711680, param0 + 5 + 120, var9, param0 + 5 + 160, StarLink.field_h, 5, var10, 5 + (param0 + 200), (byte) 110, 5 + param3 + 86);
                 return;
               }
               if (param2 == 4) {
@@ -1141,7 +1141,7 @@ final class sm {
                 var9Lifetime1 = 295 + param3;
                 var10Lifetime1 = 220;
                 var11 = 16711680;
-                hb.field_d.c(param3 + 5, param0 + 5);
+                hb.field_d.drawOpaque(param3 + 5, param0 + 5);
                 this.a(var11, param0 + 5, var9Lifetime1, 5 + param0 + 14, md.field_K, 5, var10Lifetime1, 32 + param0 + 5, (byte) 110, 250 + param3);
                 this.a(-5, nn.field_a, 139 + (5 + param3), 40 + param0 + 5, param0 + 85, var9Lifetime1, var10Lifetime1, (byte) 62, 5 + param3 + 139, var11);
                 this.a(var11, 5 + (param0 + 130), var9Lifetime1, 70 + param0 + 5, ProxySocketConnector.field_i, 5, var10Lifetime1, 100 + (5 + param0), (byte) 110, 188 + (5 + param3));
@@ -1153,19 +1153,19 @@ final class sm {
                   var12 = 390;
                 }
                 ai.a(true);
-                gf.b(16 * var12 + em.field_c[0], ul.field_Db[0] + param0 * 16, 50, 7, h.field_s);
-                rs.field_Cb.d(sk.field_i, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
+                gf.b(16 * var12 + em.field_c[0], ul.field_Db[0] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
+                rs.field_Cb.drawString(sk.field_i, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
-                gf.b(16 * var12 + em.field_c[0], ul.field_Db[0] + 16 * param0, 50, 7, h.field_s);
-                gf.b(em.field_c[1] + 16 * var12, 16 * param0 + ul.field_Db[1], 50, 7, h.field_s);
-                rs.field_Cb.d(pg.field_F, var12 + 22, rs.field_Cb.field_J / 4 + param0, 16777215, -1);
+                gf.b(16 * var12 + em.field_c[0], ul.field_Db[0] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
+                gf.b(em.field_c[1] + 16 * var12, 16 * param0 + ul.field_Db[1], 50, 7, MusicCrossfadeStream.field_s);
+                rs.field_Cb.drawString(pg.field_F, var12 + 22, rs.field_Cb.field_J / 4 + param0, 16777215, -1);
                 param0 += 40;
-                gf.b(16 * var12 + em.field_c[0], param0 * 16 + ul.field_Db[0], 50, 7, h.field_s);
-                gf.b(em.field_c[2] + var12 * 16, ul.field_Db[2] + 16 * param0, 50, 7, h.field_s);
-                gf.b(em.field_c[3] + var12 * 16, ul.field_Db[3] + param0 * 16, 50, 7, h.field_s);
-                rs.field_Cb.d(vd.field_n, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
+                gf.b(16 * var12 + em.field_c[0], param0 * 16 + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
+                gf.b(em.field_c[2] + var12 * 16, ul.field_Db[2] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
+                gf.b(em.field_c[3] + var12 * 16, ul.field_Db[3] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
+                rs.field_Cb.drawString(vd.field_n, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
-                qk.field_y[0].b(var12 - 15, param0 - 15, 30, 30);
+                qk.field_y[0].drawScaled(var12 - 15, param0 - 15, 30, 30);
                 var13 = cl.field_n % 104;
                 if (4 < var13 &&
                   48 >= var13) {
@@ -1173,16 +1173,16 @@ final class sm {
                 } else {
                   qk.field_y[12].c(-15 + var12, -15 + param0, 30, 30, 128);
                 }
-                rs.field_Cb.d(or.field_d[0], var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
+                rs.field_Cb.drawString(or.field_d[0], var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 return;
               }
               if (param2 == 5) {
                 var9_ref_bi = new Sprite(80, 80);
                 bs.a(var9_ref_bi, 90);
-                bd.field_G.a(40, 40, cl.field_n % 25 * 200, 16384);
+                bd.field_G.drawRotated(40, 40, cl.field_n % 25 * 200, 16384);
                 cg.i(0);
-                var9_ref_bi.d(param3 + 15, 8 + param0);
-                var42 = er.field_n;
+                var9_ref_bi.drawHalfSize(param3 + 15, 8 + param0);
+                var42 = WhirlpoolHasher.field_n;
                 var10Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var42), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((3 + var10Lifetime2 * 4) * var8 >> 2);
                 var11Lifetime1 = cl.field_n % 200;
@@ -1191,7 +1191,7 @@ final class sm {
                 var43 = ri.field_N;
                 var10Lifetime2Lifetime1 = rs.field_Cb.a(wg.field_e.a(5607, var43), param3 + 80, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((4 * var10Lifetime2Lifetime1 + 3) * var8 >> 2);
-                kj.field_f[cl.field_n % kj.field_f.length].f(5 + param3, 42 + param0);
+                kj.field_f[cl.field_n % kj.field_f.length].draw(5 + param3, 42 + param0);
                 var44 = rk.field_n;
                 var5 = var44;
                 var10Lifetime2Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var44), 80 + param3, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
@@ -1199,9 +1199,9 @@ final class sm {
                 return;
               }
               if (param2 == 6) {
-                var45 = (ArgbSprite) (fj.field_p);
+                var45 = (ArgbSprite) (MatchingTextValidator.field_p);
                 var10_ref_om = var45.h();
-                var10_ref_om.f();
+                var10_ref_om.rotate90();
                 var11Lifetime2 = cl.field_n % 200;
                 var12Lifetime1 = param3 + 35;
                 var13Lifetime1 = param0 + 40;
@@ -1210,9 +1210,9 @@ final class sm {
                   gf.c(var12Lifetime1, var13Lifetime1, 30, 16777215, 92);
                   ie.a(var10_ref_om, var10_ref_om.field_z << 3, var10_ref_om.field_w << 3, var12Lifetime1 * 16, var13Lifetime1 * 16, 0, 4096);
                   gf.c(var12Lifetime1, var13Lifetime1, 9, 0, 92);
-                  di.field_i[0].f(-(di.field_i[0].field_z / 2) + 30 + var12Lifetime1, var13Lifetime1 - di.field_i[0].field_w / 2);
-                  di.field_i[1].f(var12Lifetime1 - 30 - di.field_i[0].field_z / 2, var13Lifetime1 - di.field_i[0].field_w / 2);
-                  di.field_i[2].f(var12Lifetime1 - di.field_i[0].field_z / 2, 30 + (var13Lifetime1 - di.field_i[0].field_w / 2));
+                  di.field_i[0].draw(-(di.field_i[0].field_z / 2) + 30 + var12Lifetime1, var13Lifetime1 - di.field_i[0].field_w / 2);
+                  di.field_i[1].draw(var12Lifetime1 - 30 - di.field_i[0].field_z / 2, var13Lifetime1 - di.field_i[0].field_w / 2);
+                  di.field_i[2].draw(var12Lifetime1 - di.field_i[0].field_z / 2, 30 + (var13Lifetime1 - di.field_i[0].field_w / 2));
                   var14 = 4;
                   if (120 <= var11Lifetime2) {
                     var14 = 1;
@@ -1229,7 +1229,7 @@ final class sm {
                       var14 = 1;
                     }
                   }
-                  rs.field_Cb.c(Integer.toString(var14), var12Lifetime1, 4 + var13Lifetime1, 16777215, -1);
+                  rs.field_Cb.drawCentred(Integer.toString(var14), var12Lifetime1, 4 + var13Lifetime1, 16777215, -1);
                   if (var11Lifetime2 / 20 > 0 &&
                     var11Lifetime2 / 20 < 4 &&
                     var11Lifetime2 % 20 < 3) {
@@ -1245,7 +1245,7 @@ final class sm {
                     gf.b(var12Lifetime1, 30 + var13Lifetime1, di.field_i[2].field_z / 2, 16777215);
                   }
                 }
-                var32 = da.field_a;
+                var32 = DebouncedValidator.field_a;
                 var14 = rs.field_Cb.a(wg.field_e.a(5607, var32), 80 + param3, param0, var6 - 80, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + 4 * var14) >> 2);
                 var15 = cl.field_n % 50;
@@ -1264,7 +1264,7 @@ final class sm {
                 for (var16_intLifetime1 = 0; var16_intLifetime1 < 10; var16_intLifetime1++) {
                   gf.f(-(var16_intLifetime1 >> 1) + (param3 + 36), var16_intLifetime1 + param0 + 30, -2 & var16_intLifetime1, 16777215);
                 }
-                var33 = er.field_l;
+                var33 = WhirlpoolHasher.field_l;
                 var14 = rs.field_Cb.a(wg.field_e.a(5607, var33), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + var14 * 4) >> 2);
                 var16_intLifetime2 = cl.field_n / 100 % 3;
@@ -1295,7 +1295,7 @@ final class sm {
                     bs.a(var34, 83);
                     var20 = 0;
                     for (var21 = 0; 5 > var21; var21++) {
-                      var10_ref_om.f(var20, 0);
+                      var10_ref_om.draw(var20, 0);
                       var20 += 5;
                     }
                     cg.i(0);
@@ -1328,7 +1328,7 @@ final class sm {
                 if (null != oo.field_b) {
                   var19Lifetime2 = cl.field_n % 50;
                   for (var20Lifetime2 = 0; 5 > var20Lifetime2; var20Lifetime2++) {
-                    oo.field_b[var20Lifetime2] = re.a(er.field_q[var20Lifetime2], 50, var19Lifetime2, fg.field_c[var20Lifetime2], 0);
+                    oo.field_b[var20Lifetime2] = re.a(WhirlpoolHasher.field_q[var20Lifetime2], 50, var19Lifetime2, fg.field_c[var20Lifetime2], 0);
                   }
                   var20Lifetime2Lifetime1 = param3 + 10;
                   var21Lifetime2 = oo.field_b[0] + (10 + param0);
@@ -1361,8 +1361,8 @@ final class sm {
                 var16 = new String[16];
                 var17 = wg.field_e.a(5607, ph.field_d);
                 var18 = wg.field_e.a(5607, jb.field_h);
-                var19Lifetime1 = rs.field_Cb.a(var17, new int[]{var14}, var16);
-                var20Lifetime1 = rs.field_Cb.a(var18, new int[]{var15}, var16);
+                var19Lifetime1 = rs.field_Cb.wrapText(var17, new int[]{var14}, var16);
+                var20Lifetime1 = rs.field_Cb.wrapText(var18, new int[]{var15}, var16);
                 stackIn_96_0 = (var20Lifetime1 < var19Lifetime1) ? var19Lifetime1 : var20Lifetime1;
                 var10Lifetime3Lifetime1 = stackIn_96_0;
                 var10Lifetime3Lifetime2 = 3;
@@ -1376,8 +1376,8 @@ final class sm {
                 var11Lifetime3 = var11Lifetime3 + (rs.field_Cb.field_J + var21Lifetime1);
                 var17Lifetime1 = wg.field_e.a(5607, tb.field_b);
                 var18Lifetime1 = wg.field_e.a(5607, wq.field_c);
-                var19Lifetime1Lifetime1 = rs.field_Cb.a(var17Lifetime1, new int[]{var14}, var16);
-                var20Lifetime1Lifetime1 = rs.field_Cb.a(var18Lifetime1, new int[]{var15}, var16);
+                var19Lifetime1Lifetime1 = rs.field_Cb.wrapText(var17Lifetime1, new int[]{var14}, var16);
+                var20Lifetime1Lifetime1 = rs.field_Cb.wrapText(var18Lifetime1, new int[]{var15}, var16);
                 stackIn_99_0 = (var20Lifetime1Lifetime1 >= var19Lifetime1Lifetime1) ? var20Lifetime1Lifetime1 : var19Lifetime1Lifetime1;
                 var10Lifetime3Lifetime3 = stackIn_99_0;
                 var21Lifetime1Lifetime1 = var8 * var10Lifetime3Lifetime3 + var8;
@@ -1388,7 +1388,7 @@ final class sm {
                 this.a(param3 + 295, 16, -1, var11Lifetime3 + (var21Lifetime1Lifetime1 >> 1), (byte) -21, (100 + cl.field_n) % 200);
                 var11Lifetime3 = var11Lifetime3 + (var8 + var21Lifetime1Lifetime1);
                 var17Lifetime2 = wg.field_e.a(5607, of.field_a);
-                var10Lifetime3Lifetime4 = rs.field_Cb.a(var17Lifetime2, new int[]{200}, var16);
+                var10Lifetime3Lifetime4 = rs.field_Cb.wrapText(var17Lifetime2, new int[]{200}, var16);
                 var21Lifetime1Lifetime2 = var10Lifetime3Lifetime4 * var8 + var8;
                 if (40 > var21Lifetime1Lifetime2) {
                   var21Lifetime1Lifetime2 = 40;
@@ -1426,7 +1426,7 @@ final class sm {
                 return;
               }
               if (8 == param2) {
-                var38 = hs.field_g;
+                var38 = StandardMapGenerator.field_g;
                 var9Lifetime3 = rs.field_Cb.a(wg.field_e.a(5607, var38), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
                 this.a(param3 + 15, 20, 0, param0 + (rs.field_Cb.field_J * (var9Lifetime3 * 2 + 1) >> 2), (byte) -15, cl.field_n % 200);
                 param0 = param0 + ((3 + var9Lifetime3 * 4) * var8 >> 2);
@@ -1439,7 +1439,7 @@ final class sm {
                 var5 = var40;
                 var9Lifetime3Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var40), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
                 this.a(15 + param3, 20, 2, (rs.field_Cb.field_J * (2 * var9Lifetime3Lifetime2 + 1) >> 2) + param0, (byte) -82, (170 + cl.field_n) % 200);
-                var41 = ar.field_o;
+                var41 = ArchiveNetworkClient.field_o;
                 var5 = var41;
                 var5 = var41;
                 param0 = param0 + (var8 * (4 * var9Lifetime3Lifetime2 + 3) >> 2);
@@ -1452,12 +1452,12 @@ final class sm {
                 if (10 != param2) {
                   throw new RuntimeException();
                 }
-                var5 = DualLinkNode.field_m + ac.field_v;
+                var5 = DualLinkNode.field_m + DefendTask.field_v;
               } else {
                 var5 = dm.field_a;
               }
             } else {
-              var5 = jd.field_a;
+              var5 = CellVertex.field_a;
             }
           } else {
             var5 = ck.field_g;
@@ -1479,7 +1479,7 @@ final class sm {
         if (param0 != -20) {
           this.e((byte) 56);
         }
-        return qg.field_l[this.field_a];
+        return TutorialVictoryChecker.field_l[this.field_a];
     }
 
     private final void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
@@ -1503,7 +1503,7 @@ final class sm {
         }
         int var9 = 103 / ((param4 - 25) / 40);
         if (param2 != -1) {
-          co.field_p[param2].b(-param1 + param0, var8 + param3 - param1, 2 * param1, 2 * param1);
+          GarrisonTask.field_p[param2].drawScaled(-param1 + param0, var8 + param3 - param1, 2 * param1, 2 * param1);
         } else {
           bd.field_G.a(15, var8 + param3, 8192 * param1 / bd.field_G.field_z, param0, 200 * (cl.field_n % 25));
         }
@@ -1531,7 +1531,7 @@ final class sm {
         int var12;
         int var13;
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
-        var4 = 20 + (this.b(false) + qg.field_r[this.field_a]);
+        var4 = 20 + (this.b(false) + TutorialVictoryChecker.field_r[this.field_a]);
         var5 = 10 + this.h(-121);
         var6 = Star.field_H.length;
         if (param1 > var4) {
@@ -1544,8 +1544,8 @@ final class sm {
               var5 + 17 > param2) {
               return -2;
             }
-            if (-45 + (var5 + qg.field_t[this.field_a]) < param2 &&
-              qg.field_t[this.field_a] + (var5 - 23) > param2) {
+            if (-45 + (var5 + TutorialVictoryChecker.field_t[this.field_a]) < param2 &&
+              TutorialVictoryChecker.field_t[this.field_a] + (var5 - 23) > param2) {
               return -3;
             }
           }
@@ -1597,7 +1597,7 @@ final class sm {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!md.field_Q &&
           !is.field_a) {
-          while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
+          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (oq.field_j != 13) {
               this.k(23);
               if (this.field_d.field_c == -1) {
@@ -1610,10 +1610,10 @@ final class sm {
               this.field_a != 2 &&
               this.field_a != 3 &&
               this.field_a != 4) {
-              if (vr.field_c == 9) {
+              if (GameRules.field_c == 9) {
                 continue;
               }
-              var2 = br.field_m;
+              var2 = MusicPatch.field_m;
               ta.a(0, var2, (byte) 96, false);
               continue;
             }
@@ -1627,7 +1627,7 @@ final class sm {
             this.a(-16084);
           }
           v.a((byte) -128);
-          this.field_d.a(param0 ^ -2665, this.a(td.field_P, (byte) -109, nh.field_p), this.a(bb.field_b, (byte) -109, pd.field_k));
+          this.field_d.a(param0 ^ -2665, this.a(SliderWidget.field_P, (byte) -109, PointsVictoryChecker.field_p), this.a(bb.field_b, (byte) -109, pd.field_k));
           if (this.field_d.field_c != -1) {
             this.a(true, this.field_d.field_c, false);
           }
@@ -1668,7 +1668,7 @@ final class sm {
         }
         if (je.field_d == 0) {
         } else {
-          var2 = this.d(84, nh.field_p, td.field_P);
+          var2 = this.d(84, PointsVictoryChecker.field_p, SliderWidget.field_P);
           if (var2 == an.field_c) {
             an.field_c = -1;
           } else {
@@ -1682,33 +1682,33 @@ final class sm {
     private final int b(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        if (vr.field_c != this.field_a &&
+        if (GameRules.field_c != this.field_a &&
           this.field_a != gr.field_o) {
           return 0;
         }
-        if (nh.a((byte) -124, vr.field_c) && nh.a((byte) -75, gr.field_o) &&
-          vr.field_c != gr.field_o) {
-          var2 = qg.field_p[vr.field_c].length * qg.field_l[vr.field_c] + (qg.field_t[vr.field_c] + 10);
-          var3 = qg.field_t[gr.field_o] + qg.field_l[gr.field_o] * qg.field_p[gr.field_o].length + 10;
+        if (PointsVictoryChecker.a((byte) -124, GameRules.field_c) && PointsVictoryChecker.a((byte) -75, gr.field_o) &&
+          GameRules.field_c != gr.field_o) {
+          var2 = TutorialVictoryChecker.field_p[GameRules.field_c].length * TutorialVictoryChecker.field_l[GameRules.field_c] + (TutorialVictoryChecker.field_t[GameRules.field_c] + 10);
+          var3 = TutorialVictoryChecker.field_t[gr.field_o] + TutorialVictoryChecker.field_l[gr.field_o] * TutorialVictoryChecker.field_p[gr.field_o].length + 10;
           return re.a(var2, 32, eh.field_Q, var3, 0);
         }
         if (param0 != -98) {
           this.field_h = -2;
         }
-        return qg.field_l[this.field_a] * qg.field_p[this.field_a].length + qg.field_t[this.field_a] + 10;
+        return TutorialVictoryChecker.field_l[this.field_a] * TutorialVictoryChecker.field_p[this.field_a].length + TutorialVictoryChecker.field_t[this.field_a] + 10;
     }
 
     private final void d(int param0, int param1) {
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        o.field_s = param1;
-        pr.field_g = 0 != jn.field_b ? re.a(pr.field_g, 32, jn.field_b, ac.field_w, 0) : ac.field_w;
-        ac.field_w = 0;
+        WidgetTheme.field_s = param1;
+        pr.field_g = 0 != jn.field_b ? re.a(pr.field_g, 32, jn.field_b, DefendTask.field_w, 0) : DefendTask.field_w;
+        DefendTask.field_w = 0;
         if (param0 != 4) {
           this.a((String) null, -102, (byte) 82, -77, 35, 32, 13, -31, 45, 70);
         }
         for (var3 = 0; var3 < param1; var3++) {
-          ac.field_w = ac.field_w + cb.field_i[var3];
+          DefendTask.field_w = DefendTask.field_w + cb.field_i[var3];
         }
         jn.field_b = 1;
     }
@@ -1722,7 +1722,7 @@ final class sm {
 
     final void g(int param0) {
         if (null != ce.field_x ||
-          in.field_g != null) {
+          SecondaryNodeHashTable.field_g != null) {
           oa.a(480, 0, 640, (byte) -116, 0);
         }
         int var2 = this.c(32);
@@ -1734,7 +1734,7 @@ final class sm {
         int var8 = var4 - 10;
         int var9 = var3 + 10;
         int var10 = 127 / ((param0 - 15) / 60);
-        ga.a(var9, var8, var6, (byte) -72, var7);
+        MidiPcmStream.a(var9, var8, var6, (byte) -72, var7);
         this.e(var4, 7903);
     }
 
@@ -1761,7 +1761,7 @@ final class sm {
         if (param2) {
           field_e = true;
         }
-        var4 = qg.field_p[this.field_a][param1];
+        var4 = TutorialVictoryChecker.field_p[this.field_a][param1];
         if (this.field_d.d(-1)) {
           this.b(param1, param0, var4, -32580);
         }
@@ -1778,17 +1778,17 @@ final class sm {
           if (var6 == 21) {
             var5 = 0;
             if (this.field_d.a(-1) &&
-              tf.field_p > 0) {
+              CheckboxPainter.field_p > 0) {
               js.a(0, 197126152);
               var5 = 1;
             }
             if (this.field_d.a(true) &&
-              tf.field_p < 256) {
+              CheckboxPainter.field_p < 256) {
               var5 = 1;
               js.a(256, 197126152);
             }
             if (this.field_d.b((byte) -50)) {
-              var6 = this.b(param1, true) + this.a(true, param1) + hg.field_t - 120 >> 1;
+              var6 = this.b(param1, true) + this.a(true, param1) + IsolationistAi.field_t - 120 >> 1;
               var7 = pd.field_k - var6;
               var8 = 256 * var7 / 120;
               if (0 < var8) {
@@ -1803,49 +1803,49 @@ final class sm {
               var5 = 1;
             }
             if (this.field_d.c(-97) &&
-              tf.field_p > 0) {
+              CheckboxPainter.field_p > 0) {
               var5 = 1;
               DualLinkNode.c(!param2);
             }
             if (this.field_d.f(-97) &&
-              tf.field_p < 256) {
+              CheckboxPainter.field_p < 256) {
               var5 = 1;
-              cc.f((byte) 124);
+              PasswordValidator.f((byte) 124);
             }
             if (((var5 != 0)) && ((!(this.field_d.b((byte) -114)) ||
-              !(cl.field_n <= qg.field_q)))) {
-              qk.a(qc.field_w, 89);
-              qg.field_q = 25 + cl.field_n;
+              !(cl.field_n <= TutorialVictoryChecker.field_q)))) {
+              qk.a(SocketArchiveNetworkClient.field_w, 89);
+              TutorialVictoryChecker.field_q = 25 + cl.field_n;
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             if (var6 == 22) {
               if (this.field_d.a(-1)) {
-                ak.c(-68, 0);
+                DiskArchiveRequest.c(-68, 0);
               }
               if (this.field_d.a(true)) {
-                ak.c(-61, 256);
+                DiskArchiveRequest.c(-61, 256);
               }
               if (this.field_d.b((byte) -73)) {
                 stackIn_92_0 = -120;
                 stackIn_92_1 = this.b(param1, true);
                 stackIn_93_3 = !(param2);
-                var6 = stackIn_92_0 + (stackIn_92_1 - (-this.a(stackIn_93_3, param1) - hg.field_t)) >> 1;
+                var6 = stackIn_92_0 + (stackIn_92_1 - (-this.a(stackIn_93_3, param1) - IsolationistAi.field_t)) >> 1;
                 var7Lifetime1 = pd.field_k - var6;
                 var8Lifetime1 = 256 * var7Lifetime1 / 120;
                 if (var8Lifetime1 <= 0) {
-                  ak.c(127, 0);
+                  DiskArchiveRequest.c(127, 0);
                 } else {
                   if (256 > var8Lifetime1) {
-                    ak.c(-66, var8Lifetime1);
+                    DiskArchiveRequest.c(-66, var8Lifetime1);
                   } else {
-                    ak.c(127, 256);
+                    DiskArchiveRequest.c(127, 256);
                   }
                 }
               }
               if (this.field_d.c(-97)) {
-                qs.d(!param2);
+                SingleChildWidget.d(!param2);
               }
               if (this.field_d.f(-77)) {
                 jn.a(11615);
@@ -1911,7 +1911,7 @@ final class sm {
         var27 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = 52;
         var3 = 140;
-        gf.a(kc.field_m);
+        gf.a(MusicEnvelope.field_m);
         var4 = var2;
         gf.a();
         for (var6 = 0; var6 < 25; var6++) {
@@ -1937,13 +1937,13 @@ final class sm {
               if (var5 == 0) {
                 stackIn_24_0 = n.field_k;
               } else {
-                stackIn_24_0 = mr.a(var6, -106);
+                stackIn_24_0 = DerelictMapReader.a(var6, -106);
               }
               var8Lifetime2 = stackIn_24_0;
               if (var5 == 0) {
-                stackIn_27_0 = pc.field_n;
+                stackIn_27_0 = DerelictMapGenerator.field_n;
               } else {
-                stackIn_27_0 = jd.field_j[var6];
+                stackIn_27_0 = CellVertex.field_j[var6];
               }
               var30 = stackIn_27_0;
               var9_ref_biLifetime1 = var30;
@@ -1983,8 +1983,8 @@ final class sm {
             var4 = var2 + 21;
           }
         }
-        if (gl.field_h == null) {
-          gl.field_h = new Sprite(256, 256);
+        if (DisplayModeInfo.field_h == null) {
+          DisplayModeInfo.field_h = new Sprite(256, 256);
         }
         if (il.field_gb == null) {
           il.field_gb = new Sprite(256, 256);
@@ -2002,18 +2002,18 @@ final class sm {
         }
         var5Lifetime1 = stackIn_48_0;
         if (var5Lifetime1 == 0) {
-          var7 = pc.field_n;
+          var7 = DerelictMapGenerator.field_n;
           var8Lifetime1 = n.field_k;
         } else {
-          var7 = jd.field_j[var6];
-          var8Lifetime1 = mr.a(var6, -94);
+          var7 = CellVertex.field_j[var6];
+          var8Lifetime1 = DerelictMapReader.a(var6, -94);
         }
-        ra.a(-106);
-        gl.field_h.e();
+        RandomAccessCacheFile.a(-106);
+        DisplayModeInfo.field_h.bindAsRenderTarget();
         gf.b();
-        var7.b(0, 0, 256, 256);
-        il.field_gb.e();
-        var8Lifetime1.c(0, 0);
+        var7.drawScaled(0, 0, 256, 256);
+        il.field_gb.bindAsRenderTarget();
+        var8Lifetime1.drawOpaque(0, 0);
         cg.i(0);
         var9 = 64 + (int)(64.0 * Math.cos(3.141592653589793 * (double)(cl.field_n * 2) / 150.0));
         var10 = re.a(0, 32, le.field_b, 600, 0);
@@ -2021,33 +2021,33 @@ final class sm {
         var12 = (640 - var10) / 2;
         var13 = 220;
         if (20 < var10) {
-          ga.a(var11, var13, var12, (byte) -124, var10);
+          MidiPcmStream.a(var11, var13, var12, (byte) -124, var10);
         }
         gf.d(10 + var12, var13, var12 + var10 - 10, var11 + var13);
         var14 = 98;
-        var15 = (qg.field_m[this.field_a] >> 1) + 24;
+        var15 = (TutorialVictoryChecker.field_m[this.field_a] >> 1) + 24;
         var16 = 128;
         var17 = 113 / ((87 - param0) / 34);
         gf.a(-(var16 >> 5) - (var16 >> 1) + var14, var15 + 6, var16 + (var16 >> 4), 136, 10, 0, 128);
-        gf.f(-(var16 >> 1) + (var14 - (var16 >> 5)), 6 + var15, (var16 >> 4) + var16, 136, 10, ui.a(3974311, 0, -95, 128));
+        gf.f(-(var16 >> 1) + (var14 - (var16 >> 5)), 6 + var15, (var16 >> 4) + var16, 136, 10, SolVictoryChecker.a(3974311, 0, -95, 128));
         il.field_gb.c(-var16 + var14, -54 + var15, var16 << 1, 256, var9);
-        gl.field_h.c(var14 - (var16 >> 1), 10 + var15, var16, 128, 256);
+        DisplayModeInfo.field_h.c(var14 - (var16 >> 1), 10 + var15, var16, 128, 256);
         var18 = 350;
         var2Lifetime1 = 24 + this.b(false) + (this.c(32) + 16) - var18;
         var19 = 136;
         var20 = -var19 + (-34 + this.h(-110));
         gf.a(var2Lifetime1, var20, var18, var19, 10, 0, 128);
-        gf.f(var2Lifetime1, var20, var18, var19, 10, ui.a(3974311, 0, -118, 128));
+        gf.f(var2Lifetime1, var20, var18, var19, 10, SolVictoryChecker.a(3974311, 0, -118, 128));
         if (-1 != var6 &&
           var6 != 24) {
-          mp.field_b.d(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + mp.field_b.field_J), 2805974, -1);
+          mp.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + mp.field_b.field_J), 2805974, -1);
           var21_ref_String = "(" + re.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
           var22 = rs.field_Cb.a(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           var22 = var22 + (1 + rs.field_Cb.a(ul.field_Qb[var6], 10 + var2Lifetime1, rs.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * rs.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J));
           rs.field_Cb.a(a.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
         } else {
           if (var6 == 24) {
-            mp.field_b.d(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + mp.field_b.field_J, 2805974, -1);
+            mp.field_b.drawString(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + mp.field_b.field_J, 2805974, -1);
             if (var5Lifetime1 != 0) {
               var21_ref_String = "(" + re.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
               var22_ref_String = ul.field_Qb[var6];
@@ -2060,10 +2060,10 @@ final class sm {
             rs.field_Cb.a(a.field_i, var2Lifetime1 + 10, (var23 + 1) * rs.field_Cb.field_J + 14 + var20, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           } else {
             if (!oe.field_e) {
-              mp.field_b.d(VictoryChecker.field_c.toUpperCase(), var2Lifetime1 + 10, mp.field_b.field_J + (6 + var20), 2805974, -1);
+              mp.field_b.drawString(VictoryChecker.field_c.toUpperCase(), var2Lifetime1 + 10, mp.field_b.field_J + (6 + var20), 2805974, -1);
               rs.field_Cb.a(rk.field_l, 10 + var2Lifetime1, var20 + 14 + rs.field_Cb.field_J, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
             } else {
-              mp.field_b.d(ol.field_j.toUpperCase(), 10 + var2Lifetime1, var20 + 6 + mp.field_b.field_J, 2805974, -1);
+              mp.field_b.drawString(WeightedLruCache.field_j.toUpperCase(), 10 + var2Lifetime1, var20 + 6 + mp.field_b.field_J, 2805974, -1);
               rs.field_Cb.a(SocketConnector.field_c, 10 + var2Lifetime1, rs.field_Cb.field_J + var20 + 14, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
             }
           }
@@ -2079,7 +2079,7 @@ final class sm {
           var2Lifetime2 = 89 + var14;
           var20Lifetime1 = -(var21 >> 1) + (var15 + 74);
           gf.a(var2Lifetime2, var20Lifetime1, var18Lifetime1, var21, 10, 0, 128);
-          gf.f(var2Lifetime2, var20Lifetime1, var18Lifetime1, var21, 10, ui.a(3974311, 0, -122, 128));
+          gf.f(var2Lifetime2, var20Lifetime1, var18Lifetime1, var21, 10, SolVictoryChecker.a(3974311, 0, -122, 128));
           gf.d(4 + var2Lifetime2, 4 + var20Lifetime1, var18Lifetime1 + var2Lifetime2 - 4, -4 + var21 + var20Lifetime1);
           if (var6 != -1 && (var6 != 24 ||
             var5Lifetime1 != 0)) {
@@ -2099,7 +2099,7 @@ final class sm {
             }
           }
         }
-        gf.b(kc.field_m);
+        gf.b(MusicEnvelope.field_m);
     }
 
     private final int b(int param0, boolean param1) {
@@ -2128,10 +2128,10 @@ final class sm {
         if (oq.field_j == 4) {
           em.a(mq.c((byte) 67), 1);
         }
-        if (vr.field_c == 6) {
+        if (GameRules.field_c == 6) {
           this.e(170);
         } else {
-          if (11 == vr.field_c) {
+          if (11 == GameRules.field_c) {
             this.field_d.e(85);
           } else {
             this.field_d.b(0);
@@ -2155,16 +2155,16 @@ final class sm {
         String[] var16 = null;
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var16 = vi.a(param7, (byte) 119, param8, new int[]{param4});
+          var16 = TutorialMapGenerator.a(param7, (byte) 119, param8, new int[]{param4});
           var11 = var16;
           for (var12 = 0; var12 < var11.length; var12++) {
             var13 = var11[var12];
             param2 = param2 + param0;
-            var14 = param7.c(var13);
+            var14 = param7.stringWidth(var13);
             if (4 * var14 >= param4 * 3) {
               param7.b(var13, param3, param2, param5, -1, param4);
             } else {
-              param7.d(var13, param3, param2, param5, -1);
+              param7.drawString(var13, param3, param2, param5, -1);
             }
           }
           if (param1 != -91) {
@@ -2213,14 +2213,14 @@ final class sm {
           ie.a(SpriteState.field_q, param0, param6);
           gf.b(var17);
         }
-        rs.field_Cb.c(Integer.toString(param3), var8 / 2 + param0, 10 + param6 + param2, 16777215, -1);
+        rs.field_Cb.drawCentred(Integer.toString(param3), var8 / 2 + param0, 10 + param6 + param2, 16777215, -1);
     }
 
     private final void a(int param0, byte param1) {
         int var5 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3 = Star.field_H.length;
-        int var4 = ac.field_w + 147;
+        int var4 = DefendTask.field_w + 147;
         for (var5 = 0; var5 < var3; var5++) {
           var4 = var4 - cb.field_i[var5];
           if (var4 < 0) {
@@ -2239,7 +2239,7 @@ final class sm {
 
     sm(int param0) {
         this.field_a = param0;
-        this.field_d = new np(qg.field_p[this.field_a].length);
+        this.field_d = new np(TutorialVictoryChecker.field_p[this.field_a].length);
         Star.field_H = new int[pe.field_J.length];
         this.a(0, (byte) 28, false);
     }
@@ -2266,9 +2266,9 @@ final class sm {
               ta.a(0, -4, (byte) 96, var6 != 0);
             } else {
               if (var5 == 1) {
-                if (w.d(true)) {
+                if (Dialog.d(true)) {
                   var5 = 0;
-                  uc.a(320, mp.field_b.field_K, mp.field_b.field_K + mp.field_b.field_q, 240, 8, se.field_a, param1, mr.field_i, (byte) -87, 2, mr.field_i, mp.field_b, false, 8, var5);
+                  uc.a(320, mp.field_b.field_K, mp.field_b.field_K + mp.field_b.field_q, 240, 8, AchievementProgress.field_a, param1, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, mp.field_b, false, 8, var5);
                 } else {
                   this.field_g = param0;
                   var5 = param1 ? 1 : 0;
@@ -2302,7 +2302,7 @@ final class sm {
                             if (6 != var5) {
                               if (var5 == 9) {
                                 this.field_g = param0;
-                                var5 = br.field_m;
+                                var5 = MusicPatch.field_m;
                                 var6 = param1 ? 1 : 0;
                                 ta.a(gr.field_o, var5, (byte) 96, var6 != 0);
                               } else {
@@ -2315,11 +2315,11 @@ final class sm {
                                     var5 != 22) {
                                     if (var5 == 7) {
                                       if (null != bj.field_K) {
-                                        ej.c(param3 ^ -32580);
+                                        BufferedCacheFile.c(param3 ^ -32580);
                                       } else {
                                         var5 = param1 ? 1 : 0;
-                                        ne.field_s = false;
-                                        m.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, mr.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, mr.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, es.field_n);
+                                        BattleContribution.field_s = false;
+                                        StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, DerelictMapReader.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, DerelictMapReader.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, StarAnnotation.field_n);
                                         fm.a(var5 != 0, -1);
                                       }
                                       break regionExit1;
@@ -2328,7 +2328,7 @@ final class sm {
                                       this.field_g = param0;
                                       ce.field_x.a(false, param1);
                                       lg.field_b = true;
-                                      cs.field_i = false;
+                                      Wormhole.field_i = false;
                                     } else {
                                       if (11 == var5) {
                                         this.field_g = param0;
@@ -2360,12 +2360,12 @@ final class sm {
                                                   } else {
                                                     if (var5 == 24) {
                                                       if (this.field_a != 8 &&
-                                                        5 != vr.field_c) {
+                                                        5 != GameRules.field_c) {
                                                         if ((this.field_a == 11)) {
-                                                          ts.a(kq.f((byte) 126), (byte) 51);
+                                                          ts.a(GameScreen.f((byte) 126), (byte) 51);
                                                         }
                                                       } else {
-                                                        qk.a(se.field_a, this.field_a, (byte) 123);
+                                                        qk.a(AchievementProgress.field_a, this.field_a, (byte) 123);
                                                       }
                                                       break regionExit1;
                                                     }
@@ -2379,18 +2379,18 @@ final class sm {
                                                     } else {
                                                       if (var5 == 20) {
                                                         this.field_g = param0;
-                                                        da.a(param3 ^ -32579, kq.f((byte) 127));
+                                                        DebouncedValidator.a(param3 ^ -32579, GameScreen.f((byte) 127));
                                                       } else {
                                                         if (27 == var5) {
                                                           var5 = param1 ? 1 : 0;
                                                           ta.a(gr.field_o, -3, (byte) 96, var5 != 0);
                                                         } else {
                                                           if (var5 == 28) {
-                                                            hj.field_k = hj.field_k + 1;
-                                                            if (hj.field_k == 4) {
-                                                              hj.field_k = 0;
+                                                            PlacementEvent.field_k = PlacementEvent.field_k + 1;
+                                                            if (PlacementEvent.field_k == 4) {
+                                                              PlacementEvent.field_k = 0;
                                                             }
-                                                            var5 = hj.field_k;
+                                                            var5 = PlacementEvent.field_k;
                                                             switch (var5) {
                                                               case 0:
                                                                 oq.field_i[28] = lm.field_a;
@@ -2409,22 +2409,22 @@ final class sm {
                                                             }
                                                           }
                                                           if (var5 == 29) {
-                                                            if (TaskAi.field_a != td.field_K) {
-                                                              oq.field_i[29] = tp.field_k;
-                                                              td.field_K = TaskAi.field_a;
+                                                            if (TaskAi.field_a != SliderWidget.field_K) {
+                                                              oq.field_i[29] = SliderPainter.field_k;
+                                                              SliderWidget.field_K = TaskAi.field_a;
                                                             } else {
-                                                              td.field_K = ec.field_s;
+                                                              SliderWidget.field_K = UsernameAvailabilityValidator.field_s;
                                                               oq.field_i[29] = og.field_a;
                                                             }
                                                             break regionExit1;
                                                           }
                                                           if (32 == var5) {
-                                                            if (oq.field_i[32] == ga.field_L) {
+                                                            if (oq.field_i[32] == MidiPcmStream.field_L) {
                                                               hk.field_nb = js.field_i;
-                                                              oq.field_i[32] = rj.field_r;
+                                                              oq.field_i[32] = RecklessAi.field_r;
                                                               jo.a(32767, hk.field_nb, true, 50);
                                                             } else {
-                                                              oq.field_i[32] = ga.field_L;
+                                                              oq.field_i[32] = MidiPcmStream.field_L;
                                                               hk.field_nb = wp.field_a;
                                                               jo.a(32767, hk.field_nb, true, 50);
                                                             }
@@ -2441,7 +2441,7 @@ final class sm {
                                                 var5 = param1 ? 1 : 0;
                                                 ta.a(gr.field_o, -7, (byte) 96, var5 != 0);
                                               }
-                                              if (kc.field_d) {
+                                              if (MusicEnvelope.field_d) {
                                                 os.a(0, 11, true);
                                               }
                                             }
@@ -2503,19 +2503,19 @@ final class sm {
     }
 
     private final int h(int param0) {
-        if (vr.field_c != this.field_a &&
+        if (GameRules.field_c != this.field_a &&
           this.field_a != gr.field_o) {
           return 0;
         }
         if (param0 > -92) {
           this.e((byte) 113);
         }
-        if (gr.field_o != vr.field_c &&
-          nh.a((byte) -119, vr.field_c) &&
-          nh.a((byte) -88, gr.field_o)) {
-          return re.a(qg.field_m[vr.field_c], 32, eh.field_Q, qg.field_m[gr.field_o], 0);
+        if (gr.field_o != GameRules.field_c &&
+          PointsVictoryChecker.a((byte) -119, GameRules.field_c) &&
+          PointsVictoryChecker.a((byte) -88, gr.field_o)) {
+          return re.a(TutorialVictoryChecker.field_m[GameRules.field_c], 32, eh.field_Q, TutorialVictoryChecker.field_m[gr.field_o], 0);
         }
-        return qg.field_m[this.field_a];
+        return TutorialVictoryChecker.field_m[this.field_a];
     }
 
     private final String c(int param0, int param1) {
@@ -2535,19 +2535,19 @@ final class sm {
         }
         boolean decompiledFrameRemainder0 = true;
         if (param1 == 9) {
-          if (br.field_m != 0 &&
+          if (MusicPatch.field_m != 0 &&
             gr.field_o != 0 &&
-            br.field_m != 11 &&
+            MusicPatch.field_m != 11 &&
             gr.field_o != 11 &&
-            br.field_m != 13 &&
+            MusicPatch.field_m != 13 &&
             gr.field_o != 13) {
-            if (1 != br.field_m &&
+            if (1 != MusicPatch.field_m &&
               gr.field_o != 1) {
-              if ((2 == br.field_m ||
+              if ((2 == MusicPatch.field_m ||
                 gr.field_o == 2 ||
-                br.field_m == 3 ||
+                MusicPatch.field_m == 3 ||
                 gr.field_o == 3 ||
-                br.field_m == 4 ||
+                MusicPatch.field_m == 4 ||
                 4 == gr.field_o)) {
                 var3Lifetime2 = ep.field_d;
               }
@@ -2563,7 +2563,7 @@ final class sm {
         if (param1 == 10 &&
           null != ce.field_x &&
           ce.field_x.field_W) {
-          var3Lifetime2 = ua.field_g;
+          var3Lifetime2 = SectorCacheStore.field_g;
         }
         if (param0 != -22609) {
           return (String) null;
@@ -2578,7 +2578,7 @@ final class sm {
         if (!param1) {
           return 40;
         }
-        return this.h(-105) + (qg.field_t[this.field_a] + qg.field_l[this.field_a] * param0);
+        return this.h(-105) + (TutorialVictoryChecker.field_t[this.field_a] + TutorialVictoryChecker.field_l[this.field_a] * param0);
     }
 
     private final void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7, byte param8, int param9) {
@@ -2748,14 +2748,14 @@ final class sm {
         var32Lifetime1 -= 16384;
         var32Lifetime1 = -3800 + (var32Lifetime1 + param1 * 7600 / 200);
         if (!param3) {
-          stackIn_23_0 = fj.field_p;
+          stackIn_23_0 = MatchingTextValidator.field_p;
         } else {
           stackIn_23_0 = eq.field_o;
         }
-        ie.a((ArgbSprite) (stackIn_23_0), fj.field_p.field_z << 3, fj.field_p.field_w << 3, var30, var31, var32Lifetime1, 4096);
+        ie.a((ArgbSprite) (stackIn_23_0), MatchingTextValidator.field_p.field_z << 3, MatchingTextValidator.field_p.field_w << 3, var30, var31, var32Lifetime1, 4096);
         if (param8) {
           gf.c(var30 >> 4, var31 >> 4, 9, 0, 92);
-          rs.field_Cb.c(Integer.toString(param7), var30 >> 4, 4 + (var31 >> 4), 16777215, -1);
+          rs.field_Cb.drawCentred(Integer.toString(param7), var30 >> 4, 4 + (var31 >> 4), 16777215, -1);
         }
     }
 
@@ -2767,7 +2767,7 @@ final class sm {
         if (param1 != -109) {
           this.field_h = 86;
         }
-        for (var4 = 0; qg.field_p[this.field_a].length > var4; var4++) {
+        for (var4 = 0; TutorialVictoryChecker.field_p[this.field_a].length > var4; var4++) {
           var5 = this.c(var4, true);
           if (this.a((byte) 44, var4) &&
             param2 >= this.b(var4, true) &&
@@ -2809,22 +2809,22 @@ final class sm {
     }
 
     private final int c(int param0) {
-        if (vr.field_c != this.field_a &&
+        if (GameRules.field_c != this.field_a &&
           this.field_a != gr.field_o) {
           return 0;
         }
-        if (gr.field_o == vr.field_c) {
-          return qg.field_r[vr.field_c];
+        if (gr.field_o == GameRules.field_c) {
+          return TutorialVictoryChecker.field_r[GameRules.field_c];
         }
-        if (nh.a((byte) -103, vr.field_c) &&
-          nh.a((byte) -125, gr.field_o)) {
-          return re.a(qg.field_r[vr.field_c], 32, eh.field_Q, qg.field_r[gr.field_o], 0);
+        if (PointsVictoryChecker.a((byte) -103, GameRules.field_c) &&
+          PointsVictoryChecker.a((byte) -125, gr.field_o)) {
+          return re.a(TutorialVictoryChecker.field_r[GameRules.field_c], 32, eh.field_Q, TutorialVictoryChecker.field_r[gr.field_o], 0);
         }
         double var2 = wm.a(eh.field_Q, (byte) 109, param0);
-        if (this.field_a == vr.field_c) {
+        if (this.field_a == GameRules.field_c) {
           var2 = -var2 + 1.0;
         }
-        return (int)((double)qg.field_r[this.field_a] * var2);
+        return (int)((double)TutorialVictoryChecker.field_r[this.field_a] * var2);
     }
 
     static {

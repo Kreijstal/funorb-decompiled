@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pg extends qs {
+final class pg extends SingleChildWidget {
     private int field_K;
     private int field_H;
     static String field_E;
@@ -23,7 +23,7 @@ final class pg extends qs {
     }
 
     pg(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, nq param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (iq) null, (ko) null);
+        super(param0, param1, param2, param3, (WidgetPainter) null, (WidgetListener) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -48,7 +48,7 @@ final class pg extends qs {
           stackIn_4_1 = (param5);
           this.field_I = stackIn_4_1;
           var12_int = -this.field_K + this.field_H;
-          var13 = this.field_G.c(param10, var12_int, this.field_G.field_J) + this.field_K * 2;
+          var13 = this.field_G.textHeight(param10, var12_int, this.field_G.field_J) + this.field_K * 2;
           if (param3 < var13) {
             this.a(param1, var13, (byte) 102, param0, param2);
           } else {

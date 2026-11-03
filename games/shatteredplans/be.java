@@ -130,12 +130,12 @@ final class be extends IntrusiveNode {
           }
           sb.field_h = param6;
           ks.field_e = param8;
-          ec.field_p = -1L;
+          UsernameAvailabilityValidator.field_p = -1L;
           em.field_k = param8.length;
           he.field_p = null;
           np.field_a = null;
           id.field_c = new byte[(sb.field_h + 7) / 8];
-          k.field_i = false;
+          TurnEventLog.field_i = false;
           var10_int = 0;
           for (var11 = 0; var11 < ks.field_e.length; var11++) {
             var10_int = var10_int + (ks.field_e[var11] & 255);
@@ -146,24 +146,24 @@ final class be extends IntrusiveNode {
             param7.field_M = new IntrusiveDeque();
           }
           gr.field_p = param7.field_M;
-          gr.field_p.a(0);
-          ShatteredPlansClient.field_H = new in(param1);
+          gr.field_p.clear(0);
+          ShatteredPlansClient.field_H = new SecondaryNodeHashTable(param1);
           a.field_j = -1;
-          bh.field_h = -1;
+          BoundsRect.field_h = -1;
           ah.field_X = 0;
           GameApplet.field_g = 0;
           if (param0.field_M == null) {
             param0.field_M = new IntrusiveDeque();
           }
           kj.field_a = param0.field_M;
-          kj.field_a.a(0);
-          ea.field_b = new in(param3);
+          kj.field_a.clear(0);
+          IsaacBackedRandom.field_b = new SecondaryNodeHashTable(param3);
           if (param2.field_M == null) {
             param2.field_M = new IntrusiveDeque();
           }
           uo.field_a = param2.field_M;
-          uo.field_a.a(0);
-          qp.field_w = new in(param4);
+          uo.field_a.clear(0);
+          qp.field_w = new SecondaryNodeHashTable(param4);
           sf.field_e = 0L;
           ks.field_i = param9;
           return;

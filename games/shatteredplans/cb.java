@@ -31,10 +31,10 @@ final class cb extends le {
 
     final static boolean c(byte param0) {
         int var1 = 72 / ((param0 + 17) / 62);
-        if (bh.field_p == null) {
+        if (BoundsRect.field_p == null) {
           return false;
         }
-        if (bh.field_p.b(-1)) {
+        if (BoundsRect.field_p.b(-1)) {
           return true;
         }
         return false;
@@ -47,7 +47,7 @@ final class cb extends le {
         if (null == wg.field_f) {
           return false;
         }
-        if (ih.field_f != cs.field_j) {
+        if (ih.field_f != Wormhole.field_j) {
           return false;
         }
         return true;

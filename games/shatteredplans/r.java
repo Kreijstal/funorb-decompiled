@@ -8,14 +8,14 @@ final class r implements Runnable {
     private PlatformTaskDispatcher field_l;
     static String field_f;
     static int field_c;
-    private pb field_b;
+    private PlatformTask field_b;
     static int[] field_j;
     private DataInputStream field_g;
     private int field_h;
     private java.net.URL field_e;
-    private pb field_a;
+    private PlatformTask field_a;
     static boolean field_d;
-    private pb field_i;
+    private PlatformTask field_i;
 
     final static void a(byte param0) {
         String[][] dupTemp$0 = null;
@@ -36,7 +36,7 @@ final class r implements Runnable {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        sl var15 = null;
+        CipherPacketBuffer var15 = null;
         int var7_intLifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
@@ -44,11 +44,11 @@ final class r implements Runnable {
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var15 = sa.field_a;
-          var2 = var15.j(-102);
-          var3 = (gr) (qa.field_r.d(0));
+          var2 = var15.readUnsignedByte(-102);
+          var3 = (gr) (PlacementOrder.field_r.startForward(0));
           while (var3 != null) {
             if (~var3.field_k != ~var2) {
-              var3 = (gr) (qa.field_r.a((byte) -71));
+              var3 = (gr) (PlacementOrder.field_r.nextForward((byte) -71));
               continue;
             }
             break;
@@ -58,16 +58,16 @@ final class r implements Runnable {
             return;
           }
           var4 = -122 % ((14 - param0) / 34);
-          var5 = var15.j(-87);
+          var5 = var15.readUnsignedByte(-87);
           if (var5 != 0) {
             var6 = var3.field_j;
-            wb.field_a[0] = Star.field_o;
+            QuaternaryNodeList.field_a[0] = Star.field_o;
             for (var7_int = 1; var5 > var7_int; var7_int++) {
-              wb.field_a[var7_int] = var15.e(-1);
+              QuaternaryNodeList.field_a[var7_int] = var15.readString(-1);
             }
             vd.a(var6, var5, (byte) 18);
             for (var7_intLifetime1 = 0; var5 > var7_intLifetime1; var7_intLifetime1++) {
-              qg.a(var15, false);
+              TutorialVictoryChecker.a(var15, false);
               if (var7_intLifetime1 != 0) {
                 ul.a(0, na.field_L, np.field_j, gp.field_c, var7_intLifetime1, ig.field_d);
               } else {
@@ -78,7 +78,7 @@ final class r implements Runnable {
                 ul.a(0, na.field_L, np.field_j, gp.field_c, var7_intLifetime1, ig.field_d);
               }
             }
-            bh.a(var6, (byte) -111);
+            BoundsRect.a(var6, (byte) -111);
             dupTemp$0 = new String[2][var6];
             var3.field_n = dupTemp$0;
             var7 = dupTemp$0;
@@ -90,12 +90,12 @@ final class r implements Runnable {
             var11 = 0;
             while (var9 > var10) {
               var12 = lg.field_d[var10];
-              var7[0][var11] = wb.field_a[var12];
+              var7[0][var11] = QuaternaryNodeList.field_a[var12];
               var8[0][4 * var11] = GameApplet.field_f[var12];
               var8[0][var11 * 4 + 1] = fb.field_zb[var12];
               var8[0][2 + var11 * 4] = aj.field_d[var12];
               var8[0][var11 * 4 + 3] = WidgetContainer.field_y[var12];
-              if (jp.a(wb.field_a[var12], (byte) -105) &&
+              if (jp.a(QuaternaryNodeList.field_a[var12], (byte) -105) &&
                 WidgetContainer.field_y[var12] + aj.field_d[var12] + fb.field_zb[var12] == 0) {
                 var7[0][var11] = null;
                 var11--;
@@ -108,12 +108,12 @@ final class r implements Runnable {
             var11Lifetime1 = var14;
             while (var9 > var10Lifetime1) {
               var12Lifetime1 = lg.field_d[var10Lifetime1 + var6];
-              var7[1][var14] = wb.field_a[var12Lifetime1];
+              var7[1][var14] = QuaternaryNodeList.field_a[var12Lifetime1];
               var8[1][4 * var14] = GameApplet.field_f[var12Lifetime1];
               var8[1][4 * var14 + 1] = fb.field_zb[var12Lifetime1];
               var8[1][var14 * 4 + 2] = aj.field_d[var12Lifetime1];
               var8[1][var14 * 4 + 3] = WidgetContainer.field_y[var12Lifetime1];
-              if (jp.a(wb.field_a[var12Lifetime1], (byte) -105) &&
+              if (jp.a(QuaternaryNodeList.field_a[var12Lifetime1], (byte) -105) &&
                 0 == fb.field_zb[var12Lifetime1] + aj.field_d[var12Lifetime1] + WidgetContainer.field_y[var12Lifetime1]) {
                 var7[1][var14] = null;
                 var14--;
@@ -123,7 +123,7 @@ final class r implements Runnable {
             }
           }
           var3.field_q = true;
-          var3.b((byte) -106);
+          var3.unlink((byte) -106);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -173,14 +173,14 @@ final class r implements Runnable {
           gf.b();
           js.field_j = 0;
           gq.e(-65);
-          var2 = var1.g();
+          var2 = var1.copy();
           int var4 = 11 / ((31 - param0) / 62);
           for (var3 = 0; 15 > var3; var3++) {
-            var2.e(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             gf.b(4, 4, 0, 0, 540, 140);
           }
-          rf.field_h.e();
-          var1.d(0, 0);
+          AllianceExpiredEvent.field_h.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           Star.f((byte) -70);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "r.D(" + param0 + ')');
@@ -202,10 +202,10 @@ final class r implements Runnable {
         field_j = (int[]) null;
     }
 
-    final static fk a(byte[] param0, byte param1, int param2) {
-        fk var3 = null;
+    final static ByteArrayNode a(byte[] param0, byte param1, int param2) {
+        ByteArrayNode var3 = null;
         RuntimeException var3_ref = null;
-        fk stackIn_3_0 = null;
+        ByteArrayNode stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -214,8 +214,8 @@ final class r implements Runnable {
           if (param1 > -9) {
             r.a((byte) 30, false);
           }
-          var3 = new fk(param0);
-          tr.field_vb.a((byte) -113, var3);
+          var3 = new ByteArrayNode(param0);
+          MapView.field_vb.addLast((byte) -113, var3);
           dn.a(param2, var3, (byte) 13);
           stackIn_3_0 = var3;
           return stackIn_3_0;
@@ -337,7 +337,7 @@ final class r implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_e.getFile() + "\n\n"));
-              var3.write(se.a((byte) 80, var5));
+              var3.write(AchievementProgress.a((byte) 80, var5));
               this.field_g = new DataInputStream(var4.getInputStream());
             }
             this.field_k.position = 0;

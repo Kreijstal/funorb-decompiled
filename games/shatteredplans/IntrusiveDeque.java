@@ -11,12 +11,12 @@ final class IntrusiveDeque {
     static Sprite field_d;
     static Sprite[] field_a;
 
-    final boolean g(int param0) {
+    final boolean isEmpty(int param0) {
         int var2 = -83 / ((param0 + 24) / 49);
         return this.field_h == this.field_h.next ? true : false;
     }
 
-    final int a(byte param0, IntrusiveNode[] param1) {
+    final int copyToArray(byte param0, IntrusiveNode[] param1) {
         int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -64,21 +64,21 @@ final class IntrusiveDeque {
         if (param2 != -1043) {
           return;
         }
-        ve var3 = rq.a(true, param0, param1);
+        ve var3 = LinkPainter.a(true, param0, param1);
         if (var3 != null) {
-          hp.field_m.a(false, param2 - 15618);
-          var4 = hp.field_m;
-          var5_ref_String = qc.field_u;
+          DerelictVictoryChecker.field_m.a(false, param2 - 15618);
+          var4 = DerelictVictoryChecker.field_m;
+          var5_ref_String = SocketArchiveNetworkClient.field_u;
           var4.field_j.a(param2 ^ -1044, 5, var5_ref_String);
-          var4Lifetime1 = hp.field_m;
-          var5 = nh.field_p;
-          var6 = td.field_P;
+          var4Lifetime1 = DerelictVictoryChecker.field_m;
+          var5 = PointsVictoryChecker.field_p;
+          var6 = SliderWidget.field_P;
           var4Lifetime1.field_j.b(0, 0, 0, var5, var6);
         }
         di.a(-7904, param1, param0);
     }
 
-    final IntrusiveNode f(int param0) {
+    final IntrusiveNode startReverse(int param0) {
         IntrusiveNode var2 = this.field_h.previous;
         if (var2 == this.field_h) {
           this.field_b = null;
@@ -91,7 +91,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode nextReverse(int param0) {
         IntrusiveNode var2 = this.field_b;
         if (this.field_h == var2) {
           this.field_b = null;
@@ -104,7 +104,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final int e(int param0) {
+    final int size(int param0) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = param0;
         IntrusiveNode var3 = this.field_h.next;
@@ -115,7 +115,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final IntrusiveNode b(IntrusiveNode param0, int param1) {
+    final IntrusiveNode startForwardFrom(IntrusiveNode param0, int param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
@@ -126,7 +126,7 @@ final class IntrusiveDeque {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -9189) {
-            this.a(-87);
+            this.clear(-87);
           }
           if (param0 == null) {
             var3 = this.field_h.next;
@@ -155,12 +155,12 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode h(int param0) {
+    final IntrusiveNode pollFirst(int param0) {
         IntrusiveNode var2 = this.field_h.next;
         if (var2 == this.field_h) {
           return null;
         }
-        var2.b((byte) -104);
+        var2.unlink((byte) -104);
         if (param0 <= 25) {
           return (IntrusiveNode) null;
         }
@@ -177,7 +177,7 @@ final class IntrusiveDeque {
         field_a = null;
     }
 
-    final IntrusiveNode d(int param0) {
+    final IntrusiveNode startForward(int param0) {
         IntrusiveNode var2 = this.field_h.next;
         if (param0 != 0) {
           field_f = (String) null;
@@ -190,7 +190,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    final void a(IntrusiveNode param0, int param1) {
+    final void addFirst(IntrusiveNode param0, int param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -198,7 +198,7 @@ final class IntrusiveDeque {
         RuntimeException var3 = null;
         try {
           if (null != param0.previous) {
-            param0.b((byte) -90);
+            param0.unlink((byte) -90);
           }
           param0.next = this.field_h.next;
           param0.previous = this.field_h;
@@ -222,7 +222,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode pollLast(boolean param0) {
         if (!param0) {
           this.field_h = (IntrusiveNode) null;
         }
@@ -230,7 +230,7 @@ final class IntrusiveDeque {
         if (var2 == this.field_h) {
           return null;
         }
-        var2.b((byte) -125);
+        var2.unlink((byte) -125);
         return var2;
     }
 
@@ -277,9 +277,9 @@ final class IntrusiveDeque {
         }
     }
 
-    final void a(byte param0, IntrusiveNode param1) {
+    final void addLast(byte param0, IntrusiveNode param1) {
         if (null != param1.previous) {
-          param1.b((byte) -104);
+          param1.unlink((byte) -104);
         }
         param1.previous = this.field_h.previous;
         param1.next = this.field_h;
@@ -294,7 +294,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode nextForward(byte param0) {
         IntrusiveNode var2 = this.field_b;
         if (var2 == this.field_h) {
           this.field_b = null;
@@ -343,7 +343,7 @@ final class IntrusiveDeque {
         }
     }
 
-    final void a(int param0) {
+    final void clear(int param0) {
         IntrusiveNode var2 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         while (true) {
@@ -351,12 +351,12 @@ final class IntrusiveDeque {
           if (this.field_h == var2) {
             break;
           }
-          var2.b((byte) -72);
+          var2.unlink((byte) -72);
         }
         this.field_b = null;
         if (param0 != 0) {
           IntrusiveNode var4 = (IntrusiveNode) null;
-          this.a((byte) -24, (IntrusiveNode) null);
+          this.addLast((byte) -24, (IntrusiveNode) null);
         }
     }
 
@@ -366,7 +366,7 @@ final class IntrusiveDeque {
         this.field_h.previous = this.field_h;
     }
 
-    final void a(byte param0, IntrusiveDeque param1) {
+    final void transferAllTo(byte param0, IntrusiveDeque param1) {
         try {
           this.a(false, this.field_h.next, param1);
           if (param0 != -90) {

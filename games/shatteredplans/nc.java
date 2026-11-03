@@ -46,7 +46,7 @@ final class nc extends IntrusiveNode {
           }
           if (param0.field_l != 0 ||
             param0.field_e != 0) {
-            for (var2_int = 0; var2_int < da.field_g; var2_int++) {
+            for (var2_int = 0; var2_int < DebouncedValidator.field_g; var2_int++) {
               var3 = wm.field_d[var2_int];
               if (2 == var3.field_n &&
                 param0.field_l == var3.field_l &&
@@ -56,7 +56,7 @@ final class nc extends IntrusiveNode {
             }
           }
           if (param0.field_f != null) {
-            jj.field_o = param0.field_b;
+            ConquestVictoryChecker.field_o = param0.field_b;
             bq.field_e = param0.field_p;
             uo.field_f = param0.field_f;
             tl.field_D = param0.field_n;
@@ -77,7 +77,7 @@ final class nc extends IntrusiveNode {
         }
     }
 
-    final static String a(String param0, bc param1, int param2, String param3) {
+    final static String a(String param0, Archive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
@@ -91,12 +91,12 @@ final class nc extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.b((byte) 115)) {
+          if (!param1.isIndexLoaded((byte) 115)) {
             stackIn_2_0 = (String) (param0);
             return stackIn_2_0;
           }
           var4_int = -57 % ((-25 - param2) / 51);
-          stackIn_4_0 = param3 + " - " + param1.d(100) + "%";
+          stackIn_4_0 = param3 + " - " + param1.getOverallProgress(100) + "%";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

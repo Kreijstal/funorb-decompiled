@@ -6,40 +6,40 @@ final class un extends hb {
     private static int[] field_k;
     private IntrusiveDeque field_h;
     static qr field_g;
-    static u field_i;
+    static ValidationState field_i;
     static String field_j;
 
     final int b(byte param0) {
         if (param0 != -61) {
           this.field_h = (IntrusiveDeque) null;
         }
-        return this.field_h.e(0);
+        return this.field_h.size(0);
     }
 
     final IntrusiveNode a(byte param0) {
         if (param0 <= 99) {
           field_j = (String) null;
         }
-        return this.field_h.d(0);
+        return this.field_h.startForward(0);
     }
 
     final IntrusiveNode a(boolean param0) {
         if (param0) {
           return (IntrusiveNode) null;
         }
-        return this.field_h.a((byte) -71);
+        return this.field_h.nextForward((byte) -71);
     }
 
     final static void a(String param0, byte param1, long param2, int param3, int param4) {
         try {
-          jj.field_n = true;
+          ConquestVictoryChecker.field_n = true;
           if (param1 <= 44) {
             field_k = (int[]) null;
           }
           vs.field_d = param4;
-          ac.field_o = param2;
+          DefendTask.field_o = param2;
           ah.field_S = param0;
-          vp.field_r = param3;
+          TertiaryLinkNode.field_r = param3;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "un.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -75,7 +75,7 @@ final class un extends hb {
         for (var0Lifetime1 = 0; var0Lifetime1 < 12; var0Lifetime1++) {
           field_k[var0Lifetime1] = (-var0Lifetime1 + 11) * 526344;
         }
-        field_i = new u();
+        field_i = new ValidationState();
         field_j = "Played";
     }
 }

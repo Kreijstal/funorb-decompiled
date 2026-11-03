@@ -80,13 +80,13 @@ class hm extends DualLinkNode {
         }
     }
 
-    final static void a(qa param0, PacketBuffer param1, boolean param2) {
+    final static void a(PlacementOrder param0, PacketBuffer param1, boolean param2) {
         try {
           di.a(param0.field_u, false, param1);
           if (!param2) {
             field_q = (sq) null;
           }
-          param1.d(param0.field_v, 255);
+          param1.writeShort(param0.field_v, 255);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "hm.HA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

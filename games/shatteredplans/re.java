@@ -3,11 +3,11 @@
  */
 final class re {
     static int[] field_d;
-    private bc field_c;
-    private bc field_e;
+    private Archive field_c;
+    private Archive field_e;
     static qr[] field_g;
     static int field_b;
-    private ol field_f;
+    private WeightedLruCache field_f;
     static qr field_h;
     static int field_a;
 
@@ -74,7 +74,7 @@ final class re {
                 break;
               }
               var7_ref_String = param0.substring(2 + var6_int, var5);
-              if (!go.a(0, (CharSequence) ((Object) var7_ref_String))) {
+              if (!TextFieldWidget.a(0, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -84,7 +84,7 @@ final class re {
                 continue;
               }
               var5++;
-              var8 = ma.a((CharSequence) ((Object) var7_ref_String), 2);
+              var8 = DefensiveAi.a((CharSequence) ((Object) var7_ref_String), 2);
               var4 = var4 + (param2[var8].length() - var5 + var6_int);
               continue;
             }
@@ -110,7 +110,7 @@ final class re {
               break;
             }
             var9 = param0.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!go.a(0, (CharSequence) ((Object) var9))) {
+            if (!TextFieldWidget.a(0, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {
@@ -120,7 +120,7 @@ final class re {
               continue;
             }
             var5Lifetime1++;
-            var10 = ma.a((CharSequence) ((Object) var9), 2);
+            var10 = DefensiveAi.a((CharSequence) ((Object) var9), 2);
             discarded$0 = var6.append(param0.substring(var7, var8Lifetime1));
             discarded$1 = var6.append(param2[var10]);
             var7 = var5Lifetime1;
@@ -155,9 +155,9 @@ final class re {
           return var3;
         }
         if (param1 >= 32768) {
-          var4 = this.field_c.a(1, -1, 32767 & param1);
+          var4 = this.field_c.getFile(1, -1, 32767 & param1);
         } else {
-          var4 = this.field_e.a(1, param0 - 48, param1);
+          var4 = this.field_e.getFile(1, param0 - 48, param1);
         }
         var3 = new dp();
         if (var4 != null) {
@@ -179,7 +179,7 @@ final class re {
         field_h = null;
     }
 
-    re(int param0, bc param1, bc param2, wr param3) {
+    re(int param0, Archive param1, Archive param2, wr param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -189,15 +189,15 @@ final class re {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_f = new ol(64);
+        this.field_f = new WeightedLruCache(64);
         try {
           this.field_e = param1;
           this.field_c = param2;
           if (null != this.field_e) {
-            this.field_e.a(1, -26268);
+            this.field_e.getFileCount(1, -26268);
           }
           if (this.field_c != null) {
-            this.field_c.a(1, -26268);
+            this.field_c.getFileCount(1, -26268);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

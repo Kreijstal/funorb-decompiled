@@ -64,9 +64,9 @@ final class em implements jk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          fj.field_t = param0;
-          if (2 != fj.field_t.field_c &&
-            1 != fj.field_t.field_c) {
+          MatchingTextValidator.field_t = param0;
+          if (2 != MatchingTextValidator.field_t.field_c &&
+            1 != MatchingTextValidator.field_t.field_c) {
           }
           if (param1 != 1) {
             field_g = (String) null;
@@ -169,29 +169,29 @@ final class em implements jk {
             gf.a(ph.field_b);
             if (null != param4[0]) {
               gf.i(param5, param3, var16, var18);
-              param4[0].f(param5, param3);
+              param4[0].draw(param5, param3);
               gf.b(ph.field_b);
             }
             if (param4[2] != null) {
               gf.i(var17, param3, var10, var18);
-              param4[2].f(var13, param3);
+              param4[2].draw(var13, param3);
               gf.b(ph.field_b);
             }
             if (param4[6] != null) {
               gf.i(param5, var19, var16, var11);
-              param4[6].f(param5, var15);
+              param4[6].draw(param5, var15);
               gf.b(ph.field_b);
             }
             if (null != param4[8]) {
               gf.i(var17, var19, var10, var11);
-              param4[8].f(var13, var15);
+              param4[8].draw(var13, var15);
               gf.b(ph.field_b);
             }
             if (null != param4[1] &&
               param4[1].field_o != 0) {
               gf.i(var16, param3, var17, var18);
               for (var20 = var12; var13 > var20; var20 = var20 + param4[1].field_o) {
-                param4[1].f(var20, param3);
+                param4[1].draw(var20, param3);
               }
               gf.b(ph.field_b);
             }
@@ -199,7 +199,7 @@ final class em implements jk {
               param4[7].field_o != 0) {
               gf.i(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param4[7].field_o) {
-                param4[7].f(var20Lifetime1, var15);
+                param4[7].draw(var20Lifetime1, var15);
               }
               gf.b(ph.field_b);
             }
@@ -207,7 +207,7 @@ final class em implements jk {
               param4[3].field_p != 0) {
               gf.i(param5, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param4[3].field_p) {
-                param4[3].f(param5, var20Lifetime2);
+                param4[3].draw(param5, var20Lifetime2);
               }
               gf.b(ph.field_b);
             }
@@ -215,7 +215,7 @@ final class em implements jk {
               param4[5].field_p != 0) {
               gf.i(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param4[5].field_p) {
-                param4[5].f(var13, var20Lifetime3);
+                param4[5].draw(var13, var20Lifetime3);
               }
               gf.b(ph.field_b);
             }
@@ -227,7 +227,7 @@ final class em implements jk {
               gf.i(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param4[4].field_p) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param4[4].field_o) {
-                  param4[4].f(var21, var20Lifetime4);
+                  param4[4].draw(var21, var20Lifetime4);
                 }
               }
               gf.b(ph.field_b);

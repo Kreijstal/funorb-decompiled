@@ -32,7 +32,7 @@ final class id {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
               var3 = 3 / ((12 - param1) / 37);
-              param0.getAppletContext().showDocument(jg.a(param0, false, var2), "_top");
+              param0.getAppletContext().showDocument(AudioService.a(param0, false, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ final class id {
         return Star.field_o;
     }
 
-    final static Sprite a(int param0, bc param1, String param2, String param3) {
+    final static Sprite a(int param0, Archive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -84,9 +84,9 @@ final class id {
           if (param0 != 2) {
             field_d = (Star) null;
           }
-          var4_int = param1.a(125, param2);
-          var5 = param1.a(var4_int, (byte) 106, param3);
-          stackIn_3_0 = ga.a(param1, var5, var4_int, -20487);
+          var4_int = param1.getGroupIdByName(125, param2);
+          var5 = param1.getFileIdByName(var4_int, (byte) 106, param3);
+          stackIn_3_0 = MidiPcmStream.a(param1, var5, var4_int, -20487);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -157,7 +157,7 @@ final class id {
           return var2;
         }
         String var3 = (String) null;
-        id.a(20, (bc) null, (String) null, (String) null);
+        id.a(20, (Archive) null, (String) null, (String) null);
         return var2;
     }
 

@@ -5,7 +5,7 @@ import java.io.*;
 
 final class BufferedSocket implements Runnable {
     private int field_a;
-    private pb field_p;
+    private PlatformTask field_p;
     private PlatformTaskDispatcher field_m;
     static int[] field_q;
     private java.net.Socket field_o;
@@ -377,7 +377,7 @@ final class BufferedSocket implements Runnable {
         field_k[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
           var1 = (var0 - 1) * 8;
-          field_k[var0] = bg.a(bg.a(co.a(65280L, field_l[6][var1 + 6]), bg.a(bg.a(co.a(4278190080L, field_l[4][var1 + 4]), bg.a(co.a(1095216660480L, field_l[3][var1 + 3]), bg.a(co.a(field_l[2][2 + var1], 280375465082880L), bg.a(co.a(field_l[1][var1 + 1], 71776119061217280L), co.a(field_l[0][var1], -72057594037927936L))))), co.a(field_l[5][var1 + 5], 16711680L))), co.a(field_l[7][var1 + 7], 255L));
+          field_k[var0] = bg.a(bg.a(GarrisonTask.a(65280L, field_l[6][var1 + 6]), bg.a(bg.a(GarrisonTask.a(4278190080L, field_l[4][var1 + 4]), bg.a(GarrisonTask.a(1095216660480L, field_l[3][var1 + 3]), bg.a(GarrisonTask.a(field_l[2][2 + var1], 280375465082880L), bg.a(GarrisonTask.a(field_l[1][var1 + 1], 71776119061217280L), GarrisonTask.a(field_l[0][var1], -72057594037927936L))))), GarrisonTask.a(field_l[5][var1 + 5], 16711680L))), GarrisonTask.a(field_l[7][var1 + 7], 255L));
         }
     }
 }

@@ -26,45 +26,45 @@ final class sk extends IntrusiveNode {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        sl var8 = null;
+        CipherPacketBuffer var8 = null;
         dp var9 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var8 = sa.field_a;
-        var3 = var8.j(param1 ^ 113);
+        var3 = var8.readUnsignedByte(param1 ^ 113);
         stackIn_3_0 = (param1 != ~(128 & var3));
         kr.field_b = stackIn_3_0;
         PacketBuffer.field_k = var3 & 127;
-        nj.field_a = var8.j(-77);
-        sp.field_j = var8.d(param1 ^ -31);
+        nj.field_a = var8.readUnsignedByte(-77);
+        sp.field_j = var8.readLong(param1 ^ -31);
         if (PacketBuffer.field_k != 2) {
-          el.field_f = 0;
+          TertiaryNodeList.field_f = 0;
           va.field_b = 0;
         } else {
-          el.field_f = var8.f(param1 - 20975);
-          va.field_b = var8.k(param1 + 256);
+          TertiaryNodeList.field_f = var8.readUnsignedShort(param1 - 20975);
+          va.field_b = var8.readMedium(param1 + 256);
         }
-        stackIn_9_0 = (1 != var8.j(param1 - 66)) ? 0 : 1;
+        stackIn_9_0 = (1 != var8.readUnsignedByte(param1 - 66)) ? 0 : 1;
         var4 = stackIn_9_0;
-        jc.field_s = var8.e(param1 ^ 0);
+        ArchiveRequest.field_s = var8.readString(param1 ^ 0);
         if (var4 == 0) {
-          em.field_a = jc.field_s;
+          em.field_a = ArchiveRequest.field_s;
         } else {
-          em.field_a = var8.e(-1);
+          em.field_a = var8.readString(-1);
         }
         if (PacketBuffer.field_k != 1 &&
           PacketBuffer.field_k != 4) {
           fm.field_f = 0;
-          mc.field_q = null;
+          WeightedCacheEntry.field_q = null;
         } else {
-          fm.field_f = var8.f(param1 - 20975);
-          mc.field_q = var8.e(param1 + 0);
+          fm.field_f = var8.readUnsignedShort(param1 - 20975);
+          WeightedCacheEntry.field_q = var8.readString(param1 + 0);
         }
         if (!param0) {
           BufferedSocket.field_h = pe.a(var8, param1 + 1, 80);
-          mb.field_p = null;
+          AgeValidator.field_p = null;
           return new nf(param0);
         }
-        var5 = var8.f(-20976);
+        var5 = var8.readUnsignedShort(-20976);
         try {
           var9 = dh.field_c.a((byte) 47, var5);
           BufferedSocket.field_h = var9.f(80);
@@ -73,13 +73,13 @@ final class sk extends IntrusiveNode {
           } else {
             stackIn_22_0 = var9.field_o;
           }
-          mb.field_p = stackIn_22_0;
+          AgeValidator.field_p = stackIn_22_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           GameKeyHandler.a(param1 - 29900, (Throwable) ((Object) var6), "CC1");
           BufferedSocket.field_h = null;
-          mb.field_p = null;
+          AgeValidator.field_p = null;
           return new nf(param0);
         }
         return new nf(param0);

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends WidgetContainer implements op, bp {
-    private kg field_H;
+final class pe extends WidgetContainer implements op, ButtonListener {
+    private FocusableWidget field_H;
     private ts field_G;
     static String[] field_J;
     private oj field_I;
@@ -41,11 +41,11 @@ final class pe extends WidgetContainer implements op, bp {
     }
 
     pe(oj param0) {
-        super(0, 0, 288, 0, (iq) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         RuntimeException runtimeException = null;
         String var2 = null;
         int var3 = 0;
-        o var4 = null;
+        WidgetTheme var4 = null;
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -54,16 +54,16 @@ final class pe extends WidgetContainer implements op, bp {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_I = param0;
-          this.field_H = new kg(gq.field_b, (ko) null);
-          this.field_H.field_p = (iq) ((Object) new qp());
-          var2 = re.a(rn.field_e, 4371, new String[]{this.l(98), this.a(56)});
+          this.field_H = new FocusableWidget(gq.field_b, (WidgetListener) null);
+          this.field_H.field_p = (WidgetPainter) ((Object) new qp());
+          var2 = re.a(DiskCacheWorker.field_e, 4371, new String[]{this.l(98), this.a(56)});
           var3 = 20;
-          var4 = new o(gn.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
+          var4 = new WidgetTheme(gn.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
           this.field_G = new ts(var2, var4);
           this.field_G.field_v = "";
           this.field_G.a(0, true, bk.field_c);
           this.field_G.a(1, true, bk.field_c);
-          this.field_G.field_u = (ko) (this);
+          this.field_G.field_u = (WidgetListener) (this);
           this.field_G.field_x = -40 + this.field_x;
           this.field_G.a(26, var3, (byte) 57, this.field_x - 40);
           var3 = var3 + (this.field_G.field_n + 15);
@@ -71,7 +71,7 @@ final class pe extends WidgetContainer implements op, bp {
           var5 = 4;
           var6 = 200;
           this.field_H.a(var3, 40, (byte) 115, -var6 + 300 >> 1, var6);
-          this.field_H.field_u = (ko) (this);
+          this.field_H.field_u = (WidgetListener) (this);
           this.b((byte) -126, this.field_H);
           this.a(0, var3 + 55 + var5, (byte) 121, 0, 300);
           return;
@@ -184,13 +184,13 @@ final class pe extends WidgetContainer implements op, bp {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.h(-1282738780);
+            var3_int = param0.readUnsignedSmart(-1282738780);
             if (var3_int > param2) {
               var3_int = param2;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + ak.field_v.a(var4, param0.payload, var3_int, 7, param0.position, param1);
-            var5 = qi.a(var4, var3_int, 0, param1 ^ -127);
+            param0.position = param0.position + DiskArchiveRequest.field_v.a(var4, param0.payload, var3_int, 7, param0.position, param1);
+            var5 = StellarBombEvent.a(var4, var3_int, 0, param1 ^ -127);
             stackIn_3_0 = var5;
             return stackIn_3_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -251,14 +251,14 @@ final class pe extends WidgetContainer implements op, bp {
     final static void k(int param0) {
         int stackIn_40_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        eg var1 = null;
+        BattleEvent var1 = null;
         Star[] var1_array = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Star var3 = null;
         int var4 = 0;
         int var5 = 0;
-        eg var1Lifetime1;
+        BattleEvent var1Lifetime1;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 <= 95) {
@@ -267,24 +267,24 @@ final class pe extends WidgetContainer implements op, bp {
           NodeHashTableIterator.a(0, "endturn");
           if (2 == oq.field_a.field_P.field_g.field_e.length) {
             if (ho.field_d == oq.field_a.field_P.field_g.field_e[1].field_y) {
-              if (qc.a("combatSuccess", -116)) {
-                ac.a(1, n.a("combatSuccess", -21502));
+              if (SocketArchiveNetworkClient.a("combatSuccess", -116)) {
+                DefendTask.a(1, n.a("combatSuccess", -21502));
                 if (var5 != 0) {
-                  var1 = vp.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
+                  var1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
                   if (null != var1 &&
-                    qc.a("combatFailed", -116)) {
-                    ac.a(1, n.a("combatFailed", -21502));
+                    SocketArchiveNetworkClient.a("combatFailed", -116)) {
+                    DefendTask.a(1, n.a("combatFailed", -21502));
                   }
                 }
               }
             } else {
-              var1 = vp.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
+              var1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
               if (null != var1 &&
-                qc.a("combatFailed", -116)) {
-                ac.a(1, n.a("combatFailed", -21502));
+                SocketArchiveNetworkClient.a("combatFailed", -116)) {
+                DefendTask.a(1, n.a("combatFailed", -21502));
               }
             }
-            var1Lifetime1 = vp.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
+            var1Lifetime1 = TertiaryLinkNode.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
             if (null != var1Lifetime1) {
               uq.field_m.a(nf.a(var1Lifetime1, 23248), 27275, "combatreport1");
             }
@@ -292,7 +292,7 @@ final class pe extends WidgetContainer implements op, bp {
           }
           if (oq.field_a.field_P.field_z &&
             oq.field_a.field_P.field_k != ho.field_d.field_x) {
-            ac.a(1, n.a("lose", -21502));
+            DefendTask.a(1, n.a("lose", -21502));
           }
           var1_array = oq.field_a.field_P.field_g.field_e;
           var2 = 0;
@@ -453,14 +453,14 @@ final class pe extends WidgetContainer implements op, bp {
                   var24Lifetime1 = param6.field_a[var23Lifetime2];
                   var25Lifetime1 = param6.field_c[var23Lifetime2];
                   var26Lifetime1 = param6.field_l[var23Lifetime2];
-                  k.field_g[var23Lifetime2] = (var12 * var24Lifetime1 + (var15 * var25Lifetime1 + var18 * var26Lifetime1) >> 16) + var9;
-                  h.field_t[var23Lifetime2] = (var13 * var24Lifetime1 + var25Lifetime1 * var16 + var26Lifetime1 * var19 >> 16) + var10;
+                  TurnEventLog.field_g[var23Lifetime2] = (var12 * var24Lifetime1 + (var15 * var25Lifetime1 + var18 * var26Lifetime1) >> 16) + var9;
+                  MusicCrossfadeStream.field_t[var23Lifetime2] = (var13 * var24Lifetime1 + var25Lifetime1 * var16 + var26Lifetime1 * var19 >> 16) + var10;
                   nb.field_b[var23Lifetime2] = (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var20 * var26Lifetime1) >> 16) + var11;
                   var24Lifetime1 = param6.field_A[var23Lifetime2];
                   var25Lifetime1 = param6.field_m[var23Lifetime2];
                   var26Lifetime1 = param6.field_Q[var23Lifetime2];
                   aq.field_o[var23Lifetime2] = var9 + (var18 * var26Lifetime1 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16);
-                  fk.field_h[var23Lifetime2] = var10 + (var24Lifetime1 * var13 + var16 * var25Lifetime1 + var19 * var26Lifetime1 >> 16);
+                  ByteArrayNode.field_h[var23Lifetime2] = var10 + (var24Lifetime1 * var13 + var16 * var25Lifetime1 + var19 * var26Lifetime1 >> 16);
                   qo.field_c[var23Lifetime2] = var11 + (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var26Lifetime1 * var20) >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
@@ -492,7 +492,7 @@ final class pe extends WidgetContainer implements op, bp {
                   var20 = param6.field_y[var18];
                   var21Lifetime2 = param6.field_v[var18];
                   fm.field_c[var18] = var21Lifetime2 * var15 + (var20 * var12 + var9 * var19) >> 16;
-                  ra.field_f[var18] = var21Lifetime2 * var16 + (var19 * var10 + var13 * var20) >> 16;
+                  RandomAccessCacheFile.field_f[var18] = var21Lifetime2 * var16 + (var19 * var10 + var13 * var20) >> 16;
                   hk.field_ob[var18] = var11 * var19 - (-(var14 * var20) - var21Lifetime2 * var17) >> 16;
                   var18++;
                 }
@@ -502,7 +502,7 @@ final class pe extends WidgetContainer implements op, bp {
             }
             break;
           }
-          ej.$cfr$intArgs$a$c7cf2d00b385(stackIn_65_0, stackIn_65_1 != 0, param6, var7_int, var8);
+          BufferedCacheFile.$cfr$intArgs$a$c7cf2d00b385(stackIn_65_0, stackIn_65_1 != 0, param6, var7_int, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -547,7 +547,7 @@ final class pe extends WidgetContainer implements op, bp {
         }
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

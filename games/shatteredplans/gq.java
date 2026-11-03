@@ -44,12 +44,12 @@ final class gq {
           var4 = ji.a(param0, true);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!tc.a(var4.charAt(0), param2 + 6) &&
-              !tc.a(var4.charAt(var4.length() - 1), 2)) {
+            if (!DialogRoot.a(var4.charAt(0), param2 + 6) &&
+              !DialogRoot.a(var4.charAt(var4.length() - 1), 2)) {
               var5 = 0;
               for (var6 = 0; var6 < param0.length(); var6++) {
                 var7 = param0.charAt(var6);
-                if (tc.a((char) var7, 2)) {
+                if (DialogRoot.a((char) var7, 2)) {
                   var5++;
                 } else {
                   var5 = 0;
@@ -102,7 +102,7 @@ final class gq {
             var4 = var3;
             var4.field_a = 0;
           }
-          rp.field_K.a(0);
+          DialWidget.field_K.clear(0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "gq.E(" + param0 + ')');
         }
@@ -120,7 +120,7 @@ final class gq {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param2.j(-74);
+          var3_int = param2.readUnsignedByte(-74);
           if (param1 != -2284) {
             stackIn_2_0 = (Star) null;
             return stackIn_2_0;
@@ -194,7 +194,7 @@ final class gq {
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_sr = vc.field_d[var3];
             var4_ref_sr.a(true);
-            ec.a(-1, var3);
+            UsernameAvailabilityValidator.a(-1, var3);
             var5 = var4_ref_sr.field_O + var4_ref_sr.field_k >> 1;
             var6 = var4_ref_sr.field_j + var4_ref_sr.field_t >> 1;
             var7 = var4_ref_sr.field_r + var4_ref_sr.field_E >> 1;
@@ -239,12 +239,12 @@ final class gq {
             }
             var21[var16] = -2147483648;
             var17 = vc.field_d[var16];
-            ec.a(-1, var16);
+            UsernameAvailabilityValidator.a(-1, var16);
             for (var18 = 0; var18 < 3; var18++) {
               MouseWheelInput.field_a[var18] = MouseWheelInput.field_a[var18] + fa.field_Z[var15][var18];
             }
             pe.a(true, nc.field_p, false, 80, MouseWheelInput.field_a, false, var17);
-            er.a(var7Lifetime1, var13Lifetime1, false, var8Lifetime1, var14, var17, var12Lifetime1, var9Lifetime1);
+            WhirlpoolHasher.a(var7Lifetime1, var13Lifetime1, false, var8Lifetime1, var14, var17, var12Lifetime1, var9Lifetime1);
           }
           var16Lifetime1 = -47 / ((47 - param0) / 46);
         } catch (RuntimeException runtimeException) {
@@ -259,13 +259,13 @@ final class gq {
     final static Sprite d(int param0) {
         int var4_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        int var1 = cm.field_g[0] * mc.field_s[0];
+        int var1 = cm.field_g[0] * WeightedCacheEntry.field_s[0];
         byte[] var2 = hd.field_q[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = eo.field_fb[we.a((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[param0], var3);
+        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, BattleEvent.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[param0], var3);
         pd.a(0);
         return var4;
     }

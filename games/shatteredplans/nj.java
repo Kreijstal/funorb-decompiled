@@ -7,9 +7,9 @@ final class nj {
     final static void a(int param0) {
         int var1 = (kh.field_Mb - 640) / 2;
         int var2 = MouseInputHandler.field_f * MouseInputHandler.field_f;
-        int var3 = var2 - qa.field_t * qa.field_t;
-        ia.field_j.a(199, -124 + (gf.field_k - 90), (byte) 49, 90, -(199 * var3 / var2) + var1);
-        se.field_i.a(param0, gf.field_k - 124, (byte) 56, 0, var1 + (202 + var3 * 438 / var2));
+        int var3 = var2 - PlacementOrder.field_t * PlacementOrder.field_t;
+        MapViewState.field_j.a(199, -124 + (gf.field_k - 90), (byte) 49, 90, -(199 * var3 / var2) + var1);
+        AchievementProgress.field_i.a(param0, gf.field_k - 124, (byte) 56, 0, var1 + (202 + var3 * 438 / var2));
     }
 
     final static String a(String param0, int param1, byte param2) {
@@ -28,7 +28,7 @@ final class nj {
         RuntimeException var3 = null;
         int var4 = 0;
         String var5 = null;
-        sl var6 = null;
+        CipherPacketBuffer var6 = null;
         CharSequence var7 = null;
         try {
           var7 = (CharSequence) ((Object) param0);
@@ -41,15 +41,15 @@ final class nj {
             return stackIn_5_0;
           }
           if (jp.a(param0, (byte) -105)) {
-            stackIn_8_0 = wb.field_f;
+            stackIn_8_0 = QuaternaryNodeList.field_f;
             return stackIn_8_0;
           }
-          if (da.a(-30106, param0)) {
-            stackIn_12_0 = re.a(tr.field_pb, 4371, new String[]{param0});
+          if (DebouncedValidator.a(-30106, param0)) {
+            stackIn_12_0 = re.a(MapView.field_pb, 4371, new String[]{param0});
             return stackIn_12_0;
           }
           if (r.field_c >= 100 &&
-            es.field_m <= 0) {
+            StarAnnotation.field_m <= 0) {
             stackIn_17_0 = hd.field_p;
             return stackIn_17_0;
           }
@@ -61,17 +61,17 @@ final class nj {
             stackIn_22_0 = hd.field_p;
             return stackIn_22_0;
           }
-          if (ti.a(param0, true)) {
-            stackIn_26_0 = re.a(go.field_G, 4371, new String[]{param0});
+          if (IntrusiveNodeHashTable.a(param0, true)) {
+            stackIn_26_0 = re.a(TextFieldWidget.field_G, 4371, new String[]{param0});
             return stackIn_26_0;
           }
           var6 = js.field_f;
           var6.h(param1, 255);
           var6.position = var6.position + 1;
           var4 = var6.position;
-          var6.c(0, (byte) -58);
-          var6.a(param0, (byte) 0);
-          var6.b(-var4 + var6.position, (byte) 118);
+          var6.writeByte(0, (byte) -58);
+          var6.writeString(param0, (byte) 0);
+          var6.patchLengthByte(-var4 + var6.position, (byte) 118);
           stackIn_28_0 = null;
           return (String) (stackIn_28_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,7 +91,7 @@ final class nj {
     final static void a(float param0, int param1, String param2) {
         try {
           il.field_cb = param0;
-          pc.field_r = param2;
+          DerelictMapGenerator.field_r = param2;
           if (param1 != 2) {
             field_a = 17;
           }
@@ -106,20 +106,20 @@ final class nj {
         if (ck.field_a == null) {
           sg.field_Ab = null;
           hd.field_m = null;
-          mb.field_n = null;
+          AgeValidator.field_n = null;
           cb.field_l = null;
           sr.field_h = true;
           return;
         }
-        cg.field_C = er.field_j;
+        cg.field_C = WhirlpoolHasher.field_j;
         uq.field_j = ck.field_a;
         uq.field_j.field_jb = -1;
-        er.field_j = null;
+        WhirlpoolHasher.field_j = null;
         uq.field_j.field_qb = -1;
         ck.field_a = null;
         sg.field_Ab = null;
         hd.field_m = null;
-        mb.field_n = null;
+        AgeValidator.field_n = null;
         cb.field_l = null;
         sr.field_h = true;
     }

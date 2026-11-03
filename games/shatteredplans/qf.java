@@ -5,7 +5,7 @@ import java.util.*;
 
 final class qf {
     int field_a;
-    kk field_f;
+    PcmSample field_f;
     static byte[][] field_d;
     static String field_c;
     static String field_b;
@@ -22,17 +22,17 @@ final class qf {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (hp.field_m == null) {
-          if (tc.field_G != null &&
-            tc.field_G.h(0)) {
-            tc.field_G = null;
+        if (DerelictVictoryChecker.field_m == null) {
+          if (DialogRoot.field_G != null &&
+            DialogRoot.field_G.h(0)) {
+            DialogRoot.field_G = null;
             ai.a(3);
             return true;
           }
           if (param0 != 0) {
             qf.a(-33, 11, -33, 82);
           }
-          if (ac.d(97)) {
+          if (DefendTask.d(97)) {
             return true;
           }
           if (ph.a(4, param1, param3, param2)) {
@@ -40,15 +40,15 @@ final class qf {
           }
           return false;
         }
-        if (hp.field_m.b(true)) {
+        if (DerelictVictoryChecker.field_m.b(true)) {
           ai.a(param0 + 3);
           return true;
         }
-        if (tc.field_G == null) {
+        if (DialogRoot.field_G == null) {
           if (param0 != 0) {
             qf.a(-33, 11, -33, 82);
           }
-          if (ac.d(97)) {
+          if (DefendTask.d(97)) {
             return true;
           }
           if (ph.a(4, param1, param3, param2)) {
@@ -56,13 +56,13 @@ final class qf {
           }
           return false;
         }
-        if (tc.field_G.h(0)) {
-          tc.field_G = null;
+        if (DialogRoot.field_G.h(0)) {
+          DialogRoot.field_G = null;
           ai.a(3);
           return true;
         }
         if (param0 == 0) {
-          if (ac.d(97)) {
+          if (DefendTask.d(97)) {
             return true;
           }
           if (ph.a(4, param1, param3, param2)) {
@@ -71,7 +71,7 @@ final class qf {
           return false;
         }
         qf.a(-33, 11, -33, 82);
-        if (ac.d(97)) {
+        if (DefendTask.d(97)) {
           return true;
         }
         if (!ph.a(4, param1, param3, param2)) {
@@ -82,17 +82,17 @@ final class qf {
 
     final static void a(byte param0) {
         int var1 = 125 / ((param0 + 68) / 50);
-        u.field_a = vc.a((byte) -39, 50);
-        tk.field_C = (nq) ((Object) rs.field_Cb);
-        rp.field_K = new IntrusiveDeque();
-        ui.field_m = 0;
-        kc.field_i = 0;
+        ValidationState.field_a = vc.a((byte) -39, 50);
+        NetworkArchiveRequest.field_C = (nq) ((Object) rs.field_Cb);
+        DialWidget.field_K = new IntrusiveDeque();
+        SolVictoryChecker.field_m = 0;
+        MusicEnvelope.field_i = 0;
         di.field_m = 0;
-        p.field_n = false;
+        CachedArchiveSource.field_n = false;
         bj.field_L = 0;
-        gh var2 = (gh) null;
-        jo.a(32767, (gh) null, true, 50);
-        kg.f((byte) -123);
+        MusicTrack var2 = (MusicTrack) null;
+        jo.a(32767, (MusicTrack) null, true, 50);
+        FocusableWidget.f((byte) -123);
     }
 
     final static int a(byte param0, int param1, Random param2) {
@@ -122,7 +122,7 @@ final class qf {
         }
     }
 
-    qf(kk param0, int param1) {
+    qf(PcmSample param0, int param1) {
         try {
           this.field_a = param1;
           this.field_f = param0;

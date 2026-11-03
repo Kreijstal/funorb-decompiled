@@ -193,7 +193,7 @@ final class sg extends qr {
           }
           var9 = new String[32];
           var10 = var9;
-          var6 = param4.a(param3, new int[]{600}, var10);
+          var6 = param4.wrapText(param3, new int[]{600}, var10);
           if (param1) {
             param2 = param2 - var6 * 50;
           }
@@ -201,7 +201,7 @@ final class sg extends qr {
             return;
           }
           for (var7 = 0; var6 > var7; var7++) {
-            cb.field_h.a((byte) -113, new hd(var9[var7], param4, var7 * 50 + param2));
+            cb.field_h.addLast((byte) -113, new hd(var9[var7], param4, var7 * 50 + param2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -243,10 +243,10 @@ final class sg extends qr {
         return var5 + var4 + (param2 + (param0 + param2));
     }
 
-    final static as a(byte param0, mg param1) {
+    final static as a(byte param0, FleetMove param1) {
         as var2 = null;
         RuntimeException var2_ref = null;
-        mg var3 = null;
+        FleetMove var3 = null;
         as stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -256,8 +256,8 @@ final class sg extends qr {
           var2 = new as(param1);
           var2.field_v = -var2.field_v;
           if (param0 != 101) {
-            var3 = (mg) null;
-            sg.a((byte) -73, (mg) null);
+            var3 = (FleetMove) null;
+            sg.a((byte) -73, (FleetMove) null);
           }
           stackIn_3_0 = var2;
           return stackIn_3_0;

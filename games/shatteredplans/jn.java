@@ -15,11 +15,11 @@ final class jn extends Exception {
           return;
         }
         if (wm.field_b >= 224) {
-          ak.c(-78, 256);
+          DiskArchiveRequest.c(-78, 256);
           return;
         }
         int var1 = wm.field_b % 32;
-        ak.c(124, wm.field_b + (32 - var1));
+        DiskArchiveRequest.c(124, wm.field_b + (32 - var1));
     }
 
     static {

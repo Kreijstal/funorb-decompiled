@@ -166,11 +166,11 @@ final class sq {
     }
 
     final static void a(int param0, int param1, int param2) {
-        sl var3 = js.field_f;
+        CipherPacketBuffer var3 = js.field_f;
         var3.h(param1, 255);
-        var3.c(3, (byte) -70);
-        var3.c(8, (byte) -58);
-        var3.d(param2, 255);
+        var3.writeByte(3, (byte) -70);
+        var3.writeByte(8, (byte) -58);
+        var3.writeShort(param2, 255);
         if (param0 >= -18) {
           field_p = (String) null;
         }
@@ -180,7 +180,7 @@ final class sq {
         if (param0) {
           return false;
         }
-        return bh.field_j;
+        return BoundsRect.field_j;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

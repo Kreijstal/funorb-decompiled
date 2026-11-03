@@ -27,7 +27,7 @@ final class hc {
           var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
           return null;
         }
-        stackIn_6_0 = kq.field_A;
+        stackIn_6_0 = GameScreen.field_A;
         try {
           while (true) {
             var2 = ((jo) (Object) stackIn_6_0).a(var1_int, (byte) 100);
@@ -36,7 +36,7 @@ final class hc {
               return stackIn_8_0;
             }
             var1_int++;
-            stackIn_6_0 = kq.field_A;
+            stackIn_6_0 = GameScreen.field_A;
           }
         } catch (java.lang.IllegalArgumentException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -47,11 +47,11 @@ final class hc {
 
     final static lp a(int param0, int param1, int param2) {
         lp var9 = new lp(param0, param2, 209, rs.field_Cb.field_J);
-        int var4 = (-rs.field_Cb.c(ho.field_g) + 209 - 20) / 2;
+        int var4 = (-rs.field_Cb.stringWidth(ho.field_g) + 209 - 20) / 2;
         vc.field_b = new Sprite(var4, 2);
         int var5 = 112 / ((param1 - 89) / 37);
-        ra.a(-107);
-        vc.field_b.e();
+        RandomAccessCacheFile.a(-107);
+        vc.field_b.bindAsRenderTarget();
         gf.d(0, 0, var4, 2, 16777215);
         cg.i(0);
         ff var6 = new ff(5 + param0, var9.field_i / 2 + param2, vc.field_b);

@@ -90,7 +90,7 @@ class kp extends ms {
     }
 
     final static void c(int param0) {
-        ce.a(kq.f((byte) 126), true);
+        ce.a(GameScreen.f((byte) 126), true);
         if (param0 != -1) {
           field_n = 16;
         }
@@ -103,8 +103,8 @@ class kp extends ms {
 
     final void a(PacketBuffer param0, byte param1) {
         try {
-          param0.b(-16426, this.field_p);
-          param0.b((byte) -120, this.field_l);
+          param0.writeLong(-16426, this.field_p);
+          param0.writePackedName((byte) -120, this.field_l);
           if (param1 <= 67) {
             kp.b((byte) -120);
           }

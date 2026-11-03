@@ -249,7 +249,7 @@ final class ur extends qr {
           return;
         }
         cb.field_n = param0;
-        s.field_c = param2;
+        GzipInflater.field_c = param2;
     }
 
     public static void f(byte param0) {
@@ -262,7 +262,7 @@ final class ur extends qr {
         field_yb = null;
     }
 
-    final static void a(Sprite[][] param0, int param1, byte[] param2, boolean param3, bc param4, int[] param5, Sprite[][] param6, String[] param7, String[] param8, int param9, byte[] param10, bc param11, bc param12, nk[] param13, String[][] param14, int param15, String[][] param16, int[] param17, int param18) {
+    final static void a(Sprite[][] param0, int param1, byte[] param2, boolean param3, Archive param4, int[] param5, Sprite[][] param6, String[] param7, String[] param8, int param9, byte[] param10, Archive param11, Archive param12, nk[] param13, String[][] param14, int param15, String[][] param16, int[] param17, int param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;

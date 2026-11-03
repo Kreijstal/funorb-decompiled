@@ -38,7 +38,7 @@ final class de extends IntrusiveNode {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-              param1.getAppletContext().showDocument(jg.a(param1, false, var2), "_top");
+              param1.getAppletContext().showDocument(AudioService.a(param1, false, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = (Exception) (Object) decompiledCaughtException;

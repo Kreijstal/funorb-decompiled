@@ -19,28 +19,28 @@ final class rh implements jk {
         RuntimeException var1_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var1 = rp.i(0);
+          var1 = DialWidget.i(0);
           if (var1 != null &&
-            var1 != hs.field_j) {
-            no.a(hs.field_j, 1);
-            hs.field_j = var1;
+            var1 != StandardMapGenerator.field_j) {
+            no.a(StandardMapGenerator.field_j, 1);
+            StandardMapGenerator.field_j = var1;
           }
           if (RasterBuffer.field_a < 18) {
             RasterBuffer.field_a = RasterBuffer.field_a + 1;
           }
           if (RasterBuffer.field_a >= 18) {
             RasterBuffer.field_a = 18;
-            var2_ref_tm = (tm) (ld.field_p.h(35));
+            var2_ref_tm = (tm) (ld.field_p.pollFirst(35));
             if (var2_ref_tm != null) {
-              gs.a(var2_ref_tm, true);
+              NanoFrameTimer.a(var2_ref_tm, true);
             }
           }
           if (param0 > -126) {
             field_g = (mp) null;
           }
-          for (var2 = 0; var2 < hj.field_l.length; var2++) {
-            if (hj.field_l[var2] != null) {
-              hj.field_l[var2].a(256);
+          for (var2 = 0; var2 < PlacementEvent.field_l.length; var2++) {
+            if (PlacementEvent.field_l[var2] != null) {
+              PlacementEvent.field_l[var2].a(256);
             }
           }
           return;
@@ -65,8 +65,8 @@ final class rh implements jk {
         if (param0 > -119) {
           return;
         }
-        pc.c(-113);
-        tc.field_G = null;
+        DerelictMapGenerator.c(-113);
+        DialogRoot.field_G = null;
         jp.g((byte) 122);
     }
 

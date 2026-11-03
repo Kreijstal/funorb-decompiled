@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class le {
-    static tc field_e;
+    static DialogRoot field_e;
     static String field_a;
     static String field_c;
     static int field_b;
@@ -66,11 +66,11 @@ abstract class le {
             if (em.field_h == 0) {
               return true;
             }
-            qq.c(false);
+            MusicVoice.c(false);
             return true;
           }
           if (cg.field_E.length() <= 0) {
-            qq.c(param2);
+            MusicVoice.c(param2);
           } else {
             var4_ref_String = cg.field_E.toString();
             if (DelegatingCanvas.a(var4_ref_String, 0)) {
@@ -79,8 +79,8 @@ abstract class le {
               md.a(2, pr.field_e, 0, (String) null, (String) null, -16169);
               var15 = (String) null;
               var14 = (String) null;
-              md.a(2, go.field_K, 0, (String) null, (String) null, -16169);
-              qq.c(param2);
+              md.a(2, TextFieldWidget.field_K, 0, (String) null, (String) null, -16169);
+              MusicVoice.c(param2);
               return true;
             }
             var5 = em.field_h;
@@ -91,11 +91,11 @@ abstract class le {
             if (id.a(-7019, var5) == 2) {
               gb.a((byte) 91, param0, 1, var5);
               ih.a(gi.field_a, 2, -1, em.field_h, var4_ref_String, param1);
-              qq.c(param2);
+              MusicVoice.c(param2);
               return true;
             }
             ih.a(gi.field_a, 2, -1, em.field_h, var4_ref_String, param1);
-            qq.c(param2);
+            MusicVoice.c(param2);
           }
           return true;
         }
@@ -130,13 +130,13 @@ abstract class le {
         var18 = var16;
         if (em.field_h == 2) {
           var61 = (CharSequence) ((Object) gi.field_a);
-          var20 = re.a(fj.field_q, 4371, new String[]{ih.a(var61, -117)});
+          var20 = re.a(MatchingTextValidator.field_q, 4371, new String[]{ih.a(var61, -117)});
           var8 = re.a(cf.field_M, 4371, new String[]{var16});
-          var9 = ho.field_f.c(var20);
-          var10 = ho.field_f.c(var8);
+          var9 = ho.field_f.stringWidth(var20);
+          var10 = ho.field_f.stringWidth(var8);
           if (var9 <= var10) {
             var5Lifetime1 = var5Lifetime1 - var10;
-            if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+            if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
               aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
             }
             return true;
@@ -146,8 +146,8 @@ abstract class le {
           var7 = "";
           if (0 != em.field_h) {
             var59 = var7 + var18 + ": ";
-            var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var59);
-            if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+            var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var59);
+            if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
               aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
             }
             return true;
@@ -156,35 +156,35 @@ abstract class le {
             if (!je.field_e) {
               if (null == np.field_a) {
                 var47 = var7 + var18 + ": ";
-                var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var47);
-                if (var5Lifetime1 >= ho.field_f.c(cg.field_E.toString())) {
+                var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var47);
+                if (var5Lifetime1 >= ho.field_f.stringWidth(cg.field_E.toString())) {
                   return true;
                 }
                 aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                 return true;
               }
-              if (!i.field_c) {
+              if (!DialPainter.field_c) {
                 var50 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                 var51 = var50 + var18 + ": ";
-                var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var51);
-                if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+                var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var51);
+                if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
                   aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                 }
                 return true;
               }
-              if (wf.field_m == null) {
+              if (AiTask.field_m == null) {
                 var48 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
                 var49 = var48 + var18 + ": ";
-                var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var49);
-                if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+                var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var49);
+                if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
                   aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
                 }
                 return true;
               }
-              var52 = "[" + wf.field_m + "] ";
+              var52 = "[" + AiTask.field_m + "] ";
               var53 = var52 + var18 + ": ";
-              var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var53);
-              if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+              var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var53);
+              if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
                 aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
               }
               return true;
@@ -192,36 +192,36 @@ abstract class le {
             var7 = "[" + ds.field_a + "] ";
           }
           if (null != np.field_a) {
-            if (!i.field_c) {
+            if (!DialPainter.field_c) {
               var57 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
               var58 = var57 + var18 + ": ";
-              var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var58);
-              if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+              var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var58);
+              if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
                 aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
               }
               return true;
             }
-            if (wf.field_m == null) {
+            if (AiTask.field_m == null) {
               var55 = "[" + re.a(he.field_q, 4371, new String[]{np.field_a.field_Xb}) + "] ";
               var56 = var55 + var18 + ": ";
-              var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var56);
-              if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+              var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var56);
+              if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
                 aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
               }
               return true;
             }
-            var7 = "[" + wf.field_m + "] ";
+            var7 = "[" + AiTask.field_m + "] ";
             var59Lifetime1 = var7 + var18 + ": ";
-            var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var59Lifetime1);
-            if (var5Lifetime1 < ho.field_f.c(cg.field_E.toString())) {
+            var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var59Lifetime1);
+            if (var5Lifetime1 < ho.field_f.stringWidth(cg.field_E.toString())) {
               aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');
             }
             return true;
           }
           var54 = var7 + var18 + ": ";
-          var5Lifetime1 = var5Lifetime1 - ho.field_f.c(var54);
+          var5Lifetime1 = var5Lifetime1 - ho.field_f.stringWidth(var54);
         }
-        if (var5Lifetime1 >= ho.field_f.c(cg.field_E.toString())) {
+        if (var5Lifetime1 >= ho.field_f.stringWidth(cg.field_E.toString())) {
           return true;
         }
         aj.a(cg.field_E, -1 + cg.field_E.length(), 87, ' ');

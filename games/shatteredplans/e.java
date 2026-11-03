@@ -17,7 +17,7 @@ final class e {
         ff var7 = null;
         ff var8 = null;
         qk var9 = null;
-        kk var10 = null;
+        PcmSample var10 = null;
         lp var11 = null;
         lp var12 = null;
         lp stackIn_6_0 = null;
@@ -29,15 +29,15 @@ final class e {
           var11 = new lp(0, 0, 132, 40);
           var12 = var11;
           if (param1 > -22) {
-            var10 = (kk) null;
-            e.a(-126, -120, (kk) null);
+            var10 = (PcmSample) null;
+            e.a(-126, -120, (PcmSample) null);
           }
           param3.field_c[param2] = var11;
-          var5 = new qk(132 - rs.field_Cb.c(or.field_d[param2]), 0, or.field_d[param2]);
+          var5 = new qk(132 - rs.field_Cb.stringWidth(or.field_d[param2]), 0, or.field_d[param2]);
           var12.a(var5, 8);
           var6 = new b(d.field_b[param2].field_z / 2, rs.field_Cb.field_J + 2, 132 - d.field_b[param2].field_z / 2, d.field_b[param2].field_w, 2, 2105376);
           var12.a(var6, 8);
-          var7 = new ff(3 * d.field_b[param2].field_z / 4, rs.field_Cb.field_J + 5, ec.a(param2, param0, true));
+          var7 = new ff(3 * d.field_b[param2].field_z / 4, rs.field_Cb.field_J + 5, UsernameAvailabilityValidator.a(param2, param0, true));
           var12.a(var7, 8);
           var8 = new ff(0, 2 + rs.field_Cb.field_J, d.field_b[param2]);
           var12.a(var8, 8);
@@ -49,7 +49,7 @@ final class e {
             var5.field_o = dupTemp$1;
             var12.field_o = dupTemp$1;
           } else {
-            var9 = new qk(d.field_b[param2].field_z, 1 + (rs.field_Cb.field_J + 2 + d.field_b[param2].field_w / 8), 130 - d.field_b[param2].field_z, d.field_b[param2].field_w, mf.field_v);
+            var9 = new qk(d.field_b[param2].field_z, 1 + (rs.field_Cb.field_J + 2 + d.field_b[param2].field_w / 8), 130 - d.field_b[param2].field_z, d.field_b[param2].field_w, EmailValidator.field_v);
             var12.a(var9, 8);
             param3.field_b[param2] = var9;
             var9.field_o = mm.field_q;
@@ -88,7 +88,7 @@ final class e {
         return this.field_a;
     }
 
-    final static gm a(int param0, int param1, kk param2) {
+    final static gm a(int param0, int param1, PcmSample param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         gm stackIn_1_0 = null;
@@ -98,7 +98,7 @@ final class e {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 13 / ((-40 - param1) / 39);
-          stackIn_1_0 = da.a(-128, al.a(param2, 100, param0));
+          stackIn_1_0 = DebouncedValidator.a(-128, PcmSampleStream.createScaled(param2, 100, param0));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

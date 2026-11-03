@@ -71,11 +71,11 @@ final class nb {
     final static void a(int param0) {
         String var1 = null;
         String var1Lifetime1;
-        if (!el.field_b) {
+        if (!TertiaryNodeList.field_b) {
           throw new IllegalStateException();
         }
         if (null == ji.field_G) {
-          var1 = w.l(param0 ^ param0);
+          var1 = Dialog.l(param0 ^ param0);
           no.field_e = new ri(var1, (String) null, true, false, false);
           le.field_e.a(true, ae.field_f);
           ae.field_f.b(no.field_e, param0 - 18);
@@ -83,7 +83,7 @@ final class nb {
           return;
         }
         ji.field_G.i((byte) -104);
-        var1Lifetime1 = w.l(param0 ^ param0);
+        var1Lifetime1 = Dialog.l(param0 ^ param0);
         no.field_e = new ri(var1Lifetime1, (String) null, true, false, false);
         le.field_e.a(true, ae.field_f);
         ae.field_f.b(no.field_e, param0 - 18);
@@ -101,7 +101,7 @@ final class nb {
           if (param1 <= 94) {
             nb.a((byte) -57);
           }
-          stackIn_3_0 = ek.field_D.a(true, param0, "");
+          stackIn_3_0 = ek.field_D.getFileByName(true, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

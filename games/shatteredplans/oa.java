@@ -63,23 +63,23 @@ final class oa {
             if (param0 != 0) {
               oa.b(-14);
             }
-            if (vp.field_o != null) {
-              vp.field_o.e(param0 - 16363);
+            if (TertiaryLinkNode.field_o != null) {
+              TertiaryLinkNode.field_o.e(param0 - 16363);
             }
-            if (vn.field_w != null) {
-              vn.field_w.a((byte) -122);
+            if (BattleSnapshot.field_w != null) {
+              BattleSnapshot.field_w.a((byte) -122);
             }
             if (null != oq.field_g) {
               try {
-                oq.field_g.b((byte) 127);
+                oq.field_g.close((byte) 127);
               } catch (IOException iOException) {
               }
             }
-            if (null != tr.field_Eb) {
-              for (var1_int = 0; var1_int < tr.field_Eb.length; var1_int++) {
-                if (tr.field_Eb[var1_int] != null) {
+            if (null != MapView.field_Eb) {
+              for (var1_int = 0; var1_int < MapView.field_Eb.length; var1_int++) {
+                if (MapView.field_Eb[var1_int] != null) {
                   try {
-                    tr.field_Eb[var1_int].b((byte) -65);
+                    MapView.field_Eb[var1_int].close((byte) -65);
                   } catch (IOException var2_ref) {
                   }
                 }

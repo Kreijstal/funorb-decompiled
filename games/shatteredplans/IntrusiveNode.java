@@ -14,9 +14,9 @@ class IntrusiveNode {
         int var2 = 94 % ((-61 - param1) / 58);
         param0 = param0 & 8191;
         if (param0 < 4096) {
-          return param0 >= 2048 ? -br.field_o[param0 - 2048] : br.field_o[2048 - param0];
+          return param0 >= 2048 ? -MusicPatch.field_o[param0 - 2048] : MusicPatch.field_o[2048 - param0];
         }
-        return 6144 <= param0 ? br.field_o[-6144 + param0] : -br.field_o[-param0 + 6144];
+        return 6144 <= param0 ? MusicPatch.field_o[-6144 + param0] : -MusicPatch.field_o[-param0 + 6144];
     }
 
     final static void b(int param0) {
@@ -43,7 +43,7 @@ class IntrusiveNode {
         return new bg[]{og.field_b, dm.field_f, mj.field_Rb};
     }
 
-    final void b(byte param0) {
+    final void unlink(byte param0) {
         if (this.previous == null) {
           return;
         }
@@ -54,7 +54,7 @@ class IntrusiveNode {
           this.next = null;
           return;
         }
-        this.c(32);
+        this.isLinked(32);
         this.next.previous = this.previous;
         this.previous = null;
         this.next = null;
@@ -81,7 +81,7 @@ class IntrusiveNode {
           if (wg.field_f == null) {
             return false;
           }
-          if (cs.field_j.a(64)) {
+          if (Wormhole.field_j.a(64)) {
             return true;
           }
           return false;
@@ -89,13 +89,13 @@ class IntrusiveNode {
         if (wg.field_f == null) {
           return false;
         }
-        if (cs.field_j.a(64)) {
+        if (Wormhole.field_j.a(64)) {
           return true;
         }
         return false;
     }
 
-    final boolean c(int param0) {
+    final boolean isLinked(int param0) {
         if (this.previous == null) {
           return false;
         }

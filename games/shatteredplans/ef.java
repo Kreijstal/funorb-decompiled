@@ -59,7 +59,7 @@ final class ef {
     }
 
     final static void a(boolean param0) {
-        kc.field_b = new IntrusiveDeque();
+        MusicEnvelope.field_b = new IntrusiveDeque();
         if (!param0) {
           field_f = (Sprite) null;
         }

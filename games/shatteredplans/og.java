@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og implements iq {
+final class og implements WidgetPainter {
     static int[] field_c;
     static bg field_b;
     static String field_a;
 
-    final static uj a(int param0, mn param1, Player param2, GameState param3, int param4) {
+    final static Ai a(int param0, AiHost param1, Player param2, GameState param3, int param4) {
         RuntimeException var5 = null;
-        cj stackIn_5_0 = null;
-        sc stackIn_8_0 = null;
-        rj stackIn_11_0 = null;
-        hg stackIn_14_0 = null;
-        ma stackIn_18_0 = null;
-        j stackIn_23_0 = null;
-        ka stackIn_25_0 = null;
+        TutorialAi stackIn_5_0 = null;
+        AggressiveAi stackIn_8_0 = null;
+        RecklessAi stackIn_11_0 = null;
+        IsolationistAi stackIn_14_0 = null;
+        DefensiveAi stackIn_18_0 = null;
+        LegacyAi stackIn_23_0 = null;
+        StandardAi stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -28,32 +28,32 @@ final class og implements iq {
             field_b = (bg) null;
           }
           if (param0 == 2) {
-            stackIn_5_0 = new cj(param3, param2, param1);
-            return (uj) ((Object) stackIn_5_0);
+            stackIn_5_0 = new TutorialAi(param3, param2, param1);
+            return (Ai) ((Object) stackIn_5_0);
           }
           if (4 == param0) {
-            stackIn_8_0 = new sc(param3, param2, param1);
-            return (uj) ((Object) stackIn_8_0);
+            stackIn_8_0 = new AggressiveAi(param3, param2, param1);
+            return (Ai) ((Object) stackIn_8_0);
           }
           if (5 == param0) {
-            stackIn_11_0 = new rj(param3, param2, param1);
-            return (uj) ((Object) stackIn_11_0);
+            stackIn_11_0 = new RecklessAi(param3, param2, param1);
+            return (Ai) ((Object) stackIn_11_0);
           }
           if (param0 == 6) {
-            stackIn_14_0 = new hg(param3, param2, param1);
-            return (uj) ((Object) stackIn_14_0);
+            stackIn_14_0 = new IsolationistAi(param3, param2, param1);
+            return (Ai) ((Object) stackIn_14_0);
           }
           if (param0 == 7) {
-            stackIn_18_0 = new ma(param3, param2, param1);
-            return (uj) ((Object) stackIn_18_0);
+            stackIn_18_0 = new DefensiveAi(param3, param2, param1);
+            return (Ai) ((Object) stackIn_18_0);
           }
           if (param0 != 0 &&
             1 != param0) {
-            stackIn_25_0 = new ka(param3, param2, param1, param0);
-            return (uj) ((Object) stackIn_25_0);
+            stackIn_25_0 = new StandardAi(param3, param2, param1, param0);
+            return (Ai) ((Object) stackIn_25_0);
           }
-          stackIn_23_0 = new j(param3, param2, param1, param0);
-          return (uj) ((Object) stackIn_23_0);
+          stackIn_23_0 = new LegacyAi(param3, param2, param1, param0);
+          return (Ai) ((Object) stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -126,8 +126,8 @@ final class og implements iq {
           var7 = param3 + param0.field_q;
           ClientException.a((byte) -73, var7, param0.field_n, var6_int, param0.field_x);
           var8 = lp.field_w[1];
-          if (param0 instanceof kg &&
-            ((kg) (param0)).field_z) {
+          if (param0 instanceof FocusableWidget &&
+            ((FocusableWidget) (param0)).field_z) {
             var8.c(1 + (var6_int + (param0.field_x - var8.field_o >> 1)), (-var8.field_p + param0.field_n >> 1) + 1 + var7, 256);
           }
           if (!param0.f(param4 ^ 13)) {
@@ -179,15 +179,15 @@ final class og implements iq {
               if (0 != var6 % param2 &&
                 param1[var6] != null &&
                 param1[var5].field_p < param1[var6].field_p) {
-                param1[var5].a((byte) -123, param1[var6]);
-                param1[var6].a((byte) -104, param1[var5]);
+                param1[var5].addNeighbour((byte) -123, param1[var6]);
+                param1[var6].addNeighbour((byte) -104, param1[var5]);
               }
               var6Lifetime1 = var5 - 1;
               if (var5 % param2 != 0 &&
                 param1[var6Lifetime1] != null &&
                 param1[var6Lifetime1].field_p > param1[var5].field_p) {
-                param1[var5].a((byte) -87, param1[var6Lifetime1]);
-                param1[var6Lifetime1].a((byte) -77, param1[var5]);
+                param1[var5].addNeighbour((byte) -87, param1[var6Lifetime1]);
+                param1[var6Lifetime1].addNeighbour((byte) -77, param1[var5]);
               }
               if (var7 > 0) {
                 if (var5 % param2 != 0 ||
@@ -199,8 +199,8 @@ final class og implements iq {
                   }
                   if (param1[var6Lifetime2] != null &&
                     param1[var6Lifetime2].field_p > param1[var5].field_p) {
-                    param1[var5].a((byte) -120, param1[var6Lifetime2]);
-                    param1[var6Lifetime2].a((byte) -112, param1[var5]);
+                    param1[var5].addNeighbour((byte) -120, param1[var6Lifetime2]);
+                    param1[var6Lifetime2].addNeighbour((byte) -112, param1[var5]);
                   }
                 }
                 if (var8 != 0 ||
@@ -212,8 +212,8 @@ final class og implements iq {
                   }
                   if (null != param1[var6Lifetime2Lifetime1] &&
                     param1[var6Lifetime2Lifetime1].field_p > param1[var5].field_p) {
-                    param1[var5].a((byte) -93, param1[var6Lifetime2Lifetime1]);
-                    param1[var6Lifetime2Lifetime1].a((byte) -88, param1[var5]);
+                    param1[var5].addNeighbour((byte) -93, param1[var6Lifetime2Lifetime1]);
+                    param1[var6Lifetime2Lifetime1].addNeighbour((byte) -88, param1[var5]);
                   }
                 }
               }
@@ -227,8 +227,8 @@ final class og implements iq {
                   }
                   if (null != param1[var6Lifetime3] &&
                     param1[var6Lifetime3].field_p > param1[var5].field_p) {
-                    param1[var5].a((byte) -81, param1[var6Lifetime3]);
-                    param1[var6Lifetime3].a((byte) -124, param1[var5]);
+                    param1[var5].addNeighbour((byte) -81, param1[var6Lifetime3]);
+                    param1[var6Lifetime3].addNeighbour((byte) -124, param1[var5]);
                   }
                 }
                 if (var8 != 0 ||
@@ -240,8 +240,8 @@ final class og implements iq {
                   }
                   if (param1[var6Lifetime3Lifetime1] != null &&
                     param1[var5].field_p < param1[var6Lifetime3Lifetime1].field_p) {
-                    param1[var5].a((byte) -83, param1[var6Lifetime3Lifetime1]);
-                    param1[var6Lifetime3Lifetime1].a((byte) -104, param1[var5]);
+                    param1[var5].addNeighbour((byte) -83, param1[var6Lifetime3Lifetime1]);
+                    param1[var6Lifetime3Lifetime1].addNeighbour((byte) -104, param1[var5]);
                   }
                 }
               }

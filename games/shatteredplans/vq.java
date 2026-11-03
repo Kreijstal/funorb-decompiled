@@ -42,38 +42,38 @@ final class vq {
           var14 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
             var18 = new eq();
-            var18.field_l = param0.j(param3 ^ 120);
-            var18.field_j = param0.a(16711680);
+            var18.field_l = param0.readUnsignedByte(param3 ^ 120);
+            var18.field_j = param0.readInt(16711680);
             var18.field_h = new byte[var18.field_l][][];
-            var18.field_n = new pb[var18.field_l];
-            var18.field_q = new pb[var18.field_l];
+            var18.field_n = new PlatformTask[var18.field_l];
+            var18.field_q = new PlatformTask[var18.field_l];
             var18.field_p = new int[var18.field_l];
             var18.field_m = new int[var18.field_l];
             var18.field_r = new int[var18.field_l];
             for (var5 = 0; var5 < var18.field_l; var5++) {
               try {
-                var6_int = param0.j(param3 - 119);
+                var6_int = param0.readUnsignedByte(param3 - 119);
                 if (var6_int != 0 &&
                   1 != var6_int &&
                   var6_int != 2) {
                   if (3 == var6_int ||
                     var6_int == 4) {
-                    var20 = param0.e(-1);
-                    var8 = param0.e(param3 ^ 2);
-                    var9 = param0.j(-91);
+                    var20 = param0.readString(-1);
+                    var8 = param0.readString(param3 ^ 2);
+                    var9 = param0.readUnsignedByte(-91);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param0.e(-1);
+                      var10[var11_int] = param0.readString(-1);
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var12_int < var9; var12_int++) {
-                        var13 = param0.a(16711680);
+                        var13 = param0.readInt(16711680);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param0.a(var13, 0, 17469032, var21[var12_int]);
+                        param0.readBytes(var13, 0, 17469032, var21[var12_int]);
                       }
                     }
                     var18.field_m[var5] = var6_int;
@@ -88,13 +88,13 @@ final class vq {
                     var18.field_h[var5] = var21;
                   }
                 } else {
-                  var15 = param0.e(-1);
-                  dupTemp$1 = param0.e(-1);
+                  var15 = param0.readString(-1);
+                  dupTemp$1 = param0.readString(-1);
                   var16 = dupTemp$1;
                   var8 = dupTemp$1;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param0.a(param3 + 16711683);
+                    var9 = param0.readInt(param3 + 16711683);
                   }
                   var18.field_m[var5] = var6_int;
                   var18.field_r[var5] = var9;
@@ -125,7 +125,7 @@ final class vq {
             if (param3 != -3) {
               return;
             }
-            kc.field_b.a((byte) -113, var18);
+            MusicEnvelope.field_b.addLast((byte) -113, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -155,7 +155,7 @@ final class vq {
     final static String a(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        sl var5 = null;
+        CipherPacketBuffer var5 = null;
         CharSequence var6 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -175,14 +175,14 @@ final class vq {
             return stackIn_3_0;
           }
           if (jp.a(param1, (byte) -105)) {
-            stackIn_7_0 = wb.field_f;
+            stackIn_7_0 = QuaternaryNodeList.field_f;
             return stackIn_7_0;
           }
           if (po.field_b != 2) {
-            stackIn_10_0 = tp.field_d;
+            stackIn_10_0 = SliderPainter.field_d;
             return stackIn_10_0;
           }
-          if (ti.a(param1, true)) {
+          if (IntrusiveNodeHashTable.a(param1, true)) {
             stackIn_13_0 = re.a(or.field_c, 4371, new String[]{param1});
             return stackIn_13_0;
           }
@@ -190,17 +190,17 @@ final class vq {
             stackIn_17_0 = mi.field_a;
             return stackIn_17_0;
           }
-          if (da.a(param0 - 30108, param1)) {
-            stackIn_21_0 = re.a(qq.field_N, 4371, new String[]{param1});
+          if (DebouncedValidator.a(param0 - 30108, param1)) {
+            stackIn_21_0 = re.a(MusicVoice.field_N, 4371, new String[]{param1});
             return stackIn_21_0;
           }
           var5 = js.field_f;
           var5.h(param2, param0 ^ 253);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.c(param0, (byte) -97);
-          var5.a(param1, (byte) 0);
-          var5.b(var5.position - var4, (byte) 119);
+          var5.writeByte(param0, (byte) -97);
+          var5.writeString(param1, (byte) 0);
+          var5.patchLengthByte(var5.position - var4, (byte) 119);
           stackIn_23_0 = null;
           return (String) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

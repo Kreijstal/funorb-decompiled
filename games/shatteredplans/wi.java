@@ -16,13 +16,13 @@ final class wi {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = qq.field_D;
+          var7 = MusicVoice.field_D;
           if (param6 != -3903) {
             stackIn_2_0 = (wa) null;
             return stackIn_2_0;
           }
           if (var7 != null) {
-            qq.field_D = qq.field_D.field_c;
+            MusicVoice.field_D = MusicVoice.field_D.field_c;
           } else {
             var7 = new wa();
             ms.field_a = ms.field_a + 1;

@@ -11,7 +11,7 @@ final class jh extends vd implements ok {
     private int field_z;
     static boolean field_D;
     private String field_C;
-    static ga field_B;
+    static MidiPcmStream field_B;
     private Sprite field_F;
     private int field_w;
 
@@ -49,46 +49,46 @@ final class jh extends vd implements ok {
           if (-1 != this.field_z) {
             gf.d(this.field_k, this.field_t, this.field_m, this.field_i, this.field_z);
             if (this.field_F != null) {
-              this.field_F.f(this.field_k + (this.field_m - this.field_F.field_z) / 2, (this.field_i - this.field_F.field_w) / 2 + this.field_t);
+              this.field_F.draw(this.field_k + (this.field_m - this.field_F.field_z) / 2, (this.field_i - this.field_F.field_w) / 2 + this.field_t);
             }
             if (this.field_G != null) {
-              rs.field_Cb.c(this.field_G, this.field_m / 2 + 1 + this.field_k, rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_u, -1);
+              rs.field_Cb.drawCentred(this.field_G, this.field_m / 2 + 1 + this.field_k, rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_u, -1);
               return;
             }
             return;
           }
           if (this.field_F != null) {
-            this.field_F.f(this.field_k + (this.field_m - this.field_F.field_z) / 2, (this.field_i - this.field_F.field_w) / 2 + this.field_t);
+            this.field_F.draw(this.field_k + (this.field_m - this.field_F.field_z) / 2, (this.field_i - this.field_F.field_w) / 2 + this.field_t);
           }
           if (this.field_G == null) {
             return;
           }
-          rs.field_Cb.c(this.field_G, this.field_m / 2 + 1 + this.field_k, rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_u, -1);
+          rs.field_Cb.drawCentred(this.field_G, this.field_m / 2 + 1 + this.field_k, rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_u, -1);
           return;
         }
         if (this.field_w != -1) {
           gf.d(this.field_k, this.field_t, this.field_m, this.field_i, this.field_w);
           if (this.field_E == null) {
             if (null != this.field_C) {
-              rs.field_Cb.c(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
+              rs.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
             }
             return;
           }
-          this.field_E.f((-this.field_E.field_z + this.field_m) / 2 + this.field_k, (this.field_i - this.field_E.field_w) / 2 + this.field_t);
+          this.field_E.draw((-this.field_E.field_z + this.field_m) / 2 + this.field_k, (this.field_i - this.field_E.field_w) / 2 + this.field_t);
           if (null != this.field_C) {
-            rs.field_Cb.c(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
+            rs.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
           }
           return;
         }
         if (this.field_E != null) {
-          this.field_E.f((-this.field_E.field_z + this.field_m) / 2 + this.field_k, (this.field_i - this.field_E.field_w) / 2 + this.field_t);
+          this.field_E.draw((-this.field_E.field_z + this.field_m) / 2 + this.field_k, (this.field_i - this.field_E.field_w) / 2 + this.field_t);
           if (null != this.field_C) {
-            rs.field_Cb.c(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
+            rs.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
           }
           return;
         }
         if (null != this.field_C) {
-          rs.field_Cb.c(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
+          rs.field_Cb.drawCentred(this.field_C, this.field_m / 2 + (1 + this.field_k), rs.field_Cb.field_J / 2 + (this.field_i / 2 + this.field_t), this.field_x, -1);
           return;
         }
     }
@@ -120,28 +120,28 @@ final class jh extends vd implements ok {
             if (ae.field_b) {
               var5 = pg.field_E;
             } else {
-              var5 = sl.field_q;
+              var5 = CipherPacketBuffer.field_q;
             }
           }
           var7 = (String) null;
           cq.a(-114, ho.field_c, (String) null, var5, 0);
           ck.field_a = uq.field_j;
-          uq.field_j.field_ab = -(8355711 & ho.field_c >> 1) + (ho.field_c + ((16711422 & bh.field_k.field_ab) >> 1));
-          uq.field_j.field_jb = -(8355711 & ho.field_c >> 1) + ho.field_c + ((bh.field_k.field_jb & 16711422) >> 1);
-          er.field_j = cg.field_C;
-          uq.field_j.field_qb = -(ho.field_c >> 1 & 8355711) + ho.field_c + (bh.field_k.field_qb >> 1 & 8355711);
+          uq.field_j.field_ab = -(8355711 & ho.field_c >> 1) + (ho.field_c + ((16711422 & BoundsRect.field_k.field_ab) >> 1));
+          uq.field_j.field_jb = -(8355711 & ho.field_c >> 1) + ho.field_c + ((BoundsRect.field_k.field_jb & 16711422) >> 1);
+          WhirlpoolHasher.field_j = cg.field_C;
+          uq.field_j.field_qb = -(ho.field_c >> 1 & 8355711) + ho.field_c + (BoundsRect.field_k.field_qb >> 1 & 8355711);
           fa.field_X = new qr(0L, param1);
-          mb.field_n = new qr(0L, param2);
+          AgeValidator.field_n = new qr(0L, param2);
           fe.field_w = new qr(0L, (qr) null);
           sg.field_Ab = new qr(0L, param3);
           uq.field_j = new qr((long)param4, param0);
           uq.field_j.field_nb = ho.field_f;
           sg.field_Ab.a(4, uq.field_j);
-          cg.field_C = new qr(0L, er.field_j);
+          cg.field_C = new qr(0L, WhirlpoolHasher.field_j);
           sg.field_Ab.a(4, cg.field_C);
-          hd.field_m = new qr(0L, bh.field_k, ld.field_n);
-          cb.field_l = new qr(0L, bh.field_k);
-          fa.field_X.a(4, mb.field_n);
+          hd.field_m = new qr(0L, BoundsRect.field_k, ld.field_n);
+          cb.field_l = new qr(0L, BoundsRect.field_k);
+          fa.field_X.a(4, AgeValidator.field_n);
           fa.field_X.a(4, fe.field_w);
           fe.field_w.a(4, sg.field_Ab);
           fe.field_w.a(param4 + 4, hd.field_m);
@@ -199,7 +199,7 @@ final class jh extends vd implements ok {
     final void e(byte param0) {
         this.field_y = !this.field_y ? true : false;
         if (param0 <= 1) {
-          field_B = (ga) null;
+          field_B = (MidiPcmStream) null;
           return;
         }
     }

@@ -10,7 +10,7 @@ final class ck {
     static String field_f;
     static String field_c;
 
-    final static void a(bc param0, java.applet.Applet param1, bc param2, bc param3, bc param4, bc param5, byte param6) {
+    final static void a(Archive param0, java.applet.Applet param1, Archive param2, Archive param3, Archive param4, Archive param5, byte param6) {
         int var7_int = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -52,28 +52,28 @@ final class ck {
         try {
           mp.field_b = ri.a("font", "", param0, param4, (byte) 89);
           rs.field_Cb = ri.a("smallfont", "", param0, param4, (byte) 111);
-          in.field_f = ds.a(true, param0, "", "logo");
-          var7_int = 3 * in.field_f.field_o / 4;
-          var8 = in.field_f.field_p * 3 / 4;
-          ra.a(-110);
+          SecondaryNodeHashTable.field_f = ds.a(true, param0, "", "logo");
+          var7_int = 3 * SecondaryNodeHashTable.field_f.field_o / 4;
+          var8 = SecondaryNodeHashTable.field_f.field_p * 3 / 4;
+          RandomAccessCacheFile.a(-110);
           jf.field_a = new Sprite(var7_int, var8);
-          jf.field_a.e();
+          jf.field_a.bindAsRenderTarget();
           gf.d(0, 0, var7_int, var8, 16777215);
-          in.field_f.e(0, 0, 0);
+          SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 0);
           gf.b(3, 3, 0, 0, var7_int, var8);
-          in.field_f.e(0, 0, 255);
+          SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 255);
           cg.i(param6 + 8);
           fm.field_d = ae.a(101, "", param0, "edge_orbs");
-          mh.field_b = new Sprite[4];
-          ra.a(param6 ^ 108);
+          IsaacRandom.field_b = new Sprite[4];
+          RandomAccessCacheFile.a(param6 ^ 108);
           for (var9_int = 0; 4 > var9_int; var9_int++) {
             var19 = fm.field_d[var9_int];
             var20 = new Sprite(var19.field_z + 32, 32 + var19.field_w);
-            var20.e();
-            var19.e(16 - var19.field_t, 16 - var19.field_x, 16777215);
+            var20.bindAsRenderTarget();
+            var19.drawSilhouette(16 - var19.field_t, 16 - var19.field_x, 16777215);
             gf.b(8, 8, 0, 0, var20.field_z, var20.field_w);
-            var19.e(16 - var19.field_t, 16 - var19.field_x, 0);
-            mh.field_b[var9_int] = var20;
+            var19.drawSilhouette(16 - var19.field_t, 16 - var19.field_x, 0);
+            IsaacRandom.field_b[var9_int] = var20;
           }
           cg.i(0);
           hn.field_c = ds.a(true, param0, "", "menu_hex");
@@ -81,23 +81,23 @@ final class ck {
           hb.field_d = id.a(param6 ^ -6, param0, "", "instr_starframe");
           ae.a(-100, "", param0, "zoomicons");
           var9 = va.a("hud_icons", 0, "", param0);
-          k.field_d = var9[3];
-          h.field_F = var9[2];
+          TurnEventLog.field_d = var9[3];
+          MusicCrossfadeStream.field_F = var9[2];
           fm.field_e = var9[0];
           wl.field_d = var9[4];
           tm.field_r = var9[1];
           var21 = va.a("hud_icons_red", param6 + 8, "", param0);
           bd.field_D = var21[0];
-          cs.field_h = var21[3];
-          ak.field_x = var21[2];
+          Wormhole.field_h = var21[3];
+          DiskArchiveRequest.field_x = var21[2];
           je.field_b = var21[1];
-          nr.field_k = var21[4];
+          StarAbandonedEvent.field_k = var21[4];
           var22 = va.a("hud_icons_nobase", 0, "", param0);
           NodeHashTableIterator.field_b = var22[0];
           je.field_f = var22[4];
           us.field_a = var22[3];
           GameKeyHandler.field_b = var22[1];
-          ci.field_p = var22[2];
+          ArchiveIndex.field_p = var22[2];
           Player.field_a = va.a("icon_circles", param6 + 8, "", param0);
           dm.field_d = va.a("production_icons", 0, "", param0);
           aq.field_i = ds.a(true, param0, "", "production_button");
@@ -120,77 +120,77 @@ final class ck {
           rk.field_j = ds.a(true, param0, "", "ready_button");
           ei.field_a = ds.a(true, param0, "", "ready_button_down");
           jl.field_W = ds.a(true, param0, "", "shine_left");
-          mr.field_g = ds.a(true, param0, "", "shine_right");
+          DerelictMapReader.field_g = ds.a(true, param0, "", "shine_right");
           VictoryChecker.field_h = ds.a(true, param0, "", "shine_mid");
           SpriteState.field_q = ds.a(true, param0, "", "combat_hex_white");
-          ra.a(-116);
-          SpriteState.field_q.e();
+          RandomAccessCacheFile.a(-116);
+          SpriteState.field_q.bindAsRenderTarget();
           SpriteState.field_q.b(0, 0, 2105376);
           cg.i(0);
           bj.field_H = ds.a(true, param0, "", "planet_burnt");
           qe.field_j = ds.a(true, param0, "", "planet_scorchedearth");
-          tk.field_x = ds.a(true, param0, "", "planet_earthlike");
+          NetworkArchiveRequest.field_x = ds.a(true, param0, "", "planet_earthlike");
           ta.field_a = ds.a(true, param0, "", "planet_exotic");
           be.field_k = ds.a(true, param0, "", "planet_gas");
           rl.field_c = ds.a(true, param0, "", "planet_ringed");
           kr.field_d = ds.a(true, param0, "", "planet_rock");
           rk.field_k = ds.a(true, param0, "", "alien_miner");
-          ti.field_h = ds.a(true, param0, "", "alien_ship");
+          IntrusiveNodeHashTable.field_h = ds.a(true, param0, "", "alien_ship");
           cp.field_t = ds.a(true, param0, "", "alien_base");
           kb.field_y = id.a(2, param0, "", "ship");
           wo.field_b = id.a(2, param0, "", "shield");
           oo.field_a = id.a(param6 ^ -6, param0, "", "defensegrid");
           ab.field_e = id.a(2, param0, "", "chevron");
-          go.field_L = ds.a(true, param0, "", "warning");
+          TextFieldWidget.field_L = ds.a(true, param0, "", "warning");
           bd.field_G = id.a(2, param0, "", "hammer");
           e.field_e = id.a(param6 ^ -6, param0, "", "beaker");
           UiWidget.field_t = ds.a(true, param0, "", "factionring");
           SpriteState.field_y = ds.a(true, param0, "", "factionringtag");
           ek.field_z = ds.a(true, param0, "", "factionringcentre");
-          fj.field_p = ds.a(true, param0, "", "arrowship");
+          MatchingTextValidator.field_p = ds.a(true, param0, "", "arrowship");
           eq.field_o = ds.a(true, param0, "", "arrowshipdamaged");
           cf.field_F = ds.a(true, param0, "", "fleetsarrowship");
           di.field_i = va.a("fleetbuttons", 0, "", param0);
-          nr.field_r = va.a("anim_icons", 0, "", param0);
-          co.field_s = new ArgbSprite(6, 6);
-          co.field_s.field_B[33] = 469762047;
-          co.field_s.field_B[28] = -14671840;
-          co.field_s.field_B[24] = 0;
-          co.field_s.field_B[35] = 0;
-          co.field_s.field_B[17] = 1140850688;
-          co.field_s.field_B[5] = 0;
-          co.field_s.field_B[31] = 0;
-          co.field_s.field_B[2] = 872415231;
-          co.field_s.field_B[12] = 268435456;
-          co.field_s.field_B[13] = -5658199;
-          co.field_s.field_B[10] = -11250604;
-          co.field_s.field_B[25] = -13487566;
-          co.field_s.field_B[20] = -7303024;
-          co.field_s.field_B[3] = 587202559;
-          co.field_s.field_B[0] = 0;
+          StarAbandonedEvent.field_r = va.a("anim_icons", 0, "", param0);
+          GarrisonTask.field_s = new ArgbSprite(6, 6);
+          GarrisonTask.field_s.field_B[33] = 469762047;
+          GarrisonTask.field_s.field_B[28] = -14671840;
+          GarrisonTask.field_s.field_B[24] = 0;
+          GarrisonTask.field_s.field_B[35] = 0;
+          GarrisonTask.field_s.field_B[17] = 1140850688;
+          GarrisonTask.field_s.field_B[5] = 0;
+          GarrisonTask.field_s.field_B[31] = 0;
+          GarrisonTask.field_s.field_B[2] = 872415231;
+          GarrisonTask.field_s.field_B[12] = 268435456;
+          GarrisonTask.field_s.field_B[13] = -5658199;
+          GarrisonTask.field_s.field_B[10] = -11250604;
+          GarrisonTask.field_s.field_B[25] = -13487566;
+          GarrisonTask.field_s.field_B[20] = -7303024;
+          GarrisonTask.field_s.field_B[3] = 587202559;
+          GarrisonTask.field_s.field_B[0] = 0;
           mj.field_Nb = (Sprite[]) ((Object) new ArgbSprite[6]);
-          co.field_s.field_B[6] = 0;
-          co.field_s.field_B[22] = -14013910;
-          co.field_s.field_B[29] = 0;
-          co.field_s.field_B[19] = -9408400;
-          co.field_s.field_B[14] = -3815995;
-          co.field_s.field_B[7] = -6118750;
-          co.field_s.field_B[11] = 0;
-          co.field_s.field_B[34] = 0;
-          co.field_s.field_B[26] = -13948117;
-          co.field_s.field_B[30] = 0;
-          co.field_s.field_B[27] = -14869219;
-          co.field_s.field_B[15] = -5066062;
-          co.field_s.field_B[32] = 503316480;
-          co.field_s.field_B[4] = 0;
-          co.field_s.field_B[18] = 536870912;
-          co.field_s.field_B[8] = -3684409;
-          co.field_s.field_B[9] = -5329234;
-          co.field_s.field_B[1] = 0;
+          GarrisonTask.field_s.field_B[6] = 0;
+          GarrisonTask.field_s.field_B[22] = -14013910;
+          GarrisonTask.field_s.field_B[29] = 0;
+          GarrisonTask.field_s.field_B[19] = -9408400;
+          GarrisonTask.field_s.field_B[14] = -3815995;
+          GarrisonTask.field_s.field_B[7] = -6118750;
+          GarrisonTask.field_s.field_B[11] = 0;
+          GarrisonTask.field_s.field_B[34] = 0;
+          GarrisonTask.field_s.field_B[26] = -13948117;
+          GarrisonTask.field_s.field_B[30] = 0;
+          GarrisonTask.field_s.field_B[27] = -14869219;
+          GarrisonTask.field_s.field_B[15] = -5066062;
+          GarrisonTask.field_s.field_B[32] = 503316480;
+          GarrisonTask.field_s.field_B[4] = 0;
+          GarrisonTask.field_s.field_B[18] = 536870912;
+          GarrisonTask.field_s.field_B[8] = -3684409;
+          GarrisonTask.field_s.field_B[9] = -5329234;
+          GarrisonTask.field_s.field_B[1] = 0;
           ts.field_L = (Sprite[]) ((Object) new ArgbSprite[6]);
-          co.field_s.field_B[16] = -10658467;
-          co.field_s.field_B[23] = 1207959552;
-          co.field_s.field_B[21] = -10066330;
+          GarrisonTask.field_s.field_B[16] = -10658467;
+          GarrisonTask.field_s.field_B[23] = 1207959552;
+          GarrisonTask.field_s.field_B[21] = -10066330;
           for (var13_int = 0; mj.field_Nb.length > var13_int; var13_int++) {
             mj.field_Nb[var13_int] = ds.a(true, param0, "", "res_side_" + var13_int);
             ts.field_L[var13_int] = ds.a(true, param0, "", "res_low_" + var13_int);
@@ -209,14 +209,14 @@ final class ck {
               }
             }
           }
-          qa.field_p = va.a("defnet_anim_mid", 0, "", param0);
-          for (var13_intLifetime3 = 0; qa.field_p[0].field_B.length > var13_intLifetime3; var13_intLifetime3++) {
-            if (0 != qa.field_p[0].field_B[var13_intLifetime3]) {
-              qa.field_p[0].field_B[var13_intLifetime3] = 6006988 + ((qa.field_p[0].field_B[var13_intLifetime3] >>> 24) / 4 << 24);
+          PlacementOrder.field_p = va.a("defnet_anim_mid", 0, "", param0);
+          for (var13_intLifetime3 = 0; PlacementOrder.field_p[0].field_B.length > var13_intLifetime3; var13_intLifetime3++) {
+            if (0 != PlacementOrder.field_p[0].field_B[var13_intLifetime3]) {
+              PlacementOrder.field_p[0].field_B[var13_intLifetime3] = 6006988 + ((PlacementOrder.field_p[0].field_B[var13_intLifetime3] >>> 24) / 4 << 24);
             }
           }
           for (var13_intLifetime4 = 1; var13_intLifetime4 < 13; var13_intLifetime4++) {
-            var28 = qa.field_p[var13_intLifetime4];
+            var28 = PlacementOrder.field_p[var13_intLifetime4];
             for (var15_intLifetime1 = 0; var15_intLifetime1 < var28.field_B.length; var15_intLifetime1++) {
               if ((-16777216 & var28.field_B[var15_intLifetime1]) == 0) {
                 var28.field_B[var15_intLifetime1] = 0;
@@ -239,24 +239,24 @@ final class ck {
               }
             }
           }
-          rf.field_k = new Sprite(16, 10);
+          AllianceExpiredEvent.field_k = new Sprite(16, 10);
           pr.field_a = new Sprite(18, 12);
-          bs.a(rf.field_k, 98);
-          kb.field_y.d(0, 0);
-          pr.field_a.e();
-          rf.field_k.b(1, 1, 8421504);
+          bs.a(AllianceExpiredEvent.field_k, 98);
+          kb.field_y.drawHalfSize(0, 0);
+          pr.field_a.bindAsRenderTarget();
+          AllianceExpiredEvent.field_k.b(1, 1, 8421504);
           fm.field_b = new Sprite(10, 12);
-          fm.field_b.e();
+          fm.field_b.bindAsRenderTarget();
           wo.field_b.b(1, 1, 8421504);
           ef.field_f = new Sprite(12, 12);
-          ef.field_f.e();
+          ef.field_f.bindAsRenderTarget();
           oo.field_a.b(1, 1, 8421504);
           mj.field_Kb = new Sprite(12, 12);
-          mj.field_Kb.e();
+          mj.field_Kb.bindAsRenderTarget();
           ab.field_e.b(1, 1, 8421504);
           wa.field_b = new Sprite(128, 128);
-          wa.field_b.e();
-          go.field_L.f(0, 0);
+          wa.field_b.bindAsRenderTarget();
+          TextFieldWidget.field_L.draw(0, 0);
           for (var13_intLifetime7 = 0; var13_intLifetime7 < wa.field_b.field_B.length; var13_intLifetime7++) {
             if (wa.field_b.field_B[var13_intLifetime7] != 0) {
               gf.c(var13_intLifetime7 % wa.field_b.field_z, var13_intLifetime7 / wa.field_b.field_z, 16777215, 128);
@@ -264,55 +264,55 @@ final class ck {
             }
           }
           fb.field_Vb = new Sprite(18, 12);
-          fb.field_Vb.e();
+          fb.field_Vb.bindAsRenderTarget();
           bd.field_G.b(1, 1, 8421504);
           cg.i(0);
-          pr.field_a.f(16777215);
-          fm.field_b.f(16777215);
+          pr.field_a.addOutline(16777215);
+          fm.field_b.addOutline(16777215);
           if (param6 != -8) {
             ck.a(-23);
           }
-          ef.field_f.f(16777215);
-          mj.field_Kb.f(16777215);
-          fb.field_Vb.f(16777215);
-          kj.field_f = hl.a((byte) 111, 80);
-          hp.field_n = param0;
-          mr.field_i = ea.a(5592405, (byte) 41, 13882323, 10);
+          ef.field_f.addOutline(16777215);
+          mj.field_Kb.addOutline(16777215);
+          fb.field_Vb.addOutline(16777215);
+          kj.field_f = ValidationIndicator.a((byte) 111, 80);
+          DerelictVictoryChecker.field_n = param0;
+          DerelictMapReader.field_i = IsaacBackedRandom.a(5592405, (byte) 41, 13882323, 10);
           cm.field_b = id.a(param6 + 10, param2, "basic", "orbcoin");
-          var13 = es.field_m > 0 ? "unachieved" : "locked";
-          jc.a(14, id.a(param6 ^ -6, param2, "basic", var13));
-          jd.field_j = ae.a(param6 + 70, "", param0, "achievements");
-          var14 = jd.field_j.length;
+          var13 = StarAnnotation.field_m > 0 ? "unachieved" : "locked";
+          ArchiveRequest.a(14, id.a(param6 ^ -6, param2, "basic", var13));
+          CellVertex.field_j = ae.a(param6 + 70, "", param0, "achievements");
+          var14 = CellVertex.field_j.length;
           ql.field_o = new Sprite[var14];
-          tr.field_sb = new Sprite[var14];
+          MapView.field_sb = new Sprite[var14];
           vh.field_a = new Sprite[var14];
           bd.field_C = new Sprite[var14];
-          co.field_p = va.a("system_icons", 0, "", param0);
-          ca.a(param1, param2, param3, param5, true, param0);
-          kq.field_R = new Sprite(15, 15);
-          bs.a(kq.field_R, 78);
+          GarrisonTask.field_p = va.a("system_icons", 0, "", param0);
+          PlayerEliminatedEvent.a(param1, param2, param3, param5, true, param0);
+          GameScreen.field_R = new Sprite(15, 15);
+          bs.a(GameScreen.field_R, 78);
           gf.g(15, 15, 15, 65793);
           gf.g(15, 15, 5, 0);
           le.field_d = new Sprite(15, 20);
-          le.field_d.e();
+          le.field_d.bindAsRenderTarget();
           gf.d(0, 0, 15, 20, 65793);
           gf.g(0, -1, 5, 0);
           gf.g(0, 20, 5, 0);
           var15Lifetime1 = id.a(2, param0, "", "menu_pip");
           GameKeyHandler.field_e = new Sprite(2 + var15Lifetime1.field_z, 2 + var15Lifetime1.field_w);
-          GameKeyHandler.field_e.e();
-          var15Lifetime1.e(1, 1, 65793);
+          GameKeyHandler.field_e.bindAsRenderTarget();
+          var15Lifetime1.drawSilhouette(1, 1, 65793);
           bg.field_a = new Sprite(21, 22);
-          bg.field_a.e();
+          bg.field_a.bindAsRenderTarget();
           for (var16 = 0; var16 < 20; var16++) {
             var17 = var16 > 10 ? 20 - var16 : 3;
             gf.f(11 - var17, 1 + var16, 2 * var17, 65793);
           }
           cg.i(0);
-          GameKeyHandler.field_e.f(2458760);
-          bg.field_a.f(2458760);
-          o.field_k = bg.field_a.g();
-          o.field_k.b();
+          GameKeyHandler.field_e.addOutline(2458760);
+          bg.field_a.addOutline(2458760);
+          WidgetTheme.field_k = bg.field_a.copy();
+          WidgetTheme.field_k.flipVertical();
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ck.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
@@ -390,11 +390,11 @@ final class ck {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (cj.field_u == null) {
+            if (TutorialAi.field_u == null) {
               stackIn_15_0 = param1.getParameter("settings");
               return stackIn_15_0;
             }
-            stackIn_13_0 = cj.field_u;
+            stackIn_13_0 = TutorialAi.field_u;
             return stackIn_13_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -419,7 +419,7 @@ final class ck {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
-        bc var4 = null;
+        Archive var4 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -430,8 +430,8 @@ final class ck {
           var3 = new byte[var2_int];
           ps.a(param0, 0, var3, 0, var2_int);
           if (param1) {
-            var4 = (bc) null;
-            ck.a((bc) null, (java.applet.Applet) null, (bc) null, (bc) null, (bc) null, (bc) null, (byte) 57);
+            var4 = (Archive) null;
+            ck.a((Archive) null, (java.applet.Applet) null, (Archive) null, (Archive) null, (Archive) null, (Archive) null, (byte) 57);
           }
           stackIn_3_0 = var3;
           return stackIn_3_0;

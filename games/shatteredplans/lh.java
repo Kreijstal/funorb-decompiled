@@ -84,14 +84,14 @@ final class lh extends vd {
           field_E = (String) null;
           return;
         }
-        if (p.field_n) {
+        if (CachedArchiveSource.field_n) {
           if (param0 == 44) {
             return;
           }
           field_E = (String) null;
           return;
         }
-        jc.a(1, (byte) 127);
+        ArchiveRequest.a(1, (byte) 127);
         if (param0 == 44) {
           return;
         }
@@ -107,7 +107,7 @@ final class lh extends vd {
         super(param0, param1, 11, param2);
         this.field_C = 5;
         this.field_F = param3;
-        this.field_B = ui.a(this.field_F, 0, -85, 128);
+        this.field_B = SolVictoryChecker.a(this.field_F, 0, -85, 128);
     }
 
     final static void a(byte param0, int[] param1, int[] param2) {

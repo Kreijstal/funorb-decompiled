@@ -123,7 +123,7 @@ final class uc extends vd {
             stackIn_2_0 = null;
             return (hh) (stackIn_2_0);
           }
-          var2 = new hh(param0, cf.field_H, sj.field_a, mc.field_s, cm.field_g, hd.field_q);
+          var2 = new hh(param0, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, cm.field_g, hd.field_q);
           pd.a(param1 ^ param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -156,7 +156,7 @@ final class uc extends vd {
           if (param8 != -87) {
             uc.e((byte) -47);
           }
-          ub.a(param2, param11, nr.field_h, param1, param3, param9, param11, param4, em.field_j, 0, param1, new v(param10), param2, ih.field_b, wo.field_a, param13, param0, dn.field_l, qi.field_j, new v(param7));
+          ub.a(param2, param11, StarAbandonedEvent.field_h, param1, param3, param9, param11, param4, em.field_j, 0, param1, new v(param10), param2, ih.field_b, wo.field_a, param13, param0, dn.field_l, StellarBombEvent.field_j, new v(param7));
           kb.a(param6, true, param12, param14, param5);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "uc.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + param14 + ')');
@@ -165,24 +165,24 @@ final class uc extends vd {
 
     final static boolean d(byte param0) {
         if (-1 == rr.field_t) {
-          if (!es.a(-57, 1)) {
+          if (!StarAnnotation.a(-57, 1)) {
             return false;
           }
-          rr.field_t = sa.field_a.j(-54);
+          rr.field_t = sa.field_a.readUnsignedByte(-54);
           sa.field_a.position = 0;
         }
         if (-2 == rr.field_t) {
-          if (!es.a(118, 2)) {
+          if (!StarAnnotation.a(118, 2)) {
             return false;
           }
-          rr.field_t = sa.field_a.f(-20976);
+          rr.field_t = sa.field_a.readUnsignedShort(-20976);
           sa.field_a.position = 0;
         }
         if (param0 > -25) {
           nq var2 = (nq) null;
           uc.a(-68, -91, -81, 82, -51, (String) null, true, (Sprite[]) null, (byte) -67, 2, (Sprite[]) null, (nq) null, true, 22, -30);
         }
-        return es.a(-78, rr.field_t);
+        return StarAnnotation.a(-78, rr.field_t);
     }
 
     uc(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -199,7 +199,7 @@ final class uc extends vd {
           return;
         }
         for (var3 = 0; this.field_m > var3; var3++) {
-          var2 = ui.a(this.field_x, this.field_u, -115, 256 * var3 / this.field_m);
+          var2 = SolVictoryChecker.a(this.field_x, this.field_u, -115, 256 * var3 / this.field_m);
           gf.j(var3 + this.field_k, this.field_t, this.field_i, var2);
         }
         int var4 = 3 % ((67 - param0) / 47);

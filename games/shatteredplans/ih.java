@@ -11,24 +11,24 @@ final class ih {
     static String field_e;
 
     final static void a(String param0, int param1, int param2, int param3, String param4, int param5) {
-        sl var8 = null;
+        CipherPacketBuffer var8 = null;
         int var7 = 0;
         try {
           var8 = js.field_f;
-          sl var6 = var8;
+          CipherPacketBuffer var6 = var8;
           var8.h(param5, 255);
           var8.position = var8.position + 1;
           var7 = var8.position;
-          var8.c(param3, (byte) -80);
+          var8.writeByte(param3, (byte) -80);
           if (param3 == param1) {
-            var8.a(param0, (byte) 0);
+            var8.writeString(param0, (byte) 0);
           }
           if (param4 == null) {
-            var8.d(param2, 255);
+            var8.writeShort(param2, 255);
           } else {
             ee.a(var8, (byte) -87, param4);
           }
-          var8.b(-var7 + var8.position, (byte) 122);
+          var8.patchLengthByte(-var7 + var8.position, (byte) 122);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ih.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

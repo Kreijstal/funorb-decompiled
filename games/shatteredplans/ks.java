@@ -17,17 +17,17 @@ final class ks {
         if (!param1) {
           nf var3 = (nf) null;
           ks.a((nf) null, -105);
-          if (ol.field_g != null) {
+          if (WeightedLruCache.field_g != null) {
             if (pd.field_k < e.field_f) {
               return false;
             }
             if (pd.field_k >= ei.field_e) {
               return false;
             }
-            if (fk.field_k > bb.field_b) {
+            if (ByteArrayNode.field_k > bb.field_b) {
               return false;
             }
-            if (kl.field_o <= bb.field_b) {
+            if (AttackTask.field_o <= bb.field_b) {
               return false;
             }
             if (je.field_d == 0) {
@@ -36,14 +36,14 @@ final class ks {
             if (!param0) {
               return true;
             }
-            if (ol.field_g != hm.field_q) {
+            if (WeightedLruCache.field_g != hm.field_q) {
               js.a((byte) -10);
-              if (vn.a(0)) {
+              if (BattleSnapshot.a(0)) {
                 NodeHashTableIterator.a(0, "enter");
               }
               return true;
             }
-            if (vn.a(0)) {
+            if (BattleSnapshot.a(0)) {
               NodeHashTableIterator.a(0, "enter");
               return true;
             }
@@ -58,23 +58,23 @@ final class ks {
           if (pd.field_k >= ei.field_e) {
             return false;
           }
-          if (fk.field_k <= bb.field_b) {
-            if (kl.field_o <= bb.field_b) {
+          if (ByteArrayNode.field_k <= bb.field_b) {
+            if (AttackTask.field_o <= bb.field_b) {
               return false;
             }
             if (je.field_d != 0) {
               if (!param0) {
                 return true;
               }
-              if (ol.field_g != hm.field_q) {
+              if (WeightedLruCache.field_g != hm.field_q) {
                 js.a((byte) -10);
-                if (vn.a(0)) {
+                if (BattleSnapshot.a(0)) {
                   NodeHashTableIterator.a(0, "enter");
                   return true;
                 }
                 return true;
               }
-              if (vn.a(0)) {
+              if (BattleSnapshot.a(0)) {
                 NodeHashTableIterator.a(0, "enter");
                 return true;
               }
@@ -83,7 +83,7 @@ final class ks {
           }
           return false;
         }
-        if (ol.field_g == null) {
+        if (WeightedLruCache.field_g == null) {
           if (null == hm.field_q) {
             return false;
           }
@@ -91,23 +91,23 @@ final class ks {
             return false;
           }
           if (pd.field_k < ei.field_e &&
-            fk.field_k <= bb.field_b) {
-            if (kl.field_o <= bb.field_b) {
+            ByteArrayNode.field_k <= bb.field_b) {
+            if (AttackTask.field_o <= bb.field_b) {
               return false;
             }
             if (je.field_d != 0) {
               if (!param0) {
                 return true;
               }
-              if (ol.field_g != hm.field_q) {
+              if (WeightedLruCache.field_g != hm.field_q) {
                 js.a((byte) -10);
-                if (vn.a(0)) {
+                if (BattleSnapshot.a(0)) {
                   NodeHashTableIterator.a(0, "enter");
                   return true;
                 }
                 return true;
               }
-              if (vn.a(0)) {
+              if (BattleSnapshot.a(0)) {
                 NodeHashTableIterator.a(0, "enter");
                 return true;
               }
@@ -118,23 +118,23 @@ final class ks {
         }
         if (pd.field_k >= e.field_f &&
           pd.field_k < ei.field_e &&
-          fk.field_k <= bb.field_b) {
-          if (kl.field_o <= bb.field_b) {
+          ByteArrayNode.field_k <= bb.field_b) {
+          if (AttackTask.field_o <= bb.field_b) {
             return false;
           }
           if (je.field_d != 0) {
             if (!param0) {
               return true;
             }
-            if (ol.field_g != hm.field_q) {
+            if (WeightedLruCache.field_g != hm.field_q) {
               js.a((byte) -10);
-              if (vn.a(0)) {
+              if (BattleSnapshot.a(0)) {
                 NodeHashTableIterator.a(0, "enter");
                 return true;
               }
               return true;
             }
-            if (vn.a(0)) {
+            if (BattleSnapshot.a(0)) {
               NodeHashTableIterator.a(0, "enter");
               return true;
             }
@@ -166,9 +166,9 @@ final class ks {
             field_c = (String) null;
           }
           if (RasterBuffer.field_a >= 18) {
-            gs.a(var3, true);
+            NanoFrameTimer.a(var3, true);
           } else {
-            ld.field_p.a((byte) -113, var3);
+            ld.field_p.addLast((byte) -113, var3);
           }
           stackIn_6_0 = var3;
           return stackIn_6_0;
@@ -187,20 +187,20 @@ final class ks {
     }
 
     final static sp c(int param0) {
-        if (vr.field_a == null) {
-          vr.field_a = new sp();
-          vr.field_a.a(gn.field_u, true);
-          vr.field_a.field_h = mf.field_x;
-          vr.field_a.field_l = 14;
-          vr.field_a.field_i = 7697781;
-          vr.field_a.field_e = 5;
-          vr.field_a.field_k = 2763306;
-          vr.field_a.field_c = 4;
-          vr.field_a.field_d = 6;
-          vr.field_a.field_t = 0;
+        if (GameRules.field_a == null) {
+          GameRules.field_a = new sp();
+          GameRules.field_a.a(gn.field_u, true);
+          GameRules.field_a.field_h = EmailValidator.field_x;
+          GameRules.field_a.field_l = 14;
+          GameRules.field_a.field_i = 7697781;
+          GameRules.field_a.field_e = 5;
+          GameRules.field_a.field_k = 2763306;
+          GameRules.field_a.field_c = 4;
+          GameRules.field_a.field_d = 6;
+          GameRules.field_a.field_t = 0;
         }
         int var1 = -68 / ((param0 - 66) / 40);
-        return vr.field_a;
+        return GameRules.field_a;
     }
 
     final void a(boolean param0, int param1) {
@@ -314,17 +314,17 @@ final class ks {
           } else {
             stackIn_3_8 = 0;
           }
-          tp.a((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ub) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
+          SliderPainter.a((int[]) (stackIn_2_0), stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_2_4, (ub) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_n == 0 &&
             !ha.a((byte) 95) &&
             null == np.field_a &&
             he.field_p == null) {
             if (!ae.field_b) {
-              var5 = hp.field_m;
-              var6 = s.field_h;
+              var5 = DerelictVictoryChecker.field_m;
+              var6 = GzipInflater.field_h;
               var5.field_j.a(param1 + 1, 14, var6);
             }
-            var7 = hp.field_m;
+            var7 = DerelictVictoryChecker.field_m;
             var8 = gb.field_o;
             var7.field_j.a(param1 + 1, 20, var8);
           }
@@ -333,22 +333,22 @@ final class ks {
             null != np.field_a &&
             param0.field_g == np.field_a.g(-101)) {
             if (!ae.field_b) {
-              var9 = hp.field_m;
+              var9 = DerelictVictoryChecker.field_m;
               var10 = qk.field_z;
               var9.field_j.a(1, 14, var10);
             }
-            var11 = hp.field_m;
+            var11 = DerelictVictoryChecker.field_m;
             var12 = sn.field_a;
             var11.field_j.a(1, 20, var12);
           }
-          hp.field_m.a(false);
-          hp.field_m.a(false, -16661);
-          hp.field_m.a(param0.field_f, param0.field_n, (byte) -116);
-          hp.field_m.b(17);
-          hp.field_m.a(param0, (byte) -100);
-          var13 = hp.field_m;
-          var3 = nh.field_p;
-          var4 = td.field_P;
+          DerelictVictoryChecker.field_m.a(false);
+          DerelictVictoryChecker.field_m.a(false, -16661);
+          DerelictVictoryChecker.field_m.a(param0.field_f, param0.field_n, (byte) -116);
+          DerelictVictoryChecker.field_m.b(17);
+          DerelictVictoryChecker.field_m.a(param0, (byte) -100);
+          var13 = DerelictVictoryChecker.field_m;
+          var3 = PointsVictoryChecker.field_p;
+          var4 = SliderWidget.field_P;
           var13.field_j.b(0, param1, 0, var3, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -395,11 +395,11 @@ final class ks {
 
     final static void a(int param0, wj param1, int param2) {
         try {
-          wd.field_P.a((byte) -113, param1);
+          wd.field_P.addLast((byte) -113, param1);
           if (param0 != 20) {
             field_i = -24;
           }
-          eg.a(param2, param1, true);
+          BattleEvent.a(param2, param1, true);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ks.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

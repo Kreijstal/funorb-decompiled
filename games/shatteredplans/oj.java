@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends ns implements bp {
+final class oj extends ns implements ButtonListener {
     private boolean field_Eb;
     static String field_Bb;
     static String field_Ib;
-    static pb field_Gb;
+    static PlatformTask field_Gb;
     static int[] field_Cb;
     static qr field_zb;
     static mp field_Fb;
@@ -13,15 +13,15 @@ final class oj extends ns implements bp {
     private boolean field_Hb;
     static String field_Ab;
 
-    final static void a(int param0, bc param1) {
+    final static void a(int param0, Archive param1) {
         int var3 = 0;
         int var4 = 0;
         sr var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        sl var8 = null;
+        CipherPacketBuffer var8 = null;
         int var9 = 0;
-        sl var10 = null;
+        CipherPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -30,9 +30,9 @@ final class oj extends ns implements bp {
         int var4Lifetime1;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var8 = new sl(param1.a(true, "", "logo.fo3d"));
+          var8 = new CipherPacketBuffer(param1.getFileByName(true, "", "logo.fo3d"));
           var10 = var8;
-          var3 = var10.j(-108);
+          var3 = var10.readUnsignedByte(-108);
           var10.m(-84);
           wc.field_a = SecondaryNodeDequeIterator.a(24243, var10);
           vc.field_d = new sr[var3];
@@ -41,7 +41,7 @@ final class oj extends ns implements bp {
             return;
           }
           for (var4 = 0; var3 > var4; var4++) {
-            vc.field_d[var4] = ec.a(var8, (byte) 6);
+            vc.field_d[var4] = UsernameAvailabilityValidator.a(var8, (byte) 6);
           }
           var10.i((byte) -47);
           var9 = 0;
@@ -83,7 +83,7 @@ final class oj extends ns implements bp {
         }
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         if (this.field_Eb) {
           wa.a((byte) -40, false, true);
           return;
@@ -101,7 +101,7 @@ final class oj extends ns implements bp {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-          hp.a((byte) 28, param1, "");
+          DerelictVictoryChecker.a((byte) 28, param1, "");
           hr.a(param1, (byte) -127);
           if (param0 != 0) {
             oj.q(13);
@@ -124,7 +124,7 @@ final class oj extends ns implements bp {
           var2Lifetime1 = -50 / ((param0 + 23) / 52);
           return super.a((byte) 30);
         }
-        kj var2_ref_kj = br.a(65536);
+        kj var2_ref_kj = MusicPatch.a(65536);
         if (var2_ref_kj != null) {
           this.a(17, false, var2_ref_kj);
           var2Lifetime2 = -50 / ((param0 + 23) / 52);
@@ -134,8 +134,8 @@ final class oj extends ns implements bp {
         return super.a((byte) 30);
     }
 
-    oj(tc param0, aa param1) {
-        super(param0, sl.field_p, mp.field_a, false, false);
+    oj(DialogRoot param0, aa param1) {
+        super(param0, CipherPacketBuffer.field_p, mp.field_a, false, false);
         try {
           this.field_Db = param1;
         } catch (RuntimeException runtimeException) {
@@ -177,7 +177,7 @@ final class oj extends ns implements bp {
           if (param0 != 17) {
             return;
           }
-          var5 = new cf((ns) (this), sl.field_p, var4);
+          var5 = new cf((ns) (this), CipherPacketBuffer.field_p, var4);
           if (!param2.field_h) {
             if (!this.field_Eb) {
               if (param2.field_c == 5) {
@@ -187,7 +187,7 @@ final class oj extends ns implements bp {
                 var5.a(ss.field_e, (byte) 106, -1);
               }
             } else {
-              var5.a((ko) (this), param0 ^ 108, gq.field_b);
+              var5.a((WidgetListener) (this), param0 ^ 108, gq.field_b);
             }
             if (param2.field_c == 3) {
               var5.a(rs.field_yb, (byte) 103, 7);
@@ -201,7 +201,7 @@ final class oj extends ns implements bp {
               this.b(new pe(this), -51);
               return;
             }
-            var5.a((ko) (this), param0 ^ 107, gq.field_b);
+            var5.a((WidgetListener) (this), param0 ^ 107, gq.field_b);
           }
           this.b(var5, 126);
           return;

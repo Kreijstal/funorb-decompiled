@@ -12,7 +12,7 @@ final class kj {
     static String field_i;
     String field_g;
 
-    final static vr a(byte param0, PacketBuffer param1) {
+    final static GameRules a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -31,14 +31,14 @@ final class kj {
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_21_0 = 0;
-        vr stackIn_22_0 = null;
+        GameRules stackIn_22_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.j(-109);
-          var3 = param1.j(-66);
+          var2_int = param1.readUnsignedByte(-109);
+          var3 = param1.readUnsignedByte(-66);
           stackIn_3_0 = ((var3 & 1) == 0) ? 0 : 1;
           var4 = stackIn_3_0;
           stackIn_6_0 = ((2 & var3) == 0) ? 0 : 1;
@@ -54,7 +54,7 @@ final class kj {
           var10 = stackIn_18_0;
           stackIn_21_0 = (0 == (64 & var3)) ? 0 : 1;
           var11 = stackIn_21_0;
-          stackIn_22_0 = new vr(var4 != 0, var5 != 0, var6 != 0, var7 != 0, var8 != 0, var10 != 0, var11 != 0, var2_int);
+          stackIn_22_0 = new GameRules(var4 != 0, var5 != 0, var6 != 0, var7 != 0, var8 != 0, var10 != 0, var11 != 0, var2_int);
           return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

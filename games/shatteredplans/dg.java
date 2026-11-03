@@ -63,14 +63,14 @@ final class dg extends qr {
           var17.field_y = 1;
           this.field_xb = new qr(0L, param2);
           var8 = new qr(0L, param3);
-          var9 = new qr(0L, param3, rn.field_g);
+          var9 = new qr(0L, param3, DiskCacheWorker.field_g);
           var9.field_y = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; var12 < tf.field_c.length; var12++) {
+          for (var12 = 0; var12 < CheckboxPainter.field_c.length; var12++) {
             var13 = new qr(0L, param3, bg.field_d[var12]);
-            var14 = new qr(0L, param3, tf.field_c[var12]);
-            var15 = param3.field_nb.c(tf.field_c[var12]);
+            var14 = new qr(0L, param3, CheckboxPainter.field_c[var12]);
+            var15 = param3.field_nb.stringWidth(CheckboxPainter.field_c[var12]);
             var13.a(65, 15, (byte) 69, var10, 20);
             if (var15 > var11) {
               var11 = var15;
@@ -86,7 +86,7 @@ final class dg extends qr {
           this.field_xb.a(15, 15, (byte) 126, 5, -20 + var17.field_K);
           var8.a(this.field_K, -var17.field_mb + this.field_mb, (byte) 79, var17.field_mb, 0);
           var9.a(this.field_K, 15, (byte) 75, 20, 0);
-          var8.field_F = cs.a(16, 3, var8.field_mb, 11579568, 8421504, 2105376);
+          var8.field_F = Wormhole.a(16, 3, var8.field_mb, 11579568, 8421504, 2105376);
           var17.a(4, this.field_xb);
           var8.a(4, var9);
           this.a(4, var17);

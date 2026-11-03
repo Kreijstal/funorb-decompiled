@@ -30,15 +30,15 @@ final class dk {
         try {
           var2_int = pd.field_k;
           var3 = bb.field_b;
-          var4 = SpriteState.field_u.field_nb.a(param1, 500);
+          var4 = SpriteState.field_u.field_nb.lineCount(param1, 500);
           int var5 = 7 % ((-9 - param0) / 60);
-          var6 = SpriteState.field_u.field_nb.c(param1, 500) + 6;
+          var6 = SpriteState.field_u.field_nb.maxLineWidth(param1, 500) + 6;
           var7 = 2 + var4 * cr.field_c;
           var8 = uh.a(-38, var2_int, var6, 12);
           var9 = uq.a(20, 0, var7, var3);
           gf.b(var8, var9, var6, var7, 0);
           gf.d(1 + var8, 1 + var9, -2 + var6, var7 - 2, 16777088);
-          SpriteState.field_u.field_nb.a(param1, var8 + 3, s.field_i + (1 + var9 - SpriteState.field_u.field_nb.field_J), 500, 1000, 0, -1, 0, 0, cr.field_c);
+          SpriteState.field_u.field_nb.a(param1, var8 + 3, GzipInflater.field_i + (1 + var9 - SpriteState.field_u.field_nb.field_J), 500, 1000, 0, -1, 0, 0, cr.field_c);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "dk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -99,20 +99,20 @@ final class dm {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (null != np.field_a && (null != td.field_E ||
-            ci.field_h != null ||
+          if (null != np.field_a && (null != SliderWidget.field_E ||
+            ArchiveIndex.field_h != null ||
             null != pg.field_A ||
             null != ji.field_D)) {
             for (var9 = 0; var9 < em.field_k; var9++) {
               var10_int = np.field_a.field_dc[var9] & 255;
-              if (td.field_E != null &&
-                null != td.field_E[var9] &&
-                td.field_E[var9][var10_int]) {
+              if (SliderWidget.field_E != null &&
+                null != SliderWidget.field_E[var9] &&
+                SliderWidget.field_E[var9][var10_int]) {
                 var5_int = 1;
               }
-              if (ci.field_h != null &&
-                null != ci.field_h[var9]) {
-                var11_int = ci.field_h[var9][var10_int];
+              if (ArchiveIndex.field_h != null &&
+                null != ArchiveIndex.field_h[var9]) {
+                var11_int = ArchiveIndex.field_h[var9][var10_int];
                 if (var11_int > var6) {
                   var6 = var11_int;
                 }
@@ -141,12 +141,12 @@ final class dm {
           stackIn_42_0 = (ub) (param2);
           stackIn_42_1 = 4 * (2 + cr.field_c) * param0;
           stackIn_42_2 = cr.field_c * 2 + 4;
-          stackIn_43_3 = (param2 == hp.field_l);
+          stackIn_43_3 = (param2 == DerelictVictoryChecker.field_l);
           stackIn_46_0 = (!((ub) (Object) stackIn_42_0).a(stackIn_42_1, stackIn_42_2, stackIn_43_3, -108, param3, 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_46_0;
           var10 = param2.field_xb.field_M;
           var11 = null;
-          var12 = (mj) (var10.d(param1));
+          var12 = (mj) (var10.startForward(param1));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_M) {
@@ -160,9 +160,9 @@ final class dm {
               var12.field_xb = new qr(0L, SpriteState.field_u);
               var12.a(4, var12.field_xb);
               var12.e((byte) -128);
-              var12.field_Jb = new qr(0L, kq.field_h);
+              var12.field_Jb = new qr(0L, GameScreen.field_h);
               var12.a(param1 ^ 4, var12.field_Jb);
-              var12.field_Mb = new qr(0L, rf.field_l);
+              var12.field_Mb = new qr(0L, AllianceExpiredEvent.field_l);
               var13 = 1;
               var12.a(4, var12.field_Mb);
             }
@@ -234,26 +234,26 @@ final class dm {
               var12.field_Jb.field_jb = var24_int;
               if (ro.field_a != param2) {
                 if (var12.field_Tb) {
-                  var12.field_Ab.field_z = re.a(o.field_q, 4371, new String[]{var20});
+                  var12.field_Ab.field_z = re.a(WidgetTheme.field_q, 4371, new String[]{var20});
                   var12.field_Mb.field_z = fb.field_bc;
                 } else {
                   if (!var12.field_Vb) {
-                    var12.field_Jb.field_z = um.field_p;
+                    var12.field_Jb.field_z = PlayerStats.field_p;
                   } else {
-                    var12.field_Ab.field_z = re.a(mg.field_E, 4371, new String[]{var20});
-                    var12.field_Jb.field_z = o.field_m;
-                    var12.field_Mb.field_z = hl.field_J;
+                    var12.field_Ab.field_z = re.a(FleetMove.field_E, 4371, new String[]{var20});
+                    var12.field_Jb.field_z = WidgetTheme.field_m;
+                    var12.field_Mb.field_z = ValidationIndicator.field_J;
                   }
                 }
               } else {
                 if (!np.field_a.field_Ab) {
-                  var12.field_Mb.field_z = lc.field_a;
+                  var12.field_Mb.field_z = ArchiveSource.field_a;
                 }
               }
               var25_int = 0;
               if (np.field_a != null &&
                 SecondaryNodeDequeIterator.a((byte) -97) &&
-                ~ec.field_p != ~var12.field_Ib) {
+                ~UsernameAvailabilityValidator.field_p != ~var12.field_Ib) {
                 if (null != var12.field_Jb.field_z) {
                   var26 = var12.field_Jb.e(false) + 2 * tg.field_a;
                   var12.field_Jb.a(var26, cr.field_c, (byte) 80, var19, var25_int);
@@ -283,26 +283,26 @@ final class dm {
               if (var12.field_Ab.field_L &&
                 var22 != 0) {
                 dn.field_k = var12.field_Cb;
-                if (tk.field_v != null &&
-                  null != tk.field_v[var12.field_Lb]) {
-                  dn.field_k = dn.field_k + " - " + tk.field_v[var12.field_Lb];
+                if (NetworkArchiveRequest.field_v != null &&
+                  null != NetworkArchiveRequest.field_v[var12.field_Lb]) {
+                  dn.field_k = dn.field_k + " - " + NetworkArchiveRequest.field_v[var12.field_Lb];
                 }
               } else {
                 if (var12.field_Ab.field_L &&
-                  tk.field_v != null &&
-                  tk.field_v[var12.field_Lb] != null) {
-                  dn.field_k = tk.field_v[var12.field_Lb];
+                  NetworkArchiveRequest.field_v != null &&
+                  NetworkArchiveRequest.field_v[var12.field_Lb] != null) {
+                  dn.field_k = NetworkArchiveRequest.field_v[var12.field_Lb];
                 }
               }
               var19 = var19 + cr.field_c;
             }
-            var23 = lc.a(var12.field_Eb, (byte) -87, var20);
+            var23 = ArchiveSource.a(var12.field_Eb, (byte) -87, var20);
             var24 = var23;
             var30 = var24;
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_xb.field_nb.a(var23, var12.field_K - tg.field_a - tg.field_a);
+              var24_intLifetime1 = var12.field_xb.field_nb.lineCount(var23, var12.field_K - tg.field_a - tg.field_a);
               var12.field_xb.field_z = var23;
               var12.field_xb.field_I = 256 * var12.field_Gb / ks.field_i;
               var12.field_xb.a(-(2 * tg.field_a) + var12.field_K, var24_intLifetime1 * cr.field_c, (byte) 96, var19, tg.field_a);
@@ -317,23 +317,23 @@ final class dm {
             if (var12.field_rb != 0 &&
               !var12.h(-72)) {
               if (0 != var12.field_Jb.field_rb) {
-                tj.a((byte) -79, param4, var12.field_Ib);
+                ArchiveSourceManager.a((byte) -79, param4, var12.field_Ib);
               } else {
                 if (0 == var12.field_Mb.field_rb) {
-                  qg.a(nh.field_p, var12, td.field_P, param2, 0, 0, (byte) 110);
+                  TutorialVictoryChecker.a(PointsVictoryChecker.field_p, var12, SliderWidget.field_P, param2, 0, 0, (byte) 110);
                 } else {
-                  bc.a(param4, (byte) 2, var12.field_Ib);
+                  Archive.a(param4, (byte) 2, var12.field_Ib);
                 }
               }
             }
             if (var12.field_v) {
               if (var12.h(-121)) {
                 var11 = var12;
-                var12 = (mj) (var10.a((byte) -71));
+                var12 = (mj) (var10.nextForward((byte) -71));
                 continue;
               }
               var24Lifetime2 = null;
-              if (ec.field_p != var12.field_Ib) {
+              if (UsernameAvailabilityValidator.field_p != var12.field_Ib) {
                 if (var5_int != 0 &&
                   !var12.field_Ub) {
                   var24Lifetime2 = re.a(fb.field_kc, param1 ^ 4371, new String[]{var20});
@@ -346,13 +346,13 @@ final class dm {
                   if (var12.field_Fb >= var7) {
                     if (var6 <= var12.field_Qb) {
                       if ((var8 & ~var12.field_Wb) != 0) {
-                        var25_int = db.a(param1 + 38, var8 & ~var12.field_Wb);
-                        var24Lifetime2 = re.a(ra.field_j, 4371, new String[]{var20});
+                        var25_int = DualLinkDeque.a(param1 + 38, var8 & ~var12.field_Wb);
+                        var24Lifetime2 = re.a(RandomAccessCacheFile.field_j, 4371, new String[]{var20});
                         if (0 < var25_int &&
-                          null != qa.field_s &&
-                          var25_int <= qa.field_s.length &&
-                          qa.field_s[var25_int - 1] != null) {
-                          var24Lifetime2 = re.a(qa.field_s[var25_int - 1][2], param1 ^ 4371, new String[]{var20});
+                          null != PlacementOrder.field_s &&
+                          var25_int <= PlacementOrder.field_s.length &&
+                          PlacementOrder.field_s[var25_int - 1] != null) {
+                          var24Lifetime2 = re.a(PlacementOrder.field_s[var25_int - 1][2], param1 ^ 4371, new String[]{var20});
                         }
                       }
                     } else {
@@ -361,7 +361,7 @@ final class dm {
                   } else {
                     var25_int = -var12.field_Fb + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = re.a(gs.field_i, 4371, new String[]{var20});
+                      var24Lifetime2 = re.a(NanoFrameTimer.field_i, 4371, new String[]{var20});
                     }
                     var24Lifetime2 = re.a(em.field_b, 4371, new String[]{var20, Integer.toString(var25_int)});
                   }
@@ -380,13 +380,13 @@ final class dm {
                   } else {
                     if (var6 <= var12.field_Qb) {
                       if ((var8 & ~var12.field_Wb) != 0) {
-                        var25_int = db.a(param1 + 31, var8 & ~var12.field_Wb);
+                        var25_int = DualLinkDeque.a(param1 + 31, var8 & ~var12.field_Wb);
                         var24Lifetime2 = ub.field_Eb;
                         if (0 < var25_int &&
-                          null != qa.field_s &&
-                          qa.field_s.length >= var25_int &&
-                          qa.field_s[-1 + var25_int] != null) {
-                          var24Lifetime2 = qa.field_s[-1 + var25_int][1];
+                          null != PlacementOrder.field_s &&
+                          PlacementOrder.field_s.length >= var25_int &&
+                          PlacementOrder.field_s[-1 + var25_int] != null) {
+                          var24Lifetime2 = PlacementOrder.field_s[-1 + var25_int][1];
                         }
                       }
                     } else {
@@ -407,15 +407,15 @@ final class dm {
                 for (var27_int = 0; var27_int < em.field_k; var27_int++) {
                   var28 = 255 & np.field_a.field_dc[var27_int];
                   var29 = 0;
-                  if (td.field_E != null &&
-                    td.field_E[var27_int] != null &&
-                    td.field_E[var27_int][var28] &&
+                  if (SliderWidget.field_E != null &&
+                    SliderWidget.field_E[var27_int] != null &&
+                    SliderWidget.field_E[var27_int][var28] &&
                     !var12.field_Ub) {
                     var29 = 1;
                   }
-                  if (null != ci.field_h &&
-                    ci.field_h[var27_int] != null) {
-                    var30_int = ci.field_h[var27_int][var28];
+                  if (null != ArchiveIndex.field_h &&
+                    ArchiveIndex.field_h[var27_int] != null) {
+                    var30_int = ArchiveIndex.field_h[var27_int][var28];
                     if (var30_int != 0 &&
                       !hm.field_o &&
                       !var12.field_Ub) {
@@ -460,7 +460,7 @@ final class dm {
                 if (ro.field_a == param2 &&
                   SecondaryNodeDequeIterator.a((byte) -124)) {
                   if (var26Lifetime1 != 0) {
-                    var24Lifetime2 = var34 + "<br>" + eg.field_s + (String) (var25);
+                    var24Lifetime2 = var34 + "<br>" + BattleEvent.field_s + (String) (var25);
                   } else {
                     var24Lifetime2 = var34 + "<br>" + re.a(ud.field_d, 4371, new String[]{(String) (var25)});
                   }
@@ -480,7 +480,7 @@ final class dm {
               }
             }
             var11 = var12;
-            var12 = (mj) (var10.a((byte) -71));
+            var12 = (mj) (var10.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -499,7 +499,7 @@ final class dm {
 
     final static void a(int param0, int param1) {
         de.field_h = ff.field_v[param1];
-        i.field_a = h.field_w[param1];
+        DialPainter.field_a = MusicCrossfadeStream.field_w[param1];
         if (param0 != 0) {
           ub var3 = (ub) null;
           dm.a(-32, 115, (ub) null, false, 125);

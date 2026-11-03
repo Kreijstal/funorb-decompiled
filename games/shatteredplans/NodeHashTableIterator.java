@@ -26,7 +26,7 @@ final class NodeHashTableIterator implements Iterator {
         if (null == this.field_c) {
           throw new IllegalStateException();
         }
-        this.field_c.b((byte) -90);
+        this.field_c.unlink((byte) -90);
         this.field_c = null;
     }
 
@@ -41,51 +41,51 @@ final class NodeHashTableIterator implements Iterator {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        mg var3 = null;
+        FleetMove var3 = null;
         int var4 = 0;
         int var5 = 0;
-        mg var6 = null;
+        FleetMove var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         Star var10 = null;
-        db var11 = null;
-        mg var3Lifetime1;
+        DualLinkDeque var11 = null;
+        FleetMove var3Lifetime1;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (null == param0.field_s.c(-128)) {
+          if (null == param0.field_s.startForward(-128)) {
             return;
           }
           if (param1 < 35) {
             var10 = (Star) null;
             NodeHashTableIterator.a((Star) null, (byte) -17);
           }
-          var11 = new db();
-          var11.a(param0.field_s.a(-123), 32);
-          var3 = (mg) (param0.field_s.c(-128));
+          var11 = new DualLinkDeque();
+          var11.addLast(param0.field_s.pollFirst(-123), 32);
+          var3 = (FleetMove) (param0.field_s.startForward(-128));
           while (var3 != null) {
             var4 = var3.field_y.field_A - var3.field_B.field_A;
             var5 = var3.field_y.field_S - var3.field_B.field_S;
-            var6 = (mg) (var11.c(-127));
+            var6 = (FleetMove) (var11.startForward(-127));
             while (var6 != null) {
               var7 = var6.field_y.field_A - var6.field_B.field_A;
               var8 = -var6.field_B.field_S + var6.field_y.field_S;
               if (!oo.a(var4, var5, var7, true, var8)) {
-                var6 = (mg) (var11.b(32));
+                var6 = (FleetMove) (var11.nextForward(32));
                 continue;
               }
-              el.a(var3, 0, var6);
+              TertiaryNodeList.a(var3, 0, var6);
               break;
             }
             if (var6 == null) {
-              var11.a(var3, 32);
+              var11.addLast(var3, 32);
             }
-            var3 = (mg) (param0.field_s.b(32));
+            var3 = (FleetMove) (param0.field_s.nextForward(32));
           }
-          var3Lifetime1 = (mg) (var11.c(-127));
+          var3Lifetime1 = (FleetMove) (var11.startForward(-127));
           while (var3Lifetime1 != null) {
-            param0.field_s.a(var3Lifetime1, 32);
-            var3Lifetime1 = (mg) (var11.b(32));
+            param0.field_s.addLast(var3Lifetime1, 32);
+            var3Lifetime1 = (FleetMove) (var11.nextForward(32));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,7 +127,7 @@ final class NodeHashTableIterator implements Iterator {
 
     final static void a(int param0, String param1) {
         try {
-          aj.field_a.a((byte) -113, new de(param1));
+          aj.field_a.addLast((byte) -113, new de(param1));
           if (param0 != 0) {
             Star var3 = (Star) null;
             NodeHashTableIterator.a((Star) null, (byte) 103);

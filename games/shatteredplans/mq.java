@@ -47,17 +47,17 @@ final class mq {
         int var4Lifetime1;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (null == ol.field_g &&
+          if (null == WeightedLruCache.field_g &&
             null == hm.field_q) {
             return;
           }
           if (-e.field_f + ei.field_e > 20 &&
-            -fk.field_k + kl.field_o > 20) {
-            ei.a(true, -fk.field_k + kl.field_o, -e.field_f + ei.field_e, param0 - 12350, fk.field_k, e.field_f, ui.a(3974311, 0, -120, 128));
+            -ByteArrayNode.field_k + AttackTask.field_o > 20) {
+            ei.a(true, -ByteArrayNode.field_k + AttackTask.field_o, -e.field_f + ei.field_e, param0 - 12350, ByteArrayNode.field_k, e.field_f, SolVictoryChecker.a(3974311, 0, -120, 128));
           }
-          if (ol.field_g == hm.field_q) {
+          if (WeightedLruCache.field_g == hm.field_q) {
             var1_int = e.field_f + 13;
-            var2 = 6 + fk.field_k;
+            var2 = 6 + ByteArrayNode.field_k;
             var3 = te.field_c;
             if (eh.field_L != null) {
               if (te.field_c <= 0) {
@@ -65,7 +65,7 @@ final class mq {
               }
               sa.a(te.field_c, var1_int, (byte) 101, 16, eh.field_L[0], var2);
               for (var4 = 1; eh.field_L.length > var4; var4++) {
-                var3 = var3 - ol.field_g.field_j;
+                var3 = var3 - WeightedLruCache.field_g.field_j;
                 if (var3 <= 0) {
                   return;
                 }
@@ -80,7 +80,7 @@ final class mq {
                 var6 = ClientException.field_f[var4Lifetime1];
                 if (var6 <= 0) {
                   for (var7_int = 0; var7_int < var5.length; var7_int++) {
-                    var3 = var3 - ol.field_g.field_j;
+                    var3 = var3 - WeightedLruCache.field_g.field_j;
                     if (var3 <= 0) {
                       return;
                     }
@@ -95,7 +95,7 @@ final class mq {
                     var8 = var10;
                     while (var5.length > var10) {
                       var2 += 13;
-                      var3 = var3 - ol.field_g.field_j;
+                      var3 = var3 - WeightedLruCache.field_g.field_j;
                       var5[var10].c(var1_int, var2, 256);
                       var7[var10].c(var1_int, var2, var6);
                       var10++;
@@ -108,7 +108,7 @@ final class mq {
                       var6 = (var6 << 8) / 16;
                     }
                     for (var8 = 0; var5.length > var8; var8++) {
-                      var3 = var3 - ol.field_g.field_j;
+                      var3 = var3 - WeightedLruCache.field_g.field_j;
                       var2 += 13;
                       var5[var8].c(var1_int, var2, var6);
                       var7[var8].c(var1_int, var2, var6);

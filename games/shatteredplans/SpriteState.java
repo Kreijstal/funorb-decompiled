@@ -15,21 +15,21 @@ abstract class SpriteState extends DualLinkNode {
     int field_o;
     int field_p;
 
-    final static void a(bc param0, bc param1, int param2) {
-        sf.field_d = gh.a(param0, "", "shattered_plans_intro");
-        wp.field_a = gh.a(param0, "", "shattered_plans_ingame_two");
-        js.field_i = gh.a(param0, "", "shattered_plans_ingame");
+    final static void a(Archive param0, Archive param1, int param2) {
+        sf.field_d = MusicTrack.a(param0, "", "shattered_plans_intro");
+        wp.field_a = MusicTrack.a(param0, "", "shattered_plans_ingame_two");
+        js.field_i = MusicTrack.a(param0, "", "shattered_plans_ingame");
         hk.field_nb = wp.field_a;
-        hj.field_n = gh.a(param0, "", "shattered_plans_win");
-        wh.field_b = gh.a(param0, "", "shattered_plans_lose");
-        u.field_b.field_u.a(param1, sf.field_d, 50, 0, mj.field_Sb);
-        u.field_b.field_u.a(param1, wp.field_a, 41, 0, mj.field_Sb);
-        u.field_b.field_u.a(param1, js.field_i, 111, 0, mj.field_Sb);
+        PlacementEvent.field_n = MusicTrack.a(param0, "", "shattered_plans_win");
+        wh.field_b = MusicTrack.a(param0, "", "shattered_plans_lose");
+        ValidationState.field_b.field_u.a(param1, sf.field_d, 50, 0, mj.field_Sb);
+        ValidationState.field_b.field_u.a(param1, wp.field_a, 41, 0, mj.field_Sb);
+        ValidationState.field_b.field_u.a(param1, js.field_i, 111, 0, mj.field_Sb);
         if (param2 < 26) {
           return;
         }
         try {
-          u.field_b.field_u.f(256);
+          ValidationState.field_b.field_u.f(256);
           mj.field_Sb = null;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ii.WB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -54,8 +54,8 @@ abstract class SpriteState extends DualLinkNode {
           field_u = null;
           return;
         }
-        bc var2 = (bc) null;
-        SpriteState.a((bc) null, (bc) null, 124);
+        Archive var2 = (Archive) null;
+        SpriteState.a((Archive) null, (Archive) null, 124);
         field_y = null;
         field_r = null;
         field_q = null;

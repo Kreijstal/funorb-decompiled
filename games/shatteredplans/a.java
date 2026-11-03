@@ -28,9 +28,9 @@ abstract class a extends IntrusiveNode {
     final static qr a(int param0) {
         if (param0 != 20605) {
           a.a((byte) -50);
-          return qs.field_y.field_xb;
+          return SingleChildWidget.field_y.field_xb;
         }
-        return qs.field_y.field_xb;
+        return SingleChildWidget.field_y.field_xb;
     }
 
     final void d(int param0, int param1, int param2) {

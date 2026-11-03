@@ -13,9 +13,9 @@ abstract class VictoryChecker {
     static int field_e;
     private boolean[] field_b;
 
-    abstract int b(boolean param0);
+    abstract int resultsPanelHeight(boolean param0);
 
-    abstract void a(PacketBuffer param0, byte param1);
+    abstract void readScores(PacketBuffer param0, byte param1);
 
     final static boolean a(int param0) {
         boolean stackIn_6_0 = false;
@@ -26,7 +26,7 @@ abstract class VictoryChecker {
         return stackIn_6_0;
     }
 
-    abstract Player[] b(int param0);
+    abstract Player[] projectedWinners(int param0);
 
     public static void a(boolean param0) {
         field_d = null;
@@ -38,7 +38,7 @@ abstract class VictoryChecker {
         field_c = null;
     }
 
-    boolean a(GameState param0, byte param1) {
+    boolean detectWinners(GameState param0, byte param1) {
         int var7 = 0;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -66,7 +66,7 @@ abstract class VictoryChecker {
           }
           for (var6 = 0; var5_ref_fs__.length > var6; var6++) {
             var7_ref_fs = var5_ref_fs__[var6];
-            if (!var7_ref_fs.field_i.g(-96)) {
+            if (!var7_ref_fs.field_i.isEmpty(-96)) {
               var3_int++;
               var4 = var7_ref_fs;
             }
@@ -79,7 +79,7 @@ abstract class VictoryChecker {
             var9 = 0;
             var5 = var9;
             while (this.field_i.length > var9) {
-              if (!this.field_i[var9].field_i.g(88)) {
+              if (!this.field_i[var9].field_i.isEmpty(88)) {
                 this.field_b[var9] = true;
               } else {
                 this.field_b[var9] = false;
@@ -122,7 +122,7 @@ abstract class VictoryChecker {
         }
     }
 
-    final boolean a(byte param0, Player param1) {
+    final boolean isLoser(byte param0, Player param1) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -161,9 +161,9 @@ abstract class VictoryChecker {
         }
     }
 
-    abstract void a(int param0, PacketBuffer param1);
+    abstract void writeScores(int param0, PacketBuffer param1);
 
-    final Player[] a(byte param0) {
+    final Player[] getWinners(byte param0) {
         if (param0 != -23) {
           byte[] var3 = (byte[]) null;
           VictoryChecker.a(-73, (byte[]) null, -98);
@@ -171,7 +171,7 @@ abstract class VictoryChecker {
         return this.field_g;
     }
 
-    abstract void a(byte param0, GameState param1, kq param2);
+    abstract void showResults(byte param0, GameState param1, GameScreen param2);
 
     final static int a(int param0, byte[] param1, int param2) {
         RuntimeException var3 = null;

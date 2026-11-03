@@ -55,7 +55,7 @@ final class lr {
           stackIn_3_0[stackIn_4_1] = var12;
           var6 = new kb(IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, -1 + (var13.field_i / 2 - rs.field_Cb.field_J), 182 - IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, param3.field_k, param3.name, 16777215, true);
           var13.a(var6, 8);
-          var7 = new fe(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var13.field_i / 2 + 1, 182 - 3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, rs.field_Cb.field_J, 8421504, md.i(0), eb.field_e, 3375155);
+          var7 = new fe(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var13.field_i / 2 + 1, 182 - 3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, rs.field_Cb.field_J, 8421504, md.i(0), FullscreenFocusCanvas.field_e, 3375155);
           var13.a(var7, param2 - 13);
           stackIn_6_0 = param0.field_i;
           if (param3.field_x >= param1.field_x) {
@@ -64,7 +64,7 @@ final class lr {
             stackIn_7_1 = param3.field_x;
           }
           stackIn_6_0[stackIn_7_1] = var7;
-          dupTemp$1 = re.a(jg.field_f, 4371, new String[]{param3.name});
+          dupTemp$1 = re.a(AudioService.field_f, 4371, new String[]{param3.name});
           var7.field_o = dupTemp$1;
           var6.field_o = dupTemp$1;
           var13.field_o = dupTemp$1;
@@ -73,9 +73,9 @@ final class lr {
             return stackIn_9_0;
           }
           bg.a(-2612, param4.length);
-          var8 = new ff(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + rs.field_Cb.field_J, ne.a(-1, false));
+          var8 = new ff(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + rs.field_Cb.field_J, BattleContribution.a(-1, false));
           var13.a(var8, 8);
-          var8.field_o = re.a(jg.field_f, 4371, new String[]{param3.name});
+          var8.field_o = re.a(AudioService.field_f, 4371, new String[]{param3.name});
           stackIn_12_0 = param0.field_f;
           if (param1.field_x < param3.field_x) {
             stackIn_13_1 = param3.field_x;
@@ -86,7 +86,7 @@ final class lr {
           for (var9_int = 1; param4.length - 1 > var9_int; var9_int++) {
             var10 = new ff(IntrusiveDeque.field_a[param3.field_x].field_z + (2 + GameState.field_F.field_z) * var9_int, var13.field_i / 2 + rs.field_Cb.field_J + 3, wm.a(-1, param2 - 21));
             var13.a(var10, 8);
-            var10.field_o = re.a(jg.field_f, 4371, new String[]{param3.name});
+            var10.field_o = re.a(AudioService.field_f, 4371, new String[]{param3.name});
             stackIn_17_0 = param0.field_f;
             if (param3.field_x <= param1.field_x) {
               stackIn_18_1 = 1 + param3.field_x;
@@ -97,7 +97,7 @@ final class lr {
           }
           var9 = new ff(0, (var12.field_i - IntrusiveDeque.field_a[param3.field_x].field_w) / 2, IntrusiveDeque.field_a[param3.field_x]);
           var13.a(var9, param2 ^ 29);
-          var9.field_o = re.a(jg.field_f, 4371, new String[]{param3.name});
+          var9.field_o = re.a(AudioService.field_f, 4371, new String[]{param3.name});
           stackIn_20_0 = var13;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -298,12 +298,12 @@ final class lr {
         if (nn.field_c != null) {
           for (var2 = 0; var2 < nf.field_a.length; var2++) {
             if (nf.field_a[var2] == param0 &&
-              tf.field_a[var2] > 0) {
-              dupTemp$6 = tf.field_a[var2] - 1;
+              CheckboxPainter.field_a[var2] > 0) {
+              dupTemp$6 = CheckboxPainter.field_a[var2] - 1;
               arrayValue$7 = nn.field_c[var2];
-              tf.field_a[var2] = dupTemp$6;
+              CheckboxPainter.field_a[var2] = dupTemp$6;
               var3 = arrayValue$7[dupTemp$6];
-              nn.field_c[var2][tf.field_a[var2]] = null;
+              nn.field_c[var2][CheckboxPainter.field_a[var2]] = null;
               return var3;
             }
           }
@@ -318,14 +318,14 @@ final class lr {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        sl var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         Object[] var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         lq var12 = null;
-        sl var13 = null;
+        CipherPacketBuffer var13 = null;
         int[] var14 = null;
         gb var15 = null;
         Object var16 = null;
@@ -339,7 +339,7 @@ final class lr {
             lr.a(121, -50, (int[]) null, (byte) -33, (Object[]) null);
           }
           var13 = sa.field_a;
-          var2 = var13.j(-100);
+          var2 = var13.readUnsignedByte(-100);
           if (var2 == 0) {
             var11 = ae.a(-128);
             var17 = var11;
@@ -348,11 +348,11 @@ final class lr {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((PacketBuffer) ((Object) var5)).j(-115);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-115);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((PacketBuffer) ((Object) var5)).a(16711680);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(16711680);
             }
-            var15 = (gb) (vl.field_o.d(0));
+            var15 = (gb) (SolMapGenerator.field_o.startForward(0));
             if (var15 == null) {
               q.g(-112);
               return;
@@ -361,19 +361,19 @@ final class lr {
             var15.field_h = var17[0];
             var15.field_j = true;
             var15.field_k = var3;
-            var15.b((byte) -105);
+            var15.unlink((byte) -105);
             return;
           }
           if (var2 == 1) {
-            var12 = (lq) (rs.field_Bb.d(0));
+            var12 = (lq) (rs.field_Bb.startForward(0));
             if (var12 == null) {
               q.g(-100);
               return;
             }
-            var12.b((byte) -108);
+            var12.unlink((byte) -108);
           } else {
             if (var2 == 2) {
-              var16_ref = (gb) (vl.field_o.d(0));
+              var16_ref = (gb) (SolMapGenerator.field_o.startForward(0));
               if (var16_ref == null) {
                 q.g(-120);
                 return;
@@ -382,9 +382,9 @@ final class lr {
               var16_ref.field_h = var16_ref.field_k[0];
               var16_ref.field_j = true;
               var16_ref.field_l = true;
-              var16_ref.b((byte) -89);
+              var16_ref.unlink((byte) -89);
             } else {
-              GameKeyHandler.a(-29901, (Throwable) null, "A1: " + w.a(16738));
+              GameKeyHandler.a(-29901, (Throwable) null, "A1: " + Dialog.a(16738));
               q.g(-125);
             }
           }
@@ -596,7 +596,7 @@ final class lr {
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         var37 < wn.field_c) {
-                        jg.a(var38, var29, var37 + var36Lifetime2, 0, var25, false, var21, 0, param5, 0);
+                        AudioService.a(var38, var29, var37 + var36Lifetime2, 0, var25, false, var21, 0, param5, 0);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
@@ -606,9 +606,9 @@ final class lr {
                         var38 = -1 + wn.field_c - var37;
                       }
                       if (0 > var37) {
-                        jg.a(var38 + var37, var29 - var37 * var41, var36Lifetime2, var40, -(var40 * var37) + var25, false, -(var37 * var39) + var21, var41, param5, var39);
+                        AudioService.a(var38 + var37, var29 - var37 * var41, var36Lifetime2, var40, -(var40 * var37) + var25, false, -(var37 * var39) + var21, var41, param5, var39);
                       } else {
-                        jg.a(var38, var29, var37 + var36Lifetime2, var40, var25, false, var21, var41, param5, var39);
+                        AudioService.a(var38, var29, var37 + var36Lifetime2, var40, var25, false, var21, var41, param5, var39);
                       }
                     }
                   }
@@ -683,7 +683,7 @@ final class lr {
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
                     wn.field_c > var36Lifetime1) {
-                    jg.a(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, 0, var25, false, var21, 0, param5, 0);
+                    AudioService.a(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, 0, var25, false, var21, 0, param5, 0);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
@@ -693,9 +693,9 @@ final class lr {
                     var37Lifetime1 = -var36Lifetime1 + (wn.field_c - 1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    jg.a(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, var39Lifetime1, var25, false, var21, var40Lifetime1, param5, var38Lifetime1);
+                    AudioService.a(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, var39Lifetime1, var25, false, var21, var40Lifetime1, param5, var38Lifetime1);
                   } else {
-                    jg.a(var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, var35Lifetime1, var39Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, false, var21 - var36Lifetime1 * var38Lifetime1, var40Lifetime1, param5, var38Lifetime1);
+                    AudioService.a(var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, var35Lifetime1, var39Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, false, var21 - var36Lifetime1 * var38Lifetime1, var40Lifetime1, param5, var38Lifetime1);
                   }
                 }
               }

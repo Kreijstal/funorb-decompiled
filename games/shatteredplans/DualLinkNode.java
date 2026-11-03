@@ -5,19 +5,19 @@ class DualLinkNode extends IntrusiveNode {
     static int[] field_k;
     long field_l;
     DualLinkNode field_j;
-    static bc field_n;
+    static Archive field_n;
     static String field_m;
     DualLinkNode field_h;
     static String field_i;
 
     final static void c(boolean param0) {
         int var1 = 0;
-        if (tf.field_p > 32) {
-          var1 = tf.field_p % 32;
+        if (CheckboxPainter.field_p > 32) {
+          var1 = CheckboxPainter.field_p % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          js.a(tf.field_p - var1, 197126152);
+          js.a(CheckboxPainter.field_p - var1, 197126152);
         } else {
           js.a(0, 197126152);
         }
@@ -26,7 +26,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final static byte[] a(int param0, boolean param1, sl param2, byte[] param3) {
+    final static byte[] a(int param0, boolean param1, CipherPacketBuffer param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -88,9 +88,9 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean isSecondaryLinked(byte param0) {
         if (param0 < 94) {
-          field_n = (bc) null;
+          field_n = (Archive) null;
         }
         if (null == this.field_j) {
           return false;
@@ -98,12 +98,12 @@ class DualLinkNode extends IntrusiveNode {
         return true;
     }
 
-    final long d(byte param0) {
+    final long secondaryKey(byte param0) {
         int var2 = -87 % ((54 - param0) / 41);
         return this.field_l;
     }
 
-    final void a(int param0) {
+    final void unlinkSecondary(int param0) {
         if (null == this.field_j) {
           return;
         }
@@ -127,14 +127,14 @@ class DualLinkNode extends IntrusiveNode {
           var2 = dupTemp$0;
           vh.field_a[param0] = dupTemp$0;
           bs.a(var2, param1 ^ 93);
-          oi.a(param0, (byte) 66).f(16, 16);
+          oi.a(param0, (byte) 66).draw(16, 16);
           gf.b(3, 3, 0, 0, 64, 64);
           cg.i(0);
         }
         return var2;
     }
 
-    final void a(int param0, long param1) {
+    final void setSecondaryKey(int param0, long param1) {
         if (null != this.field_j) {
           throw new RuntimeException();
         }

@@ -27,7 +27,7 @@ abstract class il extends jl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != this.field_eb) {
-            this.field_eb.b((byte) -124);
+            this.field_eb.unlink((byte) -124);
           }
           if (param1 != null) {
             param1.a(6 + this.field_db, param1.field_n, (byte) 121, 6, param1.field_x);
@@ -56,7 +56,7 @@ abstract class il extends jl {
         }
     }
 
-    il(tc param0, UiWidget param1, int param2, int param3, int param4) {
+    il(DialogRoot param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_x, param1.field_n + param2 + 12);
         try {
           this.field_db = param2;
@@ -125,7 +125,7 @@ abstract class il extends jl {
     }
 
     final void g(byte param0) {
-        if (this.field_ab == gs.field_j) {
+        if (this.field_ab == NanoFrameTimer.field_j) {
           return;
         }
         this.field_Z = 0;
@@ -151,7 +151,7 @@ abstract class il extends jl {
           var2 = -108 % ((param0 + 23) / 52);
           return super.a((byte) 81);
         }
-        if (gs.field_j == this.field_ab) {
+        if (NanoFrameTimer.field_j == this.field_ab) {
           fieldTemp$0 = this.field_Z + 1;
           this.field_Z = this.field_Z + 1;
           if (this.field_X != fieldTemp$0) {
@@ -198,10 +198,10 @@ abstract class il extends jl {
             this.field_Z = 0;
             return;
           }
-          if (gs.field_j == this.field_ab) {
+          if (NanoFrameTimer.field_j == this.field_ab) {
             return;
           }
-          this.field_ab = gs.field_j;
+          this.field_ab = NanoFrameTimer.field_j;
           this.field_Z = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -259,9 +259,9 @@ abstract class il extends jl {
         int var11Lifetime1;
         var18 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (null == ra.field_a ||
-            ra.field_a.length != gf.field_b) {
-            ra.field_a = new int[gf.field_b];
+          if (null == RandomAccessCacheFile.field_a ||
+            RandomAccessCacheFile.field_a.length != gf.field_b) {
+            RandomAccessCacheFile.field_a = new int[gf.field_b];
           }
           var4_int = param2 & 15;
           param2 = param2 >> 4;
@@ -287,8 +287,8 @@ abstract class il extends jl {
               var10Lifetime1 = -16711936 & var4_int * var7Lifetime1;
               var11Lifetime1 = 16711680 & var6Lifetime1 * var4_int;
               var9Lifetime1 = var10Lifetime1 | var11Lifetime1;
-              gf.field_h[var12] = ra.field_a[var17] + var9Lifetime1 >> 8;
-              ra.field_a[var17] = (var8Lifetime1 << 4) - var9Lifetime1;
+              gf.field_h[var12] = RandomAccessCacheFile.field_a[var17] + var9Lifetime1 >> 8;
+              RandomAccessCacheFile.field_a[var17] = (var8Lifetime1 << 4) - var9Lifetime1;
               var12++;
               var13++;
             }

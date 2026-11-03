@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gn extends o {
+final class gn extends WidgetTheme {
     static String field_v;
     static String field_x;
     static Sprite field_y;
@@ -14,7 +14,7 @@ final class gn extends o {
     private wk[] field_C;
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        es.field_n = param3;
+        StarAnnotation.field_n = param3;
         ah.field_P = param1;
         IterableNodeHashTable.field_b = param0;
         if (param2) {
@@ -56,7 +56,7 @@ final class gn extends o {
           sr.field_h = false;
         }
         if (oq.field_j == 13) {
-          qq.c(false);
+          MusicVoice.c(false);
           var4 = 1;
           sr.field_h = false;
         }
@@ -266,7 +266,7 @@ final class gn extends o {
           var11 = new vm[var7];
           if (param1.field_r != null) {
             for (var12 = 0; var12 < param1.field_r.length; var12++) {
-              var13_ref_si = kq.field_A.a(param1.field_r[var12], (byte) 100);
+              var13_ref_si = GameScreen.field_A.a(param1.field_r[var12], (byte) 100);
               var8[var12] = var13_ref_si.field_t;
               var9[var12] = param1.field_p[var12];
               var11[var12] = gn.a(param0 + 0, var13_ref_si, param2, param3, param4);
@@ -392,18 +392,18 @@ final class gn extends o {
         wk var7 = null;
         wk var9 = null;
         Sprite var10 = null;
-        kg var11 = null;
+        FocusableWidget var11 = null;
         wk var12 = null;
         wk var13 = null;
         wk var14 = null;
         wk var15 = null;
         try {
-          if (!(param0 instanceof kg)) {
+          if (!(param0 instanceof FocusableWidget)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (UiWidget) (param0);
           }
-          var11 = (kg) (stackIn_3_0);
+          var11 = (FocusableWidget) (stackIn_3_0);
           BufferedSocket.a(-6187, param0.field_x + (param1 + param0.field_m), param0.field_n + param0.field_q + param3, param0.field_q + param3, param1 + param0.field_m);
           if (var11 != null) {
             param2 = param2 & var11.field_y;

@@ -3,7 +3,7 @@
  */
 final class ig {
     static String field_b;
-    static s field_a;
+    static GzipInflater field_a;
     static int[] field_c;
     static int field_d;
 
@@ -16,7 +16,7 @@ final class ig {
         }
     }
 
-    final static boolean a(bc param0, int param1, bc param2, bc param3) {
+    final static boolean a(Archive param0, int param1, Archive param2, Archive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -30,15 +30,15 @@ final class ig {
           if (param1 != -7526) {
             return false;
           }
-          if (!param0.b((byte) 114)) {
+          if (!param0.isIndexLoaded((byte) 114)) {
             return false;
           }
           if (!param0.a("commonui", -51)) {
             return false;
           }
-          if (param2.b((byte) 113) &&
+          if (param2.isIndexLoaded((byte) 113) &&
             param2.a("commonui", -116)) {
-            if (param3.b((byte) 107) &&
+            if (param3.isIndexLoaded((byte) 107) &&
               param3.a("button.gif", param1 + 7620)) {
               return true;
             }
@@ -86,6 +86,6 @@ final class ig {
 
     static {
         field_b = "Please check if address is correct";
-        field_a = new s();
+        field_a = new GzipInflater();
     }
 }

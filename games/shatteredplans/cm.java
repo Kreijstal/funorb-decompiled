@@ -3,7 +3,7 @@
  */
 final class cm {
     private int[] field_d;
-    static bc field_a;
+    static Archive field_a;
     static ro field_e;
     static int[] field_g;
     static boolean field_f;

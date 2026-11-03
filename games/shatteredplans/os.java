@@ -95,14 +95,14 @@ final class os extends vd {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        sl var3 = js.field_f;
+        CipherPacketBuffer var3 = js.field_f;
         var3.h(param1, 255);
-        var3.c(3, (byte) -68);
-        var3.c(10, (byte) -98);
+        var3.writeByte(3, (byte) -68);
+        var3.writeByte(10, (byte) -98);
         if (!param2) {
           field_u = (Sprite[]) null;
         }
-        var3.d(param0, 255);
+        var3.writeShort(param0, 255);
     }
 
     os(int param0, int param1, int param2, int param3) {
@@ -124,7 +124,7 @@ final class os extends vd {
           }
           if (wh.field_a.b(14) &&
             !param1.equals(wh.field_a.a(-103))) {
-            wh.field_a = tf.a(param1, param0 ^ -12121);
+            wh.field_a = CheckboxPainter.a(param1, param0 ^ -12121);
           }
           stackIn_7_0 = wh.field_a;
           return stackIn_7_0;
@@ -144,7 +144,7 @@ final class os extends vd {
 
     final static String a(byte param0, int param1, String param2, String param3) {
         RuntimeException var4 = null;
-        sl var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         ve var7 = null;
         CharSequence var8 = null;
@@ -173,8 +173,8 @@ final class os extends vd {
             stackIn_10_0 = re.a(DelegatingCanvas.field_d, param0 + 4254, new String[]{param2});
             return stackIn_10_0;
           }
-          var7.b((byte) -74);
-          var7.a(16);
+          var7.unlink((byte) -74);
+          var7.unlinkSecondary(16);
           oi.field_e = oi.field_e - 1;
           var5 = js.field_f;
           var5.h(param1, 255);
@@ -183,9 +183,9 @@ final class os extends vd {
           if (param0 != 117) {
             field_u = (Sprite[]) null;
           }
-          var5.c(3, (byte) -57);
-          var5.a(param3, (byte) 0);
-          var5.b(var5.position - var6, (byte) 127);
+          var5.writeByte(3, (byte) -57);
+          var5.writeString(param3, (byte) 0);
+          var5.patchLengthByte(var5.position - var6, (byte) 127);
           stackIn_14_0 = null;
           return (String) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -239,7 +239,7 @@ final class os extends vd {
         int[] var2 = var7;
         gf.a(var10);
         gf.a(this.field_k, this.field_t, this.field_m, this.field_i, 10, 0, 200);
-        er.a(-119, this.field_k, this.field_i, -10 + this.field_m, this.field_t);
+        WhirlpoolHasher.a(-119, this.field_k, this.field_i, -10 + this.field_m, this.field_t);
         gf.f(10 + this.field_k, this.field_t, -20 + this.field_m, 2052949);
         gf.f(this.field_k + 10, this.field_t + this.field_i, -20 + this.field_m, 0);
         gf.i(this.field_k, this.field_t, this.field_k + 10, this.field_t + 10);
@@ -257,15 +257,15 @@ final class os extends vd {
         int var3 = 0;
         int var4 = 39 % ((param0 - 67) / 47);
         while (var3 < 3 * (-10 + this.field_i) / 4) {
-          var5 = ui.a(2052949, 0, -95, 256 * var3 / (3 * (-10 + this.field_i) / 4));
+          var5 = SolVictoryChecker.a(2052949, 0, -95, 256 * var3 / (3 * (-10 + this.field_i) / 4));
           gf.a(this.field_k, var3 + 10 + this.field_t, var5);
           gf.a(-1 + (this.field_m + this.field_k), var3 + (this.field_t + 10), var5);
           var3++;
         }
-        vd var8 = (vd) (this.field_l.f(3725));
+        vd var8 = (vd) (this.field_l.startReverse(3725));
         while (var8 != null) {
           var8.a(-101);
-          var8 = (vd) (this.field_l.b(-128));
+          var8 = (vd) (this.field_l.nextReverse(-128));
         }
     }
 

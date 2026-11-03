@@ -11,8 +11,8 @@ final class wm {
 
     final static Sprite a(int param0, int param1) {
         Sprite var2 = new Sprite(GameState.field_F.field_z, GameState.field_F.field_w);
-        ra.a(param1 ^ -110);
-        var2.e();
+        RandomAccessCacheFile.a(param1 ^ -110);
+        var2.bindAsRenderTarget();
         GameState.field_F.b(0, 0, param0 < param1 ? 2105376 : param0);
         cg.i(0);
         return var2;

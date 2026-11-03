@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class fr extends qs {
+final class fr extends SingleChildWidget {
     static String field_D;
     private int field_A;
     private int field_C;
@@ -20,12 +20,12 @@ final class fr extends qs {
         if (param0 > -28) {
           return;
         }
-        if (fj.field_t.field_k) {
+        if (MatchingTextValidator.field_t.field_k) {
           il.a(var1, 0, var2, Star.field_K);
           gf.f(0, 0, 640, 0);
           return;
         }
-        Star.field_K.c(-var1 >> 4, -var2 >> 4);
+        Star.field_K.drawOpaque(-var1 >> 4, -var2 >> 4);
     }
 
     final void h(int param0) {
@@ -48,8 +48,8 @@ final class fr extends qs {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_z instanceof kg) ||
-            ((kg) (this.field_z)).field_y) &&
+          if ((!(this.field_z instanceof FocusableWidget) ||
+            ((FocusableWidget) (this.field_z)).field_y) &&
             this.field_o == 1) {
             var5_int = -param0 + (pd.field_k - this.field_A);
             var6 = -this.field_G + (bb.field_b - param1);
@@ -189,7 +189,7 @@ final class fr extends qs {
         }
     }
 
-    private fr(int param0, int param1, int param2, int param3, iq param4, ko param5, UiWidget param6, boolean param7, boolean param8) {
+    private fr(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_C = 2147483647;
         this.field_J = 2147483647;

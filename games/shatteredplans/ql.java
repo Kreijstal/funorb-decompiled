@@ -35,25 +35,25 @@ final class ql extends IntrusiveNode {
             return;
           }
           if (0 == vc.field_c.length) {
-            mf.field_q = null;
+            EmailValidator.field_q = null;
             return;
           }
-          um.field_k = 0;
-          tp.b((byte) 93);
+          PlayerStats.field_k = 0;
+          SliderPainter.b((byte) 93);
           var9 = new dm();
           var3 = nd.a((byte) -106);
           while (var3 != null) {
             var9.a(false, var3);
             var3 = nd.a((byte) 118);
           }
-          mf.field_q = new sq[var9.field_g];
+          EmailValidator.field_q = new sq[var9.field_g];
           for (var4 = 0; var4 < var9.field_g; var4++) {
-            mf.field_q[var4] = (sq) (var9.field_b[var4]);
+            EmailValidator.field_q[var4] = (sq) (var9.field_b[var4]);
           }
           var8 = 0;
           var4Lifetime1 = var8;
           while (var9.field_g - 1 > var8) {
-            var5 = mf.field_q[var8].field_d;
+            var5 = EmailValidator.field_q[var8].field_d;
             if (var5 == null) {
               stackIn_17_0 = null;
             } else {
@@ -61,10 +61,10 @@ final class ql extends IntrusiveNode {
             }
             var6 = stackIn_17_0;
             if (var6 == null &&
-              !mf.field_q[var8].field_r) {
-              var6 = mf.field_q[var8 + 1];
+              !EmailValidator.field_q[var8].field_r) {
+              var6 = EmailValidator.field_q[var8 + 1];
             }
-            mf.field_q[var8].field_l = var6;
+            EmailValidator.field_q[var8].field_l = var6;
             var8++;
           }
           return;
@@ -87,28 +87,28 @@ final class ql extends IntrusiveNode {
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         gm var1Lifetime1;
         try {
-          aj.field_e.e();
-          hg.field_q.e();
+          aj.field_e.service();
+          IsolationistAi.field_q.service();
           if (param0 != -26848) {
             ql.a((byte) 108);
           }
           dp.field_u = dp.field_u - 1;
           if (dp.field_u == 0) {
             dp.field_u = 200;
-            var1 = (gm) (eo.field_ab.d(param0 ^ -26848));
+            var1 = (gm) (eo.field_ab.startForward(param0 ^ -26848));
             while (var1 != null) {
-              if (!var1.field_n.c(2048)) {
-                var1.b((byte) -108);
+              if (!var1.field_n.isLinked(2048)) {
+                var1.unlink((byte) -108);
               }
-              var1 = (gm) (eo.field_ab.a((byte) -71));
+              var1 = (gm) (eo.field_ab.nextForward((byte) -71));
             }
             if (nc.field_v != null) {
-              var1Lifetime1 = (gm) (nc.field_v.d(0));
+              var1Lifetime1 = (gm) (nc.field_v.startForward(0));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_n.c(2048)) {
-                  var1Lifetime1.b((byte) -84);
+                if (!var1Lifetime1.field_n.isLinked(2048)) {
+                  var1Lifetime1.unlink((byte) -84);
                 }
-                var1Lifetime1 = (gm) (nc.field_v.a((byte) -71));
+                var1Lifetime1 = (gm) (nc.field_v.nextForward((byte) -71));
               }
             }
           }
@@ -121,7 +121,7 @@ final class ql extends IntrusiveNode {
     }
 
     final static void a(java.awt.Frame param0, int param1, PlatformTaskDispatcher param2) {
-        pb var3 = null;
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

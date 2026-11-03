@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wp {
-    static gh field_a;
+    static MusicTrack field_a;
     static String field_b;
     static String field_c;
 
@@ -14,7 +14,7 @@ final class wp {
             oq.field_i[13] = eq.field_i;
           } else {
             if (ce.field_x.field_P.field_e != 0) {
-              oq.field_i[13] = qq.field_s;
+              oq.field_i[13] = MusicVoice.field_s;
             } else {
               if ((1 << ce.field_x.field_P.field_r) - 1 != (1 << ce.field_x.field_h | ce.field_x.field_i)) {
                 oq.field_i[13] = uo.field_b;
@@ -25,7 +25,7 @@ final class wp {
           }
         } else {
           if (0 != (ce.field_x.field_P.field_e & 1 << ce.field_x.field_h)) {
-            oq.field_i[13] = qc.field_s;
+            oq.field_i[13] = SocketArchiveNetworkClient.field_s;
           } else {
             if (ce.field_x.field_P.field_e != 0) {
               oq.field_i[13] = en.field_d;
@@ -41,7 +41,7 @@ final class wp {
         if (param0 == -2) {
           return;
         }
-        field_a = (gh) null;
+        field_a = (MusicTrack) null;
     }
 
     public static void a(byte param0) {
@@ -65,7 +65,7 @@ final class wp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1.previous != null) {
-            param1.b((byte) -111);
+            param1.unlink((byte) -111);
           }
           param1.next = param2;
           param1.previous = param2.previous;
@@ -118,7 +118,7 @@ final class wp {
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 == null) {
-            stackIn_3_0 = fp.field_a;
+            stackIn_3_0 = FrameTimer.field_a;
             return stackIn_3_0;
           }
           var3_int = param1.length();
@@ -131,12 +131,12 @@ final class wp {
                 stackIn_16_0 = (String) null;
                 return stackIn_16_0;
               }
-              if (!tc.a(var4.charAt(0), 2) &&
-                !tc.a(var4.charAt(-1 + var4.length()), 2)) {
+              if (!DialogRoot.a(var4.charAt(0), 2) &&
+                !DialogRoot.a(var4.charAt(-1 + var4.length()), 2)) {
                 var5 = 0;
                 for (var6 = 0; param1.length() > var6; var6++) {
                   var7 = param1.charAt(var6);
-                  if (!tc.a((char) var7, 2)) {
+                  if (!DialogRoot.a((char) var7, 2)) {
                     var5 = 0;
                   } else {
                     var5++;
@@ -156,10 +156,10 @@ final class wp {
               stackIn_21_0 = cr.field_a;
               return stackIn_21_0;
             }
-            stackIn_13_0 = fp.field_a;
+            stackIn_13_0 = FrameTimer.field_a;
             return stackIn_13_0;
           }
-          stackIn_8_0 = fp.field_a;
+          stackIn_8_0 = FrameTimer.field_a;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,7 +191,7 @@ final class wp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1.previous != null) {
-            param1.b((byte) -111);
+            param1.unlink((byte) -111);
           }
           param1.next = param2;
           param1.previous = param2.previous;

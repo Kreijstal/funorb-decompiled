@@ -4,7 +4,7 @@
 final class oi {
     static int field_a;
     static String field_c;
-    static bc field_h;
+    static Archive field_h;
     static String field_g;
     static int field_e;
     static ds field_b;
@@ -13,16 +13,16 @@ final class oi {
     static Sprite field_d;
 
     final static void a(boolean param0) {
-        k.field_b = false;
+        TurnEventLog.field_b = false;
         if (!param0) {
           oi.a(-116, (byte) -74);
         }
     }
 
-    final static void a(byte param0, bc param1) {
+    final static void a(byte param0, Archive param1) {
         int var2_int = 0;
         int var3 = 0;
-        bc var4 = null;
+        Archive var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -30,16 +30,16 @@ final class oi {
         RuntimeException var2 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          Star.field_K = mf.a(param1, "", "starfield", false);
+          Star.field_K = EmailValidator.a(param1, "", "starfield", false);
           mp.field_e = new Sprite[6];
           for (var2_int = 0; var2_int < 6; var2_int++) {
-            mp.field_e[var2_int] = vr.a(param1, var2_int + 1, 1);
+            mp.field_e[var2_int] = GameRules.a(param1, var2_int + 1, 1);
           }
-          ce.field_v = mf.a(param1, "", "win", false);
-          dp.field_s = mf.a(param1, "", "lose", false);
+          ce.field_v = EmailValidator.a(param1, "", "win", false);
+          dp.field_s = EmailValidator.a(param1, "", "lose", false);
           if (param0 != -126) {
-            var4 = (bc) null;
-            oi.a((byte) -117, (bc) null);
+            var4 = (Archive) null;
+            oi.a((byte) -117, (Archive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,7 +78,7 @@ final class oi {
           var2 = var3;
           bd.field_C[param0] = dupTemp$0;
           bs.a(var3, 77);
-          jd.field_j[param0].g(0, 0);
+          CellVertex.field_j[param0].drawQuarterSize(0, 0);
           cg.i(0);
         }
         if (param1 != 66) {

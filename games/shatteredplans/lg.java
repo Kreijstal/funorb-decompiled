@@ -5,13 +5,13 @@ import java.io.*;
 
 final class lg extends IOException {
     static jp field_e;
-    static tj field_c;
+    static ArchiveSourceManager field_c;
     static String field_f;
     static boolean field_b;
     static int[] field_d;
     static int[] field_a;
 
-    final static nk[] a(int param0, bc param1, int param2, int param3) {
+    final static nk[] a(int param0, Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         nk[] stackIn_5_0 = null;
@@ -26,7 +26,7 @@ final class lg extends IOException {
             return (nk[]) (stackIn_2_0);
           }
           if (param0 == -20435) {
-            stackIn_7_0 = jj.c(true);
+            stackIn_7_0 = ConquestVictoryChecker.c(true);
             return stackIn_7_0;
           }
           stackIn_5_0 = (nk[]) null;
@@ -45,7 +45,7 @@ final class lg extends IOException {
         }
     }
 
-    final static nk a(int param0, int param1, int param2, bc param3) {
+    final static nk a(int param0, int param1, int param2, Archive param3) {
         RuntimeException var4 = null;
         nk stackIn_5_0 = null;
         nk stackIn_7_0 = null;
@@ -182,11 +182,11 @@ final class lg extends IOException {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = mp.field_b;
-          var3 = ((nq) ((Object) var2)).c(param1);
+          var3 = ((nq) ((Object) var2)).stringWidth(param1);
           var4 = ((nq) ((Object) var2)).field_J + ((nq) ((Object) var2)).field_q;
           var5 = new Sprite(var3, var4);
           bs.a(var5, 112);
-          ((nq) ((Object) var2)).d(param1, 0, ((nq) ((Object) var2)).field_J, 16777215, -1);
+          ((nq) ((Object) var2)).drawString(param1, 0, ((nq) ((Object) var2)).field_J, 16777215, -1);
           cg.i(param0);
           stackIn_1_0 = var5;
           return stackIn_1_0;

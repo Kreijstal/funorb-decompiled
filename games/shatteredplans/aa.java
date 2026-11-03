@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aa extends WidgetContainer implements op, bp, dl {
+final class aa extends WidgetContainer implements op, ButtonListener, dl {
     private fa field_J;
     private fa field_Q;
-    private lk field_K;
-    private kg field_E;
+    private CheckboxWidget field_K;
+    private FocusableWidget field_E;
     static String field_N;
-    private kg field_O;
+    private FocusableWidget field_O;
     static String field_G;
     private fa field_H;
     static String field_P;
@@ -97,8 +97,8 @@ final class aa extends WidgetContainer implements op, bp, dl {
           }
           var11 = new pg(20, param2, 120 + param1, 25, param3, false, 120, 3, gn.field_u, 16777215, param5);
           this.b((byte) -120, var11);
-          var9 = new ah(((ki) ((Object) param3)).a((byte) 96), param4, 126, param2 + var11.field_n, 50 + param1, param6);
-          var9.field_u = (ko) (this);
+          var9 = new ah(((ValidatableWidget) ((Object) param3)).a((byte) 96), param4, 126, param2 + var11.field_n, 50 + param1, param6);
+          var9.field_u = (WidgetListener) (this);
           this.b((byte) -52, var9);
           stackIn_3_0 = var9.field_n + var11.field_n;
           return stackIn_3_0;
@@ -128,10 +128,10 @@ final class aa extends WidgetContainer implements op, bp, dl {
         }
     }
 
-    private final boolean a(boolean param0, ki param1) {
-        gk var3 = null;
+    private final boolean a(boolean param0, ValidatableWidget param1) {
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        u var4 = null;
+        ValidationState var4 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -145,7 +145,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
           if (param0) {
             field_P = (String) null;
           }
-          if (tj.field_b == var4) {
+          if (ArchiveSourceManager.field_b == var4) {
             return false;
           }
           if (var4 == pd.field_h) {
@@ -220,7 +220,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
         try {
           var3 = this.field_Q;
           var4 = param1;
-          ((go) ((Object) var3)).a(57, var4, false);
+          ((TextFieldWidget) ((Object) var3)).a(57, var4, false);
           if (param0 != 15270) {
             var5 = (String) null;
             discarded$1 = this.a(-31, (String) null, 115, (byte) 34, (UiWidget) null, (String) null);
@@ -252,59 +252,59 @@ final class aa extends WidgetContainer implements op, bp, dl {
     }
 
     public aa() {
-        super(0, 0, 496, 0, (iq) null);
-        this.field_Q = new fa("", (ko) null, 12);
-        this.field_F = new fa("", (ko) null, 100);
-        this.field_M = new fa("", (ko) null, 100);
-        this.field_J = new fa("", (ko) null, 20);
-        this.field_H = new fa("", (ko) null, 20);
-        this.field_L = new fa("", (ko) null, 3);
+        super(0, 0, 496, 0, (WidgetPainter) null);
+        this.field_Q = new fa("", (WidgetListener) null, 12);
+        this.field_F = new fa("", (WidgetListener) null, 100);
+        this.field_M = new fa("", (WidgetListener) null, 100);
+        this.field_J = new fa("", (WidgetListener) null, 20);
+        this.field_H = new fa("", (WidgetListener) null, 20);
+        this.field_L = new fa("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_K = new lk("", (ko) null, var1 != 0);
-        this.field_E = new kg(qn.field_e, (ko) null);
-        this.field_O = new kg(rn.field_a, (ko) null);
-        this.field_Q.field_v = ol.field_i;
-        this.field_F.field_v = j.field_p;
+        this.field_K = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
+        this.field_E = new FocusableWidget(qn.field_e, (WidgetListener) null);
+        this.field_O = new FocusableWidget(DiskCacheWorker.field_a, (WidgetListener) null);
+        this.field_Q.field_v = WeightedLruCache.field_i;
+        this.field_F.field_v = LegacyAi.field_p;
         this.field_M.field_v = sf.field_h;
-        this.field_J.field_v = wf.field_k;
+        this.field_J.field_v = AiTask.field_k;
         this.field_H.field_v = he.field_o;
-        this.field_L.field_v = pc.field_p;
-        this.field_K.field_v = ca.field_i;
-        this.field_Q.a(new ec(this.field_Q), 8945);
+        this.field_L.field_v = DerelictMapGenerator.field_p;
+        this.field_K.field_v = PlayerEliminatedEvent.field_i;
+        this.field_Q.a(new UsernameAvailabilityValidator(this.field_Q), 8945);
         this.field_F.a(new mm(this.field_F), 8945);
-        this.field_M.a(new mf(this.field_M, this.field_F), 8945);
-        this.field_J.a(new cc(this.field_J, this.field_Q, this.field_F), 8945);
-        this.field_H.a(new fj(this.field_H, this.field_J), 8945);
-        this.field_L.a(new mb(this.field_L), 8945);
+        this.field_M.a(new EmailValidator(this.field_M, this.field_F), 8945);
+        this.field_J.a(new PasswordValidator(this.field_J, this.field_Q, this.field_F), 8945);
+        this.field_H.a(new MatchingTextValidator(this.field_H, this.field_J), 8945);
+        this.field_L.a(new AgeValidator(this.field_L), 8945);
         this.field_E.field_y = false;
-        this.field_E.field_p = (iq) ((Object) new qp());
-        this.field_O.field_p = (iq) ((Object) new rq());
-        this.field_Q.field_p = (iq) ((Object) new rr(10000536));
+        this.field_E.field_p = (WidgetPainter) ((Object) new qp());
+        this.field_O.field_p = (WidgetPainter) ((Object) new LinkPainter());
+        this.field_Q.field_p = (WidgetPainter) ((Object) new rr(10000536));
         rr dupTemp$0 = new rr(10000536);
-        this.field_M.field_p = (iq) ((Object) dupTemp$0);
-        this.field_F.field_p = (iq) ((Object) dupTemp$0);
-        this.field_L.field_p = (iq) ((Object) new rr(10000536));
-        this.field_K.field_p = (iq) ((Object) new og());
+        this.field_M.field_p = (WidgetPainter) ((Object) dupTemp$0);
+        this.field_F.field_p = (WidgetPainter) ((Object) dupTemp$0);
+        this.field_L.field_p = (WidgetPainter) ((Object) new rr(10000536));
+        this.field_K.field_p = (WidgetPainter) ((Object) new og());
         ce dupTemp$1 = new ce(10000536);
-        this.field_H.field_p = (iq) ((Object) dupTemp$1);
-        this.field_J.field_p = (iq) ((Object) dupTemp$1);
+        this.field_H.field_p = (WidgetPainter) ((Object) dupTemp$1);
+        this.field_J.field_p = (WidgetPainter) ((Object) dupTemp$1);
         String var2 = re.a(bo.field_Y, 4371, new String[]{this.l(-63), this.k(15)});
         int var3 = 20;
         var3 = var3 + this.a(IntrusiveDequeCursor.field_i, 21760, this.field_F, var3, 170);
-        var3 = var3 + (5 + this.a(127, 170, var3, this.field_M, "", ec.field_u, 20));
-        var3 = var3 + this.a(co.field_t, 21760, this.field_J, var3, 170);
-        var3 = var3 + (5 + this.a(170, ab.field_a, var3, (byte) -127, this.field_H, qq.field_l));
-        var3 = var3 + (this.a(170, rf.field_m, var3, (byte) -128, this.field_Q, tr.field_zb) + 5);
-        var3 = var3 + this.a(vl.field_m, this.field_L, var3, (byte) -123, 170);
-        pg var4 = new pg(46, var3, -90 + this.field_x, 25, this.field_K, true, -120 + this.field_x, 5, mf.field_x, 11579568, fe.field_E);
+        var3 = var3 + (5 + this.a(127, 170, var3, this.field_M, "", UsernameAvailabilityValidator.field_u, 20));
+        var3 = var3 + this.a(GarrisonTask.field_t, 21760, this.field_J, var3, 170);
+        var3 = var3 + (5 + this.a(170, ab.field_a, var3, (byte) -127, this.field_H, MusicVoice.field_l));
+        var3 = var3 + (this.a(170, AllianceExpiredEvent.field_m, var3, (byte) -128, this.field_Q, MapView.field_zb) + 5);
+        var3 = var3 + this.a(SolMapGenerator.field_m, this.field_L, var3, (byte) -123, 170);
+        pg var4 = new pg(46, var3, -90 + this.field_x, 25, this.field_K, true, -120 + this.field_x, 5, EmailValidator.field_x, 11579568, fe.field_E);
         this.b((byte) -71, var4);
         var3 = var3 + var4.field_n;
-        o var5 = new o(gn.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, gn.field_u.field_J, -1, 2147483647, true);
+        WidgetTheme var5 = new WidgetTheme(gn.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, gn.field_u.field_J, -1, 2147483647, true);
         this.field_I = new ts(var2, var5);
         this.field_I.field_v = "";
         this.field_I.a(0, true, bk.field_c);
         this.field_I.a(1, true, bk.field_c);
-        this.field_I.field_u = (ko) (this);
+        this.field_I.field_u = (WidgetListener) (this);
         this.field_I.a(46, var3, (byte) 57, -90 + this.field_x);
         var3 = var3 + (15 + this.field_I.field_n);
         this.b((byte) -66, this.field_I);
@@ -312,8 +312,8 @@ final class aa extends WidgetContainer implements op, bp, dl {
         int var7 = 200;
         this.field_E.a(var3, 40, (byte) 102, 496 - var7 >> 1, var7);
         this.field_O.a(15 + var3, 40, (byte) 100, var6 + 3, 60);
-        this.field_O.field_u = (ko) (this);
-        this.field_E.field_u = (ko) (this);
+        this.field_O.field_u = (WidgetListener) (this);
+        this.field_E.field_u = (WidgetListener) (this);
         this.b((byte) -115, this.field_E);
         this.b((byte) -119, this.field_O);
         this.field_D = new bj((dl) (this));
@@ -383,7 +383,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
     }
 
     public final void a(int param0) {
-        ((ec) (this.field_Q.a((byte) 117))).d(0);
+        ((UsernameAvailabilityValidator) (this.field_Q.a((byte) 117))).d(0);
         if (param0 != 2147483647) {
           field_P = (String) null;
         }
@@ -443,7 +443,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
         int var6Lifetime6Lifetime3;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var3 = 1 + rs.field_Cb.field_J * 3 / 4;
-        var4 = -60 + qg.field_r[6];
+        var4 = -60 + TutorialVictoryChecker.field_r[6];
         var5 = 40;
         if (0 == param0) {
           var6 = wk.a(-9615, wg.field_e.a(5607, vc.field_e), rs.field_Cb, new int[]{var4});
@@ -464,7 +464,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
           return stackIn_13_0;
         }
         if (param0 == 2) {
-          var6Lifetime2 = wk.a(param1 ^ 9672, wg.field_e.a(5607, jd.field_a), rs.field_Cb, new int[]{var4});
+          var6Lifetime2 = wk.a(param1 ^ 9672, wg.field_e.a(5607, CellVertex.field_a), rs.field_Cb, new int[]{var4});
           var5 = var5 + var3 * var6Lifetime2;
           if (param1 != -71) {
             return -98;
@@ -479,7 +479,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
           return 294;
         }
         if (param0 == 5) {
-          var8 = er.field_n;
+          var8 = WhirlpoolHasher.field_n;
           var6Lifetime3 = wk.a(-9615, wg.field_e.a(5607, var8), rs.field_Cb, new int[]{var4 - 80});
           var5 = var5 + (var3 * (3 + 4 * var6Lifetime3) >> 2);
           var9 = ri.field_N;
@@ -495,9 +495,9 @@ final class aa extends WidgetContainer implements op, bp, dl {
           return stackIn_26_0;
         }
         if (param0 == 6) {
-          var16 = da.field_a;
+          var16 = DebouncedValidator.field_a;
           var6Lifetime4 = wk.a(-9615, wg.field_e.a(5607, var16), rs.field_Cb, new int[]{-80 + var4});
-          var17 = er.field_l;
+          var17 = WhirlpoolHasher.field_l;
           var5 = var5 + (var3 * (3 + 4 * var6Lifetime4) >> 2);
           var6Lifetime4Lifetime1 = wk.a(param1 ^ 9672, wg.field_e.a(param1 ^ -5538, var17), rs.field_Cb, new int[]{var4 - 80});
           var18 = fr.field_F;
@@ -525,7 +525,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
           return stackIn_61_0;
         }
         if (8 == param0) {
-          var11 = hs.field_g;
+          var11 = StandardMapGenerator.field_g;
           var6Lifetime6 = wk.a(-9615, wg.field_e.a(5607, var11), rs.field_Cb, new int[]{var4 - 40});
           var12 = sp.field_b;
           var5 = var5 + ((3 + var6Lifetime6 * 4) * var3 >> 2);
@@ -533,7 +533,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
           var5 = var5 + ((4 * var6Lifetime6Lifetime1 + 3) * var3 >> 2);
           var13 = jb.field_f;
           var6Lifetime6Lifetime2 = wk.a(-9615, wg.field_e.a(5607, var13), rs.field_Cb, new int[]{var4 - 40});
-          var14 = ar.field_o;
+          var14 = ArchiveNetworkClient.field_o;
           var5 = var5 + ((4 * var6Lifetime6Lifetime2 + 3) * var3 >> 2);
           var6Lifetime6Lifetime3 = wk.a(param1 ^ 9672, wg.field_e.a(5607, var14), rs.field_Cb, new int[]{-40 + var4});
           var5 = var5 + var6Lifetime6Lifetime3 * var3;
@@ -605,7 +605,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
 
     private final int a(String param0, UiWidget param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
-        hl var7 = null;
+        ValidationIndicator var7 = null;
         int var8 = 0;
         pg var9 = null;
         int stackIn_1_0 = 0;
@@ -618,7 +618,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
         try {
           var9 = new pg(20, param2, 120 + param4, 25, param1, false, 120, 3, gn.field_u, 16777215, param0);
           this.b((byte) -51, var9);
-          var7 = new hl(((ki) ((Object) param1)).a((byte) 106));
+          var7 = new ValidationIndicator(((ValidatableWidget) ((Object) param1)).a((byte) 106));
           var8 = -33 / ((param3 + 88) / 35);
           this.b((byte) -116, var7);
           var7.a(var9.field_q + (-15 + var9.field_n >> 1), 15, (byte) 118, var9.field_x + (var9.field_m + 3), 15);
@@ -672,7 +672,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
         return false;
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -681,7 +681,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
         RuntimeException var6 = null;
         try {
           if (this.field_O == param0) {
-            ol.b((byte) -120);
+            WeightedLruCache.b((byte) -120);
           } else {
             if (param0 == this.field_E) {
               discarded$1 = this.d(false);

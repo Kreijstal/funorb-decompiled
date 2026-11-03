@@ -45,18 +45,18 @@ final class qj {
           var2_int = rs.field_Cb.field_J + rs.field_Cb.field_q;
           var3 = -6 + param0.field_j - 20;
           var4 = uq.field_m.a(5607, param0.field_c);
-          var12 = vi.a(rs.field_Cb, (byte) 109, var4, new int[]{var3});
+          var12 = TutorialMapGenerator.a(rs.field_Cb, (byte) 109, var4, new int[]{var3});
           var6 = var12.length;
-          ra.a(-106);
+          RandomAccessCacheFile.a(-106);
           if (0 < var6) {
             eh.field_L = new Sprite[var6];
             eh.field_L[0] = new Sprite(var3, var2_int);
-            eh.field_L[0].e();
-            rs.field_Cb.d(var12[0], 0, rs.field_Cb.field_J, 16777215, -1);
+            eh.field_L[0].bindAsRenderTarget();
+            rs.field_Cb.drawString(var12[0], 0, rs.field_Cb.field_J, 16777215, -1);
             for (var7 = 1; var7 < var6; var7++) {
               eh.field_L[var7] = new Sprite(var3, var2_int);
-              eh.field_L[var7].e();
-              rs.field_Cb.d(var12[var7], 0, rs.field_Cb.field_J, 16777215, -1);
+              eh.field_L[var7].bindAsRenderTarget();
+              rs.field_Cb.drawString(var12[var7], 0, rs.field_Cb.field_J, 16777215, -1);
             }
           } else {
             eh.field_L = null;
@@ -72,7 +72,7 @@ final class qj {
             for (var8 = 0; var7Lifetime1 > var8; var8++) {
               var9 = param0.field_f[var8];
               var4Lifetime1 = uq.field_m.a(5607, var9.field_b);
-              var13 = vi.a(rs.field_Cb, (byte) 121, var4Lifetime1, new int[]{var3});
+              var13 = TutorialMapGenerator.a(rs.field_Cb, (byte) 121, var4Lifetime1, new int[]{var3});
               var6Lifetime1 = var13.length;
               array$0 = new Sprite[var6Lifetime1];
               oi.field_i[var8] = array$0;
@@ -80,10 +80,10 @@ final class qj {
               sp.field_m[var8] = array$1;
               for (var10 = 0; var10 < var6Lifetime1; var10++) {
                 oi.field_i[var8][var10] = new Sprite(var3, var2_int);
-                oi.field_i[var8][var10].e();
-                rs.field_Cb.d(var13[var10], 0, rs.field_Cb.field_J, 16777215, -1);
-                sp.field_m[var8][var10] = oi.field_i[var8][var10].g();
-                sp.field_m[var8][var10].e();
+                oi.field_i[var8][var10].bindAsRenderTarget();
+                rs.field_Cb.drawString(var13[var10], 0, rs.field_Cb.field_J, 16777215, -1);
+                sp.field_m[var8][var10] = oi.field_i[var8][var10].copy();
+                sp.field_m[var8][var10].bindAsRenderTarget();
                 gf.b(1, 1, 0, 0, var3, var2_int);
               }
             }
@@ -187,11 +187,11 @@ final class qj {
         cr.field_b = param1;
     }
 
-    final static qa a(byte param0, GameState param1, PacketBuffer param2) {
+    final static PlacementOrder a(byte param0, GameState param1, PacketBuffer param2) {
         Star var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        qa stackIn_3_0 = null;
+        PlacementOrder stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -202,9 +202,9 @@ final class qj {
           if (param0 >= -63) {
             qj.a((byte) 55);
           }
-          var3 = mg.a(param1, param2, 20);
-          var4 = param2.f(-20976);
-          stackIn_3_0 = new qa(var3, var4);
+          var3 = FleetMove.a(param1, param2, 20);
+          var4 = param2.readUnsignedShort(-20976);
+          stackIn_3_0 = new PlacementOrder(var3, var4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

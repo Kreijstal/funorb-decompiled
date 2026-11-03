@@ -29,7 +29,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         return var1;
     }
 
-    final static hc[] a(int param0, sl param1) {
+    final static hc[] a(int param0, CipherPacketBuffer param1) {
         int var5 = 0;
         hc[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -90,7 +90,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (param0 >= -90) {
           return false;
         }
-        return ~np.field_a.field_fc == ~ec.field_p ? true : false;
+        return ~np.field_a.field_fc == ~UsernameAvailabilityValidator.field_p ? true : false;
     }
 
     public static void a(int param0) {
@@ -101,8 +101,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
           field_f = null;
           return;
         }
-        sl var2 = (sl) null;
-        SecondaryNodeDequeIterator.a(-22, (sl) null);
+        CipherPacketBuffer var2 = (CipherPacketBuffer) null;
+        SecondaryNodeDequeIterator.a(-22, (CipherPacketBuffer) null);
         field_d = null;
         field_h = null;
         field_g = null;
@@ -113,7 +113,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (this.field_c == null) {
           throw new IllegalStateException();
         }
-        this.field_c.a(16);
+        this.field_c.unlinkSecondary(16);
         this.field_c = null;
     }
 

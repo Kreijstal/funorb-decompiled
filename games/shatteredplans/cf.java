@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf extends WidgetContainer implements bp {
+final class cf extends WidgetContainer implements ButtonListener {
     static String field_M;
     private ns field_K;
     static int field_D;
@@ -11,10 +11,10 @@ final class cf extends WidgetContainer implements bp {
     private int[] field_N;
     static int[] field_H;
     private int field_G;
-    private kg[] field_E;
+    private FocusableWidget[] field_E;
     static String field_I;
 
-    final static hh a(bc param0, int param1, bc param2, int param3, int param4) {
+    final static hh a(Archive param0, int param1, Archive param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         hh stackIn_5_0 = null;
@@ -31,7 +31,7 @@ final class cf extends WidgetContainer implements bp {
             return (hh) (stackIn_2_0);
           }
           if (param1 == 1) {
-            stackIn_7_0 = uc.a(param0.a(param3, -1, param4), 0);
+            stackIn_7_0 = uc.a(param0.getFile(param3, -1, param4), 0);
             return stackIn_7_0;
           }
           stackIn_5_0 = (hh) null;
@@ -71,17 +71,17 @@ final class cf extends WidgetContainer implements bp {
             field_D = -63;
           }
           if (je.field_d != 1) {
-            if (rf.field_n != 1) {
+            if (AllianceExpiredEvent.field_n != 1) {
               if (null != il.field_bb &&
                 uq.field_i >= 5) {
-                ca.field_h = null;
+                PlayerEliminatedEvent.field_h = null;
               } else {
-                ca.field_h = vn.field_s;
-                if (null != ca.field_h) {
-                  ca.field_h.d(-ca.field_h.field_l + pd.field_k, -ca.field_h.field_h + bb.field_b, -30872);
+                PlayerEliminatedEvent.field_h = BattleSnapshot.field_s;
+                if (null != PlayerEliminatedEvent.field_h) {
+                  PlayerEliminatedEvent.field_h.d(-PlayerEliminatedEvent.field_h.field_l + pd.field_k, -PlayerEliminatedEvent.field_h.field_h + bb.field_b, -30872);
                 }
               }
-              vn.field_s = null;
+              BattleSnapshot.field_s = null;
               il.field_bb = null;
             } else {
               uq.field_i = uq.field_i + 1;
@@ -89,7 +89,7 @@ final class cf extends WidgetContainer implements bp {
                 var2_int = (ba.field_c - bb.field_b) * (ba.field_c - bb.field_b) + (-pd.field_k + ck.field_e) * (-pd.field_k + ck.field_e);
                 if (5 < var2_int &&
                   uq.field_i > 5) {
-                  il.field_bb = vn.field_s;
+                  il.field_bb = BattleSnapshot.field_s;
                 }
               }
               if (il.field_bb != null) {
@@ -97,10 +97,10 @@ final class cf extends WidgetContainer implements bp {
               }
             }
           } else {
-            ba.field_c = td.field_P;
-            ck.field_e = nh.field_p;
+            ba.field_c = SliderWidget.field_P;
+            ck.field_e = PointsVictoryChecker.field_p;
             uq.field_i = 0;
-            vn.field_s = rr.a(param0, td.field_P, nh.field_p, param1 - 37);
+            BattleSnapshot.field_s = rr.a(param0, SliderWidget.field_P, PointsVictoryChecker.field_p, param1 - 37);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -132,15 +132,15 @@ final class cf extends WidgetContainer implements bp {
         int stackIn_12_9;
         int stackIn_12_10;
         boolean stackIn_14_11 = false;
-        mf.d(58);
+        EmailValidator.d(58);
         if (np.field_a != null) {
-          stackIn_6_0 = (tf.a(true, np.field_a.field_Lb)) ? 1 : 0;
+          stackIn_6_0 = (CheckboxPainter.a(true, np.field_a.field_Lb)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
         var2 = stackIn_6_0;
         stackIn_8_0 = 14;
-        stackIn_9_1 = (l.field_f <= 50) ? false : true;
+        stackIn_9_1 = (GalaxyMap.field_f <= 50) ? false : true;
         stackIn_12_2 = param0 ^ 16777213;
         stackIn_12_3 = param1;
         stackIn_12_4 = 13;
@@ -150,35 +150,35 @@ final class cf extends WidgetContainer implements bp {
         stackIn_12_8 = true;
         stackIn_12_9 = var2;
         stackIn_12_10 = 11;
-        stackIn_14_11 = (v.field_b) || (kc.field_d);
-        hg.a(stackIn_8_0, stackIn_9_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9 != 0, stackIn_12_10, stackIn_14_11);
+        stackIn_14_11 = (v.field_b) || (MusicEnvelope.field_d);
+        IsolationistAi.a(stackIn_8_0, stackIn_9_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9 != 0, stackIn_12_10, stackIn_14_11);
         if (sm.field_e &&
           cl.field_n % 50 == 0) {
           js.field_f.h(58, 255);
         }
-        if (ac.field_u) {
+        if (DefendTask.field_u) {
           js.field_f.h(58, 255);
-          ac.field_u = false;
+          DefendTask.field_u = false;
         }
         if (param0 != 2) {
           field_F = (Sprite) null;
         }
-        if (s.field_d) {
+        if (GzipInflater.field_d) {
           js.field_f.h(10, param0 + 253);
-          s.field_d = false;
+          GzipInflater.field_d = false;
         }
         if (uc.field_B) {
-          uc.a(320, mp.field_b.field_K, mp.field_b.field_q + mp.field_b.field_K, 240, 8, nd.field_i, true, mr.field_i, (byte) -87, 2, mr.field_i, mp.field_b, false, 8, 1);
+          uc.a(320, mp.field_b.field_K, mp.field_b.field_q + mp.field_b.field_K, 240, 8, nd.field_i, true, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, mp.field_b, false, 8, 1);
           uc.field_B = false;
         }
     }
 
-    final kg a(ko param0, int param1, String param2) {
-        kg var4 = null;
+    final FocusableWidget a(WidgetListener param0, int param1, String param2) {
+        FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        kg stackIn_2_0 = null;
-        kg stackIn_4_0 = null;
+        FocusableWidget stackIn_2_0 = null;
+        FocusableWidget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -186,12 +186,12 @@ final class cf extends WidgetContainer implements bp {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new kg(param2, param0);
-          var4.field_p = (iq) ((Object) new qp());
+          var4 = new FocusableWidget(param2, param0);
+          var4.field_p = (WidgetPainter) ((Object) new qp());
           var5 = -2 + this.field_n;
           this.a(0, this.field_n + 34, (byte) 127, 0, this.field_x);
           if (param1 <= 119) {
-            stackIn_2_0 = (kg) null;
+            stackIn_2_0 = (FocusableWidget) null;
             return stackIn_2_0;
           }
           var4.a(var5, 30, (byte) 103, 7, -14 + this.field_x);
@@ -229,22 +229,22 @@ final class cf extends WidgetContainer implements bp {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        gs.a(param0, param3, param2, -77, cr.field_c, rc.field_l, tg.field_a);
+        NanoFrameTimer.a(param0, param3, param2, -77, cr.field_c, MusicVoiceMixer.field_l, tg.field_a);
         if (param1 != 8) {
-          bc var5 = (bc) null;
-          cf.a((bc) null, -64, (bc) null, 13, 77);
+          Archive var5 = (Archive) null;
+          cf.a((Archive) null, -64, (Archive) null, 13, 77);
         }
     }
 
     cf(ns param0, nq param1, String param2) {
-        super(0, 0, 288, 0, (iq) null);
+        super(0, 0, 288, 0, (WidgetPainter) null);
         int var4_int = 0;
         this.field_G = 0;
         try {
           this.field_J = param1;
           this.field_K = param0;
           this.field_L = param2;
-          var4_int = this.field_L != null ? this.field_J.c(this.field_L, 260, this.field_J.field_J) : 0;
+          var4_int = this.field_L != null ? this.field_J.textHeight(this.field_L, 260, this.field_J.field_J) : 0;
           this.a(0, 22 + var4_int, (byte) 121, 0, 288);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "cf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -256,7 +256,7 @@ final class cf extends WidgetContainer implements bp {
         try {
           var4_int = this.field_G;
           this.b(1 + var4_int, true);
-          this.field_E[var4_int] = this.a((ko) (this), 122, param0);
+          this.field_E[var4_int] = this.a((WidgetListener) (this), 122, param0);
           if (param1 < 99) {
             this.b(105, true);
           }
@@ -274,7 +274,7 @@ final class cf extends WidgetContainer implements bp {
         }
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -321,8 +321,8 @@ final class cf extends WidgetContainer implements bp {
         if (param0 <= this.field_G) {
           return;
         }
-        kg[] var7 = new kg[param0];
-        kg[] var3 = var7;
+        FocusableWidget[] var7 = new FocusableWidget[param0];
+        FocusableWidget[] var3 = var7;
         int[] var4 = new int[param0];
         if (!param1) {
           this.field_K = (ns) null;

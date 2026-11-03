@@ -28,7 +28,7 @@ final class uq extends IntrusiveNode {
         throw new Error();
     }
 
-    final static boolean a(bc param0, int param1) {
+    final static boolean a(Archive param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -37,7 +37,7 @@ final class uq extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = param0.a(-1);
+            stackIn_4_0 = param0.preloadAll(-1);
             return stackIn_4_0;
           }
           return false;
@@ -55,7 +55,7 @@ final class uq extends IntrusiveNode {
         }
     }
 
-    final static GameState a(int param0, int param1, int param2, String[] param3, vr param4) {
+    final static GameState a(int param0, int param1, int param2, String[] param3, GameRules param4) {
         GameState var5 = null;
         RuntimeException var5_ref = null;
         GameState stackIn_3_0 = null;

@@ -110,7 +110,7 @@ final class kh extends qr {
           this.field_Cb = new qr(0L, (qr) null);
           this.a(4, this.field_Cb);
           if (param11 != null) {
-            this.field_Ab = new qr(0L, param8, o.field_a);
+            this.field_Ab = new qr(0L, param8, WidgetTheme.field_a);
             this.field_Ab.field_y = 1;
             this.field_Ab.field_x = 11184810;
             this.field_Cb.a(4, this.field_Ab);
@@ -122,7 +122,7 @@ final class kh extends qr {
             this.field_Bb.field_x = 16764006;
             this.field_Cb.a(4, this.field_Bb);
             this.field_Bb.field_u = "|";
-            if (!(5 > jd.field_i) ||
+            if (!(5 > CellVertex.field_i) ||
               !(bs.field_b < 2)) {
               regionExit1: {
                 stackIn_6_0 = this;
@@ -130,7 +130,7 @@ final class kh extends qr {
                 stackIn_6_2 = null;
                 stackIn_6_3 = 0L;
                 stackIn_6_4 = (rs) (param9);
-                if (jd.field_i < 7) {
+                if (CellVertex.field_i < 7) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
                   if (bs.field_b < 2) {
@@ -144,7 +144,7 @@ final class kh extends qr {
                 stackIn_8_0Lifetime1 = this;
                 stackIn_8_1Lifetime1 = null;
                 stackIn_8_2Lifetime1 = null;
-                stackIn_8_5 = vl.field_n;
+                stackIn_8_5 = SolMapGenerator.field_n;
               }
               this.field_zb = new rs(stackIn_6_3, stackIn_6_4, stackIn_8_5);
               this.field_Cb.a(4, this.field_zb);
@@ -159,8 +159,8 @@ final class kh extends qr {
             this.field_Cb.a(4, var28[2]);
             this.field_Hb = new qr[cb.field_j];
             for (var16 = 0; var16 < cb.field_j; var16++) {
-              if (null != eb.field_f[var16]) {
-                this.field_Hb[var16] = new qr(0L, param10, eb.field_f[var16]);
+              if (null != FullscreenFocusCanvas.field_f[var16]) {
+                this.field_Hb[var16] = new qr(0L, param10, FullscreenFocusCanvas.field_f[var16]);
                 this.field_Hb[var16].field_y = 0;
                 stackIn_14_0 = this.field_Hb[var16];
                 stackIn_15_1 = (param11 != null);
@@ -173,15 +173,15 @@ final class kh extends qr {
               discarded$0 = this.field_xb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_nb.c(md.field_D);
+            var17 = param6.field_nb.stringWidth(md.field_D);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_nb.c(tq.field_k);
+            var17Lifetime2 = param6.field_nb.stringWidth(tq.field_k);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_nb.c(s.field_a);
+            var17Lifetime3 = param6.field_nb.stringWidth(GzipInflater.field_a);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -220,7 +220,7 @@ final class kh extends qr {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(param6, var28[2], s.field_a, var16Lifetime2, 114, var18Lifetime5);
+            var18Lifetime5 = this.a(param6, var28[2], GzipInflater.field_a, var16Lifetime2, 114, var18Lifetime5);
             var18Lifetime5 = this.a((byte) -125, var28[2], this.field_Hb[13], var18Lifetime5, var16Lifetime2);
             var18Lifetime5 = this.a((byte) -126, var28[2], this.field_Hb[21], var18Lifetime5, var16Lifetime2);
             var18Lifetime5 = this.a((byte) -123, var28[2], this.field_Hb[11], var18Lifetime5, var16Lifetime2);
@@ -257,7 +257,7 @@ final class kh extends qr {
             var28[2].a(var16Lifetime2, var17Lifetime5, (byte) 73, var21, 39 + var16Lifetime2 * 2);
             var22 = var21;
             this.field_Cb.a(13 + var19 + 13, var17Lifetime5 + var22 + 10, (byte) 51, 24, 0);
-            this.field_Cb.field_F = cs.a(16, 3, this.field_Cb.field_mb, 11579568, 8421504, 2105376);
+            this.field_Cb.field_F = Wormhole.a(16, 3, this.field_Cb.field_mb, 11579568, 8421504, 2105376);
             var23 = 13 + (13 + var19);
             var24 = var17Lifetime5 + (24 + var22 + 10);
             var25 = uh.a(-47, param0, var23, param2);
@@ -271,11 +271,11 @@ final class kh extends qr {
           this.field_Cb.a(4, this.field_Ab);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Ab.field_nb.a(this.field_Ab.field_z, var15_int);
+          var17Lifetime1 = this.field_Ab.field_nb.lineCount(this.field_Ab.field_z, var15_int);
           this.field_Ab.a(var15_int, cr.field_c * var17Lifetime1, (byte) 60, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + cr.field_c * var17Lifetime1;
           this.field_Cb.a(var15_int + 26, var16Lifetime1 + 10, (byte) 77, 24, 0);
-          this.field_Cb.field_F = cs.a(16, 3, this.field_Cb.field_mb, 11579568, 8421504, 2105376);
+          this.field_Cb.field_F = Wormhole.a(16, 3, this.field_Cb.field_mb, 11579568, 8421504, 2105376);
           var18Lifetime1 = 13 + (13 + var15_int);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = uh.a(-107, param0, var18Lifetime1, param2);
@@ -410,7 +410,7 @@ final class kh extends qr {
         RuntimeException decompiledCaughtException = null;
         try {
           param3 += 8;
-          var6_int = param2.field_nb.c(param2.field_z, param4 - 2 * param2.field_kb, param2.field_Y);
+          var6_int = param2.field_nb.textHeight(param2.field_z, param4 - 2 * param2.field_kb, param2.field_Y);
           var7 = -13 % ((param0 + 85) / 38);
           param2.a(param4, var6_int, (byte) 91, param3, 0);
           param3 = param3 + (0 + var6_int);
@@ -469,7 +469,7 @@ final class kh extends qr {
         this.a(param0, -20429);
         if (null != this.field_Bb) {
           this.field_Bb.field_z = this.field_xb.toString();
-          this.field_Bb.field_hb = (this.field_K - this.field_Bb.field_nb.c(this.field_Bb.field_z)) / 2;
+          this.field_Bb.field_hb = (this.field_K - this.field_Bb.field_nb.stringWidth(this.field_Bb.field_z)) / 2;
           if (null != this.field_zb &&
             this.field_zb.field_rb != 0) {
             stackIn_6_0 = this.field_zb;

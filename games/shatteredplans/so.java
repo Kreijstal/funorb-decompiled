@@ -82,11 +82,11 @@ final class so extends qe {
 
     final static void a(int param0, boolean param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11, int param12, boolean param13) {
         dn.field_k = null;
-        wf.a(-15887);
-        param13 = ak.a(true, param7, param5, param13, param8, param10, param9);
+        AiTask.a(-15887);
+        param13 = DiskArchiveRequest.a(true, param7, param5, param13, param8, param10, param9);
         fb.a(param13, param11, param10, param2, param12, param6, param4, param3, param1, param0 + param0);
         IntrusiveDeque.a(param12, param11, -1043);
-        cc.a(-115, param7, param12, param13);
+        PasswordValidator.a(-115, param7, param12, param13);
     }
 
     public static void d(int param0) {
@@ -120,7 +120,7 @@ final class so extends qe {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param0);
-          var3_int = ak.a(-116, var10, param1);
+          var3_int = DiskArchiveRequest.a(-116, var10, param1);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
@@ -155,7 +155,7 @@ final class so extends qe {
         int var4 = 0;
         try {
           this.field_h = param0;
-          this.field_i = rp.a(96, pd.field_m, 0);
+          this.field_i = DialWidget.a(96, pd.field_m, 0);
           var2_double = Math.random() * 3.141592653589793 * 2.0;
           var4 = 16384 + vc.a((byte) -39, 16384);
           this.field_p = (int)((double)var4 * Math.sin(var2_double));

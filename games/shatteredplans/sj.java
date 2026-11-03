@@ -15,14 +15,14 @@ final class sj {
           if (null == param2.field_M) {
             param2.field_M = new IntrusiveDeque();
           }
-          if (eg.field_q == null) {
-            eg.field_q = new in(64);
+          if (BattleEvent.field_q == null) {
+            BattleEvent.field_q = new SecondaryNodeHashTable(64);
           }
-          if (sl.field_m == null) {
-            sl.field_m = new in(64);
+          if (CipherPacketBuffer.field_m == null) {
+            CipherPacketBuffer.field_m = new SecondaryNodeHashTable(64);
           }
           vd.field_j = param1.field_M;
-          fp.field_b = param2.field_M;
+          FrameTimer.field_b = param2.field_M;
           if (param0 <= 42) {
             field_a = (int[]) null;
           }
@@ -94,7 +94,7 @@ final class sj {
                 stackIn_18_0 = -1;
                 stackIn_18_1 = ~((Territory) ((Object) var2)).field_u[var8];
                 if (stackIn_18_0 == stackIn_18_1) {
-                  var9 = re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(gm.field_k[var8], 16), h.field_x[var8]});
+                  var9 = re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(gm.field_k[var8], 16), MusicCrossfadeStream.field_x[var8]});
                   var6_ref = var9;
                   if (var5_intLifetime2 != 0) {
                     if (var5_intLifetime2 == 1) {

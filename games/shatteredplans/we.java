@@ -68,7 +68,7 @@ final class we {
           var1 = im.field_c;
           synchronized (var1) {
             of.field_e = of.field_e + 1;
-            tc.field_B = fe.field_J;
+            DialogRoot.field_B = fe.field_J;
             if (param0 != -59) {
               we.a(49, -95, -50, 61, 66, -88, -81, -110, -20);
             }
@@ -79,7 +79,7 @@ final class we {
               qn.field_c = hb.field_e;
             } else {
               while (hb.field_e != qn.field_c) {
-                var2 = m.field_x[hb.field_e];
+                var2 = StrongCacheEntry.field_x[hb.field_e];
                 hb.field_e = 127 & 1 + hb.field_e;
                 if (var2 < 0) {
                   di.field_p[~var2] = false;
@@ -218,7 +218,7 @@ final class we {
             } else {
               stackIn_29_5 = param4;
             }
-            ar.$cfr$intArgs$a$c3a94e747ff6(stackIn_28_0, stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_29_5);
+            ArchiveNetworkClient.$cfr$intArgs$a$c3a94e747ff6(stackIn_28_0, stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4, stackIn_29_5);
             var19 = var21;
             var20 = var22;
             var9_int++;
@@ -234,7 +234,7 @@ final class we {
           } else {
             stackIn_33_5 = param7;
           }
-          ar.$cfr$intArgs$a$c3a94e747ff6(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5);
+          ArchiveNetworkClient.$cfr$intArgs$a$c3a94e747ff6(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

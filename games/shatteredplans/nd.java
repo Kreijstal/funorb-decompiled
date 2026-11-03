@@ -31,7 +31,7 @@ final class nd {
             return null;
           }
           if (Territory.field_t.charAt(0) != 91) {
-            tp.b((byte) 34);
+            SliderPainter.b((byte) 34);
             continue;
           }
           break;
@@ -41,7 +41,7 @@ final class nd {
         var1 = var8;
         Territory.field_t.substring(1, Territory.field_t.indexOf(']'));
         var3 = new StringBuilder();
-        tp.b((byte) 56);
+        SliderPainter.b((byte) 56);
         while (null != Territory.field_t) {
           if (Territory.field_t.charAt(0) == 91) {
             var8.field_c = var3.toString();
@@ -60,15 +60,15 @@ final class nd {
               var8 = var1;
               if (var5.equalsIgnoreCase("topright")) {
                 var8 = var1;
-                w.a((String[]) (var6), 1, var8, -75);
+                Dialog.a((String[]) (var6), 1, var8, -75);
               } else {
                 if (var5.equalsIgnoreCase("bottomleft")) {
                   var8 = var1;
-                  w.a((String[]) (var6), 2, var8, -92);
+                  Dialog.a((String[]) (var6), 2, var8, -92);
                 } else {
                   if (var5.equalsIgnoreCase("bottomright")) {
                     var8 = var1;
-                    w.a((String[]) (var6), 3, var8, -40);
+                    Dialog.a((String[]) (var6), 3, var8, -40);
                   } else {
                     if (!var5.equalsIgnoreCase("tag")) {
                       var8 = var1;
@@ -106,13 +106,13 @@ final class nd {
                 }
               }
             } else {
-              w.a((String[]) (var6), 0, var8, -117);
+              Dialog.a((String[]) (var6), 0, var8, -117);
             }
           } else {
             discarded$0 = var3.append(Territory.field_t);
             discarded$1 = var3.append(' ');
           }
-          tp.b((byte) -118);
+          SliderPainter.b((byte) -118);
         }
         var8.field_c = var3.toString();
         return var8;

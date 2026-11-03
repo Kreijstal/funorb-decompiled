@@ -19,12 +19,12 @@ final class t {
         int stackIn_59_0 = 0;
         dm stackIn_62_0;
         boolean stackIn_62_1;
-        jd stackIn_62_2;
-        jd stackIn_62_3;
+        CellVertex stackIn_62_2;
+        CellVertex stackIn_62_3;
         Star stackIn_62_4;
         Star stackIn_62_5;
-        jd stackIn_63_2;
-        jd stackIn_63_3;
+        CellVertex stackIn_63_2;
+        CellVertex stackIn_63_3;
         Star stackIn_63_6;
         Star var5;
         IntrusiveDeque var6;
@@ -76,13 +76,13 @@ final class t {
           for (var10_int = 0; var9_ref_ln__.length > var10_int; var10_int++) {
             var23 = var9_ref_ln__[var10_int];
             if (var5 != var23) {
-              var6.a((byte) -113, new nc(var5, var23));
+              var6.addLast((byte) -113, new nc(var5, var23));
             }
           }
-          var9 = var6.e(param1 ^ 1);
+          var9 = var6.size(param1 ^ 1);
           var24 = new nc[var9];
           var10 = var24;
-          var6.a((byte) -127, var10);
+          var6.copyToArray((byte) -127, var10);
           for (var11 = 0; var9 > var11; var11++) {
             var12_int = var11 + 1;
             for (var13_int = var12_int; var13_int < var9; var13_int++) {
@@ -90,20 +90,20 @@ final class t {
             }
           }
           ad.a(var6, param1 ^ -24926);
-          var9Lifetime1 = var6.e(0);
+          var9Lifetime1 = var6.size(0);
           var25 = new IntrusiveDeque();
-          var12 = (nc) (var6.d(0));
+          var12 = (nc) (var6.startForward(0));
           while (null != var12) {
             if (((nc) (var12)).field_u != null) {
-              var25.a((byte) -113, new fi(var5, ((nc) (var12)).field_u));
+              var25.addLast((byte) -113, new StarLink(var5, ((nc) (var12)).field_u));
             }
-            var12 = (nc) (var6.a((byte) -71));
+            var12 = (nc) (var6.nextForward((byte) -71));
           }
-          if (!var25.g(-117)) {
-            var13_intLifetime1 = var25.e(0);
-            var5.field_v = new fi[var13_intLifetime1];
-            var25.a((byte) -105, var5.field_v);
-            ra.a(false, var13_intLifetime1, var5.field_v);
+          if (!var25.isEmpty(-117)) {
+            var13_intLifetime1 = var25.size(0);
+            var5.field_v = new StarLink[var13_intLifetime1];
+            var25.copyToArray((byte) -105, var5.field_v);
+            RandomAccessCacheFile.a(false, var13_intLifetime1, var5.field_v);
           }
           if (!param0) {
             var7 = var5.field_A + (int)(Math.cos(-0.2617993877991494) * 200.0);
@@ -122,14 +122,14 @@ final class t {
               var7 = var15_int;
               var12Lifetime1 = var17_ref_nc;
               var8 = var16_int;
-              var6.a((byte) -113, var17_ref_nc);
+              var6.addLast((byte) -113, var17_ref_nc);
             }
             ((nc) (var12Lifetime1)).field_k = (nc) (var13);
             ((nc) (var13)).field_r = (nc) (var12Lifetime1);
-            var14Lifetime1 = var6.e(param1 - 1);
+            var14Lifetime1 = var6.size(param1 - 1);
             var26 = new nc[var14Lifetime1];
             var10Lifetime1 = var26;
-            var6.a((byte) 95, var10Lifetime1);
+            var6.copyToArray((byte) 95, var10Lifetime1);
             for (var15_intLifetime1 = 0; var9Lifetime1 > var15_intLifetime1; var15_intLifetime1++) {
               var21 = var9Lifetime1;
               var16_intLifetime1 = var21;
@@ -139,9 +139,9 @@ final class t {
               }
             }
             ad.a(var6, -24925);
-            hl.a(var6, true);
+            ValidationIndicator.a(var6, true);
             var15 = new dm();
-            var16_ref = (nc) (var6.d(param1 ^ 1));
+            var16_ref = (nc) (var6.startForward(param1 ^ 1));
             while (var16_ref != null) {
               if (var16_ref.field_k != null &&
                 var16_ref.field_k.field_q != null &&
@@ -184,11 +184,11 @@ final class t {
                 stackIn_63_3 = null;
                 stackIn_63_6 = var16_ref.field_k.field_u;
               }
-              ((dm) (Object) stackIn_62_0).a(stackIn_62_1, new jd(stackIn_62_4, stackIn_62_5, stackIn_63_6, (int)(var16_ref.field_h + var16_ref.field_i * var16_ref.field_o), (int)(var16_ref.field_l + var16_ref.field_o * var16_ref.field_s), var17));
-              var16_ref = (nc) (var6.a((byte) -71));
+              ((dm) (Object) stackIn_62_0).a(stackIn_62_1, new CellVertex(stackIn_62_4, stackIn_62_5, stackIn_63_6, (int)(var16_ref.field_h + var16_ref.field_i * var16_ref.field_o), (int)(var16_ref.field_l + var16_ref.field_o * var16_ref.field_s), var17));
+              var16_ref = (nc) (var6.nextForward((byte) -71));
             }
             var9Lifetime1 = var15.field_g;
-            var5.field_r = new jd[var9Lifetime1];
+            var5.field_r = new CellVertex[var9Lifetime1];
             var15.a(var5.field_r, 0);
             var17Lifetime1 = var5.field_r[var9Lifetime1 - 1].field_c;
             var18 = var5.field_r[var9Lifetime1 - 1].field_f;

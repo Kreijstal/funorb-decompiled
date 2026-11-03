@@ -25,11 +25,11 @@ abstract class RasterBuffer {
           return;
         }
         try {
-          qg.field_p[param6] = param3;
-          qg.field_r[param6] = param2;
-          qg.field_m[param6] = param5;
-          qg.field_l[param6] = param0;
-          qg.field_t[param6] = param1;
+          TutorialVictoryChecker.field_p[param6] = param3;
+          TutorialVictoryChecker.field_r[param6] = param2;
+          TutorialVictoryChecker.field_m[param6] = param5;
+          TutorialVictoryChecker.field_l[param6] = param0;
+          TutorialVictoryChecker.field_t[param6] = param1;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "qd.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }

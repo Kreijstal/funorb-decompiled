@@ -42,12 +42,12 @@ final class ph implements jk {
           if (null == cb.field_h) {
             return;
           }
-          var1 = (hd) (cb.field_h.d(param0));
+          var1 = (hd) (cb.field_h.startForward(param0));
           while (var1 != null) {
             if (0 > var1.field_h) {
-              var1.b((byte) -70);
+              var1.unlink((byte) -70);
             }
-            var1 = (hd) (cb.field_h.a((byte) -71));
+            var1 = (hd) (cb.field_h.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -57,9 +57,9 @@ final class ph implements jk {
         }
     }
 
-    final static void a(bc param0, int param1) {
+    final static void a(Archive param0, int param1) {
         try {
-          tc.a((byte) 23, param0.a(true, "tutorial.txt", ""));
+          DialogRoot.a((byte) 23, param0.getFileByName(true, "tutorial.txt", ""));
           int var2_int = -90 / ((param1 + 9) / 32);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ph.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

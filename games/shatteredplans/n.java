@@ -51,7 +51,7 @@ final class n extends IntrusiveNode {
         RuntimeException var2_ref = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var6 = mf.field_q;
+          var6 = EmailValidator.field_q;
           var2 = var6;
           if (param1 != -21502) {
             stackIn_3_0 = (sq) null;

@@ -11,7 +11,7 @@ final class jm extends kp {
         try {
           fe.f(-1);
           le.field_e.k(104);
-          no.field_e = new ri(qh.field_B, (String) null, el.field_b, param3, param1);
+          no.field_e = new ri(qh.field_B, (String) null, TertiaryNodeList.field_b, param3, param1);
           if (param2 > -50) {
             field_s = (String) null;
           }
@@ -50,7 +50,7 @@ final class jm extends kp {
         try {
           fe.f(-1);
           le.field_e.k(104);
-          no.field_e = new ri(qh.field_B, (String) null, el.field_b, param3, param1);
+          no.field_e = new ri(qh.field_B, (String) null, TertiaryNodeList.field_b, param3, param1);
           if (param2 > -50) {
             field_s = (String) null;
           }

@@ -5,10 +5,10 @@ final class js {
     static ld field_c;
     static int field_d;
     static int field_g;
-    static gh field_i;
+    static MusicTrack field_i;
     static String field_h;
     static BufferedSocket field_a;
-    static sl field_f;
+    static CipherPacketBuffer field_f;
     static int field_j;
     static sq[] field_b;
     static int field_e;
@@ -18,28 +18,28 @@ final class js {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         gm var2Lifetime1;
         try {
-          tf.field_p = param0;
+          CheckboxPainter.field_p = param0;
           if (param1 != 197126152) {
             js.b((byte) -92);
           }
-          var2 = (gm) (eo.field_ab.d(0));
+          var2 = (gm) (eo.field_ab.startForward(0));
           while (var2 != null) {
-            if (var2.field_n.c(param1 - 197124104)) {
-              var2.field_p.e(var2.field_h * tf.field_p + 128 >> 8);
+            if (var2.field_n.isLinked(param1 - 197124104)) {
+              var2.field_p.setVolume(var2.field_h * CheckboxPainter.field_p + 128 >> 8);
             } else {
-              var2.b((byte) -75);
+              var2.unlink((byte) -75);
             }
-            var2 = (gm) (eo.field_ab.a((byte) -71));
+            var2 = (gm) (eo.field_ab.nextForward((byte) -71));
           }
           if (nc.field_v != null) {
-            var2Lifetime1 = (gm) (nc.field_v.d(0));
+            var2Lifetime1 = (gm) (nc.field_v.startForward(0));
             while (var2Lifetime1 != null) {
-              if (!var2Lifetime1.field_n.c(param1 - 197124104)) {
-                var2Lifetime1.b((byte) -69);
+              if (!var2Lifetime1.field_n.isLinked(param1 - 197124104)) {
+                var2Lifetime1.unlink((byte) -69);
               } else {
-                var2Lifetime1.field_p.e(128 + tf.field_p * var2Lifetime1.field_h >> 8);
+                var2Lifetime1.field_p.setVolume(128 + CheckboxPainter.field_p * var2Lifetime1.field_h >> 8);
               }
-              var2Lifetime1 = (gm) (nc.field_v.a((byte) -71));
+              var2Lifetime1 = (gm) (nc.field_v.nextForward((byte) -71));
             }
           }
         } catch (RuntimeException runtimeException) {
@@ -260,7 +260,7 @@ final class js {
               var9++;
             }
           }
-          stackIn_6_0 = fk.field_p;
+          stackIn_6_0 = ByteArrayNode.field_p;
           if (-1 == param0) {
             stackIn_7_1 = 1;
           } else {
@@ -387,27 +387,27 @@ final class js {
           be.field_h = oi.field_a;
           kp.field_j = jb.field_d;
           ph.field_g = false;
-          er.field_g = false;
-          pc.field_q = tp.field_b;
-          ol.field_g = hm.field_q;
-          jc.field_r = fe.field_B;
+          WhirlpoolHasher.field_g = false;
+          DerelictMapGenerator.field_q = SliderPainter.field_b;
+          WeightedLruCache.field_g = hm.field_q;
+          ArchiveRequest.field_r = fe.field_B;
           VictoryChecker.field_j = false;
-          td.field_L = false;
-          se.field_k = false;
+          SliderWidget.field_L = false;
+          AchievementProgress.field_k = false;
           if (param0 != -10) {
             js.a((byte) 43);
           }
           tl.field_u = false;
-          ej.field_m = 0;
-          if (null != ol.field_g.field_m) {
-            var5 = ol.field_g.field_m;
+          BufferedCacheFile.field_m = 0;
+          if (null != WeightedLruCache.field_g.field_m) {
+            var5 = WeightedLruCache.field_g.field_m;
             var1 = var5;
             for (var2 = 0; var2 < var5.length; var2++) {
               var3 = var5[var2];
-              kq.b(var3, param0 ^ -15);
+              GameScreen.b(var3, param0 ^ -15);
             }
           }
-          if (ol.field_g.field_h) {
+          if (WeightedLruCache.field_g.field_h) {
             ImageProducerRasterBuffer.field_i = 0;
           }
           return;

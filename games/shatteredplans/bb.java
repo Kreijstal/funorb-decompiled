@@ -7,7 +7,7 @@ final class bb {
     static String field_a;
     static int field_b;
 
-    final static as a(int param0, mg param1) {
+    final static as a(int param0, FleetMove param1) {
         as var2 = null;
         RuntimeException var2_ref = null;
         as stackIn_2_0 = null;
@@ -55,11 +55,11 @@ final class bb {
           if (param0 < 18) {
             bb.a(false, true, (byte) -52, -121);
           }
-          js.field_f.b(-16426, param1);
-          js.field_f.a(param4, (byte) 0);
-          js.field_f.c(param5, (byte) -127);
-          js.field_f.c(param3 ? 1 : 0, (byte) -96);
-          js.field_f.b(js.field_f.position - var7_int, (byte) 118);
+          js.field_f.writeLong(-16426, param1);
+          js.field_f.writeString(param4, (byte) 0);
+          js.field_f.writeByte(param5, (byte) -127);
+          js.field_f.writeByte(param3 ? 1 : 0, (byte) -96);
+          js.field_f.patchLengthByte(js.field_f.position - var7_int, (byte) 118);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "bb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -109,14 +109,14 @@ final class bb {
         int var10Lifetime1;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          qo.a(22353, bc.field_b);
+          qo.a(22353, Archive.field_b);
           if (param2 != -2) {
             field_d = (String) null;
           }
           if (he.field_p != null) {
-            var15 = go.field_I;
+            var15 = TextFieldWidget.field_I;
             var17 = var15;
-            go.field_I.field_mb = 0;
+            TextFieldWidget.field_I.field_mb = 0;
             var17.field_K = 0;
             var5 = aq.field_j;
             aq.field_j.field_mb = 0;
@@ -124,7 +124,7 @@ final class bb {
             var6 = dn.field_f;
             dn.field_f.field_mb = 0;
             var6.field_K = 0;
-            tj.field_f.field_z = le.field_c.toUpperCase();
+            ArchiveSourceManager.field_f.field_z = le.field_c.toUpperCase();
             var7 = (2 + IntrusiveDeque.field_g.field_K) / 2;
             dn.field_f.a(-2 + var7, 40, (byte) 108, IntrusiveDeque.field_g.field_mb - 40, 0);
             aq.field_j.a(-var7 + IntrusiveDeque.field_g.field_K, 40, (byte) 73, IntrusiveDeque.field_g.field_mb - 40, var7);
@@ -158,8 +158,8 @@ final class bb {
               }
             }
             aq.field_j.field_s = true;
-            if (k.field_i) {
-              i.field_g.field_s = false;
+            if (TurnEventLog.field_i) {
+              DialPainter.field_g.field_s = false;
               IntrusiveNode.field_c.field_z = nb.field_c;
               if (var8 == 0) {
                 stackIn_57_0 = cm.field_c;
@@ -170,7 +170,7 @@ final class bb {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = dn.field_f.field_nb.c(var16) + 3 * dn.field_f.field_nb.a('.');
+              var10Lifetime1 = dn.field_f.field_nb.stringWidth(var16) + 3 * dn.field_f.field_nb.charWidth('.');
               dn.field_f.field_kb = (-var10Lifetime1 + dn.field_f.field_K) / 2;
               if (16 == (Star.field_w & 48)) {
                 var9 = var16 + ".";
@@ -200,7 +200,7 @@ final class bb {
               }
               stackIn_28_0.field_z = re.a(stackIn_29_1, 4371, new String[]{aq.field_j.field_z});
               dn.field_f.field_z = wg.field_b;
-              i.field_g.field_s = true;
+              DialPainter.field_g.field_s = true;
               wg.field_d = true;
               if (null != pe.field_D) {
                 wg.field_d = false;
@@ -250,28 +250,28 @@ final class bb {
             }
           }
           stackIn_70_0 = am.field_xb;
-          stackIn_71_1 = (param1) && (!param0) && (!ti.field_e);
+          stackIn_71_1 = (param1) && (!param0) && (!IntrusiveNodeHashTable.field_e);
           ((qr) (Object) stackIn_70_0).a(stackIn_71_1, -20429);
           stackIn_75_0 = IntrusiveDeque.field_g;
-          stackIn_76_1 = (param1) && (!param0) && (!ti.field_e);
+          stackIn_76_1 = (param1) && (!param0) && (!IntrusiveNodeHashTable.field_e);
           ((qr) (Object) stackIn_75_0).a(stackIn_76_1, -20429);
           stackIn_80_0 = MouseInputHandler.field_d;
-          stackIn_81_1 = (param1) && (!param0) && (ti.field_e);
+          stackIn_81_1 = (param1) && (!param0) && (IntrusiveNodeHashTable.field_e);
           ((qr) (Object) stackIn_80_0).a(stackIn_81_1, -20429);
           n.field_h.field_d.f(false);
           if (he.field_p != null) {
-            stackIn_83_0 = ~i.field_g.field_rb;
+            stackIn_83_0 = ~DialPainter.field_g.field_rb;
             if (stackIn_83_0 != -1) {
               je.a((byte) 62, param3);
             }
             if (0 != aq.field_j.field_rb) {
-              if (!k.field_i) {
-                rf.a(param3, 104);
+              if (!TurnEventLog.field_i) {
+                AllianceExpiredEvent.a(param3, 104);
               } else {
                 oq.a(param3, false);
               }
             }
-            sc.a(-109, true, he.field_p, param3);
+            AggressiveAi.a(-109, true, he.field_p, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

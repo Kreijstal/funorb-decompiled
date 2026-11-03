@@ -8,7 +8,7 @@ final class qn {
     static String field_d;
     static int[] field_b;
 
-    final static as a(int param0, mg param1) {
+    final static as a(int param0, FleetMove param1) {
         as var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -43,7 +43,7 @@ final class qn {
           if (!param2) {
             field_c = -118;
           }
-          vp.c(-20677, param1);
+          TertiaryLinkNode.c(-20677, param1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "qn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -63,14 +63,14 @@ final class qn {
           if (cb.field_h == null) {
             return;
           }
-          var1 = (hd) (cb.field_h.d(0));
-          var2 = (int)ra.field_e + 20;
+          var1 = (hd) (cb.field_h.startForward(0));
+          var2 = (int)RandomAccessCacheFile.field_e + 20;
           var3 = 20;
           var4 = 63 % ((param0 + 56) / 39);
           while (var1 != null) {
             if (var1.field_h < 0) {
               var2 = var2 + var1.field_i.field_w;
-              var1 = (hd) (cb.field_h.a((byte) -71));
+              var1 = (hd) (cb.field_h.nextForward((byte) -71));
               continue;
             }
             if (230 > var1.field_h) {
@@ -86,7 +86,7 @@ final class qn {
               }
             }
             var2 = var2 + var1.field_i.field_w;
-            var1 = (hd) (cb.field_h.a((byte) -71));
+            var1 = (hd) (cb.field_h.nextForward((byte) -71));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -103,10 +103,10 @@ final class qn {
           return;
         }
         try {
-          for (var1_int = 0; var1_int < da.field_g; var1_int++) {
+          for (var1_int = 0; var1_int < DebouncedValidator.field_g; var1_int++) {
             wm.field_d[var1_int] = null;
           }
-          da.field_g = 0;
+          DebouncedValidator.field_g = 0;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "qn.C(" + param0 + ')');
         }

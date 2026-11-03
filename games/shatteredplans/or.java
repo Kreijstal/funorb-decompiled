@@ -32,10 +32,10 @@ final class or {
             field_d = (String[]) null;
           }
           if (!param0) {
-            stackIn_6_0 = lq.field_k.c(param1);
+            stackIn_6_0 = lq.field_k.stringWidth(param1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = kc.field_g.c(param1);
+          stackIn_4_0 = MusicEnvelope.field_g.stringWidth(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

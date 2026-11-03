@@ -27,11 +27,11 @@ final class nf {
           if (this.field_c > 0) {
             return 2;
           }
-          if (~this.field_p == ~ec.field_p) {
+          if (~this.field_p == ~UsernameAvailabilityValidator.field_p) {
             return 1;
           }
           if (po.field_b == 2) {
-            if (da.a(-30106, this.field_b)) {
+            if (DebouncedValidator.a(-30106, this.field_b)) {
               return 1;
             }
             if (param0 > 100) {
@@ -44,11 +44,11 @@ final class nf {
           }
           return 23;
         }
-        if (~this.field_p == ~ec.field_p) {
+        if (~this.field_p == ~UsernameAvailabilityValidator.field_p) {
           return 1;
         }
         if (po.field_b == 2) {
-          if (da.a(-30106, this.field_b)) {
+          if (DebouncedValidator.a(-30106, this.field_b)) {
             return 1;
           }
           if (param0 > 100) {
@@ -62,7 +62,7 @@ final class nf {
         return 23;
     }
 
-    final static String a(eg param0, int param1) {
+    final static String a(BattleEvent param0, int param1) {
         int incrementValue$0 = 0;
         String stackIn_11_0 = null;
         String stackIn_14_0 = null;
@@ -75,7 +75,7 @@ final class nf {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        ne var4 = null;
+        BattleContribution var4 = null;
         String var5 = null;
         String[] var6 = null;
         String var7 = null;
@@ -85,7 +85,7 @@ final class nf {
         try {
           var2_int = 0;
           var3 = 0;
-          var4 = (ne) (param0.field_v.d(0));
+          var4 = (BattleContribution) (param0.field_v.startForward(0));
           while (var4 != null) {
             if (ho.field_d == var4.field_h) {
               if (var4.field_r != 0 &&
@@ -94,7 +94,7 @@ final class nf {
               }
               var2_int = var2_int + var4.field_p;
             }
-            var4 = (ne) (param0.field_v.a((byte) -71));
+            var4 = (BattleContribution) (param0.field_v.nextForward((byte) -71));
           }
           if (param1 != 23248) {
             stackIn_11_0 = (String) null;
@@ -115,7 +115,7 @@ final class nf {
             var6 = new String[1 + var3];
             var3 = 1;
             var6[0] = var9;
-            var4 = (ne) (param0.field_v.d(0));
+            var4 = (BattleContribution) (param0.field_v.startForward(0));
             while (var4 != null) {
               if (var4.field_h == ho.field_d &&
                 var4.field_r != 0 &&
@@ -129,7 +129,7 @@ final class nf {
                 var3++;
                 var6[incrementValue$0] = var7;
               }
-              var4 = (ne) (param0.field_v.a((byte) -71));
+              var4 = (BattleContribution) (param0.field_v.nextForward((byte) -71));
             }
             var5 = va.a(-2, var6);
           }
@@ -219,14 +219,14 @@ final class nf {
         int var3 = 0;
         int var3Lifetime1;
         int var3Lifetime2;
-        if (null != tc.field_G) {
-          var3 = tc.field_G.b(param2, (byte) -68);
+        if (null != DialogRoot.field_G) {
+          var3 = DialogRoot.field_G.b(param2, (byte) -68);
           if (var3 != -2) {
             if (var3 != -1) {
-              var4 = tc.field_G.i(-86) ? 1 : 0;
-              bb.a(94, tc.field_G.field_Gb, param1, var4 != 0, tc.field_G.g((byte) -42), var3);
+              var4 = DialogRoot.field_G.i(-86) ? 1 : 0;
+              bb.a(94, DialogRoot.field_G.field_Gb, param1, var4 != 0, DialogRoot.field_G.g((byte) -42), var3);
             }
-            tc.field_G = null;
+            DialogRoot.field_G = null;
             ai.a(3);
           }
           var3Lifetime2 = 107 % ((param0 + 29) / 53);
@@ -238,7 +238,7 @@ final class nf {
     nf(boolean param0) {
         this.field_e = va.field_b;
         if (param0) {
-          this.field_f = mb.field_p;
+          this.field_f = AgeValidator.field_p;
         } else {
           this.field_f = null;
         }
@@ -246,12 +246,12 @@ final class nf {
         this.field_k = BufferedSocket.field_h;
         this.field_c = nj.field_a;
         this.field_h = kr.field_b;
-        this.field_o = mc.field_q;
+        this.field_o = WeightedCacheEntry.field_q;
         this.field_p = sp.field_j;
-        this.field_l = el.field_f;
+        this.field_l = TertiaryNodeList.field_f;
         this.field_g = fm.field_f;
         this.field_n = PacketBuffer.field_k;
-        this.field_d = jc.field_s;
+        this.field_d = ArchiveRequest.field_s;
     }
 
     public static void b(byte param0) {

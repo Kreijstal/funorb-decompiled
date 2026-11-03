@@ -37,14 +37,14 @@ final class mi {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param3) {
-            param1.field_Lb = param2.j(-95);
+            param1.field_Lb = param2.readUnsignedByte(-95);
           }
-          param1.field_Eb = param2.j(-64);
+          param1.field_Eb = param2.readUnsignedByte(-64);
           if (param0 != -89) {
             mi.a((byte) -67);
           }
-          param1.field_nc = param2.j(-123);
-          var4_int = param2.j(-111);
+          param1.field_nc = param2.readUnsignedByte(-123);
+          var4_int = param2.readUnsignedByte(-111);
           stackIn_7_0 = (fb) (param1);
           stackIn_8_1 = (0 != (128 & var4_int));
           stackIn_7_0.field_Qb = stackIn_8_1;
@@ -71,17 +71,17 @@ final class mi {
           var5 = stackIn_27_0;
           stackIn_30_0 = ((2 & var4_int) == 0) ? 0 : 1;
           var6 = stackIn_30_0;
-          param2.a(param1.field_dc.length, 0, 17469032, param1.field_dc);
-          param1.field_Zb = param2.f(-20976);
-          param1.field_Gb = pr.a(param0 + 14363) - (long)param2.a(16711680);
+          param2.readBytes(param1.field_dc.length, 0, 17469032, param1.field_dc);
+          param1.field_Zb = param2.readUnsignedShort(-20976);
+          param1.field_Gb = pr.a(param0 + 14363) - (long)param2.readInt(16711680);
           if (var5 == 0) {
             param1.field_lc = -1;
           } else {
-            param1.field_lc = param2.a(16711680);
+            param1.field_lc = param2.readInt(16711680);
           }
-          param1.field_fc = param2.d(127);
+          param1.field_fc = param2.readLong(127);
           var7 = param2.position;
-          param1.field_Xb = param2.e(-1);
+          param1.field_Xb = param2.readString(-1);
           if (var6 == 0) {
             param1.field_jc = null;
             return;
@@ -89,7 +89,7 @@ final class mi {
           param2.position = var7;
           param1.field_jc = new String[param1.field_Lb];
           for (var8 = 0; param1.field_Lb > var8; var8++) {
-            param1.field_jc[var8] = param2.e(-1);
+            param1.field_jc[var8] = param2.readString(-1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

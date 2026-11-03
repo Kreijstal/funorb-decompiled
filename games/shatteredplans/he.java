@@ -16,7 +16,7 @@ final class he extends IntrusiveNode {
     final static void a(int param0, String param1) {
         try {
           oo.a(param1, (byte) -70);
-          fk.a(ClientException.field_c, 72, false);
+          ByteArrayNode.a(ClientException.field_c, 72, false);
           if (param0 != 8192) {
             String var3 = (String) null;
             he.a(62, (String) null);

@@ -5,9 +5,9 @@ import java.io.*;
 
 final class jo {
     static String field_e;
-    private bc field_f;
-    private bc field_h;
-    private ol field_b;
+    private Archive field_f;
+    private Archive field_h;
+    private WeightedLruCache field_b;
     static qr field_a;
     static String field_d;
     static String field_c;
@@ -44,8 +44,8 @@ final class jo {
             var2 = var6;
             if (vc.field_a != null) {
               try {
-                vc.field_a.a((byte) 95, 0L);
-                vc.field_a.a(var6, true);
+                vc.field_a.seek((byte) 95, 0L);
+                vc.field_a.readFully(var6, true);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;
@@ -55,7 +55,7 @@ final class jo {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                param1.a(0, 24, var2, 22186);
+                param1.writeBytes(0, 24, var2, 22186);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -69,7 +69,7 @@ final class jo {
                 return;
               }
             }
-            param1.a(0, 24, var2, 22186);
+            param1.writeBytes(0, 24, var2, 22186);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -90,19 +90,19 @@ final class jo {
         }
     }
 
-    final static void a(int param0, gh param1, boolean param2, int param3) {
+    final static void a(int param0, MusicTrack param1, boolean param2, int param3) {
         try {
           if (param0 != 32767) {
-            gh var5 = (gh) null;
-            jo.a(6, (gh) null, false, -66);
+            MusicTrack var5 = (MusicTrack) null;
+            jo.a(6, (MusicTrack) null, false, -66);
           }
-          u.field_b.a(1000000, 256, (byte) -121, !param2 ? true : false, param3, param1);
+          ValidationState.field_b.a(1000000, 256, (byte) -121, !param2 ? true : false, param3, param1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "jo.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    jo(int param0, bc param1, bc param2) {
+    jo(int param0, Archive param1, Archive param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -110,15 +110,15 @@ final class jo {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_b = new ol(64);
+        this.field_b = new WeightedLruCache(64);
         try {
           this.field_h = param2;
           this.field_f = param1;
           if (this.field_f != null) {
-            this.field_f.a(0, -26268);
+            this.field_f.getFileCount(0, -26268);
           }
           if (this.field_h != null) {
-            this.field_h.a(0, -26268);
+            this.field_h.getFileCount(0, -26268);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -144,17 +144,17 @@ final class jo {
     final si a(int param0, byte param1) {
         byte[] var4 = null;
         if (param1 != 100) {
-          gh var5 = (gh) null;
-          jo.a(71, (gh) null, true, -32);
+          MusicTrack var5 = (MusicTrack) null;
+          jo.a(71, (MusicTrack) null, true, -32);
         }
         si var3 = (si) (this.field_b.a((long)param0, param1 - 100));
         if (var3 != null) {
           return var3;
         }
         if (param0 < 32768) {
-          var4 = this.field_f.a(0, -1, param0);
+          var4 = this.field_f.getFile(0, -1, param0);
         } else {
-          var4 = this.field_h.a(0, param1 ^ -101, param0 & 32767);
+          var4 = this.field_h.getFile(0, param1 ^ -101, param0 & 32767);
         }
         si var6 = new si();
         if (var4 != null) {

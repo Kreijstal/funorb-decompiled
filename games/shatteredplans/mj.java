@@ -27,18 +27,18 @@ final class mj extends qr {
     static byte[][] field_Bb;
     long field_Ib;
     static Territory field_yb;
-    static io field_Sb;
+    static SoundCache field_Sb;
 
     final static void a(int param0, boolean param1) {
         if (dn.field_k != null) {
           dk.a((byte) 54, dn.field_k);
         }
-        if (hp.field_m != null) {
-          hp.field_m.a(13505, param1);
+        if (DerelictVictoryChecker.field_m != null) {
+          DerelictVictoryChecker.field_m.a(13505, param1);
           if (param0 == 0) {
             r.a((byte) -82, param1);
-            if (null != tc.field_G) {
-              tc.field_G.b(param1, -68);
+            if (null != DialogRoot.field_G) {
+              DialogRoot.field_G.b(param1, -68);
             }
             ho.a(param1, param0 + 8323199);
             return;
@@ -47,8 +47,8 @@ final class mj extends qr {
         }
         if (param0 == 0) {
           r.a((byte) -82, param1);
-          if (null != tc.field_G) {
-            tc.field_G.b(param1, -68);
+          if (null != DialogRoot.field_G) {
+            DialogRoot.field_G.b(param1, -68);
           }
           ho.a(param1, param0 + 8323199);
           return;
@@ -155,14 +155,14 @@ final class mj extends qr {
             var6_int = param5[0].field_o;
             var7 = param5[param1].field_o;
             var8 = param5[1].field_o;
-            param5[0].d(param4, param3, param2);
-            param5[2].d(-var7 + (param4 + param0), param3, param2);
+            param5[0].drawTinted(param4, param3, param2);
+            param5[2].drawTinted(-var7 + (param4 + param0), param3, param2);
             gf.a(fc.field_g);
             gf.i(var6_int + param4, param3, param4 + (param0 - var7), param5[1].field_p + param3);
             var9 = param4 + var6_int;
             var10 = param0 + param4 - var7;
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
-              param5[1].d(param4, param3, param2);
+              param5[1].drawTinted(param4, param3, param2);
             }
             gf.b(fc.field_g);
             return;
@@ -184,10 +184,10 @@ final class mj extends qr {
 
     final boolean h(int param0) {
         if (param0 < -58) {
-          return !this.a((byte) 96) ? true : false;
+          return !this.isSecondaryLinked((byte) 96) ? true : false;
         }
         mj.g(-58);
-        return !this.a((byte) 96) ? true : false;
+        return !this.isSecondaryLinked((byte) 96) ? true : false;
     }
 
     mj(String param0, String param1, long param2) {

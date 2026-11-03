@@ -14,12 +14,12 @@ final class kb extends vd {
     static ArgbSprite field_w;
 
     final static void f(int param0) {
-        Star.field_o = sa.field_a.e(-1);
+        Star.field_o = sa.field_a.readString(-1);
         if (param0 >= -82) {
           return;
         }
         CharSequence var2 = (CharSequence) ((Object) Star.field_o);
-        ci.field_d = ji.a(var2, true);
+        ArchiveIndex.field_d = ji.a(var2, true);
     }
 
     kb(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6) {
@@ -34,31 +34,31 @@ final class kb extends vd {
           this.field_u = param5;
           this.field_z = param4;
           this.field_C = new Sprite(this.field_m, this.field_i);
-          ra.a(-111);
-          this.field_C.e();
+          RandomAccessCacheFile.a(-111);
+          this.field_C.bindAsRenderTarget();
           for (var8_int = 0; this.field_C.field_w > var8_int; var8_int++) {
             var9 = (this.field_C.field_w / 2 - var8_int) * (this.field_C.field_w / 2 - var8_int);
-            gf.f(0, var8_int, this.field_C.field_z, ui.a(0, this.field_D, -80, -(256 * var9 / (this.field_C.field_w / 2 * (this.field_C.field_w / 2))) + 256));
+            gf.f(0, var8_int, this.field_C.field_z, SolVictoryChecker.a(0, this.field_D, -80, -(256 * var9 / (this.field_C.field_w / 2 * (this.field_C.field_w / 2))) + 256));
           }
           var11 = 0;
           var8_intLifetime1 = var11;
           while (var11 < this.field_C.field_w) {
-            gf.a(0, var11, ui.a(0, this.field_C.field_B[var11 * this.field_C.field_z], -105, 128));
-            gf.a(-1 + this.field_C.field_z, var11, ui.a(0, this.field_C.field_B[-1 + this.field_C.field_z * (1 + var11)], -112, 128));
+            gf.a(0, var11, SolVictoryChecker.a(0, this.field_C.field_B[var11 * this.field_C.field_z], -105, 128));
+            gf.a(-1 + this.field_C.field_z, var11, SolVictoryChecker.a(0, this.field_C.field_B[-1 + this.field_C.field_z * (1 + var11)], -112, 128));
             var11++;
           }
-          gf.a(1, 1, ui.a(0, this.field_C.field_B[1 + this.field_C.field_z], -93, 128));
-          gf.a(2, 1, ui.a(0, this.field_C.field_B[this.field_C.field_z + 2], -113, 192));
-          gf.a(1, 2, ui.a(0, this.field_C.field_B[1 + this.field_C.field_z * 2], -87, 192));
-          gf.a(1, this.field_C.field_w - 2, ui.a(0, this.field_C.field_B[1 + this.field_C.field_z * (-2 + this.field_C.field_w)], -90, 128));
-          gf.a(2, -2 + this.field_C.field_w, ui.a(0, this.field_C.field_B[2 + (-2 + this.field_C.field_w) * this.field_C.field_z], -82, 192));
-          gf.a(1, this.field_C.field_w - 3, ui.a(0, this.field_C.field_B[1 + this.field_C.field_z * (-3 + this.field_C.field_w)], -78, 192));
-          gf.a(-2 + this.field_C.field_z, 1, ui.a(0, this.field_C.field_B[2 * this.field_C.field_z - 2], -99, 128));
-          gf.a(-3 + this.field_C.field_z, 1, ui.a(0, this.field_C.field_B[-3 + this.field_C.field_z * 2], -85, 192));
-          gf.a(this.field_C.field_z - 2, 2, ui.a(0, this.field_C.field_B[-2 + 3 * this.field_C.field_z], -124, 192));
-          gf.a(this.field_C.field_z - 2, this.field_C.field_w - 2, ui.a(0, this.field_C.field_B[-2 + this.field_C.field_z * (this.field_C.field_w - 1)], -88, 128));
-          gf.a(-3 + this.field_C.field_z, -2 + this.field_C.field_w, ui.a(0, this.field_C.field_B[-3 + (this.field_C.field_w - 1) * this.field_C.field_z], -83, 192));
-          gf.a(-2 + this.field_C.field_z, this.field_C.field_w - 3, ui.a(0, this.field_C.field_B[-2 + (this.field_C.field_w - 2) * this.field_C.field_z], -94, 192));
+          gf.a(1, 1, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z], -93, 128));
+          gf.a(2, 1, SolVictoryChecker.a(0, this.field_C.field_B[this.field_C.field_z + 2], -113, 192));
+          gf.a(1, 2, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z * 2], -87, 192));
+          gf.a(1, this.field_C.field_w - 2, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z * (-2 + this.field_C.field_w)], -90, 128));
+          gf.a(2, -2 + this.field_C.field_w, SolVictoryChecker.a(0, this.field_C.field_B[2 + (-2 + this.field_C.field_w) * this.field_C.field_z], -82, 192));
+          gf.a(1, this.field_C.field_w - 3, SolVictoryChecker.a(0, this.field_C.field_B[1 + this.field_C.field_z * (-3 + this.field_C.field_w)], -78, 192));
+          gf.a(-2 + this.field_C.field_z, 1, SolVictoryChecker.a(0, this.field_C.field_B[2 * this.field_C.field_z - 2], -99, 128));
+          gf.a(-3 + this.field_C.field_z, 1, SolVictoryChecker.a(0, this.field_C.field_B[-3 + this.field_C.field_z * 2], -85, 192));
+          gf.a(this.field_C.field_z - 2, 2, SolVictoryChecker.a(0, this.field_C.field_B[-2 + 3 * this.field_C.field_z], -124, 192));
+          gf.a(this.field_C.field_z - 2, this.field_C.field_w - 2, SolVictoryChecker.a(0, this.field_C.field_B[-2 + this.field_C.field_z * (this.field_C.field_w - 1)], -88, 128));
+          gf.a(-3 + this.field_C.field_z, -2 + this.field_C.field_w, SolVictoryChecker.a(0, this.field_C.field_B[-3 + (this.field_C.field_w - 1) * this.field_C.field_z], -83, 192));
+          gf.a(-2 + this.field_C.field_z, this.field_C.field_w - 3, SolVictoryChecker.a(0, this.field_C.field_B[-2 + (this.field_C.field_w - 2) * this.field_C.field_z], -94, 192));
           cg.i(0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "kb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
@@ -88,7 +88,7 @@ final class kb extends vd {
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           na.field_r = param3;
-          k.field_b = param1;
+          TurnEventLog.field_b = param1;
           var11 = param4;
           if (param2) {
             stackIn_7_0 = lq.field_p;
@@ -97,7 +97,7 @@ final class kb extends vd {
           }
           var6 = stackIn_7_0;
           if (na.field_r == 0) {
-            var7 = db.a(480, lq.field_k, var11, ks.field_b, 3);
+            var7 = DualLinkDeque.a(480, lq.field_k, var11, ks.field_b, 3);
             var8 = 3 + var7;
             t.field_c = new String[var8];
             pr.field_d = new int[var8];
@@ -119,7 +119,7 @@ final class kb extends vd {
             if (1 != na.field_r) {
               throw new IllegalArgumentException();
             }
-            var7 = db.a(480, lq.field_k, var11, ks.field_b, 3);
+            var7 = DualLinkDeque.a(480, lq.field_k, var11, ks.field_b, 3);
             var8 = var7 + 2;
             t.field_c = new String[var8];
             pr.field_d = new int[var8];
@@ -147,19 +147,19 @@ final class kb extends vd {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          ah.field_R = -(var7Lifetime1 >> 1) + var7Lifetime1 + ol.field_e;
-          ld.field_j = -(var7Lifetime1 >> 1) + ol.field_e;
-          rn.field_b = (js.field_e + uo.field_g << 1) * ns.field_nb.field_b;
+          ah.field_R = -(var7Lifetime1 >> 1) + var7Lifetime1 + WeightedLruCache.field_e;
+          ld.field_j = -(var7Lifetime1 >> 1) + WeightedLruCache.field_e;
+          DiskCacheWorker.field_b = (js.field_e + uo.field_g << 1) * ns.field_nb.field_b;
           for (var8Lifetime2 = 0; var8Lifetime2 < t.field_c.length; var8Lifetime2++) {
-            stackIn_40_0 = rn.field_b;
+            stackIn_40_0 = DiskCacheWorker.field_b;
             if (pr.field_d[var8Lifetime2] >= 0) {
               stackIn_41_1 = vh.field_b;
             } else {
               stackIn_41_1 = fe.field_A;
             }
-            rn.field_b = stackIn_40_0 + stackIn_41_1;
+            DiskCacheWorker.field_b = stackIn_40_0 + stackIn_41_1;
           }
-          vo.field_b = ri.field_O - (rn.field_b >> 1);
+          vo.field_b = ri.field_O - (DiskCacheWorker.field_b >> 1);
           ns.field_nb.a(ch.a(-15073, bb.field_b, pd.field_k), 0, param0, 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -186,14 +186,14 @@ final class kb extends vd {
     }
 
     final static void a(int param0, int param1) {
-        sl var2 = js.field_f;
+        CipherPacketBuffer var2 = js.field_f;
         if (param0 <= 54) {
           kb.f(112);
         }
         var2.h(param1, 255);
-        var2.c(2, (byte) -59);
-        var2.c(4, (byte) -84);
-        var2.c(mr.a(0), (byte) -76);
+        var2.writeByte(2, (byte) -59);
+        var2.writeByte(4, (byte) -84);
+        var2.writeByte(DerelictMapReader.a(0), (byte) -76);
     }
 
     final void a(int param0) {
@@ -208,12 +208,12 @@ final class kb extends vd {
         gf.i(this.field_k, this.field_t, this.field_m + this.field_k, this.field_i + this.field_t);
         int var3 = rs.field_Cb.field_J;
         int var4 = -24 / ((param0 - 67) / 47);
-        this.field_C.f(this.field_k, this.field_t);
+        this.field_C.draw(this.field_k, this.field_t);
         if (this.field_z != null) {
           if (this.field_B) {
-            rs.field_Cb.c(this.field_z, 1 + (this.field_k + this.field_m / 2), (rs.field_Cb.field_J + rs.field_Cb.field_q) / 2 + (3 + this.field_t), this.field_u, -1);
+            rs.field_Cb.drawCentred(this.field_z, 1 + (this.field_k + this.field_m / 2), (rs.field_Cb.field_J + rs.field_Cb.field_q) / 2 + (3 + this.field_t), this.field_u, -1);
           } else {
-            rs.field_Cb.d(this.field_z, this.field_k + var3 / 2, (rs.field_Cb.field_q + rs.field_Cb.field_J) / 2 + this.field_t + 3, this.field_u, -1);
+            rs.field_Cb.drawString(this.field_z, this.field_k + var3 / 2, (rs.field_Cb.field_q + rs.field_Cb.field_J) / 2 + this.field_t + 3, this.field_u, -1);
           }
         }
         gf.b(var11);

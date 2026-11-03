@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends qs {
+final class cg extends SingleChildWidget {
     static StringBuilder field_E;
     int field_J;
     static String field_F;
@@ -13,7 +13,7 @@ final class cg extends qs {
     static qr field_C;
 
     public cg() {
-        super(0, 0, 0, 0, (iq) null, (ko) null);
+        super(0, 0, 0, 0, (WidgetPainter) null, (WidgetListener) null);
         this.field_J = 256;
     }
 
@@ -63,7 +63,7 @@ final class cg extends qs {
           aq.a((byte) 114, var6);
           this.field_z.a(param0, param1, 0, 0);
           Star.f((byte) -78);
-          var6.a(param3 + this.field_m, param2 + this.field_q, this.field_J);
+          var6.drawAlpha(param3 + this.field_m, param2 + this.field_q, this.field_J);
           return;
         }
         this.field_z.a(param0, -11857, param2 + this.field_q, param3 + this.field_m);
@@ -125,14 +125,14 @@ final class cg extends qs {
           }
           var8 = new oj(le.field_e, param5);
           le.field_e.a(true, var8);
-          if (go.j(0)) {
+          if (TextFieldWidget.j(0)) {
             var8.f(false);
             return true;
           }
           ee.field_l = ue.field_a;
           np.field_m = param1;
           aa.field_G = param4;
-          um.field_j = param2;
+          PlayerStats.field_j = param2;
           wh.field_c = null;
           ae.field_g = param0;
           jm.field_t = param3;
@@ -170,19 +170,19 @@ final class cg extends qs {
     }
 
     final static void i(int param0) {
-        ra.field_k = ra.field_k - 1;
-        gf.a(bc.field_c[ra.field_k], oj.field_Cb[ra.field_k], vp.field_s[ra.field_k]);
-        gf.field_i = cb.field_f[ra.field_k];
+        RandomAccessCacheFile.field_k = RandomAccessCacheFile.field_k - 1;
+        gf.a(Archive.field_c[RandomAccessCacheFile.field_k], oj.field_Cb[RandomAccessCacheFile.field_k], TertiaryLinkNode.field_s[RandomAccessCacheFile.field_k]);
+        gf.field_i = cb.field_f[RandomAccessCacheFile.field_k];
         if (param0 == 0) {
-          gf.field_l = dk.field_b[ra.field_k];
-          gf.field_a = bf.field_c[ra.field_k];
-          gf.field_f = da.field_d[ra.field_k];
+          gf.field_l = dk.field_b[RandomAccessCacheFile.field_k];
+          gf.field_a = bf.field_c[RandomAccessCacheFile.field_k];
+          gf.field_f = DebouncedValidator.field_d[RandomAccessCacheFile.field_k];
           return;
         }
         field_A = (qr) null;
-        gf.field_l = dk.field_b[ra.field_k];
-        gf.field_a = bf.field_c[ra.field_k];
-        gf.field_f = da.field_d[ra.field_k];
+        gf.field_l = dk.field_b[RandomAccessCacheFile.field_k];
+        gf.field_a = bf.field_c[RandomAccessCacheFile.field_k];
+        gf.field_f = DebouncedValidator.field_d[RandomAccessCacheFile.field_k];
     }
 
     final static MouseWheelInput e(boolean param0) {
@@ -226,7 +226,7 @@ final class cg extends qs {
     }
 
     cg(UiWidget param0) {
-        super(param0.field_m, param0.field_q, param0.field_x, param0.field_n, (iq) null, (ko) null);
+        super(param0.field_m, param0.field_q, param0.field_x, param0.field_n, (WidgetPainter) null, (WidgetListener) null);
         try {
           param0.a(0, this.field_n, (byte) 120, 0, this.field_x);
           this.field_z = param0;

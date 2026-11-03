@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ns extends il implements bp {
+class ns extends il implements ButtonListener {
     static boolean field_pb;
     static np field_nb;
     private boolean field_vb;
@@ -13,7 +13,7 @@ class ns extends il implements bp {
     private nq field_ub;
     static String field_xb;
     private boolean field_wb;
-    static vk field_rb;
+    static PcmStreamMixer field_rb;
 
     final void p(int param0) {
         cf var2 = null;
@@ -69,7 +69,7 @@ class ns extends il implements bp {
         this.i((byte) -32);
     }
 
-    public void a(kg param0, int param1, int param2, int param3, int param4) {
+    public void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -80,7 +80,7 @@ class ns extends il implements bp {
             this.field_sb = false;
           }
           if (!this.field_sb) {
-            sl.a("tochangedisplayname.ws", kq.f((byte) 126), (byte) 63);
+            CipherPacketBuffer.a("tochangedisplayname.ws", GameScreen.f((byte) 126), (byte) 63);
             return;
           }
           qj.a((byte) -127, 3);
@@ -100,7 +100,7 @@ class ns extends il implements bp {
         }
     }
 
-    ns(tc param0, nq param1, String param2, boolean param3, boolean param4) {
+    ns(DialogRoot param0, nq param1, String param2, boolean param3, boolean param4) {
         super(param0, new cf((ns) null, param1, param2), 77, 10, 10);
         try {
           this.field_sb = false;
@@ -172,7 +172,7 @@ class ns extends il implements bp {
             var6.a(em.field_g, (byte) 120, 17);
           } else {
             if (param1 == 256) {
-              var6.a((ko) (this), 121, ts.field_E);
+              var6.a((WidgetListener) (this), 121, ts.field_E);
             } else {
               stackIn_10_0 = var6;
               if (!this.field_tb) {
@@ -197,7 +197,7 @@ class ns extends il implements bp {
                   this.b(var6, 110);
                   return;
                 }
-                var6.a((ko) (this), 126, MouseWheelInput.field_d);
+                var6.a((WidgetListener) (this), 126, MouseWheelInput.field_d);
               }
             } else {
               var6.a(IntrusiveDeque.field_f, (byte) 122, 8);

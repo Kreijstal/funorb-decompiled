@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh extends ek implements bp {
+final class eh extends ek implements ButtonListener {
     static Sprite[] field_L;
     static int field_C;
     private wd field_J;
     static String field_N;
-    private kg field_M;
+    private FocusableWidget field_M;
     static String[] field_I;
     static boolean field_P;
     static int field_Q;
@@ -14,13 +14,13 @@ final class eh extends ek implements bp {
     final void a(int param0, int param1, UiWidget param2, byte param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_M.field_y = this.field_J.a((byte) 127).c(100) == p.field_g ? true : false;
+          this.field_M.field_y = this.field_J.a((byte) 127).c(100) == CachedArchiveSource.field_g ? true : false;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "eh.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static hb a(int param0, el param1) {
+    final static hb a(int param0, TertiaryNodeList param1) {
         RuntimeException var2 = null;
         pd stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -63,11 +63,11 @@ final class eh extends ek implements bp {
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        mf.field_x.d(kr.field_c, this.field_m + (param3 + 4), this.field_q + (param2 + (mf.field_x.field_J + 4)), 16777215, -1);
+        EmailValidator.field_x.drawString(kr.field_c, this.field_m + (param3 + 4), this.field_q + (param2 + (EmailValidator.field_x.field_J + 4)), 16777215, -1);
     }
 
-    public final void a(kg param0, int param1, int param2, int param3, int param4) {
-        if (this.field_J.a((byte) 111).c(-123) != p.field_g) {
+    public final void a(FocusableWidget param0, int param1, int param2, int param3, int param4) {
+        if (this.field_J.a((byte) 111).c(-123) != CachedArchiveSource.field_g) {
           return;
         }
         try {
@@ -81,12 +81,12 @@ final class eh extends ek implements bp {
     }
 
     eh(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (iq) null);
+        super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_J = new wd(new rr(10000536), va.field_j, 0, 0, 140, 25);
         this.field_J.a(new ja(), -70);
-        this.field_M = new kg(gq.field_b, (ko) (this));
+        this.field_M = new FocusableWidget(gq.field_b, (WidgetListener) (this));
         this.field_B = new UiWidget[]{(UiWidget) ((Object) this.field_J), (UiWidget) ((Object) this.field_M)};
-        this.field_M.field_p = (iq) ((Object) new qp());
+        this.field_M.field_p = (WidgetPainter) ((Object) new qp());
         this.d((byte) -118);
     }
 

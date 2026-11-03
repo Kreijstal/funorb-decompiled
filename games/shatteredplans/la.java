@@ -8,7 +8,7 @@ final class la extends qo {
     private boolean field_f;
     static String field_o;
     private int field_p;
-    static bc field_k;
+    static Archive field_k;
     static String field_n;
     private String field_g;
     private nq field_j;
@@ -32,7 +32,7 @@ final class la extends qo {
           this.field_f = true;
           this.field_j = param3;
           var8 = this.a(param0, param3, param1, (byte) 15);
-          var7 = param3.c(param1);
+          var7 = param3.stringWidth(param1);
           var8.field_b[param2] = -(var7 >> 1) + param4;
           var8.field_b[param1.length()] = param4 + (var7 >> 1);
           ta.a(param1, var8, 27329, 0, param3);
@@ -97,9 +97,9 @@ final class la extends qo {
           this.field_g = param0;
           this.field_i = param5;
           this.field_m = param7;
-          var16 = new String[1 + param6.a(param0, param4)];
+          var16 = new String[1 + param6.lineCount(param0, param4)];
           var17 = var16;
-          var10 = Math.max(1, param6.a(param0, new int[]{param4}, var17));
+          var10 = Math.max(1, param6.wrapText(param0, new int[]{param4}, var17));
           if (this.field_l == 3 &&
             var10 == 1) {
             this.field_l = 1;
@@ -141,12 +141,12 @@ final class la extends qo {
             var14 = new ha(stackIn_33_2, stackIn_33_3, stackIn_34_4);
             var14.field_b[0] = 0;
             if (var13 != null) {
-              var14.field_b[var13.length()] = param6.c(var13);
+              var14.field_b[var13.length()] = param6.stringWidth(var13);
               stackIn_38_0 = var13;
               stackIn_38_1 = var14;
               stackIn_38_2 = param1 + 27329;
               if (param2 == 3) {
-                stackIn_39_3 = this.a(param1 ^ -28135, param4, param6.c(var13), var13);
+                stackIn_39_3 = this.a(param1 ^ -28135, param4, param6.stringWidth(var13), var13);
               } else {
                 stackIn_39_3 = 0;
               }
@@ -251,7 +251,7 @@ final class la extends qo {
           var7 = this.a(param1, param0, param3, (byte) 15);
           var8 = var7;
           var7.field_b[0] = param4;
-          var8.field_b[param3.length()] = param0.c(param3) + param4;
+          var8.field_b[param3.length()] = param0.stringWidth(param3) + param4;
           ta.a(param3, var8, param2 + 27333, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "la.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -280,7 +280,7 @@ final class la extends qo {
           int var7 = 79 / ((59 - param0) / 47);
           var9 = this.a(param1, param2, param3, (byte) 15);
           var10 = var9;
-          var10.field_b[0] = -param2.c(param3) + param4;
+          var10.field_b[0] = -param2.stringWidth(param3) + param4;
           var10.field_b[param3.length()] = param4;
           ta.a(param3, var10, 27329, 0, param2);
         } catch (RuntimeException runtimeException) {

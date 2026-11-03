@@ -58,7 +58,7 @@ final class hr {
                 hr.a((java.applet.Applet) null, (byte) -44);
               }
               var5 = new java.net.URL(param0.getCodeBase(), var4Lifetime2);
-              param0.getAppletContext().showDocument(jg.a(param0, false, var5), "_self");
+              param0.getAppletContext().showDocument(AudioService.a(param0, false, var5), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,7 +129,7 @@ final class hr {
               } else {
                 oq.field_b[var12].a(var8, var7Lifetime1, (byte) 115, var13, var6_int);
                 tb.field_a[var12].a(var9 - param2, var7Lifetime1, (byte) 118, 0, param2);
-                mr.field_d[var12].a(param0, -param5 + var7Lifetime1 - param5, (byte) 122, param5, var9);
+                DerelictMapReader.field_d[var12].a(param0, -param5 + var7Lifetime1 - param5, (byte) 122, param5, var9);
                 n.field_n[var12].a(var8 - param2 - var10, var7Lifetime1 - param5 - param5, (byte) 52, param5, var10);
               }
             }

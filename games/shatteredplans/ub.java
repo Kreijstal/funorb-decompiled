@@ -134,9 +134,9 @@ final class ub extends qr {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          kc.field_g = param1;
+          MusicEnvelope.field_g = param1;
           lq.field_k = param6;
-          nh.a(param10, param3, param0, param12, 2);
+          PointsVictoryChecker.a(param10, param3, param0, param12, 2);
           as.a(param17, param9 + 20, param18, param2);
           wi.a(param5, (byte) 67, param19, param7, param11, param15);
           if (param9 != 0) {
@@ -233,27 +233,27 @@ final class ub extends qr {
         int var2 = 0;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (!mf.field_r) {
-            if (hp.field_n.a("intro", param0 ^ 52)) {
-              mf.field_r = true;
+          if (!EmailValidator.field_r) {
+            if (DerelictVictoryChecker.field_n.a("intro", param0 ^ 52)) {
+              EmailValidator.field_r = true;
             }
           } else {
             if (!jn.field_a) {
-              rn.b((byte) 50);
+              DiskCacheWorker.b((byte) 50);
             }
           }
           if (param0 != 93) {
             ub.f((byte) -67);
           }
-          while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
+          while (PasswordValidator.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (oq.field_j == 13) {
-              jc.a(-1, (byte) 125);
+              ArchiveRequest.a(-1, (byte) 125);
               continue;
             }
             if (oq.field_j != 83) {
               continue;
             }
-            if (p.field_n) {
+            if (CachedArchiveSource.field_n) {
               continue;
             }
             if (!jn.field_a) {
@@ -263,17 +263,17 @@ final class ub extends qr {
               continue;
             }
             ph.a(param0 ^ 93);
-            if (ui.field_m >= 5) {
+            if (SolVictoryChecker.field_m >= 5) {
               stackIn_21_0 = -1;
             } else {
-              stackIn_21_0 = ui.field_m + 1;
+              stackIn_21_0 = SolVictoryChecker.field_m + 1;
             }
-            jc.a(stackIn_21_0, (byte) 125);
+            ArchiveRequest.a(stackIn_21_0, (byte) 125);
           }
-          if (50 + u.field_a < cl.field_n) {
-            u.field_a = cl.field_n + vc.a((byte) -39, 50);
+          if (50 + ValidationState.field_a < cl.field_n) {
+            ValidationState.field_a = cl.field_n + vc.a((byte) -39, 50);
           }
-          var1_int = cl.field_n - u.field_a;
+          var1_int = cl.field_n - ValidationState.field_a;
           if (0 > var1_int) {
             dp.field_r = 0;
           } else {
@@ -303,7 +303,7 @@ final class ub extends qr {
               }
             }
           }
-          if (!p.field_n) {
+          if (!CachedArchiveSource.field_n) {
             if (bj.field_L < 50) {
               bj.field_L = bj.field_L + 1;
             }
@@ -311,87 +311,87 @@ final class ub extends qr {
             fieldTemp$0 = bj.field_L - 1;
             bj.field_L = bj.field_L - 1;
             if (fieldTemp$0 <= 0) {
-              p.field_n = false;
-              ui.field_m = kc.field_i;
+              CachedArchiveSource.field_n = false;
+              SolVictoryChecker.field_m = MusicEnvelope.field_i;
               bj.field_L = 0;
-              if (ui.field_m == -1) {
+              if (SolVictoryChecker.field_m == -1) {
                 uc.field_v = 50;
                 ta.a(0, 0, (byte) 96, false);
-                rn.a(param0 + 1048483);
-                ne.d(true);
+                DiskCacheWorker.a(param0 + 1048483);
+                BattleContribution.d(true);
               }
-              if (ui.field_m == 2) {
+              if (SolVictoryChecker.field_m == 2) {
                 gq.b(param0 + 29);
               }
-              if (ui.field_m != 4) {
+              if (SolVictoryChecker.field_m != 4) {
                 di.field_m = 0;
               } else {
-                mh.b(param0 + 1674225223);
+                IsaacRandom.b(param0 + 1674225223);
                 di.field_m = 0;
               }
             }
           }
-          ej.b(-128);
-          if (ui.field_m != 0) {
-            if (1 == ui.field_m) {
-              tr.a((byte) 119);
+          BufferedCacheFile.b(-128);
+          if (SolVictoryChecker.field_m != 0) {
+            if (1 == SolVictoryChecker.field_m) {
+              MapView.a((byte) 119);
             } else {
-              if (2 != ui.field_m) {
-                if (ui.field_m == 3) {
-                  ak.f((byte) 118);
+              if (2 != SolVictoryChecker.field_m) {
+                if (SolVictoryChecker.field_m == 3) {
+                  DiskArchiveRequest.f((byte) 118);
                 } else {
-                  if (ui.field_m == 4) {
+                  if (SolVictoryChecker.field_m == 4) {
                     ld.d(0);
                   } else {
-                    if (ui.field_m == 5) {
-                      gl.a((byte) -72);
+                    if (SolVictoryChecker.field_m == 5) {
+                      DisplayModeInfo.a((byte) -72);
                     }
                   }
                 }
               } else {
-                um.b(-63);
+                PlayerStats.b(-63);
               }
             }
           } else {
             lh.d((byte) 44);
           }
           if (pd.field_k < 540) {
-            ci.field_o = false;
+            ArchiveIndex.field_o = false;
           } else {
             if (pd.field_k >= 620) {
-              ci.field_o = false;
+              ArchiveIndex.field_o = false;
             } else {
               if (440 > bb.field_b) {
-                ci.field_o = false;
+                ArchiveIndex.field_o = false;
               } else {
                 if (bb.field_b >= 460) {
-                  ci.field_o = false;
+                  ArchiveIndex.field_o = false;
                 } else {
-                  ci.field_o = true;
+                  ArchiveIndex.field_o = true;
                 }
               }
             }
           }
           if (je.field_d != 0) {
-            if (540 <= nh.field_p &&
-              nh.field_p < 620 &&
-              440 <= td.field_P &&
-              td.field_P < 460) {
-              jc.a(-1, (byte) 122);
+            if (540 <= PointsVictoryChecker.field_p &&
+              PointsVictoryChecker.field_p < 620 &&
+              440 <= SliderWidget.field_P &&
+              SliderWidget.field_P < 460) {
+              ArchiveRequest.a(-1, (byte) 122);
               return;
             }
-            if (!p.field_n &&
+            if (!CachedArchiveSource.field_n &&
               jn.field_a) {
               if (bj.field_L <= 0) {
                 return;
               }
               ph.a(0);
-              if (5 > ui.field_m) {
-                stackIn_88_0 = 1 + ui.field_m;
+              if (5 > SolVictoryChecker.field_m) {
+                stackIn_88_0 = 1 + SolVictoryChecker.field_m;
               } else {
                 stackIn_88_0 = -1;
               }
-              jc.a(stackIn_88_0, (byte) -55);
+              ArchiveRequest.a(stackIn_88_0, (byte) -55);
               return;
             }
           }

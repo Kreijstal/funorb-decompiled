@@ -10,8 +10,8 @@ final class oq {
     String field_d;
     static qr[] field_b;
     static String[] field_i;
-    static km field_a;
-    static ej field_g;
+    static GameSession field_a;
+    static BufferedCacheFile field_g;
 
     final static int a(byte param0, int param1, int param2) {
         if (param0 != -123) {
@@ -21,7 +21,7 @@ final class oq {
           qe.a((byte) -65, param1)) {
           return 29;
         }
-        return er.field_b[param2];
+        return WhirlpoolHasher.field_b[param2];
     }
 
     final static String[] a(byte[] param0, byte param1) {
@@ -62,13 +62,13 @@ final class oq {
     }
 
     final static void a(int param0, boolean param1) {
-        sl var2 = js.field_f;
+        CipherPacketBuffer var2 = js.field_f;
         if (param1) {
           return;
         }
         var2.h(param0, 255);
-        var2.c(1, (byte) -114);
-        var2.c(3, (byte) -73);
+        var2.writeByte(1, (byte) -114);
+        var2.writeByte(3, (byte) -73);
     }
 
     public static void a(int param0) {
@@ -220,23 +220,23 @@ final class oq {
     final static void a(int param0, int param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        fk var4 = null;
+        ByteArrayNode var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var4 = (fk) (tr.field_vb.d(0));
+          var4 = (ByteArrayNode) (MapView.field_vb.startForward(0));
           while (var4 != null) {
             dn.a(param0, var4, (byte) 13);
-            var4 = (fk) (tr.field_vb.a((byte) -71));
+            var4 = (ByteArrayNode) (MapView.field_vb.nextForward((byte) -71));
           }
-          var2 = ua.field_d.d(0);
+          var2 = SectorCacheStore.field_d.startForward(0);
           if (param1 != 37) {
             field_i = (String[]) null;
           }
           while (var2 != null) {
             cp.a(param0, 1);
-            var2 = ua.field_d.a((byte) -71);
+            var2 = SectorCacheStore.field_d.nextForward((byte) -71);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

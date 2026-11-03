@@ -171,7 +171,7 @@ final class wk {
           }
           do {
             try {
-              var4_int = param2.a(param1, param3, IterableNodeHashTable.field_g);
+              var4_int = param2.wrapText(param1, param3, IterableNodeHashTable.field_g);
               decompiledRegionSelector0 = 0;
             } catch (java.lang.ArrayIndexOutOfBoundsException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -382,7 +382,7 @@ final class wk {
             if (2 == param4.field_l) {
               var7 = var7 + (param2.field_n - this.field_g.field_p);
             }
-            this.field_g.f(var6_int, var7);
+            this.field_g.draw(var6_int, var7);
           }
           if (!param1) {
             return;

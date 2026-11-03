@@ -8,15 +8,15 @@ final class hq {
     static String field_d;
 
     final static void a(int param0, int param1, PacketBuffer param2, byte param3, int param4) {
-        param2.c(12, (byte) -126);
-        param2.d(17, param3 + 235);
+        param2.writeByte(12, (byte) -126);
+        param2.writeShort(17, param3 + 235);
         if (param3 != 20) {
           return;
         }
         try {
-          param2.d(param1, 255);
-          param2.d(param0, 255);
-          param2.c(param4, (byte) -59);
+          param2.writeShort(param1, 255);
+          param2.writeShort(param0, 255);
+          param2.writeByte(param4, (byte) -59);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "hq.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

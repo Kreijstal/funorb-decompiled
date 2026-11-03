@@ -11,7 +11,7 @@ abstract class ek extends UiWidget implements ni {
     static String field_G;
     static int field_A;
     static qr field_E;
-    static bc field_D;
+    static Archive field_D;
     static boolean[] field_F;
 
     private final boolean a(int param0, int param1, UiWidget param2) {
@@ -106,8 +106,8 @@ abstract class ek extends UiWidget implements ni {
         }
     }
 
-    ek(int param0, int param1, int param2, int param3, iq param4) {
-        super(param0, param1, param2, param3, param4, (ko) null);
+    ek(int param0, int param1, int param2, int param3, WidgetPainter param4) {
+        super(param0, param1, param2, param3, param4, (WidgetListener) null);
     }
 
     final boolean a(int param0, char param1, int param2, UiWidget param3) {

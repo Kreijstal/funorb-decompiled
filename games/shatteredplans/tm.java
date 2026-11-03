@@ -20,7 +20,7 @@ final class tm extends IntrusiveNode {
         field_j = null;
         if (param0 != -30032) {
           short[] var2 = (short[]) null;
-          tm.a((byte) -113, (sl) null, 17, (short[]) null);
+          tm.a((byte) -113, (CipherPacketBuffer) null, 17, (short[]) null);
         }
         field_k = null;
         field_t = null;
@@ -64,9 +64,9 @@ final class tm extends IntrusiveNode {
           field_r = (Sprite) null;
         }
         if (this.field_q != 256) {
-          ss.field_b.d(this.field_l, 100, param1 + 14, 16777215, -1, this.field_q);
+          ss.field_b.drawStringAlpha(this.field_l, 100, param1 + 14, 16777215, -1, this.field_q);
         } else {
-          ss.field_b.d(this.field_l, 100, 14 + param1, 16777215, -1);
+          ss.field_b.drawString(this.field_l, 100, 14 + param1, 16777215, -1);
         }
     }
 
@@ -77,14 +77,14 @@ final class tm extends IntrusiveNode {
           this.field_q = 256;
           this.field_l = param0;
           this.field_m = !this.field_n ? 0 : 500;
-          var3_int = 20 + ss.field_b.c(this.field_l);
+          var3_int = 20 + ss.field_b.stringWidth(this.field_l);
           this.field_s = Math.max(400, var3_int);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static short[] a(byte param0, sl param1, int param2, short[] param3) {
+    final static short[] a(byte param0, CipherPacketBuffer param1, int param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -103,7 +103,7 @@ final class tm extends IntrusiveNode {
         try {
           if (param0 != 39) {
             var9 = (short[]) null;
-            tm.a((byte) -7, (sl) null, 123, (short[]) null);
+            tm.a((byte) -7, (CipherPacketBuffer) null, 123, (short[]) null);
           }
           var4_int = param1.b((byte) 101, param2);
           if (var4_int == 0) {

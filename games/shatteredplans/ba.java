@@ -64,7 +64,7 @@ final class ba {
           BufferedSocket.field_q[1] = 6356832;
           ho.field_f = param9;
           BufferedSocket.field_q[0] = 16764000;
-          bh.field_k = param11;
+          BoundsRect.field_k = param11;
           je.field_e = param8;
           BufferedSocket.field_q[2] = 9474303;
           BufferedSocket.field_q[3] = 16736511;
@@ -103,7 +103,7 @@ final class ba {
           cg.field_C = new qr(0L, (qr) null);
           cg.field_C.field_F = var16;
           TaskAi.field_o.a(4, cg.field_C);
-          mr.field_d = new qr[5];
+          DerelictMapReader.field_d = new qr[5];
           tb.field_a = new qr[5];
           n.field_n = new qr[5];
           oq.field_b = new qr[5];
@@ -115,7 +115,7 @@ final class ba {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_34_0 == ~var18) {
                 if (!je.field_e) {
-                  stackIn_16_0 = tr.field_Fb;
+                  stackIn_16_0 = MapView.field_Fb;
                 } else {
                   stackIn_16_0 = ds.field_a;
                 }
@@ -124,20 +124,20 @@ final class ba {
                 !je.field_e) {
                 decompiledFrameRemainder0 = (2 == var18);
                 if (decompiledFrameRemainder0) {
-                  var19 = jd.field_e;
+                  var19 = CellVertex.field_e;
                 }
               } else {
                 var19 = jo.field_c;
               }
               if (decompiledFrameRemainder0) {
                 oq.field_b[var18] = new qr(0L, param5);
-                tb.field_a[var18] = new qr(0L, bh.field_k, var19);
-                mr.field_d[var18] = new qr(0L, (qr) null);
-                mr.field_d[var18].field_G = 1;
-                n.field_n[var18] = new qr(0L, bh.field_k);
+                tb.field_a[var18] = new qr(0L, BoundsRect.field_k, var19);
+                DerelictMapReader.field_d[var18] = new qr(0L, (qr) null);
+                DerelictMapReader.field_d[var18].field_G = 1;
+                n.field_n[var18] = new qr(0L, BoundsRect.field_k);
                 n.field_n[var18].field_G = 1;
                 oq.field_b[var18].a(4, tb.field_a[var18]);
-                oq.field_b[var18].a(4, mr.field_d[var18]);
+                oq.field_b[var18].a(4, DerelictMapReader.field_d[var18]);
                 oq.field_b[var18].a(4, n.field_n[var18]);
                 oq.field_b[var18].e((byte) -126);
                 tg.field_c.a(4, oq.field_b[var18]);

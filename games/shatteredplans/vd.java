@@ -23,10 +23,10 @@ class vd extends IntrusiveNode {
         if (param1 != 0) {
           this.field_k = this.field_k + param1;
           this.field_t = this.field_t + param0;
-          var6 = (vd) (this.field_l.d(param2));
+          var6 = (vd) (this.field_l.startForward(param2));
           while (var6 != null) {
             var6.d(param0, param1, 0);
-            var6 = (vd) (this.field_l.a((byte) -71));
+            var6 = (vd) (this.field_l.nextForward((byte) -71));
           }
           return;
         }
@@ -35,19 +35,19 @@ class vd extends IntrusiveNode {
         }
         this.field_k = this.field_k + param1;
         this.field_t = this.field_t + param0;
-        var6Lifetime1 = (vd) (this.field_l.d(param2));
+        var6Lifetime1 = (vd) (this.field_l.startForward(param2));
         while (var6Lifetime1 != null) {
           var6Lifetime1.d(param0, param1, 0);
-          var6Lifetime1 = (vd) (this.field_l.a((byte) -71));
+          var6Lifetime1 = (vd) (this.field_l.nextForward((byte) -71));
         }
     }
 
     void e(int param0) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        vd var4 = (vd) (this.field_l.d(param0 ^ param0));
+        vd var4 = (vd) (this.field_l.startForward(param0 ^ param0));
         while (var4 != null) {
-          var4.b((byte) -69);
-          var4 = (vd) (this.field_l.a((byte) -71));
+          var4.unlink((byte) -69);
+          var4 = (vd) (this.field_l.nextForward((byte) -71));
         }
     }
 
@@ -66,12 +66,12 @@ class vd extends IntrusiveNode {
             return true;
           }
           var4 = -85 / ((-63 - param0) / 47);
-          var6 = (vd) (this.field_l.d(0));
+          var6 = (vd) (this.field_l.startForward(0));
           while (var6 != null) {
             if (var6.a((byte) -125, param1)) {
               return true;
             }
-            var6 = (vd) (this.field_l.a((byte) -71));
+            var6 = (vd) (this.field_l.nextForward((byte) -71));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -108,7 +108,7 @@ class vd extends IntrusiveNode {
         return stackIn_18_0;
     }
 
-    final static boolean a(int param0, bc param1, int param2, int param3) {
+    final static boolean a(int param0, Archive param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -117,12 +117,12 @@ class vd extends IntrusiveNode {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param1.a(param0, -1, param2);
+          var5 = param1.getFile(param0, -1, param2);
           var4 = var5;
           if (var5 == null) {
             return false;
           }
-          k.a(var5, (byte) 62);
+          TurnEventLog.a(var5, (byte) 62);
           if (param3 == 2) {
             return true;
           }
@@ -315,7 +315,7 @@ class vd extends IntrusiveNode {
           vd.a((byte) 6);
         }
         ff.field_u = 2147483647;
-        s.field_e = -2147483648;
+        GzipInflater.field_e = -2147483648;
         us.field_b = -2147483648;
         ef.field_a = 2147483647;
     }
@@ -327,25 +327,25 @@ class vd extends IntrusiveNode {
         if (param0) {
           this.a((byte) 48, 44, -59);
         } else {
-          var4 = (vd) (this.field_l.d(0));
+          var4 = (vd) (this.field_l.startForward(0));
           while (var4 != null) {
             var4.c(false);
-            var4 = (vd) (this.field_l.a((byte) -71));
+            var4 = (vd) (this.field_l.nextForward((byte) -71));
           }
           this.e(0);
           return;
         }
-        var4Lifetime1 = (vd) (this.field_l.d(0));
+        var4Lifetime1 = (vd) (this.field_l.startForward(0));
         while (var4Lifetime1 != null) {
           var4Lifetime1.c(false);
-          var4Lifetime1 = (vd) (this.field_l.a((byte) -71));
+          var4Lifetime1 = (vd) (this.field_l.nextForward((byte) -71));
         }
         this.e(0);
     }
 
     void a(vd param0, int param1) {
         try {
-          this.field_l.a(param0, param1 ^ param1);
+          this.field_l.addFirst(param0, param1 ^ param1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "vd.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -365,8 +365,8 @@ class vd extends IntrusiveNode {
           field_r = null;
           return;
         }
-        bc var2 = (bc) null;
-        vd.a(40, (bc) null, 88, 85);
+        Archive var2 = (Archive) null;
+        vd.a(40, (Archive) null, 88, 85);
         field_q = null;
         field_j = null;
         field_r = null;
@@ -385,11 +385,11 @@ class vd extends IntrusiveNode {
     final static void d(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        sl var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        bc var4 = null;
+        Archive var4 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var1 = js.field_f;
@@ -398,12 +398,12 @@ class vd extends IntrusiveNode {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            hs.a(var1, (byte) -128);
-            js.field_f.b(-var2 + var1.position, (byte) 118);
+            StandardMapGenerator.a(var1, (byte) -128);
+            js.field_f.patchLengthByte(-var2 + var1.position, (byte) 118);
           }
           if (param0 != 2147483647) {
-            var4 = (bc) null;
-            vd.a(0, (bc) null, -70, 78);
+            var4 = (Archive) null;
+            vd.a(0, (Archive) null, -70, 78);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -446,7 +446,7 @@ class vd extends IntrusiveNode {
     }
 
     vd(int param0, int param1, int param2, int param3) {
-        rs.field_Cb.c("200");
+        rs.field_Cb.stringWidth("200");
         this.field_k = param0;
         this.field_h = null;
         this.field_i = param3;
