@@ -60,7 +60,7 @@ final class he {
         field_b = null;
     }
 
-    final static void a(int param0, java.awt.Canvas param1) {
+    final static void attachCanvasInput(int param0, java.awt.Canvas param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

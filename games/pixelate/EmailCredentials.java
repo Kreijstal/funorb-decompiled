@@ -193,7 +193,7 @@ class EmailCredentials extends LoginCredentials {
         return true;
     }
 
-    final void a(byte param0, PacketBuffer param1) {
+    final void writePayload(byte param0, PacketBuffer param1) {
         try {
           if (param0 != -12) {
             this.field_g = -108L;

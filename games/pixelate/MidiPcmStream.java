@@ -993,7 +993,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     final synchronized void g(int param0) {
-        this.a(125, true);
+        this.stopTrack(125, true);
         int var2 = 127 / ((param0 - 78) / 45);
     }
 
@@ -1002,7 +1002,7 @@ final class MidiPcmStream extends PcmStream {
         int var6 = 0;
         int var7 = Pixelate.field_H ? 1 : 0;
         try {
-          this.a(param3 + 66, param2);
+          this.stopTrack(param3 + 66, param2);
           this.midiReader.parse(param1.field_k);
           this.playbackTime = (long)param3;
           this.field_z = param0 ? true : false;
@@ -1215,7 +1215,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(byte param0) {
+    final synchronized boolean isReady(byte param0) {
         int var2 = -72 % ((param0 - 20) / 61);
         return this.midiReader.isReady();
     }
@@ -1254,7 +1254,7 @@ final class MidiPcmStream extends PcmStream {
         int var3 = -66 / ((-71 - param0) / 55);
     }
 
-    private final synchronized void a(int param0, boolean param1) {
+    private final synchronized void stopTrack(int param0, boolean param1) {
         this.midiReader.release();
         this.field_D = null;
         this.resetState((byte) 92, param1);

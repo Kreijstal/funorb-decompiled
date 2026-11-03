@@ -21,7 +21,7 @@ final class dg {
           var7 = var8.position;
           var8.writeByte(160, param1);
           if (param1 == 2) {
-            var8.b((byte) -41, param4);
+            var8.writeString((byte) -41, param4);
           }
           if (param3 != null) {
             DebouncedValidator.a(!param0 ? true : false, param3, var8);

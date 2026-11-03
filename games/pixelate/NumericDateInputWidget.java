@@ -64,7 +64,7 @@ final class NumericDateInputWidget extends DateInputWidget {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
             }
-            ib.a(param1, false);
+            ib.updatePageLinks(param1, false);
             if (param2) {
               return;
             }

@@ -23,7 +23,7 @@ final class ra {
         field_h = null;
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8) {
+    final static Sprite[] buildNineSliceSprites(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
         Sprite[] var10;

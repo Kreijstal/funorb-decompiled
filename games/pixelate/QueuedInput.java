@@ -115,7 +115,7 @@ final class QueuedInput extends IntrusiveNode {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            ib.a(param2, false);
+            ib.updatePageLinks(param2, false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

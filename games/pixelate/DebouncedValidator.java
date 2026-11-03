@@ -338,7 +338,7 @@ abstract class DebouncedValidator implements ValidationSource {
           ra.field_e.setBounds(10, -10 + (-10 + (-4 + (-120 + SoftwareRasterizer.field_d))), SoftwareRasterizer.field_j - 360 >> 1, 256, 360);
           ih.field_g.setBounds(0, 24, 0, 256, ra.field_e.field_K);
           kh.field_a.setBounds(24, -24 + ra.field_e.height, 0, 256, ra.field_e.field_K);
-          kh.field_a.field_zb = OptionsScreen.a(8421504, param0 ^ 48, 11579568, kh.field_a.height, 1, 3);
+          kh.field_a.field_zb = OptionsScreen.buildNineSliceSprites(8421504, param0 ^ 48, 11579568, kh.field_a.height, 1, 3);
           StripedProgressBar.field_O.setBounds(5, -2 + kh.field_a.height - 10 - 24, 5, param0 + 224, kh.field_a.field_K - 10);
           ContentTransitionDialog.field_eb.setBounds(-24 + kh.field_a.height - 5, 24, (-80 + kh.field_a.field_K) / 2, 256, 80);
           mi.b(false);

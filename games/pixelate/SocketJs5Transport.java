@@ -170,10 +170,10 @@ final class SocketJs5Transport extends Js5Transport {
             }
           }
           if (this.transport == null) {
-            if (this.b(-97) != 0) {
+            if (this.getInFlightRequestCount(-97) != 0) {
               return false;
             }
-            if (this.a((byte) 34) == 0) {
+            if (this.getPendingRequestCount((byte) 34) == 0) {
               return true;
             }
             return false;
@@ -333,8 +333,8 @@ final class SocketJs5Transport extends Js5Transport {
             this.field_h = this.field_h + 1;
             this.transport = null;
             this.field_m = -2;
-            if (0 == this.b(-30) &&
-              this.a((byte) 34) == 0) {
+            if (0 == this.getInFlightRequestCount(-30) &&
+              this.getPendingRequestCount((byte) 34) == 0) {
               return true;
             }
             return false;

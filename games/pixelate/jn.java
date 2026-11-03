@@ -39,7 +39,7 @@ final class jn extends IntrusiveNode {
         this.field_u = param0;
         this.field_t = TabbedPanel.a((byte) 41, 640, 240);
         this.field_y = TabbedPanel.a((byte) 41, 768, 256);
-        this.field_o = nh.c((byte) 60);
+        this.field_o = nh.randomUnitVector((byte) 60);
         this.field_l = 0;
         this.field_s = TabbedPanel.a((byte) 41, 50, 20);
         this.field_w = TabbedPanel.a((byte) 41, 75, 25);

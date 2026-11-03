@@ -399,7 +399,7 @@ final class io {
           GameModeSelectScreen.field_v.writeInt(ModalPanel.field_L[3], -48);
           wf.a(1, GameModeSelectScreen.field_v);
           GameModeSelectScreen.field_v.writeShort(1276387944, param3);
-          param2.a((byte) -12, GameModeSelectScreen.field_v);
+          param2.writePayload((byte) -12, GameModeSelectScreen.field_v);
           aa.field_f.position = 0;
           if (param0) {
             aa.field_f.writeByte(160, 18);
@@ -428,9 +428,9 @@ final class io {
           if (var7 == null) {
             var7 = "";
           }
-          aa.field_f.b((byte) -41, var7);
+          aa.field_f.writeString((byte) -41, var7);
           if (ConditionalTextValue.field_a != null) {
-            aa.field_f.writeString((byte) -66, ConditionalTextValue.field_a);
+            aa.field_f.a((byte) -66, ConditionalTextValue.field_a);
           }
           if (param1 >= -40) {
             var8 = (BinaryBitmapFont) null;

@@ -40,12 +40,12 @@ final class td {
         field_c = null;
         if (param0 != 6) {
           Sprite[] var2 = (Sprite[]) null;
-          td.a(72, -37, -11, (Sprite[]) null, (byte) -29, -65);
+          td.drawThreeSliceBar(72, -37, -11, (Sprite[]) null, (byte) -29, -65);
         }
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2, Sprite[] param3, byte param4, int param5) {
+    final static void drawThreeSliceBar(int param0, int param1, int param2, Sprite[] param3, byte param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -126,7 +126,7 @@ final class td {
           li.field_d.makeRasterTarget();
           if (param0 < 117) {
             var8 = (Sprite[]) null;
-            td.a(-3, 104, 72, (Sprite[]) null, (byte) -122, -90);
+            td.drawThreeSliceBar(-3, 104, 72, (Sprite[]) null, (byte) -122, -90);
           }
           for (var2_intLifetime1 = 0; 8 > var2_intLifetime1; var2_intLifetime1++) {
             var3Lifetime1 = (var2_intLifetime1 << 8) / 8;

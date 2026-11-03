@@ -38,7 +38,7 @@ final class GameResultsScreen extends MenuScreen {
         this.field_E = param1;
         this.field_H = param8;
         this.field_J = param6;
-        this.field_K = di.a(false, param9);
+        this.field_K = di.formatThousands(false, param9);
         if (!param4) {
           if (!param5) {
             if (param2) {
@@ -315,7 +315,7 @@ final class GameResultsScreen extends MenuScreen {
           this.field_p = new String[2];
           for (var4_int = 0; var4_int < 2; var4_int++) {
             this.field_M[var4_int] = param2.playerNames[var4_int];
-            this.field_p[var4_int] = di.a(false, param2.scores[var4_int]);
+            this.field_p[var4_int] = di.formatThousands(false, param2.scores[var4_int]);
           }
           if (param2.scores[0] >= param2.scores[1]) {
             stackIn_10_1 = 0;

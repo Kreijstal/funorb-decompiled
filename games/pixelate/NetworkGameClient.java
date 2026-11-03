@@ -300,9 +300,9 @@ abstract class NetworkGameClient extends GameApplet {
           if (0 != wo.field_d) {
             DebouncedValidator.field_e = MouseInputHandler.a(QuickChatCategoryCache.field_f, (byte) 124);
           }
-          wk.field_j = vm.a(true, (byte) 22, false, Matrix3.field_e, 1);
-          io.field_g = vm.a(true, (byte) 22, false, IconTextComponent.field_Hb, 1);
-          MatchingTextValidator.field_u = vm.a(true, (byte) 22, false, SocketJs5Transport.field_r, 1);
+          wk.field_j = vm.createArchive(true, (byte) 22, false, Matrix3.field_e, 1);
+          io.field_g = vm.createArchive(true, (byte) 22, false, IconTextComponent.field_Hb, 1);
+          MatchingTextValidator.field_u = vm.createArchive(true, (byte) 22, false, SocketJs5Transport.field_r, 1);
           qn.field_l = wk.field_j;
           dg.field_d = io.field_g;
           hf.field_q = 2;
@@ -391,7 +391,7 @@ abstract class NetworkGameClient extends GameApplet {
           wl.field_i) {
           MenuInputState.a(NameAvailabilityValidator.field_u, param0 ^ 0);
           this.recreateCanvas(-27106);
-          he.a(0, NameAvailabilityValidator.field_u);
+          he.attachCanvasInput(0, NameAvailabilityValidator.field_u);
         }
         if (Checkbox.field_P[8]) {
           GradientOutlineTextPainter.d(8);
@@ -408,11 +408,11 @@ abstract class NetworkGameClient extends GameApplet {
           return;
         }
         MenuInputState.b(wo.field_d, -31383);
-        l.a(false, wo.field_d, 5000, this.field_v, this.field_u, this.field_s, this.field_w, param0, 5000, param1, this.field_y, this.field_q, this.field_B, mc.field_k);
+        l.initialisePacketBuffers(false, wo.field_d, 5000, this.field_v, this.field_u, this.field_s, this.field_w, param0, 5000, param1, this.field_y, this.field_q, this.field_B, mc.field_k);
         KeyboardInputHandler.initializeArchiveServices(this.field_u, param0, wo.field_d, this.field_y, mc.field_k, this.field_q, this.field_w, -21462, this.field_B);
         qf.initialiseKeyMap(31171);
         ScrollContainer.field_Lb = bl.createMouseWheelHandler(71);
-        he.a(0, NameAvailabilityValidator.field_u);
+        he.attachCanvasInput(0, NameAvailabilityValidator.field_u);
         Matrix3.field_e = param6;
         SocketJs5Transport.field_r = param5;
         QuickChatCategoryCache.field_f = param7;

@@ -199,7 +199,7 @@ final class ThreeSliceButtonPainter extends TextWidgetPainter {
             stackIn_16_0 = this.field_v;
           }
           var7 = stackIn_16_0;
-          td.a(param3 + param0.field_z, param0.field_p + (param2 + (param0.field_C - this.field_s[0].field_B >> 1)), param0.field_E, this.field_s, (byte) 121, var7);
+          td.drawThreeSliceBar(param3 + param0.field_z, param0.field_p + (param2 + (param0.field_C - this.field_s[0].field_B >> 1)), param0.field_E, this.field_s, (byte) 121, var7);
           stackIn_19_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
           this.font.drawParagraph(param0.field_q, param3 + param0.field_z, param2 + param0.field_p - 2, param0.field_E, param0.field_C, var8, -1, 1, 1, this.font.maxAscent);

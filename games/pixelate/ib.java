@@ -13,7 +13,7 @@ final class ib {
     static FullscreenFocusCanvas field_f;
     static int field_g;
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void updatePageLinks(java.applet.Applet param0, boolean param1) {
         try {
           RuntimeException stackIn_6_0 = null;
           StringBuilder stackIn_6_1 = null;

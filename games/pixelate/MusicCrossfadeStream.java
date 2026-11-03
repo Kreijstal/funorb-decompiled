@@ -228,13 +228,13 @@ final class MusicCrossfadeStream extends PcmStream {
         }
         if (this.field_r) {
           if (this.fadeStep > 0 &&
-            !this.field_x.a((byte) -76)) {
+            !this.field_x.isReady((byte) -76)) {
             this.field_r = false;
             this.fadeStep = -this.fadeStep;
             this.field_q = null;
           } else {
             if (this.fadeStep < 0 &&
-              !this.field_H.a((byte) 112)) {
+              !this.field_H.isReady((byte) 112)) {
               this.field_r = false;
               this.fadeStep = -this.fadeStep;
               this.field_A = null;
@@ -394,13 +394,13 @@ final class MusicCrossfadeStream extends PcmStream {
           }
           if (this.field_r) {
             if (this.fadeStep > 0 &&
-              !this.field_x.a((byte) 105)) {
+              !this.field_x.isReady((byte) 105)) {
               this.field_q = null;
               this.field_r = false;
               this.fadeStep = -this.fadeStep;
             } else {
               if (this.fadeStep < 0 &&
-                !this.field_H.a((byte) -83)) {
+                !this.field_H.isReady((byte) -83)) {
                 this.fadeStep = -this.fadeStep;
                 this.field_A = null;
                 this.field_r = false;

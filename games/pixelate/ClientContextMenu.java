@@ -523,7 +523,7 @@ final class ClientContextMenu {
         if (io.field_c != null) {
           return;
         }
-        var3 = vm.a(this.field_m, (byte) -107);
+        var3 = vm.findLobbyGame(this.field_m, (byte) -107);
         if (var3 == null) {
           return;
         }

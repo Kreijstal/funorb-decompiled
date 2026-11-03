@@ -18,7 +18,7 @@ final class fp {
         field_d = null;
     }
 
-    static long a(long param0, long param1) {
+    static long xor(long param0, long param1) {
         return param0 ^ param1;
     }
 

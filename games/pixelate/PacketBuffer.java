@@ -46,7 +46,7 @@ class PacketBuffer extends IntrusiveNode {
         try {
           if (param2 > -71) {
             var7 = (String) null;
-            this.b((byte) -93, (String) null);
+            this.writeString((byte) -93, (String) null);
           }
           for (var5_int = param1; param1 + param3 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
@@ -80,7 +80,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void b(byte param0, String param1) {
+    final void writeString(byte param0, String param1) {
         int var3_int = 0;
         CharSequence var4 = null;
         int fieldTemp$0 = 0;
@@ -799,7 +799,7 @@ class PacketBuffer extends IntrusiveNode {
         return var6.toString();
     }
 
-    final void writeString(byte param0, String param1) {
+    final void a(byte param0, String param1) {
         int var3_int = 0;
         int fieldTemp$0 = 0;
         CharSequence var4 = null;

@@ -39,29 +39,29 @@ abstract class Js5Transport {
 
     abstract void attachTransport(Object param0, boolean param1, int param2);
 
-    final boolean a(int param0) {
+    final boolean isInFlightFull(int param0) {
         if (param0 != 20) {
           return false;
         }
-        return this.b(127) >= 20 ? true : false;
+        return this.getInFlightRequestCount(127) >= 20 ? true : false;
     }
 
-    final int a(byte param0) {
+    final int getPendingRequestCount(byte param0) {
         if (param0 != 34) {
           return 117;
         }
         return this.field_l.b(param0 + 67) + this.field_p.b(118);
     }
 
-    final boolean d(byte param0) {
+    final boolean isPendingFull(byte param0) {
         if (param0 > 9) {
-          return this.a((byte) 34) >= 20 ? true : false;
+          return this.getPendingRequestCount((byte) 34) >= 20 ? true : false;
         }
         this.field_f = (DualLinkDeque) null;
-        return this.a((byte) 34) >= 20 ? true : false;
+        return this.getPendingRequestCount((byte) 34) >= 20 ? true : false;
     }
 
-    final Js5NetworkRequest a(byte param0, int param1, boolean param2, int param3, byte param4) {
+    final Js5NetworkRequest createRequest(byte param0, int param1, boolean param2, int param3, byte param4) {
         if (param0 != -31) {
           return (Js5NetworkRequest) null;
         }
@@ -71,12 +71,12 @@ abstract class Js5Transport {
         var8.field_t = param2 ? true : false;
         var8.field_q = var6;
         if (param2) {
-          if (!(this.b(126) < 20)) {
+          if (!(this.getInFlightRequestCount(126) < 20)) {
             throw new RuntimeException();
           }
           this.field_e.addLast(-89, var8);
         } else {
-          if (this.a((byte) 34) < 20) {
+          if (this.getPendingRequestCount((byte) 34) < 20) {
             this.field_l.addLast(-45, var8);
             return var8;
           }
@@ -87,7 +87,7 @@ abstract class Js5Transport {
 
     abstract void reportIntegrityFailure(byte param0);
 
-    final int b(int param0) {
+    final int getInFlightRequestCount(int param0) {
         int var2 = 23 % ((58 - param0) / 55);
         return this.field_e.b(113) + this.field_f.b(102);
     }

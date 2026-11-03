@@ -137,7 +137,7 @@ final class AudioService implements Runnable {
                       param0.writeByte(160, 4);
                     } else {
                       param0.writeByte(160, 2);
-                      param0.b((byte) -41, (String) (var10));
+                      param0.writeString((byte) -41, (String) (var10));
                     }
                   } else {
                     if (4 == var6_int) {

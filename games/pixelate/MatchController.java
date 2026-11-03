@@ -1128,7 +1128,7 @@ final class MatchController {
         if (null != aa.field_p &&
           aa.field_p.field_n &&
           aa.field_p.field_r != null) {
-          this.field_e.field_f = di.a(false, aa.field_p.field_l[1][0]);
+          this.field_e.field_f = di.formatThousands(false, aa.field_p.field_l[1][0]);
           aa.field_p = null;
         }
         if (var4.a(false)) {

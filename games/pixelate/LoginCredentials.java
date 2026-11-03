@@ -36,7 +36,7 @@ abstract class LoginCredentials {
         try {
           var5 = -(var4 / 2) - 110 + var3 / 2 + 7;
           TickClock.field_e.setBounds(var5, -(var5 * 2) + (-120 + var3), (-320 + var2_int) / 2, 256, 320);
-          TickClock.field_e.field_zb = OptionsScreen.a(8421504, 16, 11579568, TickClock.field_e.height, 2105376, 3);
+          TickClock.field_e.field_zb = OptionsScreen.buildNineSliceSprites(8421504, 16, 11579568, TickClock.field_e.height, 2105376, 3);
           jm.field_h.setBounds(16, -24 + TickClock.field_e.height - 20, 24, 256, -24 + (TickClock.field_e.field_K - 24));
           DelegatingCanvas.field_h.setBounds(-24 + (TickClock.field_e.height - 20), 24, 120, 256, 80);
         } catch (RuntimeException runtimeException) {
@@ -44,7 +44,7 @@ abstract class LoginCredentials {
         }
     }
 
-    abstract void a(byte param0, PacketBuffer param1);
+    abstract void writePayload(byte param0, PacketBuffer param1);
 
     abstract ea getCredentialKind(int param0);
 

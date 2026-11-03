@@ -260,7 +260,7 @@ final class ReportAbuseDialog extends SceneWidget {
             var28[2].setBounds(var21, var17Lifetime5, 39 + 2 * var16Lifetime2, 256, var16Lifetime2);
             var22 = var21;
             this.field_Qb.setBounds(24, var17Lifetime5 + (var22 + 10), 0, 256, 13 + (var19 + 13));
-            this.field_Qb.field_zb = OptionsScreen.a(8421504, 16, 11579568, this.field_Qb.height, 2105376, 3);
+            this.field_Qb.field_zb = OptionsScreen.buildNineSliceSprites(8421504, 16, 11579568, this.field_Qb.height, 2105376, 3);
             var23 = 13 + (var19 + 13);
             var24 = var17Lifetime5 + (24 + var22) + 10;
             var25 = ui.a(param2, param0, var23, (byte) -1);
@@ -278,7 +278,7 @@ final class ReportAbuseDialog extends SceneWidget {
           this.field_Tb.setBounds(var16Lifetime1, var17Lifetime1 * fq.field_q, 13, 256, var15_int);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * fq.field_q;
           this.field_Qb.setBounds(24, var16Lifetime1 + 10, 0, 256, 13 + (var15_int + 13));
-          this.field_Qb.field_zb = OptionsScreen.a(8421504, 16, 11579568, this.field_Qb.height, 2105376, 3);
+          this.field_Qb.field_zb = OptionsScreen.buildNineSliceSprites(8421504, 16, 11579568, this.field_Qb.height, 2105376, 3);
           var18Lifetime1 = 13 - (-var15_int - 13);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = ui.a(param2, param0, var18Lifetime1, (byte) -1);
@@ -552,7 +552,7 @@ final class ReportAbuseDialog extends SceneWidget {
           ProxySocketConnector.field_k = new SceneWidget(0L, (SceneWidget) null);
           ProxySocketConnector.field_k.field_zb = AccountNamePrompt.a(false, false, 4210752, 120, true, 8421504);
           ConditionalTextValue.field_g = new SceneWidget(0L, (SceneWidget) null);
-          ConditionalTextValue.field_g.field_zb = OptionsScreen.a(6316128, 16, 6316128, 114, 1, 3);
+          ConditionalTextValue.field_g.field_zb = OptionsScreen.buildNineSliceSprites(6316128, 16, 6316128, 114, 1, 3);
           SoundCache.field_c = new SceneWidget(0L, (SceneWidget) null);
           SoundCache.field_c.field_zb = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("popup", "lobby", (byte) 47, param1));
           var12 = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("popup_mouseover", "lobby", (byte) 47, param1));
@@ -621,9 +621,9 @@ final class ReportAbuseDialog extends SceneWidget {
           ab.field_a.field_ab = FallingPieceView.a(false, SocketConnector.loadRgbSpritesByName("tab_mouseover", "lobby", (byte) 47, param1));
           ab.field_a.field_eb = var14;
           AccountMessagePanel.field_J = new SceneWidget(0L, (SceneWidget) null);
-          AccountMessagePanel.field_J.field_zb = OptionsScreen.a(1127256, 16, 1856141, 206, -1, 3);
+          AccountMessagePanel.field_J.field_zb = OptionsScreen.buildNineSliceSprites(1127256, 16, 1856141, 206, -1, 3);
           ff.field_a = new SceneWidget(0L, (SceneWidget) null);
-          ff.field_a.field_zb = OptionsScreen.a(6052956, 16, 11579568, 290, -1, 3);
+          ff.field_a.field_zb = OptionsScreen.buildNineSliceSprites(6052956, 16, 11579568, 290, -1, 3);
           PicturePreview.field_k = new SceneWidget(0L, var15);
           PicturePreview.field_k.field_V = 1;
           PicturePreview.field_k.selectedOffsetX = 1;

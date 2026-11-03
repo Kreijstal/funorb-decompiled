@@ -7,7 +7,7 @@ final class nh {
     static int[] field_a;
     static int field_b;
 
-    final static Vector3 c(byte param0) {
+    final static Vector3 randomUnitVector(byte param0) {
         int var1;
         int var2;
         int var3;
@@ -63,7 +63,7 @@ final class nh {
         rk.field_e.colorPalettes[3][var2] = 4473924;
     }
 
-    final static long a(CharSequence param0, int param1) {
+    final static long encodeBase37Name(CharSequence param0, int param1) {
         int var5 = 0;
         long stackIn_25_0 = 0L;
         RuntimeException stackIn_28_0 = null;

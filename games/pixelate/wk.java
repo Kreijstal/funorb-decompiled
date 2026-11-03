@@ -54,13 +54,13 @@ final class wk extends LoginCredentials {
         int var12 = -97 % ((param6 + 37) / 37);
     }
 
-    final void a(byte param0, PacketBuffer param1) {
+    final void writePayload(byte param0, PacketBuffer param1) {
         try {
-          param1.writeString((byte) -66, this.field_h);
+          param1.a((byte) -66, this.field_h);
           param1.writeBase38Name(-129, this.field_k);
           if (param0 != -12) {
             PacketBuffer var4 = (PacketBuffer) null;
-            this.a((byte) -114, (PacketBuffer) null);
+            this.writePayload((byte) -114, (PacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "wk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

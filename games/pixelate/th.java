@@ -47,7 +47,7 @@ final class th {
         field_b = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int fixedCosine(int param0, int param1) {
         param0 = param0 & param1;
         if (param0 >= 4096) {
           return param0 >= 6144 ? NanoTickClock.field_i[param0 - 6144] : -NanoTickClock.field_i[-param0 + 6144];

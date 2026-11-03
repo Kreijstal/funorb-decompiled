@@ -108,7 +108,7 @@ final class Bzip2State {
               var2 = 3;
             } else {
               var2 = 2;
-              he.a(0, ib.field_f);
+              he.attachCanvasInput(0, ib.field_f);
             }
           }
         } else {
@@ -130,7 +130,7 @@ final class Bzip2State {
               var2 = 3;
             } else {
               var2 = 2;
-              he.a(0, ib.field_f);
+              he.attachCanvasInput(0, ib.field_f);
             }
           }
         }

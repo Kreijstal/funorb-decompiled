@@ -148,10 +148,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 this.cacheGroupStates[param0] != -1) {
                 var4 = this.cacheIo.readNow(param0, this.field_y, 116);
               } else {
-                if (this.field_i.a(20)) {
+                if (this.field_i.isInFlightFull(20)) {
                   return null;
                 }
-                var4 = this.field_i.a((byte) -31, this.archiveId, true, param0, (byte) 2);
+                var4 = this.field_i.createRequest((byte) -31, this.archiveId, true, param0, (byte) 2);
               }
             } else {
               if (1 == param1) {
@@ -169,10 +169,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 if (this.cacheGroupStates[param0] != -1) {
                   throw new RuntimeException();
                 }
-                if (this.field_i.d((byte) 86)) {
+                if (this.field_i.isPendingFull((byte) 86)) {
                   return null;
                 }
-                var4 = this.field_i.a((byte) -31, this.archiveId, false, param0, (byte) 2);
+                var4 = this.field_i.createRequest((byte) -31, this.archiveId, false, param0, (byte) 2);
               }
             }
             this.requests.a((long)param0, 127, (IntrusiveNode) (var4));
@@ -229,10 +229,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
               this.cacheGroupStates[param0] = (byte)-1;
               ((ArchiveRequest) (var4)).unlink(2779);
               if (((ArchiveRequest) (var4)).field_t) {
-                if (this.field_i.a(20)) {
+                if (this.field_i.isInFlightFull(20)) {
                   return null;
                 }
-                var4 = this.field_i.a((byte) -31, this.archiveId, true, param0, (byte) 2);
+                var4 = this.field_i.createRequest((byte) -31, this.archiveId, true, param0, (byte) 2);
                 this.requests.a((long)param0, 127, (IntrusiveNode) (var4));
               }
               stackIn_118_0 = null;
@@ -271,10 +271,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
             if (!((ArchiveRequest) (var4)).field_t) {
               return null;
             }
-            if (this.field_i.a(20)) {
+            if (this.field_i.isInFlightFull(20)) {
               return null;
             }
-            var4 = this.field_i.a((byte) -31, this.archiveId, true, param0, (byte) 2);
+            var4 = this.field_i.createRequest((byte) -31, this.archiveId, true, param0, (byte) 2);
             this.requests.a((long)param0, 127, (IntrusiveNode) (var4));
             stackIn_68_0 = null;
             return (ArchiveRequest) (stackIn_68_0);
@@ -583,7 +583,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                     this.scanGroupId = this.scanGroupId + 1;
                     continue;
                   }
-                  if (!this.field_i.d((byte) 97)) {
+                  if (!this.field_i.isPendingFull((byte) 97)) {
                     if (1 != this.cacheGroupStates[this.scanGroupId]) {
                       discarded$0 = this.pollGroupRequest(this.scanGroupId, 2, true);
                     }
@@ -664,10 +664,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
             return stackIn_7_0;
           }
           if (this.field_o == null) {
-            if (this.field_i.a(20)) {
+            if (this.field_i.isInFlightFull(20)) {
               return null;
             }
-            this.field_o = (ArchiveRequest) ((Object) this.field_i.a((byte) -31, 255, true, this.archiveId, (byte) 0));
+            this.field_o = (ArchiveRequest) ((Object) this.field_i.createRequest((byte) -31, 255, true, this.archiveId, (byte) 0));
           }
           if (this.field_o.field_v) {
             stackIn_18_0 = null;
@@ -688,10 +688,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
               var3 = decompiledCaughtException;
               this.field_i.reportIntegrityFailure((byte) 0);
               this.index = null;
-              if (this.field_i.a(param0 ^ 48)) {
+              if (this.field_i.isInFlightFull(param0 ^ 48)) {
                 this.field_o = null;
               } else {
-                this.field_o = (ArchiveRequest) ((Object) this.field_i.a((byte) -31, 255, true, this.archiveId, (byte) 0));
+                this.field_o = (ArchiveRequest) ((Object) this.field_i.createRequest((byte) -31, 255, true, this.archiveId, (byte) 0));
               }
               stackIn_45_0 = null;
               return (ArchiveIndex) (stackIn_45_0);
@@ -712,10 +712,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = decompiledCaughtException;
               this.index = null;
-              if (this.field_i.a(20)) {
+              if (this.field_i.isInFlightFull(20)) {
                 this.field_o = null;
               } else {
-                this.field_o = (ArchiveRequest) ((Object) this.field_i.a((byte) -31, 255, true, this.archiveId, (byte) 0));
+                this.field_o = (ArchiveRequest) ((Object) this.field_i.createRequest((byte) -31, 255, true, this.archiveId, (byte) 0));
               }
               stackIn_33_0 = null;
               return (ArchiveIndex) (stackIn_33_0);

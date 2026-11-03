@@ -14,7 +14,7 @@ final class di {
         field_c = null;
     }
 
-    final static String a(boolean param0, int param1) {
+    final static String formatThousands(boolean param0, int param1) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;

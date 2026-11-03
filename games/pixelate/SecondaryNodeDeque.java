@@ -203,7 +203,7 @@ final class SecondaryNodeDeque implements Iterable {
         field_c[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = (var0 - 1) * 8;
-            field_c[var0] = fp.a(fp.a(fp.a(fp.a(FullscreenFocusCanvas.a(4278190080L, field_b[4][4 + var1]), fp.a(FullscreenFocusCanvas.a(1095216660480L, field_b[3][var1 + 3]), fp.a(FullscreenFocusCanvas.a(field_b[2][var1 + 2], 280375465082880L), fp.a(FullscreenFocusCanvas.a(-72057594037927936L, field_b[0][var1]), FullscreenFocusCanvas.a(field_b[1][var1 + 1], 71776119061217280L))))), FullscreenFocusCanvas.a(field_b[5][5 + var1], 16711680L)), FullscreenFocusCanvas.a(65280L, field_b[6][var1 + 6])), FullscreenFocusCanvas.a(field_b[7][var1 + 7], 255L));
+            field_c[var0] = fp.xor(fp.xor(fp.xor(fp.xor(FullscreenFocusCanvas.a(4278190080L, field_b[4][4 + var1]), fp.xor(FullscreenFocusCanvas.a(1095216660480L, field_b[3][var1 + 3]), fp.xor(FullscreenFocusCanvas.a(field_b[2][var1 + 2], 280375465082880L), fp.xor(FullscreenFocusCanvas.a(-72057594037927936L, field_b[0][var1]), FullscreenFocusCanvas.a(field_b[1][var1 + 1], 71776119061217280L))))), FullscreenFocusCanvas.a(field_b[5][5 + var1], 16711680L)), FullscreenFocusCanvas.a(65280L, field_b[6][var1 + 6])), FullscreenFocusCanvas.a(field_b[7][var1 + 7], 255L));
         }
         field_f = new PcmSample[132];
         field_d = "Achievements";

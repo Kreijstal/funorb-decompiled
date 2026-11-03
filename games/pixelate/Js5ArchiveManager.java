@@ -205,8 +205,8 @@ final class Js5ArchiveManager {
           this.field_j = param0;
           this.field_a = param1;
           this.field_f = param2;
-          if (!this.field_j.a(20)) {
-            this.field_g = this.field_j.a((byte) -31, 255, true, 255, (byte) 0);
+          if (!this.field_j.isInFlightFull(20)) {
+            this.field_g = this.field_j.createRequest((byte) -31, 255, true, 255, (byte) 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -258,10 +258,10 @@ final class Js5ArchiveManager {
           return true;
         }
         if (this.field_g == null) {
-          if (this.field_j.a(param0 ^ 32047)) {
+          if (this.field_j.isInFlightFull(param0 ^ 32047)) {
             return false;
           }
-          this.field_g = this.field_j.a((byte) -31, 255, true, 255, (byte) 0);
+          this.field_g = this.field_j.createRequest((byte) -31, 255, true, 255, (byte) 0);
         }
         if (this.field_g.field_v) {
           return false;

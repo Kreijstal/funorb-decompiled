@@ -20,7 +20,7 @@ final class bj {
         field_b = (int[]) null;
     }
 
-    final static Puzzle a(int param0, int param1) {
+    final static Puzzle createChallengePuzzle(int param0, int param1) {
         int var2 = 0;
         if (param0 >= 10) {
           if (10 > param0) {

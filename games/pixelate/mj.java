@@ -138,7 +138,7 @@ final class mj {
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.writeByte(160, 2);
-          var6.b((byte) -41, param1);
+          var6.writeString((byte) -41, param1);
           var6.backpatchByteLength(var6.position - var4, -1);
           var5 = 55 / ((param0 - 16) / 45);
           stackIn_22_0 = null;

@@ -291,7 +291,7 @@ final class Match {
           throw new IllegalStateException();
         }
         this.field_r = param1;
-        this.puzzle = bj.a(this.field_r, -89);
+        this.puzzle = bj.createChallengePuzzle(this.field_r, -89);
         for (var4 = param0; var4 < this.boards.length; var4++) {
           if (null != this.boards[var4]) {
             this.boards[var4] = new PlayerBoard(this.puzzle);
@@ -355,7 +355,7 @@ final class Match {
           this.field_g = param5;
           this.field_q = this.field_c + 1;
           if (param2 == 0) {
-            this.puzzle = bj.a(this.field_r, -121);
+            this.puzzle = bj.createChallengePuzzle(this.field_r, -121);
           }
           if (1 == param2) {
             this.puzzle = un.field_j.b(-3060);

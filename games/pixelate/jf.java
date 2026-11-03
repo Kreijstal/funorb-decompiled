@@ -160,7 +160,7 @@ final class jf {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(160, 0);
-          var5.b((byte) -41, param0);
+          var5.writeString((byte) -41, param0);
           var5.backpatchByteLength(-var4 + var5.position, -1);
           stackIn_29_0 = null;
           return (String) (stackIn_29_0);

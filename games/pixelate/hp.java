@@ -94,7 +94,7 @@ final class hp extends SceneWidget {
           this.field_Eb.setBounds(5, 15, -20 + var17.field_K, 256, 15);
           var8.setBounds(var17.height, this.height - var17.height, 0, 256, this.field_K);
           var9.setBounds(20, 15, 0, 256, this.field_K);
-          var8.field_zb = OptionsScreen.a(8421504, 16, 11579568, var8.height, 2105376, 3);
+          var8.field_zb = OptionsScreen.buildNineSliceSprites(8421504, 16, 11579568, var8.height, 2105376, 3);
           var17.addChild(this.field_Eb, (byte) 26);
           var8.addChild(var9, (byte) 26);
           this.addChild(var17, (byte) 26);

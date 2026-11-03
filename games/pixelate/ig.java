@@ -100,7 +100,7 @@ final class ig {
             }
           }
           if ((null != MainMenuScreen.field_q) &&
-            (stackIn_18_0 = MainMenuScreen.field_q.a((byte) -123))) {
+            (stackIn_18_0 = MainMenuScreen.field_q.isReady((byte) -123))) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

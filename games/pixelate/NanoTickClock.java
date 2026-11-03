@@ -179,7 +179,7 @@ final class NanoTickClock extends TickClock {
           var6 = null;
           if (param3.indexOf('@') == -1) {
             var7 = (CharSequence) ((Object) param3);
-            var4_long = nh.a(var7, -29667);
+            var4_long = nh.encodeBase37Name(var7, -29667);
           } else {
             var6 = param3;
           }
