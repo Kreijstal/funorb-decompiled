@@ -275,7 +275,7 @@ final class BytePlusOneCommand extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final ConsoleValue a(byte param0, ConsoleValue[] param1) {
+    final ConsoleValue execute(byte param0, ConsoleValue[] param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;

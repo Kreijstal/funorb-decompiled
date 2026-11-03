@@ -140,7 +140,7 @@ abstract class ConsoleCommand extends DualLinkNode {
         return this.field_s;
     }
 
-    abstract ConsoleValue a(byte param0, ConsoleValue[] param1);
+    abstract ConsoleValue execute(byte param0, ConsoleValue[] param1);
 
     final static void a(int param0, int param1, boolean param2, dg param3) {
         mt.field_a = param1;

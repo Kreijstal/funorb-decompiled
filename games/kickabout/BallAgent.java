@@ -268,7 +268,7 @@ class BallAgent extends MatchAgent {
         return false;
     }
 
-    final void a(byte param0, MatchAgent param1) {
+    final void copyStateFrom(byte param0, MatchAgent param1) {
         BallAgent var5 = null;
         try {
           var5 = (BallAgent) (param1);

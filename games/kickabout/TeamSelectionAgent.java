@@ -48,7 +48,7 @@ final class TeamSelectionAgent extends MatchAgent {
         return stackIn_11_0;
     }
 
-    final void a(byte param0, MatchAgent param1) {
+    final void copyStateFrom(byte param0, MatchAgent param1) {
         TeamSelectionAgent var6 = null;
         TeamSelectionAgent var3 = null;
         int var4 = 0;

@@ -184,7 +184,7 @@ final class FormationAgent extends MatchAgent {
         }
     }
 
-    final void a(byte param0, MatchAgent param1) {
+    final void copyStateFrom(byte param0, MatchAgent param1) {
         int var4 = 0;
         FormationAgent var3 = null;
         int var5 = 0;

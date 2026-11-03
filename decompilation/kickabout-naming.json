@@ -6780,6 +6780,14 @@
       "renamedSymbol": "M:TrinketShopDialog.dialogWidth(I)I"
     },
     {
+      "symbol": "M:el.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BytePlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;"
+    },
+    {
       "symbol": "M:em.c(B)V",
       "originalName": "c",
       "to": "releaseStatics",
@@ -6994,6 +7002,14 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:et.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:ev.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LongPlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;"
     },
     {
       "symbol": "M:ew.d(I)V",
@@ -8348,6 +8364,14 @@
       "renamedSymbol": "M:gs.releaseStatics(B)V"
     },
     {
+      "symbol": "M:gt.a(BLmo;)V",
+      "originalName": "a",
+      "to": "copyStateFrom",
+      "evidence": "Abstract hook that each agent subclass implements by copying the other agent's fields into itself. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ParticipantStatus.copyStateFrom(BLMatchAgent;)V"
+    },
+    {
       "symbol": "M:gt.d(I)Z",
       "originalName": "d",
       "to": "isActive",
@@ -8706,6 +8730,14 @@
       "evidence": "Abstract message evaluation called by b(int) after the debounce; jd implements it with the describe method on the widget text. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:hl.evaluateValidationMessage(I)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:hm.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SumIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;"
     },
     {
       "symbol": "M:hn.a(B)V",
@@ -9100,6 +9132,14 @@
       "renamedSymbol": "M:WeightedCacheEntry.releaseStatics(B)V"
     },
     {
+      "symbol": "M:ik.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntDoubleCommand.execute(B[LConsoleValue;)LConsoleValue;"
+    },
+    {
       "symbol": "M:il.a(B)V",
       "originalName": "a",
       "to": "releaseStatics",
@@ -9146,6 +9186,22 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ip.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:ir.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ThreeCommand.execute(B[LConsoleValue;)LConsoleValue;"
+    },
+    {
+      "symbol": "M:it.a(BLmo;)V",
+      "originalName": "a",
+      "to": "copyStateFrom",
+      "evidence": "Abstract hook that each agent subclass implements by copying the other agent's fields into itself. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:it.copyStateFrom(BLMatchAgent;)V"
     },
     {
       "symbol": "M:iu.a(B)V",
@@ -9676,6 +9732,14 @@
       "renamedSymbol": "M:TextFieldValidator.evaluateValidationMessage(I)Ljava/lang/String;"
     },
     {
+      "symbol": "M:jf.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DoSomethingCommand.execute(B[LConsoleValue;)LConsoleValue;"
+    },
+    {
       "symbol": "M:jg.a(BLfd;II)V",
       "originalName": "a",
       "to": "updatePointerState",
@@ -9892,6 +9956,14 @@
       "renamedSymbol": "M:RegistrationRequestDialog.releaseStatics(I)V"
     },
     {
+      "symbol": "M:jo.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DemoIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;"
+    },
+    {
       "symbol": "M:js.a(BZ)V",
       "originalName": "a",
       "to": "updateScreen",
@@ -10042,6 +10114,14 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ka.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:kb.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:WriteIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;"
     },
     {
       "symbol": "M:kc.a(B)V",
@@ -10652,6 +10732,14 @@
       "renamedSymbol": "M:DebouncedValidationProvider.evaluateValidationMessage(I)Ljava/lang/String;"
     },
     {
+      "symbol": "M:lh.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BroadcastServerCommand.execute(B[LConsoleValue;)LConsoleValue;"
+    },
+    {
       "symbol": "M:lh.g(B)V",
       "originalName": "g",
       "to": "releaseStatics",
@@ -10882,6 +10970,14 @@
       "evidence": "Abstract click hook; FormationView submits the formation when the button kind is 41. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:FormationView.onButtonClick(II)V"
+    },
+    {
+      "symbol": "M:ls.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BigCommand.execute(B[LConsoleValue;)LConsoleValue;"
     },
     {
       "symbol": "M:lt.a(I)V",
@@ -11364,6 +11460,14 @@
       "renamedSymbol": "M:mn.drawWidget(IZILUiWidget;I)V"
     },
     {
+      "symbol": "M:mo.a(BLmo;)V",
+      "originalName": "a",
+      "to": "copyStateFrom",
+      "evidence": "Abstract hook that each agent subclass implements by copying the other agent's fields into itself.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MatchAgent.copyStateFrom(BLMatchAgent;)V"
+    },
+    {
       "symbol": "M:mp.a(Ljava/applet/Applet;ZLjava/lang/String;)V",
       "originalName": "a",
       "to": "writeSettingsCookie",
@@ -11722,6 +11826,14 @@
       "evidence": "Stores the action code and loads its duration from the vf.field_I table.",
       "confidence": "reviewed",
       "renamedSymbol": "M:FootballerAgent.setAction(BI)V"
+    },
+    {
+      "symbol": "M:nl.a(BLmo;)V",
+      "originalName": "a",
+      "to": "copyStateFrom",
+      "evidence": "Abstract hook that each agent subclass implements by copying the other agent's fields into itself. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FootballerAgent.copyStateFrom(BLMatchAgent;)V"
     },
     {
       "symbol": "M:nl.a(II)V",
@@ -12308,6 +12420,14 @@
       "renamedSymbol": "M:TeamSelectionAgent.canJoinTeamZero(BI)Z"
     },
     {
+      "symbol": "M:oe.a(BLmo;)V",
+      "originalName": "a",
+      "to": "copyStateFrom",
+      "evidence": "Abstract hook that each agent subclass implements by copying the other agent's fields into itself. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TeamSelectionAgent.copyStateFrom(BLMatchAgent;)V"
+    },
+    {
       "symbol": "M:oe.a(II)Z",
       "originalName": "a",
       "to": "isReadyOrInactive",
@@ -12714,6 +12834,14 @@
       "evidence": "Copies the pitch-end, per-footballer, per-player and nobody counters from another log.",
       "confidence": "reviewed",
       "renamedSymbol": "M:LoggedPossession.copyFrom(ILLoggedPossession;)V"
+    },
+    {
+      "symbol": "M:pb.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;"
     },
     {
       "symbol": "M:pd.a(CBLfd;I)Z",
@@ -14764,6 +14892,14 @@
       "renamedSymbol": "M:BallAgent.stepPhysics(BI[LPlayArea;)V"
     },
     {
+      "symbol": "M:tj.a(BLmo;)V",
+      "originalName": "a",
+      "to": "copyStateFrom",
+      "evidence": "Abstract hook that each agent subclass implements by copying the other agent's fields into itself. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BallAgent.copyStateFrom(BLMatchAgent;)V"
+    },
+    {
       "symbol": "M:tj.a(Z)I",
       "originalName": "a",
       "to": "pixelX",
@@ -14850,6 +14986,22 @@
       "evidence": "Static method whose body only assigns null to static fields of this class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:tl.releaseStatics(I)V"
+    },
+    {
+      "symbol": "M:tm.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ConsoleCommand.execute(B[LConsoleValue;)LConsoleValue;"
+    },
+    {
+      "symbol": "M:tq.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NotCommand.execute(B[LConsoleValue;)LConsoleValue;"
     },
     {
       "symbol": "M:tr.a(B)Z",
@@ -15028,6 +15180,14 @@
       "renamedSymbol": "M:GoalStateAgent.releaseStatics(B)V"
     },
     {
+      "symbol": "M:ua.a(BLmo;)V",
+      "originalName": "a",
+      "to": "copyStateFrom",
+      "evidence": "Abstract hook that each agent subclass implements by copying the other agent's fields into itself. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GoalStateAgent.copyStateFrom(BLMatchAgent;)V"
+    },
+    {
       "symbol": "M:ua.a(Lml;B)V",
       "originalName": "a",
       "to": "readState",
@@ -15074,6 +15234,14 @@
       "evidence": "Matches armiesofgielinor/geoblox ContentTransitionDialog.advanceDialogAnimation by signature and body shape. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ModalPanel.advanceDialogAnimation(I)Z"
+    },
+    {
+      "symbol": "M:uc.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntTripleCommand.execute(B[LConsoleValue;)LConsoleValue;"
     },
     {
       "symbol": "M:ud.a(BZ)V",
@@ -15178,6 +15346,14 @@
       "evidence": "Throws while the request is pending, otherwise returns the data array. Resolved override family. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ui.getBytes(I)[B"
+    },
+    {
+      "symbol": "M:uj.a(B[Lli;)Lli;",
+      "originalName": "a",
+      "to": "execute",
+      "evidence": "Abstract command body that takes the parsed argument values and returns a result value. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetLagCommand.execute(B[LConsoleValue;)LConsoleValue;"
     },
     {
       "symbol": "M:uk.a(B)V",
@@ -16980,6 +17156,14 @@
       "renamedSymbol": "M:wk.releaseStatics(B)V"
     },
     {
+      "symbol": "M:wl.a(BLmo;)V",
+      "originalName": "a",
+      "to": "copyStateFrom",
+      "evidence": "Abstract hook that each agent subclass implements by copying the other agent's fields into itself. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LineupAgent.copyStateFrom(BLMatchAgent;)V"
+    },
+    {
       "symbol": "M:wl.a(II)Z",
       "originalName": "a",
       "to": "isReadyOrInactive",
@@ -17082,6 +17266,14 @@
       "evidence": "Returns true when both teams' confirmed flags are set.",
       "confidence": "reviewed",
       "renamedSymbol": "M:FormationAgent.allFormationsConfirmed(B)Z"
+    },
+    {
+      "symbol": "M:wr.a(BLmo;)V",
+      "originalName": "a",
+      "to": "copyStateFrom",
+      "evidence": "Abstract hook that each agent subclass implements by copying the other agent's fields into itself. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FormationAgent.copyStateFrom(BLMatchAgent;)V"
     },
     {
       "symbol": "M:wr.a(III)V",
@@ -121618,7 +121810,7 @@
     },
     {
       "symbol": "L:el.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:BytePlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:BytePlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -121629,7 +121821,7 @@
     },
     {
       "symbol": "L:el.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:BytePlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:BytePlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -121640,7 +121832,7 @@
     },
     {
       "symbol": "L:el.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:BytePlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:BytePlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -121651,7 +121843,7 @@
     },
     {
       "symbol": "L:el.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:BytePlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:BytePlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -121662,7 +121854,7 @@
     },
     {
       "symbol": "L:el.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:BytePlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:BytePlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -121673,7 +121865,7 @@
     },
     {
       "symbol": "L:el.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:BytePlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:BytePlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -121684,7 +121876,7 @@
     },
     {
       "symbol": "L:el.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:BytePlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:BytePlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -127679,7 +127871,7 @@
     },
     {
       "symbol": "L:ev.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:LongPlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:LongPlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -127690,7 +127882,7 @@
     },
     {
       "symbol": "L:ev.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:LongPlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:LongPlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -127701,7 +127893,7 @@
     },
     {
       "symbol": "L:ev.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:LongPlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:LongPlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -127712,7 +127904,7 @@
     },
     {
       "symbol": "L:ev.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:LongPlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:LongPlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -127723,7 +127915,7 @@
     },
     {
       "symbol": "L:ev.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:LongPlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:LongPlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -127734,7 +127926,7 @@
     },
     {
       "symbol": "L:ev.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:LongPlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:LongPlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -127745,7 +127937,7 @@
     },
     {
       "symbol": "L:ev.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:LongPlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:LongPlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -127756,7 +127948,7 @@
     },
     {
       "symbol": "L:ev.a(B[Lli;)Lli;#7",
-      "renamedSymbol": "L:LongPlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#7",
+      "renamedSymbol": "L:LongPlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -147050,7 +147242,7 @@
     },
     {
       "symbol": "L:gt.a(BLmo;)V#0",
-      "renamedSymbol": "L:ParticipantStatus.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "L:ParticipantStatus.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -147061,7 +147253,7 @@
     },
     {
       "symbol": "L:gt.a(BLmo;)V#1",
-      "renamedSymbol": "L:ParticipantStatus.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "L:ParticipantStatus.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -147072,7 +147264,7 @@
     },
     {
       "symbol": "L:gt.a(BLmo;)V#2",
-      "renamedSymbol": "L:ParticipantStatus.a(BLMatchAgent;)V#2",
+      "renamedSymbol": "L:ParticipantStatus.copyStateFrom(BLMatchAgent;)V#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -147083,7 +147275,7 @@
     },
     {
       "symbol": "L:gt.a(BLmo;)V#3",
-      "renamedSymbol": "L:ParticipantStatus.a(BLMatchAgent;)V#3",
+      "renamedSymbol": "L:ParticipantStatus.copyStateFrom(BLMatchAgent;)V#3",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -147094,7 +147286,7 @@
     },
     {
       "symbol": "L:gt.a(BLmo;)V#4",
-      "renamedSymbol": "L:ParticipantStatus.a(BLMatchAgent;)V#4",
+      "renamedSymbol": "L:ParticipantStatus.copyStateFrom(BLMatchAgent;)V#4",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -147105,7 +147297,7 @@
     },
     {
       "symbol": "L:gt.a(BLmo;)V#5",
-      "renamedSymbol": "L:ParticipantStatus.a(BLMatchAgent;)V#5",
+      "renamedSymbol": "L:ParticipantStatus.copyStateFrom(BLMatchAgent;)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -147116,7 +147308,7 @@
     },
     {
       "symbol": "L:gt.a(BLmo;)V#6",
-      "renamedSymbol": "L:ParticipantStatus.a(BLMatchAgent;)V#6",
+      "renamedSymbol": "L:ParticipantStatus.copyStateFrom(BLMatchAgent;)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -153309,7 +153501,7 @@
     },
     {
       "symbol": "L:hm.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:SumIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:SumIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -153320,7 +153512,7 @@
     },
     {
       "symbol": "L:hm.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:SumIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:SumIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -153331,7 +153523,7 @@
     },
     {
       "symbol": "L:hm.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:SumIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:SumIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -153342,7 +153534,7 @@
     },
     {
       "symbol": "L:hm.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:SumIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:SumIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -153353,7 +153545,7 @@
     },
     {
       "symbol": "L:hm.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:SumIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:SumIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -153364,7 +153556,7 @@
     },
     {
       "symbol": "L:hm.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:SumIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:SumIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -153375,7 +153567,7 @@
     },
     {
       "symbol": "L:hm.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:SumIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:SumIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -164056,7 +164248,7 @@
     },
     {
       "symbol": "L:ik.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:IntDoubleCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:IntDoubleCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -164067,7 +164259,7 @@
     },
     {
       "symbol": "L:ik.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:IntDoubleCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:IntDoubleCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -164078,7 +164270,7 @@
     },
     {
       "symbol": "L:ik.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:IntDoubleCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:IntDoubleCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -164089,7 +164281,7 @@
     },
     {
       "symbol": "L:ik.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:IntDoubleCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:IntDoubleCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -164100,7 +164292,7 @@
     },
     {
       "symbol": "L:ik.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:IntDoubleCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:IntDoubleCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -164111,7 +164303,7 @@
     },
     {
       "symbol": "L:ik.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:IntDoubleCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:IntDoubleCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -164122,7 +164314,7 @@
     },
     {
       "symbol": "L:ik.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:IntDoubleCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:IntDoubleCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -165816,7 +166008,7 @@
     },
     {
       "symbol": "L:ir.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:ThreeCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:ThreeCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -165827,7 +166019,7 @@
     },
     {
       "symbol": "L:ir.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:ThreeCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:ThreeCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -165838,7 +166030,7 @@
     },
     {
       "symbol": "L:ir.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:ThreeCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:ThreeCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -165849,7 +166041,7 @@
     },
     {
       "symbol": "L:ir.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:ThreeCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:ThreeCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -165860,7 +166052,7 @@
     },
     {
       "symbol": "L:ir.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:ThreeCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:ThreeCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -165871,7 +166063,7 @@
     },
     {
       "symbol": "L:ir.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:ThreeCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:ThreeCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -165882,7 +166074,7 @@
     },
     {
       "symbol": "L:ir.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:ThreeCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:ThreeCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -166135,7 +166327,7 @@
     },
     {
       "symbol": "L:it.a(BLmo;)V#0",
-      "renamedSymbol": "L:it.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "L:it.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -166146,7 +166338,7 @@
     },
     {
       "symbol": "L:it.a(BLmo;)V#1",
-      "renamedSymbol": "L:it.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "L:it.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -166157,7 +166349,7 @@
     },
     {
       "symbol": "L:it.a(BLmo;)V#2",
-      "renamedSymbol": "L:it.a(BLMatchAgent;)V#2",
+      "renamedSymbol": "L:it.copyStateFrom(BLMatchAgent;)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -166168,7 +166360,7 @@
     },
     {
       "symbol": "L:it.a(BLmo;)V#3",
-      "renamedSymbol": "L:it.a(BLMatchAgent;)V#3",
+      "renamedSymbol": "L:it.copyStateFrom(BLMatchAgent;)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -166179,7 +166371,7 @@
     },
     {
       "symbol": "L:it.a(BLmo;)V#4",
-      "renamedSymbol": "L:it.a(BLMatchAgent;)V#4",
+      "renamedSymbol": "L:it.copyStateFrom(BLMatchAgent;)V#4",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -170942,7 +171134,7 @@
     },
     {
       "symbol": "L:jf.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:DoSomethingCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:DoSomethingCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -170953,7 +171145,7 @@
     },
     {
       "symbol": "L:jf.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:DoSomethingCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:DoSomethingCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -170964,7 +171156,7 @@
     },
     {
       "symbol": "L:jf.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:DoSomethingCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:DoSomethingCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -170975,7 +171167,7 @@
     },
     {
       "symbol": "L:jf.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:DoSomethingCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:DoSomethingCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -170986,7 +171178,7 @@
     },
     {
       "symbol": "L:jf.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:DoSomethingCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:DoSomethingCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -170997,7 +171189,7 @@
     },
     {
       "symbol": "L:jf.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:DoSomethingCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:DoSomethingCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -171008,7 +171200,7 @@
     },
     {
       "symbol": "L:jf.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:DoSomethingCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:DoSomethingCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -171019,7 +171211,7 @@
     },
     {
       "symbol": "L:jf.a(B[Lli;)Lli;#7",
-      "renamedSymbol": "L:DoSomethingCommand.a(B[LConsoleValue;)LConsoleValue;#7",
+      "renamedSymbol": "L:DoSomethingCommand.execute(B[LConsoleValue;)LConsoleValue;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -176046,7 +176238,7 @@
     },
     {
       "symbol": "L:jo.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:DemoIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:DemoIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -176057,7 +176249,7 @@
     },
     {
       "symbol": "L:jo.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:DemoIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:DemoIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -176068,7 +176260,7 @@
     },
     {
       "symbol": "L:jo.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:DemoIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:DemoIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -176079,7 +176271,7 @@
     },
     {
       "symbol": "L:jo.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:DemoIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:DemoIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -176090,7 +176282,7 @@
     },
     {
       "symbol": "L:jo.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:DemoIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:DemoIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -176101,7 +176293,7 @@
     },
     {
       "symbol": "L:jo.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:DemoIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:DemoIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -176112,7 +176304,7 @@
     },
     {
       "symbol": "L:jo.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:DemoIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:DemoIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -180622,7 +180814,7 @@
     },
     {
       "symbol": "L:kb.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:WriteIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:WriteIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -180633,7 +180825,7 @@
     },
     {
       "symbol": "L:kb.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:WriteIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:WriteIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -180644,7 +180836,7 @@
     },
     {
       "symbol": "L:kb.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:WriteIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:WriteIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -180655,7 +180847,7 @@
     },
     {
       "symbol": "L:kb.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:WriteIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:WriteIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -180666,7 +180858,7 @@
     },
     {
       "symbol": "L:kb.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:WriteIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:WriteIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -180677,7 +180869,7 @@
     },
     {
       "symbol": "L:kb.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:WriteIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:WriteIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -180688,7 +180880,7 @@
     },
     {
       "symbol": "L:kb.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:WriteIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:WriteIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -180699,7 +180891,7 @@
     },
     {
       "symbol": "L:kb.a(B[Lli;)Lli;#7",
-      "renamedSymbol": "L:WriteIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#7",
+      "renamedSymbol": "L:WriteIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -194603,7 +194795,7 @@
     },
     {
       "symbol": "L:lh.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:BroadcastServerCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:BroadcastServerCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -194614,7 +194806,7 @@
     },
     {
       "symbol": "L:lh.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:BroadcastServerCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:BroadcastServerCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -194625,7 +194817,7 @@
     },
     {
       "symbol": "L:lh.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:BroadcastServerCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:BroadcastServerCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -194636,7 +194828,7 @@
     },
     {
       "symbol": "L:lh.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:BroadcastServerCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:BroadcastServerCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -194647,7 +194839,7 @@
     },
     {
       "symbol": "L:lh.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:BroadcastServerCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:BroadcastServerCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -194658,7 +194850,7 @@
     },
     {
       "symbol": "L:lh.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:BroadcastServerCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:BroadcastServerCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -194669,7 +194861,7 @@
     },
     {
       "symbol": "L:lh.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:BroadcastServerCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:BroadcastServerCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -194680,7 +194872,7 @@
     },
     {
       "symbol": "L:lh.a(B[Lli;)Lli;#7",
-      "renamedSymbol": "L:BroadcastServerCommand.a(B[LConsoleValue;)LConsoleValue;#7",
+      "renamedSymbol": "L:BroadcastServerCommand.execute(B[LConsoleValue;)LConsoleValue;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -199817,7 +200009,7 @@
     },
     {
       "symbol": "L:ls.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:BigCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:BigCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -199828,7 +200020,7 @@
     },
     {
       "symbol": "L:ls.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:BigCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:BigCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -199839,7 +200031,7 @@
     },
     {
       "symbol": "L:ls.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:BigCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:BigCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -199850,7 +200042,7 @@
     },
     {
       "symbol": "L:ls.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:BigCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:BigCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -199861,7 +200053,7 @@
     },
     {
       "symbol": "L:ls.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:BigCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:BigCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -199872,7 +200064,7 @@
     },
     {
       "symbol": "L:ls.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:BigCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:BigCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -199883,7 +200075,7 @@
     },
     {
       "symbol": "L:ls.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:BigCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:BigCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -199894,7 +200086,7 @@
     },
     {
       "symbol": "L:ls.a(B[Lli;)Lli;#7",
-      "renamedSymbol": "L:BigCommand.a(B[LConsoleValue;)LConsoleValue;#7",
+      "renamedSymbol": "L:BigCommand.execute(B[LConsoleValue;)LConsoleValue;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -217472,7 +217664,7 @@
     },
     {
       "symbol": "L:nl.a(BLmo;)V#0",
-      "renamedSymbol": "L:FootballerAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "L:FootballerAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -217483,7 +217675,7 @@
     },
     {
       "symbol": "L:nl.a(BLmo;)V#1",
-      "renamedSymbol": "L:FootballerAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "L:FootballerAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -231079,7 +231271,7 @@
     },
     {
       "symbol": "L:oe.a(BLmo;)V#0",
-      "renamedSymbol": "L:TeamSelectionAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "L:TeamSelectionAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -231090,7 +231282,7 @@
     },
     {
       "symbol": "L:oe.a(BLmo;)V#1",
-      "renamedSymbol": "L:TeamSelectionAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "L:TeamSelectionAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -231101,7 +231293,7 @@
     },
     {
       "symbol": "L:oe.a(BLmo;)V#2",
-      "renamedSymbol": "L:TeamSelectionAgent.a(BLMatchAgent;)V#2",
+      "renamedSymbol": "L:TeamSelectionAgent.copyStateFrom(BLMatchAgent;)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -231112,7 +231304,7 @@
     },
     {
       "symbol": "L:oe.a(BLmo;)V#3",
-      "renamedSymbol": "L:TeamSelectionAgent.a(BLMatchAgent;)V#3",
+      "renamedSymbol": "L:TeamSelectionAgent.copyStateFrom(BLMatchAgent;)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -231123,7 +231315,7 @@
     },
     {
       "symbol": "L:oe.a(BLmo;)V#4",
-      "renamedSymbol": "L:TeamSelectionAgent.a(BLMatchAgent;)V#4",
+      "renamedSymbol": "L:TeamSelectionAgent.copyStateFrom(BLMatchAgent;)V#4",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -247953,7 +248145,7 @@
     },
     {
       "symbol": "L:pb.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:IsSixCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -247964,7 +248156,7 @@
     },
     {
       "symbol": "L:pb.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:IsSixCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -247975,7 +248167,7 @@
     },
     {
       "symbol": "L:pb.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:IsSixCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -247986,7 +248178,7 @@
     },
     {
       "symbol": "L:pb.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:IsSixCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -247997,7 +248189,7 @@
     },
     {
       "symbol": "L:pb.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:IsSixCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -248008,7 +248200,7 @@
     },
     {
       "symbol": "L:pb.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:IsSixCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -248019,7 +248211,7 @@
     },
     {
       "symbol": "L:pb.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:IsSixCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -248030,7 +248222,7 @@
     },
     {
       "symbol": "L:pb.a(B[Lli;)Lli;#7",
-      "renamedSymbol": "L:IsSixCommand.a(B[LConsoleValue;)LConsoleValue;#7",
+      "renamedSymbol": "L:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -296683,7 +296875,7 @@
     },
     {
       "symbol": "L:tj.a(BLmo;)V#0",
-      "renamedSymbol": "L:BallAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "L:BallAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -296694,7 +296886,7 @@
     },
     {
       "symbol": "L:tj.a(BLmo;)V#1",
-      "renamedSymbol": "L:BallAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "L:BallAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -296705,7 +296897,7 @@
     },
     {
       "symbol": "L:tj.a(BLmo;)V#2",
-      "renamedSymbol": "L:BallAgent.a(BLMatchAgent;)V#2",
+      "renamedSymbol": "L:BallAgent.copyStateFrom(BLMatchAgent;)V#2",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -298201,7 +298393,7 @@
     },
     {
       "symbol": "L:tq.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:NotCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:NotCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -298212,7 +298404,7 @@
     },
     {
       "symbol": "L:tq.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:NotCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:NotCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -298223,7 +298415,7 @@
     },
     {
       "symbol": "L:tq.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:NotCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:NotCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -298234,7 +298426,7 @@
     },
     {
       "symbol": "L:tq.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:NotCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:NotCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -298245,7 +298437,7 @@
     },
     {
       "symbol": "L:tq.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:NotCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:NotCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -298256,7 +298448,7 @@
     },
     {
       "symbol": "L:tq.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:NotCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:NotCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -298267,7 +298459,7 @@
     },
     {
       "symbol": "L:tq.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:NotCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:NotCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -300412,7 +300604,7 @@
     },
     {
       "symbol": "L:ua.a(BLmo;)V#0",
-      "renamedSymbol": "L:GoalStateAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "L:GoalStateAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -300423,7 +300615,7 @@
     },
     {
       "symbol": "L:ua.a(BLmo;)V#1",
-      "renamedSymbol": "L:GoalStateAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "L:GoalStateAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -300434,7 +300626,7 @@
     },
     {
       "symbol": "L:ua.a(BLmo;)V#2",
-      "renamedSymbol": "L:GoalStateAgent.a(BLMatchAgent;)V#2",
+      "renamedSymbol": "L:GoalStateAgent.copyStateFrom(BLMatchAgent;)V#2",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -300874,7 +301066,7 @@
     },
     {
       "symbol": "L:uc.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:IntTripleCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:IntTripleCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -300885,7 +301077,7 @@
     },
     {
       "symbol": "L:uc.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:IntTripleCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:IntTripleCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -300896,7 +301088,7 @@
     },
     {
       "symbol": "L:uc.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:IntTripleCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:IntTripleCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -300907,7 +301099,7 @@
     },
     {
       "symbol": "L:uc.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:IntTripleCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:IntTripleCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -300918,7 +301110,7 @@
     },
     {
       "symbol": "L:uc.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:IntTripleCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:IntTripleCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -300929,7 +301121,7 @@
     },
     {
       "symbol": "L:uc.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:IntTripleCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:IntTripleCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -300940,7 +301132,7 @@
     },
     {
       "symbol": "L:uc.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:IntTripleCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:IntTripleCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -303613,7 +303805,7 @@
     },
     {
       "symbol": "L:uj.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "L:SetLagCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "L:SetLagCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -303624,7 +303816,7 @@
     },
     {
       "symbol": "L:uj.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "L:SetLagCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "L:SetLagCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -303635,7 +303827,7 @@
     },
     {
       "symbol": "L:uj.a(B[Lli;)Lli;#2",
-      "renamedSymbol": "L:SetLagCommand.a(B[LConsoleValue;)LConsoleValue;#2",
+      "renamedSymbol": "L:SetLagCommand.execute(B[LConsoleValue;)LConsoleValue;#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -303646,7 +303838,7 @@
     },
     {
       "symbol": "L:uj.a(B[Lli;)Lli;#3",
-      "renamedSymbol": "L:SetLagCommand.a(B[LConsoleValue;)LConsoleValue;#3",
+      "renamedSymbol": "L:SetLagCommand.execute(B[LConsoleValue;)LConsoleValue;#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -303657,7 +303849,7 @@
     },
     {
       "symbol": "L:uj.a(B[Lli;)Lli;#4",
-      "renamedSymbol": "L:SetLagCommand.a(B[LConsoleValue;)LConsoleValue;#4",
+      "renamedSymbol": "L:SetLagCommand.execute(B[LConsoleValue;)LConsoleValue;#4",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -303668,7 +303860,7 @@
     },
     {
       "symbol": "L:uj.a(B[Lli;)Lli;#5",
-      "renamedSymbol": "L:SetLagCommand.a(B[LConsoleValue;)LConsoleValue;#5",
+      "renamedSymbol": "L:SetLagCommand.execute(B[LConsoleValue;)LConsoleValue;#5",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -303679,7 +303871,7 @@
     },
     {
       "symbol": "L:uj.a(B[Lli;)Lli;#6",
-      "renamedSymbol": "L:SetLagCommand.a(B[LConsoleValue;)LConsoleValue;#6",
+      "renamedSymbol": "L:SetLagCommand.execute(B[LConsoleValue;)LConsoleValue;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -303690,7 +303882,7 @@
     },
     {
       "symbol": "L:uj.a(B[Lli;)Lli;#7",
-      "renamedSymbol": "L:SetLagCommand.a(B[LConsoleValue;)LConsoleValue;#7",
+      "renamedSymbol": "L:SetLagCommand.execute(B[LConsoleValue;)LConsoleValue;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -335843,7 +336035,7 @@
     },
     {
       "symbol": "L:wl.a(BLmo;)V#0",
-      "renamedSymbol": "L:LineupAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "L:LineupAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -335854,7 +336046,7 @@
     },
     {
       "symbol": "L:wl.a(BLmo;)V#1",
-      "renamedSymbol": "L:LineupAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "L:LineupAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -335865,7 +336057,7 @@
     },
     {
       "symbol": "L:wl.a(BLmo;)V#2",
-      "renamedSymbol": "L:LineupAgent.a(BLMatchAgent;)V#2",
+      "renamedSymbol": "L:LineupAgent.copyStateFrom(BLMatchAgent;)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -335876,7 +336068,7 @@
     },
     {
       "symbol": "L:wl.a(BLmo;)V#3",
-      "renamedSymbol": "L:LineupAgent.a(BLMatchAgent;)V#3",
+      "renamedSymbol": "L:LineupAgent.copyStateFrom(BLMatchAgent;)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -335887,7 +336079,7 @@
     },
     {
       "symbol": "L:wl.a(BLmo;)V#4",
-      "renamedSymbol": "L:LineupAgent.a(BLMatchAgent;)V#4",
+      "renamedSymbol": "L:LineupAgent.copyStateFrom(BLMatchAgent;)V#4",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -339814,7 +340006,7 @@
     },
     {
       "symbol": "L:wr.a(BLmo;)V#0",
-      "renamedSymbol": "L:FormationAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "L:FormationAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -339825,7 +340017,7 @@
     },
     {
       "symbol": "L:wr.a(BLmo;)V#1",
-      "renamedSymbol": "L:FormationAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "L:FormationAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -339836,7 +340028,7 @@
     },
     {
       "symbol": "L:wr.a(BLmo;)V#2",
-      "renamedSymbol": "L:FormationAgent.a(BLMatchAgent;)V#2",
+      "renamedSymbol": "L:FormationAgent.copyStateFrom(BLMatchAgent;)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -339847,7 +340039,7 @@
     },
     {
       "symbol": "L:wr.a(BLmo;)V#3",
-      "renamedSymbol": "L:FormationAgent.a(BLMatchAgent;)V#3",
+      "renamedSymbol": "L:FormationAgent.copyStateFrom(BLMatchAgent;)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -339858,7 +340050,7 @@
     },
     {
       "symbol": "L:wr.a(BLmo;)V#4",
-      "renamedSymbol": "L:FormationAgent.a(BLMatchAgent;)V#4",
+      "renamedSymbol": "L:FormationAgent.copyStateFrom(BLMatchAgent;)V#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -339869,7 +340061,7 @@
     },
     {
       "symbol": "L:wr.a(BLmo;)V#5",
-      "renamedSymbol": "L:FormationAgent.a(BLMatchAgent;)V#5",
+      "renamedSymbol": "L:FormationAgent.copyStateFrom(BLMatchAgent;)V#5",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -339880,7 +340072,7 @@
     },
     {
       "symbol": "L:wr.a(BLmo;)V#6",
-      "renamedSymbol": "L:FormationAgent.a(BLMatchAgent;)V#6",
+      "renamedSymbol": "L:FormationAgent.copyStateFrom(BLMatchAgent;)V#6",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -339891,7 +340083,7 @@
     },
     {
       "symbol": "L:wr.a(BLmo;)V#7",
-      "renamedSymbol": "L:FormationAgent.a(BLMatchAgent;)V#7",
+      "renamedSymbol": "L:FormationAgent.copyStateFrom(BLMatchAgent;)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -339902,7 +340094,7 @@
     },
     {
       "symbol": "L:wr.a(BLmo;)V#8",
-      "renamedSymbol": "L:FormationAgent.a(BLMatchAgent;)V#8",
+      "renamedSymbol": "L:FormationAgent.copyStateFrom(BLMatchAgent;)V#8",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -339913,7 +340105,7 @@
     },
     {
       "symbol": "L:wr.a(BLmo;)V#9",
-      "renamedSymbol": "L:FormationAgent.a(BLMatchAgent;)V#9",
+      "renamedSymbol": "L:FormationAgent.copyStateFrom(BLMatchAgent;)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -351969,9 +352161,9 @@
     },
     {
       "symbol": "M:el.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:BytePlusOneCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:BytePlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "el.java",
         "start": 10769,
@@ -352992,9 +353184,9 @@
     },
     {
       "symbol": "M:ev.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:LongPlusOneCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:LongPlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "ev.java",
         "start": 661,
@@ -357018,9 +357210,9 @@
     },
     {
       "symbol": "M:gt.a(BLmo;)V",
-      "renamedSymbol": "M:ParticipantStatus.a(BLMatchAgent;)V",
+      "renamedSymbol": "M:ParticipantStatus.copyStateFrom(BLMatchAgent;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyStateFrom",
       "declaration": {
         "file": "gt.java",
         "start": 6222,
@@ -358437,9 +358629,9 @@
     },
     {
       "symbol": "M:hm.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:SumIntegersCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:SumIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "hm.java",
         "start": 1983,
@@ -360208,9 +360400,9 @@
     },
     {
       "symbol": "M:ik.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:IntDoubleCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:IntDoubleCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "ik.java",
         "start": 206,
@@ -360648,9 +360840,9 @@
     },
     {
       "symbol": "M:ir.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:ThreeCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:ThreeCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "ir.java",
         "start": 184,
@@ -360747,9 +360939,9 @@
     },
     {
       "symbol": "M:it.a(BLmo;)V",
-      "renamedSymbol": "M:it.a(BLMatchAgent;)V",
+      "renamedSymbol": "M:it.copyStateFrom(BLMatchAgent;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyStateFrom",
       "declaration": {
         "file": "it.java",
         "start": 304,
@@ -362045,9 +362237,9 @@
     },
     {
       "symbol": "M:jf.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:DoSomethingCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:DoSomethingCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "jf.java",
         "start": 570,
@@ -362782,9 +362974,9 @@
     },
     {
       "symbol": "M:jo.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:DemoIntegersCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:DemoIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "jo.java",
         "start": 4534,
@@ -363475,9 +363667,9 @@
     },
     {
       "symbol": "M:kb.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:WriteIntegersCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:WriteIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "kb.java",
         "start": 474,
@@ -366049,9 +366241,9 @@
     },
     {
       "symbol": "M:lh.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:BroadcastServerCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:BroadcastServerCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "lh.java",
         "start": 3656,
@@ -367116,9 +367308,9 @@
     },
     {
       "symbol": "M:ls.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:BigCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:BigCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "ls.java",
         "start": 465,
@@ -368777,9 +368969,9 @@
     },
     {
       "symbol": "M:mo.a(BLmo;)V",
-      "renamedSymbol": "M:MatchAgent.a(BLMatchAgent;)V",
+      "renamedSymbol": "M:MatchAgent.copyStateFrom(BLMatchAgent;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyStateFrom",
       "declaration": {
         "file": "mo.java",
         "start": 13785,
@@ -370416,9 +370608,9 @@
     },
     {
       "symbol": "M:nl.a(BLmo;)V",
-      "renamedSymbol": "M:FootballerAgent.a(BLMatchAgent;)V",
+      "renamedSymbol": "M:FootballerAgent.copyStateFrom(BLMatchAgent;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyStateFrom",
       "declaration": {
         "file": "nl.java",
         "start": 12060,
@@ -372473,9 +372665,9 @@
     },
     {
       "symbol": "M:oe.a(BLmo;)V",
-      "renamedSymbol": "M:TeamSelectionAgent.a(BLMatchAgent;)V",
+      "renamedSymbol": "M:TeamSelectionAgent.copyStateFrom(BLMatchAgent;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyStateFrom",
       "declaration": {
         "file": "oe.java",
         "start": 1332,
@@ -374530,9 +374722,9 @@
     },
     {
       "symbol": "M:pb.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:IsSixCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "pb.java",
         "start": 971,
@@ -382989,9 +383181,9 @@
     },
     {
       "symbol": "M:tj.a(BLmo;)V",
-      "renamedSymbol": "M:BallAgent.a(BLMatchAgent;)V",
+      "renamedSymbol": "M:BallAgent.copyStateFrom(BLMatchAgent;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyStateFrom",
       "declaration": {
         "file": "tj.java",
         "start": 9601,
@@ -383286,9 +383478,9 @@
     },
     {
       "symbol": "M:tm.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:ConsoleCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:ConsoleCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "tm.java",
         "start": 4515,
@@ -383440,9 +383632,9 @@
     },
     {
       "symbol": "M:tq.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:NotCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:NotCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "tq.java",
         "start": 2671,
@@ -384045,9 +384237,9 @@
     },
     {
       "symbol": "M:ua.a(BLmo;)V",
-      "renamedSymbol": "M:GoalStateAgent.a(BLMatchAgent;)V",
+      "renamedSymbol": "M:GoalStateAgent.copyStateFrom(BLMatchAgent;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyStateFrom",
       "declaration": {
         "file": "ua.java",
         "start": 4286,
@@ -384265,9 +384457,9 @@
     },
     {
       "symbol": "M:uc.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:IntTripleCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:IntTripleCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "uc.java",
         "start": 856,
@@ -384903,9 +385095,9 @@
     },
     {
       "symbol": "M:uj.a(B[Lli;)Lli;",
-      "renamedSymbol": "M:SetLagCommand.a(B[LConsoleValue;)LConsoleValue;",
+      "renamedSymbol": "M:SetLagCommand.execute(B[LConsoleValue;)LConsoleValue;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "execute",
       "declaration": {
         "file": "uj.java",
         "start": 4222,
@@ -390425,9 +390617,9 @@
     },
     {
       "symbol": "M:wl.a(BLmo;)V",
-      "renamedSymbol": "M:LineupAgent.a(BLMatchAgent;)V",
+      "renamedSymbol": "M:LineupAgent.copyStateFrom(BLMatchAgent;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyStateFrom",
       "declaration": {
         "file": "wl.java",
         "start": 10441,
@@ -390887,9 +391079,9 @@
     },
     {
       "symbol": "M:wr.a(BLmo;)V",
-      "renamedSymbol": "M:FormationAgent.a(BLMatchAgent;)V",
+      "renamedSymbol": "M:FormationAgent.copyStateFrom(BLMatchAgent;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyStateFrom",
       "declaration": {
         "file": "wr.java",
         "start": 6598,
@@ -410104,7 +410296,7 @@
     },
     {
       "symbol": "P:el.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:BytePlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:BytePlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -410115,7 +410307,7 @@
     },
     {
       "symbol": "P:el.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:BytePlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:BytePlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -413943,7 +414135,7 @@
     },
     {
       "symbol": "P:ev.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:LongPlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:LongPlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -413954,7 +414146,7 @@
     },
     {
       "symbol": "P:ev.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:LongPlusOneCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:LongPlusOneCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -422402,7 +422594,7 @@
     },
     {
       "symbol": "P:gt.a(BLmo;)V#0",
-      "renamedSymbol": "P:ParticipantStatus.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "P:ParticipantStatus.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -422413,7 +422605,7 @@
     },
     {
       "symbol": "P:gt.a(BLmo;)V#1",
-      "renamedSymbol": "P:ParticipantStatus.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "P:ParticipantStatus.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -425581,7 +425773,7 @@
     },
     {
       "symbol": "P:hm.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:SumIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:SumIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -425592,7 +425784,7 @@
     },
     {
       "symbol": "P:hm.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:SumIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:SumIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -430036,7 +430228,7 @@
     },
     {
       "symbol": "P:ik.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:IntDoubleCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:IntDoubleCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -430047,7 +430239,7 @@
     },
     {
       "symbol": "P:ik.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:IntDoubleCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:IntDoubleCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -431081,7 +431273,7 @@
     },
     {
       "symbol": "P:ir.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:ThreeCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:ThreeCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431092,7 +431284,7 @@
     },
     {
       "symbol": "P:ir.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:ThreeCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:ThreeCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -431334,7 +431526,7 @@
     },
     {
       "symbol": "P:it.a(BLmo;)V#0",
-      "renamedSymbol": "P:it.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "P:it.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -431345,7 +431537,7 @@
     },
     {
       "symbol": "P:it.a(BLmo;)V#1",
-      "renamedSymbol": "P:it.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "P:it.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -433600,7 +433792,7 @@
     },
     {
       "symbol": "P:jf.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:DoSomethingCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:DoSomethingCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -433611,7 +433803,7 @@
     },
     {
       "symbol": "P:jf.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:DoSomethingCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:DoSomethingCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -435536,7 +435728,7 @@
     },
     {
       "symbol": "P:jo.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:DemoIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:DemoIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -435547,7 +435739,7 @@
     },
     {
       "symbol": "P:jo.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:DemoIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:DemoIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -437153,7 +437345,7 @@
     },
     {
       "symbol": "P:kb.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:WriteIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:WriteIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -437164,7 +437356,7 @@
     },
     {
       "symbol": "P:kb.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:WriteIntegersCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:WriteIntegersCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -442752,7 +442944,7 @@
     },
     {
       "symbol": "P:lh.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:BroadcastServerCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:BroadcastServerCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -442763,7 +442955,7 @@
     },
     {
       "symbol": "P:lh.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:BroadcastServerCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:BroadcastServerCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -444721,7 +444913,7 @@
     },
     {
       "symbol": "P:ls.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:BigCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:BigCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -444732,7 +444924,7 @@
     },
     {
       "symbol": "P:ls.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:BigCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:BigCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -448384,7 +448576,7 @@
     },
     {
       "symbol": "P:mo.a(BLmo;)V#0",
-      "renamedSymbol": "P:MatchAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "P:MatchAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -448395,7 +448587,7 @@
     },
     {
       "symbol": "P:mo.a(BLmo;)V#1",
-      "renamedSymbol": "P:MatchAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "P:MatchAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -452421,7 +452613,7 @@
     },
     {
       "symbol": "P:nl.a(BLmo;)V#0",
-      "renamedSymbol": "P:FootballerAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "P:FootballerAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -452432,7 +452624,7 @@
     },
     {
       "symbol": "P:nl.a(BLmo;)V#1",
-      "renamedSymbol": "P:FootballerAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "P:FootballerAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -457041,7 +457233,7 @@
     },
     {
       "symbol": "P:oe.a(BLmo;)V#0",
-      "renamedSymbol": "P:TeamSelectionAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "P:TeamSelectionAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -457052,7 +457244,7 @@
     },
     {
       "symbol": "P:oe.a(BLmo;)V#1",
-      "renamedSymbol": "P:TeamSelectionAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "P:TeamSelectionAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -463553,7 +463745,7 @@
     },
     {
       "symbol": "P:pb.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:IsSixCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -463564,7 +463756,7 @@
     },
     {
       "symbol": "P:pb.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:IsSixCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:IsSixCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -482594,7 +482786,7 @@
     },
     {
       "symbol": "P:tj.a(BLmo;)V#0",
-      "renamedSymbol": "P:BallAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "P:BallAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -482605,7 +482797,7 @@
     },
     {
       "symbol": "P:tj.a(BLmo;)V#1",
-      "renamedSymbol": "P:BallAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "P:BallAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -483309,7 +483501,7 @@
     },
     {
       "symbol": "P:tm.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:ConsoleCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:ConsoleCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -483320,7 +483512,7 @@
     },
     {
       "symbol": "P:tm.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:ConsoleCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:ConsoleCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -483628,7 +483820,7 @@
     },
     {
       "symbol": "P:tq.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:NotCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:NotCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -483639,7 +483831,7 @@
     },
     {
       "symbol": "P:tq.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:NotCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:NotCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -484596,7 +484788,7 @@
     },
     {
       "symbol": "P:ua.a(BLmo;)V#0",
-      "renamedSymbol": "P:GoalStateAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "P:GoalStateAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -484607,7 +484799,7 @@
     },
     {
       "symbol": "P:ua.a(BLmo;)V#1",
-      "renamedSymbol": "P:GoalStateAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "P:GoalStateAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -485025,7 +485217,7 @@
     },
     {
       "symbol": "P:uc.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:IntTripleCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:IntTripleCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -485036,7 +485228,7 @@
     },
     {
       "symbol": "P:uc.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:IntTripleCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:IntTripleCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -486312,7 +486504,7 @@
     },
     {
       "symbol": "P:uj.a(B[Lli;)Lli;#0",
-      "renamedSymbol": "P:SetLagCommand.a(B[LConsoleValue;)LConsoleValue;#0",
+      "renamedSymbol": "P:SetLagCommand.execute(B[LConsoleValue;)LConsoleValue;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -486323,7 +486515,7 @@
     },
     {
       "symbol": "P:uj.a(B[Lli;)Lli;#1",
-      "renamedSymbol": "P:SetLagCommand.a(B[LConsoleValue;)LConsoleValue;#1",
+      "renamedSymbol": "P:SetLagCommand.execute(B[LConsoleValue;)LConsoleValue;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -502097,7 +502289,7 @@
     },
     {
       "symbol": "P:wl.a(BLmo;)V#0",
-      "renamedSymbol": "P:LineupAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "P:LineupAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -502108,7 +502300,7 @@
     },
     {
       "symbol": "P:wl.a(BLmo;)V#1",
-      "renamedSymbol": "P:LineupAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "P:LineupAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -503252,7 +503444,7 @@
     },
     {
       "symbol": "P:wr.a(BLmo;)V#0",
-      "renamedSymbol": "P:FormationAgent.a(BLMatchAgent;)V#0",
+      "renamedSymbol": "P:FormationAgent.copyStateFrom(BLMatchAgent;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -503263,7 +503455,7 @@
     },
     {
       "symbol": "P:wr.a(BLmo;)V#1",
-      "renamedSymbol": "P:FormationAgent.a(BLMatchAgent;)V#1",
+      "renamedSymbol": "P:FormationAgent.copyStateFrom(BLMatchAgent;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -578793,7 +578985,7 @@
       "original": "el.java",
       "renamed": "BytePlusOneCommand.java",
       "inputSha256": "1640f480d7fd809aaea548fd190646ff238d8b5d84804ae0020f6d4cfebc18d2",
-      "outputSha256": "b53572c82e90a2e0a595dcc32c2e712a4b63b7adc4f8956c8a18fc0be8e2308e",
+      "outputSha256": "adb40c954f834ee1cdb66561e7542499de35d4868b14b4e028a5f447253b9777",
       "edits": [
         {
           "start": 50,
@@ -579487,6 +579679,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 10769,
+          "end": 10770,
+          "symbol": "M:el.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 10784,
@@ -583969,7 +584168,7 @@
       "original": "ev.java",
       "renamed": "LongPlusOneCommand.java",
       "inputSha256": "90e7dda6fc8523a70a7a3a9facb1e8730e430844bc24cad679c7015e5ab499b5",
-      "outputSha256": "0a682c7b9d40647596096e37319e6a7dcdd4f1e39fb1430f63b86e701679d4d9",
+      "outputSha256": "b22824af95e1f9a7c52f305869cdbeed11afa76f099201a540e13c6b2f4bfe86",
       "edits": [
         {
           "start": 50,
@@ -584054,6 +584253,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 661,
+          "end": 662,
+          "symbol": "M:ev.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 676,
@@ -604636,7 +604842,7 @@
       "original": "gt.java",
       "renamed": "ParticipantStatus.java",
       "inputSha256": "dfaa90c0324a14c54b9c78e1ca056d2067d494d641a1cbb541f591fb0d41c5f5",
-      "outputSha256": "e40f143f8391176562e4e0dac25ac8c19ee441d9ba2db6b191198067e8e33e3d",
+      "outputSha256": "15c331e1ed12e9f42218e22589777faace471ec9a0c809f647c8b908b8860b5c",
       "edits": [
         {
           "start": 50,
@@ -605001,6 +605207,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 6222,
+          "end": 6223,
+          "symbol": "M:gt.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
         },
         {
           "start": 6237,
@@ -611156,7 +611369,7 @@
       "original": "hm.java",
       "renamed": "SumIntegersCommand.java",
       "inputSha256": "4ce579e33feee50fc54ec5cddde43913efa4e46c210ad7ec893acc1d0c8b1399",
-      "outputSha256": "796af6011ddd522b230ae4398f27f62dd121fa9cab343a4ca982c6be2072c0d1",
+      "outputSha256": "b3110972230b794a28f25c436e1a28596228a568fd807b0198db4f7b26f3e70b",
       "edits": [
         {
           "start": 50,
@@ -611213,6 +611426,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 1983,
+          "end": 1984,
+          "symbol": "M:hm.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 1998,
@@ -621481,7 +621701,7 @@
       "original": "ik.java",
       "renamed": "IntDoubleCommand.java",
       "inputSha256": "e7ee82df77ecfa6c884418411684627fba3cd0b0d28f7fb0a780eae1476f58fa",
-      "outputSha256": "8c1e4633e9a2106f5247c4355f5e2f8cd884f5712a6c0bc0d21c3505066d1f36",
+      "outputSha256": "1dbc9bd32a9c0460f6daf386300672d8c6f56aed5899938a6bb04d0614d94494",
       "edits": [
         {
           "start": 50,
@@ -621510,6 +621730,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 206,
+          "end": 207,
+          "symbol": "M:ik.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 221,
@@ -624764,7 +624991,7 @@
       "original": "ir.java",
       "renamed": "ThreeCommand.java",
       "inputSha256": "e63074637a8ef9e4cd25d22270d120dcf81415c3f7c35905b790c6c6c9091ebe",
-      "outputSha256": "be1d9d1ecb37913dd486af530a564b0351b1ca2aad474c3d4fd4369eada32742",
+      "outputSha256": "daddb7a06ee2d674c57876990c20866e6fec9ef4b22f9de00fd0cc7cbddd6da0",
       "edits": [
         {
           "start": 50,
@@ -624786,6 +625013,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 184,
+          "end": 185,
+          "symbol": "M:ir.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 199,
@@ -625319,7 +625553,7 @@
       "original": "it.java",
       "renamed": "it.java",
       "inputSha256": "0e8e3a44db5d92730d5799eb3ead4d14c606033d7960ae0396172bc9f10232d3",
-      "outputSha256": "e7418ee3f5098557486028e488101c7b8554848faa86c734ebc8c2391b09b8c0",
+      "outputSha256": "f9fa195ccb11f08d458c50751b15b620b0841b8a6fe1f04365f96af47a3b6a91",
       "edits": [
         {
           "start": 61,
@@ -625334,6 +625568,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "ScrollBar"
+        },
+        {
+          "start": 304,
+          "end": 305,
+          "symbol": "M:it.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
         },
         {
           "start": 319,
@@ -632632,7 +632873,7 @@
       "original": "jf.java",
       "renamed": "DoSomethingCommand.java",
       "inputSha256": "9a21627f7f3e014897a4611f84c6ef004cf2d140254e91ceab4a87d45e7f46cd",
-      "outputSha256": "40bdef8591e73c5255bfc4741c88ca034d89353c7af508554a765d60b77f86e5",
+      "outputSha256": "61b8c6ae12923ea7197a641c01a131cc9b7dba43f143cf1ec4a8b68c22c5fdb7",
       "edits": [
         {
           "start": 50,
@@ -632703,6 +632944,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 570,
+          "end": 571,
+          "symbol": "M:jf.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 585,
@@ -637010,7 +637258,7 @@
       "original": "jo.java",
       "renamed": "DemoIntegersCommand.java",
       "inputSha256": "019292cf58bdc99320965b40bfdfa144195c95e09801681708b9719f6dec700c",
-      "outputSha256": "cb69bb7eb9949faa658f0d6b255372996c5c5f1e6f0f8838c2db92f19ee135f2",
+      "outputSha256": "42448cb556c9cc72fb8b2df91241ff677ff62b386f1cae423f41f9dd952067e3",
       "edits": [
         {
           "start": 50,
@@ -637305,6 +637553,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 4534,
+          "end": 4535,
+          "symbol": "M:jo.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 4549,
@@ -641796,7 +642051,7 @@
       "original": "kb.java",
       "renamed": "WriteIntegersCommand.java",
       "inputSha256": "caad1d6b629fbf6b82b515704d0389a32bfebdf9613bf16b417209882cacf511",
-      "outputSha256": "a34994cb3b344f5e9e539478da40f117e442808f6a2c8cf382c08c050d44eb7a",
+      "outputSha256": "2c0704dd938eaa9b87c6e1374ef458c5901c911a178decf5c1aef3b98574d63c",
       "edits": [
         {
           "start": 50,
@@ -641846,6 +642101,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 474,
+          "end": 475,
+          "symbol": "M:kb.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 489,
@@ -653286,7 +653548,7 @@
       "original": "lh.java",
       "renamed": "BroadcastServerCommand.java",
       "inputSha256": "f7dea1b190a100485baea23da7f2a61302fbfd73926587af640e42c517a52dfd",
-      "outputSha256": "235de2488c6ea7e37aec82031cc16d1f1f87e275311fd32048f51d2a90285644",
+      "outputSha256": "05565df63f4c69c66b99cbae1ae58b556986383e5a27fa96a93214eef6a6af6d",
       "edits": [
         {
           "start": 50,
@@ -653504,6 +653766,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 3656,
+          "end": 3657,
+          "symbol": "M:lh.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 3671,
@@ -656387,7 +656656,7 @@
       "original": "lo.java",
       "renamed": "PasswordValidator.java",
       "inputSha256": "ed4c6310e8edacc2db94a640aa5eeef6a71f1bf6ac91958aa60f72dd106e5cbb",
-      "outputSha256": "02ab9eba5e1c8e6bc21da31b0c679a092bf71ebeb3034a009996437598ead61e",
+      "outputSha256": "1bef680f7b993316cd0a8b1770693e5f3aa98b08d65a55169f9a1306bc06b002",
       "edits": [
         {
           "start": 50,
@@ -657293,6 +657562,13 @@
           "renamed": "ConsoleValue"
         },
         {
+          "start": 14976,
+          "end": 14977,
+          "symbol": "M:tm.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
+        },
+        {
           "start": 15426,
           "end": 15428,
           "symbol": "C:rm",
@@ -657952,7 +658228,7 @@
       "original": "ls.java",
       "renamed": "BigCommand.java",
       "inputSha256": "fc847ae5d52521382f79ca53190f3baef6e2fdb0da0a4b3687e42687ac532cef",
-      "outputSha256": "e80e2e7341e5a5f6b799363aeeaa702680bc1d1083b15bf2746b99de828320e3",
+      "outputSha256": "b622cc4585f187fa0a38f0ef4607fc6ce941ee68b6888ebe78778a86e2625bef",
       "edits": [
         {
           "start": 50,
@@ -657995,6 +658271,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 465,
+          "end": 466,
+          "symbol": "M:ls.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 480,
@@ -669725,7 +670008,7 @@
       "original": "mo.java",
       "renamed": "MatchAgent.java",
       "inputSha256": "3b8e6a122cc4fd3e0ba67f33b4e9b44fb68d9daa8808a87241d4b23e1759514b",
-      "outputSha256": "a271f685b485227117223b3ca773ba0a6831aaec6e2afe39d18f3f2e7c952365",
+      "outputSha256": "c74ad6307fae478537c55e96ad4dd12b93aeede63654c1528f98ff685a34cc7f",
       "edits": [
         {
           "start": 72,
@@ -669789,6 +670072,13 @@
           "symbol": "C:mo",
           "original": "mo",
           "renamed": "MatchAgent"
+        },
+        {
+          "start": 2483,
+          "end": 2484,
+          "symbol": "M:mo.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
         },
         {
           "start": 2674,
@@ -670316,6 +670606,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 13785,
+          "end": 13786,
+          "symbol": "M:mo.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
+        },
+        {
           "start": 13800,
           "end": 13802,
           "symbol": "C:mo",
@@ -670384,6 +670681,13 @@
           "symbol": "C:mo",
           "original": "mo",
           "renamed": "MatchAgent"
+        },
+        {
+          "start": 17068,
+          "end": 17069,
+          "symbol": "M:mo.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
         },
         {
           "start": 17082,
@@ -679734,7 +680038,7 @@
       "original": "nl.java",
       "renamed": "FootballerAgent.java",
       "inputSha256": "c2c3c7f9fa4e32facb1f4a8180670b6b27a10222c4816fe846abb6fbd4da0cf0",
-      "outputSha256": "6f5b08af9f169526593e616ce912c5c3da5e9c1a6ad860d5a400c37a30bac2ea",
+      "outputSha256": "b993c3851e4cba3a8f3d7fe384afe229ddc4ed2cb5c8b96e194d844453c514d4",
       "edits": [
         {
           "start": 44,
@@ -680897,6 +681201,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 12060,
+          "end": 12061,
+          "symbol": "M:nl.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
         },
         {
           "start": 12075,
@@ -696659,7 +696970,7 @@
       "original": "oe.java",
       "renamed": "TeamSelectionAgent.java",
       "inputSha256": "16b07827946561dc0a5b1bdae929441a7625414583849178d18bd065a9392b06",
-      "outputSha256": "a42d20bb44a455a9da7ae0b500eaf25d5c849231031135cc969792e72cd900c0",
+      "outputSha256": "b272bb592655a35faa37ffa263ba0851a963b361c46d92e2c581b493bb6feff2",
       "edits": [
         {
           "start": 50,
@@ -696772,6 +697083,13 @@
           "symbol": "F:oe.field_k:[I",
           "original": "field_k",
           "renamed": "selection"
+        },
+        {
+          "start": 1332,
+          "end": 1333,
+          "symbol": "M:oe.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
         },
         {
           "start": 1347,
@@ -707287,7 +707605,7 @@
       "original": "pb.java",
       "renamed": "IsSixCommand.java",
       "inputSha256": "e428eea3d50b04cb8922f7a30ebf85ad0043bee07f4e7a2b39eb296b7bf5bd12",
-      "outputSha256": "169eb2222264bbacc6fd88e878db3d17a61c2350cb152141490c7e9b8ae8733c",
+      "outputSha256": "f3494ecc9160a40eb3663cff70a02004906d9b87e850cbcfc245ecc1493d0c53",
       "edits": [
         {
           "start": 50,
@@ -707400,6 +707718,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 971,
+          "end": 972,
+          "symbol": "M:pb.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 986,
@@ -765926,7 +766251,7 @@
       "original": "tj.java",
       "renamed": "BallAgent.java",
       "inputSha256": "3911204869ce76ec8c69d7939451c451bfc588aa89fca447906e453cd1c7b438",
-      "outputSha256": "d0a352d793085f08dcba0e619a0d857e9a29a24b45c7004904b28b7b4292c66b",
+      "outputSha256": "4e1ba64dae472169be0489ae1b37eb6837d5636a8fef4c5c91ad93013dd80644",
       "edits": [
         {
           "start": 44,
@@ -766830,6 +767155,13 @@
           "symbol": "F:tj.field_p:I",
           "original": "field_p",
           "renamed": "positionY"
+        },
+        {
+          "start": 9601,
+          "end": 9602,
+          "symbol": "M:tj.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
         },
         {
           "start": 9616,
@@ -768449,7 +768781,7 @@
       "original": "tm.java",
       "renamed": "ConsoleCommand.java",
       "inputSha256": "5e9d4ce823ee79b6dae1e75fef346d0a8e55c3f8f5b0c4a4ac9339e871e47389",
-      "outputSha256": "cba0db87c76b32411baaa929faa27d8af1bd6fa1ff6d765f4e0c3ba2ef4a3c59",
+      "outputSha256": "a1caf62b872a458ca14ba1330c23b91bbc77c946d61d63f49ec2eab89fe43370",
       "edits": [
         {
           "start": 53,
@@ -768627,6 +768959,13 @@
           "renamed": "ConsoleValue"
         },
         {
+          "start": 4515,
+          "end": 4516,
+          "symbol": "M:tm.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
+        },
+        {
           "start": 4530,
           "end": 4532,
           "symbol": "C:li",
@@ -768782,7 +769121,7 @@
       "original": "tq.java",
       "renamed": "NotCommand.java",
       "inputSha256": "b31c7aac457fd7edae35e180fcb84a0195b32975d445b6ff50000e479ba5bee6",
-      "outputSha256": "50fe818347ad6bae4c122bee8e2a727e8f8a7d10f3e74b1aee6774f264a5b2ea",
+      "outputSha256": "499bd83143675bbeddcc0f97c76d25c3d8caa2bba6ad328352ddcdcf7bcfbd37",
       "edits": [
         {
           "start": 50,
@@ -769322,6 +769661,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 2671,
+          "end": 2672,
+          "symbol": "M:tq.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 2686,
@@ -771899,7 +772245,7 @@
       "original": "ua.java",
       "renamed": "GoalStateAgent.java",
       "inputSha256": "0398f559522d7262d9366e36c87aa0ba79e005d45f48a1beef2ae540f9c5eda6",
-      "outputSha256": "84b3d78f7a7910ec940b83839ca8bf0f7360aeecc37d30412a01b7fdd3cbb64a",
+      "outputSha256": "8be9cfbbadeca67563ae1cc8577ae5e0e8f034775b259df6e5210a18c9e7be14",
       "edits": [
         {
           "start": 50,
@@ -772222,6 +772568,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 4286,
+          "end": 4287,
+          "symbol": "M:ua.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
         },
         {
           "start": 4301,
@@ -772951,7 +773304,7 @@
       "original": "uc.java",
       "renamed": "IntTripleCommand.java",
       "inputSha256": "bad2dda3df476ee76c8ea095cfebb1e2a3350910eba5258defebfbee9ecaad4d",
-      "outputSha256": "5f3bb53b29df75c21b2333146bf46278d0aa45a4427db46c0095b4d52cb41a11",
+      "outputSha256": "e7e613b7ee5e32e14671d3e7a05f0782c4d48851e44a78110f5d7be495d3ed93",
       "edits": [
         {
           "start": 50,
@@ -772987,6 +773340,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 856,
+          "end": 857,
+          "symbol": "M:uc.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 871,
@@ -776824,7 +777184,7 @@
       "original": "uj.java",
       "renamed": "SetLagCommand.java",
       "inputSha256": "50e1dc36d958500925bc555f21b21194c14faa1edf469f83fd9c696463792e74",
-      "outputSha256": "e0991498141d4d6451b843e57d15aa8076a3fb4a7c0d30a970b3d8ee0fe4333c",
+      "outputSha256": "5d8dbb82544413323fcb111f58972df6c8157a718a1c6250d6da67826985447a",
       "edits": [
         {
           "start": 69,
@@ -777007,6 +777367,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "ConsoleValue"
+        },
+        {
+          "start": 4222,
+          "end": 4223,
+          "symbol": "M:uj.a(B[Lli;)Lli;",
+          "original": "a",
+          "renamed": "execute"
         },
         {
           "start": 4237,
@@ -805696,7 +806063,7 @@
       "original": "wl.java",
       "renamed": "LineupAgent.java",
       "inputSha256": "3806f73ee66340fda1ae052acf10c811b0a2607ff3fc61f8ead3c474ecae3546",
-      "outputSha256": "18f04122166860f51dea2b2a6ea4cf45bb6c5ae1f197bde157b5067a378bc904",
+      "outputSha256": "c04f0cd21f5196f57f0261a9db86b5fe27ee01a019522d5727ce88ed98f0d487",
       "edits": [
         {
           "start": 50,
@@ -805958,6 +806325,13 @@
           "renamed": "MatchAgent"
         },
         {
+          "start": 5207,
+          "end": 5208,
+          "symbol": "M:wl.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
+        },
+        {
           "start": 5222,
           "end": 5224,
           "symbol": "C:mo",
@@ -806047,6 +806421,13 @@
           "symbol": "C:mo",
           "original": "mo",
           "renamed": "MatchAgent"
+        },
+        {
+          "start": 7192,
+          "end": 7193,
+          "symbol": "M:wl.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
         },
         {
           "start": 7206,
@@ -806243,6 +806624,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 10441,
+          "end": 10442,
+          "symbol": "M:wl.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
         },
         {
           "start": 10456,
@@ -809930,7 +810318,7 @@
       "original": "wr.java",
       "renamed": "FormationAgent.java",
       "inputSha256": "caca687e06bdce1f2bac37671f786aa6b7a4aacd6f253b6b3d693338471dcf0c",
-      "outputSha256": "a4367baa137ac4499fc9067865d5a5c53a373c0c36d4eca9403bbdcb920d6fd6",
+      "outputSha256": "d5634748abb9ac6555f6af167ede663619b7f77e12b7a135a068216a9975fe35",
       "edits": [
         {
           "start": 50,
@@ -810260,6 +810648,13 @@
           "symbol": "M:nb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lbs;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 6598,
+          "end": 6599,
+          "symbol": "M:wr.a(BLmo;)V",
+          "original": "a",
+          "renamed": "copyStateFrom"
         },
         {
           "start": 6613,
@@ -812166,10 +812561,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/kickabout"
     },
-    "rulesSha256": "eb36b1d847f4be7709716f5eefa9c5ad75ae15d05c2c3b92eae5c65cf52662e5",
+    "rulesSha256": "9d3746c599fcb06b263038ab4a3e466a329c5971ac039681a3bf758d6b33b886",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f",
-    "outputTreeSha256": "38e886348528efa9f83da9e7e32c33ab6aab892daf51491178db0f1b6e1dd8cd",
+    "outputTreeSha256": "0a8c604ba6751475024859ee1b1cd86682165de71e0e31a9d3c23045c7ca25cf",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

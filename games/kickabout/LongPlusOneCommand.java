@@ -29,7 +29,7 @@ final class LongPlusOneCommand extends ConsoleCommand {
         return NetworkGameClient.field_y;
     }
 
-    final ConsoleValue a(byte param0, ConsoleValue[] param1) {
+    final ConsoleValue execute(byte param0, ConsoleValue[] param1) {
         RuntimeException var3 = null;
         ConsoleValue stackIn_2_0 = null;
         ConsoleValue stackIn_4_0 = null;

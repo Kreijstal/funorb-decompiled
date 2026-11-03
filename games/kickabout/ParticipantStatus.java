@@ -168,7 +168,7 @@ final class ParticipantStatus extends MatchAgent {
         }
     }
 
-    final void a(byte param0, MatchAgent param1) {
+    final void copyStateFrom(byte param0, MatchAgent param1) {
         RuntimeException runtimeException = null;
         ParticipantStatus var3 = null;
         RuntimeException stackIn_7_0 = null;

@@ -14,7 +14,7 @@ final class it extends MatchAgent {
     static boolean field_n;
     boolean field_i;
 
-    final void a(byte param0, MatchAgent param1) {
+    final void copyStateFrom(byte param0, MatchAgent param1) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
         it var6 = (it) (param1);

@@ -124,7 +124,7 @@ final class GoalStateAgent extends MatchAgent {
         }
     }
 
-    final void a(byte param0, MatchAgent param1) {
+    final void copyStateFrom(byte param0, MatchAgent param1) {
         GoalStateAgent var4 = null;
         GoalStateAgent var3 = null;
         if (param0 >= -52) {

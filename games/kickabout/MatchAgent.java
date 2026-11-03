@@ -74,7 +74,7 @@ abstract class MatchAgent {
 
     final void a(MatchAgent param0, boolean param1) {
         try {
-          this.a((byte) -105, param0);
+          this.copyStateFrom((byte) -105, param0);
           if (param1) {
             this.field_c = -29;
           }
@@ -318,7 +318,7 @@ abstract class MatchAgent {
         }
     }
 
-    abstract void a(byte param0, MatchAgent param1);
+    abstract void copyStateFrom(byte param0, MatchAgent param1);
 
     final static String a(int param0, CharSequence param1) {
         int var6 = 0;
@@ -417,7 +417,7 @@ abstract class MatchAgent {
         try {
           if (param1 != 4) {
             var4 = (MatchAgent) null;
-            this.a((byte) 17, (MatchAgent) null);
+            this.copyStateFrom((byte) 17, (MatchAgent) null);
           }
           this.field_b = -hq.a(22531, 6, param0, 0) + 64;
           if (ContentTransitionDialog.a(param0, (byte) -39)) {

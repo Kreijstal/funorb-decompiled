@@ -388,7 +388,7 @@ final class PasswordValidator extends TextFieldValidator {
               var4_int++;
               continue;
             }
-            stackIn_5_0 = param2[var4_int].a((byte) 84, param0);
+            stackIn_5_0 = param2[var4_int].execute((byte) 84, param0);
             return stackIn_5_0;
           }
           var7 = new StringBuilder("The method " + param3 + "(");
