@@ -220,7 +220,7 @@ final class aa extends WidgetContainer implements op, ButtonListener, dl {
         try {
           var3 = this.field_Q;
           var4 = param1;
-          ((TextFieldWidget) ((Object) var3)).a(57, var4, false);
+          ((TextFieldWidget) ((Object) var3)).setText(57, var4, false);
           if (param0 != 15270) {
             var5 = (String) null;
             discarded$1 = this.a(-31, (String) null, 115, (byte) 34, (UiWidget) null, (String) null);

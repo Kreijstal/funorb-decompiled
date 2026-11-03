@@ -4,7 +4,7 @@
 class Sprite extends SpriteState {
     int[] field_B;
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitTintedRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$1 = 0;
@@ -140,7 +140,7 @@ class Sprite extends SpriteState {
           if (var6 <= 0) {
             return;
           }
-          Sprite.b(SoftwareRasterizer.field_h, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.blitAlphaRows(SoftwareRasterizer.field_h, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -782,12 +782,12 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.a(0, SoftwareRasterizer.field_h, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.blitMultiplyRows(0, SoftwareRasterizer.field_h, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -875,7 +875,7 @@ class Sprite extends SpriteState {
           if (var6 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.field_h, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.blitTintedRows(SoftwareRasterizer.field_h, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1093,7 +1093,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitMultiplyRows(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$5 = 0;
@@ -1165,7 +1165,7 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.field_h, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.blitRows(SoftwareRasterizer.field_h, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1227,7 +1227,7 @@ class Sprite extends SpriteState {
           if (var6 <= 0) {
             return;
           }
-          Sprite.b(SoftwareRasterizer.field_h, this.field_B, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.blitSilhouetteRows(SoftwareRasterizer.field_h, this.field_B, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1239,7 +1239,7 @@ class Sprite extends SpriteState {
         int var4 = param0 + (this.field_z >> 1) > SoftwareRasterizer.field_l ? SoftwareRasterizer.field_l - param0 << 1 : this.field_z;
         int var5 = param1 < SoftwareRasterizer.field_a ? SoftwareRasterizer.field_a - param1 << 1 : 0;
         int var6 = param1 + (this.field_w >> 1) > SoftwareRasterizer.field_f ? SoftwareRasterizer.field_f - param1 << 1 : this.field_w;
-        Sprite.a(this.field_B, var5 * this.field_z + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_b + (param0 + (var3 >> 1)), (this.field_z << 1) - (var4 - var3) + (this.field_z & 1), SoftwareRasterizer.field_b - (var4 - var3 >> 1), this.field_z, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.blitHalfSizeRows(this.field_B, var5 * this.field_z + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_b + (param0 + (var3 >> 1)), (this.field_z << 1) - (var4 - var3) + (this.field_z & 1), SoftwareRasterizer.field_b - (var4 - var3 >> 1), this.field_z, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void drawRotated(int param0, int param1, int param2, int param3) {
@@ -1250,7 +1250,7 @@ class Sprite extends SpriteState {
         this.drawRotatedAbout(var5, var6, param0, param1, param2, param3);
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitHalfSizeRows(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -2480,12 +2480,12 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.field_h, this.field_B, var4, var3, var6, var5, var7, var8);
+          Sprite.copyRows(SoftwareRasterizer.field_h, this.field_B, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitAlphaRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -2509,7 +2509,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void copyRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
@@ -2529,7 +2529,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitSilhouetteRows(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;

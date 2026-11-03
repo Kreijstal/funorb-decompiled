@@ -27,8 +27,8 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         try {
           var3 = this.field_H;
           var4 = param1;
-          var3.a(108, var4, false);
-          this.field_R.e(true);
+          var3.setText(108, var4, false);
+          this.field_R.clear(true);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ri.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -438,8 +438,8 @@ final class ri extends WidgetContainer implements TextFieldListener, ButtonListe
         if (param0 != 8) {
           return;
         }
-        this.field_H.e(true);
-        this.field_R.e(true);
+        this.field_H.clear(true);
+        this.field_R.clear(true);
     }
 
     static {

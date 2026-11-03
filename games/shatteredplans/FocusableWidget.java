@@ -204,7 +204,7 @@ class FocusableWidget extends UiWidget {
             }
             if (this.containsPoint(pd.field_k, 72, bb.field_b, param1, param0) &&
               AllianceExpiredEvent.field_n == 0) {
-              this.a(this.field_o, pd.field_k - param0, -param1 + bb.field_b, (byte) -109);
+              this.fireAction(this.field_o, pd.field_k - param0, -param1 + bb.field_b, (byte) -109);
             }
             this.handleRelease(pd.field_k, param1, param0, bb.field_b, -600269855, param2);
           }
@@ -230,7 +230,7 @@ class FocusableWidget extends UiWidget {
             param0 != 83) {
             return false;
           }
-          this.a(1, -1, -1, (byte) -109);
+          this.fireAction(1, -1, -1, (byte) -109);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -253,7 +253,7 @@ class FocusableWidget extends UiWidget {
         this.field_p = MusicVoice.field_I.field_o;
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
+    void fireAction(int param0, int param1, int param2, byte param3) {
         if (this.field_u == null) {
           return;
         }

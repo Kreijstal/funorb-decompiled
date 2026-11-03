@@ -3068,6 +3068,46 @@
       "renamedSymbol": "M:Sprite.drawRotated(IIII)V"
     },
     {
+      "symbol": "M:bi.a(I[I[IIIIIIII)V",
+      "originalName": "a",
+      "to": "blitMultiplyRows",
+      "evidence": "Row kernel that multiplies each non-zero pixel with the target pixel.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitMultiplyRows(I[I[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:bi.a([IIIIIIII)V",
+      "originalName": "a",
+      "to": "blitHalfSizeRows",
+      "evidence": "Row kernel that averages a 2 by 2 block of source pixels per target pixel, using the target for transparent ones.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitHalfSizeRows([IIIIIIII)V"
+    },
+    {
+      "symbol": "M:bi.a([I[IIIIIII)V",
+      "originalName": "a",
+      "to": "copyRows",
+      "evidence": "Row kernel that copies every pixel of each row.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.copyRows([I[IIIIIII)V"
+    },
+    {
+      "symbol": "M:bi.a([I[IIIIIIII)V",
+      "originalName": "a",
+      "to": "blitRows",
+      "evidence": "Row kernel that copies non-zero pixels, four at a time.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitRows([I[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:bi.a([I[IIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitTintedRows",
+      "evidence": "Row kernel that tints grey pixels with a colour and skips zero pixels.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitTintedRows([I[IIIIIIIII)V"
+    },
+    {
       "symbol": "M:bi.b()V",
       "originalName": "b",
       "to": "flipVertical",
@@ -3100,6 +3140,22 @@
       "renamedSymbol": "M:Sprite.drawRotatedAbout(IIIIII)V"
     },
     {
+      "symbol": "M:bi.b([I[IIIIIIII)V",
+      "originalName": "b",
+      "to": "blitSilhouetteRows",
+      "evidence": "Row kernel that writes one colour for each non-zero pixel.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitSilhouetteRows([I[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:bi.b([I[IIIIIIIII)V",
+      "originalName": "b",
+      "to": "blitAlphaRows",
+      "evidence": "Row kernel that blends non-zero pixels over the target with an alpha.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitAlphaRows([I[IIIIIIIII)V"
+    },
+    {
       "symbol": "M:bi.c()Lbi;",
       "originalName": "c",
       "to": "flippedCopy",
@@ -3127,7 +3183,7 @@
       "symbol": "M:bi.d(II)V",
       "originalName": "d",
       "to": "drawHalfSize",
-      "evidence": "Offsets and size are shifted right by one and the kernel reads two source pixels per target pixel.",
+      "evidence": "Offsets and size are shifted right by one and the kernel averages a 2 by 2 block of source pixels per target pixel.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Sprite.drawHalfSize(II)V"
     },
@@ -3199,7 +3255,7 @@
       "symbol": "M:bi.g(II)V",
       "originalName": "g",
       "to": "drawQuarterSize",
-      "evidence": "Offsets and size are divided by four and the kernel reads four source pixels per target pixel.",
+      "evidence": "Offsets and size are divided by four and the code averages a 4 by 4 block of source pixels per target pixel.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Sprite.drawQuarterSize(II)V"
     },
@@ -4492,6 +4548,14 @@
       "renamedSymbol": "M:fa.getTooltip(Z)Ljava/lang/String;"
     },
     {
+      "symbol": "M:fa.i(I)V",
+      "originalName": "i",
+      "to": "notifyTextChanged",
+      "evidence": "Calls the TextFieldListener when the listener is one. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:fa.notifyTextChanged(I)V"
+    },
+    {
       "symbol": "M:fa.l(I)V",
       "originalName": "l",
       "to": "clearStatics",
@@ -5212,12 +5276,36 @@
       "renamedSymbol": "M:gn.clearStatics(Z)V"
     },
     {
+      "symbol": "M:go.a(BLjava/lang/String;)V",
+      "originalName": "a",
+      "to": "insertText",
+      "evidence": "Replaces the selection by the string, truncated to the maximum length.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.insertText(BLjava/lang/String;)V"
+    },
+    {
+      "symbol": "M:go.a(I)I",
+      "originalName": "a",
+      "to": "findNextWordBoundary",
+      "evidence": "Scans right from the caret for the next word boundary.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.findNextWordBoundary(I)I"
+    },
+    {
       "symbol": "M:go.a(ICILvg;)Z",
       "originalName": "a",
       "to": "handleKey",
       "evidence": "Handles a key press and returns whether it was consumed. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextFieldWidget.handleKey(ICILUiWidget;)Z"
+    },
+    {
+      "symbol": "M:go.a(II)V",
+      "originalName": "a",
+      "to": "moveCaret",
+      "evidence": "Moves the caret and collapses the selection unless shift is held.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.moveCaret(II)V"
     },
     {
       "symbol": "M:go.a(IIBIIILvg;)Z",
@@ -5244,12 +5332,84 @@
       "renamedSymbol": "M:TextFieldWidget.updateHover(IILUiWidget;B)V"
     },
     {
+      "symbol": "M:go.a(ILjava/lang/String;Z)V",
+      "originalName": "a",
+      "to": "setText",
+      "evidence": "Stores the text, treating null as empty, and moves the caret to the end.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.setText(ILjava/lang/String;Z)V"
+    },
+    {
+      "symbol": "M:go.e(Z)V",
+      "originalName": "e",
+      "to": "clear",
+      "evidence": "Empties the text, resets the caret and notifies the listener.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.clear(Z)V"
+    },
+    {
+      "symbol": "M:go.g(B)I",
+      "originalName": "g",
+      "to": "findPreviousWordBoundary",
+      "evidence": "Scans left from the caret for the previous word boundary.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.findPreviousWordBoundary(B)I"
+    },
+    {
+      "symbol": "M:go.h(B)V",
+      "originalName": "h",
+      "to": "cutSelection",
+      "evidence": "Copies the selection to the clipboard and then deletes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.cutSelection(B)V"
+    },
+    {
+      "symbol": "M:go.h(I)V",
+      "originalName": "h",
+      "to": "copyToClipboard",
+      "evidence": "Copies the selected text to the system clipboard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.copyToClipboard(I)V"
+    },
+    {
+      "symbol": "M:go.i(I)V",
+      "originalName": "i",
+      "to": "notifyTextChanged",
+      "evidence": "Calls the TextFieldListener when the listener is one.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.notifyTextChanged(I)V"
+    },
+    {
+      "symbol": "M:go.k(B)V",
+      "originalName": "k",
+      "to": "deleteSelection",
+      "evidence": "Removes the selected range from the text and collapses the caret.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.deleteSelection(B)V"
+    },
+    {
       "symbol": "M:go.k(I)V",
       "originalName": "k",
       "to": "clearStatics",
       "evidence": "Assigns null to 5 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TextFieldWidget.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:go.l(B)Ljava/lang/String;",
+      "originalName": "l",
+      "to": "getSelectedText",
+      "evidence": "Returns the substring between the caret and the selection anchor.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.getSelectedText(B)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:go.m(B)V",
+      "originalName": "m",
+      "to": "pasteFromClipboard",
+      "evidence": "Reads the clipboard string and inserts it at the caret.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldWidget.pasteFromClipboard(B)V"
     },
     {
       "symbol": "M:gp.a(B)V",
@@ -6692,6 +6852,14 @@
       "renamedSymbol": "M:FocusableWidget.handlePress(IIBIIILUiWidget;)Z"
     },
     {
+      "symbol": "M:kg.a(IIIB)V",
+      "originalName": "a",
+      "to": "fireAction",
+      "evidence": "Calls the ButtonListener of the widget with its position when the listener is a ButtonListener.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FocusableWidget.fireAction(IIIB)V"
+    },
+    {
       "symbol": "M:kg.a(IIIIILvg;)V",
       "originalName": "a",
       "to": "handleRelease",
@@ -7090,6 +7258,14 @@
       "evidence": "Opens a Socket to the stored host and port; ProxySocketConnector consults the proxy selector first.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SocketConnector.connect(I)Ljava/net/Socket;"
+    },
+    {
+      "symbol": "M:lk.a(IIIB)V",
+      "originalName": "a",
+      "to": "fireAction",
+      "evidence": "Calls the ButtonListener of the widget with its position when the listener is a ButtonListener. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CheckboxWidget.fireAction(IIIB)V"
     },
     {
       "symbol": "M:lk.h(I)V",
@@ -8287,7 +8463,7 @@
       "symbol": "M:om.d(II)V",
       "originalName": "d",
       "to": "drawHalfSize",
-      "evidence": "Offsets and size are shifted right by one and the kernel reads two source pixels per target pixel. Resolved override family.",
+      "evidence": "Offsets and size are shifted right by one and the kernel averages a 2 by 2 block of source pixels per target pixel. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ArgbSprite.drawHalfSize(II)V"
     },
@@ -8311,7 +8487,7 @@
       "symbol": "M:om.g(II)V",
       "originalName": "g",
       "to": "drawQuarterSize",
-      "evidence": "Offsets and size are divided by four and the kernel reads four source pixels per target pixel. Resolved override family.",
+      "evidence": "Offsets and size are divided by four and the code averages a 4 by 4 block of source pixels per target pixel. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ArgbSprite.drawQuarterSize(II)V"
     },
@@ -10106,6 +10282,14 @@
       "evidence": "Stores y, height, x and width. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ts.setBounds(IIBII)V"
+    },
+    {
+      "symbol": "M:ts.a(IIIB)V",
+      "originalName": "a",
+      "to": "fireAction",
+      "evidence": "Calls the ButtonListener of the widget with its position when the listener is a ButtonListener. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ts.fireAction(IIIB)V"
     },
     {
       "symbol": "M:ts.a(IIII)V",
@@ -74411,7 +74595,7 @@
     },
     {
       "symbol": "L:bi.a(I[I[IIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -74422,7 +74606,7 @@
     },
     {
       "symbol": "L:bi.a(I[I[IIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -74433,7 +74617,7 @@
     },
     {
       "symbol": "L:bi.a(I[I[IIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#2",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -74444,7 +74628,7 @@
     },
     {
       "symbol": "L:bi.a(I[I[IIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#3",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -74455,7 +74639,7 @@
     },
     {
       "symbol": "L:bi.a(I[I[IIIIIIII)V#4",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#4",
+      "renamedSymbol": "L:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -74466,7 +74650,7 @@
     },
     {
       "symbol": "L:bi.a(I[I[IIIIIIII)V#5",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#5",
+      "renamedSymbol": "L:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#5",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -74477,7 +74661,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -74488,7 +74672,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -74499,7 +74683,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#10",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#10",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#10",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -74510,7 +74694,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#11",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#11",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#11",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -74521,7 +74705,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#12",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#12",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#12",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -74532,7 +74716,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#13",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#13",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#13",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -74543,7 +74727,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#14",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#14",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#14",
       "originalName": "var10Lifetime3",
       "renamedName": "var10Lifetime3",
       "declaration": {
@@ -74554,7 +74738,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -74565,7 +74749,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#3",
       "originalName": "dupTemp$3",
       "renamedName": "dupTemp$3",
       "declaration": {
@@ -74576,7 +74760,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#4",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#4",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#4",
       "originalName": "incrementValue$4",
       "renamedName": "incrementValue$4",
       "declaration": {
@@ -74587,7 +74771,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#5",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#5",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -74598,7 +74782,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#6",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#6",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -74609,7 +74793,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#7",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#7",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -74620,7 +74804,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#8",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#8",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -74631,7 +74815,7 @@
     },
     {
       "symbol": "L:bi.a([IIIIIIII)V#9",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#9",
+      "renamedSymbol": "L:Sprite.blitHalfSizeRows([IIIIIIII)V#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -74642,7 +74826,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.copyRows([I[IIIIIII)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -74653,7 +74837,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.copyRows([I[IIIIIII)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -74664,7 +74848,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitRows([I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -74675,7 +74859,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitRows([I[IIIIIIII)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -74686,7 +74870,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitRows([I[IIIIIIII)V#2",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -74697,7 +74881,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitRows([I[IIIIIIII)V#3",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -74708,7 +74892,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#0",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -74719,7 +74903,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#1",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -74730,7 +74914,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#10",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#10",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#10",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -74741,7 +74925,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#11",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#11",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#11",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -74752,7 +74936,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#12",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#12",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#12",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -74763,7 +74947,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#2",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -74774,7 +74958,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#3",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -74785,7 +74969,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#4",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#4",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#4",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -74796,7 +74980,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#5",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#5",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#5",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -74807,7 +74991,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#6",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#6",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#6",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -74818,7 +75002,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#7",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#7",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#7",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -74829,7 +75013,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#8",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#8",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#8",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -74840,7 +75024,7 @@
     },
     {
       "symbol": "L:bi.a([I[IIIIIIIII)V#9",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#9",
+      "renamedSymbol": "L:Sprite.blitTintedRows([I[IIIIIIIII)V#9",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -76116,7 +76300,7 @@
     },
     {
       "symbol": "L:bi.b([I[IIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitSilhouetteRows([I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -76127,7 +76311,7 @@
     },
     {
       "symbol": "L:bi.b([I[IIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitSilhouetteRows([I[IIIIIIII)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -76138,7 +76322,7 @@
     },
     {
       "symbol": "L:bi.b([I[IIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitSilhouetteRows([I[IIIIIIII)V#2",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -76149,7 +76333,7 @@
     },
     {
       "symbol": "L:bi.b([I[IIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitSilhouetteRows([I[IIIIIIII)V#3",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -76160,7 +76344,7 @@
     },
     {
       "symbol": "L:bi.b([I[IIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitAlphaRows([I[IIIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -76171,7 +76355,7 @@
     },
     {
       "symbol": "L:bi.b([I[IIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitAlphaRows([I[IIIIIIIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -76182,7 +76366,7 @@
     },
     {
       "symbol": "L:bi.b([I[IIIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitAlphaRows([I[IIIIIIIII)V#2",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -76193,7 +76377,7 @@
     },
     {
       "symbol": "L:bi.b([I[IIIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitAlphaRows([I[IIIIIIIII)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -76204,7 +76388,7 @@
     },
     {
       "symbol": "L:bi.b([I[IIIIIIIII)V#4",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIII)V#4",
+      "renamedSymbol": "L:Sprite.blitAlphaRows([I[IIIIIIIII)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -135516,7 +135700,7 @@
     },
     {
       "symbol": "L:go.a(BLjava/lang/String;)V#0",
-      "renamedSymbol": "L:TextFieldWidget.a(BLjava/lang/String;)V#0",
+      "renamedSymbol": "L:TextFieldWidget.insertText(BLjava/lang/String;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -135527,7 +135711,7 @@
     },
     {
       "symbol": "L:go.a(BLjava/lang/String;)V#1",
-      "renamedSymbol": "L:TextFieldWidget.a(BLjava/lang/String;)V#1",
+      "renamedSymbol": "L:TextFieldWidget.insertText(BLjava/lang/String;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -135538,7 +135722,7 @@
     },
     {
       "symbol": "L:go.a(I)I#0",
-      "renamedSymbol": "L:TextFieldWidget.a(I)I#0",
+      "renamedSymbol": "L:TextFieldWidget.findNextWordBoundary(I)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -135549,7 +135733,7 @@
     },
     {
       "symbol": "L:go.a(I)I#1",
-      "renamedSymbol": "L:TextFieldWidget.a(I)I#1",
+      "renamedSymbol": "L:TextFieldWidget.findNextWordBoundary(I)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -135560,7 +135744,7 @@
     },
     {
       "symbol": "L:go.a(I)I#2",
-      "renamedSymbol": "L:TextFieldWidget.a(I)I#2",
+      "renamedSymbol": "L:TextFieldWidget.findNextWordBoundary(I)I#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -136121,7 +136305,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Z)V#0",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;Z)V#0",
+      "renamedSymbol": "L:TextFieldWidget.setText(ILjava/lang/String;Z)V#0",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -136132,7 +136316,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Z)V#1",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;Z)V#1",
+      "renamedSymbol": "L:TextFieldWidget.setText(ILjava/lang/String;Z)V#1",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -136143,7 +136327,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Z)V#2",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;Z)V#2",
+      "renamedSymbol": "L:TextFieldWidget.setText(ILjava/lang/String;Z)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -136154,7 +136338,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Z)V#3",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;Z)V#3",
+      "renamedSymbol": "L:TextFieldWidget.setText(ILjava/lang/String;Z)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -136165,7 +136349,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Z)V#4",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;Z)V#4",
+      "renamedSymbol": "L:TextFieldWidget.setText(ILjava/lang/String;Z)V#4",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -136176,7 +136360,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Z)V#5",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;Z)V#5",
+      "renamedSymbol": "L:TextFieldWidget.setText(ILjava/lang/String;Z)V#5",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -136187,7 +136371,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Z)V#6",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;Z)V#6",
+      "renamedSymbol": "L:TextFieldWidget.setText(ILjava/lang/String;Z)V#6",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -136198,7 +136382,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Z)V#7",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;Z)V#7",
+      "renamedSymbol": "L:TextFieldWidget.setText(ILjava/lang/String;Z)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -136209,7 +136393,7 @@
     },
     {
       "symbol": "L:go.a(ILjava/lang/String;Z)V#8",
-      "renamedSymbol": "L:TextFieldWidget.a(ILjava/lang/String;Z)V#8",
+      "renamedSymbol": "L:TextFieldWidget.setText(ILjava/lang/String;Z)V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -136220,7 +136404,7 @@
     },
     {
       "symbol": "L:go.g(B)I#0",
-      "renamedSymbol": "L:TextFieldWidget.g(B)I#0",
+      "renamedSymbol": "L:TextFieldWidget.findPreviousWordBoundary(B)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -136231,7 +136415,7 @@
     },
     {
       "symbol": "L:go.g(B)I#1",
-      "renamedSymbol": "L:TextFieldWidget.g(B)I#1",
+      "renamedSymbol": "L:TextFieldWidget.findPreviousWordBoundary(B)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -136242,7 +136426,7 @@
     },
     {
       "symbol": "L:go.h(I)V#0",
-      "renamedSymbol": "L:TextFieldWidget.h(I)V#0",
+      "renamedSymbol": "L:TextFieldWidget.copyToClipboard(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -136253,7 +136437,7 @@
     },
     {
       "symbol": "L:go.h(I)V#1",
-      "renamedSymbol": "L:TextFieldWidget.h(I)V#1",
+      "renamedSymbol": "L:TextFieldWidget.copyToClipboard(I)V#1",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -136264,7 +136448,7 @@
     },
     {
       "symbol": "L:go.h(I)V#2",
-      "renamedSymbol": "L:TextFieldWidget.h(I)V#2",
+      "renamedSymbol": "L:TextFieldWidget.copyToClipboard(I)V#2",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -136374,7 +136558,7 @@
     },
     {
       "symbol": "L:go.k(B)V#0",
-      "renamedSymbol": "L:TextFieldWidget.k(B)V#0",
+      "renamedSymbol": "L:TextFieldWidget.deleteSelection(B)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -136385,7 +136569,7 @@
     },
     {
       "symbol": "L:go.k(B)V#1",
-      "renamedSymbol": "L:TextFieldWidget.k(B)V#1",
+      "renamedSymbol": "L:TextFieldWidget.deleteSelection(B)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -136396,7 +136580,7 @@
     },
     {
       "symbol": "L:go.k(B)V#2",
-      "renamedSymbol": "L:TextFieldWidget.k(B)V#2",
+      "renamedSymbol": "L:TextFieldWidget.deleteSelection(B)V#2",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -136407,7 +136591,7 @@
     },
     {
       "symbol": "L:go.l(B)Ljava/lang/String;#0",
-      "renamedSymbol": "L:TextFieldWidget.l(B)Ljava/lang/String;#0",
+      "renamedSymbol": "L:TextFieldWidget.getSelectedText(B)Ljava/lang/String;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -136418,7 +136602,7 @@
     },
     {
       "symbol": "L:go.l(B)Ljava/lang/String;#1",
-      "renamedSymbol": "L:TextFieldWidget.l(B)Ljava/lang/String;#1",
+      "renamedSymbol": "L:TextFieldWidget.getSelectedText(B)Ljava/lang/String;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -136429,7 +136613,7 @@
     },
     {
       "symbol": "L:go.l(B)Ljava/lang/String;#2",
-      "renamedSymbol": "L:TextFieldWidget.l(B)Ljava/lang/String;#2",
+      "renamedSymbol": "L:TextFieldWidget.getSelectedText(B)Ljava/lang/String;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -136440,7 +136624,7 @@
     },
     {
       "symbol": "L:go.m(B)V#0",
-      "renamedSymbol": "L:TextFieldWidget.m(B)V#0",
+      "renamedSymbol": "L:TextFieldWidget.pasteFromClipboard(B)V#0",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -136451,7 +136635,7 @@
     },
     {
       "symbol": "L:go.m(B)V#1",
-      "renamedSymbol": "L:TextFieldWidget.m(B)V#1",
+      "renamedSymbol": "L:TextFieldWidget.pasteFromClipboard(B)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -136462,7 +136646,7 @@
     },
     {
       "symbol": "L:go.m(B)V#2",
-      "renamedSymbol": "L:TextFieldWidget.m(B)V#2",
+      "renamedSymbol": "L:TextFieldWidget.pasteFromClipboard(B)V#2",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -136473,7 +136657,7 @@
     },
     {
       "symbol": "L:go.m(B)V#3",
-      "renamedSymbol": "L:TextFieldWidget.m(B)V#3",
+      "renamedSymbol": "L:TextFieldWidget.pasteFromClipboard(B)V#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -136484,7 +136668,7 @@
     },
     {
       "symbol": "L:go.m(B)V#4",
-      "renamedSymbol": "L:TextFieldWidget.m(B)V#4",
+      "renamedSymbol": "L:TextFieldWidget.pasteFromClipboard(B)V#4",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -136495,7 +136679,7 @@
     },
     {
       "symbol": "L:go.m(B)V#5",
-      "renamedSymbol": "L:TextFieldWidget.m(B)V#5",
+      "renamedSymbol": "L:TextFieldWidget.pasteFromClipboard(B)V#5",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -285512,7 +285696,7 @@
     },
     {
       "symbol": "L:ts.a(IIIB)V#0",
-      "renamedSymbol": "L:ts.a(IIIB)V#0",
+      "renamedSymbol": "L:ts.fireAction(IIIB)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -285523,7 +285707,7 @@
     },
     {
       "symbol": "L:ts.a(IIIB)V#1",
-      "renamedSymbol": "L:ts.a(IIIB)V#1",
+      "renamedSymbol": "L:ts.fireAction(IIIB)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -285534,7 +285718,7 @@
     },
     {
       "symbol": "L:ts.a(IIIB)V#2",
-      "renamedSymbol": "L:ts.a(IIIB)V#2",
+      "renamedSymbol": "L:ts.fireAction(IIIB)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -310141,9 +310325,9 @@
     },
     {
       "symbol": "M:bi.a(I[I[IIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a(I[I[IIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitMultiplyRows(I[I[IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitMultiplyRows",
       "declaration": {
         "file": "bi.java",
         "start": 41497,
@@ -310152,9 +310336,9 @@
     },
     {
       "symbol": "M:bi.a([IIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a([IIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitHalfSizeRows([IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitHalfSizeRows",
       "declaration": {
         "file": "bi.java",
         "start": 47217,
@@ -310163,9 +310347,9 @@
     },
     {
       "symbol": "M:bi.a([I[IIIIIII)V",
-      "renamedSymbol": "M:Sprite.a([I[IIIIIII)V",
+      "renamedSymbol": "M:Sprite.copyRows([I[IIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyRows",
       "declaration": {
         "file": "bi.java",
         "start": 92239,
@@ -310174,9 +310358,9 @@
     },
     {
       "symbol": "M:bi.a([I[IIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a([I[IIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitRows([I[IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitRows",
       "declaration": {
         "file": "bi.java",
         "start": 31839,
@@ -310185,9 +310369,9 @@
     },
     {
       "symbol": "M:bi.a([I[IIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a([I[IIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitTintedRows([I[IIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitTintedRows",
       "declaration": {
         "file": "bi.java",
         "start": 110,
@@ -310273,9 +310457,9 @@
     },
     {
       "symbol": "M:bi.b([I[IIIIIIII)V",
-      "renamedSymbol": "M:Sprite.b([I[IIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitSilhouetteRows([I[IIIIIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "blitSilhouetteRows",
       "declaration": {
         "file": "bi.java",
         "start": 92951,
@@ -310284,9 +310468,9 @@
     },
     {
       "symbol": "M:bi.b([I[IIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.b([I[IIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitAlphaRows([I[IIIIIIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "blitAlphaRows",
       "declaration": {
         "file": "bi.java",
         "start": 91305,
@@ -316147,9 +316331,9 @@
     },
     {
       "symbol": "M:fa.i(I)V",
-      "renamedSymbol": "M:fa.i(I)V",
+      "renamedSymbol": "M:fa.notifyTextChanged(I)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "notifyTextChanged",
       "declaration": {
         "file": "fa.java",
         "start": 1207,
@@ -319095,9 +319279,9 @@
     },
     {
       "symbol": "M:go.a(BLjava/lang/String;)V",
-      "renamedSymbol": "M:TextFieldWidget.a(BLjava/lang/String;)V",
+      "renamedSymbol": "M:TextFieldWidget.insertText(BLjava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "insertText",
       "declaration": {
         "file": "go.java",
         "start": 1252,
@@ -319106,9 +319290,9 @@
     },
     {
       "symbol": "M:go.a(I)I",
-      "renamedSymbol": "M:TextFieldWidget.a(I)I",
+      "renamedSymbol": "M:TextFieldWidget.findNextWordBoundary(I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findNextWordBoundary",
       "declaration": {
         "file": "go.java",
         "start": 12155,
@@ -319128,9 +319312,9 @@
     },
     {
       "symbol": "M:go.a(II)V",
-      "renamedSymbol": "M:TextFieldWidget.a(II)V",
+      "renamedSymbol": "M:TextFieldWidget.moveCaret(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "moveCaret",
       "declaration": {
         "file": "go.java",
         "start": 6806,
@@ -319194,9 +319378,9 @@
     },
     {
       "symbol": "M:go.a(ILjava/lang/String;Z)V",
-      "renamedSymbol": "M:TextFieldWidget.a(ILjava/lang/String;Z)V",
+      "renamedSymbol": "M:TextFieldWidget.setText(ILjava/lang/String;Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setText",
       "declaration": {
         "file": "go.java",
         "start": 14693,
@@ -319205,9 +319389,9 @@
     },
     {
       "symbol": "M:go.e(Z)V",
-      "renamedSymbol": "M:TextFieldWidget.e(Z)V",
+      "renamedSymbol": "M:TextFieldWidget.clear(Z)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "clear",
       "declaration": {
         "file": "go.java",
         "start": 2195,
@@ -319216,9 +319400,9 @@
     },
     {
       "symbol": "M:go.g(B)I",
-      "renamedSymbol": "M:TextFieldWidget.g(B)I",
+      "renamedSymbol": "M:TextFieldWidget.findPreviousWordBoundary(B)I",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "findPreviousWordBoundary",
       "declaration": {
         "file": "go.java",
         "start": 21942,
@@ -319227,9 +319411,9 @@
     },
     {
       "symbol": "M:go.h(B)V",
-      "renamedSymbol": "M:TextFieldWidget.h(B)V",
+      "renamedSymbol": "M:TextFieldWidget.cutSelection(B)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "cutSelection",
       "declaration": {
         "file": "go.java",
         "start": 1019,
@@ -319238,9 +319422,9 @@
     },
     {
       "symbol": "M:go.h(I)V",
-      "renamedSymbol": "M:TextFieldWidget.h(I)V",
+      "renamedSymbol": "M:TextFieldWidget.copyToClipboard(I)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "copyToClipboard",
       "declaration": {
         "file": "go.java",
         "start": 21052,
@@ -319260,9 +319444,9 @@
     },
     {
       "symbol": "M:go.i(I)V",
-      "renamedSymbol": "M:TextFieldWidget.i(I)V",
+      "renamedSymbol": "M:TextFieldWidget.notifyTextChanged(I)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "notifyTextChanged",
       "declaration": {
         "file": "go.java",
         "start": 14469,
@@ -319293,9 +319477,9 @@
     },
     {
       "symbol": "M:go.k(B)V",
-      "renamedSymbol": "M:TextFieldWidget.k(B)V",
+      "renamedSymbol": "M:TextFieldWidget.deleteSelection(B)V",
       "originalName": "k",
-      "renamedName": "k",
+      "renamedName": "deleteSelection",
       "declaration": {
         "file": "go.java",
         "start": 445,
@@ -319315,9 +319499,9 @@
     },
     {
       "symbol": "M:go.l(B)Ljava/lang/String;",
-      "renamedSymbol": "M:TextFieldWidget.l(B)Ljava/lang/String;",
+      "renamedSymbol": "M:TextFieldWidget.getSelectedText(B)Ljava/lang/String;",
       "originalName": "l",
-      "renamedName": "l",
+      "renamedName": "getSelectedText",
       "declaration": {
         "file": "go.java",
         "start": 16250,
@@ -319326,9 +319510,9 @@
     },
     {
       "symbol": "M:go.m(B)V",
-      "renamedSymbol": "M:TextFieldWidget.m(B)V",
+      "renamedSymbol": "M:TextFieldWidget.pasteFromClipboard(B)V",
       "originalName": "m",
-      "renamedName": "m",
+      "renamedName": "pasteFromClipboard",
       "declaration": {
         "file": "go.java",
         "start": 17763,
@@ -325695,9 +325879,9 @@
     },
     {
       "symbol": "M:kg.a(IIIB)V",
-      "renamedSymbol": "M:FocusableWidget.a(IIIB)V",
+      "renamedSymbol": "M:FocusableWidget.fireAction(IIIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "fireAction",
       "declaration": {
         "file": "kg.java",
         "start": 9074,
@@ -328269,9 +328453,9 @@
     },
     {
       "symbol": "M:lk.a(IIIB)V",
-      "renamedSymbol": "M:CheckboxWidget.a(IIIB)V",
+      "renamedSymbol": "M:CheckboxWidget.fireAction(IIIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "fireAction",
       "declaration": {
         "file": "lk.java",
         "start": 1488,
@@ -342404,9 +342588,9 @@
     },
     {
       "symbol": "M:ts.a(IIIB)V",
-      "renamedSymbol": "M:ts.a(IIIB)V",
+      "renamedSymbol": "M:ts.fireAction(IIIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "fireAction",
       "declaration": {
         "file": "ts.java",
         "start": 16488,
@@ -355846,7 +356030,7 @@
     },
     {
       "symbol": "P:bi.a(I[I[IIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -355857,7 +356041,7 @@
     },
     {
       "symbol": "P:bi.a(I[I[IIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -355868,7 +356052,7 @@
     },
     {
       "symbol": "P:bi.a(I[I[IIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -355879,7 +356063,7 @@
     },
     {
       "symbol": "P:bi.a(I[I[IIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -355890,7 +356074,7 @@
     },
     {
       "symbol": "P:bi.a(I[I[IIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -355901,7 +356085,7 @@
     },
     {
       "symbol": "P:bi.a(I[I[IIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -355912,7 +356096,7 @@
     },
     {
       "symbol": "P:bi.a(I[I[IIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -355923,7 +356107,7 @@
     },
     {
       "symbol": "P:bi.a(I[I[IIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -355934,7 +356118,7 @@
     },
     {
       "symbol": "P:bi.a(I[I[IIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -355945,7 +356129,7 @@
     },
     {
       "symbol": "P:bi.a(I[I[IIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitMultiplyRows(I[I[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -355956,7 +356140,7 @@
     },
     {
       "symbol": "P:bi.a([IIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitHalfSizeRows([IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -355967,7 +356151,7 @@
     },
     {
       "symbol": "P:bi.a([IIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitHalfSizeRows([IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -355978,7 +356162,7 @@
     },
     {
       "symbol": "P:bi.a([IIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitHalfSizeRows([IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -355989,7 +356173,7 @@
     },
     {
       "symbol": "P:bi.a([IIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitHalfSizeRows([IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -356000,7 +356184,7 @@
     },
     {
       "symbol": "P:bi.a([IIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitHalfSizeRows([IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -356011,7 +356195,7 @@
     },
     {
       "symbol": "P:bi.a([IIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitHalfSizeRows([IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -356022,7 +356206,7 @@
     },
     {
       "symbol": "P:bi.a([IIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitHalfSizeRows([IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -356033,7 +356217,7 @@
     },
     {
       "symbol": "P:bi.a([IIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitHalfSizeRows([IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -356044,7 +356228,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.copyRows([I[IIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -356055,7 +356239,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.copyRows([I[IIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -356066,7 +356250,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.copyRows([I[IIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -356077,7 +356261,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.copyRows([I[IIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -356088,7 +356272,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.copyRows([I[IIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -356099,7 +356283,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.copyRows([I[IIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -356110,7 +356294,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.copyRows([I[IIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -356121,7 +356305,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.copyRows([I[IIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -356132,7 +356316,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitRows([I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -356143,7 +356327,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitRows([I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -356154,7 +356338,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitRows([I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -356165,7 +356349,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitRows([I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -356176,7 +356360,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitRows([I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -356187,7 +356371,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitRows([I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -356198,7 +356382,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitRows([I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -356209,7 +356393,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitRows([I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -356220,7 +356404,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitRows([I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -356231,7 +356415,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitTintedRows([I[IIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -356242,7 +356426,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitTintedRows([I[IIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -356253,7 +356437,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitTintedRows([I[IIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -356264,7 +356448,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitTintedRows([I[IIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -356275,7 +356459,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitTintedRows([I[IIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -356286,7 +356470,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitTintedRows([I[IIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -356297,7 +356481,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitTintedRows([I[IIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -356308,7 +356492,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitTintedRows([I[IIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -356319,7 +356503,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitTintedRows([I[IIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -356330,7 +356514,7 @@
     },
     {
       "symbol": "P:bi.a([I[IIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitTintedRows([I[IIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -356814,7 +356998,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitSilhouetteRows([I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -356825,7 +357009,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitSilhouetteRows([I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -356836,7 +357020,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitSilhouetteRows([I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -356847,7 +357031,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitSilhouetteRows([I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -356858,7 +357042,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitSilhouetteRows([I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -356869,7 +357053,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitSilhouetteRows([I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -356880,7 +357064,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitSilhouetteRows([I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -356891,7 +357075,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitSilhouetteRows([I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -356902,7 +357086,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitSilhouetteRows([I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -356913,7 +357097,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitAlphaRows([I[IIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -356924,7 +357108,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitAlphaRows([I[IIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -356935,7 +357119,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitAlphaRows([I[IIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -356946,7 +357130,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitAlphaRows([I[IIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -356957,7 +357141,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitAlphaRows([I[IIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -356968,7 +357152,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitAlphaRows([I[IIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -356979,7 +357163,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitAlphaRows([I[IIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -356990,7 +357174,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitAlphaRows([I[IIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -357001,7 +357185,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitAlphaRows([I[IIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -357012,7 +357196,7 @@
     },
     {
       "symbol": "P:bi.b([I[IIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitAlphaRows([I[IIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -370179,7 +370363,7 @@
     },
     {
       "symbol": "P:fa.i(I)V#0",
-      "renamedSymbol": "P:fa.i(I)V#0",
+      "renamedSymbol": "P:fa.notifyTextChanged(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378429,7 +378613,7 @@
     },
     {
       "symbol": "P:go.a(BLjava/lang/String;)V#0",
-      "renamedSymbol": "P:TextFieldWidget.a(BLjava/lang/String;)V#0",
+      "renamedSymbol": "P:TextFieldWidget.insertText(BLjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378440,7 +378624,7 @@
     },
     {
       "symbol": "P:go.a(BLjava/lang/String;)V#1",
-      "renamedSymbol": "P:TextFieldWidget.a(BLjava/lang/String;)V#1",
+      "renamedSymbol": "P:TextFieldWidget.insertText(BLjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -378451,7 +378635,7 @@
     },
     {
       "symbol": "P:go.a(I)I#0",
-      "renamedSymbol": "P:TextFieldWidget.a(I)I#0",
+      "renamedSymbol": "P:TextFieldWidget.findNextWordBoundary(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378506,7 +378690,7 @@
     },
     {
       "symbol": "P:go.a(II)V#0",
-      "renamedSymbol": "P:TextFieldWidget.a(II)V#0",
+      "renamedSymbol": "P:TextFieldWidget.moveCaret(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378517,7 +378701,7 @@
     },
     {
       "symbol": "P:go.a(II)V#1",
-      "renamedSymbol": "P:TextFieldWidget.a(II)V#1",
+      "renamedSymbol": "P:TextFieldWidget.moveCaret(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -378770,7 +378954,7 @@
     },
     {
       "symbol": "P:go.a(ILjava/lang/String;Z)V#0",
-      "renamedSymbol": "P:TextFieldWidget.a(ILjava/lang/String;Z)V#0",
+      "renamedSymbol": "P:TextFieldWidget.setText(ILjava/lang/String;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378781,7 +378965,7 @@
     },
     {
       "symbol": "P:go.a(ILjava/lang/String;Z)V#1",
-      "renamedSymbol": "P:TextFieldWidget.a(ILjava/lang/String;Z)V#1",
+      "renamedSymbol": "P:TextFieldWidget.setText(ILjava/lang/String;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -378792,7 +378976,7 @@
     },
     {
       "symbol": "P:go.a(ILjava/lang/String;Z)V#2",
-      "renamedSymbol": "P:TextFieldWidget.a(ILjava/lang/String;Z)V#2",
+      "renamedSymbol": "P:TextFieldWidget.setText(ILjava/lang/String;Z)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -378803,7 +378987,7 @@
     },
     {
       "symbol": "P:go.e(Z)V#0",
-      "renamedSymbol": "P:TextFieldWidget.e(Z)V#0",
+      "renamedSymbol": "P:TextFieldWidget.clear(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378814,7 +378998,7 @@
     },
     {
       "symbol": "P:go.g(B)I#0",
-      "renamedSymbol": "P:TextFieldWidget.g(B)I#0",
+      "renamedSymbol": "P:TextFieldWidget.findPreviousWordBoundary(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378825,7 +379009,7 @@
     },
     {
       "symbol": "P:go.h(B)V#0",
-      "renamedSymbol": "P:TextFieldWidget.h(B)V#0",
+      "renamedSymbol": "P:TextFieldWidget.cutSelection(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378836,7 +379020,7 @@
     },
     {
       "symbol": "P:go.h(I)V#0",
-      "renamedSymbol": "P:TextFieldWidget.h(I)V#0",
+      "renamedSymbol": "P:TextFieldWidget.copyToClipboard(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378858,7 +379042,7 @@
     },
     {
       "symbol": "P:go.i(I)V#0",
-      "renamedSymbol": "P:TextFieldWidget.i(I)V#0",
+      "renamedSymbol": "P:TextFieldWidget.notifyTextChanged(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378891,7 +379075,7 @@
     },
     {
       "symbol": "P:go.k(B)V#0",
-      "renamedSymbol": "P:TextFieldWidget.k(B)V#0",
+      "renamedSymbol": "P:TextFieldWidget.deleteSelection(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378913,7 +379097,7 @@
     },
     {
       "symbol": "P:go.l(B)Ljava/lang/String;#0",
-      "renamedSymbol": "P:TextFieldWidget.l(B)Ljava/lang/String;#0",
+      "renamedSymbol": "P:TextFieldWidget.getSelectedText(B)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -378924,7 +379108,7 @@
     },
     {
       "symbol": "P:go.m(B)V#0",
-      "renamedSymbol": "P:TextFieldWidget.m(B)V#0",
+      "renamedSymbol": "P:TextFieldWidget.pasteFromClipboard(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -393532,7 +393716,7 @@
     },
     {
       "symbol": "P:kg.a(IIIB)V#0",
-      "renamedSymbol": "P:FocusableWidget.a(IIIB)V#0",
+      "renamedSymbol": "P:FocusableWidget.fireAction(IIIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -393543,7 +393727,7 @@
     },
     {
       "symbol": "P:kg.a(IIIB)V#1",
-      "renamedSymbol": "P:FocusableWidget.a(IIIB)V#1",
+      "renamedSymbol": "P:FocusableWidget.fireAction(IIIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -393554,7 +393738,7 @@
     },
     {
       "symbol": "P:kg.a(IIIB)V#2",
-      "renamedSymbol": "P:FocusableWidget.a(IIIB)V#2",
+      "renamedSymbol": "P:FocusableWidget.fireAction(IIIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -393565,7 +393749,7 @@
     },
     {
       "symbol": "P:kg.a(IIIB)V#3",
-      "renamedSymbol": "P:FocusableWidget.a(IIIB)V#3",
+      "renamedSymbol": "P:FocusableWidget.fireAction(IIIB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -399417,7 +399601,7 @@
     },
     {
       "symbol": "P:lk.a(IIIB)V#0",
-      "renamedSymbol": "P:CheckboxWidget.a(IIIB)V#0",
+      "renamedSymbol": "P:CheckboxWidget.fireAction(IIIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -399428,7 +399612,7 @@
     },
     {
       "symbol": "P:lk.a(IIIB)V#1",
-      "renamedSymbol": "P:CheckboxWidget.a(IIIB)V#1",
+      "renamedSymbol": "P:CheckboxWidget.fireAction(IIIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -399439,7 +399623,7 @@
     },
     {
       "symbol": "P:lk.a(IIIB)V#2",
-      "renamedSymbol": "P:CheckboxWidget.a(IIIB)V#2",
+      "renamedSymbol": "P:CheckboxWidget.fireAction(IIIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -399450,7 +399634,7 @@
     },
     {
       "symbol": "P:lk.a(IIIB)V#3",
-      "renamedSymbol": "P:CheckboxWidget.a(IIIB)V#3",
+      "renamedSymbol": "P:CheckboxWidget.fireAction(IIIB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -434551,7 +434735,7 @@
     },
     {
       "symbol": "P:ts.a(IIIB)V#0",
-      "renamedSymbol": "P:ts.a(IIIB)V#0",
+      "renamedSymbol": "P:ts.fireAction(IIIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -434562,7 +434746,7 @@
     },
     {
       "symbol": "P:ts.a(IIIB)V#1",
-      "renamedSymbol": "P:ts.a(IIIB)V#1",
+      "renamedSymbol": "P:ts.fireAction(IIIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -434573,7 +434757,7 @@
     },
     {
       "symbol": "P:ts.a(IIIB)V#2",
-      "renamedSymbol": "P:ts.a(IIIB)V#2",
+      "renamedSymbol": "P:ts.fireAction(IIIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -434584,7 +434768,7 @@
     },
     {
       "symbol": "P:ts.a(IIIB)V#3",
-      "renamedSymbol": "P:ts.a(IIIB)V#3",
+      "renamedSymbol": "P:ts.fireAction(IIIB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -451406,7 +451590,7 @@
       "original": "aa.java",
       "renamed": "aa.java",
       "inputSha256": "35dc0e643c81c3b478fa5541e86482b3c744b465d03d2bd7253bf9b8357b149a",
-      "outputSha256": "09baa0171e9f04123a4f7a39a83adcfe4a14a427e4d12eba88b8394cebcf08aa",
+      "outputSha256": "7d8bb3f75481ab45b975f19111a320fc729a0caa575055c78be1bfb262c00c52",
       "edits": [
         {
           "start": 61,
@@ -451603,6 +451787,13 @@
           "symbol": "C:go",
           "original": "go",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 8358,
+          "end": 8359,
+          "symbol": "M:go.a(ILjava/lang/String;Z)V",
+          "original": "a",
+          "renamed": "setText"
         },
         {
           "start": 8515,
@@ -460536,7 +460727,7 @@
       "original": "bi.java",
       "renamed": "Sprite.java",
       "inputSha256": "34e6c73a298804d4f30da12b3c6e9c3c2ff7d8c20826ecc757c161b497c52077",
-      "outputSha256": "a51349ac378611bcd13be03d5b53f5ed53f6917752a8142ff4a0d5c7a5858261",
+      "outputSha256": "002cb71431f071459193a3fe12cf5a297b46c6291929eb9b10ef8011eec602e8",
       "edits": [
         {
           "start": 44,
@@ -460551,6 +460742,13 @@
           "symbol": "C:ii",
           "original": "ii",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 110,
+          "end": 111,
+          "symbol": "M:bi.a([I[IIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitTintedRows"
         },
         {
           "start": 3160,
@@ -460663,6 +460861,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Sprite"
+        },
+        {
+          "start": 5025,
+          "end": 5026,
+          "symbol": "M:bi.b([I[IIIIIIIII)V",
+          "original": "b",
+          "renamed": "blitAlphaRows"
         },
         {
           "start": 5027,
@@ -460980,11 +461185,25 @@
           "renamed": "Sprite"
         },
         {
+          "start": 31703,
+          "end": 31704,
+          "symbol": "M:bi.a(I[I[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitMultiplyRows"
+        },
+        {
           "start": 31708,
           "end": 31710,
           "symbol": "C:gf",
           "original": "gf",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 31839,
+          "end": 31840,
+          "symbol": "M:bi.a([I[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitRows"
         },
         {
           "start": 33261,
@@ -461090,6 +461309,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Sprite"
+        },
+        {
+          "start": 34638,
+          "end": 34639,
+          "symbol": "M:bi.a([I[IIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitTintedRows"
         },
         {
           "start": 34640,
@@ -461246,6 +461472,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 41497,
+          "end": 41498,
+          "symbol": "M:bi.a(I[I[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitMultiplyRows"
+        },
+        {
           "start": 42616,
           "end": 42617,
           "symbol": "M:bi.f(II)V",
@@ -461349,6 +461582,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Sprite"
+        },
+        {
+          "start": 43964,
+          "end": 43965,
+          "symbol": "M:bi.a([I[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitRows"
         },
         {
           "start": 43966,
@@ -461491,6 +461731,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 46030,
+          "end": 46031,
+          "symbol": "M:bi.b([I[IIIIIIII)V",
+          "original": "b",
+          "renamed": "blitSilhouetteRows"
+        },
+        {
           "start": 46032,
           "end": 46034,
           "symbol": "C:gf",
@@ -461568,6 +461815,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 46630,
+          "end": 46631,
+          "symbol": "M:bi.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitHalfSizeRows"
+        },
+        {
           "start": 46699,
           "end": 46701,
           "symbol": "C:gf",
@@ -461594,6 +461848,13 @@
           "symbol": "M:bi.b(IIIIII)V",
           "original": "b",
           "renamed": "drawRotatedAbout"
+        },
+        {
+          "start": 47217,
+          "end": 47218,
+          "symbol": "M:bi.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitHalfSizeRows"
         },
         {
           "start": 47800,
@@ -462443,11 +462704,39 @@
           "renamed": "Sprite"
         },
         {
+          "start": 91175,
+          "end": 91176,
+          "symbol": "M:bi.a([I[IIIIIII)V",
+          "original": "a",
+          "renamed": "copyRows"
+        },
+        {
           "start": 91177,
           "end": 91179,
           "symbol": "C:gf",
           "original": "gf",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 91305,
+          "end": 91306,
+          "symbol": "M:bi.b([I[IIIIIIIII)V",
+          "original": "b",
+          "renamed": "blitAlphaRows"
+        },
+        {
+          "start": 92239,
+          "end": 92240,
+          "symbol": "M:bi.a([I[IIIIIII)V",
+          "original": "a",
+          "renamed": "copyRows"
+        },
+        {
+          "start": 92951,
+          "end": 92952,
+          "symbol": "M:bi.b([I[IIIIIIII)V",
+          "original": "b",
+          "renamed": "blitSilhouetteRows"
         },
         {
           "start": 94234,
@@ -494365,7 +494654,7 @@
       "original": "fa.java",
       "renamed": "fa.java",
       "inputSha256": "b4ae4035be71c0fc4bbc797d03cf9ac65880b79a6eb88f27f9d3215c27d59996",
-      "outputSha256": "129d9fb6a9f336ef8df2d3420281f262da96c8df3b595cf8d4689b200eb6ac2b",
+      "outputSha256": "e0db320ff018e19d404b625cb136916ecbcaa23cecd1b30343c7fed82bc0264a",
       "edits": [
         {
           "start": 61,
@@ -494443,6 +494732,20 @@
           "symbol": "M:fa.c(Z)Ljava/lang/String;",
           "original": "c",
           "renamed": "getTooltip"
+        },
+        {
+          "start": 1207,
+          "end": 1208,
+          "symbol": "M:fa.i(I)V",
+          "original": "i",
+          "renamed": "notifyTextChanged"
+        },
+        {
+          "start": 1237,
+          "end": 1238,
+          "symbol": "M:go.i(I)V",
+          "original": "i",
+          "renamed": "notifyTextChanged"
         },
         {
           "start": 1349,
@@ -505520,7 +505823,7 @@
       "original": "go.java",
       "renamed": "TextFieldWidget.java",
       "inputSha256": "5390bf948886f70478332f30ccfa9c87a67fe4bc76c42823d15566ed553b9c2a",
-      "outputSha256": "b25edd6c85eef82ac54bbd097098adc0e927ad43a09a67b4d690db0ac5a1e53a",
+      "outputSha256": "a6ca21ca4e4affe9788e94cc0e99760ed5ef7334436ff169a8043d723a9fa51d",
       "edits": [
         {
           "start": 44,
@@ -505544,6 +505847,69 @@
           "renamed": "Sprite"
         },
         {
+          "start": 445,
+          "end": 446,
+          "symbol": "M:go.k(B)V",
+          "original": "k",
+          "renamed": "deleteSelection"
+        },
+        {
+          "start": 918,
+          "end": 919,
+          "symbol": "M:go.i(I)V",
+          "original": "i",
+          "renamed": "notifyTextChanged"
+        },
+        {
+          "start": 1019,
+          "end": 1020,
+          "symbol": "M:go.h(B)V",
+          "original": "h",
+          "renamed": "cutSelection"
+        },
+        {
+          "start": 1080,
+          "end": 1081,
+          "symbol": "M:go.h(I)V",
+          "original": "h",
+          "renamed": "copyToClipboard"
+        },
+        {
+          "start": 1102,
+          "end": 1103,
+          "symbol": "M:go.k(B)V",
+          "original": "k",
+          "renamed": "deleteSelection"
+        },
+        {
+          "start": 1187,
+          "end": 1188,
+          "symbol": "M:go.h(I)V",
+          "original": "h",
+          "renamed": "copyToClipboard"
+        },
+        {
+          "start": 1207,
+          "end": 1208,
+          "symbol": "M:go.k(B)V",
+          "original": "k",
+          "renamed": "deleteSelection"
+        },
+        {
+          "start": 1252,
+          "end": 1253,
+          "symbol": "M:go.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "insertText"
+        },
+        {
+          "start": 1970,
+          "end": 1971,
+          "symbol": "M:go.i(I)V",
+          "original": "i",
+          "renamed": "notifyTextChanged"
+        },
+        {
           "start": 2049,
           "end": 2050,
           "symbol": "C:r",
@@ -505556,6 +505922,20 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 2195,
+          "end": 2196,
+          "symbol": "M:go.e(Z)V",
+          "original": "e",
+          "renamed": "clear"
+        },
+        {
+          "start": 2358,
+          "end": 2359,
+          "symbol": "M:go.i(I)V",
+          "original": "i",
+          "renamed": "notifyTextChanged"
         },
         {
           "start": 2392,
@@ -505600,11 +505980,32 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 3295,
+          "end": 3296,
+          "symbol": "M:go.a(II)V",
+          "original": "a",
+          "renamed": "moveCaret"
+        },
+        {
           "start": 3351,
           "end": 3352,
           "symbol": "M:pr.a(I)J",
           "original": "a",
           "renamed": "currentTimeMillis"
+        },
+        {
+          "start": 3531,
+          "end": 3532,
+          "symbol": "M:go.g(B)I",
+          "original": "g",
+          "renamed": "findPreviousWordBoundary"
+        },
+        {
+          "start": 3579,
+          "end": 3580,
+          "symbol": "M:go.a(I)I",
+          "original": "a",
+          "renamed": "findNextWordBoundary"
         },
         {
           "start": 3973,
@@ -505719,6 +506120,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 6806,
+          "end": 6807,
+          "symbol": "M:go.a(II)V",
+          "original": "a",
+          "renamed": "moveCaret"
+        },
+        {
           "start": 7040,
           "end": 7041,
           "symbol": "M:go.a(ICILvg;)Z",
@@ -505738,6 +506146,118 @@
           "symbol": "M:pr.a(I)J",
           "original": "a",
           "renamed": "currentTimeMillis"
+        },
+        {
+          "start": 7789,
+          "end": 7790,
+          "symbol": "M:go.k(B)V",
+          "original": "k",
+          "renamed": "deleteSelection"
+        },
+        {
+          "start": 8485,
+          "end": 8486,
+          "symbol": "M:go.i(I)V",
+          "original": "i",
+          "renamed": "notifyTextChanged"
+        },
+        {
+          "start": 8654,
+          "end": 8655,
+          "symbol": "M:go.k(B)V",
+          "original": "k",
+          "renamed": "deleteSelection"
+        },
+        {
+          "start": 8865,
+          "end": 8866,
+          "symbol": "M:go.k(B)V",
+          "original": "k",
+          "renamed": "deleteSelection"
+        },
+        {
+          "start": 9026,
+          "end": 9027,
+          "symbol": "M:go.k(B)V",
+          "original": "k",
+          "renamed": "deleteSelection"
+        },
+        {
+          "start": 9215,
+          "end": 9216,
+          "symbol": "M:go.k(B)V",
+          "original": "k",
+          "renamed": "deleteSelection"
+        },
+        {
+          "start": 9352,
+          "end": 9353,
+          "symbol": "M:go.e(Z)V",
+          "original": "e",
+          "renamed": "clear"
+        },
+        {
+          "start": 9598,
+          "end": 9599,
+          "symbol": "M:go.g(B)I",
+          "original": "g",
+          "renamed": "findPreviousWordBoundary"
+        },
+        {
+          "start": 9736,
+          "end": 9737,
+          "symbol": "M:go.a(II)V",
+          "original": "a",
+          "renamed": "moveCaret"
+        },
+        {
+          "start": 10145,
+          "end": 10146,
+          "symbol": "M:go.a(I)I",
+          "original": "a",
+          "renamed": "findNextWordBoundary"
+        },
+        {
+          "start": 10199,
+          "end": 10200,
+          "symbol": "M:go.a(II)V",
+          "original": "a",
+          "renamed": "moveCaret"
+        },
+        {
+          "start": 10372,
+          "end": 10373,
+          "symbol": "M:go.a(II)V",
+          "original": "a",
+          "renamed": "moveCaret"
+        },
+        {
+          "start": 10499,
+          "end": 10500,
+          "symbol": "M:go.a(II)V",
+          "original": "a",
+          "renamed": "moveCaret"
+        },
+        {
+          "start": 10812,
+          "end": 10813,
+          "symbol": "M:go.h(B)V",
+          "original": "h",
+          "renamed": "cutSelection"
+        },
+        {
+          "start": 10981,
+          "end": 10982,
+          "symbol": "M:go.h(I)V",
+          "original": "h",
+          "renamed": "copyToClipboard"
+        },
+        {
+          "start": 11151,
+          "end": 11152,
+          "symbol": "M:go.m(B)V",
+          "original": "m",
+          "renamed": "pasteFromClipboard"
         },
         {
           "start": 11836,
@@ -505768,6 +506288,27 @@
           "renamed": "getHostApplet"
         },
         {
+          "start": 12155,
+          "end": 12156,
+          "symbol": "M:go.a(I)I",
+          "original": "a",
+          "renamed": "findNextWordBoundary"
+        },
+        {
+          "start": 12569,
+          "end": 12570,
+          "symbol": "M:go.h(B)V",
+          "original": "h",
+          "renamed": "cutSelection"
+        },
+        {
+          "start": 12829,
+          "end": 12830,
+          "symbol": "M:go.h(B)V",
+          "original": "h",
+          "renamed": "cutSelection"
+        },
+        {
           "start": 12875,
           "end": 12877,
           "symbol": "M:go.<init>(Ljava/lang/String;Lko;I)V",
@@ -505787,6 +506328,13 @@
           "symbol": "C:qq",
           "original": "qq",
           "renamed": "MusicVoice"
+        },
+        {
+          "start": 13140,
+          "end": 13141,
+          "symbol": "M:go.a(ILjava/lang/String;Z)V",
+          "original": "a",
+          "renamed": "setText"
         },
         {
           "start": 13220,
@@ -505880,6 +506428,13 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 14469,
+          "end": 14470,
+          "symbol": "M:go.i(I)V",
+          "original": "i",
+          "renamed": "notifyTextChanged"
+        },
+        {
           "start": 14521,
           "end": 14523,
           "symbol": "C:od",
@@ -505892,6 +506447,20 @@
           "symbol": "C:od",
           "original": "od",
           "renamed": "TextFieldListener"
+        },
+        {
+          "start": 14693,
+          "end": 14694,
+          "symbol": "M:go.a(ILjava/lang/String;Z)V",
+          "original": "a",
+          "renamed": "setText"
+        },
+        {
+          "start": 15573,
+          "end": 15574,
+          "symbol": "M:go.i(I)V",
+          "original": "i",
+          "renamed": "notifyTextChanged"
         },
         {
           "start": 16054,
@@ -505908,6 +506477,20 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 16250,
+          "end": 16251,
+          "symbol": "M:go.l(B)Ljava/lang/String;",
+          "original": "l",
+          "renamed": "getSelectedText"
+        },
+        {
+          "start": 16564,
+          "end": 16565,
+          "symbol": "M:go.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "insertText"
+        },
+        {
           "start": 17599,
           "end": 17600,
           "symbol": "C:r",
@@ -505920,6 +506503,27 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 17763,
+          "end": 17764,
+          "symbol": "M:go.m(B)V",
+          "original": "m",
+          "renamed": "pasteFromClipboard"
+        },
+        {
+          "start": 18127,
+          "end": 18128,
+          "symbol": "M:go.k(B)V",
+          "original": "k",
+          "renamed": "deleteSelection"
+        },
+        {
+          "start": 18160,
+          "end": 18161,
+          "symbol": "M:go.a(BLjava/lang/String;)V",
+          "original": "a",
+          "renamed": "insertText"
         },
         {
           "start": 18813,
@@ -505964,11 +506568,39 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 21052,
+          "end": 21053,
+          "symbol": "M:go.h(I)V",
+          "original": "h",
+          "renamed": "copyToClipboard"
+        },
+        {
+          "start": 21111,
+          "end": 21112,
+          "symbol": "M:go.l(B)Ljava/lang/String;",
+          "original": "l",
+          "renamed": "getSelectedText"
+        },
+        {
+          "start": 21343,
+          "end": 21344,
+          "symbol": "M:go.l(B)Ljava/lang/String;",
+          "original": "l",
+          "renamed": "getSelectedText"
+        },
+        {
           "start": 21721,
           "end": 21722,
           "symbol": "M:go.k(I)V",
           "original": "k",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 21942,
+          "end": 21943,
+          "symbol": "M:go.g(B)I",
+          "original": "g",
+          "renamed": "findPreviousWordBoundary"
         },
         {
           "start": 22533,
@@ -505983,6 +506615,20 @@
           "symbol": "C:od",
           "original": "od",
           "renamed": "TextFieldListener"
+        },
+        {
+          "start": 22646,
+          "end": 22647,
+          "symbol": "M:go.l(B)Ljava/lang/String;",
+          "original": "l",
+          "renamed": "getSelectedText"
+        },
+        {
+          "start": 22778,
+          "end": 22779,
+          "symbol": "M:go.l(B)Ljava/lang/String;",
+          "original": "l",
+          "renamed": "getSelectedText"
         }
       ]
     },
@@ -521912,7 +522558,7 @@
       "original": "ir.java",
       "renamed": "ir.java",
       "inputSha256": "50ce331ef01209bb21fc9e647de5e0ef4a6d640751be4be533a03efe13620d86",
-      "outputSha256": "031687cbfc9f697b86ad47f6ab6488b04a402b4ea7a0e621b4ed120944973118",
+      "outputSha256": "fbf7ed70e20f286ad0114dca4f78808f9714c224e265f230fd7737b59649d9d1",
       "edits": [
         {
           "start": 61,
@@ -522046,6 +522692,13 @@
           "symbol": "C:go",
           "original": "go",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 3479,
+          "end": 3480,
+          "symbol": "M:go.a(ILjava/lang/String;Z)V",
+          "original": "a",
+          "renamed": "setText"
         },
         {
           "start": 3569,
@@ -533304,7 +533957,7 @@
       "original": "kg.java",
       "renamed": "FocusableWidget.java",
       "inputSha256": "841a347596a3e240608831f4e85f1fc193b5fadacede7c3a89a3fca56943b6a7",
-      "outputSha256": "899e5d23fb836195c266ac42ecbc116ea8d71c467a231593bc8737be689903d7",
+      "outputSha256": "cc5780bc8f53b9f11138e7bc303f54779f02e62eb5a0719c32deb5ec08e9d5c3",
       "edits": [
         {
           "start": 65,
@@ -533573,6 +534226,13 @@
           "renamed": "AllianceExpiredEvent"
         },
         {
+          "start": 7249,
+          "end": 7250,
+          "symbol": "M:kg.a(IIIB)V",
+          "original": "a",
+          "renamed": "fireAction"
+        },
+        {
           "start": 7353,
           "end": 7354,
           "symbol": "M:kg.a(IIIIILvg;)V",
@@ -533615,6 +534275,13 @@
           "renamed": "isFocused"
         },
         {
+          "start": 8204,
+          "end": 8205,
+          "symbol": "M:kg.a(IIIB)V",
+          "original": "a",
+          "renamed": "fireAction"
+        },
+        {
           "start": 8762,
           "end": 8763,
           "symbol": "C:r",
@@ -533641,6 +534308,13 @@
           "symbol": "C:qq",
           "original": "qq",
           "renamed": "MusicVoice"
+        },
+        {
+          "start": 9074,
+          "end": 9075,
+          "symbol": "M:kg.a(IIIB)V",
+          "original": "a",
+          "renamed": "fireAction"
         },
         {
           "start": 9229,
@@ -553693,7 +554367,7 @@
       "original": "lk.java",
       "renamed": "CheckboxWidget.java",
       "inputSha256": "470883a6268a3e50fc7dac225f0dd8b57381fa02f05d21e40a00c5433a5e10b7",
-      "outputSha256": "44ec38ba4ad13dd8f9dfd4c3ba6f7ca651dc5e64349067f528899f4d02025dd2",
+      "outputSha256": "911b36d4d99b5bef3f536b9fdc2d9100743ad2319b2c7b1709f9678a332e1ab0",
       "edits": [
         {
           "start": 50,
@@ -553848,6 +554522,20 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 1488,
+          "end": 1489,
+          "symbol": "M:lk.a(IIIB)V",
+          "original": "a",
+          "renamed": "fireAction"
+        },
+        {
+          "start": 1608,
+          "end": 1609,
+          "symbol": "M:kg.a(IIIB)V",
+          "original": "a",
+          "renamed": "fireAction"
         },
         {
           "start": 1673,
@@ -592749,7 +593437,7 @@
       "original": "ri.java",
       "renamed": "ri.java",
       "inputSha256": "8f8b5ad2325108553cf90f8769ad363cad3625c04ae8063cfde58de11a16a5fc",
-      "outputSha256": "af98095763acb80f91bfafb0cf5ce3ccb171fc65f963221a874fd9487407a61f",
+      "outputSha256": "b271bc86af459393fe51d34a8129a7911d5be8774e159a9d049832994ea88e82",
       "edits": [
         {
           "start": 61,
@@ -592813,6 +593501,20 @@
           "symbol": "C:go",
           "original": "go",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 713,
+          "end": 714,
+          "symbol": "M:go.a(ILjava/lang/String;Z)V",
+          "original": "a",
+          "renamed": "setText"
+        },
+        {
+          "start": 757,
+          "end": 758,
+          "symbol": "M:go.e(Z)V",
+          "original": "e",
+          "renamed": "clear"
         },
         {
           "start": 836,
@@ -593478,6 +594180,20 @@
           "symbol": "M:ri.a(B)V",
           "original": "a",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 16215,
+          "end": 16216,
+          "symbol": "M:go.e(Z)V",
+          "original": "e",
+          "renamed": "clear"
+        },
+        {
+          "start": 16245,
+          "end": 16246,
+          "symbol": "M:go.e(Z)V",
+          "original": "e",
+          "renamed": "clear"
         }
       ]
     },
@@ -621878,7 +622594,7 @@
       "original": "ts.java",
       "renamed": "ts.java",
       "inputSha256": "c284a3828a79230529ebb15549254c4e3ad858121f987e41ee1f9e97dd528948",
-      "outputSha256": "706062b2857941529317ab0f4c9c92cf89ab9668a55ee03751501e227791a3a0",
+      "outputSha256": "9feeaf458800b44cde0e179860a9a20d571db926dc28243074ea6326363ce6ba",
       "edits": [
         {
           "start": 74,
@@ -622502,6 +623218,20 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 16488,
+          "end": 16489,
+          "symbol": "M:ts.a(IIIB)V",
+          "original": "a",
+          "renamed": "fireAction"
+        },
+        {
+          "start": 16555,
+          "end": 16556,
+          "symbol": "M:kg.a(IIIB)V",
+          "original": "a",
+          "renamed": "fireAction"
         }
       ]
     },
@@ -650760,10 +651490,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "2adad44030e6e37afdb543eaa01e557d82359cb833fb50fe7eadcba042cbb974",
+    "rulesSha256": "f307040ffc59c22273d0b4989190e958bf94a3d9b4bae4385f7f8efbd4bdd615",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "a18d39bec9c5ae9db26d286664a1c0b8225345fd7915135fbee0a067b506a402",
+    "outputTreeSha256": "77107c76c8c19cd62d4bbfc25c84e8751c3fdb71dd207f52869bef60c3d9c766",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

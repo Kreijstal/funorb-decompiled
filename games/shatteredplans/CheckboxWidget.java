@@ -39,9 +39,9 @@ final class CheckboxWidget extends FocusableWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void fireAction(int param0, int param1, int param2, byte param3) {
         this.field_z = !this.field_z ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.fireAction(param0, param1, param2, param3);
     }
 
     public static void clearStatics(int param0) {

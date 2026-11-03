@@ -87,7 +87,7 @@ final class ir extends WidgetContainer implements dl, ButtonListener {
           }
           var3 = this.field_H;
           var4 = param1;
-          ((TextFieldWidget) ((Object) var3)).a(63, var4, false);
+          ((TextFieldWidget) ((Object) var3)).setText(63, var4, false);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ir.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

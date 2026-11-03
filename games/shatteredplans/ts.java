@@ -471,8 +471,8 @@ class ts extends FocusableWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, param3);
+    final void fireAction(int param0, int param1, int param2, byte param3) {
+        super.fireAction(param0, param1, param2, param3);
         int var5 = -this.field_m + param1;
         int var6 = -this.field_q + param2;
         ql var7 = this.b(var5, var6, (byte) -66);
