@@ -40,7 +40,7 @@ final class rh extends IntrusiveNode {
           } else {
             if (param3 >= 100 &&
               param3 <= 105) {
-              MouseWheelHandler.field_b = fk.a((byte) 117, param2);
+              MouseWheelHandler.field_b = HowToPlayScreen.a((byte) 117, param2);
               return;
             }
             MouseWheelHandler.field_b = pa.a(param3, param1, (byte) -120);

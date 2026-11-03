@@ -201,7 +201,7 @@ final class PasswordValidator extends TextFieldValidator {
         int var5Lifetime2;
         var6 = Pixelate.field_H ? 1 : 0;
         var2 = 0;
-        var3 = ga.field_f;
+        var3 = GameModeCard.field_f;
         if (var3 < 5) {
           var2 = var3 * var3 * 8192 / 1100;
         } else {

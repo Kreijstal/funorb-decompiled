@@ -637,13 +637,13 @@ abstract class MenuScreen {
                   if (var6 == 25) {
                     if (this.field_g.isActivated(74) &&
                       this.c(-119, param0)) {
-                      ((fk) (StripedProgressBar.field_H[7])).a(param2, 97);
+                      ((HowToPlayScreen) (StripedProgressBar.field_H[7])).a(param2, 97);
                     }
                   } else {
                     if (var6 == 26) {
                       if (this.field_g.isActivated(20) &&
                         this.c(-128, param0)) {
-                        ((fk) (StripedProgressBar.field_H[7])).b(false, param2);
+                        ((HowToPlayScreen) (StripedProgressBar.field_H[7])).b(false, param2);
                       }
                     } else {
                       if (var6 == 22) {
@@ -654,7 +654,7 @@ abstract class MenuScreen {
                       } else {
                         if (var6 == 5) {
                           if (!(!this.field_g.isActivated(45))) {
-                            ((fk) (StripedProgressBar.field_H[7])).a(2, 1, param2);
+                            ((HowToPlayScreen) (StripedProgressBar.field_H[7])).a(2, 1, param2);
                             var6 = param2 ? 1 : 0;
                             la.a(MidiPcmStream.field_t, 7, var6 != 0, -25528);
                           }
@@ -896,7 +896,7 @@ abstract class MenuScreen {
               }
             } else {
               if (this.field_g.isActivated(6)) {
-                ((op) (StripedProgressBar.field_H[17])).f(76);
+                ((OptionsScreen) (StripedProgressBar.field_H[17])).f(76);
                 var6 = param2 ? 1 : 0;
                 la.a(MidiPcmStream.field_t, 17, var6 != 0, -25528);
               }

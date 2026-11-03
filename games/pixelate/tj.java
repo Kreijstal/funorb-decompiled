@@ -84,7 +84,7 @@ final class tj extends ah {
     final static void h(int param0) {
         LobbyPlayer.j(-705633312);
         NumericDateInputWidget.field_V = true;
-        to.field_s = true;
+        MainMenuScreen.field_s = true;
         if (param0 != 20) {
           field_w = (String) null;
         }

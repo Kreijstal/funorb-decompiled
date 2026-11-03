@@ -242,7 +242,7 @@ class UiComponent extends IntrusiveNode {
           Checkbox.a(-126, var1);
           ja.a();
           SoftwareRasterizer.d();
-          ga.field_f = param0;
+          GameModeCard.field_f = param0;
           ma.d((byte) 106);
           var2 = var1.a();
           var3 = 0;

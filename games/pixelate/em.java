@@ -97,9 +97,9 @@ final class em {
           nj.a(param3, (byte) 14);
           dk.a(false, param3);
           NameAvailabilityValidator.a(false, param3);
-          op.e(260);
+          OptionsScreen.e(260);
           UiComponent.g(0);
-          ga.field_f = -ub.field_a + 0;
+          GameModeCard.field_f = -ub.field_a + 0;
           int var4_int = 26 % ((param1 - 1) / 55);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "em.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

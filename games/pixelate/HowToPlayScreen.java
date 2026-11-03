@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends MenuScreen {
+final class HowToPlayScreen extends MenuScreen {
     static String field_q;
     private int field_r;
     static Sprite[] field_s;
@@ -15,7 +15,7 @@ final class fk extends MenuScreen {
         field_q = null;
     }
 
-    fk(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    HowToPlayScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_r = 0;
     }

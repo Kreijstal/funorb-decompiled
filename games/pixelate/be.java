@@ -1298,7 +1298,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           var2Lifetime57 = ContentTransitionDialog.a("tutorial4,0", (byte) 122);
           if (var2Lifetime57 != null) {
-            ol.field_p[0] = of.a(var2Lifetime57, 1);
+            PauseMenuScreen.field_p[0] = of.a(var2Lifetime57, 1);
           }
           var2Lifetime58 = ContentTransitionDialog.a("tutorial5,0", (byte) -95);
           if (var2Lifetime58 != null) {
@@ -1370,7 +1370,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           }
           var2Lifetime75 = ContentTransitionDialog.a("instructions7,0", (byte) -63);
           if (var2Lifetime75 != null) {
-            uk.field_q[0] = of.a(var2Lifetime75, 1);
+            GameModeSelectScreen.field_q[0] = of.a(var2Lifetime75, 1);
           }
           var2Lifetime76 = ContentTransitionDialog.a("instructions8,0", (byte) -100);
           if (var2Lifetime76 != null) {
@@ -1831,7 +1831,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
           var8 = ui.field_d;
           var9 = lg.a(AudioService.a(13867), -18992);
           if (ig.field_e == var9) {
-            var8 = rb.field_r;
+            var8 = AchievementsScreen.field_r;
             if ((var11 != 0) &&
               (var9 == vm.field_a)) {
               var8 = MusicPatch.field_k;

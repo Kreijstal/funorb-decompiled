@@ -305,15 +305,15 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
               var9 = var16;
               var9 = var16;
               var10Lifetime1 = nk.field_e.font.textWidth(var16) + nk.field_e.font.a('.') * 3;
-              if (16 == (48 & rb.field_o)) {
+              if (16 == (48 & AchievementsScreen.field_o)) {
                 var9 = var16 + ".";
               }
               nk.field_e.field_C = (nk.field_e.field_K - var10Lifetime1) / 2;
               nk.field_e.horizontalAlignment = 0;
-              if ((rb.field_o & 48) == 32) {
+              if ((AchievementsScreen.field_o & 48) == 32) {
                 var9 = (String) (var9) + "..";
               }
-              if ((rb.field_o & 48) == 48) {
+              if ((AchievementsScreen.field_o & 48) == 48) {
                 var9 = (String) (var9) + "...";
               }
               nk.field_e.field_cb = (String) (var9);

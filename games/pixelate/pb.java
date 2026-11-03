@@ -75,22 +75,22 @@ final class pb {
     }
 
     final static void b(int param0) {
-        if (0 - ub.field_a == ga.field_f) {
+        if (0 - ub.field_a == GameModeCard.field_f) {
           if (param0 > 122) {
-            ga.field_f = ga.field_f + 1;
+            GameModeCard.field_f = GameModeCard.field_f + 1;
             return;
           }
           return;
         }
-        if (ga.field_f != 250 - ub.field_a) {
+        if (GameModeCard.field_f != 250 - ub.field_a) {
           if (param0 > 122) {
-            ga.field_f = ga.field_f + 1;
+            GameModeCard.field_f = GameModeCard.field_f + 1;
             return;
           }
           return;
         }
         if (param0 > 122) {
-          ga.field_f = ga.field_f + 1;
+          GameModeCard.field_f = GameModeCard.field_f + 1;
           return;
         }
     }
@@ -190,7 +190,7 @@ final class pb {
             }
             if (var7 == 0) {
               if (var3 > 0) {
-                wh.field_q.a(var9, var10 - wh.field_q.field_B, var3 >> 1);
+                HighscoresScreen.field_q.a(var9, var10 - HighscoresScreen.field_q.field_B, var3 >> 1);
               }
               if (this.field_l.length - 1 == var7 &&
                 var4 > 0) {
@@ -206,7 +206,7 @@ final class pb {
             gb.field_b.a(var9, var10, 128);
             this.field_l[var8].b(this.field_h + var9, var10 + this.field_a, (byte) -106);
             if (0 == var7) {
-              wh.field_q.a(var9, var10 - wh.field_q.field_B, 128);
+              HighscoresScreen.field_q.a(var9, var10 - HighscoresScreen.field_q.field_B, 128);
             }
             if (this.field_l.length - 1 == var7) {
               of.field_h.a(var9, var10 + 100, 128);

@@ -59,11 +59,11 @@ final class m extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        if (!to.field_s) {
+        if (!MainMenuScreen.field_s) {
           throw new IllegalStateException();
         }
-        if (to.field_r != null) {
-          to.field_r.p(param0 ^ 15);
+        if (MainMenuScreen.field_r != null) {
+          MainMenuScreen.field_r.p(param0 ^ 15);
         }
         String var1 = Puzzle.a(0);
         nf.field_b = new be(var1, (String) null, true, false, false);

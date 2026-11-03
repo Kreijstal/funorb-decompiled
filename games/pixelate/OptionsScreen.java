@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class op extends MenuScreen {
+final class OptionsScreen extends MenuScreen {
     private int field_v;
     private int field_r;
     static String field_w;
@@ -185,7 +185,7 @@ final class op extends MenuScreen {
 
     final int a(int param0, int param1) {
         if (param0 != -28071) {
-          op.f((byte) -35);
+          OptionsScreen.f((byte) -35);
         }
         if (1 == param1 ||
           2 == param1) {
@@ -441,7 +441,7 @@ final class op extends MenuScreen {
         }
     }
 
-    op(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    OptionsScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         int[] var9 = null;
         int var8 = 0;

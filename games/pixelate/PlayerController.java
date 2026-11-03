@@ -85,7 +85,7 @@ final class PlayerController {
         if (param0 != -59) {
           PlayerController.a((byte) 49);
         }
-        stackIn_7_0 = (10 <= el.field_b) && (!lo.field_Nb) && (!ol.b(true));
+        stackIn_7_0 = (10 <= el.field_b) && (!lo.field_Nb) && (!PauseMenuScreen.b(true));
         return stackIn_7_0;
     }
 

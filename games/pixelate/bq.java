@@ -166,8 +166,8 @@ final class bq {
             }
             df.field_r = new String[var4];
             qb.a(EmailConfirmationValidator.field_p, 0, df.field_r, 0, var4);
-            uk.field_r = new String[-1 + (var3_int - var4)];
-            qb.a(EmailConfirmationValidator.field_p, var4 + 1, uk.field_r, 0, var3_int + (-var4 - 1));
+            GameModeSelectScreen.field_r = new String[-1 + (var3_int - var4)];
+            qb.a(EmailConfirmationValidator.field_p, var4 + 1, GameModeSelectScreen.field_r, 0, var3_int + (-var4 - 1));
             var3_int = qn.a(sd.a(oj.field_R, 44, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -106, bg.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -190,8 +190,8 @@ final class bq {
               stackIn_23_0 = df.field_r.length;
             }
             var5 = stackIn_23_0;
-            if (uk.field_r.length >= ContentTransitionDialog.field_jb.length) {
-              stackIn_26_0 = uk.field_r.length;
+            if (GameModeSelectScreen.field_r.length >= ContentTransitionDialog.field_jb.length) {
+              stackIn_26_0 = GameModeSelectScreen.field_r.length;
             } else {
               stackIn_26_0 = ContentTransitionDialog.field_jb.length;
             }
@@ -260,7 +260,7 @@ final class bq {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = uk.field_r;
+            var4_ref_String__Lifetime1 = GameModeSelectScreen.field_r;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = sb.a(3, var12, false);

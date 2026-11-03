@@ -42,7 +42,7 @@ final class gi {
         try {
           kf.field_q = param1;
           int var3_int = 67 % ((34 - param2) / 41);
-          ga.field_a = ho.field_e;
+          GameModeCard.field_a = ho.field_e;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "gi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

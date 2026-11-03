@@ -69,7 +69,7 @@ final class vf {
           if (Puzzle.a(param1, (byte) 122)) {
             return true;
           }
-          var2 = wh.field_r;
+          var2 = HighscoresScreen.field_r;
           var3 = 0;
           if (param0 != -3) {
             field_c = (String) null;
@@ -203,7 +203,7 @@ final class vf {
             var6 = (im) (var4.last(1504642273));
           }
           if (MouseWheelHandler.field_e.field_Ib.field_P != 0) {
-            he.field_f = new AccountNamePrompt(MouseWheelHandler.field_e.field_Ib.field_tb, MouseWheelHandler.field_e.field_Ib.screenY, MouseWheelHandler.field_e.field_Ib.field_K, MouseWheelHandler.field_e.field_Ib.height, dp.field_p, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
+            he.field_f = new AccountNamePrompt(MouseWheelHandler.field_e.field_Ib.field_tb, MouseWheelHandler.field_e.field_Ib.screenY, MouseWheelHandler.field_e.field_Ib.field_K, MouseWheelHandler.field_e.field_Ib.height, GameplayScreen.field_p, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
             il.field_e = 2;
           }
           if (MouseWheelHandler.field_e.field_Hb.field_P == 0) {

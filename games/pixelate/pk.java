@@ -317,7 +317,7 @@ final class pk {
                 if (null != io.field_c) {
                   if (!TickClock.field_b ||
                     TextLayoutLine.field_f == null) {
-                    var4 = "[" + sd.a(fk.field_q, 40, new String[]{io.field_c.field_pc}) + "] ";
+                    var4 = "[" + sd.a(HowToPlayScreen.field_q, 40, new String[]{io.field_c.field_pc}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + TextLayoutLine.field_f + "] ";
                     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dp extends MenuScreen {
+final class GameplayScreen extends MenuScreen {
     static String field_p;
     static boolean[] field_o;
 
@@ -12,7 +12,7 @@ final class dp extends MenuScreen {
         la.a(!gq.d(127) ? 0 : 12, -1, false, -25528);
     }
 
-    dp(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    GameplayScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 

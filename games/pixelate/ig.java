@@ -76,7 +76,7 @@ final class ig {
         cm var2Lifetime1;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          to.field_t.serviceOutput();
+          MainMenuScreen.field_t.serviceOutput();
           ib.field_h.serviceOutput();
           var1_int = -121 % ((param0 - 54) / 39);
           e.field_a = e.field_a - 1;
@@ -99,8 +99,8 @@ final class ig {
               }
             }
           }
-          if ((null != to.field_q) &&
-            (stackIn_18_0 = to.field_q.a((byte) -123))) {
+          if ((null != MainMenuScreen.field_q) &&
+            (stackIn_18_0 = MainMenuScreen.field_q.a((byte) -123))) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

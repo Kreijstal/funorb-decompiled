@@ -226,7 +226,7 @@ final class fq extends MenuScreen {
                 var2 = wo.field_a;
                 var5 = var4.field_r[of.field_a];
                 var20 = var4.field_l[of.field_a];
-                var7 = ge.a(wh.field_p, var4, of.field_a, -7402);
+                var7 = ge.a(HighscoresScreen.field_p, var4, of.field_a, -7402);
                 var8 = 16777215;
                 var9 = 0;
                 var10 = 16711680;
@@ -248,9 +248,9 @@ final class fq extends MenuScreen {
                   }
                   var11 += 15;
                 }
-                if (((null != wh.field_p)) &&
+                if (((null != HighscoresScreen.field_p)) &&
                   ((var7 == -1))) {
-                  var12Lifetime1 = wh.field_p.field_k[0];
+                  var12Lifetime1 = HighscoresScreen.field_p.field_k[0];
                   qj.field_e.drawText(ModalStack.field_J, 180, var11, var8, var9);
                   qj.field_e.drawRightAlignedText(Integer.toString(var12Lifetime1), 480, var11, var8, var9);
                 }

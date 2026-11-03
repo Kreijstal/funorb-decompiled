@@ -85,19 +85,19 @@ final class ql extends BackgroundScene {
         dk.field_c = false;
         wp.field_a = null;
         var1 = 32 / ((-65 - param0) / 51);
-        if (to.field_s) {
-          to.field_r.o(2121792);
+        if (MainMenuScreen.field_s) {
+          MainMenuScreen.field_r.o(2121792);
         } else {
           var2 = ra.field_g;
           if (var2 > 0) {
             if (var2 == 1) {
-              wp.field_a = to.field_o;
+              wp.field_a = MainMenuScreen.field_o;
             } else {
               wp.field_a = sd.a(SpriteState.field_v, 63, new String[]{Integer.toString(var2)});
             }
             wp.field_a = gi.a(0, new CharSequence[]{(CharSequence) ((Object) wp.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GameApplet.field_d)});
           }
-          to.field_r.p(-100);
+          MainMenuScreen.field_r.p(-100);
           fl.a((byte) 81);
         }
     }

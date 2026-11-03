@@ -43,7 +43,7 @@ final class ho {
           PacketBuffer.field_o[15] = re.field_k[1];
           PacketBuffer.field_o[24] = mj.field_i;
           PacketBuffer.field_o[22] = SecondaryNodeDeque.field_d;
-          PacketBuffer.field_o[20] = fk.field_p;
+          PacketBuffer.field_o[20] = HowToPlayScreen.field_p;
           PacketBuffer.field_o[26] = qh.field_f;
           PacketBuffer.field_o[16] = re.field_k[2];
           PacketBuffer.field_o[23] = td.field_a;
@@ -58,8 +58,8 @@ final class ho {
           wc.field_m[4] = ce.field_e;
           wc.field_m[1] = ro.field_f;
           wc.field_m[7] = qf.field_d;
-          dn.field_a = new String[][]{hm.field_f, MatchingTextValidator.field_t, um.field_l, ol.field_p, ui.field_h, qg.field_d};
-          ln.field_m = new String[][]{up.field_a, ScrollContainer.field_Hb, qh.field_d, wk.field_i, GameApplet.field_k, NumericDateInputWidget.field_R, uk.field_q, vd.field_d};
+          dn.field_a = new String[][]{hm.field_f, MatchingTextValidator.field_t, um.field_l, PauseMenuScreen.field_p, ui.field_h, qg.field_d};
+          ln.field_m = new String[][]{up.field_a, ScrollContainer.field_Hb, qh.field_d, wk.field_i, GameApplet.field_k, NumericDateInputWidget.field_R, GameModeSelectScreen.field_q, vd.field_d};
           wc.field_m[0] = DraggableWidget.field_L;
           wc.field_m[5] = wa.field_e;
           for (var1_int = 0; var1_int < wc.field_m.length; var1_int++) {

@@ -10,8 +10,8 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
     static int field_Bb;
 
     final static void i(byte param0) {
-        if (null != to.field_r) {
-          to.field_r.p(-108);
+        if (null != MainMenuScreen.field_r) {
+          MainMenuScreen.field_r.p(-108);
         }
         aa.field_c = new DisplayNameForm();
         ph.field_l.transitionToContent(aa.field_c, -125);
@@ -32,10 +32,10 @@ final class RegistrationRequestDialog extends AccountRequestDialog implements Bu
 
     final static boolean q(int param0) {
         if (param0 == 22452) {
-          return ga.field_f > 250 ? true : false;
+          return GameModeCard.field_f > 250 ? true : false;
         }
         RegistrationRequestDialog.r(-8);
-        return ga.field_f > 250 ? true : false;
+        return GameModeCard.field_f > 250 ? true : false;
     }
 
     final boolean c(boolean param0) {

@@ -29,7 +29,7 @@ final class Js5ArchiveManager {
           }
           param1.removeKeyListener(mc.field_r);
           param1.removeFocusListener(mc.field_r);
-          ol.field_q = -1;
+          PauseMenuScreen.field_q = -1;
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "am.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -324,7 +324,7 @@ final class Js5ArchiveManager {
     }
 
     static {
-        ol.e(2071);
+        PauseMenuScreen.e(2071);
         field_c = 50;
     }
 }

@@ -202,7 +202,7 @@ final class cl {
     final static void a(byte param0, boolean param1) {
         int var2 = -93 / ((-55 - param0) / 55);
         if (null != up.field_o) {
-          dp.a(up.field_o, -2);
+          GameplayScreen.a(up.field_o, -2);
         }
         if (null != ProxySocketConnector.field_n) {
           ProxySocketConnector.field_n.a(param1, (byte) 20);

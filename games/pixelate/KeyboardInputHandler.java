@@ -22,12 +22,12 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             } else {
               var2_int = -1;
             }
-            if (ol.field_q >= 0 &&
+            if (PauseMenuScreen.field_q >= 0 &&
               0 <= var2_int) {
-              LabeledField.field_Q[ol.field_q] = ~var2_int;
-              ol.field_q = ol.field_q + 1 & 127;
-              if (ol.field_q == wm.field_c) {
-                ol.field_q = -1;
+              LabeledField.field_Q[PauseMenuScreen.field_q] = ~var2_int;
+              PauseMenuScreen.field_q = PauseMenuScreen.field_q + 1 & 127;
+              if (PauseMenuScreen.field_q == wm.field_c) {
+                PauseMenuScreen.field_q = -1;
               }
             }
           }
@@ -133,7 +133,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (mc.field_r != null) {
-            ol.field_q = -1;
+            PauseMenuScreen.field_q = -1;
           }
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "rp.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
@@ -193,12 +193,12 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             } else {
               var2_int = -1;
             }
-            if (0 <= ol.field_q &&
+            if (0 <= PauseMenuScreen.field_q &&
               var2_int >= 0) {
-              LabeledField.field_Q[ol.field_q] = var2_int;
-              ol.field_q = 127 & 1 + ol.field_q;
-              if (ol.field_q == wm.field_c) {
-                ol.field_q = -1;
+              LabeledField.field_Q[PauseMenuScreen.field_q] = var2_int;
+              PauseMenuScreen.field_q = 127 & 1 + PauseMenuScreen.field_q;
+              if (PauseMenuScreen.field_q == wm.field_c) {
+                PauseMenuScreen.field_q = -1;
               }
             }
             if (var2_int >= 0) {

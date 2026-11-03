@@ -57,24 +57,24 @@ final class cn {
           if (param2 >= -121) {
             field_a = (bd) null;
           }
-          if (uk.field_s == ij.field_o) {
+          if (GameModeSelectScreen.field_s == ij.field_o) {
             aa.field_f.position = 0;
             ArchiveIndex.field_j = null;
             if (param0 != null) {
               var9 = 0;
-              uk.field_v.position = 0;
+              GameModeSelectScreen.field_v.position = 0;
               if (param3) {
                 var9 = var9 | 1;
               }
-              uk.field_v.d(ai.field_d.nextInt(), -49);
-              uk.field_v.d(ai.field_d.nextInt(), -62);
-              uk.field_v.a((byte) -66, var14);
-              uk.field_v.a((byte) -66, var8);
+              GameModeSelectScreen.field_v.d(ai.field_d.nextInt(), -49);
+              GameModeSelectScreen.field_v.d(ai.field_d.nextInt(), -62);
+              GameModeSelectScreen.field_v.a((byte) -66, var14);
+              GameModeSelectScreen.field_v.a((byte) -66, var8);
               var15 = (CharSequence) ((Object) param0);
-              uk.field_v.a((byte) -66, la.a((byte) 10, var15));
-              uk.field_v.writeShort(1276387944, param1);
-              uk.field_v.writeByte(160, param5);
-              uk.field_v.writeByte(160, var9);
+              GameModeSelectScreen.field_v.a((byte) -66, la.a((byte) 10, var15));
+              GameModeSelectScreen.field_v.writeShort(1276387944, param1);
+              GameModeSelectScreen.field_v.writeByte(160, param5);
+              GameModeSelectScreen.field_v.writeByte(160, var9);
               aa.field_f.writeByte(160, 18);
               aa.field_f.position = aa.field_f.position + 2;
               var10 = aa.field_f.position;
@@ -83,13 +83,13 @@ final class cn {
                 var11_ref_StringLifetime2 = "";
               }
               aa.field_f.b((byte) -41, var11_ref_StringLifetime2);
-              wh.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, uk.field_v, 12556);
+              HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
               aa.field_f.c(7519, aa.field_f.position - var10);
             } else {
-              uk.field_v.position = 0;
-              uk.field_v.d(ai.field_d.nextInt(), -90);
-              uk.field_v.d(ai.field_d.nextInt(), -68);
-              stackIn_13_0 = uk.field_v;
+              GameModeSelectScreen.field_v.position = 0;
+              GameModeSelectScreen.field_v.d(ai.field_d.nextInt(), -90);
+              GameModeSelectScreen.field_v.d(ai.field_d.nextInt(), -68);
+              stackIn_13_0 = GameModeSelectScreen.field_v;
               stackIn_13_1 = -66;
               if (!param6.b((byte) -25)) {
                 stackIn_14_2 = "";
@@ -97,7 +97,7 @@ final class cn {
                 stackIn_14_2 = var14;
               }
               ((PacketBuffer) (Object) stackIn_13_0).a((byte) stackIn_13_1, stackIn_14_2);
-              stackIn_16_0 = uk.field_v;
+              stackIn_16_0 = GameModeSelectScreen.field_v;
               stackIn_16_1 = -66;
               if (param4.b((byte) 127)) {
                 stackIn_17_2 = var8;
@@ -108,20 +108,20 @@ final class cn {
               aa.field_f.writeByte(160, 16);
               aa.field_f.position = aa.field_f.position + 1;
               var9 = aa.field_f.position;
-              wh.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, uk.field_v, 12556);
+              HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
               aa.field_f.f(aa.field_f.position - var9, -1);
             }
             SecondaryNodeHashTable.b(-1, 10000);
-            uk.field_s = TextLayoutLine.field_c;
+            GameModeSelectScreen.field_s = TextLayoutLine.field_c;
           }
-          if (TextLayoutLine.field_c == uk.field_s &&
+          if (TextLayoutLine.field_c == GameModeSelectScreen.field_s &&
             QueuedInput.a(1, false)) {
             var9Lifetime1 = MusicCrossfadeStream.field_o.f(255);
             MusicCrossfadeStream.field_o.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               MatchController.field_y = new String[-100 + var9Lifetime1];
-              uk.field_s = EditableTextWidget.field_Z;
+              GameModeSelectScreen.field_s = EditableTextWidget.field_Z;
             } else {
               if (248 == var9Lifetime1) {
                 ql.a(AudioService.a(13867), -7624);
@@ -133,7 +133,7 @@ final class cn {
               }
               if (var9Lifetime1 != 99) {
                 TextLayoutLine.field_e = var9Lifetime1;
-                uk.field_s = bg.field_l;
+                GameModeSelectScreen.field_s = bg.field_l;
                 BackgroundScene.field_b = -1;
               } else {
                 QueuedInput.a(wl.a(23062), false);
@@ -142,7 +142,7 @@ final class cn {
               }
             }
           }
-          if (uk.field_s == EditableTextWidget.field_Z) {
+          if (GameModeSelectScreen.field_s == EditableTextWidget.field_Z) {
             var9Lifetime2 = 2;
             if (QueuedInput.a(var9Lifetime2, false)) {
               var10Lifetime1 = MusicCrossfadeStream.field_o.a((byte) 82);
@@ -159,7 +159,7 @@ final class cn {
               }
             }
           }
-          if (uk.field_s == bg.field_l &&
+          if (GameModeSelectScreen.field_s == bg.field_l &&
             MusicPatchNode.e(-18481)) {
             if (TextLayoutLine.field_e == 255) {
               var9_ref_String = MusicCrossfadeStream.field_o.e((byte) 40);

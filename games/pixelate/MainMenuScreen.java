@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class to extends MenuScreen {
+final class MainMenuScreen extends MenuScreen {
     static AudioOutput field_t;
     static boolean field_s;
     static AccountRequestDialog field_r;
@@ -23,7 +23,7 @@ final class to extends MenuScreen {
         if (param0 > 36) {
           return;
         }
-        to.g((byte) 72);
+        MainMenuScreen.g((byte) 72);
     }
 
     final void a(int param0) {
@@ -43,7 +43,7 @@ final class to extends MenuScreen {
         field_t = null;
     }
 
-    to(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    MainMenuScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 

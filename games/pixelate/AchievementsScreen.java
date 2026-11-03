@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class rb extends MenuScreen {
+final class AchievementsScreen extends MenuScreen {
     static String field_r;
     static int field_q;
     static int field_o;
@@ -94,7 +94,7 @@ final class rb extends MenuScreen {
         var2 = stackIn_3_0;
         var3 = rk.field_e;
         if (param0 != 11) {
-          rb.b(-94, (byte) 78);
+          AchievementsScreen.b(-94, (byte) 78);
         }
         var4 = qj.field_e;
         NumericDateInputWidget.field_W[6].b(0, 45);
@@ -133,7 +133,7 @@ final class rb extends MenuScreen {
           var9.b(60, 120);
           var10 = var4.drawParagraph(this.a(true, var5Lifetime1), 120, 320, 400, 400, 16777215, 0, 0, 0, var7Lifetime1);
           var11 = 320 + (var7Lifetime1 * var10 + 24);
-          var4.drawText(to.field_p + ri.field_c[var5Lifetime1], 120, var11, 16777215, 0);
+          var4.drawText(MainMenuScreen.field_p + ri.field_c[var5Lifetime1], 120, var11, 16777215, 0);
           var11 = var11 + (4 + var7Lifetime1);
           var4.drawText(DisplayNameForm.field_K, 120, var11, 16777215, 0);
           var12 = var4.textWidth(DisplayNameForm.field_K) + 120;
@@ -214,7 +214,7 @@ final class rb extends MenuScreen {
         la.a(this.field_l, TickClock.field_a, false, -25528);
     }
 
-    rb(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    AchievementsScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
@@ -302,7 +302,7 @@ final class rb extends MenuScreen {
 
     public static void b(boolean param0) {
         if (!param0) {
-          rb.b(3, (byte) 57);
+          AchievementsScreen.b(3, (byte) 57);
         }
         field_p = null;
         field_r = null;
@@ -333,7 +333,7 @@ final class rb extends MenuScreen {
           super.a(var4, param1, param2, var5, (byte) 124);
         }
         if (param0 > -116) {
-          rb.b(40, (byte) -112);
+          AchievementsScreen.b(40, (byte) -112);
         }
     }
 

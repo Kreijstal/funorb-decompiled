@@ -163,19 +163,19 @@ final class io {
         int var7Lifetime3;
         int var7Lifetime4;
         var8 = Pixelate.field_H ? 1 : 0;
-        if (ga.field_f < 0) {
+        if (GameModeCard.field_f < 0) {
           return;
         }
         var3 = param2 - 135;
         var4 = param0 - 35;
         var5 = 256;
-        if (ga.field_f < 75) {
-          var5 = (ga.field_f << 8) / 75;
+        if (GameModeCard.field_f < 75) {
+          var5 = (GameModeCard.field_f << 8) / 75;
         }
         if (param1 > -46) {
           field_g = (ResourceArchive) null;
-          if (ga.field_f > 200) {
-            var5 = (250 - ga.field_f << 8) / 50;
+          if (GameModeCard.field_f > 200) {
+            var5 = (250 - GameModeCard.field_f << 8) / 50;
           }
           Checkbox.a(-113, re.field_b);
           ja.a();
@@ -185,15 +185,15 @@ final class io {
             SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           }
           LinkButtonPainter.a((byte) 92);
-          if (ga.field_f >= 150) {
+          if (GameModeCard.field_f >= 150) {
             th.field_b.a(var3 + 15, var4 + 10, var5);
           } else {
             re.field_b.d(var3, var4);
           }
-          var6 = ga.field_f - 125;
+          var6 = GameModeCard.field_f - 125;
           if (var6 > 0) {
             if (var6 >= 50) {
-              var6 = ga.field_f - 140;
+              var6 = GameModeCard.field_f - 140;
               if (var6 > 0) {
                 var7 = 256;
                 if (var6 < 20) {
@@ -215,7 +215,7 @@ final class io {
               bd.field_a.b(var3, var4, var7Lifetime4);
             }
           }
-          var6Lifetime3 = ga.field_f - 140;
+          var6Lifetime3 = GameModeCard.field_f - 140;
           if (var6Lifetime3 > 0) {
             var7Lifetime3 = 256;
             if (var6Lifetime3 < 20) {
@@ -225,8 +225,8 @@ final class io {
           }
           return;
         }
-        if (ga.field_f > 200) {
-          var5 = (250 - ga.field_f << 8) / 50;
+        if (GameModeCard.field_f > 200) {
+          var5 = (250 - GameModeCard.field_f << 8) / 50;
         }
         Checkbox.a(-113, re.field_b);
         ja.a();
@@ -235,12 +235,12 @@ final class io {
         if (256 > var5) {
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           LinkButtonPainter.a((byte) 92);
-          if (ga.field_f >= 150) {
+          if (GameModeCard.field_f >= 150) {
             th.field_b.a(var3 + 15, var4 + 10, var5);
           } else {
             re.field_b.d(var3, var4);
           }
-          var6Lifetime1 = ga.field_f - 125;
+          var6Lifetime1 = GameModeCard.field_f - 125;
           if (var6Lifetime1 > 0 &&
             var6Lifetime1 < 50) {
             if (var6Lifetime1 >= 20) {
@@ -257,11 +257,11 @@ final class io {
           }
         } else {
           LinkButtonPainter.a((byte) 92);
-          if (ga.field_f >= 150) {
+          if (GameModeCard.field_f >= 150) {
             th.field_b.a(var3 + 15, var4 + 10, var5);
-            var6Lifetime1 = ga.field_f - 125;
+            var6Lifetime1 = GameModeCard.field_f - 125;
             if (var6Lifetime1 <= 0) {
-              var6Lifetime1 = ga.field_f - 140;
+              var6Lifetime1 = GameModeCard.field_f - 140;
               if (var6Lifetime1 > 0) {
                 var7Lifetime1 = 256;
                 if (var6Lifetime1 < 20) {
@@ -271,7 +271,7 @@ final class io {
               }
             } else {
               if (var6Lifetime1 >= 50) {
-                var6Lifetime1 = ga.field_f - 140;
+                var6Lifetime1 = GameModeCard.field_f - 140;
                 if (var6Lifetime1 > 0) {
                   var7Lifetime1 = 256;
                   if (var6Lifetime1 < 20) {
@@ -283,7 +283,7 @@ final class io {
                 if (var6Lifetime1 < 20) {
                   var7Lifetime1 = 256 * var6Lifetime1 / 20;
                   bd.field_a.b(var3, var4, var7Lifetime1);
-                  var6Lifetime1 = ga.field_f - 140;
+                  var6Lifetime1 = GameModeCard.field_f - 140;
                   if (var6Lifetime1 > 0) {
                     var7Lifetime1 = 256;
                     if (var6Lifetime1 < 20) {
@@ -294,7 +294,7 @@ final class io {
                 } else {
                   if (var6Lifetime1 < 30) {
                     bd.field_a.b(var3, var4, 256);
-                    var6Lifetime1 = ga.field_f - 140;
+                    var6Lifetime1 = GameModeCard.field_f - 140;
                     if (var6Lifetime1 > 0) {
                       var7Lifetime1 = 256;
                       if (var6Lifetime1 < 20) {
@@ -305,7 +305,7 @@ final class io {
                   } else {
                     var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
                     bd.field_a.b(var3, var4, var7Lifetime1);
-                    var6Lifetime1 = ga.field_f - 140;
+                    var6Lifetime1 = GameModeCard.field_f - 140;
                     if (var6Lifetime1 > 0) {
                       var7Lifetime1 = 256;
                       if (var6Lifetime1 < 20) {
@@ -320,7 +320,7 @@ final class io {
             return;
           }
           re.field_b.d(var3, var4);
-          var6Lifetime1 = ga.field_f - 125;
+          var6Lifetime1 = GameModeCard.field_f - 125;
           if (var6Lifetime1 > 0 &&
             var6Lifetime1 < 50) {
             if (var6Lifetime1 < 20) {
@@ -336,7 +336,7 @@ final class io {
             }
           }
         }
-        var6Lifetime2 = ga.field_f - 140;
+        var6Lifetime2 = GameModeCard.field_f - 140;
         if (var6Lifetime2 > 0) {
           var7Lifetime2 = 256;
           if (var6Lifetime2 < 20) {
@@ -390,16 +390,16 @@ final class io {
         try {
           ModalPanel.field_L[0] = ai.field_d.nextInt();
           ModalPanel.field_L[1] = ai.field_d.nextInt();
-          uk.field_v.position = 0;
+          GameModeSelectScreen.field_v.position = 0;
           ModalPanel.field_L[3] = (int)NumericDateInputWidget.field_P;
           ModalPanel.field_L[2] = (int)(NumericDateInputWidget.field_P >> 32);
-          uk.field_v.d(ModalPanel.field_L[0], -55);
-          uk.field_v.d(ModalPanel.field_L[1], -71);
-          uk.field_v.d(ModalPanel.field_L[2], -68);
-          uk.field_v.d(ModalPanel.field_L[3], -48);
-          wf.a(1, uk.field_v);
-          uk.field_v.writeShort(1276387944, param3);
-          param2.a((byte) -12, uk.field_v);
+          GameModeSelectScreen.field_v.d(ModalPanel.field_L[0], -55);
+          GameModeSelectScreen.field_v.d(ModalPanel.field_L[1], -71);
+          GameModeSelectScreen.field_v.d(ModalPanel.field_L[2], -68);
+          GameModeSelectScreen.field_v.d(ModalPanel.field_L[3], -48);
+          wf.a(1, GameModeSelectScreen.field_v);
+          GameModeSelectScreen.field_v.writeShort(1276387944, param3);
+          param2.a((byte) -12, GameModeSelectScreen.field_v);
           aa.field_f.position = 0;
           if (param0) {
             aa.field_f.writeByte(160, 18);
@@ -436,7 +436,7 @@ final class io {
             var8 = (BinaryBitmapFont) null;
             io.a((BinaryBitmapFont) null, (byte) 105);
           }
-          wh.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, uk.field_v, 12556);
+          HighscoresScreen.a(AgeValidator.field_m, aa.field_f, SceneWidgetNode.field_t, GameModeSelectScreen.field_v, 12556);
           aa.field_f.c(7519, aa.field_f.position - var5_int);
           SecondaryNodeHashTable.b(-1, 10000);
           return;

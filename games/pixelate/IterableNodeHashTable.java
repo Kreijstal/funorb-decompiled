@@ -111,7 +111,7 @@ final class IterableNodeHashTable implements Iterable {
         if (fieldTemp$0 == jm.field_g.length) {
           LoadingProgressDialog.field_hb = 0;
         }
-        wh.e(-89, jm.field_g[LoadingProgressDialog.field_hb]);
+        HighscoresScreen.e(-89, jm.field_g[LoadingProgressDialog.field_hb]);
         jd.field_r = 0;
         if (param0 <= -73) {
           return;

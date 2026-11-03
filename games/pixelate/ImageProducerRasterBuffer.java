@@ -573,7 +573,7 @@ final class ImageProducerRasterBuffer extends CanvasRasterBuffer implements java
         }
         Pixelate.a(param3, (byte) 69, param8, param2, param5, param0, param9);
         la.a(58, param0, ae.field_c, param8, param3);
-        rb.field_o = rb.field_o + 1;
+        AchievementsScreen.field_o = AchievementsScreen.field_o + 1;
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {

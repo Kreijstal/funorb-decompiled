@@ -150,8 +150,8 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
 
     final static void c(byte param0) {
         int var1 = 75 / ((20 - param0) / 48);
-        if (to.field_t != null) {
-          to.field_t.shutdown();
+        if (MainMenuScreen.field_t != null) {
+          MainMenuScreen.field_t.shutdown();
         }
         if (ib.field_h != null) {
           ib.field_h.shutdown();

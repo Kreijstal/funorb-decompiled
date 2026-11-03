@@ -79,10 +79,10 @@ abstract class NetworkGameClient extends GameApplet {
             if (mj.field_b != -1 &&
               mj.field_b != 0) {
               mj.field_b = -1;
-              op.g((byte) 68);
+              OptionsScreen.g((byte) 68);
             }
             if (param2) {
-              ol.field_o = false;
+              PauseMenuScreen.field_o = false;
             } else {
               var5_intLifetime2 = mi.a(this.field_A, (byte) 28, Js5ArchiveManager.a(-13565), this.field_t, false, ProxySocketConnector.f(8192));
               if (-1 != var5_intLifetime2) {
@@ -203,17 +203,17 @@ abstract class NetworkGameClient extends GameApplet {
         if (null != ScrollContainer.field_Lb) {
           lp.field_i = ScrollContainer.field_Lb.b(true);
         }
-        if (ol.b(true)) {
+        if (PauseMenuScreen.b(true)) {
           var3 = MenuInputState.a(true) * 1200;
           if (this.field_F ||
             !(il.a(-115) <= var3) &&
             !(var3 >= ql.g(13428))) {
             this.field_F = false;
             na.a(true);
-            to.g((byte) 81);
+            MainMenuScreen.g((byte) 81);
             ScrollContainer.a(true, hm.field_c, 2);
             fe.a(false);
-            ol.field_o = true;
+            PauseMenuScreen.field_o = true;
             mc.field_q = 15000L + hm.a(64);
           }
         }
@@ -255,7 +255,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           } else {
             if (el.field_b >= 10) {
-              to.g((byte) 106);
+              MainMenuScreen.g((byte) 106);
               if (mj.field_b == 3) {
                 ScrollContainer.a(true, wo.field_e, 256);
               } else {
@@ -273,7 +273,7 @@ abstract class NetworkGameClient extends GameApplet {
                   }
                 }
               }
-              ol.field_o = true;
+              PauseMenuScreen.field_o = true;
             }
           }
         }
@@ -281,11 +281,11 @@ abstract class NetworkGameClient extends GameApplet {
           mj.field_b != 0 ||
           PlayerController.a((byte) -59)) &&
           mc.field_q <= hm.a(64)) {
-          ol.field_o = false;
+          PauseMenuScreen.field_o = false;
           if (mj.field_b != -1 &&
             mj.field_b != 0) {
             mj.field_b = -1;
-            op.g((byte) 68);
+            OptionsScreen.g((byte) 68);
           }
         }
         if (0 == mj.field_b &&
@@ -314,7 +314,7 @@ abstract class NetworkGameClient extends GameApplet {
               DebouncedValidator.field_e = null;
             } else {
               if (DebouncedValidator.field_e.ensureGroupAvailableByName("", ~param0)) {
-                uk.a(param0 + 31873, DebouncedValidator.field_e);
+                GameModeSelectScreen.a(param0 + 31873, DebouncedValidator.field_e);
                 DebouncedValidator.field_e = null;
                 sf.a(param0 + 0);
               }
@@ -443,7 +443,7 @@ abstract class NetworkGameClient extends GameApplet {
             } else {
               if (var2 != 3) {
                 if (var2 == 4) {
-                  wh.e(-84);
+                  HighscoresScreen.e(-84);
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {
@@ -711,7 +711,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (param0 >= -73) {
           this.field_w = (String) null;
         }
-        if (ol.field_o) {
+        if (PauseMenuScreen.field_o) {
           return -1;
         }
         var2 = mi.a(this.field_A, (byte) 91, Js5ArchiveManager.a(-13565), this.field_t, true, ProxySocketConnector.f(8192));
@@ -723,9 +723,9 @@ abstract class NetworkGameClient extends GameApplet {
           if (!Js5ArchiveManager.field_e) {
             this.redirectToErrorPage(-18310, "reconnect");
           }
-          to.g((byte) 47);
+          MainMenuScreen.g((byte) 47);
           ScrollContainer.a(true, gi.field_b, var2);
-          ol.field_o = true;
+          PauseMenuScreen.field_o = true;
           mc.field_q = 15000L + hm.a(64);
           return var2;
         }

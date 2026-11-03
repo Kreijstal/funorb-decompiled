@@ -73,14 +73,14 @@ final class Js5NetworkRequest extends ArchiveRequest {
           SoftwareRasterizer.g(-2 + SoftwareRasterizer.field_j - 4, 0, SoftwareRasterizer.field_d, var2);
           SoftwareRasterizer.b(4, 0, -8 + SoftwareRasterizer.field_j, var2);
           SoftwareRasterizer.b(4, -1 + SoftwareRasterizer.field_d, SoftwareRasterizer.field_j - 8, var2);
-          wh.field_q = new Sprite(gb.field_b.field_A, 4);
-          wh.field_q.c();
+          HighscoresScreen.field_q = new Sprite(gb.field_b.field_A, 4);
+          HighscoresScreen.field_q.c();
           SoftwareRasterizer.c(4, SoftwareRasterizer.field_d, 4, var2);
           SoftwareRasterizer.c(SoftwareRasterizer.field_j - 5, SoftwareRasterizer.field_d, 4, var2);
           SoftwareRasterizer.b(4, -1 + SoftwareRasterizer.field_d, -8 + SoftwareRasterizer.field_j, var2);
-          of.field_h = new Sprite(wh.field_q.field_A, wh.field_q.field_B);
+          of.field_h = new Sprite(HighscoresScreen.field_q.field_A, HighscoresScreen.field_q.field_B);
           of.field_h.c();
-          wh.field_q.c(0, 0);
+          HighscoresScreen.field_q.c(0, 0);
           ClientException.field_f.a(19692);
           return;
         }
@@ -89,14 +89,14 @@ final class Js5NetworkRequest extends ArchiveRequest {
         SoftwareRasterizer.g(-2 + SoftwareRasterizer.field_j - 4, 0, SoftwareRasterizer.field_d, var2);
         SoftwareRasterizer.b(4, 0, -8 + SoftwareRasterizer.field_j, var2);
         SoftwareRasterizer.b(4, -1 + SoftwareRasterizer.field_d, SoftwareRasterizer.field_j - 8, var2);
-        wh.field_q = new Sprite(gb.field_b.field_A, 4);
-        wh.field_q.c();
+        HighscoresScreen.field_q = new Sprite(gb.field_b.field_A, 4);
+        HighscoresScreen.field_q.c();
         SoftwareRasterizer.c(4, SoftwareRasterizer.field_d, 4, var2);
         SoftwareRasterizer.c(SoftwareRasterizer.field_j - 5, SoftwareRasterizer.field_d, 4, var2);
         SoftwareRasterizer.b(4, -1 + SoftwareRasterizer.field_d, -8 + SoftwareRasterizer.field_j, var2);
-        of.field_h = new Sprite(wh.field_q.field_A, wh.field_q.field_B);
+        of.field_h = new Sprite(HighscoresScreen.field_q.field_A, HighscoresScreen.field_q.field_B);
         of.field_h.c();
-        wh.field_q.c(0, 0);
+        HighscoresScreen.field_q.c(0, 0);
         ClientException.field_f.a(19692);
     }
 

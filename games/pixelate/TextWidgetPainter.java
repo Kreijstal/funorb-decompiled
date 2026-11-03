@@ -219,7 +219,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
               var3 = "[" + ul.field_m + "] ";
             }
             if (1 == param0.field_j) {
-              var3 = "[" + sd.a(fk.field_q, 106, new String[]{param0.field_h}) + "] ";
+              var3 = "[" + sd.a(HowToPlayScreen.field_q, 106, new String[]{param0.field_h}) + "] ";
             }
             if (param0.field_j == 4 &&
               null != TextLayoutLine.field_f) {

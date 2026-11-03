@@ -322,7 +322,7 @@ final class SecondaryNodeHashTable {
           boolean decompiledFrameRemainder0 = true;
           if (null != NodeHashTableIterator.field_e) {
             if (param0 >= 0) {
-              decompiledFrameRemainder0 = (Pixelate.field_G == uk.field_s);
+              decompiledFrameRemainder0 = (Pixelate.field_G == GameModeSelectScreen.field_s);
               if ((decompiledFrameRemainder0) && (aa.field_f.position == 0 &&
                 hm.a(64) > (aj.field_m + 10000L))) {
                 aa.field_f.g(param0, 15514);

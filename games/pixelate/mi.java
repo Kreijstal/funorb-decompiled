@@ -15,7 +15,7 @@ final class mi extends MenuScreen {
     final void a(int param0) {
         this.b((byte) -71);
         int var2 = EmailCredentials.field_k != 0 ? 1 : 0;
-        int var3 = null != wh.field_p ? 1 : 0;
+        int var3 = null != HighscoresScreen.field_p ? 1 : 0;
         String var7 = EmailValidator.field_p;
         if (param0 != 11) {
           mi.b(false);
@@ -148,7 +148,7 @@ final class mi extends MenuScreen {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
-            if (ij.field_o == uk.field_s) {
+            if (ij.field_o == GameModeSelectScreen.field_s) {
               if (param4) {
                 var10 = (String) null;
                 li.field_g = ck.a(param2, (String) null, false, vn.field_b, 83);
@@ -159,29 +159,29 @@ final class mi extends MenuScreen {
               aa.field_f.writeByte(160, 14);
               aa.field_f.writeByte(160, li.field_g.b(-27096).field_a);
               SecondaryNodeHashTable.b(-1, 10000);
-              uk.field_s = cn.field_a;
+              GameModeSelectScreen.field_s = cn.field_a;
             }
-            if (uk.field_s == cn.field_a &&
+            if (GameModeSelectScreen.field_s == cn.field_a &&
               QueuedInput.a(1, false)) {
               var6_int = MusicCrossfadeStream.field_o.f(255);
               MusicCrossfadeStream.field_o.position = 0;
               if (var6_int != 0) {
                 TextLayoutLine.field_e = var6_int;
-                uk.field_s = IndexedSpriteState.field_b;
+                GameModeSelectScreen.field_s = IndexedSpriteState.field_b;
                 BackgroundScene.field_b = -1;
               } else {
-                uk.field_s = ke.field_b;
+                GameModeSelectScreen.field_s = ke.field_b;
               }
             }
-            if (uk.field_s == ke.field_b &&
+            if (GameModeSelectScreen.field_s == ke.field_b &&
               QueuedInput.a(8, false)) {
               NumericDateInputWidget.field_P = MusicCrossfadeStream.field_o.a(false);
               MusicCrossfadeStream.field_o.position = 0;
               io.a(param4, -67, li.field_g, param3, param0);
-              uk.field_s = BoardView.field_b;
+              GameModeSelectScreen.field_s = BoardView.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (BoardView.field_b == uk.field_s &&
+            if (BoardView.field_b == GameModeSelectScreen.field_s &&
               QueuedInput.a(1, false)) {
               var6_intLifetime1 = MusicCrossfadeStream.field_o.f(255);
               sc.field_a = null;
@@ -190,7 +190,7 @@ final class mi extends MenuScreen {
               if (0 != var6_intLifetime1 &&
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
-                  uk.field_s = IndexedSpriteState.field_b;
+                  GameModeSelectScreen.field_s = IndexedSpriteState.field_b;
                   BackgroundScene.field_b = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -203,10 +203,10 @@ final class mi extends MenuScreen {
               }
               if (decompiledFrameRemainder0) {
                 BackgroundScene.field_b = -1;
-                uk.field_s = e.field_d;
+                GameModeSelectScreen.field_s = e.field_d;
               }
             }
-            if (e.field_d == uk.field_s &&
+            if (e.field_d == GameModeSelectScreen.field_s &&
               MusicPatchNode.e(-18481)) {
               vn.field_b = MusicCrossfadeStream.field_o.a(false);
               GameResultsScreen.field_t = param2;
@@ -245,7 +245,7 @@ final class mi extends MenuScreen {
               var11 = (CharSequence) ((Object) ModalStack.field_J);
               LobbyGame.field_Hb = dh.a(var11, (byte) 54);
               ra.field_g = MusicCrossfadeStream.field_o.f(255);
-              uk.field_s = Pixelate.field_G;
+              GameModeSelectScreen.field_s = Pixelate.field_G;
               if (li.field_g.b(-27096) == l.field_r) {
                 ig.field_e.a(AudioService.a(13867), -80419032);
               } else {
@@ -284,7 +284,7 @@ final class mi extends MenuScreen {
               stackIn_79_0 = TextLayoutLine.field_e;
               return stackIn_79_0;
             }
-            if (IndexedSpriteState.field_b == uk.field_s &&
+            if (IndexedSpriteState.field_b == GameModeSelectScreen.field_s &&
               MusicPatchNode.e(-18481)) {
               na.a(true);
               if (TextLayoutLine.field_e == 7 &&

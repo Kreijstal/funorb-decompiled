@@ -18,7 +18,7 @@ final class ce {
         if (param0 != -124) {
           return 3;
         }
-        rb.field_q = 0;
+        AchievementsScreen.field_q = 0;
         se.field_o = null;
         var2 = ArchiveIndex.field_s;
         ArchiveIndex.field_s = pd.field_Eb;

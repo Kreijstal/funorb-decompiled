@@ -86,7 +86,7 @@ final class ma extends bg {
           var3Lifetime1 = bg.field_a[9] >> 8;
           var4 = bg.field_a[10] >> 8;
           var5Lifetime1 = bg.field_a[11] >> 8;
-          var6Lifetime1 = ga.field_f << 4;
+          var6Lifetime1 = GameModeCard.field_f << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = mi.d(-4096, var6Lifetime1) >> 8;
           var9Lifetime1 = th.a(var6Lifetime1, param0 + 8085) >> 8;
@@ -121,7 +121,7 @@ final class ma extends bg {
               ReportAbuseDialog.field_Hb[var18] = ReportAbuseDialog.field_Hb[var18] + wc.field_p[var15][var18];
             }
             TextButton.a(var17Lifetime1, bg.field_a, false, ReportAbuseDialog.field_Hb, (byte) 98, true, false);
-            uk.a(var14, var17Lifetime1, var12Lifetime1, var9Lifetime1, var8Lifetime1, var13Lifetime1, 20126, var7Lifetime1);
+            GameModeSelectScreen.a(var14, var17Lifetime1, var12Lifetime1, var9Lifetime1, var8Lifetime1, var13Lifetime1, 20126, var7Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -200,7 +200,7 @@ final class ma extends bg {
         if (param0 != 37) {
           return true;
         }
-        return to.field_s;
+        return MainMenuScreen.field_s;
     }
 
     final void c(int param0) {

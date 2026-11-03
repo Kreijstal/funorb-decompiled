@@ -128,8 +128,8 @@ final class LoadingProgressDialog extends ResizableModalPanel {
             String var4 = (String) null;
             LoadingProgressDialog.a(true, (String) null, -84);
           }
-          to.field_r = new AccountRequestDialog(wa.field_c, ba.field_d, param1, to.field_s, ke.field_d);
-          wa.field_c.b(param2 ^ 32140, to.field_r);
+          MainMenuScreen.field_r = new AccountRequestDialog(wa.field_c, ba.field_d, param1, MainMenuScreen.field_s, ke.field_d);
+          wa.field_c.b(param2 ^ 32140, MainMenuScreen.field_r);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "ko.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

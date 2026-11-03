@@ -35,9 +35,9 @@ final class mc extends IntrusiveNode {
           UiTheme.field_f = param0;
           var12 = SecondaryNodeHashTable.a((byte) 96, param3);
           if (!param2) {
-            stackIn_3_0 = ga.a(param3, 10);
+            stackIn_3_0 = GameModeCard.a(param3, 10);
           } else {
-            stackIn_3_0 = rb.b(param3, (byte) 73);
+            stackIn_3_0 = AchievementsScreen.b(param3, (byte) 73);
           }
           var6 = stackIn_3_0;
           var7 = el.a(param3, (byte) -24);

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ga {
+final class GameModeCard {
     private int field_b;
     private int[] field_e;
     private int field_g;
@@ -217,7 +217,7 @@ final class ga {
         }
     }
 
-    ga(int param0, int param1, int[] param2) {
+    GameModeCard(int param0, int param1, int[] param2) {
         try {
           this.field_b = param0;
           this.field_e = param2;

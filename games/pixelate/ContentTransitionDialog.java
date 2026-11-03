@@ -31,10 +31,10 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
                 StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new fq(param2, param6, param3, param1, param5, param4));
               } else {
                 if (param2 == 6) {
-                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new wh(param2, param6, param3, param1, param5, param4));
+                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new HighscoresScreen(param2, param6, param3, param1, param5, param4));
                 } else {
                   if (param2 == 7) {
-                    StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new fk(param2, param6, param3, param1, param5, param4));
+                    StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new HowToPlayScreen(param2, param6, param3, param1, param5, param4));
                   } else {
                     if (param2 != 8 &&
                       param2 != 9) {
@@ -45,16 +45,16 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
                           StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new l(param2, param6, param3, param1, param5, param4));
                         } else {
                           if (param2 == 12) {
-                            StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new ol(param2, param6, param3, param1, param5, param4));
+                            StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new PauseMenuScreen(param2, param6, param3, param1, param5, param4));
                           } else {
                             if (param2 == 13) {
                               StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new GameResultsScreen(param2, param6, param3, param1, param5, param4));
                             } else {
                               if (param2 == 16) {
-                                StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new uk(param2, param6, param3, param1, param5, param4));
+                                StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new GameModeSelectScreen(param2, param6, param3, param1, param5, param4));
                               } else {
                                 if (17 == param2) {
-                                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new op(param2, param6, param3, param1, param5, param4));
+                                  StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new OptionsScreen(param2, param6, param3, param1, param5, param4));
                                 } else {
                                   if (param2 != 14) {
                                     throw new IllegalStateException("No class defined for id=" + param2);
@@ -67,7 +67,7 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
                         }
                       }
                     } else {
-                      StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new rb(param2, param6, param3, param1, param5, param4));
+                      StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new AchievementsScreen(param2, param6, param3, param1, param5, param4));
                     }
                   }
                 }
@@ -75,10 +75,10 @@ abstract class ContentTransitionDialog extends ResizableModalPanel {
               decompiledFrameRemainder0 = false;
             }
             else {
-              StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new dp(param2, param6, param3, param1, param5, param4));
+              StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new GameplayScreen(param2, param6, param3, param1, param5, param4));
             }
           } else {
-            StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new to(param2, param6, param3, param1, param5, param4));
+            StripedProgressBar.field_H[param2] = (MenuScreen) ((Object) new MainMenuScreen(param2, param6, param3, param1, param5, param4));
           }
           if (param0) {
             return;

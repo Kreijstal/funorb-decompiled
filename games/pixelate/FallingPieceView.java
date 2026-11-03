@@ -27,8 +27,8 @@ final class FallingPieceView {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (to.field_r != null) {
-            to.field_r.p(-92);
+          if (MainMenuScreen.field_r != null) {
+            MainMenuScreen.field_r.p(-92);
           }
           nf.field_b = new be(param0, param2, false, true, true);
           ph.field_l.transitionToContent(nf.field_b, -120);

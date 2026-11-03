@@ -18,7 +18,7 @@ final class MusicPatchPcmStream extends PcmStream {
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new sc(ProxySocketConnector.f(8192), op.g(120));
+          return new sc(ProxySocketConnector.f(8192), OptionsScreen.g(120));
         }
         field_p = (Sprite) null;
         var1Lifetime1 = ProxySocketConnector.f(8192);
@@ -26,7 +26,7 @@ final class MusicPatchPcmStream extends PcmStream {
           var1Lifetime1.indexOf('@') >= 0) {
           var1Lifetime1 = "";
         }
-        return new sc(ProxySocketConnector.f(8192), op.g(120));
+        return new sc(ProxySocketConnector.f(8192), OptionsScreen.g(120));
     }
 
     final PcmStream nextSubStream() {

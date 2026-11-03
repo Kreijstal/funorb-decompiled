@@ -121,7 +121,7 @@ final class HuffmanCodec {
         if (var3 != null) {
           ProxySocketConnector.field_n.b(false, (byte) -98);
           var4 = ProxySocketConnector.field_n;
-          var5_ref_String = op.field_q;
+          var5_ref_String = OptionsScreen.field_q;
           var4.field_b.addAction(var5_ref_String, (byte) -68, 5);
           var4Lifetime1 = ProxySocketConnector.field_n;
           var5 = BufferedRandomAccessFile.field_a;
@@ -241,14 +241,14 @@ final class HuffmanCodec {
             HuffmanCodec.a('ﾢ', 24);
           }
           AudioOutput.a(param1, param2, 10);
-          to.field_t = AudioOutput.a(param6, param5, 0, param3);
+          MainMenuScreen.field_t = AudioOutput.a(param6, param5, 0, param3);
           ib.field_h = AudioOutput.a(param6, param5, 1, param0);
           ClientContextMenu.field_d = new PcmStreamMixer();
           ba.field_f = param0;
           ib.field_h.b(ClientContextMenu.field_d);
           ri.field_a = param7;
           ri.field_a.a(SocketJs5Transport.field_u, (byte) 2);
-          to.field_t.b(ri.field_a);
+          MainMenuScreen.field_t.b(ri.field_a);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "oh.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ')');
         }

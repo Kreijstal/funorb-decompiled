@@ -158,13 +158,13 @@ class EmailCredentials extends LoginCredentials {
                 break regionExit1;
               }
               if (!TickClock.field_b) {
-                var37 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
+                var37 = "[" + sd.a(HowToPlayScreen.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var38 = var37 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var38);
                 break regionExit1;
               }
               if (TextLayoutLine.field_f == null) {
-                var35 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
+                var35 = "[" + sd.a(HowToPlayScreen.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
                 var36 = var35 + var33 + ": ";
                 var6Lifetime1 = var6Lifetime1 - AccountMessagePanel.field_Q.textWidth(var36);
                 break regionExit1;

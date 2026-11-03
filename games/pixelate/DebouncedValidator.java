@@ -85,7 +85,7 @@ abstract class DebouncedValidator implements ValidationSource {
               param2 <= 105) {
               var7 = param1;
               ro.a(var7, 2);
-              SpriteCheckboxPainter.field_f = fk.a((byte) -65, param1);
+              SpriteCheckboxPainter.field_f = HowToPlayScreen.a((byte) -65, param1);
             } else {
               SpriteCheckboxPainter.field_f = pa.a(param2, param3, (byte) -97);
             }
@@ -338,7 +338,7 @@ abstract class DebouncedValidator implements ValidationSource {
           ra.field_e.a(10, -10 + (-10 + (-4 + (-120 + SoftwareRasterizer.field_d))), SoftwareRasterizer.field_j - 360 >> 1, 256, 360);
           ih.field_g.a(0, 24, 0, 256, ra.field_e.field_K);
           kh.field_a.a(24, -24 + ra.field_e.height, 0, 256, ra.field_e.field_K);
-          kh.field_a.field_zb = op.a(8421504, param0 ^ 48, 11579568, kh.field_a.height, 1, 3);
+          kh.field_a.field_zb = OptionsScreen.a(8421504, param0 ^ 48, 11579568, kh.field_a.height, 1, 3);
           StripedProgressBar.field_O.a(5, -2 + kh.field_a.height - 10 - 24, 5, param0 + 224, kh.field_a.field_K - 10);
           ContentTransitionDialog.field_eb.a(-24 + kh.field_a.height - 5, 24, (-80 + kh.field_a.field_K) / 2, 256, 80);
           mi.b(false);
@@ -361,7 +361,7 @@ abstract class DebouncedValidator implements ValidationSource {
           field_d = -88;
         }
         if (this.isInputEmpty(-22265)) {
-          return wh.field_o;
+          return HighscoresScreen.field_o;
         }
         if (!((350L + this.field_c) <= hm.a(64))) {
           return BufferedRandomAccessFile.field_b;

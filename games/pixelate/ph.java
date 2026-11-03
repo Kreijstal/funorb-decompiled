@@ -31,30 +31,30 @@ final class ph extends IntrusiveNode {
             return 4;
           }
           try {
-            if (0 == rb.field_q) {
+            if (0 == AchievementsScreen.field_q) {
               se.field_o = ef.field_e.a(20278, bl.field_e, ArchiveIndex.field_s);
-              rb.field_q = rb.field_q + 1;
+              AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
             }
-            if (1 == rb.field_q) {
+            if (1 == AchievementsScreen.field_q) {
               if (se.field_o.field_b == 2) {
                 stackIn_14_0 = ce.a((byte) -124, -1);
                 return stackIn_14_0;
               }
               if (se.field_o.field_b == 1) {
-                rb.field_q = rb.field_q + 1;
+                AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
               }
             }
-            if (rb.field_q == 2) {
+            if (AchievementsScreen.field_q == 2) {
               sc.field_d = new BufferedSocket((java.net.Socket) (se.field_o.field_e), ef.field_e);
               var2 = new PacketBuffer(13);
               FallingPieceView.a(ql.field_o, (byte) 66, SceneWidget.field_ib, var2, lk.field_n);
               var2.writeByte(160, 15);
               var2.d(fj.field_a, -76);
               sc.field_d.a(13, -103, 0, var2.payload);
-              rb.field_q = rb.field_q + 1;
+              AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
               ViewportController.field_a = 30000L + hm.a(64);
             }
-            if (rb.field_q == 3) {
+            if (AchievementsScreen.field_q == 3) {
               if (sc.field_d.a(-120) <= 0) {
                 if (ViewportController.field_a < hm.a(64)) {
                   stackIn_30_0 = ce.a((byte) -124, -2);
@@ -66,20 +66,20 @@ final class ph extends IntrusiveNode {
                   stackIn_26_0 = ce.a((byte) -124, var1_int);
                   return stackIn_26_0;
                 }
-                rb.field_q = rb.field_q + 1;
+                AchievementsScreen.field_q = AchievementsScreen.field_q + 1;
               }
             }
             if (param0 != 25960) {
               stackIn_33_0 = -28;
               return stackIn_33_0;
             }
-            if (rb.field_q != 4) {
+            if (AchievementsScreen.field_q != 4) {
               return -1;
             }
             Match.field_h.a(sc.field_d, ModalStack.field_L, 8);
             sc.field_d = null;
             se.field_o = null;
-            rb.field_q = 0;
+            AchievementsScreen.field_q = 0;
             stackIn_37_0 = 0;
             return stackIn_37_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -114,7 +114,7 @@ final class ph extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           dk.field_e = bi.a("basic", "display_name_changed", param0, (byte) -25);
-          ma.field_z = new pd(0L, rm.field_a, SceneWidgetNode.field_u, op.field_q);
+          ma.field_z = new pd(0L, rm.field_a, SceneWidgetNode.field_u, OptionsScreen.field_q);
           MouseWheelHandler.field_e = new pd(0L, rm.field_a, qh.field_e, NanoTickClock.field_n);
           wa.field_f = new SceneWidget(0L, (SceneWidget) null);
           SceneWidget.field_E = new SceneWidget(0L, TextFieldValidator.field_h);

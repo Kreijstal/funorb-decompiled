@@ -80,15 +80,15 @@ final class aa {
     }
 
     aa(boolean param0) {
-        this.field_b = op.field_s;
-        this.field_n = op.field_t;
+        this.field_b = OptionsScreen.field_s;
+        this.field_n = OptionsScreen.field_t;
         this.field_h = cl.field_h;
         if (param0) {
           this.field_l = HuffmanCodec.field_g;
         } else {
           this.field_l = null;
         }
-        this.field_j = fk.field_o;
+        this.field_j = HowToPlayScreen.field_o;
         this.field_m = Puzzle.field_a;
         this.field_i = BoundedRandomAccessFile.field_d;
         this.field_e = ModalStack.field_I;

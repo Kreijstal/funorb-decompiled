@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk extends MenuScreen {
+final class GameModeSelectScreen extends MenuScreen {
     private int field_t;
     static PacketBuffer field_v;
-    private ga field_o;
+    private GameModeCard field_o;
     static ResourceArchive field_u;
     static bd field_s;
-    private ga field_p;
+    private GameModeCard field_p;
     static String[] field_r;
     static String[] field_q;
 
@@ -104,7 +104,7 @@ final class uk extends MenuScreen {
                 }
                 var2 = vd.a("ticketing_oneunread", param0 ^ 31873);
                 if (var2 != null) {
-                  to.field_o = of.a(var2, 1);
+                  MainMenuScreen.field_o = of.a(var2, 1);
                 }
                 var2 = vd.a("ticketing_xunread", 0);
                 if (null != var2) {
@@ -244,7 +244,7 @@ final class uk extends MenuScreen {
                 }
                 var2 = vd.a("mu_lobby_friend_rm", 0);
                 if (null != var2) {
-                  op.field_q = of.a(var2, 1);
+                  OptionsScreen.field_q = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_lobby_name_add", 0);
                 if (null != var2) {
@@ -264,7 +264,7 @@ final class uk extends MenuScreen {
                 }
                 var2 = vd.a("mu_gamelist_status", 0);
                 if (null != var2) {
-                  op.field_w = of.a(var2, 1);
+                  OptionsScreen.field_w = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_gamelist_owner", 0);
                 if (null != var2) {
@@ -532,7 +532,7 @@ final class uk extends MenuScreen {
                 }
                 var2 = vd.a("xs_game", 0);
                 if (var2 != null) {
-                  fk.field_q = of.a(var2, param0 ^ 31872);
+                  HowToPlayScreen.field_q = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("waiting_for_x_to_start_game", param0 ^ 31873);
                 if (null != var2) {
@@ -608,7 +608,7 @@ final class uk extends MenuScreen {
                 }
                 var2 = vd.a("status_private", 0);
                 if (var2 != null) {
-                  wh.field_s = of.a(var2, 1);
+                  HighscoresScreen.field_s = of.a(var2, 1);
                 }
                 var2 = vd.a("status_full", param0 - 31873);
                 if (null != var2) {
@@ -1478,7 +1478,7 @@ final class uk extends MenuScreen {
                 }
                 var2 = vd.a("login_email", 0);
                 if (null != var2) {
-                  rb.field_r = of.a(var2, 1);
+                  AchievementsScreen.field_r = of.a(var2, 1);
                 }
                 var2 = vd.a("login_username_tooltip", param0 ^ 31873);
                 if (null != var2) {
@@ -1730,7 +1730,7 @@ final class uk extends MenuScreen {
                 }
                 var2 = vd.a("enterignore_add", param0 - 31873);
                 if (var2 != null) {
-                  dp.field_p = of.a(var2, 1);
+                  GameplayScreen.field_p = of.a(var2, 1);
                 }
                 var2 = vd.a("enterignore_del", 0);
                 if (var2 != null) {
@@ -1890,7 +1890,7 @@ final class uk extends MenuScreen {
                 }
                 var2 = vd.a("sound_colon", param0 ^ 31873);
                 if (var2 != null) {
-                  fk.field_p = of.a(var2, 1);
+                  HowToPlayScreen.field_p = of.a(var2, 1);
                 }
                 var2 = vd.a("music_colon", param0 - 31873);
                 if (null != var2) {
@@ -2276,7 +2276,7 @@ final class uk extends MenuScreen {
                 }
                 var2 = vd.a("orbpoints_colon", param0 - 31873);
                 if (null != var2) {
-                  to.field_p = of.a(var2, param0 - 31872);
+                  MainMenuScreen.field_p = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("orbcoins_colon", 0);
                 if (null != var2) {
@@ -3085,7 +3085,7 @@ final class uk extends MenuScreen {
         try {
           var2_int = this.field_g.field_j;
           if (param0 > -35) {
-            uk.a(-67, (ResourceArchive) null);
+            GameModeSelectScreen.a(-67, (ResourceArchive) null);
           }
           if (ke.field_a != 96 &&
             ke.field_a != 97 &&
@@ -3384,10 +3384,10 @@ final class uk extends MenuScreen {
     }
 
     final void e(byte param0) {
-        ga stackIn_3_0 = null;
+        GameModeCard stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
-        ga stackIn_9_0 = null;
+        GameModeCard stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         boolean stackIn_10_2 = false;
         RuntimeException decompiledCaughtException = null;
@@ -3397,14 +3397,14 @@ final class uk extends MenuScreen {
           stackIn_3_0 = this.field_p;
           stackIn_3_1 = -127;
           stackIn_4_2 = (this.field_g.field_j == 0);
-          ((ga) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_4_2);
+          ((GameModeCard) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_4_2);
           if (param0 >= -64) {
             return;
           }
           stackIn_9_0 = this.field_o;
           stackIn_9_1 = -125;
           stackIn_10_2 = (this.field_g.field_j == 1);
-          ((ga) (Object) stackIn_9_0).a((byte) stackIn_9_1, stackIn_10_2);
+          ((GameModeCard) (Object) stackIn_9_0).a((byte) stackIn_9_1, stackIn_10_2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3413,7 +3413,7 @@ final class uk extends MenuScreen {
         }
     }
 
-    uk(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    GameModeSelectScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         int[] var7 = null;
         int[] var8 = null;
@@ -3438,8 +3438,8 @@ final class uk extends MenuScreen {
           for (var10Lifetime1 = 0; var8.length > var10Lifetime1; var10Lifetime1++) {
             var8[var10Lifetime1] = cm.a(cm.a(var9Lifetime1, 16711935) * var10Lifetime1, -16711936) + cm.a(cm.a(var9Lifetime1, 65280) * var10Lifetime1, 16711680) >> 8;
           }
-          this.field_p = new ga(0, 126, var7);
-          this.field_o = new ga(1, 370, var8);
+          this.field_p = new GameModeCard(0, 126, var7);
+          this.field_o = new GameModeCard(1, 370, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3456,9 +3456,9 @@ final class uk extends MenuScreen {
     }
 
     final void a(int param0) {
-        ga var2 = null;
+        GameModeCard var2 = null;
         String var3 = null;
-        ga stackIn_12_0 = null;
+        GameModeCard stackIn_12_0 = null;
         String stackIn_16_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;

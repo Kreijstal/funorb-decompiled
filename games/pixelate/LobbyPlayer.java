@@ -78,12 +78,12 @@ final class LobbyPlayer extends SceneWidget {
         var8 = MusicCrossfadeStream.field_o;
         var2 = var8;
         var3 = var8.f(255);
-        fk.field_o = var3 & 127;
+        HowToPlayScreen.field_o = var3 & 127;
         stackIn_5_0 = (0 != (128 & var3));
         TextWidgetPainter.field_n = stackIn_5_0;
         BoundedRandomAccessFile.field_d = var8.f(255);
         cd.field_g = var8.a(false);
-        if (fk.field_o == 2) {
+        if (HowToPlayScreen.field_o == 2) {
           qf.field_b = var8.a((byte) 2);
           ModalStack.field_I = var8.readUnsignedMedium((byte) 13);
         } else {
@@ -94,19 +94,19 @@ final class LobbyPlayer extends SceneWidget {
         var4 = stackIn_11_0;
         Puzzle.field_a = var8.h(5);
         if (var4 == 0) {
-          op.field_t = Puzzle.field_a;
+          OptionsScreen.field_t = Puzzle.field_a;
         } else {
-          op.field_t = var8.h(5);
+          OptionsScreen.field_t = var8.h(5);
         }
-        if (fk.field_o == 1) {
-          op.field_s = var8.a((byte) -4);
+        if (HowToPlayScreen.field_o == 1) {
+          OptionsScreen.field_s = var8.a((byte) -4);
           cl.field_h = var8.h(5);
         } else {
-          if (fk.field_o == 4) {
-            op.field_s = var8.a((byte) -4);
+          if (HowToPlayScreen.field_o == 4) {
+            OptionsScreen.field_s = var8.a((byte) -4);
             cl.field_h = var8.h(5);
           } else {
-            op.field_s = 0;
+            OptionsScreen.field_s = 0;
             cl.field_h = null;
           }
         }
@@ -119,7 +119,7 @@ final class LobbyPlayer extends SceneWidget {
         try {
           var9 = jd.field_k.a(-21209, var5);
           pb.field_j = var9.getPreview((byte) -54);
-          if (op.field_t.equals(ModalStack.field_J)) {
+          if (OptionsScreen.field_t.equals(ModalStack.field_J)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var9.field_u;
@@ -194,7 +194,7 @@ final class LobbyPlayer extends SceneWidget {
     }
 
     final static void j(int param0) {
-        to.field_s = false;
+        MainMenuScreen.field_s = false;
         dk.field_c = false;
         QuickChatMenu.a(-1, -2671);
         MatchingTextValidator.field_n = wm.field_a;

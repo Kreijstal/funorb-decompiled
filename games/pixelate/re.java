@@ -208,13 +208,13 @@ final class re {
           synchronized (var1) {
             qn.field_p = ln.field_p;
             LinkButtonPainter.field_i = LinkButtonPainter.field_i + 1;
-            if (0 > ol.field_q) {
+            if (0 > PauseMenuScreen.field_q) {
               for (var2 = 0; var2 < 112; var2++) {
                 EmailValidator.field_m[var2] = false;
               }
-              ol.field_q = wm.field_c;
+              PauseMenuScreen.field_q = wm.field_c;
             } else {
-              while (ol.field_q != wm.field_c) {
+              while (PauseMenuScreen.field_q != wm.field_c) {
                 var2 = LabeledField.field_Q[wm.field_c];
                 wm.field_c = 127 & 1 + wm.field_c;
                 if (var2 >= 0) {

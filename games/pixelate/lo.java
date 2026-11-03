@@ -199,9 +199,9 @@ final class lo extends SceneWidget {
               !(param1 + param2 <= ArchiveRequest.field_A.length)) {
               ArchiveRequest.field_A = new int[2 * (param1 + param2)];
             }
-            if (dp.field_o == null ||
-              !(param2 <= dp.field_o.length)) {
-              dp.field_o = new boolean[2 * param2];
+            if (GameplayScreen.field_o == null ||
+              !(param2 <= GameplayScreen.field_o.length)) {
+              GameplayScreen.field_o = new boolean[2 * param2];
             }
           } else {
             if (param2 <= SecondaryNodeDequeIterator.field_c.length) {
@@ -209,9 +209,9 @@ final class lo extends SceneWidget {
                 !(param1 + param2 <= ArchiveRequest.field_A.length)) {
                 ArchiveRequest.field_A = new int[2 * (param1 + param2)];
               }
-              if (dp.field_o == null ||
-                !(param2 <= dp.field_o.length)) {
-                dp.field_o = new boolean[2 * param2];
+              if (GameplayScreen.field_o == null ||
+                !(param2 <= GameplayScreen.field_o.length)) {
+                GameplayScreen.field_o = new boolean[2 * param2];
               }
             } else {
               SecondaryNodeDequeIterator.field_c = new int[2 * param2];
@@ -219,9 +219,9 @@ final class lo extends SceneWidget {
                 !(param1 + param2 <= ArchiveRequest.field_A.length)) {
                 ArchiveRequest.field_A = new int[2 * (param1 + param2)];
               }
-              if (dp.field_o == null ||
-                !(param2 <= dp.field_o.length)) {
-                dp.field_o = new boolean[2 * param2];
+              if (GameplayScreen.field_o == null ||
+                !(param2 <= GameplayScreen.field_o.length)) {
+                GameplayScreen.field_o = new boolean[2 * param2];
               }
             }
           }
@@ -250,21 +250,21 @@ final class lo extends SceneWidget {
             }
             if (null == ArchiveRequest.field_A) {
               ArchiveRequest.field_A = new int[2 * (param1 + param2)];
-              if (dp.field_o == null ||
-                !(param2 <= dp.field_o.length)) {
-                dp.field_o = new boolean[2 * param2];
+              if (GameplayScreen.field_o == null ||
+                !(param2 <= GameplayScreen.field_o.length)) {
+                GameplayScreen.field_o = new boolean[2 * param2];
               }
             } else {
               if (param1 + param2 <= ArchiveRequest.field_A.length) {
-                if (dp.field_o == null ||
-                  !(param2 <= dp.field_o.length)) {
-                  dp.field_o = new boolean[2 * param2];
+                if (GameplayScreen.field_o == null ||
+                  !(param2 <= GameplayScreen.field_o.length)) {
+                  GameplayScreen.field_o = new boolean[2 * param2];
                 }
               } else {
                 ArchiveRequest.field_A = new int[2 * (param1 + param2)];
-                if (dp.field_o == null ||
-                  !(param2 <= dp.field_o.length)) {
-                  dp.field_o = new boolean[2 * param2];
+                if (GameplayScreen.field_o == null ||
+                  !(param2 <= GameplayScreen.field_o.length)) {
+                  GameplayScreen.field_o = new boolean[2 * param2];
                 }
               }
             }
@@ -289,21 +289,21 @@ final class lo extends SceneWidget {
               }
               if (null == ArchiveRequest.field_A) {
                 ArchiveRequest.field_A = new int[2 * (param1 + param2)];
-                if (dp.field_o == null ||
-                  !(param2 <= dp.field_o.length)) {
-                  dp.field_o = new boolean[2 * param2];
+                if (GameplayScreen.field_o == null ||
+                  !(param2 <= GameplayScreen.field_o.length)) {
+                  GameplayScreen.field_o = new boolean[2 * param2];
                 }
               } else {
                 if (param1 + param2 <= ArchiveRequest.field_A.length) {
-                  if (dp.field_o == null ||
-                    !(param2 <= dp.field_o.length)) {
-                    dp.field_o = new boolean[2 * param2];
+                  if (GameplayScreen.field_o == null ||
+                    !(param2 <= GameplayScreen.field_o.length)) {
+                    GameplayScreen.field_o = new boolean[2 * param2];
                   }
                 } else {
                   ArchiveRequest.field_A = new int[2 * (param1 + param2)];
-                  if (dp.field_o == null ||
-                    !(param2 <= dp.field_o.length)) {
-                    dp.field_o = new boolean[2 * param2];
+                  if (GameplayScreen.field_o == null ||
+                    !(param2 <= GameplayScreen.field_o.length)) {
+                    GameplayScreen.field_o = new boolean[2 * param2];
                   }
                 }
               }
@@ -315,21 +315,21 @@ final class lo extends SceneWidget {
                 }
                 if (null == ArchiveRequest.field_A) {
                   ArchiveRequest.field_A = new int[2 * (param1 + param2)];
-                  if (dp.field_o == null ||
-                    !(param2 <= dp.field_o.length)) {
-                    dp.field_o = new boolean[2 * param2];
+                  if (GameplayScreen.field_o == null ||
+                    !(param2 <= GameplayScreen.field_o.length)) {
+                    GameplayScreen.field_o = new boolean[2 * param2];
                   }
                 } else {
                   if (param1 + param2 <= ArchiveRequest.field_A.length) {
-                    if (dp.field_o == null ||
-                      !(param2 <= dp.field_o.length)) {
-                      dp.field_o = new boolean[2 * param2];
+                    if (GameplayScreen.field_o == null ||
+                      !(param2 <= GameplayScreen.field_o.length)) {
+                      GameplayScreen.field_o = new boolean[2 * param2];
                     }
                   } else {
                     ArchiveRequest.field_A = new int[2 * (param1 + param2)];
-                    if (dp.field_o == null ||
-                      !(param2 <= dp.field_o.length)) {
-                      dp.field_o = new boolean[2 * param2];
+                    if (GameplayScreen.field_o == null ||
+                      !(param2 <= GameplayScreen.field_o.length)) {
+                      GameplayScreen.field_o = new boolean[2 * param2];
                     }
                   }
                 }
@@ -341,21 +341,21 @@ final class lo extends SceneWidget {
                 }
                 if (null == ArchiveRequest.field_A) {
                   ArchiveRequest.field_A = new int[2 * (param1 + param2)];
-                  if (dp.field_o == null ||
-                    !(param2 <= dp.field_o.length)) {
-                    dp.field_o = new boolean[2 * param2];
+                  if (GameplayScreen.field_o == null ||
+                    !(param2 <= GameplayScreen.field_o.length)) {
+                    GameplayScreen.field_o = new boolean[2 * param2];
                   }
                 } else {
                   if (param1 + param2 <= ArchiveRequest.field_A.length) {
-                    if (dp.field_o == null ||
-                      !(param2 <= dp.field_o.length)) {
-                      dp.field_o = new boolean[2 * param2];
+                    if (GameplayScreen.field_o == null ||
+                      !(param2 <= GameplayScreen.field_o.length)) {
+                      GameplayScreen.field_o = new boolean[2 * param2];
                     }
                   } else {
                     ArchiveRequest.field_A = new int[2 * (param1 + param2)];
-                    if (dp.field_o == null ||
-                      !(param2 <= dp.field_o.length)) {
-                      dp.field_o = new boolean[2 * param2];
+                    if (GameplayScreen.field_o == null ||
+                      !(param2 <= GameplayScreen.field_o.length)) {
+                      GameplayScreen.field_o = new boolean[2 * param2];
                     }
                   }
                 }

@@ -237,7 +237,7 @@ final class MatchHud {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          fk.field_s = SocketConnector.a("frame_top", "commonui", (byte) 47, param2);
+          HowToPlayScreen.field_s = SocketConnector.a("frame_top", "commonui", (byte) 47, param2);
           PlayerBoard.field_v = SocketConnector.a("frame_bottom", "commonui", (byte) 47, param2);
           ge.field_g = bi.a("commonui", "jagex_logo_grey", param2, (byte) -74);
           fc.field_d = SocketConnector.a("button", "commonui", (byte) 47, param2);

@@ -171,7 +171,7 @@ final class MatchController {
           stackIn_5_0 = var7;
           stackIn_5_1 = gb.field_f[0];
           stackIn_5_2 = gb.field_f[1];
-          stackIn_6_3 = (wh.field_p == null) ? false : true;
+          stackIn_6_3 = (HighscoresScreen.field_p == null) ? false : true;
           stackIn_8_4 = param0;
           stackIn_8_5 = ArrayWidgetContainer.a((byte) 85);
           stackIn_9_6 = (EmailCredentials.field_k == 0) ? false : true;
@@ -449,12 +449,12 @@ final class MatchController {
 
     private final void j(int param0) {
         int var2 = this.field_a.scores[0];
-        if (null == wh.field_p &&
+        if (null == HighscoresScreen.field_p &&
           var2 > 0 &&
           !this.field_l) {
-          wh.field_p = new rh(0, 65535, ln.field_n, mj.field_j, ra.field_a, PlayerController.field_r, new int[]{var2});
+          HighscoresScreen.field_p = new rh(0, 65535, ln.field_n, mj.field_j, ra.field_a, PlayerController.field_r, new int[]{var2});
           if (!ArrayWidgetContainer.a((byte) 120)) {
-            ValidationHelpWidget.a(wh.field_p, true, 3);
+            ValidationHelpWidget.a(HighscoresScreen.field_p, true, 3);
           }
         }
         if (param0 != 17945) {
@@ -715,19 +715,19 @@ final class MatchController {
             if (1 != param0) {
               if (param0 != 2) {
                 if (param0 == 3) {
-                  wh.e(61, 2);
+                  HighscoresScreen.e(61, 2);
                 } else {
                   if (param0 == 4) {
-                    wh.e(-41, 3);
+                    HighscoresScreen.e(-41, 3);
                   } else {
                     if (param0 == 5) {
-                      wh.e(60, 4);
+                      HighscoresScreen.e(60, 4);
                     } else {
                       if (param0 == 6) {
-                        wh.e(-111, 5);
+                        HighscoresScreen.e(-111, 5);
                       } else {
                         if (param0 == 7) {
-                          wh.e(123, 6);
+                          HighscoresScreen.e(123, 6);
                         } else {
                           if (param0 != 8) {
                             if (9 == param0) {
@@ -766,7 +766,7 @@ final class MatchController {
                               }
                             }
                           } else {
-                            wh.e(51, 7);
+                            HighscoresScreen.e(51, 7);
                           }
                         }
                       }
@@ -774,10 +774,10 @@ final class MatchController {
                   }
                 }
               } else {
-                wh.e(104, 1);
+                HighscoresScreen.e(104, 1);
               }
             } else {
-              wh.e(-42, 0);
+              HighscoresScreen.e(-42, 0);
             }
           } else {
             if (EmailValidator.field_m[81]) {

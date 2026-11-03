@@ -103,7 +103,7 @@ final class l extends MenuScreen {
             aa.field_f = new CipherPacketBuffer(param2);
             bj.field_a = param1;
             hf.field_n = param7;
-            op.field_p = param13;
+            OptionsScreen.field_p = param13;
             vm.field_d = param9;
             hf.field_t = param5;
             LobbyPlayer.field_Lb = param3;
@@ -116,11 +116,11 @@ final class l extends MenuScreen {
               var16 = (PlatformTaskDispatcher) null;
               l.a(false, 22, 99, false, -71, -71L, (String) null, 37, -83, false, -70, -34, 80, (PlatformTaskDispatcher) null);
             }
-            if (null == op.field_p.field_e) {
+            if (null == OptionsScreen.field_p.field_e) {
               return;
             }
             try {
-              MusicCrossfadeStream.field_p = new BufferedRandomAccessFile(op.field_p.field_e, 64, 0);
+              MusicCrossfadeStream.field_p = new BufferedRandomAccessFile(OptionsScreen.field_p.field_e, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

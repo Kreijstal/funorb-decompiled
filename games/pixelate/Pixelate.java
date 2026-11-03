@@ -141,7 +141,7 @@ public final class Pixelate extends NetworkGameClient {
                 if (!fo.a((byte) 58)) {
                   this.advanceClientState(false, true);
                 } else {
-                  if (ga.field_d == ga.field_a) {
+                  if (GameModeCard.field_d == GameModeCard.field_a) {
                     var2 = lp.a(2);
                     if (var2 == 1) {
                       gi.a(QuickChatMenu.field_Ib, kf.field_q, (byte) 78);
@@ -153,7 +153,7 @@ public final class Pixelate extends NetworkGameClient {
                 }
               }
             } else {
-              if (ga.field_d == ga.field_a) {
+              if (GameModeCard.field_d == GameModeCard.field_a) {
                 var2 = TriangleMesh.b((byte) 83);
                 if (var2 == 2) {
                   ln.a(97);
@@ -244,7 +244,7 @@ public final class Pixelate extends NetworkGameClient {
                 var4 = 0;
               }
               if (var4 != 0) {
-                to.g((byte) 103);
+                MainMenuScreen.g((byte) 103);
               }
             }
             return;
@@ -258,7 +258,7 @@ public final class Pixelate extends NetworkGameClient {
           }
           if (TextLayoutLine.field_e == 14) {
             IntrusiveDequeCursor.a(0);
-            ga.a(150, DropTargetWidget.a(-1879863704, 2000), 1024, 3, hp.j(0), fb.b((byte) 79), LoginCredentials.field_d, DropTargetWidget.a(-1879863704, 8), cl.field_f.length, IndexedSpriteState.a(1));
+            GameModeCard.a(150, DropTargetWidget.a(-1879863704, 2000), 1024, 3, hp.j(0), fb.b((byte) 79), LoginCredentials.field_d, DropTargetWidget.a(-1879863704, 8), cl.field_f.length, IndexedSpriteState.a(1));
             fc.a(ba.a(-26573), 64, TickClock.b(119));
             MidiPcmStream.field_t = -2;
             StripedProgressBar.field_G = true;
@@ -420,7 +420,7 @@ public final class Pixelate extends NetworkGameClient {
           var7Lifetime1 = MusicCrossfadeStream.field_o.f(255);
           var8Lifetime1 = MusicCrossfadeStream.field_o.f(255);
           var9Lifetime1 = MusicCrossfadeStream.field_o.readInt(0);
-          wh.field_p = null;
+          HighscoresScreen.field_p = null;
           stackIn_100_0 = (TextLayoutLine.field_e == 58);
           DateOfBirthValidator.field_i = stackIn_100_0;
           bg.a(2);
@@ -453,7 +453,7 @@ public final class Pixelate extends NetworkGameClient {
         ef.a(true);
         ck.a((byte) -109);
         MenuScreen.d(-1);
-        uk.b(false);
+        GameModeSelectScreen.b(false);
         ab.a(false);
         oo.a(true);
         MusicCrossfadeStream.e(-97);
@@ -553,11 +553,11 @@ public final class Pixelate extends NetworkGameClient {
         ig.a((byte) 2);
         Puzzle.b(116);
         so.a(true);
-        op.f((byte) 122);
+        OptionsScreen.f((byte) 122);
         bg.b((byte) -101);
         ma.c((byte) -112);
-        rb.b(true);
-        fk.e(108);
+        AchievementsScreen.b(true);
+        HowToPlayScreen.e(108);
         FallingPieceView.a((byte) 51);
         BoardView.b(true);
         pb.c(0);
@@ -603,11 +603,11 @@ public final class Pixelate extends NetworkGameClient {
         hp.b((byte) -15);
         aj.a((byte) -38);
         BoundedRandomAccessFile.a(-1);
-        to.f((byte) 23);
-        dp.e(param0 ^ 23116);
+        MainMenuScreen.f((byte) 23);
+        GameplayScreen.e(param0 ^ 23116);
         fq.f((byte) -123);
-        wh.f((byte) 49);
-        ol.c(false);
+        HighscoresScreen.f((byte) 49);
+        PauseMenuScreen.c(false);
         ij.e(-124);
         wa.a(0);
         ra.a(false);
@@ -1129,7 +1129,7 @@ public final class Pixelate extends NetworkGameClient {
                 if (!var12.field_hc &&
                   !var12.field_cc) {
                   if (!var12.field_Pb) {
-                    var12.field_Nb.field_cb = wh.field_s;
+                    var12.field_Nb.field_cb = HighscoresScreen.field_s;
                   } else {
                     var12.field_Nb.field_cb = ki.field_b;
                   }
@@ -1312,7 +1312,7 @@ public final class Pixelate extends NetworkGameClient {
               if (1 == var12.field_Ib) {
                 var34 = ri.field_g;
               } else {
-                var34 = rb.field_p[var12.field_Ib];
+                var34 = AchievementsScreen.field_p[var12.field_Ib];
               }
               up.field_o = DisplayNameForm.field_R + " - " + var34;
             }
@@ -1481,7 +1481,7 @@ public final class Pixelate extends NetworkGameClient {
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           ThreeSliceButtonPainter.a(ab.field_c, ab.field_c[0].field_E, -96, ab.field_c[0].field_F);
         }
-        if (ga.field_a != ga.field_d) {
+        if (GameModeCard.field_a != GameModeCard.field_d) {
           var3Lifetime3 = (hf.field_o << 8) / 16;
           SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, var3Lifetime3);
         }
@@ -1524,8 +1524,8 @@ public final class Pixelate extends NetworkGameClient {
                                 PlayerBoard.field_c.ensureGroupAvailableByName("basic", -1)) {
                                 if (SocketConnector.field_a.b(-3) &&
                                   SocketConnector.field_a.a((byte) 92)) {
-                                  if (uk.field_u.b(-3) &&
-                                    uk.field_u.a((byte) 92)) {
+                                  if (GameModeSelectScreen.field_u.b(-3) &&
+                                    GameModeSelectScreen.field_u.a((byte) 92)) {
                                     li.a(85.0f, -1, rh.field_r);
                                     this.renderClient(param1 + 106);
                                     if (!param0) {
@@ -1537,7 +1537,7 @@ public final class Pixelate extends NetworkGameClient {
                                     sf.a(param1 - 4);
                                     return false;
                                   }
-                                  li.a(80.0f, -1, dk.a(em.field_a, 0, jd.field_p, uk.field_u));
+                                  li.a(80.0f, -1, dk.a(em.field_a, 0, jd.field_p, GameModeSelectScreen.field_u));
                                   return false;
                                 }
                                 li.a(75.0f, -1, TextLayoutLine.a(120, SocketConnector.field_a, em.field_a, "", jd.field_p));
@@ -1736,7 +1736,7 @@ public final class Pixelate extends NetworkGameClient {
             var7[var8] = SocketConnector.a(fo.field_u[var8], "basic", (byte) 47, MenuInputState.field_d);
           }
         }
-        CachedArchiveProvider.a(true, lp.field_c, LoginCredentials.field_d, qn.field_l, hp.field_Hb, la.field_c, var7, 2, 2, var7, uk.field_u, param1 + 29, ap.field_d, dg.field_d, cl.field_f);
+        CachedArchiveProvider.a(true, lp.field_c, LoginCredentials.field_d, qn.field_l, hp.field_Hb, la.field_c, var7, 2, 2, var7, GameModeSelectScreen.field_u, param1 + 29, ap.field_d, dg.field_d, cl.field_f);
         fe.field_a = false;
         ri.a(200, (byte) -126);
         Js5ArchiveManager.a(qn.field_l, true, dg.field_d);
@@ -1767,7 +1767,7 @@ public final class Pixelate extends NetworkGameClient {
         PacketBuffer.field_p = MouseInputHandler.a(8, (byte) 124);
         ab.field_f = MouseInputHandler.a(9, (byte) 124);
         BoundedRandomAccessFile.field_c = MouseInputHandler.a(10, (byte) 124);
-        uk.field_u = MouseInputHandler.a(11, (byte) 124);
+        GameModeSelectScreen.field_u = MouseInputHandler.a(11, (byte) 124);
         ho.a(-29810);
     }
 
@@ -1787,8 +1787,8 @@ public final class Pixelate extends NetworkGameClient {
         int var8;
         int var3Lifetime1;
         var8 = field_H ? 1 : 0;
-        if (ga.field_d != ga.field_a) {
-          if (ga.field_a == ho.field_e) {
+        if (GameModeCard.field_d != GameModeCard.field_a) {
+          if (GameModeCard.field_a == ho.field_e) {
             hf.field_o = hf.field_o + 1;
             if (16 == hf.field_o) {
               if (wl.field_b) {
@@ -1796,18 +1796,18 @@ public final class Pixelate extends NetworkGameClient {
               } else {
                 MarkerSlider.a(-20822);
               }
-              ga.field_a = BoardView.field_y;
+              GameModeCard.field_a = BoardView.field_y;
             }
           } else {
-            if (BoardView.field_y != ga.field_a) {
+            if (BoardView.field_y != GameModeCard.field_a) {
               hf.field_o = hf.field_o - 1;
               if (hf.field_o == 0) {
-                ga.field_a = ga.field_d;
+                GameModeCard.field_a = GameModeCard.field_d;
               }
             } else {
               if (!ArrayWidgetContainer.a((byte) 121)) {
-                if (null != wh.field_p) {
-                  ValidationHelpWidget.a(wh.field_p, true, 3);
+                if (null != HighscoresScreen.field_p) {
+                  ValidationHelpWidget.a(HighscoresScreen.field_p, true, 3);
                 }
                 un.a(true);
                 var3 = kf.field_q;
@@ -1821,9 +1821,9 @@ public final class Pixelate extends NetworkGameClient {
                 if (BoardParticle.a((byte) -104, MidiPcmStream.field_t)) {
                   IntrusiveDequeCursor.a(0);
                 }
-                ga.field_a = MatchingTextValidator.field_A;
+                GameModeCard.field_a = MatchingTextValidator.field_A;
               } else {
-                ga.field_a = MatchingTextValidator.field_A;
+                GameModeCard.field_a = MatchingTextValidator.field_A;
               }
             }
           }
@@ -1938,7 +1938,7 @@ public final class Pixelate extends NetworkGameClient {
           }
         }
         if (MidiPcmStream.field_t == -3) {
-          wh.field_p = null;
+          HighscoresScreen.field_p = null;
           ro.field_e = new MatchController();
           stackIn_97_0 = (!MenuScreen.field_f) ? 0 : 1;
           var3Lifetime1 = stackIn_97_0;

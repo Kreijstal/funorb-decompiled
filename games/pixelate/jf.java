@@ -30,7 +30,7 @@ final class jf {
         int var7 = 0;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          if (Pixelate.field_G != uk.field_s) {
+          if (Pixelate.field_G != GameModeSelectScreen.field_s) {
             return false;
           }
           if (!param0) {

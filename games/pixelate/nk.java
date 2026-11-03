@@ -166,7 +166,7 @@ final class nk {
             GradientOutlineTextPainter.field_u = new SceneWidget(0L, param7);
             GradientOutlineTextPainter.field_u.field_cb = nd.field_a;
             ui.field_i.a(GradientOutlineTextPainter.field_u, (byte) 26);
-            stackIn_34_0 = ol.b(true) ? 1 : 0;
+            stackIn_34_0 = PauseMenuScreen.b(true) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&
             !ln.field_q) {

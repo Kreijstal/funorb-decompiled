@@ -15,7 +15,7 @@ final class dj {
           MouseInputHandler.field_c = param3;
           bg.field_j = param2;
           ma.field_y = param1;
-          op.b(SoftwareRasterizer.field_d / 2, SoftwareRasterizer.field_j / 2, true);
+          OptionsScreen.b(SoftwareRasterizer.field_d / 2, SoftwareRasterizer.field_j / 2, true);
           BackgroundScene.a(param2.maxDescent + param2.field_D, false, param1.field_D, param2.field_D, param1.field_D + param1.maxDescent);
         } catch (RuntimeException runtimeException) {
           throw aa.a((Throwable) ((Object) runtimeException), "dj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

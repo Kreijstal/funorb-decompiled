@@ -83,12 +83,12 @@ class IntrusiveNode {
           fd.field_c = SocketConnector.a("ratedgame", "lobby", (byte) 47, param1);
           EmailCredentials.field_h = SocketConnector.a("opentome", "lobby", (byte) 47, param1);
           so.field_d = SocketConnector.a("allowspectators", "lobby", (byte) 47, param1);
-          rb.field_p = new String[5];
-          rb.field_p[3] = il.field_c;
-          rb.field_p[2] = cl.field_b;
-          rb.field_p[4] = u.field_g;
-          rb.field_p[0] = CipherPacketBuffer.field_t;
-          rb.field_p[1] = IntrusiveDequeCursor.field_b;
+          AchievementsScreen.field_p = new String[5];
+          AchievementsScreen.field_p[3] = il.field_c;
+          AchievementsScreen.field_p[2] = cl.field_b;
+          AchievementsScreen.field_p[4] = u.field_g;
+          AchievementsScreen.field_p[0] = CipherPacketBuffer.field_t;
+          AchievementsScreen.field_p[1] = IntrusiveDequeCursor.field_b;
           StripedProgressBar.field_O = new SceneWidget(0L, (SceneWidget) null);
           ho.field_g = new SceneWidget(0L, u.field_l, qn.field_m);
           l.field_s = new SceneWidget(0L, ni.field_s, rh.field_m);
@@ -108,7 +108,7 @@ class IntrusiveNode {
           ValidatedTextWidget.field_cb = new SceneWidget(0L, be.field_R, AccountChoicePanel.field_K.toUpperCase());
           sd.field_P = new SceneWidget(0L, io.field_f, ul.field_n.toUpperCase());
           DiskCacheWorker.field_a = new SceneWidget(0L, ff.field_a);
-          wc.field_n = new SceneWidget(0L, u.field_l, op.field_w);
+          wc.field_n = new SceneWidget(0L, u.field_l, OptionsScreen.field_w);
           if (param3 < 108) {
             IntrusiveNode.d(41);
           }
@@ -183,7 +183,7 @@ class IntrusiveNode {
           dh.field_b[0] = new SceneWidget(0L, qk.field_d, cd.field_f);
           AccountTermsPanel.field_L[0] = new lo[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            AccountTermsPanel.field_L[0][var17_int + 1] = new lo(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, DraggableWidget.field_P[var17_int], rb.field_p[var17_int]);
+            AccountTermsPanel.field_L[0][var17_int + 1] = new lo(0L, EmailValidator.field_o, (SceneWidget) null, dn.field_c, DraggableWidget.field_P[var17_int], AchievementsScreen.field_p[var17_int]);
           }
           if (LinkButtonPainter.field_a.length >= 2) {
             dh.field_b[1] = new SceneWidget(0L, qk.field_d, pk.field_e);

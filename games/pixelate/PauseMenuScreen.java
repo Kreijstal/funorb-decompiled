@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends MenuScreen {
+final class PauseMenuScreen extends MenuScreen {
     static String[] field_p;
     static boolean field_o;
     static int field_q;
 
     final void c(byte param0) {
         if (param0 >= -13) {
-          ol.b(false);
+          PauseMenuScreen.b(false);
         }
     }
 
@@ -83,7 +83,7 @@ final class ol extends MenuScreen {
         }
     }
 
-    ol(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    PauseMenuScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
@@ -99,7 +99,7 @@ final class ol extends MenuScreen {
         if (!param0) {
           field_p = (String[]) null;
         }
-        stackIn_6_0 = (null != NodeHashTableIterator.field_e) && (Pixelate.field_G == uk.field_s);
+        stackIn_6_0 = (null != NodeHashTableIterator.field_e) && (Pixelate.field_G == GameModeSelectScreen.field_s);
         return stackIn_6_0;
     }
 

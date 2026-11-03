@@ -592,7 +592,7 @@ final class CachedTextLayout extends TextLayout {
             var7.field_K = 0;
             if (!AccountRegistrationPanel.m(param1 + 98)) {
               var9_ref_String = io.field_c.field_pc;
-              VerticalScrollbar.field_Qb.field_cb = sd.a(fk.field_q, param1 ^ 62, new String[]{var9_ref_String}).toUpperCase();
+              VerticalScrollbar.field_Qb.field_cb = sd.a(HowToPlayScreen.field_q, param1 ^ 62, new String[]{var9_ref_String}).toUpperCase();
               nk.field_e.a(ai.field_A.height - 40, 40, 0, param1 + 255, ai.field_A.field_K);
               nk.field_e.field_cb = sd.a(qh.field_a, param1 + 23, new String[]{var9_ref_String});
               var8 = nk.field_e;
@@ -624,7 +624,7 @@ final class CachedTextLayout extends TextLayout {
                   var10_ref_String = sd.a(d.field_a, 99, new String[]{Integer.toString(ResizableModalPanel.field_X)});
                 }
                 wm.field_d.field_cb = wm.field_d.field_cb + "<br>" + var10_ref_String;
-                if (0 == (16 & rb.field_o) &&
+                if (0 == (16 & AchievementsScreen.field_o) &&
                   !bm.field_o) {
                   wm.field_d.field_zb = bf.field_k.field_ab;
                 }

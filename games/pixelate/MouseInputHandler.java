@@ -52,7 +52,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (ra.field_b == null) {
-            ra.field_b = op.field_p.a(param0 ^ 20278, MatchController.field_B, gd.field_g);
+            ra.field_b = OptionsScreen.field_p.a(param0 ^ 20278, MatchController.field_B, gd.field_g);
           }
           if (param0 == ra.field_b.field_b) {
             return false;
@@ -61,14 +61,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           aj.field_m = dupTemp$1;
           SpriteCheckboxPainter.field_c = dupTemp$1;
           if (ra.field_b.field_b != 1) {
-            uk.field_s = jm.field_q;
+            GameModeSelectScreen.field_s = jm.field_q;
           } else {
             try {
-              NodeHashTableIterator.field_e = new BufferedSocket((java.net.Socket) (ra.field_b.field_e), op.field_p);
+              NodeHashTableIterator.field_e = new BufferedSocket((java.net.Socket) (ra.field_b.field_e), OptionsScreen.field_p);
               aa.field_f.position = 0;
               var4 = MusicCrossfadeStream.field_o;
               var5 = var4;
-              uk.field_s = ij.field_o;
+              GameModeSelectScreen.field_s = ij.field_o;
               var5.position = 0;
               stackIn_11_0 = (param1) ? -2 : -1;
               oj.field_G = stackIn_11_0;
@@ -79,7 +79,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              uk.field_s = jm.field_q;
+              GameModeSelectScreen.field_s = jm.field_q;
               ra.field_b = null;
               return true;
             }

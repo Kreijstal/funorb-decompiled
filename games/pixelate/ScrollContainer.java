@@ -35,10 +35,10 @@ final class ScrollContainer extends SceneWidget {
         try {
           dk.field_c = false;
           NumericDateInputWidget.field_V = false;
-          if (null != to.field_r &&
-            to.field_r.field_N) {
+          if (null != MainMenuScreen.field_r &&
+            MainMenuScreen.field_r.field_N) {
             if (param2 == 8) {
-              if (!to.field_s) {
+              if (!MainMenuScreen.field_s) {
                 param1 = bo.field_b;
               } else {
                 param1 = mp.field_e;
@@ -58,11 +58,11 @@ final class ScrollContainer extends SceneWidget {
               if (ke.field_d) {
                 param1 = IsaacRandom.field_a;
               }
-              to.field_r.a(param2, 5804, param1);
+              MainMenuScreen.field_r.a(param2, 5804, param1);
             }
             if (256 != param2 &&
               param2 != 10 &&
-              !to.field_s) {
+              !MainMenuScreen.field_s) {
               nf.field_b.m(-10515);
             }
           }

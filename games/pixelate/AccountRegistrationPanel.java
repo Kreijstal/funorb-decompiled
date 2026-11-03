@@ -678,7 +678,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
           if (var4 == BufferedRandomAccessFile.field_b) {
             return false;
           }
-          if (var4 == wh.field_o) {
+          if (var4 == HighscoresScreen.field_o) {
             return false;
           }
           if (!param1) {

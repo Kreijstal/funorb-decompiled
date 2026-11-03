@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wh extends MenuScreen {
+final class HighscoresScreen extends MenuScreen {
     static rh field_p;
     static String field_s;
     static dj field_o;
@@ -652,7 +652,7 @@ final class wh extends MenuScreen {
         la.a(this.field_l, TickClock.field_a, false, -25528);
     }
 
-    wh(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+    HighscoresScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 

@@ -241,8 +241,8 @@ abstract class ArrayWidgetContainer extends UiComponent implements UiContainerMa
 
     final static void a(int param0, int param1) {
         SocketJs5Transport.field_u = param0;
-        if (null != to.field_q) {
-          to.field_q.c((byte) 30, param0);
+        if (null != MainMenuScreen.field_q) {
+          MainMenuScreen.field_q.c((byte) 30, param0);
         }
         int var2 = -13 % ((52 - param1) / 59);
         if (ri.field_a != null) {

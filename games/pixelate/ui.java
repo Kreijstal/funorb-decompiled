@@ -99,20 +99,20 @@ final class ui {
     final static void a(int param0, int param1, int param2, int param3) {
         int fieldTemp$0 = 0;
         int var4 = 0;
-        uk.field_v.position = 0;
-        uk.field_v.writeByte(160, 12);
-        uk.field_v.d(ai.field_d.nextInt(), -42);
-        uk.field_v.d(ai.field_d.nextInt(), -97);
-        uk.field_v.writeByte(160, param1);
+        GameModeSelectScreen.field_v.position = 0;
+        GameModeSelectScreen.field_v.writeByte(160, 12);
+        GameModeSelectScreen.field_v.d(ai.field_d.nextInt(), -42);
+        GameModeSelectScreen.field_v.d(ai.field_d.nextInt(), -97);
+        GameModeSelectScreen.field_v.writeByte(160, param1);
         if (param0 > 79) {
-          uk.field_v.writeByte(160, param3);
-          uk.field_v.writeShort(1276387944, param2);
-          uk.field_v.a(SceneWidgetNode.field_t, AgeValidator.field_m, 0);
+          GameModeSelectScreen.field_v.writeByte(160, param3);
+          GameModeSelectScreen.field_v.writeShort(1276387944, param2);
+          GameModeSelectScreen.field_v.a(SceneWidgetNode.field_t, AgeValidator.field_m, 0);
           aa.field_f.g(18, 15514);
           fieldTemp$0 = aa.field_f.position + 1;
           aa.field_f.position = aa.field_f.position + 1;
           var4 = fieldTemp$0;
-          aa.field_f.a(uk.field_v.position, 0, -3493, uk.field_v.payload);
+          aa.field_f.a(GameModeSelectScreen.field_v.position, 0, -3493, GameModeSelectScreen.field_v.payload);
           aa.field_f.f(-var4 + aa.field_f.position, -1);
           return;
         }

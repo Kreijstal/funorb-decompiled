@@ -94,8 +94,8 @@ final class Match {
                 stackIn_19_0 = jk.field_d.length;
               }
               var7 = stackIn_19_0;
-              if (ContentTransitionDialog.field_jb.length <= uk.field_r.length) {
-                stackIn_22_0 = uk.field_r.length;
+              if (ContentTransitionDialog.field_jb.length <= GameModeSelectScreen.field_r.length) {
+                stackIn_22_0 = GameModeSelectScreen.field_r.length;
               } else {
                 stackIn_22_0 = ContentTransitionDialog.field_jb.length;
               }
@@ -111,8 +111,8 @@ final class Match {
               }
               if (var3 >= 7 + var7 &&
                 var3 < var8 + var7 + 7) {
-                if (-var7 + (-7 + var3) < uk.field_r.length) {
-                  stackIn_33_0 = uk.field_r[-var7 - 7 + var3];
+                if (-var7 + (-7 + var3) < GameModeSelectScreen.field_r.length) {
+                  stackIn_33_0 = GameModeSelectScreen.field_r[-var7 - 7 + var3];
                 } else {
                   stackIn_33_0 = "";
                 }
