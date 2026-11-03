@@ -86,7 +86,7 @@ final class wo {
         SceneWidget.field_E.a(0, fq.field_q, 0, param4 ^ 261, wa.field_f.field_K);
         EmailConfirmationValidator.field_u.a(fq.field_q + 2, 18, 0, 256, -2 + (-DelegatingCanvas.field_b + (wa.field_f.field_K - 2) - 80));
         Vector3.field_e.a(fq.field_q + 2, 18, -80 + (-2 + (-DelegatingCanvas.field_b + wa.field_f.field_K)), 256, 82 + DelegatingCanvas.field_b);
-        ma.field_z.a(0, wa.field_f.field_K, 20, fq.field_q + 2 + 20, false, DelegatingCanvas.field_b, 2, -fq.field_q + wa.field_f.height - 22);
+        ScoreMarkerBar.field_z.a(0, wa.field_f.field_K, 20, fq.field_q + 2 + 20, false, DelegatingCanvas.field_b, 2, -fq.field_q + wa.field_f.height - 22);
         MouseWheelHandler.field_e.a(20, true, 2, DelegatingCanvas.field_b);
     }
 

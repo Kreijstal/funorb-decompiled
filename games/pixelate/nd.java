@@ -41,10 +41,10 @@ final class nd {
         var3.cells[21] = (byte)2;
         SpriteState.field_C = new BoardView(var3, 460, 285);
         QuickChatMenu.field_Qb = new FallingPieceView(var10, var3, SpriteState.field_C);
-        ug.field_q = new pb(var2, 150, 280);
+        ug.field_q = new PictureStrip(var2, 150, 280);
         SpriteState.field_C.a(0, 0, 0, (byte) -124, 0);
         ug.field_q.a(param0 - 18614);
-        SpriteState.field_u = new kf();
+        SpriteState.field_u = new TimerBarDemo();
         SpriteState.field_u.a(262144, -76);
         jf.field_c = new mj();
         Puzzle var4 = new Puzzle(3, 4, 0, 0, 0, 262144, 0, 0, FallingPieceView.field_c[3][4]);
@@ -79,7 +79,7 @@ final class nd {
           an.field_b = new BoardView(var6, 640 - var7Lifetime1, var8);
           BoundedRandomAccessFile.field_g = new FallingPieceView(var4, var5, PasswordValidator.field_r);
           DialWidgetPainter.field_a = new FallingPieceView(var4, var6, an.field_b);
-          DiskCacheRequest.field_H = new pb(var4, 320, var8);
+          DiskCacheRequest.field_H = new PictureStrip(var4, 320, var8);
           PasswordValidator.field_r.a(0, 0, 0, (byte) -69, 0);
           an.field_b.a(0, 0, 0, (byte) -98, 0);
           DiskCacheRequest.field_H.a(-18577);

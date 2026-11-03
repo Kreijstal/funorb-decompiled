@@ -422,7 +422,7 @@ abstract class DebouncedValidator implements ValidationSource {
             var3 != 0) {
             return false;
           }
-          if (!ma.a(true)) {
+          if (!ScoreMarkerBar.a(true)) {
             return true;
           }
           String var4 = (String) null;

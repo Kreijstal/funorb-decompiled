@@ -504,15 +504,15 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                   stackIn_361_0 = 1;
                 }
                 var16Lifetime1 = stackIn_361_0;
-                pb.field_f = true;
+                PictureStrip.field_f = true;
                 if (var16Lifetime1 == 0 &&
                   var9 >= 0 &&
                   null != Checkbox.field_Z && (!param0 ||
                   !TriangleMesh.field_r)) {
-                  pb.field_f = false;
+                  PictureStrip.field_f = false;
                   ib.field_b = false;
-                  if (kf.field_o == null) {
-                    kf.field_o = new byte[fj.field_b];
+                  if (TimerBarDemo.field_o == null) {
+                    TimerBarDemo.field_o = new byte[fj.field_b];
                     lc.field_t = new boolean[fj.field_b];
                   }
                   var17_int = 0;
@@ -525,9 +525,9 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                     CachedTextLayout.a(var7, 0, (byte) 91, param0, -1, var9, param1, -1);
                     if (wo.field_h >= 2 &&
                       EmailValidator.field_m[12]) {
-                      pb.field_f = true;
+                      PictureStrip.field_f = true;
                     }
-                    if (pb.field_f) {
+                    if (PictureStrip.field_f) {
                       break;
                     }
                     var16Lifetime1 = 1;
@@ -564,11 +564,11 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                 }
                 if (0 <= var9 &&
                   var17.field_R) {
-                  if (null != AchievementIcon.field_q) {
-                    if (AchievementIcon.field_q[var7] == null) {
+                  if (null != PicturePreview.field_q) {
+                    if (PicturePreview.field_q[var7] == null) {
                       stackIn_443_0 = null;
                     } else {
-                      stackIn_443_0 = AchievementIcon.field_q[var7][var9];
+                      stackIn_443_0 = PicturePreview.field_q[var7][var9];
                     }
                   } else {
                     stackIn_443_0 = null;
@@ -629,7 +629,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                     }
                   }
                   if (var4_int != 0 &&
-                    !pb.field_f) {
+                    !PictureStrip.field_f) {
                     var22 = null;
                     var23 = 0;
                     if (ib.field_b) {
@@ -701,7 +701,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
                 }
                 else {
                   stackIn_547_0 = var17;
-                  if (pb.field_f) {
+                  if (PictureStrip.field_f) {
                     stackIn_544_0Lifetime1 = stackIn_547_0;
                     stackIn_544_1Lifetime1 = ~param1.field_Eb[var7];
                     stackIn_544_2Lifetime1 = (byte)var9;
@@ -861,7 +861,7 @@ final class be extends UiContainer implements TextInputListener, ButtonListener 
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (ma.e((byte) 37) ||
+          if (ScoreMarkerBar.e((byte) 37) ||
             !(this.field_J.field_q.length() <= 0) &&
             !(0 >= this.field_O.field_q.length())) {
             oi.a(this.field_J.field_q, this.field_O.field_q, (byte) -33);

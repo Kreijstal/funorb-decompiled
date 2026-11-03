@@ -138,7 +138,7 @@ final class PasswordValidator extends TextFieldValidator {
         if (param0) {
           return (SceneWidget) null;
         }
-        return ma.field_z.field_Fb;
+        return ScoreMarkerBar.field_z.field_Fb;
     }
 
     private final boolean containsEmailPart(int param0, String param1) {

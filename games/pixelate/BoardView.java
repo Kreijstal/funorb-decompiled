@@ -56,7 +56,7 @@ final class BoardView {
         }
     }
 
-    final void b(byte param0) {
+    final void tick(byte param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -127,7 +127,7 @@ final class BoardView {
         }
     }
 
-    final void d(int param0) {
+    final void spawnPlacementParticles(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4;
@@ -178,7 +178,7 @@ final class BoardView {
         }
         this.field_c.makeRasterTarget();
         SoftwareRasterizer.clear();
-        this.a(-20, 0, 0);
+        this.drawCells(-20, 0, 0);
         ClientException.field_f.a(19692);
         for (var2Lifetime1 = 1; -1 + this.field_h > var2Lifetime1; var2Lifetime1++) {
           var6 = 1;
@@ -196,7 +196,7 @@ final class BoardView {
         this.field_v = 1;
     }
 
-    final boolean a(int param0) {
+    final boolean isIdle(int param0) {
         if (param0 != 6) {
           field_y = 31;
         }
@@ -258,7 +258,7 @@ final class BoardView {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void drawCells(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int stackIn_20_0 = 0;
@@ -330,7 +330,7 @@ final class BoardView {
           }
         }
         if (param0 != -20) {
-          this.a(true);
+          this.draw(true);
         }
     }
 
@@ -351,7 +351,7 @@ final class BoardView {
         field_b = null;
     }
 
-    final void a(boolean param0) {
+    final void draw(boolean param0) {
         int var7 = 0;
         int stackIn_35_0 = 0;
         int stackIn_41_0 = 0;
@@ -407,7 +407,7 @@ final class BoardView {
           this.field_c.b(var2, var3);
           SoftwareRasterizer.restoreClip(DialWidgetPainter.field_d);
         } else {
-          this.a(-20, var3, var2);
+          this.drawCells(-20, var3, var2);
         }
         for (var6Lifetime2 = 0; var6Lifetime2 < this.field_j; var6Lifetime2++) {
           for (var7 = 0; var7 < this.field_h; var7++) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends bg {
+final class TimerBarDemo extends StatusBar {
     private int field_r;
     static int field_q;
     private int field_t;
@@ -143,7 +143,7 @@ final class kf extends bg {
         return;
     }
 
-    public kf() {
+    public TimerBarDemo() {
         this.field_s = 0;
         this.field_m = 500;
         this.field_t = 2 * this.field_m / 3;

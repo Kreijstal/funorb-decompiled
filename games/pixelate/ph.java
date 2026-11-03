@@ -114,7 +114,7 @@ final class ph extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           dk.field_e = bi.a("basic", "display_name_changed", param0, (byte) -25);
-          ma.field_z = new ScrollPaneWithFooter(0L, rm.field_a, SceneWidgetNode.field_u, OptionsScreen.field_q);
+          ScoreMarkerBar.field_z = new ScrollPaneWithFooter(0L, rm.field_a, SceneWidgetNode.field_u, OptionsScreen.field_q);
           MouseWheelHandler.field_e = new ScrollPaneWithFooter(0L, rm.field_a, qh.field_e, NanoTickClock.field_n);
           wa.field_f = new SceneWidget(0L, (SceneWidget) null);
           SceneWidget.field_E = new SceneWidget(0L, TextFieldValidator.field_h);
@@ -125,11 +125,11 @@ final class ph extends IntrusiveNode {
           wa.field_f.addChild(SceneWidget.field_E, (byte) 26);
           wa.field_f.addChild(EmailConfirmationValidator.field_u, (byte) 26);
           wa.field_f.addChild(Vector3.field_e, (byte) 26);
-          wa.field_f.addChild(ma.field_z, (byte) 26);
+          wa.field_f.addChild(ScoreMarkerBar.field_z, (byte) 26);
           wa.field_f.addChild(sk.field_e, (byte) 26);
-          ma.field_z.field_Gb.field_Ib.applyStyle(param1 ^ 27853, TextFieldValidator.field_h);
-          ma.field_z.field_Gb.field_Ib.verticalAlignment = 1;
-          var5 = ma.field_z.field_Gb.field_Ib;
+          ScoreMarkerBar.field_z.field_Gb.field_Ib.applyStyle(param1 ^ 27853, TextFieldValidator.field_h);
+          ScoreMarkerBar.field_z.field_Gb.field_Ib.verticalAlignment = 1;
+          var5 = ScoreMarkerBar.field_z.field_Gb.field_Ib;
           var6 = var5;
           var6.horizontalAlignment = 1;
           MouseWheelHandler.field_e.field_Gb.field_Ib.applyStyle(param1 ^ 27853, TextFieldValidator.field_h);

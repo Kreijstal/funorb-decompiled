@@ -20,7 +20,7 @@ final class mi extends MenuScreen {
         if (param0 != 11) {
           mi.b(false);
         }
-        String var8 = var7 + " " + ub.replaceCharacter(AlphaContainer.a(AchievementIcon.a(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{mj.field_i}), param0 - 11, "<br><br>", '#');
+        String var8 = var7 + " " + ub.replaceCharacter(AlphaContainer.a(PicturePreview.a(param0 - 99, false, var3 != 0, var2 != 0), param0 ^ 50, new String[]{mj.field_i}), param0 - 11, "<br><br>", '#');
         BinaryBitmapFont var5 = qj.field_e;
         int var6 = 1 + var5.maxDescent + var5.maxAscent;
         var5.drawParagraph(var8, 50, 150, 540, 10 * var6, 16777215, 0, 1, 0, var6);

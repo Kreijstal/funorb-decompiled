@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ma extends bg {
+final class ScoreMarkerBar extends StatusBar {
     static ScrollPaneWithFooter field_z;
     private int field_x;
     private int field_v;
@@ -58,7 +58,7 @@ final class ma extends bg {
         int var13Lifetime1;
         var19 = Pixelate.field_H ? 1 : 0;
         try {
-          bg.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          StatusBar.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = ck.field_b.length;
           var21 = new int[var1_int];
           var20 = var21;
@@ -72,9 +72,9 @@ final class ma extends bg {
             var5 = var4_ref_rl.field_c + var4_ref_rl.field_b >> 1;
             var6 = var4_ref_rl.field_F + var4_ref_rl.field_t >> 1;
             var7 = var4_ref_rl.field_g + var4_ref_rl.field_x >> 1;
-            var8 = bg.field_a[9] >> 2;
-            var9 = bg.field_a[10] >> 2;
-            var10_int = bg.field_a[11] >> 2;
+            var8 = StatusBar.field_a[9] >> 2;
+            var9 = StatusBar.field_a[10] >> 2;
+            var10_int = StatusBar.field_a[11] >> 2;
             var11 = var8 * ReportAbuseDialog.field_Hb[3] + (var9 * ReportAbuseDialog.field_Hb[4] + var10_int * ReportAbuseDialog.field_Hb[5]) >> 14;
             var12 = var9 * ReportAbuseDialog.field_Hb[7] + var8 * ReportAbuseDialog.field_Hb[6] + ReportAbuseDialog.field_Hb[8] * var10_int >> 14;
             var13 = var10_int * ReportAbuseDialog.field_Hb[11] + var9 * ReportAbuseDialog.field_Hb[10] + var8 * ReportAbuseDialog.field_Hb[9] >> 14;
@@ -83,17 +83,17 @@ final class ma extends bg {
           if (param0 != 106) {
             field_z = (ScrollPaneWithFooter) null;
           }
-          var3Lifetime1 = bg.field_a[9] >> 8;
-          var4 = bg.field_a[10] >> 8;
-          var5Lifetime1 = bg.field_a[11] >> 8;
+          var3Lifetime1 = StatusBar.field_a[9] >> 8;
+          var4 = StatusBar.field_a[10] >> 8;
+          var5Lifetime1 = StatusBar.field_a[11] >> 8;
           var6Lifetime1 = GameModeCard.field_f << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = mi.d(-4096, var6Lifetime1) >> 8;
           var9Lifetime1 = th.a(var6Lifetime1, param0 + 8085) >> 8;
           if (ProxyAuthenticationException.field_d != -1 &&
-            -1 != bg.field_k) {
+            -1 != StatusBar.field_k) {
             var9Lifetime1 = -128;
-            var8Lifetime1 = -bg.field_k + 240;
+            var8Lifetime1 = -StatusBar.field_k + 240;
             var7Lifetime1 = -320 + ProxyAuthenticationException.field_d;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1));
@@ -120,7 +120,7 @@ final class ma extends bg {
             for (var18 = 0; var18 < 3; var18++) {
               ReportAbuseDialog.field_Hb[var18] = ReportAbuseDialog.field_Hb[var18] + BlastFromThePastBackground.field_p[var15][var18];
             }
-            TextButton.a(var17Lifetime1, bg.field_a, false, ReportAbuseDialog.field_Hb, (byte) 98, true, false);
+            TextButton.a(var17Lifetime1, StatusBar.field_a, false, ReportAbuseDialog.field_Hb, (byte) 98, true, false);
             GameModeSelectScreen.a(var14, var17Lifetime1, var12Lifetime1, var9Lifetime1, var8Lifetime1, var13Lifetime1, 20126, var7Lifetime1);
           }
           return;
@@ -140,7 +140,7 @@ final class ma extends bg {
         field_o = null;
     }
 
-    ma(int[] param0, boolean param1, int param2) {
+    ScoreMarkerBar(int[] param0, boolean param1, int param2) {
         this(param0, param1, 615, 435 - param2);
     }
 
@@ -152,7 +152,7 @@ final class ma extends bg {
         var6 = Pixelate.field_H ? 1 : 0;
         var1 = hm.a(64);
         if (!param0) {
-          ma.a(true);
+          ScoreMarkerBar.a(true);
         }
         var3 = -io.field_d + var1;
         if (30000L < var3) {
@@ -284,7 +284,7 @@ final class ma extends bg {
         var7 = Pixelate.field_H ? 1 : 0;
         super.a((byte) 21);
         if (param0 != 12804) {
-          ma.c((byte) 73);
+          ScoreMarkerBar.c((byte) 73);
         }
         var3 = this.field_t[1] - this.field_t[0];
         if (var3 > 1024) {
@@ -329,7 +329,7 @@ final class ma extends bg {
         }
     }
 
-    ma(int[] param0, boolean param1, int param2, int param3) {
+    ScoreMarkerBar(int[] param0, boolean param1, int param2, int param3) {
         this.field_v = 0;
         this.field_r = 0;
         this.field_A = 0;

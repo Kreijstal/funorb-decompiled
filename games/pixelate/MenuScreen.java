@@ -207,7 +207,7 @@ abstract class MenuScreen {
     }
 
     void a(int param0, int param1, boolean param2) {
-        this.field_g.a(param2, this.a(ProxyAuthenticationException.field_d, bg.field_k, -119), 17068, param1);
+        this.field_g.a(param2, this.a(ProxyAuthenticationException.field_d, StatusBar.field_k, -119), 17068, param1);
         nk.field_i = pa.field_b;
         if (param0 != 2) {
           field_h = -13;
@@ -555,7 +555,7 @@ abstract class MenuScreen {
             }
             this.a(this.field_g.field_j, (byte) -114, false);
           }
-          this.field_g.a(this.a(BufferedRandomAccessFile.field_a, ji.field_c, -125), this.a(ProxyAuthenticationException.field_d, bg.field_k, -115), -1);
+          this.field_g.a(this.a(BufferedRandomAccessFile.field_a, ji.field_c, -125), this.a(ProxyAuthenticationException.field_d, StatusBar.field_k, -115), -1);
           if (-1 != this.field_g.field_j) {
             this.a(this.field_g.field_j, (byte) -128, true);
           }
@@ -870,7 +870,7 @@ abstract class MenuScreen {
                                 }
                               } else {
                                 if (this.field_g.isActivated(96)) {
-                                  ro.field_e.a(false, 250, param2);
+                                  ro.field_e.showResults(false, 250, param2);
                                 }
                               }
                             }

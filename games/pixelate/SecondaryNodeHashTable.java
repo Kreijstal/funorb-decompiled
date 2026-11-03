@@ -85,10 +85,10 @@ final class SecondaryNodeHashTable {
           return;
         }
         if (0L != param0 % 10L) {
-          ma.a((byte) 37, param0);
+          ScoreMarkerBar.a((byte) 37, param0);
         } else {
-          ma.a((byte) 37, -1L + param0);
-          ma.a((byte) 37, 1L);
+          ScoreMarkerBar.a((byte) 37, -1L + param0);
+          ScoreMarkerBar.a((byte) 37, 1L);
           return;
         }
     }

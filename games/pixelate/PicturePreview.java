@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AchievementIcon extends IntrusiveNode {
+final class PicturePreview extends IntrusiveNode {
     static String[][] field_q;
     static String field_t;
     private int field_n;
@@ -76,7 +76,7 @@ final class AchievementIcon extends IntrusiveNode {
         field_r = null;
         if (param0 > -72) {
           String var2 = (String) null;
-          AchievementIcon.a(-17, (String) null, (String) null);
+          PicturePreview.a(-17, (String) null, (String) null);
         }
         field_q = (String[][]) null;
     }
@@ -130,7 +130,7 @@ final class AchievementIcon extends IntrusiveNode {
 
     final static String a(int param0, boolean param1, boolean param2, boolean param3) {
         if (param0 >= -50) {
-          AchievementIcon.a(true);
+          PicturePreview.a(true);
         }
         int var4 = 0;
         if (param3) {
@@ -244,7 +244,7 @@ final class AchievementIcon extends IntrusiveNode {
         int var4 = 21 / ((param2 + 66) / 35);
     }
 
-    AchievementIcon(IndexedSprite param0) {
+    PicturePreview(IndexedSprite param0) {
         try {
           this.field_p = ThreeSliceButtonPainter.a(param0, 21922);
           this.field_n = param0.field_f;

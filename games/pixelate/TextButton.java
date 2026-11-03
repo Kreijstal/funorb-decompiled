@@ -158,11 +158,11 @@ class TextButton extends UiComponent {
           super.updatePointer(param0, param1, param2, param3);
           if (this.field_k != 0 &&
             this.field_k != ef.field_b) {
-            if (this.a(78, param2, param1, bg.field_k, ProxyAuthenticationException.field_d) &&
+            if (this.a(78, param2, param1, StatusBar.field_k, ProxyAuthenticationException.field_d) &&
               ef.field_b == 0) {
-              this.a(true, -param1 + bg.field_k, this.field_k, -param2 + ProxyAuthenticationException.field_d);
+              this.a(true, -param1 + StatusBar.field_k, this.field_k, -param2 + ProxyAuthenticationException.field_d);
             }
-            this.handlePointerRelease(bg.field_k, param2, param3, 0, param1, ProxyAuthenticationException.field_d);
+            this.handlePointerRelease(StatusBar.field_k, param2, param3, 0, param1, ProxyAuthenticationException.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

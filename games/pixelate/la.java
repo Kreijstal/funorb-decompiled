@@ -42,7 +42,7 @@ final class la {
           }
           var2 = var13.readUnsignedByte(255);
           if (var2 == 0) {
-            var11 = AchievementIcon.a(false);
+            var11 = PicturePreview.a(false);
             var17 = var11;
             var14 = var17;
             var3 = var14;
@@ -74,7 +74,7 @@ final class la {
                 na.a(true);
                 return;
               }
-              var16_ref.field_l = AchievementIcon.a(false);
+              var16_ref.field_l = PicturePreview.a(false);
               var16_ref.field_p = true;
               var16_ref.field_s = var16_ref.field_l[0];
               var16_ref.unlink(2779);
@@ -347,7 +347,7 @@ final class la {
               var12.field_Sb = new SceneWidget(0L, TextFieldValidator.field_h);
               var12.addChild(var12.field_Sb, (byte) 26);
               var12.h(-257);
-              var12.field_Zb = new SceneWidget(0L, ul.field_p);
+              var12.field_Zb = new SceneWidget(0L, TimerBar.field_p);
               var12.addChild(var12.field_Zb, (byte) 26);
               var12.field_Mb = new SceneWidget(0L, ge.field_h);
               var12.addChild(var12.field_Mb, (byte) 26);
@@ -512,7 +512,7 @@ final class la {
                   pe.a(7, param1, var12.field_Nb);
                 }
               } else {
-                bg.a(var12.field_Nb, param1, -26231);
+                StatusBar.a(var12.field_Nb, param1, -26231);
               }
             }
             var11 = var12;

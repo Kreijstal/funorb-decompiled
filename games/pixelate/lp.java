@@ -38,7 +38,7 @@ final class lp {
             }
             var1_int = 1;
           }
-          VerticalScrollbar.field_Gb.a(NameAvailabilityValidator.a(false, BufferedRandomAccessFile.field_a, ji.field_c), NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, bg.field_k), -1);
+          VerticalScrollbar.field_Gb.a(NameAvailabilityValidator.a(false, BufferedRandomAccessFile.field_a, ji.field_c), NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, StatusBar.field_k), -1);
           if (param0 != 2) {
             field_d = 101;
           }

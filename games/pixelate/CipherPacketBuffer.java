@@ -110,31 +110,31 @@ final class CipherPacketBuffer extends PacketBuffer {
         String var18Lifetime1;
         var19 = Pixelate.field_H ? 1 : 0;
         try {
-          stackIn_4_0 = ma.field_z.field_Gb;
+          stackIn_4_0 = ScoreMarkerBar.field_z.field_Gb;
           stackIn_4_1 = param1;
-          stackIn_5_2 = (bj.field_d == ma.field_z.field_Gb);
+          stackIn_5_2 = (bj.field_d == ScoreMarkerBar.field_z.field_Gb);
           boolean decompiledFrameRemainder0 = true;
           var3_int = ((ScrollContainer) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2, 2, param0 * (3 * fq.field_q + 6), 0, 2 + fq.field_q) ? 1 : 0;
-          var4 = ma.field_z.field_Fb.children;
+          var4 = ScoreMarkerBar.field_z.field_Fb.children;
           var5 = null;
           if (ValidatedTextWidget.field_db != 2) {
             wa.field_f.field_rb = false;
             SceneWidget.field_E.field_cb = GrowableIntList.field_b;
             if (ValidatedTextWidget.field_db != 1) {
-              ma.field_z.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
+              ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = FullscreenFocusCanvas.field_c;
               if (var19 != 0) {
-                ma.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
+                ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
               }
             } else {
-              ma.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
+              ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = ih.field_d;
             }
-            GrowableIntList.a(ma.field_z.field_Fb, false);
+            GrowableIntList.a(ScoreMarkerBar.field_z.field_Fb, false);
             decompiledFrameRemainder0 = (var19 != 0);
           }
           if (decompiledFrameRemainder0) {
             wa.field_f.field_rb = true;
             SceneWidget.field_E.field_cb = AlphaContainer.a(ke.field_e, 78, new String[]{LabeledField.field_L});
-            ma.field_z.field_Gb.field_Ib.field_cb = null;
+            ScoreMarkerBar.field_z.field_Gb.field_Ib.field_cb = null;
             var6 = null;
             var7 = (SocialListEntry) (var4.c(1504642273));
             while (true) {
@@ -155,7 +155,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                     var7.h(-257);
                     var8 = 1;
                   }
-                  var7.field_K = ma.field_z.field_Fb.field_K;
+                  var7.field_K = ScoreMarkerBar.field_z.field_Fb.field_K;
                   var9 = 0;
                   if (null != var7.field_Nb) {
                     if (var7.field_Nb == LabeledField.field_L) {
@@ -214,7 +214,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                     var7.pendingHeightDelta = -var7.height + var9;
                   }
                   if (var8 != 0) {
-                    ma.field_z.field_Fb.positionAfter(var7, 2, -1, (SceneWidget) (var6));
+                    ScoreMarkerBar.field_z.field_Fb.positionAfter(var7, 2, -1, (SceneWidget) (var6));
                   }
                   var6 = var7;
                   if (var7.field_Ob != null &&
@@ -227,10 +227,10 @@ final class CipherPacketBuffer extends PacketBuffer {
                     }
                   } else {
                     var16 = var7.field_Fb;
-                    em.a((String) null, 0L, var16, -1, var7, -163, ma.field_z.field_Gb, (int[]) null, -1);
+                    em.a((String) null, 0L, var16, -1, var7, -163, ScoreMarkerBar.field_z.field_Gb, (int[]) null, -1);
                     var5 = var7;
                     if (var7.field_Nb != null &&
-                      !ul.a(75, ProxySocketConnector.field_n.field_h) &&
+                      !TimerBar.a(75, ProxySocketConnector.field_n.field_h) &&
                       !ln.field_q) {
                       if (!IsaacRandom.field_g) {
                         var17 = ProxySocketConnector.field_n;
@@ -246,16 +246,16 @@ final class CipherPacketBuffer extends PacketBuffer {
                   continue;
                 }
               } else {
-                stackIn_95_0 = ma.field_z.field_Ib;
+                stackIn_95_0 = ScoreMarkerBar.field_z.field_Ib;
               }
               if (((SceneWidget) (stackIn_95_0)).field_P != 0) {
-                he.field_f = new AccountNamePrompt(ma.field_z.field_Ib.field_tb, ma.field_z.field_Ib.screenY, ma.field_z.field_Ib.field_K, ma.field_z.field_Ib.height, BackgroundScene.field_j, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
+                he.field_f = new AccountNamePrompt(ScoreMarkerBar.field_z.field_Ib.field_tb, ScoreMarkerBar.field_z.field_Ib.screenY, ScoreMarkerBar.field_z.field_Ib.field_K, ScoreMarkerBar.field_z.field_Ib.height, BackgroundScene.field_j, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
                 QuickChatCategoryCache.field_e = 0;
               }
-              if (ma.field_z.field_Hb.field_P == 0) {
+              if (ScoreMarkerBar.field_z.field_Hb.field_P == 0) {
                 break;
               }
-              he.field_f = new AccountNamePrompt(ma.field_z.field_Hb.field_tb, ma.field_z.field_Hb.screenY, ma.field_z.field_Hb.field_K, ma.field_z.field_Hb.height, hp.field_Fb, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
+              he.field_f = new AccountNamePrompt(ScoreMarkerBar.field_z.field_Hb.field_tb, ScoreMarkerBar.field_z.field_Hb.screenY, ScoreMarkerBar.field_z.field_Hb.field_K, ScoreMarkerBar.field_z.field_Hb.height, hp.field_Fb, SoundCache.field_c, TextFieldValidator.field_h, TextFieldValidator.field_h);
               QuickChatCategoryCache.field_e = 1;
               break;
             }

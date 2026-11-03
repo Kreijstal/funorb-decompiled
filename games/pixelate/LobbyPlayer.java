@@ -111,14 +111,14 @@ final class LobbyPlayer extends SceneWidget {
           }
         }
         if (!param0) {
-          pb.field_j = BoundedRandomAccessFile.a(80, -57, var8);
+          PictureStrip.field_j = BoundedRandomAccessFile.a(80, -57, var8);
           HuffmanCodec.field_g = null;
           return new aa(param0);
         }
         var5 = var8.a((byte) 127);
         try {
           var9 = jd.field_k.a(-21209, var5);
-          pb.field_j = var9.getPreview((byte) -54);
+          PictureStrip.field_j = var9.getPreview((byte) -54);
           if (OptionsScreen.field_t.equals(ModalStack.field_J)) {
             stackIn_24_0 = null;
           } else {
@@ -130,7 +130,7 @@ final class LobbyPlayer extends SceneWidget {
           var6 = (Exception) (Object) decompiledCaughtException;
           CheckboxPainter.reportClientError(1, "CC1", (Throwable) ((Object) var6));
           HuffmanCodec.field_g = null;
-          pb.field_j = null;
+          PictureStrip.field_j = null;
           return new aa(param0);
         }
         return new aa(param0);

@@ -312,7 +312,7 @@ final class pk {
               if (0 == var6) {
                 if (null == io.field_c &&
                   ge.field_f) {
-                  var4 = "[" + ul.field_m + "] ";
+                  var4 = "[" + TimerBar.field_m + "] ";
                 }
                 if (null != io.field_c) {
                   if (!TickClock.field_b ||

@@ -93,7 +93,7 @@ final class id {
         ReportAbuseDialog.field_Sb = 0;
         jn.field_q = ui.field_k;
         NameSuggestionsPanel.field_I = new MenuInputState(2);
-        NameSuggestionsPanel.field_I.a(param0, el.a(bg.field_k, (byte) -106, ProxyAuthenticationException.field_d), 17068, -1);
+        NameSuggestionsPanel.field_I.a(param0, el.a(StatusBar.field_k, (byte) -106, ProxyAuthenticationException.field_d), 17068, -1);
     }
 
     id(boolean param0) {

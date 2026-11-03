@@ -37,7 +37,7 @@ final class LoginDialog extends ContentTransitionDialog {
         RuntimeException var3 = null;
         try {
           if (param0 == 1) {
-            stackIn_3_0 = AlphaContainer.a(bg.field_f, param2 + 17311, new String[]{param1});
+            stackIn_3_0 = AlphaContainer.a(StatusBar.field_f, param2 + 17311, new String[]{param1});
             return stackIn_3_0;
           }
           if (param0 == 2) {

@@ -23,7 +23,7 @@ final class MatchHud {
     static boolean field_i;
 
     final static void a(boolean param0) {
-        ma.field_o = new IntrusiveDeque();
+        ScoreMarkerBar.field_o = new IntrusiveDeque();
         if (!param0) {
           ResourceArchive var2 = (ResourceArchive) null;
           MatchHud.loadCommonUiResources(-1, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);

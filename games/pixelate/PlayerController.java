@@ -26,7 +26,7 @@ final class PlayerController {
     int field_p;
     static char[] field_b;
 
-    final void a(boolean param0) {
+    final void drainInputQueue(boolean param0) {
         int dupTemp$0 = 0;
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
@@ -43,7 +43,7 @@ final class PlayerController {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void enqueueInput(int param0, int param1, int param2) {
         this.field_g.a(param2, 0, param1);
         if (param0 != 6364) {
           PlayerController.a((byte) -64);
@@ -67,7 +67,7 @@ final class PlayerController {
     }
 
     final void b(int param0) {
-        this.field_f.a(false);
+        this.field_f.draw(false);
         if (param0 != -1) {
           PlayerController.f(88);
         }
@@ -100,7 +100,7 @@ final class PlayerController {
           ki.a(this.field_i, -1, param1, this.field_s);
         }
         if (param0 != -20791) {
-          this.a(-23, -70, 98);
+          this.enqueueInput(-23, -70, 98);
         }
     }
 
@@ -116,7 +116,7 @@ final class PlayerController {
         this.field_k.boards[this.field_j].fastDrop = false;
     }
 
-    final void e(int param0) {
+    final void beginPicture(int param0) {
         if (param0 != 2406) {
           this.field_j = -80;
         }
@@ -226,7 +226,7 @@ final class PlayerController {
             nf.field_c = stackIn_36_0 + stackIn_37_1;
           }
           ce.field_c = -(nf.field_c >> 1) + qh.field_b;
-          VerticalScrollbar.field_Gb.a(param0, NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, bg.field_k), param3 ^ 17068, 0);
+          VerticalScrollbar.field_Gb.a(param0, NameAvailabilityValidator.a(false, ProxyAuthenticationException.field_d, StatusBar.field_k), param3 ^ 17068, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -257,7 +257,7 @@ final class PlayerController {
         int var3;
         int var2Lifetime1;
         var3 = Pixelate.field_H ? 1 : 0;
-        this.field_f.b((byte) -113);
+        this.field_f.tick((byte) -113);
         if (param0 > ~this.field_p) {
           fieldTemp$0 = this.field_p + 1;
           this.field_p = this.field_p + 1;
@@ -335,7 +335,7 @@ final class PlayerController {
         if (param1 == 5) {
           stackIn_32_0 = (!this.field_k.applyAction(param1, this.field_j, param0 + 92, this.field_e)) ? 0 : 1;
           var3 = stackIn_32_0;
-          this.field_f.d(param0 - 16);
+          this.field_f.spawnPlacementParticles(param0 - 16);
           this.field_q.a(param0 - 122);
           this.field_u = 0;
           this.field_l = this.field_k.boards[this.field_j].isFullyPainted(param0 + 26745);
@@ -388,7 +388,7 @@ final class PlayerController {
         if (param0 != -1) {
           return true;
         }
-        return this.field_f.a(6);
+        return this.field_f.isIdle(6);
     }
 
     PlayerController(Match param0, int param1, boolean param2, Puzzle param3, int param4, int param5) {

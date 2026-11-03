@@ -93,7 +93,7 @@ final class CachedTextLayout extends TextLayout {
                               if (var13_int >= param7) {
                                 break scanLoop3;
                               }
-                              if ((kf.field_o[var13_int] & 255) != var14) {
+                              if ((TimerBarDemo.field_o[var13_int] & 255) != var14) {
                                 break scanLoop3;
                               }
                             }
@@ -139,7 +139,7 @@ final class CachedTextLayout extends TextLayout {
                     stackIn_36_0 = var8_int;
                   }
                   if (stackIn_36_0 != 0) {
-                    pb.field_f = true;
+                    PictureStrip.field_f = true;
                   }
                   if (var15 == 0) {
                     decompiledFrameCompleted1 = false;
@@ -219,7 +219,7 @@ final class CachedTextLayout extends TextLayout {
                       }
                       if (-1 != param7 ||
                         var15 != 0) {
-                        kf.field_o[param7] = (byte)var11Lifetime1;
+                        TimerBarDemo.field_o[param7] = (byte)var11Lifetime1;
                       }
                       if (param7 != -1 ||
                         LinkButtonPainter.field_a.length != 1) {
@@ -255,7 +255,7 @@ final class CachedTextLayout extends TextLayout {
                         var10Lifetime1 = 1;
                         CachedTextLayout.a(param0, param1, (byte) 124, param3, param4, param5, param6, 1 + param7);
                       }
-                      if (pb.field_f) {
+                      if (PictureStrip.field_f) {
                         return;
                       }
                       var11Lifetime1++;
@@ -274,12 +274,12 @@ final class CachedTextLayout extends TextLayout {
                         break regionExit1;
                       }
                       if (stackIn_110_0 != stackIn_110_1) {
-                        kf.field_o[param7] = (byte)var11Lifetime1;
+                        TimerBarDemo.field_o[param7] = (byte)var11Lifetime1;
                       } else {
                         param4 = var11Lifetime1;
                       }
                       CachedTextLayout.a(param0, param1, (byte) 83, param3, param4, param5, param6, param7 + 1);
-                      if (pb.field_f) {
+                      if (PictureStrip.field_f) {
                         return;
                       }
                       var11Lifetime1++;
@@ -613,7 +613,7 @@ final class CachedTextLayout extends TextLayout {
                 wm.field_d.field_cb = WhirlpoolHasher.field_k.toUpperCase();
                 wm.field_d.field_rb = true;
               }
-              wm.field_d.field_zb = AchievementIcon.field_k.field_zb;
+              wm.field_d.field_zb = PicturePreview.field_k.field_zb;
               if (ResizableModalPanel.field_X > 0) {
                 boolean decompiledSharedTail1 = (ResizableModalPanel.field_X != 1);
                 if (!decompiledSharedTail1) {
@@ -626,7 +626,7 @@ final class CachedTextLayout extends TextLayout {
                 wm.field_d.field_cb = wm.field_d.field_cb + "<br>" + var10_ref_String;
                 if (0 == (16 & AchievementsScreen.field_o) &&
                   !EmergentBehaviourBackground.field_o) {
-                  wm.field_d.field_zb = AchievementIcon.field_k.field_ab;
+                  wm.field_d.field_zb = PicturePreview.field_k.field_ab;
                 }
               }
               ep.field_a.a(-40 + Bzip2State.field_A.height, 40, var9, 256, -var9 + Bzip2State.field_A.field_K);
@@ -637,8 +637,8 @@ final class CachedTextLayout extends TextLayout {
               stackIn_21_0.field_rb = stackIn_22_1;
               var10 = 2;
               if (Checkbox.field_Z != null) {
-                if (kf.field_o == null) {
-                  kf.field_o = new byte[fj.field_b];
+                if (TimerBarDemo.field_o == null) {
+                  TimerBarDemo.field_o = new byte[fj.field_b];
                   lc.field_t = new boolean[fj.field_b];
                 }
                 var11_int = 0;

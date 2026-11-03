@@ -21,7 +21,7 @@ final class gd {
           vd.field_c.addChild(ValidatedTextWidget.field_lb, (byte) 26);
         }
         vd.field_c.addChild(StripedProgressBar.field_O, (byte) 26);
-        cl.field_g = new wo(ul.field_m, vd.field_c);
+        cl.field_g = new wo(TimerBar.field_m, vd.field_c);
         GreenGrowTheRushesBackground.field_n = new SceneWidget(0L, (SceneWidget) null);
         if (param0 != -7) {
           gd.a(-71);

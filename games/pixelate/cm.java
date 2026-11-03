@@ -152,7 +152,7 @@ final class cm extends IntrusiveNode {
           oi.field_c = oi.field_c + 1;
           ef.field_b = jm.field_o;
           ProxyAuthenticationException.field_d = QuickChatPhraseCache.field_b;
-          bg.field_k = ra.field_d;
+          StatusBar.field_k = ra.field_d;
           SocialListEntry.field_Jb = QuickChatPhraseCache.field_j;
           QuickChatPhraseCache.field_j = false;
           IntrusiveDequeCursor.field_c = tl.field_a;

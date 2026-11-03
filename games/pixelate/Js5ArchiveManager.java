@@ -36,12 +36,12 @@ final class Js5ArchiveManager {
     }
 
     final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2) {
-        pb.field_n = param0;
+        PictureStrip.field_n = param0;
         if (!param1) {
           return;
         }
         try {
-          kf.field_p = param2;
+          TimerBarDemo.field_p = param2;
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "am.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -208,7 +208,7 @@ final class HowToPlayScreen extends MenuScreen {
             var9.cells[2] = (byte) 1;
             var9.cells[7] = (byte) 1;
             SoftwareRasterizer.setClip(0, 0, 640, 389);
-            var10.a(false);
+            var10.draw(false);
             SoftwareRasterizer.resetClip();
           } else {
             if (this.field_r != 2) {
@@ -253,8 +253,8 @@ final class HowToPlayScreen extends MenuScreen {
                         var9_int = 2;
                         if (640 - var8_int > ProxyAuthenticationException.field_d &&
                           -var8_int + 640 - 170 < ProxyAuthenticationException.field_d &&
-                          314 > bg.field_k &&
-                          bg.field_k > 290) {
+                          314 > StatusBar.field_k &&
+                          StatusBar.field_k > 290) {
                           var9_int++;
                         }
                         var4.drawRightAlignedText(ln.field_m[this.field_r][var9_int], -var8_int + 640, 314, 0, -1);
@@ -262,8 +262,8 @@ final class HowToPlayScreen extends MenuScreen {
                     } else {
                       var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 540, 150, 16777215, 0, 0, 0, var6);
                       SoftwareRasterizer.setClip(0, 0, 640, 389);
-                      PasswordValidator.field_r.a(false);
-                      an.field_b.a(false);
+                      PasswordValidator.field_r.draw(false);
+                      an.field_b.draw(false);
                       DiskCacheRequest.field_H.c((byte) 119);
                       BoundedRandomAccessFile.field_g.a(55, 0, 0);
                       DialWidgetPainter.field_a.a(60, 0, 0);
@@ -302,7 +302,7 @@ final class HowToPlayScreen extends MenuScreen {
           var7 = var7 + var5.drawParagraph(ln.field_m[this.field_r][0], 50, var7, 270, 400, 16777215, 0, 0, 0, var6) * var6;
           var7 += 10;
           var7 = var7 + var6 * var5.drawParagraph(ln.field_m[this.field_r][1], 50, var7, 270, 400, 16777215, 0, 0, 0, var6);
-          SpriteState.field_C.a(false);
+          SpriteState.field_C.draw(false);
           QuickChatMenu.field_Qb.a(50, 0, 0);
         }
         var4.drawCentered(pk.field_d[this.field_r], 320, 180, 0, -1);

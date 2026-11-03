@@ -6,7 +6,7 @@ import java.util.*;
 final class mj {
     private int[] field_a;
     static String field_i;
-    private ma field_f;
+    private ScoreMarkerBar field_f;
     static int field_b;
     static MenuInputState field_c;
     static int field_j;
@@ -161,7 +161,7 @@ final class mj {
         this.field_a = new int[2];
         this.field_a[0] = 0;
         this.field_a[1] = 0;
-        this.field_f = new ma(this.field_a, false, 500, 330);
+        this.field_f = new ScoreMarkerBar(this.field_a, false, 500, 330);
         this.field_f.a(196608, -115);
     }
 

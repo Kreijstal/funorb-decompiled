@@ -119,21 +119,21 @@ final class mc extends IntrusiveNode {
         int var9_intLifetime3;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
-          if (pb.field_n != null &&
-            pb.field_n.b(-3) &&
-            pb.field_n.ensureGroupAvailableByName("benefits", -1) &&
-            kf.field_p != null &&
-            kf.field_p.b(param0 - 15) &&
-            kf.field_p.ensureGroupAvailableByName("benefits", -1)) {
-            EmailCredentials.field_i = bi.a("benefits", "headline", pb.field_n, (byte) -79);
-            SpriteCheckboxPainter.field_a = bi.a("benefits", "blurbpane", pb.field_n, (byte) -97);
-            wo.field_c = bi.a("benefits", "button", pb.field_n, (byte) -57);
-            ro.field_b = bi.a("benefits", "signup_text", pb.field_n, (byte) -119);
-            ResizableModalPanel.field_P = bi.a("benefits", "menu_text", pb.field_n, (byte) -20);
-            AccountChoicePanel.field_O = bi.a("benefits", "button_frame", pb.field_n, (byte) -63);
-            ScrollContainer.field_Kb = bi.a("benefits", "arrow", pb.field_n, (byte) -125);
-            EmailConfirmationValidator.field_r = (BitmapFont) ((Object) AchievementIcon.a(0, kf.field_p, "large_font", pb.field_n, "benefits"));
-            QuickChatCategory.field_A = (BitmapFont) ((Object) AchievementIcon.a(0, kf.field_p, "small_font", pb.field_n, "benefits"));
+          if (PictureStrip.field_n != null &&
+            PictureStrip.field_n.b(-3) &&
+            PictureStrip.field_n.ensureGroupAvailableByName("benefits", -1) &&
+            TimerBarDemo.field_p != null &&
+            TimerBarDemo.field_p.b(param0 - 15) &&
+            TimerBarDemo.field_p.ensureGroupAvailableByName("benefits", -1)) {
+            EmailCredentials.field_i = bi.a("benefits", "headline", PictureStrip.field_n, (byte) -79);
+            SpriteCheckboxPainter.field_a = bi.a("benefits", "blurbpane", PictureStrip.field_n, (byte) -97);
+            wo.field_c = bi.a("benefits", "button", PictureStrip.field_n, (byte) -57);
+            ro.field_b = bi.a("benefits", "signup_text", PictureStrip.field_n, (byte) -119);
+            ResizableModalPanel.field_P = bi.a("benefits", "menu_text", PictureStrip.field_n, (byte) -20);
+            AccountChoicePanel.field_O = bi.a("benefits", "button_frame", PictureStrip.field_n, (byte) -63);
+            ScrollContainer.field_Kb = bi.a("benefits", "arrow", PictureStrip.field_n, (byte) -125);
+            EmailConfirmationValidator.field_r = (BitmapFont) ((Object) PicturePreview.a(0, TimerBarDemo.field_p, "large_font", PictureStrip.field_n, "benefits"));
+            QuickChatCategory.field_A = (BitmapFont) ((Object) PicturePreview.a(0, TimerBarDemo.field_p, "small_font", PictureStrip.field_n, "benefits"));
             var28 = SoftwareRasterizer.field_k;
             var2 = SoftwareRasterizer.field_j;
             var3 = SoftwareRasterizer.field_d;
@@ -148,7 +148,7 @@ final class mc extends IntrusiveNode {
             var6 = var13.field_F / 2;
             var13.makeRasterTarget();
             EmailConfirmationValidator.field_r.drawCentered(AlphaContainer.a(MusicCrossfadeStream.field_s, param0 + 24, new String[]{FallingPieceView.field_g}), var6, 40, 16777215, -1);
-            QuickChatCategory.field_A.drawCentered(AlphaContainer.a(kf.field_n, 76, new String[]{FallingPieceView.field_g}), var6, 60, 16777215, -1);
+            QuickChatCategory.field_A.drawCentered(AlphaContainer.a(TimerBarDemo.field_n, 76, new String[]{FallingPieceView.field_g}), var6, 60, 16777215, -1);
             EmailConfirmationValidator.field_r.drawCentered(AlphaContainer.a(ab.field_d, 73, new String[]{bl.field_g}), var6, 110, 16777215, -1);
             QuickChatCategory.field_A.drawCentered(AlphaContainer.a(BoardView.field_l, 44, new String[]{bl.field_g}), var6, 130, 16777215, -1);
             EmailConfirmationValidator.field_r.drawCentered(UiComponent.field_w, var6, 180, 16777215, -1);
@@ -167,7 +167,7 @@ final class mc extends IntrusiveNode {
             nh.a(SoftwareRasterizer.field_d * 2 / 3, 64, 0, 0, 126, SoftwareRasterizer.field_j);
             SoftwareRasterizer.a(var28, var2, var3);
             SoftwareRasterizer.restoreClip(ClientContextMenu.field_f);
-            pb.field_n = null;
+            PictureStrip.field_n = null;
             JaggrabDownloader.field_a = (wo.field_c.field_F - AccountChoicePanel.field_O.field_F) / 2 + 434;
             DraggableWidget.field_Q = (wo.field_c.field_E - AccountChoicePanel.field_O.field_E) / 2 + 390;
             ui.field_b = (wo.field_c.field_E - AccountChoicePanel.field_O.field_E) / 2 + 390;
@@ -342,8 +342,8 @@ final class mc extends IntrusiveNode {
             var1_int = 357 - ScrollContainer.field_Kb.field_B / 2;
             ScrollContainer.field_Kb.b(-ScrollContainer.field_Kb.field_A + 269, var1_int);
             hf.field_m.b(586, var1_int);
-            if (bg.field_k > var1_int &&
-              ScrollContainer.field_Kb.field_E + var1_int > bg.field_k) {
+            if (StatusBar.field_k > var1_int &&
+              ScrollContainer.field_Kb.field_E + var1_int > StatusBar.field_k) {
               var2Lifetime5 = (40 * GrowableIntList.b(qk.field_e << 4, 0) >> 16) + 40;
               if (var2Lifetime5 > 0) {
                 if (ProxyAuthenticationException.field_d > -ScrollContainer.field_Kb.field_F + 269 &&

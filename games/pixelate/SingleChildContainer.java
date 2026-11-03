@@ -337,10 +337,10 @@ abstract class SingleChildContainer extends UiComponent implements UiContainerMa
         } else {
           if (ro.field_e == null) {
             if (null != MatchingTextValidator.field_r) {
-              MatchingTextValidator.field_r.a(param0, 0);
+              MatchingTextValidator.field_r.render(param0, 0);
             }
           } else {
-            ro.field_e.a(param0, 0);
+            ro.field_e.render(param0, 0);
           }
         }
         if (decompiledFrameRemainder0) {

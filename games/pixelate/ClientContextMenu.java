@@ -82,7 +82,7 @@ final class ClientContextMenu {
               }
             }
             if (var5 != null) {
-              if (!ul.a(57, this.field_h) &&
+              if (!TimerBar.a(57, this.field_h) &&
                 !ln.field_q) {
                 if (!IsaacRandom.field_g) {
                   this.field_b.addAction(AlphaContainer.a(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
@@ -136,7 +136,7 @@ final class ClientContextMenu {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         if (param0 == 0) {
-          bg.a(this.field_l, param1, param2 ^ -31541);
+          StatusBar.a(this.field_l, param1, param2 ^ -31541);
           if (param2 == 7490) {
             return true;
           }

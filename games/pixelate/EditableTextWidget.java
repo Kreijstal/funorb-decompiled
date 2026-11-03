@@ -421,7 +421,7 @@ class EditableTextWidget extends TextButton {
           if (!(this.field_y instanceof WidgetTextLayout)) {
             return false;
           }
-          var8_int = ((WidgetTextLayout) ((Object) this.field_y)).a(param3, param5, 0, ProxyAuthenticationException.field_d, bg.field_k, (UiComponent) (this));
+          var8_int = ((WidgetTextLayout) ((Object) this.field_y)).a(param3, param5, 0, ProxyAuthenticationException.field_d, StatusBar.field_k, (UiComponent) (this));
           if (var8_int == -1) {
             stackIn_6_1 = 0;
           } else {
@@ -522,7 +522,7 @@ class EditableTextWidget extends TextButton {
           if (this.field_k == 1) {
             if (this.field_y instanceof WidgetTextLayout) {
               var5 = (WidgetTextLayout) ((Object) this.field_y);
-              var6 = var5.a(param1, param2, param0 ^ 40, ProxyAuthenticationException.field_d, bg.field_k, (UiComponent) (this));
+              var6 = var5.a(param1, param2, param0 ^ 40, ProxyAuthenticationException.field_d, StatusBar.field_k, (UiComponent) (this));
               if (var6 != -1) {
                 if (this.field_P &&
                   var6 < this.field_V &&

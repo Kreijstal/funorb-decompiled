@@ -87,7 +87,7 @@ final class WidgetStyleLayer {
         RuntimeException decompiledCaughtException = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          var1 = (aj) (ma.field_o.c(1504642273));
+          var1 = (aj) (ScoreMarkerBar.field_o.c(1504642273));
           if (var1 == null) {
             return false;
           }

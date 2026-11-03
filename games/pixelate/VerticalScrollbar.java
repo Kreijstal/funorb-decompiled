@@ -315,7 +315,7 @@ final class VerticalScrollbar extends SceneWidget {
             this.repeatDelay = this.repeatDelay - 1;
           }
           if (this.repeatDelay == 0 &&
-            this.field_Pb.screenY + this.field_Pb.pendingYDelta > bg.field_k) {
+            this.field_Pb.screenY + this.field_Pb.pendingYDelta > StatusBar.field_k) {
             this.repeatDelay = 3;
             return true;
           }
@@ -407,7 +407,7 @@ final class VerticalScrollbar extends SceneWidget {
         if (this.repeatDelay != 0) {
           return false;
         }
-        if (bg.field_k >= this.field_Pb.pendingHeightDelta + (this.field_Pb.screenY + this.field_Pb.pendingYDelta + this.field_Pb.height)) {
+        if (StatusBar.field_k >= this.field_Pb.pendingHeightDelta + (this.field_Pb.screenY + this.field_Pb.pendingYDelta + this.field_Pb.height)) {
           this.repeatDelay = 3;
           return true;
         }

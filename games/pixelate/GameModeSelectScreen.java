@@ -132,7 +132,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mu_chat_lobby", 0);
                 if (var2 != null) {
-                  ul.field_m = of.a(var2, 1);
+                  TimerBar.field_m = of.a(var2, 1);
                 }
                 var2 = vd.a("mu_chat_public", 0);
                 if (null != var2) {
@@ -156,7 +156,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mu_x_entered_game", 0);
                 if (null != var2) {
-                  bg.field_f = of.a(var2, param0 ^ 31872);
+                  StatusBar.field_f = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("mu_x_joined_your_game", 0);
                 if (var2 != null) {
@@ -260,7 +260,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mu_gamelist_all_games", 0);
                 if (var2 != null) {
-                  ul.field_n = of.a(var2, param0 ^ 31872);
+                  TimerBar.field_n = of.a(var2, param0 ^ 31872);
                 }
                 var2 = vd.a("mu_gamelist_status", 0);
                 if (null != var2) {
@@ -632,7 +632,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("you_can_join", param0 - 31873);
                 if (var2 != null) {
-                  bg.field_c = of.a(var2, 1);
+                  StatusBar.field_c = of.a(var2, 1);
                 }
                 var2 = vd.a("you_can_ask_to_join", 0);
                 if (null != var2) {
@@ -1518,7 +1518,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("create_displayname_tooltip", 0);
                 if (var2 != null) {
-                  bg.field_i = of.a(var2, 1);
+                  StatusBar.field_i = of.a(var2, 1);
                 }
                 var2 = vd.a("create_displayname_hint", 0);
                 if (var2 != null) {
@@ -1530,7 +1530,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("create_password_hint", 0);
                 if (null != var2) {
-                  pb.field_i = of.a(var2, 1);
+                  PictureStrip.field_i = of.a(var2, 1);
                 }
                 var2 = vd.a("create_password_confirm_tooltip", param0 - 31873);
                 if (var2 != null) {
@@ -2260,7 +2260,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("notyetachieved", param0 ^ 31873);
                 if (null != var2) {
-                  AchievementIcon.field_t = of.a(var2, 1);
+                  PicturePreview.field_t = of.a(var2, 1);
                 }
                 var2 = vd.a("achieved", param0 - 31873);
                 if (var2 != null) {
@@ -2704,7 +2704,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("fs_button_tryagain", param0 - 31873);
                 if (var2 != null) {
-                  bg.field_b = of.a(var2, param0 - 31872);
+                  StatusBar.field_b = of.a(var2, param0 - 31872);
                 }
                 var2 = vd.a("graphics_ui_fs_countdown", 0);
                 if (var2 != null) {
@@ -2724,7 +2724,7 @@ final class GameModeSelectScreen extends MenuScreen {
                 }
                 var2 = vd.a("mb_full_access_2", 0);
                 if (var2 != null) {
-                  kf.field_n = of.a(var2, 1);
+                  TimerBarDemo.field_n = of.a(var2, 1);
                 }
                 var2 = vd.a("mb_achievement_count_1", 0);
                 if (null != var2) {

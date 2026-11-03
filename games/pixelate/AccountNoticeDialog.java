@@ -246,14 +246,14 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
               stackIn_37_0.field_cb = AlphaContainer.a(stackIn_38_1, 59, new String[]{ep.field_a.field_cb});
               ValidatedTextWidget.field_kb.field_rb = true;
               nk.field_e.field_cb = dn.field_b;
-              pb.field_f = true;
+              PictureStrip.field_f = true;
               if (null != Checkbox.field_Z) {
                 ib.field_b = false;
-                if (null == kf.field_o) {
+                if (null == TimerBarDemo.field_o) {
                   lc.field_t = new boolean[fj.field_b];
-                  kf.field_o = new byte[fj.field_b];
+                  TimerBarDemo.field_o = new byte[fj.field_b];
                 }
-                pb.field_f = false;
+                PictureStrip.field_f = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
                 while (fj.field_b > var13) {
@@ -263,10 +263,10 @@ final class AccountNoticeDialog extends ResizableModalPanel implements ButtonLis
                 CachedTextLayout.a(fj.field_b, 0, (byte) 91, true, -1, -1, DraggableWidget.field_S, -1);
                 if (!(wo.field_h < 2) &&
                   EmailValidator.field_m[12]) {
-                  pb.field_f = true;
+                  PictureStrip.field_f = true;
                 }
               }
-              if (!pb.field_f) {
+              if (!PictureStrip.field_f) {
                 ep.field_a.field_rb = false;
                 if (ep.field_a.field_R) {
                   var9 = null;

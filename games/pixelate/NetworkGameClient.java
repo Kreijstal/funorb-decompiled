@@ -350,7 +350,7 @@ abstract class NetworkGameClient extends GameApplet {
           io.field_g = null;
           MatchingTextValidator.field_u = null;
           wk.field_j = null;
-          bg.a(param0 + 125, (java.applet.Applet) (this));
+          StatusBar.a(param0 + 125, (java.applet.Applet) (this));
           sf.a(0);
           hf.field_q = 10;
         }
@@ -513,7 +513,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (hf.field_q < 10) {
           } else {
             if (!RegistrationRequestDialog.q(22452)) {
-              pb.b(124);
+              PictureStrip.b(124);
             } else {
               if (el.field_b != 0) {
                 NameSuggestionsPanel.a((byte) -104, lp.field_i);

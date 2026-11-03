@@ -91,7 +91,7 @@ final class um extends IntrusiveNode {
             field_o = (String) null;
           }
           if (rk.a(param4, false, param0, param2)) {
-            stackIn_6_0 = kf.a(param1.a(param2, param4, true), -17);
+            stackIn_6_0 = TimerBarDemo.a(param1.a(param2, param4, true), -17);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

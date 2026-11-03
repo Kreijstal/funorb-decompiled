@@ -76,8 +76,8 @@ class IntrusiveNode {
           PasswordValidator.field_s = param6;
           ig.field_a = param7;
           GameApplet.field_o = param13;
-          bg.field_d = param14;
-          AchievementIcon.field_q = param10;
+          StatusBar.field_d = param14;
+          PicturePreview.field_q = param10;
           dk.field_a = param4;
           DraggableWidget.field_P = SocketConnector.loadRgbSpritesByName("gameprivacy", "lobby", (byte) 47, param1);
           fd.field_c = SocketConnector.loadRgbSpritesByName("ratedgame", "lobby", (byte) 47, param1);
@@ -106,7 +106,7 @@ class IntrusiveNode {
           ValidatedTextWidget.field_lb = new SceneWidget(0L, TextFieldValidator.field_h);
           ValidatedTextWidget.field_lb.horizontalAlignment = 1;
           ValidatedTextWidget.field_cb = new SceneWidget(0L, be.field_R, AccountChoicePanel.field_K.toUpperCase());
-          AlphaContainer.field_P = new SceneWidget(0L, io.field_f, ul.field_n.toUpperCase());
+          AlphaContainer.field_P = new SceneWidget(0L, io.field_f, TimerBar.field_n.toUpperCase());
           DiskCacheWorker.field_a = new SceneWidget(0L, ff.field_a);
           BlastFromThePastBackground.field_n = new SceneWidget(0L, QuickChatPhraseCache.field_l, OptionsScreen.field_w);
           if (param3 < 108) {
@@ -118,12 +118,12 @@ class IntrusiveNode {
           PasswordValidator.field_o = new SceneWidget(0L, AccountRequestDialog.field_mb, MatchController.field_b);
           SocketJs5Transport.field_t = new SceneWidget(0L, ni.field_s, df.field_m);
           aj.field_k = new ScrollContainer(0L, new SceneWidget(0L, (SceneWidget) null), ff.field_g, ug.field_s);
-          lg.field_c = new SceneWidget(0L, AchievementIcon.field_k, DualLinkNode.field_m.toUpperCase());
+          lg.field_c = new SceneWidget(0L, PicturePreview.field_k, DualLinkNode.field_m.toUpperCase());
           lg.field_c.field_rb = DialWidgetPainter.field_n;
           stackIn_8_0 = null;
           stackIn_8_1 = null;
           stackIn_8_2 = 0L;
-          stackIn_8_3 = AchievementIcon.field_k;
+          stackIn_8_3 = PicturePreview.field_k;
           if (DialWidgetPainter.field_n) {
             stackIn_9_0 = null;
             stackIn_9_1 = null;
@@ -220,11 +220,11 @@ class IntrusiveNode {
                   var19_ref = null;
                 }
               }
-              if (AchievementIcon.field_q == null) {
+              if (PicturePreview.field_q == null) {
                 var20 = null;
               } else {
-                if (AchievementIcon.field_q[var17_intLifetime3] != null) {
-                  var20 = AchievementIcon.field_q[var17_intLifetime3][var18];
+                if (PicturePreview.field_q[var17_intLifetime3] != null) {
+                  var20 = PicturePreview.field_q[var17_intLifetime3][var18];
                 } else {
                   var20 = null;
                 }
@@ -245,8 +245,8 @@ class IntrusiveNode {
               }
             }
           }
-          wm.field_d = new SceneWidget(0L, AchievementIcon.field_k);
-          ep.field_a = new SceneWidget(0L, AchievementIcon.field_k);
+          wm.field_d = new SceneWidget(0L, PicturePreview.field_k);
+          ep.field_a = new SceneWidget(0L, PicturePreview.field_k);
           nk.field_e = new SceneWidget(0L, ArchiveIndex.field_l);
           nk.field_e.applyStyle(-27813, TextFieldValidator.field_h);
           nk.field_e.verticalAlignment = 1;

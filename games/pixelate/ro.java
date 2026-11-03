@@ -289,8 +289,8 @@ final class ro {
             }
             if (var4 == 0 &&
               jn.field_q > ui.field_k &&
-              bg.field_k > var3 &&
-              var3 + ScrollContainer.field_Kb.field_E > bg.field_k) {
+              StatusBar.field_k > var3 &&
+              var3 + ScrollContainer.field_Kb.field_E > StatusBar.field_k) {
               if (ProxyAuthenticationException.field_d > -ScrollContainer.field_Kb.field_F + 269 &&
                 269 > ProxyAuthenticationException.field_d) {
                 jn.field_q = ui.field_k;
@@ -302,7 +302,7 @@ final class ro {
             }
           }
           if (param1) {
-            NameSuggestionsPanel.field_I.a(el.a(ji.field_c, (byte) 126, BufferedRandomAccessFile.field_a), el.a(bg.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
+            NameSuggestionsPanel.field_I.a(el.a(ji.field_c, (byte) 126, BufferedRandomAccessFile.field_a), el.a(StatusBar.field_k, (byte) -77, ProxyAuthenticationException.field_d), -1);
             if (NameSuggestionsPanel.field_I.isActivated(19)) {
               if (NameSuggestionsPanel.field_I.field_j == 0) {
                 stackIn_63_0 = 3;

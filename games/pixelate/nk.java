@@ -137,7 +137,7 @@ final class nk {
                 }
               } else {
                 if (ge.field_f) {
-                  stackIn_30_0 = ul.field_m;
+                  stackIn_30_0 = TimerBar.field_m;
                 } else {
                   stackIn_30_0 = em.field_c;
                 }

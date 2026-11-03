@@ -262,7 +262,7 @@ final class DisplayNameForm extends UiContainer implements NameSuggestionListene
         UiComponent var2 = new UiComponent(PlayerController.field_d, var1, (UiListener) null);
         this.field_P = new TextButton(ig.field_c, (UiListener) null);
         this.field_N = new TextButton(IntrusiveNode.field_f, (UiListener) null);
-        this.field_O.field_l = bg.field_i;
+        this.field_O.field_l = StatusBar.field_i;
         this.field_O.a((byte) 57, new NameAvailabilityValidator(this.field_O));
         this.field_P.field_H = false;
         this.field_P.field_y = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());

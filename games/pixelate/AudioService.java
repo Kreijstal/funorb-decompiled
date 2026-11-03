@@ -62,7 +62,7 @@ final class AudioService implements Runnable {
           var21 = null;
           var12 = Pixelate.field_H ? 1 : 0;
           try {
-            var16_ref = (aj) (ma.field_o.c(1504642273));
+            var16_ref = (aj) (ScoreMarkerBar.field_o.c(1504642273));
             if (var16_ref == null) {
               return;
             }

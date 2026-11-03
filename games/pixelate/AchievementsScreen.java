@@ -127,7 +127,7 @@ final class AchievementsScreen extends MenuScreen {
           if (this.a((byte) 66, var5Lifetime1)) {
             var3.drawCentered(ViewportController.field_d, 320, 280 + var6, 0, -1);
           } else {
-            var3.drawCentered(AchievementIcon.field_t, 320, var6 + 280, 1, -1);
+            var3.drawCentered(PicturePreview.field_t, 320, var6 + 280, 1, -1);
           }
           var9 = this.b((byte) 37, var5Lifetime1);
           var9.b(60, 120);
@@ -271,7 +271,7 @@ final class AchievementsScreen extends MenuScreen {
         if (param0 > -64) {
           field_q = 92;
         }
-        jn.field_v = this.b(4, ProxyAuthenticationException.field_d, bg.field_k);
+        jn.field_v = this.b(4, ProxyAuthenticationException.field_d, StatusBar.field_k);
         if (jn.field_v != -1 &&
           IntrusiveDequeCursor.field_c == 1) {
           mc.a(128, -126);

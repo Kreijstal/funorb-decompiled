@@ -389,7 +389,7 @@ class TextHotspotWidget extends TextButton {
           this.field_P = null;
           if (this.field_D) {
             var5_int = ProxyAuthenticationException.field_d - (param2 + this.field_z);
-            var6 = -param1 + (bg.field_k - this.field_p);
+            var6 = -param1 + (StatusBar.field_k - this.field_p);
             this.field_P = this.b(var5_int, -22562, var6);
           }
         } catch (RuntimeException runtimeException) {

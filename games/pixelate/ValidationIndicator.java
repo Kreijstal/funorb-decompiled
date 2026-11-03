@@ -76,7 +76,7 @@ final class ValidationIndicator extends TextButton {
           BackgroundScene.a(param17, false, param0, param7, param18);
           OptionsScreen.b(param8, param20, true);
           lg.a(param5, param2, -118, param3, param4, param1);
-          pb.a(param12, param13, 16, param10);
+          PictureStrip.a(param12, param13, 16, param10);
           JaggrabDownloader.a((byte) -113, param19, param11, param14);
           var21_int = -33 / ((param16 - 20) / 57);
           return;

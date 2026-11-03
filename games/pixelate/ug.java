@@ -6,7 +6,7 @@ final class ug extends IntrusiveNode {
     int field_m;
     static int[] field_n;
     static VerticalScrollbar field_s;
-    static pb field_q;
+    static PictureStrip field_q;
     static BufferedRandomAccessFile[] field_l;
     long field_o;
     static int field_k;

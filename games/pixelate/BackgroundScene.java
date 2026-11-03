@@ -63,7 +63,7 @@ class BackgroundScene {
           return;
         }
         MatchController.field_i = param3;
-        ul.field_q = param2;
+        TimerBar.field_q = param2;
     }
 
     final static bo[] a(PlatformTaskDispatcher param0, int param1) {

@@ -146,7 +146,7 @@ final class GameplayScreen extends MenuScreen {
         int var8 = 0;
         try {
           var2_int = ProxyAuthenticationException.field_d;
-          var3 = bg.field_k;
+          var3 = StatusBar.field_k;
           var4 = TextFieldValidator.field_h.font.wrappedLineCount(param0, 500);
           var5 = TextFieldValidator.field_h.font.getWrappedWidth(param0, 500) + 6;
           var6 = 2 + var4 * fq.field_q;
@@ -180,7 +180,7 @@ final class GameplayScreen extends MenuScreen {
           if (var4 == null) {
             super.c(0);
           } else {
-            var4.a(false, param0 + param0);
+            var4.render(false, param0 + param0);
             if (this.field_l == 1) {
               SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
               rh.b((byte) 121);
@@ -192,7 +192,7 @@ final class GameplayScreen extends MenuScreen {
             if (var3 == null) {
               super.c(0);
             } else {
-              var3.a(false, param0 + param0);
+              var3.render(false, param0 + param0);
               if (this.field_l == 1) {
                 SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
                 rh.b((byte) 121);
@@ -203,7 +203,7 @@ final class GameplayScreen extends MenuScreen {
               if (var2 == null) {
                 super.c(0);
               } else {
-                ((MatchController) (var2)).a(false, param0 + param0);
+                ((MatchController) (var2)).render(false, param0 + param0);
                 if (this.field_l == 1) {
                   SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
                   rh.b((byte) 121);
@@ -214,7 +214,7 @@ final class GameplayScreen extends MenuScreen {
               if (var5 == null) {
                 super.c(0);
               } else {
-                var5.a(false, param0 + param0);
+                var5.render(false, param0 + param0);
                 if (this.field_l == 1) {
                   SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
                   rh.b((byte) 121);

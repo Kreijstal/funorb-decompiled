@@ -57,7 +57,7 @@ final class bq {
           sm.field_l = true;
           CanvasRasterBuffer.field_h = param2;
           if (CanvasRasterBuffer.field_h == 0) {
-            var3_int = qn.a(l.field_t, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, bg.field_j);
+            var3_int = qn.a(l.field_t, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, StatusBar.field_j);
             var4 = var3_int + 3;
             fo.field_a = new int[var4];
             vm.field_e = new String[var4];
@@ -76,7 +76,7 @@ final class bq {
             fo.field_a[-1 + var4] = 1;
             BackgroundScene.field_h[1] = 5;
           } else if (CanvasRasterBuffer.field_h == 1) {
-            var3_int = qn.a(l.field_t, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -102, bg.field_j);
+            var3_int = qn.a(l.field_t, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -102, StatusBar.field_j);
             var4 = 2 + var3_int;
             fo.field_a = new int[var4];
             vm.field_e = new String[var4];
@@ -94,9 +94,9 @@ final class bq {
           } else if (CanvasRasterBuffer.field_h != 2) {
             if (3 == CanvasRasterBuffer.field_h) {
               if (!mc.field_k.field_x) {
-                var3_int = qn.a(TextLayoutLine.field_a, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -120, bg.field_j);
+                var3_int = qn.a(TextLayoutLine.field_a, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -120, StatusBar.field_j);
               } else {
-                var3_int = qn.a(el.field_c, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -115, bg.field_j);
+                var3_int = qn.a(el.field_c, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -115, StatusBar.field_j);
               }
               var4 = 2 + var3_int;
               fo.field_a = new int[var4];
@@ -113,7 +113,7 @@ final class bq {
               fo.field_a[var4 - 1] = 0;
               BackgroundScene.field_h[0] = 5;
             } else if (CanvasRasterBuffer.field_h == 4) {
-              var3_int = qn.a(l.field_o, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -118, bg.field_j);
+              var3_int = qn.a(l.field_o, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -118, StatusBar.field_j);
               var4 = 2 + var3_int;
               vm.field_e = new String[var4];
               fo.field_a = new int[var4];
@@ -132,7 +132,7 @@ final class bq {
               if (CanvasRasterBuffer.field_h != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = qn.a(CanvasRasterBuffer.field_k, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -118, bg.field_j);
+              var3_int = qn.a(CanvasRasterBuffer.field_k, MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -118, StatusBar.field_j);
               var4 = var3_int + 3;
               fo.field_a = new int[var4];
               vm.field_e = new String[var4];
@@ -144,7 +144,7 @@ final class bq {
                 vm.field_e[var5] = EmailConfirmationValidator.field_p[var5];
               }
               vm.field_e[var4 - 3] = "";
-              vm.field_e[var4 - 2] = bg.field_b;
+              vm.field_e[var4 - 2] = StatusBar.field_b;
               fo.field_a[var4 - 2] = 0;
               BackgroundScene.field_h[0] = 3;
               vm.field_e[var4 - 1] = TabbedPanel.field_Hb;
@@ -152,7 +152,7 @@ final class bq {
               BackgroundScene.field_h[1] = 5;
             }
           } else {
-            var3_int = qn.a(AlphaContainer.a(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, bg.field_j);
+            var3_int = qn.a(AlphaContainer.a(DualLinkNode.field_n, 84, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -128, StatusBar.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(EmailConfirmationValidator.field_p[var5])) {
@@ -168,7 +168,7 @@ final class bq {
             ArraySupport.a(EmailConfirmationValidator.field_p, 0, df.field_r, 0, var4);
             GameModeSelectScreen.field_r = new String[-1 + (var3_int - var4)];
             ArraySupport.a(EmailConfirmationValidator.field_p, var4 + 1, GameModeSelectScreen.field_r, 0, var3_int + (-var4 - 1));
-            var3_int = qn.a(AlphaContainer.a(BirthDateEntryPanel.field_R, 44, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -106, bg.field_j);
+            var3_int = qn.a(AlphaContainer.a(BirthDateEntryPanel.field_R, 44, new String[]{"<br><%0><br>"}), MouseInputHandler.field_c, EmailConfirmationValidator.field_p, -106, StatusBar.field_j);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(EmailConfirmationValidator.field_p[var5])) {
@@ -306,7 +306,7 @@ final class bq {
             var4Lifetime3++;
           }
           if (CanvasRasterBuffer.field_h != 2) {
-            mj.field_c.a(param0, mi.a(ProxyAuthenticationException.field_d, bg.field_k, (byte) -97), 17068, 0);
+            mj.field_c.a(param0, mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -97), 17068, 0);
           } else {
             mj.field_c.a(param0, -1, 17068, -1);
           }

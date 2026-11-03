@@ -155,7 +155,7 @@ class UiComponent extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(param0 + 66, param2, param1, bg.field_k, ProxyAuthenticationException.field_d) ? 1 : 0;
+          var5_int = this.a(param0 + 66, param2, param1, StatusBar.field_k, ProxyAuthenticationException.field_d) ? 1 : 0;
           stackIn_3_0 = (var5_int != 0) ? 0 : 1;
           if (this.field_D) {
             stackIn_6_1 = 0;
@@ -243,7 +243,7 @@ class UiComponent extends IntrusiveNode {
           MeshRasterState.a();
           SoftwareRasterizer.clear();
           GameModeCard.field_f = param0;
-          ma.d((byte) 106);
+          ScoreMarkerBar.d((byte) 106);
           var2 = var1.a();
           var3 = 0;
           while (15 > var3) {
@@ -380,7 +380,7 @@ class UiComponent extends IntrusiveNode {
                 if (0 == IntrusiveDequeCursor.field_c) {
                   if (ef.field_b == 0 &&
                     TextHotspotWidget.field_R != 0) {
-                    this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                    this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                     var10 = qf.field_a;
                     if (var10 != null) {
                       if (var10.field_n instanceof WidgetDropListener) {
@@ -399,7 +399,7 @@ class UiComponent extends IntrusiveNode {
                     param1 = false;
                     if (ef.field_b == 0 &&
                       TextHotspotWidget.field_R != 0) {
-                      this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                      this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                       var8 = qf.field_a;
                       var6 = var8;
                       if (var8 != null) {
@@ -417,7 +417,7 @@ class UiComponent extends IntrusiveNode {
                   } else {
                     if (ef.field_b == 0 &&
                       TextHotspotWidget.field_R != 0) {
-                      this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                      this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                       var9 = qf.field_a;
                       var6Lifetime3 = var9;
                       if (var9 != null) {
@@ -436,12 +436,12 @@ class UiComponent extends IntrusiveNode {
                 }
                 break regionExit1;
               }
-              this.onMouseWheel(ProxyAuthenticationException.field_d, (byte) 80, param0, param3, bg.field_k, lp.field_i, this);
+              this.onMouseWheel(ProxyAuthenticationException.field_d, (byte) 80, param0, param3, StatusBar.field_k, lp.field_i, this);
             }
             if (0 == IntrusiveDequeCursor.field_c) {
               if (ef.field_b == 0 &&
                 TextHotspotWidget.field_R != 0) {
-                this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                 var11 = qf.field_a;
                 var6Lifetime1 = var11;
                 if (var11 != null) {
@@ -478,7 +478,7 @@ class UiComponent extends IntrusiveNode {
                     ij.a(-5516, this.b((byte) 37));
                     return param1;
                   }
-                  this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                  this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                   var12 = qf.field_a;
                   if (var12 != null) {
                     if (var12.field_n instanceof WidgetDropListener) {
@@ -516,7 +516,7 @@ class UiComponent extends IntrusiveNode {
                   if (TextHotspotWidget.field_R == 0) {
                     break regionExit1;
                   }
-                  this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                  this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                   var14 = qf.field_a;
                   var6Lifetime2 = var14;
                   if (var14 != null) {
@@ -558,7 +558,7 @@ class UiComponent extends IntrusiveNode {
                   ij.a(-5516, this.b((byte) 37));
                   return param1;
                 }
-                this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+                this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
                 var13 = qf.field_a;
                 var6Lifetime2Lifetime1 = var13;
                 if (var13 != null) {
@@ -604,7 +604,7 @@ class UiComponent extends IntrusiveNode {
               ij.a(-5516, this.b((byte) 37));
               return param1;
             }
-            this.handlePointerRelease(bg.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
+            this.handlePointerRelease(StatusBar.field_k, param3, this, param2 - 99, param0, ProxyAuthenticationException.field_d);
             var15 = qf.field_a;
             if (var15 != null) {
               if (var15.field_n instanceof WidgetDropListener) {

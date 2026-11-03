@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bg {
+abstract class StatusBar {
     static String field_b;
     static int[] field_a;
     int field_h;
@@ -28,7 +28,7 @@ abstract class bg {
           var4.f(var4.position - var5, -1);
           return;
         }
-        bg.a(18L, -62, 23);
+        StatusBar.a(18L, -62, 23);
         var4.position = var4.position + 1;
         var5Lifetime1 = var4.position;
         var4.writeByte(160, 6);
@@ -121,23 +121,23 @@ abstract class bg {
         int var6 = ui.field_f.field_A + var5;
         int var7 = var5 - (-param3 + ui.field_f.field_A);
         SoftwareRasterizer.fillRectangle(var6, param2, param3 - 2 * ui.field_f.field_A, 25, 16711935);
-        SoftwareRasterizer.saveClip(AchievementIcon.field_r);
+        SoftwareRasterizer.saveClip(PicturePreview.field_r);
         SoftwareRasterizer.setClip(0, 0, 320, 480);
         ui.field_f.b(var5, param2);
         SoftwareRasterizer.setClip(320, 0, 640, 480);
         ui.field_f.drawHorizontalFlip(var7, param2);
-        SoftwareRasterizer.restoreClip(AchievementIcon.field_r);
+        SoftwareRasterizer.restoreClip(PicturePreview.field_r);
         SoftwareRasterizer.drawHorizontalLine(var6, param2, -(2 * ui.field_f.field_A) + param3, 0);
         SoftwareRasterizer.drawHorizontalLine(var6, 25 + param2 - 1, param3 - 2 * ui.field_f.field_A, 0);
         int var8 = this.field_e >> 16;
         mh.a(param2, gd.field_h[param1], var8 - hp.field_Gb.field_A, 0);
         mh.a(param2, gd.field_h[param1], var8, 0);
-        SoftwareRasterizer.saveClip(AchievementIcon.field_r);
+        SoftwareRasterizer.saveClip(PicturePreview.field_r);
         SoftwareRasterizer.setClip(0, 0, 320, 480);
         NameAvailabilityValidator.field_q.a(var5 + 2, param2, 128);
         SoftwareRasterizer.setClip(320, 0, 640, 480);
         di.field_c.a(-1 + param3 + (var5 - di.field_c.field_A), param2, 128);
-        SoftwareRasterizer.restoreClip(AchievementIcon.field_r);
+        SoftwareRasterizer.restoreClip(PicturePreview.field_r);
         if (var7 <= var6) {
           return;
         }
@@ -164,7 +164,7 @@ abstract class bg {
         this.field_h = param0;
     }
 
-    bg() {
+    StatusBar() {
         this.field_g = 65536;
         this.field_h = 0;
         this.field_e = 0;

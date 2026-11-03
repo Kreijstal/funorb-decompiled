@@ -141,10 +141,10 @@ final class Match {
               var1_int = var1_int + bd.field_c;
             }
             if (var4 < 0) {
-              bg.field_j.drawText(var6, var8Lifetime1, var1_int + MatchController.field_i, var5, -1);
+              StatusBar.field_j.drawText(var6, var8Lifetime1, var1_int + MatchController.field_i, var5, -1);
               var1_int = var1_int + GameResultsScreen.field_r;
             } else {
-              ma.field_y.drawText(var6, var8Lifetime1, var1_int + ul.field_q, var5, -1);
+              ScoreMarkerBar.field_y.drawText(var6, var8Lifetime1, var1_int + TimerBar.field_q, var5, -1);
               var1_int = var1_int + (ValidatedTextWidget.field_fb + (bd.field_c + LoadingProgressDialog.field_fb));
             }
           }

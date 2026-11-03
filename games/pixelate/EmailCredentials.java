@@ -124,7 +124,7 @@ class EmailCredentials extends LoginCredentials {
           return true;
         }
         var5 = DualLinkDeque.field_f;
-        if (!MatchController.a(1, (char) var5)) {
+        if (!MatchController.isSupportedChar(1, (char) var5)) {
           return false;
         }
         if (var3 == 0) {
@@ -150,7 +150,7 @@ class EmailCredentials extends LoginCredentials {
             if (ce.field_d == 0) {
               if (io.field_c == null &&
                 ge.field_f) {
-                var8Lifetime1Lifetime6 = "[" + ul.field_m + "] ";
+                var8Lifetime1Lifetime6 = "[" + TimerBar.field_m + "] ";
               }
               if (io.field_c == null) {
                 var34 = var8Lifetime1Lifetime6 + var33 + ": ";

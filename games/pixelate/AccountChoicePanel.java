@@ -96,7 +96,7 @@ final class AccountChoicePanel extends UiContainer implements ButtonListener {
             GameApplet.field_o != LinkButtonPainter.field_a[0]) {
             GameApplet.field_o = LinkButtonPainter.field_a[0];
           }
-          DialWidget.a(param1, bg.field_d, GameApplet.field_o, 0, true, (byte) -76);
+          DialWidget.a(param1, StatusBar.field_d, GameApplet.field_o, 0, true, (byte) -76);
         }
         if (DelegatingCanvas.field_h.field_P != 0) {
           LobbyPlayer.field_Wb = false;

@@ -133,7 +133,7 @@ final class cn {
               }
               if (var9Lifetime1 != 99) {
                 TextLayoutLine.field_e = var9Lifetime1;
-                GameModeSelectScreen.field_s = bg.field_l;
+                GameModeSelectScreen.field_s = StatusBar.field_l;
                 BackgroundScene.field_b = -1;
               } else {
                 QueuedInput.a(wl.a(23062), false);
@@ -159,7 +159,7 @@ final class cn {
               }
             }
           }
-          if (GameModeSelectScreen.field_s == bg.field_l &&
+          if (GameModeSelectScreen.field_s == StatusBar.field_l &&
             MusicPatchNode.e(-18481)) {
             if (TextLayoutLine.field_e == 255) {
               var9_ref_String = MusicCrossfadeStream.field_o.e((byte) 40);

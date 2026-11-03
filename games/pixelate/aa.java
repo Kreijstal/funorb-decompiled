@@ -95,7 +95,7 @@ final class aa {
         this.field_a = TextWidgetPainter.field_n;
         this.field_k = cd.field_g;
         this.field_d = qf.field_b;
-        this.field_g = pb.field_j;
+        this.field_g = PictureStrip.field_j;
     }
 
     aa(int param0, String param1, int param2, String param3, String param4) {

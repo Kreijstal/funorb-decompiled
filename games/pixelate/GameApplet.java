@@ -141,8 +141,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 ArchiveRequest.field_y = Js5NetworkRequest.j(-30272);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (AchievementIcon.field_m != 0L) {
-                    stackIn_100_0 = $cfr$lcmp(~hm.a(64), ~AchievementIcon.field_m);
+                  if (PicturePreview.field_m != 0L) {
+                    stackIn_100_0 = $cfr$lcmp(~hm.a(64), ~PicturePreview.field_m);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_100_0 <= 0)) {
@@ -468,7 +468,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          AchievementIcon.field_m = 0L;
+          PicturePreview.field_m = 0L;
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "tn.start()");
         }
@@ -554,7 +554,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == DropTargetWidget.field_I &&
             !DialWidget.field_U) {
-            AchievementIcon.field_m = hm.a(64);
+            PicturePreview.field_m = hm.a(64);
             SecondaryNodeHashTable.a(5000L, (byte) 23);
             fp.field_c = null;
             this.shutdownApplet(false, -238);
@@ -705,7 +705,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           return;
         }
         try {
-          AchievementIcon.field_m = 4000L + hm.a(64);
+          PicturePreview.field_m = 4000L + hm.a(64);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "tn.stop()");
         }

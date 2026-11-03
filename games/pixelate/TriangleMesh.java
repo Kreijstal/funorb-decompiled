@@ -176,7 +176,7 @@ final class TriangleMesh {
             }
             var2 = 1;
           }
-          mj.field_c.a(mi.a(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, bg.field_k, (byte) -73), -1);
+          mj.field_c.a(mi.a(BufferedRandomAccessFile.field_a, ji.field_c, (byte) -82), mi.a(ProxyAuthenticationException.field_d, StatusBar.field_k, (byte) -73), -1);
           if (param0 <= 74) {
             TriangleMesh.b((byte) -77);
           }

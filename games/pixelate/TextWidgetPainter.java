@@ -216,7 +216,7 @@ class TextWidgetPainter implements WidgetPainter, WidgetTextLayout {
           if (param0.field_j != 2) {
             if (param0.field_j == 0 &&
               ge.field_f) {
-              var3 = "[" + ul.field_m + "] ";
+              var3 = "[" + TimerBar.field_m + "] ";
             }
             if (1 == param0.field_j) {
               var3 = "[" + AlphaContainer.a(HowToPlayScreen.field_q, 106, new String[]{param0.field_h}) + "] ";

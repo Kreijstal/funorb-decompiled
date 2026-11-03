@@ -268,7 +268,7 @@ final class GameResultsScreen extends MenuScreen {
         if (null == ro.field_e) {
           super.c(0);
         } else {
-          ro.field_e.a(false, param0 ^ 0);
+          ro.field_e.render(false, param0 ^ 0);
           SoftwareRasterizer.darkenRectangle(0, 0, 640, 480);
           rh.b((byte) -75);
         }

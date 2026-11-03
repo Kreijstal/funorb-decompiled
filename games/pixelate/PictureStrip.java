@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pb {
-    private AchievementIcon[] field_l;
+final class PictureStrip {
+    private PicturePreview[] field_l;
     private int field_c;
     private int field_e;
     private int field_d;
@@ -25,7 +25,7 @@ final class pb {
           GradientOutlineTextPainter.field_t = param0;
           if (param2 != 16) {
             sb var5 = (sb) null;
-            pb.a(-25, (sb) null, 81, -121);
+            PictureStrip.a(-25, (sb) null, 81, -121);
           }
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "pb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -58,7 +58,7 @@ final class pb {
             return;
           }
           var3 = (sb) null;
-          pb.a(-62, (sb) null, 98, 74);
+          PictureStrip.a(-62, (sb) null, 98, 74);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -103,7 +103,7 @@ final class pb {
           return;
         }
         sb var2 = (sb) null;
-        pb.a(-41, (sb) null, 24, 65);
+        PictureStrip.a(-41, (sb) null, 24, 65);
         field_n = null;
         field_j = null;
         field_i = null;
@@ -139,7 +139,7 @@ final class pb {
         int var3 = 512 * (param1 - this.field_o + 100) / 100;
         if (param0) {
           Sprite[] var4 = (Sprite[]) null;
-          pb.a(31, (Sprite[]) null);
+          PictureStrip.a(31, (Sprite[]) null);
           if (var3 > 256) {
             return 256;
           }
@@ -223,7 +223,7 @@ final class pb {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 != -16888) {
-          pb.c(-121);
+          PictureStrip.c(-121);
           var2 = this.b((byte) -37);
           if (this.field_c > 0) {
             this.field_c = this.field_c - 1;
@@ -260,7 +260,7 @@ final class pb {
         this.field_c = 30;
     }
 
-    pb(Puzzle param0, int param1, int param2) {
+    PictureStrip(Puzzle param0, int param1, int param2) {
         IndexedSprite[] var7 = null;
         int var5 = 0;
         try {
@@ -272,9 +272,9 @@ final class pb {
           this.field_d = 16 * var7[0].field_g;
           this.field_a = -this.field_g + gb.field_b.field_B >> 1;
           this.field_h = gb.field_b.field_A - this.field_d >> 1;
-          this.field_l = new AchievementIcon[var7.length];
+          this.field_l = new PicturePreview[var7.length];
           for (var5 = 0; var7.length > var5; var5++) {
-            this.field_l[var5] = new AchievementIcon(var7[var5]);
+            this.field_l[var5] = new PicturePreview(var7[var5]);
           }
           this.field_e = 200 + this.field_o;
           this.field_k = param1;

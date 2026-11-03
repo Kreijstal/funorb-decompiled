@@ -180,7 +180,7 @@ final class io {
           Checkbox.a(-113, re.field_b);
           MeshRasterState.a();
           SoftwareRasterizer.clear();
-          ma.d((byte) 106);
+          ScoreMarkerBar.d((byte) 106);
           if (256 > var5) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           }
@@ -231,7 +231,7 @@ final class io {
         Checkbox.a(-113, re.field_b);
         MeshRasterState.a();
         SoftwareRasterizer.clear();
-        ma.d((byte) 106);
+        ScoreMarkerBar.d((byte) 106);
         if (256 > var5) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
           LinkButtonPainter.a((byte) 92);

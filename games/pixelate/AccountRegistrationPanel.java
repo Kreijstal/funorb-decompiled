@@ -56,7 +56,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         this.field_T = new Checkbox("", (UiListener) null, var1 != 0);
         this.field_R = new TextButton(hm.field_d, (UiListener) null);
         this.field_K = new TextButton(MatchController.field_v, (UiListener) null);
-        this.field_U.field_l = bg.field_i;
+        this.field_U.field_l = StatusBar.field_i;
         this.field_P.field_l = LabeledField.field_N;
         this.field_L.field_l = jf.field_b;
         this.field_V.field_l = QuickChatMenu.field_Eb;
@@ -86,7 +86,7 @@ final class AccountRegistrationPanel extends UiContainer implements TextHotspotL
         var3 = var3 + this.addLabeledField(DialWidget.field_S, -21, this.field_P, 170, var3);
         var3 = var3 + (5 + this.addFieldWithHelp(mp.field_d, this.field_L, 20, 170, var3, 126, ""));
         var3 = var3 + this.addLabeledField(AccountRequestDialog.field_qb, -86, this.field_V, 170, var3);
-        var3 = var3 + (5 + this.a(pb.field_i, var3, this.field_X, 35, 170, r.field_b));
+        var3 = var3 + (5 + this.a(PictureStrip.field_i, var3, this.field_X, 35, 170, r.field_b));
         var3 = var3 + (this.a(na.field_a, var3, this.field_U, 35, 170, BufferedSocket.field_i) + 5);
         var3 = var3 + this.addLabeledFieldWithValidationIcon((byte) 85, 170, this.field_Q, var3, TriangleMesh.field_O);
         LabeledField var4 = new LabeledField(46, var3, this.field_E - 90, 25, this.field_T, true, this.field_E - 120, 5, ep.field_b, 11579568, CanvasRasterBuffer.field_j);

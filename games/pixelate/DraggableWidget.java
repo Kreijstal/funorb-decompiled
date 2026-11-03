@@ -167,7 +167,7 @@ final class DraggableWidget extends SingleChildContainer {
             ((TextButton) (this.child)).field_H) &&
             1 == this.field_k) {
             var5_int = -this.field_N + ProxyAuthenticationException.field_d - param2;
-            var6 = -param1 - this.field_K + bg.field_k;
+            var6 = -param1 - this.field_K + StatusBar.field_k;
             if ((var5_int != this.field_z ||
               var6 != this.field_p)) {
               this.field_p = var6;

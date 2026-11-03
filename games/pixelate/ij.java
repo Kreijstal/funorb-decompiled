@@ -30,7 +30,7 @@ final class ij extends MenuScreen {
           if (DisplayNameForm.field_L == -1 &&
             -1 == Checkbox.field_Q) {
             DisplayNameForm.field_L = ProxyAuthenticationException.field_d;
-            Checkbox.field_Q = bg.field_k;
+            Checkbox.field_Q = StatusBar.field_k;
           }
           boolean decompiledFrameRemainder0 = true;
           CachedTextLayout.field_h = CachedTextLayout.field_h + 1;

@@ -179,7 +179,7 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         if (param0 <= 16) {
           field_cb = (SceneWidget) null;
         }
-        nk.a(bg.field_k, this.field_E - this.field_hb + ProxyAuthenticationException.field_d, 5818);
+        nk.a(StatusBar.field_k, this.field_E - this.field_hb + ProxyAuthenticationException.field_d, 5818);
         return this.field_l;
     }
 

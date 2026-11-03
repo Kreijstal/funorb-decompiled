@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ul extends bg {
+final class TimerBar extends StatusBar {
     static String field_n;
     private int field_o;
     static SceneWidget field_p;
@@ -228,7 +228,7 @@ final class ul extends bg {
         return this.field_r <= this.field_s ? true : false;
     }
 
-    ul(int param0) {
+    TimerBar(int param0) {
         this.a(true, param0);
         this.field_r = this.field_s;
     }

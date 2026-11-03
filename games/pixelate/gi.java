@@ -40,7 +40,7 @@ final class gi {
 
     final static void a(String param0, int param1, byte param2) {
         try {
-          kf.field_q = param1;
+          TimerBarDemo.field_q = param1;
           int var3_int = 67 % ((34 - param2) / 41);
           GameModeCard.field_a = TextTableInitializer.field_e;
         } catch (RuntimeException runtimeException) {

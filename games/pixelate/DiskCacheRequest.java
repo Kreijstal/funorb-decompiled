@@ -7,7 +7,7 @@ final class DiskCacheRequest extends ArchiveRequest {
     int field_C;
     byte[] field_D;
     static boolean field_I;
-    static pb field_H;
+    static PictureStrip field_H;
 
     final static String b(boolean param0) {
         if (param0) {
@@ -136,7 +136,7 @@ final class DiskCacheRequest extends ArchiveRequest {
           var6 = param1.field_K;
           var7 = param1.height;
           if (param0 != -13) {
-            field_H = (pb) null;
+            field_H = (PictureStrip) null;
           }
           var38.field_b.b(var7, var4, 91, var5, var6);
         } catch (RuntimeException runtimeException) {

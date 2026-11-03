@@ -20,7 +20,7 @@ final class DialWidget extends TextButton {
           if (param0 != -1913) {
             DialWidget.a((byte) -51);
           }
-          mi.a(EmailCredentials.field_f, AchievementIcon.field_o, -1, ThreeSliceButtonPainter.field_r);
+          mi.a(EmailCredentials.field_f, PicturePreview.field_o, -1, ThreeSliceButtonPainter.field_r);
           fj.a(0, 0, (byte) 113, param1);
         } catch (RuntimeException runtimeException) {
           throw aa.addExceptionContext((Throwable) ((Object) runtimeException), "si.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
