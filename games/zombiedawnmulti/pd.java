@@ -52,7 +52,7 @@ final class pd {
             var4.field_Nb != null) {
             return true;
           }
-          stackIn_10_0 = (mh.field_c != null) && (vm.a(param0, (byte) -81) != null);
+          stackIn_10_0 = (JaggrabDownloader.field_c != null) && (vm.a(param0, (byte) -81) != null);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

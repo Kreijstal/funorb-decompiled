@@ -3,10 +3,10 @@
  */
 final class SoundEffect {
     private int field_c;
-    private rh[] instruments;
+    private SynthInstrument[] instruments;
     private int field_b;
 
-    final static SoundEffect a(ul param0, String param1, String param2) {
+    final static SoundEffect a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, param2, false);
         if (var3 == null) {
           return null;
@@ -14,7 +14,7 @@ final class SoundEffect {
         return new SoundEffect(new PacketBuffer(var3));
     }
 
-    final static SoundEffect a(ul param0, int param1, int param2) {
+    final static SoundEffect a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, true, param2);
         if (var3 == null) {
           return null;
@@ -70,12 +70,12 @@ final class SoundEffect {
     private SoundEffect(PacketBuffer param0) {
         int var2 = 0;
         int var3;
-        this.instruments = new rh[10];
+        this.instruments = new SynthInstrument[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.readUnsignedByte(31365);
           if (var3 != 0) {
             param0.position = param0.position - 1;
-            this.instruments[var2] = new rh();
+            this.instruments[var2] = new SynthInstrument();
             this.instruments[var2].a(param0);
           }
         }

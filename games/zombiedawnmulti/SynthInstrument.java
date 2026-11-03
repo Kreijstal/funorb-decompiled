@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class rh {
+final class SynthInstrument {
     int field_h;
     private SoundEnvelope field_q;
     private int[] field_k;
@@ -79,7 +79,7 @@ final class rh {
         this.field_j.a(param0, this.field_q);
     }
 
-    private final int a(int param0, int param1, int param2) {
+    private final int evaluateWaveform(int param0, int param1, int param2) {
         if (param2 == 1) {
           if ((param0 & 32767) < 16384) {
             return param1;
@@ -182,20 +182,20 @@ final class rh {
           if (this.field_r != null) {
             var14 = this.field_r.advance(param0);
             var15 = this.field_l.advance(param0);
-            var12 = var12 + (this.a(var7, var15, this.field_r.field_e) >> 1);
+            var12 = var12 + (this.evaluateWaveform(var7, var15, this.field_r.field_e) >> 1);
             var7 = var7 + ((var14 * var5 >> 16) + var6);
           }
           if (this.field_e != null) {
             var14Lifetime3 = this.field_e.advance(param0);
             var15Lifetime3 = this.field_s.advance(param0);
-            var13 = var13 * ((this.a(var10, var15Lifetime3, this.field_e.field_e) >> 1) + 32768) >> 15;
+            var13 = var13 * ((this.evaluateWaveform(var10, var15Lifetime3, this.field_e.field_e) >> 1) + 32768) >> 15;
             var10 = var10 + ((var14Lifetime3 * var8 >> 16) + var9);
           }
           for (var14Lifetime4 = 0; var14Lifetime4 < 5; var14Lifetime4++) {
             if (this.field_y[var14Lifetime4] != 0) {
               var15Lifetime4 = var11Lifetime1 + field_g[var14Lifetime4];
               if (var15Lifetime4 < param0) {
-                field_c[var15Lifetime4] = field_c[var15Lifetime4] + this.a(field_v[var14Lifetime4], var13 * field_n[var14Lifetime4] >> 15, this.field_d.field_e);
+                field_c[var15Lifetime4] = field_c[var15Lifetime4] + this.evaluateWaveform(field_v[var14Lifetime4], var13 * field_n[var14Lifetime4] >> 15, this.field_d.field_e);
                 field_v[var14Lifetime4] = field_v[var14Lifetime4] + ((var12 * field_p[var14Lifetime4] >> 16) + field_m[var14Lifetime4]);
               }
             }
@@ -307,7 +307,7 @@ final class rh {
         return field_c;
     }
 
-    rh() {
+    SynthInstrument() {
         this.field_k = new int[]{0, 0, 0, 0, 0};
         this.field_t = 100;
         this.field_h = 0;
@@ -317,7 +317,7 @@ final class rh {
         this.field_y = new int[]{0, 0, 0, 0, 0};
     }
 
-    public static void a() {
+    public static void releaseStatics() {
         field_c = null;
         field_i = null;
         field_o = null;

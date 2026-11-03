@@ -4,18 +4,18 @@
 import java.io.*;
 import java.util.*;
 
-public class nd {
+public class CacheFileLocator {
     private static boolean field_c;
     private static String field_a;
     private static Hashtable field_d;
     private static String field_b;
     private static int field_e;
 
-    private nd() throws Throwable {
+    private CacheFileLocator() throws Throwable {
         throw new Error();
     }
 
-    public static File a(String param0, int param1, String param2, int param3) {
+    public static File resolveRedirectedCacheFile(String param0, int param1, String param2, int param3) {
         return net.alterorb.launcher.Hook.cacheRedirect(param2, param0);
     }
 
@@ -44,11 +44,11 @@ public class nd {
 
     public static File a(String param0, int param1) {
         if (param1 == 0) {
-          return nd.a(param0, -25157, field_b, field_e);
+          return CacheFileLocator.resolveRedirectedCacheFile(param0, -25157, field_b, field_e);
         }
         String var3 = (String) null;
-        nd.a((String) null, -93);
-        return nd.a(param0, -25157, field_b, field_e);
+        CacheFileLocator.a((String) null, -93);
+        return CacheFileLocator.resolveRedirectedCacheFile(param0, -25157, field_b, field_e);
     }
 
     static {

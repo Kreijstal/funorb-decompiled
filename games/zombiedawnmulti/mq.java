@@ -102,7 +102,7 @@ final class mq extends nc {
           var7.c(var4, var11Lifetime1, var12, 16777215, 0);
           var11Lifetime1 = var11Lifetime1 + var7.a(var4);
           for (var17 = 0; ra.field_n[var9Lifetime1] > var17; var17++) {
-            of.field_k.g(var17 * (of.field_k.fullWidth >> 1) + var11Lifetime1, 2 - of.field_k.field_u + var12);
+            BufferedFile.field_k.g(var17 * (BufferedFile.field_k.fullWidth >> 1) + var11Lifetime1, 2 - BufferedFile.field_k.field_u + var12);
           }
         }
     }
@@ -251,7 +251,7 @@ final class mq extends nc {
         if (param0 != 0) {
           return (IndexedSprite) null;
         }
-        return wl.field_l;
+        return WhirlpoolHasher.field_l;
     }
 
     private final boolean h(int param0, int param1) {
@@ -260,7 +260,7 @@ final class mq extends nc {
         }
         int[] var4 = this.field_d != 6 ? PacketBuffer.field_n : fc.field_m;
         int[] var3 = var4;
-        return fq.a(param0, 127, var4);
+        return PhaseChangeEvent.a(param0, 127, var4);
     }
 
     mq(int param0, boolean param1, int param2, int param3, int param4, int param5, int[] param6) {

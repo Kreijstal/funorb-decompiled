@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj extends ae {
+final class sj extends GameEvent {
     private int field_i;
     private int field_o;
     static int field_p;

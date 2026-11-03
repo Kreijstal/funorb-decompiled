@@ -65,15 +65,15 @@ final class ak {
             try {
               var4 = param1.getCodeBase();
               var3 = gf.a(param1, true, var4).getFile();
-              fo.a(param1, "updatelinks", (byte) 23, new Object[]{"home", var3 + "home.ws"});
-              fo.a(param1, "updatelinks", (byte) 23, new Object[]{"gamelist", var3 + "togamelist.ws"});
+              JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"home", var3 + "home.ws"});
+              JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"gamelist", var3 + "togamelist.ws"});
               if (param0 != 14158) {
                 field_a = (int[]) null;
               }
-              fo.a(param1, "updatelinks", (byte) 23, new Object[]{"serverlist", var3 + "toserverlist.ws"});
-              fo.a(param1, "updatelinks", (byte) 23, new Object[]{"options", var3 + "options.ws"});
-              fo.a(param1, "updatelinks", (byte) 23, new Object[]{"terms", var3 + "terms.ws"});
-              fo.a(param1, "updatelinks", (byte) 23, new Object[]{"privacy", var3 + "privacy.ws"});
+              JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"serverlist", var3 + "toserverlist.ws"});
+              JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"options", var3 + "options.ws"});
+              JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"terms", var3 + "terms.ws"});
+              JavaScriptBridge.a(param1, "updatelinks", (byte) 23, new Object[]{"privacy", var3 + "privacy.ws"});
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,7 +114,7 @@ final class ak {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         sj.field_j.h(param3, param4, param0);
-        lm.field_fb.a(param3, param4, param1);
+        SimHuman.field_fb.a(param3, param4, param1);
         vo.field_p.h(param3, -5 + param1 + param4, param0);
         tb.field_s.a(param0 + param3 - 5, param4, param1);
         rp.field_r[0].c(param3, param4);

@@ -28,7 +28,7 @@ final class pb {
         return false;
     }
 
-    final static Sprite[] a(String param0, ul param1, int param2, String param3) {
+    final static Sprite[] a(String param0, ResourceArchive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -98,7 +98,7 @@ final class pb {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -117 / ((param2 + 83) / 37);
-          stackIn_1_0 = c.a(param0, param1, true, 0);
+          stackIn_1_0 = TertiaryLinkDeque.a(param0, param1, true, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

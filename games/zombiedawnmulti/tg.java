@@ -615,7 +615,7 @@ final class tg implements Runnable {
               if (!pp.field_n && (!h.i(51603) ||
                 !jk.a((byte) -128, FullscreenFocusCanvas.field_k.field_s[var9_int]))) {
                 var8[0].field_c[var9_int] = FullscreenFocusCanvas.field_k.field_s[var9_int];
-                var7.field_e[0] = cp.a(var7.field_e[0], 1L << FullscreenFocusCanvas.field_k.field_s[var9_int]);
+                var7.teamUpgradeMask[0] = cp.a(var7.teamUpgradeMask[0], 1L << FullscreenFocusCanvas.field_k.field_s[var9_int]);
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -651,7 +651,7 @@ final class tg implements Runnable {
             var16 = new PacketBuffer(4096);
             var7.a(var16, (byte) -122);
             var16.position = 1;
-            var9.a(2, var16);
+            var9.decodeFromPacket(2, var16);
             var9.field_C = 2147483646;
             var9.currentTick = var7.currentTick - 50;
             wp.field_h = new GameScreen(var9, var8[0], 0);

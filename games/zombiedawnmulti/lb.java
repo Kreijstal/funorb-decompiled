@@ -3,7 +3,7 @@
  */
 final class lb {
     static String field_e;
-    static ul field_d;
+    static ResourceArchive field_d;
     static int[] field_c;
     static int field_a;
     static String field_b;

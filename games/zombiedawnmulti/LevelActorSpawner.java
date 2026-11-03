@@ -299,16 +299,16 @@ final class LevelActorSpawner extends fc {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
-        ek var6 = null;
-        ge var7 = null;
+        SimEntity var6 = null;
+        SimZombie var7 = null;
         int var8 = 0;
         int var9 = 0;
-        ge var10 = null;
+        SimZombie var10 = null;
         int var11 = 0;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var3 = this.a(-103);
-          param0.field_f = 1;
+          param0.nextObjectId = 1;
           var4 = 0;
           do {
             if (!(var4 < param0.field_y.length)) {
@@ -319,12 +319,12 @@ final class LevelActorSpawner extends fc {
             var4++;
           } while (var11 == 0);
           do {
-            if (!((param0.field_t - 1) > var4)) {
+            if (!((param0.teamCount - 1) > var4)) {
               var4 = 0;
               var5 = 0;
               break;
             }
-            var5 = hp.a((byte) 10, g.field_a, param0.field_t - var4) + var4;
+            var5 = hp.a((byte) 10, g.field_a, param0.teamCount - var4) + var4;
             var6_int = param0.field_y[var5];
             param0.field_y[var5] = param0.field_y[var4];
             param0.field_y[var4] = var6_int;
@@ -333,25 +333,25 @@ final class LevelActorSpawner extends fc {
           if (param1 <= 7) {
             return;
           }
-          var6 = (ek) (var3.c(48));
+          var6 = (SimEntity) (var3.c(48));
           while (null != var6) {
             if (var11 != 0) {
               return;
             }
-            stackIn_21_0 = var6 instanceof lm ? 1 : 0;
+            stackIn_21_0 = var6 instanceof SimHuman ? 1 : 0;
             if (stackIn_21_0 != 0 ||
-              var6 instanceof ge) {
-              if (var6 instanceof ge) {
-                var7 = (ge) (var6);
+              var6 instanceof SimZombie) {
+              if (var6 instanceof SimZombie) {
+                var7 = (SimZombie) (var6);
                 if (!(var7.field_gb > 1) ||
-                  !(param0.field_t <= var7.field_gb) ||
+                  !(param0.teamCount <= var7.field_gb) ||
                   var11 != 0) {
                   var7.field_gb = param0.field_y[var7.field_gb];
                   var8 = 1;
-                  if (param0.b((byte) -121, 52, var7.field_gb)) {
+                  if (param0.hasUpgrade((byte) -121, 52, var7.field_gb)) {
                     var8++;
                   }
-                  if (param0.b((byte) -62, 50, var7.field_gb)) {
+                  if (param0.hasUpgrade((byte) -62, 50, var7.field_gb)) {
                     var8 += 2;
                   }
                   if (var4 == 0 ||
@@ -362,12 +362,12 @@ final class LevelActorSpawner extends fc {
                     var5 = var5 + var8;
                     var9 = 0;
                     while (var8 > var9) {
-                      var10 = new ge(var7.e((byte) -112) + (-3 + var9 % 5) * 2, var7.g(1829947600) + (var9 * 11 % 7 - 3) * 2, var7.d(true));
+                      var10 = new SimZombie(var7.getX((byte) -112) + (-3 + var9 % 5) * 2, var7.getY(1829947600) + (var9 * 11 % 7 - 3) * 2, var7.d(true));
                       var10.field_gb = var7.field_gb;
-                      var10.field_x = param0.a(-16777216);
+                      var10.objectId = param0.nextObjectId(-16777216);
                       stackIn_21_0 = var4;
                       if (stackIn_21_0 != 0) {
-                        System.out.println("Zombie! oid " + var10.field_x);
+                        System.out.println("Zombie! oid " + var10.objectId);
                       }
                       param0.characters.a(var10, false);
                       var9++;
@@ -375,11 +375,11 @@ final class LevelActorSpawner extends fc {
                   }
                 }
               } else {
-                var6.field_x = param0.a(-16777216);
+                var6.objectId = param0.nextObjectId(-16777216);
                 param0.characters.a(var6, false);
               }
             }
-            var6 = (ek) (var3.b(6));
+            var6 = (SimEntity) (var3.b(6));
             continue;
           }
           return;
@@ -397,7 +397,7 @@ final class LevelActorSpawner extends fc {
         }
     }
 
-    final static void a(int param0, ul param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RuntimeException runtimeException = null;
         Sprite var2 = null;
         int var3 = 0;
@@ -454,41 +454,41 @@ final class LevelActorSpawner extends fc {
         }
     }
 
-    private final ek a(int param0, int param1, int param2, int param3, int param4) {
-        sh var6 = null;
+    private final SimEntity a(int param0, int param1, int param2, int param3, int param4) {
+        SimPortal var6 = null;
         int var6_int = 0;
         RuntimeException var6_ref = null;
-        ge var7 = null;
-        ek stackIn_2_0 = null;
-        lm stackIn_8_0 = null;
-        sh stackIn_11_0 = null;
-        ge stackIn_13_0 = null;
+        SimZombie var7 = null;
+        SimEntity stackIn_2_0 = null;
+        SimHuman stackIn_8_0 = null;
+        SimPortal stackIn_11_0 = null;
+        SimZombie stackIn_13_0 = null;
         Object stackIn_15_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -8944) {
-            stackIn_2_0 = (ek) null;
+            stackIn_2_0 = (SimEntity) null;
             return stackIn_2_0;
           }
           if (0 == param4) {
             var6_int = 1073741823 & param3;
-            var7 = new ge(param0, param1, var6_int);
+            var7 = new SimZombie(param0, param1, var6_int);
             var7.field_gb = (byte)((-1073741824 & param3) >>> 30);
             stackIn_13_0 = var7;
-            return (ek) ((Object) stackIn_13_0);
+            return (SimEntity) ((Object) stackIn_13_0);
           }
           if (param4 == 1) {
             stackIn_8_0 = ee.a(param3, param1, param0, true);
-            return (ek) ((Object) stackIn_8_0);
+            return (SimEntity) ((Object) stackIn_8_0);
           }
           if (param4 != 4) {
             stackIn_15_0 = null;
-            return (ek) (stackIn_15_0);
+            return (SimEntity) (stackIn_15_0);
           }
-          var6 = new sh(param0, param1);
+          var6 = new SimPortal(param0, param1);
           var6.field_O = (byte)(3 & param3 >>> 30);
           stackIn_11_0 = var6;
-          return (ek) ((Object) stackIn_11_0);
+          return (SimEntity) ((Object) stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
@@ -569,7 +569,7 @@ final class LevelActorSpawner extends fc {
         try {
           en.a(-1, 1);
           if (param1 == 10 &&
-            1 == op.field_m.field_t) {
+            1 == op.field_m.teamCount) {
             bi.field_e = true;
             param3 = 1;
             param1 = 15;
@@ -637,7 +637,7 @@ final class LevelActorSpawner extends fc {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ek var9 = null;
+        SimEntity var9 = null;
         int var10 = 0;
         IntrusiveDeque stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;

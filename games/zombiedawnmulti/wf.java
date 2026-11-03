@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wf extends ae {
+final class wf extends GameEvent {
     private int field_p;
     private boolean field_i;
     private int field_l;
@@ -189,7 +189,7 @@ final class wf extends ae {
                   ((GameScreen) (Object) stackIn_85_0).a(stackIn_85_1, stackIn_86_2, this.field_s, (byte) -40, this.field_j);
                   break;
                 }
-                var5 = op.field_m.a((byte) 32, this.field_j, 1000);
+                var5 = op.field_m.computeEffectDuration((byte) 32, this.field_j, 1000);
                 param1.a((byte) -111, this.field_s, this.field_q, var5, this.field_p);
                 break;
               case 4:
@@ -207,10 +207,10 @@ final class wf extends ae {
                 }
                 break;
               case 12:
-                param1.b(this.field_j, 0, op.field_m.a((byte) 32, this.field_j, 750));
+                param1.b(this.field_j, 0, op.field_m.computeEffectDuration((byte) 32, this.field_j, 750));
                 break;
               case 11:
-                param1.c(this.field_j, op.field_m.a((byte) 32, this.field_j, 500), -2);
+                param1.c(this.field_j, op.field_m.computeEffectDuration((byte) 32, this.field_j, 500), -2);
                 break;
             }
           } else {
@@ -226,7 +226,7 @@ final class wf extends ae {
             }
             this.field_f = this.field_f + 50;
             this.field_i = true;
-            param1.a(false, (ae) (this));
+            param1.a(false, (GameEvent) (this));
             nm.b(-127, 67);
           }
           if (param0 != 0) {

@@ -92,7 +92,7 @@ final class dd implements dr {
           if (param1 > -77) {
             return true;
           }
-          if (od.field_Db != 0 &&
+          if (SimArmedHuman.field_Db != 0 &&
             fd.field_F < 0) {
             var4_ref_bb = (bb) (he.field_k.c(60));
             if (var4_ref_bb != null &&
@@ -137,7 +137,7 @@ final class dd implements dr {
             if (!dd.a(0)) {
               return false;
             }
-            if (od.field_Db == 0) {
+            if (SimArmedHuman.field_Db == 0) {
               PacketBuffer.field_k = jp.field_e;
               jp.field_e = ij.field_d;
               ij.field_d = op.field_i;
@@ -145,9 +145,9 @@ final class dd implements dr {
               fd.field_F = -1;
               return true;
             }
-            var4 = od.field_Db;
+            var4 = SimArmedHuman.field_Db;
             if (0.0 != la.field_n) {
-              var4 = (int)((double)var4 + c.field_c.nextGaussian() * la.field_n);
+              var4 = (int)((double)var4 + TertiaryLinkDeque.field_c.nextGaussian() * la.field_n);
               if (var4 < 0) {
                 var4 = 0;
               }

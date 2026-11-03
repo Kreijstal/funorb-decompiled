@@ -147,7 +147,7 @@ final class sa extends IntrusiveNode {
         IntrusiveNode var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
-        lm var3 = null;
+        SimHuman var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -161,9 +161,9 @@ final class sa extends IntrusiveNode {
           this.field_m = this.field_m + 1;
           if (fieldTemp$0 > 10) {
             this.field_m = 0;
-            var2 = this.field_i.field_u.c(87);
-            while (var2 instanceof ek) {
-              stackOut_7_0 = var2 instanceof lm;
+            var2 = this.field_i.entities.c(87);
+            while (var2 instanceof SimEntity) {
+              stackOut_7_0 = var2 instanceof SimHuman;
               stackIn_17_0 = stackOut_7_0 ? 1 : 0;
               stackIn_8_0 = stackOut_7_0;
               if (var6 != 0) {
@@ -171,9 +171,9 @@ final class sa extends IntrusiveNode {
                 break;
               }
               if (stackIn_8_0) {
-                var3 = (lm) (var2);
-                var4 = var3.e((byte) -112) - this.field_p;
-                var5 = var3.g(1829947600) - this.field_o;
+                var3 = (SimHuman) (var2);
+                var4 = var3.getX((byte) -112) - this.field_p;
+                var5 = var3.getY(1829947600) - this.field_o;
                 if (var4 * var4 + var5 * var5 < 66564) {
                   var3.a(-12, this);
                 }
@@ -318,7 +318,7 @@ final class sa extends IntrusiveNode {
                   var20 = param0.field_p[var18];
                   var21 = param0.field_b[var18];
                   eb.field_J[var18] = var20 * var12 + (var19 * var9 + var21 * var15) >> 16;
-                  bq.field_g[var18] = var21 * var16 + var20 * var13 + var10 * var19 >> 16;
+                  SectorCacheStore.field_g[var18] = var21 * var16 + var20 * var13 + var10 * var19 >> 16;
                   wp.field_i[var18] = var19 * var11 + var20 * var14 + var21 * var17 >> 16;
                   var18++;
                   break scanLoop1;
@@ -405,7 +405,7 @@ final class sa extends IntrusiveNode {
                 var20 = param0.field_p[var18];
                 var21 = param0.field_b[var18];
                 eb.field_J[var18] = var20 * var12 + (var19 * var9 + var21 * var15) >> 16;
-                bq.field_g[var18] = var21 * var16 + var20 * var13 + var10 * var19 >> 16;
+                SectorCacheStore.field_g[var18] = var21 * var16 + var20 * var13 + var10 * var19 >> 16;
                 wp.field_i[var18] = var19 * var11 + var20 * var14 + var21 * var17 >> 16;
                 var18++;
               } while (var30 == 0);
@@ -457,7 +457,7 @@ final class sa extends IntrusiveNode {
         }
     }
 
-    sa(ge param0, int param1, int param2, int param3) {
+    sa(SimZombie param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -465,7 +465,7 @@ final class sa extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         this.field_m = 0;
         try {
-          this.field_i = param0.field_A;
+          this.field_i = param0.simulation;
           this.field_k = 0;
           this.field_l = param3;
           this.field_p = param1;

@@ -834,14 +834,14 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var8 = we.a((byte) -114, "@", var7, "%40");
             var9 = we.a((byte) -74, "&", var8, "%26");
             var10 = we.a((byte) 85, "#", var9, "%23");
-            if (null == aq.field_w) {
+            if (null == NetworkGameClient.field_w) {
               return;
             }
             stackIn_14_0 = kk.field_y;
             stackIn_14_1 = -12;
             stackIn_14_2 = null;
             stackIn_14_3 = null;
-            stackIn_14_4 = aq.field_w.getCodeBase();
+            stackIn_14_4 = NetworkGameClient.field_w.getCodeBase();
             stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(pn.field_b).append("&u=");
             if (il.field_j == null) {
               stackIn_15_2 = null;

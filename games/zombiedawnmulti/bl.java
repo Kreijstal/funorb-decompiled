@@ -29,7 +29,7 @@ final class bl {
         return RandomAccessCacheFile.field_e - IntrusiveDequeCursor.field_i;
     }
 
-    final static Sprite a(byte param0, int param1, ul param2, int param3) {
+    final static Sprite a(byte param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite stackIn_5_0 = null;

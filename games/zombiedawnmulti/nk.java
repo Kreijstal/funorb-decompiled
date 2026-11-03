@@ -11,7 +11,7 @@ final class nk extends IntrusiveNode {
     private int field_o;
     private IntrusiveDeque field_l;
     private int field_p;
-    private ge field_t;
+    private SimZombie field_t;
     private int field_i;
     private GameSimulation field_m;
     static ea field_h;
@@ -20,7 +20,7 @@ final class nk extends IntrusiveNode {
 
     final static void a(int param0, double param1, int param2, int param3, double param4) {
         IntrusiveDeque discarded$0 = null;
-        if (od.field_Db == 0 &&
+        if (SimArmedHuman.field_Db == 0 &&
           param2 > 0) {
           he.field_k = new IntrusiveDeque();
         } else {
@@ -28,7 +28,7 @@ final class nk extends IntrusiveNode {
             he.field_k = null;
           }
         }
-        od.field_Db = param2;
+        SimArmedHuman.field_Db = param2;
         la.field_n = param1;
         if (param3 == ab.field_o &&
           param0 > 0) {
@@ -41,7 +41,7 @@ final class nk extends IntrusiveNode {
         ab.field_o = param0;
     }
 
-    final static ae a(int param0, ga param1) {
+    final static GameEvent a(int param0, ga param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -69,7 +69,7 @@ final class nk extends IntrusiveNode {
           var7 = param1.readUnsignedShort((byte) 69);
           var8 = param1.readUnsignedShort((byte) 69);
           stackIn_3_0 = td.a(var5, var2_int, var4, (byte) 125, var8, var6, var7, var3);
-          return (ae) ((Object) stackIn_3_0);
+          return (GameEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -84,8 +84,8 @@ final class nk extends IntrusiveNode {
         }
     }
 
-    nk(ge param0, int param1, int param2, boolean param3) {
-        this(param0.field_A, param1, param2, param3);
+    nk(SimZombie param0, int param1, int param2, boolean param3) {
+        this(param0.simulation, param1, param2, param3);
         try {
           this.field_t = param0;
           this.field_l.a(this.field_t, false);
@@ -210,14 +210,14 @@ final class nk extends IntrusiveNode {
         int var2;
         IntrusiveNode var3;
         IntrusiveNode var4;
-        ek var5;
+        SimEntity var5;
         int var6;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         this.field_p = this.field_p + 6;
         if (this.field_r < this.field_p) {
           if (this.field_k) {
-            this.field_m.field_b.field_i.a((byte) 122);
-            this.field_m.field_b.a(48);
+            this.field_m.navigation.field_i.a((byte) 122);
+            this.field_m.navigation.a(48);
           }
           this.unlink(true);
         }
@@ -231,20 +231,20 @@ final class nk extends IntrusiveNode {
           if (((ha) (var3)).field_f < var2) {
             var3.unlink(true);
             var5 = ((ha) (var3)).field_m;
-            if (!(var5 instanceof ge)) {
-              if (var5 instanceof lm) {
+            if (!(var5 instanceof SimZombie)) {
+              if (var5 instanceof SimHuman) {
                 if (!this.field_g) {
-                  ((lm) (var5)).a(800, true);
+                  ((SimHuman) (var5)).a(800, true);
                 } else {
-                  ((lm) (var5)).c(false);
+                  ((SimHuman) (var5)).c(false);
                 }
               }
             } else {
               if (var5 != this.field_t &&
                 !this.field_g) {
-                ((ge) (var5)).d(400, -118);
+                ((SimZombie) (var5)).d(400, -118);
               } else {
-                ((ge) (var5)).m((byte) 42);
+                ((SimZombie) (var5)).m((byte) 42);
                 this.field_t = null;
               }
             }
@@ -306,7 +306,7 @@ final class nk extends IntrusiveNode {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ge var13 = null;
+        SimZombie var13 = null;
         this.field_k = false;
         try {
           stackIn_4_1 = (param3);
@@ -318,7 +318,7 @@ final class nk extends IntrusiveNode {
             stackIn_7_1 = 90;
           }
           this.field_r = stackIn_7_1;
-          if (!this.field_m.field_b.a(-128, param2, param1)) {
+          if (!this.field_m.navigation.a(-128, param2, param1)) {
             param2 = param2 - (param2 % 24 - 4);
           }
           this.field_p = 0;
@@ -326,18 +326,18 @@ final class nk extends IntrusiveNode {
           this.field_o = param1;
           this.field_l = new IntrusiveDeque();
           var5_int = this.field_r * this.field_r;
-          var6 = this.field_m.field_u.c(76);
-          while (var6 instanceof ek) {
+          var6 = this.field_m.entities.c(76);
+          while (var6 instanceof SimEntity) {
             boolean decompiledFrameRemainder0 = true;
-            if (((!(var6 instanceof ge) ||
-              9 == ((ge) (var6)).field_Q) &&
+            if (((!(var6 instanceof SimZombie) ||
+              9 == ((SimZombie) (var6)).state) &&
               !(var6 instanceof fd)) &&
-              (decompiledFrameRemainder0 = !(!(var6 instanceof lm)))) {
-              decompiledFrameRemainder0 = (((lm) (var6)).field_Q != 2);
+              (decompiledFrameRemainder0 = !(!(var6 instanceof SimHuman)))) {
+              decompiledFrameRemainder0 = (((SimHuman) (var6)).state != 2);
             }
             if (decompiledFrameRemainder0) {
-              var7 = ((ek) (var6)).e((byte) -112);
-              var8 = ((ek) (var6)).g(1829947600);
+              var7 = ((SimEntity) (var6)).getX((byte) -112);
+              var8 = ((SimEntity) (var6)).getY(1829947600);
               var9 = this.field_o - var7;
               var10 = -var8 + this.field_i;
               var11 = var10 * var10 + var9 * var9;
@@ -345,7 +345,7 @@ final class nk extends IntrusiveNode {
               var12 = stackIn_19_0;
               if (!(var6 instanceof fd)) {
                 stackIn_29_0 = var12;
-                if (this.field_m.field_b.a(var8, -34, var7, this.field_i, this.field_o) == -1) {
+                if (this.field_m.navigation.a(var8, -34, var7, this.field_i, this.field_o) == -1) {
                   stackIn_30_1 = 0;
                 } else {
                   stackIn_30_1 = 1;
@@ -353,10 +353,10 @@ final class nk extends IntrusiveNode {
                 var12 = stackIn_29_0 & stackIn_30_1;
               } else {
                 stackIn_24_0 = var12;
-                if (-1 == this.field_m.field_b.a(-24 + (-24 + (var8 - 2)), 98, var7, this.field_i, this.field_o) &&
-                  this.field_m.field_b.a(-48 + var8 - 2, -58, var7 + 24, this.field_i, this.field_o) == -1 &&
-                  -1 == this.field_m.field_b.a(var8 + 2, -124, var7, this.field_i, this.field_o) &&
-                  this.field_m.field_b.a(2 + var8, 107, 24 + var7, this.field_i, this.field_o) == -1) {
+                if (-1 == this.field_m.navigation.a(-24 + (-24 + (var8 - 2)), 98, var7, this.field_i, this.field_o) &&
+                  this.field_m.navigation.a(-48 + var8 - 2, -58, var7 + 24, this.field_i, this.field_o) == -1 &&
+                  -1 == this.field_m.navigation.a(var8 + 2, -124, var7, this.field_i, this.field_o) &&
+                  this.field_m.navigation.a(2 + var8, 107, 24 + var7, this.field_i, this.field_o) == -1) {
                   stackIn_26_1 = 0;
                 } else {
                   stackIn_26_1 = 1;
@@ -364,15 +364,15 @@ final class nk extends IntrusiveNode {
                 var12 = stackIn_24_0 & stackIn_26_1;
               }
               if (var12 != 0) {
-                if (var6 instanceof ge) {
-                  var13 = (ge) (var6);
+                if (var6 instanceof SimZombie) {
+                  var13 = (SimZombie) (var6);
                   if (this.field_m.world.b(0, var13.field_gb)) {
                     this.field_m.a((byte) -100, var13);
                     decompiledFrameRemainder0 = false;
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  this.field_l.a(new ha((ek) (var6), var11), false);
+                  this.field_l.a(new ha((SimEntity) (var6), var11), false);
                 }
               }
             }

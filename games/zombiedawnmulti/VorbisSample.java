@@ -128,7 +128,7 @@ final class VorbisSample extends IntrusiveNode {
         return var1;
     }
 
-    private final static boolean a(ul param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_u) {
           var1 = param0.a(0, true, 0);
@@ -148,7 +148,7 @@ final class VorbisSample extends IntrusiveNode {
         return var0;
     }
 
-    final static VorbisSample a(ul param0, int param1, int param2) {
+    final static VorbisSample a(ResourceArchive param0, int param1, int param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {
@@ -242,7 +242,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = mb.a((byte) -31, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = lm.a(var11, -19863, var10);
+            var9[var11] = SimHuman.reverseBits(var11, -19863, var10);
           }
           if (var1 == 0) {
             field_H = var6_ref_float__;
@@ -700,7 +700,7 @@ final class VorbisSample extends IntrusiveNode {
         return (float[]) (var17);
     }
 
-    final static VorbisSample a(ul param0, String param1, String param2) {
+    final static VorbisSample a(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.a(param0)) {

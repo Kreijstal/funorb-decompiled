@@ -162,7 +162,7 @@ final class jj extends id {
         return false;
     }
 
-    final static String a(String param0, byte param1, ul param2, String param3) {
+    final static String a(String param0, byte param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
@@ -237,7 +237,7 @@ final class jj extends id {
         this.field_Q = param3;
         this.field_N = this.field_G ? 255 : 96;
         this.field_K = 3;
-        this.field_P = null == op.field_m ? 3000 : op.field_m.a((byte) 32, this.field_Q, 3000);
+        this.field_P = null == op.field_m ? 3000 : op.field_m.computeEffectDuration((byte) 32, this.field_Q, 3000);
         this.field_G = param4 ? true : false;
         this.field_J = 1;
     }

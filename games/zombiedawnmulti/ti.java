@@ -78,7 +78,7 @@ abstract class ti extends id {
           if (this instanceof gm) {
             var3 = var3 * 2;
           }
-          this.field_G = op.field_m.a((byte) 32, param0, var3);
+          this.field_G = op.field_m.computeEffectDuration((byte) 32, param0, var3);
           return;
         }
     }

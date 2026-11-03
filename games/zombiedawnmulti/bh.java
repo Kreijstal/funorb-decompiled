@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bh {
-    static vp field_a;
+    static PcmStreamMixer field_a;
     static sc field_f;
     static IntrusiveDeque field_d;
     static String[] field_b;
@@ -58,7 +58,7 @@ final class bh {
               var3 = "[" + ne.field_vb + "] ";
             }
             if (param1.field_l == 1) {
-              var3 = "[" + vl.a(ae.field_g, new String[]{param1.field_g}, 2) + "] ";
+              var3 = "[" + vl.a(GameEvent.field_g, new String[]{param1.field_g}, 2) + "] ";
             }
             if (param1.field_l == 4 &&
               null != bp.field_t) {
@@ -211,7 +211,7 @@ final class bh {
                 var9 = 0;
                 break;
               }
-              param2 = param2 + (od.field_Gb[param7] & 255);
+              param2 = param2 + (SimArmedHuman.field_Gb[param7] & 255);
             } else {
               var10_int = 0;
               while (!(qo.field_r.length <= var10_int)) {
@@ -272,9 +272,9 @@ final class bh {
                 var12 = stackIn_49_0;
               } else {
                 if (param7 != -1) {
-                  stackIn_40_0 = ((mh.field_c.field_Zb[param7] & 255) != var11) ? 0 : 1;
+                  stackIn_40_0 = ((JaggrabDownloader.field_c.field_Zb[param7] & 255) != var11) ? 0 : 1;
                 } else {
-                  stackIn_40_0 = (qo.field_r[var11] != mh.field_c.field_mc) ? 0 : 1;
+                  stackIn_40_0 = (qo.field_r[var11] != JaggrabDownloader.field_c.field_mc) ? 0 : 1;
                 }
                 var12 = stackIn_40_0;
               }

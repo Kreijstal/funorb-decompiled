@@ -561,14 +561,14 @@ final class rp {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (1 == ge.field_zb) {
-                ge.field_zb = 2;
+              if (1 == SimZombie.field_zb) {
+                SimZombie.field_zb = 2;
               }
               return;
             }
             if (3 == var2) {
-              if (2 == ge.field_zb) {
-                ge.field_zb = 1;
+              if (2 == SimZombie.field_zb) {
+                SimZombie.field_zb = 1;
               }
               return;
             }
@@ -578,7 +578,7 @@ final class rp {
               var3Lifetime1 = 67 % ((-12 - param0) / 48);
               return;
             }
-            ge.field_zb = 1;
+            SimZombie.field_zb = 1;
             var3_ref = var1.readString((byte) -119);
             ta.field_ob = ((String) (var3_ref)).intern();
             var4 = var1.readUnsignedByte(31365);

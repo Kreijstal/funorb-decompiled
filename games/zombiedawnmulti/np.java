@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class np extends ae {
+final class np extends GameEvent {
     static GameScreen field_m;
     private int field_k;
     private int field_q;

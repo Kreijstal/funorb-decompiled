@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cn extends ng {
-    private be field_s;
+    private ArchiveIndex field_s;
     private byte[] field_A;
     static String field_C;
-    private bq field_x;
+    private SectorCacheStore field_x;
     private f field_p;
     private byte[] field_k;
     private qb field_h;
     static ao field_j;
-    private bq field_t;
+    private SectorCacheStore field_t;
     private qc field_l;
     private ai field_z;
     private int field_B;
@@ -126,12 +126,12 @@ final class cn extends ng {
           var2 = this.field_q.b(6);
         }
         if (param0 <= 64) {
-          cn.a((ul) null, -84, (byte[]) null, (int[]) null, (byte[]) null, -44, (String[]) null, (ul) null, (IndexedSprite[]) null, (ul) null, 116, (Sprite[][]) null, true, (String[][]) null, (int[]) null, (Sprite[][]) null, (String[][]) null);
+          cn.a((ResourceArchive) null, -84, (byte[]) null, (int[]) null, (byte[]) null, -44, (String[]) null, (ResourceArchive) null, (IndexedSprite[]) null, (ResourceArchive) null, 116, (Sprite[][]) null, true, (String[][]) null, (int[]) null, (Sprite[][]) null, (String[][]) null);
         }
         return;
     }
 
-    final be a(byte param0) {
+    final ArchiveIndex a(byte param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -164,7 +164,7 @@ final class cn extends ng {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_s = new be(var7, this.field_o, this.field_k);
+            this.field_s = new ArchiveIndex(var7, this.field_o, this.field_k);
             if (this.field_w != this.field_s.field_h) {
               throw new RuntimeException();
             }
@@ -184,7 +184,7 @@ final class cn extends ng {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_s = new be(var7, this.field_o, this.field_k);
+            this.field_s = new ArchiveIndex(var7, this.field_o, this.field_k);
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
@@ -208,7 +208,7 @@ final class cn extends ng {
         return this.field_s;
     }
 
-    final static Sprite[] a(boolean param0, String param1, ul param2, String param3) {
+    final static Sprite[] a(boolean param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -290,7 +290,7 @@ final class cn extends ng {
         IntrusiveNode var3Lifetime1;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != -2) {
-          this.field_t = (bq) null;
+          this.field_t = (SectorCacheStore) null;
         }
         boolean decompiledFrameRemainder0 = true;
         if (null != this.field_v) {
@@ -594,7 +594,7 @@ final class cn extends ng {
         return -var3 + (var3 + param2) / param0;
     }
 
-    final static void a(ul param0, int param1, byte[] param2, int[] param3, byte[] param4, int param5, String[] param6, ul param7, IndexedSprite[] param8, ul param9, int param10, Sprite[][] param11, boolean param12, String[][] param13, int[] param14, Sprite[][] param15, String[][] param16) {
+    final static void a(ResourceArchive param0, int param1, byte[] param2, int[] param3, byte[] param4, int param5, String[] param6, ResourceArchive param7, IndexedSprite[] param8, ResourceArchive param9, int param10, Sprite[][] param11, boolean param12, String[][] param13, int[] param14, Sprite[][] param15, String[][] param16) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -629,7 +629,7 @@ final class cn extends ng {
         try {
           if (param1 != 0) {
             var18 = (String) null;
-            cn.a(true, (String) null, (ul) null, (String) null);
+            cn.a(true, (String) null, (ResourceArchive) null, (String) null);
           }
           var19 = (String[]) null;
           SecondaryNodeDeque.a(param7, param4, 1, (String[]) null, param14, param5, param11, param6, true, param16, param10, param13, param0, param2, param3, param8, param15, param9, param12);
@@ -742,7 +742,7 @@ final class cn extends ng {
         field_u = null;
     }
 
-    cn(int param0, bq param1, bq param2, qb param3, ai param4, int param5, byte[] param6, int param7, boolean param8) {
+    cn(int param0, SectorCacheStore param1, SectorCacheStore param2, qb param3, ai param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

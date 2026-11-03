@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj extends ae {
+final class aj extends GameEvent {
     static String field_l;
     static int field_j;
     static String field_i;
@@ -108,13 +108,13 @@ final class aj extends ae {
               var4 = var4 + ImageProducerRasterBuffer.field_l;
             } else {
               var6 = vh.a(true, -121, eo.field_e[var3_int]);
-              var7 = aq.field_x - (var6 >> 1);
+              var7 = NetworkGameClient.field_x - (var6 >> 1);
               var4 = var4 + pb.field_b;
-              if (IntrusiveDeque.a(param0, -GameCharacter.field_db + var7, param2, (GameCharacter.field_db << 1) + var6, var4, po.field_n + (ne.field_tb << 1), 93)) {
+              if (IntrusiveDeque.a(param0, -GameCharacter.field_db + var7, param2, (GameCharacter.field_db << 1) + var6, var4, MusicPatch.field_n + (ne.field_tb << 1), 93)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + ((ne.field_tb << 1) + (pb.field_b + po.field_n));
+              var4 = var4 + ((ne.field_tb << 1) + (pb.field_b + MusicPatch.field_n));
             }
             var3_int++;
           }

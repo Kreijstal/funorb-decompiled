@@ -39,7 +39,7 @@ final class sf {
           }
           var2_int = re.a(param1, 0, (byte) 77);
           if (var2_int == 3) {
-            stackIn_16_0 = gd.a(param1, (byte) 46);
+            stackIn_16_0 = MidiPcmStream.a(param1, (byte) 46);
             return (fc) ((Object) stackIn_16_0);
           }
           if (4 == var2_int) {
@@ -96,7 +96,7 @@ final class sf {
             stackIn_6_0 = hf.field_b;
             return stackIn_6_0;
           }
-          if (ge.field_zb != 2) {
+          if (SimZombie.field_zb != 2) {
             stackIn_9_0 = bg.field_d;
             return stackIn_9_0;
           }

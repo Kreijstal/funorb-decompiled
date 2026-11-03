@@ -34,7 +34,7 @@ final class ka {
           if (this.field_a == ie.field_sb) {
             return 1;
           }
-          if (ge.field_zb != 2) {
+          if (SimZombie.field_zb != 2) {
             if (param0) {
               return 0;
             }
@@ -53,7 +53,7 @@ final class ka {
         if (this.field_a == ie.field_sb) {
           return 1;
         }
-        if (ge.field_zb == 2 &&
+        if (SimZombie.field_zb == 2 &&
           kj.a((byte) -94, this.field_e)) {
           return 1;
         }
@@ -83,9 +83,9 @@ final class ka {
         field_c = null;
     }
 
-    final static IndexedSprite a(int param0, int param1, int param2, ul param3) {
+    final static IndexedSprite a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
-        ul var5 = null;
+        ResourceArchive var5 = null;
         IndexedSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -96,8 +96,8 @@ final class ka {
             return null;
           }
           if (param0 != -1) {
-            var5 = (ul) null;
-            ka.a(-91, -49, -2, (ul) null);
+            var5 = (ResourceArchive) null;
+            ka.a(-91, -49, -2, (ResourceArchive) null);
           }
           stackIn_6_0 = lc.c((byte) 89);
           return stackIn_6_0;
@@ -117,10 +117,10 @@ final class ka {
 
     ka(boolean param0) {
         this.field_l = wc.field_N;
-        this.field_h = of.field_g;
+        this.field_h = BufferedFile.field_g;
         this.field_g = sn.field_Ib;
         this.field_k = fe.field_R;
-        this.field_a = ek.field_K;
+        this.field_a = SimEntity.field_K;
         this.field_n = kk.field_s;
         this.field_o = ti.field_W;
         this.field_d = pg.field_b;

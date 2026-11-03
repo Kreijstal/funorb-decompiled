@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class lm extends pa {
+abstract class SimHuman extends SimUnit {
     static Sprite field_fb;
     private int[] field_ub;
     private int field_kb;
@@ -13,7 +13,7 @@ abstract class lm extends pa {
     private int field_tb;
     int field_lb;
     private boolean field_vb;
-    ge field_nb;
+    SimZombie field_nb;
     private boolean field_wb;
     static cj field_gb;
     private int field_rb;
@@ -44,7 +44,7 @@ abstract class lm extends pa {
         return false;
     }
 
-    final boolean a(boolean param0, pa param1) {
+    final boolean a(boolean param0, SimUnit param1) {
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -61,10 +61,10 @@ abstract class lm extends pa {
           this.field_kb = 200;
           stackIn_3_1 = (param0);
           this.field_wb = stackIn_3_1;
-          var3_int = (param1.e((byte) -112) + this.e((byte) -112)) / 2;
-          var4 = (param1.g(1829947600) + this.g(1829947600)) / 2;
-          var5 = var3_int - this.e((byte) -112);
-          var6 = -this.g(1829947600) + var4;
+          var3_int = (param1.getX((byte) -112) + this.getX((byte) -112)) / 2;
+          var4 = (param1.getY(1829947600) + this.getY(1829947600)) / 2;
+          var5 = var3_int - this.getX((byte) -112);
+          var6 = -this.getY(1829947600) + var4;
           var7 = 400;
           if (var7 <= var5 * var5 + var6 * var6) {
             var8 = 8;
@@ -73,22 +73,22 @@ abstract class lm extends pa {
               var4 = var4 + (12 + (hp.a((byte) 108, g.field_a, 2 * var8) - var8));
             }
             if (this.a((byte) 125, var4, var3_int) &&
-              this.field_A.field_b.a(this.g(1829947600), this.e((byte) -112), -17201, var3_int, var4, false, false) != -1) {
-              this.b(this.field_N, -94, this.field_ab);
-              this.field_N = var3_int;
-              this.field_ab = var4;
-              this.b(this.field_ab, (byte) -61, this.field_N);
+              this.simulation.navigation.a(this.getY(1829947600), this.getX((byte) -112), -17201, var3_int, var4, false, false) != -1) {
+              this.b(this.targetX, -94, this.targetY);
+              this.targetX = var3_int;
+              this.targetY = var4;
+              this.b(this.targetY, (byte) -61, this.targetX);
             }
           } else {
-            if (this.field_N == this.e((byte) -112) &&
-              this.field_ab == this.g(1829947600)) {
+            if (this.targetX == this.getX((byte) -112) &&
+              this.targetY == this.getY(1829947600)) {
               return true;
             }
-            this.field_N = this.e((byte) -112);
-            this.field_ab = this.g(1829947600);
+            this.targetX = this.getX((byte) -112);
+            this.targetY = this.getY(1829947600);
           }
-          this.c(93, 28672 * this.field_M);
-          this.field_S = true;
+          this.moveToward(93, 28672 * this.speedMultiplier);
+          this.needsSync = true;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,29 +104,29 @@ abstract class lm extends pa {
         }
     }
 
-    final ge a(boolean param0, int param1, int param2) {
+    final SimZombie findVisibleZombie(boolean param0, int param1, int param2) {
         IntrusiveNode var4;
         int var8;
-        ge var5;
+        SimZombie var5;
         int var6;
         int var7;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param2 != 5690) {
           this.field_qb = (int[]) null;
         }
-        var4 = this.field_A.field_u.c(57);
-        while (var4 instanceof ek) {
-          if (!(var4 instanceof ge)) {
+        var4 = this.simulation.entities.c(57);
+        while (var4 instanceof SimEntity) {
+          if (!(var4 instanceof SimZombie)) {
             var4 = var4.previous;
             continue;
           }
-          var5 = (ge) (var4);
+          var5 = (SimZombie) (var4);
           if (var5 != null &&
             var5.o(param2 ^ 5700)) {
-            var6 = var5.e((byte) -112) - this.e((byte) -112);
-            var7 = var5.g(param2 ^ 1829953258) - this.g(1829947600);
+            var6 = var5.getX((byte) -112) - this.getX((byte) -112);
+            var7 = var5.getY(param2 ^ 1829953258) - this.getY(1829947600);
             if (var6 * var6 + var7 * var7 < param1 * param1 && (param0 ||
-              this.field_A.field_b.a(var5.g(1829947600), var5.e((byte) -112), param2 ^ -21771, this.e((byte) -112), this.g(param2 + 1829941910), false, true) != -1)) {
+              this.simulation.navigation.a(var5.getY(1829947600), var5.getX((byte) -112), param2 ^ -21771, this.getX((byte) -112), this.getY(param2 + 1829941910), false, true) != -1)) {
               return var5;
             }
           }
@@ -200,23 +200,23 @@ abstract class lm extends pa {
         return false;
     }
 
-    final boolean d(boolean param0) {
-        this.m((byte) 99);
+    final boolean startFleeing(boolean param0) {
+        this.resetFleePoints((byte) 99);
         if (param0) {
-          this.q(-67);
+          this.becomeIdle(-67);
         }
-        int var2 = this.l(-18812);
+        int var2 = this.chooseFleePoint(-18812);
         if (var2 == -1) {
           return false;
         }
         this.field_kb = 20;
         this.field_wb = false;
-        this.field_N = this.field_ub[var2];
-        this.field_ab = this.field_qb[var2];
-        this.b(this.e((byte) -112), -80, this.g(1829947600));
-        this.b(this.field_ab, (byte) -61, this.field_N);
-        this.c(-50, this.field_M * this.field_cb);
-        this.a(1, (byte) -89);
+        this.targetX = this.field_ub[var2];
+        this.targetY = this.field_qb[var2];
+        this.b(this.getX((byte) -112), -80, this.getY(1829947600));
+        this.b(this.targetY, (byte) -61, this.targetX);
+        this.moveToward(-50, this.speedMultiplier * this.baseSpeed);
+        this.setState(1, (byte) -89);
         return true;
     }
 
@@ -231,12 +231,12 @@ abstract class lm extends pa {
         if (param0 != -7) {
           this.b(-71, -11, -39);
         }
-        ek var3 = (ek) (this.field_A.field_u.c(100));
+        SimEntity var3 = (SimEntity) (this.simulation.entities.c(100));
         while (var3 != null) {
-          if (var3 instanceof ge &&
-            ((ge) (var3)).p((byte) 56)) {
-            var4 = this.field_ub[-1 + this.field_lb] - var3.e((byte) -112);
-            var5 = this.field_qb[-1 + this.field_lb] - var3.g(1829947600);
+          if (var3 instanceof SimZombie &&
+            ((SimZombie) (var3)).p((byte) 56)) {
+            var4 = this.field_ub[-1 + this.field_lb] - var3.getX((byte) -112);
+            var5 = this.field_qb[-1 + this.field_lb] - var3.getY(1829947600);
             var6 = var4 * var4;
             var7 = var5 * var5;
             var8 = 90000;
@@ -245,17 +245,17 @@ abstract class lm extends pa {
               break;
             }
           }
-          var3 = (ek) (this.field_A.field_u.b(~param0));
+          var3 = (SimEntity) (this.simulation.entities.b(~param0));
         }
         return var2 != 0;
     }
 
     final void c(boolean param0) {
-        this.a(32, (byte) -89);
+        this.setState(32, (byte) -89);
         if (param0) {
-          this.m((byte) -45);
+          this.resetFleePoints((byte) -45);
         }
-        this.field_S = true;
+        this.needsSync = true;
     }
 
     private final void b(int param0, int param1, int param2) {
@@ -271,26 +271,26 @@ abstract class lm extends pa {
     }
 
     final void j(byte param0) {
-        this.a(20, (byte) -89);
+        this.setState(20, (byte) -89);
         if (param0 <= 101) {
           this.field_lb = -17;
         }
     }
 
-    private final int l(int param0) {
+    private final int chooseFleePoint(int param0) {
         int var5 = 0;
         int stackIn_3_0 = 0;
         int var2;
         int var3;
         int var4;
-        c var6;
-        ek var7;
+        TertiaryLinkDeque var6;
+        SimEntity var7;
         int var8;
         int var9;
         int var3Lifetime1;
         int var4Lifetime1;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (!this.field_A.field_l) {
+        if (!this.simulation.field_l) {
           stackIn_3_0 = 0;
         } else {
           stackIn_3_0 = this.m(-7) ? 1 : 0;
@@ -300,19 +300,19 @@ abstract class lm extends pa {
           regionExit1: {
             ClientException.field_a[var3] = 0;
             if (~(-1 + this.field_lb) != ~var3 && (!this.a((byte) 108, this.field_qb[var3], this.field_ub[var3]) ||
-              -1 == this.field_A.field_b.a(this.field_qb[var3], 95, this.field_ub[var3], this.g(1829947600), this.e((byte) -112)))) {
+              -1 == this.simulation.navigation.a(this.field_qb[var3], 95, this.field_ub[var3], this.getY(1829947600), this.getX((byte) -112)))) {
               ClientException.field_a[var3] = -1;
               break regionExit1;
             }
-            for (var4 = this.field_C - 1; 1 + this.field_C >= var4; var4++) {
-              for (var5 = this.field_B - 1; 1 + this.field_B >= var5; var5++) {
-                var6 = this.field_A.a(true, var4, var5);
+            for (var4 = this.cellX - 1; 1 + this.cellX >= var4; var4++) {
+              for (var5 = this.cellY - 1; 1 + this.cellY >= var5; var5++) {
+                var6 = this.simulation.getCell(true, var4, var5);
                 if (var6 != null &&
-                  var6.b(param0 ^ -18812) != 0) {
-                  var7 = (ek) (var6.a(false));
+                  var6.size(param0 ^ -18812) != 0) {
+                  var7 = (SimEntity) (var6.first(false));
                   while (var7 != null) {
-                    this.a(var2 != 0, var7, var3, 2);
-                    var7 = (ek) (var6.c(-1));
+                    this.scoreFleePoint(var2 != 0, var7, var3, 2);
+                    var7 = (SimEntity) (var6.next(-1));
                   }
                 }
               }
@@ -338,13 +338,13 @@ abstract class lm extends pa {
         return var3Lifetime1;
     }
 
-    final void j(int param0) {
-        this.a(param0, (byte) -89);
-        this.field_A.world.c(-112);
-        super.j(18);
+    final void remove(int param0) {
+        this.setState(param0, (byte) -89);
+        this.simulation.world.c(-112);
+        super.remove(18);
     }
 
-    final void h(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$7 = 0;
@@ -364,9 +364,9 @@ abstract class lm extends pa {
           this.p(110);
         }
         regionExit1: {
-          super.h(38);
-          this.b((byte) 120, this.field_Q);
-          if (this.field_Q == 0) {
+          super.tick(38);
+          this.advanceAnimation((byte) 120, this.state);
+          if (this.state == 0) {
             fieldTemp$0 = this.field_ib + 1;
             this.field_ib = this.field_ib + 1;
             if (this.field_rb < fieldTemp$0) {
@@ -385,7 +385,7 @@ abstract class lm extends pa {
               }
             }
             if (!this.field_vb) {
-              this.field_V = 0;
+              this.animationFrame = 0;
             }
             fieldTemp$1 = this.field_kb;
             this.field_kb = this.field_kb + 1;
@@ -394,66 +394,66 @@ abstract class lm extends pa {
               this.l((byte) 111);
             }
           } else {
-            if (this.field_Q == 2) {
-              this.h((byte) 70);
-              if (this.field_V >= 4) {
-                if (this.field_V != 4) {
-                  if (this.field_V == 6) {
-                    this.a(0, (byte) -89);
-                    this.b(this.g(1829947600), (byte) -61, this.e((byte) -112));
+            if (this.state == 2) {
+              this.applyVelocity((byte) 70);
+              if (this.animationFrame >= 4) {
+                if (this.animationFrame != 4) {
+                  if (this.animationFrame == 6) {
+                    this.setState(0, (byte) -89);
+                    this.b(this.getY(1829947600), (byte) -61, this.getX((byte) -112));
                   }
                 } else {
                   fieldTemp$7 = this.field_xb;
                   this.field_xb = this.field_xb + 1;
                   if (fieldTemp$7 >= 400) {
-                    this.field_V = this.field_V + 1;
+                    this.animationFrame = this.animationFrame + 1;
                   }
-                  this.field_L = 0;
-                  this.field_W = 0;
-                  this.field_R = 0;
+                  this.animationTicks = 0;
+                  this.velocityY = 0;
+                  this.velocityX = 0;
                 }
               } else {
-                this.field_L = this.field_L + 1;
+                this.animationTicks = this.animationTicks + 1;
               }
-              if (!(this.field_A.field_b.a(this.field_G + this.field_R >> 16, true, true, this.field_W + this.field_E >> 16))) {
-                this.field_E = this.field_E - this.field_W;
-                this.field_G = this.field_G - this.field_R;
-                this.field_R = 0;
-                this.field_W = 0;
+              if (!(this.simulation.navigation.a(this.positionX + this.velocityX >> 16, true, true, this.velocityY + this.positionY >> 16))) {
+                this.positionY = this.positionY - this.velocityY;
+                this.positionX = this.positionX - this.velocityX;
+                this.velocityX = 0;
+                this.velocityY = 0;
               }
               break regionExit1;
             }
-            if (this.field_Q == 1) {
+            if (this.state == 1) {
               fieldTemp$2 = this.field_kb;
               this.field_kb = this.field_kb + 1;
               if (fieldTemp$2 >= 20) {
                 this.field_kb = 0;
                 var2 = 0;
-                var3 = this.field_A.world.field_A.c(106);
+                var3 = this.simulation.world.field_A.c(106);
                 while (var3 instanceof bf) {
                   var2 = var2 != 0 | ((bf) (var3)).a(this, 0) ? 1 : 0;
                   var3 = var3.previous;
                 }
                 if (!this.field_wb &&
                   var2 != 0) {
-                  this.c(-110, this.field_cb >> 2);
+                  this.moveToward(-110, this.baseSpeed >> 2);
                 } else {
                   if (this.field_wb &&
                     var2 == 0) {
-                    this.c(119, this.field_cb);
+                    this.moveToward(119, this.baseSpeed);
                   }
                 }
                 stackIn_53_1 = (var2 != 0);
                 this.field_wb = stackIn_53_1;
               }
-              this.h((byte) 38);
-              if (!(!this.k(2))) {
-                this.a(0, (byte) -89);
+              this.applyVelocity((byte) 38);
+              if (!(!this.stepTowardTarget(2))) {
+                this.setState(0, (byte) -89);
                 this.l((byte) 111);
               }
               break regionExit1;
             }
-            if (this.field_Q == 3) {
+            if (this.state == 3) {
               fieldTemp$3 = this.field_kb;
               this.field_kb = this.field_kb + 1;
               if (!(fieldTemp$3 < 20)) {
@@ -462,32 +462,32 @@ abstract class lm extends pa {
               }
               break regionExit1;
             }
-            if (this.field_Q == 16) {
+            if (this.state == 16) {
               fieldTemp$4 = this.field_kb;
               this.field_kb = this.field_kb + 1;
               if (!(fieldTemp$4 < 20)) {
                 this.field_kb = 0;
                 if (!(!this.field_mb.b(true))) {
                   this.field_mb = null;
-                  this.a(0, (byte) -89);
-                  this.field_S = true;
+                  this.setState(0, (byte) -89);
+                  this.needsSync = true;
                 }
               }
               break regionExit1;
             }
-            if (this.field_Q != 20) {
-              if (this.field_Q == 25) {
+            if (this.state != 20) {
+              if (this.state == 25) {
                 fieldTemp$5 = this.field_tb - 1;
                 this.field_tb = this.field_tb - 1;
                 if (!(fieldTemp$5 > 0)) {
-                  this.a(0, (byte) -89);
-                  this.field_S = true;
+                  this.setState(0, (byte) -89);
+                  this.needsSync = true;
                   this.field_kb = 0;
                 }
                 break regionExit1;
               }
-              if (this.field_Q == 30) {
-                this.h((byte) 42);
+              if (this.state == 30) {
+                this.applyVelocity((byte) 42);
                 fieldTemp$6 = this.field_kb;
                 this.field_kb = this.field_kb + 1;
                 if (20 <= fieldTemp$6) {
@@ -500,7 +500,7 @@ abstract class lm extends pa {
         }
     }
 
-    private final void a(boolean param0, ek param1, int param2, int param3) {
+    private final void scoreFleePoint(boolean param0, SimEntity param1, int param2, int param3) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -510,15 +510,15 @@ abstract class lm extends pa {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ge var9 = null;
+        SimZombie var9 = null;
         try {
           if (param3 != 2) {
             field_pb = 1;
           }
-          if (!(param1 instanceof ge)) {
+          if (!(param1 instanceof SimZombie)) {
             if (param1 instanceof og) {
-              var5_int = this.field_ub[param2] - param1.e((byte) -112);
-              var6 = this.field_qb[param2] - param1.g(param3 ^ 1829947602);
+              var5_int = this.field_ub[param2] - param1.getX((byte) -112);
+              var6 = this.field_qb[param2] - param1.getY(param3 ^ 1829947602);
               var7 = var5_int * var5_int + var6 * var6;
               if (ClientException.field_a[param2] != 0 &&
                 var7 >= ClientException.field_a[param2]) {
@@ -527,14 +527,14 @@ abstract class lm extends pa {
               ClientException.field_a[param2] = var7;
             }
           } else {
-            var9 = (ge) (param1);
+            var9 = (SimZombie) (param1);
             if (var9.q(param3 ^ -126)) {
               if (param0 &&
                 !var9.p((byte) 76)) {
                 return;
               }
-              var6 = this.field_ub[param2] - param1.e((byte) -112);
-              var7 = this.field_qb[param2] - param1.g(1829947600);
+              var6 = this.field_ub[param2] - param1.getX((byte) -112);
+              var7 = this.field_qb[param2] - param1.getY(1829947600);
               var8 = var6 * var6 + var7 * var7;
               if (ClientException.field_a[param2] != 0 &&
                 var8 >= ClientException.field_a[param2]) {
@@ -558,7 +558,7 @@ abstract class lm extends pa {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int reverseBits(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -567,7 +567,7 @@ abstract class lm extends pa {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param1 != -19863) {
-            lm.a(-75, -66, 106);
+            SimHuman.reverseBits(-75, -66, 106);
           }
           var3_int = 0;
           while (param2 > 0) {
@@ -584,7 +584,7 @@ abstract class lm extends pa {
         }
     }
 
-    lm(int param0, int param1, int param2, int param3) {
+    SimHuman(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3);
         this.field_ib = 0;
         this.field_vb = false;
@@ -598,11 +598,11 @@ abstract class lm extends pa {
         this.field_rb = hp.a((byte) 43, g.field_a, 200);
         this.field_ub = new int[43];
         this.field_qb = new int[43];
-        this.m((byte) 119);
+        this.resetFleePoints((byte) 119);
         this.field_kb = hp.a((byte) 20, g.field_a, 20);
     }
 
-    final boolean b(boolean param0, int param1, int param2) {
+    final boolean isZombieWithin(boolean param0, int param1, int param2) {
         int var10 = 0;
         int var11 = 0;
         int stackIn_3_0 = 0;
@@ -612,9 +612,9 @@ abstract class lm extends pa {
         int var7;
         int var8;
         int var9;
-        c var12;
+        TertiaryLinkDeque var12;
         Object var13;
-        ek var14;
+        SimEntity var14;
         int var15;
         int var16;
         int var17;
@@ -624,25 +624,25 @@ abstract class lm extends pa {
         var4 = param1 * param1;
         stackIn_3_0 = (param0) ? 2 : 1;
         var5 = stackIn_3_0;
-        var6 = var5 + this.field_C;
-        var7 = var5 + this.field_B;
-        var8 = this.e((byte) -112);
-        var9 = this.g(1829947600);
-        for (var10 = this.field_C - var5; var6 >= var10; var10++) {
-          for (var11 = this.field_B - var5; var11 <= var7; var11++) {
-            var12 = this.field_A.a(true, var10, var11);
+        var6 = var5 + this.cellX;
+        var7 = var5 + this.cellY;
+        var8 = this.getX((byte) -112);
+        var9 = this.getY(1829947600);
+        for (var10 = this.cellX - var5; var6 >= var10; var10++) {
+          for (var11 = this.cellY - var5; var11 <= var7; var11++) {
+            var12 = this.simulation.getCell(true, var10, var11);
             if (var12 != null) {
-              var13 = var12.a(false);
-              while (var13 instanceof ek) {
-                var14 = (ek) (var13);
-                if (var13 instanceof ge &&
-                  ((ge) (var13)).q(-127) || var14 instanceof og) {
-                  var15 = var14.e((byte) -112);
-                  var16 = var14.g(1829947600);
+              var13 = var12.first(false);
+              while (var13 instanceof SimEntity) {
+                var14 = (SimEntity) (var13);
+                if (var13 instanceof SimZombie &&
+                  ((SimZombie) (var13)).q(-127) || var14 instanceof og) {
+                  var15 = var14.getX((byte) -112);
+                  var16 = var14.getY(1829947600);
                   var17 = -var8 + var15;
                   var18 = var16 - var9;
                   if (var4 > var17 * var17 + var18 * var18 && (param0 ||
-                    this.field_A.field_b.a(var16, var15, -17201, var8, var9, false, true) != -1)) {
+                    this.simulation.navigation.a(var16, var15, -17201, var8, var9, false, true) != -1)) {
                     return true;
                   }
                 }
@@ -658,26 +658,26 @@ abstract class lm extends pa {
     }
 
     final void a(int param0, boolean param1) {
-        if (this.field_Q == 20) {
+        if (this.state == 20) {
           return;
         }
-        this.a(25, (byte) -89);
+        this.setState(25, (byte) -89);
         this.field_tb = param0;
-        this.field_S = param1 ? true : false;
+        this.needsSync = param1 ? true : false;
     }
 
     final void p(int param0) {
         this.field_hb = true;
         this.field_D = !this.k((byte) 122) ? 21 : 22;
         if (param0 < 22) {
-          this.field_nb = (ge) null;
+          this.field_nb = (SimZombie) null;
         }
     }
 
-    final void a(int param0, GameSimulation param1) {
+    final void attachToSimulation(int param0, GameSimulation param1) {
         try {
-          super.a(param0, param1);
-          this.field_sb = this.field_A.field_b.field_p;
+          super.attachToSimulation(param0, param1);
+          this.field_sb = this.simulation.navigation.field_p;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "lm.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -694,14 +694,14 @@ abstract class lm extends pa {
         int[] dupTemp$0 = this.field_sb[param0];
         dupTemp$0[param2] = dupTemp$0[param2] + 1;
         if (param1 != -61) {
-          this.d(true);
+          this.startFleeing(true);
         }
     }
 
-    private final void m(byte param0) {
+    private final void resetFleePoints(byte param0) {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        int var2 = this.e((byte) -112);
-        int var3 = this.g(1829947600);
+        int var2 = this.getX((byte) -112);
+        int var3 = this.getY(1829947600);
         int var4 = 0;
         if (param0 < 90) {
           this.l((byte) 59);
@@ -716,19 +716,19 @@ abstract class lm extends pa {
     }
 
     final void a(int param0, sa param1) {
-        if (this.field_Q == 18 ||
-          20 == this.field_Q ||
-          16 == this.field_Q ||
-          this.field_Q == 2) {
+        if (this.state == 18 ||
+          20 == this.state ||
+          16 == this.state ||
+          this.state == 2) {
           return;
         }
         try {
           if (param0 != -12) {
             field_ob = (String) null;
           }
-          this.a(16, (byte) -89);
+          this.setState(16, (byte) -89);
           this.field_mb = param1;
-          this.field_S = true;
+          this.needsSync = true;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "lm.MA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -757,11 +757,11 @@ abstract class lm extends pa {
         field_jb = null;
     }
 
-    final void q(int param0) {
+    final void becomeIdle(int param0) {
         if (param0 != -22882) {
           this.field_ub = (int[]) null;
         }
-        this.a(0, (byte) -89);
+        this.setState(0, (byte) -89);
     }
 
     abstract void l(byte param0);

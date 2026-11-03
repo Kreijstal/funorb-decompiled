@@ -50,7 +50,7 @@ abstract class qb {
           if (param1 > -101) {
             qb.c((byte) 57);
           }
-          po.field_l = param2;
+          MusicPatch.field_l = param2;
           la.field_m = param0;
           um.field_a = param3;
         } catch (RuntimeException runtimeException) {

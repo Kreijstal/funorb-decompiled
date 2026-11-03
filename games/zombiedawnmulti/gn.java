@@ -177,7 +177,7 @@ class gn extends UiWidget {
         return true;
     }
 
-    final static ae a(int param0, ga param1) {
+    final static GameEvent a(int param0, ga param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -195,7 +195,7 @@ class gn extends UiWidget {
           var3 = param1.readUnsignedShort((byte) 69);
           var4 = param1.readUnsignedByte(31365);
           stackIn_3_0 = ak.a(var4, (byte) -94, var2_int, var3);
-          return (ae) ((Object) stackIn_3_0);
+          return (GameEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -322,7 +322,7 @@ class gn extends UiWidget {
             stackIn_3_0 = u.field_f;
             return stackIn_3_0;
           }
-          if (2 != ge.field_zb) {
+          if (2 != SimZombie.field_zb) {
             stackIn_6_0 = UiWidget.field_p;
             return stackIn_6_0;
           }

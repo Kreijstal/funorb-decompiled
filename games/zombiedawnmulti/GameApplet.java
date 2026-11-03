@@ -69,13 +69,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           var3 = this;
           synchronized (var3) {
-            if (aq.field_t) {
+            if (NetworkGameClient.field_t) {
               return;
             }
             if (param0 < 49) {
               this.a((byte) 54);
             }
-            aq.field_t = true;
+            NetworkGameClient.field_t = true;
           }
           if (fd.field_L != null) {
             fd.field_L.destroy();
@@ -142,7 +142,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_f = true;
             System.out.println("error_game_" + param1);
             try {
-              fo.b(jl.b(param0 ^ 27200), 13093, "loggedout");
+              JavaScriptBridge.b(jl.b(param0 ^ 27200), 13093, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
@@ -213,7 +213,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void stop() {
         if (this != tg.field_i ||
-          aq.field_t) {
+          NetworkGameClient.field_t) {
           return;
         }
         try {
@@ -503,7 +503,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == tg.field_i &&
-            !aq.field_t) {
+            !NetworkGameClient.field_t) {
             kj.field_n = 0L;
             return;
           }
@@ -555,7 +555,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               if (param3 != 32000) {
                 field_g = (String) null;
               }
-              aq.field_w = jl.b(0);
+              NetworkGameClient.field_w = jl.b(0);
               dupTemp$0 = new PlatformTaskDispatcher(param2, param5, param6, true);
               pl.field_J = dupTemp$0;
               kk.field_y = dupTemp$0;
@@ -847,7 +847,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2_ref = null;
         try {
           if (this == tg.field_i &&
-            !aq.field_t) {
+            !NetworkGameClient.field_t) {
             cj.field_ub = true;
             if (mj.field_Rb &&
               bl.a((byte) 124) - eo.field_d > 1000L) {
@@ -907,7 +907,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (tg.field_i == this &&
-            !aq.field_t) {
+            !NetworkGameClient.field_t) {
             kj.field_n = bl.a((byte) 40);
             vd.a(false, 5000L);
             kk.field_y = null;

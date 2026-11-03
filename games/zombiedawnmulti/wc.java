@@ -30,7 +30,7 @@ final class wc extends id {
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           BufferedSocket.field_n = null;
-          mh.field_c = null;
+          JaggrabDownloader.field_c = null;
           la.field_k = false;
           if (cg.field_i != null) {
             cg.field_i.e(-30986);
@@ -116,7 +116,7 @@ final class wc extends id {
         boolean stackIn_168_2 = false;
         int var2;
         hi.h(2);
-        if (null == mh.field_c) {
+        if (null == JaggrabDownloader.field_c) {
           var2 = 0;
           stackIn_17_0 = 1;
           if (hh.field_b) {
@@ -136,7 +136,7 @@ final class wc extends id {
             }
           }
         } else {
-          if (mh.field_c.field_cc == 2) {
+          if (JaggrabDownloader.field_c.field_cc == 2) {
             var2 = 1;
             stackIn_151_0 = 1;
             if (hh.field_b) {
@@ -169,7 +169,7 @@ final class wc extends id {
             }
             return;
           }
-          if (mh.field_c.field_cc == 4) {
+          if (JaggrabDownloader.field_c.field_cc == 4) {
             var2 = 1;
             stackIn_107_0 = 1;
             if (hh.field_b) {

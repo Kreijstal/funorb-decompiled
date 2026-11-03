@@ -14,7 +14,7 @@ final class gg {
     static String field_e;
     static int[] field_b;
     String field_h;
-    ul field_d;
+    ResourceArchive field_d;
     static int field_c;
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3) {
@@ -107,7 +107,7 @@ final class gg {
               if (var8 != 0) {
                 stackIn_57_0 = vc.field_c;
               } else {
-                stackIn_57_0 = po.field_f;
+                stackIn_57_0 = MusicPatch.field_f;
               }
               var16 = stackIn_57_0;
               var9 = var16;
@@ -192,7 +192,7 @@ final class gg {
               }
             }
           }
-          stackIn_68_0 = mh.field_i;
+          stackIn_68_0 = JaggrabDownloader.field_i;
           stackIn_68_1 = -11838;
           stackIn_69_2 = (param1) && (!param2) && (!io.field_b);
           ((cj) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
@@ -263,10 +263,10 @@ final class gg {
     }
 
     final static void a(int param0, boolean param1) {
-        if (mh.field_h > 0 &&
+        if (JaggrabDownloader.field_h > 0 &&
           ee.field_a) {
           SoftwareRasterizer.clearRect(0, 0, SoftwareRasterizer.field_b, ImageProducerRasterBuffer.field_k.field_qb);
-          lm.field_gb.c(param1, -1);
+          SimHuman.field_gb.c(param1, -1);
         }
         if ((sq.field_Q > 0 || InflaterDecompressor.field_a > 0) &&
           io.field_b) {

@@ -14,7 +14,7 @@ final class mk {
     Sprite[] field_e;
     static String field_n;
     static int field_d;
-    static ul field_b;
+    static ResourceArchive field_b;
     static String field_l;
 
     final mk a(int param0, int param1) {
@@ -103,7 +103,7 @@ final class mk {
             var6 = var8 + 1;
           }
           if (param1) {
-            field_b = (ul) null;
+            field_b = (ResourceArchive) null;
           }
           var4[var3_int] = param2.substring(var6);
           stackIn_10_0 = var4;

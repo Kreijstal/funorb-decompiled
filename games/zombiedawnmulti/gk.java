@@ -111,8 +111,8 @@ final class gk {
             }
           }
           pl.field_F = mo.field_Jb.field_c * (ne.field_tb + pb.field_b << 1);
-          RandomAccessCacheFile.field_e = aq.field_x - (-var7Lifetime1 + (var7Lifetime1 >> 1));
-          IntrusiveDequeCursor.field_i = -(var7Lifetime1 >> 1) + aq.field_x;
+          RandomAccessCacheFile.field_e = NetworkGameClient.field_x - (-var7Lifetime1 + (var7Lifetime1 >> 1));
+          IntrusiveDequeCursor.field_i = -(var7Lifetime1 >> 1) + NetworkGameClient.field_x;
           var8Lifetime2 = 0;
           while (var8Lifetime2 < eo.field_e.length) {
             stackIn_38_0 = pl.field_F;
@@ -120,7 +120,7 @@ final class gk {
             if (stackIn_38_1 < 0) {
               stackIn_41_1 = ImageProducerRasterBuffer.field_l;
             } else {
-              stackIn_41_1 = po.field_n;
+              stackIn_41_1 = MusicPatch.field_n;
             }
             pl.field_F = stackIn_38_0 + stackIn_41_1;
             var8Lifetime2++;

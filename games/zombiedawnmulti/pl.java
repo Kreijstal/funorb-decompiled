@@ -9,7 +9,7 @@ abstract class pl extends UiWidget implements dh {
     static PlatformTaskDispatcher field_J;
     static int field_F;
     static String field_D;
-    static ul field_C;
+    static ResourceArchive field_C;
     static cj field_L;
     static int field_I;
     static String field_K;
@@ -580,7 +580,7 @@ abstract class pl extends UiWidget implements dh {
           }
           var4_int = -1 + this.field_E.length;
           if (param1 != 32) {
-            field_C = (ul) null;
+            field_C = (ResourceArchive) null;
           }
           while (0 <= var4_int) {
             var5 = this.field_E[var4_int];

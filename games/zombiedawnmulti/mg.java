@@ -68,8 +68,8 @@ final class mg extends id {
             dd.field_d = null;
             if (param4 == null) {
               pm.field_R.position = 0;
-              pm.field_R.writeInt(125, c.field_c.nextInt());
-              pm.field_R.writeInt(-114, c.field_c.nextInt());
+              pm.field_R.writeInt(125, TertiaryLinkDeque.field_c.nextInt());
+              pm.field_R.writeInt(-114, TertiaryLinkDeque.field_c.nextInt());
               stackIn_15_0 = pm.field_R;
               stackIn_15_1 = -16171;
               if (param1.a((byte) 105)) {
@@ -97,8 +97,8 @@ final class mg extends id {
               if (param0) {
                 var9 = var9 | 1;
               }
-              pm.field_R.writeInt(-11, c.field_c.nextInt());
-              pm.field_R.writeInt(90, c.field_c.nextInt());
+              pm.field_R.writeInt(-11, TertiaryLinkDeque.field_c.nextInt());
+              pm.field_R.writeInt(90, TertiaryLinkDeque.field_c.nextInt());
               pm.field_R.b(-16171, var14);
               pm.field_R.b(-16171, var8);
               var15 = (CharSequence) ((Object) param4);
@@ -131,7 +131,7 @@ final class mg extends id {
             } else {
               if (248 == var9Lifetime1) {
                 og.a(param6 ^ -92, jl.b(0));
-                ol.field_q = pa.field_Y;
+                ol.field_q = SimUnit.field_Y;
                 ak.a((byte) -115);
                 sk.field_j = false;
                 stackIn_31_0 = var9Lifetime1;
@@ -139,7 +139,7 @@ final class mg extends id {
               }
               if (var9Lifetime1 == 99) {
                 fa.b(10, wm.f(1));
-                dd.field_d = new Boolean(fq.a(s.field_e, (byte) -114));
+                dd.field_d = new Boolean(PhaseChangeEvent.a(s.field_e, (byte) -114));
                 s.field_e.position = 0;
               } else {
                 vo.field_l = pq.field_p;
@@ -195,9 +195,9 @@ final class mg extends id {
               return stackIn_60_0;
             }
             var9Lifetime3 = jo.field_b;
-            jo.field_b = ff.field_s;
+            jo.field_b = TertiaryLinkNode.field_s;
             sk.field_j = true;
-            ff.field_s = var9Lifetime3;
+            TertiaryLinkNode.field_s = var9Lifetime3;
           }
           stackIn_62_0 = -1;
           return stackIn_62_0;

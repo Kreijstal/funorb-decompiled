@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class df extends WidgetContainer {
-    static ul field_M;
+    static ResourceArchive field_M;
     static volatile boolean field_P;
     private int field_K;
     static String field_G;
@@ -52,7 +52,7 @@ abstract class df extends WidgetContainer {
           field_J = null;
           return;
         }
-        field_M = (ul) null;
+        field_M = (ResourceArchive) null;
         field_M = null;
         field_L = null;
         field_J = null;

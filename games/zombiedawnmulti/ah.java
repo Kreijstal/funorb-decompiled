@@ -30,7 +30,7 @@ final class ah {
         }
     }
 
-    final static void a(boolean param0, ul param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2608_0;
             StringBuilder stackIn_2608_1;
@@ -39,9 +39,9 @@ final class ah {
             byte[] var2;
             RuntimeException var2_ref;
             boolean param0;
-            ul param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(boolean initialParam0, ul initialParam1) {
+            $CfrPartitionedBody(boolean initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2608_0 = null;
@@ -91,7 +91,7 @@ final class ah {
                 }
                 var2 = pc.a("create_unable", (byte) 83);
                 if (null != var2) {
-                  pa.field_Y = qe.a(-2739, var2);
+                  SimUnit.field_Y = qe.a(-2739, var2);
                 }
                 var2 = pc.a("create_ineligible", (byte) 83);
                 if (null != var2) {
@@ -139,7 +139,7 @@ final class ah {
                 }
                 var2 = pc.a("mu_chat_friends", (byte) 83);
                 if (var2 != null) {
-                  of.field_p = qe.a(-2739, var2);
+                  BufferedFile.field_p = qe.a(-2739, var2);
                 }
                 var2 = pc.a("mu_chat_off", (byte) 83);
                 if (null != var2) {
@@ -242,7 +242,7 @@ final class ah {
                 }
                 var2 = pc.a("mu_request_withdrawn", (byte) 83);
                 if (null != var2) {
-                  ek.field_I = qe.a(-2739, var2);
+                  SimEntity.field_I = qe.a(-2739, var2);
                 }
                 var2 = pc.a("mu_all_players_have_left", (byte) 83);
                 if (null != var2) {
@@ -310,7 +310,7 @@ final class ah {
                 }
                 var2 = pc.a("mu_create_unrated", (byte) 83);
                 if (null != var2) {
-                  ff.field_t = qe.a(-2739, var2);
+                  TertiaryLinkNode.field_t = qe.a(-2739, var2);
                 }
                 var2 = pc.a("mu_options", (byte) 83);
                 if (null != var2) {
@@ -342,7 +342,7 @@ final class ah {
                 }
                 var2 = pc.a("no", (byte) 83);
                 if (var2 != null) {
-                  be.field_f = qe.a(-2739, var2);
+                  ArchiveIndex.field_f = qe.a(-2739, var2);
                 }
                 var2 = pc.a("mu_invite_players", (byte) 83);
                 if (var2 != null) {
@@ -418,7 +418,7 @@ final class ah {
                 }
                 var2 = pc.a("mu_gameopt_invite_x_to_game", (byte) 83);
                 if (null != var2) {
-                  ge.field_qb = qe.a(-2739, var2);
+                  SimZombie.field_qb = qe.a(-2739, var2);
                 }
                 var2 = pc.a("report_x_for_abuse", (byte) 83);
                 if (null != var2) {
@@ -506,7 +506,7 @@ final class ah {
                 }
                 var2 = pc.a("searching_for_opponent_singular", (byte) 83);
                 if (null != var2) {
-                  po.field_f = qe.a(-2739, var2);
+                  MusicPatch.field_f = qe.a(-2739, var2);
                 }
                 var2 = pc.a("searching_for_opponents_plural", (byte) 83);
                 if (var2 != null) {
@@ -550,7 +550,7 @@ final class ah {
                 }
                 var2 = pc.a("xs_game", (byte) 83);
                 if (null != var2) {
-                  ae.field_g = qe.a(-2739, var2);
+                  GameEvent.field_g = qe.a(-2739, var2);
                 }
                 var2 = pc.a("waiting_for_x_to_start_game", (byte) 83);
                 if (null != var2) {
@@ -558,7 +558,7 @@ final class ah {
                 }
                 var2 = pc.a("game_options_changed", (byte) 83);
                 if (null != var2) {
-                  ge.field_pb = qe.a(-2739, var2);
+                  SimZombie.field_pb = qe.a(-2739, var2);
                 }
                 var2 = pc.a("players_x_of_y", (byte) 83);
                 if (null != var2) {
@@ -642,7 +642,7 @@ final class ah {
                 }
                 var2 = pc.a("asking_to_join_xs_game", (byte) 83);
                 if (var2 != null) {
-                  be.field_k = qe.a(-2739, var2);
+                  ArchiveIndex.field_k = qe.a(-2739, var2);
                 }
                 var2 = pc.a("who_can_join", (byte) 83);
                 if (null != var2) {
@@ -834,7 +834,7 @@ final class ah {
                 }
                 var2 = pc.a("gameopt_playerneedsrating", (byte) 83);
                 if (var2 != null) {
-                  ek.field_y = qe.a(-2739, var2);
+                  SimEntity.field_y = qe.a(-2739, var2);
                 }
                 var2 = pc.a("gameopt_youneedrating", (byte) 83);
                 if (null != var2) {
@@ -866,7 +866,7 @@ final class ah {
                 }
                 var2 = pc.a("gameopt_trychanging1", (byte) 83);
                 if (var2 != null) {
-                  od.field_Cb = qe.a(-2739, var2);
+                  SimArmedHuman.field_Cb = qe.a(-2739, var2);
                 }
                 var2 = pc.a("gameopt_trychanging2", (byte) 83);
                 if (var2 != null) {
@@ -902,7 +902,7 @@ final class ah {
                 }
                 var2 = pc.a("gameopt_pleaseselectoption2", (byte) 83);
                 if (null != var2) {
-                  aq.field_n = qe.a(-2739, var2);
+                  NetworkGameClient.field_n = qe.a(-2739, var2);
                 }
                 var2 = pc.a("gameopt_badnumplayers", (byte) 83);
                 if (var2 != null) {
@@ -972,7 +972,7 @@ final class ah {
                 }
                 var2 = pc.a("rule_0_4", (byte) 83);
                 if (null != var2) {
-                  eh.field_f = qe.a(-2739, var2);
+                  HuffmanCodec.field_f = qe.a(-2739, var2);
                 }
                 var2 = pc.a("rule_0_5", (byte) 83);
                 if (null != var2) {
@@ -1060,7 +1060,7 @@ final class ah {
                 }
                 var2 = pc.a("toserverlist", (byte) 83);
                 if (null != var2) {
-                  od.field_zb = qe.a(-2739, var2);
+                  SimArmedHuman.field_zb = qe.a(-2739, var2);
                 }
                 var2 = pc.a("tocustomersupport", (byte) 83);
                 if (null != var2) {
@@ -1488,7 +1488,7 @@ final class ah {
                 }
                 var2 = pc.a("login_username_email", (byte) 83);
                 if (var2 != null) {
-                  sh.field_M = qe.a(-2739, var2);
+                  SimPortal.field_M = qe.a(-2739, var2);
                 }
                 var2 = pc.a("login_username", (byte) 83);
                 if (var2 != null) {
@@ -1708,7 +1708,7 @@ final class ah {
                 }
                 var2 = pc.a("friendlistfull", (byte) 83);
                 if (var2 != null) {
-                  eh.field_g = qe.a(-2739, var2);
+                  HuffmanCodec.field_g = qe.a(-2739, var2);
                 }
                 var2 = pc.a("friendlistdupe", (byte) 83);
                 if (null != var2) {
@@ -2054,7 +2054,7 @@ final class ah {
                 }
                 var2 = pc.a("previous", (byte) 83);
                 if (null != var2) {
-                  aq.field_r = qe.a(-2739, var2);
+                  NetworkGameClient.field_r = qe.a(-2739, var2);
                 }
                 var2 = pc.a("prev", (byte) 83);
                 if (null != var2) {
@@ -2074,7 +2074,7 @@ final class ah {
                 }
                 var2 = pc.a("entermultiplayerlobby", (byte) 83);
                 if (null != var2) {
-                  eh.field_c = qe.a(-2739, var2);
+                  HuffmanCodec.field_c = qe.a(-2739, var2);
                 }
                 var2 = pc.a("singleplayergame", (byte) 83);
                 if (null != var2) {
@@ -2478,7 +2478,7 @@ final class ah {
                 }
                 var2 = pc.a("autorespond", (byte) 83);
                 if (var2 != null) {
-                  ff.field_u = qe.a(-2739, var2);
+                  TertiaryLinkNode.field_u = qe.a(-2739, var2);
                 }
                 var2 = pc.a("quickchat_help", (byte) 83);
                 if (null != var2) {
@@ -2574,7 +2574,7 @@ final class ah {
                 }
                 var2 = pc.a("benefits_price", (byte) 83);
                 if (var2 != null) {
-                  eh.field_h = qe.a(-2739, var2);
+                  HuffmanCodec.field_h = qe.a(-2739, var2);
                 }
                 var2 = pc.a("members_expansion_benefits,0", (byte) 83);
                 if (null != var2) {
@@ -2844,7 +2844,7 @@ final class ah {
                 }
                 var2 = pc.a("createtouse", (byte) 83);
                 if (var2 != null) {
-                  fq.field_j = qe.a(-2739, var2);
+                  PhaseChangeEvent.field_j = qe.a(-2739, var2);
                 }
                 var2 = pc.a("achievementsoffline", (byte) 83);
                 if (var2 != null) {
@@ -3091,10 +3091,10 @@ final class ah {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder0 = true;
           ma.field_d = ai.field_b;
-          lm.field_pb = 0;
+          SimHuman.field_pb = 0;
           ai.field_b = param1;
-          fieldTemp$0 = lm.field_pb;
-          lm.field_pb = lm.field_pb + 1;
+          fieldTemp$0 = SimHuman.field_pb;
+          SimHuman.field_pb = SimHuman.field_pb + 1;
           gn.field_I[fieldTemp$0] = 0;
           if (!(ai.field_b >= 0) ||
             !(19 > ai.field_b)) {
@@ -3103,9 +3103,9 @@ final class ah {
             } else {
               stackIn_14_0 = ei.field_g[ai.field_b].length;
             }
-            lm.field_pb = stackIn_14_0;
+            SimHuman.field_pb = stackIn_14_0;
             var2_int = 0;
-            while (var2_int < lm.field_pb) {
+            while (var2_int < SimHuman.field_pb) {
               gn.field_I[var2_int] = var2_int;
               var2_int++;
               if (var4 != 0) {
@@ -3130,8 +3130,8 @@ final class ah {
                   if (stackIn_24_0) {
                     var2_intLifetime1++;
                     if (FullscreenFocusCanvas.field_k.c(param0 + 213, var3)) {
-                      fieldTemp$1 = lm.field_pb;
-                      lm.field_pb = lm.field_pb + 1;
+                      fieldTemp$1 = SimHuman.field_pb;
+                      SimHuman.field_pb = SimHuman.field_pb + 1;
                       gn.field_I[fieldTemp$1] = var2_intLifetime1;
                     }
                   }
@@ -3139,12 +3139,12 @@ final class ah {
                   continue;
                 }
               } else {
-                stackIn_35_0 = ~lm.field_pb;
+                stackIn_35_0 = ~SimHuman.field_pb;
               }
               if (stackIn_35_0 >= ~ei.field_g[ai.field_b].length) {
                 break;
               }
-              lm.field_pb = ei.field_g[ai.field_b].length;
+              SimHuman.field_pb = ei.field_g[ai.field_b].length;
               break;
             }
           }

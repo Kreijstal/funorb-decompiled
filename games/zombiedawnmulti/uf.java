@@ -142,8 +142,8 @@ final class uf {
           stackIn_6_4 = (vc.field_d == gl.field_L.field_Jb);
           var3_int = ((tq) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param0 * (3 * jk.field_f + 6), -90) ? 1 : 0;
           var4 = gl.field_L.field_Ib.field_Cb;
-          if (ge.field_zb != 2 &&
-            ge.field_zb != 1) {
+          if (SimZombie.field_zb != 2 &&
+            SimZombie.field_zb != 1) {
             gl.field_L.field_Z = false;
             gl.field_L.field_Jb.field_Jb.field_wb = hj.field_e;
             ob.a(gl.field_L.field_Ib, 37);
@@ -169,14 +169,14 @@ final class uf {
             if (var6.field_Kb != null &&
               !var6.field_Kb.equals("")) {
               var6.field_Gb.field_ob = 16737894;
-              var6.field_Gb.field_rb = pa.field_T;
-              var6.field_Gb.a(jk.field_f, 0, 3 + pa.field_T.fullWidth, 0, -3344);
+              var6.field_Gb.field_rb = SimUnit.field_T;
+              var6.field_Gb.a(jk.field_f, 0, 3 + SimUnit.field_T.fullWidth, 0, -3344);
               var8 = 1;
             }
             var9 = 0;
             var10 = var6.field_zb;
             if (var8 != 0) {
-              var9 = 3 + pa.field_T.fullWidth;
+              var9 = 3 + SimUnit.field_T.fullWidth;
               var10 = var10 - var9;
             }
             stackIn_22_0 = var6.field_Ib;

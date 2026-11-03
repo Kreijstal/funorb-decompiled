@@ -270,7 +270,7 @@ final class gi extends IntrusiveNode {
             stackIn_13_0 = var5;
             return stackIn_13_0;
           }
-          stackIn_6_0 = of.field_d;
+          stackIn_6_0 = BufferedFile.field_d;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -67,7 +67,7 @@ class ne extends ie implements in {
               }
             }
           } else {
-            var7.a(od.field_zb, 7, true);
+            var7.a(SimArmedHuman.field_zb, 7, true);
           }
           this.a((UiWidget) (var7), (byte) 119);
           var5Lifetime1 = -3 % ((-15 - param1) / 46);
@@ -109,14 +109,14 @@ class ne extends ie implements in {
           mg.field_H = param0;
           ImageProducerRasterBuffer.field_l = param2;
           tk.field_n = param4;
-          po.field_n = param3;
+          MusicPatch.field_n = param3;
           return;
         }
         field_Ab = (Sprite[]) null;
         mg.field_H = param0;
         ImageProducerRasterBuffer.field_l = param2;
         tk.field_n = param4;
-        po.field_n = param3;
+        MusicPatch.field_n = param3;
     }
 
     public static void n(int param0) {

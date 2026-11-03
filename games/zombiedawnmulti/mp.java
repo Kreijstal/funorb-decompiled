@@ -58,8 +58,8 @@ abstract class mp {
         try {
           pm.field_R.position = param0;
           pm.field_R.a(param0 ^ -108, 12);
-          pm.field_R.writeInt(-114, c.field_c.nextInt());
-          pm.field_R.writeInt(-118, c.field_c.nextInt());
+          pm.field_R.writeInt(-114, TertiaryLinkDeque.field_c.nextInt());
+          pm.field_R.writeInt(-118, TertiaryLinkDeque.field_c.nextInt());
           pm.field_R.a(123, param2);
           pm.field_R.a(-67, param1);
           pm.field_R.a(param3, (byte) -128);
@@ -141,8 +141,8 @@ abstract class mp {
           var3_int = ((tq) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, (jk.field_f * 3 + 6) * param0, -106) ? 1 : 0;
           var4 = eg.field_B.field_Ib.field_Cb;
           var5 = null;
-          if (2 == ge.field_zb) {
-            pa.field_O.field_Z = true;
+          if (2 == SimZombie.field_zb) {
+            SimUnit.field_O.field_Z = true;
             dp.field_b.field_wb = vl.a(kg.field_m, new String[]{ta.field_ob}, 2);
             eg.field_B.field_Jb.field_Jb.field_wb = null;
             var6 = null;
@@ -177,9 +177,9 @@ abstract class mp {
                 var12 = 0;
                 if (var7.field_Kb != null &&
                   !var7.field_Kb.equals("")) {
-                  var7.field_Gb.field_rb = pa.field_T;
+                  var7.field_Gb.field_rb = SimUnit.field_T;
                   var7.field_Gb.field_ob = var11;
-                  var7.field_Gb.a(jk.field_f, var9, 3 + pa.field_T.fullWidth, 0, -3344);
+                  var7.field_Gb.a(jk.field_f, var9, 3 + SimUnit.field_T.fullWidth, 0, -3344);
                   var12 = 1;
                 }
                 var7.field_Fb.field_ob = var11;
@@ -193,7 +193,7 @@ abstract class mp {
                 var13 = 0;
                 var14 = -80 + (var7.field_zb - 2);
                 if (var12 != 0) {
-                  var13 = 3 + pa.field_T.fullWidth;
+                  var13 = 3 + SimUnit.field_T.fullWidth;
                   var14 = var14 - var13;
                 }
                 stackIn_34_0 = var7.field_Ib;
@@ -234,7 +234,7 @@ abstract class mp {
                     if (var7.field_Nb != null &&
                       !cq.a(pk.field_b.field_f, -124) &&
                       !nh.field_m) {
-                      if (!sh.field_L) {
+                      if (!SimPortal.field_L) {
                         var17 = pk.field_b;
                         var18 = vl.a(jk.field_i, new String[]{var16}, 2);
                         var17.field_j.a((byte) -118, var18, 8);
@@ -266,9 +266,9 @@ abstract class mp {
             decompiledFrameRemainder0 = false;
           }
           else {
-            pa.field_O.field_Z = false;
+            SimUnit.field_O.field_Z = false;
             dp.field_b.field_wb = op.field_l;
-            if (1 == ge.field_zb) {
+            if (1 == SimZombie.field_zb) {
               eg.field_B.field_Jb.field_Jb.field_wb = rg.field_D;
               if (var19 != 0) {
                 eg.field_B.field_Jb.field_Jb.field_wb = hj.field_e;

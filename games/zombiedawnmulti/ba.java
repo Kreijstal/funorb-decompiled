@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ba extends PcmStream {
-    private gd field_n;
+    private MidiPcmStream field_n;
     static String field_j;
     IntrusiveDeque field_k;
     static String field_p;
     static int field_q;
     static String field_l;
     static int field_m;
-    vp field_o;
+    PcmStreamMixer field_o;
 
     final void b(int[] param0, int param1, int param2) {
         boolean stackIn_4_0 = false;
@@ -64,7 +64,7 @@ final class ba extends PcmStream {
     }
 
     private final void a(int param0, int param1, int param2, mb param3, int[] param4, int param5) {
-        gd stackIn_13_0 = null;
+        MidiPcmStream stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -109,7 +109,7 @@ final class ba extends PcmStream {
                 param3.field_C = PcmSampleStream.a(param3.field_f, var11.l(), 0, var11.g());
                 stackIn_13_0 = this.field_n;
                 stackIn_14_1 = !(param3.field_x.field_g[param3.field_p] >= 0);
-                ((gd) (Object) stackIn_13_0).a(stackIn_14_1, (byte) -76, param3);
+                ((MidiPcmStream) (Object) stackIn_13_0).a(stackIn_14_1, (byte) -76, param3);
                 param3.field_C.a(var9, var11.h());
               }
               if (param3.field_x.field_g[param3.field_p] < 0) {
@@ -145,7 +145,7 @@ final class ba extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream firstSubStream() {
         mb var1 = (mb) (this.field_k.c(76));
         if (var1 == null) {
           return null;
@@ -157,7 +157,7 @@ final class ba extends PcmStream {
     }
 
     private final void a(mb param0, int param1, boolean param2) {
-        gd stackIn_7_0 = null;
+        MidiPcmStream stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -177,7 +177,7 @@ final class ba extends PcmStream {
                 param0.field_C = PcmSampleStream.a(param0.field_f, param0.field_C.l(), 0, param0.field_C.g());
                 stackIn_7_0 = this.field_n;
                 stackIn_8_1 = !(0 <= param0.field_x.field_g[param0.field_p]);
-                ((gd) (Object) stackIn_7_0).a(stackIn_8_1, (byte) -80, param0);
+                ((MidiPcmStream) (Object) stackIn_7_0).a(stackIn_8_1, (byte) -80, param0);
               } else {
                 param0.field_C = PcmSampleStream.a(param0.field_f, param0.field_C.l(), param0.field_C.h(), param0.field_C.g());
               }
@@ -187,7 +187,7 @@ final class ba extends PcmStream {
               param1 = param0.field_w / var4_int;
             }
           }
-          param0.field_C.a(param1);
+          param0.field_C.skip(param1);
           if (!param2) {
             return;
           }
@@ -218,12 +218,12 @@ final class ba extends PcmStream {
         field_l = null;
     }
 
-    final void a(int param0) {
+    final void skip(int param0) {
         int var2;
         mb var3;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        this.field_o.a(param0);
+        this.field_o.skip(param0);
         var3 = (mb) (this.field_k.c(91));
         while (var3 != null) {
           if (!this.field_n.a(-1, var3)) {
@@ -281,9 +281,9 @@ final class ba extends PcmStream {
         return stackIn_7_0;
     }
 
-    ba(gd param0) {
+    ba(MidiPcmStream param0) {
         this.field_k = new IntrusiveDeque();
-        this.field_o = new vp();
+        this.field_o = new PcmStreamMixer();
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {

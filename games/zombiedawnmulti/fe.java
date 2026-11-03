@@ -6,7 +6,7 @@ final class fe extends WidgetContainer implements co, in, jn {
     static Sprite field_U;
     private gn field_O;
     private on field_P;
-    static ul field_L;
+    static ResourceArchive field_L;
     private on field_T;
     gl field_J;
     private fj field_H;
@@ -191,14 +191,14 @@ final class fe extends WidgetContainer implements co, in, jn {
         try {
           if (param3 != 0) {
             if (param3 == 1) {
-              ge.a("privacy.ws", (byte) 125);
+              SimZombie.a("privacy.ws", (byte) 125);
             } else {
               if (param3 == 2) {
-                ge.a("conduct.ws", (byte) 127);
+                SimZombie.a("conduct.ws", (byte) 127);
               }
             }
           } else {
-            ge.a("terms.ws", (byte) 127);
+            SimZombie.a("terms.ws", (byte) 127);
           }
           if (param2 < -16) {
             return;

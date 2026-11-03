@@ -45,7 +45,7 @@ final class oj extends pl implements in {
         this.e(-1);
     }
 
-    final static ul a(boolean param0, int param1, int param2, int param3, boolean param4) {
+    final static ResourceArchive a(boolean param0, int param1, int param2, int param3, boolean param4) {
         if (param3 == -24285) {
           return wm.a(param1, param2, param4, false, -127, param0);
         }

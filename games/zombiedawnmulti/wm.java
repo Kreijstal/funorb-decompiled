@@ -5,7 +5,7 @@ import java.io.*;
 
 final class wm extends gn {
     private la field_R;
-    static ul field_V;
+    static ResourceArchive field_V;
     static String field_U;
     static String field_P;
     private int field_O;
@@ -39,9 +39,9 @@ final class wm extends gn {
     final static ao[] b(boolean param0) {
         if (!param0) {
           wm.b(false);
-          return new ao[]{hd.field_r, sf.field_d, so.field_o, km.field_W, mk.field_g, ae.field_h, bq.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, hd.field_w, oa.field_a, eb.field_w};
+          return new ao[]{hd.field_r, sf.field_d, so.field_o, km.field_W, mk.field_g, GameEvent.field_h, SectorCacheStore.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, hd.field_w, oa.field_a, eb.field_w};
         }
-        return new ao[]{hd.field_r, sf.field_d, so.field_o, km.field_W, mk.field_g, ae.field_h, bq.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, hd.field_w, oa.field_a, eb.field_w};
+        return new ao[]{hd.field_r, sf.field_d, so.field_o, km.field_W, mk.field_g, GameEvent.field_h, SectorCacheStore.field_i, ka.field_b, mo.field_Lb, ha.field_i, cn.field_j, hd.field_w, oa.field_a, eb.field_w};
     }
 
     final int g(byte param0) {
@@ -51,39 +51,39 @@ final class wm extends gn {
         return this.field_O;
     }
 
-    final static ul a(int param0, int param1, boolean param2, boolean param3, int param4, boolean param5) {
+    final static ResourceArchive a(int param0, int param1, boolean param2, boolean param3, int param4, boolean param5) {
         try {
           int var6_int = 0;
           IOException var6 = null;
           Object var7 = null;
           Object var8 = null;
           cn var9 = null;
-          ul stackIn_12_0 = null;
+          ResourceArchive stackIn_12_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6_int = 122 % ((-63 - param4) / 63);
             var7 = null;
             if (p.field_a.field_i != null) {
-              hc.field_b = new of(p.field_a.field_i, 5200, 0);
+              hc.field_b = new BufferedFile(p.field_a.field_i, 5200, 0);
               p.field_a.field_i = null;
-              var7 = new bq(255, hc.field_b, new of(p.field_a.field_k, 12000, 0), 2097152);
+              var7 = new SectorCacheStore(255, hc.field_b, new BufferedFile(p.field_a.field_k, 12000, 0), 2097152);
             }
             var8 = null;
             if (hc.field_b != null) {
               if (GameSimulation.field_r == null) {
-                GameSimulation.field_r = new of[p.field_a.field_t.length];
+                GameSimulation.field_r = new BufferedFile[p.field_a.field_t.length];
               }
               if (GameSimulation.field_r[param0] == null) {
-                GameSimulation.field_r[param0] = new of(p.field_a.field_t[param0], 12000, 0);
+                GameSimulation.field_r[param0] = new BufferedFile(p.field_a.field_t[param0], 12000, 0);
                 p.field_a.field_t[param0] = null;
               }
-              var8 = new bq(param0, hc.field_b, GameSimulation.field_r[param0], 2097152);
+              var8 = new SectorCacheStore(param0, hc.field_b, GameSimulation.field_r[param0], 2097152);
             }
-            var9 = tj.field_a.a(param0, (bq) (var7), -15893, (bq) (var8), param3);
+            var9 = tj.field_a.a(param0, (SectorCacheStore) (var7), -15893, (SectorCacheStore) (var8), param3);
             if (param5) {
               var9.a(false);
             }
-            stackIn_12_0 = new ul(var9, param2, param1);
+            stackIn_12_0 = new ResourceArchive(var9, param2, param1);
             return stackIn_12_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

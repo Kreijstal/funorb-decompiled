@@ -38,7 +38,7 @@ final class vk extends rg {
         }
         boolean decompiledFrameRemainder0 = true;
         if (ClientException.field_i >= 20 &&
-          ge.p(-86) && (!(qq.field_a > 0) ||
+          SimZombie.p(-86) && (!(qq.field_a > 0) ||
           re.b(-118))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;
@@ -247,7 +247,7 @@ final class vk extends rg {
         return null;
     }
 
-    final static Sprite[] a(int param0, int param1, ul param2, int param3) {
+    final static Sprite[] a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

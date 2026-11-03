@@ -167,7 +167,7 @@ final class dc extends cj {
               if (param3 >= -91) {
                 return;
               }
-              fo.a(param1, 14575, "document.cookie=\"" + var7Lifetime4 + "\"");
+              JavaScriptBridge.evaluateScript(param1, 14575, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;

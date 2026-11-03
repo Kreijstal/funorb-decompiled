@@ -80,7 +80,7 @@ final class pn {
 
     final static void a(byte param0) {
         nh.field_m = false;
-        sh.field_L = s.field_e.readUnsignedByte(31365) == 0 ? true : false;
+        SimPortal.field_L = s.field_e.readUnsignedByte(31365) == 0 ? true : false;
         if (param0 > 51) {
           return;
         }

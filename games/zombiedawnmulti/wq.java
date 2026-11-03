@@ -10,7 +10,7 @@ final class wq {
     static String[][] field_g;
     static String field_b;
 
-    final static IndexedSprite a(int param0, String param1, ul param2, String param3) {
+    final static IndexedSprite a(int param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

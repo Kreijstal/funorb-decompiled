@@ -32,7 +32,7 @@ final class tn extends qc {
           }
           if (!GameKeyHandler.a(250)) {
             SoftwareRasterizer.clear();
-            eh.a(320, 240, 122);
+            HuffmanCodec.a(320, 240, 122);
             t.a(false, 0, param2, 0);
             return;
           }

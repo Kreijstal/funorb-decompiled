@@ -193,7 +193,7 @@ final class ok {
             var2Lifetime1 = SoftwareRasterizer.field_b;
             var3Lifetime1 = SoftwareRasterizer.field_l;
             SoftwareRasterizer.saveClip(b.field_f);
-            var14 = vl.a(eh.field_h, new String[]{vk.field_L[hj.field_f]}, 2);
+            var14 = vl.a(HuffmanCodec.field_h, new String[]{vk.field_L[hj.field_f]}, 2);
             var5 = dc.field_Lb.c(var14, ol.field_p);
             var6Lifetime1 = dc.field_Lb.a(var14, ol.field_p, dc.field_Lb.field_C + dc.field_Lb.field_r);
             var7Lifetime1 = (-var5 + ol.field_p) / 2 + pg.field_c;
@@ -465,7 +465,7 @@ final class ok {
           return;
         }
         if (df.field_I) {
-          UiWidget.field_s.a(param1, -11513, 0, param5, param4);
+          UiWidget.field_s.requestPowerup(param1, -11513, 0, param5, param4);
           return;
         }
         try {

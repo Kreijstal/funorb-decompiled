@@ -4,7 +4,7 @@
 abstract class wk extends WidgetContainer implements kh {
     static String field_K;
     static IndexedSprite field_J;
-    static mh field_I;
+    static JaggrabDownloader field_I;
     private dj field_H;
     static int[] field_L;
     static int field_G;

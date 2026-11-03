@@ -123,12 +123,12 @@ final class lf {
             lo.field_b = param5;
             v.field_f = param4;
             DualLinkNode.field_i = param2;
-            ff.field_s = param9;
+            TertiaryLinkNode.field_s = param9;
             if (null == ok.field_m.field_s) {
               return;
             }
             try {
-              bg.field_e = new of(ok.field_m.field_s, 64, 0);
+              bg.field_e = new BufferedFile(ok.field_m.field_s, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,16 +167,16 @@ final class lf {
     final static void a(BinaryBitmapFont param0, int param1) {
         int var2_int = 0;
         Sprite var3 = null;
-        if (null == of.field_k) {
+        if (null == BufferedFile.field_k) {
           return;
         }
         try {
           var2_int = param0.field_C + param0.field_r;
           var3 = new Sprite(var2_int, var2_int);
           var3.a();
-          of.field_k.c(0, param1, var2_int, var2_int);
+          BufferedFile.field_k.c(0, param1, var2_int, var2_int);
           SocketConnector.field_h.b((byte) 119);
-          of.field_k = var3;
+          BufferedFile.field_k = var3;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "lf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

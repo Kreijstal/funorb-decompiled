@@ -105,7 +105,7 @@ final class ua extends rg {
         String stackIn_43_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        ul var4 = null;
+        ResourceArchive var4 = null;
         try {
           if (param1 == 1) {
             stackIn_2_0 = vl.a(oe.field_e, new String[]{param2}, 2);
@@ -120,8 +120,8 @@ final class ua extends rg {
             return stackIn_8_0;
           }
           if (param0 != -61) {
-            var4 = (ul) null;
-            ua.a((ul) null, (ul) null, (byte) 0);
+            var4 = (ResourceArchive) null;
+            ua.a((ResourceArchive) null, (ResourceArchive) null, (byte) 0);
           }
           if (4 == param1) {
             stackIn_14_0 = vl.a(fh.field_f, new String[]{param2}, 2);
@@ -245,7 +245,7 @@ final class ua extends rg {
         }
     }
 
-    final static void a(ul param0, ul param1, byte param2) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2) {
         try {
           if (param2 != 23) {
             field_N = 91;

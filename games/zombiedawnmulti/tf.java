@@ -38,7 +38,7 @@ final class tf extends ne implements in {
           if (this.field_Fb) {
             return super.i(-27388);
           }
-          var2 = of.d(param0 ^ -27388);
+          var2 = BufferedFile.d(param0 ^ -27388);
           if (var2 != null) {
             this.a(-6, false, var2);
             return super.i(-27388);
@@ -51,7 +51,7 @@ final class tf extends ne implements in {
         if (this.field_Fb) {
           return super.i(-27388);
         }
-        var2Lifetime1 = of.d(param0 ^ -27388);
+        var2Lifetime1 = BufferedFile.d(param0 ^ -27388);
         if (var2Lifetime1 != null) {
           this.a(-6, false, var2Lifetime1);
           return super.i(-27388);
@@ -106,7 +106,7 @@ final class tf extends ne implements in {
               var5.a(ub.field_xb, param0 ^ 58, (bj) (this));
             }
             if (param2.field_c == 3) {
-              var5.a(od.field_zb, 7, true);
+              var5.a(SimArmedHuman.field_zb, 7, true);
             } else {
               if (param2.field_c == 6) {
                 var5.a(wm.field_S, 9, true);

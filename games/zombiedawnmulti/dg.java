@@ -24,7 +24,7 @@ final class dg extends WidgetContainer implements in {
         io.a(-21113, true, true);
     }
 
-    final static vp a(int param0) {
+    final static PcmStreamMixer a(int param0) {
         if (param0 != 30) {
           field_I = (String) null;
           return bh.field_a;
@@ -71,7 +71,7 @@ final class dg extends WidgetContainer implements in {
         }
     }
 
-    final static void a(eh param0, int param1) {
+    final static void a(HuffmanCodec param0, int param1) {
         try {
           r.field_a = param0;
           if (param1 != -40) {

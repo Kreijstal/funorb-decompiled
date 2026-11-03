@@ -10,7 +10,7 @@ final class ki {
     Sprite field_b;
     static String[][] field_o;
     static String field_n;
-    static ul field_m;
+    static ResourceArchive field_m;
     static String field_f;
     static String field_p;
     static String field_i;
@@ -78,7 +78,7 @@ final class ki {
         }
     }
 
-    final static String a(String param0, String param1, ul param2, byte param3, String param4) {
+    final static String a(String param0, String param1, ResourceArchive param2, byte param3, String param4) {
         RuntimeException var5 = null;
         String var6 = null;
         String stackIn_3_0 = null;
@@ -100,7 +100,7 @@ final class ki {
           }
           if (param3 != 76) {
             var6 = (String) null;
-            ki.a((String) null, (String) null, (ul) null, (byte) 113, (String) null);
+            ki.a((String) null, (String) null, (ResourceArchive) null, (byte) 113, (String) null);
           }
           stackIn_7_0 = param4 + " - " + param2.a(0, param1) + "%";
           return stackIn_7_0;

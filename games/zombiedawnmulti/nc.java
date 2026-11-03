@@ -148,7 +148,7 @@ class nc {
                     pi.field_f.d(0, -pi.field_f.field_b + 480);
                   } else {
                     if (9 == this.field_d) {
-                      of.field_e[4].c(0, 0);
+                      BufferedFile.field_e[4].c(0, 0);
                     } else {
                       if (this.field_d == 11) {
                         SoftwareRasterizer.fillRect(0, 0, 640, 480, 65793);
@@ -167,9 +167,9 @@ class nc {
               }
               break regionExit1;
             }
-            of.field_e[0].c(0, 0);
+            BufferedFile.field_e[0].c(0, 0);
           } else {
-            of.field_e[0].c(0, 0);
+            BufferedFile.field_e[0].c(0, 0);
           }
         }
     }
@@ -303,10 +303,10 @@ class nc {
                                 } else {
                                   if (var6 == 13) {
                                     if (this.field_g.g(127)) {
-                                      ff.a(0, -127);
+                                      TertiaryLinkNode.a(0, -127);
                                     }
                                     if (this.field_g.f(-23954)) {
-                                      ff.a(200, 92);
+                                      TertiaryLinkNode.a(200, 92);
                                     }
                                     if (this.field_g.b(false)) {
                                       var6 = 137 + ok.field_l;
@@ -314,34 +314,34 @@ class nc {
                                       var8 = MouseInputHandler.field_g - var7 << 1;
                                       var8 = var8 * 200 >> 8;
                                       if (var8 <= 0) {
-                                        ff.a(0, 61);
+                                        TertiaryLinkNode.a(0, 61);
                                       } else {
                                         if (200 <= var8) {
-                                          ff.a(200, 24);
+                                          TertiaryLinkNode.a(200, 24);
                                         } else {
-                                          ff.a(var8, 81);
+                                          TertiaryLinkNode.a(var8, 81);
                                         }
                                       }
                                     }
                                     if (this.field_g.e(96)) {
                                       var6 = uk.field_S;
                                       if (var6 <= 25) {
-                                        ff.a(0, -88);
+                                        TertiaryLinkNode.a(0, -88);
                                       } else {
                                         var7 = var6 % 25;
                                         if (var7 == 0) {
                                           var7 = 25;
                                         }
-                                        ff.a(var6 - var7, -103);
+                                        TertiaryLinkNode.a(var6 - var7, -103);
                                       }
                                     }
                                     if (this.field_g.a(97)) {
                                       var6 = uk.field_S;
                                       if (var6 >= 175) {
-                                        ff.a(200, -118);
+                                        TertiaryLinkNode.a(200, -118);
                                       } else {
                                         var7 = var6 % 25;
-                                        ff.a(-var7 + var6 + 25, -89);
+                                        TertiaryLinkNode.a(-var7 + var6 + 25, -89);
                                       }
                                     }
                                   } else {
@@ -715,7 +715,7 @@ class nc {
         RuntimeException var4 = null;
         try {
           if (ra.field_m != null) {
-            fq.a(param0, 1048576, param3, 124, param1);
+            PhaseChangeEvent.a(param0, 1048576, param3, 124, param1);
           }
           var4_int = -64 % ((param2 - 42) / 38);
           if (wd.field_L != null) {
@@ -1007,7 +1007,7 @@ class nc {
           }
           var16 = stackIn_62_0;
           var16 = (var16 << 8) / var13;
-          lm.field_eb.g((var16 >> 1) + (var15 - 1), var4);
+          SimHuman.field_eb.g((var16 >> 1) + (var15 - 1), var4);
           return;
         }
     }

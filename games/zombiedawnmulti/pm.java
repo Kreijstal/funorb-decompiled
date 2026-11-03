@@ -361,8 +361,8 @@ class pm extends gn {
         int var2 = this.field_O > this.field_S ? this.field_S : this.field_O;
         int var3 = this.field_O <= this.field_S ? this.field_S : this.field_O;
         if (param0 >= -98) {
-          ul var4 = (ul) null;
-          pm.a((ul) null, -5, 40, (ul) null, -102);
+          ResourceArchive var4 = (ResourceArchive) null;
+          pm.a((ResourceArchive) null, -5, 40, (ResourceArchive) null, -102);
         }
         return this.field_j.substring(var2, var3);
     }
@@ -378,7 +378,7 @@ class pm extends gn {
             if (param0 != 250) {
               return;
             }
-            this.a(var2, (byte) 112);
+            this.insertText(var2, (byte) 112);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -432,7 +432,7 @@ class pm extends gn {
         }
         if (param0) {
           String var4 = (String) null;
-          this.a((String) null, (byte) -92);
+          this.insertText((String) null, (byte) -92);
         }
     }
 
@@ -455,7 +455,7 @@ class pm extends gn {
         return var2;
     }
 
-    private final void a(String param0, byte param1) {
+    private final void insertText(String param0, byte param1) {
         int var3_int = 0;
         if (this.field_W != -1) {
           var3_int = this.field_W - this.field_j.length();
@@ -494,8 +494,8 @@ class pm extends gn {
           qk.a(ui.field_j, -123);
         }
         if (param0) {
-          ul var3 = (ul) null;
-          pm.a((ul) null, -81, 46, (ul) null, -115);
+          ResourceArchive var3 = (ResourceArchive) null;
+          pm.a((ResourceArchive) null, -81, 46, (ResourceArchive) null, -115);
         }
         if (null != pk.field_b) {
           pk.field_b.b(param1, (byte) 47);
@@ -507,7 +507,7 @@ class pm extends gn {
         ie.a(param1, param0);
     }
 
-    final static PaletteBitmapFont a(ul param0, int param1, int param2, ul param3, int param4) {
+    final static PaletteBitmapFont a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         PaletteBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends PcmStream {
+final class MidiPcmStream extends PcmStream {
     private int[] field_C;
     static me field_Q;
     private mb[][] field_O;
@@ -39,7 +39,7 @@ final class gd extends PcmStream {
     final synchronized void a(int param0, byte param1) {
         this.field_N = param0;
         if (param1 != 116) {
-          this.a(113);
+          this.skip(113);
         }
     }
 
@@ -132,7 +132,7 @@ final class gd extends PcmStream {
 
     public static void e(int param0) {
         if (param0 != 0) {
-          gd.e(70);
+          MidiPcmStream.e(70);
         }
         field_Q = null;
     }
@@ -239,7 +239,7 @@ final class gd extends PcmStream {
             var5 = (int)((long)this.field_y[param2.field_o] * (long)var4_int >> 6);
           }
           if (param1 >= -64) {
-            gd.a(43, (byte) -76, 101);
+            MidiPcmStream.a(43, (byte) -76, 101);
           }
           param2.field_C.c(var5);
           return;
@@ -338,7 +338,7 @@ final class gd extends PcmStream {
         } else {
           this.a(-1, true);
         }
-        this.d(86, param0);
+        this.resetChannelControllers(86, param0);
         for (var3 = 0; var3 < 16; var3++) {
           this.field_C[var3] = this.field_j[var3];
         }
@@ -359,8 +359,8 @@ final class gd extends PcmStream {
         mb var8;
         int var9;
         MusicTrack var10;
-        po var11;
-        po var12;
+        MusicPatch var11;
+        MusicPatch var12;
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         this.b(param0, param3, 64, 101);
         if (0 != (2 & this.field_H[param3])) {
@@ -380,7 +380,7 @@ final class gd extends PcmStream {
             var5 = (mb) (this.field_P.field_k.c((byte) 121));
           }
         }
-        var11 = (po) (this.field_G.a(0, (long)this.field_C[param3]));
+        var11 = (MusicPatch) (this.field_G.a(0, (long)this.field_C[param3]));
         var12 = var11;
         if (var12 == null) {
           return;
@@ -566,7 +566,7 @@ final class gd extends PcmStream {
         }
         if (!param1) {
           Sprite[] var5 = (Sprite[]) null;
-          gd.a(false, -23, (Sprite[]) null);
+          MidiPcmStream.a(false, -23, (Sprite[]) null);
         }
     }
 
@@ -621,14 +621,14 @@ final class gd extends PcmStream {
         }
     }
 
-    final synchronized PcmStream b() {
+    final synchronized PcmStream firstSubStream() {
         return (PcmStream) ((Object) this.field_P);
     }
 
     private final synchronized void b(boolean param0, int param1) {
         if (param1 != -82) {
           Sprite[] var4 = (Sprite[]) null;
-          gd.a(false, 13, (Sprite[]) null);
+          MidiPcmStream.a(false, 13, (Sprite[]) null);
         }
         this.field_p.release();
         this.field_s = null;
@@ -664,7 +664,7 @@ final class gd extends PcmStream {
         try {
           if (param1 != 81682502) {
             var4 = (Sprite[]) null;
-            gd.a(true, -52, (Sprite[]) null);
+            MidiPcmStream.a(true, -52, (Sprite[]) null);
           }
           var3_int = this.field_J[param0.field_o];
           if (var3_int < 8192) {
@@ -693,7 +693,7 @@ final class gd extends PcmStream {
         return var3 + (param0 + (param0 >>> 31)) % param2;
     }
 
-    final synchronized boolean a(int param0, me param1, int param2, MusicTrack param3, ul param4) {
+    final synchronized boolean a(int param0, me param1, int param2, MusicTrack param3, ResourceArchive param4) {
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -708,7 +708,7 @@ final class gd extends PcmStream {
         Object var7 = null;
         kg var8 = null;
         int var9 = 0;
-        po var10 = null;
+        MusicPatch var10 = null;
         int var11 = 0;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -725,7 +725,7 @@ final class gd extends PcmStream {
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
             var9 = (int)var8.key;
-            var10 = (po) (this.field_G.a(param0 ^ -10783, (long)var9));
+            var10 = (MusicPatch) (this.field_G.a(param0 ^ -10783, (long)var9));
             if (var10 == null) {
               var10 = r.a(param4, var9, (byte) 15);
               if (var10 == null) {
@@ -991,7 +991,7 @@ final class gd extends PcmStream {
           this.c(var4Lifetime4, 0);
         }
         if (var5Lifetime4 == 121) {
-          this.d(param0 + 5855, var4Lifetime4);
+          this.resetChannelControllers(param0 + 5855, var4Lifetime4);
         }
         if (var5Lifetime4 == 123) {
           this.a(var4Lifetime4, true);
@@ -1074,7 +1074,7 @@ final class gd extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var2;
         long var3;
         int var5;
@@ -1091,19 +1091,19 @@ final class gd extends PcmStream {
             }
             var5 = (int)((-this.field_A + this.field_l + (long)var2 - 1L) / (long)var2);
             this.field_A = this.field_A + (long)var2 * (long)var5;
-            this.field_P.a(var5);
+            this.field_P.skip(var5);
             param0 = param0 - var5;
             this.f(-20);
             if (this.field_p.isReady()) {
               continue;
             }
-            this.field_P.a(param0);
+            this.field_P.skip(param0);
             decompiledFrameCompleted0 = false;
             break;
           }
         }
         if (decompiledFrameCompleted0) {
-          this.field_P.a(param0);
+          this.field_P.skip(param0);
         }
 
     }
@@ -1146,10 +1146,10 @@ final class gd extends PcmStream {
 
     final synchronized void d(int param0) {
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
-        po var4 = (po) (this.field_G.a(0));
+        MusicPatch var4 = (MusicPatch) (this.field_G.a(0));
         while (var4 != null) {
           var4.e(-6930);
-          var4 = (po) (this.field_G.b(-110));
+          var4 = (MusicPatch) (this.field_G.b(-110));
         }
         if (param0 < 124) {
           this.a(101, (byte) 21);
@@ -1260,7 +1260,7 @@ final class gd extends PcmStream {
           if (param3 != null) {
             param0.field_C.b(param3, param2, param1);
           } else {
-            param0.field_C.a(param1);
+            param0.field_C.skip(param1);
           }
           if (param0.field_C.j()) {
             this.field_P.field_o.b(param0.field_C);
@@ -1301,12 +1301,12 @@ final class gd extends PcmStream {
         return this.field_p.isReady();
     }
 
-    private final void d(int param0, int param1) {
+    private final void resetChannelControllers(int param0, int param1) {
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param1 < 0) {
           for (param1 = 0; param1 < 16; param1++) {
-            this.d(67, param1);
+            this.resetChannelControllers(67, param1);
           }
         } else {
           this.field_E[param1] = 12800;
@@ -1337,7 +1337,7 @@ final class gd extends PcmStream {
         this.e(-13961, param0, param2);
     }
 
-    public gd() {
+    public MidiPcmStream() {
         this.field_O = new mb[16][128];
         this.field_r = 1000000;
         this.field_m = new int[16];

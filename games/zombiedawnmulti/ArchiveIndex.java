@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be {
+final class ArchiveIndex {
     qq field_d;
     static String field_m;
     static String field_k;
@@ -267,7 +267,7 @@ final class be {
         field_k = null;
     }
 
-    be(byte[] param0, int param1, byte[] param2) {
+    ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
           this.field_o = pb.a(param0, param0.length, (byte) -120);

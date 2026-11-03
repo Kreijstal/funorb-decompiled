@@ -40,7 +40,7 @@ final class NodeHashTableIterator implements Iterator {
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var1_int = RandomAccessCacheFile.field_e - IntrusiveDequeCursor.field_i;
-          IntrusiveDequeCursor.field_i = aq.field_x - (var1_int >> 1);
+          IntrusiveDequeCursor.field_i = NetworkGameClient.field_x - (var1_int >> 1);
           RandomAccessCacheFile.field_e = IntrusiveDequeCursor.field_i + var1_int;
           eb.field_M = pm.field_Q - (pl.field_F >> 1);
           var2 = eb.field_M;
@@ -58,7 +58,7 @@ final class NodeHashTableIterator implements Iterator {
             var6 = eo.field_e[var3];
             stackIn_11_0 = !(var4 < 0);
             var7 = vh.a(stackIn_11_0, -76, var6);
-            var8 = -(var7 >> 1) + aq.field_x;
+            var8 = -(var7 >> 1) + NetworkGameClient.field_x;
             if (var4 >= 0) {
               var2 = var2 + pb.field_b;
               if (var4 == mo.field_Jb.field_d) {
@@ -68,7 +68,7 @@ final class NodeHashTableIterator implements Iterator {
               }
               var9 = stackIn_16_0;
               if (var9 != null) {
-                var9.a(var2, -GameCharacter.field_db + var8, (GameCharacter.field_db << 1) + var7, (ne.field_tb << 1) + po.field_n, 12018);
+                var9.a(var2, -GameCharacter.field_db + var8, (GameCharacter.field_db << 1) + var7, (ne.field_tb << 1) + MusicPatch.field_n, 12018);
               }
               var2 = var2 + ne.field_tb;
             }
@@ -77,7 +77,7 @@ final class NodeHashTableIterator implements Iterator {
               var2 = var2 + ImageProducerRasterBuffer.field_l;
             } else {
               wn.field_u.c(var6, var8, var2 + tk.field_n, var5, -1);
-              var2 = var2 + (po.field_n + (pb.field_b + ne.field_tb));
+              var2 = var2 + (MusicPatch.field_n + (pb.field_b + ne.field_tb));
             }
           }
           var4Lifetime1 = -17 / ((param0 + 59) / 46);

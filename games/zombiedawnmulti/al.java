@@ -13,7 +13,7 @@ abstract class al extends df {
     private int field_X;
     private int field_db;
     private int field_V;
-    static ul field_eb;
+    static ResourceArchive field_eb;
     private int field_T;
     static int field_Z;
 
@@ -25,7 +25,7 @@ abstract class al extends df {
             return;
           }
           try {
-            fo.a(jl.b(0), "resizing", (byte) 23, new Object[]{new Integer(param1)});
+            JavaScriptBridge.a(jl.b(0), "resizing", (byte) 23, new Object[]{new Integer(param1)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;
@@ -230,7 +230,7 @@ abstract class al extends df {
           return 1;
         }
         if (param1 != -1) {
-          field_eb = (ul) null;
+          field_eb = (ResourceArchive) null;
         }
         return -1;
     }

@@ -142,7 +142,7 @@ final class iq {
                 io.field_g = false;
                 return;
               }
-              if (hg.field_rb >= -1 + lm.field_pb) {
+              if (hg.field_rb >= -1 + SimHuman.field_pb) {
                 io.field_g = false;
                 return;
               }
@@ -156,7 +156,7 @@ final class iq {
             if (param0 != -14) {
               return;
             }
-            if (-1 + lm.field_pb > hg.field_rb) {
+            if (-1 + SimHuman.field_pb > hg.field_rb) {
               df.a(-17306, 1 + hg.field_rb);
               return;
             }
@@ -169,7 +169,7 @@ final class iq {
           }
           var2_int = hg.field_rb;
           if (param0 != -12) {
-            po.a((byte) -12, param0);
+            MusicPatch.a((byte) -12, param0);
           }
           if (param0 == -1) {
             w.field_m = 0;

@@ -4,7 +4,7 @@
 final class li extends qc {
     static long field_A;
     int field_y;
-    bq field_B;
+    SectorCacheStore field_B;
     static String field_z;
     static pd field_E;
     static int field_C;

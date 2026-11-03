@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ra extends IntrusiveNode {
-    static ul field_l;
+    static ResourceArchive field_l;
     int[] field_h;
     static String field_i;
     static int[] field_n;
@@ -21,7 +21,7 @@ final class ra extends IntrusiveNode {
           if (11 == a.field_b) {
             fg.a(-29956);
           }
-          c.a(eb.field_p, (byte) -100, lh.field_i, od.field_Bb);
+          TertiaryLinkDeque.a(eb.field_p, (byte) -100, lh.field_i, SimArmedHuman.field_Bb);
           t.a(false, 0, param0, 0);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -53,7 +53,7 @@ final class ra extends IntrusiveNode {
               if (0 == param2.length()) {
                 var5Lifetime4 = var5Lifetime4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              fo.a(param0, 14575, "document.cookie=\"" + var5Lifetime4 + "\"");
+              JavaScriptBridge.evaluateScript(param0, 14575, "document.cookie=\"" + var5Lifetime4 + "\"");
             } catch (Throwable throwable) {
             }
             ak.a(14158, param0);

@@ -17,8 +17,8 @@ final class lc extends IntrusiveNode {
 
     final static IndexedSprite c(byte param0) {
         if (param0 != 89) {
-          ul var2 = (ul) null;
-          lc.a(-40, (ul) null, (int[]) null, (IndexedSprite[]) null, (ul) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          lc.a(-40, (ResourceArchive) null, (int[]) null, (IndexedSprite[]) null, (ResourceArchive) null);
         }
         IndexedSprite var1 = new IndexedSprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[0], qj.field_o[0], oq.field_w[0], vj.field_p[0], qp.field_t[0], tp.field_t);
         fd.h((byte) 126);
@@ -133,8 +133,8 @@ final class lc extends IntrusiveNode {
         this.field_q = false;
         this.field_o = null;
         if (param4 < 103) {
-          ul var7 = (ul) null;
-          lc.a(83, (ul) null, (int[]) null, (IndexedSprite[]) null, (ul) null);
+          ResourceArchive var7 = (ResourceArchive) null;
+          lc.a(83, (ResourceArchive) null, (int[]) null, (IndexedSprite[]) null, (ResourceArchive) null);
         }
         this.field_k = param2;
         this.field_j = param0;
@@ -142,7 +142,7 @@ final class lc extends IntrusiveNode {
         this.field_f = param1;
     }
 
-    final static void a(int param0, ul param1, int[] param2, IndexedSprite[] param3, ul param4) {
+    final static void a(int param0, ResourceArchive param1, int[] param2, IndexedSprite[] param3, ResourceArchive param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
@@ -377,11 +377,11 @@ final class lc extends IntrusiveNode {
           SpriteState.field_v.field_S = dupTemp$3;
           var17 = pb.a("lobby", param1, -256, "checkbox");
           jk.field_h = new mi(0L, var17[1], var17[0], 1, cm.field_b, (String) null);
-          po.field_k = new cj(0L, (cj) null);
-          po.field_k.field_ab = ae.a(fl.a("lobby", "slideregion", param1, param0 + 23126), 27117);
-          po.field_k.field_X = ae.a(fl.a("lobby", "slideregion_mouseover", param1, 11091), 27117);
-          po.field_k.field_S = ae.a(fl.a("lobby", "slideregion_mouseheld", param1, 11091), 27117);
-          po.field_k.field_Bb = ae.a(fl.a("lobby", "slideregion_disabled", param1, 11091), 27117);
+          MusicPatch.field_k = new cj(0L, (cj) null);
+          MusicPatch.field_k.field_ab = GameEvent.a(fl.a("lobby", "slideregion", param1, param0 + 23126), 27117);
+          MusicPatch.field_k.field_X = GameEvent.a(fl.a("lobby", "slideregion_mouseover", param1, 11091), 27117);
+          MusicPatch.field_k.field_S = GameEvent.a(fl.a("lobby", "slideregion_mouseheld", param1, 11091), 27117);
+          MusicPatch.field_k.field_Bb = GameEvent.a(fl.a("lobby", "slideregion_disabled", param1, 11091), 27117);
           qq.field_c = new cj(0L, (cj) null);
           qq.field_c.field_ab = hc.a(pb.a("lobby", param1, -256, "dragbar"), 0);
           qq.field_c.field_X = hc.a(pb.a("lobby", param1, -256, "dragbar_mouseover"), 0);
@@ -397,7 +397,7 @@ final class lc extends IntrusiveNode {
           qq.field_b.field_K = fl.a("lobby", "downbutton_mouseover", param1, 11091);
           qq.field_b.field_nb = fl.a("lobby", "downbutton_mouseheld", param1, 11091);
           qq.field_b.field_cb = fl.a("lobby", "downbutton_disabled", param1, 11091);
-          td.field_f = new hi(0L, mj.field_Mb, qq.field_b, po.field_k, qq.field_c);
+          td.field_f = new hi(0L, mj.field_Mb, qq.field_b, MusicPatch.field_k, qq.field_c);
           oj.field_Q = new cd(0L, (cj) null, nc.field_e, td.field_f, tj.field_b, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

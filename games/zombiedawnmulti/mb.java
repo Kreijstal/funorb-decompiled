@@ -16,7 +16,7 @@ final class mb extends IntrusiveNode {
     int field_B;
     nj field_h;
     int field_l;
-    po field_x;
+    MusicPatch field_x;
     int field_D;
     int field_A;
     int field_p;

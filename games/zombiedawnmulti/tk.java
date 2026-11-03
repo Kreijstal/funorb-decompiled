@@ -510,8 +510,8 @@ final class tk extends nc {
         try {
           on.field_bb = new ki[63];
           lh.field_l = 255;
-          var12 = fq.field_k;
-          var9 = fq.field_k.f();
+          var12 = PhaseChangeEvent.field_k;
+          var9 = PhaseChangeEvent.field_k.f();
           rq.field_u = new int[255];
           for (var10 = 0; var10 < 255; var10++) {
             rq.field_u[var10] = var10 * 65793;
@@ -911,7 +911,7 @@ final class tk extends nc {
             }
           }
         }
-        if (c.field_b &&
+        if (TertiaryLinkDeque.field_b &&
           pq.field_f != 0) {
           stackIn_56_0 = !(wf.field_m - sq.field_S >= 25);
           kk.field_u = stackIn_56_0;
@@ -920,7 +920,7 @@ final class tk extends nc {
           kk.field_u = false;
         }
         stackIn_60_0 = (pq.field_f == param0);
-        c.field_b = stackIn_60_0;
+        TertiaryLinkDeque.field_b = stackIn_60_0;
         if (kk.field_u) {
           regionExit1: {
             if (FullscreenFocusCanvas.field_k.c(127, cp.field_O)) {

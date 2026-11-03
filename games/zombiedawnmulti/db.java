@@ -20,7 +20,7 @@ final class db {
         field_d = null;
     }
 
-    final static void a(PlatformTaskDispatcher param0, int param1, java.awt.Component param2, gd param3, int param4, boolean param5) {
+    final static void a(PlatformTaskDispatcher param0, int param1, java.awt.Component param2, MidiPcmStream param3, int param4, boolean param5) {
         try {
           kk.a(param1, param5, param1, (byte) 119, param2, param0, param4, param3);
         } catch (RuntimeException runtimeException) {

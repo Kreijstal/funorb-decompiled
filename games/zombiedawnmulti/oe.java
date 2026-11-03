@@ -93,7 +93,7 @@ final class oe {
           }
           ic.field_g = param1;
           SecondaryNodeDeque.field_a = param0;
-          ff.f(-4604);
+          TertiaryLinkNode.f(-4604);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "oe.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

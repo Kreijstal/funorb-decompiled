@@ -5,7 +5,7 @@ final class w extends PcmStream {
     private int field_s;
     private int[] field_r;
     private int[] field_w;
-    private gd field_j;
+    private MidiPcmStream field_j;
     private int field_u;
     private MusicTrack field_p;
     static String field_n;
@@ -14,14 +14,14 @@ final class w extends PcmStream {
     private boolean field_y;
     static BitmapFont field_A;
     private boolean field_l;
-    private gd field_t;
+    private MidiPcmStream field_t;
     private MusicTrack field_x;
-    private gd field_v;
+    private MidiPcmStream field_v;
     static IndexedSprite field_z;
     static int field_m;
     private int field_q;
 
-    private final void a(gd param0, int param1, int param2, int param3) {
+    private final void a(MidiPcmStream param0, int param1, int param2, int param3) {
         try {
           param0.a(param2, param1, false);
           param0.a((byte) -116, param3);
@@ -33,10 +33,10 @@ final class w extends PcmStream {
     final synchronized void a(MusicTrack param0, int param1, boolean param2, int param3, int param4, boolean param5) {
         boolean stackIn_17_1 = false;
         int stackIn_32_0 = 0;
-        gd stackIn_40_0 = null;
+        MidiPcmStream stackIn_40_0 = null;
         MusicTrack stackIn_40_1 = null;
         boolean stackIn_41_2 = false;
-        gd stackIn_49_0 = null;
+        MidiPcmStream stackIn_49_0 = null;
         MusicTrack stackIn_49_1 = null;
         boolean stackIn_50_2 = false;
         RuntimeException stackIn_55_0 = null;
@@ -105,7 +105,7 @@ final class w extends PcmStream {
               stackIn_49_0 = this.field_v;
               stackIn_49_1 = (MusicTrack) (param0);
               stackIn_50_2 = !(param2);
-              ((gd) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_50_2, 8361407);
+              ((MidiPcmStream) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_50_2, 8361407);
               this.a(this.field_v, -1, param3, param1);
             }
             this.field_q = -param4;
@@ -118,7 +118,7 @@ final class w extends PcmStream {
               stackIn_40_0 = this.field_j;
               stackIn_40_1 = (MusicTrack) (param0);
               stackIn_41_2 = !(param2);
-              ((gd) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_41_2, 8361407);
+              ((MidiPcmStream) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_41_2, 8361407);
               this.a(this.field_j, -1, param3, param1);
             }
             this.field_q = param4;
@@ -171,17 +171,17 @@ final class w extends PcmStream {
         return false;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var3;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_s <= 0) {
           if (this.field_s < 1048576 &&
             this.field_o != null) {
-            this.field_v.a(param0);
+            this.field_v.skip(param0);
           }
           if (0 < this.field_u &&
             this.field_x != null) {
-            this.field_t.a(param0);
+            this.field_t.skip(param0);
           }
           if (this.field_y) {
             if (this.field_q > 0 &&
@@ -218,12 +218,12 @@ final class w extends PcmStream {
           }
         } else {
           if (null != this.field_p) {
-            this.field_j.a(param0);
+            this.field_j.skip(param0);
           }
           if (this.field_s >= 1048576) {
             if (0 < this.field_u &&
               this.field_x != null) {
-              this.field_t.a(param0);
+              this.field_t.skip(param0);
             }
             if (this.field_y) {
               if (this.field_q > 0 &&
@@ -260,10 +260,10 @@ final class w extends PcmStream {
             }
           } else {
             if (this.field_o != null) {
-              this.field_v.a(param0);
+              this.field_v.skip(param0);
               if (0 < this.field_u &&
                 this.field_x != null) {
-                this.field_t.a(param0);
+                this.field_t.skip(param0);
               }
               if (this.field_y) {
                 if (this.field_q > 0 &&
@@ -352,7 +352,7 @@ final class w extends PcmStream {
                   this.field_p = null;
                   return;
                 }
-                this.field_t.a(param0);
+                this.field_t.skip(param0);
               }
               if (this.field_y) {
                 if (this.field_q > 0 &&
@@ -501,7 +501,7 @@ final class w extends PcmStream {
         }
     }
 
-    final PcmStream b() {
+    final PcmStream firstSubStream() {
         return null;
     }
 
@@ -538,7 +538,7 @@ final class w extends PcmStream {
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (this.field_k <= 0) {
-            this.a(param2);
+            this.skip(param2);
             return;
           }
           if (this.field_y) {

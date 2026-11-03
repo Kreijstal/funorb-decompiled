@@ -179,7 +179,7 @@ final class ld extends cj {
               if (hl.b(0)) {
                 ui.field_j = pd.field_f;
               } else {
-                ui.field_j = vl.a(vc.field_e, new String[]{mh.field_c.field_Nb}, 2);
+                ui.field_j = vl.a(vc.field_e, new String[]{JaggrabDownloader.field_c.field_Nb}, 2);
               }
             }
           }
@@ -457,13 +457,13 @@ final class ld extends cj {
               }
               if (var9 >= 0 &&
                 var17.field_pb) {
-                if (ul.field_m == null) {
+                if (ResourceArchive.field_m == null) {
                   var18_ref = null;
                 } else {
-                  if (null == ul.field_m[var7]) {
+                  if (null == ResourceArchive.field_m[var7]) {
                     var18_ref = null;
                   } else {
-                    var18_ref = ul.field_m[var7][var9];
+                    var18_ref = ResourceArchive.field_m[var7][var9];
                   }
                 }
                 if (kp.field_n != null) {
@@ -606,7 +606,7 @@ final class ld extends cj {
               stackIn_329_1 = (var4_int != 0) && (var16Lifetime1 == 0);
               stackIn_328_0.field_Z = stackIn_329_1;
             }
-            var6Lifetime4 = var6Lifetime4 + (od.field_Gb[var7] & 255);
+            var6Lifetime4 = var6Lifetime4 + (SimArmedHuman.field_Gb[var7] & 255);
           }
           if (var5 != 0) {
             if (param1) {
@@ -1110,7 +1110,7 @@ final class ld extends cj {
               var5 = 32768 | this.field_Qb[param1];
               var6 = va.field_a;
               if (var6 == 0 &&
-                mh.field_c != null) {
+                JaggrabDownloader.field_c != null) {
                 var6 = 1;
               }
               if (ga.a(var6, true) == 2) {

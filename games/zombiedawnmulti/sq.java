@@ -408,10 +408,10 @@ class sq extends gn {
           for (var3 = 0; hq.field_m.length > var3; var3++) {
             var4 = wd.field_Q[var3];
             if (var4 >= 0) {
-              if (var4 != aq.field_B.field_d) {
+              if (var4 != NetworkGameClient.field_B.field_d) {
                 var5 = hp.field_k;
               } else {
-                var5 = fq.field_n;
+                var5 = PhaseChangeEvent.field_n;
               }
             } else {
               var5 = qh.field_e;
@@ -460,7 +460,7 @@ class sq extends gn {
             var8Lifetime1 = am.field_c - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + al.field_bb;
-              if (var4 != aq.field_B.field_d) {
+              if (var4 != NetworkGameClient.field_B.field_d) {
                 stackIn_44_0 = RandomAccessCacheFile.field_a;
               } else {
                 stackIn_44_0 = en.field_d;

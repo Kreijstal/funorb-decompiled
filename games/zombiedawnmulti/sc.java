@@ -231,18 +231,18 @@ final class sc {
           field_d = (cj) null;
           var1 = fa.d(false);
           var2 = sk.a((byte) -99);
-          po.field_l.a(-la.field_m + ce.field_k, -um.field_a + ZombieDawnMulti.field_H, var1 + (um.field_a << 1), (la.field_m << 1) + var2, 12018);
+          MusicPatch.field_l.a(-la.field_m + ce.field_k, -um.field_a + ZombieDawnMulti.field_H, var1 + (um.field_a << 1), (la.field_m << 1) + var2, 12018);
           sq.g(param0 + 114);
           return;
         }
         var1Lifetime1 = fa.d(false);
         var2Lifetime1 = sk.a((byte) -99);
-        po.field_l.a(-la.field_m + ce.field_k, -um.field_a + ZombieDawnMulti.field_H, var1Lifetime1 + (um.field_a << 1), (la.field_m << 1) + var2Lifetime1, 12018);
+        MusicPatch.field_l.a(-la.field_m + ce.field_k, -um.field_a + ZombieDawnMulti.field_H, var1Lifetime1 + (um.field_a << 1), (la.field_m << 1) + var2Lifetime1, 12018);
         sq.g(param0 + 114);
     }
 
     final static void b(int param0) {
-        fq.field_i = null;
+        PhaseChangeEvent.field_i = null;
         if (param0 != 1) {
           field_j = (cj) null;
           GameCharacter.field_hb = null;

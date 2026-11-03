@@ -56,11 +56,11 @@ final class qi {
             return;
           }
           var4 = var11.readSignedSmart(22219);
-          var5 = (hp) (mh.field_l.c(83));
+          var5 = (hp) (JaggrabDownloader.field_l.c(83));
           while (var5 != null) {
             if (var5.field_v != var3 ||
               var4 != var5.field_f) {
-              var5 = (hp) (mh.field_l.b(6));
+              var5 = (hp) (JaggrabDownloader.field_l.b(6));
               continue;
             }
             break;

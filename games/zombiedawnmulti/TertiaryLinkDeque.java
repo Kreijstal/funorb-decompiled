@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class c {
-    private ff field_a;
+final class TertiaryLinkDeque {
+    private TertiaryLinkNode field_a;
     static Random field_c;
-    private ff field_f;
+    private TertiaryLinkNode field_f;
     static int field_e;
     static boolean field_b;
     static String field_d;
@@ -283,7 +283,7 @@ final class c {
             var4_int = var4_int >>> 8 ^ LevelFileCatalog.field_a[255 & (param0[var5] ^ var4_int)];
           }
           if (!param2) {
-            c.a(104);
+            TertiaryLinkDeque.a(104);
           }
           var4_int = ~var4_int;
           stackIn_7_0 = var4_int;
@@ -302,22 +302,22 @@ final class c {
         }
     }
 
-    final ff c(int param0) {
-        ff var2 = this.field_f;
+    final TertiaryLinkNode next(int param0) {
+        TertiaryLinkNode var2 = this.field_f;
         if (param0 != -1) {
-          this.c(-65);
+          this.next(-65);
           if (var2 == this.field_a) {
             this.field_f = null;
             return null;
           }
-          this.field_f = var2.field_v;
+          this.field_f = var2.tertiaryNext;
           return var2;
         }
         if (var2 == this.field_a) {
           this.field_f = null;
           return null;
         }
-        this.field_f = var2.field_v;
+        this.field_f = var2.tertiaryNext;
         return var2;
     }
 
@@ -336,52 +336,52 @@ final class c {
         }
     }
 
-    final void a(ff param0, boolean param1) {
-        if (null != param0.field_w) {
-          param0.c((byte) -70);
+    final void addLast(TertiaryLinkNode param0, boolean param1) {
+        if (null != param0.tertiaryPrevious) {
+          param0.unlinkTertiary((byte) -70);
         }
-        param0.field_v = this.field_a.field_v;
-        param0.field_w = this.field_a;
+        param0.tertiaryNext = this.field_a.tertiaryNext;
+        param0.tertiaryPrevious = this.field_a;
         if (!param1) {
           return;
         }
         try {
-          param0.field_w.field_v = param0;
-          param0.field_v.field_w = param0;
+          param0.tertiaryPrevious.tertiaryNext = param0;
+          param0.tertiaryNext.tertiaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "c.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final int b(int param0) {
+    final int size(int param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2 = param0;
-        ff var3 = this.field_a.field_v;
+        TertiaryLinkNode var3 = this.field_a.tertiaryNext;
         while (var3 != this.field_a) {
           var2++;
-          var3 = var3.field_v;
+          var3 = var3.tertiaryNext;
         }
         return var2;
     }
 
-    public c() {
-        this.field_a = new ff();
-        this.field_a.field_v = this.field_a;
-        this.field_a.field_w = this.field_a;
+    public TertiaryLinkDeque() {
+        this.field_a = new TertiaryLinkNode();
+        this.field_a.tertiaryNext = this.field_a;
+        this.field_a.tertiaryPrevious = this.field_a;
     }
 
-    final ff a(boolean param0) {
-        ff var2 = this.field_a.field_v;
+    final TertiaryLinkNode first(boolean param0) {
+        TertiaryLinkNode var2 = this.field_a.tertiaryNext;
         if (this.field_a == var2) {
           this.field_f = null;
           return null;
         }
         if (!param0) {
-          this.field_f = var2.field_v;
+          this.field_f = var2.tertiaryNext;
           return var2;
         }
-        this.field_a = (ff) null;
-        this.field_f = var2.field_v;
+        this.field_a = (TertiaryLinkNode) null;
+        this.field_f = var2.tertiaryNext;
         return var2;
     }
 

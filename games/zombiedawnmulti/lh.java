@@ -63,7 +63,7 @@ final class lh {
         field_g = null;
     }
 
-    final static void a(int param0, ul param1) {
+    final static void a(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;

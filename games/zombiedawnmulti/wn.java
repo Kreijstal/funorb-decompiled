@@ -85,7 +85,7 @@ final class wn extends pp {
           var2 = !tb.field_u ? 200 : 250;
           InflaterDecompressor.field_h.a(30, 5, -var2 + 363, var2 + 5, -3344);
           bp.field_w.a(30, 5, cm.field_a.field_zb - 5 - 5 - 365, 370, -3344);
-          ek.field_H.a(DualLinkNode.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
+          SimEntity.field_H.a(DualLinkNode.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
           var3 = (2 + cm.field_a.field_zb) / 2;
           ia.field_t.a(40, -40 + cm.field_a.field_z, var3 - 2, 0, param0 - 3347);
           if (!tb.field_u) {
@@ -103,7 +103,7 @@ final class wn extends pp {
         var2Lifetime1 = !tb.field_u ? 200 : 250;
         InflaterDecompressor.field_h.a(30, 5, -var2Lifetime1 + 363, var2Lifetime1 + 5, -3344);
         bp.field_w.a(30, 5, cm.field_a.field_zb - 5 - 5 - 365, 370, -3344);
-        ek.field_H.a(DualLinkNode.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
+        SimEntity.field_H.a(DualLinkNode.field_o, 2, -10 + ml.field_Lb.field_zb, 5, -37 + ml.field_Lb.field_z - 5, param0 ^ -31468, 37);
         var3Lifetime1 = (2 + cm.field_a.field_zb) / 2;
         ia.field_t.a(40, -40 + cm.field_a.field_z, var3Lifetime1 - 2, 0, param0 - 3347);
         if (!tb.field_u) {

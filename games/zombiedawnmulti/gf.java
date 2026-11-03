@@ -46,9 +46,9 @@ abstract class gf implements j {
 
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6, boolean param7) {
         try {
-          if (ek.field_z.field_T != 0 &&
+          if (SimEntity.field_z.field_T != 0 &&
             !nh.field_m) {
-            if (!sh.field_L) {
+            if (!SimPortal.field_L) {
               sq.field_N = true;
             } else {
               q.a(13151);

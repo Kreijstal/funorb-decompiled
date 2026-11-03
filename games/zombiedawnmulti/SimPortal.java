@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sh extends ek {
+final class SimPortal extends SimEntity {
     static String field_M;
     int field_O;
     static IndexedSprite[] field_N;
@@ -19,13 +19,13 @@ final class sh extends ek {
         field_P = null;
     }
 
-    final void h(int param0) {
+    final void tick(int param0) {
         if (param0 <= 30) {
-          sh.b(false);
+          SimPortal.b(false);
         }
     }
 
-    final boolean a(pa param0, int param1) {
+    final boolean isInRange(SimUnit param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -35,11 +35,11 @@ final class sh extends ek {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.field_Q == param1) {
+          if (param0.state == param1) {
             return false;
           }
-          var3_int = param0.e((byte) -112) - this.e((byte) -112);
-          var4 = param0.g(1829947600) - this.g(1829947600);
+          var3_int = param0.getX((byte) -112) - this.getX((byte) -112);
+          var4 = param0.getY(1829947600) - this.getY(1829947600);
           var5 = var4 * var4 + var3_int * var3_int;
           return !(var5 >= 3600);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -56,7 +56,7 @@ final class sh extends ek {
         }
     }
 
-    sh(int param0, int param1) {
+    SimPortal(int param0, int param1) {
         super(param0, param1, 0);
     }
 

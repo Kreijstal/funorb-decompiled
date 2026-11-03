@@ -56,7 +56,7 @@ final class ap extends qb {
         }
     }
 
-    final static void a(ul param0, byte param1, BitmapFont param2) {
+    final static void a(ResourceArchive param0, byte param1, BitmapFont param2) {
         int var6 = 0;
         int var7 = 0;
         int[] var17 = null;
@@ -95,7 +95,7 @@ final class ap extends qb {
             SoftwareRasterizer.drawVerticalLine(var9, var9 + 1, 14 - (var9 << 1), 16777215);
           }
           SoftwareRasterizer.setTarget(var17, var6, var7);
-          tl.field_t = eh.a(false, tg.field_d, bb.field_k, GameWorld.field_x, var5);
+          tl.field_t = HuffmanCodec.a(false, tg.field_d, bb.field_k, GameWorld.field_x, var5);
           rp.field_l.field_Cb = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ap.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -322,7 +322,7 @@ final class ap extends qb {
         }
     }
 
-    final static PaletteBitmapFont a(ul param0, ul param1, String param2, int param3, String param4) {
+    final static PaletteBitmapFont a(ResourceArchive param0, ResourceArchive param1, String param2, int param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

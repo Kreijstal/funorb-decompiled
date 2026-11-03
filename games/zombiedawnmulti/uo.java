@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uo extends ae {
+final class uo extends GameEvent {
     static String field_j;
     private int field_l;
     private int field_k;

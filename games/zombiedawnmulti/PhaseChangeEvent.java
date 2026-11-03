@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fq extends ae {
+final class PhaseChangeEvent extends GameEvent {
     static Sprite field_k;
     static String field_j;
     int field_l;
@@ -13,7 +13,7 @@ final class fq extends ae {
         try {
           if (param0 != 0) {
             PacketBuffer var4 = (PacketBuffer) null;
-            fq.a((PacketBuffer) null, (byte) 15);
+            PhaseChangeEvent.a((PacketBuffer) null, (byte) 15);
           }
           param1.a((byte) -74, this.field_l, this.field_m);
         } catch (RuntimeException runtimeException) {
@@ -29,7 +29,7 @@ final class fq extends ae {
           return;
         }
         PacketBuffer var2 = (PacketBuffer) null;
-        fq.a((PacketBuffer) null, (byte) -34);
+        PhaseChangeEvent.a((PacketBuffer) null, (byte) -34);
         field_k = null;
     }
 
@@ -135,7 +135,7 @@ final class fq extends ae {
         }
     }
 
-    fq(int param0, int param1, int param2) {
+    PhaseChangeEvent(int param0, int param1, int param2) {
         super(param0);
         this.field_m = param2;
         this.field_l = param1;

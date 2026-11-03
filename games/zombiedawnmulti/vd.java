@@ -89,11 +89,11 @@ final class vd {
           return;
         }
         if (param1 % 10L != 0L) {
-          be.a(param1, true);
+          ArchiveIndex.a(param1, true);
           return;
         }
-        be.a(-1L + param1, true);
-        be.a(1L, !param0 ? true : false);
+        ArchiveIndex.a(-1L + param1, true);
+        ArchiveIndex.a(1L, !param0 ? true : false);
     }
 
     static {

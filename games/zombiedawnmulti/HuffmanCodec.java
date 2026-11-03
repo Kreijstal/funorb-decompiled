@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh {
+final class HuffmanCodec {
     static String field_h;
     private int[] field_e;
     static String field_f;
@@ -130,7 +130,7 @@ final class eh {
           var7 = var5_int + var6;
           if (param0) {
             var18 = (ob) null;
-            eh.a(false, (cj) null, (cj) null, (cj) null, (ob) null);
+            HuffmanCodec.a(false, (cj) null, (cj) null, (cj) null, (ob) null);
           }
           var8 = new String[var7];
           var22 = new char[var7];
@@ -145,7 +145,7 @@ final class eh {
               var13_ref_ob = ok.field_p.a(param4.field_x[var12], 32767);
               var8[var12] = var13_ref_ob.field_s;
               var9[var12] = param4.field_r[var12];
-              var11[var12] = eh.a(false, param1, param2, param3, var13_ref_ob);
+              var11[var12] = HuffmanCodec.a(false, param1, param2, param3, var13_ref_ob);
             }
           }
           if (param4.field_B != null) {
@@ -237,12 +237,12 @@ final class eh {
         field_f = null;
         if (param0 <= 26) {
           ob var2 = (ob) null;
-          eh.a(false, (cj) null, (cj) null, (cj) null, (ob) null);
+          HuffmanCodec.a(false, (cj) null, (cj) null, (cj) null, (ob) null);
         }
         field_c = null;
     }
 
-    final int a(int param0, int param1, int param2, byte[] param3, byte[] param4, int param5) {
+    final int decompress(int param0, int param1, int param2, byte[] param3, byte[] param4, int param5) {
         int dupTemp$0 = 0;
         int incrementValue$1 = 0;
         int dupTemp$2 = 0;
@@ -447,7 +447,7 @@ final class eh {
         }
     }
 
-    final int a(int param0, byte param1, int param2, byte[] param3, int param4, byte[] param5) {
+    final int compress(int param0, byte param1, int param2, byte[] param3, int param4, byte[] param5) {
         int dupTemp$0 = 0;
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -540,7 +540,7 @@ final class eh {
         }
     }
 
-    eh(byte[] param0) {
+    HuffmanCodec(byte[] param0) {
         int var5 = 0;
         int var14 = 0;
         RuntimeException stackIn_38_0 = null;

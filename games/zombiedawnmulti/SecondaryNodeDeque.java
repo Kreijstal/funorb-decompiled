@@ -11,7 +11,7 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_b;
     static BitmapFont field_c;
 
-    final static void a(ul param0, byte[] param1, int param2, String[] param3, int[] param4, int param5, Sprite[][] param6, String[] param7, boolean param8, String[][] param9, int param10, String[][] param11, ul param12, byte[] param13, int[] param14, IndexedSprite[] param15, Sprite[][] param16, ul param17, boolean param18) {
+    final static void a(ResourceArchive param0, byte[] param1, int param2, String[] param3, int[] param4, int param5, Sprite[][] param6, String[] param7, boolean param8, String[][] param9, int param10, String[][] param11, ResourceArchive param12, byte[] param13, int[] param14, IndexedSprite[] param15, Sprite[][] param16, ResourceArchive param17, boolean param18) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

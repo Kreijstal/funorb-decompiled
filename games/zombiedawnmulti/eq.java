@@ -27,7 +27,7 @@ final class eq {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final cn a(int param0, bq param1, int param2, bq param3, boolean param4) {
+    final cn a(int param0, SectorCacheStore param1, int param2, SectorCacheStore param3, boolean param4) {
         cn stackIn_11_0 = null;
         cn stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;

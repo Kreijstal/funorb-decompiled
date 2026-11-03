@@ -17,10 +17,10 @@ final class gl extends WidgetContainer implements in {
         RuntimeException var2 = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var4 = (hp) (mh.field_l.c(108));
+          var4 = (hp) (JaggrabDownloader.field_l.c(108));
           while (var4 != null) {
             tk.a(var4, 58, param1);
-            var4 = (hp) (mh.field_l.b(6));
+            var4 = (hp) (JaggrabDownloader.field_l.b(6));
           }
           if (!param0) {
             gl.c(false);

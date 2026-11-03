@@ -93,7 +93,7 @@ final class jb {
           this.c(-88);
           return;
         }
-        if (mh.field_c == null) {
+        if (JaggrabDownloader.field_c == null) {
           if (param1 < -80) {
             return;
           }
@@ -111,25 +111,25 @@ final class jb {
         var4 = vm.a(this.field_i, (byte) -104);
         var5 = this.b(-20516);
         if (var4 != null) {
-          if (!mh.field_c.field_Fb) {
+          if (!JaggrabDownloader.field_c.field_Fb) {
             this.field_j.a((byte) -118, vl.a(lk.field_I, new String[]{var5}, 2), 1);
           } else {
-            if (mh.field_c.field_Sb >= 0) {
+            if (JaggrabDownloader.field_c.field_Sb >= 0) {
               this.field_j.a((byte) -118, vl.a(lk.field_I, new String[]{var5}, 2), 1);
             }
           }
         } else {
           if (var7 != null &&
-            mh.field_c.field_Wb &&
-            mh.field_c.field_cc < mh.field_c.field_mc) {
+            JaggrabDownloader.field_c.field_Wb &&
+            JaggrabDownloader.field_c.field_cc < JaggrabDownloader.field_c.field_mc) {
             if (var7.field_Pb) {
               this.field_j.a((byte) -118, vl.a(bl.field_f, new String[]{var5}, 2), 1);
             } else {
               if (!param0) {
-                this.field_j.a((byte) -118, vl.a(ge.field_qb, new String[]{var5}, 2), 0);
+                this.field_j.a((byte) -118, vl.a(SimZombie.field_qb, new String[]{var5}, 2), 0);
               } else {
                 if (!var7.field_Ob) {
-                  this.field_j.a((byte) -118, vl.a(ge.field_qb, new String[]{var5}, 2), 0);
+                  this.field_j.a((byte) -118, vl.a(SimZombie.field_qb, new String[]{var5}, 2), 0);
                 } else {
                   this.field_j.a((byte) -118, vl.a(mq.field_p, new String[]{var5}, 2), 0);
                   this.field_j.a((byte) -118, vl.a(r.field_g, new String[]{var5}, 2), 1);
@@ -186,7 +186,7 @@ final class jb {
         int var4;
         jh var5;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (mh.field_c != null) {
+        if (JaggrabDownloader.field_c != null) {
           if (param0 <= -8) {
             return;
           }
@@ -440,7 +440,7 @@ final class jb {
         String var7 = null;
         try {
           if (this.field_f != null && (ie.field_sb != this.field_i ||
-            2 == param0) && ge.field_zb == 2) {
+            2 == param0) && SimZombie.field_zb == 2) {
             var7 = this.b(-20516);
             var4 = var7;
             var5 = dn.a(this.field_f, false);
@@ -453,19 +453,19 @@ final class jb {
                 param0 != 2 &&
                 !nh.field_m) {
                 this.field_g = param1;
-                this.field_j.a((byte) -118, vl.a(ff.field_u, new String[]{var7}, 2), 19);
+                this.field_j.a((byte) -118, vl.a(TertiaryLinkNode.field_u, new String[]{var7}, 2), 19);
               }
             }
             if (var5 != null) {
               if (!cq.a(this.field_f, -118) &&
                 !nh.field_m) {
-                if (!sh.field_L) {
+                if (!SimPortal.field_L) {
                   this.field_j.a((byte) -118, vl.a(jk.field_i, new String[]{var7}, 2), 8);
                 }
                 this.field_j.a((byte) -118, vl.a(mp.field_c, new String[]{var7}, 2), 18);
                 if (param1 != null) {
                   this.field_g = param1;
-                  this.field_j.a((byte) -118, vl.a(ff.field_u, new String[]{var7}, 2), 19);
+                  this.field_j.a((byte) -118, vl.a(TertiaryLinkNode.field_u, new String[]{var7}, 2), 19);
                 }
               }
               this.field_j.a((byte) -118, vl.a(nk.field_j, new String[]{var7}, 2), 5);

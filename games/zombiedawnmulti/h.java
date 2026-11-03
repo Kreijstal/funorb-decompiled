@@ -76,7 +76,7 @@ final class h extends id {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 19313) {
-            h.a((ul) null, 102);
+            h.a((ResourceArchive) null, 102);
           }
           if (2 <= param0) {
             stackIn_5_0 = 2;
@@ -95,7 +95,7 @@ final class h extends id {
         }
     }
 
-    final static boolean a(ul param0, int param1, ul param2, ul param3) {
+    final static boolean a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -191,7 +191,7 @@ final class h extends id {
             field_K = (int[]) null;
           }
           rn.field_a = fa.field_Qb[param1];
-          od.field_Ab = dd.field_f[param1];
+          SimArmedHuman.field_Ab = dd.field_f[param1];
           ne.field_Ab = pf.field_e[param1];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -201,7 +201,7 @@ final class h extends id {
         }
     }
 
-    final static void a(ul param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_1861_0;
             StringBuilder stackIn_1861_1;
@@ -211,10 +211,10 @@ final class h extends id {
             byte[] var2;
             RuntimeException var2_ref;
             int var3;
-            ul param0;
+            ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(ul initialParam0, int initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1861_0 = null;
@@ -1168,7 +1168,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-124, "name_POWERUP_SPEED");
                 if (var2 != null) {
-                  ek.field_F = qe.a(-2739, var2);
+                  SimEntity.field_F = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "name_POWERUP_MELTDOWN");
                 if (null != var2) {
@@ -1184,7 +1184,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-128, "name_POWERUP_DETONATE");
                 if (null != var2) {
-                  ul.field_d = qe.a(-2739, var2);
+                  ResourceArchive.field_d = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "name_POWERUP_SCREECH");
                 if (var2 != null) {
@@ -1208,7 +1208,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-125, "name_POWERUP_BREACH");
                 if (null != var2) {
-                  od.field_Eb = qe.a(-2739, var2);
+                  SimArmedHuman.field_Eb = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "name_POWERUP_HAZE");
                 if (null != var2) {
@@ -1359,7 +1359,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-125, "teaser_POWERUP_DISGUISE");
                 if (null != var2) {
-                  lm.field_jb = qe.a(-2739, var2);
+                  SimHuman.field_jb = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "teaser_POWERUP_DETONATE");
                 if (null != var2) {
@@ -1379,7 +1379,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-122, "teaser_POWERUP_HAMMER");
                 if (null != var2) {
-                  sh.field_P = qe.a(-2739, var2);
+                  SimPortal.field_P = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "teaser_POWERUP_BARRIER");
                 if (null != var2) {
@@ -1435,7 +1435,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-126, "teaser_TRAIT_EXPERT");
                 if (var2 != null) {
-                  po.field_i = qe.a(-2739, var2);
+                  MusicPatch.field_i = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "teaser_TRAIT_SPELL_MASTER");
                 if (null != var2) {
@@ -1483,7 +1483,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-127, "teaser_TRAIT_RESILIENT");
                 if (var2 != null) {
-                  lm.field_ob = qe.a(-2739, var2);
+                  SimHuman.field_ob = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "teaser_TRAIT_SCEPTIC");
                 if (var2 != null) {
@@ -1551,15 +1551,15 @@ final class h extends id {
                 }
                 var2 = qe.a(-125, "tip_POWERUP_CURSE");
                 if (var2 != null) {
-                  pa.field_bb = qe.a(-2739, var2);
+                  SimUnit.field_bb = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "tip_POWERUP_HAMMER");
                 if (null != var2) {
-                  c.field_d = qe.a(-2739, var2);
+                  TertiaryLinkDeque.field_d = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "tip_POWERUP_BARRIER");
                 if (var2 != null) {
-                  ge.field_ib = qe.a(-2739, var2);
+                  SimZombie.field_ib = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "tip_POWERUP_BREACH");
                 if (null != var2) {
@@ -1623,11 +1623,11 @@ final class h extends id {
                 }
                 var2 = qe.a(-126, "tip_TRAIT_FOCUSED");
                 if (null != var2) {
-                  ul.field_c = qe.a(-2739, var2);
+                  ResourceArchive.field_c = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "tip_TRAIT_FAMISHED");
                 if (null != var2) {
-                  ul.field_h = qe.a(-2739, var2);
+                  ResourceArchive.field_h = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "tip_TRAIT_ZOMBIE_LOVER");
                 if (null != var2) {
@@ -1655,7 +1655,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-124, "tip_TRAIT_FAST");
                 if (var2 != null) {
-                  ul.field_i = qe.a(-2739, var2);
+                  ResourceArchive.field_i = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "tip_TRAIT_RESILIENT");
                 if (null != var2) {
@@ -1667,7 +1667,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-124, "tip_TRAIT_SAGE");
                 if (null != var2) {
-                  ff.field_q = qe.a(-2739, var2);
+                  TertiaryLinkNode.field_q = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "tip_MODIFIER_ANNOYING");
                 if (var2 != null) {
@@ -1675,7 +1675,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-125, "tip_MODIFIER_IMPOSED");
                 if (null != var2) {
-                  wl.field_g = qe.a(-2739, var2);
+                  WhirlpoolHasher.field_g = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "tip_MODIFIER_LETHAL");
                 if (var2 != null) {
@@ -1715,7 +1715,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-122, "endoffreegame");
                 if (var2 != null) {
-                  wl.field_i = qe.a(-2739, var2);
+                  WhirlpoolHasher.field_i = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "testchamber");
                 if (var2 != null) {
@@ -2345,7 +2345,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-126, "hidechattocontinue");
                 if (null != var2) {
-                  be.field_m = qe.a(-2739, var2);
+                  ArchiveIndex.field_m = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "mp_showchat_nounread");
                 if (null != var2) {

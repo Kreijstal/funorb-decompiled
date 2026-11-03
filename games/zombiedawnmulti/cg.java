@@ -7,7 +7,7 @@ final class cg extends IntrusiveNode {
     static cj field_f;
     private IntrusiveDeque field_k;
     private int field_g;
-    static ul field_n;
+    static ResourceArchive field_n;
     static String field_j;
     private int field_h;
     static boolean field_l;

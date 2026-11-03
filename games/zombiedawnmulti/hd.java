@@ -397,7 +397,7 @@ final class hd extends un {
             return stackIn_20_0;
           }
           if (11 == param0) {
-            stackIn_23_0 = ek.field_I;
+            stackIn_23_0 = SimEntity.field_I;
             return stackIn_23_0;
           }
           if (param0 != 14) {

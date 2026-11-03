@@ -12,12 +12,12 @@ abstract class kk extends DualLinkNode {
     static PlatformTaskDispatcher field_y;
     static String field_s;
 
-    final static void a(int param0, boolean param1, int param2, byte param3, java.awt.Component param4, PlatformTaskDispatcher param5, int param6, gd param7) {
+    final static void a(int param0, boolean param1, int param2, byte param3, java.awt.Component param4, PlatformTaskDispatcher param5, int param6, MidiPcmStream param7) {
         try {
           PcmPlayerService.a(param0, param1, 10);
           rm.field_b = PcmPlayerService.a(param5, param4, 0, param2);
           ga.field_u = PcmPlayerService.a(param5, param4, 1, param6);
-          bh.field_a = new vp();
+          bh.field_a = new PcmStreamMixer();
           lq.field_d = param6 * 1000 / param0;
           ga.field_u.a(bh.field_a);
           wd.field_L = param7;

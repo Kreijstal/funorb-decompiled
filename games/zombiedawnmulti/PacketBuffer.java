@@ -8,7 +8,7 @@ class PacketBuffer extends IntrusiveNode {
     static int[] field_n;
     static boolean field_f;
     static String field_h;
-    static vp field_l;
+    static PcmStreamMixer field_l;
     static cj field_g;
     static int[] field_i;
 
@@ -138,7 +138,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param1 < 111) {
           this.e(-90, -121);
         }
-        int var3 = c.a(this.payload, this.position, true, param0);
+        int var3 = TertiaryLinkDeque.a(this.payload, this.position, true, param0);
         this.writeInt(8, var3);
         return var3;
     }
@@ -367,7 +367,7 @@ class PacketBuffer extends IntrusiveNode {
           this.a(var8.length, (byte) -101);
           this.a(var8, var8.length, 0, param1 ^ -2617);
           if (param1 != -2628) {
-            field_l = (vp) null;
+            field_l = (PcmStreamMixer) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -616,7 +616,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param0) {
           field_f = true;
         }
-        int var2 = c.a(this.payload, this.position, true, 0);
+        int var2 = TertiaryLinkDeque.a(this.payload, this.position, true, 0);
         int var3 = this.readInt(-1478490344);
         if (var2 != var3) {
           return false;

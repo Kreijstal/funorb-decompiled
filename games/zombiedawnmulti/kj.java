@@ -112,9 +112,9 @@ final class kj extends IntrusiveNode {
           ve.a(stackIn_2_0, stackIn_2_1, stackIn_2_2, (tq) (stackIn_2_3), stackIn_2_4, stackIn_2_5, stackIn_2_6, (int[]) (stackIn_2_7), stackIn_3_8);
           if (param1.field_l == 0 &&
             !um.b(-127) &&
-            mh.field_c == null &&
+            JaggrabDownloader.field_c == null &&
             BufferedSocket.field_n == null) {
-            if (!sh.field_L) {
+            if (!SimPortal.field_L) {
               var5 = pk.field_b;
               var6 = ki.field_j;
               var5.field_j.a((byte) -118, var6, 14);
@@ -128,9 +128,9 @@ final class kj extends IntrusiveNode {
           }
           if (param1.field_l == 1 &&
             !um.b(-122) &&
-            null != mh.field_c &&
-            param1.field_j == mh.field_c.i(6)) {
-            if (!sh.field_L) {
+            null != JaggrabDownloader.field_c &&
+            param1.field_j == JaggrabDownloader.field_c.i(6)) {
+            if (!SimPortal.field_L) {
               var9 = pk.field_b;
               var10 = pi.field_e;
               var9.field_j.a((byte) -118, var10, 14);

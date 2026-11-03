@@ -8,7 +8,7 @@ final class cp extends WidgetContainer implements jn, in {
     static BitmapFont field_H;
     private gn field_M;
     gl field_V;
-    static ul field_P;
+    static ResourceArchive field_P;
     static Calendar field_U;
     private gn field_W;
     private on field_G;

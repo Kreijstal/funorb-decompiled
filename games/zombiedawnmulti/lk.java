@@ -29,7 +29,7 @@ final class lk extends id {
         this.field_H = 0;
         int fieldTemp$1 = this.field_M + 1;
         this.field_M = this.field_M + 1;
-        if (fieldTemp$1 < od.field_Fb.length) {
+        if (fieldTemp$1 < SimArmedHuman.field_Fb.length) {
           return;
         }
         if (this.field_S != 1) {
@@ -50,7 +50,7 @@ final class lk extends id {
           this.field_z = param0 << 16;
           this.field_Q = param0;
           this.h((byte) -11);
-          var5 = od.field_Fb.length;
+          var5 = SimArmedHuman.field_Fb.length;
           this.field_H = hp.a((byte) 68, g.field_a, 10);
           this.field_K = hp.a((byte) 107, g.field_a, param1);
           this.field_M = hp.a((byte) -68, g.field_a, var5);
@@ -61,7 +61,7 @@ final class lk extends id {
         this.field_z = param0 << 16;
         this.field_Q = param0;
         this.h((byte) -11);
-        var5Lifetime1 = od.field_Fb.length;
+        var5Lifetime1 = SimArmedHuman.field_Fb.length;
         this.field_H = hp.a((byte) 68, g.field_a, 10);
         this.field_K = hp.a((byte) 107, g.field_a, param1);
         this.field_M = hp.a((byte) -68, g.field_a, var5Lifetime1);
@@ -93,7 +93,7 @@ final class lk extends id {
                 fb.field_e.field_u.field_k[this.h(82) / 24][this.g(-95) / 24]) {
                 return;
               }
-              od.field_Fb[this.field_M].c(var3_int, var4, this.field_F);
+              SimArmedHuman.field_Fb[this.field_M].c(var3_int, var4, this.field_F);
               return;
             }
           }

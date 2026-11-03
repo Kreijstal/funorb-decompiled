@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class de {
-    static ul field_e;
+    static ResourceArchive field_e;
     static ip field_h;
     static int[] field_c;
     static qh field_b;

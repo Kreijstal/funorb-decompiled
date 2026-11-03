@@ -201,7 +201,7 @@ final class u extends IntrusiveNode {
         return DualLinkNode.a(param3, param4, 1, 3, (byte) 127, param2, param1, 1, 1);
     }
 
-    final static ul a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param0 == 5) {
           return wm.a(param1, 1, true, false, 19, false);
         }
@@ -236,8 +236,8 @@ final class u extends IntrusiveNode {
           var1_int = 0;
           var2 = 0;
           while (ba.c(-1)) {
-            aq.field_B.d(99);
-            if (aq.field_B.c(-85)) {
+            NetworkGameClient.field_B.d(99);
+            if (NetworkGameClient.field_B.c(-85)) {
               var1_int = 1;
             }
             if (sj.field_p != 13) {
@@ -245,26 +245,26 @@ final class u extends IntrusiveNode {
             }
             var2 = 1;
           }
-          aq.field_B.a(iq.a(bo.field_d, -1, MouseInputHandler.field_g), 76, iq.a(ka.field_t, -1, vb.field_f));
+          NetworkGameClient.field_B.a(iq.a(bo.field_d, -1, MouseInputHandler.field_g), 76, iq.a(ka.field_t, -1, vb.field_f));
           if (param0 > -50) {
             stackIn_10_0 = 119;
             return stackIn_10_0;
           }
-          if (aq.field_B.c(-85)) {
+          if (NetworkGameClient.field_B.c(-85)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            aq.field_B.field_d >= 0) {
-            var3 = v.field_b[aq.field_B.field_d];
+            NetworkGameClient.field_B.field_d >= 0) {
+            var3 = v.field_b[NetworkGameClient.field_B.field_d];
             if (2 == var3 ||
               5 == var3) {
-              ek.i(81);
+              SimEntity.i(81);
             }
           } else {
             if (var2 != 0 &&
               2 != ho.field_q) {
-              ek.i(126);
+              SimEntity.i(126);
             }
           }
           if (var3 == 0 &&

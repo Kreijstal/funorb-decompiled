@@ -185,9 +185,9 @@ final class uk extends gn {
     final static boolean a(byte param0) {
         if (param0 >= -36) {
           uk.a((byte) 99);
-          return !sh.field_L ? true : false;
+          return !SimPortal.field_L ? true : false;
         }
-        return !sh.field_L ? true : false;
+        return !SimPortal.field_L ? true : false;
     }
 
     static {

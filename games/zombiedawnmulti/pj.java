@@ -26,13 +26,13 @@ final class pj extends WidgetContainer implements co, in {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param3 == 0) {
-            ge.a("terms.ws", (byte) 125);
+            SimZombie.a("terms.ws", (byte) 125);
           } else {
             if (param3 == 1) {
-              ge.a("privacy.ws", (byte) 125);
+              SimZombie.a("privacy.ws", (byte) 125);
             } else {
               if (2 == param3) {
-                ge.a("conduct.ws", (byte) 125);
+                SimZombie.a("conduct.ws", (byte) 125);
               }
             }
           }
@@ -109,7 +109,7 @@ final class pj extends WidgetContainer implements co, in {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final static BinaryBitmapFont a(ul param0, int param1, ul param2, String param3, String param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, ResourceArchive param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

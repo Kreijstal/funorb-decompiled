@@ -3,8 +3,8 @@
  */
 final class an {
     private io field_a;
-    private ul field_b;
-    private ul field_c;
+    private ResourceArchive field_b;
+    private ResourceArchive field_c;
 
     final static void a(byte param0, ld param1) {
         try {
@@ -68,10 +68,10 @@ final class an {
         if (param0 != 1) {
           return (hf) null;
         }
-        return new hf(gg.a(91), po.c(128));
+        return new hf(gg.a(91), MusicPatch.c(128));
     }
 
-    an(int param0, ul param1, ul param2, dr param3) {
+    an(int param0, ResourceArchive param1, ResourceArchive param2, dr param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

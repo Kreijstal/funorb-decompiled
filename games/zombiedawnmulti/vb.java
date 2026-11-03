@@ -38,11 +38,11 @@ final class vb {
         field_b = null;
     }
 
-    final static void a(int param0, String[][] param1, String[] param2, String[] param3, boolean param4, String[][] param5, int[] param6, String[] param7, byte[] param8, ul param9, int[] param10, int param11, Sprite[][] param12, int param13, ul param14, boolean param15, Sprite[][] param16, ul param17, byte[] param18, IndexedSprite[] param19) {
+    final static void a(int param0, String[][] param1, String[] param2, String[] param3, boolean param4, String[][] param5, int[] param6, String[] param7, byte[] param8, ResourceArchive param9, int[] param10, int param11, Sprite[][] param12, int param13, ResourceArchive param14, boolean param15, Sprite[][] param16, ResourceArchive param17, byte[] param18, IndexedSprite[] param19) {
         String[] stackIn_4_0;
         int stackIn_4_1;
         int[] stackIn_4_2;
-        ul stackIn_4_3;
+        ResourceArchive stackIn_4_3;
         String[] stackIn_4_4;
         Sprite[][] stackIn_4_5;
         Sprite[][] stackIn_4_6;
@@ -92,7 +92,7 @@ final class vb {
           stackIn_4_0 = (String[]) (param7);
           stackIn_4_1 = param13;
           stackIn_4_2 = (int[]) (param6);
-          stackIn_4_3 = (ul) (param14);
+          stackIn_4_3 = (ResourceArchive) (param14);
           stackIn_4_4 = (String[]) (param2);
           stackIn_4_5 = (Sprite[][]) (param12);
           stackIn_4_6 = (Sprite[][]) (param16);
@@ -102,7 +102,7 @@ final class vb {
           stackIn_5_10 = !(param15);
           md.a(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_5_10, param18, param3, param11, param5);
           t.a(param17, param14, 0, param4);
-          po.a(2);
+          MusicPatch.a(2);
           wf.a(6835);
           hb.b(41);
           return;

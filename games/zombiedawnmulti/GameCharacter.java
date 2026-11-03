@@ -283,7 +283,7 @@ final class GameCharacter extends ti {
           if (this.field_xb &&
             this.field_nb &&
             ~this.team == ~fb.field_e.field_M) {
-            gd.field_B = fb.field_d[wf.field_m % fb.field_d.length];
+            MidiPcmStream.field_B = fb.field_d[wf.field_m % fb.field_d.length];
             mo.field_Ib = BufferedSocket.field_p[wf.field_m % BufferedSocket.field_p.length];
           }
           return;
@@ -349,7 +349,7 @@ final class GameCharacter extends ti {
             if (var2_int < 0) {
               return;
             }
-            gd.field_B = 13421772;
+            MidiPcmStream.field_B = 13421772;
             mo.field_Ib = 13421772;
           }
           if (param0 != 2) {
@@ -576,11 +576,11 @@ final class GameCharacter extends ti {
                 var8 = -48 + param1.d(this.h(param0 ^ 10225), 111);
               }
               if (this.field_K == 8) {
-                gd.field_B = op.field_m.field_D[this.team][0];
+                MidiPcmStream.field_B = op.field_m.field_D[this.team][0];
                 mo.field_Ib = op.field_m.field_D[this.team][1];
                 this.n(0);
                 this.s(2);
-                var12_ref_ja = nk.a(ig.field_d[var6 + (gg.field_l[var5] + this.field_fb)], mo.field_Ib, 255, gd.field_B);
+                var12_ref_ja = nk.a(ig.field_d[var6 + (gg.field_l[var5] + this.field_fb)], mo.field_Ib, 255, MidiPcmStream.field_B);
                 var12_ref_ja.g(var7 + this.field_mb - 3, var8 + this.field_cb - 3);
                 return;
               }
@@ -675,10 +675,10 @@ final class GameCharacter extends ti {
                     this.field_nb) {
                     var16 = fb.field_e.field_M;
                     if (var16 < 0) {
-                      var16 = (this.team + 1) % op.field_m.field_t;
+                      var16 = (this.team + 1) % op.field_m.teamCount;
                     }
                   }
-                  gd.field_B = op.field_m.field_D[var16][0];
+                  MidiPcmStream.field_B = op.field_m.field_D[var16][0];
                   mo.field_Ib = op.field_m.field_D[var16][1];
                   this.n(param0 + 10136);
                   this.s(2);
@@ -697,28 +697,28 @@ final class GameCharacter extends ti {
                     }
                   } else {
                     mo.field_Ib = 2473480;
-                    gd.field_B = 12222482;
+                    MidiPcmStream.field_B = 12222482;
                     break regionExit1;
                   }
                   if ((decompiledFrameRemainder2) &&
                     (decompiledFrameRemainder1) &&
                     (decompiledFrameRemainder0)) {
-                    gd.field_B = 11498997;
+                    MidiPcmStream.field_B = 11498997;
                     mo.field_Ib = 8165621;
                     break regionExit1;
                   }
                   if ((decompiledFrameRemainder2) &&
                     (decompiledFrameRemainder1)) {
                     mo.field_Ib = 13843485;
-                    gd.field_B = 13542477;
+                    MidiPcmStream.field_B = 13542477;
                     break regionExit1;
                   }
                   if (decompiledFrameRemainder1) {
-                    gd.field_B = 9796223;
+                    MidiPcmStream.field_B = 9796223;
                     mo.field_Ib = 16054718;
                     break regionExit1;
                   }
-                  gd.field_B = 3178624;
+                  MidiPcmStream.field_B = 3178624;
                   mo.field_Ib = 3176576;
                 }
               }
@@ -752,7 +752,7 @@ final class GameCharacter extends ti {
               }
               var18 = stackIn_330_0;
               if (var18 == 0) {
-                nk.a(var17[var16][var15], mo.field_Ib, param0 + 10391, gd.field_B);
+                nk.a(var17[var16][var15], mo.field_Ib, param0 + 10391, MidiPcmStream.field_B);
               } else {
                 g.c(vb.field_b);
                 var19 = 117;
@@ -785,7 +785,7 @@ final class GameCharacter extends ti {
                       }
                     } else {
                       var26 = var25 >> 16;
-                      var23[var24] = cr.b(cr.b(var26 * tq.b(255, gd.field_B) >> 8, tq.b(65280, var26 * (tq.b(65430, gd.field_B) >> 8))), tq.b(1895890688, var26 * tq.b(255, gd.field_B >> 16)) << 8);
+                      var23[var24] = cr.b(cr.b(var26 * tq.b(255, MidiPcmStream.field_B) >> 8, tq.b(65280, var26 * (tq.b(65430, MidiPcmStream.field_B) >> 8))), tq.b(1895890688, var26 * tq.b(255, MidiPcmStream.field_B >> 16)) << 8);
                     }
                   }
                   var24++;
@@ -798,7 +798,7 @@ final class GameCharacter extends ti {
                 g.c(vb.field_b);
                 stackIn_370_0 = 0;
                 stackIn_370_1 = 0;
-                g.a(stackIn_370_0, stackIn_370_1, 54, 54, gd.field_B);
+                g.a(stackIn_370_0, stackIn_370_1, 54, 54, MidiPcmStream.field_B);
                 g.d();
               }
               if (this.field_K != 21) {
@@ -1451,7 +1451,7 @@ final class GameCharacter extends ti {
                           this.field_Q = this.field_Q - 1;
                           this.field_xb = false;
                           if (this.field_jb == null) {
-                            this.field_jb = new pq(this.g(-74), this.h(-61) - 30, op.field_m.a((byte) 32, this.team, 750));
+                            this.field_jb = new pq(this.g(-74), this.h(-61) - 30, op.field_m.computeEffectDuration((byte) 32, this.team, 750));
                             op.field_m.field_G.a(this.field_jb, false);
                             if (var3 == 0) {
                               break regionExit1;
@@ -1487,7 +1487,7 @@ final class GameCharacter extends ti {
                               break regionExit1;
                             }
                             fb.field_e.a(true, this);
-                            op.field_m.a(-119, (ff) (this));
+                            op.field_m.addEntity(-119, (TertiaryLinkNode) (this));
                             if (var3 == 0) {
                               break regionExit1;
                             }
@@ -1498,7 +1498,7 @@ final class GameCharacter extends ti {
                               if (~(gg.field_j[27] / 2) == ~this.field_ab) {
                                 this.field_ub = 0;
                                 this.field_xb = false;
-                                this.field_Nb = op.field_m.a((byte) 32, this.team, 2250);
+                                this.field_Nb = op.field_m.computeEffectDuration((byte) 32, this.team, 2250);
                               }
                               if (gg.field_j[27] - 1 != this.field_ab) {
                                 break regionExit1;
@@ -1514,7 +1514,7 @@ final class GameCharacter extends ti {
                             if (this.field_ab == gg.field_j[28] / 2) {
                               this.field_xb = false;
                               this.field_Nb = 0;
-                              this.field_Mb = op.field_m.a((byte) 32, this.team, 2250);
+                              this.field_Mb = op.field_m.computeEffectDuration((byte) 32, this.team, 2250);
                               this.field_ub = this.field_Mb;
                             }
                             if (this.field_ab != -1 + gg.field_j[28]) {
@@ -1542,7 +1542,7 @@ final class GameCharacter extends ti {
                         this.field_Q = this.field_Q - 1;
                         this.field_xb = false;
                         if (this.field_jb == null) {
-                          this.field_jb = new pq(this.g(73), this.h(-104) - 30, op.field_m.a((byte) 32, this.team, 750));
+                          this.field_jb = new pq(this.g(73), this.h(-104) - 30, op.field_m.computeEffectDuration((byte) 32, this.team, 750));
                           op.field_m.field_G.a(this.field_jb, false);
                         }
                         if (!this.field_jb.d(124)) {

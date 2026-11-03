@@ -12,8 +12,8 @@ final class a {
           field_c = null;
           return;
         }
-        ul var2 = (ul) null;
-        a.a(-28, (byte) -5, (ul) null, -70);
+        ResourceArchive var2 = (ResourceArchive) null;
+        a.a(-28, (byte) -5, (ResourceArchive) null, -70);
         field_a = (IndexedSprite[][]) null;
         field_c = null;
     }
@@ -61,7 +61,7 @@ final class a {
         return rn.field_f == null ? ro.field_L : true;
     }
 
-    final static Sprite[] a(int param0, byte param1, ul param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Sprite[] stackIn_4_0 = null;

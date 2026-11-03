@@ -23,14 +23,14 @@ final class sd extends rg {
         if (eo.a(param3, true, param2)) {
           return true;
         }
-        if (sh.field_L) {
+        if (SimPortal.field_L) {
           return false;
         }
         if (param1 > 67) {
-          return wl.a(param0, 59, param2);
+          return WhirlpoolHasher.a(param0, 59, param2);
         }
         sd.a((byte) 79, 66, 86);
-        return wl.a(param0, 59, param2);
+        return WhirlpoolHasher.a(param0, 59, param2);
     }
 
     final static boolean h(int param0) {

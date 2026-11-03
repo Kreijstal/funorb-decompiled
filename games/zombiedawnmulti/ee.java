@@ -148,14 +148,14 @@ final class ee {
         return true;
     }
 
-    final static lm a(int param0, int param1, int param2, boolean param3) {
+    final static SimHuman a(int param0, int param1, int param2, boolean param3) {
         if (!param3) {
           field_b = false;
         }
         if (19 == param0) {
           return null;
         }
-        return (lm) ((Object) new od(param2, param1, param0));
+        return (SimHuman) ((Object) new SimArmedHuman(param2, param1, param0));
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, boolean param5, boolean param6, int param7, boolean param8, int param9, int param10, boolean param11, int param12, boolean param13) {

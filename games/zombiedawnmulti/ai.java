@@ -12,10 +12,10 @@ final class ai implements Runnable {
     static int field_b;
     int field_h;
 
-    final li b(int param0, bq param1, int param2) {
+    final li b(int param0, SectorCacheStore param1, int param2) {
         li var4 = null;
         RuntimeException var4_ref = null;
-        bq var5 = null;
+        SectorCacheStore var5 = null;
         li stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -23,8 +23,8 @@ final class ai implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 10) {
-            var5 = (bq) null;
-            this.a(-98, (bq) null, -12);
+            var5 = (SectorCacheStore) null;
+            this.a(-98, (SectorCacheStore) null, -12);
           }
           var4 = new li();
           var4.field_B = param1;
@@ -127,7 +127,7 @@ final class ai implements Runnable {
         }
     }
 
-    final li a(int param0, bq param1, byte[] param2, int param3) {
+    final li a(int param0, SectorCacheStore param1, byte[] param2, int param3) {
         li var5 = null;
         RuntimeException var5_ref = null;
         li stackIn_2_0 = null;
@@ -327,7 +327,7 @@ final class ai implements Runnable {
         field_g = null;
     }
 
-    final li a(int param0, bq param1, int param2) {
+    final li a(int param0, SectorCacheStore param1, int param2) {
         li var4 = null;
         RuntimeException var4_ref = null;
         Object var5 = null;

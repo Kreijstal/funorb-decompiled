@@ -16,7 +16,7 @@ final class jo {
         }
     }
 
-    final static boolean a(ul param0, int param1) {
+    final static boolean a(ResourceArchive param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;

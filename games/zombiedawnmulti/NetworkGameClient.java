@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class aq extends GameApplet {
+abstract class NetworkGameClient extends GameApplet {
     static String field_r;
     private boolean field_m;
     static Sprite field_u;
@@ -31,7 +31,7 @@ abstract class aq extends GameApplet {
 
     public static void o(int param0) {
         if (param0 != 10) {
-          aq.o(-41);
+          NetworkGameClient.o(-41);
         }
         field_u = null;
         field_r = null;
@@ -97,7 +97,7 @@ abstract class aq extends GameApplet {
         }
         sq.field_R = param6;
         m.field_y = param4;
-        this.b((byte) 27);
+        this.initializeAccountPacketLengths((byte) 27);
         jo.a((byte) 81);
     }
 
@@ -129,10 +129,10 @@ abstract class aq extends GameApplet {
         return (pc) null;
     }
 
-    private final void b(boolean param0, int param1) {
+    private final void enableBaseResponses(boolean param0, int param1) {
         wj.field_l[3] = true;
         if (param1 != -7793) {
-          aq.k(-38);
+          NetworkGameClient.k(-38);
         }
         wj.field_l[16] = true;
         wj.field_l[0] = true;
@@ -245,7 +245,7 @@ abstract class aq extends GameApplet {
         }
     }
 
-    private final void b(byte param0) {
+    private final void initializeAccountPacketLengths(byte param0) {
         sq.field_U[3] = -1;
         sq.field_U[10] = -1;
         sq.field_U[5] = -1;
@@ -290,7 +290,7 @@ abstract class aq extends GameApplet {
             return;
           }
           if (var2 == 1) {
-            mh.c(0);
+            JaggrabDownloader.c(0);
           } else {
             if (var2 != 2) {
               if (var2 != 3) {
@@ -391,7 +391,7 @@ abstract class aq extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = ek.a(nh.c((byte) -98), this.field_q, gg.a(param0 ^ -2218), -125, bb.c(-19385), s.a((byte) 32), GameCharacter.h((byte) -80));
+            var5_intLifetime1 = SimEntity.a(nh.c((byte) -98), this.field_q, gg.a(param0 ^ -2218), -125, bb.c(-19385), s.a((byte) 32), GameCharacter.h((byte) -80));
             if (var5_intLifetime1 != -1) {
               sj.a(hb.field_b, 31407, var5_intLifetime1, ol.field_q);
               hb.field_b = null;
@@ -457,7 +457,7 @@ abstract class aq extends GameApplet {
           if (13 == var4) {
             try {
               if (null == wk.field_I) {
-                wk.field_I = new mh(pl.field_J, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                wk.field_I = new JaggrabDownloader(pl.field_J, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (wk.field_I.b(-90)) {
                 var12 = wk.field_I.a((byte) 21);
@@ -630,7 +630,7 @@ abstract class aq extends GameApplet {
           eb.field_p = false;
         }
         if (ClientException.field_i == 0 &&
-          c.a((byte) 98)) {
+          TertiaryLinkDeque.a((byte) 98)) {
           ClientException.field_i = 1;
         }
         if (ClientException.field_i == 1) {
@@ -667,7 +667,7 @@ abstract class aq extends GameApplet {
           sc.b(1);
           lc.a(62);
           hh.field_m = false;
-          od.field_Bb = hj.field_e;
+          SimArmedHuman.field_Bb = hj.field_e;
           si.a(false, cm.field_e, wm.field_V, ra.field_l, fe.field_L);
           if (gj.field_f ||
             null != kj.field_g) {
@@ -682,9 +682,9 @@ abstract class aq extends GameApplet {
           }
           if (null == PacketBuffer.field_l) {
             PacketBuffer.field_l = dg.a(30);
-            c.field_e = vh.h(32);
+            TertiaryLinkDeque.field_e = vh.h(32);
           }
-          ud.a(-3758, c.field_e, wm.field_V, PacketBuffer.field_l);
+          ud.a(-3758, TertiaryLinkDeque.field_e, wm.field_V, PacketBuffer.field_l);
           wm.field_V = null;
           fe.field_L = null;
           ra.field_l = null;
@@ -736,7 +736,7 @@ abstract class aq extends GameApplet {
         }
     }
 
-    protected aq() {
+    protected NetworkGameClient() {
     }
 
     final int a(boolean param0, int param1) {
@@ -756,7 +756,7 @@ abstract class aq extends GameApplet {
         if (param0 <= 17) {
           return;
         }
-        if (!ge.p(-86)) {
+        if (!SimZombie.p(-86)) {
           if (10 <= ClientException.field_i) {
             if (!GameKeyHandler.a(250)) {
               fc.b((byte) -9);
@@ -783,9 +783,9 @@ abstract class aq extends GameApplet {
     }
 
     final void a(boolean param0, byte param1, boolean param2, boolean param3, boolean param4, boolean param5, boolean param6) {
-        this.b(true, -7793);
+        this.enableBaseResponses(true, -7793);
         if (param1 != -27) {
-          aq.a(-38, false, -82, 45);
+          NetworkGameClient.a(-38, false, -82, 45);
         }
         if (param5) {
           this.e((byte) 119);
@@ -827,10 +827,10 @@ abstract class aq extends GameApplet {
             fe.a((byte) -121, 6);
           }
           if (wj.field_l[6]) {
-            ff.a((byte) 126, 7);
+            TertiaryLinkNode.a((byte) 126, 7);
           }
           if (wj.field_l[8]) {
-            of.b((byte) 105);
+            BufferedFile.b((byte) 105);
           }
         }
         if (param0 == 10) {

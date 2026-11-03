@@ -143,7 +143,7 @@ final class IterableNodeHashTable implements Iterable {
         SoftwareRasterizer.fillRectGradient(0, 5, 640, 55, 16777215, 1);
         Sprite var5 = new Sprite(640, 75);
         var5.a();
-        ff.field_r.b(sm.field_g[param2], 320, 65, 53248, 1);
+        TertiaryLinkNode.field_r.b(sm.field_g[param2], 320, 65, 53248, 1);
         Sprite var6 = new Sprite(640, 75);
         var6.a();
         int var7 = (int)(param1 * 640.0);

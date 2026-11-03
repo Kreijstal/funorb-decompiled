@@ -11,7 +11,7 @@ final class PlatformTaskDispatcher implements Runnable {
     java.awt.EventQueue field_j;
     private PlatformTask field_f;
     static java.lang.reflect.Method field_h;
-    private tc field_m;
+    private MicrosoftDisplayController field_m;
     private static String field_o;
     RandomAccessCacheFile[] field_t;
     private static String field_c;
@@ -22,7 +22,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private PlatformTask field_u;
     RandomAccessCacheFile field_s;
     boolean field_d;
-    private cl field_p;
+    private MicrosoftCursorController field_p;
     private static volatile long field_g;
     private Thread field_n;
     static String field_r;
@@ -447,7 +447,7 @@ final class PlatformTaskDispatcher implements Runnable {
 
     final PlatformTask a(String param0, int param1, byte param2) {
         if (param2 != -120) {
-          this.field_p = (cl) null;
+          this.field_p = (MicrosoftCursorController) null;
         }
         return this.a((byte) -121, param0, param1, false);
     }
@@ -457,7 +457,7 @@ final class PlatformTaskDispatcher implements Runnable {
           return false;
         }
         if (param0 >= -35) {
-          this.field_p = (cl) null;
+          this.field_p = (MicrosoftCursorController) null;
         }
         if (this.field_v) {
           return null != this.field_m ? true : false;
@@ -503,7 +503,7 @@ final class PlatformTaskDispatcher implements Runnable {
         Throwable throwable = null;
         boolean stackIn_3_1 = false;
         Throwable decompiledCaughtException = null;
-        tc var7 = null;
+        MicrosoftDisplayController var7 = null;
         this.field_i = null;
         this.field_f = null;
         this.field_w = false;
@@ -580,14 +580,14 @@ final class PlatformTaskDispatcher implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        nd.a(field_c, field_e, -7682);
+        CacheFileLocator.a(field_c, field_e, -7682);
         if (this.field_d) {
-          this.field_s = new RandomAccessCacheFile(nd.a("random.dat", -25157, (String) null, field_e), "rw", 25L);
-          this.field_i = new RandomAccessCacheFile(nd.a("main_file_cache.dat2", 0), "rw", 314572800L);
-          this.field_k = new RandomAccessCacheFile(nd.a("main_file_cache.idx255", 0), "rw", 1048576L);
+          this.field_s = new RandomAccessCacheFile(CacheFileLocator.resolveRedirectedCacheFile("random.dat", -25157, (String) null, field_e), "rw", 25L);
+          this.field_i = new RandomAccessCacheFile(CacheFileLocator.a("main_file_cache.dat2", 0), "rw", 314572800L);
+          this.field_k = new RandomAccessCacheFile(CacheFileLocator.a("main_file_cache.idx255", 0), "rw", 1048576L);
           this.field_t = new RandomAccessCacheFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_t[var5_int] = new RandomAccessCacheFile(nd.a("main_file_cache.idx" + var5_int, 0), "rw", 1048576L);
+            this.field_t[var5_int] = new RandomAccessCacheFile(CacheFileLocator.a("main_file_cache.idx" + var5_int, 0), "rw", 1048576L);
           }
           if (this.field_v) {
             try {
@@ -599,7 +599,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (this.field_v) {
-              var7 = new tc();
+              var7 = new MicrosoftDisplayController();
               this.field_m = var7;
             } else {
               this.field_b = Class.forName("AwtFullscreenController").newInstance();
@@ -612,7 +612,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (!this.field_v) {
               this.field_x = Class.forName("AwtCursorBridge").newInstance();
             } else {
-              this.field_p = new cl();
+              this.field_p = new MicrosoftCursorController();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter10) {
             decompiledCaughtException = decompiledCaughtParameter10;

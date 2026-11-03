@@ -46,7 +46,7 @@ final class qm extends WidgetContainer implements fi, in {
         String var12 = null;
         jb var13 = null;
         try {
-          ve.a(0L, 196, (String) null, ek.field_H, (String) null, param0, -1, (int[]) null, param0.i(6));
+          ve.a(0L, 196, (String) null, SimEntity.field_H, (String) null, param0, -1, (int[]) null, param0.i(6));
           if (param0.field_Fb && (param0.field_fc == 2 ||
             !(kj.field_q < 2))) {
             var7 = pk.field_b;
@@ -258,7 +258,7 @@ final class qm extends WidgetContainer implements fi, in {
           if (null != this.field_O) {
             this.field_i = this.field_i + (var7.a(this.field_O, this.field_n - 40, var7.field_C) + 5);
           }
-          var8 = sh.field_M;
+          var8 = SimPortal.field_M;
           var9 = me.a(-57, jl.b(0));
           if (wp.field_b != var9) {
             if (RasterBuffer.field_c == var9) {
@@ -373,7 +373,7 @@ final class qm extends WidgetContainer implements fi, in {
         }
     }
 
-    final static ae a(ga param0, boolean param1) {
+    final static GameEvent a(ga param0, boolean param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -395,7 +395,7 @@ final class qm extends WidgetContainer implements fi, in {
           }
           var6 = param0.readUnsignedShort((byte) 69);
           stackIn_3_0 = ClientException.a(var6, var4, var3, (byte) 104, var2_int, var5);
-          return (ae) ((Object) stackIn_3_0);
+          return (GameEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -482,7 +482,7 @@ final class qm extends WidgetContainer implements fi, in {
             String var4 = (String) null;
             qm.a(-1.1143913269042969f, -113, (String) null);
           }
-          od.field_Bb = param2;
+          SimArmedHuman.field_Bb = param2;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "qm.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

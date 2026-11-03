@@ -3,14 +3,14 @@
  */
 import java.io.*;
 
-final class bq {
+final class SectorCacheStore {
     static int[] field_g;
     private int field_h;
     static String field_f;
-    private of field_b;
+    private BufferedFile field_b;
     static boolean field_c;
     static ao field_i;
-    private of field_d;
+    private BufferedFile field_d;
     static Sprite field_a;
     private int field_e;
 
@@ -163,7 +163,7 @@ final class bq {
               param2 <= this.field_e) {
               var6 = this.a(true, param1, (byte) 49, param2, param3) ? 1 : 0;
               if (param0 != 118) {
-                this.field_b = (of) null;
+                this.field_b = (BufferedFile) null;
               }
               if (var6 == 0) {
                 var6 = this.a(false, param1, (byte) 49, param2, param3) ? 1 : 0;
@@ -379,7 +379,7 @@ final class bq {
         }
     }
 
-    bq(int param0, of param1, of param2, int param3) {
+    SectorCacheStore(int param0, BufferedFile param1, BufferedFile param2, int param3) {
         this.field_d = null;
         this.field_b = null;
         this.field_e = 65000;

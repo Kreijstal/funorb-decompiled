@@ -70,7 +70,7 @@ final class en extends IOException {
           if (param0 >= -86) {
             en.a(40);
           }
-          stackIn_4_0 = ek.field_H.field_Gb;
+          stackIn_4_0 = SimEntity.field_H.field_Gb;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,15 +167,15 @@ final class en extends IOException {
           var17.field_Cb = new IntrusiveDeque();
           tn.field_A = new tq(0L, var17, param1, param7);
           qe.field_q.a((byte) 50, tn.field_A);
-          ek.field_z = new cj(0L, param3);
-          qe.field_q.a((byte) 50, ek.field_z);
+          SimEntity.field_z = new cj(0L, param3);
+          qe.field_q.a((byte) 50, SimEntity.field_z);
           ec.field_b = new cj(0L, param4);
           ec.field_b.field_yb = w.field_A;
-          ek.field_z.a((byte) 50, ec.field_b);
-          ek.field_z.f(-128);
+          SimEntity.field_z.a((byte) 50, ec.field_b);
+          SimEntity.field_z.f(-128);
           ua.field_E = new cj(0L, (cj) null);
           ua.field_E.field_ab = var16;
-          ek.field_z.a((byte) 50, ua.field_E);
+          SimEntity.field_z.a((byte) 50, ua.field_E);
           la.field_h = new cj[5];
           pf.field_d = new cj[5];
           ij.field_k = new cj[5];

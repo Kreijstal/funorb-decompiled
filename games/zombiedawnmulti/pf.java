@@ -6,7 +6,7 @@ final class pf {
     static int field_c;
     static Sprite[][] field_e;
     static IndexedSprite field_a;
-    static ul field_b;
+    static ResourceArchive field_b;
 
     public static void b(int param0) {
         field_a = null;
@@ -20,7 +20,7 @@ final class pf {
         field_d = null;
     }
 
-    final static IndexedSprite[] a(int param0, ul param1, int param2, int param3) {
+    final static IndexedSprite[] a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite[] stackIn_5_0 = null;

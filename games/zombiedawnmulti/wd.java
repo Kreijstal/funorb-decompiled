@@ -6,7 +6,7 @@ final class wd extends WidgetContainer implements in {
     static id field_G;
     static int[] field_Q;
     private String field_O;
-    static gd field_L;
+    static MidiPcmStream field_L;
     private ne field_R;
     private int[] field_N;
     private gn[] field_H;

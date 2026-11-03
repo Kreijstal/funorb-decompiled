@@ -5,7 +5,7 @@ final class rn {
     static Sprite[] field_a;
     static FullscreenFocusCanvas field_f;
     static ai field_d;
-    static ul field_e;
+    static ResourceArchive field_e;
     static String field_g;
     static String field_b;
     static String field_c;

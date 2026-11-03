@@ -202,13 +202,13 @@ final class ko {
           }
           stackIn_14_0 = qe.field_k;
           stackIn_14_1 = -11838;
-          stackIn_15_2 = (param0) && (!param3) && (!ee.field_a) && (null == mh.field_c) && (BufferedSocket.field_n == null);
+          stackIn_15_2 = (param0) && (!param3) && (!ee.field_a) && (null == JaggrabDownloader.field_c) && (BufferedSocket.field_n == null);
           ((cj) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
           stackIn_22_0 = cm.field_a;
           stackIn_22_1 = -11838;
-          stackIn_23_2 = (param0) && (!param3) && (!ee.field_a) && (mh.field_c == null) && (BufferedSocket.field_n == null);
+          stackIn_23_2 = (param0) && (!param3) && (!ee.field_a) && (JaggrabDownloader.field_c == null) && (BufferedSocket.field_n == null);
           ((cj) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_23_2);
-          stackIn_28_0 = lm.field_gb;
+          stackIn_28_0 = SimHuman.field_gb;
           stackIn_28_1 = -11838;
           stackIn_29_2 = (param0) && (!param3) && (ee.field_a);
           ((cj) (Object) stackIn_28_0).a(stackIn_28_1, stackIn_29_2);
@@ -317,10 +317,10 @@ final class ko {
                 if (!this.field_g) {
                   if (this.field_c &&
                     this.field_d) {
-                    this.a(mi.field_Mb, (byte) 59, aq.field_u);
+                    this.a(mi.field_Mb, (byte) 59, NetworkGameClient.field_u);
                   } else {
                     if (this.field_c) {
-                      this.a(bq.field_a, (byte) 59, ii.field_c);
+                      this.a(SectorCacheStore.field_a, (byte) 59, ii.field_c);
                     } else {
                       if (this.field_d) {
                         this.a(fe.field_U, (byte) 59, ap.field_t);
@@ -686,7 +686,7 @@ final class ko {
               wd.a(param1.field_y, -1, this.field_l, op.field_m.currentTick, ma.field_a);
             }
           }
-          tg.field_e.powerupReadyTick[this.field_l] = op.field_m.currentTick + op.field_m.a(FullscreenFocusCanvas.field_k.field_g[this.field_l], var5_int, fb.field_e.field_M, false);
+          tg.field_e.powerupReadyTick[this.field_l] = op.field_m.currentTick + op.field_m.getPowerupCooldown(FullscreenFocusCanvas.field_k.field_g[this.field_l], var5_int, fb.field_e.field_M, false);
           this.field_b[this.field_l].a(0);
           this.field_c = false;
           this.field_g = false;

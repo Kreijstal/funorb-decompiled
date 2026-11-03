@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class of {
+final class BufferedFile {
     private long field_m;
     static Sprite[] field_e;
     private long field_j;
@@ -24,7 +24,7 @@ final class of {
     final void a(long param0, byte param1) throws IOException {
         if (param1 != -70) {
           java.awt.Component var5 = (java.awt.Component) null;
-          of.a(-66, (java.awt.Component) null);
+          BufferedFile.a(-66, (java.awt.Component) null);
         }
         if (param0 >= 0L) {
           this.field_h = param0;
@@ -185,7 +185,7 @@ final class of {
         we.field_k = new IntrusiveDeque();
         if (param0 < 97) {
           java.awt.Component var2 = (java.awt.Component) null;
-          of.a(116, (java.awt.Component) null);
+          BufferedFile.a(116, (java.awt.Component) null);
         }
     }
 
@@ -193,7 +193,7 @@ final class of {
         this.c((byte) -23);
         this.field_o.b((byte) 38);
         if (param0 >= -84) {
-          of.a(-119);
+          BufferedFile.a(-119);
         }
     }
 
@@ -242,7 +242,7 @@ final class of {
           this.field_m = -1L;
         }
         if (param0 != -23) {
-          of.a(34);
+          BufferedFile.a(34);
         }
     }
 
@@ -387,7 +387,7 @@ final class of {
           break;
         }
         if (param0 != -8855) {
-          of.d(56);
+          BufferedFile.d(56);
         }
     }
 
@@ -422,7 +422,7 @@ final class of {
         }
     }
 
-    of(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
+    BufferedFile(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_m = -1L;
         this.field_a = 0;

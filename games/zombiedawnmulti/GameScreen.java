@@ -412,7 +412,7 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 107) {
-            stackIn_4_0 = op.field_m.a(tg.field_e.field_f[param0], tg.field_e.powerupTypes[param0], this.field_M, false);
+            stackIn_4_0 = op.field_m.getPowerupCooldown(tg.field_e.field_f[param0], tg.field_e.powerupTypes[param0], this.field_M, false);
             return stackIn_4_0;
           }
           stackIn_2_0 = 126;
@@ -512,12 +512,12 @@ final class GameScreen {
                 this.d(15);
                 this.e(107);
                 if ((var14 != 0) &&
-                  (op.field_m.field_l == 0)) {
+                  (op.field_m.phase == 0)) {
                   this.e(-121);
                 }
               }
             } else {
-              if (op.field_m.field_l == 0) {
+              if (op.field_m.phase == 0) {
                 this.e(-121);
               }
             }
@@ -576,8 +576,8 @@ final class GameScreen {
             this.field_k.a(false, false, false, false, (byte) -91, false);
           }
           if (0 < this.field_l && (this.field_l < 640 ||
-            op.field_m.field_l != 0 ||
-            op.field_m.field_l == 0 &&
+            op.field_m.phase != 0 ||
+            op.field_m.phase == 0 &&
             0.95 < (double)this.field_k.field_t)) {
             this.field_l = this.field_l - 15;
           }
@@ -755,8 +755,8 @@ final class GameScreen {
         try {
           this.field_J.a(0, param2, param1);
           if (this.field_Q.a((byte) 98) > 1) {
-            param2 = po.d(12949) - param2 % 24 + param2;
-            param1 = po.d(12949) + (-(param1 % 24) + param1);
+            param2 = MusicPatch.d(12949) - param2 % 24 + param2;
+            param1 = MusicPatch.d(12949) + (-(param1 % 24) + param1);
             if (var20 != 0) {
               param1 += 6;
             }
@@ -939,8 +939,8 @@ final class GameScreen {
                   -1 == var17Lifetime1) {
                   return;
                 }
-                var18Lifetime1 = po.d(12949) + 24 * var16Lifetime1;
-                var19Lifetime1 = 24 * var17Lifetime1 + po.d(12949);
+                var18Lifetime1 = MusicPatch.d(12949) + 24 * var16Lifetime1;
+                var19Lifetime1 = 24 * var17Lifetime1 + MusicPatch.d(12949);
                 var15.a((byte) 95, 100 + op.field_m.currentTick, var18Lifetime1, var19Lifetime1);
                 wd.a(var15.field_y, op.field_m.currentTick, ma.field_a, var18Lifetime1, 61, var19Lifetime1);
                 var15 = (GameCharacter) (this.field_Q.b((byte) 108));
@@ -1205,7 +1205,7 @@ final class GameScreen {
           }
           pj.a(0, 16, -16384, 22, 21, (byte) -27, 3);
           pj.a(0, 21, 16384, 23, 16, (byte) 122, 3);
-          ge.s(9);
+          SimZombie.s(9);
           ck.a(59, -23838);
           ck.a(60, -23838);
           ck.a(61, -23838);
@@ -1285,8 +1285,8 @@ final class GameScreen {
               if (param1 != 41) {
               }
               if (40 == param1) {
-                stackIn_55_0 = !(po.field_p);
-                po.field_p = stackIn_55_0;
+                stackIn_55_0 = !(MusicPatch.field_p);
+                MusicPatch.field_p = stackIn_55_0;
               }
               if (32 == param1) {
                 stackIn_63_0 = !(IterableNodeHashTable.field_c);
@@ -1394,7 +1394,7 @@ final class GameScreen {
                 tl.a(1, (byte) -11, ma.field_a, 0, this.field_M, 0);
               }
               if (5 == param1) {
-                tl.a(1, (byte) -11, ma.field_a, 0, (this.field_M + 1) % op.field_m.field_t, 0);
+                tl.a(1, (byte) -11, ma.field_a, 0, (this.field_M + 1) % op.field_m.teamCount, 0);
               }
               if (6 == param1) {
                 nk.a(120, la.field_n, 120, 0, si.field_C);
@@ -1426,7 +1426,7 @@ final class GameScreen {
             if (mg.field_F == param1) {
               this.field_I.a(4, -1);
             }
-            if (op.field_m.b((byte) -67, 51, this.field_M)) {
+            if (op.field_m.hasUpgrade((byte) -67, 51, this.field_M)) {
               if (param1 == 35) {
                 this.a(this.field_k.a(640, 2), this.field_k.a(true, 480), this.field_k.a(true, 0), this.field_k.a(0, 2), (byte) 5);
               }
@@ -1770,7 +1770,7 @@ final class GameScreen {
             op.field_m.field_J[param0] = op.field_m.field_J[param0] + 1;
             var5 = 10;
             this.f(27);
-            if (op.field_m.b((byte) -88, 60, param0)) {
+            if (op.field_m.hasUpgrade((byte) -88, 60, param0)) {
               var5 = var5 + var5 / 2;
             }
             if (this.field_M != param0) {
@@ -1787,7 +1787,7 @@ final class GameScreen {
               pb.$cfr$intArgs$a$90ed9136db05(stackIn_22_0, stackIn_23_1);
               if (var6 != 0) {
                 var5 = 4;
-                if (op.field_m.b((byte) -124, 53, param0)) {
+                if (op.field_m.hasUpgrade((byte) -124, 53, param0)) {
                   var5 = var5 + var5 / 2;
                 }
                 if (~this.field_M == ~param0) {
@@ -1800,7 +1800,7 @@ final class GameScreen {
             }
           } else {
             var5 = 4;
-            if (op.field_m.b((byte) -124, 53, param0)) {
+            if (op.field_m.hasUpgrade((byte) -124, 53, param0)) {
               var5 = var5 + var5 / 2;
             }
             if (~this.field_M == ~param0) {
@@ -1814,7 +1814,7 @@ final class GameScreen {
           }
           this.field_T.a(new wc(var4.g(-78), -30 + var4.h(-66), var5, true), false);
           var4.b(21, -27655);
-          op.field_m.field_d[param0] = op.field_m.field_d[param0] + var5;
+          op.field_m.teamScores[param0] = op.field_m.teamScores[param0] + var5;
           iq.a(-9, (byte) 99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1920,7 +1920,7 @@ final class GameScreen {
             stackIn_17_0 = (GameCharacter) null;
             return stackIn_17_0;
           }
-          op.field_m.field_d[param0] = op.field_m.field_d[param0] + var9;
+          op.field_m.teamScores[param0] = op.field_m.teamScores[param0] + var9;
           if (0 != var9 &&
             this.field_M == param0) {
             this.field_T.a(new wc(param2.g(104), param2.h(86) - 30, var9, true), false);
@@ -1967,7 +1967,7 @@ final class GameScreen {
         try {
           op.field_m.c(-122);
           this.field_G.h(2);
-          if (op.field_m.field_l == 1) {
+          if (op.field_m.phase == 1) {
             this.field_G.field_n = 2.0f;
           }
           var2_int = 66 % ((param0 - 78) / 48);
@@ -2086,8 +2086,8 @@ final class GameScreen {
         }
     }
 
-    final void a(boolean param0, ae param1) {
-        ae var3 = null;
+    final void a(boolean param0, GameEvent param1) {
+        GameEvent var3 = null;
         int var4 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -2096,8 +2096,8 @@ final class GameScreen {
         RuntimeException var3_ref = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (param1 instanceof fq) {
-            this.d(((fq) (param1)).field_l, param1.field_f, -30305);
+          if (param1 instanceof PhaseChangeEvent) {
+            this.d(((PhaseChangeEvent) (param1)).field_l, param1.field_f, -30305);
           }
           if (this.field_hb.f(28113)) {
             this.field_hb.a(-25612, param1);
@@ -2106,7 +2106,7 @@ final class GameScreen {
           if (param0) {
             return;
           }
-          var3 = (ae) (this.field_hb.a((byte) -84));
+          var3 = (GameEvent) (this.field_hb.a((byte) -84));
           while (null != var3) {
             if (var4 != 0) {
               return;
@@ -2115,7 +2115,7 @@ final class GameScreen {
               qc.a(param1, var3, 0);
               return;
             }
-            var3 = (ae) (this.field_hb.c((byte) 97));
+            var3 = (GameEvent) (this.field_hb.c((byte) 97));
           }
           this.field_hb.a(-25612, param1);
           return;
@@ -2140,7 +2140,7 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          param1.c((byte) -70);
+          param1.unlinkTertiary((byte) -70);
           param1.a(-4564);
           param1.unlink(param0);
           if (!param0) {
@@ -2313,7 +2313,7 @@ final class GameScreen {
           on.j((byte) 113);
           if (df.field_I) {
             if (!pp.field_n) {
-              if (!op.field_m.b((byte) -128, 45, this.field_M)) {
+              if (!op.field_m.hasUpgrade((byte) -128, 45, this.field_M)) {
                 ah.a((byte) -86, 19);
                 if (var14 != 0) {
                   ah.a((byte) -86, 20);
@@ -2390,7 +2390,7 @@ final class GameScreen {
               if (stackIn_112_0) {
                 boolean decompiledFrameRemainder0 = true;
                 var9 = (h) (var8);
-                if (op.field_m.field_t > var9.field_I) {
+                if (op.field_m.teamCount > var9.field_I) {
                   var9.field_I = op.field_m.field_y[var9.field_I];
                   this.field_H.a(var8, false);
                   this.field_c.a(29664, var8);
@@ -2431,7 +2431,7 @@ final class GameScreen {
                 }
               } else {
                 var9_ref = (GameCharacter) (var8);
-                if (op.field_m.field_t > var9_ref.team &&
+                if (op.field_m.teamCount > var9_ref.team &&
                   op.field_m.field_y[var9_ref.team] == this.field_M) {
                   var10 = var8.g(param0 ^ -37);
                   var11 = var8.h(-56);
@@ -2550,29 +2550,29 @@ final class GameScreen {
           SoftwareRasterizer.i(4, 4, 0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_l);
           this.field_y.f(6, 6, 0);
           g.d();
-          if (op.field_m.field_t == 1) {
+          if (op.field_m.teamCount == 1) {
             this.field_l = 0;
           }
           this.field_G.c(0);
           if (!df.field_I) {
             if (!gf.field_h ||
-              op.field_m.field_l != 0) {
-              this.a((byte) -110, op.field_m.field_l, op.field_m.field_C);
+              op.field_m.phase != 0) {
+              this.a((byte) -110, op.field_m.phase, op.field_m.field_C);
               if (var14 != 0) {
                 this.a((byte) -36, 1, 0);
                 this.field_k.field_f = false;
-                op.field_m.field_l = 1;
+                op.field_m.phase = 1;
               }
             } else {
               this.a((byte) -36, 1, 0);
               if (var14 != 0) {
                 this.field_k.field_f = false;
-                op.field_m.field_l = 1;
+                op.field_m.phase = 1;
               }
             }
           } else {
             this.field_k.field_f = false;
-            op.field_m.field_l = 1;
+            op.field_m.phase = 1;
           }
           this.field_W = op.field_m.currentTick - 50;
           this.field_t = bl.a((byte) 43);
@@ -2753,7 +2753,7 @@ final class GameScreen {
           if (!param0) {
             return;
           }
-          if (op.field_m.field_l == 0) {
+          if (op.field_m.phase == 0) {
             if (this.field_W < 400) {
               return;
             }
@@ -2762,9 +2762,9 @@ final class GameScreen {
               return;
             }
           }
-          if (op.field_m.field_l != 3 &&
+          if (op.field_m.phase != 3 &&
             !op.field_m.field_c) {
-            if (op.field_m.field_l == 2) {
+            if (op.field_m.phase == 2) {
               if ((op.field_m.field_C - 1550) > op.field_m.currentTick) {
                 return;
               }
@@ -2783,12 +2783,12 @@ final class GameScreen {
               hg.field_rb != 11) {
               var2 = new GameCharacter(hc.field_c, gk.field_c, 0);
               var2.team = this.field_M;
-              var2.field_y = op.field_m.a(-16777216);
+              var2.field_y = op.field_m.nextObjectId(-16777216);
               op.field_m.characters.a(-25612, var2);
               op.field_m.teamCharacterCounts[this.field_M] = op.field_m.teamCharacterCounts[this.field_M] + 1;
               var2Lifetime1 = new GameCharacter(hc.field_c, gk.field_c - 30, 1);
               var2Lifetime1.team = this.field_M;
-              var2Lifetime1.field_y = op.field_m.a(-16777216);
+              var2Lifetime1.field_y = op.field_m.nextObjectId(-16777216);
               op.field_m.characters.a(-25612, var2Lifetime1);
               op.field_m.teamCharacterCounts[this.field_M] = op.field_m.teamCharacterCounts[this.field_M] + 1;
               iq.a(-12, (byte) 99);
@@ -2967,7 +2967,7 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -104 % ((param0 - 59) / 39);
-          stackIn_7_0 = (op.field_m.field_l == 1) || (op.field_m.field_l == 2);
+          stackIn_7_0 = (op.field_m.phase == 1) || (op.field_m.phase == 2);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3257,11 +3257,11 @@ final class GameScreen {
         int var6 = 0;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          op.field_m.field_l = param1;
+          op.field_m.phase = param1;
           if (param0 > -8) {
             this.b((byte) -48);
           }
-          var4_int = op.field_m.field_l;
+          var4_int = op.field_m.phase;
           if (var4_int != 0) {
             if (2 != var4_int) {
               if (var4_int == 1) {
@@ -3348,7 +3348,7 @@ final class GameScreen {
         int var9_int = 0;
         int[] var9 = null;
         String var9_ref = null;
-        ae var9_ref2 = null;
+        GameEvent var9_ref2 = null;
         int var10 = 0;
         GameCharacter var10_ref_wb = null;
         h var10_ref_h = null;
@@ -3835,22 +3835,22 @@ final class GameScreen {
           }
           boolean decompiledFrameRemainder0 = true;
           var8 = ah.field_e;
-          if (0 != op.field_m.field_l) {
-            if ((3 == op.field_m.field_l) &&
+          if (0 != op.field_m.phase) {
+            if ((3 == op.field_m.phase) &&
               (decompiledFrameRemainder0 = !(this.field_d >= 225))) {
               var8.b(tm.field_g, 320, 240, 2, -1);
               decompiledFrameRemainder0 = (var20 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (!gf.field_h &&
-                op.field_m.field_l == 1 &&
+                op.field_m.phase == 1 &&
                 op.field_m.currentTick < 500) {
                 var8.b(NodeHashTableIterator.field_c, 320, 240, 0, -1);
                 this.field_k.field_f = false;
                 decompiledFrameRemainder0 = (var20 != 0);
               }
               if ((decompiledFrameRemainder0) &&
-                (decompiledFrameRemainder0 = (op.field_m.field_l == 2))) {
+                (decompiledFrameRemainder0 = (op.field_m.phase == 2))) {
                 var9_int = op.field_m.field_C - op.field_m.currentTick;
                 if (var9_int < 1550) {
                   if (gf.field_h) {
@@ -3908,8 +3908,8 @@ final class GameScreen {
               SoftwareRasterizer.setClip(stackIn_348_0, stackIn_351_1, stackIn_352_2, 345);
               sj.field_j.c(var11 - 5, 75);
               sj.field_j.a(-5 + var11, 340);
-              lm.field_fb.c(var11 - 5, 75);
-              lm.field_fb.b(-5 - var11 + 640, 75);
+              SimHuman.field_fb.c(var11 - 5, 75);
+              SimHuman.field_fb.b(-5 - var11 + 640, 75);
               rp.field_r[0].c(var11 - 5, 75);
               rp.field_r[1].c(635 - var11, 75);
               rp.field_r[2].c(var11 - 5, 340);
@@ -3918,17 +3918,17 @@ final class GameScreen {
               var13 = 160;
               var14Lifetime1 = 90;
               this.a(var13, (byte) -99, var14Lifetime1, var12);
-              if (op.field_m.field_t > 1) {
+              if (op.field_m.teamCount > 1) {
                 var12++;
                 var14Lifetime1Lifetime1 = 270;
                 var13 = 640 - var13;
                 this.a(var13, (byte) -99, var14Lifetime1Lifetime1, var12);
-                if (2 < op.field_m.field_t) {
+                if (2 < op.field_m.teamCount) {
                   var13 = 640 - var13;
                   var14Lifetime1Lifetime1 = 230;
                   var12++;
                   this.a(var13, (byte) -99, var14Lifetime1Lifetime1, var12);
-                  if (3 < op.field_m.field_t) {
+                  if (3 < op.field_m.teamCount) {
                     var12++;
                     var13 = 640 - var13;
                     var14Lifetime1Lifetime1 = 130;
@@ -3961,10 +3961,10 @@ final class GameScreen {
             var8.c(Integer.toString(ji.field_b), 10, 40, 2, -1);
             var8.c(Integer.toString(ei.field_b), 10, 40, 2, -1);
             var8.c(Integer.toString(op.field_m.currentTick), 10, 80, 2, -1);
-            var9_ref2 = (ae) (this.field_hb.c(106));
+            var9_ref2 = (GameEvent) (this.field_hb.c(106));
             while (null != var9_ref2) {
               var9_ref2.a(-240 + this.field_k.field_g, true, -320 + this.field_k.field_k, op.field_m.currentTick);
-              var9_ref2 = (ae) (this.field_hb.b(6));
+              var9_ref2 = (GameEvent) (this.field_hb.b(6));
               if (var20 != 0) {
                 return;
               }
@@ -4241,7 +4241,7 @@ final class GameScreen {
             pb.field_i = id.field_x;
             if ((iq.field_f) &&
               (decompiledFrameRemainder0 = (var3_int != 0))) {
-              pb.field_i = be.field_m;
+              pb.field_i = ArchiveIndex.field_m;
               decompiledFrameRemainder0 = (var6 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -4378,7 +4378,7 @@ final class GameScreen {
         boolean stackOut_55_0;
         boolean stackOut_65_0;
         Object var2 = null;
-        ae var3_ref_ae = null;
+        GameEvent var3_ref_ae = null;
         int var3 = 0;
         IntrusiveNode var3_ref_br = null;
         lj var3_ref_lj = null;
@@ -4386,7 +4386,7 @@ final class GameScreen {
         pq var3_ref_pq = null;
         wc var3_ref_wc = null;
         lc var3_ref_lc = null;
-        ae var4 = null;
+        GameEvent var4 = null;
         IntrusiveNode var4_ref = null;
         Object var4_ref2 = null;
         ce var4_ref3 = null;
@@ -4399,20 +4399,20 @@ final class GameScreen {
         try {
           op.field_m.currentTick = op.field_m.currentTick + 1;
           var2 = null;
-          var3_ref_ae = (ae) (this.field_hb.c(50));
+          var3_ref_ae = (GameEvent) (this.field_hb.c(50));
           while (var3_ref_ae != null) {
             if (var2 != null &&
-              ((ae) (var2)).field_f <= var3_ref_ae.field_f) {
+              ((GameEvent) (var2)).field_f <= var3_ref_ae.field_f) {
             }
             var2 = var3_ref_ae;
-            var3_ref_ae = (ae) (this.field_hb.b(6));
+            var3_ref_ae = (GameEvent) (this.field_hb.b(6));
             if (var6 == 0) {
               continue;
             }
             break;
           }
           var3 = 10 % ((-25 - param0) / 61);
-          var4 = (ae) (this.field_hb.c(114));
+          var4 = (GameEvent) (this.field_hb.c(114));
           scanLoop1: while (true) {
             if (var4 != null) {
               stackIn_22_0 = op.field_m.currentTick;
@@ -4430,17 +4430,17 @@ final class GameScreen {
                   var5 = (Exception) (Object) decompiledCaughtException;
                   MouseInputHandler.a(op.field_m.currentTick + ": error executing message of tick " + var4.field_f + ": " + var5.getMessage(), (Throwable) ((Object) var5), false);
                 }
-                var4 = (ae) (this.field_hb.c(78));
+                var4 = (GameEvent) (this.field_hb.c(78));
                 continue;
               }
             }
-            stackIn_22_0 = ~op.field_m.field_l;
+            stackIn_22_0 = ~op.field_m.phase;
             stackIn_22_1 = -1;
             break;
           }
           if (stackIn_22_0 != stackIn_22_1) {
             this.field_G.a(-21991);
-            if (op.field_m.field_l != 3) {
+            if (op.field_m.phase != 3) {
               this.field_G.a(this.field_Z, false);
             }
             var3_ref_br = this.field_H.c(61);
@@ -4641,7 +4641,7 @@ final class GameScreen {
           if (param1) {
             this.field_A = 96;
           }
-          ArrayOperations.a(param0, 0, op.field_m.field_d, 0, param0.length);
+          ArrayOperations.a(param0, 0, op.field_m.teamScores, 0, param0.length);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4792,9 +4792,9 @@ final class GameScreen {
             so.field_l = new Sprite(1280 / ke.field_b, 960 / ke.field_b);
           }
           if (!gf.field_h) {
-            var4 = new int[param0.field_t + 3];
-            var5 = new int[3 + param0.field_t];
-            var6 = new int[param0.field_t + 2];
+            var4 = new int[param0.teamCount + 3];
+            var5 = new int[3 + param0.teamCount];
+            var6 = new int[param0.teamCount + 2];
             var7 = 0;
             var8 = 0;
             boolean decompiledNaturalLoopExit0 = false;

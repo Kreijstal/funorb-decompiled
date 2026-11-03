@@ -150,7 +150,7 @@ final class fk extends nc {
         if (RandomAccessCacheFile.field_i != null) {
           regionExit1: {
             if (wc.j(111)) {
-              var4 = fq.field_j;
+              var4 = PhaseChangeEvent.field_j;
             } else {
               if (!RandomAccessCacheFile.field_i.field_j) {
                 var4 = op.field_l;
@@ -210,7 +210,7 @@ final class fk extends nc {
         if (wc.j(114)) {
           regionExit2: {
             if (wc.j(111)) {
-              var4Lifetime1 = fq.field_j;
+              var4Lifetime1 = PhaseChangeEvent.field_j;
             } else {
               if (!RandomAccessCacheFile.field_i.field_j) {
                 var4Lifetime1 = op.field_l;
@@ -270,7 +270,7 @@ final class fk extends nc {
         }
         RandomAccessCacheFile.field_i = qm.b(117, 7, 0, 10);
         if (wc.j(111)) {
-          var4Lifetime2 = fq.field_j;
+          var4Lifetime2 = PhaseChangeEvent.field_j;
           ((BitmapFont) ((Object) var2)).a(var4Lifetime2, 40, 150, 560, 200, 0, -1, 1, 1, var3);
           return;
         }

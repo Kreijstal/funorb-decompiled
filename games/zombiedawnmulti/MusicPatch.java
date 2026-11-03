@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class po extends IntrusiveNode {
+final class MusicPatch extends IntrusiveNode {
     private int[] field_r;
     PcmSample[] field_s;
     static int field_n;
@@ -52,12 +52,12 @@ final class po extends IntrusiveNode {
         nk.field_n[13] = vn.field_a;
         nk.field_n[20] = GameSimulation.field_c;
         if (param0 != 2) {
-          po.d(2);
+          MusicPatch.d(2);
         }
         nk.field_n[17] = tj.field_d;
         nk.field_n[9] = li.field_z;
         nk.field_n[11] = si.field_D;
-        nk.field_n[15] = eh.field_f;
+        nk.field_n[15] = HuffmanCodec.field_f;
     }
 
     final static int d(int param0) {
@@ -74,7 +74,7 @@ final class po extends IntrusiveNode {
         return !tg.field_g.d(-86) ? true : false;
     }
 
-    po(byte[] param0) {
+    MusicPatch(byte[] param0) {
         int var11_int = 0;
         int incrementValue$0 = 0;
         nj dupTemp$8 = null;
@@ -605,7 +605,7 @@ final class po extends IntrusiveNode {
         try {
           var5_int = 1;
           if (param1 < 39) {
-            po.c(-70);
+            MusicPatch.c(-70);
           }
           var6 = 0;
           var7 = null;

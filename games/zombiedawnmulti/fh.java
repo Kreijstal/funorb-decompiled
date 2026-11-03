@@ -851,8 +851,8 @@ final class fh {
                     else {
                       var11 = -1 + ((var10 & 33488896) >> 16);
                       if (var11 >= 0 &&
-                        var11 < od.field_Ab.length) {
-                        var16 = od.field_Ab[var11];
+                        var11 < SimArmedHuman.field_Ab.length) {
+                        var16 = SimArmedHuman.field_Ab[var11];
                         if ((268435456 & var10) > 0) {
                           var16.b(var5_int, var6);
                         } else {
@@ -914,11 +914,11 @@ final class fh {
                   else {
                     var11 = ((var10 & 65408) >> 7) - 1;
                     if (var11 >= 0 &&
-                      var11 < od.field_Ab.length) {
+                      var11 < SimArmedHuman.field_Ab.length) {
                       if (param1) {
                         SoftwareRasterizer.fillRect(var5_int, var6, 24, 24, 16711935);
                       }
-                      var15 = od.field_Ab[var11];
+                      var15 = SimArmedHuman.field_Ab[var11];
                       var16 = var15;
                       var16 = var15;
                       if (!this.field_k[var8 + this.field_b][this.field_o + var9]) {
@@ -939,7 +939,7 @@ final class fh {
                       } else {
                         var15.c(var5_int, var6, 128);
                       }
-                      if (po.field_p &&
+                      if (MusicPatch.field_p &&
                         (var10 & 33554432) != 0) {
                         SoftwareRasterizer.fillRectAlpha(var5_int, var6, 24, 24, 8425216, 96);
                       }

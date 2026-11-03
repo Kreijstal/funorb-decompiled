@@ -9,7 +9,7 @@ final class il extends IntrusiveNode {
     int field_p;
     int field_g;
     static int field_k;
-    static ul field_n;
+    static ResourceArchive field_n;
     static String field_j;
     int field_h;
     static String field_l;

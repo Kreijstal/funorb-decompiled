@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class so extends ae {
+final class so extends GameEvent {
     private int field_n;
     private int field_i;
     private int field_m;
@@ -101,17 +101,17 @@ final class so extends ae {
         we.field_g[45] = ZombieDawnMulti.field_F;
         we.field_g[20] = s.field_g;
         we.field_g[3] = fg.field_l;
-        we.field_g[17] = aq.field_r;
+        we.field_g[17] = NetworkGameClient.field_r;
         we.field_g[11] = ra.field_i;
         we.field_g[7] = qf.field_d;
         we.field_g[2] = r.field_b;
-        we.field_g[36] = wl.field_i;
+        we.field_g[36] = WhirlpoolHasher.field_i;
         we.field_g[39] = "Shouldn't See Me";
         we.field_g[35] = lq.field_a;
         we.field_g[49] = vl.field_j[1];
         we.field_g[50] = df.field_L;
         we.field_g[48] = vl.field_j[0];
-        we.field_g[40] = eh.field_c;
+        we.field_g[40] = HuffmanCodec.field_c;
         we.field_g[46] = lj.field_m;
         we.field_g[41] = ic.field_l;
         we.field_g[38] = UiWidget.field_m;
@@ -128,7 +128,7 @@ final class so extends ae {
         gh.field_f[47] = og.field_S;
         gh.field_f[48] = vd.field_b;
         gh.field_f[52] = lc.field_i;
-        gh.field_f[0] = ek.field_F;
+        gh.field_f[0] = SimEntity.field_F;
         wq.field_g = new String[63][2];
         gh.field_f[11] = LevelFileCatalog.field_e;
         gh.field_f[45] = db.field_d;
@@ -149,14 +149,14 @@ final class so extends ae {
         gh.field_f[60] = uc.field_c;
         gh.field_f[49] = dg.field_O;
         gh.field_f[2] = hd.field_t;
-        gh.field_f[4] = ul.field_d;
+        gh.field_f[4] = ResourceArchive.field_d;
         gh.field_f[9] = IterableNodeHashTable.field_b;
         gh.field_f[32] = ZombieDawnMulti.field_M;
         gh.field_f[58] = me.field_j;
         gh.field_f[8] = cj.field_B;
         gh.field_f[35] = gj.field_c;
         gh.field_f[56] = rn.field_c;
-        gh.field_f[10] = od.field_Eb;
+        gh.field_f[10] = SimArmedHuman.field_Eb;
         gh.field_f[61] = qc.field_w;
         gh.field_f[17] = PacketBuffer.field_h;
         gh.field_f[37] = df.field_G;
@@ -170,12 +170,12 @@ final class so extends ae {
         wq.field_g[0][0] = hb.field_a;
         wq.field_g[1][0] = jo.field_a;
         wq.field_g[2][0] = na.field_F;
-        wq.field_g[3][0] = lm.field_jb;
+        wq.field_g[3][0] = SimHuman.field_jb;
         wq.field_g[4][0] = qf.field_e;
         wq.field_g[5][0] = ka.field_c;
         wq.field_g[6][0] = eb.field_i;
         wq.field_g[7][0] = s.field_d;
-        wq.field_g[8][0] = sh.field_P;
+        wq.field_g[8][0] = SimPortal.field_P;
         wq.field_g[9][0] = me.field_c;
         wq.field_g[10][0] = ClientException.field_j;
         wq.field_g[11][0] = wp.field_a;
@@ -189,7 +189,7 @@ final class so extends ae {
         wq.field_g[61][0] = fk.field_o;
         wq.field_g[60][0] = og.field_P;
         wq.field_g[59][0] = hq.field_k;
-        wq.field_g[58][0] = po.field_i;
+        wq.field_g[58][0] = MusicPatch.field_i;
         wq.field_g[57][0] = wi.field_p;
         wq.field_g[56][0] = em.field_V;
         wq.field_g[55][0] = h.field_F;
@@ -201,7 +201,7 @@ final class so extends ae {
         wq.field_g[49][0] = sn.field_Sb;
         wq.field_g[48][0] = uf.field_d;
         wq.field_g[47][0] = cn.field_u;
-        wq.field_g[46][0] = lm.field_ob;
+        wq.field_g[46][0] = SimHuman.field_ob;
         wq.field_g[45][0] = me.field_m;
         wq.field_g[44][0] = hn.field_b;
         wq.field_g[32][0] = ic.field_j;
@@ -218,9 +218,9 @@ final class so extends ae {
         wq.field_g[4][1] = ha.field_n;
         wq.field_g[5][1] = bl.field_d;
         wq.field_g[6][1] = lo.field_e;
-        wq.field_g[7][1] = pa.field_bb;
-        wq.field_g[8][1] = c.field_d;
-        wq.field_g[9][1] = ge.field_ib;
+        wq.field_g[7][1] = SimUnit.field_bb;
+        wq.field_g[8][1] = TertiaryLinkDeque.field_d;
+        wq.field_g[9][1] = SimZombie.field_ib;
         wq.field_g[10][1] = eo.field_c;
         wq.field_g[11][1] = nh.field_j;
         wq.field_g[12][1] = uc.field_d;
@@ -236,23 +236,23 @@ final class so extends ae {
         wq.field_g[58][1] = ok.field_i;
         wq.field_g[57][1] = tp.field_u;
         wq.field_g[56][1] = lh.field_a;
-        wq.field_g[55][1] = ul.field_c;
+        wq.field_g[55][1] = ResourceArchive.field_c;
         if (param0 != -6445) {
           so.a(-95);
         }
-        wq.field_g[54][1] = ul.field_h;
+        wq.field_g[54][1] = ResourceArchive.field_h;
         wq.field_g[53][1] = cr.field_g;
         wq.field_g[52][1] = wj.field_j;
         wq.field_g[51][1] = qj.field_l;
         wq.field_g[50][1] = dd.field_b;
         wq.field_g[49][1] = fb.field_g;
         wq.field_g[48][1] = oj.field_O;
-        wq.field_g[47][1] = ul.field_i;
+        wq.field_g[47][1] = ResourceArchive.field_i;
         wq.field_g[46][1] = fe.field_X;
         wq.field_g[45][1] = ip.field_d;
-        wq.field_g[44][1] = ff.field_q;
+        wq.field_g[44][1] = TertiaryLinkNode.field_q;
         wq.field_g[32][1] = UiWidget.field_o;
-        wq.field_g[33][1] = wl.field_g;
+        wq.field_g[33][1] = WhirlpoolHasher.field_g;
         wq.field_g[34][1] = vg.field_q;
         wq.field_g[35][1] = wq.field_e;
         wq.field_g[36][1] = va.field_b;
@@ -388,7 +388,7 @@ final class so extends ae {
         try {
           boolean decompiledFrameCompleted0 = true;
           MouseWheelInput.a(InflaterDecompressor.field_a, false);
-          if (null != mh.field_c) {
+          if (null != JaggrabDownloader.field_c) {
             jp.field_b.field_Z = true;
             en.field_b.field_z = 0;
             var22 = en.field_b;
@@ -404,7 +404,7 @@ final class so extends ae {
               gg.field_m.field_wb = ClientException.field_l.toUpperCase();
               var9 = (2 + fc.field_a.field_zb) / 2;
               en.field_b.a(40, fc.field_a.field_z - 40, var9 - 2, 0, -3344);
-              if (mh.field_c.field_mc > mh.field_c.field_cc) {
+              if (JaggrabDownloader.field_c.field_mc > JaggrabDownloader.field_c.field_cc) {
                 en.field_b.field_wb = p.field_c.toUpperCase();
                 en.field_b.field_Z = true;
                 if (var19 != 0) {
@@ -478,9 +478,9 @@ final class so extends ae {
                             stackIn_56_1 = -1;
                             if (stackIn_56_0 == stackIn_56_1) {
                               if (var10 == 0) {
-                                stackIn_44_0 = mh.field_c.field_mc;
+                                stackIn_44_0 = JaggrabDownloader.field_c.field_mc;
                               } else {
-                                stackIn_44_0 = mh.field_c.field_cc;
+                                stackIn_44_0 = JaggrabDownloader.field_c.field_cc;
                               }
                               var17_int = stackIn_44_0;
                               if (var17_int != var16 &&
@@ -488,7 +488,7 @@ final class so extends ae {
                                 break scanLoop2;
                               }
                             } else {
-                              if (~(mh.field_c.field_Zb[var15] & 255) != ~var16 &&
+                              if (~(JaggrabDownloader.field_c.field_Zb[var15] & 255) != ~var16 &&
                                 var19 == 0) {
                                 break scanLoop2;
                               }
@@ -571,7 +571,7 @@ final class so extends ae {
                     var13_ref_String = ai.field_d;
                     boolean decompiledSharedTail1 = (var12 == 0);
                     if (!decompiledSharedTail1) {
-                      var14_ref_String = aq.field_n + (String) (var11_ref);
+                      var14_ref_String = NetworkGameClient.field_n + (String) (var11_ref);
                       decompiledSharedTail1 = (var19 != 0);
                     }
                     if (decompiledSharedTail1) {
@@ -602,7 +602,7 @@ final class so extends ae {
                 var15 = 0;
                 var16 = 0;
                 while (kj.field_h > var16) {
-                  var17_int = 255 & mh.field_c.field_Zb[var16];
+                  var17_int = 255 & JaggrabDownloader.field_c.field_Zb[var16];
                   stackIn_188_0 = null;
                   if (var19 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -718,15 +718,15 @@ final class so extends ae {
               }
               if ((decompiledFrameCompleted0) &&
                 (var19 != 0)) {
-                var9_ref_String = mh.field_c.field_Nb;
-                gg.field_m.field_wb = vl.a(ae.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
+                var9_ref_String = JaggrabDownloader.field_c.field_Nb;
+                gg.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
                 eb.field_B.a(40, fc.field_a.field_z - 40, fc.field_a.field_zb, 0, -3344);
                 eb.field_B.field_wb = vl.a(mp.field_a, new String[]{var9_ref_String}, 2);
                 var8 = eb.field_B;
               }
             } else {
-              var9_ref_String = mh.field_c.field_Nb;
-              gg.field_m.field_wb = vl.a(ae.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
+              var9_ref_String = JaggrabDownloader.field_c.field_Nb;
+              gg.field_m.field_wb = vl.a(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
               eb.field_B.a(40, fc.field_a.field_z - 40, fc.field_a.field_zb, 0, -3344);
               eb.field_B.field_wb = vl.a(mp.field_a, new String[]{var9_ref_String}, 2);
               var8 = eb.field_B;
@@ -738,16 +738,16 @@ final class so extends ae {
                 if (var9 < 1) {
                   var9 = 1;
                 }
-                var8.field_wb = vl.a(ge.field_pb, new String[]{Integer.toString(var9)}, param0 ^ 48);
+                var8.field_wb = vl.a(SimZombie.field_pb, new String[]{Integer.toString(var9)}, param0 ^ 48);
               }
-              ClientException.field_h.field_wb = vl.a(pb.field_g, new String[]{Integer.toString(mh.field_c.field_cc), Integer.toString(mh.field_c.field_mc)}, 2);
+              ClientException.field_h.field_wb = vl.a(pb.field_g, new String[]{Integer.toString(JaggrabDownloader.field_c.field_cc), Integer.toString(JaggrabDownloader.field_c.field_mc)}, 2);
             }
           }
           if (decompiledFrameCompleted0) {
             if (param0 != 50) {
               field_t = (ma) null;
             }
-            stackIn_176_0 = mh.field_i;
+            stackIn_176_0 = JaggrabDownloader.field_i;
             stackIn_176_1 = -11838;
             stackIn_177_2 = (param1) && (!param2) && (!io.field_b);
             ((cj) (Object) stackIn_176_0).a(stackIn_176_1, stackIn_177_2);
@@ -762,9 +762,9 @@ final class so extends ae {
             em.field_U.field_c.h(-40);
             stackIn_188_0 = null;
           }
-          if (stackIn_188_0 != mh.field_c) {
+          if (stackIn_188_0 != JaggrabDownloader.field_c) {
             if (jp.field_b.field_T != 0) {
-              ml.a(mh.field_c.i(6), param4, -76);
+              ml.a(JaggrabDownloader.field_c.i(6), param4, -76);
             }
             if (0 != en.field_b.field_T) {
               io.field_b = true;
@@ -775,7 +775,7 @@ final class so extends ae {
             if (pg.field_a.field_T != 0) {
               io.field_b = false;
             }
-            ld.a(mh.field_c, false, param4, 1);
+            ld.a(JaggrabDownloader.field_c, false, param4, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

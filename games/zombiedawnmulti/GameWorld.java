@@ -8,19 +8,19 @@ class GameWorld {
     IntrusiveDeque characters;
     static String field_w;
     fc field_h;
-    int field_l;
+    int phase;
     int[] field_v;
     int field_F;
-    int[] field_d;
+    int[] teamScores;
     boolean field_c;
-    int field_f;
+    int nextObjectId;
     int field_C;
     private PlayerLoadout[] field_k;
     boolean field_i;
-    int field_t;
+    int teamCount;
     int[] teamCharacterCounts;
     IntrusiveDeque field_s;
-    long[] field_e;
+    long[] teamUpgradeMask;
     static String field_p;
     int[] field_o;
     static String field_q;
@@ -56,30 +56,30 @@ class GameWorld {
         }
     }
 
-    final boolean b(byte param0, int param1, int param2) {
+    final boolean hasUpgrade(byte param0, int param1, int param2) {
         if (param2 < 0) {
           return false;
         }
         if (param0 > -61) {
           this.b(103, -2);
         }
-        return (1L << param1 & this.field_e[param2]) != 0L ? true : false;
+        return (1L << param1 & this.teamUpgradeMask[param2]) != 0L ? true : false;
     }
 
-    final int a(int param0) {
+    final int nextObjectId(int param0) {
         if (param0 != -16777216) {
           return 30;
         }
-        int fieldTemp$0 = this.field_f;
-        this.field_f = this.field_f + 1;
+        int fieldTemp$0 = this.nextObjectId;
+        this.nextObjectId = this.nextObjectId + 1;
         return fieldTemp$0;
     }
 
-    final int a(int param0, int param1, int param2, boolean param3) {
+    final int getPowerupCooldown(int param0, int param1, int param2, boolean param3) {
         if (param3) {
           return -15;
         }
-        return g.a(param1, param0, this.b((byte) -81, 59, param2), this.b((byte) -92, 56, param2));
+        return g.a(param1, param0, this.hasUpgrade((byte) -81, 59, param2), this.hasUpgrade((byte) -92, 56, param2));
     }
 
     public static void b(int param0) {
@@ -103,15 +103,15 @@ class GameWorld {
         return this.characters;
     }
 
-    final int a(byte param0, int param1, int param2) {
+    final int computeEffectDuration(byte param0, int param1, int param2) {
         int var4 = param2;
-        if (this.b((byte) -66, 58, param1)) {
+        if (this.hasUpgrade((byte) -66, 58, param1)) {
           var4 = var4 + param2 / 2;
         }
         if (param0 != 32) {
           this.field_C = 122;
         }
-        if (this.b((byte) -101, 57, param1)) {
+        if (this.hasUpgrade((byte) -101, 57, param1)) {
           var4 = var4 + param2;
         }
         return var4;
@@ -137,7 +137,7 @@ class GameWorld {
           this.field_u = (IntrusiveDeque) null;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (!this.b((byte) -83, 45, param1) && (!this.b((byte) -83, 46, param1) ||
+        if (!this.hasUpgrade((byte) -83, 45, param1) && (!this.hasUpgrade((byte) -83, 46, param1) ||
           !(hp.a((byte) 7, g.field_a, 100) < 40))) {
           stackIn_8_0 = false;
           decompiledFrameRemainder0 = false;
@@ -173,7 +173,7 @@ class GameWorld {
         return null;
     }
 
-    final void a(int param0, PacketBuffer param1) {
+    final void decodeFromPacket(int param0, PacketBuffer param1) {
         int dupTemp$0 = 0;
         boolean stackIn_4_1 = false;
         jj stackIn_21_0;
@@ -218,17 +218,17 @@ class GameWorld {
           this.field_C = param1.readUnsignedShort((byte) 69);
           this.field_I = param1.readUnsignedShort((byte) 69);
           this.field_g = param1.readUnsignedShort((byte) 69);
-          this.field_l = param1.readUnsignedByte(31365);
+          this.phase = param1.readUnsignedByte(31365);
           if (param0 != 2) {
             var18 = (String) null;
             GameWorld.a(51, (String) null);
           }
-          for (var3_int = 0; var3_int < this.field_t; var3_int++) {
+          for (var3_int = 0; var3_int < this.teamCount; var3_int++) {
             this.field_y[var3_int] = param1.readUnsignedByte(31365);
             this.field_D[var3_int][0] = param1.readUnsignedMedium(128);
             this.field_D[var3_int][1] = param1.readUnsignedMedium(128);
-            this.field_d[var3_int] = param1.readUnsignedShort((byte) 69);
-            this.field_e[var3_int] = (long)param1.readUnsignedMedium(128) << 40;
+            this.teamScores[var3_int] = param1.readUnsignedShort((byte) 69);
+            this.teamUpgradeMask[var3_int] = (long)param1.readUnsignedMedium(128) << 40;
             this.teamCharacterCounts[var3_int] = 0;
             this.field_J[var3_int] = 0;
             this.field_a[var3_int] = param1.readUnsignedShort((byte) 69);
@@ -300,7 +300,7 @@ class GameWorld {
               continue;
             }
             ((id) (var4Lifetime1)).field_y = var5;
-            this.field_f = 1 + var5;
+            this.nextObjectId = 1 + var5;
             this.characters.a((IntrusiveNode) (var4Lifetime1), false);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -336,7 +336,7 @@ class GameWorld {
           if (param3 == null) {
             var8.a(param0, (byte) -71);
           } else {
-            ae.a(var8, param3, -31746);
+            GameEvent.a(var8, param3, -31746);
           }
           var8.e(41, var8.position - var7);
         } catch (RuntimeException runtimeException) {
@@ -344,14 +344,14 @@ class GameWorld {
         }
     }
 
-    final void a(int param0, ff param1) {
+    final void addEntity(int param0, TertiaryLinkNode param1) {
         try {
           param1.unlink(true);
           param1.a(-4564);
           if (param0 >= -95) {
             this.field_g = 51;
           }
-          param1.c((byte) -70);
+          param1.unlinkTertiary((byte) -70);
           this.field_u.a(param1, false);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "kb.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -359,7 +359,7 @@ class GameWorld {
     }
 
     final void c(int param0) {
-        if (this.field_l == 1) {
+        if (this.phase == 1) {
           this.field_C = this.field_C - 250;
         }
         this.field_g = this.field_g - 1;
@@ -441,32 +441,32 @@ class GameWorld {
           if (null != this.field_h) {
             this.field_r = this.field_h.field_i;
           }
-          this.field_t = param0.length;
-          if (this.field_t == 1) {
-            this.field_t = 2;
+          this.teamCount = param0.length;
+          if (this.teamCount == 1) {
+            this.teamCount = 2;
           }
-          this.field_J = new int[this.field_t];
-          this.field_D = new int[this.field_t][2];
-          this.field_e = new long[this.field_t];
-          this.field_d = new int[this.field_t];
-          this.teamCharacterCounts = new int[this.field_t];
-          this.field_y = new int[this.field_t];
+          this.field_J = new int[this.teamCount];
+          this.field_D = new int[this.teamCount][2];
+          this.teamUpgradeMask = new long[this.teamCount];
+          this.teamScores = new int[this.teamCount];
+          this.teamCharacterCounts = new int[this.teamCount];
+          this.field_y = new int[this.teamCount];
           this.characters = new IntrusiveDeque();
           this.field_u = new IntrusiveDeque();
           this.field_A = new IntrusiveDeque();
           this.field_s = new IntrusiveDeque();
           this.field_G = new IntrusiveDeque();
-          this.field_o = new int[this.field_t];
-          this.field_v = new int[this.field_t];
-          this.field_a = new int[this.field_t];
-          this.field_k = new PlayerLoadout[this.field_t];
-          this.field_z = new int[this.field_t];
-          for (var3_int = 0; this.field_t > var3_int; var3_int++) {
+          this.field_o = new int[this.teamCount];
+          this.field_v = new int[this.teamCount];
+          this.field_a = new int[this.teamCount];
+          this.field_k = new PlayerLoadout[this.teamCount];
+          this.field_z = new int[this.teamCount];
+          for (var3_int = 0; this.teamCount > var3_int; var3_int++) {
             this.field_k[var3_int] = new PlayerLoadout();
           }
-          this.field_t = param0.length;
+          this.teamCount = param0.length;
           this.field_c = false;
-          this.field_l = 0;
+          this.phase = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

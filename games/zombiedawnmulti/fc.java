@@ -536,8 +536,8 @@ class fc {
         int fieldTemp$0 = 0;
         try {
           this.field_j = param2;
-          fieldTemp$0 = eh.field_b;
-          eh.field_b = eh.field_b + 1;
+          fieldTemp$0 = HuffmanCodec.field_b;
+          HuffmanCodec.field_b = HuffmanCodec.field_b + 1;
           this.field_i = fieldTemp$0;
           this.field_l = param1;
           this.field_b = param4;

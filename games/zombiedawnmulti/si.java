@@ -210,7 +210,7 @@ final class si extends nc {
         return var2 + ":" + (10 > var3 ? "0" : "") + var3;
     }
 
-    final static void a(boolean param0, boolean param1, ul param2, ul param3, ul param4) {
+    final static void a(boolean param0, boolean param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           tg.field_g = tg.a("", !param0 ? true : false);
           tg.field_g.a(-17853, param0);
@@ -498,7 +498,7 @@ final class si extends nc {
           var9 = qb.field_h.field_e;
           var10 = 150;
           var11 = 0;
-          for (var12 = 0; var12 < this.field_z.field_t; var12++) {
+          for (var12 = 0; var12 < this.field_z.teamCount; var12++) {
             var13 = this.field_A[var12];
             stackIn_22_0 = (wp.field_h.field_M != var13) ? 0 : 1;
             var14 = stackIn_22_0;
@@ -554,7 +554,7 @@ final class si extends nc {
             SoftwareRasterizer.setClip(0, 0, 640, 480);
             var18 = 436;
             for (var19 = 0; var19 < 63; var19++) {
-              stackIn_51_0 = (!this.field_z.b((byte) -121, var19, var13)) ? 0 : 1;
+              stackIn_51_0 = (!this.field_z.hasUpgrade((byte) -121, var19, var13)) ? 0 : 1;
               var20 = stackIn_51_0;
               if (var20 != 0) {
                 wa.field_b[-18 + var19].c(var18, var10 + 5, var6);
@@ -738,10 +738,10 @@ final class si extends nc {
               hn.field_i.a(var11Lifetime1Lifetime1 * 209 + 91, 280, var6Lifetime1);
             }
           }
-          ul.field_f.a(93, 231, var6Lifetime1);
-          ul.field_f.a(209, 231, var6Lifetime1);
-          ul.field_f.a(329, 231, var6Lifetime1);
-          ul.field_f.a(573, 231, var6Lifetime1);
+          ResourceArchive.field_f.a(93, 231, var6Lifetime1);
+          ResourceArchive.field_f.a(209, 231, var6Lifetime1);
+          ResourceArchive.field_f.a(329, 231, var6Lifetime1);
+          ResourceArchive.field_f.a(573, 231, var6Lifetime1);
         }
     }
 

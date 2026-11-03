@@ -65,7 +65,7 @@ final class io {
           if (nh.field_m) {
             var5 = t.field_a;
           } else {
-            if (sh.field_L) {
+            if (SimPortal.field_L) {
               var5 = GameScreen.field_v;
             } else {
               var5 = pd.field_e;

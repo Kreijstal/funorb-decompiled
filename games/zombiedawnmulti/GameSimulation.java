@@ -5,27 +5,27 @@ final class GameSimulation {
     static String[] field_h;
     boolean field_l;
     private PlayerLoadout[] loadouts;
-    IntrusiveDeque field_q;
+    IntrusiveDeque eventQueue;
     private int[] field_i;
     private int[] field_j;
     private int[] field_k;
-    private c[][] field_s;
+    private TertiaryLinkDeque[][] field_s;
     private int[] field_g;
-    static of[] field_r;
+    static BufferedFile[] field_r;
     private IntrusiveDeque field_n;
     static byte[] field_v;
     private boolean cheatsEnabled;
     private IntrusiveDeque field_e;
     int[] field_p;
-    fh field_b;
+    fh navigation;
     private boolean field_o;
     GameWorld world;
     static String field_c;
     private IntrusiveDeque field_f;
     static Sprite[] field_a;
-    IntrusiveDeque field_u;
+    IntrusiveDeque entities;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void requestPowerup(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException decompiledCaughtException = null;
         PlayerLoadout var6 = null;
         RuntimeException var6_ref = null;
@@ -50,8 +50,8 @@ final class GameSimulation {
             var8 = var6.field_f[param3];
             var9 = new qj(this.world.currentTick + 50, param2, var7, var8, param4, param0);
             this.field_e.a(var9, false);
-            this.a(-7737, rm.a(this.world.currentTick, param4, param0, var7, var8, param2, param1 ^ -13113, param4));
-            var6.powerupReadyTick[param3] = this.world.currentTick + this.world.a(var8, var7, param2, false);
+            this.queueEvent(-7737, rm.a(this.world.currentTick, param4, param0, var7, var8, param2, param1 ^ -13113, param4));
+            var6.powerupReadyTick[param3] = this.world.currentTick + this.world.getPowerupCooldown(var8, var7, param2, false);
             return;
           }
           this.a((byte) 95, "invalid powerup slot", param2 + " tried to use invalid powerup slot: " + param3);
@@ -85,11 +85,11 @@ final class GameSimulation {
         }
     }
 
-    final void a(int param0, ge param1, int param2, lm param3) {
+    final void convertHumanToZombie(int param0, SimZombie param1, int param2, SimHuman param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
-        ge var7 = null;
+        SimZombie var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -97,17 +97,17 @@ final class GameSimulation {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.e((byte) -112);
-          var6 = param3.g(param2 + 1829980022);
-          var7 = new ge(var5_int, var6, param3.k((byte) 121));
+          var5_int = param3.getX((byte) -112);
+          var6 = param3.getY(param2 + 1829980022);
+          var7 = new SimZombie(var5_int, var6, param3.k((byte) 121));
           if (param2 != -32422) {
             return;
           }
-          var7.field_A = this;
-          var7.field_x = this.world.a(param2 - 16744794);
+          var7.simulation = this;
+          var7.objectId = this.world.nextObjectId(param2 - 16744794);
           var7.field_gb = param0;
-          this.world.field_d[var7.field_gb] = this.world.field_d[var7.field_gb] + param3.o(-116);
-          this.field_u.a(var7, false);
+          this.world.teamScores[var7.field_gb] = this.world.teamScores[var7.field_gb] + param3.o(-116);
+          this.entities.a(var7, false);
           this.a(param3, var7, param1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,13 +130,13 @@ final class GameSimulation {
         }
     }
 
-    final void b(int param0) {
-        this.d(-32724);
+    final void tick(int param0) {
+        this.advanceTick(-32724);
         if (param0 != -198) {
           return;
         }
         try {
-          this.a(120);
+          this.updatePhase(120);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "rl.G(" + param0 + ')');
         }
@@ -162,7 +162,7 @@ final class GameSimulation {
         }
     }
 
-    private final void a(int param0, ge param1) {
+    private final void a(int param0, SimZombie param1) {
         RuntimeException runtimeException = null;
         pc var3 = null;
         RuntimeException stackIn_10_0 = null;
@@ -174,11 +174,11 @@ final class GameSimulation {
             this.field_j = (int[]) null;
           }
           param1.field_eb = false;
-          if (param1.field_Z) {
+          if (param1.removed) {
             return;
           }
-          var3 = aq.a(this.world.currentTick, false, param1.field_tb.field_x, param1.field_x);
-          this.a(param0 - 7735, var3);
+          var3 = NetworkGameClient.a(this.world.currentTick, false, param1.field_tb.objectId, param1.objectId);
+          this.queueEvent(param0 - 7735, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -194,21 +194,21 @@ final class GameSimulation {
         }
     }
 
-    final void a(int param0, ek param1) {
-        c var3 = null;
+    final void relinkCell(int param0, SimEntity param1) {
+        TertiaryLinkDeque var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1.c((byte) -70);
+          param1.unlinkTertiary((byte) -70);
           if (param0 >= -21) {
             GameSimulation.a((byte) 90);
           }
-          var3 = this.a(true, param1.field_C, param1.field_B);
+          var3 = this.getCell(true, param1.cellX, param1.cellY);
           if (null != var3) {
-            var3.a(param1, true);
+            var3.addLast(param1, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -225,15 +225,15 @@ final class GameSimulation {
         }
     }
 
-    final c a(boolean param0, int param1, int param2) {
+    final TertiaryLinkDeque getCell(boolean param0, int param1, int param2) {
         RuntimeException var4 = null;
-        c stackIn_2_0 = null;
+        TertiaryLinkDeque stackIn_2_0 = null;
         Object stackIn_14_0 = null;
-        c stackIn_20_0 = null;
+        TertiaryLinkDeque stackIn_20_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_2_0 = (c) null;
+            stackIn_2_0 = (TertiaryLinkDeque) null;
             return stackIn_2_0;
           }
           if (this.field_s[0].length >= param1 &&
@@ -241,13 +241,13 @@ final class GameSimulation {
             param2 >= 0 &&
             0 <= param1) {
             if (null == this.field_s[param2][param1]) {
-              this.field_s[param2][param1] = new c();
+              this.field_s[param2][param1] = new TertiaryLinkDeque();
             }
             stackIn_20_0 = this.field_s[param2][param1];
             return stackIn_20_0;
           }
           stackIn_14_0 = null;
-          return (c) (stackIn_14_0);
+          return (TertiaryLinkDeque) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -257,34 +257,34 @@ final class GameSimulation {
 
     private final void b(int param0, int param1) {
         RuntimeException runtimeException = null;
-        ge var3 = null;
-        pa var4 = null;
+        SimZombie var3 = null;
+        SimUnit var4 = null;
         RuntimeException decompiledCaughtException = null;
-        lm var5 = null;
+        SimHuman var5 = null;
         try {
-          var4 = this.a((byte) -125, param1);
+          var4 = this.getUnit((byte) -125, param1);
           if (var4 == null) {
             return;
           }
-          var4.b(false);
+          var4.clearSpeedEffect(false);
           if (param0 != 4) {
             return;
           }
-          if (var4 instanceof ge) {
-            var3 = (ge) (var4);
+          if (var4 instanceof SimZombie) {
+            var3 = (SimZombie) (var4);
             var3.f(true);
             var3.t(4);
             var3.r((byte) -111);
-            if (var3.field_Q != 29) {
+            if (var3.state != 29) {
               return;
             }
-            var3.a(4, (byte) -89);
+            var3.setState(4, (byte) -89);
             if (!ZombieDawnMulti.field_E) {
               return;
             }
           }
-          if (var4 instanceof lm) {
-            var5 = (lm) (var4);
+          if (var4 instanceof SimHuman) {
+            var5 = (SimHuman) (var4);
             var5.n((byte) -100);
           }
           return;
@@ -295,7 +295,7 @@ final class GameSimulation {
         }
     }
 
-    final void a(byte param0, ge param1, boolean param2) {
+    final void a(byte param0, SimZombie param1, boolean param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -305,7 +305,7 @@ final class GameSimulation {
           if (param0 != 65) {
             this.field_l = false;
           }
-          this.field_n.a(new nk(param1, param1.e((byte) -112), param1.g(1829947600), param2), false);
+          this.field_n.a(new nk(param1, param1.getX((byte) -112), param1.getY(1829947600), param2), false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -321,7 +321,7 @@ final class GameSimulation {
         }
     }
 
-    private final void a(int param0, pa param1) {
+    private final void emitUnitEvent(int param0, SimUnit param1) {
         so var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -329,15 +329,15 @@ final class GameSimulation {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1.field_S = false;
-          if (param1.field_Z) {
+          param1.needsSync = false;
+          if (param1.removed) {
             return;
           }
           if (param0 != -2) {
-            this.field_s = (c[][]) null;
+            this.field_s = (TertiaryLinkDeque[][]) null;
           }
-          var3 = ng.a(param1.field_N, param0 ^ -101, param1.field_Q, param1.field_x, param1.field_G, this.world.currentTick, param1.field_E, param1.field_db, param1.field_ab);
-          this.a(-7737, var3);
+          var3 = ng.a(param1.targetX, param0 ^ -101, param1.state, param1.objectId, param1.positionX, this.world.currentTick, param1.positionY, param1.speed, param1.targetY);
+          this.queueEvent(-7737, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -353,25 +353,25 @@ final class GameSimulation {
         }
     }
 
-    private final pa a(byte param0, int param1) {
-        ek var3 = null;
+    private final SimUnit getUnit(byte param0, int param1) {
+        SimEntity var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
-        pa stackIn_10_0 = null;
+        SimUnit stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.c(param1, -117);
+          var3 = this.findEntity(param1, -117);
           if (null == var3) {
             stackIn_2_0 = null;
-            return (pa) (stackIn_2_0);
+            return (SimUnit) (stackIn_2_0);
           }
-          if (!(var3 instanceof pa)) {
+          if (!(var3 instanceof SimUnit)) {
             throw new IllegalArgumentException("oid " + param1 + " is not a character");
           }
           if (param0 > -119) {
             field_v = (byte[]) null;
           }
-          stackIn_10_0 = (pa) (var3);
+          stackIn_10_0 = (SimUnit) (var3);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -380,7 +380,7 @@ final class GameSimulation {
         }
     }
 
-    private final void a(int param0) {
+    private final void updatePhase(int param0) {
         int stackIn_44_0 = 0;
         int stackIn_44_1 = 0;
         int stackIn_70_0 = 0;
@@ -392,14 +392,14 @@ final class GameSimulation {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        ge var3_ref_ge = null;
+        SimZombie var3_ref_ge = null;
         int[] var3_ref_int__ = null;
         int[] var4_ref_int__ = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ge var3_ref_geLifetime1;
+        SimZombie var3_ref_geLifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -411,13 +411,13 @@ final class GameSimulation {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          var3 = this.world.field_l;
+          var3 = this.world.phase;
           if (var3 == 0) {
             if (this.world.currentTick < 400 &&
-              this.world.field_t != 1) {
+              this.world.teamCount != 1) {
               return;
             }
-            this.a(false, 1);
+            this.setPhase(false, 1);
             if (var7 == 0) {
               return;
             }
@@ -438,25 +438,25 @@ final class GameSimulation {
               if (11 == hg.field_rb) {
                 return;
               }
-              var3_ref_ge = new ge(hc.field_c, gk.field_c, 0);
-              var3_ref_ge.a(-9019, this);
+              var3_ref_ge = new SimZombie(hc.field_c, gk.field_c, 0);
+              var3_ref_ge.attachToSimulation(-9019, this);
               var3_ref_ge.field_gb = 0;
-              var3_ref_ge.field_x = this.world.a(-16777216);
+              var3_ref_ge.objectId = this.world.nextObjectId(-16777216);
               this.world.characters.a(-25612, var3_ref_ge);
-              var3_ref_ge.field_S = true;
-              op.field_m.field_f = var3_ref_ge.field_x;
-              var3_ref_geLifetime1 = new ge(hc.field_c, -30 + gk.field_c, 1);
-              var3_ref_geLifetime1.a(-9019, this);
+              var3_ref_ge.needsSync = true;
+              op.field_m.nextObjectId = var3_ref_ge.objectId;
+              var3_ref_geLifetime1 = new SimZombie(hc.field_c, -30 + gk.field_c, 1);
+              var3_ref_geLifetime1.attachToSimulation(-9019, this);
               var3_ref_geLifetime1.field_gb = 0;
-              var3_ref_geLifetime1.field_x = this.world.a(-16777216);
+              var3_ref_geLifetime1.objectId = this.world.nextObjectId(-16777216);
               this.world.characters.a(-25612, var3_ref_geLifetime1);
-              var3_ref_geLifetime1.field_S = true;
+              var3_ref_geLifetime1.needsSync = true;
               return;
             }
             if (this.world.currentTick % 32 != 0) {
               return;
             }
-            var3Lifetime2 = this.world.field_t;
+            var3Lifetime2 = this.world.teamCount;
             var4_ref_int__ = this.world.teamCharacterCounts;
             var5 = 0;
             while (true) {
@@ -482,13 +482,13 @@ final class GameSimulation {
               (!((this.world.field_I / 8) < this.world.field_g) ||
               !(this.world.currentTick < (this.world.field_C - 3000)) ||
               1 >= var3Lifetime2)) {
-              this.a(false, 2);
+              this.setPhase(false, 2);
             }
             if (var7 == 0) {
               return;
             }
           }
-          var2_int = this.world.field_t;
+          var2_int = this.world.teamCount;
           var3_ref_int__ = this.world.teamCharacterCounts;
           var4 = 0;
           boolean decompiledNaturalLoopExit1 = false;
@@ -517,13 +517,13 @@ final class GameSimulation {
           var4Lifetime1 = 0;
           var5Lifetime2 = 1;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var5Lifetime2 < this.world.field_d.length)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(var5Lifetime2 < this.world.teamScores.length)))) {
             stackIn_87_0 = this.world;
             if (var7 == 0) {
-              if (stackIn_87_0.field_d[var5Lifetime2] == this.world.field_d[var3Lifetime1]) {
+              if (stackIn_87_0.teamScores[var5Lifetime2] == this.world.teamScores[var3Lifetime1]) {
                 var4Lifetime1 = 1;
               } else {
-                if (this.world.field_d[var5Lifetime2] > this.world.field_d[var3Lifetime1]) {
+                if (this.world.teamScores[var5Lifetime2] > this.world.teamScores[var3Lifetime1]) {
                   var3Lifetime1 = var5Lifetime2;
                   var4Lifetime1 = 0;
                 }
@@ -543,7 +543,7 @@ final class GameSimulation {
             stackIn_91_2 = -1;
           }
           ((GameWorld) (Object) stackIn_87_0).a((byte) stackIn_90_1, stackIn_91_2);
-          this.a(false, 3);
+          this.setPhase(false, 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -596,7 +596,7 @@ final class GameSimulation {
             }
             var4_ref_md = vn.field_c[var3];
             var4_ref_md.a((byte) -81);
-            c.a(var3, (byte) 75);
+            TertiaryLinkDeque.a(var3, (byte) 75);
             var5 = var4_ref_md.field_D + var4_ref_md.field_C >> 1;
             var6 = var4_ref_md.field_G + var4_ref_md.field_l >> 1;
             var7 = var4_ref_md.field_j + var4_ref_md.field_r >> 1;
@@ -652,7 +652,7 @@ final class GameSimulation {
               }
               var2[var16] = -2147483648;
               var17 = vn.field_c[var16];
-              c.a(var16, (byte) 106);
+              TertiaryLinkDeque.a(var16, (byte) 106);
               var18 = 0;
               while (var18 < 3) {
                 hl.field_c[var18] = hl.field_c[var18] + lk.field_G[var15][var18];
@@ -673,8 +673,8 @@ final class GameSimulation {
         }
     }
 
-    private final void a(int param0, ae param1) {
-        ae var3 = null;
+    private final void queueEvent(int param0, GameEvent param1) {
+        GameEvent var3 = null;
         int var4 = 0;
         int stackIn_15_0 = 0;
         int stackIn_15_1 = 0;
@@ -685,11 +685,11 @@ final class GameSimulation {
         RuntimeException var3_ref = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (this.field_q.f(param0 + 35850)) {
-            this.field_q.a(param0 ^ 31283, param1);
+          if (this.eventQueue.f(param0 + 35850)) {
+            this.eventQueue.a(param0 ^ 31283, param1);
             return;
           }
-          var3 = (ae) (this.field_q.a((byte) 76));
+          var3 = (GameEvent) (this.eventQueue.a((byte) 76));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
             stackIn_15_0 = ~param1.field_f;
@@ -699,13 +699,13 @@ final class GameSimulation {
                 qc.a(param1, var3, 0);
                 return;
               }
-              var3 = (ae) (this.field_q.c((byte) 123));
+              var3 = (GameEvent) (this.eventQueue.c((byte) 123));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            this.field_q.a(-25612, param1);
+            this.eventQueue.a(-25612, param1);
             stackIn_15_0 = param0;
             stackIn_15_1 = -7737;
           }
@@ -727,7 +727,7 @@ final class GameSimulation {
         }
     }
 
-    private final void a(boolean param0, byte param1, fc param2) {
+    private final void initialize(boolean param0, byte param1, fc param2) {
         boolean stackIn_4_0 = false;
         int stackIn_13_0 = 0;
         int stackIn_36_0 = 0;
@@ -742,11 +742,11 @@ final class GameSimulation {
         boolean stackOut_3_0;
         IntrusiveDeque var4 = null;
         RuntimeException var4_ref = null;
-        ek var5_ref_ek = null;
+        SimEntity var5_ref_ek = null;
         int var5 = 0;
         Object var6 = null;
         Object var7 = null;
-        ek var8_ref_ek = null;
+        SimEntity var8_ref_ek = null;
         int var8 = 0;
         int var9 = 0;
         Object var10 = null;
@@ -765,69 +765,69 @@ final class GameSimulation {
         int var13Lifetime1;
         var14 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          this.field_b = new fh(param2);
-          this.field_s = new c[(this.field_b.field_c >> 7) + 1][1 + (this.field_b.field_r >> 7)];
+          this.navigation = new fh(param2);
+          this.field_s = new TertiaryLinkDeque[(this.navigation.field_c >> 7) + 1][1 + (this.navigation.field_r >> 7)];
           this.world.currentTick = 0;
           ip.b((byte) 97);
           this.field_n = new IntrusiveDeque();
           this.field_f = new IntrusiveDeque();
           this.field_e = new IntrusiveDeque();
           var4 = param2.a(91);
-          var5_ref_ek = (ek) (var4.c(78));
+          var5_ref_ek = (SimEntity) (var4.c(78));
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var5_ref_ek == null))) {
-            stackOut_3_0 = var5_ref_ek instanceof sh;
+            stackOut_3_0 = var5_ref_ek instanceof SimPortal;
             stackIn_13_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
             if (var14 == 0) {
               if (stackIn_4_0) {
-                var6 = (sh) (var5_ref_ek);
-                if (((sh) (var6)).field_O < this.world.field_t) {
-                  ((sh) (var6)).a(-9019, this);
-                  ((sh) (var6)).field_O = this.world.field_y[((sh) (var6)).field_O];
+                var6 = (SimPortal) (var5_ref_ek);
+                if (((SimPortal) (var6)).field_O < this.world.teamCount) {
+                  ((SimPortal) (var6)).attachToSimulation(-9019, this);
+                  ((SimPortal) (var6)).field_O = this.world.field_y[((SimPortal) (var6)).field_O];
                   this.field_f.a(var5_ref_ek, false);
                 }
               }
-              var5_ref_ek = (ek) (var4.b(6));
+              var5_ref_ek = (SimEntity) (var4.b(6));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit1) {
             this.world.field_I = 0;
-            stackIn_13_0 = 2 * this.world.field_t;
+            stackIn_13_0 = 2 * this.world.teamCount;
           }
           var5 = stackIn_13_0;
           var6Lifetime1 = null;
           var7 = null;
           if (param0) {
-            var7 = new ek[var5];
+            var7 = new SimEntity[var5];
             var6Lifetime1 = new int[var5];
           }
           if (param1 != -6) {
             return;
           }
-          var8_ref_ek = (ek) (this.field_u.c(123));
+          var8_ref_ek = (SimEntity) (this.entities.c(123));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var8_ref_ek))) {
-            stackIn_52_0 = var8_ref_ek instanceof lm;
+            stackIn_52_0 = var8_ref_ek instanceof SimHuman;
             if (var14 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_52_0) {
                 this.world.field_I = this.world.field_I + 1;
                 if ((param0)) {
                   var9 = 2147483647;
-                  var10 = (sh) (this.field_f.c(73));
+                  var10 = (SimPortal) (this.field_f.c(73));
                   while (var10 != null) {
-                    var11 = ((sh) (var10)).e((byte) -112) - var8_ref_ek.e((byte) -112);
-                    var12_int = ((sh) (var10)).g(1829947600) - var8_ref_ek.g(1829947600);
+                    var11 = ((SimPortal) (var10)).getX((byte) -112) - var8_ref_ek.getX((byte) -112);
+                    var12_int = ((SimPortal) (var10)).getY(1829947600) - var8_ref_ek.getY(1829947600);
                     var13 = var11 * var11 + var12_int * var12_int;
                     stackIn_36_0 = var13;
                     stackIn_36_1 = var9;
                     if (stackIn_36_0 < stackIn_36_1) {
                       var9 = var13;
                     }
-                    var10 = (sh) (this.field_f.b(6));
+                    var10 = (SimPortal) (this.field_f.b(6));
                   }
                   var10Lifetime1 = var8_ref_ek;
                   var11Lifetime1 = 0;
@@ -853,10 +853,10 @@ final class GameSimulation {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (!(var8_ref_ek instanceof ge)) {
+                if (!(var8_ref_ek instanceof SimZombie)) {
                 }
               }
-              var8_ref_ek = (ek) (this.field_u.b(6));
+              var8_ref_ek = (SimEntity) (this.entities.b(6));
               continue;
             }
             break;
@@ -873,7 +873,7 @@ final class GameSimulation {
                 break;
               }
               if (null != ((Object[]) (var7))[var8]) {
-                ((lm) (((Object[]) (var7))[var8])).p(95);
+                ((SimHuman) (((Object[]) (var7))[var8])).p(95);
               }
               var8++;
             }
@@ -882,7 +882,7 @@ final class GameSimulation {
             this.world.field_g = this.world.field_I;
             this.world.field_C = 9000 + 250 * this.world.field_I;
           }
-          stackIn_64_0Lifetime1 = ~this.world.field_t;
+          stackIn_64_0Lifetime1 = ~this.world.teamCount;
           stackIn_64_1Lifetime1 = -2;
           if (stackIn_64_0Lifetime1 == stackIn_64_1Lifetime1) {
             this.world.field_C = 64512;
@@ -905,23 +905,23 @@ final class GameSimulation {
         }
     }
 
-    private final lm a(int param0, int param1) {
-        ek var3 = null;
+    private final SimHuman getHuman(int param0, int param1) {
+        SimEntity var3 = null;
         RuntimeException var3_ref = null;
-        lm stackIn_12_0 = null;
+        SimHuman stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.c(param1, param0 - 417600939);
+          var3 = this.findEntity(param1, param0 - 417600939);
           if (param0 != 417600865) {
-            this.a(-39, (pa) null);
+            this.emitUnitEvent(-39, (SimUnit) null);
           }
           if (null == var3) {
             throw new IllegalArgumentException("oid " + param1 + " invalid");
           }
-          if (!(var3 instanceof lm)) {
+          if (!(var3 instanceof SimHuman)) {
             throw new IllegalArgumentException("oid " + param1 + " is not a human");
           }
-          stackIn_12_0 = (lm) (var3);
+          stackIn_12_0 = (SimHuman) (var3);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -934,28 +934,28 @@ final class GameSimulation {
         try {
           this.field_n.a(new nk(this, param2, param0, param1), false);
           if (param3 >= -44) {
-            this.a((byte) -68, (ge) null);
+            this.a((byte) -68, (SimZombie) null);
           }
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "rl.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void setPhase(boolean param0, int param1) {
         boolean discarded$1 = false;
         int var3_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.world.field_l = param1;
+          this.world.phase = param1;
           if (param0) {
-            discarded$1 = this.b(-90, 117, 86, 71, -86, 91);
+            discarded$1 = this.executePowerup(-90, 117, 86, 71, -86, 91);
           }
-          var3_int = this.world.field_l;
+          var3_int = this.world.phase;
           if (var3_int == 2) {
             this.world.field_C = this.world.currentTick + 3000;
           }
-          this.a(-7737, new fq(this.world.currentTick, this.world.field_l, this.world.field_C));
+          this.queueEvent(-7737, new PhaseChangeEvent(this.world.currentTick, this.world.phase, this.world.field_C));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -964,31 +964,31 @@ final class GameSimulation {
         }
     }
 
-    private final ek c(int param0, int param1) {
+    private final SimEntity findEntity(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        ek var4 = null;
+        SimEntity var4 = null;
         int var5 = 0;
-        ek stackIn_7_0 = null;
+        SimEntity stackIn_7_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           var3_int = 101 / ((31 - param1) / 58);
-          var4 = (ek) (this.field_u.c(101));
+          var4 = (SimEntity) (this.entities.c(101));
           while (null != var4) {
-            if (var4.field_x == param0) {
+            if (var4.objectId == param0) {
               stackIn_7_0 = var4;
               return stackIn_7_0;
             }
-            var4 = (ek) (this.field_u.b(6));
+            var4 = (SimEntity) (this.entities.b(6));
             if (var5 == 0) {
               continue;
             }
             break;
           }
           stackIn_10_0 = null;
-          return (ek) (stackIn_10_0);
+          return (SimEntity) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -1028,7 +1028,7 @@ final class GameSimulation {
         }
     }
 
-    final void a(byte param0, ge param1) {
+    final void a(byte param0, SimZombie param1) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_8_0 = null;
@@ -1036,13 +1036,13 @@ final class GameSimulation {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.field_Z) {
+          if (param1.removed) {
             return;
           }
-          this.a(-7737, new aj(this.world.currentTick, param1.field_x));
+          this.queueEvent(-7737, new aj(this.world.currentTick, param1.objectId));
           param1.field_eb = false;
           var3_int = -89 / ((param0 + 48) / 48);
-          param1.field_S = false;
+          param1.needsSync = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1058,34 +1058,34 @@ final class GameSimulation {
         }
     }
 
-    private final ek a(int param0, boolean param1) {
-        ek var3 = null;
+    private final SimEntity a(int param0, boolean param1) {
+        SimEntity var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        ek stackIn_3_0 = null;
-        ek stackIn_9_0 = null;
+        SimEntity stackIn_3_0 = null;
+        SimEntity stackIn_9_0 = null;
         Object stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var3 = (ek) (this.world.field_u.c(104));
+          var3 = (SimEntity) (this.world.field_u.c(104));
           if (!param1) {
-            stackIn_3_0 = (ek) null;
+            stackIn_3_0 = (SimEntity) null;
             return stackIn_3_0;
           }
           while (null != var3) {
-            if (param0 == var3.field_x) {
+            if (param0 == var3.objectId) {
               stackIn_9_0 = var3;
               return stackIn_9_0;
             }
-            var3 = (ek) (this.world.field_u.b(6));
+            var3 = (SimEntity) (this.world.field_u.b(6));
             if (var4 == 0) {
               continue;
             }
             break;
           }
           stackIn_12_0 = null;
-          return (ek) (stackIn_12_0);
+          return (SimEntity) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -1093,40 +1093,40 @@ final class GameSimulation {
         }
     }
 
-    private final boolean b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ge stackIn_173_0 = null;
+    private final boolean executePowerup(int param0, int param1, int param2, int param3, int param4, int param5) {
+        SimZombie stackIn_173_0 = null;
         int stackIn_174_1 = 0;
-        ge stackIn_220_0 = null;
+        SimZombie stackIn_220_0 = null;
         boolean stackIn_221_1 = false;
         int stackIn_228_1 = 0;
         boolean stackIn_229_2 = false;
-        ge stackIn_244_0 = null;
+        SimZombie stackIn_244_0 = null;
         boolean stackIn_245_1 = false;
-        ge stackIn_265_0 = null;
+        SimZombie stackIn_265_0 = null;
         int stackIn_265_1 = 0;
         boolean stackIn_266_2 = false;
         boolean stackIn_286_1 = false;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        ge var8 = null;
-        pa var9 = null;
-        lm var10 = null;
+        SimZombie var8 = null;
+        SimUnit var9 = null;
+        SimHuman var10 = null;
         int var11 = 0;
         int var12_int = 0;
-        ek var12 = null;
+        SimEntity var12 = null;
         int var13 = 0;
         og var13_ref_og = null;
         int var14 = 0;
-        ge var8Lifetime1;
-        ge var8Lifetime2;
-        ge var8Lifetime3;
-        ge var8Lifetime4;
-        ge var8Lifetime4Lifetime1;
-        ge var8Lifetime4Lifetime2;
-        ge var8Lifetime4Lifetime3;
-        ge var8Lifetime4Lifetime4;
-        ge var8Lifetime4Lifetime5;
+        SimZombie var8Lifetime1;
+        SimZombie var8Lifetime2;
+        SimZombie var8Lifetime3;
+        SimZombie var8Lifetime4;
+        SimZombie var8Lifetime4Lifetime1;
+        SimZombie var8Lifetime4Lifetime2;
+        SimZombie var8Lifetime4Lifetime3;
+        SimZombie var8Lifetime4Lifetime4;
+        SimZombie var8Lifetime4Lifetime5;
         int var11Lifetime1;
         int var12_intLifetime1;
         int var13Lifetime1;
@@ -1136,7 +1136,7 @@ final class GameSimulation {
           if (this.field_o) {
             System.out.println(this.world.currentTick + ": executing powerup " + param1 + " with modifier " + param0);
           }
-          if (this.world.b((byte) -105, 45, param5) &&
+          if (this.world.hasUpgrade((byte) -105, 45, param5) &&
             param1 != 17) {
             return false;
           }
@@ -1152,7 +1152,7 @@ final class GameSimulation {
             param1 == 0 ||
             param1 == 18 ||
             param1 == 6) {
-            var8 = this.b((byte) 87, var7_int);
+            var8 = this.getZombie((byte) 87, var7_int);
             var12_int = 0;
             if (null != var8) {
               var13 = var8.field_gb;
@@ -1168,7 +1168,7 @@ final class GameSimulation {
               }
             }
           }
-          var12 = this.c(var7_int, -69);
+          var12 = this.findEntity(var7_int, -69);
           if (null != var12 &&
             var12 instanceof og) {
             var13_ref_og = (og) (var12);
@@ -1180,7 +1180,7 @@ final class GameSimulation {
           var13Lifetime1 = param1;
           if (3 == var13Lifetime1 &&
             var14 == 0) {
-            var8Lifetime1 = this.b((byte) 32, var7_int);
+            var8Lifetime1 = this.getZombie((byte) 32, var7_int);
             if (var8Lifetime1 == null) {
               return false;
             }
@@ -1193,20 +1193,20 @@ final class GameSimulation {
             } else {
               stackIn_174_1 = 19;
             }
-            ((ge) (Object) stackIn_173_0).a(stackIn_174_1, (byte) -89);
-            var8Lifetime1.field_S = true;
+            ((SimZombie) (Object) stackIn_173_0).setState(stackIn_174_1, (byte) -89);
+            var8Lifetime1.needsSync = true;
             return true;
           }
           if (var13Lifetime1 == 7) {
-            var9 = this.a((byte) -120, var7_int);
+            var9 = this.getUnit((byte) -120, var7_int);
             if (var9 == null) {
               return false;
             }
-            if (!(var9 instanceof lm) ||
-              var9.field_Z) {
-              if ((var9 instanceof ge) &&
+            if (!(var9 instanceof SimHuman) ||
+              var9.removed) {
+              if ((var9 instanceof SimZombie) &&
                 (param0 == 37)) {
-                var8Lifetime2 = (ge) (var9);
+                var8Lifetime2 = (SimZombie) (var9);
                 if (this.field_o) {
                   System.out.println("cursing, owner " + var8Lifetime2.field_gb + ", prev 0 " + var8Lifetime2.d((byte) 61, 0) + " 1 " + var8Lifetime2.d((byte) 61, 1));
                 }
@@ -1216,32 +1216,32 @@ final class GameSimulation {
                 }
                 var8Lifetime2.e(93, param5);
                 if (var14 != 0) {
-                  var10 = this.a(417600865, var7_int);
-                  if (var10.field_Q != 20 &&
-                    18 != var10.field_Q) {
-                    this.a(param5, (ge) null, -32422, var10);
-                    var10.j(18);
+                  var10 = this.getHuman(417600865, var7_int);
+                  if (var10.state != 20 &&
+                    18 != var10.state) {
+                    this.convertHumanToZombie(param5, (SimZombie) null, -32422, var10);
+                    var10.remove(18);
                   }
                 }
               }
             } else {
-              var10 = this.a(417600865, var7_int);
-              if (var10.field_Q != 20 &&
-                18 != var10.field_Q) {
-                this.a(param5, (ge) null, -32422, var10);
-                var10.j(18);
+              var10 = this.getHuman(417600865, var7_int);
+              if (var10.state != 20 &&
+                18 != var10.state) {
+                this.convertHumanToZombie(param5, (SimZombie) null, -32422, var10);
+                var10.remove(18);
               }
             }
             return true;
           }
           if (var13Lifetime1 == 4) {
-            var8Lifetime3 = this.b((byte) 124, var7_int);
+            var8Lifetime3 = this.getZombie((byte) 124, var7_int);
             if (null == var8Lifetime3) {
               return false;
             }
             stackIn_220_0 = var8Lifetime3;
             stackIn_221_1 = (param0 == 34);
-            ((ge) (Object) stackIn_220_0).a(stackIn_221_1, (byte) 100);
+            ((SimZombie) (Object) stackIn_220_0).a(stackIn_221_1, (byte) 100);
             return true;
           }
           if ((var13Lifetime1 != 10 ||
@@ -1255,7 +1255,7 @@ final class GameSimulation {
               return true;
             }
             if (var13Lifetime1 == 1) {
-              var8Lifetime4 = this.b((byte) 25, var7_int);
+              var8Lifetime4 = this.getZombie((byte) 25, var7_int);
               if (var8Lifetime4 == null) {
                 return false;
               }
@@ -1264,17 +1264,17 @@ final class GameSimulation {
             }
             if (var13Lifetime1 == 2 &&
               var14 == 0) {
-              var8Lifetime4Lifetime1 = this.b((byte) 32, var7_int);
+              var8Lifetime4Lifetime1 = this.getZombie((byte) 32, var7_int);
               if (null == var8Lifetime4Lifetime1) {
                 return false;
               }
               stackIn_244_0 = var8Lifetime4Lifetime1;
               stackIn_245_1 = (param0 == 38);
-              ((ge) (Object) stackIn_244_0).b(stackIn_245_1, (byte) -127);
+              ((SimZombie) (Object) stackIn_244_0).b(stackIn_245_1, (byte) -127);
               return true;
             }
             if (var13Lifetime1 == 16) {
-              var8Lifetime4Lifetime2 = this.b((byte) 100, var7_int);
+              var8Lifetime4Lifetime2 = this.getZombie((byte) 100, var7_int);
               if (var8Lifetime4Lifetime2 == null) {
                 return false;
               }
@@ -1283,7 +1283,7 @@ final class GameSimulation {
             }
             if (var13Lifetime1 == 14 &&
               var14 == 0) {
-              var8Lifetime4Lifetime3 = this.b((byte) 86, var7_int);
+              var8Lifetime4Lifetime3 = this.getZombie((byte) 86, var7_int);
               if (var8Lifetime4Lifetime3 == null) {
                 return false;
               }
@@ -1292,28 +1292,28 @@ final class GameSimulation {
             }
             if (5 == var13Lifetime1 &&
               var14 == 0) {
-              var8Lifetime4Lifetime4 = this.b((byte) 68, var7_int);
+              var8Lifetime4Lifetime4 = this.getZombie((byte) 68, var7_int);
               if (var8Lifetime4Lifetime4 == null) {
                 return false;
               }
               stackIn_265_0 = var8Lifetime4Lifetime4;
               stackIn_265_1 = 47;
               stackIn_266_2 = (param0 == 35);
-              ((ge) (Object) stackIn_265_0).a(stackIn_265_1, stackIn_266_2);
+              ((SimZombie) (Object) stackIn_265_0).a(stackIn_265_1, stackIn_266_2);
               return true;
             }
             if (var13Lifetime1 == 0 &&
               var14 == 0) {
-              var9 = this.a((byte) -121, var7_int);
+              var9 = this.getUnit((byte) -121, var7_int);
               if (var9 == null) {
                 return false;
               }
-              var9.c((byte) -68, param5);
+              var9.applyHaste((byte) -68, param5);
               return true;
             }
             if (18 == var13Lifetime1 &&
               var14 == 0) {
-              var8Lifetime4Lifetime5 = this.b((byte) 40, var7_int);
+              var8Lifetime4Lifetime5 = this.getZombie((byte) 40, var7_int);
               if (null == var8Lifetime4Lifetime5) {
                 return false;
               }
@@ -1327,36 +1327,36 @@ final class GameSimulation {
               return true;
             }
             if (8 == var13Lifetime1) {
-              var9 = this.a((byte) -125, var7_int);
+              var9 = this.getUnit((byte) -125, var7_int);
               if (null == var9) {
                 return false;
               }
-              var11 = this.world.a((byte) 32, param5, 400);
-              if (!(var9 instanceof ge)) {
-                if (var9 instanceof lm) {
+              var11 = this.world.computeEffectDuration((byte) 32, param5, 400);
+              if (!(var9 instanceof SimZombie)) {
+                if (var9 instanceof SimHuman) {
                   if (param0 != 34) {
-                    ((lm) (var9)).a(var11 * 3 / 4, true);
+                    ((SimHuman) (var9)).a(var11 * 3 / 4, true);
                   }
                   if (param0 == 34 ||
                     var14 != 0) {
-                    ((lm) (var9)).c(false);
+                    ((SimHuman) (var9)).c(false);
                     if (var14 != 0) {
                       if (34 == param0) {
-                        ((ge) (var9)).m((byte) 124);
-                        ((ge) (var9)).d(var11, -96);
+                        ((SimZombie) (var9)).m((byte) 124);
+                        ((SimZombie) (var9)).d(var11, -96);
                       } else {
-                        ((ge) (var9)).d(var11, -96);
+                        ((SimZombie) (var9)).d(var11, -96);
                       }
                     }
                   }}
               } else {
                 if (34 == param0) {
-                  ((ge) (var9)).m((byte) 124);
+                  ((SimZombie) (var9)).m((byte) 124);
                   if (var14 != 0) {
-                    ((ge) (var9)).d(var11, -96);
+                    ((SimZombie) (var9)).d(var11, -96);
                   }
                 } else {
-                  ((ge) (var9)).d(var11, -96);
+                  ((SimZombie) (var9)).d(var11, -96);
                 }
               }
               return true;
@@ -1373,11 +1373,11 @@ final class GameSimulation {
             }
             if (var13Lifetime1 == 11 &&
               var14 == 0) {
-              this.world.field_a[param5] = this.world.a((byte) 32, param5, 500);
+              this.world.field_a[param5] = this.world.computeEffectDuration((byte) 32, param5, 500);
               return true;
             }
             if (var13Lifetime1 == 12) {
-              this.world.field_z[param5] = this.world.a((byte) 32, param5, 750);
+              this.world.field_z[param5] = this.world.computeEffectDuration((byte) 32, param5, 750);
               return true;
             }
             if (param3 > -44) {
@@ -1385,7 +1385,7 @@ final class GameSimulation {
             }
             return false;
           }
-          var11Lifetime1 = this.world.a((byte) 32, param5, 1000);
+          var11Lifetime1 = this.world.computeEffectDuration((byte) 32, param5, 1000);
           this.b(param1, param2, var11Lifetime1, 11564, param4);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1395,32 +1395,32 @@ final class GameSimulation {
         }
     }
 
-    private final ge b(byte param0, int param1) {
-        ek var3 = null;
+    private final SimZombie getZombie(byte param0, int param1) {
+        SimEntity var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
         Object stackIn_10_0 = null;
         Object stackIn_15_0 = null;
-        ge stackIn_17_0 = null;
+        SimZombie stackIn_17_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 19) {
             this.b(101, -68, 16, -57, 121);
           }
-          var3 = this.c(param1, -40);
+          var3 = this.findEntity(param1, -40);
           if (var3 == null) {
             if (this.a(param1, true) == null) {
               stackIn_10_0 = null;
-              return (ge) (stackIn_10_0);
+              return (SimZombie) (stackIn_10_0);
             }
             stackIn_8_0 = null;
-            return (ge) (stackIn_8_0);
+            return (SimZombie) (stackIn_8_0);
           }
-          if (!(var3 instanceof ge)) {
+          if (!(var3 instanceof SimZombie)) {
             stackIn_15_0 = null;
-            return (ge) (stackIn_15_0);
+            return (SimZombie) (stackIn_15_0);
           }
-          stackIn_17_0 = (ge) (var3);
+          stackIn_17_0 = (SimZombie) (var3);
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1429,7 +1429,7 @@ final class GameSimulation {
         }
     }
 
-    private final void d(int param0) {
+    private final void advanceTick(int param0) {
         boolean stackIn_7_0 = false;
         int stackIn_17_0 = 0;
         int stackIn_31_0 = 0;
@@ -1457,11 +1457,11 @@ final class GameSimulation {
         IntrusiveNode var3 = null;
         Object var3_ref = null;
         ce var3_ref2 = null;
-        pa var4 = null;
+        SimUnit var4 = null;
         ce var4_ref = null;
         IntrusiveNode var4_ref2 = null;
         qj var4_ref3 = null;
-        ge var5_ref_ge = null;
+        SimZombie var5_ref_ge = null;
         int var5 = 0;
         int var6 = 0;
         int stackIn_31_0Lifetime1;
@@ -1469,23 +1469,23 @@ final class GameSimulation {
         int var2_intLifetime1;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (this.world.field_l == 3) {
+          if (this.world.phase == 3) {
             return;
           }
           this.world.currentTick = this.world.currentTick + 1;
           this.field_l = false;
-          var2 = this.field_u.c(86);
+          var2 = this.entities.c(86);
           boolean decompiledNaturalLoopExit4 = false;
-          while (!(decompiledNaturalLoopExit4 = (!(var2 instanceof ek)))) {
-            stackOut_6_0 = var2 instanceof ge;
+          while (!(decompiledNaturalLoopExit4 = (!(var2 instanceof SimEntity)))) {
+            stackOut_6_0 = var2 instanceof SimZombie;
             stackIn_17_0 = stackOut_6_0 ? 1 : 0;
             stackIn_7_0 = stackOut_6_0;
             if (var6 == 0) {
               if (stackIn_7_0 &&
-                ((ge) (var2)).p((byte) 53)) {
+                ((SimZombie) (var2)).p((byte) 53)) {
                 this.field_l = true;
               }
-              var2 = this.field_u.b(param0 ^ -32726);
+              var2 = this.entities.b(param0 ^ -32726);
               continue;
             }
             break;
@@ -1539,7 +1539,7 @@ final class GameSimulation {
             stackIn_45_0 = 0;
             break;
           }
-          if (stackIn_45_0 == this.world.field_l) {
+          if (stackIn_45_0 == this.world.phase) {
             return;
           }
           var2_intLifetime1 = 0;
@@ -1551,29 +1551,29 @@ final class GameSimulation {
                 continue;
               }
             } else {
-              var2 = this.field_u.c(75);
+              var2 = this.entities.c(75);
               boolean decompiledNaturalLoopExit3 = false;
-              while (!(decompiledNaturalLoopExit3 = (!(var2 instanceof ek)))) {
+              while (!(decompiledNaturalLoopExit3 = (!(var2 instanceof SimEntity)))) {
                 var3 = var2.previous;
-                ((ek) (var2)).h(param0 ^ -32763);
+                ((SimEntity) (var2)).tick(param0 ^ -32763);
                 stackIn_84_0 = var2;
                 if (var6 == 0) {
-                  if (stackIn_84_0 instanceof pa) {
-                    var4 = (pa) (var2);
-                    if (var4 instanceof ge &&
-                      !var4.field_Z &&
-                      9 != var4.field_Q &&
-                      var4.field_Q != 21) {
-                      this.world.teamCharacterCounts[((ge) (var4)).field_gb] = this.world.teamCharacterCounts[((ge) (var4)).field_gb] + 1;
+                  if (stackIn_84_0 instanceof SimUnit) {
+                    var4 = (SimUnit) (var2);
+                    if (var4 instanceof SimZombie &&
+                      !var4.removed &&
+                      9 != var4.state &&
+                      var4.state != 21) {
+                      this.world.teamCharacterCounts[((SimZombie) (var4)).field_gb] = this.world.teamCharacterCounts[((SimZombie) (var4)).field_gb] + 1;
                     }
-                    if (var4.field_S) {
-                      if (var4 instanceof ge) {
-                        var5_ref_ge = (ge) (var4);
+                    if (var4.needsSync) {
+                      if (var4 instanceof SimZombie) {
+                        var5_ref_ge = (SimZombie) (var4);
                         if (var5_ref_ge.field_eb) {
                           this.a(-2, var5_ref_ge);
                         }
                       }
-                      this.a(-2, var4);
+                      this.emitUnitEvent(-2, var4);
                     }
                   }
                   var2 = var3;
@@ -1657,21 +1657,21 @@ final class GameSimulation {
             var4_ref = (ce) (this.world.field_s.c(45));
             do {
               if (null == var4_ref) {
-                this.field_b.a(48);
+                this.navigation.a(48);
                 break;
               }
               var4_ref.a((byte) -60);
               var4_ref = (ce) (this.world.field_s.b(param0 ^ -32726));
             } while (var6 == 0);
-            var4_ref2 = this.field_u.c(99);
+            var4_ref2 = this.entities.c(99);
             boolean decompiledNaturalLoopExit0 = false;
-            while (!(decompiledNaturalLoopExit0 = (!(var4_ref2 instanceof ek)))) {
-              stackIn_129_0 = var4_ref2 instanceof ge;
+            while (!(decompiledNaturalLoopExit0 = (!(var4_ref2 instanceof SimEntity)))) {
+              stackIn_129_0 = var4_ref2 instanceof SimZombie;
               if (var6 == 0) {
                 if (stackIn_129_0) {
-                  ((ge) (var4_ref2)).j((byte) 82);
+                  ((SimZombie) (var4_ref2)).j((byte) 82);
                 }
-                var4_ref2 = this.field_u.b(6);
+                var4_ref2 = this.entities.b(6);
                 continue;
               }
               break;
@@ -1699,7 +1699,7 @@ final class GameSimulation {
             if (var4_ref3.field_g > this.world.currentTick) {
               break;
             }
-            var5 = this.b(var4_ref3.field_h, var4_ref3.field_q, var4_ref3.field_f, -84, var4_ref3.field_k, var4_ref3.field_n) ? 1 : 0;
+            var5 = this.executePowerup(var4_ref3.field_h, var4_ref3.field_q, var4_ref3.field_f, -84, var4_ref3.field_k, var4_ref3.field_n) ? 1 : 0;
             if (var5 != 0) {
               if (this.field_j[var4_ref3.field_n] == 255) {
                 this.field_j[var4_ref3.field_n] = var4_ref3.field_q;
@@ -1732,9 +1732,9 @@ final class GameSimulation {
         RuntimeException decompiledCaughtException = null;
         ce var6 = null;
         RuntimeException var6_ref = null;
-        ek var7 = null;
-        ge var8 = null;
-        lm var8_ref = null;
+        SimEntity var7 = null;
+        SimZombie var8 = null;
+        SimHuman var8_ref = null;
         int var9 = 0;
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -1743,7 +1743,7 @@ final class GameSimulation {
           }
           stackIn_6_0 = null;
           stackIn_6_1 = null;
-          stackIn_6_2 = this.field_b;
+          stackIn_6_2 = this.navigation;
           stackIn_6_3 = param1;
           stackIn_6_4 = param4;
           stackIn_6_5 = param2;
@@ -1759,25 +1759,25 @@ final class GameSimulation {
           var6 = new ce(stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_6_5, stackIn_7_6);
           this.world.field_s.a(var6, false);
           if (param0 == 9) {
-            var7 = (ek) (this.field_u.c(60));
+            var7 = (SimEntity) (this.entities.c(60));
             while (null != var7) {
               if (var9 != 0) {
                 return;
               }
-              if (var7 instanceof ge) {
-                var8 = (ge) (var7);
-                if (var6.a(var8.e((byte) -112), var8.g(1829947600), -1)) {
+              if (var7 instanceof SimZombie) {
+                var8 = (SimZombie) (var7);
+                if (var6.a(var8.getX((byte) -112), var8.getY(1829947600), -1)) {
                   var8.d(200, -124);
                 }
               } else {
-                if (var7 instanceof lm) {
-                  var8_ref = (lm) (var7);
-                  if (var6.a(var8_ref.e((byte) -112), var8_ref.g(1829947600), -1)) {
+                if (var7 instanceof SimHuman) {
+                  var8_ref = (SimHuman) (var7);
+                  if (var6.a(var8_ref.getX((byte) -112), var8_ref.getY(1829947600), -1)) {
                     var8_ref.a(200, true);
                   }
                 }
               }
-              var7 = (ek) (this.field_u.b(6));
+              var7 = (SimEntity) (this.entities.b(6));
             }
           }
           return;
@@ -1788,66 +1788,66 @@ final class GameSimulation {
         }
     }
 
-    final boolean a(pa param0, byte param1) {
+    final boolean isAtPortal(SimUnit param0, byte param1) {
         int stackIn_40_0 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sh var3 = null;
+        SimPortal var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        ge var6 = null;
+        SimZombie var6 = null;
         int var7 = 0;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          if (param0.field_Z) {
+          if (param0.removed) {
             return false;
           }
           if (param1 != 105) {
             return true;
           }
-          var3 = (sh) (this.field_f.c(64));
+          var3 = (SimPortal) (this.field_f.c(64));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
-            var4 = var3.field_C - param0.field_C;
+            var4 = var3.cellX - param0.cellX;
             stackIn_40_0 = -1;
             if (var7 == 0) {
               if (stackIn_40_0 <= var4 &&
                 1 >= var4) {
-                var4 = -param0.field_B + var3.field_B;
+                var4 = -param0.cellY + var3.cellY;
                 if (var4 >= -1 &&
                   1 >= var4 &&
-                  var3.a(param0, param1 - 84)) {
-                  this.a(-7737, ak.a(var3.field_O, (byte) -111, this.world.currentTick, param0.field_x));
-                  if (!(param0 instanceof lm)) {
-                    var6 = (ge) (param0);
+                  var3.isInRange(param0, param1 - 84)) {
+                  this.queueEvent(-7737, ak.a(var3.field_O, (byte) -111, this.world.currentTick, param0.objectId));
+                  if (!(param0 instanceof SimHuman)) {
+                    var6 = (SimZombie) (param0);
                     var5 = 4;
                     var6.t(4);
                     this.field_i[var3.field_O] = this.field_i[var3.field_O] + 1;
                     this.world.field_J[var3.field_O] = this.world.field_J[var3.field_O] + 1;
-                    if (this.world.b((byte) -122, 53, var3.field_O)) {
+                    if (this.world.hasUpgrade((byte) -122, 53, var3.field_O)) {
                       var5 = var5 + var5 / 2;
                     }
                   } else {
                     this.world.c(-118);
                     var5 = 10;
                     this.field_g[var3.field_O] = this.field_g[var3.field_O] + 1;
-                    if (((lm) (param0)).field_hb) {
+                    if (((SimHuman) (param0)).field_hb) {
                       this.field_k[var3.field_O] = cr.b(this.field_k[var3.field_O], 4);
                     }
                     this.world.field_J[var3.field_O] = this.world.field_J[var3.field_O] + 3;
-                    if (this.world.b((byte) -99, 60, var3.field_O)) {
+                    if (this.world.hasUpgrade((byte) -99, 60, var3.field_O)) {
                       var5 = var5 + var5 / 2;
                     }
                   }
-                  this.world.field_d[var3.field_O] = this.world.field_d[var3.field_O] + var5;
-                  this.world.a(param1 - 233, param0);
+                  this.world.teamScores[var3.field_O] = this.world.teamScores[var3.field_O] + var5;
+                  this.world.addEntity(param1 - 233, param0);
                   return true;
                 }
               }
-              var3 = (sh) (this.field_f.b(6));
+              var3 = (SimPortal) (this.field_f.b(6));
               continue;
             }
             break;
@@ -1872,7 +1872,7 @@ final class GameSimulation {
 
     final void a(int param0, int param1, int param2, int param3) {
         try {
-          this.world.field_A.a(new bf(this.field_b, param2, param0, param3), false);
+          this.world.field_A.a(new bf(this.navigation, param2, param0, param3), false);
           if (param1 != -22930) {
             this.a(-17, false, -101, (byte) 121);
           }
@@ -1881,7 +1881,7 @@ final class GameSimulation {
         }
     }
 
-    final void a(lm param0, ge param1, int param2, int param3, byte param4) {
+    final void a(SimHuman param0, SimZombie param1, int param2, int param3, byte param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -1890,13 +1890,13 @@ final class GameSimulation {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param1.field_Z) {
+          if (param1.removed) {
             return;
           }
-          this.a(-7737, ClientException.a(param3, param0.field_x, param1.field_x, (byte) 116, this.world.currentTick, param2));
-          param1.field_S = false;
+          this.queueEvent(-7737, ClientException.a(param3, param0.objectId, param1.objectId, (byte) 116, this.world.currentTick, param2));
+          param1.needsSync = false;
           if (param4 != -63) {
-            this.field_b = (fh) null;
+            this.navigation = (fh) null;
           }
           param1.field_eb = false;
           return;
@@ -1920,7 +1920,7 @@ final class GameSimulation {
         }
     }
 
-    private final void a(lm param0, ge param1, ge param2, boolean param3) {
+    private final void a(SimHuman param0, SimZombie param1, SimZombie param2, boolean param3) {
         sj var5 = null;
         sj stackIn_3_0 = null;
         sj stackIn_3_1 = null;
@@ -1948,13 +1948,13 @@ final class GameSimulation {
           } else {
             stackIn_4_0 = null;
             stackIn_4_1 = null;
-            stackIn_4_3 = param2.field_x;
+            stackIn_4_3 = param2.objectId;
           }
-          var5 = new sj(stackIn_3_2, stackIn_4_3, param0.field_x, param1.field_x, param0.field_G, param0.field_E, param1.field_gb);
+          var5 = new sj(stackIn_3_2, stackIn_4_3, param0.objectId, param1.objectId, param0.positionX, param0.positionY, param1.field_gb);
           if (param3) {
             this.loadouts = (PlayerLoadout[]) null;
           }
-          this.a(-7737, var5);
+          this.queueEvent(-7737, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1987,57 +1987,57 @@ final class GameSimulation {
         int stackIn_37_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_6_0;
-        pa[] var6 = null;
+        SimUnit[] var6 = null;
         RuntimeException var6_ref = null;
         int[] var7 = null;
         int var8 = 0;
         IntrusiveNode var9_ref_br = null;
         int var9 = 0;
-        pa var10 = null;
+        SimUnit var10 = null;
         int var11 = 0;
         int var12 = 0;
-        ge var13 = null;
+        SimZombie var13 = null;
         int var14 = 0;
         var14 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           g.field_a.setSeed((long)((param4 << 5) + param3 + param2));
-          var6 = new pa[this.field_u.a(0)];
-          var7 = new int[this.field_u.a(0)];
+          var6 = new SimUnit[this.entities.a(0)];
+          var7 = new int[this.entities.a(0)];
           ArrayOperations.a(var7, 0, var7.length, 32767);
           if (param1 > -36) {
-            field_r = (of[]) null;
+            field_r = (BufferedFile[]) null;
           }
           var8 = 0;
-          var9_ref_br = this.field_u.c(111);
+          var9_ref_br = this.entities.c(111);
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var9_ref_br instanceof ek)))) {
-            stackOut_6_0 = var9_ref_br instanceof pa;
+          while (!(decompiledNaturalLoopExit0 = (!(var9_ref_br instanceof SimEntity)))) {
+            stackOut_6_0 = var9_ref_br instanceof SimUnit;
             stackIn_37_0 = stackOut_6_0 ? 1 : 0;
             stackIn_7_0 = stackOut_6_0;
             if (var14 == 0) {
               if (stackIn_7_0) {
-                var10 = (pa) (var9_ref_br);
-                var11 = var10.e((byte) -112) - param3;
-                var12 = -param4 + var10.g(1829947600);
+                var10 = (SimUnit) (var9_ref_br);
+                var11 = var10.getX((byte) -112) - param3;
+                var12 = -param4 + var10.getY(1829947600);
                 if (var11 * var11 + var12 * var12 <= 14400) {
                   if (!param0 ||
-                    !(var10 instanceof ge)) {
-                    if (var10 instanceof lm) {
+                    !(var10 instanceof SimZombie)) {
+                    if (var10 instanceof SimHuman) {
                       var6[var8] = var10;
-                      var7[var8] = var10.field_x;
+                      var7[var8] = var10.objectId;
                       var8++;
                     }
                   } else {
-                    var13 = (ge) (var10);
+                    var13 = (SimZombie) (var10);
                     if (var13.field_gb != param2) {
-                      var6[var8] = (pa) ((Object) var13);
-                      var7[var8] = var13.field_x;
+                      var6[var8] = (SimUnit) ((Object) var13);
+                      var7[var8] = var13.objectId;
                       var8++;
                     }
                   }
                 }
               }
-              var9_ref_br = this.field_u.b(6);
+              var9_ref_br = this.entities.b(6);
               continue;
             }
             break;
@@ -2052,11 +2052,11 @@ final class GameSimulation {
             if (var14 != 0) {
               return;
             }
-            if (var10 instanceof ge &&
-              this.world.b(0, ((ge) (var10)).field_gb)) {
-              this.a((byte) 100, (ge) (var10));
+            if (var10 instanceof SimZombie &&
+              this.world.b(0, ((SimZombie) (var10)).field_gb)) {
+              this.a((byte) 100, (SimZombie) (var10));
             } else {
-              var6[var9].b(param2, -50);
+              var6[var9].applySlow(param2, -50);
             }
             var9++;
           }
@@ -2203,7 +2203,7 @@ final class GameSimulation {
           }
           var7Lifetime1 = 0;
           if (param0 != 2) {
-            this.a((lm) null, (ge) null, -111, -126, (byte) -27);
+            this.a((SimHuman) null, (SimZombie) null, -111, -126, (byte) -27);
           }
           var8 = 0;
           while (true) {
@@ -2234,7 +2234,7 @@ final class GameSimulation {
         }
     }
 
-    final void a(int param0, ge param1, ge param2) {
+    final void a(int param0, SimZombie param1, SimZombie param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         RuntimeException stackIn_12_0 = null;
@@ -2244,9 +2244,9 @@ final class GameSimulation {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2.field_Z &&
-            !param1.field_Z) {
-            this.a(-7737, td.a(param2.g(1829947600), this.world.currentTick, param2.e((byte) -112), (byte) 41, param1.g(1829947600), param1.field_x, param1.e((byte) -112), param2.field_x));
+          if (!param2.removed &&
+            !param1.removed) {
+            this.queueEvent(-7737, td.a(param2.getY(1829947600), this.world.currentTick, param2.getX((byte) -112), (byte) 41, param1.getY(1829947600), param1.objectId, param1.getX((byte) -112), param2.objectId));
             var4_int = -87 % ((param0 + 35) / 36);
             return;
           }
@@ -2277,7 +2277,7 @@ final class GameSimulation {
         RuntimeException var7_ref = null;
         int var8 = 0;
         IntrusiveNode var8_ref_br = null;
-        lm var9 = null;
+        SimHuman var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -2294,28 +2294,28 @@ final class GameSimulation {
           }
           var8 = param1;
           if (var8 == 0) {
-            var8_ref_br = this.field_u.c(85);
+            var8_ref_br = this.entities.c(85);
             while (null != var8_ref_br) {
               if (var12 != 0) {
                 return;
               }
-              if (var8_ref_br instanceof lm) {
-                var9 = (lm) (var8_ref_br);
-                if (!var9.field_Z ||
+              if (var8_ref_br instanceof SimHuman) {
+                var9 = (SimHuman) (var8_ref_br);
+                if (!var9.removed ||
                   var12 != 0) {
-                  var10 = -param5 + var9.e((byte) -112);
-                  var11 = -param3 + var9.g(1829947600);
+                  var10 = -param5 + var9.getX((byte) -112);
+                  var11 = -param3 + var9.getY(1829947600);
                   if (var10 * var10 + var11 * var11 >= 4000 ||
                     var12 != 0) {
-                    var9.field_G = param5 << 16;
-                    var9.field_E = param3 << 16;
-                    var9.field_S = true;
-                    System.out.println("moving human oid " + var9.field_x);
+                    var9.positionX = param5 << 16;
+                    var9.positionY = param3 << 16;
+                    var9.needsSync = true;
+                    System.out.println("moving human oid " + var9.objectId);
                     return;
                   }
                 }
               }
-              var8_ref_br = this.field_u.b(6);
+              var8_ref_br = this.entities.b(6);
             }
             return;
           }
@@ -2327,17 +2327,17 @@ final class GameSimulation {
               return;
             }
           } else {
-            this.world.field_d[param0] = 100;
-            this.world.field_d[(param0 + 1) % this.world.field_t] = 25;
+            this.world.teamScores[param0] = 100;
+            this.world.teamScores[(param0 + 1) % this.world.teamCount] = 25;
             this.world.currentTick = 6000;
-            this.a(false, 2);
+            this.setPhase(false, 2);
             this.world.field_C = this.world.currentTick + 1;
             if (var12 == 0) {
               return;
             }
           }
           if (decompiledFrameRemainder0) {
-            this.a(false, param5);
+            this.setPhase(false, param5);
             if (var12 == 0) {
               return;
             }
@@ -2360,20 +2360,20 @@ final class GameSimulation {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, boolean param4) {
-        ge var6 = null;
+        SimZombie var6 = null;
         RuntimeException var6_ref = null;
-        ge stackIn_22_0 = null;
+        SimZombie stackIn_22_0 = null;
         boolean stackIn_23_1 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = this.b((byte) 117, param3);
+          var6 = this.getZombie((byte) 117, param3);
           if (var6 == null) {
             return false;
           }
           if (param0 != var6.field_gb) {
             return true;
           }
-          if (21 == var6.field_Q) {
+          if (21 == var6.state) {
             return true;
           }
           if (param4) {
@@ -2383,17 +2383,17 @@ final class GameSimulation {
           if (!decompiledSharedTail0) {
             stackIn_22_0 = var6;
             stackIn_23_1 = !(param4);
-            ((ge) (Object) stackIn_22_0).a(stackIn_23_1, this.field_b.b(var6.e((byte) -112), param2, var6.g(1829947600), param1, 8760));
+            ((SimZombie) (Object) stackIn_22_0).setPath(stackIn_23_1, this.navigation.b(var6.getX((byte) -112), param2, var6.getY(1829947600), param1, 8760));
             decompiledSharedTail0 = (ZombieDawnMulti.field_E);
           }
           if (decompiledSharedTail0) {
-            var6.field_G = param1 << 16;
-            var6.field_E = param2 << 16;
-            var6.a(33, (byte) -89);
-            var6.field_ab = param2;
-            var6.field_N = param1;
+            var6.positionX = param1 << 16;
+            var6.positionY = param2 << 16;
+            var6.setState(33, (byte) -89);
+            var6.targetY = param2;
+            var6.targetX = param1;
           }
-          this.a(-2, (pa) (var6));
+          this.emitUnitEvent(-2, (SimUnit) (var6));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2409,7 +2409,7 @@ final class GameSimulation {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ek var5 = null;
+        SimEntity var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -2424,17 +2424,17 @@ final class GameSimulation {
           this.loadouts = param1;
           this.cheatsEnabled = param2;
           this.world = param0;
-          this.field_q = new IntrusiveDeque();
-          this.field_u = this.world.a((byte) 125);
-          this.a(param3, (byte) -6, this.world.field_h);
-          var5 = (ek) (this.field_u.c(126));
+          this.eventQueue = new IntrusiveDeque();
+          this.entities = this.world.a((byte) 125);
+          this.initialize(param3, (byte) -6, this.world.field_h);
+          var5 = (SimEntity) (this.entities.c(126));
           do {
             if (var5 == null) {
-              this.world.field_l = 0;
+              this.world.phase = 0;
               break;
             }
-            var5.a(-9019, this);
-            var5 = (ek) (this.field_u.b(6));
+            var5.attachToSimulation(-9019, this);
+            var5 = (SimEntity) (this.entities.b(6));
           } while (var6 == 0);
           var5_int = 0;
           while (var5_int < this.field_j.length) {

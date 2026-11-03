@@ -10,7 +10,7 @@ final class he implements WidgetActionListener {
     static boolean field_a;
     static IntrusiveDeque field_k;
     private BitmapFont field_g;
-    static ul field_f;
+    static ResourceArchive field_f;
     static long field_e;
     static String[][] field_d;
 

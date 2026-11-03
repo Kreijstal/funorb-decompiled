@@ -38,7 +38,7 @@ abstract class SpriteState extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           eq.a((java.awt.Component) ((Object) param1), (byte) 127);
-          of.a(-1693, (java.awt.Component) ((Object) param1));
+          BufferedFile.a(-1693, (java.awt.Component) ((Object) param1));
           if (param0 != 95) {
             field_s = (IntrusiveDeque) null;
           }
@@ -61,7 +61,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    final static ae a(int param0, ga param1) {
+    final static GameEvent a(int param0, ga param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -78,8 +78,8 @@ abstract class SpriteState extends DualLinkNode {
           var2_int = param1.readUnsignedShort((byte) 69);
           var3 = param1.readUnsignedShort((byte) 69);
           var4 = param1.readUnsignedShort((byte) 69);
-          stackIn_3_0 = aq.a(var2_int, false, var4, var3);
-          return (ae) ((Object) stackIn_3_0);
+          stackIn_3_0 = NetworkGameClient.a(var2_int, false, var4, var3);
+          return (GameEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

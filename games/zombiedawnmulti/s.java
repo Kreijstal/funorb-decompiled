@@ -45,8 +45,8 @@ final class s {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var4 = fq.a(-128, param0) ? 1 : 0;
-          var5 = fq.a(-86, param0) ? 1 : 0;
+          var4 = PhaseChangeEvent.a(-128, param0) ? 1 : 0;
+          var5 = PhaseChangeEvent.a(-86, param0) ? 1 : 0;
           var6 = new md();
           var6.field_n = (short)param0.h(16, 14862);
           var6.field_k = lo.a(16, var6.field_k, param0, (byte) -104);
@@ -73,10 +73,10 @@ final class s {
             var6.field_a = lo.a(16, var6.field_a, param0, (byte) -120);
             var6.field_J = lo.a(16, var6.field_J, param0, (byte) -116);
           }
-          if (fq.a(-99, param0)) {
+          if (PhaseChangeEvent.a(-99, param0)) {
             var6.field_c = lo.a(16, var6.field_c, param0, (byte) -100);
           }
-          if (fq.a(-92, param0)) {
+          if (PhaseChangeEvent.a(-92, param0)) {
             var6.field_z = dn.a(param0, var6.field_z, (byte) -102, 16);
             var7 = 0;
             for (var8 = 0; var8 < var6.field_z.length; var8++) {

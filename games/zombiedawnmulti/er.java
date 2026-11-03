@@ -34,7 +34,7 @@ final class er extends IntrusiveNode {
             WidgetContainer.field_E = 0;
             ml.field_Jb = gn.field_I[hg.field_rb];
             ma.field_d = ai.field_b;
-            stackIn_51_0 = !(hg.field_rb >= -1 + lm.field_pb);
+            stackIn_51_0 = !(hg.field_rb >= -1 + SimHuman.field_pb);
             dg.field_J = stackIn_51_0;
             if (0 <= ai.field_b &&
               ml.field_Jb >= 0) {
@@ -63,7 +63,7 @@ final class er extends IntrusiveNode {
             WidgetContainer.field_E = 0;
             ml.field_Jb = gn.field_I[hg.field_rb];
             ma.field_d = ai.field_b;
-            stackIn_7_0 = !(hg.field_rb >= -1 + lm.field_pb);
+            stackIn_7_0 = !(hg.field_rb >= -1 + SimHuman.field_pb);
             dg.field_J = stackIn_7_0;
             if (0 > ai.field_b) {
               if (ai.field_b == 21 &&
@@ -159,7 +159,7 @@ final class er extends IntrusiveNode {
         return false;
     }
 
-    final static BinaryBitmapFont a(ul param0, int param1, int param2, int param3, ul param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         BinaryBitmapFont stackIn_6_0 = null;

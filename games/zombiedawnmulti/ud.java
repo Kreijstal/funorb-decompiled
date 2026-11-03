@@ -20,7 +20,7 @@ final class ud extends gn {
     static String field_Z;
     static String[] field_O;
 
-    final static boolean a(int param0, ul param1, int param2, byte param3) {
+    final static boolean a(int param0, ResourceArchive param1, int param2, byte param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -63,13 +63,13 @@ final class ud extends gn {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
-        vp var13 = null;
+        PcmStreamMixer var13 = null;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (!super.a(param0, param1, param2, param3, param4 ^ 0, param5, param6)) {
             if (param4 != -24) {
-              var13 = (vp) null;
-              ud.a(17, -37, (ul) null, (vp) null);
+              var13 = (PcmStreamMixer) null;
+              ud.a(17, -37, (ResourceArchive) null, (PcmStreamMixer) null);
             }
             return false;
           }
@@ -108,7 +108,7 @@ final class ud extends gn {
         }
     }
 
-    final static void a(int param0, int param1, ul param2, vp param3) {
+    final static void a(int param0, int param1, ResourceArchive param2, PcmStreamMixer param3) {
         try {
           if (param0 != -3758) {
             field_Q = (IndexedSprite) null;
@@ -118,7 +118,7 @@ final class ud extends gn {
           lh.a(-30, param2);
           LevelActorSpawner.a(30651, param2);
           pg.a(false);
-          eh.a(-1741);
+          HuffmanCodec.a(-1741);
           f.field_a = 0 - vm.field_hb;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ud.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

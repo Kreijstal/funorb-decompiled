@@ -78,11 +78,11 @@ final class jp {
             if (var6 != 2 ||
               var10 != 0) {
               if (var6 == 0) {
-                if (mh.field_c == null &&
+                if (JaggrabDownloader.field_c == null &&
                   sn.field_Hb) {
                   var4 = "[" + ne.field_vb + "] ";
                 }
-                if (null != mh.field_c) {
+                if (null != JaggrabDownloader.field_c) {
                   var6 = 1;
                   boolean decompiledSharedTail1 = (!(wa.field_k) ||
                     null == bp.field_t);
@@ -91,7 +91,7 @@ final class jp {
                     decompiledSharedTail1 = (var10 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var4 = "[" + vl.a(ae.field_g, new String[]{mh.field_c.field_Nb}, 2) + "] ";
+                    var4 = "[" + vl.a(GameEvent.field_g, new String[]{JaggrabDownloader.field_c.field_Nb}, 2) + "] ";
                   }
                 }
               }
@@ -109,7 +109,7 @@ final class jp {
                 decompiledSharedTail0 = (var10 != 0);
               }
               if ((decompiledSharedTail0) &&
-                (sh.field_L)) {
+                (SimPortal.field_L)) {
                 var4 = "<col=999999>" + var4 + UiWidget.field_v + "</col>";
                 var5 = "";
               }

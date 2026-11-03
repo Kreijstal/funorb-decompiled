@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pc extends ae {
+final class pc extends GameEvent {
     private int field_j;
     private int field_i;
 

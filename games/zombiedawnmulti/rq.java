@@ -144,11 +144,11 @@ final class rq extends IntrusiveNode {
           var4_int = 2 + (var2 + var1);
           var5_int = -var1 + var3 - 2;
           if (0 == var1) {
-            ul.field_e = true;
+            ResourceArchive.field_e = true;
           }
           if (var1 == -4 &&
-            ul.field_e) {
-            ul.field_e = false;
+            ResourceArchive.field_e) {
+            ResourceArchive.field_e = false;
             nm.b(param0 - 137, 47);
           }
           ig.field_b.e(var4_int, var5_int, 128, 61264);
@@ -166,8 +166,8 @@ final class rq extends IntrusiveNode {
           g.a(IsaacRandom.field_h, 10, var3Lifetime1, 192);
           sj.field_j.g(10, var3Lifetime1);
           sj.field_j.a(10, -5 + (hj.field_g + var3Lifetime1));
-          lm.field_fb.g(var1Lifetime1, var3Lifetime1);
-          lm.field_fb.b(-5 + (var2Lifetime1 + var1Lifetime1), var3Lifetime1);
+          SimHuman.field_fb.g(var1Lifetime1, var3Lifetime1);
+          SimHuman.field_fb.b(-5 + (var2Lifetime1 + var1Lifetime1), var3Lifetime1);
           rp.field_r[0].g(var1Lifetime1, var3Lifetime1);
           rp.field_r[1].g(var2Lifetime1 + (var1Lifetime1 - 5), var3Lifetime1);
           rp.field_r[2].g(var1Lifetime1, var3Lifetime1 + hj.field_g - 5);
@@ -197,11 +197,11 @@ final class rq extends IntrusiveNode {
           var2Lifetime2 = var1Lifetime2 + 222;
           var3Lifetime2 = 428 - var1Lifetime2;
           if (var1Lifetime2 == 0) {
-            ul.field_e = true;
+            ResourceArchive.field_e = true;
           }
           if (var1Lifetime2 == -4 &&
-            ul.field_e) {
-            ul.field_e = false;
+            ResourceArchive.field_e) {
+            ResourceArchive.field_e = false;
             nm.b(-127, 47);
           }
           ig.field_b.e(var2Lifetime2, var3Lifetime2, 128, 61264);
@@ -236,12 +236,12 @@ final class rq extends IntrusiveNode {
           mi.field_Mb = InflaterDecompressor.a(104, mq.field_o);
           NodeHashTableIterator.field_f = InflaterDecompressor.a(4, wm.field_U);
           la.field_j = InflaterDecompressor.a(70, vc.field_a);
-          bq.field_a = InflaterDecompressor.a(-113, BufferedSocket.field_k);
+          SectorCacheStore.field_a = InflaterDecompressor.a(-113, BufferedSocket.field_k);
           wp.field_e = InflaterDecompressor.a(100, bg.field_p);
           bf.field_f = g.b(SocketConnector.field_c);
           ap.field_t = g.b(fe.field_U);
-          ii.field_c = g.b(bq.field_a);
-          aq.field_u = g.b(mi.field_Mb);
+          ii.field_c = g.b(SectorCacheStore.field_a);
+          NetworkGameClient.field_u = g.b(mi.field_Mb);
           kj.field_o = g.b(la.field_j);
           oq.field_t = g.b(NodeHashTableIterator.field_f);
           vl.field_k = g.b(wp.field_e);

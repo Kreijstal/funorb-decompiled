@@ -54,12 +54,12 @@ final class eo {
             }
           }
         } else {
-          if (tn.a(bq.field_f, ld.field_Kb, (byte) -81, en.field_c, tb.field_t)) {
+          if (tn.a(SectorCacheStore.field_f, ld.field_Kb, (byte) -81, en.field_c, tb.field_t)) {
             if (en.field_c == 2) {
-              return na.a(tb.field_t, (byte) -46, bq.field_f, ld.field_Kb, en.field_c);
+              return na.a(tb.field_t, (byte) -46, SectorCacheStore.field_f, ld.field_Kb, en.field_c);
             }
             if (var3 == 0) {
-              return na.a(tb.field_t, (byte) -46, bq.field_f, ld.field_Kb, en.field_c);
+              return na.a(tb.field_t, (byte) -46, SectorCacheStore.field_f, ld.field_Kb, en.field_c);
             }
             return false;
           }

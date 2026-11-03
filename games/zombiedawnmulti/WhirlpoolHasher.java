@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wl {
+final class WhirlpoolHasher {
     static int[] field_k;
     private long[] field_b;
     private int field_c;
@@ -71,7 +71,7 @@ final class wl {
           var4_int = 0;
           if (param1 != 1) {
             var9 = (dm) null;
-            wl.a(-29, (tq) null, -43, 102, (byte) 41, -126, (dm) null);
+            WhirlpoolHasher.a(-29, (tq) null, -43, 102, (byte) 41, -126, (dm) null);
           }
           var5 = param2;
           while (var4_int < 8) {
@@ -177,7 +177,7 @@ final class wl {
         field_k = null;
         field_g = null;
         if (!param0) {
-          wl.a(true);
+          WhirlpoolHasher.a(true);
         }
         field_i = null;
     }
@@ -324,7 +324,7 @@ final class wl {
               if (!so.a(-115, var4_ref_String)) {
                 var5 = va.field_a;
                 if (var5 == 0 &&
-                  mh.field_c != null) {
+                  JaggrabDownloader.field_c != null) {
                   var5 = 1;
                 }
                 if (ga.a(var5, true) == 2) {
@@ -380,16 +380,16 @@ final class wl {
           if (va.field_a != 2) {
             var7Lifetime6 = "";
             if (va.field_a == 0) {
-              if (null == mh.field_c &&
+              if (null == JaggrabDownloader.field_c &&
                 sn.field_Hb) {
                 var7Lifetime6 = "[" + ne.field_vb + "] ";
               }
-              if (mh.field_c != null) {
+              if (JaggrabDownloader.field_c != null) {
                 if (wa.field_k &&
                   bp.field_t != null) {
                   var7Lifetime6 = "[" + bp.field_t + "] ";
                 } else {
-                  var7Lifetime6 = "[" + vl.a(ae.field_g, new String[]{mh.field_c.field_Nb}, 2) + "] ";
+                  var7Lifetime6 = "[" + vl.a(GameEvent.field_g, new String[]{JaggrabDownloader.field_c.field_Nb}, 2) + "] ";
                 }
               }
             }
@@ -430,7 +430,7 @@ final class wl {
           pk.field_b.a(0, (int[]) null, (byte) 13);
           pk.field_b.c(param4 ^ -42);
           if (param4 != 81) {
-            wl.a(-56, -95, -27);
+            WhirlpoolHasher.a(-56, -95, -27);
           }
           var13 = pk.field_b;
           var8 = param5;
@@ -443,7 +443,7 @@ final class wl {
         }
     }
 
-    wl() {
+    WhirlpoolHasher() {
         this.field_b = new long[8];
         this.field_m = new byte[64];
         this.field_j = new long[8];

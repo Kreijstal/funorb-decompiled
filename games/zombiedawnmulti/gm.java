@@ -21,7 +21,7 @@ abstract class gm extends ti {
     int field_kb;
 
     final static void f(int param0, int param1) {
-        lo.field_f = aq.field_l[param1];
+        lo.field_f = NetworkGameClient.field_l[param1];
         ud.field_Y = bp.field_v[param1];
         if (param0 != -7733) {
           field_ob = (String) null;
@@ -108,7 +108,7 @@ abstract class gm extends ti {
         if (param0) {
           this.field_kb = -115;
         }
-        op.field_m.a(-112, (ff) (this));
+        op.field_m.addEntity(-112, (TertiaryLinkNode) (this));
     }
 
     final void a(int param0, nm param1) {
@@ -195,7 +195,7 @@ abstract class gm extends ti {
               var10 = null;
               if (this.field_K != 25) {
                 if (30 == this.field_K) {
-                  var10 = sh.field_N[var9];
+                  var10 = SimPortal.field_N[var9];
                 }
               } else {
                 var10 = aa.field_h[var9];

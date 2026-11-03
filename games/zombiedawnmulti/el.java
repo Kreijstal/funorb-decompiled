@@ -57,7 +57,7 @@ final class el extends rg {
           if (param9) {
             ck.field_a = ho.field_m;
             ui.a((byte) -109, param9);
-            if (mh.field_h > 0) {
+            if (JaggrabDownloader.field_h > 0) {
               ko.a(param4, param7, false, param9);
             }
             eb.field_B.field_R = 1;
@@ -69,7 +69,7 @@ final class el extends rg {
               so.a(param3 ^ 48, param4, param9, param1, param7);
             }
             if (io.field_b &&
-              mh.field_c.field_mc <= mh.field_c.field_cc) {
+              JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
               pd.field_b.field_Z = false;
               hf.field_e.field_Jb.field_wb = ka.field_p;
               ob.a(hf.field_e.field_Gb, 97);
@@ -81,7 +81,7 @@ final class el extends rg {
           } else {
             ck.field_a = (-640 + kp.field_l) / 2;
             ui.a((byte) -109, param9);
-            if (mh.field_h > 0) {
+            if (JaggrabDownloader.field_h > 0) {
               ko.a(param4, param7, false, param9);
               eb.field_B.field_R = 1;
               eb.field_B.field_V = qc.field_u.field_V;
@@ -92,7 +92,7 @@ final class el extends rg {
                 so.a(param3 ^ 48, param4, param9, param1, param7);
               }
               if (io.field_b &&
-                mh.field_c.field_mc <= mh.field_c.field_cc) {
+                JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                 pd.field_b.field_Z = false;
                 hf.field_e.field_Jb.field_wb = ka.field_p;
                 ob.a(hf.field_e.field_Gb, 97);
@@ -110,7 +110,7 @@ final class el extends rg {
                   so.a(param3 ^ 48, param4, param9, param1, param7);
                 }
                 if (io.field_b &&
-                  mh.field_c.field_mc <= mh.field_c.field_cc) {
+                  JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                   pd.field_b.field_Z = false;
                   hf.field_e.field_Jb.field_wb = ka.field_p;
                   ob.a(hf.field_e.field_Gb, 97);
@@ -128,7 +128,7 @@ final class el extends rg {
                   pd.field_b.field_Z = true;
                   vi.a(param2, param7, (byte) 45, hf.field_e, param6);
                 } else {
-                  if (mh.field_c.field_mc <= mh.field_c.field_cc) {
+                  if (JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                     pd.field_b.field_Z = false;
                     hf.field_e.field_Jb.field_wb = ka.field_p;
                     ob.a(hf.field_e.field_Gb, 97);
@@ -146,7 +146,7 @@ final class el extends rg {
             if (SoftwareRasterizer.field_l != dm.field_Qb &&
               SoftwareRasterizer.field_l == SocketConnector.field_h.field_f &&
               SocketConnector.field_h.field_h == SoftwareRasterizer.field_b) {
-              if (null != mh.field_c) {
+              if (null != JaggrabDownloader.field_c) {
                 ci.a(false, -83);
               } else {
                 if (BufferedSocket.field_n != null) {
@@ -159,7 +159,7 @@ final class el extends rg {
             if (param9) {
               ck.field_a = ho.field_m;
               ui.a((byte) -109, param9);
-              if (mh.field_h > 0) {
+              if (JaggrabDownloader.field_h > 0) {
                 ko.a(param4, param7, false, param9);
               }
               eb.field_B.field_R = 1;
@@ -171,7 +171,7 @@ final class el extends rg {
                 so.a(param3 ^ 48, param4, param9, param1, param7);
               }
               if (io.field_b &&
-                mh.field_c.field_mc <= mh.field_c.field_cc) {
+                JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                 pd.field_b.field_Z = false;
                 hf.field_e.field_Jb.field_wb = ka.field_p;
                 ob.a(hf.field_e.field_Gb, 97);
@@ -183,7 +183,7 @@ final class el extends rg {
             } else {
               ck.field_a = (-640 + kp.field_l) / 2;
               ui.a((byte) -109, param9);
-              if (mh.field_h > 0) {
+              if (JaggrabDownloader.field_h > 0) {
                 ko.a(param4, param7, false, param9);
               }
               eb.field_B.field_R = 1;
@@ -199,7 +199,7 @@ final class el extends rg {
                 pd.field_b.field_Z = true;
                 vi.a(param2, param7, (byte) 45, hf.field_e, param6);
               } else {
-                if (mh.field_c.field_mc <= mh.field_c.field_cc) {
+                if (JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                   pd.field_b.field_Z = false;
                   hf.field_e.field_Jb.field_wb = ka.field_p;
                   ob.a(hf.field_e.field_Gb, 97);
@@ -213,7 +213,7 @@ final class el extends rg {
           } else {
             if (SoftwareRasterizer.field_l == SocketConnector.field_h.field_f &&
               SocketConnector.field_h.field_h == SoftwareRasterizer.field_b) {
-              if (null != mh.field_c) {
+              if (null != JaggrabDownloader.field_c) {
                 ci.a(false, -83);
               } else {
                 if (BufferedSocket.field_n != null) {
@@ -226,7 +226,7 @@ final class el extends rg {
             if (param9) {
               ck.field_a = ho.field_m;
               ui.a((byte) -109, param9);
-              if (mh.field_h > 0) {
+              if (JaggrabDownloader.field_h > 0) {
                 ko.a(param4, param7, false, param9);
               }
               eb.field_B.field_R = 1;
@@ -238,7 +238,7 @@ final class el extends rg {
                 so.a(param3 ^ 48, param4, param9, param1, param7);
               }
               if (io.field_b &&
-                mh.field_c.field_mc <= mh.field_c.field_cc) {
+                JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                 pd.field_b.field_Z = false;
                 hf.field_e.field_Jb.field_wb = ka.field_p;
                 ob.a(hf.field_e.field_Gb, 97);
@@ -250,7 +250,7 @@ final class el extends rg {
             } else {
               ck.field_a = (-640 + kp.field_l) / 2;
               ui.a((byte) -109, param9);
-              if (mh.field_h > 0) {
+              if (JaggrabDownloader.field_h > 0) {
                 ko.a(param4, param7, false, param9);
                 eb.field_B.field_R = 1;
                 eb.field_B.field_V = qc.field_u.field_V;
@@ -261,7 +261,7 @@ final class el extends rg {
                   so.a(param3 ^ 48, param4, param9, param1, param7);
                 }
                 if (io.field_b &&
-                  mh.field_c.field_mc <= mh.field_c.field_cc) {
+                  JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                   pd.field_b.field_Z = false;
                   hf.field_e.field_Jb.field_wb = ka.field_p;
                   ob.a(hf.field_e.field_Gb, 97);
@@ -279,7 +279,7 @@ final class el extends rg {
                     so.a(param3 ^ 48, param4, param9, param1, param7);
                   }
                   if (io.field_b &&
-                    mh.field_c.field_mc <= mh.field_c.field_cc) {
+                    JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                     pd.field_b.field_Z = false;
                     hf.field_e.field_Jb.field_wb = ka.field_p;
                     ob.a(hf.field_e.field_Gb, 97);
@@ -297,7 +297,7 @@ final class el extends rg {
                     pd.field_b.field_Z = true;
                     vi.a(param2, param7, (byte) 45, hf.field_e, param6);
                   } else {
-                    if (mh.field_c.field_mc <= mh.field_c.field_cc) {
+                    if (JaggrabDownloader.field_c.field_mc <= JaggrabDownloader.field_c.field_cc) {
                       pd.field_b.field_Z = false;
                       hf.field_e.field_Jb.field_wb = ka.field_p;
                       ob.a(hf.field_e.field_Gb, 97);

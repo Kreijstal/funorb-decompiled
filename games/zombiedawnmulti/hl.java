@@ -140,16 +140,16 @@ final class hl {
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           ie.field_sb = -1L;
-          od.field_Gb = param0;
+          SimArmedHuman.field_Gb = param0;
           DualLinkNode.field_h = param5;
           kj.field_h = param0.length;
           la.field_k = false;
           fg.field_k = new byte[(DualLinkNode.field_h + 7) / 8];
-          mh.field_c = null;
+          JaggrabDownloader.field_c = null;
           BufferedSocket.field_n = null;
           var10_int = 0;
-          for (var11 = 0; var11 < od.field_Gb.length; var11++) {
-            var10_int = var10_int + (255 & od.field_Gb[var11]);
+          for (var11 = 0; var11 < SimArmedHuman.field_Gb.length; var11++) {
+            var10_int = var10_int + (255 & SimArmedHuman.field_Gb[var11]);
           }
           var10_int = (7 + var10_int) / 8;
           tg.field_a = new byte[var10_int];
@@ -228,7 +228,7 @@ final class hl {
         if (param0 != 0) {
           field_b = (db) null;
         }
-        return ie.field_sb == mh.field_c.field_nc ? true : false;
+        return ie.field_sb == JaggrabDownloader.field_c.field_nc ? true : false;
     }
 
     static {

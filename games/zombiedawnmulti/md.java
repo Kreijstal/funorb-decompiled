@@ -296,7 +296,7 @@ final class md {
         }
     }
 
-    final static void a(String[] args, int param1, int[] param2, ul param3, String[] param4, Sprite[][] param5, Sprite[][] param6, String[][] param7, byte[] param8, int param9, boolean param10, byte[] param11, String[] param12, int param13, String[][] param14) {
+    final static void a(String[] args, int param1, int[] param2, ResourceArchive param3, String[] param4, Sprite[][] param5, Sprite[][] param6, String[][] param7, byte[] param8, int param9, boolean param10, byte[] param11, String[] param12, int param13, String[][] param14) {
         mo[] array$0 = null;
         mo[] array$1 = null;
         mo[] array$2 = null;
@@ -357,7 +357,7 @@ final class md {
           qo.field_r = param2;
           um.field_b = param12;
           i.field_e = param1;
-          ul.field_m = param14;
+          ResourceArchive.field_m = param14;
           IntrusiveDequeCursor.field_c = param11;
           ng.field_b = param8;
           um.field_g = param6;
@@ -398,7 +398,7 @@ final class md {
           sc.field_d = new cj(0L, al.field_fb, jl.field_t);
           InflaterDecompressor.field_h = new cj(0L, al.field_fb, op.field_k);
           bp.field_w = new cj(0L, pn.field_g, fd.field_N);
-          ek.field_H = new tq(0L, new cj(0L, (cj) null), nc.field_e, td.field_f);
+          SimEntity.field_H = new tq(0L, new cj(0L, (cj) null), nc.field_e, td.field_f);
           ia.field_t = new cj(0L, he.field_i, sn.field_Gb.toUpperCase());
           ia.field_t.field_Z = tb.field_u;
           stackIn_5_0 = null;
@@ -412,7 +412,7 @@ final class md {
           } else {
             stackIn_6_0 = null;
             stackIn_6_1 = null;
-            stackIn_6_4 = ff.field_t;
+            stackIn_6_4 = TertiaryLinkNode.field_t;
           }
           pl.field_L = new cj(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
           cm.field_a = new cj(0L, (cj) null);
@@ -430,7 +430,7 @@ final class md {
           }
           ml.field_Lb.a((byte) 50, InflaterDecompressor.field_h);
           ml.field_Lb.a((byte) 50, bp.field_w);
-          ml.field_Lb.a((byte) 50, ek.field_H);
+          ml.field_Lb.a((byte) 50, SimEntity.field_H);
           if (tb.field_u) {
             cm.field_a.a((byte) 50, ia.field_t);
           }
@@ -439,9 +439,9 @@ final class md {
           sc.field_j.field_lb = 0;
           sc.field_j.field_R = 1;
           kn.field_a = new cj(0L, GameWorld.field_n, ji.field_e.toUpperCase());
-          lm.field_gb = new cj(0L, wa.field_a);
-          lm.field_gb.a((byte) 50, sc.field_j);
-          lm.field_gb.a((byte) 50, kn.field_a);
+          SimHuman.field_gb = new cj(0L, wa.field_a);
+          SimHuman.field_gb.a((byte) 50, sc.field_j);
+          SimHuman.field_gb.a((byte) 50, kn.field_a);
           sk.field_i = new cj(0L, nc.field_e);
           sk.field_i.b((byte) -32, vo.field_m);
           var16 = sk.field_i;
@@ -480,7 +480,7 @@ final class md {
             }
           }
           mi.field_Ib[2] = new cj(0L, m.field_B, qj.field_j);
-          ma.field_b[2] = new mo[]{new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, hi.field_Mb), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[0], be.field_f), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[1], wf.field_k)};
+          ma.field_b[2] = new mo[]{new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) null, hi.field_Mb), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[0], ArchiveIndex.field_f), new mo(0L, uq.field_d, (cj) null, cm.field_b, we.field_j[1], wf.field_k)};
           if (r.field_f > 1) {
             mi.field_Ib[3] = new cj(0L, m.field_B, gj.field_d);
             array$1 = new mo[r.field_f + 1];
@@ -505,13 +505,13 @@ final class md {
               } else {
                 var19_ref = null;
               }
-              if (null == ul.field_m) {
+              if (null == ResourceArchive.field_m) {
                 var20 = null;
               } else {
-                if (ul.field_m[var17_intLifetime3] == null) {
+                if (ResourceArchive.field_m[var17_intLifetime3] == null) {
                   var20 = null;
                 } else {
-                  var20 = ul.field_m[var17_intLifetime3][var18];
+                  var20 = ResourceArchive.field_m[var17_intLifetime3][var18];
                 }
               }
               ma.field_b[var17_intLifetime3 + 4][var18 + 1] = new mo(0L, uq.field_d, (cj) null, cm.field_b, (Sprite) (var19_ref), (String) (var20));
@@ -661,7 +661,7 @@ final class md {
             param1 <= 36) {
             var4_int = 0;
             if (param2 >= -12) {
-              md.a((String[]) null, -25, (int[]) null, (ul) null, (String[]) null, (Sprite[][]) null, (Sprite[][]) null, (String[][]) null, (byte[]) null, -121, true, (byte[]) null, (String[]) null, 73, (String[][]) null);
+              md.a((String[]) null, -25, (int[]) null, (ResourceArchive) null, (String[]) null, (Sprite[][]) null, (Sprite[][]) null, (String[][]) null, (byte[]) null, -121, true, (byte[]) null, (String[]) null, 73, (String[][]) null);
             }
             var5 = 0;
             var6 = 0;

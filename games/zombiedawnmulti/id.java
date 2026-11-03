@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class id extends ff {
+abstract class id extends TertiaryLinkNode {
     int field_C;
     static String field_x;
     static String field_A;

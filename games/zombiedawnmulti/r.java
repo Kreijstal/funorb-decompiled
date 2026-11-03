@@ -4,7 +4,7 @@
 final class r {
     static String field_e;
     static int[][] field_c;
-    static eh field_a;
+    static HuffmanCodec field_a;
     static String field_b;
     static String field_d;
     static String field_g;
@@ -35,13 +35,13 @@ final class r {
         }
     }
 
-    final static po a(ul param0, int param1, byte param2) {
+    final static MusicPatch a(ResourceArchive param0, int param1, byte param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         Sprite var4 = null;
         byte[] var5 = null;
         Object stackIn_2_0 = null;
-        po stackIn_6_0 = null;
+        MusicPatch stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -51,13 +51,13 @@ final class r {
           var3 = var5;
           if (var5 == null) {
             stackIn_2_0 = null;
-            return (po) (stackIn_2_0);
+            return (MusicPatch) (stackIn_2_0);
           }
           if (param2 != 15) {
             var4 = (Sprite) null;
             r.a(-29, (Sprite) null);
           }
-          stackIn_6_0 = new po(var5);
+          stackIn_6_0 = new MusicPatch(var5);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

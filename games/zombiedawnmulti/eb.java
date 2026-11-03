@@ -136,7 +136,7 @@ final class eb {
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           ho.field_q = param2;
-          bq.field_c = true;
+          SectorCacheStore.field_c = true;
           if (ho.field_q == 0) {
             var3_int = mb.a(uq.field_f, false, oi.field_e, cq.field_e, ib.field_b);
             var4 = 3 + var3_int;
@@ -320,7 +320,7 @@ final class eb {
             }
             so.field_s = bl.a((byte) 41);
           }
-          aq.field_B.field_c = v.field_b.length;
+          NetworkGameClient.field_B.field_c = v.field_b.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; hq.field_m.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_88_0 = 0;
@@ -350,7 +350,7 @@ final class eb {
               }
             }
           }
-          qk.field_j = aq.field_B.field_c * (al.field_bb + wk.field_G << 1);
+          qk.field_j = NetworkGameClient.field_B.field_c * (al.field_bb + wk.field_G << 1);
           ZombieDawnMulti.field_H = am.field_c - (var3_intLifetime1 >> 1);
           fl.field_a = -(var3_intLifetime1 >> 1) + (am.field_c + var3_intLifetime1);
           for (var4Lifetime2 = 0; hq.field_m.length > var4Lifetime2; var4Lifetime2++) {
@@ -387,9 +387,9 @@ final class eb {
             var4Lifetime3++;
           }
           if (ho.field_q != 2) {
-            aq.field_B.a(0, param1, -31458, iq.a(bo.field_d, -1, MouseInputHandler.field_g));
+            NetworkGameClient.field_B.a(0, param1, -31458, iq.a(bo.field_d, -1, MouseInputHandler.field_g));
           } else {
-            aq.field_B.a(-1, param1, -31458, -1);
+            NetworkGameClient.field_B.a(-1, param1, -31458, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

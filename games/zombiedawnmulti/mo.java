@@ -66,7 +66,7 @@ final class mo extends cj {
         return param0 + param2 + param0 - (-var4Lifetime1 - var5Lifetime1);
     }
 
-    final static String a(String param0, int param1, int param2, String param3, ul param4) {
+    final static String a(String param0, int param1, int param2, String param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;

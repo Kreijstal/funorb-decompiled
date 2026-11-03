@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ca extends BitmapFont {
+final class AntialiasedBitmapFont extends BitmapFont {
     private byte[][] field_O;
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -102,7 +102,7 @@ final class ca extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            ca.a(SoftwareRasterizer.field_i, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            AntialiasedBitmapFont.a(SoftwareRasterizer.field_i, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
             BinaryBitmapFont.blitBinaryGlyphWithAlpha(SoftwareRasterizer.field_i, this.field_O[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
@@ -150,7 +150,7 @@ final class ca extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            ca.a(SoftwareRasterizer.field_i, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
+            AntialiasedBitmapFont.a(SoftwareRasterizer.field_i, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
             BinaryBitmapFont.blitBinaryGlyph(SoftwareRasterizer.field_i, this.field_O[param0], param5, var11, var8, param3, param4, var9, var10);
           }
@@ -185,9 +185,9 @@ final class ca extends BitmapFont {
         return param1;
     }
 
-    ca(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
+    AntialiasedBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
         this.field_O = new byte[256][];
-        this.field_O = ca.a(param5, param6);
+        this.field_O = AntialiasedBitmapFont.a(param5, param6);
     }
 }

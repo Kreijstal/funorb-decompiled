@@ -193,7 +193,7 @@ final class jh extends cj {
               } else {
                 var5Lifetime6 = var7 + "; Expires=" + ke.a(-29971, bl.a((byte) 113) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
-              fo.a(param0, 14575, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.evaluateScript(param0, 14575, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (Throwable throwable) {
             }
             ak.a(param1 + 14159, param0);

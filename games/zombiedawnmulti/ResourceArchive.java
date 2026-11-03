@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ul {
+final class ResourceArchive {
     int field_b;
     static ip field_n;
     static String[][] field_m;
     boolean field_j;
     private Object[][] field_l;
     private Object[] field_g;
-    private be field_k;
+    private ArchiveIndex field_k;
     static String field_c;
     private ng field_a;
     static String field_i;
@@ -39,7 +39,7 @@ final class ul {
           var6 = (CharSequence) ((Object) param0);
           var4_int = this.field_k.field_d.a(1481485697, kd.a(var6, -79));
           if (param2) {
-            ul.b(((byte[]) (this.field_g[3]))[9]);
+            ResourceArchive.b(((byte[]) (this.field_g[3]))[9]);
           }
           if (!this.b(var4_int, -120)) {
             return null;
@@ -148,7 +148,7 @@ final class ul {
           this.field_g[param1] = this.field_a.a(-123, param1);
         }
         if (param0 >= -85) {
-          this.field_k = (be) null;
+          this.field_k = (ArchiveIndex) null;
         }
     }
 
@@ -156,7 +156,7 @@ final class ul {
         field_c = null;
         field_h = null;
         if (param0 != -35) {
-          ul.b((byte) -55);
+          ResourceArchive.b((byte) -55);
         }
         field_m = (String[][]) null;
         field_n = null;
@@ -751,7 +751,7 @@ final class ul {
 
     final synchronized byte[] a(byte param0, int param1) {
         if (param0 != -77) {
-          ul.b((byte) -63);
+          ResourceArchive.b((byte) -63);
         }
         if (!this.a((byte) -128)) {
           return null;
@@ -828,7 +828,7 @@ final class ul {
         return this.a(param0, param2, -25139, (int[]) null);
     }
 
-    ul(ng param0, boolean param1, int param2) {
+    ResourceArchive(ng param0, boolean param1, int param2) {
         this.field_k = null;
         try {
           if (0 > param2 ||

@@ -95,7 +95,7 @@ final class qe {
         return rb.field_a;
     }
 
-    final static void a(ul param0, int param1, ul param2, ul param3) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         Sprite var17 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -208,7 +208,7 @@ final class qe {
         g.c();
         SoftwareRasterizer.setClip(0, 0, 640, 40);
         SoftwareRasterizer.fillRect(0, 0, 640, 40, 0);
-        for (var3 = 0; var5.field_t > var3; var3++) {
+        for (var3 = 0; var5.teamCount > var3; var3++) {
           this.a((byte) -126, var3);
         }
         if (param0 != -27635) {
@@ -241,7 +241,7 @@ final class qe {
         var19 = var18;
         stackIn_3_0 = (0 == (1 << param1 & var19.field_F)) ? 0 : 1;
         var4 = stackIn_3_0;
-        var5 = var18.field_d[param1];
+        var5 = var18.teamScores[param1];
         var25 = op.field_m.field_D[param1];
         stackIn_6_0 = (param1 != fb.field_e.field_M) ? 0 : 1;
         var7 = stackIn_6_0;
@@ -259,8 +259,8 @@ final class qe {
         var22 = BitmapFont.a(var9, var21, -2 + var10 - 48);
         ((BitmapFont) ((Object) var9)).c(var22, 48 + var11, var12, var8, 0);
         if (var4 == 0) {
-          if (var19.field_l != 1 &&
-            var19.field_l != 0 &&
+          if (var19.phase != 1 &&
+            var19.phase != 0 &&
             var7 == 0) {
             var16 = en.field_e;
             var17 = ob.field_C;

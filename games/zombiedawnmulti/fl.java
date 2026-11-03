@@ -67,7 +67,7 @@ final class fl {
         return new byte[param1];
     }
 
-    final static Sprite a(String param0, String param1, ul param2, int param3) {
+    final static Sprite a(String param0, String param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

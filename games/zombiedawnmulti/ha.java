@@ -7,8 +7,8 @@ final class ha extends IntrusiveNode {
     static oi[] field_j;
     static String field_h;
     int field_f;
-    static ul field_g;
-    ek field_m;
+    static ResourceArchive field_g;
+    SimEntity field_m;
     static String field_n;
     static String field_k;
     static ao field_i;
@@ -64,7 +64,7 @@ final class ha extends IntrusiveNode {
         }
     }
 
-    ha(ek param0, int param1) {
+    ha(SimEntity param0, int param1) {
         try {
           this.field_m = param0;
           this.field_f = param1;

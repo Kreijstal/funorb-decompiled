@@ -128,8 +128,8 @@ final class Bzip2Decoder {
         var24 = null;
         var25 = null;
         param0.field_H = 1;
-        if (wl.field_k == null) {
-          wl.field_k = new int[param0.field_H * 100000];
+        if (WhirlpoolHasher.field_k == null) {
+          WhirlpoolHasher.field_k = new int[param0.field_H * 100000];
         }
         var26 = 1;
         while (true) {
@@ -300,14 +300,14 @@ final class Bzip2Decoder {
                 param0.field_G[var4] = param0.field_G[var4] + param0.field_G[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(wl.field_k[var4] & 255);
+                var1 = (byte)(WhirlpoolHasher.field_k[var4] & 255);
                 dupTemp$1 = param0.field_G[var1 & 255];
-                wl.field_k[dupTemp$1] = wl.field_k[dupTemp$1] | var4 << 8;
+                WhirlpoolHasher.field_k[dupTemp$1] = WhirlpoolHasher.field_k[dupTemp$1] | var4 << 8;
                 param0.field_G[var1 & 255] = param0.field_G[var1 & 255] + 1;
               }
-              param0.field_d = wl.field_k[param0.field_N] >> 8;
+              param0.field_d = WhirlpoolHasher.field_k[param0.field_N] >> 8;
               param0.field_u = 0;
-              param0.field_d = wl.field_k[param0.field_d];
+              param0.field_d = WhirlpoolHasher.field_k[param0.field_d];
               param0.field_s = (byte)(param0.field_d & 255);
               param0.field_d = param0.field_d >> 8;
               param0.field_u = param0.field_u + 1;
@@ -371,7 +371,7 @@ final class Bzip2Decoder {
               }
               dupTemp$0 = param0.field_C[var1 & 255] & 255;
               param0.field_m[dupTemp$0] = param0.field_m[dupTemp$0] + 1;
-              wl.field_k[var14] = param0.field_C[var1 & 255] & 255;
+              WhirlpoolHasher.field_k[var14] = param0.field_C[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -428,7 +428,7 @@ final class Bzip2Decoder {
             var1 = param0.field_C[param0.field_v[param0.field_g[0]] & 255];
             param0.field_m[var1 & 255] = param0.field_m[var1 & 255] + var15;
             while (var15 > 0) {
-              wl.field_k[var14] = var1 & 255;
+              WhirlpoolHasher.field_k[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -457,7 +457,7 @@ final class Bzip2Decoder {
         var3 = param0.field_f;
         var4 = param0.field_u;
         var5 = param0.field_s;
-        var15 = wl.field_k;
+        var15 = WhirlpoolHasher.field_k;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_d;
@@ -559,7 +559,7 @@ final class Bzip2Decoder {
         param0.field_f = var3;
         param0.field_u = var4;
         param0.field_s = var5;
-        wl.field_k = var6;
+        WhirlpoolHasher.field_k = var6;
         param0.field_d = var7;
         param0.field_k = var8;
         param0.field_b = var9;

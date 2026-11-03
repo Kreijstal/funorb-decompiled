@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ek extends ff {
+abstract class SimEntity extends TertiaryLinkNode {
     int field_D;
-    int field_C;
+    int cellX;
     static String field_y;
-    int field_E;
+    int positionY;
     static Sprite field_J;
     static cj field_z;
-    int field_x;
-    int field_G;
+    int objectId;
+    int positionX;
     static String field_I;
-    int field_B;
+    int cellY;
     static tq field_H;
     static long field_K;
     static String field_F;
-    GameSimulation field_A;
+    GameSimulation simulation;
 
     final static int a(boolean param0, int param1, String param2, int param3, String param4, String param5, int param6) {
         hf var7 = null;
@@ -80,30 +80,30 @@ abstract class ek extends ff {
         field_H = null;
     }
 
-    final void d(byte param0) {
+    final void updateCell(byte param0) {
         int var4 = 0;
-        int var2 = this.field_G >> 24;
-        int var3 = this.field_E >> 24;
+        int var2 = this.positionX >> 24;
+        int var3 = this.positionY >> 24;
         int var4Lifetime1;
         int var4Lifetime2;
-        if (var2 != this.field_C) {
-          this.field_C = var2;
-          this.field_B = var3;
-          this.field_A.a(-44, this);
+        if (var2 != this.cellX) {
+          this.cellX = var2;
+          this.cellY = var3;
+          this.simulation.relinkCell(-44, this);
           var4 = -126 % ((-59 - param0) / 46);
           return;
         }
-        if (var3 == this.field_B) {
+        if (var3 == this.cellY) {
           var4Lifetime1 = -126 % ((-59 - param0) / 46);
           return;
         }
-        this.field_C = var2;
-        this.field_B = var3;
-        this.field_A.a(-44, this);
+        this.cellX = var2;
+        this.cellY = var3;
+        this.simulation.relinkCell(-44, this);
         var4Lifetime2 = -126 % ((-59 - param0) / 46);
     }
 
-    abstract void h(int param0);
+    abstract void tick(int param0);
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         me.field_h = param4;
@@ -119,13 +119,13 @@ abstract class ek extends ff {
         bf.field_g = param3;
     }
 
-    final int g(int param0) {
+    final int getY(int param0) {
         if (param0 == 1829947600) {
-          return this.field_E >> 16;
+          return this.positionY >> 16;
         }
         String var3 = (String) null;
-        ek.a(false, -35, (String) null, -111, (String) null, (String) null, -17);
-        return this.field_E >> 16;
+        SimEntity.a(false, -35, (String) null, -111, (String) null, (String) null, -17);
+        return this.positionY >> 16;
     }
 
     final static void i(int param0) {
@@ -133,20 +133,20 @@ abstract class ek extends ff {
         aa.field_n = null;
         ik.field_a = null;
         if (param0 >= 45) {
-          bq.field_c = false;
+          SectorCacheStore.field_c = false;
           ud.field_N = null;
           return;
         }
         String var2 = (String) null;
-        ek.a(false, 8, (String) null, -49, (String) null, (String) null, -19);
-        bq.field_c = false;
+        SimEntity.a(false, 8, (String) null, -49, (String) null, (String) null, -19);
+        SectorCacheStore.field_c = false;
         ud.field_N = null;
     }
 
-    void a(int param0, GameSimulation param1) {
+    void attachToSimulation(int param0, GameSimulation param1) {
         try {
-          this.field_A = param1;
-          this.d((byte) -105);
+          this.simulation = param1;
+          this.updateCell((byte) -105);
           if (param0 != -9019) {
             field_J = (Sprite) null;
           }
@@ -155,20 +155,20 @@ abstract class ek extends ff {
         }
     }
 
-    final int e(byte param0) {
+    final int getX(byte param0) {
         if (param0 != -112) {
-          ek.i(98);
-          return this.field_G >> 16;
+          SimEntity.i(98);
+          return this.positionX >> 16;
         }
-        return this.field_G >> 16;
+        return this.positionX >> 16;
     }
 
-    ek(int param0, int param1, int param2) {
-        this.field_C = -1;
-        this.field_G = param0 << 16;
-        this.field_B = -1;
+    SimEntity(int param0, int param1, int param2) {
+        this.cellX = -1;
+        this.positionX = param0 << 16;
+        this.cellY = -1;
         this.field_D = param2;
-        this.field_E = param1 << 16;
+        this.positionY = param1 << 16;
     }
 
     static {

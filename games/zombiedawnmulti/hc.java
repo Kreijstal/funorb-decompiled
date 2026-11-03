@@ -4,13 +4,13 @@
 final class hc {
     static String field_a;
     static int field_c;
-    static of field_b;
+    static BufferedFile field_b;
 
-    final static ca a(boolean param0, byte[] param1) {
-        ca var2 = null;
+    final static AntialiasedBitmapFont a(boolean param0, byte[] param1) {
+        AntialiasedBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        ca stackIn_6_0 = null;
+        AntialiasedBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -18,12 +18,12 @@ final class hc {
         try {
           if (param1 == null) {
             stackIn_2_0 = null;
-            return (ca) (stackIn_2_0);
+            return (AntialiasedBitmapFont) (stackIn_2_0);
           }
           if (!param0) {
             field_c = -66;
           }
-          var2 = new ca(param1, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, tp.field_t, qp.field_t);
+          var2 = new AntialiasedBitmapFont(param1, PacketBuffer.field_i, qj.field_o, oq.field_w, vj.field_p, tp.field_t, qp.field_t);
           fd.h((byte) 125);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -87,11 +87,11 @@ final class hc {
         }
     }
 
-    final static ae a(int param0, ga param1) {
+    final static GameEvent a(int param0, ga param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        ae stackIn_2_0 = null;
+        GameEvent stackIn_2_0 = null;
         aj stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -99,13 +99,13 @@ final class hc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            stackIn_2_0 = (ae) null;
+            stackIn_2_0 = (GameEvent) null;
             return stackIn_2_0;
           }
           var2_int = param1.readUnsignedShort((byte) 69);
           var3 = param1.readUnsignedShort((byte) 69);
           stackIn_4_0 = new aj(var2_int, var3);
-          return (ae) ((Object) stackIn_4_0);
+          return (GameEvent) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

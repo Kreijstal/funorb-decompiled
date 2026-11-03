@@ -131,10 +131,10 @@ final class jq {
 
     final static void a(boolean param0, byte param1) {
         em.field_U = !param0 ? new qh(RasterBuffer.field_d, ga.field_r) : new qh(mk.field_n, sk.field_i);
-        mh.field_i = new cj(0L, (cj) null);
-        mh.field_i.a((byte) 50, em.field_U.field_c);
+        JaggrabDownloader.field_i = new cj(0L, (cj) null);
+        JaggrabDownloader.field_i.a((byte) 50, em.field_U.field_c);
         int var2 = 81 % ((65 - param1) / 60);
-        mh.field_i.a((byte) 50, jp.field_b);
+        JaggrabDownloader.field_i.a((byte) 50, jp.field_b);
         qf.field_b = new cj(0L, wa.field_a);
         vb.field_c = new cj(0L, (cj) null);
         qf.field_b.a((byte) 50, mq.field_l);

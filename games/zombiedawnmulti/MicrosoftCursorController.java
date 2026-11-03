@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends com.ms.dll.Callback {
+final class MicrosoftCursorController extends com.ms.dll.Callback {
     private volatile int field_a;
     private volatile int field_d;
     private boolean field_c;
@@ -120,7 +120,7 @@ final class cl extends com.ms.dll.Callback {
         }
     }
 
-    cl() {
+    MicrosoftCursorController() {
         this.field_b = true;
     }
 }

@@ -89,12 +89,12 @@ final class vi {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (null != mh.field_c && (null != IntrusiveDequeCursor.field_g ||
+          if (null != JaggrabDownloader.field_c && (null != IntrusiveDequeCursor.field_g ||
             sd.field_G != null ||
             r.field_c != null ||
             null != na.field_J)) {
             for (var9 = 0; var9 < kj.field_h; var9++) {
-              var10_int = mh.field_c.field_Zb[var9] & 255;
+              var10_int = JaggrabDownloader.field_c.field_Zb[var9] & 255;
               if (null != IntrusiveDequeCursor.field_g &&
                 IntrusiveDequeCursor.field_g[var9] != null &&
                 IntrusiveDequeCursor.field_g[var9][var10_int]) {
@@ -233,7 +233,7 @@ final class vi {
               var12.field_Tb.field_xb = var24_int;
               var12.field_Tb.field_ob = var24_int;
               if (param3 == bf.field_n) {
-                if (!mh.field_c.field_Fb) {
+                if (!JaggrabDownloader.field_c.field_Fb) {
                   var12.field_cc.field_wb = me.field_d;
                 }
               } else {
@@ -251,7 +251,7 @@ final class vi {
                 }
               }
               var25_int = 0;
-              if (null != mh.field_c &&
+              if (null != JaggrabDownloader.field_c &&
                 hl.b(param2 ^ 45) &&
                 ~ie.field_sb != ~var12.field_ec) {
                 if (null != var12.field_Tb.field_wb) {
@@ -322,7 +322,7 @@ final class vi {
                 so.a(-21148, var12.field_ec, param1);
               } else {
                 if (var12.field_cc.field_T == 0) {
-                  wl.a(ka.field_t, param3, 0, 0, (byte) 81, vb.field_f, var12);
+                  WhirlpoolHasher.a(ka.field_t, param3, 0, 0, (byte) 81, vb.field_f, var12);
                 } else {
                   cg.a(param1, -27404, var12.field_ec);
                 }
@@ -388,7 +388,7 @@ final class vi {
                         }
                       }
                     } else {
-                      var24Lifetime2 = vl.a(ek.field_y, new String[]{var20, Integer.toString(var6)}, 2);
+                      var24Lifetime2 = vl.a(SimEntity.field_y, new String[]{var20, Integer.toString(var6)}, 2);
                     }
                   }
                 }
@@ -403,7 +403,7 @@ final class vi {
                 var25 = null;
                 var26Lifetime1 = 0;
                 for (var27_int = 0; var27_int < kj.field_h; var27_int++) {
-                  var28 = mh.field_c.field_Zb[var27_int] & 255;
+                  var28 = JaggrabDownloader.field_c.field_Zb[var27_int] & 255;
                   var29 = 0;
                   if (IntrusiveDequeCursor.field_g != null &&
                     IntrusiveDequeCursor.field_g[var27_int] != null &&
@@ -460,7 +460,7 @@ final class vi {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var35 + "<br>" + RandomAccessCacheFile.field_b + (String) (var25);
                   } else {
-                    var24Lifetime2 = var35 + "<br>" + vl.a(od.field_Cb, new String[]{(String) (var25)}, 2);
+                    var24Lifetime2 = var35 + "<br>" + vl.a(SimArmedHuman.field_Cb, new String[]{(String) (var25)}, 2);
                   }
                 } else {
                   if (var26Lifetime1 != 0) {
@@ -471,7 +471,7 @@ final class vi {
                 }
                 if (bf.field_n == param3 &&
                   !hl.b(0)) {
-                  var27 = mh.field_c.field_Nb;
+                  var27 = JaggrabDownloader.field_c.field_Nb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + vl.a(mj.field_Ob, new String[]{var27}, param2 - 43);
                 }
                 ui.field_j = (String) (var24Lifetime2);

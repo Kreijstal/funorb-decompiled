@@ -62,7 +62,7 @@ final class n extends IntrusiveNode {
         if (param0 >= -16) {
           return true;
         }
-        return bq.field_c;
+        return SectorCacheStore.field_c;
     }
 
     static {

@@ -150,7 +150,7 @@ abstract class ng {
         }
     }
 
-    abstract be a(byte param0);
+    abstract ArchiveIndex a(byte param0);
 
     final static String a(String param0, String param1, int param2, int param3) {
         RuntimeException var4 = null;
@@ -174,7 +174,7 @@ abstract class ng {
             stackIn_3_0 = u.field_f;
             return stackIn_3_0;
           }
-          if (ge.field_zb != 2) {
+          if (SimZombie.field_zb != 2) {
             stackIn_7_0 = id.field_A;
             return stackIn_7_0;
           }

@@ -4,7 +4,7 @@
 final class me {
     static String field_m;
     static String field_e;
-    private ul field_b;
+    private ResourceArchive field_b;
     static String field_c;
     static vk field_k;
     private f field_i;
@@ -12,7 +12,7 @@ final class me {
     static int[] field_f;
     static String field_d;
     static boolean field_g;
-    private ul field_l;
+    private ResourceArchive field_l;
     static String field_j;
     private f field_a;
 
@@ -325,7 +325,7 @@ final class me {
         }
     }
 
-    me(ul param0, ul param1) {
+    me(ResourceArchive param0, ResourceArchive param1) {
         this.field_i = new f(256);
         this.field_a = new f(256);
         try {

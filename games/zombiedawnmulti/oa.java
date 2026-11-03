@@ -7,12 +7,12 @@ final class oa {
     static ao field_a;
     static String field_b;
 
-    final static fq a(ga param0, int param1) {
+    final static PhaseChangeEvent a(ga param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        fq stackIn_3_0 = null;
+        PhaseChangeEvent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -24,7 +24,7 @@ final class oa {
           }
           var3 = param0.readUnsignedByte(31365);
           var4 = param0.readUnsignedShort((byte) 69);
-          stackIn_3_0 = new fq(var2_int, var3, var4);
+          stackIn_3_0 = new PhaseChangeEvent(var2_int, var3, var4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,7 +119,7 @@ final class oa {
           for (var2 = 0; op.field_m.field_z.length > var2; var2++) {
             var3 = op.field_m.field_z[var2];
             if (var3 > 0) {
-              var4 = -var3 + op.field_m.a((byte) 32, var2, 750);
+              var4 = -var3 + op.field_m.computeEffectDuration((byte) 32, var2, 750);
               if (var4 > 50) {
                 var4 = var3;
               }

@@ -3,7 +3,7 @@
  */
 abstract class ii {
     static boolean field_e;
-    static ul field_a;
+    static ResourceArchive field_a;
     static String field_b;
     static Sprite field_c;
     static long field_d;
@@ -102,7 +102,7 @@ abstract class ii {
             stackIn_3_0 = u.field_f;
             return stackIn_3_0;
           }
-          if (ge.field_zb != 2) {
+          if (SimZombie.field_zb != 2) {
             stackIn_6_0 = le.field_G;
             return stackIn_6_0;
           }
@@ -119,11 +119,11 @@ abstract class ii {
           }
           if (100 <= dc.field_Fb &&
             0 >= vl.field_h) {
-            stackIn_19_0 = eh.field_g;
+            stackIn_19_0 = HuffmanCodec.field_g;
             return stackIn_19_0;
           }
           if (200 <= dc.field_Fb) {
-            stackIn_23_0 = eh.field_g;
+            stackIn_23_0 = HuffmanCodec.field_g;
             return stackIn_23_0;
           }
           if (hp.a(param0, param1 + 904)) {

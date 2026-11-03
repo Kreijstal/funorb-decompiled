@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jm extends ae {
+final class jm extends GameEvent {
     private int field_r;
     static float[] field_k;
     private int field_o;
@@ -95,7 +95,7 @@ final class jm extends ae {
             if (!uk.a((byte) -120)) {
               return false;
             }
-            var4 = wl.a(param3, 60, param0) ? 1 : 0;
+            var4 = WhirlpoolHasher.a(param3, 60, param0) ? 1 : 0;
             if (sj.field_p == 80 ||
               sj.field_p == 84) {
               var4 = 1;

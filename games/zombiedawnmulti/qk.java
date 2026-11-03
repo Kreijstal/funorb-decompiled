@@ -8,7 +8,7 @@ final class qk extends IntrusiveNode {
     static String field_i;
     int field_g;
 
-    final static ae a(ga param0, byte param1) {
+    final static GameEvent a(ga param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -32,7 +32,7 @@ final class qk extends IntrusiveNode {
             qk.b(true);
           }
           stackIn_7_0 = new fg(var2_int, var4);
-          return (ae) ((Object) stackIn_7_0);
+          return (GameEvent) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

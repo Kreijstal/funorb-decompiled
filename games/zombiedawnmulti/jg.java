@@ -24,7 +24,7 @@ final class jg {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + r.field_a.a(var3_int, param2 - 3574, 0, param0.payload, var4, param0.position);
+            param0.position = param0.position + r.field_a.decompress(var3_int, param2 - 3574, 0, param0.payload, var4, param0.position);
             if (param2 != 3460) {
               jg.b(43);
             }

@@ -97,7 +97,7 @@ final class gh {
           var8 = var41;
           var64 = new int[param0.field_o];
           var62 = eb.field_J;
-          var61 = bq.field_g;
+          var61 = SectorCacheStore.field_g;
           var63 = wp.field_i;
           for (var13 = 0; param0.field_o > var13; var13++) {
             var14 = var61[var13] * param7 + (var62[var13] * param1 + var63[var13] * param5) >> 8;

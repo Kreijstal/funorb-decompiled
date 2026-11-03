@@ -99,7 +99,7 @@ final class fj extends gn {
         super.a(param0, param1, param2, param3);
     }
 
-    final static Sprite[] a(String param0, String param1, int param2, ul param3) {
+    final static Sprite[] a(String param0, String param1, int param2, ResourceArchive param3) {
         Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         Sprite[] var5 = null;

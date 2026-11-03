@@ -7,7 +7,7 @@ final class nn {
     static String field_a;
 
     final static void a(byte param0, int param1, int param2, int param3) {
-        fq.field_n = param2;
+        PhaseChangeEvent.field_n = param2;
         qh.field_e = param3;
         hp.field_k = param1;
         int var4 = -111 % ((param0 + 71) / 49);

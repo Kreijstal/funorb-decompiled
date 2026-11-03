@@ -158,15 +158,15 @@ final class km extends sq {
         field_ab = null;
     }
 
-    final static void a(ul param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         cj var5 = null;
         cj var6 = null;
         cj var3 = null;
         try {
-          pa.field_T = fl.a("basic", "display_name_changed", param0, 11091);
+          SimUnit.field_T = fl.a("basic", "display_name_changed", param0, 11091);
           eg.field_B = new cd(0L, oj.field_Q, iq.field_a, dg.field_I);
           gl.field_L = new cd(0L, oj.field_Q, kg.field_i, qh.field_d);
-          pa.field_O = new cj(0L, (cj) null);
+          SimUnit.field_O = new cj(0L, (cj) null);
           dp.field_b = new cj(0L, vo.field_m);
           dp.field_b.field_R = 1;
           bi.field_f = new cj(0L, vd.field_a, GameScreen.field_r);
@@ -175,11 +175,11 @@ final class km extends sq {
           if (param1 > -106) {
             km.h(-103);
           }
-          pa.field_O.a((byte) 50, dp.field_b);
-          pa.field_O.a((byte) 50, bi.field_f);
-          pa.field_O.a((byte) 50, jb.field_c);
-          pa.field_O.a((byte) 50, eg.field_B);
-          pa.field_O.a((byte) 50, lk.field_J);
+          SimUnit.field_O.a((byte) 50, dp.field_b);
+          SimUnit.field_O.a((byte) 50, bi.field_f);
+          SimUnit.field_O.a((byte) 50, jb.field_c);
+          SimUnit.field_O.a((byte) 50, eg.field_B);
+          SimUnit.field_O.a((byte) 50, lk.field_J);
           eg.field_B.field_Jb.field_Jb.b((byte) -32, vo.field_m);
           eg.field_B.field_Jb.field_Jb.field_lb = 1;
           var5 = eg.field_B.field_Jb.field_Jb;
@@ -385,7 +385,7 @@ final class km extends sq {
     }
 
     km(j param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, pa.g((byte) 120));
+        super(param1, SimUnit.g((byte) 120));
         try {
           this.field_bb = param1;
           this.field_Y = param0;

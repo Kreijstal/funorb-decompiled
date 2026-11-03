@@ -62,7 +62,7 @@ final class hp extends IntrusiveNode {
           do {
             var5 = param1.nextInt();
           } while (var5 >= var3_int);
-          stackIn_11_0 = gd.a(var5, (byte) -87, param2);
+          stackIn_11_0 = MidiPcmStream.a(var5, (byte) -87, param2);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

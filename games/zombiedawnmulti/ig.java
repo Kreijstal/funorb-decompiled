@@ -4,8 +4,8 @@
 final class ig {
     static IntrusiveDeque field_a;
     private io field_c;
-    private ul field_h;
-    private ul field_f;
+    private ResourceArchive field_h;
+    private ResourceArchive field_f;
     static Sprite field_b;
     static Sprite[] field_d;
     static String field_g;
@@ -47,7 +47,7 @@ final class ig {
         field_g = null;
     }
 
-    ig(int param0, ul param1, ul param2) {
+    ig(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

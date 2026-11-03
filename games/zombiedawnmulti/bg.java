@@ -11,7 +11,7 @@ final class bg implements WidgetActionListener {
     static String field_m;
     private int field_f;
     private BitmapFont field_g;
-    static of field_e;
+    static BufferedFile field_e;
     private int field_b;
     static String field_d;
     private int field_j;

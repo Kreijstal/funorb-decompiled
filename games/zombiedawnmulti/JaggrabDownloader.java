@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class mh implements Runnable {
+final class JaggrabDownloader implements Runnable {
     private PacketBuffer field_g;
     private PlatformTask field_b;
     private DataInputStream field_f;
@@ -161,7 +161,7 @@ final class mh implements Runnable {
               break;
             }
             if (this.field_g.position == this.field_g.payload.length) {
-              throw mh.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_a));
+              throw JaggrabDownloader.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_a));
             }
             var1 = this;
             synchronized (var1) {
@@ -236,7 +236,7 @@ final class mh implements Runnable {
     public static void a(int param0) {
         field_l = null;
         if (param0 != 17) {
-          mh.c(29);
+          JaggrabDownloader.c(29);
           field_c = null;
           field_i = null;
           return;
@@ -245,7 +245,7 @@ final class mh implements Runnable {
         field_i = null;
     }
 
-    mh(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
+    JaggrabDownloader(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_a = param1;
           this.field_j = param0;

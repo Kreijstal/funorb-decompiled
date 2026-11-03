@@ -13,7 +13,7 @@ final class v {
     final static void a(int param0) {
         int var1 = (kp.field_l - 640) / 2;
         int var2 = b.field_d * b.field_d;
-        int var3 = var2 - mh.field_h * mh.field_h;
+        int var3 = var2 - JaggrabDownloader.field_h * JaggrabDownloader.field_h;
         qe.field_k.a(-4 + (-120 + SoftwareRasterizer.field_l) - 90, 90, 199, -(var3 * param0 / var2) + var1, -3344);
         cm.field_a.a(-120 + (SoftwareRasterizer.field_l - 4), 0, 438, var1 + 202 + var3 * 438 / var2, -3344);
     }

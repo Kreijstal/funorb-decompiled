@@ -51,8 +51,8 @@ final class pi {
         int var6 = 0;
         String var7 = null;
         try {
-          mj.field_Fb[0] = c.field_c.nextInt();
-          mj.field_Fb[1] = c.field_c.nextInt();
+          mj.field_Fb[0] = TertiaryLinkDeque.field_c.nextInt();
+          mj.field_Fb[1] = TertiaryLinkDeque.field_c.nextInt();
           mj.field_Fb[2] = (int)(nm.field_c >> 32);
           mj.field_Fb[3] = (int)nm.field_c;
           pm.field_R.position = 0;

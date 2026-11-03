@@ -15,7 +15,7 @@ final class bf extends IntrusiveNode {
     static cj field_h;
     static int field_g;
 
-    final boolean a(lm param0, int param1) {
+    final boolean a(SimHuman param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -30,8 +30,8 @@ final class bf extends IntrusiveNode {
           if (param1 != 0) {
             this.c(-49);
           }
-          var3_int = param0.e((byte) -112);
-          var4 = param0.g(param1 ^ 1829947600);
+          var3_int = param0.getX((byte) -112);
+          var4 = param0.getY(param1 ^ 1829947600);
           var5 = (ui) (this.field_p.c(69));
           while (var5 != null) {
             if (var5.a(param1 + 40, var3_int, var4)) {
@@ -82,7 +82,7 @@ final class bf extends IntrusiveNode {
           }
           if (param0.field_r != null) {
             ld.field_Kb = param0.field_a;
-            bq.field_f = param0.field_e;
+            SectorCacheStore.field_f = param0.field_e;
             tb.field_t = param0.field_r;
             en.field_c = param0.field_l;
           }

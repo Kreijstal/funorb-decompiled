@@ -112,7 +112,7 @@ final class PcmSampleStream extends PcmStream {
         return 1;
     }
 
-    final PcmStream b() {
+    final PcmStream firstSubStream() {
         return null;
     }
 
@@ -292,7 +292,7 @@ final class PcmSampleStream extends PcmStream {
         this.i();
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -650,7 +650,7 @@ final class PcmSampleStream extends PcmStream {
         int var10Lifetime1;
         if (this.field_v == 0 &&
           this.field_x == 0) {
-          this.a(param2);
+          this.skip(param2);
           return;
         }
         var4 = (PcmSample) (this.field_i);

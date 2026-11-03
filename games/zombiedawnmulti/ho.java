@@ -271,7 +271,7 @@ final class ho extends nc {
             try {
               boolean decompiledFrameCompleted0 = true;
               var2 = "tuhstatbut";
-              var3 = (String) (fo.b(param0, 13093, "getcookies"));
+              var3 = (String) (JavaScriptBridge.b(param0, 13093, "getcookies"));
               if (param1 != 61) {
                 ho.a(122, 9, (byte[]) null, 88);
               }
@@ -326,7 +326,7 @@ final class ho extends nc {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
-        wl var5 = null;
+        WhirlpoolHasher var5 = null;
         byte[] var6 = null;
         int var7 = 0;
         byte[] stackIn_12_0 = null;
@@ -356,7 +356,7 @@ final class ho extends nc {
           } else {
             var4 = param2;
           }
-          var5 = new wl();
+          var5 = new WhirlpoolHasher();
           var5.b(32);
           if (param0 != 4246) {
             stackIn_12_0 = (byte[]) null;

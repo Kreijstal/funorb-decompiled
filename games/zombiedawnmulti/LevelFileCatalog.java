@@ -52,7 +52,7 @@ final class LevelFileCatalog {
 
     final static void a(String param0, long param1, int param2, int param3, boolean param4, int param5) {
         int var7_int = 0;
-        ul var8 = null;
+        ResourceArchive var8 = null;
         ga stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
@@ -78,8 +78,8 @@ final class LevelFileCatalog {
           ((ga) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_3_2);
           ma.field_a.e(76, -var7_int + ma.field_a.position);
           if (param5 != 21965) {
-            var8 = (ul) null;
-            LevelFileCatalog.a((ul) null, -63);
+            var8 = (ResourceArchive) null;
+            LevelFileCatalog.a((ResourceArchive) null, -63);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,7 +105,7 @@ final class LevelFileCatalog {
         field_a = null;
     }
 
-    final static ci a(ul param0, int param1) {
+    final static ci a(ResourceArchive param0, int param1) {
         ci var2 = null;
         RuntimeException var2_ref = null;
         ci stackIn_2_0 = null;

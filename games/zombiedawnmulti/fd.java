@@ -93,27 +93,27 @@ final class fd extends id {
           }
           if (this.field_H &&
             this.field_K) {
-            od.field_Ab[this.field_P].d(var3_int, var4);
+            SimArmedHuman.field_Ab[this.field_P].d(var3_int, var4);
           } else {
             if (this.field_H) {
-              od.field_Ab[this.field_P].b(var3_int, var4);
+              SimArmedHuman.field_Ab[this.field_P].b(var3_int, var4);
             } else {
               if (!this.field_K) {
-                od.field_Ab[this.field_P].g(var3_int, var4);
+                SimArmedHuman.field_Ab[this.field_P].g(var3_int, var4);
               } else {
-                od.field_Ab[this.field_P].a(var3_int, var4);
+                SimArmedHuman.field_Ab[this.field_P].a(var3_int, var4);
               }
             }
           }
           if (this.field_J) {
             if (!this.field_H) {
               if (!this.field_K) {
-                od.field_Ab[-8 + this.field_P].g(var3_int, -24 + var4);
+                SimArmedHuman.field_Ab[-8 + this.field_P].g(var3_int, -24 + var4);
               } else {
-                od.field_Ab[-8 + this.field_P].a(var3_int, -24 + var4);
+                SimArmedHuman.field_Ab[-8 + this.field_P].a(var3_int, -24 + var4);
               }
             } else {
-              od.field_Ab[-8 + this.field_P].b(var3_int, var4 - 24);
+              SimArmedHuman.field_Ab[-8 + this.field_P].b(var3_int, var4 - 24);
             }
           }
           return;
@@ -211,14 +211,14 @@ final class fd extends id {
               var6_int = s.field_e.readUnsignedByte(param0 ^ 31371);
               s.field_e.position = 0;
               if (var6_int == 0) {
-                vo.field_l = ul.field_n;
+                vo.field_l = ResourceArchive.field_n;
               } else {
                 hd.field_q = -1;
                 vo.field_l = gn.field_K;
                 op.field_i = var6_int;
               }
             }
-            if (ul.field_n == vo.field_l &&
+            if (ResourceArchive.field_n == vo.field_l &&
               fa.b(10, 8)) {
               nm.field_c = s.field_e.readLong((byte) -30);
               s.field_e.position = 0;
@@ -267,11 +267,11 @@ final class fd extends id {
                 stackIn_52_0 = (0 != (4 & var7));
                 fj.field_M = stackIn_52_0;
                 stackIn_55_0 = ((2 & var7) != 0);
-                sh.field_L = stackIn_55_0;
+                SimPortal.field_L = stackIn_55_0;
                 stackIn_58_0 = ((var7 & 8) != 0);
                 nh.field_m = stackIn_58_0;
                 if (nh.field_m) {
-                  sh.field_L = true;
+                  SimPortal.field_L = true;
                 }
                 stackIn_63_0 = ((var7 & 16) != 0);
                 tm.field_b = stackIn_63_0;
@@ -318,14 +318,14 @@ final class fd extends id {
               if (vl.field_h <= 0 &&
                 !fj.field_M) {
                 try {
-                  fo.b(jl.b(0), 13093, "unzap");
+                  JavaScriptBridge.b(jl.b(0), 13093, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  fo.a(jl.b(0), "zap", (byte) 23, new Object[]{RandomAccessCacheFile.a(ii.field_d, (byte) 26)});
+                  JavaScriptBridge.a(jl.b(0), "zap", (byte) 23, new Object[]{RandomAccessCacheFile.a(ii.field_d, (byte) 26)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -371,9 +371,9 @@ final class fd extends id {
                 return stackIn_113_0;
               }
               var6_intLifetime2 = jo.field_b;
-              jo.field_b = ff.field_s;
+              jo.field_b = TertiaryLinkNode.field_s;
               sk.field_j = true;
-              ff.field_s = var6_intLifetime2;
+              TertiaryLinkNode.field_s = var6_intLifetime2;
             }
             stackIn_115_0 = -1;
             return stackIn_115_0;

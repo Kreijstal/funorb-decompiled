@@ -88,7 +88,7 @@ final class jl extends hq {
         RuntimeException var21 = null;
         try {
           lj.a(param6, param4, param15, 61);
-          ek.a(param16, param0, 1829947600, param9, param10);
+          SimEntity.a(param16, param0, 1829947600, param9, param10);
           uo.a(param13, param1, 1633);
           if (!param20) {
             field_t = (String) null;

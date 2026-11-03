@@ -11,7 +11,7 @@ final class ui extends IntrusiveNode {
     private int field_g;
     static int[] field_f;
 
-    final static void a(int param0, ul param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RuntimeException runtimeException = null;
         VorbisSample var2 = null;
         RuntimeException stackIn_7_0 = null;
@@ -112,7 +112,7 @@ final class ui extends IntrusiveNode {
             field_k = (Sprite[]) null;
           }
           if (null != op.field_m &&
-            1 < op.field_m.field_t) {
+            1 < op.field_m.teamCount) {
             stackIn_8_0 = (pl.field_I == 10) ? 1 : 0;
             var2_int = stackIn_8_0;
             if (!iq.field_f) {
@@ -224,13 +224,13 @@ final class ui extends IntrusiveNode {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param1 ||
-            mh.field_c == null) {
+            JaggrabDownloader.field_c == null) {
             io.field_b = false;
           }
           if (!param1) {
-            if (null != mh.field_c) {
-              if (mh.field_h > 0) {
-                mh.field_h = mh.field_h - 1;
+            if (null != JaggrabDownloader.field_c) {
+              if (JaggrabDownloader.field_h > 0) {
+                JaggrabDownloader.field_h = JaggrabDownloader.field_h - 1;
               } else {
                 if (sq.field_Q > 0) {
                   sq.field_Q = sq.field_Q - 1;
@@ -252,19 +252,19 @@ final class ui extends IntrusiveNode {
                   sq.field_Q = sq.field_Q - 1;
                 } else {
                   if (InflaterDecompressor.field_a <= 0) {
-                    if (mh.field_h < b.field_d) {
-                      if (0 == mh.field_h) {
+                    if (JaggrabDownloader.field_h < b.field_d) {
+                      if (0 == JaggrabDownloader.field_h) {
                         wf.a(6835);
                       }
-                      mh.field_h = mh.field_h + 1;
+                      JaggrabDownloader.field_h = JaggrabDownloader.field_h + 1;
                     }
                   } else {
                     InflaterDecompressor.field_a = InflaterDecompressor.field_a - 1;
                   }
                 }
               } else {
-                if (0 < mh.field_h) {
-                  mh.field_h = mh.field_h - 1;
+                if (0 < JaggrabDownloader.field_h) {
+                  JaggrabDownloader.field_h = JaggrabDownloader.field_h - 1;
                 } else {
                   if (InflaterDecompressor.field_a <= 0) {
                     if (sq.field_Q < b.field_d) {
@@ -280,8 +280,8 @@ final class ui extends IntrusiveNode {
               }
             }
           } else {
-            if (mh.field_h > 0) {
-              mh.field_h = mh.field_h - 1;
+            if (JaggrabDownloader.field_h > 0) {
+              JaggrabDownloader.field_h = JaggrabDownloader.field_h - 1;
             } else {
               if (0 >= sq.field_Q) {
                 if (InflaterDecompressor.field_a > 0) {

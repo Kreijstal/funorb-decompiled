@@ -226,7 +226,7 @@ final class ck {
                     if (var7 == null) {
                       var7 = new dm(var27, var28, var3_longLifetime2);
                       kp.field_o.a(-1, var7, var3_longLifetime2);
-                      mh.field_c.field_cc = mh.field_c.field_cc + 1;
+                      JaggrabDownloader.field_c.field_cc = JaggrabDownloader.field_c.field_cc + 1;
                     }
                     var7.field_Mb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
                     var8 = ((PacketBuffer) ((Object) var1)).a(0);
@@ -252,12 +252,12 @@ final class ck {
                         var15.field_bc = so.field_r;
                       }
                       var26.a(param0 ^ 6623);
-                      mh.field_c.field_cc = mh.field_c.field_cc - 1;
+                      JaggrabDownloader.field_c.field_cc = JaggrabDownloader.field_c.field_cc - 1;
                     }
                     return;
                   }
                   if (var2 == 20) {
-                    SocketConnector.a(mh.field_c, false, var1, false);
+                    SocketConnector.a(JaggrabDownloader.field_c, false, var1, false);
                     return;
                   }
                   if (var2 == 21) {
@@ -354,17 +354,17 @@ final class ck {
             var3_ref_dmLifetime2 = (dm) (hq.field_c.c((byte) 123));
           }
           if (var2 == 1 &&
-            null != mh.field_c) {
-            sb.field_k = mh.field_c.field_Nb;
+            null != JaggrabDownloader.field_c) {
+            sb.field_k = JaggrabDownloader.field_c.field_Nb;
           }
           if (var2 == 4) {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) 69);
-            mh.field_c = new jh(kj.field_h);
-            mh.field_c.a((byte) -85, (long)var3Lifetime1);
-            SocketConnector.a(mh.field_c, false, var1, false);
+            JaggrabDownloader.field_c = new jh(kj.field_h);
+            JaggrabDownloader.field_c.a((byte) -85, (long)var3Lifetime1);
+            SocketConnector.a(JaggrabDownloader.field_c, false, var1, false);
             qi.field_c = 0L;
           } else {
-            mh.field_c = null;
+            JaggrabDownloader.field_c = null;
           }
           if (var2 != 2 &&
             var2 != 3) {

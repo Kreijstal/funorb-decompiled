@@ -19,14 +19,14 @@ abstract class MouseWheelInput {
         if (!param1) {
           var3 = b.field_d * b.field_d;
           var4 = var3 - param0 * param0;
-          mh.field_i.a(-90 + (-120 + SoftwareRasterizer.field_l) - 4, 90, 199, -(var4 * 199 / var3) + var2, -3344);
+          JaggrabDownloader.field_i.a(-90 + (-120 + SoftwareRasterizer.field_l) - 4, 90, 199, -(var4 * 199 / var3) + var2, -3344);
           fc.field_a.a(-120 + (SoftwareRasterizer.field_l - 4), 0, 438, var2 + (202 + 438 * var4 / var3), -3344);
           return;
         }
         MouseWheelInput.a(56, false);
         var3Lifetime1 = b.field_d * b.field_d;
         var4Lifetime1 = var3Lifetime1 - param0 * param0;
-        mh.field_i.a(-90 + (-120 + SoftwareRasterizer.field_l) - 4, 90, 199, -(var4Lifetime1 * 199 / var3Lifetime1) + var2, -3344);
+        JaggrabDownloader.field_i.a(-90 + (-120 + SoftwareRasterizer.field_l) - 4, 90, 199, -(var4Lifetime1 * 199 / var3Lifetime1) + var2, -3344);
         fc.field_a.a(-120 + (SoftwareRasterizer.field_l - 4), 0, 438, var2 + (202 + 438 * var4Lifetime1 / var3Lifetime1), -3344);
     }
 

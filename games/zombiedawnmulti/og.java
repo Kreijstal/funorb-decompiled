@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends ek {
+final class og extends SimEntity {
     static String field_M;
     static String field_T;
     static boolean field_N;
@@ -18,7 +18,7 @@ final class og extends ek {
         }
     }
 
-    final void h(int param0) {
+    final void tick(int param0) {
         int fieldTemp$0 = this.field_R - 1;
         this.field_R = this.field_R - 1;
         if (fieldTemp$0 <= 0) {
@@ -38,10 +38,10 @@ final class og extends ek {
         var2.position = var2.position + 1;
         int var4 = var2.position;
         var2.a(122, 5);
-        var2.a(122, mh.field_c.field_mc);
-        int var5 = mh.field_c.field_Pb + (mh.field_c.field_fc << 6);
+        var2.a(122, JaggrabDownloader.field_c.field_mc);
+        int var5 = JaggrabDownloader.field_c.field_Pb + (JaggrabDownloader.field_c.field_fc << 6);
         var2.a(-101, var5);
-        var2.a(mh.field_c.field_Zb, mh.field_c.field_Zb.length, 0, 114);
+        var2.a(JaggrabDownloader.field_c.field_Zb, JaggrabDownloader.field_c.field_Zb.length, 0, 114);
         var2.e(91, -var4 + var2.position);
     }
 
@@ -79,13 +79,13 @@ final class og extends ek {
         return true;
     }
 
-    final void a(int param0, GameSimulation param1) {
+    final void attachToSimulation(int param0, GameSimulation param1) {
         try {
-          super.a(param0 ^ 0, param1);
+          super.attachToSimulation(param0 ^ 0, param1);
           if (param0 != -9019) {
             og.b(-123, -15);
           }
-          this.field_R = this.field_A.world.a((byte) 32, this.field_O, 3000);
+          this.field_R = this.simulation.world.computeEffectDuration((byte) 32, this.field_O, 3000);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "og.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -205,13 +205,13 @@ final class og extends ek {
         var53 = null;
         var41 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          stackIn_3_0 = ek.field_H;
+          stackIn_3_0 = SimEntity.field_H;
           stackIn_3_1 = 2;
           stackIn_3_2 = param5;
           stackIn_3_3 = 2 * (jk.field_f + 2);
-          stackIn_4_4 = (vc.field_d == ek.field_H);
+          stackIn_4_4 = (vc.field_d == SimEntity.field_H);
           var7_int = ((tq) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, (4 * jk.field_f + 8) * param6, -108) ? 1 : 0;
-          var8 = ek.field_H.field_Gb.field_Cb;
+          var8 = SimEntity.field_H.field_Gb.field_Cb;
           var9 = bl.a((byte) 99);
           var11 = null;
           var12 = (jh) (var8.c(105));
@@ -380,7 +380,7 @@ final class og extends ek {
             var12.field_Rb.field_z = 0;
             var30 = var12.field_Rb;
             var30.field_zb = 0;
-            var12.field_zb = ek.field_H.field_Gb.field_zb;
+            var12.field_zb = SimEntity.field_H.field_Gb.field_zb;
             var31 = 0;
             var32 = var12.field_Nb;
             if (!var12.j(2)) {
@@ -548,7 +548,7 @@ final class og extends ek {
                 var31 = var31 + jk.field_f;
               }
               if (var12.field_rc) {
-                var12.field_pc.field_wb = vl.a(be.field_k, new String[]{var32}, 2);
+                var12.field_pc.field_wb = vl.a(ArchiveIndex.field_k, new String[]{var32}, 2);
                 var12.field_pc.a(jk.field_f, var31, var12.field_zb - nj.field_h * 2, nj.field_h, -3344);
                 var31 = var31 + jk.field_f;
               }
@@ -567,7 +567,7 @@ final class og extends ek {
               var12.field_I = var31 - var12.field_z;
             }
             if (var13 != 0) {
-              ek.field_H.field_Gb.a(2, var12, 1300, (cj) (var11));
+              SimEntity.field_H.field_Gb.a(2, var12, 1300, (cj) (var11));
             }
             for (var34_intLifetime2 = 0; kj.field_h > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Qb[var34_intLifetime2].field_L) {
@@ -697,8 +697,8 @@ final class og extends ek {
         if (param2 > -114) {
           og.a(96, -108, -22);
         }
-        var4 = this.field_G >> 16;
-        var5 = this.field_E >> 16;
+        var4 = this.positionX >> 16;
+        var5 = this.positionY >> 16;
         stackIn_8_0 = (param1 < 24 + (var4 - 7)) && (7 + (var4 - 24) < param1) && (param0 > 5 + (-48 + var5)) && (var5 + 2 > param0);
         return stackIn_8_0;
     }

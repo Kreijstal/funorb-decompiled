@@ -5,7 +5,7 @@ final class bo {
     private String field_f;
     static IntrusiveDeque field_a;
     static String field_c;
-    static ul field_b;
+    static ResourceArchive field_b;
     static boolean field_e;
     static int field_d;
 
@@ -37,7 +37,7 @@ final class bo {
           var3 = param1.h(12, 14862);
           var4 = new af[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (!fq.a(68, param1)) {
+            if (!PhaseChangeEvent.a(68, param1)) {
               var6 = param1.h(ImageProducerRasterBuffer.b(-1 + var5, param0 - 30800), param0 ^ 17006);
               var4[var5] = var4[var6];
             } else {

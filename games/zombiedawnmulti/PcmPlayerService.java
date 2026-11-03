@@ -29,7 +29,7 @@ class PcmPlayerService {
         if (param0.field_i != null) {
           param0.field_i.field_f = 0;
         }
-        PcmStream var1 = param0.b();
+        PcmStream var1 = param0.firstSubStream();
         while (var1 != null) {
           PcmPlayerService.b(var1);
           var1 = param0.d();
@@ -137,7 +137,7 @@ class PcmPlayerService {
           this.field_h = 0;
         }
         if (this.field_s != null) {
-          this.field_s.a(param0);
+          this.field_s.skip(param0);
           return;
         }
     }
@@ -358,7 +358,7 @@ class PcmPlayerService {
                     if (var4 >= this.field_e) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.b();
+                    var14Lifetime2 = var11.firstSubStream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_g;
                       while (var14Lifetime2 != null) {

@@ -55,10 +55,10 @@ final class ip {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (null == fq.field_i) {
-                fq.field_i = dk.field_Ib.createImage(304, 34);
+              if (null == PhaseChangeEvent.field_i) {
+                PhaseChangeEvent.field_i = dk.field_Ib.createImage(304, 34);
               }
-              var10 = fq.field_i.getGraphics();
+              var10 = PhaseChangeEvent.field_i.getGraphics();
               var10.setColor(param1);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, 3 * param0, 30);
@@ -71,7 +71,7 @@ final class ip {
               var10.setFont(GameCharacter.field_hb);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param3, (-(param3.length() * 6) + 304) / 2, 22);
-              var9.drawImage(fq.field_i, ng.field_d / 2 - 152, -18 + pi.field_i / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(PhaseChangeEvent.field_i, ng.field_d / 2 - 152, -18 + pi.field_i / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;

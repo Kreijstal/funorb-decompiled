@@ -62,7 +62,7 @@ class UiWidget extends IntrusiveNode {
               return;
             }
           }
-          ge.field_zb = 0;
+          SimZombie.field_zb = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,14 +78,14 @@ class UiWidget extends IntrusiveNode {
         int var3 = SocketConnector.field_h.field_f;
         int var4 = sc.field_j.field_yb.a(param1, 272, sc.field_j.field_J);
         int var5 = -(var4 / 2) + 7 + (-110 + var3 / 2);
-        lm.field_gb.a(-(2 * var5) + var3 - 120, var5, 320, (-320 + var2_int) / 2, -3344);
-        lm.field_gb.field_ab = tg.a(2105376, lm.field_gb.field_z, 8421504, 3, 11579568, 114);
-        sc.field_j.a(-20 + (lm.field_gb.field_z - 24), 16, -24 + lm.field_gb.field_zb - 24, 24, -3344);
+        SimHuman.field_gb.a(-(2 * var5) + var3 - 120, var5, 320, (-320 + var2_int) / 2, -3344);
+        SimHuman.field_gb.field_ab = tg.a(2105376, SimHuman.field_gb.field_z, 8421504, 3, 11579568, 114);
+        sc.field_j.a(-20 + (SimHuman.field_gb.field_z - 24), 16, -24 + SimHuman.field_gb.field_zb - 24, 24, -3344);
         if (param0 >= -6) {
           return;
         }
         try {
-          kn.field_a.a(24, -24 + (-20 + lm.field_gb.field_z), 80, 120, -3344);
+          kn.field_a.a(24, -24 + (-20 + SimHuman.field_gb.field_z), 80, 120, -3344);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "cf.CC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ff extends DualLinkNode {
+class TertiaryLinkNode extends DualLinkNode {
     static int field_s;
     static String field_u;
-    static ca field_r;
+    static AntialiasedBitmapFont field_r;
     static String field_q;
-    ff field_v;
-    ff field_w;
+    TertiaryLinkNode tertiaryNext;
+    TertiaryLinkNode tertiaryPrevious;
     static String field_t;
 
     final static void f(int param0) {
@@ -26,22 +26,22 @@ class ff extends DualLinkNode {
         NodeHashTableIterator.b(-125);
     }
 
-    final void c(byte param0) {
-        if (null == this.field_w) {
+    final void unlinkTertiary(byte param0) {
+        if (null == this.tertiaryPrevious) {
           return;
         }
         if (param0 == -70) {
-          this.field_w.field_v = this.field_v;
-          this.field_v.field_w = this.field_w;
-          this.field_w = null;
-          this.field_v = null;
+          this.tertiaryPrevious.tertiaryNext = this.tertiaryNext;
+          this.tertiaryNext.tertiaryPrevious = this.tertiaryPrevious;
+          this.tertiaryPrevious = null;
+          this.tertiaryNext = null;
           return;
         }
-        ff.f(-48);
-        this.field_w.field_v = this.field_v;
-        this.field_v.field_w = this.field_w;
-        this.field_w = null;
-        this.field_v = null;
+        TertiaryLinkNode.f(-48);
+        this.tertiaryPrevious.tertiaryNext = this.tertiaryNext;
+        this.tertiaryNext.tertiaryPrevious = this.tertiaryPrevious;
+        this.tertiaryPrevious = null;
+        this.tertiaryNext = null;
     }
 
     final static void a(int param0, int param1) {
@@ -62,7 +62,7 @@ class ff extends DualLinkNode {
         }
     }
 
-    protected ff() {
+    protected TertiaryLinkNode() {
     }
 
     final static void a(byte param0, int param1) {
@@ -73,7 +73,7 @@ class ff extends DualLinkNode {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 != 126) {
-            ff.a(-116, -3);
+            TertiaryLinkNode.a(-116, -3);
           }
           var4 = (vg) (GameApplet.field_i.c(param0 - 74));
           while (var4 != null) {
@@ -93,7 +93,7 @@ class ff extends DualLinkNode {
         field_u = null;
         field_t = null;
         if (param0 != -1130232991) {
-          field_r = (ca) null;
+          field_r = (AntialiasedBitmapFont) null;
           field_r = null;
           return;
         }

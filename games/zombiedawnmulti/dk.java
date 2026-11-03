@@ -61,7 +61,7 @@ final class dk extends cj {
         nm.a(SoftwareRasterizer.field_b - 640 >> 1, SoftwareRasterizer.field_l, (byte) 105, 640 + SoftwareRasterizer.field_b >> 1, 0);
         if (param1 != -7579) {
           dk.c((byte) -88);
-          if (0 < mh.field_h) {
+          if (0 < JaggrabDownloader.field_h) {
             if (null == vm.field_lb) {
               stackIn_6_0 = qe.field_k;
               stackIn_7_1 = (param0) && (!ee.field_a);
@@ -72,9 +72,9 @@ final class dk extends cj {
               if (!(sq.field_Q <= 0) ||
                 !(InflaterDecompressor.field_a <= 0)) {
                 if (vm.field_lb != null) {
-                  vm.field_lb.c(mh.field_i.field_x, 0);
+                  vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
                 }
-                stackIn_20_0 = mh.field_i;
+                stackIn_20_0 = JaggrabDownloader.field_i;
                 stackIn_21_1 = (param0) && (!io.field_b);
                 ((cj) (Object) stackIn_20_0).c(stackIn_21_1, -1);
                 stackIn_24_0 = fc.field_a;
@@ -94,9 +94,9 @@ final class dk extends cj {
           }
           if (sq.field_Q > 0) {
             if (vm.field_lb != null) {
-              vm.field_lb.c(mh.field_i.field_x, 0);
+              vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
             }
-            stackIn_57_0 = mh.field_i;
+            stackIn_57_0 = JaggrabDownloader.field_i;
             stackIn_58_1 = (param0) && (!io.field_b);
             ((cj) (Object) stackIn_57_0).c(stackIn_58_1, -1);
             stackIn_61_0 = fc.field_a;
@@ -105,9 +105,9 @@ final class dk extends cj {
           } else {
             if (InflaterDecompressor.field_a > 0) {
               if (vm.field_lb != null) {
-                vm.field_lb.c(mh.field_i.field_x, 0);
+                vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
               }
-              stackIn_44_0 = mh.field_i;
+              stackIn_44_0 = JaggrabDownloader.field_i;
               stackIn_45_1 = (param0) && (!io.field_b);
               ((cj) (Object) stackIn_44_0).c(stackIn_45_1, -1);
               stackIn_48_0 = fc.field_a;
@@ -116,12 +116,12 @@ final class dk extends cj {
             }
           }
         } else {
-          if (0 >= mh.field_h) {
+          if (0 >= JaggrabDownloader.field_h) {
             if (sq.field_Q > 0) {
               if (vm.field_lb != null) {
-                vm.field_lb.c(mh.field_i.field_x, 0);
+                vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
               }
-              stackIn_110_0 = mh.field_i;
+              stackIn_110_0 = JaggrabDownloader.field_i;
               stackIn_111_1 = (param0) && (!io.field_b);
               ((cj) (Object) stackIn_110_0).c(stackIn_111_1, -1);
               stackIn_114_0 = fc.field_a;
@@ -130,9 +130,9 @@ final class dk extends cj {
             } else {
               if (InflaterDecompressor.field_a > 0) {
                 if (vm.field_lb != null) {
-                  vm.field_lb.c(mh.field_i.field_x, 0);
+                  vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
                 }
-                stackIn_124_0 = mh.field_i;
+                stackIn_124_0 = JaggrabDownloader.field_i;
                 stackIn_125_1 = (param0) && (!io.field_b);
                 ((cj) (Object) stackIn_124_0).c(stackIn_125_1, -1);
                 stackIn_128_0 = fc.field_a;
@@ -152,9 +152,9 @@ final class dk extends cj {
             ((cj) (Object) stackIn_74_0).c(stackIn_75_1, -1);
             if (sq.field_Q > 0) {
               if (vm.field_lb != null) {
-                vm.field_lb.c(mh.field_i.field_x, 0);
+                vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
               }
-              stackIn_82_0 = mh.field_i;
+              stackIn_82_0 = JaggrabDownloader.field_i;
               stackIn_83_1 = (param0) && (!io.field_b);
               ((cj) (Object) stackIn_82_0).c(stackIn_83_1, -1);
               stackIn_86_0 = fc.field_a;
@@ -163,9 +163,9 @@ final class dk extends cj {
             } else {
               if (InflaterDecompressor.field_a > 0) {
                 if (vm.field_lb != null) {
-                  vm.field_lb.c(mh.field_i.field_x, 0);
+                  vm.field_lb.c(JaggrabDownloader.field_i.field_x, 0);
                 }
-                stackIn_96_0 = mh.field_i;
+                stackIn_96_0 = JaggrabDownloader.field_i;
                 stackIn_97_1 = (param0) && (!io.field_b);
                 ((cj) (Object) stackIn_96_0).c(stackIn_97_1, -1);
                 stackIn_100_0 = fc.field_a;

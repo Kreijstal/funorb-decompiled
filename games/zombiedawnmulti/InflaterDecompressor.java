@@ -176,7 +176,7 @@ final class InflaterDecompressor {
         this(-1, 1000000, 1000000);
     }
 
-    final static IndexedSprite[] a(String param0, ul param1, byte param2, String param3) {
+    final static IndexedSprite[] a(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

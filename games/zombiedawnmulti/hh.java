@@ -470,8 +470,8 @@ final class hh {
     final static void b(int param0) {
         int var2;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (mh.field_h > 0) {
-          mh.field_h = mh.field_h - 1;
+        if (JaggrabDownloader.field_h > 0) {
+          JaggrabDownloader.field_h = JaggrabDownloader.field_h - 1;
         } else {
           if (sq.field_Q > 0) {
             sq.field_Q = sq.field_Q - 1;
@@ -481,7 +481,7 @@ final class hh {
             }
           }
         }
-        if (mh.field_h > 0) {
+        if (JaggrabDownloader.field_h > 0) {
           v.a(param0 + 199);
         }
         if (sq.field_Q > 0) {

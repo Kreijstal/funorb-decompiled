@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ae extends IntrusiveNode {
+abstract class GameEvent extends IntrusiveNode {
     int field_f;
     static ao field_h;
     static String field_g;
@@ -30,7 +30,7 @@ abstract class ae extends IntrusiveNode {
             return stackIn_2_0;
           }
           param0.c(var4.length, (byte) 78);
-          param0.position = param0.position + r.field_a.a(var4.length, (byte) -62, 0, param0.payload, param0.position, var4);
+          param0.position = param0.position + r.field_a.compress(var4.length, (byte) -62, 0, param0.payload, param0.position, var4);
           stackIn_4_0 = -var3_int + param0.position;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -62,7 +62,7 @@ abstract class ae extends IntrusiveNode {
         this.field_f = param1;
     }
 
-    ae() {
+    GameEvent() {
     }
 
     final static Sprite[] a(Sprite param0, int param1) {
@@ -104,7 +104,7 @@ abstract class ae extends IntrusiveNode {
           return;
         }
         String var2 = (String) null;
-        ae.a((PacketBuffer) null, (String) null, -18);
+        GameEvent.a((PacketBuffer) null, (String) null, -18);
         field_g = null;
         field_h = null;
     }
@@ -119,7 +119,7 @@ abstract class ae extends IntrusiveNode {
         this.unlink(true);
     }
 
-    ae(int param0) {
+    GameEvent(int param0) {
         this.a(0, param0);
     }
 

@@ -50,7 +50,7 @@ final class ub extends ie {
         }
     }
 
-    final static void a(String[][] param0, ul param1, boolean param2, String[][] param3, String[] param4, ul param5, int param6, byte[] param7, ul param8, int param9, int[] param10, byte[] param11, boolean param12, Sprite[][] param13, Sprite[][] param14) {
+    final static void a(String[][] param0, ResourceArchive param1, boolean param2, String[][] param3, String[] param4, ResourceArchive param5, int param6, byte[] param7, ResourceArchive param8, int param9, int[] param10, byte[] param11, boolean param12, Sprite[][] param13, Sprite[][] param14) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
