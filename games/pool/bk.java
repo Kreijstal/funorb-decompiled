@@ -114,14 +114,14 @@ final class bk extends IntrusiveNode {
           }
           var3_int = this.field_s;
           if (0 == var3_int) {
-            param0.field_a.a(false, (byte) -109);
+            param0.field_a.leaveShotMode(false, (byte) -109);
           } else {
             if (2 != var3_int) {
               if (var3_int == 1) {
-                param0.field_a.a(false, (byte) -127);
+                param0.field_a.leaveShotMode(false, (byte) -127);
               }
             } else {
-              param0.field_a.a(false, (byte) -122);
+              param0.field_a.leaveShotMode(false, (byte) -122);
             }
           }
           this.field_z = new Sprite(PoolGameModel.field_k.width, this.field_t + 10);

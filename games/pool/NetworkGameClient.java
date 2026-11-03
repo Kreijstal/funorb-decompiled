@@ -794,7 +794,7 @@ abstract class NetworkGameClient extends GameApplet {
           MenuSelection.a((byte) 98);
           TextWidgetPainter.field_n = UiComponentNode.loading;
           ClassicBallSkin.field_o = false;
-          PoolMatchController.a(param0 ^ 11934, CushionSegment.field_g, uj.field_d, DualLinkNode.field_r, PolarTableScene.field_nb);
+          PoolMatchController.loadInterfaceAssets(param0 ^ 11934, CushionSegment.field_g, uj.field_d, DualLinkNode.field_r, PolarTableScene.field_nb);
           if (LinkButtonPainter.field_g ||
             null != InstructionsScreen.field_J) {
             stackIn_102_0 = -122;

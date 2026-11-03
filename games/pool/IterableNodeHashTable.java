@@ -90,10 +90,10 @@ final class IterableNodeHashTable {
         if (param0) {
           return;
         }
-        if ((1 << AccountContentDialog.field_ub.localPlayerIndex & AccountContentDialog.field_ub.field_I.field_x) != 0) {
+        if ((1 << AccountContentDialog.field_ub.localPlayerIndex & AccountContentDialog.field_ub.gameModel.field_x) != 0) {
           TranslatedUiText.field_f[10] = dj.canceldraw;
         } else {
-          if (AccountContentDialog.field_ub.field_I.field_x == 0) {
+          if (AccountContentDialog.field_ub.gameModel.field_x == 0) {
             TranslatedUiText.field_f[10] = DateInputWidget.offerdraw;
           } else {
             TranslatedUiText.field_f[10] = ff.acceptdraw;

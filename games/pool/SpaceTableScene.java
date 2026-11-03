@@ -450,7 +450,7 @@ final class SpaceTableScene extends ModelTableScene {
         int var5Lifetime2;
         var10 = Pool.field_O;
         try {
-          var25 = param1.field_I.balls;
+          var25 = param1.gameModel.balls;
           var3 = var25;
           var57 = f.a((byte) 109, param1.viewMatrix);
           var24 = var57;
@@ -622,7 +622,7 @@ final class SpaceTableScene extends ModelTableScene {
             stackIn_47_2 = 73;
             stackIn_47_3 = true;
             stackIn_47_4 = var3;
-            if (param1.field_I.currentShot(76).phase != 0) {
+            if (param1.gameModel.currentShot(76).phase != 0) {
               stackIn_48_0 = this;
               stackIn_48_5 = false;
             } else {

@@ -315,13 +315,13 @@ final class CueStick {
         RuntimeException var3 = null;
         var14 = Pool.field_O;
         try {
-          var3_double = Math.sin((double)param0.field_G.polarAngle * 3.141592653589793 / 1024.0);
-          var5 = Math.cos(3.141592653589793 * (double)param0.field_G.polarAngle / 1024.0);
-          var7 = Math.sin((double)param0.field_G.azimuth * 3.141592653589793 / 1024.0);
-          var9 = Math.cos(3.141592653589793 * (double)param0.field_G.azimuth / 1024.0);
-          param0.field_I.a(this.field_l, param0.field_G.polarAngle, (byte) 49, param0.field_G.azimuth, param0.field_G.field_e, param0.field_G.field_d);
+          var3_double = Math.sin((double)param0.cueAim.polarAngle * 3.141592653589793 / 1024.0);
+          var5 = Math.cos(3.141592653589793 * (double)param0.cueAim.polarAngle / 1024.0);
+          var7 = Math.sin((double)param0.cueAim.azimuth * 3.141592653589793 / 1024.0);
+          var9 = Math.cos(3.141592653589793 * (double)param0.cueAim.azimuth / 1024.0);
+          param0.gameModel.a(this.field_l, param0.cueAim.polarAngle, (byte) 49, param0.cueAim.azimuth, param0.cueAim.field_e, param0.cueAim.field_d);
           for (var11 = 0; var11 < this.segmentOffsets.length; var11++) {
-            var12 = this.segmentOffsets[var11] + (double)param0.field_f;
+            var12 = this.segmentOffsets[var11] + (double)param0.cuePullbackDistance;
             this.field_d[var11][0] = (this.field_l[0] >> 13) + PotEvent.a(4885, var9 * (var3_double * var12));
             this.field_d[var11][1] = (this.field_l[1] >> 13) + PotEvent.a(4885, var12 * var3_double * var7);
             this.field_d[var11][2] = (this.field_l[2] >> 13) + PotEvent.a(4885, var12 * var5);

@@ -167,12 +167,12 @@ final class Camera {
 
     final void focusOnCueBall(PoolMatchController param0, int param1) {
         try {
-          this.targetX = (double)WidgetStyleLayer.b(126, param0.field_I.balls[0].positionX);
+          this.targetX = (double)WidgetStyleLayer.b(126, param0.gameModel.balls[0].positionX);
           if (param1 != 1) {
             field_j = (Sprite) null;
           }
-          this.targetY = (double)WidgetStyleLayer.b(param1 ^ 126, param0.field_I.balls[0].positionY);
-          this.setOrbit(3.141592653589793 * (double)param0.field_G.azimuth / 1024.0, 3.141592653589793 * (double)(param0.field_G.polarAngle + 32) / 1024.0, 192.0, -6861);
+          this.targetY = (double)WidgetStyleLayer.b(param1 ^ 126, param0.gameModel.balls[0].positionY);
+          this.setOrbit(3.141592653589793 * (double)param0.cueAim.azimuth / 1024.0, 3.141592653589793 * (double)(param0.cueAim.polarAngle + 32) / 1024.0, 192.0, -6861);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mm.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

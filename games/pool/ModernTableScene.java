@@ -203,7 +203,7 @@ final class ModernTableScene extends ModelTableScene {
         int var13Lifetime2;
         var14 = Pool.field_O;
         try {
-          var20 = param1.field_I.balls;
+          var20 = param1.gameModel.balls;
           var3 = var20;
           var36 = f.a((byte) -56, param1.viewMatrix);
           var19 = var36;
@@ -466,7 +466,7 @@ final class ModernTableScene extends ModelTableScene {
             stackIn_136_2 = 115;
             stackIn_136_3 = true;
             stackIn_136_4 = var3;
-            if (param1.field_I.currentShot(param0 ^ -45).phase != 0) {
+            if (param1.gameModel.currentShot(param0 ^ -45).phase != 0) {
               stackIn_137_0 = this;
               stackIn_137_5 = false;
             } else {
@@ -1169,13 +1169,13 @@ final class ModernTableScene extends ModelTableScene {
         if (param0 != -119) {
           field_eb = (he) null;
         }
-        if ((AccountContentDialog.field_ub.field_I.field_b & 1 << AccountContentDialog.field_ub.localPlayerIndex) != 0) {
+        if ((AccountContentDialog.field_ub.gameModel.field_b & 1 << AccountContentDialog.field_ub.localPlayerIndex) != 0) {
           TranslatedUiText.field_f[12] = AccountContentDialog.field_ub.unrated ? w.mpCancelrematchUnrated : AimTarget.mpCancelrematch;
         } else {
-          if (AccountContentDialog.field_ub.field_I.field_b != 0) {
+          if (AccountContentDialog.field_ub.gameModel.field_b != 0) {
             TranslatedUiText.field_f[12] = AccountContentDialog.field_ub.unrated ? NodeHashTableIterator.mpAcceptrematchUnrated : DialWidget.mpAcceptrematch;
           } else {
-            if (-1 + (1 << AccountContentDialog.field_ub.field_I.playerCount) == (AccountContentDialog.field_ub.field_cb | 1 << AccountContentDialog.field_ub.localPlayerIndex)) {
+            if (-1 + (1 << AccountContentDialog.field_ub.gameModel.playerCount) == (AccountContentDialog.field_ub.field_cb | 1 << AccountContentDialog.field_ub.localPlayerIndex)) {
               TranslatedUiText.field_f[12] = AccountContentDialog.field_ub.unrated ? e.mpRematchnewgameUnrated : fq.mpRematchnewgame;
             } else {
               TranslatedUiText.field_f[12] = !AccountContentDialog.field_ub.unrated ? MenuSelection.mpOfferrematch : TutorialSelectScreen.mpOfferrematchUnrated;

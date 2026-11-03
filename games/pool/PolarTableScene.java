@@ -109,7 +109,7 @@ final class PolarTableScene extends ModelTableScene {
         int[] var6_ref_int__Lifetime1;
         var9 = Pool.field_O;
         try {
-          var4 = param1.field_I.balls;
+          var4 = param1.gameModel.balls;
           var37 = f.a((byte) 53, param1.viewMatrix);
           var14 = var37;
           var5 = var14;
@@ -217,7 +217,7 @@ final class PolarTableScene extends ModelTableScene {
             stackIn_37_2 = 112;
             stackIn_37_3 = true;
             stackIn_37_4 = var4;
-            if (param1.field_I.currentShot(83).phase != 0) {
+            if (param1.gameModel.currentShot(83).phase != 0) {
               stackIn_38_0 = this;
               stackIn_38_5 = false;
             } else {

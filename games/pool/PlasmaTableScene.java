@@ -652,10 +652,10 @@ final class PlasmaTableScene extends TableScene {
           }
           if (param2.canControlCue(-38)) {
             if (id.field_c.field_g) {
-              param2.field_I.a(id.field_c.field_l, param2.field_G.polarAngle, (byte) 47, param2.field_G.azimuth, param2.field_G.field_e, param2.field_G.field_d);
+              param2.gameModel.a(id.field_c.field_l, param2.cueAim.polarAngle, (byte) 47, param2.cueAim.azimuth, param2.cueAim.field_e, param2.cueAim.field_d);
               id.field_c.field_g = false;
             }
-            var4_int = param2.field_f;
+            var4_int = param2.cuePullbackDistance;
             this.field_R[0] = (id.field_c.field_l[0] >> 13) + (var4_int * id.field_c.field_l[9] >> 13);
             this.field_X[0] = (id.field_c.field_l[10] * var4_int >> 13) + (id.field_c.field_l[1] >> 13);
             this.field_L[0] = (id.field_c.field_l[11] * var4_int >> 13) + (id.field_c.field_l[2] >> 13);
@@ -688,8 +688,8 @@ final class PlasmaTableScene extends TableScene {
                 var10++;
               }
               var5 = bc.field_c;
-              if (param2.field_I.rules instanceof EightBallRules) {
-                var6Lifetime1 = ((EightBallRules) (param2.field_I.rules)).a(-1);
+              if (param2.gameModel.rules instanceof EightBallRules) {
+                var6Lifetime1 = ((EightBallRules) (param2.gameModel.rules)).a(-1);
                 if (-1 != var6Lifetime1) {
                   var5 = hf.a(var6Lifetime1, (byte) 73);
                 }
@@ -735,7 +735,7 @@ final class PlasmaTableScene extends TableScene {
             this.field_K[var3_int].a((byte) -43);
           }
           this.n(2);
-          this.a(param1.field_I.balls, (byte) -122);
+          this.a(param1.gameModel.balls, (byte) -122);
           ClassicBallSkin.field_l = ClassicBallSkin.field_l - 1;
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fk.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -986,7 +986,7 @@ final class PlasmaTableScene extends TableScene {
         int var7Lifetime1;
         var10 = Pool.field_O;
         try {
-          var14 = param1.field_I.balls;
+          var14 = param1.gameModel.balls;
           var3 = var14;
           var16 = param1.viewMatrix;
           var13 = var16;
@@ -1030,8 +1030,8 @@ final class PlasmaTableScene extends TableScene {
               var12++;
             }
             var6 = bc.field_c;
-            if (param1.field_I.rules instanceof EightBallRules) {
-              var7Lifetime1 = ((EightBallRules) (param1.field_I.rules)).a(-1);
+            if (param1.gameModel.rules instanceof EightBallRules) {
+              var7Lifetime1 = ((EightBallRules) (param1.gameModel.rules)).a(-1);
               if (var7Lifetime1 != -1) {
                 var6 = hf.a(var7Lifetime1, (byte) 96);
               }
@@ -1057,7 +1057,7 @@ final class PlasmaTableScene extends TableScene {
             stackIn_28_2 = 122;
             stackIn_28_3 = true;
             stackIn_28_4 = var3;
-            if (param1.field_I.currentShot(20).phase != 0) {
+            if (param1.gameModel.currentShot(20).phase != 0) {
               stackIn_29_0 = this;
               stackIn_29_5 = false;
             } else {

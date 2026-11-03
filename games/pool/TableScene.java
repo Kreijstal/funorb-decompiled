@@ -136,7 +136,7 @@ abstract class TableScene {
         int var12 = 0;
         Ball var13 = null;
         try {
-          var13 = param2.field_I.balls[param3];
+          var13 = param2.gameModel.balls[param3];
           var6 = (long)(-param0.centerX + var13.positionX);
           var8 = (long)(var13.positionY - param0.centerY);
           var10 = IterableNodeHashTable.a(param1 ^ -24621, FullscreenFocusCanvas.multiplyFixedChecked(var6, var6, false) + FullscreenFocusCanvas.multiplyFixedChecked(var8, var8, false));
@@ -1580,14 +1580,14 @@ abstract class TableScene {
             this.field_r.isSamplePositionOutOfRange()) {
             this.field_r = null;
           }
-          var10 = param1.field_I.pockets;
+          var10 = param1.gameModel.pockets;
           var3 = var10;
           for (var4 = 0; var4 < var10.length; var4++) {
             var5 = var10[var4].pottedBalls;
             if (var5 != null) {
               for (var6 = 0; var6 < var5.size((byte) 127); var6++) {
                 var7 = var5.get(var6, 2229);
-                var8 = param1.field_I.balls[var7];
+                var8 = param1.gameModel.balls[var7];
                 if (var8.inPlay) {
                   throw new IllegalStateException("Ball in play cannot be potted!");
                 }

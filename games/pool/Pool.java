@@ -141,9 +141,9 @@ public final class Pool extends NetworkGameClient {
                 }
               } else {
                 if (!td.field_d) {
-                  AccountContentDialog.field_ub.a(false, true, (byte) -9);
+                  AccountContentDialog.field_ub.tick(false, true, (byte) -9);
                   while (LabeledChildWidget.h(127)) {
-                    AccountContentDialog.field_ub.p((byte) 101);
+                    AccountContentDialog.field_ub.handleKeyTyped((byte) 101);
                   }
                 } else {
                   var4 = 1;
@@ -163,13 +163,13 @@ public final class Pool extends NetworkGameClient {
             if (mj.field_e) {
               stackIn_26_0 = TextWidgetPainter.field_e;
               stackIn_27_1 = (0 != fl.field_q.pressedButton);
-              ((PoolMatchController) (Object) stackIn_26_0).a(stackIn_27_1, var4 != 0, (byte) -118);
+              ((PoolMatchController) (Object) stackIn_26_0).tick(stackIn_27_1, var4 != 0, (byte) -118);
             }
             if (MidiNoteMixer.field_v) {
               ie.a(180, var4 != 0, param1 - 17156, 320);
               stackIn_32_0 = AccountContentDialog.field_ub;
               stackIn_33_1 = (fl.field_q.pressedButton != 0);
-              ((PoolMatchController) (Object) stackIn_32_0).a(stackIn_33_1, var4 != 0, (byte) -108);
+              ((PoolMatchController) (Object) stackIn_32_0).tick(stackIn_33_1, var4 != 0, (byte) -108);
             }
             while (LabeledChildWidget.h(127)) {
               if (un.field_b) {
@@ -182,12 +182,12 @@ public final class Pool extends NetworkGameClient {
                 }
               }
               if (mj.field_e) {
-                TextWidgetPainter.field_e.p((byte) 94);
+                TextWidgetPainter.field_e.handleKeyTyped((byte) 94);
               }
               if (!MidiNoteMixer.field_v) {
                 continue;
               }
-              AccountContentDialog.field_ub.p((byte) 81);
+              AccountContentDialog.field_ub.handleKeyTyped((byte) 81);
             }
           }
           if (!td.field_d) {
@@ -272,7 +272,7 @@ public final class Pool extends NetworkGameClient {
             stackIn_106_7 = true;
           }
           var4_ref_uf = new PoolMatchController(stackIn_105_2, stackIn_105_3, stackIn_105_4, stackIn_105_5, stackIn_105_6, stackIn_106_7, var10, 0, false);
-          var4_ref_uf.field_I.a(ga.nextRandomInt(512, true, ea.field_r), -1, 0, (AccountContentDialog.field_ub.field_I.field_A + 1) % fr.field_n, param1 ^ 19063);
+          var4_ref_uf.gameModel.a(ga.nextRandomInt(512, true, ea.field_r), -1, 0, (AccountContentDialog.field_ub.gameModel.field_A + 1) % fr.field_n, param1 ^ 19063);
           AccountContentDialog.field_ub = var4_ref_uf;
           var5 = jd.field_a ? 1 : 0;
           stackIn_108_0 = -3405;
@@ -1075,7 +1075,7 @@ public final class Pool extends NetworkGameClient {
                 mj.field_e) {
                 PoolGameModel.l(param0 + 108);
                 if (MidiNoteMixer.field_v) {
-                  AccountContentDialog.field_ub.c(param0 ^ 259, false);
+                  AccountContentDialog.field_ub.openInGameMenu(param0 ^ 259, false);
                 }
                 mj.field_e = false;
                 GameRules.field_b = -2;
@@ -1099,15 +1099,15 @@ public final class Pool extends NetworkGameClient {
             }
             if (var2Lifetime1 != null) {
               if (Bzip2DecoderState.field_c == 79) {
-                ((PoolMatchController) (var2Lifetime1)).g(true);
+                ((PoolMatchController) (var2Lifetime1)).handleStartTurnPacket(true);
                 continue;
               }
               if (Bzip2DecoderState.field_c == 67) {
-                ((PoolMatchController) (var2Lifetime1)).b(PlayerContextMenu.field_e, false);
+                ((PoolMatchController) (var2Lifetime1)).readGameStateSync(PlayerContextMenu.field_e, false);
                 continue;
               }
               if (Bzip2DecoderState.field_c == 68) {
-                ((PoolMatchController) (var2Lifetime1)).a(PlayerContextMenu.field_e, 0);
+                ((PoolMatchController) (var2Lifetime1)).readMovePacket(PlayerContextMenu.field_e, 0);
                 continue;
               }
               if (Bzip2DecoderState.field_c == 76) {
@@ -1119,16 +1119,16 @@ public final class Pool extends NetworkGameClient {
                 continue;
               }
               if (Bzip2DecoderState.field_c == 75) {
-                ((PoolMatchController) (var2Lifetime1)).a(96, PlayerContextMenu.field_e);
+                ((PoolMatchController) (var2Lifetime1)).readEndShotPacket(96, PlayerContextMenu.field_e);
                 continue;
               }
               if (Bzip2DecoderState.field_c == 77) {
-                ((PoolMatchController) (var2Lifetime1)).d(4096, PlayerContextMenu.field_e);
+                ((PoolMatchController) (var2Lifetime1)).readEndResolutionPacket(4096, PlayerContextMenu.field_e);
                 continue;
               }
               if (Bzip2DecoderState.field_c == 69) {
                 var3Lifetime1 = PlayerContextMenu.field_e.readByte((byte) 105);
-                ((PoolMatchController) (var2Lifetime1)).field_I.c(param0 - 14289, var3Lifetime1);
+                ((PoolMatchController) (var2Lifetime1)).gameModel.c(param0 - 14289, var3Lifetime1);
                 if (((PoolMatchController) (var2Lifetime1)).localPlayerIndex == var3Lifetime1) {
                   LobbyGame.field_gc.a(17, 256, (byte) -121, 128);
                 } else {
@@ -1143,8 +1143,8 @@ public final class Pool extends NetworkGameClient {
                   stackIn_102_2 = 0;
                 }
                 fq.a(stackIn_101_0, stackIn_101_1, stackIn_102_2, false);
-                ((PoolMatchController) (var20)).a(-23095);
-                if ((f.field_f & ((PoolMatchController) (var20)).field_L) == 0) {
+                ((PoolMatchController) (var20)).resetView(-23095);
+                if ((f.field_f & ((PoolMatchController) (var20)).modeFlags) == 0) {
                   continue;
                 }
                 MatchingTextValidator.field_w = 23;
@@ -1152,7 +1152,7 @@ public final class Pool extends NetworkGameClient {
                 continue;
               }
               if (Bzip2DecoderState.field_c == 70) {
-                ((PoolMatchController) (var2Lifetime1)).field_I.field_x = PlayerContextMenu.field_e.readUnsignedByte(param0 ^ -92);
+                ((PoolMatchController) (var2Lifetime1)).gameModel.field_x = PlayerContextMenu.field_e.readUnsignedByte(param0 ^ -92);
                 if (AccountContentDialog.field_ub == null) {
                   continue;
                 }
@@ -1160,12 +1160,12 @@ public final class Pool extends NetworkGameClient {
                 continue;
               }
               if (Bzip2DecoderState.field_c == 71) {
-                ((PoolMatchController) (var2Lifetime1)).field_I.field_p = PlayerContextMenu.field_e.readUnsignedByte(param0 - 63);
-                ((PoolMatchController) (var2Lifetime1)).field_I.field_x = ((PoolMatchController) (var2Lifetime1)).field_I.field_x & ~((PoolMatchController) (var2Lifetime1)).field_I.field_p;
+                ((PoolMatchController) (var2Lifetime1)).gameModel.field_p = PlayerContextMenu.field_e.readUnsignedByte(param0 - 63);
+                ((PoolMatchController) (var2Lifetime1)).gameModel.field_x = ((PoolMatchController) (var2Lifetime1)).gameModel.field_x & ~((PoolMatchController) (var2Lifetime1)).gameModel.field_p;
                 continue;
               }
               if (Bzip2DecoderState.field_c == 72) {
-                ((PoolMatchController) (var2Lifetime1)).field_I.field_b = PlayerContextMenu.field_e.readUnsignedByte(param0 - 119);
+                ((PoolMatchController) (var2Lifetime1)).gameModel.field_b = PlayerContextMenu.field_e.readUnsignedByte(param0 - 119);
                 if (AccountContentDialog.field_ub == null) {
                   continue;
                 }
@@ -1174,7 +1174,7 @@ public final class Pool extends NetworkGameClient {
               }
               if (73 == Bzip2DecoderState.field_c) {
                 ((PoolMatchController) (var2Lifetime1)).field_cb = PlayerContextMenu.field_e.readUnsignedByte(-105);
-                ((PoolMatchController) (var2Lifetime1)).field_I.field_b = ((PoolMatchController) (var2Lifetime1)).field_I.field_b & ~((PoolMatchController) (var2Lifetime1)).field_cb;
+                ((PoolMatchController) (var2Lifetime1)).gameModel.field_b = ((PoolMatchController) (var2Lifetime1)).gameModel.field_b & ~((PoolMatchController) (var2Lifetime1)).field_cb;
                 if (null == AccountContentDialog.field_ub) {
                   continue;
                 }
@@ -1223,7 +1223,7 @@ public final class Pool extends NetworkGameClient {
             stackIn_58_7 = true;
           }
           var7 = new PoolMatchController(stackIn_57_2, stackIn_57_3, stackIn_57_4, stackIn_57_5, stackIn_57_6, stackIn_58_7, var6, var2_int, var4 != 0);
-          var7.c(16915, PlayerContextMenu.field_e);
+          var7.loadStateSnapshot(16915, PlayerContextMenu.field_e);
           if (65 != Bzip2DecoderState.field_c) {
             mj.field_e = true;
             TextWidgetPainter.field_e = var7;

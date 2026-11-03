@@ -141,7 +141,7 @@ class om extends TextWidgetPainter {
         boolean stackIn_146_0 = false;
         boolean stackIn_158_0 = false;
         if (null != AccountContentDialog.field_ub) {
-          AccountContentDialog.field_ub.a(param1, -29423);
+          AccountContentDialog.field_ub.drawHud(param1, -29423);
         }
         var2 = 36 / ((param0 - 1) / 45);
         if (TextWidgetPainter.field_e == null) {
@@ -165,7 +165,7 @@ class om extends TextWidgetPainter {
             AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
           }
         } else {
-          TextWidgetPainter.field_e.a(param1, -29423);
+          TextWidgetPainter.field_e.drawHud(param1, -29423);
           if (!TranslatedUiText.field_d) {
             if (null == AccountContentDialog.field_ub) {
               if (null == TextWidgetPainter.field_e) {

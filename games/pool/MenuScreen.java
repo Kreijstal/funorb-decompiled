@@ -691,7 +691,7 @@ class MenuScreen extends jh {
                                                                                   if (!this.selection.isPressActivated((byte) 120)) {
                                                                                     break regionExit2;
                                                                                   }
-                                                                                  if ((AccountContentDialog.field_ub.field_L & TutorialController.field_c) != 0) {
+                                                                                  if ((AccountContentDialog.field_ub.modeFlags & TutorialController.field_c) != 0) {
                                                                                     AccountContentDialog.field_ub.requestRematch((byte) -17);
                                                                                   } else {
                                                                                     var6 = param1 ? 1 : 0;
@@ -745,7 +745,7 @@ class MenuScreen extends jh {
                                                                                   if (!this.selection.isPressActivated((byte) 78)) {
                                                                                     break regionExit2;
                                                                                   }
-                                                                                  if ((AccountContentDialog.field_ub.field_L & f.field_f) != 0) {
+                                                                                  if ((AccountContentDialog.field_ub.modeFlags & f.field_f) != 0) {
                                                                                     var6 = param1 ? 1 : 0;
                                                                                     stackIn_240_0 = -3405;
                                                                                     stackIn_240_1 = -8;
@@ -756,7 +756,7 @@ class MenuScreen extends jh {
                                                                                     }
                                                                                     fq.a(stackIn_240_0, stackIn_240_1, stackIn_241_2, var6 != 0);
                                                                                   } else {
-                                                                                    if ((AccountContentDialog.field_ub.field_L & sk.field_d) != 0) {
+                                                                                    if ((AccountContentDialog.field_ub.modeFlags & sk.field_d) != 0) {
                                                                                       var6 = param1 ? 1 : 0;
                                                                                       stackIn_236_0 = -3405;
                                                                                       stackIn_236_1 = -6;
@@ -785,7 +785,7 @@ class MenuScreen extends jh {
                                                                             if (!this.selection.isPressActivated((byte) 75)) {
                                                                               break regionExit2;
                                                                             }
-                                                                            AccountContentDialog.field_ub.c(256, param1);
+                                                                            AccountContentDialog.field_ub.openInGameMenu(256, param1);
                                                                             ContextMenu.field_Sb = true;
                                                                             jc.field_c = false;
                                                                           }

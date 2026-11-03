@@ -848,7 +848,7 @@ final class TikiTableScene extends ModelTableScene {
         int var10Lifetime1;
         var11 = Pool.field_O;
         try {
-          var21 = param1.field_I.balls;
+          var21 = param1.gameModel.balls;
           var3 = var21;
           var30 = f.a((byte) -119, param1.viewMatrix);
           var18 = var30;
@@ -974,7 +974,7 @@ final class TikiTableScene extends ModelTableScene {
             stackIn_53_2 = 102;
             stackIn_53_3 = true;
             stackIn_53_4 = var3;
-            if (param1.field_I.currentShot(29).phase != 0) {
+            if (param1.gameModel.currentShot(29).phase != 0) {
               stackIn_54_0 = this;
               stackIn_54_5 = false;
             } else {

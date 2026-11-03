@@ -25,8 +25,8 @@ final class nn {
         if (var3 == null) {
           return;
         }
-        if (vn.field_e < var3.field_I.balls.length) {
-          var3.field_I.balls[vn.field_e].transformDirty = true;
+        if (vn.field_e < var3.gameModel.balls.length) {
+          var3.gameModel.balls[vn.field_e].transformDirty = true;
           return;
         }
     }

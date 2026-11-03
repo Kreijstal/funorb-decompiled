@@ -302,7 +302,7 @@ final class TutorialController {
         } else {
           if (null != this.field_j) {
             this.field_j.previousStep = this.currentStep;
-            this.field_a.attachTutorial(104, this.field_a.field_I.field_h, this.field_j);
+            this.field_a.attachTutorial(104, this.field_a.gameModel.field_h, this.field_j);
           }
         }
     }
@@ -385,21 +385,21 @@ final class TutorialController {
           if (var4_int == 2048) {
             var12 = (String) null;
             ProgressBarWidget.a(true, 0, CueAim.pottingTheRestOfYourGroup, (String) null);
-            var13 = this.field_a.field_I.balls;
+            var13 = this.field_a.gameModel.balls;
             var2 = var13;
-            var3 = this.field_a.field_I.rules.a(-1);
+            var3 = this.field_a.gameModel.rules.a(-1);
             if (0 == var3 ||
               var3 == 1) {
-              var4 = this.field_a.field_I.currentShot(105);
+              var4 = this.field_a.gameModel.currentShot(105);
               var5 = null;
               var14 = 0;
               var6 = var14;
               while (var13.length > var14) {
                 var17 = var13[var14];
                 if (var17.inPlay &&
-                  var3 == this.field_a.field_I.rules.b(var14, 30554)) {
-                  var8 = this.field_a.field_I.nearestPocketIndex(17897, var14);
-                  var18 = this.field_a.field_I.pockets[var8];
+                  var3 == this.field_a.gameModel.rules.b(var14, 30554)) {
+                  var8 = this.field_a.gameModel.nearestPocketIndex(17897, var14);
+                  var18 = this.field_a.gameModel.pockets[var8];
                   var17.positionX = var18.centerX;
                   var17.inPlay = false;
                   var17.positionY = var18.centerY;
@@ -413,36 +413,36 @@ final class TutorialController {
                 var14++;
               }
               if (var5 != null) {
-                this.field_a.field_I.stopAllBalls(-54);
+                this.field_a.gameModel.stopAllBalls(-54);
                 var4.endResolution = MarkerSliderPainter.field_j;
                 var4.field_n = ((PotEvent) (((IntrusiveDeque) (var5)).c((byte) -64))).ballIndex;
                 var4.pottedBalls = (IntrusiveDeque) (var5);
                 var4.phase = 2;
-                stackIn_27_0 = this.field_a.field_I.f((byte) 117);
-                this.field_a.s((byte) -62);
+                stackIn_27_0 = this.field_a.gameModel.f((byte) 117);
+                this.field_a.beginTurn((byte) -62);
               }
             }
           }
         } else {
-          if (this.field_a.field_I.rules.a(-1) == -1) {
+          if (this.field_a.gameModel.rules.a(-1) == -1) {
             var4_int = ga.nextRandomInt(2, true, ea.field_r);
             var5_int = ga.nextRandomInt(7, true, ea.field_r) - (-(var4_int << 3) - 1);
-            var6 = ga.nextRandomInt(this.field_a.field_I.pockets.length, true, ea.field_r);
-            var16 = this.field_a.field_I.pockets[var6];
+            var6 = ga.nextRandomInt(this.field_a.gameModel.pockets.length, true, ea.field_r);
+            var16 = this.field_a.gameModel.pockets[var6];
             var18 = var16;
             var18 = var16;
-            var8_ref_pq = this.field_a.field_I.balls[var5_int];
-            var15 = this.field_a.field_I.currentShot(75);
+            var8_ref_pq = this.field_a.gameModel.balls[var5_int];
+            var15 = this.field_a.gameModel.currentShot(75);
             ProgressBarWidget.a(true, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{dq.field_a.a((byte) 92, var4_int)}, -1, ModelTableScene.pottingBallForYou), (String) null);
-            this.field_a.field_I.stopAllBalls(-95);
-            this.field_a.field_I.rules.a(var4_int, -1, 0);
+            this.field_a.gameModel.stopAllBalls(-95);
+            this.field_a.gameModel.rules.a(var4_int, -1, 0);
             var15.endResolution = i.field_m | MarkerSliderPainter.field_j;
             var15.phase = 2;
             var15.pottedBalls = new IntrusiveDeque();
             var15.pottedBalls.b((byte) 105, new PotEvent(var5_int, var6));
             var15.field_n = var5_int;
-            this.field_a.field_I.f((byte) 53);
-            this.field_a.s((byte) -36);
+            this.field_a.gameModel.f((byte) 53);
+            this.field_a.beginTurn((byte) -36);
             var16.addBall(var5_int, 69);
             var8_ref_pq.inPlay = false;
             var8_ref_pq.positionY = var16.centerY;
@@ -484,8 +484,8 @@ final class TutorialController {
             this.b(1, 9, -28186);
           }
           if (2048 == this.currentStep.field_s &&
-            this.field_a.field_I.rules instanceof EightBallRules) {
-            var7 = (EightBallRules) (this.field_a.field_I.rules);
+            this.field_a.gameModel.rules instanceof EightBallRules) {
+            var7 = (EightBallRules) (this.field_a.gameModel.rules);
             var4 = var7.f(22533, 0);
             if (var4 == 0 ||
               var4 == 1) {
@@ -534,7 +534,7 @@ final class TutorialController {
             }
           }
           if (this.currentStep.field_s == 16384 &&
-            param1.groupBefore == this.field_a.field_I.rules.b(param1.field_n, 30554)) {
+            param1.groupBefore == this.field_a.gameModel.rules.b(param1.field_n, 30554)) {
             this.b(1, 14, -28186);
             return;
           }
@@ -708,8 +708,8 @@ final class TutorialController {
         if (param0 != -1) {
           this.c(127);
         }
-        this.field_a.field_I.setGameType(this.field_n, (byte) -118);
-        this.field_a.field_G.azimuth = 0;
+        this.field_a.gameModel.setGameType(this.field_n, (byte) -118);
+        this.field_a.cueAim.azimuth = 0;
         this.field_a.snapCameraToPreset(-24070);
         ProgressBarWidget.a(true, 0, this.field_g, LoginTextValue.pressEscapeForOptionsMenu);
     }

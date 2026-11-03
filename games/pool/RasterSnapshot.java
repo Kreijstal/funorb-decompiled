@@ -29,19 +29,19 @@ final class RasterSnapshot extends IntrusiveNode {
         ShotRecord var6 = null;
         ShotRecord var7 = null;
         try {
-          var6 = param0.field_I.currentShot(param1 + 16848);
+          var6 = param0.gameModel.currentShot(param1 + 16848);
           var7 = var6;
           if (param1 != -16813) {
             field_w = (UiComponent) null;
           }
           var3 = param0.isLocalPlayersTurn(-1) ? 1 : 0;
-          if ((TutorialController.field_c & param0.field_L) != 0) {
+          if ((TutorialController.field_c & param0.modeFlags) != 0) {
             stackIn_8_0 = (var3 != 0) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }
           var4 = stackIn_8_0;
-          if ((TutorialController.field_c & param0.field_L) != 0) {
+          if ((TutorialController.field_c & param0.modeFlags) != 0) {
             stackIn_14_0 = (var3 == 0) ? 1 : 0;
           } else {
             stackIn_14_0 = 1;
@@ -49,19 +49,19 @@ final class RasterSnapshot extends IntrusiveNode {
           var5 = stackIn_14_0;
           if (var4 != 0 &&
             var7.c(true)) {
-            ArchiveLoadSequence.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.field_I.field_h[var6.playerIndex]}, -1, AgeValidator.whichGroupDoYouWant), dq.field_a.a((byte) 99, 1), dq.field_a.a((byte) 120, 0), 40, 2, 1);
+            ArchiveLoadSequence.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.gameModel.field_h[var6.playerIndex]}, -1, AgeValidator.whichGroupDoYouWant), dq.field_a.a((byte) 99, 1), dq.field_a.a((byte) 120, 0), 40, 2, 1);
             return;
           }
           if (var4 != 0 &&
             var7.a(-110)) {
-            ArchiveLoadSequence.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.field_I.field_h[var6.playerIndex]}, -1, ml.wouldYouLikeToPlayOrPass), rl.decisionButtonPass, ImageProducerRasterBuffer.decisionButtonPlay, param1 + 16877, 16, 8);
+            ArchiveLoadSequence.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.gameModel.field_h[var6.playerIndex]}, -1, ml.wouldYouLikeToPlayOrPass), rl.decisionButtonPass, ImageProducerRasterBuffer.decisionButtonPlay, param1 + 16877, 16, 8);
             return;
           }
           if (var5 != 0) {
             if (!var7.c((byte) 91)) {
               return;
             }
-            ArchiveLoadSequence.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.field_I.field_h[(1 + var7.playerIndex) % param0.field_I.playerCount]}, -1, ml.wouldYouLikeToPlayOrPass), rl.decisionButtonPass, ImageProducerRasterBuffer.decisionButtonPlay, -122, 64, 32);
+            ArchiveLoadSequence.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.gameModel.field_h[(1 + var7.playerIndex) % param0.gameModel.playerCount]}, -1, ml.wouldYouLikeToPlayOrPass), rl.decisionButtonPass, ImageProducerRasterBuffer.decisionButtonPlay, -122, 64, 32);
             return;
           }
           return;

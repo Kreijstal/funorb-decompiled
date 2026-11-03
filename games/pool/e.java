@@ -154,7 +154,7 @@ final class e {
         RuntimeException decompiledCaughtException = null;
         try {
           if (GzipDecoder.field_h) {
-            var2 = param1.field_I.currentShot(60);
+            var2 = param1.gameModel.currentShot(60);
             LobbyGame.field_Vb.updateRoot(true, false);
             if (NanoTickClock.field_t.pressedButton == 1) {
               var2.a(ag.field_a, true);
