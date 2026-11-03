@@ -8,11 +8,11 @@ final class IterableNodeHashTable {
     static String privatechatFriendOffline;
     private IntrusiveNode[] field_g;
     static String idlemessage20min;
-    static di field_k;
+    static ResourceArchive field_k;
     private IntrusiveNode field_j;
     static int field_h;
     private int field_m;
-    static vh field_e;
+    static UiComponent field_e;
     private int field_b;
     static int[] field_c;
 
@@ -32,7 +32,7 @@ final class IterableNodeHashTable {
           param1.previous.next = param1;
           param1.key = param2;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "bm.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bm.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class IterableNodeHashTable {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class IterableNodeHashTable {
         if (param0) {
           return;
         }
-        if ((1 << AccountContentDialog.field_ub.field_db & AccountContentDialog.field_ub.field_I.field_x) != 0) {
+        if ((1 << AccountContentDialog.field_ub.localPlayerIndex & AccountContentDialog.field_ub.field_I.field_x) != 0) {
           TranslatedUiText.field_f[10] = dj.canceldraw;
         } else {
           if (AccountContentDialog.field_ub.field_I.field_x == 0) {
@@ -189,7 +189,7 @@ final class IterableNodeHashTable {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

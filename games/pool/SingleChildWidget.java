@@ -11,13 +11,13 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     static int[] field_G;
     static String gameoptPleaseselectoption2;
     static String muChatPublic;
-    static vh field_J;
+    static UiComponent field_J;
 
     SingleChildWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_J = null;
         gameoptPleaseselectoption2 = null;
         field_F = null;
@@ -57,7 +57,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -116,7 +116,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -191,17 +191,17 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     final static void f(int param0) {
-        if (param0 >= ~ec.field_b) {
+        if (param0 >= ~BallDebugOverlay.field_b) {
           AgeValidator.a(true, 256);
           return;
         }
-        int var1 = ec.field_b % 32;
-        AgeValidator.a(true, -var1 + (32 + ec.field_b));
+        int var1 = BallDebugOverlay.field_b % 32;
+        AgeValidator.a(true, -var1 + (32 + BallDebugOverlay.field_b));
     }
 
     final static IndexedSprite a(IndexedSprite param0, byte param1, int[] param2) {
@@ -217,16 +217,16 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         try {
           var3 = new IndexedSprite(0, 0, 0);
           var3.field_i = param2;
-          var3.field_e = param0.field_e;
-          var3.field_d = param0.field_d;
-          var3.field_b = param0.field_b;
+          var3.trimX = param0.trimX;
+          var3.trimY = param0.trimY;
+          var3.fullHeight = param0.fullHeight;
           if (param1 <= 23) {
             SingleChildWidget.a(0.5253398849342288, -86, 126);
           }
-          var3.field_f = param0.field_f;
+          var3.width = param0.width;
           var3.field_j = param0.field_j;
-          var3.field_g = param0.field_g;
-          var3.field_h = param0.field_h;
+          var3.height = param0.height;
+          var3.fullWidth = param0.fullWidth;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -245,7 +245,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -304,7 +304,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           if (var5_int != 80) {
             return false;
           }
-          if (!vj.field_c[81]) {
+          if (!TextLineLayout.field_c[81]) {
             stackIn_12_0 = this.a(param3, 10);
           } else {
             stackIn_12_0 = this.a(param3, false);
@@ -320,7 +320,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -390,7 +390,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -417,7 +417,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -443,7 +443,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -494,7 +494,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

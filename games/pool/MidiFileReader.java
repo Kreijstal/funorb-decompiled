@@ -13,7 +13,7 @@ final class MidiFileReader {
     int[] trackTicks;
 
     final int readMessage(int trackIndex) {
-        int var2 = this.c(trackIndex);
+        int var2 = this.readNextMessage(trackIndex);
         return var2;
     }
 
@@ -88,7 +88,7 @@ final class MidiFileReader {
         return this.trackPositions.length;
     }
 
-    final void f(int param0) {
+    final void readDelta(int param0) {
         int var2 = this.packet.k(88);
         this.trackTicks[param0] = this.trackTicks[param0] + var2;
     }
@@ -123,7 +123,7 @@ final class MidiFileReader {
           this.trackTicks[var4] = 0;
           this.runningStatus[var4] = 0;
           this.packet.position = this.trackStarts[var4];
-          this.f(var4);
+          this.readDelta(var4);
           this.trackPositions[var4] = this.packet.position;
         }
     }
@@ -165,7 +165,7 @@ final class MidiFileReader {
         return var4Lifetime1;
     }
 
-    private final int c(int param0) {
+    private final int readNextMessage(int param0) {
         int var2;
         int var3;
         int var4;

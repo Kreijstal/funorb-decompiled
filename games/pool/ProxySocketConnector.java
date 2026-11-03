@@ -10,7 +10,7 @@ final class ProxySocketConnector extends SocketConnector {
     static int keycodeDefaultDown2;
     static long field_g;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_e = null;
         if (param0 != 15296) {
           String var2 = (String) null;
@@ -101,7 +101,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class ProxySocketConnector extends SocketConnector {
             var6.write(("CONNECT " + this.field_c + ":" + this.field_a + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           }
           if (param1 != 25) {
-            ProxySocketConnector.c(-94);
+            ProxySocketConnector.releaseStatics(-94);
           }
           boolean decompiledFrameRemainder0 = true;
           var6.flush();
@@ -205,7 +205,7 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -323,11 +323,11 @@ final class ProxySocketConnector extends SocketConnector {
           if (d.field_d != null) {
             d.field_d.dismissDialog(17);
           }
-          var1 = ve.d(120);
-          vj.field_j = new LoginForm(var1, (String) null, true, false, param0);
-          wd.field_Ub.showDialog(tn.field_n, 30000);
-          tn.field_n.replaceContent(vj.field_j, 30);
-          tn.field_n.finishTransition(param0);
+          var1 = BitmapTextLayout.d(120);
+          TextLineLayout.field_j = new LoginForm(var1, (String) null, true, false, param0);
+          TabbedPane.field_Ub.showDialog(RasterSnapshot.field_n, 30000);
+          RasterSnapshot.field_n.replaceContent(TextLineLayout.field_j, 30);
+          RasterSnapshot.field_n.finishTransition(param0);
           return;
         }
         throw new IllegalStateException();
@@ -342,11 +342,11 @@ final class ProxySocketConnector extends SocketConnector {
           ArrayWidgetGroup.field_I = param2;
           hn.field_b = 2;
           var5 = (CharSequence) ((Object) param2);
-          di.field_a = TutorialController.normalizeDisplayName(88, var5);
+          ResourceArchive.field_a = TutorialController.normalizeDisplayName(88, var5);
           c.field_d = param1;
           DualLinkNode.field_p = true;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "kr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kr.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -11,7 +11,7 @@ final class th {
     static boolean field_h;
     static String field_g;
     static String close;
-    static p[] field_l;
+    static ModelInstance[] field_l;
     static int field_b;
     static String xsGame;
 
@@ -26,7 +26,7 @@ final class th {
         SingleChildWidget.field_F = cb.field_f[param1];
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleChatKey(int param0, int param1, int param2) {
         StringBuilder discarded$1 = null;
         int var3;
         int var4;
@@ -73,7 +73,7 @@ final class th {
         var3 = 1 / ((param1 - 10) / 61);
         var4 = 1;
         if (!gd.field_b &&
-          uq.field_D == null) {
+          Bzip2DecoderState.field_D == null) {
           var4 = 0;
         }
         if (hn.field_b == 0 &&
@@ -84,7 +84,7 @@ final class th {
           !hp.a(false)) {
           var4 = 0;
         }
-        if (qi.field_a == 84) {
+        if (IterableDualLinkDeque.field_a == 84) {
           if (var4 == 0) {
             if (hn.field_b == 0) {
               return true;
@@ -100,24 +100,24 @@ final class th {
                 jh.a(0, hj.unableToSendMessagePasswordA, (String) null, 2, (String) null, true);
                 var15 = (String) null;
                 var14 = (String) null;
-                jh.a(0, ci.unableToSendMessagePasswordB, (String) null, 2, (String) null, true);
+                jh.a(0, DebugTuningSlider.unableToSendMessagePasswordB, (String) null, 2, (String) null, true);
               } else {
                 var6 = hn.field_b;
                 if (var6 == 0 &&
-                  null != em.field_L) {
+                  null != HighscoresScreen.field_L) {
                   var6 = 1;
                 }
                 if (f.a(5, var6) == 2) {
                   om.a(1, var6, param0, (byte) -4);
                 }
-                ub.a((byte) -116, var5_ref_String, param2, ArrayWidgetGroup.field_I, hn.field_b, -1);
+                AlternateLongAndTextLoginPayload.a((byte) -116, var5_ref_String, param2, ArrayWidgetGroup.field_I, hn.field_b, -1);
               }
             }
           }
           cl.a(14851);
           return true;
         }
-        if (qi.field_a == 85) {
+        if (IterableDualLinkDeque.field_a == 85) {
           if (var4 != 0 &&
             td.field_c.length() > 0) {
             TikiTableScene.a(' ', -1 + td.field_c.length(), -2790, td.field_c);
@@ -126,7 +126,7 @@ final class th {
           return true;
         }
         var5 = ml.field_b;
-        if (!nq.a((char) var5, (byte) -125)) {
+        if (!UiTheme.isRenderableCharacter((char) var5, (byte) -125)) {
           return false;
         }
         if (var4 == 0) {
@@ -135,7 +135,7 @@ final class th {
         if (80 > td.field_c.length()) {
           discarded$1 = td.field_c.append((char) var5);
           var6Lifetime1 = 485;
-          var65 = di.field_j;
+          var65 = ResourceArchive.field_j;
           var16 = IterableNodeHashTable.a(524288, var65);
           var66 = var16;
           if (hn.field_b != 2) {
@@ -145,25 +145,25 @@ final class th {
               var67 = var8Lifetime1 + var66 + ": ";
               var6Lifetime1 = var6Lifetime1 - m.field_c.b(var67);
             } else {
-              if (null == em.field_L) {
-                if (!ej.field_l) {
+              if (null == HighscoresScreen.field_L) {
+                if (!JaggrabDownloader.field_l) {
                   boolean decompiledFrameRemainder0 = true;
-                  if (em.field_L != null) {
+                  if (HighscoresScreen.field_L != null) {
                     if (!sa.field_c) {
-                      var70 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
+                      var70 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, xsGame) + "] ";
                       var71 = var70 + var66 + ": ";
                       var6Lifetime1 = var6Lifetime1 - m.field_c.b(var71);
                       decompiledFrameRemainder0 = false;
                     }
                     else {
-                      if (kn.field_g == null) {
-                        var68 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
+                      if (PlayerContextMenu.field_g == null) {
+                        var68 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, xsGame) + "] ";
                         var69 = var68 + var66 + ": ";
                         var6Lifetime1 = var6Lifetime1 - m.field_c.b(var69);
                         decompiledFrameRemainder0 = false;
                       }
                       else {
-                        var8Lifetime1 = "[" + kn.field_g + "] ";
+                        var8Lifetime1 = "[" + PlayerContextMenu.field_g + "] ";
                       }
                     }
                   }
@@ -178,22 +178,22 @@ final class th {
                 }
               }
               if (decompiledFrameRemainder1) {
-                if (em.field_L != null) {
+                if (HighscoresScreen.field_L != null) {
                   if (!sa.field_c) {
-                    var75 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
+                    var75 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, xsGame) + "] ";
                     var76 = var75 + var66 + ": ";
                     var6Lifetime1 = var6Lifetime1 - m.field_c.b(var76);
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    if (kn.field_g == null) {
-                      var73 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
+                    if (PlayerContextMenu.field_g == null) {
+                      var73 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, xsGame) + "] ";
                       var74 = var73 + var66 + ": ";
                       var6Lifetime1 = var6Lifetime1 - m.field_c.b(var74);
                       decompiledFrameRemainder1 = false;
                     }
                     else {
-                      var8Lifetime1 = "[" + kn.field_g + "] ";
+                      var8Lifetime1 = "[" + PlayerContextMenu.field_g + "] ";
                     }
                   }
                 }
@@ -210,7 +210,7 @@ final class th {
           }
           var89 = (CharSequence) ((Object) ArrayWidgetGroup.field_I);
           var78 = AccountWelcomePanel.substituteTemplateArguments(new String[]{WidgetContainer.a(false, var89)}, -1, jl.privatequickchatToX);
-          var79 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var16}, -1, vh.privatequickchatFromX);
+          var79 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var16}, -1, UiComponent.privatequickchatFromX);
           var10 = m.field_c.b(var78);
           var11 = m.field_c.b(var79);
           if (var10 <= var11) {
@@ -229,7 +229,7 @@ final class th {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         muXEnteredGame = null;
         field_j = (byte[][]) null;
         field_g = null;
@@ -296,7 +296,7 @@ final class th {
             th.a(var6 + 1, param1 + 0, param2, param3, param4);
           }
           if (param1 != -30916) {
-            th.a(-19, 83, -97);
+            th.handleChatKey(-19, 83, -97);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -315,7 +315,7 @@ final class th {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param4).append(')').toString());
         }
     }
 

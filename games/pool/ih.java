@@ -3,13 +3,13 @@
  */
 final class ih {
     static String fsUnavailable;
-    static vh field_e;
+    static UiComponent field_e;
     static String[] hsModeName;
     static int[] field_d;
     static BufferedFile field_a;
     static String[] field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         hsModeName = null;
         field_d = null;
         fsUnavailable = null;
@@ -64,8 +64,8 @@ final class ih {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          if (no.field_h == tl.field_J) {
-            ej.field_j.position = 0;
+          if (Js5Transport.field_h == RankingsScreen.field_J) {
+            JaggrabDownloader.field_j.position = 0;
             bq.field_q = null;
             if (param0 == null) {
               bc.field_b.position = 0;
@@ -87,11 +87,11 @@ final class ih {
                 stackIn_21_2 = var8;
               }
               ((PacketBuffer) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_21_2);
-              ej.field_j.a(16, false);
-              ej.field_j.position = ej.field_j.position + 1;
-              var9 = ej.field_j.position;
-              ad.a((byte) 93, rb.field_l, bc.field_b, UiWidget.field_q, ej.field_j);
-              ej.field_j.b(-var9 + ej.field_j.position, true);
+              JaggrabDownloader.field_j.a(16, false);
+              JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 1;
+              var9 = JaggrabDownloader.field_j.position;
+              ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, bc.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
+              JaggrabDownloader.field_j.b(-var9 + JaggrabDownloader.field_j.position, true);
             } else {
               var9 = 0;
               if (param3) {
@@ -103,101 +103,101 @@ final class ih {
               bc.field_b.a(false, var13);
               bc.field_b.a(false, var8);
               var14 = (CharSequence) ((Object) param0);
-              bc.field_b.a(false, cn.a(-28, var14));
+              bc.field_b.a(false, DelegatingCanvas.normalizeUsername(-28, var14));
               bc.field_b.writeShort((byte) -81, param2);
               bc.field_b.a(param6, false);
               bc.field_b.a(var9, false);
-              ej.field_j.a(18, false);
-              ej.field_j.position = ej.field_j.position + 2;
-              var10 = ej.field_j.position;
+              JaggrabDownloader.field_j.a(18, false);
+              JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 2;
+              var10 = JaggrabDownloader.field_j.position;
               var11_ref_String = DateInputWidget.a(NanoTickClock.getApplet(79), (byte) 112);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              ej.field_j.a(-9946, var11_ref_String);
-              ad.a((byte) 93, rb.field_l, bc.field_b, UiWidget.field_q, ej.field_j);
-              ej.field_j.c(-var10 + ej.field_j.position, (byte) -92);
+              JaggrabDownloader.field_j.a(-9946, var11_ref_String);
+              ArchiveIndex.a((byte) 93, ArchiveLoadSequence.field_l, bc.field_b, UiWidget.field_q, JaggrabDownloader.field_j);
+              JaggrabDownloader.field_j.c(-var10 + JaggrabDownloader.field_j.position, (byte) -92);
             }
             de.a(-1, 0);
-            tl.field_J = dr.field_a;
+            RankingsScreen.field_J = dr.field_a;
           }
-          if (tl.field_J == dr.field_a &&
+          if (RankingsScreen.field_J == dr.field_a &&
             DialogLayer.b((byte) 118, 1)) {
-            var9Lifetime1 = kn.field_e.readUnsignedByte(-80);
-            kn.field_e.position = 0;
+            var9Lifetime1 = PlayerContextMenu.field_e.readUnsignedByte(-80);
+            PlayerContextMenu.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               bi.field_b = new String[-100 + var9Lifetime1];
-              tl.field_J = og.field_L;
+              RankingsScreen.field_J = TutorialSelectScreen.field_L;
             } else {
               if (var9Lifetime1 == 248) {
                 PotEvent.a(16, NanoTickClock.getApplet(71));
                 LoginTextValue.field_g = FadingDialog.createUnable;
                 dn.c(-70);
-                we.field_e = false;
+                ArchiveLoadStep.field_e = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
               }
               if (99 == var9Lifetime1) {
-                DialogLayer.b((byte) 63, ld.a(0));
-                bq.field_q = new Boolean(de.a((byte) 104, kn.field_e));
-                kn.field_e.position = 0;
+                DialogLayer.b((byte) 63, WhirlpoolHasher.a(0));
+                bq.field_q = new Boolean(de.a((byte) 104, PlayerContextMenu.field_e));
+                PlayerContextMenu.field_e.position = 0;
               } else {
-                tl.field_J = eh.field_l;
-                uq.field_c = var9Lifetime1;
-                of.field_Pb = -1;
+                RankingsScreen.field_J = eh.field_l;
+                Bzip2DecoderState.field_c = var9Lifetime1;
+                ScrollPane.field_Pb = -1;
               }
             }
           }
-          if (tl.field_J == og.field_L) {
+          if (RankingsScreen.field_J == TutorialSelectScreen.field_L) {
             var9Lifetime2 = 2;
             if (DialogLayer.b((byte) 44, var9Lifetime2)) {
-              var10Lifetime1 = kn.field_e.readUnsignedShort(-1034);
-              kn.field_e.position = 0;
+              var10Lifetime1 = PlayerContextMenu.field_e.readUnsignedShort(-1034);
+              PlayerContextMenu.field_e.position = 0;
               if (DialogLayer.b((byte) 49, var10Lifetime1)) {
                 var11 = bi.field_b.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  bi.field_b[var12] = kn.field_e.a(10762);
+                  bi.field_b[var12] = PlayerContextMenu.field_e.a(10762);
                 }
                 dn.c(53);
-                we.field_e = false;
+                ArchiveLoadStep.field_e = false;
                 stackIn_43_0 = var11 + 100;
                 return stackIn_43_0;
               }
             }
           }
-          if (tl.field_J == eh.field_l &&
-            wf.a((byte) 39)) {
-            if (uq.field_c != 255) {
-              LoginTextValue.field_g = kn.field_e.j(-122);
+          if (RankingsScreen.field_J == eh.field_l &&
+            wf.hasCompletePacket((byte) 39)) {
+            if (Bzip2DecoderState.field_c != 255) {
+              LoginTextValue.field_g = PlayerContextMenu.field_e.j(-122);
             } else {
-              var9_ref_String = kn.field_e.m(110);
+              var9_ref_String = PlayerContextMenu.field_e.m(110);
               if (var9_ref_String != null) {
                 WeightedLruCache.writeSettingsCookie(NanoTickClock.getApplet(86), -128, var9_ref_String);
               }
             }
             dn.c(55);
-            we.field_e = false;
-            stackIn_53_0 = uq.field_c;
+            ArchiveLoadStep.field_e = false;
+            stackIn_53_0 = Bzip2DecoderState.field_c;
             return stackIn_53_0;
           }
           if (param1 <= 38) {
-            ih.a(-57);
+            ih.releaseStatics(-57);
           }
           if (null == jd.field_c) {
-            if (we.field_e) {
+            if (ArchiveLoadStep.field_e) {
               if (CushionSegment.d((byte) 123) <= 30000L) {
                 LoginTextValue.field_g = DialWidget.loginm2;
               } else {
-                LoginTextValue.field_g = wd.loginm3;
+                LoginTextValue.field_g = TabbedPane.loginm3;
               }
-              we.field_e = false;
+              ArchiveLoadStep.field_e = false;
               stackIn_62_0 = 249;
               return stackIn_62_0;
             }
-            var9Lifetime3 = vj.field_d;
-            vj.field_d = cq.field_a;
-            we.field_e = true;
+            var9Lifetime3 = TextLineLayout.field_d;
+            TextLineLayout.field_d = cq.field_a;
+            ArchiveLoadStep.field_e = true;
             cq.field_a = var9Lifetime3;
           }
           stackIn_65_0 = -1;
@@ -224,7 +224,7 @@ final class ih {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -8,13 +8,13 @@ final class ij extends IntrusiveNode {
     int[] field_x;
     int[] field_p;
     int field_H;
-    vh field_q;
+    UiComponent field_q;
     int field_w;
     static int field_G;
     int field_m;
     static String createAlertInvaliddate;
     int[] field_D;
-    vh field_I;
+    UiComponent field_I;
     int[] field_F;
     int[] field_z;
     Sprite field_K;
@@ -22,9 +22,9 @@ final class ij extends IntrusiveNode {
     static String playerYouFirstListAreGroupName;
     int field_C;
     int field_y;
-    vh field_l;
+    UiComponent field_l;
     static String loginNoDisplayname;
-    static cg field_u;
+    static MusicTrack field_u;
     static so field_o;
     int field_v;
     static String ballsetPolarGroup0;
@@ -98,7 +98,7 @@ final class ij extends IntrusiveNode {
           if (param1 < 79) {
             this.field_L = (int[]) null;
           }
-          var14 = dq.a(4, 0, param0);
+          var14 = dq.createTextLabelSprite(4, 0, param0);
           var5 = var14.field_z;
           if (param2 == null) {
             this.field_B = (param0.length() >> 3) * 25;
@@ -112,7 +112,7 @@ final class ij extends IntrusiveNode {
           var8 = stackIn_7_0;
           this.field_K = new Sprite(var8, var7);
           this.field_K.e();
-          var14.c(var8 - var14.field_z >> 1, 0);
+          var14.draw(var8 - var14.field_z >> 1, 0);
           var9 = 0;
           var10 = new String[16];
           var11 = sa.field_h.a(param2, new int[]{320}, var10);
@@ -154,7 +154,7 @@ final class ij extends IntrusiveNode {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

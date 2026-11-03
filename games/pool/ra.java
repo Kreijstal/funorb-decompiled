@@ -9,7 +9,7 @@ final class ra {
     static ph field_e;
     static int[][] field_b;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_e = null;
         muChatGameShowAll = null;
         if (!param0) {
@@ -19,7 +19,7 @@ final class ra {
           field_f = null;
           return;
         }
-        ra.a(false);
+        ra.releaseStatics(false);
         tabHidechattemporarily = null;
         createtouse = null;
         field_b = (int[][]) null;
@@ -27,15 +27,15 @@ final class ra {
     }
 
     final static void a(byte param0) {
-        re.field_b = false;
+        LoginPayload.field_b = false;
         if (param0 != -108) {
           ra.a((byte) -36);
         }
     }
 
     final static void a(int param0, oi param1, int param2) {
-        oq var5 = ej.field_j;
-        var5.b(false, param0);
+        CipherPacketBuffer var5 = JaggrabDownloader.field_j;
+        var5.writeCipheredOpcode(false, param0);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         var5.a(1, false);
@@ -52,7 +52,7 @@ final class ra {
         try {
           var5.b(var5.position - var4, true);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

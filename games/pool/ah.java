@@ -13,7 +13,7 @@ final class ah {
     static so[] field_e;
     int field_j;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         gameoptUnselectedoptions = null;
         field_e = null;
         field_c = null;
@@ -34,7 +34,7 @@ final class ah {
           this.field_f = param0.field_f;
           this.field_d = param0.field_d;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

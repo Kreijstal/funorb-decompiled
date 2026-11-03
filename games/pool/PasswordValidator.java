@@ -15,7 +15,7 @@ final class PasswordValidator extends TextInputValidator {
     private TextInputWidget usernameInput;
     static int field_w;
 
-    final static void a(int param0, vh param1, vh param2, vh param3, vh param4) {
+    final static void a(int param0, UiComponent param1, UiComponent param2, UiComponent param3, UiComponent param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -31,7 +31,7 @@ final class PasswordValidator extends TextInputValidator {
         int var6 = 0;
         String var7 = null;
         try {
-          if (oq.field_z != null) {
+          if (CipherPacketBuffer.field_z != null) {
             return;
           }
           DualLinkNode.field_p = false;
@@ -46,28 +46,28 @@ final class PasswordValidator extends TextInputValidator {
           }
           var7 = (String) null;
           dr.a((String) null, 11468, FreePlayRules.field_g, 0, var5);
-          pa.field_J.field_P = (8355711 & TickClock.field_h.field_P >> 1) + (FreePlayRules.field_g - (8355711 & FreePlayRules.field_g >> 1));
-          lh.field_i = NineBallRules.field_j;
-          pa.field_J.field_K = ((TickClock.field_h.field_K & 16711423) >> 1) + (-((16711423 & FreePlayRules.field_g) >> 1) + FreePlayRules.field_g);
-          pa.field_J.field_Bb = -((FreePlayRules.field_g & 16711422) >> 1) + (FreePlayRules.field_g + (8355711 & TickClock.field_h.field_Bb >> 1));
-          oq.field_z = pa.field_J;
-          uq.field_D = new vh(0L, param4);
-          IntrusiveNode.field_e = new vh(0L, param3);
-          ml.field_e = new vh(0L, (vh) null);
-          vi.field_c = new vh(0L, param1);
-          pa.field_J = new vh(0L, param2);
-          pa.field_J.field_I = m.field_c;
-          vi.field_c.a(78, pa.field_J);
-          NineBallRules.field_j = new vh(0L, lh.field_i);
-          vi.field_c.a(113, NineBallRules.field_j);
-          be.field_L = new vh(0L, TickClock.field_h, ra.tabHidechattemporarily);
-          wn.field_g = new vh(0L, TickClock.field_h);
+          TimeTrialSelectScreen.field_J.capturedTextColor = (8355711 & TickClock.field_h.capturedTextColor >> 1) + (FreePlayRules.field_g - (8355711 & FreePlayRules.field_g >> 1));
+          ArchiveProvider.field_i = NineBallRules.field_j;
+          TimeTrialSelectScreen.field_J.activeTextColor = ((TickClock.field_h.activeTextColor & 16711423) >> 1) + (-((16711423 & FreePlayRules.field_g) >> 1) + FreePlayRules.field_g);
+          TimeTrialSelectScreen.field_J.selectedTextColor = -((FreePlayRules.field_g & 16711422) >> 1) + (FreePlayRules.field_g + (8355711 & TickClock.field_h.selectedTextColor >> 1));
+          CipherPacketBuffer.field_z = TimeTrialSelectScreen.field_J;
+          Bzip2DecoderState.field_D = new UiComponent(0L, param4);
+          IntrusiveNode.field_e = new UiComponent(0L, param3);
+          ml.field_e = new UiComponent(0L, (UiComponent) null);
+          vi.field_c = new UiComponent(0L, param1);
+          TimeTrialSelectScreen.field_J = new UiComponent(0L, param2);
+          TimeTrialSelectScreen.field_J.font = m.field_c;
+          vi.field_c.addChild(78, TimeTrialSelectScreen.field_J);
+          NineBallRules.field_j = new UiComponent(0L, ArchiveProvider.field_i);
+          vi.field_c.addChild(113, NineBallRules.field_j);
+          OptionsScreen.field_L = new UiComponent(0L, TickClock.field_h, ra.tabHidechattemporarily);
+          wn.field_g = new UiComponent(0L, TickClock.field_h);
           var6 = 43 % ((-44 - param0) / 45);
-          uq.field_D.a(14, IntrusiveNode.field_e);
-          uq.field_D.a(-121, ml.field_e);
-          ml.field_e.a(-96, vi.field_c);
-          ml.field_e.a(127, be.field_L);
-          ml.field_e.a(43, wn.field_g);
+          Bzip2DecoderState.field_D.addChild(14, IntrusiveNode.field_e);
+          Bzip2DecoderState.field_D.addChild(-121, ml.field_e);
+          ml.field_e.addChild(-96, vi.field_c);
+          ml.field_e.addChild(127, OptionsScreen.field_L);
+          ml.field_e.addChild(43, wn.field_g);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,7 +97,7 @@ final class PasswordValidator extends TextInputValidator {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -141,18 +141,18 @@ final class PasswordValidator extends TextInputValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_t = null;
         field_u = null;
         waitingForXToStartGame = null;
         field_p = null;
         field_r = null;
         if (!param0) {
-          PasswordValidator.b(true);
+          PasswordValidator.releaseStatics(true);
         }
     }
 
@@ -162,7 +162,7 @@ final class PasswordValidator extends TextInputValidator {
           this.usernameInput = param1;
           this.emailInput = param2;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "uh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "uh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class PasswordValidator extends TextInputValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -243,7 +243,7 @@ final class PasswordValidator extends TextInputValidator {
           }
           var5 = var4;
           if (SpaceTableScene.a(var5, 28350)) {
-            stackIn_5_0 = uq.createAlertPasslength;
+            stackIn_5_0 = Bzip2DecoderState.createAlertPasslength;
             return stackIn_5_0;
           }
           if (param1 != 0) {
@@ -255,7 +255,7 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_10_0;
           }
           if (IterableNodeHashTable.a(var5, -113)) {
-            stackIn_14_0 = lh.createAlertPassrepeated;
+            stackIn_14_0 = ArchiveProvider.createAlertPassrepeated;
             return stackIn_14_0;
           }
           if (this.passwordContainsEmailPart(-31894, param0)) {
@@ -274,8 +274,8 @@ final class PasswordValidator extends TextInputValidator {
             stackIn_28_0 = AgeValidator.createAlertPasscontainsnamePartial;
             return stackIn_28_0;
           }
-          if (!wg.a(23138, var7, var5)) {
-            return uq.createAlertPasslength;
+          if (!StateIconLabel.a(23138, var7, var5)) {
+            return Bzip2DecoderState.createAlertPasslength;
           }
           stackIn_32_0 = TranslatedUiText.field_o;
           return stackIn_32_0;
@@ -289,7 +289,7 @@ final class PasswordValidator extends TextInputValidator {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
         }
     }
 

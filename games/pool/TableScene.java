@@ -6,7 +6,7 @@ import java.util.*;
 abstract class TableScene {
     static int[] field_w;
     static int field_I;
-    cg field_n;
+    MusicTrack field_n;
     int field_F;
     int field_q;
     static int field_k;
@@ -17,7 +17,7 @@ abstract class TableScene {
     boolean field_h;
     private PcmSampleStream field_r;
     int field_d;
-    private p[] field_y;
+    private ModelInstance[] field_y;
     private int[][] field_a;
     int field_v;
     CueStick field_A;
@@ -27,28 +27,28 @@ abstract class TableScene {
     int field_e;
     int field_x;
     int field_C;
-    private eg[][] field_f;
+    private MeshBuilder[][] field_f;
     static String timeTrial;
-    cg field_i;
+    MusicTrack field_i;
     static Sprite field_D;
     double field_E;
     private int[][] field_g;
     int field_H;
-    cg field_b;
-    private p[][] field_o;
+    MusicTrack field_b;
+    private ModelInstance[][] field_o;
     Sprite field_B;
     private int field_t;
-    private eg field_s;
+    private MeshBuilder field_s;
 
     void d(boolean param0) {
         if (!param0) {
-          TableScene.l(-87);
+          TableScene.releaseStatics(-87);
         }
         this.field_s = null;
         this.field_g = (int[][]) null;
         this.field_a = (int[][]) null;
-        this.field_o = (p[][]) null;
-        this.field_f = (eg[][]) null;
+        this.field_o = (ModelInstance[][]) null;
+        this.field_f = (MeshBuilder[][]) null;
         this.field_y = null;
     }
 
@@ -58,9 +58,9 @@ abstract class TableScene {
         }
     }
 
-    final fa b(int[] param0, eg param1, int param2) {
+    final fa b(int[] param0, MeshBuilder param1, int param2) {
         RuntimeException var4 = null;
-        di var5 = null;
+        ResourceArchive var5 = null;
         fa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -70,8 +70,8 @@ abstract class TableScene {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -25431) {
-            var5 = (di) null;
-            this.a(-49, (di) null);
+            var5 = (ResourceArchive) null;
+            this.a(-49, (ResourceArchive) null);
           }
           stackIn_3_0 = param1.a(this.field_d, this.field_t, this.field_q, this.field_e, this.field_u, param0);
           return stackIn_3_0;
@@ -91,7 +91,7 @@ abstract class TableScene {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ abstract class TableScene {
         try {
           int var3_int = -56 % ((-64 - param0) / 52);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "oo.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,9 +116,9 @@ abstract class TableScene {
           return;
         }
         try {
-          this.a(param1, mn.field_g, (byte) -118, br.field_I);
+          this.a(param1, DualLinkDequeIterator.field_g, (byte) -118, LoginRequiredScreen.field_I);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "oo.NB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.NB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -139,14 +139,14 @@ abstract class TableScene {
           var13 = param2.field_I.balls[param3];
           var6 = (long)(-param0.centerX + var13.positionX);
           var8 = (long)(var13.positionY - param0.centerY);
-          var10 = IterableNodeHashTable.a(param1 ^ -24621, od.a(var6, var6, false) + od.a(var8, var8, false));
+          var10 = IterableNodeHashTable.a(param1 ^ -24621, FullscreenFocusCanvas.multiplyFixedChecked(var6, var6, false) + FullscreenFocusCanvas.multiplyFixedChecked(var8, var8, false));
           var13.b(true);
           if (var13.positionZ > 4194304) {
-            param2.a(0, param3);
+            param2.addBallToRack(0, param3);
             return;
           }
           if (var13.positionZ < 0) {
-            var12 = 1179648 - rf.a(4194304 - (var13.positionZ * var13.positionZ >> 16), param1 ^ -24622);
+            var12 = 1179648 - rf.inverseSquareRoot(4194304 - (var13.positionZ * var13.positionZ >> 16), param1 ^ -24622);
           } else {
             var12 = 655360;
           }
@@ -186,7 +186,7 @@ abstract class TableScene {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ abstract class TableScene {
     private final void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
         int var16 = 0;
         int var17 = 0;
-        eg var18 = null;
+        MeshBuilder var18 = null;
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
@@ -219,30 +219,30 @@ abstract class TableScene {
         int var8 = -param2 + param1;
         var8 = var8 * var8;
         double var9 = Math.sqrt((double)(var8 + (var7 + 256)));
-        int var11 = (int)Math.ceil(var9 / (double)nc.field_Y.length);
-        eg[] var12 = new eg[var11];
-        p[] var13 = new p[var11];
+        int var11 = (int)Math.ceil(var9 / (double)ModelMesh.field_Y.length);
+        MeshBuilder[] var12 = new MeshBuilder[var11];
+        ModelInstance[] var13 = new ModelInstance[var11];
         int var14 = param3 - param0;
         int var15 = -param2 + param1;
         for (var16 = 0; var12.length > var16; var16++) {
           var17 = 1 + var16;
-          var18 = new eg(4, 4, 1);
+          var18 = new MeshBuilder(4, 4, 1);
           var19 = var14 * var16 / var11 + param0;
           var20 = var17 * var14 / var11 + param0;
           var21 = param2 + var16 * var15 / var11;
           var22 = param2 + var17 * var15 / var11;
           var23 = (var20 + var19) / 2;
           var24 = (var22 + var21) / 2;
-          var25 = var18.a(var19 - var23, var21 - var24, 0);
-          var26 = var18.a(-var23 + var20, -var24 + var22, 0);
-          var27 = var18.a(var19 - var23, var21 - var24, sb.a(-16.0f, true));
-          var28 = var18.a(var20 - var23, var22 - var24, sb.a(-16.0f, true));
-          var18.a(var25, var27, var26, (byte) 1, hh.rgbToPackedHsl((byte) -123, this.e(31761)), this.c(99));
-          var18.a(var28, var26, var27, (byte) 1, hh.rgbToPackedHsl((byte) 94, this.e(31761)), this.c(97));
-          var18.a(var25, var26, var27, (byte) 1, hh.rgbToPackedHsl((byte) 93, this.e(31761)), this.c(100));
-          var18.a(var28, var27, var26, (byte) 1, hh.rgbToPackedHsl((byte) 42, this.e(31761)), this.c(95));
+          var25 = var18.addVertex(var19 - var23, var21 - var24, 0);
+          var26 = var18.addVertex(-var23 + var20, -var24 + var22, 0);
+          var27 = var18.addVertex(var19 - var23, var21 - var24, sb.a(-16.0f, true));
+          var28 = var18.addVertex(var20 - var23, var22 - var24, sb.a(-16.0f, true));
+          var18.addFace(var25, var27, var26, (byte) 1, hh.rgbToPackedHsl((byte) -123, this.e(31761)), this.c(99));
+          var18.addFace(var28, var26, var27, (byte) 1, hh.rgbToPackedHsl((byte) 94, this.e(31761)), this.c(97));
+          var18.addFace(var25, var26, var27, (byte) 1, hh.rgbToPackedHsl((byte) 93, this.e(31761)), this.c(100));
+          var18.addFace(var28, var27, var26, (byte) 1, hh.rgbToPackedHsl((byte) 42, this.e(31761)), this.c(95));
           var12[var16] = var18;
-          var13[var16] = new p((nc) (var12[var16].a(this.field_C, this.field_x, this.field_q, this.field_e, this.field_u)), new int[]{var23, var24, 0});
+          var13[var16] = new ModelInstance((ModelMesh) (var12[var16].a(this.field_C, this.field_x, this.field_q, this.field_e, this.field_u)), new int[]{var23, var24, 0});
         }
         this.field_f[param5] = var12;
         this.field_o[param5] = var13;
@@ -255,10 +255,10 @@ abstract class TableScene {
         }
         id.field_c.field_g = true;
         if (null != AccountContentDialog.field_ub) {
-          AccountContentDialog.field_ub.K(0);
+          AccountContentDialog.field_ub.markBallTransformsDirty(0);
         }
-        if (null != am.field_e) {
-          am.field_e.K(0);
+        if (null != TextWidgetPainter.field_e) {
+          TextWidgetPainter.field_e.markBallTransformsDirty(0);
         }
     }
 
@@ -374,7 +374,7 @@ abstract class TableScene {
         var10 = -var6;
         var11 = var9 * var9 + var10 * var10;
         if (var11 > 0) {
-          var11 = rf.a(var11, -121) >> 8;
+          var11 = rf.inverseSquareRoot(var11, -121) >> 8;
           var9 = (var9 << 8) / var11;
           var10 = (var10 << 8) / var11;
         }
@@ -383,7 +383,7 @@ abstract class TableScene {
         var13 = var6 * var10 - var7 * var9 >> 8;
         var14 = var11Lifetime1 * var11Lifetime1 + var12 * var12 + var13 * var13;
         if (var14 > 0) {
-          var14 = rf.a(var14, -125) >> 8;
+          var14 = rf.inverseSquareRoot(var14, -125) >> 8;
           var11Lifetime1 = (var11Lifetime1 << 8) / var14;
           var12 = (var12 << 8) / var14;
           var13 = (var13 << 8) / var14;
@@ -665,7 +665,7 @@ abstract class TableScene {
         return;
     }
 
-    final fa a(int[] param0, byte param1, eg param2) {
+    final fa a(int[] param0, byte param1, MeshBuilder param2) {
         RuntimeException var4 = null;
         fa stackIn_2_0 = null;
         fa stackIn_4_0 = null;
@@ -698,11 +698,11 @@ abstract class TableScene {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final void a(int param0, cf param1, di param2) {
+    final void a(int param0, SoundCache param1, ResourceArchive param2) {
         kf[] var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -717,7 +717,7 @@ abstract class TableScene {
             this.a(-23, -100, (byte) -87, (PcmSample[]) null, (kf[]) null);
           }
           if (this.field_b != null) {
-            tl.field_N.a(param1, param2, this.field_b, param0 ^ 79, 0);
+            RankingsScreen.field_N.prepareScoreInstruments(param1, param2, this.field_b, param0 ^ 79, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -736,11 +736,11 @@ abstract class TableScene {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -15631) {
           return;
         }
@@ -749,13 +749,13 @@ abstract class TableScene {
         field_D = null;
     }
 
-    void a(int param0, di param1) {
+    void a(int param0, ResourceArchive param1) {
         try {
           if (param0 != 1) {
             this.g(67);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "oo.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -774,7 +774,7 @@ abstract class TableScene {
         return "lighting amb=" + this.field_d + ", cont=" + this.field_m;
     }
 
-    final fa a(int[] param0, eg param1, int param2) {
+    final fa a(int[] param0, MeshBuilder param1, int param2) {
         RuntimeException var4 = null;
         Ball[] var5 = null;
         fa stackIn_3_0 = null;
@@ -807,7 +807,7 @@ abstract class TableScene {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -827,41 +827,41 @@ abstract class TableScene {
         int var2;
         boolean stackIn_4_0 = false;
         var2 = 31 % ((-8 - param0) / 41);
-        stackIn_4_0 = (null != this.field_r) && (!this.field_r.i());
+        stackIn_4_0 = (null != this.field_r) && (!this.field_r.isSamplePositionOutOfRange());
         return stackIn_4_0;
     }
 
     private final void a(Pocket[] param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
-        nc var3 = null;
+        ModelMesh var3 = null;
         double var4_double = 0.0;
         double var6 = 0.0;
         double var8 = 0.0;
         double var10 = 0.0;
-        nc var12 = null;
+        ModelMesh var12 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          d.field_b = new eg(17, 16, 1);
+          d.field_b = new MeshBuilder(17, 16, 1);
           for (var3_int = 0; var3_int < 16; var3_int++) {
             var4_double = Math.sin(2.0 * (3.141592653589793 * (double)var3_int) / 16.0);
             var6 = Math.cos(3.141592653589793 * (double)var3_int * 2.0 / 16.0);
             var8 = Math.sin(2.0 * (3.141592653589793 * (double)(var3_int + 1)) / 16.0);
             var10 = Math.cos(3.141592653589793 * (double)(var3_int + 1) * 2.0 / 16.0);
-            d.field_b.a(d.field_b.a(0, 0, 0), d.field_b.a(PotEvent.a(4885, 18.0 * var10), PotEvent.a(4885, var8 * 18.0), 0), d.field_b.a(PotEvent.a(4885, 18.0 * var6), PotEvent.a(4885, 18.0 * var4_double), 0), (byte) 1, (short) 127, (byte) 127);
+            d.field_b.addFace(d.field_b.addVertex(0, 0, 0), d.field_b.addVertex(PotEvent.a(4885, 18.0 * var10), PotEvent.a(4885, var8 * 18.0), 0), d.field_b.addVertex(PotEvent.a(4885, 18.0 * var6), PotEvent.a(4885, 18.0 * var4_double), 0), (byte) 1, (short) 127, (byte) 127);
           }
-          var12 = (nc) (this.a(-113, d.field_b));
+          var12 = (ModelMesh) (this.a(-113, d.field_b));
           var3 = var12;
-          v.field_g = new p[param0.length];
+          LimitedRandomAccessFile.field_g = new ModelInstance[param0.length];
           if (param1 >= -16) {
             return;
           }
-          for (var4 = 0; v.field_g.length > var4; var4++) {
-            v.field_g[var4] = new p(var12, new int[]{param0[var4].centerX >> 13, param0[var4].centerY >> 13, 0});
+          for (var4 = 0; LimitedRandomAccessFile.field_g.length > var4; var4++) {
+            LimitedRandomAccessFile.field_g[var4] = new ModelInstance(var12, new int[]{param0[var4].centerX >> 13, param0[var4].centerY >> 13, 0});
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -874,7 +874,7 @@ abstract class TableScene {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -886,8 +886,8 @@ abstract class TableScene {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.field_f = new eg[param1.length][];
-          this.field_o = new p[param1.length][];
+          this.field_f = new MeshBuilder[param1.length][];
+          this.field_o = new ModelInstance[param1.length][];
           if (param0 != -92) {
             return;
           }
@@ -905,25 +905,25 @@ abstract class TableScene {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    void a(di param0, int param1) {
+    void a(ResourceArchive param0, int param1) {
         try {
           if (param1 >= -43) {
             this.field_e = 4;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "oo.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void a(cf param0, int param1) {
+    void a(SoundCache param0, int param1) {
         try {
           int var3_int = 55 % ((39 - param1) / 38);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "oo.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -937,7 +937,7 @@ abstract class TableScene {
           return;
         }
         this.a((byte) 120);
-        ap.field_D = new kf[param1];
+        QuickChatPhraseDefinition.field_D = new kf[param1];
     }
 
     final void a(byte param0) {
@@ -947,11 +947,11 @@ abstract class TableScene {
         if (param0 < 87) {
           return;
         }
-        if (ap.field_D != null) {
-          for (var2 = 0; var2 < ap.field_D.length; var2++) {
-            if (null != ap.field_D[var2] &&
-              !ap.field_D[var2].field_o.i()) {
-              ap.field_D[var2].field_o.c(441);
+        if (QuickChatPhraseDefinition.field_D != null) {
+          for (var2 = 0; var2 < QuickChatPhraseDefinition.field_D.length; var2++) {
+            if (null != QuickChatPhraseDefinition.field_D[var2] &&
+              !QuickChatPhraseDefinition.field_D[var2].field_o.isSamplePositionOutOfRange()) {
+              QuickChatPhraseDefinition.field_D[var2].field_o.c(441);
             }
           }
         }
@@ -976,7 +976,7 @@ abstract class TableScene {
           var6_int = 6114 * param0 >> 7;
           for (var7 = 0; var7 < 2; var7++) {
             if (null != param4[var7] &&
-              !param4[var7].field_o.i()) {
+              !param4[var7].field_o.isSamplePositionOutOfRange()) {
               var8 = param4[var7].field_n;
               var9 = -32;
               if (var8 > var6_int) {
@@ -984,8 +984,8 @@ abstract class TableScene {
               }
               param4[var7].a(var9 + ga.nextRandomInt(64, true, ea.field_r) + var8, 441, 128);
             } else if ((param4[var7] == null ||
-              param4[var7].field_o.i()) && ga.nextRandomInt(param1, true, ea.field_r) == 0) {
-              param4[var7] = mn.a(-24296, PcmSampleStream.c(param3[ga.nextRandomInt(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
+              param4[var7].field_o.isSamplePositionOutOfRange()) && ga.nextRandomInt(param1, true, ea.field_r) == 0) {
+              param4[var7] = DualLinkDequeIterator.a(-24296, PcmSampleStream.c(param3[ga.nextRandomInt(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
             }
           }
           var7Lifetime1 = -14 % ((-11 - param2) / 44);
@@ -1006,7 +1006,7 @@ abstract class TableScene {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -1041,11 +1041,11 @@ abstract class TableScene {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final fa a(int param0, eg param1) {
+    final fa a(int param0, MeshBuilder param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         fa stackIn_1_0 = null;
@@ -1067,7 +1067,7 @@ abstract class TableScene {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -1091,7 +1091,7 @@ abstract class TableScene {
         try {
           var3_int = 0;
           if (param0 <= 26) {
-            this.field_b = (cg) null;
+            this.field_b = (MusicTrack) null;
           }
           while (var3_int < this.field_y.length) {
             this.field_y[var3_int].c(6710886, param1);
@@ -1108,19 +1108,19 @@ abstract class TableScene {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final void a(int param0, int[] param1, int param2, int[] param3, int param4) {
         try {
           IntrusiveNode.a(param0 - 1336449638, param3, param1);
-          this.a(param4, mn.field_g * param2 >> 8, (byte) -111, br.field_I);
+          this.a(param4, DualLinkDequeIterator.field_g * param2 >> 8, (byte) -111, LoginRequiredScreen.field_I);
           if (param0 != 1336449640) {
             this.field_j = 1.1224327362689441;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "oo.QB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.QB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -1140,8 +1140,8 @@ abstract class TableScene {
           if (param1 < 63) {
             this.field_t = 44;
           }
-          for (var6_int = wh.field_g + (param3.length - 1); var6_int >= 0; var6_int--) {
-            var7 = pd.field_f[var6_int];
+          for (var6_int = QuickChatPhraseRegistry.field_g + (param3.length - 1); var6_int >= 0; var6_int--) {
+            var7 = LinkButtonPainter.field_f[var6_int];
             if (var7 >= param3.length) {
               if (param4) {
                 w.field_a[var7].a(param0, -32215);
@@ -1177,7 +1177,7 @@ abstract class TableScene {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1203,16 +1203,16 @@ abstract class TableScene {
               dq.field_a.a(false, param2[var4_int].renderTransform, var4_int);
             }
             w.field_a[var4_int] = (eb) ((Object) DropTargetWidget.field_O[var4_int]);
-            pd.field_f[var4_int] = var4_int;
-            tc.field_d[var4_int] = w.field_a[var4_int].b(param1, -111);
+            LinkButtonPainter.field_f[var4_int] = var4_int;
+            GrowableIntList.field_d[var4_int] = w.field_a[var4_int].b(param1, -111);
           }
-          for (var5 = 0; var5 < wh.field_g; var5++) {
-            w.field_a[var4_int] = (eb) ((Object) rb.field_e[var5]);
-            pd.field_f[var4_int] = var4_int;
-            tc.field_d[var4_int] = w.field_a[var4_int].b(param1, -114);
+          for (var5 = 0; var5 < QuickChatPhraseRegistry.field_g; var5++) {
+            w.field_a[var4_int] = (eb) ((Object) ArchiveLoadSequence.field_e[var5]);
+            LinkButtonPainter.field_f[var4_int] = var4_int;
+            GrowableIntList.field_d[var4_int] = w.field_a[var4_int].b(param1, -114);
             var4_int++;
           }
-          th.a(0, -30916, tc.field_d, pd.field_f, param2.length - (-wh.field_g + 1));
+          th.a(0, -30916, GrowableIntList.field_d, LinkButtonPainter.field_f, param2.length - (-QuickChatPhraseRegistry.field_g + 1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1230,7 +1230,7 @@ abstract class TableScene {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -1282,13 +1282,13 @@ abstract class TableScene {
         }
     }
 
-    void c(int param0, di param1) {
+    void c(int param0, ResourceArchive param1) {
         try {
           if (param0 != -23569) {
-            TableScene.l(-78);
+            TableScene.releaseStatics(-78);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "oo.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1296,16 +1296,16 @@ abstract class TableScene {
         int var3_int = 0;
         int var3_intLifetime1;
         try {
-          DropTargetWidget.field_O = new ec[param0.balls.length];
-          w.field_a = new eb[rb.field_e.length + param0.balls.length];
+          DropTargetWidget.field_O = new BallDebugOverlay[param0.balls.length];
+          w.field_a = new eb[ArchiveLoadSequence.field_e.length + param0.balls.length];
           var3_int = param1;
           for (var3_intLifetime1 = 0; var3_intLifetime1 < param0.balls.length; var3_intLifetime1++) {
-            DropTargetWidget.field_O[var3_intLifetime1] = new ec(var3_intLifetime1, param0);
+            DropTargetWidget.field_O[var3_intLifetime1] = new BallDebugOverlay(var3_intLifetime1, param0);
           }
-          tc.field_d = new int[w.field_a.length];
-          pd.field_f = new int[w.field_a.length];
+          GrowableIntList.field_d = new int[w.field_a.length];
+          LinkButtonPainter.field_f = new int[w.field_a.length];
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "oo.OB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.OB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1383,7 +1383,7 @@ abstract class TableScene {
             for (var8 = 1 + var7; param0.length > var8; var8++) {
               var9_long = (long)(param0[var7].centerX(param1 + 83) - param0[var8].centerX(param1 ^ 101));
               var11 = (long)(param0[var7].centerY((byte) -127) - param0[var8].centerY((byte) -127));
-              var13 = od.a(var9_long, var9_long, false) + od.a(var11, var11, false);
+              var13 = FullscreenFocusCanvas.multiplyFixedChecked(var9_long, var9_long, false) + FullscreenFocusCanvas.multiplyFixedChecked(var11, var11, false);
               if (var3_long < var13) {
                 var3_long = var13;
                 var6 = 0;
@@ -1411,11 +1411,11 @@ abstract class TableScene {
             var9 = param0[var17[var15][1]].centerY((byte) -127) - param0[var17[var15][0]].centerY((byte) -127);
             this.field_a[var15][0] = -var9 >> 13;
             this.field_a[var15][1] = var8 >> 13;
-            var10 = IterableNodeHashTable.a(-111, od.a((long)var8, (long)var8, false) + od.a((long)var9, (long)var9, false));
+            var10 = IterableNodeHashTable.a(-111, FullscreenFocusCanvas.multiplyFixedChecked((long)var8, (long)var8, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false));
             if (var10 <= 2147483647L &&
               var10 >= -2147483648L) {
-              this.field_a[var15][0] = lh.a((int)var10, (byte) -74, (long)this.field_a[var15][0]);
-              this.field_a[var15][1] = lh.a((int)var10, (byte) -95, (long)this.field_a[var15][1]);
+              this.field_a[var15][0] = ArchiveProvider.divideFixed16((int)var10, (byte) -74, (long)this.field_a[var15][0]);
+              this.field_a[var15][1] = ArchiveProvider.divideFixed16((int)var10, (byte) -95, (long)this.field_a[var15][1]);
               this.field_g[var15][0] = var17[var15][0];
               this.field_g[var15][1] = var17[var15][1];
               var15++;
@@ -1434,11 +1434,11 @@ abstract class TableScene {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    void a(boolean param0, mm param1) {
+    void a(boolean param0, Camera param1) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -1447,29 +1447,29 @@ abstract class TableScene {
         RuntimeException var3 = null;
         Ball[] var5 = null;
         try {
-          if (!(param1.field_m < 0.0)) {
-            if (param1.field_m > 288.0) {
-              param1.field_m = 288.0;
+          if (!(param1.targetY < 0.0)) {
+            if (param1.targetY > 288.0) {
+              param1.targetY = 288.0;
             }
           } else {
-            param1.field_m = 0.0;
+            param1.targetY = 0.0;
           }
-          if (param1.field_f < 0.0) {
-            param1.field_f = 0.0;
+          if (param1.targetX < 0.0) {
+            param1.targetX = 0.0;
           } else {
-            if (param1.field_f > 576.0) {
-              param1.field_f = 576.0;
+            if (param1.targetX > 576.0) {
+              param1.targetX = 576.0;
             }
           }
           if (param0) {
             var5 = (Ball[]) null;
             this.a((int[]) null, (byte) -29, true, (Ball[]) null, false);
           }
-          var3_double = param1.d(8);
+          var3_double = param1.getDistance(8);
           if (var3_double > 768.0) {
-            param1.field_a = 768.0 * (-param1.field_m + param1.field_a) / var3_double + param1.field_m;
-            param1.field_h = (param1.field_h - param1.field_k) * 768.0 / var3_double + param1.field_k;
-            param1.field_d = param1.field_f + (param1.field_d - param1.field_f) * 768.0 / var3_double;
+            param1.eyeY = 768.0 * (-param1.targetY + param1.eyeY) / var3_double + param1.targetY;
+            param1.eyeZ = (param1.eyeZ - param1.targetZ) * 768.0 / var3_double + param1.targetZ;
+            param1.eyeX = param1.targetX + (param1.eyeX - param1.targetX) * 768.0 / var3_double;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1482,7 +1482,7 @@ abstract class TableScene {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -1492,37 +1492,37 @@ abstract class TableScene {
         int var19 = 0;
         double var20 = 0.0;
         float var2 = (float)PotEvent.a(4885, Math.sqrt(414720.0));
-        int var3 = (int)Math.ceil((double)(var2 / (float)nc.field_Y.length));
-        int var4 = (int)Math.ceil((double)(var2 / (float)nc.field_Y.length));
-        this.field_y = new p[var3 * var4];
+        int var3 = (int)Math.ceil((double)(var2 / (float)ModelMesh.field_Y.length));
+        int var4 = (int)Math.ceil((double)(var2 / (float)ModelMesh.field_Y.length));
+        this.field_y = new ModelInstance[var3 * var4];
         double var5 = 576.0 / (double)var3;
         double var7 = 288.0 / (double)var4;
         int var9 = (PotEvent.a(4885, var5) >> 1) * 16 / 16;
         int var10 = (PotEvent.a(param0 + 4883, var7) >> 1) * 16 / 16;
-        this.field_s = new eg(4, param0, 1);
-        int var11 = this.field_s.a(-var9, -var10, 0);
-        int var12 = this.field_s.a(var9, -var10, 0);
-        int var13 = this.field_s.a(-var9, var10, 0);
-        int var14 = this.field_s.a(var9, var10, 0);
-        this.field_s.a(var11, var13, var12, (byte) 1, hh.rgbToPackedHsl((byte) -105, this.h(684)), this.g(-56));
-        this.field_s.a(var14, var12, var13, (byte) 1, hh.rgbToPackedHsl((byte) -127, this.h(684)), this.g(91));
-        nc var15 = (nc) (this.a(103, this.field_s));
+        this.field_s = new MeshBuilder(4, param0, 1);
+        int var11 = this.field_s.addVertex(-var9, -var10, 0);
+        int var12 = this.field_s.addVertex(var9, -var10, 0);
+        int var13 = this.field_s.addVertex(-var9, var10, 0);
+        int var14 = this.field_s.addVertex(var9, var10, 0);
+        this.field_s.addFace(var11, var13, var12, (byte) 1, hh.rgbToPackedHsl((byte) -105, this.h(684)), this.g(-56));
+        this.field_s.addFace(var14, var12, var13, (byte) 1, hh.rgbToPackedHsl((byte) -127, this.h(684)), this.g(91));
+        ModelMesh var15 = (ModelMesh) (this.a(103, this.field_s));
         for (var16 = 0; var16 < var4; var16++) {
           var17 = var7 * (double)(1 + 2 * var16) / 2.0;
           for (var19 = 0; var3 > var19; var19++) {
             var20 = var5 * (double)(1 + var19 * 2) / 2.0;
-            this.field_y[var16 * var3 + var19] = new p(var15, MidiNoteMixer.a(new double[]{var20, var17, 0.0}, -30100));
+            this.field_y[var16 * var3 + var19] = new ModelInstance(var15, MidiNoteMixer.a(new double[]{var20, var17, 0.0}, -30100));
           }
         }
     }
 
-    void b(int param0, di param1) {
+    void b(int param0, ResourceArchive param1) {
         try {
           if (param0 != 5) {
-            this.field_b = (cg) null;
+            this.field_b = (MusicTrack) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "oo.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oo.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1561,7 +1561,7 @@ abstract class TableScene {
         int var4 = 0;
         int var6 = 0;
         Pocket[] var3 = null;
-        tc var5 = null;
+        GrowableIntList var5 = null;
         int var7 = 0;
         Ball var8 = null;
         int var9 = 0;
@@ -1574,10 +1574,10 @@ abstract class TableScene {
         var9 = Pool.field_O;
         try {
           if (param0 != 10) {
-            this.field_f = (eg[][]) null;
+            this.field_f = (MeshBuilder[][]) null;
           }
           if (null != this.field_r &&
-            this.field_r.i()) {
+            this.field_r.isSamplePositionOutOfRange()) {
             this.field_r = null;
           }
           var10 = param1.field_I.pockets;
@@ -1585,14 +1585,14 @@ abstract class TableScene {
           for (var4 = 0; var4 < var10.length; var4++) {
             var5 = var10[var4].pottedBalls;
             if (var5 != null) {
-              for (var6 = 0; var6 < var5.a((byte) 127); var6++) {
-                var7 = var5.a(var6, 2229);
+              for (var6 = 0; var6 < var5.size((byte) 127); var6++) {
+                var7 = var5.get(var6, 2229);
                 var8 = param1.field_I.balls[var7];
                 if (var8.inPlay) {
                   throw new IllegalStateException("Ball in play cannot be potted!");
                 }
                 if (!var8.field_o) {
-                  kh.field_gc.a(var10[var4], 24657, param1, var7);
+                  LobbyGame.field_gc.a(var10[var4], 24657, param1, var7);
                 }
               }
             }
@@ -1608,7 +1608,7 @@ abstract class TableScene {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 

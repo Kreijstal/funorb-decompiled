@@ -15,9 +15,9 @@ final class bq extends IntrusiveNode {
         try {
           Ball.field_m = param4;
           jc.field_h = param3;
-          ad.field_r = param6;
-          ej.field_g = param5;
-          se.field_h = param0;
+          ArchiveIndex.field_r = param6;
+          JaggrabDownloader.field_g = param5;
+          LongAndTextLoginPayload.field_h = param0;
           rf.field_c = param8;
           IsaacCipher.field_e = param2;
           vn.field_j = param1;
@@ -25,7 +25,7 @@ final class bq extends IntrusiveNode {
             field_n = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "bq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class bq extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var7), "bq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var7), "bq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class bq extends IntrusiveNode {
         this.field_l = param0;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         foulExclamation = null;
         field_q = null;

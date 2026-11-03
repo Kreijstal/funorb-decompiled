@@ -58,7 +58,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
             var6_int = param2.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = var6_int + 2; var5 < var3_int; var5++) {
-                if (kh.a(param2.charAt(var5), (byte) 71)) {
+                if (LobbyGame.a(param2.charAt(var5), (byte) 71)) {
                   continue;
                 }
                 break;
@@ -91,7 +91,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
               return stackIn_27_0;
             }
             for (var5Lifetime1 = var8Lifetime1 + 2; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (kh.a(param2.charAt(var5Lifetime1), (byte) 57)) {
+              if (LobbyGame.a(param2.charAt(var5Lifetime1), (byte) 57)) {
                 continue;
               }
               break;
@@ -128,7 +128,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -152,14 +152,14 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
         try {
           if (param3 != this.goBackButton) {
             if (param3 == this.createAccountButton) {
-              br.f(35);
+              LoginRequiredScreen.f(35);
             } else {
               if (this.justPlayButton == param3) {
                 PoolGameModel.m(4);
               }
             }
           } else {
-            mb.b(3);
+            ByteStorage.b(3);
           }
           if (!param0) {
             var8 = (ButtonWidget) null;
@@ -176,16 +176,16 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
     public AccountWelcomePanel() {
         super(0, 0, 476, 225, (WidgetPainter) null);
-        this.createAccountButton = new ButtonWidget(ad.createCreateanaccount, (WidgetListener) null);
+        this.createAccountButton = new ButtonWidget(ArchiveIndex.createCreateanaccount, (WidgetListener) null);
         this.goBackButton = new ButtonWidget(ValidationIconWidget.goback, (WidgetListener) null);
         this.justPlayButton = new ButtonWidget(MultiHandleSliderWidget.justplay, (WidgetListener) null);
-        ng var1 = new ng();
+        ThreeSliceButtonPainter var1 = new ThreeSliceButtonPainter();
         this.createAccountButton.renderer = (WidgetPainter) ((Object) var1);
         this.goBackButton.renderer = (WidgetPainter) ((Object) var1);
         this.justPlayButton.renderer = (WidgetPainter) ((Object) var1);
@@ -199,7 +199,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
         this.createAccountButton.listener = (WidgetListener) (this);
         this.createAccountButton.hoverText = fc.loginCreateTooltip;
         this.justPlayButton.listener = (WidgetListener) (this);
-        this.justPlayButton.hoverText = lh.loginJustplayTooltip;
+        this.justPlayButton.hoverText = ArchiveProvider.loginJustplayTooltip;
         this.addChild(true, this.goBackButton);
         this.addChild(true, this.createAccountButton);
         this.addChild(true, this.justPlayButton);
@@ -236,11 +236,11 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_N = null;
         field_X = null;
         if (param0 != 20868) {

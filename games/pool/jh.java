@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class jh {
-    static vh field_a;
-    static cg field_d;
+    static UiComponent field_a;
+    static MusicTrack field_d;
     static String muLobbyName;
     static String muGameoptWithdrawInviteToX;
     static Sprite field_e;
@@ -63,7 +63,7 @@ class jh {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ class jh {
           if (param1 != 108) {
             jh.a(92);
           }
-          stackIn_3_0 = qg.a(123, 0, param2, param0);
+          stackIn_3_0 = qg.extendIntArray(123, 0, param2, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,7 +90,7 @@ class jh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

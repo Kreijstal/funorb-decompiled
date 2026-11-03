@@ -15,58 +15,58 @@ final class SpaceBallSkin extends BallSkin {
           CueAim.a(62, var1);
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clear();
-          im.field_fc = 0;
+          LobbyPlayer.field_fc = 0;
           TextHotspotRegion.a(-21818);
-          var3 = var1.d();
+          var3 = var1.copy();
           for (var4 = 0; 15 > var4; var4++) {
-            var3.f(-2, -2, 16777215);
+            var3.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.e(4, 4, 0, 0, 540, 140);
           }
-          ci.field_h.e();
+          DebugTuningSlider.field_h.e();
           var1.drawHalfSize(0, 0);
-          oc.a(126);
+          TriangleMesh.a(126);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "lm.E(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lm.E(" + param0 + ')');
         }
     }
 
-    final void a(int param0, di param1) {
+    final void a(int param0, ResourceArchive param1) {
         if (param0 != 198123656) {
           return;
         }
         try {
-          this.field_e = aj.a(0, "", param1, "top_bar_balls_space");
+          this.field_e = NameEntryPopup.a(0, "", param1, "top_bar_balls_space");
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "lm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void c(int param0, int param1) {
-        oq var2 = ej.field_j;
-        var2.b(false, param1);
+        CipherPacketBuffer var2 = JaggrabDownloader.field_j;
+        var2.writeCipheredOpcode(false, param1);
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.a(param0, false);
-        var2.a(em.field_L.field_Nb, false);
-        int var4 = em.field_L.field_ac + (em.field_L.field_Yb << 6);
+        var2.a(HighscoresScreen.field_L.field_Nb, false);
+        int var4 = HighscoresScreen.field_L.field_ac + (HighscoresScreen.field_L.field_Yb << 6);
         var2.a(var4, false);
-        var2.a(em.field_L.field_tc, (byte) 0, 0, em.field_L.field_tc.length);
+        var2.a(HighscoresScreen.field_L.settings, (byte) 0, 0, HighscoresScreen.field_L.settings.length);
         var2.b(-var3 + var2.position, true);
     }
 
-    final void a(di param0, byte param1) {
-        eg dupTemp$0 = null;
-        eg dupTemp$1 = null;
+    final void a(ResourceArchive param0, byte param1) {
+        MeshBuilder dupTemp$0 = null;
+        MeshBuilder dupTemp$1 = null;
         if (null != this.field_a) {
           return;
         }
-        this.field_a = new eg[16];
-        this.field_a[0] = eg.a(param0, "", "balls/SPACE/space_ball_white");
+        this.field_a = new MeshBuilder[16];
+        this.field_a[0] = MeshBuilder.loadFromArchive(param0, "", "balls/SPACE/space_ball_white");
         if (param1 != 117) {
           return;
         }
         try {
-          dupTemp$0 = eg.a(param0, "", "balls/SPACE/space_ball_01");
+          dupTemp$0 = MeshBuilder.loadFromArchive(param0, "", "balls/SPACE/space_ball_01");
           this.field_a[7] = dupTemp$0;
           this.field_a[6] = dupTemp$0;
           this.field_a[5] = dupTemp$0;
@@ -74,8 +74,8 @@ final class SpaceBallSkin extends BallSkin {
           this.field_a[3] = dupTemp$0;
           this.field_a[2] = dupTemp$0;
           this.field_a[1] = dupTemp$0;
-          this.field_a[8] = eg.a(param0, "", "balls/SPACE/space_ball_black");
-          dupTemp$1 = eg.a(param0, "", "balls/SPACE/space_ball_02");
+          this.field_a[8] = MeshBuilder.loadFromArchive(param0, "", "balls/SPACE/space_ball_black");
+          dupTemp$1 = MeshBuilder.loadFromArchive(param0, "", "balls/SPACE/space_ball_02");
           this.field_a[15] = dupTemp$1;
           this.field_a[14] = dupTemp$1;
           this.field_a[13] = dupTemp$1;
@@ -83,12 +83,12 @@ final class SpaceBallSkin extends BallSkin {
           this.field_a[11] = dupTemp$1;
           this.field_a[10] = dupTemp$1;
           this.field_a[9] = dupTemp$1;
-          this.field_a[0].a(8, 8, 8, 8);
-          this.field_a[1].a(8, 8, 8, 8);
-          this.field_a[8].a(8, 8, 8, 8);
-          this.field_a[9].a(8, 8, 8, 8);
+          this.field_a[0].scaleVertices(8, 8, 8, 8);
+          this.field_a[1].scaleVertices(8, 8, 8, 8);
+          this.field_a[8].scaleVertices(8, 8, 8, 8);
+          this.field_a[9].scaleVertices(8, 8, 8, 8);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "lm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -106,11 +106,11 @@ final class SpaceBallSkin extends BallSkin {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        IntrusiveNode.field_e.field_nb = param6;
+        IntrusiveNode.field_e.text = param6;
         if (hn.field_b != 2) {
-          wn.field_g.field_nb = ff.escCancelthisline;
+          wn.field_g.text = ff.escCancelthisline;
         } else {
-          wn.field_g.field_nb = IsaacCipher.escCancelprivatemessage;
+          wn.field_g.text = IsaacCipher.escCancelprivatemessage;
         }
         if (param3 != 4) {
           return;
@@ -118,27 +118,27 @@ final class SpaceBallSkin extends BallSkin {
         try {
           var9_int = 495;
           var10 = 5;
-          vi.field_c.b(var10, param3 ^ 2147483643, 5, var9_int - 10, param7);
-          pa.field_J.b(0, param3 + 2147483643, 0, -NineBallRules.field_j.field_gb + vi.field_c.field_gb, param7);
+          vi.field_c.setBounds(var10, param3 ^ 2147483643, 5, var9_int - 10, param7);
+          TimeTrialSelectScreen.field_J.setBounds(0, param3 + 2147483643, 0, -NineBallRules.field_j.width + vi.field_c.width, param7);
           var10 = var10 + (param1 + param7);
-          NineBallRules.field_j.b(0, 2147483647, pa.field_J.field_gb, NineBallRules.field_j.field_gb, param7);
-          be.field_L.b(var10, 2147483647, 5, be.field_L.b(true), param8);
-          var11 = wn.field_g.b(true);
-          wn.field_g.b(var10, 2147483647, -var11 + var9_int - 5, var11, param8);
+          NineBallRules.field_j.setBounds(0, 2147483647, TimeTrialSelectScreen.field_J.width, NineBallRules.field_j.width, param7);
+          OptionsScreen.field_L.setBounds(var10, 2147483647, 5, OptionsScreen.field_L.getContentWidth(true), param8);
+          var11 = wn.field_g.getContentWidth(true);
+          wn.field_g.setBounds(var10, 2147483647, -var11 + var9_int - 5, var11, param8);
           var12 = param8 + var10 + 5;
-          IntrusiveNode.field_e.b(0, param3 ^ 2147483643, 0, var9_int, param2);
-          ml.field_e.b(param2, param3 ^ 2147483643, 0, var9_int, var12);
+          IntrusiveNode.field_e.setBounds(0, param3 ^ 2147483643, 0, var9_int, param2);
+          ml.field_e.setBounds(param2, param3 ^ 2147483643, 0, var9_int, var12);
           var12 = var12 + param2;
-          ml.field_e.field_F = rp.a(32450, 3, 2105376, ml.field_e.field_Db, 11579568, 8421504);
-          uq.field_D.b(-(var12 / 2) + param4, 2147483647, param5 - var9_int / 2, var9_int, var12);
+          ml.field_e.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, 2105376, ml.field_e.height, 11579568, 8421504);
+          Bzip2DecoderState.field_D.setBounds(-(var12 / 2) + param4, 2147483647, param5 - var9_int / 2, var9_int, var12);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "lm.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lm.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     final static hj[] a(byte param0) {
         if (param0 == -32) {
-          return new hj[]{ArchiveRequest.field_G, lb.field_N, TranslatedUiText.field_g, CacheEntry.field_A, en.field_c, CueStick.field_i, no.field_g, of.field_Tb, mj.field_d, pf.field_e, Ball.field_J, WidgetContainer.field_K, bq.field_r, pn.field_k};
+          return new hj[]{ArchiveRequest.field_G, lb.field_N, TranslatedUiText.field_g, CacheEntry.field_A, en.field_c, CueStick.field_i, Js5Transport.field_g, ScrollPane.field_Tb, mj.field_d, WidgetStyleLayer.field_e, Ball.field_J, WidgetContainer.field_K, bq.field_r, pn.field_k};
         }
         return (hj[]) null;
     }
@@ -146,7 +146,7 @@ final class SpaceBallSkin extends BallSkin {
     final int a(int param0, boolean param1) {
         int var3;
         int var4;
-        di var5;
+        ResourceArchive var5;
         int var3Lifetime1;
         var4 = Pool.field_O;
         if (param1) {
@@ -201,8 +201,8 @@ final class SpaceBallSkin extends BallSkin {
           }
           return this.b(1, (byte) -108);
         }
-        var5 = (di) null;
-        this.a((di) null, (byte) -106);
+        var5 = (ResourceArchive) null;
+        this.a((ResourceArchive) null, (byte) -106);
         var3Lifetime1 = param0;
         if (var3Lifetime1 == 0) {
           return 13421772;

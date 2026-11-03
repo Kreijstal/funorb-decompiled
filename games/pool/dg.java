@@ -4,16 +4,16 @@
 final class dg extends ArchiveRequest {
     int field_N;
     static int[] field_K;
-    np field_R;
+    SectorCacheStore field_R;
     byte[] field_Q;
     static String menuRestartGame;
     static byte[] field_S;
-    static tf field_L;
-    static vh field_J;
+    static LoginPayloadKind field_L;
+    static UiComponent field_J;
     static int[] field_T;
     static String statusPlaying;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_T = null;
         menuRestartGame = null;
         field_L = null;
@@ -84,7 +84,7 @@ final class dg extends ArchiveRequest {
     static {
         menuRestartGame = "Restart";
         field_S = new byte[520];
-        field_L = new tf(3);
+        field_L = new LoginPayloadKind(3);
         statusPlaying = "Playing";
     }
 }

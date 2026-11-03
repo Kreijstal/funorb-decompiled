@@ -23,13 +23,13 @@ final class ViewportController {
     private float field_m;
     private int field_j;
     private int field_r;
-    static di field_q;
+    static ResourceArchive field_q;
     static boolean field_y;
     private int field_d;
     static int field_t;
     private bd field_o;
 
-    final static void a(di param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         Object var2 = null;
         int var3 = 0;
         TableScene var4 = null;
@@ -70,7 +70,7 @@ final class ViewportController {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw wm.a((Throwable) (stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) (stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -107,13 +107,13 @@ final class ViewportController {
           }
         }
         if (ml.field_d == this.field_d &&
-          ad.field_c == this.field_h) {
+          ArchiveIndex.field_c == this.field_h) {
           return;
         }
         this.field_o.a(this.field_h, this.field_d, 110);
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_n = null;
         muRequestDeclined = null;
@@ -125,12 +125,12 @@ final class ViewportController {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        kn var4 = null;
+        PlayerContextMenu var4 = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        eo var3 = wp.a(param0, param2, 100);
-        kn var4Lifetime1;
+        SocialListEntry var3 = wp.a(param0, param2, 100);
+        PlayerContextMenu var4Lifetime1;
         if (param1 >= -72) {
           int[] var7 = (int[]) null;
           ViewportController.a((float[]) null, -27, -27, (int[]) null);
@@ -139,11 +139,11 @@ final class ViewportController {
           PlasmaBallSkin.field_m.a((byte) 124, false);
           var4 = PlasmaBallSkin.field_m;
           var5_ref_String = PacketBuffer.muLobbyFriendRm;
-          var4.field_n.a(var5_ref_String, 17130, 5);
+          var4.field_n.addAction(var5_ref_String, 17130, 5);
           var4Lifetime1 = PlasmaBallSkin.field_m;
           var5 = DialogLayer.field_W;
           var6 = UsernameAvailabilityValidator.field_o;
-          var4Lifetime1.field_n.c(0, 0, var5, 0, var6);
+          var4Lifetime1.field_n.layoutAtAnchor(0, 0, var5, 0, var6);
         }
         d.a(param2, (byte) 21, param0);
     }
@@ -156,12 +156,12 @@ final class ViewportController {
           return;
         }
         try {
-          ag.a(param3, param0, 9);
+          ag.projectToScreen(param3, param0, 9);
           SoftwareRasterizer.drawLine((int)param0[0], -4 + (int)param0[1], (int)param0[0], 4 + (int)param0[1], param1);
           int var4_int = 91 / ((55 - param2) / 46);
           SoftwareRasterizer.drawLine((int)param0[0] - 4, (int)param0[1], (int)param0[0] + 4, (int)param0[1], param1);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hr.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hr.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -179,8 +179,8 @@ final class ViewportController {
         try {
           param3 = param3 - param2[1];
           if (param5 != 9) {
-            di var12 = (di) null;
-            ViewportController.a((di) null, 12);
+            ResourceArchive var12 = (ResourceArchive) null;
+            ViewportController.a((ResourceArchive) null, 12);
           }
           param0 = param0 - param2[0];
           param4 = param4 - param2[2];
@@ -194,17 +194,17 @@ final class ViewportController {
           param1[1] = (int)((long)TriangleRasterizer.projectionCenterY + KillerRules.a(512L, (byte) -48, var8) / var10);
           param1[2] = (int)var10;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hr.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hr.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final od b(int param0) {
+    final FullscreenFocusCanvas b(int param0) {
         this.field_u = ml.field_d;
-        this.field_i = ad.field_c;
+        this.field_i = ArchiveIndex.field_c;
         this.field_o.a(this.field_p, this.field_a, 117);
         int var2 = 35 % ((58 - param0) / 41);
-        wd.field_Sb = false;
-        od var3 = wp.a(this.field_a, lg.field_s, (byte) 0, this.field_p, 0, 0);
+        TabbedPane.field_Sb = false;
+        FullscreenFocusCanvas var3 = wp.a(this.field_a, StatefulTextPainter.field_s, (byte) 0, this.field_p, 0, 0);
         if (var3 == null) {
           this.d(22472);
         }
@@ -222,7 +222,7 @@ final class ViewportController {
           ViewportController.a(true, 91, 8);
         }
         qa.a((byte) 55, param0);
-        mq.a(0, param0);
+        AudioService.a(0, param0);
     }
 
     private final void a(int param0) {
@@ -265,7 +265,7 @@ final class ViewportController {
           }
         }
         if (ml.field_d != var2 ||
-          ad.field_c != var3) {
+          ArchiveIndex.field_c != var3) {
           this.field_o.a(var3, var2, param0 + 99);
         }
         if (this.field_j > 0) {

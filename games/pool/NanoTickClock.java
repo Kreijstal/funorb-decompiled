@@ -12,7 +12,7 @@ final class NanoTickClock extends TickClock {
     static String youNowHaveNLives;
     private int field_l;
     private int field_j;
-    static vh field_t;
+    static UiComponent field_t;
     static boolean field_s;
 
     final static boolean b(int param0) {
@@ -44,11 +44,11 @@ final class NanoTickClock extends TickClock {
         return var5;
     }
 
-    final static qp a(vh param0, vh param1, sf param2, vh param3, byte param4) {
+    final static QuickChatMenu a(UiComponent param0, UiComponent param1, QuickChatCategoryDefinition param2, UiComponent param3, byte param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        qp stackIn_30_0 = null;
+        QuickChatMenu stackIn_30_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -66,12 +66,12 @@ final class NanoTickClock extends TickClock {
         String[] var8 = null;
         char[] var9 = null;
         int[] var10 = null;
-        qp[] var11 = null;
+        QuickChatMenu[] var11 = null;
         int var12 = 0;
-        sf var13_ref_sf = null;
+        QuickChatCategoryDefinition var13_ref_sf = null;
         int var13 = 0;
         int var15 = 0;
-        ap var16 = null;
+        QuickChatPhraseDefinition var16 = null;
         int var17 = 0;
         int[] var18 = null;
         char[] var19 = null;
@@ -83,16 +83,16 @@ final class NanoTickClock extends TickClock {
           if (param2 == null) {
             return null;
           }
-          if (null != param2.field_F) {
-            stackIn_7_0 = param2.field_F.length;
+          if (null != param2.subcategoryIds) {
+            stackIn_7_0 = param2.subcategoryIds.length;
           } else {
             stackIn_7_0 = 0;
           }
           var5_int = stackIn_7_0;
-          if (null == param2.field_D) {
+          if (null == param2.phraseIds) {
             stackIn_10_0 = 0;
           } else {
-            stackIn_10_0 = param2.field_D.length;
+            stackIn_10_0 = param2.phraseIds.length;
           }
           var6 = stackIn_10_0;
           var7 = var5_int + var6;
@@ -103,40 +103,40 @@ final class NanoTickClock extends TickClock {
           var20 = new int[var7];
           var18 = var20;
           var10 = var18;
-          var11 = new qp[var7];
-          if (null != param2.field_F) {
-            for (var12 = 0; param2.field_F.length > var12; var12++) {
-              var13_ref_sf = DisplayNamePanel.field_N.a((byte) -55, param2.field_F[var12]);
-              var8[var12] = var13_ref_sf.field_G;
-              var9[var12] = param2.field_w[var12];
+          var11 = new QuickChatMenu[var7];
+          if (null != param2.subcategoryIds) {
+            for (var12 = 0; param2.subcategoryIds.length > var12; var12++) {
+              var13_ref_sf = DisplayNamePanel.field_N.a((byte) -55, param2.subcategoryIds[var12]);
+              var8[var12] = var13_ref_sf.title;
+              var9[var12] = param2.subcategoryShortcuts[var12];
               var11[var12] = NanoTickClock.a(param0, param1, var13_ref_sf, param3, (byte) 125);
             }
           }
-          if (null != param2.field_D) {
+          if (null != param2.phraseIds) {
             var12Lifetime1 = var5_int;
             var13 = 49;
-            for (var14 = 0; var14 < param2.field_D.length; var14++) {
-              var15 = param2.field_D[var14];
+            for (var14 = 0; var14 < param2.phraseIds.length; var14++) {
+              var15 = param2.phraseIds[var14];
               if (var15 != -1) {
-                var16 = o.field_x.a(127, var15);
+                var16 = UiComponentNode.field_x.getDefinition(127, var15);
                 var8[var12Lifetime1 + var14] = var16.e(0);
-                var9[var12Lifetime1 + var14] = param2.field_A[var14];
+                var9[var12Lifetime1 + var14] = param2.phraseShortcuts[var14];
                 if (var9[var14 + var12Lifetime1] <= 0) {
                   var13 = (char)(var13 + 1);
                   var9[var12Lifetime1 + var14] = (char)var13;
                 }
-                var10[var12Lifetime1 + var14] = param2.field_D[var14];
+                var10[var12Lifetime1 + var14] = param2.phraseIds[var14];
               } else {
                 var8[var12Lifetime1 + var14] = w.quickchatHelp;
-                var9[var14 + var12Lifetime1] = param2.field_A[var14];
-                var10[var12Lifetime1 + var14] = param2.field_D[var14];
+                var9[var14 + var12Lifetime1] = param2.phraseShortcuts[var14];
+                var10[var12Lifetime1 + var14] = param2.phraseIds[var14];
               }
             }
           }
           if (param4 <= 73) {
-            NanoTickClock.c((byte) -82);
+            NanoTickClock.releaseStatics((byte) -82);
           }
-          stackIn_30_0 = new qp(0L, param0, param3, param1, var11, var20, var8, var21);
+          stackIn_30_0 = new QuickChatMenu(0L, param0, param3, param1, var11, var20, var8, var21);
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -166,7 +166,7 @@ final class NanoTickClock extends TickClock {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class NanoTickClock extends TickClock {
         return 0L;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         rule11 = null;
         youNowHaveNLives = null;
@@ -198,8 +198,8 @@ final class NanoTickClock extends TickClock {
           this.field_m = this.field_m + (this.field_p - this.field_m);
         }
         if (param0 != 26) {
-          vh var3 = (vh) null;
-          NanoTickClock.a((vh) null, (vh) null, (sf) null, (vh) null, (byte) 20);
+          UiComponent var3 = (UiComponent) null;
+          NanoTickClock.a((UiComponent) null, (UiComponent) null, (QuickChatCategoryDefinition) null, (UiComponent) null, (byte) 20);
         }
     }
 
@@ -207,8 +207,8 @@ final class NanoTickClock extends TickClock {
         if (param0 < 54) {
           return (java.applet.Applet) null;
         }
-        if (oc.field_t != null) {
-          return oc.field_t;
+        if (TriangleMesh.field_t != null) {
+          return TriangleMesh.field_t;
         }
         return (java.applet.Applet) ((Object) ModernTableScene.field_ib);
     }
@@ -219,11 +219,11 @@ final class NanoTickClock extends TickClock {
           return;
         }
         int var2 = ContentTransitionDialog.k((byte) 59);
-        db.field_Vb.a((kp.field_d << 1) + var1, AccountContentDialog.field_wb - ShotRecord.field_o, -6316, CacheEntry.field_z - kp.field_d, (ShotRecord.field_o << 1) + var2);
+        VerticalScrollbar.field_Vb.draw((kp.field_d << 1) + var1, AccountContentDialog.field_wb - ShotRecord.field_o, -6316, CacheEntry.field_z - kp.field_d, (ShotRecord.field_o << 1) + var2);
         jj.h(-9395);
     }
 
-    final static MusicPatch a(di param0, byte param1, int param2) {
+    final static MusicPatch a(ResourceArchive param0, byte param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -255,7 +255,7 @@ final class NanoTickClock extends TickClock {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class NanoTickClock extends TickClock {
         int var9Lifetime3;
         int var8Lifetime1;
         if (param0 < 44) {
-          NanoTickClock.c((byte) -91);
+          NanoTickClock.releaseStatics((byte) -91);
         }
         int var7 = -512;
         int var9 = 320;

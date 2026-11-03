@@ -3,7 +3,7 @@
  */
 final class NineBallRules extends GameRules {
     static int[] field_g;
-    static vh field_j;
+    static UiComponent field_j;
     static int field_h;
     private int field_f;
     static String unpackingGraphics;
@@ -68,7 +68,7 @@ final class NineBallRules extends GameRules {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -80,10 +80,10 @@ final class NineBallRules extends GameRules {
         return 1;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         unpackingGraphics = null;
         if (param0) {
-          field_j = (vh) null;
+          field_j = (UiComponent) null;
         }
         field_j = null;
         field_g = null;
@@ -99,7 +99,7 @@ final class NineBallRules extends GameRules {
 
     private final int q(int param0) {
         if (param0 != 10) {
-          field_j = (vh) null;
+          field_j = (UiComponent) null;
         }
         return AccountWelcomePanel.field_Q | ll.field_f;
     }
@@ -125,7 +125,7 @@ final class NineBallRules extends GameRules {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -149,9 +149,9 @@ final class NineBallRules extends GameRules {
             return false;
           }
           if (hn.field_b == 2 &&
-            di.field_a != null) {
+            ResourceArchive.field_a != null) {
             var3 = (CharSequence) ((Object) param0);
-            if (!di.field_a.equals(TutorialController.normalizeDisplayName(91, var3))) {
+            if (!ResourceArchive.field_a.equals(TutorialController.normalizeDisplayName(91, var3))) {
               return false;
             }
             if (param1 == -101) {
@@ -170,7 +170,7 @@ final class NineBallRules extends GameRules {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ final class NineBallRules extends GameRules {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class NineBallRules extends GameRules {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -264,7 +264,7 @@ final class NineBallRules extends GameRules {
 
     final boolean f(int param0) {
         if (param0 < 113) {
-          NineBallRules.b(false);
+          NineBallRules.releaseStatics(false);
         }
         return true;
     }
@@ -277,8 +277,8 @@ final class NineBallRules extends GameRules {
         int var7;
         ShotRecord var8;
         ShotRecord var9;
-        aa var10;
-        aa var11;
+        IntrusiveDequeCursor var10;
+        IntrusiveDequeCursor var11;
         var6 = null;
         var7 = Pool.field_O;
         var8 = this.field_d.currentShot(123);
@@ -309,11 +309,11 @@ final class NineBallRules extends GameRules {
         var4 = 74 % ((-37 - param0) / 60);
         if (var3 != 0) {
           if (!var9.pottedBalls.c(0)) {
-            var11 = new aa(var9.pottedBalls);
-            var6_ref = (PotEvent) (var11.b((byte) -92));
+            var11 = new IntrusiveDequeCursor(var9.pottedBalls);
+            var6_ref = (PotEvent) (var11.last((byte) -92));
             while (var6_ref != null) {
               if (9 != var6_ref.ballIndex) {
-                var6_ref = (PotEvent) (var11.b(-86));
+                var6_ref = (PotEvent) (var11.previous(-86));
                 continue;
               }
               var9.a(9, -14, new int[]{this.field_d.field_A});
@@ -323,16 +323,16 @@ final class NineBallRules extends GameRules {
           }
         } else {
           if (!var9.pottedBalls.c(0)) {
-            var10 = new aa(var9.pottedBalls);
-            var6_ref = (PotEvent) (var10.b((byte) -92));
+            var10 = new IntrusiveDequeCursor(var9.pottedBalls);
+            var6_ref = (PotEvent) (var10.last((byte) -92));
             while (var6_ref != null) {
               if (var6_ref.ballIndex == 9) {
                 var9.a(10, -14, new int[]{this.field_d.field_A});
                 return ag.field_e;
               }
-              var3 = var3 | nd.field_j;
+              var3 = var3 | MarkerSliderPainter.field_j;
               var9.field_w = (byte)(var9.field_w + 1);
-              var6_ref = (PotEvent) (var10.b(-126));
+              var6_ref = (PotEvent) (var10.previous(-126));
             }
           }
           if (this.field_d.a(false, (byte) 81, var9)) {
@@ -386,7 +386,7 @@ final class NineBallRules extends GameRules {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -400,7 +400,7 @@ final class NineBallRules extends GameRules {
 
     final int i(int param0) {
         if (param0 != 26840) {
-          field_j = (vh) null;
+          field_j = (UiComponent) null;
         }
         return 10;
     }
@@ -411,30 +411,30 @@ final class NineBallRules extends GameRules {
         IsaacCipher var6 = new IsaacCipher(new int[]{1024 + param0});
         IsaacCipher var3 = var6;
         for (var4 = 0; var4 < 7; var4++) {
-          up.field_M[var4] = var4 + 2;
+          CachedArchiveSource.field_M[var4] = var4 + 2;
           dj.field_a[var4] = var6.a(23165, 2048);
         }
-        StrongCacheEntry.a(dj.field_a, up.field_M, (byte) -54);
-        no.field_s[1] = 1;
-        no.field_s[0] = 0;
-        no.field_s[3] = up.field_M[1];
-        no.field_s[2] = up.field_M[0];
-        no.field_s[6] = up.field_M[3];
-        no.field_s[4] = up.field_M[2];
-        no.field_s[5] = 9;
-        no.field_s[7] = -1;
+        StrongCacheEntry.a(dj.field_a, CachedArchiveSource.field_M, (byte) -54);
+        Js5Transport.field_s[1] = 1;
+        Js5Transport.field_s[0] = 0;
+        Js5Transport.field_s[3] = CachedArchiveSource.field_M[1];
+        Js5Transport.field_s[2] = CachedArchiveSource.field_M[0];
+        Js5Transport.field_s[6] = CachedArchiveSource.field_M[3];
+        Js5Transport.field_s[4] = CachedArchiveSource.field_M[2];
+        Js5Transport.field_s[5] = 9;
+        Js5Transport.field_s[7] = -1;
         if (param1 != -32) {
           field_g = (int[]) null;
         }
-        no.field_s[10] = -1;
-        no.field_s[12] = -1;
-        no.field_s[14] = -1;
-        no.field_s[13] = up.field_M[6];
-        no.field_s[8] = up.field_M[4];
-        no.field_s[9] = up.field_M[5];
-        no.field_s[11] = -1;
-        no.field_s[15] = -1;
-        return no.field_s;
+        Js5Transport.field_s[10] = -1;
+        Js5Transport.field_s[12] = -1;
+        Js5Transport.field_s[14] = -1;
+        Js5Transport.field_s[13] = CachedArchiveSource.field_M[6];
+        Js5Transport.field_s[8] = CachedArchiveSource.field_M[4];
+        Js5Transport.field_s[9] = CachedArchiveSource.field_M[5];
+        Js5Transport.field_s[11] = -1;
+        Js5Transport.field_s[15] = -1;
+        return Js5Transport.field_s;
     }
 
     final byte b(int param0, int param1) {

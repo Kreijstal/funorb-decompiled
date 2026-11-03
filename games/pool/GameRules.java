@@ -5,7 +5,7 @@ abstract class GameRules {
     static int[] field_a;
     static int field_b;
     PoolGameModel field_d;
-    static no field_c;
+    static Js5Transport field_c;
 
     abstract int a(boolean param0);
 
@@ -52,7 +52,7 @@ abstract class GameRules {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -96,7 +96,7 @@ abstract class GameRules {
 
     abstract byte b(int param0, int param1);
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 13) {
           String var2 = (String) null;
@@ -165,7 +165,7 @@ abstract class GameRules {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ abstract class GameRules {
         if (param0 <= 107) {
           GameRules.k(-99);
         }
-        return or.field_b;
+        return BallEvent.field_b;
     }
 
     final static void a(String[] args, boolean param1, int param2, String param3) {
@@ -193,13 +193,13 @@ abstract class GameRules {
           if (param1) {
             field_b = 100;
           }
-          pa.field_I = td.field_f;
+          TimeTrialSelectScreen.field_I = td.field_f;
           if (param2 != 255) {
             if (param2 >= 100 &&
               param2 <= 105) {
               var4 = args;
               gf.a(92, var4);
-              PoolMatchController.field_gb = jo.a(args, 57);
+              PoolMatchController.field_gb = PauseMenuScreen.a(args, 57);
               return;
             }
             PoolMatchController.field_gb = DebouncedValidationProvider.a(param2, true, param3);
@@ -226,7 +226,7 @@ abstract class GameRules {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ abstract class GameRules {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -251,7 +251,7 @@ abstract class GameRules {
             this.a(-101);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "sq.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sq.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -305,7 +305,7 @@ abstract class GameRules {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

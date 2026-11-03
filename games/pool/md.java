@@ -6,14 +6,14 @@ final class md {
     static String[] achievementNames;
     static int field_b;
     static byte[] field_c;
-    static vh field_d;
+    static UiComponent field_d;
 
     final static boolean a(byte param0) {
         if (param0 >= -11) {
-          field_d = (vh) null;
-          return re.field_b;
+          field_d = (UiComponent) null;
+          return LoginPayload.field_b;
         }
-        return re.field_b;
+        return LoginPayload.field_b;
     }
 
     static int a(int param0, int param1) {
@@ -25,8 +25,8 @@ final class md {
         TriangleRasterizer.useRasterClip();
         TriangleRasterizer.setProjectionCenter(320, 240);
         ViewportController.field_q.field_k = 0;
-        TriangleRasterizer.a(new dp(NetworkGameClient.field_F, ViewportController.field_q, param0, 128));
-        di.a(0);
+        TriangleRasterizer.a(new TextureCache(NetworkGameClient.field_F, ViewportController.field_q, param0, 128));
+        ResourceArchive.a(0);
     }
 
     public static void a(boolean param0) {

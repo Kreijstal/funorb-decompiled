@@ -19,7 +19,7 @@ abstract class SocketConnector {
 
     abstract java.net.Socket a(byte param0) throws IOException;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 16857) {
           field_d = 93;
           gameoptCannotbecombined2 = null;

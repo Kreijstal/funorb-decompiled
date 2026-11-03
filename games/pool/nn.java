@@ -9,18 +9,18 @@ final class nn {
     static int[][] field_e;
 
     final static void a(boolean param0, int param1, int param2) {
-        of.a(param1, (byte) 0, param2);
+        ScrollPane.a(param1, (byte) 0, param2);
         jc.field_e.toRotationMatrix(tp.field_h, -59);
         if (!param0) {
           return;
         }
-        if (null != tf.field_a.field_a) {
-          tf.field_a.field_j[vn.field_e] = (nc) (tf.field_a.field_a[vn.field_e].a(96, 1031, -1024, -1024, -10240, tp.field_h));
+        if (null != LoginPayloadKind.field_a.field_a) {
+          LoginPayloadKind.field_a.field_j[vn.field_e] = (ModelMesh) (LoginPayloadKind.field_a.field_a[vn.field_e].a(96, 1031, -1024, -1024, -10240, tp.field_h));
         }
-        tf.field_a.a(tp.field_h, CushionSegment.field_i, vn.field_e, -3637);
+        LoginPayloadKind.field_a.a(tp.field_h, CushionSegment.field_i, vn.field_e, -3637);
         PoolMatchController var3 = AccountContentDialog.field_ub;
         if (var3 == null) {
-          var3 = am.field_e;
+          var3 = TextWidgetPainter.field_e;
         }
         if (var3 == null) {
           return;
@@ -31,25 +31,25 @@ final class nn {
         }
     }
 
-    final static void a(eg param0, boolean param1) {
+    final static void a(MeshBuilder param0, boolean param1) {
         int[] var4 = null;
         try {
           if (!param1) {
             String var3 = (String) null;
-            nn.a(-76L, (byte) -91, (java.applet.Applet) null, (String) null, (String) null);
+            nn.setBrowserCookie(-76L, (byte) -91, (java.applet.Applet) null, (String) null, (String) null);
           }
-          var4 = param0.field_q;
+          var4 = param0.vertexZ;
           int[] var2 = var4;
-          param0.field_q = param0.field_g;
-          param0.field_g = var4;
+          param0.vertexZ = param0.vertexX;
+          param0.vertexX = var4;
           ImageProducerRasterBuffer.a(param0, (byte) 38);
           param0.a();
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "nn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_a = (Sprite[][]) null;
         if (param0 != 16006) {
@@ -58,7 +58,7 @@ final class nn {
         field_e = (int[][]) null;
     }
 
-    final static void a(long param0, byte param1, java.applet.Applet param2, String param3, String param4) {
+    final static void setBrowserCookie(long param0, byte param1, java.applet.Applet param2, String param3, String param4) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;
@@ -91,9 +91,9 @@ final class nn {
               if (param0 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + hn.formatCookieDate(rl.a((byte) -120) + param0 * 1000L, false) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + hn.formatCookieDate(rl.monotonicTimeMillis((byte) -120) + param0 * 1000L, false) + "; Max-Age=" + param0;
               }
-              mo.a("document.cookie=\"" + var7Lifetime4 + "\"", param2, (byte) 35);
+              JavaScriptBridge.evaluateScript("document.cookie=\"" + var7Lifetime4 + "\"", param2, (byte) 35);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -122,7 +122,7 @@ final class nn {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

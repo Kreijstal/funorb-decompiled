@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ii {
-    static vh field_e;
+    static UiComponent field_e;
     static String createPasswordConfirmTooltip;
     static int field_d;
     static int field_a;
@@ -33,23 +33,23 @@ final class ii {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new Sprite(4 + param1.field_f, param1.field_g + 4);
-          var9.field_B = param1.field_d - 2;
-          var9.field_G = param1.field_e - 2;
+          var9 = new Sprite(4 + param1.width, param1.height + 4);
+          var9.field_B = param1.trimY - 2;
+          var9.field_G = param1.trimX - 2;
           var15 = new int[4];
           var16 = SoftwareRasterizer.pixels;
           var5 = SoftwareRasterizer.width;
           var6 = SoftwareRasterizer.height;
           SoftwareRasterizer.saveClip(var15);
           var9.e();
-          param1.field_d = 0;
+          param1.trimY = 0;
           var7 = param1;
-          param1.field_h = param1.field_f;
-          var7.field_e = 0;
-          param1.field_b = param1.field_g;
-          param1.a(2, param0);
-          var9.e(4144959);
-          var9.e(65793);
+          param1.fullWidth = param1.width;
+          var7.trimX = 0;
+          param1.fullHeight = param1.height;
+          param1.draw(2, param0);
+          var9.addOutline(4144959);
+          var9.addOutline(65793);
           SoftwareRasterizer.setTarget(var16, var5, var6);
           SoftwareRasterizer.restoreClip(var15);
           stackIn_1_0 = var9;
@@ -64,7 +64,7 @@ final class ii {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class ii {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class ii {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -146,16 +146,16 @@ final class ii {
         }
         boolean decompiledFrameRemainder0 = true;
         if (null != sm.field_C) {
-          var3 = sm.field_C.a(param2, (byte) -83);
+          var3 = sm.field_C.updateAndPollNameInput(param2, (byte) -83);
           if (0 != var3) {
             if (var3 == 2 &&
-              sm.field_C.field_nb != null &&
-              !sm.field_C.field_nb.equals("")) {
-              if (sm.field_C.field_nb.charAt(0) != 91) {
-                var7 = (CharSequence) ((Object) sm.field_C.field_nb);
+              sm.field_C.text != null &&
+              !sm.field_C.text.equals("")) {
+              if (sm.field_C.text.charAt(0) != 91) {
+                var7 = (CharSequence) ((Object) sm.field_C.text);
                 var4 = TutorialController.normalizeDisplayName(85, var7);
               } else {
-                var4 = sm.field_C.field_nb;
+                var4 = sm.field_C.text;
               }
               var5 = null;
               if (MatchingTextValidator.field_m == 0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class IndexedSprite extends bb {
+final class IndexedSprite extends IndexedSpriteState {
     byte[] field_j;
     int[] field_i;
 
@@ -71,36 +71,36 @@ final class IndexedSprite extends bb {
         int var3 = 0;
         int var4 = 0;
         int incrementValue$0 = 0;
-        if (this.field_f == this.field_h &&
-          this.field_g == this.field_b) {
+        if (this.width == this.fullWidth &&
+          this.height == this.fullHeight) {
           return;
         }
-        byte[] var1 = new byte[this.field_h * this.field_b];
+        byte[] var1 = new byte[this.fullWidth * this.fullHeight];
         int var2 = 0;
-        for (var3 = 0; var3 < this.field_g; var3++) {
-          for (var4 = 0; var4 < this.field_f; var4++) {
+        for (var3 = 0; var3 < this.height; var3++) {
+          for (var4 = 0; var4 < this.width; var4++) {
             incrementValue$0 = var2;
             var2++;
-            var1[var4 + this.field_e + (var3 + this.field_d) * this.field_h] = this.field_j[incrementValue$0];
+            var1[var4 + this.trimX + (var3 + this.trimY) * this.fullWidth] = this.field_j[incrementValue$0];
           }
         }
         this.field_j = var1;
-        this.field_f = this.field_h;
-        this.field_g = this.field_b;
-        this.field_e = 0;
-        this.field_d = 0;
+        this.width = this.fullWidth;
+        this.height = this.fullHeight;
+        this.trimX = 0;
+        this.trimY = 0;
     }
 
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_e;
-        param1 = param1 + this.field_d;
+        param0 = param0 + this.trimX;
+        param1 = param1 + this.trimY;
         int var3 = param0 + param1 * SoftwareRasterizer.width;
         int var4 = 0;
-        int var5 = this.field_g;
-        int var6 = this.field_f;
+        int var5 = this.height;
+        int var6 = this.width;
         int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -135,16 +135,16 @@ final class IndexedSprite extends bb {
         IndexedSprite.copyNonzeroPaletteRows(SoftwareRasterizer.pixels, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_e;
-        param1 = param1 + this.field_d;
+        param0 = param0 + this.trimX;
+        param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.width;
         int var5 = 0;
-        int var6 = this.field_g;
-        int var7 = this.field_f;
+        int var6 = this.height;
+        int var7 = this.width;
         int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -183,26 +183,26 @@ final class IndexedSprite extends bb {
         int var3 = 0;
         int var4 = 0;
         int incrementValue$0 = 0;
-        byte[] var1 = new byte[this.field_f * this.field_g];
+        byte[] var1 = new byte[this.width * this.height];
         int var2 = 0;
-        for (var3 = 0; var3 < this.field_g; var3++) {
-          for (var4 = this.field_f - 1; var4 >= 0; var4--) {
+        for (var3 = 0; var3 < this.height; var3++) {
+          for (var4 = this.width - 1; var4 >= 0; var4--) {
             incrementValue$0 = var2;
             var2++;
-            var1[incrementValue$0] = this.field_j[var4 + var3 * this.field_f];
+            var1[incrementValue$0] = this.field_j[var4 + var3 * this.width];
           }
         }
         this.field_j = var1;
-        this.field_e = this.field_h - this.field_f - this.field_e;
+        this.trimX = this.fullWidth - this.width - this.trimX;
     }
 
     IndexedSprite(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        this.field_h = param0;
-        this.field_b = param1;
-        this.field_e = param2;
-        this.field_d = param3;
-        this.field_f = param4;
-        this.field_g = param5;
+        this.fullWidth = param0;
+        this.fullHeight = param1;
+        this.trimX = param2;
+        this.trimY = param3;
+        this.width = param4;
+        this.height = param5;
         this.field_j = param6;
         this.field_i = param7;
     }
@@ -234,12 +234,12 @@ final class IndexedSprite extends bb {
     }
 
     IndexedSprite(int param0, int param1, int param2) {
-        this.field_f = param0;
-        this.field_h = param0;
-        this.field_g = param1;
-        this.field_b = param1;
-        this.field_d = 0;
-        this.field_e = 0;
+        this.width = param0;
+        this.fullWidth = param0;
+        this.height = param1;
+        this.fullHeight = param1;
+        this.trimY = 0;
+        this.trimX = 0;
         this.field_j = new byte[param0 * param1];
         this.field_i = new int[param2];
     }

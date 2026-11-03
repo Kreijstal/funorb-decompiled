@@ -10,7 +10,7 @@ final class qr {
     private String field_c;
     private boolean field_f;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 41) {
           qr.a(123, false);
           field_a = null;
@@ -59,7 +59,7 @@ final class qr {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "qr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qr.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class qr {
           }
         } else {
           if (PlasmaTableScene.field_gb == null) {
-            MatchingTextValidator.field_u = wp.a(640, lg.field_s, (byte) 0, 480, 0, 0);
+            MatchingTextValidator.field_u = wp.a(640, StatefulTextPainter.field_s, (byte) 0, 480, 0, 0);
             if (null != MatchingTextValidator.field_u) {
               var2 = 2;
               kc.attachInputListeners(MatchingTextValidator.field_u, param0 ^ -28040);

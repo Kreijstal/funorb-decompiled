@@ -34,7 +34,7 @@ final class en {
             return stackIn_37_0;
           }
           if (var3 == 2) {
-            stackIn_42_0 = (param0 == re.field_f);
+            stackIn_42_0 = (param0 == LoginPayload.field_f);
             return stackIn_42_0;
           }
           if (var3 == 0) {
@@ -58,7 +58,7 @@ final class en {
           return stackIn_10_0;
         }
         if (var3Lifetime1 == 2) {
-          stackIn_15_0 = (param0 == re.field_f);
+          stackIn_15_0 = (param0 == LoginPayload.field_f);
           return stackIn_15_0;
         }
         if (var3Lifetime1 == 0) {

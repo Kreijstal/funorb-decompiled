@@ -16,7 +16,7 @@ final class jd {
     final static String a(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        oq var5 = null;
+        CipherPacketBuffer var5 = null;
         CharSequence var6 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -32,11 +32,11 @@ final class jd {
         try {
           var6 = (CharSequence) ((Object) param1);
           if (!ProgressBarWidget.a(param2 ^ -25906, var6)) {
-            stackIn_2_0 = p.invalidName;
+            stackIn_2_0 = ModelInstance.invalidName;
             return stackIn_2_0;
           }
-          if (or.a((byte) 3, param1)) {
-            stackIn_6_0 = fn.cannotAddYourself;
+          if (BallEvent.a((byte) 3, param1)) {
+            stackIn_6_0 = QuickChatHelpDialog.cannotAddYourself;
             return stackIn_6_0;
           }
           if (th.field_a != 2) {
@@ -48,15 +48,15 @@ final class jd {
             return stackIn_13_0;
           }
           if (TextHotspotRegion.field_t >= 100) {
-            stackIn_17_0 = ci.ignorelistfull;
+            stackIn_17_0 = DebugTuningSlider.ignorelistfull;
             return stackIn_17_0;
           }
           if (DialogLayer.a(param1, -1)) {
             stackIn_21_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, gf.removefriendfirst);
             return stackIn_21_0;
           }
-          var5 = ej.field_j;
-          var5.b(false, param0);
+          var5 = JaggrabDownloader.field_j;
+          var5.writeCipheredOpcode(false, param0);
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.a(param2, false);
@@ -74,7 +74,7 @@ final class jd {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -99,15 +99,15 @@ final class jd {
           }
           return null;
         }
-        if (wp.field_c > jo.field_J) {
+        if (wp.field_c > PauseMenuScreen.field_J) {
           if (param0 != 9383) {
             field_h = (int[]) null;
             return null;
           }
           return null;
         }
-        if (wp.field_c + ji.field_d > jo.field_J) {
-          return pj.field_I;
+        if (wp.field_c + ji.field_d > PauseMenuScreen.field_J) {
+          return MessageScreen.field_I;
         }
         if (param0 != 9383) {
           field_h = (int[]) null;
@@ -148,7 +148,7 @@ final class jd {
           if (co.a(param1, (byte) -111, param2)) {
             return false;
           }
-          if (!wg.a(23138, param1, param2)) {
+          if (!StateIconLabel.a(23138, param1, param2)) {
             return true;
           }
           return false;
@@ -168,26 +168,26 @@ final class jd {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
-    final static eg[] a(int param0, eg param1) {
+    final static MeshBuilder[] a(int param0, MeshBuilder param1) {
         int[] var2 = null;
         RuntimeException var2_ref = null;
-        eg[] stackIn_3_0 = null;
+        MeshBuilder[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          d.a(param1, -23109);
+          d.computeMeshBounds(param1, -23109);
           var2 = new int[]{3, 1, 1};
           if (param0 <= 65) {
             field_b = 76;
           }
           ie.a(-2656, var2, param1);
-          stackIn_3_0 = cm.a(param1, var2, true);
+          stackIn_3_0 = LocalGameSetupScreen.a(param1, var2, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,7 +199,7 @@ final class jd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

@@ -12,17 +12,17 @@ final class rf {
     static int field_c;
 
     final static String a(byte param0) {
-        if (null == di.field_j) {
+        if (null == ResourceArchive.field_j) {
           return "";
         }
         if (param0 > -85) {
           field_d = 115;
-          return di.field_j;
+          return ResourceArchive.field_j;
         }
-        return di.field_j;
+        return ResourceArchive.field_j;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_e = null;
         yourGame = null;
@@ -34,7 +34,7 @@ final class rf {
         reconnectLostSeq = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int inverseSquareRoot(int param0, int param1) {
         int var2;
         int var2Lifetime1;
         if (param0 == 0) {
@@ -95,10 +95,10 @@ final class rf {
           if (d.field_d != null) {
             d.field_d.dismissDialog(17);
           }
-          vj.field_j = new LoginForm(param2, param0, false, true, true);
-          tn.field_n.replaceContent(vj.field_j, 30);
+          TextLineLayout.field_j = new LoginForm(param2, param0, false, true, true);
+          RasterSnapshot.field_n.replaceContent(TextLineLayout.field_j, 30);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "rf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

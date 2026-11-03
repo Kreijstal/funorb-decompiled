@@ -7,7 +7,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
     static String ballsetSpaceGroup0;
     DateInputWidget dateInput;
     static String themeRandom;
-    static vh field_m;
+    static UiComponent field_m;
     static byte[] field_n;
 
     public final void onTextInputChanged(TextInputWidget param0, int param1) {
@@ -15,11 +15,11 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           int var3_int = -25 % ((-43 - param1) / 35);
           this.resetValidationDelay(11755);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "sn.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sn.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_n = null;
         field_m = null;
         muChatLobby = null;
@@ -29,7 +29,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           ballsetSpaceGroup0 = null;
           return;
         }
-        BirthDateValidator.a((byte) -90);
+        BirthDateValidator.releaseStatics((byte) -90);
         themeRandom = null;
         ballsetSpaceGroup0 = null;
     }
@@ -48,14 +48,14 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           var3 = this.dateInput.getMonthIndex(25);
           var5 = -15 / ((-30 - param0) / 45);
           var4 = this.dateInput.getYear(119);
-          var6 = em.h(36);
+          var6 = HighscoresScreen.h(36);
           if (var4 >= 1890 &&
             var6 - 3 >= var4) {
-            if (qp.a((byte) 123, var4, var3, var2_int)) {
+            if (QuickChatMenu.a((byte) 123, var4, var3, var2_int)) {
               return null;
             }
           } else {
-            stackIn_4_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{"1890", Integer.toString(-3 + var6)}, -1, ej.createAlertYearrange);
+            stackIn_4_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{"1890", Integer.toString(-3 + var6)}, -1, JaggrabDownloader.createAlertYearrange);
             return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
@@ -72,7 +72,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
         if (null == sm.field_C) {
           return false;
         }
-        if (!sm.field_C.f(20628)) {
+        if (!sm.field_C.handleNormalizedNameKey(20628)) {
           return false;
         }
         return true;
@@ -95,7 +95,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
           var2_int = this.dateInput.getDay((byte) -119);
           var3 = this.dateInput.getMonthIndex(param0 ^ -14827);
           var4 = this.dateInput.getYear(49);
-          var5 = em.h(param0 + 14872);
+          var5 = HighscoresScreen.h(param0 + 14872);
           if (1890 > var4) {
             stackIn_4_0 = gp.field_d;
             return stackIn_4_0;
@@ -104,7 +104,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
             stackIn_8_0 = gp.field_d;
             return stackIn_8_0;
           }
-          if (!qp.a((byte) 122, var4, var3, var2_int)) {
+          if (!QuickChatMenu.a((byte) 122, var4, var3, var2_int)) {
             stackIn_11_0 = gp.field_d;
             return stackIn_11_0;
           }
@@ -123,7 +123,7 @@ final class BirthDateValidator extends DebouncedValidationProvider implements Te
             this.onTextInputChanged((TextInputWidget) null, -31);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "sn.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sn.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

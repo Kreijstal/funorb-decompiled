@@ -44,7 +44,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           this.passwordInput.clearInputText(88);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ui.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ui.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ng var6 = null;
+        ThreeSliceButtonPainter var6 = null;
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
@@ -129,16 +129,16 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             }
             this.secondaryButton = new ButtonWidget(stackIn_19_3, (WidgetListener) null);
             if (this.field_Y) {
-              this.createAccountButton = new ButtonWidget(ad.createCreateanaccount, (WidgetListener) (this));
+              this.createAccountButton = new ButtonWidget(ArchiveIndex.createCreateanaccount, (WidgetListener) (this));
             }
           } else {
-            this.loginButton = new ButtonWidget(ap.retry, (WidgetListener) null);
+            this.loginButton = new ButtonWidget(QuickChatPhraseDefinition.retry, (WidgetListener) null);
             this.secondaryButton = new ButtonWidget(dj.quittowebsite, (WidgetListener) null);
             this.usernameInput.enabled = false;
           }
           this.usernameInput.renderer = (WidgetPainter) ((Object) new om(10000536));
           this.passwordInput.renderer = (WidgetPainter) ((Object) new sm(10000536));
-          var6 = new ng();
+          var6 = new ThreeSliceButtonPainter();
           this.loginButton.renderer = (WidgetPainter) ((Object) var6);
           if (this.secondaryButton != null) {
             this.secondaryButton.renderer = (WidgetPainter) ((Object) var6);
@@ -152,13 +152,13 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           if (!this.field_P) {
             if (this.field_O) {
-              this.secondaryButton.hoverText = lh.loginJustplayTooltip;
-              this.secondaryButton.renderer = (WidgetPainter) ((Object) new pd());
+              this.secondaryButton.hoverText = ArchiveProvider.loginJustplayTooltip;
+              this.secondaryButton.renderer = (WidgetPainter) ((Object) new LinkButtonPainter());
             } else {
-              this.secondaryButton.renderer = (WidgetPainter) ((Object) new pd());
+              this.secondaryButton.renderer = (WidgetPainter) ((Object) new LinkButtonPainter());
             }
           } else {
-            this.secondaryButton.hoverText = wg.warningIfyouquit;
+            this.secondaryButton.hoverText = StateIconLabel.warningIfyouquit;
           }
           this.widgetY = 15;
           var7 = ValidationIconWidget.field_O;
@@ -166,12 +166,12 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             this.widgetY = this.widgetY + (5 + var7.measureWrappedHeight(this.field_T, -40 + this.widgetWidth, var7.maxAscent));
           }
           var8 = vi.loginUsernameEmail;
-          var9 = aj.a(NanoTickClock.getApplet(76), 5137);
-          if (var9 == eo.field_Xb) {
-            var8 = wm.loginEmail;
+          var9 = NameEntryPopup.a(NanoTickClock.getApplet(76), 5137);
+          if (var9 == SocialListEntry.field_Xb) {
+            var8 = ReportAbuseDialog.loginEmail;
           } else {
-            if (var9 == ug.field_v) {
-              var8 = qp.loginUsername;
+            if (var9 == SocketArchiveNetworkClient.field_v) {
+              var8 = QuickChatMenu.loginUsername;
             }
           }
           dupTemp$0 = new LabeledChildWidget(10, this.widgetY, -20 + this.widgetWidth, 25, this.usernameInput, false, 80, 3, var7, 16777215, var8);
@@ -235,7 +235,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -270,7 +270,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -297,7 +297,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         try {
           int var3_int = 100 / ((-43 - param1) / 35);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ui.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ui.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           }
           qa.a(false, param1, -102, param2);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ui.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ui.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -330,12 +330,12 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         if (param1 <= 67) {
           return 14;
         }
-        return jo.c(16, -54264319, param0);
+        return PauseMenuScreen.c(16, -54264319, param0);
     }
 
     final static void a(String param0, int param1, int param2, boolean param3, int param4) {
-        aa var5 = null;
-        lk var6 = null;
+        IntrusiveDequeCursor var5 = null;
+        ChatMessageLine var6 = null;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -344,8 +344,8 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
         RuntimeException var5_ref = null;
         var7 = Pool.field_O;
         try {
-          var5 = new aa(MatchingTextValidator.field_r);
-          var6 = (lk) (var5.b((byte) -92));
+          var5 = new IntrusiveDequeCursor(MatchingTextValidator.field_r);
+          var6 = (ChatMessageLine) (var5.last((byte) -92));
           while (true) {
             if (var6 == null) {
               LabeledChildWidget.a(8, param0, param1, param3, param4);
@@ -354,9 +354,9 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
               }
               return;
             }
-            if (var6.field_x != param0 &&
-              !var6.field_x.equals(param0)) {
-              var6 = (lk) (var5.b(-84));
+            if (var6.text != param0 &&
+              !var6.text.equals(param0)) {
+              var6 = (ChatMessageLine) (var5.previous(-84));
               continue;
             }
             break;
@@ -372,7 +372,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -403,14 +403,14 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
                   MidiNoteMixer.c(-119);
                 } else {
                   if (!this.field_O) {
-                    db.h(15158);
+                    VerticalScrollbar.h(15158);
                   } else {
-                    od.a(true);
+                    FullscreenFocusCanvas.a(true);
                   }
                 }
               }
             } else {
-              br.f(35);
+              LoginRequiredScreen.f(35);
             }
           } else {
             this.submitLogin(-1);
@@ -429,7 +429,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -448,7 +448,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
           try {
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param0);
-              var3 = p.a((byte) -61, var3, param1);
+              var3 = ModelInstance.a((byte) -61, var3, param1);
               jc.openUrl(-10553, param1, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -476,7 +476,7 @@ final class LoginForm extends WidgetContainer implements TextInputListener, Butt
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -22,8 +22,8 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
             ti.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < el.field_H.length) {
-              var2_int = el.field_H[var2_int];
+              var2_int < AchievementsScreen.field_H.length) {
+              var2_int = AchievementsScreen.field_H[var2_int];
               if ((var2_int & 128) != 0) {
                 var2_int = -1;
               }
@@ -40,7 +40,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
             }
             if (0 <= var2_int) {
               var3 = op.field_h + 1 & 127;
-              if (var3 != bl.field_s) {
+              if (var3 != WireframeQuad.field_s) {
                 ee.field_b[op.field_h] = var2_int;
                 ek.field_c[op.field_h] = (char)0;
                 op.field_h = var3;
@@ -65,7 +65,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -79,17 +79,17 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
         RuntimeException var3 = null;
         var4 = Pool.field_O;
         try {
-          if (sf.field_y < 10) {
+          if (QuickChatCategoryDefinition.field_y < 10) {
             var3_int = 0;
             if (he.field_c) {
               he.field_c = false;
               var3_int = 1;
             }
-            ModelTableScene.a(var3_int != 0, 30, df.a((byte) 84), cm.field_H, ResizableDialog.i(19535));
+            ModelTableScene.a(var3_int != 0, 30, AimTarget.getLoadingStatusMessage((byte) 84), LocalGameSetupScreen.field_H, ResizableDialog.i(19535));
           } else {
             if (u.a(108)) {
               if (PlasmaTableScene.field_ab == 0) {
-                di.a(param1, (byte) 109, false);
+                ResourceArchive.a(param1, (byte) 109, false);
                 ButtonWidget.a(0, 0, (byte) -65, param2);
               } else {
                 ModelTableScene.a(true, param2);
@@ -114,11 +114,11 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != -1) {
           return;
@@ -139,9 +139,9 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
           if (null != wn.field_a) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && 65535 != var2_int &&
-              kn.a((byte) 112, (char) var2_int)) {
+              PlayerContextMenu.a((byte) 112, (char) var2_int)) {
               var3 = 1 + op.field_h & 127;
-              if (bl.field_s != var3) {
+              if (WireframeQuad.field_s != var3) {
                 ee.field_b[op.field_h] = -1;
                 ek.field_c[op.field_h] = (char)var2_int;
                 op.field_h = var3;
@@ -150,7 +150,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "fo.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fo.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -166,8 +166,8 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
             ti.field_e = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              el.field_H.length > var2_int) {
-              var2_int = el.field_H[var2_int] & -129;
+              AchievementsScreen.field_H.length > var2_int) {
+              var2_int = AchievementsScreen.field_H[var2_int] & -129;
             } else {
               var2_int = -1;
             }
@@ -192,13 +192,13 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     final static IndexedSprite a(byte param0) {
         int var2 = 77 % ((20 - param0) / 41);
-        IndexedSprite var1 = new IndexedSprite(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], v.field_b[0], IntrusiveNode.field_h);
+        IndexedSprite var1 = new IndexedSprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[0], ih.field_d[0], LinkButtonPainter.field_a[0], rc.field_f[0], LimitedRandomAccessFile.field_b[0], IntrusiveNode.field_h);
         OpacityWidget.h(-1);
         return var1;
     }
@@ -208,10 +208,10 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
           if (param2) {
             KeyHandler.a((String) null, 0.6310321688652039f, false);
           }
-          am.field_n = param0;
+          TextWidgetPainter.field_n = param0;
           CacheEntry.field_w = param1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "fo.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fo.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
             MessageDialog.field_xb = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "fo.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fo.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

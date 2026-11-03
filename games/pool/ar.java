@@ -18,7 +18,7 @@ final class ar implements eb {
         try {
           SoftwareRasterizer.a(this.field_h, this.field_f, this.field_b, 127, dq.field_a.b(this.field_d, 0));
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ar.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ar.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -47,11 +47,11 @@ final class ar implements eb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 10) {
           field_g = (String) null;
           field_g = null;
@@ -60,20 +60,20 @@ final class ar implements eb {
         field_g = null;
     }
 
-    final static void a(int param0, vh param1) {
+    final static void a(int param0, UiComponent param1) {
         try {
-          param1.field_X = ln.field_s;
-          param1.field_N = 16777215;
+          param1.capturedFrameSprites = ln.field_s;
+          param1.textColor = 16777215;
           if (param0 != 29022) {
             ar.a((byte) 26);
           }
-          param1.field_Gb = ln.field_s;
-          param1.field_Fb = 1;
-          param1.field_cb = 1;
-          param1.field_I = (BitmapFont) ((Object) sa.field_h);
-          param1.field_F = rm.field_g;
+          param1.activeFrameSprites = ln.field_s;
+          param1.horizontalAlignment = 1;
+          param1.verticalAlignment = 1;
+          param1.font = (BitmapFont) ((Object) sa.field_h);
+          param1.frameSprites = rm.field_g;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ar.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ar.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class ar implements eb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1_ref), "ar.E(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ar.E(" + param0 + ')');
         }
     }
 

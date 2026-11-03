@@ -5,10 +5,10 @@ final class pm extends IntrusiveNode {
     static String tickerHintRotate;
     static int field_p;
     so field_n;
-    static vh field_m;
+    static UiComponent field_m;
     static int field_l;
 
-    final static void a(byte[] param0, byte[] param1, String[][] param2, di param3, Sprite[][] param4, int param5, IndexedSprite[] param6, int[] param7, Sprite[][] param8, int param9, String[] param10, di param11, boolean param12, int[] param13, di param14, String[][] param15, int param16) {
+    final static void a(byte[] param0, byte[] param1, String[][] param2, ResourceArchive param3, Sprite[][] param4, int param5, IndexedSprite[] param6, int[] param7, Sprite[][] param8, int param9, String[] param10, ResourceArchive param11, boolean param12, int[] param13, ResourceArchive param14, String[][] param15, int param16) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -40,7 +40,7 @@ final class pm extends IntrusiveNode {
         RuntimeException var17 = null;
         try {
           if (param16 != -6103) {
-            field_m = (vh) null;
+            field_m = (UiComponent) null;
           }
           so.a(param2, param9, param11, param8, param15, param16 ^ 6094, 1, param4, param10, param0, param5, param7, param14, (String[]) null, param1, param13, param3, param12, param6);
           return;
@@ -126,13 +126,13 @@ final class pm extends IntrusiveNode {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param16).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param16).append(')').toString());
         }
     }
 
     final static int a(int param0) {
         if (param0 != -27011) {
-          pm.a((byte[]) null, (byte[]) null, (String[][]) null, (di) null, (Sprite[][]) null, 100, (IndexedSprite[]) null, (int[]) null, (Sprite[][]) null, 104, (String[]) null, (di) null, false, (int[]) null, (di) null, (String[][]) null, 112);
+          pm.a((byte[]) null, (byte[]) null, (String[][]) null, (ResourceArchive) null, (Sprite[][]) null, 100, (IndexedSprite[]) null, (int[]) null, (Sprite[][]) null, 104, (String[]) null, (ResourceArchive) null, false, (int[]) null, (ResourceArchive) null, (String[][]) null, 112);
           if (cl.a(1, pl.field_b)) {
             return 0;
           }
@@ -142,7 +142,7 @@ final class pm extends IntrusiveNode {
           if (!cl.a(1, qa.field_v)) {
             return -1;
           }
-          if (vm.field_d[5] == qa.field_v.field_hb) {
+          if (vm.field_d[5] == qa.field_v.sprite) {
             return 3;
           }
           return 2;
@@ -156,22 +156,22 @@ final class pm extends IntrusiveNode {
         if (!cl.a(1, qa.field_v)) {
           return -1;
         }
-        if (vm.field_d[5] == qa.field_v.field_hb) {
+        if (vm.field_d[5] == qa.field_v.sprite) {
           return 3;
         }
         return 2;
     }
 
     final static void a(fl param0, int param1, boolean param2) {
-        oq var3 = null;
+        CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = ej.field_j;
-          var3.b(false, param1);
+          var3 = JaggrabDownloader.field_j;
+          var3.writeCipheredOpcode(false, param1);
           var3.a(2, false);
           var3.a(0, false);
           var3.a(param0.field_o, false);
@@ -190,11 +190,11 @@ final class pm extends IntrusiveNode {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           return;
         }
@@ -206,7 +206,7 @@ final class pm extends IntrusiveNode {
         try {
           this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "pm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

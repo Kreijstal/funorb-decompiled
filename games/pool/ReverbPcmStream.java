@@ -10,10 +10,10 @@ final class ReverbPcmStream extends PcmStream {
     private float field_v;
     private float sameChannelGain;
     private float wetGain;
-    private qc[] field_t;
+    private ReverbCombFilter[] field_t;
     private float field_z;
     private float stereoWidth;
-    private qc[] field_x;
+    private ReverbCombFilter[] field_x;
     private go[] field_E;
     private float field_p;
     private go[] field_F;
@@ -22,7 +22,7 @@ final class ReverbPcmStream extends PcmStream {
         this.field_v = param0;
     }
 
-    final int d() {
+    final int getSchedulingCost() {
         return 8;
     }
 
@@ -42,11 +42,11 @@ final class ReverbPcmStream extends PcmStream {
         this.field_z = param0;
     }
 
-    final PcmStream a() {
+    final PcmStream firstChildStream() {
         return this.inputStream;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mixInto(int[] param0, int param1, int param2) {
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
         int incrementValue$0 = 0;
@@ -80,11 +80,11 @@ final class ReverbPcmStream extends PcmStream {
         int var20;
         int var21;
         int var22;
-        qc var23;
+        ReverbCombFilter var23;
         go var24;
-        qc var25;
+        ReverbCombFilter var25;
         go var26;
-        qc var27;
+        ReverbCombFilter var27;
         go var28;
         int var6Lifetime1;
         int var6Lifetime2;
@@ -103,18 +103,18 @@ final class ReverbPcmStream extends PcmStream {
             var4 = 256;
           }
           if (this.inputStream != null) {
-            this.inputStream.a(this.field_u, 0, var4);
+            this.inputStream.mixInto(this.field_u, 0, var4);
           }
           var5 = 0;
           for (var6 = 0; var6 < 8; var6++) {
-            var5 = ReverbPcmStream.a(var5, this.field_x[var6].field_c, this.field_x[var6].field_a, var4);
+            var5 = ReverbPcmStream.a(var5, this.field_x[var6].delayBuffer, this.field_x[var6].delayIndex, var4);
           }
           for (var6Lifetime1 = 0; var6Lifetime1 < 4; var6Lifetime1++) {
             var5 = ReverbPcmStream.a(var5, this.field_E[var6Lifetime1].field_a, this.field_E[var6Lifetime1].field_b, var4);
           }
           if (AudioOutput.stereo) {
             for (var6Lifetime2 = 0; var6Lifetime2 < 8; var6Lifetime2++) {
-              var5 = ReverbPcmStream.a(var5, this.field_t[var6Lifetime2].field_c, this.field_t[var6Lifetime2].field_a, var4);
+              var5 = ReverbPcmStream.a(var5, this.field_t[var6Lifetime2].delayBuffer, this.field_t[var6Lifetime2].delayIndex, var4);
             }
             for (var6Lifetime2Lifetime1 = 0; var6Lifetime2Lifetime1 < 4; var6Lifetime2Lifetime1++) {
               var5 = ReverbPcmStream.a(var5, this.field_F[var6Lifetime2Lifetime1].field_a, this.field_F[var6Lifetime2Lifetime1].field_b, var4);
@@ -148,15 +148,15 @@ final class ReverbPcmStream extends PcmStream {
               var15 = 0;
               for (var16 = 0; var16 < 8; var16++) {
                 var27 = this.field_x[var16];
-                var18 = var27.field_c[var27.field_a] >> var6Lifetime4;
-                var19 = var27.field_b >> var6Lifetime4;
+                var18 = var27.delayBuffer[var27.delayIndex] >> var6Lifetime4;
+                var19 = var27.filteredSample >> var6Lifetime4;
                 var19 = var19 + ((var18 - var19) * var8 + 2048 >> 12);
-                var27.field_b = var19 << var6Lifetime4;
-                var27.field_c[var27.field_a] = var14 + (var19 * var7Lifetime1 + 2048 >> 12) << var6Lifetime4;
-                fieldTemp$3 = var27.field_a + 1;
-                var27.field_a = var27.field_a + 1;
-                if (fieldTemp$3 >= var27.field_c.length) {
-                  var27.field_a = 0;
+                var27.filteredSample = var19 << var6Lifetime4;
+                var27.delayBuffer[var27.delayIndex] = var14 + (var19 * var7Lifetime1 + 2048 >> 12) << var6Lifetime4;
+                fieldTemp$3 = var27.delayIndex + 1;
+                var27.delayIndex = var27.delayIndex + 1;
+                if (fieldTemp$3 >= var27.delayBuffer.length) {
+                  var27.delayIndex = 0;
                 }
                 var15 = var15 + var18;
               }
@@ -197,15 +197,15 @@ final class ReverbPcmStream extends PcmStream {
                 var17 = 0;
                 for (var18 = 0; var18 < 8; var18++) {
                   var23 = this.field_x[var18];
-                  var20 = var23.field_c[var23.field_a] >> var6Lifetime4;
-                  var21 = var23.field_b >> var6Lifetime4;
+                  var20 = var23.delayBuffer[var23.delayIndex] >> var6Lifetime4;
+                  var21 = var23.filteredSample >> var6Lifetime4;
                   var21 = var21 + ((var20 - var21) * var8 + 2048 >> 12);
-                  var23.field_b = var21 << var6Lifetime4;
-                  var23.field_c[var23.field_a] = var16 + (var21 * var7Lifetime1 + 2048 >> 12) << var6Lifetime4;
-                  fieldTemp$13 = var23.field_a + 1;
-                  var23.field_a = var23.field_a + 1;
-                  if (fieldTemp$13 >= var23.field_c.length) {
-                    var23.field_a = 0;
+                  var23.filteredSample = var21 << var6Lifetime4;
+                  var23.delayBuffer[var23.delayIndex] = var16 + (var21 * var7Lifetime1 + 2048 >> 12) << var6Lifetime4;
+                  fieldTemp$13 = var23.delayIndex + 1;
+                  var23.delayIndex = var23.delayIndex + 1;
+                  if (fieldTemp$13 >= var23.delayBuffer.length) {
+                    var23.delayIndex = 0;
                   }
                   var17 = var17 + var20;
                 }
@@ -223,15 +223,15 @@ final class ReverbPcmStream extends PcmStream {
                 var18 = 0;
                 for (var19 = 0; var19 < 8; var19++) {
                   var25 = this.field_t[var19];
-                  var21Lifetime1 = var25.field_c[var25.field_a] >> var6Lifetime4;
-                  var22 = var25.field_b >> var6Lifetime4;
+                  var21Lifetime1 = var25.delayBuffer[var25.delayIndex] >> var6Lifetime4;
+                  var22 = var25.filteredSample >> var6Lifetime4;
                   var22 = var22 + ((var21Lifetime1 - var22) * var8 + 2048 >> 12);
-                  var25.field_b = var22 << var6Lifetime4;
-                  var25.field_c[var25.field_a] = var16 + (var22 * var7Lifetime1 + 2048 >> 12) << var6Lifetime4;
-                  fieldTemp$11 = var25.field_a + 1;
-                  var25.field_a = var25.field_a + 1;
-                  if (fieldTemp$11 >= var25.field_c.length) {
-                    var25.field_a = 0;
+                  var25.filteredSample = var22 << var6Lifetime4;
+                  var25.delayBuffer[var25.delayIndex] = var16 + (var22 * var7Lifetime1 + 2048 >> 12) << var6Lifetime4;
+                  fieldTemp$11 = var25.delayIndex + 1;
+                  var25.delayIndex = var25.delayIndex + 1;
+                  if (fieldTemp$11 >= var25.delayBuffer.length) {
+                    var25.delayIndex = 0;
                   }
                   var18 = var18 + var21Lifetime1;
                 }
@@ -279,7 +279,7 @@ final class ReverbPcmStream extends PcmStream {
         if (!AudioOutput.stereo) {
           if (this.field_t != null) {
             for (var1 = 0; var1 < 8; var1++) {
-              this.field_x[var1].a();
+              this.field_x[var1].clear();
             }
             for (var1 = 0; var1 < 4; var1++) {
               this.field_E[var1].a();
@@ -291,20 +291,20 @@ final class ReverbPcmStream extends PcmStream {
         } else {
           if (this.field_t == null) {
             for (var1 = 0; var1 < 8; var1++) {
-              this.field_x[var1].a();
+              this.field_x[var1].clear();
             }
             for (var1 = 0; var1 < 4; var1++) {
               this.field_E[var1].a();
             }
-            this.field_t = new qc[8];
-            this.field_t[0] = new qc(1139 * AudioOutput.sampleRate / 44100);
-            this.field_t[1] = new qc(1211 * AudioOutput.sampleRate / 44100);
-            this.field_t[2] = new qc(1300 * AudioOutput.sampleRate / 44100);
-            this.field_t[3] = new qc(1379 * AudioOutput.sampleRate / 44100);
-            this.field_t[4] = new qc(1445 * AudioOutput.sampleRate / 44100);
-            this.field_t[5] = new qc(1514 * AudioOutput.sampleRate / 44100);
-            this.field_t[6] = new qc(1580 * AudioOutput.sampleRate / 44100);
-            this.field_t[7] = new qc(1640 * AudioOutput.sampleRate / 44100);
+            this.field_t = new ReverbCombFilter[8];
+            this.field_t[0] = new ReverbCombFilter(1139 * AudioOutput.sampleRate / 44100);
+            this.field_t[1] = new ReverbCombFilter(1211 * AudioOutput.sampleRate / 44100);
+            this.field_t[2] = new ReverbCombFilter(1300 * AudioOutput.sampleRate / 44100);
+            this.field_t[3] = new ReverbCombFilter(1379 * AudioOutput.sampleRate / 44100);
+            this.field_t[4] = new ReverbCombFilter(1445 * AudioOutput.sampleRate / 44100);
+            this.field_t[5] = new ReverbCombFilter(1514 * AudioOutput.sampleRate / 44100);
+            this.field_t[6] = new ReverbCombFilter(1580 * AudioOutput.sampleRate / 44100);
+            this.field_t[7] = new ReverbCombFilter(1640 * AudioOutput.sampleRate / 44100);
             this.field_F = new go[4];
             this.field_F[0] = new go(579 * AudioOutput.sampleRate / 44100);
             this.field_F[1] = new go(464 * AudioOutput.sampleRate / 44100);
@@ -321,7 +321,7 @@ final class ReverbPcmStream extends PcmStream {
         this.crossChannelGain = (float)((double)this.wetGain * Math.sqrt((double)(1.0f - this.stereoWidth) * 0.5));
     }
 
-    final PcmStream b() {
+    final PcmStream nextChildStream() {
         return null;
     }
 
@@ -357,15 +357,15 @@ final class ReverbPcmStream extends PcmStream {
     }
 
     ReverbPcmStream(PcmStream param0) {
-        this.field_x = new qc[8];
-        this.field_x[0] = new qc(1116 * AudioOutput.sampleRate / 44100);
-        this.field_x[1] = new qc(1188 * AudioOutput.sampleRate / 44100);
-        this.field_x[2] = new qc(1277 * AudioOutput.sampleRate / 44100);
-        this.field_x[3] = new qc(1356 * AudioOutput.sampleRate / 44100);
-        this.field_x[4] = new qc(1422 * AudioOutput.sampleRate / 44100);
-        this.field_x[5] = new qc(1491 * AudioOutput.sampleRate / 44100);
-        this.field_x[6] = new qc(1557 * AudioOutput.sampleRate / 44100);
-        this.field_x[7] = new qc(1617 * AudioOutput.sampleRate / 44100);
+        this.field_x = new ReverbCombFilter[8];
+        this.field_x[0] = new ReverbCombFilter(1116 * AudioOutput.sampleRate / 44100);
+        this.field_x[1] = new ReverbCombFilter(1188 * AudioOutput.sampleRate / 44100);
+        this.field_x[2] = new ReverbCombFilter(1277 * AudioOutput.sampleRate / 44100);
+        this.field_x[3] = new ReverbCombFilter(1356 * AudioOutput.sampleRate / 44100);
+        this.field_x[4] = new ReverbCombFilter(1422 * AudioOutput.sampleRate / 44100);
+        this.field_x[5] = new ReverbCombFilter(1491 * AudioOutput.sampleRate / 44100);
+        this.field_x[6] = new ReverbCombFilter(1557 * AudioOutput.sampleRate / 44100);
+        this.field_x[7] = new ReverbCombFilter(1617 * AudioOutput.sampleRate / 44100);
         this.field_E = new go[4];
         this.field_E[0] = new go(556 * AudioOutput.sampleRate / 44100);
         this.field_E[1] = new go(441 * AudioOutput.sampleRate / 44100);

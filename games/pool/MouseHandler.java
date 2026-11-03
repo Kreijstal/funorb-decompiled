@@ -17,7 +17,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
             return;
           }
           PoolUiText.field_g = 0;
-          we.field_l = param0.getX();
+          ArchiveLoadStep.field_l = param0.getX();
           wn.field_k = param0.getY();
           m.field_d = true;
           return;
@@ -31,7 +31,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -46,7 +46,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
             return;
           }
           PoolUiText.field_g = 0;
-          we.field_l = param0.getX();
+          ArchiveLoadStep.field_l = param0.getX();
           wn.field_k = param0.getY();
           m.field_d = true;
           return;
@@ -60,11 +60,11 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         rule10 = null;
         timeTrialFailed = null;
         muGameIsFull = null;
@@ -75,12 +75,12 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         try {
           if (wp.field_g != null) {
             PoolUiText.field_g = 0;
-            we.field_l = -1;
+            ArchiveLoadStep.field_l = -1;
             wn.field_k = -1;
             m.field_d = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ql.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ql.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
             return;
           }
           PoolUiText.field_g = 0;
-          we.field_l = param0.getX();
+          ArchiveLoadStep.field_l = param0.getX();
           wn.field_k = param0.getY();
           m.field_d = true;
           return;
@@ -210,7 +210,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
             PoolUiText.field_g = 0;
             Ball.field_f = param0.getX();
             MatchingTextValidator.field_o = param0.getY();
-            rl.a((byte) -115);
+            rl.monotonicTimeMillis((byte) -115);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               CueAim.field_c = 2;
               ho.field_v = 2;
@@ -271,7 +271,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

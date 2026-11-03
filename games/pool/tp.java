@@ -3,16 +3,16 @@
  */
 final class tp {
     static int field_b;
-    static vh field_i;
+    static UiComponent field_i;
     static int[] field_h;
     static String field_g;
-    static kh field_e;
+    static LobbyGame field_e;
     static String privatechatFriendNotlisted;
     static String statusVersus;
     static String muLobbyNameRm;
     static String gameoptNeedchanging2;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_g = null;
         gameoptNeedchanging2 = null;
         if (param0 == 0) {
@@ -53,7 +53,7 @@ final class tp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "tp.A(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "tp.A(" + param0 + ',' + param1 + ')');
         }
     }
 

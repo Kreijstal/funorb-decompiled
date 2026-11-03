@@ -19,23 +19,23 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     }
 
     UiWidget findFocusTarget(byte param0) {
-        aa var2;
+        IntrusiveDequeCursor var2;
         int var3;
         UiWidget var4;
         var3 = 90 / ((param0 - 51) / 61);
-        var2 = new aa(this.children);
-        var4 = (UiWidget) (var2.b((byte) -92));
+        var2 = new IntrusiveDequeCursor(this.children);
+        var4 = (UiWidget) (var2.last((byte) -92));
         while (var4 != null) {
           if (var4.hasKeyboardFocus(83)) {
             return var4;
           }
-          var4 = (UiWidget) (var2.b(-87));
+          var4 = (UiWidget) (var2.previous(-87));
         }
         return null;
     }
 
     final boolean requestKeyboardFocus(UiWidget param0, byte param1) {
-        aa var3 = null;
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         UiWidget var5 = null;
@@ -44,15 +44,15 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new aa(this.children);
+          var3 = new IntrusiveDequeCursor(this.children);
           var4 = -98 / ((param1 + 43) / 47);
-          var5 = (UiWidget) (var3.b((byte) -92));
+          var5 = (UiWidget) (var3.last((byte) -92));
           while (true) {
             if (var5 == null) {
               return false;
             }
             if (!var5.requestKeyboardFocus(param0, (byte) 72)) {
-              var5 = (UiWidget) (var3.b(-125));
+              var5 = (UiWidget) (var3.previous(-125));
               continue;
             }
             break;
@@ -68,7 +68,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         StringBuilder discarded$3 = null;
         int var8 = 0;
         StringBuilder discarded$4 = null;
-        aa var5 = null;
+        IntrusiveDequeCursor var5 = null;
         int var6 = 0;
         UiWidget var7 = null;
         RuntimeException stackIn_9_0 = null;
@@ -87,16 +87,16 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          var5 = new aa(this.children);
+          var5 = new IntrusiveDequeCursor(this.children);
           var6 = 16 / ((22 - param0) / 49);
-          var7 = (UiWidget) (var5.b((byte) -92));
+          var7 = (UiWidget) (var5.last((byte) -92));
           while (var7 != null) {
             discarded$3 = param1.append('\n');
             for (var8 = 0; param2 >= var8; var8++) {
               discarded$4 = param1.append(' ');
             }
             var7.appendWidgetDiagnostics(param1, 1 + param2, param3, 104);
-            var7 = (UiWidget) (var5.b(-88));
+            var7 = (UiWidget) (var5.previous(-88));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -115,12 +115,12 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final boolean handlePointerPress(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
-        aa var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
         int var10 = 0;
@@ -130,17 +130,17 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         var10 = Pool.field_O;
         try {
-          var8 = new aa(this.children);
+          var8 = new IntrusiveDequeCursor(this.children);
           if (!param2) {
             field_H = 45;
           }
-          var9 = (UiWidget) (var8.b((byte) -92));
+          var9 = (UiWidget) (var8.last((byte) -92));
           while (var9 != null) {
             if (var9.b(-109)) {
               if (var9.handlePointerPress(param0, param1 + this.widgetX, true, param3, param4, this.widgetY + param5, param6)) {
                 return true;
               }
-              var9 = (UiWidget) (var8.b(-119));
+              var9 = (UiWidget) (var8.previous(-119));
               continue;
             }
             break;
@@ -156,13 +156,13 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     void updatePointerState(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
-        aa var5 = null;
+        IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -172,12 +172,12 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         var7 = Pool.field_O;
         try {
           super.updatePointerState(param0, param1, param2, param3);
-          var5 = new aa(this.children);
-          var6 = (UiWidget) (var5.b((byte) -92));
+          var5 = new IntrusiveDequeCursor(this.children);
+          var6 = (UiWidget) (var5.last((byte) -92));
           while (var6 != null) {
             if (var6.b(-107)) {
               var6.updatePointerState(param0, param1 ^ 0, param2 + this.widgetX, this.widgetY + param3);
-              var6 = (UiWidget) (var5.b(-89));
+              var6 = (UiWidget) (var5.previous(-89));
               continue;
             }
             break;
@@ -193,13 +193,13 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void handlePointerRelease(int param0, int param1, int param2, int param3, byte param4, UiWidget param5) {
         RuntimeException runtimeException = null;
-        aa var7 = null;
+        IntrusiveDequeCursor var7 = null;
         UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -208,15 +208,15 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         var9 = Pool.field_O;
         try {
-          var7 = new aa(this.children);
-          var8 = (UiWidget) (var7.b((byte) -92));
+          var7 = new IntrusiveDequeCursor(this.children);
+          var8 = (UiWidget) (var7.last((byte) -92));
           if (param4 <= 62) {
             field_I = 75;
           }
           while (var8 != null) {
             if (var8.b(-128)) {
               var8.handlePointerRelease(param0 + this.widgetX, param1, this.widgetY + param2, param3, (byte) 94, param5);
-              var8 = (UiWidget) (var7.b(-82));
+              var8 = (UiWidget) (var7.previous(-82));
               continue;
             }
             break;
@@ -232,28 +232,28 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final void clearKeyboardFocus(byte param0) {
         int var4 = Pool.field_O;
-        aa var2 = new aa(this.children);
-        UiWidget var3 = (UiWidget) (var2.b((byte) -92));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
+        UiWidget var3 = (UiWidget) (var2.last((byte) -92));
         if (param0 != 99) {
           field_J = (int[]) null;
         }
         while (var3 != null) {
           var3.clearKeyboardFocus((byte) 99);
-          var3 = (UiWidget) (var2.b(-90));
+          var3 = (UiWidget) (var2.previous(-90));
         }
     }
 
     final static void a(boolean param0, oj param1, int param2) {
         int var5 = 0;
-        oq stackIn_2_0 = null;
+        CipherPacketBuffer stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
-        oq stackIn_5_0 = null;
+        CipherPacketBuffer stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -261,12 +261,12 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        oq var6 = null;
-        oq var7 = null;
+        CipherPacketBuffer var6 = null;
+        CipherPacketBuffer var7 = null;
         try {
-          var6 = ej.field_j;
+          var6 = JaggrabDownloader.field_j;
           var7 = var6;
-          var7.b(false, param2);
+          var7.writeCipheredOpcode(false, param2);
           var7.position = var7.position + 1;
           var4 = var7.position;
           var7.a(1, false);
@@ -276,10 +276,10 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           var7.a(true, param1.field_n);
           stackIn_2_0 = var7;
           stackIn_3_1 = !(param0);
-          ((oq) (Object) stackIn_2_0).a(stackIn_3_1, param1.field_x);
+          ((CipherPacketBuffer) (Object) stackIn_2_0).a(stackIn_3_1, param1.field_x);
           stackIn_5_0 = var7;
           stackIn_6_1 = !(param0);
-          ((oq) (Object) stackIn_5_0).a(stackIn_6_1, param1.field_A);
+          ((CipherPacketBuffer) (Object) stackIn_5_0).a(stackIn_6_1, param1.field_A);
           var7.a(true, param1.field_v);
           var7.a(param1.field_z.length, param0);
           for (var5 = 0; param1.field_z.length > var5; var5++) {
@@ -298,7 +298,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -307,17 +307,17 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           this.renderer != null) {
           this.renderer.paintWidget(true, param2, (byte) 105, param3, (UiWidget) (this));
         }
-        aa var5 = new aa(this.children);
-        UiWidget var6 = (UiWidget) (var5.a(0));
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.children);
+        UiWidget var6 = (UiWidget) (var5.first(0));
         while (var6 != null) {
           var6.renderWidget(param0, (byte) 92, param2 + this.widgetX, this.widgetY + param3);
-          var6 = (UiWidget) (var5.c((byte) -71));
+          var6 = (UiWidget) (var5.next((byte) -71));
         }
         int var7 = 69 / ((-42 - param1) / 53);
     }
 
     final boolean handlePointerWheel(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
-        aa var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
         int var10 = 0;
@@ -327,18 +327,18 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         var10 = Pool.field_O;
         try {
-          var8 = new aa(this.children);
+          var8 = new IntrusiveDequeCursor(this.children);
           if (param4 >= -126) {
             this.refreshChildrenLayout(-115);
           }
-          var9 = (UiWidget) (var8.b((byte) -92));
+          var9 = (UiWidget) (var8.last((byte) -92));
           while (var9 != null) {
             if (var9.b(-116)) {
               if (var9.hasKeyboardFocus(-122) &&
                 var9.handlePointerWheel(param0, param1, param2, param3, (byte) -127, param5, param6)) {
                 return true;
               }
-              var9 = (UiWidget) (var8.b(-103));
+              var9 = (UiWidget) (var8.previous(-103));
               continue;
             }
             break;
@@ -354,7 +354,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -365,34 +365,34 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             field_I = -128;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ch.RA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ch.RA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void refreshChildrenLayout(int param0) {
-        aa var2 = new aa(this.children);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
         if (param0 != 22555) {
           Hashtable var4 = (Hashtable) null;
           this.appendWidgetDiagnostics((StringBuilder) null, -32, (Hashtable) null, 81);
         }
-        UiWidget var3 = (UiWidget) (var2.b((byte) -92));
+        UiWidget var3 = (UiWidget) (var2.last((byte) -92));
         while (var3 != null) {
           var3.refreshLayout((byte) -119);
-          var3 = (UiWidget) (var2.b(-94));
+          var3 = (UiWidget) (var2.previous(-94));
         }
     }
 
     String getHoverText(int param0) {
         String var4 = null;
         int var5 = Pool.field_O;
-        aa var2 = new aa(this.children);
-        UiWidget var3 = (UiWidget) (var2.b((byte) -92));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.children);
+        UiWidget var3 = (UiWidget) (var2.last((byte) -92));
         while (var3 != null) {
           var4 = var3.getHoverText(-76);
           if (var4 != null) {
             return var4;
           }
-          var3 = (UiWidget) (var2.b(-115));
+          var3 = (UiWidget) (var2.previous(-115));
         }
         if (param0 <= -10) {
           return null;
@@ -410,24 +410,24 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         int var5 = 0;
         int var6 = Pool.field_O;
         int var2 = 0;
-        aa var3 = new aa(this.children);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.children);
         if (param0 <= 33) {
           CharSequence var7 = (CharSequence) null;
           WidgetContainer.a(false, (CharSequence) null);
         }
-        UiWidget var4 = (UiWidget) (var3.b((byte) -92));
+        UiWidget var4 = (UiWidget) (var3.last((byte) -92));
         while (var4 != null) {
           var5 = var4.getLastRenderPass(38);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (UiWidget) (var3.b(-122));
+          var4 = (UiWidget) (var3.previous(-122));
         }
         return var2;
     }
 
     boolean handleKeyInput(char param0, int param1, boolean param2, UiWidget param3) {
-        aa var5 = null;
+        IntrusiveDequeCursor var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
@@ -439,15 +439,15 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         RuntimeException decompiledCaughtException = null;
         var7 = Pool.field_O;
         try {
-          var5 = new aa(this.children);
-          var8 = (UiWidget) (var5.b((byte) -92));
+          var5 = new IntrusiveDequeCursor(this.children);
+          var8 = (UiWidget) (var5.last((byte) -92));
           while (var8 != null) {
             if (var8.b(-115)) {
               if (var8.hasKeyboardFocus(109) &&
                 var8.handleKeyInput(param0, param1, false, param3)) {
                 return true;
               }
-              var8 = (UiWidget) (var5.b(-80));
+              var8 = (UiWidget) (var5.previous(-80));
               continue;
             }
             break;
@@ -459,7 +459,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             }
             return true;
           }
-          if (!vj.field_c[81]) {
+          if (!TextLineLayout.field_c[81]) {
             stackIn_14_0 = this.requestNextChildFocus(param3, 0);
           } else {
             stackIn_14_0 = this.requestPreviousChildFocus(param3, 3);
@@ -475,7 +475,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -514,7 +514,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -532,7 +532,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = TextInputWidget.decodeBase37Name(param0, td.a((byte) 52, param1));
+          var2 = TextInputWidget.decodeBase37Name(param0, td.encodeBase37((byte) 52, param1));
           if (param0) {
             field_J = (int[]) null;
           }
@@ -551,18 +551,18 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final boolean requestPreviousChildFocus(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
-        aa var5 = null;
+        IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var7 = 0;
         Hashtable var8 = null;
-        aa var9 = null;
+        IntrusiveDequeCursor var9 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -576,21 +576,21 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             var8 = (Hashtable) null;
             this.appendChildrenDiagnostics((byte) 29, (StringBuilder) null, -124, (Hashtable) null);
           }
-          var9 = new aa(this.children);
-          var4 = (UiWidget) (var9.a(0));
+          var9 = new IntrusiveDequeCursor(this.children);
+          var4 = (UiWidget) (var9.first(0));
           while (var4 != null) {
             if (var4.hasKeyboardFocus(-108)) {
-              var5 = new aa(this.children);
+              var5 = new IntrusiveDequeCursor(this.children);
               var5.a(var4, param1 ^ -123);
-              var6 = (UiWidget) (var5.c((byte) -71));
+              var6 = (UiWidget) (var5.next((byte) -71));
               while (var6 != null) {
                 if (var6.requestKeyboardFocus(param0, (byte) 73)) {
                   return true;
                 }
-                var6 = (UiWidget) (var5.c((byte) -71));
+                var6 = (UiWidget) (var5.next((byte) -71));
               }
             }
-            var4 = (UiWidget) (var9.c((byte) -71));
+            var4 = (UiWidget) (var9.next((byte) -71));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -603,7 +603,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -635,11 +635,11 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_M = null;
         newgame = null;
         field_K = null;
@@ -650,10 +650,10 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     }
 
     final boolean requestNextChildFocus(UiWidget param0, int param1) {
-        aa var3 = null;
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
-        aa var5 = null;
+        IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -665,21 +665,21 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           if (this.children.c(param1)) {
             return false;
           }
-          var3 = new aa(this.children);
-          var4 = (UiWidget) (var3.b((byte) -92));
+          var3 = new IntrusiveDequeCursor(this.children);
+          var4 = (UiWidget) (var3.last((byte) -92));
           while (var4 != null) {
             if (var4.hasKeyboardFocus(-112)) {
-              var5 = new aa(this.children);
+              var5 = new IntrusiveDequeCursor(this.children);
               var5.a(var4, false);
-              var6 = (UiWidget) (var5.b(-90));
+              var6 = (UiWidget) (var5.previous(-90));
               while (var6 != null) {
                 if (var6.requestKeyboardFocus(param0, (byte) -108)) {
                   return true;
                 }
-                var6 = (UiWidget) (var5.b(-90));
+                var6 = (UiWidget) (var5.previous(-90));
               }
             }
-            var4 = (UiWidget) (var3.b(param1 ^ -123));
+            var4 = (UiWidget) (var3.previous(param1 ^ -123));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -692,7 +692,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

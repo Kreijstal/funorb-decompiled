@@ -8,7 +8,7 @@ final class te extends IntrusiveNode {
     static Sprite field_n;
     static short[] field_m;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_p = null;
         if (param0 <= 69) {
           return;
@@ -22,19 +22,19 @@ final class te extends IntrusiveNode {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0, int param1) {
-        oq var2 = ej.field_j;
-        var2.b(false, param0);
+        CipherPacketBuffer var2 = JaggrabDownloader.field_j;
+        var2.writeCipheredOpcode(false, param0);
         var2.a(1, false);
         var2.a(1, false);
         if (param1 <= -1) {
           return;
         }
-        te.a(45, 53);
+        te.nextPowerOfTwo(45, 53);
     }
 
     final static void a(byte param0, int param1, int param2) {
@@ -42,10 +42,10 @@ final class te extends IntrusiveNode {
         if (param0 > -21) {
           return;
         }
-        ci.field_i = param2;
+        DebugTuningSlider.field_i = param2;
     }
 
-    final static int a(int param0, int param1) {
+    final static int nextPowerOfTwo(int param0, int param1) {
         param1--;
         if (param0 == -17931) {
           param1 = param1 | param1 >>> 1;

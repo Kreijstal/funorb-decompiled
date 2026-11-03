@@ -5,13 +5,13 @@ final class CheckboxWidget extends ButtonWidget {
     static String createEmailTooltip;
     static long field_S;
     static String connectingToFriendServerTwoline;
-    static vh field_P;
+    static UiComponent field_P;
     static String orbcoinsColon;
-    static rn field_U;
+    static DiskCacheWorker field_U;
     static String field_N;
     static String rule03;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > 65) {
           field_U = null;
           connectingToFriendServerTwoline = null;
@@ -25,11 +25,11 @@ final class CheckboxWidget extends ButtonWidget {
     }
 
     private CheckboxWidget(String param0, WidgetListener param1) {
-        this(param0, db.field_Sb.field_l, param1);
+        this(param0, VerticalScrollbar.field_Sb.field_l, param1);
         try {
-          this.renderer = db.field_Sb.field_o;
+          this.renderer = VerticalScrollbar.field_Sb.field_o;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,9 +47,9 @@ final class CheckboxWidget extends ButtonWidget {
     private CheckboxWidget(String param0, WidgetPainter param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.renderer = db.field_Sb.field_o;
+          this.renderer = VerticalScrollbar.field_Sb.field_o;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class CheckboxWidget extends ButtonWidget {
         try {
           this.active = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

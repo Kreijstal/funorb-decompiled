@@ -12,18 +12,18 @@ final class je {
           AccountWelcomePanel.field_X = param4;
           UiWidget.field_B = param8;
           qf.field_f = param2;
-          ci.field_k = param1;
+          DebugTuningSlider.field_k = param1;
           om.field_v = param7;
           ButtonWidget.field_M = param0;
           wn.field_h = param3;
           if (param5 >= -61) {
             muChatTips = (String) null;
           }
-          GameRules.field_c = (no) ((Object) new ug());
-          CheckboxWidget.field_U = new rn(param0);
-          TranslatedUiText.field_m = new qd(GameRules.field_c, CheckboxWidget.field_U);
+          GameRules.field_c = (Js5Transport) ((Object) new SocketArchiveNetworkClient());
+          CheckboxWidget.field_U = new DiskCacheWorker(param0);
+          TranslatedUiText.field_m = new Js5ArchiveManager(GameRules.field_c, CheckboxWidget.field_U);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "je.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "je.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -57,12 +57,12 @@ final class je {
     }
 
     final static void a(int param0, int param1, boolean param2, byte[] param3, int param4, boolean param5) {
-        oq var6 = null;
+        CipherPacketBuffer var6 = null;
         int var7 = 0;
         int var8 = 0;
         try {
-          var6 = ej.field_j;
-          var6.b(param5, param0);
+          var6 = JaggrabDownloader.field_j;
+          var6.writeCipheredOpcode(param5, param0);
           var6.position = var6.position + 1;
           var7 = var6.position;
           var6.a(4, false);
@@ -75,7 +75,7 @@ final class je {
           var6.a(param3, (byte) 0, 0, param3.length);
           var6.b(var6.position - var7, !param5 ? true : false);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "je.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "je.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

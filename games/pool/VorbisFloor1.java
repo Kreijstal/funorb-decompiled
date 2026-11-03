@@ -169,7 +169,7 @@ final class VorbisFloor1 {
         return var6 < 0 ? y0 - var10 : y0 + var10;
     }
 
-    final void a(float[] param0, int param1) {
+    final void applyFloor(float[] param0, int param1) {
         int stackIn_5_0 = 0;
         int[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;

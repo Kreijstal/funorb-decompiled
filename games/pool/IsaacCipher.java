@@ -16,7 +16,7 @@ final class IsaacCipher {
     static int[] field_b;
     private int field_k;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_f = null;
         escCancelprivatemessage = null;
         field_l = null;
@@ -41,7 +41,7 @@ final class IsaacCipher {
         do {
           var4 = this.a((byte) 7);
         } while (var4 > var3);
-        return aj.a(true, param1, var4);
+        return NameEntryPopup.a(true, param1, var4);
     }
 
     private final void a(boolean param0) {
@@ -73,10 +73,10 @@ final class IsaacCipher {
             }
           }
           this.field_m = this.field_m + this.field_a[255 & var2 + 128];
-          dupTemp$1 = this.field_k + (this.field_a[rb.b(var3 >> 2, 255)] + this.field_m);
+          dupTemp$1 = this.field_k + (this.field_a[ArchiveLoadSequence.b(var3 >> 2, 255)] + this.field_m);
           var4 = dupTemp$1;
           this.field_a[var2] = dupTemp$1;
-          dupTemp$2 = this.field_a[rb.b(var4, 261279) >> 8 >> 2] + var3;
+          dupTemp$2 = this.field_a[ArchiveLoadSequence.b(var4, 261279) >> 8 >> 2] + var3;
           this.field_k = dupTemp$2;
           this.field_j[var2] = dupTemp$2;
           var2++;
@@ -212,7 +212,7 @@ final class IsaacCipher {
         this.field_c = 256;
     }
 
-    final static void a(eg param0, int param1) {
+    final static void a(MeshBuilder param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int var12 = 0;
@@ -246,19 +246,19 @@ final class IsaacCipher {
         var12 = Pool.field_O;
         try {
           var2_int = 0;
-          for (var3 = param1; param0.field_K > var3; var3++) {
+          for (var3 = param1; param0.faceCount > var3; var3++) {
             if (param0.field_L[var3] != -1) {
               var2_int++;
             }
           }
           param0.field_o = OpacityWidget.a((byte) 60, param0.field_o, var2_int);
-          param0.field_p = ap.a(param0.field_p, (byte) -73, var2_int * 3);
-          param0.field_H = ap.a(param0.field_H, (byte) -73, var2_int * 3);
-          param0.field_C = ap.a(param0.field_C, (byte) -73, var2_int * 3);
-          param0.field_g = jh.a(var2_int * 3, (byte) 108, param0.field_g);
-          param0.field_Y = jh.a(3 * var2_int, (byte) 108, param0.field_Y);
-          param0.field_q = jh.a(var2_int * 3, (byte) 108, param0.field_q);
-          for (var2_intLifetime1 = 0; param0.field_K > var2_intLifetime1; var2_intLifetime1++) {
+          param0.field_p = QuickChatPhraseDefinition.a(param0.field_p, (byte) -73, var2_int * 3);
+          param0.field_H = QuickChatPhraseDefinition.a(param0.field_H, (byte) -73, var2_int * 3);
+          param0.field_C = QuickChatPhraseDefinition.a(param0.field_C, (byte) -73, var2_int * 3);
+          param0.vertexX = jh.a(var2_int * 3, (byte) 108, param0.vertexX);
+          param0.vertexY = jh.a(3 * var2_int, (byte) 108, param0.vertexY);
+          param0.vertexZ = jh.a(var2_int * 3, (byte) 108, param0.vertexZ);
+          for (var2_intLifetime1 = 0; param0.faceCount > var2_intLifetime1; var2_intLifetime1++) {
             if (param0.field_L[var2_intLifetime1] != -1) {
               var3Lifetime1 = param0.field_k[var2_intLifetime1];
               var31 = new float[3];
@@ -281,27 +281,27 @@ final class IsaacCipher {
               var22 = new int[3];
               var14 = var22;
               var11 = var14;
-              var6[0] = param0.field_g[param0.field_N[var2_intLifetime1]];
-              var6[1] = param0.field_g[param0.field_v[var2_intLifetime1]];
-              var6[2] = param0.field_g[param0.field_X[var2_intLifetime1]];
-              var7[0] = param0.field_Y[param0.field_N[var2_intLifetime1]];
-              var7[1] = param0.field_Y[param0.field_v[var2_intLifetime1]];
-              var7[2] = param0.field_Y[param0.field_X[var2_intLifetime1]];
-              var8[0] = param0.field_q[param0.field_N[var2_intLifetime1]];
-              var8[1] = param0.field_q[param0.field_v[var2_intLifetime1]];
-              var8[2] = param0.field_q[param0.field_X[var2_intLifetime1]];
-              var9[0] = param0.field_g[param0.field_p[var3Lifetime1]];
-              var9[1] = param0.field_g[param0.field_H[var3Lifetime1]];
-              var9[2] = param0.field_g[param0.field_C[var3Lifetime1]];
-              var10[0] = param0.field_Y[param0.field_p[var3Lifetime1]];
-              var10[1] = param0.field_Y[param0.field_H[var3Lifetime1]];
-              var10[2] = param0.field_Y[param0.field_C[var3Lifetime1]];
-              var11[0] = param0.field_q[param0.field_p[var3Lifetime1]];
-              var11[1] = param0.field_q[param0.field_H[var3Lifetime1]];
-              var11[2] = param0.field_q[param0.field_C[var3Lifetime1]];
+              var6[0] = param0.vertexX[param0.faceVertexA[var2_intLifetime1]];
+              var6[1] = param0.vertexX[param0.faceVertexB[var2_intLifetime1]];
+              var6[2] = param0.vertexX[param0.faceVertexC[var2_intLifetime1]];
+              var7[0] = param0.vertexY[param0.faceVertexA[var2_intLifetime1]];
+              var7[1] = param0.vertexY[param0.faceVertexB[var2_intLifetime1]];
+              var7[2] = param0.vertexY[param0.faceVertexC[var2_intLifetime1]];
+              var8[0] = param0.vertexZ[param0.faceVertexA[var2_intLifetime1]];
+              var8[1] = param0.vertexZ[param0.faceVertexB[var2_intLifetime1]];
+              var8[2] = param0.vertexZ[param0.faceVertexC[var2_intLifetime1]];
+              var9[0] = param0.vertexX[param0.field_p[var3Lifetime1]];
+              var9[1] = param0.vertexX[param0.field_H[var3Lifetime1]];
+              var9[2] = param0.vertexX[param0.field_C[var3Lifetime1]];
+              var10[0] = param0.vertexY[param0.field_p[var3Lifetime1]];
+              var10[1] = param0.vertexY[param0.field_H[var3Lifetime1]];
+              var10[2] = param0.vertexY[param0.field_C[var3Lifetime1]];
+              var11[0] = param0.vertexZ[param0.field_p[var3Lifetime1]];
+              var11[1] = param0.vertexZ[param0.field_H[var3Lifetime1]];
+              var11[2] = param0.vertexZ[param0.field_C[var3Lifetime1]];
               PacketBuffer.a(var31, var22, var23, var32, var25, var26, var27, (byte) 111, var28);
-              ob.a(var22, var27, var23, var28, var31, var26, var32, 0, var25);
-              param0.field_k[var2_intLifetime1] = param0.a((short)param0.a(jo.c(0, -54264319, var25[0]), jo.c(0, -54264319, var27[0]), jo.c(0, -54264319, var22[0])), (short)param0.a(jo.c(0, cq.a(param1, -54264319), var25[1]), jo.c(0, -54264319, var27[1]), jo.c(0, -54264319, var22[1])), (short)param0.a(jo.c(0, -54264319, var25[2]), jo.c(0, -54264319, var27[2]), jo.c(0, -54264319, var22[2])));
+              MenuScreen.a(var22, var27, var23, var28, var31, var26, var32, 0, var25);
+              param0.field_k[var2_intLifetime1] = param0.a((short)param0.addVertex(PauseMenuScreen.c(0, -54264319, var25[0]), PauseMenuScreen.c(0, -54264319, var27[0]), PauseMenuScreen.c(0, -54264319, var22[0])), (short)param0.addVertex(PauseMenuScreen.c(0, cq.a(param1, -54264319), var25[1]), PauseMenuScreen.c(0, -54264319, var27[1]), PauseMenuScreen.c(0, -54264319, var22[1])), (short)param0.addVertex(PauseMenuScreen.c(0, -54264319, var25[2]), PauseMenuScreen.c(0, -54264319, var27[2]), PauseMenuScreen.c(0, -54264319, var22[2])));
             }
           }
           return;
@@ -315,7 +315,7 @@ final class IsaacCipher {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -329,7 +329,7 @@ final class IsaacCipher {
           }
           this.b(2);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -352,15 +352,15 @@ final class IsaacCipher {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        aa var3 = null;
+        IntrusiveDequeCursor var3 = null;
         ShotRecord var4 = null;
-        oq var5 = null;
+        CipherPacketBuffer var5 = null;
         try {
           if (param0 != 2243) {
             field_d = 116;
           }
-          var5 = new oq(4096);
-          var3 = new aa(param1.shots);
+          var5 = new CipherPacketBuffer(4096);
+          var3 = new IntrusiveDequeCursor(param1.shots);
           if (param1.rules instanceof EightBallRules) {
             var5.a(0, false);
           } else {
@@ -382,7 +382,7 @@ final class IsaacCipher {
               var5.a(1, false);
             }
           }
-          var4 = (ShotRecord) (var3.b((byte) -92));
+          var4 = (ShotRecord) (var3.last((byte) -92));
           while (var4 != null) {
             var5.a(true, var4.shotNumber);
             var5.a(var4.playerIndex, false);
@@ -402,10 +402,10 @@ final class IsaacCipher {
             if (var4.phase >= 3) {
               var4.a(var5, (byte) 0);
             }
-            var4 = (ShotRecord) (var3.b(-126));
+            var4 = (ShotRecord) (var3.previous(-126));
           }
           var5.a(true, -1);
-          System.out.println("pool2:" + np.a(false, var5));
+          System.out.println("pool2:" + SectorCacheStore.toHexString(false, var5));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -417,7 +417,7 @@ final class IsaacCipher {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

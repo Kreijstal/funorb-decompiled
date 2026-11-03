@@ -9,14 +9,14 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     private int contentFadeTick;
     private int fadeInDurationTicks;
     private OpacityWidget contentOpacityWidget;
-    static am field_mb;
+    static TextWidgetPainter field_mb;
     private int contentVerticalInset;
     private cd contentTransitionPhase;
-    static vh field_ob;
+    static UiComponent field_ob;
     private UiWidget pendingContent;
 
     final static void a(int param0, boolean param1) {
-        di.a(param1, (byte) 108, true);
+        ResourceArchive.a(param1, (byte) 108, true);
         int var2 = 40 / ((-28 - param0) / 51);
     }
 
@@ -31,7 +31,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             this.contentOpacityWidget = (OpacityWidget) null;
           }
           this.pendingContent = param0;
-          if (db.field_Ub == this.contentTransitionPhase) {
+          if (VerticalScrollbar.field_Ub == this.contentTransitionPhase) {
             this.startResizeTransition((byte) -77, this.pendingContent.widgetHeight + (12 + this.contentVerticalInset), 12 + this.pendingContent.widgetWidth, this.contentResizeDurationTicks);
             this.contentFadeTick = 0;
           } else {
@@ -52,7 +52,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -90,37 +90,37 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           var10 = IterableNodeHashTable.a(-128, var8 >> 16);
           if (var10 >= -2147483648L &&
             var10 <= 2147483647L) {
-            var6 = lh.a((int)var10, (byte) -83, (long)var6);
-            var7 = lh.a((int)var10, (byte) -112, (long)var7);
+            var6 = ArchiveProvider.divideFixed16((int)var10, (byte) -83, (long)var6);
+            var7 = ArchiveProvider.divideFixed16((int)var10, (byte) -112, (long)var7);
             var12 = KillerRules.a((long)param1.velocityX, (byte) -48, (long)var6) + KillerRules.a((long)param1.velocityY, (byte) -48, (long)var7) >> 16;
             var14 = KillerRules.a((long)param2.velocityX, (byte) -48, (long)var6) + KillerRules.a((long)param2.velocityY, (byte) -48, (long)var7) >> 16;
-            param1.velocityX = (int)((long)param1.velocityX - od.a((long)var6, var12, false));
-            param1.velocityY = (int)((long)param1.velocityY - od.a((long)var7, var12, false));
-            param2.velocityX = (int)((long)param2.velocityX - od.a((long)var6, var14, false));
-            param2.velocityY = (int)((long)param2.velocityY - od.a((long)var7, var14, false));
-            param1.velocityX = (int)((long)param1.velocityX + (od.a((long)(tl.field_K * var6), var14, false) >> 8));
-            param1.velocityY = (int)((long)param1.velocityY + (od.a((long)(tl.field_K * var7), var14, false) >> 8));
-            param2.velocityX = (int)((long)param2.velocityX + (od.a((long)(tl.field_K * var6), var12, false) >> 8));
-            param2.velocityY = (int)((long)param2.velocityY + (od.a((long)(tl.field_K * var7), var12, false) >> 8));
-            param1.angularVelocityY = ca.field_l * param1.angularVelocityY >> 8;
-            param1.angularVelocityZ = ca.field_l * param1.angularVelocityZ >> 8;
-            param1.angularVelocityX = ca.field_l * param1.angularVelocityX >> 8;
-            param2.angularVelocityY = param2.angularVelocityY * ca.field_l >> 8;
-            param2.angularVelocityZ = param2.angularVelocityZ * ca.field_l >> 8;
-            param2.angularVelocityX = param2.angularVelocityX * ca.field_l >> 8;
+            param1.velocityX = (int)((long)param1.velocityX - FullscreenFocusCanvas.multiplyFixedChecked((long)var6, var12, false));
+            param1.velocityY = (int)((long)param1.velocityY - FullscreenFocusCanvas.multiplyFixedChecked((long)var7, var12, false));
+            param2.velocityX = (int)((long)param2.velocityX - FullscreenFocusCanvas.multiplyFixedChecked((long)var6, var14, false));
+            param2.velocityY = (int)((long)param2.velocityY - FullscreenFocusCanvas.multiplyFixedChecked((long)var7, var14, false));
+            param1.velocityX = (int)((long)param1.velocityX + (FullscreenFocusCanvas.multiplyFixedChecked((long)(RankingsScreen.field_K * var6), var14, false) >> 8));
+            param1.velocityY = (int)((long)param1.velocityY + (FullscreenFocusCanvas.multiplyFixedChecked((long)(RankingsScreen.field_K * var7), var14, false) >> 8));
+            param2.velocityX = (int)((long)param2.velocityX + (FullscreenFocusCanvas.multiplyFixedChecked((long)(RankingsScreen.field_K * var6), var12, false) >> 8));
+            param2.velocityY = (int)((long)param2.velocityY + (FullscreenFocusCanvas.multiplyFixedChecked((long)(RankingsScreen.field_K * var7), var12, false) >> 8));
+            param1.angularVelocityY = TextPairLoginPayload.field_l * param1.angularVelocityY >> 8;
+            param1.angularVelocityZ = TextPairLoginPayload.field_l * param1.angularVelocityZ >> 8;
+            param1.angularVelocityX = TextPairLoginPayload.field_l * param1.angularVelocityX >> 8;
+            param2.angularVelocityY = param2.angularVelocityY * TextPairLoginPayload.field_l >> 8;
+            param2.angularVelocityZ = param2.angularVelocityZ * TextPairLoginPayload.field_l >> 8;
+            param2.angularVelocityX = param2.angularVelocityX * TextPairLoginPayload.field_l >> 8;
             param1.motionState = 1;
             param2.motionState = 1;
             var18 = -53 / ((param3 - 62) / 39);
             var16 = param1.horizontalSpeedSquared(-14770) + param2.horizontalSpeedSquared(-14770);
-            if (wm.field_ac.length > or.field_l) {
-              wm.field_ac[or.field_l][0] = param1.positionX + param2.positionX >> 1;
-              wm.field_ac[or.field_l][1] = param2.positionY + param1.positionY >> 1;
-              wm.field_ac[or.field_l][2] = -524288;
+            if (ReportAbuseDialog.field_ac.length > BallEvent.field_l) {
+              ReportAbuseDialog.field_ac[BallEvent.field_l][0] = param1.positionX + param2.positionX >> 1;
+              ReportAbuseDialog.field_ac[BallEvent.field_l][1] = param2.positionY + param1.positionY >> 1;
+              ReportAbuseDialog.field_ac[BallEvent.field_l][2] = -524288;
             }
-            if (or.field_l < wd.field_Qb.length) {
-              fieldTemp$1 = or.field_l;
-              or.field_l = or.field_l + 1;
-              wd.field_Qb[fieldTemp$1] = (int)(-var16 + var4_long);
+            if (BallEvent.field_l < TabbedPane.field_Qb.length) {
+              fieldTemp$1 = BallEvent.field_l;
+              BallEvent.field_l = BallEvent.field_l + 1;
+              TabbedPane.field_Qb[fieldTemp$1] = (int)(-var16 + var4_long);
             }
             return;
           }
@@ -141,7 +141,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           this.addChild(true, this.contentOpacityWidget);
           this.pendingContent = null;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ok.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ok.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
             if (this.fadeOutDurationTicks != fieldTemp$4) {
               this.contentOpacityWidget.opacity = 256 - (this.contentFadeTick << 8) / this.fadeOutDurationTicks;
             } else {
-              this.contentTransitionPhase = db.field_Ub;
+              this.contentTransitionPhase = VerticalScrollbar.field_Ub;
               this.startResizeTransition((byte) 88, this.pendingContent.widgetHeight + (12 + this.contentVerticalInset), 12 + this.pendingContent.widgetWidth, this.contentResizeDurationTicks);
               this.contentOpacityWidget.opacity = 0;
               this.contentFadeTick = 0;
@@ -258,23 +258,23 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           var8 = (Ball) null;
           ContentTransitionDialog.applyBallCollisionImpulse(101, (Ball) null, (Ball) null, (byte) 35);
         }
-        var1 = pd.field_a[0] * rc.field_f[0];
-        var17 = v.field_b[0];
+        var1 = LinkButtonPainter.field_a[0] * rc.field_f[0];
+        var17 = LimitedRandomAccessFile.field_b[0];
         if (!DebouncedValidationProvider.field_d[0]) {
           var9 = new int[var1];
           for (var5_int = 0; var1 > var5_int; var5_int++) {
-            var9[var5_int] = IntrusiveNode.field_h[rb.b((int) var17[var5_int], 255)];
+            var9[var5_int] = IntrusiveNode.field_h[ArchiveLoadSequence.b((int) var17[var5_int], 255)];
           }
-          var3 = new Sprite(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var9);
+          var3 = new Sprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[0], ih.field_d[0], LinkButtonPainter.field_a[0], rc.field_f[0], var9);
         } else {
-          var18 = wg.field_Sb[0];
+          var18 = StateIconLabel.field_Sb[0];
           var14 = new int[var1];
           var12 = var14;
           var5 = var12;
           for (var6 = 0; var6 < var1; var6++) {
-            var5[var6] = md.a(rb.b(-16777216, var18[var6] << 24), IntrusiveNode.field_h[rb.b(255, (int) var17[var6])]);
+            var5[var6] = md.a(ArchiveLoadSequence.b(-16777216, var18[var6] << 24), IntrusiveNode.field_h[ArchiveLoadSequence.b(255, (int) var17[var6])]);
           }
-          var3 = new ArgbSprite(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var14);
+          var3 = new ArgbSprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[0], ih.field_d[0], LinkButtonPainter.field_a[0], rc.field_f[0], var14);
         }
         OpacityWidget.h(-1);
         return (Sprite) (var3);
@@ -289,11 +289,11 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           this.contentResizeDurationTicks = param4;
           this.installContent(param1, -111052767);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_mb = null;
         field_pb = (String[][]) null;
         field_ob = null;
@@ -332,7 +332,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -353,23 +353,23 @@ abstract class ContentTransitionDialog extends ResizableDialog {
           ContentTransitionDialog.k((byte) -62);
         }
         for (var2 = 0; wf.field_d > var2; var2++) {
-          var3 = pd.field_a[var2] * rc.field_f[var2];
-          var16 = v.field_b[var2];
+          var3 = LinkButtonPainter.field_a[var2] * rc.field_f[var2];
+          var16 = LimitedRandomAccessFile.field_b[var2];
           if (!DebouncedValidationProvider.field_d[var2]) {
             var8 = new int[var3];
             for (var6_int = 0; var3 > var6_int; var6_int++) {
-              var8[var6_int] = IntrusiveNode.field_h[rb.b((int) var16[var6_int], 255)];
+              var8[var6_int] = IntrusiveNode.field_h[ArchiveLoadSequence.b((int) var16[var6_int], 255)];
             }
-            var1[var2] = new Sprite(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var8);
+            var1[var2] = new Sprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[var2], ih.field_d[var2], LinkButtonPainter.field_a[var2], rc.field_f[var2], var8);
           } else {
-            var17 = wg.field_Sb[var2];
+            var17 = StateIconLabel.field_Sb[var2];
             var13 = new int[var3];
             var11 = var13;
             var6 = var11;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = md.a(rb.b((int) var17[var7], 255) << 24, IntrusiveNode.field_h[rb.b(255, (int) var16[var7])]);
+              var6[var7] = md.a(ArchiveLoadSequence.b((int) var17[var7], 255) << 24, IntrusiveNode.field_h[ArchiveLoadSequence.b(255, (int) var16[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var13));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[var2], ih.field_d[var2], LinkButtonPainter.field_a[var2], rc.field_f[var2], var13));
           }
         }
         OpacityWidget.h(-1);

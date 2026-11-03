@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TextHotspotRegion extends IntrusiveNode {
-    static vh field_o;
+    static UiComponent field_o;
     int field_r;
     int field_p;
     int field_l;
@@ -60,7 +60,7 @@ final class TextHotspotRegion extends IntrusiveNode {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        oc var4_ref_oc = null;
+        TriangleMesh var4_ref_oc = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -78,7 +78,7 @@ final class TextHotspotRegion extends IntrusiveNode {
         int[] var20 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        oc var17 = null;
+        TriangleMesh var17 = null;
         int var3Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -96,11 +96,11 @@ final class TextHotspotRegion extends IntrusiveNode {
           var2 = var19;
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_oc = ShotRecord.field_S[var3];
-            var4_ref_oc.a((byte) 87);
+            var4_ref_oc.updateBounds((byte) 87);
             ShotRecord.b(0, var3);
-            var5 = var4_ref_oc.field_n + var4_ref_oc.field_q >> 1;
-            var6 = var4_ref_oc.field_b + var4_ref_oc.field_N >> 1;
-            var7 = var4_ref_oc.field_f + var4_ref_oc.field_F >> 1;
+            var5 = var4_ref_oc.minX + var4_ref_oc.maxX >> 1;
+            var6 = var4_ref_oc.maxY + var4_ref_oc.minY >> 1;
+            var7 = var4_ref_oc.minZ + var4_ref_oc.maxZ >> 1;
             var8 = eh.field_p[9] >> 2;
             var9 = eh.field_p[10] >> 2;
             var10_int = eh.field_p[11] >> 2;
@@ -112,10 +112,10 @@ final class TextHotspotRegion extends IntrusiveNode {
           var3Lifetime1 = eh.field_p[9] >> 8;
           var4 = eh.field_p[10] >> 8;
           var5Lifetime1 = eh.field_p[11] >> 8;
-          var6Lifetime1 = im.field_fc << 4;
+          var6Lifetime1 = LobbyPlayer.field_fc << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = EightBallRules.c((byte) -123, var6Lifetime1) >> 8;
-          var9Lifetime1 = o.a(var6Lifetime1, (byte) 83) >> 8;
+          var9Lifetime1 = UiComponentNode.sineFixed(var6Lifetime1, (byte) 83) >> 8;
           if (wn.field_i != -1 &&
             DebouncedValidationProvider.field_f != -1) {
             var9Lifetime1 = -128;
@@ -147,23 +147,23 @@ final class TextHotspotRegion extends IntrusiveNode {
             var17 = ShotRecord.field_S[var16];
             ShotRecord.b(0, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              IsaacCipher.field_b[var18] = IsaacCipher.field_b[var18] + qp.field_gc[var15][var18];
+              IsaacCipher.field_b[var18] = IsaacCipher.field_b[var18] + QuickChatMenu.field_gc[var15][var18];
             }
-            ve.a(param0 + 21815, false, eh.field_p, false, true, IsaacCipher.field_b, var17);
+            BitmapTextLayout.a(param0 + 21815, false, eh.field_p, false, true, IsaacCipher.field_b, var17);
             CueAim.a(var14, 8355711, var17, var8Lifetime1, var13Lifetime1, var9Lifetime1, var12Lifetime1, var7Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "gi.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "gi.A(" + param0 + ')');
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         createUsernameUnavailable = null;
         if (!param0) {
-          field_o = (vh) null;
+          field_o = (UiComponent) null;
         }
         field_o = null;
     }
@@ -183,7 +183,7 @@ final class TextHotspotRegion extends IntrusiveNode {
           if (EmailAvailabilityValidator.a(-2, param1) == null) {
             var4 = new ij(param1);
             var4.a(param2, (byte) 120, param3);
-            nd.field_i.b((byte) -20, var4);
+            MarkerSliderPainter.field_i.b((byte) -20, var4);
             stackIn_3_0 = var4;
             return stackIn_3_0;
           }
@@ -208,7 +208,7 @@ final class TextHotspotRegion extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

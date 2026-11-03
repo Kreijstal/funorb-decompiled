@@ -10,7 +10,7 @@ final class ti {
     static int field_g;
     static volatile int field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         returntogame = null;
         muEnteredOtherGame = null;
         if (param0 != -20973) {
@@ -29,7 +29,7 @@ final class ti {
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          if (0L == (pd.field_i & 1L)) {
+          if (0L == (LinkButtonPainter.field_i & 1L)) {
             return false;
           }
           de.a(-105);
@@ -49,7 +49,7 @@ final class ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "ti.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ti.A(" + param0 + ')');
         }
     }
 

@@ -56,11 +56,11 @@ final class dk {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, byte param1, int param2, Ball param3, int param4) {
+    final static void bounceBallOffPoint(int param0, byte param1, int param2, Ball param3, int param4) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -78,14 +78,14 @@ final class dk {
           var5_long = param3.horizontalSpeedSquared(-14770);
           var7 = param0 - param3.positionX;
           var8 = -param3.positionY + param4;
-          var9 = IterableNodeHashTable.a(-107, od.a((long)var7, (long)var7, false) + od.a((long)var8, (long)var8, false));
+          var9 = IterableNodeHashTable.a(-107, FullscreenFocusCanvas.multiplyFixedChecked((long)var7, (long)var7, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var8, (long)var8, false));
           if (var9 <= 2147483647L &&
             var9 >= -2147483648L) {
-            var7 = lh.a((int)var9, (byte) -96, (long)var7);
-            var8 = lh.a((int)var9, (byte) -85, (long)var8);
-            var11 = aj.a(var7, false, param3.velocityX) + aj.a(var8, false, param3.velocityY);
-            param3.velocityX = param3.velocityX - 2 * aj.a(var11, false, var7);
-            param3.velocityY = param3.velocityY - aj.a(var11, false, var8) * 2;
+            var7 = ArchiveProvider.divideFixed16((int)var9, (byte) -96, (long)var7);
+            var8 = ArchiveProvider.divideFixed16((int)var9, (byte) -85, (long)var8);
+            var11 = NameEntryPopup.a(var7, false, param3.velocityX) + NameEntryPopup.a(var8, false, param3.velocityY);
+            param3.velocityX = param3.velocityX - 2 * NameEntryPopup.a(var11, false, var7);
+            param3.velocityY = param3.velocityY - NameEntryPopup.a(var11, false, var8) * 2;
             param3.angularVelocityX = param3.angularVelocityX * kp.field_m >> 8;
             param3.motionState = 1;
             param3.angularVelocityY = param3.angularVelocityY * kp.field_m >> 8;
@@ -96,10 +96,10 @@ final class dk {
               nn.field_e[td.field_b][1] = param4;
               nn.field_e[td.field_b][2] = -524288;
             }
-            if (td.field_b < cf.field_g.length) {
+            if (td.field_b < SoundCache.field_g.length) {
               fieldTemp$0 = td.field_b;
               td.field_b = td.field_b + 1;
-              cf.field_g[fieldTemp$0] = (int)(var5_long - var12);
+              SoundCache.field_g[fieldTemp$0] = (int)(var5_long - var12);
             }
             if (param1 != -20) {
               returntolobby = (String) null;
@@ -117,7 +117,7 @@ final class dk {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -128,10 +128,10 @@ final class dk {
           this.field_i = param2;
           this.field_e = param0;
           if (param1 != 78) {
-            dk.a((byte) -28, (String) null, (di) null, (String) null, (String) null);
+            dk.a((byte) -28, (String) null, (ResourceArchive) null, (String) null, (String) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "dk.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dk.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class dk {
         var10 = Pool.field_O;
         try {
           if (param0 != 1) {
-            dk.a((byte) -62, (String) null, (di) null, (String) null, (String) null);
+            dk.a((byte) -62, (String) null, (ResourceArchive) null, (String) null, (String) null);
           }
           var1 = null;
           var2 = null;
@@ -162,7 +162,7 @@ final class dk {
           }
           if (hn.field_b == 2 &&
             !hp.a(false)) {
-            boolean decompiledSharedTail2 = !(!DialogLayer.a(di.field_a, -1));
+            boolean decompiledSharedTail2 = !(!DialogLayer.a(ResourceArchive.field_a, -1));
             if (!decompiledSharedTail2) {
               var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ArrayWidgetGroup.field_I}, param0 ^ -2, tp.privatechatFriendNotlisted);
               decompiledSharedTail2 = (var10 != 0);
@@ -177,13 +177,13 @@ final class dk {
           }
           if (null == var2 &&
             !gd.field_b &&
-            uq.field_D == null) {
+            Bzip2DecoderState.field_D == null) {
             var2 = NineBallRules.chatviewscrolledup;
           }
           if (var2 != null) {
             dr.a((String) null, param0 + 11467, FreePlayRules.field_g, 0, (String) (var2));
           } else {
-            var3 = di.field_j;
+            var3 = ResourceArchive.field_j;
             var3 = IterableNodeHashTable.a(524288, var3);
             var4 = "";
             var5 = "|";
@@ -191,26 +191,26 @@ final class dk {
             var7 = 0;
             if (var6 == 2) {
               var4 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ArrayWidgetGroup.field_I}, -1, jl.privatequickchatToX);
-              var8 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, vh.privatequickchatFromX);
-              var7 = pa.field_J.field_gb - (-NineBallRules.field_j.field_gb + (485 - m.field_c.b(var8) + m.field_c.b(var4)));
+              var8 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, UiComponent.privatequickchatFromX);
+              var7 = TimeTrialSelectScreen.field_J.width - (-NineBallRules.field_j.width + (485 - m.field_c.b(var8) + m.field_c.b(var4)));
               if (var7 < 0) {
                 var7 = 0;
               }
             } else {
               if (var6 == 0) {
-                if (null == em.field_L &&
-                  ej.field_l) {
+                if (null == HighscoresScreen.field_L &&
+                  JaggrabDownloader.field_l) {
                   var4 = "[" + BirthDateValidator.muChatLobby + "] ";
                 }
-                if (null != em.field_L) {
+                if (null != HighscoresScreen.field_L) {
                   boolean decompiledSharedTail1 = (!(sa.field_c) ||
-                    kn.field_g == null);
+                    PlayerContextMenu.field_g == null);
                   if (!decompiledSharedTail1) {
-                    var4 = "[" + kn.field_g + "] ";
+                    var4 = "[" + PlayerContextMenu.field_g + "] ";
                     decompiledSharedTail1 = (var10 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var4 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{em.field_L.field_Ob}, -1, th.xsGame) + "] ";
+                    var4 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, th.xsGame) + "] ";
                   }
                   var6 = 1;
                 }
@@ -235,16 +235,16 @@ final class dk {
               }
               var9 = m.field_c.b(var4);
               if (!MenuSelection.b(param0 ^ -2)) {
-                if (pa.field_J.field_W &&
-                  -pa.field_J.field_sb + wn.field_i < var9) {
+                if (TimeTrialSelectScreen.field_J.activeInside &&
+                  -TimeTrialSelectScreen.field_J.screenX + wn.field_i < var9) {
                   if (ea.field_z) {
                     var1 = "Broken!";
                   } else {
                     var1 = je.clickToQuickchat;
                   }
                 }
-                if (pa.field_J.field_R != 0 &&
-                  var9 > pa.field_J.field_mb &&
+                if (TimeTrialSelectScreen.field_J.pressedButton != 0 &&
+                  var9 > TimeTrialSelectScreen.field_J.pressLocalX &&
                   !ea.field_z) {
                   EmailValidator.c((byte) 68);
                 }
@@ -252,9 +252,9 @@ final class dk {
             }
             dr.a(var5, 11468, Ball.field_F[var6], var7, var4 + BitmapFont.escapeMarkup(td.field_c.toString()));
             if (!DualLinkNode.field_p) {
-              NineBallRules.field_j.field_W = false;
+              NineBallRules.field_j.activeInside = false;
             }
-            if (NineBallRules.field_j.field_W) {
+            if (NineBallRules.field_j.activeInside) {
               var1 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var3, ArrayWidgetGroup.field_I}, -1, wb.privatechatBlankareaExplanation);
             }
           }
@@ -263,7 +263,7 @@ final class dk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) (var1), "dk.E(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) (var1), "dk.E(" + param0 + ')');
         }
     }
 
@@ -275,7 +275,7 @@ final class dk {
             this.a(-71, 118, (byte) -96);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "dk.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dk.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -289,11 +289,11 @@ final class dk {
           gameoptNotunlocked = null;
           loginGameupdated = null;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "dk.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dk.B(" + param0 + ')');
         }
     }
 
-    final static String a(byte param0, String param1, di param2, String param3, String param4) {
+    final static String a(byte param0, String param1, ResourceArchive param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         String stackIn_4_0 = null;
@@ -344,11 +344,11 @@ final class dk {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
-    final static void a(vh param0, byte param1) {
+    final static void a(UiComponent param0, byte param1) {
         Sprite var2 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -358,14 +358,14 @@ final class dk {
         Sprite var2Lifetime1;
         try {
           if (param1 != 93) {
-            dk.a((byte) 91, (String) null, (di) null, (String) null, (String) null);
+            dk.a((byte) 91, (String) null, (ResourceArchive) null, (String) null, (String) null);
           }
-          var2 = param0.field_hb;
-          var2.field_B = -var2.field_A + param0.field_Db >> 1;
+          var2 = param0.sprite;
+          var2.field_B = -var2.field_A + param0.height >> 1;
           var2.field_y = var2.field_B + var2.field_A;
-          var2Lifetime1 = param0.field_yb;
+          var2Lifetime1 = param0.selectedSprite;
           if (null != var2Lifetime1) {
-            var2Lifetime1.field_B = -var2Lifetime1.field_A + param0.field_Db >> 1;
+            var2Lifetime1.field_B = -var2Lifetime1.field_A + param0.height >> 1;
             var2Lifetime1.field_y = var2Lifetime1.field_B + var2Lifetime1.field_A;
           }
           return;
@@ -379,7 +379,7 @@ final class dk {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -388,7 +388,7 @@ final class dk {
         try {
           this.a(param1, param0, (byte) 34);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dk.<init>(" + param0 + ',' + param1 + ')');
         }
     }
 

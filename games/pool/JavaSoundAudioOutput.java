@@ -8,11 +8,11 @@ final class JavaSoundAudioOutput extends AudioOutput {
     private int field_y;
     private static String field_z;
 
-    final int e() {
+    final int getQueuedFrames() {
         return this.field_y - (this.field_v.available() >> (stereo ? 2 : 1));
     }
 
-    final void a() {
+    final void closeDevice() {
         if (this.field_v != null) {
           this.field_v.close();
           this.field_v = null;
@@ -49,8 +49,8 @@ final class JavaSoundAudioOutput extends AudioOutput {
           this.field_v.start();
           this.field_y = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-          if (se.a(false, param0) != 1) {
-            this.a(te.a(-17931, param0));
+          if (LongAndTextLoginPayload.countSetBits(false, param0) != 1) {
+            this.a(te.nextPowerOfTwo(-17931, param0));
             return;
           }
           this.field_v = null;

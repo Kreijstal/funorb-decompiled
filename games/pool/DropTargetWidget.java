@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DropTargetWidget extends SingleChildWidget {
-    static ec[] field_O;
+    static BallDebugOverlay[] field_O;
     static int[][] field_N;
 
     static long a(long param0, long param1) {
@@ -33,13 +33,13 @@ final class DropTargetWidget extends SingleChildWidget {
             PasswordValidator.field_u = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "k.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "k.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, byte param1, long param2) {
-        oq var4 = ej.field_j;
-        var4.b(false, param0);
+        CipherPacketBuffer var4 = JaggrabDownloader.field_j;
+        var4.writeCipheredOpcode(false, param0);
         var4.position = var4.position + 1;
         int var6 = 84 / ((-74 - param1) / 37);
         int var5 = var4.position;
@@ -50,7 +50,7 @@ final class DropTargetWidget extends SingleChildWidget {
 
     final static void g(byte param0) {
         if (param0 != 96) {
-          field_O = (ec[]) null;
+          field_O = (BallDebugOverlay[]) null;
           if (!bj.c(1)) {
             return;
           }
@@ -65,10 +65,10 @@ final class DropTargetWidget extends SingleChildWidget {
 
     final static String a(long param0, int param1, boolean param2, int param3) {
         if (param2) {
-          return di.a(param0, param3, false, -109, param1, 10);
+          return ResourceArchive.a(param0, param3, false, -109, param1, 10);
         }
-        DropTargetWidget.h(83);
-        return di.a(param0, param3, false, -109, param1, 10);
+        DropTargetWidget.releaseStatics(83);
+        return ResourceArchive.a(param0, param3, false, -109, param1, 10);
     }
 
     private DropTargetWidget(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, UiWidget param6) {
@@ -76,7 +76,7 @@ final class DropTargetWidget extends SingleChildWidget {
         try {
           this.child = param6;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "k.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "k.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -84,14 +84,14 @@ final class DropTargetWidget extends SingleChildWidget {
         try {
           kf.a(param2.length, (byte) -104, param2, param0, 0);
           if (param1 != -121) {
-            field_O = (ec[]) null;
+            field_O = (BallDebugOverlay[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "k.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "k.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         field_O = null;
         field_N = (int[][]) null;
         if (param0 != 120) {
@@ -99,7 +99,7 @@ final class DropTargetWidget extends SingleChildWidget {
         }
     }
 
-    final static boolean a(di param0, di param1, di param2, boolean param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -150,7 +150,7 @@ final class DropTargetWidget extends SingleChildWidget {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
         }
     }
 

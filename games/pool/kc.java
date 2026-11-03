@@ -9,7 +9,7 @@ final class kc {
     static int[] field_h;
     static String[] field_g;
     static int[] field_e;
-    static vh field_b;
+    static UiComponent field_b;
 
     final static void attachInputListeners(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
@@ -40,11 +40,11 @@ final class kc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_g = null;
         field_b = null;

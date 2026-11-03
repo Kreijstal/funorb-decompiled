@@ -31,7 +31,7 @@ final class ck extends HotspotTextWidget {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -40,18 +40,18 @@ final class ck extends HotspotTextWidget {
           this.field_V = this.field_V + 1;
           super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ck.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ck.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     ck(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, ub.c(4));
+        super(param1, AlternateLongAndTextLoginPayload.c(4));
         try {
           this.field_S = param0;
           this.field_X = param1;
           this.setWidgetBounds(param4, param2, param5, false, param3);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class ck extends HotspotTextWidget {
           var35 = (io) ((Object) this.renderer);
           var10 = -91 % ((-42 - param1) / 53);
           var9 = this.widgetX + param2;
-          var11 = var35.a(param3, (UiWidget) (this), (byte) -7) + (var35.b(0, (UiWidget) (this)).a((byte) 66) >> 1);
+          var11 = var35.a(param3, (UiWidget) (this), (byte) -7) + (var35.ensureTextLayout(0, (UiWidget) (this)).a((byte) 66) >> 1);
           if (ji.field_h == var6) {
             var21 = bo.field_a[0];
             var12 = var21.field_w << 1;
@@ -140,11 +140,11 @@ final class ck extends HotspotTextWidget {
               }
             }
             var21.b(112, 144, var21.field_w << 4, var21.field_y << 4, -this.field_V << 10, 4096);
-            oc.a(126);
+            TriangleMesh.a(126);
             this.field_U.drawAdditive(var9 - (var21.field_w >> 1), var11 - var21.field_y, 256);
             return;
           }
-          if (no.field_k != var6) {
+          if (Js5Transport.field_k != var6) {
             if (gp.field_d == var6) {
               var22 = bo.field_a[2];
               var22.drawAdditive(var9, var11 - (var22.field_A >> 1), 256);
@@ -170,11 +170,11 @@ final class ck extends HotspotTextWidget {
             CueAim.a(81, this.field_U);
           }
           var20.b(112, 144, var20.field_w << 4, var20.field_y << 4, -this.field_V << 10, 4096);
-          oc.a(126);
+          TriangleMesh.a(126);
           this.field_U.drawAdditive(var9 - (var20.field_w >> 1), var11 - var20.field_y, 256);
           return;
         }
-        if (var6 == no.field_k) {
+        if (var6 == Js5Transport.field_k) {
           var24 = oi.checking;
           if (!var24.equals(this.widgetText)) {
             this.widgetText = var24;
@@ -185,7 +185,7 @@ final class ck extends HotspotTextWidget {
           var36 = (io) ((Object) this.renderer);
           var10Lifetime1 = -91 % ((-42 - param1) / 53);
           var9Lifetime1 = this.widgetX + param2;
-          var11Lifetime1 = var36.a(param3, (UiWidget) (this), (byte) -7) + (var36.b(0, (UiWidget) (this)).a((byte) 66) >> 1);
+          var11Lifetime1 = var36.a(param3, (UiWidget) (this), (byte) -7) + (var36.ensureTextLayout(0, (UiWidget) (this)).a((byte) 66) >> 1);
           if (ji.field_h == var6) {
             var27 = bo.field_a[0];
             var12Lifetime1 = var27.field_w << 1;
@@ -208,11 +208,11 @@ final class ck extends HotspotTextWidget {
               }
             }
             var27.b(112, 144, var27.field_w << 4, var27.field_y << 4, -this.field_V << 10, 4096);
-            oc.a(126);
+            TriangleMesh.a(126);
             this.field_U.drawAdditive(var9Lifetime1 - (var27.field_w >> 1), var11Lifetime1 - var27.field_y, 256);
             return;
           }
-          if (no.field_k != var6) {
+          if (Js5Transport.field_k != var6) {
             if (gp.field_d == var6) {
               var28 = bo.field_a[2];
               var28.drawAdditive(var9Lifetime1, var11Lifetime1 - (var28.field_A >> 1), 256);
@@ -238,7 +238,7 @@ final class ck extends HotspotTextWidget {
             CueAim.a(81, this.field_U);
           }
           var26.b(112, 144, var26.field_w << 4, var26.field_y << 4, -this.field_V << 10, 4096);
-          oc.a(126);
+          TriangleMesh.a(126);
           this.field_U.drawAdditive(var9Lifetime1 - (var26.field_w >> 1), var11Lifetime1 - var26.field_y, 256);
           return;
         }
@@ -255,7 +255,7 @@ final class ck extends HotspotTextWidget {
         var37 = (io) ((Object) this.renderer);
         var10Lifetime2 = -91 % ((-42 - param1) / 53);
         var9Lifetime2 = this.widgetX + param2;
-        var11Lifetime2 = var37.a(param3, (UiWidget) (this), (byte) -7) + (var37.b(0, (UiWidget) (this)).a((byte) 66) >> 1);
+        var11Lifetime2 = var37.a(param3, (UiWidget) (this), (byte) -7) + (var37.ensureTextLayout(0, (UiWidget) (this)).a((byte) 66) >> 1);
         if (ji.field_h == var6Lifetime1) {
           var32 = bo.field_a[0];
           var12Lifetime2 = var32.field_w << 1;
@@ -278,11 +278,11 @@ final class ck extends HotspotTextWidget {
             }
           }
           var32.b(112, 144, var32.field_w << 4, var32.field_y << 4, -this.field_V << 10, 4096);
-          oc.a(126);
+          TriangleMesh.a(126);
           this.field_U.drawAdditive(var9Lifetime2 - (var32.field_w >> 1), var11Lifetime2 - var32.field_y, 256);
           return;
         }
-        if (no.field_k != var6Lifetime1) {
+        if (Js5Transport.field_k != var6Lifetime1) {
           if (gp.field_d == var6Lifetime1) {
             var33 = bo.field_a[2];
             var33.drawAdditive(var9Lifetime2, var11Lifetime2 - (var33.field_A >> 1), 256);
@@ -308,11 +308,11 @@ final class ck extends HotspotTextWidget {
           CueAim.a(81, this.field_U);
         }
         var31.b(112, 144, var31.field_w << 4, var31.field_y << 4, -this.field_V << 10, 4096);
-        oc.a(126);
+        TriangleMesh.a(126);
         this.field_U.drawAdditive(var9Lifetime2 - (var31.field_w >> 1), var11Lifetime2 - var31.field_y, 256);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_Y = null;
         quickchatShortcutKeys = null;
         if (param0 > -52) {

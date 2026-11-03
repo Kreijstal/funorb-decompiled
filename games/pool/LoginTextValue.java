@@ -22,24 +22,24 @@ final class LoginTextValue {
         RuntimeException decompiledCaughtException = null;
         var5 = Pool.field_O;
         try {
-          wd.field_Lb = td.field_f;
+          TabbedPane.field_Lb = td.field_f;
           if (param3 != -16) {
             LoginTextValue.a(-100);
           }
           if (param1 == 255) {
             stackIn_7_0 = !(ButtonPainter.field_b >= 13);
-            sf.field_B = ta.a(stackIn_7_0, param3 - 30898);
+            QuickChatCategoryDefinition.field_B = ta.a(stackIn_7_0, param3 - 30898);
             return;
           }
           if (param1 < 100) {
-            sf.field_B = DebouncedValidationProvider.a(param1, true, param0);
+            QuickChatCategoryDefinition.field_B = DebouncedValidationProvider.a(param1, true, param0);
             return;
           }
           if (param1 <= 105) {
-            sf.field_B = jo.a(param2, 57);
+            QuickChatCategoryDefinition.field_B = PauseMenuScreen.a(param2, 57);
             return;
           }
-          sf.field_B = DebouncedValidationProvider.a(param1, true, param0);
+          QuickChatCategoryDefinition.field_B = DebouncedValidationProvider.a(param1, true, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,7 +57,7 @@ final class LoginTextValue {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -68,11 +68,11 @@ final class LoginTextValue {
           if (nl.field_c != null) {
             try {
               nl.field_c.seek(param0 ^ 100, 0L);
-              nl.field_c.write(24, kn.field_e.payload, kn.field_e.position, -1);
+              nl.field_c.write(24, PlayerContextMenu.field_e.payload, PlayerContextMenu.field_e.position, -1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              kn.field_e.position = kn.field_e.position + 24;
+              PlayerContextMenu.field_e.position = PlayerContextMenu.field_e.position + 24;
               if (param0 == 100) {
                 return;
               }
@@ -80,7 +80,7 @@ final class LoginTextValue {
               return;
             }
           }
-          kn.field_e.position = kn.field_e.position + 24;
+          PlayerContextMenu.field_e.position = PlayerContextMenu.field_e.position + 24;
           if (param0 != 100) {
             field_f = (IntrusiveDeque) null;
           }
@@ -135,7 +135,7 @@ final class LoginTextValue {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class LoginTextValue {
         if (65536L > (long)param1) {
           if ((long)param1 < 256L) {
             if (param1 >= 0) {
-              return el.field_J[param1] >> 12;
+              return AchievementsScreen.field_J[param1] >> 12;
             }
             if (!param0) {
               return -1;
@@ -157,40 +157,40 @@ final class LoginTextValue {
           }
           if ((long)param1 >= 4096L) {
             if ((long)param1 >= 16384L) {
-              return el.field_J[param1 >> 8] >> 8;
+              return AchievementsScreen.field_J[param1 >> 8] >> 8;
             }
-            return el.field_J[param1 >> 6] >> 9;
+            return AchievementsScreen.field_J[param1 >> 6] >> 9;
           }
           if ((long)param1 < 1024L) {
-            return el.field_J[param1 >> 2] >> 11;
+            return AchievementsScreen.field_J[param1 >> 2] >> 11;
           }
-          return el.field_J[param1 >> 4] >> 10;
+          return AchievementsScreen.field_J[param1 >> 4] >> 10;
         }
         if ((long)param1 < 16777216L) {
           if ((long)param1 < 1048576L) {
             if (262144L <= (long)param1) {
-              return el.field_J[param1 >> 12] >> 6;
+              return AchievementsScreen.field_J[param1 >> 12] >> 6;
             }
-            return el.field_J[param1 >> 10] >> 7;
+            return AchievementsScreen.field_J[param1 >> 10] >> 7;
           }
           if ((long)param1 < 4194304L) {
-            return el.field_J[param1 >> 14] >> 5;
+            return AchievementsScreen.field_J[param1 >> 14] >> 5;
           }
-          return el.field_J[param1 >> 16] >> 4;
+          return AchievementsScreen.field_J[param1 >> 16] >> 4;
         }
         if ((long)param1 >= 268435456L) {
           if ((long)param1 >= 1073741824L) {
-            return el.field_J[param1 >> 24];
+            return AchievementsScreen.field_J[param1 >> 24];
           }
-          return el.field_J[param1 >> 22] >> 1;
+          return AchievementsScreen.field_J[param1 >> 22] >> 1;
         }
         if (67108864L > (long)param1) {
-          return el.field_J[param1 >> 18] >> 3;
+          return AchievementsScreen.field_J[param1 >> 18] >> 3;
         }
-        return el.field_J[param1 >> 20] >> 2;
+        return AchievementsScreen.field_J[param1 >> 20] >> 2;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         gameoptMightchange = null;
         field_f = null;
         if (param0) {

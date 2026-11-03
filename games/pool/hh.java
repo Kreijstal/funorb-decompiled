@@ -9,15 +9,15 @@ final class hh {
     static String errorJs5connectFull;
     static int field_e;
 
-    final static vh a(byte param0) {
+    final static UiComponent a(byte param0) {
         if (param0 != 1) {
           field_a = 112;
-          return BufferedSocket.field_m.field_Rb;
+          return BufferedSocket.field_m.content;
         }
-        return BufferedSocket.field_m.field_Rb;
+        return BufferedSocket.field_m.content;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 28882) {
           errorJs5connectFull = null;
           unratedGame = null;
@@ -104,7 +104,7 @@ final class hh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "hh.B(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "hh.B(" + param0 + ',' + param1 + ')');
         }
     }
 

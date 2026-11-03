@@ -92,18 +92,18 @@ abstract class ResizableDialog extends FadingDialog {
     }
 
     final static int i(int param0) {
-        if (sf.field_y < 2) {
+        if (QuickChatCategoryDefinition.field_y < 2) {
           return 0;
         }
         if (0 != ProgressBarWidget.field_S) {
-          if (null != wh.field_a) {
-            if (!wh.field_a.d(-103)) {
+          if (null != QuickChatPhraseRegistry.field_a) {
+            if (!QuickChatPhraseRegistry.field_a.d(-103)) {
               return 14;
             }
-            if (!wh.field_a.a((byte) 114, "")) {
+            if (!QuickChatPhraseRegistry.field_a.a((byte) 114, "")) {
               return 29;
             }
-            if (!wh.field_a.a("", 0)) {
+            if (!QuickChatPhraseRegistry.field_a.a("", 0)) {
               return 29;
             }
           }
@@ -151,7 +151,7 @@ abstract class ResizableDialog extends FadingDialog {
         return 100;
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -16) {
           ResizableDialog.i(83);
         }
@@ -279,9 +279,9 @@ abstract class ResizableDialog extends FadingDialog {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        EmailAvailabilityValidator.field_p.c(this.widgetWidth + param0 - 90, 10 + param1);
+        EmailAvailabilityValidator.field_p.draw(this.widgetWidth + param0 - 90, 10 + param1);
         id.a(param1 + 35, this.widgetWidth - 10, ArchiveRequest.field_I, param0 + 5, (byte) 23);
-        id.a(-22 + (param1 + this.widgetHeight), this.widgetWidth, rb.field_d, param0, (byte) 23);
+        id.a(-22 + (param1 + this.widgetHeight), this.widgetWidth, ArchiveLoadSequence.field_d, param0, (byte) 23);
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
         var4Lifetime2 = -79 + this.widgetHeight;

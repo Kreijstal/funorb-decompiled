@@ -9,9 +9,9 @@ final class PolarBallSkin extends BallSkin {
     static int field_o;
     static boolean[][] field_m;
 
-    final void a(di param0, byte param1) {
-        eg dupTemp$0 = null;
-        eg dupTemp$1 = null;
+    final void a(ResourceArchive param0, byte param1) {
+        MeshBuilder dupTemp$0 = null;
+        MeshBuilder dupTemp$1 = null;
         if (this.field_a != null) {
           return;
         }
@@ -19,9 +19,9 @@ final class PolarBallSkin extends BallSkin {
           if (param1 != 117) {
             field_q = true;
           }
-          this.field_a = new eg[16];
-          this.field_a[0] = eg.a(param0, "", "balls/POLAR/polar_ball_white");
-          dupTemp$0 = eg.a(param0, "", "balls/POLAR/polar_ball_1");
+          this.field_a = new MeshBuilder[16];
+          this.field_a[0] = MeshBuilder.loadFromArchive(param0, "", "balls/POLAR/polar_ball_white");
+          dupTemp$0 = MeshBuilder.loadFromArchive(param0, "", "balls/POLAR/polar_ball_1");
           this.field_a[7] = dupTemp$0;
           this.field_a[6] = dupTemp$0;
           this.field_a[5] = dupTemp$0;
@@ -29,8 +29,8 @@ final class PolarBallSkin extends BallSkin {
           this.field_a[3] = dupTemp$0;
           this.field_a[2] = dupTemp$0;
           this.field_a[1] = dupTemp$0;
-          this.field_a[8] = eg.a(param0, "", "balls/POLAR/polar_ball_black");
-          dupTemp$1 = eg.a(param0, "", "balls/POLAR/polar_ball_2");
+          this.field_a[8] = MeshBuilder.loadFromArchive(param0, "", "balls/POLAR/polar_ball_black");
+          dupTemp$1 = MeshBuilder.loadFromArchive(param0, "", "balls/POLAR/polar_ball_2");
           this.field_a[15] = dupTemp$1;
           this.field_a[14] = dupTemp$1;
           this.field_a[13] = dupTemp$1;
@@ -38,12 +38,12 @@ final class PolarBallSkin extends BallSkin {
           this.field_a[11] = dupTemp$1;
           this.field_a[10] = dupTemp$1;
           this.field_a[9] = dupTemp$1;
-          this.field_a[0].a(8, 8, 8, 8);
-          this.field_a[1].a(8, 8, 8, 8);
-          this.field_a[8].a(8, 8, 8, 8);
-          this.field_a[9].a(8, 8, 8, 8);
+          this.field_a[0].scaleVertices(8, 8, 8, 8);
+          this.field_a[1].scaleVertices(8, 8, 8, 8);
+          this.field_a[8].scaleVertices(8, 8, 8, 8);
+          this.field_a[9].scaleVertices(8, 8, 8, 8);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "to.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "to.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class PolarBallSkin extends BallSkin {
         return false;
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         createPassword = null;
         if (param0 != 8) {
@@ -149,36 +149,36 @@ final class PolarBallSkin extends BallSkin {
         return 16711935;
     }
 
-    final void a(int param0, di param1) {
+    final void a(int param0, ResourceArchive param1) {
         if (param0 != 198123656) {
           return;
         }
         try {
-          this.field_e = aj.a(0, "", param1, "top_bar_balls_polar");
+          this.field_e = NameEntryPopup.a(0, "", param1, "top_bar_balls_polar");
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "to.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "to.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0, boolean param1) {
-        wd.field_Ub.renderWidgetPassesAndTooltip(0, (byte) 92, 0);
+        TabbedPane.field_Ub.renderWidgetPassesAndTooltip(0, (byte) 92, 0);
         int var2 = -32 % ((37 - param0) / 60);
     }
 
     final String a(byte param0, int param1) {
         if (param0 >= 9) {
-          return param1 == 0 ? ij.ballsetPolarGroup0 : ld.ballsetPolarGroup1;
+          return param1 == 0 ? ij.ballsetPolarGroup0 : WhirlpoolHasher.ballsetPolarGroup1;
         }
         field_l = (PcmSample) null;
-        return param1 == 0 ? ij.ballsetPolarGroup0 : ld.ballsetPolarGroup1;
+        return param1 == 0 ? ij.ballsetPolarGroup0 : WhirlpoolHasher.ballsetPolarGroup1;
     }
 
     final static ml[] a(byte param0) {
         if (param0 == -66) {
-          return new ml[]{eo.field_Xb, ug.field_v, ve.field_l};
+          return new ml[]{SocialListEntry.field_Xb, SocketArchiveNetworkClient.field_v, BitmapTextLayout.field_l};
         }
         field_p = 19;
-        return new ml[]{eo.field_Xb, ug.field_v, ve.field_l};
+        return new ml[]{SocialListEntry.field_Xb, SocketArchiveNetworkClient.field_v, BitmapTextLayout.field_l};
     }
 
     static {

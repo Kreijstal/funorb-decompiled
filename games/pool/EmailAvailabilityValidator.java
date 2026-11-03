@@ -6,7 +6,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
     private boolean cachedEmailAvailable;
     static String muChatInvisibleAndSilentMode;
     private String cachedEmailCandidate;
-    static di field_r;
+    static ResourceArchive field_r;
     static int field_o;
     static int field_s;
     static Sprite field_p;
@@ -21,7 +21,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         int var3 = Pool.field_O;
         IndexedSprite[] var1 = new IndexedSprite[wf.field_d];
         for (var2 = param0; wf.field_d > var2; var2++) {
-          var1[var2] = new IndexedSprite(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], v.field_b[var2], IntrusiveNode.field_h);
+          var1[var2] = new IndexedSprite(DialRenderer.field_c, tq.field_r, AchievementsScreen.field_I[var2], ih.field_d[var2], LinkButtonPainter.field_a[var2], rc.field_f[var2], LimitedRandomAccessFile.field_b[var2], IntrusiveNode.field_h);
         }
         OpacityWidget.h(-1);
         return var1;
@@ -56,32 +56,32 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var3), "me.N(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "me.N(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static ij a(int param0, int param1) {
-        aa var2;
+        IntrusiveDequeCursor var2;
         ij var3;
         int var4;
         var4 = Pool.field_O;
         if (param0 != -2) {
           return (ij) null;
         }
-        var2 = new aa(nd.field_i);
-        var3 = (ij) (var2.b((byte) -92));
+        var2 = new IntrusiveDequeCursor(MarkerSliderPainter.field_i);
+        var3 = (ij) (var2.last((byte) -92));
         while (var3 != null) {
           if (param1 == var3.field_m) {
             return var3;
           }
-          var3 = (ij) (var2.b(-86));
+          var3 = (ij) (var2.previous(-86));
         }
         return null;
     }
 
     final static void b(int param0, int param1) {
-        oq var2 = ej.field_j;
-        var2.b(false, param1);
+        CipherPacketBuffer var2 = JaggrabDownloader.field_j;
+        var2.writeCipheredOpcode(false, param1);
         var2.a(1, false);
         var2.a(3, false);
         int var3 = 22 / ((-52 - param0) / 62);
@@ -97,7 +97,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           gameoptInviteplayersOrTrychanging1 = null;
           return;
         }
-        field_r = (di) null;
+        field_r = (ResourceArchive) null;
         gameoptInviteplayersOrTrychanging1 = null;
     }
 
@@ -108,7 +108,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         try {
           this.emailMatchValidator = new MatchingTextValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           if (!param0.equals(this.cachedEmailCandidate)) {
             var3 = AccountCreationForm.b((byte) -25, param0);
             if (!var3.a(80)) {
-              stackIn_8_0 = no.field_k;
+              stackIn_8_0 = Js5Transport.field_k;
               return stackIn_8_0;
             }
             this.cachedEmailCandidate = param0;
@@ -152,7 +152,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

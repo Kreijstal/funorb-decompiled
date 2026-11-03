@@ -8,10 +8,10 @@ final class il {
     static Sprite field_a;
     static PcmSample[] field_c;
     static String off;
-    static vh[] field_g;
+    static UiComponent[] field_g;
     static Sprite field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_c = null;
         rule21 = null;
@@ -109,7 +109,7 @@ final class il {
         var4 = Pool.field_O;
         try {
           if (param0 < 72) {
-            il.a(-2);
+            il.releaseStatics(-2);
           }
           if (param1 != null &&
             param1.length != 0) {
@@ -141,7 +141,7 @@ final class il {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

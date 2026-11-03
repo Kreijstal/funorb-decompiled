@@ -5,12 +5,12 @@ final class cq {
     static String unpackingSoundeffects;
     static int field_a;
     static Sprite[] field_b;
-    static vh field_d;
+    static UiComponent field_d;
     static IntrusiveDeque field_g;
     static int field_c;
     static String enterfriendAdd;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != -90) {
           cq.a(-5);
         }
@@ -36,7 +36,7 @@ final class cq {
         int var6 = Pool.field_O;
         Sprite[] var7 = new Sprite[9];
         Sprite[] var4 = var7;
-        var7[0] = ad.a(param2, param0, 7);
+        var7[0] = ArchiveIndex.a(param2, param0, 7);
         int var5 = 1;
         if (param1 != 4578) {
           cq.a(true, -89);
@@ -45,7 +45,7 @@ final class cq {
           var4[var5] = var4[0];
           var5++;
         }
-        var4[4] = ad.a(param3, 64, param1 - 4571);
+        var4[4] = ArchiveIndex.a(param3, 64, param1 - 4571);
         return var4;
     }
 
@@ -58,12 +58,12 @@ final class cq {
           return -1;
         }
         boolean decompiledFrameRemainder0 = true;
-        var11 = lh.a(param8, (byte) -75, (long)(param0 + ((param1 << 16) - param3)));
-        var12 = lh.a(param8, (byte) -81, (long)(-param3 + (-(param1 << 16) + param0)));
+        var11 = ArchiveProvider.divideFixed16(param8, (byte) -75, (long)(param0 + ((param1 << 16) - param3)));
+        var12 = ArchiveProvider.divideFixed16(param8, (byte) -81, (long)(-param3 + (-(param1 << 16) + param0)));
         if (0 < var11 &&
           -param6 + 65536 >= var11 &&
           var12 > var11) {
-          var10 = param5 + aj.a(var11, false, param4);
+          var10 = param5 + NameEntryPopup.a(var11, false, param4);
           if (param7 < param9) {
             decompiledFrameRemainder0 = !(param7 > var10);
             if (decompiledFrameRemainder0) {
@@ -82,7 +82,7 @@ final class cq {
         regionExit1: {
           if (var12 > 0 &&
             65536 - param6 >= var12) {
-            var10Lifetime1 = param5 + aj.a(var12, false, param4);
+            var10Lifetime1 = param5 + NameEntryPopup.a(var12, false, param4);
             if (param7 >= param9) {
               if (var10Lifetime1 < param9) {
                 break regionExit1;
@@ -111,15 +111,15 @@ final class cq {
         PoolGameModel.i(-27397);
         so.field_g = new TutorialController[3];
         so.field_g[0] = new TutorialController(jj.tutorialTitleBasics, -1, 3);
-        so.field_g[0].field_d.b((byte) 110, new bk(fn.tutorialCameraRotate, 100, 0));
+        so.field_g[0].field_d.b((byte) 110, new bk(QuickChatHelpDialog.tutorialCameraRotate, 100, 0));
         so.field_g[0].field_d.b((byte) -114, new bk(ResizableDialog.tutorialCameraZoom, 50, 1, so.field_g[0].field_d));
         so.field_g[0].field_d.b((byte) -80, new bk(ie.tutorialCameraRecentre, 3, 2, so.field_g[0].field_d));
         so.field_g[0].field_d.b((byte) -50, new bk(je.tutorialShotModeEnter, 1, 3, so.field_g[0].field_d));
         so.field_g[0].field_d.b((byte) 91, new bk(en.tutorialShotModeRotate, 300, 4, so.field_g[0].field_d));
         so.field_g[0].field_d.b((byte) 88, new bk(na.tutorialShotModePower, 150, 5, so.field_g[0].field_d));
-        so.field_g[0].field_d.b((byte) -78, new bk(el.tutorialShotModeTake, 1, 7, so.field_g[0].field_d));
+        so.field_g[0].field_d.b((byte) -78, new bk(AchievementsScreen.tutorialShotModeTake, 1, 7, so.field_g[0].field_d));
         so.field_g[0].field_d.b((byte) -110, new bk(om.tutorialShotModeLeave, 1, 6, so.field_g[0].field_d));
-        so.field_g[0].field_d.b((byte) -74, new bk(vj.tutorialBasicComplete, 1, -1, so.field_g[0].field_d));
+        so.field_g[0].field_d.b((byte) -74, new bk(TextLineLayout.tutorialBasicComplete, 1, -1, so.field_g[0].field_d));
         so.field_g[0].a(false);
         TutorialController dupTemp$0 = new TutorialController(fc.tutorialTitleEightBall, 2, 0);
         TutorialController arrayValue$1 = so.field_g[0];
@@ -132,12 +132,12 @@ final class cq {
         so.field_g[1].field_d.b((byte) -43, new bk(dr.tutorialEightBallBreak, 1, 8, 0));
         so.field_g[1].field_d.b((byte) 99, new bk(ea.tutorialEightBallAfterbreak, 1, 9, 0));
         so.field_g[1].field_d.b((byte) 87, new bk(gn.tutorialEightBallAfterfirstpot, 7, 11, 0));
-        so.field_g[1].field_d.b((byte) 99, new bk(lk.tutorialEightBallAftergrouppot, 1, 12, 0));
+        so.field_g[1].field_d.b((byte) 99, new bk(ChatMessageLine.tutorialEightBallAftergrouppot, 1, 12, 0));
         so.field_g[1].field_d.b((byte) -6, new bk(MusicPatch.tutorialEightBallComplete, 1, -1, 0));
         so.field_g[1].a(false);
         so.field_g[2] = new TutorialController(NetworkGameClient.tutorialTitleNineBall, 2, 1);
-        so.field_g[2].field_d.b((byte) -90, new bk(ca.tutorialNineBallStartPlaceCueball, 40, 13, 128));
-        so.field_g[2].field_d.b((byte) -99, new bk(cf.tutorialNineBallBreak, 1, 8, 0));
+        so.field_g[2].field_d.b((byte) -90, new bk(TextPairLoginPayload.tutorialNineBallStartPlaceCueball, 40, 13, 128));
+        so.field_g[2].field_d.b((byte) -99, new bk(SoundCache.tutorialNineBallBreak, 1, 8, 0));
         so.field_g[2].field_d.b((byte) -21, new bk(DateInputWidget.tutorialNineBallAfterbreak, 1, 14, 0));
         so.field_g[2].field_d.b((byte) -9, new bk(pl.tutorialNineBallPottingABall, 1, 15, 0));
         so.field_g[2].field_d.b((byte) -62, new bk(LoginForm.tutorialNineBallPottingNine, 1, 16, 0));
@@ -145,12 +145,12 @@ final class cq {
         so.field_g[2].a(false);
     }
 
-    final static eg a(int param0, int param1, int param2, eg param3, int param4) {
+    final static MeshBuilder a(int param0, int param1, int param2, MeshBuilder param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        eg stackIn_3_0 = null;
-        eg stackIn_13_0 = null;
+        MeshBuilder stackIn_3_0 = null;
+        MeshBuilder stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -161,21 +161,21 @@ final class cq {
         try {
           var5_int = 0;
           if (param1 <= 53) {
-            stackIn_3_0 = (eg) null;
+            stackIn_3_0 = (MeshBuilder) null;
             return stackIn_3_0;
           }
-          while (var5_int < param3.field_g.length) {
-            param3.field_g[var5_int] = param3.field_g[var5_int] - param0;
+          while (var5_int < param3.vertexX.length) {
+            param3.vertexX[var5_int] = param3.vertexX[var5_int] - param0;
             var5_int++;
           }
-          for (var5_intLifetime1 = 0; param3.field_Y.length > var5_intLifetime1; var5_intLifetime1++) {
-            param3.field_Y[var5_intLifetime1] = param3.field_Y[var5_intLifetime1] - param4;
+          for (var5_intLifetime1 = 0; param3.vertexY.length > var5_intLifetime1; var5_intLifetime1++) {
+            param3.vertexY[var5_intLifetime1] = param3.vertexY[var5_intLifetime1] - param4;
           }
-          for (var5_intLifetime2 = 0; var5_intLifetime2 < param3.field_q.length; var5_intLifetime2++) {
-            param3.field_q[var5_intLifetime2] = param3.field_q[var5_intLifetime2] - param2;
+          for (var5_intLifetime2 = 0; var5_intLifetime2 < param3.vertexZ.length; var5_intLifetime2++) {
+            param3.vertexZ[var5_intLifetime2] = param3.vertexZ[var5_intLifetime2] - param2;
           }
           param3.a();
-          stackIn_13_0 = (eg) (param3);
+          stackIn_13_0 = (MeshBuilder) (param3);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,7 +187,7 @@ final class cq {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -10,18 +10,18 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
     private java.awt.image.ImageConsumer field_p;
     private java.awt.image.ColorModel field_m;
 
-    final static void a(eg param0, byte param1) {
+    final static void a(MeshBuilder param0, byte param1) {
         int[] var3 = null;
         try {
-          var3 = param0.field_v;
+          var3 = param0.faceVertexB;
           int[] var2 = var3;
-          param0.field_v = param0.field_X;
+          param0.faceVertexB = param0.faceVertexC;
           if (param1 != 38) {
             ratingPlayed = (String) null;
           }
-          param0.field_X = var3;
+          param0.faceVertexC = var3;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "jf.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jf.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "jf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,18 +62,18 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 2) {
           ratingPlayed = null;
           decisionButtonPlay = null;
           field_o = null;
           return;
         }
-        ImageProducerRasterBuffer.c(-27);
+        ImageProducerRasterBuffer.releaseStatics(-27);
         ratingPlayed = null;
         decisionButtonPlay = null;
         field_o = null;
@@ -90,7 +90,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         try {
           param0.drawImage(this.field_c, param1, param2, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "jf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -113,10 +113,10 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param3.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
           this.bindAsRenderTarget(15100);
           if (param2 != -6980) {
-            ImageProducerRasterBuffer.c(68);
+            ImageProducerRasterBuffer.releaseStatics(68);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "jf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           param0.setColorModel(this.field_m);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "jf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -163,12 +163,12 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     final static eh a(int param0, int param1, int param2, int param3, int param4) {
         int var7 = Pool.field_O;
-        eh var5 = (eh) (wg.field_Lb.c((byte) 118));
+        eh var5 = (eh) (StateIconLabel.field_Lb.c((byte) 118));
         while (var5 != null) {
           if (~var5.field_A == ~param2) {
             return var5;
           }
-          var5 = (eh) (wg.field_Lb.f((byte) -5));
+          var5 = (eh) (StateIconLabel.field_Lb.f((byte) -5));
         }
         eh var8 = new eh();
         var5 = var8;
@@ -176,8 +176,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         int var6 = -73 / ((param0 - 60) / 49);
         var5.field_r = param4;
         var5.field_v = param1;
-        wg.field_Lb.b((byte) -24, var5);
-        ub.a(var5, param3, (byte) -117);
+        StateIconLabel.field_Lb.b((byte) -24, var5);
+        AlternateLongAndTextLoginPayload.a(var5, param3, (byte) -117);
         return var5;
     }
 

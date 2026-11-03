@@ -5,12 +5,12 @@ final class s {
     static int[][] field_b;
     static String muXLeftLobby;
     static int[] field_e;
-    static di field_a;
+    static ResourceArchive field_a;
     static int[] field_f;
-    static ob[] field_c;
+    static MenuScreen[] field_c;
     static String[] gameoptlabels;
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void openSubscribePage(java.applet.Applet param0, int param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -25,7 +25,7 @@ final class s {
             }
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
-              param0.getAppletContext().showDocument(p.a((byte) -83, var2, param0), "_top");
+              param0.getAppletContext().showDocument(ModelInstance.a((byte) -83, var2, param0), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,7 +43,7 @@ final class s {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -52,7 +52,7 @@ final class s {
         }
     }
 
-    final static int a(int param0, byte param1) {
+    final static int highestOneBit(int param0, byte param1) {
         int var2 = param0 >>> 1;
         var2 = var2 | var2 >>> 1;
         var2 = var2 | var2 >>> 2;
@@ -89,8 +89,8 @@ final class s {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + Pool.field_J.a((byte) 36, 0, param0.position, var4, param0.payload, var3_int);
-            var5 = tl.a(var3_int, -7510, var4, 0);
+            param0.position = param0.position + Pool.field_J.decompress((byte) 36, 0, param0.position, var4, param0.payload, var3_int);
+            var5 = RankingsScreen.a(var3_int, -7510, var4, 0);
             stackIn_7_0 = var5;
             return stackIn_7_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -109,11 +109,11 @@ final class s {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static dj[] a(byte param0, PlatformTaskDispatcher param1) {
+    final static dj[] queryDisplayModes(byte param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         dj[] stackIn_3_0 = null;
         dj[] stackIn_10_0 = null;
@@ -138,7 +138,7 @@ final class s {
           }
           var8 = param1.a(84);
           while (var8.field_f == 0) {
-            cf.a(-123, 10L);
+            SoundCache.a(-123, 10L);
           }
           if (2 == var8.field_f) {
             stackIn_10_0 = new dj[]{};
@@ -171,11 +171,11 @@ final class s {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
-    final static char a(byte param0, int param1) {
+    final static char decodeCp1252Byte(byte param0, int param1) {
         int var3 = 0;
         int var2 = param0 & 255;
         if (var2 == 0) {
@@ -202,7 +202,7 @@ final class s {
         return (char)var2;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         muXLeftLobby = null;
         field_e = null;
@@ -217,16 +217,16 @@ final class s {
 
     final static int[] a(int param0, int param1) {
         if (param1 > 111) {
-          return 0 == param0 ? jc.field_i : param0 != 8 ? 8 > param0 ? v.field_a : dq.field_i : bc.field_c;
+          return 0 == param0 ? jc.field_i : param0 != 8 ? 8 > param0 ? LimitedRandomAccessFile.field_a : dq.field_i : bc.field_c;
         }
         java.applet.Applet var3 = (java.applet.Applet) null;
-        s.a((java.applet.Applet) null, 17);
-        return 0 == param0 ? jc.field_i : param0 != 8 ? 8 > param0 ? v.field_a : dq.field_i : bc.field_c;
+        s.openSubscribePage((java.applet.Applet) null, 17);
+        return 0 == param0 ? jc.field_i : param0 != 8 ? 8 > param0 ? LimitedRandomAccessFile.field_a : dq.field_i : bc.field_c;
     }
 
     static {
         muXLeftLobby = "<%0> has left the lobby.";
-        field_c = new ob[25];
+        field_c = new MenuScreen[25];
         field_e = new int[12];
         gameoptlabels = new String[]{"Turn time (seconds)", "Game", "Theme", "Guide"};
     }

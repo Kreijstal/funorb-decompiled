@@ -23,7 +23,7 @@ final class nl {
         return true;
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void openServerList(byte param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           Exception var2_ref = null;
@@ -38,7 +38,7 @@ final class nl {
             }
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-              param1.getAppletContext().showDocument(p.a((byte) -33, var2, param1), "_top");
+              param1.getAppletContext().showDocument(ModelInstance.a((byte) -33, var2, param1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,7 +56,7 @@ final class nl {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -65,7 +65,7 @@ final class nl {
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 <= -11) {
           field_c = null;
           field_d = null;

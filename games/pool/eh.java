@@ -26,10 +26,10 @@ final class eh extends IntrusiveNode {
           var1 = "";
         }
         if (param0 == 8388) {
-          return new LoginTextValue(sa.a(false), sp.h(0));
+          return new LoginTextValue(sa.a(false), NetworkArchiveRequest.h(0));
         }
         eh.a(115, true);
-        return new LoginTextValue(sa.a(false), sp.h(0));
+        return new LoginTextValue(sa.a(false), NetworkArchiveRequest.h(0));
     }
 
     final static void a(int param0, boolean param1) {
@@ -46,22 +46,22 @@ final class eh extends IntrusiveNode {
             var4 = (oj) (ta.field_i.f((byte) -5));
           }
           if (!param1) {
-            eh.a(104);
+            eh.releaseStatics(104);
           }
-          var5 = (eh) (wg.field_Lb.c((byte) -49));
+          var5 = (eh) (StateIconLabel.field_Lb.c((byte) -49));
           while (var5 != null) {
-            ub.a(var5, param0, (byte) -126);
-            var5 = (eh) (wg.field_Lb.f((byte) -5));
+            AlternateLongAndTextLoginPayload.a(var5, param0, (byte) -126);
+            var5 = (eh) (StateIconLabel.field_Lb.f((byte) -5));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "eh.D(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "eh.D(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 > 69) {
           field_p = null;
           field_s = null;
@@ -99,7 +99,7 @@ final class eh extends IntrusiveNode {
           if (param8 != 19539) {
             return;
           }
-          mm.a(param15, param1, param9, param14, param13, param7, param11, param18, param17, param6, new nm(param2), param12, param19, new nm(param5), param3, param0, param8 ^ 19537, param16, param4, new nm(param10));
+          Camera.a(param15, param1, param9, param14, param13, param7, param11, param18, param17, param6, new NineSliceFrame(param2), param12, param19, new NineSliceFrame(param5), param3, param0, param8 ^ 19537, param16, param4, new NineSliceFrame(param10));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,7 +135,7 @@ final class eh extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
         }
     }
 

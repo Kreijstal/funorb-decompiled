@@ -12,7 +12,7 @@ final class StrongCacheEntry extends CacheEntry {
     private Object value;
     static int field_I;
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 0) {
           tutorialOptionEightBall = null;
           muXDeclinedInvite = null;
@@ -43,7 +43,7 @@ final class StrongCacheEntry extends CacheEntry {
         var5 = Pool.field_O;
         try {
           IsaacCipher.field_d = IsaacCipher.field_d + 65536;
-          while (ng.a(hj.field_f, param1 - 65, IsaacCipher.field_d) >= 65536) {
+          while (ThreeSliceButtonPainter.fixedMultiply(hj.field_f, param1 - 65, IsaacCipher.field_d) >= 65536) {
             IsaacCipher.field_d = IsaacCipher.field_d - hj.field_f;
             PoolMatchController.field_X = PoolMatchController.field_X + 1;
           }
@@ -56,28 +56,28 @@ final class StrongCacheEntry extends CacheEntry {
             var2_int = AccountCreationForm.field_V.length;
           }
           if (param1 != 65) {
-            StrongCacheEntry.i(38);
+            StrongCacheEntry.releaseStatics(38);
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (hj.field_g > ug.field_u) {
-              ug.field_u = ug.field_u + 1;
-              if (ug.field_u > hj.field_l && (AccountCreationForm.field_V == null ||
+            if (hj.field_g > SocketArchiveNetworkClient.field_u) {
+              SocketArchiveNetworkClient.field_u = SocketArchiveNetworkClient.field_u + 1;
+              if (SocketArchiveNetworkClient.field_u > hj.field_l && (AccountCreationForm.field_V == null ||
                 AccountCreationForm.field_V[KillerRules.field_f] == null)) {
-                ug.field_u = ug.field_u - 1;
+                SocketArchiveNetworkClient.field_u = SocketArchiveNetworkClient.field_u - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (ug.field_u >= hj.field_g &&
+                if (SocketArchiveNetworkClient.field_u >= hj.field_g &&
                   null == AccountCreationForm.field_V[(1 + KillerRules.field_f) % var2_int]) {
-                  ug.field_u = ug.field_u - 1;
+                  SocketArchiveNetworkClient.field_u = SocketArchiveNetworkClient.field_u - 1;
                 }
               }
             }
-            if (ug.field_u >= hj.field_g) {
-              cf.field_b = KillerRules.field_f;
-              ug.field_u = ug.field_u - hj.field_g;
-              if (!b.field_K) {
+            if (SocketArchiveNetworkClient.field_u >= hj.field_g) {
+              SoundCache.field_b = KillerRules.field_f;
+              SocketArchiveNetworkClient.field_u = SocketArchiveNetworkClient.field_u - hj.field_g;
+              if (!InstructionsScreen.field_K) {
                 KillerRules.field_f = KillerRules.field_f - 1;
                 if (KillerRules.field_f < 0) {
                   KillerRules.field_f = KillerRules.field_f + var2_int;
@@ -89,40 +89,40 @@ final class StrongCacheEntry extends CacheEntry {
                 }
               }
             }
-            if (ug.field_u > hj.field_l) {
-              b.field_K = true;
+            if (SocketArchiveNetworkClient.field_u > hj.field_l) {
+              InstructionsScreen.field_K = true;
             }
           }
-          if (null != vq.field_Yb) {
-            var3 = -(vq.field_Yb.field_y / 2) + 357;
+          if (null != ContextMenu.field_Yb) {
+            var3 = -(ContextMenu.field_Yb.field_y / 2) + 357;
             var4 = 0;
             if (0 != MatchingTextValidator.field_s &&
               UsernameAvailabilityValidator.field_o > var3 &&
-              var3 + vq.field_Yb.field_A > UsernameAvailabilityValidator.field_o) {
-              if (-vq.field_Yb.field_z + 269 < DialogLayer.field_W &&
+              var3 + ContextMenu.field_Yb.field_A > UsernameAvailabilityValidator.field_o) {
+              if (-ContextMenu.field_Yb.field_z + 269 < DialogLayer.field_W &&
                 269 > DialogLayer.field_W) {
-                b.field_K = false;
-                ug.field_u = hj.field_g;
+                InstructionsScreen.field_K = false;
+                SocketArchiveNetworkClient.field_u = hj.field_g;
                 var4 = 1;
               }
               if (586 < DialogLayer.field_W &&
-                DialogLayer.field_W < 586 + vq.field_Yb.field_z) {
+                DialogLayer.field_W < 586 + ContextMenu.field_Yb.field_z) {
                 var4 = 1;
-                b.field_K = true;
-                ug.field_u = hj.field_g;
+                InstructionsScreen.field_K = true;
+                SocketArchiveNetworkClient.field_u = hj.field_g;
               }
             }
             if (var4 == 0 &&
-              hj.field_l < ug.field_u &&
+              hj.field_l < SocketArchiveNetworkClient.field_u &&
               DebouncedValidationProvider.field_f > var3 &&
-              DebouncedValidationProvider.field_f < var3 + vq.field_Yb.field_A) {
-              if (-vq.field_Yb.field_z + 269 < wn.field_i &&
+              DebouncedValidationProvider.field_f < var3 + ContextMenu.field_Yb.field_A) {
+              if (-ContextMenu.field_Yb.field_z + 269 < wn.field_i &&
                 wn.field_i < 269) {
-                ug.field_u = hj.field_l;
+                SocketArchiveNetworkClient.field_u = hj.field_l;
               }
               if (586 < wn.field_i &&
-                wn.field_i < 586 + vq.field_Yb.field_z) {
-                ug.field_u = hj.field_l;
+                wn.field_i < 586 + ContextMenu.field_Yb.field_z) {
+                SocketArchiveNetworkClient.field_u = hj.field_l;
               }
             }
           }
@@ -156,7 +156,7 @@ final class StrongCacheEntry extends CacheEntry {
                 return stackIn_75_0;
               }
             }
-            if (qi.field_a != 13) {
+            if (IterableDualLinkDeque.field_a != 13) {
               continue;
             }
             break;
@@ -166,36 +166,36 @@ final class StrongCacheEntry extends CacheEntry {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "fd.Q(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "fd.Q(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void h(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        oq var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         var3 = Pool.field_O;
         try {
-          var1 = ej.field_j;
+          var1 = JaggrabDownloader.field_j;
           if (param0 <= 117) {
             return;
           }
           while (MultiHandleSliderWidget.g((byte) -120)) {
-            var1.b(false, 8);
+            var1.writeCipheredOpcode(false, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            wn.a(var1, 1);
-            ej.field_j.b(var1.position - var2, true);
+            wn.writeReflectionCheckReplies(var1, 1);
+            JaggrabDownloader.field_j.b(var1.position - var2, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1_ref), "fd.G(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "fd.G(" + param0 + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class StrongCacheEntry extends CacheEntry {
         try {
           this.value = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "fd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -216,13 +216,13 @@ final class StrongCacheEntry extends CacheEntry {
             StrongCacheEntry.a((int[]) null, (int[]) null, (byte) -96);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "fd.R(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fd.R(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final boolean isReferenceBacked(int param0) {
         if (param0 >= -16) {
-          StrongCacheEntry.i(-107);
+          StrongCacheEntry.releaseStatics(-107);
           return false;
         }
         return false;
@@ -250,7 +250,7 @@ final class StrongCacheEntry extends CacheEntry {
             var5 = var9;
             var6 = param2;
             var7 = param1;
-            var9[var6] = var7 + rb.b(8355711, var9[var6] >> 1);
+            var9[var6] = var7 + ArchiveLoadSequence.b(8355711, var9[var6] >> 1);
             param2++;
             param3--;
           }
@@ -265,7 +265,7 @@ final class StrongCacheEntry extends CacheEntry {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

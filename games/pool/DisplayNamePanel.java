@@ -9,7 +9,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     static ee field_N;
     static Sprite field_T;
     private ButtonWidget cancelButton;
-    static eg field_P;
+    static MeshBuilder field_P;
     UsernameSuggestionsPanel suggestionsPanel;
     static String removeignorefirst;
 
@@ -24,7 +24,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             return;
           }
           if (this.cancelButton == param3) {
-            mb.b(3);
+            ByteStorage.b(3);
             return;
           }
           if (this.okButton != param3) {
@@ -42,7 +42,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -100,11 +100,11 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           var4 = param0;
           ((TextInputWidget) ((Object) var3)).setInputText((byte) -124, false, var4);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "jp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_N = null;
         field_T = null;
         removeignorefirst = null;
@@ -123,7 +123,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           super.updatePointerState(param0, param1, param2, param3);
           this.okButton.enabled = this.isNameValid(-23086);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "jp.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jp.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -192,14 +192,14 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     private final void submitDisplayName(int param0) {
         int discarded$0 = 0;
         if (this.isNameValid(-23086)) {
-          qi.a(87, this.displayNameInput.widgetText);
+          IterableDualLinkDeque.a(87, this.displayNameInput.widgetText);
           if (param0 >= -104) {
             String var3 = (String) null;
             discarded$0 = this.a(-86, (String) null, (UiWidget) null, -74, (String) null, -122, 47);
@@ -211,15 +211,15 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     public DisplayNamePanel() {
         super(0, 0, 496, 0, (WidgetPainter) null);
         this.displayNameInput = new ga("", (WidgetListener) null, 12);
-        am var1 = new am(PoolUiText.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, ValidationIconWidget.field_O.maxAscent, -1, 2147483647, true);
+        TextWidgetPainter var1 = new TextWidgetPainter(PoolUiText.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, ValidationIconWidget.field_O.maxAscent, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(ij.loginNoDisplayname, var1, (WidgetListener) null);
         this.okButton = new ButtonWidget(wn.ok, (WidgetListener) null);
-        this.cancelButton = new ButtonWidget(be.cancel, (WidgetListener) null);
-        this.displayNameInput.hoverText = sg.createDisplaynameTooltip;
+        this.cancelButton = new ButtonWidget(OptionsScreen.cancel, (WidgetListener) null);
+        this.displayNameInput.hoverText = ThemeSelectScreen.createDisplaynameTooltip;
         this.displayNameInput.a((byte) -111, new UsernameAvailabilityValidator(this.displayNameInput));
         this.okButton.enabled = false;
-        this.okButton.renderer = (WidgetPainter) ((Object) new ng());
-        this.cancelButton.renderer = (WidgetPainter) ((Object) new pd());
+        this.okButton.renderer = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
+        this.cancelButton.renderer = (WidgetPainter) ((Object) new LinkButtonPainter());
         this.displayNameInput.renderer = (WidgetPainter) ((Object) new om(10000536));
         int var3 = 20;
         int var4 = 4;
@@ -227,7 +227,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         var2.setWidgetBounds(270, 20, 50, false, var3);
         this.addChild(true, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(KillerBallSkin.createDisplayname, se.createDisplaynameHint, 170, var3, this.displayNameInput, -17870));
+        var3 = var3 + (5 + this.a(KillerBallSkin.createDisplayname, LongAndTextLoginPayload.createDisplaynameHint, 170, var3, this.displayNameInput, -17870));
         this.okButton.setWidgetBounds(var5, -var5 + 496 >> 1, 40, false, var3);
         this.cancelButton.setWidgetBounds(60, 3 + var4, 40, false, var3 + 15);
         this.cancelButton.listener = (WidgetListener) (this);
@@ -240,7 +240,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         this.setWidgetBounds(496, 0, var4 + 55 + var3, false, 0);
     }
 
-    final static Sprite a(int param0, byte param1, di param2, int param3) {
+    final static Sprite a(int param0, byte param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite stackIn_6_0 = null;
@@ -249,12 +249,12 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vj.a(param3, param2, param0, (byte) 121)) {
+          if (!TextLineLayout.a(param3, param2, param0, (byte) 121)) {
             stackIn_2_0 = null;
             return (Sprite) (stackIn_2_0);
           }
           if (param1 <= 12) {
-            DisplayNamePanel.a(true);
+            DisplayNamePanel.releaseStatics(true);
           }
           stackIn_6_0 = ContentTransitionDialog.j((byte) -104);
           return stackIn_6_0;
@@ -268,7 +268,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -340,7 +340,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

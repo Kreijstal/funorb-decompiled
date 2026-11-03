@@ -19,7 +19,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         }
     }
 
-    final static boolean a(byte param0, oq param1) {
+    final static boolean a(byte param0, CipherPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -28,9 +28,9 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 118) {
-            FullscreenErrorDialog.i((byte) 80);
+            FullscreenErrorDialog.releaseStatics((byte) 80);
           }
-          stackIn_5_0 = (param1.e(1, 63) == 1);
+          stackIn_5_0 = (param1.readBits(1, 63) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -42,7 +42,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -59,12 +59,12 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         try {
           var3 = null;
           if (param1 != ic.field_c) {
-            if (el.field_K == param1) {
-              var3 = wh.fsFocus;
+            if (AchievementsScreen.field_K == param1) {
+              var3 = QuickChatPhraseRegistry.fsFocus;
               this.widgetHeight = this.widgetHeight + 10;
               if (je.b((byte) 124)) {
                 this.widgetHeight = this.widgetHeight + 20;
-                var3 = rk.fsFocusOrResolution;
+                var3 = HuffmanCodec.fsFocusOrResolution;
               }
             } else {
               if (param1 == ModernTableScene.field_eb) {
@@ -80,7 +80,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
           var4.widgetX = 0;
           var4.widgetY = 50;
           var4.widgetWidth = this.widgetWidth;
-          var4.renderer = (WidgetPainter) ((Object) new am(PoolUiText.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.renderer = (WidgetPainter) ((Object) new TextWidgetPainter(PoolUiText.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(true, var4);
           this.closeButton = this.appendFullscreenDialogButton(2391, hi.fsButtonClose, (WidgetListener) (this));
           return;
@@ -100,13 +100,13 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= -44) {
-          FullscreenErrorDialog.i((byte) -8);
+          FullscreenErrorDialog.releaseStatics((byte) -8);
           playerX2HaveWon = null;
           tickerHintSetPower = null;
           return;
@@ -129,7 +129,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new ButtonWidget(param1, param2);
-          var4.renderer = (WidgetPainter) ((Object) new ng());
+          var4.renderer = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           var5 = -6 + this.widgetHeight;
           this.widgetHeight = this.widgetHeight + 38;
           var4.setWidgetBounds(-14 + this.widgetWidth - 16, 15, 30, false, var5);
@@ -157,7 +157,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 

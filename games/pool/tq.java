@@ -10,7 +10,7 @@ final class tq extends IntrusiveNode {
     static String raSuggestmute;
     static String tooltipSnookered;
     static int field_t;
-    static vh field_m;
+    static UiComponent field_m;
     static String ratedMembersonly;
     static so field_o;
     int[] field_l;
@@ -59,7 +59,7 @@ final class tq extends IntrusiveNode {
     }
 
     final static boolean a(boolean param0, long param1, String param2) {
-        eo var4 = null;
+        SocialListEntry var4 = null;
         RuntimeException var4_ref = null;
         String var5 = null;
         boolean stackIn_10_0 = false;
@@ -74,10 +74,10 @@ final class tq extends IntrusiveNode {
           }
           var4 = gf.a(62, param2);
           if (var4 != null &&
-            null != var4.field_Wb) {
+            null != var4.serverName) {
             return true;
           }
-          stackIn_10_0 = (null != em.field_L) && (fn.b(param1, 0) != null);
+          stackIn_10_0 = (null != HighscoresScreen.field_L) && (QuickChatHelpDialog.b(param1, 0) != null);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class tq extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -102,11 +102,11 @@ final class tq extends IntrusiveNode {
             tooltipSnookered = (String) null;
           }
           var5 = (CharSequence) ((Object) param2);
-          di.field_a = TutorialController.normalizeDisplayName(117, var5);
+          ResourceArchive.field_a = TutorialController.normalizeDisplayName(117, var5);
           c.field_d = param0;
           jq.a((byte) 11);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "tq.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tq.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -118,12 +118,12 @@ final class tq extends IntrusiveNode {
         if (param0 > -100) {
           return;
         }
-        MatchingTextValidator.field_u.a(lg.field_s, -1);
+        MatchingTextValidator.field_u.a(StatefulTextPainter.field_s, -1);
         MatchingTextValidator.field_u = null;
         if (null != PlasmaTableScene.field_gb) {
           PlasmaTableScene.field_gb.d(22472);
         }
-        pa.field_K.requestFocus();
+        TimeTrialSelectScreen.field_K.requestFocus();
     }
 
     final static int[] a(int param0, int param1, double[] param2) {
@@ -157,7 +157,7 @@ final class tq extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

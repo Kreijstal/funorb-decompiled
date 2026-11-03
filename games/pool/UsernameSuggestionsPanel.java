@@ -23,7 +23,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         }
         BitmapFont var6 = ValidationIconWidget.field_O;
         if (this.suggestions != null) {
-          var6.drawParagraph(oc.createSuggestions, this.widgetX + param2, this.widgetY + param3, this.widgetWidth, 20, 16777215, -1, 0, 0, var6.maxDescent + var6.maxAscent);
+          var6.drawParagraph(TriangleMesh.createSuggestions, this.widgetX + param2, this.widgetY + param3, this.widgetWidth, 20, 16777215, -1, 0, 0, var6.maxDescent + var6.maxAscent);
         }
     }
 
@@ -32,7 +32,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         try {
           this.listener = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "mp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        pd var4 = null;
+        LinkButtonPainter var4 = null;
         try {
           this.children.d((byte) 87);
           if (param1 != null &&
@@ -55,7 +55,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
               this.suggestions[var4_int] = WidgetContainer.a(false, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
-            var4 = new pd(ValidationIconWidget.field_O, 0, 1);
+            var4 = new LinkButtonPainter(ValidationIconWidget.field_O, 0, 1);
             this.suggestionButtons = new ButtonWidget[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.suggestionButtons[var5] = new ButtonWidget(this.suggestions[var5], (WidgetListener) (this));
@@ -64,7 +64,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
               this.suggestionButtons[var5].setWidgetBounds(80, 0, 15, false, 20 + 16 * var5);
               this.addChild(true, this.suggestionButtons[var5]);
             }
-            this.suggestionButtons[var3_int] = new ButtonWidget(be.createMoreSuggestions, (WidgetListener) (this));
+            this.suggestionButtons[var3_int] = new ButtonWidget(OptionsScreen.createMoreSuggestions, (WidgetListener) (this));
             this.suggestionButtons[var3_int].renderer = (WidgetPainter) ((Object) var4);
             this.suggestionButtons[var3_int].setWidgetBounds(100, 0, 15, param0, 20 - (-(16 * var3_int) - 16));
             this.addChild(true, this.suggestionButtons[var3_int]);
@@ -82,13 +82,13 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
     final static boolean g(byte param0) {
         if (param0 >= -77) {
-          UsernameSuggestionsPanel.a(9);
+          UsernameSuggestionsPanel.releaseStatics(9);
         }
         return !ViewportController.field_y ? true : false;
     }
@@ -124,7 +124,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -137,9 +137,9 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         if (!param4 && (fr.field_s != SoftwareRasterizer.width ||
           SoftwareRasterizer.height != f.field_h) && (SoftwareRasterizer.height == OpacityWidget.field_P.height &&
           OpacityWidget.field_P.width == SoftwareRasterizer.width)) {
-          if (null == em.field_L) {
+          if (null == HighscoresScreen.field_L) {
             if (tp.field_e == null) {
-              f.a(48);
+              f.layoutLobbyPanels(48);
             } else {
               PoolGameModel.a(true, 0);
             }
@@ -148,16 +148,16 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           }
         }
         if (!param4) {
-          tn.field_u = (fr.field_s - 640) / 2;
+          RasterSnapshot.field_u = (fr.field_s - 640) / 2;
         } else {
-          tn.field_u = StrongCacheEntry.field_I;
+          RasterSnapshot.field_u = StrongCacheEntry.field_I;
         }
-        pf.a(param4, param5 ^ -13418);
+        WidgetStyleLayer.a(param4, param5 ^ -13418);
         if (NodeHashTableIterator.field_a > 0) {
           ie.a(param4, param1, param5 - 13502, param9);
         }
-        TextHotspotRegion.field_o.field_tb = pa.field_M.field_tb;
-        TextHotspotRegion.field_o.field_Fb = 1;
+        TextHotspotRegion.field_o.textInset = TimeTrialSelectScreen.field_M.textInset;
+        TextHotspotRegion.field_o.horizontalAlignment = 1;
         if (PoolMatchController.field_z > 0) {
           MessageDialogContent.a(param4, param9, param1, 112);
         }
@@ -165,21 +165,21 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           ButtonWidget.a(param8, param4, param1, -102, param9);
         }
         if (AccountWelcomePanel.field_bb &&
-          em.field_L.field_Nb <= em.field_L.field_mc) {
-          ci.field_c.field_Sb.field_nb = ro.gameFull;
-          c.field_e.field_pb = false;
-          mq.a(ci.field_c.field_Rb, (byte) 109);
+          HighscoresScreen.field_L.field_Nb <= HighscoresScreen.field_L.field_mc) {
+          DebugTuningSlider.field_c.viewport.text = ro.gameFull;
+          c.field_e.enabled = false;
+          AudioService.a(DebugTuningSlider.field_c.content, (byte) 109);
         } else {
-          c.field_e.field_pb = true;
-          ci.field_c.field_Sb.field_nb = null;
-          rk.a(param7, param0, ci.field_c, param9, (byte) -83);
+          c.field_e.enabled = true;
+          DebugTuningSlider.field_c.viewport.text = null;
+          HuffmanCodec.a(param7, param0, DebugTuningSlider.field_c, param9, (byte) -83);
         }
         mk.a(param3, 0, param9, param7, param6, param2, param0);
-        rk.a(param7, param0, DualLinkDeque.field_f, param9, (byte) -83);
+        HuffmanCodec.a(param7, param0, DualLinkDeque.field_f, param9, (byte) -83);
         MultiHandleSliderWidget.field_V = MultiHandleSliderWidget.field_V + 1;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_N = null;
         timerSecondsFractions = null;
         if (param0 != 160) {
@@ -223,18 +223,18 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, nm param2, int param3) {
+    final static void a(int param0, int param1, NineSliceFrame param2, int param3) {
         try {
           kp.field_d = param1;
           ShotRecord.field_o = param0;
           int var4_int = 87 % ((40 - param3) / 48);
-          db.field_Vb = param2;
+          VerticalScrollbar.field_Vb = param2;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "mp.T(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mp.T(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -4,7 +4,7 @@
 final class rm {
     static boolean field_d;
     static String muChatPmFriends;
-    static nm field_e;
+    static NineSliceFrame field_e;
     static String yes;
     static int field_b;
     static Sprite[] field_g;
@@ -32,17 +32,17 @@ final class rm {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         muChatPmFriends = null;
         field_g = null;
         yes = null;
         field_e = null;
         if (param0 > -12) {
-          rm.a((byte) -85);
+          rm.releaseStatics((byte) -85);
         }
     }
 

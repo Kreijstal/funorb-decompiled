@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TranslatedUiText {
-    static qd field_m;
+    static Js5ArchiveManager field_m;
     static String field_k;
     static hj field_g;
     static String field_c;
@@ -18,10 +18,10 @@ final class TranslatedUiText {
     static byte[][][] field_l;
     static int field_a;
 
-    final static sf c(int param0) {
+    final static QuickChatCategoryDefinition c(int param0) {
         int var1_int = 0;
-        sf var2 = null;
-        sf stackIn_5_0 = null;
+        QuickChatCategoryDefinition var2 = null;
+        QuickChatCategoryDefinition stackIn_5_0 = null;
         Object stackIn_11_0 = null;
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var1 = null;
@@ -31,7 +31,7 @@ final class TranslatedUiText {
             var1_int = 0;
             while (true) {
               var2 = DisplayNamePanel.field_N.a((byte) -55, var1_int);
-              if (var2.field_C) {
+              if (var2.rootMarker) {
                 stackIn_5_0 = var2;
                 return stackIn_5_0;
               }
@@ -44,12 +44,12 @@ final class TranslatedUiText {
               TranslatedUiText.a(94, (byte) 12);
             }
             stackIn_11_0 = null;
-            return (sf) (stackIn_11_0);
+            return (QuickChatCategoryDefinition) (stackIn_11_0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1_ref), "nk.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "nk.A(" + param0 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class TranslatedUiText {
             TranslatedUiText.d(103);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "nk.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nk.F(" + param0 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class TranslatedUiText {
         RuntimeException decompiledCaughtException = null;
         try {
           EmailAvailabilityValidator.field_s = th.field_b;
-          eo.field_Ub = param1;
+          SocialListEntry.field_Ub = param1;
           if (param2 <= 74) {
             field_h = -97;
           }
@@ -87,11 +87,11 @@ final class TranslatedUiText {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(di param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2626_0;
             StringBuilder stackIn_2626_1;
@@ -101,10 +101,10 @@ final class TranslatedUiText {
             byte[] var2;
             RuntimeException var2_ref;
             int var3;
-            di param0;
+            ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(di initialParam0, int initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2626_0 = null;
@@ -120,7 +120,7 @@ final class TranslatedUiText {
                 EmailAvailabilityValidator.field_r = param0;
                 var2 = DebouncedValidationProvider.a((byte) 123, "loginm3");
                 if (var2 != null) {
-                  wd.loginm3 = a.a(var2, 127);
+                  TabbedPane.loginm3 = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -99, "loginm2");
                 if (null != var2) {
@@ -136,11 +136,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 95, "error_js5crc");
                 if (null != var2) {
-                  br.errorJs5crc = a.a(var2, 125);
+                  LoginRequiredScreen.errorJs5crc = a.a(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -41, "error_js5io");
                 if (var2 != null) {
-                  cm.errorJs5io = a.a(var2, -71);
+                  LocalGameSetupScreen.errorJs5io = a.a(var2, -71);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -109, "error_js5connect_full");
                 if (null != var2) {
@@ -184,7 +184,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -80, "ticketing_oneunread");
                 if (null != var2) {
-                  vd.ticketingOneunread = a.a(var2, 126);
+                  DialRenderer.ticketingOneunread = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -53, "ticketing_xunread");
                 if (null != var2) {
@@ -228,11 +228,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -30, "mu_chat_game");
                 if (null != var2) {
-                  mm.muChatGame = a.a(var2, -79);
+                  Camera.muChatGame = a.a(var2, -79);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -44, "mu_chat_private");
                 if (null != var2) {
-                  vk.muChatPrivate = a.a(var2, 123);
+                  MidiPcmStream.muChatPrivate = a.a(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -110, "mu_x_entered_game");
                 if (var2 != null) {
@@ -240,7 +240,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -100, "mu_x_joined_your_game");
                 if (var2 != null) {
-                  up.muXJoinedYourGame = a.a(var2, 127);
+                  CachedArchiveSource.muXJoinedYourGame = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 106, "mu_x_entered_other_game");
                 if (var2 != null) {
@@ -252,7 +252,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 100, "mu_x_lost_con");
                 if (null != var2) {
-                  lh.muXLostCon = a.a(var2, param1 + 20888);
+                  ArchiveProvider.muXLostCon = a.a(var2, param1 + 20888);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 125, "mu_x_cannot_join_full");
                 if (null != var2) {
@@ -268,7 +268,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 94, "mu_x_withdrew_request");
                 if (var2 != null) {
-                  sg.muXWithdrewRequest = a.a(var2, -77);
+                  ThemeSelectScreen.muXWithdrewRequest = a.a(var2, -77);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -103, "mu_x_removed");
                 if (null != var2) {
@@ -276,7 +276,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -33, "mu_x_dropped_out");
                 if (var2 != null) {
-                  np.muXDroppedOut = a.a(var2, -96);
+                  SectorCacheStore.muXDroppedOut = a.a(var2, -96);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 100, "mu_entered_other_game");
                 if (null != var2) {
@@ -296,7 +296,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 122, "mu_invite_withdrawn");
                 if (null != var2) {
-                  up.muInviteWithdrawn = a.a(var2, 123);
+                  CachedArchiveSource.muInviteWithdrawn = a.a(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -123, "mu_request_declined");
                 if (var2 != null) {
@@ -316,11 +316,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -114, "mu_lobby_rating");
                 if (null != var2) {
-                  wi.muLobbyRating = a.a(var2, param1 + 20892);
+                  IntKeyLookup.muLobbyRating = a.a(var2, param1 + 20892);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -117, "mu_lobby_friend_add");
                 if (var2 != null) {
-                  wg.muLobbyFriendAdd = a.a(var2, 123);
+                  StateIconLabel.muLobbyFriendAdd = a.a(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 109, "mu_lobby_friend_rm");
                 if (var2 != null) {
@@ -344,11 +344,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -48, "mu_gamelist_status");
                 if (null != var2) {
-                  wi.muGamelistStatus = a.a(var2, -77);
+                  IntKeyLookup.muGamelistStatus = a.a(var2, -77);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 96, "mu_gamelist_owner");
                 if (var2 != null) {
-                  mb.muGamelistOwner = a.a(var2, -29);
+                  ByteStorage.muGamelistOwner = a.a(var2, -29);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 94, "mu_gamelist_players");
                 if (var2 != null) {
@@ -372,7 +372,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 117, "mu_create_unrated");
                 if (var2 != null) {
-                  lh.muCreateUnrated = a.a(var2, 126);
+                  ArchiveProvider.muCreateUnrated = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -95, "mu_options");
                 if (var2 != null) {
@@ -388,11 +388,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -85, "mu_options_dontmind");
                 if (null != var2) {
-                  mq.muOptionsDontmind = a.a(var2, 125);
+                  AudioService.muOptionsDontmind = a.a(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 123, "mu_options_allow_spectate");
                 if (null != var2) {
-                  ve.muOptionsAllowSpectate = a.a(var2, -18);
+                  BitmapTextLayout.muOptionsAllowSpectate = a.a(var2, -18);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 112, "mu_options_ratedgametype");
                 if (var2 != null) {
@@ -404,11 +404,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -78, "no");
                 if (null != var2) {
-                  mb.no = a.a(var2, -41);
+                  ByteStorage.no = a.a(var2, -41);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 119, "mu_invite_players");
                 if (var2 != null) {
-                  v.muInvitePlayers = a.a(var2, 126);
+                  LimitedRandomAccessFile.muInvitePlayers = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -71, "close");
                 if (var2 != null) {
@@ -416,7 +416,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 113, "add_x_to_friends");
                 if (var2 != null) {
-                  fn.addXToFriends = a.a(var2, -99);
+                  QuickChatHelpDialog.addXToFriends = a.a(var2, -99);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 95, "add_x_to_ignore");
                 if (null != var2) {
@@ -444,7 +444,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 98, "invite_accept_xs_game");
                 if (var2 != null) {
-                  or.inviteAcceptXsGame = a.a(var2, -103);
+                  BallEvent.inviteAcceptXsGame = a.a(var2, -103);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 121, "invite_decline_xs_game");
                 if (null != var2) {
@@ -452,7 +452,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -56, "join_xs_game");
                 if (var2 != null) {
-                  se.joinXsGame = a.a(var2, 124);
+                  LongAndTextLoginPayload.joinXsGame = a.a(var2, 124);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 116, "join_request_xs_game");
                 if (var2 != null) {
@@ -460,7 +460,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 127, "join_withdraw_request_xs_game");
                 if (null != var2) {
-                  nd.joinWithdrawRequestXsGame = a.a(var2, 124);
+                  MarkerSliderPainter.joinWithdrawRequestXsGame = a.a(var2, 124);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -75, "mu_gameopt_kick_x_from_this_game");
                 if (var2 != null) {
@@ -480,7 +480,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -29, "mu_gameopt_invite_x_to_game");
                 if (var2 != null) {
-                  qi.muGameoptInviteXToGame = a.a(var2, param1 + 21025);
+                  IterableDualLinkDeque.muGameoptInviteXToGame = a.a(var2, param1 + 21025);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -41, "report_x_for_abuse");
                 if (var2 != null) {
@@ -492,7 +492,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -70, "unable_to_send_message_password_b");
                 if (null != var2) {
-                  ci.unableToSendMessagePasswordB = a.a(var2, param1 ^ -21097);
+                  DebugTuningSlider.unableToSendMessagePasswordB = a.a(var2, param1 ^ -21097);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -78, "mu_chat_lobby_show_all");
                 if (var2 != null) {
@@ -516,7 +516,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -97, "mu_chat_game_friends_only");
                 if (var2 != null) {
-                  wi.muChatGameFriendsOnly = a.a(var2, 126);
+                  IntKeyLookup.muChatGameFriendsOnly = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -88, "mu_chat_game_friends");
                 if (null != var2) {
@@ -556,7 +556,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -80, "rated_game");
                 if (null != var2) {
-                  of.ratedGame = a.a(var2, 126);
+                  ScrollPane.ratedGame = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -73, "unrated_game");
                 if (var2 != null) {
@@ -568,7 +568,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -88, "searching_for_opponent_singular");
                 if (var2 != null) {
-                  or.searchingForOpponentSingular = a.a(var2, 123);
+                  BallEvent.searchingForOpponentSingular = a.a(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -121, "searching_for_opponents_plural");
                 if (null != var2) {
@@ -620,7 +620,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 98, "game_options_changed");
                 if (var2 != null) {
-                  bl.gameOptionsChanged = a.a(var2, -94);
+                  WireframeQuad.gameOptionsChanged = a.a(var2, -94);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -66, "players_x_of_y");
                 if (null != var2) {
@@ -628,7 +628,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -92, "message_lobby");
                 if (null != var2) {
-                  jo.messageLobby = a.a(var2, param1 + 20958);
+                  PauseMenuScreen.messageLobby = a.a(var2, param1 + 20958);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -31, "quickchat_lobby");
                 if (null != var2) {
@@ -636,7 +636,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -66, "message_game");
                 if (null != var2) {
-                  vd.messageGame = a.a(var2, 125);
+                  DialRenderer.messageGame = a.a(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -94, "message_team");
                 if (null != var2) {
@@ -644,11 +644,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -96, "quickchat_game");
                 if (null != var2) {
-                  br.quickchatGame = a.a(var2, -115);
+                  LoginRequiredScreen.quickchatGame = a.a(var2, -115);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -100, "kick");
                 if (null != var2) {
-                  bl.kick = a.a(var2, 125);
+                  WireframeQuad.kick = a.a(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 93, "inviting_x");
                 if (null != var2) {
@@ -668,7 +668,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -94, "invite");
                 if (null != var2) {
-                  kn.invite = a.a(var2, -92);
+                  PlayerContextMenu.invite = a.a(var2, -92);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -105, "status_concluded");
                 if (null != var2) {
@@ -684,11 +684,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 115, "status_join");
                 if (null != var2) {
-                  vk.statusJoin = a.a(var2, 127);
+                  MidiPcmStream.statusJoin = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 123, "status_private");
                 if (var2 != null) {
-                  sg.statusPrivate = a.a(var2, param1 ^ -21098);
+                  ThemeSelectScreen.statusPrivate = a.a(var2, param1 ^ -21098);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 96, "status_full");
                 if (var2 != null) {
@@ -716,7 +716,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 118, "you_can_ask_to_join");
                 if (null != var2) {
-                  im.youCanAskToJoin = a.a(var2, 123);
+                  LobbyPlayer.youCanAskToJoin = a.a(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -120, "you_cannot_join_in_progress");
                 if (var2 != null) {
@@ -748,11 +748,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -98, "loading");
                 if (null != var2) {
-                  o.loading = a.a(var2, -78);
+                  UiComponentNode.loading = a.a(var2, -78);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 104, "offline");
                 if (null != var2) {
-                  we.offline = a.a(var2, 126);
+                  ArchiveLoadStep.offline = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -41, "multiconst_invite_only");
                 if (var2 != null) {
@@ -772,15 +772,15 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -36, "multiconst_open");
                 if (null != var2) {
-                  oq.multiconstOpen = a.a(var2, 124);
+                  CipherPacketBuffer.multiconstOpen = a.a(var2, 124);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -81, "no_options_available");
                 if (var2 != null) {
-                  np.noOptionsAvailable = a.a(var2, 14);
+                  SectorCacheStore.noOptionsAvailable = a.a(var2, 14);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -92, "reportabuse");
                 if (null != var2) {
-                  rk.reportabuse = a.a(var2, param1 + 21003);
+                  HuffmanCodec.reportabuse = a.a(var2, param1 + 21003);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 110, "presstabtochat");
                 if (null != var2) {
@@ -796,7 +796,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 116, "dob_enterforchat");
                 if (var2 != null) {
-                  bl.dobEnterforchat = a.a(var2, param1 + 21023);
+                  WireframeQuad.dobEnterforchat = a.a(var2, param1 + 21023);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 101, "tab_hidechattemporarily");
                 if (null != var2) {
@@ -812,7 +812,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 119, "privatequickchat_from_x");
                 if (var2 != null) {
-                  vh.privatequickchatFromX = a.a(var2, 126);
+                  UiComponent.privatequickchatFromX = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 127, "privatequickchat_to_x");
                 if (var2 != null) {
@@ -840,7 +840,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -69, "thisisrunescapeclan");
                 if (null != var2) {
-                  rq.thisisrunescapeclan = a.a(var2, param1 ^ 21084);
+                  MusicCrossfadeStream.thisisrunescapeclan = a.a(var2, param1 ^ 21084);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 114, "thisisrunescapeclan_notowner");
                 if (var2 != null) {
@@ -856,7 +856,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 122, "gameopt_membersonly");
                 if (var2 != null) {
-                  lk.gameoptMembersonly = a.a(var2, -62);
+                  ChatMessageLine.gameoptMembersonly = a.a(var2, -62);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 119, "gameopt_1moreratedgame");
                 if (null != var2) {
@@ -900,7 +900,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -86, "gameopt_youneedrating");
                 if (null != var2) {
-                  ld.gameoptYouneedrating = a.a(var2, -93);
+                  WhirlpoolHasher.gameoptYouneedrating = a.a(var2, -93);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -45, "gameopt_playerneedsratedgames");
                 if (var2 != null) {
@@ -936,7 +936,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -116, "gameopt_needchanging1");
                 if (null != var2) {
-                  sf.gameoptNeedchanging1 = a.a(var2, -97);
+                  QuickChatCategoryDefinition.gameoptNeedchanging1 = a.a(var2, -97);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -43, "gameopt_needchanging2");
                 if (null != var2) {
@@ -948,7 +948,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -102, "gameopt_playersdontqualify");
                 if (var2 != null) {
-                  fn.gameoptPlayersdontqualify = a.a(var2, param1 + 20919);
+                  QuickChatHelpDialog.gameoptPlayersdontqualify = a.a(var2, param1 + 20919);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -108, "gameopt_playersdontqualify_selectgametab");
                 if (var2 != null) {
@@ -968,7 +968,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 99, "gameopt_badnumplayers");
                 if (var2 != null) {
-                  aj.gameoptBadnumplayers = a.a(var2, -100);
+                  NameEntryPopup.gameoptBadnumplayers = a.a(var2, -100);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 124, "gameopt_inviteplayers_or_trychanging1");
                 if (null != var2) {
@@ -990,7 +990,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 116, "ra_title");
                 if (var2 != null) {
-                  oh.raTitle = a.a(var2, 127);
+                  GzipDecoder.raTitle = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -71, "ra_mutethisplayer");
                 if (var2 != null) {
@@ -1026,7 +1026,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -43, "rule_0_2");
                 if (var2 != null) {
-                  o.rule02 = a.a(var2, 125);
+                  UiComponentNode.rule02 = a.a(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 115, "rule_0_3");
                 if (var2 != null) {
@@ -1054,7 +1054,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -67, "rule_1_2");
                 if (null != var2) {
-                  vq.rule12 = a.a(var2, 126);
+                  ContextMenu.rule12 = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -108, "rule_1_3");
                 if (null != var2) {
@@ -1062,15 +1062,15 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 110, "rule_1_4");
                 if (var2 != null) {
-                  p.rule14 = a.a(var2, -56);
+                  ModelInstance.rule14 = a.a(var2, -56);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -75, "rule_pillar_2");
                 if (var2 != null) {
-                  hd.rulePillar2 = a.a(var2, 124);
+                  MembershipBenefitsScreen.rulePillar2 = a.a(var2, 124);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -54, "rule_2_0");
                 if (null != var2) {
-                  nm.rule20 = a.a(var2, 126);
+                  NineSliceFrame.rule20 = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -93, "rule_2_1");
                 if (null != var2) {
@@ -1086,7 +1086,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 99, "cancel");
                 if (null != var2) {
-                  be.cancel = a.a(var2, param1 ^ -21098);
+                  OptionsScreen.cancel = a.a(var2, param1 ^ -21098);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 119, "pleaselogintoplay");
                 if (null != var2) {
@@ -1114,7 +1114,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 110, "playfreeversion");
                 if (null != var2) {
-                  lg.playfreeversion = a.a(var2, 125);
+                  StatefulTextPainter.playfreeversion = a.a(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 103, "reloadgame");
                 if (null != var2) {
@@ -1122,7 +1122,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -95, "toserverlist");
                 if (null != var2) {
-                  o.toserverlist = a.a(var2, -84);
+                  UiComponentNode.toserverlist = a.a(var2, -84);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 97, "tocustomersupport");
                 if (var2 != null) {
@@ -1130,7 +1130,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -44, "changedisplayname");
                 if (null != var2) {
-                  lg.changedisplayname = a.a(var2, -40);
+                  StatefulTextPainter.changedisplayname = a.a(var2, -40);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 94, "returntohomepage");
                 if (null != var2) {
@@ -1202,11 +1202,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -93, "invalidpass");
                 if (var2 != null) {
-                  ng.invalidpass = a.a(var2, -23);
+                  ThreeSliceButtonPainter.invalidpass = a.a(var2, -23);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 123, "retry");
                 if (null != var2) {
-                  ap.retry = a.a(var2, 127);
+                  QuickChatPhraseDefinition.retry = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 103, "back");
                 if (null != var2) {
@@ -1226,7 +1226,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 107, "warning_ifyouquit");
                 if (var2 != null) {
-                  wg.warningIfyouquit = a.a(var2, 13);
+                  StateIconLabel.warningIfyouquit = a.a(var2, 13);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 122, "warning_ifyouquitorleavepage");
                 if (null != var2) {
@@ -1321,7 +1321,7 @@ final class TranslatedUiText {
                   a.a(var2, 127);
                 }
                 if (param1 != -21013) {
-                  TranslatedUiText.a((di) null, -20);
+                  TranslatedUiText.a((ResourceArchive) null, -20);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -70, "create_sameaccounttip_named");
                 if (var2 != null) {
@@ -1369,7 +1369,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 123, "openinpopupwindow");
                 if (var2 != null) {
-                  cn.openinpopupwindow = a.a(var2, param1 + 21138);
+                  DelegatingCanvas.openinpopupwindow = a.a(var2, param1 + 21138);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -82, "create");
                 if (var2 != null) {
@@ -1389,7 +1389,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -110, "creatingyouraccount");
                 if (var2 != null) {
-                  tk.creatingyouraccount = a.a(var2, param1 ^ -21097);
+                  DualLinkNodeHashTable.creatingyouraccount = a.a(var2, param1 ^ -21097);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -61, "create_youmustaccept");
                 if (var2 != null) {
@@ -1405,7 +1405,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -108, "day");
                 if (null != var2) {
-                  dp.day = a.a(var2, param1 ^ -21104);
+                  TextureCache.day = a.a(var2, param1 ^ -21104);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 102, "month");
                 if (var2 != null) {
@@ -1413,7 +1413,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -85, "year");
                 if (var2 != null) {
-                  bb.year = a.a(var2, -21);
+                  IndexedSpriteState.year = a.a(var2, -21);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 113, "monthnames,0");
                 if (null != var2) {
@@ -1473,7 +1473,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -115, "create_createanaccount");
                 if (null != var2) {
-                  ad.createCreateanaccount = a.a(var2, param1 + 20978);
+                  ArchiveIndex.createCreateanaccount = a.a(var2, param1 + 20978);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 107, "create_username");
                 if (var2 != null) {
@@ -1493,7 +1493,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 114, "create_email");
                 if (null != var2) {
-                  ng.createEmail = a.a(var2, 126);
+                  ThreeSliceButtonPainter.createEmail = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -42, "create_email_confirm");
                 if (null != var2) {
@@ -1529,11 +1529,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 103, "create_suggestions");
                 if (var2 != null) {
-                  oc.createSuggestions = a.a(var2, -27);
+                  TriangleMesh.createSuggestions = a.a(var2, -27);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 121, "create_more_suggestions");
                 if (var2 != null) {
-                  be.createMoreSuggestions = a.a(var2, 125);
+                  OptionsScreen.createMoreSuggestions = a.a(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -48, "create_select_alternative");
                 if (null != var2) {
@@ -1545,7 +1545,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 127, "create_agreeterms");
                 if (var2 != null) {
-                  lh.createAgreeterms = a.a(var2, 125);
+                  ArchiveProvider.createAgreeterms = a.a(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 124, "create_u13terms");
                 if (var2 != null) {
@@ -1557,11 +1557,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -36, "login_username");
                 if (null != var2) {
-                  qp.loginUsername = a.a(var2, -102);
+                  QuickChatMenu.loginUsername = a.a(var2, -102);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -86, "login_email");
                 if (null != var2) {
-                  wm.loginEmail = a.a(var2, 124);
+                  ReportAbuseDialog.loginEmail = a.a(var2, 124);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -89, "login_username_tooltip");
                 if (var2 != null) {
@@ -1581,7 +1581,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 107, "login_justplay_tooltip");
                 if (var2 != null) {
-                  lh.loginJustplayTooltip = a.a(var2, -63);
+                  ArchiveProvider.loginJustplayTooltip = a.a(var2, -63);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 103, "login_back_tooltip");
                 if (null != var2) {
@@ -1601,11 +1601,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 115, "create_displayname_tooltip");
                 if (null != var2) {
-                  sg.createDisplaynameTooltip = a.a(var2, param1 + 21139);
+                  ThemeSelectScreen.createDisplaynameTooltip = a.a(var2, param1 + 21139);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 93, "create_displayname_hint");
                 if (var2 != null) {
-                  se.createDisplaynameHint = a.a(var2, 123);
+                  LongAndTextLoginPayload.createDisplaynameHint = a.a(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 103, "create_password_tooltip");
                 if (null != var2) {
@@ -1613,7 +1613,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -54, "create_password_hint");
                 if (var2 != null) {
-                  df.createPasswordHint = a.a(var2, 126);
+                  AimTarget.createPasswordHint = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -125, "create_password_confirm_tooltip");
                 if (var2 != null) {
@@ -1677,11 +1677,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 107, "create_alert_nameleadingspace");
                 if (null != var2) {
-                  lg.createAlertNameleadingspace = a.a(var2, -90);
+                  StatefulTextPainter.createAlertNameleadingspace = a.a(var2, -90);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -40, "create_alert_doublespace");
                 if (null != var2) {
-                  oh.createAlertDoublespace = a.a(var2, -11);
+                  GzipDecoder.createAlertDoublespace = a.a(var2, -11);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -27, "create_alert_passchars");
                 if (var2 != null) {
@@ -1689,11 +1689,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -122, "create_alert_passrepeated");
                 if (null != var2) {
-                  lh.createAlertPassrepeated = a.a(var2, 127);
+                  ArchiveProvider.createAlertPassrepeated = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 114, "create_alert_passlength");
                 if (null != var2) {
-                  uq.createAlertPasslength = a.a(var2, param1 + 21137);
+                  Bzip2DecoderState.createAlertPasslength = a.a(var2, param1 + 21137);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 116, "create_alert_passcontainsname");
                 if (null != var2) {
@@ -1725,15 +1725,15 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -49, "create_alert_invalidage");
                 if (null != var2) {
-                  sg.createAlertInvalidage = a.a(var2, param1 + 21138);
+                  ThemeSelectScreen.createAlertInvalidage = a.a(var2, param1 + 21138);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 110, "create_alert_yearrange");
                 if (var2 != null) {
-                  ej.createAlertYearrange = a.a(var2, param1 + 21138);
+                  JaggrabDownloader.createAlertYearrange = a.a(var2, param1 + 21138);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -103, "create_alert_mismatch");
                 if (null != var2) {
-                  rk.createAlertMismatch = a.a(var2, 12);
+                  HuffmanCodec.createAlertMismatch = a.a(var2, 12);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 127, "create_passwordvalid");
                 if (null != var2) {
@@ -1749,11 +1749,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 113, "invalid_name");
                 if (var2 != null) {
-                  p.invalidName = a.a(var2, param1 ^ -21099);
+                  ModelInstance.invalidName = a.a(var2, param1 ^ -21099);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -116, "cannot_add_yourself");
                 if (null != var2) {
-                  fn.cannotAddYourself = a.a(var2, param1 + 20894);
+                  QuickChatHelpDialog.cannotAddYourself = a.a(var2, param1 + 20894);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -62, "unable_to_add_friend");
                 if (var2 != null) {
@@ -1777,15 +1777,15 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 94, "friendlistdupe");
                 if (null != var2) {
-                  tl.friendlistdupe = a.a(var2, -44);
+                  RankingsScreen.friendlistdupe = a.a(var2, -44);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -45, "friendnotfound");
                 if (var2 != null) {
-                  aa.friendnotfound = a.a(var2, param1 + 21137);
+                  IntrusiveDequeCursor.friendnotfound = a.a(var2, param1 + 21137);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 113, "ignorelistfull");
                 if (null != var2) {
-                  ci.ignorelistfull = a.a(var2, 126);
+                  DebugTuningSlider.ignorelistfull = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 112, "ignorelistdupe");
                 if (null != var2) {
@@ -1793,7 +1793,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -90, "ignorenotfound");
                 if (var2 != null) {
-                  sg.ignorenotfound = a.a(var2, param1 ^ 21081);
+                  ThemeSelectScreen.ignorenotfound = a.a(var2, param1 ^ 21081);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -28, "removeignorefirst");
                 if (var2 != null) {
@@ -1809,7 +1809,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 99, "enterfriend_del");
                 if (var2 != null) {
-                  vk.enterfriendDel = a.a(var2, -4);
+                  MidiPcmStream.enterfriendDel = a.a(var2, -4);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -79, "enterignore_add");
                 if (null != var2) {
@@ -1853,11 +1853,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -92, "waitingfor_soundeffects");
                 if (null != var2) {
-                  rk.waitingforSoundeffects = a.a(var2, param1 ^ -21097);
+                  HuffmanCodec.waitingforSoundeffects = a.a(var2, param1 ^ -21097);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 97, "waitingfor_music");
                 if (var2 != null) {
-                  aj.waitingforMusic = a.a(var2, -94);
+                  NameEntryPopup.waitingforMusic = a.a(var2, -94);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -104, "waitingfor_instruments");
                 if (null != var2) {
@@ -1899,11 +1899,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 123, "loading_soundeffects");
                 if (null != var2) {
-                  mq.loadingSoundeffects = a.a(var2, 6);
+                  AudioService.loadingSoundeffects = a.a(var2, 6);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -122, "loading_music");
                 if (null != var2) {
-                  mm.loadingMusic = a.a(var2, -49);
+                  Camera.loadingMusic = a.a(var2, -49);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -48, "loading_instruments");
                 if (null != var2) {
@@ -1915,7 +1915,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 122, "loading_extradata");
                 if (null != var2) {
-                  cf.loadingExtradata = a.a(var2, 127);
+                  SoundCache.loadingExtradata = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -108, "loading_languages");
                 if (var2 != null) {
@@ -1975,15 +1975,15 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 99, "sound_colon");
                 if (null != var2) {
-                  up.soundColon = a.a(var2, param1 + 21139);
+                  CachedArchiveSource.soundColon = a.a(var2, param1 + 21139);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 100, "music_colon");
                 if (null != var2) {
-                  fn.musicColon = a.a(var2, -89);
+                  QuickChatHelpDialog.musicColon = a.a(var2, -89);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -78, "fullscreen");
                 if (null != var2) {
-                  wd.fullscreen = a.a(var2, 125);
+                  TabbedPane.fullscreen = a.a(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -46, "screensize");
                 if (var2 != null) {
@@ -2015,7 +2015,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -42, "quit");
                 if (null != var2) {
-                  qd.quit = a.a(var2, -101);
+                  Js5ArchiveManager.quit = a.a(var2, -101);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 123, "login_createaccount");
                 if (var2 != null) {
@@ -2043,7 +2043,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 97, "pausemenu");
                 if (var2 != null) {
-                  ld.pausemenu = a.a(var2, -71);
+                  WhirlpoolHasher.pausemenu = a.a(var2, -71);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 117, "optionsmenu_notpaused");
                 if (var2 != null) {
@@ -2347,7 +2347,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -121, "achieved");
                 if (null != var2) {
-                  np.achieved = a.a(var2, -49);
+                  SectorCacheStore.achieved = a.a(var2, -49);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 114, "orbpoints");
                 if (null != var2) {
@@ -2419,7 +2419,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 95, "mp_offerrematch_unrated");
                 if (var2 != null) {
-                  og.mpOfferrematchUnrated = a.a(var2, 123);
+                  TutorialSelectScreen.mpOfferrematchUnrated = a.a(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 112, "mp_acceptrematch");
                 if (var2 != null) {
@@ -2431,7 +2431,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -127, "mp_cancelrematch");
                 if (null != var2) {
-                  df.mpCancelrematch = a.a(var2, -68);
+                  AimTarget.mpCancelrematch = a.a(var2, -68);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 122, "mp_cancelrematch_unrated");
                 if (var2 != null) {
@@ -2447,11 +2447,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 115, "mp_x_wantstodraw");
                 if (var2 != null) {
-                  rn.mpXWantstodraw = a.a(var2, 125);
+                  DiskCacheWorker.mpXWantstodraw = a.a(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 120, "mp_x_offersrematch");
                 if (var2 != null) {
-                  p.mpXOffersrematch = a.a(var2, 125);
+                  ModelInstance.mpXOffersrematch = a.a(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -105, "mp_x_offersrematch_unrated");
                 if (null != var2) {
@@ -2503,11 +2503,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -90, "mp_gamedrawn");
                 if (null != var2) {
-                  no.mpGamedrawn = a.a(var2, -27);
+                  Js5Transport.mpGamedrawn = a.a(var2, -27);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -102, "mp_timeremaining");
                 if (var2 != null) {
-                  p.mpTimeremaining = a.a(var2, param1 + 21136);
+                  ModelInstance.mpTimeremaining = a.a(var2, param1 + 21136);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 109, "mp_x_turn");
                 if (var2 != null) {
@@ -2603,11 +2603,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 108, "keychar_the_character_under_questionmark");
                 if (null != var2) {
-                  we.keycharTheCharacterUnderQuestionmark = s.a(var2[0], 8);
+                  ArchiveLoadStep.keycharTheCharacterUnderQuestionmark = s.decodeCp1252Byte(var2[0], 8);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 113, "rating_noratings");
                 if (var2 != null) {
-                  mm.ratingNoratings = a.a(var2, 127);
+                  Camera.ratingNoratings = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -89, "rating_rating");
                 if (null != var2) {
@@ -2619,7 +2619,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -33, "rating_won");
                 if (null != var2) {
-                  vj.ratingWon = a.a(var2, -20);
+                  TextLineLayout.ratingWon = a.a(var2, -20);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -118, "rating_lost");
                 if (var2 != null) {
@@ -2739,7 +2739,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -45, "fs_button_cancel");
                 if (var2 != null) {
-                  ad.fsButtonCancel = a.a(var2, 126);
+                  ArchiveIndex.fsButtonCancel = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 122, "fs_accept_aftercancel");
                 if (var2 != null) {
@@ -2751,11 +2751,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -38, "fs_accept_countdown_pl");
                 if (null != var2) {
-                  cf.fsAcceptCountdownPl = a.a(var2, -77);
+                  SoundCache.fsAcceptCountdownPl = a.a(var2, -77);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 94, "fs_nonmember");
                 if (null != var2) {
-                  lg.fsNonmember = a.a(var2, 127);
+                  StatefulTextPainter.fsNonmember = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 118, "fs_button_close");
                 if (var2 != null) {
@@ -2775,11 +2775,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -119, "fs_focus");
                 if (var2 != null) {
-                  wh.fsFocus = a.a(var2, 127);
+                  QuickChatPhraseRegistry.fsFocus = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -32, "fs_focus_or_resolution");
                 if (var2 != null) {
-                  rk.fsFocusOrResolution = a.a(var2, 123);
+                  HuffmanCodec.fsFocusOrResolution = a.a(var2, 123);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 96, "fs_timeout");
                 if (null != var2) {
@@ -2799,7 +2799,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -64, "mb_including_gamename");
                 if (var2 != null) {
-                  wm.mbIncludingGamename = a.a(var2, param1 + 21138);
+                  ReportAbuseDialog.mbIncludingGamename = a.a(var2, param1 + 21138);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -57, "mb_full_access_1");
                 if (null != var2) {
@@ -2811,7 +2811,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 94, "mb_achievement_count_1");
                 if (var2 != null) {
-                  up.mbAchievementCount1 = a.a(var2, -43);
+                  CachedArchiveSource.mbAchievementCount1 = a.a(var2, -43);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 115, "mb_achievement_count_2");
                 if (null != var2) {
@@ -2853,11 +2853,11 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) 116, "rating_mode_name,0");
                 if (null != var2) {
-                  mm.ratingModeName[0] = a.a(var2, 127);
+                  Camera.ratingModeName[0] = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -41, "rating_mode_name,1");
                 if (null != var2) {
-                  mm.ratingModeName[1] = a.a(var2, cq.a(param1, -21097));
+                  Camera.ratingModeName[1] = a.a(var2, cq.a(param1, -21097));
                 }
                 var2 = DebouncedValidationProvider.a((byte) -115, "rating_mode_long_name,0");
                 if (null != var2) {
@@ -2921,7 +2921,7 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -69, "DEFAULT_PLAYER_NAME");
                 if (null != var2) {
-                  tf.dEFAULTPLAYERNAME = a.a(var2, -14);
+                  LoginPayloadKind.dEFAULTPLAYERNAME = a.a(var2, -14);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 103, "mustlogin1");
                 if (null != var2) {
@@ -2957,31 +2957,31 @@ final class TranslatedUiText {
                 }
                 var2 = DebouncedValidationProvider.a((byte) -46, "mustlogin3,1");
                 if (var2 != null) {
-                  qd.mustlogin3[1] = a.a(var2, -14);
+                  Js5ArchiveManager.mustlogin3[1] = a.a(var2, -14);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -51, "mustlogin3,2");
                 if (null != var2) {
-                  qd.mustlogin3[2] = a.a(var2, 127);
+                  Js5ArchiveManager.mustlogin3[2] = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 95, "mustlogin3,3");
                 if (null != var2) {
-                  qd.mustlogin3[3] = a.a(var2, -111);
+                  Js5ArchiveManager.mustlogin3[3] = a.a(var2, -111);
                 }
                 var2 = DebouncedValidationProvider.a((byte) 117, "mustlogin3,4");
                 if (null != var2) {
-                  qd.mustlogin3[4] = a.a(var2, 125);
+                  Js5ArchiveManager.mustlogin3[4] = a.a(var2, 125);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -126, "mustlogin3,5");
                 if (null != var2) {
-                  qd.mustlogin3[5] = a.a(var2, cq.a(param1, -21023));
+                  Js5ArchiveManager.mustlogin3[5] = a.a(var2, cq.a(param1, -21023));
                 }
                 var2 = DebouncedValidationProvider.a((byte) 110, "mustlogin3,6");
                 if (var2 != null) {
-                  qd.mustlogin3[6] = a.a(var2, 126);
+                  Js5ArchiveManager.mustlogin3[6] = a.a(var2, 126);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -98, "mustlogin3,7");
                 if (null != var2) {
-                  qd.mustlogin3[7] = a.a(var2, 127);
+                  Js5ArchiveManager.mustlogin3[7] = a.a(var2, 127);
                 }
                 var2 = DebouncedValidationProvider.a((byte) -41, "discard");
                 if (var2 != null) {
@@ -3126,7 +3126,7 @@ final class TranslatedUiText {
                   } else {
                     stackIn_2627_2 = "{...}";
                   }
-                  throw wm.a((Throwable) ((Object) stackIn_2626_0), ((StringBuilder) (Object) stackIn_2626_1).append(stackIn_2627_2).append(',').append(param1).append(')').toString());
+                  throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_2626_0), ((StringBuilder) (Object) stackIn_2626_1).append(stackIn_2627_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2635_0 = (!GameApplet.field_k);
@@ -3158,14 +3158,14 @@ final class TranslatedUiText {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "nk.G(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "nk.G(" + param0 + ')');
         }
     }
 
     final static void a(int param0) {
         int stackIn_21_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        oq var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -3180,18 +3180,18 @@ final class TranslatedUiText {
           if (param0 <= 104) {
             return;
           }
-          var1 = kn.field_e;
+          var1 = PlayerContextMenu.field_e;
           var2 = var1.readUnsignedByte(-72);
           if (var2 != 0) {
             if (var2 != 1) {
-              tc.a((Throwable) null, "A1: " + t.a(93), -8555);
+              GrowableIntList.reportClientError((Throwable) null, "A1: " + t.formatPacketDump(93), -8555);
               dn.c(120);
               if (var6 == 0) {
                 return;
               }
             }
             var3_int = var1.readInt(true);
-            var4_ref_kg = (kg) (we.field_c.c((byte) 86));
+            var4_ref_kg = (kg) (ArchiveLoadStep.field_c.c((byte) 86));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (null != var4_ref_kg) {
@@ -3199,7 +3199,7 @@ final class TranslatedUiText {
                 decompiledFrameRemainder0 = (var6 == 0);
                 if ((decompiledFrameRemainder0) &&
                   (stackIn_21_0 != var4_ref_kg.field_o)) {
-                  var4_ref_kg = (kg) (we.field_c.f((byte) -5));
+                  var4_ref_kg = (kg) (ArchiveLoadStep.field_c.f((byte) -5));
                   continue;
                 }
               }
@@ -3241,7 +3241,7 @@ final class TranslatedUiText {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1_ref), "nk.D(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "nk.D(" + param0 + ')');
         }
     }
 
@@ -3267,7 +3267,7 @@ final class TranslatedUiText {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + param1 + ')');
         }
     }
 

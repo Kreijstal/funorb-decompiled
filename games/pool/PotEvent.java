@@ -32,13 +32,13 @@ final class PotEvent extends IntrusiveNode {
             field_p = (int[]) null;
           }
           var4 = -1L;
-          nn.a(var4, (byte) -120, param1, var3, var2);
+          nn.setBrowserCookie(var4, (byte) -120, param1, var3, var2);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "cr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_o = null;
         field_p = null;
         if (param0 >= 45) {
@@ -58,9 +58,9 @@ final class PotEvent extends IntrusiveNode {
     final static double a(byte param0, long param1) {
         if (param0 != 89) {
           PotEvent.a(-26, 0.6233354276237926);
-          return bb.a((byte) -107, 16, param1);
+          return IndexedSpriteState.a((byte) -107, 16, param1);
         }
-        return bb.a((byte) -107, 16, param1);
+        return IndexedSpriteState.a((byte) -107, 16, param1);
     }
 
     PotEvent(int param0, int param1) {

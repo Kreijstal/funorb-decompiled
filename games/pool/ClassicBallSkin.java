@@ -29,7 +29,7 @@ final class ClassicBallSkin extends BallSkin {
         return SingleChildWidget.a(param1, 16, 1);
     }
 
-    final void a(di param0, byte param1) {
+    final void a(ResourceArchive param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -39,12 +39,12 @@ final class ClassicBallSkin extends BallSkin {
         RuntimeException var3 = null;
         var4 = Pool.field_O;
         try {
-          this.field_a = new eg[]{this.g(-930305852), eg.a(param0, "", "balls/CLASSIC/ball1"), eg.a(param0, "", "balls/CLASSIC/ball2"), eg.a(param0, "", "balls/CLASSIC/ball3"), eg.a(param0, "", "balls/CLASSIC/ball4"), eg.a(param0, "", "balls/CLASSIC/ball5"), eg.a(param0, "", "balls/CLASSIC/ball6"), eg.a(param0, "", "balls/CLASSIC/ball7"), eg.a(param0, "", "balls/CLASSIC/ball8"), eg.a(param0, "", "balls/CLASSIC/ball9"), eg.a(param0, "", "balls/CLASSIC/ball10"), eg.a(param0, "", "balls/CLASSIC/ball11"), eg.a(param0, "", "balls/CLASSIC/ball12"), eg.a(param0, "", "balls/CLASSIC/ball13"), eg.a(param0, "", "balls/CLASSIC/ball14"), eg.a(param0, "", "balls/CLASSIC/ball15")};
+          this.field_a = new MeshBuilder[]{this.g(-930305852), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball1"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball2"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball3"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball4"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball5"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball6"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball7"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball8"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball9"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball10"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball11"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball12"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball13"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball14"), MeshBuilder.loadFromArchive(param0, "", "balls/CLASSIC/ball15")};
           if (param1 != 117) {
             return;
           }
           for (var3_int = 1; this.field_a.length > var3_int; var3_int++) {
-            this.field_a[var3_int].a(8, 8, 8, 4);
+            this.field_a[var3_int].scaleVertices(8, 8, 8, 4);
             IsaacCipher.a(this.field_a[var3_int], 0);
           }
           return;
@@ -58,22 +58,22 @@ final class ClassicBallSkin extends BallSkin {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(int param0, di param1) {
+    final void a(int param0, ResourceArchive param1) {
         Sprite[] dupTemp$0 = null;
         try {
-          dupTemp$0 = aj.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
+          dupTemp$0 = NameEntryPopup.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
           this.field_e = dupTemp$0;
           d.field_a = dupTemp$0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "mf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_n = null;
         if (param0 != 1) {
           ClassicBallSkin.j(26);
@@ -82,12 +82,12 @@ final class ClassicBallSkin extends BallSkin {
 
     final static void j(int param0) {
         if (param0 != 1) {
-          nm var2 = (nm) null;
-          ClassicBallSkin.a((byte) -32, 29, (nm) null, (nm) null, -126, -60);
-          sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, UiWidget.field_A);
+          NineSliceFrame var2 = (NineSliceFrame) null;
+          ClassicBallSkin.a((byte) -32, 29, (NineSliceFrame) null, (NineSliceFrame) null, -126, -60);
+          sa.field_f = new QuickChatHelpDialog(tq.field_m, dg.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A);
           return;
         }
-        sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, UiWidget.field_A);
+        sa.field_f = new QuickChatHelpDialog(tq.field_m, dg.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A);
     }
 
     ClassicBallSkin() {
@@ -101,9 +101,9 @@ final class ClassicBallSkin extends BallSkin {
         return 0 == param1 ? EmailAvailabilityValidator.ballsetUsa8Group0 : PolarTableScene.ballsetUsa8Group1;
     }
 
-    final static void a(byte param0, int param1, nm param2, nm param3, int param4, int param5) {
+    final static void a(byte param0, int param1, NineSliceFrame param2, NineSliceFrame param3, int param4, int param5) {
         td.field_e = param2;
-        qi.field_e = param1;
+        IterableDualLinkDeque.field_e = param1;
         NineBallRules.field_h = param5;
         if (param0 > -24) {
           return;
@@ -112,7 +112,7 @@ final class ClassicBallSkin extends BallSkin {
           rm.field_b = param4;
           bk.field_m = param3;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "mf.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mf.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

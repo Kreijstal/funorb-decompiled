@@ -6,7 +6,7 @@ final class ef {
     int field_d;
     int field_a;
     int field_b;
-    static vh field_c;
+    static UiComponent field_c;
 
     final static String a(String param0, String param1, byte param2, String param3) {
         int var6 = 0;
@@ -63,7 +63,7 @@ final class ef {
                       var4 = param1.toLowerCase();
                       break;
                     }
-                    if (var12 > 0 && (vq.a(var4.charAt(var12 - 1), param2 ^ 22991) ||
+                    if (var12 > 0 && (ContextMenu.a(var4.charAt(var12 - 1), param2 ^ 22991) ||
                       var4.charAt(var12 - 1) == 35)) {
                       if (var4.charAt(var12 - 1) != 35) {
                         discarded$0 = ((StringBuilder) (var5)).append(param1.substring(var11, 1 + var12));
@@ -75,7 +75,7 @@ final class ef {
                       continue;
                     }
                     if (var4.length() > var12 + var10 &&
-                      vq.a(var4.charAt(var12 + var10), 22987)) {
+                      ContextMenu.a(var4.charAt(var12 + var10), 22987)) {
                       discarded$3 = ((StringBuilder) (var5)).append(param1.substring(var11, var12 + 1));
                       var11 = 1 + var12;
                       continue;
@@ -96,7 +96,7 @@ final class ef {
             }
           }
           if (param2 != 4) {
-            field_c = (vh) null;
+            field_c = (UiComponent) null;
           }
           if (var5 == null) {
             stackIn_38_0 = (String) (param1);
@@ -126,30 +126,30 @@ final class ef {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        cm.field_L = new String[cd.field_a];
-        cm.field_L[11] = wc.rule22;
-        cm.field_L[18] = vq.rule12;
-        cm.field_L[15] = jd.rule04;
-        cm.field_L[9] = ab.rule01;
-        cm.field_L[20] = p.rule14;
-        cm.field_L[4] = kf.rule05;
+        LocalGameSetupScreen.field_L = new String[cd.field_a];
+        LocalGameSetupScreen.field_L[11] = wc.rule22;
+        LocalGameSetupScreen.field_L[18] = ContextMenu.rule12;
+        LocalGameSetupScreen.field_L[15] = jd.rule04;
+        LocalGameSetupScreen.field_L[9] = ab.rule01;
+        LocalGameSetupScreen.field_L[20] = ModelInstance.rule14;
+        LocalGameSetupScreen.field_L[4] = kf.rule05;
         if (param0 >= -12) {
           String var2 = (String) null;
           ef.a(20, (Sprite) null, (String) null);
         }
-        cm.field_L[6] = DateInputWidget.rule00;
-        cm.field_L[21] = il.rule21;
-        cm.field_L[7] = CheckboxWidget.rule03;
-        cm.field_L[13] = nm.rule20;
-        cm.field_L[16] = MouseHandler.rule10;
-        cm.field_L[19] = Under13NoticePanel.rule13;
-        cm.field_L[5] = o.rule02;
-        cm.field_L[17] = NanoTickClock.rule11;
+        LocalGameSetupScreen.field_L[6] = DateInputWidget.rule00;
+        LocalGameSetupScreen.field_L[21] = il.rule21;
+        LocalGameSetupScreen.field_L[7] = CheckboxWidget.rule03;
+        LocalGameSetupScreen.field_L[13] = NineSliceFrame.rule20;
+        LocalGameSetupScreen.field_L[16] = MouseHandler.rule10;
+        LocalGameSetupScreen.field_L[19] = Under13NoticePanel.rule13;
+        LocalGameSetupScreen.field_L[5] = UiComponentNode.rule02;
+        LocalGameSetupScreen.field_L[17] = NanoTickClock.rule11;
     }
 
     final static void a(int param0, Sprite param1, String param2) {
@@ -160,19 +160,19 @@ final class ef {
           }
           ProgressDialog.field_gb = param1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ef.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ef.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2) {
-        oq var3 = ej.field_j;
-        var3.b(false, param2);
+        CipherPacketBuffer var3 = JaggrabDownloader.field_j;
+        var3.writeCipheredOpcode(false, param2);
         var3.a(param1, false);
         var3.a(10, false);
         var3.writeShort((byte) -81, param0);
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         if (param0 != 1) {
           rmXFromFriends = (String) null;

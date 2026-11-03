@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Bzip2Decoder {
-    private static uq field_a;
+    private static Bzip2DecoderState field_a;
 
-    private final static int readBits(int bitCount, uq state) {
+    private final static int readBits(int bitCount, Bzip2DecoderState state) {
         int var2;
         while (state.field_F < bitCount) {
           state.field_h = state.field_h << 8 | state.field_B[state.field_u] & 255;
@@ -35,7 +35,7 @@ final class Bzip2Decoder {
           field_a.field_h = 0;
           field_a.field_s = 0;
           field_a.field_q = 0;
-          Bzip2Decoder.e(field_a);
+          Bzip2Decoder.decodeBlocks(field_a);
           param1 = param1 - field_a.field_t;
           field_a.field_B = null;
           field_a.field_g = null;
@@ -44,26 +44,26 @@ final class Bzip2Decoder {
         return stackIn_2_0;
     }
 
-    private final static byte readByte(uq state) {
+    private final static byte readByte(Bzip2DecoderState state) {
         return (byte)Bzip2Decoder.readBits(8, state);
     }
 
-    private final static byte readBit(uq state) {
+    private final static byte readBit(Bzip2DecoderState state) {
         return (byte)Bzip2Decoder.readBits(1, state);
     }
 
-    private final static void buildSymbolMap(uq state) {
+    private final static void buildSymbolMap(Bzip2DecoderState state) {
         int var1 = 0;
         state.field_j = 0;
         for (var1 = 0; var1 < 256; var1++) {
-          if (state.field_m[var1]) {
-            state.field_k[state.field_j] = (byte)var1;
+          if (state.usedBytes[var1]) {
+            state.alphabetBytes[state.field_j] = (byte)var1;
             state.field_j = state.field_j + 1;
           }
         }
     }
 
-    private final static void emitBlock(uq param0) {
+    private final static void emitBlock(Bzip2DecoderState param0) {
         int var1;
         int var2;
         int var3;
@@ -243,7 +243,7 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static void e(uq param0) {
+    private final static void decodeBlocks(Bzip2DecoderState param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -341,20 +341,20 @@ final class Bzip2Decoder {
           for (var4 = 0; var4 < 16; var4++) {
             var1 = Bzip2Decoder.readBit(param0);
             if (var1 != 1) {
-              param0.field_x[var4] = false;
+              param0.usedByteGroups[var4] = false;
             } else {
-              param0.field_x[var4] = true;
+              param0.usedByteGroups[var4] = true;
             }
           }
           for (var4 = 0; var4 < 256; var4++) {
-            param0.field_m[var4] = false;
+            param0.usedBytes[var4] = false;
           }
           for (var4 = 0; var4 < 16; var4++) {
-            if (param0.field_x[var4]) {
+            if (param0.usedByteGroups[var4]) {
               for (var5 = 0; var5 < 16; var5++) {
                 var1 = Bzip2Decoder.readBit(param0);
                 if (var1 == 1) {
-                  param0.field_m[var4 * 16 + var5] = true;
+                  param0.usedBytes[var4 * 16 + var5] = true;
                 }
               }
             }
@@ -407,7 +407,7 @@ final class Bzip2Decoder {
               while (true) {
                 var1 = Bzip2Decoder.readBit(param0);
                 if (var1 == 0) {
-                  param0.field_J[var6][var4] = (byte)var17;
+                  param0.huffmanCodeLengths[var6][var4] = (byte)var17;
                   var4++;
                   break;
                 }
@@ -424,36 +424,36 @@ final class Bzip2Decoder {
             var2 = 32;
             var3 = 0;
             for (var4 = 0; var4 < var7; var4++) {
-              if (param0.field_J[var6][var4] > var3) {
-                var3 = param0.field_J[var6][var4];
+              if (param0.huffmanCodeLengths[var6][var4] > var3) {
+                var3 = param0.huffmanCodeLengths[var6][var4];
               }
-              if (param0.field_J[var6][var4] < var2) {
-                var2 = param0.field_J[var6][var4];
+              if (param0.huffmanCodeLengths[var6][var4] < var2) {
+                var2 = param0.huffmanCodeLengths[var6][var4];
               }
             }
-            Bzip2Decoder.buildHuffmanTables(param0.field_b[var6], param0.field_d[var6], param0.field_n[var6], param0.field_J[var6], var2, var3, var7);
-            param0.field_v[var6] = var2;
+            Bzip2Decoder.buildHuffmanTables(param0.field_b[var6], param0.field_d[var6], param0.field_n[var6], param0.huffmanCodeLengths[var6], var2, var3, var7);
+            param0.minimumCodeLengths[var6] = var2;
           }
           var10 = param0.field_j + 1;
           var11 = -1;
           var12 = 0;
           for (var4 = 0; var4 <= 255; var4++) {
-            param0.field_I[var4] = 0;
+            param0.byteFrequencies[var4] = 0;
           }
           var29 = 4095;
           for (var27 = 15; var27 >= 0; var27--) {
             for (var28 = 15; var28 >= 0; var28--) {
-              param0.field_G[var29] = (byte)(var27 * 16 + var28);
+              param0.moveToFrontBytes[var29] = (byte)(var27 * 16 + var28);
               var29--;
             }
-            param0.field_o[var27] = var29 + 1;
+            param0.moveToFrontBlockStarts[var27] = var29 + 1;
           }
           var14 = 0;
           if (var12 == 0) {
             var11++;
             var12 = 50;
             var21 = param0.field_A[var11];
-            var22 = param0.field_v[var21];
+            var22 = param0.minimumCodeLengths[var21];
             var23 = param0.field_b[var21];
             var25 = param0.field_n[var21];
             var24 = param0.field_d[var21];
@@ -471,18 +471,18 @@ final class Bzip2Decoder {
             if (var13 == var10) {
               param0.field_l = 0;
               param0.field_C = (byte) 0;
-              param0.field_w[0] = 0;
+              param0.byteBucketPositions[0] = 0;
               for (var4 = 1; var4 <= 256; var4++) {
-                param0.field_w[var4] = param0.field_I[var4 - 1];
+                param0.byteBucketPositions[var4] = param0.byteFrequencies[var4 - 1];
               }
               for (var4 = 1; var4 <= 256; var4++) {
-                param0.field_w[var4] = param0.field_w[var4] + param0.field_w[var4 - 1];
+                param0.byteBucketPositions[var4] = param0.byteBucketPositions[var4] + param0.byteBucketPositions[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
                 var1 = (byte)(BallSkin.field_c[var4] & 255);
-                dupTemp$1 = param0.field_w[var1 & 255];
+                dupTemp$1 = param0.byteBucketPositions[var1 & 255];
                 BallSkin.field_c[dupTemp$1] = BallSkin.field_c[dupTemp$1] | var4 << 8;
-                param0.field_w[var1 & 255] = param0.field_w[var1 & 255] + 1;
+                param0.byteBucketPositions[var1 & 255] = param0.byteBucketPositions[var1 & 255] + 1;
               }
               param0.field_y = BallSkin.field_c[param0.field_E] >> 8;
               param0.field_p = 0;
@@ -504,59 +504,59 @@ final class Bzip2Decoder {
               var13 != 1) {
               var33 = var13 - 1;
               if (var33 < 16) {
-                var30 = param0.field_o[0];
-                var1 = param0.field_G[var30 + var33];
+                var30 = param0.moveToFrontBlockStarts[0];
+                var1 = param0.moveToFrontBytes[var30 + var33];
                 while (var33 > 3) {
                   var34 = var30 + var33;
-                  param0.field_G[var34] = param0.field_G[var34 - 1];
-                  param0.field_G[var34 - 1] = param0.field_G[var34 - 2];
-                  param0.field_G[var34 - 2] = param0.field_G[var34 - 3];
-                  param0.field_G[var34 - 3] = param0.field_G[var34 - 4];
+                  param0.moveToFrontBytes[var34] = param0.moveToFrontBytes[var34 - 1];
+                  param0.moveToFrontBytes[var34 - 1] = param0.moveToFrontBytes[var34 - 2];
+                  param0.moveToFrontBytes[var34 - 2] = param0.moveToFrontBytes[var34 - 3];
+                  param0.moveToFrontBytes[var34 - 3] = param0.moveToFrontBytes[var34 - 4];
                   var33 -= 4;
                 }
                 while (var33 > 0) {
-                  param0.field_G[var30 + var33] = param0.field_G[var30 + var33 - 1];
+                  param0.moveToFrontBytes[var30 + var33] = param0.moveToFrontBytes[var30 + var33 - 1];
                   var33--;
                 }
-                param0.field_G[var30] = (byte)var1;
+                param0.moveToFrontBytes[var30] = (byte)var1;
               } else {
                 var31 = var33 / 16;
                 var32 = var33 % 16;
-                var35 = param0.field_o[var31] + var32;
+                var35 = param0.moveToFrontBlockStarts[var31] + var32;
                 var30 = var35;
-                var1 = param0.field_G[var35];
-                while (var35 > param0.field_o[var31]) {
-                  param0.field_G[var35] = param0.field_G[var35 - 1];
+                var1 = param0.moveToFrontBytes[var35];
+                while (var35 > param0.moveToFrontBlockStarts[var31]) {
+                  param0.moveToFrontBytes[var35] = param0.moveToFrontBytes[var35 - 1];
                   var35--;
                 }
-                param0.field_o[var31] = param0.field_o[var31] + 1;
+                param0.moveToFrontBlockStarts[var31] = param0.moveToFrontBlockStarts[var31] + 1;
                 while (var31 > 0) {
-                  param0.field_o[var31] = param0.field_o[var31] - 1;
-                  param0.field_G[param0.field_o[var31]] = param0.field_G[param0.field_o[var31 - 1] + 16 - 1];
+                  param0.moveToFrontBlockStarts[var31] = param0.moveToFrontBlockStarts[var31] - 1;
+                  param0.moveToFrontBytes[param0.moveToFrontBlockStarts[var31]] = param0.moveToFrontBytes[param0.moveToFrontBlockStarts[var31 - 1] + 16 - 1];
                   var31--;
                 }
-                param0.field_o[0] = param0.field_o[0] - 1;
-                param0.field_G[param0.field_o[0]] = (byte)var1;
-                if (param0.field_o[0] == 0) {
+                param0.moveToFrontBlockStarts[0] = param0.moveToFrontBlockStarts[0] - 1;
+                param0.moveToFrontBytes[param0.moveToFrontBlockStarts[0]] = (byte)var1;
+                if (param0.moveToFrontBlockStarts[0] == 0) {
                   var29 = 4095;
                   for (var27 = 15; var27 >= 0; var27--) {
                     for (var28 = 15; var28 >= 0; var28--) {
-                      param0.field_G[var29] = param0.field_G[param0.field_o[var27] + var28];
+                      param0.moveToFrontBytes[var29] = param0.moveToFrontBytes[param0.moveToFrontBlockStarts[var27] + var28];
                       var29--;
                     }
-                    param0.field_o[var27] = var29 + 1;
+                    param0.moveToFrontBlockStarts[var27] = var29 + 1;
                   }
                 }
               }
-              dupTemp$0 = param0.field_k[var1 & 255] & 255;
-              param0.field_I[dupTemp$0] = param0.field_I[dupTemp$0] + 1;
-              BallSkin.field_c[var14] = param0.field_k[var1 & 255] & 255;
+              dupTemp$0 = param0.alphabetBytes[var1 & 255] & 255;
+              param0.byteFrequencies[dupTemp$0] = param0.byteFrequencies[dupTemp$0] + 1;
+              BallSkin.field_c[var14] = param0.alphabetBytes[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
                 var12 = 50;
                 var21 = param0.field_A[var11];
-                var22 = param0.field_v[var21];
+                var22 = param0.minimumCodeLengths[var21];
                 var23 = param0.field_b[var21];
                 var25 = param0.field_n[var21];
                 var24 = param0.field_d[var21];
@@ -587,7 +587,7 @@ final class Bzip2Decoder {
                 var11++;
                 var12 = 50;
                 var21 = param0.field_A[var11];
-                var22 = param0.field_v[var21];
+                var22 = param0.minimumCodeLengths[var21];
                 var23 = param0.field_b[var21];
                 var25 = param0.field_n[var21];
                 var24 = param0.field_d[var21];
@@ -604,8 +604,8 @@ final class Bzip2Decoder {
             } while (var13 == 0 ||
               var13 == 1);
             var15++;
-            var1 = param0.field_k[param0.field_G[param0.field_o[0]] & 255];
-            param0.field_I[var1 & 255] = param0.field_I[var1 & 255] + var15;
+            var1 = param0.alphabetBytes[param0.moveToFrontBytes[param0.moveToFrontBlockStarts[0]] & 255];
+            param0.byteFrequencies[var1 & 255] = param0.byteFrequencies[var1 & 255] + var15;
             while (var15 > 0) {
               BallSkin.field_c[var14] = var1 & 255;
               var14++;
@@ -616,6 +616,6 @@ final class Bzip2Decoder {
     }
 
     static {
-        field_a = new uq();
+        field_a = new Bzip2DecoderState();
     }
 }

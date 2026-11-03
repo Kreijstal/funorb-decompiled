@@ -13,7 +13,7 @@ final class hf {
         int var4 = 0;
         int var5 = Pool.field_O;
         try {
-          re.field_e = param1;
+          LoginPayload.field_e = param1;
           lb.field_P = param0;
           for (var3_int = 0; var3_int < lb.field_P.length; var3_int++) {
             for (var4 = 0; var4 < lb.field_P[var3_int].length; var4++) {
@@ -26,7 +26,7 @@ final class hf {
             multiconstSimilarRating = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hf.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hf.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class hf {
           return jc.field_i;
         }
         if (var2 == 0) {
-          return v.field_a;
+          return LimitedRandomAccessFile.field_a;
         }
         if (1 == var2) {
           return dq.field_i;
@@ -50,7 +50,7 @@ final class hf {
         return null;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 0) {
           field_d = (int[]) null;
         }

@@ -9,23 +9,23 @@ abstract class id {
 
     abstract void a(java.awt.Component param0, int param1);
 
-    final static vh a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12) {
-        vh var13 = null;
+    final static UiComponent a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12) {
+        UiComponent var13 = null;
         RuntimeException var13_ref = null;
-        vh stackIn_1_0 = null;
+        UiComponent stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var13 = new vh((long)param1, (vh) null);
-          var13.field_F = TikiBallSkin.a(param12, (byte) 20, param4);
-          var13.field_Gb = TikiBallSkin.a(param7, (byte) 20, param10);
-          var13.field_X = TikiBallSkin.a(param0, (byte) 20, param11);
-          var13.field_Kb = TikiBallSkin.a(param3, (byte) 20, param6);
-          var13.field_Y = TikiBallSkin.a(param5, (byte) 20, param8);
-          var13.field_N = param2;
-          var13.field_I = param9;
+          var13 = new UiComponent((long)param1, (UiComponent) null);
+          var13.frameSprites = TikiBallSkin.a(param12, (byte) 20, param4);
+          var13.activeFrameSprites = TikiBallSkin.a(param7, (byte) 20, param10);
+          var13.capturedFrameSprites = TikiBallSkin.a(param0, (byte) 20, param11);
+          var13.selectedFrameSprites = TikiBallSkin.a(param3, (byte) 20, param6);
+          var13.disabledFrameSprites = TikiBallSkin.a(param5, (byte) 20, param8);
+          var13.textColor = param2;
+          var13.font = param9;
           stackIn_1_0 = var13;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -38,7 +38,7 @@ abstract class id {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -57,7 +57,7 @@ abstract class id {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("vo");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
               if (param2 >= -41) {
                 field_c = (CueStick) null;
@@ -83,7 +83,7 @@ abstract class id {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -96,7 +96,7 @@ abstract class id {
         if (param0 >= -8) {
           return;
         }
-        ug.field_u = hj.field_l;
+        SocketArchiveNetworkClient.field_u = hj.field_l;
         PoolMatchController.field_X = 0;
         KillerRules.field_f = 0;
         IsaacCipher.field_d = 0;
@@ -140,7 +140,7 @@ abstract class id {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        oq var27 = null;
+        CipherPacketBuffer var27 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
@@ -149,14 +149,14 @@ abstract class id {
           if (param0 < 95) {
             id.a(33, true);
           }
-          var27 = kn.field_e;
+          var27 = PlayerContextMenu.field_e;
           var2 = var27.readUnsignedByte(-107);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(-1034);
-            var4 = (eh) (wg.field_Lb.c((byte) -36));
+            var4 = (eh) (StateIconLabel.field_Lb.c((byte) -36));
             while (var4 != null) {
               if (var3 != var4.field_A) {
-                var4 = (eh) (wg.field_Lb.f((byte) -5));
+                var4 = (eh) (StateIconLabel.field_Lb.f((byte) -5));
                 continue;
               }
               break;
@@ -168,17 +168,17 @@ abstract class id {
             var5 = var27.readUnsignedByte(-79);
             if (0 != var5) {
               var6 = var4.field_r;
-              rq.field_y[0].field_b = null;
-              rq.field_y[0].field_c = false;
-              rq.field_y[0].field_f = di.field_j;
+              MusicCrossfadeStream.field_y[0].field_b = null;
+              MusicCrossfadeStream.field_y[0].field_c = false;
+              MusicCrossfadeStream.field_y[0].field_f = ResourceArchive.field_j;
               var7 = var4.field_v;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                rq.field_y[var8_int].field_f = var27.j(-76);
-                rq.field_y[var8_int].field_c = false;
+                MusicCrossfadeStream.field_y[var8_int].field_f = var27.j(-76);
+                MusicCrossfadeStream.field_y[var8_int].field_c = false;
                 if (1 != var27.readUnsignedByte(-60)) {
-                  rq.field_y[var8_int].field_b = null;
+                  MusicCrossfadeStream.field_y[var8_int].field_b = null;
                 } else {
-                  rq.field_y[var8_int].field_b = var27.j(-126);
+                  MusicCrossfadeStream.field_y[var8_int].field_b = var27.j(-126);
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -201,12 +201,12 @@ abstract class id {
               if (0 < var18) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var27.readUnsignedByte(-105);
-                  var21 = rq.field_y[var20].field_f;
+                  var21 = MusicCrossfadeStream.field_y[var20].field_f;
                   var22 = var27.readLong(-412303328);
                   var24 = var27.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = rq.field_y[var20].field_b;
+                    var9[0][var12] = MusicCrossfadeStream.field_y[var20].field_b;
                     var10[0][var12] = var22;
                     var12++;
                     for (var25 = 0; var25 < var7; var25++) {
@@ -216,8 +216,8 @@ abstract class id {
                     }
                   }
                   if (var21 != null &&
-                    or.a((byte) 3, var21)) {
-                    var8[1][var13] = di.field_j;
+                    BallEvent.a((byte) 3, var21)) {
+                    var8[1][var13] = ResourceArchive.field_j;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var27.position = var24;
@@ -229,10 +229,10 @@ abstract class id {
                     }
                   }
                   if (var6 > var14 &&
-                    !rq.field_y[var20].field_c) {
-                    rq.field_y[var20].field_c = true;
+                    !MusicCrossfadeStream.field_y[var20].field_c) {
+                    MusicCrossfadeStream.field_y[var20].field_c = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = rq.field_y[var20].field_b;
+                    var9[2][var14] = MusicCrossfadeStream.field_y[var20].field_b;
                     var10[2][var14] = var22;
                     var27.position = var24;
                     var14++;
@@ -268,13 +268,13 @@ abstract class id {
             var6_ref_oj.unlink((byte) -117);
             return;
           }
-          tc.a((Throwable) null, "HS1: " + t.a(112), -8555);
+          GrowableIntList.reportClientError((Throwable) null, "HS1: " + t.formatPacketDump(112), -8555);
           dn.c(-101);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "id.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "id.F(" + param0 + ')');
         }
     }
 
@@ -293,11 +293,11 @@ abstract class id {
           }
           var1 = wn.field_a;
           synchronized (var1) {
-            bl.field_s = ja.field_c;
+            WireframeQuad.field_s = ja.field_c;
             ti.field_e = ti.field_e + 1;
             if (0 > MessageDialog.field_xb) {
               for (var2 = 0; var2 < 112; var2++) {
-                vj.field_c[var2] = false;
+                TextLineLayout.field_c[var2] = false;
               }
               MessageDialog.field_xb = jq.field_g;
             } else {
@@ -305,10 +305,10 @@ abstract class id {
                 var2 = KeyHandler.field_b[jq.field_g];
                 jq.field_g = 127 & 1 + jq.field_g;
                 if (0 > var2) {
-                  vj.field_c[~var2] = false;
+                  TextLineLayout.field_c[~var2] = false;
                   continue;
                 }
-                vj.field_c[var2] = true;
+                TextLineLayout.field_c[var2] = true;
               }
             }
             ja.field_c = op.field_h;
@@ -317,7 +317,7 @@ abstract class id {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1_ref), "id.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "id.C(" + param0 + ')');
         }
     }
 
@@ -345,14 +345,14 @@ abstract class id {
             if (param4 != 23) {
               id.c(-44);
             }
-            param2[0].c(param3, param0);
-            param2[2].c(-var6 + (param1 + param3), param0);
+            param2[0].draw(param3, param0);
+            param2[2].draw(-var6 + (param1 + param3), param0);
             SoftwareRasterizer.saveClip(GameRules.field_a);
             SoftwareRasterizer.intersectClip(param3 + var5_int, param0, -var6 + (param3 + param1), param0 + param2[1].field_y);
             var8 = param3 + var5_int;
             var9 = param1 + param3 - var6;
             for (param3 = var8; param3 < var9; param3 = param3 + var7) {
-              param2[1].c(param3, param0);
+              param2[1].draw(param3, param0);
             }
             SoftwareRasterizer.restoreClip(GameRules.field_a);
             return;
@@ -368,7 +368,7 @@ abstract class id {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

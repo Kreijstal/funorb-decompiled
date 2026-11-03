@@ -27,7 +27,7 @@ final class ShotRecord extends IntrusiveNode {
     boolean field_t;
     int playerIndex;
     static int field_o;
-    static oc[] field_S;
+    static TriangleMesh[] field_S;
     int cueBallY;
     int groupBefore;
     int phase;
@@ -41,27 +41,27 @@ final class ShotRecord extends IntrusiveNode {
     int endResolution;
 
     final boolean hasPotted(byte param0, int param1) {
-        aa var3;
+        IntrusiveDequeCursor var3;
         int var4;
         PotEvent var5;
-        var3 = new aa(this.pottedBalls);
+        var3 = new IntrusiveDequeCursor(this.pottedBalls);
         var4 = 105 / ((param0 + 53) / 59);
-        var5 = (PotEvent) (var3.b((byte) -92));
+        var5 = (PotEvent) (var3.last((byte) -92));
         while (var5 != null) {
           if (var5.ballIndex == param1) {
             return true;
           }
-          var5 = (PotEvent) (var3.b(-108));
+          var5 = (PotEvent) (var3.previous(-108));
         }
         return false;
     }
 
-    final static tc b(boolean param0) {
+    final static GrowableIntList b(boolean param0) {
         if (!param0) {
           unableToDeleteFriend = (String) null;
-          return w.a(false, 1);
+          return w.createGrowableIntList(false, 1);
         }
-        return w.a(false, 1);
+        return w.createGrowableIntList(false, 1);
     }
 
     final String describe(int param0, PoolGameModel param1) {
@@ -82,7 +82,7 @@ final class ShotRecord extends IntrusiveNode {
           if (param0 != 1) {
             ShotRecord.b(false);
           }
-          var5 = "Shot " + this.shotNumber + " " + am.a(8, this.phase) + " player " + param1.field_h[this.playerIndex];
+          var5 = "Shot " + this.shotNumber + " " + TextWidgetPainter.a(8, this.phase) + " player " + param1.field_h[this.playerIndex];
           var3 = var5;
           var3Lifetime1 = var5;
           var3Lifetime2 = var5;
@@ -118,7 +118,7 @@ final class ShotRecord extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class ShotRecord extends IntrusiveNode {
         try {
           param0.a((int) this.field_l, false);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "qe.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qe.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -172,7 +172,7 @@ final class ShotRecord extends IntrusiveNode {
           }
           this.field_R.b((byte) 124, new dn(param0, param2));
           if (param1 != -14) {
-            field_S = (oc[]) null;
+            field_S = (TriangleMesh[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -185,12 +185,12 @@ final class ShotRecord extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        p.a(param3, param2 ^ 40844);
+        ModelInstance.a(param3, param2 ^ 40844);
         hp.a(param1, param3, param0, 30);
         if (param2 != -40960) {
           ShotRecord.b(false);
@@ -223,7 +223,7 @@ final class ShotRecord extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -284,7 +284,7 @@ final class ShotRecord extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var6), "qe.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var6), "qe.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -294,7 +294,7 @@ final class ShotRecord extends IntrusiveNode {
         int var4;
         int var5;
         var2 = param0;
-        var3 = im.field_fc;
+        var3 = LobbyPlayer.field_fc;
         if (var3 < 5) {
           var2 = var3 * var3 * 8192 / 1100;
           var4 = 1;
@@ -404,7 +404,7 @@ final class ShotRecord extends IntrusiveNode {
                 var4 = 1;
                 var5 = 1;
               }
-              IsaacCipher.field_b = cf.a(var2 * var5, false, var2 * var4);
+              IsaacCipher.field_b = SoundCache.a(var2 * var5, false, var2 * var4);
               return;
             }
             var3 = -var3 + 120;
@@ -455,7 +455,7 @@ final class ShotRecord extends IntrusiveNode {
           var4 = 1;
           var5 = 1;
         }
-        IsaacCipher.field_b = cf.a(var2 * var5, false, var2 * var4);
+        IsaacCipher.field_b = SoundCache.a(var2 * var5, false, var2 * var4);
     }
 
     final byte readMove(byte param0, PacketBuffer param1) {
@@ -521,7 +521,7 @@ final class ShotRecord extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -551,7 +551,7 @@ final class ShotRecord extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -611,7 +611,7 @@ final class ShotRecord extends IntrusiveNode {
           var4_ref.a(true, this.cueBallX);
           var4_ref.a(true, this.cueBallY);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "qe.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qe.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -829,7 +829,7 @@ final class ShotRecord extends IntrusiveNode {
     }
 
     final boolean d(int param0) {
-        if (this.endResolution == uk.field_a) {
+        if (this.endResolution == IntrusiveNodeHashTable.field_a) {
           return false;
         }
         if (param0 < 105) {
@@ -860,7 +860,7 @@ final class ShotRecord extends IntrusiveNode {
             return;
           }
           this.c(2, var3_int);
-          if ((pd.field_i & 2097152L) != 0L) {
+          if ((LinkButtonPainter.field_i & 2097152L) != 0L) {
             System.out.println("->S2C_END_SHOT: " + ab.a(this.endResolution, (byte) 10));
           }
           return;
@@ -874,7 +874,7 @@ final class ShotRecord extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -890,14 +890,14 @@ final class ShotRecord extends IntrusiveNode {
           if (param0 != 2) {
             return;
           }
-          if (uk.field_a == this.endResolution) {
+          if (IntrusiveNodeHashTable.field_a == this.endResolution) {
             this.endResolution = param1;
             return;
           }
           if (this.endResolution == param1) {
             return;
           }
-          tc.a(new Throwable(), "New end resolution 0b" + Integer.toString(this.endResolution, 2) + ": " + wd.b(param1, param0 ^ 87) + " does not match current one 0b" + Integer.toString(param1, 2) + ": " + wd.b(this.endResolution, 77), -8555);
+          GrowableIntList.reportClientError(new Throwable(), "New end resolution 0b" + Integer.toString(this.endResolution, 2) + ": " + TabbedPane.b(param1, param0 ^ 87) + " does not match current one 0b" + Integer.toString(param1, 2) + ": " + TabbedPane.b(this.endResolution, 77), -8555);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1021,7 +1021,7 @@ final class ShotRecord extends IntrusiveNode {
         this.field_x = 0L;
         this.field_l = (byte) 0;
         this.field_R = null;
-        this.endResolution = uk.field_a;
+        this.endResolution = IntrusiveNodeHashTable.field_a;
     }
 
     ShotRecord(int param0, int param1) {
@@ -1041,7 +1041,7 @@ final class ShotRecord extends IntrusiveNode {
         this.field_x = 0L;
         this.field_l = (byte) 0;
         this.field_R = null;
-        this.endResolution = uk.field_a;
+        this.endResolution = IntrusiveNodeHashTable.field_a;
         this.playerIndex = param1;
         this.shotNumber = param0;
     }

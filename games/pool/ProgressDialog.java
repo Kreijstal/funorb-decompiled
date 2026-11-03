@@ -4,12 +4,12 @@
 final class ProgressDialog extends ResizableDialog {
     static String tooltipExtraVisit;
     static Sprite field_gb;
-    static vh field_hb;
+    static UiComponent field_hb;
     static int[] field_ib;
     private String introductoryText;
     private String statusText;
     private ProgressBarWidget progressBar;
-    static vh field_qb;
+    static UiComponent field_qb;
     private boolean normalAnimationStopped;
     static int[] field_mb;
     private boolean redHighlightActive;
@@ -17,18 +17,18 @@ final class ProgressDialog extends ResizableDialog {
     final static void l(int param0) {
         int var3 = 0;
         int var1 = BufferedFile.field_h * BufferedFile.field_h;
-        int var2 = -(em.field_P * em.field_P) + var1;
+        int var2 = -(HighscoresScreen.field_P * HighscoresScreen.field_P) + var1;
         int var3Lifetime1;
         if (param0 == 23323) {
           var3 = StrongCacheEntry.field_J + (-StrongCacheEntry.field_J + cb.field_g) * var2 / var1;
-          fl.field_q.b(var3, 2147483647, tn.field_u, 640, 120);
-          mm.a(ja.field_b, cb.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
+          fl.field_q.setBounds(var3, 2147483647, RasterSnapshot.field_u, 640, 120);
+          Camera.a(ja.field_b, cb.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
           return;
         }
         field_ib = (int[]) null;
         var3Lifetime1 = StrongCacheEntry.field_J + (-StrongCacheEntry.field_J + cb.field_g) * var2 / var1;
-        fl.field_q.b(var3Lifetime1, 2147483647, tn.field_u, 640, 120);
-        mm.a(ja.field_b, cb.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
+        fl.field_q.setBounds(var3Lifetime1, 2147483647, RasterSnapshot.field_u, 640, 120);
+        Camera.a(ja.field_b, cb.field_g - 24, 0, 640, 5, 118, CueAim.field_j);
     }
 
     final void drawDialogFrame(int param0, int param1, int param2) {
@@ -55,11 +55,11 @@ final class ProgressDialog extends ResizableDialog {
           this.redHighlightActive = false;
           this.addChild(true, this.progressBar);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "wa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void n(int param0) {
+    public static void releaseStatics(int param0) {
         tooltipExtraVisit = null;
         field_qb = null;
         field_ib = null;
@@ -115,7 +115,7 @@ final class ProgressDialog extends ResizableDialog {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -135,29 +135,29 @@ final class ProgressDialog extends ResizableDialog {
           field_gb = (Sprite) null;
           if (null != PlasmaBallSkin.field_m) {
             if (PlasmaBallSkin.field_m.field_i != null) {
-              PlasmaBallSkin.field_m.field_i.field_Ib = false;
+              PlasmaBallSkin.field_m.field_i.selected = false;
             }
             PlasmaBallSkin.field_m = null;
-            pf.field_c = null;
+            WidgetStyleLayer.field_c = null;
             return;
           }
           PlasmaBallSkin.field_m = null;
-          pf.field_c = null;
+          WidgetStyleLayer.field_c = null;
           return;
         }
         if (null == PlasmaBallSkin.field_m) {
           PlasmaBallSkin.field_m = null;
-          pf.field_c = null;
+          WidgetStyleLayer.field_c = null;
           return;
         }
         if (PlasmaBallSkin.field_m.field_i != null) {
-          PlasmaBallSkin.field_m.field_i.field_Ib = false;
+          PlasmaBallSkin.field_m.field_i.selected = false;
           PlasmaBallSkin.field_m = null;
-          pf.field_c = null;
+          WidgetStyleLayer.field_c = null;
           return;
         }
         PlasmaBallSkin.field_m = null;
-        pf.field_c = null;
+        WidgetStyleLayer.field_c = null;
     }
 
     final void stopNormalAnimation(int param0) {

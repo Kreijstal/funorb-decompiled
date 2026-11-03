@@ -999,7 +999,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

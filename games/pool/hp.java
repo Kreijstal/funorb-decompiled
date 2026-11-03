@@ -12,7 +12,7 @@ final class hp {
         if (param0) {
           hp.a(-113, false, -92, -109);
         }
-        return tq.a(false, c.field_d, di.field_a);
+        return tq.a(false, c.field_d, ResourceArchive.field_a);
     }
 
     final static void openSupportPage(byte param0, java.applet.Applet param1) {
@@ -28,7 +28,7 @@ final class hp {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-              param1.getAppletContext().showDocument(p.a((byte) 79, var2, param1), "_top");
+              param1.getAppletContext().showDocument(ModelInstance.a((byte) 79, var2, param1), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -36,7 +36,7 @@ final class hp {
             }
             if (param0 != 83) {
               var3 = (String) null;
-              hp.a((di) null, (String) null, -87, (String) null);
+              hp.a((ResourceArchive) null, (String) null, -87, (String) null);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -49,7 +49,7 @@ final class hp {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -90,11 +90,11 @@ final class hp {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static String a(di param0, String param1, int param2, String param3) {
+    final static String a(ResourceArchive param0, String param1, int param2, String param3) {
         RuntimeException var4 = null;
         int[] var5 = null;
         String stackIn_3_0 = null;
@@ -140,11 +140,11 @@ final class hp {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_d = null;
         field_c = null;
         playerX2AreOfferingRematch = null;
@@ -161,21 +161,21 @@ final class hp {
         if (!ArrayWidgetGroup.field_H) {
           return;
         }
-        e.field_a.a(param1, false);
+        e.field_a.updateRoot(param1, false);
         var5 = -29 / ((param3 + 12) / 33);
-        var4 = im.field_Ub.i(-1) ? 1 : 0;
+        var4 = LobbyPlayer.field_Ub.hasPressedItem(-1) ? 1 : 0;
         if (MatchingTextValidator.field_s != 0 &&
           var4 == 0) {
           param1 = false;
           th.b(-1);
         }
         if (param1) {
-          im.field_Ub.a((byte) 86, param2, param0);
+          LobbyPlayer.field_Ub.processPressedItems((byte) 86, param2, param0);
         }
         if (var4 != 0) {
-          e.field_a.a(param1, false);
+          e.field_a.updateRoot(param1, false);
         }
-        var6 = im.field_Ub.g(-1) + im.field_Ub.field_sb;
+        var6 = LobbyPlayer.field_Ub.getOpenChainWidth(-1) + LobbyPlayer.field_Ub.screenX;
         if (var6 > 640) {
           ProgressBarWidget.field_G = ProgressBarWidget.field_G + 5;
         } else {

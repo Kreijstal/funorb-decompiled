@@ -9,18 +9,18 @@ final class f {
     static int field_f;
     static int field_h;
     static int field_g;
-    static vh field_e;
+    static UiComponent field_e;
 
     final static int a(int param0, int param1) {
         int var2 = 0;
         if (0 == param1) {
-          var2 = ec.field_i;
+          var2 = BallDebugOverlay.field_i;
         }
         if (param1 == 1) {
           var2 = ol.field_e;
         }
         if (param1 == 2) {
-          var2 = di.field_e;
+          var2 = ResourceArchive.field_e;
         }
         if (param0 == 5) {
           return var2;
@@ -50,39 +50,39 @@ final class f {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
-    final static void a(int param0) {
+    final static void layoutLobbyPanels(int param0) {
         field_h = SoftwareRasterizer.height;
         fr.field_s = SoftwareRasterizer.width;
-        qi.a((byte) -95);
-        kg.field_l.a(BufferedFile.field_a.field_Db - 40 - 2, BufferedFile.field_a.field_gb, 0, 0, (byte) -124);
-        pm.field_m.b(0, 2147483647, 0, BirthDateValidator.field_m.field_gb, ad.field_x);
-        int var1 = 2 + ad.field_x;
-        c.field_e.b(!tq.field_p ? 0 : var1, 2147483647, 0, BirthDateValidator.field_m.field_gb, -(!tq.field_p ? 0 : var1) + BirthDateValidator.field_m.field_Db);
+        IterableDualLinkDeque.a((byte) -95);
+        kg.field_l.a(BufferedFile.field_a.height - 40 - 2, BufferedFile.field_a.width, 0, 0, (byte) -124);
+        pm.field_m.setBounds(0, 2147483647, 0, BirthDateValidator.field_m.width, ArchiveIndex.field_x);
+        int var1 = 2 + ArchiveIndex.field_x;
+        c.field_e.setBounds(!tq.field_p ? 0 : var1, 2147483647, 0, BirthDateValidator.field_m.width, -(!tq.field_p ? 0 : var1) + BirthDateValidator.field_m.height);
         da.a(true);
-        ProgressBarWidget.field_K.b(BufferedFile.field_a.field_Db - 40, 2147483647, 0, BufferedFile.field_a.field_gb, 40);
-        ll.field_d.b(0, 2147483647, 0, oi.field_n.field_gb, 30);
-        pk.field_a.b(30, 2147483647, 0, oi.field_n.field_gb, -70 + (oi.field_n.field_Db - 2));
-        MessageDialogContent.field_N.b(5, 2147483647, 5, 68, 30);
-        pp.field_c.b(5, param0 ^ 2147483599, 75, 78, 30);
-        KillerBallSkin.field_p.b(5, 2147483647, 155, 48, 30);
-        mm.field_g.b(5, 2147483647, 205, param0, 30);
+        ProgressBarWidget.field_K.setBounds(BufferedFile.field_a.height - 40, 2147483647, 0, BufferedFile.field_a.width, 40);
+        ll.field_d.setBounds(0, 2147483647, 0, oi.field_n.width, 30);
+        pk.field_a.setBounds(30, 2147483647, 0, oi.field_n.width, -70 + (oi.field_n.height - 2));
+        MessageDialogContent.field_N.setBounds(5, 2147483647, 5, 68, 30);
+        pp.field_c.setBounds(5, param0 ^ 2147483599, 75, 78, 30);
+        KillerBallSkin.field_p.setBounds(5, 2147483647, 155, 48, 30);
+        Camera.field_g.setBounds(5, 2147483647, 205, param0, 30);
         int var2 = tq.field_p ? 250 : 200;
-        mn.field_e.b(5, 2147483647, 5 + var2, -var2 + 363, 30);
-        l.field_f.b(5, param0 ^ 2147483599, 370, -10 + oi.field_n.field_gb - 365, 30);
-        BufferedSocket.field_m.a(TranslatedUiText.field_n, -5 + (pk.field_a.field_Db - 37), (byte) -112, 2, pk.field_a.field_gb - 10, 5, 37);
-        int var3 = (2 + oi.field_n.field_gb) / 2;
-        rn.field_f.b(oi.field_n.field_Db - 40, 2147483647, 0, -2 + var3, 40);
+        DualLinkDequeIterator.field_e.setBounds(5, 2147483647, 5 + var2, -var2 + 363, 30);
+        l.field_f.setBounds(5, param0 ^ 2147483599, 370, -10 + oi.field_n.width - 365, 30);
+        BufferedSocket.field_m.setScrollPaneBounds(TranslatedUiText.field_n, -5 + (pk.field_a.height - 37), (byte) -112, 2, pk.field_a.width - 10, 5, 37);
+        int var3 = (2 + oi.field_n.width) / 2;
+        DiskCacheWorker.field_f.setBounds(oi.field_n.height - 40, 2147483647, 0, -2 + var3, 40);
         if (!tq.field_p) {
           var3 = 0;
         }
-        uc.field_b.b(oi.field_n.field_Db - 40, param0 + 2147483599, var3, oi.field_n.field_gb - var3, 40);
+        uc.field_b.setBounds(oi.field_n.height - 40, param0 + 2147483599, var3, oi.field_n.width - var3, 40);
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_c = (double[][]) null;
         if (param0 < 57) {

@@ -39,7 +39,7 @@ final class co extends DateInputWidget {
           var15 = TriangleRasterizer.projectionCenterY + SoftwareRasterizer.clipTop + var15 / var11;
           SoftwareRasterizer.drawLineBlendedInclusive(var12, var13, var14, var15, param4, param3);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "co.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "co.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -57,8 +57,8 @@ final class co extends DateInputWidget {
           if (param1 > -79) {
             field_db = 112;
           }
-          param0 = o.a('_', "", param0, 1);
-          var3 = qa.a(param2, 0);
+          param0 = UiComponentNode.replaceChar('_', "", param0, 1);
+          var3 = qa.reverseString(param2, 0);
           stackIn_7_0 = (param0.indexOf(param2) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,11 +77,11 @@ final class co extends DateInputWidget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           field_ab = (int[]) null;
           field_ab = null;
@@ -152,7 +152,7 @@ final class co extends DateInputWidget {
         try {
           this.setWidgetBounds(param4, param2, param5, false, param3);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "co.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "co.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class co extends DateInputWidget {
           this.field_bb.listener = (WidgetListener) ((Object) param1);
           this.field_eb.listener = (WidgetListener) ((Object) param1);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "co.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "co.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -217,7 +217,7 @@ final class co extends DateInputWidget {
           }
           this.addChild(true, this.field_eb);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "co.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "co.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -248,9 +248,9 @@ final class co extends DateInputWidget {
         param3 = param3 + this.widgetY;
         param2 = param2 + this.widgetX;
         int var5 = 30 % ((-42 - param1) / 53);
-        this.a(param2, param3, 75, this.field_Z, dp.day);
+        this.a(param2, param3, 75, this.field_Z, TextureCache.day);
         this.a(param2, param3, 114, this.field_bb, pc.month);
-        this.a(param2, param3, 91, this.field_eb, bb.year);
+        this.a(param2, param3, 91, this.field_eb, IndexedSpriteState.year);
     }
 
     private final void a(int param0, int param1, int param2, UiWidget param3, String param4) {
@@ -260,7 +260,7 @@ final class co extends DateInputWidget {
         try {
           PoolUiText.field_a.drawCentered(param4, (param3.widgetWidth >> 1) + param0 + param3.widgetX, -5 + (param3.widgetY + param1), 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "co.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "co.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

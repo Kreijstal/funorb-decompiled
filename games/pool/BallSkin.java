@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class BallSkin {
-    static vh field_d;
-    eg[] field_a;
+    static UiComponent field_d;
+    MeshBuilder[] field_a;
     static int field_f;
     boolean field_g;
-    nc[] field_j;
+    ModelMesh[] field_j;
     Sprite[] field_e;
     private int[][] field_k;
     static IntrusiveDeque field_i;
@@ -21,7 +21,7 @@ abstract class BallSkin {
             this.a(-49, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "tm.DA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tm.DA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ abstract class BallSkin {
           this.a(param4, param2, param1, param3, -20263);
           this.field_j[param1].b(param3, param2);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "tm.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tm.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -51,10 +51,10 @@ abstract class BallSkin {
         int var3 = Pool.field_O;
         this.field_k = new int[16][];
         if (param0 > -124) {
-          this.field_j = (nc[]) null;
+          this.field_j = (ModelMesh[]) null;
         }
         for (var2 = 0; var2 < this.field_k.length; var2++) {
-          this.field_k[var2] = ta.a(new int[]{0, 0, 128, this.a(var2, true)}, -119);
+          this.field_k[var2] = ta.buildGradientPalette(new int[]{0, 0, 128, this.a(var2, true)}, -119);
         }
     }
 
@@ -100,7 +100,7 @@ abstract class BallSkin {
         int var6_intLifetime1;
         int var7Lifetime1;
         try {
-          if (no.field_n[param2] <= 0) {
+          if (Js5Transport.field_n[param2] <= 0) {
             return;
           }
           var8 = -param3[2] + param1[2];
@@ -109,7 +109,7 @@ abstract class BallSkin {
           var10 = param3[8] * var8 + (param3[7] * var7 + var6_int * param3[6]) >> 3;
           var9 = param3[4] * var7 + (param3[3] * var6_int + var8 * param3[5]) >> 3;
           if (param4 != -20263) {
-            this.field_a = (eg[]) null;
+            this.field_a = (MeshBuilder[]) null;
           }
           var8 = var8 * param3[11] + param3[9] * var6_int + var7 * param3[10] >> 16;
           if (var8 <= 0) {
@@ -127,7 +127,7 @@ abstract class BallSkin {
           var14 = var15;
           var12 = var14;
           for (var13 = 0; var13 < var15.length; var13++) {
-            ff.field_a[var13] = md.a(md.a(rb.b(no.field_n[param2] * rb.b(var15[var13], 65280) >>> 8, 973143808), rb.b(-16776974, rb.b(16711680, var15[var13]) * no.field_n[param2]) >>> 8), rb.b(-1912602369, no.field_n[param2] * rb.b(255, var15[var13]) >>> 8));
+            ff.field_a[var13] = md.a(md.a(ArchiveLoadSequence.b(Js5Transport.field_n[param2] * ArchiveLoadSequence.b(var15[var13], 65280) >>> 8, 973143808), ArchiveLoadSequence.b(-16776974, ArchiveLoadSequence.b(16711680, var15[var13]) * Js5Transport.field_n[param2]) >>> 8), ArchiveLoadSequence.b(-1912602369, Js5Transport.field_n[param2] * ArchiveLoadSequence.b(255, var15[var13]) >>> 8));
           }
           if (2147483647L > 64L * ((long)var11 * (long)var11)) {
             SoftwareRasterizer.a(var6_intLifetime1, var7Lifetime1, var11, 64, ff.field_a);
@@ -149,11 +149,11 @@ abstract class BallSkin {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    final eg g(int param0) {
+    final MeshBuilder g(int param0) {
         int var6 = 0;
         int var15 = 0;
         int var3;
@@ -172,15 +172,15 @@ abstract class BallSkin {
         int var26;
         int var27;
         int var28;
-        eg var29;
+        MeshBuilder var29;
         var28 = Pool.field_O;
-        var29 = new eg((3 + MatchingTextValidator.field_v) * (ViewportController.field_b + 1), 2 * (ViewportController.field_b * MatchingTextValidator.field_v), MatchingTextValidator.field_v);
+        var29 = new MeshBuilder((3 + MatchingTextValidator.field_v) * (ViewportController.field_b + 1), 2 * (ViewportController.field_b * MatchingTextValidator.field_v), MatchingTextValidator.field_v);
         if (param0 != -930305852) {
           field_h = (cd) null;
         }
-        var3 = var29.a(-383, -383, 384);
-        var4 = var29.a(384, -383, 384);
-        var5 = var29.a(-383, 384, 384);
+        var3 = var29.addVertex(-383, -383, 384);
+        var4 = var29.addVertex(384, -383, 384);
+        var5 = var29.addVertex(-383, 384, 384);
         var29.a((short)var3, (short)var4, (short)var5);
         for (var6 = 0; var6 < ViewportController.field_b; var6++) {
           var7 = Math.cos((double)var6 * 3.141592653589793 / (double)ViewportController.field_b) * 8.0;
@@ -192,15 +192,15 @@ abstract class BallSkin {
             var18 = Math.sin(3.141592653589793 * (double)(var15 * 2) / (double)MatchingTextValidator.field_v);
             var20 = Math.cos(3.141592653589793 * (double)(2 + var15 * 2) / (double)MatchingTextValidator.field_v);
             var22 = Math.sin((double)(2 * (var15 + 1)) * 3.141592653589793 / (double)MatchingTextValidator.field_v);
-            var24 = var29.a(PotEvent.a(4885, var16 * var9), PotEvent.a(4885, var9 * var18), PotEvent.a(4885, var7));
-            var25 = var29.a(PotEvent.a(4885, var20 * var9), PotEvent.a(param0 + 930310737, var9 * var22), PotEvent.a(param0 ^ -930300975, var7));
-            var26 = var29.a(PotEvent.a(4885, var13 * var16), PotEvent.a(4885, var13 * var18), PotEvent.a(4885, var11));
-            var27 = var29.a(PotEvent.a(4885, var20 * var13), PotEvent.a(4885, var13 * var22), PotEvent.a(4885, var11));
+            var24 = var29.addVertex(PotEvent.a(4885, var16 * var9), PotEvent.a(4885, var9 * var18), PotEvent.a(4885, var7));
+            var25 = var29.addVertex(PotEvent.a(4885, var20 * var9), PotEvent.a(param0 + 930310737, var9 * var22), PotEvent.a(param0 ^ -930300975, var7));
+            var26 = var29.addVertex(PotEvent.a(4885, var13 * var16), PotEvent.a(4885, var13 * var18), PotEvent.a(4885, var11));
+            var27 = var29.addVertex(PotEvent.a(4885, var20 * var13), PotEvent.a(4885, var13 * var22), PotEvent.a(4885, var11));
             if (var24 != var25) {
-              var29.a(var24, var26, var25, (byte) 0, (short) 96, this.a(true));
+              var29.addFace(var24, var26, var25, (byte) 0, (short) 96, this.a(true));
             }
             if (var26 != var27) {
-              var29.a(var27, var25, var26, (byte) 0, (short) 96, this.a(true));
+              var29.addFace(var27, var25, var26, (byte) 0, (short) 96, this.a(true));
             }
           }
         }
@@ -210,7 +210,7 @@ abstract class BallSkin {
 
     final void a(int param0) {
         if (this.field_a != null) {
-          this.field_j = new nc[this.field_a.length];
+          this.field_j = new ModelMesh[this.field_a.length];
         }
         if (param0 != 7096) {
           this.field_k = (int[][]) null;
@@ -218,7 +218,7 @@ abstract class BallSkin {
         this.f(-128);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         if (param0 != -22799) {
           field_i = (IntrusiveDeque) null;
@@ -236,13 +236,13 @@ abstract class BallSkin {
         return this.field_j.length;
     }
 
-    void a(int param0, di param1) {
+    void a(int param0, ResourceArchive param1) {
         try {
           if (param0 != 198123656) {
             this.h(32);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "tm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -253,13 +253,13 @@ abstract class BallSkin {
         return this.field_k[param0];
     }
 
-    void a(di param0, byte param1) {
+    void a(ResourceArchive param0, byte param1) {
         try {
           if (param1 != 117) {
             this.b(-29, 80);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "tm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -278,7 +278,7 @@ abstract class BallSkin {
             this.field_k = (int[][]) null;
           }
           if (param1 instanceof NineBallRules) {
-            stackIn_4_0 = or.nineBallNumbers[param0];
+            stackIn_4_0 = BallEvent.nineBallNumbers[param0];
             return stackIn_4_0;
           }
           if (this.c(2)) {
@@ -302,7 +302,7 @@ abstract class BallSkin {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -320,12 +320,12 @@ abstract class BallSkin {
         RuntimeException var4 = null;
         try {
           if (param0) {
-            this.field_a = (eg[]) null;
+            this.field_a = (MeshBuilder[]) null;
           }
           if (!this.field_g) {
-            this.field_j[param2] = (nc) (kh.field_gc.b(param1, this.field_a[param2], -25431));
+            this.field_j[param2] = (ModelMesh) (LobbyGame.field_gc.b(param1, this.field_a[param2], -25431));
           } else {
-            this.field_j[param2] = (nc) (kh.field_gc.a(param1, (byte) 103, this.field_a[param2]));
+            this.field_j[param2] = (ModelMesh) (LobbyGame.field_gc.a(param1, (byte) 103, this.field_a[param2]));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -338,7 +338,7 @@ abstract class BallSkin {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -361,10 +361,10 @@ abstract class BallSkin {
     void a(int param0, PoolGameModel param1) {
         try {
           if (param0 != 2147483647) {
-            this.field_j = (nc[]) null;
+            this.field_j = (ModelMesh[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "tm.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tm.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

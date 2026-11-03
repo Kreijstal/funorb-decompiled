@@ -9,29 +9,29 @@ final class FreePlayRules extends GameRules {
     static PaletteBitmapFont field_e;
     static String muChatPmFriendsOnly;
     static int field_g;
-    static uo[][] field_f;
+    static AlignedIconLabel[][] field_f;
 
     final static void c(byte param0) {
         int var1 = 0;
-        kh.field_Vb.field_Db = 240;
+        LobbyGame.field_Vb.height = 240;
         if (param0 < -68) {
-          kh.field_Vb.field_Fb = 3;
-          kh.field_Vb.field_ob = kh.field_Vb.field_F[1].field_A;
-          kh.field_Vb.field_eb = 120;
-          kh.field_Vb.field_qb = 160;
-          kh.field_Vb.field_cb = 0;
-          kh.field_Vb.field_gb = 320;
-          kh.field_Vb.field_V = kh.field_Vb.field_F[3].field_z;
-          var1 = kh.field_Vb.field_I.measureWrappedHeight(kh.field_Vb.field_nb, -kh.field_Vb.field_F[3].field_z + (kh.field_Vb.field_gb - kh.field_Vb.field_F[5].field_z), 2 + kh.field_Vb.field_I.baselineHeight);
-          NanoTickClock.field_t.field_gb = NanoTickClock.field_t.field_I.b(NanoTickClock.field_t.field_nb) + NanoTickClock.field_t.field_F[3].field_z + NanoTickClock.field_t.field_F[5].field_z;
-          NanoTickClock.field_t.field_qb = kh.field_Vb.field_F[3].field_z;
-          NanoTickClock.field_t.field_Db = 20;
-          NanoTickClock.field_t.field_eb = var1 + kh.field_Vb.field_F[1].field_A + 3;
-          rl.field_b.field_gb = rl.field_b.field_I.b(rl.field_b.field_nb) - (-rl.field_b.field_F[3].field_z - rl.field_b.field_F[5].field_z);
-          rl.field_b.field_Db = NanoTickClock.field_t.field_Db;
-          rl.field_b.field_eb = 3 + var1 + kh.field_Vb.field_F[1].field_A;
-          rl.field_b.field_qb = -kh.field_Vb.field_F[5].field_z + (kh.field_Vb.field_gb - rl.field_b.field_gb);
-          kh.field_Vb.field_Db = 3 + var1 + (kh.field_Vb.field_F[1].field_A + (NanoTickClock.field_t.field_Db + kh.field_Vb.field_F[7].field_A));
+          LobbyGame.field_Vb.horizontalAlignment = 3;
+          LobbyGame.field_Vb.contentOffsetY = LobbyGame.field_Vb.frameSprites[1].field_A;
+          LobbyGame.field_Vb.localY = 120;
+          LobbyGame.field_Vb.localX = 160;
+          LobbyGame.field_Vb.verticalAlignment = 0;
+          LobbyGame.field_Vb.width = 320;
+          LobbyGame.field_Vb.contentOffsetX = LobbyGame.field_Vb.frameSprites[3].field_z;
+          var1 = LobbyGame.field_Vb.font.measureWrappedHeight(LobbyGame.field_Vb.text, -LobbyGame.field_Vb.frameSprites[3].field_z + (LobbyGame.field_Vb.width - LobbyGame.field_Vb.frameSprites[5].field_z), 2 + LobbyGame.field_Vb.font.baselineHeight);
+          NanoTickClock.field_t.width = NanoTickClock.field_t.font.b(NanoTickClock.field_t.text) + NanoTickClock.field_t.frameSprites[3].field_z + NanoTickClock.field_t.frameSprites[5].field_z;
+          NanoTickClock.field_t.localX = LobbyGame.field_Vb.frameSprites[3].field_z;
+          NanoTickClock.field_t.height = 20;
+          NanoTickClock.field_t.localY = var1 + LobbyGame.field_Vb.frameSprites[1].field_A + 3;
+          rl.field_b.width = rl.field_b.font.b(rl.field_b.text) - (-rl.field_b.frameSprites[3].field_z - rl.field_b.frameSprites[5].field_z);
+          rl.field_b.height = NanoTickClock.field_t.height;
+          rl.field_b.localY = 3 + var1 + LobbyGame.field_Vb.frameSprites[1].field_A;
+          rl.field_b.localX = -LobbyGame.field_Vb.frameSprites[5].field_z + (LobbyGame.field_Vb.width - rl.field_b.width);
+          LobbyGame.field_Vb.height = 3 + var1 + (LobbyGame.field_Vb.frameSprites[1].field_A + (NanoTickClock.field_t.height + LobbyGame.field_Vb.frameSprites[7].field_A));
           return;
         }
     }
@@ -57,7 +57,7 @@ final class FreePlayRules extends GameRules {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class FreePlayRules extends GameRules {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -116,9 +116,9 @@ final class FreePlayRules extends GameRules {
         if (param1 != -32) {
           ShotRecord var4 = (ShotRecord) null;
           this.a(-52, (byte) -33, (ShotRecord) null);
-          return dp.field_k;
+          return TextureCache.field_k;
         }
-        return dp.field_k;
+        return TextureCache.field_k;
     }
 
     final boolean c(ShotRecord param0, int param1) {
@@ -143,7 +143,7 @@ final class FreePlayRules extends GameRules {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -156,10 +156,10 @@ final class FreePlayRules extends GameRules {
         return var3;
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_j = null;
         field_k = null;
-        field_f = (uo[][]) null;
+        field_f = (AlignedIconLabel[][]) null;
         muChatPmFriendsOnly = null;
         if (param0 > -94) {
           return;
@@ -231,7 +231,7 @@ final class FreePlayRules extends GameRules {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

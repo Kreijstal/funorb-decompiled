@@ -14,7 +14,7 @@ final class dq {
     static String field_g;
     static BufferedSocket field_h;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_k = null;
         field_f = null;
         raIntro = null;
@@ -69,11 +69,11 @@ final class dq {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
-    final static Sprite a(int param0, int param1, String param2) {
+    final static Sprite createTextLabelSprite(int param0, int param1, String param2) {
         Sprite var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
@@ -95,8 +95,8 @@ final class dq {
           SoftwareRasterizer.saveClip(var4);
           var3.e();
           FreePlayRules.field_e.d(param2, 2, FreePlayRules.field_e.maxAscent + 2, param0, -1);
-          var3.e(4144959);
-          var3.e(65793);
+          var3.addOutline(4144959);
+          var3.addOutline(65793);
           SoftwareRasterizer.setTarget(var5, var6, var7);
           SoftwareRasterizer.restoreClip(var4);
           var3.field_y = var3.field_A;
@@ -116,7 +116,7 @@ final class dq {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 

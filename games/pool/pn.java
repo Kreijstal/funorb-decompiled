@@ -8,7 +8,7 @@ final class pn {
     int[] field_d;
     int field_p;
     int field_h;
-    vh field_u;
+    UiComponent field_u;
     boolean field_g;
     String field_n;
     static String[] field_i;
@@ -24,7 +24,7 @@ final class pn {
     static int field_s;
     static int[] field_r;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         field_l = null;
         if (param0 == 0) {
@@ -44,7 +44,7 @@ final class pn {
         field_i = null;
     }
 
-    final static IndexedSprite[] a(int param0, di param1, int param2, int param3) {
+    final static IndexedSprite[] loadIndexedSprites(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite[] stackIn_6_0 = null;
@@ -53,7 +53,7 @@ final class pn {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vj.a(param2, param1, param0, (byte) 121)) {
+          if (!TextLineLayout.a(param2, param1, param0, (byte) 121)) {
             stackIn_2_0 = null;
             return (IndexedSprite[]) (stackIn_2_0);
           }
@@ -72,7 +72,7 @@ final class pn {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ final class pn {
           return 2;
         }
         if (this.field_p != 2) {
-          if (~ve.field_m == ~this.field_b) {
+          if (~BitmapTextLayout.field_m == ~this.field_b) {
             return 1;
           }
           if (param0 != 14842) {
@@ -91,7 +91,7 @@ final class pn {
           if (0 < this.field_h) {
             return 2;
           }
-          if (~ve.field_m == ~this.field_b) {
+          if (~BitmapTextLayout.field_m == ~this.field_b) {
             return 1;
           }
           if (param0 == 14842) {
@@ -118,22 +118,22 @@ final class pn {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        tf.field_d = true;
-        t.field_b.field_nb = param1;
+        LoginPayloadKind.field_d = true;
+        t.field_b.text = param1;
         int var2_int = OpacityWidget.field_P.width;
         if (param0 != 75) {
           return;
         }
         try {
           var3 = OpacityWidget.field_P.height;
-          var4 = t.field_b.field_I.measureWrappedHeight(param1, 272, t.field_b.field_M);
+          var4 = t.field_b.font.measureWrappedHeight(param1, 272, t.field_b.lineSpacing);
           var5 = -(var4 / 2) + var3 / 2 - 103;
-          ln.field_q.b(var5, param0 ^ 2147483572, (-320 + var2_int) / 2, 320, -(var5 * 2) - 120 + var3);
-          ln.field_q.field_F = rp.a(32450, 3, 2105376, ln.field_q.field_Db, 11579568, 8421504);
-          t.field_b.b(16, param0 + 2147483572, 24, -24 + (ln.field_q.field_gb - 24), ln.field_q.field_Db - 44);
-          sb.field_a.b(-20 + ln.field_q.field_Db - 24, param0 ^ 2147483572, 120, 80, 24);
+          ln.field_q.setBounds(var5, param0 ^ 2147483572, (-320 + var2_int) / 2, 320, -(var5 * 2) - 120 + var3);
+          ln.field_q.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, 2105376, ln.field_q.height, 11579568, 8421504);
+          t.field_b.setBounds(16, param0 + 2147483572, 24, -24 + (ln.field_q.width - 24), ln.field_q.height - 44);
+          sb.field_a.setBounds(-20 + ln.field_q.height - 24, param0 ^ 2147483572, 120, 80, 24);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "pn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -143,13 +143,13 @@ final class pn {
         if (!param0) {
           this.field_d = null;
         } else {
-          this.field_d = ci.field_p;
+          this.field_d = DebugTuningSlider.field_p;
         }
-        this.field_f = np.field_a;
+        this.field_f = SectorCacheStore.field_a;
         this.field_j = LabeledChildWidget.field_S;
         this.field_g = qg.field_d;
-        this.field_q = lh.field_f;
-        this.field_h = df.field_e;
+        this.field_q = ArchiveProvider.field_f;
+        this.field_h = AimTarget.field_e;
         this.field_e = m.field_e;
         this.field_o = pp.field_b;
         this.field_m = wq.field_a;
@@ -171,7 +171,7 @@ final class pn {
           this.field_p = param0;
           this.field_h = 0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "pn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

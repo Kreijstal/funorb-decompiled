@@ -11,7 +11,7 @@ final class ProgressBarWidget extends UiWidget {
     private int dimStripeColor;
     private int alternateStripeColor;
     private Sprite field_H;
-    static vh field_K;
+    static UiComponent field_K;
     boolean animationEnabled;
     private int stripeColor;
     private Sprite[] stripeSprites;
@@ -53,7 +53,7 @@ final class ProgressBarWidget extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(this.stripeWidth + var7, var6, this.stripeWidth, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + var7, var6, this.stripeWidth, var12Lifetime1);
         }
-        oc.a(122);
+        TriangleMesh.a(122);
         return var13;
     }
 
@@ -66,7 +66,7 @@ final class ProgressBarWidget extends UiWidget {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!p.a(param1, (byte) -113, true)) {
+          if (!ModelInstance.isValidDisplayName(param1, (byte) -113, true)) {
             return false;
           }
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
@@ -90,7 +90,7 @@ final class ProgressBarWidget extends UiWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class ProgressBarWidget extends UiWidget {
         if (param0 != 16711422) {
           discarded$0 = this.buildStripeSprite(24, 48, (byte) -125);
         }
-        oc.a(117);
+        TriangleMesh.a(117);
         return var3;
     }
 
@@ -137,31 +137,31 @@ final class ProgressBarWidget extends UiWidget {
         int var7 = 0;
         try {
           var5_int = param1 + this.widgetWidth;
-          wh.a(param1 + this.field_U.field_z, param2, var5_int - this.field_U.field_z, (byte) 31, param2 + this.widgetHeight);
+          QuickChatPhraseRegistry.a(param1 + this.field_U.field_z, param2, var5_int - this.field_U.field_z, (byte) 31, param2 + this.widgetHeight);
           for (var6 = -this.stripeOffset + param1; var5_int > var6; var6 = var6 + param3.field_z) {
-            param3.c(var6, param2);
+            param3.draw(var6, param2);
           }
           if (param0) {
             this.field_U = (Sprite) null;
           }
-          oc.a(121);
+          TriangleMesh.a(121);
           if (SoftwareRasterizer.clipLeft <= param1 + this.field_U.field_z) {
             CueAim.a(43, this.field_H);
-            param3.c(-this.stripeOffset, 0);
-            param3.c(-this.stripeOffset + 2 * this.stripeWidth, 0);
-            this.field_F.d(0, 0);
-            oc.a(114);
-            this.field_H.c(param1, param2);
+            param3.draw(-this.stripeOffset, 0);
+            param3.draw(-this.stripeOffset + 2 * this.stripeWidth, 0);
+            this.field_F.drawMultiply(0, 0);
+            TriangleMesh.a(114);
+            this.field_H.draw(param1, param2);
           }
           if (var5_int - this.field_U.field_z <= SoftwareRasterizer.clipRight) {
             CueAim.a(86, this.field_H);
             for (var7 = -this.field_U.field_z + (this.widgetWidth + this.stripeOffset); var7 > this.stripeWidth * 2; var7 = var7 - this.stripeWidth * 2) {
             }
-            param3.c(-var7, 0);
-            param3.c(this.stripeWidth * 2 - var7, 0);
-            this.field_U.d(0, 0);
-            oc.a(121);
-            this.field_H.c(var5_int - this.field_U.field_z, param2);
+            param3.draw(-var7, 0);
+            param3.draw(this.stripeWidth * 2 - var7, 0);
+            this.field_U.drawMultiply(0, 0);
+            TriangleMesh.a(121);
+            this.field_H.draw(var5_int - this.field_U.field_z, param2);
             return;
           }
           return;
@@ -175,7 +175,7 @@ final class ProgressBarWidget extends UiWidget {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -183,11 +183,11 @@ final class ProgressBarWidget extends UiWidget {
         this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, (param6 & 16711422) >> 1);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_T = null;
         field_W = null;
         if (!param0) {
-          field_K = (vh) null;
+          field_K = (UiComponent) null;
         }
         field_K = null;
         field_R = null;
@@ -216,7 +216,7 @@ final class ProgressBarWidget extends UiWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -229,9 +229,9 @@ final class ProgressBarWidget extends UiWidget {
         int var7 = this.widgetY + param3;
         this.drawRoundedStripes(false, var5, var7, this.stripeSprites[0]);
         if (this.fillFractionQ16 < 65536) {
-          wh.a(var5 + (this.widgetWidth * this.fillFractionQ16 >> 16), var7, this.widgetWidth + var5, (byte) -116, var7 + this.widgetHeight);
+          QuickChatPhraseRegistry.a(var5 + (this.widgetWidth * this.fillFractionQ16 >> 16), var7, this.widgetWidth + var5, (byte) -116, var7 + this.widgetHeight);
           this.drawRoundedStripes(false, var5, var7, this.stripeSprites[1]);
-          oc.a(112);
+          TriangleMesh.a(112);
         }
     }
 
@@ -242,7 +242,7 @@ final class ProgressBarWidget extends UiWidget {
           ProgressBarWidget.a((byte[]) null, -61, 57);
         }
         this.field_U = this.buildEndMask(16711422);
-        this.field_F = this.field_U.a();
+        this.field_F = this.field_U.copyFlippedHorizontal();
         this.field_H = new Sprite(this.widgetHeight >> 1, this.widgetHeight);
     }
 
@@ -276,7 +276,7 @@ final class ProgressBarWidget extends UiWidget {
             return stackIn_2_0;
           }
           var4.a(param2, (byte) 87, param3);
-          nd.field_i.b((byte) 92, var4);
+          MarkerSliderPainter.field_i.b((byte) 92, var4);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -295,7 +295,7 @@ final class ProgressBarWidget extends UiWidget {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -327,7 +327,7 @@ final class ProgressBarWidget extends UiWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -8,7 +8,7 @@ final class rc {
     static IntrusiveDeque field_c;
     static String playerColonFr;
     static String tutorialNineBallFinal;
-    static vh field_b;
+    static UiComponent field_b;
 
     final static String b(boolean param0) {
         if (!param0) {
@@ -17,7 +17,7 @@ final class rc {
         return th.field_g;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_c = null;
         field_b = null;
         playerColonFr = null;

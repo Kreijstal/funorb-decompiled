@@ -9,10 +9,10 @@ final class qf {
     static int field_i;
     static int field_f;
     private int[] field_g;
-    private eg field_n;
+    private MeshBuilder field_n;
     private int field_q;
     private Quaternion field_e;
-    private nc field_o;
+    private ModelMesh field_o;
     static String enterignoreAdd;
     private int field_c;
     private int field_b;
@@ -20,7 +20,7 @@ final class qf {
     private Quaternion field_p;
     static Sprite field_k;
     private int field_h;
-    static ai field_d;
+    static PcmStreamMixer field_d;
 
     final void a(int param0) {
         this.field_a = this.field_a + this.field_h;
@@ -87,7 +87,7 @@ final class qf {
                 this.field_n.field_f = hi.field_h[-134217728 - this.field_q >> 20];
               }
             }
-            this.field_o = (nc) (this.field_n.a(param1.field_C, param1.field_F, param1.field_q, param1.field_e, param1.field_u, this.field_g));
+            this.field_o = (ModelMesh) (this.field_n.a(param1.field_C, param1.field_F, param1.field_q, param1.field_e, param1.field_u, this.field_g));
           }
           this.field_o.b(param0, this.field_g);
           return;
@@ -107,11 +107,11 @@ final class qf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_k = null;
         if (param0) {
           field_d = null;
@@ -147,7 +147,7 @@ final class qf {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -198,11 +198,11 @@ final class qf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    qf(eg param0) {
+    qf(MeshBuilder param0) {
         int var2_int = 0;
         int var3 = 0;
         int dupTemp$0 = 0;
@@ -218,7 +218,7 @@ final class qf {
           this.field_q = dupTemp$0;
           dupTemp$1 = EightBallRules.c((byte) -128, var2_int) * var3;
           this.field_m = dupTemp$1;
-          dupTemp$2 = o.a(var2_int, (byte) 77) * var3;
+          dupTemp$2 = UiComponentNode.sineFixed(var2_int, (byte) 77) * var3;
           this.field_a = dupTemp$2;
           this.field_g = new int[]{dupTemp$0 >> 13, dupTemp$1 >> 13, dupTemp$2 >> 13, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
           this.field_b = -(65536 + ga.nextRandomInt(131072, true, ea.field_r));
@@ -230,7 +230,7 @@ final class qf {
           this.field_e.setFromAxisAngle(60, ga.nextRandomInt(32768, true, ea.field_r) - 16384, -16384 + ga.nextRandomInt(32768, true, ea.field_r), -16384 + ga.nextRandomInt(32768, true, ea.field_r), 1 + ga.nextRandomInt(8, true, ea.field_r));
           this.field_e.normalise(true);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

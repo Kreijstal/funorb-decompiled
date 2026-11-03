@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ButtonPainter implements WidgetPainter {
-    static vh field_a;
+    static UiComponent field_a;
     static int field_b;
 
     final static int a(int param0, float param1, byte param2) {
@@ -26,21 +26,21 @@ final class ButtonPainter implements WidgetPainter {
         var9 = param6 - param1;
         var11 = -92 / ((param7 + 46) / 51);
         var10 = -param8 + param0;
-        if (od.a((long)var9, (long)param2, false) + od.a((long)var10, (long)param3, false) >= 0L) {
+        if (FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)param2, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)param3, false) >= 0L) {
           return -1;
         }
-        var12 = IterableNodeHashTable.a(-112, od.a((long)var9, (long)var9, false) + od.a((long)var10, (long)var10, false));
-        var14 = IterableNodeHashTable.a(-99, od.a((long)param2, (long)param2, false) + od.a((long)param3, (long)param3, false));
+        var12 = IterableNodeHashTable.a(-112, FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)var10, false));
+        var14 = IterableNodeHashTable.a(-99, FullscreenFocusCanvas.multiplyFixedChecked((long)param2, (long)param2, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)param3, (long)param3, false));
         if (0L < -(long)(param5 << 16) + (var12 - var14)) {
           return -1;
         }
-        var16 = aj.a(param2, false, param2) + aj.a(param3, false, param3);
+        var16 = NameEntryPopup.a(param2, false, param2) + NameEntryPopup.a(param3, false, param3);
         if (var16 == 0) {
           return -1;
         }
-        var17 = (od.a((long)var9, (long)param2, false) + od.a((long)var10, (long)param3, false)) * 2L;
-        var19 = od.a((long)var9, (long)var9, false) + (od.a((long)var10, (long)var10, false) - (long)(param5 * param5 << 16));
-        var21 = od.a(var17, var17, false) - 4L * od.a((long)var16, var19, false);
+        var17 = (FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)param2, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)param3, false)) * 2L;
+        var19 = FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false) + (FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)var10, false) - (long)(param5 * param5 << 16));
+        var21 = FullscreenFocusCanvas.multiplyFixedChecked(var17, var17, false) - 4L * FullscreenFocusCanvas.multiplyFixedChecked((long)var16, var19, false);
         if (var21 < 0L) {
           return -1;
         }
@@ -51,8 +51,8 @@ final class ButtonPainter implements WidgetPainter {
         if (-2147483648L > var23) {
           throw new IllegalStateException("Out of range: 0x" + Long.toString(var23, 16));
         }
-        var25 = lh.a(var16, (byte) -128, (long)(int)(var23 - var17)) / 2;
-        var26 = lh.a(var16, (byte) -64, (long)(int)(-var23 - var17)) / 2;
+        var25 = ArchiveProvider.divideFixed16(var16, (byte) -128, (long)(int)(var23 - var17)) / 2;
+        var26 = ArchiveProvider.divideFixed16(var16, (byte) -64, (long)(int)(-var23 - var17)) / 2;
         if (0 >= var25) {
           if (var26 <= 0) {
             if (var25 >= 0) {
@@ -109,7 +109,7 @@ final class ButtonPainter implements WidgetPainter {
         return param4;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 == 16) {
           field_a = null;
           return;
@@ -141,7 +141,7 @@ final class ButtonPainter implements WidgetPainter {
           if (!param4.hasKeyboardFocus(126)) {
             return;
           }
-          bj.a(2 + var8, param4.widgetHeight - 4, param4.widgetWidth - 4, 2 + var6_int, 2187);
+          bj.drawDottedRectangle(2 + var8, param4.widgetHeight - 4, param4.widgetWidth - 4, 2 + var6_int, 2187);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,7 +153,7 @@ final class ButtonPainter implements WidgetPainter {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

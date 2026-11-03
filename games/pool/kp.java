@@ -16,18 +16,18 @@ final class kp {
     int field_n;
     int field_j;
     static int field_m;
-    static eg field_h;
+    static MeshBuilder field_h;
 
-    final static void a(rk param0, byte param1) {
+    final static void a(HuffmanCodec param0, byte param1) {
         try {
           int var2_int = 75 % ((0 - param1) / 57);
           Pool.field_J = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "kp.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kp.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         muChatPmShowAll = null;
         field_i = (int[][]) null;
         int var1 = 9 % ((-61 - param0) / 35);
@@ -44,7 +44,7 @@ final class kp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 100) {
-            stackIn_4_0 = mn.a(-24296, PcmSampleStream.a(param1, 100, param3, param2));
+            stackIn_4_0 = DualLinkDequeIterator.a(-24296, PcmSampleStream.a(param1, 100, param3, param2));
             return stackIn_4_0;
           }
           stackIn_2_0 = (kf) null;
@@ -59,13 +59,13 @@ final class kp {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1) {
-        oq var2 = ej.field_j;
-        var2.b(false, param1);
+        CipherPacketBuffer var2 = JaggrabDownloader.field_j;
+        var2.writeCipheredOpcode(false, param1);
         var2.a(param0, false);
         var2.a(2, false);
     }

@@ -7,7 +7,7 @@ final class pc {
     static String month;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         month = null;
         field_a = null;
         if (param0 != -24420) {

@@ -16,7 +16,7 @@ final class DialWidget extends ButtonWidget {
     static String raMutethisplayer;
     static int field_R;
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         raMutethisplayer = null;
         mpAcceptrematch = null;
         loginm2 = null;
@@ -42,7 +42,7 @@ final class DialWidget extends ButtonWidget {
         int var7Lifetime10;
         int var7Lifetime11;
         int var7Lifetime3Lifetime1;
-        if (!(im.field_fc >= 0)) {
+        if (!(LobbyPlayer.field_fc >= 0)) {
           return;
         }
         if (param1) {
@@ -51,11 +51,11 @@ final class DialWidget extends ButtonWidget {
         int var3 = param2 - 135;
         int var4 = param0 - 35;
         int var5 = 256;
-        if (im.field_fc < 75) {
-          var5 = (im.field_fc << 8) / 75;
+        if (LobbyPlayer.field_fc < 75) {
+          var5 = (LobbyPlayer.field_fc << 8) / 75;
         }
-        if (!(im.field_fc <= 200)) {
-          var5 = (-im.field_fc + 250 << 8) / 50;
+        if (!(LobbyPlayer.field_fc <= 200)) {
+          var5 = (-LobbyPlayer.field_fc + 250 << 8) / 50;
         }
         CueAim.a(63, un.field_c);
         TriangleRasterizer.useRasterClip();
@@ -64,117 +64,117 @@ final class DialWidget extends ButtonWidget {
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, -var5 + 256);
         }
-        oc.a(112);
-        if (im.field_fc < 150) {
+        TriangleMesh.a(112);
+        if (LobbyPlayer.field_fc < 150) {
           un.field_c.drawHalfSize(var3, var4);
-          var6 = -125 + im.field_fc;
+          var6 = -125 + LobbyPlayer.field_fc;
           if (var6 <= 0) {
-            var6 = im.field_fc - 140;
+            var6 = LobbyPlayer.field_fc - 140;
             if (0 < var6) {
               var7 = 256;
               if (var6 < 20) {
                 var7 = 256 * var6 / 20;
               }
-              we.field_k.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
+              ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
               return;
             }
             return;
           }
           if (var6 >= 50) {
-            var6 = im.field_fc - 140;
+            var6 = LobbyPlayer.field_fc - 140;
             if (0 < var6) {
               var7Lifetime7 = 256;
               if (var6 < 20) {
                 var7Lifetime7 = 256 * var6 / 20;
               }
-              we.field_k.a(var3 + 15, var4 + 10, var7Lifetime7 * var5 >> 8);
+              ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime7 * var5 >> 8);
               return;
             }
             return;
           }
           if (20 > var6) {
             var7Lifetime8 = var6 * 256 / 20;
-            ci.field_h.drawAdditive(var3, var4, var7Lifetime8);
-            var6 = im.field_fc - 140;
+            DebugTuningSlider.field_h.drawAdditive(var3, var4, var7Lifetime8);
+            var6 = LobbyPlayer.field_fc - 140;
             if (0 < var6) {
               var7Lifetime8 = 256;
               if (var6 < 20) {
                 var7Lifetime8 = 256 * var6 / 20;
               }
-              we.field_k.a(var3 + 15, var4 + 10, var7Lifetime8 * var5 >> 8);
+              ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime8 * var5 >> 8);
               return;
             }
             return;
           }
           if (var6 < 30) {
-            ci.field_h.drawAdditive(var3, var4, 256);
-            var6 = im.field_fc - 140;
+            DebugTuningSlider.field_h.drawAdditive(var3, var4, 256);
+            var6 = LobbyPlayer.field_fc - 140;
             if (0 < var6) {
               var7Lifetime9 = 256;
               if (var6 < 20) {
                 var7Lifetime9 = 256 * var6 / 20;
               }
-              we.field_k.a(var3 + 15, var4 + 10, var7Lifetime9 * var5 >> 8);
+              ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime9 * var5 >> 8);
               return;
             }
             return;
           }
           var7Lifetime10 = (-var6 + 50) * 256 / 20;
-          ci.field_h.drawAdditive(var3, var4, var7Lifetime10);
-          var6Lifetime3 = im.field_fc - 140;
+          DebugTuningSlider.field_h.drawAdditive(var3, var4, var7Lifetime10);
+          var6Lifetime3 = LobbyPlayer.field_fc - 140;
           if (0 < var6Lifetime3) {
             var7Lifetime11 = 256;
             if (var6Lifetime3 < 20) {
               var7Lifetime11 = 256 * var6Lifetime3 / 20;
             }
-            we.field_k.a(var3 + 15, var4 + 10, var7Lifetime11 * var5 >> 8);
+            ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime11 * var5 >> 8);
             return;
           }
           return;
         }
         qf.field_k.a(var3 + 15, 10 + var4, var5);
-        var6Lifetime1 = -125 + im.field_fc;
+        var6Lifetime1 = -125 + LobbyPlayer.field_fc;
         if (var6Lifetime1 <= 0) {
-          var6Lifetime1 = im.field_fc - 140;
+          var6Lifetime1 = LobbyPlayer.field_fc - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime1 = 256;
             if (var6Lifetime1 < 20) {
               var7Lifetime1 = 256 * var6Lifetime1 / 20;
             }
-            we.field_k.a(var3 + 15, var4 + 10, var7Lifetime1 * var5 >> 8);
+            ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime1 * var5 >> 8);
             return;
           }
           return;
         }
         if (var6Lifetime1 >= 50) {
-          var6Lifetime1 = im.field_fc - 140;
+          var6Lifetime1 = LobbyPlayer.field_fc - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime2 = 256;
             if (var6Lifetime1 < 20) {
               var7Lifetime2 = 256 * var6Lifetime1 / 20;
             }
-            we.field_k.a(var3 + 15, var4 + 10, var7Lifetime2 * var5 >> 8);
+            ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime2 * var5 >> 8);
             return;
           }
           return;
         }
         if (20 > var6Lifetime1) {
           var7Lifetime3 = var6Lifetime1 * 256 / 20;
-          ci.field_h.drawAdditive(var3, var4, var7Lifetime3);
-          var6Lifetime1 = im.field_fc - 140;
+          DebugTuningSlider.field_h.drawAdditive(var3, var4, var7Lifetime3);
+          var6Lifetime1 = LobbyPlayer.field_fc - 140;
           if (0 < var6Lifetime1) {
             var7Lifetime3Lifetime1 = 256;
             if (var6Lifetime1 < 20) {
               var7Lifetime3Lifetime1 = 256 * var6Lifetime1 / 20;
             }
-            we.field_k.a(var3 + 15, var4 + 10, var7Lifetime3Lifetime1 * var5 >> 8);
+            ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime3Lifetime1 * var5 >> 8);
             return;
           }
           return;
         }
         if (var6Lifetime1 < 30) {
-          ci.field_h.drawAdditive(var3, var4, 256);
-          var6Lifetime1 = im.field_fc - 140;
+          DebugTuningSlider.field_h.drawAdditive(var3, var4, 256);
+          var6Lifetime1 = LobbyPlayer.field_fc - 140;
           if (0 >= var6Lifetime1) {
             return;
           }
@@ -182,12 +182,12 @@ final class DialWidget extends ButtonWidget {
           if (var6Lifetime1 < 20) {
             var7Lifetime4 = 256 * var6Lifetime1 / 20;
           }
-          we.field_k.a(var3 + 15, var4 + 10, var7Lifetime4 * var5 >> 8);
+          ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime4 * var5 >> 8);
           return;
         }
         var7Lifetime5 = (-var6Lifetime1 + 50) * 256 / 20;
-        ci.field_h.drawAdditive(var3, var4, var7Lifetime5);
-        var6Lifetime2 = im.field_fc - 140;
+        DebugTuningSlider.field_h.drawAdditive(var3, var4, var7Lifetime5);
+        var6Lifetime2 = LobbyPlayer.field_fc - 140;
         if (0 >= var6Lifetime2) {
           return;
         }
@@ -195,11 +195,11 @@ final class DialWidget extends ButtonWidget {
         if (var6Lifetime2 < 20) {
           var7Lifetime6 = 256 * var6Lifetime2 / 20;
         }
-        we.field_k.a(var3 + 15, var4 + 10, var7Lifetime6 * var5 >> 8);
+        ArchiveLoadStep.field_k.a(var3 + 15, var4 + 10, var7Lifetime6 * var5 >> 8);
     }
 
-    final static void a(im param0, int param1) {
-        im var2 = null;
+    final static void a(LobbyPlayer param0, int param1) {
+        LobbyPlayer var2 = null;
         int var3 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -212,10 +212,10 @@ final class DialWidget extends ButtonWidget {
           if (param1 >= -89) {
             return;
           }
-          var2 = (im) (IntrusiveNode.field_i.c((byte) 124));
+          var2 = (LobbyPlayer) (IntrusiveNode.field_i.c((byte) 124));
           while (var2 != null) {
-            if (var2.a(param0, (byte) -97)) {
-              var2 = (im) (IntrusiveNode.field_i.f((byte) -5));
+            if (var2.comesBeforePlayer(param0, (byte) -97)) {
+              var2 = (LobbyPlayer) (IntrusiveNode.field_i.f((byte) -5));
               continue;
             }
             break;
@@ -223,7 +223,7 @@ final class DialWidget extends ButtonWidget {
           if (var2 == null) {
             IntrusiveNode.field_i.b((byte) -11, param0);
           } else {
-            vj.a(param0, (byte) -119, var2);
+            TextLineLayout.insertAfter(param0, (byte) -119, var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -236,7 +236,7 @@ final class DialWidget extends ButtonWidget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -297,7 +297,7 @@ final class DialWidget extends ButtonWidget {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class DialWidget extends ButtonWidget {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

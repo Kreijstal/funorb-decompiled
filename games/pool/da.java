@@ -9,9 +9,9 @@ final class da {
         if (!param0) {
           da.a(false);
         }
-        d.field_f.b(0, 2147483647, 0, -(tq.field_p ? 40 + (TranslatedUiText.field_n + 2 + 2) : 0) + c.field_e.field_gb, 18);
-        CueAim.field_a.b(0, 2147483647, -40 - TranslatedUiText.field_n + c.field_e.field_gb - 2, TranslatedUiText.field_n + 42, 18);
-        ci.field_c.a(TranslatedUiText.field_n, -20 + c.field_e.field_Db, (byte) -112, 2, c.field_e.field_gb, 0, 20);
+        d.field_f.setBounds(0, 2147483647, 0, -(tq.field_p ? 40 + (TranslatedUiText.field_n + 2 + 2) : 0) + c.field_e.width, 18);
+        CueAim.field_a.setBounds(0, 2147483647, -40 - TranslatedUiText.field_n + c.field_e.width - 2, TranslatedUiText.field_n + 42, 18);
+        DebugTuningSlider.field_c.setScrollPaneBounds(TranslatedUiText.field_n, -20 + c.field_e.height, (byte) -112, 2, c.field_e.width, 0, 20);
     }
 
     final static void a(byte param0) {
@@ -31,16 +31,16 @@ final class da {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        oq var13 = null;
+        CipherPacketBuffer var13 = null;
         int var14 = 0;
-        oq var15 = null;
+        CipherPacketBuffer var15 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
         var12 = Pool.field_O;
         try {
-          var13 = kn.field_e;
+          var13 = PlayerContextMenu.field_e;
           var15 = var13;
           var2 = var15.readUnsignedByte(-113);
           if (param0 < 93) {
@@ -61,24 +61,24 @@ final class da {
           var4 = var15.readUnsignedByte(-79);
           if (var4 != 0) {
             var5 = var3.field_o;
-            sa.field_e[0] = di.field_j;
+            sa.field_e[0] = ResourceArchive.field_j;
             for (var6_int = 1; var6_int < var4; var6_int++) {
               sa.field_e[var6_int] = var13.j(-36);
             }
             gn.a(var4, var5, false);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              sf.b((byte) 125, var15);
+              QuickChatCategoryDefinition.b((byte) 125, var15);
               if (0 == var6_intLifetime1) {
                 var3.field_t = BufferedSocket.field_f;
-                var3.field_w = vd.field_n;
-                var3.field_y = wi.field_a;
+                var3.field_w = DialRenderer.field_n;
+                var3.field_y = IntKeyLookup.field_a;
                 var3.field_x = jj.field_F;
-                rq.a(vd.field_n, var6_intLifetime1, true, BufferedSocket.field_f, wi.field_a, jj.field_F);
+                MusicCrossfadeStream.a(DialRenderer.field_n, var6_intLifetime1, true, BufferedSocket.field_f, IntKeyLookup.field_a, jj.field_F);
               } else {
-                rq.a(vd.field_n, var6_intLifetime1, true, BufferedSocket.field_f, wi.field_a, jj.field_F);
+                MusicCrossfadeStream.a(DialRenderer.field_n, var6_intLifetime1, true, BufferedSocket.field_f, IntKeyLookup.field_a, jj.field_F);
               }
             }
-            sp.a(true, var5);
+            NetworkArchiveRequest.a(true, var5);
             dupTemp$0 = new String[2][var5];
             var3.field_n = dupTemp$0;
             var6 = dupTemp$0;
@@ -92,11 +92,11 @@ final class da {
               var11 = NetworkGameClient.field_H[var9];
               var6[0][var10] = sa.field_e[var11];
               var7[0][var10 * 4] = TickClock.field_g[var11];
-              var7[0][1 + 4 * var10] = ob.field_y[var11];
+              var7[0][1 + 4 * var10] = MenuScreen.field_y[var11];
               var7[0][2 + var10 * 4] = om.field_s[var11];
               var7[0][var10 * 4 + 3] = gd.field_d[var11];
-              if (or.a((byte) 3, sa.field_e[var11]) &&
-                0 == om.field_s[var11] + ob.field_y[var11] + gd.field_d[var11]) {
+              if (BallEvent.a((byte) 3, sa.field_e[var11]) &&
+                0 == om.field_s[var11] + MenuScreen.field_y[var11] + gd.field_d[var11]) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -110,11 +110,11 @@ final class da {
               var11Lifetime1 = NetworkGameClient.field_H[var5 + var9Lifetime1];
               var6[1][var14] = sa.field_e[var11Lifetime1];
               var7[1][4 * var14] = TickClock.field_g[var11Lifetime1];
-              var7[1][4 * var14 + 1] = ob.field_y[var11Lifetime1];
+              var7[1][4 * var14 + 1] = MenuScreen.field_y[var11Lifetime1];
               var7[1][2 + var14 * 4] = om.field_s[var11Lifetime1];
               var7[1][var14 * 4 + 3] = gd.field_d[var11Lifetime1];
-              if (or.a((byte) 3, sa.field_e[var11Lifetime1]) &&
-                gd.field_d[var11Lifetime1] + (ob.field_y[var11Lifetime1] + om.field_s[var11Lifetime1]) == 0) {
+              if (BallEvent.a((byte) 3, sa.field_e[var11Lifetime1]) &&
+                gd.field_d[var11Lifetime1] + (MenuScreen.field_y[var11Lifetime1] + om.field_s[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;
               }
@@ -128,7 +128,7 @@ final class da {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "da.D(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "da.D(" + param0 + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class da {
           TranslatedUiText.field_f[8] = null;
           TranslatedUiText.field_f[2] = ti.returntogame;
           TranslatedUiText.field_f[7] = ShotRecord.menu;
-          TranslatedUiText.field_f[6] = wd.fullscreen;
+          TranslatedUiText.field_f[6] = TabbedPane.fullscreen;
           TranslatedUiText.field_f[13] = dk.returntolobby;
           TranslatedUiText.field_f[4] = uj.rankings;
           TranslatedUiText.field_f[11] = IntrusiveDeque.resign;
@@ -157,9 +157,9 @@ final class da {
           TranslatedUiText.field_f[23] = NetworkGameClient.loginCreateaccount;
           TranslatedUiText.field_f[49] = th.field_h ? NodeHashTableIterator.mouseYAxisInverted : PoolMatchController.mouseYAxisNormal;
           TranslatedUiText.field_f[38] = s.gameoptlabels[1];
-          TranslatedUiText.field_f[59] = wm.textGameName;
-          TranslatedUiText.field_f[19] = qd.quit;
-          TranslatedUiText.field_f[21] = fn.musicColon;
+          TranslatedUiText.field_f[59] = ReportAbuseDialog.textGameName;
+          TranslatedUiText.field_f[19] = Js5ArchiveManager.quit;
+          TranslatedUiText.field_f[21] = QuickChatHelpDialog.musicColon;
           TranslatedUiText.field_f[56] = cb.themeNames[2];
           TranslatedUiText.field_f[53] = pl.menuTimeTrialWithoutGuides;
           TranslatedUiText.field_f[47] = IntrusiveDeque.menuSettings;
@@ -180,13 +180,13 @@ final class da {
           int var1_int = -62 / ((-24 - param0) / 60);
           TranslatedUiText.field_f[22] = PacketBuffer.achievements;
           TranslatedUiText.field_f[25] = cb.previous;
-          TranslatedUiText.field_f[42] = pf.tutorialOptionNineBall;
-          TranslatedUiText.field_f[17] = mm.ratingModeName[0];
-          TranslatedUiText.field_f[20] = up.soundColon;
+          TranslatedUiText.field_f[42] = WidgetStyleLayer.tutorialOptionNineBall;
+          TranslatedUiText.field_f[17] = Camera.ratingModeName[0];
+          TranslatedUiText.field_f[20] = CachedArchiveSource.soundColon;
           TranslatedUiText.field_f[50] = ShotRecord.menuTimeTrialWithGuides;
-          TranslatedUiText.field_f[18] = mm.ratingModeName[1];
+          TranslatedUiText.field_f[18] = Camera.ratingModeName[1];
           TranslatedUiText.field_f[3] = dg.menuRestartGame;
-          TranslatedUiText.field_f[12] = up.menuRematchGame;
+          TranslatedUiText.field_f[12] = CachedArchiveSource.menuRematchGame;
           TranslatedUiText.field_f[16] = ih.hsModeName[2];
           TranslatedUiText.field_f[37] = s.gameoptlabels[2];
           TranslatedUiText.field_f[57] = cb.themeNames[3];
@@ -201,11 +201,11 @@ final class da {
           }
           PoolUiText.field_c[2][cb.themeNames.length] = BirthDateValidator.themeRandom;
           DraggableWidget.field_S = new String[22];
-          ve.field_q[1] = im.rulesetNames;
-          ve.field_q[3] = LoginTextValue.guideNames;
+          BitmapTextLayout.field_q[1] = LobbyPlayer.rulesetNames;
+          BitmapTextLayout.field_q[3] = LoginTextValue.guideNames;
           DraggableWidget.field_S[6] = ProgressDialog.tooltipExtraVisit;
           DraggableWidget.field_S[0] = ll.tutorialPrev;
-          DraggableWidget.field_S[1] = aj.tutorialNext;
+          DraggableWidget.field_S[1] = NameEntryPopup.tutorialNext;
           DraggableWidget.field_S[4] = jq.tooltipBallInHand;
           DraggableWidget.field_S[3] = ml.tutorialShow;
           DraggableWidget.field_S[2] = ln.tutorialHide;
@@ -214,14 +214,14 @@ final class da {
           DraggableWidget.field_S[11] = PolarTableScene.ballsetUsa8Group1;
           DraggableWidget.field_S[2] = ln.tutorialHide;
           DraggableWidget.field_S[9] = DualLinkNode.targetOpenTable;
-          DraggableWidget.field_S[12] = oq.targetBlackBall;
+          DraggableWidget.field_S[12] = CipherPacketBuffer.targetBlackBall;
           DraggableWidget.field_S[10] = EmailAvailabilityValidator.ballsetUsa8Group0;
           for (var2Lifetime2 = 1; 9 >= var2Lifetime2; var2Lifetime2++) {
-            DraggableWidget.field_S[var2Lifetime2 + 12] = or.nineBallNumbers[var2Lifetime2];
+            DraggableWidget.field_S[var2Lifetime2 + 12] = BallEvent.nineBallNumbers[var2Lifetime2];
           }
           hf.a(Pocket.field_e, hj.definitionDefinitions, (byte) -96);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "da.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "da.A(" + param0 + ')');
         }
     }
 

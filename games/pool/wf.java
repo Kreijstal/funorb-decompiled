@@ -40,7 +40,7 @@ final class wf {
           param3.drawAdditive(param6 + 1, 1 + param8, param1);
           SoftwareRasterizer.restoreClip(AgeValidator.field_o);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "wf.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wf.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -48,13 +48,13 @@ final class wf {
         try {
           NetworkGameClient.field_z = true;
           PolarBallSkin.field_q = param0 ? true : false;
-          d.field_d = new MessageDialog(wd.field_Ub, bi.field_e, param1, ro.field_e, PolarBallSkin.field_q);
-          wd.field_Ub.showDialog(d.field_d, 30000);
+          d.field_d = new MessageDialog(TabbedPane.field_Ub, bi.field_e, param1, ro.field_e, PolarBallSkin.field_q);
+          TabbedPane.field_Ub.showDialog(d.field_d, 30000);
           if (param2 > -122) {
             field_a = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "wf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -67,29 +67,29 @@ final class wf {
         }
     }
 
-    final static boolean a(byte param0) {
-        if (-1 == of.field_Pb) {
+    final static boolean hasCompletePacket(byte param0) {
+        if (-1 == ScrollPane.field_Pb) {
           if (!DialogLayer.b((byte) 114, 1)) {
             return false;
           }
-          of.field_Pb = kn.field_e.readUnsignedByte(-86);
-          kn.field_e.position = 0;
+          ScrollPane.field_Pb = PlayerContextMenu.field_e.readUnsignedByte(-86);
+          PlayerContextMenu.field_e.position = 0;
         }
-        if (of.field_Pb == -2) {
+        if (ScrollPane.field_Pb == -2) {
           if (!DialogLayer.b((byte) 76, 2)) {
             return false;
           }
-          of.field_Pb = kn.field_e.readUnsignedShort(-1034);
-          kn.field_e.position = 0;
+          ScrollPane.field_Pb = PlayerContextMenu.field_e.readUnsignedShort(-1034);
+          PlayerContextMenu.field_e.position = 0;
         }
         if (param0 == 39) {
-          return DialogLayer.b((byte) 67, of.field_Pb);
+          return DialogLayer.b((byte) 67, ScrollPane.field_Pb);
         }
         field_a = (Sprite) null;
-        return DialogLayer.b((byte) 67, of.field_Pb);
+        return DialogLayer.b((byte) 67, ScrollPane.field_Pb);
     }
 
-    final static void a(byte param0, boolean param1, kh param2, String param3) {
+    final static void a(byte param0, boolean param1, LobbyGame param2, String param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -99,31 +99,31 @@ final class wf {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        kn var9 = null;
+        PlayerContextMenu var9 = null;
         String var10 = null;
-        kn var11 = null;
+        PlayerContextMenu var11 = null;
         String var12 = null;
-        kn var13 = null;
+        PlayerContextMenu var13 = null;
         String var14 = null;
-        kn var15 = null;
+        PlayerContextMenu var15 = null;
         try {
-          dr.a((String) null, -1, 0L, param2.g(20872), BufferedSocket.field_m, (String) null, 32540, param2, (int[]) null);
+          dr.a((String) null, -1, 0L, param2.getGameId(20872), BufferedSocket.field_m, (String) null, 32540, param2, (int[]) null);
           if (param2.field_ec && (param2.field_Yb == 2 ||
             !(TutorialController.field_i < 2))) {
             var9 = PlasmaBallSkin.field_m;
             var10 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param3}, param0 + 109, PacketBuffer.spectateXsGame);
-            var9.field_n.a(var10, 17130, 10);
+            var9.field_n.addAction(var10, 17130, 10);
           }
           PlasmaBallSkin.field_m.b(2616);
           if (param1) {
             if (AgeValidator.field_r != PlasmaBallSkin.field_m.field_b) {
               var13 = PlasmaBallSkin.field_m;
               var14 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param3}, param0 + 109, bi.showPlayersInXsGame);
-              var13.field_n.a(var14, param0 + 17240, 15);
+              var13.field_n.addAction(var14, param0 + 17240, 15);
             } else {
               var11 = PlasmaBallSkin.field_m;
               var12 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param3}, -1, jj.hidePlayersInXsGame);
-              var11.field_n.a(var12, 17130, 16);
+              var11.field_n.addAction(var12, 17130, 16);
             }
           }
           var15 = PlasmaBallSkin.field_m;
@@ -132,7 +132,7 @@ final class wf {
           }
           var5 = DialogLayer.field_W;
           var6 = UsernameAvailabilityValidator.field_o;
-          var15.field_n.c(0, 0, var5, 0, var6);
+          var15.field_n.layoutAtAnchor(0, 0, var5, 0, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -150,7 +150,7 @@ final class wf {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

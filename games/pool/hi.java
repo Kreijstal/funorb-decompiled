@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends mb {
+final class hi extends ByteStorage {
     static byte[][] field_h;
     static int[] field_k;
     static String ballsetPlasmaGroup1;
     static String fsButtonClose;
     private java.nio.ByteBuffer field_l;
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_k = null;
         if (param0 < 117) {
           ballsetPlasmaGroup1 = (String) null;
@@ -146,7 +146,7 @@ final class hi extends mb {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class hi extends mb {
         if (param0 != -11071) {
           field_k = (int[]) null;
         }
-        return TranslatedUiText.field_m.a(true);
+        return TranslatedUiText.field_m.ensureMasterIndex(true);
     }
 
     final static void attachMouseListeners(java.awt.Component param0, int param1) {
@@ -174,14 +174,14 @@ final class hi extends mb {
           param0.addMouseMotionListener(wp.field_g);
           param0.addFocusListener(wp.field_g);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hi.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hi.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     hi() {
     }
 
-    final void a(byte[] param0, byte param1) {
+    final void setBytes(byte[] param0, byte param1) {
         try {
           if (param1 != 2) {
             hi.e(-82);
@@ -190,13 +190,13 @@ final class hi extends mb {
           this.field_l.position(0);
           this.field_l.put(param0);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hi.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, int param1) {
-        oq var2 = ej.field_j;
-        var2.b(false, param1);
+        CipherPacketBuffer var2 = JaggrabDownloader.field_j;
+        var2.writeCipheredOpcode(false, param1);
         var2.a(param0, false);
         var2.a(0, false);
     }
@@ -205,17 +205,17 @@ final class hi extends mb {
         if (!param0) {
           return (wc) null;
         }
-        if (aa.field_c == wd.field_Lb) {
+        if (IntrusiveDequeCursor.field_c == TabbedPane.field_Lb) {
           throw new IllegalStateException();
         }
-        if (wd.field_Lb == td.field_f) {
-          wd.field_Lb = aa.field_c;
-          return sf.field_B;
+        if (TabbedPane.field_Lb == td.field_f) {
+          TabbedPane.field_Lb = IntrusiveDequeCursor.field_c;
+          return QuickChatCategoryDefinition.field_B;
         }
         return null;
     }
 
-    final static PaletteBitmapFont a(int param0, int param1, int param2, di param3, di param4) {
+    final static PaletteBitmapFont a(int param0, int param1, int param2, ResourceArchive param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
@@ -227,7 +227,7 @@ final class hi extends mb {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!vj.a(param1, param4, param2, (byte) 121)) {
+          if (!TextLineLayout.a(param1, param4, param2, (byte) 121)) {
             stackIn_2_0 = null;
             return (PaletteBitmapFont) (stackIn_2_0);
           }
@@ -250,11 +250,11 @@ final class hi extends mb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final byte[] a(int param0) {
+    final byte[] toByteArray(int param0) {
         byte[] var3 = new byte[this.field_l.capacity()];
         byte[] var2 = var3;
         this.field_l.position(0);

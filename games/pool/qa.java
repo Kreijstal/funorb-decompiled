@@ -9,7 +9,7 @@ final class qa extends IntrusiveNode {
     int field_p;
     static String rulePillar1;
     int field_q;
-    static vh field_v;
+    static UiComponent field_v;
     int field_n;
     int field_w;
     static int field_r;
@@ -37,7 +37,7 @@ final class qa extends IntrusiveNode {
         try {
           NodeHashTableIterator.field_s = -1;
           td.field_b = 0;
-          or.field_l = 0;
+          BallEvent.field_l = 0;
           var6 = param2;
           var4 = var6;
           for (var5 = 0; var6.length > var5; var5++) {
@@ -81,11 +81,11 @@ final class qa extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         playersXOfY = null;
         field_t = null;
         rulePillar1 = null;
@@ -103,7 +103,7 @@ final class qa extends IntrusiveNode {
           wf.a(param0, DebouncedValidationProvider.loggingIn, -126);
           int var4_int = -110 % ((param2 + 30) / 57);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "qa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,8 +123,8 @@ final class qa extends IntrusiveNode {
           }
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!vq.a((char) var3, 22987) &&
-              !kh.a((char) var3, (byte) 120)) {
+            if (!ContextMenu.a((char) var3, 22987) &&
+              !LobbyGame.a((char) var3, (byte) 120)) {
               return true;
             }
           }
@@ -139,7 +139,7 @@ final class qa extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -147,12 +147,12 @@ final class qa extends IntrusiveNode {
         ClientException.a(param1, (byte) 80);
         if (param0 != 55) {
           String var3 = (String) null;
-          qa.a((String) null, 95);
+          qa.reverseString((String) null, 95);
         }
         Quaternion.a(param1, param0 - 19268);
     }
 
-    final static String a(String param0, int param1) {
+    final static String reverseString(String param0, int param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -180,7 +180,7 @@ final class qa extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -210,14 +210,14 @@ final class qa extends IntrusiveNode {
           if (var6_int > param1) {
             var9 = var6_int / param1;
             var10 = 2 * ((-1 + (var6_int % param1 + var9)) / var9) + param1;
-            if (null == wg.field_Mb) {
-              wg.field_Mb = new String[16];
+            if (null == StateIconLabel.field_Mb) {
+              StateIconLabel.field_Mb = new String[16];
             }
-            var8Lifetime1 = param2.a(param3, new int[]{var10}, wg.field_Mb);
+            var8Lifetime1 = param2.a(param3, new int[]{var10}, StateIconLabel.field_Mb);
             var7 = var7 * var8Lifetime1;
             var6_int = 0;
             for (var11 = 0; var11 < var8Lifetime1; var11++) {
-              var12 = param2.b(wg.field_Mb[var11]);
+              var12 = param2.b(StateIconLabel.field_Mb[var11]);
               if (var12 > var6_int) {
                 var6_int = var12;
               }
@@ -226,7 +226,7 @@ final class qa extends IntrusiveNode {
           if (param0 != 71) {
             return;
           }
-          var9Lifetime1 = pa.field_H;
+          var9Lifetime1 = TimeTrialSelectScreen.field_H;
           if (var9Lifetime1 + var6_int + 6 > SoftwareRasterizer.width) {
             var9Lifetime1 = -6 - var6_int + SoftwareRasterizer.width;
           }
@@ -254,7 +254,7 @@ final class qa extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

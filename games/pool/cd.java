@@ -10,23 +10,23 @@ final class cd {
 
     final static void a(byte param0) {
         tq.d((byte) -128);
-        if (pa.field_K != null) {
-          he.detachInputListeners(pa.field_K, 0);
+        if (TimeTrialSelectScreen.field_K != null) {
+          he.detachInputListeners(TimeTrialSelectScreen.field_K, 0);
         }
-        v.a(-22444);
+        LimitedRandomAccessFile.a(-22444);
         int var1 = 8 / ((param0 + 12) / 55);
         aq.a(0);
-        am.b((byte) 70);
-        if (!oc.b((byte) 84)) {
+        TextWidgetPainter.b((byte) 70);
+        if (!TriangleMesh.b((byte) 84)) {
           dn.c(-111);
           return;
         }
-        ej.field_j.b(false, 1);
+        JaggrabDownloader.field_j.writeCipheredOpcode(false, 1);
         de.a(0, 0);
         dn.c(-111);
     }
 
-    final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5) {
+    final static void drawProjectedCross(int param0, int param1, int[] param2, int param3, int param4, int param5) {
         int var7 = 0;
         int var8 = 0;
         param0 = param0 - param2[0];
@@ -34,7 +34,7 @@ final class cd {
         param5 = param5 - param2[2];
         if (param4 != 10521) {
           int[] var9 = (int[]) null;
-          cd.a(-11, -8, (int[]) null, -102, -112, 112);
+          cd.drawProjectedCross(-11, -8, (int[]) null, -102, -112, 112);
         }
         int var6_int = param2[11] * param5 + param2[10] * param1 + param0 * param2[9] >> 16;
         if (var6_int <= 0) {
@@ -48,7 +48,7 @@ final class cd {
           SoftwareRasterizer.drawLine(-4 + var7, var8, 4 + var7, var8, param3);
           SoftwareRasterizer.drawLine(var7, var8 - 4, var7, var8 + 4, param3);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "cd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cd.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class cd {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         mpYouresigned = null;
         field_d = null;
         if (param0 <= 35) {

@@ -33,7 +33,7 @@ class HotspotTextWidget extends ButtonWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -65,7 +65,7 @@ class HotspotTextWidget extends ButtonWidget {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ class HotspotTextWidget extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var5), "mh.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5), "mh.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -118,7 +118,7 @@ class HotspotTextWidget extends ButtonWidget {
         int var9;
         int var10;
         Object var11;
-        vj var13;
+        TextLineLayout var13;
         int var14;
         int var15;
         qa var16;
@@ -127,7 +127,7 @@ class HotspotTextWidget extends ButtonWidget {
         this.hotspotBounds = new IntrusiveDeque();
         var3 = 0;
         var4 = (io) ((Object) this.renderer);
-        var5 = var4.b(0, (UiWidget) (this));
+        var5 = var4.ensureTextLayout(0, (UiWidget) (this));
         while (true) {
           var6 = this.widgetText.indexOf("<hotspot=", var3);
           if (-1 == var6) {
@@ -143,14 +143,14 @@ class HotspotTextWidget extends ButtonWidget {
           for (var12 = var9; var12 <= var10; var12++) {
             var13 = var5.field_b[var12];
             if (var9 != var12) {
-              stackIn_7_0 = var13.field_h[0];
+              stackIn_7_0 = var13.caretXs[0];
             } else {
               stackIn_7_0 = var5.a(var6, (byte) -73);
             }
             var14 = stackIn_7_0;
             if (var10 != var12) {
               if (var13 != null) {
-                stackIn_12_0 = var13.field_h[-1 + var13.field_h.length];
+                stackIn_12_0 = var13.caretXs[-1 + var13.caretXs.length];
               } else {
                 stackIn_12_0 = 0;
               }
@@ -158,7 +158,7 @@ class HotspotTextWidget extends ButtonWidget {
               stackIn_12_0 = var5.a(var3, (byte) -104);
             }
             var15 = stackIn_12_0;
-            var16 = new qa(var8Lifetime1, var14, var13.field_e, var15 - var14, Math.max(var4.a(-10492), var13.field_i - var13.field_e));
+            var16 = new qa(var8Lifetime1, var14, var13.top, var15 - var14, Math.max(var4.lineHeight(-10492), var13.bottom - var13.top));
             if (var11 != null) {
               ((qa) (var11)).field_l = var16;
             }
@@ -183,7 +183,7 @@ class HotspotTextWidget extends ButtonWidget {
           var8 = var6.a(5286, (UiWidget) (this), param2);
           var9 = var6.a(param3, (UiWidget) (this), (byte) -7);
           do {
-            bj.a(var9 + var7.field_p - 2, var7.field_q + 2, 2 + var7.field_w, var7.field_n + (var8 - 2), 2187);
+            bj.drawDottedRectangle(var9 + var7.field_p - 2, var7.field_q + 2, 2 + var7.field_w, var7.field_n + (var8 - 2), 2187);
             var7 = var7.field_l;
           } while (var7 != null);
         }
@@ -248,7 +248,7 @@ class HotspotTextWidget extends ButtonWidget {
         try {
           this.renderer = param1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -270,7 +270,7 @@ class HotspotTextWidget extends ButtonWidget {
           }
           this.hotspotHoverTexts[param2] = param1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "mh.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "mh.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

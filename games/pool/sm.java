@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sm extends om {
-    static aj field_C;
+    static NameEntryPopup field_C;
     static Sprite field_z;
     static int field_D;
     static String tickerHintZoom;
     static String gameoptNeedrating;
     static String gameoptPlayerneedsratedgames;
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_z = null;
         tickerHintZoom = null;
         gameoptPlayerneedsratedgames = null;
@@ -37,11 +37,11 @@ final class sm extends om {
         if (param0 != -18791) {
           sm.d(72);
         }
-        if (!vj.field_c[86]) {
+        if (!TextLineLayout.field_c[86]) {
           return false;
         }
         var1 = -1;
-        var2 = qi.field_a;
+        var2 = IterableDualLinkDeque.field_a;
         if (var2 == 16) {
           var1Lifetime1 = 0;
         } else {
@@ -82,14 +82,14 @@ final class sm extends om {
             var1Lifetime1 = 1;
           }
         }
-        if (vj.field_c[81]) {
+        if (TextLineLayout.field_c[81]) {
           var1Lifetime1 += 10;
         }
-        if (vj.field_c[82]) {
+        if (TextLineLayout.field_c[82]) {
           var1Lifetime1 += 20;
         }
-        pd.field_i = pd.field_i ^ 1L << var1Lifetime1;
-        rq.a(0, var1Lifetime1);
+        LinkButtonPainter.field_i = LinkButtonPainter.field_i ^ 1L << var1Lifetime1;
+        MusicCrossfadeStream.a(0, var1Lifetime1);
         return true;
     }
 
@@ -103,7 +103,7 @@ final class sm extends om {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -1) {
-            stackIn_4_0 = v.a(param1.widgetText.length(), 0, '*');
+            stackIn_4_0 = LimitedRandomAccessFile.a(param1.widgetText.length(), 0, '*');
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -118,11 +118,11 @@ final class sm extends om {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, CushionSegment param1, int param2, Ball param3) {
+    final static void bounceBallOffCushion(int param0, CushionSegment param1, int param2, Ball param3) {
         int fieldTemp$0 = 0;
         int[] stackIn_6_0 = null;
         int stackIn_6_1 = 0;
@@ -151,15 +151,15 @@ final class sm extends om {
           param3.advanceTo(param0 - 1, 118);
           var4_int = -param1.startY + param1.endY >> 8;
           var5 = param1.startX - param1.endX >> 8;
-          var6 = rf.a(aj.a(var4_int, false, var4_int) + aj.a(var5, false, var5), -123);
-          var4_int = lh.a(var6, (byte) -101, (long)var4_int);
-          var5 = lh.a(var6, (byte) -61, (long)var5);
+          var6 = rf.inverseSquareRoot(NameEntryPopup.a(var4_int, false, var4_int) + NameEntryPopup.a(var5, false, var5), -123);
+          var4_int = ArchiveProvider.divideFixed16(var6, (byte) -101, (long)var4_int);
+          var5 = ArchiveProvider.divideFixed16(var6, (byte) -61, (long)var5);
           var7 = param3.horizontalSpeedSquared(-14770);
           if (param1.endX != param1.startX) {
             if (param1.endY != param1.startY) {
-              var9 = (long)(aj.a(param3.velocityX, false, var4_int) + aj.a(param3.velocityY, false, var5));
-              param3.velocityX = (int)((long)param3.velocityX - (od.a((long)var4_int, var9, false) * (long)(256 + dj.field_g) >> 8));
-              param3.velocityY = (int)((long)param3.velocityY - (od.a((long)var5, var9, false) * (long)(256 + dj.field_g) >> 8));
+              var9 = (long)(NameEntryPopup.a(param3.velocityX, false, var4_int) + NameEntryPopup.a(param3.velocityY, false, var5));
+              param3.velocityX = (int)((long)param3.velocityX - (FullscreenFocusCanvas.multiplyFixedChecked((long)var4_int, var9, false) * (long)(256 + dj.field_g) >> 8));
+              param3.velocityY = (int)((long)param3.velocityY - (FullscreenFocusCanvas.multiplyFixedChecked((long)var5, var9, false) * (long)(256 + dj.field_g) >> 8));
               param3.angularVelocityY = 0;
               param3.angularVelocityX = 0;
               if (td.field_b < nn.field_e.length) {
@@ -205,10 +205,10 @@ final class sm extends om {
           param3.angularVelocityZ = kp.field_m * param3.angularVelocityZ >> 8;
           param3.motionState = 1;
           var9Lifetime1 = param3.horizontalSpeedSquared(-14770);
-          if (td.field_b < cf.field_g.length) {
+          if (td.field_b < SoundCache.field_g.length) {
             fieldTemp$0 = td.field_b;
             td.field_b = td.field_b + 1;
-            cf.field_g[fieldTemp$0] = (int)(var7 - var9Lifetime1);
+            SoundCache.field_g[fieldTemp$0] = (int)(var7 - var9Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -227,7 +227,7 @@ final class sm extends om {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -243,19 +243,19 @@ final class sm extends om {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -40 / ((param1 - 36) / 53);
-          if (ra.field_e == pa.field_I) {
+          if (ra.field_e == TimeTrialSelectScreen.field_I) {
             stackIn_2_0 = null;
             return (wc) (stackIn_2_0);
           }
-          if (td.field_f == pa.field_I &&
+          if (td.field_f == TimeTrialSelectScreen.field_I &&
             param0.equals(l.field_c)) {
-            pa.field_I = aa.field_c;
+            TimeTrialSelectScreen.field_I = IntrusiveDequeCursor.field_c;
             stackIn_6_0 = PoolMatchController.field_gb;
             return stackIn_6_0;
           }
           l.field_c = param0;
           PoolMatchController.field_gb = null;
-          pa.field_I = ra.field_e;
+          TimeTrialSelectScreen.field_I = ra.field_e;
           stackIn_8_0 = null;
           return (wc) (stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -268,7 +268,7 @@ final class sm extends om {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

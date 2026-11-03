@@ -9,7 +9,7 @@ final class dn extends IntrusiveNode {
     static Sprite[] field_o;
     int field_q;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -2048) {
           dn.c(111);
         }
@@ -62,7 +62,7 @@ final class dn extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class dn extends IntrusiveNode {
         cl.field_c = null;
     }
 
-    final static int a(int param0, int param1, int param2, or param3) {
+    final static int a(int param0, int param1, int param2, BallEvent param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -87,7 +87,7 @@ final class dn extends IntrusiveNode {
         try {
           var4_int = param0 * sa.field_h.baselineHeight;
           var5 = param2 * sa.field_h.baselineHeight;
-          sa.field_h.d(param3.field_g + ": " + param3.b((byte) 115), var4_int, var5, 16777215, 3355443);
+          sa.field_h.d(param3.ballIndex + ": " + param3.describe((byte) 115), var4_int, var5, 16777215, 3355443);
           if (param3.field_i != null) {
             param2++;
             param2 = dn.a(1 + param0, 30409, param2, param3.field_i);
@@ -112,7 +112,7 @@ final class dn extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class dn extends IntrusiveNode {
           this.field_q = param0;
           this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "dn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

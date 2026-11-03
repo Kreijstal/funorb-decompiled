@@ -8,7 +8,7 @@ final class ValidationIconWidget extends ButtonWidget {
     static Random field_P;
     private ValidationProvider validationProvider;
     static String goback;
-    static vh field_U;
+    static UiComponent field_U;
     static int field_V;
     static String fsUnavailableTrySignedApplet;
     static String unpackingModels;
@@ -17,17 +17,17 @@ final class ValidationIconWidget extends ButtonWidget {
     final static void a(boolean param0, String param1, int param2, int param3, long param4, int param5) {
         int var7_int = 0;
         try {
-          ej.field_j.b(false, param3);
-          ej.field_j.position = ej.field_j.position + 1;
+          JaggrabDownloader.field_j.writeCipheredOpcode(false, param3);
+          JaggrabDownloader.field_j.position = JaggrabDownloader.field_j.position + 1;
           int var8 = 55 % ((param5 + 38) / 51);
-          var7_int = ej.field_j.position;
-          ej.field_j.writeLong(param4, (byte) -79);
-          ej.field_j.a(-9946, param1);
-          ej.field_j.a(param2, false);
-          ej.field_j.a(!param0 ? 0 : 1, false);
-          ej.field_j.b(ej.field_j.position - var7_int, true);
+          var7_int = JaggrabDownloader.field_j.position;
+          JaggrabDownloader.field_j.writeLong(param4, (byte) -79);
+          JaggrabDownloader.field_j.a(-9946, param1);
+          JaggrabDownloader.field_j.a(param2, false);
+          JaggrabDownloader.field_j.a(!param0 ? 0 : 1, false);
+          JaggrabDownloader.field_j.b(JaggrabDownloader.field_j.position - var7_int, true);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "lc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class ValidationIconWidget extends ButtonWidget {
         return (String) null;
     }
 
-    public static void g(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_P = null;
         goback = null;
         fsUnavailableTrySignedApplet = null;
@@ -55,7 +55,7 @@ final class ValidationIconWidget extends ButtonWidget {
         try {
           this.validationProvider = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class ValidationIconWidget extends ButtonWidget {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -88,7 +88,7 @@ final class ValidationIconWidget extends ButtonWidget {
           this.animationTicks = this.animationTicks + 1;
           super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "lc.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lc.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -113,7 +113,7 @@ final class ValidationIconWidget extends ButtonWidget {
         var6 = (this.widgetHeight >> 1) + (param3 + this.widgetY);
         var9 = this.validationProvider.getDebouncedValidationState(-31873);
         if (ji.field_h != var9 &&
-          no.field_k != var9) {
+          Js5Transport.field_k != var9) {
           if (var9 == gp.field_d) {
             var15 = bo.field_a[2];
             var15.drawAdditive(-(var15.field_z >> 1) + var5, var6 - (var15.field_A >> 1), 256);
@@ -135,7 +135,7 @@ final class ValidationIconWidget extends ButtonWidget {
             CueAim.a(56, sm.field_z);
           }
           var13.b(112, 144, var13.field_w << 4, var13.field_y << 4, -this.animationTicks << 10, 4096);
-          oc.a(112);
+          TriangleMesh.a(112);
           sm.field_z.drawAdditive(-var13.field_w + var5, var6 - var13.field_y, 256);
         }
     }
@@ -167,7 +167,7 @@ final class ValidationIconWidget extends ButtonWidget {
             for (var6 = param1; var6 < var5; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (param3.field_w == param2.field_q[param0][var6] &&
-                or.a((byte) 3, param2.field_m[param0][var6])) {
+                BallEvent.a((byte) 3, param2.field_m[param0][var6])) {
                 for (var7 = 0; var7 < var4_int; var7++) {
                   if (param3.field_z[var7] != param2.field_z[param0][var7 + var6 * var4_int]) {
                     decompiledFrameCompleted0 = false;
@@ -201,7 +201,7 @@ final class ValidationIconWidget extends ButtonWidget {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

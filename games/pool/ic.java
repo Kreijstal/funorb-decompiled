@@ -13,7 +13,7 @@ final class ic {
         int var2 = 59 / ((-23 - param0) / 46);
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -512) {
           return;
         }
@@ -208,7 +208,7 @@ final class ic {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class ic {
           var5_int = FreePlayRules.field_e.countWrappedLines(param3, param2);
           var6 = var5_int * FreePlayRules.field_e.baselineHeight + FreePlayRules.field_e.maxDescent;
           if (!param1) {
-            ic.a(-50);
+            ic.releaseStatics(-50);
           }
           var7 = new Sprite(param2 + 4, 4 + var6);
           var7.field_B = -2;
@@ -243,11 +243,11 @@ final class ic {
           SoftwareRasterizer.saveClip(var19);
           var7.e();
           FreePlayRules.field_e.drawParagraph(param3, 2, 2, param2, var6, param4, -1, param0, 0, FreePlayRules.field_e.baselineHeight * 3 / 4);
-          var7.e(4144959);
-          var7.e(65793);
+          var7.addOutline(4144959);
+          var7.addOutline(65793);
           SoftwareRasterizer.setTarget(var20, var10, var11);
           SoftwareRasterizer.restoreClip(var19);
-          var7.b();
+          var7.trimTransparentBorders();
           var7.field_y = var7.field_A;
           var7.field_w = var7.field_z;
           var7.field_B = 0;
@@ -265,7 +265,7 @@ final class ic {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(')').toString());
         }
     }
 

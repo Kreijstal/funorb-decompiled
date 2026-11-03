@@ -5,10 +5,10 @@ import java.util.*;
 
 final class hn {
     static int field_b;
-    static re field_c;
+    static LoginPayload field_c;
     static double field_a;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 11) {
           hn.fillScreenWhite(-88);
           field_c = null;
@@ -27,13 +27,13 @@ final class hn {
         int var8 = aq.field_b.get(12);
         int var9 = aq.field_b.get(13);
         if (!param1) {
-          return kc.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + df.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return kc.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + AimTarget.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
-        field_c = (re) null;
-        return kc.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + df.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        field_c = (LoginPayload) null;
+        return kc.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + AimTarget.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    final static AlphaFont a(di param0, String param1, String param2, int param3, di param4) {
+    final static AlphaFont a(ResourceArchive param0, String param1, String param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -54,9 +54,9 @@ final class hn {
             stackIn_2_0 = (AlphaFont) null;
             return stackIn_2_0;
           }
-          var5_int = param4.b(param1, -1);
+          var5_int = param4.getGroupId(param1, -1);
           var6 = param4.a(var5_int, 0, param2);
-          stackIn_4_0 = cn.a(param4, var6, var5_int, param0, param3 ^ -890);
+          stackIn_4_0 = DelegatingCanvas.a(param4, var6, var5_int, param0, param3 ^ -890);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,7 +86,7 @@ final class hn {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -103,14 +103,14 @@ final class hn {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
-        di var4 = null;
+        ResourceArchive var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var3 = Pool.field_O;
         try {
           if (param0 != -3143) {
-            var4 = (di) null;
-            hn.a((di) null, (String) null, (String) null, 35, (di) null);
+            var4 = (ResourceArchive) null;
+            hn.a((ResourceArchive) null, (String) null, (String) null, 35, (ResourceArchive) null);
           }
           var1_int = 0;
           var2 = -7 + SoftwareRasterizer.width * SoftwareRasterizer.height;
@@ -150,7 +150,7 @@ final class hn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "hn.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "hn.C(" + param0 + ')');
         }
     }
 

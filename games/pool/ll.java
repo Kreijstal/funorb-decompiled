@@ -3,14 +3,14 @@
  */
 final class ll {
     static int field_f;
-    static vh field_d;
+    static UiComponent field_d;
     static int[] field_a;
     static String tutorialPrev;
     static int field_c;
     static String muChatIgnore;
     private static int field_b;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         muChatIgnore = null;
         tutorialPrev = null;
         field_d = null;
@@ -20,7 +20,7 @@ final class ll {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean openUrlInBrowser(String param0, int param1) {
         int var3 = 0;
         String var2 = null;
         Exception var2_ref = null;
@@ -64,7 +64,7 @@ final class ll {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 

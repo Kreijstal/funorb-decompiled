@@ -3,15 +3,15 @@
  */
 final class e {
     static String[] shotMessages;
-    static vh field_a;
+    static UiComponent field_a;
     static String createPasswordConfirm;
-    static wg field_e;
+    static StateIconLabel field_e;
     static int[] field_c;
     static int[] field_d;
     static String mpRematchnewgameUnrated;
     static String tocustomersupport;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_d = null;
         mpRematchnewgameUnrated = null;
         field_a = null;
@@ -32,7 +32,7 @@ final class e {
         String stackIn_33_0 = null;
         String stackIn_38_0 = null;
         boolean stackIn_39_1 = false;
-        nm stackIn_44_0 = null;
+        NineSliceFrame stackIn_44_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -44,7 +44,7 @@ final class e {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        nm var9 = null;
+        NineSliceFrame var9 = null;
         int var10 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
@@ -53,7 +53,7 @@ final class e {
           var1_int = PasswordValidator.field_n;
           var2 = 0;
           if (2 == ClientException.field_h) {
-            var3_long = -ap.field_y + rl.a((byte) -112);
+            var3_long = -QuickChatPhraseDefinition.field_y + rl.monotonicTimeMillis((byte) -112);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (0 > var2) {
               var2 = 0;
@@ -61,7 +61,7 @@ final class e {
           }
           var3 = 0;
           if (param0 > -78) {
-            field_e = (wg) null;
+            field_e = (StateIconLabel) null;
           }
           while (dq.field_j.length > var3) {
             var4 = IterableNodeHashTable.field_c[var3];
@@ -92,18 +92,18 @@ final class e {
                 }
                 var6 = stackIn_24_0;
               }
-              if (rq.field_H.length >= KeyHandler.field_a.length) {
-                stackIn_28_0 = rq.field_H.length;
+              if (MusicCrossfadeStream.field_H.length >= KeyHandler.field_a.length) {
+                stackIn_28_0 = MusicCrossfadeStream.field_H.length;
               } else {
                 stackIn_28_0 = KeyHandler.field_a.length;
               }
               var8 = stackIn_28_0;
               if (var7 + 7 <= var3 &&
                 var8 + var7 + 7 > var3) {
-                if (var3 - 7 - var7 >= rq.field_H.length) {
+                if (var3 - 7 - var7 >= MusicCrossfadeStream.field_H.length) {
                   stackIn_33_0 = "";
                 } else {
-                  stackIn_33_0 = rq.field_H[-7 + var3 - var7];
+                  stackIn_33_0 = MusicCrossfadeStream.field_H[-7 + var3 - var7];
                 }
                 var6 = stackIn_33_0;
               }
@@ -116,7 +116,7 @@ final class e {
             var7Lifetime1 = WidgetContainer.a(stackIn_38_0, stackIn_39_1, false);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + nn.field_c;
             if (var4 >= 0) {
-              var1_int = var1_int + qi.field_e;
+              var1_int = var1_int + IterableDualLinkDeque.field_e;
               if (var4 != LabeledChildWidget.field_W.selectedIndex) {
                 stackIn_44_0 = bk.field_m;
               } else {
@@ -124,7 +124,7 @@ final class e {
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a(var7Lifetime1 + (rm.field_b << 1), var1_int, -6316, var8Lifetime1 - rm.field_b, (NineBallRules.field_h << 1) + WidgetContainer.field_I);
+                var9.draw(var7Lifetime1 + (rm.field_b << 1), var1_int, -6316, var8Lifetime1 - rm.field_b, (NineBallRules.field_h << 1) + WidgetContainer.field_I);
               }
               var1_int = var1_int + NineBallRules.field_h;
             }
@@ -132,8 +132,8 @@ final class e {
               dq.field_f.d(var6, var8Lifetime1, ModelTableScene.field_K + var1_int, var5, -1);
               var1_int = var1_int + ShotRecord.field_y;
             } else {
-              ProgressBarWidget.field_R.d(var6, var8Lifetime1, var1_int + mm.field_b, var5, -1);
-              var1_int = var1_int + (WidgetContainer.field_I + qi.field_e + NineBallRules.field_h);
+              ProgressBarWidget.field_R.d(var6, var8Lifetime1, var1_int + Camera.field_b, var5, -1);
+              var1_int = var1_int + (WidgetContainer.field_I + IterableDualLinkDeque.field_e + NineBallRules.field_h);
             }
             var3++;
           }
@@ -141,7 +141,7 @@ final class e {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "e.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "e.B(" + param0 + ')');
         }
     }
 
@@ -153,19 +153,19 @@ final class e {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (oh.field_h) {
+          if (GzipDecoder.field_h) {
             var2 = param1.field_I.currentShot(60);
-            kh.field_Vb.a(true, false);
-            if (NanoTickClock.field_t.field_R == 1) {
+            LobbyGame.field_Vb.updateRoot(true, false);
+            if (NanoTickClock.field_t.pressedButton == 1) {
               var2.a(ag.field_a, true);
-              oh.field_h = false;
-              tn.a(param1, -16813);
+              GzipDecoder.field_h = false;
+              RasterSnapshot.a(param1, -16813);
               return true;
             }
-            if (rl.field_b.field_R == 1) {
+            if (rl.field_b.pressedButton == 1) {
               var2.a(EmailAvailabilityValidator.field_n, true);
-              oh.field_h = false;
-              tn.a(param1, -16813);
+              GzipDecoder.field_h = false;
+              RasterSnapshot.a(param1, -16813);
               return true;
             }
           }
@@ -184,7 +184,7 @@ final class e {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

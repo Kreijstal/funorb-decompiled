@@ -49,7 +49,7 @@ class TextInputWidget extends ButtonWidget {
         while (param1 != 0L) {
           var7 = param1;
           param1 = param1 / 37L;
-          var9 = dp.field_d[(int)(var7 - param1 * 37L)];
+          var9 = TextureCache.field_d[(int)(var7 - param1 * 37L)];
           if (var9 == 95) {
             var10 = -1 + var6.length();
             var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
@@ -83,7 +83,7 @@ class TextInputWidget extends ButtonWidget {
           if (!(this.renderer instanceof io)) {
             return false;
           }
-          var8_int = ((io) ((Object) this.renderer)).a(param5, wn.field_i, DebouncedValidationProvider.field_f, (UiWidget) (this), 105, param1);
+          var8_int = ((io) ((Object) this.renderer)).characterIndexAtPosition(param5, wn.field_i, DebouncedValidationProvider.field_f, (UiWidget) (this), 105, param1);
           stackIn_6_1 = 86;
           if (var8_int != -1) {
             stackIn_7_2 = var8_int;
@@ -91,7 +91,7 @@ class TextInputWidget extends ButtonWidget {
             stackIn_7_2 = 0;
           }
           this.moveCaret(stackIn_6_1, stackIn_7_2);
-          var8_long = rl.a((byte) -107);
+          var8_long = rl.monotonicTimeMillis((byte) -107);
           stackIn_10_1 = !(var8_long - this.lastPointerPressMillis >= 250L);
           this.wordSelectionDrag = stackIn_10_1;
           if (this.wordSelectionDrag) {
@@ -115,7 +115,7 @@ class TextInputWidget extends ButtonWidget {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -160,7 +160,7 @@ class TextInputWidget extends ButtonWidget {
 
     private final void moveCaret(int param0, int param1) {
         this.caretIndex = param1;
-        if (!vj.field_c[81]) {
+        if (!TextLineLayout.field_c[81]) {
           this.selectionAnchorIndex = this.caretIndex;
         }
         int var3 = -72 / ((param0 + 33) / 62);
@@ -175,7 +175,7 @@ class TextInputWidget extends ButtonWidget {
           if (this.pressedPointerButton == 1) {
             if (this.renderer instanceof io) {
               var7 = (io) ((Object) this.renderer);
-              var6 = var7.a(param3, wn.field_i, DebouncedValidationProvider.field_f, (UiWidget) (this), param1 - 882, param2);
+              var6 = var7.characterIndexAtPosition(param3, wn.field_i, DebouncedValidationProvider.field_f, (UiWidget) (this), param1 - 882, param2);
               if (-1 != var6) {
                 if (this.wordSelectionDrag && var6 < this.wordSelectionEndIndex &&
                   var6 > this.selectionAnchorIndex) {
@@ -184,10 +184,10 @@ class TextInputWidget extends ButtonWidget {
                 this.caretIndex = var6;
               }
             }
-            this.caretBlinkStartMillis = rl.a((byte) -126);
+            this.caretBlinkStartMillis = rl.monotonicTimeMillis((byte) -126);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "sl.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sl.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ class TextInputWidget extends ButtonWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -280,11 +280,11 @@ class TextInputWidget extends ButtonWidget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
-    public static void i(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_Y = null;
         field_V = null;
         tutorialOptionBasics = null;
@@ -329,10 +329,10 @@ class TextInputWidget extends ButtonWidget {
           return;
         }
         io var9 = (io) ((Object) this.renderer);
-        op var3 = var9.b(0, (UiWidget) (this));
+        op var3 = var9.ensureTextLayout(0, (UiWidget) (this));
         int var4 = var3.a(-1);
         int var5 = var9.a((byte) 26, (UiWidget) (this));
-        int var6 = var9.a(-10492) >> 1;
+        int var6 = var9.lineHeight(-10492) >> 1;
         if (-var6 + var5 > var4) {
           this.textOffsetX = 0;
           this.textOffsetY = 0;
@@ -365,12 +365,12 @@ class TextInputWidget extends ButtonWidget {
         this.lastPointerPressMillis = 0L;
         try {
           this.maximumTextLength = param2;
-          this.renderer = db.field_Sb.field_j;
+          this.renderer = VerticalScrollbar.field_Sb.field_j;
           this.setInputText((byte) -124, true, param0);
           this.caretScrollingEnabled = true;
-          this.caretBlinkStartMillis = rl.a((byte) -101);
+          this.caretBlinkStartMillis = rl.monotonicTimeMillis((byte) -101);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "sl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -396,7 +396,7 @@ class TextInputWidget extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.caretBlinkStartMillis = rl.a((byte) -116);
+          this.caretBlinkStartMillis = rl.monotonicTimeMillis((byte) -116);
           if (param2) {
             this.caretBlinkStartMillis = 25L;
           }
@@ -454,17 +454,17 @@ class TextInputWidget extends ButtonWidget {
                       this.notifyTextInputSubmitted((byte) 3);
                       return true;
                     }
-                    if (vj.field_c[82] &&
+                    if (TextLineLayout.field_c[82] &&
                       65 == param1) {
                       this.cutSelectedText(-98);
                       return true;
                     }
-                    if (vj.field_c[82] &&
+                    if (TextLineLayout.field_c[82] &&
                       66 == param1) {
                       this.copySelectedTextToClipboard(param2);
                       return true;
                     }
-                    if (vj.field_c[82] &&
+                    if (TextLineLayout.field_c[82] &&
                       param1 == 67) {
                       this.pasteClipboardText((byte) 4);
                       return true;
@@ -472,7 +472,7 @@ class TextInputWidget extends ButtonWidget {
                   } else {
                     if (this.caretIndex < this.widgetText.length()) {
                       stackIn_43_1 = -128;
-                      if (!vj.field_c[82]) {
+                      if (!TextLineLayout.field_c[82]) {
                         stackIn_44_2 = this.caretIndex + 1;
                       } else {
                         stackIn_44_2 = this.findNextWordBoundary(31);
@@ -484,7 +484,7 @@ class TextInputWidget extends ButtonWidget {
                 } else {
                   if (this.caretIndex > 0) {
                     stackIn_35_1 = 97;
-                    if (vj.field_c[82]) {
+                    if (TextLineLayout.field_c[82]) {
                       stackIn_36_2 = this.findPreviousWordBoundary(32);
                     } else {
                       stackIn_36_2 = this.caretIndex - 1;
@@ -518,7 +518,7 @@ class TextInputWidget extends ButtonWidget {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
         }
     }
 
@@ -566,11 +566,11 @@ class TextInputWidget extends ButtonWidget {
           if (this.renderer instanceof io) {
             var6 = (io) ((Object) this.renderer);
             if (this.selectionAnchorIndex != this.caretIndex) {
-              var6.a(this.caretIndex, this.selectionAnchorIndex, param2, param3, 154888568, (UiWidget) (this));
+              var6.drawSelection(this.caretIndex, this.selectionAnchorIndex, param2, param3, 154888568, (UiWidget) (this));
             }
-            var7 = rl.a((byte) -126);
+            var7 = rl.monotonicTimeMillis((byte) -126);
             if (500L > (-this.caretBlinkStartMillis + var7) % 1000L) {
-              var6.a(1, param3, this.caretIndex, param2, (UiWidget) (this));
+              var6.drawCaret(1, param3, this.caretIndex, param2, (UiWidget) (this));
             }
           }
         }

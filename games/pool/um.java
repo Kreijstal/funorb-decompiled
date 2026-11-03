@@ -16,10 +16,10 @@ abstract class um {
         RuntimeException var2_ref = null;
         var3 = Pool.field_O;
         try {
-          var4 = (kg) (we.field_c.c((byte) 65));
+          var4 = (kg) (ArchiveLoadStep.field_c.c((byte) 65));
           while (var4 != null) {
             fr.a(98, var4, param1);
-            var4 = (kg) (we.field_c.f((byte) -5));
+            var4 = (kg) (ArchiveLoadStep.field_c.f((byte) -5));
           }
           if (param0 != 10) {
             field_e = false;
@@ -33,14 +33,14 @@ abstract class um {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2_ref), "um.T(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2_ref), "um.T(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         ratingDrawn = null;
         if (param0 <= 107) {
-          um.a(-2);
+          um.releaseStatics(-2);
         }
     }
 

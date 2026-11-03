@@ -7,15 +7,15 @@ abstract class op {
     static String askingToJoinXsGame;
     static java.awt.Frame field_e;
     static int[] field_d;
-    vj[] field_b;
+    TextLineLayout[] field_b;
     static String muChatGameHide;
     static int field_f;
 
     final int a(int param0) {
         int var4 = 0;
         int var2;
-        vj[] var3;
-        vj var5;
+        TextLineLayout[] var3;
+        TextLineLayout var5;
         int var7;
         int var6;
         var7 = Pool.field_O;
@@ -25,7 +25,7 @@ abstract class op {
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5 != null) {
-              var6 = var5.a(param0 - 56);
+              var6 = var5.rightEdge(param0 - 56);
               if (var2 < var6) {
                 var2 = var6;
               }
@@ -37,18 +37,18 @@ abstract class op {
 
     final int a(int param0, byte param1) {
         int var4 = 0;
-        vj var5 = null;
-        vj[] var6 = this.field_b;
-        vj[] var3 = var6;
+        TextLineLayout var5 = null;
+        TextLineLayout[] var6 = this.field_b;
+        TextLineLayout[] var3 = var6;
         if (param1 > -35) {
           return -23;
         }
         for (var4 = 0; var4 < var6.length; var4++) {
           var5 = var6[var4];
-          if (var5.field_h.length > param0) {
-            return var5.field_h[param0];
+          if (var5.caretXs.length > param0) {
+            return var5.caretXs[param0];
           }
-          param0 = param0 - (-1 + var5.field_h.length);
+          param0 = param0 - (-1 + var5.caretXs.length);
         }
         return 0;
     }
@@ -60,7 +60,7 @@ abstract class op {
         }
         if (null != this.field_b &&
           this.field_b.length > 0) {
-          stackIn_6_0 = -this.field_b[0].field_e + this.field_b[this.field_b.length - 1].field_i;
+          stackIn_6_0 = -this.field_b[0].top + this.field_b[this.field_b.length - 1].bottom;
         } else {
           stackIn_6_0 = 0;
         }
@@ -69,13 +69,13 @@ abstract class op {
 
     final int a(int param0, int param1) {
         int var3 = 0;
-        vj var4 = null;
+        TextLineLayout var4 = null;
         for (var3 = param1; this.field_b.length > var3; var3++) {
           var4 = this.field_b[var3];
-          if (var4.field_h.length > param0) {
+          if (var4.caretXs.length > param0) {
             return var3;
           }
-          param0 = param0 - (var4.field_h.length - 1);
+          param0 = param0 - (var4.caretXs.length - 1);
         }
         return this.field_b.length;
     }
@@ -133,7 +133,7 @@ abstract class op {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ abstract class op {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -262,10 +262,10 @@ abstract class op {
                 if (var15Lifetime4.field_i == 0 &&
                   0 == var15Lifetime4.field_k) {
                   MatchingTextValidator.field_q = var14.field_f;
-                  di.field_h = var14.field_m;
+                  ResourceArchive.field_h = var14.field_m;
                 } else {
                   MatchingTextValidator.field_q = var15Lifetime4.field_i;
-                  di.field_h = var15Lifetime4.field_k;
+                  ResourceArchive.field_h = var15Lifetime4.field_k;
                 }
                 var12Lifetime1 = 0;
               } else {
@@ -274,11 +274,11 @@ abstract class op {
               if (0 == (15 & var14.field_r)) {
                 var11_intLifetime2 = 0;
                 if (var13 == null) {
-                  ng.field_w = var14.field_f;
+                  ThreeSliceButtonPainter.field_w = var14.field_f;
                   fr.field_u = var14.field_m;
                 } else {
                   fr.field_u = var14.field_k;
-                  ng.field_w = var14.field_i;
+                  ThreeSliceButtonPainter.field_w = var14.field_i;
                 }
               } else {
                 var11_intLifetime2 = 2;
@@ -329,45 +329,45 @@ abstract class op {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
         }
     }
 
     final int a(int param0, int param1, int param2) {
         int var5 = 0;
         int var4;
-        vj var6;
+        TextLineLayout var6;
         int var7;
         int var8;
         var8 = Pool.field_O;
         if (this.field_b != null &&
           this.field_b.length != 0 &&
-          this.field_b[0].field_e <= param0) {
-          if (this.field_b[param2 + this.field_b.length].field_i < param0) {
+          this.field_b[0].top <= param0) {
+          if (this.field_b[param2 + this.field_b.length].bottom < param0) {
             return -1;
           }
           if (this.field_b.length == 1) {
-            return this.field_b[0].a(-109, param1);
+            return this.field_b[0].nearestCaret(-109, param1);
           }
           var4 = 0;
           for (var5 = 0; this.field_b.length > var5; var5++) {
             var6 = this.field_b[var5];
-            if (param0 >= var6.field_e &&
-              var6.field_i >= param0) {
-              var7 = var6.a(-111, param1);
+            if (param0 >= var6.top &&
+              var6.bottom >= param0) {
+              var7 = var6.nearestCaret(-111, param1);
               if (var7 != -1) {
                 return var7 + var4;
               }
               return -1;
             }
-            var4 = var4 + (-1 + var6.field_h.length);
+            var4 = var4 + (-1 + var6.caretXs.length);
           }
           return -1;
         }
         return -1;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         field_d = null;
         muChatGameHide = null;
         if (param0 != 0) {

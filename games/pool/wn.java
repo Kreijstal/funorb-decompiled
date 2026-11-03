@@ -5,7 +5,7 @@ import java.io.*;
 
 final class wn {
     static volatile int field_k;
-    static vh field_g;
+    static UiComponent field_g;
     static KeyHandler field_a;
     static int field_h;
     static int field_j;
@@ -17,7 +17,7 @@ final class wn {
     static int field_i;
     static int[] field_d;
 
-    final static void a(oq param0, int param1) {
+    final static void writeReflectionCheckReplies(CipherPacketBuffer param0, int param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -67,7 +67,7 @@ final class wn {
           var22 = null;
           var12 = Pool.field_O;
           try {
-            var16_ref = (ho) (pj.field_H.c((byte) -89));
+            var16_ref = (ho) (MessageScreen.field_H.c((byte) -89));
             if (var16_ref == null) {
               return;
             }
@@ -218,7 +218,7 @@ final class wn {
             } else {
               stackIn_70_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -227,7 +227,7 @@ final class wn {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         if (!param0) {
           int[] var2 = (int[]) null;
           wn.$cfr$intArgs$a$2435eea43ef1(51, -10, (int[]) null, (int[]) null, 92, 127, (int[]) null, (int[]) null);
@@ -286,7 +286,7 @@ final class wn {
             }
           }
           var10 = var8_int;
-          ng.field_w = var8_int;
+          ThreeSliceButtonPainter.field_w = var8_int;
           var11 = var9;
           fr.field_u = var9;
           var15 = 1;
@@ -305,7 +305,7 @@ final class wn {
               }
             }
             MatchingTextValidator.field_q = var8_int + var10 >> 1;
-            di.field_h = var11 + var9 >> 1;
+            ResourceArchive.field_h = var11 + var9 >> 1;
             stackIn_18_0 = param3[var15 - 1];
             stackIn_18_1 = param4;
             stackIn_18_2 = -23;
@@ -326,9 +326,9 @@ final class wn {
               stackIn_22_10 = param1;
             }
             bo.$cfr$intArgs$a$29f688675a86(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
-            ng.field_w = MatchingTextValidator.field_q;
+            ThreeSliceButtonPainter.field_w = MatchingTextValidator.field_q;
             var9 = var11;
-            fr.field_u = di.field_h;
+            fr.field_u = ResourceArchive.field_h;
             var8_int = var10;
             var15++;
           }
@@ -361,7 +361,7 @@ final class wn {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 
@@ -420,7 +420,7 @@ final class wn {
             }
           }
           var10 = var8_int;
-          ng.field_w = var8_int;
+          ThreeSliceButtonPainter.field_w = var8_int;
           var11 = var9;
           fr.field_u = var9;
           var15 = 1;
@@ -439,7 +439,7 @@ final class wn {
               }
             }
             MatchingTextValidator.field_q = var8_int + var10 >> 1;
-            di.field_h = var11 + var9 >> 1;
+            ResourceArchive.field_h = var11 + var9 >> 1;
             stackIn_18_0 = param3[var15 - 1];
             stackIn_18_1 = param4;
             stackIn_18_2 = -23;
@@ -460,9 +460,9 @@ final class wn {
               stackIn_22_10 = param1;
             }
             bo.$cfr$intArgs$a$29f688675a86(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
-            ng.field_w = MatchingTextValidator.field_q;
+            ThreeSliceButtonPainter.field_w = MatchingTextValidator.field_q;
             var9 = var11;
-            fr.field_u = di.field_h;
+            fr.field_u = ResourceArchive.field_h;
             var8_int = var10;
             var15++;
           }
@@ -495,7 +495,7 @@ final class wn {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 }

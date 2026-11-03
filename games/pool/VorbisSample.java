@@ -18,7 +18,7 @@ final class VorbisSample extends IntrusiveNode {
     private byte[] field_S;
     private static boolean[] longBlockModes;
     private static int field_O;
-    private static km[] mappings;
+    private static VorbisMapping[] mappings;
     private float[] previousBlock;
     private static boolean field_r;
     private static byte[] bitData;
@@ -85,7 +85,7 @@ final class VorbisSample extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        km var14;
+        VorbisMapping var14;
         int var15;
         int var16;
         int var17_int;
@@ -214,20 +214,20 @@ final class VorbisSample extends IntrusiveNode {
           var13 = var4 >> 1;
         }
         var14 = mappings[modeMappings[var2]];
-        var16 = var14.field_b;
-        var17_int = var14.field_a[var16];
+        var16 = var14.mux;
+        var17_int = var14.submapFloors[var16];
         stackIn_22_0 = (floors[var17_int].b()) ? 0 : 1;
         var15 = stackIn_22_0;
         var16Lifetime1 = var15;
-        for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_d; var17_intLifetime1++) {
-          var42 = residues[var14.field_c[var17_intLifetime1]];
+        for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.submaps; var17_intLifetime1++) {
+          var42 = residues[var14.submapResidues[var17_intLifetime1]];
           var52 = field_R;
           var42.a(var52, var4 >> 1, var16Lifetime1 != 0);
         }
         if (var15 == 0) {
-          var17_intLifetime2 = var14.field_b;
-          var18_int = var14.field_a[var17_intLifetime2];
-          floors[var18_int].a(field_R, var4 >> 1);
+          var17_intLifetime2 = var14.mux;
+          var18_int = var14.submapFloors[var17_intLifetime2];
+          floors[var18_int].applyFloor(field_R, var4 >> 1);
         }
         if (var15 != 0) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {
@@ -443,7 +443,7 @@ final class VorbisSample extends IntrusiveNode {
         longBitReverse = null;
     }
 
-    private final static boolean a(di param0) {
+    private final static boolean ensureSetup(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_r) {
           var1 = param0.a(112, 0, 0);
@@ -602,7 +602,7 @@ final class VorbisSample extends IntrusiveNode {
           var9 = new int[var5];
           var10 = TextHotspotRegion.a(var5 - 1, 0);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = c.a(var11, var10, (byte) -87);
+            var9[var11] = c.reverseBits(var11, var10, (byte) -87);
           }
           if (var1 == 0) {
             shortTrigA = var6_ref_float__;
@@ -636,9 +636,9 @@ final class VorbisSample extends IntrusiveNode {
           residues[var4Lifetime1] = new VorbisResidue();
         }
         var4Lifetime2 = VorbisSample.readBits(6) + 1;
-        mappings = new km[var4Lifetime2];
+        mappings = new VorbisMapping[var4Lifetime2];
         for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
-          mappings[var5Lifetime1] = new km();
+          mappings[var5Lifetime1] = new VorbisMapping();
         }
         var5Lifetime2 = VorbisSample.readBits(6) + 1;
         longBlockModes = new boolean[var5Lifetime2];
@@ -669,10 +669,10 @@ final class VorbisSample extends IntrusiveNode {
         bitOffset = 0;
     }
 
-    final static VorbisSample a(di param0, int param1, int param2) {
+    final static VorbisSample a(ResourceArchive param0, int param1, int param2) {
         try {
           VorbisSample var4_ref = null;
-          if (!VorbisSample.a(param0)) {
+          if (!VorbisSample.ensureSetup(param0)) {
             param0.b(param2, param1, 30);
             return null;
           }
@@ -729,14 +729,14 @@ final class VorbisSample extends IntrusiveNode {
         return new PcmSample(this.sampleRate, var1, this.loopStart, this.loopEnd, this.field_T);
     }
 
-    final static VorbisSample a(di param0, String param1, String param2) {
+    final static VorbisSample a(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
-          if (!VorbisSample.a(param0)) {
+          if (!VorbisSample.ensureSetup(param0)) {
             param0.a(param2, 121, param1);
             return null;
           }
-          byte[] var3 = param0.a(false, param2, param1);
+          byte[] var3 = param0.getFileByName(false, param2, param1);
           if (var3 == null) {
             return null;
           }

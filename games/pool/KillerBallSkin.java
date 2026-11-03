@@ -4,13 +4,13 @@
 final class KillerBallSkin extends BallSkin {
     static String createDisplayname;
     static Sprite field_n;
-    static vh field_p;
+    static UiComponent field_p;
     static int[] field_r;
     static String unpackingMusic;
     static int[] field_o;
     static int field_m;
 
-    final static void a(int param0, boolean param1, boolean param2, cg param3) {
+    final static void a(int param0, boolean param1, boolean param2, MusicTrack param3) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -19,15 +19,15 @@ final class KillerBallSkin extends BallSkin {
         RuntimeException var4_ref = null;
         try {
           if (ij.field_u != param3) {
-            var4 = tl.field_N;
+            var4 = RankingsScreen.field_N;
             synchronized (var4) {
-              tl.field_N.a((byte) -121, -1, 256);
+              RankingsScreen.field_N.setChannelVolumeScale((byte) -121, -1, 256);
               ij.field_u = param3;
-              tl.field_N.a(param3, param1, (byte) -14, param2);
+              RankingsScreen.field_N.loadScoreAndResetSynthesis(param3, param1, (byte) -14, param2);
             }
           }
           if (param0 != 256) {
-            field_p = (vh) null;
+            field_p = (UiComponent) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -40,14 +40,14 @@ final class KillerBallSkin extends BallSkin {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     final int a(int param0, boolean param1) {
         int var3;
         int var4;
-        di var5;
+        ResourceArchive var5;
         int var3Lifetime1;
         var4 = Pool.field_O;
         if (param1) {
@@ -102,8 +102,8 @@ final class KillerBallSkin extends BallSkin {
           }
           return this.c(101, 1);
         }
-        var5 = (di) null;
-        this.a(-117, (di) null);
+        var5 = (ResourceArchive) null;
+        this.a(-117, (ResourceArchive) null);
         var3Lifetime1 = param0;
         if (var3Lifetime1 == 0) {
           return 13421772;
@@ -174,7 +174,7 @@ final class KillerBallSkin extends BallSkin {
         return false;
     }
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 >= 78) {
           createDisplayname = null;
           field_n = null;
@@ -184,7 +184,7 @@ final class KillerBallSkin extends BallSkin {
           field_r = null;
           return;
         }
-        KillerBallSkin.i(94);
+        KillerBallSkin.releaseStatics(94);
         createDisplayname = null;
         field_n = null;
         unpackingMusic = null;
@@ -195,7 +195,7 @@ final class KillerBallSkin extends BallSkin {
 
     private final int c(int param0, int param1) {
         if (param0 <= 75) {
-          KillerBallSkin.i(-122);
+          KillerBallSkin.releaseStatics(-122);
           if (param1 == 0) {
             return 13158;
           }
@@ -213,31 +213,31 @@ final class KillerBallSkin extends BallSkin {
         return 16777215;
     }
 
-    final void a(int param0, di param1) {
+    final void a(int param0, ResourceArchive param1) {
         try {
           if (param0 != 198123656) {
             this.c(45);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ac.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ac.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0, byte param1) {
         int var2 = 99 % ((-11 - param1) / 49);
         ArrayWidgetGroup.field_M = ArrayWidgetGroup.field_M + param0;
-        tq.field_q = (no.field_q.field_y + sa.field_h.maxAscent >> 1) + ArrayWidgetGroup.field_M;
+        tq.field_q = (Js5Transport.field_q.field_y + sa.field_h.maxAscent >> 1) + ArrayWidgetGroup.field_M;
     }
 
-    final void a(di param0, byte param1) {
-        eg dupTemp$0 = null;
+    final void a(ResourceArchive param0, byte param1) {
+        MeshBuilder dupTemp$0 = null;
         if (this.field_a != null) {
           return;
         }
         try {
-          this.field_a = new eg[16];
+          this.field_a = new MeshBuilder[16];
           this.field_a[0] = this.g(-930305852);
-          dupTemp$0 = eg.a(param0, "", "balls/ball_killer_red");
+          dupTemp$0 = MeshBuilder.loadFromArchive(param0, "", "balls/ball_killer_red");
           this.field_a[15] = dupTemp$0;
           this.field_a[14] = dupTemp$0;
           this.field_a[13] = dupTemp$0;
@@ -252,16 +252,16 @@ final class KillerBallSkin extends BallSkin {
           this.field_a[3] = dupTemp$0;
           this.field_a[2] = dupTemp$0;
           this.field_a[1] = dupTemp$0;
-          this.field_a[8] = eg.a(param0, "", "balls/ball_killer_black");
+          this.field_a[8] = MeshBuilder.loadFromArchive(param0, "", "balls/ball_killer_black");
           if (param1 != 117) {
             this.c(40);
           }
-          this.field_a[1].a(8, 8, 8, 4);
-          this.field_a[8].a(8, 8, 8, 4);
+          this.field_a[1].scaleVertices(8, 8, 8, 4);
+          this.field_a[8].scaleVertices(8, 8, 8, 4);
           IsaacCipher.a(this.field_a[1], 0);
           IsaacCipher.a(this.field_a[8], 0);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ac.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ac.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -13,11 +13,11 @@ final class CueAim {
     int azimuth;
     static String pottingTheRestOfYourGroup;
     static String[] field_i;
-    static vh field_a;
+    static UiComponent field_a;
     static volatile int field_c;
     static int field_f;
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         pottingTheRestOfYourGroup = null;
         field_a = null;
         field_g = null;
@@ -34,7 +34,7 @@ final class CueAim {
         return new CueAim(this.field_n, this.azimuth, this.polarAngle, this.field_d, this.field_e);
     }
 
-    final void aimAt(mm param0, Ball param1, byte param2) {
+    final void aimAt(Camera param0, Ball param1, byte param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -42,12 +42,12 @@ final class CueAim {
         try {
           var4_int = param1.positionX >> 13;
           var5 = param1.positionY >> 13;
-          var6 = (int)(8.0 * param0.field_a + 0.5);
-          var7 = (int)(0.5 + param0.field_d * 8.0);
+          var6 = (int)(8.0 * param0.eyeY + 0.5);
+          var7 = (int)(0.5 + param0.eyeX * 8.0);
           this.azimuth = ResizableDialog.c(-var4_int + var7, var6 - var5, 4096) >> 2;
           int var8 = -57 % ((param2 - 66) / 54);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "kj.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kj.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class CueAim {
     final boolean a(boolean param0) {
         if (param0) {
           Ball var3 = (Ball) null;
-          this.aimAt((mm) null, (Ball) null, (byte) 16);
+          this.aimAt((Camera) null, (Ball) null, (byte) 16);
         }
         return 0 <= this.field_n ? true : false;
     }
@@ -77,11 +77,11 @@ final class CueAim {
           param0.a(this.field_d, false);
           param0.a(this.field_e, false);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "kj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static void a(int param0, int param1, oc param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, TriangleMesh param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_14_0 = 0;
         int[] stackIn_16_0 = null;
         int stackIn_17_1 = 0;
@@ -126,7 +126,7 @@ final class CueAim {
         int var39 = 0;
         int[] var40 = null;
         int var43 = 0;
-        oc var44 = null;
+        TriangleMesh var44 = null;
         int[] var49 = null;
         int[] var54 = null;
         byte[] var60 = null;
@@ -189,7 +189,7 @@ final class CueAim {
           var43 = 0;
           var13Lifetime1 = var43;
           while (var43 < eh.field_x) {
-            var14Lifetime1 = tl.field_I[var43];
+            var14Lifetime1 = RankingsScreen.field_I[var43];
             var15Lifetime1 = param2.field_y[var14Lifetime1];
             var16 = param2.field_r[var14Lifetime1];
             var17 = param2.field_u[var14Lifetime1];
@@ -211,12 +211,12 @@ final class CueAim {
               stackIn_31_0 = -1;
             }
             var20 = stackIn_31_0;
-            if (null != cf.field_a &&
+            if (null != SoundCache.field_a &&
               null != param2.field_H &&
               param2.field_H.length > var14Lifetime1 &&
               param2.field_H[var14Lifetime1] != -1 &&
-              param2.field_H[var14Lifetime1] < cf.field_a.length) {
-              stackIn_38_0 = cf.field_a[param2.field_H[var14Lifetime1]];
+              param2.field_H[var14Lifetime1] < SoundCache.field_a.length) {
+              stackIn_38_0 = SoundCache.field_a[param2.field_H[var14Lifetime1]];
             } else {
               stackIn_38_0 = null;
             }
@@ -241,7 +241,7 @@ final class CueAim {
               var32 = var30 & 65280;
               var33 = (-16711742 & var31 * var28) >>> 8 | 922812160 & var32 * var28 >>> 8;
               var33 = var33 + 65793 * var29;
-              dp.a(var24, var27, var23, var25, var26, var33 >> 1 & 8355711, 108, var22);
+              TextureCache.a(var24, var27, var23, var25, var26, var33 >> 1 & 8355711, 108, var22);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];
@@ -278,15 +278,15 @@ final class CueAim {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
-        PasswordValidator.a(-124, ub.field_n, uo.field_Lb, dg.field_J, tq.field_m);
+        PasswordValidator.a(-124, AlternateLongAndTextLoginPayload.field_n, AlignedIconLabel.field_Lb, dg.field_J, tq.field_m);
         if (param0 > -97) {
-          oc var2 = (oc) null;
-          CueAim.a(-66, 60, (oc) null, -82, -71, 60, 97, 51);
+          TriangleMesh var2 = (TriangleMesh) null;
+          CueAim.a(-66, 60, (TriangleMesh) null, -82, -71, 60, 97, 51);
         }
     }
 
@@ -370,20 +370,20 @@ final class CueAim {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 
     final static void a(int param0, Sprite param1) {
         try {
-          uc.a((byte) 90);
+          uc.pushRasterSnapshot((byte) 90);
           SoftwareRasterizer.setTarget(param1.field_D, param1.field_w, param1.field_y);
           if (param0 < 38) {
             Sprite var3 = (Sprite) null;
             CueAim.a(30, (Sprite) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "kj.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kj.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -410,7 +410,7 @@ final class CueAim {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -425,7 +425,7 @@ final class CueAim {
           this.field_d = param1.readByte((byte) 105);
           this.field_e = param1.readByte((byte) 105);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "kj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kj.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -436,12 +436,12 @@ final class CueAim {
           this.field_n = param1.field_n;
           this.polarAngle = param1.polarAngle;
           if (param0 < 21) {
-            oc var4 = (oc) null;
-            CueAim.a(63, -58, (oc) null, 93, 55, 29, 35, -81);
+            TriangleMesh var4 = (TriangleMesh) null;
+            CueAim.a(63, -58, (TriangleMesh) null, 93, 55, 29, 35, -81);
           }
           this.field_e = param1.field_e;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "kj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

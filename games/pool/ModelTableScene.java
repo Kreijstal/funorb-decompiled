@@ -8,9 +8,9 @@ abstract class ModelTableScene extends TableScene {
     int[][] field_M;
     static String pottingBallForYou;
     static int field_L;
-    eg[] field_O;
+    MeshBuilder[] field_O;
 
-    final int a(int param0, eg[][] param1, int[][][] param2, int param3, int param4) {
+    final int a(int param0, MeshBuilder[][] param1, int[][][] param2, int param3, int param4) {
         int var6_int = 0;
         int var9 = 0;
         RuntimeException var6 = null;
@@ -33,8 +33,8 @@ abstract class ModelTableScene extends TableScene {
             var7 = var7 + param1[var8].length;
             param2[var8] = new int[param1[var8].length][3];
             for (var9 = 0; param1[var8].length > var9; var9++) {
-              ln.a(param2[var8][var9], 0, param1[var8][var9]);
-              nd.a(param1[var8][var9], (byte) -37);
+              ln.recenterModel(param2[var8][var9], 0, param1[var8][var9]);
+              MarkerSliderPainter.a(param1[var8][var9], (byte) -37);
             }
           }
           if (param3 > -49) {
@@ -58,7 +58,7 @@ abstract class ModelTableScene extends TableScene {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -70,15 +70,15 @@ abstract class ModelTableScene extends TableScene {
         var3 = Pool.field_O;
         if (this.field_h) {
           for (var2 = 0; ph.field_g.length > var2; var2++) {
-            pa.field_L[var2] = th.field_l[ph.field_g[var2]].b(-13025, oh.field_d);
-            OpacityWidget.field_Q[var2] = th.field_l[var2].a(param0, oh.field_d);
+            TimeTrialSelectScreen.field_L[var2] = th.field_l[ph.field_g[var2]].b(-13025, GzipDecoder.field_d);
+            OpacityWidget.field_Q[var2] = th.field_l[var2].a(param0, GzipDecoder.field_d);
           }
         } else {
           var5 = 0;
           var2 = var5;
           while (ph.field_g.length > var5) {
-            pa.field_L[var5] = th.field_l[ph.field_g[var5]].b(oh.field_d, -31);
-            OpacityWidget.field_Q[var5] = th.field_l[var5].a(true, oh.field_d);
+            TimeTrialSelectScreen.field_L[var5] = th.field_l[ph.field_g[var5]].b(GzipDecoder.field_d, -31);
+            OpacityWidget.field_Q[var5] = th.field_l[var5].a(true, GzipDecoder.field_d);
             var5++;
           }
         }
@@ -95,7 +95,7 @@ abstract class ModelTableScene extends TableScene {
         int var2Lifetime1;
         if (th.field_l != null) {
           ph.field_g = new int[th.field_l.length];
-          pa.field_L = new int[th.field_l.length];
+          TimeTrialSelectScreen.field_L = new int[th.field_l.length];
           OpacityWidget.field_Q = new boolean[th.field_l.length];
           for (var2 = 0; var2 < ph.field_g.length; var2++) {
             ph.field_g[var2] = var2;
@@ -112,7 +112,7 @@ abstract class ModelTableScene extends TableScene {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, p[] param6) {
+    final void a(int param0, int param1, int param2, int param3, int param4, int param5, ModelInstance[] param6) {
         int[] var13 = null;
         int[] var11 = null;
         int[] var9 = null;
@@ -122,21 +122,21 @@ abstract class ModelTableScene extends TableScene {
         int[] var10 = null;
         int[] var8Lifetime1;
         try {
-          var13 = mj.a(-31121);
+          var13 = mj.identityTransform(-31121);
           var11 = var13;
           var9 = var11;
           var8 = var9;
           var9[param0] = param4 + this.field_M[param5][0];
           var9[1] = param2 + this.field_M[param5][1];
           var9[2] = param3 + this.field_M[param5][2];
-          param6[param1 - 0] = new p((nc) (this.a(var13, this.field_O[param5], -97)), var13);
+          param6[param1 - 0] = new ModelInstance((ModelMesh) (this.a(var13, this.field_O[param5], -97)), var13);
           var14 = dq.a((byte) 78, f.a((byte) 69, var13));
           var12 = var14;
           var10 = var12;
           var8Lifetime1 = var10;
-          param6[1 + param1] = new p((nc) (this.a(var14, this.field_O[param5], -82)), var14);
+          param6[1 + param1] = new ModelInstance((ModelMesh) (this.a(var14, this.field_O[param5], -82)), var14);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vc.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vc.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -147,18 +147,18 @@ abstract class ModelTableScene extends TableScene {
           if (PlasmaTableScene.field_ab == 11) {
             bi.b(-125);
           }
-          a.a(am.field_n, param0, PasswordValidator.field_o, CacheEntry.field_w);
+          a.a(TextWidgetPainter.field_n, param0, PasswordValidator.field_o, CacheEntry.field_w);
           if (!param0) {
             optionsmenuNotpaused = (String) null;
           }
           ButtonWidget.a(0, 0, (byte) -118, param1);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vc.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vc.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(p[] param0, int param1, int param2, boolean param3, eg param4, int param5, int[] param6, int param7) {
-        eg var10 = null;
+    final void a(ModelInstance[] param0, int param1, int param2, boolean param3, MeshBuilder param4, int param5, int[] param6, int param7) {
+        MeshBuilder var10 = null;
         int[] var15 = null;
         int[] var11 = null;
         int[] var9 = null;
@@ -172,39 +172,39 @@ abstract class ModelTableScene extends TableScene {
         int[] var9Lifetime2;
         int[] var9Lifetime3;
         try {
-          var10 = a.a(!param3 ? true : false, new eg(param4, false, param3, false, false));
-          var15 = mj.a(-31121);
+          var10 = a.a(!param3 ? true : false, new MeshBuilder(param4, false, param3, false, false));
+          var15 = mj.identityTransform(-31121);
           var11 = var15;
           var9 = var11;
           var9[2] = param6[2] + param1;
           var9[1] = param2 + param6[1];
           var9[0] = param6[0] + param7;
-          param0[0 + param5] = new p((nc) (this.a(var15, param4, -115)), var15);
-          var16 = mj.a(-31121);
+          param0[0 + param5] = new ModelInstance((ModelMesh) (this.a(var15, param4, -115)), var15);
+          var16 = mj.identityTransform(-31121);
           var12 = var16;
           var9Lifetime1 = var12;
           var9Lifetime1[2] = param6[2] + param1;
           var9Lifetime1[1] = -param6[1] - param2;
           var9Lifetime1[0] = param6[0] + param7;
-          param0[param5 + 1] = new p((nc) (this.a(var16, var10, -56)), var16);
-          var17 = mj.a(-31121);
+          param0[param5 + 1] = new ModelInstance((ModelMesh) (this.a(var16, var10, -56)), var16);
+          var17 = mj.identityTransform(-31121);
           var13 = var17;
           var9Lifetime2 = var13;
           var9Lifetime2[1] = param2 + param6[1];
           var9Lifetime2[2] = param6[2] + param1;
           var9Lifetime2[0] = param7 + param6[0];
           dq.a((byte) 114, var17);
-          param0[param5 + 2] = new p((nc) (this.a(var17, param4, -85)), var17);
-          var18 = mj.a(-31121);
+          param0[param5 + 2] = new ModelInstance((ModelMesh) (this.a(var17, param4, -85)), var17);
+          var18 = mj.identityTransform(-31121);
           var14 = var18;
           var9Lifetime3 = var14;
           var9Lifetime3[2] = param1 + param6[2];
           var9Lifetime3[0] = param6[0] + param7;
           var9Lifetime3[1] = -param2 - param6[1];
           dq.a((byte) -116, var18);
-          param0[param5 + 3] = new p((nc) (this.a(var18, var10, -76)), var18);
+          param0[param5 + 3] = new ModelInstance((ModelMesh) (this.a(var18, var10, -76)), var18);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -224,20 +224,20 @@ abstract class ModelTableScene extends TableScene {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = pa.field_K.getGraphics();
+            var9 = TimeTrialSelectScreen.field_K.getGraphics();
             if (cl.field_c == null) {
               cl.field_c = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param0) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, ml.field_d, ad.field_c);
+              var9.fillRect(0, 0, ml.field_d, ArchiveIndex.field_c);
             }
             if (param3 == null) {
               param3 = new java.awt.Color(140, 17, 17);
             }
             try {
               if (wf.field_c == null) {
-                wf.field_c = pa.field_K.createImage(304, 34);
+                wf.field_c = TimeTrialSelectScreen.field_K.createImage(304, 34);
               }
               var10 = wf.field_c.getGraphics();
               var10.setColor(param3);
@@ -249,12 +249,12 @@ abstract class ModelTableScene extends TableScene {
               var10.setFont(cl.field_c);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (304 - param2.length() * 6) / 2, 22);
-              var9.drawImage(wf.field_c, ml.field_d / 2 - 152, ad.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(wf.field_c, ml.field_d / 2 - 152, ArchiveIndex.field_c / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = ml.field_d / 2 - 152;
-              var8 = ad.field_c / 2 - 18;
+              var8 = ArchiveIndex.field_c / 2 - 18;
               var9.setColor(param3);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(var7 + 2, var8 + 2, 3 * param4, 30);
@@ -268,12 +268,12 @@ abstract class ModelTableScene extends TableScene {
             if (null != ImageProducerRasterBuffer.field_o) {
               var9.setFont(cl.field_c);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(ImageProducerRasterBuffer.field_o, ml.field_d / 2 - ImageProducerRasterBuffer.field_o.length() * 6 / 2, ad.field_c / 2 - 26);
+              var9.drawString(ImageProducerRasterBuffer.field_o, ml.field_d / 2 - ImageProducerRasterBuffer.field_o.length() * 6 / 2, ArchiveIndex.field_c / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            pa.field_K.repaint();
+            TimeTrialSelectScreen.field_K.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -292,11 +292,11 @@ abstract class ModelTableScene extends TableScene {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void d(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 < 95) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;
           ModelTableScene.a(false, (java.awt.Canvas) null);
@@ -316,10 +316,10 @@ abstract class ModelTableScene extends TableScene {
           this.d(16);
           if (param1 != 21894) {
             int[] var4 = (int[]) null;
-            this.a((p[]) null, 81, -71, false, (eg) null, -4, (int[]) null, -24);
+            this.a((ModelInstance[]) null, 81, -71, false, (MeshBuilder) null, -4, (int[]) null, -24);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

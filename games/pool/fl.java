@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fl extends IntrusiveNode {
-    static vh field_q;
+    static UiComponent field_q;
     static int keycodeDefaultUp2;
     int[] field_r;
     static String endOfGamePressEscapeToContinue;
@@ -22,27 +22,27 @@ final class fl extends IntrusiveNode {
     }
 
     final static void registerPunctuationKeyCodes(boolean param0) {
-        el.field_H[44] = 71;
-        el.field_H[47] = 73;
-        el.field_H[222] = 58;
-        el.field_H[192] = 28;
-        el.field_H[520] = 59;
-        el.field_H[91] = 42;
-        el.field_H[93] = 43;
+        AchievementsScreen.field_H[44] = 71;
+        AchievementsScreen.field_H[47] = 73;
+        AchievementsScreen.field_H[222] = 58;
+        AchievementsScreen.field_H[192] = 28;
+        AchievementsScreen.field_H[520] = 59;
+        AchievementsScreen.field_H[91] = 42;
+        AchievementsScreen.field_H[93] = 43;
         if (param0) {
-          el.field_H[59] = 57;
-          el.field_H[46] = 72;
-          el.field_H[45] = 26;
-          el.field_H[92] = 74;
-          el.field_H[61] = 27;
+          AchievementsScreen.field_H[59] = 57;
+          AchievementsScreen.field_H[46] = 72;
+          AchievementsScreen.field_H[45] = 26;
+          AchievementsScreen.field_H[92] = 74;
+          AchievementsScreen.field_H[61] = 27;
           return;
         }
-        field_q = (vh) null;
-        el.field_H[59] = 57;
-        el.field_H[46] = 72;
-        el.field_H[45] = 26;
-        el.field_H[92] = 74;
-        el.field_H[61] = 27;
+        field_q = (UiComponent) null;
+        AchievementsScreen.field_H[59] = 57;
+        AchievementsScreen.field_H[46] = 72;
+        AchievementsScreen.field_H[45] = 26;
+        AchievementsScreen.field_H[92] = 74;
+        AchievementsScreen.field_H[61] = 27;
     }
 
     private fl() throws Throwable {

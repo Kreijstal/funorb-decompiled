@@ -8,7 +8,7 @@ final class TikiTableScene extends ModelTableScene {
     private PcmSample field_hb;
     private PcmSample field_lb;
     private PcmSample field_gb;
-    static vh field_V;
+    static UiComponent field_V;
     private PcmSample field_kb;
     static String playerXNowHasNLives;
     private PcmSample field_db;
@@ -73,18 +73,18 @@ final class TikiTableScene extends ModelTableScene {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final void b(int param0, di param1) {
+    final void b(int param0, ResourceArchive param1) {
         try {
           if (param0 != 5) {
             this.field_gb = (PcmSample) null;
           }
-          this.field_B = new Sprite(param1.a(false, "tiki-sky.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
+          this.field_B = new Sprite(param1.getFileByName(false, "tiki-sky.jpg", ""), (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "cj.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cj.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class TikiTableScene extends ModelTableScene {
         try {
           super.a(param0, param1);
           if (ln.field_t == 0) {
-            tl.field_N.a(true, -1);
+            RankingsScreen.field_N.unloadScoreAndResetSynthesis(true, -1);
           }
           if (500 > ln.field_t) {
             this.a(128, 50, (byte) 71, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
@@ -115,14 +115,14 @@ final class TikiTableScene extends ModelTableScene {
                 if (ga.nextRandomInt(800, true, ea.field_r) == 0) {
                   this.c(-4577, 128 - 7 * var3_int / 8 >> 2);
                 }
-                tl.field_N.a((byte) 77, -1, var3_int);
+                RankingsScreen.field_N.setChannelVolumeScale((byte) 77, -1, var3_int);
               } else {
                 if (ln.field_t < 11200) {
                   this.a(8, 50, (byte) -101, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
                 } else {
                   if (ln.field_t >= 12200) {
                     if (ln.field_t == 12200) {
-                      tl.field_N.e(-1);
+                      RankingsScreen.field_N.stopMusicPlayback(-1);
                     } else {
                       ln.field_t = -1;
                     }
@@ -132,14 +132,14 @@ final class TikiTableScene extends ModelTableScene {
                     if (ga.nextRandomInt(800, true, ea.field_r) == 0) {
                       this.c(-4577, 128 - var3_int * 7 / 8 >> 2);
                     }
-                    tl.field_N.a((byte) 32, -1, var3_int);
+                    RankingsScreen.field_N.setChannelVolumeScale((byte) 32, -1, var3_int);
                   }
                 }
               }
             } else {
-              tl.field_N.a((byte) 88, -1, 1);
+              RankingsScreen.field_N.setChannelVolumeScale((byte) 88, -1, 1);
               ij.field_u = this.field_b;
-              tl.field_N.a(this.field_b, true, (byte) -14, true);
+              RankingsScreen.field_N.loadScoreAndResetSynthesis(this.field_b, true, (byte) -14, true);
             }
           }
           ln.field_t = ln.field_t + 1;
@@ -154,11 +154,11 @@ final class TikiTableScene extends ModelTableScene {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
-    final void a(di param0, int param1) {
+    final void a(ResourceArchive param0, int param1) {
         int incrementValue$22 = 0;
         int incrementValue$23 = 0;
         int incrementValue$24 = 0;
@@ -198,13 +198,13 @@ final class TikiTableScene extends ModelTableScene {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        eg[] var14 = null;
+        MeshBuilder[] var14 = null;
         int var15 = 0;
-        eg[] var16 = null;
-        eg var17 = null;
-        eg[] var19 = null;
+        MeshBuilder[] var16 = null;
+        MeshBuilder var17 = null;
+        MeshBuilder[] var19 = null;
         int[] var20 = null;
-        eg var21 = null;
+        MeshBuilder var21 = null;
         int[] var24 = null;
         int[] var25 = null;
         int[] var26 = null;
@@ -223,99 +223,99 @@ final class TikiTableScene extends ModelTableScene {
         int var4Lifetime4;
         var22 = Pool.field_O;
         try {
-          this.field_O = new eg[22];
+          this.field_O = new MeshBuilder[22];
           var3_int = 0;
           ml.field_j = var3_int;
           incrementValue$22 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$22] = eg.a(param0, "", "tiki_table/tiki_extra_1");
+          this.field_O[incrementValue$22] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_extra_1");
           incrementValue$23 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$23] = eg.a(param0, "", "tiki_table/tiki_extra_2");
+          this.field_O[incrementValue$23] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_extra_2");
           incrementValue$24 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$24] = eg.a(param0, "", "tiki_table/tiki_extra_3");
+          this.field_O[incrementValue$24] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_extra_3");
           incrementValue$25 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$25] = eg.a(param0, "", "tiki_table/tiki_extra_4");
+          this.field_O[incrementValue$25] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_extra_4");
           kp.field_f = var3_int;
           AccountCreationForm.field_T = var3_int;
           incrementValue$26 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$26] = eg.a(param0, "", "tiki_table/tiki_totnew");
+          this.field_O[incrementValue$26] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_totnew");
           ViewportController.field_t = var3_int;
-          mn.field_a = var3_int;
+          DualLinkDequeIterator.field_a = var3_int;
           incrementValue$27 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$27] = eg.a(param0, "", "tiki_table/tiki_steps_extend");
-          ec.field_c = var3_int;
+          this.field_O[incrementValue$27] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_steps_extend");
+          BallDebugOverlay.field_c = var3_int;
           FullscreenErrorDialog.field_ib = var3_int;
           incrementValue$28 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$28] = eg.a(param0, "", "tiki_table/tiki_leg_a");
+          this.field_O[incrementValue$28] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_leg_a");
           incrementValue$29 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$29] = eg.a(param0, "", "tiki_table/tiki_leg_b");
+          this.field_O[incrementValue$29] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_leg_b");
           qf.field_i = var3_int;
-          im.field_Wb = var3_int;
+          LobbyPlayer.field_Wb = var3_int;
           incrementValue$30 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$30] = eg.a(param0, "", "tiki_table/tiki_block_a");
+          this.field_O[incrementValue$30] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_block_a");
           incrementValue$31 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$31] = eg.a(param0, "", "tiki_table/tiki_block_b");
+          this.field_O[incrementValue$31] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_block_b");
           incrementValue$32 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$32] = eg.a(param0, "", "tiki_table/tiki_block_c");
+          this.field_O[incrementValue$32] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_block_c");
           incrementValue$33 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$33] = eg.a(param0, "", "tiki_table/tiki_block_d");
+          this.field_O[incrementValue$33] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_block_d");
           incrementValue$34 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$34] = eg.a(param0, "", "tiki_table/tiki_block_e");
+          this.field_O[incrementValue$34] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_block_e");
           incrementValue$35 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$35] = eg.a(param0, "", "tiki_table/tiki_block_f");
-          or.field_h = var3_int;
-          vh.field_L = var3_int;
+          this.field_O[incrementValue$35] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_block_f");
+          BallEvent.field_h = var3_int;
+          UiComponent.field_L = var3_int;
           incrementValue$36 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$36] = eg.a(param0, "", "tiki_table/tiki_hole_a");
-          sg.field_S = var3_int;
-          mm.field_i = var3_int;
+          this.field_O[incrementValue$36] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_hole_a");
+          ThemeSelectScreen.field_S = var3_int;
+          Camera.field_i = var3_int;
           incrementValue$37 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$37] = eg.a(param0, "", "tiki_table/tiki_hole_b");
-          nd.field_l = var3_int;
-          nm.field_e = var3_int;
+          this.field_O[incrementValue$37] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_hole_b");
+          MarkerSliderPainter.field_l = var3_int;
+          NineSliceFrame.field_e = var3_int;
           incrementValue$38 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$38] = eg.a(param0, "", "tiki_table/tiki_corner");
+          this.field_O[incrementValue$38] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_corner");
           incrementValue$39 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$39] = eg.a(param0, "", "tiki_table/tiki_side_a");
+          this.field_O[incrementValue$39] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_side_a");
           if (param1 > -43) {
             this.field_Z = (PcmSample) null;
           }
           incrementValue$40 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$40] = eg.a(param0, "", "tiki_table/tiki_side_b");
+          this.field_O[incrementValue$40] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_side_b");
           incrementValue$41 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$41] = eg.a(param0, "", "tiki_table/tiki_side_c");
+          this.field_O[incrementValue$41] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_side_c");
           AgeValidator.field_q = var3_int;
-          ca.field_h = var3_int;
+          TextPairLoginPayload.field_h = var3_int;
           incrementValue$42 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$42] = eg.a(param0, "", "tiki_table/tiki_top_a");
+          this.field_O[incrementValue$42] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_top_a");
           incrementValue$43 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$43] = eg.a(param0, "", "tiki_table/tiki_top_b");
+          this.field_O[incrementValue$43] = MeshBuilder.loadFromArchive(param0, "", "tiki_table/tiki_top_b");
           om.field_x = var3_int;
           this.field_A = new CueStick();
-          this.field_A.a(eg.a(param0, "", "cues/jungle_cue"), (byte) -115);
+          this.field_A.a(MeshBuilder.loadFromArchive(param0, "", "cues/jungle_cue"), (byte) -115);
           for (var4 = 0; var4 < this.field_O.length; var4++) {
-            db.a(0, this.field_O[var4]);
+            VerticalScrollbar.a(0, this.field_O[var4]);
           }
           var5 = 2147483647;
           var6 = -2147483648;
@@ -324,7 +324,7 @@ final class TikiTableScene extends ModelTableScene {
           var9 = 2147483647;
           var10 = -2147483648;
           for (var4Lifetime1 = AgeValidator.field_q; om.field_x > var4Lifetime1; var4Lifetime1++) {
-            d.a(this.field_O[var4Lifetime1], -23109);
+            d.computeMeshBounds(this.field_O[var4Lifetime1], -23109);
             if (this.field_O[var4Lifetime1].field_S > var8) {
               var8 = this.field_O[var4Lifetime1].field_S;
             }
@@ -357,53 +357,53 @@ final class TikiTableScene extends ModelTableScene {
           this.field_M = new int[this.field_O.length][3];
           for (var4Lifetime3 = 0; this.field_O.length > var4Lifetime3; var4Lifetime3++) {
             if (this.field_O[var4Lifetime3] != null) {
-              ln.a(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
+              ln.recenterModel(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
             }
           }
-          var14 = new eg[4];
-          for (var4Lifetime4 = mn.field_a; FullscreenErrorDialog.field_ib > var4Lifetime4; var4Lifetime4++) {
+          var14 = new MeshBuilder[4];
+          for (var4Lifetime4 = DualLinkDequeIterator.field_a; FullscreenErrorDialog.field_ib > var4Lifetime4; var4Lifetime4++) {
             var15 = var4Lifetime4;
             var16 = var14;
             var17 = this.field_O[var15];
             var34 = this.field_M[var15];
             var19 = var16;
-            var21 = a.a(true, new eg(var17, false, false, false, false));
-            var29 = mj.a(-31121);
+            var21 = a.a(true, new MeshBuilder(var17, false, false, false, false));
+            var29 = mj.identityTransform(-31121);
             var24 = var29;
             var20 = var24;
             var20[1] = var34[1] + 0;
             var20[0] = var34[0] - 0;
             var20[2] = 0 + var34[2];
-            var19[0] = new eg(var17, false, false, false, false);
+            var19[0] = new MeshBuilder(var17, false, false, false, false);
             var19[0].a(var29);
-            var30 = mj.a(-31121);
+            var30 = mj.identityTransform(-31121);
             var25 = var30;
             var20Lifetime1 = var25;
             var20Lifetime1[2] = var34[2] - 0;
             var20Lifetime1[0] = 0 + var34[0];
             var20Lifetime1[1] = -(var34[1] + 0);
-            var19[1] = new eg(var21, false, false, false, false);
+            var19[1] = new MeshBuilder(var21, false, false, false, false);
             var19[1].a(var30);
-            var31 = mj.a(-31121);
+            var31 = mj.identityTransform(-31121);
             var26 = var31;
             var20Lifetime2 = var26;
             var20Lifetime2[0] = 0 + var34[0];
             var20Lifetime2[2] = 0 + var34[2];
             var20Lifetime2[1] = 0 + var34[1];
             dq.a((byte) -121, var31);
-            var19[2] = new eg(var17, false, false, false, false);
+            var19[2] = new MeshBuilder(var17, false, false, false, false);
             var19[2].a(var31);
-            var32 = mj.a(-31121);
+            var32 = mj.identityTransform(-31121);
             var27 = var32;
             var20Lifetime3 = var27;
             var20Lifetime3[0] = 0 + var34[0];
             var20Lifetime3[2] = 0 + var34[2];
             var20Lifetime3[1] = -(var34[1] - 0);
             dq.a((byte) 50, var32);
-            var19[3] = new eg(var21, false, false, false, false);
+            var19[3] = new MeshBuilder(var21, false, false, false, false);
             var19[3].a(var32);
-            this.field_O[var4Lifetime4] = new eg(var14, 4);
-            this.field_O[var4Lifetime4].a(1, 1, 1, 2);
+            this.field_O[var4Lifetime4] = new MeshBuilder(var14, 4);
+            this.field_O[var4Lifetime4].scaleVertices(1, 1, 1, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -416,11 +416,11 @@ final class TikiTableScene extends ModelTableScene {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final void a(int[] param0, IntrusiveDeque[] param1, eg param2, int param3) {
+    private final void a(int[] param0, IntrusiveDeque[] param1, MeshBuilder param2, int param3) {
         int[] stackIn_5_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -434,10 +434,10 @@ final class TikiTableScene extends ModelTableScene {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        eg var8 = null;
-        eg var9 = null;
+        MeshBuilder var8 = null;
+        MeshBuilder var9 = null;
         int var10 = 0;
-        eg var11 = null;
+        MeshBuilder var11 = null;
         var11 = param2;
         var10 = Pool.field_O;
         try {
@@ -469,7 +469,7 @@ final class TikiTableScene extends ModelTableScene {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
         }
         stackIn_5_0 = jd.field_h;
         try {
@@ -481,8 +481,8 @@ final class TikiTableScene extends ModelTableScene {
                   jd.field_h[var7] > var5_int) {
                   var8 = TutorialController.b((byte) 125);
                   var9 = TutorialController.b((byte) 127);
-                  ej.a(0, var9, 0, false, jd.field_h[var7] - param0[2], 0, 0, 1, var8, var11);
-                  if (var9.field_K > 0) {
+                  JaggrabDownloader.a(0, var9, 0, false, jd.field_h[var7] - param0[2], 0, 0, 1, var8, var11);
+                  if (var9.faceCount > 0) {
                     var9.a();
                     var9.e();
                     param1[var7].b((byte) 106, new pm(hc.a(var9, param0, (byte) 101)));
@@ -491,7 +491,7 @@ final class TikiTableScene extends ModelTableScene {
                   var11 = var8;
                   param2 = var11;
                   var8.e();
-                  if (0 == var11.field_K) {
+                  if (0 == var11.faceCount) {
                     break scanLoop1;
                   }
                 }
@@ -506,7 +506,7 @@ final class TikiTableScene extends ModelTableScene {
             break;
           }
           if (param2 != null) {
-            if (param2.field_K <= 0) {
+            if (param2.faceCount <= 0) {
               return;
             }
             param1[param1.length - 1].b((byte) -95, new pm(hc.a(param2, param0, (byte) 101)));
@@ -534,7 +534,7 @@ final class TikiTableScene extends ModelTableScene {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -595,13 +595,13 @@ final class TikiTableScene extends ModelTableScene {
         pr.c((byte) 90);
     }
 
-    final void c(int param0, di param1) {
+    final void c(int param0, ResourceArchive param1) {
         try {
           if (param0 != -23569) {
             this.field_pb = (PcmSample) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "cj.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cj.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -624,7 +624,7 @@ final class TikiTableScene extends ModelTableScene {
         int var5;
         int var6;
         IntrusiveDeque[] var7;
-        eg var8;
+        MeshBuilder var8;
         int var9;
         int var10;
         StringBuilder var11;
@@ -634,9 +634,9 @@ final class TikiTableScene extends ModelTableScene {
           ln.field_u = null;
           var2 = 500;
           jd.field_h = new int[]{var2, var2 + 50, 100 + var2, 200 + var2};
-          sg.field_K = 1 + jd.field_h.length;
-          ck.field_Y = new IntrusiveDeque[sg.field_K];
-          for (var3 = 0; sg.field_K > var3; var3++) {
+          ThemeSelectScreen.field_K = 1 + jd.field_h.length;
+          ck.field_Y = new IntrusiveDeque[ThemeSelectScreen.field_K];
+          for (var3 = 0; ThemeSelectScreen.field_K > var3; var3++) {
             ck.field_Y[var3] = new IntrusiveDeque();
           }
           CueAim.field_m = 80;
@@ -694,7 +694,7 @@ final class TikiTableScene extends ModelTableScene {
                                     fieldTemp$6 = CueAim.field_m - 125;
                                     CueAim.field_m = CueAim.field_m - 125;
                                     this.a(ck.field_Y, fieldTemp$6, (byte) 98, this.field_O[var6], 0, hf.field_a);
-                                    this.field_l = mn.progressJungleFinishing;
+                                    this.field_l = DualLinkDequeIterator.progressJungleFinishing;
                                   } else {
                                     if (15 == var9) {
                                       this.n(param0 + 6);
@@ -746,12 +746,12 @@ final class TikiTableScene extends ModelTableScene {
         this.field_H = this.field_H + 1;
     }
 
-    final static tc a(int param0, int param1, int param2) {
-        tc var3 = w.a(false, param1);
+    final static GrowableIntList a(int param0, int param1, int param2) {
+        GrowableIntList var3 = w.createGrowableIntList(false, param1);
         if (param2 != 0) {
           playerXNowHasNLives = (String) null;
         }
-        var3.field_e = new int[param0];
+        var3.values = new int[param0];
         return var3;
     }
 
@@ -760,25 +760,25 @@ final class TikiTableScene extends ModelTableScene {
           StringBuilder var2 = (StringBuilder) null;
           TikiTableScene.a('ￅ', -57, 7, (StringBuilder) null);
         }
-        return ~ve.field_m == ~em.field_L.field_Zb ? true : false;
+        return ~BitmapTextLayout.field_m == ~HighscoresScreen.field_L.field_Zb ? true : false;
     }
 
-    private final void a(IntrusiveDeque[] param0, int param1, byte param2, eg param3, int param4, int param5) {
+    private final void a(IntrusiveDeque[] param0, int param1, byte param2, MeshBuilder param3, int param4, int param5) {
         int var7_int = 0;
         int var8 = 0;
         try {
-          param3 = new eg(param3, false, false, false, false);
+          param3 = new MeshBuilder(param3, false, false, false, false);
           var7_int = param5 * hc.a(2047, param1) >> 16;
-          var8 = param5 * ao.a(param1, true) >> 16;
+          var8 = param5 * ScrollPaneWithFooter.a(param1, true) >> 16;
           param1 = param1 + param4;
-          param3.a(new int[]{0, 0, 0, hc.a(2047, 1536 + param1), ao.a(1536 + param1, true), 0, -ao.a(param1 + 1536, true), hc.a(2047, param1 + 1536), 0, 0, 0, 65536});
+          param3.a(new int[]{0, 0, 0, hc.a(2047, 1536 + param1), ScrollPaneWithFooter.a(1536 + param1, true), 0, -ScrollPaneWithFooter.a(param1 + 1536, true), hc.a(2047, param1 + 1536), 0, 0, 0, 65536});
           param3.e();
           if (param2 < 68) {
             this.d(false);
           }
-          this.a(new int[]{var7_int, var8, kh.field_vc}, param0, param3, -123);
+          this.a(new int[]{var7_int, var8, LobbyGame.field_vc}, param0, param3, -123);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "cj.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cj.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -815,7 +815,7 @@ final class TikiTableScene extends ModelTableScene {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        eg var12 = null;
+        MeshBuilder var12 = null;
         int[] var13 = null;
         int[] var14 = null;
         int var15 = 0;
@@ -850,26 +850,26 @@ final class TikiTableScene extends ModelTableScene {
         try {
           var21 = param1.field_I.balls;
           var3 = var21;
-          var30 = f.a((byte) -119, param1.field_ab);
+          var30 = f.a((byte) -119, param1.viewMatrix);
           var18 = var30;
           var4 = var18;
           var28 = var4;
           var16 = var28;
           var13 = var16;
           var5_ref_int__ = var13;
-          oh.field_d[0] = var28[0] - sb.a(288.0f, true) >> 2;
-          oh.field_d[1] = var28[1] - sb.a(144.0f, true) >> 2;
-          oh.field_d[2] = var28[2] >> 2;
-          if (var5_ref_int__ != oh.field_d) {
-            oh.field_d[9] = var28[9];
-            oh.field_d[5] = var28[5];
-            oh.field_d[10] = var28[10];
-            oh.field_d[6] = var28[6];
-            oh.field_d[8] = var28[8];
-            oh.field_d[7] = var28[7];
-            oh.field_d[11] = var28[11];
-            oh.field_d[3] = var28[3];
-            oh.field_d[4] = var28[4];
+          GzipDecoder.field_d[0] = var28[0] - sb.a(288.0f, true) >> 2;
+          GzipDecoder.field_d[1] = var28[1] - sb.a(144.0f, true) >> 2;
+          GzipDecoder.field_d[2] = var28[2] >> 2;
+          if (var5_ref_int__ != GzipDecoder.field_d) {
+            GzipDecoder.field_d[9] = var28[9];
+            GzipDecoder.field_d[5] = var28[5];
+            GzipDecoder.field_d[10] = var28[10];
+            GzipDecoder.field_d[6] = var28[6];
+            GzipDecoder.field_d[8] = var28[8];
+            GzipDecoder.field_d[7] = var28[7];
+            GzipDecoder.field_d[11] = var28[11];
+            GzipDecoder.field_d[3] = var28[3];
+            GzipDecoder.field_d[4] = var28[4];
           }
           var29 = var4;
           var17 = var29;
@@ -889,9 +889,9 @@ final class TikiTableScene extends ModelTableScene {
             ArchiveRequest.field_w[11] = var29[11];
             ArchiveRequest.field_w[6] = var29[6];
           }
-          var4[1] = rb.b(var30[1], -4);
-          var4[0] = rb.b(var30[0], -4);
-          var4[2] = rb.b(var30[2], -4);
+          var4[1] = ArchiveLoadSequence.b(var30[1], -4);
+          var4[0] = ArchiveLoadSequence.b(var30[0], -4);
+          var4[2] = ArchiveLoadSequence.b(var30[2], -4);
           this.e(true);
           for (var5 = 0; ln.field_u.length > var5; var5++) {
             var19 = ln.field_u[var5];
@@ -899,11 +899,11 @@ final class TikiTableScene extends ModelTableScene {
             var19.b((byte) 112, 0, var19.field_j.length, var39);
           }
           this.a(false, var30, var21);
-          kf.a(ta.field_c, (byte) -104, pa.field_L, ph.field_g, cq.field_c);
-          kf.a(am.field_h, (byte) -104, pa.field_L, ph.field_g, c.field_b);
-          kf.a(gf.field_d, (byte) -104, pa.field_L, ph.field_g, CheckboxPainter.field_n);
-          kf.a(cn.field_d, (byte) -104, pa.field_L, ph.field_g, ClientException.field_e);
-          kf.a(wn.field_j, (byte) -104, pa.field_L, ph.field_g, ue.field_a);
+          kf.a(ta.field_c, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, cq.field_c);
+          kf.a(TextWidgetPainter.field_h, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, c.field_b);
+          kf.a(gf.field_d, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, CheckboxPainter.field_n);
+          kf.a(DelegatingCanvas.field_d, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ClientException.field_e);
+          kf.a(wn.field_j, (byte) -104, TimeTrialSelectScreen.field_L, ph.field_g, ue.field_a);
           this.a(param1, 9291);
           pr.a(ArchiveRequest.field_w, false);
           this.a(256, 3, 256, (byte) -86);
@@ -913,47 +913,47 @@ final class TikiTableScene extends ModelTableScene {
             var22 = ln.field_u[var5Lifetime1];
             var40 = ArchiveRequest.field_w;
             var22.a((byte) -122, 0, var22.field_j.length, var40);
-            if (0L != (256L & pd.field_i)) {
+            if (0L != (256L & LinkButtonPainter.field_i)) {
               ln.field_u[var5Lifetime1].a(ArchiveRequest.field_w, 0);
             }
           }
           TriangleRasterizer.colorPalette = dn.field_m[0];
           if (param0 != -55) {
-            var12 = (eg) null;
-            this.a((int[]) null, (IntrusiveDeque[]) null, (eg) null, -92);
+            var12 = (MeshBuilder) null;
+            this.a((int[]) null, (IntrusiveDeque[]) null, (MeshBuilder) null, -92);
           }
           var24 = ln.field_u[1];
           var41 = ArchiveRequest.field_w;
           var24.a((byte) -115, 0, var24.field_j.length, var41);
-          if ((pd.field_i & 256L) != 0L) {
+          if ((LinkButtonPainter.field_i & 256L) != 0L) {
             ln.field_u[1].a(ArchiveRequest.field_w, 0);
           }
           TriangleRasterizer.colorPalette = var6;
           var26 = ln.field_u[0];
           var42 = ArchiveRequest.field_w;
           var26.a((byte) -98, 0, var26.field_j.length, var42);
-          if ((256L & pd.field_i) != 0L) {
+          if ((256L & LinkButtonPainter.field_i) != 0L) {
             ln.field_u[0].a(ArchiveRequest.field_w, 0);
           }
-          if ((4194304L & pd.field_i) != 0L) {
+          if ((4194304L & LinkButtonPainter.field_i) != 0L) {
             return;
           }
           for (var5Lifetime2 = -1 + ta.field_c; cq.field_c <= var5Lifetime2; var5Lifetime2--) {
-            th.field_l[ph.field_g[var5Lifetime2]].c(6710886, oh.field_d);
+            th.field_l[ph.field_g[var5Lifetime2]].c(6710886, GzipDecoder.field_d);
           }
-          for (var5Lifetime3 = -1 + am.field_h; c.field_b <= var5Lifetime3; var5Lifetime3--) {
-            th.field_l[ph.field_g[var5Lifetime3]].c(6710886, oh.field_d);
+          for (var5Lifetime3 = -1 + TextWidgetPainter.field_h; c.field_b <= var5Lifetime3; var5Lifetime3--) {
+            th.field_l[ph.field_g[var5Lifetime3]].c(6710886, GzipDecoder.field_d);
           }
           for (var5Lifetime4 = gf.field_d - 1; var5Lifetime4 >= CheckboxPainter.field_n; var5Lifetime4--) {
-            th.field_l[ph.field_g[var5Lifetime4]].c(6710886, oh.field_d);
+            th.field_l[ph.field_g[var5Lifetime4]].c(6710886, GzipDecoder.field_d);
           }
-          if ((1073741824L & pd.field_i) == 0L) {
+          if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
             this.a(var30, (byte) 106, false, var21, false);
           }
           for (var5Lifetime5 = wn.field_j - 1; var5Lifetime5 >= ue.field_a; var5Lifetime5--) {
-            th.field_l[ph.field_g[var5Lifetime5]].c(6710886, oh.field_d);
+            th.field_l[ph.field_g[var5Lifetime5]].c(6710886, GzipDecoder.field_d);
           }
-          if ((pd.field_i & 1073741824L) == 0L) {
+          if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
             for (var5Lifetime6 = 0; var21.length > var5Lifetime6; var5Lifetime6++) {
               if (var21[var5Lifetime6].inPlay) {
                 this.a(var30, var21[var5Lifetime6]);
@@ -961,14 +961,14 @@ final class TikiTableScene extends ModelTableScene {
             }
           }
           var7 = ClientException.field_e;
-          var8 = cn.field_d;
+          var8 = DelegatingCanvas.field_d;
           for (var10 = var8 - 1; var7 <= var10; var10--) {
             var9 = ph.field_g[var10];
             if (!OpacityWidget.field_Q[var9]) {
-              th.field_l[var9].c(param0 ^ -6710865, oh.field_d);
+              th.field_l[var9].c(param0 ^ -6710865, GzipDecoder.field_d);
             }
           }
-          if (0L == (1073741824L & pd.field_i)) {
+          if (0L == (1073741824L & LinkButtonPainter.field_i)) {
             stackIn_53_0 = this;
             stackIn_53_1 = var4;
             stackIn_53_2 = 102;
@@ -984,23 +984,23 @@ final class TikiTableScene extends ModelTableScene {
             this.a(stackIn_53_1, (byte) stackIn_53_2, stackIn_53_3, stackIn_53_4, stackIn_54_5);
           }
           var7Lifetime1 = ClientException.field_e;
-          var8Lifetime1 = cn.field_d;
+          var8Lifetime1 = DelegatingCanvas.field_d;
           var15 = -1 + var8Lifetime1;
           var10Lifetime1 = var15;
           while (var15 >= var7Lifetime1) {
             var9Lifetime1 = ph.field_g[var15];
             if (OpacityWidget.field_Q[var9Lifetime1]) {
-              th.field_l[var9Lifetime1].c(6710886, oh.field_d);
+              th.field_l[var9Lifetime1].c(6710886, GzipDecoder.field_d);
             }
             var15--;
           }
-          if ((1073741824L & pd.field_i) == 0L) {
-            param1.q(-1);
+          if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
+            param1.updateCueStick(-1);
           }
-          if ((1073741824L & pd.field_i) == 0L) {
-            param1.D(-125);
+          if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
+            param1.buildAimPreviewTrail(-125);
           }
-          if ((pd.field_i & 256L) != 0L) {
+          if ((LinkButtonPainter.field_i & 256L) != 0L) {
             for (var5Lifetime7 = 0; th.field_l.length > var5Lifetime7; var5Lifetime7++) {
             }
             return;
@@ -1016,7 +1016,7 @@ final class TikiTableScene extends ModelTableScene {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
@@ -1043,20 +1043,20 @@ final class TikiTableScene extends ModelTableScene {
         }
     }
 
-    final void a(int param0, di param1) {
+    final void a(int param0, ResourceArchive param1) {
         try {
           if (param0 != 1) {
             PoolGameModel var4 = (PoolGameModel) null;
             this.a((PoolGameModel) null, 126);
           }
-          this.field_b = cg.a(param1, "", "pool_jungle");
-          this.field_i = cg.a(param1, "", "pool_jungle_win_jingle");
+          this.field_b = MusicTrack.loadFromArchive(param1, "", "pool_jungle");
+          this.field_i = MusicTrack.loadFromArchive(param1, "", "pool_jungle_win_jingle");
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "cj.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cj.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(cf param0, int param1) {
+    final void a(SoundCache param0, int param1) {
         try {
           int var3_int = 86 / ((param1 - 39) / 38);
           this.field_bb = param0.a("jungle_ball_hard", true, "");
@@ -1085,7 +1085,7 @@ final class TikiTableScene extends ModelTableScene {
           this.field_lb = param0.a("", "jungle_bg_wind3", (byte) 121);
           this.field_qb = param0.a("", "jungle_bg_wind4", (byte) 124);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "cj.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cj.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1101,16 +1101,16 @@ final class TikiTableScene extends ModelTableScene {
         int var2Lifetime1;
         int var4Lifetime1;
         var8 = Pool.field_O;
-        var3 = new IntrusiveDeque[sg.field_K];
-        for (var4 = 0; var4 < sg.field_K; var4++) {
+        var3 = new IntrusiveDeque[ThemeSelectScreen.field_K];
+        for (var4 = 0; var4 < ThemeSelectScreen.field_K; var4++) {
           var3[var4] = new IntrusiveDeque();
         }
         var4Lifetime1 = 0;
-        var2 = ec.field_c;
+        var2 = BallDebugOverlay.field_c;
         if (param0 != 8) {
           return;
         }
-        while (var2 < im.field_Wb) {
+        while (var2 < LobbyPlayer.field_Wb) {
           this.field_O[var2].e();
           var5 = this.field_O[var2].field_x + this.field_M[var2][2];
           if (var5 > var4Lifetime1) {
@@ -1119,7 +1119,7 @@ final class TikiTableScene extends ModelTableScene {
           var2++;
         }
         var4Lifetime1 = var4Lifetime1 >> 2;
-        var9 = mn.field_a;
+        var9 = DualLinkDequeIterator.field_a;
         var2Lifetime1 = var9;
         while (var9 < FullscreenErrorDialog.field_ib) {
           this.field_O[var9].e();
@@ -1128,11 +1128,11 @@ final class TikiTableScene extends ModelTableScene {
           var4Lifetime1 = this.field_O[var9].field_x + var5;
           var9++;
         }
-        dn.field_m = new int[sg.field_K][];
-        ln.field_u = new so[sg.field_K];
-        ah.field_e = new so[sg.field_K];
-        for (var5 = 0; sg.field_K > var5; var5++) {
-          var6 = 63 + var5 * 192 / sg.field_K;
+        dn.field_m = new int[ThemeSelectScreen.field_K][];
+        ln.field_u = new so[ThemeSelectScreen.field_K];
+        ah.field_e = new so[ThemeSelectScreen.field_K];
+        for (var5 = 0; ThemeSelectScreen.field_K > var5; var5++) {
+          var6 = 63 + var5 * 192 / ThemeSelectScreen.field_K;
           var7 = 128;
           dn.field_m[var5] = tq.a(md.a(var7, md.a(var7 << 16, var7 << 8)), var6, false);
           ah.field_e[var5] = new so();
@@ -1167,14 +1167,14 @@ final class TikiTableScene extends ModelTableScene {
         int var9 = 0;
         var9 = Pool.field_O;
         try {
-          var3_int = param0.field_eb.b(param1 - 9419);
+          var3_int = param0.camera.b(param1 - 9419);
           if (param1 != 9291) {
             return;
           }
           SoftwareRasterizer.fillVerticalGradient(0, var3_int, 640, -var3_int + 480, this.field_v, 16128);
           var4 = this.field_B.field_z << 1;
           var5 = this.field_B.field_A << 1;
-          var6 = (int)(-param0.field_eb.a(true) * (double)var4 / 2.0 / 3.141592653589793);
+          var6 = (int)(-param0.camera.getYaw(true) * (double)var4 / 2.0 / 3.141592653589793);
           var7 = -200 + var3_int;
           if (0 < var7) {
             SoftwareRasterizer.fillRectangle(0, 0, 640, var7, this.field_B.field_D[0]);
@@ -1197,7 +1197,7 @@ final class TikiTableScene extends ModelTableScene {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1221,69 +1221,69 @@ final class TikiTableScene extends ModelTableScene {
         }
         for (var3 = 2; var3 < FreePlayRules.field_j.length; var3++) {
           if (null == FreePlayRules.field_j[var3] ||
-            FreePlayRules.field_j[var3].field_o.i() ||
+            FreePlayRules.field_j[var3].field_o.isSamplePositionOutOfRange() ||
             !FreePlayRules.field_j[var3].field_o.b(param0 ^ 4492)) {
             stackIn_11_0 = (FreePlayRules.field_j[var3] == null) ? 11 : 22;
             var4 = ga.nextRandomInt(stackIn_11_0, true, ea.field_r);
             var6 = var4;
             if (var6 == 0) {
-              FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_db, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+              FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.a(this.field_db, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
             } else {
               if (var6 != 1) {
                 if (2 == var6) {
-                  FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_kb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                  FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.a(this.field_kb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                 } else {
                   if (var6 != 3) {
                     if (4 != var6) {
                       if (var6 == 5) {
-                        FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_Z, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                        FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.a(this.field_Z, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                       } else {
                         if (var6 != 6) {
                           if (var6 != 7) {
                             if (var6 != 8) {
                               if (var6 != 9) {
                                 if (var6 == 10) {
-                                  FreePlayRules.field_j[var3] = rq.a(126, PcmSampleStream.a(this.field_gb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                                  FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.a(this.field_gb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                                 } else {
                                   var5 = (PcmSample) (FreePlayRules.field_j[var3].field_o.field_n);
                                   if (var5 != this.field_X &&
                                     this.field_cb != var5 &&
                                     var5 != this.field_Y &&
                                     this.field_gb != var5) {
-                                    FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(var5, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.a(var5, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                                   } else {
-                                    FreePlayRules.field_j[var3] = rq.a(126, PcmSampleStream.a(var5, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                                    FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.a(var5, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                                   }
                                 }
                               } else {
-                                FreePlayRules.field_j[var3] = rq.a(101, PcmSampleStream.a(this.field_Y, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                                FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(101, PcmSampleStream.a(this.field_Y, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                               }
                             } else {
-                              FreePlayRules.field_j[var3] = rq.a(124, PcmSampleStream.a(this.field_cb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                              FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(124, PcmSampleStream.a(this.field_cb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                             }
                           } else {
-                            FreePlayRules.field_j[var3] = rq.a(126, PcmSampleStream.a(this.field_X, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                            FreePlayRules.field_j[var3] = MusicCrossfadeStream.a(126, PcmSampleStream.a(this.field_X, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                           }
                         } else {
-                          FreePlayRules.field_j[var3] = mn.a(param0 - 19719, PcmSampleStream.a(this.field_ab, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                          FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.a(this.field_ab, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                         }
                       }
                     } else {
-                      FreePlayRules.field_j[var3] = mn.a(param0 - 19719, PcmSampleStream.a(this.field_T, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                      FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(param0 - 19719, PcmSampleStream.a(this.field_T, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                     }
                   } else {
-                    FreePlayRules.field_j[var3] = mn.a(cq.a(param0, 20231), PcmSampleStream.a(this.field_pb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                    FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(cq.a(param0, 20231), PcmSampleStream.a(this.field_pb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                   }
                 }
               } else {
-                FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_nb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
+                FreePlayRules.field_j[var3] = DualLinkDequeIterator.a(-24296, PcmSampleStream.a(this.field_nb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
               }
             }
           }
         }
     }
 
-    final void a(boolean param0, mm param1) {
+    final void a(boolean param0, Camera param1) {
         double stackIn_14_0 = 0.0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -1296,31 +1296,31 @@ final class TikiTableScene extends ModelTableScene {
         PoolGameModel var8 = null;
         var7 = Pool.field_O;
         try {
-          if (param1.field_m < 0.0) {
-            param1.field_m = 0.0;
+          if (param1.targetY < 0.0) {
+            param1.targetY = 0.0;
           } else {
-            if (288.0 < param1.field_m) {
-              param1.field_m = 288.0;
+            if (288.0 < param1.targetY) {
+              param1.targetY = 288.0;
             }
           }
-          if (param1.field_f < 0.0) {
-            param1.field_f = 0.0;
+          if (param1.targetX < 0.0) {
+            param1.targetX = 0.0;
           } else {
-            if (576.0 < param1.field_f) {
-              param1.field_f = 576.0;
+            if (576.0 < param1.targetX) {
+              param1.targetX = 576.0;
             }
           }
           if (param0) {
             var8 = (PoolGameModel) null;
             this.a((PoolGameModel) null, 35);
           }
-          var3_double = param1.d(8);
-          stackIn_14_0 = ((4194304L & pd.field_i) != 0L) ? 12000.0 : 2048.0;
+          var3_double = param1.getDistance(8);
+          stackIn_14_0 = ((4194304L & LinkButtonPainter.field_i) != 0L) ? 12000.0 : 2048.0;
           var5 = stackIn_14_0;
           if (var3_double > var5) {
-            param1.field_d = param1.field_f + var5 * (param1.field_d - param1.field_f) / var3_double;
-            param1.field_h = param1.field_k + var5 * (param1.field_h - param1.field_k) / var3_double;
-            param1.field_a = param1.field_m + (param1.field_a - param1.field_m) * var5 / var3_double;
+            param1.eyeX = param1.targetX + var5 * (param1.eyeX - param1.targetX) / var3_double;
+            param1.eyeZ = param1.targetZ + var5 * (param1.eyeZ - param1.targetZ) / var3_double;
+            param1.eyeY = param1.targetY + (param1.eyeY - param1.targetY) * var5 / var3_double;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1333,17 +1333,17 @@ final class TikiTableScene extends ModelTableScene {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
     final void a(PoolGameModel param0, int param1) {
         try {
           super.a(param0, param1);
-          jo.a(0.8999999761581421f, 1.0f, 0.8999999761581421f, 0.0833333358168602f, -31792);
+          PauseMenuScreen.a(0.8999999761581421f, 1.0f, 0.8999999761581421f, 0.0833333358168602f, -31792);
           ln.field_t = 0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "cj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "cj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1354,12 +1354,12 @@ final class TikiTableScene extends ModelTableScene {
         int var6;
         int var7;
         PoolMatchController var8;
-        p[] var9;
-        p[] var10;
-        p[] var11;
-        p[] var12;
-        p[] var13;
-        p[] var14;
+        ModelInstance[] var9;
+        ModelInstance[] var10;
+        ModelInstance[] var11;
+        ModelInstance[] var12;
+        ModelInstance[] var13;
+        ModelInstance[] var14;
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
@@ -1377,15 +1377,15 @@ final class TikiTableScene extends ModelTableScene {
         int var6Lifetime4;
         int var6Lifetime5;
         var7 = Pool.field_O;
-        th.field_l = new p[-sg.field_S + nd.field_l + (mn.field_a - FullscreenErrorDialog.field_ib + (-ViewportController.field_t + AccountCreationForm.field_T) + (this.field_O.length - kp.field_f + (ml.field_j - ec.field_c))) - (-im.field_Wb - vh.field_L + (qf.field_i - 3 * (-AgeValidator.field_q + om.field_x)) + (-((-or.field_h + mm.field_i) * 3) - 3 * (ca.field_h - nm.field_e)))];
+        th.field_l = new ModelInstance[-ThemeSelectScreen.field_S + MarkerSliderPainter.field_l + (DualLinkDequeIterator.field_a - FullscreenErrorDialog.field_ib + (-ViewportController.field_t + AccountCreationForm.field_T) + (this.field_O.length - kp.field_f + (ml.field_j - BallDebugOverlay.field_c))) - (-LobbyPlayer.field_Wb - UiComponent.field_L + (qf.field_i - 3 * (-AgeValidator.field_q + om.field_x)) + (-((-BallEvent.field_h + Camera.field_i) * 3) - 3 * (TextPairLoginPayload.field_h - NineSliceFrame.field_e)))];
         var3 = 0;
         cq.field_c = var3;
-        var2 = ec.field_c;
+        var2 = BallDebugOverlay.field_c;
         if (param0 > -11) {
           var8 = (PoolMatchController) null;
           this.a((byte) 7, (PoolMatchController) null);
         }
-        while (var2 < im.field_Wb) {
+        while (var2 < LobbyPlayer.field_Wb) {
           var4 = var2;
           var9 = th.field_l;
           var6 = var3;
@@ -1395,7 +1395,7 @@ final class TikiTableScene extends ModelTableScene {
         }
         c.field_b = var3;
         ta.field_c = var3;
-        for (var2Lifetime1 = qf.field_i; vh.field_L > var2Lifetime1; var2Lifetime1++) {
+        for (var2Lifetime1 = qf.field_i; UiComponent.field_L > var2Lifetime1; var2Lifetime1++) {
           var4Lifetime1 = var2Lifetime1;
           var10 = th.field_l;
           var6Lifetime1 = var3;
@@ -1403,7 +1403,7 @@ final class TikiTableScene extends ModelTableScene {
           var3 += 2;
         }
         ue.field_a = var3;
-        am.field_h = var3;
+        TextWidgetPainter.field_h = var3;
         for (var2Lifetime2 = AgeValidator.field_q; var2Lifetime2 < om.field_x; var2Lifetime2++) {
           var4Lifetime2 = var2Lifetime2;
           var11 = th.field_l;
@@ -1413,7 +1413,7 @@ final class TikiTableScene extends ModelTableScene {
         }
         wn.field_j = var3;
         ClientException.field_e = var3;
-        for (var2Lifetime3 = nm.field_e; ca.field_h > var2Lifetime3; var2Lifetime3++) {
+        for (var2Lifetime3 = NineSliceFrame.field_e; TextPairLoginPayload.field_h > var2Lifetime3; var2Lifetime3++) {
           var4Lifetime3 = var2Lifetime3;
           var12 = th.field_l;
           var6Lifetime3 = var3;
@@ -1421,15 +1421,15 @@ final class TikiTableScene extends ModelTableScene {
           var3 += 4;
         }
         CheckboxPainter.field_n = var3;
-        cn.field_d = var3;
-        for (var2Lifetime4 = or.field_h; var2Lifetime4 < mm.field_i; var2Lifetime4++) {
+        DelegatingCanvas.field_d = var3;
+        for (var2Lifetime4 = BallEvent.field_h; var2Lifetime4 < Camera.field_i; var2Lifetime4++) {
           var4Lifetime4 = var2Lifetime4;
           var13 = th.field_l;
           var6Lifetime4 = var3;
           this.a(var13, 0, 0, false, this.field_O[var4Lifetime4], var6Lifetime4, this.field_M[var4Lifetime4], 0);
           var3 += 4;
         }
-        for (var2Lifetime5 = sg.field_S; nd.field_l > var2Lifetime5; var2Lifetime5++) {
+        for (var2Lifetime5 = ThemeSelectScreen.field_S; MarkerSliderPainter.field_l > var2Lifetime5; var2Lifetime5++) {
           var4Lifetime5 = var2Lifetime5;
           var14 = th.field_l;
           var6Lifetime5 = var3;
@@ -1438,7 +1438,7 @@ final class TikiTableScene extends ModelTableScene {
         }
         gf.field_d = var3;
         ph.field_g = new int[th.field_l.length];
-        pa.field_L = new int[th.field_l.length];
+        TimeTrialSelectScreen.field_L = new int[th.field_l.length];
         for (var4Lifetime6 = 0; ph.field_g.length > var4Lifetime6; var4Lifetime6++) {
           ph.field_g[var4Lifetime6] = var4Lifetime6;
         }

@@ -5,12 +5,12 @@ final class c {
     static int field_b;
     static String tutorialLoseEightBallGame;
     static Sprite[] field_c;
-    static vh field_e;
+    static UiComponent field_e;
     static long field_d;
 
-    final static void a(BitmapFont param0, boolean param1, di param2) {
+    final static void createQuickChatMenu(BitmapFont param0, boolean param1, ResourceArchive param2) {
         int var8 = 0;
-        di stackIn_7_0 = null;
+        ResourceArchive stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -20,7 +20,7 @@ final class c {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        sf var4 = null;
+        QuickChatCategoryDefinition var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
@@ -31,29 +31,29 @@ final class c {
         var9 = Pool.field_O;
         try {
           var3_int = ProgressBarWidget.field_S;
-          e.field_a = new vh(0L, (vh) null);
+          e.field_a = new UiComponent(0L, (UiComponent) null);
           if (param2 == null) {
             var10 = (Throwable) null;
-            tc.a((Throwable) null, "QC1", -8555);
+            GrowableIntList.reportClientError((Throwable) null, "QC1", -8555);
             return;
           }
-          stackIn_7_0 = (di) (param2);
+          stackIn_7_0 = (ResourceArchive) (param2);
           stackIn_8_1 = (param1);
           stackIn_7_0.field_i = stackIn_8_1;
           param2.field_k = 0;
           DisplayNamePanel.field_N = new ee(var3_int, param2, param2);
-          o.field_x = new wh(var3_int, param2, param2, new wp());
+          UiComponentNode.field_x = new QuickChatPhraseRegistry(var3_int, param2, param2, new wp());
           var4 = TranslatedUiText.c(2);
           if (var4 == null) {
             var11 = (Throwable) null;
-            tc.a((Throwable) null, "QC2", -8555);
+            GrowableIntList.reportClientError((Throwable) null, "QC2", -8555);
             return;
           }
           gp.a((byte) 58, var4);
           var12 = (BitmapFont) null;
           tp.field_i = id.a(1127256, 0, 0, 4020342, 1513239, 65793, 5138823, 1513239, 65793, (BitmapFont) null, 8947848, 2245737, 65793);
           CushionSegment.field_c = id.a(0, 0, 16764006, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
-          br.field_J = id.a(0, 0, 16777215, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
+          LoginRequiredScreen.field_J = id.a(0, 0, 16777215, 0, 0, 0, 0, 0, 0, param0, 0, 0, 0);
           var5 = SoftwareRasterizer.width;
           var6 = SoftwareRasterizer.height;
           var16 = SoftwareRasterizer.pixels;
@@ -63,8 +63,8 @@ final class c {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRasterizer.setTarget(var16, var5, var6);
-          w.field_b = NanoTickClock.a(br.field_J, CushionSegment.field_c, var4, tp.field_i, (byte) 112);
-          e.field_a.field_T = new IntrusiveDeque();
+          w.field_b = NanoTickClock.a(LoginRequiredScreen.field_J, CushionSegment.field_c, var4, tp.field_i, (byte) 112);
+          e.field_a.children = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,11 +82,11 @@ final class c {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int reverseBits(int param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -105,7 +105,7 @@ final class c {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var3), "c.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "c.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class c {
           return -1;
         }
         if (param9 == param1) {
-          return wh.a(param7, param9, param0, param5, param6, param3, param10, param2, param4, 98);
+          return QuickChatPhraseRegistry.a(param7, param9, param0, param5, param6, param3, param10, param2, param4, 98);
         }
         if (param7 == param3) {
           return cq.a(param3, param6, (byte) -112, param2, param10, param5, param0, param9, param4, param1);
@@ -135,22 +135,22 @@ final class c {
         var12 = -param3 + param7;
         var13 = var12;
         var14 = -var11;
-        var15 = rf.a(aj.a(var13, false, var13) + aj.a(var14, false, var14), -128);
-        if (0L < od.a((long)var13, (long)param10, false) + od.a((long)var14, (long)param4, false)) {
-          param9 = param9 - lh.a(var15, (byte) -73, (long)(var13 * param6));
-          param3 = param3 - lh.a(var15, (byte) -90, (long)(var14 * param6));
+        var15 = rf.inverseSquareRoot(NameEntryPopup.a(var13, false, var13) + NameEntryPopup.a(var14, false, var14), -128);
+        if (0L < FullscreenFocusCanvas.multiplyFixedChecked((long)var13, (long)param10, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var14, (long)param4, false)) {
+          param9 = param9 - ArchiveProvider.divideFixed16(var15, (byte) -73, (long)(var13 * param6));
+          param3 = param3 - ArchiveProvider.divideFixed16(var15, (byte) -90, (long)(var14 * param6));
         } else {
-          param9 = param9 + lh.a(var15, (byte) -95, (long)(var13 * param6));
-          param3 = param3 + lh.a(var15, (byte) -111, (long)(param6 * var14));
+          param9 = param9 + ArchiveProvider.divideFixed16(var15, (byte) -95, (long)(var13 * param6));
+          param3 = param3 + ArchiveProvider.divideFixed16(var15, (byte) -111, (long)(param6 * var14));
         }
-        var16 = aj.a(var11, false, param4) - aj.a(var12, false, param10);
+        var16 = NameEntryPopup.a(var11, false, param4) - NameEntryPopup.a(var12, false, param10);
         if (var16 == 0) {
           return -1;
         }
-        var17 = lh.a(var16, (byte) -82, (long)(aj.a(var12, false, param5 - param9) - aj.a(var11, false, -param3 + param2)));
+        var17 = ArchiveProvider.divideFixed16(var16, (byte) -82, (long)(NameEntryPopup.a(var12, false, param5 - param9) - NameEntryPopup.a(var11, false, -param3 + param2)));
         if (var17 > 0 &&
           var17 <= -param0 + 65536) {
-          var18 = lh.a(var11, (byte) -110, (long)(-param9 + param5 + aj.a(var17, false, param10)));
+          var18 = ArchiveProvider.divideFixed16(var11, (byte) -110, (long)(-param9 + param5 + NameEntryPopup.a(var17, false, param10)));
           if (var18 >= 0 &&
             var18 <= 65536) {
             return var17 + param0;

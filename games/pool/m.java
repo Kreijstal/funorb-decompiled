@@ -10,12 +10,12 @@ final class m {
     static int field_e;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         yourRatingIsX = null;
         gameoptPleasetrychanging = null;
         if (param0 > -31) {
-          m.a((byte) 74);
+          m.releaseStatics((byte) 74);
         }
     }
 

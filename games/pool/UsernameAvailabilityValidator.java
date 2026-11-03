@@ -64,7 +64,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!qi.a((byte) -64, var4)) {
+          if (!IterableDualLinkDeque.a((byte) -64, var4)) {
             stackIn_2_0 = gp.field_d;
             return stackIn_2_0;
           }
@@ -97,7 +97,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
               this.cachedUsernameCandidate = param0;
               this.cachedUsernameAvailable = var3.field_f;
             } else {
-              stackIn_11_0 = no.field_k;
+              stackIn_11_0 = Js5Transport.field_k;
               return stackIn_11_0;
             }
           }
@@ -117,7 +117,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         this.cachedUsernameCandidate = null;
     }
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         multiconstClan = null;
         field_r = null;
         field_u = null;
@@ -152,16 +152,16 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
     final static void b(boolean param0) {
         if (!param0) {
           startgame = (String) null;
-          if (oh.field_h) {
-            kh.field_Vb.a((byte) -79, false);
+          if (GzipDecoder.field_h) {
+            LobbyGame.field_Vb.drawRoot((byte) -79, false);
             return;
           }
           return;
         }
-        if (!oh.field_h) {
+        if (!GzipDecoder.field_h) {
           return;
         }
-        kh.field_Vb.a((byte) -79, false);
+        LobbyGame.field_Vb.drawRoot((byte) -79, false);
     }
 
     static {

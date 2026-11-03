@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lb extends jo {
+final class lb extends PauseMenuScreen {
     static hj field_N;
     static String createUsernameAvailable;
     static Sprite[] field_O;
     static String[][] field_P;
 
-    final void b(byte param0) {
+    final void darkenBackground(byte param0) {
         if (param0 != 108) {
-          this.b((byte) 24);
+          this.darkenBackground((byte) 24);
         }
     }
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         createUsernameAvailable = null;
         field_O = null;
         field_N = null;
         field_P = (String[][]) null;
         if (param0 >= -70) {
           String var2 = (String) null;
-          lb.a((di) null, 82, (String) null, (String) null);
+          lb.loadSprite((ResourceArchive) null, 82, (String) null, (String) null);
         }
     }
 
-    final static Sprite a(di param0, int param1, String param2, String param3) {
+    final static Sprite loadSprite(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -40,7 +40,7 @@ final class lb extends jo {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = 27 / ((29 - param1) / 34);
-          var4_int = param0.b(param2, -1);
+          var4_int = param0.getGroupId(param2, -1);
           var6 = param0.a(var4_int, 0, param3);
           stackIn_1_0 = DisplayNamePanel.a(var6, (byte) 119, param0, var4_int);
           return stackIn_1_0;
@@ -66,7 +66,7 @@ final class lb extends jo {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jq {
-    static vh field_d;
+    static UiComponent field_d;
     static IntrusiveDeque field_c;
     static String tooltipBallInHand;
     static String gameoptPlayerneedsrating;
     static int field_g;
-    static vh field_f;
+    static UiComponent field_f;
     static String[] field_e;
     static String playerYouFirstListHaveWon;
 

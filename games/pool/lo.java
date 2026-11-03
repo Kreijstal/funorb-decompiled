@@ -9,18 +9,18 @@ final class lo extends IOException {
     static String createEmailConfirm;
     static boolean field_a;
 
-    final static nq b(int param0) {
+    final static UiTheme b(int param0) {
         if (null == ae.field_c) {
-          ae.field_c = new nq();
-          ae.field_c.a(ValidationIconWidget.field_O, -76);
-          ae.field_c.field_m = 6;
-          ae.field_c.field_b = 4;
-          ae.field_c.field_i = PoolUiText.field_a;
-          ae.field_c.field_a = 2763306;
-          ae.field_c.field_e = 7697781;
-          ae.field_c.field_h = 0;
-          ae.field_c.field_g = 14;
-          ae.field_c.field_d = 5;
+          ae.field_c = new UiTheme();
+          ae.field_c.initializePainters(ValidationIconWidget.field_O, -76);
+          ae.field_c.tooltipLeftPadding = 6;
+          ae.field_c.tooltipBottomPadding = 4;
+          ae.field_c.tooltipFont = PoolUiText.field_a;
+          ae.field_c.tooltipBackgroundColor = 2763306;
+          ae.field_c.tooltipBorderColor = 7697781;
+          ae.field_c.tooltipTopPadding = 0;
+          ae.field_c.tooltipLineSpacing = 14;
+          ae.field_c.tooltipRightPadding = 5;
           if (param0 != 14) {
             field_c = (String[]) null;
             return ae.field_c;
@@ -34,7 +34,7 @@ final class lo extends IOException {
         return ae.field_c;
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         joinRequestsOne = null;
         if (param0 < 110) {
@@ -47,25 +47,25 @@ final class lo extends IOException {
 
     final static String a(long param0, int param1) {
         if (param1 == 7697781) {
-          return di.a(param0, 16, false, -112, 6, 10);
+          return ResourceArchive.a(param0, 16, false, -112, 6, 10);
         }
         field_c = (String[]) null;
-        return di.a(param0, 16, false, -112, 6, 10);
+        return ResourceArchive.a(param0, 16, false, -112, 6, 10);
     }
 
     lo(String param0) {
         super(param0);
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int divideFixed12(int param0, int param1, byte param2) {
         if (param2 < 53) {
-          lo.a(85);
+          lo.detectMaxMemoryMb(85);
           return (param0 << 12) / param1;
         }
         return (param0 << 12) / param1;
     }
 
-    final static void a(int param0) {
+    final static void detectMaxMemoryMb(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           java.lang.reflect.Method var1 = null;

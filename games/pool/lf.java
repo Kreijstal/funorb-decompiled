@@ -4,11 +4,11 @@
 final class lf {
     static String youHaveBeenRemovedFromXsGame;
     static int field_b;
-    static tk field_a;
-    static vh field_d;
+    static DualLinkNodeHashTable field_a;
+    static UiComponent field_d;
     static boolean field_c;
 
-    final static double[] a(int param0, double[] param1, double[] param2) {
+    final static double[] crossProduct(int param0, double[] param1, double[] param2) {
         RuntimeException var3 = null;
         double[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -39,18 +39,18 @@ final class lf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final static void a(int param0, byte param1) {
         jd.field_b = param0;
         if (param1 <= 74) {
-          field_d = (vh) null;
+          field_d = (UiComponent) null;
         }
     }
 
-    final static void a(java.math.BigInteger param0, byte[] param1, java.math.BigInteger param2, PacketBuffer param3, int param4, int param5, int param6) {
+    final static void writeEncryptedPayload(java.math.BigInteger param0, byte[] param1, java.math.BigInteger param2, PacketBuffer param3, int param4, int param5, int param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -133,7 +133,7 @@ final class lf {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

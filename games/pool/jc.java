@@ -11,9 +11,9 @@ final class jc {
     static MenuSelection field_j;
     static int[] field_i;
     static String youAreInvitedToXsGame;
-    static di field_a;
+    static ResourceArchive field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         on = null;
         field_e = null;
@@ -40,7 +40,7 @@ final class jc {
           Throwable decompiledCaughtException = null;
           try {
             if (PlatformTaskDispatcher.field_w.startsWith("win") &&
-              ll.a(param2, param0 ^ -10570)) {
+              ll.openUrlInBrowser(param2, param0 ^ -10570)) {
               return;
             }
             try {
@@ -54,7 +54,7 @@ final class jc {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              tc.a((Throwable) null, "MGR1: " + param2, -8555);
+              GrowableIntList.reportClientError((Throwable) null, "MGR1: " + param2, -8555);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -73,7 +73,7 @@ final class jc {
             } else {
               stackIn_14_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -92,7 +92,7 @@ final class jc {
             jc.openUrl(-84, (java.applet.Applet) null, (String) null, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class jc {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = (CharSequence) ((Object) param1);
-          var3_int = pl.a(var10, -115, param2);
+          var3_int = pl.countOccurrences(var10, -115, param2);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;
@@ -145,7 +145,7 @@ final class jc {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

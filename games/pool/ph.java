@@ -3,7 +3,7 @@
  */
 final class ph {
     static int[] field_g;
-    static vh field_d;
+    static UiComponent field_d;
     static String tutorialLose;
     static volatile long field_b;
     static Sprite field_f;
@@ -28,10 +28,10 @@ final class ph {
         var3 = Pool.field_O;
         try {
           var1_int = -124 / ((param0 - 38) / 54);
-          wd.field_Ub.processPointerFrame(-120, qr.field_b, true, sm.field_D);
-          wd.field_Ub.advanceDialogAnimations((byte) 126);
+          TabbedPane.field_Ub.processPointerFrame(-120, qr.field_b, true, sm.field_D);
+          TabbedPane.field_Ub.advanceDialogAnimations((byte) 126);
           while (LabeledChildWidget.h(127)) {
-            wd.field_Ub.dispatchKeyInputOrRequestFocus(-81, qi.field_a, ml.field_b);
+            TabbedPane.field_Ub.dispatchKeyInputOrRequestFocus(-81, IterableDualLinkDeque.field_a, ml.field_b);
           }
           if (jd.field_b != -1) {
             var2 = jd.field_b;
@@ -43,7 +43,7 @@ final class ph {
             stackIn_9_0 = 3;
             return stackIn_9_0;
           }
-          if (pa.field_I == ra.field_e) {
+          if (TimeTrialSelectScreen.field_I == ra.field_e) {
             stackIn_13_0 = 1;
             return stackIn_13_0;
           }
@@ -51,7 +51,7 @@ final class ph {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
-          if (ra.field_e != wd.field_Lb) {
+          if (ra.field_e != TabbedPane.field_Lb) {
             return -1;
           }
           stackIn_20_0 = 2;
@@ -59,11 +59,11 @@ final class ph {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "ph.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "ph.A(" + param0 + ')');
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_g = null;
         tutorialLose = null;
         rmXFromIgnore = null;

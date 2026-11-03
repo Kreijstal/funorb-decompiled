@@ -34,7 +34,7 @@ final class la {
               return null;
             }
           }
-          stackIn_10_0 = pj.field_K;
+          stackIn_10_0 = MessageScreen.field_K;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,13 +46,13 @@ final class la {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, String param4, boolean param5, int param6, int param7) {
         try {
-          if (ph.field_d.field_R == 0) {
+          if (ph.field_d.pressedButton == 0) {
           } else {
             if (!ea.field_z) {
               if (!ViewportController.field_y) {
@@ -65,25 +65,25 @@ final class la {
           int var8_int = -106 % ((param0 + 1) / 55);
           if (DualLinkNode.field_p) {
             SpaceBallSkin.a(param1, param6, 20, 4, param2, param7, param4, param3, param3);
-            uq.field_D.a(param5, false);
+            Bzip2DecoderState.field_D.updateRoot(param5, false);
             if (!param5) {
               return;
             }
-            if (0 != be.field_L.field_R) {
+            if (0 != OptionsScreen.field_L.pressedButton) {
               DualLinkNode.field_p = false;
             }
-            if (0 == wn.field_g.field_R) {
+            if (0 == wn.field_g.pressedButton) {
               return;
             }
             cl.a(14851);
             DualLinkNode.field_p = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_c = null;
         field_h = null;
         int var1 = 64 % ((53 - param0) / 52);

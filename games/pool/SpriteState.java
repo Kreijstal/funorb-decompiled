@@ -9,8 +9,8 @@ abstract class SpriteState extends DualLinkNode {
     int field_A;
     int field_y;
     static String create;
-    static rq field_C;
-    static vh field_F;
+    static MusicCrossfadeStream field_C;
+    static UiComponent field_F;
     int field_G;
 
     abstract void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5);
@@ -21,13 +21,13 @@ abstract class SpriteState extends DualLinkNode {
           return;
         }
         SocketConnector.field_d = param1;
-        hd.field_H = param3;
+        MembershipBenefitsScreen.field_H = param3;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_C = null;
         if (param0 != 11) {
-          field_F = (vh) null;
+          field_F = (UiComponent) null;
         }
         create = null;
         field_x = null;
@@ -45,7 +45,7 @@ abstract class SpriteState extends DualLinkNode {
         this.rotateNearest(var6, var7, param4, param1, param0, param2);
     }
 
-    final static void a(byte param0, boolean param1, byte[] param2, di param3, di param4, int param5, String[][] param6, int param7, di param8, String[] param9, Sprite[][] param10, String[][] param11, int[] param12, byte[] param13, Sprite[][] param14) {
+    final static void a(byte param0, boolean param1, byte[] param2, ResourceArchive param3, ResourceArchive param4, int param5, String[][] param6, int param7, ResourceArchive param8, String[] param9, Sprite[][] param10, String[][] param11, int[] param12, byte[] param13, Sprite[][] param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -147,7 +147,7 @@ abstract class SpriteState extends DualLinkNode {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -176,7 +176,7 @@ abstract class SpriteState extends DualLinkNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ abstract class SpriteState extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 92) {
-            field_C = (rq) null;
+            field_C = (MusicCrossfadeStream) null;
           }
           var2_int = param1.length();
           var3 = 0L;
@@ -211,7 +211,7 @@ abstract class SpriteState extends DualLinkNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

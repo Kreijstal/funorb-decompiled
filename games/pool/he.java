@@ -4,7 +4,7 @@
 final class he {
     static String gameoptUnratedonly;
     static volatile boolean field_c;
-    static di field_b;
+    static ResourceArchive field_b;
     static String[] plusungoodShot;
 
     final static void detachInputListeners(java.awt.Canvas param0, int param1) {
@@ -14,7 +14,7 @@ final class he {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          em.a((java.awt.Component) ((Object) param0), (byte) -39);
+          HighscoresScreen.a((java.awt.Component) ((Object) param0), (byte) -39);
           hj.detachMouseListeners((java.awt.Component) ((Object) param0), false);
           if (param1 != 0) {
             return;
@@ -34,7 +34,7 @@ final class he {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -61,8 +61,8 @@ final class he {
           if (TickClock.field_g[param2] < TickClock.field_g[param0]) {
             return false;
           }
-          var4 = gd.field_d[param0] + (ob.field_y[param0] + om.field_s[param0]);
-          var5 = gd.field_d[param2] + (ob.field_y[param2] + om.field_s[param2]);
+          var4 = gd.field_d[param0] + (MenuScreen.field_y[param0] + om.field_s[param0]);
+          var5 = gd.field_d[param2] + (MenuScreen.field_y[param2] + om.field_s[param2]);
           if (var5 > var4) {
             return true;
           }
@@ -83,8 +83,8 @@ final class he {
         if (ah.field_c[param2] < ah.field_c[param0]) {
           return false;
         }
-        var4Lifetime1 = gd.field_d[param0] + (ob.field_y[param0] + om.field_s[param0]);
-        var5Lifetime1 = gd.field_d[param2] + (ob.field_y[param2] + om.field_s[param2]);
+        var4Lifetime1 = gd.field_d[param0] + (MenuScreen.field_y[param0] + om.field_s[param0]);
+        var5Lifetime1 = gd.field_d[param2] + (MenuScreen.field_y[param2] + om.field_s[param2]);
         if (var5Lifetime1 > var4Lifetime1) {
           return true;
         }
@@ -128,7 +128,7 @@ final class he {
           if (var3_int >= 12) {
             return false;
           }
-          if (!qd.a(0, param0)) {
+          if (!Js5ArchiveManager.a(0, param0)) {
             return true;
           }
           if (0 != var3_int) {
@@ -145,11 +145,11 @@ final class he {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static BinaryBitmapFont a(di param0, String param1, int param2, di param3, String param4) {
+    final static BinaryBitmapFont a(ResourceArchive param0, String param1, int param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -165,7 +165,7 @@ final class he {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param0.b(param4, -1);
+          var5_int = param0.getGroupId(param4, -1);
           var6 = param0.a(var5_int, param2, param1);
           stackIn_1_0 = wc.a(param0, 43, var5_int, param3, var6);
           return stackIn_1_0;
@@ -197,7 +197,7 @@ final class he {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

@@ -37,7 +37,7 @@ final class TimeTrialRules extends GameRules {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class TimeTrialRules extends GameRules {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class TimeTrialRules extends GameRules {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -187,25 +187,25 @@ final class TimeTrialRules extends GameRules {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            kn.field_e = new oq(param9);
-            ej.field_j = new oq(param11);
-            vj.field_d = param0;
-            kh.field_uc = param4;
-            nd.field_a = param8;
+            PlayerContextMenu.field_e = new CipherPacketBuffer(param9);
+            JaggrabDownloader.field_j = new CipherPacketBuffer(param11);
+            TextLineLayout.field_d = param0;
+            LobbyGame.field_uc = param4;
+            MarkerSliderPainter.field_a = param8;
             if (param2 < 71) {
               return;
             }
             cq.field_a = param5;
             kc.field_c = param12;
             NanoTickClock.field_s = param6;
-            kn.field_j = param13;
+            PlayerContextMenu.field_j = param13;
             UsernameSuggestionsPanel.field_S = param7;
             CushionSegment.field_g = param3;
             lf.field_b = param10;
-            im.field_ec = param1;
-            if (nd.field_a.field_b != null) {
+            LobbyPlayer.field_ec = param1;
+            if (MarkerSliderPainter.field_a.field_b != null) {
               try {
-                nl.field_c = new BufferedFile(nd.field_a.field_b, 64, 0);
+                nl.field_c = new BufferedFile(MarkerSliderPainter.field_a.field_b, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -229,7 +229,7 @@ final class TimeTrialRules extends GameRules {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -274,7 +274,7 @@ final class TimeTrialRules extends GameRules {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -304,7 +304,7 @@ final class TimeTrialRules extends GameRules {
         int var4;
         int var5;
         int var6;
-        aa var7;
+        IntrusiveDequeCursor var7;
         PotEvent var8;
         int var9;
         ShotRecord var10;
@@ -325,12 +325,12 @@ final class TimeTrialRules extends GameRules {
           var11.a(3, -14, new int[]{var10.playerIndex});
           var11.field_w = (byte)(var11.field_w - 1);
           var11.field_t = true;
-          var5 = var5 | (AccountWelcomePanel.field_R | (um.field_c | be.field_I));
+          var5 = var5 | (AccountWelcomePanel.field_R | (um.field_c | OptionsScreen.field_I));
         }
         if (8 == var11.field_n &&
           var4 != 2) {
           var11.a(2, -14, new int[]{var10.playerIndex});
-          var5 = var5 | be.field_I;
+          var5 = var5 | OptionsScreen.field_I;
           var11.field_w = (byte)(var11.field_w - 1);
           var11.field_t = true;
         } else {
@@ -338,7 +338,7 @@ final class TimeTrialRules extends GameRules {
             var11.a(7, -14, new int[]{var10.playerIndex});
             var11.field_t = true;
             var11.field_w = (byte)(var11.field_w - 1);
-            var5 = var5 | be.field_I;
+            var5 = var5 | OptionsScreen.field_I;
           }
         }
         var6 = var11.pottedBalls.a(30);
@@ -348,8 +348,8 @@ final class TimeTrialRules extends GameRules {
           var4 == 2) {
           return ag.field_e;
         }
-        var7 = new aa(var11.pottedBalls);
-        var8 = (PotEvent) (var7.b((byte) -92));
+        var7 = new IntrusiveDequeCursor(var11.pottedBalls);
+        var8 = (PotEvent) (var7.last((byte) -92));
         while (var8 != null) {
           if (var8.ballIndex == 8) {
             var11.a(5, -14, new int[]{this.field_d.field_A});
@@ -358,7 +358,7 @@ final class TimeTrialRules extends GameRules {
           if (0 != var8.ballIndex) {
             var11.field_w = (byte)(var11.field_w + 1);
           }
-          var8 = (PotEvent) (var7.b(-101));
+          var8 = (PotEvent) (var7.previous(-101));
         }
         return var5;
     }

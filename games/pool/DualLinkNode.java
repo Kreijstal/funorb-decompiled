@@ -3,7 +3,7 @@
  */
 class DualLinkNode extends IntrusiveNode {
     long field_m;
-    static di field_r;
+    static ResourceArchive field_r;
     static String statusOutOfLives;
     static String targetOpenTable;
     DualLinkNode field_q;
@@ -79,7 +79,7 @@ class DualLinkNode extends IntrusiveNode {
           DualLinkNode.a(33, -109, 29, false, 1, 26, 48);
         }
         if (hn.field_b != 2) {
-          var7 = vd.messageGame;
+          var7 = DialRenderer.messageGame;
         } else {
           var7 = wb.sendPm;
         }
@@ -175,7 +175,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param4).append(')').toString());
         }
     }
 

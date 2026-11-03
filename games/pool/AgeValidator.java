@@ -50,7 +50,7 @@ final class AgeValidator extends TextInputValidator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class AgeValidator extends TextInputValidator {
           if (param0 != 10) {
             AgeValidator.a(false, 105);
           }
-          stackIn_3_0 = na.a(10, true, param1, 87);
+          stackIn_3_0 = na.isValidInteger(10, true, param1, 87);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class AgeValidator extends TextInputValidator {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -97,14 +97,14 @@ final class AgeValidator extends TextInputValidator {
         kf var2 = null;
         kf var2Lifetime1;
         try {
-          ec.field_b = param1;
+          BallDebugOverlay.field_b = param1;
           if (!param0) {
             field_q = -113;
           }
           var2 = (kf) (oj.field_o.c((byte) -36));
           while (var2 != null) {
             if (var2.field_m.b(-108)) {
-              var2.field_o.d(ec.field_b * var2.field_n + 128 >> 8);
+              var2.field_o.d(BallDebugOverlay.field_b * var2.field_n + 128 >> 8);
             } else {
               var2.unlink((byte) -117);
             }
@@ -116,13 +116,13 @@ final class AgeValidator extends TextInputValidator {
               if (!var2Lifetime1.field_m.b(-113)) {
                 var2Lifetime1.unlink((byte) -117);
               } else {
-                var2Lifetime1.field_o.d(128 + var2Lifetime1.field_n * ec.field_b >> 8);
+                var2Lifetime1.field_o.d(128 + var2Lifetime1.field_n * BallDebugOverlay.field_b >> 8);
               }
               var2Lifetime1 = (kf) (UsernameSuggestionsPanel.field_R.f((byte) -5));
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ka.M(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ka.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class AgeValidator extends TextInputValidator {
           field_r = 25;
           if (ArrayWidgetGroup.field_H) {
             SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
-            e.field_a.a((byte) -79, false);
+            e.field_a.drawRoot((byte) -79, false);
             return;
           }
           return;
@@ -140,7 +140,7 @@ final class AgeValidator extends TextInputValidator {
           return;
         }
         SoftwareRasterizer.darkenRectangle(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight - SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom - SoftwareRasterizer.clipTop);
-        e.field_a.a((byte) -79, false);
+        e.field_a.drawRoot((byte) -79, false);
     }
 
     final static void h(int param0) {
@@ -169,7 +169,7 @@ final class AgeValidator extends TextInputValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1_ref), "ka.O(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ka.O(" + param0 + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class AgeValidator extends TextInputValidator {
           if (this.validationStateForText(param0, true) != gp.field_d) {
             return null;
           }
-          stackIn_5_0 = sg.createAlertInvalidage;
+          stackIn_5_0 = ThemeSelectScreen.createAlertInvalidage;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,7 +205,7 @@ final class AgeValidator extends TextInputValidator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -1,0 +1,1416 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class RankingsScreen extends MenuScreen {
+    static MidiPcmStream field_N;
+    static int field_K;
+    static int field_M;
+    static int[] field_L;
+    static nl field_J;
+    static int[] field_I;
+    static String friendlistdupe;
+
+    final void handleNavigationKey(int param0) {
+        int var3;
+        var3 = Pool.field_O;
+        if (param0 != -34) {
+          field_J = (nl) null;
+        }
+        if (!NanoTickClock.b(10)) {
+          if (IterableDualLinkDeque.field_a == 96) {
+            if (this.selection.selectedIndex > 0) {
+              if (this.selection.selectedIndex != 2) {
+                this.selection.a(0, (byte) 1);
+              }
+            } else {
+              this.selection.a(1, (byte) 1);
+            }
+          }
+          if (IterableDualLinkDeque.field_a == 97) {
+            if (this.selection.selectedIndex == 1) {
+              this.selection.a(0, (byte) 1);
+            } else {
+              if (this.selection.selectedIndex != 2) {
+                this.selection.a(1, (byte) 1);
+              }
+            }
+          }
+          if (IterableDualLinkDeque.field_a == 99) {
+            if (0 <= this.selection.selectedIndex &&
+              1 >= this.selection.selectedIndex) {
+              this.selection.a(2, (byte) 1);
+            } else {
+              this.selection.a(SocialListEntry.field_Lb, (byte) 1);
+            }
+          }
+          if (IterableDualLinkDeque.field_a == 98) {
+            if (this.selection.selectedIndex == 2) {
+              this.selection.a(SocialListEntry.field_Lb, (byte) 1);
+            } else {
+              this.selection.a(2, (byte) 1);
+            }
+            this.selection.a(false);
+          } else {
+            this.selection.a(SocialListEntry.field_Lb, (byte) 1);
+          }
+        } else {
+          super.handleNavigationKey(-34);
+        }
+    }
+
+    RankingsScreen(int param0, int param1, int param2, int param3, int param4, int[] param5) {
+        super(HighscoresScreen.field_M, param0, param1, param2, param3, param4, param5);
+    }
+
+    private final void drawRankingRow(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, String param8) {
+        String var12 = null;
+        String var13 = null;
+        String var14 = null;
+        String var15 = null;
+        String var16 = null;
+        int var10_int = param3 + (param2 + param1);
+        if (0 != var10_int) {
+          param1 = (200 * param1 + var10_int) / (var10_int * 2);
+          param3 = (200 * param3 + var10_int) / (var10_int * 2);
+          param2 = (200 * param2 + var10_int) / (var10_int * 2);
+        }
+        if (param5 < 90) {
+          return;
+        }
+        try {
+          if (param0 != -1) {
+            sa.field_h.c(param0 + 1 + ". ", 90, param7, param6, -1);
+          }
+          sa.field_h.d(param8, 95, param7, param6, -1);
+          var12 = Integer.toString(param4);
+          sa.field_h.drawCentered(var12, LongAndTextLoginPayload.field_i[0], param7, param6, -1);
+          var13 = var10_int >= 50 ? "50+" : Integer.toString(var10_int);
+          String var11 = var13;
+          sa.field_h.drawCentered(var13, LongAndTextLoginPayload.field_i[1], param7, param6, -1);
+          var14 = param1 + "%";
+          sa.field_h.drawCentered(var14, LongAndTextLoginPayload.field_i[2], param7, param6, -1);
+          var15 = param2 + "%";
+          sa.field_h.drawCentered(var15, LongAndTextLoginPayload.field_i[3], param7, param6, -1);
+          var16 = param3 + "%";
+          sa.field_h.drawCentered(var16, LongAndTextLoginPayload.field_i[4], param7, param6, -1);
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "tl.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final int getButtonHeight(byte param0, int param1) {
+        if (param0 != 69) {
+          field_N = (MidiPcmStream) null;
+        }
+        if (!NanoTickClock.b(-114) &&
+          param1 < 2) {
+          return 24;
+        }
+        return 36;
+    }
+
+    final static int h(int param0) {
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var1_int = 0;
+          while (LabeledChildWidget.h(param0 + 119)) {
+            un.field_f.navigateVertical(-15525);
+            if (!un.field_f.isPressActivated((byte) 119)) {
+              continue;
+            }
+            var1_int = 1;
+          }
+          un.field_f.a(un.a(-49, UsernameAvailabilityValidator.field_o, DialogLayer.field_W), un.a(-49, DebouncedValidationProvider.field_f, wn.field_i), -30);
+          if (un.field_f.isPressActivated((byte) 99)) {
+            var1_int = 1;
+          }
+          var2 = 0;
+          if (param0 != 8) {
+            RankingsScreen.d(-51, true);
+          }
+          if (var1_int != 0 &&
+            un.field_f.selectedIndex >= 0) {
+            var2 = LoginForm.field_V[un.field_f.selectedIndex];
+            if (var2 == 2) {
+              ra.a((byte) -108);
+            }
+          }
+          stackIn_13_0 = var2;
+          return stackIn_13_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "tl.F(" + param0 + ')');
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, byte param10, int param11, int param12, int param13, int param14, int param15, int[] param16) {
+        RuntimeException stackIn_80_0 = null;
+        StringBuilder stackIn_80_1 = null;
+        String stackIn_81_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var17_int = 0;
+        RuntimeException var17 = null;
+        int var18 = 0;
+        int var19 = 0;
+        int var20 = 0;
+        int var21 = 0;
+        int var22 = 0;
+        int var23 = 0;
+        int var24 = 0;
+        int var25 = 0;
+        int var26 = 0;
+        int var27 = 0;
+        int var28 = 0;
+        int var29 = 0;
+        int var30 = 0;
+        int var31 = 0;
+        int var32 = 0;
+        int var33 = 0;
+        int var34 = 0;
+        int var35 = 0;
+        int var36 = 0;
+        int var37 = 0;
+        int var38 = 0;
+        int var39 = 0;
+        int var40 = 0;
+        int var41 = 0;
+        int var35Lifetime1;
+        int var36Lifetime1;
+        int var37Lifetime1;
+        int var38Lifetime1;
+        int var39Lifetime1;
+        int var40Lifetime1;
+        int var36Lifetime2;
+        int var36Lifetime3;
+        int var37Lifetime2;
+        int var38Lifetime2;
+        int var39Lifetime2;
+        int var40Lifetime2;
+        try {
+          if (param14 >= 0 &&
+            param2 < TriangleRasterizer.clipHeight) {
+            if (param7 < 0 &&
+              param5 < 0 &&
+              param6 < 0) {
+              return;
+            }
+            if (param7 >= TriangleRasterizer.clipWidth &&
+              param5 >= TriangleRasterizer.clipWidth &&
+              TriangleRasterizer.clipWidth <= param6) {
+              return;
+            }
+            var34 = param14 - param2;
+            if (param2 != param1) {
+              var30 = param4 << 16;
+              var29 = param4 << 16;
+              var22 = param12 << 16;
+              var21 = param12 << 16;
+              var26 = param13 << 16;
+              var25 = param13 << 16;
+              var18 = param7 << 16;
+              var17_int = param7 << 16;
+              var35 = -param2 + param1;
+              var20 = (param6 - param7 << 16) / var34;
+              var19 = (param5 - param7 << 16) / var35;
+              if (var20 <= var19) {
+                var36 = var19;
+                var19 = var20;
+                var20 = var36;
+                var33 = 1;
+                var31 = (-param4 + param3 << 16) / var34;
+                var27 = (param15 - param13 << 16) / var34;
+                var32 = (-param4 + param0 << 16) / var35;
+                var28 = (-param13 + param9 << 16) / var35;
+                var24 = (param8 - param12 << 16) / var35;
+                var23 = (param11 - param12 << 16) / var34;
+              } else {
+                var24 = (param11 - param12 << 16) / var34;
+                var31 = (param0 - param4 << 16) / var35;
+                var33 = 0;
+                var28 = (param15 - param13 << 16) / var34;
+                var23 = (-param12 + param8 << 16) / var35;
+                var32 = (-param4 + param3 << 16) / var34;
+                var27 = (param9 - param13 << 16) / var35;
+              }
+              boolean decompiledFrameRemainder0 = true;
+              if (0 > param2) {
+                if (param1 < 0) {
+                  param2 = param1 - param2;
+                  var25 = var25 + var27 * param2;
+                  var30 = var30 + var32 * param2;
+                  var26 = var26 + var28 * param2;
+                  var29 = var29 + param2 * var31;
+                  var18 = var18 + var20 * param2;
+                  var22 = var22 + var24 * param2;
+                  var17_int = var17_int + var19 * param2;
+                  var21 = var21 + param2 * var23;
+                  param2 = param1;
+                  decompiledFrameRemainder0 = false;
+                }
+                else {
+                  param2 = -param2;
+                  var25 = var25 + var27 * param2;
+                  var18 = var18 + param2 * var20;
+                  var29 = var29 + param2 * var31;
+                  var17_int = var17_int + var19 * param2;
+                  var30 = var30 + var32 * param2;
+                  var26 = var26 + param2 * var28;
+                  var22 = var22 + var24 * param2;
+                  var21 = var21 + var23 * param2;
+                  param2 = 0;
+                }
+              }
+              if (decompiledFrameRemainder0) {
+                var36Lifetime2 = TriangleRasterizer.scanlineOffsets[param2];
+                while (param1 > param2) {
+                  var37 = var17_int >> 16;
+                  if (TriangleRasterizer.clipWidth > var37) {
+                    var38 = -(var17_int >> 16) + (var18 >> 16);
+                    if (var38 != 0) {
+                      var39 = (-var21 + var22) / var38;
+                      var40 = (var26 - var25) / var38;
+                      var41 = (var30 - var29) / var38;
+                      if (var38 + var37 >= TriangleRasterizer.clipWidth) {
+                        var38 = -1 + (TriangleRasterizer.clipWidth - var37);
+                      }
+                      if (var37 >= 0) {
+                        ThreeSliceButtonPainter.a(var29, var25, var40, var36Lifetime2 + var37, (byte) -117, var41, var21, var38, param16, var39);
+                      } else {
+                        ThreeSliceButtonPainter.a(-(var37 * var41) + var29, -(var40 * var37) + var25, var40, var36Lifetime2, (byte) -117, var41, var21 - var39 * var37, var37 + var38, param16, var39);
+                      }
+                    } else {
+                      if (var37 >= 0 &&
+                        var37 < TriangleRasterizer.clipWidth) {
+                        ThreeSliceButtonPainter.a(var29, var25, 0, var36Lifetime2 + var37, (byte) -117, 0, var21, var38, param16, 0);
+                      }
+                    }
+                  }
+                  param2++;
+                  if (TriangleRasterizer.clipHeight <= param2) {
+                    return;
+                  }
+                  var17_int = var17_int + var19;
+                  var29 = var29 + var31;
+                  var25 = var25 + var27;
+                  var21 = var21 + var23;
+                  var30 = var30 + var32;
+                  var26 = var26 + var28;
+                  var18 = var18 + var20;
+                  var22 = var22 + var24;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.width;
+                }
+              }
+              var36Lifetime3 = -param1 + param14;
+              if (var36Lifetime3 != 0) {
+                var37Lifetime2 = param6 << 16;
+                var38Lifetime2 = param11 << 16;
+                var39Lifetime2 = param15 << 16;
+                var40Lifetime2 = param3 << 16;
+                if (var33 == 0) {
+                  var21 = param8 << 16;
+                  var25 = param9 << 16;
+                  var17_int = param5 << 16;
+                  var29 = param0 << 16;
+                } else {
+                  var18 = param5 << 16;
+                  var22 = param8 << 16;
+                  var30 = param0 << 16;
+                  var26 = param9 << 16;
+                }
+                var32 = (var40Lifetime2 - var30) / var36Lifetime3;
+                var24 = (var38Lifetime2 - var22) / var36Lifetime3;
+                var23 = (var38Lifetime2 - var21) / var36Lifetime3;
+                var19 = (-var17_int + var37Lifetime2) / var36Lifetime3;
+                var27 = (-var25 + var39Lifetime2) / var36Lifetime3;
+                var20 = (var37Lifetime2 - var18) / var36Lifetime3;
+                var28 = (var39Lifetime2 - var26) / var36Lifetime3;
+                var31 = (-var29 + var40Lifetime2) / var36Lifetime3;
+              } else {
+                var28 = 0;
+                var19 = 0;
+                var27 = 0;
+                var31 = 0;
+                var20 = 0;
+                var24 = 0;
+                var23 = 0;
+                var32 = 0;
+              }
+            } else {
+              if (param2 == param14) {
+                var18 = param5 << 16;
+                var30 = param0;
+                var24 = 0;
+                var26 = param9;
+                var19 = 0;
+                var32 = 0;
+                var21 = param12;
+                var23 = 0;
+                var28 = 0;
+                var22 = param8;
+                var20 = 0;
+                var27 = 0;
+                var17_int = param7 << 16;
+                var31 = 0;
+                var25 = param13;
+                var29 = param4;
+              } else {
+                var35 = param14 - param1;
+                if (param5 > param7) {
+                  var18 = param5 << 16;
+                  var23 = (-param12 + param11 << 16) / var34;
+                  var27 = (param15 - param13 << 16) / var34;
+                  var30 = param0 << 16;
+                  var20 = (-param5 + param6 << 16) / var35;
+                  var24 = (-param8 + param11 << 16) / var35;
+                  var19 = (-param7 + param6 << 16) / var34;
+                  var31 = (-param4 + param3 << 16) / var34;
+                  var29 = param4 << 16;
+                  var26 = param9 << 16;
+                  var25 = param13 << 16;
+                  var32 = (param3 - param0 << 16) / var35;
+                  var22 = param8 << 16;
+                  var21 = param12 << 16;
+                  var17_int = param7 << 16;
+                  var28 = (-param9 + param15 << 16) / var35;
+                } else {
+                  var31 = (-param0 + param3 << 16) / var35;
+                  var22 = param12 << 16;
+                  var25 = param9 << 16;
+                  var17_int = param5 << 16;
+                  var20 = (-param7 + param6 << 16) / var34;
+                  var28 = (param15 - param13 << 16) / var34;
+                  var19 = (param6 - param5 << 16) / var35;
+                  var32 = (-param4 + param3 << 16) / var34;
+                  var18 = param7 << 16;
+                  var30 = param4 << 16;
+                  var29 = param0 << 16;
+                  var26 = param13 << 16;
+                  var27 = (param15 - param9 << 16) / var35;
+                  var21 = param8 << 16;
+                  var24 = (param11 - param12 << 16) / var34;
+                  var23 = (-param8 + param11 << 16) / var35;
+                }
+              }
+              var33 = 0;
+              if (param2 < 0) {
+                param2 = Math.min(-param2, -param2 + param1);
+                var22 = var22 + param2 * var24;
+                var26 = var26 + var28 * param2;
+                var30 = var30 + var32 * param2;
+                var25 = var25 + param2 * var27;
+                var21 = var21 + var23 * param2;
+                var18 = var18 + var20 * param2;
+                var29 = var29 + param2 * var31;
+                var17_int = var17_int + var19 * param2;
+                param2 = 0;
+              }
+            }
+            if (param2 < 0) {
+              param2 = -param2;
+              var21 = var21 + param2 * var23;
+              var18 = var18 + param2 * var20;
+              var30 = var30 + var32 * param2;
+              var22 = var22 + var24 * param2;
+              var26 = var26 + param2 * var28;
+              var29 = var29 + param2 * var31;
+              var25 = var25 + param2 * var27;
+              var17_int = var17_int + param2 * var19;
+              param2 = 0;
+            }
+            var35Lifetime1 = TriangleRasterizer.scanlineOffsets[param2];
+            if (param10 != -49) {
+              field_J = (nl) null;
+            }
+            while (param14 > param2) {
+              var36Lifetime1 = var17_int >> 16;
+              if (var36Lifetime1 < TriangleRasterizer.clipWidth) {
+                var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
+                if (0 == var37Lifetime1) {
+                  if (var36Lifetime1 >= 0 &&
+                    var36Lifetime1 < TriangleRasterizer.clipWidth) {
+                    ThreeSliceButtonPainter.a(var29, var25, 0, var36Lifetime1 + var35Lifetime1, (byte) -117, 0, var21, var37Lifetime1, param16, 0);
+                  }
+                } else {
+                  var38Lifetime1 = (var22 - var21) / var37Lifetime1;
+                  var39Lifetime1 = (var26 - var25) / var37Lifetime1;
+                  var40Lifetime1 = (var30 - var29) / var37Lifetime1;
+                  if (TriangleRasterizer.clipWidth <= var37Lifetime1 + var36Lifetime1) {
+                    var37Lifetime1 = -var36Lifetime1 + TriangleRasterizer.clipWidth - 1;
+                  }
+                  if (var36Lifetime1 < 0) {
+                    ThreeSliceButtonPainter.a(-(var40Lifetime1 * var36Lifetime1) + var29, var25 - var36Lifetime1 * var39Lifetime1, var39Lifetime1, var35Lifetime1, (byte) -117, var40Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, var37Lifetime1 + var36Lifetime1, param16, var38Lifetime1);
+                  } else {
+                    ThreeSliceButtonPainter.a(var29, var25, var39Lifetime1, var35Lifetime1 + var36Lifetime1, (byte) -117, var40Lifetime1, var21, var37Lifetime1, param16, var38Lifetime1);
+                  }
+                }
+              }
+              param2++;
+              if (TriangleRasterizer.clipHeight <= param2) {
+                return;
+              }
+              var26 = var26 + var28;
+              var22 = var22 + var24;
+              var17_int = var17_int + var19;
+              var25 = var25 + var27;
+              var30 = var30 + var32;
+              var21 = var21 + var23;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.width;
+              var18 = var18 + var20;
+              var29 = var29 + var31;
+            }
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var17 = decompiledCaughtException;
+          stackIn_80_0 = var17;
+          stackIn_80_1 = new StringBuilder().append("tl.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',');
+          if (param16 == null) {
+            stackIn_81_2 = "null";
+          } else {
+            stackIn_81_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(int param0) {
+        if (param0 != 0) {
+          friendlistdupe = (String) null;
+        }
+        field_N = null;
+        field_I = null;
+        field_L = null;
+        friendlistdupe = null;
+        field_J = null;
+    }
+
+    final static void a(int param0, LobbyGame param1, int param2, boolean param3) {
+        AlignedIconLabel dupTemp$0 = null;
+        int var17_int = 0;
+        int var24 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_12_0 = 0;
+        AlignedIconLabel stackIn_22_0 = null;
+        boolean stackIn_23_1 = false;
+        AlignedIconLabel stackIn_29_0 = null;
+        boolean stackIn_30_1 = false;
+        int stackIn_43_0 = 0;
+        int stackIn_51_0 = 0;
+        int stackIn_59_0 = 0;
+        AlignedIconLabel stackIn_74_0 = null;
+        boolean stackIn_75_1 = false;
+        AlignedIconLabel stackIn_79_0 = null;
+        byte stackIn_79_1 = 0;
+        int stackIn_79_2 = 0;
+        boolean stackIn_82_1 = false;
+        AlignedIconLabel stackIn_87_0 = null;
+        boolean stackIn_87_1 = false;
+        boolean stackIn_88_2 = false;
+        AlignedIconLabel stackIn_92_0 = null;
+        boolean stackIn_93_1 = false;
+        int stackIn_97_0 = 0;
+        AlignedIconLabel stackIn_112_0 = null;
+        boolean stackIn_113_1 = false;
+        AlignedIconLabel stackIn_116_0 = null;
+        boolean stackIn_117_1 = false;
+        AlignedIconLabel stackIn_120_0 = null;
+        boolean stackIn_121_1 = false;
+        AlignedIconLabel stackIn_124_0 = null;
+        boolean stackIn_125_1 = false;
+        String stackIn_141_0 = null;
+        AlignedIconLabel stackIn_146_0 = null;
+        boolean stackIn_147_1 = false;
+        AlignedIconLabel stackIn_149_0 = null;
+        boolean stackIn_150_1 = false;
+        int stackIn_156_0 = 0;
+        int stackIn_192_0 = 0;
+        int stackIn_215_0 = 0;
+        AlignedIconLabel stackIn_320_0 = null;
+        boolean stackIn_320_1 = false;
+        boolean stackIn_321_2 = false;
+        AlignedIconLabel stackIn_324_0 = null;
+        boolean stackIn_325_1 = false;
+        int stackIn_328_1 = 0;
+        byte stackIn_328_2 = 0;
+        int stackIn_328_3 = 0;
+        AlignedIconLabel stackIn_330_0 = null;
+        boolean stackIn_331_1 = false;
+        AlignedIconLabel stackIn_335_0 = null;
+        boolean stackIn_336_1 = false;
+        RuntimeException stackIn_344_0 = null;
+        StringBuilder stackIn_344_1 = null;
+        String stackIn_345_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8_int = 0;
+        String var8 = null;
+        AlignedIconLabel[] var8_array = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        AlignedIconLabel var17 = null;
+        int var18 = 0;
+        Object var18_ref = null;
+        Object var19 = null;
+        Object var20 = null;
+        Object var21 = null;
+        Object var22 = null;
+        int var22_int = 0;
+        int var23 = 0;
+        Object var25 = null;
+        String var25_ref = null;
+        int var26 = 0;
+        int var27 = 0;
+        AlignedIconLabel var28 = null;
+        AlignedIconLabel var29 = null;
+        AlignedIconLabel[] var30 = null;
+        String var31 = null;
+        String var32 = null;
+        String var33 = null;
+        Object var25Lifetime1;
+        String var25_refLifetime1;
+        Object var25Lifetime1Lifetime1;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var6Lifetime3;
+        int var6Lifetime4;
+        int var8_intLifetime1;
+        int var16Lifetime1;
+        int var18Lifetime1;
+        int var16Lifetime2;
+        var26 = Pool.field_O;
+        try {
+          if (param3) {
+            stackIn_12_0 = (LobbyGame.field_Ac) ? 0 : 1;
+            var4_int = stackIn_12_0;
+          } else {
+            if (TikiTableScene.e((byte) 85)) {
+              stackIn_8_0 = (!param1.field_ec) ? 1 : 0;
+            } else {
+              stackIn_8_0 = 0;
+            }
+            var4_int = stackIn_8_0;
+          }
+          var5 = 0;
+          if (!param3) {
+            for (var6 = 0; 5 > var6; var6++) {
+              if (var4_int != 0 &&
+                FreePlayRules.field_f[0][var6 + 1].pressedButton != 0 &&
+                var6 != param1.field_ac) {
+                param1.field_ac = var6;
+                var5 = 1;
+              }
+              stackIn_22_0 = FreePlayRules.field_f[0][var6 + 1];
+              stackIn_23_1 = (var4_int != 0);
+              stackIn_22_0.enabled = stackIn_23_1;
+              if (!tq.field_p &&
+                3 == var6) {
+                FreePlayRules.field_f[0][var6 + 1].enabled = false;
+              }
+              stackIn_29_0 = FreePlayRules.field_f[0][var6 + 1];
+              stackIn_30_1 = (param1.field_ac == var6);
+              stackIn_29_0.selected = stackIn_30_1;
+            }
+            if (FreePlayRules.field_f[0][2].hovered) {
+              if (TikiTableScene.e((byte) 85)) {
+                CacheEntry.field_B = MusicCrossfadeStream.thisisrunescapeclan;
+              } else {
+                CacheEntry.field_B = AccountWelcomePanel.substituteTemplateArguments(new String[]{HighscoresScreen.field_L.field_Ob}, -1, NetworkGameClient.thisisrunescapeclanNotowner);
+              }
+            }
+          }
+          if (dg.field_T.length >= 2) {
+            if (param3) {
+              stackIn_43_0 = (FullscreenFocusCanvas.field_d != -1) ? 1 : 0;
+            } else {
+              stackIn_43_0 = 0;
+            }
+            var6Lifetime1 = stackIn_43_0;
+            if (var6Lifetime1 != 0) {
+              var7 = FullscreenFocusCanvas.field_d;
+              for (var8_int = 0; var8_int < md.field_c.length; var8_int++) {
+                md.field_c[var8_int] = (byte) 0;
+              }
+              md.field_c[var7 / 8] = (byte)md.a((int) md.field_c[var7 / 8], 1 << var7 % 8);
+            }
+            stackIn_51_0 = (param3) ? -1 : 0;
+            for (var7 = stackIn_51_0; dg.field_T.length > var7; var7++) {
+              if (var6Lifetime1 != 0) {
+                stackIn_59_0 = (var7 != FullscreenFocusCanvas.field_d) ? 1 : 0;
+              } else {
+                stackIn_59_0 = 0;
+              }
+              var8_intLifetime1 = stackIn_59_0;
+              if (var4_int != 0 &&
+                FreePlayRules.field_f[1][var7 + 1].pressedButton != 0) {
+                if (!param3) {
+                  var9 = dg.field_T[var7];
+                  if (var9 != param1.field_Nb) {
+                    param1.field_Nb = var9;
+                    var5 = 1;
+                  }
+                } else {
+                  if (var6Lifetime1 == 0) {
+                    if (var7 == -1) {
+                      for (var9 = 0; md.field_c.length > var9; var9++) {
+                        md.field_c[var9] = (byte) 0;
+                      }
+                    } else {
+                      md.field_c[var7 / 8] = (byte)cq.a((int) md.field_c[var7 / 8], 1 << ArchiveLoadSequence.b(var7, 7));
+                    }
+                  }
+                }
+              }
+              if (param3) {
+                if (var7 == -1) {
+                  FreePlayRules.field_f[1][var7 + 1].selected = true;
+                  for (var9 = 0; var9 < dg.field_T.length; var9++) {
+                    dupTemp$0 = FreePlayRules.field_f[1][1 + var7];
+                    stackIn_87_0 = dupTemp$0;
+                    stackIn_87_1 = dupTemp$0.selected;
+                    stackIn_88_2 = ((md.field_c[var9 / 8] & 1 << (7 & var9)) == 0);
+                    stackIn_87_0.selected = stackIn_87_1 & stackIn_88_2;
+                  }
+                } else {
+                  stackIn_79_0 = FreePlayRules.field_f[1][1 + var7];
+                  stackIn_79_1 = md.field_c[var7 / 8];
+                  stackIn_79_2 = 1 << (7 & var7);
+                  stackIn_82_1 = ((stackIn_79_1 & stackIn_79_2) != 0);
+                  stackIn_79_0.selected = stackIn_82_1;
+                }
+              } else {
+                var9 = dg.field_T[var7];
+                stackIn_74_0 = FreePlayRules.field_f[1][var7 + 1];
+                stackIn_75_1 = (var9 == param1.field_Nb);
+                stackIn_74_0.selected = stackIn_75_1;
+              }
+              stackIn_92_0 = FreePlayRules.field_f[1][1 + var7];
+              stackIn_93_1 = (var4_int != 0) && (var8_intLifetime1 == 0);
+              stackIn_92_0.enabled = stackIn_93_1;
+            }
+          }
+          stackIn_97_0 = (!param3) ? 1 : 0;
+          for (var6Lifetime2 = stackIn_97_0; var6Lifetime2 < 3; var6Lifetime2++) {
+            var28 = FreePlayRules.field_f[2][var6Lifetime2];
+            if (var4_int != 0 &&
+              var28.pressedButton != 0) {
+              if (!param3) {
+                if (param1.field_Yb != var6Lifetime2) {
+                  var5 = 1;
+                  param1.field_Yb = var6Lifetime2;
+                }
+              } else {
+                if (var6Lifetime2 == 0) {
+                  FreePlayRules.field_l = 0;
+                } else {
+                  FreePlayRules.field_l = FreePlayRules.field_l ^ var6Lifetime2;
+                }
+              }
+            }
+            if (!param3) {
+              stackIn_120_0 = var28;
+              stackIn_121_1 = ((var6Lifetime2 & param1.field_Yb) != 0);
+              stackIn_120_0.selected = stackIn_121_1;
+            } else {
+              if (0 == var6Lifetime2) {
+                stackIn_116_0 = var28;
+                stackIn_117_1 = (0 == FreePlayRules.field_l);
+                stackIn_116_0.selected = stackIn_117_1;
+              } else {
+                stackIn_112_0 = var28;
+                stackIn_113_1 = ((FreePlayRules.field_l & var6Lifetime2) != 0);
+                stackIn_112_0.selected = stackIn_113_1;
+              }
+            }
+            stackIn_124_0 = var28;
+            stackIn_125_1 = (var4_int != 0);
+            stackIn_124_0.enabled = stackIn_125_1;
+          }
+          if (param3 &&
+            1 < ji.field_g) {
+            for (var6Lifetime3 = 0; ji.field_g + 1 > var6Lifetime3; var6Lifetime3++) {
+              var29 = FreePlayRules.field_f[3][var6Lifetime3];
+              if (var4_int != 0 &&
+                var29.pressedButton != 0) {
+                pm.field_l = var6Lifetime3;
+              }
+              if (var29.hovered &&
+                var6Lifetime3 > 0) {
+                if (null != wp.field_f) {
+                  stackIn_141_0 = wp.field_f[-1 + var6Lifetime3];
+                } else {
+                  stackIn_141_0 = null;
+                }
+                var8 = stackIn_141_0;
+                if (var8 != null) {
+                  CacheEntry.field_B = var8;
+                }
+              }
+              stackIn_146_0 = var29;
+              stackIn_147_1 = (var4_int != 0);
+              stackIn_146_0.enabled = stackIn_147_1;
+              stackIn_149_0 = var29;
+              stackIn_150_1 = (pm.field_l == var6Lifetime3);
+              stackIn_149_0.selected = stackIn_150_1;
+            }
+          }
+          var6Lifetime4 = 0;
+          for (var7 = param2; var7 < dr.field_c; var7++) {
+            var30 = FreePlayRules.field_f[4 + var7];
+            var8_array = var30;
+            stackIn_156_0 = (param3) ? -1 : 0;
+            for (var9 = stackIn_156_0; -1 + var30.length > var9; var9++) {
+              var10 = 0;
+              var11 = 0;
+              var12 = 0;
+              var13 = 0;
+              var14 = 0;
+              var15 = 0;
+              if (var4_int != 0 &&
+                var9 >= 0) {
+                if (op.field_a != null &&
+                  op.field_a[var7] != null &&
+                  (~DateInputWidget.field_S & op.field_a[var7][var9]) > 0) {
+                  var14 = 1;
+                  var15 = s.highestOneBit(op.field_a[var7][var9] & ~DateInputWidget.field_S, (byte) 87);
+                }
+                if (Pocket.field_j != null &&
+                  null != Pocket.field_j[var7] &&
+                  UsernameSuggestionsPanel.field_V <= 0 &&
+                  Pocket.field_j[var7][var9]) {
+                  var10 = 1;
+                }
+                if (DebugTuningSlider.field_d != null &&
+                  DebugTuningSlider.field_d[var7] != null) {
+                  var16 = DebugTuningSlider.field_d[var7][var9];
+                  if (0 < var16 &&
+                    mg.field_d < var16) {
+                    var12 = 1;
+                  }
+                  if (var16 != 0 &&
+                    !DualLinkNode.field_s &&
+                    0 >= UsernameSuggestionsPanel.field_V) {
+                    var10 = 1;
+                  }
+                }
+                if (param3) {
+                  if (TextPairLoginPayload.field_j != null) {
+                    if (null != TextPairLoginPayload.field_j[var7]) {
+                      stackIn_192_0 = (!TextPairLoginPayload.field_j[var7][var9]) ? 0 : 1;
+                    } else {
+                      stackIn_192_0 = 0;
+                    }
+                  } else {
+                    stackIn_192_0 = 0;
+                  }
+                } else {
+                  stackIn_192_0 = 0;
+                }
+                var13 = stackIn_192_0;
+                if (null != w.field_j &&
+                  w.field_j[var7] != null) {
+                  var16Lifetime2 = w.field_j[var7][var9];
+                  if (var16Lifetime2 != 0 &&
+                    !DualLinkNode.field_s &&
+                    UsernameSuggestionsPanel.field_V <= 0) {
+                    var10 = 1;
+                  }
+                  if (var16Lifetime2 > 0 &&
+                    TutorialSelectScreen.field_I < var16Lifetime2) {
+                    var11 = 1;
+                  }
+                }
+              }
+              if (2 <= TutorialController.field_i &&
+                TextLineLayout.field_c[12]) {
+                var12 = 0;
+                var11 = 0;
+                var14 = 0;
+                var13 = 0;
+                var10 = 0;
+              }
+              PoolUiText.field_b = true;
+              if (var10 == 0 &&
+                var11 == 0 &&
+                var12 == 0 &&
+                var13 == 0) {
+                if (var14 == 0) {
+                  stackIn_215_0 = 0;
+                } else {
+                  stackIn_215_0 = 1;
+                }
+              } else {
+                stackIn_215_0 = 1;
+              }
+              var16Lifetime1 = stackIn_215_0;
+              if (var16Lifetime1 == 0 &&
+                0 <= var9 &&
+                ArchiveLoadStep.field_m != null && (!param3 ||
+                !LobbyGame.field_Ac)) {
+                PoolUiText.field_b = false;
+                if (dk.field_j == null) {
+                  dk.field_j = new byte[dr.field_c];
+                  gf.field_b = new boolean[dr.field_c];
+                }
+                ln.field_p = false;
+                for (var17_int = 0; var7 > var17_int; var17_int++) {
+                  gf.field_b[var17_int] = false;
+                }
+                OpacityWidget.a(0, var7, var9, false, param1, -1, -1, param3);
+                if (2 <= TutorialController.field_i &&
+                  TextLineLayout.field_c[12]) {
+                  PoolUiText.field_b = true;
+                }
+                if (!PoolUiText.field_b) {
+                  var16Lifetime1 = 1;
+                }
+              }
+              var17 = var8_array[var9 + 1];
+              if (var4_int != 0 &&
+                var17.pressedButton != 0) {
+                if (param3) {
+                  if (var9 == -1) {
+                    for (var18 = var6Lifetime4; var18 < -1 + var6Lifetime4 + var30.length; var18++) {
+                      AgeValidator.field_s[var18 / 8] = (byte)ArchiveLoadSequence.b((int) AgeValidator.field_s[var18 / 8], ~(1 << ArchiveLoadSequence.b(7, var18)));
+                    }
+                  } else {
+                    AgeValidator.field_s[(var9 + var6Lifetime4) / 8] = (byte)cq.a((int) AgeValidator.field_s[(var9 + var6Lifetime4) / 8], 1 << ArchiveLoadSequence.b(var9 + var6Lifetime4, 7));
+                  }
+                } else {
+                  if (var16Lifetime1 == 0 &&
+                    param1.settings[var7] != (byte)var9) {
+                    param1.settings[var7] = (byte)var9;
+                    var5 = 1;
+                  }
+                }
+              }
+              if (param3 &&
+                var16Lifetime1 != 0) {
+                AgeValidator.field_s[(var9 + var6Lifetime4) / 8] = (byte)ArchiveLoadSequence.b((int) AgeValidator.field_s[(var9 + var6Lifetime4) / 8], ~(1 << ArchiveLoadSequence.b(var9 + var6Lifetime4, 7)));
+              }
+              if (var9 >= 0 &&
+                var17.hovered) {
+                if (null == mj.field_c) {
+                  var18_ref = null;
+                } else {
+                  if (mj.field_c[var7] != null) {
+                    var18_ref = mj.field_c[var7][var9];
+                  } else {
+                    var18_ref = null;
+                  }
+                }
+                if (null == BufferedFile.field_p) {
+                  var19 = null;
+                } else {
+                  if (null != BufferedFile.field_p[var7]) {
+                    var19 = BufferedFile.field_p[var7][var9];
+                  } else {
+                    var19 = null;
+                  }
+                }
+                var20 = null;
+                if (var19 != null &&
+                  !((String) (var19)).equals(var18_ref)) {
+                  var20 = var19;
+                }
+                var21 = null;
+                if (var13 != 0) {
+                  var21 = he.gameoptUnratedonly;
+                  var22 = var21;
+                  var25 = var22;
+                  var22 = var25;
+                  var21 = var22;
+                  var25 = var21;
+                  var22 = var25;
+                  var25 = var22;
+                  var22 = var25;
+                  var21 = var22;
+                  var22 = var25;
+                } else {
+                  if (var10 == 0) {
+                    if (var11 != 0) {
+                      var22_int = -TutorialSelectScreen.field_I + w.field_j[var7][var9];
+                      if (var22_int == 1) {
+                        var21 = TickClock.gameopt1moreratedgame;
+                      } else {
+                        var21 = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(var22_int)}, -1, PotEvent.gameoptMoreratedgames);
+                      }
+                    }
+                    if (var12 != 0) {
+                      var31 = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(mg.field_d), Integer.toString(DebugTuningSlider.field_d[var7][var9])}, -1, sm.gameoptNeedrating);
+                      var22 = var31;
+                      var25 = var22;
+                      var22 = var25;
+                      var21 = var22;
+                      var25_ref = var31;
+                      var22 = var25_ref;
+                      if (var21 == null) {
+                        var21 = var31;
+                      } else {
+                        var21 = (String) (var21) + "<br>" + var31;
+                      }
+                    }
+                    if (var14 != 0) {
+                      var22 = dk.gameoptNotunlocked;
+                      if (0 < var15 &&
+                        null != WeightedLruCache.field_f &&
+                        var15 <= WeightedLruCache.field_f.length &&
+                        null != WeightedLruCache.field_f[var15 - 1]) {
+                        var22 = WeightedLruCache.field_f[-1 + var15][0];
+                      }
+                      if (var21 != null) {
+                        var21 = (String) (var21) + "<br>" + (String) (var22);
+                      } else {
+                        var21 = var22;
+                      }
+                    }
+                  } else {
+                    var21 = ChatMessageLine.gameoptMembersonly;
+                  }
+                }
+                if (var4_int != 0 &&
+                  !PoolUiText.field_b) {
+                  var22 = null;
+                  if (ln.field_p) {
+                    var22 = "</col>" + ab.muOptionsPlayers + "<col=A00000>";
+                    var25Lifetime1 = var22;
+                    var22 = var25Lifetime1;
+                    var25Lifetime1Lifetime1 = var22;
+                    var22 = var25Lifetime1Lifetime1;
+                    var21 = var22;
+                  }
+                  var23 = 0;
+                  for (var24 = 0; var7 > var24; var24++) {
+                    if (gf.field_b[var24]) {
+                      var25_refLifetime1 = "</col>" + ck.field_R[var24] + "<col=A00000>";
+                      var22 = var25_refLifetime1;
+                      var21 = var22;
+                      var22 = var25_refLifetime1;
+                      if (var22 != null) {
+                        var23 = 1;
+                        var22 = (String) (var22) + ", " + var25_refLifetime1;
+                        var21 = var22;
+                        var21 = var22;
+                      } else {
+                        var22 = var25_refLifetime1;
+                      }
+                    }
+                  }
+                  if (var23 != 0) {
+                    var21 = SocketConnector.gameoptCannotbecombined2 + (String) (var22);
+                  } else {
+                    var21 = AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var22)}, ~param2, AgeValidator.gameoptCannotbecombined1);
+                  }
+                }
+                if (var21 != null) {
+                  var32 = "<col=A00000>" + (String) (var21);
+                  var33 = SocketArchiveNetworkClient.a("<br>", "<br><col=A00000>", var32, -1);
+                  if (var20 == null) {
+                    var20 = var33;
+                  } else {
+                    var20 = (String) (var20) + "<br>" + var33;
+                  }
+                }
+                if (var20 != null) {
+                  CacheEntry.field_B = (String) (var20);
+                }
+              }
+              if (!param3) {
+                boolean decompiledFrameRemainder0 = true;
+                stackIn_330_0 = var17;
+                if (PoolUiText.field_b) {
+                  stackIn_328_1 = ~param1.settings[var7];
+                  stackIn_328_2 = (byte)var9;
+                  stackIn_328_3 = -1;
+                  if (stackIn_328_1 == (stackIn_328_2 ^ stackIn_328_3)) {
+                    stackIn_331_1 = true;
+                    decompiledFrameRemainder0 = false;
+                  }
+                }
+                if (decompiledFrameRemainder0) {
+                  stackIn_331_1 = false;
+                }
+                stackIn_330_0.selected = stackIn_331_1;
+              } else {
+                if (var9 == -1) {
+                  var17.selected = true;
+                  var27 = var6Lifetime4;
+                  var18Lifetime1 = var27;
+                  while (-1 + (var30.length + var6Lifetime4) > var27) {
+                    stackIn_320_0 = var17;
+                    stackIn_320_1 = var17.selected;
+                    stackIn_321_2 = (0 == (AgeValidator.field_s[var27 / 8] & 1 << (var27 & 7)));
+                    stackIn_320_0.selected = stackIn_320_1 & stackIn_321_2;
+                    var27++;
+                  }
+                } else {
+                  stackIn_324_0 = var17;
+                  stackIn_325_1 = ((AgeValidator.field_s[(var6Lifetime4 + var9) / 8] & 1 << (7 & var9 + var6Lifetime4)) != 0);
+                  stackIn_324_0.selected = stackIn_325_1;
+                }
+              }
+              stackIn_335_0 = var17;
+              stackIn_336_1 = (var4_int != 0) && (var16Lifetime1 == 0);
+              stackIn_335_0.enabled = stackIn_336_1;
+            }
+            var6Lifetime4 = var6Lifetime4 + (qf.field_j[var7] & 255);
+          }
+          if (var5 != 0 &&
+            !param3) {
+            SpaceBallSkin.c(5, param0);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_344_0 = var4;
+          stackIn_344_1 = new StringBuilder().append("tl.P(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_345_2 = "null";
+          } else {
+            stackIn_345_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_344_0), ((StringBuilder) (Object) stackIn_344_1).append(stackIn_345_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final static IndexedSprite a(ResourceArchive param0, int param1, String param2, String param3) {
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        IndexedSprite stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4_int = param0.getGroupId(param3, -1);
+          if (param1 != 3812) {
+            friendlistdupe = (String) null;
+          }
+          var5 = param0.a(var4_int, 0, param2);
+          stackIn_3_0 = LobbyGame.a(var5, var4_int, (byte) -97, param0);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("tl.S(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param3 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+        }
+    }
+
+    final Sprite createButtonLabel(String param0, int param1, int param2, int param3) {
+        int[] var5 = null;
+        RuntimeException var5_ref = null;
+        String var6 = null;
+        int[] var7 = null;
+        Sprite stackIn_6_0 = null;
+        Sprite stackIn_8_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 != 0) {
+            var6 = (String) null;
+            this.createButtonLabel((String) null, 127, -77, -84);
+          }
+          if (!NanoTickClock.b(96) &&
+            param3 < 2) {
+            var7 = FreePlayRules.field_e.field_U[param1];
+            var5 = var7;
+            stackIn_8_0 = ag.createTextLabelSprite((byte) 89, var7[var7.length >> 1], param0);
+            return stackIn_8_0;
+          }
+          stackIn_6_0 = super.createButtonLabel(param0, param1, 0, param3);
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5_ref = decompiledCaughtException;
+          stackIn_11_0 = var5_ref;
+          stackIn_11_1 = new StringBuilder().append("tl.PA(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final int getButtonRight(boolean param0, int param1) {
+        if (!NanoTickClock.b(-114)) {
+          return param1 < 2 ? param1 * 240 + 300 : 380;
+        }
+        if (param0) {
+          friendlistdupe = (String) null;
+        }
+        if (param1 == 0) {
+          return 340 + this.getButtonLeft(0, param1);
+        }
+        if (param1 == 1) {
+          return 130 + this.getButtonLeft(0, param1);
+        }
+        return this.getButtonLeft(0, param1) + 140;
+    }
+
+    final void handleMenuAction(int param0, boolean param1, int param2) {
+        int var4;
+        if (param0 != -16470) {
+          return;
+        }
+        var4 = this.itemIds[param2];
+        if (var4 != 23) {
+          super.handleMenuAction(param0 + 0, param1, param2);
+        } else {
+          if (this.selection.isPressActivated((byte) 75)) {
+            TranslatedUiText.a(pl.pleaselogin, this.screenId, (byte) 101);
+          }
+        }
+    }
+
+    final int getLabelOffsetY(int param0, int param1) {
+        if (param1 != 6402) {
+          return 53;
+        }
+        if (2 <= param0) {
+          return super.getLabelOffsetY(param0, 6402);
+        }
+        return 0;
+    }
+
+    final void drawScreen(int param0) {
+        int var8 = 0;
+        int stackIn_18_0;
+        int stackIn_18_1;
+        int stackIn_18_2;
+        int stackIn_18_3;
+        int stackIn_19_4 = 0;
+        int var2;
+        int var3;
+        Object var4;
+        String[] var5;
+        int[] var6;
+        int var7;
+        String var9;
+        int var10;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        int var3Lifetime2Lifetime1;
+        var10 = Pool.field_O;
+        super.drawScreen(43);
+        if (NanoTickClock.b(-128)) {
+          this.f(320);
+          return;
+        }
+        if (BallSkin.field_b == null) {
+          BallSkin.field_b = wp.a(0, 10, (byte) 68, 7);
+        }
+        var2 = 170;
+        nj.drawNineSlice(MidiPcmStream.field_y, (byte) 65, 520, 60, 150, ModernTableScene.field_Z.baselineHeight + 176 + 16);
+        var3 = 2;
+        var3Lifetime1 = 15658734;
+        ModernTableScene.field_Z.drawCentered(DateInputWidget.ratingRating, LongAndTextLoginPayload.field_i[0], var2, var3Lifetime1, -1);
+        ModernTableScene.field_Z.drawCentered(ImageProducerRasterBuffer.ratingPlayed, LongAndTextLoginPayload.field_i[1], var2, var3Lifetime1, -1);
+        ModernTableScene.field_Z.drawCentered(TextLineLayout.ratingWon, LongAndTextLoginPayload.field_i[2], var2, var3Lifetime1, -1);
+        ModernTableScene.field_Z.drawCentered(ShotRecord.ratingLost, LongAndTextLoginPayload.field_i[3], var2, var3Lifetime1, -1);
+        ModernTableScene.field_Z.drawCentered(um.ratingDrawn, LongAndTextLoginPayload.field_i[4], var2, var3Lifetime1, -1);
+        if (param0 <= 36) {
+          return;
+        }
+        regionExit1: {
+          var2 = var2 + (8 + (ModernTableScene.field_Z.maxDescent + sa.field_h.maxAscent));
+          if (!BallSkin.field_b.field_v) {
+            var4 = cl.pleasewaitDotdotdot;
+          } else {
+            if (BallSkin.field_b.field_n != null) {
+              var4 = Camera.ratingNoratings;
+              var5 = BallSkin.field_b.field_n[SocialListEntry.field_Lb];
+              var6 = BallSkin.field_b.field_q[SocialListEntry.field_Lb];
+              var7 = 0;
+              for (var8 = 0; var8 < 10; var8++) {
+                if (var5 != null) {
+                  stackIn_18_0 = 62;
+                  stackIn_18_1 = var2 - sa.field_h.maxAscent;
+                  stackIn_18_2 = 516;
+                  stackIn_18_3 = 16;
+                  if ((1 & var8) == 0) {
+                    stackIn_19_4 = 4475508;
+                  } else {
+                    stackIn_19_4 = 4146281;
+                  }
+                  SoftwareRasterizer.fillRectangle(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_19_4);
+                  var3Lifetime2 = 13421772;
+                  var9 = var5[var8];
+                  if (BallEvent.a((byte) 3, var9)) {
+                    var7 = 1;
+                    var3Lifetime2 = 16777215;
+                  }
+                  this.drawRankingRow(var8, var6[1 + 4 * var8], var6[var8 * 4 + 3], var6[2 + 4 * var8], var6[var8 * 4], 117, var3Lifetime2, var2, var9);
+                  var4 = null;
+                }
+                var2 += 16;
+              }
+              if ((var7 == 0)) {
+                var3Lifetime2Lifetime1 = 4;
+                this.drawRankingRow(-1, BallSkin.field_b.field_y, BallSkin.field_b.field_x, BallSkin.field_b.field_w, BallSkin.field_b.field_t, 100, 16777215, var2, ResourceArchive.field_j);
+              }
+              break regionExit1;
+            }
+            var4 = fh.serviceunavailable;
+          }
+        }
+        if (var4 != null) {
+          sa.field_h.drawCentered((String) (var4), SoftwareRasterizer.width >> 1, 245, 16777215, -1);
+        }
+        return;
+    }
+
+    private final void f(int param0) {
+        sa.field_h.drawCentered(ra.createtouse, param0, 380, 15658734, -1);
+    }
+
+    final static String a(int param0, int param1, byte[] param2, int param3) {
+        int var6 = 0;
+        int incrementValue$1 = 0;
+        char[] var4 = null;
+        RuntimeException var4_ref = null;
+        int var5 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        char[] var9 = null;
+        char[] var10 = null;
+        char[] var11 = null;
+        String stackIn_14_0 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var11 = new char[param0];
+          var10 = var11;
+          var9 = var10;
+          var4 = var9;
+          var5 = 0;
+          if (param1 != -7510) {
+            RankingsScreen.h(-13);
+          }
+          for (var6 = 0; var6 < param0; var6++) {
+            var7 = param2[param3 + var6] & 255;
+            if (var7 != 0) {
+              if (var7 >= 128 &&
+                var7 < 160) {
+                var8 = rf.field_a[-128 + var7];
+                if (var8 == 0) {
+                  var8 = 63;
+                }
+                var7 = var8;
+              }
+              incrementValue$1 = var5;
+              var5++;
+              var9[incrementValue$1] = (char)var7;
+            }
+          }
+          stackIn_14_0 = new String(var11, 0, var5);
+          return stackIn_14_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_17_0 = var4_ref;
+          stackIn_17_1 = new StringBuilder().append("tl.U(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final int getButtonLeft(int param0, int param1) {
+        if (!NanoTickClock.b(-117)) {
+          return 2 <= param1 ? 260 : param1 * 240 + 100;
+        }
+        if (param0 != 0) {
+          field_I = (int[]) null;
+        }
+        return param1 * 350 + 80;
+    }
+
+    final void onExit(byte param0) {
+        BallSkin.field_b = null;
+        if (param0 != -6) {
+          field_K = -93;
+        }
+    }
+
+    final int getButtonTop(byte param0, int param1) {
+        if (param0 != 6) {
+          this.drawScreen(120);
+        }
+        if (!NanoTickClock.b(-119)) {
+          if (param1 < 2) {
+            return this.buttonTop;
+          }
+          return 390;
+        }
+        return 390;
+    }
+
+    final static void d(int param0, boolean param1) {
+        fl.field_q.drawRoot((byte) -79, param1);
+        jj var2 = ThemeSelectScreen.field_J;
+        if (var2 != null) {
+          var2.renderWidgetPassesAndTooltip(fl.field_q.screenX, (byte) 74, fl.field_q.screenY);
+        }
+        if (param0 >= -74) {
+          field_I = (int[]) null;
+        }
+    }
+
+    static {
+        field_L = new int[]{2, 20, 21, 49, 5, 12, 13};
+        field_I = new int[16384];
+        friendlistdupe = "<%0> is already on your friend list.";
+        field_K = 236;
+    }
+}

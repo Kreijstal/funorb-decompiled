@@ -4,7 +4,7 @@
 abstract class BitmapFont extends DualLinkNode {
     private int[] field_A;
     private static StringBuilder field_z;
-    private bb[] inlineSprites;
+    private IndexedSpriteState[] inlineSprites;
     private int[] field_y;
     int maxAscent;
     private int[] field_x;
@@ -28,7 +28,7 @@ abstract class BitmapFont extends DualLinkNode {
     private static int currentAlpha;
 
     final int measureCharacterAdvance(char param0) {
-        return this.glyphAdvances[vi.a(param0, true) & 255];
+        return this.glyphAdvances[vi.encodeCp1252Char(param0, true) & 255];
     }
 
     final static String truncateText(BitmapFont param0, String param1, int param2) {
@@ -178,7 +178,7 @@ abstract class BitmapFont extends DualLinkNode {
 
     abstract void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7);
 
-    final void setInlineSprites(bb[] sprites, int[] baselines) {
+    final void setInlineSprites(IndexedSpriteState[] sprites, int[] baselines) {
         if (baselines != null &&
           baselines.length != sprites.length) {
           throw new IllegalArgumentException();
@@ -249,7 +249,7 @@ abstract class BitmapFont extends DualLinkNode {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
                                     var16_int = GameApplet.a((byte) 123, var18);
-                                    var4 = var4 + this.inlineSprites[var16_int].field_h;
+                                    var4 = var4 + this.inlineSprites[var16_int].fullWidth;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -333,7 +333,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_z.append((char) var14);
-                var14 = (char)(vi.a((char) var14, true) & 255);
+                var14 = (char)(vi.encodeCp1252Char((char) var14, true) & 255);
                 var4 = var4 + this.glyphAdvances[var14];
                 if (this.kerning != null &&
                   var10 != 0) {
@@ -452,7 +452,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(vi.a((char) var8, true) & 255);
+              var8 = (char)(vi.encodeCp1252Char((char) var8, true) & 255);
               var9 = this.field_H[var8];
               var10 = this.glyphAdvances[var8];
               var11 = this.field_A[var8];
@@ -533,7 +533,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
                                   var9_int = GameApplet.a((byte) 120, var10);
-                                  var4 = var4 + this.inlineSprites[var9_int].field_h;
+                                  var4 = var4 + this.inlineSprites[var9_int].fullWidth;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -569,7 +569,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(vi.a((char) var7, true) & 255);
+              var7 = (char)(vi.encodeCp1252Char((char) var7, true) & 255);
               var4 = var4 + this.glyphAdvances[var7];
               if (this.kerning != null &&
                 var3 != 0) {
@@ -596,7 +596,7 @@ abstract class BitmapFont extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        bb var11_ref_bb = null;
+        IndexedSpriteState var11_ref_bb = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -628,17 +628,17 @@ abstract class BitmapFont extends DualLinkNode {
                                   var10 = GameApplet.a((byte) 77, var13);
                                   var11_ref_bb = this.inlineSprites[var10];
                                   if (this.inlineSpriteBaselines == null) {
-                                    stackIn_27_0 = var11_ref_bb.field_b;
+                                    stackIn_27_0 = var11_ref_bb.fullHeight;
                                   } else {
                                     stackIn_27_0 = this.inlineSpriteBaselines[var10];
                                   }
                                   var12 = stackIn_27_0;
                                   if (currentAlpha != 256) {
-                                    var11_ref_bb.a(param1, param2 + this.baselineHeight - var12, currentAlpha);
+                                    var11_ref_bb.drawAlpha(param1, param2 + this.baselineHeight - var12, currentAlpha);
                                   } else {
-                                    var11_ref_bb.a(param1, param2 + this.baselineHeight - var12);
+                                    var11_ref_bb.draw(param1, param2 + this.baselineHeight - var12);
                                   }
-                                  param1 = param1 + var11_ref_bb.field_h;
+                                  param1 = param1 + var11_ref_bb.fullWidth;
                                   var5 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -674,7 +674,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(vi.a((char) var8, true) & 255);
+              var8 = (char)(vi.encodeCp1252Char((char) var8, true) & 255);
               if (this.kerning != null &&
                 var5 != 0) {
                 param1 = param1 + this.kerning[(var5 << 8) + var8];
@@ -696,9 +696,9 @@ abstract class BitmapFont extends DualLinkNode {
                   this.drawGlyphAlpha(var8, param1 + this.field_x[var8], param2 + this.field_y[var8], var9, var10, currentTextColor, currentAlpha, false);
                 } else {
                   if (currentShadowColor != -1) {
-                    this.b(var8, param1 + this.field_x[var8] + 1, param2 + this.field_y[var8] + 1, var9, var10, currentShadowColor, true);
+                    this.drawGlyph(var8, param1 + this.field_x[var8] + 1, param2 + this.field_y[var8] + 1, var9, var10, currentShadowColor, true);
                   }
-                  this.b(var8, param1 + this.field_x[var8], param2 + this.field_y[var8], var9, var10, currentTextColor, false);
+                  this.drawGlyph(var8, param1 + this.field_x[var8], param2 + this.field_y[var8], var9, var10, currentTextColor, false);
                 }
               }
               param1 = param1 + this.glyphAdvances[var8];
@@ -879,7 +879,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                currentShadowColor = el.a(16, var7, 30377);
+                                currentShadowColor = AchievementsScreen.a(16, var7, 30377);
                               }
                             } else {
                               underlineColor = -1;
@@ -889,7 +889,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          underlineColor = el.a(16, var6, 30377);
+                          underlineColor = AchievementsScreen.a(16, var6, 30377);
                         }
                       } else {
                         field_J = -1;
@@ -899,7 +899,7 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_J = el.a(16, var5, 30377);
+                    field_J = AchievementsScreen.a(16, var5, 30377);
                   }
                 } else {
                   currentAlpha = defaultAlpha;
@@ -913,7 +913,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            currentTextColor = el.a(16, var3, 30377);
+            currentTextColor = AchievementsScreen.a(16, var3, 30377);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1059,7 +1059,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var3.toString();
     }
 
-    abstract void b(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
+    abstract void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
     private final void resetStyle(int textColor, int shadow, int alpha) {
         field_J = -1;

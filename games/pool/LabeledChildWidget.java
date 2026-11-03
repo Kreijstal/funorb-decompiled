@@ -14,23 +14,23 @@ final class LabeledChildWidget extends SingleChildWidget {
     static long[][] field_N;
     static long[] field_Z;
     static String ratedGameTipsSetupPlural;
-    static vh field_R;
+    static UiComponent field_R;
     static String field_S;
 
     final static void a(int param0, String param1, int param2, boolean param3, int param4) {
-        lk var5 = null;
+        ChatMessageLine var5 = null;
         try {
           if (param0 != 8) {
             LabeledChildWidget.g((byte) 74);
           }
-          var5 = new lk();
-          var5.field_s = param2;
+          var5 = new ChatMessageLine();
+          var5.color = param2;
           var5.field_v = param3 ? true : false;
-          var5.field_x = param1;
+          var5.text = param1;
           var5.field_l = param4;
           MatchingTextValidator.field_r.b((byte) 116, var5);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "n.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "n.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -53,12 +53,12 @@ final class LabeledChildWidget extends SingleChildWidget {
         Throwable decompiledCaughtException = null;
         var1 = wn.field_a;
         synchronized (var1) {
-          if (ja.field_c == bl.field_s) {
+          if (ja.field_c == WireframeQuad.field_s) {
             return false;
           }
-          qi.field_a = ee.field_b[bl.field_s];
-          ml.field_b = ek.field_c[bl.field_s];
-          bl.field_s = param0 & bl.field_s + 1;
+          IterableDualLinkDeque.field_a = ee.field_b[WireframeQuad.field_s];
+          ml.field_b = ek.field_c[WireframeQuad.field_s];
+          WireframeQuad.field_s = param0 & WireframeQuad.field_s + 1;
           stackIn_6_0 = true;
         }
         return stackIn_6_0;
@@ -106,7 +106,7 @@ final class LabeledChildWidget extends SingleChildWidget {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class LabeledChildWidget extends SingleChildWidget {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -260,7 +260,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         field_Z[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = (-1 + var0) * 8;
-            field_Z[var0] = im.a(im.a(im.a(mj.a(16711680L, field_N[5][5 + var1]), im.a(im.a(im.a(im.a(mj.a(field_N[0][var1], -72057594037927936L), mj.a(field_N[1][1 + var1], 71776119061217280L)), mj.a(280375465082880L, field_N[2][var1 + 2])), mj.a(field_N[3][var1 + 3], 1095216660480L)), mj.a(4278190080L, field_N[4][4 + var1]))), mj.a(field_N[6][var1 + 6], 65280L)), mj.a(255L, field_N[7][var1 + 7]));
+            field_Z[var0] = LobbyPlayer.a(LobbyPlayer.a(LobbyPlayer.a(mj.a(16711680L, field_N[5][5 + var1]), LobbyPlayer.a(LobbyPlayer.a(LobbyPlayer.a(LobbyPlayer.a(mj.a(field_N[0][var1], -72057594037927936L), mj.a(field_N[1][1 + var1], 71776119061217280L)), mj.a(280375465082880L, field_N[2][var1 + 2])), mj.a(field_N[3][var1 + 3], 1095216660480L)), mj.a(4278190080L, field_N[4][4 + var1]))), mj.a(field_N[6][var1 + 6], 65280L)), mj.a(255L, field_N[7][var1 + 7]));
         }
     }
 }

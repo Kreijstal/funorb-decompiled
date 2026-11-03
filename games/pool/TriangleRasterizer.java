@@ -1703,7 +1703,7 @@ final class TriangleRasterizer {
         int var41Lifetime3;
         int var41Lifetime4;
         int var41Lifetime1Lifetime1;
-        var43 = textureProvider.a(true, param18, field_p);
+        var43 = textureProvider.getTexturePixels(true, param18, field_p);
         var42 = var43;
         var19 = var42;
         if (var19 != null &&
@@ -2300,7 +2300,7 @@ final class TriangleRasterizer {
         clipHeight = param3 - param1;
         TriangleRasterizer.c();
         if (scanlineOffsets.length < clipHeight) {
-          scanlineOffsets = new int[te.a(-17931, clipHeight)];
+          scanlineOffsets = new int[te.nextPowerOfTwo(-17931, clipHeight)];
         }
         int var4 = param1 * SoftwareRasterizer.width + param0;
         for (var5 = 0; var5 < clipHeight; var5++) {

@@ -3,7 +3,7 @@
  */
 abstract class ArchiveRequest extends DualLinkNode {
     static hj field_G;
-    static vh field_y;
+    static UiComponent field_y;
     static String playerNameTwoShots;
     static int field_z;
     static Sprite[] field_I;
@@ -18,16 +18,16 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     final static void g(int param0) {
         if (param0 > 92) {
-          lk.field_o = false;
-          rq.field_H = null;
+          ChatMessageLine.field_o = false;
+          MusicCrossfadeStream.field_H = null;
           NanoTickClock.field_n = null;
           MultiHandleSliderWidget.field_W = null;
           KeyHandler.field_a = null;
           return;
         }
-        ArchiveRequest.f(4);
-        lk.field_o = false;
-        rq.field_H = null;
+        ArchiveRequest.releaseStatics(4);
+        ChatMessageLine.field_o = false;
+        MusicCrossfadeStream.field_H = null;
         NanoTickClock.field_n = null;
         MultiHandleSliderWidget.field_W = null;
         KeyHandler.field_a = null;
@@ -35,7 +35,7 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     abstract byte[] getBytes(boolean param0);
 
-    public static void f(int param0) {
+    public static void releaseStatics(int param0) {
         field_G = null;
         field_y = null;
         field_E = null;
@@ -57,7 +57,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         entermultiplayerlobby = null;
     }
 
-    final static IndexedSprite[] a(di param0, String param1, int param2, String param3) {
+    final static IndexedSprite[] a(ResourceArchive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -72,10 +72,10 @@ abstract class ArchiveRequest extends DualLinkNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.b(param1, -1);
+          var4_int = param0.getGroupId(param1, -1);
           var5 = param0.a(var4_int, 0, param3);
           if (param2 == -24155) {
-            stackIn_4_0 = pn.a(var5, param0, var4_int, 120);
+            stackIn_4_0 = pn.loadIndexedSprites(var5, param0, var4_int, 120);
             return stackIn_4_0;
           }
           stackIn_2_0 = (IndexedSprite[]) null;
@@ -102,7 +102,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

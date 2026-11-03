@@ -13,14 +13,14 @@ final class CushionSegment {
     static Sprite field_h;
     int startX;
     int endY;
-    static vh field_c;
+    static UiComponent field_c;
 
     final static long d(byte param0) {
         if (param0 < 117) {
-          CushionSegment.c((byte) 7);
-          return rl.a((byte) -104) - ob.field_v;
+          CushionSegment.releaseStatics((byte) 7);
+          return rl.monotonicTimeMillis((byte) -104) - MenuScreen.field_v;
         }
-        return rl.a((byte) -104) - ob.field_v;
+        return rl.monotonicTimeMillis((byte) -104) - MenuScreen.field_v;
     }
 
     final static void b(byte param0) {
@@ -47,7 +47,7 @@ final class CushionSegment {
           PasswordValidator.field_t[2] = -1;
           PasswordValidator.field_t[1] = var3 / PasswordValidator.field_t[2] + 240;
           if (param0 < 75) {
-            field_c = (vh) null;
+            field_c = (UiComponent) null;
           }
           PasswordValidator.field_t[0] = var2 / PasswordValidator.field_t[2] + 320;
           if (!(0 < PasswordValidator.field_t[2])) {
@@ -81,7 +81,7 @@ final class CushionSegment {
         }
         PasswordValidator.field_t[1] = var3 / PasswordValidator.field_t[2] + 240;
         if (param0 < 75) {
-          field_c = (vh) null;
+          field_c = (UiComponent) null;
           PasswordValidator.field_t[0] = var2 / PasswordValidator.field_t[2] + 320;
           if (!(0 < PasswordValidator.field_t[2])) {
             return;
@@ -150,7 +150,7 @@ final class CushionSegment {
         return (this.endX + this.startX) / 2;
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 >= 28) {
           timer = null;
           field_c = null;

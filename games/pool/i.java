@@ -6,14 +6,14 @@ final class i extends IntrusiveNode {
     int field_q;
     int field_p;
     private static int field_u;
-    static vh field_l;
+    static UiComponent field_l;
     static Sprite field_o;
     int field_s;
     int field_r;
     static int field_m;
     int field_n;
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_l = null;
         if (param0 <= 33) {
           field_u = -21;
@@ -59,7 +59,7 @@ final class i extends IntrusiveNode {
         boolean stackIn_54_10 = false;
         int var2;
         TikiBallSkin.j(-8);
-        if (em.field_L == null) {
+        if (HighscoresScreen.field_L == null) {
           var2 = 0;
           stackIn_4_0 = var2;
           stackIn_4_1 = 14;
@@ -74,7 +74,7 @@ final class i extends IntrusiveNode {
           stackIn_9_10 = (MessageDialogContent.field_P <= 50) ? false : true;
           OpacityWidget.$cfr$intArgs$a$a4481b60e878(stackIn_4_0 != 0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_6_8, stackIn_8_9, stackIn_9_10, true);
         } else {
-          if (ProgressBarWidget.a(em.field_L.field_tc, em.field_L.field_mc, 2)) {
+          if (ProgressBarWidget.a(HighscoresScreen.field_L.settings, HighscoresScreen.field_L.field_mc, 2)) {
             var2 = 1;
             stackIn_49_0 = var2;
             stackIn_49_1 = 14;
@@ -104,13 +104,13 @@ final class i extends IntrusiveNode {
             OpacityWidget.$cfr$intArgs$a$a4481b60e878(stackIn_27_0 != 0, stackIn_27_1, stackIn_27_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_29_8, stackIn_31_9, stackIn_32_10, true);
           }
         }
-        if (em.field_N) {
-          ej.field_j.b(false, 64);
-          em.field_N = false;
+        if (HighscoresScreen.field_N) {
+          JaggrabDownloader.field_j.writeCipheredOpcode(false, 64);
+          HighscoresScreen.field_N = false;
         }
-        if (jo.field_H) {
-          ej.field_j.b(false, 10);
-          jo.field_H = false;
+        if (PauseMenuScreen.field_H) {
+          JaggrabDownloader.field_j.writeCipheredOpcode(false, 10);
+          PauseMenuScreen.field_H = false;
         }
         if (gn.field_f) {
           pn.a((byte) 75, tq.ratedMembersonly);

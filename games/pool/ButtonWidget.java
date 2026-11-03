@@ -44,7 +44,7 @@ class ButtonWidget extends UiWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -59,7 +59,7 @@ class ButtonWidget extends UiWidget {
     }
 
     final static void a(boolean param0, boolean param1, boolean param2, int param3, int param4) {
-        vh stackIn_20_0 = null;
+        UiComponent stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int stackIn_36_0 = 0;
         int stackIn_36_1 = 0;
@@ -71,21 +71,21 @@ class ButtonWidget extends UiWidget {
         int stackIn_83_0 = 0;
         boolean stackIn_131_0 = false;
         int stackIn_150_0 = 0;
-        vh stackIn_173_0 = null;
+        UiComponent stackIn_173_0 = null;
         boolean stackIn_174_1 = false;
-        vh stackIn_178_0 = null;
+        UiComponent stackIn_178_0 = null;
         boolean stackIn_179_1 = false;
-        vh stackIn_183_0 = null;
+        UiComponent stackIn_183_0 = null;
         boolean stackIn_184_1 = false;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_75_0;
         boolean stackOut_130_0;
-        vh var5 = null;
+        UiComponent var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        vh var6 = null;
-        vh var7 = null;
-        vh var8 = null;
+        UiComponent var6 = null;
+        UiComponent var7 = null;
+        UiComponent var8 = null;
         int var9 = 0;
         String var9_ref_String = null;
         String var10_ref_String = null;
@@ -104,7 +104,7 @@ class ButtonWidget extends UiWidget {
         IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
-        im var18_ref = null;
+        LobbyPlayer var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
@@ -118,33 +118,33 @@ class ButtonWidget extends UiWidget {
         var19 = Pool.field_O;
         try {
           fr.$cfr$intArgs$a$e9dea5688aa5(-58, nj.field_b);
-          if (null != em.field_L) {
-            ContentTransitionDialog.field_ob.field_pb = true;
-            kc.field_b.field_Db = 0;
+          if (null != HighscoresScreen.field_L) {
+            ContentTransitionDialog.field_ob.enabled = true;
+            kc.field_b.height = 0;
             var5 = kc.field_b;
-            var5.field_gb = 0;
-            d.field_c.field_Db = 0;
+            var5.width = 0;
+            d.field_c.height = 0;
             var6 = d.field_c;
-            var6.field_gb = 0;
-            TextHotspotRegion.field_o.field_Db = 0;
+            var6.width = 0;
+            TextHotspotRegion.field_o.height = 0;
             var7 = TextHotspotRegion.field_o;
-            var7.field_gb = 0;
+            var7.width = 0;
             if (TikiTableScene.e((byte) 85)) {
-              ii.field_e.field_nb = rf.yourGame.toUpperCase();
-              var9 = (2 + uq.field_f.field_gb) / 2;
-              kc.field_b.b(uq.field_f.field_Db - 40, 2147483647, 0, var9 - 2, 40);
-              if (em.field_L.field_mc < em.field_L.field_Nb) {
-                kc.field_b.field_nb = v.muInvitePlayers.toUpperCase();
-                kc.field_b.field_pb = true;
+              ii.field_e.text = rf.yourGame.toUpperCase();
+              var9 = (2 + Bzip2DecoderState.field_f.width) / 2;
+              kc.field_b.setBounds(Bzip2DecoderState.field_f.height - 40, 2147483647, 0, var9 - 2, 40);
+              if (HighscoresScreen.field_L.field_mc < HighscoresScreen.field_L.field_Nb) {
+                kc.field_b.text = LimitedRandomAccessFile.muInvitePlayers.toUpperCase();
+                kc.field_b.enabled = true;
                 if (var19 != 0) {
-                  kc.field_b.field_nb = ro.gameFull.toUpperCase();
-                  kc.field_b.field_pb = false;
+                  kc.field_b.text = ro.gameFull.toUpperCase();
+                  kc.field_b.enabled = false;
                 }
               } else {
-                kc.field_b.field_nb = ro.gameFull.toUpperCase();
-                kc.field_b.field_pb = false;
+                kc.field_b.text = ro.gameFull.toUpperCase();
+                kc.field_b.enabled = false;
               }
-              kc.field_b.field_F = mg.field_c.field_F;
+              kc.field_b.frameSprites = mg.field_c.frameSprites;
               if (PoolMatchController.field_jb > 0) {
                 boolean decompiledSharedTail1 = (PoolMatchController.field_jb != 1);
                 if (!decompiledSharedTail1) {
@@ -156,18 +156,18 @@ class ButtonWidget extends UiWidget {
                 }
                 if ((MultiHandleSliderWidget.field_V & 16) == 0 &&
                   !AccountWelcomePanel.field_bb) {
-                  kc.field_b.field_F = mg.field_c.field_Gb;
+                  kc.field_b.frameSprites = mg.field_c.activeFrameSprites;
                 }
-                kc.field_b.field_nb = kc.field_b.field_nb + "<br>" + var10_ref_String;
+                kc.field_b.text = kc.field_b.text + "<br>" + var10_ref_String;
               }
-              d.field_c.b(uq.field_f.field_Db - 40, 2147483647, var9, -var9 + uq.field_f.field_gb, 40);
-              d.field_c.field_nb = UsernameAvailabilityValidator.startgame.toUpperCase();
+              d.field_c.setBounds(Bzip2DecoderState.field_f.height - 40, 2147483647, var9, -var9 + Bzip2DecoderState.field_f.width, 40);
+              d.field_c.text = UsernameAvailabilityValidator.startgame.toUpperCase();
               var8 = d.field_c;
               stackIn_20_0 = d.field_c;
               stackIn_21_1 = (param0) && (StrongCacheEntry.field_K == 0L);
-              stackIn_20_0.field_pb = stackIn_21_1;
+              stackIn_20_0.enabled = stackIn_21_1;
               var10 = 2;
-              if (we.field_m != null) {
+              if (ArchiveLoadStep.field_m != null) {
                 if (null == dk.field_j) {
                   dk.field_j = new byte[dr.field_c];
                   gf.field_b = new boolean[dr.field_c];
@@ -191,9 +191,9 @@ class ButtonWidget extends UiWidget {
                     var12 = stackIn_67_0;
                     while (true) {
                       stackIn_36_0 = var12;
-                      stackIn_36_1 = we.field_m.length;
+                      stackIn_36_1 = ArchiveLoadStep.field_m.length;
                       if (stackIn_36_0 < stackIn_36_1) {
-                        var23 = we.field_m[var12];
+                        var23 = ArchiveLoadStep.field_m[var12];
                         var21 = var23;
                         var20 = var21;
                         var13_ref_int__ = var20;
@@ -206,16 +206,16 @@ class ButtonWidget extends UiWidget {
                             stackIn_53_0 = ~var15;
                             if (stackIn_53_0 == 0) {
                               if (0 == var10) {
-                                stackIn_45_0 = em.field_L.field_Nb;
+                                stackIn_45_0 = HighscoresScreen.field_L.field_Nb;
                               } else {
-                                stackIn_45_0 = em.field_L.field_mc;
+                                stackIn_45_0 = HighscoresScreen.field_L.field_mc;
                               }
                               var17_int = stackIn_45_0;
                               if (~var17_int != ~var16) {
                                 break scanLoop2;
                               }
                             } else {
-                              if (var16 != (em.field_L.field_tc[var15] & 255)) {
+                              if (var16 != (HighscoresScreen.field_L.settings[var15] & 255)) {
                                 break scanLoop2;
                               }
                             }
@@ -253,14 +253,14 @@ class ButtonWidget extends UiWidget {
                   break;
                 }
                 if (stackIn_67_0 <= -3 &&
-                  vj.field_c[12]) {
+                  TextLineLayout.field_c[12]) {
                   var10 = 2;
                 }
               }
               boolean decompiledFrameRemainder0 = true;
               if (var10 < 2) {
-                d.field_c.field_pb = false;
-                decompiledFrameRemainder0 = !(!d.field_c.field_db);
+                d.field_c.enabled = false;
+                decompiledFrameRemainder0 = !(!d.field_c.hovered);
                 if (decompiledFrameRemainder0) {
                   var11_ref = null;
                   var12 = 0;
@@ -289,7 +289,7 @@ class ButtonWidget extends UiWidget {
                     break;
                   }
                   if (stackIn_83_0 != ~var10) {
-                    var13_ref_String = aj.gameoptBadnumplayers;
+                    var13_ref_String = NameEntryPopup.gameoptBadnumplayers;
                     boolean decompiledSharedTail0 = (var12 == 0);
                     if (!decompiledSharedTail0) {
                       var14_ref_String = ab.gameoptInviteplayersOrTrychanging2 + (String) (var11_ref);
@@ -313,7 +313,7 @@ class ButtonWidget extends UiWidget {
                 }
               }
               if ((decompiledFrameRemainder0) && (!(var10 < 2) || var19 != 0) && (null != Pocket.field_j ||
-                null != ci.field_d ||
+                null != DebugTuningSlider.field_d ||
                 w.field_j != null ||
                 null != op.field_a)) {
                 var11 = 0;
@@ -324,16 +324,16 @@ class ButtonWidget extends UiWidget {
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (!(dr.field_c > var16)))) {
-                  var17_int = em.field_L.field_tc[var16] & 255;
+                  var17_int = HighscoresScreen.field_L.settings[var16] & 255;
                   if (var19 == 0) {
                     if (Pocket.field_j != null &&
                       null != Pocket.field_j[var16] &&
                       Pocket.field_j[var16][var17_int]) {
                       var11 = 1;
                     }
-                    if (ci.field_d != null &&
-                      null != ci.field_d[var16]) {
-                      var18_int = ci.field_d[var16][var17_int];
+                    if (DebugTuningSlider.field_d != null &&
+                      null != DebugTuningSlider.field_d[var16]) {
+                      var18_int = DebugTuningSlider.field_d[var16][var17_int];
                       if (var18_int > var13Lifetime1) {
                         var13Lifetime1 = var18_int;
                       }
@@ -365,12 +365,12 @@ class ButtonWidget extends UiWidget {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = DualLinkDeque.field_f.field_Rb.field_T;
-                var18_ref = (im) (var17.c((byte) 96));
+                var17 = DualLinkDeque.field_f.content.children;
+                var18_ref = (LobbyPlayer) (var17.c((byte) 96));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
                   if (var18_ref != null) {
-                    stackOut_130_0 = var18_ref.c(true);
+                    stackOut_130_0 = var18_ref.isUnindexed(true);
                     stackIn_150_0 = stackOut_130_0 ? 1 : 0;
                     stackIn_131_0 = stackOut_130_0;
                     if (var19 != 0) {
@@ -409,7 +409,7 @@ class ButtonWidget extends UiWidget {
                       }
                     }
                     if (decompiledFrameRemainder1) {
-                      var18_ref = (im) (var17.f((byte) -5));
+                      var18_ref = (LobbyPlayer) (var17.f((byte) -5));
                       continue;
                     }
                   }
@@ -417,78 +417,78 @@ class ButtonWidget extends UiWidget {
                   break;
                 }
                 if (stackIn_150_0 >= 2 &&
-                  vj.field_c[12]) {
+                  TextLineLayout.field_c[12]) {
                   var16 = 0;
                 }
                 if (var16 != 0) {
-                  d.field_c.field_pb = false;
-                  if (d.field_c.field_db) {
-                    if (na.field_e.field_i.field_Mb != 0) {
-                      CacheEntry.field_B = AccountWelcomePanel.substituteTemplateArguments(new String[]{mm.muChatGame}, -1, t.gameoptPlayersdontqualifySelectgametab);
+                  d.field_c.enabled = false;
+                  if (d.field_c.hovered) {
+                    if (na.field_e.field_i.selectedTab != 0) {
+                      CacheEntry.field_B = AccountWelcomePanel.substituteTemplateArguments(new String[]{Camera.muChatGame}, -1, t.gameoptPlayersdontqualifySelectgametab);
                       if (var19 != 0) {
-                        CacheEntry.field_B = fn.gameoptPlayersdontqualify;
+                        CacheEntry.field_B = QuickChatHelpDialog.gameoptPlayersdontqualify;
                       }
                     } else {
-                      CacheEntry.field_B = fn.gameoptPlayersdontqualify;
+                      CacheEntry.field_B = QuickChatHelpDialog.gameoptPlayersdontqualify;
                     }
                   }
                 }
               }
               if (var19 != 0) {
-                var9_ref_String = em.field_L.field_Ob;
-                ii.field_e.field_nb = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, th.xsGame).toUpperCase();
-                TextHotspotRegion.field_o.b(-40 + uq.field_f.field_Db, 2147483647, 0, uq.field_f.field_gb, 40);
-                TextHotspotRegion.field_o.field_nb = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, PasswordValidator.waitingForXToStartGame);
+                var9_ref_String = HighscoresScreen.field_L.field_Ob;
+                ii.field_e.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, th.xsGame).toUpperCase();
+                TextHotspotRegion.field_o.setBounds(-40 + Bzip2DecoderState.field_f.height, 2147483647, 0, Bzip2DecoderState.field_f.width, 40);
+                TextHotspotRegion.field_o.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, PasswordValidator.waitingForXToStartGame);
                 var8 = TextHotspotRegion.field_o;
               }
             } else {
-              var9_ref_String = em.field_L.field_Ob;
-              ii.field_e.field_nb = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, th.xsGame).toUpperCase();
-              TextHotspotRegion.field_o.b(-40 + uq.field_f.field_Db, 2147483647, 0, uq.field_f.field_gb, 40);
-              TextHotspotRegion.field_o.field_nb = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, PasswordValidator.waitingForXToStartGame);
+              var9_ref_String = HighscoresScreen.field_L.field_Ob;
+              ii.field_e.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, th.xsGame).toUpperCase();
+              TextHotspotRegion.field_o.setBounds(-40 + Bzip2DecoderState.field_f.height, 2147483647, 0, Bzip2DecoderState.field_f.width, 40);
+              TextHotspotRegion.field_o.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{var9_ref_String}, -1, PasswordValidator.waitingForXToStartGame);
               var8 = TextHotspotRegion.field_o;
             }
             if (StrongCacheEntry.field_K != 0L) {
-              var9 = (int)(-rl.a((byte) -94) + StrongCacheEntry.field_K);
+              var9 = (int)(-rl.monotonicTimeMillis((byte) -94) + StrongCacheEntry.field_K);
               var9 = (999 + var9) / 1000;
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_nb = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(var9)}, -1, bl.gameOptionsChanged);
+              var8.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(var9)}, -1, WireframeQuad.gameOptionsChanged);
             }
-            nd.field_c.field_nb = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(em.field_L.field_mc), Integer.toString(em.field_L.field_Nb)}, -1, qa.playersXOfY);
+            MarkerSliderPainter.field_c.text = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(HighscoresScreen.field_L.field_mc), Integer.toString(HighscoresScreen.field_L.field_Nb)}, -1, qa.playersXOfY);
           }
           stackIn_173_0 = so.field_k;
           stackIn_174_1 = (param2) && (!param1) && (!AccountWelcomePanel.field_bb);
-          ((vh) (Object) stackIn_173_0).a(stackIn_174_1, false);
-          stackIn_178_0 = uq.field_f;
+          ((UiComponent) (Object) stackIn_173_0).updateRoot(stackIn_174_1, false);
+          stackIn_178_0 = Bzip2DecoderState.field_f;
           stackIn_179_1 = (param2) && (!param1) && (!AccountWelcomePanel.field_bb);
-          ((vh) (Object) stackIn_178_0).a(stackIn_179_1, false);
+          ((UiComponent) (Object) stackIn_178_0).updateRoot(stackIn_179_1, false);
           var5_int = 92 / ((0 - param3) / 63);
           stackIn_183_0 = de.field_b;
           stackIn_184_1 = (param2) && (!param1) && (AccountWelcomePanel.field_bb);
-          ((vh) (Object) stackIn_183_0).a(stackIn_184_1, false);
-          na.field_e.field_i.c(true);
-          if (null != em.field_L) {
-            if (ContentTransitionDialog.field_ob.field_R != 0) {
-              AccountCreationForm.a(em.field_L.g(20872), true, param4);
+          ((UiComponent) (Object) stackIn_183_0).updateRoot(stackIn_184_1, false);
+          na.field_e.field_i.processTabPresses(true);
+          if (null != HighscoresScreen.field_L) {
+            if (ContentTransitionDialog.field_ob.pressedButton != 0) {
+              AccountCreationForm.a(HighscoresScreen.field_L.getGameId(20872), true, param4);
             }
-            if (kc.field_b.field_R != 0) {
+            if (kc.field_b.pressedButton != 0) {
               AccountWelcomePanel.field_bb = true;
             }
-            if (d.field_c.field_R != 0) {
-              em.field_N = true;
+            if (d.field_c.pressedButton != 0) {
+              HighscoresScreen.field_N = true;
             }
-            if (AccountContentDialog.field_vb.field_R != 0) {
+            if (AccountContentDialog.field_vb.pressedButton != 0) {
               AccountWelcomePanel.field_bb = false;
             }
-            tl.a(param4, em.field_L, 0, false);
+            RankingsScreen.a(param4, HighscoresScreen.field_L, 0, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var5_ref), "fe.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5_ref), "fe.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -515,7 +515,7 @@ class ButtonWidget extends UiWidget {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -561,7 +561,7 @@ class ButtonWidget extends UiWidget {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -594,7 +594,7 @@ class ButtonWidget extends UiWidget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -634,7 +634,7 @@ class ButtonWidget extends UiWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -655,7 +655,7 @@ class ButtonWidget extends UiWidget {
         boolean stackOut_7_0;
         var5 = Pool.field_O;
         try {
-          var3 = up.a(param0, param2, (byte) 117);
+          var3 = CachedArchiveSource.a(param0, param2, (byte) 117);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
@@ -663,7 +663,7 @@ class ButtonWidget extends UiWidget {
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param2.length() > var4)))) {
-            stackOut_7_0 = uc.a(param2.charAt(var4), (byte) -51);
+            stackOut_7_0 = uc.isNameCharacter(param2.charAt(var4), (byte) -51);
             stackIn_14_0 = stackOut_7_0 ? 1 : 0;
             stackIn_8_0 = stackOut_7_0;
             if (var5 == 0) {
@@ -695,7 +695,7 @@ class ButtonWidget extends UiWidget {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -743,11 +743,11 @@ class ButtonWidget extends UiWidget {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void f(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_L = null;
         if (param0 != 72) {
           field_J = false;
@@ -757,7 +757,7 @@ class ButtonWidget extends UiWidget {
     }
 
     ButtonWidget(String param0, WidgetListener param1) {
-        this(param0, db.field_Sb.field_l, param1);
+        this(param0, VerticalScrollbar.field_Sb.field_l, param1);
     }
 
     boolean requestKeyboardFocus(UiWidget param0, byte param1) {
@@ -790,7 +790,7 @@ class ButtonWidget extends UiWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -805,7 +805,7 @@ class ButtonWidget extends UiWidget {
         this.enabled = true;
         this.focusable = true;
         this.focused = false;
-        this.renderer = db.field_Sb.field_k;
+        this.renderer = VerticalScrollbar.field_Sb.field_k;
     }
 
     final void handlePointerRelease(int param0, int param1, int param2, int param3, byte param4, UiWidget param5) {
@@ -819,7 +819,7 @@ class ButtonWidget extends UiWidget {
           }
           this.pressedPointerButton = 0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "fe.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fe.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

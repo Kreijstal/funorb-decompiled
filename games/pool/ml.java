@@ -5,7 +5,7 @@ final class ml {
     static String muGamelistElapsedTime;
     static int field_d;
     static String[] mustloginAlternate;
-    static vh field_e;
+    static UiComponent field_e;
     static String wouldYouLikeToPlayOrPass;
     private String field_i;
     static int[] field_l;
@@ -45,18 +45,18 @@ final class ml {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(java.applet.Applet param0, boolean param1) {
+    final void saveLastLoginMethodCookie(java.applet.Applet param0, boolean param1) {
         try {
           if (!param1) {
             tutorialShow = (String) null;
           }
-          nn.a(31536000L, (byte) -120, param0, this.field_i, "jagex-last-login-method");
+          nn.setBrowserCookie(31536000L, (byte) -120, param0, this.field_i, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ml.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ml.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class ml {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ml.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ml.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class ml {
                     if (var15 <= 255) {
                       var18 = SoftwareRasterizer.pixels[var8];
                       var19 = 16711935 & var16 * (var18 & 16711935) + (var17 & 16711935) * var15 >> 8;
-                      SoftwareRasterizer.pixels[var8] = var19 + rb.b(65280, rb.b(var17, 65280) * var15 + var16 * rb.b(var18, 65280) >> 8);
+                      SoftwareRasterizer.pixels[var8] = var19 + ArchiveLoadSequence.b(65280, ArchiveLoadSequence.b(var17, 65280) * var15 + var16 * ArchiveLoadSequence.b(var18, 65280) >> 8);
                     } else {
                       SoftwareRasterizer.pixels[var8] = var17;
                     }
@@ -193,7 +193,7 @@ final class ml {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ final class ml {
         try {
           WidgetContainer.a(false, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

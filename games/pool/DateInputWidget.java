@@ -29,7 +29,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
         try {
           this.validator.dateInput = this;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "eq.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "eq.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -59,7 +59,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
 
     abstract boolean isDateIncomplete(byte param0);
 
-    public static void i(int param0) {
+    public static void releaseStatics(int param0) {
         field_V = null;
         offerdraw = null;
         tutorialNineBallAfterbreak = null;
@@ -76,37 +76,37 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
     }
 
     final static void i(byte param0) {
-        s.field_c = new ob[25];
-        ob discarded$0 = new ob(cl.field_m, 0, 180, 460, 160, 24, new int[]{39, 43, 0, 1, 5, 47, 4, 48, 22, 19});
-        be discarded$1 = new be(14, 180, 460, 160, 24, rq.field_B);
-        pa discarded$2 = new pa(DialogLayer.field_Q, 2, 180, 460, 160, 24, new int[]{50, 51, 8});
-        jo discarded$3 = new jo((Sprite) null, 3, 180, 460, 160, 24, ad.field_o);
-        jo discarded$4 = new jo((Sprite) null, 8, 180, 460, 160, 24, e.field_d);
-        jo discarded$5 = new jo((Sprite) null, 9, 180, 460, 160, 24, v.field_f);
-        jo discarded$6 = new jo((Sprite) null, 24, 180, 460, 160, 24, og.field_J);
-        jo discarded$7 = new jo((Sprite) null, 10, 180, 460, 160, 24, bl.field_r);
-        jo discarded$8 = new jo((Sprite) null, 11, 180, 460, 160, 24, tl.field_L);
-        jo discarded$9 = new jo((Sprite) null, 12, 180, 460, 160, 24, ob.field_m);
+        s.field_c = new MenuScreen[25];
+        MenuScreen discarded$0 = new MenuScreen(cl.field_m, 0, 180, 460, 160, 24, new int[]{39, 43, 0, 1, 5, 47, 4, 48, 22, 19});
+        OptionsScreen discarded$1 = new OptionsScreen(14, 180, 460, 160, 24, MusicCrossfadeStream.field_B);
+        TimeTrialSelectScreen discarded$2 = new TimeTrialSelectScreen(DialogLayer.field_Q, 2, 180, 460, 160, 24, new int[]{50, 51, 8});
+        PauseMenuScreen discarded$3 = new PauseMenuScreen((Sprite) null, 3, 180, 460, 160, 24, ArchiveIndex.field_o);
+        PauseMenuScreen discarded$4 = new PauseMenuScreen((Sprite) null, 8, 180, 460, 160, 24, e.field_d);
+        PauseMenuScreen discarded$5 = new PauseMenuScreen((Sprite) null, 9, 180, 460, 160, 24, LimitedRandomAccessFile.field_f);
+        PauseMenuScreen discarded$6 = new PauseMenuScreen((Sprite) null, 24, 180, 460, 160, 24, TutorialSelectScreen.field_J);
+        PauseMenuScreen discarded$7 = new PauseMenuScreen((Sprite) null, 10, 180, 460, 160, 24, WireframeQuad.field_r);
+        PauseMenuScreen discarded$8 = new PauseMenuScreen((Sprite) null, 11, 180, 460, 160, 24, RankingsScreen.field_L);
+        PauseMenuScreen discarded$9 = new PauseMenuScreen((Sprite) null, 12, 180, 460, 160, 24, MenuScreen.field_m);
         lb discarded$10 = new lb((Sprite) null, 23, 180, 460, 160, 24, new int[]{9, 3});
-        jo discarded$11 = new jo((Sprite) null, 22, 180, 460, 160, 24, new int[]{2, 21, 59, 60, 54, 55, 56, 57, 58});
-        em discarded$12 = new em(16, 180, 460, 410, 24, new int[]{23, 8});
-        tl discarded$13 = new tl(15, 180, 460, 410, 24, new int[]{23, 8});
-        b discarded$14 = new b(13, 70, 460, 400, 24, new int[]{25, 8, 26});
-        el discarded$15 = new el(17, 180, 460, 400, 24, new int[]{23, 8});
-        el discarded$16 = new el(18, 180, 460, 400, 24, new int[]{48, 8});
-        br discarded$17 = new br(19, 180, 460, 400, 24, new int[]{23, 24});
-        pj discarded$18 = new pj(20, 290, 460, 400, 24, new int[]{7});
+        PauseMenuScreen discarded$11 = new PauseMenuScreen((Sprite) null, 22, 180, 460, 160, 24, new int[]{2, 21, 59, 60, 54, 55, 56, 57, 58});
+        HighscoresScreen discarded$12 = new HighscoresScreen(16, 180, 460, 410, 24, new int[]{23, 8});
+        RankingsScreen discarded$13 = new RankingsScreen(15, 180, 460, 410, 24, new int[]{23, 8});
+        InstructionsScreen discarded$14 = new InstructionsScreen(13, 70, 460, 400, 24, new int[]{25, 8, 26});
+        AchievementsScreen discarded$15 = new AchievementsScreen(17, 180, 460, 400, 24, new int[]{23, 8});
+        AchievementsScreen discarded$16 = new AchievementsScreen(18, 180, 460, 400, 24, new int[]{48, 8});
+        LoginRequiredScreen discarded$17 = new LoginRequiredScreen(19, 180, 460, 400, 24, new int[]{23, 24});
+        MessageScreen discarded$18 = new MessageScreen(20, 290, 460, 400, 24, new int[]{7});
         int var1 = 37 % ((37 - param0) / 35);
-        hd discarded$19 = new hd(21, 180, 460, 160, 24, new int[]{});
-        cm discarded$20 = new cm(6, 180, 460, 160, 24, new int[]{28, 27, 64, 63, 45, 44, 46, 8, 65});
-        sg discarded$21 = new sg(7, 180, 460, 160, 24, new int[]{29, 30, 31, 32, 33, 8});
-        og discarded$22 = new og(df.field_i, 1, 180, 460, 160, 24, new int[]{40, 41, 42, 8});
+        MembershipBenefitsScreen discarded$19 = new MembershipBenefitsScreen(21, 180, 460, 160, 24, new int[]{});
+        LocalGameSetupScreen discarded$20 = new LocalGameSetupScreen(6, 180, 460, 160, 24, new int[]{28, 27, 64, 63, 45, 44, 46, 8, 65});
+        ThemeSelectScreen discarded$21 = new ThemeSelectScreen(7, 180, 460, 160, 24, new int[]{29, 30, 31, 32, 33, 8});
+        TutorialSelectScreen discarded$22 = new TutorialSelectScreen(AimTarget.field_i, 1, 180, 460, 160, 24, new int[]{40, 41, 42, 8});
         Ball.field_H = FreePlayRules.field_e.b(TranslatedUiText.field_f[20]) + 10;
         var1 = 10 + FreePlayRules.field_e.b(TranslatedUiText.field_f[21]);
         if (!(Ball.field_H >= var1)) {
           Ball.field_H = var1;
         }
-        jo.f((byte) -104);
+        PauseMenuScreen.applyScreenLayouts((byte) -104);
     }
 
     final static String a(java.applet.Applet param0, byte param1) {
@@ -132,7 +132,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
                 field_U = 74;
               }
               var3 = var8 + "settings";
-              var4 = (String) (mo.a((byte) 124, "getcookies", param0));
+              var4 = (String) (JavaScriptBridge.callWindowFunction((byte) 124, "getcookies", param0));
               var5 = jc.splitString(30634, var4, ';');
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -161,7 +161,7 @@ abstract class DateInputWidget extends WidgetContainer implements ValidationProv
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

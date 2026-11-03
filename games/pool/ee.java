@@ -4,17 +4,17 @@
 import java.io.*;
 
 final class ee {
-    private di field_e;
+    private ResourceArchive field_e;
     static String playerListAreOfferingRematch;
-    private di field_c;
+    private ResourceArchive field_c;
     static int[] field_b;
     private WeightedLruCache field_d;
 
-    final static void a(int param0, int param1) {
+    final static void setFrameRate(int param0, int param1) {
         if (param1 > -37) {
           playerListAreOfferingRematch = (String) null;
         }
-        oh.field_e = 1000000000L / (long)param0;
+        GzipDecoder.field_e = 1000000000L / (long)param0;
     }
 
     public static void a(byte param0) {
@@ -25,7 +25,7 @@ final class ee {
         field_b = null;
     }
 
-    final static String a(int param0, Throwable param1) throws IOException {
+    final static String formatThrowable(int param0, Throwable param1) throws IOException {
         String var2;
         PrintWriter var4;
         String var5;
@@ -154,7 +154,7 @@ final class ee {
           }
           if (param0.field_m != 0 ||
             param0.field_e != 0) {
-            for (var2_int = 0; var2_int < aa.field_e; var2_int++) {
+            for (var2_int = 0; var2_int < IntrusiveDequeCursor.field_e; var2_int++) {
               var3 = wb.field_e[var2_int];
               if (var3.field_p == 2 &&
                 param0.field_m == var3.field_m &&
@@ -166,7 +166,7 @@ final class ee {
           if (param0.field_d != null) {
             hp.field_a = param0.field_b;
             ro.field_s = param0.field_q;
-            rn.field_g = param0.field_d;
+            DiskCacheWorker.field_g = param0.field_d;
             hg.field_a = param0.field_p;
           }
           ClientException.a(-114, param0);
@@ -181,7 +181,7 @@ final class ee {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -190,22 +190,22 @@ final class ee {
         int stackIn_9_0 = 0;
         int[] stackIn_25_0 = null;
         Throwable decompiledCaughtException = null;
-        oq var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        oq var8 = null;
-        ap var9 = null;
+        CipherPacketBuffer var8 = null;
+        QuickChatPhraseDefinition var9 = null;
         var7 = Pool.field_O;
-        var8 = kn.field_e;
+        var8 = PlayerContextMenu.field_e;
         var2 = var8;
         var3 = var8.readUnsignedByte(-111);
         stackIn_3_0 = ((var3 & 128) != 0);
         qg.field_d = stackIn_3_0;
         um.field_d = var3 & 127;
-        df.field_e = var8.readUnsignedByte(-105);
+        AimTarget.field_e = var8.readUnsignedByte(-105);
         qg.field_c = var8.readLong(-412303328);
         if (2 != um.field_d) {
           m.field_e = 0;
@@ -221,9 +221,9 @@ final class ee {
           ee.b((byte) -81);
         }
         if (var4 == 0) {
-          lh.field_f = LabeledChildWidget.field_S;
+          ArchiveProvider.field_f = LabeledChildWidget.field_S;
         } else {
-          lh.field_f = var8.j(param0 ^ 82);
+          ArchiveProvider.field_f = var8.j(param0 ^ 82);
         }
         if (um.field_d == 1) {
           pp.field_b = var8.readUnsignedShort(-1034);
@@ -240,33 +240,33 @@ final class ee {
         if (param1) {
           var5 = var8.readUnsignedShort(-1034);
           try {
-            var9 = o.field_x.a(127, var5);
-            np.field_a = var9.e(param0 ^ -31);
-            if (lh.field_f.equals(di.field_j)) {
+            var9 = UiComponentNode.field_x.getDefinition(127, var5);
+            SectorCacheStore.field_a = var9.e(param0 ^ -31);
+            if (ArchiveProvider.field_f.equals(ResourceArchive.field_j)) {
               stackIn_25_0 = null;
             } else {
               stackIn_25_0 = var9.field_C;
             }
-            ci.field_p = stackIn_25_0;
+            DebugTuningSlider.field_p = stackIn_25_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            tc.a((Throwable) ((Object) var6), "CC1", param0 ^ 8564);
-            np.field_a = null;
-            ci.field_p = null;
+            GrowableIntList.reportClientError((Throwable) ((Object) var6), "CC1", param0 ^ 8564);
+            SectorCacheStore.field_a = null;
+            DebugTuningSlider.field_p = null;
           }
         } else {
-          np.field_a = s.a(var8, 80, true);
-          ci.field_p = null;
+          SectorCacheStore.field_a = s.a(var8, 80, true);
+          DebugTuningSlider.field_p = null;
         }
         return new pn(param1);
     }
 
-    final sf a(byte param0, int param1) {
+    final QuickChatCategoryDefinition a(byte param0, int param1) {
         byte[] var4 = null;
-        sf var3 = (sf) (this.field_d.get((long)param1, true));
+        QuickChatCategoryDefinition var3 = (QuickChatCategoryDefinition) (this.field_d.get((long)param1, true));
         if (param0 != -55) {
-          return (sf) null;
+          return (QuickChatCategoryDefinition) null;
         }
         if (var3 != null) {
           return var3;
@@ -276,18 +276,18 @@ final class ee {
         } else {
           var4 = this.field_e.a(112, param1 & 32767, 0);
         }
-        var3 = new sf();
+        var3 = new QuickChatCategoryDefinition();
         if (var4 != null) {
-          var3.a((byte) -123, new PacketBuffer(var4));
+          var3.decode((byte) -123, new PacketBuffer(var4));
         }
         if (32768 <= param1) {
-          var3.f(0);
+          var3.markExtendedLinks(0);
         }
         this.field_d.put(121, var3, (long)param1);
         return var3;
     }
 
-    ee(int param0, di param1, di param2) {
+    ee(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -322,7 +322,7 @@ final class ee {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -337,22 +337,22 @@ final class ee {
         int stackIn_9_0 = 0;
         int[] stackIn_25_0 = null;
         Throwable decompiledCaughtException = null;
-        oq var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        oq var8 = null;
-        ap var9 = null;
+        CipherPacketBuffer var8 = null;
+        QuickChatPhraseDefinition var9 = null;
         var7 = Pool.field_O;
-        var8 = kn.field_e;
+        var8 = PlayerContextMenu.field_e;
         var2 = var8;
         var3 = var8.readUnsignedByte(-111);
         stackIn_3_0 = ((var3 & 128) != 0);
         qg.field_d = stackIn_3_0;
         um.field_d = var3 & 127;
-        df.field_e = var8.readUnsignedByte(-105);
+        AimTarget.field_e = var8.readUnsignedByte(-105);
         qg.field_c = var8.readLong(-412303328);
         if (2 != um.field_d) {
           m.field_e = 0;
@@ -368,9 +368,9 @@ final class ee {
           ee.b((byte) -81);
         }
         if (var4 == 0) {
-          lh.field_f = LabeledChildWidget.field_S;
+          ArchiveProvider.field_f = LabeledChildWidget.field_S;
         } else {
-          lh.field_f = var8.j(param0 ^ 82);
+          ArchiveProvider.field_f = var8.j(param0 ^ 82);
         }
         if (um.field_d == 1) {
           pp.field_b = var8.readUnsignedShort(-1034);
@@ -387,24 +387,24 @@ final class ee {
         if (param1) {
           var5 = var8.readUnsignedShort(-1034);
           try {
-            var9 = o.field_x.a(127, var5);
-            np.field_a = var9.e(param0 ^ -31);
-            if (lh.field_f.equals(di.field_j)) {
+            var9 = UiComponentNode.field_x.getDefinition(127, var5);
+            SectorCacheStore.field_a = var9.e(param0 ^ -31);
+            if (ArchiveProvider.field_f.equals(ResourceArchive.field_j)) {
               stackIn_25_0 = null;
             } else {
               stackIn_25_0 = var9.field_C;
             }
-            ci.field_p = stackIn_25_0;
+            DebugTuningSlider.field_p = stackIn_25_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            tc.a((Throwable) ((Object) var6), "CC1", param0 ^ 8564);
-            np.field_a = null;
-            ci.field_p = null;
+            GrowableIntList.reportClientError((Throwable) ((Object) var6), "CC1", param0 ^ 8564);
+            SectorCacheStore.field_a = null;
+            DebugTuningSlider.field_p = null;
           }
         } else {
-          np.field_a = s.a(var8, 80, true);
-          ci.field_p = null;
+          SectorCacheStore.field_a = s.a(var8, 80, true);
+          DebugTuningSlider.field_p = null;
         }
         return new pn(param1);
     }

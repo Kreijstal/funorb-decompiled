@@ -21,7 +21,7 @@ final class PolarTableScene extends ModelTableScene {
     private PcmSample field_jb;
     private PcmSample field_kb;
     PcmSample field_bb;
-    static di field_nb;
+    static ResourceArchive field_nb;
     private PcmSample field_S;
     PcmSample field_Y;
     private PcmSample field_db;
@@ -37,14 +37,14 @@ final class PolarTableScene extends ModelTableScene {
         int var4 = Pool.field_O;
         try {
           super.a(param0, param1);
-          ci.field_f = ci.field_f + 1;
+          DebugTuningSlider.field_f = DebugTuningSlider.field_f + 1;
           for (var3_int = 0; var3_int < this.field_U.length; var3_int++) {
             this.field_U[var3_int].a(this, 10);
           }
           this.a(24, 50, (byte) -121, new PcmSample[]{this.field_V, this.field_W, this.field_T, this.field_db, this.field_fb}, Pool.field_N);
-          this.a(24, 50, (byte) 125, new PcmSample[]{this.field_eb, this.field_Z, this.field_kb}, ca.field_g);
+          this.a(24, 50, (byte) 125, new PcmSample[]{this.field_eb, this.field_Z, this.field_kb}, TextPairLoginPayload.field_g);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vf.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vf.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -110,7 +110,7 @@ final class PolarTableScene extends ModelTableScene {
         var9 = Pool.field_O;
         try {
           var4 = param1.field_I.balls;
-          var37 = f.a((byte) 53, param1.field_ab);
+          var37 = f.a((byte) 53, param1.viewMatrix);
           var14 = var37;
           var5 = var14;
           var36 = var5;
@@ -121,36 +121,36 @@ final class PolarTableScene extends ModelTableScene {
             var10 = (PoolGameModel) null;
             this.a((PoolGameModel) null, 25);
           }
-          oh.field_d[0] = var36[0] - sb.a(288.0f, true) >> 2;
-          oh.field_d[1] = var36[1] - sb.a(144.0f, true) >> 2;
-          oh.field_d[2] = var36[2] >> 2;
-          if (var6_ref_int__ != oh.field_d) {
-            oh.field_d[6] = var36[6];
-            oh.field_d[3] = var36[3];
-            oh.field_d[7] = var36[7];
-            oh.field_d[8] = var36[8];
-            oh.field_d[5] = var36[5];
-            oh.field_d[11] = var36[11];
-            oh.field_d[4] = var36[4];
-            oh.field_d[9] = var36[9];
-            oh.field_d[10] = var36[10];
+          GzipDecoder.field_d[0] = var36[0] - sb.a(288.0f, true) >> 2;
+          GzipDecoder.field_d[1] = var36[1] - sb.a(144.0f, true) >> 2;
+          GzipDecoder.field_d[2] = var36[2] >> 2;
+          if (var6_ref_int__ != GzipDecoder.field_d) {
+            GzipDecoder.field_d[6] = var36[6];
+            GzipDecoder.field_d[3] = var36[3];
+            GzipDecoder.field_d[7] = var36[7];
+            GzipDecoder.field_d[8] = var36[8];
+            GzipDecoder.field_d[5] = var36[5];
+            GzipDecoder.field_d[11] = var36[11];
+            GzipDecoder.field_d[4] = var36[4];
+            GzipDecoder.field_d[9] = var36[9];
+            GzipDecoder.field_d[10] = var36[10];
           }
-          var5[2] = rb.b(var37[2], -4);
-          var5[1] = rb.b(var37[1], -4);
-          var5[0] = rb.b(var37[0], -4);
+          var5[2] = ArchiveLoadSequence.b(var37[2], -4);
+          var5[1] = ArchiveLoadSequence.b(var37[1], -4);
+          var5[0] = ArchiveLoadSequence.b(var37[0], -4);
           hn.fillScreenWhite(-3143);
           this.a(true, param1);
           this.a();
-          this.a(oh.field_d, param1.field_eb.b(param0 - 72));
+          this.a(GzipDecoder.field_d, param1.camera.b(param0 - 72));
           this.a(false, var37, var4);
-          if ((pd.field_i & 1073741824L) == 0L) {
+          if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
             this.a(var37, (byte) 122, false, var4, false);
           }
           var15 = EmailAvailabilityValidator.field_y;
-          var61 = oh.field_d;
+          var61 = GzipDecoder.field_d;
           var15.b((byte) 111, 0, var15.field_j.length, var61);
           var17 = gf.field_e;
-          var62 = oh.field_d;
+          var62 = GzipDecoder.field_d;
           var17.b((byte) -122, 0, var17.field_j.length, var62);
           for (var3_int = 0; bc.field_j.length > var3_int; var3_int++) {
             var40 = gf.field_e.field_c[var3_int];
@@ -161,7 +161,7 @@ final class PolarTableScene extends ModelTableScene {
             var8 = 288;
             stackIn_13_0 = bc.field_j;
             stackIn_13_1 = var3_int;
-            stackIn_13_2 = -oh.field_d[0] + var40[0];
+            stackIn_13_2 = -GzipDecoder.field_d[0] + var40[0];
             if (var40[0] >= -var7) {
               if (var7 < var40[0]) {
                 stackIn_16_3 = -1;
@@ -172,7 +172,7 @@ final class PolarTableScene extends ModelTableScene {
               stackIn_16_3 = 1;
             }
             stackIn_18_2 = stackIn_13_2 * stackIn_16_3;
-            stackIn_18_3 = -oh.field_d[1] + var40[1];
+            stackIn_18_3 = -GzipDecoder.field_d[1] + var40[1];
             if (var40[1] >= -var8) {
               if (var40[1] > var8) {
                 stackIn_21_4 = -1;
@@ -186,21 +186,21 @@ final class PolarTableScene extends ModelTableScene {
             stackIn_13_0[stackIn_13_1] = stackIn_24_2;
           }
           var20 = sa.field_s;
-          var63 = oh.field_d;
+          var63 = GzipDecoder.field_d;
           var20.b((byte) 104, 0, var20.field_j.length, var63);
           var22 = FadingDialog.field_U;
-          var64 = oh.field_d;
+          var64 = GzipDecoder.field_d;
           var22.b((byte) 119, 0, var22.field_j.length, var64);
           var24 = EmailAvailabilityValidator.field_y;
-          var65 = oh.field_d;
+          var65 = GzipDecoder.field_d;
           var24.a((byte) -65, 0, var24.field_j.length, var65);
           var26 = FadingDialog.field_U;
-          var66 = oh.field_d;
+          var66 = GzipDecoder.field_d;
           var26.a((byte) -96, 0, var26.field_j.length, var66);
           var28 = sa.field_s;
-          var67 = oh.field_d;
+          var67 = GzipDecoder.field_d;
           var28.a((byte) -113, 0, var28.field_j.length, var67);
-          if ((pd.field_i & 1073741824L) == 0L) {
+          if ((LinkButtonPainter.field_i & 1073741824L) == 0L) {
             for (var6 = 0; var6 < var4.length; var6++) {
               if (var4[var6].inPlay) {
                 this.a(var37, var4[var6]);
@@ -208,10 +208,10 @@ final class PolarTableScene extends ModelTableScene {
             }
           }
           var30 = gf.field_e;
-          var68 = oh.field_d;
+          var68 = GzipDecoder.field_d;
           var69 = bc.field_j;
           var30.a(false, 0, var30.field_j.length, (byte) 100, var68, var69);
-          if (0L == (1073741824L & pd.field_i)) {
+          if (0L == (1073741824L & LinkButtonPainter.field_i)) {
             stackIn_37_0 = this;
             stackIn_37_1 = var5;
             stackIn_37_2 = 112;
@@ -227,16 +227,16 @@ final class PolarTableScene extends ModelTableScene {
             this.a(stackIn_37_1, (byte) stackIn_37_2, stackIn_37_3, stackIn_37_4, stackIn_38_5);
           }
           var33 = gf.field_e;
-          var70 = oh.field_d;
+          var70 = GzipDecoder.field_d;
           var71 = bc.field_j;
           var33.a(true, 0, var33.field_j.length, (byte) 117, var70, var71);
-          if ((pd.field_i & 256L) != 0L) {
-            FadingDialog.field_U.a(oh.field_d, 0);
-            gf.field_e.a(oh.field_d, 0);
+          if ((LinkButtonPainter.field_i & 256L) != 0L) {
+            FadingDialog.field_U.a(GzipDecoder.field_d, 0);
+            gf.field_e.a(GzipDecoder.field_d, 0);
           }
-          if ((1073741824L & pd.field_i) == 0L) {
-            param1.q(-1);
-            param1.D(-128);
+          if ((1073741824L & LinkButtonPainter.field_i) == 0L) {
+            param1.updateCueStick(-1);
+            param1.buildAimPreviewTrail(-128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -249,7 +249,7 @@ final class PolarTableScene extends ModelTableScene {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 
@@ -280,33 +280,33 @@ final class PolarTableScene extends ModelTableScene {
         so var13;
         so var14;
         int var20;
-        eg var22;
-        eg var23;
-        eg var24;
+        MeshBuilder var22;
+        MeshBuilder var23;
+        MeshBuilder var24;
         so var25;
-        eg var26;
+        MeshBuilder var26;
         so var27;
-        eg var28;
+        MeshBuilder var28;
         so var29;
         IntrusiveDeque var33;
         int stackIn_15_0 = 0;
-        eg stackIn_15_1 = null;
+        MeshBuilder stackIn_15_1 = null;
         int stackIn_15_2 = 0;
         boolean stackIn_16_3;
         so[] stackIn_34_0 = null;
         boolean stackIn_35_1 = false;
         int var15;
-        eg var15_ref_eg;
+        MeshBuilder var15_ref_eg;
         int var16;
         so[] var17;
         int var18;
         int var19;
         PoolMatchController var21;
         so var30;
-        eg var31;
+        MeshBuilder var31;
         so var32;
         so[] var34;
-        eg var36;
+        MeshBuilder var36;
         so[] var37;
         so[] var39;
         int[] var47;
@@ -334,7 +334,7 @@ final class PolarTableScene extends ModelTableScene {
         var6 = new so();
         var7 = new so();
         var8 = new so();
-        var9 = new so(hj.field_a - vq.field_Ob);
+        var9 = new so(hj.field_a - ContextMenu.field_Ob);
         so dupTemp$489 = new so(co.field_db - kg.field_n);
         var10 = dupTemp$489;
         so dupTemp$490 = new so((ol.field_d - DialWidget.field_S) * 4);
@@ -343,7 +343,7 @@ final class PolarTableScene extends ModelTableScene {
         gf.field_e = dupTemp$491;
         so dupTemp$492 = new so(co.field_db - kg.field_n);
         var12 = dupTemp$492;
-        so dupTemp$493 = new so(4 * (mb.field_e - tg.field_g) + (hf.field_c - rl.field_f) * 2);
+        so dupTemp$493 = new so(4 * (ByteStorage.field_e - tg.field_g) + (hf.field_c - rl.field_f) * 2);
         var13 = dupTemp$493;
         so dupTemp$494 = new so(new so[]{dupTemp$492, var7, dupTemp$493});
         FadingDialog.field_U = dupTemp$494;
@@ -353,17 +353,17 @@ final class PolarTableScene extends ModelTableScene {
         EmailAvailabilityValidator.field_y = dupTemp$496;
         var14 = new so(new so[]{dupTemp$491, dupTemp$494, dupTemp$495, dupTemp$496});
         for (var2Lifetime1 = kg.field_n; co.field_db > var2Lifetime1; var2Lifetime1++) {
-          if (ec.field_f < this.field_O[var2Lifetime1].field_x + this.field_M[var2Lifetime1][2]) {
-            ec.field_f = this.field_M[var2Lifetime1][2] + this.field_O[var2Lifetime1].field_x;
+          if (BallDebugOverlay.field_f < this.field_O[var2Lifetime1].field_x + this.field_M[var2Lifetime1][2]) {
+            BallDebugOverlay.field_f = this.field_M[var2Lifetime1][2] + this.field_O[var2Lifetime1].field_x;
           }
           var23 = TutorialController.b((byte) 122);
           var22 = TutorialController.b((byte) 121);
-          ej.a(0, var23, 0, false, -this.field_M[var2Lifetime1][2], 0, 0, 1, var22, this.field_O[var2Lifetime1]);
+          JaggrabDownloader.a(0, var23, 0, false, -this.field_M[var2Lifetime1][2], 0, 0, 1, var22, this.field_O[var2Lifetime1]);
           var12.field_b[var2Lifetime1 - kg.field_n] = hc.a(var22, this.field_M[var2Lifetime1], (byte) 101);
           var10.field_b[-kg.field_n + var2Lifetime1] = hc.a(var23, this.field_M[var2Lifetime1], (byte) 101);
         }
-        for (var2Lifetime2 = vq.field_Ob; hj.field_a > var2Lifetime2; var2Lifetime2++) {
-          var9.field_b[-vq.field_Ob + var2Lifetime2] = hc.a(this.field_O[var2Lifetime2], this.field_M[var2Lifetime2], (byte) 101);
+        for (var2Lifetime2 = ContextMenu.field_Ob; hj.field_a > var2Lifetime2; var2Lifetime2++) {
+          var9.field_b[-ContextMenu.field_Ob + var2Lifetime2] = hc.a(this.field_O[var2Lifetime2], this.field_M[var2Lifetime2], (byte) 101);
         }
         for (var2Lifetime3 = FullscreenErrorDialog.field_hb; ClassicBallSkin.field_m > var2Lifetime3; var2Lifetime3++) {
           var24 = this.field_O[var2Lifetime3];
@@ -382,7 +382,7 @@ final class PolarTableScene extends ModelTableScene {
               stackIn_15_1 = var28;
               stackIn_15_2 = 0;
               stackIn_16_3 = !(param0);
-              ej.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, -this.field_M[var2Lifetime3][2], 0, 0, 1, var26, var24);
+              JaggrabDownloader.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, -this.field_M[var2Lifetime3][2], 0, 0, 1, var26, var24);
               dupTemp$498 = hc.a(var26, this.field_M[var2Lifetime3], (byte) 101);
               var27 = dupTemp$498;
               var4.b((byte) -51, new pm(dupTemp$498));
@@ -424,7 +424,7 @@ final class PolarTableScene extends ModelTableScene {
           var15 += 4;
         }
         var15Lifetime1 = 0;
-        for (var2Lifetime5 = tg.field_g; mb.field_e > var2Lifetime5; var2Lifetime5++) {
+        for (var2Lifetime5 = tg.field_g; ByteStorage.field_e > var2Lifetime5; var2Lifetime5++) {
           var16 = var2Lifetime5;
           var37 = var13.field_b;
           var18 = var15Lifetime1;
@@ -436,7 +436,7 @@ final class PolarTableScene extends ModelTableScene {
           var16Lifetime1 = var2Lifetime6;
           var39 = var13.field_b;
           var18Lifetime1 = var15Lifetime1;
-          be.a(var18Lifetime1, this.field_M[var16Lifetime1][1], this.field_M[var16Lifetime1][2], 1, var39, this.field_M[var16Lifetime1][0], this.field_O[var16Lifetime1]);
+          OptionsScreen.a(var18Lifetime1, this.field_M[var16Lifetime1][1], this.field_M[var16Lifetime1][2], 1, var39, this.field_M[var16Lifetime1][0], this.field_O[var16Lifetime1]);
           var15Lifetime1 += 2;
         }
         var15Lifetime2 = 0;
@@ -507,12 +507,12 @@ final class PolarTableScene extends ModelTableScene {
           var14 = param0[11] + (param0[5] * (SoftwareRasterizer.clipLeft - 320) + param0[8] * var5 >> 9) >> 1;
           var15 = var12 * var12 + var13 * var13 + var14 * var14 >> 16;
           if (var15 > 0) {
-            var15 = rf.a(var15, -128);
-            var12 = lh.a(var15, (byte) -80, (long)var12);
-            var13 = lh.a(var15, (byte) -100, (long)var13);
-            var14 = lh.a(var15, (byte) -92, (long)var14);
+            var15 = rf.inverseSquareRoot(var15, -128);
+            var12 = ArchiveProvider.divideFixed16(var15, (byte) -80, (long)var12);
+            var13 = ArchiveProvider.divideFixed16(var15, (byte) -100, (long)var13);
+            var14 = ArchiveProvider.divideFixed16(var15, (byte) -92, (long)var14);
             if (var14 != 0) {
-              var16 = lh.a(var14, (byte) -90, (long)(ec.field_f - param0[2]));
+              var16 = ArchiveProvider.divideFixed16(var14, (byte) -90, (long)(BallDebugOverlay.field_f - param0[2]));
               var8 = param0[0] + (var16 * var12 >> 16) >> 3;
               var10 = param0[1] + (var16 * var13 >> 16) >> 3;
               var12 = param0[9] + (param0[3] * (SoftwareRasterizer.clipRight - 320) + param0[6] * var5 >> 9) >> 1;
@@ -520,12 +520,12 @@ final class PolarTableScene extends ModelTableScene {
               var14 = param0[11] + (param0[5] * (SoftwareRasterizer.clipRight - 320) + param0[8] * var5 >> 9) >> 1;
               var15 = var12 * var12 + var13 * var13 + var14 * var14 >> 16;
               if (var15 > 0) {
-                var15 = rf.a(var15, -121);
-                var12 = lh.a(var15, (byte) -67, (long)var12);
-                var13 = lh.a(var15, (byte) -120, (long)var13);
-                var14 = lh.a(var15, (byte) -119, (long)var14);
+                var15 = rf.inverseSquareRoot(var15, -121);
+                var12 = ArchiveProvider.divideFixed16(var15, (byte) -67, (long)var12);
+                var13 = ArchiveProvider.divideFixed16(var15, (byte) -120, (long)var13);
+                var14 = ArchiveProvider.divideFixed16(var15, (byte) -119, (long)var14);
                 if (var14 != 0) {
-                  var16Lifetime1 = lh.a(var14, (byte) -112, (long)(ec.field_f - param0[2]));
+                  var16Lifetime1 = ArchiveProvider.divideFixed16(var14, (byte) -112, (long)(BallDebugOverlay.field_f - param0[2]));
                   var9 = param0[0] + (var16Lifetime1 * var12 >> 16) >> 3;
                   var11 = param0[1] + (var16Lifetime1 * var13 >> 16) >> 3;
                   var12 = var9 - var8;
@@ -538,10 +538,10 @@ final class PolarTableScene extends ModelTableScene {
                   for (var19 = SoftwareRasterizer.clipLeft; var19 < SoftwareRasterizer.clipRight; var19++) {
                     if (SoftwareRasterizer.pixels[var18] == -1) {
                       var20 = ((var16Lifetime1Lifetime1 >> 16 & 255) << 8) + (var17 >> 16 & 255);
-                      var21 = di.field_g >> 0;
+                      var21 = ResourceArchive.field_g >> 0;
                       var22 = 256 - var21;
-                      var23 = we.field_g[var20];
-                      var24 = p.field_c[var20];
+                      var23 = ArchiveLoadStep.field_g[var20];
+                      var24 = ModelInstance.field_c[var20];
                       var23 = ((var23 & 65280) * var22 >> 8) + ((var24 & 65280) * var21 >> 8) & 65280 | ((var23 & 16711935) * var22 >> 8) + ((var24 & 16711935) * var21 >> 8) & 16711935;
                       if (var6 != 0) {
                         var23 = ((var23 & 65280) * var7 >> 7) + (60928 * var6 >> 7) & 65280 | ((var23 & 16711935) * var7 >> 7) + (15597806 * var6 >> 7) & 16711935;
@@ -559,7 +559,7 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    final void a(di param0, int param1) {
+    final void a(ResourceArchive param0, int param1) {
         int incrementValue$61 = 0;
         int incrementValue$62 = 0;
         int incrementValue$63 = 0;
@@ -644,209 +644,209 @@ final class PolarTableScene extends ModelTableScene {
         var14 = Pool.field_O;
         try {
           var3_int = 0;
-          this.field_O = new eg[61];
+          this.field_O = new MeshBuilder[61];
           UsernameSuggestionsPanel.field_W = var3_int;
           incrementValue$61 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$61] = eg.a(param0, "", "polar_table/ice_isle_us_a");
+          this.field_O[incrementValue$61] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_us_a");
           incrementValue$62 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$62] = eg.a(param0, "", "polar_table/ice_isle_us_b");
+          this.field_O[incrementValue$62] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_us_b");
           incrementValue$63 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$63] = eg.a(param0, "", "polar_table/ice_isle_us_c");
+          this.field_O[incrementValue$63] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_us_c");
           incrementValue$64 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$64] = eg.a(param0, "", "polar_table/ice_isle_us_d");
+          this.field_O[incrementValue$64] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_us_d");
           incrementValue$65 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$65] = eg.a(param0, "", "polar_table/ice_isle_us_e");
+          this.field_O[incrementValue$65] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_us_e");
           incrementValue$66 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$66] = eg.a(param0, "", "polar_table/ice_isle_us_f");
+          this.field_O[incrementValue$66] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_us_f");
           incrementValue$67 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$67] = eg.a(param0, "", "polar_table/ice_isle_us_g");
+          this.field_O[incrementValue$67] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_us_g");
           incrementValue$68 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$68] = eg.a(param0, "", "polar_table/ice_isle_us_h");
+          this.field_O[incrementValue$68] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_us_h");
           incrementValue$69 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$69] = eg.a(param0, "", "polar_table/ice_isle_us_i");
+          this.field_O[incrementValue$69] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_us_i");
           incrementValue$70 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$70] = eg.a(param0, "", "polar_table/ice_isle_us_j");
+          this.field_O[incrementValue$70] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_us_j");
           FullscreenErrorDialog.field_hb = var3_int;
           incrementValue$71 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$71] = eg.a(param0, "", "polar_table/ice_isle_a");
+          this.field_O[incrementValue$71] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_a");
           incrementValue$72 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$72] = eg.a(param0, "", "polar_table/ice_isle_b");
+          this.field_O[incrementValue$72] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_b");
           incrementValue$73 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$73] = eg.a(param0, "", "polar_table/ice_isle_c");
+          this.field_O[incrementValue$73] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_c");
           incrementValue$74 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$74] = eg.a(param0, "", "polar_table/ice_isle_d");
+          this.field_O[incrementValue$74] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_d");
           incrementValue$75 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$75] = eg.a(param0, "", "polar_table/ice_isle_e");
+          this.field_O[incrementValue$75] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_e");
           incrementValue$76 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$76] = eg.a(param0, "", "polar_table/ice_isle_f");
+          this.field_O[incrementValue$76] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_f");
           incrementValue$77 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$77] = eg.a(param0, "", "polar_table/ice_isle_g");
+          this.field_O[incrementValue$77] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_g");
           incrementValue$78 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$78] = eg.a(param0, "", "polar_table/ice_isle_h");
+          this.field_O[incrementValue$78] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_h");
           incrementValue$79 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$79] = eg.a(param0, "", "polar_table/ice_isle_i");
+          this.field_O[incrementValue$79] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_i");
           incrementValue$80 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$80] = eg.a(param0, "", "polar_table/ice_isle_j");
-          vq.field_Ob = var3_int;
+          this.field_O[incrementValue$80] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_isle_j");
+          ContextMenu.field_Ob = var3_int;
           ClassicBallSkin.field_m = var3_int;
           incrementValue$81 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$81] = eg.a(param0, "", "polar_table/ice_main_us_a");
+          this.field_O[incrementValue$81] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_a");
           incrementValue$82 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$82] = eg.a(param0, "", "polar_table/ice_main_us_b");
+          this.field_O[incrementValue$82] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_b");
           incrementValue$83 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$83] = eg.a(param0, "", "polar_table/ice_main_us_c");
+          this.field_O[incrementValue$83] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_c");
           incrementValue$84 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$84] = eg.a(param0, "", "polar_table/ice_main_us_d");
+          this.field_O[incrementValue$84] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_d");
           incrementValue$85 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$85] = eg.a(param0, "", "polar_table/ice_main_us_e");
+          this.field_O[incrementValue$85] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_e");
           incrementValue$86 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$86] = eg.a(param0, "", "polar_table/ice_main_us_f");
+          this.field_O[incrementValue$86] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_f");
           incrementValue$87 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$87] = eg.a(param0, "", "polar_table/ice_main_us_g");
+          this.field_O[incrementValue$87] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_g");
           incrementValue$88 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$88] = eg.a(param0, "", "polar_table/ice_main_us_h");
+          this.field_O[incrementValue$88] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_h");
           incrementValue$89 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$89] = eg.a(param0, "", "polar_table/ice_main_us_i");
+          this.field_O[incrementValue$89] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_i");
           incrementValue$90 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$90] = eg.a(param0, "", "polar_table/ice_main_us_j");
+          this.field_O[incrementValue$90] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_j");
           incrementValue$91 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$91] = eg.a(param0, "", "polar_table/ice_main_us_k");
+          this.field_O[incrementValue$91] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_k");
           incrementValue$92 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$92] = eg.a(param0, "", "polar_table/ice_main_us_l");
+          this.field_O[incrementValue$92] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_l");
           incrementValue$93 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$93] = eg.a(param0, "", "polar_table/ice_main_us_m");
+          this.field_O[incrementValue$93] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_m");
           incrementValue$94 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$94] = eg.a(param0, "", "polar_table/ice_main_us_n");
+          this.field_O[incrementValue$94] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_n");
           incrementValue$95 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$95] = eg.a(param0, "", "polar_table/ice_main_us_o");
+          this.field_O[incrementValue$95] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_o");
           incrementValue$96 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$96] = eg.a(param0, "", "polar_table/ice_main_us_p");
+          this.field_O[incrementValue$96] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_us_p");
           hj.field_a = var3_int;
           incrementValue$97 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$97] = eg.a(param0, "", "polar_table/ice_sea");
+          this.field_O[incrementValue$97] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_sea");
           kg.field_n = var3_int;
           incrementValue$98 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$98] = eg.a(param0, "", "polar_table/ice_main_a");
+          this.field_O[incrementValue$98] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_a");
           incrementValue$99 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$99] = eg.a(param0, "", "polar_table/ice_main_b");
+          this.field_O[incrementValue$99] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_b");
           incrementValue$100 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$100] = eg.a(param0, "", "polar_table/ice_main_c");
+          this.field_O[incrementValue$100] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_c");
           incrementValue$101 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$101] = eg.a(param0, "", "polar_table/ice_main_d");
+          this.field_O[incrementValue$101] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_d");
           incrementValue$102 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$102] = eg.a(param0, "", "polar_table/ice_main_e");
+          this.field_O[incrementValue$102] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_e");
           incrementValue$103 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$103] = eg.a(param0, "", "polar_table/ice_main_f");
+          this.field_O[incrementValue$103] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_f");
           incrementValue$104 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$104] = eg.a(param0, "", "polar_table/ice_main_g");
+          this.field_O[incrementValue$104] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_g");
           incrementValue$105 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$105] = eg.a(param0, "", "polar_table/ice_main_h");
+          this.field_O[incrementValue$105] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_h");
           incrementValue$106 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$106] = eg.a(param0, "", "polar_table/ice_main_i");
+          this.field_O[incrementValue$106] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_i");
           incrementValue$107 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$107] = eg.a(param0, "", "polar_table/ice_main_j");
+          this.field_O[incrementValue$107] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_j");
           incrementValue$108 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$108] = eg.a(param0, "", "polar_table/ice_main_k");
+          this.field_O[incrementValue$108] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_k");
           incrementValue$109 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$109] = eg.a(param0, "", "polar_table/ice_main_l");
+          this.field_O[incrementValue$109] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_l");
           incrementValue$110 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$110] = eg.a(param0, "", "polar_table/ice_main_m");
+          this.field_O[incrementValue$110] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_m");
           incrementValue$111 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$111] = eg.a(param0, "", "polar_table/ice_main_n");
+          this.field_O[incrementValue$111] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_n");
           incrementValue$112 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$112] = eg.a(param0, "", "polar_table/ice_main_o");
+          this.field_O[incrementValue$112] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_o");
           incrementValue$113 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$113] = eg.a(param0, "", "polar_table/ice_main_p");
+          this.field_O[incrementValue$113] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_main_p");
           tg.field_g = var3_int;
           co.field_db = var3_int;
           incrementValue$114 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$114] = eg.a(param0, "", "polar_table/ice_hole_a");
+          this.field_O[incrementValue$114] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_hole_a");
           rl.field_f = var3_int;
-          mb.field_e = var3_int;
+          ByteStorage.field_e = var3_int;
           incrementValue$115 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$115] = eg.a(param0, "", "polar_table/ice_hole_b");
+          this.field_O[incrementValue$115] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_hole_b");
           hf.field_c = var3_int;
           DialWidget.field_S = var3_int;
           incrementValue$116 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$116] = eg.a(param0, "", "polar_table/ice_corner");
+          this.field_O[incrementValue$116] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_corner");
           incrementValue$117 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$117] = eg.a(param0, "", "polar_table/ice_side_a");
+          this.field_O[incrementValue$117] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_side_a");
           incrementValue$118 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$118] = eg.a(param0, "", "polar_table/ice_side_b");
+          this.field_O[incrementValue$118] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_side_b");
           incrementValue$119 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$119] = eg.a(param0, "", "polar_table/ice_side_c");
+          this.field_O[incrementValue$119] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_side_c");
           fr.field_t = var3_int;
           ol.field_d = var3_int;
           incrementValue$120 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$120] = eg.a(param0, "", "polar_table/ice_top_a");
+          this.field_O[incrementValue$120] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_top_a");
           incrementValue$121 = var3_int;
           var3_int++;
-          this.field_O[incrementValue$121] = eg.a(param0, "", "polar_table/ice_top_b");
+          this.field_O[incrementValue$121] = MeshBuilder.loadFromArchive(param0, "", "polar_table/ice_top_b");
           DraggableWidget.field_V = var3_int;
           this.field_A = new CueStick();
-          this.field_A.a(eg.a(param0, "", "cues/ice_cue"), (byte) -105);
+          this.field_A.a(MeshBuilder.loadFromArchive(param0, "", "cues/ice_cue"), (byte) -105);
           for (var4 = 0; this.field_O.length > var4; var4++) {
-            db.a(0, this.field_O[var4]);
+            VerticalScrollbar.a(0, this.field_O[var4]);
           }
           var5 = 2147483647;
           var6 = -2147483648;
@@ -855,7 +855,7 @@ final class PolarTableScene extends ModelTableScene {
           var9 = 2147483647;
           var10 = -2147483648;
           for (var4Lifetime1 = fr.field_t; DraggableWidget.field_V > var4Lifetime1; var4Lifetime1++) {
-            d.a(this.field_O[var4Lifetime1], -23109);
+            d.computeMeshBounds(this.field_O[var4Lifetime1], -23109);
             if (this.field_O[var4Lifetime1].field_D < var5) {
               var5 = this.field_O[var4Lifetime1].field_D;
             }
@@ -888,7 +888,7 @@ final class PolarTableScene extends ModelTableScene {
             this.field_V = (PcmSample) null;
           }
           for (var4Lifetime3 = 0; this.field_O.length > var4Lifetime3; var4Lifetime3++) {
-            ln.a(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
+            ln.recenterModel(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -901,19 +901,19 @@ final class PolarTableScene extends ModelTableScene {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void d(boolean param0) {
-        pi.a();
+        ValueNoise.a();
         TableScene.field_w = null;
         BufferedSocket.field_p = null;
-        p.field_c = null;
+        ModelInstance.field_c = null;
         if (!param0) {
           return;
         }
-        we.field_g = null;
+        ArchiveLoadStep.field_g = null;
         this.a((byte) 119);
     }
 
@@ -926,31 +926,31 @@ final class PolarTableScene extends ModelTableScene {
           return;
         }
         try {
-          var6 = ta.a(new int[]{0, 3368601, 3, 3381708}, 101);
+          var6 = ta.buildGradientPalette(new int[]{0, 3368601, 3, 3381708}, 101);
           var5 = var6;
           var4 = var5;
           int[] var3 = var4;
-          TableScene.field_w = ta.a(new int[]{0, var6[0], 128, var6[1], 256, var6[2]}, param1 ^ 21919);
-          pi.c();
+          TableScene.field_w = ta.buildGradientPalette(new int[]{0, var6[0], 128, var6[1], 256, var6[2]}, param1 ^ 21919);
+          ValueNoise.initializeTable();
           this.a(86, param0.balls.length);
           BufferedSocket.field_p = new int[65536];
-          we.field_g = new int[65536];
-          p.field_c = new int[65536];
+          ArchiveLoadStep.field_g = new int[65536];
+          ModelInstance.field_c = new int[65536];
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, di param1) {
+    final void a(int param0, ResourceArchive param1) {
         try {
-          this.field_b = cg.a(param1, "", "pool_polar");
-          this.field_i = cg.a(param1, "", "pool_polar_win_jingle");
-          this.field_n = cg.a(param1, "", "pool_polar_lose_jingle");
+          this.field_b = MusicTrack.loadFromArchive(param1, "", "pool_polar");
+          this.field_i = MusicTrack.loadFromArchive(param1, "", "pool_polar_win_jingle");
+          this.field_n = MusicTrack.loadFromArchive(param1, "", "pool_polar_lose_jingle");
           if (param0 != 1) {
             this.d(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vf.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vf.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1012,13 +1012,13 @@ final class PolarTableScene extends ModelTableScene {
         }
     }
 
-    final void c(int param0, di param1) {
+    final void c(int param0, ResourceArchive param1) {
         try {
           if (param0 != -23569) {
             this.field_T = (PcmSample) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vf.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vf.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1034,14 +1034,14 @@ final class PolarTableScene extends ModelTableScene {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          var3_int = param1.field_eb.b(-128);
+          var3_int = param1.camera.b(-128);
           if (!param0) {
             PolarTableScene.e((byte) -126);
           }
           var4 = this.field_B.field_z << 1;
           var5 = this.field_B.field_A << 1;
           if (var3_int > 0) {
-            var6 = (int)((double)var4 * -param1.field_eb.a(param0) / 2.0 / 3.141592653589793);
+            var6 = (int)((double)var4 * -param1.camera.getYaw(param0) / 2.0 / 3.141592653589793);
             var7 = -var5 + var3_int;
             this.field_B.drawScaled(var6 - var4, var7, var4, var5);
             if (-640 + var4 > var6) {
@@ -1059,7 +1059,7 @@ final class PolarTableScene extends ModelTableScene {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -1069,29 +1069,29 @@ final class PolarTableScene extends ModelTableScene {
         int var4 = 0;
         int incrementValue$0 = 0;
         int[] var2 = null;
-        int var1 = di.field_g + 32;
-        for (var2_int = di.field_g; var2_int < var1; var2_int++) {
+        int var1 = ResourceArchive.field_g + 32;
+        for (var2_int = ResourceArchive.field_g; var2_int < var1; var2_int++) {
           var3 = var2_int * 256;
           for (var4 = 0; var4 < 256; var4++) {
             incrementValue$0 = var3;
             var3++;
-            BufferedSocket.field_p[incrementValue$0] = pi.a(var4 << 6, var2_int << 6, qa.field_r << 7, TableScene.field_w, 128, 6);
+            BufferedSocket.field_p[incrementValue$0] = ValueNoise.a(var4 << 6, var2_int << 6, qa.field_r << 7, TableScene.field_w, 128, 6);
           }
         }
         if (var1 >= 256) {
           var2 = BufferedSocket.field_p;
-          BufferedSocket.field_p = we.field_g;
-          we.field_g = p.field_c;
-          p.field_c = var2;
+          BufferedSocket.field_p = ArchiveLoadStep.field_g;
+          ArchiveLoadStep.field_g = ModelInstance.field_c;
+          ModelInstance.field_c = var2;
           var1 = 32;
-          di.field_g = 0;
+          ResourceArchive.field_g = 0;
           qa.field_r = qa.field_r + 1;
         } else {
-          di.field_g = di.field_g + 32;
+          ResourceArchive.field_g = ResourceArchive.field_g + 32;
         }
     }
 
-    final void a(cf param0, int param1) {
+    final void a(SoundCache param0, int param1) {
         try {
           this.field_mb = param0.a("", "polar_blackball_collision1", (byte) 127);
           this.field_jb = param0.a("polar_pot_ball_pocket2", true, "");
@@ -1112,7 +1112,7 @@ final class PolarTableScene extends ModelTableScene {
           this.field_db = param0.a("", "polar_bg_wind4", (byte) 121);
           this.field_fb = param0.a("", "polar_bg_wind5", (byte) 125);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vf.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vf.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -1120,20 +1120,20 @@ final class PolarTableScene extends ModelTableScene {
         int var2 = 0;
         int var3 = Pool.field_O;
         super.b(param0);
-        ci.field_f = 0;
+        DebugTuningSlider.field_f = 0;
         for (var2 = 0; var2 < this.field_U.length; var2++) {
           this.field_U[var2].a(-40);
         }
     }
 
-    final void b(int param0, di param1) {
+    final void b(int param0, ResourceArchive param1) {
         try {
           if (param0 != 5) {
             this.field_fb = (PcmSample) null;
           }
-          this.field_B = new Sprite(param1.a(false, "polar-sky.jpg", ""), (java.awt.Component) ((Object) pa.field_K));
+          this.field_B = new Sprite(param1.getFileByName(false, "polar-sky.jpg", ""), (java.awt.Component) ((Object) TimeTrialSelectScreen.field_K));
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vf.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vf.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -22,7 +22,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 43 / ((param0 - 33) / 60);
-          stackIn_1_0 = EmailAvailabilityValidator.field_r.a(false, param1, "");
+          stackIn_1_0 = EmailAvailabilityValidator.field_r.getFileByName(false, param1, "");
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -34,17 +34,17 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          DebouncedValidationProvider.e(39);
+          DebouncedValidationProvider.releaseStatics(39);
           if (10 > PlasmaTableScene.field_ab) {
             return false;
           }
-          if (sf.field_y >= 13) {
+          if (QuickChatCategoryDefinition.field_y >= 13) {
             return true;
           }
           return false;
@@ -52,7 +52,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         if (10 > PlasmaTableScene.field_ab) {
           return false;
         }
-        if (sf.field_y >= 13) {
+        if (QuickChatCategoryDefinition.field_y >= 13) {
           return true;
         }
         return false;
@@ -61,13 +61,13 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
     public final void resetValidationDelay(int param0) {
         if (param0 != 11755) {
           this.lastInputChangeMillis = 87L;
-          this.lastInputChangeMillis = rl.a((byte) -109);
+          this.lastInputChangeMillis = rl.monotonicTimeMillis((byte) -109);
           return;
         }
-        this.lastInputChangeMillis = rl.a((byte) -109);
+        this.lastInputChangeMillis = rl.monotonicTimeMillis((byte) -109);
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != -1) {
           return;
         }
@@ -106,22 +106,22 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     public final na getDebouncedValidationState(int param0) {
         if (this.isInputEmpty(-3)) {
-          return wm.field_Pb;
+          return ReportAbuseDialog.field_Pb;
         }
         if (param0 != -31873) {
           field_g = -106;
-          if ((350L + this.lastInputChangeMillis) <= rl.a((byte) -101)) {
+          if ((350L + this.lastInputChangeMillis) <= rl.monotonicTimeMillis((byte) -101)) {
             return this.currentValidationState(param0 ^ 17779);
           }
           return ji.field_h;
         }
-        if ((350L + this.lastInputChangeMillis) <= rl.a((byte) -101)) {
+        if ((350L + this.lastInputChangeMillis) <= rl.monotonicTimeMillis((byte) -101)) {
           return this.currentValidationState(param0 ^ 17779);
         }
         return ji.field_h;
@@ -152,7 +152,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
                 var4Lifetime2 = var4Lifetime2 + var2.substring(var3);
               }
               var5 = new java.net.URL(param0.getCodeBase(), var4Lifetime2);
-              param0.getAppletContext().showDocument(p.a((byte) -103, var5, param0), "_self");
+              param0.getAppletContext().showDocument(ModelInstance.a((byte) -103, var5, param0), "_self");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = (Exception) (Object) decompiledCaughtException;
@@ -173,7 +173,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -188,7 +188,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         if (this.isInputEmpty(-3)) {
           return null;
         }
-        if (rl.a((byte) -123) < this.lastInputChangeMillis + 350L) {
+        if (rl.monotonicTimeMillis((byte) -123) < this.lastInputChangeMillis + 350L) {
           return null;
         }
         if (param0 > 61) {

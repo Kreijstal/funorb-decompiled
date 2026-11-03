@@ -3,8 +3,8 @@
  */
 final class cp {
     static int[] field_d;
-    static di field_a;
-    static ao field_c;
+    static ResourceArchive field_a;
+    static ScrollPaneWithFooter field_c;
     static String mbExclusive2;
 
     final static boolean a(byte param0) {
@@ -13,7 +13,7 @@ final class cp {
           if (!fq.m(0)) {
             return false;
           }
-          if ((eo.field_Tb & 8) == 0) {
+          if ((SocialListEntry.field_Tb & 8) == 0) {
             return true;
           }
           return false;
@@ -21,17 +21,17 @@ final class cp {
         if (!fq.m(0)) {
           return false;
         }
-        if ((eo.field_Tb & 8) == 0) {
+        if ((SocialListEntry.field_Tb & 8) == 0) {
           return true;
         }
         return false;
     }
 
     final static void a(boolean param0) {
-        db.field_Pb = rl.a((byte) -121);
-        up.field_j = 0;
+        VerticalScrollbar.field_Pb = rl.monotonicTimeMillis((byte) -121);
+        CachedArchiveSource.field_j = 0;
         if (param0) {
-          field_a = (di) null;
+          field_a = (ResourceArchive) null;
         }
     }
 
@@ -60,17 +60,17 @@ final class cp {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_a = null;
         field_c = null;
         field_d = null;
         mbExclusive2 = null;
         if (!param0) {
-          field_c = (ao) null;
+          field_c = (ScrollPaneWithFooter) null;
         }
     }
 

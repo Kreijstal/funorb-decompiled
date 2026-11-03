@@ -8,7 +8,7 @@ final class gp {
     static String createAlertNamelength;
     static int[] field_e;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         createAlertNamelength = null;
         field_e = null;
         if (param0 != 63) {
@@ -17,24 +17,24 @@ final class gp {
         field_d = null;
     }
 
-    final static void a(byte param0, sf param1) {
+    final static void a(byte param0, QuickChatCategoryDefinition param1) {
         try {
-          param1.field_A = new char[]{(char)63};
+          param1.phraseShortcuts = new char[]{(char)63};
           if (param0 < 9) {
             field_d = (na) null;
           }
-          param1.field_D = new int[]{-1};
+          param1.phraseIds = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "gp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, i param1, int param2) {
-        oq var6 = null;
+        CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
-          var6 = ej.field_j;
-          var6.b(false, param0);
+          var6 = JaggrabDownloader.field_j;
+          var6.writeCipheredOpcode(false, param0);
           var6.position = var6.position + 1;
           if (param2 != -6725) {
             i var5 = (i) null;
@@ -51,7 +51,7 @@ final class gp {
           var6.d(-1, var4);
           var6.b(-var4 + var6.position, true);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "gp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "gp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

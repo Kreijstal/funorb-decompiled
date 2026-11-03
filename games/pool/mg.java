@@ -5,14 +5,14 @@ final class mg {
     static int field_d;
     static String ignorelistdupe;
     static String playerX2AreOut;
-    static vh field_c;
+    static UiComponent field_c;
 
-    final static im a(int param0, long param1) {
+    final static LobbyPlayer a(int param0, long param1) {
         if (param0 != 0) {
           mg.a(-80);
-          return (im) (ln.field_n.a(param1, false));
+          return (LobbyPlayer) (ln.field_n.findFirst(param1, false));
         }
-        return (im) (ln.field_n.a(param1, false));
+        return (LobbyPlayer) (ln.field_n.findFirst(param1, false));
     }
 
     final static boolean a(int param0) {
@@ -20,13 +20,13 @@ final class mg {
         if (jd.field_c == null) {
           return false;
         }
-        if (ta.field_a == tl.field_J) {
+        if (ta.field_a == RankingsScreen.field_J) {
           return true;
         }
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         playerX2AreOut = null;
         field_c = null;
         ignorelistdupe = null;

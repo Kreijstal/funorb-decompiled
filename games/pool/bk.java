@@ -12,7 +12,7 @@ final class bk extends IntrusiveNode {
     int field_o;
     int field_u;
     private int field_t;
-    static nm field_m;
+    static NineSliceFrame field_m;
     private String field_p;
     static int[] field_w;
     private int field_y;
@@ -25,7 +25,7 @@ final class bk extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -101) {
-            stackIn_4_0 = 20 + (qa.field_v.field_Db + this.field_t);
+            stackIn_4_0 = 20 + (qa.field_v.height + this.field_t);
             return stackIn_4_0;
           }
           stackIn_2_0 = -65;
@@ -33,27 +33,27 @@ final class bk extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "bk.D(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "bk.D(" + param0 + ')');
         }
     }
 
     final void c(int param0) {
         try {
-          this.field_q = ag.a(-PoolGameModel.field_k.field_eb + DebouncedValidationProvider.field_f, this.field_r, wn.field_i - PoolGameModel.field_k.field_qb, 15395);
+          this.field_q = ag.a(-PoolGameModel.field_k.localY + DebouncedValidationProvider.field_f, this.field_r, wn.field_i - PoolGameModel.field_k.localX, 15395);
           int var2_int = 25 % ((param0 - 39) / 62);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "bk.A(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bk.A(" + param0 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2) {
         try {
-          this.field_q.drawOutline(param0, PoolGameModel.field_k.field_qb, param1, -1, true, PoolGameModel.field_k.field_eb);
+          this.field_q.drawOutline(param0, PoolGameModel.field_k.localX, param1, -1, true, PoolGameModel.field_k.localY);
           if (param2 != 9750) {
             this.field_u = -125;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "bk.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "bk.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -64,12 +64,12 @@ final class bk extends IntrusiveNode {
           if (param0) {
             field_w = (int[]) null;
           }
-          this.field_z.c(PoolGameModel.field_k.field_qb, PoolGameModel.field_k.field_eb);
+          this.field_z.draw(PoolGameModel.field_k.localX, PoolGameModel.field_k.localY);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "bk.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "bk.C(" + param0 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class bk extends IntrusiveNode {
         int var3_int = 0;
         RuntimeException var3 = null;
         try {
-          this.field_n = -20 + PoolGameModel.field_k.field_gb;
+          this.field_n = -20 + PoolGameModel.field_k.width;
           if (param1 <= 36) {
             this.field_l = 75;
           }
@@ -91,25 +91,25 @@ final class bk extends IntrusiveNode {
           }
           this.field_t = sa.field_h.measureWrappedHeight(this.field_p, this.field_n, this.field_y);
           if (param0.field_d.field_e != this.next &&
-            !pl.field_b.field_pb) {
-            pl.field_b.field_pb = true;
+            !pl.field_b.enabled) {
+            pl.field_b.enabled = true;
           } else {
             if (this.next == param0.field_d.field_e &&
-              pl.field_b.field_pb) {
-              pl.field_b.field_R = 0;
-              pl.field_b.field_pb = false;
+              pl.field_b.enabled) {
+              pl.field_b.pressedButton = 0;
+              pl.field_b.enabled = false;
             }
           }
           if ((param0.field_d.field_e != this.previous ||
             param0.field_j != null) &&
-            !jq.field_d.field_pb) {
-            jq.field_d.field_pb = true;
+            !jq.field_d.enabled) {
+            jq.field_d.enabled = true;
           } else {
             if (this.previous == param0.field_d.field_e &&
               null == param0.field_j &&
-              jq.field_d.field_pb) {
-              jq.field_d.field_pb = false;
-              jq.field_d.field_R = 0;
+              jq.field_d.enabled) {
+              jq.field_d.enabled = false;
+              jq.field_d.pressedButton = 0;
             }
           }
           var3_int = this.field_s;
@@ -124,11 +124,11 @@ final class bk extends IntrusiveNode {
               param0.field_a.a(false, (byte) -122);
             }
           }
-          this.field_z = new Sprite(PoolGameModel.field_k.field_gb, this.field_t + 10);
+          this.field_z = new Sprite(PoolGameModel.field_k.width, this.field_t + 10);
           this.field_z.e();
           sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
           sa.field_h.drawParagraph(ef.a("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);
-          this.field_r = ug.a(new int[]{this.field_y}, this.field_n, this.field_p, 7, sa.field_h, true, 10);
+          this.field_r = SocketArchiveNetworkClient.a(new int[]{this.field_y}, this.field_n, this.field_p, 7, sa.field_h, true, 10);
           OpacityWidget.field_P.bindAsRenderTarget(15100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,7 +141,7 @@ final class bk extends IntrusiveNode {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class bk extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var3), "bk.E(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "bk.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -206,16 +206,16 @@ final class bk extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           if (param0 != -5917) {
-            bk.a(-18);
+            bk.releaseStatics(-18);
           }
           field_w = null;
           field_m = null;
@@ -224,7 +224,7 @@ final class bk extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "bk.H(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "bk.H(" + param0 + ')');
         }
     }
 
@@ -255,7 +255,7 @@ final class bk extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -286,13 +286,13 @@ final class bk extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     bk(String param0, int param1, int param2, IntrusiveDeque param3) {
         RuntimeException runtimeException = null;
-        aa var5 = null;
+        IntrusiveDequeCursor var5 = null;
         bk var6 = null;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -312,11 +312,11 @@ final class bk extends IntrusiveNode {
           }
           this.field_p = param0;
           this.field_o = ~this.field_s;
-          var5 = new aa(param3);
-          var6 = (bk) (var5.b((byte) -92));
+          var5 = new IntrusiveDequeCursor(param3);
+          var6 = (bk) (var5.last((byte) -92));
           while (null != var6) {
             this.field_o = this.field_o & ~var6.field_s;
-            var6 = (bk) (var5.b(-114));
+            var6 = (bk) (var5.previous(-114));
             if (var7 != 0) {
               return;
             }
@@ -338,7 +338,7 @@ final class bk extends IntrusiveNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

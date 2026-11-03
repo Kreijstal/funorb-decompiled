@@ -1,0 +1,258 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MarkerSliderPainter implements WidgetPainter {
+    static String youhavelost;
+    private int field_o;
+    private int field_n;
+    private static int field_e;
+    private int field_p;
+    static IntrusiveDeque field_i;
+    private int field_f;
+    private int field_d;
+    private int field_k;
+    static int field_j;
+    static int field_m;
+    static int field_l;
+    static PlatformTaskDispatcher field_a;
+    static String joinWithdrawRequestXsGame;
+    private BitmapFont font;
+    static UiComponent field_c;
+
+    final static so a(int param0, MeshBuilder param1, int[] param2) {
+        so var3 = null;
+        RuntimeException var3_ref = null;
+        so stackIn_2_0 = null;
+        so stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 < 2) {
+            stackIn_2_0 = (so) null;
+            return stackIn_2_0;
+          }
+          var3 = new so();
+          var3.field_d = il.a((byte) 112, param2);
+          var3.field_i = param1;
+          IntrusiveNodeHashTable.a(var3.field_d, -123, var3.field_i);
+          stackIn_4_0 = var3;
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_7_0 = var3_ref;
+          stackIn_7_1 = new StringBuilder().append("nd.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(byte param0) {
+        field_c = null;
+        int var1 = 122 % ((-31 - param0) / 53);
+        youhavelost = null;
+        joinWithdrawRequestXsGame = null;
+        field_i = null;
+        field_a = null;
+    }
+
+    public final void paintWidget(boolean param0, int param1, byte param2, int param3, UiWidget param4) {
+        int var11 = 0;
+        UiWidget stackIn_4_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var12 = 0;
+        MultiHandleSliderWidget var13 = null;
+        var12 = Pool.field_O;
+        try {
+          if (param4 instanceof MultiHandleSliderWidget) {
+            stackIn_4_0 = (UiWidget) (param4);
+          } else {
+            stackIn_4_0 = null;
+          }
+          var13 = (MultiHandleSliderWidget) (stackIn_4_0);
+          if (var13 != null) {
+          }
+          SoftwareRasterizer.fillRectangle(param1 + param4.widgetX, param3 + param4.widgetY, param4.widgetWidth, param4.widgetHeight, this.field_n);
+          var7 = -(2 * var13.railInset) + param4.widgetWidth;
+          var8 = var13.railInset + (param4.widgetX + param1);
+          var9 = param3 - (-param4.widgetY - var13.field_R);
+          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_p);
+          var10 = 87 % ((param2 - 2) / 41);
+          for (var11 = var13.getHandleCount(0) - 1; var11 >= 0; var11--) {
+            SoftwareRasterizer.fillCircle(var7 * var13.getHandleValueAt((byte) -37, var11) / var13.getMaximumValue(0) + var8, var9, this.field_f, this.field_d);
+          }
+          if (null != this.font) {
+            this.font.drawCentered(var13.widgetText, var7 / 2 + var8, var9 + (this.font.baselineHeight + var13.field_R), this.field_o, this.field_k);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_14_0 = var6;
+          stackIn_14_1 = new StringBuilder().append("nd.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+        }
+    }
+
+    final static void b(byte param0) {
+        VerticalScrollbar.field_Sb = lo.b(14);
+        TabbedPane.field_Ub = new DialogLayer();
+        if (param0 > -82) {
+          field_i = (IntrusiveDeque) null;
+        }
+        t.a(110, true, true);
+    }
+
+    final static void a(MeshBuilder param0, byte param1) {
+        int var5 = 0;
+        RuntimeException runtimeException = null;
+        int var2_int = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        double var15 = 0.0;
+        double var17 = 0.0;
+        double var19 = 0.0;
+        double var21 = 0.0;
+        double var23 = 0.0;
+        int var25 = 0;
+        int var26 = 0;
+        int var27 = 0;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var27 = Pool.field_O;
+        try {
+          d.computeMeshBounds(param0, -23109);
+          if (param1 != -37) {
+            MarkerSliderPainter.b((byte) 33);
+          }
+          var2_int = (param0.field_w + param0.field_D) / 2;
+          var3 = (param0.field_S + param0.field_y) / 2;
+          var4 = (param0.field_x + param0.field_V) / 2;
+          for (var5 = 0; var5 < param0.field_l; var5++) {
+            var6 = param0.vertexX[param0.field_p[var5]];
+            var7 = param0.vertexY[param0.field_p[var5]];
+            var8 = param0.vertexZ[param0.field_p[var5]];
+            var9 = -var6 + param0.vertexX[param0.field_H[var5]];
+            var10 = -var7 + param0.vertexY[param0.field_H[var5]];
+            var11 = -var8 + param0.vertexZ[param0.field_H[var5]];
+            var12 = -var6 + param0.vertexX[param0.field_C[var5]];
+            var13 = -var7 + param0.vertexY[param0.field_C[var5]];
+            var14 = param0.vertexZ[param0.field_C[var5]] - var8;
+            var15 = Math.sqrt((double)(var11 * var11 + var9 * var9 + var10 * var10));
+            var17 = Math.sqrt((double)(var12 * var12 + var13 * var13 + var14 * var14));
+            var19 = (double)(var2_int - var6);
+            var21 = (double)(var3 - var7);
+            var23 = (double)(-var8 + var4);
+            var25 = (int)Math.floor(((double)var11 * var23 + ((double)var9 * var19 + (double)var10 * var21)) / var15 / var15);
+            var26 = (int)Math.floor(((double)var14 * var23 + (var21 * (double)var13 + var19 * (double)var12)) / var17 / var17);
+            if (var25 != 0 ||
+              var26 != 0) {
+              if (0 != var25) {
+                var7 = var7 + var10 * var25;
+                var6 = var6 + var25 * var9;
+                var8 = var8 + var11 * var25;
+              }
+              if (var26 != 0) {
+                var6 = var6 + var26 * var12;
+                var8 = var8 + var14 * var26;
+                var7 = var7 + var26 * var13;
+              }
+              if (LobbyGame.a(-3, param0, (int) param0.field_p[var5])) {
+                param0.field_p[var5] = (short)param0.addVertex(var6, var7, var8);
+              } else {
+                param0.vertexX[param0.field_p[var5]] = var6;
+                param0.vertexY[param0.field_p[var5]] = var7;
+                param0.vertexZ[param0.field_p[var5]] = var8;
+              }
+              if (!LobbyGame.a(-3, param0, (int) param0.field_p[var5])) {
+                param0.vertexX[param0.field_H[var5]] = var9 + var6;
+                param0.vertexY[param0.field_H[var5]] = var7 + var10;
+                param0.vertexZ[param0.field_H[var5]] = var8 + var11;
+              } else {
+                param0.field_p[var5] = (short)param0.addVertex(var6 + var9, var7 + var10, var8 + var11);
+              }
+              if (!LobbyGame.a(-3, param0, (int) param0.field_p[var5])) {
+                param0.vertexX[param0.field_C[var5]] = var12 + var6;
+                param0.vertexY[param0.field_C[var5]] = var7 + var13;
+                param0.vertexZ[param0.field_C[var5]] = var14 + var8;
+              } else {
+                param0.field_p[var5] = (short)param0.addVertex(var6 + var12, var13 + var7, var8 + var14);
+              }
+            }
+          }
+          param0.a();
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          stackIn_28_0 = runtimeException;
+          stackIn_28_1 = new StringBuilder().append("nd.B(");
+          if (param0 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
+          }
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    MarkerSliderPainter(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        try {
+          this.font = param0;
+          this.field_k = param2;
+          this.field_d = param6;
+          this.field_p = param3;
+          this.field_o = param1;
+          this.field_n = param4;
+          this.field_f = param5;
+        } catch (RuntimeException runtimeException) {
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+        }
+    }
+
+    static {
+        field_e = 1;
+        youhavelost = "You have lost!";
+        field_j = 1 << field_e;
+        joinWithdrawRequestXsGame = "Withdraw request to join <%0>'s game";
+        field_i = new IntrusiveDeque();
+    }
+}

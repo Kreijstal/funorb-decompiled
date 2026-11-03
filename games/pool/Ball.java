@@ -11,7 +11,7 @@ final class Ball {
     static Ball[][] field_B;
     int positionX;
     static String playerYouX2AreOfferingRematch;
-    static or field_i;
+    static BallEvent field_i;
     private Quaternion spinDelta;
     static PcmSample field_L;
     int positionY;
@@ -34,11 +34,11 @@ final class Ball {
     int motionState;
     int angularVelocityY;
     private int field_a;
-    or field_q;
+    BallEvent field_q;
     static String raExplanation;
     boolean field_o;
     boolean inPlay;
-    static di field_z;
+    static ResourceArchive field_z;
     static volatile int field_f;
 
     final void stop(byte param0) {
@@ -47,7 +47,7 @@ final class Ball {
         this.clearLinearMotion(50);
         this.motionState = 0;
         if (this.field_q != null &&
-          this.field_q.field_n == 0) {
+          this.field_q.eventKind == 0) {
           this.field_q.a(false, this);
         }
     }
@@ -59,10 +59,10 @@ final class Ball {
         this.field_h = this.velocityY + -this.angularVelocityX * -8;
         if (0 != this.field_l ||
           this.field_h != 0) {
-          var2 = rf.a(aj.a(this.field_l, false, this.field_l) + aj.a(this.field_h, false, this.field_h), -123);
+          var2 = rf.inverseSquareRoot(NameEntryPopup.a(this.field_l, false, this.field_l) + NameEntryPopup.a(this.field_h, false, this.field_h), -123);
           if (var2 != 0) {
-            this.field_l = lh.a(var2, (byte) -100, (long)this.field_l);
-            this.field_h = lh.a(var2, (byte) -75, (long)this.field_h);
+            this.field_l = ArchiveProvider.divideFixed16(var2, (byte) -100, (long)this.field_l);
+            this.field_h = ArchiveProvider.divideFixed16(var2, (byte) -75, (long)this.field_h);
           }
         }
         var2Lifetime1 = 83 / ((param0 - 41) / 46);
@@ -72,8 +72,8 @@ final class Ball {
         int var3;
         if (this.velocityX != 0 ||
           this.velocityY != 0) {
-          this.positionX = this.positionX + aj.a(-this.lastAdvanceTime + param0, false, this.velocityX);
-          this.positionY = this.positionY + aj.a(param0 - this.lastAdvanceTime, false, this.velocityY);
+          this.positionX = this.positionX + NameEntryPopup.a(-this.lastAdvanceTime + param0, false, this.velocityX);
+          this.positionY = this.positionY + NameEntryPopup.a(param0 - this.lastAdvanceTime, false, this.velocityY);
           this.transformDirty = true;
         }
         var3 = 34 / ((58 - param1) / 45);
@@ -126,7 +126,7 @@ final class Ball {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class Ball {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -243,7 +243,7 @@ final class Ball {
           this.field_h = param0.field_h;
           this.field_l = param0.field_l;
           if (param1 != -12) {
-            field_z = (di) null;
+            field_z = (ResourceArchive) null;
           }
           this.field_d = param0.field_d;
           this.inPlay = param0.inPlay;
@@ -251,16 +251,16 @@ final class Ball {
           this.field_y = param0.field_y;
           this.motionState = param0.motionState;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "pq.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "pq.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6) {
         if (null == ta.field_h ||
-          null == wm.field_Xb ||
+          null == ReportAbuseDialog.field_Xb ||
           null == UsernameSuggestionsPanel.field_R) {
-          wm.field_Xb = new ai();
-          ta.field_h = new ReverbPcmStream(wm.field_Xb);
+          ReportAbuseDialog.field_Xb = new PcmStreamMixer();
+          ta.field_h = new ReverbPcmStream(ReportAbuseDialog.field_Xb);
           qf.field_d.b(ta.field_h);
           UsernameSuggestionsPanel.field_R = new IntrusiveDeque();
         }
@@ -280,9 +280,9 @@ final class Ball {
         if (this.angularVelocityX != 0 ||
           0 != this.angularVelocityY ||
           this.angularVelocityZ != 0) {
-          var2 = rf.a(aj.a(this.angularVelocityX, false, this.angularVelocityX) + aj.a(this.angularVelocityY, false, this.angularVelocityY) + aj.a(this.angularVelocityZ, false, this.angularVelocityZ), -121);
+          var2 = rf.inverseSquareRoot(NameEntryPopup.a(this.angularVelocityX, false, this.angularVelocityX) + NameEntryPopup.a(this.angularVelocityY, false, this.angularVelocityY) + NameEntryPopup.a(this.angularVelocityZ, false, this.angularVelocityZ), -121);
           if (0 < var2) {
-            this.spinDelta.setFromAxisAngle(111, -lh.a(var2, (byte) -92, (long)this.angularVelocityX), -lh.a(var2, (byte) -84, (long)this.angularVelocityY), lh.a(var2, (byte) -101, (long)this.angularVelocityZ), (int)((double)(var2 * 1024) / 205887.41614566068));
+            this.spinDelta.setFromAxisAngle(111, -ArchiveProvider.divideFixed16(var2, (byte) -92, (long)this.angularVelocityX), -ArchiveProvider.divideFixed16(var2, (byte) -84, (long)this.angularVelocityY), ArchiveProvider.divideFixed16(var2, (byte) -101, (long)this.angularVelocityZ), (int)((double)(var2 * 1024) / 205887.41614566068));
             this.orientation.multiplyBy(3, this.spinDelta);
             this.orientation.normalise(true);
             this.transformDirty = true;
@@ -299,7 +299,7 @@ final class Ball {
 
     final long horizontalSpeedSquared(int param0) {
         if (param0 == -14770) {
-          return od.a((long)this.velocityX, (long)this.velocityX, false) + od.a((long)this.velocityY, (long)this.velocityY, false);
+          return FullscreenFocusCanvas.multiplyFixedChecked((long)this.velocityX, (long)this.velocityX, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)this.velocityY, (long)this.velocityY, false);
         }
         return -91L;
     }
@@ -324,9 +324,9 @@ final class Ball {
         if (0 != this.angularVelocityX ||
           this.angularVelocityY != 0 ||
           this.angularVelocityZ != 0) {
-          var2_int = rf.a(aj.a(this.angularVelocityX, false, this.angularVelocityX) + (aj.a(this.angularVelocityY, false, this.angularVelocityY) + aj.a(this.angularVelocityZ, false, this.angularVelocityZ)), -126);
+          var2_int = rf.inverseSquareRoot(NameEntryPopup.a(this.angularVelocityX, false, this.angularVelocityX) + (NameEntryPopup.a(this.angularVelocityY, false, this.angularVelocityY) + NameEntryPopup.a(this.angularVelocityZ, false, this.angularVelocityZ)), -126);
           if (var2_int > 0) {
-            this.spinDelta.setFromAxisAngle(77, -lh.a(var2_int, (byte) -82, (long)this.angularVelocityX), -lh.a(var2_int, (byte) -63, (long)this.angularVelocityY), lh.a(var2_int, (byte) -117, (long)this.angularVelocityZ), 1024 * var2_int / 205887);
+            this.spinDelta.setFromAxisAngle(77, -ArchiveProvider.divideFixed16(var2_int, (byte) -82, (long)this.angularVelocityX), -ArchiveProvider.divideFixed16(var2_int, (byte) -63, (long)this.angularVelocityY), ArchiveProvider.divideFixed16(var2_int, (byte) -117, (long)this.angularVelocityZ), 1024 * var2_int / 205887);
             this.orientation.multiplyBy(3, this.spinDelta);
             this.orientation.normalise(true);
             this.transformDirty = true;
@@ -340,19 +340,19 @@ final class Ball {
               this.field_h = -this.angularVelocityX * -8;
               if (this.field_l == 0 &&
                 this.field_h == 0) {
-                if (aj.a(this.velocityX, param0, this.velocityX) + aj.a(this.velocityY, false, this.velocityY) < aj.a(3276, false, 3276) &&
-                  aj.a(this.angularVelocityX, param0, this.angularVelocityX) + (aj.a(this.angularVelocityY, param0, this.angularVelocityY) + aj.a(this.angularVelocityZ, false, this.angularVelocityZ)) < aj.a(3276, false, 3276)) {
+                if (NameEntryPopup.a(this.velocityX, param0, this.velocityX) + NameEntryPopup.a(this.velocityY, false, this.velocityY) < NameEntryPopup.a(3276, false, 3276) &&
+                  NameEntryPopup.a(this.angularVelocityX, param0, this.angularVelocityX) + (NameEntryPopup.a(this.angularVelocityY, param0, this.angularVelocityY) + NameEntryPopup.a(this.angularVelocityZ, false, this.angularVelocityZ)) < NameEntryPopup.a(3276, false, 3276)) {
                   this.stop((byte) 112);
                 }
                 return;
               }
-              var2_intLifetime1 = rf.a(aj.a(this.field_l, false, this.field_l) + aj.a(this.field_h, false, this.field_h), -125);
+              var2_intLifetime1 = rf.inverseSquareRoot(NameEntryPopup.a(this.field_l, false, this.field_l) + NameEntryPopup.a(this.field_h, false, this.field_h), -125);
               if (0 != var2_intLifetime1) {
-                this.field_l = lh.a(var2_intLifetime1, (byte) -100, (long)this.field_l);
-                this.field_h = lh.a(var2_intLifetime1, (byte) -107, (long)this.field_h);
-                this.field_a = -lh.a(PasswordValidator.field_w, (byte) -117, (long)(vn.a(this.field_h * 8, 0, PasswordValidator.field_q, l.field_g) / 50));
-                this.field_y = lh.a(PasswordValidator.field_w, (byte) -118, (long)(vn.a(this.field_l * 8, 0, PasswordValidator.field_q, l.field_g) / 50));
-                this.field_d = aj.a(wn.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
+                this.field_l = ArchiveProvider.divideFixed16(var2_intLifetime1, (byte) -100, (long)this.field_l);
+                this.field_h = ArchiveProvider.divideFixed16(var2_intLifetime1, (byte) -107, (long)this.field_h);
+                this.field_a = -ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -117, (long)(vn.a(this.field_h * 8, 0, PasswordValidator.field_q, l.field_g) / 50));
+                this.field_y = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -118, (long)(vn.a(this.field_l * 8, 0, PasswordValidator.field_q, l.field_g) / 50));
+                this.field_d = NameEntryPopup.a(wn.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
                 this.angularVelocityZ = this.angularVelocityZ + this.field_d;
                 this.angularVelocityY = this.angularVelocityY + this.field_y;
                 this.angularVelocityX = this.angularVelocityX + this.field_a;
@@ -362,9 +362,9 @@ final class Ball {
                 this.velocityY = -this.angularVelocityX * 8;
                 var3 = -8 * this.angularVelocityY;
                 var4_int = -8 * -this.angularVelocityX;
-                if (0 <= aj.a(var3, false, this.field_l) + aj.a(var4_int, param0, this.field_h)) {
-                  if (aj.a(this.velocityX, param0, this.velocityX) + aj.a(this.velocityY, false, this.velocityY) < aj.a(3276, false, 3276) &&
-                    aj.a(this.angularVelocityX, param0, this.angularVelocityX) + (aj.a(this.angularVelocityY, param0, this.angularVelocityY) + aj.a(this.angularVelocityZ, false, this.angularVelocityZ)) < aj.a(3276, false, 3276)) {
+                if (0 <= NameEntryPopup.a(var3, false, this.field_l) + NameEntryPopup.a(var4_int, param0, this.field_h)) {
+                  if (NameEntryPopup.a(this.velocityX, param0, this.velocityX) + NameEntryPopup.a(this.velocityY, false, this.velocityY) < NameEntryPopup.a(3276, false, 3276) &&
+                    NameEntryPopup.a(this.angularVelocityX, param0, this.angularVelocityX) + (NameEntryPopup.a(this.angularVelocityY, param0, this.angularVelocityY) + NameEntryPopup.a(this.angularVelocityZ, false, this.angularVelocityZ)) < NameEntryPopup.a(3276, false, 3276)) {
                     this.stop((byte) 112);
                   }
                   return;
@@ -377,15 +377,15 @@ final class Ball {
                 this.field_l = this.velocityX + -8 * this.angularVelocityY;
                 if (this.field_l != 0 ||
                   this.field_h != 0) {
-                  var2 = IterableNodeHashTable.a(-104, od.a((long)this.field_l, (long)this.field_l, false) + od.a((long)this.field_h, (long)this.field_h, false));
+                  var2 = IterableNodeHashTable.a(-104, FullscreenFocusCanvas.multiplyFixedChecked((long)this.field_l, (long)this.field_l, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)this.field_h, (long)this.field_h, false));
                   if (var2 != 0L) {
                     if (-2147483648L <= var2 &&
                       var2 <= 2147483647L) {
-                      this.field_l = lh.a((int)var2, (byte) -128, (long)this.field_l);
-                      this.field_h = lh.a((int)var2, (byte) -104, (long)this.field_h);
-                      this.field_A = -aj.a(dr.field_f, false, this.field_l) / 50;
-                      this.field_u = -aj.a(dr.field_f, false, this.field_h) / 50;
-                      var4 = od.a((long)this.field_A, (long)this.field_A, false) + od.a((long)this.field_u, (long)this.field_u, false);
+                      this.field_l = ArchiveProvider.divideFixed16((int)var2, (byte) -128, (long)this.field_l);
+                      this.field_h = ArchiveProvider.divideFixed16((int)var2, (byte) -104, (long)this.field_h);
+                      this.field_A = -NameEntryPopup.a(dr.field_f, false, this.field_l) / 50;
+                      this.field_u = -NameEntryPopup.a(dr.field_f, false, this.field_h) / 50;
+                      var4 = FullscreenFocusCanvas.multiplyFixedChecked((long)this.field_A, (long)this.field_A, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)this.field_u, (long)this.field_u, false);
                       var6 = this.horizontalSpeedSquared(-14770);
                       if (var6 < var4) {
                         var8_long = IterableNodeHashTable.a(-104, var4);
@@ -395,21 +395,21 @@ final class Ball {
                       }
                       this.velocityX = this.velocityX + this.field_A;
                       this.velocityY = this.velocityY + this.field_u;
-                      this.field_a = -lh.a(PasswordValidator.field_w, (byte) -87, (long)(vn.a(this.field_h * 8, 0, PasswordValidator.field_q, dr.field_f) / 50));
-                      this.field_y = lh.a(PasswordValidator.field_w, (byte) -122, (long)(vn.a(8 * this.field_l, 0, PasswordValidator.field_q, dr.field_f) / 50));
-                      this.field_d = aj.a(wn.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
+                      this.field_a = -ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -87, (long)(vn.a(this.field_h * 8, 0, PasswordValidator.field_q, dr.field_f) / 50));
+                      this.field_y = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -122, (long)(vn.a(8 * this.field_l, 0, PasswordValidator.field_q, dr.field_f) / 50));
+                      this.field_d = NameEntryPopup.a(wn.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
                       this.velocityX = this.velocityX + vn.a(this.angularVelocityZ, 0, -this.velocityY, pr.field_l);
                       this.velocityY = this.velocityY + vn.a(this.angularVelocityZ, 0, this.velocityX, pr.field_l);
                       this.angularVelocityY = this.angularVelocityY + this.field_y;
                       this.angularVelocityZ = this.angularVelocityZ + this.field_d;
                       this.angularVelocityX = this.angularVelocityX + this.field_a;
-                      this.angularVelocityZ = aj.a(wn.field_l, false, this.angularVelocityZ);
+                      this.angularVelocityZ = NameEntryPopup.a(wn.field_l, false, this.angularVelocityZ);
                       var8 = this.velocityX + -8 * this.angularVelocityY;
                       var9 = this.velocityY + -this.angularVelocityX * -8;
                       var10 = this.field_l - var8;
                       var11 = -var9 + this.field_h;
-                      var12 = aj.a(this.field_l, param0, var10) + aj.a(this.field_h, false, var11);
-                      var13 = aj.a(var8, param0, var10) + aj.a(var9, param0, var11);
+                      var12 = NameEntryPopup.a(this.field_l, param0, var10) + NameEntryPopup.a(this.field_h, false, var11);
+                      var13 = NameEntryPopup.a(var8, param0, var10) + NameEntryPopup.a(var9, param0, var11);
                       if (var12 >= 0 ||
                         var13 <= 0) {
                         if (var12 <= 0) {
@@ -423,7 +423,7 @@ final class Ball {
                       this.motionState = 2;
                       break regionExit1;
                     }
-                    throw new IllegalStateException("Overflow. Norm of " + pf.b(127, this.field_l) + ", " + pf.b(126, this.field_h) + " := " + PotEvent.a((byte) 89, var2));
+                    throw new IllegalStateException("Overflow. Norm of " + WidgetStyleLayer.b(127, this.field_l) + ", " + WidgetStyleLayer.b(126, this.field_h) + " := " + PotEvent.a((byte) 89, var2));
                   }
                   this.motionState = 2;
                   this.a((byte) -28);
@@ -432,8 +432,8 @@ final class Ball {
             }
           }
         }
-        if (aj.a(this.velocityX, param0, this.velocityX) + aj.a(this.velocityY, false, this.velocityY) < aj.a(3276, false, 3276) &&
-          aj.a(this.angularVelocityX, param0, this.angularVelocityX) + (aj.a(this.angularVelocityY, param0, this.angularVelocityY) + aj.a(this.angularVelocityZ, false, this.angularVelocityZ)) < aj.a(3276, false, 3276)) {
+        if (NameEntryPopup.a(this.velocityX, param0, this.velocityX) + NameEntryPopup.a(this.velocityY, false, this.velocityY) < NameEntryPopup.a(3276, false, 3276) &&
+          NameEntryPopup.a(this.angularVelocityX, param0, this.angularVelocityX) + (NameEntryPopup.a(this.angularVelocityY, param0, this.angularVelocityY) + NameEntryPopup.a(this.angularVelocityZ, false, this.angularVelocityZ)) < NameEntryPopup.a(3276, false, 3276)) {
           this.stop((byte) 112);
         }
     }

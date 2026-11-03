@@ -7,7 +7,7 @@ final class NodeHashTableIterator implements Iterator {
     private IntrusiveNode field_i;
     private int field_o;
     private IntrusiveNode field_m;
-    private uk field_h;
+    private IntrusiveNodeHashTable field_h;
     static long[] field_f;
     static IntrusiveDeque field_j;
     static String reloadgame;
@@ -52,7 +52,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -78,58 +78,58 @@ final class NodeHashTableIterator implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = Pool.field_O;
-        if (this.field_h.field_k[-1 + this.field_o] != this.field_m) {
+        if (this.field_h.buckets[-1 + this.field_o] != this.field_m) {
           var1 = this.field_m;
           this.field_i = var1;
           this.field_m = var1.previous;
           return var1;
         }
         do {
-          if (this.field_h.field_h <= this.field_o) {
+          if (this.field_h.bucketCount <= this.field_o) {
             return null;
           }
           fieldTemp$0 = this.field_o;
           this.field_o = this.field_o + 1;
-          var1 = this.field_h.field_k[fieldTemp$0].previous;
-        } while (this.field_h.field_k[this.field_o - 1] == var1);
+          var1 = this.field_h.buckets[fieldTemp$0].previous;
+        } while (this.field_h.buckets[this.field_o - 1] == var1);
         this.field_m = var1.previous;
         this.field_i = var1;
         return var1;
     }
 
-    final static void a(int param0, vh param1, int param2) {
+    final static void a(int param0, UiComponent param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        kn var11 = null;
+        PlayerContextMenu var11 = null;
         Sprite var12 = null;
         String var13 = null;
-        kn var14 = null;
+        PlayerContextMenu var14 = null;
         Sprite var15 = null;
         String var16 = null;
-        kn var17 = null;
+        PlayerContextMenu var17 = null;
         Sprite var18 = null;
         String var19 = null;
-        kn var20 = null;
+        PlayerContextMenu var20 = null;
         Sprite var21 = null;
         String var22 = null;
-        kn var23 = null;
+        PlayerContextMenu var23 = null;
         Sprite var24 = null;
         String var25 = null;
-        kn var26 = null;
+        PlayerContextMenu var26 = null;
         Sprite var27 = null;
         String var28 = null;
-        kn var29 = null;
+        PlayerContextMenu var29 = null;
         Sprite var30 = null;
         String var31 = null;
-        kn var32 = null;
+        PlayerContextMenu var32 = null;
         Sprite var33 = null;
         String var34 = null;
-        kn var35 = null;
+        PlayerContextMenu var35 = null;
         Sprite var36 = null;
         String var37 = null;
-        kn var38 = null;
+        PlayerContextMenu var38 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -148,67 +148,67 @@ final class NodeHashTableIterator implements Iterator {
         Sprite var30Lifetime1Lifetime4;
         Sprite var30Lifetime1Lifetime5;
         try {
-          dr.a((String) null, param2, 0L, -1, (of) null, (String) null, 32540, param1, (int[]) null);
+          dr.a((String) null, param2, 0L, -1, (ScrollPane) null, (String) null, 32540, param1, (int[]) null);
           if (0 == param2) {
             var11 = PlasmaBallSkin.field_m;
-            var12 = sg.field_M[0];
+            var12 = ThemeSelectScreen.field_M[0];
             var30 = var12;
             var30Lifetime3 = var12;
             var13 = IntrusiveDeque.muChatLobbyShowAll;
-            var11.field_n.a(11, (byte) 108, var12, var13);
+            var11.field_n.addIconAction(11, (byte) 108, var12, var13);
             var14 = PlasmaBallSkin.field_m;
-            var15 = sg.field_M[1];
+            var15 = ThemeSelectScreen.field_M[1];
             var30Lifetime4 = var15;
             var30Lifetime5 = var15;
             var16 = sa.muChatLobbyFriends;
-            var14.field_n.a(12, (byte) -77, var15, var16);
+            var14.field_n.addIconAction(12, (byte) -77, var15, var16);
             var17 = PlasmaBallSkin.field_m;
-            var18 = sg.field_M[2];
+            var18 = ThemeSelectScreen.field_M[2];
             var30Lifetime6 = var18;
             var30Lifetime7 = var18;
             var19 = Pool.muChatLobbyHide;
-            var17.field_n.a(13, (byte) -75, var18, var19);
+            var17.field_n.addIconAction(13, (byte) -75, var18, var19);
           }
           if (param2 == 1) {
             var20 = PlasmaBallSkin.field_m;
-            var21 = sg.field_M[0];
+            var21 = ThemeSelectScreen.field_M[0];
             var30Lifetime1 = var21;
             var30Lifetime1Lifetime1 = var21;
             var22 = ra.muChatGameShowAll;
-            var20.field_n.a(11, (byte) -87, var21, var22);
+            var20.field_n.addIconAction(11, (byte) -87, var21, var22);
             var23 = PlasmaBallSkin.field_m;
-            var24 = sg.field_M[1];
+            var24 = ThemeSelectScreen.field_M[1];
             var30Lifetime1Lifetime2 = var24;
             var30Lifetime1Lifetime3 = var24;
             var25 = md.muChatGameFriends;
-            var23.field_n.a(12, (byte) -119, var24, var25);
+            var23.field_n.addIconAction(12, (byte) -119, var24, var25);
             var26 = PlasmaBallSkin.field_m;
-            var27 = sg.field_M[2];
+            var27 = ThemeSelectScreen.field_M[2];
             var30Lifetime1Lifetime4 = var27;
             var30Lifetime1Lifetime5 = var27;
             var28 = op.muChatGameHide;
-            var26.field_n.a(13, (byte) 82, var27, var28);
+            var26.field_n.addIconAction(13, (byte) 82, var27, var28);
           }
           if (param2 == 2) {
             var29 = PlasmaBallSkin.field_m;
-            var30Lifetime2 = sg.field_M[0];
+            var30Lifetime2 = ThemeSelectScreen.field_M[0];
             var31 = kp.muChatPmShowAll;
-            var29.field_n.a(11, (byte) -122, var30Lifetime2, var31);
+            var29.field_n.addIconAction(11, (byte) -122, var30Lifetime2, var31);
             var32 = PlasmaBallSkin.field_m;
-            var33 = sg.field_M[1];
+            var33 = ThemeSelectScreen.field_M[1];
             var34 = rm.muChatPmFriends;
-            var32.field_n.a(12, (byte) 122, var33, var34);
+            var32.field_n.addIconAction(12, (byte) 122, var33, var34);
             var35 = PlasmaBallSkin.field_m;
-            var36 = sg.field_M[2];
+            var36 = ThemeSelectScreen.field_M[2];
             var37 = EmailAvailabilityValidator.muChatInvisibleAndSilentMode;
-            var35.field_n.a(13, (byte) 90, var36, var37);
+            var35.field_n.addIconAction(13, (byte) 90, var36, var37);
           }
           var38 = PlasmaBallSkin.field_m;
-          var4 = param1.field_sb;
-          var5 = param1.field_ib;
-          var6 = param1.field_gb;
-          var7 = param1.field_Db;
-          var38.field_n.c(var6, var7, var4, 0, var5);
+          var4 = param1.screenX;
+          var5 = param1.screenY;
+          var6 = param1.width;
+          var7 = param1.height;
+          var38.field_n.layoutAtAnchor(var6, var7, var4, 0, var5);
           if (param0 != 27937) {
             mpAcceptrematchUnrated = (String) null;
           }
@@ -223,7 +223,7 @@ final class NodeHashTableIterator implements Iterator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class NodeHashTableIterator implements Iterator {
         if (param0 != 43) {
           return;
         }
-        this.field_m = this.field_h.field_k[0].previous;
+        this.field_m = this.field_h.buckets[0].previous;
         this.field_o = 1;
     }
 
@@ -248,28 +248,28 @@ final class NodeHashTableIterator implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = Pool.field_O;
-        if (this.field_h.field_k[-1 + this.field_o] != this.field_m) {
+        if (this.field_h.buckets[-1 + this.field_o] != this.field_m) {
           return true;
         }
-        while (this.field_o < this.field_h.field_h) {
+        while (this.field_o < this.field_h.bucketCount) {
           fieldTemp$0 = this.field_o;
           this.field_o = this.field_o + 1;
-          if (this.field_h.field_k[fieldTemp$0].previous != this.field_h.field_k[this.field_o - 1]) {
-            this.field_m = this.field_h.field_k[-1 + this.field_o].previous;
+          if (this.field_h.buckets[fieldTemp$0].previous != this.field_h.buckets[this.field_o - 1]) {
+            this.field_m = this.field_h.buckets[-1 + this.field_o].previous;
             return true;
           }
-          this.field_m = this.field_h.field_k[this.field_o - 1];
+          this.field_m = this.field_h.buckets[this.field_o - 1];
         }
         return false;
     }
 
-    NodeHashTableIterator(uk param0) {
+    NodeHashTableIterator(IntrusiveNodeHashTable param0) {
         this.field_i = null;
         try {
           this.field_h = param0;
           this.a((byte) 43);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

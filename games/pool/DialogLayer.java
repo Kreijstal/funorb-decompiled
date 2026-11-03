@@ -20,7 +20,7 @@ final class DialogLayer extends SingleChildWidget {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (param1 <= kn.field_e.position) {
+          if (param1 <= PlayerContextMenu.field_e.position) {
             return true;
           }
           if (null == jd.field_c) {
@@ -32,16 +32,16 @@ final class DialogLayer extends SingleChildWidget {
               connectionlostWithreason = (String) null;
             }
             if (0 < var2_int) {
-              if (var2_int > param1 - kn.field_e.position) {
-                var2_int = param1 - kn.field_e.position;
+              if (var2_int > param1 - PlayerContextMenu.field_e.position) {
+                var2_int = param1 - PlayerContextMenu.field_e.position;
               }
-              jd.field_c.a(var2_int, 0, kn.field_e.position, kn.field_e.payload);
-              ob.field_v = rl.a((byte) -97);
-              kn.field_e.position = kn.field_e.position + var2_int;
-              if (param1 > kn.field_e.position) {
+              jd.field_c.a(var2_int, 0, PlayerContextMenu.field_e.position, PlayerContextMenu.field_e.payload);
+              MenuScreen.field_v = rl.monotonicTimeMillis((byte) -97);
+              PlayerContextMenu.field_e.position = PlayerContextMenu.field_e.position + var2_int;
+              if (param1 > PlayerContextMenu.field_e.position) {
                 return false;
               }
-              kn.field_e.position = 0;
+              PlayerContextMenu.field_e.position = 0;
               return true;
             }
             if (var2_int < 0) {
@@ -72,14 +72,14 @@ final class DialogLayer extends SingleChildWidget {
 
     final void hideAllDialogs(int param0) {
         int var4 = Pool.field_O;
-        aa var2 = new aa(this.dialogs);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.dialogs);
         if (param0 != -22216) {
           return;
         }
-        FadingDialog var3 = (FadingDialog) (var2.b((byte) -92));
+        FadingDialog var3 = (FadingDialog) (var2.last((byte) -92));
         while (var3 != null) {
           var3.dialogOpen = false;
-          var3 = (FadingDialog) (var2.b(param0 ^ 22169));
+          var3 = (FadingDialog) (var2.previous(param0 ^ 22169));
         }
         this.child = null;
     }
@@ -88,7 +88,7 @@ final class DialogLayer extends SingleChildWidget {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        vh var5 = null;
+        UiComponent var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
@@ -99,36 +99,36 @@ final class DialogLayer extends SingleChildWidget {
             StrongCacheEntry.field_J = StrongCacheEntry.field_J + (OpacityWidget.field_P.height - cb.field_g);
             cb.field_g = OpacityWidget.field_P.height;
           }
-          if (BufferedFile.field_h > em.field_P) {
-            em.field_P = em.field_P + 1;
+          if (BufferedFile.field_h > HighscoresScreen.field_P) {
+            HighscoresScreen.field_P = HighscoresScreen.field_P + 1;
           }
-          if (em.field_P <= 0) {
+          if (HighscoresScreen.field_P <= 0) {
             return;
           }
           ProgressDialog.l(23323);
-          fl.field_q.a(param1, false);
-          if (null != sg.field_J) {
+          fl.field_q.updateRoot(param1, false);
+          if (null != ThemeSelectScreen.field_J) {
             if (!ea.field_z) {
-              sg.field_J = null;
+              ThemeSelectScreen.field_J = null;
             } else {
-              sg.field_J.processPointerFrame(-125, fl.field_q.field_sb, param1, fl.field_q.field_ib);
+              ThemeSelectScreen.field_J.processPointerFrame(-125, fl.field_q.screenX, param1, fl.field_q.screenY);
             }
           }
           for (var4_int = 0; 5 > var4_int; var4_int++) {
             var5 = il.field_g[var4_int];
             if (var5 != null) {
-              if (var5.field_R != 0) {
+              if (var5.pressedButton != 0) {
                 NodeHashTableIterator.a(27937, var5, var4_int);
               }
               var6 = f.a(param2 ^ 5, var4_int);
-              uo.field_Mb[var4_int].field_hb = sg.field_M[var6];
-              ta.field_b[var4_int].field_nb = TranslatedUiText.field_i[var6];
+              AlignedIconLabel.field_Mb[var4_int].sprite = ThemeSelectScreen.field_M[var6];
+              ta.field_b[var4_int].text = TranslatedUiText.field_i[var6];
             }
           }
-          if (param2 != d.field_e.field_R) {
-            fc.field_b = new wm(d.field_e.field_sb, d.field_e.field_ib, d.field_e.field_gb, d.field_e.field_Db, param3, tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, UiWidget.field_A, (String) null, 0L);
+          if (param2 != d.field_e.pressedButton) {
+            fc.field_b = new ReportAbuseDialog(d.field_e.screenX, d.field_e.screenY, d.field_e.width, d.field_e.height, param3, tq.field_m, dg.field_J, qg.field_f, AlignedIconLabel.field_Lb, e.field_e, UiWidget.field_A, (String) null, 0L);
           }
-          var9 = uk.a(param0, (byte) -126, ad.field_x, CueAim.field_j);
+          var9 = IntrusiveNodeHashTable.a(param0, (byte) -126, ArchiveIndex.field_x, CueAim.field_j);
           if (var9 != null) {
             na.a(var9, 122);
           }
@@ -140,7 +140,7 @@ final class DialogLayer extends SingleChildWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var4), "lq.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "lq.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -150,11 +150,11 @@ final class DialogLayer extends SingleChildWidget {
         if (this.renderer != null) {
           this.renderer.paintWidget(true, param2, (byte) -63, param3, (UiWidget) (this));
         }
-        aa var5 = new aa(this.dialogs);
-        UiWidget var7 = (UiWidget) (var5.a(0));
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.dialogs);
+        UiWidget var7 = (UiWidget) (var5.first(0));
         while (var7 != null) {
           var7.renderWidget(param0, (byte) 28, this.widgetX + param2, this.widgetY + param3);
-          var7 = (UiWidget) (var5.c((byte) -71));
+          var7 = (UiWidget) (var5.next((byte) -71));
         }
     }
 
@@ -181,19 +181,19 @@ final class DialogLayer extends SingleChildWidget {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final UiWidget findFocusTarget(int param0) {
         int var4 = Pool.field_O;
-        aa var2 = new aa(this.dialogs);
-        FadingDialog var3 = (FadingDialog) (var2.b((byte) -92));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.dialogs);
+        FadingDialog var3 = (FadingDialog) (var2.last((byte) -92));
         while (var3 != null) {
           if (var3.dialogOpen) {
             return var3.findFocusTarget((byte) 127);
           }
-          var3 = (FadingDialog) (var2.b(-84));
+          var3 = (FadingDialog) (var2.previous(-84));
         }
         if (param0 == -1) {
           return null;
@@ -207,13 +207,13 @@ final class DialogLayer extends SingleChildWidget {
         if (param0 != 11741) {
           return;
         }
-        aa var2 = new aa(this.dialogs);
-        FadingDialog var3 = (FadingDialog) (var2.b((byte) -92));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.dialogs);
+        FadingDialog var3 = (FadingDialog) (var2.last((byte) -92));
         while (var3 != null) {
           if (var3.settleDialogAnimation(false)) {
             var3.unlink((byte) -117);
           }
-          var3 = (FadingDialog) (var2.b(-86));
+          var3 = (FadingDialog) (var2.previous(-86));
         }
     }
 
@@ -221,13 +221,13 @@ final class DialogLayer extends SingleChildWidget {
         if (param0 <= 121) {
           return;
         }
-        aa var2 = new aa(this.dialogs);
-        FadingDialog var3 = (FadingDialog) (var2.b((byte) -92));
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.dialogs);
+        FadingDialog var3 = (FadingDialog) (var2.last((byte) -92));
         while (var3 != null) {
           if (var3.advanceDialogAnimation((byte) -20)) {
             var3.unlink((byte) -117);
           }
-          var3 = (FadingDialog) (var2.b(-112));
+          var3 = (FadingDialog) (var2.previous(-112));
         }
         this.child = (UiWidget) ((Object) this.getTopOpenDialog(110));
     }
@@ -260,8 +260,8 @@ final class DialogLayer extends SingleChildWidget {
         if (param0 != 15975) {
           connectionlostWithreason = (String) null;
         }
-        if (null != im.field_Ub) {
-          im.field_Ub.f(17517);
+        if (null != LobbyPlayer.field_Ub) {
+          LobbyPlayer.field_Ub.resetSelection(17517);
         }
         if (0 != hn.field_b) {
           cl.a(param0 ^ 1124);
@@ -270,18 +270,18 @@ final class DialogLayer extends SingleChildWidget {
     }
 
     final FadingDialog getTopOpenDialog(int param0) {
-        aa var2;
+        IntrusiveDequeCursor var2;
         FadingDialog var3;
         if (param0 < 101) {
           timerMinutesSeconds = (String) null;
         }
-        var2 = new aa(this.dialogs);
-        var3 = (FadingDialog) (var2.b((byte) -92));
+        var2 = new IntrusiveDequeCursor(this.dialogs);
+        var3 = (FadingDialog) (var2.last((byte) -92));
         while (var3 != null) {
           if (var3.dialogOpen) {
             return var3;
           }
-          var3 = (FadingDialog) (var2.b(-128));
+          var3 = (FadingDialog) (var2.previous(-128));
         }
         return null;
     }
@@ -293,23 +293,23 @@ final class DialogLayer extends SingleChildWidget {
         try {
           TextHotspotRegion.field_t = 0;
           int var1_int = 83 % ((17 - param0) / 34);
-          cm.field_J = null;
+          LocalGameSetupScreen.field_J = null;
           AccountWelcomePanel.field_S = 0;
-          cf.field_k.d((byte) 69);
+          SoundCache.field_k.d((byte) 69);
           jq.field_c.d((byte) 48);
-          var2 = df.field_b.a((byte) -125);
+          var2 = AimTarget.field_b.firstForIteration((byte) -125);
           while (var2 != null) {
             var2.a(false);
-            var2 = df.field_b.b(83);
+            var2 = AimTarget.field_b.nextForIteration(83);
           }
-          var2Lifetime1 = gd.field_c.a((byte) -125);
+          var2Lifetime1 = gd.field_c.firstForIteration((byte) -125);
           while (var2Lifetime1 != null) {
             var2Lifetime1.a(false);
-            var2Lifetime1 = gd.field_c.b(68);
+            var2Lifetime1 = gd.field_c.nextForIteration(68);
           }
           th.field_a = 0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "lq.GA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lq.GA(" + param0 + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class DialogLayer extends SingleChildWidget {
           var3.dialogOpen = true;
           var3.requestKeyboardFocus((UiWidget) (this), (byte) 66);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "lq.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "lq.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

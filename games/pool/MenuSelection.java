@@ -15,7 +15,7 @@ final class MenuSelection {
     boolean field_a;
     static int field_l;
 
-    public static void g(int param0) {
+    public static void releaseStatics(int param0) {
         mpOfferrematch = null;
         int var1 = 98 / ((param0 + 72) / 33);
         field_d = null;
@@ -43,7 +43,7 @@ final class MenuSelection {
         this.field_a = param0 ? true : false;
         this.keyCode = 0;
         if (this.heldCode == 0) {
-          this.keyCode = qi.field_a;
+          this.keyCode = IterableDualLinkDeque.field_a;
         }
     }
 
@@ -84,7 +84,7 @@ final class MenuSelection {
             this.heldCode = 0;
             if (this.heldCode == 0) {
               if (!this.pointerDriven &&
-                !re.field_c) {
+                !LoginPayload.field_c) {
                 return;
               }
               if (param1 < 0) {
@@ -108,7 +108,7 @@ final class MenuSelection {
             return;
           }
           if (!this.pointerDriven &&
-            !re.field_c) {
+            !LoginPayload.field_c) {
             return;
           }
           if (param1 < 0) {
@@ -131,7 +131,7 @@ final class MenuSelection {
             this.heldCode = 0;
             if (this.heldCode == 0) {
               if (!this.pointerDriven &&
-                !re.field_c) {
+                !LoginPayload.field_c) {
                 return;
               }
               if (param1 < 0) {
@@ -155,7 +155,7 @@ final class MenuSelection {
             return;
           }
           if (!this.pointerDriven &&
-            !re.field_c) {
+            !LoginPayload.field_c) {
             return;
           }
           if (param1 < 0) {
@@ -182,7 +182,7 @@ final class MenuSelection {
             return;
           }
           if (!this.pointerDriven &&
-            !re.field_c) {
+            !LoginPayload.field_c) {
             return;
           }
           if (param1 < 0) {
@@ -199,14 +199,14 @@ final class MenuSelection {
           this.selectedIndex = param1;
           return;
         }
-        this.field_i = kh.field_oc;
+        this.field_i = LobbyGame.field_oc;
         this.field_i = this.field_i - 1;
         if (MatchingTextValidator.field_s != 0) {
           if (this.heldCode != 0) {
             return;
           }
           if (!this.pointerDriven &&
-            !re.field_c) {
+            !LoginPayload.field_c) {
             return;
           }
           if (param1 < 0) {
@@ -231,7 +231,7 @@ final class MenuSelection {
             return;
           }
           if (!this.pointerDriven &&
-            !re.field_c) {
+            !LoginPayload.field_c) {
             return;
           }
           if (param1 < 0) {
@@ -256,7 +256,7 @@ final class MenuSelection {
           return;
         }
         if (!this.pointerDriven &&
-          !re.field_c) {
+          !LoginPayload.field_c) {
           return;
         }
         if (param1 < 0) {
@@ -288,17 +288,17 @@ final class MenuSelection {
               fr.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
             }
             if (param0 != -13953) {
-              MenuSelection.g(67);
+              MenuSelection.releaseStatics(67);
             }
             return;
           }
-          qi.a((byte) -80);
+          IterableDualLinkDeque.a((byte) -80);
           if (0 >= PoolMatchController.field_z) {
             if (nj.field_b > 0) {
               fr.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
             }
             if (param0 != -13953) {
-              MenuSelection.g(67);
+              MenuSelection.releaseStatics(67);
             }
             return;
           }
@@ -309,13 +309,13 @@ final class MenuSelection {
           if (param0 == -13953) {
             return;
           }
-          MenuSelection.g(67);
+          MenuSelection.releaseStatics(67);
           return;
         }
         if (0 < PoolMatchController.field_z) {
           PoolMatchController.field_z = PoolMatchController.field_z - 1;
           if (NodeHashTableIterator.field_a > 0) {
-            qi.a((byte) -80);
+            IterableDualLinkDeque.a((byte) -80);
           }
           if (0 < PoolMatchController.field_z) {
             fr.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
@@ -326,12 +326,12 @@ final class MenuSelection {
           if (param0 == -13953) {
             return;
           }
-          MenuSelection.g(67);
+          MenuSelection.releaseStatics(67);
           return;
         }
         if (nj.field_b <= 0) {
           if (NodeHashTableIterator.field_a > 0) {
-            qi.a((byte) -80);
+            IterableDualLinkDeque.a((byte) -80);
           }
           if (0 < PoolMatchController.field_z) {
             fr.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
@@ -339,7 +339,7 @@ final class MenuSelection {
         } else {
           nj.field_b = nj.field_b - 1;
           if (NodeHashTableIterator.field_a > 0) {
-            qi.a((byte) -80);
+            IterableDualLinkDeque.a((byte) -80);
             if (0 < PoolMatchController.field_z) {
               fr.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
             }
@@ -351,7 +351,7 @@ final class MenuSelection {
               if (param0 == -13953) {
                 return;
               }
-              MenuSelection.g(67);
+              MenuSelection.releaseStatics(67);
               return;
             }
             fr.$cfr$intArgs$a$e9dea5688aa5(-42, PoolMatchController.field_z);
@@ -361,13 +361,13 @@ final class MenuSelection {
           fr.$cfr$intArgs$a$e9dea5688aa5(-35, nj.field_b);
         }
         if (param0 != -13953) {
-          MenuSelection.g(67);
+          MenuSelection.releaseStatics(67);
         }
     }
 
     final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
-        vh var3 = null;
+        UiComponent var3 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -375,8 +375,8 @@ final class MenuSelection {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 24552) {
-            var3 = (vh) null;
-            MenuSelection.a(false, (vh) null);
+            var3 = (UiComponent) null;
+            MenuSelection.a(false, (UiComponent) null);
           }
           stackIn_5_0 = (null != CheckboxPainter.a(param0, param1 ^ 24553));
           return stackIn_5_0;
@@ -390,16 +390,16 @@ final class MenuSelection {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static boolean b(int param0) {
         if (param0 == -1) {
-          return null != oq.field_z ? true : false;
+          return null != CipherPacketBuffer.field_z ? true : false;
         }
         field_l = 96;
-        return null != oq.field_z ? true : false;
+        return null != CipherPacketBuffer.field_z ? true : false;
     }
 
     final boolean isLeftArrow(int param0) {
@@ -429,7 +429,7 @@ final class MenuSelection {
         this.keyCode = 0;
         if (this.heldCode != 0) {
           if (this.heldCode == 0 &&
-            98 == qi.field_a) {
+            98 == IterableDualLinkDeque.field_a) {
             if (this.selectedIndex <= 0) {
               this.selectedIndex = this.itemCount;
             }
@@ -438,7 +438,7 @@ final class MenuSelection {
             this.selectedIndex = this.selectedIndex - 1;
           }
         } else {
-          this.keyCode = qi.field_a;
+          this.keyCode = IterableDualLinkDeque.field_a;
           if (this.heldCode != 0) {
             if (param0 != -15525) {
               return;
@@ -446,7 +446,7 @@ final class MenuSelection {
             if (this.heldCode != 0) {
               return;
             }
-            if (qi.field_a != 99) {
+            if (IterableDualLinkDeque.field_a != 99) {
               return;
             }
             this.selectedIndex = this.selectedIndex + 1;
@@ -457,7 +457,7 @@ final class MenuSelection {
             this.field_a = true;
             return;
           }
-          if (98 == qi.field_a) {
+          if (98 == IterableDualLinkDeque.field_a) {
             if (this.selectedIndex <= 0) {
               this.selectedIndex = this.itemCount;
             }
@@ -470,7 +470,7 @@ final class MenuSelection {
           return;
         }
         if (this.heldCode == 0 &&
-          qi.field_a == 99) {
+          IterableDualLinkDeque.field_a == 99) {
           this.selectedIndex = this.selectedIndex + 1;
           this.pointerDriven = false;
           if (this.itemCount <= this.selectedIndex) {
@@ -480,20 +480,20 @@ final class MenuSelection {
         }
     }
 
-    final static void a(boolean param0, vh param1) {
+    final static void a(boolean param0, UiComponent param1) {
         try {
-          param1.field_N = 16777215;
-          param1.field_Fb = 1;
-          param1.field_I = (BitmapFont) ((Object) sa.field_h);
-          param1.field_F = rm.field_g;
-          param1.field_X = null;
+          param1.textColor = 16777215;
+          param1.horizontalAlignment = 1;
+          param1.font = (BitmapFont) ((Object) sa.field_h);
+          param1.frameSprites = rm.field_g;
+          param1.capturedFrameSprites = null;
           if (!param0) {
             field_d = (BufferedFile[]) null;
           }
-          param1.field_cb = 1;
-          param1.field_Gb = null;
+          param1.verticalAlignment = 1;
+          param1.activeFrameSprites = null;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ia.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ia.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -509,7 +509,7 @@ final class MenuSelection {
         if (param0 == -1) {
           return 97 == this.keyCode ? true : false;
         }
-        MenuSelection.g(19);
+        MenuSelection.releaseStatics(19);
         return 97 == this.keyCode ? true : false;
     }
 
@@ -535,13 +535,13 @@ final class MenuSelection {
         this.field_a = false;
         if (this.heldCode != 0) {
           if (this.heldCode == 0) {
-            this.keyCode = qi.field_a;
+            this.keyCode = IterableDualLinkDeque.field_a;
           }
           if (!param0) {
             return;
           }
           if (this.heldCode == 0 &&
-            97 == qi.field_a) {
+            97 == IterableDualLinkDeque.field_a) {
             this.selectedIndex = this.selectedIndex + 1;
             if (this.itemCount <= this.selectedIndex) {
               this.selectedIndex = 0;
@@ -552,7 +552,7 @@ final class MenuSelection {
           if (0 != this.heldCode) {
             return;
           }
-          if (qi.field_a == 98) {
+          if (IterableDualLinkDeque.field_a == 98) {
             this.pointerDriven = false;
             this.field_a = true;
             if (this.selectedIndex >= 0) {
@@ -561,7 +561,7 @@ final class MenuSelection {
             this.selectedIndex = param1;
             return;
           }
-          if (qi.field_a != 99) {
+          if (IterableDualLinkDeque.field_a != 99) {
             return;
           }
           this.pointerDriven = false;
@@ -571,15 +571,15 @@ final class MenuSelection {
           }
           return;
         }
-        if (qi.field_a != 96) {
+        if (IterableDualLinkDeque.field_a != 96) {
           if (this.heldCode == 0) {
-            this.keyCode = qi.field_a;
+            this.keyCode = IterableDualLinkDeque.field_a;
           }
           if (!param0) {
             return;
           }
           if (this.heldCode == 0 &&
-            97 == qi.field_a) {
+            97 == IterableDualLinkDeque.field_a) {
             this.selectedIndex = this.selectedIndex + 1;
             if (this.itemCount <= this.selectedIndex) {
               this.selectedIndex = 0;
@@ -590,7 +590,7 @@ final class MenuSelection {
           if (0 != this.heldCode) {
             return;
           }
-          if (qi.field_a == 98) {
+          if (IterableDualLinkDeque.field_a == 98) {
             this.pointerDriven = false;
             this.field_a = true;
             if (this.selectedIndex >= 0) {
@@ -599,7 +599,7 @@ final class MenuSelection {
             this.selectedIndex = param1;
             return;
           }
-          if (qi.field_a != 99) {
+          if (IterableDualLinkDeque.field_a != 99) {
             return;
           }
           this.pointerDriven = false;
@@ -616,13 +616,13 @@ final class MenuSelection {
         this.pointerDriven = false;
         this.field_a = true;
         if (this.heldCode == 0) {
-          this.keyCode = qi.field_a;
+          this.keyCode = IterableDualLinkDeque.field_a;
         }
         if (!param0) {
           return;
         }
         if (this.heldCode == 0 &&
-          97 == qi.field_a) {
+          97 == IterableDualLinkDeque.field_a) {
           this.selectedIndex = this.selectedIndex + 1;
           if (this.itemCount <= this.selectedIndex) {
             this.selectedIndex = 0;
@@ -631,7 +631,7 @@ final class MenuSelection {
           this.pointerDriven = false;
         }
         if (0 == this.heldCode) {
-          if (qi.field_a == 98) {
+          if (IterableDualLinkDeque.field_a == 98) {
             this.pointerDriven = false;
             this.field_a = true;
             if (this.selectedIndex >= 0) {
@@ -639,7 +639,7 @@ final class MenuSelection {
             }
             this.selectedIndex = param1;
           } else {
-            if (qi.field_a == 99) {
+            if (IterableDualLinkDeque.field_a == 99) {
               this.pointerDriven = false;
               this.field_a = true;
               if (this.selectedIndex < 0) {

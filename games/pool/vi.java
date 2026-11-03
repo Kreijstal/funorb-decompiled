@@ -3,7 +3,7 @@
  */
 final class vi {
     static String loginUsernameEmail;
-    static vh field_c;
+    static UiComponent field_c;
     static String searchingForOpponentsPlural;
     static String highscoreHeaderTime;
 
@@ -12,10 +12,10 @@ final class vi {
         if (param0 != -7414) {
           return;
         }
-        nd.field_i.d((byte) 66);
+        MarkerSliderPainter.field_i.d((byte) 66);
     }
 
-    final static byte a(char param0, boolean param1) {
+    final static byte encodeCp1252Char(char param0, boolean param1) {
         int var2;
         if (0 >= param0) {
           if (param0 >= 160 &&
@@ -439,7 +439,7 @@ final class vi {
         if (param0 <= 45) {
           return (String) null;
         }
-        return di.a(param3, 16, false, -118, param2, param1);
+        return ResourceArchive.a(param3, 16, false, -118, param2, param1);
     }
 
     static {

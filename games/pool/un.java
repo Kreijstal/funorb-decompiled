@@ -11,7 +11,7 @@ final class un {
     static String highscores;
     static int[] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_c = null;
         if (param0 < -90) {
           field_f = null;
@@ -41,19 +41,19 @@ final class un {
           }
           var3_int = 0;
           var4 = AccountContentDialog.field_wb;
-          while (qp.field_Sb.length > var3_int) {
+          while (QuickChatMenu.field_Sb.length > var3_int) {
             var5 = ll.field_a[var3_int];
             if (var5 < 0) {
-              var4 = var4 + ob.field_u;
+              var4 = var4 + MenuScreen.field_u;
             } else {
-              var6 = wm.a(true, param0 ^ -35, qp.field_Sb[var3_int]);
-              var7 = ad.field_u - (var6 >> 1);
+              var6 = ReportAbuseDialog.a(true, param0 ^ -35, QuickChatMenu.field_Sb[var3_int]);
+              var7 = ArchiveIndex.field_u - (var6 >> 1);
               var4 = var4 + bj.field_m;
-              if (ResizableDialog.a(param2, -59, kh.field_yc + (oc.field_B << 1), param1, var6 + (qi.field_g << 1), var4, -qi.field_g + var7)) {
+              if (ResizableDialog.a(param2, -59, LobbyGame.field_yc + (TriangleMesh.field_B << 1), param1, var6 + (IterableDualLinkDeque.field_g << 1), var4, -IterableDualLinkDeque.field_g + var7)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
-              var4 = var4 + (kh.field_yc + (oc.field_B << 1) + bj.field_m);
+              var4 = var4 + (LobbyGame.field_yc + (TriangleMesh.field_B << 1) + bj.field_m);
             }
             var3_int++;
           }
@@ -62,21 +62,21 @@ final class un {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var3), "un.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "un.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void b(int param0) {
         int var1 = 69 % ((param0 + 18) / 59);
-        if (im.field_fc == 0 - cl.field_h) {
-          im.field_fc = im.field_fc + 1;
+        if (LobbyPlayer.field_fc == 0 - cl.field_h) {
+          LobbyPlayer.field_fc = LobbyPlayer.field_fc + 1;
           return;
         }
-        if (im.field_fc == 250 - cl.field_h) {
-          im.field_fc = im.field_fc + 1;
+        if (LobbyPlayer.field_fc == 250 - cl.field_h) {
+          LobbyPlayer.field_fc = LobbyPlayer.field_fc + 1;
           return;
         }
-        im.field_fc = im.field_fc + 1;
+        LobbyPlayer.field_fc = LobbyPlayer.field_fc + 1;
     }
 
     final static void a(int param0) {
@@ -89,15 +89,15 @@ final class un {
     }
 
     final static void a(int param0, bj param1, byte param2) {
-        oq var3 = null;
+        CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = ej.field_j;
-          var3.b(false, param0);
+          var3 = JaggrabDownloader.field_j;
+          var3.writeCipheredOpcode(false, param0);
           var3.a(param1.field_n, false);
           var3.writeShort((byte) -81, param1.field_l);
           if (param2 == -51) {
@@ -115,7 +115,7 @@ final class un {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 

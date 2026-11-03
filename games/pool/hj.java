@@ -16,7 +16,7 @@ final class hj {
     static int[][] field_d;
 
     final static boolean a(int param0, int[] param1, long param2, String param3, byte param4) {
-        qp var6 = null;
+        QuickChatMenu var6 = null;
         RuntimeException var6_ref = null;
         CharSequence var7 = null;
         RuntimeException stackIn_12_0 = null;
@@ -38,9 +38,9 @@ final class hj {
             field_f = -23;
           }
           var7 = (CharSequence) ((Object) param3);
-          di.field_a = TutorialController.normalizeDisplayName(62, var7);
+          ResourceArchive.field_a = TutorialController.normalizeDisplayName(62, var7);
           c.field_d = param2;
-          var6 = ld.a((byte) 92, br.field_J, param1, tp.field_i, CushionSegment.field_c);
+          var6 = WhirlpoolHasher.a((byte) 92, LoginRequiredScreen.field_J, param1, tp.field_i, CushionSegment.field_c);
           CueStick.a(111, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,7 +59,7 @@ final class hj {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class hj {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 == -103) {
           field_d = (int[][]) null;
           definitionDefinitions = null;
@@ -92,10 +92,10 @@ final class hj {
           param0.removeFocusListener(wp.field_g);
           ho.field_v = 0;
           if (param1) {
-            hj.a((byte) -103);
+            hj.releaseStatics((byte) -103);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pk {
-    static vh field_a;
+    static UiComponent field_a;
     static String muOptionsRatedgametype;
     static Sprite field_b;
 
@@ -28,11 +28,11 @@ final class pk {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_b = null;
         muOptionsRatedgametype = null;
         int var1 = 77 % ((1 - param0) / 46);
@@ -41,7 +41,7 @@ final class pk {
 
     final static boolean b(byte param0) {
         if (param0 != 109) {
-          field_a = (vh) null;
+          field_a = (UiComponent) null;
           if (PlasmaTableScene.field_ab < 10) {
             return false;
           }

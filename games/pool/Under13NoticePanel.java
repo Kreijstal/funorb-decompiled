@@ -5,11 +5,11 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
     private ButtonWidget continueButton;
     static boolean field_T;
     static String rule13;
-    static vh field_Q;
+    static UiComponent field_Q;
     private fq owner;
     static String playerIsGroupName;
     static String orbpointsColon;
-    static di field_R;
+    static ResourceArchive field_R;
     static String muXRemoved;
     private HotspotTextWidget termsText;
 
@@ -21,7 +21,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.continueButton == param3) {
-            nm.a((byte) 41);
+            NineSliceFrame.a((byte) 41);
             this.owner.dismissDialog(17);
           }
           if (param0) {
@@ -39,7 +39,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -49,7 +49,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         var3 = Pool.field_O;
         rl.field_e = 0;
         dq.field_h = null;
-        mq.field_c = null;
+        AudioService.field_c = null;
         var2 = na.field_a;
         na.field_a = wn.field_h;
         if (param1 == 51) {
@@ -103,20 +103,20 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
         super(0, 0, 288, 0, (WidgetPainter) null);
         String var7 = null;
         int var3 = 0;
-        am var4 = null;
+        TextWidgetPainter var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
           this.owner = param0;
           this.continueButton = new ButtonWidget(WeightedLruCache.cont, (WidgetListener) null);
-          this.continueButton.renderer = (WidgetPainter) ((Object) new ng());
+          this.continueButton.renderer = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
           var7 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.h((byte) 44), this.g((byte) 99)}, -1, NodeHashTableIterator.createU13terms);
           var3 = 20;
-          var4 = new am(ValidationIconWidget.field_O, 0, 0, 0, 0, 16777215, -1, 3, 0, ValidationIconWidget.field_O.maxAscent, -1, 2147483647, true);
+          var4 = new TextWidgetPainter(ValidationIconWidget.field_O, 0, 0, 0, 0, 16777215, -1, 3, 0, ValidationIconWidget.field_O.maxAscent, -1, 2147483647, true);
           this.termsText = new HotspotTextWidget(var7, var4);
           this.termsText.hoverText = "";
-          this.termsText.setHotspotHoverText((byte) 68, cn.openinpopupwindow, 0);
-          this.termsText.setHotspotHoverText((byte) 66, cn.openinpopupwindow, 1);
+          this.termsText.setHotspotHoverText((byte) 68, DelegatingCanvas.openinpopupwindow, 0);
+          this.termsText.setHotspotHoverText((byte) 66, DelegatingCanvas.openinpopupwindow, 1);
           this.termsText.widgetWidth = -40 + this.widgetWidth;
           this.termsText.listener = (WidgetListener) (this);
           this.termsText.fitTextBounds(26, var3, this.widgetWidth - 40, -119);
@@ -129,7 +129,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
           this.addChild(true, this.continueButton);
           this.setWidgetBounds(300, 0, 55 + (var3 + var5), false, 0);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -146,17 +146,17 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
             Under13NoticePanel.a(true, -93);
           }
           if (0 == param3) {
-            ci.a("terms.ws", -128);
+            DebugTuningSlider.a("terms.ws", -128);
             return;
           }
           if (1 == param3) {
-            ci.a("privacy.ws", -127);
+            DebugTuningSlider.a("privacy.ws", -127);
             return;
           }
           if (param3 != 2) {
             return;
           }
-          ci.a("conduct.ws", -127);
+          DebugTuningSlider.a("conduct.ws", -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -168,7 +168,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class Under13NoticePanel extends WidgetContainer implements HotspotActivat
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

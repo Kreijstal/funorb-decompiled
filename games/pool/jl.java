@@ -5,10 +5,10 @@ final class jl {
     static String privatequickchatToX;
     static String playerListAreOut;
     static Sprite[][] field_d;
-    static rb field_e;
+    static ArchiveLoadSequence field_e;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         playerListAreOut = null;
         privatequickchatToX = null;
         field_e = null;
@@ -16,14 +16,14 @@ final class jl {
           field_d = (Sprite[][]) null;
           return;
         }
-        field_e = (rb) null;
+        field_e = (ArchiveLoadSequence) null;
         field_d = (Sprite[][]) null;
     }
 
-    final static boolean a(byte param0, di param1, int param2) {
+    final static boolean a(byte param0, ResourceArchive param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        di var4 = null;
+        ResourceArchive var4 = null;
         byte[] var5 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -31,8 +31,8 @@ final class jl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 5) {
-            var4 = (di) null;
-            jl.a((byte) -59, (di) null, -110);
+            var4 = (ResourceArchive) null;
+            jl.a((byte) -59, (ResourceArchive) null, -110);
           }
           var5 = param1.b(param2, -31413);
           var3 = var5;
@@ -51,7 +51,7 @@ final class jl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 

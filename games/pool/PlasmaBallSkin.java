@@ -8,7 +8,7 @@ final class PlasmaBallSkin extends BallSkin {
     static String muRequestWithdrawn;
     static String playerColon;
     static volatile boolean field_q;
-    static kn field_m;
+    static PlayerContextMenu field_m;
     private static int[][] field_n;
     static IndexedSprite[] field_l;
     static String muGamelistAllGames;
@@ -63,29 +63,29 @@ final class PlasmaBallSkin extends BallSkin {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
-    final void a(int param0, di param1) {
+    final void a(int param0, ResourceArchive param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          sa.field_q = pf.a("", (byte) 101, "grad_ball_purple", param1).field_D;
-          om.field_r = pf.a("", (byte) 113, "grad_ball_blue", param1).field_D;
-          PotEvent.field_p = pf.a("", (byte) 126, "grad_ball_red", param1).field_D;
-          ae.field_e = pf.a("", (byte) 86, "grad_ball_white", param1).field_D;
-          bc.field_c = pf.a("", (byte) 68, "grad_lightning_purple", param1).field_D;
+          sa.field_q = WidgetStyleLayer.loadSprite("", (byte) 101, "grad_ball_purple", param1).field_D;
+          om.field_r = WidgetStyleLayer.loadSprite("", (byte) 113, "grad_ball_blue", param1).field_D;
+          PotEvent.field_p = WidgetStyleLayer.loadSprite("", (byte) 126, "grad_ball_red", param1).field_D;
+          ae.field_e = WidgetStyleLayer.loadSprite("", (byte) 86, "grad_ball_white", param1).field_D;
+          bc.field_c = WidgetStyleLayer.loadSprite("", (byte) 68, "grad_lightning_purple", param1).field_D;
           if (param0 != 198123656) {
             field_p = (boolean[]) null;
           }
-          dq.field_i = pf.a("", (byte) 46, "grad_lightning_blue", param1).field_D;
-          v.field_a = pf.a("", (byte) 53, "grad_lightning_red", param1).field_D;
-          jc.field_i = pf.a("", (byte) 37, "grad_lightning_white", param1).field_D;
-          this.field_e = aj.a(0, "", param1, "top_bar_balls_plasma");
+          dq.field_i = WidgetStyleLayer.loadSprite("", (byte) 46, "grad_lightning_blue", param1).field_D;
+          LimitedRandomAccessFile.field_a = WidgetStyleLayer.loadSprite("", (byte) 53, "grad_lightning_red", param1).field_D;
+          jc.field_i = WidgetStyleLayer.loadSprite("", (byte) 37, "grad_lightning_white", param1).field_D;
+          this.field_e = NameEntryPopup.a(0, "", param1, "top_bar_balls_plasma");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,7 +97,7 @@ final class PlasmaBallSkin extends BallSkin {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class PlasmaBallSkin extends BallSkin {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -156,9 +156,9 @@ final class PlasmaBallSkin extends BallSkin {
                   om.a(-96, false);
                   if (param0 < 0) {
                     SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
-                    s.field_c[param0].b((byte) 108);
+                    s.field_c[param0].darkenBackground((byte) 108);
                   } else {
-                    s.field_c[param0].b((byte) 108);
+                    s.field_c[param0].darkenBackground((byte) 108);
                   }
                 }
               }} else {
@@ -166,13 +166,13 @@ final class PlasmaBallSkin extends BallSkin {
               if (param0 < 0) {
                 SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
                 if (var5 != 0) {
-                  s.field_c[param0].b((byte) 108);
+                  s.field_c[param0].darkenBackground((byte) 108);
                 }
               } else {
-                s.field_c[param0].b((byte) 108);
+                s.field_c[param0].darkenBackground((byte) 108);
               }
             }
-            s.field_c[param0].c(param1 ^ -21891);
+            s.field_c[param0].drawScreen(param1 ^ -21891);
             if (var5 == 0) {
               return;
             }
@@ -182,7 +182,7 @@ final class PlasmaBallSkin extends BallSkin {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var4), "vl.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var4), "vl.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -223,7 +223,7 @@ final class PlasmaBallSkin extends BallSkin {
           }
           if (param1.charAt(0) == 34) {
             if (param1.charAt(-1 + var2_int) != 34) {
-              stackIn_16_0 = pj.field_K;
+              stackIn_16_0 = MessageScreen.field_K;
               return stackIn_16_0;
             }
             var3 = 0;
@@ -238,7 +238,7 @@ final class PlasmaBallSkin extends BallSkin {
                 var6 != 0) {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_36_0 = pj.field_K;
+                  stackIn_36_0 = MessageScreen.field_K;
                   return stackIn_36_0;
                 }
                 var3 = 0;
@@ -268,13 +268,13 @@ final class PlasmaBallSkin extends BallSkin {
                 var3Lifetime1 = 1;
                 decompiledFrameRemainder0 = (var6 != 0);
               } else {
-                stackIn_57_0 = pj.field_K;
+                stackIn_57_0 = MessageScreen.field_K;
                 return stackIn_57_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (dj.field_b.indexOf(var5Lifetime1) == -1) {
-                stackIn_63_0 = pj.field_K;
+                stackIn_63_0 = MessageScreen.field_K;
                 return stackIn_63_0;
               }
               var3Lifetime1 = 0;
@@ -297,7 +297,7 @@ final class PlasmaBallSkin extends BallSkin {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
         }
     }
 
@@ -437,7 +437,7 @@ final class PlasmaBallSkin extends BallSkin {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -477,7 +477,7 @@ final class PlasmaBallSkin extends BallSkin {
           }
           for (var5Lifetime1 = 1; (var4 - 1) > var5Lifetime1; var5Lifetime1++) {
             var2_int = var5Lifetime1 - var4 / 2;
-            var6Lifetime1 = rf.a(65536 - (var2_int * var2_int << 16) / (var4 * var4 / 4), -120) * 8 >> 13 >> 1;
+            var6Lifetime1 = rf.inverseSquareRoot(65536 - (var2_int * var2_int << 16) / (var4 * var4 / 4), -120) * 8 >> 13 >> 1;
             for (var7 = 0; var7 < hj.field_d.length; var7++) {
               if (var6Lifetime1 > 0) {
                 hj.field_d[var7][var5Lifetime1] = hj.field_d[var7][var5Lifetime1] + hj.field_d[var7][-1 + var5Lifetime1] >> 1;
@@ -507,7 +507,7 @@ final class PlasmaBallSkin extends BallSkin {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "vl.CA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "vl.CA(" + param0 + ')');
         }
     }
 
@@ -522,7 +522,7 @@ final class PlasmaBallSkin extends BallSkin {
           muGamelistAllGames = null;
           field_m = null;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vl.E(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vl.E(" + param0 + ')');
         }
     }
 
@@ -580,7 +580,7 @@ final class PlasmaBallSkin extends BallSkin {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -605,7 +605,7 @@ final class PlasmaBallSkin extends BallSkin {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var3), "vl.W(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "vl.W(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -658,7 +658,7 @@ final class PlasmaBallSkin extends BallSkin {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -672,11 +672,11 @@ final class PlasmaBallSkin extends BallSkin {
             return;
           }
           if (fc.field_b != null) {
-            var3_int = fc.field_b.a(param2, -27403);
+            var3_int = fc.field_b.updateAndPollReason(param2, -27403);
             if (var3_int != -2) {
               if (var3_int != -1) {
-                var4 = fc.field_b.g(-10459) ? 1 : 0;
-                ValidationIconWidget.a(var4 != 0, fc.field_b.h(1), var3_int, param1, fc.field_b.field_Lb, -121);
+                var4 = fc.field_b.isMuteRequested(-10459) ? 1 : 0;
+                ValidationIconWidget.a(var4 != 0, fc.field_b.getReportedName(1), var3_int, param1, fc.field_b.reportTargetId, -121);
               }
               fc.field_b = null;
               ProgressDialog.m(8421504);
@@ -686,7 +686,7 @@ final class PlasmaBallSkin extends BallSkin {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) runtimeException), "vl.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vl.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -749,7 +749,7 @@ final class PlasmaBallSkin extends BallSkin {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var3), "vl.A(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "vl.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -807,7 +807,7 @@ final class PlasmaBallSkin extends BallSkin {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -820,21 +820,21 @@ final class PlasmaBallSkin extends BallSkin {
         RuntimeException decompiledCaughtException = null;
         var6 = Pool.field_O;
         try {
-          var1_long = rl.a((byte) -101);
+          var1_long = rl.monotonicTimeMillis((byte) -101);
           if (param0 != 12000) {
             PlasmaBallSkin.i(32);
           }
-          var3 = var1_long - db.field_Pb;
+          var3 = var1_long - VerticalScrollbar.field_Pb;
           if (var3 <= 30000L) {
             boolean decompiledFrameRemainder0 = true;
             var5 = 3000;
-            if (7 <= up.field_j) {
+            if (7 <= CachedArchiveSource.field_j) {
               var5 = 12000;
               decompiledFrameRemainder0 = (var6 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (5 > up.field_j) {
-                if (!(up.field_j < 3)) {
+              if (5 > CachedArchiveSource.field_j) {
+                if (!(CachedArchiveSource.field_j < 3)) {
                   var5 = 6000;
                   if (var6 != 0) {
                     var5 = 9000;
@@ -845,21 +845,21 @@ final class PlasmaBallSkin extends BallSkin {
               }
             }
             if (var3 > (long)var5) {
-              db.field_Pb = var1_long;
-              up.field_j = up.field_j + 1;
+              VerticalScrollbar.field_Pb = var1_long;
+              CachedArchiveSource.field_j = CachedArchiveSource.field_j + 1;
               return true;
             }
             if (var6 == 0) {
               return false;
             }
           }
-          up.field_j = 0;
-          db.field_Pb = var1_long;
+          CachedArchiveSource.field_j = 0;
+          VerticalScrollbar.field_Pb = var1_long;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "vl.GA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "vl.GA(" + param0 + ')');
         }
     }
 
@@ -876,7 +876,7 @@ final class PlasmaBallSkin extends BallSkin {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "vl.P(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "vl.P(" + param0 + ')');
         }
     }
 
@@ -931,7 +931,7 @@ final class PlasmaBallSkin extends BallSkin {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -946,7 +946,7 @@ final class PlasmaBallSkin extends BallSkin {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "vl.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "vl.B(" + param0 + ')');
         }
     }
 
@@ -996,7 +996,7 @@ final class PlasmaBallSkin extends BallSkin {
               }
             }
             if (decompiledFrameRemainder0) {
-              stackIn_80_0 = v.field_a;
+              stackIn_80_0 = LimitedRandomAccessFile.field_a;
               return stackIn_80_0;
             }
           }
@@ -1005,7 +1005,7 @@ final class PlasmaBallSkin extends BallSkin {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var3), "vl.T(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "vl.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1032,7 +1032,7 @@ final class PlasmaBallSkin extends BallSkin {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var3), "vl.G(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var3), "vl.G(" + param0 + ',' + param1 + ')');
         }
     }
 

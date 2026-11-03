@@ -13,22 +13,22 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
     private boolean errorContentInstalled;
 
     final static void o(byte param0) {
-        kh.field_Vb = new vh("decision box", (vh) null);
-        MenuSelection.a(true, kh.field_Vb);
-        NanoTickClock.field_t = new vh("decision button a", (vh) null);
-        rl.field_b = new vh("decision button b", (vh) null);
+        LobbyGame.field_Vb = new UiComponent("decision box", (UiComponent) null);
+        MenuSelection.a(true, LobbyGame.field_Vb);
+        NanoTickClock.field_t = new UiComponent("decision button a", (UiComponent) null);
+        rl.field_b = new UiComponent("decision button b", (UiComponent) null);
         if (param0 < -103) {
           ar.a(29022, NanoTickClock.field_t);
           ar.a(29022, rl.field_b);
-          kh.field_Vb.a(-104, NanoTickClock.field_t);
-          kh.field_Vb.a(-104, rl.field_b);
+          LobbyGame.field_Vb.addChild(-104, NanoTickClock.field_t);
+          LobbyGame.field_Vb.addChild(-104, rl.field_b);
           return;
         }
         MessageDialog.o((byte) -98);
         ar.a(29022, NanoTickClock.field_t);
         ar.a(29022, rl.field_b);
-        kh.field_Vb.a(-104, NanoTickClock.field_t);
-        kh.field_Vb.a(-104, rl.field_b);
+        LobbyGame.field_Vb.addChild(-104, NanoTickClock.field_t);
+        LobbyGame.field_Vb.addChild(-104, rl.field_b);
     }
 
     final boolean handleKeyInput(char param0, int param1, boolean param2, UiWidget param3) {
@@ -58,7 +58,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -137,16 +137,16 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               if (!this.field_sb) {
                 stackIn_11_2 = CueStick.back;
               } else {
-                stackIn_11_2 = ap.retry;
+                stackIn_11_2 = QuickChatPhraseDefinition.retry;
               }
               ((MessageDialogContent) (Object) stackIn_10_0).addActionButton(stackIn_10_1, stackIn_11_2, 1);
             } else {
-              var5.addButton(ap.retry, -101, (WidgetListener) (this));
+              var5.addButton(QuickChatPhraseDefinition.retry, -101, (WidgetListener) (this));
             }
           }
           if (param1 != 3) {
             if (4 == param1) {
-              var5.addActionButton(8, lg.playfreeversion, 1);
+              var5.addActionButton(8, StatefulTextPainter.playfreeversion, 1);
             } else {
               if (param1 == 6) {
                 var5.addActionButton(9, e.tocustomersupport, 1);
@@ -155,11 +155,11 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                   this.replaceContent(var5, 30);
                   return;
                 }
-                var5.addButton(lg.changedisplayname, -94, (WidgetListener) (this));
+                var5.addButton(StatefulTextPainter.changedisplayname, -94, (WidgetListener) (this));
               }
             }
           } else {
-            var5.addActionButton(7, o.toserverlist, 1);
+            var5.addActionButton(7, UiComponentNode.toserverlist, 1);
           }
           this.replaceContent(var5, 30);
           return;
@@ -173,7 +173,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -205,7 +205,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           this.statusProgressBar.animationEnabled = true;
           this.addChild(true, this.statusProgressBar);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "qq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "qq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

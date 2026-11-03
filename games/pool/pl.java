@@ -3,18 +3,18 @@
  */
 final class pl {
     static String field_f;
-    static vh field_b;
+    static UiComponent field_b;
     static Sprite field_a;
     static String pleaselogin;
     static String tutorialNineBallPottingABall;
     static String menuTimeTrialWithoutGuides;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         tutorialNineBallPottingABall = null;
         if (param0 != -23334) {
           CharSequence var2 = (CharSequence) null;
-          pl.a((CharSequence) null, -41, ';');
+          pl.countOccurrences((CharSequence) null, -41, ';');
         }
         pleaselogin = null;
         menuTimeTrialWithoutGuides = null;
@@ -22,7 +22,7 @@ final class pl {
         field_a = null;
     }
 
-    final static int a(CharSequence param0, int param1, char param2) {
+    final static int countOccurrences(CharSequence param0, int param1, char param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -39,7 +39,7 @@ final class pl {
           var5 = 0;
           if (param1 > -69) {
             var6 = (CharSequence) null;
-            pl.a((CharSequence) null, 35, 'ﾢ');
+            pl.countOccurrences((CharSequence) null, 35, 'ﾢ');
           }
           while (var5 < var4) {
             if (param0.charAt(var5) == param2) {
@@ -59,11 +59,11 @@ final class pl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(int[] param0, int param1, int param2, int[] param3, int param4, int[] param5, int[] param6, int[] param7, int param8, int[] param9, int param10, int[] param11) {
+    final static void projectVertices(int[] param0, int param1, int param2, int[] param3, int param4, int[] param5, int[] param6, int[] param7, int param8, int[] param9, int param10, int[] param11) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -163,7 +163,7 @@ final class pl {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 

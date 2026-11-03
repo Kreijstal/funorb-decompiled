@@ -21,7 +21,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) runtimeException), "ga.N(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ga.N(" + param0 + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -71,19 +71,19 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "ga.L(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ga.L(" + param0 + ')');
         }
     }
 
     final static void b(boolean param0) {
         try {
-          be.f(-1);
+          OptionsScreen.f(-1);
           DualLinkDeque.field_c = true;
           ro.field_e = true;
-          wd.field_Ub.hideAllDialogs(-22216);
+          TabbedPane.field_Ub.hideAllDialogs(-22216);
           wf.a(param0, na.connectionlostReconnecting, -127);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ga.LA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ga.LA(" + param0 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
         int fieldTemp$1 = 0;
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        oq var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -100,20 +100,20 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
         String var4_ref_String = null;
         int var4 = 0;
         String var5 = null;
-        eo var6 = null;
+        SocialListEntry var6 = null;
         String var7 = null;
-        eo var7_ref = null;
+        SocialListEntry var7_ref = null;
         String var8 = null;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
         String var5Lifetime1;
-        eo var6Lifetime1;
+        SocialListEntry var6Lifetime1;
         try {
-          var1 = kn.field_e;
+          var1 = PlayerContextMenu.field_e;
           var2 = var1.readUnsignedByte(-125);
           if (var2 == 0) {
             if (gd.field_c == null) {
-              gd.field_c = new tk(128);
+              gd.field_c = new DualLinkNodeHashTable(128);
               TextHotspotRegion.field_t = 0;
             }
             stackIn_10_0 = (1 != var1.readUnsignedByte(-91)) ? 0 : 1;
@@ -133,20 +133,20 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
             if (null == var6) {
               var6 = CheckboxPainter.a(var7, 1);
               if (var6 != null) {
-                gd.field_c.a(-6946, (long)var8.hashCode(), var6);
+                gd.field_c.put(-6946, (long)var8.hashCode(), var6);
               }
             }
             if (null == var6) {
-              var6 = new eo();
-              gd.field_c.a(param0 ^ -28521, (long)var8.hashCode(), var6);
+              var6 = new SocialListEntry();
+              gd.field_c.put(param0 ^ -28521, (long)var8.hashCode(), var6);
               fieldTemp$0 = TextHotspotRegion.field_t;
               TextHotspotRegion.field_t = TextHotspotRegion.field_t + 1;
-              var6.field_Mb = fieldTemp$0;
+              var6.insertionIndex = fieldTemp$0;
               jq.field_c.b((byte) -31, var6);
             }
-            var6.field_Yb = var5;
-            var6.field_Sb = var7;
-            var6.field_Zb = var4_ref_String;
+            var6.actionName = var5;
+            var6.previousName = var7;
+            var6.name = var4_ref_String;
             return;
           }
           if (var2 != 1) {
@@ -166,19 +166,19 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
               ga.a((int[]) null, (int[]) null, true);
             }
             if (var2 != 4) {
-              tc.a((Throwable) null, "F1: " + t.a(93), param0 ^ -21796);
+              GrowableIntList.reportClientError((Throwable) null, "F1: " + t.formatPacketDump(93), param0 ^ -21796);
               dn.c(99);
               return;
             }
             th.field_a = 1;
             var3 = var1.j(-118);
-            cm.field_J = ((String) (var3)).intern();
+            LocalGameSetupScreen.field_J = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-84);
-            vd.a((byte) 78, var4);
+            DialRenderer.a((byte) 78, var4);
             return;
           }
-          if (df.field_b == null) {
-            df.field_b = new tk(128);
+          if (AimTarget.field_b == null) {
+            AimTarget.field_b = new DualLinkNodeHashTable(128);
             AccountWelcomePanel.field_S = 0;
           }
           var3Lifetime1 = var1.j(-101);
@@ -191,42 +191,42 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = gf.a(92, var5Lifetime1);
             if (null != var6Lifetime1) {
-              df.field_b.a(-6946, (long)TutorialController.normalizeDisplayName(123, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6Lifetime1);
+              AimTarget.field_b.put(-6946, (long)TutorialController.normalizeDisplayName(123, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6Lifetime1);
             }
           }
           if (null == var6Lifetime1) {
-            var6Lifetime1 = new eo();
-            df.field_b.a(-6946, (long)TutorialController.normalizeDisplayName(param0 ^ 29715, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6Lifetime1);
+            var6Lifetime1 = new SocialListEntry();
+            AimTarget.field_b.put(-6946, (long)TutorialController.normalizeDisplayName(param0 ^ 29715, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6Lifetime1);
             fieldTemp$1 = AccountWelcomePanel.field_S;
             AccountWelcomePanel.field_S = AccountWelcomePanel.field_S + 1;
-            var6Lifetime1.field_Mb = fieldTemp$1;
-            cf.field_k.b((byte) -24, var6Lifetime1);
+            var6Lifetime1.insertionIndex = fieldTemp$1;
+            SoundCache.field_k.b((byte) -24, var6Lifetime1);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
-          var6Lifetime1.field_Wb = (String) (var3Lifetime1);
-          var6Lifetime1.field_Zb = var4_ref_StringLifetime1;
-          var6Lifetime1.field_Sb = var5Lifetime1;
+          var6Lifetime1.serverName = (String) (var3Lifetime1);
+          var6Lifetime1.name = var4_ref_StringLifetime1;
+          var6Lifetime1.previousName = var5Lifetime1;
           var6Lifetime1.unlink((byte) -117);
-          var7_ref = (eo) (cf.field_k.c((byte) -125));
+          var7_ref = (SocialListEntry) (SoundCache.field_k.c((byte) -125));
           while (var7_ref != null) {
             if (MessageDialogContent.a(var6Lifetime1, var7_ref, 83)) {
-              var7_ref = (eo) (cf.field_k.f((byte) -5));
+              var7_ref = (SocialListEntry) (SoundCache.field_k.f((byte) -5));
               continue;
             }
             break;
           }
           if (var7_ref == null) {
-            cf.field_k.b((byte) 85, var6Lifetime1);
+            SoundCache.field_k.b((byte) 85, var6Lifetime1);
           } else {
-            vj.a(var6Lifetime1, (byte) -119, var7_ref);
+            TextLineLayout.insertAfter(var6Lifetime1, (byte) -119, var7_ref);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1_ref), "ga.RA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "ga.RA(" + param0 + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
           do {
             var4 = param2.nextInt();
           } while (var4 >= var3_int);
-          stackIn_16_0 = aj.a(true, param0, var4);
+          stackIn_16_0 = NameEntryPopup.a(true, param0, var4);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,7 +269,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -285,7 +285,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "ga.KA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "ga.KA(" + param0 + ')');
         }
     }
 
@@ -335,7 +335,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -362,18 +362,18 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void m(int param0) {
         jc.field_e = new Quaternion(ga.nextRandomInt(262144, true, ea.field_r) - 131072, -131072 + ga.nextRandomInt(262144, true, ea.field_r), -131072 + ga.nextRandomInt(262144, true, ea.field_r), -131072 + ga.nextRandomInt(262144, true, ea.field_r));
         jc.field_e.normalise(true);
-        tf.field_a = dq.field_a;
-        if (tf.field_a == null) {
-          tf.field_a = PoolGameModel.field_B[0];
+        LoginPayloadKind.field_a = dq.field_a;
+        if (LoginPayloadKind.field_a == null) {
+          LoginPayloadKind.field_a = PoolGameModel.field_B[0];
         }
-        vn.field_e = ga.nextRandomInt(tf.field_a.b(param0 + 23883), true, ea.field_r);
+        vn.field_e = ga.nextRandomInt(LoginPayloadKind.field_a.b(param0 + 23883), true, ea.field_r);
         tp.field_h[1] = 0;
         tp.field_h[0] = -140;
         CushionSegment.field_i = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
@@ -383,7 +383,7 @@ final class ga extends TextInputWidget implements ValidationProviderSource {
         try {
           tp.field_h[2] = 128;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ga.PA(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ga.PA(" + param0 + ')');
         }
     }
 

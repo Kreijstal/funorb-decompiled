@@ -3,7 +3,7 @@
  */
 final class MultiHandleSliderWidget extends ButtonWidget {
     static int[] field_T;
-    private tc handleValues;
+    private GrowableIntList handleValues;
     static int[] field_N;
     static String justplay;
     static int field_V;
@@ -16,11 +16,11 @@ final class MultiHandleSliderWidget extends ButtonWidget {
 
     final int getHandleCount(int param0) {
         if (param0 == 0) {
-          return this.handleValues.a((byte) 98);
+          return this.handleValues.size((byte) 98);
         }
         UiWidget var3 = (UiWidget) null;
         this.handlePointerPress((UiWidget) null, -110, false, -50, 44, -90, -14);
-        return this.handleValues.a((byte) 98);
+        return this.handleValues.size((byte) 98);
     }
 
     final boolean handlePointerPress(UiWidget param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
@@ -54,8 +54,8 @@ final class MultiHandleSliderWidget extends ButtonWidget {
             if (param3 == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.handleValues.a((byte) 87) > var12; var12++) {
-                var13 = -var8_int + this.handleValues.a(var12, 2229);
+              for (var12 = 0; this.handleValues.size((byte) 87) > var12; var12++) {
+                var13 = -var8_int + this.handleValues.get(var12, 2229);
                 var13 = var13 * var13;
                 if (var10 > var13) {
                   var11 = var12;
@@ -65,10 +65,10 @@ final class MultiHandleSliderWidget extends ButtonWidget {
               if (var11 < 0) {
                 return true;
               }
-              this.handleValues.c(var11, 40);
+              this.handleValues.removeAt(var11, 40);
             }
           } else {
-            this.handleValues.a((byte) -2, var8_int);
+            this.handleValues.add((byte) -2, var8_int);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -81,11 +81,11 @@ final class MultiHandleSliderWidget extends ButtonWidget {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         hsFriendTip = null;
         field_W = null;
         field_N = null;
@@ -121,24 +121,24 @@ final class MultiHandleSliderWidget extends ButtonWidget {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        oq var6 = null;
+        CipherPacketBuffer var6 = null;
         CharSequence var7 = null;
         try {
           var7 = (CharSequence) ((Object) param0);
           if (!ProgressBarWidget.a(-25908, var7)) {
-            stackIn_2_0 = p.invalidName;
+            stackIn_2_0 = ModelInstance.invalidName;
             return stackIn_2_0;
           }
           if (2 != th.field_a) {
             stackIn_6_0 = AgeValidator.unableToAddFriend;
             return stackIn_6_0;
           }
-          if (or.a((byte) 3, param0)) {
-            stackIn_10_0 = fn.cannotAddYourself;
+          if (BallEvent.a((byte) 3, param0)) {
+            stackIn_10_0 = QuickChatHelpDialog.cannotAddYourself;
             return stackIn_10_0;
           }
           if (DialogLayer.a(param0, -1)) {
-            stackIn_13_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, tl.friendlistdupe);
+            stackIn_13_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, RankingsScreen.friendlistdupe);
             return stackIn_13_0;
           }
           if (AccountWelcomePanel.field_S >= 100 &&
@@ -154,8 +154,8 @@ final class MultiHandleSliderWidget extends ButtonWidget {
             stackIn_26_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, DisplayNamePanel.removeignorefirst);
             return stackIn_26_0;
           }
-          var6 = ej.field_j;
-          var6.b(false, param1);
+          var6 = JaggrabDownloader.field_j;
+          var6.writeCipheredOpcode(false, param1);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.a(0, false);
@@ -174,7 +174,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
         RuntimeException decompiledCaughtException = null;
         var4 = Pool.field_O;
         try {
-          var5 = (ho) (pj.field_H.c((byte) -88));
+          var5 = (ho) (MessageScreen.field_H.c((byte) -88));
           var1 = var5;
           if (var1 == null) {
             return false;
@@ -210,38 +210,38 @@ final class MultiHandleSliderWidget extends ButtonWidget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1_ref), "va.F(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1_ref), "va.F(" + param0 + ')');
         }
     }
 
-    final static void a(boolean param0, vh param1, vh param2) {
+    final static void a(boolean param0, UiComponent param1, UiComponent param2) {
         try {
           if (param0) {
             field_T = (int[]) null;
           }
-          param2.field_eb = -param2.field_Db + param1.field_Db >> 1;
+          param2.localY = -param2.height + param1.height >> 1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "va.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "va.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final int getHandleValueAt(byte param0, int param1) {
         if (param0 > -22) {
-          vh var4 = (vh) null;
-          MultiHandleSliderWidget.a(true, (vh) null, (vh) null);
+          UiComponent var4 = (UiComponent) null;
+          MultiHandleSliderWidget.a(true, (UiComponent) null, (UiComponent) null);
           if (0 > param1) {
             return -1;
           }
-          if (param1 < this.handleValues.a((byte) 127)) {
-            return this.handleValues.a(param1, 2229);
+          if (param1 < this.handleValues.size((byte) 127)) {
+            return this.handleValues.get(param1, 2229);
           }
           return -1;
         }
         if (0 > param1) {
           return -1;
         }
-        if (param1 < this.handleValues.a((byte) 127)) {
-          return this.handleValues.a(param1, 2229);
+        if (param1 < this.handleValues.size((byte) 127)) {
+          return this.handleValues.get(param1, 2229);
         }
         return -1;
     }

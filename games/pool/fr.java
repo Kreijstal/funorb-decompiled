@@ -71,12 +71,12 @@ final class fr extends IntrusiveNode {
     }
 
     final static void a(int param0, kg param1, int param2) {
-        oq var6 = null;
+        CipherPacketBuffer var6 = null;
         int var4 = 0;
         try {
-          var6 = ej.field_j;
-          oq var3 = var6;
-          var6.b(false, param2);
+          var6 = JaggrabDownloader.field_j;
+          CipherPacketBuffer var3 = var6;
+          var6.writeCipheredOpcode(false, param2);
           var6.position = var6.position + 1;
           var4 = var6.position;
           var6.a(1, false);
@@ -92,7 +92,7 @@ final class fr extends IntrusiveNode {
           param1.field_o = var6.readInt(true);
           var6.b(-var4 + var6.position, true);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "fr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -105,15 +105,15 @@ final class fr extends IntrusiveNode {
         if (param0 <= -21) {
           var3 = BufferedFile.field_h * BufferedFile.field_h;
           var4 = var3 - param1 * param1;
-          so.field_k.b(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
-          uq.field_f.b(0, 2147483647, 202 + (var2 + 438 * var4 / var3), 438, -120 + SoftwareRasterizer.height - 4);
+          so.field_k.setBounds(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
+          Bzip2DecoderState.field_f.setBounds(0, 2147483647, 202 + (var2 + 438 * var4 / var3), 438, -120 + SoftwareRasterizer.height - 4);
           return;
         }
         field_s = -62;
         var3Lifetime1 = BufferedFile.field_h * BufferedFile.field_h;
         var4Lifetime1 = var3Lifetime1 - param1 * param1;
-        so.field_k.b(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
-        uq.field_f.b(0, 2147483647, 202 + (var2 + 438 * var4Lifetime1 / var3Lifetime1), 438, -120 + SoftwareRasterizer.height - 4);
+        so.field_k.setBounds(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
+        Bzip2DecoderState.field_f.setBounds(0, 2147483647, 202 + (var2 + 438 * var4Lifetime1 / var3Lifetime1), 438, -120 + SoftwareRasterizer.height - 4);
     }
 
     public static void c(byte param0) {
@@ -131,7 +131,7 @@ final class fr extends IntrusiveNode {
           this.field_l = param2;
           this.field_r = param1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "fr.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fr.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -151,14 +151,14 @@ final class fr extends IntrusiveNode {
         if (param0 <= -21) {
           var3 = BufferedFile.field_h * BufferedFile.field_h;
           var4 = var3 - param1 * param1;
-          so.field_k.b(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
-          uq.field_f.b(0, 2147483647, 202 + (var2 + 438 * var4 / var3), 438, -120 + SoftwareRasterizer.height - 4);
+          so.field_k.setBounds(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
+          Bzip2DecoderState.field_f.setBounds(0, 2147483647, 202 + (var2 + 438 * var4 / var3), 438, -120 + SoftwareRasterizer.height - 4);
           return;
         }
         field_s = -62;
         var3Lifetime1 = BufferedFile.field_h * BufferedFile.field_h;
         var4Lifetime1 = var3Lifetime1 - param1 * param1;
-        so.field_k.b(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
-        uq.field_f.b(0, 2147483647, 202 + (var2 + 438 * var4Lifetime1 / var3Lifetime1), 438, -120 + SoftwareRasterizer.height - 4);
+        so.field_k.setBounds(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
+        Bzip2DecoderState.field_f.setBounds(0, 2147483647, 202 + (var2 + 438 * var4Lifetime1 / var3Lifetime1), 438, -120 + SoftwareRasterizer.height - 4);
     }
 }

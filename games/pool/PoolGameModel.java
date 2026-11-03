@@ -4,9 +4,9 @@
 import java.util.*;
 
 final class PoolGameModel {
-    static vh field_k;
+    static UiComponent field_k;
     int field_y;
-    static vh field_v;
+    static UiComponent field_v;
     Pocket[] pockets;
     boolean field_m;
     CushionSegment[] cushionSegments;
@@ -30,7 +30,7 @@ final class PoolGameModel {
     int field_b;
     private int[] field_a;
     IntrusiveDeque field_i;
-    df[] field_r;
+    AimTarget[] field_r;
     private int[] field_t;
 
     private final void loadTableOutline(boolean param0, int[] param1) {
@@ -83,7 +83,7 @@ final class PoolGameModel {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class PoolGameModel {
         return var3;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int param0) {
         if (param0 != 10) {
           return;
         }
@@ -159,7 +159,7 @@ final class PoolGameModel {
           this.field_y = 0;
           this.field_z = 0;
         }
-        if ((ob.field_F & var8.endResolution) != 0) {
+        if ((MenuScreen.field_F & var8.endResolution) != 0) {
           this.b(ga.nextRandomInt(512, true, ea.field_r) + 1, 456);
         }
         if (param0 < 30) {
@@ -189,7 +189,7 @@ final class PoolGameModel {
         for (var5 = 0; var5 < this.pockets.length; var5++) {
           this.pockets[var5].keepOnlyPottedBalls(this.balls, -80);
         }
-        if ((var8.endResolution & be.field_I) != 0) {
+        if ((var8.endResolution & OptionsScreen.field_I) != 0) {
           this.field_z = 1;
         }
         if ((var8.endResolution & AccountWelcomePanel.field_Y) == 0) {
@@ -207,7 +207,7 @@ final class PoolGameModel {
             var4_ref.ballInHandMode = 3;
           }
         }
-        if (0 != (var8.endResolution & sg.field_O)) {
+        if (0 != (var8.endResolution & ThemeSelectScreen.field_O)) {
           this.field_y = 1;
         }
         if ((ClientException.field_b & var8.endResolution) != 0) {
@@ -229,7 +229,7 @@ final class PoolGameModel {
           this.a(param0, param3, param1, -30896, param4, 8192);
           int var6_int = 99 / ((param2 + 26) / 53);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "al.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "al.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -287,7 +287,7 @@ final class PoolGameModel {
               for (var5 = 0; var5 < this.pockets.length; var5++) {
                 var6 = -this.pockets[var5].centerX + param1[var4_int].positionX;
                 var7 = -this.pockets[var5].centerY + param1[var4_int].positionY;
-                if (od.a((long)var6, (long)var6, false) + od.a((long)var7, (long)var7, false) < (long)LoginForm.a(324, (byte) 90)) {
+                if (FullscreenFocusCanvas.multiplyFixedChecked((long)var6, (long)var6, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var7, (long)var7, false) < (long)LoginForm.a(324, (byte) 90)) {
                   param1[var4_int].inPlay = false;
                   param1[var4_int].motionState = 0;
                   if (param1[var4_int].field_q != null) {
@@ -318,7 +318,7 @@ final class PoolGameModel {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -337,7 +337,7 @@ final class PoolGameModel {
           var5 = 119 / ((param1 + 1) / 48);
           var4_int = 1;
           if (0 >= this.field_z) {
-            if ((param2.endResolution & nd.field_j) != 0) {
+            if ((param2.endResolution & MarkerSliderPainter.field_j) != 0) {
               var4_int = 0;
             } else {
               if (this.field_y > 0) {
@@ -388,7 +388,7 @@ final class PoolGameModel {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
@@ -412,8 +412,8 @@ final class PoolGameModel {
               if (this.balls[var3].inPlay) {
                 var4 = (long)(-this.balls[var3].positionX + this.balls[var2].positionX);
                 var6 = (long)(this.balls[var2].positionY - this.balls[var3].positionY);
-                var4 = od.a(var4, var4, false);
-                var6 = od.a(var6, var6, false);
+                var4 = FullscreenFocusCanvas.multiplyFixedChecked(var4, var4, false);
+                var6 = FullscreenFocusCanvas.multiplyFixedChecked(var6, var6, false);
                 if (var4 + var6 < 16777216L) {
                   DropTargetWidget.field_N[hh.field_e][0] = var2;
                   DropTargetWidget.field_N[hh.field_e][1] = var3;
@@ -549,7 +549,7 @@ final class PoolGameModel {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -641,7 +641,7 @@ final class PoolGameModel {
               }
               var11 = var11 % param5;
               var9.positionX = (EightBallRules.c((byte) -121, var11) >> 4) * (var10 >> 12) + param1;
-              var9.positionY = param0 + (o.a(var11, (byte) -62) >> 4) * (var10 >> 12);
+              var9.positionY = param0 + (UiComponentNode.sineFixed(var11, (byte) -62) >> 4) * (var10 >> 12);
               this.findOverlappingBalls((byte) 77);
               continue;
             }
@@ -658,7 +658,7 @@ final class PoolGameModel {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -701,17 +701,17 @@ final class PoolGameModel {
         for (var8 = 0; this.cushionSegments.length > var8; var8++) {
           var9 = this.cushionSegments[var8].startY - this.cushionSegments[var8].endY;
           var10 = this.cushionSegments[var8].endX - this.cushionSegments[var8].startX;
-          var11_long = IterableNodeHashTable.a(param3 ^ -314, od.a((long)var9, (long)var9, false) + od.a((long)var10, (long)var10, false));
+          var11_long = IterableNodeHashTable.a(param3 ^ -314, FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)var9, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)var10, false));
           if (-2147483648L > var11_long ||
             var11_long > 2147483647L) {
             System.out.println("Wall normal overflow " + lo.a(var11_long, 7697781));
           }
           boolean decompiledFrameRemainder0 = true;
-          var9 = lh.a((int)var11_long, (byte) -128, (long)var9);
-          var10 = lh.a((int)var11_long, (byte) -119, (long)var10);
-          var11 = -aj.a(this.cushionSegments[var8].startX, false, var9) - aj.a(this.cushionSegments[var8].startY, false, var10);
-          var12_long = (long)var11 + (od.a((long)var9, (long)s.field_e[0], false) + od.a((long)var10, (long)s.field_e[1], false));
-          var14 = od.a((long)var9, (long)s.field_e[9], false) + od.a((long)var10, (long)s.field_e[10], false);
+          var9 = ArchiveProvider.divideFixed16((int)var11_long, (byte) -128, (long)var9);
+          var10 = ArchiveProvider.divideFixed16((int)var11_long, (byte) -119, (long)var10);
+          var11 = -NameEntryPopup.a(this.cushionSegments[var8].startX, false, var9) - NameEntryPopup.a(this.cushionSegments[var8].startY, false, var10);
+          var12_long = (long)var11 + (FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)s.field_e[0], false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)s.field_e[1], false));
+          var14 = FullscreenFocusCanvas.multiplyFixedChecked((long)var9, (long)s.field_e[9], false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var10, (long)s.field_e[10], false);
           if (var14 != 0L) {
             var16 = -var12_long / var14;
             if (-2147483648L <= var16 &&
@@ -759,17 +759,17 @@ final class PoolGameModel {
                   if (var20 >= -1048576 &&
                     var20 <= 0) {
                     if (AccountContentDialog.field_ub != null) {
-                      if (0L == (pd.field_i & 16L)) {
+                      if (0L == (LinkButtonPainter.field_i & 16L)) {
                         return false;
                       }
-                      ViewportController.a(ol.a(new int[]{var18, var19_int, var20}, (byte) 1), 16724753, -128, AccountContentDialog.field_ub.field_ab);
+                      ViewportController.a(ol.a(new int[]{var18, var19_int, var20}, (byte) 1), 16724753, -128, AccountContentDialog.field_ub.viewMatrix);
                     }
                     return false;
                   }
                 }
                 if (((AccountContentDialog.field_ub != null)) &&
-                  ((0L != (16L & pd.field_i)))) {
-                  ViewportController.a(ol.a(new int[]{var18, var19_int, var20}, (byte) 1), 16764057, -79, AccountContentDialog.field_ub.field_ab);
+                  ((0L != (16L & LinkButtonPainter.field_i)))) {
+                  ViewportController.a(ol.a(new int[]{var18, var19_int, var20}, (byte) 1), 16764057, -79, AccountContentDialog.field_ub.viewMatrix);
                 }
               }
               decompiledFrameRemainder0 = false;
@@ -786,10 +786,10 @@ final class PoolGameModel {
               var10Lifetime1 = -s.field_e[0] + this.balls[var9Lifetime1].positionX;
               var11Lifetime1 = -s.field_e[1] + this.balls[var9Lifetime1].positionY;
               var12 = -s.field_e[2] + this.balls[var9Lifetime1].positionZ;
-              var13 = od.a((long)s.field_e[9], (long)s.field_e[9], false) + (od.a((long)s.field_e[10], (long)s.field_e[10], false) + od.a((long)s.field_e[11], (long)s.field_e[11], false));
-              var15 = -2L * (od.a((long)s.field_e[9], (long)var10Lifetime1, false) - (-od.a((long)s.field_e[10], (long)var11Lifetime1, false) - od.a((long)s.field_e[11], (long)var12, false)));
-              var17 = od.a((long)var10Lifetime1, (long)var10Lifetime1, false) + od.a((long)var11Lifetime1, (long)var11Lifetime1, false) - (-od.a((long)var12, (long)var12, false) + (long)var8Lifetime1);
-              var19 = od.a(var15, var15, false) - 4L * od.a(var13, var17, false);
+              var13 = FullscreenFocusCanvas.multiplyFixedChecked((long)s.field_e[9], (long)s.field_e[9], false) + (FullscreenFocusCanvas.multiplyFixedChecked((long)s.field_e[10], (long)s.field_e[10], false) + FullscreenFocusCanvas.multiplyFixedChecked((long)s.field_e[11], (long)s.field_e[11], false));
+              var15 = -2L * (FullscreenFocusCanvas.multiplyFixedChecked((long)s.field_e[9], (long)var10Lifetime1, false) - (-FullscreenFocusCanvas.multiplyFixedChecked((long)s.field_e[10], (long)var11Lifetime1, false) - FullscreenFocusCanvas.multiplyFixedChecked((long)s.field_e[11], (long)var12, false)));
+              var17 = FullscreenFocusCanvas.multiplyFixedChecked((long)var10Lifetime1, (long)var10Lifetime1, false) + FullscreenFocusCanvas.multiplyFixedChecked((long)var11Lifetime1, (long)var11Lifetime1, false) - (-FullscreenFocusCanvas.multiplyFixedChecked((long)var12, (long)var12, false) + (long)var8Lifetime1);
+              var19 = FullscreenFocusCanvas.multiplyFixedChecked(var15, var15, false) - 4L * FullscreenFocusCanvas.multiplyFixedChecked(var13, var17, false);
               if (var19 >= 0L) {
                 var21 = IterableNodeHashTable.a(param3 ^ -278, var19);
                 if (var21 <= 2147483647L &&
@@ -801,8 +801,8 @@ final class PoolGameModel {
                     var27 = (long)s.field_e[1] + var23 * (long)s.field_e[10];
                     var29 = (long)s.field_e[2] + var23 * (long)s.field_e[11];
                     if (null != AccountContentDialog.field_ub &&
-                      (pd.field_i & 16L) != 0L) {
-                      ViewportController.a(ol.a(new int[]{(int)var25, (int)var27, (int)var29}, (byte) 1), 16724753, 112, AccountContentDialog.field_ub.field_ab);
+                      (LinkButtonPainter.field_i & 16L) != 0L) {
+                      ViewportController.a(ol.a(new int[]{(int)var25, (int)var27, (int)var29}, (byte) 1), 16724753, 112, AccountContentDialog.field_ub.viewMatrix);
                     }
                     return false;
                   }
@@ -817,8 +817,8 @@ final class PoolGameModel {
                   var29 = (long)s.field_e[10] * var25 + (long)s.field_e[1];
                   var31 = (long)s.field_e[11] * var25 + (long)s.field_e[2];
                   if (null != AccountContentDialog.field_ub &&
-                    (pd.field_i & 16L) != 0L) {
-                    ViewportController.a(ol.a(new int[]{(int)var27, (int)var29, (int)var31}, (byte) 1), 16724753, param3 ^ -272, AccountContentDialog.field_ub.field_ab);
+                    (LinkButtonPainter.field_i & 16L) != 0L) {
+                    ViewportController.a(ol.a(new int[]{(int)var27, (int)var29, (int)var31}, (byte) 1), 16724753, param3 ^ -272, AccountContentDialog.field_ub.viewMatrix);
                   }
                   return false;
                 }
@@ -842,7 +842,7 @@ final class PoolGameModel {
         if (param0 != 0) {
           return;
         }
-        if (0L != (524288L & pd.field_i)) {
+        if (0L != (524288L & LinkButtonPainter.field_i)) {
           return;
         }
         var9 = this.currentShot(param1 ^ -23).ballInHandMode;
@@ -887,7 +887,7 @@ final class PoolGameModel {
             var7 = var5 >> 8;
             var8 = var6 * var6 + var7 * var7;
             if (var8 > 31690296) {
-              var9 = rf.a(var8, -122);
+              var9 = rf.inverseSquareRoot(var8, -122);
               var10.positionY = (var5 / (var9 >> 8) << 8) + 9437184;
               var10.positionX = (var4 / (var9 >> 8) << 8) + 9437184;
             }
@@ -948,7 +948,7 @@ final class PoolGameModel {
           var6 = -1 + param1.readUnsignedByte(-119);
           this.a(var5, var6, var3_int, var4, 19063);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "al.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "al.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1001,28 +1001,28 @@ final class PoolGameModel {
     final void e(int param0, int param1) {
         int var3;
         Ball var4;
-        df var5;
+        AimTarget var5;
         int var5_int;
         int var6;
         int var7;
         int var8;
         int var9;
         int var10;
-        df var11;
+        AimTarget var11;
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
         int var3Lifetime4;
-        this.field_r = new df[this.balls.length + this.field_e.length];
+        this.field_r = new AimTarget[this.balls.length + this.field_e.length];
         for (var3 = 0; this.balls.length > var3; var3++) {
-          this.field_r[var3] = new df();
+          this.field_r[var3] = new AimTarget();
         }
         var3Lifetime1 = 0;
         if (param0 != 12226) {
           this.g((byte) 17);
         }
         while (this.field_e.length > var3Lifetime1) {
-          this.field_r[this.balls.length + var3Lifetime1] = new df();
+          this.field_r[this.balls.length + var3Lifetime1] = new AimTarget();
           var3Lifetime1++;
         }
         this.field_t = new int[this.field_r.length];
@@ -1031,16 +1031,16 @@ final class PoolGameModel {
         for (var3Lifetime2 = 0; var3Lifetime2 < this.balls.length; var3Lifetime2++) {
           this.field_r[var3Lifetime2].a(var3Lifetime2, true, true);
           if (this.field_r[var3Lifetime2].a((byte) -8, param1, this)) {
-            this.field_r[var3Lifetime2].a(param0 + 1763061160, var4, this);
-            this.field_a[var3Lifetime2] = this.field_r[var3Lifetime2].field_l;
+            this.field_r[var3Lifetime2].computeDistance(param0 + 1763061160, var4, this);
+            this.field_a[var3Lifetime2] = this.field_r[var3Lifetime2].distance;
             this.field_t[var3Lifetime2] = var3Lifetime2;
           }
         }
         for (var3Lifetime3 = 0; this.field_e.length > var3Lifetime3; var3Lifetime3++) {
           var5_int = this.balls.length + var3Lifetime3;
           this.field_r[var5_int].a(var3Lifetime3, false, true);
-          this.field_r[var5_int].a(1763073386, var4, this);
-          this.field_a[var5_int] = this.field_r[var5_int].field_l;
+          this.field_r[var5_int].computeDistance(1763073386, var4, this);
+          this.field_a[var5_int] = this.field_r[var5_int].distance;
           this.field_t[var5_int] = var5_int;
         }
         StrongCacheEntry.a(this.field_a, this.field_t, (byte) -54);
@@ -1179,15 +1179,15 @@ final class PoolGameModel {
         if (9216 < var5) {
           throw new IllegalStateException("Strike point out of range! " + var3.field_D + "," + var3.field_H);
         }
-        int var6 = -rf.a(-(var5 << 2) + 65536, -121) >> 9;
-        int var7 = ao.a((int) var3.elevation, true);
+        int var6 = -rf.inverseSquareRoot(-(var5 << 2) + 65536, -121) >> 9;
+        int var7 = ScrollPaneWithFooter.a((int) var3.elevation, true);
         int var8 = hc.a(2047, (int) var3.elevation);
-        int var9 = ao.a((int) var3.aimAngle, true);
+        int var9 = ScrollPaneWithFooter.a((int) var3.aimAngle, true);
         int var10 = hc.a(2047, (int) var3.aimAngle);
         int var11 = var9;
         int var12 = -var10;
-        int var13 = aj.a(var7, false, -var12);
-        int var14 = aj.a(var7, false, var11);
+        int var13 = NameEntryPopup.a(var7, false, -var12);
+        int var14 = NameEntryPopup.a(var7, false, var11);
         int var15 = var8;
         int var16 = 0 * var14 - var15 * var12 >> 16;
         int var17 = var15 * var11 - 0 * var13 >> 16;
@@ -1195,13 +1195,13 @@ final class PoolGameModel {
         int var19 = var6 * var13 + var3.field_D * var11 + var3.field_H * var16 >> 9;
         int var20 = var12 * var3.field_D + (var14 * var6 + var3.field_H * var17) >> 9;
         int var21 = 0 * var3.field_D + var6 * var15 + var18 * var3.field_H >> 9;
-        var4.velocityX = lh.a(PasswordValidator.field_q, (byte) -73, (long)(int)(od.a((long)(var3.power * var13), (long)CueAim.field_f, false) / 4096L));
-        var4.velocityY = lh.a(PasswordValidator.field_q, (byte) -108, (long)(int)(od.a((long)(var3.power * var14), (long)CueAim.field_f, false) / 4096L));
+        var4.velocityX = ArchiveProvider.divideFixed16(PasswordValidator.field_q, (byte) -73, (long)(int)(FullscreenFocusCanvas.multiplyFixedChecked((long)(var3.power * var13), (long)CueAim.field_f, false) / 4096L));
+        var4.velocityY = ArchiveProvider.divideFixed16(PasswordValidator.field_q, (byte) -108, (long)(int)(FullscreenFocusCanvas.multiplyFixedChecked((long)(var3.power * var14), (long)CueAim.field_f, false) / 4096L));
         var4.motionState = 1;
-        int var22 = lh.a(PasswordValidator.field_w, (byte) -116, (long)(int)(od.a((long)(var3.power * bl.field_g), (long)CueAim.field_f, false) / 4096L));
-        var4.angularVelocityX = aj.a(-aj.a(var14, false, var21), false, var22);
-        var4.angularVelocityY = aj.a(aj.a(var13, false, var21), false, var22);
-        var4.angularVelocityZ = aj.a(aj.a(var14, false, var19) - aj.a(var13, false, var20), false, var22);
+        int var22 = ArchiveProvider.divideFixed16(PasswordValidator.field_w, (byte) -116, (long)(int)(FullscreenFocusCanvas.multiplyFixedChecked((long)(var3.power * WireframeQuad.field_g), (long)CueAim.field_f, false) / 4096L));
+        var4.angularVelocityX = NameEntryPopup.a(-NameEntryPopup.a(var14, false, var21), false, var22);
+        var4.angularVelocityY = NameEntryPopup.a(NameEntryPopup.a(var13, false, var21), false, var22);
+        var4.angularVelocityZ = NameEntryPopup.a(NameEntryPopup.a(var14, false, var19) - NameEntryPopup.a(var13, false, var20), false, var22);
         Ball.field_i = BufferedSocket.a(-6584, this.balls[0]);
     }
 
@@ -1210,20 +1210,20 @@ final class PoolGameModel {
           return;
         }
         if (dn.a(true, MatchingTextValidator.field_w)) {
-          s.field_c[MatchingTextValidator.field_w].e((byte) -6);
+          s.field_c[MatchingTextValidator.field_w].onExit((byte) -6);
         }
         MatchingTextValidator.field_w = GameRules.field_b;
-        if (vq.field_Sb) {
+        if (ContextMenu.field_Sb) {
           AccountContentDialog.field_ub = null;
-          am.field_e = null;
-          vq.field_Sb = false;
+          TextWidgetPainter.field_e = null;
+          ContextMenu.field_Sb = false;
         }
-        sg.field_P = 0;
+        ThemeSelectScreen.field_P = 0;
         TranslatedUiText.field_d = jc.field_c;
         int var1 = -44 % ((-83 - param0) / 40);
         if (lo.field_a) {
           ti.field_d = null;
-          ad.field_l = new IntrusiveDeque();
+          ArchiveIndex.field_l = new IntrusiveDeque();
           ClientException.field_g = ek.a(124);
           hp.field_c = ek.a(-110);
           lo.field_a = false;
@@ -1267,8 +1267,8 @@ final class PoolGameModel {
                 var5 = this.pockets[var4Lifetime1];
                 var5.read((byte) 113, var10);
                 if (var5.pottedBalls != null) {
-                  for (var6 = 0; var5.pottedBalls.a((byte) 110) > var6; var6++) {
-                    var7 = this.balls[var5.pottedBalls.a(var6, 2229)];
+                  for (var6 = 0; var5.pottedBalls.size((byte) 110) > var6; var6++) {
+                    var7 = this.balls[var5.pottedBalls.get(var6, 2229)];
                     var7.positionY = var5.centerY;
                     var7.positionX = var5.centerX;
                     var7.transformDirty = true;
@@ -1294,7 +1294,7 @@ final class PoolGameModel {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1423,9 +1423,9 @@ final class PoolGameModel {
         IntrusiveNode stackIn_10_0 = null;
         int var2;
         int var3;
-        aa var4;
+        IntrusiveDequeCursor var4;
         ShotRecord var5;
-        aa var6;
+        IntrusiveDequeCursor var6;
         dn var7;
         ShotRecord var5Lifetime1;
         var2 = this.shots.a(32);
@@ -1435,18 +1435,18 @@ final class PoolGameModel {
         }
         if (var2 > 0) {
           var2 = 0;
-          var4 = new aa(this.shots);
-          var5 = (ShotRecord) (var4.a(0));
+          var4 = new IntrusiveDequeCursor(this.shots);
+          var5 = (ShotRecord) (var4.first(0));
           while (var5 != null) {
             if (var2 < 3) {
               var2++;
-              var5 = (ShotRecord) (var4.c((byte) -71));
+              var5 = (ShotRecord) (var4.next((byte) -71));
               continue;
             }
             break;
           }
           if (var5 == null) {
-            stackIn_10_0 = var4.b((byte) -92);
+            stackIn_10_0 = var4.last((byte) -92);
           } else {
             stackIn_10_0 = var4.a(var5.previous, false);
           }
@@ -1462,12 +1462,12 @@ final class PoolGameModel {
               var3++;
               if (var5Lifetime1.field_R != null &&
                 !var5Lifetime1.field_R.c(0)) {
-                var6 = new aa(var5Lifetime1.field_R);
-                var7 = (dn) (var6.b((byte) -92));
+                var6 = new IntrusiveDequeCursor(var5Lifetime1.field_R);
+                var7 = (dn) (var6.last((byte) -92));
                 while (var7 != null) {
                   var3 += 2;
                   var3 = var3 + var7.field_l.length;
-                  var7 = (dn) (var6.b(-112));
+                  var7 = (dn) (var6.previous(-112));
                 }
               }
               var3 += 3;
@@ -1475,7 +1475,7 @@ final class PoolGameModel {
             if (var5Lifetime1.phase >= 3) {
               var3++;
             }
-            var5Lifetime1 = (ShotRecord) (var4.b(-84));
+            var5Lifetime1 = (ShotRecord) (var4.previous(-84));
           }
         }
         return var3;
@@ -1501,11 +1501,11 @@ final class PoolGameModel {
 
     final static void a(boolean param0, int param1) {
         int var6 = 0;
-        vh dupTemp$0 = null;
+        UiComponent dupTemp$0 = null;
         int var11 = 0;
         int stackIn_3_0 = 0;
         int stackIn_4_1 = 0;
-        vh stackIn_6_0;
+        UiComponent stackIn_6_0;
         int stackIn_6_1;
         int stackIn_6_2;
         int stackIn_6_3;
@@ -1518,17 +1518,17 @@ final class PoolGameModel {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        vh var7 = null;
+        UiComponent var7 = null;
         int var7_int = 0;
         int var8 = 0;
-        vh var8_ref_vh = null;
-        uo var9 = null;
+        UiComponent var8_ref_vh = null;
+        AlignedIconLabel var9 = null;
         int var9_int = 0;
-        uo var10 = null;
+        AlignedIconLabel var10 = null;
         int var10_int = 0;
         int var12 = 0;
         int var13 = 0;
-        vh var14 = null;
+        UiComponent var14 = null;
         int var15 = 0;
         var13 = Pool.field_O;
         try {
@@ -1541,24 +1541,24 @@ final class PoolGameModel {
             stackIn_4_1 = nj.field_b;
           }
           fr.$cfr$intArgs$a$e9dea5688aa5(stackIn_3_0, stackIn_4_1);
-          na.field_e.a(-40 + so.field_k.field_Db - 2, so.field_k.field_gb, 0, 0, (byte) -114);
-          nd.field_c.b(0, 2147483647, 0, cl.field_d.field_gb, ad.field_x);
-          stackIn_6_0 = br.field_M;
-          stackIn_6_1 = 2 + ad.field_x;
+          na.field_e.a(-40 + so.field_k.height - 2, so.field_k.width, 0, 0, (byte) -114);
+          MarkerSliderPainter.field_c.setBounds(0, 2147483647, 0, cl.field_d.width, ArchiveIndex.field_x);
+          stackIn_6_0 = LoginRequiredScreen.field_M;
+          stackIn_6_1 = 2 + ArchiveIndex.field_x;
           stackIn_6_2 = param1 ^ 2147483647;
           stackIn_6_3 = 0;
-          stackIn_6_4 = cl.field_d.field_gb;
+          stackIn_6_4 = cl.field_d.width;
           if (!tq.field_p) {
             stackIn_7_5 = 0;
           } else {
             stackIn_7_5 = 2 + (2 + TranslatedUiText.field_n) + 40;
           }
-          ((vh) (Object) stackIn_6_0).b(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4 - stackIn_7_5, 18);
-          jh.field_a.b(ad.field_x + 2, 2147483647, -2 + (-TranslatedUiText.field_n + cl.field_d.field_gb - 40), TranslatedUiText.field_n + 42, 18);
-          DualLinkDeque.field_f.a(TranslatedUiText.field_n, -22 + (cl.field_d.field_Db - ad.field_x), (byte) -112, 2, cl.field_d.field_gb, 0, ad.field_x + 22);
-          ContentTransitionDialog.field_ob.b(so.field_k.field_Db - 40, 2147483647, 0, so.field_k.field_gb, 40);
-          ii.field_e.b(0, param1 ^ 2147483647, 0, uq.field_f.field_gb, 30);
-          rq.field_x.b(30, 2147483647, 0, uq.field_f.field_gb, -30 + (-2 + uq.field_f.field_Db) - 40);
+          ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4 - stackIn_7_5, 18);
+          jh.field_a.setBounds(ArchiveIndex.field_x + 2, 2147483647, -2 + (-TranslatedUiText.field_n + cl.field_d.width - 40), TranslatedUiText.field_n + 42, 18);
+          DualLinkDeque.field_f.setScrollPaneBounds(TranslatedUiText.field_n, -22 + (cl.field_d.height - ArchiveIndex.field_x), (byte) -112, 2, cl.field_d.width, 0, ArchiveIndex.field_x + 22);
+          ContentTransitionDialog.field_ob.setBounds(so.field_k.height - 40, 2147483647, 0, so.field_k.width, 40);
+          ii.field_e.setBounds(0, param1 ^ 2147483647, 0, Bzip2DecoderState.field_f.width, 30);
+          MusicCrossfadeStream.field_x.setBounds(30, 2147483647, 0, Bzip2DecoderState.field_f.width, -30 + (-2 + Bzip2DecoderState.field_f.height) - 40);
           var2_int = dr.field_c + 3;
           if (dg.field_T.length < 2) {
             var2_int--;
@@ -1566,15 +1566,15 @@ final class PoolGameModel {
           if (param0) {
             var2_int--;
           }
-          var3 = (-8 + (rq.field_x.field_Db - 10 + (var2_int + 1) / 2)) / (var2_int + 1) - 2;
+          var3 = (-8 + (MusicCrossfadeStream.field_x.height - 10 + (var2_int + 1) / 2)) / (var2_int + 1) - 2;
           if (30 < var3) {
             var3 = 30;
           }
-          var4 = -5 + (rq.field_x.field_Db - (5 + var2_int * (2 + var3)));
+          var4 = -5 + (MusicCrossfadeStream.field_x.height - (5 + var2_int * (2 + var3)));
           if (var4 > 40) {
             var4 = 40;
           }
-          oi.field_q.b(5, 2147483647, 5, -5 + rq.field_x.field_gb - 5, var4);
+          oi.field_q.setBounds(5, 2147483647, 5, -5 + MusicCrossfadeStream.field_x.width - 5, var4);
           var5 = 5 + var4 + 2;
           for (var6 = param1; var6 < 4 + dr.field_c; var6++) {
             if ((var6 != 1 ||
@@ -1585,25 +1585,25 @@ final class PoolGameModel {
                 dupTemp$0 = oi.field_v[var6];
                 var14 = dupTemp$0;
                 var7 = dupTemp$0;
-                oi.field_v[var6].field_Db = 0;
-                var14.field_gb = 0;
+                oi.field_v[var6].height = 0;
+                var14.width = 0;
                 for (var8 = 0; FreePlayRules.field_f[var6].length > var8; var8++) {
                   if (null != FreePlayRules.field_f[var6][var8]) {
                     var9 = FreePlayRules.field_f[var6][var8];
-                    FreePlayRules.field_f[var6][var8].field_Db = 0;
-                    var9.field_gb = 0;
+                    FreePlayRules.field_f[var6][var8].height = 0;
+                    var9.width = 0;
                   }
                 }
               } else if (param0 &&
                 0 == var6) {
                 var7 = oi.field_v[var6];
-                oi.field_v[var6].field_Db = 0;
-                var7.field_gb = 0;
+                oi.field_v[var6].height = 0;
+                var7.width = 0;
                 for (var8 = 0; var8 < FreePlayRules.field_f[var6].length; var8++) {
                   if (null != FreePlayRules.field_f[var6][var8]) {
                     var9 = FreePlayRules.field_f[var6][var8];
-                    FreePlayRules.field_f[var6][var8].field_Db = 0;
-                    var9.field_gb = 0;
+                    FreePlayRules.field_f[var6][var8].height = 0;
+                    var9.width = 0;
                   }
                 }
               } else {
@@ -1623,54 +1623,54 @@ final class PoolGameModel {
                 var7_int = stackIn_41_0;
                 if (var7_int != 0) {
                   var8_ref_vh = oi.field_v[var6];
-                  oi.field_v[var6].field_Db = 0;
-                  var8_ref_vh.field_gb = 0;
+                  oi.field_v[var6].height = 0;
+                  var8_ref_vh.width = 0;
                   var15 = 0;
                   var9_int = var15;
                   while (var15 < FreePlayRules.field_f[var6].length) {
                     if (FreePlayRules.field_f[var6][var15] != null) {
                       var10 = FreePlayRules.field_f[var6][var15];
-                      FreePlayRules.field_f[var6][var15].field_Db = 0;
-                      var10.field_gb = 0;
+                      FreePlayRules.field_f[var6][var15].height = 0;
+                      var10.width = 0;
                     }
                     var15++;
                   }
                 } else {
-                  oi.field_v[var6].b(var5, 2147483647, 5, 103, var3);
+                  oi.field_v[var6].setBounds(var5, 2147483647, 5, 103, var3);
                   var8 = 110;
                   if (!param0) {
                     if (null != FreePlayRules.field_f[var6][0]) {
                       var9 = FreePlayRules.field_f[var6][0];
-                      FreePlayRules.field_f[var6][0].field_Db = 0;
-                      var9.field_gb = 0;
+                      FreePlayRules.field_f[var6][0].height = 0;
+                      var9.width = 0;
                     }
                   } else {
-                    FreePlayRules.field_f[var6][0].a(var8, true, 2, var3, ja.field_b, 38, var5);
+                    FreePlayRules.field_f[var6][0].setIconLabelBounds(var8, true, 2, var3, ja.field_b, 38, var5);
                     var8 += 40;
                   }
-                  var9_int = 2 - var8 + (-5 + uq.field_f.field_gb);
+                  var9_int = 2 - var8 + (-5 + Bzip2DecoderState.field_f.width);
                   var10_int = FreePlayRules.field_f[var6].length - 1;
                   for (var11 = 0; var11 < var10_int; var11++) {
                     var12 = var11 * var9_int / var10_int;
-                    FreePlayRules.field_f[var6][1 + var11].a(var12 + var8, true, 2, var3, ja.field_b, -2 + ((var11 + 1) * var9_int / var10_int - var12), var5);
+                    FreePlayRules.field_f[var6][1 + var11].setIconLabelBounds(var12 + var8, true, 2, var3, ja.field_b, -2 + ((var11 + 1) * var9_int / var10_int - var12), var5);
                   }
                   var5 = var5 + (2 + var3);
                 }
               }
             }
           }
-          de.field_b.b(10, 2147483647, SoftwareRasterizer.width - 360 >> 1, 360, -134 + SoftwareRasterizer.height - 10);
-          Pool.field_P.b(0, 2147483647, 0, de.field_b.field_gb, 24);
-          aa.field_b.b(24, 2147483647, 0, de.field_b.field_gb, -24 + de.field_b.field_Db);
-          aa.field_b.field_F = rp.a(32450, 3, 1, aa.field_b.field_Db, 11579568, 8421504);
-          c.field_e.b(5, 2147483647, 5, -10 + aa.field_b.field_gb, -2 + (-24 + (-10 + aa.field_b.field_Db)));
-          AccountContentDialog.field_vb.b(-24 + (aa.field_b.field_Db - 5), param1 ^ 2147483647, (-80 + aa.field_b.field_gb) / 2, 80, 24);
+          de.field_b.setBounds(10, 2147483647, SoftwareRasterizer.width - 360 >> 1, 360, -134 + SoftwareRasterizer.height - 10);
+          Pool.field_P.setBounds(0, 2147483647, 0, de.field_b.width, 24);
+          IntrusiveDequeCursor.field_b.setBounds(24, 2147483647, 0, de.field_b.width, -24 + de.field_b.height);
+          IntrusiveDequeCursor.field_b.frameSprites = rp.buildNineSliceFrameSprites(32450, 3, 1, IntrusiveDequeCursor.field_b.height, 11579568, 8421504);
+          c.field_e.setBounds(5, 2147483647, 5, -10 + IntrusiveDequeCursor.field_b.width, -2 + (-24 + (-10 + IntrusiveDequeCursor.field_b.height)));
+          AccountContentDialog.field_vb.setBounds(-24 + (IntrusiveDequeCursor.field_b.height - 5), param1 ^ 2147483647, (-80 + IntrusiveDequeCursor.field_b.width) / 2, 80, 24);
           da.a(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "al.OA(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "al.OA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1712,8 +1712,8 @@ final class PoolGameModel {
           var7 = this.pockets[var6];
           var7.read((byte) 113, var4);
           if (null != var7.pottedBalls) {
-            for (var8 = 0; var7.pottedBalls.a((byte) 101) > var8; var8++) {
-              var9 = this.balls[var7.pottedBalls.a(var8, 2229)];
+            for (var8 = 0; var7.pottedBalls.size((byte) 101) > var8; var8++) {
+              var9 = this.balls[var7.pottedBalls.get(var8, 2229)];
               var9.positionY = var7.centerY;
               var9.transformDirty = true;
               var9.positionX = var7.centerX;
@@ -1722,7 +1722,7 @@ final class PoolGameModel {
         }
         var3.phase = 0;
         var3.pottedBalls.d((byte) 83);
-        var3.endResolution = uk.field_a;
+        var3.endResolution = IntrusiveNodeHashTable.field_a;
         if (null == this.field_i) {
           this.field_i = new IntrusiveDeque();
         }
@@ -1734,7 +1734,7 @@ final class PoolGameModel {
         ShotRecord stackIn_7_0 = null;
         int stackIn_8_1 = 0;
         ShotRecord var3;
-        aa var4_ref_aa;
+        IntrusiveDequeCursor var4_ref_aa;
         int var4;
         PotEvent var5;
         Pocket var6;
@@ -1754,8 +1754,8 @@ final class PoolGameModel {
         var3 = this.currentShot(60);
         this.field_j = 0;
         if (!var3.pottedBalls.c(0)) {
-          var4_ref_aa = new aa(var3.pottedBalls);
-          var5 = (PotEvent) (var4_ref_aa.a(0));
+          var4_ref_aa = new IntrusiveDequeCursor(var3.pottedBalls);
+          var5 = (PotEvent) (var4_ref_aa.first(0));
           while (var5 != null) {
             var6 = this.pockets[var5.pocketIndex];
             if (var6.containsBall(var5.ballIndex, 304)) {
@@ -1763,7 +1763,7 @@ final class PoolGameModel {
             }
             var6.addBall(var5.ballIndex, 75);
             this.field_j = this.field_j + 1;
-            var5 = (PotEvent) (var4_ref_aa.c((byte) -71));
+            var5 = (PotEvent) (var4_ref_aa.next((byte) -71));
           }
         }
         var4 = var7.phase;
@@ -1778,7 +1778,7 @@ final class PoolGameModel {
     }
 
     final static void m(int param0) {
-        ci.d((byte) -125);
+        DebugTuningSlider.d((byte) -125);
         lf.a(param0, (byte) 93);
     }
 
@@ -1857,64 +1857,64 @@ final class PoolGameModel {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
     final static void i(int param0) {
-        field_k = new vh(0L, (vh) null, SoftwareRasterizer.width - ff.field_e[4].field_z >> 1, -120 + SoftwareRasterizer.height, ff.field_e[4].field_z, SoftwareRasterizer.height, (String) null);
+        field_k = new UiComponent(0L, (UiComponent) null, SoftwareRasterizer.width - ff.field_e[4].field_z >> 1, -120 + SoftwareRasterizer.height, ff.field_e[4].field_z, SoftwareRasterizer.height, (String) null);
         MenuSelection.a(true, field_k);
-        field_k.field_F = ff.field_e;
-        qa.field_v = new vh("tut_close", (vh) null);
-        vh dupTemp$0 = new vh("tut_skip", (vh) null);
+        field_k.frameSprites = ff.field_e;
+        qa.field_v = new UiComponent("tut_close", (UiComponent) null);
+        UiComponent dupTemp$0 = new UiComponent("tut_skip", (UiComponent) null);
         jq.field_d = dupTemp$0;
-        field_k.a(-111, dupTemp$0);
-        vh dupTemp$1 = new vh("tut_prev", (vh) null);
+        field_k.addChild(-111, dupTemp$0);
+        UiComponent dupTemp$1 = new UiComponent("tut_prev", (UiComponent) null);
         pl.field_b = dupTemp$1;
-        field_k.a(-104, dupTemp$1);
-        pl.field_b.b(72, 2147483647, 277, 15, 15);
-        qa.field_v.b(72, 2147483647, 297, 15, 15);
-        jq.field_d.b(72, 2147483647, 317, 15, 15);
-        pl.field_b.field_xb = vm.field_d[8];
-        pl.field_b.field_G = vm.field_d[12];
-        pl.field_b.field_hb = vm.field_d[4];
-        pl.field_b.field_ab = vm.field_d[0];
-        qa.field_v.field_ab = vm.field_d[2];
-        qa.field_v.field_G = vm.field_d[14];
+        field_k.addChild(-104, dupTemp$1);
+        pl.field_b.setBounds(72, 2147483647, 277, 15, 15);
+        qa.field_v.setBounds(72, 2147483647, 297, 15, 15);
+        jq.field_d.setBounds(72, 2147483647, 317, 15, 15);
+        pl.field_b.activeSprite = vm.field_d[8];
+        pl.field_b.capturedSprite = vm.field_d[12];
+        pl.field_b.sprite = vm.field_d[4];
+        pl.field_b.disabledSprite = vm.field_d[0];
+        qa.field_v.disabledSprite = vm.field_d[2];
+        qa.field_v.capturedSprite = vm.field_d[14];
         if (param0 != -27397) {
           return;
         }
-        qa.field_v.field_hb = vm.field_d[6];
-        qa.field_v.field_xb = vm.field_d[10];
-        jq.field_d.field_xb = vm.field_d[11];
-        jq.field_d.field_hb = vm.field_d[7];
-        jq.field_d.field_G = vm.field_d[15];
-        jq.field_d.field_ab = vm.field_d[3];
+        qa.field_v.sprite = vm.field_d[6];
+        qa.field_v.activeSprite = vm.field_d[10];
+        jq.field_d.activeSprite = vm.field_d[11];
+        jq.field_d.sprite = vm.field_d[7];
+        jq.field_d.capturedSprite = vm.field_d[15];
+        jq.field_d.disabledSprite = vm.field_d[3];
     }
 
     final void a(int[] param0, int param1, byte param2, int param3, int param4, int param5) {
         int var14_int = 0;
-        int var7_int = ao.a(param1, true);
+        int var7_int = ScrollPaneWithFooter.a(param1, true);
         int var8 = hc.a(2047, param1);
-        int var9 = ao.a(param3, true);
+        int var9 = ScrollPaneWithFooter.a(param3, true);
         int var10 = hc.a(2047, param3);
-        param0[9] = aj.a(var10, false, var7_int);
-        param0[10] = aj.a(var9, false, var7_int);
+        param0[9] = NameEntryPopup.a(var10, false, var7_int);
+        param0[10] = NameEntryPopup.a(var9, false, var7_int);
         param0[3] = var9;
         param0[5] = 0;
         param0[4] = -var10;
         param0[11] = var8;
-        param0[6] = aj.a(param0[5], false, param0[10]) - aj.a(param0[4], false, param0[11]);
-        param0[7] = aj.a(param0[3], false, param0[11]) - aj.a(param0[5], false, param0[9]);
-        param0[8] = aj.a(param0[4], false, param0[9]) - aj.a(param0[3], false, param0[10]);
+        param0[6] = NameEntryPopup.a(param0[5], false, param0[10]) - NameEntryPopup.a(param0[4], false, param0[11]);
+        param0[7] = NameEntryPopup.a(param0[3], false, param0[11]) - NameEntryPopup.a(param0[5], false, param0[9]);
+        param0[8] = NameEntryPopup.a(param0[4], false, param0[9]) - NameEntryPopup.a(param0[3], false, param0[10]);
         int var11 = param5 * 65536 / 128;
         int var12 = 53 / ((param2 + 17) / 58);
         int var13 = param4 * 65536 / 128;
         try {
-          var14_int = rf.a(-aj.a(var11, false, var11) + (65536 - aj.a(var13, false, var13)), -122);
-          param0[0] = this.balls[0].positionX + (aj.a(param0[3], false, var11) + (aj.a(param0[6], false, var13) + aj.a(param0[9], false, var14_int))) * 8;
-          param0[1] = this.balls[0].positionY + 8 * (aj.a(param0[4], false, var11) + aj.a(param0[7], false, var13) + aj.a(param0[10], false, var14_int));
-          param0[2] = this.balls[0].positionZ + (aj.a(param0[5], false, var11) + aj.a(param0[8], false, var13) + aj.a(param0[11], false, var14_int)) * 8;
+          var14_int = rf.inverseSquareRoot(-NameEntryPopup.a(var11, false, var11) + (65536 - NameEntryPopup.a(var13, false, var13)), -122);
+          param0[0] = this.balls[0].positionX + (NameEntryPopup.a(param0[3], false, var11) + (NameEntryPopup.a(param0[6], false, var13) + NameEntryPopup.a(param0[9], false, var14_int))) * 8;
+          param0[1] = this.balls[0].positionY + 8 * (NameEntryPopup.a(param0[4], false, var11) + NameEntryPopup.a(param0[7], false, var13) + NameEntryPopup.a(param0[10], false, var14_int));
+          param0[2] = this.balls[0].positionZ + (NameEntryPopup.a(param0[5], false, var11) + NameEntryPopup.a(param0[8], false, var13) + NameEntryPopup.a(param0[11], false, var14_int)) * 8;
         } catch (IllegalArgumentException illegalArgumentException) {
           System.out.println("Oh dear. Strike point is way wrong: " + param5 + "," + param4 + ":\n" + illegalArgumentException.getMessage());
           throw illegalArgumentException;
@@ -1951,7 +1951,7 @@ final class PoolGameModel {
           var5.playerIndex = this.field_A;
           this.b(ga.nextRandomInt(512, true, ea.field_r) + 1, 456);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

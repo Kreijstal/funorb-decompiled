@@ -3,18 +3,18 @@
  */
 final class so {
     private int[] field_f;
-    static vh field_k;
-    private nc field_a;
+    static UiComponent field_k;
+    private ModelMesh field_a;
     int[] field_j;
     so[] field_b;
     static TutorialController[] field_g;
     static BitmapFont field_h;
-    eg field_i;
+    MeshBuilder field_i;
     int[][] field_c;
-    private nc[] field_e;
+    private ModelMesh[] field_e;
     int[] field_d;
 
-    final static void a(String[][] param0, int param1, di param2, Sprite[][] param3, String[][] param4, int param5, int param6, Sprite[][] param7, String[] param8, byte[] param9, int param10, int[] param11, di param12, String[] param13, byte[] param14, int[] param15, di param16, boolean param17, IndexedSprite[] param18) {
+    final static void a(String[][] param0, int param1, ResourceArchive param2, Sprite[][] param3, String[][] param4, int param5, int param6, Sprite[][] param7, String[] param8, byte[] param9, int param10, int[] param11, ResourceArchive param12, String[] param13, byte[] param14, int[] param15, ResourceArchive param16, boolean param17, IndexedSprite[] param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -50,10 +50,10 @@ final class so {
         String[] var21 = null;
         try {
           var21 = (String[]) null;
-          em.a((String[]) null, 1, param1, param17, param16, param10, param2, param14, param11, param12, param0, param8, param9, param18, param13, param3, param4, (byte) -75, param7, param15);
+          HighscoresScreen.a((String[]) null, 1, param1, param17, param16, param10, param2, param14, param11, param12, param0, param8, param9, param18, param13, param3, param4, (byte) -75, param7, param15);
           if (param5 != -25) {
             var20 = (IndexedSprite[]) null;
-            so.a((String[][]) null, -73, (di) null, (Sprite[][]) null, (String[][]) null, 7, 14, (Sprite[][]) null, (String[]) null, (byte[]) null, 88, (int[]) null, (di) null, (String[]) null, (byte[]) null, (int[]) null, (di) null, false, (IndexedSprite[]) null);
+            so.a((String[][]) null, -73, (ResourceArchive) null, (Sprite[][]) null, (String[][]) null, 7, 14, (Sprite[][]) null, (String[]) null, (byte[]) null, 88, (int[]) null, (ResourceArchive) null, (String[]) null, (byte[]) null, (int[]) null, (ResourceArchive) null, false, (IndexedSprite[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -144,7 +144,7 @@ final class so {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class so {
         try {
           this.a((byte) -107, param0);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "so.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "so.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class so {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "so.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "so.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class so {
         RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
-        nc var10 = null;
+        ModelMesh var10 = null;
         int var11 = 0;
         var11 = Pool.field_O;
         try {
@@ -195,9 +195,9 @@ final class so {
             }
             if (stackIn_6_0 == stackIn_9_1) {
               var10 = this.field_e[var9];
-              if (var10.a() << 1 > nc.field_Y.length) {
+              if (var10.getBoundingRadius() << 1 > ModelMesh.field_Y.length) {
                 this.a(param4, var10, this.field_c[var9], -78);
-                this.a(1, "Model too big - radixsize:" + (var10.a() << 1) + " maxmodelsize:" + nc.field_Y.length + " numf:" + var10.field_P, var10, param4, this.field_c[var9]);
+                this.a(1, "Model too big - radixsize:" + (var10.getBoundingRadius() << 1) + " maxmodelsize:" + ModelMesh.field_Y.length + " numf:" + var10.field_P, var10, param4, this.field_c[var9]);
               } else {
                 var10.a(param4, this.field_c[var9]);
               }
@@ -221,7 +221,7 @@ final class so {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -229,9 +229,9 @@ final class so {
         int discarded$1 = 0;
         int var5_int = 0;
         int var6 = 0;
-        nc var7 = null;
+        ModelMesh var7 = null;
         int var8 = 0;
-        nc[] var9 = null;
+        ModelMesh[] var9 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -240,17 +240,17 @@ final class so {
         var8 = Pool.field_O;
         try {
           if (param0 > -57) {
-            var9 = (nc[]) null;
-            discarded$1 = this.a((int[][]) null, -64, 116, (nc[]) null);
+            var9 = (ModelMesh[]) null;
+            discarded$1 = this.a((int[][]) null, -64, 116, (ModelMesh[]) null);
           }
           for (var5_int = -1 + param2; param1 <= var5_int; var5_int--) {
             var6 = this.field_j[var5_int];
             var7 = this.field_e[var6];
-            if (var7.a() << 1 <= nc.field_Y.length) {
+            if (var7.getBoundingRadius() << 1 <= ModelMesh.field_Y.length) {
               var7.a(param3, this.field_c[var6]);
             } else {
               this.a(param3, var7, this.field_c[var6], -122);
-              this.a(1, "Model too big - radixsize:" + (var7.a() << 1) + " maxmodelsize:" + nc.field_Y.length + " numf:" + var7.field_P, var7, param3, this.field_c[var6]);
+              this.a(1, "Model too big - radixsize:" + (var7.getBoundingRadius() << 1) + " maxmodelsize:" + ModelMesh.field_Y.length + " numf:" + var7.field_P, var7, param3, this.field_c[var6]);
             }
           }
           return;
@@ -264,7 +264,7 @@ final class so {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ final class so {
         }
     }
 
-    private final void a(int[] param0, nc param1, int[] param2, int param3) {
+    private final void a(int[] param0, ModelMesh param1, int[] param2, int param3) {
         int var15 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -312,22 +312,22 @@ final class so {
         int[] var18 = null;
         var16 = Pool.field_O;
         try {
-          var5_int = param1.b();
-          var6 = param1.f();
-          var7 = param1.g();
+          var5_int = param1.getMinX();
+          var6 = param1.getMaxX();
+          var7 = param1.getMinY();
           if (param3 >= -62) {
             var17 = (int[]) null;
             this.b((byte) 83, -74, 7, (int[]) null);
           }
-          var8 = param1.h();
-          var9 = param1.d();
-          var10 = param1.i();
+          var8 = param1.getMaxY();
+          var9 = param1.getMinZ();
+          var10 = param1.getMaxZ();
           var11 = new int[]{var5_int, var6, var5_int, var6, var5_int, var6, var5_int, var6, var5_int, var5_int, var5_int, var5_int, var6, var6, var6, var6, var5_int, var5_int, var5_int, var5_int, var6, var6, var6, var6};
           var12 = new int[]{var7, var7, var7, var7, var8, var8, var8, var8, var7, var8, var7, var8, var7, var8, var7, var8, var7, var7, var8, var8, var7, var7, var8, var8};
           var13 = new int[]{var9, var9, var10, var10, var9, var9, var10, var10, var9, var9, var10, var10, var9, var9, var10, var10, var9, var10, var9, var10, var9, var10, var9, var10};
           var14 = new int[]{6697779, 6710886, 6710886, 6710886, 3368499, 6710886, 6710886, 6710886, 3355494, 6710886, 6710886, 6710886};
-          hd.a(24, 0, true, var11, var13, var12, param2);
-          qg.a(var13, 0, param0, var12, 24, var11, (byte) 56);
+          MembershipBenefitsScreen.a(24, 0, true, var11, var13, var12, param2);
+          qg.transformVertices(var13, 0, param0, var12, 24, var11, (byte) 56);
           for (var15 = 0; var15 < 24; var15 += 2) {
             if (0 <= var13[var15] &&
               var13[1 + var15] >= 0 &&
@@ -370,23 +370,23 @@ final class so {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(boolean param0) {
         int var5 = 0;
-        eg var6 = null;
+        MeshBuilder var6 = null;
         int[] var23 = null;
         int var8 = 0;
-        eg var9 = null;
+        MeshBuilder var9 = null;
         int[] var24 = null;
         int var11 = Pool.field_O;
         int var2 = this.b(120);
         if (var2 == 0) {
           return;
         }
-        eg[] var3 = new eg[var2];
+        MeshBuilder[] var3 = new MeshBuilder[var2];
         int[][] var22 = new int[var2][];
         if (param0) {
           boolean[] var12 = (boolean[]) null;
@@ -410,7 +410,7 @@ final class so {
         int var4 = Pool.field_O;
         int var2 = this.b(91);
         this.field_c = new int[var2][];
-        this.field_e = new nc[var2];
+        this.field_e = new ModelMesh[var2];
         this.field_j = new int[var2];
         this.field_f = new int[var2];
         if (param0 <= 88) {
@@ -434,11 +434,11 @@ final class so {
           }
           kf.a(param2, (byte) -104, this.field_f, this.field_j, param1);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "so.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "so.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int a(int[][] param0, int param1, int param2, nc[] param3) {
+    private final int a(int[][] param0, int param1, int param2, ModelMesh[] param3) {
         int incrementValue$1 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -486,7 +486,7 @@ final class so {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -497,7 +497,7 @@ final class so {
           field_g = (TutorialController[]) null;
         }
         if (null != this.field_i) {
-          this.field_a = (nc) (this.field_i.a(param5, param2, param0, param1, param4, this.field_d));
+          this.field_a = (ModelMesh) (this.field_i.a(param5, param2, param0, param1, param4, this.field_d));
         }
         if (null != this.field_b) {
           for (var7 = 0; this.field_b.length > var7; var7++) {
@@ -506,7 +506,7 @@ final class so {
         }
     }
 
-    private final int a(int param0, int[][] param1, int param2, eg[] param3) {
+    private final int a(int param0, int[][] param1, int param2, MeshBuilder[] param3) {
         int incrementValue$1 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -551,7 +551,7 @@ final class so {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -579,7 +579,7 @@ final class so {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -613,7 +613,7 @@ final class so {
         }
     }
 
-    private final void a(int param0, String param1, nc param2, int[] param3, int[] param4) {
+    private final void a(int param0, String param1, ModelMesh param2, int[] param3, int[] param4) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -633,9 +633,9 @@ final class so {
         int var6_intLifetime1;
         int var7Lifetime1;
         try {
-          var6_int = param4[0] - (-((param2.b() + param2.f()) / 2) + param3[0]);
-          var7 = param4[1] - (-((param2.g() + param2.h()) / 2) + param3[1]);
-          var8 = param4[2] + (param2.d() + param2.i()) / 2 - param3[2];
+          var6_int = param4[0] - (-((param2.getMinX() + param2.getMaxX()) / 2) + param3[0]);
+          var7 = param4[1] - (-((param2.getMinY() + param2.getMaxY()) / 2) + param3[1]);
+          var8 = param4[2] + (param2.getMinZ() + param2.getMaxZ()) / 2 - param3[2];
           var9 = var7 * param3[4] + var6_int * param3[3] + var8 * param3[5] >> 7;
           var10 = param3[8] * var8 + (param3[7] * var7 + param3[6] * var6_int) >> 7;
           var8 = var8 * param3[11] + param3[9] * var6_int + var7 * param3[10] >> 16;
@@ -674,7 +674,7 @@ final class so {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -712,11 +712,11 @@ final class so {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    public static void c(int param0) {
+    public static void releaseStatics(int param0) {
         field_h = null;
         field_k = null;
         field_g = null;

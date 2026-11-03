@@ -17,20 +17,20 @@ final class DraggableWidget extends SingleChildWidget {
 
     final static void a(int param0, boolean param1) {
         if (NodeHashTableIterator.field_a > 0 &&
-          tf.field_d) {
-          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, fl.field_q.field_ib);
-          ln.field_q.a((byte) -79, param1);
+          LoginPayloadKind.field_d) {
+          SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, fl.field_q.screenY);
+          ln.field_q.drawRoot((byte) -79, param1);
         }
         if (PoolMatchController.field_z > 0) {
           if (AccountWelcomePanel.field_bb) {
-            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, fl.field_q.field_ib);
-            de.field_b.a((byte) -79, param1);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, fl.field_q.screenY);
+            de.field_b.drawRoot((byte) -79, param1);
           }
         } else {
           if (nj.field_b > 0 &&
             AccountWelcomePanel.field_bb) {
-            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, fl.field_q.field_ib);
-            de.field_b.a((byte) -79, param1);
+            SoftwareRasterizer.darkenRectangle(0, 0, SoftwareRasterizer.width, fl.field_q.screenY);
+            de.field_b.drawRoot((byte) -79, param1);
           }
         }
         if (param0 < -42) {
@@ -47,10 +47,10 @@ final class DraggableWidget extends SingleChildWidget {
     }
 
     final static void a(int param0, int param1) {
-        ap.field_E = param0;
+        QuickChatPhraseDefinition.field_E = param0;
         MusicPatch.field_l = new int[3];
         wb.field_e = new pn[param0 * 15];
-        aa.field_e = 0;
+        IntrusiveDequeCursor.field_e = 0;
         if (param1 > -43) {
           field_V = 16;
         }
@@ -98,7 +98,7 @@ final class DraggableWidget extends SingleChildWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -106,8 +106,8 @@ final class DraggableWidget extends SingleChildWidget {
         field_S = null;
         playerYouFirstListHaveResigned = null;
         if (param0 >= -33) {
-          ai var2 = (ai) null;
-          DraggableWidget.a((di) null, 96, false, (ai) null);
+          PcmStreamMixer var2 = (PcmStreamMixer) null;
+          DraggableWidget.a((ResourceArchive) null, 96, false, (PcmStreamMixer) null);
         }
     }
 
@@ -119,7 +119,7 @@ final class DraggableWidget extends SingleChildWidget {
           super.handlePointerRelease(param0, param1, param2, param3, (byte) 124, param5);
           this.pressedPointerButton = 0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "wj.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wj.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -132,13 +132,13 @@ final class DraggableWidget extends SingleChildWidget {
           this.childPressTakesPriority = param8 ? true : false;
           this.easeToLayoutPosition = param7 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "wj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    final static void a(di param0, int param1, boolean param2, ai param3) {
+    final static void a(ResourceArchive param0, int param1, boolean param2, PcmStreamMixer param3) {
         try {
-          cl.field_h = param1 * up.a(-21282) / 1000;
+          cl.field_h = param1 * CachedArchiveSource.a(-21282) / 1000;
           if (param2) {
             field_S = (String[]) null;
           }
@@ -147,9 +147,9 @@ final class DraggableWidget extends SingleChildWidget {
           dr.a((byte) -65, param0);
           MessageDialogContent.a(-257);
           SpaceBallSkin.i(23);
-          im.field_fc = 0 - cl.field_h;
+          LobbyPlayer.field_fc = 0 - cl.field_h;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "wj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "wj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class DraggableWidget extends SingleChildWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class DraggableWidget extends SingleChildWidget {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

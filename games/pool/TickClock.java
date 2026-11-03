@@ -5,11 +5,11 @@ abstract class TickClock {
     static int[] field_d;
     static String mpYouofferrematch;
     static String gameopt1moreratedgame;
-    static vh field_h;
+    static UiComponent field_h;
     static String loadingFonts;
     static int field_e;
     static String secretachievement;
-    static vh field_i;
+    static UiComponent field_i;
     static int[] field_g;
 
     final static int a(int param0, LoginTextValue param1, LoginTextValue param2) {
@@ -24,7 +24,7 @@ abstract class TickClock {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 9539) {
-            TickClock.a((byte) -60);
+            TickClock.releaseStatics((byte) -60);
           }
           var4 = (String) null;
           stackIn_3_0 = ih.a((String) null, (byte) 107, 0, false, param2, param1, 0);
@@ -45,7 +45,7 @@ abstract class TickClock {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -57,14 +57,14 @@ abstract class TickClock {
         if (param1 == 39) {
           var4 = this.delayMillis(31);
           if (0L < var4) {
-            cf.a(param1 ^ -124, var4);
+            SoundCache.a(param1 ^ -124, var4);
           }
           return this.advanceTicks(param0, (byte) 113);
         }
         this.waitAndAdvance(1L, (byte) 114);
         var4Lifetime1 = this.delayMillis(31);
         if (0L < var4Lifetime1) {
-          cf.a(param1 ^ -124, var4Lifetime1);
+          SoundCache.a(param1 ^ -124, var4Lifetime1);
         }
         return this.advanceTicks(param0, (byte) 113);
     }
@@ -74,11 +74,11 @@ abstract class TickClock {
           int var2_int = 59 % ((param0 + 75) / 33);
           qf.field_d.a(param1);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "kb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "kb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         mpYouofferrematch = null;
         loadingFonts = null;
         field_d = null;
@@ -95,12 +95,12 @@ abstract class TickClock {
 
     abstract long delayMillis(int param0);
 
-    final static re a(boolean param0, String param1, int param2, String param3) {
+    final static LoginPayload a(boolean param0, String param1, int param2, String param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
         CharSequence var7 = null;
-        re stackIn_6_0 = null;
+        LoginPayload stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -117,7 +117,7 @@ abstract class TickClock {
             var6 = param1;
           } else {
             var7 = (CharSequence) ((Object) param1);
-            var4_long = td.a((byte) 52, var7);
+            var4_long = td.encodeBase37((byte) 52, var7);
           }
           stackIn_6_0 = bi.a(var4_long, param2 - 10805, param3, param0, (String) (var6));
           return stackIn_6_0;
@@ -137,7 +137,7 @@ abstract class TickClock {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

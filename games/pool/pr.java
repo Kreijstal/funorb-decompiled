@@ -32,10 +32,10 @@ final class pr extends IntrusiveNode {
         ta.field_h = null;
         UsernameSuggestionsPanel.field_R = null;
         int var1 = 107 / ((24 - param0) / 56);
-        wm.field_Xb = null;
+        ReportAbuseDialog.field_Xb = null;
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void readUsernameParameter(int param0, java.applet.Applet param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -50,7 +50,7 @@ final class pr extends IntrusiveNode {
           var2 = param1.getParameter("username");
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (0L != td.a((byte) 52, var3)) {
+            if (0L != td.encodeBase37((byte) 52, var3)) {
               return;
             }
           }
@@ -65,7 +65,7 @@ final class pr extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -93,13 +93,13 @@ final class pr extends IntrusiveNode {
             var3 = 65536;
             var2_int = 0;
           } else {
-            var5 = rf.a(var4, -127);
-            var2_int = lh.a(var5, (byte) -81, (long)var2_int);
-            var3 = lh.a(var5, (byte) -121, (long)var3);
+            var5 = rf.inverseSquareRoot(var4, -127);
+            var2_int = ArchiveProvider.divideFixed16(var5, (byte) -81, (long)var2_int);
+            var3 = ArchiveProvider.divideFixed16(var5, (byte) -121, (long)var3);
           }
           if (param1) {
             var7 = (java.applet.Applet) null;
-            pr.a(-15, (java.applet.Applet) null);
+            pr.readUsernameParameter(-15, (java.applet.Applet) null);
           }
           var2_int = var2_int >> 3;
           var3 = var3 >> 3;
@@ -154,7 +154,7 @@ final class pr extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ final class pr extends IntrusiveNode {
         this.field_o = null;
     }
 
-    final static java.net.URL a(int param0, java.net.URL param1, String param2, byte param3, String param4) {
+    final static java.net.URL rewriteUrlPathParameters(int param0, java.net.URL param1, String param2, byte param3, String param4) {
         try {
           StringBuilder discarded$0 = null;
           StringBuilder discarded$1 = null;
@@ -296,7 +296,7 @@ final class pr extends IntrusiveNode {
             } else {
               stackIn_52_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

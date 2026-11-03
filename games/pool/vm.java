@@ -128,7 +128,7 @@ final class vm {
           var7 = 0;
           var4Lifetime1 = var7;
           while (this.field_h.field_b.length > var7) {
-            this.field_h.field_b[var7].field_d[2] = this.field_k[var7][2] + (o.a(ci.field_f * this.field_l, (byte) 82) >> 13);
+            this.field_h.field_b[var7].field_d[2] = this.field_k[var7][2] + (UiComponentNode.sineFixed(DebugTuningSlider.field_f * this.field_l, (byte) 82) >> 13);
             var7++;
           }
           if (param1 != 10) {
@@ -145,7 +145,7 @@ final class vm {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class vm {
           }
           this.field_l = 32 + ga.nextRandomInt(32, true, ea.field_r);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "vm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "vm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

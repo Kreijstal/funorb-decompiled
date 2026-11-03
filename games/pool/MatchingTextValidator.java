@@ -10,7 +10,7 @@ final class MatchingTextValidator extends TextInputValidator {
     static int field_s;
     static volatile int field_o;
     static int field_m;
-    static od field_u;
+    static FullscreenFocusCanvas field_u;
     static Sprite[] field_t;
     static int field_n;
 
@@ -51,11 +51,11 @@ final class MatchingTextValidator extends TextInputValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public static void b(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_u = null;
         if (param0 != 15) {
           field_q = 105;
@@ -88,7 +88,7 @@ final class MatchingTextValidator extends TextInputValidator {
             if (var3 != null) {
               if (var3.getDebouncedValidationState(-31873) == ProxySocketConnector.field_e &&
                 !param0.equals(this.referenceInput.widgetText)) {
-                stackIn_10_0 = rk.createAlertMismatch;
+                stackIn_10_0 = HuffmanCodec.createAlertMismatch;
                 return stackIn_10_0;
               }
               stackIn_12_0 = var3.getDebouncedValidationMessage(73);
@@ -98,7 +98,7 @@ final class MatchingTextValidator extends TextInputValidator {
           if (param0.equals(this.referenceInput.widgetText)) {
             return null;
           }
-          stackIn_16_0 = rk.createAlertMismatch;
+          stackIn_16_0 = HuffmanCodec.createAlertMismatch;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,7 +110,7 @@ final class MatchingTextValidator extends TextInputValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class MatchingTextValidator extends TextInputValidator {
         try {
           this.referenceInput = param1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

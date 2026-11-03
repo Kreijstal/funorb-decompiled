@@ -66,7 +66,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -101,13 +101,13 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        oq var3 = ej.field_j;
-        var3.b(false, param2);
+        CipherPacketBuffer var3 = JaggrabDownloader.field_j;
+        var3.writeCipheredOpcode(false, param2);
         var3.a(3, !param1 ? true : false);
         var3.a(9, !param1 ? true : false);
         if (param1) {
@@ -168,7 +168,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -192,11 +192,11 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           if (ji.field_h == var4) {
             return false;
           }
-          if (wm.field_Pb == var4) {
+          if (ReportAbuseDialog.field_Pb == var4) {
             return false;
           }
           if (param0 != -3) {
-            AccountCreationForm.h((byte) -49);
+            AccountCreationForm.releaseStatics((byte) -49);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -209,7 +209,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -226,17 +226,17 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
             field_V = (Sprite[]) null;
           }
           if (param3 == 0) {
-            ci.a("terms.ws", -127);
+            DebugTuningSlider.a("terms.ws", -127);
             return;
           }
           if (param3 == 1) {
-            ci.a("privacy.ws", param2 + 12020);
+            DebugTuningSlider.a("privacy.ws", param2 + 12020);
             return;
           }
           if (param3 != 2) {
             return;
           }
-          ci.a("conduct.ws", param2 ^ 12044);
+          DebugTuningSlider.a("conduct.ws", param2 ^ 12044);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -248,7 +248,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -288,7 +288,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -297,16 +297,16 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           super.updatePointerState(param0, param1, param2, param3);
           this.createButton.enabled = this.areAllInputsValid(3);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "nf.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nf.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static vh g(byte param0) {
+    final static UiComponent g(byte param0) {
         if (param0 != 103) {
           field_S = (IntrusiveDeque) null;
-          return DualLinkDeque.field_f.field_Rb;
+          return DualLinkDeque.field_f.content;
         }
-        return DualLinkDeque.field_f.field_Rb;
+        return DualLinkDeque.field_f.content;
     }
 
     private final int a(int param0, String param1, UiWidget param2, String param3, int param4, int param5) {
@@ -350,7 +350,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -389,7 +389,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         String var7 = null;
         try {
           if (param3 == this.backButton) {
-            od.a(true);
+            FullscreenFocusCanvas.a(true);
           } else {
             if (param3 == this.createButton) {
               discarded$1 = this.submitAccountCreation(127);
@@ -411,11 +411,11 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    public static void h(byte param0) {
+    public static void releaseStatics(byte param0) {
         if (param0 != 4) {
           return;
         }
@@ -437,7 +437,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.newsOptInCheckbox = new CheckboxWidget("", (WidgetListener) null, var1 != 0);
         this.createButton = new ButtonWidget(SpriteState.create, (WidgetListener) null);
         this.backButton = new ButtonWidget(ValidationIconWidget.goback, (WidgetListener) null);
-        this.displayNameInput.hoverText = sg.createDisplaynameTooltip;
+        this.displayNameInput.hoverText = ThemeSelectScreen.createDisplaynameTooltip;
         this.emailInput.hoverText = CheckboxWidget.createEmailTooltip;
         this.emailConfirmInput.hoverText = wp.createEmailConfirmTooltip;
         this.passwordInput.hoverText = kc.createPasswordTooltip;
@@ -451,8 +451,8 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         this.passwordConfirmInput.a((byte) -111, new MatchingTextValidator(this.passwordConfirmInput, this.passwordInput));
         this.ageInput.a((byte) -111, new AgeValidator(this.ageInput));
         this.createButton.enabled = false;
-        this.createButton.renderer = (WidgetPainter) ((Object) new ng());
-        this.backButton.renderer = (WidgetPainter) ((Object) new pd());
+        this.createButton.renderer = (WidgetPainter) ((Object) new ThreeSliceButtonPainter());
+        this.backButton.renderer = (WidgetPainter) ((Object) new LinkButtonPainter());
         this.displayNameInput.renderer = (WidgetPainter) ((Object) new om(10000536));
         om dupTemp$0 = new om(10000536);
         this.emailConfirmInput.renderer = (WidgetPainter) ((Object) dupTemp$0);
@@ -462,22 +462,22 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         sm dupTemp$1 = new sm(10000536);
         this.passwordConfirmInput.renderer = (WidgetPainter) ((Object) dupTemp$1);
         this.passwordInput.renderer = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.j(0), this.i(11579568)}, -1, lh.createAgreeterms);
+        String var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{this.j(0), this.i(11579568)}, -1, ArchiveProvider.createAgreeterms);
         int var3 = 20;
-        var3 = var3 + this.a((byte) 44, this.emailInput, var3, 170, ng.createEmail);
+        var3 = var3 + this.a((byte) 44, this.emailInput, var3, 170, ThreeSliceButtonPainter.createEmail);
         var3 = var3 + (5 + this.a(lo.createEmailConfirm, this.emailConfirmInput, 20, 170, "", var3, (byte) -76));
         var3 = var3 + this.a((byte) 44, this.passwordInput, var3, 170, PolarBallSkin.createPassword);
-        var3 = var3 + (5 + this.a(35, e.createPasswordConfirm, this.passwordConfirmInput, df.createPasswordHint, 170, var3));
-        var3 = var3 + (5 + this.a(35, KillerBallSkin.createDisplayname, this.displayNameInput, se.createDisplaynameHint, 170, var3));
+        var3 = var3 + (5 + this.a(35, e.createPasswordConfirm, this.passwordConfirmInput, AimTarget.createPasswordHint, 170, var3));
+        var3 = var3 + (5 + this.a(35, KillerBallSkin.createDisplayname, this.displayNameInput, LongAndTextLoginPayload.createDisplaynameHint, 170, var3));
         var3 = var3 + this.a(MusicPatch.createAge, (byte) -114, 170, var3, this.ageInput);
         LabeledChildWidget var4 = new LabeledChildWidget(46, var3, -90 + this.widgetWidth, 25, this.newsOptInCheckbox, true, -120 + this.widgetWidth, 5, PoolUiText.field_a, 11579568, ab.createOptinNews);
         this.addChild(true, var4);
         var3 = var3 + var4.widgetHeight;
-        am var5 = new am(ValidationIconWidget.field_O, 0, 0, 0, 0, 16777215, -1, 0, 0, ValidationIconWidget.field_O.maxAscent, -1, 2147483647, true);
+        TextWidgetPainter var5 = new TextWidgetPainter(ValidationIconWidget.field_O, 0, 0, 0, 0, 16777215, -1, 0, 0, ValidationIconWidget.field_O.maxAscent, -1, 2147483647, true);
         this.termsText = new HotspotTextWidget(var2, var5);
         this.termsText.hoverText = "";
-        this.termsText.setHotspotHoverText((byte) 73, cn.openinpopupwindow, 0);
-        this.termsText.setHotspotHoverText((byte) 117, cn.openinpopupwindow, 1);
+        this.termsText.setHotspotHoverText((byte) 73, DelegatingCanvas.openinpopupwindow, 0);
+        this.termsText.setHotspotHoverText((byte) 117, DelegatingCanvas.openinpopupwindow, 1);
         this.termsText.listener = (WidgetListener) (this);
         this.termsText.fitTextBounds(46, var3, -90 + this.widgetWidth, -15);
         var3 = var3 + (this.termsText.widgetHeight + 15);
@@ -511,7 +511,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           }
           if (TextInputValidator.field_j.a(param0 + 121) &&
             !param1.equals(TextInputValidator.field_j.b(2))) {
-            TextInputValidator.field_j = oh.a(117, param1);
+            TextInputValidator.field_j = GzipDecoder.a(117, param1);
           }
           stackIn_7_0 = TextInputValidator.field_j;
           return stackIn_7_0;
@@ -525,7 +525,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -573,7 +573,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
           var4 = param0;
           ((TextInputWidget) ((Object) var3)).setInputText((byte) -124, false, var4);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "nf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "nf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class WeightedLruCache {
-    private uk entriesByKey;
-    static di field_d;
+    private IntrusiveNodeHashTable entriesByKey;
+    static ResourceArchive field_d;
     private int remainingCapacity;
     static String[][] field_f;
     static String cont;
-    private qi lruQueue;
+    private IterableDualLinkDeque lruQueue;
     private int capacity;
     static String dobChatdisabled;
 
     private final void remove(long param0, int param1) {
-        CacheEntry var4 = (CacheEntry) (this.entriesByKey.a(-28010, param0));
+        CacheEntry var4 = (CacheEntry) (this.entriesByKey.findByKey(-28010, param0));
         this.removeEntry(param1, var4);
     }
 
@@ -25,7 +25,7 @@ final class WeightedLruCache {
           this.putWeighted(0, 1, param1, param2);
           int var5_int = 99 % ((-17 - param0) / 62);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "fg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class WeightedLruCache {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -71,15 +71,15 @@ final class WeightedLruCache {
           this.remove(param3, param0);
           this.remainingCapacity = this.remainingCapacity - param1;
           while (this.remainingCapacity < 0) {
-            var6 = (CacheEntry) (this.lruQueue.a(-97));
+            var6 = (CacheEntry) (this.lruQueue.removeFirst(-97));
             this.removeEntry(0, var6);
           }
           var6_ref = new StrongCacheEntry(param2, param1);
-          this.entriesByKey.a(var6_ref, true, param3);
-          this.lruQueue.a((byte) -62, var6_ref);
+          this.entriesByKey.put(var6_ref, true, param3);
+          this.lruQueue.addLast((byte) -62, var6_ref);
           ((CacheEntry) ((Object) var6_ref)).field_m = 0L;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "fg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class WeightedLruCache {
         StrongCacheEntry var6Lifetime1;
         if (!param1) {
           field_f = (String[][]) null;
-          var8 = (CacheEntry) (this.entriesByKey.a(-28010, param0));
+          var8 = (CacheEntry) (this.entriesByKey.findByKey(-28010, param0));
           CacheEntry var7 = var8;
           if (var8 == null) {
             return null;
@@ -104,19 +104,19 @@ final class WeightedLruCache {
             return null;
           }
           if (!var8.isReferenceBacked(-74)) {
-            this.lruQueue.a((byte) -36, var8);
+            this.lruQueue.addLast((byte) -36, var8);
             var8.field_m = 0L;
             return var9;
           }
           var6 = new StrongCacheEntry(var9, var8.weight);
-          this.entriesByKey.a(var6, param1, var8.key);
-          this.lruQueue.a((byte) -36, var6);
+          this.entriesByKey.put(var6, param1, var8.key);
+          this.lruQueue.addLast((byte) -36, var6);
           ((CacheEntry) ((Object) var6)).field_m = 0L;
           var8.unlink((byte) -117);
           var8.a(!param1 ? true : false);
           return var9;
         }
-        CacheEntry var10 = (CacheEntry) (this.entriesByKey.a(-28010, param0));
+        CacheEntry var10 = (CacheEntry) (this.entriesByKey.findByKey(-28010, param0));
         if (var10 == null) {
           return null;
         }
@@ -128,13 +128,13 @@ final class WeightedLruCache {
           return null;
         }
         if (!var10.isReferenceBacked(-74)) {
-          this.lruQueue.a((byte) -36, var10);
+          this.lruQueue.addLast((byte) -36, var10);
           var10.field_m = 0L;
           return var11;
         }
         var6Lifetime1 = new StrongCacheEntry(var11, var10.weight);
-        this.entriesByKey.a(var6Lifetime1, param1, var10.key);
-        this.lruQueue.a((byte) -36, var6Lifetime1);
+        this.entriesByKey.put(var6Lifetime1, param1, var10.key);
+        this.lruQueue.addLast((byte) -36, var6Lifetime1);
         ((CacheEntry) ((Object) var6Lifetime1)).field_m = 0L;
         var10.unlink((byte) -117);
         var10.a(!param1 ? true : false);
@@ -177,16 +177,16 @@ final class WeightedLruCache {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param2.length() != 0) {
-                var5Lifetime6 = var7 + "; Expires=" + hn.formatCookieDate(rl.a((byte) -120) + 94608000000L, false) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + hn.formatCookieDate(rl.monotonicTimeMillis((byte) -120) + 94608000000L, false) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              mo.a("document.cookie=\"" + var5Lifetime6 + "\"", param0, (byte) 35);
+              JavaScriptBridge.evaluateScript("document.cookie=\"" + var5Lifetime6 + "\"", param0, (byte) 35);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            uk.a(558370049, param0);
+            IntrusiveNodeHashTable.a(558370049, param0);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -204,7 +204,7 @@ final class WeightedLruCache {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -215,13 +215,13 @@ final class WeightedLruCache {
 
     private WeightedLruCache(int param0, int param1) {
         int var3;
-        this.lruQueue = new qi();
+        this.lruQueue = new IterableDualLinkDeque();
         this.capacity = param0;
         this.remainingCapacity = param0;
         var3 = 1;
         while (true) {
           if (var3 + var3 >= param0) {
-            this.entriesByKey = new uk(var3);
+            this.entriesByKey = new IntrusiveNodeHashTable(var3);
             return;
           }
           if (param1 > var3) {
@@ -230,11 +230,11 @@ final class WeightedLruCache {
           }
           break;
         }
-        this.entriesByKey = new uk(var3);
+        this.entriesByKey = new IntrusiveNodeHashTable(var3);
         return;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         dobChatdisabled = null;
         if (param0 == 0) {
           field_d = null;
@@ -242,7 +242,7 @@ final class WeightedLruCache {
           cont = null;
           return;
         }
-        field_d = (di) null;
+        field_d = (ResourceArchive) null;
         field_d = null;
         field_f = (String[][]) null;
         cont = null;

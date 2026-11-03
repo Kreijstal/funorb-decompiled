@@ -15,7 +15,7 @@ final class MusicPatch extends IntrusiveNode {
     static int[] field_l;
     static String createAge;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_l = null;
         tutorialEightBallComplete = null;
         field_o = null;
@@ -25,7 +25,7 @@ final class MusicPatch extends IntrusiveNode {
         }
     }
 
-    final boolean prepareSamples(int param0, byte[] param1, int[] param2, cf param3) {
+    final boolean prepareSamples(int param0, byte[] param1, int[] param2, SoundCache param3) {
         int var8 = 0;
         int stackIn_22_0 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -98,14 +98,14 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 
     final void releaseSampleIds(int param0) {
         this.sampleIds = null;
         if (param0 != 23478) {
-          MusicPatch.a(-24);
+          MusicPatch.releaseStatics(-24);
         }
     }
 
@@ -366,7 +366,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.k(-112);
             }
-            this.field_s[var23] = (short)(this.field_s[var23] + (rb.b(2, -1 + var22) << 14));
+            this.field_s[var23] = (short)(this.field_s[var23] + (ArchiveLoadSequence.b(2, -1 + var22) << 14));
             var20Lifetime2--;
             this.sampleIds[var23] = var22;
           }
@@ -617,7 +617,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             stackIn_209_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_208_0), ((StringBuilder) (Object) stackIn_208_1).append(stackIn_209_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_208_0), ((StringBuilder) (Object) stackIn_208_1).append(stackIn_209_2).append(')').toString());
         }
     }
 

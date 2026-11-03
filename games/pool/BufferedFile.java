@@ -17,8 +17,8 @@ final class BufferedFile {
     static String field_b;
     private long field_g;
     static String pleasetryagain;
-    static vh field_a;
-    private v file;
+    static UiComponent field_a;
+    private LimitedRandomAccessFile file;
     private byte[] field_c;
     private int field_q;
 
@@ -69,10 +69,10 @@ final class BufferedFile {
               return;
             }
             if (this.position != this.field_g) {
-              this.file.a(-1, this.position);
+              this.file.seek(-1, this.position);
               this.field_g = this.position;
             }
-            this.file.a(param2, 25354, param0, param1);
+            this.file.write(param2, 25354, param0, param1);
             this.field_g = this.field_g + (long)param0;
             if (this.field_g > this.field_m) {
               this.field_m = this.field_g;
@@ -120,15 +120,15 @@ final class BufferedFile {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void close(byte param0) throws IOException {
         this.flush(false);
-        this.file.c((byte) 101);
+        this.file.close((byte) 101);
         if (param0 <= 34) {
-          BufferedFile.a((byte) -96);
+          BufferedFile.releaseStatics((byte) -96);
         }
     }
 
@@ -141,7 +141,7 @@ final class BufferedFile {
           this.length((byte) 81);
         }
         if (this.position != this.field_g) {
-          this.file.a(-1, this.position);
+          this.file.seek(-1, this.position);
           this.field_g = this.position;
         }
         this.field_d = this.position;
@@ -150,7 +150,7 @@ final class BufferedFile {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.file.a(this.field_c, 20859, var2, this.field_o);
+          var3 = this.file.read(this.field_c, 20859, var2, this.field_o);
           if (var3 == -1) {
             break;
           }
@@ -194,7 +194,7 @@ final class BufferedFile {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -250,10 +250,10 @@ final class BufferedFile {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (this.field_c.length < param1) {
-              this.file.a(-1, this.position);
+              this.file.seek(-1, this.position);
               this.field_g = this.position;
               while (param1 > 0) {
-                var9_intLifetime1 = this.file.a(param3, 20859, param1, param2);
+                var9_intLifetime1 = this.file.read(param3, 20859, param1, param2);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -343,11 +343,11 @@ final class BufferedFile {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         pleasetryagain = null;
         field_a = null;
         int var1 = -55 / ((62 - param0) / 40);
@@ -370,7 +370,7 @@ final class BufferedFile {
           }
           this.readFully((byte) -126, param1.length, 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ir.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ir.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -382,10 +382,10 @@ final class BufferedFile {
         var7 = Pool.field_O;
         if (this.field_j != -1L) {
           if (~this.field_j != ~this.field_g) {
-            this.file.a(-1, this.field_j);
+            this.file.seek(-1, this.field_j);
             this.field_g = this.field_j;
           }
-          this.file.a(0, 25354, this.field_q, this.field_k);
+          this.file.write(0, 25354, this.field_q, this.field_k);
           this.field_g = this.field_g + (long)this.field_q;
           if (this.field_m < this.field_g) {
             this.field_m = this.field_g;
@@ -419,25 +419,25 @@ final class BufferedFile {
           this.field_j = -1L;
         }
         if (param0) {
-          BufferedFile.a((byte) 126);
+          BufferedFile.releaseStatics((byte) 126);
         }
     }
 
-    BufferedFile(v param0, int param1, int param2) throws IOException {
+    BufferedFile(LimitedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_j = -1L;
         this.field_d = -1L;
         this.field_q = 0;
         try {
           this.file = param0;
-          dupTemp$0 = param0.a(false);
+          dupTemp$0 = param0.length(false);
           this.field_m = dupTemp$0;
           this.field_e = dupTemp$0;
           this.position = 0L;
           this.field_c = new byte[param1];
           this.field_k = new byte[param2];
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ir.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ir.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

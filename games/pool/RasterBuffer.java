@@ -5,7 +5,7 @@ abstract class RasterBuffer {
     int[] pixels;
     static boolean field_i;
     static String nSecondTimePenalty;
-    static db field_f;
+    static VerticalScrollbar field_f;
     static boolean field_j;
     int width;
     java.awt.Image field_c;
@@ -17,7 +17,7 @@ abstract class RasterBuffer {
 
     abstract void drawTo(java.awt.Graphics param0, int param1, int param2, int param3);
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_a = null;
         field_d = null;
         field_l = null;

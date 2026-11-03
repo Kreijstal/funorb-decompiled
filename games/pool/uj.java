@@ -3,12 +3,12 @@
  */
 final class uj {
     static ie field_e;
-    static di field_d;
+    static ResourceArchive field_d;
     static Sprite field_c;
     static String rankings;
     static int[] field_a;
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_e = null;
         field_d = null;
         field_a = null;
@@ -17,11 +17,11 @@ final class uj {
           field_c = null;
           return;
         }
-        uj.a((byte) 78);
+        uj.releaseStatics((byte) 78);
         field_c = null;
     }
 
-    final static void a(PoolMatchController param0, ij param1, int[] param2, int[] param3, int param4) {
+    final static void projectWorldPointToScreen(PoolMatchController param0, ij param1, int[] param2, int[] param3, int param4) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -46,7 +46,7 @@ final class uj {
         int[] var15 = null;
         var12 = Pool.field_O;
         try {
-          var15 = param0.field_ab;
+          var15 = param0.viewMatrix;
           var14 = var15;
           var13 = var14;
           var5 = var13;
@@ -111,7 +111,7 @@ final class uj {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 

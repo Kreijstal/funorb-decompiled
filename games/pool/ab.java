@@ -12,7 +12,7 @@ final class ab {
     static String muOptionsPlayers;
     static String rule01;
 
-    final static boolean a(di param0, boolean param1) {
+    final static boolean a(ResourceArchive param0, boolean param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -35,7 +35,7 @@ final class ab {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class ab {
             gameoptInviteplayersOrTrychanging2 = (String) null;
           }
           try {
-            mo.a("resizing", new Object[]{new Integer(param1)}, param0 ^ 25619, NanoTickClock.getApplet(116));
+            JavaScriptBridge.callWindowFunctionWithArguments("resizing", new Object[]{new Integer(param1)}, param0 ^ 25619, NanoTickClock.getApplet(116));
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;
@@ -116,19 +116,19 @@ final class ab {
           ab.a(-112, (byte) -4);
         }
         stackIn_4_0 = new StringBuilder();
-        if ((param0 & nd.field_j) != 0) {
+        if ((param0 & MarkerSliderPainter.field_j) != 0) {
           stackIn_5_1 = "cont vis|";
         } else {
           stackIn_5_1 = "";
         }
         stackIn_7_0 = ((StringBuilder) (Object) stackIn_4_0).append(stackIn_5_1);
-        if ((param0 & sg.field_O) == 0) {
+        if ((param0 & ThemeSelectScreen.field_O) == 0) {
           stackIn_8_1 = "";
         } else {
           stackIn_8_1 = "gv visit+1|";
         }
         stackIn_10_0 = ((StringBuilder) (Object) stackIn_7_0).append(stackIn_8_1);
-        if ((param0 & be.field_I) == 0) {
+        if ((param0 & OptionsScreen.field_I) == 0) {
           stackIn_11_1 = "";
         } else {
           stackIn_11_1 = "gv shot+1|";
@@ -176,7 +176,7 @@ final class ab {
           stackIn_32_1 = "respot white|";
         }
         stackIn_34_0 = ((StringBuilder) (Object) stackIn_31_0).append(stackIn_32_1);
-        if ((param0 & ob.field_F) != 0) {
+        if ((param0 & MenuScreen.field_F) != 0) {
           stackIn_35_1 = "rerack|";
         } else {
           stackIn_35_1 = "";

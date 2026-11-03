@@ -15,15 +15,15 @@ final class OpacityWidget extends SingleChildWidget {
         if (param0 != -1) {
           benefitsPrice = (String) null;
         }
-        v.field_b = (byte[][]) null;
+        LimitedRandomAccessFile.field_b = (byte[][]) null;
         rc.field_f = null;
         ih.field_d = null;
-        pd.field_a = null;
-        el.field_I = null;
+        LinkButtonPainter.field_a = null;
+        AchievementsScreen.field_I = null;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, kh param4, int param5, int param6, boolean param7) {
-        uo[][] stackIn_4_0 = null;
+    final static void a(int param0, int param1, int param2, boolean param3, LobbyGame param4, int param5, int param6, boolean param7) {
+        AlignedIconLabel[][] stackIn_4_0 = null;
         int stackIn_5_1 = 0;
         int stackIn_25_0 = 0;
         int stackIn_40_0 = 0;
@@ -33,7 +33,7 @@ final class OpacityWidget extends SingleChildWidget {
         String stackIn_107_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
-        uo[] var8 = null;
+        AlignedIconLabel[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
         int[] var10 = null;
@@ -41,11 +41,11 @@ final class OpacityWidget extends SingleChildWidget {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        uo var13_ref_uo = null;
+        AlignedIconLabel var13_ref_uo = null;
         int var14 = 0;
         int var15 = 0;
-        uo[] var16 = null;
-        uo[] var17 = null;
+        AlignedIconLabel[] var16 = null;
+        AlignedIconLabel[] var17 = null;
         int[] var18 = null;
         int[] var19 = null;
         int var10_intLifetime1;
@@ -59,7 +59,7 @@ final class OpacityWidget extends SingleChildWidget {
             var8_int = 1;
             var9 = 0;
             while (true) {
-              if (var9 >= we.field_m.length) {
+              if (var9 >= ArchiveLoadStep.field_m.length) {
                 if (var8_int == 0) {
                   decompiledFrameCompleted2 = false;
                   break;
@@ -68,7 +68,7 @@ final class OpacityWidget extends SingleChildWidget {
                 decompiledFrameCompleted1 = false;
                 break;
               }
-              var19 = we.field_m[var9];
+              var19 = ArchiveLoadStep.field_m[var9];
               var18 = var19;
               var10 = var18;
               var11 = 0;
@@ -191,9 +191,9 @@ final class OpacityWidget extends SingleChildWidget {
               } else {
                 var13_ref_uo = var8[var11 + 1];
                 if (param7) {
-                  if (!var13_ref_uo.field_Ib) {
+                  if (!var13_ref_uo.selected) {
                     if (var9 != 0) {
-                      stackIn_49_0 = (var13_ref_uo.field_pb) ? 1 : 0;
+                      stackIn_49_0 = (var13_ref_uo.enabled) ? 1 : 0;
                     } else {
                       stackIn_49_0 = 0;
                     }
@@ -203,9 +203,9 @@ final class OpacityWidget extends SingleChildWidget {
                   var12 = stackIn_49_0;
                 } else {
                   if (param5 == -1) {
-                    stackIn_40_0 = (em.field_L.field_Nb != dg.field_T[var11]) ? 0 : 1;
+                    stackIn_40_0 = (HighscoresScreen.field_L.field_Nb != dg.field_T[var11]) ? 0 : 1;
                   } else {
-                    stackIn_40_0 = ((em.field_L.field_tc[param5] & 255) != var11) ? 0 : 1;
+                    stackIn_40_0 = ((HighscoresScreen.field_L.settings[param5] & 255) != var11) ? 0 : 1;
                   }
                   var12 = stackIn_40_0;
                 }
@@ -234,7 +234,7 @@ final class OpacityWidget extends SingleChildWidget {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -274,7 +274,7 @@ final class OpacityWidget extends SingleChildWidget {
         Sprite var6 = new Sprite(this.child.widgetWidth, this.child.widgetHeight);
         CueAim.a(110, var6);
         this.child.renderWidget(param0, (byte) -126, 0, 0);
-        oc.a(118);
+        TriangleMesh.a(118);
         var6.a(param2 + this.widgetX, this.widgetY + param3, this.opacity);
     }
 
@@ -300,11 +300,11 @@ final class OpacityWidget extends SingleChildWidget {
           this.opacity = 256;
           this.child = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(di param0, byte param1, di param2) {
+    final static void a(ResourceArchive param0, byte param1, ResourceArchive param2) {
         try {
           rl.field_c = param2;
           IterableNodeHashTable.field_k = param0;
@@ -312,7 +312,7 @@ final class OpacityWidget extends SingleChildWidget {
             youCanSpectate = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "sh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "sh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class OpacityWidget extends SingleChildWidget {
           if (param0 < 25) {
             OpacityWidget.a(-81, 49, -78, -118);
           }
-          stackIn_3_0 = sg.a(-116, param2, param1, (byte) 0);
+          stackIn_3_0 = ThemeSelectScreen.a(-116, param2, param1, (byte) 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -339,16 +339,16 @@ final class OpacityWidget extends SingleChildWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3, int param4, byte param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
         if (param5 != -12) {
-          kh var13 = (kh) null;
-          OpacityWidget.a(-82, 16, -99, true, (kh) null, -40, 16, false);
+          LobbyGame var13 = (LobbyGame) null;
+          OpacityWidget.a(-82, 16, -99, true, (LobbyGame) null, -40, 16, false);
         }
-        rn.a(param1, param6, param11, param3, param10, param8, param2, param0, 16777215, param9, param4, param7, -124, 16777215);
+        DiskCacheWorker.a(param1, param6, param11, param3, param10, param8, param2, param0, 16777215, param9, param4, param7, -124, 16777215);
     }
 
     static {
@@ -361,9 +361,9 @@ final class OpacityWidget extends SingleChildWidget {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$a4481b60e878(boolean param0, int param1, boolean param2, int param3, int param4, int param5, int param6, int param7, boolean param8, int param9, boolean param10, boolean param11) {
         if (param5 != -12) {
-          kh var13 = (kh) null;
-          OpacityWidget.a(-82, 16, -99, true, (kh) null, -40, 16, false);
+          LobbyGame var13 = (LobbyGame) null;
+          OpacityWidget.a(-82, 16, -99, true, (LobbyGame) null, -40, 16, false);
         }
-        rn.a(param1, param6, param11, param3, param10, param8, param2, param0, 16777215, param9, param4, param7, -124, 16777215);
+        DiskCacheWorker.a(param1, param6, param11, param3, param10, param8, param2, param0, 16777215, param9, param4, param7, -124, 16777215);
     }
 }

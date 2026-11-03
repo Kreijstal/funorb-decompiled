@@ -5,13 +5,13 @@ final class ag {
     static String connectionrestored;
     private static int field_h;
     static Sprite field_b;
-    static vh field_f;
+    static UiComponent field_f;
     static int field_e;
     static int field_a;
     static String muLobbyNameAdd;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         if (param0 != 0) {
           IntrusiveDeque var2 = (IntrusiveDeque) null;
@@ -22,7 +22,7 @@ final class ag {
         field_f = null;
     }
 
-    final static void a(int[] param0, float[] param1, int param2) {
+    final static void projectToScreen(int[] param0, float[] param1, int param2) {
         float var3_float = 0.0f;
         float var4 = 0.0f;
         float var5 = 0.0f;
@@ -37,7 +37,7 @@ final class ag {
           param1[1] = 512.0f * var4 / var5 + (float)TriangleRasterizer.projectionCenterY;
           param1[2] = var5;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ag.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ag.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -47,7 +47,7 @@ final class ag {
         TextHotspotRegion var6 = null;
         int var7 = 0;
         IntrusiveDeque var8 = null;
-        aa var9 = null;
+        IntrusiveDequeCursor var9 = null;
         TextHotspotRegion stackIn_12_0 = null;
         Object stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
@@ -56,8 +56,8 @@ final class ag {
         RuntimeException decompiledCaughtException = null;
         var7 = Pool.field_O;
         try {
-          var9 = new aa(param1);
-          var5 = (TextHotspotRegion) (var9.b((byte) -92));
+          var9 = new IntrusiveDequeCursor(param1);
+          var5 = (TextHotspotRegion) (var9.last((byte) -92));
           while (var5 != null) {
             var6 = var5;
             while (var5 != null) {
@@ -70,7 +70,7 @@ final class ag {
               }
               var5 = var5.next;
             }
-            var5 = (TextHotspotRegion) (var9.b(-81));
+            var5 = (TextHotspotRegion) (var9.previous(-81));
           }
           if (param3 == 15395) {
             return null;
@@ -89,11 +89,11 @@ final class ag {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static Sprite a(byte param0, int param1, String param2) {
+    final static Sprite createTextLabelSprite(byte param0, int param1, String param2) {
         RuntimeException var3 = null;
         int var6 = 0;
         int var7 = 0;
@@ -117,7 +117,7 @@ final class ag {
           SoftwareRasterizer.saveClip(var16);
           var10.e();
           ModernTableScene.field_Z.d(param2, 2, 2 + ModernTableScene.field_Z.maxAscent, param1, -1);
-          var10.e(4144959);
+          var10.addOutline(4144959);
           SoftwareRasterizer.setTarget(var17, var6, var7);
           SoftwareRasterizer.restoreClip(var16);
           var10.field_y = var10.field_A;
@@ -126,7 +126,7 @@ final class ag {
           var8 = var10;
           var8.field_G = 0;
           if (param0 != 89) {
-            ag.a(-120);
+            ag.releaseStatics(-120);
           }
           stackIn_3_0 = var10;
           return stackIn_3_0;
@@ -140,7 +140,7 @@ final class ag {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

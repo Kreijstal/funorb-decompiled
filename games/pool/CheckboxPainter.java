@@ -18,15 +18,15 @@ final class CheckboxPainter implements WidgetPainter {
     private int field_m;
     static int field_n;
 
-    final static eo a(String param0, int param1) {
+    final static SocialListEntry a(String param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
-        eo var3 = null;
+        SocialListEntry var3 = null;
         String var4 = null;
         CharSequence var5 = null;
         CharSequence var6 = null;
         Object stackIn_2_0 = null;
-        eo stackIn_11_0 = null;
+        SocialListEntry stackIn_11_0 = null;
         Object stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -35,14 +35,14 @@ final class CheckboxPainter implements WidgetPainter {
         try {
           if (null == gd.field_c) {
             stackIn_2_0 = null;
-            return (eo) (stackIn_2_0);
+            return (SocialListEntry) (stackIn_2_0);
           }
           var5 = (CharSequence) ((Object) param0);
           var2 = TutorialController.normalizeDisplayName(param1 ^ 123, var5);
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (eo) (gd.field_c.a((long)var2.hashCode(), false));
+          var3 = (SocialListEntry) (gd.field_c.findFirst((long)var2.hashCode(), false));
           while (true) {
             if (var3 == null) {
               if (param1 == 1) {
@@ -50,15 +50,15 @@ final class CheckboxPainter implements WidgetPainter {
               }
               CheckboxPainter.a(-34);
               stackIn_16_0 = null;
-              return (eo) (stackIn_16_0);
+              return (SocialListEntry) (stackIn_16_0);
             }
-            var6 = (CharSequence) ((Object) var3.field_Zb);
+            var6 = (CharSequence) ((Object) var3.name);
             var4 = TutorialController.normalizeDisplayName(param1 ^ 104, var6);
             if (var4 == null) {
-              var4 = var3.field_Zb;
+              var4 = var3.name;
             }
             if (!var4.equals(var2)) {
-              var3 = (eo) (gd.field_c.a(param1 ^ -98));
+              var3 = (SocialListEntry) (gd.field_c.findNext(param1 ^ -98));
               continue;
             }
             break;
@@ -75,7 +75,7 @@ final class CheckboxPainter implements WidgetPainter {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -131,11 +131,11 @@ final class CheckboxPainter implements WidgetPainter {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         ratedGameTips = null;
         if (param0) {
           field_n = -28;
@@ -155,9 +155,9 @@ final class CheckboxPainter implements WidgetPainter {
     final static void a(Sprite param0, int param1) {
         try {
           int var2_int = 17 % ((param1 - 33) / 56);
-          mm.field_c = param0;
+          Camera.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class CheckboxPainter implements WidgetPainter {
           this.field_f = param9;
           this.field_m = param1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

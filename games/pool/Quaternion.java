@@ -56,47 +56,47 @@ final class Quaternion {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void normalise(boolean param0) {
-        int var2 = aj.a(this.w, false, this.w) - (-aj.a(this.x, false, this.x) - (aj.a(this.y, false, this.y) + aj.a(this.z, false, this.z)));
+        int var2 = NameEntryPopup.a(this.w, false, this.w) - (-NameEntryPopup.a(this.x, false, this.x) - (NameEntryPopup.a(this.y, false, this.y) + NameEntryPopup.a(this.z, false, this.z)));
         if (!param0) {
           createAlertEmailUnavailable = (String) null;
           if (var2 >= 65535) {
             if (65537 < var2) {
-              var2 = rf.a(var2, -127);
-              this.w = lh.a(var2, (byte) -76, (long)this.w);
-              this.x = lh.a(var2, (byte) -62, (long)this.x);
-              this.y = lh.a(var2, (byte) -71, (long)this.y);
-              this.z = lh.a(var2, (byte) -69, (long)this.z);
+              var2 = rf.inverseSquareRoot(var2, -127);
+              this.w = ArchiveProvider.divideFixed16(var2, (byte) -76, (long)this.w);
+              this.x = ArchiveProvider.divideFixed16(var2, (byte) -62, (long)this.x);
+              this.y = ArchiveProvider.divideFixed16(var2, (byte) -71, (long)this.y);
+              this.z = ArchiveProvider.divideFixed16(var2, (byte) -69, (long)this.z);
             }
             return;
           }
-          var2 = rf.a(var2, -127);
-          this.w = lh.a(var2, (byte) -76, (long)this.w);
-          this.x = lh.a(var2, (byte) -62, (long)this.x);
-          this.y = lh.a(var2, (byte) -71, (long)this.y);
-          this.z = lh.a(var2, (byte) -69, (long)this.z);
+          var2 = rf.inverseSquareRoot(var2, -127);
+          this.w = ArchiveProvider.divideFixed16(var2, (byte) -76, (long)this.w);
+          this.x = ArchiveProvider.divideFixed16(var2, (byte) -62, (long)this.x);
+          this.y = ArchiveProvider.divideFixed16(var2, (byte) -71, (long)this.y);
+          this.z = ArchiveProvider.divideFixed16(var2, (byte) -69, (long)this.z);
           return;
         }
         if (var2 < 65535) {
-          var2 = rf.a(var2, -127);
-          this.w = lh.a(var2, (byte) -76, (long)this.w);
-          this.x = lh.a(var2, (byte) -62, (long)this.x);
-          this.y = lh.a(var2, (byte) -71, (long)this.y);
-          this.z = lh.a(var2, (byte) -69, (long)this.z);
+          var2 = rf.inverseSquareRoot(var2, -127);
+          this.w = ArchiveProvider.divideFixed16(var2, (byte) -76, (long)this.w);
+          this.x = ArchiveProvider.divideFixed16(var2, (byte) -62, (long)this.x);
+          this.y = ArchiveProvider.divideFixed16(var2, (byte) -71, (long)this.y);
+          this.z = ArchiveProvider.divideFixed16(var2, (byte) -69, (long)this.z);
           return;
         }
         if (65537 >= var2) {
           return;
         }
-        var2 = rf.a(var2, -127);
-        this.w = lh.a(var2, (byte) -76, (long)this.w);
-        this.x = lh.a(var2, (byte) -62, (long)this.x);
-        this.y = lh.a(var2, (byte) -71, (long)this.y);
-        this.z = lh.a(var2, (byte) -69, (long)this.z);
+        var2 = rf.inverseSquareRoot(var2, -127);
+        this.w = ArchiveProvider.divideFixed16(var2, (byte) -76, (long)this.w);
+        this.x = ArchiveProvider.divideFixed16(var2, (byte) -62, (long)this.x);
+        this.y = ArchiveProvider.divideFixed16(var2, (byte) -71, (long)this.y);
+        this.z = ArchiveProvider.divideFixed16(var2, (byte) -69, (long)this.z);
     }
 
     final void multiplyBy(int param0, Quaternion param1) {
@@ -104,19 +104,19 @@ final class Quaternion {
         int var4 = 0;
         int var5 = 0;
         try {
-          var3_int = aj.a(this.w, false, param1.w) + (-aj.a(this.x, false, param1.x) - aj.a(this.y, false, param1.y) - aj.a(this.z, false, param1.z));
+          var3_int = NameEntryPopup.a(this.w, false, param1.w) + (-NameEntryPopup.a(this.x, false, param1.x) - NameEntryPopup.a(this.y, false, param1.y) - NameEntryPopup.a(this.z, false, param1.z));
           if (param0 != 3) {
             field_k = (nl) null;
           }
-          var4 = aj.a(this.x, false, param1.w) + (aj.a(this.w, false, param1.x) + aj.a(this.z, false, param1.y)) - aj.a(this.y, false, param1.z);
-          var5 = aj.a(this.y, false, param1.w) - aj.a(this.z, false, param1.x) + aj.a(this.w, false, param1.y) + aj.a(this.x, false, param1.z);
-          this.z = aj.a(this.z, false, param1.w) + (aj.a(this.y, false, param1.x) - (aj.a(this.x, false, param1.y) - aj.a(this.w, false, param1.z)));
+          var4 = NameEntryPopup.a(this.x, false, param1.w) + (NameEntryPopup.a(this.w, false, param1.x) + NameEntryPopup.a(this.z, false, param1.y)) - NameEntryPopup.a(this.y, false, param1.z);
+          var5 = NameEntryPopup.a(this.y, false, param1.w) - NameEntryPopup.a(this.z, false, param1.x) + NameEntryPopup.a(this.w, false, param1.y) + NameEntryPopup.a(this.x, false, param1.z);
+          this.z = NameEntryPopup.a(this.z, false, param1.w) + (NameEntryPopup.a(this.y, false, param1.x) - (NameEntryPopup.a(this.x, false, param1.y) - NameEntryPopup.a(this.w, false, param1.z)));
           this.w = var3_int;
           this.x = var4;
           this.y = var5;
           this.normalise(true);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -124,20 +124,20 @@ final class Quaternion {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var3_int = aj.a(this.w, false, this.w);
-        int var4 = aj.a(this.x, false, this.w);
-        int var5 = aj.a(this.y, false, this.w);
-        int var6 = aj.a(this.z, false, this.w);
-        int var7 = aj.a(this.x, false, this.x);
-        int var8 = aj.a(this.y, false, this.x);
-        int var9 = aj.a(this.z, false, this.x);
+        int var3_int = NameEntryPopup.a(this.w, false, this.w);
+        int var4 = NameEntryPopup.a(this.x, false, this.w);
+        int var5 = NameEntryPopup.a(this.y, false, this.w);
+        int var6 = NameEntryPopup.a(this.z, false, this.w);
+        int var7 = NameEntryPopup.a(this.x, false, this.x);
+        int var8 = NameEntryPopup.a(this.y, false, this.x);
+        int var9 = NameEntryPopup.a(this.z, false, this.x);
         if (param1 > -36) {
           return;
         }
         try {
-          var10 = aj.a(this.y, false, this.y);
-          var11 = aj.a(this.z, false, this.y);
-          var12 = aj.a(this.z, false, this.z);
+          var10 = NameEntryPopup.a(this.y, false, this.y);
+          var11 = NameEntryPopup.a(this.z, false, this.y);
+          var12 = NameEntryPopup.a(this.z, false, this.z);
           param0[3] = -var10 + (var3_int + var7 - var12);
           param0[5] = var9 + (-var5 + var9 - var5);
           param0[4] = var6 + (var8 + (var8 + var6));
@@ -148,7 +148,7 @@ final class Quaternion {
           param0[8] = var4 + var11 + (var4 + var11);
           param0[11] = var3_int + var12 - (var10 + var7);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hm.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hm.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class Quaternion {
           }
           this.w = param1.w;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hm.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -191,7 +191,7 @@ final class Quaternion {
           this.y = param1.readMedium(0);
           this.z = param1.readMedium(0);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "hm.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "hm.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class Quaternion {
         this.y = param2;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         int var1 = -69 / ((param0 - 2) / 61);
         field_k = null;
         createAlertEmailUnavailable = null;
@@ -222,17 +222,17 @@ final class Quaternion {
 
     final void setFromAxisAngle(int param0, int param1, int param2, int param3, int param4) {
         param4 = param4 >> 1;
-        int var6 = ao.a(param4, true);
+        int var6 = ScrollPaneWithFooter.a(param4, true);
         int var7 = hc.a(2047, param4);
         this.w = var7;
-        this.x = aj.a(var6, false, param1);
-        this.y = aj.a(var6, false, param2);
+        this.x = NameEntryPopup.a(var6, false, param1);
+        this.y = NameEntryPopup.a(var6, false, param2);
         if (param0 > 46) {
-          this.z = aj.a(var6, false, param3);
+          this.z = NameEntryPopup.a(var6, false, param3);
           return;
         }
         this.setFromAxisAngle(32, -115, -18, -75, 3);
-        this.z = aj.a(var6, false, param3);
+        this.z = NameEntryPopup.a(var6, false, param3);
     }
 
     final static void a(boolean param0, int param1) {

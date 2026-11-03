@@ -9,14 +9,14 @@ final class w {
     static String quickchatHelp;
     static String[] field_k;
     static int[] field_d;
-    static qp field_b;
+    static QuickChatMenu field_b;
     static eb[] field_a;
     static String playerX2HaveResigned;
     static String playerVsPlayer;
     static int[][] field_j;
     static Sprite field_f;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_i = null;
         playerVsPlayer = null;
         quickchatHelp = null;
@@ -47,7 +47,7 @@ final class w {
     }
 
     final static void a(int param0, int param1, int param2) {
-        ad.field_u = param0;
+        ArchiveIndex.field_u = param0;
         m.field_f = param2;
         int var3 = 62 % ((59 - param1) / 59);
     }
@@ -62,14 +62,14 @@ final class w {
         RuntimeException decompiledCaughtException = null;
         var4 = Pool.field_O;
         try {
-          if (!p.a(param1, (byte) -113, param0)) {
+          if (!ModelInstance.isValidDisplayName(param1, (byte) -113, param0)) {
             return false;
           }
           if (param2 != -37) {
             return true;
           }
           for (var3_int = 0; var3_int < param1.length(); var3_int++) {
-            if (!uc.a(param1.charAt(var3_int), (byte) -51)) {
+            if (!uc.isNameCharacter(param1.charAt(var3_int), (byte) -51)) {
               return false;
             }
           }
@@ -84,12 +84,12 @@ final class w {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static tc a(boolean param0, int param1) {
-        tc var2 = new tc(param1, param0);
+    final static GrowableIntList createGrowableIntList(boolean param0, int param1) {
+        GrowableIntList var2 = new GrowableIntList(param1, param0);
         return var2;
     }
 

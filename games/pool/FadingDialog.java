@@ -12,7 +12,7 @@ abstract class FadingDialog extends WidgetContainer {
     static String mustloginNotloggedin;
     static String createUnable;
 
-    public static void h(int param0) {
+    public static void releaseStatics(int param0) {
         createUnable = null;
         if (param0 != -1) {
           int[] var2 = (int[]) null;
@@ -105,7 +105,7 @@ abstract class FadingDialog extends WidgetContainer {
               for (var7_int = var6 + 1; var7_int < param2.length; var7_int++) {
                 if (param2[var7_int].inPlay && (param2[var6].motionState != 0 ||
                   0 != param2[var7_int].motionState)) {
-                  var8_int = no.a(param2[var7_int].velocityY, param2[var6].lastAdvanceTime, param2[var7_int].velocityX, param2[var7_int].lastAdvanceTime, param2[var6].velocityX, param2[var7_int].positionY, param2[var6].velocityY, param2[var7_int].positionX, 8, param2[var6].positionX, param2[var6].positionY, -1);
+                  var8_int = Js5Transport.a(param2[var7_int].velocityY, param2[var6].lastAdvanceTime, param2[var7_int].velocityX, param2[var7_int].lastAdvanceTime, param2[var6].velocityX, param2[var7_int].positionY, param2[var6].velocityY, param2[var7_int].positionX, 8, param2[var6].positionX, param2[var6].positionY, -1);
                   if (param1 < var8_int) {
                     if (param2[var6].lastAdvanceTime < param2[var7_int].lastAdvanceTime) {
                       stackIn_18_0 = param2[var7_int].lastAdvanceTime;
@@ -149,7 +149,7 @@ abstract class FadingDialog extends WidgetContainer {
                 -1 == NodeHashTableIterator.field_s) {
                 NodeHashTableIterator.field_s = var7.field_i;
               }
-              if ((33554432L & pd.field_i) != 0L) {
+              if ((33554432L & LinkButtonPainter.field_i) != 0L) {
                 System.out.println("Bounce ball " + var7.field_n + " and ball " + var7.field_i + " at time " + Integer.toString(var7.field_u, 16));
               }
               var9 = param2[var7.field_i];
@@ -164,14 +164,14 @@ abstract class FadingDialog extends WidgetContainer {
             }
             if (-1 != var7.field_x) {
               var8.field_c = var8.field_c + 1;
-              sm.a(var7.field_u, param0[var7.field_x], 117, var8);
+              sm.bounceBallOffCushion(var7.field_u, param0[var7.field_x], 117, var8);
               if (null != var8.field_q) {
                 var8.field_q.a((int) var7.field_x, -26401, var8);
               }
             }
             if (var7.field_a != -1) {
               var8.field_c = var8.field_c + 1;
-              dk.a(param3[var7.field_a][0], (byte) -20, var7.field_u, var8, param3[var7.field_a][1]);
+              dk.bounceBallOffPoint(param3[var7.field_a][0], (byte) -20, var7.field_u, var8, param3[var7.field_a][1]);
               if (var8.field_q != null) {
                 var8.field_q.a(var8, (int) var7.field_a, (byte) 5);
               }
@@ -202,7 +202,7 @@ abstract class FadingDialog extends WidgetContainer {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -227,17 +227,17 @@ abstract class FadingDialog extends WidgetContainer {
           super.renderWidget(param0, (byte) 70, param2, param3);
           return;
         }
-        if (ad.field_y == null ||
-          !(ad.field_y.field_z >= this.widgetWidth) ||
-          !(this.widgetHeight <= ad.field_y.field_A)) {
-          ad.field_y = new Sprite(this.widgetWidth, this.widgetHeight);
+        if (ArchiveIndex.field_y == null ||
+          !(ArchiveIndex.field_y.field_z >= this.widgetWidth) ||
+          !(this.widgetHeight <= ArchiveIndex.field_y.field_A)) {
+          ArchiveIndex.field_y = new Sprite(this.widgetWidth, this.widgetHeight);
         }
-        CueAim.a(117, ad.field_y);
+        CueAim.a(117, ArchiveIndex.field_y);
         SoftwareRasterizer.clear();
         this.drawDialogFrame(0, 0, 260);
         super.renderWidget(param0, (byte) 48, -this.widgetX - param2, -this.widgetY - param3);
-        oc.a(117);
-        ad.field_y.a(this.widgetX + param2, param3 + this.widgetY, this.dialogOpacity);
+        TriangleMesh.a(117);
+        ArchiveIndex.field_y.a(this.widgetX + param2, param3 + this.widgetY, this.dialogOpacity);
         var5 = 121 / ((param1 + 42) / 53);
     }
 
@@ -248,7 +248,7 @@ abstract class FadingDialog extends WidgetContainer {
           this.dialogOpacity = 0;
           this.dialogOpen = false;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "oe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "oe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -287,7 +287,7 @@ abstract class FadingDialog extends WidgetContainer {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

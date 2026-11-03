@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class om extends am {
+class om extends TextWidgetPainter {
     static Sprite field_u;
     static String field_y;
     static int field_w;
@@ -45,7 +45,7 @@ class om extends am {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ class om extends am {
           int var6_int = 5 / ((2 - param2) / 41);
           super.paintWidget(param0, param1, (byte) -73, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "om.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "om.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -69,15 +69,15 @@ class om extends am {
         int var4;
         int var4Lifetime1;
         if (param1 == 0) {
-          if (~param0 == ~ec.field_i) {
+          if (~param0 == ~BallDebugOverlay.field_i) {
             var4 = 101 % ((59 - param3) / 59);
             if (param1 != 1) {
               if (2 == param1) {
-                if (~di.field_e == ~param0) {
+                if (~ResourceArchive.field_e == ~param0) {
                   return;
                 }
                 lf.field_c = true;
-                di.field_e = param0;
+                ResourceArchive.field_e = param0;
                 mj.a(param2, 27712);
               }
               return;
@@ -90,15 +90,15 @@ class om extends am {
             if (2 != param1) {
               return;
             }
-            if (~di.field_e != ~param0) {
+            if (~ResourceArchive.field_e != ~param0) {
               lf.field_c = true;
-              di.field_e = param0;
+              ResourceArchive.field_e = param0;
               mj.a(param2, 27712);
             }
             return;
           }
           lf.field_c = true;
-          ec.field_i = param0;
+          BallDebugOverlay.field_i = param0;
           mj.a(param2, 27712);
         }
         var4Lifetime1 = 101 % ((59 - param3) / 59);
@@ -109,16 +109,16 @@ class om extends am {
           mj.a(param2, 27712);
         }
         if (2 == param1) {
-          if (~di.field_e == ~param0) {
+          if (~ResourceArchive.field_e == ~param0) {
             return;
           }
           lf.field_c = true;
-          di.field_e = param0;
+          ResourceArchive.field_e = param0;
           mj.a(param2, 27712);
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         tutorialShotModeLeave = null;
         int var1 = 111 / ((param0 - 40) / 61);
         field_y = null;
@@ -144,7 +144,7 @@ class om extends am {
           AccountContentDialog.field_ub.a(param1, -29423);
         }
         var2 = 36 / ((param0 - 1) / 45);
-        if (am.field_e == null) {
+        if (TextWidgetPainter.field_e == null) {
           if (TranslatedUiText.field_d &&
             jc.field_c) {
             if (MidiNoteMixer.field_v &&
@@ -162,35 +162,35 @@ class om extends am {
             }
           }
           if (null != AccountContentDialog.field_ub) {
-            AccountContentDialog.field_ub.d(300, param1);
+            AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
           }
         } else {
-          am.field_e.a(param1, -29423);
+          TextWidgetPainter.field_e.a(param1, -29423);
           if (!TranslatedUiText.field_d) {
             if (null == AccountContentDialog.field_ub) {
-              if (null == am.field_e) {
+              if (null == TextWidgetPainter.field_e) {
                 return;
               }
-              am.field_e.d(300, param1);
+              TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
               return;
             }
-            AccountContentDialog.field_ub.d(300, param1);
-            if (null != am.field_e) {
-              am.field_e.d(300, param1);
+            AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+            if (null != TextWidgetPainter.field_e) {
+              TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
             }
             return;
           }
           if (!jc.field_c) {
             if (null == AccountContentDialog.field_ub) {
-              if (null == am.field_e) {
+              if (null == TextWidgetPainter.field_e) {
                 return;
               }
-              am.field_e.d(300, param1);
+              TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
               return;
             }
-            AccountContentDialog.field_ub.d(300, param1);
-            if (null != am.field_e) {
-              am.field_e.d(300, param1);
+            AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+            if (null != TextWidgetPainter.field_e) {
+              TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
             }
             return;
           }
@@ -203,7 +203,7 @@ class om extends am {
               FadingDialog.a(stackIn_32_0, 1);
             }
             if (null != AccountContentDialog.field_ub) {
-              AccountContentDialog.field_ub.d(300, param1);
+              AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
             }
           } else {
             if (!DualLinkNode.field_p) {
@@ -215,15 +215,15 @@ class om extends am {
                 FadingDialog.a(stackIn_51_0, 1);
               }
               if (null == AccountContentDialog.field_ub) {
-                if (null == am.field_e) {
+                if (null == TextWidgetPainter.field_e) {
                   return;
                 }
-                am.field_e.d(300, param1);
+                TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
                 return;
               }
-              AccountContentDialog.field_ub.d(300, param1);
-              if (null != am.field_e) {
-                am.field_e.d(300, param1);
+              AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+              if (null != TextWidgetPainter.field_e) {
+                TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
               }
               return;
             }
@@ -232,9 +232,9 @@ class om extends am {
               ViewportController.a(false, (byte) 50);
               if (var3 == 0) {
                 if (null != AccountContentDialog.field_ub) {
-                  AccountContentDialog.field_ub.d(300, param1);
-                  if (null != am.field_e) {
-                    am.field_e.d(300, param1);
+                  AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+                  if (null != TextWidgetPainter.field_e) {
+                    TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
                   }
                   return;
                 }
@@ -242,7 +242,7 @@ class om extends am {
                 stackIn_76_0 = (param1) && (cp.a((byte) 98));
                 FadingDialog.a(stackIn_76_0, 1);
                 if (null != AccountContentDialog.field_ub) {
-                  AccountContentDialog.field_ub.d(300, param1);
+                  AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
                 }
               }
             } else {
@@ -250,9 +250,9 @@ class om extends am {
                 ViewportController.a(false, (byte) 50);
                 if (var3 == 0) {
                   if (null != AccountContentDialog.field_ub) {
-                    AccountContentDialog.field_ub.d(300, param1);
-                    if (null != am.field_e) {
-                      am.field_e.d(300, param1);
+                    AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
+                    if (null != TextWidgetPainter.field_e) {
+                      TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
                     }
                     return;
                   }
@@ -260,7 +260,7 @@ class om extends am {
                   stackIn_100_0 = (param1) && (cp.a((byte) 98));
                   FadingDialog.a(stackIn_100_0, 1);
                   if (null != AccountContentDialog.field_ub) {
-                    AccountContentDialog.field_ub.d(300, param1);
+                    AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
                   }
                 }
               } else {
@@ -270,16 +270,16 @@ class om extends am {
                   FadingDialog.a(stackIn_127_0, 1);
                 }
                 if (null != AccountContentDialog.field_ub) {
-                  AccountContentDialog.field_ub.d(300, param1);
+                  AccountContentDialog.field_ub.drawDebugOverlay(300, param1);
                 }
               }
             }
           }
         }
-        if (null == am.field_e) {
+        if (null == TextWidgetPainter.field_e) {
           return;
         }
-        am.field_e.d(300, param1);
+        TextWidgetPainter.field_e.drawDebugOverlay(300, param1);
     }
 
     static {

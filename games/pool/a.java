@@ -7,29 +7,29 @@ final class a {
     private static int field_a;
     static String youCannotJoinInProgress;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         muGamelistPlayers = null;
         youCannotJoinInProgress = null;
         if (param0 != 0) {
-          eg var2 = (eg) null;
-          a.a(true, (eg) null);
+          MeshBuilder var2 = (MeshBuilder) null;
+          a.a(true, (MeshBuilder) null);
         }
     }
 
-    final static eg a(boolean param0, eg param1) {
+    final static MeshBuilder a(boolean param0, MeshBuilder param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         String var4 = null;
-        eg stackIn_7_0 = null;
+        MeshBuilder stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          for (var2_int = 0; param1.field_Y.length > var2_int; var2_int++) {
-            param1.field_Y[var2_int] = -param1.field_Y[var2_int];
+          for (var2_int = 0; param1.vertexY.length > var2_int; var2_int++) {
+            param1.vertexY[var2_int] = -param1.vertexY[var2_int];
           }
           if (!param0) {
             var4 = (String) null;
@@ -37,7 +37,7 @@ final class a {
           }
           ImageProducerRasterBuffer.a(param1, (byte) 38);
           param1.a();
-          stackIn_7_0 = (eg) (param1);
+          stackIn_7_0 = (MeshBuilder) (param1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -49,7 +49,7 @@ final class a {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ final class a {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -3 % ((69 - param1) / 54);
-          stackIn_1_0 = tl.a(param0.length, -7510, param0, 0);
+          stackIn_1_0 = RankingsScreen.a(param0.length, -7510, param0, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,21 +75,21 @@ final class a {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(String param0, boolean param1, boolean param2, float param3) {
         try {
-          if (of.field_Nb == null) {
-            of.field_Nb = new ProgressDialog(wd.field_Ub, ClientException.field_d);
-            wd.field_Ub.showDialog(of.field_Nb, 30000);
+          if (ScrollPane.field_Nb == null) {
+            ScrollPane.field_Nb = new ProgressDialog(TabbedPane.field_Ub, ClientException.field_d);
+            TabbedPane.field_Ub.showDialog(ScrollPane.field_Nb, 30000);
           }
-          of.field_Nb.updateProgress(param0, 2113632, param3, param2);
+          ScrollPane.field_Nb.updateProgress(param0, 2113632, param3, param2);
           SoftwareRasterizer.clear();
           PolarBallSkin.a((byte) -118, param1);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "a.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "a.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

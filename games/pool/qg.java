@@ -5,14 +5,14 @@ final class qg {
     static Sprite field_b;
     static int field_e;
     static boolean field_d;
-    static vh field_f;
-    static cf field_g;
+    static UiComponent field_f;
+    static SoundCache field_g;
     static long field_c;
     static String field_a;
 
     final static void a(byte param0, int param1) {
         ij var3 = null;
-        aa var4 = null;
+        IntrusiveDequeCursor var4 = null;
         ij var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -20,14 +20,14 @@ final class qg {
           if (param1 == 0) {
             return;
           }
-          if (nd.field_i.c(0)) {
+          if (MarkerSliderPainter.field_i.c(0)) {
             return;
           }
           if (param0 != 48) {
             return;
           }
-          var4 = new aa(nd.field_i);
-          var5 = (ij) (var4.b((byte) -92));
+          var4 = new IntrusiveDequeCursor(MarkerSliderPainter.field_i);
+          var5 = (ij) (var4.last((byte) -92));
           if (param1 == var5.field_m) {
             if (kg.field_m != -1) {
               if (var5.field_H <= kg.field_m) {
@@ -41,32 +41,32 @@ final class qg {
               var5.unlink((byte) -117);
             }
           }
-          var3 = (ij) (var4.b(-108));
+          var3 = (ij) (var4.previous(-108));
           while (var3 != null) {
             if (param1 == var3.field_m) {
               var3.unlink((byte) -117);
             }
-            var3 = (ij) (var4.b(-88));
+            var3 = (ij) (var4.previous(-88));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var2), "qg.A(" + param0 + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var2), "qg.A(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         field_g = null;
         field_a = null;
         field_f = null;
         if (param0 != 0) {
-          field_g = (cf) null;
+          field_g = (SoundCache) null;
         }
     }
 
-    final static int[] a(int param0, int param1, int[] param2, int param3) {
+    final static int[] extendIntArray(int param0, int param1, int[] param2, int param3) {
         int[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -102,11 +102,11 @@ final class qg {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(int[] param0, int param1, int[] param2, int[] param3, int param4, int[] param5, byte param6) {
+    final static void transformVertices(int[] param0, int param1, int[] param2, int[] param3, int param4, int[] param5, byte param6) {
         int var7_int = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -128,7 +128,7 @@ final class qg {
         try {
           if (param6 != 56) {
             var12 = (int[]) null;
-            qg.a(106, -48, (int[]) null, -106);
+            qg.extendIntArray(106, -48, (int[]) null, -106);
           }
           for (var7_int = param1; param4 > var7_int; var7_int++) {
             var8 = -param2[0] + param5[var7_int];
@@ -167,7 +167,7 @@ final class qg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param6).append(')').toString());
         }
     }
 

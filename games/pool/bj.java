@@ -7,7 +7,7 @@ final class bj extends IntrusiveNode {
     static int field_m;
     int field_n;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawDottedRectangle(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -116,7 +116,7 @@ final class bj extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var5), "bj.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var5), "bj.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class bj extends IntrusiveNode {
         if (param0 != 1) {
           return false;
         }
-        return lk.field_o;
+        return ChatMessageLine.field_o;
     }
 
     public static void a(int param0) {

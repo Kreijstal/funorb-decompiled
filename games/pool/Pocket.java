@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Pocket {
-    tc pottedBalls;
+    GrowableIntList pottedBalls;
     int centerY;
     static boolean[][] field_j;
     static Sprite field_h;
@@ -18,8 +18,8 @@ final class Pocket {
         if (null == this.pottedBalls) {
           return false;
         }
-        for (var3 = 0; var3 < this.pottedBalls.a((byte) 88); var3++) {
-          if (this.pottedBalls.a(var3, 2229) == param0) {
+        for (var3 = 0; var3 < this.pottedBalls.size((byte) 88); var3++) {
+          if (this.pottedBalls.get(var3, 2229) == param0) {
             return true;
           }
         }
@@ -48,11 +48,11 @@ final class Pocket {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw wm.a((Throwable) ((Object) var1), "dl.C(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) var1), "dl.C(" + param0 + ')');
         }
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean param0) {
         field_h = null;
         if (param0) {
           field_b = 37;
@@ -66,7 +66,7 @@ final class Pocket {
 
     final int a(byte param0) {
         int var2 = 67 / ((-51 - param0) / 62);
-        return (this.pottedBalls == null ? 0 : this.pottedBalls.a((byte) 99)) + 1;
+        return (this.pottedBalls == null ? 0 : this.pottedBalls.size((byte) 99)) + 1;
     }
 
     final void print(boolean param0) {
@@ -77,13 +77,13 @@ final class Pocket {
           Pocket.a(29, (String) null);
         }
         if (this.pottedBalls != null &&
-          this.pottedBalls.a((byte) 123) != 0) {
+          this.pottedBalls.size((byte) 123) != 0) {
           System.out.print("{");
-          for (var2 = 0; var2 < this.pottedBalls.a((byte) 113); var2++) {
+          for (var2 = 0; var2 < this.pottedBalls.size((byte) 113); var2++) {
             if (0 != var2) {
               System.out.print(",");
             }
-            System.out.print(Integer.toString(this.pottedBalls.a(var2, 2229)));
+            System.out.print(Integer.toString(this.pottedBalls.get(var2, 2229)));
           }
           System.out.print("}");
         } else {
@@ -109,7 +109,7 @@ final class Pocket {
           if (var3_int > 0) {
             this.pottedBalls = TikiTableScene.a(var3_int, 1, 0);
             for (var4 = 0; var4 < var3_int; var4++) {
-              this.pottedBalls.a(10499, param1.readUnsignedByte(param0 - 222), var4);
+              this.pottedBalls.set(10499, param1.readUnsignedByte(param0 - 222), var4);
             }
             return;
           }
@@ -125,7 +125,7 @@ final class Pocket {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class Pocket {
           this.pottedBalls = ShotRecord.b(true);
         }
         int var3 = 126 / ((param1 - 0) / 51);
-        this.pottedBalls.a((byte) -2, param0);
+        this.pottedBalls.add((byte) -2, param0);
     }
 
     final void write(PacketBuffer param0, int param1) {
@@ -149,9 +149,9 @@ final class Pocket {
             this.containsBall(-87, 43);
           }
           if (null != this.pottedBalls) {
-            param0.a(this.pottedBalls.a((byte) 120), false);
-            for (var3_int = 0; this.pottedBalls.a((byte) 108) > var3_int; var3_int++) {
-              param0.a(this.pottedBalls.a(var3_int, 2229), false);
+            param0.a(this.pottedBalls.size((byte) 120), false);
+            for (var3_int = 0; this.pottedBalls.size((byte) 108) > var3_int; var3_int++) {
+              param0.a(this.pottedBalls.get(var3_int, 2229), false);
             }
             return;
           }
@@ -167,7 +167,7 @@ final class Pocket {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -204,12 +204,12 @@ final class Pocket {
             if (var4 == 45) {
               if (0 == var3 ||
                 var2_int - 1 == var3) {
-                stackIn_19_0 = pj.field_K;
+                stackIn_19_0 = MessageScreen.field_K;
                 return stackIn_19_0;
               }
             } else {
               if (ie.field_c.indexOf(var4) == -1) {
-                stackIn_23_0 = pj.field_K;
+                stackIn_23_0 = MessageScreen.field_K;
                 return stackIn_23_0;
               }
             }
@@ -225,12 +225,12 @@ final class Pocket {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
     final void keepOnlyPottedBalls(Ball[] param0, int param1) {
-        tc var3 = null;
+        GrowableIntList var3 = null;
         int var4 = 0;
         int var5 = 0;
         int incrementValue$0 = 0;
@@ -240,19 +240,19 @@ final class Pocket {
         try {
           var3 = ShotRecord.b(true);
           var4 = 0;
-          for (var5 = 0; var5 < this.pottedBalls.a((byte) 110); var5++) {
-            if (!param0[this.pottedBalls.a(var5, 2229)].inPlay) {
+          for (var5 = 0; var5 < this.pottedBalls.size((byte) 110); var5++) {
+            if (!param0[this.pottedBalls.get(var5, 2229)].inPlay) {
               incrementValue$0 = var4;
               var4++;
-              var3.a(10499, this.pottedBalls.a(var5, 2229), incrementValue$0);
+              var3.set(10499, this.pottedBalls.get(var5, 2229), incrementValue$0);
             }
           }
           if (param1 >= -36) {
             this.a((byte) -111);
           }
-          this.pottedBalls = var3.a((byte) 98) == 0 ? null : var3;
+          this.pottedBalls = var3.size((byte) 98) == 0 ? null : var3;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "dl.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dl.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -262,7 +262,7 @@ final class Pocket {
           this.centerX = (param0.endX + param0.startX) / 2;
           this.centerY = (param0.startY + param0.endY) / 2;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "dl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "dl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

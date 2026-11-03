@@ -5,7 +5,7 @@ class AudioOutput {
     private long field_g;
     private static int serviceThreadPriority;
     private int field_e;
-    private static mq field_u;
+    private static AudioService field_u;
     int[] field_l;
     private PcmStream rootStream;
     static boolean stereo;
@@ -55,7 +55,7 @@ class AudioOutput {
     void a(java.awt.Component param0) throws Exception {
     }
 
-    void a() {
+    void closeDevice() {
     }
 
     final static AudioOutput a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
@@ -96,15 +96,15 @@ class AudioOutput {
               ((AudioOutput) ((Object) var4)).a(((AudioOutput) ((Object) var4)).field_a);
               if (serviceThreadPriority > 0 &&
                 field_u == null) {
-                field_u = new mq();
-                field_u.field_i = param0;
+                field_u = new AudioService();
+                field_u.tasks = param0;
                 param0.a(102, serviceThreadPriority, (Runnable) ((Object) field_u));
               }
               if (field_u != null) {
-                if (field_u.field_e[param2] != null) {
+                if (field_u.outputs[param2] != null) {
                   throw new IllegalArgumentException();
                 }
-                field_u.field_e[param2] = (AudioOutput) ((Object) var5);
+                field_u.outputs[param2] = (AudioOutput) ((Object) var5);
               }
               stackIn_21_0 = var4;
               return (AudioOutput) ((Object) stackIn_21_0);
@@ -126,7 +126,7 @@ class AudioOutput {
         this.rootStream = param0;
     }
 
-    public static void c() {
+    public static void releaseStatics() {
         field_u = null;
     }
 
@@ -140,7 +140,7 @@ class AudioOutput {
           if (this.field_s) {
             return;
           }
-          var1 = rl.a((byte) -127);
+          var1 = rl.monotonicTimeMillis((byte) -127);
           try {
             if (var1 > this.field_g + 6000L) {
               this.field_g = var1 - 6000L;
@@ -148,7 +148,7 @@ class AudioOutput {
             while (var1 > this.field_g + 5000L) {
               this.skipFrames(256);
               this.field_g = this.field_g + (long)(256000 / sampleRate);
-              var1 = rl.a((byte) -120);
+              var1 = rl.monotonicTimeMillis((byte) -120);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,7 +167,7 @@ class AudioOutput {
               this.field_b = 0L;
               this.field_n = true;
             }
-            var3_int = this.e();
+            var3_int = this.getQueuedFrames();
             if (this.field_i - var3_int > this.field_k) {
               this.field_k = this.field_i - var3_int;
             }
@@ -180,7 +180,7 @@ class AudioOutput {
               if (this.field_a > 16384) {
                 this.field_a = 16384;
               }
-              this.a();
+              this.closeDevice();
               this.a(this.field_a);
               var3_int = 0;
               this.field_n = true;
@@ -200,7 +200,7 @@ class AudioOutput {
               } else {
                 if (this.field_k == 0 &&
                   this.field_c == 0) {
-                  this.a();
+                  this.closeDevice();
                   this.field_b = var1 + 2000L;
                   return;
                 }
@@ -214,7 +214,7 @@ class AudioOutput {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = (Exception) (Object) decompiledCaughtException;
-            this.a();
+            this.closeDevice();
             this.field_b = var1 + 2000L;
           }
           return;
@@ -268,7 +268,7 @@ class AudioOutput {
           this.framesUntilScheduling <= 0) {
           this.framesUntilScheduling = this.framesUntilScheduling + (sampleRate >> 4);
           AudioOutput.b(this.rootStream);
-          this.enqueueByPriority(this.rootStream, this.rootStream.c());
+          this.enqueueByPriority(this.rootStream, this.rootStream.priority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -299,7 +299,7 @@ class AudioOutput {
                       continue;
                     }
                     var11.field_l = true;
-                    var13 = var11.d();
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_l = var12.field_l + var13;
@@ -307,12 +307,12 @@ class AudioOutput {
                     if (var4 >= this.field_e) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.a();
+                    var14Lifetime2 = var11.firstChildStream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_m;
                       while (var14Lifetime2 != null) {
-                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.c() >> 8);
-                        var14Lifetime2 = var11.b();
+                        this.enqueueByPriority(var14Lifetime2, var15_int * var14Lifetime2.priority() >> 8);
+                        var14Lifetime2 = var11.nextChildStream();
                       }
                     }
                     var15 = var11.field_o;
@@ -354,9 +354,9 @@ class AudioOutput {
           this.framesUntilScheduling = 0;
         }
         if (this.rootStream != null) {
-          this.rootStream.a(param0, 0, param1);
+          this.rootStream.mixInto(param0, 0, param1);
         }
-        this.field_g = rl.a((byte) -125);
+        this.field_g = rl.monotonicTimeMillis((byte) -125);
     }
 
     private final static void b(PcmStream param0) {
@@ -364,10 +364,10 @@ class AudioOutput {
         if (param0.field_n != null) {
           param0.field_n.field_l = 0;
         }
-        PcmStream var1 = param0.a();
+        PcmStream var1 = param0.firstChildStream();
         while (var1 != null) {
           AudioOutput.b(var1);
-          var1 = param0.b();
+          var1 = param0.nextChildStream();
         }
     }
 
@@ -377,34 +377,34 @@ class AudioOutput {
         if (field_u != null) {
           var1 = 1;
           for (var2 = 0; var2 < 2; var2++) {
-            if (field_u.field_e[var2] == this) {
-              field_u.field_e[var2] = null;
+            if (field_u.outputs[var2] == this) {
+              field_u.outputs[var2] = null;
             }
-            if (field_u.field_e[var2] != null) {
+            if (field_u.outputs[var2] != null) {
               var1 = 0;
             }
           }
           if (var1 != 0) {
-            field_u.field_d = true;
-            while (field_u.field_h) {
-              cf.a(-127, 50L);
+            field_u.stopRequested = true;
+            while (field_u.running) {
+              SoundCache.a(-127, 50L);
             }
             field_u = null;
           }
         }
-        this.a();
+        this.closeDevice();
         this.field_l = null;
         this.field_s = true;
     }
 
-    int e() throws Exception {
+    int getQueuedFrames() throws Exception {
         return this.field_a;
     }
 
     AudioOutput() {
         this.field_e = 32;
         this.field_s = false;
-        this.field_g = rl.a((byte) -104);
+        this.field_g = rl.monotonicTimeMillis((byte) -104);
         this.field_b = 0L;
         this.field_d = 0L;
         this.field_c = 0;

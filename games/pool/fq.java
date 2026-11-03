@@ -18,7 +18,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
         return null == MatchingTextValidator.field_u ? um.field_e : true;
     }
 
-    public static void l(int param0) {
+    public static void releaseStatics(int param0) {
         mpRematchnewgame = null;
         muChatOn = null;
         if (param0 != 5) {
@@ -80,7 +80,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
               }
             }
             if (3 == param0.field_g) {
-              var5.addActionButton(7, o.toserverlist, param1 ^ 4);
+              var5.addActionButton(7, UiComponentNode.toserverlist, param1 ^ 4);
             } else {
               if (param0.field_g != 6) {
                 this.replaceContent(var5, 30);
@@ -101,7 +101,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -110,14 +110,14 @@ final class fq extends MessageDialog implements ButtonActivationListener {
           t.a(115, false, true);
           return;
         }
-        nm.a((byte) 41);
+        NineSliceFrame.a((byte) 41);
         if (!param0) {
           return;
         }
         try {
           this.dismissDialog(17);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "fq.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fq.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -154,11 +154,11 @@ final class fq extends MessageDialog implements ButtonActivationListener {
     }
 
     fq(DialogLayer param0, AccountCreationForm param1) {
-        super(param0, bi.field_e, tk.creatingyouraccount, false, false);
+        super(param0, bi.field_e, DualLinkNodeHashTable.creatingyouraccount, false, false);
         try {
           this.field_Cb = param1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "fq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "fq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -171,8 +171,8 @@ final class fq extends MessageDialog implements ButtonActivationListener {
 
     final static void a(int param0, int param1, int param2, boolean param3) {
         int var4;
-        lg.field_s.a(true, (byte) 106, (java.awt.Component) ((Object) vj.a((byte) -37)));
-        sg.field_P = 0;
+        StatefulTextPainter.field_s.a(true, (byte) 106, (java.awt.Component) ((Object) TextLineLayout.a((byte) -37)));
+        ThemeSelectScreen.field_P = 0;
         GameRules.field_b = param1;
         if (param0 != -3405) {
           return;
@@ -184,7 +184,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                vj.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, il.field_c[3]);
               }
               return;
             }
@@ -218,22 +218,22 @@ final class fq extends MessageDialog implements ButtonActivationListener {
           if (GameRules.field_b == -4) {
             return;
           }
-          vj.a((byte) -27, il.field_c[3]);
+          TextLineLayout.a((byte) -27, il.field_c[3]);
           return;
         }
-        s.field_c[GameRules.field_b].field_w = param2;
+        s.field_c[GameRules.field_b].parentScreenId = param2;
         var4 = 0;
         if (GameRules.field_b == 21) {
           var4 = -1;
         }
-        s.field_c[GameRules.field_b].a(0, var4, param3);
+        s.field_c[GameRules.field_b].onEnter(0, var4, param3);
         if (GameRules.field_b != 21) {
           if (GameRules.field_b < 0) {
             if (-2 == GameRules.field_b) {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                vj.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, il.field_c[3]);
               }
               return;
             }
@@ -241,7 +241,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                vj.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, il.field_c[3]);
                 return;
               }
               return;
@@ -257,7 +257,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
                 KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
                 if (GameRules.field_b != -2 &&
                   GameRules.field_b != -4) {
-                  vj.a((byte) -27, il.field_c[3]);
+                  TextLineLayout.a((byte) -27, il.field_c[3]);
                   return;
                 }
                 return;
@@ -266,7 +266,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
                 KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
                 if (GameRules.field_b != -2 &&
                   GameRules.field_b != -4) {
-                  vj.a((byte) -27, il.field_c[3]);
+                  TextLineLayout.a((byte) -27, il.field_c[3]);
                   return;
                 }
                 return;
@@ -275,7 +275,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
                 KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
                 if (GameRules.field_b != -2 &&
                   GameRules.field_b != -4) {
-                  vj.a((byte) -27, il.field_c[3]);
+                  TextLineLayout.a((byte) -27, il.field_c[3]);
                   return;
                 }
                 return;
@@ -289,7 +289,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                vj.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, il.field_c[3]);
                 return;
               }
               return;
@@ -298,7 +298,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                vj.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, il.field_c[3]);
                 return;
               }
               return;
@@ -311,7 +311,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                vj.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, il.field_c[3]);
                 return;
               }
               return;
@@ -320,7 +320,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                vj.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, il.field_c[3]);
                 return;
               }
               return;
@@ -329,7 +329,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                vj.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, il.field_c[3]);
                 return;
               }
               return;
@@ -338,7 +338,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
               KillerBallSkin.a(256, false, true, HalloweenBallSkin.field_m);
               if (GameRules.field_b != -2 &&
                 GameRules.field_b != -4) {
-                vj.a((byte) -27, il.field_c[3]);
+                TextLineLayout.a((byte) -27, il.field_c[3]);
                 return;
               }
               return;
@@ -351,7 +351,7 @@ final class fq extends MessageDialog implements ButtonActivationListener {
         if (GameRules.field_b == -4) {
           return;
         }
-        vj.a((byte) -27, il.field_c[3]);
+        TextLineLayout.a((byte) -27, il.field_c[3]);
         return;
     }
 

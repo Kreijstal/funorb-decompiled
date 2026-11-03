@@ -15,7 +15,7 @@ final class sk {
         return PoolUiText.field_g;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int param0) {
         field_b = null;
         pressf10toquickchat = null;
         if (param0 != 1) {
@@ -26,7 +26,7 @@ final class sk {
         playerListHaveWon = null;
     }
 
-    final static PaletteBitmapFont a(di param0, int param1, String param2, String param3, di param4) {
+    final static PaletteBitmapFont loadPaletteFont(ResourceArchive param0, int param1, String param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -45,7 +45,7 @@ final class sk {
           if (param1 != 32362) {
             field_d = 16;
           }
-          var5_int = param4.b(param2, -1);
+          var5_int = param4.getGroupId(param2, -1);
           var6 = param4.a(var5_int, 0, param3);
           stackIn_3_0 = hi.a(107, var5_int, var6, param0, param4);
           return stackIn_3_0;
@@ -77,11 +77,11 @@ final class sk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    final static short[] a(byte param0, int param1, short[] param2, short param3) {
+    final static short[] extendShortArray(byte param0, int param1, short[] param2, short param3) {
         short[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -118,7 +118,7 @@ final class sk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 

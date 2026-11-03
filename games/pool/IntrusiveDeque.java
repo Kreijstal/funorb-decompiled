@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntrusiveDeque {
-    static vq field_c;
+    static ContextMenu field_c;
     static String resign;
     IntrusiveNode field_e;
     private IntrusiveNode field_f;
@@ -120,13 +120,13 @@ final class IntrusiveDeque {
           if (param0 < 73) {
             muChatLobbyShowAll = (String) null;
           }
-          while (aa.field_e > var1_int) {
+          while (IntrusiveDequeCursor.field_e > var1_int) {
             wb.field_e[var1_int] = null;
             var1_int++;
           }
-          aa.field_e = 0;
+          IntrusiveDequeCursor.field_e = 0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ko.B(" + param0 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ko.B(" + param0 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class IntrusiveDeque {
           param1.next.previous = param1;
           param1.previous.next = param1;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ko.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ko.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -211,7 +211,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -226,7 +226,7 @@ final class IntrusiveDeque {
           param1.previous.next = param1;
           int var3_int = -68 / ((param0 - 40) / 40);
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ko.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ko.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -264,11 +264,11 @@ final class IntrusiveDeque {
               }
               incrementValue$1 = var6;
               var6++;
-              param1 = tl.field_I[incrementValue$1];
+              param1 = RankingsScreen.field_I[incrementValue$1];
               dupTemp$2 = param2[param1];
               dupTemp$3 = param0[dupTemp$2];
               param0[dupTemp$2] = dupTemp$3 + 1;
-              tl.field_I[dupTemp$3] = param1;
+              RankingsScreen.field_I[dupTemp$3] = param1;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -287,7 +287,7 @@ final class IntrusiveDeque {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

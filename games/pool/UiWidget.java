@@ -6,7 +6,7 @@ import java.util.*;
 class UiWidget extends IntrusiveNode {
     int widgetY;
     int textOffsetX;
-    static vh field_A;
+    static UiComponent field_A;
     int widgetWidth;
     int widgetHeight;
     WidgetPainter renderer;
@@ -26,7 +26,7 @@ class UiWidget extends IntrusiveNode {
     static String youAreOnXServer;
 
     UiWidget(String param0, WidgetListener param1) {
-        this(param0, db.field_Sb.field_c, param1);
+        this(param0, VerticalScrollbar.field_Sb.field_c, param1);
     }
 
     void updatePointerState(UiWidget param0, int param1, int param2, int param3) {
@@ -63,11 +63,11 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public static void c(byte param0) {
+    public static void releaseStatics(byte param0) {
         field_q = null;
         field_A = null;
         if (param0 != 80) {
@@ -100,7 +100,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ class UiWidget extends IntrusiveNode {
             return false;
           }
           if (param0 != -71) {
-            field_A = (vh) null;
+            field_A = (UiComponent) null;
           }
           stackIn_9_0 = !(param1.toLowerCase().indexOf(field_E.toLowerCase()) < 0);
           return stackIn_9_0;
@@ -154,7 +154,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -228,7 +228,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -313,12 +313,12 @@ class UiWidget extends IntrusiveNode {
         Sprite[] var4 = new Sprite[9];
         Sprite[] var2 = var4;
         if (param0 > 4) {
-          var4[4] = ad.a(param1, 64, 7);
+          var4[4] = ArchiveIndex.a(param1, 64, 7);
           return var2;
         }
         String var3 = (String) null;
         UiWidget.a((byte) 3, (String) null);
-        var4[4] = ad.a(param1, 64, 7);
+        var4[4] = ArchiveIndex.a(param1, 64, 7);
         return var2;
     }
 
@@ -385,7 +385,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -524,7 +524,7 @@ class UiWidget extends IntrusiveNode {
           ue.a((byte) 70, this.getHoverText(-94));
           return param2;
         }
-        UiWidget.c((byte) 17);
+        UiWidget.releaseStatics((byte) 17);
         var5Lifetime1 = this.hasKeyboardFocus(85) ? 1 : 0;
         if (!param2) {
           if (var5Lifetime1 != 0 &&
@@ -682,7 +682,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -705,7 +705,7 @@ class UiWidget extends IntrusiveNode {
           }
           this.pressedPointerButton = 0;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ei.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ei.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -744,7 +744,7 @@ class UiWidget extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -761,7 +761,7 @@ class UiWidget extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        db.field_Sb.a((byte) -52, MatchingTextValidator.field_n, id.field_b, var5);
+        VerticalScrollbar.field_Sb.drawTooltip((byte) -52, MatchingTextValidator.field_n, id.field_b, var5);
     }
 
     void renderWidget(int param0, byte param1, int param2, int param3) {
@@ -815,7 +815,7 @@ class UiWidget extends IntrusiveNode {
             this.widgetHeight = var4.a(1, this);
           }
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -830,7 +830,7 @@ class UiWidget extends IntrusiveNode {
           this.renderer = param4;
           this.widgetWidth = param2;
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "ei.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ei.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

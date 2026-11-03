@@ -18,16 +18,16 @@ final class KillerRules extends GameRules {
           KillerRules.a(56, -99, 1, -23);
         }
         if (sa.field_f != null &&
-          qi.field_a == 13) {
+          IterableDualLinkDeque.field_a == 13) {
           sa.field_f = null;
           return true;
         }
         if (!DualLinkNode.field_p) {
           if (!ArrayWidgetGroup.field_H &&
-            qi.field_a != 9 &&
-            10 != qi.field_a &&
-            qi.field_a != 11) {
-            if (qi.field_a != 80) {
+            IterableDualLinkDeque.field_a != 9 &&
+            10 != IterableDualLinkDeque.field_a &&
+            IterableDualLinkDeque.field_a != 11) {
+            if (IterableDualLinkDeque.field_a != 80) {
               return false;
             }
             if (!UsernameSuggestionsPanel.g((byte) -108)) {
@@ -36,19 +36,19 @@ final class KillerRules extends GameRules {
             DualLinkNode.field_p = true;
             return true;
           }
-          return tf.a(param2 + 15586, param0, param3);
+          return LoginPayloadKind.a(param2 + 15586, param0, param3);
         }
         if (!UsernameSuggestionsPanel.g((byte) -121)) {
           return false;
         }
-        stackIn_22_0 = (!th.a(param3, -103, param1)) ? 0 : 1;
+        stackIn_22_0 = (!th.handleChatKey(param3, -103, param1)) ? 0 : 1;
         var4 = stackIn_22_0;
-        if (80 == qi.field_a ||
-          84 == qi.field_a) {
+        if (80 == IterableDualLinkDeque.field_a ||
+          84 == IterableDualLinkDeque.field_a) {
           DualLinkNode.field_p = false;
           var4 = 1;
         }
-        if (qi.field_a == 13) {
+        if (IterableDualLinkDeque.field_a == 13) {
           cl.a(param2 + 14852);
           DualLinkNode.field_p = false;
           var4 = 1;
@@ -71,7 +71,7 @@ final class KillerRules extends GameRules {
         int var3;
         int var4;
         int var5;
-        aa var6_ref_aa;
+        IntrusiveDequeCursor var6_ref_aa;
         int var6;
         PotEvent var7_ref_cr;
         int var8;
@@ -100,8 +100,8 @@ final class KillerRules extends GameRules {
           var10.a(7, -14, new int[]{var9.playerIndex});
         }
         var5 = 0;
-        var6_ref_aa = new aa(var10.pottedBalls);
-        var7_ref_cr = (PotEvent) (var6_ref_aa.b((byte) -92));
+        var6_ref_aa = new IntrusiveDequeCursor(var10.pottedBalls);
+        var7_ref_cr = (PotEvent) (var6_ref_aa.last((byte) -92));
         while (var7_ref_cr != null) {
           if (0 == var7_ref_cr.ballIndex) {
             var10.field_w = (byte)(var10.field_w - 1);
@@ -113,7 +113,7 @@ final class KillerRules extends GameRules {
             }
             var5++;
           }
-          var7_ref_cr = (PotEvent) (var6_ref_aa.b(-95));
+          var7_ref_cr = (PotEvent) (var6_ref_aa.previous(-95));
         }
         if (var10.breakSeed < 0) {
           if (var5 == 0) {
@@ -129,12 +129,12 @@ final class KillerRules extends GameRules {
         } else {
           if (!var10.field_t) {
             if (var5 == 0) {
-              var4 = nd.field_j;
+              var4 = MarkerSliderPainter.field_j;
             }
           } else {
             var10.a(22, -14, new int[]{var9.playerIndex});
             this.f(var10.playerIndex, 8640);
-            var4 = var4 | (AccountWelcomePanel.field_R | ob.field_F);
+            var4 = var4 | (AccountWelcomePanel.field_R | MenuScreen.field_F);
           }
         }
         if (this.e((byte) -91) > 1) {
@@ -147,7 +147,7 @@ final class KillerRules extends GameRules {
             break;
           }
           if (var6 == 0) {
-            var4 = var4 | (ob.field_F | AccountWelcomePanel.field_R);
+            var4 = var4 | (MenuScreen.field_F | AccountWelcomePanel.field_R);
           }
         } else {
           if (this.a((byte) 36, var10.playerIndex)) {
@@ -176,10 +176,10 @@ final class KillerRules extends GameRules {
           var3_int = 0;
           while (true) {
             var4 = param0.readUnsignedByte(-119);
-            this.field_e[var3_int] = rb.b(var4, 254) >> 4;
+            this.field_e[var3_int] = ArchiveLoadSequence.b(var4, 254) >> 4;
             var3_int++;
             if (this.field_d.field_h.length != var3_int) {
-              this.field_e[var3_int] = rb.b(var4, 15);
+              this.field_e[var3_int] = ArchiveLoadSequence.b(var4, 15);
               var3_int++;
               if (~var3_int != ~this.field_d.field_h.length) {
                 continue;
@@ -201,7 +201,7 @@ final class KillerRules extends GameRules {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class KillerRules extends GameRules {
           super.a(param0, param1);
           param0.field_N = this.field_e[param0.playerIndex];
         } catch (RuntimeException runtimeException) {
-          throw wm.a((Throwable) ((Object) runtimeException), "rj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "rj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class KillerRules extends GameRules {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -332,7 +332,7 @@ final class KillerRules extends GameRules {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ final class KillerRules extends GameRules {
         }
         var6.field_t = true;
         if (~var6.breakSeed <= param0) {
-          var3Lifetime1 = var3Lifetime1 | ob.field_F;
+          var3Lifetime1 = var3Lifetime1 | MenuScreen.field_F;
         }
         this.f(var6.playerIndex, 8640);
         if (this.e((byte) -125) <= 1) {
@@ -434,10 +434,10 @@ final class KillerRules extends GameRules {
     }
 
     final static void c(byte param0) {
-        PoolUiText.field_f.field_hb = dq.a(1, param0 ^ -45, Integer.toString(fr.field_n));
+        PoolUiText.field_f.sprite = dq.createTextLabelSprite(1, param0 ^ -45, Integer.toString(fr.field_n));
         dk.a(PoolUiText.field_f, (byte) 93);
-        tn.field_w.field_pb = 2 < fr.field_n ? true : false;
-        ih.field_e.field_pb = fr.field_n < 8 ? true : false;
+        RasterSnapshot.field_w.enabled = 2 < fr.field_n ? true : false;
+        ih.field_e.enabled = fr.field_n < 8 ? true : false;
         if (param0 != -45) {
           KillerRules.c((byte) -61);
         }
@@ -491,7 +491,7 @@ final class KillerRules extends GameRules {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -525,7 +525,7 @@ final class KillerRules extends GameRules {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -552,7 +552,7 @@ final class KillerRules extends GameRules {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
